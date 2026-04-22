@@ -98,12 +98,17 @@ So the honest state is:
   `REQUEST4_LLR_BASELINE_FIT.md`.
 - That surrogate improves a geocentric `DE421` nominal residual by about
   `12x` in RMS, but still leaves residuals at `O(10^5-10^6 m)`.
+- A CRD pivot scout now also exists; see `REQUEST4_LLR_CRD_PIVOT_SCOUT.md`.
+- That scout shows the canonical CDDIS CRD root is real but currently gated by
+  `Earthdata Login`, while the public ILRS support tarballs are directly
+  accessible and can already be pinned and parsed in this workspace.
 - So Request 4 is still **not a real weak-field parameter fit** in this
   workspace.
 - The blocker is now very concrete: the self-built APOLLO-only surrogate does
   not close cleanly enough, which points toward an existing LLR estimator stack
   or the CRD/ILRS canonical path rather than indefinite growth of the bespoke
-  branch.
+  branch. The pivot scout sharpens that further: authenticated CRD access
+  and/or estimator integration is now the actual bottleneck.
 
 ## Immediate Next Step
 

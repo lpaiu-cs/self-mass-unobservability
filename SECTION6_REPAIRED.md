@@ -178,6 +178,9 @@ delta_SEP = sigma_1 (s_E-s_M) + sigma_2 (s_E^2-s_M^2)
 - 그 결과 nominal residual `rms ~ 6.0e6 m`가 `~5.0e5 m`까지는 줄었지만,
   residual이 여전히 `O(10^5-10^6 m)`라 bespoke APOLLO-only branch는
   닫히지 않았다.
+- 그 뒤의 CRD pivot scout도 실행되었고, canonical CDDIS CRD root는 현재
+  `401 Unauthorized`인 반면 ILRS public tarball들과 public lunar CRD sample
+  ingest는 workspace에 고정 가능함이 확인되었다.
 - 따라서 Request 4의 다음 주력은 더 많은 surrogate를 쌓는 것이 아니라,
   기존 LLR estimator/codebase 또는 CRD/ILRS canonical path에 붙이는 쪽이다.
 

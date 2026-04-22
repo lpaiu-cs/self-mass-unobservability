@@ -1,0 +1,152 @@
+{
+  "config": {
+    "root_dir": "data/request4_llr/ilrs_pivot_scout",
+    "summary_json": "request4_llr_crd_pivot_summary.json",
+    "summary_svg": "request4_llr_crd_pivot_summary.svg",
+    "sample_tsv": "request4_llr_crd_lunar_sample_normal_points.tsv",
+    "manifest_json": "data/request4_llr/ilrs_pivot_scout/manifest.json",
+    "assets": [
+      {
+        "label": "crd_sample_code_v2.01b",
+        "url": "https://ilrs.gsfc.nasa.gov/docs/2021/crd_v2.01b.tgz",
+        "local_name": "crd_v2.01b.tgz",
+        "role": "ILRS public CRD v2 sample code and converters"
+      },
+      {
+        "label": "crd_test_data_v2.01",
+        "url": "https://ilrs.gsfc.nasa.gov/docs/2019/testcrd_for_2.01.tgz",
+        "local_name": "testcrd_for_2.01.tgz",
+        "role": "ILRS public CRD v2 test data"
+      },
+      {
+        "label": "orbitNP_release_1.2.1",
+        "url": "https://ilrs.gsfc.nasa.gov/technology/software/orbitNP_release_1.2.1.tar.gz",
+        "local_name": "orbitNP_release_1.2.1.tar.gz",
+        "role": "Public SLR normal-point and residual software"
+      },
+      {
+        "label": "MLRS_Lunar_Code_v1.0",
+        "url": "https://ilrs.gsfc.nasa.gov/technology/software/MLRS_Lunar_Code_v1.0.tgz",
+        "local_name": "MLRS_Lunar_Code_v1.0.tgz",
+        "role": "Public lunar prediction, residual, and normal-point code bundle"
+      }
+    ]
+  },
+  "asset_counts": {
+    "public_ok": 4,
+    "public_total": 4
+  },
+  "cddis_crd_root": {
+    "ok": false,
+    "status": 401,
+    "reason": "Unauthorized"
+  },
+  "assets": [
+    {
+      "label": "crd_sample_code_v2.01b",
+      "url": "https://ilrs.gsfc.nasa.gov/docs/2021/crd_v2.01b.tgz",
+      "local_name": "crd_v2.01b.tgz",
+      "role": "ILRS public CRD v2 sample code and converters",
+      "head": {
+        "ok": true,
+        "status": 200,
+        "content_type": "application/x-gzip",
+        "content_length": "2780162"
+      },
+      "sha256": "426006e7691bfbca24fd04bf9a2df8ed33f5a627a82142ebc19ef76a69846bb2",
+      "size_bytes": 2780162
+    },
+    {
+      "label": "crd_test_data_v2.01",
+      "url": "https://ilrs.gsfc.nasa.gov/docs/2019/testcrd_for_2.01.tgz",
+      "local_name": "testcrd_for_2.01.tgz",
+      "role": "ILRS public CRD v2 test data",
+      "head": {
+        "ok": true,
+        "status": 200,
+        "content_type": "application/x-gzip",
+        "content_length": "131989"
+      },
+      "sha256": "6a3ee6057f6503072abea44c142be398920a0547d18e6abfa5d290c17af5a4fd",
+      "size_bytes": 131989
+    },
+    {
+      "label": "orbitNP_release_1.2.1",
+      "url": "https://ilrs.gsfc.nasa.gov/technology/software/orbitNP_release_1.2.1.tar.gz",
+      "local_name": "orbitNP_release_1.2.1.tar.gz",
+      "role": "Public SLR normal-point and residual software",
+      "head": {
+        "ok": true,
+        "status": 200,
+        "content_type": "application/x-gzip",
+        "content_length": "115461"
+      },
+      "sha256": "d356118b95aedc35e1da3afb94b414f6a8121671129ccb14601de1b2aa422a15",
+      "size_bytes": 115461
+    },
+    {
+      "label": "MLRS_Lunar_Code_v1.0",
+      "url": "https://ilrs.gsfc.nasa.gov/technology/software/MLRS_Lunar_Code_v1.0.tgz",
+      "local_name": "MLRS_Lunar_Code_v1.0.tgz",
+      "role": "Public lunar prediction, residual, and normal-point code bundle",
+      "head": {
+        "ok": true,
+        "status": 200,
+        "content_type": "application/x-gzip",
+        "content_length": "2537162"
+      },
+      "sha256": "0d7469b92f2b5e69577cd8d1a730dca34bb56a9f5faa0ff52b7a83d8726669a9",
+      "size_bytes": 2537162
+    }
+  ],
+  "lunar_sample": {
+    "row_count": 2,
+    "coverage_start": "2011-01-16T02:48:36.445646Z",
+    "coverage_end": "2011-02-11T02:55:17.382463Z",
+    "targets": [
+      "apollo15"
+    ],
+    "stations": [
+      "MDOL"
+    ],
+    "one_way_range_m_stats": {
+      "min": 377157114.97415674,
+      "max": 389577922.83745146,
+      "mean": 383367518.9058041,
+      "median": 383367518.9058041
+    },
+    "num_ranges_stats": {
+      "min": 9,
+      "max": 12,
+      "mean": 10.5,
+      "median": 10.5
+    },
+    "signal_to_noise_stats": null
+  },
+  "software_scan": {
+    "orbitNP": {
+      "role": "SLR normal-point generation and residual flattening, not a lunar verdict estimator.",
+      "readme_path": "data/request4_llr/ilrs_pivot_scout/orbitNP_release_1.2.1/README"
+    },
+    "mlrs_lunar_code": {
+      "role": "Public lunar prediction, residual, and normal-point stack with CRD sample data.",
+      "sample_np_path": "data/request4_llr/ilrs_pivot_scout/MLRS_Lunar_Code/data/analysis/ref/s25y11d042t0234#103.npt",
+      "build_notes": [
+        "bundle contains llr_npt and llr_npt_crd code paths",
+        "makefiles and scripts hard-code g77, /prod/bin, and csh-era assumptions",
+        "gfortran is available locally, so modernization is plausible but not zero-cost"
+      ]
+    },
+    "crd_sample_code": {
+      "role": "Public CRD parser/checker/converter starter kit",
+      "readme_path": "data/request4_llr/ilrs_pivot_scout/crd_sample_code_v2.01b/README_CRD"
+    }
+  },
+  "notes": [
+    "CDDIS CRD remains the canonical Request 4 data path, but direct archive access currently returns HTTP 401 and requires Earthdata Login.",
+    "Public ILRS tarballs are directly accessible and sufficient to stand up a CRD v2 parser and sample ingest path in the workspace.",
+    "The MLRS Lunar Code bundle is the closest public LLR-specific software hand-off point found so far, but it needs local build modernization before it can serve as a drop-in estimator.",
+    "orbitNP is useful as a reference for residual flattening and normal-point logic, but it is an SLR tool, not the final weak-field LLR verdict path.",
+    "So the healthy next move is a canonical-path bridge: keep the CRD parser/ingest side live and either modernize the public MLRS stack locally or connect to a more mature external estimator stack."
+  ]
+}

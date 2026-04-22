@@ -1,0 +1,350 @@
+Doing common_c
+in: 7080_giovea_crd_20080508_09_00.frd
+out: 7080_giovea_crd_20080508_09_00.frd_wr
+in: 7080_giovea_crd_20080508_09_00.npt
+out: 7080_giovea_crd_20080508_09_00.npt_wr
+in: 7080_giovea_crd_20080508_09_00_v2.frd
+out: 7080_giovea_crd_20080508_09_00_v2.frd_wr
+in: 7080_giovea_crd_20080508_09_00_v2na.frd
+out: 7080_giovea_crd_20080508_09_00_v2na.frd_wr
+in: 7080_giovea_crd_20080508_09_00_v2.npt
+out: 7080_giovea_crd_20080508_09_00_v2.npt_wr
+in: 7080_giovea_crd_20080508_09_00_v2na.npt
+out: 7080_giovea_crd_20080508_09_00_v2na.npt_wr
+Comparing full rate files
+------ V1
+------ V2
+------ V2na
+comparing normal point files
+------ V1
+------ V2
+------ V2na
+
+-c
+Doing common_f
+ in: 7080_giovea_crd_20080508_09_00.frd
+ out: 7080_giovea_crd_20080508_09_00.frd_wr
+ Done!
+ in: 7080_giovea_crd_20080508_09_00.npt
+ out: 7080_giovea_crd_20080508_09_00.npt_wr
+ Done!
+ in: 7080_giovea_crd_20080508_09_00_v2.frd
+ out: 7080_giovea_crd_20080508_09_00_v2.frd_wr
+ Done!
+ in: 7080_giovea_crd_20080508_09_00_v2na.frd
+ out: 7080_giovea_crd_20080508_09_00_v2na.frd_wr
+ Done!
+ in: 7080_giovea_crd_20080508_09_00_v2.npt
+ out: 7080_giovea_crd_20080508_09_00_v2.npt_wr
+ Done!
+ in: 7080_giovea_crd_20080508_09_00_v2na.npt
+ out: 7080_giovea_crd_20080508_09_00_v2na.npt_wr
+ Done!
+Comparing full rate files
+------ V1
+------ V2
+------ V2na
+comparing normal point files
+------ V1
+------ V2
+------ V2na
+
+-c
+Doing crd_chk_c
+crd_in = [7080_etalon2_crd_20080506_10_00.npt]
+cstg_in = [7080_etalon2_crd_20080506_10_00.qld]
+report_out = [7080_etalon2_crd_20080506_10_00.cmp]
+crd_in =   [7080_etalon2_crd_20080506_10_00.frd]
+merit_in = [7080_etalon2_crd_20080506_10_00.mrt]
+report_out = [7080_etalon2_crd_20080506_10_00.frcmp]
+Comparing 7080_lageos1_crd_20071202_16_00.npt.chk
+Comparing 7080_lageos1_crd_20071202_16_00.qlk.chk
+Comparing 7080_lageos1_crd_20071202_16_00.frd.chk
+Comparing 7080_giovea_crd_20080508_09_00_v2na.frd.chk
+Comparing beaconc_20110111.npt.chk
+Comparing lageos2_201910.np2.chk
+Comparing 7080_etalon2_crd_20080506_10_00.cmp
+Comparing 7080_etalon2_crd_20080506_10_00.frcmp
+
+-c
+Doing crd_conv_llr_c
+Convert COSPAR Lunar Normalpoints to CRD Format: version 2.00 09/14/2018
+cospar_in = [moon_sum.9001]
+crd_out = [7080_apollo15_1990_00.npt]
+Convert COSPAR Lunar Normalpoints to CRD Format: version 2.00 09/14/2018
+cospar_in = [s25y07d333t0828#103.lu]
+crd_out = [7080_apollo15_20071129_08_00.crd]
+comparing .npt
+1c1
+< h1 CRD 2 2021 3 4 19
+---
+> h1 CRD 2 2019 10 16 13
+comparing .crd
+1c1
+< h1 CRD 2 2021 3 4 19
+---
+> h1 CRD 2 2019 10 16 13
+
+-c
+Doing crd_conv_slr_c
+Convert Merit Fullrate to CRD Format: version 2.01 10/16/2019
+mrt_in = [s25y07d336t1600#1155.mrt]
+crd_out = [7080_lageos1_20071202_16_00.frd]
+Convert CRD Fullrate to Merit II Format: version 2.01b 12/23/2028
+crd_in = [7080_lageos1_20071202_16_00.frd]
+cstg_out = [s25y07d336t1600#1155.mrt_c]
+Convert CSTG Normalpoints and Quicklook to CRD Format: version 2.01 10/16/2019
+qld_in = [s25y07d336t1600#1155.qld]
+crd_out1 = [7080_lageos1_20071202_16_00.npt]
+crd_out2 = [7080_lageos1_20071202_16_00.qlk]
+Convert CSTG Normalpoints and Quicklook to CRD Format: version 2.01 10/16/2019
+qld_in = [s25y07d336t1600#1155.npt]
+crd_out1 = [7080_lageos1_20071202_16_00.npt]
+crd_out2 = [7080_lageos1_20071202_16_00.qlk]
+Could not open file s25y07d336t1600#1155.npt
+Convert CRD Normalpoints to CSTG Format: version 2.00 05/06/2019
+crd_in = [7080_lageos1_20071202_16_00.npt]
+cstg_out = [s25y07d336t1600#1155.np]
+Convert CRD Normalpoints to CSTG Format: version 2.00 05/06/2019
+crd_in = [7080_lageos1_20071202_16_00.np2]
+cstg_out = [s25y07d336t1600#1155.np-2]
+Convert CRD Normalpoints to CSTG Format: version 2.00 05/06/2019
+crd_in = [7080_lageos1_20071202_16_00.np2-na]
+cstg_out = [s25y07d336t1600#1155.np-2na]
+Convert CRD Quicklook to CSTG Format: version 2.00 05/06/2019
+crd_in = [7080_lageos1_20071202_16_00.qlk]
+cstg_out = [s25y07d336t1600#1155.ql]
+Convert CRD Quicklook to CSTG Format: version 2.00 05/06/2019
+crd_in = [7080_lageos1_20071202_16_00.ql2-na]
+cstg_out = [s25y07d336t1600#1155.ql-2na]
+comparing 7080_lageos1_20071202_16_00.frd
+1c1
+< h1 CRD 2 2021 3 4 19
+---
+> h1 CRD 2 2019 10 16 2
+comparing s25y07d336t1600#1155.mrt_c
+49c49
+< 760390107336576462599990708024191433307806725 39930496878      05320 80462805 6613191  1601    0    -837     0 1030   024211160031
+---
+> 760390107336576462599990708024191433308806725 39930496878      05320 80462805 6613191  1601    0    -837     0 1030   024211160031
+198c198
+< 760390107336577025842173708024191587340789010 40039268378      05320 80462805 6613265  1601    0    -837     0 1030   024211160031
+---
+> 760390107336577025842173708024191587341789010 40039268378      05320 80462805 6613265  1601    0    -837     0 1030   024211160031
+372c372
+< 760390107336578156325372708024191768074739668 40452041284      05320 80462807 6613542  1601    0    -837     0 1030   024211160031
+---
+> 760390107336578156325372708024191768074739669 40452041284      05320 80462807 6613542  1601    0    -837     0 1030   024211160031
+comparing 7080_lageos1_20071202_16_00.npt
+2c2
+< h1 CRD 2 2021 3 4 19
+---
+> h1 CRD 2 2021 2 9 22
+comparing 7080_lageos1_20071202_16_00.qlk
+2c2
+< h1 CRD 2 2021 3 4 19
+---
+> h1 CRD 2 2019 10 16 12
+comparing s25y07d336t1600#1155.np
+comparing s25y07d336t1600#1155.np CRD v2
+comparing s25y07d336t1600#1155.np CRD v2-na
+comparing s25y07d336t1600#1155.ql
+comparing s25y07d336t1600#1155.ql CRD v2-na
+
+-c
+Doing crd_conv_v1v2
+Running crd_conv on s25y18d030t2353#4379.frd
+in: s25y18d030t2353#4379.frd
+out: s25y18d030t2353#4379.frd.v2
+Compare s25y18d030t2353#4379.frd.v2
+Running crd_conv on s25y18d030t2353#4379.npt
+in: s25y18d030t2353#4379.npt
+out: s25y18d030t2353#4379.npt.v2
+Compare s25y18d030t2353#4379.npt.v2
+Running crd_conv on s25y18d052t0159#5986.frd
+in: s25y18d052t0159#5986.frd
+out: s25y18d052t0159#5986.frd.v2
+Compare s25y18d052t0159#5986.frd.v2
+Running crd_conv on s25y18d052t0159#5986.npt
+in: s25y18d052t0159#5986.npt
+out: s25y18d052t0159#5986.npt.v2
+Compare s25y18d052t0159#5986.npt.v2
+Running crd_create on lageos1_20180112.frd
+in: lageos1_20180112.frd
+out: lageos1_20180112.frd.v2Y
+fill in: ../create.dat.YARL
+Compare lageos1_20180112.frd.v2Y
+Running crd_create on lageos1_201801.npt
+in: lageos1_201801.npt
+out: lageos1_201801.npt.v2Y
+fill in: ../create.dat.YARL
+Compare lageos1_201801.npt.v2Y
+Running crd_create on lageos1_20180416.npt
+in: lageos1_20180416.npt
+out: lageos1_20180416.npt.v2Y
+fill in: ../create.dat.YARL
+Compare lageos1_20180416.npt.v2Y
+Running crd_create on lageos2_201802.npt
+in: lageos2_201802.npt
+out: lageos2_201802.npt.v2Y
+fill in: ../create.dat.YARL
+Compare lageos2_201802.npt.v2Y
+Running crd_create on lageos1_20180112.frd
+in: lageos1_20180112.frd
+out: lageos1_20180112.frd.v2C
+fill in: ../create.dat.CHAL
+Compare lageos1_20180112.frd.v2C
+Running crd_create on lageos1_201801.npt
+in: lageos1_201801.npt
+out: lageos1_201801.npt.v2C
+fill in: ../create.dat.CHAL
+Compare lageos1_201801.npt.v2C
+Running crd_create on lageos1_20180416.npt
+in: lageos1_20180416.npt
+out: lageos1_20180416.npt.v2C
+fill in: ../create.dat.CHAL
+Compare lageos1_20180416.npt.v2C
+Running crd_create on lageos2_201802.npt
+in: lageos2_201802.npt
+out: lageos2_201802.npt.v2C
+fill in: ../create.dat.CHAL
+Compare lageos2_201802.npt.v2C
+Compare lageos1_20180112.frd.v2C.chk
+Compare lageos1_20180112.frd.v2Y.chk
+Compare lageos1_201801.npt.v2C.chk
+Compare lageos1_201801.npt.v2Y.chk
+Compare lageos1_20180416.npt.v2C.chk
+Compare lageos1_20180416.npt.v2Y.chk
+Compare lageos2_201802.npt.v2C.chk
+Compare lageos2_201802.npt.v2Y.chk
+
+-c
+Doing crd_split_c
+new file name:[7080_apollo15_crd_931206_0937_0.frd]
+new file name:[7080_apollo15_crd_931206_0937_0.npt]
+new file name:[7080_apollo15_crd_931206_0959_0.frd]
+new file name:[7080_apollo15_crd_931206_0959_0.npt]
+new file name:[7080_luna21_crd_931206_1015_0.frd]
+new file name:[7080_apollo11_crd_931206_1119_0.frd]
+new file name:[7080_apollo11_crd_931206_1119_0.npt]
+new file name:[7080_apollo11_crd_931206_1141_0.frd]
+new file name:[7080_apollo11_crd_931206_1141_0.npt]
+new file name:[7080_apollo15_crd_931206_1154_0.frd]
+new file name:[7080_apollo15_crd_931206_1154_0.npt]
+new file name:[7080_apollo15_crd_931206_1210_0.frd]
+new file name:[7080_apollo15_crd_931206_1210_0.npt]
+new file name:[7080_apollo11_crd_931206_1317_0.frd]
+new file name:[7080_apollo15_crd_931219_0053_0.frd]
+new file name:[7080_apollo15_crd_931219_0053_0.npt]
+new file name:[7080_apollo15_crd_931219_0103_0.frd]
+new file name:[7080_apollo15_crd_931219_0103_0.npt]
+new file name:[7080_apollo11_crd_931219_0128_0.frd]
+new file name:[7080_apollo15_crd_931223_0132_0.frd]
+new file name:[7080_apollo15_crd_931223_0132_0.npt]
+new file name:[7080_apollo14_crd_931223_0159_0.frd]
+new file name:[7080_apollo14_crd_931223_0212_0.frd]
+new file name:[7080_apollo15_crd_931223_0338_0.frd]
+new file name:[7080_apollo15_crd_931223_0338_0.npt]
+new file name:[7080_apollo15_crd_931223_0348_0.frd]
+new file name:[7080_apollo15_crd_931223_0348_0.npt]
+new file name:[7080_apollo15_crd_931223_0406_0.frd]
+new file name:[7080_apollo15_crd_931223_0406_0.npt]
+new file name:[7080_apollo14_crd_931223_0441_0.frd]
+new file name:[7080_apollo14_crd_931223_0441_0.npt]
+new file name:[7080_apollo14_crd_931223_0500_0.frd]
+new file name:[7080_apollo14_crd_931223_0500_0.npt]
+new file name:[7080_apollo14_crd_931223_0518_0.frd]
+new file name:[7080_apollo14_crd_931223_0518_0.npt]
+new file name:[7080_ICESAT_crd_071220_0138_0.npt]
+new file name:[7080_ICESAT_crd_071220_0138_0.qlk]
+new file name:[7080_ICESAT_crd_071220_0138_0.frd]
+new file name:[7080_Beacon-C_crd_071220_1715_0.npt]
+new file name:[7080_Beacon-C_crd_071220_1715_0.qlk]
+new file name:[7080_Beacon-C_crd_071220_1715_0.frd]
+new file name:[7080_ERS2_crd_071220_1732_0.npt]
+new file name:[7080_ERS2_crd_071220_1732_0.qlk]
+new file name:[7080_ERS2_crd_071220_1732_0.frd]
+new file name:[7080_JASON1_crd_071220_2033_0.npt]
+new file name:[7080_JASON1_crd_071220_2033_0.qlk]
+new file name:[7080_JASON1_crd_071220_2033_0.frd]
+new file name:[7080_STELLA_crd_071220_2128_0.npt]
+new file name:[7080_STELLA_crd_071220_2128_0.qlk]
+new file name:[7080_STELLA_crd_071220_2128_0.frd]
+new file name:[7840_lageos2_crd_191010_0741_0.npt]
+new file name:[7840_lageos2_crd_191009_0941_0.npt]
+new file name:[7840_lageos2_crd_191009_2336_0.npt]
+comparing 7080_apollo11_crd_931206_1119_0.npt
+comparing 7080_apollo11_crd_931206_1141_0.npt
+comparing 7080_apollo14_crd_931223_0441_0.npt
+comparing 7080_apollo14_crd_931223_0500_0.npt
+comparing 7080_apollo14_crd_931223_0518_0.npt
+comparing 7080_apollo15_crd_931206_0937_0.npt
+comparing 7080_apollo15_crd_931206_0959_0.npt
+comparing 7080_apollo15_crd_931206_1154_0.npt
+comparing 7080_apollo15_crd_931206_1210_0.npt
+comparing 7080_apollo15_crd_931219_0053_0.npt
+comparing 7080_apollo15_crd_931219_0103_0.npt
+comparing 7080_apollo15_crd_931223_0132_0.npt
+comparing 7080_apollo15_crd_931223_0338_0.npt
+comparing 7080_apollo15_crd_931223_0348_0.npt
+comparing 7080_apollo15_crd_931223_0406_0.npt
+comparing 7080_Beacon-C_crd_071220_1715_0.npt
+comparing 7080_ERS2_crd_071220_1732_0.npt
+comparing 7080_ICESAT_crd_071220_0138_0.npt
+comparing 7080_JASON1_crd_071220_2033_0.npt
+comparing 7080_STELLA_crd_071220_2128_0.npt
+comparing 7840_lageos2_crd_191009_0941_0.npt
+comparing 7840_lageos2_crd_191009_2336_0.npt
+comparing 7840_lageos2_crd_191010_0741_0.npt
+comparing 7080_Beacon-C_crd_071220_1715_0.qlk
+comparing 7080_ERS2_crd_071220_1732_0.qlk
+comparing 7080_ICESAT_crd_071220_0138_0.qlk
+comparing 7080_JASON1_crd_071220_2033_0.qlk
+comparing 7080_STELLA_crd_071220_2128_0.qlk
+comparing 7080_apollo11_crd_931206_1119_0.frd
+comparing 7080_apollo11_crd_931206_1141_0.frd
+comparing 7080_apollo11_crd_931206_1317_0.frd
+comparing 7080_apollo11_crd_931219_0128_0.frd
+comparing 7080_apollo14_crd_931223_0159_0.frd
+comparing 7080_apollo14_crd_931223_0212_0.frd
+comparing 7080_apollo14_crd_931223_0441_0.frd
+comparing 7080_apollo14_crd_931223_0500_0.frd
+comparing 7080_apollo14_crd_931223_0518_0.frd
+comparing 7080_apollo15_crd_931206_0937_0.frd
+comparing 7080_apollo15_crd_931206_0959_0.frd
+comparing 7080_apollo15_crd_931206_1154_0.frd
+comparing 7080_apollo15_crd_931206_1210_0.frd
+comparing 7080_apollo15_crd_931219_0053_0.frd
+comparing 7080_apollo15_crd_931219_0103_0.frd
+comparing 7080_apollo15_crd_931223_0132_0.frd
+comparing 7080_apollo15_crd_931223_0338_0.frd
+comparing 7080_apollo15_crd_931223_0348_0.frd
+comparing 7080_apollo15_crd_931223_0406_0.frd
+comparing 7080_Beacon-C_crd_071220_1715_0.frd
+comparing 7080_ERS2_crd_071220_1732_0.frd
+comparing 7080_ICESAT_crd_071220_0138_0.frd
+comparing 7080_JASON1_crd_071220_2033_0.frd
+comparing 7080_lageos1_20071202_16_00.frd
+comparing 7080_luna21_crd_931206_1015_0.frd
+comparing 7080_STELLA_crd_071220_2128_0.frd
+Merged 3 passes!
+Differences on h1 headers are due to different creation dates.
+comparing beaconc_20070511.npt
+1c1
+< h1 CRD  1 2021  3  4 19
+---
+> h1 CRD  0 2009  9  4 18
+comparing beaconc_20070511.qlk
+1c1
+< h1 CRD  1 2021  3  4 19
+---
+> h1 CRD  0 2009  9  4 18
+comparing beaconc_20070511.frd
+1c1
+< h1 CRD  1 2021  3  4 19
+---
+> h1 CRD  0 2009  9  4 18
+
+-c
+Bypassing include
+done
