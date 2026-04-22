@@ -1,0 +1,242 @@
+{
+  "config": {
+    "basis_tsv": "request4_llr_apollo_baseline_basis.tsv",
+    "residuals_tsv": "request4_llr_apollo_baseline_residuals.tsv",
+    "coefficients_tsv": "request4_llr_apollo_baseline_coefficients.tsv",
+    "summary_json": "request4_llr_apollo_baseline_fit_summary.json",
+    "summary_svg": "request4_llr_apollo_baseline_fit_summary.svg",
+    "skyfield_cache_dir": "data/request4_llr/skyfield_cache",
+    "ephemeris_name": "de421.bsp",
+    "annual_harmonics": 3,
+    "monthly_harmonics": 6,
+    "day_harmonics": 4
+  },
+  "row_count": 3846,
+  "coverage_start": "2006-04-07T06:26:30Z",
+  "coverage_end": "2020-12-27T06:58:30Z",
+  "nominal_model": {
+    "description": "Skyfield DE421 Earth-Moon center distance only.",
+    "ephemeris_name": "de421.bsp",
+    "cache_dir": "data/request4_llr/skyfield_cache"
+  },
+  "design_matrix": {
+    "column_count": 112,
+    "terms": [
+      "const",
+      "t_year_centered",
+      "t_year_centered_sq",
+      "annual_1_sin",
+      "annual_1_cos",
+      "annual_2_sin",
+      "annual_2_cos",
+      "annual_3_sin",
+      "annual_3_cos",
+      "synodic_1_sin",
+      "synodic_1_cos",
+      "synodic_2_sin",
+      "synodic_2_cos",
+      "synodic_3_sin",
+      "synodic_3_cos",
+      "synodic_4_sin",
+      "synodic_4_cos",
+      "synodic_5_sin",
+      "synodic_5_cos",
+      "synodic_6_sin",
+      "synodic_6_cos",
+      "sidereal_month_1_sin",
+      "sidereal_month_1_cos",
+      "sidereal_month_2_sin",
+      "sidereal_month_2_cos",
+      "sidereal_month_3_sin",
+      "sidereal_month_3_cos",
+      "sidereal_month_4_sin",
+      "sidereal_month_4_cos",
+      "sidereal_month_5_sin",
+      "sidereal_month_5_cos",
+      "sidereal_month_6_sin",
+      "sidereal_month_6_cos",
+      "anomalistic_1_sin",
+      "anomalistic_1_cos",
+      "anomalistic_2_sin",
+      "anomalistic_2_cos",
+      "anomalistic_3_sin",
+      "anomalistic_3_cos",
+      "anomalistic_4_sin",
+      "anomalistic_4_cos",
+      "anomalistic_5_sin",
+      "anomalistic_5_cos",
+      "anomalistic_6_sin",
+      "anomalistic_6_cos",
+      "solar_day_1_sin",
+      "solar_day_1_cos",
+      "solar_day_2_sin",
+      "solar_day_2_cos",
+      "solar_day_3_sin",
+      "solar_day_3_cos",
+      "solar_day_4_sin",
+      "solar_day_4_cos",
+      "sidereal_day_1_sin",
+      "sidereal_day_1_cos",
+      "sidereal_day_2_sin",
+      "sidereal_day_2_cos",
+      "sidereal_day_3_sin",
+      "sidereal_day_3_cos",
+      "sidereal_day_4_sin",
+      "sidereal_day_4_cos",
+      "synodic_1_minus_annual_sin",
+      "synodic_1_minus_annual_cos",
+      "synodic_1_plus_annual_sin",
+      "synodic_1_plus_annual_cos",
+      "synodic_2_minus_annual_sin",
+      "synodic_2_minus_annual_cos",
+      "synodic_2_plus_annual_sin",
+      "synodic_2_plus_annual_cos",
+      "synodic_3_minus_annual_sin",
+      "synodic_3_minus_annual_cos",
+      "synodic_3_plus_annual_sin",
+      "synodic_3_plus_annual_cos",
+      "sidereal_month_1_minus_annual_sin",
+      "sidereal_month_1_minus_annual_cos",
+      "sidereal_month_1_plus_annual_sin",
+      "sidereal_month_1_plus_annual_cos",
+      "sidereal_month_2_minus_annual_sin",
+      "sidereal_month_2_minus_annual_cos",
+      "sidereal_month_2_plus_annual_sin",
+      "sidereal_month_2_plus_annual_cos",
+      "sidereal_month_3_minus_annual_sin",
+      "sidereal_month_3_minus_annual_cos",
+      "sidereal_month_3_plus_annual_sin",
+      "sidereal_month_3_plus_annual_cos",
+      "anomalistic_1_minus_annual_sin",
+      "anomalistic_1_minus_annual_cos",
+      "anomalistic_1_plus_annual_sin",
+      "anomalistic_1_plus_annual_cos",
+      "anomalistic_2_minus_annual_sin",
+      "anomalistic_2_minus_annual_cos",
+      "anomalistic_2_plus_annual_sin",
+      "anomalistic_2_plus_annual_cos",
+      "anomalistic_3_minus_annual_sin",
+      "anomalistic_3_minus_annual_cos",
+      "anomalistic_3_plus_annual_sin",
+      "anomalistic_3_plus_annual_cos",
+      "pressure_z",
+      "temperature_z",
+      "humidity_z",
+      "np_duration_z",
+      "log_photon_count_z",
+      "uncertainty_z",
+      "batch_group_b",
+      "batch_group_c_replacement",
+      "batch_group_d_complete",
+      "batch_group_e_complete",
+      "batch_group_f",
+      "reflector_Apollo11",
+      "reflector_Apollo14",
+      "reflector_Luna17",
+      "reflector_Luna21"
+    ]
+  },
+  "fit_diagnostics": {
+    "rank": 112,
+    "singular_value_max": 555582.1235710535,
+    "singular_value_min": 6.662017898707961,
+    "condition_number": 83395.47146500518,
+    "weighted_residual_sum_sq": 8.5789216422148e+19
+  },
+  "nominal_residual_stats": {
+    "rms_m": 6003901.288417692,
+    "wrms_m": 6175459.916381316,
+    "median_abs_m": 5820411.966010779,
+    "p95_abs_m": 7652521.26300095,
+    "max_abs_m": 7984482.814475298
+  },
+  "fitted_residual_stats": {
+    "rms_m": 504763.51805754204,
+    "wrms_m": 406172.00466034276,
+    "median_abs_m": 257327.0712993783,
+    "p95_abs_m": 974719.3272138424,
+    "max_abs_m": 8687167.23986872
+  },
+  "batch_stats": {
+    "group_a": {
+      "count": 941,
+      "weighted_mean_m": 8.636572859841875e-09,
+      "wrms_m": 351899.6371001666,
+      "median_abs_m": 210577.25953014195
+    },
+    "group_b": {
+      "count": 514,
+      "weighted_mean_m": -1.318660436682122e-07,
+      "wrms_m": 551997.6559250708,
+      "median_abs_m": 323185.32271476183
+    },
+    "group_c_replacement": {
+      "count": 361,
+      "weighted_mean_m": 5.281538232786148e-09,
+      "wrms_m": 424249.2757527424,
+      "median_abs_m": 238507.99488241598
+    },
+    "group_d_complete": {
+      "count": 760,
+      "weighted_mean_m": 2.6530604586452864e-08,
+      "wrms_m": 422811.2794574273,
+      "median_abs_m": 270672.2231937498
+    },
+    "group_e_complete": {
+      "count": 915,
+      "weighted_mean_m": -8.08490138601086e-08,
+      "wrms_m": 359532.44829450024,
+      "median_abs_m": 258259.99376210012
+    },
+    "group_f": {
+      "count": 355,
+      "weighted_mean_m": -6.821525053345325e-08,
+      "wrms_m": 494266.4401028326,
+      "median_abs_m": 299072.0714330226
+    }
+  },
+  "reflector_stats": {
+    "Apollo15": {
+      "count": 1792,
+      "weighted_mean_m": -2.4880609882632823e-08,
+      "wrms_m": 422662.2848075619,
+      "median_abs_m": 276856.53413043544
+    },
+    "Apollo11": {
+      "count": 752,
+      "weighted_mean_m": -7.396301867163627e-08,
+      "wrms_m": 410220.89911361097,
+      "median_abs_m": 244465.68901593424
+    },
+    "Apollo14": {
+      "count": 744,
+      "weighted_mean_m": 1.7664159344782627e-08,
+      "wrms_m": 395297.0485152066,
+      "median_abs_m": 254053.84790653735
+    },
+    "Luna21": {
+      "count": 258,
+      "weighted_mean_m": -7.12782778118775e-09,
+      "wrms_m": 304299.5521117753,
+      "median_abs_m": 197677.09091139678
+    },
+    "Luna17": {
+      "count": 300,
+      "weighted_mean_m": -3.936873355432574e-08,
+      "wrms_m": 342632.2513539243,
+      "median_abs_m": 265216.34999941103
+    }
+  },
+  "assessment": {
+    "status": "not_closed",
+    "improvement_factor_rms": 11.894483403876386,
+    "improvement_factor_wrms": 15.204051105258921
+  },
+  "notes": [
+    "This is a narrow APOLLO-only baseline surrogate, not a production LLR estimator.",
+    "The nominal model is geocentric Earth-Moon center distance from DE421 and omits full station, reflector, troposphere, orientation, and relativistic light-time modeling.",
+    "The residual layer includes batch offsets, reflector biases, meteo surrogates, and annual/monthly/day harmonic blocks only.",
+    "Residuals remaining at O(10^5-10^6) m mean the bespoke APOLLO-only branch is still far from a credible weak-field verdict path.",
+    "At that point the healthy next move is to attach to an existing LLR estimator or pivot to the CRD/ILRS canonical path rather than keep growing this surrogate indefinitely."
+  ]
+}

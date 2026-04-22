@@ -34,6 +34,13 @@ That project role should be read carefully:
 So Request 4 is no longer just "one more pending item." It is part of the
 remaining mainline program.
 
+Two cautions should stay attached to that statement:
+
+- the current APOLLO-only branch is a single-station scaffold, not yet a
+  canonical weak-field verdict path,
+- and the APOLLO public page itself says that the legacy text archive is an old
+  format while the newer CRD stream is mirrored through CDDIS.
+
 ## Why Request 4 Was Left Pending
 
 The current repository has:
@@ -81,18 +88,35 @@ Only then is it meaningful to compare the recovered `sigma_1` scale with publish
 So the honest state is:
 
 - Request 4 is **specified**.
-- Request 4 is **not numerically executed** in this workspace yet.
-- The blocker is not the EFT. The blocker is the missing real LLR estimator and curated data ingest.
+- A pinned public APOLLO normal-point release and ingest scaffold now exist in
+  the workspace; see `REQUEST4_LLR_APOLLO_INGEST.md`.
+- That ingest already exposed one archive inconsistency: the public `group_b`
+  file currently contains `514` records while the APOLLO page describes `506`.
+- A narrow baseline nuisance/design layer now also exists; see
+  `REQUEST4_LLR_BASELINE_SCAFFOLD.md`.
+- A first APOLLO-only baseline surrogate fit also now exists; see
+  `REQUEST4_LLR_BASELINE_FIT.md`.
+- That surrogate improves a geocentric `DE421` nominal residual by about
+  `12x` in RMS, but still leaves residuals at `O(10^5-10^6 m)`.
+- So Request 4 is still **not a real weak-field parameter fit** in this
+  workspace.
+- The blocker is now very concrete: the self-built APOLLO-only surrogate does
+  not close cleanly enough, which points toward an existing LLR estimator stack
+  or the CRD/ILRS canonical path rather than indefinite growth of the bespoke
+  branch.
 
 ## Immediate Next Step
 
-If Request 4 is the next priority, the next concrete action is:
+If Request 4 remains the next priority, the next concrete action is now:
 
-1. choose the public data source to target first,
-2. download a fixed release of those normal points into the workspace,
-3. either attach to an existing LLR codebase or build a narrow ingest-plus-linearized-fit scaffold around that release.
+1. stop growing the APOLLO-only surrogate as if it were on track to become a
+   final weak-field estimator by itself,
+2. attach the already-pinned data branch to an existing LLR codebase or
+   estimation stack, or else pivot to the CRD/ILRS canonical path,
+3. only on top of that more credible estimator layer add the EFT remapping and
+   nuisance estimation for `sigma_1`, `sigma_2`.
 
-Anything short of that is still Request 3 territory, not Request 4.
+Anything short of that is still ingest territory, not the real Request 4 fit.
 
 Given the present project state, that is also the correct strategic next move
 if the goal is the tied-vs-decoupled verdict rather than further local clock

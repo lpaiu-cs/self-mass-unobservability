@@ -1,0 +1,119 @@
+{
+  "config": {
+    "input_tsv": "request4_llr_apollo_normal_points.tsv",
+    "basis_tsv": "request4_llr_apollo_baseline_basis.tsv",
+    "summary_json": "request4_llr_apollo_baseline_scaffold_summary.json",
+    "summary_svg": "request4_llr_apollo_baseline_scaffold_summary.svg",
+    "reference_batch": "group_a",
+    "reference_reflector": "Apollo15"
+  },
+  "row_count": 3846,
+  "coverage_start": "2006-04-07T06:26:30Z",
+  "coverage_end": "2020-12-27T06:58:30Z",
+  "reference_batch": "group_a",
+  "reference_reflector": "Apollo15",
+  "batch_counts": {
+    "group_a": 941,
+    "group_b": 514,
+    "group_c_replacement": 361,
+    "group_d_complete": 760,
+    "group_e_complete": 915,
+    "group_f": 355
+  },
+  "reflector_counts": {
+    "Apollo15": 1792,
+    "Apollo11": 752,
+    "Apollo14": 744,
+    "Luna21": 258,
+    "Luna17": 300
+  },
+  "basis_columns": [
+    "timestamp_utc",
+    "batch_label",
+    "reflector_name",
+    "one_way_range_m",
+    "uncertainty_ps",
+    "t_days",
+    "t_year_centered",
+    "t_year_centered_sq",
+    "pressure_z",
+    "temperature_z",
+    "humidity_z",
+    "np_duration_z",
+    "log_photon_count_z",
+    "uncertainty_z",
+    "annual_sin",
+    "annual_cos",
+    "synodic_sin",
+    "synodic_cos",
+    "sidereal_sin",
+    "sidereal_cos",
+    "anomalistic_sin",
+    "anomalistic_cos",
+    "batch_group_b",
+    "batch_group_c_replacement",
+    "batch_group_d_complete",
+    "batch_group_e_complete",
+    "batch_group_f",
+    "reflector_Apollo11",
+    "reflector_Apollo14",
+    "reflector_Luna17",
+    "reflector_Luna21"
+  ],
+  "batch_indicator_columns": [
+    "batch_group_b",
+    "batch_group_c_replacement",
+    "batch_group_d_complete",
+    "batch_group_e_complete",
+    "batch_group_f"
+  ],
+  "reflector_indicator_columns": [
+    "reflector_Apollo11",
+    "reflector_Apollo14",
+    "reflector_Luna17",
+    "reflector_Luna21"
+  ],
+  "time_origin_utc": "2006-04-07T06:26:30Z",
+  "time_span_days": 5378.022222222222,
+  "zscore_stats": {
+    "pressure": {
+      "mean": 728.245715028601,
+      "std": 3.6285868149247142
+    },
+    "temperature": {
+      "mean": 7.372568902756111,
+      "std": 6.199060872360472
+    },
+    "humidity": {
+      "mean": 37.32553302132085,
+      "std": 18.299371223361376
+    },
+    "np_duration": {
+      "mean": 248.15392615704627,
+      "std": 135.88196607362607
+    },
+    "log_photon_count": {
+      "mean": 2.243403671426271,
+      "std": 0.4893800108227765
+    },
+    "uncertainty_ps": {
+      "mean": 33.24076963078523,
+      "std": 152.1535506362653
+    }
+  },
+  "zero_photon_count": 1,
+  "harmonic_period_days": {
+    "annual": 365.24219,
+    "synodic_month": 29.530588,
+    "sidereal_month": 27.321661,
+    "anomalistic_month": 27.55455
+  },
+  "notes": [
+    "This is a nuisance/design scaffold for the APOLLO-only branch, not a GR residual fit.",
+    "Batch indicators are included because APOLLO release groups may coincide with reduction-version boundaries.",
+    "Reflector indicators provide a first scaffold for reflector-specific biases.",
+    "Annual and lunar-month harmonics are surrogate basis functions only; they are not a physical Earth-Moon ephemeris.",
+    "One zero-photon record is floored at photon_count=1 before taking log10 so the design matrix stays finite."
+  ],
+  "stop_rule": "If a narrow APOLLO-only baseline GR residual layer cannot be stabilized on top of this scaffold, the next move should be to attach to an existing LLR estimator or pivot to the CRD/ILRS path."
+}

@@ -169,6 +169,18 @@ delta_SEP = sigma_1 (s_E-s_M) + sigma_2 (s_E^2-s_M^2)
 - `sigma_1` 한계가 published Nordtvedt/LLR 규모와 같은 order에 도달한다.
 - `sigma_2`는 약한 장에서 거의 안 보인다는 점을 posterior로 확인한다.
 
+**현재 상태**
+
+- pinned APOLLO legacy release와 ingest/QC scaffold는 이미 확보되었다.
+- APOLLO-only nuisance/design scaffold도 구현되었다.
+- `DE421` geocentric Earth-Moon-center nominal 위에 batch/reflector/meteo/
+  harmonic surrogate를 얹은 좁은 baseline probe까지는 실행되었다.
+- 그 결과 nominal residual `rms ~ 6.0e6 m`가 `~5.0e5 m`까지는 줄었지만,
+  residual이 여전히 `O(10^5-10^6 m)`라 bespoke APOLLO-only branch는
+  닫히지 않았다.
+- 따라서 Request 4의 다음 주력은 더 많은 surrogate를 쌓는 것이 아니라,
+  기존 LLR estimator/codebase 또는 CRD/ILRS canonical path에 붙이는 쪽이다.
+
 ## Request 5. PSR J0337+1715: 두 단계 분석으로 분리
 
 원문의 J0337 요청도 "공개 자료로 즉시 가능한 것"과 "전용 timing code가 있어야 가능한 것"이 섞여 있다. 먼저 번역 가능한 posterior를 만들고, 그 다음 full TOA fit으로 간다.

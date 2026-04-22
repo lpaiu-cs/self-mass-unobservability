@@ -1,0 +1,159 @@
+<html>
+<head>
+<title>APOLLO Normal Points</title>
+</head>
+
+<body BACKGROUND="../backgrnd/mildback.gif">
+<h1><p>APOLLO Normal Points<p></h1>
+
+<h2>APOLLO data also available at the <a href="ftp://cddis.gsfc.nasa.gov/slr/data/npt_crd/">NASA CDDIS Archive</a></h2>
+
+<p>Format is new CRD (consolidated range data), updated more regularly than this site.  Subdirectories apollo11, apollo14, apollo15, luna17, luna21.</p>
+
+<h3>Invitation for Collaboration</h3>
+
+<p>APOLLO scientists are eager to participate in science endeavors that can
+benefit from APOLLO data.  We believe that it is through open collaboration
+that the best scientific progress is made.  Communication between analysis
+efforts and data collection efforts will almost certainly benefit both:
+anomalous signals may be traceable to instrumentation artifacts if the data
+collection effort is suitably informed; and observing suggestions arising
+from the analysis may translate to improved analysis capability.</p>
+
+<p>We ask that APOLLO members be invited to participate in derivative
+science, one goal being co-authorship on science papers.  APOLLO members
+may decline the invitation to co-author results if we have little to
+contribute, but we nonetheless ask for the courtesy of invitation to
+be extended.  The data are available without this requirement. </p>
+
+
+<h3>Normal Point Versions</h3>
+
+<p>APOLLO data reduction is a subtle task, dealing with multi-photon
+returns and associated biases, an array detector, variable spatial
+illumination, end other issues.  Therefore, the normal points are
+periodically upgraded based on new reduction techniques.  On this page, we
+will keep a running archive of old reduction products.  Typically, the file
+at the top of the list is the most relevant, most up-to-date set.</p>
+
+<h3>Normal Point Format</h3>
+
+<p>We are currently using a very old normal point format that is favored by
+JPL.  We intend to switch to the latest ILRS format in the near future, and
+archive our points on their web site.</p>
+
+<p> A typical normal point appears as follows:</p>
+
+<p><tt>512008 330123950000000026170710379889370610207   317312B 72439 -5134 5320A 250A</tt></p>
+
+<p>The fields are:
+<table BORDER>
+<tr><td>field</td><td>width</td><td>represents</td><td>this example</td><td>notes</td></tr>
+
+<tr><td><tt>51</tt></td><td>2</td><td>?</td><td>51</td><td></td></tr>
+
+<tr><td><tt>2008</tt></td><td>4</td><td>year</td><td>2008</td><td>time is UTC launch time</td></tr>
+
+<tr><td><tt> 3</tt></td><td>2</td><td>Month</td><td>March</td><td></td></tr>
+
+<tr><td><tt>30</tt></td><td>2</td><td>Day</td><td>30<sup>th</sup></td><td></td></tr>
+
+<tr><td><tt>12</tt></td><td>2</td><td>Hour</td><td>12 h</td><td></td></tr>
+
+<tr><td><tt>39</tt></td><td>2</td><td>Monute</td><td>39 m</td><td></td></tr>
+
+<tr><td><tt>500000000</tt></td><td>9</td><td>10<sup>-7</sup>seconds</td><td>50.0000000 s</td><td></td></tr>
+
+<tr><td><tt>26170710379889</tt></td><td>14</td><td>round trip time, 10<sup>-13</sup> seconds</td><td>2.6170710379889 s</td><td>measured round trip</td></tr>
+
+<tr><td><tt>3</tt></td><td>1</td><td>reflector number</td><td>Apollo 15 (#3)</td><td>0=A11; 1=L1; 2=A14; 3=A15; 4=L2</td></tr>
+
+<tr><td><tt>70610</tt></td><td>5</td><td>station ID</td><td>Apache Point</td><td></td></tr>
+
+<tr><td><tt>207</tt></td><td>3</td><td># photons in NP</td><td>207 photons</td><td>saturates at 999</td></tr>
+
+<tr><td><tt>   317</tt></td><td>6</td><td>uncert in 0.1 ps</td><td>31.7 ps</td><td></td></tr>
+
+<tr><td><tt>312</tt></td><td>3</td><td>10&times;SNR</td><td>31.2</td><td>saturates at 99.9</td></tr>
+
+<tr><td><tt>B</tt></td><td>1</td><td>data quality grade</td><td>B</td><td>A, B, C, D</td></tr>
+
+<tr><td><tt> 72439</tt></td><td>6</td><td>pressure, 0.01 mbar</td><td>724.39 mbar</td><td></td></tr>
+
+<tr><td><tt> -51</tt></td><td>4</td><td>temperature, 0.1&deg;C</td><td>-5.1&deg;C</td><td></td></tr>
+
+<tr><td><tt>34</tt></td><td>2</td><td>% relative humidity</td><td>34%</td><td></td></tr>
+
+<tr><td><tt> 5320</tt></td><td>5</td><td>wavelength, angstroms</td><td>5320 angstrom</td><td></td></tr>
+
+<tr><td><tt>A</tt></td><td>1</td><td>?</td><td>A</td><td></td></tr>
+
+<tr><td><tt> 250</tt></td><td>4</td><td>NP duration, sec</td><td>250 sec</td><td></td></tr>
+
+<tr><td><tt>A</tt></td><td>1</td><td>?</td><td>A</td><td></td></tr>
+
+</table>
+
+<h3>Normal Point batches (text files)</h3>
+
+<p>2020 Dec. 27:<br>
+<a href="./190823f_apollo_np2.txt">Group f</a> (355 NPs, 2019-08-23 to 2020-12-27; replaced 2022.01.05)<br>
+<a href="./190823_notes.txt">notes</a><p>
+
+<p>2016 Sept. 12:<br>
+<a href="./160912e_apollo_np2.txt">Group e complete</a> (915 NPs, 2016-09-12 to 2019-08-18; replaced 2022.01.05)<br>
+<a href="./160912_notes.txt">notes</a><p>
+
+<p>2016 July 25:<br>
+<a href="./160725d_apollo_np.txt">Group d complete</a> (760 NPs, 2013-09-30 to 2016-07-25)<br>
+<a href="./160725_notes.txt">notes</a><p>
+
+<p>2016 Nov. 25:<br>
+<a href="./161125_apollo_np.txt">Group d extension</a> (superseded by complete collection above; 315 NPs, 2015-11-21 to 2016-11-25)<br>
+<a href="./161125_notes.txt">notes</a><p>
+
+<p>2015 Dec. 1:<br>
+<a href="./151201_apollo_np.txt">Group d extension</a> (superseded by complete collection above; 258 NPs, 2014-11-18 to 2015-11-03)<br>
+<a href="./151201_notes.txt">notes</a><p>
+
+<p>2014 Nov. 20:<br>
+<a href="./141120d_apollo_np.txt">Group d</a> (superseded by complete collection above; 259 NPs, 2013-09-30 to 2014-11-17)<br>
+<a href="./141120_notes.txt">notes</a><p>
+
+<p>2013 Dec. 19:<br>
+<a href="./131219c_apollo_np.txt">Group c replacement</a> (361 NPs, 2012-04-06 to 2013-09-01)<br>
+<a href="./131219_notes.txt">notes</a><p>
+
+<p>2012 Nov. 6:<br>
+<a href="./121106a_apollo_np.txt">Group a</a> (941 NPs, 2006-04-07 to 2010-10-30)<br>
+<a href="./121106b_apollo_np.txt">Group b</a> (506 NPs, 2010-12-01 to 2012-04-06)<br>
+<a href="./121106c_apollo_np.txt">Group c</a> (118 NPs, 2012-04-07 to 2012-08-28)<br>
+<a href="./121106_notes.txt">notes</a><p>
+
+<p><a href="./101201_apollo_np.txt">2010 Dec. 1</a>
+(942 NPs, 2006-04-07 to 2010-10-30)
+<a href="101201_notes.txt">notes</a></p>
+
+<p><a href="./090717_apollo_np.txt">2009 July 17</a>
+(642 NPs, 2006-04-07 to 2009-06-15)
+<a href="090717_notes.txt">notes</a></p>
+
+<p><a href="./080928_apollo_np.txt">2008 Sept. 28</a>
+(453 NPs, 2006-04-07 to 2008-09-24)
+<a href="080928_notes.txt">notes</a></p>
+
+<p><a href="./080501_apollo_np.txt">2008 May 1</a>
+(322 NPs, 2006-04-07 to 2008-03-30)
+<a href="080501_notes.txt">notes</a></p>
+
+<p>The geocentric (<em>careful: not geodetic</em>) coordinates for the
+APOLLO telescope are approximately: (6374.69213 km radius; 32.6054889&deg;
+latitude; 254.1795778&deg; longitude).  </p>
+
+<br>
+<hr>
+<br>
+<p><a href="./apollo.html">APOLLO main page</a>.<p>
+
+</body>
+</html>
