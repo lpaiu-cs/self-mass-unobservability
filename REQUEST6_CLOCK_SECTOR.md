@@ -195,6 +195,43 @@ So the present Request 6 branch remains what it was already becoming after the
 earlier conceptual fixes: a legitimate local clock-sector audit, not the place
 where the tied-vs-decoupled question is finally settled.
 
+## Status After The Covariance-Proxy Low-Side Push
+
+That final published-summary covariance-aware push has now also been carried
+out.
+
+The upgraded low-side stage is documented in
+`REQUEST6_LOW_SIDE_COVARIANCE_PROXY.md`. Its core change is that `J1906` no
+longer uses a single shared `gamma` observable; instead it carries the
+published `xdot-gamma` timing-analysis covariance through an explicit branch
+mixture between
+
+- a `DD + external geometry` branch, and
+- a `DDGR+xdot` correlated branch.
+
+Likewise, `J1141` is upgraded from a single scintillation branch to a mixture
+between the independent scintillation geometry and the timing-derived
+inclination branch.
+
+The result is decisive at the current staging level:
+
+- baseline after `B1913`: `|kappa_*|_95 = 4.877e-2`
+- previous simple low-side stage (`J1141 + J1906`): `4.861e-2`
+- covariance-proxy `J1141 + J1906`: `4.875e-2`
+
+So the stronger covariance-aware push does not improve the slope direction at
+all. If anything, it slightly worsens it.
+
+The physical reason is also now clearer.
+
+- `J1141` remains genuinely low-side, but too broad to matter.
+- `J1906` stops behaving like a useful low-side source once its published
+  `xdot-gamma` covariance is respected; the correlated branch dominates and
+  shifts its effective `sbar` upward to about `0.154`.
+
+So the low-side bottleneck is no longer just a plausible interpretation. At the
+published-summary covariance level, it has now been demonstrated numerically.
+
 ## What Has To Come Next
 
 The next upgrade path is now narrower and clearer:
@@ -204,11 +241,39 @@ The next upgrade path is now narrower and clearer:
 2. if Request 6 is to be pushed further, the next meaningful upgrade is not
    “one more source” but a source-specific covariance-aware or TOA-level
    treatment of the low-side nuisance sectors,
-3. if that stronger treatment still fails to drive `|\kappa_*|_{95}` toward
-   `1e-2`, then Request 6 should be written up as a support section / local
+3. treat the next low-side covariance-aware / TOA-level upgrade as the
+   decision point for this branch,
+4. if that stronger treatment still does **not** bring `|\kappa_*|_{95}` down
+   into the `10^-2` range, then further effort on Request 6 becomes
+   low-return and the branch should be frozen as a support section / local
    clock-sector audit rather than as the project's main novelty engine,
-4. the actual tied-vs-decoupled verdict should remain in the joint
+5. the actual tied-vs-decoupled verdict should remain in the joint
    free-fall-plus-clock consistency analysis with the LLR and J0337 branches.
+
+## Stop Rule
+
+The current project stop rule for Request 6 is now explicit.
+
+One more serious low-side push is justified:
+
+- a covariance-aware low-side PK likelihood, or
+- a TOA-level low-side timing fit with the nuisance sector carried directly.
+
+But if that upgrade still fails to move the slope constraint into the
+`10^-2` regime, then continuing to push Request 6 as the main novelty engine
+is not a good use of effort. In that case:
+
+- Request 6 gets fixed as a support / local clock-sector audit section,
+- its role becomes documenting the local clock-sector direction and its current
+  ceiling,
+- and the main tied-vs-decoupled verdict is delegated to the joint
+  free-fall-plus-clock analysis.
+
+At the current state of the project, that stop rule is effectively already met
+at the published-summary covariance level. A genuine TOA-level low-side fit is
+the only remaining escalation that could still change the status. Unless that
+path is opened, Request 6 should now be treated as frozen in its support/local-
+audit role.
 
 ## Files
 
@@ -222,3 +287,4 @@ The next upgrade path is now narrower and clearer:
 - `request6_clock_sector_posterior_tied_conservative.tsv`
 - `REQUEST6_B1913_COVARIANCE.md`
 - `REQUEST6_LOW_SIDE_EXTENSIONS.md`
+- `REQUEST6_LOW_SIDE_COVARIANCE_PROXY.md`

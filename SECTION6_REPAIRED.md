@@ -236,6 +236,15 @@ d tau / dt = 1 - v^2/(2c^2) - [1 + zeta_1 s + zeta_2 s^2] U_ext/c^2
 - `gamma_obs = (1 + zeta_1 s + zeta_2 s^2) gamma_GR`라는 ansatz가 어떤 근사에서 정당한지 명시된다.
 - free-fall sector를 건드리지 않고도 clock-sector만으로 남는 제약이 무엇인지 분리된다.
 
+**중단 기준**
+
+- low-side source를 covariance-aware likelihood 또는 TOA-level timing까지
+  한 번 더 밀어도 `|kappa_*|_95`가 `10^-2`대로 내려오지 않으면,
+  Request 6은 더 이상 주 novelty engine으로 밀지 않는다.
+- 그 경우 Request 6은 support/local-audit section으로 고정하고,
+  tied-vs-decoupled의 본판정은 joint free-fall-plus-clock analysis로
+  넘긴다.
+
 ## 실행 순서
 
 실제 작업 순서는 아래가 맞다.

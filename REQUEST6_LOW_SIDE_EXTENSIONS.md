@@ -165,10 +165,31 @@ The next meaningful upgrade has to be one of:
 
 1. a genuinely covariance-aware low-side PK likelihood,
 2. a TOA-level low-side timing fit with the nuisance sectors carried directly,
-3. or, if those still do not drive `|kappa_*|_95` toward `1e-2`, an explicit
-   demotion of Request 6 to a support/local-audit section while the main
-   tied-vs-decoupled verdict is taken from the joint free-fall-plus-clock
-   program.
+3. and that next upgrade should be treated as the decision point for the
+   Request 6 branch,
+4. if even that stronger low-side treatment still does not move
+   `|kappa_*|_95` into the `10^-2` range, then further effort here is
+   low-return and Request 6 should be explicitly frozen as a
+   support/local-audit section,
+5. the main tied-vs-decoupled verdict should then be taken from the joint
+   free-fall-plus-clock program rather than from additional clock-only source
+   chasing.
+
+## Branch Decision Rule
+
+This stage makes the branch logic concrete.
+
+- `B1913 + J1141 + J1906` already show that adding more published
+  PK-summary-level `gamma` systems is not enough.
+- So only one more class of upgrade is worth pursuing here:
+  covariance-aware or TOA-level low-side treatment.
+- If that still fails to pull `|kappa_*|_95` into the `10^-2` regime, then the
+  correct move is to stop pushing Request 6 as a main-engine novelty claim.
+
+At that point, Request 6 should be kept in the paper or note, but only as a
+documented local clock-sector audit. The project's tied-vs-decoupled
+bottom-line should come from the joint free-fall-plus-clock consistency
+analysis.
 
 ## Files
 
