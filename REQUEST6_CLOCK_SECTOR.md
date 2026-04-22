@@ -146,22 +146,69 @@ already being built in the LLR and J0337 branches. Request 6 can sharpen or
 weaken the clock-only branch, but it should not by itself be sold as the final
 discriminator between tied and decoupled physics.
 
+## Status After `B1913` Plus Both Low-Side Follow-Ups
+
+That next-stage source program has now been carried out in the current staging
+framework.
+
+- `PSR B1913+16` was added through the nuisance-aware extension documented in
+  `REQUEST6_B1913_COVARIANCE.md`, which moved the original audit from
+  `|kappa_*|_95 ~= 8.42` down to `4.88e-2`.
+- `PSR J1141-6545` was then added as the physically cleaner low-side surrogate,
+  using the independent scintillation inclination for non-`gamma` mass
+  inference and keeping the WD-driven `xdot` / spin-orbit sector explicit as a
+  caveat.
+- `PSR J1906+0746` was added as the more precise but more nuisance-sensitive
+  low-side surrogate, with an external-inclination branch and an explicitly
+  correlated `xdot`-conditioned branch.
+
+The net result is that the low-side bottleneck survives.
+
+Using the same original local basis point `s* = 0.134196`, the updated
+Fisher-style audit now gives
+
+- baseline after `B1913`: `|kappa_*|_95 = 4.877e-2`
+- `+ J1141`: `4.874e-2`
+- `+ J1906`: `4.864e-2`
+- `+ both`: `4.861e-2`
+
+So adding both low-side systems only improves the current staged audit by about
+`0.3%` relative to the `B1913` baseline.
+
+This is consistent with the source-specific effective rows found in the current
+surrogate implementation:
+
+- `J1141`: genuine low-side source, but `sigma_delta = 1.787e-2` is far too
+  broad to drive the slope direction
+- `J1906`: better nominal precision with `sigma_delta = 6.163e-3`, but the
+  `xdot`-conditioned branch is effectively suppressed by the `gamma`
+  likelihood, so the source does not become the hoped-for low-side rescue
+
+At the combined `B1913 + J1141 + J1906` stage, the front-page local-amplitude
+summary is still modestly better constrained than the slope direction:
+
+- local basis point: `s_ref = 0.155832`
+- `|eta_*|_95 = 2.106e-3`
+- `|kappa_*|_95 = 4.628e-2`
+
+So the present Request 6 branch remains what it was already becoming after the
+earlier conceptual fixes: a legitimate local clock-sector audit, not the place
+where the tied-vs-decoupled question is finally settled.
+
 ## What Has To Come Next
 
-The next upgrade path is now clearer:
+The next upgrade path is now narrower and clearer:
 
-1. strengthen the decoupled clock-only branch first, beginning with covariance-aware incorporation of `PSR B1913+16`,
-2. add a genuinely low-side source with its nuisance sector carried explicitly:
-   `PSR J1141-6545` if physical cleanliness is the priority, `PSR J1906+0746`
-   if raw timing precision is the priority,
-3. rerun the `\kappa_*` audit after those additions and check whether the
-   realistic source set can push `|\kappa_*|_{95}` toward `1e-2`,
-4. if that threshold still remains well out of reach, demote Request 6 from
-   “novelty engine” status to a support section / local clock-sector audit and
-   keep the main tied-vs-decoupled verdict in the joint free-fall-plus-clock
-   consistency analysis,
-5. only after the source-lever-arm question is settled does it make sense to
-   invest in full covariance-aware or TOA-level clock-sector timing fits.
+1. do not expect more of the same PK-summary additions to rescue the slope
+   direction; `B1913 + J1141 + J1906` already show the present ceiling,
+2. if Request 6 is to be pushed further, the next meaningful upgrade is not
+   “one more source” but a source-specific covariance-aware or TOA-level
+   treatment of the low-side nuisance sectors,
+3. if that stronger treatment still fails to drive `|\kappa_*|_{95}` toward
+   `1e-2`, then Request 6 should be written up as a support section / local
+   clock-sector audit rather than as the project's main novelty engine,
+4. the actual tied-vs-decoupled verdict should remain in the joint
+   free-fall-plus-clock consistency analysis with the LLR and J0337 branches.
 
 ## Files
 
@@ -173,3 +220,5 @@ The next upgrade path is now clearer:
 - `request6_clock_sector_posterior_clock_only.tsv`
 - `request6_clock_sector_posterior_tied_optimistic.tsv`
 - `request6_clock_sector_posterior_tied_conservative.tsv`
+- `REQUEST6_B1913_COVARIANCE.md`
+- `REQUEST6_LOW_SIDE_EXTENSIONS.md`

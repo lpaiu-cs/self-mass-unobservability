@@ -17,6 +17,12 @@ The scout is intentionally tied to the current Request 6 machinery:
 This is therefore a **source-selection audit for the current staging analysis**,
 not an exhaustive catalogue of all relativistic pulsars.
 
+It also has a narrower role than the eventual tied-model verdict. In this
+project structure, Request 6 is the place where the **clock-sector local
+direction** is probed. The final tied-vs-decoupled judgement still belongs to a
+joint free-fall-plus-clock consistency check, because the tied hypothesis is a
+combined statement about both sectors.
+
 ## What The Audit Actually Wants
 
 From `request6_lever_arm_audit`, the practical single-source target for opening
@@ -135,17 +141,36 @@ So the problem is now very clear:
   `J1913+1102` for lever arm
 - the **negative/low-side** remains the bottleneck
 
+This is the main strategic output of the scout. It does **not** identify a
+single decisive source that suddenly makes Request 6 conclusive. Instead, it
+quantifies the current ceiling of the Request 6 program under the present
+surrogate-`s_p` / local-basis / Fisher-audit staging assumptions. In that
+sense, the scout is valuable precisely because it shows where Request 6 stops
+being the right place to demand a final tied-model verdict.
+
 ## Practical Next Step
 
 For the next Request 6 upgrade, the most defensible order is:
 
 1. Add `PSR B1913+16` first in a covariance-aware PK fit.
+   This should be interpreted as strengthening the **decoupled clock-only**
+   branch, not as a clean final test of the tied model.
 2. Add one low-side system with explicit nuisance handling.
    - If prioritizing physical cleanliness: `PSR J1141-6545`
    - If prioritizing raw timing precision: `PSR J1906+0746`, but only with
      explicit `xdot-gamma` covariance treatment
-3. Keep `PSR J1757-1854` and `PSR J1756-2251` as clean cross-check systems,
+3. Rerun the `kappa_*` audit after that upgrade.
+4. Keep `PSR J1757-1854` and `PSR J1756-2251` as clean cross-check systems,
    not as primary slope drivers.
+
+## Programmatic Consequence
+
+If the realistic upgraded source set still fails to reach something like
+`|\kappa_*|_95 \lesssim 1e-2`, then the right move is not to keep overloading
+Request 6. At that point Request 6 should be written up as a **local
+clock-sector audit** and treated as a support section, while the real
+tied-vs-decoupled verdict is left to the joint consistency analysis with the
+free-fall sector (`LLR`, `J0337`, and any later real-data orbital tests).
 
 ## Source Notes
 
