@@ -1,0 +1,397 @@
+{
+  "current_basis_gaussian": {
+    "sstar": 0.13419551590434076,
+    "covariance": [
+      [
+        2.8541602562965792e-06,
+        -0.006757640919899775
+      ],
+      [
+        -0.006757640919899775,
+        18.437136534575153
+      ]
+    ],
+    "std_eta_star": 0.0016894260138569487,
+    "std_kappa_star": 4.293848685570459,
+    "abs95_eta_star": 0.0033112749871596196,
+    "abs95_kappa_star": 8.4159434237181,
+    "correlation": -0.9315564943983159
+  },
+  "current_rows": [
+    {
+      "name": "PSR B1534+12",
+      "sbar": 0.13380206328465852,
+      "xc": 0.5011776571712304,
+      "gamma_gr_s": 0.002063801946283937,
+      "sigma_gamma_s": 4.565031811066138e-06,
+      "sigma_delta": 0.0022119524692211343,
+      "delta_gamma_obs": 0.003390855274975957
+    },
+    {
+      "name": "PSR J0737-3039A/B",
+      "sbar": 0.13458896852402302,
+      "xc": 0.48272460774898684,
+      "gamma_gr_s": 0.00038399471838536435,
+      "sigma_gamma_s": 1.618769650507755e-07,
+      "sigma_delta": 0.0004215603947143907,
+      "delta_gamma_obs": 0.0001309435058041153
+    }
+  ],
+  "lever_arm_target_reference": {
+    "target_abs_ds": 0.054195515904340755,
+    "target_sigma_delta": 0.0001994079648317803
+  },
+  "candidate_rows_ranked": [
+    {
+      "name": "PSR B1913+16",
+      "readiness": "moderate",
+      "system_type": "DNS",
+      "nongamma_strategy": "omdot + Pbdot (radiative; Galactic/kinematic corrections required)",
+      "mp_msun": 1.4398,
+      "mp_sigma_msun": 0.0002,
+      "mc_msun": 1.3886,
+      "mc_sigma_msun": 0.0002,
+      "pb_days": 0.322997448911,
+      "eccentricity": 0.6171334,
+      "gamma_obs_s": 0.0042992,
+      "gamma_sigma_s": 8e-07,
+      "gamma_fractional_sigma": 0.00018608113137327873,
+      "xc": 0.49094894640079195,
+      "s_low": 0.13995000000000002,
+      "s_high": 0.17995,
+      "s_mid": 0.15995,
+      "delta_s_from_sstar": 0.025754484095659252,
+      "direction": "positive",
+      "source_urls": [
+        "https://arxiv.org/abs/1011.0718"
+      ],
+      "notes": "Best precision anchor in the scanned sample. It does not bracket s* by itself, but its gamma precision is already at the audit target scale.",
+      "slope_proxy": 8617.384846284847,
+      "new_abs95_kappa_star": 0.052034415581262365,
+      "improvement_factor": 161.73802145572068,
+      "composite_priority_score": 6893.907877027878
+    },
+    {
+      "name": "PSR J1913+1102",
+      "readiness": "moderate",
+      "system_type": "DNS",
+      "nongamma_strategy": "omdot + Pbdot (radiative); gamma then used only as the clock observable",
+      "mp_msun": 1.62,
+      "mp_sigma_msun": 0.03,
+      "mc_msun": 1.27,
+      "mc_sigma_msun": 0.03,
+      "pb_days": 0.2062523345,
+      "eccentricity": 0.089531,
+      "gamma_obs_s": 0.000471,
+      "gamma_sigma_s": 1.5e-05,
+      "gamma_fractional_sigma": 0.03184713375796178,
+      "xc": 0.4394463667820069,
+      "s_low": 0.18500000000000005,
+      "s_high": 0.2,
+      "s_mid": 0.19250000000000003,
+      "delta_s_from_sstar": 0.058304484095659276,
+      "direction": "positive",
+      "source_urls": [
+        "https://arxiv.org/abs/2007.04175"
+      ],
+      "notes": "The best high-s lever-arm source in the scanned set, but the gamma precision is far weaker than B1913+16.",
+      "slope_proxy": 1.6176040818639796,
+      "new_abs95_kappa_star": 1.5252655441565193,
+      "improvement_factor": 5.517690644727811,
+      "composite_priority_score": 1.2940832654911838
+    },
+    {
+      "name": "PSR J1141-6545",
+      "readiness": "conditional",
+      "system_type": "NS-WD",
+      "nongamma_strategy": "omdot + Pbdot + Shapiro-like geometry, but xdot / spin-orbit coupling must be modelled",
+      "mp_msun": 1.27,
+      "mp_sigma_msun": 0.01,
+      "mc_msun": 1.02,
+      "mc_sigma_msun": 0.01,
+      "pb_days": 0.1976509593,
+      "eccentricity": 0.171884,
+      "gamma_obs_s": 0.000773,
+      "gamma_sigma_s": 1.1e-05,
+      "gamma_fractional_sigma": 0.014230271668822767,
+      "xc": 0.44541484716157204,
+      "s_low": 0.1,
+      "s_high": 0.1375,
+      "s_mid": 0.11875000000000001,
+      "delta_s_from_sstar": -0.015445515904340748,
+      "direction": "negative",
+      "source_urls": [
+        "https://arxiv.org/abs/0804.0956",
+        "https://arxiv.org/abs/2001.11405"
+      ],
+      "notes": "Best low-s candidate found in the scan. It gives the desired opposite-side lever arm, but only if the WD-driven xdot nuisance is carried explicitly.",
+      "slope_proxy": 0.5638887531919834,
+      "new_abs95_kappa_star": 2.441090461950275,
+      "improvement_factor": 3.4476163644481654,
+      "composite_priority_score": 0.2537499389363925
+    },
+    {
+      "name": "PSR J1906+0746",
+      "readiness": "tricky",
+      "system_type": "compact companion (DNS or WD)",
+      "nongamma_strategy": "omdot + Pbdot + possible xdot, but gamma and xdot are correlated",
+      "mp_msun": 1.316,
+      "mp_sigma_msun": 0.005,
+      "mc_msun": 1.297,
+      "mc_sigma_msun": 0.005,
+      "pb_days": 0.165993045,
+      "eccentricity": 0.0853022,
+      "gamma_obs_s": 0.000459,
+      "gamma_sigma_s": 2e-06,
+      "gamma_fractional_sigma": 0.004357298474945533,
+      "xc": 0.4963643321852277,
+      "s_low": 0.10900000000000003,
+      "s_high": 0.14900000000000002,
+      "s_mid": 0.12900000000000003,
+      "delta_s_from_sstar": -0.005195515904340725,
+      "direction": "negative",
+      "source_urls": [
+        "https://arxiv.org/abs/2602.05947"
+      ],
+      "notes": "Interesting because it sits slightly below s*, but the paper explicitly reports a ~3.5 sigma mass shift once xdot is fitted, so this is not a front-line clean test case.",
+      "slope_proxy": 0.6349624479551601,
+      "new_abs95_kappa_star": 2.2256252618907286,
+      "improvement_factor": 3.781383851012065,
+      "composite_priority_score": 0.12699248959103202
+    },
+    {
+      "name": "PSR J1756-2251",
+      "readiness": "clean",
+      "system_type": "DNS",
+      "nongamma_strategy": "omdot + r + s (Shapiro-based); Pbdot measured but systematics discussed in the paper",
+      "mp_msun": 1.341,
+      "mp_sigma_msun": 0.007,
+      "mc_msun": 1.23,
+      "mc_sigma_msun": 0.007,
+      "pb_days": 0.31963390143,
+      "eccentricity": 0.1805694,
+      "gamma_obs_s": 0.001148,
+      "gamma_sigma_s": 9e-06,
+      "gamma_fractional_sigma": 0.007839721254355402,
+      "xc": 0.4784130688448075,
+      "s_low": 0.11525,
+      "s_high": 0.15525,
+      "s_mid": 0.13525,
+      "delta_s_from_sstar": 0.0010544840956592527,
+      "direction": "positive",
+      "source_urls": [
+        "https://arxiv.org/abs/1406.5507"
+      ],
+      "notes": "Useful clean Shapiro cross-check. The source table labels gamma in ms but the numerical value is on the 10^-3 s scale; the scout uses the physically consistent seconds interpretation.",
+      "slope_proxy": 0.008277272232484851,
+      "new_abs95_kappa_star": 8.155936042349511,
+      "improvement_factor": 1.031879526766579,
+      "composite_priority_score": 0.008277272232484851
+    },
+    {
+      "name": "PSR J1757-1854",
+      "readiness": "clean",
+      "system_type": "DNS",
+      "nongamma_strategy": "omdot + h3 + varsigma (Shapiro-based); Pbdot available as a cross-check",
+      "mp_msun": 1.3384,
+      "mp_sigma_msun": 0.0009,
+      "mc_msun": 1.3946,
+      "mc_sigma_msun": 0.0009,
+      "pb_days": 0.18353783587,
+      "eccentricity": 0.6058142,
+      "gamma_obs_s": 0.003587,
+      "gamma_sigma_s": 1.2e-05,
+      "gamma_fractional_sigma": 0.003345413994981879,
+      "xc": 0.5102817416758141,
+      "s_low": 0.11460000000000002,
+      "s_high": 0.15460000000000002,
+      "s_mid": 0.13460000000000003,
+      "delta_s_from_sstar": 0.0004044840956592688,
+      "direction": "positive",
+      "source_urls": [
+        "https://arxiv.org/abs/1711.07697"
+      ],
+      "notes": "Methodologically attractive because the leave-one-out mass route can be kept almost entirely inside non-gamma PK information.",
+      "slope_proxy": 0.006408954918016886,
+      "new_abs95_kappa_star": 8.411631073520129,
+      "improvement_factor": 1.0005126651609277,
+      "composite_priority_score": 0.006408954918016886
+    }
+  ],
+  "best_single_candidate": {
+    "name": "PSR B1913+16",
+    "new_abs95_kappa_star": 0.052034415581262365,
+    "improvement_factor": 161.73802145572068
+  },
+  "best_positive_side_candidate": {
+    "name": "PSR B1913+16",
+    "delta_s_from_sstar": 0.025754484095659252,
+    "new_abs95_kappa_star": 0.052034415581262365
+  },
+  "best_negative_side_candidate": {
+    "name": "PSR J1906+0746",
+    "delta_s_from_sstar": -0.005195515904340725,
+    "new_abs95_kappa_star": 2.2256252618907286
+  },
+  "pair_summaries": {
+    "best_pair_any": {
+      "names": [
+        "PSR B1913+16",
+        "PSR J1757-1854"
+      ],
+      "new_abs95_kappa_star": 0.05171984404036122,
+      "improvement_factor": 162.72174790686628,
+      "directions": [
+        "positive",
+        "positive"
+      ],
+      "readiness": [
+        "moderate",
+        "clean"
+      ]
+    },
+    "best_pair_cross_side": {
+      "names": [
+        "PSR B1913+16",
+        "PSR J1906+0746"
+      ],
+      "new_abs95_kappa_star": 0.0517312318116928,
+      "improvement_factor": 162.6859274171748,
+      "directions": [
+        "positive",
+        "negative"
+      ],
+      "readiness": [
+        "moderate",
+        "tricky"
+      ]
+    },
+    "best_pair_cross_side_non_tricky": {
+      "names": [
+        "PSR B1913+16",
+        "PSR J1141-6545"
+      ],
+      "new_abs95_kappa_star": 0.05197551315707298,
+      "improvement_factor": 161.92131472150425,
+      "directions": [
+        "positive",
+        "negative"
+      ],
+      "readiness": [
+        "moderate",
+        "conditional"
+      ]
+    }
+  },
+  "sources": [
+    {
+      "name": "PSR B1913+16",
+      "system_type": "DNS",
+      "readiness": "moderate",
+      "nongamma_strategy": "omdot + Pbdot (radiative; Galactic/kinematic corrections required)",
+      "mp_msun": 1.4398,
+      "mp_sigma_msun": 0.0002,
+      "mc_msun": 1.3886,
+      "mc_sigma_msun": 0.0002,
+      "pb_days": 0.322997448911,
+      "eccentricity": 0.6171334,
+      "gamma_obs_s": 0.0042992,
+      "gamma_sigma_s": 8e-07,
+      "source_urls": [
+        "https://arxiv.org/abs/1011.0718"
+      ],
+      "notes": "Best precision anchor in the scanned sample. It does not bracket s* by itself, but its gamma precision is already at the audit target scale."
+    },
+    {
+      "name": "PSR J1757-1854",
+      "system_type": "DNS",
+      "readiness": "clean",
+      "nongamma_strategy": "omdot + h3 + varsigma (Shapiro-based); Pbdot available as a cross-check",
+      "mp_msun": 1.3384,
+      "mp_sigma_msun": 0.0009,
+      "mc_msun": 1.3946,
+      "mc_sigma_msun": 0.0009,
+      "pb_days": 0.18353783587,
+      "eccentricity": 0.6058142,
+      "gamma_obs_s": 0.003587,
+      "gamma_sigma_s": 1.2e-05,
+      "source_urls": [
+        "https://arxiv.org/abs/1711.07697"
+      ],
+      "notes": "Methodologically attractive because the leave-one-out mass route can be kept almost entirely inside non-gamma PK information."
+    },
+    {
+      "name": "PSR J1756-2251",
+      "system_type": "DNS",
+      "readiness": "clean",
+      "nongamma_strategy": "omdot + r + s (Shapiro-based); Pbdot measured but systematics discussed in the paper",
+      "mp_msun": 1.341,
+      "mp_sigma_msun": 0.007,
+      "mc_msun": 1.23,
+      "mc_sigma_msun": 0.007,
+      "pb_days": 0.31963390143,
+      "eccentricity": 0.1805694,
+      "gamma_obs_s": 0.001148,
+      "gamma_sigma_s": 9e-06,
+      "source_urls": [
+        "https://arxiv.org/abs/1406.5507"
+      ],
+      "notes": "Useful clean Shapiro cross-check. The source table labels gamma in ms but the numerical value is on the 10^-3 s scale; the scout uses the physically consistent seconds interpretation."
+    },
+    {
+      "name": "PSR J1913+1102",
+      "system_type": "DNS",
+      "readiness": "moderate",
+      "nongamma_strategy": "omdot + Pbdot (radiative); gamma then used only as the clock observable",
+      "mp_msun": 1.62,
+      "mp_sigma_msun": 0.03,
+      "mc_msun": 1.27,
+      "mc_sigma_msun": 0.03,
+      "pb_days": 0.2062523345,
+      "eccentricity": 0.089531,
+      "gamma_obs_s": 0.000471,
+      "gamma_sigma_s": 1.5e-05,
+      "source_urls": [
+        "https://arxiv.org/abs/2007.04175"
+      ],
+      "notes": "The best high-s lever-arm source in the scanned set, but the gamma precision is far weaker than B1913+16."
+    },
+    {
+      "name": "PSR J1141-6545",
+      "system_type": "NS-WD",
+      "readiness": "conditional",
+      "nongamma_strategy": "omdot + Pbdot + Shapiro-like geometry, but xdot / spin-orbit coupling must be modelled",
+      "mp_msun": 1.27,
+      "mp_sigma_msun": 0.01,
+      "mc_msun": 1.02,
+      "mc_sigma_msun": 0.01,
+      "pb_days": 0.1976509593,
+      "eccentricity": 0.171884,
+      "gamma_obs_s": 0.000773,
+      "gamma_sigma_s": 1.1e-05,
+      "source_urls": [
+        "https://arxiv.org/abs/0804.0956",
+        "https://arxiv.org/abs/2001.11405"
+      ],
+      "notes": "Best low-s candidate found in the scan. It gives the desired opposite-side lever arm, but only if the WD-driven xdot nuisance is carried explicitly."
+    },
+    {
+      "name": "PSR J1906+0746",
+      "system_type": "compact companion (DNS or WD)",
+      "readiness": "tricky",
+      "nongamma_strategy": "omdot + Pbdot + possible xdot, but gamma and xdot are correlated",
+      "mp_msun": 1.316,
+      "mp_sigma_msun": 0.005,
+      "mc_msun": 1.297,
+      "mc_sigma_msun": 0.005,
+      "pb_days": 0.165993045,
+      "eccentricity": 0.0853022,
+      "gamma_obs_s": 0.000459,
+      "gamma_sigma_s": 2e-06,
+      "source_urls": [
+        "https://arxiv.org/abs/2602.05947"
+      ],
+      "notes": "Interesting because it sits slightly below s*, but the paper explicitly reports a ~3.5 sigma mass shift once xdot is fitted, so this is not a front-line clean test case."
+    }
+  ]
+}
