@@ -1,0 +1,171 @@
+{
+  "status": "mlrs_handshake_alive",
+  "lab_root": "data/request4_llr/mlrs_handshake_lab",
+  "jpl_ephemeris": {
+    "source_url": "https://ssd.jpl.nasa.gov/ftp/eph/planets/Linux/de421/lnxp1900p2053.421",
+    "local_path": "data/request4_llr/mlrs_handshake_lab/data/pred/jpleph.421",
+    "size_bytes": 13966960,
+    "sha256": "5b3f81dd0c505925055a389431fd2bc5e0ae2fd02d85db37fa4d4fe54dfb4096",
+    "top_level_link": "data/request4_llr/mlrs_handshake_lab/JPLEPH",
+    "top_level_link_target": "/Users/lpaiu/vs/lab/self-mass-unobservability/data/request4_llr/mlrs_handshake_lab/data/pred/jpleph.421"
+  },
+  "binaries": {
+    "bin/llr_npt_crd": {
+      "exists": true,
+      "file_description": "Mach-O 64-bit executable arm64",
+      "sha256": "dc61f5131cdcd37084b178642e8cfbdd1bc3fe0c0b47214f266805f3b0f65984"
+    },
+    "bin/Poisson_crd": {
+      "exists": true,
+      "file_description": "Mach-O 64-bit executable arm64",
+      "sha256": "ae621d1473b778b7a60493b195e0472c167e9115d47daf091aa3bd1214514ea5"
+    },
+    "bin/lun_auto_crd": {
+      "exists": true,
+      "file_description": "Mach-O 64-bit executable arm64",
+      "sha256": "2cef762e155af52b2753f06ac3d376e8fb33b3fa02e24020f23aecb6da8620f9"
+    },
+    "bin/lun_sdqi_crd": {
+      "exists": true,
+      "file_description": "Mach-O 64-bit executable arm64",
+      "sha256": "5d1bea20dbebf144496be13a4c16e7a350bc43f813d579d337124609482b4161"
+    },
+    "bin/frd_strip": {
+      "exists": true,
+      "file_description": "Mach-O 64-bit executable arm64",
+      "sha256": "d0fce7691ac519e4c081d7392c86f9b4c3f52a18d27a0076ed946a6a58dcf51b"
+    }
+  },
+  "samples": [
+    {
+      "stem": "s25y11d016t0231#103",
+      "errorc_bytes": 0,
+      "errorc_empty": true,
+      "frd": {
+        "current_sha256": "4272bdc33b31ce1fd070dce342370f9de90b4e5108a6b88801f21527f4a53144",
+        "reference_sha256": "4272bdc33b31ce1fd070dce342370f9de90b4e5108a6b88801f21527f4a53144",
+        "exact_match": true,
+        "line_count_current": 1351,
+        "line_count_reference": 1351,
+        "line_diff_count": 0,
+        "first_diff": null
+      },
+      "npt": {
+        "current_sha256": "46a598a140113e76575f251d1acbef6d93ea14d188bf2c639bfe6b9f7e7272f6",
+        "reference_sha256": "0ae42a7ecee9dab52a08a90460fc38bf0ac99bef6ffb2e661df339b5dcdaf0f9",
+        "exact_match": false,
+        "line_count_current": 14,
+        "line_count_reference": 14,
+        "line_diff_count": 1,
+        "first_diff": {
+          "line_number": 11,
+          "current": "11 10116.445646369561     2.516121436078 std 2 1840.7     12  480.2  -0.297  -1.614   -1988.0   0.00 0",
+          "reference": "11 10116.445646369561     2.516121436078 std 2 1840.7     12  480.2  -0.297  -1.613   -1988.1   0.30 0",
+          "token_diffs": [
+            {
+              "token_index": 10,
+              "current": "-1.614",
+              "reference": "-1.613",
+              "delta": -0.001000000000000112
+            },
+            {
+              "token_index": 11,
+              "current": "-1988.0",
+              "reference": "-1988.1",
+              "delta": 0.09999999999990905
+            },
+            {
+              "token_index": 12,
+              "current": "0.00",
+              "reference": "0.30",
+              "delta": -0.3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "stem": "s25y11d042t0234#103",
+      "errorc_bytes": 0,
+      "errorc_empty": true,
+      "frd": {
+        "current_sha256": "cc198f7a80ca6131409be1a8084e144c16c4d4b4c8760e00318e57fd75c44b83",
+        "reference_sha256": "cc198f7a80ca6131409be1a8084e144c16c4d4b4c8760e00318e57fd75c44b83",
+        "exact_match": true,
+        "line_count_current": 272,
+        "line_count_reference": 272,
+        "line_diff_count": 0,
+        "first_diff": null
+      },
+      "npt": {
+        "current_sha256": "3ac19fcfbf0221a831f210d8d437e5d2a1b87e2fb16e179d63487492e55fe832",
+        "reference_sha256": "fdebb72984c216252cb160cf20d7a05421cba22aab8bdb66b9ea73e03ac9a4a1",
+        "exact_match": false,
+        "line_count_current": 15,
+        "line_count_reference": 15,
+        "line_diff_count": 1,
+        "first_diff": {
+          "line_number": 12,
+          "current": "11 10517.382463431954     2.598984146809 std 2 1490.5      9  328.4   0.640  -0.929   -2499.5   4.67 0",
+          "reference": "11 10517.382463431954     2.598984146809 std 2 1490.5      9  328.4   0.640  -0.929   -2499.5   3.15 0",
+          "token_diffs": [
+            {
+              "token_index": 12,
+              "current": "4.67",
+              "reference": "3.15",
+              "delta": 1.52
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "sample_replay": {
+    "sample_count": 2,
+    "frd_exact_matches": 2,
+    "npt_exact_matches": 0,
+    "npt_single_line_drifts": 2
+  },
+  "pipeline_interfaces": [
+    {
+      "stage": "recalc",
+      "script_file": "data/request4_llr/mlrs_handshake_lab/bin/ldb_crd",
+      "script_lines": "115-126",
+      "command": "bin/llr_npt_crd -r -p poldat_thruJ17 -i ...frcal -o ...frrec",
+      "role": "prediction and residual recalculation",
+      "eft_insertion_candidate": true,
+      "notes": "Nearest place to perturb the gravity model before filtering."
+    },
+    {
+      "stage": "poisson_filter",
+      "script_file": "data/request4_llr/mlrs_handshake_lab/bin/ldb_crd",
+      "script_lines": "132-141",
+      "command": "bin/Poisson_crd -i ...frrec -o ...frfil",
+      "role": "filtering only",
+      "eft_insertion_candidate": false,
+      "notes": "Post-model outlier rejection, not the gravity-model hook."
+    },
+    {
+      "stage": "normalpoint",
+      "script_file": "data/request4_llr/mlrs_handshake_lab/bin/ldb_crd",
+      "script_lines": "174-180",
+      "command": "bin/llr_npt_crd -n -p poldat_thruJ17 -i ...frfil3 -o ...frfin -m ...npt",
+      "role": "normal-point construction after filtering",
+      "eft_insertion_candidate": false,
+      "notes": "Consumes filtered ranges; model perturbation should enter upstream."
+    },
+    {
+      "stage": "ephemeris_bridge",
+      "source_file": "data/request4_llr/mlrs_handshake_lab/src/llr_npt/jjreadnp.f",
+      "source_lines": "5-6, 30-53",
+      "role": "bridge from MLRS residual code to JPL PLEPH calls",
+      "eft_insertion_candidate": true,
+      "notes": "Current model enters through PLEPH-backed state evaluation here."
+    }
+  ],
+  "assessment": {
+    "passed_short_handshake_gate": true,
+    "why": "Public MLRS sample workflow now replays end-to-end on macOS arm64 with exact FRD matches and only one-line NPT drifts in each sample.",
+    "not_yet_done": "This is still a bounded hand-off test, not a weak-field posterior. Partials, nuisance estimation, and EFT remapping are not wired yet."
+  }
+}

@@ -181,8 +181,13 @@ delta_SEP = sigma_1 (s_E-s_M) + sigma_2 (s_E^2-s_M^2)
 - 그 뒤의 CRD pivot scout도 실행되었고, canonical CDDIS CRD root는 현재
   `401 Unauthorized`인 반면 ILRS public tarball들과 public lunar CRD sample
   ingest는 workspace에 고정 가능함이 확인되었다.
+- 이어서 public `MLRS Lunar Code`에 대한 짧은 hand-off 실험도 수행되었다.
+- 그 결과 public DE421 binary를 연결하고 sample-critical binary subset을
+  arm64로 재빌드하면 bundled lunar sample workflow가 end-to-end로 재생되며,
+  `.frd`는 ref exact match, `.npt`는 각 sample당 1-line drift만 남는다.
 - 따라서 Request 4의 다음 주력은 더 많은 surrogate를 쌓는 것이 아니라,
-  기존 LLR estimator/codebase 또는 CRD/ILRS canonical path에 붙이는 쪽이다.
+  `CRD canonical data path + bounded MLRS hand-off` 또는 더 성숙한 기존
+  LLR estimator/codebase에 붙이는 쪽이다.
 
 ## Request 5. PSR J0337+1715: 두 단계 분석으로 분리
 

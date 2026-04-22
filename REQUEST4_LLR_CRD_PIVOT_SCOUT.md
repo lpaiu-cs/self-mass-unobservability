@@ -94,3 +94,9 @@ That means the next credible Request 4 actions are now narrower and clearer:
 
 Either way, Request 4 is no longer blocked on "where is the data format?".
 It is now blocked on authenticated archive access and/or estimator integration.
+
+That question has since been narrowed one step further by the follow-on
+`MLRS` hand-off audit in `REQUEST4_LLR_MLRS_HANDSHAKE.md`: the public MLRS
+sample workflow is now replayable in a bounded lab copy, so the remaining
+question is not whether MLRS is alive at all, but whether it exposes a bounded
+enough interface for later EFT insertion.

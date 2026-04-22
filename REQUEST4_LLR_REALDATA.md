@@ -102,13 +102,20 @@ So the honest state is:
 - That scout shows the canonical CDDIS CRD root is real but currently gated by
   `Earthdata Login`, while the public ILRS support tarballs are directly
   accessible and can already be pinned and parsed in this workspace.
+- A bounded MLRS hand-off experiment now also exists; see
+  `REQUEST4_LLR_MLRS_HANDSHAKE.md`.
+- That handshake no longer leaves MLRS at the level of "legacy code maybe worth
+  trying". The public sample workflow now replays end-to-end in the lab copy,
+  with exact `.frd` matches and only one-line `.npt` drifts against the
+  bundled references.
 - So Request 4 is still **not a real weak-field parameter fit** in this
   workspace.
 - The blocker is now very concrete: the self-built APOLLO-only surrogate does
   not close cleanly enough, which points toward an existing LLR estimator stack
   or the CRD/ILRS canonical path rather than indefinite growth of the bespoke
-  branch. The pivot scout sharpens that further: authenticated CRD access
-  and/or estimator integration is now the actual bottleneck.
+  branch. The pivot scout and MLRS handshake sharpen that further:
+  authenticated CRD access and/or bounded estimator integration is now the
+  actual bottleneck.
 
 ## Immediate Next Step
 
@@ -116,10 +123,12 @@ If Request 4 remains the next priority, the next concrete action is now:
 
 1. stop growing the APOLLO-only surrogate as if it were on track to become a
    final weak-field estimator by itself,
-2. attach the already-pinned data branch to an existing LLR codebase or
-   estimation stack, or else pivot to the CRD/ILRS canonical path,
-3. only on top of that more credible estimator layer add the EFT remapping and
-   nuisance estimation for `sigma_1`, `sigma_2`.
+2. keep `Earthdata/CRD` as the data-side canonical path, but treat the MLRS
+   sample-replay success as the current estimator-side hand-off candidate,
+3. only if the MLRS path can expose a bounded residual/partial interface should
+   it carry the later EFT remapping for `sigma_1`, `sigma_2`,
+4. otherwise fall through to a more mature external estimator/codebase without
+   letting MLRS turn into a second bespoke branch.
 
 Anything short of that is still ingest territory, not the real Request 4 fit.
 
