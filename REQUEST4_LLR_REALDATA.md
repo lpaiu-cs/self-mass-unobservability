@@ -19,6 +19,21 @@ The workspace already contains the pieces that belong **before** a real-data fit
 
 So the EFT side is staged. What is still missing for Request 4 is the **production LLR analysis layer**.
 
+## Role In The Project After Freezing Request 6
+
+With Request 6 now effectively frozen as a support/local-audit branch, Request 4
+becomes one of the two main routes to the tied-vs-decoupled verdict.
+
+That project role should be read carefully:
+
+- Request 4 is the weak-field / Solar-System side of the final verdict,
+- Request 5 is the strong-field / pulsar free-fall side,
+- Request 6 is now support material for the clock sector rather than the place
+  where the final model choice is decided.
+
+So Request 4 is no longer just "one more pending item." It is part of the
+remaining mainline program.
+
 ## Why Request 4 Was Left Pending
 
 The current repository has:
@@ -78,3 +93,7 @@ If Request 4 is the next priority, the next concrete action is:
 3. either attach to an existing LLR codebase or build a narrow ingest-plus-linearized-fit scaffold around that release.
 
 Anything short of that is still Request 3 territory, not Request 4.
+
+Given the present project state, that is also the correct strategic next move
+if the goal is the tied-vs-decoupled verdict rather than further local clock
+audits.

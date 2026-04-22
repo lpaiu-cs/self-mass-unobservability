@@ -109,3 +109,28 @@ Phase A confirms two points from the repaired plan:
 - Once both `sigma_1` and `sigma_2` float simultaneously, the result is ridge-like; the clean one-parameter limits require conditional slices or a full Phase B TOA refit.
 
 So this stage is a legitimate **strong-field posterior translator**, but not yet a competitive timing analysis.
+
+## Role In The Project After Freezing Request 6
+
+With Request 6 now effectively frozen as a support/local-audit branch, the
+J0337 line becomes one of the main routes to the tied-vs-decoupled verdict.
+
+That means this document should be read in two layers:
+
+- as a Phase A translator from published strong-field bounds into
+  `(sigma_1, sigma_2)`,
+- and as the current strong-field anchor for the free-fall side of the final
+  `LLR + J0337 + clock` consistency program.
+
+In other words, Request 5 is no longer just a side calculation that supports
+Request 6. It is now part of the main decision branch.
+
+## Practical Consequence
+
+If the project is prioritizing the final tied-vs-decoupled judgement, the next
+high-value escalation is not more clock-only source chasing. It is either:
+
+1. a stronger J0337 implementation,
+2. a real-data LLR implementation,
+3. or the eventual joint combination of those free-fall branches with the now
+   fixed Request 6 clock-sector audit.

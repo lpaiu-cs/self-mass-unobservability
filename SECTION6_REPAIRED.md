@@ -245,6 +245,16 @@ d tau / dt = 1 - v^2/(2c^2) - [1 + zeta_1 s + zeta_2 s^2] U_ext/c^2
   tied-vs-decoupled의 본판정은 joint free-fall-plus-clock analysis로
   넘긴다.
 
+**현재 상태**
+
+- published-summary covariance 단계까지 포함한 현재 워크스페이스 결과에서는
+  위 중단 기준이 사실상 충족되었다.
+- 따라서 Request 6은 이제 주력 novelty branch가 아니라
+  support/local-audit branch로 읽는 것이 맞다.
+- 남은 주력 판정 축은 Request 4의 real-data LLR과 Request 5의
+  J0337 strong-field branch, 그리고 이후 이를 clock sector와 묶는
+  joint free-fall-plus-clock consistency이다.
+
 ## 실행 순서
 
 실제 작업 순서는 아래가 맞다.
@@ -256,6 +266,14 @@ d tau / dt = 1 - v^2/(2c^2) - [1 + zeta_1 s + zeta_2 s^2] U_ext/c^2
 5. Request 6의 유도 부분
 6. Request 4와 Request 5 Phase B는 전용 데이터/코드가 확보된 뒤 수행
 
+현재 프로젝트 상태를 반영한 **우선순위 재배치**는 아래와 같다.
+
+1. Request 6은 support/local-audit section으로 동결
+2. Request 4 real-data LLR pipeline 확보
+3. Request 5 strong-field branch 고도화 또는 Phase B 준비
+4. 마지막에 `LLR + J0337 + clock` joint free-fall-plus-clock consistency
+   로 tied-vs-decoupled 본판정
+
 ## 핵심 수정 요약
 
 - 원문 6절의 4개 요청을 **6개 워크패키지**로 쪼갰다.
@@ -263,3 +281,5 @@ d tau / dt = 1 - v^2/(2c^2) - [1 + zeta_1 s + zeta_2 s^2] U_ext/c^2
 - LLR과 J0337은 각각 **mock/inference**와 **real-data refit**을 분리했다.
 - clock-sector는 곧바로 fit하지 않고 **관측식 유도 -> joint fit** 순서로 고쳤다.
 - 따라서 이제 각 요청이 "지금 당장 가능한 것"과 "전용 파이프라인이 있어야 가능한 것"으로 명확히 나뉜다.
+- 그리고 현재 상태에서는 Request 6이 이미 그 한계를 규정한 local audit로
+  정리되었으므로, 이후 주력은 Request 4/5와 joint consistency로 이동한다.
