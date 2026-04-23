@@ -13,13 +13,13 @@ This note closes that question for the current host.
 ## Artifacts
 
 - feasibility script:
-  [request5_j0337_phaseB_build_feasibility.py](/Users/lpaiu/vs/lab/self-mass-unobservability/request5_j0337_phaseB_build_feasibility.py)
+  [request5_j0337_phaseB_build_feasibility.py](request5_j0337_phaseB_build_feasibility.py)
 - machine summary:
-  [request5_j0337_phaseB_build_feasibility_summary.json](/Users/lpaiu/vs/lab/self-mass-unobservability/request5_j0337_phaseB_build_feasibility_summary.json)
+  [request5_j0337_phaseB_build_feasibility_summary.json](request5_j0337_phaseB_build_feasibility_summary.json)
 - visual summary:
-  [request5_j0337_phaseB_build_feasibility_summary.svg](/Users/lpaiu/vs/lab/self-mass-unobservability/request5_j0337_phaseB_build_feasibility_summary.svg)
+  [request5_j0337_phaseB_build_feasibility_summary.svg](request5_j0337_phaseB_build_feasibility_summary.svg)
 - diagnostic table:
-  [request5_j0337_phaseB_build_feasibility_diagnostics.tsv](/Users/lpaiu/vs/lab/self-mass-unobservability/request5_j0337_phaseB_build_feasibility_diagnostics.tsv)
+  [request5_j0337_phaseB_build_feasibility_diagnostics.tsv](request5_j0337_phaseB_build_feasibility_diagnostics.tsv)
 
 ## Host Result
 

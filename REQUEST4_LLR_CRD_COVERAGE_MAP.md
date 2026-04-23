@@ -16,14 +16,14 @@ current bottleneck is now **transferability**, not raw sample count.
 ## Inputs
 
 - monthly file manifest:
-  [request4_llr_crd_monthly_ensemble_files.tsv](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_crd_monthly_ensemble_files.tsv:1)
+  [request4_llr_crd_monthly_ensemble_files.tsv](request4_llr_crd_monthly_ensemble_files.tsv#L1)
 - parsed normal-point rows:
-  [request4_llr_crd_monthly_ensemble_normal_points.tsv](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_crd_monthly_ensemble_normal_points.tsv:1)
+  [request4_llr_crd_monthly_ensemble_normal_points.tsv](request4_llr_crd_monthly_ensemble_normal_points.tsv#L1)
 
 ## Implementation
 
 The analysis lives in
-[request4_llr_crd_coverage_map.py](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_crd_coverage_map.py:1).
+[request4_llr_crd_coverage_map.py](request4_llr_crd_coverage_map.py#L1).
 
 For each valid monthly file it computes:
 
@@ -48,13 +48,13 @@ separately as **coverage gaps**.
 ## Outputs
 
 - file-level coverage table:
-  [request4_llr_crd_monthly_coverage.tsv](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_crd_monthly_coverage.tsv:1)
+  [request4_llr_crd_monthly_coverage.tsv](request4_llr_crd_monthly_coverage.tsv#L1)
 - representative-case shortlist:
-  [request4_llr_crd_representative_cases.tsv](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_crd_representative_cases.tsv:1)
+  [request4_llr_crd_representative_cases.tsv](request4_llr_crd_representative_cases.tsv#L1)
 - summary:
-  [request4_llr_crd_coverage_summary.json](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_crd_coverage_summary.json:1)
+  [request4_llr_crd_coverage_summary.json](request4_llr_crd_coverage_summary.json#L1)
 - figure:
-  [request4_llr_crd_coverage_summary.svg](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_crd_coverage_summary.svg)
+  [request4_llr_crd_coverage_summary.svg](request4_llr_crd_coverage_summary.svg)
 
 ## Result
 

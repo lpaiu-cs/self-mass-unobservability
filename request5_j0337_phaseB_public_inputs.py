@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-ROOT = Path("/Users/lpaiu/vs/lab/self-mass-unobservability")
+ROOT = Path(__file__).resolve().parent
 DATA_ROOT = ROOT / "data" / "request5_j0337" / "nutimo_public_release_2026-04-23"
 Y2020 = DATA_ROOT / "2020"
 Y2025 = DATA_ROOT / "2025"
@@ -28,6 +28,10 @@ class Asset:
     local_path: str
     size_bytes: int
     role: str
+
+
+def repo_relative(path: Path) -> str:
+    return str(path.relative_to(ROOT))
 
 
 def tar_members(path: Path) -> list[str]:
@@ -88,7 +92,7 @@ def main() -> None:
             doi="10.5281/zenodo.3778978",
             asset="README",
             local_status="mirrored",
-            local_path=str(Y2020 / "README"),
+            local_path=repo_relative(Y2020 / "README"),
             size_bytes=(Y2020 / "README").stat().st_size,
             role="release readme",
         ),
@@ -97,7 +101,7 @@ def main() -> None:
             doi="10.5281/zenodo.3778978",
             asset="nutimo.tar.bz2",
             local_status="mirrored",
-            local_path=str(Y2020 / "nutimo.tar.bz2"),
+            local_path=repo_relative(Y2020 / "nutimo.tar.bz2"),
             size_bytes=(Y2020 / "nutimo.tar.bz2").stat().st_size,
             role="timing-model source code",
         ),
@@ -106,7 +110,7 @@ def main() -> None:
             doi="10.5281/zenodo.3778978",
             asset="Data_and_Results.tar.bz2",
             local_status="mirrored",
-            local_path=str(Y2020 / "Data_and_Results.tar.bz2"),
+            local_path=repo_relative(Y2020 / "Data_and_Results.tar.bz2"),
             size_bytes=(Y2020 / "Data_and_Results.tar.bz2").stat().st_size,
             role="TOA, parfile, MCMC results bundle",
         ),
@@ -115,7 +119,7 @@ def main() -> None:
             doi="10.5281/zenodo.13899771",
             asset="Readme.md",
             local_status="mirrored",
-            local_path=str(Y2025 / "Readme.md"),
+            local_path=repo_relative(Y2025 / "Readme.md"),
             size_bytes=(Y2025 / "Readme.md").stat().st_size,
             role="release readme",
         ),
@@ -124,7 +128,7 @@ def main() -> None:
             doi="10.5281/zenodo.13899771",
             asset="nutimo.tar.bz2",
             local_status="mirrored",
-            local_path=str(Y2025 / "nutimo.tar.bz2"),
+            local_path=repo_relative(Y2025 / "nutimo.tar.bz2"),
             size_bytes=(Y2025 / "nutimo.tar.bz2").stat().st_size,
             role="timing-model source code",
         ),
@@ -133,7 +137,7 @@ def main() -> None:
             doi="10.5281/zenodo.13899771",
             asset="Data.tar.bz2",
             local_status="mirrored",
-            local_path=str(Y2025 / "Data.tar.bz2"),
+            local_path=repo_relative(Y2025 / "Data.tar.bz2"),
             size_bytes=(Y2025 / "Data.tar.bz2").stat().st_size,
             role="TOA bundle used in paper",
         ),

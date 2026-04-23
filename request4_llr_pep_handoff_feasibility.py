@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-ROOT = Path("/Users/lpaiu/vs/lab/self-mass-unobservability")
+ROOT = Path(__file__).resolve().parent
 PEP_ROOT = ROOT / "data" / "request4_llr" / "pep_hand_off_2026-04-23"
 PEP_CORE = PEP_ROOT / "pep_core"
 PEP_DOC = PEP_ROOT / "pep_doc"

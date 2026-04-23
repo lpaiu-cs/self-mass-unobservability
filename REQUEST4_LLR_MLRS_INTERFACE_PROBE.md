@@ -17,7 +17,7 @@ It asks two narrower questions:
 ## Implementation
 
 The probe lives in
-[request4_llr_mlrs_interface_probe.py](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_mlrs_interface_probe.py:1).
+[request4_llr_mlrs_interface_probe.py](request4_llr_mlrs_interface_probe.py#L1).
 
 It performs two runs on the first bundled lunar sample:
 
@@ -27,9 +27,9 @@ It performs two runs on the first bundled lunar sample:
 
 The local hook is intentionally minimal and lives in the lab copy only:
 
-- [np_crd.f](/Users/lpaiu/vs/lab/self-mass-unobservability/data/request4_llr/mlrs_handshake_lab/src/llr_npt/np_crd.f:441)
+- [np_crd.f](data/request4_llr/mlrs_handshake_lab/src/llr_npt/np_crd.f#L441)
   now calls a bounded helper immediately after computing `OMC`,
-- [smu_probe_adjust_omc.f](/Users/lpaiu/vs/lab/self-mass-unobservability/data/request4_llr/mlrs_handshake_lab/src/llr_npt/smu_probe_adjust_omc.f:1)
+- [smu_probe_adjust_omc.f](data/request4_llr/mlrs_handshake_lab/src/llr_npt/smu_probe_adjust_omc.f#L1)
   reads `SMU_OMC_OFFSET_NS` and, by default, is a no-op.
 
 This is a software-architecture probe, not the final EFT.
@@ -37,11 +37,11 @@ This is a software-architecture probe, not the final EFT.
 ## Outputs
 
 - probe summary:
-  [request4_llr_mlrs_interface_probe_summary.json](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_mlrs_interface_probe_summary.json:1)
+  [request4_llr_mlrs_interface_probe_summary.json](request4_llr_mlrs_interface_probe_summary.json#L1)
 - probe figure:
-  [request4_llr_mlrs_interface_probe_summary.svg](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_mlrs_interface_probe_summary.svg)
+  [request4_llr_mlrs_interface_probe_summary.svg](request4_llr_mlrs_interface_probe_summary.svg)
 - probe script:
-  [request4_llr_mlrs_interface_probe.py](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_mlrs_interface_probe.py:1)
+  [request4_llr_mlrs_interface_probe.py](request4_llr_mlrs_interface_probe.py#L1)
 
 ## Result 1: The Existing Drift Is Not Pure Formatting
 
@@ -92,15 +92,15 @@ propagate through normalpoint construction **without** requiring changes to:
 After this probe, the bounded insertion map is narrower:
 
 1. nearest local correction seam:
-   [np_crd.f](/Users/lpaiu/vs/lab/self-mass-unobservability/data/request4_llr/mlrs_handshake_lab/src/llr_npt/np_crd.f:441)
+   [np_crd.f](data/request4_llr/mlrs_handshake_lab/src/llr_npt/np_crd.f#L441)
    at the `OMC` computation / `write_93` path
 2. deeper state-level seam:
-   [jjreadnp.f](/Users/lpaiu/vs/lab/self-mass-unobservability/data/request4_llr/mlrs_handshake_lab/src/llr_npt/jjreadnp.f:30)
+   [jjreadnp.f](data/request4_llr/mlrs_handshake_lab/src/llr_npt/jjreadnp.f#L30)
    through the `PLEPH` state bridge
 3. geometry/prediction consumer:
-   [jeulpkg.f](/Users/lpaiu/vs/lab/self-mass-unobservability/data/request4_llr/mlrs_handshake_lab/src/llr_npt/jeulpkg.f:341)
+   [jeulpkg.f](data/request4_llr/mlrs_handshake_lab/src/llr_npt/jeulpkg.f#L341)
    and
-   [jeulpkg.f](/Users/lpaiu/vs/lab/self-mass-unobservability/data/request4_llr/mlrs_handshake_lab/src/llr_npt/jeulpkg.f:1216)
+   [jeulpkg.f](data/request4_llr/mlrs_handshake_lab/src/llr_npt/jeulpkg.f#L1216)
 
 So the next real question is no longer "can MLRS be made to run?".
 It is:

@@ -16,13 +16,13 @@ So the remaining question was narrow:
 ## Inputs
 
 - Local reproducible scout:
-  [request4_llr_mlrs_frcal_layer_scout.py](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_mlrs_frcal_layer_scout.py)
+  [request4_llr_mlrs_frcal_layer_scout.py](request4_llr_mlrs_frcal_layer_scout.py)
 - Machine summary:
-  [request4_llr_mlrs_frcal_layer_summary.json](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_mlrs_frcal_layer_summary.json)
+  [request4_llr_mlrs_frcal_layer_summary.json](request4_llr_mlrs_frcal_layer_summary.json)
 - Visual summary:
-  [request4_llr_mlrs_frcal_layer_summary.svg](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_mlrs_frcal_layer_summary.svg)
+  [request4_llr_mlrs_frcal_layer_summary.svg](request4_llr_mlrs_frcal_layer_summary.svg)
 - Upstream promotion evidence:
-  [REQUEST4_LLR_MLRS_PROMOTION_AUDIT.md](/Users/lpaiu/vs/lab/self-mass-unobservability/REQUEST4_LLR_MLRS_PROMOTION_AUDIT.md)
+  [REQUEST4_LLR_MLRS_PROMOTION_AUDIT.md](REQUEST4_LLR_MLRS_PROMOTION_AUDIT.md)
 
 ## Evidence Chain
 
@@ -74,7 +74,7 @@ So the public `MLRS` test path does not start from generic raw public monthly
 
 Local source:
 
-- [MLRS Lunar Prediction and Normal Point Manual-v1.0.doc](/Users/lpaiu/vs/lab/self-mass-unobservability/data/request4_llr/mlrs_handshake_lab/MLRS%20Lunar%20Prediction%20and%20Normal%20Point%20Manual-v1.0.doc)
+- [MLRS Lunar Prediction and Normal Point Manual-v1.0.doc](data/request4_llr/mlrs_handshake_lab/MLRS%20Lunar%20Prediction%20and%20Normal%20Point%20Manual-v1.0.doc)
 
 ### 4. The public `ldb_crd` script says the calibration code is removed
 
@@ -87,7 +87,7 @@ That is exactly the missing layer suggested by the promotion audit.
 
 Local source:
 
-- [ldb_crd](/Users/lpaiu/vs/lab/self-mass-unobservability/data/request4_llr/mlrs_handshake_lab/bin/ldb_crd)
+- [ldb_crd](data/request4_llr/mlrs_handshake_lab/bin/ldb_crd)
 
 ### 5. Archive access is real, but archive access is not the blocker anymore
 

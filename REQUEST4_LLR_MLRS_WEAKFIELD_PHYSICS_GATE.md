@@ -6,7 +6,7 @@ This is the first gate that no longer uses an arbitrary synthetic displacement
 class.
 
 Instead, it takes the weak-field analytic structure already fixed in
-[REQUEST3_LLR_MOCK.md](/Users/lpaiu/vs/lab/self-mass-unobservability/REQUEST3_LLR_MOCK.md:1)
+[REQUEST3_LLR_MOCK.md](REQUEST3_LLR_MOCK.md#L1)
 and asks whether an externally computed, weak-field-inspired `delta_SEP` state
 correction can still be injected through the local `jjreadnp` seam.
 
@@ -48,12 +48,12 @@ Earth-Moon barycenter.
 ## Implementation
 
 The gate runner is
-[request4_llr_mlrs_weakfield_physics_gate.py](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_mlrs_weakfield_physics_gate.py:1).
+[request4_llr_mlrs_weakfield_physics_gate.py](request4_llr_mlrs_weakfield_physics_gate.py#L1).
 
 The edit scope stays local:
 
-- [jjreadnp.f](/Users/lpaiu/vs/lab/self-mass-unobservability/data/request4_llr/mlrs_handshake_lab/src/llr_npt/jjreadnp.f:1)
-- [smu_probe_adjust_states.f](/Users/lpaiu/vs/lab/self-mass-unobservability/data/request4_llr/mlrs_handshake_lab/src/llr_npt/smu_probe_adjust_states.f:1)
+- [jjreadnp.f](data/request4_llr/mlrs_handshake_lab/src/llr_npt/jjreadnp.f#L1)
+- [smu_probe_adjust_states.f](data/request4_llr/mlrs_handshake_lab/src/llr_npt/smu_probe_adjust_states.f#L1)
 
 No edits were made to:
 
@@ -88,11 +88,11 @@ through the Request 3 analytic coefficient.
 ## Outputs
 
 - summary:
-  [request4_llr_mlrs_weakfield_physics_gate_summary.json](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_mlrs_weakfield_physics_gate_summary.json:1)
+  [request4_llr_mlrs_weakfield_physics_gate_summary.json](request4_llr_mlrs_weakfield_physics_gate_summary.json#L1)
 - figure:
-  [request4_llr_mlrs_weakfield_physics_gate_summary.svg](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_mlrs_weakfield_physics_gate_summary.svg)
+  [request4_llr_mlrs_weakfield_physics_gate_summary.svg](request4_llr_mlrs_weakfield_physics_gate_summary.svg)
 - runner:
-  [request4_llr_mlrs_weakfield_physics_gate.py](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_mlrs_weakfield_physics_gate.py:1)
+  [request4_llr_mlrs_weakfield_physics_gate.py](request4_llr_mlrs_weakfield_physics_gate.py#L1)
 
 ## Result
 

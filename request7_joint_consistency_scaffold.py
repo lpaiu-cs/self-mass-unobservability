@@ -10,7 +10,7 @@ from pathlib import Path
 import numpy as np
 
 
-ROOT = Path("/Users/lpaiu/vs/lab/self-mass-unobservability")
+ROOT = Path(__file__).resolve().parent
 REQ5_SUMMARY = ROOT / "request5_j0337_phaseA_summary.json"
 REQ6_SUMMARY = ROOT / "request6_clock_sector_summary.json"
 REQ3_SUMMARY = ROOT / "request3_llr_mock_summary.json"
@@ -52,6 +52,10 @@ class ClockPrior:
     eta_abs_max: float
     kappa_abs_max: float
     grid_points: int
+
+
+def repo_relative(path: Path) -> str:
+    return str(path.relative_to(ROOT))
 
 
 def sigma_grids(config: PhaseAConfig) -> tuple[np.ndarray, np.ndarray]:
@@ -397,9 +401,9 @@ def main() -> None:
             "clock_surrogate_note": "Clock likelihood is a Gaussian surrogate in (eta_*,kappa_*) matched to the Request 6 clock-only posterior near s*.",
         },
         "inputs": {
-            "request5_phaseA_summary": str(REQ5_SUMMARY),
-            "request6_clock_sector_summary": str(REQ6_SUMMARY),
-            "request3_mock_summary": str(REQ3_SUMMARY),
+            "request5_phaseA_summary": repo_relative(REQ5_SUMMARY),
+            "request6_clock_sector_summary": repo_relative(REQ6_SUMMARY),
+            "request3_mock_summary": repo_relative(REQ3_SUMMARY),
         },
         "clock_surrogate": {
             "sstar": clock_surrogate["sstar"],

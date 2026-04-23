@@ -17,13 +17,13 @@ This note closes that question.
 ## Artifacts
 
 - probe script:
-  [request4_llr_pep_environment_probe.py](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_pep_environment_probe.py)
+  [request4_llr_pep_environment_probe.py](request4_llr_pep_environment_probe.py)
 - machine summary:
-  [request4_llr_pep_environment_summary.json](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_pep_environment_summary.json)
+  [request4_llr_pep_environment_summary.json](request4_llr_pep_environment_summary.json)
 - visual summary:
-  [request4_llr_pep_environment_summary.svg](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_pep_environment_summary.svg)
+  [request4_llr_pep_environment_summary.svg](request4_llr_pep_environment_summary.svg)
 - diagnostic table:
-  [request4_llr_pep_environment_diagnostics.tsv](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_pep_environment_diagnostics.tsv)
+  [request4_llr_pep_environment_diagnostics.tsv](request4_llr_pep_environment_diagnostics.tsv)
 
 ## Result
 

@@ -7,13 +7,18 @@ import subprocess
 from pathlib import Path
 
 
-LAB_ROOT = Path("data/request4_llr/mlrs_handshake_lab")
+ROOT = Path(__file__).resolve().parent
+LAB_ROOT = ROOT / "data/request4_llr/mlrs_handshake_lab"
 ANALYSIS_REF = LAB_ROOT / "data/analysis/ref"
 PROBE_ROOT = LAB_ROOT / "data/interface_probe"
 PROBE_ROOT_REL = Path("data/interface_probe")
-SUMMARY_JSON = Path("request4_llr_mlrs_interface_probe_summary.json")
-SUMMARY_SVG = Path("request4_llr_mlrs_interface_probe_summary.svg")
+SUMMARY_JSON = ROOT / "request4_llr_mlrs_interface_probe_summary.json"
+SUMMARY_SVG = ROOT / "request4_llr_mlrs_interface_probe_summary.svg"
 SAMPLE_STEM = "s25y11d016t0231#103"
+
+
+def repo_relative(path: Path) -> str:
+    return str(path.relative_to(ROOT))
 
 
 def run_command(args: list[str], cwd: Path, env: dict[str, str] | None = None) -> subprocess.CompletedProcess[str]:
@@ -295,9 +300,9 @@ def main() -> None:
     summary = {
         "status": "bounded_interface_alive",
         "sample_stem": SAMPLE_STEM,
-        "lab_root": str(LAB_ROOT),
-        "baseline_run": str(baseline_dir),
-        "offset_run": str(offset_dir),
+        "lab_root": repo_relative(LAB_ROOT),
+        "baseline_run": repo_relative(baseline_dir),
+        "offset_run": repo_relative(offset_dir),
         "baseline_vs_reference": baseline_vs_reference,
         "synthetic_offset_probe": synthetic_offset_probe,
         "candidate_interfaces": [

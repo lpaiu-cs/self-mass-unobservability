@@ -11,13 +11,13 @@ This note closes the next bounded question:
 ## Artifacts
 
 - feasibility script:
-  [request4_llr_pep_handoff_feasibility.py](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_pep_handoff_feasibility.py)
+  [request4_llr_pep_handoff_feasibility.py](request4_llr_pep_handoff_feasibility.py)
 - machine summary:
-  [request4_llr_pep_handoff_summary.json](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_pep_handoff_summary.json)
+  [request4_llr_pep_handoff_summary.json](request4_llr_pep_handoff_summary.json)
 - visual summary:
-  [request4_llr_pep_handoff_summary.svg](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_pep_handoff_summary.svg)
+  [request4_llr_pep_handoff_summary.svg](request4_llr_pep_handoff_summary.svg)
 - diagnostic table:
-  [request4_llr_pep_handoff_diagnostics.tsv](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_pep_handoff_diagnostics.tsv)
+  [request4_llr_pep_handoff_diagnostics.tsv](request4_llr_pep_handoff_diagnostics.tsv)
 
 ## Acquisition Result
 

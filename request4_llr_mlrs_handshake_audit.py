@@ -6,9 +6,10 @@ import subprocess
 from pathlib import Path
 
 
-LAB_ROOT = Path("data/request4_llr/mlrs_handshake_lab")
-SUMMARY_JSON = Path("request4_llr_mlrs_handshake_summary.json")
-SUMMARY_SVG = Path("request4_llr_mlrs_handshake_summary.svg")
+ROOT = Path(__file__).resolve().parent
+LAB_ROOT = ROOT / "data/request4_llr/mlrs_handshake_lab"
+SUMMARY_JSON = ROOT / "request4_llr_mlrs_handshake_summary.json"
+SUMMARY_SVG = ROOT / "request4_llr_mlrs_handshake_summary.svg"
 JPL_DE421_URL = "https://ssd.jpl.nasa.gov/ftp/eph/planets/Linux/de421/lnxp1900p2053.421"
 
 SAMPLE_STEMS = (
@@ -23,6 +24,10 @@ BINARY_PATHS = (
     "bin/lun_sdqi_crd",
     "bin/frd_strip",
 )
+
+
+def repo_relative(path: Path) -> str:
+    return str(path.relative_to(ROOT))
 
 
 def sha256_file(path: Path) -> str:
@@ -202,14 +207,14 @@ def main() -> None:
 
     summary = {
         "status": "mlrs_handshake_alive",
-        "lab_root": str(LAB_ROOT),
+        "lab_root": repo_relative(LAB_ROOT),
         "jpl_ephemeris": {
             "source_url": JPL_DE421_URL,
-            "local_path": str(jpl_path),
+            "local_path": repo_relative(jpl_path),
             "size_bytes": jpl_path.stat().st_size,
             "sha256": sha256_file(jpl_path),
-            "top_level_link": str(jpl_link),
-            "top_level_link_target": str(jpl_link.resolve()),
+            "top_level_link": repo_relative(jpl_link),
+            "top_level_link_target": repo_relative(jpl_link.resolve()),
         },
         "binaries": binaries,
         "samples": samples,

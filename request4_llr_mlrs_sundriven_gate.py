@@ -7,13 +7,14 @@ import subprocess
 from pathlib import Path
 
 
-LAB_ROOT = Path("data/request4_llr/mlrs_handshake_lab")
+ROOT = Path(__file__).resolve().parent
+LAB_ROOT = ROOT / "data/request4_llr/mlrs_handshake_lab"
 REF_ROOT = LAB_ROOT / "data/analysis/ref"
 ANALYSIS_ROOT = LAB_ROOT / "data/analysis"
 RUN_ROOT = LAB_ROOT / "data/sundriven_state_probe"
 RUN_ROOT_REL = Path("data/sundriven_state_probe")
-SUMMARY_JSON = Path("request4_llr_mlrs_sundriven_gate_summary.json")
-SUMMARY_SVG = Path("request4_llr_mlrs_sundriven_gate_summary.svg")
+SUMMARY_JSON = ROOT / "request4_llr_mlrs_sundriven_gate_summary.json"
+SUMMARY_SVG = ROOT / "request4_llr_mlrs_sundriven_gate_summary.svg"
 
 SAMPLE_STEM = "s25y11d016t0231#103"
 SHIFT_VALUES_M = (-0.01, -0.005, 0.005, 0.01)

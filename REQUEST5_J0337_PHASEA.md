@@ -22,7 +22,7 @@ The code uses the two bounds quoted in the research note as input hypotheses:
 
 and interprets each as a Gaussian upper limit with width `sigma_Delta = Delta_95 / 1.96`.
 
-Implementation: [request5_j0337_phaseA.py](/Users/lpaiu/vs/lab/self-mass-unobservability/request5_j0337_phaseA.py)
+Implementation: [request5_j0337_phaseA.py](request5_j0337_phaseA.py)
 
 ## Model
 
@@ -54,10 +54,10 @@ and the published-bound posterior is obtained by averaging over the EOS prior.
 
 ## Outputs
 
-- summary JSON: [request5_j0337_phaseA_summary.json](/Users/lpaiu/vs/lab/self-mass-unobservability/request5_j0337_phaseA_summary.json)
-- optimistic posterior table: [request5_j0337_phaseA_posterior_optimistic.tsv](/Users/lpaiu/vs/lab/self-mass-unobservability/request5_j0337_phaseA_posterior_optimistic.tsv)
-- conservative posterior table: [request5_j0337_phaseA_posterior_conservative.tsv](/Users/lpaiu/vs/lab/self-mass-unobservability/request5_j0337_phaseA_posterior_conservative.tsv)
-- summary figure: [request5_j0337_phaseA_summary.svg](/Users/lpaiu/vs/lab/self-mass-unobservability/request5_j0337_phaseA_summary.svg)
+- summary JSON: [request5_j0337_phaseA_summary.json](request5_j0337_phaseA_summary.json)
+- optimistic posterior table: [request5_j0337_phaseA_posterior_optimistic.tsv](request5_j0337_phaseA_posterior_optimistic.tsv)
+- conservative posterior table: [request5_j0337_phaseA_posterior_conservative.tsv](request5_j0337_phaseA_posterior_conservative.tsv)
+- summary figure: [request5_j0337_phaseA_summary.svg](request5_j0337_phaseA_summary.svg)
 
 ## Results
 

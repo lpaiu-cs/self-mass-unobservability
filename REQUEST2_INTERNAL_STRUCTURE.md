@@ -150,7 +150,7 @@ Request 2 therefore confirms the conceptual point from the research note:
 
 ## Outputs
 
-- Analysis code: [request2_internal_structure.py](/Users/lpaiu/vs/lab/self-mass-unobservability/request2_internal_structure.py)
-- This memo: [REQUEST2_INTERNAL_STRUCTURE.md](/Users/lpaiu/vs/lab/self-mass-unobservability/REQUEST2_INTERNAL_STRUCTURE.md)
-- Scaling table: [request2_internal_structure_scalings.tsv](/Users/lpaiu/vs/lab/self-mass-unobservability/request2_internal_structure_scalings.tsv)
-- Scaling figure: [request2_internal_structure_scalings.svg](/Users/lpaiu/vs/lab/self-mass-unobservability/request2_internal_structure_scalings.svg)
+- Analysis code: [request2_internal_structure.py](request2_internal_structure.py)
+- This memo: [REQUEST2_INTERNAL_STRUCTURE.md](REQUEST2_INTERNAL_STRUCTURE.md)
+- Scaling table: [request2_internal_structure_scalings.tsv](request2_internal_structure_scalings.tsv)
+- Scaling figure: [request2_internal_structure_scalings.svg](request2_internal_structure_scalings.svg)

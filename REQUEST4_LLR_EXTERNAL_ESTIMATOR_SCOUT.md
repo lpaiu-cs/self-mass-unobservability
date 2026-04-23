@@ -15,13 +15,13 @@ This note ranks the best candidates found in the bounded scout.
 ## Artifacts
 
 - scout script:
-  [request4_llr_external_estimator_scout.py](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_external_estimator_scout.py)
+  [request4_llr_external_estimator_scout.py](request4_llr_external_estimator_scout.py)
 - machine summary:
-  [request4_llr_external_estimator_summary.json](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_external_estimator_summary.json)
+  [request4_llr_external_estimator_summary.json](request4_llr_external_estimator_summary.json)
 - visual summary:
-  [request4_llr_external_estimator_summary.svg](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_external_estimator_summary.svg)
+  [request4_llr_external_estimator_summary.svg](request4_llr_external_estimator_summary.svg)
 - candidate table:
-  [request4_llr_external_estimator_candidates.tsv](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_external_estimator_candidates.tsv)
+  [request4_llr_external_estimator_candidates.tsv](request4_llr_external_estimator_candidates.tsv)
 
 ## Ranked Outcome
 

@@ -16,15 +16,15 @@ It is a **provisional joint scaffold** that combines the living local branches:
 ## Artifacts
 
 - scaffold script:
-  [request7_joint_consistency_scaffold.py](/Users/lpaiu/vs/lab/self-mass-unobservability/request7_joint_consistency_scaffold.py)
+  [request7_joint_consistency_scaffold.py](request7_joint_consistency_scaffold.py)
 - machine summary:
-  [request7_joint_consistency_summary.json](/Users/lpaiu/vs/lab/self-mass-unobservability/request7_joint_consistency_summary.json)
+  [request7_joint_consistency_summary.json](request7_joint_consistency_summary.json)
 - visual summary:
-  [request7_joint_consistency_summary.svg](/Users/lpaiu/vs/lab/self-mass-unobservability/request7_joint_consistency_summary.svg)
+  [request7_joint_consistency_summary.svg](request7_joint_consistency_summary.svg)
 - scenario table:
-  [request7_joint_consistency_scenarios.tsv](/Users/lpaiu/vs/lab/self-mass-unobservability/request7_joint_consistency_scenarios.tsv)
+  [request7_joint_consistency_scenarios.tsv](request7_joint_consistency_scenarios.tsv)
 - reference tied posterior:
-  [request7_joint_consistency_reference_tied_posterior.tsv](/Users/lpaiu/vs/lab/self-mass-unobservability/request7_joint_consistency_reference_tied_posterior.tsv)
+  [request7_joint_consistency_reference_tied_posterior.tsv](request7_joint_consistency_reference_tied_posterior.tsv)
 
 ## Model Structure
 

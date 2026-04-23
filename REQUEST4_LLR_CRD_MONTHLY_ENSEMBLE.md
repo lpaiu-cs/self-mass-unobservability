@@ -27,7 +27,7 @@ official EDC mirror.
 ## Implementation
 
 The acquisition and parse logic lives in
-[request4_llr_crd_monthly_ensemble.py](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_crd_monthly_ensemble.py:1).
+[request4_llr_crd_monthly_ensemble.py](request4_llr_crd_monthly_ensemble.py#L1).
 
 The scan covers:
 
@@ -49,20 +49,20 @@ The script also validates payload truth rather than trusting `HEAD` alone:
 - files whose first bytes do not look like `h1 crd` are treated as rejected
   payloads,
 - valid CRD payloads remain under
-  [data/request4_llr/crd_monthly_ensemble_2026-04-23/raw](/Users/lpaiu/vs/lab/self-mass-unobservability/data/request4_llr/crd_monthly_ensemble_2026-04-23/raw),
+  [data/request4_llr/crd_monthly_ensemble_2026-04-23/raw](data/request4_llr/crd_monthly_ensemble_2026-04-23/raw),
 - rejected HTML / error payloads are separated into
-  [data/request4_llr/crd_monthly_ensemble_2026-04-23/rejected_payloads](/Users/lpaiu/vs/lab/self-mass-unobservability/data/request4_llr/crd_monthly_ensemble_2026-04-23/rejected_payloads).
+  [data/request4_llr/crd_monthly_ensemble_2026-04-23/rejected_payloads](data/request4_llr/crd_monthly_ensemble_2026-04-23/rejected_payloads).
 
 ## Outputs
 
 - candidate/file manifest:
-  [request4_llr_crd_monthly_ensemble_files.tsv](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_crd_monthly_ensemble_files.tsv:1)
+  [request4_llr_crd_monthly_ensemble_files.tsv](request4_llr_crd_monthly_ensemble_files.tsv#L1)
 - parsed normal-point table:
-  [request4_llr_crd_monthly_ensemble_normal_points.tsv](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_crd_monthly_ensemble_normal_points.tsv:1)
+  [request4_llr_crd_monthly_ensemble_normal_points.tsv](request4_llr_crd_monthly_ensemble_normal_points.tsv#L1)
 - summary:
-  [request4_llr_crd_monthly_ensemble_summary.json](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_crd_monthly_ensemble_summary.json:1)
+  [request4_llr_crd_monthly_ensemble_summary.json](request4_llr_crd_monthly_ensemble_summary.json#L1)
 - figure:
-  [request4_llr_crd_monthly_ensemble_summary.svg](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_crd_monthly_ensemble_summary.svg)
+  [request4_llr_crd_monthly_ensemble_summary.svg](request4_llr_crd_monthly_ensemble_summary.svg)
 
 ## Result
 

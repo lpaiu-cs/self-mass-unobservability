@@ -173,9 +173,9 @@ as met:
 
 ## Files
 
-- [request6_low_side_covariance_proxy.py](/Users/lpaiu/vs/lab/self-mass-unobservability/request6_low_side_covariance_proxy.py:1)
-- [request6_low_side_covariance_proxy_summary.json](/Users/lpaiu/vs/lab/self-mass-unobservability/request6_low_side_covariance_proxy_summary.json:1)
-- [request6_low_side_covariance_proxy_summary.svg](/Users/lpaiu/vs/lab/self-mass-unobservability/request6_low_side_covariance_proxy_summary.svg)
-- [request6_low_side_covariance_proxy_posterior_j1141.tsv](/Users/lpaiu/vs/lab/self-mass-unobservability/request6_low_side_covariance_proxy_posterior_j1141.tsv:1)
-- [request6_low_side_covariance_proxy_posterior_j1906.tsv](/Users/lpaiu/vs/lab/self-mass-unobservability/request6_low_side_covariance_proxy_posterior_j1906.tsv:1)
-- [request6_low_side_covariance_proxy_posterior_both.tsv](/Users/lpaiu/vs/lab/self-mass-unobservability/request6_low_side_covariance_proxy_posterior_both.tsv:1)
+- [request6_low_side_covariance_proxy.py](request6_low_side_covariance_proxy.py#L1)
+- [request6_low_side_covariance_proxy_summary.json](request6_low_side_covariance_proxy_summary.json#L1)
+- [request6_low_side_covariance_proxy_summary.svg](request6_low_side_covariance_proxy_summary.svg)
+- [request6_low_side_covariance_proxy_posterior_j1141.tsv](request6_low_side_covariance_proxy_posterior_j1141.tsv#L1)
+- [request6_low_side_covariance_proxy_posterior_j1906.tsv](request6_low_side_covariance_proxy_posterior_j1906.tsv#L1)
+- [request6_low_side_covariance_proxy_posterior_both.tsv](request6_low_side_covariance_proxy_posterior_both.tsv#L1)

@@ -17,12 +17,12 @@ It still does **not** implement the full weak-field `delta_SEP` dynamics.
 ## Implementation
 
 The gate is implemented in
-[request4_llr_mlrs_sundriven_gate.py](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_mlrs_sundriven_gate.py:1).
+[request4_llr_mlrs_sundriven_gate.py](request4_llr_mlrs_sundriven_gate.py#L1).
 
 The edit scope remains local:
 
-- [jjreadnp.f](/Users/lpaiu/vs/lab/self-mass-unobservability/data/request4_llr/mlrs_handshake_lab/src/llr_npt/jjreadnp.f:1)
-- [smu_probe_adjust_states.f](/Users/lpaiu/vs/lab/self-mass-unobservability/data/request4_llr/mlrs_handshake_lab/src/llr_npt/smu_probe_adjust_states.f:1)
+- [jjreadnp.f](data/request4_llr/mlrs_handshake_lab/src/llr_npt/jjreadnp.f#L1)
+- [smu_probe_adjust_states.f](data/request4_llr/mlrs_handshake_lab/src/llr_npt/smu_probe_adjust_states.f#L1)
 
 The only new architectural move is:
 
@@ -61,11 +61,11 @@ explicitly Sun-driven, but it is still only a bounded surrogate for the real
 ## Outputs
 
 - summary:
-  [request4_llr_mlrs_sundriven_gate_summary.json](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_mlrs_sundriven_gate_summary.json:1)
+  [request4_llr_mlrs_sundriven_gate_summary.json](request4_llr_mlrs_sundriven_gate_summary.json#L1)
 - figure:
-  [request4_llr_mlrs_sundriven_gate_summary.svg](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_mlrs_sundriven_gate_summary.svg)
+  [request4_llr_mlrs_sundriven_gate_summary.svg](request4_llr_mlrs_sundriven_gate_summary.svg)
 - runner:
-  [request4_llr_mlrs_sundriven_gate.py](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_mlrs_sundriven_gate.py:1)
+  [request4_llr_mlrs_sundriven_gate.py](request4_llr_mlrs_sundriven_gate.py#L1)
 
 ## Result
 

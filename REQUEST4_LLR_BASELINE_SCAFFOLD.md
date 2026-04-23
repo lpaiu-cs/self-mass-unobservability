@@ -26,7 +26,7 @@ The current scaffold is built to encode three practical choices:
 ## Implementation
 
 The code is in
-[request4_llr_apollo_baseline_scaffold.py](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_apollo_baseline_scaffold.py:1).
+[request4_llr_apollo_baseline_scaffold.py](request4_llr_apollo_baseline_scaffold.py#L1).
 
 It reads the parsed APOLLO normal-point table and writes a basis/design table
 with:
@@ -51,11 +51,11 @@ of the first narrow baseline target.
 ## Outputs
 
 - basis table:
-  [request4_llr_apollo_baseline_basis.tsv](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_apollo_baseline_basis.tsv:1)
+  [request4_llr_apollo_baseline_basis.tsv](request4_llr_apollo_baseline_basis.tsv#L1)
 - scaffold summary:
-  [request4_llr_apollo_baseline_scaffold_summary.json](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_apollo_baseline_scaffold_summary.json:1)
+  [request4_llr_apollo_baseline_scaffold_summary.json](request4_llr_apollo_baseline_scaffold_summary.json#L1)
 - scaffold summary figure:
-  [request4_llr_apollo_baseline_scaffold_summary.svg](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_apollo_baseline_scaffold_summary.svg)
+  [request4_llr_apollo_baseline_scaffold_summary.svg](request4_llr_apollo_baseline_scaffold_summary.svg)
 
 ## Current Role In Request 4
 
@@ -95,6 +95,6 @@ bespoke estimator indefinitely. The correct next move is either:
 That is the practical boundary between a healthy scaffold and a scope trap.
 
 That follow-on probe has now been carried out in
-[REQUEST4_LLR_BASELINE_FIT.md](/Users/lpaiu/vs/lab/self-mass-unobservability/REQUEST4_LLR_BASELINE_FIT.md:1),
+[REQUEST4_LLR_BASELINE_FIT.md](REQUEST4_LLR_BASELINE_FIT.md#L1),
 and the current result falls on the `pivot` side of that boundary rather than
 the `keep growing the bespoke surrogate` side.

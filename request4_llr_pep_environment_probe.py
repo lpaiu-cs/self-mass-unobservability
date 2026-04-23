@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-ROOT = Path("/Users/lpaiu/vs/lab/self-mass-unobservability")
+ROOT = Path(__file__).resolve().parent
 SUMMARY_JSON = ROOT / "request4_llr_pep_environment_summary.json"
 SUMMARY_SVG = ROOT / "request4_llr_pep_environment_summary.svg"
 DIAGNOSTICS_TSV = ROOT / "request4_llr_pep_environment_diagnostics.tsv"

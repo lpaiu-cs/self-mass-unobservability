@@ -13,13 +13,13 @@ This note closes that question.
 ## Artifacts
 
 - scout script:
-  [request5_j0337_phaseB_public_inputs.py](/Users/lpaiu/vs/lab/self-mass-unobservability/request5_j0337_phaseB_public_inputs.py)
+  [request5_j0337_phaseB_public_inputs.py](request5_j0337_phaseB_public_inputs.py)
 - machine summary:
-  [request5_j0337_phaseB_public_inputs_summary.json](/Users/lpaiu/vs/lab/self-mass-unobservability/request5_j0337_phaseB_public_inputs_summary.json)
+  [request5_j0337_phaseB_public_inputs_summary.json](request5_j0337_phaseB_public_inputs_summary.json)
 - visual summary:
-  [request5_j0337_phaseB_public_inputs_summary.svg](/Users/lpaiu/vs/lab/self-mass-unobservability/request5_j0337_phaseB_public_inputs_summary.svg)
+  [request5_j0337_phaseB_public_inputs_summary.svg](request5_j0337_phaseB_public_inputs_summary.svg)
 - asset manifest:
-  [request5_j0337_phaseB_public_inputs_manifest.tsv](/Users/lpaiu/vs/lab/self-mass-unobservability/request5_j0337_phaseB_public_inputs_manifest.tsv)
+  [request5_j0337_phaseB_public_inputs_manifest.tsv](request5_j0337_phaseB_public_inputs_manifest.tsv)
 
 ## Primary Sources
 

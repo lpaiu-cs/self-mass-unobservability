@@ -18,7 +18,7 @@ build-out or triggers the pivot/stop rule.
 ## Implementation
 
 The fitter is in
-[request4_llr_apollo_baseline_fit.py](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_apollo_baseline_fit.py:1).
+[request4_llr_apollo_baseline_fit.py](request4_llr_apollo_baseline_fit.py#L1).
 
 Because the default workstation `astropy/scipy` stack is ABI-broken against the
 current NumPy, this stage uses a local runtime:
@@ -46,13 +46,13 @@ troposphere, Earth orientation, or relativistic light-time modeling.
 ## Outputs
 
 - residual series:
-  [request4_llr_apollo_baseline_residuals.tsv](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_apollo_baseline_residuals.tsv:1)
+  [request4_llr_apollo_baseline_residuals.tsv](request4_llr_apollo_baseline_residuals.tsv#L1)
 - fitted coefficients:
-  [request4_llr_apollo_baseline_coefficients.tsv](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_apollo_baseline_coefficients.tsv:1)
+  [request4_llr_apollo_baseline_coefficients.tsv](request4_llr_apollo_baseline_coefficients.tsv#L1)
 - summary:
-  [request4_llr_apollo_baseline_fit_summary.json](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_apollo_baseline_fit_summary.json:1)
+  [request4_llr_apollo_baseline_fit_summary.json](request4_llr_apollo_baseline_fit_summary.json#L1)
 - summary figure:
-  [request4_llr_apollo_baseline_fit_summary.svg](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_apollo_baseline_fit_summary.svg)
+  [request4_llr_apollo_baseline_fit_summary.svg](request4_llr_apollo_baseline_fit_summary.svg)
 
 ## Current Result
 

@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-ROOT = Path("/Users/lpaiu/vs/lab/self-mass-unobservability")
+ROOT = Path(__file__).resolve().parent
 SRC = ROOT / "data" / "request5_j0337" / "nutimo_public_release_2026-04-23" / "2025" / "build_probe" / "nutimo" / "src"
 SUMMARY_JSON = ROOT / "request5_j0337_phaseB_build_feasibility_summary.json"
 SUMMARY_SVG = ROOT / "request5_j0337_phaseB_build_feasibility_summary.svg"

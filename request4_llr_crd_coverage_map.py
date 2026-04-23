@@ -5,17 +5,18 @@ import json
 import math
 from collections import Counter, defaultdict
 from dataclasses import dataclass
-from datetime import UTC, datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from statistics import median
 
 
-FILES_TSV = Path("/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_crd_monthly_ensemble_files.tsv")
-ROWS_TSV = Path("/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_crd_monthly_ensemble_normal_points.tsv")
-OUT_COVERAGE_TSV = Path("/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_crd_monthly_coverage.tsv")
-OUT_SHORTLIST_TSV = Path("/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_crd_representative_cases.tsv")
-OUT_SUMMARY_JSON = Path("/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_crd_coverage_summary.json")
-OUT_SUMMARY_SVG = Path("/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_crd_coverage_summary.svg")
+ROOT = Path(__file__).resolve().parent
+FILES_TSV = ROOT / "request4_llr_crd_monthly_ensemble_files.tsv"
+ROWS_TSV = ROOT / "request4_llr_crd_monthly_ensemble_normal_points.tsv"
+OUT_COVERAGE_TSV = ROOT / "request4_llr_crd_monthly_coverage.tsv"
+OUT_SHORTLIST_TSV = ROOT / "request4_llr_crd_representative_cases.tsv"
+OUT_SUMMARY_JSON = ROOT / "request4_llr_crd_coverage_summary.json"
+OUT_SUMMARY_SVG = ROOT / "request4_llr_crd_coverage_summary.svg"
 
 
 @dataclass(frozen=True)
@@ -313,7 +314,7 @@ def main() -> None:
         by_station[row["station_name"]] = by_station.get(row["station_name"], 0) + 1
 
     summary = {
-        "generated_at_utc": datetime.now(UTC).isoformat().replace("+00:00", "Z"),
+        "generated_at_utc": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
         "valid_files": len(metrics),
         "total_normal_points": len(rows),
         "coverage_start_utc": min(metric.coverage_start_utc for metric in metrics),

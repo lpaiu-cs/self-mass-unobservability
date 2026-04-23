@@ -10,7 +10,7 @@ from dataclasses import asdict, dataclass
 from pathlib import Path
 
 
-ROOT = Path("/Users/lpaiu/vs/lab/self-mass-unobservability")
+ROOT = Path(__file__).resolve().parent
 SHORTLIST_TSV = ROOT / "request4_llr_crd_representative_cases.tsv"
 MLRS_LAB = ROOT / "data/request4_llr/mlrs_handshake_lab"
 CONVERTER = (

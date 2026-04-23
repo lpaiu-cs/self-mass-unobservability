@@ -7,7 +7,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-ROOT = Path("/Users/lpaiu/vs/lab/self-mass-unobservability")
+ROOT = Path(__file__).resolve().parent
 MANUAL_DOC = ROOT / "data/request4_llr/mlrs_handshake_lab/MLRS Lunar Prediction and Normal Point Manual-v1.0.doc"
 LDB_CRD = ROOT / "data/request4_llr/mlrs_handshake_lab/bin/ldb_crd"
 PROMOTION_SUMMARY = ROOT / "request4_llr_mlrs_promotion_audit_summary.json"

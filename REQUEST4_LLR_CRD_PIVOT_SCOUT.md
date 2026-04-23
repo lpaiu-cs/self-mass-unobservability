@@ -27,7 +27,7 @@ in the workspace.
 ## Implementation
 
 The scout lives in
-[request4_llr_crd_pivot_scout.py](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_crd_pivot_scout.py:1).
+[request4_llr_crd_pivot_scout.py](request4_llr_crd_pivot_scout.py#L1).
 
 It does four things:
 
@@ -46,13 +46,13 @@ It does four things:
 ## Outputs
 
 - parsed lunar CRD sample table:
-  [request4_llr_crd_lunar_sample_normal_points.tsv](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_crd_lunar_sample_normal_points.tsv:1)
+  [request4_llr_crd_lunar_sample_normal_points.tsv](request4_llr_crd_lunar_sample_normal_points.tsv#L1)
 - scout summary:
-  [request4_llr_crd_pivot_summary.json](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_crd_pivot_summary.json:1)
+  [request4_llr_crd_pivot_summary.json](request4_llr_crd_pivot_summary.json#L1)
 - scout figure:
-  [request4_llr_crd_pivot_summary.svg](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_crd_pivot_summary.svg)
+  [request4_llr_crd_pivot_summary.svg](request4_llr_crd_pivot_summary.svg)
 - pinned asset manifest:
-  [data/request4_llr/ilrs_pivot_scout/manifest.json](/Users/lpaiu/vs/lab/self-mass-unobservability/data/request4_llr/ilrs_pivot_scout/manifest.json:1)
+  [data/request4_llr/ilrs_pivot_scout/manifest.json](data/request4_llr/ilrs_pivot_scout/manifest.json#L1)
 
 ## Current Result
 

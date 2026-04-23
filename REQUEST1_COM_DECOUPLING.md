@@ -177,5 +177,5 @@ So both benchmark spherical bodies have vanishing STF quadrupole and therefore f
 
 ## Files
 
-- Symbolic implementation: [request1_com_decoupling.py](/Users/lpaiu/vs/lab/self-mass-unobservability/request1_com_decoupling.py)
-- This memo: [REQUEST1_COM_DECOUPLING.md](/Users/lpaiu/vs/lab/self-mass-unobservability/REQUEST1_COM_DECOUPLING.md)
+- Symbolic implementation: [request1_com_decoupling.py](request1_com_decoupling.py)
+- This memo: [REQUEST1_COM_DECOUPLING.md](REQUEST1_COM_DECOUPLING.md)

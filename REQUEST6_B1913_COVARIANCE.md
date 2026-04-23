@@ -151,8 +151,8 @@ analysis with the free-fall sector.
 
 ## Files
 
-- [request6_b1913_covariance.py](/Users/lpaiu/vs/lab/self-mass-unobservability/request6_b1913_covariance.py:1)
-- [request6_b1913_covariance_summary.json](/Users/lpaiu/vs/lab/self-mass-unobservability/request6_b1913_covariance_summary.json:1)
-- [request6_b1913_covariance_summary.svg](/Users/lpaiu/vs/lab/self-mass-unobservability/request6_b1913_covariance_summary.svg)
-- [request6_b1913_covariance_posterior_b1913_only.tsv](/Users/lpaiu/vs/lab/self-mass-unobservability/request6_b1913_covariance_posterior_b1913_only.tsv:1)
-- [request6_b1913_covariance_posterior_combined.tsv](/Users/lpaiu/vs/lab/self-mass-unobservability/request6_b1913_covariance_posterior_combined.tsv:1)
+- [request6_b1913_covariance.py](request6_b1913_covariance.py#L1)
+- [request6_b1913_covariance_summary.json](request6_b1913_covariance_summary.json#L1)
+- [request6_b1913_covariance_summary.svg](request6_b1913_covariance_summary.svg)
+- [request6_b1913_covariance_posterior_b1913_only.tsv](request6_b1913_covariance_posterior_b1913_only.tsv#L1)
+- [request6_b1913_covariance_posterior_combined.tsv](request6_b1913_covariance_posterior_combined.tsv#L1)

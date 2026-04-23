@@ -39,7 +39,7 @@ For format context, the relevant ILRS pages are:
 ## Implementation
 
 The downloader/parser lives in
-[request4_llr_apollo_ingest.py](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_apollo_ingest.py:1).
+[request4_llr_apollo_ingest.py](request4_llr_apollo_ingest.py#L1).
 
 What it does:
 
@@ -74,13 +74,13 @@ It also maps APOLLO reflector IDs to:
 ## Outputs
 
 - parsed table:
-  [request4_llr_apollo_normal_points.tsv](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_apollo_normal_points.tsv:1)
+  [request4_llr_apollo_normal_points.tsv](request4_llr_apollo_normal_points.tsv#L1)
 - release summary:
-  [request4_llr_apollo_release_summary.json](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_apollo_release_summary.json:1)
+  [request4_llr_apollo_release_summary.json](request4_llr_apollo_release_summary.json#L1)
 - release summary figure:
-  [request4_llr_apollo_release_summary.svg](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_apollo_release_summary.svg)
+  [request4_llr_apollo_release_summary.svg](request4_llr_apollo_release_summary.svg)
 - pinned raw release:
-  [data/request4_llr/apollo_legacy_text_release_2026-04-22/manifest.json](/Users/lpaiu/vs/lab/self-mass-unobservability/data/request4_llr/apollo_legacy_text_release_2026-04-22/manifest.json:1)
+  [data/request4_llr/apollo_legacy_text_release_2026-04-22/manifest.json](data/request4_llr/apollo_legacy_text_release_2026-04-22/manifest.json#L1)
 
 ## Current Ingest Result
 
@@ -118,7 +118,7 @@ before any science fit is trusted.
 ## What This Resolves
 
 This stage resolves one of the explicit blockers listed in
-[REQUEST4_LLR_REALDATA.md](/Users/lpaiu/vs/lab/self-mass-unobservability/REQUEST4_LLR_REALDATA.md:1):
+[REQUEST4_LLR_REALDATA.md](REQUEST4_LLR_REALDATA.md#L1):
 
 - the workspace now **does** contain a pinned public LLR normal-point release,
 - the workspace now **does** contain a validated ingest/parser scaffold,
@@ -151,8 +151,8 @@ decoupled program. The next concrete escalation for Request 4 is no longer
 2. then add the EFT remapping for `delta_SEP`.
 
 That next baseline step is now scaffolded explicitly in
-[REQUEST4_LLR_BASELINE_SCAFFOLD.md](/Users/lpaiu/vs/lab/self-mass-unobservability/REQUEST4_LLR_BASELINE_SCAFFOLD.md:1).
+[REQUEST4_LLR_BASELINE_SCAFFOLD.md](REQUEST4_LLR_BASELINE_SCAFFOLD.md#L1).
 
 That scaffold has now been pushed one step further into an actual surrogate
 baseline probe; see
-[REQUEST4_LLR_BASELINE_FIT.md](/Users/lpaiu/vs/lab/self-mass-unobservability/REQUEST4_LLR_BASELINE_FIT.md:1).
+[REQUEST4_LLR_BASELINE_FIT.md](REQUEST4_LLR_BASELINE_FIT.md#L1).

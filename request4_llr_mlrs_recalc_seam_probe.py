@@ -8,12 +8,13 @@ import subprocess
 from pathlib import Path
 
 
-LAB_ROOT = Path("data/request4_llr/mlrs_handshake_lab")
+ROOT = Path(__file__).resolve().parent
+LAB_ROOT = ROOT / "data/request4_llr/mlrs_handshake_lab"
 REF_ROOT = LAB_ROOT / "data/analysis/ref"
 RUN_ROOT = LAB_ROOT / "data/recalc_seam_probe"
 RUN_ROOT_REL = Path("data/recalc_seam_probe")
-SUMMARY_JSON = Path("request4_llr_mlrs_recalc_seam_probe_summary.json")
-SUMMARY_SVG = Path("request4_llr_mlrs_recalc_seam_probe_summary.svg")
+SUMMARY_JSON = ROOT / "request4_llr_mlrs_recalc_seam_probe_summary.json"
+SUMMARY_SVG = ROOT / "request4_llr_mlrs_recalc_seam_probe_summary.svg"
 
 SAMPLE_STEMS = (
     "s25y11d016t0231#103",

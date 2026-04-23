@@ -14,12 +14,12 @@ It is a software-architecture gate, not a weak-field fit.
 ## Implementation
 
 The gate is implemented in
-[request4_llr_mlrs_state_seam_gate.py](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_mlrs_state_seam_gate.py:1).
+[request4_llr_mlrs_state_seam_gate.py](request4_llr_mlrs_state_seam_gate.py#L1).
 
 The probe adds exactly one new local helper,
-[smu_probe_adjust_states.f](/Users/lpaiu/vs/lab/self-mass-unobservability/data/request4_llr/mlrs_handshake_lab/src/llr_npt/smu_probe_adjust_states.f:1),
+[smu_probe_adjust_states.f](data/request4_llr/mlrs_handshake_lab/src/llr_npt/smu_probe_adjust_states.f#L1),
 and one new call site in
-[jjreadnp.f](/Users/lpaiu/vs/lab/self-mass-unobservability/data/request4_llr/mlrs_handshake_lab/src/llr_npt/jjreadnp.f:1).
+[jjreadnp.f](data/request4_llr/mlrs_handshake_lab/src/llr_npt/jjreadnp.f#L1).
 
 The helper is synthetic and bounded:
 
@@ -59,11 +59,11 @@ It is a bounded state-level seam test.
 ## Outputs
 
 - summary:
-  [request4_llr_mlrs_state_seam_gate_summary.json](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_mlrs_state_seam_gate_summary.json:1)
+  [request4_llr_mlrs_state_seam_gate_summary.json](request4_llr_mlrs_state_seam_gate_summary.json#L1)
 - figure:
-  [request4_llr_mlrs_state_seam_gate_summary.svg](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_mlrs_state_seam_gate_summary.svg)
+  [request4_llr_mlrs_state_seam_gate_summary.svg](request4_llr_mlrs_state_seam_gate_summary.svg)
 - runner:
-  [request4_llr_mlrs_state_seam_gate.py](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_mlrs_state_seam_gate.py:1)
+  [request4_llr_mlrs_state_seam_gate.py](request4_llr_mlrs_state_seam_gate.py#L1)
 
 ## Result
 

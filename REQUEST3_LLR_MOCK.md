@@ -17,7 +17,7 @@ f_i = 1 + \sigma_1 s_i + \sigma_2 s_i^2,
 - daily synthetic normal points over 720 days,
 - nuisance surrogates for station/reflector bias, solar-radiation pressure, thermal expansion, lunar Love response, and initial-state-vector error.
 
-The implementation lives in [request3_llr_mock.py](/Users/lpaiu/vs/lab/self-mass-unobservability/request3_llr_mock.py).
+The implementation lives in [request3_llr_mock.py](request3_llr_mock.py).
 
 ## 1. Analytic Benchmark
 
@@ -91,14 +91,14 @@ So this is a clean **injection-recovery sensitivity study**, not an attempt to r
 
 The script writes:
 
-- summary JSON: [request3_llr_mock_summary.json](/Users/lpaiu/vs/lab/self-mass-unobservability/request3_llr_mock_summary.json)
+- summary JSON: [request3_llr_mock_summary.json](request3_llr_mock_summary.json)
 - residual tables:
-  [request3_llr_mock_residuals_null.tsv](/Users/lpaiu/vs/lab/self-mass-unobservability/request3_llr_mock_residuals_null.tsv),
-  [request3_llr_mock_residuals_injected.tsv](/Users/lpaiu/vs/lab/self-mass-unobservability/request3_llr_mock_residuals_injected.tsv)
+  [request3_llr_mock_residuals_null.tsv](request3_llr_mock_residuals_null.tsv),
+  [request3_llr_mock_residuals_injected.tsv](request3_llr_mock_residuals_injected.tsv)
 - posterior tables:
-  [request3_llr_mock_posterior_null.tsv](/Users/lpaiu/vs/lab/self-mass-unobservability/request3_llr_mock_posterior_null.tsv),
-  [request3_llr_mock_posterior_injected.tsv](/Users/lpaiu/vs/lab/self-mass-unobservability/request3_llr_mock_posterior_injected.tsv)
-- summary figure: [request3_llr_mock_summary.svg](/Users/lpaiu/vs/lab/self-mass-unobservability/request3_llr_mock_summary.svg)
+  [request3_llr_mock_posterior_null.tsv](request3_llr_mock_posterior_null.tsv),
+  [request3_llr_mock_posterior_injected.tsv](request3_llr_mock_posterior_injected.tsv)
+- summary figure: [request3_llr_mock_summary.svg](request3_llr_mock_summary.svg)
 
 The two scenarios currently implemented are:
 

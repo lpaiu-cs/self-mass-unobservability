@@ -27,12 +27,12 @@ That was enough to justify one more bounded test before touching the deeper
 ## Implementation
 
 The probe is implemented in
-[request4_llr_mlrs_recalc_seam_probe.py](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_mlrs_recalc_seam_probe.py:1).
+[request4_llr_mlrs_recalc_seam_probe.py](request4_llr_mlrs_recalc_seam_probe.py#L1).
 
 It does three things:
 
 1. rebuilds the lab `llr_npt_crd` with the current
-   [smu_probe_adjust_omc.f](/Users/lpaiu/vs/lab/self-mass-unobservability/data/request4_llr/mlrs_handshake_lab/src/llr_npt/smu_probe_adjust_omc.f:1),
+   [smu_probe_adjust_omc.f](data/request4_llr/mlrs_handshake_lab/src/llr_npt/smu_probe_adjust_omc.f#L1),
 2. runs a constant-offset linearity suite on the first bundled lunar sample
    with offsets
    `{-0.005, -0.002, -0.001, +0.001, +0.002, +0.005} ns`,
@@ -51,11 +51,11 @@ The helper now supports both:
 ## Outputs
 
 - probe summary:
-  [request4_llr_mlrs_recalc_seam_probe_summary.json](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_mlrs_recalc_seam_probe_summary.json:1)
+  [request4_llr_mlrs_recalc_seam_probe_summary.json](request4_llr_mlrs_recalc_seam_probe_summary.json#L1)
 - probe figure:
-  [request4_llr_mlrs_recalc_seam_probe_summary.svg](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_mlrs_recalc_seam_probe_summary.svg)
+  [request4_llr_mlrs_recalc_seam_probe_summary.svg](request4_llr_mlrs_recalc_seam_probe_summary.svg)
 - probe script:
-  [request4_llr_mlrs_recalc_seam_probe.py](/Users/lpaiu/vs/lab/self-mass-unobservability/request4_llr_mlrs_recalc_seam_probe.py:1)
+  [request4_llr_mlrs_recalc_seam_probe.py](request4_llr_mlrs_recalc_seam_probe.py#L1)
 
 ## Result 1: Constant-Probe Linearity Is Clean
 
@@ -128,8 +128,8 @@ The right reading is therefore:
 The real next gate is one level deeper:
 
 - can the true prediction/state perturbation be inserted at the
-  [jjreadnp.f](/Users/lpaiu/vs/lab/self-mass-unobservability/data/request4_llr/mlrs_handshake_lab/src/llr_npt/jjreadnp.f:30)
-  / [jeulpkg.f](/Users/lpaiu/vs/lab/self-mass-unobservability/data/request4_llr/mlrs_handshake_lab/src/llr_npt/jeulpkg.f:341)
+  [jjreadnp.f](data/request4_llr/mlrs_handshake_lab/src/llr_npt/jjreadnp.f#L30)
+  / [jeulpkg.f](data/request4_llr/mlrs_handshake_lab/src/llr_npt/jeulpkg.f#L341)
   seam without broad legacy-code surgery.
 
 If yes, `MLRS` remains a live hand-off path.
