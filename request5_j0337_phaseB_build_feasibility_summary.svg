@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="920" viewBox="0 0 1500 920">
+<rect width="100%" height="100%" fill="#f8fafc"/>
+<text x="48" y="46" font-family="sans-serif" font-size="24" font-weight="700" fill="#111827">Request 5: J0337 Phase B build feasibility</text>
+<text x="48" y="74" font-family="sans-serif" font-size="14" fill="#475569">Bounded build/runtime gate for the public Nutimo release on the current host.</text>
+<rect x="48" y="108" width="1404" height="176" fill="white" stroke="#cbd5e1"/>
+<text x="66" y="138" font-family="sans-serif" font-size="16" font-weight="700" fill="#111827">Decision</text>
+<text x="66" y="170" font-family="monospace" font-size="13" fill="#111827">verdict = Nutimo public inputs are available, but the current host does not yet close the runtime stack: the default build fails on Apple clang OpenMP, and the GCC path then fails on missing Boost and remaining timing dependencies.</text>
+<text x="66" y="194" font-family="monospace" font-size="13" fill="#111827">default compiler = /usr/bin/g++ | g++-14 = /opt/homebrew/bin/g++-14</text>
+<text x="66" y="218" font-family="monospace" font-size="13" fill="#111827">missing deps = ['tempo2', 'root-config', 'cython', 'mpic++', 'boost-odeint']</text>
+<text x="66" y="242" font-family="monospace" font-size="13" fill="#111827">next bounded action = do not begin open-ended dependency provisioning in this workspace; either use a pre-provisioned research environment or an external analysis route for full Phase B</text>
+<rect x="48" y="318" width="1404" height="540" fill="white" stroke="#cbd5e1"/>
+<text x="66" y="348" font-family="sans-serif" font-size="16" font-weight="700" fill="#111827">Diagnostics</text>
+<text x="66" y="382" font-family="sans-serif" font-size="15" font-weight="700" fill="#92400e">WARN · default makefile compiler path</text>
+<text x="66" y="404" font-family="sans-serif" font-size="12" fill="#334155">makefile-original uses g++; on this host that resolves to /usr/bin/g++.</text>
+<text x="66" y="446" font-family="sans-serif" font-size="15" font-weight="700" fill="#991b1b">FAIL · default build probe</text>
+<text x="66" y="468" font-family="sans-serif" font-size="12" fill="#334155">make -f makefile-original Minuit_fit.exe fails immediately because Apple clang++ does not accept -fopenmp in the default CXXFLAGS.</text>
+<text x="66" y="510" font-family="sans-serif" font-size="15" font-weight="700" fill="#92400e">WARN · gcc-14 probe</text>
+<text x="66" y="532" font-family="sans-serif" font-size="12" fill="#334155">Homebrew g++-14 path = /opt/homebrew/bin/g++-14.</text>
+<text x="66" y="574" font-family="sans-serif" font-size="15" font-weight="700" fill="#991b1b">FAIL · post-openmp compile probe</text>
+<text x="66" y="596" font-family="sans-serif" font-size="12" fill="#334155">With CXX=g++-14, compilation gets past the OpenMP frontend issue but then fails on missing boost/numeric/odeint.hpp.</text>
+<text x="66" y="638" font-family="sans-serif" font-size="15" font-weight="700" fill="#92400e">WARN · timing-stack dependencies</text>
+<text x="66" y="660" font-family="sans-serif" font-size="12" fill="#334155">tempo2=none, root-config=none, cython=none, mpic++=none, boost_odeint=False.</text>
+</svg>

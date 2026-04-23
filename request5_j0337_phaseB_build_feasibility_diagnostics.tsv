@@ -1,0 +1,6 @@
+name	status	detail
+default makefile compiler path	warn	makefile-original uses g++; on this host that resolves to /usr/bin/g++.
+default build probe	fail	make -f makefile-original Minuit_fit.exe fails immediately because Apple clang++ does not accept -fopenmp in the default CXXFLAGS.
+gcc-14 probe	warn	Homebrew g++-14 path = /opt/homebrew/bin/g++-14.
+post-openmp compile probe	fail	With CXX=g++-14, compilation gets past the OpenMP frontend issue but then fails on missing boost/numeric/odeint.hpp.
+timing-stack dependencies	warn	tempo2=none, root-config=none, cython=none, mpic++=none, boost_odeint=False.

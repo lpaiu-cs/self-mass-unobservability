@@ -1,0 +1,67 @@
+{
+  "generated_at_utc": "2026-04-23T12:02:23.026752+00:00",
+  "default_gpp": "/usr/bin/g++",
+  "gpp14": "/opt/homebrew/bin/g++-14",
+  "mpicxx": null,
+  "tempo2": null,
+  "root_config": null,
+  "cython": null,
+  "boost_odeint_present": false,
+  "default_make_exit_code": 2,
+  "default_make_excerpt": [
+    "g++    -c -g -Wall -O2 -fopenmp  -Bstatic -I  -I/include/ -L  -ltempo2 -lsofa -llapack -lcblas  -lgfortran  -lf77blas -latlas AllTheories3Bodies.cpp",
+    "clang++: warning: -lsofa: 'linker' input unused [-Wunused-command-line-argument]",
+    "clang++: warning: -llapack: 'linker' input unused [-Wunused-command-line-argument]",
+    "clang++: warning: -lcblas: 'linker' input unused [-Wunused-command-line-argument]",
+    "clang++: warning: -lgfortran: 'linker' input unused [-Wunused-command-line-argument]",
+    "clang++: warning: -lf77blas: 'linker' input unused [-Wunused-command-line-argument]",
+    "clang++: warning: -latlas: 'linker' input unused [-Wunused-command-line-argument]",
+    "clang++: error: unsupported option '-fopenmp'",
+    "make: *** [AllTheories3Bodies.o] Error 1"
+  ],
+  "boost_probe_exit_code": 2,
+  "boost_probe_excerpt": [
+    "g++-14 -c -g -Wall -O2 -fopenmp -Bstatic -I  -I/include/ -L  -ltempo2 -lsofa -llapack -lcblas  -lgfortran  -lf77blas -latlas AllTheories3Bodies.cpp",
+    "AllTheories3Bodies.cpp:5:10: fatal error: boost/numeric/odeint.hpp: No such file or directory",
+    "    5 | #include <boost/numeric/odeint.hpp>",
+    "      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~",
+    "compilation terminated.",
+    "make: *** [AllTheories3Bodies.o] Error 1"
+  ],
+  "missing_dependencies": [
+    "tempo2",
+    "root-config",
+    "cython",
+    "mpic++",
+    "boost-odeint"
+  ],
+  "verdict": "Nutimo public inputs are available, but the current host does not yet close the runtime stack: the default build fails on Apple clang OpenMP, and the GCC path then fails on missing Boost and remaining timing dependencies.",
+  "next_bounded_action": "do not begin open-ended dependency provisioning in this workspace; either use a pre-provisioned research environment or an external analysis route for full Phase B",
+  "diagnostics": [
+    {
+      "name": "default makefile compiler path",
+      "status": "warn",
+      "detail": "makefile-original uses g++; on this host that resolves to /usr/bin/g++."
+    },
+    {
+      "name": "default build probe",
+      "status": "fail",
+      "detail": "make -f makefile-original Minuit_fit.exe fails immediately because Apple clang++ does not accept -fopenmp in the default CXXFLAGS."
+    },
+    {
+      "name": "gcc-14 probe",
+      "status": "warn",
+      "detail": "Homebrew g++-14 path = /opt/homebrew/bin/g++-14."
+    },
+    {
+      "name": "post-openmp compile probe",
+      "status": "fail",
+      "detail": "With CXX=g++-14, compilation gets past the OpenMP frontend issue but then fails on missing boost/numeric/odeint.hpp."
+    },
+    {
+      "name": "timing-stack dependencies",
+      "status": "warn",
+      "detail": "tempo2=none, root-config=none, cython=none, mpic++=none, boost_odeint=False."
+    }
+  ]
+}

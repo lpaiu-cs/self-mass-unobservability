@@ -136,9 +136,15 @@ So the honest state is:
   transferability candidate for public monthly CRD, but **not yet** as a
   closed weak-field posterior path for diverse public monthly passes.
 - The remaining blocker is therefore no longer "can MLRS ingest public CRD at
-  all?" but "what public or semi-public `raw frd -> usable frcal / 93 stream`
-  layer is still missing before promoted public passes become real observation-
-  operator cases?"
+  all?" but the missing public or semi-public `raw frd -> usable frcal / 93
+  stream` layer before promoted public passes become real observation-operator
+  cases.
+- That bounded search has now also been carried out; see
+  `REQUEST4_LLR_MLRS_FRCAL_LAYER_SCOUT.md`.
+- The result is negative: the official/public path does not expose such a layer
+  in the current workspace, and the best-supported reading is that the needed
+  calibrated residual-bearing pass product is station-internal, removed from
+  the public bundle, or both.
 - A bounded MLRS hand-off experiment now also exists; see
   `REQUEST4_LLR_MLRS_HANDSHAKE.md`.
 - That handshake no longer leaves MLRS at the level of "legacy code maybe worth
@@ -202,12 +208,12 @@ If Request 4 remains the next priority, the next concrete action is now:
    candidate,
    while also using the widened monthly CRD ensemble for operator-level
    response calibration and station/target/time diversity checks,
-3. the next MLRS step should stay narrow: promote a few shortlist cases from
-   `REQUEST4_LLR_CRD_COVERAGE_MAP.md` into bounded runnable experiments and
-   measure whether the operator gain remains explainable by a low-dimensional
-   station/target/time/geometry layer,
-4. otherwise fall through to a more mature external estimator/codebase without
-   letting MLRS turn into a second bespoke branch.
+3. recognize that the bounded MLRS search has now reached its current ceiling:
+   public monthly CRD promotion reaches parser/recalc, but the missing
+   residual-bearing `frcal/93` layer is not publicly exposed,
+4. therefore fall through to a more mature external estimator/codebase for the
+   final weak-field posterior without letting MLRS turn into a second bespoke
+   branch.
 
 As of the current state-seam and Sun-driven gates, item 3 should now be read
 more precisely:
@@ -226,3 +232,57 @@ Anything short of that is still ingest territory, not the real Request 4 fit.
 Given the present project state, that is also the correct strategic next move
 if the goal is the tied-vs-decoupled verdict rather than further local clock
 audits.
+
+## Request 4 Stop Rule
+
+Request 4 should now be read with a completed bounded-search rule:
+
+- the short, explicit search for the missing public or semi-public
+  `raw frd -> usable frcal / 93 stream` layer has been carried out,
+- that search did not find a public path that closes the promoted public passes
+  into a residual-bearing `MLRS` case,
+- so MLRS should stop here as a bespoke estimator branch,
+- and the final weak-field posterior should be handed over to a more mature
+  external LLR estimator/codebase.
+- The external hand-off ranking has now also been scouted; see
+  `REQUEST4_LLR_EXTERNAL_ESTIMATOR_SCOUT.md`.
+- In the current bounded public scout, `PEP` is the strongest public-code
+  estimator candidate, while `JPL` and `POLAC/ELPN` look more like mature
+  external-analysis routes than drop-in public code releases.
+- That public-code ranking has now also passed its first acquisition/build
+  feasibility gate; see `REQUEST4_LLR_PEP_HANDOFF_FEASIBILITY.md`.
+  The result is narrower than the ranking itself:
+  `PEP` is indeed the right code family, with public GitLab repos and real
+  `LLR` bigtest assets, but it is not locally buildable on the current
+  `arm64` `gfortran` toolchain because `REAL*10` is pervasive and some
+  sub-builds also require `-m128bit-long-double`.
+  So the only justified next escalation is a separate legacy / `x86_64`
+  environment probe, not a local source-port.
+- That final local environment probe has now also been run; see
+  `REQUEST4_LLR_PEP_ENVIRONMENT_PROBE.md`.
+  On this host, `Rosetta` exists, but there is no `/usr/local` `x86_64`
+  `Homebrew`, no `x86` `gfortran`, and no container/runtime path already
+  present. So there is no bounded local `PEP` execution path here without new
+  infrastructure work.
+
+This is the correct boundary because the current evidence is already specific:
+
+- bundled public replay cases succeed end-to-end,
+- bounded local-state operator probes succeed,
+- public monthly CRD promotion reaches parser/recalc,
+- but the promoted public passes still do not produce a usable `93` residual
+  stream.
+- and the strongest public-code external estimator candidate is blocked on the
+  current host by a legacy numeric-kind / toolchain mismatch, not by missing
+  code acquisition.
+- and the follow-up environment probe found no already-provisioned local
+  `x86_64` / legacy runtime that would keep the `PEP` escalation bounded.
+
+So the remaining issue is not software survivability; it is the missing
+residual-bearing promotion layer, and the bounded search for that layer has now
+ended without finding a public closure path inside `MLRS`.
+For the external hand-off branch, the next bounded question is now only whether
+`PEP` can be run in a separate legacy-compatible environment.
+That question is now negative for this specific host, so the local workspace
+branch of `Request 4` stops here and the final weak-field posterior must move
+to a separate external estimator environment or analysis route.

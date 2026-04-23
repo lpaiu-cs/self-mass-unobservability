@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="960" viewBox="0 0 1440 960">
+<rect width="100%" height="100%" fill="#f8fafc"/>
+<text x="48" y="46" font-family="sans-serif" font-size="24" font-weight="700" fill="#111827">Request 4: MLRS frcal/93 layer scout</text>
+<text x="48" y="74" font-family="sans-serif" font-size="14" fill="#475569">Bounded search for a public or semi-public raw-CRD to residual-bearing frcal promotion layer.</text>
+<rect x="48" y="108" width="1344" height="136" fill="white" stroke="#cbd5e1"/>
+<text x="66" y="138" font-family="sans-serif" font-size="16" font-weight="700" fill="#111827">Verdict</text>
+<text x="66" y="170" font-family="monospace" font-size="13" fill="#111827">missing layer status = not_publicly_exposed_in_bounded_search</text>
+<text x="66" y="194" font-family="monospace" font-size="13" fill="#111827">stop rule triggered = True</text>
+<text x="66" y="218" font-family="monospace" font-size="13" fill="#111827">request4 status = hand_off_final_weak_field_posterior_to_external_estimator</text>
+<rect x="48" y="276" width="1344" height="238" fill="white" stroke="#cbd5e1"/>
+<text x="66" y="306" font-family="sans-serif" font-size="16" font-weight="700" fill="#111827">Evidence chain</text>
+<text x="66" y="338" font-family="monospace" font-size="13" fill="#111827">manual says Poisson input = Standard, range calibrated, CRD full rate data file</text>
+<text x="66" y="362" font-family="monospace" font-size="13" fill="#111827">manual says bundled tests use = See prod/bin/ldb_crd. This script is used to filter lunar data and created normal points and fully filtered full rate data. The file npt_test.sh in the top level directory can be used to run several lunar data sets. The input CRD files are in data/analysis directory ending in “.frcal”. These are fully calibrated full rate files. After running the script, other files will appear in that directory, including the normal points (.npt) and full rate data (.frd) and log files (.lsc for summary and .llc for full log).</text>
+<text x="66" y="386" font-family="monospace" font-size="13" fill="#111827">bundle script says = # MLRS-specific calibration code removed</text>
+<text x="66" y="410" font-family="monospace" font-size="13" fill="#111827">bundle script input line = -i $DATA_DIR$1".frcal" -o $DATA_DIR$1".frrec" \</text>
+<text x="66" y="434" font-family="monospace" font-size="13" fill="#111827">public promotion recalc pass = 3 / 5</text>
+<text x="66" y="458" font-family="monospace" font-size="13" fill="#111827">public promotion poisson pass = 0 / 5</text>
+<text x="66" y="482" font-family="monospace" font-size="13" fill="#111827">public promotion 93-bearing cases = []</text>
+<rect x="48" y="546" width="1344" height="318" fill="white" stroke="#cbd5e1"/>
+<text x="66" y="576" font-family="sans-serif" font-size="16" font-weight="700" fill="#111827">Reference vs promoted record structure</text>
+<text x="66" y="608" font-family="monospace" font-size="13" fill="#111827">reference frrec counts = 10:1456 12:1 30:1761 92:10 93:1761</text>
+<text x="66" y="638" font-family="monospace" font-size="13" fill="#111827">apollo15_202503_wetl_promo frfil counts = 10:121 12:0 20:2 30:0 40:1 93:0</text>
+<text x="66" y="662" font-family="monospace" font-size="13" fill="#111827">apollo15_202511_apol_promo frfil counts = 10:16 12:0 20:1 30:16 40:1 93:0</text>
+<text x="66" y="686" font-family="monospace" font-size="13" fill="#111827">apollo15_202502_grsm_promo frfil counts = 10:47 12:0 20:1 30:47 40:1 93:0</text>
+<text x="66" y="722" font-family="sans-serif" font-size="15" font-weight="700" fill="#111827">Interpretation</text>
+<text x="66" y="750" font-family="sans-serif" font-size="13" fill="#334155">Official CRD docs describe CRD as the native format before station-side calibration/filtering,</text>
+<text x="66" y="772" font-family="sans-serif" font-size="13" fill="#334155">and note that 9x station-defined records are normally stripped before transmittal.</text>
+<text x="66" y="794" font-family="sans-serif" font-size="13" fill="#334155">The public MLRS bundle expects fully calibrated .frcal input but also says MLRS-specific calibration code was removed.</text>
+<text x="66" y="816" font-family="sans-serif" font-size="13" fill="#334155">So the missing residual-bearing frcal/93 layer is not publicly exposed in the current bounded MLRS path.</text>
+</svg>

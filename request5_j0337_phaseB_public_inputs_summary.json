@@ -1,0 +1,117 @@
+{
+  "generated_at_utc": "2026-04-23T12:00:40.510570+00:00",
+  "verdict": "Phase B public inputs are open and locally mirrored: public TOA files, parfiles, and Nutimo source are available from Zenodo. The next gate is build/runtime closure, not data access.",
+  "release_2020_mirrored": true,
+  "release_2025_mirrored": true,
+  "tim_files_found": 4,
+  "par_files_found": 1,
+  "nutimo_source_files_found": 61,
+  "release_2020_doi": "10.5281/zenodo.3778978",
+  "release_2025_doi": "10.5281/zenodo.13899771",
+  "release_2020_tim_files": [
+    "Data_and_Results/4ft1200s-20191018-FDM-gt600s-superclean-no_sun_5deg.tim",
+    "Data_and_Results/f4t1200s-FDM-20190514-gt600s-clean.tim-sorted-supershort"
+  ],
+  "release_2020_par_files": [
+    "Data_and_Results/0337+1715.par-nofit-DE430"
+  ],
+  "release_2025_tim_files": [
+    "Data/0337_20211005-sorted-sun5deg-res25microsec-58631_58780_clipped.tim",
+    "Data/0337_20211005-sorted-sun5deg-res25microsec.tim"
+  ],
+  "release_2025_par_files": [],
+  "release_2025_code_highlights": [
+    "nutimo/Documentation/README.md",
+    "nutimo/Documentation/TheFakePulsar/README.md",
+    "nutimo/README.md",
+    "nutimo/install_script.sh",
+    "nutimo/src/AllTheories3Bodies.cpp",
+    "nutimo/src/Check_accuracy.cpp",
+    "nutimo/src/Compare_parameters.cpp",
+    "nutimo/src/Compute_chi2_and_prior.cpp",
+    "nutimo/src/Compute_cord-2points.cpp",
+    "nutimo/src/Compute_cord.cpp",
+    "nutimo/src/Compute_gradients.cpp",
+    "nutimo/src/Convert_MCMC_chain.cpp"
+  ],
+  "release_2025_dependency_statement": "Nutimo README names Boost, Tempo2, Minuit, and Acor; install_script.sh also expects manual third_party paths and compiles C++ plus Cython extensions.",
+  "local_command_paths": {
+    "tempo2": null,
+    "root-config": null,
+    "g++": "/usr/bin/g++",
+    "gcc": "/usr/bin/gcc",
+    "python3": "/opt/anaconda3/bin/python3",
+    "cython": null
+  },
+  "missing_local_dependencies": [
+    "tempo2",
+    "root-config",
+    "cython"
+  ],
+  "next_bounded_action": "perform a Nutimo build/runtime feasibility probe in the current workspace without turning Request 5 into an open-ended dependency provisioning project",
+  "assets": [
+    {
+      "release": "2020",
+      "doi": "10.5281/zenodo.3778978",
+      "asset": "README",
+      "local_status": "mirrored",
+      "local_path": "/Users/lpaiu/vs/lab/self-mass-unobservability/data/request5_j0337/nutimo_public_release_2026-04-23/2020/README",
+      "size_bytes": 1491,
+      "role": "release readme"
+    },
+    {
+      "release": "2020",
+      "doi": "10.5281/zenodo.3778978",
+      "asset": "nutimo.tar.bz2",
+      "local_status": "mirrored",
+      "local_path": "/Users/lpaiu/vs/lab/self-mass-unobservability/data/request5_j0337/nutimo_public_release_2026-04-23/2020/nutimo.tar.bz2",
+      "size_bytes": 261322,
+      "role": "timing-model source code"
+    },
+    {
+      "release": "2020",
+      "doi": "10.5281/zenodo.3778978",
+      "asset": "Data_and_Results.tar.bz2",
+      "local_status": "mirrored",
+      "local_path": "/Users/lpaiu/vs/lab/self-mass-unobservability/data/request5_j0337/nutimo_public_release_2026-04-23/2020/Data_and_Results.tar.bz2",
+      "size_bytes": 30759551,
+      "role": "TOA, parfile, MCMC results bundle"
+    },
+    {
+      "release": "2025",
+      "doi": "10.5281/zenodo.13899771",
+      "asset": "Readme.md",
+      "local_status": "mirrored",
+      "local_path": "/Users/lpaiu/vs/lab/self-mass-unobservability/data/request5_j0337/nutimo_public_release_2026-04-23/2025/Readme.md",
+      "size_bytes": 845,
+      "role": "release readme"
+    },
+    {
+      "release": "2025",
+      "doi": "10.5281/zenodo.13899771",
+      "asset": "nutimo.tar.bz2",
+      "local_status": "mirrored",
+      "local_path": "/Users/lpaiu/vs/lab/self-mass-unobservability/data/request5_j0337/nutimo_public_release_2026-04-23/2025/nutimo.tar.bz2",
+      "size_bytes": 245918,
+      "role": "timing-model source code"
+    },
+    {
+      "release": "2025",
+      "doi": "10.5281/zenodo.13899771",
+      "asset": "Data.tar.bz2",
+      "local_status": "mirrored",
+      "local_path": "/Users/lpaiu/vs/lab/self-mass-unobservability/data/request5_j0337/nutimo_public_release_2026-04-23/2025/Data.tar.bz2",
+      "size_bytes": 493129,
+      "role": "TOA bundle used in paper"
+    },
+    {
+      "release": "2025",
+      "doi": "10.5281/zenodo.13899771",
+      "asset": "Analysis.tar.bz2",
+      "local_status": "remote-only",
+      "local_path": "",
+      "size_bytes": 247273012,
+      "role": "full analysis products; left remote in bounded scout"
+    }
+  ]
+}

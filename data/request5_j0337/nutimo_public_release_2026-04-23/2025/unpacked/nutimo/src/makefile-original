@@ -1,0 +1,245 @@
+# SPDX-FileCopyrightText: 2024 Guillaume VOISIN (researcher at LUTH, Observatoire de Paris, PSL, CNRS) <guillaume.voisin@obspm.fr> <astro.guillaume.voisin@gmail.com>
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+# /* This code implements a timing model and fitting procedures aimed at studiyng th triple system J0337+1715 (Ransom et al. 2013)
+#  *
+#  * Written by Guillaume Voisin 2017 , LUTh, Observatoire de Paris, PSL Research University (guillaume.voisin@obspm.fr astro.guillaume.voisin@google.com)
+#  */
+
+############ COMPILER OPTIONS #########################
+CXX = g++   # put here your version of c++ compiler
+MPICXX = mpic++ # put here your version of mpic++
+PYTHON = python3
+
+## Should not have to be changed
+CXXFLAGS = -g -Wall -O2 -fopenmp # compiling options
+MPICXXFLAGS = -g -O2
+
+
+########## LINKING VARIABLES ######################################################
+# TEMPO2 contains an include directory
+TEMPO2 =
+# MiNUIT must contain a include and a lib directory
+MINUIT =
+# BOOST includes for BOOST >1.55
+BOOST =
+# TEMPO2 static libraries
+LIBSTATICTEMPO2 =
+LIBSTATICTEMPO2FPIC =
+########################################################
+
+## LINKING VARIABLES that should not be edited.
+LDFLAGS = -Bstatic -I$(BOOST)  -I$(TEMPO2)/include/ -L$(LIBSTATICTEMPO2)  -ltempo2 -lsofa -llapack -lcblas  -lgfortran  -lf77blas -latlas
+LDFLAGSfpic = -Bstatic -I$(BOOST)  -I$(TEMPO2)/include/ -L$(LIBSTATICTEMPO2FPIC)  -ltempo2 -lsofa -llapack -lcblas  -lgfortran  -lf77blas -latlas
+
+LDminuit = -I$(MINUIT)/include/
+
+####################################################################################
+# Installation directory
+INSTALLDIR =
+
+
+sources  =  AllTheories3Bodies.cpp  Delay_brut.cpp Fittriple-compute.cpp \
+	Fittriple-init.cpp Fittriple-IO.cpp Fittriple-diagnostics.cpp IO.cpp  Orbital_elements.cpp Spline.cpp Utilities.cpp Diagnostics.cpp Parameters.cpp
+
+objects  =  AllTheories3Bodies.o Delay_brut.o Fittriple-compute.o \
+	Fittriple-init.o Fittriple-IO.o Fittriple-diagnostics.o IO.o  Orbital_elements.o Spline.o Utilities.o Diagnostics.o Parameters.o
+	# jpleph.o
+
+headers = Fittriple.h IO.h Orbital_elements.h \
+	Utilities.h Constants.h Spline.h AllTheories3Bodies.h Delay_brut.h Diagnostics.h Parameters.h
+
+sourcesMCMC = Utilities_MPI.cpp Utilities_MCMC_affinv.cpp acc.cpp
+headersMCMC = Utilities_MPI.h Utilities_MCMC_affinv.h MCMC_lnposterior_functions.h
+
+all : Minuit_fit.exe
+bis : Minuit_fitbis.exe
+library : libFittriplecpp.so
+mcmc : MCMC_pai_pt.exe New_parfile_from_MCMC.exe Convert_MCMC_chain.exe # MCMC_pai.exe : equivalent to MCMC_pai_pt.exe without parallel tempering
+test : Test-fittriple.exe
+chi2map : Minuit_fit-chi2map.exe
+python : acor_python.so python_Fittriple_interface.so
+install :
+	cp mcmcanalysis.py Fittriple.py Sieving.py $(INSTALLDIR)
+	cp Minuit_fit.exe $(INSTALLDIR)
+	cp libFittriplecpp.so $(INSTALLDIR)
+	cp acor_python.*.so python_Fittriple_interface.*.so $(INSTALLDIR)
+	cp MCMC_pai_pt.exe New_parfile_from_MCMC.exe Convert_MCMC_chain.exe $(INSTALLDIR)
+installcheck :
+	cp Check_accuracy.exe $(INSTALLDIR)
+
+installfake :
+	cp Make_fake_timfile.exe $(INSTALLDIR)
+
+installpy :
+	cp integrate.py mcmcanalysis.py Fittriple.py Sieving.py libFittriplecpp.so libacorcpp.so acor_python.*.so python_Fittriple_interface.*.so $(INSTALLDIR)
+	
+installmc :
+	cp MCMC_pai_pt.exe New_parfile_from_MCMC.exe Convert_MCMC_chain.exe $(INSTALLDIR)
+
+installint :
+	cp integrate.exe integrate.py $(INSTALLDIR)
+	cp integrate_convert.exe $(INSTALLDIR)
+
+Test-fittriple.exe :  $(objects) Test-fittriple.o
+	$(CXX) -o $@ $(CXXFLAGS)  $^ $(LDFLAGS)
+
+MCMC_pai.exe : MCMC_parallelaffineinvariant.cpp  $(headers) $(sources) $(headersMCMC) $(sourcesMCMC) $(sourcesMCMC) #MCMC_parallelaffineinvariant.cpp acc.cpp
+	$(MPICXX) -D MPIMODE -std=gnu++11 -D MPIMODE $(MPICXXFLAGS) -o $@ $< $(sources) $(LDFLAGS) $(sourcesMCMC)
+
+MCMC_pai_pt.exe : MCMC_parallelaffineinvariant_paralleltemp.cpp $(headers)  $(sources) $(headersMCMC) $(sourcesMCMC) # MCMC_parallelaffineinvariant_paralleltemp.cpp acc.cpp
+	$(MPICXX) -D MPIMODE -std=gnu++11 $(MPICXXFLAGS) -o $@ $<  $(sourcesMCMC) $(sources) $(LDFLAGS)
+
+MCMC_pai_pt-simudata.exe : MCMC_parallelaffineinvariant_paralleltemp.cpp $(headers)  $(sources) $(headersMCMC) $(sourcesMCMC) # MCMC_parallelaffineinvariant_paralleltemp.cpp acc.cpp
+	$(MPICXX) -D MPIMODE -D SIMUDATA -std=gnu++11 $(MPICXXFLAGS) -o $@ $<  $(sourcesMCMC) $(sources) $(LDFLAGS)
+
+Minuit_fit-chi2map.exe : $(objects) Minuit_fit-chi2map.o Minuit_Fittriple_interface.h
+	$(CXX) -o $@ $(CXXFLAGS) $^ $(LDFLAGS) $(LDminuit)   $(MINUIT)/lib/libMinuit2.a
+
+Minuit_fitbis.exe : $(objects) Minuit_fit.o Minuit_Fittriple_interface.h
+	$(CXX) -o $@ $(CXXFLAGS) $^ $(LDFLAGS) $(LDminuit)   $(MINUIT)/lib/libMinuit2.a
+
+Minuit_fit.exe : $(objects) Minuit_fit.o Minuit_Fittriple_interface.h
+	$(CXX) -o $@ $(CXXFLAGS) $^ $(LDFLAGS) $(LDminuit)   $(MINUIT)/lib/libMinuit2.a
+
+integrate.exe : integrate.cpp Constants.h Utilities.o AllTheories3Bodies.o Diagnostics.o Parameters.o Orbital_elements.o Utilities_integrate.o
+	$(CXX) -o $@ $(CXXFLAGS) $^ $(LDFLAGS) 
+
+integrate_convert.exe : integrate_convert.cpp Constants.h Utilities.o AllTheories3Bodies.o Diagnostics.o Parameters.o Orbital_elements.o Utilities_integrate.o
+	$(CXX) -o $@ $(CXXFLAGS) $^ $(LDFLAGS) 
+
+Test-fittriple.o : Test-fittriple.cpp $(headers)
+	$(CXX) -c $(CXXFLAGS) $(LDFLAGS) $<
+
+Cord.exe :  $(headers)  $(sources) Compute_cord.cpp
+	$(MPICXX) -D MPIMODE -std=gnu++11 $(MPICXXFLAGS) -o $@  Compute_cord.cpp  $(sources) $(LDFLAGS)
+
+Cord-2points.exe :  $(headers)  $(sources) Compute_cord-2points.cpp
+	$(MPICXX) -D MPIMODE -std=gnu++11 $(MPICXXFLAGS) -o $@  Compute_cord-2points.cpp  $(sources) $(LDFLAGS)
+
+Make_fake_timfile.exe :  $(objects)  Make_fake_timfile.o
+	$(CXX) -std=gnu++11 $(CXXFLAGS) -o $@  $^ $(LDFLAGS)
+
+Make_fake_timfile.o :  Make_fake_timfile.cpp $(headers)
+	$(CXX) -c -std=gnu++11 $(CXXFLAGS)  $(LDFLAGS) $<
+
+Check_accuracy.exe : $(objects) Check_accuracy.o
+	$(CXX) -o $@ $(CXXFLAGS) $^ $(LDFLAGS)
+
+Check_accuracy.o : Check_accuracy.cpp $(headers)
+	$(CXX) -c  $(CXXFLAGS) $(LDFLAGS)  $<
+	
+New_parfile_from_MCMC.exe : $(objects) New_parfile_from_MCMC.o
+	$(CXX) -o $@ $(CXXFLAGS) $^ $(LDFLAGS)
+
+New_parfile_from_MCMC.o : New_parfile_from_MCMC.cpp $(headers)
+	$(CXX) -c  $(CXXFLAGS) $(LDFLAGS)  $<
+	
+Convert_MCMC_chain.exe : Convert_MCMC_chain.o Utilities_MCMC_affinv.o $(objects)
+	$(CXX) -o $@ $(CXXFLAGS) $^ $(LDFLAGS)
+
+Convert_MCMC_chain.o : Convert_MCMC_chain.cpp $(headers) 
+	$(CXX) -c  $(CXXFLAGS) $(LDFLAGS)  $<
+	
+Utilities_MCMC_affinv.o : Utilities_MCMC_affinv.cpp  
+	$(CXX) -c  $(CXXFLAGS) $(LDFLAGS)  $<
+
+Utilities_integrate.o : Utilities_integrate.cpp  
+	$(CXX) -c  $(CXXFLAGS) $(LDFLAGS)  $<
+
+Compute_chi2_and_prior.exe : $(objects) Compute_chi2_and_prior.o
+	$(CXX) -std=gnu++11 -o $@ $(CXXFLAGS) $^ $(LDFLAGS)
+
+Compute_chi2_and_prior.o : Compute_chi2_and_prior.cpp $(headers)
+	$(CXX) -std=gnu++11 -c  $(CXXFLAGS) $(LDFLAGS)  $<
+
+Convert_parameter_sets.exe : Convert_parameter_sets.cpp Parameters.cpp Utilities_MCMC_affinv.cpp Utilities.cpp Orbital_elements.cpp Convert_parameter_sets.cpp Parameters.cpp Utilities_MCMC_affinv.cpp Utilities.cpp Orbital_elements.cpp
+	$(CXX) -std=gnu++11 Convert_parameter_sets.cpp Parameters.cpp Utilities_MCMC_affinv.cpp Utilities.cpp Orbital_elements.cpp -o $@
+
+Minuit_fit-chi2map.o : Minuit_fit-chi2map.cpp $(headers) Minuit_Fittriple_interface.h
+	$(CXX) -c  $(CXXFLAGS) $(LDFLAGS) $(LDminuit) $<
+
+Minuit_fit.o : Minuit_fit.cpp $(headers) Minuit_Fittriple_interface.h
+	$(CXX) -c  $(CXXFLAGS) $(LDFLAGS) $(LDminuit) $<
+
+libFittriplecpp.so :  $(sources) $(headers)
+	$(CXX) -c -fpic   $(LDFLAGSfpic) $(sources)
+	$(CXX) -shared -o $@ $(CXXFLAGS)  $(objects) $(LDFLAGSfpic) $(LDminuit)   $(MINUIT)/lib/libMinuit2.a
+	rm *.o
+
+libFittriplecpp.a :  $(sources)
+	$(CXX) -c -fpic $(LDFLAGSfpic) $(sources)
+	ar -rcs $@ $(objects)
+
+get_obsCoord.o : get_obsCoord.C
+	$(CXX) -c $(CXXFLAGS)  $< $(LDFLAGS)
+
+jpleph.o : jpleph.c jpleph.h jpl_int.h
+	$(CXX) -c $(CXXFLAGS) $<
+
+MCMC_parallelaffineinvariant.o : MCMC_parallelaffineinvariant.cpp $(headers)
+	$(CXX) -c $(CXXFLAGS) $(LDFLAGS) $<
+
+acc.o : acc.cpp acor.h
+	$(CXX) -c $(CXXFLAGS) $(LDFLAGS) $<
+
+AllTheories3Bodies.o : AllTheories3Bodies.cpp $(headers)
+	$(CXX) -c $(CXXFLAGS) $(LDFLAGS) $<
+
+Delay_brut.o : Delay_brut.cpp
+	$(CXX) -c $(CXXFLAGS) $(LDFLAGS) $<
+
+Fittriple-compute.o : Fittriple-compute.cpp $(headers)
+	$(CXX) -c $(CXXFLAGS) $(LDFLAGS)  $<
+
+
+Fittriple-init.o : Fittriple-init.cpp $(headers)
+	$(CXX) -c $(CXXFLAGS) $(LDFLAGS) $<
+
+Fittriple-IO.o : Fittriple-IO.cpp $(headers)
+	$(CXX) -c $(CXXFLAGS) $(LDFLAGS) $<
+
+Fittriple-diagnostics.o : Fittriple-diagnostics.cpp $(headers)
+	$(CXX) -c $(CXXFLAGS) $(LDFLAGS) $<
+
+
+IO.o : IO.cpp $(headers)
+	$(CXX) -c  $(CXXFLAGS) $(LDFLAGS) $<
+
+
+Orbital_elements.o : Orbital_elements.cpp $(headers)
+	$(CXX) -c $(CXXFLAGS) $(LDFLAGS) $<
+
+
+
+Spline.o : Spline.cpp $(headers)
+	$(CXX) -c $(CXXFLAGS) $(LDFLAGS) $<
+
+
+Utilities.o : Utilities.cpp $(headers)
+	$(CXX) -c $(CXXFLAGS) $(LDFLAGS) $<
+
+Diagnostics.o : Diagnostics.cpp $(headers)
+	$(CXX) -c $(CXXFLAGS) $(LDFLAGS) $<
+
+Parameters.o: Parameters.cpp $(headers)
+	$(CXX) -c $(CXXFLAGS) $(LDFLAGS) $<
+
+
+libacorcpp.so: acc.cpp
+	$(CXX) -c -fpic acc.cpp
+	$(CXX) -shared -o libacorcpp.so acc.o
+	rm -f acc.o
+
+acor_python.so: libacorcpp.so acor_python.pyx
+	$(PYTHON) setup_acor_python.py build_ext --inplace
+
+
+python_Fittriple_interface.so: acor_python.so  python_Fittriple_interface.pyx libFittriplecpp.so
+	$(PYTHON) setup_cppFittriple.py build_ext --inplace
+
+clean :
+	rm -f *.o *.gch *.a *.exe *.so
+	rm -rf build/
+	rm python_Fittriple_interface.cpp

@@ -1,0 +1,103 @@
+# SPDX-FileCopyrightText: 2024 Guillaume VOISIN (researcher at LUTH, Observatoire de Paris, PSL, CNRS) <guillaume.voisin@obspm.fr> <astro.guillaume.voisin@gmail.com>
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+#########################################################################################
+######## Example of parameter file (parfile)
+#########################################################################################
+
+# Tempo2 parfile
+tempo2parfile 0337+1715.par-nofit # to run properly Fittriple needs a tempo2 parfile corresponding to the system. It does not need to be accurate for orbital and propagation parameters (such as DM) as it is only here to initialize tempo2. However Tempo2 specific parameters need to be accurate: data paramteres (e.g. jumps), ephemeris, time reference... 
+
+# Time of reference
+treference 5.6492297192640595000e+04 # Timeof reference for the spin period, turn numbers etc.. 
+posepoch 5.6337000000000000000e+04  # Time of reference for the position in the plane  sky and radial position
+
+# Enabled delays (0 = disabled, 1 = enabled)
+geometric 1      # enable geometric delay
+kopeikin 1      # enable kopeikin terms in the geometric delay
+shklovskii 1    # idem with shklovskii
+roemer 1        # obsolete, should be removed
+einstein 1      # eintein delay
+shapiro 1       # shapiro delay
+aberration 1    # aberration assuming the pulsar is a perpendicular rotator
+truefreq 1      # if 0, remove the linear component from the einstein delay to mimic tempo2 (analytical models in general). It may be slighly inaccurate. If 2, start without the linear component and adjust the spin frequency of the pulsar to put it back: transition from tempo-like parameters to the full numerical model. 
+
+# Integrator parameters 
+integrator 0 # "0" for newtonian. "1" for 1PN. "2" for 1PN with in-plane spin quadrupole moment of inner WD
+integration_tolerance 9.9999999999999999998e-17 # relative accuracy of the integrator
+
+# Interpolation parameters 
+interpsteps 1000 # number of interpolation points per inner orbital period 
+interpolation_margin 1.000000 # number of inner orbital periods used as margin before the first TOA and after the last TOA to avoid edge effects in the interpolation. 
+
+# Parameter set 
+parameter_set 1 # 0 : masspar_p = 0.5*(Mp + Mi), masspar_i =0.5*(Mp - Mi), mass_o = Mo and the inner and outer orbital periods are not fitted. 
+                # 1 : the inner and outer orbital periods are fitted. masspar_p and mass_o are not fitted. masspar_i = Mi
+
+# Special case 
+specialcase RN_PL # Must be "RN_PL" to add a power-law red noise signal, "Circum-ternary_Kepler" to add the signal of a Keplerian orbit around the triple. In Voisin et al. 2024, this reroutes the "quadrupole" parameters (see below) in order to describe the corresponding parameters
+
+
+# ***** Fittable parameters ****
+# Syntax : Parameter_name parameter_value parameter_variation fitted
+# parameter_variation: In minuit parameters are rescaled such that "parameter_minuit = (parameter_value - parameter_value_initial ) / parameter_variation" where parameter_value_initial is the parameter value of the initial parfile
+# parameter_variation can be automatically estimated to be the shift such that the reduced chi2 changes by ~1, with all other parameters fixed. This needs to be switched on in Minuit_fit.cpp. 
+# if "fitted" is "0", Minuit does not fit this parameter. If "fitted" is "1", Minuit fits this parameter.
+
+# Position in the sky
+right_ascension 1.e-01 3.9999999999999999999e-09 0 # in radians, at posepoch
+declination 3.e-01 1.6000000000000000000e-08 0     # in radians, at posepoch
+distance 4.e+03 2.0000000000000000000e+02 0        # in light years
+right_ascension1 3.e+00 2.5000000000000000000e-01 1 # in mas / year
+declination1 7.e+00 1.0000000000000000000e+00 1     # in mas / year
+distance1 9.e-05 9.9999999999999999999e-06 0        # = radial velocity / distance, in mas / year 
+
+# Dispersion Measure
+dispmeasure 2.e+01 1.2500000000000000000e-01 0   # in pc/cm^3
+dispmeasure1 0.e+00 9.7656250000000000000e-04 0  # in pc/cm^3 / yr
+DMX1         0.0e+00 1.e-1    0                   # First time dependent Corrections to DM pc.cm^-3
+...                                              # Data span is split in "n" time intervals with each a different DMX
+DMXn         0.0e+00 1.e-1    0                  # Last time dependent Corrections to DM pc.cm^-3
+
+#Pulsar system parameters 
+spinfreq 3.e+02  8.1920000000000000002e-07 1     # spin frequency of the pulsar, in s^-1
+spinfreq1 -2.e-15 2.4414062500000000000e-09 1    # derivative of the spin frequency, in s^-2
+
+# Inner system (pulsar + inner companion) Keplerian parameters
+eta_p 6.e-04 1.6000000000000000000e-06 1         # = e_i * cos(omega_p)  where e_i=eccentricity inner orbit, omega_p=argument of periastron of the pulsar on the inner orbit
+apsini_i 1.e+00 1.6384000000000000000e-01 1      # = a_p * sin( i_i), light seconds,    where a_p = semi-major axis of the inner orbit for the pulsar, i_i = inclination with line of sight of the inner-orbit plane
+kappa_p -8.e-05 3.2000000000000000000e-06 1      # = e_i * sin(omega_p)
+apcosi_i 1.e+00 1.0240000000000000000e-01 1      # = a_p * cos(i_i), light seconds
+tasc_p 5.e+04 1.9531250000000000000e-07 1        # = time of passage at the line of ascending nodes of the inner orbit for the pulsar, Modifief Julian Days (MJD)
+period_i 1.e+00 4.7683715820312499998e-10 0      # period of the inner orbit (days)
+
+# Outer system (barycenter of the inner system + outer companion) Keplerian parameters
+eta_b 3.e-02 3.9062500000000000000e-08 1         # = e_o * cos(omega_b)  where e_o=eccentricity outer orbit, omega_b=argument of periastron of the barycenter of the inner system
+absini_o 7.e+01 4.1943040000000000000e+01 1      # = a_b * sin( i_o), light seconds,    where a_b = semi-major axis of the outer orbit for the barycenter of the inner system, i_o = inclination with line of sight of the inner-orbit plane
+kappa_b -3.e-03 3.1250000000000000001e-08 1      # = e_o * sin(omega_b)
+abcosi_o 9.e+01 5.2428800000000000001e+01 1      # = a_p * cos(i_i), light seconds
+tasc_b 5.e+04 1.5625000000000000000e-06 1        # = time of passage at the line of ascending nodes of the inner orbit for the barycenter of the inner system, Modified Julian Days (MJD)
+period_o 3.e+02 3.1250000000000000000e-07 0      # = period of the outer system
+
+# Mass parameters
+masspar_p 8.e-01 4.7683715820312500001e-11 1     # see parameter_set above, in solar masses 
+masspar_i 6.e-01 2.9802322387695312499e-11 1     # see parameter_set above, in solar masses 
+mass_o 4.e-01 3.8146972656250000000e-10 1        # see parameter_set above, in solar masses 
+
+# Quadrupole parameter
+quadrupole1 0.0000000000000000000e+00 1.0000000000000000000e-04 0 # Works only with "integrator 2", or when rerouted through a "specialcase" (see above)
+
+# These are part of the Keplerian parameters, but less often detectable
+oman 3.e+02 1.6000000000000000000e-01 1          # longitude of the line of ascending nodes of the outer orbit, in degrees
+deltaoman 4.e-03 3.2000000000000000001e-05 1     # difference between the longitude of the line of ascending nodes of the inner orbit and of the outer orbit, in degrees
+
+#Others 
+dphase0 0.0000000000000000000e+00 4.8828125000000000000e-04 0       # phase error of the first used TOA (used as reference), does not need to be activated normally
+efac 1.0000000000000000000e+00 1.0000000000000000000e+00 0          # Toa uncertainty scaling parameter
+
+# SEP violation parameters
+SEP_D 0.0000000000000000000e+00 9.9999999999999999998e-08 0         # Parameter of violation of the strong equivalence pinciple (from 0PN)
+SEP_gamma 0.0000000000000000000e+00 5.0000000000000000000e+00 0     # 1PN 
+SEP_beta_0pp 0.0000000000000000000e+00 5.0000000000000000000e+00 0  # 1PN
+SEP_beta_p00 0.0000000000000000000e+00 5.0000000000000000000e+00 0  # 1PN
+SEP_beta_0p0 0.0000000000000000000e+00 5.0000000000000000000e+00 0 

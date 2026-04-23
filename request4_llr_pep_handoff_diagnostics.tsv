@@ -1,0 +1,8 @@
+name	status	detail
+public acquisition	pass	Cloned pep_core@570410b and pep_doc@146d799 from public GitLab remotes.
+LLR pedigree present	pass	bigtest.obsllr exists=True and peputil/bigtest workflow references it directly=True.
+arm64 REAL*10 support	fail	Current gfortran rejects both REAL*10 declarations and _10 literals in a trivial probe.
+arm64 long-double flag	fail	Current gfortran rejects -m128bit-long-double, while pep_core/verify and peputil makefiles require that flag.
+minimal object build	fail	make -C pep -f makefile a1ut1.o fails immediately at the first REAL*10 source, before any LLR bigtest run can start.
+x86 legacy toolchain on host	warn	Rosetta available=True, but dedicated /usr/local/bin gfortran paths found=0.
+porting risk	warn	REAL*10 appears in 166 files and 207 source hits, so rewriting kinds locally would become a porting project, not a bounded hand-off.

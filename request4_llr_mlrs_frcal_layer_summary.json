@@ -1,0 +1,88 @@
+{
+  "generated_at_utc": "2026-04-23T11:25:46.290049+00:00",
+  "official_public_sources": {
+    "software_index": "https://ilrs.gsfc.nasa.gov/technology/software/index.html",
+    "crd_overview": "https://ilrs.gsfc.nasa.gov/data_and_products/formats/crd.html",
+    "crd_v1_01_manual": "https://ilrs.gsfc.nasa.gov/docs/crd_v1.01.pdf",
+    "cddis_archive_access": "https://www.earthdata.nasa.gov/centers/cddis-daac/archive-access"
+  },
+  "evidence": {
+    "local_manual": {
+      "poisson_input": {
+        "line_number": 106,
+        "text": "Standard, range calibrated, CRD full rate data file"
+      },
+      "frcal_input": {
+        "line_number": 151,
+        "text": "See prod/bin/ldb_crd. This script is used to filter lunar data and created normal points and fully filtered full rate data. The file npt_test.sh in the top level directory can be used to run several lunar data sets. The input CRD files are in data/analysis directory ending in \u201c.frcal\u201d. These are fully calibrated full rate files. After running the script, other files will appear in that directory, including the normal points (.npt) and full rate data (.frd) and log files (.lsc for summary and .llc for full log)."
+      },
+      "writes_93": {
+        "line_number": 130,
+        "text": "An option for running this program (-r) just calculates the O-C range residuals for each of the filtered returns and writes them to the CRD file in special MLRS-only 93 records. The program is run with this option at the beginning of processing, providing the Poisson program with up-to-date residuals to use in filtering."
+      }
+    },
+    "local_bundle": {
+      "calibration_removed": {
+        "line_number": 109,
+        "text": "# MLRS-specific calibration code removed"
+      },
+      "frcal_input": {
+        "line_number": 119,
+        "text": "-i $DATA_DIR$1\".frcal\" -o $DATA_DIR$1\".frrec\" \\"
+      }
+    },
+    "public_promotion": {
+      "total_cases": 5,
+      "recalc_passed_cases": 3,
+      "poisson_passed_cases": 0,
+      "cases_with_93_stream": [],
+      "invalid_payload_cases": [
+        "luna21_202506.np2",
+        "luna17_202502.np2"
+      ]
+    }
+  },
+  "reference_counts": {
+    "10": 1456,
+    "12": 1,
+    "30": 1761,
+    "92": 10,
+    "93": 1761
+  },
+  "promoted_counts": {
+    "apollo15_202503_wetl_promo": {
+      "10": 121,
+      "12": 0,
+      "20": 2,
+      "30": 0,
+      "40": 1,
+      "93": 0
+    },
+    "apollo15_202511_apol_promo": {
+      "10": 16,
+      "12": 0,
+      "20": 1,
+      "30": 16,
+      "40": 1,
+      "93": 0
+    },
+    "apollo15_202502_grsm_promo": {
+      "10": 47,
+      "12": 0,
+      "20": 1,
+      "30": 47,
+      "40": 1,
+      "93": 0
+    }
+  },
+  "missing_layer_status": "not_publicly_exposed_in_bounded_search",
+  "stop_rule_triggered": true,
+  "request4_status": "hand_off_final_weak_field_posterior_to_external_estimator",
+  "verdict": "No public or semi-public raw-CRD to residual-bearing frcal/93 promotion layer was found in the bounded Request 4 MLRS search.",
+  "interpretation": [
+    "Official CRD documentation describes MLRS as converting acquisition data to CRD and then doing station-side calibration, filtering, and normal pointing there.",
+    "The CRD format manual explicitly says 91/92/93 user-defined station records are normally stripped before transmittal.",
+    "The public MLRS bundle expects fully calibrated .frcal input and its ldb_crd script says MLRS-specific calibration code was removed.",
+    "Public monthly CRD promotion reaches recalc but still produces no 93-bearing residual stream in the promoted .frfil cases."
+  ]
+}

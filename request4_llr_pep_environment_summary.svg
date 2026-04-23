@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="860" viewBox="0 0 1500 860">
+<rect width="100%" height="100%" fill="#f8fafc"/>
+<text x="48" y="46" font-family="sans-serif" font-size="24" font-weight="700" fill="#111827">Request 4: PEP environment probe</text>
+<text x="48" y="74" font-family="sans-serif" font-size="14" fill="#475569">Bounded check for a local x86_64 or legacy-compatible PEP build path.</text>
+<rect x="48" y="108" width="1404" height="162" fill="white" stroke="#cbd5e1"/>
+<text x="66" y="138" font-family="sans-serif" font-size="16" font-weight="700" fill="#111827">Decision</text>
+<text x="66" y="170" font-family="monospace" font-size="13" fill="#111827">verdict = No bounded local x86_64 or legacy-compatible PEP build path is presently available on this host without provisioning a new toolchain or runtime.</text>
+<text x="66" y="194" font-family="monospace" font-size="13" fill="#111827">rosetta_available = True</text>
+<text x="66" y="218" font-family="monospace" font-size="13" fill="#111827">x86_homebrew_present = False | x86_gfortran_count = 0</text>
+<text x="66" y="242" font-family="monospace" font-size="13" fill="#111827">container_runtimes = []</text>
+<rect x="48" y="304" width="1404" height="500" fill="white" stroke="#cbd5e1"/>
+<text x="66" y="334" font-family="sans-serif" font-size="16" font-weight="700" fill="#111827">Diagnostics</text>
+<text x="66" y="368" font-family="sans-serif" font-size="15" font-weight="700" fill="#166534">PASS · rosetta runtime</text>
+<text x="66" y="390" font-family="sans-serif" font-size="12" fill="#334155">arch -x86_64 /usr/bin/true exit code = 0.</text>
+<text x="66" y="432" font-family="sans-serif" font-size="15" font-weight="700" fill="#92400e">WARN · x86 Homebrew prefix</text>
+<text x="66" y="454" font-family="sans-serif" font-size="12" fill="#334155">/usr/local Homebrew present = False.</text>
+<text x="66" y="496" font-family="sans-serif" font-size="15" font-weight="700" fill="#92400e">WARN · x86 gfortran toolchain</text>
+<text x="66" y="518" font-family="sans-serif" font-size="12" fill="#334155">Detected /usr/local/bin gfortran paths = none.</text>
+<text x="66" y="560" font-family="sans-serif" font-size="15" font-weight="700" fill="#92400e">WARN · x86 gcc toolchain</text>
+<text x="66" y="582" font-family="sans-serif" font-size="12" fill="#334155">Detected /usr/local/bin gcc paths = none.</text>
+<text x="66" y="624" font-family="sans-serif" font-size="15" font-weight="700" fill="#92400e">WARN · container/VM runtime</text>
+<text x="66" y="646" font-family="sans-serif" font-size="12" fill="#334155">Detected runtime paths = docker:none, podman:none, colima:none, lima:none, nerdctl:none, orb:none</text>
+</svg>

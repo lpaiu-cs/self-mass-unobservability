@@ -1,0 +1,47 @@
+{
+  "generated_at_utc": "2026-04-23T11:54:10.446729+00:00",
+  "rosetta_available": true,
+  "x86_homebrew_present": false,
+  "x86_gfortran_count": 0,
+  "x86_gfortran_paths": [],
+  "x86_gcc_count": 0,
+  "x86_gcc_paths": [],
+  "detected_container_runtimes": [],
+  "runtime_paths": {
+    "docker": null,
+    "podman": null,
+    "colima": null,
+    "lima": null,
+    "nerdctl": null,
+    "orb": null
+  },
+  "verdict": "No bounded local x86_64 or legacy-compatible PEP build path is presently available on this host without provisioning a new toolchain or runtime.",
+  "project_consequence": "Stop local PEP escalation here; any PEP hand-off now requires a separate pre-provisioned environment or an external analysis route.",
+  "diagnostics": [
+    {
+      "name": "rosetta runtime",
+      "status": "pass",
+      "detail": "arch -x86_64 /usr/bin/true exit code = 0."
+    },
+    {
+      "name": "x86 Homebrew prefix",
+      "status": "warn",
+      "detail": "/usr/local Homebrew present = False."
+    },
+    {
+      "name": "x86 gfortran toolchain",
+      "status": "warn",
+      "detail": "Detected /usr/local/bin gfortran paths = none."
+    },
+    {
+      "name": "x86 gcc toolchain",
+      "status": "warn",
+      "detail": "Detected /usr/local/bin gcc paths = none."
+    },
+    {
+      "name": "container/VM runtime",
+      "status": "warn",
+      "detail": "Detected runtime paths = docker:none, podman:none, colima:none, lima:none, nerdctl:none, orb:none"
+    }
+  ]
+}

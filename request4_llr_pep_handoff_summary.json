@@ -1,0 +1,93 @@
+{
+  "generated_at_utc": "2026-04-23T11:52:52.570918+00:00",
+  "pep_core_git_hash": "570410b",
+  "pep_doc_git_hash": "146d799",
+  "uname": "Darwin Junes-MacBook-Air.local 25.4.0 Darwin Kernel Version 25.4.0: Thu Mar 19 19:33:43 PDT 2026; root:xnu-12377.101.15~1/RELEASE_ARM64_T8142 arm64",
+  "machine_arch": "arm64",
+  "compiler_path": "/opt/homebrew/bin/gfortran",
+  "compiler_version_short": "GNU Fortran (Homebrew GCC 14.2.0_1) 14.2.0",
+  "rosetta_available": true,
+  "dedicated_x86_gfortran_paths": [],
+  "real10_file_count": 166,
+  "real10_hit_count": 207,
+  "long_double_flag_makefiles": [
+    "verify/makefile",
+    "peputil/makefile"
+  ],
+  "llr_bigtest_obsllr_exists": true,
+  "llr_bigtest_input_count": 74,
+  "real10_probe_exit_code": 1,
+  "real10_probe_excerpt": [
+    "/var/folders/qd/2bsw6p251nsc2759tnd96hqr0000gn/T/tmpmjsuqkd9/test_real10.f:1:14:",
+    "",
+    "    1 |       real*10 x",
+    "      |              1",
+    "Error: Old-style type declaration REAL*10 not supported at (1)",
+    "/var/folders/qd/2bsw6p251nsc2759tnd96hqr0000gn/T/tmpmjsuqkd9/test_real10.f:2:17:",
+    "",
+    "    2 |       x = 1.0_10",
+    "      |                 1",
+    "Error: Invalid real kind 10 at (1)"
+  ],
+  "long_double_probe_exit_code": 1,
+  "long_double_probe_excerpt": [
+    "gfortran: error: unrecognized command-line option '-m128bit-long-double'"
+  ],
+  "minimal_build_probe_exit_code": 2,
+  "minimal_build_probe_excerpt": [
+    "gfortran -fno-automatic -w -frecord-marker=8 -c -o a1ut1.o a1ut1.f",
+    "a1ut1.f:1:14:",
+    "",
+    "    1 |       real*10 function A1UT1(jd, fract)",
+    "      |              1",
+    "Error: Old-style type declaration REAL*10 not supported at (1)",
+    "a1ut1.f:9:14:",
+    "",
+    "    9 |       real*10 fract",
+    "      |              1",
+    "Error: Old-style type declaration REAL*10 not supported at (1)",
+    "a1ut1.f:30:14:",
+    "",
+    "   30 |       real*10 t,xint(4),y1(2),y2(2),s,f2"
+  ],
+  "verdict": "PEP is confirmed as the right external estimator family, but it is not locally buildable on the current arm64 gfortran toolchain.",
+  "next_bounded_action": "try only a separate x86_64 / legacy-compatible build environment; do not turn Request 4 into a local PEP porting project",
+  "fallback_if_environment_probe_fails": "hand weak-field posterior work to a collaboration / external-analysis-center route such as JPL or POLAC-ELPN",
+  "diagnostics": [
+    {
+      "name": "public acquisition",
+      "status": "pass",
+      "detail": "Cloned pep_core@570410b and pep_doc@146d799 from public GitLab remotes."
+    },
+    {
+      "name": "LLR pedigree present",
+      "status": "pass",
+      "detail": "bigtest.obsllr exists=True and peputil/bigtest workflow references it directly=True."
+    },
+    {
+      "name": "arm64 REAL*10 support",
+      "status": "fail",
+      "detail": "Current gfortran rejects both REAL*10 declarations and _10 literals in a trivial probe."
+    },
+    {
+      "name": "arm64 long-double flag",
+      "status": "fail",
+      "detail": "Current gfortran rejects -m128bit-long-double, while pep_core/verify and peputil makefiles require that flag."
+    },
+    {
+      "name": "minimal object build",
+      "status": "fail",
+      "detail": "make -C pep -f makefile a1ut1.o fails immediately at the first REAL*10 source, before any LLR bigtest run can start."
+    },
+    {
+      "name": "x86 legacy toolchain on host",
+      "status": "warn",
+      "detail": "Rosetta available=True, but dedicated /usr/local/bin gfortran paths found=0."
+    },
+    {
+      "name": "porting risk",
+      "status": "warn",
+      "detail": "REAL*10 appears in 166 files and 207 source hits, so rewriting kinds locally would become a porting project, not a bounded hand-off."
+    }
+  ]
+}

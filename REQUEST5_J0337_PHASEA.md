@@ -125,6 +125,17 @@ That means this document should be read in two layers:
 In other words, Request 5 is no longer just a side calculation that supports
 Request 6. It is now part of the main decision branch.
 
+That main-branch interpretation is now reinforced by a new bounded scout:
+`REQUEST5_J0337_PHASEB_PUBLIC_INPUTS.md` shows that public `TOA`, `par`, and
+`Nutimo` code releases for `J0337` are in fact available and locally mirrored.
+So the remaining gate for Phase B is no longer "do public inputs exist?" but
+"can the local workspace close the Nutimo dependency/runtime stack?".
+
+That runtime question has also been checked in bounded form:
+`REQUEST5_J0337_PHASEB_BUILD_FEASIBILITY.md` shows that the current host stops
+on Apple clang `-fopenmp` and then missing `Boost/Tempo2` stack, so Phase B is
+currently public-input-ready but not locally runnable here.
+
 ## Practical Consequence
 
 If the project is prioritizing the final tied-vs-decoupled judgement, the next

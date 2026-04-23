@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="980" viewBox="0 0 1500 980">
+<rect width="100%" height="100%" fill="#f8fafc"/>
+<text x="48" y="46" font-family="sans-serif" font-size="24" font-weight="700" fill="#111827">Request 4: PEP hand-off feasibility</text>
+<text x="48" y="74" font-family="sans-serif" font-size="14" fill="#475569">Bounded acquisition/build gate for the external weak-field estimator hand-off.</text>
+<rect x="48" y="108" width="1404" height="182" fill="white" stroke="#cbd5e1"/>
+<text x="66" y="138" font-family="sans-serif" font-size="16" font-weight="700" fill="#111827">Decision</text>
+<text x="66" y="170" font-family="monospace" font-size="13" fill="#111827">verdict = PEP is confirmed as the right external estimator family, but it is not locally buildable on the current arm64 gfortran toolchain.</text>
+<text x="66" y="194" font-family="monospace" font-size="13" fill="#111827">current machine = arm64 | GNU Fortran (Homebrew GCC 14.2.0_1) 14.2.0</text>
+<text x="66" y="218" font-family="monospace" font-size="13" fill="#111827">REAL*10 files / hits = 166 / 207</text>
+<text x="66" y="242" font-family="monospace" font-size="13" fill="#111827">long-double flag sites = ['verify/makefile', 'peputil/makefile']</text>
+<text x="66" y="266" font-family="monospace" font-size="13" fill="#111827">next bounded action = try only a separate x86_64 / legacy-compatible build environment; do not turn Request 4 into a local PEP porting project</text>
+<rect x="48" y="324" width="1404" height="594" fill="white" stroke="#cbd5e1"/>
+<text x="66" y="354" font-family="sans-serif" font-size="16" font-weight="700" fill="#111827">Diagnostics</text>
+<text x="66" y="388" font-family="sans-serif" font-size="15" font-weight="700" fill="#166534">PASS · public acquisition</text>
+<text x="66" y="410" font-family="sans-serif" font-size="12" fill="#334155">Cloned pep_core@570410b and pep_doc@146d799 from public GitLab remotes.</text>
+<text x="66" y="452" font-family="sans-serif" font-size="15" font-weight="700" fill="#166534">PASS · LLR pedigree present</text>
+<text x="66" y="474" font-family="sans-serif" font-size="12" fill="#334155">bigtest.obsllr exists=True and peputil/bigtest workflow references it directly=True.</text>
+<text x="66" y="516" font-family="sans-serif" font-size="15" font-weight="700" fill="#991b1b">FAIL · arm64 REAL*10 support</text>
+<text x="66" y="538" font-family="sans-serif" font-size="12" fill="#334155">Current gfortran rejects both REAL*10 declarations and _10 literals in a trivial probe.</text>
+<text x="66" y="580" font-family="sans-serif" font-size="15" font-weight="700" fill="#991b1b">FAIL · arm64 long-double flag</text>
+<text x="66" y="602" font-family="sans-serif" font-size="12" fill="#334155">Current gfortran rejects -m128bit-long-double, while pep_core/verify and peputil makefiles require that flag.</text>
+<text x="66" y="644" font-family="sans-serif" font-size="15" font-weight="700" fill="#991b1b">FAIL · minimal object build</text>
+<text x="66" y="666" font-family="sans-serif" font-size="12" fill="#334155">make -C pep -f makefile a1ut1.o fails immediately at the first REAL*10 source, before any LLR bigtest run can start.</text>
+<text x="66" y="708" font-family="sans-serif" font-size="15" font-weight="700" fill="#92400e">WARN · x86 legacy toolchain on host</text>
+<text x="66" y="730" font-family="sans-serif" font-size="12" fill="#334155">Rosetta available=True, but dedicated /usr/local/bin gfortran paths found=0.</text>
+<text x="66" y="772" font-family="sans-serif" font-size="15" font-weight="700" fill="#92400e">WARN · porting risk</text>
+<text x="66" y="794" font-family="sans-serif" font-size="12" fill="#334155">REAL*10 appears in 166 files and 207 source hits, so rewriting kinds locally would become a porting project, not a bounded hand-off.</text>
+</svg>

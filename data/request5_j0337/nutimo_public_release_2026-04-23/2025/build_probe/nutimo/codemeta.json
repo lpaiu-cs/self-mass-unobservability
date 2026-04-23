@@ -1,0 +1,45 @@
+{
+    "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+    "type": "SoftwareSourceCode",
+    "applicationCategory": "Astronomy",
+    "author": [
+        {
+            "id": "https://orcid.org/0000-0003-2845-8905",
+            "type": "Person",
+            "affiliation": {
+                "type": "Organization",
+                "name": "LUTH, Observatoire de Paris, PSL, CNRS"
+            },
+            "email": "guillaume.voisin@obspm.fr",
+            "familyName": "Voisin",
+            "givenName": "Guillaume"
+        }
+    ],
+    "dateModified": "2024-11-12",
+    "description": " This software can analyse times of arrivals from pulsars in systems with multiple companions. The core is dedicated to deal with a triple system the orbits of which are numerically integrated at using first-post-newtonian-order equations of motion. It was initially developed to deal with the case of PSR J0337+1715 which is in a hierarchical triple stellar system with two white-dwarf companions. ",
+    "keywords": [
+        "astronomy",
+        "pulsar",
+        "timing",
+        "gravitation"
+    ],
+    "license": "https://spdx.org/licenses/GPL-3.0-or-later",
+    "name": "Nutimo",
+    "operatingSystem": "Linux",
+    "programmingLanguage": [
+        "C++",
+        "python3"
+    ],
+    "schema:releaseNotes": "This version is the one used in Voisin et al. 2024",
+    "softwareRequirements": [
+        "Boost library: www.boost.org. Version 1.55.0",
+        " https://bitbucket.org/psrsoft/tempo2/src/master/",
+        "(downloaded on Git repo on 2021.04)",
+        " http://seal.web.cern.ch/seal/snapshot/work-packages/mathlibs/minuit/ Version 5.34.14",
+        "/",
+        "Acor, Jonathan Goodman, sping 2009. https://math.nyu.edu/~goodman/software/acor/index.html",
+        "/",
+        "Tested on Linux Mint 18.3 64-bit and Linux Mint 20.1. with gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.2), and python version 3.8.5."
+    ],
+    "referencePublication": "https://doi.org/10.1051/0004-6361/202452100"
+}

@@ -267,10 +267,40 @@ delta_SEP = sigma_1 (s_E-s_M) + sigma_2 (s_E^2-s_M^2)
   hand-off될 수 있지만, diverse public pass를 최종 weak-field posterior
   path로 닫으려면 아직 `raw frd -> usable frcal/93 stream` 층이 추가로
   밝혀져야 한다.
-- 그러므로 다음 한 수는 바로 posterior가 아니라,
-  이 빠진 public pre-prediction / frcal-construction layer가 있는지
-  확인하거나, 없으면 더 성숙한 외부 estimator 쪽으로 hand-off 기준을
-  명확히 세우는 단계다.
+- 이어서 이 빠진 layer에 대한 bounded scout도 수행되었다.
+  `REQUEST4_LLR_MLRS_FRCAL_LAYER_SCOUT.md`는
+  공식 `CRD` 문서, 공개 `MLRS` bundle, promotion audit를 함께 묶어,
+  현재 public path에는 residual-bearing `frcal/93` promotion layer가
+  노출되어 있지 않다는 점을 고정한다.
+- 따라서 Request 4의 stop rule은 이제 실행 완료 상태다.
+  `missing frcal/93 layer`를 짧게 더 찾는 단계는 끝났고,
+  결과가 negative였으므로 Request 4의 최종 weak-field 판정은
+  외부 성숙 `LLR estimator`로 넘긴다.
+  즉 MLRS는 여기서
+  `bundled two-case observation-operator lab`
+  으로 남고, 본선 posterior branch는 외부 estimator hand-off로 넘어간다.
+- 외부 hand-off 후보 비교도 수행되었다.
+  `REQUEST4_LLR_EXTERNAL_ESTIMATOR_SCOUT.md` 기준으로 현재 가장 강한
+  public-code hand-off 후보는 `PEP`이고,
+  `JPL`, `POLAC/ELPN`은 성숙한 external-analysis route,
+  `INPOP/CALCEPH`, `EPM`은 ephemeris/support layer 또는 비공개 engine
+  쪽으로 정리된다.
+- 이어서 `PEP` acquisition/build feasibility도 bounded하게 점검되었다.
+  `REQUEST4_LLR_PEP_HANDOFF_FEASIBILITY.md` 기준으로 public GitLab 획득과
+  `LLR` bigtest asset 존재 자체는 확인됐지만,
+  현재 `arm64` host의 `gfortran`은 `REAL*10`과
+  `-m128bit-long-double`를 감당하지 못해 로컬 빌드 타깃으로는 부적합하다.
+  따라서 `Request 4`의 다음 escalation은 source port가 아니라
+  별도 `x86_64` / legacy-compatible environment probe 하나로 제한된다.
+- 그 최종 local environment probe도 끝났다.
+  `REQUEST4_LLR_PEP_ENVIRONMENT_PROBE.md` 기준으로 이 host에는
+  `Rosetta`는 있지만 `/usr/local` `x86_64` Homebrew/toolchain도 없고,
+  container/VM runtime도 발견되지 않았다.
+  따라서 `PEP`를 이 워크스페이스에서 계속 올리는 것은 bounded probe가
+  아니라 새 인프라 작업이 된다.
+  결론적으로 `Request 4`의 local branch는 여기서 닫고,
+  최종 weak-field posterior는 별도 external estimator environment 또는
+  external-analysis route로 hand-off한다.
 
 ## Request 5. PSR J0337+1715: 두 단계 분석으로 분리
 
@@ -304,6 +334,22 @@ Phase B. Full TOA refit
 
 - raw TOA가 없더라도 Phase A만으로 즉시 strong-field posterior를 낼 수 있다.
 - Phase B는 가능할 때만 경쟁 제약으로 승격한다.
+
+**현재 상태**
+
+- published-bound translation only인 `Request5_J0337_PHASEA.md`는 이미 구현되어 있다.
+- 그리고 `REQUEST5_J0337_PHASEB_PUBLIC_INPUTS.md` 기준으로,
+  `J0337`의 `Phase B`에 필요한 public `TOA`, `par`, `Nutimo` code release도
+  이제 실제로 확보 가능한 경로임이 확인되었다.
+- 따라서 남은 병목은 데이터 비공개가 아니라
+  `Tempo2/Minuit/Boost` 기반의 local build/runtime closure다.
+- 그 build/runtime gate도 bounded하게 점검되었다.
+  `REQUEST5_J0337_PHASEB_BUILD_FEASIBILITY.md` 기준으로 현재 host에서는
+  default `g++` 경로가 Apple clang이라 `-fopenmp`에서 먼저 막히고,
+  `g++-14`를 강제로 써도 `boost/numeric/odeint.hpp`와
+  `Tempo2` 계열 dependency가 비어 있다.
+  즉 `Request 5 Phase B`는 public-input level에서는 열려 있지만,
+  이 워크스페이스에서 곧바로 full TOA refit까지 닫히지는 않는다.
 
 ## Request 6. Clock Sector: 관측식 유도 후 joint pulsar fit
 
@@ -377,6 +423,16 @@ d tau / dt = 1 - v^2/(2c^2) - [1 + zeta_1 s + zeta_2 s^2] U_ext/c^2
 4. 마지막에 `LLR + J0337 + clock` joint free-fall-plus-clock consistency
    로 tied-vs-decoupled 본판정
 
+현재 로컬 워크스페이스 기준으로는 2와 3의 full execution이 둘 다
+external environment를 요구하게 되었으므로,
+그 사이의 실제 mainline local 작업은
+`REQUEST7_JOINT_CONSISTENCY_SCAFFOLD.md`로 구현된
+provisional joint scaffold이다.
+즉 지금 즉시 가능한 고급 작업은
+`J0337 Phase A + Request 6 local clock audit`
+를 tied/decoupled 두 모형 아래에서 연결하는 일관성 스캐폴드이며,
+최종 weak-field verdict는 여전히 외부 estimator branch를 기다린다.
+
 ## 핵심 수정 요약
 
 - 원문 6절의 4개 요청을 **6개 워크패키지**로 쪼갰다.
@@ -386,3 +442,13 @@ d tau / dt = 1 - v^2/(2c^2) - [1 + zeta_1 s + zeta_2 s^2] U_ext/c^2
 - 따라서 이제 각 요청이 "지금 당장 가능한 것"과 "전용 파이프라인이 있어야 가능한 것"으로 명확히 나뉜다.
 - 그리고 현재 상태에서는 Request 6이 이미 그 한계를 규정한 local audit로
   정리되었으므로, 이후 주력은 Request 4/5와 joint consistency로 이동한다.
+- 실제로 Request 7 provisional joint scaffold를 실행해 보면,
+  현재 local branch에서는 `J0337 Phase A`가 tied clock basis로 투영될 때
+  pre-clock tension이 약 `0.59` Mahalanobis에 불과하고,
+  tied `|eta_*|_95 ~ 2e-6`, tied `|kappa_*|_95 ~ 6e-5` 수준이라
+  `Request 6` clock audit 폭(`|eta_*|_95 ~ 1.5e-3`,
+  `|kappa_*|_95 ~ 3.6e-2`) 안쪽 깊숙이 들어간다.
+- 따라서 현재 workspace에서 얻는 joint consistency 결과는
+  “clock branch가 tied relation과 충돌한다”가 아니라,
+  “현재 clock local audit은 strong-field free-fall posterior와 양립 가능하고,
+  model comparison은 주로 prior-volume sensitivity를 반영한다”는 쪽이다.
