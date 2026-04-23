@@ -18,7 +18,7 @@ Assets for the real-data LLR branch:
 
 Assets for the strong-field `J0337` Phase B scout:
 
-- `nutimo_public_release_2026-04-23/`: local mirror root for public Nutimo releases. The payloads are publicly downloadable and ignored by Git; the tracked registry for this scout is [`request5_j0337_phaseB_public_inputs_manifest.tsv`](../request5_j0337_phaseB_public_inputs_manifest.tsv).
+- `nutimo_public_release_2026-04-23/`: local mirror root for public Nutimo releases. The payloads are publicly downloadable and ignored by Git; the tracked registry for this scout is [`request5_j0337_phaseB_public_inputs_manifest.tsv`](../request5/request5_j0337_phaseB_public_inputs_manifest.tsv).
 
 ## Working Assumption
 

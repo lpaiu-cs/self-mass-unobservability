@@ -14,13 +14,13 @@ Research workspace for staged calculations around self-mass unobservability and 
 
 ## Repository Layout
 
-The root directory is intentionally flat. Each request keeps its memo, script, notebooks, and generated outputs side by side with a shared filename prefix so the scientific narrative stays easy to trace in Git history and in the paper draft.
+The repository is organized by request so the root stays clean and each stage
+keeps its memo, script, notebooks, and generated outputs together.
 
-- `request*.py`: executable analysis scripts.
-- `REQUEST*.md`: narrative memos and status notes.
-- `request*.json`, `request*.svg`, `request*.tsv`: checked-in generated artifacts used by the memos.
-- `*.ipynb`: notebook companions for selected requests.
+- `request1/` ... `request7/`: per-request scripts, memos, notebooks, and checked-in outputs.
+- `section6/`: repaired orchestration note for the staged program.
 - [`data/`](data/README.md): mirrored public inputs, vendored external code, and bounded hand-off workspaces used by Requests 4 and 5.
+- [`paper/`](paper/README.md): manuscript source and LaTeX draft for the interim paper.
 
 ## Quick Start
 
@@ -49,36 +49,40 @@ make request3
 make request5-phaseA
 make request6
 make request7
+make paper-tex
 ```
 
 Equivalent direct commands:
 
 ```bash
-python3 request1_com_decoupling.py
-python3 request2_internal_structure.py
-python3 request3_llr_mock.py
-python3 request5_j0337_phaseA.py
-python3 request6_clock_sector.py
-python3 request7_joint_consistency_scaffold.py
+(cd request1 && python3 request1_com_decoupling.py)
+(cd request2 && python3 request2_internal_structure.py)
+(cd request3 && python3 request3_llr_mock.py)
+(cd request5 && python3 request5_j0337_phaseA.py)
+(cd request6 && python3 request6_clock_sector.py)
+(cd request7 && python3 request7_joint_consistency_scaffold.py)
 ```
 
-Most scripts write outputs into the repository root by default. Request 4 and Request 5 Phase B scouts additionally depend on the mirrored assets under `data/`, and some of those probes assume host tools such as `make`, `gfortran`, or macOS `textutil`.
+Most scripts write outputs into their own request directory by default when run
+from that directory or via `make`. Request 4 and Request 5 Phase B scouts
+additionally depend on the mirrored assets under `data/`, and some of those
+probes assume host tools such as `make`, `gfortran`, or macOS `textutil`.
 
 ## Request Index
 
-- [`REQUEST1_COM_DECOUPLING.md`](REQUEST1_COM_DECOUPLING.md)
-- [`REQUEST2_INTERNAL_STRUCTURE.md`](REQUEST2_INTERNAL_STRUCTURE.md)
-- [`REQUEST3_LLR_MOCK.md`](REQUEST3_LLR_MOCK.md)
-- [`REQUEST4_LLR_REALDATA.md`](REQUEST4_LLR_REALDATA.md)
-- [`REQUEST5_J0337_PHASEA.md`](REQUEST5_J0337_PHASEA.md)
-- [`REQUEST5_J0337_PHASEB_PUBLIC_INPUTS.md`](REQUEST5_J0337_PHASEB_PUBLIC_INPUTS.md)
-- [`REQUEST5_J0337_PHASEB_BUILD_FEASIBILITY.md`](REQUEST5_J0337_PHASEB_BUILD_FEASIBILITY.md)
-- [`REQUEST6_CLOCK_SECTOR.md`](REQUEST6_CLOCK_SECTOR.md)
-- [`REQUEST6_B1913_COVARIANCE.md`](REQUEST6_B1913_COVARIANCE.md)
-- [`REQUEST6_LOW_SIDE_EXTENSIONS.md`](REQUEST6_LOW_SIDE_EXTENSIONS.md)
-- [`REQUEST6_LOW_SIDE_COVARIANCE_PROXY.md`](REQUEST6_LOW_SIDE_COVARIANCE_PROXY.md)
-- [`REQUEST7_JOINT_CONSISTENCY_SCAFFOLD.md`](REQUEST7_JOINT_CONSISTENCY_SCAFFOLD.md)
-- [`SECTION6_REPAIRED.md`](SECTION6_REPAIRED.md)
+- [`request1/REQUEST1_COM_DECOUPLING.md`](request1/REQUEST1_COM_DECOUPLING.md)
+- [`request2/REQUEST2_INTERNAL_STRUCTURE.md`](request2/REQUEST2_INTERNAL_STRUCTURE.md)
+- [`request3/REQUEST3_LLR_MOCK.md`](request3/REQUEST3_LLR_MOCK.md)
+- [`request4/REQUEST4_LLR_REALDATA.md`](request4/REQUEST4_LLR_REALDATA.md)
+- [`request5/REQUEST5_J0337_PHASEA.md`](request5/REQUEST5_J0337_PHASEA.md)
+- [`request5/REQUEST5_J0337_PHASEB_PUBLIC_INPUTS.md`](request5/REQUEST5_J0337_PHASEB_PUBLIC_INPUTS.md)
+- [`request5/REQUEST5_J0337_PHASEB_BUILD_FEASIBILITY.md`](request5/REQUEST5_J0337_PHASEB_BUILD_FEASIBILITY.md)
+- [`request6/REQUEST6_CLOCK_SECTOR.md`](request6/REQUEST6_CLOCK_SECTOR.md)
+- [`request6/REQUEST6_B1913_COVARIANCE.md`](request6/REQUEST6_B1913_COVARIANCE.md)
+- [`request6/REQUEST6_LOW_SIDE_EXTENSIONS.md`](request6/REQUEST6_LOW_SIDE_EXTENSIONS.md)
+- [`request6/REQUEST6_LOW_SIDE_COVARIANCE_PROXY.md`](request6/REQUEST6_LOW_SIDE_COVARIANCE_PROXY.md)
+- [`request7/REQUEST7_JOINT_CONSISTENCY_SCAFFOLD.md`](request7/REQUEST7_JOINT_CONSISTENCY_SCAFFOLD.md)
+- [`section6/SECTION6_REPAIRED.md`](section6/SECTION6_REPAIRED.md)
 
 ## Data And External Code
 
