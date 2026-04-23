@@ -181,6 +181,24 @@ delta_SEP = sigma_1 (s_E-s_M) + sigma_2 (s_E^2-s_M^2)
 - 그 뒤의 CRD pivot scout도 실행되었고, canonical CDDIS CRD root는 현재
   `401 Unauthorized`인 반면 ILRS public tarball들과 public lunar CRD sample
   ingest는 workspace에 고정 가능함이 확인되었다.
+- 이어서 public lunar monthly CRD v2 ensemble도 확보되었다.
+- EDC mirror를 통해 `2025-01`부터 `2026-03`까지 `6 x 15 = 90`개의
+  target-month 후보를 스캔한 결과, `67`개의 valid monthly payload와
+  `961`개의 lunar normal point가 실제로 확보되었다.
+- coverage는 `2025-01-03T00:37:50Z`부터 `2026-02-27T22:24:50.366086Z`
+  까지이고, target은 `apollo11/14/15`, `luna17/21`, `nglr1`,
+  station은 `GRSM`, `APOL`, `WETL`, `MATM`이다.
+- 이 단계의 의미는 `MLRS` runnable sample 수가 늘었다는 것이 아니라,
+  public real-data CRD observation ensemble이 실제로 넓어졌다는 것이다.
+  즉 MLRS end-to-end replay ensemble은 여전히 bundled 2-case이고,
+  새 자산은 observation-side monthly CRD archive slice다.
+- 그 다음 이 monthly ensemble 위에 file-level coverage map과
+  representative-case shortlist도 생성되었다.
+- 현재 shortlist는 `8`개이고, dominant station/target coverage gap은
+  `MATM/apollo15`, `APOL/luna17` 두 조합으로 명시되었다.
+- 따라서 이제 Request 4의 bottleneck은 "real CRD sample이 너무 적다"가
+  아니라, diverse station/target/month 조건에서 local observation-
+  operator approximation이 실제로 transfer되는지 여부다.
 - 이어서 public `MLRS Lunar Code`에 대한 짧은 hand-off 실험도 수행되었다.
 - 그 결과 public DE421 binary를 연결하고 sample-critical binary subset을
   arm64로 재빌드하면 bundled lunar sample workflow가 end-to-end로 재생되며,
@@ -213,11 +231,46 @@ delta_SEP = sigma_1 (s_E-s_M) + sigma_2 (s_E^2-s_M^2)
   `npt` 1-line drift, near-linear/odd-symmetric response가 유지되었다.
 - 따라서 지금 기준으로는 `MLRS` 경로가 structure 측면에서 broad surgery로
   번진다고 보기는 어렵다. 남은 마지막 게이트는 오직 물리 적합성이다.
+- 그 다음 weak-field physics gate도 수행되었다.
+- 이 단계에서는 `Request 3`의 analytic `A_N Delta_SEP` scale을 외부에서
+  계산해, `delta r_rel = A_N Delta_SEP * u_ES(t)`,
+  `delta v_rel = A_N Delta_SEP * d(u_ES)/dt` 형태의 barycenter-consistent
+  Earth-Moon relative state correction으로 `jjreadnp` seam에 주입했다.
+- 두 bundled sample 모두에서 이 weak-field-inspired correction이
+  end-to-end로 통과했고, 첫 sample에서는 매우 깨끗한 선형/odd-symmetric
+  응답, 둘째 sample에서는 더 약하지만 같은 local seam 안에 머무는 응답이
+  확인되었다.
+- 따라서 Request 4의 현재 판정은 더 좁아졌다:
+  `MLRS`는 이제 살아 있는 hand-off candidate를 넘어 weak-field
+  observation-operator candidate로 볼 수 있다. 남은 쟁점은 broad surgery가
+  아니라, 이 local remapping approximation의 물리 적합성이다.
 - 따라서 Request 4의 다음 주력은 더 많은 surrogate를 쌓는 것이 아니라,
   `CRD canonical data path + bounded MLRS hand-off` 또는 더 성숙한 기존
   LLR estimator/codebase에 붙이는 쪽이다. MLRS 쪽에서는 다음 한 수를
   physical `delta_SEP` adequacy 판정으로 좁혀 두고, 그 단계가 ephemeris-
   level broad surgery로 번지면 바로 외부 성숙 estimator로 넘긴다.
+- 동시에 새 monthly CRD ensemble은 operator-level response calibration,
+  target/station/time diversity audit, weak-field likelihood용 real-data
+  observation set 확장에 바로 쓸 수 있다.
+- 그 다음 실제 bounded runnable promotion audit도 수행되었다.
+- 이 단계에서는 representative monthly `fr2`를 single-pass로 split하고,
+  `v2 -> v1` conversion과 좁은 `c0` normalization을 거쳐 `ldb_crd`에
+  다시 넣는 절차를 자동화했다.
+- 결과는 두 갈래로 갈린다.
+  어떤 shortlist row는 public `np2`는 존재하지만 대응 `fr2` URL이 usable
+  CRD payload를 돌려주지 않는다.
+  다른 row는 single-pass split과 `recalc`까지는 통과하지만 최종적으로
+  `93` residual stream이 생성되지 않아 `Poisson`이 `Total obs = 0`으로
+  끝난다.
+- 따라서 Request 4의 current ceiling도 더 선명해졌다.
+  MLRS는 public monthly CRD에 대해 parser/recalc stage까지는 bounded하게
+  hand-off될 수 있지만, diverse public pass를 최종 weak-field posterior
+  path로 닫으려면 아직 `raw frd -> usable frcal/93 stream` 층이 추가로
+  밝혀져야 한다.
+- 그러므로 다음 한 수는 바로 posterior가 아니라,
+  이 빠진 public pre-prediction / frcal-construction layer가 있는지
+  확인하거나, 없으면 더 성숙한 외부 estimator 쪽으로 hand-off 기준을
+  명확히 세우는 단계다.
 
 ## Request 5. PSR J0337+1715: 두 단계 분석으로 분리
 

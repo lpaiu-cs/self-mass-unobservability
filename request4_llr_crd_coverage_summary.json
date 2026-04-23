@@ -1,0 +1,317 @@
+{
+  "generated_at_utc": "2026-04-23T06:58:18.071899Z",
+  "valid_files": 67,
+  "total_normal_points": 961,
+  "coverage_start_utc": "2025-01-03T00:37:50Z",
+  "coverage_stop_utc": "2026-02-27T22:24:50.366086Z",
+  "targets": [
+    "apollo11",
+    "apollo14",
+    "apollo15",
+    "luna17",
+    "luna21",
+    "nglr1"
+  ],
+  "stations": [
+    "APOL",
+    "GRSM",
+    "MATM",
+    "WETL"
+  ],
+  "by_target": {
+    "apollo11": {
+      "files": 12,
+      "normal_point_rows": 118
+    },
+    "apollo14": {
+      "files": 11,
+      "normal_point_rows": 104
+    },
+    "apollo15": {
+      "files": 14,
+      "normal_point_rows": 441
+    },
+    "luna17": {
+      "files": 11,
+      "normal_point_rows": 111
+    },
+    "luna21": {
+      "files": 11,
+      "normal_point_rows": 147
+    },
+    "nglr1": {
+      "files": 8,
+      "normal_point_rows": 40
+    }
+  },
+  "by_station": {
+    "GRSM": 447,
+    "APOL": 324,
+    "WETL": 171,
+    "MATM": 19
+  },
+  "by_dominant_station": {
+    "APOL": {
+      "files": 38,
+      "normal_point_rows": 242
+    },
+    "GRSM": {
+      "files": 23,
+      "normal_point_rows": 461
+    },
+    "MATM": {
+      "files": 1,
+      "normal_point_rows": 2
+    },
+    "WETL": {
+      "files": 5,
+      "normal_point_rows": 256
+    }
+  },
+  "shortlist": [
+    {
+      "rank": 1,
+      "filename": "apollo15_202503.np2",
+      "target": "apollo15",
+      "yyyymm": "202503",
+      "dominant_station": "WETL",
+      "row_count": 123,
+      "station_count": 3,
+      "dominant_station_fraction": "0.487805",
+      "station_mix": "WETL:60,APOL:35,GRSM:28",
+      "coverage_start_utc": "2025-03-03T01:16:25Z",
+      "coverage_stop_utc": "2025-03-27T10:34:06.890245Z",
+      "median_num_ranges": "108.0",
+      "median_bin_rms_ps": "174.500",
+      "median_bin_pmm_ps": "",
+      "median_return_rate_hz": "1.200000",
+      "selection_reason": "greedy_diversity_over_combo_winners"
+    },
+    {
+      "rank": 2,
+      "filename": "luna21_202506.np2",
+      "target": "luna21",
+      "yyyymm": "202506",
+      "dominant_station": "GRSM",
+      "row_count": 9,
+      "station_count": 1,
+      "dominant_station_fraction": "1.000000",
+      "station_mix": "GRSM:9",
+      "coverage_start_utc": "2025-06-03T16:18:33.814775Z",
+      "coverage_stop_utc": "2025-06-06T21:31:44.397123Z",
+      "median_num_ranges": "37.0",
+      "median_bin_rms_ps": "187.300",
+      "median_bin_pmm_ps": "",
+      "median_return_rate_hz": "0.600000",
+      "selection_reason": "greedy_diversity_over_combo_winners"
+    },
+    {
+      "rank": 3,
+      "filename": "apollo15_202511.np2",
+      "target": "apollo15",
+      "yyyymm": "202511",
+      "dominant_station": "APOL",
+      "row_count": 32,
+      "station_count": 2,
+      "dominant_station_fraction": "0.812500",
+      "station_mix": "APOL:26,MATM:6",
+      "coverage_start_utc": "2025-11-01T06:33:00Z",
+      "coverage_stop_utc": "2025-11-30T20:58:48.504000Z",
+      "median_num_ranges": "151.5",
+      "median_bin_rms_ps": "316.150",
+      "median_bin_pmm_ps": "",
+      "median_return_rate_hz": "0.350000",
+      "selection_reason": "greedy_diversity_over_combo_winners"
+    },
+    {
+      "rank": 4,
+      "filename": "luna17_202502.np2",
+      "target": "luna17",
+      "yyyymm": "202502",
+      "dominant_station": "GRSM",
+      "row_count": 51,
+      "station_count": 2,
+      "dominant_station_fraction": "0.941176",
+      "station_mix": "GRSM:48,APOL:3",
+      "coverage_start_utc": "2025-02-01T01:41:25Z",
+      "coverage_stop_utc": "2025-02-07T07:01:45Z",
+      "median_num_ranges": "56.0",
+      "median_bin_rms_ps": "164.000",
+      "median_bin_pmm_ps": "",
+      "median_return_rate_hz": "0.900000",
+      "selection_reason": "greedy_diversity_over_combo_winners"
+    },
+    {
+      "rank": 5,
+      "filename": "apollo15_202502.np2",
+      "target": "apollo15",
+      "yyyymm": "202502",
+      "dominant_station": "GRSM",
+      "row_count": 99,
+      "station_count": 3,
+      "dominant_station_fraction": "0.747475",
+      "station_mix": "GRSM:74,APOL:20,MATM:5",
+      "coverage_start_utc": "2025-02-01T01:09:35Z",
+      "coverage_stop_utc": "2025-02-22T13:26:20Z",
+      "median_num_ranges": "71.0",
+      "median_bin_rms_ps": "159.700",
+      "median_bin_pmm_ps": "",
+      "median_return_rate_hz": "1.000000",
+      "selection_reason": "greedy_diversity_over_combo_winners"
+    },
+    {
+      "rank": 6,
+      "filename": "luna21_202502.np2",
+      "target": "luna21",
+      "yyyymm": "202502",
+      "dominant_station": "WETL",
+      "row_count": 71,
+      "station_count": 3,
+      "dominant_station_fraction": "0.577465",
+      "station_mix": "WETL:41,GRSM:28,APOL:2",
+      "coverage_start_utc": "2025-02-01T01:25:35Z",
+      "coverage_stop_utc": "2025-02-07T06:44:20Z",
+      "median_num_ranges": "92.0",
+      "median_bin_rms_ps": "183.000",
+      "median_bin_pmm_ps": "",
+      "median_return_rate_hz": "2.300000",
+      "selection_reason": "greedy_diversity_over_combo_winners"
+    },
+    {
+      "rank": 7,
+      "filename": "nglr1_202503.np2",
+      "target": "nglr1",
+      "yyyymm": "202503",
+      "dominant_station": "APOL",
+      "row_count": 11,
+      "station_count": 2,
+      "dominant_station_fraction": "0.818182",
+      "station_mix": "APOL:9,WETL:2",
+      "coverage_start_utc": "2025-03-04T17:32:32.631551Z",
+      "coverage_stop_utc": "2025-03-23T12:34:45Z",
+      "median_num_ranges": "32.0",
+      "median_bin_rms_ps": "141.100",
+      "median_bin_pmm_ps": "",
+      "median_return_rate_hz": "",
+      "selection_reason": "greedy_diversity_over_combo_winners"
+    },
+    {
+      "rank": 8,
+      "filename": "apollo11_202502.np2",
+      "target": "apollo11",
+      "yyyymm": "202502",
+      "dominant_station": "GRSM",
+      "row_count": 45,
+      "station_count": 2,
+      "dominant_station_fraction": "0.933333",
+      "station_mix": "GRSM:42,APOL:3",
+      "coverage_start_utc": "2025-02-01T01:35:05Z",
+      "coverage_stop_utc": "2025-02-07T06:51:05Z",
+      "median_num_ranges": "70.0",
+      "median_bin_rms_ps": "148.300",
+      "median_bin_pmm_ps": "",
+      "median_return_rate_hz": "1.200000",
+      "selection_reason": "greedy_diversity_over_combo_winners"
+    }
+  ],
+  "coverage_gaps": [
+    {
+      "dominant_station": "MATM",
+      "target": "apollo15",
+      "filename": "apollo15_202601.np2",
+      "yyyymm": "202601",
+      "row_count": 2,
+      "station_mix": "MATM:2"
+    },
+    {
+      "dominant_station": "APOL",
+      "target": "luna17",
+      "filename": "luna17_202511.np2",
+      "yyyymm": "202511",
+      "row_count": 3,
+      "station_mix": "APOL:3"
+    }
+  ],
+  "top_row_count_files": [
+    {
+      "filename": "apollo15_202503.np2",
+      "target": "apollo15",
+      "yyyymm": "202503",
+      "dominant_station": "WETL",
+      "row_count": 123,
+      "station_mix": "WETL:60,APOL:35,GRSM:28"
+    },
+    {
+      "filename": "apollo15_202502.np2",
+      "target": "apollo15",
+      "yyyymm": "202502",
+      "dominant_station": "GRSM",
+      "row_count": 99,
+      "station_mix": "GRSM:74,APOL:20,MATM:5"
+    },
+    {
+      "filename": "luna21_202502.np2",
+      "target": "luna21",
+      "yyyymm": "202502",
+      "dominant_station": "WETL",
+      "row_count": 71,
+      "station_mix": "WETL:41,GRSM:28,APOL:2"
+    },
+    {
+      "filename": "luna17_202502.np2",
+      "target": "luna17",
+      "yyyymm": "202502",
+      "dominant_station": "GRSM",
+      "row_count": 51,
+      "station_mix": "GRSM:48,APOL:3"
+    },
+    {
+      "filename": "apollo11_202502.np2",
+      "target": "apollo11",
+      "yyyymm": "202502",
+      "dominant_station": "GRSM",
+      "row_count": 45,
+      "station_mix": "GRSM:42,APOL:3"
+    },
+    {
+      "filename": "apollo15_202504.np2",
+      "target": "apollo15",
+      "yyyymm": "202504",
+      "dominant_station": "GRSM",
+      "row_count": 37,
+      "station_mix": "GRSM:16,APOL:12,WETL:9"
+    },
+    {
+      "filename": "apollo14_202502.np2",
+      "target": "apollo14",
+      "yyyymm": "202502",
+      "dominant_station": "GRSM",
+      "row_count": 36,
+      "station_mix": "GRSM:33,APOL:3"
+    },
+    {
+      "filename": "luna21_202503.np2",
+      "target": "luna21",
+      "yyyymm": "202503",
+      "dominant_station": "WETL",
+      "row_count": 36,
+      "station_mix": "WETL:33,GRSM:2,APOL:1"
+    },
+    {
+      "filename": "apollo15_202511.np2",
+      "target": "apollo15",
+      "yyyymm": "202511",
+      "dominant_station": "APOL",
+      "row_count": 32,
+      "station_mix": "APOL:26,MATM:6"
+    },
+    {
+      "filename": "apollo15_202501.np2",
+      "target": "apollo15",
+      "yyyymm": "202501",
+      "dominant_station": "GRSM",
+      "row_count": 30,
+      "station_mix": "GRSM:17,APOL:13"
+    }
+  ]
+}

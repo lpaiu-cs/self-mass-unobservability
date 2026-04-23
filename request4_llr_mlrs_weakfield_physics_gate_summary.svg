@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1480" height="1160" viewBox="0 0 1480 1160">
+<rect width="100%" height="100%" fill="#f8fafc"/>
+<text x="48" y="46" font-family="sans-serif" font-size="24" font-weight="700" fill="#111827">Request 4: MLRS weak-field physics gate</text>
+<text x="48" y="74" font-family="sans-serif" font-size="14" fill="#475569">External weak-field amplitude from Request 3, injected as a barycenter-consistent Sun-driven relative state correction at the jjreadnp seam.</text>
+<rect x="48" y="108" width="1384" height="168" fill="white" stroke="#cbd5e1"/>
+<text x="66" y="138" font-family="sans-serif" font-size="16" font-weight="700" fill="#111827">Model</text>
+<text x="66" y="168" font-family="monospace" font-size="13" fill="#111827">delta_SEP = sigma1*(s_E-s_M) + sigma2*(s_E^2-s_M^2)</text>
+<text x="66" y="192" font-family="monospace" font-size="13" fill="#111827">A_N = 2.942498e+10 m per delta_SEP</text>
+<text x="66" y="216" font-family="monospace" font-size="13" fill="#111827">helper applies delta r_rel = A * u_ES(t), delta v_rel = A * d(u_ES)/dt and splits it across Earth/Moon with fixed EM barycenter</text>
+<text x="66" y="240" font-family="monospace" font-size="13" fill="#111827">edit scope stays local: jjreadnp.f + smu_probe_adjust_states.f only</text>
+<text x="48" y="308" font-family="sans-serif" font-size="16" font-weight="700" fill="#111827">s25y11d016t0231#103</text>
+<text x="66" y="336" font-family="monospace" font-size="12" fill="#111827">-0.001: amp=-1.310000e-02 m, mean Δ93=-5.813874e-02 ns, frfin=12, frd=True, npt ΔTOF=0.000e+00 s, npt ΔPmM=-58.100 ps</text>
+<text x="66" y="358" font-family="monospace" font-size="12" fill="#111827">-0.0005: amp=-6.550000e-03 m, mean Δ93=-2.909890e-02 ns, frfin=12, frd=True, npt ΔTOF=0.000e+00 s, npt ΔPmM=-29.100 ps</text>
+<text x="66" y="380" font-family="monospace" font-size="12" fill="#111827">+0.0005: amp=6.550000e-03 m, mean Δ93=2.909821e-02 ns, frfin=12, frd=True, npt ΔTOF=0.000e+00 s, npt ΔPmM=29.100 ps</text>
+<text x="66" y="402" font-family="monospace" font-size="12" fill="#111827">+0.001: amp=1.310000e-02 m, mean Δ93=5.814217e-02 ns, frfin=12, frd=True, npt ΔTOF=0.000e+00 s, npt ΔPmM=58.100 ps</text>
+<text x="48" y="434" font-family="sans-serif" font-size="16" font-weight="700" fill="#111827">s25y11d042t0234#103</text>
+<text x="66" y="462" font-family="monospace" font-size="12" fill="#111827">-0.001: amp=-1.310000e-02 m, mean Δ93=4.128906e-03 ns, frfin=9, frd=True, npt ΔTOF=0.000e+00 s, npt ΔPmM=1.000 ps</text>
+<text x="66" y="484" font-family="monospace" font-size="12" fill="#111827">-0.0005: amp=-6.550000e-03 m, mean Δ93=1.949219e-03 ns, frfin=9, frd=True, npt ΔTOF=0.000e+00 s, npt ΔPmM=0.000 ps</text>
+<text x="66" y="506" font-family="monospace" font-size="12" fill="#111827">+0.0005: amp=6.550000e-03 m, mean Δ93=-1.921875e-03 ns, frfin=9, frd=True, npt ΔTOF=0.000e+00 s, npt ΔPmM=0.000 ps</text>
+<text x="66" y="528" font-family="monospace" font-size="12" fill="#111827">+0.001: amp=1.310000e-02 m, mean Δ93=-4.089844e-03 ns, frfin=9, frd=True, npt ΔTOF=0.000e+00 s, npt ΔPmM=0.000 ps</text>
+<text x="48" y="560" font-family="sans-serif" font-size="16" font-weight="700" fill="#111827">Odd Symmetry / Scaling</text>
+<text x="66" y="588" font-family="monospace" font-size="13" fill="#111827">s25y11d016t0231#103</text>
+<text x="84" y="610" font-family="monospace" font-size="12" fill="#111827">eps=0.0005 -> frrec sum=-6.868e-07 ns, npt TOF sum=0.000e+00 s, npt PmM sum=0.000e+00 ps</text>
+<text x="84" y="630" font-family="monospace" font-size="12" fill="#111827">eps=0.001 -> frrec sum=3.434e-06 ns, npt TOF sum=0.000e+00 s, npt PmM sum=0.000e+00 ps</text>
+<text x="84" y="650" font-family="monospace" font-size="12" fill="#111827">eps=0.0005 -> gain(Δ93/sigma1)=5.819643e+01, gain(ΔPmM/sigma1)=5.820000e+04</text>
+<text x="84" y="670" font-family="monospace" font-size="12" fill="#111827">eps=0.001 -> gain(Δ93/sigma1)=5.814217e+01, gain(ΔPmM/sigma1)=5.810000e+04</text>
+<text x="66" y="700" font-family="monospace" font-size="13" fill="#111827">s25y11d042t0234#103</text>
+<text x="84" y="722" font-family="monospace" font-size="12" fill="#111827">eps=0.0005 -> frrec sum=2.734e-05 ns, npt TOF sum=0.000e+00 s, npt PmM sum=0.000e+00 ps</text>
+<text x="84" y="742" font-family="monospace" font-size="12" fill="#111827">eps=0.001 -> frrec sum=3.906e-05 ns, npt TOF sum=0.000e+00 s, npt PmM sum=1.000e+00 ps</text>
+<text x="84" y="762" font-family="monospace" font-size="12" fill="#111827">eps=0.0005 -> gain(Δ93/sigma1)=-3.843750e+00, gain(ΔPmM/sigma1)=0.000000e+00</text>
+<text x="84" y="782" font-family="monospace" font-size="12" fill="#111827">eps=0.001 -> gain(Δ93/sigma1)=-4.089844e+00, gain(ΔPmM/sigma1)=0.000000e+00</text>
+<text x="48" y="822" font-family="sans-serif" font-size="16" font-weight="700" fill="#111827">Reading</text>
+<text x="66" y="852" font-family="monospace" font-size="13" fill="#111827">If these runs stay local and near-linear, the software stop rule remains cleared even for a weak-field-inspired state correction.</text>
+<text x="66" y="876" font-family="monospace" font-size="13" fill="#111827">The remaining question is whether this local observation-operator model is physically adequate, not whether the seam survives.</text>
+</svg>
