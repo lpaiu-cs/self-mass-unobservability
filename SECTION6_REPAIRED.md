@@ -185,9 +185,32 @@ delta_SEP = sigma_1 (s_E-s_M) + sigma_2 (s_E^2-s_M^2)
 - 그 결과 public DE421 binary를 연결하고 sample-critical binary subset을
   arm64로 재빌드하면 bundled lunar sample workflow가 end-to-end로 재생되며,
   `.frd`는 ref exact match, `.npt`는 각 sample당 1-line drift만 남는다.
+- 그 다음 bounded interface probe도 수행되었다.
+- 현재 drift는 pure formatting이 아니라 picosecond-scale `93` residual line
+  단계에서 먼저 나타나지만, synthetic local correction을 recalc `OMC`
+  layer에 넣어도 downstream filtering executables을 건드리지 않고
+  normalpoint까지 전파된다는 점이 확인되었다.
+- 이어서 stricter recalc-seam probe도 수행되었다.
+- 이 단계에서는 `+/- epsilon` constant perturbation에 대해 odd symmetry와
+  선형 scaling이 수치적으로 깨끗하게 성립하고, `29.53 d` slow synodic-like
+  waveform도 두 공개 sample에서 부호/압축률이 다르게 나타나면서
+  downstream stack을 깨지 않고 통과함이 확인되었다.
+- 다만 이 성공은 `delta_SEP` 물리 구현의 성공이 아니라 bounded
+  recalc-layer interface의 생존성 확인으로만 읽어야 한다.
+- 그 다음 더 깊은 state-seam gate도 수행되었다.
+- 이 단계에서는 `jjreadnp.f` bridge에 국소 synthetic helper 하나와
+  call-site 하나만 추가한 뒤, `+/- 0.01 m` Moon displacement probe가
+  end-to-end로 통과하고 `frd` exact match, `npt` 1-line drift 구조를
+  유지함이 확인되었다.
+- 따라서 broad-surgery stop rule은 `jjreadnp` bridge 자체에서는
+  발동하지 않는다. 남은 질문은 이 local state seam이 물리적으로도
+  충분한 `delta_SEP` remapping 층인지, 아니면 ephemeris-level work로
+  넘겨야 하는지이다.
 - 따라서 Request 4의 다음 주력은 더 많은 surrogate를 쌓는 것이 아니라,
   `CRD canonical data path + bounded MLRS hand-off` 또는 더 성숙한 기존
-  LLR estimator/codebase에 붙이는 쪽이다.
+  LLR estimator/codebase에 붙이는 쪽이다. MLRS 쪽에서는 다음 한 수를
+  physical `delta_SEP` adequacy 판정으로 좁혀 두고, 그 단계가 ephemeris-
+  level broad surgery로 번지면 바로 외부 성숙 estimator로 넘긴다.
 
 ## Request 5. PSR J0337+1715: 두 단계 분석으로 분리
 

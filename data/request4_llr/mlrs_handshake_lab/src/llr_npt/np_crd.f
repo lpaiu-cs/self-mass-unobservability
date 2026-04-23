@@ -450,6 +450,7 @@ C:CORRECT FOR 2.7 M FOLDED LIGHT PATH
 
 C:CALCULATE FINAL O-C RESIDUAL
       OMC= (ORANGE-TTLTIM)*1.D9
+      CALL SMU_PROBE_ADJUST_OMC(TJDINT,SUTCT,OMC)
       if (dabs(omc) .gt. 2.e6) omc= 2.e5
       ONREFL= NREFL
 
@@ -652,4 +653,3 @@ c  ceror calls HP-UX "exit"
 C
 C	   THE
 	   END
-

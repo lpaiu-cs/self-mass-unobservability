@@ -1,0 +1,101 @@
+      SUBROUTINE SMU_PROBE_ADJUST_OMC(TJDINT,SUTCT,OMC)
+      IMPLICIT DOUBLE PRECISION (A-H,O-Z)
+C
+C  Bounded interface probe for Request 4.
+C  Default is a no-op. Optional controls:
+C    SMU_OMC_OFFSET_NS
+C      constant additive correction at the recalc/normalpoint layer
+C    SMU_OMC_SINE_AMPL_NS, SMU_OMC_SINE_PERIOD_S,
+C    SMU_OMC_SINE_T0_JD, SMU_OMC_SINE_T0_SOD, SMU_OMC_SINE_PHASE_RAD
+C      slow time-varying synthetic correction at the same layer
+C
+      CHARACTER*64 ENVBUF
+      INTEGER LENV, ESTAT, SMU_INITIALIZED
+      DOUBLE PRECISION SMU_OFFSET_NS, SMU_SINE_AMPL_NS,
+     1  SMU_SINE_PERIOD_S, SMU_SINE_T0_JD, SMU_SINE_T0_SOD,
+     2  SMU_SINE_PHASE_RAD, SMU_DT_S, SMU_PI
+      COMMON /SMU_PROBE_CFG/ SMU_OFFSET_NS, SMU_SINE_AMPL_NS,
+     1  SMU_SINE_PERIOD_S, SMU_SINE_T0_JD, SMU_SINE_T0_SOD,
+     2  SMU_SINE_PHASE_RAD, SMU_INITIALIZED
+      SAVE /SMU_PROBE_CFG/
+      DATA SMU_OFFSET_NS /0.D0/, SMU_SINE_AMPL_NS /0.D0/,
+     1  SMU_SINE_PERIOD_S /0.D0/, SMU_SINE_T0_JD /0.D0/,
+     2  SMU_SINE_T0_SOD /0.D0/, SMU_SINE_PHASE_RAD /0.D0/,
+     3  SMU_INITIALIZED /0/
+
+      IF (SMU_INITIALIZED .EQ. 0) THEN
+        ENVBUF = ' '
+        LENV = 0
+        ESTAT = 1
+        CALL GET_ENVIRONMENT_VARIABLE('SMU_OMC_OFFSET_NS', ENVBUF,
+     1        LENV, ESTAT)
+        IF (ESTAT .EQ. 0 .AND. LENV .GT. 0) THEN
+          READ(ENVBUF(1:LENV),*,ERR=100) SMU_OFFSET_NS
+        ENDIF
+  100   CONTINUE
+
+        ENVBUF = ' '
+        LENV = 0
+        ESTAT = 1
+        CALL GET_ENVIRONMENT_VARIABLE('SMU_OMC_SINE_AMPL_NS', ENVBUF,
+     1        LENV, ESTAT)
+        IF (ESTAT .EQ. 0 .AND. LENV .GT. 0) THEN
+          READ(ENVBUF(1:LENV),*,ERR=110) SMU_SINE_AMPL_NS
+        ENDIF
+  110   CONTINUE
+
+        ENVBUF = ' '
+        LENV = 0
+        ESTAT = 1
+        CALL GET_ENVIRONMENT_VARIABLE('SMU_OMC_SINE_PERIOD_S', ENVBUF,
+     1        LENV, ESTAT)
+        IF (ESTAT .EQ. 0 .AND. LENV .GT. 0) THEN
+          READ(ENVBUF(1:LENV),*,ERR=120) SMU_SINE_PERIOD_S
+        ENDIF
+  120   CONTINUE
+
+        ENVBUF = ' '
+        LENV = 0
+        ESTAT = 1
+        CALL GET_ENVIRONMENT_VARIABLE('SMU_OMC_SINE_T0_JD', ENVBUF,
+     1        LENV, ESTAT)
+        IF (ESTAT .EQ. 0 .AND. LENV .GT. 0) THEN
+          READ(ENVBUF(1:LENV),*,ERR=130) SMU_SINE_T0_JD
+        ENDIF
+  130   CONTINUE
+
+        ENVBUF = ' '
+        LENV = 0
+        ESTAT = 1
+        CALL GET_ENVIRONMENT_VARIABLE('SMU_OMC_SINE_T0_SOD', ENVBUF,
+     1        LENV, ESTAT)
+        IF (ESTAT .EQ. 0 .AND. LENV .GT. 0) THEN
+          READ(ENVBUF(1:LENV),*,ERR=140) SMU_SINE_T0_SOD
+        ENDIF
+  140   CONTINUE
+
+        ENVBUF = ' '
+        LENV = 0
+        ESTAT = 1
+        CALL GET_ENVIRONMENT_VARIABLE('SMU_OMC_SINE_PHASE_RAD', ENVBUF,
+     1        LENV, ESTAT)
+        IF (ESTAT .EQ. 0 .AND. LENV .GT. 0) THEN
+          READ(ENVBUF(1:LENV),*,ERR=150) SMU_SINE_PHASE_RAD
+        ENDIF
+  150   CONTINUE
+
+        SMU_INITIALIZED = 1
+      ENDIF
+
+      OMC = OMC + SMU_OFFSET_NS
+      IF (DABS(SMU_SINE_AMPL_NS) .GT. 0.D0 .AND.
+     1    SMU_SINE_PERIOD_S .GT. 0.D0) THEN
+        SMU_PI = DACOS(-1.D0)
+        SMU_DT_S = (TJDINT-SMU_SINE_T0_JD)*86400.D0 +
+     1             (SUTCT-SMU_SINE_T0_SOD)
+        OMC = OMC + SMU_SINE_AMPL_NS *
+     1        DSIN((2.D0*SMU_PI*SMU_DT_S/SMU_SINE_PERIOD_S) +
+     2             SMU_SINE_PHASE_RAD)
+      ENDIF
+      RETURN
+      END

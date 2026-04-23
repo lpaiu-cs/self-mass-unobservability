@@ -124,3 +124,11 @@ The correct reading is narrower:
 - the MLRS handshake passed its sample-reproduction gate,
 - so the remaining Request 4 question is now whether this public MLRS path can
   be used as the bounded estimator hand-off layer for a later EFT remapping.
+
+That follow-on question is now addressed one step further in
+`REQUEST4_LLR_MLRS_INTERFACE_PROBE.md` and
+`REQUEST4_LLR_MLRS_RECALC_SEAM_PROBE.md`: the recalc layer exposes a bounded
+local correction seam, and that seam behaves linearly under small synthetic
+probes, but the project still needs to decide whether the real `delta_SEP`
+physics fits through the deeper prediction/state seam without expanding into a
+broader legacy-code restoration project.

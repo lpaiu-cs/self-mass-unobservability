@@ -108,6 +108,25 @@ So the honest state is:
   trying". The public sample workflow now replays end-to-end in the lab copy,
   with exact `.frd` matches and only one-line `.npt` drifts against the
   bundled references.
+- A bounded MLRS interface probe now also exists; see
+  `REQUEST4_LLR_MLRS_INTERFACE_PROBE.md`.
+- That probe shows the residual mismatch appears first in picosecond-scale
+  `93` residual lines rather than only at final formatting, and it also shows
+  that a local correction inserted at the recalc `OMC` layer propagates through
+  normalpoint generation without breaking the downstream batch executables.
+- A stricter MLRS recalc-seam probe now also exists; see
+  `REQUEST4_LLR_MLRS_RECALC_SEAM_PROBE.md`.
+- That follow-on probe shows the bounded recalc seam is numerically clean under
+  `+/- epsilon` constant perturbations and also survives a slow synodic-like
+  waveform injection. This is evidence for software-interface viability only,
+  not yet for the physical correctness of a real `delta_SEP` insertion.
+- A deeper MLRS state-seam gate now also exists; see
+  `REQUEST4_LLR_MLRS_STATE_SEAM_GATE.md`.
+- That gate shows the next insertion layer down, the `jjreadnp` ephemeris-state
+  bridge, can also carry a bounded synthetic perturbation with only a local
+  helper plus one call-site edit. So the broad-surgery stop rule is not
+  triggered at the software-architecture level by moving from recalc to state
+  seam.
 - So Request 4 is still **not a real weak-field parameter fit** in this
   workspace.
 - The blocker is now very concrete: the self-built APOLLO-only surrogate does
@@ -124,11 +143,21 @@ If Request 4 remains the next priority, the next concrete action is now:
 1. stop growing the APOLLO-only surrogate as if it were on track to become a
    final weak-field estimator by itself,
 2. keep `Earthdata/CRD` as the data-side canonical path, but treat the MLRS
-   sample-replay success as the current estimator-side hand-off candidate,
-3. only if the MLRS path can expose a bounded residual/partial interface should
-   it carry the later EFT remapping for `sigma_1`, `sigma_2`,
+   sample-replay and recalc-seam success as the current estimator-side hand-off
+   candidate,
+3. the next MLRS step should stay narrow: decide whether the real `delta_SEP`
+   perturbation fits through the deeper prediction/state seam at
+   `jjreadnp.f / jeulpkg.f`, rather than treating the recalc `OMC` hook itself
+   as physics,
 4. otherwise fall through to a more mature external estimator/codebase without
    letting MLRS turn into a second bespoke branch.
+
+As of the current state-seam gate, item 3 should now be read more precisely:
+
+- the `jjreadnp` bridge itself no longer looks like broad surgery,
+- but the remaining decision is whether a physically adequate `delta_SEP`
+  remapping can stay at that local bridge, or whether it spills outward into
+  ephemeris-level work that should be handed off to a more mature estimator.
 
 Anything short of that is still ingest territory, not the real Request 4 fit.
 

@@ -1,0 +1,68 @@
+{
+  "status": "state_seam_bounded",
+  "sample_stem": "s25y11d016t0231#103",
+  "shift_values_m": [
+    -0.01,
+    0.01
+  ],
+  "build_scope": {
+    "source_files_touched": [
+      "src/llr_npt/jjreadnp.f",
+      "src/llr_npt/smu_probe_adjust_states.f"
+    ],
+    "recompiled_objects": [
+      "src/llr_npt/jjreadnp.o",
+      "src/llr_npt/smu_probe_adjust_states.o"
+    ],
+    "relinked_binary": "bin/llr_npt_crd",
+    "batch_script_edits": 0,
+    "pleph_edits": 0,
+    "jeulpkg_edits": 0
+  },
+  "probe_model": {
+    "kind": "moon_displacement_along_earth_moon_line",
+    "amplitude_m": 0.01
+  },
+  "runs": {
+    "-0.010m": {
+      "changed_93_lines": 1456,
+      "total_93_lines": 1761,
+      "mean_delta_ns": 0.06671497252747649,
+      "min_delta_ns": 0.0,
+      "max_delta_ns": 0.06700000000091677,
+      "frfin_line_diff_count": 12,
+      "frd_exact_match": true,
+      "npt_line_diff_count": 1,
+      "npt_time_of_flight_delta_s": 0.0,
+      "npt_pmm_delta_ps": 66.70000000000005,
+      "npt_first_diff": [
+        11,
+        "11 10116.445646369561     2.516121436078 std 2 1840.7     12  480.2  -0.297  -1.614   -1921.3   0.00 0",
+        "11 10116.445646369561     2.516121436078 std 2 1840.7     12  480.2  -0.297  -1.614   -1988.0   0.00 0"
+      ]
+    },
+    "+0.010m": {
+      "changed_93_lines": 1456,
+      "total_93_lines": 1761,
+      "mean_delta_ns": -0.06671909340659227,
+      "min_delta_ns": -0.06700000000091677,
+      "max_delta_ns": 0.0,
+      "frfin_line_diff_count": 12,
+      "frd_exact_match": true,
+      "npt_line_diff_count": 1,
+      "npt_time_of_flight_delta_s": 0.0,
+      "npt_pmm_delta_ps": -66.69999999999982,
+      "npt_first_diff": [
+        11,
+        "11 10116.445646369561     2.516121436078 std 2 1840.7     12  480.2  -0.297  -1.614   -2054.7   0.00 0",
+        "11 10116.445646369561     2.516121436078 std 2 1840.7     12  480.2  -0.297  -1.614   -1988.0   0.00 0"
+      ]
+    }
+  },
+  "odd_symmetry": {
+    "frrec_mean_sum_ns": -4.120879115776521e-06,
+    "npt_tof_sum_s": 0.0,
+    "npt_pmm_sum_ps": 2.2737367544323206e-13
+  },
+  "assessment": "A deeper prediction/state-seam probe fits through the jjreadnp bridge without widening into broad legacy-code surgery. The remaining risk is physical, not architectural: a real delta_SEP insertion may still need a model stronger than this synthetic state displacement."
+}

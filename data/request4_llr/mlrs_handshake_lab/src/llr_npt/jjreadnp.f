@@ -40,6 +40,8 @@ CC	call pleph(rjed,tsec,itarg,icent,rrd,*9998)
 	do 4 i4=1,6
 4	tabout(i4,11)=rrd(i4)
 
+      call smu_probe_adjust_states(rjed,tsec,tabout(1,3),tabout(1,11))
+
 c  Get libration.
 	itarg=15
 CC	call pleph(rjed,tsec,itarg,icent,rrd,*9998)

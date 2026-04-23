@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1420" height="820" viewBox="0 0 1420 820">
+<rect width="100%" height="100%" fill="#f8fafc"/>
+<text x="48" y="46" font-family="sans-serif" font-size="24" font-weight="700" fill="#111827">Request 4: MLRS state seam gate</text>
+<text x="48" y="74" font-family="sans-serif" font-size="14" fill="#475569">Bounded probe at the jjreadnp/ephemeris-state bridge, not a physical delta_SEP implementation.</text>
+<rect x="48" y="108" width="1324" height="182" fill="white" stroke="#cbd5e1"/>
+<text x="66" y="138" font-family="sans-serif" font-size="16" font-weight="700" fill="#111827">Build Scope</text>
+<text x="66" y="168" font-family="monospace" font-size="13" fill="#111827">source edits: jjreadnp.f + smu_probe_adjust_states.f</text>
+<text x="66" y="192" font-family="monospace" font-size="13" fill="#111827">rebuild: jjreadnp.o + smu_probe_adjust_states.o + llr_npt_crd relink only</text>
+<text x="66" y="216" font-family="monospace" font-size="13" fill="#111827">no batch-script edits, no PLEPH edits, no jeulpkg.f surgery</text>
+<text x="66" y="240" font-family="monospace" font-size="13" fill="#111827">probe: +/- 0.01 m Moon displacement along instantaneous Earth->Moon line</text>
+<rect x="48" y="320" width="1324" height="220" fill="white" stroke="#cbd5e1"/>
+<text x="66" y="350" font-family="sans-serif" font-size="16" font-weight="700" fill="#111827">Results</text>
+<text x="66" y="382" font-family="monospace" font-size="12" fill="#111827">-0.010m: mean Δ93 = 0.066715 ns, changed 93 = 1456/1761, frfin diffs = 12, frd exact = True, npt ΔTOF = 0.000e+00 s, npt ΔPmM = 66.700 ps</text>
+<text x="66" y="406" font-family="monospace" font-size="12" fill="#111827">+0.010m: mean Δ93 = -0.066719 ns, changed 93 = 1456/1761, frfin diffs = 12, frd exact = True, npt ΔTOF = 0.000e+00 s, npt ΔPmM = -66.700 ps</text>
+<rect x="48" y="570" width="1324" height="170" fill="white" stroke="#cbd5e1"/>
+<text x="66" y="600" font-family="sans-serif" font-size="16" font-weight="700" fill="#111827">Verdict</text>
+<text x="66" y="630" font-family="monospace" font-size="13" fill="#111827">The prediction/state insertion does not spill into broad surgery at the software-interface level.</text>
+<text x="66" y="654" font-family="monospace" font-size="13" fill="#111827">The gate remains bounded to the ephemeris-state bridge, but this is still not a physical weak-field fit.</text>
+<text x="66" y="678" font-family="monospace" font-size="13" fill="#111827">If a real delta_SEP model later demands editing PLEPH or regenerating ephemerides, stop and hand off outward.</text>
+</svg>
