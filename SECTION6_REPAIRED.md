@@ -206,6 +206,13 @@ delta_SEP = sigma_1 (s_E-s_M) + sigma_2 (s_E^2-s_M^2)
   발동하지 않는다. 남은 질문은 이 local state seam이 물리적으로도
   충분한 `delta_SEP` remapping 층인지, 아니면 ephemeris-level work로
   넘겨야 하는지이다.
+- 이어서 Sun-driven state gate도 수행되었다.
+- 이 단계에서는 `jjreadnp` 내부에서 태양 상태를 한 번 더 local fetch한 뒤,
+  Earth-to-Sun 방향의 작은 Moon displacement를 `+/- 0.005, +/- 0.01 m`
+  로 주입해 보았고, 여전히 `frd` exact match, `frfin` 12-line diff,
+  `npt` 1-line drift, near-linear/odd-symmetric response가 유지되었다.
+- 따라서 지금 기준으로는 `MLRS` 경로가 structure 측면에서 broad surgery로
+  번진다고 보기는 어렵다. 남은 마지막 게이트는 오직 물리 적합성이다.
 - 따라서 Request 4의 다음 주력은 더 많은 surrogate를 쌓는 것이 아니라,
   `CRD canonical data path + bounded MLRS hand-off` 또는 더 성숙한 기존
   LLR estimator/codebase에 붙이는 쪽이다. MLRS 쪽에서는 다음 한 수를

@@ -25,7 +25,7 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
 	INCLUDE 'LIB.INC'
 
-	dimension rrd(6)
+	dimension rrd(6), sunpv(6)
 
 c  Get position and velocity vectors.
 	itarg=3
@@ -40,7 +40,13 @@ CC	call pleph(rjed,tsec,itarg,icent,rrd,*9998)
 	do 4 i4=1,6
 4	tabout(i4,11)=rrd(i4)
 
-      call smu_probe_adjust_states(rjed,tsec,tabout(1,3),tabout(1,11))
+      itarg=11
+      call pleph(rjed+(tsec/86400),itarg,icent,rrd)
+      do 5 i5=1,6
+5     sunpv(i5)=rrd(i5)
+
+      call smu_probe_adjust_states(rjed,tsec,tabout(1,3),tabout(1,11),
+     1  sunpv)
 
 c  Get libration.
 	itarg=15

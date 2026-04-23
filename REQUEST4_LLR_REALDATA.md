@@ -127,6 +127,13 @@ So the honest state is:
   helper plus one call-site edit. So the broad-surgery stop rule is not
   triggered at the software-architecture level by moving from recalc to state
   seam.
+- A stricter Sun-driven MLRS state gate now also exists; see
+  `REQUEST4_LLR_MLRS_SUNDRIVEN_GATE.md`.
+- That gate upgrades the same conclusion from "arbitrary local state class" to
+  "bounded Sun-driven local state class": a local Earth-to-Sun-direction Moon
+  displacement still fits through `jjreadnp` with no `PLEPH` edit, no batch
+  edit, and no ephemeris regeneration, while preserving near-linear final
+  normal-point response.
 - So Request 4 is still **not a real weak-field parameter fit** in this
   workspace.
 - The blocker is now very concrete: the self-built APOLLO-only surrogate does
@@ -152,12 +159,15 @@ If Request 4 remains the next priority, the next concrete action is now:
 4. otherwise fall through to a more mature external estimator/codebase without
    letting MLRS turn into a second bespoke branch.
 
-As of the current state-seam gate, item 3 should now be read more precisely:
+As of the current state-seam and Sun-driven gates, item 3 should now be read
+more precisely:
 
 - the `jjreadnp` bridge itself no longer looks like broad surgery,
+- and a more physical Sun-driven local state class still stays bounded there,
 - but the remaining decision is whether a physically adequate `delta_SEP`
-  remapping can stay at that local bridge, or whether it spills outward into
-  ephemeris-level work that should be handed off to a more mature estimator.
+  remapping can stay at that local bridge, or whether it still spills outward
+  into ephemeris-level work that should be handed off to a more mature
+  estimator.
 
 Anything short of that is still ingest territory, not the real Request 4 fit.
 

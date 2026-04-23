@@ -1,0 +1,129 @@
+{
+  "status": "sun_driven_state_seam_still_bounded",
+  "sample_stem": "s25y11d016t0231#103",
+  "shift_values_m": [
+    -0.01,
+    -0.005,
+    0.005,
+    0.01
+  ],
+  "build_scope": {
+    "source_files_touched": [
+      "src/llr_npt/jjreadnp.f",
+      "src/llr_npt/smu_probe_adjust_states.f"
+    ],
+    "new_local_fetch": "PLEPH Sun state inside jjreadnp bridge",
+    "batch_script_edits": 0,
+    "pleph_edits": 0,
+    "jeulpkg_edits": 0,
+    "ephemeris_regeneration": 0
+  },
+  "probe_model": {
+    "kind": "moon_displacement_along_earth_sun_line",
+    "amplitude_values_m": [
+      -0.01,
+      -0.005,
+      0.005,
+      0.01
+    ]
+  },
+  "runs": {
+    "-0.010m": {
+      "changed_93_lines": 1456,
+      "total_93_lines": 1761,
+      "mean_delta_ns": -0.04439079670329836,
+      "min_delta_ns": -0.04500000000007276,
+      "max_delta_ns": 0.0,
+      "frfin_line_diff_count": 12,
+      "frd_exact_match": true,
+      "npt_line_diff_count": 1,
+      "npt_time_of_flight_delta_s": 0.0,
+      "npt_pmm_delta_ps": -44.299999999999955,
+      "npt_first_diff": [
+        11,
+        "11 10116.445646369561     2.516121436078 std 2 1840.7     12  480.2  -0.297  -1.614   -2032.3   0.00 0",
+        "11 10116.445646369561     2.516121436078 std 2 1840.7     12  480.2  -0.297  -1.614   -1988.0   0.00 0"
+      ]
+    },
+    "-0.005m": {
+      "changed_93_lines": 1456,
+      "total_93_lines": 1761,
+      "mean_delta_ns": -0.022146978021973865,
+      "min_delta_ns": -0.023000000001047738,
+      "max_delta_ns": 0.0,
+      "frfin_line_diff_count": 12,
+      "frd_exact_match": true,
+      "npt_line_diff_count": 1,
+      "npt_time_of_flight_delta_s": 0.0,
+      "npt_pmm_delta_ps": -22.09999999999991,
+      "npt_first_diff": [
+        11,
+        "11 10116.445646369561     2.516121436078 std 2 1840.7     12  480.2  -0.297  -1.614   -2010.1   0.00 0",
+        "11 10116.445646369561     2.516121436078 std 2 1840.7     12  480.2  -0.297  -1.614   -1988.0   0.00 0"
+      ]
+    },
+    "+0.005m": {
+      "changed_93_lines": 1456,
+      "total_93_lines": 1761,
+      "mean_delta_ns": 0.022146291208796118,
+      "min_delta_ns": 0.0,
+      "max_delta_ns": 0.023000000001047738,
+      "frfin_line_diff_count": 12,
+      "frd_exact_match": true,
+      "npt_line_diff_count": 1,
+      "npt_time_of_flight_delta_s": 0.0,
+      "npt_pmm_delta_ps": 22.200000000000045,
+      "npt_first_diff": [
+        11,
+        "11 10116.445646369561     2.516121436078 std 2 1840.7     12  480.2  -0.297  -1.614   -1965.8   0.00 0",
+        "11 10116.445646369561     2.516121436078 std 2 1840.7     12  480.2  -0.297  -1.614   -1988.0   0.00 0"
+      ]
+    },
+    "+0.010m": {
+      "changed_93_lines": 1456,
+      "total_93_lines": 1761,
+      "mean_delta_ns": 0.044401098901095,
+      "min_delta_ns": 0.0,
+      "max_delta_ns": 0.04500000000007276,
+      "frfin_line_diff_count": 12,
+      "frd_exact_match": true,
+      "npt_line_diff_count": 1,
+      "npt_time_of_flight_delta_s": 0.0,
+      "npt_pmm_delta_ps": 44.40000000000009,
+      "npt_first_diff": [
+        11,
+        "11 10116.445646369561     2.516121436078 std 2 1840.7     12  480.2  -0.297  -1.614   -1943.6   0.30 0",
+        "11 10116.445646369561     2.516121436078 std 2 1840.7     12  480.2  -0.297  -1.614   -1988.0   0.00 0"
+      ]
+    }
+  },
+  "odd_symmetry": [
+    {
+      "epsilon_m": 0.005,
+      "frrec_mean_sum_ns": -6.868131777471032e-07,
+      "npt_tof_sum_s": 0.0,
+      "npt_pmm_sum_ps": 0.10000000000013642
+    },
+    {
+      "epsilon_m": 0.01,
+      "frrec_mean_sum_ns": 1.0302197796636936e-05,
+      "npt_tof_sum_s": 0.0,
+      "npt_pmm_sum_ps": 0.10000000000013642
+    }
+  ],
+  "scaling": [
+    {
+      "epsilon_m": 0.005,
+      "frrec_gain_ns_per_m": 4.429258241759223,
+      "npt_tof_gain_s_per_m": 0.0,
+      "npt_pmm_gain_ps_per_m": 4440.000000000009
+    },
+    {
+      "epsilon_m": 0.01,
+      "frrec_gain_ns_per_m": 4.4401098901094995,
+      "npt_tof_gain_s_per_m": 0.0,
+      "npt_pmm_gain_ps_per_m": 4440.000000000009
+    }
+  ],
+  "assessment": "A more physical Sun-driven local state class still fits through the jjreadnp bridge without widening into PLEPH edits or broader legacy-code surgery. The remaining open question is physical adequacy, not software interface viability."
+}

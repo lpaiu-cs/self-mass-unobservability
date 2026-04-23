@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1460" height="980" viewBox="0 0 1460 980">
+<rect width="100%" height="100%" fill="#f8fafc"/>
+<text x="48" y="46" font-family="sans-serif" font-size="24" font-weight="700" fill="#111827">Request 4: MLRS Sun-driven state gate</text>
+<text x="48" y="74" font-family="sans-serif" font-size="14" fill="#475569">A bounded local probe for a more physical perturbation class: Moon displacement along the instantaneous Earth->Sun direction.</text>
+<rect x="48" y="108" width="1364" height="184" fill="white" stroke="#cbd5e1"/>
+<text x="66" y="138" font-family="sans-serif" font-size="16" font-weight="700" fill="#111827">Build Scope</text>
+<text x="66" y="168" font-family="monospace" font-size="13" fill="#111827">source edits remain local: jjreadnp.f + smu_probe_adjust_states.f</text>
+<text x="66" y="192" font-family="monospace" font-size="13" fill="#111827">new local action: one extra PLEPH fetch for Sun state inside jjreadnp bridge</text>
+<text x="66" y="216" font-family="monospace" font-size="13" fill="#111827">no PLEPH edits, no jeulpkg edits, no batch-script edits, no ephemeris regeneration</text>
+<text x="66" y="240" font-family="monospace" font-size="13" fill="#111827">probe amplitudes: +/- 0.005 m and +/- 0.010 m along instantaneous Earth->Sun line</text>
+<rect x="48" y="322" width="1364" height="360" fill="white" stroke="#cbd5e1"/>
+<text x="66" y="352" font-family="sans-serif" font-size="16" font-weight="700" fill="#111827">Runs</text>
+<text x="66" y="384" font-family="monospace" font-size="12" fill="#111827">-0.010m: mean Δ93 = -0.044391 ns, changed 93 = 1456/1761, frfin diffs = 12, frd exact = True, npt ΔTOF = 0.000e+00 s, npt ΔPmM = -44.300 ps</text>
+<text x="66" y="408" font-family="monospace" font-size="12" fill="#111827">-0.005m: mean Δ93 = -0.022147 ns, changed 93 = 1456/1761, frfin diffs = 12, frd exact = True, npt ΔTOF = 0.000e+00 s, npt ΔPmM = -22.100 ps</text>
+<text x="66" y="432" font-family="monospace" font-size="12" fill="#111827">+0.005m: mean Δ93 = 0.022146 ns, changed 93 = 1456/1761, frfin diffs = 12, frd exact = True, npt ΔTOF = 0.000e+00 s, npt ΔPmM = 22.200 ps</text>
+<text x="66" y="456" font-family="monospace" font-size="12" fill="#111827">+0.010m: mean Δ93 = 0.044401 ns, changed 93 = 1456/1761, frfin diffs = 12, frd exact = True, npt ΔTOF = 0.000e+00 s, npt ΔPmM = 44.400 ps</text>
+<text x="66" y="492" font-family="monospace" font-size="13" fill="#111827">odd symmetry:</text>
+<text x="84" y="516" font-family="monospace" font-size="12" fill="#111827">eps=0.005 m -> frrec sum=-6.868e-07 ns, npt TOF sum=0.000e+00 s, npt PmM sum=1.000e-01 ps</text>
+<text x="84" y="536" font-family="monospace" font-size="12" fill="#111827">eps=0.010 m -> frrec sum=1.030e-05 ns, npt TOF sum=0.000e+00 s, npt PmM sum=1.000e-01 ps</text>
+<text x="66" y="566" font-family="monospace" font-size="13" fill="#111827">scaling:</text>
+<text x="84" y="590" font-family="monospace" font-size="12" fill="#111827">eps=0.005 m -> gain(Δ93/eps)=4.429258 ns/m, gain(ΔTOF/eps)=0.000e+00 s/m, gain(ΔPmM/eps)=4440.000 ps/m</text>
+<text x="84" y="610" font-family="monospace" font-size="12" fill="#111827">eps=0.010 m -> gain(Δ93/eps)=4.440110 ns/m, gain(ΔTOF/eps)=0.000e+00 s/m, gain(ΔPmM/eps)=4440.000 ps/m</text>
+<rect x="48" y="714" width="1364" height="194" fill="white" stroke="#cbd5e1"/>
+<text x="66" y="744" font-family="sans-serif" font-size="16" font-weight="700" fill="#111827">Reading</text>
+<text x="66" y="774" font-family="monospace" font-size="13" fill="#111827">This is a more physical perturbation class than the Earth->Moon radial probe because it is Sun-driven.</text>
+<text x="66" y="798" font-family="monospace" font-size="13" fill="#111827">If the response stays local, linear, and odd-symmetric here, the software stop rule remains cleared.</text>
+<text x="66" y="822" font-family="monospace" font-size="13" fill="#111827">It still does not prove that the full delta_SEP dynamics are captured; it only shows that a Sun-driven local state class fits through the same seam.</text>
+<text x="66" y="846" font-family="monospace" font-size="13" fill="#111827">Any later need to modify PLEPH, regenerate ephemerides, or widen edits beyond this bridge should still trigger hand-off outward.</text>
+</svg>
