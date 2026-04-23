@@ -9,7 +9,7 @@ Assets for the real-data LLR branch:
 - `apollo_legacy_text_release_2026-04-22/`: APOLLO ingest manifest. Public raw payloads are re-downloadable and ignored by Git.
 - `crd_monthly_ensemble_2026-04-23/`: monthly CRD fetch manifest. Public raw and rejected payloads are re-downloadable and ignored by Git.
 - `ilrs_pivot_scout/`: pivot-scout manifests and notes. Vendored ILRS downloads are public inputs and are ignored by Git.
-- `mlrs_handshake_lab/`: bounded MLRS replay / interface-probe workspace.
+- `mlrs_handshake_lab/`: bounded MLRS replay / interface-probe workspace. Public JPL ephemeris mirrors used by the lab stay local and are ignored by Git.
 - `mlrs_promotion_audit_2026-04-23/`: CRD-to-MLRS promotion audit snapshot. The checked-in summary artifacts stay in Git, while the split/work subtree is now treated as a local regenerated workspace.
 - `pep_hand_off_2026-04-23/`: bounded PEP acquisition/build hand-off snapshot.
 - `skyfield_cache/`: local ephemeris cache, ignored by Git.
