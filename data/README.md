@@ -6,9 +6,9 @@ The `data/` tree contains mirrored public inputs, vendored third-party code, and
 
 Assets for the real-data LLR branch:
 
-- `apollo_legacy_text_release_2026-04-22/`: mirrored APOLLO legacy normal-point release used by the ingest scaffold.
-- `crd_monthly_ensemble_2026-04-23/`: mirrored public monthly CRD payloads and rejected-payload bookkeeping.
-- `ilrs_pivot_scout/`: ILRS support code and pivot-scout artifacts.
+- `apollo_legacy_text_release_2026-04-22/`: APOLLO ingest manifest. Public raw payloads are re-downloadable and ignored by Git.
+- `crd_monthly_ensemble_2026-04-23/`: monthly CRD fetch manifest. Public raw and rejected payloads are re-downloadable and ignored by Git.
+- `ilrs_pivot_scout/`: pivot-scout manifests and notes. Vendored ILRS downloads are public inputs and are ignored by Git.
 - `mlrs_handshake_lab/`: bounded MLRS replay / interface-probe workspace.
 - `mlrs_promotion_audit_2026-04-23/`: CRD-to-MLRS promotion audit snapshot. The checked-in summary artifacts stay in Git, while the split/work subtree is now treated as a local regenerated workspace.
 - `pep_hand_off_2026-04-23/`: bounded PEP acquisition/build hand-off snapshot.
@@ -18,9 +18,8 @@ Assets for the real-data LLR branch:
 
 Assets for the strong-field `J0337` Phase B scout:
 
-- `nutimo_public_release_2026-04-23/2020/`: mirrored 2020 public Nutimo release.
-- `nutimo_public_release_2026-04-23/2025/`: mirrored 2025 public release. The pinned archive and curated top-level mirror stay in Git; transient `unpacked/` and `build_probe/` trees are now ignored.
+- `nutimo_public_release_2026-04-23/`: local mirror root for public Nutimo releases. The payloads are publicly downloadable and ignored by Git; the tracked registry for this scout is [`request5_j0337_phaseB_public_inputs_manifest.tsv`](../request5_j0337_phaseB_public_inputs_manifest.tsv).
 
 ## Working Assumption
 
-The public repository keeps pinned releases, manifests, memos, scripts, and the source-level patches needed to understand the bounded reproduction story. Re-generated workspaces and extracted third-party duplicates are ignored once they are no longer needed as first-class repo artifacts. If you later want an even slimmer public repository, the next candidates to externalize are the mirrored tarballs and large vendored hand-off labs; keep manifests and checksums in Git and move the bulky payloads to Zenodo, GitHub Releases, or Git LFS.
+The public repository keeps manifests, memos, scripts, summaries, and the source-level patches needed to understand the bounded reproduction story. Publicly downloadable payloads are intentionally excluded from Git once their fetch manifests or registries are recorded. Re-generated workspaces and extracted third-party duplicates are also ignored once they are no longer needed as first-class repo artifacts.

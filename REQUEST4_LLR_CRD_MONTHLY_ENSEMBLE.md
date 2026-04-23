@@ -48,10 +48,10 @@ The script also validates payload truth rather than trusting `HEAD` alone:
 
 - files whose first bytes do not look like `h1 crd` are treated as rejected
   payloads,
-- valid CRD payloads remain under
-  [data/request4_llr/crd_monthly_ensemble_2026-04-23/raw](data/request4_llr/crd_monthly_ensemble_2026-04-23/raw),
-- rejected HTML / error payloads are separated into
-  [data/request4_llr/crd_monthly_ensemble_2026-04-23/rejected_payloads](data/request4_llr/crd_monthly_ensemble_2026-04-23/rejected_payloads).
+- the tracked fetch registry is
+  [data/request4_llr/crd_monthly_ensemble_2026-04-23/fetch_manifest.json](data/request4_llr/crd_monthly_ensemble_2026-04-23/fetch_manifest.json#L1),
+- raw and rejected payload directories are kept only as local cache because
+  they are publicly downloadable from the upstream mirror.
 
 ## Outputs
 

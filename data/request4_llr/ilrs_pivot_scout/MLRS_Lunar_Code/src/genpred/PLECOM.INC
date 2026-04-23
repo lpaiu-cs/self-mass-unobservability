@@ -1,6 +1,0 @@
-C 12 Sep 90, 1126 - move to /np.dr for JPL ephemeris.
-C       COMMON AREA FOR POSITION/VELOCITY SWITCH
-C
-      INTEGER IPV
-      COMMON/PLECOM/IPV
-
