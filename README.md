@@ -82,7 +82,10 @@ Most scripts write outputs into the repository root by default. Request 4 and Re
 
 ## Data And External Code
 
-The repository includes mirrored public releases and vendored external code snapshots needed for the bounded Request 4 and Request 5 scouts. See [`data/README.md`](data/README.md) for a directory-level guide.
+The workspace uses mirrored public releases and vendored external code snapshots
+for the bounded Request 4 and Request 5 scouts, but the public repository keeps
+only the manifests, memos, summaries, and patches needed to reconstruct those
+steps. See [`data/README.md`](data/README.md) for the directory-level policy.
 
 ## Notes For Public Release
 

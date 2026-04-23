@@ -41,30 +41,54 @@ Two cautions should stay attached to that statement:
 - and the APOLLO public page itself says that the legacy text archive is an old
   format while the newer CRD stream is mirrored through CDDIS.
 
-## Why Request 4 Was Left Pending
+## Why Request 4 Remains Pending
 
-The current repository has:
+That blocker has changed over the life of the project.
 
-- no downloaded public LLR normal points,
-- no validated normal-point ingest and quality-control chain,
-- no established LLR force-model / partial-derivative estimator,
-- no troposphere, station bias, reflector bias, and lunar-tidal estimation stack.
+The repository no longer lacks public inputs or basic ingest scaffolding. It now
+has:
 
-Without those, a "real-data posterior" would just be the toy integrator with public files glued on top, which is not a credible LLR result.
+- pinned public APOLLO normal-point ingest,
+- a validated normal-point parsing and quality-control layer,
+- a wider public lunar `CRD` monthly ensemble,
+- and a bounded `MLRS` hand-off / observation-operator laboratory.
+
+What it still does **not** have is a mature residual-bearing weak-field
+estimation stack that closes into a credible real-data posterior inside this
+workspace.
+
+More concretely, the missing pieces are now:
+
+- a production `LLR` force-model / partial-derivative estimator that is already
+  mature enough for real parameter inference,
+- the calibrated residual-bearing pass layer needed to turn promoted public
+  `CRD` passes into usable `93`-stream cases,
+- and the full nuisance-estimation stack needed for a defensible weak-field
+  posterior: troposphere, station bias, reflector bias, lunar tides, and the
+  rest of the normal Solar-System estimation machinery.
+
+Without that layer, a "real-data posterior" would still collapse into either
+the old toy integrator with public files glued on top, or a bounded
+observation-operator probe being over-read as a full `LLR` estimator result.
 
 ## External Inputs Required
 
-The public data side is available, but it must be attached to a real estimator.
+The public data side is now available locally in staged form, but it still must
+be attached to a real estimator.
 
 - The ILRS data page states that laser ranging data are distributed as full-rate data and normal points, and that LLR archives are maintained for Apollo and Lunokhod reflectors.
 - The ILRS normal-point format page documents the data-record layout needed for ingest.
 - The APOLLO normal-point page states that APOLLO normal points are public and also mirrored through the NASA CDDIS archive.
 
-Those are the right starting points for Request 4, but they are still just data and formats. They are not the actual inference pipeline.
+Those are the right public entry points for Request 4, but they are still data
+and formats rather than the final inference pipeline. At the present project
+boundary, the required external input is therefore not "some public normal
+points" but a mature `LLR` estimator environment or external analysis route
+that can carry the weak-field posterior to completion.
 
 ## What Counts As a Real Request 4 Implementation
 
-A defensible Request 4 needs all of the following:
+A defensible final Request 4 posterior still needs all of the following:
 
 1. pick one concrete public release of normal points,
 2. reproduce a GR baseline fit on that release,
