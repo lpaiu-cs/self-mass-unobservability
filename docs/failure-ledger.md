@@ -1,32 +1,68 @@
 # Failure Ledger
 
-This ledger records exact failure modes, not vague concerns. If a proof step breaks, the failed step and the smallest missing assumption should appear here.
+Status: Imported from prior work. This ledger replaces static primitive-family bookkeeping as the main failure surface for this worktree.
 
-| ID | Status | Failed step or loophole | Minimal violated or missing assumption | Current action |
-| --- | --- | --- | --- | --- |
-| F1 | Proven | The previous five-element `Delta<=4` target omitted explicit surviving gradient operators. | The omitted operators are `divE2` and `mixedGradE2`. | The corrected normal-form path now includes them explicitly in [`theorem-A-freefall.md`](theorem-A-freefall.md), [`../lemmas/07-gradient-sector-audit.md`](../lemmas/07-gradient-sector-audit.md), and [`../symbolic/enumerate_contractions_delta4.py`](../symbolic/enumerate_contractions_delta4.py). |
-| F2 | Counterexample candidate | A light internal coordinate `chi_A(t)` with orbital-timescale dynamics can enter the free-fall action as an explicit worldline field. | A4 fails. | See [`counterexamples/chi-state/README.md`](../counterexamples/chi-state/README.md). |
-| F3 | Counterexample candidate | A threshold response such as `sqrt(Y - Y_c) Theta(Y - Y_c)` breaks the analytic sensitivity jet. | A5 fails. | See [`counterexamples/nonanalytic-activation/README.md`](../counterexamples/nonanalytic-activation/README.md). |
-| F4 | Counterexample candidate | Retarded memory kernels can preserve body dependence that is not instantaneous in the local invariants. | A3 fails. | See [`counterexamples/hereditary/README.md`](../counterexamples/hereditary/README.md). |
-| F5 | Counterexample candidate | A nonmetric clock coupling can evade the free-fall theorem because it lives outside the MVP observable sector. | The free-fall-only scope assumption fails. | See [`counterexamples/nonmetric-clock/README.md`](../counterexamples/nonmetric-clock/README.md). |
-| F6 | Counterexample candidate | If finite external field content fails, infinitely many primitive species can survive at the same fixed order and block basis closure before the conditional collapse lemma applies. | A8 fails. | Keep this loophole explicit rather than smuggling a finite basis into the assumptions. |
-| F7 | Proven | The electric-only exact current primitive set is not yet adequate as a physically justified minimal free-fall sector. | A physically motivated magnetic tidal family `B_ij` is excluded only by working restriction, not by a derived theorem assumption. | [`primitive-set-adequacy.md`](primitive-set-adequacy.md), [`magnetic-family-ordering.md`](magnetic-family-ordering.md), and [`../lemmas/10-magnetic-family-obstruction.md`](../lemmas/10-magnetic-family-obstruction.md) now record `B2` as the smallest explicit adequacy obstruction. |
-| F8 | Proven | The corrected exact-current-set `E/B` theorem is not yet adequate as a physically justified minimal free-fall sector either. | A parity-even scalar-like external family is excluded only by working restriction, not by a derived theorem assumption. | [`scalar-family-ordering.md`](scalar-family-ordering.md), [`../lemmas/13-scalar-family-obstruction.md`](../lemmas/13-scalar-family-obstruction.md), and [`../symbolic/es_sector_delta4.py`](../symbolic/es_sector_delta4.py) now record `S` as the smallest explicit scalar-family obstruction. |
-| F9 | Proven | Even a derivative-only or shift-symmetric scalar family does not rescue minimal-sector uniqueness. | Removing bare `S` alone is insufficient; derivative invariants still survive unless a stronger suppression principle is added. | [`../lemmas/14-derivative-only-scalar-audit.md`](../lemmas/14-derivative-only-scalar-audit.md) and [`../symbolic/shift_scalar_sector_delta4.py`](../symbolic/shift_scalar_sector_delta4.py) now record the first weight-`4` derivative-only scalar obstructions, with canonical representative `dotS2`. |
+## Current Minimal Model
 
-## Current Theorem Failure Boundary
+Status: Counterexample candidate. The tested model is
 
-- Status: Proven. Abstract monomial finiteness is no longer the unresolved step once a finite primitive catalog with positive weights is fixed.
-- Status: Proven. The previous minimal obstruction to the five-element target is explicit: `divE2`, with `mixedGradE2` as a second surviving gradient invariant.
-- Status: Proven. For the exact current primitive set, the corrected seven-element normal-form basis is now linearly independent.
-- Status: Proven. The live bottleneck for electric-only salvage remains magnetic-family ordering.
-- Status: Proven. The raw `E/B` survivor candidate list had one explicit mixed quartic dependence relation.
-- Status: Proven. After that correction, the `E/B`-expanded `Delta<=4` sector closes on a finite linearly independent `18`-element basis.
-- Status: Proven. The smallest explicit adequacy obstruction found so far is the magnetic-family survivor `B2`.
-- Status: Proven. The scalar-family extension contributes the smaller broad-program adequacy obstruction `S` as soon as a rank-0 external family is admitted.
-- Status: Proven. The corrected `E/B+scalar` `Delta<=4` sector closes on a finite linearly independent `33`-element basis.
-- Status: Proven. The derivative-only scalar audit removes bare `S` but still produces new weight-`4` survivors, including canonical obstruction `dotS2`.
-- Status: Proven. Minimal-sector uniqueness is therefore already effectively dead across the audited unsuppressed family extensions.
-- Status: Conjectural. The positive finite-family collapse candidate remains plausible because fixed-order closure survives in the corrected `E/B+scalar` audit and in the derivative-only scalar audit.
-- Status: Conjectural. The live positive bottleneck is no longer uniqueness; it is the finite-family collapse theorem beyond the explicitly audited catalogs.
-- Status: Counterexample candidate. If the sector is enlarged beyond the explicit audited family catalogs by another physically admissible family, the first new survivor in that extension reinforces the uniqueness no-go and only obstructs the positive branch if fixed-order finiteness itself fails.
+```text
+tau_chi * d chi / dt + chi = alpha F(t)
+m / m0 = 1 + c_Y F(t) + c_chi chi(t)
+```
+
+with `F(t) = F0 cos(Omega t)` for the first derivation.
+
+## Exact Collapse Conditions
+
+| Status | Condition | Exact failing step | Classification |
+| --- | --- | --- | --- |
+| Proven | `tau_chi = 0` | The equation becomes `chi = alpha F`, so `m/m0 = 1 + (c_Y + c_chi alpha)F`. | Static sensitivity redefinition. |
+| Proven | `Omega = 0` | The quadrature coefficient `alpha F0 Omega tau_chi / (1 + Omega^2 tau_chi^2)` vanishes. | Static or secular shift only. |
+| Proven | `alpha c_chi = 0` | The internal state either is not driven or is not read out in the mass response. | No dynamic observable. |
+| Proven | `Omega tau_chi << 1` with a local derivative EFT truncated at order `N` | `chi = alpha sum_{n=0}^N (-tau_chi d/dt)^n F + O((Omega tau_chi)^{N+1})`. | Order-by-order derivative collapse. |
+| Proven | Single known drive frequency with an unconstrained local `dot F` Wilson coefficient | The leading quadrature can be fit by one derivative coefficient without proving an internal state. | Static-basis-degenerate signal. |
+| Proven | Linear first-order `chi` plus linear two-frequency forcing and linear readout | Superposition leaves only the input frequencies; no `Omega_1 +/- Omega_2` terms appear. | No sideband loophole in the linear MVP. |
+
+## Non-Collapse Candidate
+
+Status: Counterexample candidate. At finite `Omega tau_chi`, the exact transfer
+
+```text
+H(Omega) = alpha / (1 + i Omega tau_chi)
+```
+
+has a relaxation pole and cannot be represented exactly by a finite instantaneous static sensitivity basis.
+
+Status: Counterexample candidate. If the allowed comparator is a finite local derivative EFT, the loophole is not a single quadrature point; it is the frequency-dependent transfer relation across drives or the need for an infinite derivative tower to reproduce the pole exactly.
+
+## Failed Sideband Attempt
+
+Status: Proven. The linear two-frequency MVP does not produce sidebands.
+
+Exact failing step:
+
+```text
+F(t) = F1 cos(Omega1 t) + F2 cos(Omega2 t)
+```
+
+implies
+
+```text
+chi(t) = chi_1(t) + chi_2(t)
+```
+
+by linearity, so the readout `c_Y F + c_chi chi` contains only `Omega1` and `Omega2`.
+
+Minimal missing assumption for sidebands:
+
+Status: Conjectural. Add a nonlinear drive or readout, such as `m/m0` containing `c_chi2 chi^2`, or a nonlinear `F(Y)` evaluated on a multi-frequency invariant.
+
+## Next Escalations
+
+Status: Counterexample candidate. If the one-state model is judged insufficient against a derivative-EFT comparator, the next smallest escalations are:
+
+1. hereditary kernel with non-rational memory response,
+2. second-order internal mode with resonant phase behavior,
+3. nonlinear readout or nonlinear drive to generate sidebands,
+4. nonanalytic threshold or hysteresis to break local analytic expansion.

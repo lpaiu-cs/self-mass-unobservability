@@ -1,69 +1,69 @@
-# collapse-theorem
+# dynamic-chi-observable
 
-Status: Conjectural. The repository now targets a theorem-first follow-up: prove or refute that self-mass-unobservability hypotheses collapse to a finite-dimensional sensitivity-manifold EFT in the free-fall sector under explicit assumptions.
+Status: Imported from prior work. This worktree treats the previous collapse-theorem repository as background and attacks assumption A4 directly: no orbital-timescale internal state variable in the free-fall sector.
+
+Status: Conjectural. The central question is whether a one-state internal-visibility variable `chi_A` can generate an observable that cannot be absorbed into a static finite-dimensional sensitivity-manifold EFT.
 
 ## Success Modes
 
-- Status: Conjectural. Success mode 1 is a proof that the leading body-dependent free-fall deviation reduces to sensitivity coordinates `(s_A,I, s_A,IJ, ...)` plus higher-multipole Wilson coefficients inside a local worldline EFT.
-- Status: Counterexample candidate. Success mode 2 is an explicit smallest loophole model together with the exact theorem assumption it violates.
+Status: Counterexample candidate. Success mode 1 is an explicit dynamic loophole: `chi_A` produces phase lag, quadrature response, sidebands, or frequency-dependent transfer that is not reducible to a finite static sensitivity/Wilson basis.
 
-## MVP Scope
+Status: Conjectural. Success mode 2 is a sharp no-go boundary for the minimal model: the notes must state the exact limit or degeneracy in which the one-state `chi_A` model collapses back to the static description.
 
-The MVP is free-fall only. The clock sector is documented only conditionally in `lemmas/04-clock-conditional-note.md`, and scalar `s_A` is treated as a corollary rather than as a starting axiom.
+## MVP Model
 
-Out of scope for this phase:
+Status: Counterexample candidate. The first model is the one-state relaxation system
 
-- LLR / MLRS / PEP / Nutimo / TOA follow-up work
-- runtime, build, or environment triage
-- empirical claims without a derivation or a cited artifact already in this repository
+```text
+tau_chi * d chi_A / dt + chi_A = alpha * F(Y)
+m_A(Y, chi_A) = m_A^(0) * [1 + c_Y F(Y) + c_chi chi_A]
+```
 
-## Imported Starting Point
+Status: Conjectural. The default drive is the simplest deterministic scalar drive, `F(t) = F0 cos(Omega t)`, standing in for one selected free-fall-sector invariant or normalized invariant.
 
-- Status: Imported from prior work. [`request2/REQUEST2_INTERNAL_STRUCTURE.md`](request2/REQUEST2_INTERNAL_STRUCTURE.md) shows that literal internal self-unobservability fails as a self-bound equilibrium principle.
-- Status: Imported from prior work. [`request1/REQUEST1_COM_DECOUPLING.md`](request1/REQUEST1_COM_DECOUPLING.md) shows that center-of-mass self-subtraction does not generate a new monopole force.
-- Status: Imported from prior work. [`request7/REQUEST7_JOINT_CONSISTENCY_SCAFFOLD.md`](request7/REQUEST7_JOINT_CONSISTENCY_SCAFFOLD.md) is only a provisional consistency scaffold, not the theorem target of this repository.
+Status: Proven. The periodic response has transfer function
 
-## Current Layout
+```text
+H(Omega) = chi_hat / F_hat = alpha / (1 + i Omega tau_chi)
+```
 
-- [`docs/`](docs): theorem candidates, electric and `E/B` conditional collapse notes, power counting, the primitive catalog, magnetic-ordering and primitive-set adequacy notes, explicit reduction rules, ledgers, and the roadmap.
-- [`lemmas/`](lemmas): free-fall lemmas and reduction notes.
-- [`symbolic/`](symbolic): small SymPy scripts for worldline expansion, sensitivity jets, basis enumeration, contraction enumeration, electric and `E/B` survivor-rank checks, primitive-family attacks, full `E/B`-sector audits, and normal-form reduction.
-- [`counterexamples/`](counterexamples): explicit loophole classes and minimal models.
-- [`notes/scratch/`](notes/scratch): disposable local notes that should not become theorem claims without promotion.
+with an in-phase component and a quadrature component.
 
-Legacy request-stage material remains in `request1/` through `request7/`, `data/`, `paper/`, and `section6/` as provenance only. The root workflow should now start from the theorem documents above, not from the old pipeline entry points.
+## Current MVP Classification
+
+Status: Proven. In the strict instantaneous limit `Omega tau_chi = 0`, or when `alpha c_chi = 0`, the dynamic state produces no new observable and collapses to a static sensitivity redefinition.
+
+Status: Proven. In the adiabatic regime `Omega tau_chi << 1`, the model is locally expandable as an infinite derivative series and is absorbable order-by-order by a derivative EFT to any fixed truncation order.
+
+Status: Counterexample candidate. At finite `Omega tau_chi`, the full rational transfer function and its associated phase lag cannot be represented exactly by any finite static instantaneous sensitivity basis. If the admissible static EFT also allows arbitrary time-derivative Wilson coefficients, the one-frequency quadrature alone is not sufficient; novelty then requires frequency dependence across more than one drive frequency or the full pole structure.
+
+Status: Proven. For the linear readout above and a two-frequency linear drive, no sidebands are generated. Sidebands require a nonlinear drive/readout, a hereditary kernel with mixing, a second-order internal mode coupled nonlinearly, or a threshold/hysteretic extension.
+
+## Layout
+
+- `docs/model-definition.md`: one-state and deferred second-order model definitions.
+- `docs/observable-targets.md`: criteria for new versus absorbed observables.
+- `docs/adiabatic-limit.md`: low-frequency collapse derivation.
+- `docs/nonadiabatic-regime.md`: finite-frequency response and observable classification.
+- `docs/failure-ledger.md`: exact failure modes and next escalation paths.
+- `symbolic/chi_relaxation_response.py`: monochromatic response formulas.
+- `symbolic/chi_two_frequency_response.py`: two-frequency superposition and sideband check.
+- `symbolic/checks/test_symbolic.py`: deterministic symbolic checks.
+- `counterexamples/README.md`: loophole framing and escalation list.
+
+Status: Imported from prior work. Other inherited theorem files remain as background provenance only; the current worktree entry points are the dynamic-chi files listed above.
 
 ## Quick Start
 
 Use Python `3.10+`.
 
 ```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
+python symbolic/checks/test_symbolic.py
 ```
 
-Run the current symbolic scaffold:
+If GNU Make is available:
 
 ```powershell
-make worldline-expand
-make enumerate-basis
-make enumerate-contractions
-make survivor-rank
-make primitive-attack
-make eb-sector
-make eb-rank
-make normal-form-reduce
 make symbolic-check
 ```
-
-## Working Rule
-
-Every nontrivial scientific claim in the new theorem-first files should be labeled as one of:
-
-- `Proven`
-- `Imported from prior work`
-- `Conjectural`
-- `Counterexample candidate`
-
-If a proof attempt breaks, record the exact failed step and the smallest missing assumption in [`docs/failure-ledger.md`](docs/failure-ledger.md) rather than smoothing it over in prose.

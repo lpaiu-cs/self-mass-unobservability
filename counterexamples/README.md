@@ -1,14 +1,26 @@
-# Counterexample Classes
+# Counterexamples
 
-The repository tracks loopholes only when they are explicit and tied to a theorem assumption.
+Status: Imported from prior work. This worktree is explicitly seeking a loophole to the previous sensitivity-collapse theorem target, not another static primitive-family audit.
 
-| Class | Status | Violated assumption | Minimal idea |
-| --- | --- | --- | --- |
-| `chi-state` | Counterexample candidate | A4: no orbital-timescale internal state variable | Add a light internal coordinate that couples to the external invariant and carries initial-condition dependence. |
-| `nonanalytic-activation` | Counterexample candidate | A5: analytic coupling | Allow a threshold or cusp response that has no regular Taylor jet at the operating point. |
-| `hereditary` | Counterexample candidate | A3: locality | Replace the local worldline action by a retarded memory kernel. |
-| `nonmetric-clock` | Counterexample candidate | free-fall-only MVP scope | Keep free fall metric, but let the measured clock rate depend on body species. |
+## Active Candidate
 
-## Explicit Smallest Candidate
+Status: Counterexample candidate. The active candidate is a one-state dynamic internal-visibility model:
 
-- Status: Counterexample candidate. [`chi-state/README.md`](chi-state/README.md) is the current smallest explicit loophole model because it changes only one assumption, keeps the action local, and immediately obstructs instantaneous sensitivity collapse.
+```text
+tau_chi dot chi_A + chi_A = alpha F(Y)
+m_A/m_A^(0) = 1 + c_Y F(Y) + c_chi chi_A.
+```
+
+Status: Counterexample candidate. The candidate escapes an instantaneous static sensitivity basis if finite `Omega tau_chi` produces a measurable quadrature or frequency-dependent transfer relation.
+
+Status: Proven. The candidate does not produce sidebands in its linear two-frequency MVP.
+
+## Escalations If One-State Relaxation Collapses
+
+Status: Counterexample candidate. Next escalation 1 is a hereditary kernel whose response cannot be represented by a finite local derivative tower.
+
+Status: Counterexample candidate. Next escalation 2 is a second-order internal mode with a resonance scale and sharper phase behavior.
+
+Status: Counterexample candidate. Next escalation 3 is nonlinear readout or nonlinear forcing, because sidebands require mixing.
+
+Status: Counterexample candidate. Next escalation 4 is a nonanalytic threshold or hysteresis model, because that would violate analytic expansion around a single static equilibrium.
