@@ -46,7 +46,7 @@ external estimators.
 
 ## Current Entry Point
 
-Generate the first binary dictionary table stub:
+Generate the first binary dictionary table:
 
 ```bash
 python scripts/run_binary_dictionary.py
@@ -54,8 +54,10 @@ python scripts/run_binary_dictionary.py
 
 The script writes:
 
-- `outputs/tsv/binary_pk_dictionary_stub.tsv`
-- `outputs/json/binary_pk_dictionary_stub.json`
+- `outputs/tsv/binary_pk_dictionary.tsv`
+- `outputs/json/binary_pk_dictionary.json`
+- `outputs/tsv/binary_pk_dictionary_exact_e.tsv`
+- `outputs/json/binary_pk_dictionary_exact_e.json`
 
 The table schema is:
 

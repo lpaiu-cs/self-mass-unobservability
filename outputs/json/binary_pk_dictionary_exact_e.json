@@ -1,0 +1,152 @@
+{
+  "assumptions": {
+    "carrier_orbit": "Newtonian Kepler binary",
+    "clock_sector": "decoupled EFT only",
+    "eccentricity_order": "exact in e",
+    "einstein_delay_basis": "sin(E)",
+    "free_fall_sector": "GR",
+    "post_keplerian_order": "leading clock O(c^-2)",
+    "propagation_sector": "GR",
+    "status": "exact-in-e leading-order binary table; not a final theorem",
+    "time_anomaly_jacobian": "dt/dE = (1 - e cos(E)) / n"
+  },
+  "exact_projection": {
+    "alpha_a": "s_A**2*zeta_2 + s_A*zeta_1 + 1",
+    "contributions": [
+      {
+        "absorbed_coordinate_time_residual": "G*m_B**2*(-E + e*sin(E))/(2*M*a*c**2*n)",
+        "d_tau_dE": "-G*m_B**2*(e*cos(E) + 1)/(2*M*a*c**2*n)",
+        "d_tau_dt": "G*m_B**2*(e*cos(E) + 1)/(2*M*a*c**2*(e*cos(E) - 1))",
+        "integrated_residual": "-G*m_B**2*(E + e*sin(E))/(2*M*a*c**2*n)",
+        "notes": "Baseline special-relativistic clock term on the GR carrier.",
+        "periodic_basis": "sin(E)",
+        "periodic_basis_coefficient": "-G*e*m_B**2/(M*a*c**2*n)",
+        "periodic_residual_after_absorption": "-G*e*m_B**2*sin(E)/(M*a*c**2*n)",
+        "secular_slope_coordinate_time": "-G*m_B**2/(2*M*a*c**2)",
+        "source_label": "-v_A^2/(2 c^2)",
+        "source_term": "baseline_kinetic"
+      },
+      {
+        "absorbed_coordinate_time_residual": "G*m_B*(-E + e*sin(E))/(a*c**2*n)",
+        "d_tau_dE": "-G*m_B/(a*c**2*n)",
+        "d_tau_dt": "G*m_B/(a*c**2*(e*cos(E) - 1))",
+        "integrated_residual": "-E*G*m_B/(a*c**2*n)",
+        "notes": "Baseline GR external-potential clock term.",
+        "periodic_basis": "sin(E)",
+        "periodic_basis_coefficient": "-G*e*m_B/(a*c**2*n)",
+        "periodic_residual_after_absorption": "-G*e*m_B*sin(E)/(a*c**2*n)",
+        "secular_slope_coordinate_time": "-G*m_B/(a*c**2)",
+        "source_label": "-U_ext/c^2",
+        "source_term": "baseline_potential"
+      },
+      {
+        "absorbed_coordinate_time_residual": "G*m_B*s_A*zeta_1*(-E + e*sin(E))/(a*c**2*n)",
+        "d_tau_dE": "-G*m_B*s_A*zeta_1/(a*c**2*n)",
+        "d_tau_dt": "G*m_B*s_A*zeta_1/(a*c**2*(e*cos(E) - 1))",
+        "integrated_residual": "-E*G*m_B*s_A*zeta_1/(a*c**2*n)",
+        "notes": "Linear sensitivity correction in the decoupled clock sector.",
+        "periodic_basis": "sin(E)",
+        "periodic_basis_coefficient": "-G*e*m_B*s_A*zeta_1/(a*c**2*n)",
+        "periodic_residual_after_absorption": "-G*e*m_B*s_A*zeta_1*sin(E)/(a*c**2*n)",
+        "secular_slope_coordinate_time": "-G*m_B*s_A*zeta_1/(a*c**2)",
+        "source_label": "-zeta_1 s_A U_ext/c^2",
+        "source_term": "zeta1_sA_clock"
+      },
+      {
+        "absorbed_coordinate_time_residual": "G*m_B*s_A**2*zeta_2*(-E + e*sin(E))/(a*c**2*n)",
+        "d_tau_dE": "-G*m_B*s_A**2*zeta_2/(a*c**2*n)",
+        "d_tau_dt": "G*m_B*s_A**2*zeta_2/(a*c**2*(e*cos(E) - 1))",
+        "integrated_residual": "-E*G*m_B*s_A**2*zeta_2/(a*c**2*n)",
+        "notes": "Quadratic sensitivity correction in the decoupled clock sector.",
+        "periodic_basis": "sin(E)",
+        "periodic_basis_coefficient": "-G*e*m_B*s_A**2*zeta_2/(a*c**2*n)",
+        "periodic_residual_after_absorption": "-G*e*m_B*s_A**2*zeta_2*sin(E)/(a*c**2*n)",
+        "secular_slope_coordinate_time": "-G*m_B*s_A**2*zeta_2/(a*c**2)",
+        "source_label": "-zeta_2 s_A^2 U_ext/c^2",
+        "source_term": "zeta2_sA2_clock"
+      }
+    ],
+    "coordinate_time": "-(-E + e*sin(E))/n",
+    "delta_alpha_a": "s_A*(s_A*zeta_2 + zeta_1)",
+    "dt_dE": "-(e*cos(E) - 1)/n",
+    "einstein_delay_basis": "sin(E)",
+    "inverse_radius": "-1/(a*(e*cos(E) - 1))",
+    "potential_u_ext": "-G*m_B/(a*(e*cos(E) - 1))",
+    "radius": "-a*(e*cos(E) - 1)",
+    "velocity_squared_a": "-G*m_B**2*(e*cos(E) + 1)/(M*a*(e*cos(E) - 1))"
+  },
+  "rows": [
+    {
+      "absorption_target": "spin phase / spin frequency",
+      "expansion_order": "O(c^-2), Newtonian carrier orbit, exact in eccentricity e",
+      "harmonic": "integrated residual: E secular; absorbed coordinate-time trend",
+      "notes": "Baseline special-relativistic clock term on the GR carrier. d_tau_dE=-G*m_B**2*(e*cos(E) + 1)/(2*M*a*c**2*n); absorbed_slope=-G*m_B**2/(2*M*a*c**2)",
+      "observable_status": "absorbed",
+      "term": "baseline_kinetic_secular"
+    },
+    {
+      "absorption_target": "Einstein delay gamma",
+      "expansion_order": "O(c^-2), Newtonian carrier orbit, exact in eccentricity e",
+      "harmonic": "periodic residual: sin(E) Einstein-delay basis",
+      "notes": "periodic residual is proportional to the Einstein-delay sin(E) basis; residual=-G*e*m_B**2*sin(E)/(M*a*c**2*n); basis_coefficient=-G*e*m_B**2/(M*a*c**2*n)",
+      "observable_status": "degenerate",
+      "term": "baseline_kinetic_einstein_sinE"
+    },
+    {
+      "absorption_target": "spin phase / spin frequency",
+      "expansion_order": "O(c^-2), Newtonian carrier orbit, exact in eccentricity e",
+      "harmonic": "integrated residual: E secular; absorbed coordinate-time trend",
+      "notes": "Baseline GR external-potential clock term. d_tau_dE=-G*m_B/(a*c**2*n); absorbed_slope=-G*m_B/(a*c**2)",
+      "observable_status": "absorbed",
+      "term": "baseline_potential_secular"
+    },
+    {
+      "absorption_target": "Einstein delay gamma",
+      "expansion_order": "O(c^-2), Newtonian carrier orbit, exact in eccentricity e",
+      "harmonic": "periodic residual: sin(E) Einstein-delay basis",
+      "notes": "periodic residual is proportional to the Einstein-delay sin(E) basis; residual=-G*e*m_B*sin(E)/(a*c**2*n); basis_coefficient=-G*e*m_B/(a*c**2*n)",
+      "observable_status": "degenerate",
+      "term": "baseline_potential_einstein_sinE"
+    },
+    {
+      "absorption_target": "spin phase / spin frequency",
+      "expansion_order": "O(c^-2), Newtonian carrier orbit, exact in eccentricity e",
+      "harmonic": "integrated residual: E secular; absorbed coordinate-time trend",
+      "notes": "Linear sensitivity correction in the decoupled clock sector. d_tau_dE=-G*m_B*s_A*zeta_1/(a*c**2*n); absorbed_slope=-G*m_B*s_A*zeta_1/(a*c**2)",
+      "observable_status": "absorbed",
+      "term": "zeta1_sA_clock_secular"
+    },
+    {
+      "absorption_target": "Einstein delay gamma",
+      "expansion_order": "O(c^-2), Newtonian carrier orbit, exact in eccentricity e",
+      "harmonic": "periodic residual: sin(E) Einstein-delay basis",
+      "notes": "periodic residual is proportional to the Einstein-delay sin(E) basis; residual=-G*e*m_B*s_A*zeta_1*sin(E)/(a*c**2*n); basis_coefficient=-G*e*m_B*s_A*zeta_1/(a*c**2*n)",
+      "observable_status": "degenerate",
+      "term": "zeta1_sA_clock_einstein_sinE"
+    },
+    {
+      "absorption_target": "spin phase / spin frequency",
+      "expansion_order": "O(c^-2), Newtonian carrier orbit, exact in eccentricity e",
+      "harmonic": "integrated residual: E secular; absorbed coordinate-time trend",
+      "notes": "Quadratic sensitivity correction in the decoupled clock sector. d_tau_dE=-G*m_B*s_A**2*zeta_2/(a*c**2*n); absorbed_slope=-G*m_B*s_A**2*zeta_2/(a*c**2)",
+      "observable_status": "absorbed",
+      "term": "zeta2_sA2_clock_secular"
+    },
+    {
+      "absorption_target": "Einstein delay gamma",
+      "expansion_order": "O(c^-2), Newtonian carrier orbit, exact in eccentricity e",
+      "harmonic": "periodic residual: sin(E) Einstein-delay basis",
+      "notes": "periodic residual is proportional to the Einstein-delay sin(E) basis; residual=-G*e*m_B*s_A**2*zeta_2*sin(E)/(a*c**2*n); basis_coefficient=-G*e*m_B*s_A**2*zeta_2/(a*c**2*n)",
+      "observable_status": "degenerate",
+      "term": "zeta2_sA2_clock_einstein_sinE"
+    }
+  ],
+  "schema": [
+    "term",
+    "expansion_order",
+    "harmonic",
+    "observable_status",
+    "absorption_target",
+    "notes"
+  ]
+}

@@ -1,0 +1,255 @@
+{
+  "assumptions": {
+    "carrier_orbit": "Newtonian Kepler binary",
+    "clock_sector": "decoupled EFT only",
+    "eccentricity_order": 1,
+    "free_fall_sector": "GR",
+    "post_keplerian_order": "leading clock O(c^-2)",
+    "propagation_sector": "GR",
+    "status": "first populated O(e^1) binary table; not a final theorem"
+  },
+  "projections": [
+    {
+      "absorption_target": "spin phase / spin frequency",
+      "notes": "Baseline special-relativistic clock term on the GR carrier. The constant rate piece is a secular clock rescaling at this order.",
+      "observable_status": "absorbed",
+      "rate_coefficient": "-G*m_B**2/(2*M*a*c**2)",
+      "rate_harmonic": "constant",
+      "residual_expression": "-G*m_B**2*t/(2*M*a*c**2)",
+      "residual_structure": "secular spin phase/frequency",
+      "source_label": "-v_A^2/(2 c^2)",
+      "source_term": "baseline_kinetic",
+      "term": "baseline_kinetic_constant"
+    },
+    {
+      "absorption_target": "Einstein delay gamma",
+      "notes": "Baseline special-relativistic clock term on the GR carrier. The periodic piece has the standard Einstein-delay timing shape at O(e^1).",
+      "observable_status": "degenerate",
+      "rate_coefficient": "-G*e*m_B**2/(M*a*c**2)",
+      "rate_harmonic": "cos(E)",
+      "residual_expression": "-G*e*m_B**2*sin(E)/(M*a*c**2*n)",
+      "residual_structure": "sin(E) Einstein-delay harmonic",
+      "source_label": "-v_A^2/(2 c^2)",
+      "source_term": "baseline_kinetic",
+      "term": "baseline_kinetic_cosE"
+    },
+    {
+      "absorption_target": "spin phase / spin frequency",
+      "notes": "Baseline GR external-potential clock term. The constant rate piece is a secular clock rescaling at this order.",
+      "observable_status": "absorbed",
+      "rate_coefficient": "-G*m_B/(a*c**2)",
+      "rate_harmonic": "constant",
+      "residual_expression": "-G*m_B*t/(a*c**2)",
+      "residual_structure": "secular spin phase/frequency",
+      "source_label": "-U_ext/c^2",
+      "source_term": "baseline_potential",
+      "term": "baseline_potential_constant"
+    },
+    {
+      "absorption_target": "Einstein delay gamma",
+      "notes": "Baseline GR external-potential clock term. The periodic piece has the standard Einstein-delay timing shape at O(e^1).",
+      "observable_status": "degenerate",
+      "rate_coefficient": "-G*e*m_B/(a*c**2)",
+      "rate_harmonic": "cos(E)",
+      "residual_expression": "-G*e*m_B*sin(E)/(a*c**2*n)",
+      "residual_structure": "sin(E) Einstein-delay harmonic",
+      "source_label": "-U_ext/c^2",
+      "source_term": "baseline_potential",
+      "term": "baseline_potential_cosE"
+    },
+    {
+      "absorption_target": "spin phase / spin frequency",
+      "notes": "Linear sensitivity correction in the decoupled clock sector. The constant rate piece is a secular clock rescaling at this order.",
+      "observable_status": "absorbed",
+      "rate_coefficient": "-G*m_B*s_A*zeta_1/(a*c**2)",
+      "rate_harmonic": "constant",
+      "residual_expression": "-G*m_B*s_A*t*zeta_1/(a*c**2)",
+      "residual_structure": "secular spin phase/frequency",
+      "source_label": "-zeta_1 s_A U_ext/c^2",
+      "source_term": "zeta1_sA_clock",
+      "term": "zeta1_sA_clock_constant"
+    },
+    {
+      "absorption_target": "Einstein delay gamma",
+      "notes": "Linear sensitivity correction in the decoupled clock sector. The periodic piece has the standard Einstein-delay timing shape at O(e^1).",
+      "observable_status": "degenerate",
+      "rate_coefficient": "-G*e*m_B*s_A*zeta_1/(a*c**2)",
+      "rate_harmonic": "cos(E)",
+      "residual_expression": "-G*e*m_B*s_A*zeta_1*sin(E)/(a*c**2*n)",
+      "residual_structure": "sin(E) Einstein-delay harmonic",
+      "source_label": "-zeta_1 s_A U_ext/c^2",
+      "source_term": "zeta1_sA_clock",
+      "term": "zeta1_sA_clock_cosE"
+    },
+    {
+      "absorption_target": "spin phase / spin frequency",
+      "notes": "Quadratic sensitivity correction in the decoupled clock sector. The constant rate piece is a secular clock rescaling at this order.",
+      "observable_status": "absorbed",
+      "rate_coefficient": "-G*m_B*s_A**2*zeta_2/(a*c**2)",
+      "rate_harmonic": "constant",
+      "residual_expression": "-G*m_B*s_A**2*t*zeta_2/(a*c**2)",
+      "residual_structure": "secular spin phase/frequency",
+      "source_label": "-zeta_2 s_A^2 U_ext/c^2",
+      "source_term": "zeta2_sA2_clock",
+      "term": "zeta2_sA2_clock_constant"
+    },
+    {
+      "absorption_target": "Einstein delay gamma",
+      "notes": "Quadratic sensitivity correction in the decoupled clock sector. The periodic piece has the standard Einstein-delay timing shape at O(e^1).",
+      "observable_status": "degenerate",
+      "rate_coefficient": "-G*e*m_B*s_A**2*zeta_2/(a*c**2)",
+      "rate_harmonic": "cos(E)",
+      "residual_expression": "-G*e*m_B*s_A**2*zeta_2*sin(E)/(a*c**2*n)",
+      "residual_structure": "sin(E) Einstein-delay harmonic",
+      "source_label": "-zeta_2 s_A^2 U_ext/c^2",
+      "source_term": "zeta2_sA2_clock",
+      "term": "zeta2_sA2_clock_cosE"
+    }
+  ],
+  "rows": [
+    {
+      "absorption_target": "spin phase / spin frequency",
+      "expansion_order": "O(c^-2), Newtonian carrier orbit, eccentricity through O(e^1)",
+      "harmonic": "rate: constant; residual: secular spin phase/frequency",
+      "notes": "Baseline special-relativistic clock term on the GR carrier. The constant rate piece is a secular clock rescaling at this order. rate_coefficient=-G*m_B**2/(2*M*a*c**2); residual=-G*m_B**2*t/(2*M*a*c**2)",
+      "observable_status": "absorbed",
+      "term": "baseline_kinetic_constant"
+    },
+    {
+      "absorption_target": "Einstein delay gamma",
+      "expansion_order": "O(c^-2), Newtonian carrier orbit, eccentricity through O(e^1)",
+      "harmonic": "rate: cos(E); residual: sin(E) Einstein-delay harmonic",
+      "notes": "Baseline special-relativistic clock term on the GR carrier. The periodic piece has the standard Einstein-delay timing shape at O(e^1). rate_coefficient=-G*e*m_B**2/(M*a*c**2); residual=-G*e*m_B**2*sin(E)/(M*a*c**2*n)",
+      "observable_status": "degenerate",
+      "term": "baseline_kinetic_cosE"
+    },
+    {
+      "absorption_target": "spin phase / spin frequency",
+      "expansion_order": "O(c^-2), Newtonian carrier orbit, eccentricity through O(e^1)",
+      "harmonic": "rate: constant; residual: secular spin phase/frequency",
+      "notes": "Baseline GR external-potential clock term. The constant rate piece is a secular clock rescaling at this order. rate_coefficient=-G*m_B/(a*c**2); residual=-G*m_B*t/(a*c**2)",
+      "observable_status": "absorbed",
+      "term": "baseline_potential_constant"
+    },
+    {
+      "absorption_target": "Einstein delay gamma",
+      "expansion_order": "O(c^-2), Newtonian carrier orbit, eccentricity through O(e^1)",
+      "harmonic": "rate: cos(E); residual: sin(E) Einstein-delay harmonic",
+      "notes": "Baseline GR external-potential clock term. The periodic piece has the standard Einstein-delay timing shape at O(e^1). rate_coefficient=-G*e*m_B/(a*c**2); residual=-G*e*m_B*sin(E)/(a*c**2*n)",
+      "observable_status": "degenerate",
+      "term": "baseline_potential_cosE"
+    },
+    {
+      "absorption_target": "spin phase / spin frequency",
+      "expansion_order": "O(c^-2), Newtonian carrier orbit, eccentricity through O(e^1)",
+      "harmonic": "rate: constant; residual: secular spin phase/frequency",
+      "notes": "Linear sensitivity correction in the decoupled clock sector. The constant rate piece is a secular clock rescaling at this order. rate_coefficient=-G*m_B*s_A*zeta_1/(a*c**2); residual=-G*m_B*s_A*t*zeta_1/(a*c**2)",
+      "observable_status": "absorbed",
+      "term": "zeta1_sA_clock_constant"
+    },
+    {
+      "absorption_target": "Einstein delay gamma",
+      "expansion_order": "O(c^-2), Newtonian carrier orbit, eccentricity through O(e^1)",
+      "harmonic": "rate: cos(E); residual: sin(E) Einstein-delay harmonic",
+      "notes": "Linear sensitivity correction in the decoupled clock sector. The periodic piece has the standard Einstein-delay timing shape at O(e^1). rate_coefficient=-G*e*m_B*s_A*zeta_1/(a*c**2); residual=-G*e*m_B*s_A*zeta_1*sin(E)/(a*c**2*n)",
+      "observable_status": "degenerate",
+      "term": "zeta1_sA_clock_cosE"
+    },
+    {
+      "absorption_target": "spin phase / spin frequency",
+      "expansion_order": "O(c^-2), Newtonian carrier orbit, eccentricity through O(e^1)",
+      "harmonic": "rate: constant; residual: secular spin phase/frequency",
+      "notes": "Quadratic sensitivity correction in the decoupled clock sector. The constant rate piece is a secular clock rescaling at this order. rate_coefficient=-G*m_B*s_A**2*zeta_2/(a*c**2); residual=-G*m_B*s_A**2*t*zeta_2/(a*c**2)",
+      "observable_status": "absorbed",
+      "term": "zeta2_sA2_clock_constant"
+    },
+    {
+      "absorption_target": "Einstein delay gamma",
+      "expansion_order": "O(c^-2), Newtonian carrier orbit, eccentricity through O(e^1)",
+      "harmonic": "rate: cos(E); residual: sin(E) Einstein-delay harmonic",
+      "notes": "Quadratic sensitivity correction in the decoupled clock sector. The periodic piece has the standard Einstein-delay timing shape at O(e^1). rate_coefficient=-G*e*m_B*s_A**2*zeta_2/(a*c**2); residual=-G*e*m_B*s_A**2*zeta_2*sin(E)/(a*c**2*n)",
+      "observable_status": "degenerate",
+      "term": "zeta2_sA2_clock_cosE"
+    }
+  ],
+  "schema": [
+    "term",
+    "expansion_order",
+    "harmonic",
+    "observable_status",
+    "absorption_target",
+    "notes"
+  ],
+  "symbolic_expansion": {
+    "alpha_a": "s_A**2*zeta_2 + s_A*zeta_1 + 1",
+    "delta_alpha_a": "s_A*(s_A*zeta_2 + zeta_1)",
+    "eccentricity_order": 1,
+    "inverse_radius": "(e*cos(E) + 1)/a",
+    "potential_u_ext": "G*m_B*(e*cos(E) + 1)/a",
+    "radius": "-a*(e*cos(E) - 1)",
+    "rate_terms": [
+      {
+        "expression": "-G*m_B**2*(2*e*cos(E) + 1)/(2*M*a*c**2)",
+        "harmonic_split": {
+          "constant": "-G*m_B**2/(2*M*a*c**2)",
+          "cos(E)": "-G*e*m_B**2/(M*a*c**2)",
+          "remainder": "0"
+        },
+        "label": "-v_A^2/(2 c^2)",
+        "name": "baseline_kinetic",
+        "nonzero_harmonics": [
+          "constant",
+          "cos(E)"
+        ],
+        "notes": "Baseline special-relativistic clock term on the GR carrier."
+      },
+      {
+        "expression": "-G*m_B*(e*cos(E) + 1)/(a*c**2)",
+        "harmonic_split": {
+          "constant": "-G*m_B/(a*c**2)",
+          "cos(E)": "-G*e*m_B/(a*c**2)",
+          "remainder": "0"
+        },
+        "label": "-U_ext/c^2",
+        "name": "baseline_potential",
+        "nonzero_harmonics": [
+          "constant",
+          "cos(E)"
+        ],
+        "notes": "Baseline GR external-potential clock term."
+      },
+      {
+        "expression": "-G*m_B*s_A*zeta_1*(e*cos(E) + 1)/(a*c**2)",
+        "harmonic_split": {
+          "constant": "-G*m_B*s_A*zeta_1/(a*c**2)",
+          "cos(E)": "-G*e*m_B*s_A*zeta_1/(a*c**2)",
+          "remainder": "0"
+        },
+        "label": "-zeta_1 s_A U_ext/c^2",
+        "name": "zeta1_sA_clock",
+        "nonzero_harmonics": [
+          "constant",
+          "cos(E)"
+        ],
+        "notes": "Linear sensitivity correction in the decoupled clock sector."
+      },
+      {
+        "expression": "-G*m_B*s_A**2*zeta_2*(e*cos(E) + 1)/(a*c**2)",
+        "harmonic_split": {
+          "constant": "-G*m_B*s_A**2*zeta_2/(a*c**2)",
+          "cos(E)": "-G*e*m_B*s_A**2*zeta_2/(a*c**2)",
+          "remainder": "0"
+        },
+        "label": "-zeta_2 s_A^2 U_ext/c^2",
+        "name": "zeta2_sA2_clock",
+        "nonzero_harmonics": [
+          "constant",
+          "cos(E)"
+        ],
+        "notes": "Quadratic sensitivity correction in the decoupled clock sector."
+      }
+    ],
+    "velocity_squared_a": "G*m_B**2*(2*e*cos(E) + 1)/(M*a)"
+  },
+  "unexpected_rate_harmonic_remainders": {}
+}
