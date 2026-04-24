@@ -54,6 +54,19 @@ from forcing_observable_dictionary import (  # noqa: E402
     symbols as forcing_symbols,
     validate_rows as validate_forcing_dictionary_rows,
 )
+from nonlinear_sideband_test import (  # noqa: E402
+    linear_projection_sideband_output,
+    nonlinear_drive_chi_sidebands,
+    nonlinear_drive_rhs_sidebands,
+    nonlinear_readout_difference_sideband,
+    nonlinear_readout_sum_sideband,
+    orbital_3n_nonlinear_drive_amplitude,
+    orbital_n_2n_input_amplitudes,
+    payload as nonlinear_sideband_payload,
+    rows_as_dicts as nonlinear_sideband_rows,
+    symbols as nonlinear_sideband_symbols,
+    validate_rows as validate_nonlinear_sideband_rows,
+)
 from projection_channel_audit import (  # noqa: E402
     arbitrary_projection_solution,
     observed_range_transfer,
@@ -360,6 +373,91 @@ def test_forcing_dictionary_payload_has_required_columns() -> None:
     assert "missing_assumption" in schema
 
 
+def test_nonlinear_drive_generates_expected_rhs_sidebands() -> None:
+    sym = nonlinear_sideband_symbols()
+    sidebands = nonlinear_drive_rhs_sidebands()
+
+    assert sidebands["2Omega1"] == sym["beta_F2"] * sym["F1"] ** 2 / 2
+    assert sidebands["2Omega2"] == sym["beta_F2"] * sym["F2"] ** 2 / 2
+    assert sidebands["Omega1_plus_Omega2"] == sym["beta_F2"] * sym["F1"] * sym["F2"]
+    assert sidebands["Omega1_minus_Omega2"] == sym["beta_F2"] * sym["F1"] * sym["F2"]
+    assert sp.simplify(sidebands["Omega1_plus_Omega2"].subs(sym["beta_F2"], 0)) == 0
+
+
+def test_nonlinear_drive_sideband_response_has_relaxation_phase() -> None:
+    sym = nonlinear_sideband_symbols()
+    sidebands = nonlinear_drive_chi_sidebands()
+    cos_coeff, sin_coeff = sidebands["Omega1_plus_Omega2"]
+    nu = sym["Omega1"] + sym["Omega2"]
+
+    assert sp.simplify(sin_coeff / cos_coeff - nu * sym["tau_chi"]) == 0
+    assert sp.simplify(cos_coeff.subs(sym["F1"], 0)) == 0
+    assert sp.simplify(sin_coeff.subs(sym["F2"], 0)) == 0
+
+
+def test_nonlinear_readout_sum_sideband_collapses_when_lambdas_zero() -> None:
+    sym = nonlinear_sideband_symbols()
+    sideband = nonlinear_readout_sum_sideband()
+    substitutions = {
+        sym["lambda_Fchi"]: 0,
+        sym["lambda_chi2"]: 0,
+    }
+
+    assert sideband["cos"] != 0
+    assert sideband["sin"] != 0
+    assert sp.simplify(sideband["cos"].subs(substitutions)) == 0
+    assert sp.simplify(sideband["sin"].subs(substitutions)) == 0
+
+
+def test_nonlinear_readout_difference_sideband_collapses_when_drive_missing() -> None:
+    sym = nonlinear_sideband_symbols()
+    sideband = nonlinear_readout_difference_sideband()
+
+    assert sideband["cos"] != 0
+    assert sideband["sin"] != 0
+    assert sp.simplify(sideband["cos"].subs(sym["F1"], 0)) == 0
+    assert sp.simplify(sideband["sin"].subs(sym["F2"], 0)) == 0
+
+
+def test_orbital_n_2n_mixing_creates_3n_sideband() -> None:
+    sym = nonlinear_sideband_symbols()
+    amplitudes = orbital_n_2n_input_amplitudes()
+    sideband = orbital_3n_nonlinear_drive_amplitude()
+    expected = sym["beta_F2"] * sym["p"] ** 2 * (sym["p"] + 3) * sym["e"] ** 3 / 4
+
+    assert amplitudes["n"] == sym["p"] * sym["e"]
+    assert amplitudes["2n"] == sym["p"] * (sym["p"] + 3) * sym["e"] ** 2 / 4
+    assert sp.simplify(sideband - expected) == 0
+    assert sp.simplify(sideband.subs(sym["e"], 0)) == 0
+    assert sp.simplify(sideband.subs(sym["p"], 0)) == 0
+    assert sp.simplify(sideband.subs(sym["p"], -3)) == 0
+
+
+def test_linear_projection_cannot_create_absent_sideband() -> None:
+    sym = nonlinear_sideband_symbols()
+
+    assert linear_projection_sideband_output() == 0
+    assert linear_projection_sideband_output(sym["F1"]) == sym["F1"] * sym["Lambda_side"]
+
+
+def test_nonlinear_sideband_rows_are_classified() -> None:
+    rows = nonlinear_sideband_rows()
+    validate_nonlinear_sideband_rows(rows)
+    assert rows
+    assert all(row["claim_status"] for row in rows)
+    assert all(row["generated_frequencies"] for row in rows)
+    assert all(row["collapse_condition"] for row in rows)
+
+
+def test_nonlinear_sideband_payload_has_required_columns() -> None:
+    data = nonlinear_sideband_payload()
+    schema = set(data["schema"])
+
+    assert "generated_frequencies" in schema
+    assert "projection_note" in schema
+    assert data["linear_projection_of_absent_sideband"] == "0"
+
+
 def test_range_projection_deprojects_to_relaxation_transfer() -> None:
     assert range_deprojection_residual() == 0
 
@@ -548,6 +646,14 @@ def main() -> None:
     test_orbital_two_harmonic_dotf_obstruction()
     test_forcing_dictionary_rows_are_classified()
     test_forcing_dictionary_payload_has_required_columns()
+    test_nonlinear_drive_generates_expected_rhs_sidebands()
+    test_nonlinear_drive_sideband_response_has_relaxation_phase()
+    test_nonlinear_readout_sum_sideband_collapses_when_lambdas_zero()
+    test_nonlinear_readout_difference_sideband_collapses_when_drive_missing()
+    test_orbital_n_2n_mixing_creates_3n_sideband()
+    test_linear_projection_cannot_create_absent_sideband()
+    test_nonlinear_sideband_rows_are_classified()
+    test_nonlinear_sideband_payload_has_required_columns()
     test_range_projection_deprojects_to_relaxation_transfer()
     test_range_projection_satisfies_linear_channel_equation()
     test_range_relaxation_pole_survives_unless_couplings_collapse()

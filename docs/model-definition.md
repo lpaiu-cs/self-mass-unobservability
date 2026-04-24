@@ -78,6 +78,27 @@ Status: Counterexample candidate. The first concrete projection channels are
 `delta a_hat = Gamma q_hat` and `ddot R + kappa^2 R = Gamma q_A`, representing
 acceleration-like and range-like linearized free-fall readouts.
 
+## Minimal Nonlinear Extensions
+
+Status: Counterexample candidate. Before adding a second-order mode, M5 tests
+minimal nonlinear first-order extensions:
+
+```text
+tau_chi dot chi_A + chi_A = alpha F(Y) + beta_F2 F(Y)^2
+```
+
+and
+
+```text
+m_A/m_A^(0) =
+  1 + c_Y F + c_chi chi_A
+  + lambda_Fchi F chi_A
+  + lambda_chi2 chi_A^2.
+```
+
+Status: Proven. These nonlinear terms are sufficient to generate sidebands
+under two-frequency forcing.
+
 ## Deferred Secondary Model
 
 Status: Counterexample candidate. If first-order relaxation is insufficient, the next model is

@@ -1,0 +1,109 @@
+{
+  "assumptions": {
+    "input": "F(t)=F1 cos(Omega1 t)+F2 cos(Omega2 t)",
+    "nonlinear_drive": "tau_chi dot chi + chi = alpha F + beta_F2 F^2",
+    "nonlinear_readout": "m/m0 includes lambda_Fchi F chi + lambda_chi2 chi^2",
+    "scope": "symbolic minimal nonlinear sideband audit; no data fitting"
+  },
+  "linear_projection_of_absent_sideband": "0",
+  "nonlinear_drive_chi_sidebands": {
+    "2Omega1": {
+      "cos": "F1**2*beta_F2/(2*(4*Omega1**2*tau_chi**2 + 1))",
+      "sin": "F1**2*Omega1*beta_F2*tau_chi/(4*Omega1**2*tau_chi**2 + 1)"
+    },
+    "2Omega2": {
+      "cos": "F2**2*beta_F2/(2*(4*Omega2**2*tau_chi**2 + 1))",
+      "sin": "F2**2*Omega2*beta_F2*tau_chi/(4*Omega2**2*tau_chi**2 + 1)"
+    },
+    "Omega1_minus_Omega2": {
+      "cos": "F1*F2*beta_F2/(tau_chi**2*(Omega1 - Omega2)**2 + 1)",
+      "sin": "F1*F2*beta_F2*tau_chi*(Omega1 - Omega2)/(tau_chi**2*(Omega1 - Omega2)**2 + 1)"
+    },
+    "Omega1_plus_Omega2": {
+      "cos": "F1*F2*beta_F2/(tau_chi**2*(Omega1 + Omega2)**2 + 1)",
+      "sin": "F1*F2*beta_F2*tau_chi*(Omega1 + Omega2)/(tau_chi**2*(Omega1 + Omega2)**2 + 1)"
+    }
+  },
+  "nonlinear_drive_rhs_sidebands": {
+    "2Omega1": "F1**2*beta_F2/2",
+    "2Omega2": "F2**2*beta_F2/2",
+    "Omega1_minus_Omega2": "F1*F2*beta_F2",
+    "Omega1_plus_Omega2": "F1*F2*beta_F2",
+    "dc": "beta_F2*(F1**2 + F2**2)/2"
+  },
+  "nonlinear_readout_difference_sideband": {
+    "cos": "F1*F2*alpha*(2*alpha*lambda_chi2*(Omega1*Omega2*tau_chi**2 + 1) + lambda_Fchi*(Omega1**2*tau_chi**2 + Omega2**2*tau_chi**2 + 2))/(2*(Omega1**2*tau_chi**2 + 1)*(Omega2**2*tau_chi**2 + 1))",
+    "sin": "F1*F2*alpha*tau_chi*(2*alpha*lambda_chi2*(Omega1 - Omega2) + lambda_Fchi*(Omega1*(Omega2**2*tau_chi**2 + 1) - Omega2*(Omega1**2*tau_chi**2 + 1)))/(2*(Omega1**2*tau_chi**2 + 1)*(Omega2**2*tau_chi**2 + 1))"
+  },
+  "nonlinear_readout_sum_sideband": {
+    "cos": "F1*F2*alpha*(-2*alpha*lambda_chi2*(Omega1*Omega2*tau_chi**2 - 1) + lambda_Fchi*(Omega1**2*tau_chi**2 + Omega2**2*tau_chi**2 + 2))/(2*(Omega1**2*tau_chi**2 + 1)*(Omega2**2*tau_chi**2 + 1))",
+    "sin": "F1*F2*alpha*tau_chi*(2*alpha*lambda_chi2*(Omega1 + Omega2) + lambda_Fchi*(Omega1*(Omega2**2*tau_chi**2 + 1) + Omega2*(Omega1**2*tau_chi**2 + 1)))/(2*(Omega1**2*tau_chi**2 + 1)*(Omega2**2*tau_chi**2 + 1))"
+  },
+  "orbital_3n_nonlinear_drive_amplitude": "beta_F2*e**3*p**2*(p + 3)/4",
+  "orbital_n_2n_input_amplitudes": {
+    "2n": "e**2*p*(p + 3)/4",
+    "n": "e*p"
+  },
+  "rows": [
+    {
+      "claim_status": "Proven",
+      "collapse_condition": "not applicable",
+      "generated_frequencies": "Omega1, Omega2 only",
+      "model": "tau dot chi + chi = alpha F; linear readout",
+      "notes": "This is the baseline failure that motivates M5.",
+      "projection_note": "linear projection cannot create absent frequencies",
+      "term": "linear_baseline",
+      "verdict": "no sideband"
+    },
+    {
+      "claim_status": "Proven",
+      "collapse_condition": "beta_F2 F1 F2 = 0 for mixed sidebands",
+      "generated_frequencies": "2Omega1, 2Omega2, Omega1+Omega2, |Omega1-Omega2|",
+      "model": "tau dot chi + chi = alpha F + beta_F2 F^2",
+      "notes": "The relaxation transfer adds a phase lag at each generated frequency.",
+      "projection_note": "sidebands survive any nonzero linear projection at that frequency",
+      "term": "nonlinear_drive_F2",
+      "verdict": "sidebands generated"
+    },
+    {
+      "claim_status": "Proven",
+      "collapse_condition": "lambda_Fchi = lambda_chi2 = 0 or one harmonic amplitude vanishes",
+      "generated_frequencies": "Omega1+Omega2 and |Omega1-Omega2|",
+      "model": "linear chi with lambda_Fchi F chi + lambda_chi2 chi^2 readout",
+      "notes": "The coefficients inherit A_j and B_j, so sideband phase carries tau_chi.",
+      "projection_note": "linear projection can hide but not synthesize these frequencies",
+      "term": "nonlinear_readout_Fchi_chi2",
+      "verdict": "sidebands generated"
+    },
+    {
+      "claim_status": "Counterexample candidate",
+      "collapse_condition": "beta_F2 = 0, e = 0, p = 0, or p = -3",
+      "generated_frequencies": "3n from n+2n",
+      "model": "M3 orbital F=(a/r)^p plus beta_F2 F^2",
+      "notes": "This is the cleanest bridge from M3 forcing to M5 sideband.",
+      "projection_note": "3n is absent from the O(e^2) linear drive",
+      "term": "orbital_3n_sideband",
+      "verdict": "new harmonic candidate"
+    },
+    {
+      "claim_status": "Proven",
+      "collapse_condition": "projection is nonlinear or time-varying",
+      "generated_frequencies": "none by projection alone",
+      "model": "linear time-invariant projection",
+      "notes": "This makes sidebands stronger than one-frequency quadrature anomalies.",
+      "projection_note": "Lambda(i nu) only multiplies existing sideband amplitude",
+      "term": "projection_robustness",
+      "verdict": "sideband cannot be faked by linear projection of absent input"
+    }
+  ],
+  "schema": [
+    "term",
+    "claim_status",
+    "model",
+    "generated_frequencies",
+    "verdict",
+    "collapse_condition",
+    "projection_note",
+    "notes"
+  ]
+}

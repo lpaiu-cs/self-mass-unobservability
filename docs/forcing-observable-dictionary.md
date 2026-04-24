@@ -114,6 +114,10 @@ Status: Proven. This is enough to beat a real-coefficient degree-`1` or
 degree-`2` derivative EFT, but not enough to beat arbitrary higher-order
 finite derivative EFTs.
 
+Status: Counterexample candidate. If the same `n,2n` forcing enters a nonlinear
+drive term `beta_F2 F^2`, it generates a `3n` sideband absent from the linear
+`O(e^2)` forcing template.
+
 ## Failure Conditions
 
 Status: Proven. The orbital-harmonic dictionary fails as a frequency-sweep

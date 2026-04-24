@@ -84,6 +84,11 @@ O_hat(z_k) = Lambda(z_k) G(z_k) F_hat(z_k)
 
 can be fit point by point, and the pole relation is not tested.
 
+Status: Proven. A linear time-invariant projection still cannot synthesize a
+frequency absent from its input. Therefore nonlinear sidebands are robust
+against arbitrary linear projection in a way that one-frequency quadrature is
+not.
+
 ## M4 Boundary
 
 Status: Counterexample candidate. The range-like channel is a viable

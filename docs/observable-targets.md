@@ -151,4 +151,18 @@ projection nuisance assigned independently to each carrier.
 
 Status: Proven. A linear time-invariant one-state model driven by `F1 cos(Omega1 t) + F2 cos(Omega2 t)` cannot create sidebands in the linear readout.
 
-Status: Conjectural. Sideband novelty requires a nonlinear readout, nonlinear drive construction, or a non-linear internal equation.
+Status: Proven. A minimal nonlinear internal drive
+`tau_chi dot chi + chi = alpha F + beta_F2 F^2` generates
+`2Omega1`, `2Omega2`, `Omega1+Omega2`, and `|Omega1-Omega2|`.
+
+Status: Proven. A minimal nonlinear readout
+`lambda_Fchi F chi + lambda_chi2 chi^2` generates sum and difference
+sidebands even when the internal equation remains linear.
+
+Status: Counterexample candidate. For the M3 orbital forcing with `n` and `2n`,
+the nonlinear drive creates a `3n` sideband with amplitude
+`beta_F2 p^2(p+3)e^3/4`, which is absent from the linear `O(e^2)` input.
+
+Status: Proven. A linear time-invariant projection cannot synthesize a
+frequency absent from its input; it only multiplies an already generated
+sideband by `Lambda(i nu)`.

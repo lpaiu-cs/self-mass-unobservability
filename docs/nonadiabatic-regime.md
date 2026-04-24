@@ -185,4 +185,24 @@ produces only `Omega1` and `Omega2` in `chi(t)`.
 
 Status: Proven. The minimal one-state linear model does not generate sidebands.
 
-Status: Conjectural. Sidebands become a next escalation only after adding nonlinear readout, nonlinear forcing, or a non-linear internal equation.
+Status: Proven. The minimal nonlinear drive extension
+
+```text
+tau_chi dot chi + chi = alpha F + beta_F2 F^2
+```
+
+generates sidebands at `2Omega1`, `2Omega2`, `Omega1+Omega2`, and
+`|Omega1-Omega2|`.
+
+Status: Proven. The minimal nonlinear readout extension
+
+```text
+lambda_Fchi F chi + lambda_chi2 chi^2
+```
+
+generates sum and difference sidebands. These sideband phases inherit
+`tau_chi` through the linear `chi` coefficients.
+
+Status: Counterexample candidate. Sideband generation is a stronger observable
+class than one-frequency quadrature because an LTI projection cannot create
+frequencies absent from the input.

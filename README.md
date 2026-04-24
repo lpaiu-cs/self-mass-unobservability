@@ -53,6 +53,11 @@ outer-dipole combination carrier `|Omega_in-Omega_out|` as a conditional third
 sample. In a nonresonant hierarchy with finite projection nuisance, this
 pressures real degree-`N<=4` and complex degree-`N<=1` comparators.
 
+Status: Counterexample candidate. The M5 nonlinear sideband test adds the
+minimal nonlinear drive/readout terms. These generate frequencies absent from
+the linear input, including `Omega1+Omega2`, `|Omega1-Omega2|`, and the orbital
+`3n` sideband from M3's `n,2n` forcing.
+
 Status: Proven. For the linear readout above and a two-frequency linear drive, no sidebands are generated. Sidebands require a nonlinear drive/readout, a hereditary kernel with mixing, a second-order internal mode coupled nonlinearly, or a threshold/hysteretic extension.
 
 ## Layout
@@ -64,6 +69,7 @@ Status: Proven. For the linear readout above and a two-frequency linear drive, n
 - `docs/frequency-sweep-distinguishability.md`: finite-derivative EFT distinguishability theorem candidate.
 - `docs/forcing-observable-dictionary.md`: concrete forcing templates and observable projection boundaries.
 - `docs/projection-channel-audit.md`: concrete projection-channel audit for acceleration/range readouts.
+- `docs/nonlinear-sideband-test.md`: minimal nonlinear drive/readout sideband test.
 - `docs/failure-ledger.md`: exact failure modes and next escalation paths.
 - `symbolic/chi_relaxation_response.py`: monochromatic response formulas.
 - `symbolic/chi_two_frequency_response.py`: two-frequency superposition and sideband check.
@@ -72,6 +78,7 @@ Status: Proven. For the linear readout above and a two-frequency linear drive, n
 - `symbolic/projection_channel_audit.py`: projection deconvolution and pole-survival checks.
 - `symbolic/triple_shared_tau_bridge.py`: inner/outer carrier bridge to the shared-`tau_chi` frequency-sweep test.
 - `symbolic/triple_gr_carrier_inventory.py`: three-carrier GR triple inventory and comparator-count audit.
+- `symbolic/nonlinear_sideband_test.py`: minimal nonlinear sideband generation checks.
 - `symbolic/checks/test_symbolic.py`: deterministic symbolic checks.
 - `counterexamples/README.md`: loophole framing and escalation list.
 

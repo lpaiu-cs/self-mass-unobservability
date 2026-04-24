@@ -38,6 +38,9 @@ with `F(t) = F0 cos(Omega t)` for the first derivation.
 | Proven | Three-carrier triple inventory against real degree `N >= 5` or complex degree `N >= 2` comparator | Three samples are below the corresponding obstruction count. | Need sideband carrier, order prior, or projection prior. |
 | Proven | Three-carrier triple inventory with arbitrary complex projection nuisance per carrier | The projection absorbs the shared transfer law point by point. | Observable bridge collapse. |
 | Proven | Linear first-order `chi` plus linear two-frequency forcing and linear readout | Superposition leaves only the input frequencies; no `Omega_1 +/- Omega_2` terms appear. | No sideband loophole in the linear MVP. |
+| Proven | Nonlinear sideband model with `beta_F2 = lambda_Fchi = lambda_chi2 = 0` | The model reduces to the linear no-sideband one-state response. | Nonlinear sideband collapse. |
+| Proven | Mixed sideband test with `F1 F2 = 0` | Sum and difference sideband amplitudes vanish because only one harmonic is present. | Insufficient nonlinear forcing. |
+| Proven | Orbital `3n` sideband test with `e = 0`, `p = 0`, `p = -3`, or `beta_F2 = 0` | The `n,2n` input pair or nonlinear drive coefficient vanishes. | Orbital sideband collapse. |
 
 ## Non-Collapse Candidate
 
@@ -100,7 +103,9 @@ by linearity, so the readout `c_Y F + c_chi chi` contains only `Omega1` and `Ome
 
 Minimal missing assumption for sidebands:
 
-Status: Conjectural. Add a nonlinear drive or readout, such as `m/m0` containing `c_chi2 chi^2`, or a nonlinear `F(Y)` evaluated on a multi-frequency invariant.
+Status: Proven. Adding `beta_F2 F^2` to the internal drive or
+`lambda_Fchi F chi + lambda_chi2 chi^2` to the readout is sufficient to
+generate sidebands under two-frequency forcing.
 
 ## Next Escalations
 
@@ -108,5 +113,5 @@ Status: Counterexample candidate. If the one-state model is judged insufficient 
 
 1. hereditary kernel with non-rational memory response,
 2. second-order internal mode with resonant phase behavior,
-3. nonlinear readout or nonlinear drive to generate sidebands,
+3. projection-specific sideband survival checks for named measurement channels,
 4. nonanalytic threshold or hysteresis to break local analytic expansion.
