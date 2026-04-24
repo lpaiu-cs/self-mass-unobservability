@@ -67,8 +67,9 @@
 12. Status: Proven. [`family-admission-theorem.md`](family-admission-theorem.md) promotes the repeated family-attack pattern into an explicit no-go statement for the audited family classes.
 13. Status: Proven. [`suppression-budget-theorem.md`](suppression-budget-theorem.md), [`../lemmas/17-witness-threshold-classification.md`](../lemmas/17-witness-threshold-classification.md), and [`../symbolic/witness_threshold_map.py`](../symbolic/witness_threshold_map.py) promote the audited witnesses into necessary suppression thresholds for minimal-sector uniqueness at `\Delta_{\max} = 4`.
 14. Status: Proven. [`mixed-witness-thresholds.md`](mixed-witness-thresholds.md), [`../lemmas/18-rank2-mixed-witness-threshold.md`](../lemmas/18-rank2-mixed-witness-threshold.md), [`../lemmas/19-rank0-mixed-witness-threshold.md`](../lemmas/19-rank0-mixed-witness-threshold.md), and [`../symbolic/mixed_witness_map.py`](../symbolic/mixed_witness_map.py) classify the first self and first mixed witnesses for the audited family classes.
-15. Status: Conjectural. The live negative-branch bottleneck is now sharp witness-threshold classification beyond mere witness existence.
-16. Status: Conjectural. The remaining positive burden is to prove the finite-family fixed-order collapse statement for arbitrary explicit admitted catalogs rather than just the audited examples.
+15. Status: Proven. [`threshold-formulas.md`](threshold-formulas.md), [`../lemmas/20-rank2-threshold-formula.md`](../lemmas/20-rank2-threshold-formula.md), [`../lemmas/21-rank0-threshold-formula.md`](../lemmas/21-rank0-threshold-formula.md), and [`../symbolic/threshold_formula_check.py`](../symbolic/threshold_formula_check.py) lift the audited family classes into formula-level threshold statements.
+16. Status: Conjectural. The live negative-branch bottleneck is now sharp mixed-aware threshold classification beyond mere witness existence.
+17. Status: Conjectural. The remaining positive burden is to prove the finite-family fixed-order collapse statement for arbitrary explicit admitted catalogs rather than just the audited examples.
 
 ## Current Verdict
 
@@ -78,10 +79,9 @@
 - Status: Proven. The stronger physically justified minimal-sector theorem should not presently be treated as alive.
 - Status: Proven. Minimal-sector uniqueness is already effectively dead across the audited unsuppressed family classes.
 - Status: Proven. No audited family class is currently harmless without extra assumptions.
-- Status: Proven. Necessary suppression budgets are explicit for the audited classes: `w_X \ge 3` for rank-2 STF families, `w_S \ge 5` or outright exclusion for bare scalar families, and derivative-family block weight above `2` for the current derivative-only scalar witnesses.
-- Status: Proven. No audited family class currently exhibits a mixed witness below its first self witness at `\Delta \le 4`; the live negative-branch bottleneck is sharp witness-threshold classification beyond mere witness existence.
-- Status: Proven. The rank-2 STF and derivative-only scalar classes already show that the sharp thresholds are not purely self-witness statements, because mixed witnesses tie at the first surviving order.
-- Status: Proven. The bare scalar class remains self-dominated: `S` appears before the first mixed witness `SE2`.
+- Status: Proven. Necessary suppression budgets are explicit for the audited classes: for rank-2 STF families the self-only lower bound is `w_X \ge 3` but the mixed-aware necessary threshold is `w_X \ge 4` unless an explicit `EX = 0`-type rule removes the mixed quadratic witness; for bare scalar families the self-only sharp threshold is `w_S \ge 5`; for derivative-only scalar families the tied-sharp threshold is `w_D \ge 3`.
+- Status: Proven. No audited family class currently exhibits a mixed witness below its first self witness at `\Delta \le 4`; the live negative-branch bottleneck is sharp mixed-aware threshold classification beyond mere witness existence.
+- Status: Proven. The rank-2 STF class is now explicitly mixed-aware, the bare scalar class is self-only, and the derivative-only scalar class is tied-sharp.
 - Status: Conjectural. The broad positive target remains finite-family fixed-order collapse, and it remains plausible because the audited enlarged family catalogs still close finitely at `\Delta \le 4`.
 
 ## Dependencies
@@ -103,12 +103,15 @@
 - Status: Proven. [`../lemmas/16-rank0-family-admission.md`](../lemmas/16-rank0-family-admission.md)
 - Status: Proven. [`../lemmas/18-rank2-mixed-witness-threshold.md`](../lemmas/18-rank2-mixed-witness-threshold.md)
 - Status: Proven. [`../lemmas/19-rank0-mixed-witness-threshold.md`](../lemmas/19-rank0-mixed-witness-threshold.md)
+- Status: Proven. [`../lemmas/20-rank2-threshold-formula.md`](../lemmas/20-rank2-threshold-formula.md)
+- Status: Proven. [`../lemmas/21-rank0-threshold-formula.md`](../lemmas/21-rank0-threshold-formula.md)
 - Status: Conjectural. [`conditional-collapse-lemma.md`](conditional-collapse-lemma.md)
 - Status: Conjectural. [`eb-conditional-collapse.md`](eb-conditional-collapse.md)
 - Status: Conjectural. [`power-counting.md`](power-counting.md)
 - Status: Proven. [`family-admission-no-go.md`](family-admission-no-go.md)
 - Status: Proven. [`family-admission-theorem.md`](family-admission-theorem.md)
 - Status: Proven. [`mixed-witness-thresholds.md`](mixed-witness-thresholds.md)
+- Status: Proven. [`threshold-formulas.md`](threshold-formulas.md)
 - Status: Proven. [`suppression-budget-theorem.md`](suppression-budget-theorem.md)
 - Status: Proven. [`sharp-threshold-status.md`](sharp-threshold-status.md)
 - Status: Proven. [`broad-collapse-reformulation.md`](broad-collapse-reformulation.md)
@@ -120,6 +123,7 @@
 - Status: Proven. [`reduction-rules.md`](reduction-rules.md)
 - Status: Proven. [`../symbolic/witness_threshold_map.py`](../symbolic/witness_threshold_map.py)
 - Status: Proven. [`../symbolic/mixed_witness_map.py`](../symbolic/mixed_witness_map.py)
+- Status: Proven. [`../symbolic/threshold_formula_check.py`](../symbolic/threshold_formula_check.py)
 
 ## Failure Triggers
 

@@ -23,6 +23,7 @@ from family_witness_map import family_witness_summary
 from mixed_witness_map import mixed_witness_summary
 from primitive_family_attack import primitive_attack_summary
 from shift_scalar_sector_delta4 import shift_scalar_summary
+from threshold_formula_check import threshold_formula_summary
 from witness_threshold_map import witness_threshold_summary
 from normal_form_reduce import (
     operator_symbols,
@@ -312,9 +313,13 @@ def test_witness_threshold_map() -> None:
         "rank0_scalar_unsuppressed",
         "rank0_scalar_derivative_only",
     )
-    assert summary.entries[0].necessary_threshold_at_delta4.startswith("w_X >= 3")
+    assert summary.entries[0].self_only_lower_bound_at_delta4 == "w_X >= 3"
+    assert summary.entries[0].necessary_threshold_at_delta4.startswith("w_X >= 4")
+    assert summary.entries[0].threshold_type == "mixed-aware"
     assert summary.entries[1].necessary_threshold_at_delta4.startswith("w_S >= 5")
-    assert "above 2" in summary.entries[2].necessary_threshold_at_delta4
+    assert summary.entries[1].threshold_type == "self-only"
+    assert summary.entries[2].necessary_threshold_at_delta4.startswith("w_D >= 3")
+    assert summary.entries[2].threshold_type == "tied-sharp"
     assert all(entry.sufficient_for_uniqueness is False for entry in summary.entries)
 
 
@@ -331,16 +336,36 @@ def test_mixed_witness_map() -> None:
     assert rank2.first_self_witness == "X2"
     assert rank2.first_mixed_witness == "EX"
     assert rank2.self_weight == rank2.mixed_weight == rank2.w_min == 2
-    assert "tie" in rank2.sharpness_status
+    assert "tied" in rank2.sharpness_status
     assert bare_scalar.first_self_witness == "S"
     assert bare_scalar.first_mixed_witness == "SE2"
     assert bare_scalar.self_weight == bare_scalar.w_min == 1
     assert bare_scalar.mixed_weight == 3
-    assert "dominates" in bare_scalar.sharpness_status
+    assert bare_scalar.sharpness_status == "self-only"
     assert derivative_only.first_self_witness == "dotS2"
     assert derivative_only.first_mixed_witness == "DtS_E2"
     assert derivative_only.self_weight == derivative_only.mixed_weight == derivative_only.w_min == 4
-    assert "tie" in derivative_only.sharpness_status
+    assert derivative_only.sharpness_status == "tied-sharp"
+
+
+def test_threshold_formula_check() -> None:
+    summary = threshold_formula_summary()
+    assert summary.delta_max == 4
+    assert tuple(entry.family_class for entry in summary.entries) == (
+        "rank2_stf",
+        "rank0_scalar_unsuppressed",
+        "rank0_scalar_derivative_only",
+    )
+    rank2, bare_scalar, derivative_only = summary.entries
+    assert rank2.self_formula == "2*w_X"
+    assert rank2.mixed_formula == "w_X + 1"
+    assert rank2.threshold_type == "mixed-aware"
+    assert "tied" in rank2.sharpness_status
+    assert bare_scalar.w_min_formula == "w_S"
+    assert bare_scalar.threshold_type == "self-only"
+    assert derivative_only.self_formula == "2*w_D"
+    assert derivative_only.mixed_formula == "w_D + 2"
+    assert derivative_only.threshold_type == "tied-sharp"
 
 
 def main() -> None:
@@ -365,6 +390,7 @@ def main() -> None:
     test_family_witness_map()
     test_witness_threshold_map()
     test_mixed_witness_map()
+    test_threshold_formula_check()
     print("symbolic checks passed")
 
 

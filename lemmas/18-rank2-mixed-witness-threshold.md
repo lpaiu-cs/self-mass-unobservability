@@ -49,7 +49,8 @@ W_{\min}(\mathrm{R2}) = 2.
 
 ## Consequence
 
-- Status: Proven. The currently advertised threshold `w_X \ge 3` is sharp within the audited rank-2 family class at `\Delta_{\max} = 4`.
+- Status: Proven. The current unsuppressed audit is tied at weight `2`, but the threshold consequence at `\Delta_{\max} = 4` is mixed-aware rather than self-only.
+- Status: Proven. In particular, the old self-only line `w_X \ge 3` is only a lower bound; the mixed-aware necessary threshold is derived separately in [`20-rank2-threshold-formula.md`](20-rank2-threshold-formula.md).
 - Status: Proven. The self witness `X2` remains a canonical obstruction, but it is not uniquely fundamental because the mixed witness `EX` appears at the same effective order.
 - Status: Proven. The obstructed theorem layer is the promotion of the electric-only exact-current-set theorem candidate to a physically justified minimal-sector theorem.
 

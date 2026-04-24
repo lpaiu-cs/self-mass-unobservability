@@ -86,11 +86,21 @@ Status: Conjectural. The repository roadmap is organized around theorem progress
 | Item | Status | Deliverable | Exit condition |
 | --- | --- | --- | --- |
 | M9.1 | Proven | [`mixed-witness-thresholds.md`](mixed-witness-thresholds.md) | Self witnesses, mixed witnesses, and `W_{\min}` are defined explicitly for the audited family classes. |
-| M9.2 | Proven | [`../lemmas/18-rank2-mixed-witness-threshold.md`](../lemmas/18-rank2-mixed-witness-threshold.md) | The audited rank-2 STF class is classified as a sharp tied self/mixed threshold. |
+| M9.2 | Proven | [`../lemmas/18-rank2-mixed-witness-threshold.md`](../lemmas/18-rank2-mixed-witness-threshold.md) | The audited rank-2 STF class is identified as tied in the unsuppressed audit but mixed-aware at the threshold level. |
 | M9.3 | Proven | [`../lemmas/19-rank0-mixed-witness-threshold.md`](../lemmas/19-rank0-mixed-witness-threshold.md) | The audited rank-0 bare-scalar and derivative-only subclasses are split into self-dominated versus tied sharp thresholds. |
 | M9.4 | Proven | [`../symbolic/mixed_witness_map.py`](../symbolic/mixed_witness_map.py) | A deterministic machine-readable mixed-witness threshold table runs without error. |
-| M9.5 | Proven | [`sharp-threshold-status.md`](sharp-threshold-status.md) and [`family-class-table.md`](family-class-table.md) | Each audited family class is labeled as sharp, lower-bound-only, or unresolved. |
-| M9.6 | Conjectural | [`docs/theorem-A-freefall.md`](theorem-A-freefall.md) and [`failure-ledger.md`](failure-ledger.md) | The live negative-branch bottleneck is stated as sharp witness-threshold classification beyond mere witness existence. |
+| M9.5 | Proven | [`sharp-threshold-status.md`](sharp-threshold-status.md) and [`family-class-table.md`](family-class-table.md) | Each audited family class is labeled as self-only, mixed-aware, or tied-sharp. |
+| M9.6 | Conjectural | [`docs/theorem-A-freefall.md`](theorem-A-freefall.md) and [`failure-ledger.md`](failure-ledger.md) | The live negative-branch bottleneck is stated as sharp mixed-aware threshold classification beyond mere witness existence. |
+
+## M10: Formula-Level Threshold Classification
+
+| Item | Status | Deliverable | Exit condition |
+| --- | --- | --- | --- |
+| M10.1 | Proven | [`threshold-formulas.md`](threshold-formulas.md) | Audited family classes are lifted into formula-level `W_{\mathrm{self}}`, `W_{\mathrm{mix}}`, and `W_{\min}` notation. |
+| M10.2 | Proven | [`../lemmas/20-rank2-threshold-formula.md`](../lemmas/20-rank2-threshold-formula.md) | The rank-2 STF class now distinguishes the self-only lower bound from the mixed-aware necessary threshold. |
+| M10.3 | Proven | [`../lemmas/21-rank0-threshold-formula.md`](../lemmas/21-rank0-threshold-formula.md) | The bare-scalar and derivative-only subclasses are classified as self-only versus tied-sharp at `\Delta_{\max}=4`. |
+| M10.4 | Proven | [`../symbolic/threshold_formula_check.py`](../symbolic/threshold_formula_check.py) | The audited formula layer reproduces the current `\Delta \le 4` witness map deterministically. |
+| M10.5 | Conjectural | [`docs/theorem-A-freefall.md`](theorem-A-freefall.md) and [`family-admission-theorem.md`](family-admission-theorem.md) | The live negative-branch bottleneck is written uniformly as sharp mixed-aware threshold classification beyond mere witness existence. |
 
 ## Near-Term Sequence
 

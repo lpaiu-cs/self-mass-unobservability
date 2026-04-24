@@ -11,8 +11,11 @@ class WitnessThresholdEntry:
     family_class: str
     witness: str
     witness_weight: int
+    self_only_lower_bound_formula: str
+    self_only_lower_bound_at_delta4: str
     necessary_threshold_formula: str
     necessary_threshold_at_delta4: str
+    threshold_type: str
     theorem_layer_at_risk: str
     sufficient_for_uniqueness: bool
 
@@ -32,8 +35,11 @@ def witness_threshold_entries(delta_max: int = DELTA_MAX) -> tuple[WitnessThresh
             family_class="rank2_stf",
             witness="X2",
             witness_weight=2,
-            necessary_threshold_formula="2 w_X > Delta_max",
-            necessary_threshold_at_delta4="w_X >= 3, or explicit family exclusion/background restriction",
+            self_only_lower_bound_formula="2 w_X > Delta_max",
+            self_only_lower_bound_at_delta4="w_X >= 3",
+            necessary_threshold_formula="min(2 w_X, w_X + 1) > Delta_max",
+            necessary_threshold_at_delta4="w_X >= 4, unless an explicit EX = 0-type rule removes the mixed quadratic witness",
+            threshold_type="mixed-aware",
             theorem_layer_at_risk="minimal-sector uniqueness",
             sufficient_for_uniqueness=False,
         ),
@@ -41,8 +47,11 @@ def witness_threshold_entries(delta_max: int = DELTA_MAX) -> tuple[WitnessThresh
             family_class="rank0_scalar_unsuppressed",
             witness="S",
             witness_weight=1,
+            self_only_lower_bound_formula="w_S > Delta_max",
+            self_only_lower_bound_at_delta4="w_S >= 5",
             necessary_threshold_formula="w_S > Delta_max",
             necessary_threshold_at_delta4="w_S >= 5, or explicit rule forbidding bare S",
+            threshold_type="self-only",
             theorem_layer_at_risk="minimal-sector uniqueness",
             sufficient_for_uniqueness=False,
         ),
@@ -50,8 +59,11 @@ def witness_threshold_entries(delta_max: int = DELTA_MAX) -> tuple[WitnessThresh
             family_class="rank0_scalar_derivative_only",
             witness="dotS2",
             witness_weight=4,
-            necessary_threshold_formula="raise derivative-family insertions so the current weight-4 witnesses move above Delta_max",
-            necessary_threshold_at_delta4="increase derivative-family block weight above 2, for example to 3, or explicitly remove the mixed derivative witnesses",
+            self_only_lower_bound_formula="2 w_D > Delta_max",
+            self_only_lower_bound_at_delta4="w_D >= 3",
+            necessary_threshold_formula="min(2 w_D, w_D + 2) > Delta_max",
+            necessary_threshold_at_delta4="w_D >= 3, or explicit rule removing the mixed derivative witnesses",
+            threshold_type="tied-sharp",
             theorem_layer_at_risk="minimal-sector uniqueness after removing bare S",
             sufficient_for_uniqueness=False,
         ),
@@ -77,8 +89,11 @@ def witness_threshold_report(delta_max: int = DELTA_MAX) -> str:
                 f"- family_class: {entry.family_class}",
                 f"  witness: {entry.witness}",
                 f"  witness_weight: {entry.witness_weight}",
+                f"  self_only_lower_bound_formula: {entry.self_only_lower_bound_formula}",
+                f"  self_only_lower_bound_at_delta4: {entry.self_only_lower_bound_at_delta4}",
                 f"  necessary_threshold_formula: {entry.necessary_threshold_formula}",
                 f"  necessary_threshold_at_delta4: {entry.necessary_threshold_at_delta4}",
+                f"  threshold_type: {entry.threshold_type}",
                 f"  theorem_layer_at_risk: {entry.theorem_layer_at_risk}",
                 f"  sufficient_for_uniqueness: {entry.sufficient_for_uniqueness}",
             ]

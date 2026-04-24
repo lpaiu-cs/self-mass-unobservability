@@ -39,11 +39,11 @@ def mixed_witness_entries(delta_max: int = DELTA_MAX) -> tuple[MixedWitnessEntry
             first_mixed_witness="EX",
             mixed_weight=2,
             w_min=2,
-            current_threshold_statement="w_X >= 3, or explicit family exclusion/background restriction",
+            current_threshold_statement="w_X >= 4, unless an explicit EX = 0-type rule removes the mixed quadratic witness",
             theorem_layer_obstructed=(
                 "promotion of electric-only exact-current-set theorem to a physically justified minimal-sector theorem"
             ),
-            sharpness_status="exact within audited class; self and mixed tie",
+            sharpness_status="mixed-aware; current unsuppressed case is tied",
             confidence_level="Proven",
         ),
         MixedWitnessEntry(
@@ -57,7 +57,7 @@ def mixed_witness_entries(delta_max: int = DELTA_MAX) -> tuple[MixedWitnessEntry
             theorem_layer_obstructed=(
                 "promotion of corrected E/B exact-current-set theorem to a physically justified minimal-sector theorem"
             ),
-            sharpness_status="exact within audited class; self dominates mixed",
+            sharpness_status="self-only",
             confidence_level="Proven",
         ),
         MixedWitnessEntry(
@@ -67,11 +67,9 @@ def mixed_witness_entries(delta_max: int = DELTA_MAX) -> tuple[MixedWitnessEntry
             first_mixed_witness="DtS_E2",
             mixed_weight=4,
             w_min=4,
-            current_threshold_statement=(
-                "increase derivative-family block weight above 2, for example to 3, or explicitly remove the mixed derivative witnesses"
-            ),
+            current_threshold_statement="w_D >= 3, or explicit rule removing the mixed derivative witnesses",
             theorem_layer_obstructed="rescue of minimal-sector uniqueness after removing bare S",
-            sharpness_status="exact within audited class; self and mixed tie",
+            sharpness_status="tied-sharp",
             confidence_level="Proven",
         ),
     )

@@ -15,7 +15,7 @@
 ## Audited Thresholds At `\Delta_{\max} = 4`
 
 - Status: Proven. Rank-2 STF family class:
-  the quadratic witness is `X2`, so uniqueness up to `\Delta \le 4` requires effective family weight `w_X \ge 3`, or an explicit rule that excludes the family on the allowed backgrounds.
+  the self-only lower bound is `w_X \ge 3`, but the mixed-aware necessary threshold is `w_X \ge 4` unless an explicit `EX = 0`-type rule removes the mixed quadratic witness.
 - Status: Proven. Unsuppressed bare scalar class:
   the witness is `S`, so uniqueness up to `\Delta \le 4` requires `w_S \ge 5`, or a symmetry/background rule that forbids bare `S`.
 - Status: Proven. Derivative-only scalar class:
@@ -23,10 +23,10 @@
 
 ## M9 Sharpness Status Within The Audited Classes
 
-- Status: Proven. For the audited rank-2 STF class, the current threshold is sharp within the class because `W_{\mathrm{self}} = W_{\mathrm{mix}} = 2`.
-- Status: Proven. For the audited bare scalar class, the current threshold is sharp within the class because `W_{\mathrm{self}} = 1 < 3 = W_{\mathrm{mix}}`.
-- Status: Proven. For the audited derivative-only scalar class, the current threshold is sharp within the class because `W_{\mathrm{self}} = W_{\mathrm{mix}} = 4`.
-- Status: Proven. Therefore the current class-limited threshold map is no longer only about witness existence; it also records whether the first obstruction is self-dominated or tied with a mixed witness.
+- Status: Proven. For the audited rank-2 STF class, the current threshold is mixed-aware: `W_{\mathrm{self}} = W_{\mathrm{mix}} = 2` in the unsuppressed audit, but the true `\Delta_{\max}=4` budget is governed by the mixed branch.
+- Status: Proven. For the audited bare scalar class, the current threshold is self-only and sharp because `W_{\mathrm{self}} = 1 < 3 = W_{\mathrm{mix}}`.
+- Status: Proven. For the audited derivative-only scalar class, the current threshold is tied-sharp because `W_{\mathrm{self}} = W_{\mathrm{mix}} = 4` in the current audit and both branches give `w_D \ge 3`.
+- Status: Proven. Therefore the current class-limited threshold map is no longer only about witness existence; it also records whether the active threshold is self-only, mixed-aware, or tied-sharp.
 
 ## What This Theorem Buys
 
