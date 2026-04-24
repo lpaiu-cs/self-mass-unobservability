@@ -29,6 +29,18 @@ from chi_two_frequency_response import (  # noqa: E402
     relaxation_residual as two_frequency_residual,
     two_frequency_response,
 )
+from frequency_sweep_distinguishability import (  # noqa: E402
+    interpolation_residual,
+    linear_interpolation_residual_example,
+    low_frequency_error_bound,
+    polynomial_sample_limit,
+    real_coefficient_sample_limit,
+    real_odd_channel_residual,
+    real_odd_symbols,
+    symbols as sweep_symbols,
+    taylor_residual,
+    taylor_residual_closed_form,
+)
 
 
 def test_monochromatic_response_solves_relaxation_equation() -> None:
@@ -143,6 +155,53 @@ def test_finite_polynomial_obstruction_records_pole_mismatch() -> None:
     assert obstruction["constant_coefficient_after_recursion"] == "-alpha"
 
 
+def test_frequency_sweep_sample_count_boundary() -> None:
+    boundary = polynomial_sample_limit(4)
+    assert boundary["exact_interpolation_limit"] == 5
+    assert boundary["first_exact_obstruction_count"] == 6
+
+
+def test_real_coefficient_boundary_is_sharper() -> None:
+    boundary = real_coefficient_sample_limit(4)
+    assert boundary["positive_frequency_exact_interpolation_limit"] == 2
+    assert boundary["first_positive_frequency_obstruction_count"] == 3
+
+
+def test_frequency_sweep_residual_has_expected_collapse_limits() -> None:
+    sym = sweep_symbols(2)
+    residual = interpolation_residual(2)
+
+    assert residual != 0
+    assert sp.simplify(residual.subs(sym.beta, 0)) == 0
+    assert sp.simplify(residual.subs(sym.tau, 0)) == 0
+    assert sp.simplify(residual.subs(sym.z_star, sym.z_nodes[0])) == 0
+
+
+def test_real_odd_channel_residual_has_expected_collapse_limits() -> None:
+    sym = real_odd_symbols(3)
+    residual = real_odd_channel_residual(3)
+
+    assert residual != 0
+    assert sp.simplify(residual.subs(sym.beta, 0)) == 0
+    assert sp.simplify(residual.subs(sym.tau, 0)) == 0
+    assert sp.simplify(residual.subs(sym.u_star, sym.u_nodes[0])) == 0
+
+
+def test_frequency_sweep_residual_matches_direct_interpolation() -> None:
+    example = linear_interpolation_residual_example()
+    assert sp.simplify(example["direct_residual"] - example["formula_residual"]) == 0
+    assert example["direct_residual"] != 0
+
+
+def test_taylor_residual_closed_form() -> None:
+    assert sp.simplify(taylor_residual(5) - taylor_residual_closed_form(5)) == 0
+
+
+def test_low_frequency_error_bound_power() -> None:
+    rho, beta_abs = sp.symbols("rho abs_beta", nonnegative=True, real=True)
+    assert low_frequency_error_bound(3) == beta_abs * rho**4
+
+
 def main() -> None:
     test_monochromatic_response_solves_relaxation_equation()
     test_transfer_function_components_match_real_solution()
@@ -157,6 +216,13 @@ def main() -> None:
     test_single_frequency_dotF_basis_fits_both_quadratures()
     test_derivative_series_residual_starts_after_truncation_order()
     test_finite_polynomial_obstruction_records_pole_mismatch()
+    test_frequency_sweep_sample_count_boundary()
+    test_real_coefficient_boundary_is_sharper()
+    test_frequency_sweep_residual_has_expected_collapse_limits()
+    test_real_odd_channel_residual_has_expected_collapse_limits()
+    test_frequency_sweep_residual_matches_direct_interpolation()
+    test_taylor_residual_closed_form()
+    test_low_frequency_error_bound_power()
     print("dynamic chi symbolic checks passed")
 
 

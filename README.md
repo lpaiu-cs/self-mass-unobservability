@@ -37,6 +37,8 @@ Status: Proven. In the adiabatic regime `Omega tau_chi << 1`, the model is local
 
 Status: Counterexample candidate. At finite `Omega tau_chi`, the full rational transfer function and its associated phase lag cannot be represented exactly by any finite static instantaneous sensitivity basis. If the admissible static EFT also allows arbitrary time-derivative Wilson coefficients, the one-frequency quadrature alone is not sufficient; novelty then requires frequency dependence across more than one drive frequency or the full pole structure.
 
+Status: Counterexample candidate. The M2 frequency-sweep target is sharper: a real-coefficient degree-`N` finite derivative EFT can absorb at most `floor((N+1)/2)` positive frequency samples before the next sample exposes the relaxation pole. Even a complex-coefficient polynomial comparator fails at `N + 2` distinct samples if `alpha c_chi tau_chi != 0`.
+
 Status: Proven. For the linear readout above and a two-frequency linear drive, no sidebands are generated. Sidebands require a nonlinear drive/readout, a hereditary kernel with mixing, a second-order internal mode coupled nonlinearly, or a threshold/hysteretic extension.
 
 ## Layout
@@ -45,9 +47,11 @@ Status: Proven. For the linear readout above and a two-frequency linear drive, n
 - `docs/observable-targets.md`: criteria for new versus absorbed observables.
 - `docs/adiabatic-limit.md`: low-frequency collapse derivation.
 - `docs/nonadiabatic-regime.md`: finite-frequency response and observable classification.
+- `docs/frequency-sweep-distinguishability.md`: finite-derivative EFT distinguishability theorem candidate.
 - `docs/failure-ledger.md`: exact failure modes and next escalation paths.
 - `symbolic/chi_relaxation_response.py`: monochromatic response formulas.
 - `symbolic/chi_two_frequency_response.py`: two-frequency superposition and sideband check.
+- `symbolic/frequency_sweep_distinguishability.py`: polynomial interpolation and Taylor-residual checks.
 - `symbolic/checks/test_symbolic.py`: deterministic symbolic checks.
 - `counterexamples/README.md`: loophole framing and escalation list.
 

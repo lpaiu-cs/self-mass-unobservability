@@ -41,6 +41,10 @@ Status: Proven. Exact zero-frequency collapse occurs when `Omega = 0`, because t
 
 Status: Proven. If `Omega tau_chi << 1`, a local derivative EFT through order `N` can reproduce the response up to `O((Omega tau_chi)^(N+1))`.
 
+Status: Proven. More sharply, for `z=i Omega` and `|Omega tau_chi| <= rho`,
+the degree-`N` Taylor derivative residual is bounded by
+`|alpha c_chi| rho^(N+1)`.
+
 Status: Proven. Exact reproduction of `alpha / (1 + i Omega tau_chi)` for arbitrary `Omega` requires either the explicit state `chi`, a hereditary kernel, or an infinite derivative tower.
 
 ## Boundary Statement

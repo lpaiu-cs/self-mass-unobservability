@@ -81,6 +81,24 @@ Status: Counterexample candidate. The nonadiabatic observable target is the
 shared rational transfer relation across changing `Omega`, not the mere
 existence of a sine quadrature in one monochromatic experiment.
 
+## Frequency-Sweep Distinguishability
+
+Status: Proven. A finite derivative comparator of degree `N` has the form
+`P_N(i Omega) = sum_{n=0}^{N} d_n (i Omega)^n`.
+
+Status: Proven. With freely chosen shared coefficients, this comparator can
+match the relaxation transfer at `N + 1` distinct sampled frequencies if the
+coefficients are allowed to be complex.
+
+Status: Counterexample candidate. With real derivative coefficients and
+positive drive frequencies, matching `floor((N+1)/2)+1` distinct frequencies is
+already an exact non-adiabatic distinguishability test.
+
+Status: Counterexample candidate. With the stronger complex-coefficient
+comparator, matching `N + 2` distinct frequencies is the conservative exact
+test, because the residual is proportional to the pole strength
+`alpha c_chi tau_chi^(N+1)`.
+
 ## Large-Frequency Behavior
 
 Status: Proven. For `x = Omega tau_chi >> 1`,

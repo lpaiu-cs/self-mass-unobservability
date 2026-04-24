@@ -23,6 +23,9 @@ with `F(t) = F0 cos(Omega t)` for the first derivation.
 | Proven | `Omega tau_chi << 1` with a local derivative EFT truncated at order `N` | `chi = alpha sum_{n=0}^N (-tau_chi d/dt)^n F + O((Omega tau_chi)^{N+1})`. | Order-by-order derivative collapse. |
 | Proven | Single known drive frequency with an unconstrained local `dot F` Wilson coefficient | The leading quadrature can be fit by one derivative coefficient without proving an internal state. | Static-basis-degenerate signal. |
 | Proven | Single known drive frequency with unconstrained `{F, dot F}` coefficients | Both cosine and sine quadratures are fit by `a0 F + a1 dot F`, but the fitted `a1` depends on `Omega`. | Single-frequency derivative degeneracy. |
+| Proven | `K <= floor((N+1)/2)` positive sampled frequencies with freely fitted real degree-`N` derivative coefficients | Even and odd channels can be interpolated at all sampled points. | Physical finite-sample degeneracy. |
+| Proven | `K <= N + 1` sampled frequencies with freely fitted complex degree-`N` derivative coefficients | Polynomial interpolation can match the relaxation transfer at all sampled points. | Conservative complex finite-sample degeneracy. |
+| Proven | Low-frequency sweep with `|Omega tau_chi| <= rho` and tolerance above `|alpha c_chi| rho^(N+1)` | Taylor truncation through order `N` is within tolerance over the band. | Operational derivative-EFT collapse. |
 | Proven | Linear first-order `chi` plus linear two-frequency forcing and linear readout | Superposition leaves only the input frequencies; no `Omega_1 +/- Omega_2` terms appear. | No sideband loophole in the linear MVP. |
 
 ## Non-Collapse Candidate
@@ -36,6 +39,16 @@ H(Omega) = alpha / (1 + i Omega tau_chi)
 has a relaxation pole and cannot be represented exactly by a finite instantaneous static sensitivity basis.
 
 Status: Counterexample candidate. If the allowed comparator is a finite local derivative EFT, the loophole is not a single quadrature point; it is the frequency-dependent transfer relation across drives or the need for an infinite derivative tower to reproduce the pole exactly.
+
+Status: Counterexample candidate. For a fixed derivative order `N`,
+`floor((N+1)/2)+1` distinct positive frequencies give the first exact
+obstruction to real shared-coefficient absorption. The obstruction is zero only
+when `alpha c_chi = 0`, `tau_chi = 0`, or the frequencies are not distinct.
+
+Status: Counterexample candidate. If complex derivative coefficients are
+allowed, `N + 2` distinct frequencies give the conservative exact obstruction.
+The obstruction is zero only when `alpha c_chi = 0`, `tau_chi = 0`, the
+frequencies are not distinct, or a sampled point lies on the pole.
 
 ## Failed Sideband Attempt
 

@@ -52,6 +52,16 @@ Status: Conjectural. The broader local comparator may include derivative Wilson 
 
 Status: Proven. The one-state relaxation model is exactly equivalent to an infinite derivative expansion only inside the formal inverse `(1 + tau_chi d/dt)^(-1)`.
 
+Status: Proven. A finite derivative comparator of order `N` is represented in
+frequency space by a polynomial `P_N(i Omega)`.
+
+Status: Proven. For real Wilson coefficients and positive frequencies, this
+polynomial splits into a real even channel and an imaginary odd channel in
+`Omega^2`.
+
+Status: Counterexample candidate. The frequency-sweep comparison requires the
+same polynomial coefficients to apply across all sampled drive frequencies.
+
 ## Deferred Secondary Model
 
 Status: Counterexample candidate. If first-order relaxation is insufficient, the next model is

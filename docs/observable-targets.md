@@ -69,6 +69,22 @@ transfer relation `alpha c_chi/(1 + i Omega tau_chi)`, which cannot be
 represented exactly by a finite shared-coefficient polynomial derivative basis
 over varying drive frequency.
 
+## Frequency-Sweep Target
+
+Status: Proven. A degree-`N` complex derivative polynomial can absorb `N + 1`
+frequency samples by interpolation if its coefficients are freely fit to that
+sample set.
+
+Status: Counterexample candidate. The first exact frequency-sweep observable
+requires at least `floor((N+1)/2)+1` distinct positive frequencies with one
+shared real coefficient vector.
+
+Status: Counterexample candidate. If the comparator is granted complex
+coefficients, the conservative exact target is `N + 2` distinct frequencies.
+
+Status: Proven. The exact obstruction is the nonzero interpolation residual
+derived in [`frequency-sweep-distinguishability.md`](frequency-sweep-distinguishability.md).
+
 ## Sideband Test
 
 Status: Proven. A linear time-invariant one-state model driven by `F1 cos(Omega1 t) + F2 cos(Omega2 t)` cannot create sidebands in the linear readout.
