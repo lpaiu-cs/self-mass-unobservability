@@ -28,6 +28,9 @@ with `F(t) = F0 cos(Omega t)` for the first derivation.
 | Proven | Low-frequency sweep with `|Omega tau_chi| <= rho` and tolerance above `|alpha c_chi| rho^(N+1)` | Taylor truncation through order `N` is within tolerance over the band. | Operational derivative-EFT collapse. |
 | Proven | Concrete orbital template with `e = 0`, `p = 0`, or `p = -3` at `O(e^2)` | The two-harmonic `n, 2n` sweep is absent or incomplete. | Insufficient forcing dictionary. |
 | Proven | Observable projection with arbitrary complex `Lambda(Omega_k)` at each frequency | The projection nuisance can absorb `G(i Omega_k)` point by point. | Observable dictionary collapse. |
+| Proven | Triple bridge with `Omega_in = Omega_out` or `F_in F_out = 0` | The inner/outer carrier inventory has fewer than two usable frequency samples. | One-frequency derivative degeneracy. |
+| Proven | Triple bridge against real degree `N >= 3` derivative EFT with only two carriers | The real odd channel has enough coefficients to interpolate both positive-frequency samples. | Need additional carrier or derivative-order prior. |
+| Proven | Triple bridge against complex degree `N >= 1` polynomial comparator with only two carriers | Complex polynomial interpolation absorbs two samples. | Conservative complex-comparator degeneracy. |
 | Proven | Linear first-order `chi` plus linear two-frequency forcing and linear readout | Superposition leaves only the input frequencies; no `Omega_1 +/- Omega_2` terms appear. | No sideband loophole in the linear MVP. |
 
 ## Non-Collapse Candidate
@@ -55,6 +58,11 @@ frequencies are not distinct, or a sampled point lies on the pole.
 Status: Counterexample candidate. The current concrete forcing candidate is
 `F(Y(t))=(a/r(t))^p` on a small-eccentricity orbit. It is a structural
 observable dictionary, not an empirical detectability claim.
+
+Status: Counterexample candidate. The hierarchical-triple shared-tau bridge is
+the current clean carrier-inventory route: existing inner/outer carriers can
+test real degree-`1` and degree-`2` shared derivative comparators without
+requiring a new tensor harmonic.
 
 ## Failed Sideband Attempt
 

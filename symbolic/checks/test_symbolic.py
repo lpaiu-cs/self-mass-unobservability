@@ -54,6 +54,15 @@ from forcing_observable_dictionary import (  # noqa: E402
     symbols as forcing_symbols,
     validate_rows as validate_forcing_dictionary_rows,
 )
+from triple_shared_tau_bridge import (  # noqa: E402
+    complex_two_frequency_verdict,
+    payload as triple_bridge_payload,
+    real_two_frequency_verdict,
+    rows_as_dicts as triple_bridge_rows,
+    transfer_at_carriers,
+    two_carrier_real_odd_residual_order1,
+    validate_rows as validate_triple_bridge_rows,
+)
 
 
 def test_monochromatic_response_solves_relaxation_equation() -> None:
@@ -328,6 +337,54 @@ def test_forcing_dictionary_payload_has_required_columns() -> None:
     assert "missing_assumption" in schema
 
 
+def test_triple_bridge_rows_are_classified() -> None:
+    rows = triple_bridge_rows()
+    validate_triple_bridge_rows(rows)
+
+    assert rows
+    assert all(row["claim_status"] for row in rows)
+    assert all(row["N_frequencies"] for row in rows)
+    assert all(row["verdict"] for row in rows)
+
+
+def test_triple_bridge_two_carriers_break_low_real_derivative_orders() -> None:
+    assert real_two_frequency_verdict(1)["verdict"] == "distinguishable"
+    assert real_two_frequency_verdict(2)["verdict"] == "distinguishable"
+    assert real_two_frequency_verdict(3)["verdict"] == "degenerate at two carriers"
+
+
+def test_triple_bridge_two_carriers_are_not_enough_for_complex_degree1() -> None:
+    assert complex_two_frequency_verdict(0)["verdict"] == "distinguishable"
+    assert complex_two_frequency_verdict(1)["verdict"] == "degenerate at two carriers"
+
+
+def test_triple_bridge_transfer_uses_distinct_inner_outer_samples() -> None:
+    transfer = transfer_at_carriers()
+
+    assert transfer["G_in"] != transfer["G_out"]
+    assert transfer["difference"] != 0
+
+
+def test_triple_bridge_real_odd_residual_has_expected_collapse_limits() -> None:
+    residual = two_carrier_real_odd_residual_order1()
+    sym = real_odd_symbols(1)
+    u0 = sym.u_nodes[0]
+
+    assert residual != 0
+    assert sp.simplify(residual.subs(sym.beta, 0)) == 0
+    assert sp.simplify(residual.subs(sym.tau, 0)) == 0
+    assert sp.simplify(residual.subs(sym.u_star, u0)) == 0
+
+
+def test_triple_bridge_payload_records_carrier_inventory() -> None:
+    data = triple_bridge_payload()
+
+    assert "forcing_model" in data
+    assert "transfer_at_carriers" in data
+    assert "real_degree_boundaries" in data
+    assert data["real_degree_boundaries"]["1"]["verdict"] == "distinguishable"
+
+
 def main() -> None:
     test_monochromatic_response_solves_relaxation_equation()
     test_transfer_function_components_match_real_solution()
@@ -358,6 +415,12 @@ def main() -> None:
     test_orbital_two_harmonic_dotf_obstruction()
     test_forcing_dictionary_rows_are_classified()
     test_forcing_dictionary_payload_has_required_columns()
+    test_triple_bridge_rows_are_classified()
+    test_triple_bridge_two_carriers_break_low_real_derivative_orders()
+    test_triple_bridge_two_carriers_are_not_enough_for_complex_degree1()
+    test_triple_bridge_transfer_uses_distinct_inner_outer_samples()
+    test_triple_bridge_real_odd_residual_has_expected_collapse_limits()
+    test_triple_bridge_payload_records_carrier_inventory()
     print("dynamic chi symbolic checks passed")
 
 

@@ -99,6 +99,21 @@ Status: Proven. If `Lambda(Omega_k)` is an arbitrary complex nuisance at every
 frequency, the observable target collapses because the nuisance can absorb the
 pole relation.
 
+## Triple Shared-Tau Carrier Bridge
+
+Status: Counterexample candidate. A hierarchical triple can provide two
+existing GR carrier frequencies, `Omega_in` and `Omega_out`, without requiring
+a new tensor harmonic.
+
+Status: Counterexample candidate. If the two frequencies are distinct and both
+carrier amplitudes are nonzero, they are enough to test a real
+shared-coefficient degree-`1` or degree-`2` derivative EFT.
+
+Status: Proven. The same two carriers are not enough against real degree
+`N >= 3` comparators or against an overpowered complex degree-`1` polynomial
+comparator. Those require additional carrier frequencies or a justified
+derivative-order prior.
+
 ## Sideband Test
 
 Status: Proven. A linear time-invariant one-state model driven by `F1 cos(Omega1 t) + F2 cos(Omega2 t)` cannot create sidebands in the linear readout.

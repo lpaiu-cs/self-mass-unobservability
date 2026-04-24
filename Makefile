@@ -1,6 +1,6 @@
 PYTHON ?= python
 
-.PHONY: chi-response chi-two-frequency chi-basis-audit frequency-sweep forcing-dictionary symbolic-check
+.PHONY: chi-response chi-two-frequency chi-basis-audit frequency-sweep forcing-dictionary triple-shared-tau-bridge symbolic-check
 
 chi-response:
 	$(PYTHON) symbolic/chi_relaxation_response.py
@@ -16,6 +16,9 @@ frequency-sweep:
 
 forcing-dictionary:
 	$(PYTHON) symbolic/forcing_observable_dictionary.py
+
+triple-shared-tau-bridge:
+	$(PYTHON) symbolic/triple_shared_tau_bridge.py
 
 symbolic-check:
 	$(PYTHON) symbolic/checks/test_symbolic.py

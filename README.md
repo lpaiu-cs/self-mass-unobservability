@@ -41,6 +41,11 @@ Status: Counterexample candidate. The M2 frequency-sweep target is sharper: a re
 
 Status: Counterexample candidate. The M3 forcing dictionary lowers that target to a concrete template: a normalized power-law invariant `(a/r)^p` on a small-eccentricity orbit produces `n` and `2n` harmonics through `O(e^2)`, and a calibrated linear observable projection preserves the same pole-bearing transfer relation.
 
+Status: Counterexample candidate. The triple shared-tau bridge gives a cleaner
+carrier inventory: existing hierarchical-triple inner and outer GR carriers
+provide two distinct samples, enough to test real shared-coefficient degree-1
+and degree-2 derivative comparators when both carrier amplitudes are nonzero.
+
 Status: Proven. For the linear readout above and a two-frequency linear drive, no sidebands are generated. Sidebands require a nonlinear drive/readout, a hereditary kernel with mixing, a second-order internal mode coupled nonlinearly, or a threshold/hysteretic extension.
 
 ## Layout
@@ -56,6 +61,7 @@ Status: Proven. For the linear readout above and a two-frequency linear drive, n
 - `symbolic/chi_two_frequency_response.py`: two-frequency superposition and sideband check.
 - `symbolic/frequency_sweep_distinguishability.py`: polynomial interpolation and Taylor-residual checks.
 - `symbolic/forcing_observable_dictionary.py`: harmonic forcing and projection checks.
+- `symbolic/triple_shared_tau_bridge.py`: inner/outer carrier bridge to the shared-`tau_chi` frequency-sweep test.
 - `symbolic/checks/test_symbolic.py`: deterministic symbolic checks.
 - `counterexamples/README.md`: loophole framing and escalation list.
 

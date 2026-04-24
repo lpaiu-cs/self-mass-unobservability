@@ -109,6 +109,20 @@ Status: Proven. The `n` and `2n` harmonics give the first real-coefficient
 degree-`1` and degree-`2` finite-derivative obstruction in one system, provided
 the observable projection is not arbitrary frequency by frequency.
 
+## Triple Carrier Bridge
+
+Status: Counterexample candidate. Existing triple inner/outer carriers sample
+the same transfer at `G(Omega_in)` and `G(Omega_out)`.
+
+Status: Counterexample candidate. This two-carrier inventory breaks the
+physical real shared-coefficient degree-`1` and degree-`2` derivative
+comparators when `Omega_in != Omega_out`, `F_in F_out != 0`, and
+`beta tau_chi != 0`.
+
+Status: Proven. It does not by itself break higher real derivative order or
+complex degree-`1` comparators. The bridge is therefore a low-order positive
+route, not a final universal theorem.
+
 ## Large-Frequency Behavior
 
 Status: Proven. For `x = Omega tau_chi >> 1`,

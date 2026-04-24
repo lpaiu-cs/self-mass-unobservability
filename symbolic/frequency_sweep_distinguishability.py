@@ -97,9 +97,13 @@ def real_odd_symbols(order: int) -> RealOddSymbols:
     if order < 0:
         raise ValueError("order must be non-negative")
     node_count = max(0, (order + 1) // 2)
-    u_nodes = sp.symbols(f"u0:{node_count}")
-    if node_count == 1:
-        u_nodes = (u_nodes,)
+    raw_nodes = sp.symbols(f"u0:{node_count}")
+    if node_count == 0:
+        u_nodes = ()
+    elif isinstance(raw_nodes, tuple):
+        u_nodes = raw_nodes
+    else:
+        u_nodes = (raw_nodes,)
     return RealOddSymbols(
         u_nodes=tuple(u_nodes),
         u_star=sp.Symbol("u_star"),
