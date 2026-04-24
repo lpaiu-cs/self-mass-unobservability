@@ -71,12 +71,33 @@ Status: Conjectural. The repository roadmap is organized around theorem progress
 | M7.4 | Proven | [`../lemmas/12-magnetic-ordering-salvage.md`](../lemmas/12-magnetic-ordering-salvage.md) | The exact strength and cost of electric-only salvage assumptions are written explicitly. |
 | M7.5 | Conjectural | [`docs/theorem-A-freefall.md`](theorem-A-freefall.md) and [`failure-ledger.md`](failure-ledger.md) | The repo now splits electric-only salvage from the corrected `E/B` theorem route. |
 
+## M8: Family-Admission No-Go And Necessary Budgets
+
+| Item | Status | Deliverable | Exit condition |
+| --- | --- | --- | --- |
+| M8.1 | Proven | [`family-admission-theorem.md`](family-admission-theorem.md) | The negative uniqueness branch is promoted from isolated audits into a class-limited family-admission theorem. |
+| M8.2 | Proven | [`../lemmas/15-rank2-family-admission.md`](../lemmas/15-rank2-family-admission.md) and [`../lemmas/16-rank0-family-admission.md`](../lemmas/16-rank0-family-admission.md) | Rank-2 STF and rank-0 scalar family classes are abstracted from the explicit audits. |
+| M8.3 | Proven | [`../symbolic/family_witness_map.py`](../symbolic/family_witness_map.py) | The current audited family classes and their canonical witnesses are summarized deterministically. |
+| M8.4 | Proven | [`suppression-budget-theorem.md`](suppression-budget-theorem.md), [`family-class-table.md`](family-class-table.md), and [`../symbolic/witness_threshold_map.py`](../symbolic/witness_threshold_map.py) | Necessary class-limited suppression budgets are explicit at `\Delta_{\max} = 4`. |
+| M8.5 | Conjectural | [`docs/theorem-A-freefall.md`](theorem-A-freefall.md) and [`failure-ledger.md`](failure-ledger.md) | The main positive theorem target is finite-family fixed-order collapse rather than minimal-sector uniqueness. |
+
+## M9: Mixed-Witness Threshold Classification
+
+| Item | Status | Deliverable | Exit condition |
+| --- | --- | --- | --- |
+| M9.1 | Proven | [`mixed-witness-thresholds.md`](mixed-witness-thresholds.md) | Self witnesses, mixed witnesses, and `W_{\min}` are defined explicitly for the audited family classes. |
+| M9.2 | Proven | [`../lemmas/18-rank2-mixed-witness-threshold.md`](../lemmas/18-rank2-mixed-witness-threshold.md) | The audited rank-2 STF class is classified as a sharp tied self/mixed threshold. |
+| M9.3 | Proven | [`../lemmas/19-rank0-mixed-witness-threshold.md`](../lemmas/19-rank0-mixed-witness-threshold.md) | The audited rank-0 bare-scalar and derivative-only subclasses are split into self-dominated versus tied sharp thresholds. |
+| M9.4 | Proven | [`../symbolic/mixed_witness_map.py`](../symbolic/mixed_witness_map.py) | A deterministic machine-readable mixed-witness threshold table runs without error. |
+| M9.5 | Proven | [`sharp-threshold-status.md`](sharp-threshold-status.md) and [`family-class-table.md`](family-class-table.md) | Each audited family class is labeled as sharp, lower-bound-only, or unresolved. |
+| M9.6 | Conjectural | [`docs/theorem-A-freefall.md`](theorem-A-freefall.md) and [`failure-ledger.md`](failure-ledger.md) | The live negative-branch bottleneck is stated as sharp witness-threshold classification beyond mere witness existence. |
+
 ## Near-Term Sequence
 
-1. Status: Conjectural. Decide whether to pursue the corrected `E/B` theorem route as the main line or to impose a stronger magnetic-ordering salvage assumption for an electric-only theorem.
-2. Status: Conjectural. If the corrected `E/B` route is accepted, attack the next primitive-family extension and the conditional collapse step rather than returning to electric-only salvage by default.
+1. Status: Conjectural. Extend the mixed-witness sharpness analysis beyond the currently audited family classes and decide whether a genuinely mixed-dominant class appears.
+2. Status: Conjectural. Push the positive branch from audited finite examples toward an abstract finite-family fixed-order collapse theorem.
 3. Status: Conjectural. Decide whether any further mixed-trace or gradient identity should be introduced explicitly, rather than silently collapsing enlarged-sector operators.
-4. Status: Counterexample candidate. Promote the dominant loophole class only if it produces a genuine failure of the corrected `E/B` basis or of the next primitive-family attack.
+4. Status: Counterexample candidate. Promote the dominant loophole class only if it produces a genuine failure of the corrected finite-family collapse candidate rather than only another uniqueness obstruction.
 5. Status: Conjectural. Revisit the scalar `s_A` corollary only after the higher-dimensional sensitivity manifold statement is sharp.
 
 ## Explicit Non-Goals For M1

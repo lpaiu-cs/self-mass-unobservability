@@ -20,6 +20,7 @@ from eb_survivor_rank_check import eb_rank_summary
 from es_sector_delta4 import es_summary
 from es_survivor_rank_check import es_rank_summary
 from family_witness_map import family_witness_summary
+from mixed_witness_map import mixed_witness_summary
 from primitive_family_attack import primitive_attack_summary
 from shift_scalar_sector_delta4 import shift_scalar_summary
 from witness_threshold_map import witness_threshold_summary
@@ -317,6 +318,31 @@ def test_witness_threshold_map() -> None:
     assert all(entry.sufficient_for_uniqueness is False for entry in summary.entries)
 
 
+def test_mixed_witness_map() -> None:
+    summary = mixed_witness_summary()
+    assert summary.delta_max == 4
+    assert summary.mixed_dominant_family_class is None
+    assert tuple(entry.family_class for entry in summary.entries) == (
+        "rank2_stf",
+        "rank0_scalar_unsuppressed",
+        "rank0_scalar_derivative_only",
+    )
+    rank2, bare_scalar, derivative_only = summary.entries
+    assert rank2.first_self_witness == "X2"
+    assert rank2.first_mixed_witness == "EX"
+    assert rank2.self_weight == rank2.mixed_weight == rank2.w_min == 2
+    assert "tie" in rank2.sharpness_status
+    assert bare_scalar.first_self_witness == "S"
+    assert bare_scalar.first_mixed_witness == "SE2"
+    assert bare_scalar.self_weight == bare_scalar.w_min == 1
+    assert bare_scalar.mixed_weight == 3
+    assert "dominates" in bare_scalar.sharpness_status
+    assert derivative_only.first_self_witness == "dotS2"
+    assert derivative_only.first_mixed_witness == "DtS_E2"
+    assert derivative_only.self_weight == derivative_only.mixed_weight == derivative_only.w_min == 4
+    assert "tie" in derivative_only.sharpness_status
+
+
 def main() -> None:
     test_symmetric_quadratic_jet()
     test_worldline_force_structure()
@@ -338,6 +364,7 @@ def main() -> None:
     test_shift_scalar_sector_survivors()
     test_family_witness_map()
     test_witness_threshold_map()
+    test_mixed_witness_map()
     print("symbolic checks passed")
 
 

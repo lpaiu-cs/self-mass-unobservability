@@ -39,9 +39,9 @@
 
 - Status: Proven. Minimal-sector uniqueness is not the positive theorem target anymore.
 - Status: Proven. Across the explicitly audited family classes, unsuppressed family admission always yields a new low-order survivor.
-- Status: Proven. For STF rank-2 family admission, the generic witness is `X2`; the audited explicit instance is `B2`.
-- Status: Proven. For unsuppressed rank-0 scalar-family admission, the smallest explicit witness is `S`.
-- Status: Proven. For derivative-only or shift-symmetric scalar-family admission, the first new survivors still appear at weight `4`, with canonical witness `dotS2`.
+- Status: Proven. For STF rank-2 family admission, the self witness `X2` and the mixed witness `EX` both appear at weight `2`; the audited explicit self instance is `B2`.
+- Status: Proven. For unsuppressed rank-0 scalar-family admission, the self witness `S` appears before the first mixed witness `SE2`.
+- Status: Proven. For derivative-only or shift-symmetric scalar-family admission, the self witness `dotS2` and the mixed witness `DtS_E2` both first appear at weight `4`.
 - Status: Proven. Therefore a stronger physically justified minimal-sector theorem is already on the no-go branch unless explicit suppression, ordering, or background-restriction assumptions are added family by family.
 
 ## Scope Separation
@@ -66,7 +66,9 @@
 11. Status: Proven. [`../symbolic/family_witness_map.py`](../symbolic/family_witness_map.py) records the current family-class witness table and the exact theorem layer each audited class obstructs.
 12. Status: Proven. [`family-admission-theorem.md`](family-admission-theorem.md) promotes the repeated family-attack pattern into an explicit no-go statement for the audited family classes.
 13. Status: Proven. [`suppression-budget-theorem.md`](suppression-budget-theorem.md), [`../lemmas/17-witness-threshold-classification.md`](../lemmas/17-witness-threshold-classification.md), and [`../symbolic/witness_threshold_map.py`](../symbolic/witness_threshold_map.py) promote the audited witnesses into necessary suppression thresholds for minimal-sector uniqueness at `\Delta_{\max} = 4`.
-14. Status: Conjectural. The remaining positive burden is to prove the finite-family fixed-order collapse statement for arbitrary explicit admitted catalogs rather than just the audited examples.
+14. Status: Proven. [`mixed-witness-thresholds.md`](mixed-witness-thresholds.md), [`../lemmas/18-rank2-mixed-witness-threshold.md`](../lemmas/18-rank2-mixed-witness-threshold.md), [`../lemmas/19-rank0-mixed-witness-threshold.md`](../lemmas/19-rank0-mixed-witness-threshold.md), and [`../symbolic/mixed_witness_map.py`](../symbolic/mixed_witness_map.py) classify the first self and first mixed witnesses for the audited family classes.
+15. Status: Conjectural. The live negative-branch bottleneck is now sharp witness-threshold classification beyond mere witness existence.
+16. Status: Conjectural. The remaining positive burden is to prove the finite-family fixed-order collapse statement for arbitrary explicit admitted catalogs rather than just the audited examples.
 
 ## Current Verdict
 
@@ -76,7 +78,10 @@
 - Status: Proven. The stronger physically justified minimal-sector theorem should not presently be treated as alive.
 - Status: Proven. Minimal-sector uniqueness is already effectively dead across the audited unsuppressed family classes.
 - Status: Proven. No audited family class is currently harmless without extra assumptions.
-- Status: Proven. Necessary suppression budgets are now explicit for the audited classes: `w_X \ge 3` for rank-2 STF families, `w_S \ge 5` or outright exclusion for bare scalar families, and derivative-family block weight above `2` for the current derivative-only scalar witnesses.
+- Status: Proven. Necessary suppression budgets are explicit for the audited classes: `w_X \ge 3` for rank-2 STF families, `w_S \ge 5` or outright exclusion for bare scalar families, and derivative-family block weight above `2` for the current derivative-only scalar witnesses.
+- Status: Proven. No audited family class currently exhibits a mixed witness below its first self witness at `\Delta \le 4`; the live negative-branch bottleneck is sharp witness-threshold classification beyond mere witness existence.
+- Status: Proven. The rank-2 STF and derivative-only scalar classes already show that the sharp thresholds are not purely self-witness statements, because mixed witnesses tie at the first surviving order.
+- Status: Proven. The bare scalar class remains self-dominated: `S` appears before the first mixed witness `SE2`.
 - Status: Conjectural. The broad positive target remains finite-family fixed-order collapse, and it remains plausible because the audited enlarged family catalogs still close finitely at `\Delta \le 4`.
 
 ## Dependencies
@@ -96,12 +101,16 @@
 - Status: Proven. [`../lemmas/14-derivative-only-scalar-audit.md`](../lemmas/14-derivative-only-scalar-audit.md)
 - Status: Proven. [`../lemmas/15-rank2-family-admission.md`](../lemmas/15-rank2-family-admission.md)
 - Status: Proven. [`../lemmas/16-rank0-family-admission.md`](../lemmas/16-rank0-family-admission.md)
+- Status: Proven. [`../lemmas/18-rank2-mixed-witness-threshold.md`](../lemmas/18-rank2-mixed-witness-threshold.md)
+- Status: Proven. [`../lemmas/19-rank0-mixed-witness-threshold.md`](../lemmas/19-rank0-mixed-witness-threshold.md)
 - Status: Conjectural. [`conditional-collapse-lemma.md`](conditional-collapse-lemma.md)
 - Status: Conjectural. [`eb-conditional-collapse.md`](eb-conditional-collapse.md)
 - Status: Conjectural. [`power-counting.md`](power-counting.md)
 - Status: Proven. [`family-admission-no-go.md`](family-admission-no-go.md)
 - Status: Proven. [`family-admission-theorem.md`](family-admission-theorem.md)
+- Status: Proven. [`mixed-witness-thresholds.md`](mixed-witness-thresholds.md)
 - Status: Proven. [`suppression-budget-theorem.md`](suppression-budget-theorem.md)
+- Status: Proven. [`sharp-threshold-status.md`](sharp-threshold-status.md)
 - Status: Proven. [`broad-collapse-reformulation.md`](broad-collapse-reformulation.md)
 - Status: Proven. [`family-class-table.md`](family-class-table.md)
 - Status: Proven. [`primitive-catalog.md`](primitive-catalog.md)
@@ -110,6 +119,7 @@
 - Status: Proven. [`scalar-family-ordering.md`](scalar-family-ordering.md)
 - Status: Proven. [`reduction-rules.md`](reduction-rules.md)
 - Status: Proven. [`../symbolic/witness_threshold_map.py`](../symbolic/witness_threshold_map.py)
+- Status: Proven. [`../symbolic/mixed_witness_map.py`](../symbolic/mixed_witness_map.py)
 
 ## Failure Triggers
 

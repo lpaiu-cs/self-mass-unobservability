@@ -57,3 +57,5 @@ This ledger records the active assumptions behind the free-fall sensitivity-coll
 
 - Status: Proven. The derivative-only scalar audit is a separate family-admission test, not a new global theorem assumption.
 - Status: Proven. In that audit, non-shift-symmetric total-derivative preimages such as `D_\tau(S X)` are not used to reduce operators, because bare `S` is excluded by construction.
+- Status: Proven. No cross-family orthogonality or alignment condition such as `Tr(EX) = 0`, `SE2 = 0`, or `DtS_E2 = 0` is assumed in the mixed-witness threshold audit.
+- Status: Proven. The mixed-witness threshold notes do not infer mixed-sector harmlessness from self-witness analysis alone; self and mixed survivors are checked separately.

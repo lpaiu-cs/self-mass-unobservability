@@ -21,12 +21,26 @@
 - Status: Proven. Derivative-only scalar class:
   the first audited witnesses are `\{DtS_B2,\ dotS2,\ DtS_E2,\ divEGradS,\ gradS2\}` at weight `4`, so uniqueness up to `\Delta \le 4` requires derivative-family blocks to be pushed above their current weight-`2` admission, for example to effective weight `3`, or an explicit rule removing those mixed derivative witnesses.
 
+## M9 Sharpness Status Within The Audited Classes
+
+- Status: Proven. For the audited rank-2 STF class, the current threshold is sharp within the class because `W_{\mathrm{self}} = W_{\mathrm{mix}} = 2`.
+- Status: Proven. For the audited bare scalar class, the current threshold is sharp within the class because `W_{\mathrm{self}} = 1 < 3 = W_{\mathrm{mix}}`.
+- Status: Proven. For the audited derivative-only scalar class, the current threshold is sharp within the class because `W_{\mathrm{self}} = W_{\mathrm{mix}} = 4`.
+- Status: Proven. Therefore the current class-limited threshold map is no longer only about witness existence; it also records whether the first obstruction is self-dominated or tied with a mixed witness.
+
 ## What This Theorem Buys
 
 - Status: Proven. The repeated family-attack pattern is now compressed into a witness-threshold statement.
 - Status: Proven. The theorem explains why `B2`, `S`, and `dotS2` belong to the same structural pattern rather than being isolated curiosities.
 - Status: Proven. The theorem does not rescue minimal-sector uniqueness.
 - Status: Proven. It only tells us the minimum budget any attempted rescue must at least pay for the audited family classes.
+
+## What Still Remains For Sharpness
+
+- Status: Proven. The theorem above remains a necessary-threshold theorem even after the M9 sharpness split.
+- Status: Proven. Sharpness within the audited classes does not make the listed budgets sufficient for uniqueness.
+- Status: Conjectural. It remains open whether broader subclasses or future family audits could produce a smaller mixed witness than the currently audited class-limited `W_{\min}` values.
+- Status: Conjectural. It remains open whether there is an abstract theorem computing `W_{\min}(\mathcal F)` beyond the currently audited family classes.
 
 ## Boundary
 
