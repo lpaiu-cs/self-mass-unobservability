@@ -1,0 +1,162 @@
+{
+  "assumptions": {
+    "carrier_orbit": "Newtonian nested-Kepler hierarchical triple",
+    "clock_sector": "decoupled EFT only",
+    "epsilon_order": "through leading nontrivial O(a_in/a_out)",
+    "free_fall_sector": "GR",
+    "post_keplerian_order": "leading clock O(c^-2)",
+    "propagation_sector": "GR",
+    "status": "leading triple outer-potential dictionary; not a final theorem"
+  },
+  "notation": {
+    "M_in": "m_A + m_B",
+    "R_out": "a_out (1 - e_out cos E_out)",
+    "U_inner": "G m_B / r_in",
+    "U_outer_expanded": "G m_C/R_out + G m_C beta_A r_in cos_Phi/R_out^2 + O(epsilon^2)",
+    "alpha_A": "1 + zeta_1 s_A + zeta_2 s_A^2",
+    "beta_A": "m_B / M_in, so rho_A = beta_A r_in",
+    "clock_rate": "d tau_A/dt = 1 - v_A^2/(2 c^2) - alpha_A (U_inner + U_outer)/c^2",
+    "cos_Phi": "dot(rhat_in, Rhat_out), carrying relative orientation",
+    "epsilon": "a_in / a_out",
+    "inner_bodies": "A is the clock pulsar, B is the inner companion",
+    "outer_body": "C orbits the inner-binary barycenter",
+    "r_in": "a_in (1 - e_in cos E_in)"
+  },
+  "projection": {
+    "harmonic_labels": "secular, inner-only, outer-only, combination",
+    "inner_monopole_projector": "dt/dE_in = (1 - e_in cos E_in)/n_in; U_inner dt/dE_in integrates to E_in secular plus sin E_in",
+    "outer_dipole_kernel": "K_dipole = -G m_C beta_A epsilon factor/(a_out c^2)",
+    "outer_dipole_projector": "Delta_dipole = integral dt K_dipole [(1 - e_in cos E_in)/(1 - e_out cos E_out)^2] cos_Phi",
+    "outer_monopole_projector": "dt/dE_out = (1 - e_out cos E_out)/n_out; outer monopole integrates to E_out secular plus sin E_out"
+  },
+  "rows": [
+    {
+      "absorption_target": "spin phase / spin frequency",
+      "expansion_order": "O(c^-2), Newtonian nested-Kepler carrier, leading nontrivial O(epsilon=a_in/a_out)",
+      "harmonic": "secular",
+      "notes": "GR carrier; U_inner contribution with factor 1. Coordinate-time secular trend is absorbed by spin parameters.",
+      "observable_status": "absorbed",
+      "term": "inner_baseline_secular"
+    },
+    {
+      "absorption_target": "inner Einstein delay gamma",
+      "expansion_order": "O(c^-2), Newtonian nested-Kepler carrier, leading nontrivial O(epsilon=a_in/a_out)",
+      "harmonic": "inner-only",
+      "notes": "GR carrier; after secular absorption, residual is proportional to -G e_in m_B (1) sin E_in/(a_in c^2 n_in).",
+      "observable_status": "degenerate",
+      "term": "inner_baseline_einstein_sinE"
+    },
+    {
+      "absorption_target": "spin phase / spin frequency",
+      "expansion_order": "O(c^-2), Newtonian nested-Kepler carrier, leading nontrivial O(epsilon=a_in/a_out)",
+      "harmonic": "secular",
+      "notes": "GR carrier; outer monopole U_C(R_out) with factor 1. Coordinate-time secular trend is absorbed by spin parameters.",
+      "observable_status": "absorbed",
+      "term": "outer_monopole_baseline_secular"
+    },
+    {
+      "absorption_target": "outer Einstein/redshift delay parameter",
+      "expansion_order": "O(c^-2), Newtonian nested-Kepler carrier, leading nontrivial O(epsilon=a_in/a_out)",
+      "harmonic": "outer-only",
+      "notes": "GR carrier; after secular absorption, residual is proportional to -G e_out m_C (1) sin E_out/(a_out c^2 n_out).",
+      "observable_status": "degenerate",
+      "term": "outer_monopole_baseline_sinE"
+    },
+    {
+      "absorption_target": "GR triple clock carrier / fitted triple parameters",
+      "expansion_order": "O(c^-2), Newtonian nested-Kepler carrier, leading nontrivial O(epsilon=a_in/a_out)",
+      "harmonic": "combination",
+      "notes": "GR carrier; leading O(epsilon) outer-gradient clock term. Residual structure is integral dt of -G m_C beta_A epsilon (1) [(1 - e_in cos E_in)/(1 - e_out cos E_out)^2] cos_Phi/(a_out c^2). This is not a pure spin, inner-only gamma, or outer-only gamma basis.",
+      "observable_status": "degenerate",
+      "term": "outer_dipole_baseline_combination"
+    },
+    {
+      "absorption_target": "spin phase / spin frequency",
+      "expansion_order": "O(c^-2), Newtonian nested-Kepler carrier, leading nontrivial O(epsilon=a_in/a_out)",
+      "harmonic": "secular",
+      "notes": "linear decoupled clock term; U_inner contribution with factor zeta_1 s_A. Coordinate-time secular trend is absorbed by spin parameters.",
+      "observable_status": "absorbed",
+      "term": "inner_zeta1_sA_secular"
+    },
+    {
+      "absorption_target": "inner Einstein delay gamma",
+      "expansion_order": "O(c^-2), Newtonian nested-Kepler carrier, leading nontrivial O(epsilon=a_in/a_out)",
+      "harmonic": "inner-only",
+      "notes": "linear decoupled clock term; after secular absorption, residual is proportional to -G e_in m_B (zeta_1 s_A) sin E_in/(a_in c^2 n_in).",
+      "observable_status": "degenerate",
+      "term": "inner_zeta1_sA_einstein_sinE"
+    },
+    {
+      "absorption_target": "spin phase / spin frequency",
+      "expansion_order": "O(c^-2), Newtonian nested-Kepler carrier, leading nontrivial O(epsilon=a_in/a_out)",
+      "harmonic": "secular",
+      "notes": "linear decoupled clock term; outer monopole U_C(R_out) with factor zeta_1 s_A. Coordinate-time secular trend is absorbed by spin parameters.",
+      "observable_status": "absorbed",
+      "term": "outer_monopole_zeta1_sA_secular"
+    },
+    {
+      "absorption_target": "outer Einstein/redshift delay parameter",
+      "expansion_order": "O(c^-2), Newtonian nested-Kepler carrier, leading nontrivial O(epsilon=a_in/a_out)",
+      "harmonic": "outer-only",
+      "notes": "linear decoupled clock term; after secular absorption, residual is proportional to -G e_out m_C (zeta_1 s_A) sin E_out/(a_out c^2 n_out).",
+      "observable_status": "degenerate",
+      "term": "outer_monopole_zeta1_sA_sinE"
+    },
+    {
+      "absorption_target": "none at dictionary level; check covariance later",
+      "expansion_order": "O(c^-2), Newtonian nested-Kepler carrier, leading nontrivial O(epsilon=a_in/a_out)",
+      "harmonic": "combination",
+      "notes": "linear decoupled clock term; leading O(epsilon) outer-gradient clock term. Residual structure is integral dt of -G m_C beta_A epsilon (zeta_1 s_A) [(1 - e_in cos E_in)/(1 - e_out cos E_out)^2] cos_Phi/(a_out c^2). This is not a pure spin, inner-only gamma, or outer-only gamma basis.",
+      "observable_status": "observable",
+      "term": "outer_dipole_zeta1_sA_combination"
+    },
+    {
+      "absorption_target": "spin phase / spin frequency",
+      "expansion_order": "O(c^-2), Newtonian nested-Kepler carrier, leading nontrivial O(epsilon=a_in/a_out)",
+      "harmonic": "secular",
+      "notes": "quadratic decoupled clock term; U_inner contribution with factor zeta_2 s_A^2. Coordinate-time secular trend is absorbed by spin parameters.",
+      "observable_status": "absorbed",
+      "term": "inner_zeta2_sA2_secular"
+    },
+    {
+      "absorption_target": "inner Einstein delay gamma",
+      "expansion_order": "O(c^-2), Newtonian nested-Kepler carrier, leading nontrivial O(epsilon=a_in/a_out)",
+      "harmonic": "inner-only",
+      "notes": "quadratic decoupled clock term; after secular absorption, residual is proportional to -G e_in m_B (zeta_2 s_A^2) sin E_in/(a_in c^2 n_in).",
+      "observable_status": "degenerate",
+      "term": "inner_zeta2_sA2_einstein_sinE"
+    },
+    {
+      "absorption_target": "spin phase / spin frequency",
+      "expansion_order": "O(c^-2), Newtonian nested-Kepler carrier, leading nontrivial O(epsilon=a_in/a_out)",
+      "harmonic": "secular",
+      "notes": "quadratic decoupled clock term; outer monopole U_C(R_out) with factor zeta_2 s_A^2. Coordinate-time secular trend is absorbed by spin parameters.",
+      "observable_status": "absorbed",
+      "term": "outer_monopole_zeta2_sA2_secular"
+    },
+    {
+      "absorption_target": "outer Einstein/redshift delay parameter",
+      "expansion_order": "O(c^-2), Newtonian nested-Kepler carrier, leading nontrivial O(epsilon=a_in/a_out)",
+      "harmonic": "outer-only",
+      "notes": "quadratic decoupled clock term; after secular absorption, residual is proportional to -G e_out m_C (zeta_2 s_A^2) sin E_out/(a_out c^2 n_out).",
+      "observable_status": "degenerate",
+      "term": "outer_monopole_zeta2_sA2_sinE"
+    },
+    {
+      "absorption_target": "none at dictionary level; check covariance later",
+      "expansion_order": "O(c^-2), Newtonian nested-Kepler carrier, leading nontrivial O(epsilon=a_in/a_out)",
+      "harmonic": "combination",
+      "notes": "quadratic decoupled clock term; leading O(epsilon) outer-gradient clock term. Residual structure is integral dt of -G m_C beta_A epsilon (zeta_2 s_A^2) [(1 - e_in cos E_in)/(1 - e_out cos E_out)^2] cos_Phi/(a_out c^2). This is not a pure spin, inner-only gamma, or outer-only gamma basis.",
+      "observable_status": "observable",
+      "term": "outer_dipole_zeta2_sA2_combination"
+    }
+  ],
+  "schema": [
+    "term",
+    "expansion_order",
+    "harmonic",
+    "observable_status",
+    "absorption_target",
+    "notes"
+  ]
+}
