@@ -22,6 +22,7 @@ with `F(t) = F0 cos(Omega t)` for the first derivation.
 | Proven | `alpha c_chi = 0` | The internal state either is not driven or is not read out in the mass response. | No dynamic observable. |
 | Proven | `Omega tau_chi << 1` with a local derivative EFT truncated at order `N` | `chi = alpha sum_{n=0}^N (-tau_chi d/dt)^n F + O((Omega tau_chi)^{N+1})`. | Order-by-order derivative collapse. |
 | Proven | Single known drive frequency with an unconstrained local `dot F` Wilson coefficient | The leading quadrature can be fit by one derivative coefficient without proving an internal state. | Static-basis-degenerate signal. |
+| Proven | Single known drive frequency with unconstrained `{F, dot F}` coefficients | Both cosine and sine quadratures are fit by `a0 F + a1 dot F`, but the fitted `a1` depends on `Omega`. | Single-frequency derivative degeneracy. |
 | Proven | Linear first-order `chi` plus linear two-frequency forcing and linear readout | Superposition leaves only the input frequencies; no `Omega_1 +/- Omega_2` terms appear. | No sideband loophole in the linear MVP. |
 
 ## Non-Collapse Candidate

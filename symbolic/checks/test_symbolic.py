@@ -15,6 +15,15 @@ from chi_relaxation_response import (  # noqa: E402
     steady_state_response,
     transfer_function,
 )
+from chi_basis_audit import (  # noqa: E402
+    derivative_series_residual,
+    polynomial_obstruction,
+    rows_as_dicts,
+    single_frequency_derivative_fit,
+    static_only_residual,
+    symbols as basis_symbols,
+    validate_rows,
+)
 from chi_two_frequency_response import (  # noqa: E402
     linear_sideband_residuals,
     relaxation_residual as two_frequency_residual,
@@ -80,6 +89,60 @@ def test_linear_two_frequency_model_has_no_sidebands() -> None:
     assert residuals["difference"] == 0
 
 
+def test_basis_audit_rows_are_classified() -> None:
+    rows = rows_as_dicts()
+    validate_rows(rows)
+    assert rows
+    assert all(row["claim_status"] for row in rows)
+    assert all(row["observable_status"] for row in rows)
+
+
+def test_static_basis_leaves_quadrature_except_collapse_limits() -> None:
+    sym = basis_symbols()
+    residual = static_only_residual()["unmatched_quadrature"]
+
+    assert residual != 0
+    assert sp.simplify(residual.subs(sym["tau_chi"], 0)) == 0
+    assert sp.simplify(residual.subs(sym["Omega"], 0)) == 0
+    assert sp.simplify(residual.subs(sym["alpha"], 0)) == 0
+    assert sp.simplify(residual.subs(sym["c_chi"], 0)) == 0
+
+
+def test_single_frequency_dotF_basis_fits_both_quadratures() -> None:
+    sym = basis_symbols()
+    omega = sym["Omega"]
+    f0 = sym["F0"]
+    fit = single_frequency_derivative_fit()
+    residual = static_only_residual()
+
+    fitted_in_phase = sp.simplify(fit["a0"] * f0)
+    fitted_quadrature = sp.simplify(-fit["a1"] * omega * f0)
+
+    assert sp.simplify(fitted_in_phase - residual["matched_static_amplitude"]) == 0
+    assert sp.simplify(fitted_quadrature - residual["unmatched_quadrature"]) == 0
+
+
+def test_derivative_series_residual_starts_after_truncation_order() -> None:
+    sym = basis_symbols()
+    omega = sym["Omega"]
+    residual = derivative_series_residual(3).subs(
+        {
+            sym["c_Y"]: 0,
+            sym["c_chi"]: 1,
+            sym["alpha"]: 1,
+            sym["tau_chi"]: 1,
+        }
+    )
+
+    assert sp.series(residual, omega, 0, 4).removeO() == 0
+
+
+def test_finite_polynomial_obstruction_records_pole_mismatch() -> None:
+    obstruction = polynomial_obstruction(3)
+    assert "d3" in obstruction["highest_power_coefficient"]
+    assert obstruction["constant_coefficient_after_recursion"] == "-alpha"
+
+
 def main() -> None:
     test_monochromatic_response_solves_relaxation_equation()
     test_transfer_function_components_match_real_solution()
@@ -89,6 +152,11 @@ def main() -> None:
     test_two_frequency_response_has_only_input_frequencies()
     test_two_frequency_response_solves_relaxation_equation()
     test_linear_two_frequency_model_has_no_sidebands()
+    test_basis_audit_rows_are_classified()
+    test_static_basis_leaves_quadrature_except_collapse_limits()
+    test_single_frequency_dotF_basis_fits_both_quadratures()
+    test_derivative_series_residual_starts_after_truncation_order()
+    test_finite_polynomial_obstruction_records_pole_mismatch()
     print("dynamic chi symbolic checks passed")
 
 

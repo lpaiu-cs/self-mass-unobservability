@@ -53,6 +53,22 @@ across drive frequencies, together with the amplitude suppression
 sqrt(A^2 + B^2) / F0 = |alpha| / sqrt(1 + Omega^2 tau_chi^2).
 ```
 
+## Basis Audit Update
+
+Status: Proven. Against an instantaneous static `F` coefficient, the in-phase
+component is degenerate and the finite-`Omega tau_chi` quadrature remains
+outside the static basis.
+
+Status: Proven. Against a one-frequency basis `{F, dot F}` with unconstrained
+coefficients, the same quadrature is degenerate because `dot F` supplies the
+missing sine quadrature at that one frequency.
+
+Status: Counterexample candidate. The surviving target is therefore not a
+single quadrature point by itself. It is the shared frequency-dependent
+transfer relation `alpha c_chi/(1 + i Omega tau_chi)`, which cannot be
+represented exactly by a finite shared-coefficient polynomial derivative basis
+over varying drive frequency.
+
 ## Sideband Test
 
 Status: Proven. A linear time-invariant one-state model driven by `F1 cos(Omega1 t) + F2 cos(Omega2 t)` cannot create sidebands in the linear readout.

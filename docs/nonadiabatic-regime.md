@@ -60,6 +60,27 @@ A(Omega), B(Omega)
 
 with a common `tau_chi`, because no finite instantaneous static coefficient vector reproduces the full rational response over varying `Omega`.
 
+## Basis Audit Result
+
+Status: Proven. The full readout transfer is
+
+```text
+G(Omega) = c_Y + c_chi alpha/(1 + i Omega tau_chi).
+```
+
+Status: Proven. A single known drive frequency can be fit by
+
+```text
+a0 F + a1 dot F
+```
+
+with frequency-local coefficients, so one quadrature point alone is not enough
+against a derivative-EFT comparator.
+
+Status: Counterexample candidate. The nonadiabatic observable target is the
+shared rational transfer relation across changing `Omega`, not the mere
+existence of a sine quadrature in one monochromatic experiment.
+
 ## Large-Frequency Behavior
 
 Status: Proven. For `x = Omega tau_chi >> 1`,
