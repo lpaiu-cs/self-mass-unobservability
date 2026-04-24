@@ -46,3 +46,9 @@ This ledger records the active assumptions behind the free-fall sensitivity-coll
 
 - Status: Proven. The mixed quartic `E/B` STF identity used to eliminate `EBEB` is now explicit in [`reduction-rules.md`](reduction-rules.md); it is not being used tacitly.
 - Status: Proven. No stronger magnetic-ordering salvage assumption is currently active.
+
+## Non-Assumption For M8
+
+- Status: Proven. No scalar-family ordering assumption is currently active that suppresses a parity-even rank-0 external family `S`.
+- Status: Proven. No derivative-only or shift-symmetric scalar rule is being used tacitly.
+- Status: Proven. No scalar-background restriction such as `S = 0`, `S = const.`, or `\nabla_i S = 0` is currently assumed.

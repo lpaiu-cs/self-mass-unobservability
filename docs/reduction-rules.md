@@ -16,6 +16,12 @@ This note lists every reduction rule currently allowed in the `Delta<=4` minimal
 | `D_\tau(B2) = 2 B_DtB` | Proven | `B_DtB` is total-derivative reducible once the magnetic family is admitted. |
 | `D_\tau(B_DtB) = dotB2 + B_Dt2B` | Proven | `B_Dt2B` reduces to `-dotB2` once the magnetic family is admitted. |
 | `D_\tau(EB2) = B2DtE + 2 EBDtB` | Proven | `B2DtE` is reducible to `-2 EBDtB` if `EBDtB` is chosen as the mixed `E/B` normal-form representative. |
+| `D_\tau(S) = DtS` | Proven | `DtS` is total-derivative reducible once the scalar-like family is admitted. |
+| `D_\tau(S2) = 2 S_DtS` | Proven | `S_DtS` is total-derivative reducible once the scalar-like family is admitted. |
+| `D_\tau(DtS) = Dt2S` | Proven | `Dt2S` is total-derivative reducible once the scalar-like family is admitted. |
+| `D_\tau(S DtS) = dotS2 + S_Dt2S` | Proven | `S_Dt2S` reduces to `-dotS2` if `dotS2` is chosen as the scalar-family time-derivative normal-form representative. |
+| `D_\tau(S E2) = DtS_E2 + 2 S E_DtE` | Proven | `SE_DtE` is reducible to `-DtS_E2 / 2` once the scalar-like family is admitted. |
+| `D_\tau(S B2) = DtS_B2 + 2 S B_DtB` | Proven | `S_BDtB` is reducible to `-DtS_B2 / 2` once the scalar-like family is admitted. |
 
 ## Allowed Lower-Order EOM Reductions
 
@@ -26,6 +32,7 @@ This note lists every reduction rule currently allowed in the `Delta<=4` minimal
 | `a_i = 0` modulo lower-order worldline EOM | Proven | Every operator with at least one explicit `a_i` factor is reducible. |
 
 - Status: Proven. This covers `a2`, `aEa`, `aDivE`, `aDtEa`, `a2E2`, `aE2a`, `a4`, `aEGradE_1`, `aEGradE_2`, and `aEGradE_3`.
+- Status: Proven. Once the scalar-like family is admitted, this also covers `aGradS`, `a2S`, `a2DtS`, `aSEa`, `aEGradS`, `SaDivE`, `SaGradS`, and `a2S2`.
 
 ## Allowed Algebraic Identities
 
@@ -41,12 +48,15 @@ This note lists every reduction rule currently allowed in the `Delta<=4` minimal
 - Status: Proven. No vacuum/Bianchi relation is used to collapse `divE2` or `mixedGradE2` into `gradE2`.
 - Status: Proven. No parity-odd epsilon-tensor identity is used in the current audit.
 - Status: Proven. No extra mixed `E/B` trace identity beyond the explicit quartic STF relation above is used to collapse `E2B2`, `EB_sq`, or `TrE2B2`.
+- Status: Proven. No scalar shift symmetry, derivative-only scalar rule, or scalar-background restriction is used unless stated explicitly in [`scalar-family-ordering.md`](scalar-family-ordering.md).
 
 ## Operational Summary
 
 - Status: Proven. Under the currently allowed rules, `TrE2DtE` is reducible.
 - Status: Proven. Under the currently allowed rules, `B_DtB`, `B_Dt2B`, and `B2DtE` are reducible once the magnetic family is admitted.
+- Status: Proven. Under the currently allowed rules, `DtS`, `S_DtS`, `Dt2S`, `S_Dt2S`, `SE_DtE`, and `S_BDtB` are reducible once the scalar-like family is admitted.
 - Status: Proven. Under the currently allowed rules, `EBEB` is reducible once the explicit mixed quartic STF identity is admitted.
 - Status: Proven. Under the currently allowed rules, every acceleration-bearing scalar is reducible.
 - Status: Conjectural. Under the currently allowed rules, `divE2` and `mixedGradE2` remain surviving gradient candidates.
 - Status: Conjectural. Under the currently allowed rules, `divB2`, `mixedGradB2`, and `EBDtB` remain surviving `E/B`-sector candidates once the magnetic family is admitted.
+- Status: Conjectural. Under the currently allowed rules, `S`, `SE2`, `SB2`, `DtS_E2`, `DtS_B2`, `gradS2`, and `divEGradS` remain surviving scalar-family candidates once the scalar-like family is admitted.

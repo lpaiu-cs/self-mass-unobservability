@@ -17,6 +17,8 @@ from enumerate_contractions_delta4 import (
 from enumerate_basis import enumerate_minimal_scalar_monomials
 from eb_sector_delta4 import eb_summary
 from eb_survivor_rank_check import eb_rank_summary
+from es_sector_delta4 import es_summary
+from es_survivor_rank_check import es_rank_summary
 from primitive_family_attack import primitive_attack_summary
 from normal_form_reduce import (
     operator_symbols,
@@ -194,6 +196,56 @@ def test_eb_survivor_rank_correction() -> None:
     assert "TrE2B2" in relation
 
 
+def test_es_sector_survivor_list() -> None:
+    summary = es_summary()
+    assert summary.total_classes == 72
+    assert summary.smallest_new_survivor == "S"
+    assert summary.surviving_labels == (
+        "S",
+        "B2",
+        "E2",
+        "S2",
+        "EB2",
+        "SB2",
+        "E3",
+        "SE2",
+        "S3",
+        "B2^2",
+        "DtS_B2",
+        "E2B2",
+        "EB_sq",
+        "TrE2B2",
+        "SEB2",
+        "S2B2",
+        "EBDtB",
+        "dotB2",
+        "dotE2",
+        "dotS2",
+        "DtS_E2",
+        "E2^2",
+        "SE3",
+        "S2E2",
+        "divB2",
+        "gradB2",
+        "mixedGradB2",
+        "divE2",
+        "gradE2",
+        "mixedGradE2",
+        "divEGradS",
+        "gradS2",
+        "S4",
+    )
+
+
+def test_es_survivor_rank_independence() -> None:
+    summary = es_rank_summary()
+    assert summary.rank == 33
+    assert summary.count == 33
+    assert summary.nullity == 0
+    assert "divEGradS" in summary.labels
+    assert "S" in summary.labels
+
+
 def main() -> None:
     test_symmetric_quadratic_jet()
     test_worldline_force_structure()
@@ -210,6 +262,8 @@ def main() -> None:
     test_magnetic_family_attack_finds_new_survivor()
     test_eb_sector_survivor_list()
     test_eb_survivor_rank_correction()
+    test_es_sector_survivor_list()
+    test_es_survivor_rank_independence()
     print("symbolic checks passed")
 
 
