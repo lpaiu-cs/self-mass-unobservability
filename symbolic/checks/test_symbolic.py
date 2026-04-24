@@ -19,6 +19,7 @@ from eb_sector_delta4 import eb_summary
 from eb_survivor_rank_check import eb_rank_summary
 from es_sector_delta4 import es_summary
 from es_survivor_rank_check import es_rank_summary
+from family_witness_map import family_witness_summary
 from primitive_family_attack import primitive_attack_summary
 from shift_scalar_sector_delta4 import shift_scalar_summary
 from normal_form_reduce import (
@@ -286,6 +287,21 @@ def test_shift_scalar_sector_survivors() -> None:
     )
 
 
+def test_family_witness_map() -> None:
+    summary = family_witness_summary()
+    assert summary.any_harmless is False
+    assert tuple(entry.family_class for entry in summary.entries) == (
+        "rank2_stf",
+        "rank0_scalar_unsuppressed",
+        "rank0_scalar_derivative_only",
+    )
+    assert summary.entries[0].smallest_surviving_operator == "X2"
+    assert summary.entries[0].audited_instance == "B2"
+    assert summary.entries[1].smallest_surviving_operator == "S"
+    assert summary.entries[2].smallest_surviving_operator == "dotS2"
+    assert summary.entries[2].weight == 4
+
+
 def main() -> None:
     test_symmetric_quadratic_jet()
     test_worldline_force_structure()
@@ -305,6 +321,7 @@ def main() -> None:
     test_es_sector_survivor_list()
     test_es_survivor_rank_independence()
     test_shift_scalar_sector_survivors()
+    test_family_witness_map()
     print("symbolic checks passed")
 
 
