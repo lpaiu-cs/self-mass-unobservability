@@ -41,12 +41,23 @@ Status: Conjectural. The repository roadmap is organized around theorem progress
 | M4.4 | Proven | [`../lemmas/08-mixed-time-derivative-audit.md`](../lemmas/08-mixed-time-derivative-audit.md) | Mixed `E-E-D_tau E` terms are audited explicitly. |
 | M4.5 | Conjectural | [`docs/theorem-A-freefall.md`](theorem-A-freefall.md) | The corrected seven-element `Delta<=4` normal-form path is stated explicitly. |
 
+## M5: Independence And Primitive-Set Adequacy
+
+| Item | Status | Deliverable | Exit condition |
+| --- | --- | --- | --- |
+| M5.1 | Proven | [`../lemmas/09-survivor-independence-delta4.md`](../lemmas/09-survivor-independence-delta4.md) | The corrected seven survivors are checked for linear independence rather than inferred from non-reducibility. |
+| M5.2 | Proven | [`../symbolic/survivor_rank_check.py`](../symbolic/survivor_rank_check.py) | Exact polynomial coefficient rank confirms the current seven-scalar basis is linearly independent. |
+| M5.3 | Proven | [`primitive-set-adequacy.md`](primitive-set-adequacy.md) | The exact-current-set theorem is separated sharply from any physically justified minimal-sector claim. |
+| M5.4 | Proven | [`../symbolic/primitive_family_attack.py`](../symbolic/primitive_family_attack.py) | One physically motivated primitive-family extension is audited explicitly. |
+| M5.5 | Conjectural | [`docs/theorem-A-freefall.md`](theorem-A-freefall.md) and [`failure-ledger.md`](failure-ledger.md) | The main remaining risk is written uniformly as primitive-set adequacy, not survivor dependence. |
+
 ## Near-Term Sequence
 
-1. Status: Conjectural. Confirm the corrected seven-element `Delta<=4` normal-form basis against any future primitive-set extension.
-2. Status: Conjectural. Decide whether any extra gradient identity should be introduced explicitly, rather than silently collapsing `divE2` or `mixedGradE2`.
-3. Status: Counterexample candidate. Promote the dominant loophole class only if it produces a genuine failure of the explicit M4 enumeration/reduction path.
-4. Status: Conjectural. Revisit the scalar `s_A` corollary only after the higher-dimensional sensitivity manifold statement is sharp.
+1. Status: Conjectural. Decide whether the magnetic tidal family `B_ij` should be excluded by a new explicit assumption or admitted into the minimal-sector theorem target.
+2. Status: Conjectural. If `B_ij` is admitted, rerun the normal-form and collapse pipeline on the enlarged primitive catalog rather than preserving the older electric-only theorem statement.
+3. Status: Conjectural. Decide whether any extra gradient identity should be introduced explicitly, rather than silently collapsing `divE2` or `mixedGradE2`.
+4. Status: Counterexample candidate. Promote the dominant loophole class only if it produces a genuine failure of the explicit enumeration or adequacy path.
+5. Status: Conjectural. Revisit the scalar `s_A` corollary only after the higher-dimensional sensitivity manifold statement is sharp.
 
 ## Explicit Non-Goals For M1
 

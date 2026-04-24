@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from itertools import combinations_with_replacement, permutations, product
+from typing import Callable
 
 
 MAX_WEIGHT = 4
@@ -12,6 +13,7 @@ class BlockType:
     name: str
     weight: int
     rank: int
+    parity: int = 0
     sym_groups: tuple[tuple[int, ...], ...] = ()
     tracefree_pairs: tuple[tuple[int, int], ...] = ()
 
@@ -28,11 +30,11 @@ class ContractionClass:
 
 
 BLOCK_TYPES = (
-    BlockType("E", 1, 2, sym_groups=((0, 1),), tracefree_pairs=((0, 1),)),
-    BlockType("a", 1, 1),
-    BlockType("DtE", 2, 2, sym_groups=((0, 1),), tracefree_pairs=((0, 1),)),
-    BlockType("GradE", 2, 3, sym_groups=((1, 2),), tracefree_pairs=((1, 2),)),
-    BlockType("Dt2E", 3, 2, sym_groups=((0, 1),), tracefree_pairs=((0, 1),)),
+    BlockType("E", 1, 2, parity=0, sym_groups=((0, 1),), tracefree_pairs=((0, 1),)),
+    BlockType("a", 1, 1, parity=1),
+    BlockType("DtE", 2, 2, parity=0, sym_groups=((0, 1),), tracefree_pairs=((0, 1),)),
+    BlockType("GradE", 2, 3, parity=1, sym_groups=((1, 2),), tracefree_pairs=((1, 2),)),
+    BlockType("Dt2E", 3, 2, parity=0, sym_groups=((0, 1),), tracefree_pairs=((0, 1),)),
 )
 
 
@@ -121,6 +123,10 @@ def weight_signature(types: tuple[BlockType, ...]) -> tuple[tuple[str, ...], int
     signature = tuple(sorted(block.name for block in types))
     weight = sum(block.weight for block in types)
     return signature, weight
+
+
+def total_parity(types: tuple[BlockType, ...]) -> int:
+    return sum(block.parity for block in types) % 2
 
 
 def classify_and_label(
@@ -212,14 +218,24 @@ def connected_components(
     return tuple(components)
 
 
-def enumerate_contraction_classes(max_weight: int = MAX_WEIGHT) -> tuple[ContractionClass, ...]:
+def enumerate_contraction_classes(
+    max_weight: int = MAX_WEIGHT,
+    block_types: tuple[BlockType, ...] = BLOCK_TYPES,
+    classifier: Callable[
+        [tuple[str, ...], tuple[tuple[tuple[int, int], tuple[int, int]], ...]],
+        tuple[str, str, str],
+    ] = classify_and_label,
+    require_even_parity: bool = True,
+) -> tuple[ContractionClass, ...]:
     classes: list[ContractionClass] = []
     for count in range(1, 5):
-        for combo in combinations_with_replacement(range(len(BLOCK_TYPES)), count):
-            types = tuple(BLOCK_TYPES[index] for index in combo)
+        for combo in combinations_with_replacement(range(len(block_types)), count):
+            types = tuple(block_types[index] for index in combo)
             signature, weight = weight_signature(types)
             total_rank = sum(block.rank for block in types)
             if weight > max_weight or total_rank % 2:
+                continue
+            if require_even_parity and total_parity(types):
                 continue
             slots = [(inst, slot) for inst, block in enumerate(types) for slot in range(block.rank)]
             maps = symmetry_maps(types)
@@ -233,7 +249,7 @@ def enumerate_contraction_classes(max_weight: int = MAX_WEIGHT) -> tuple[Contrac
                 rep = canonicalize(pairing, maps)
                 unique.setdefault(rep, rep)
             for rep in sorted(unique):
-                label, classification, reduction_channel = classify_and_label(signature, rep)
+                label, classification, reduction_channel = classifier(signature, rep)
                 classes.append(
                     ContractionClass(
                         signature=signature,

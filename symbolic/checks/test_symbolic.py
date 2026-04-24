@@ -15,6 +15,7 @@ from enumerate_contractions_delta4 import (
     mixed_time_derivative_classes,
 )
 from enumerate_basis import enumerate_minimal_scalar_monomials
+from primitive_family_attack import primitive_attack_summary
 from normal_form_reduce import (
     operator_symbols,
     reduce_algebraic_identities,
@@ -22,6 +23,7 @@ from normal_form_reduce import (
     reduce_to_normal_form,
     reduce_total_derivatives,
 )
+from survivor_rank_check import rank_summary
 from sensitivity_expand import make_quadratic_jet
 from worldline_expand import build_worldline_model
 
@@ -138,6 +140,21 @@ def test_a_e_grade_labels_are_unique() -> None:
     assert labels == ["aEGradE_1", "aEGradE_2", "aEGradE_3"]
 
 
+def test_survivor_rank_independence() -> None:
+    summary = rank_summary()
+    assert summary.total_rank == 7
+    assert summary.e_sector_rank == 3
+    assert summary.dt_sector_rank == 1
+    assert summary.gradient_sector_rank == 3
+
+
+def test_magnetic_family_attack_finds_new_survivor() -> None:
+    summary = primitive_attack_summary()
+    assert summary.smallest_new_survivor == "B2"
+    assert "B2" in summary.new_survivor_labels
+    assert "EB2" in summary.new_survivor_labels
+
+
 def main() -> None:
     test_symmetric_quadratic_jet()
     test_worldline_force_structure()
@@ -150,6 +167,8 @@ def main() -> None:
     test_gradient_sector_audit()
     test_mixed_time_derivative_audit()
     test_a_e_grade_labels_are_unique()
+    test_survivor_rank_independence()
+    test_magnetic_family_attack_finds_new_survivor()
     print("symbolic checks passed")
 
 

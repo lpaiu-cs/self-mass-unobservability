@@ -1,6 +1,6 @@
 PYTHON ?= python
 
-.PHONY: worldline-expand sensitivity-expand enumerate-basis enumerate-contractions normal-form-reduce symbolic-check legacy-request1 legacy-request2 legacy-request7
+.PHONY: worldline-expand sensitivity-expand enumerate-basis enumerate-contractions survivor-rank primitive-attack normal-form-reduce symbolic-check legacy-request1 legacy-request2 legacy-request7
 
 worldline-expand:
 	$(PYTHON) symbolic/worldline_expand.py
@@ -13,6 +13,12 @@ enumerate-basis:
 
 enumerate-contractions:
 	$(PYTHON) symbolic/enumerate_contractions_delta4.py
+
+survivor-rank:
+	$(PYTHON) symbolic/survivor_rank_check.py
+
+primitive-attack:
+	$(PYTHON) symbolic/primitive_family_attack.py
 
 normal-form-reduce:
 	$(PYTHON) symbolic/normal_form_reduce.py

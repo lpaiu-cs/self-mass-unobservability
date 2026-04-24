@@ -29,3 +29,9 @@ This ledger records the active assumptions behind the free-fall sensitivity-coll
 - Status: Proven. No transversality condition such as `\nabla_i E^{ij} = 0` is assumed in the current `Delta<=4` audit.
 - Status: Proven. No vacuum/Bianchi identity is assumed to collapse `divE2` or `mixedGradE2` into `gradE2`.
 - Status: Proven. Contraction-level exhaustiveness for the exact current primitive blocks is attacked by explicit enumeration rather than by absence arguments.
+
+## Non-Assumption For M5
+
+- Status: Proven. Linear survivor independence is now attacked directly by an exact polynomial rank check rather than inferred from non-reducibility.
+- Status: Proven. The exact-current-set theorem does not claim that the present primitive catalog already exhausts every physically admissible minimal-sector family.
+- Status: Proven. Excluding the magnetic tidal family `B_ij` is currently a working restriction of the exact-current-set theorem, not a derived completeness statement.
