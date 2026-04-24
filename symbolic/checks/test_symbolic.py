@@ -20,6 +20,7 @@ from eb_survivor_rank_check import eb_rank_summary
 from es_sector_delta4 import es_summary
 from es_survivor_rank_check import es_rank_summary
 from primitive_family_attack import primitive_attack_summary
+from shift_scalar_sector_delta4 import shift_scalar_summary
 from normal_form_reduce import (
     operator_symbols,
     reduce_algebraic_identities,
@@ -246,6 +247,45 @@ def test_es_survivor_rank_independence() -> None:
     assert "S" in summary.labels
 
 
+def test_shift_scalar_sector_survivors() -> None:
+    summary = shift_scalar_summary()
+    assert summary.total_classes == 52
+    assert summary.first_new_weight == 4
+    assert summary.first_new_labels == (
+        "DtS_B2",
+        "dotS2",
+        "DtS_E2",
+        "divEGradS",
+        "gradS2",
+    )
+    assert summary.canonical_new_survivor == "dotS2"
+    assert summary.surviving_labels == (
+        "B2",
+        "E2",
+        "EB2",
+        "E3",
+        "B2^2",
+        "DtS_B2",
+        "E2B2",
+        "EB_sq",
+        "TrE2B2",
+        "EBDtB",
+        "dotB2",
+        "dotE2",
+        "dotS2",
+        "DtS_E2",
+        "E2^2",
+        "divB2",
+        "gradB2",
+        "mixedGradB2",
+        "divE2",
+        "gradE2",
+        "mixedGradE2",
+        "divEGradS",
+        "gradS2",
+    )
+
+
 def main() -> None:
     test_symmetric_quadratic_jet()
     test_worldline_force_structure()
@@ -264,6 +304,7 @@ def main() -> None:
     test_eb_survivor_rank_correction()
     test_es_sector_survivor_list()
     test_es_survivor_rank_independence()
+    test_shift_scalar_sector_survivors()
     print("symbolic checks passed")
 
 

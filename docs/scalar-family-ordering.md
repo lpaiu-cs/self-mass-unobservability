@@ -16,7 +16,7 @@
 ## Ordering Principles That Could Suppress The Scalar Family
 
 - Status: Proven. Option 1: no suppression. Then `S` belongs at the same fixed-order level as the already audited families, and the first explicit new survivor is `S`.
-- Status: Conjectural. Option 2: derivative-only or shift-symmetric coupling. Then bare `S`, `S2`, `S3`, and `S4` are removed, but derivative invariants such as `dotS2`, `gradS2`, `DtS_E2`, and `DtS_B2` can still survive.
+- Status: Proven. Option 2: derivative-only or shift-symmetric coupling. Then bare `S`, `S2`, `S3`, and `S4` are removed, but derivative invariants such as `dotS2`, `gradS2`, `DtS_E2`, and `DtS_B2` can still survive.
 - Status: Conjectural. Option 3: background restriction. If the allowed backgrounds satisfy `S = const.` or `S = 0` on the worldline, the entire scalar-family attack is removed by explicit environmental restriction rather than by operator reduction.
 - Status: Conjectural. Option 4: matching-level coefficient suppression. A UV completion or matching calculation could set the scalar-family Wilson data to zero, but that must be written as an explicit assumption rather than inferred from the current symmetry list.
 - Status: Conjectural. Option 5: separate ordering parameter. One may demote `S` by an additional small parameter not used for `E_ij` and `B_ij`, but that creates a stronger theorem with extra bookkeeping rather than rescuing the present MVP statement for free.
@@ -27,4 +27,5 @@
 - Status: Proven. No shift symmetry, derivative-only coupling rule, or scalar-background restriction is being used tacitly.
 - Status: Proven. [`../symbolic/es_sector_delta4.py`](../symbolic/es_sector_delta4.py) shows that the `E/B+scalar` `\Delta \le 4` extension still closes on a finite survivor list.
 - Status: Proven. [`../symbolic/es_survivor_rank_check.py`](../symbolic/es_survivor_rank_check.py) shows that the corrected `E/B+scalar` survivor list is linearly independent.
+- Status: Proven. [`../lemmas/14-derivative-only-scalar-audit.md`](../lemmas/14-derivative-only-scalar-audit.md) shows that the derivative-only scalar option removes bare `S` but still leaves new weight-`4` survivors, with canonical obstruction `dotS2`.
 - Status: Proven. Therefore the scalar-like family currently obstructs adequacy claims for the corrected `E/B` exact-current-set theorem, not finite fixed-order closure by itself.

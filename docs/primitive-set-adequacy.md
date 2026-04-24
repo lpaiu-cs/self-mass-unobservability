@@ -43,10 +43,13 @@
 - Status: Proven. The scalar-family extension also produces new surviving scalars.
 - Status: Proven. The smallest explicit new survivor beyond the corrected `E/B` basis is `S`.
 - Status: Proven. The fuller `E/B+scalar` audit closes on a corrected finite linearly independent `33`-element basis, so the scalar-family attack sharpens adequacy rather than producing a fixed-order blowup.
+- Status: Proven. Even after removing bare `S` by a derivative-only or shift-symmetric scalar rule, the derivative-only scalar audit still produces new weight-`4` survivors.
+- Status: Proven. A canonical derivative-only scalar obstruction is `dotS2`.
+- Status: Proven. The `E/B+derivative-only-scalar` audit still closes on a finite `23`-element survivor list, so the derivative-only scalar attack sharpens uniqueness failure rather than producing a fixed-order blowup.
 
 ## What This Gains
 
 - Status: Proven. The adequacy bottleneck is now sharply localized.
 - Status: Proven. Survivor independence is no longer the active risk for the exact current primitive set.
-- Status: Proven. Primitive-set adequacy, sharpened first to magnetic-family ordering and then to scalar-family ordering, is the active risk for any stronger theorem that aims to describe a physically justified minimal free-fall sector.
-- Status: Conjectural. For the broader collapse program, the live question is no longer fixed-order closure but which additional primitive families can be admitted before the corrected finite basis stops closing.
+- Status: Proven. Primitive-set adequacy, sharpened first to magnetic-family ordering and then to scalar-family ordering, has now become a no-go for minimal-sector uniqueness across the audited family extensions.
+- Status: Conjectural. For the broader collapse program, the live question is no longer minimal-sector uniqueness but which additional primitive families can be admitted before the corrected finite family-conditioned normal form stops closing.

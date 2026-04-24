@@ -29,15 +29,16 @@ modulo total derivatives, lower-order equations of motion, and the explicitly st
 - Status: Conjectural. [`eb-conditional-collapse.md`](eb-conditional-collapse.md) records the conditional finite-dimensional collapse step for this corrected `E/B` basis.
 - Status: Proven. Therefore the magnetic family does not presently falsify fixed-order finite closure for the exact current `E/B` primitive set.
 
-## Candidate 3: Stronger Physically Justified Minimal-Sector Theorem
+## Candidate 3: No-Go For Minimal-Sector Uniqueness
 
-- Status: Proven. This stronger claim is not currently available.
-- Status: Proven. It would require the exact-current-set electric-only or corrected `E/B` theorem candidate to be justified as the physically correct minimal free-fall sector rather than merely an exact audited primitive set.
-- Status: Proven. The magnetic-family survivor `B2` and the scalar-family survivor `S` are the smallest explicit obstructions to that upgrade.
-- Status: Proven. [`magnetic-family-ordering.md`](magnetic-family-ordering.md) and [`scalar-family-ordering.md`](scalar-family-ordering.md) record the allowed ways to make such suppressions explicit rather than tacit.
+- Status: Proven. A stronger physically justified minimal-sector theorem is not currently available.
+- Status: Proven. Within the explicitly audited unsuppressed family extensions, new low-order survivors always appear.
+- Status: Proven. The magnetic-family survivor `B2`, the scalar-family survivor `S`, and the derivative-only-scalar obstruction `dotS2` already show that minimal-sector uniqueness is effectively dead without explicit suppression assumptions.
+- Status: Proven. [`family-admission-no-go.md`](family-admission-no-go.md), [`magnetic-family-ordering.md`](magnetic-family-ordering.md), and [`scalar-family-ordering.md`](scalar-family-ordering.md) record this negative branch explicitly rather than tacitly.
 
-## Candidate 4: Broader Finite-Dimensional Collapse Conjecture After Scalar Extension
+## Candidate 4: Positive Finite-Family Fixed-Order Collapse Candidate
 
+- Status: Conjectural. The positive theorem target is now the family-conditioned fixed-order collapse statement recorded in [`broad-collapse-reformulation.md`](broad-collapse-reformulation.md).
 - Status: Conjectural. Adjoining one scalar-like external family to the corrected `E/B` sector yields the corrected `E/B+scalar` `\Delta \le 4` basis
 
 ```math
@@ -45,15 +46,16 @@ modulo total derivatives, lower-order equations of motion, and the explicitly st
 ```
 
 - Status: Proven. The corrected `E/B+scalar` basis is linearly independent.
-- Status: Proven. Therefore neither the magnetic nor the scalar-like family presently falsifies fixed-order finiteness by itself.
-- Status: Conjectural. The broader finite-dimensional collapse program remains plausible after the scalar extension, although its exact reduced basis is larger than both the electric-only and corrected `E/B` bases.
+- Status: Proven. Adjoining only a derivative-only scalar family to the corrected `E/B` sector yields a finite `23`-element survivor list with first new survivors only at weight `4`.
+- Status: Proven. Therefore neither the magnetic family nor either scalar-family audit presently falsifies fixed-order finiteness by itself.
+- Status: Conjectural. The broader finite-family collapse program remains plausible after these audited extensions, although its exact reduced normal form is family-dependent.
 
 ## Scope Separation
 
 - Status: Proven. Candidate 1 is a theorem candidate for the exact current electric-only primitive set.
 - Status: Conjectural. Candidate 2 is a theorem candidate for the corrected exact-current-set `E/B` primitive sector.
-- Status: Proven. Candidate 3 is the stronger physically justified minimal-sector theorem and is blocked by unresolved family-ordering questions.
-- Status: Conjectural. Candidate 4 is the broader finite-dimensional collapse conjecture after explicit scalar-family enlargement.
+- Status: Proven. Candidate 3 is the no-go branch for minimal-sector uniqueness.
+- Status: Conjectural. Candidate 4 is the positive finite-family fixed-order collapse branch.
 
 ## Proof Route
 
@@ -66,7 +68,9 @@ modulo total derivatives, lower-order equations of motion, and the explicitly st
 7. Status: Proven. [`../symbolic/eb_survivor_rank_check.py`](../symbolic/eb_survivor_rank_check.py) extracts the first explicit `E/B` dependence relation and the corrected linearly independent `18`-element basis.
 8. Status: Proven. [`../symbolic/es_sector_delta4.py`](../symbolic/es_sector_delta4.py) shows that adjoining one scalar-like external family still yields a finite enlarged `E/B+scalar` candidate list rather than a fixed-order blowup.
 9. Status: Proven. [`../symbolic/es_survivor_rank_check.py`](../symbolic/es_survivor_rank_check.py) shows that the corrected `E/B+scalar` `33`-element basis is linearly independent.
-10. Status: Conjectural. Invoke the conditional collapse lemma only after choosing whether the theorem target is the exact current electric-only set, the corrected exact-current-set `E/B` sector, or the broader scalar-extended collapse conjecture.
+10. Status: Proven. [`../symbolic/shift_scalar_sector_delta4.py`](../symbolic/shift_scalar_sector_delta4.py) shows that even derivative-only scalar admission still yields new weight-`4` survivors beyond the corrected `E/B` sector.
+11. Status: Proven. The audited family-admission pattern already supports a no-go for minimal-sector uniqueness.
+12. Status: Conjectural. Invoke the conditional collapse lemma only after fixing an explicit admitted family catalog for the positive finite-family collapse branch.
 
 ## Current Verdict
 
@@ -75,10 +79,12 @@ modulo total derivatives, lower-order equations of motion, and the explicitly st
 - Status: Proven. The live electric-only salvage bottleneck is magnetic-family ordering, not survivor dependence.
 - Status: Proven. The electric-only theorem candidate remains valid only as an exact-current-set statement.
 - Status: Proven. The corrected `E/B` theorem candidate remains valid only as an exact-current-set statement.
-- Status: Proven. The stronger physically justified minimal-sector theorem should not presently be treated as established.
+- Status: Proven. The stronger physically justified minimal-sector theorem should not presently be treated as alive.
 - Status: Proven. The raw `E/B` candidate basis needed one explicit mixed quartic correction.
 - Status: Proven. The scalar-family extension contributes the new survivor `S` immediately.
-- Status: Conjectural. The broader finite-dimensional collapse conjecture remains plausible after the scalar extension because the corrected `E/B+scalar` sector is still finite and linearly independent at `\Delta \le 4`.
+- Status: Proven. Even after a derivative-only scalar restriction, the first new survivors still appear at weight `4`, with canonical obstruction `dotS2`.
+- Status: Proven. Minimal-sector uniqueness is therefore already effectively dead without explicit suppression assumptions.
+- Status: Conjectural. The broader finite-family collapse candidate remains plausible because the corrected `E/B+scalar` sector and the derivative-only scalar extension both remain finite at `\Delta \le 4`.
 
 ## Dependencies
 
@@ -94,9 +100,12 @@ modulo total derivatives, lower-order equations of motion, and the explicitly st
 - Status: Proven. [`../lemmas/11-eb-survivor-independence-delta4.md`](../lemmas/11-eb-survivor-independence-delta4.md)
 - Status: Proven. [`../lemmas/12-magnetic-ordering-salvage.md`](../lemmas/12-magnetic-ordering-salvage.md)
 - Status: Proven. [`../lemmas/13-scalar-family-obstruction.md`](../lemmas/13-scalar-family-obstruction.md)
+- Status: Proven. [`../lemmas/14-derivative-only-scalar-audit.md`](../lemmas/14-derivative-only-scalar-audit.md)
 - Status: Conjectural. [`conditional-collapse-lemma.md`](conditional-collapse-lemma.md)
 - Status: Conjectural. [`eb-conditional-collapse.md`](eb-conditional-collapse.md)
 - Status: Conjectural. [`power-counting.md`](power-counting.md)
+- Status: Proven. [`family-admission-no-go.md`](family-admission-no-go.md)
+- Status: Proven. [`broad-collapse-reformulation.md`](broad-collapse-reformulation.md)
 - Status: Proven. [`primitive-catalog.md`](primitive-catalog.md)
 - Status: Proven. [`primitive-set-adequacy.md`](primitive-set-adequacy.md)
 - Status: Proven. [`magnetic-family-ordering.md`](magnetic-family-ordering.md)
@@ -110,5 +119,5 @@ modulo total derivatives, lower-order equations of motion, and the explicitly st
 - Status: Counterexample candidate. Hereditary couplings invalidate locality before basis closure is even applied.
 - Status: Counterexample candidate. Infinite or uncontrolled external field content invalidates the fixed-order closure theorem candidate.
 - Status: Counterexample candidate. Any additional `\Delta \le 4` scalar contraction from the exact current electric-only primitive set that evades the explicit enumeration/reduction pipeline would obstruct Candidate 1.
-- Status: Counterexample candidate. Any further physically admissible primitive family that yields new survivors beyond the corrected explicit `E/B` basis would obstruct Candidate 3 as a physically justified minimal-sector theorem.
-- Status: Counterexample candidate. Any further physically admissible primitive family that yields new survivors beyond the corrected explicit `E/B+scalar` basis would enlarge Candidate 4 or obstruct its present finite-basis path.
+- Status: Counterexample candidate. Any further physically admissible primitive family that yields new survivors beyond the corrected explicit `E/B` basis reinforces Candidate 3 rather than reviving minimal-sector uniqueness.
+- Status: Counterexample candidate. Any further physically admissible primitive family that yields new survivors beyond the corrected explicit audited family catalogs enlarges Candidate 4 but only obstructs it if fixed-order finiteness itself fails.

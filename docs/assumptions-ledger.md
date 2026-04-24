@@ -52,3 +52,8 @@ This ledger records the active assumptions behind the free-fall sensitivity-coll
 - Status: Proven. No scalar-family ordering assumption is currently active that suppresses a parity-even rank-0 external family `S`.
 - Status: Proven. No derivative-only or shift-symmetric scalar rule is being used tacitly.
 - Status: Proven. No scalar-background restriction such as `S = 0`, `S = const.`, or `\nabla_i S = 0` is currently assumed.
+
+## Explicit Rule For M9
+
+- Status: Proven. The derivative-only scalar audit is a separate family-admission test, not a new global theorem assumption.
+- Status: Proven. In that audit, non-shift-symmetric total-derivative preimages such as `D_\tau(S X)` are not used to reduce operators, because bare `S` is excluded by construction.

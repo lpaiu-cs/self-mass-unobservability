@@ -49,6 +49,7 @@ This note lists every reduction rule currently allowed in the `Delta<=4` minimal
 - Status: Proven. No parity-odd epsilon-tensor identity is used in the current audit.
 - Status: Proven. No extra mixed `E/B` trace identity beyond the explicit quartic STF relation above is used to collapse `E2B2`, `EB_sq`, or `TrE2B2`.
 - Status: Proven. No scalar shift symmetry, derivative-only scalar rule, or scalar-background restriction is used unless stated explicitly in [`scalar-family-ordering.md`](scalar-family-ordering.md).
+- Status: Proven. In the derivative-only scalar audit, no non-shift-symmetric preimage such as `D_\tau(S X)` is used as a reduction rule because bare `S` is excluded from that test catalog.
 
 ## Operational Summary
 
@@ -60,3 +61,4 @@ This note lists every reduction rule currently allowed in the `Delta<=4` minimal
 - Status: Conjectural. Under the currently allowed rules, `divE2` and `mixedGradE2` remain surviving gradient candidates.
 - Status: Conjectural. Under the currently allowed rules, `divB2`, `mixedGradB2`, and `EBDtB` remain surviving `E/B`-sector candidates once the magnetic family is admitted.
 - Status: Conjectural. Under the currently allowed rules, `S`, `SE2`, `SB2`, `DtS_E2`, `DtS_B2`, `gradS2`, and `divEGradS` remain surviving scalar-family candidates once the scalar-like family is admitted.
+- Status: Conjectural. Under the derivative-only scalar rule, `dotS2`, `gradS2`, `DtS_E2`, `DtS_B2`, and `divEGradS` remain surviving candidates even after bare `S` has been excluded.
