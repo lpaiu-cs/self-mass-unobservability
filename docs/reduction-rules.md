@@ -33,18 +33,20 @@ This note lists every reduction rule currently allowed in the `Delta<=4` minimal
 | --- | --- | --- |
 | `Tr(E^4) = \frac12 (Tr(E^2))^2` for a symmetric trace-free `3x3` tensor `E` | Proven | `E4` reduces to `E2^2 / 2`. |
 | `Tr(B^4) = \frac12 (Tr(B^2))^2` for a symmetric trace-free `3x3` tensor `B` | Proven | `B4` reduces to `B2^2 / 2` once the magnetic family is admitted. |
+| `Tr(EBEB) = (E:B)^2 + \frac12 Tr(E^2) Tr(B^2) - 2 Tr(E^2 B^2)` for symmetric trace-free `3x3` tensors `E, B` | Proven | `EBEB` reduces to `EB_sq + E2B2/2 - 2 TrE2B2` once the mixed quartic STF identity is admitted explicitly. |
 
 ## Not Allowed Unless Added Explicitly
 
 - Status: Proven. No transversality condition such as `\nabla_i E^{ij} = 0` is used in the current audit.
 - Status: Proven. No vacuum/Bianchi relation is used to collapse `divE2` or `mixedGradE2` into `gradE2`.
 - Status: Proven. No parity-odd epsilon-tensor identity is used in the current audit.
-- Status: Proven. No extra mixed `E/B` trace identity is used to collapse `E2B2`, `EB_sq`, `TrE2B2`, or `EBEB`.
+- Status: Proven. No extra mixed `E/B` trace identity beyond the explicit quartic STF relation above is used to collapse `E2B2`, `EB_sq`, or `TrE2B2`.
 
 ## Operational Summary
 
 - Status: Proven. Under the currently allowed rules, `TrE2DtE` is reducible.
 - Status: Proven. Under the currently allowed rules, `B_DtB`, `B_Dt2B`, and `B2DtE` are reducible once the magnetic family is admitted.
+- Status: Proven. Under the currently allowed rules, `EBEB` is reducible once the explicit mixed quartic STF identity is admitted.
 - Status: Proven. Under the currently allowed rules, every acceleration-bearing scalar is reducible.
 - Status: Conjectural. Under the currently allowed rules, `divE2` and `mixedGradE2` remain surviving gradient candidates.
 - Status: Conjectural. Under the currently allowed rules, `divB2`, `mixedGradB2`, and `EBDtB` remain surviving `E/B`-sector candidates once the magnetic family is admitted.

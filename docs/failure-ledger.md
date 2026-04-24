@@ -17,8 +17,10 @@ This ledger records exact failure modes, not vague concerns. If a proof step bre
 - Status: Proven. Abstract monomial finiteness is no longer the unresolved step once a finite primitive catalog with positive weights is fixed.
 - Status: Proven. The previous minimal obstruction to the five-element target is explicit: `divE2`, with `mixedGradE2` as a second surviving gradient invariant.
 - Status: Proven. For the exact current primitive set, the corrected seven-element normal-form basis is now linearly independent.
-- Status: Proven. The live bottleneck after M5 is magnetic-family ordering for the stronger electric-only minimal-sector claim.
-- Status: Proven. The `E/B`-expanded `Delta<=4` audit still closes on a finite explicit survivor list, so `E/B`-expanded closure is not the active failure boundary at this order.
+- Status: Proven. The live bottleneck for electric-only salvage remains magnetic-family ordering.
+- Status: Proven. The raw `E/B` survivor candidate list had one explicit mixed quartic dependence relation.
+- Status: Proven. After that correction, the `E/B`-expanded `Delta<=4` sector closes on a finite linearly independent `18`-element basis.
 - Status: Proven. The smallest explicit adequacy obstruction found so far is the magnetic-family survivor `B2`.
-- Status: Conjectural. The broader finite-dimensional collapse conjecture remains plausible after the magnetic extension because fixed-order closure did not fail in the explicit `E/B` audit.
+- Status: Conjectural. The broader finite-dimensional collapse conjecture remains plausible after the magnetic extension because fixed-order closure and basis independence now both survive in the corrected `E/B` audit.
+- Status: Conjectural. The live bottleneck for the broader theorem is no longer raw `E/B` closure; it is the conditional collapse step on the corrected `E/B` basis plus robustness against the next primitive-family attack.
 - Status: Counterexample candidate. If the sector is enlarged beyond the explicit `E/B` audit by another physically admissible family, the first new survivor in that extension becomes the next explicit obstruction.

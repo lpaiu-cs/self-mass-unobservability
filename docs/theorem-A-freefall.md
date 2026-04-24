@@ -25,20 +25,23 @@ modulo total derivatives, lower-order equations of motion, and the explicitly st
 
 ## Candidate 3: Broader Finite-Dimensional Collapse Conjecture
 
-- Status: Conjectural. If the magnetic family is admitted and the currently allowed reduction rules are kept, the `E/B`-expanded `\Delta \le 4` sector still closes on a finite explicit survivor list:
+- Status: Proven. The raw `E/B` survivor candidate set is not linearly independent; [`../lemmas/11-eb-survivor-independence-delta4.md`](../lemmas/11-eb-survivor-independence-delta4.md) finds one explicit mixed quartic dependence relation.
+- Status: Conjectural. After reducing by that explicit relation, the corrected `E/B`-expanded `\Delta \le 4` basis is
 
 ```math
-\{E2,\ B2,\ E3,\ EB2,\ E2^2,\ B2^2,\ dotE2,\ dotB2,\ EBDtB,\ E2B2,\ EB\_sq,\ TrE2B2,\ EBEB,\ gradE2,\ divE2,\ mixedGradE2,\ gradB2,\ divB2,\ mixedGradB2\}.
+\{E2,\ B2,\ E3,\ EB2,\ E2^2,\ B2^2,\ dotE2,\ dotB2,\ EBDtB,\ E2B2,\ EB\_sq,\ TrE2B2,\ gradE2,\ divE2,\ mixedGradE2,\ gradB2,\ divB2,\ mixedGradB2\}.
 ```
 
 - Status: Proven. Therefore the magnetic family does not presently falsify finite fixed-order closure by itself.
+- Status: Proven. The corrected `E/B` basis is linearly independent.
+- Status: Conjectural. [`eb-conditional-collapse.md`](eb-conditional-collapse.md) records the conditional finite-dimensional collapse step for this corrected `E/B` basis.
 - Status: Conjectural. The broader finite-dimensional collapse program remains plausible after the magnetic extension, although its exact reduced basis is larger than the electric-only basis.
 
 ## Scope Separation
 
 - Status: Proven. Candidate 1 is a theorem candidate for the exact current electric-only primitive set.
 - Status: Proven. Candidate 2 is the stronger physically justified minimal-sector theorem and is blocked at M6.
-- Status: Proven. Candidate 3 is the broader finite-dimensional collapse conjecture after explicit `E/B` enlargement.
+- Status: Conjectural. Candidate 3 is the broader finite-dimensional collapse conjecture after explicit `E/B` enlargement and mixed-quartic correction.
 
 ## Proof Route
 
@@ -47,17 +50,19 @@ modulo total derivatives, lower-order equations of motion, and the explicitly st
 3. Status: Proven. [`../symbolic/enumerate_contractions_delta4.py`](../symbolic/enumerate_contractions_delta4.py) exhaustively enumerates all parity-even scalar contractions from the exact current electric-only primitive set.
 4. Status: Proven. [`../symbolic/normal_form_reduce.py`](../symbolic/normal_form_reduce.py) reduces all total-derivative, lower-order-EOM, and single-family Cayley-Hamilton-reducible electric classes explicitly.
 5. Status: Proven. [`../symbolic/survivor_rank_check.py`](../symbolic/survivor_rank_check.py) shows that the corrected seven electric-only survivors are linearly independent as operators.
-6. Status: Proven. [`../symbolic/eb_sector_delta4.py`](../symbolic/eb_sector_delta4.py) shows that admitting the magnetic family yields a finite enlarged `E/B` survivor list rather than a fixed-order blowup.
-7. Status: Conjectural. Invoke the conditional collapse lemma only after choosing whether the theorem target is the exact current electric-only set or the enlarged `E/B` sector.
+6. Status: Proven. [`../symbolic/eb_sector_delta4.py`](../symbolic/eb_sector_delta4.py) shows that admitting the magnetic family yields a finite enlarged `E/B` candidate list rather than a fixed-order blowup.
+7. Status: Proven. [`../symbolic/eb_survivor_rank_check.py`](../symbolic/eb_survivor_rank_check.py) extracts the first explicit `E/B` dependence relation and the corrected linearly independent `18`-element basis.
+8. Status: Conjectural. Invoke the conditional collapse lemma only after choosing whether the theorem target is the exact current electric-only set or the corrected enlarged `E/B` sector.
 
 ## Current Verdict
 
 - Status: Proven. The old five-scalar electric target was false because it omitted `divE2` and `mixedGradE2`.
 - Status: Proven. The corrected seven-scalar electric-only basis is linearly independent for the exact current primitive set.
-- Status: Proven. The live M6 bottleneck is magnetic-family ordering, not survivor dependence.
+- Status: Proven. The live electric-only salvage bottleneck is magnetic-family ordering, not survivor dependence.
 - Status: Proven. The electric-only theorem candidate remains valid only as an exact-current-set statement.
 - Status: Proven. The stronger physically justified minimal-sector theorem should not presently be treated as established.
-- Status: Conjectural. The broader finite-dimensional collapse conjecture remains plausible after the magnetic extension because the `E/B` sector is still finite at `\Delta \le 4`.
+- Status: Proven. The raw `E/B` candidate basis needed one explicit mixed quartic correction.
+- Status: Conjectural. The broader finite-dimensional collapse conjecture remains plausible after the magnetic extension because the corrected `E/B` sector is still finite and linearly independent at `\Delta \le 4`.
 
 ## Dependencies
 
@@ -70,7 +75,10 @@ modulo total derivatives, lower-order equations of motion, and the explicitly st
 - Status: Proven. [`../lemmas/08-mixed-time-derivative-audit.md`](../lemmas/08-mixed-time-derivative-audit.md)
 - Status: Proven. [`../lemmas/09-survivor-independence-delta4.md`](../lemmas/09-survivor-independence-delta4.md)
 - Status: Proven. [`../lemmas/10-magnetic-family-obstruction.md`](../lemmas/10-magnetic-family-obstruction.md)
+- Status: Proven. [`../lemmas/11-eb-survivor-independence-delta4.md`](../lemmas/11-eb-survivor-independence-delta4.md)
+- Status: Proven. [`../lemmas/12-magnetic-ordering-salvage.md`](../lemmas/12-magnetic-ordering-salvage.md)
 - Status: Conjectural. [`conditional-collapse-lemma.md`](conditional-collapse-lemma.md)
+- Status: Conjectural. [`eb-conditional-collapse.md`](eb-conditional-collapse.md)
 - Status: Conjectural. [`power-counting.md`](power-counting.md)
 - Status: Proven. [`primitive-catalog.md`](primitive-catalog.md)
 - Status: Proven. [`primitive-set-adequacy.md`](primitive-set-adequacy.md)
@@ -84,4 +92,4 @@ modulo total derivatives, lower-order equations of motion, and the explicitly st
 - Status: Counterexample candidate. Hereditary couplings invalidate locality before basis closure is even applied.
 - Status: Counterexample candidate. Infinite or uncontrolled external field content invalidates the fixed-order closure theorem candidate.
 - Status: Counterexample candidate. Any additional `\Delta \le 4` scalar contraction from the exact current electric-only primitive set that evades the explicit enumeration/reduction pipeline would obstruct Candidate 1.
-- Status: Counterexample candidate. Any further physically admissible primitive family that yields new survivors beyond the explicit `E/B` list would enlarge Candidate 3 or obstruct its present finite-basis path.
+- Status: Counterexample candidate. Any further physically admissible primitive family that yields new survivors beyond the corrected explicit `E/B` basis would enlarge Candidate 3 or obstruct its present finite-basis path.

@@ -33,8 +33,9 @@
 - Status: Proven. The smallest explicit new survivor is `B2`.
 - Status: Proven. In the smallest `B`-only spot attack, additional new surviving candidates already appear at the same fixed order, including `EB2`, `B2DtE`, `E2B2`, `EB_sq`, `TrE2B2`, `EBEB`, and `B2^2`.
 - Status: Proven. In the fuller `E/B`-expanded audit, the mixed time-derivative content is more naturally represented by the surviving class `EBDtB`, while `B2DtE` becomes reducible by an explicit total-derivative relation.
+- Status: Proven. In the fuller `E/B`-expanded audit, one explicit mixed quartic dependence relation further reduces the raw `19`-candidate list to a corrected `18`-element basis.
 - Status: Proven. Therefore the exact current primitive set is not yet adequate as a physically justified minimal sector unless one adds a new explicit assumption excluding the magnetic family.
-- Status: Proven. The `E/B` enlargement itself still closes on a finite explicit `Delta<=4` survivor list, so adequacy is the live issue rather than fixed-order blowup.
+- Status: Proven. The `E/B` enlargement itself still closes on a corrected finite linearly independent `Delta<=4` basis, so adequacy is the live issue rather than fixed-order blowup.
 
 ## What This Gains
 

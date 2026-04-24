@@ -124,7 +124,7 @@ def classify_eb_contraction(
         if len(components) == 1 and e_edges == 1 and b_edges == 1:
             return "TrE2B2", "Surviving candidate", "survives current rules"
         if len(components) == 1 and e_edges == 0 and b_edges == 0:
-            return "EBEB", "Surviving candidate", "survives current rules"
+            return "EBEB", "Proven reducible", "mixed STF quartic identity"
     raise ValueError(f"Unhandled E/B signature {signature} with representative {representative}")
 
 
@@ -187,7 +187,8 @@ def eb_sector_report(max_weight: int = MAX_WEIGHT) -> str:
             "",
             "Operational verdict:",
             f"- Smallest new survivor beyond the electric-only exact current set: {summary.smallest_new_survivor}.",
-            "- The E/B enlargement still yields a finite explicit survivor list at Delta<=4.",
+            "- The raw E/B survivor candidate set has one explicit quartic dependence relation, so the corrected linearly independent E/B basis has 18 elements.",
+            "- The E/B enlargement still yields a corrected finite linearly independent basis at Delta<=4.",
             "- Therefore the magnetic family obstructs the electric-only minimal-sector claim, not finite fixed-order closure by itself.",
         ]
     )

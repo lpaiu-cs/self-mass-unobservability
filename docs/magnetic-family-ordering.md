@@ -39,4 +39,5 @@
 
 - Status: Proven. No magnetic-ordering assumption is currently active in the repository.
 - Status: Proven. Therefore the stronger physically justified minimal-sector theorem cannot presently be identified with the electric-only exact-current-set theorem.
-- Status: Conjectural. The broad finite-dimensional collapse program remains plausible, because the explicit `E/B` enlargement at `\Delta \le 4` still yields a finite survivor list.
+- Status: Conjectural. The broad finite-dimensional collapse program remains plausible, because the explicit `E/B` enlargement at `\Delta \le 4` still yields a corrected finite linearly independent basis.
+- Status: Proven. [`../lemmas/12-magnetic-ordering-salvage.md`](../lemmas/12-magnetic-ordering-salvage.md) now isolates exactly which salvage assumptions are strong enough and what they cost.

@@ -61,12 +61,22 @@ Status: Conjectural. The repository roadmap is organized around theorem progress
 | M6.4 | Conjectural | [`docs/theorem-A-freefall.md`](theorem-A-freefall.md) | Electric-only, stronger minimal-sector, and broader collapse statements are separated cleanly. |
 | M6.5 | Proven | [`failure-ledger.md`](failure-ledger.md) | The live bottleneck is identified as magnetic-family ordering rather than hidden basis failure. |
 
+## M7: `E/B`-Expanded Collapse Split
+
+| Item | Status | Deliverable | Exit condition |
+| --- | --- | --- | --- |
+| M7.1 | Proven | [`../symbolic/eb_survivor_rank_check.py`](../symbolic/eb_survivor_rank_check.py) | The raw `E/B` survivor candidate set is checked for independence and the first exact relation is extracted. |
+| M7.2 | Proven | [`../lemmas/11-eb-survivor-independence-delta4.md`](../lemmas/11-eb-survivor-independence-delta4.md) | The corrected `E/B` basis is identified and shown linearly independent. |
+| M7.3 | Conjectural | [`eb-conditional-collapse.md`](eb-conditional-collapse.md) | The conditional collapse step is restated on the corrected `E/B` basis. |
+| M7.4 | Proven | [`../lemmas/12-magnetic-ordering-salvage.md`](../lemmas/12-magnetic-ordering-salvage.md) | The exact strength and cost of electric-only salvage assumptions are written explicitly. |
+| M7.5 | Conjectural | [`docs/theorem-A-freefall.md`](theorem-A-freefall.md) and [`failure-ledger.md`](failure-ledger.md) | The repo now splits electric-only salvage from the corrected `E/B` theorem route. |
+
 ## Near-Term Sequence
 
-1. Status: Conjectural. Decide whether magnetic-family ordering should be imposed explicitly or whether the theorem target should be upgraded to the `E/B`-expanded sector.
-2. Status: Conjectural. If the `E/B` sector is accepted, attack survivor independence and conditional collapse for the enlarged finite basis rather than preserving an electric-only theorem statement.
-3. Status: Conjectural. Decide whether any extra gradient or mixed-trace identity should be introduced explicitly, rather than silently collapsing `divE2`, `mixedGradE2`, `divB2`, or `mixedGradB2`.
-4. Status: Counterexample candidate. Promote the dominant loophole class only if it produces a genuine failure of the explicit enumeration or adequacy path.
+1. Status: Conjectural. Decide whether to pursue the corrected `E/B` theorem route as the main line or to impose a stronger magnetic-ordering salvage assumption for an electric-only theorem.
+2. Status: Conjectural. If the corrected `E/B` route is accepted, attack the next primitive-family extension and the conditional collapse step rather than returning to electric-only salvage by default.
+3. Status: Conjectural. Decide whether any further mixed-trace or gradient identity should be introduced explicitly, rather than silently collapsing enlarged-sector operators.
+4. Status: Counterexample candidate. Promote the dominant loophole class only if it produces a genuine failure of the corrected `E/B` basis or of the next primitive-family attack.
 5. Status: Conjectural. Revisit the scalar `s_A` corollary only after the higher-dimensional sensitivity manifold statement is sharp.
 
 ## Explicit Non-Goals For M1

@@ -11,6 +11,7 @@
 - Status: Conjectural. `docs/conditional-collapse-lemma.md` isolates the finite-basis conditional step.
 - Status: Conjectural. `docs/theorem-A-freefall.md` now records the corrected `Delta<=4` contraction-level normal-form path for the exact current primitive set and separates it from the stronger minimal-sector claim.
 - Status: Proven. `docs/magnetic-family-ordering.md` records the explicit magnetic-ordering issue that now separates the electric-only theorem from the stronger minimal-sector claim.
+- Status: Conjectural. `docs/eb-conditional-collapse.md` records the conditional collapse step on the corrected `E/B` basis.
 - Status: Conjectural. `docs/power-counting.md` defines the fixed-order counting rule used by the theorem candidate and the symbolic enumerator.
 - Status: Proven. `docs/primitive-catalog.md` fixes the exact `Delta<=4` primitive and contraction-level operator content for the M4 audit.
 - Status: Proven. `docs/primitive-set-adequacy.md` records why the exact current primitive set is still weaker than a physically justified minimal-sector catalog.
@@ -22,6 +23,8 @@
 - Status: Proven. `lemmas/08-mixed-time-derivative-audit.md` records the reduction of the mixed cubic time-derivative sector.
 - Status: Proven. `lemmas/09-survivor-independence-delta4.md` records the exact rank check proving linear independence of the corrected seven-scalar basis.
 - Status: Proven. `lemmas/10-magnetic-family-obstruction.md` records what the survivor `B2` obstructs and what it does not.
+- Status: Proven. `lemmas/11-eb-survivor-independence-delta4.md` records the first mixed quartic dependence relation and the corrected `E/B` basis.
+- Status: Proven. `lemmas/12-magnetic-ordering-salvage.md` records exactly which assumptions can salvage an electric-only theorem and how strong they are.
 - Status: Counterexample candidate. `counterexamples/` collects the smallest currently identified escape routes.
 
 ## External Literature Policy

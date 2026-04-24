@@ -41,3 +41,8 @@ This ledger records the active assumptions behind the free-fall sensitivity-coll
 - Status: Proven. No magnetic-ordering assumption is currently active that suppresses `B_ij` relative to `E_ij`.
 - Status: Proven. The repository does not currently assume `B_ij = 0` on the allowed backgrounds.
 - Status: Proven. Therefore any stronger electric-only minimal-sector theorem would require a new explicit assumption, recorded rather than implied.
+
+## Explicit Rule For M7
+
+- Status: Proven. The mixed quartic `E/B` STF identity used to eliminate `EBEB` is now explicit in [`reduction-rules.md`](reduction-rules.md); it is not being used tacitly.
+- Status: Proven. No stronger magnetic-ordering salvage assumption is currently active.

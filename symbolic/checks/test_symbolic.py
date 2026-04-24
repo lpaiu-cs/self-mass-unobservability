@@ -16,6 +16,7 @@ from enumerate_contractions_delta4 import (
 )
 from enumerate_basis import enumerate_minimal_scalar_monomials
 from eb_sector_delta4 import eb_summary
+from eb_survivor_rank_check import eb_rank_summary
 from primitive_family_attack import primitive_attack_summary
 from normal_form_reduce import (
     operator_symbols,
@@ -167,7 +168,6 @@ def test_eb_sector_survivor_list() -> None:
         "E3",
         "B2^2",
         "E2B2",
-        "EBEB",
         "EB_sq",
         "TrE2B2",
         "EBDtB",
@@ -181,6 +181,17 @@ def test_eb_sector_survivor_list() -> None:
         "gradE2",
         "mixedGradE2",
     )
+
+
+def test_eb_survivor_rank_correction() -> None:
+    summary = eb_rank_summary()
+    assert summary.raw_rank == 18
+    assert summary.raw_count == 19
+    assert summary.corrected_rank == 18
+    assert summary.corrected_count == 18
+    relation = str(summary.null_relation)
+    assert "EBEB" in relation
+    assert "TrE2B2" in relation
 
 
 def main() -> None:
@@ -198,6 +209,7 @@ def main() -> None:
     test_survivor_rank_independence()
     test_magnetic_family_attack_finds_new_survivor()
     test_eb_sector_survivor_list()
+    test_eb_survivor_rank_correction()
     print("symbolic checks passed")
 
 
