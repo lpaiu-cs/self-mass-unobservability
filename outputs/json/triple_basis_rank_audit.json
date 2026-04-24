@@ -1,0 +1,80 @@
+{
+  "assumptions": {
+    "carrier_orbit": "Newtonian nested-Kepler hierarchical triple",
+    "clock_order": "leading O(c^-2)",
+    "clock_sector": "decoupled EFT only",
+    "eccentricity_order_for_harmonic_audit": "first order in e_in and e_out",
+    "free_fall_sector": "GR",
+    "hierarchy_order": "leading O(epsilon=a_in/a_out)",
+    "propagation_sector": "GR",
+    "status": "basis-rank audit; not a covariance fit or final theorem"
+  },
+  "leading_outer_dipole_vector": {
+    "cos(2 lambda_in - lambda_out)": "-e_in/2",
+    "cos(lambda_in - 2 lambda_out)": "e_out",
+    "cos(lambda_in - lambda_out)": "1",
+    "cos(lambda_in)": "e_out",
+    "cos(lambda_out)": "-e_in/2"
+  },
+  "nuisance_spans": {
+    "expanded_standard_triple_span": [
+      "minimal_span",
+      "GR outer-gradient clock carrier amplitude",
+      "GR outer-gradient clock carrier phase quadratures",
+      "inner/outer orbital phase and amplitude redefinitions"
+    ],
+    "minimal_span": [
+      "secular spin phase/frequency",
+      "inner-only Einstein-delay basis: sin/cos(lambda_in)",
+      "outer-only redshift-delay basis: sin/cos(lambda_out)"
+    ],
+    "rank_conclusion": "The leading decoupled outer-dipole kernels add a combination vector outside the minimal span, but do not add rank once the GR outer-gradient carrier/geometry nuisance span is included."
+  },
+  "rows": [
+    {
+      "absorption_target": "GR triple carrier / geometry nuisance",
+      "expanded_span_status": "basis generator inside standard GR triple carrier span",
+      "harmonic_basis": "cos(lambda_in - lambda_out):1, cos(2 lambda_in - lambda_out):-e_in/2, cos(lambda_in - 2 lambda_out):e_out, cos(lambda_in):e_out, cos(lambda_out):-e_in/2",
+      "minimal_span_status": "outside minimal spin/inner-only/outer-only span",
+      "notes": "Contains combination frequencies lambda_in-lambda_out, 2lambda_in-lambda_out, and lambda_in-2lambda_out, plus inner/outer sidebands at O(e). This row defines the standard carrier basis used by the expanded nuisance span.",
+      "observable_status": "degenerate",
+      "term": "gr_outer_dipole_carrier"
+    },
+    {
+      "absorption_target": "GR outer-gradient clock amplitude / geometry nuisance",
+      "expanded_span_status": "rank unchanged after adding GR carrier vector",
+      "harmonic_basis": "(zeta_1 s_A) * [cos(lambda_in - lambda_out):1, cos(2 lambda_in - lambda_out):-e_in/2, cos(lambda_in - 2 lambda_out):e_out, cos(lambda_in):e_out, cos(lambda_out):-e_in/2]",
+      "minimal_span_status": "adds one combination vector outside minimal span",
+      "notes": "The linear clock-sector kernel is a scalar multiple of the GR outer-dipole carrier. It is not independent in timing-basis rank unless external priors fix the carrier amplitude tightly.",
+      "observable_status": "degenerate",
+      "term": "zeta1_outer_dipole_kernel"
+    },
+    {
+      "absorption_target": "GR outer-gradient clock amplitude / geometry nuisance",
+      "expanded_span_status": "rank unchanged after adding GR carrier vector",
+      "harmonic_basis": "(zeta_2 s_A^2) * [cos(lambda_in - lambda_out):1, cos(2 lambda_in - lambda_out):-e_in/2, cos(lambda_in - 2 lambda_out):e_out, cos(lambda_in):e_out, cos(lambda_out):-e_in/2]",
+      "minimal_span_status": "adds one combination vector outside minimal span",
+      "notes": "The quadratic clock-sector kernel is a scalar multiple of the same GR outer-dipole carrier. It is also mutually degenerate with the zeta1 kernel in a single-clock basis audit.",
+      "observable_status": "degenerate",
+      "term": "zeta2_outer_dipole_kernel"
+    },
+    {
+      "absorption_target": "single effective GR-carrier amplitude rescaling",
+      "expanded_span_status": "one effective amplitude degenerate with carrier amplitude",
+      "harmonic_basis": "(zeta_1 s_A + zeta_2 s_A^2) * [GR outer-dipole vector]",
+      "minimal_span_status": "one effective combination amplitude outside minimal span",
+      "notes": "At this level the two EFT coefficients enter as one effective single-clock amplitude. This is a leading triple no-go candidate, not a final theorem.",
+      "observable_status": "degenerate",
+      "term": "effective_clock_outer_dipole_amplitude"
+    }
+  ],
+  "schema": [
+    "term",
+    "harmonic_basis",
+    "minimal_span_status",
+    "expanded_span_status",
+    "observable_status",
+    "absorption_target",
+    "notes"
+  ]
+}

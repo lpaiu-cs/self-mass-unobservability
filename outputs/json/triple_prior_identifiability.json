@@ -1,0 +1,87 @@
+{
+  "assumptions": {
+    "clock_order": "leading O(c^-2)",
+    "clock_sector": "decoupled EFT only",
+    "data_fisher": "[[1, 1], [1, 1]]",
+    "free_fall_sector": "GR",
+    "hierarchy_order": "leading O(epsilon=a_in/a_out)",
+    "model": "normalized two-amplitude Fisher audit",
+    "parameters": "[A_GR_dipole, delta_alpha_clock]",
+    "prior": "diagonal precision on A_GR_dipole only",
+    "propagation_sector": "GR",
+    "status": "conditional prior-breaking audit; not a runtime fit"
+  },
+  "interpretation": {
+    "core_degeneracy": "Without a carrier-amplitude prior, delta_alpha_clock is exactly degenerate with A_GR_dipole.",
+    "marginal_clock_information": "Schur complement p/(1+p), where p is carrier prior precision",
+    "runtime_gate": "Full triple runtime work is only motivated if realistic external priors reach the conditional/practical rows."
+  },
+  "rows": [
+    {
+      "carrier_amplitude_degeneracy": "exact",
+      "carrier_prior_precision": "0",
+      "clock_amplitude_identifiability": "none",
+      "condition_number": "inf",
+      "fisher_rank": "1",
+      "marginal_clock_information": "0",
+      "notes": "No external mass, geometry, or carrier-amplitude prior.",
+      "prior_set": "none",
+      "verdict": "no-go"
+    },
+    {
+      "carrier_amplitude_degeneracy": "exact",
+      "carrier_prior_precision": "0",
+      "clock_amplitude_identifiability": "none",
+      "condition_number": "inf",
+      "fisher_rank": "1",
+      "marginal_clock_information": "0",
+      "notes": "Mass information alone does not fix the projected outer-dipole carrier amplitude when geometry remains free.",
+      "prior_set": "mass_only",
+      "verdict": "no-go"
+    },
+    {
+      "carrier_amplitude_degeneracy": "near-exact",
+      "carrier_prior_precision": "0.1",
+      "clock_amplitude_identifiability": "weak",
+      "condition_number": "42.0762",
+      "fisher_rank": "2",
+      "marginal_clock_information": "0.0909091",
+      "notes": "Weak external geometry information gives a finite but small carrier-amplitude prior in normalized data units.",
+      "prior_set": "mass_plus_geometry_weak",
+      "verdict": "conditional-no-go"
+    },
+    {
+      "carrier_amplitude_degeneracy": "partial",
+      "carrier_prior_precision": "1",
+      "clock_amplitude_identifiability": "conditional",
+      "condition_number": "6.8541",
+      "fisher_rank": "2",
+      "marginal_clock_information": "0.5",
+      "notes": "A direct or effectively equivalent outer-carrier amplitude prior comparable to the timing information.",
+      "prior_set": "outer_amplitude_moderate",
+      "verdict": "conditional"
+    },
+    {
+      "carrier_amplitude_degeneracy": "broken by prior",
+      "carrier_prior_precision": "100",
+      "clock_amplitude_identifiability": "practical",
+      "condition_number": "102.03",
+      "fisher_rank": "2",
+      "marginal_clock_information": "0.990099",
+      "notes": "Idealized strong external prior on the GR outer-dipole carrier amplitude.",
+      "prior_set": "idealized_strong_prior",
+      "verdict": "motivates-runtime"
+    }
+  ],
+  "schema": [
+    "prior_set",
+    "carrier_amplitude_degeneracy",
+    "clock_amplitude_identifiability",
+    "carrier_prior_precision",
+    "fisher_rank",
+    "marginal_clock_information",
+    "condition_number",
+    "verdict",
+    "notes"
+  ]
+}

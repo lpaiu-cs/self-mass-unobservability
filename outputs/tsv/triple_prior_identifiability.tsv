@@ -1,0 +1,6 @@
+prior_set	carrier_amplitude_degeneracy	clock_amplitude_identifiability	carrier_prior_precision	fisher_rank	marginal_clock_information	condition_number	verdict	notes
+none	exact	none	0	1	0	inf	no-go	No external mass, geometry, or carrier-amplitude prior.
+mass_only	exact	none	0	1	0	inf	no-go	Mass information alone does not fix the projected outer-dipole carrier amplitude when geometry remains free.
+mass_plus_geometry_weak	near-exact	weak	0.1	2	0.0909091	42.0762	conditional-no-go	Weak external geometry information gives a finite but small carrier-amplitude prior in normalized data units.
+outer_amplitude_moderate	partial	conditional	1	2	0.5	6.8541	conditional	A direct or effectively equivalent outer-carrier amplitude prior comparable to the timing information.
+idealized_strong_prior	broken by prior	practical	100	2	0.990099	102.03	motivates-runtime	Idealized strong external prior on the GR outer-dipole carrier amplitude.
