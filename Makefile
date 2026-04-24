@@ -1,12 +1,15 @@
 PYTHON ?= python
 
-.PHONY: worldline-expand sensitivity-expand symbolic-check legacy-request1 legacy-request2 legacy-request7
+.PHONY: worldline-expand sensitivity-expand enumerate-basis symbolic-check legacy-request1 legacy-request2 legacy-request7
 
 worldline-expand:
 	$(PYTHON) symbolic/worldline_expand.py
 
 sensitivity-expand:
 	$(PYTHON) symbolic/sensitivity_expand.py
+
+enumerate-basis:
+	$(PYTHON) symbolic/enumerate_basis.py
 
 symbolic-check:
 	$(PYTHON) symbolic/checks/test_symbolic.py

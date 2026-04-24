@@ -9,6 +9,7 @@ SYMBOLIC_ROOT = Path(__file__).resolve().parents[1]
 if str(SYMBOLIC_ROOT) not in sys.path:
     sys.path.insert(0, str(SYMBOLIC_ROOT))
 
+from enumerate_basis import enumerate_minimal_scalar_monomials
 from sensitivity_expand import make_quadratic_jet
 from worldline_expand import build_worldline_model
 
@@ -42,9 +43,17 @@ def test_worldline_force_structure() -> None:
     assert sp.simplify(model["force"] - expected_force) == 0
 
 
+def test_basis_enumeration_order_four() -> None:
+    monomials = enumerate_minimal_scalar_monomials(max_weight=4)
+    labels = [monomial.label for monomial in monomials]
+    assert labels == ["1", "E2", "E3", "E2^2", "dotE2", "gradE2"]
+    assert all(monomial.weight <= 4 for monomial in monomials)
+
+
 def main() -> None:
     test_symmetric_quadratic_jet()
     test_worldline_force_structure()
+    test_basis_enumeration_order_four()
     print("symbolic checks passed")
 
 
