@@ -15,30 +15,32 @@
 
 - Status: Proven. This theorem candidate no longer assumes a finite invariant basis as an axiom.
 - Status: Conjectural. The conditional EFT-collapse step lives in [`conditional-collapse-lemma.md`](conditional-collapse-lemma.md).
-- Status: Conjectural. The new theorem burden is basis closure at fixed order, organized by [`power-counting.md`](power-counting.md) and [`../lemmas/05-finite-basis-closure.md`](../lemmas/05-finite-basis-closure.md).
+- Status: Conjectural. The current theorem burden is `normal-form completeness modulo total derivatives and lower-order equations of motion`, organized by [`primitive-catalog.md`](primitive-catalog.md) and [`../lemmas/06-normal-form-completeness-delta4.md`](../lemmas/06-normal-form-completeness-delta4.md).
 
 ## Proof Route
 
 1. Status: Proven. Use the fixed-order counting rule in [`power-counting.md`](power-counting.md) to define a bounded-weight operator search space.
 2. Status: Proven. Finite external field content and positive weights imply a finite set of decorated primitive building blocks at order `\Delta \le \Delta_{\max}`.
 3. Status: Proven. Once a candidate primitive catalog is fixed, the set of admissible parity-even monomials and tensor contractions at that order is finite.
-4. Status: Conjectural. Show that every admissible local minimal-sector operator reduces, modulo total derivatives and lower-order equations of motion, to that finite candidate list.
+4. Status: Conjectural. Show `normal-form completeness modulo total derivatives and lower-order equations of motion` for the exact `Delta<=4` primitive catalog.
 5. Status: Conjectural. Invoke the conditional collapse lemma to convert the finite normal-form basis into finitely many sensitivity coordinates and Wilson coefficients.
 
 ## Exact Remaining Unresolved Step
 
 - Status: Conjectural. The unresolved step is no longer "is the candidate monomial set finite?".
-- Status: Conjectural. The exact unresolved step is physical completeness of the normal-form reduction: prove that the chosen primitive catalog and contraction rules span every admissible minimal-sector local operator modulo total derivatives and lower-order equations of motion.
-- Status: Counterexample candidate. If this reduction fails, the smallest loophole is not a vague "infinite basis" slogan but a concrete violated assumption such as hidden orbital-timescale state dependence or failure of finite external field content.
+- Status: Conjectural. The exact remaining burden is `normal-form completeness modulo total derivatives and lower-order equations of motion` for the exact `Delta<=4` primitive catalog.
+- Status: Counterexample candidate. If this reduction fails, the smallest loophole should be recorded as an explicit obstruction operator or an explicit violated assumption rather than as a vague "infinite basis" slogan.
 
 ## Dependencies
 
 - Status: Imported from prior work. [`../lemmas/01-internal-structure-no-go.md`](../lemmas/01-internal-structure-no-go.md)
 - Status: Imported from prior work. [`../lemmas/02-com-decoupling.md`](../lemmas/02-com-decoupling.md)
 - Status: Conjectural. [`../lemmas/03-worldline-reduction.md`](../lemmas/03-worldline-reduction.md)
-- Status: Conjectural. [`../lemmas/05-finite-basis-closure.md`](../lemmas/05-finite-basis-closure.md)
+- Status: Proven. [`../lemmas/05-finite-basis-closure.md`](../lemmas/05-finite-basis-closure.md)
+- Status: Conjectural. [`../lemmas/06-normal-form-completeness-delta4.md`](../lemmas/06-normal-form-completeness-delta4.md)
 - Status: Conjectural. [`conditional-collapse-lemma.md`](conditional-collapse-lemma.md)
 - Status: Conjectural. [`power-counting.md`](power-counting.md)
+- Status: Proven. [`primitive-catalog.md`](primitive-catalog.md)
 
 ## Failure Triggers
 

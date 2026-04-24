@@ -19,15 +19,24 @@ Status: Conjectural. The repository roadmap is organized around theorem progress
 | --- | --- | --- | --- |
 | M2.1 | Conjectural | [`docs/conditional-collapse-lemma.md`](conditional-collapse-lemma.md) | Conditional collapse is isolated from basis closure. |
 | M2.2 | Conjectural | [`docs/power-counting.md`](power-counting.md) | Fixed-order counting rule is explicit and does not assume finite basis closure. |
-| M2.3 | Conjectural | [`lemmas/05-finite-basis-closure.md`](../lemmas/05-finite-basis-closure.md) | Abstract candidate-set finiteness is separated from the physical completeness burden. |
+| M2.3 | Proven | [`lemmas/05-finite-basis-closure.md`](../lemmas/05-finite-basis-closure.md) | Abstract candidate-set finiteness is separated from the physical completeness burden. |
 | M2.4 | Proven | [`../symbolic/enumerate_basis.py`](../symbolic/enumerate_basis.py) | The chosen-order candidate monomial list enumerates without error. |
 | M2.5 | Counterexample candidate | [`../counterexamples/chi-state/README.md`](../counterexamples/chi-state/README.md) | The smallest loophole model includes an adiabatic-collapse analysis. |
 
+## M3: Delta<=4 Normal-Form Completeness Attack
+
+| Item | Status | Deliverable | Exit condition |
+| --- | --- | --- | --- |
+| M3.1 | Proven | [`docs/primitive-catalog.md`](primitive-catalog.md) | Exact `Delta<=4` primitive and candidate operator content is fixed. |
+| M3.2 | Proven | [`../symbolic/normal_form_reduce.py`](../symbolic/normal_form_reduce.py) | Total-derivative, lower-order EOM, and algebraic reductions run without error. |
+| M3.3 | Conjectural | [`../lemmas/06-normal-form-completeness-delta4.md`](../lemmas/06-normal-form-completeness-delta4.md) | A real Delta<=4 completeness path or explicit obstruction is recorded. |
+| M3.4 | Conjectural | [`docs/theorem-A-freefall.md`](theorem-A-freefall.md) | The current burden is written uniformly as `normal-form completeness modulo total derivatives and lower-order equations of motion`. |
+
 ## Near-Term Sequence
 
-1. Status: Conjectural. Close the M2 basis-closure theorem candidate without restoring finite-basis closure as an assumption.
-2. Status: Conjectural. Prove or refute normal-form completeness of the chosen primitive catalog modulo total derivatives and lower-order equations of motion.
-3. Status: Counterexample candidate. Promote the dominant loophole class only if it produces a genuine failure of fixed-order basis closure.
+1. Status: Conjectural. Close `normal-form completeness modulo total derivatives and lower-order equations of motion` for the exact `Delta<=4` primitive catalog.
+2. Status: Conjectural. Either prove catalog exhaustiveness at `Delta<=4` or isolate the smallest additional admissible scalar obstruction.
+3. Status: Counterexample candidate. Promote the dominant loophole class only if it produces a genuine failure of the `Delta<=4` normal-form target list.
 4. Status: Conjectural. Revisit the scalar `s_A` corollary only after the higher-dimensional sensitivity manifold statement is sharp.
 
 ## Explicit Non-Goals For M1

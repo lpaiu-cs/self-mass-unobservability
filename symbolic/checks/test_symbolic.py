@@ -10,6 +10,13 @@ if str(SYMBOLIC_ROOT) not in sys.path:
     sys.path.insert(0, str(SYMBOLIC_ROOT))
 
 from enumerate_basis import enumerate_minimal_scalar_monomials
+from normal_form_reduce import (
+    operator_symbols,
+    reduce_algebraic_identities,
+    reduce_lower_order_eom,
+    reduce_to_normal_form,
+    reduce_total_derivatives,
+)
 from sensitivity_expand import make_quadratic_jet
 from worldline_expand import build_worldline_model
 
@@ -50,10 +57,39 @@ def test_basis_enumeration_order_four() -> None:
     assert all(monomial.weight <= 4 for monomial in monomials)
 
 
+def test_total_derivative_reduction() -> None:
+    ops = operator_symbols()
+    assert reduce_total_derivatives(ops["E_DtE"]) == 0
+    assert reduce_total_derivatives(ops["Dt2_E2"]) == 0
+    assert reduce_total_derivatives(ops["E_Dt2E"]) == -ops["dotE2"]
+
+
+def test_lower_order_eom_reduction() -> None:
+    ops = operator_symbols()
+    assert reduce_lower_order_eom(ops["a2"] + ops["aEa"]) == 0
+
+
+def test_algebraic_reduction() -> None:
+    ops = operator_symbols()
+    assert reduce_algebraic_identities(ops["E4"]) == sp.Rational(1, 2) * ops["E2"] ** 2
+
+
+def test_combined_normal_form_reduction() -> None:
+    ops = operator_symbols()
+    expr = ops["E4"] + ops["E_Dt2E"] + ops["a2"] + ops["gradE2"]
+    reduced = reduce_to_normal_form(expr)
+    expected = sp.Rational(1, 2) * ops["E2"] ** 2 - ops["dotE2"] + ops["gradE2"]
+    assert sp.expand(reduced - expected) == 0
+
+
 def main() -> None:
     test_symmetric_quadratic_jet()
     test_worldline_force_structure()
     test_basis_enumeration_order_four()
+    test_total_derivative_reduction()
+    test_lower_order_eom_reduction()
+    test_algebraic_reduction()
+    test_combined_normal_form_reduction()
     print("symbolic checks passed")
 
 

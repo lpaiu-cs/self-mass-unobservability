@@ -73,6 +73,18 @@ up to total derivatives.
 - Status: Counterexample candidate. In this heavy-state limit the loophole collapses back into ordinary local sensitivity and Wilson-coefficient data.
 - Status: Counterexample candidate. The `chi` loophole is therefore minimal in a precise sense: it fails only when the extra state survives on the orbital timescale.
 
+## Explicit Boundary Between Collapse And Non-Collapse
+
+- Status: Counterexample candidate. Define the adiabatic parameter
+
+```math
+\varepsilon_\chi := \frac{\Omega_{\rm orb}}{\omega_\chi}.
+```
+
+- Status: Counterexample candidate. `adiabatic-collapse` requires both `\varepsilon_\chi \ll 1` and absence or decay of the homogeneous mode `\chi_{A,\mathrm{hom}}`.
+- Status: Counterexample candidate. `non-collapse` occurs whenever either `\varepsilon_\chi = O(1)` or larger, or the homogeneous mode survives with independent initial data.
+- Status: Counterexample candidate. The theorem-relevant boundary is therefore not vague heaviness; it is the explicit failure or success of `\varepsilon_\chi \ll 1` plus homogeneous-mode suppression.
+
 ## Smallest-Model Reason
 
 - Status: Counterexample candidate. Only one new degree of freedom is added, and the rest of the worldline EFT remains local and analytic.

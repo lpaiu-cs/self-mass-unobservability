@@ -1,10 +1,10 @@
-# Lemma 05: Finite Basis Closure For The Minimal Sector
+# Proposition 05: Abstract Finite Candidate-Set Generation At Fixed Order
 
 ## Statement
 
 - Status: Proven. Fix the counting rule of [`../docs/power-counting.md`](../docs/power-counting.md), a truncation order `\Delta \le \Delta_{\max}`, and finite external field content.
 - Status: Proven. Once a candidate primitive catalog is fixed, the abstract set of parity-even scalar monomials and parity-even higher-rank tensor contractions with total weight `\le \Delta_{\max}` is finite.
-- Status: Conjectural. The physical basis-closure claim is stronger: every admissible local operator in the M2 free-fall sector should reduce, modulo total derivatives and lower-order equations of motion, to a linear combination of that finite abstract set.
+- Status: Proven. This proposition establishes abstract candidate-set finiteness only; it does not establish `normal-form completeness modulo total derivatives and lower-order equations of motion`.
 
 ## Proof Of Abstract Finiteness
 
@@ -20,12 +20,12 @@ so each `n_i` is bounded above by `\Delta_{\max} / w_i`.
 4. Status: Proven. Therefore only finitely many exponent vectors occur.
 5. Status: Proven. Each decorated block has finite tensor rank, the number of factors is bounded at fixed order, and therefore the number of parity-even complete contractions is finite.
 
-## What This Lemma Does Not Yet Prove
+## What This Proposition Does Not Yet Prove
 
-- Status: Conjectural. This lemma does not yet prove that the chosen primitive catalog is complete for the physical EFT.
-- Status: Conjectural. The remaining burden is the normal-form statement that every admissible local M2 operator reduces to the enumerated candidate contractions modulo total derivatives and lower-order equations of motion.
+- Status: Conjectural. This proposition does not prove that the chosen primitive catalog is complete for the physical EFT.
+- Status: Conjectural. The remaining burden lives in [`06-normal-form-completeness-delta4.md`](06-normal-form-completeness-delta4.md): `normal-form completeness modulo total derivatives and lower-order equations of motion`.
 
 ## Minimal-Sector Check In Code
 
 - Status: Proven. [`../symbolic/enumerate_basis.py`](../symbolic/enumerate_basis.py) enumerates the current candidate scalar monomials for the sample `\Delta_{\max} = 4` catalog.
-- Status: Proven. The code check demonstrates finite abstract candidate-set size at the chosen order; it does not by itself prove physical completeness.
+- Status: Proven. The code check demonstrates finite abstract candidate-set size at the chosen order; it does not by itself prove normal-form completeness.

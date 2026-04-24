@@ -20,7 +20,8 @@ w(X_a) + p + q.
 
 ## Candidate Scalar Catalog Used In Code
 
-- Status: Conjectural. The current code path uses a candidate scalar generator list built from one parity-even electric-type tidal tensor family `E_{ij}`:
+- Status: Conjectural. The exact `Delta<=4` primitive and candidate operator content is fixed in [`primitive-catalog.md`](primitive-catalog.md).
+- Status: Conjectural. The current code path uses one parity-even electric-type tidal tensor family `E_{ij}` and its derivative-decorated descendants:
 
 | Generator | Status | Weight | Intended meaning |
 | --- | --- | --- | --- |
@@ -29,11 +30,11 @@ w(X_a) + p + q.
 | `dotE2` | Conjectural | 4 | `(D_\tau E_{ij})(D_\tau E^{ij})` |
 | `gradE2` | Conjectural | 4 | `(\nabla_k E_{ij})(\nabla^k E^{ij})` |
 
-- Status: Conjectural. This table is a candidate primitive catalog for the M2 basis-closure theorem candidate, not an assumed final basis.
+- Status: Conjectural. This table is the current normal-form target list for the M3 Delta<=4 attack, not an assumed theorem output.
 - Status: Proven. Given a fixed candidate catalog with positive weights, the set of monomials of weight `\le \Delta_{\max}` is finite.
 
 ## What Is Proven Versus Unresolved
 
 - Status: Proven. Fixed order plus finite external field content implies a finite set of decorated primitive building blocks.
 - Status: Proven. Positive weights imply a finite set of candidate monomials built from those primitives.
-- Status: Conjectural. The unresolved step is physical completeness: whether every admissible minimal-sector local scalar operator reduces, modulo total derivatives and lower-order equations of motion, to the chosen candidate monomial list.
+- Status: Conjectural. The unresolved step is `normal-form completeness modulo total derivatives and lower-order equations of motion` for the chosen `Delta<=4` primitive catalog.
