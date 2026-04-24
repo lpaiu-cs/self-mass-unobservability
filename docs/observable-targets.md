@@ -131,6 +131,22 @@ Status: Proven. The same two carriers are not enough against real degree
 comparator. Those require additional carrier frequencies or a justified
 derivative-order prior.
 
+## Triple GR Carrier Inventory
+
+Status: Counterexample candidate. The existing GR outer-dipole combination
+carrier `|Omega_in-Omega_out|` can provide the third sample needed to strengthen
+the shared-`tau_chi` test.
+
+Status: Counterexample candidate. With the three-carrier set
+`Omega_in`, `Omega_out`, and `|Omega_in-Omega_out|`, a nonresonant triple can
+pressure real shared-coefficient derivative comparators through degree
+`N <= 4` and the deliberately generous complex comparator through degree
+`N <= 1`.
+
+Status: Proven. This three-carrier target collapses if the combination carrier
+is not distinct, has zero projection, or is absorbed by an arbitrary complex
+projection nuisance assigned independently to each carrier.
+
 ## Sideband Test
 
 Status: Proven. A linear time-invariant one-state model driven by `F1 cos(Omega1 t) + F2 cos(Omega2 t)` cannot create sidebands in the linear readout.

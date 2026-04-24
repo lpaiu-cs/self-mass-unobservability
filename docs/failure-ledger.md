@@ -34,6 +34,9 @@ with `F(t) = F0 cos(Omega t)` for the first derivation.
 | Proven | Triple bridge with `Omega_in = Omega_out` or `F_in F_out = 0` | The inner/outer carrier inventory has fewer than two usable frequency samples. | One-frequency derivative degeneracy. |
 | Proven | Triple bridge against real degree `N >= 3` derivative EFT with only two carriers | The real odd channel has enough coefficients to interpolate both positive-frequency samples. | Need additional carrier or derivative-order prior. |
 | Proven | Triple bridge against complex degree `N >= 1` polynomial comparator with only two carriers | Complex polynomial interpolation absorbs two samples. | Conservative complex-comparator degeneracy. |
+| Proven | Three-carrier triple inventory with `Omega_in = 2 Omega_out` or `Omega_out = 2 Omega_in` | The combination carrier `|Omega_in-Omega_out|` duplicates one monopole carrier. | Falls back to two-carrier bridge. |
+| Proven | Three-carrier triple inventory against real degree `N >= 5` or complex degree `N >= 2` comparator | Three samples are below the corresponding obstruction count. | Need sideband carrier, order prior, or projection prior. |
+| Proven | Three-carrier triple inventory with arbitrary complex projection nuisance per carrier | The projection absorbs the shared transfer law point by point. | Observable bridge collapse. |
 | Proven | Linear first-order `chi` plus linear two-frequency forcing and linear readout | Superposition leaves only the input frequencies; no `Omega_1 +/- Omega_2` terms appear. | No sideband loophole in the linear MVP. |
 
 ## Non-Collapse Candidate
@@ -66,6 +69,11 @@ Status: Counterexample candidate. The hierarchical-triple shared-tau bridge is
 the current clean carrier-inventory route: existing inner/outer carriers can
 test real degree-`1` and degree-`2` shared derivative comparators without
 requiring a new tensor harmonic.
+
+Status: Counterexample candidate. Adding the existing GR outer-dipole
+combination carrier `|Omega_in-Omega_out|` strengthens the same route to real
+degree `N <= 4` and complex degree `N <= 1`, subject to nonresonance and finite
+projection assumptions.
 
 Status: Counterexample candidate. The current projection-channel audit shows
 that a range-like linear readout has finite shared nuisance parameters

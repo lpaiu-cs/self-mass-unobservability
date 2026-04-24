@@ -142,6 +142,24 @@ Status: Proven. It does not by itself break higher real derivative order or
 complex degree-`1` comparators. The bridge is therefore a low-order positive
 route, not a final universal theorem.
 
+## Triple Three-Carrier Inventory
+
+Status: Counterexample candidate. Adding the existing GR outer-dipole
+combination carrier gives the candidate set
+
+```text
+Omega_in, Omega_out, |Omega_in - Omega_out|.
+```
+
+Status: Counterexample candidate. For nonresonant positive frequencies and
+nonzero finite-dimensional projection, these three samples distinguish real
+degree `N <= 4` derivative comparators and complex degree `N <= 1` polynomial
+comparators.
+
+Status: Proven. Real degree `N >= 5`, complex degree `N >= 2`, and arbitrary
+per-carrier projection nuisance still require more carrier information or an
+order/prior assumption.
+
 ## Large-Frequency Behavior
 
 Status: Proven. For `x = Omega tau_chi >> 1`,

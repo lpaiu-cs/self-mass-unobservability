@@ -77,6 +77,15 @@ from triple_shared_tau_bridge import (  # noqa: E402
     two_carrier_real_odd_residual_order1,
     validate_rows as validate_triple_bridge_rows,
 )
+from triple_gr_carrier_inventory import (  # noqa: E402
+    carrier_inventory as triple_gr_carrier_inventory,
+    complex_k_frequency_verdict as complex_k_carrier_verdict,
+    payload as triple_gr_inventory_payload,
+    real_k_frequency_verdict as real_k_carrier_verdict,
+    rows_as_dicts as triple_gr_inventory_rows,
+    three_carrier_conditions,
+    validate_rows as validate_triple_gr_inventory_rows,
+)
 
 
 def test_monochromatic_response_solves_relaxation_equation() -> None:
@@ -458,6 +467,57 @@ def test_triple_bridge_payload_records_carrier_inventory() -> None:
     assert data["real_degree_boundaries"]["1"]["verdict"] == "distinguishable"
 
 
+def test_triple_gr_inventory_rows_are_classified() -> None:
+    rows = triple_gr_inventory_rows()
+    validate_triple_gr_inventory_rows(rows)
+
+    assert rows
+    assert all(row["claim_status"] for row in rows)
+    assert all(row["carrier_set"] for row in rows)
+    assert all(row["verdict"] for row in rows)
+
+
+def test_triple_gr_inventory_has_three_base_carriers() -> None:
+    inventory = triple_gr_carrier_inventory()
+
+    assert inventory["inner_monopole"] == "Omega_in"
+    assert inventory["outer_monopole"] == "Omega_out"
+    assert inventory["outer_dipole_combination"] == "abs(Omega_in - Omega_out)"
+
+
+def test_three_carrier_real_degree_boundary() -> None:
+    assert real_k_carrier_verdict(4, 3)["verdict"] == "distinguishable"
+    assert real_k_carrier_verdict(5, 3)["verdict"] == "degenerate at 3 carriers"
+
+
+def test_three_carrier_complex_degree_boundary() -> None:
+    assert complex_k_carrier_verdict(1, 3)["verdict"] == "distinguishable"
+    assert complex_k_carrier_verdict(2, 3)["verdict"] == "degenerate at 3 carriers"
+
+
+def test_three_carrier_conditions_include_resonance_exclusions() -> None:
+    conditions = three_carrier_conditions()
+
+    assert "Omega_in != Omega_out" in conditions
+    assert "Omega_in != 2 Omega_out" in conditions
+    assert "Omega_out != 2 Omega_in" in conditions
+
+
+def test_triple_gr_inventory_payload_records_boundaries() -> None:
+    data = triple_gr_inventory_payload()
+
+    assert "real_degree_boundaries_for_three_carriers" in data
+    assert "complex_degree_boundaries_for_three_carriers" in data
+    assert (
+        data["real_degree_boundaries_for_three_carriers"]["4"]["verdict"]
+        == "distinguishable"
+    )
+    assert (
+        data["complex_degree_boundaries_for_three_carriers"]["1"]["verdict"]
+        == "distinguishable"
+    )
+
+
 def main() -> None:
     test_monochromatic_response_solves_relaxation_equation()
     test_transfer_function_components_match_real_solution()
@@ -502,6 +562,12 @@ def main() -> None:
     test_triple_bridge_transfer_uses_distinct_inner_outer_samples()
     test_triple_bridge_real_odd_residual_has_expected_collapse_limits()
     test_triple_bridge_payload_records_carrier_inventory()
+    test_triple_gr_inventory_rows_are_classified()
+    test_triple_gr_inventory_has_three_base_carriers()
+    test_three_carrier_real_degree_boundary()
+    test_three_carrier_complex_degree_boundary()
+    test_three_carrier_conditions_include_resonance_exclusions()
+    test_triple_gr_inventory_payload_records_boundaries()
     print("dynamic chi symbolic checks passed")
 
 

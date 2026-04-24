@@ -1,6 +1,6 @@
 PYTHON ?= python
 
-.PHONY: chi-response chi-two-frequency chi-basis-audit frequency-sweep forcing-dictionary projection-audit triple-shared-tau-bridge symbolic-check
+.PHONY: chi-response chi-two-frequency chi-basis-audit frequency-sweep forcing-dictionary projection-audit triple-shared-tau-bridge triple-gr-carrier-inventory symbolic-check
 
 chi-response:
 	$(PYTHON) symbolic/chi_relaxation_response.py
@@ -22,6 +22,9 @@ projection-audit:
 
 triple-shared-tau-bridge:
 	$(PYTHON) symbolic/triple_shared_tau_bridge.py
+
+triple-gr-carrier-inventory:
+	$(PYTHON) symbolic/triple_gr_carrier_inventory.py
 
 symbolic-check:
 	$(PYTHON) symbolic/checks/test_symbolic.py

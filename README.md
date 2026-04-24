@@ -48,6 +48,11 @@ carrier inventory: existing hierarchical-triple inner and outer GR carriers
 provide two distinct samples, enough to test real shared-coefficient degree-1
 and degree-2 derivative comparators when both carrier amplitudes are nonzero.
 
+Status: Counterexample candidate. The triple GR carrier inventory adds the
+outer-dipole combination carrier `|Omega_in-Omega_out|` as a conditional third
+sample. In a nonresonant hierarchy with finite projection nuisance, this
+pressures real degree-`N<=4` and complex degree-`N<=1` comparators.
+
 Status: Proven. For the linear readout above and a two-frequency linear drive, no sidebands are generated. Sidebands require a nonlinear drive/readout, a hereditary kernel with mixing, a second-order internal mode coupled nonlinearly, or a threshold/hysteretic extension.
 
 ## Layout
@@ -66,6 +71,7 @@ Status: Proven. For the linear readout above and a two-frequency linear drive, n
 - `symbolic/forcing_observable_dictionary.py`: harmonic forcing and projection checks.
 - `symbolic/projection_channel_audit.py`: projection deconvolution and pole-survival checks.
 - `symbolic/triple_shared_tau_bridge.py`: inner/outer carrier bridge to the shared-`tau_chi` frequency-sweep test.
+- `symbolic/triple_gr_carrier_inventory.py`: three-carrier GR triple inventory and comparator-count audit.
 - `symbolic/checks/test_symbolic.py`: deterministic symbolic checks.
 - `counterexamples/README.md`: loophole framing and escalation list.
 

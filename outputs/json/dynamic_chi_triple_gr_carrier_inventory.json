@@ -1,0 +1,212 @@
+{
+  "assumptions": {
+    "base_carriers": "inner monopole, outer monopole, outer-dipole combination",
+    "carrier_source": "existing GR hierarchical-triple clock carriers",
+    "scope": "symbolic inventory and comparator-count audit; no runtime"
+  },
+  "carrier_inventory": {
+    "eccentric_outer_dipole_sidebands": "abs(2 Omega_in - Omega_out), abs(Omega_in - 2 Omega_out)",
+    "inner_monopole": "Omega_in",
+    "outer_dipole_combination": "abs(Omega_in - Omega_out)",
+    "outer_monopole": "Omega_out"
+  },
+  "complex_degree_boundaries_for_three_carriers": {
+    "0": {
+      "N_frequencies": 3,
+      "degree": 0,
+      "first_obstruction_count": 2,
+      "surviving_target": "full rational transfer pole residual",
+      "verdict": "distinguishable"
+    },
+    "1": {
+      "N_frequencies": 3,
+      "degree": 1,
+      "first_obstruction_count": 3,
+      "surviving_target": "full rational transfer pole residual",
+      "verdict": "distinguishable"
+    },
+    "2": {
+      "N_frequencies": 3,
+      "degree": 2,
+      "first_obstruction_count": 4,
+      "surviving_target": "none without more distinct carrier frequencies or order prior",
+      "verdict": "degenerate at 3 carriers"
+    },
+    "3": {
+      "N_frequencies": 3,
+      "degree": 3,
+      "first_obstruction_count": 5,
+      "surviving_target": "none without more distinct carrier frequencies or order prior",
+      "verdict": "degenerate at 3 carriers"
+    },
+    "4": {
+      "N_frequencies": 3,
+      "degree": 4,
+      "first_obstruction_count": 6,
+      "surviving_target": "none without more distinct carrier frequencies or order prior",
+      "verdict": "degenerate at 3 carriers"
+    }
+  },
+  "real_degree_boundaries_for_three_carriers": {
+    "0": {
+      "N_frequencies": 3,
+      "degree": 0,
+      "first_obstruction_count": 1,
+      "surviving_target": "shared tau_chi odd-channel pole residual",
+      "verdict": "distinguishable"
+    },
+    "1": {
+      "N_frequencies": 3,
+      "degree": 1,
+      "first_obstruction_count": 2,
+      "surviving_target": "shared tau_chi odd-channel pole residual",
+      "verdict": "distinguishable"
+    },
+    "2": {
+      "N_frequencies": 3,
+      "degree": 2,
+      "first_obstruction_count": 2,
+      "surviving_target": "shared tau_chi odd-channel pole residual",
+      "verdict": "distinguishable"
+    },
+    "3": {
+      "N_frequencies": 3,
+      "degree": 3,
+      "first_obstruction_count": 3,
+      "surviving_target": "shared tau_chi odd-channel pole residual",
+      "verdict": "distinguishable"
+    },
+    "4": {
+      "N_frequencies": 3,
+      "degree": 4,
+      "first_obstruction_count": 3,
+      "surviving_target": "shared tau_chi odd-channel pole residual",
+      "verdict": "distinguishable"
+    },
+    "5": {
+      "N_frequencies": 3,
+      "degree": 5,
+      "first_obstruction_count": 4,
+      "surviving_target": "none without more distinct carrier frequencies or order prior",
+      "verdict": "degenerate at 3 carriers"
+    },
+    "6": {
+      "N_frequencies": 3,
+      "degree": 6,
+      "first_obstruction_count": 4,
+      "surviving_target": "none without more distinct carrier frequencies or order prior",
+      "verdict": "degenerate at 3 carriers"
+    }
+  },
+  "rows": [
+    {
+      "N_frequencies": "3 under generic nonresonant hierarchy",
+      "carrier_set": "Omega_in, Omega_out, abs(Omega_in - Omega_out)",
+      "claim_status": "Counterexample candidate",
+      "comparator_basis": "frequency inventory only",
+      "notes": "The third carrier is the existing GR outer-dipole combination frequency. It need not be a new clock-sector shape.",
+      "surviving_target": "three-sample shared tau_chi bridge input",
+      "term": "inner_outer_combination_inventory",
+      "verdict": "third GR carrier available conditionally"
+    },
+    {
+      "N_frequencies": "2",
+      "carrier_set": "Omega_in, Omega_out",
+      "claim_status": "Proven",
+      "comparator_basis": "real shared-coefficient derivative EFT",
+      "notes": "This restates Request 10.2b: two carriers are useful but not enough for higher derivative order.",
+      "surviving_target": "low-order shared tau_chi pole residual",
+      "term": "inner_outer_pair_baseline",
+      "verdict": "distinguishes degree 1 and 2 only"
+    },
+    {
+      "N_frequencies": "3",
+      "carrier_set": "Omega_in, Omega_out, abs(Omega_in - Omega_out)",
+      "claim_status": "Counterexample candidate",
+      "comparator_basis": "real shared-coefficient degree-N derivative EFT, N <= 4",
+      "notes": "Three distinct positive carriers reach the first obstruction count for real degree 3 and 4 comparators.",
+      "surviving_target": "shared tau_chi odd-channel pole residual",
+      "term": "three_carrier_real_degree4",
+      "verdict": "distinguishable"
+    },
+    {
+      "N_frequencies": "3",
+      "carrier_set": "Omega_in, Omega_out, abs(Omega_in - Omega_out)",
+      "claim_status": "Proven",
+      "comparator_basis": "real shared-coefficient degree-N derivative EFT, N >= 5",
+      "notes": "Degree 5 raises the real positive-frequency obstruction count to four samples, so the three-carrier bridge is insufficient.",
+      "surviving_target": "none without more distinct carrier frequencies or order prior",
+      "term": "three_carrier_real_degree5_or_higher",
+      "verdict": "degenerate at 3 carriers"
+    },
+    {
+      "N_frequencies": "3",
+      "carrier_set": "Omega_in, Omega_out, abs(Omega_in - Omega_out)",
+      "claim_status": "Counterexample candidate",
+      "comparator_basis": "complex shared-coefficient degree-N polynomial, N <= 1",
+      "notes": "Three samples are enough to beat the deliberately generous complex degree-1 polynomial comparator.",
+      "surviving_target": "full rational transfer pole residual",
+      "term": "three_carrier_complex_degree1",
+      "verdict": "distinguishable"
+    },
+    {
+      "N_frequencies": "3",
+      "carrier_set": "Omega_in, Omega_out, abs(Omega_in - Omega_out)",
+      "claim_status": "Proven",
+      "comparator_basis": "complex shared-coefficient degree-N polynomial, N >= 2",
+      "notes": "Complex degree 2 needs four distinct samples. The conservative complex gate remains open without another carrier or an order prior.",
+      "surviving_target": "none without more distinct carrier frequencies or order prior",
+      "term": "three_carrier_complex_degree2_or_higher",
+      "verdict": "degenerate at 3 carriers"
+    },
+    {
+      "N_frequencies": "optional fourth/fifth samples if eccentric sidebands are usable",
+      "carrier_set": "abs(2 Omega_in - Omega_out), abs(Omega_in - 2 Omega_out)",
+      "claim_status": "Counterexample candidate",
+      "comparator_basis": "same shared-coefficient derivative gates",
+      "notes": "The Request 8 triple rank audit showed these sidebands in the GR carrier vector. They are not new scalar-EFT shapes, but can serve as additional frequency samples if their projections are not arbitrary nuisance amplitudes.",
+      "surviving_target": "higher-order comparator pressure",
+      "term": "eccentric_outer_dipole_sideband_extension",
+      "verdict": "potential extension"
+    },
+    {
+      "N_frequencies": "less than 3",
+      "carrier_set": "commensurate or unprojected carriers",
+      "claim_status": "Proven",
+      "comparator_basis": "any three-carrier bridge comparator",
+      "notes": "The third sample is lost if Omega_in=Omega_out, Omega_in=2 Omega_out, Omega_out=2 Omega_in, or the outer-dipole projection amplitude is zero/arbitrary.",
+      "surviving_target": "none beyond lower inventory result",
+      "term": "resonance_or_projection_collapse",
+      "verdict": "collapses to two-carrier or one-carrier bridge"
+    },
+    {
+      "N_frequencies": "any",
+      "carrier_set": "any finite carrier set",
+      "claim_status": "Proven",
+      "comparator_basis": "unconstrained complex projection nuisance per carrier",
+      "notes": "If each carrier has an arbitrary complex projection amplitude, the projection absorbs the shared transfer law point by point.",
+      "surviving_target": "none",
+      "term": "arbitrary_projection_failure",
+      "verdict": "collapses"
+    }
+  ],
+  "schema": [
+    "term",
+    "claim_status",
+    "carrier_set",
+    "N_frequencies",
+    "comparator_basis",
+    "verdict",
+    "surviving_target",
+    "notes"
+  ],
+  "three_carrier_conditions": [
+    "Omega_in > 0",
+    "Omega_out > 0",
+    "Omega_in != Omega_out",
+    "Omega_in != 2 Omega_out",
+    "Omega_out != 2 Omega_in",
+    "inner, outer, and outer-dipole projection amplitudes are nonzero",
+    "projection nuisance is finite-dimensional, not arbitrary per carrier"
+  ]
+}
