@@ -160,6 +160,30 @@ Status: Proven. Real degree `N >= 5`, complex degree `N >= 2`, and arbitrary
 per-carrier projection nuisance still require more carrier information or an
 order/prior assumption.
 
+## Triple Projection-Nuisance Realism
+
+Status: Counterexample candidate. The three-carrier bridge observes
+
+```text
+O_k = Lambda_k(theta) G(z_k) F_k,
+z_k = i Omega_k.
+```
+
+Status: Counterexample candidate. If `Lambda_k(theta)` is calibrated, a common
+real scale, or a finite shared projection model, the dynamic-chi transfer law
+is not automatically reduced to a frequency-local nuisance. The result remains
+conditional for unknown finite projection models because the projection
+parameters consume rank.
+
+Status: Proven. If `Lambda_k` is an arbitrary complex nuisance independently
+assigned to each carrier, then
+
+```text
+Lambda_k = O_k/(G(z_k)F_k)
+```
+
+fits every carrier pointwise and removes the shared-`tau_chi` target.
+
 ## Large-Frequency Behavior
 
 Status: Proven. For `x = Omega tau_chi >> 1`,

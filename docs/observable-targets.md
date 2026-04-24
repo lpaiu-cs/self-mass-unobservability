@@ -147,6 +147,29 @@ Status: Proven. This three-carrier target collapses if the combination carrier
 is not distinct, has zero projection, or is absorbed by an arbitrary complex
 projection nuisance assigned independently to each carrier.
 
+## Triple Projection-Nuisance Gate
+
+Status: Counterexample candidate. The three-carrier bridge remains a positive
+route if the triple projection factors have calibrated or finite shared
+structure:
+
+```text
+O_k = Lambda_k(theta) G(i Omega_k) F_k.
+```
+
+Status: Counterexample candidate. A calibrated or common real projection scale
+preserves the shared-`tau_chi` transfer relation because it can be deprojected
+or removed by carrier ratios.
+
+Status: Counterexample candidate. Finite real or complex shared projection
+nuisance is a conditional gate: it does not erase the bridge point by point,
+but it consumes rank and requires projection priors, additional carriers, or a
+Jacobian audit.
+
+Status: Proven. Arbitrary per-carrier complex projection nuisance collapses
+the target because each carrier can choose
+`Lambda_k=O_k/(G(i Omega_k)F_k)`.
+
 ## Sideband Test
 
 Status: Proven. A linear time-invariant one-state model driven by `F1 cos(Omega1 t) + F2 cos(Omega2 t)` cannot create sidebands in the linear readout.

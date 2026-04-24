@@ -99,6 +99,16 @@ from triple_gr_carrier_inventory import (  # noqa: E402
     three_carrier_conditions,
     validate_rows as validate_triple_gr_inventory_rows,
 )
+from triple_projection_nuisance_gate import (  # noqa: E402
+    arbitrary_projection_reconstruction_residual as gate_arbitrary_projection_reconstruction_residual,
+    calibrated_deprojection_residual as gate_calibrated_deprojection_residual,
+    payload as triple_projection_gate_payload,
+    projection_model_forms,
+    range_deprojection_residual as gate_range_deprojection_residual,
+    rows_as_dicts as triple_projection_gate_rows,
+    triple_projection_mapping,
+    validate_rows as validate_triple_projection_gate_rows,
+)
 
 
 def test_monochromatic_response_solves_relaxation_equation() -> None:
@@ -616,6 +626,59 @@ def test_triple_gr_inventory_payload_records_boundaries() -> None:
     )
 
 
+def test_triple_projection_gate_rows_are_classified() -> None:
+    rows = triple_projection_gate_rows()
+    validate_triple_projection_gate_rows(rows)
+
+    assert rows
+    assert all(row["claim_status"] for row in rows)
+    assert all(row["bridge_verdict"] for row in rows)
+    assert all(row["runtime_relevance"] for row in rows)
+
+
+def test_triple_projection_gate_preserves_calibrated_projection() -> None:
+    rows = {row["term"]: row for row in triple_projection_gate_rows()}
+
+    assert rows["calibrated_common_real_scale"]["bridge_verdict"] == "distinguishable"
+    assert rows["common_real_scale_unknown"]["runtime_relevance"] == "runtime-motivated"
+    assert gate_calibrated_deprojection_residual() == 0
+    assert gate_range_deprojection_residual() == 0
+
+
+def test_triple_projection_gate_arbitrary_projection_collapses() -> None:
+    rows = {row["term"]: row for row in triple_projection_gate_rows()}
+
+    arbitrary = rows["arbitrary_per_carrier_complex_projection"]
+    assert arbitrary["bridge_verdict"] == "collapse"
+    assert arbitrary["runtime_relevance"] == "not-runtime-motivated"
+    assert gate_arbitrary_projection_reconstruction_residual() == 0
+
+
+def test_triple_projection_gate_keeps_finite_shared_nuisance_conditional() -> None:
+    rows = {row["term"]: row for row in triple_projection_gate_rows()}
+
+    assert rows["finite_real_shared_geometry"]["bridge_verdict"] == "conditional"
+    assert rows["range_like_shared_projection_unknown"]["bridge_verdict"] == "conditional"
+    assert rows["finite_complex_shared_polynomial"]["bridge_verdict"] == "conditional"
+
+
+def test_triple_projection_gate_payload_records_projection_boundary() -> None:
+    data = triple_projection_gate_payload()
+
+    assert "projection_mapping" in data
+    assert "projection_model_forms" in data
+    assert "nuisance_dimension_ledger" in data
+    assert data["arbitrary_projection_reconstruction_residual"] == "0"
+    assert (
+        triple_projection_mapping()["observed_carrier"]
+        == "O_k=Lambda_k(theta) G(z_k) F_k"
+    )
+    assert (
+        projection_model_forms()["arbitrary_per_carrier_complex"]
+        == "Lambda_k independent for each carrier"
+    )
+
+
 def main() -> None:
     test_monochromatic_response_solves_relaxation_equation()
     test_transfer_function_components_match_real_solution()
@@ -674,6 +737,11 @@ def main() -> None:
     test_three_carrier_complex_degree_boundary()
     test_three_carrier_conditions_include_resonance_exclusions()
     test_triple_gr_inventory_payload_records_boundaries()
+    test_triple_projection_gate_rows_are_classified()
+    test_triple_projection_gate_preserves_calibrated_projection()
+    test_triple_projection_gate_arbitrary_projection_collapses()
+    test_triple_projection_gate_keeps_finite_shared_nuisance_conditional()
+    test_triple_projection_gate_payload_records_projection_boundary()
     print("dynamic chi symbolic checks passed")
 
 

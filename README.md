@@ -53,6 +53,15 @@ outer-dipole combination carrier `|Omega_in-Omega_out|` as a conditional third
 sample. In a nonresonant hierarchy with finite projection nuisance, this
 pressures real degree-`N<=4` and complex degree-`N<=1` comparators.
 
+Status: Counterexample candidate. The triple projection-nuisance realism gate
+keeps the three-carrier bridge alive for calibrated or finite shared projection
+models, but downgrades the result to conditional whenever the projection
+parameters consume rank.
+
+Status: Proven. If the timing projection is granted arbitrary complex nuisance
+freedom independently at each carrier, the shared-`tau_chi` bridge collapses
+point by point and is not runtime-motivated.
+
 Status: Counterexample candidate. The M5 nonlinear sideband test adds the
 minimal nonlinear drive/readout terms. These generate frequencies absent from
 the linear input, including `Omega1+Omega2`, `|Omega1-Omega2|`, and the orbital
@@ -78,6 +87,7 @@ Status: Proven. For the linear readout above and a two-frequency linear drive, n
 - `symbolic/projection_channel_audit.py`: projection deconvolution and pole-survival checks.
 - `symbolic/triple_shared_tau_bridge.py`: inner/outer carrier bridge to the shared-`tau_chi` frequency-sweep test.
 - `symbolic/triple_gr_carrier_inventory.py`: three-carrier GR triple inventory and comparator-count audit.
+- `symbolic/triple_projection_nuisance_gate.py`: projection-nuisance realism gate for the three-carrier bridge.
 - `symbolic/nonlinear_sideband_test.py`: minimal nonlinear sideband generation checks.
 - `symbolic/checks/test_symbolic.py`: deterministic symbolic checks.
 - `counterexamples/README.md`: loophole framing and escalation list.

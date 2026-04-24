@@ -37,6 +37,9 @@ with `F(t) = F0 cos(Omega t)` for the first derivation.
 | Proven | Three-carrier triple inventory with `Omega_in = 2 Omega_out` or `Omega_out = 2 Omega_in` | The combination carrier `|Omega_in-Omega_out|` duplicates one monopole carrier. | Falls back to two-carrier bridge. |
 | Proven | Three-carrier triple inventory against real degree `N >= 5` or complex degree `N >= 2` comparator | Three samples are below the corresponding obstruction count. | Need sideband carrier, order prior, or projection prior. |
 | Proven | Three-carrier triple inventory with arbitrary complex projection nuisance per carrier | The projection absorbs the shared transfer law point by point. | Observable bridge collapse. |
+| Proven | Triple projection gate with arbitrary complex `Lambda_k` independently assigned to each carrier | Choosing `Lambda_k=O_k/(G(i Omega_k)F_k)` fits every carrier pointwise. | Projection-nuisance collapse. |
+| Proven | Triple projection gate with zero, singular, or pole-cancelling projection | A carrier sample is blind, cannot be deprojected, or cancels the relaxation pole. | Carrier sample lost. |
+| Proven | Three-carrier gate with a projection/comparator class whose effective dimension exceeds the three-sample pressure | The finite carrier inventory is below the obstruction count after nuisance parameters are admitted. | Need more carriers, order prior, or external projection prior. |
 | Proven | Linear first-order `chi` plus linear two-frequency forcing and linear readout | Superposition leaves only the input frequencies; no `Omega_1 +/- Omega_2` terms appear. | No sideband loophole in the linear MVP. |
 | Proven | Nonlinear sideband model with `beta_F2 = lambda_Fchi = lambda_chi2 = 0` | The model reduces to the linear no-sideband one-state response. | Nonlinear sideband collapse. |
 | Proven | Mixed sideband test with `F1 F2 = 0` | Sum and difference sideband amplitudes vanish because only one harmonic is present. | Insufficient nonlinear forcing. |
@@ -82,6 +85,13 @@ Status: Counterexample candidate. The current projection-channel audit shows
 that a range-like linear readout has finite shared nuisance parameters
 `Gamma,kappa`, not arbitrary frequency-local nuisance, but a named measurement
 channel still needs its own projection justification.
+
+Status: Counterexample candidate. The triple projection-nuisance realism gate
+keeps the dynamic-chi branch alive only when the carrier projection is
+calibrated or finite-dimensional and shared across carriers.
+
+Status: Proven. The same gate collapses if the standard timing nuisance model
+is allowed arbitrary per-carrier complex projection amplitudes.
 
 ## Failed Sideband Attempt
 

@@ -78,6 +78,19 @@ Status: Counterexample candidate. The first concrete projection channels are
 `delta a_hat = Gamma q_hat` and `ddot R + kappa^2 R = Gamma q_A`, representing
 acceleration-like and range-like linearized free-fall readouts.
 
+Status: Counterexample candidate. For the triple carrier bridge, the measured
+carrier samples are written as
+
+```text
+O_k = Lambda_k(theta) G(i Omega_k) F_k,
+Omega_k in {Omega_in, Omega_out, |Omega_in-Omega_out|}.
+```
+
+Status: Conjectural. The projection-nuisance realism gate is the distinction
+between finite shared `theta` and arbitrary independent complex `Lambda_k`.
+Only the former can leave the shared-`tau_chi` transfer relation as a
+runtime-worthy target.
+
 ## Minimal Nonlinear Extensions
 
 Status: Counterexample candidate. Before adding a second-order mode, M5 tests
