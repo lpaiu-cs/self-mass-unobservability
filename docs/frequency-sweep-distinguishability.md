@@ -137,3 +137,12 @@ is `N + 2` distinct frequencies.
 
 Status: Counterexample candidate. The observable class is the pole-bearing
 frequency-transfer relation, not harmonic creation.
+
+## Machine Outputs
+
+Status: Proven. The frequency-sweep audit writes the minimality table to
+
+```text
+outputs/tsv/dynamic_chi_multifrequency_audit.tsv
+outputs/json/dynamic_chi_multifrequency_audit.json
+```

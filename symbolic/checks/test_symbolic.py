@@ -30,6 +30,7 @@ from chi_two_frequency_response import (  # noqa: E402
     two_frequency_response,
 )
 from frequency_sweep_distinguishability import (  # noqa: E402
+    payload as frequency_sweep_payload,
     interpolation_residual,
     linear_interpolation_residual_example,
     low_frequency_error_bound,
@@ -37,9 +38,11 @@ from frequency_sweep_distinguishability import (  # noqa: E402
     real_coefficient_sample_limit,
     real_odd_channel_residual,
     real_odd_symbols,
+    rows_as_dicts as frequency_sweep_rows,
     symbols as sweep_symbols,
     taylor_residual,
     taylor_residual_closed_form,
+    validate_rows as validate_frequency_sweep_rows,
 )
 
 
@@ -202,6 +205,40 @@ def test_low_frequency_error_bound_power() -> None:
     assert low_frequency_error_bound(3) == beta_abs * rho**4
 
 
+def test_multifrequency_audit_rows_are_classified() -> None:
+    rows = frequency_sweep_rows()
+    validate_frequency_sweep_rows(rows)
+    assert rows
+    assert all(row["N_frequencies"] for row in rows)
+    assert all(row["comparator_basis"] for row in rows)
+    assert all(row["verdict"] for row in rows)
+    assert all(row["surviving_target"] for row in rows)
+
+
+def test_multifrequency_audit_records_minimality_boundary() -> None:
+    rows = {row["term"]: row for row in frequency_sweep_rows()}
+
+    assert rows["single_frequency_dotF"]["verdict"] == "degenerate"
+    assert (
+        rows["real_shared_coefficients_first_obstruction"]["N_frequencies"]
+        == "floor((N+1)/2)+1"
+    )
+    assert (
+        rows["complex_shared_coefficients_first_obstruction"]["N_frequencies"]
+        == "N+2"
+    )
+
+
+def test_multifrequency_payload_has_required_table_columns() -> None:
+    data = frequency_sweep_payload()
+    schema = set(data["schema"])
+
+    assert "N_frequencies" in schema
+    assert "comparator_basis" in schema
+    assert "verdict" in schema
+    assert "surviving_target" in schema
+
+
 def main() -> None:
     test_monochromatic_response_solves_relaxation_equation()
     test_transfer_function_components_match_real_solution()
@@ -223,6 +260,9 @@ def main() -> None:
     test_frequency_sweep_residual_matches_direct_interpolation()
     test_taylor_residual_closed_form()
     test_low_frequency_error_bound_power()
+    test_multifrequency_audit_rows_are_classified()
+    test_multifrequency_audit_records_minimality_boundary()
+    test_multifrequency_payload_has_required_table_columns()
     print("dynamic chi symbolic checks passed")
 
 

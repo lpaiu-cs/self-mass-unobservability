@@ -1,0 +1,127 @@
+{
+  "assumptions": {
+    "beta": "alpha c_chi",
+    "model": "tau_chi dot chi + chi = alpha F(t)",
+    "readout_transfer": "G(z) = c_Y + beta/(1 + tau_chi z)",
+    "scope": "symbolic multi-frequency audit; no empirical runtime",
+    "z": "i Omega"
+  },
+  "collapse_conditions": [
+    "beta = alpha c_chi = 0",
+    "tau_chi = 0",
+    "sampled frequencies not distinct",
+    "complex-sample pole condition 1 + tau_chi z_j = 0",
+    "operational low-frequency tolerance above Taylor residual bound"
+  ],
+  "formula_summary": {
+    "complex_coefficient_sample_boundary": {
+      "degree": 3,
+      "exact_interpolation_limit": 4,
+      "first_exact_obstruction_count": 5
+    },
+    "interpolation_residual": "beta*tau_chi**4*(z0 - z_star)*(z1 - z_star)*(z2 - z_star)*(z3 - z_star)/((tau_chi*z0 + 1)*(tau_chi*z1 + 1)*(tau_chi*z2 + 1)*(tau_chi*z3 + 1)*(tau_chi*z_star + 1))",
+    "low_frequency_error_bound": "abs_beta*rho**4",
+    "real_coefficient_sample_boundary": {
+      "degree": 3,
+      "even_channel_degree": 1,
+      "first_positive_frequency_obstruction_count": 3,
+      "odd_channel_degree": 1,
+      "positive_frequency_exact_interpolation_limit": 2
+    },
+    "real_odd_channel_residual": "-beta*tau_chi**5*(u0 - u_star)*(u1 - u_star)/((tau_chi**2*u0 + 1)*(tau_chi**2*u1 + 1)*(tau_chi**2*u_star + 1))",
+    "taylor_residual": "beta*tau_chi**4*z**4/(tau_chi*z + 1)"
+  },
+  "rows": [
+    {
+      "N_frequencies": "1",
+      "claim_status": "Counterexample candidate",
+      "comparator_basis": "instantaneous static F coefficient",
+      "derivative_order": "not applicable",
+      "notes": "This is the weakest target. It does not survive once a frequency-local dot F coefficient is allowed.",
+      "surviving_target": "finite-Omega tau_chi quadrature",
+      "term": "single_frequency_static_only",
+      "verdict": "distinguishable from static-only basis"
+    },
+    {
+      "N_frequencies": "1",
+      "claim_status": "Proven",
+      "comparator_basis": "frequency-local {F, dot F}",
+      "derivative_order": "1",
+      "notes": "One sine quadrature can be fit exactly by one unconstrained dot F Wilson coefficient at the known frequency.",
+      "surviving_target": "none",
+      "term": "single_frequency_dotF",
+      "verdict": "degenerate"
+    },
+    {
+      "N_frequencies": "K <= floor((N+1)/2)",
+      "claim_status": "Proven",
+      "comparator_basis": "real shared-coefficient degree-N derivative EFT",
+      "derivative_order": "N",
+      "notes": "For positive frequencies, real coefficients split into an even channel and an odd channel in u=Omega^2; the odd channel is the limiting interpolation count.",
+      "surviving_target": "none at finite sampled set",
+      "term": "real_shared_coefficients_interpolation_zone",
+      "verdict": "degenerate by even/odd-channel interpolation"
+    },
+    {
+      "N_frequencies": "floor((N+1)/2)+1",
+      "claim_status": "Counterexample candidate",
+      "comparator_basis": "real shared-coefficient degree-N derivative EFT",
+      "derivative_order": "N",
+      "notes": "The first exact physical obstruction is the interpolation residual of -beta tau_chi/(1+tau_chi^2 Omega^2).",
+      "surviving_target": "shared tau_chi odd-channel pole residual",
+      "term": "real_shared_coefficients_first_obstruction",
+      "verdict": "distinguishable for distinct positive frequencies"
+    },
+    {
+      "N_frequencies": "K <= N+1",
+      "claim_status": "Proven",
+      "comparator_basis": "complex shared-coefficient degree-N polynomial",
+      "derivative_order": "N",
+      "notes": "This is an intentionally overpowered comparator. It gives a conservative no-distinguishability region.",
+      "surviving_target": "none at finite sampled set",
+      "term": "complex_shared_coefficients_interpolation_zone",
+      "verdict": "degenerate by polynomial interpolation"
+    },
+    {
+      "N_frequencies": "N+2",
+      "claim_status": "Counterexample candidate",
+      "comparator_basis": "complex shared-coefficient degree-N polynomial",
+      "derivative_order": "N",
+      "notes": "The residual is beta(-tau_chi)^(N+1) prod(z*-zj) divided by the sampled pole denominators.",
+      "surviving_target": "full rational transfer pole residual",
+      "term": "complex_shared_coefficients_first_obstruction",
+      "verdict": "distinguishable for distinct off-pole samples"
+    },
+    {
+      "N_frequencies": "any within |Omega tau_chi| <= rho",
+      "claim_status": "Proven",
+      "comparator_basis": "Taylor derivative EFT through order N",
+      "derivative_order": "N",
+      "notes": "The exact Taylor residual is beta(-tau_chi z)^(N+1)/(1+tau_chi z).",
+      "surviving_target": "none if tolerance >= |beta| rho^(N+1)",
+      "term": "low_frequency_taylor_band",
+      "verdict": "operationally degenerate below truncation tolerance"
+    },
+    {
+      "N_frequencies": "2",
+      "claim_status": "Proven",
+      "comparator_basis": "sideband search basis",
+      "derivative_order": "not applicable",
+      "notes": "Linear two-frequency forcing produces only the input frequencies. Multi-frequency novelty is transfer-law distinguishability, not sideband creation, in this MVP.",
+      "surviving_target": "none",
+      "term": "linear_two_frequency_sideband_check",
+      "verdict": "null"
+    }
+  ],
+  "sample_order_used_for_formulas": 3,
+  "schema": [
+    "term",
+    "claim_status",
+    "derivative_order",
+    "N_frequencies",
+    "comparator_basis",
+    "verdict",
+    "surviving_target",
+    "notes"
+  ]
+}
