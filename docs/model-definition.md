@@ -16,6 +16,13 @@ where `F0` is small enough that the linear response model is meaningful.
 
 Status: Conjectural. The simplest dimensional convention is to normalize `F(Y)` so that `F` is dimensionless. If the selected invariant has dimensions, absorb the reference scale into the definition of `F`.
 
+Status: Counterexample candidate. The first concrete forcing template is
+`F(Y(t)) = (a/r(t))^p`, a normalized scalar invariant sampled along a
+small-eccentricity orbit.
+
+Status: Proven. This template supplies harmonics at `n` and `2n` through
+`O(e^2)` when `e != 0`, `p != 0`, and `p != -3`.
+
 ## One-State Relaxation Model
 
 Status: Counterexample candidate. The minimal dynamic loophole model is
@@ -61,6 +68,11 @@ polynomial splits into a real even channel and an imaginary odd channel in
 
 Status: Counterexample candidate. The frequency-sweep comparison requires the
 same polynomial coefficients to apply across all sampled drive frequencies.
+
+Status: Counterexample candidate. The observable projection is modeled as
+`O_hat(Omega_k) = Lambda(Omega_k) G(i Omega_k) F_hat(Omega_k)`. The pole test
+requires `Lambda` to be known, calibrated, or finite-dimensional rather than an
+arbitrary complex nuisance at each sampled frequency.
 
 ## Deferred Secondary Model
 

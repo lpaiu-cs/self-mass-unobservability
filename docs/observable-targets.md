@@ -85,6 +85,20 @@ coefficients, the conservative exact target is `N + 2` distinct frequencies.
 Status: Proven. The exact obstruction is the nonzero interpolation residual
 derived in [`frequency-sweep-distinguishability.md`](frequency-sweep-distinguishability.md).
 
+## Concrete Projection Target
+
+Status: Counterexample candidate. A normalized orbital invariant
+`F(Y(t))=(a/r(t))^p` supplies a single-system two-frequency target at `n` and
+`2n` through `O(e^2)`.
+
+Status: Proven. With a calibrated linear projection
+`O_hat_k = Lambda G(i Omega_k) F_hat_k`, the observable recovers the same
+transfer pair after dividing by `Lambda F_hat_k`.
+
+Status: Proven. If `Lambda(Omega_k)` is an arbitrary complex nuisance at every
+frequency, the observable target collapses because the nuisance can absorb the
+pole relation.
+
 ## Sideband Test
 
 Status: Proven. A linear time-invariant one-state model driven by `F1 cos(Omega1 t) + F2 cos(Omega2 t)` cannot create sidebands in the linear readout.

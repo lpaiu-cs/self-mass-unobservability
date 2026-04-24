@@ -45,6 +45,11 @@ Status: Proven. More sharply, for `z=i Omega` and `|Omega tau_chi| <= rho`,
 the degree-`N` Taylor derivative residual is bounded by
 `|alpha c_chi| rho^(N+1)`.
 
+Status: Proven. The same operational collapse applies to the concrete
+orbital-harmonic dictionary when all retained harmonics satisfy
+`|k n tau_chi| <= rho` and the observable tolerance exceeds the Taylor
+residual bound.
+
 Status: Proven. Exact reproduction of `alpha / (1 + i Omega tau_chi)` for arbitrary `Omega` requires either the explicit state `chi`, a hereditary kernel, or an infinite derivative tower.
 
 ## Boundary Statement

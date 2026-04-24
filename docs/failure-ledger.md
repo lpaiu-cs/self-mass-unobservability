@@ -26,6 +26,8 @@ with `F(t) = F0 cos(Omega t)` for the first derivation.
 | Proven | `K <= floor((N+1)/2)` positive sampled frequencies with freely fitted real degree-`N` derivative coefficients | Even and odd channels can be interpolated at all sampled points. | Physical finite-sample degeneracy. |
 | Proven | `K <= N + 1` sampled frequencies with freely fitted complex degree-`N` derivative coefficients | Polynomial interpolation can match the relaxation transfer at all sampled points. | Conservative complex finite-sample degeneracy. |
 | Proven | Low-frequency sweep with `|Omega tau_chi| <= rho` and tolerance above `|alpha c_chi| rho^(N+1)` | Taylor truncation through order `N` is within tolerance over the band. | Operational derivative-EFT collapse. |
+| Proven | Concrete orbital template with `e = 0`, `p = 0`, or `p = -3` at `O(e^2)` | The two-harmonic `n, 2n` sweep is absent or incomplete. | Insufficient forcing dictionary. |
+| Proven | Observable projection with arbitrary complex `Lambda(Omega_k)` at each frequency | The projection nuisance can absorb `G(i Omega_k)` point by point. | Observable dictionary collapse. |
 | Proven | Linear first-order `chi` plus linear two-frequency forcing and linear readout | Superposition leaves only the input frequencies; no `Omega_1 +/- Omega_2` terms appear. | No sideband loophole in the linear MVP. |
 
 ## Non-Collapse Candidate
@@ -49,6 +51,10 @@ Status: Counterexample candidate. If complex derivative coefficients are
 allowed, `N + 2` distinct frequencies give the conservative exact obstruction.
 The obstruction is zero only when `alpha c_chi = 0`, `tau_chi = 0`, the
 frequencies are not distinct, or a sampled point lies on the pole.
+
+Status: Counterexample candidate. The current concrete forcing candidate is
+`F(Y(t))=(a/r(t))^p` on a small-eccentricity orbit. It is a structural
+observable dictionary, not an empirical detectability claim.
 
 ## Failed Sideband Attempt
 

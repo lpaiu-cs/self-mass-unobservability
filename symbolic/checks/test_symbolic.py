@@ -44,6 +44,16 @@ from frequency_sweep_distinguishability import (  # noqa: E402
     taylor_residual_closed_form,
     validate_rows as validate_frequency_sweep_rows,
 )
+from forcing_observable_dictionary import (  # noqa: E402
+    observable_harmonic_components,
+    orbital_two_harmonic_dotf_obstruction,
+    payload as forcing_dictionary_payload,
+    power_law_orbital_harmonics_to_e2,
+    power_law_series_residual_to_e2,
+    rows_as_dicts as forcing_dictionary_rows,
+    symbols as forcing_symbols,
+    validate_rows as validate_forcing_dictionary_rows,
+)
 
 
 def test_monochromatic_response_solves_relaxation_equation() -> None:
@@ -239,6 +249,85 @@ def test_multifrequency_payload_has_required_table_columns() -> None:
     assert "surviving_target" in schema
 
 
+def test_power_law_orbital_harmonics_to_e2() -> None:
+    sym = forcing_symbols()
+    harmonics = power_law_orbital_harmonics_to_e2()
+    p, e, n, t = sym["p"], sym["e"], sym["n"], sym["t"]
+
+    assert sp.simplify(harmonics["constant"] - (1 + p * (p - 1) * e**2 / 4)) == 0
+    assert sp.simplify(harmonics["first_harmonic"] - p * e * sp.cos(n * t)) == 0
+    assert (
+        sp.simplify(
+            harmonics["second_harmonic"]
+            - p * (p + 3) * e**2 * sp.cos(2 * n * t) / 4
+        )
+        == 0
+    )
+
+
+def test_power_law_orbital_harmonics_match_series_derivation() -> None:
+    assert power_law_series_residual_to_e2() == 0
+
+
+def test_observable_projection_recovers_calibrated_transfer_pair() -> None:
+    sym = forcing_symbols()
+    components = observable_harmonic_components()
+
+    assert (
+        sp.simplify(
+            components["cos_coefficient"] / (sym["Lambda"] * sym["F_k"])
+            - components["calibrated_cos"]
+        )
+        == 0
+    )
+    assert (
+        sp.simplify(
+            components["sin_coefficient"] / (sym["Lambda"] * sym["F_k"])
+            - components["calibrated_sin"]
+        )
+        == 0
+    )
+
+
+def test_orbital_two_harmonic_dotf_obstruction() -> None:
+    sym = forcing_symbols()
+    obstruction = orbital_two_harmonic_dotf_obstruction()
+    expected = (
+        3
+        * sym["beta"]
+        * sym["tau_chi"] ** 3
+        * sym["n"] ** 2
+        / (
+            (1 + sym["tau_chi"] ** 2 * sym["n"] ** 2)
+            * (1 + 4 * sym["tau_chi"] ** 2 * sym["n"] ** 2)
+        )
+    )
+
+    assert sp.simplify(obstruction - expected) == 0
+    assert sp.simplify(obstruction.subs(sym["beta"], 0)) == 0
+    assert sp.simplify(obstruction.subs(sym["tau_chi"], 0)) == 0
+    assert sp.simplify(obstruction.subs(sym["n"], 0)) == 0
+
+
+def test_forcing_dictionary_rows_are_classified() -> None:
+    rows = forcing_dictionary_rows()
+    validate_forcing_dictionary_rows(rows)
+    assert rows
+    assert all(row["claim_status"] for row in rows)
+    assert all(row["forcing_class"] for row in rows)
+    assert all(row["observable_projection"] for row in rows)
+
+
+def test_forcing_dictionary_payload_has_required_columns() -> None:
+    data = forcing_dictionary_payload()
+    schema = set(data["schema"])
+
+    assert "forcing_class" in schema
+    assert "frequency_source" in schema
+    assert "observable_projection" in schema
+    assert "missing_assumption" in schema
+
+
 def main() -> None:
     test_monochromatic_response_solves_relaxation_equation()
     test_transfer_function_components_match_real_solution()
@@ -263,6 +352,12 @@ def main() -> None:
     test_multifrequency_audit_rows_are_classified()
     test_multifrequency_audit_records_minimality_boundary()
     test_multifrequency_payload_has_required_table_columns()
+    test_power_law_orbital_harmonics_to_e2()
+    test_power_law_orbital_harmonics_match_series_derivation()
+    test_observable_projection_recovers_calibrated_transfer_pair()
+    test_orbital_two_harmonic_dotf_obstruction()
+    test_forcing_dictionary_rows_are_classified()
+    test_forcing_dictionary_payload_has_required_columns()
     print("dynamic chi symbolic checks passed")
 
 

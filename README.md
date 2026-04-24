@@ -39,6 +39,8 @@ Status: Counterexample candidate. At finite `Omega tau_chi`, the full rational t
 
 Status: Counterexample candidate. The M2 frequency-sweep target is sharper: a real-coefficient degree-`N` finite derivative EFT can absorb at most `floor((N+1)/2)` positive frequency samples before the next sample exposes the relaxation pole. Even a complex-coefficient polynomial comparator fails at `N + 2` distinct samples if `alpha c_chi tau_chi != 0`.
 
+Status: Counterexample candidate. The M3 forcing dictionary lowers that target to a concrete template: a normalized power-law invariant `(a/r)^p` on a small-eccentricity orbit produces `n` and `2n` harmonics through `O(e^2)`, and a calibrated linear observable projection preserves the same pole-bearing transfer relation.
+
 Status: Proven. For the linear readout above and a two-frequency linear drive, no sidebands are generated. Sidebands require a nonlinear drive/readout, a hereditary kernel with mixing, a second-order internal mode coupled nonlinearly, or a threshold/hysteretic extension.
 
 ## Layout
@@ -48,10 +50,12 @@ Status: Proven. For the linear readout above and a two-frequency linear drive, n
 - `docs/adiabatic-limit.md`: low-frequency collapse derivation.
 - `docs/nonadiabatic-regime.md`: finite-frequency response and observable classification.
 - `docs/frequency-sweep-distinguishability.md`: finite-derivative EFT distinguishability theorem candidate.
+- `docs/forcing-observable-dictionary.md`: concrete forcing templates and observable projection boundaries.
 - `docs/failure-ledger.md`: exact failure modes and next escalation paths.
 - `symbolic/chi_relaxation_response.py`: monochromatic response formulas.
 - `symbolic/chi_two_frequency_response.py`: two-frequency superposition and sideband check.
 - `symbolic/frequency_sweep_distinguishability.py`: polynomial interpolation and Taylor-residual checks.
+- `symbolic/forcing_observable_dictionary.py`: harmonic forcing and projection checks.
 - `symbolic/checks/test_symbolic.py`: deterministic symbolic checks.
 - `counterexamples/README.md`: loophole framing and escalation list.
 

@@ -138,6 +138,16 @@ is `N + 2` distinct frequencies.
 Status: Counterexample candidate. The observable class is the pole-bearing
 frequency-transfer relation, not harmonic creation.
 
+## Link To M3 Dictionary
+
+Status: Counterexample candidate. The first concrete source of positive
+frequency samples is the orbital-harmonic template in
+[`forcing-observable-dictionary.md`](forcing-observable-dictionary.md).
+
+Status: Proven. For a power-law invariant `(a/r)^p`, the `n` and `2n`
+harmonics through `O(e^2)` provide the first two-point positive-frequency test
+whenever `e != 0`, `p != 0`, and `p != -3`.
+
 ## Machine Outputs
 
 Status: Proven. The frequency-sweep audit writes the minimality table to

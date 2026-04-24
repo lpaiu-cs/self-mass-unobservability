@@ -99,6 +99,16 @@ comparator, matching `N + 2` distinct frequencies is the conservative exact
 test, because the residual is proportional to the pole strength
 `alpha c_chi tau_chi^(N+1)`.
 
+## Forcing Dictionary Result
+
+Status: Counterexample candidate. The first concrete frequency source is a
+small-eccentricity orbital harmonic expansion of a normalized invariant
+`(a/r)^p`.
+
+Status: Proven. The `n` and `2n` harmonics give the first real-coefficient
+degree-`1` and degree-`2` finite-derivative obstruction in one system, provided
+the observable projection is not arbitrary frequency by frequency.
+
 ## Large-Frequency Behavior
 
 Status: Proven. For `x = Omega tau_chi >> 1`,
