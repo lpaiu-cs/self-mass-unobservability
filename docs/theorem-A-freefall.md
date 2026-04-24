@@ -65,7 +65,8 @@
 10. Status: Proven. [`../symbolic/shift_scalar_sector_delta4.py`](../symbolic/shift_scalar_sector_delta4.py) shows that even derivative-only scalar admission still yields new weight-`4` survivors beyond the corrected `E/B` sector.
 11. Status: Proven. [`../symbolic/family_witness_map.py`](../symbolic/family_witness_map.py) records the current family-class witness table and the exact theorem layer each audited class obstructs.
 12. Status: Proven. [`family-admission-theorem.md`](family-admission-theorem.md) promotes the repeated family-attack pattern into an explicit no-go statement for the audited family classes.
-13. Status: Conjectural. The remaining positive burden is to prove the finite-family fixed-order collapse statement for arbitrary explicit admitted catalogs rather than just the audited examples.
+13. Status: Proven. [`suppression-budget-theorem.md`](suppression-budget-theorem.md), [`../lemmas/17-witness-threshold-classification.md`](../lemmas/17-witness-threshold-classification.md), and [`../symbolic/witness_threshold_map.py`](../symbolic/witness_threshold_map.py) promote the audited witnesses into necessary suppression thresholds for minimal-sector uniqueness at `\Delta_{\max} = 4`.
+14. Status: Conjectural. The remaining positive burden is to prove the finite-family fixed-order collapse statement for arbitrary explicit admitted catalogs rather than just the audited examples.
 
 ## Current Verdict
 
@@ -75,6 +76,7 @@
 - Status: Proven. The stronger physically justified minimal-sector theorem should not presently be treated as alive.
 - Status: Proven. Minimal-sector uniqueness is already effectively dead across the audited unsuppressed family classes.
 - Status: Proven. No audited family class is currently harmless without extra assumptions.
+- Status: Proven. Necessary suppression budgets are now explicit for the audited classes: `w_X \ge 3` for rank-2 STF families, `w_S \ge 5` or outright exclusion for bare scalar families, and derivative-family block weight above `2` for the current derivative-only scalar witnesses.
 - Status: Conjectural. The broad positive target remains finite-family fixed-order collapse, and it remains plausible because the audited enlarged family catalogs still close finitely at `\Delta \le 4`.
 
 ## Dependencies
@@ -99,12 +101,15 @@
 - Status: Conjectural. [`power-counting.md`](power-counting.md)
 - Status: Proven. [`family-admission-no-go.md`](family-admission-no-go.md)
 - Status: Proven. [`family-admission-theorem.md`](family-admission-theorem.md)
+- Status: Proven. [`suppression-budget-theorem.md`](suppression-budget-theorem.md)
 - Status: Proven. [`broad-collapse-reformulation.md`](broad-collapse-reformulation.md)
+- Status: Proven. [`family-class-table.md`](family-class-table.md)
 - Status: Proven. [`primitive-catalog.md`](primitive-catalog.md)
 - Status: Proven. [`primitive-set-adequacy.md`](primitive-set-adequacy.md)
 - Status: Proven. [`magnetic-family-ordering.md`](magnetic-family-ordering.md)
 - Status: Proven. [`scalar-family-ordering.md`](scalar-family-ordering.md)
 - Status: Proven. [`reduction-rules.md`](reduction-rules.md)
+- Status: Proven. [`../symbolic/witness_threshold_map.py`](../symbolic/witness_threshold_map.py)
 
 ## Failure Triggers
 

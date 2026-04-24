@@ -22,6 +22,7 @@ from es_survivor_rank_check import es_rank_summary
 from family_witness_map import family_witness_summary
 from primitive_family_attack import primitive_attack_summary
 from shift_scalar_sector_delta4 import shift_scalar_summary
+from witness_threshold_map import witness_threshold_summary
 from normal_form_reduce import (
     operator_symbols,
     reduce_algebraic_identities,
@@ -302,6 +303,20 @@ def test_family_witness_map() -> None:
     assert summary.entries[2].weight == 4
 
 
+def test_witness_threshold_map() -> None:
+    summary = witness_threshold_summary()
+    assert summary.delta_max == 4
+    assert tuple(entry.family_class for entry in summary.entries) == (
+        "rank2_stf",
+        "rank0_scalar_unsuppressed",
+        "rank0_scalar_derivative_only",
+    )
+    assert summary.entries[0].necessary_threshold_at_delta4.startswith("w_X >= 3")
+    assert summary.entries[1].necessary_threshold_at_delta4.startswith("w_S >= 5")
+    assert "above 2" in summary.entries[2].necessary_threshold_at_delta4
+    assert all(entry.sufficient_for_uniqueness is False for entry in summary.entries)
+
+
 def main() -> None:
     test_symmetric_quadratic_jet()
     test_worldline_force_structure()
@@ -322,6 +337,7 @@ def main() -> None:
     test_es_survivor_rank_independence()
     test_shift_scalar_sector_survivors()
     test_family_witness_map()
+    test_witness_threshold_map()
     print("symbolic checks passed")
 
 
