@@ -15,6 +15,7 @@ from enumerate_contractions_delta4 import (
     mixed_time_derivative_classes,
 )
 from enumerate_basis import enumerate_minimal_scalar_monomials
+from eb_sector_delta4 import eb_summary
 from primitive_family_attack import primitive_attack_summary
 from normal_form_reduce import (
     operator_symbols,
@@ -155,6 +156,33 @@ def test_magnetic_family_attack_finds_new_survivor() -> None:
     assert "EB2" in summary.new_survivor_labels
 
 
+def test_eb_sector_survivor_list() -> None:
+    summary = eb_summary()
+    assert summary.total_classes == 42
+    assert summary.smallest_new_survivor == "B2"
+    assert summary.surviving_labels == (
+        "B2",
+        "E2",
+        "EB2",
+        "E3",
+        "B2^2",
+        "E2B2",
+        "EBEB",
+        "EB_sq",
+        "TrE2B2",
+        "EBDtB",
+        "dotB2",
+        "dotE2",
+        "E2^2",
+        "divB2",
+        "gradB2",
+        "mixedGradB2",
+        "divE2",
+        "gradE2",
+        "mixedGradE2",
+    )
+
+
 def main() -> None:
     test_symmetric_quadratic_jet()
     test_worldline_force_structure()
@@ -169,6 +197,7 @@ def main() -> None:
     test_a_e_grade_labels_are_unique()
     test_survivor_rank_independence()
     test_magnetic_family_attack_finds_new_survivor()
+    test_eb_sector_survivor_list()
     print("symbolic checks passed")
 
 

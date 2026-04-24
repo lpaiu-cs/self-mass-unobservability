@@ -10,13 +10,15 @@ This ledger records exact failure modes, not vague concerns. If a proof step bre
 | F4 | Counterexample candidate | Retarded memory kernels can preserve body dependence that is not instantaneous in the local invariants. | A3 fails. | See [`counterexamples/hereditary/README.md`](../counterexamples/hereditary/README.md). |
 | F5 | Counterexample candidate | A nonmetric clock coupling can evade the free-fall theorem because it lives outside the MVP observable sector. | The free-fall-only scope assumption fails. | See [`counterexamples/nonmetric-clock/README.md`](../counterexamples/nonmetric-clock/README.md). |
 | F6 | Counterexample candidate | If finite external field content fails, infinitely many primitive species can survive at the same fixed order and block basis closure before the conditional collapse lemma applies. | A8 fails. | Keep this loophole explicit rather than smuggling a finite basis into the assumptions. |
-| F7 | Proven | The exact current primitive set is not yet adequate as a physically justified minimal free-fall sector. | A physically motivated magnetic tidal family `B_ij` is excluded only by working restriction, not by a derived theorem assumption. | [`primitive-set-adequacy.md`](primitive-set-adequacy.md) and [`../symbolic/primitive_family_attack.py`](../symbolic/primitive_family_attack.py) now record `B2` as the next explicit primitive-set obstruction. |
+| F7 | Proven | The electric-only exact current primitive set is not yet adequate as a physically justified minimal free-fall sector. | A physically motivated magnetic tidal family `B_ij` is excluded only by working restriction, not by a derived theorem assumption. | [`primitive-set-adequacy.md`](primitive-set-adequacy.md), [`magnetic-family-ordering.md`](magnetic-family-ordering.md), and [`../lemmas/10-magnetic-family-obstruction.md`](../lemmas/10-magnetic-family-obstruction.md) now record `B2` as the smallest explicit adequacy obstruction. |
 
 ## Current Theorem Failure Boundary
 
 - Status: Proven. Abstract monomial finiteness is no longer the unresolved step once a finite primitive catalog with positive weights is fixed.
 - Status: Proven. The previous minimal obstruction to the five-element target is explicit: `divE2`, with `mixedGradE2` as a second surviving gradient invariant.
 - Status: Proven. For the exact current primitive set, the corrected seven-element normal-form basis is now linearly independent.
-- Status: Conjectural. The active remaining risk is no longer survivor independence; it is primitive-set adequacy beyond the exact current primitive set.
+- Status: Proven. The live bottleneck after M5 is magnetic-family ordering for the stronger electric-only minimal-sector claim.
+- Status: Proven. The `E/B`-expanded `Delta<=4` audit still closes on a finite explicit survivor list, so `E/B`-expanded closure is not the active failure boundary at this order.
 - Status: Proven. The smallest explicit adequacy obstruction found so far is the magnetic-family survivor `B2`.
-- Status: Counterexample candidate. If the exact current primitive set is enlarged by another physically admissible family, the first new survivor in that extension becomes the next explicit obstruction.
+- Status: Conjectural. The broader finite-dimensional collapse conjecture remains plausible after the magnetic extension because fixed-order closure did not fail in the explicit `E/B` audit.
+- Status: Counterexample candidate. If the sector is enlarged beyond the explicit `E/B` audit by another physically admissible family, the first new survivor in that extension becomes the next explicit obstruction.

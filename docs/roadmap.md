@@ -51,11 +51,21 @@ Status: Conjectural. The repository roadmap is organized around theorem progress
 | M5.4 | Proven | [`../symbolic/primitive_family_attack.py`](../symbolic/primitive_family_attack.py) | One physically motivated primitive-family extension is audited explicitly. |
 | M5.5 | Conjectural | [`docs/theorem-A-freefall.md`](theorem-A-freefall.md) and [`failure-ledger.md`](failure-ledger.md) | The main remaining risk is written uniformly as primitive-set adequacy, not survivor dependence. |
 
+## M6: Magnetic-Family Verdict
+
+| Item | Status | Deliverable | Exit condition |
+| --- | --- | --- | --- |
+| M6.1 | Proven | [`docs/magnetic-family-ordering.md`](magnetic-family-ordering.md) | The magnetic-ordering question and suppression options are written explicitly rather than tacitly. |
+| M6.2 | Proven | [`../lemmas/10-magnetic-family-obstruction.md`](../lemmas/10-magnetic-family-obstruction.md) | The exact object obstructed by `B2` is stated sharply. |
+| M6.3 | Proven | [`../symbolic/eb_sector_delta4.py`](../symbolic/eb_sector_delta4.py) | The `E/B`-expanded `Delta<=4` survivor list is computed under the current rules. |
+| M6.4 | Conjectural | [`docs/theorem-A-freefall.md`](theorem-A-freefall.md) | Electric-only, stronger minimal-sector, and broader collapse statements are separated cleanly. |
+| M6.5 | Proven | [`failure-ledger.md`](failure-ledger.md) | The live bottleneck is identified as magnetic-family ordering rather than hidden basis failure. |
+
 ## Near-Term Sequence
 
-1. Status: Conjectural. Decide whether the magnetic tidal family `B_ij` should be excluded by a new explicit assumption or admitted into the minimal-sector theorem target.
-2. Status: Conjectural. If `B_ij` is admitted, rerun the normal-form and collapse pipeline on the enlarged primitive catalog rather than preserving the older electric-only theorem statement.
-3. Status: Conjectural. Decide whether any extra gradient identity should be introduced explicitly, rather than silently collapsing `divE2` or `mixedGradE2`.
+1. Status: Conjectural. Decide whether magnetic-family ordering should be imposed explicitly or whether the theorem target should be upgraded to the `E/B`-expanded sector.
+2. Status: Conjectural. If the `E/B` sector is accepted, attack survivor independence and conditional collapse for the enlarged finite basis rather than preserving an electric-only theorem statement.
+3. Status: Conjectural. Decide whether any extra gradient or mixed-trace identity should be introduced explicitly, rather than silently collapsing `divE2`, `mixedGradE2`, `divB2`, or `mixedGradB2`.
 4. Status: Counterexample candidate. Promote the dominant loophole class only if it produces a genuine failure of the explicit enumeration or adequacy path.
 5. Status: Conjectural. Revisit the scalar `s_A` corollary only after the higher-dimensional sensitivity manifold statement is sharp.
 

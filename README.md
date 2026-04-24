@@ -25,9 +25,9 @@ Out of scope for this phase:
 
 ## Current Layout
 
-- [`docs/`](docs): theorem candidates, the conditional collapse lemma, power counting, the primitive catalog, primitive-set adequacy notes, explicit reduction rules, ledgers, and the roadmap.
+- [`docs/`](docs): theorem candidates, the conditional collapse lemma, power counting, the primitive catalog, magnetic-ordering and primitive-set adequacy notes, explicit reduction rules, ledgers, and the roadmap.
 - [`lemmas/`](lemmas): free-fall lemmas and reduction notes.
-- [`symbolic/`](symbolic): small SymPy scripts for worldline expansion, sensitivity jets, basis enumeration, contraction enumeration, survivor-rank checks, primitive-family attacks, and normal-form reduction.
+- [`symbolic/`](symbolic): small SymPy scripts for worldline expansion, sensitivity jets, basis enumeration, contraction enumeration, survivor-rank checks, primitive-family attacks, full `E/B`-sector audits, and normal-form reduction.
 - [`counterexamples/`](counterexamples): explicit loophole classes and minimal models.
 - [`notes/scratch/`](notes/scratch): disposable local notes that should not become theorem claims without promotion.
 
@@ -51,6 +51,7 @@ make enumerate-basis
 make enumerate-contractions
 make survivor-rank
 make primitive-attack
+make eb-sector
 make normal-form-reduce
 make symbolic-check
 ```

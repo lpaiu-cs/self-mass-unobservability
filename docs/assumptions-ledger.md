@@ -35,3 +35,9 @@ This ledger records the active assumptions behind the free-fall sensitivity-coll
 - Status: Proven. Linear survivor independence is now attacked directly by an exact polynomial rank check rather than inferred from non-reducibility.
 - Status: Proven. The exact-current-set theorem does not claim that the present primitive catalog already exhausts every physically admissible minimal-sector family.
 - Status: Proven. Excluding the magnetic tidal family `B_ij` is currently a working restriction of the exact-current-set theorem, not a derived completeness statement.
+
+## Non-Assumption For M6
+
+- Status: Proven. No magnetic-ordering assumption is currently active that suppresses `B_ij` relative to `E_ij`.
+- Status: Proven. The repository does not currently assume `B_ij = 0` on the allowed backgrounds.
+- Status: Proven. Therefore any stronger electric-only minimal-sector theorem would require a new explicit assumption, recorded rather than implied.
