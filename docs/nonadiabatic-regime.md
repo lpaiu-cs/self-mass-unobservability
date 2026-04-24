@@ -109,6 +109,25 @@ Status: Proven. The `n` and `2n` harmonics give the first real-coefficient
 degree-`1` and degree-`2` finite-derivative obstruction in one system, provided
 the observable projection is not arbitrary frequency by frequency.
 
+## Projection Channel Audit
+
+Status: Counterexample candidate. The acceleration-like channel has constant
+projection, so it cannot create or hide a frequency-dependent pole except by
+setting the channel scale to zero.
+
+Status: Proven. The range-like channel transfer is
+
+```text
+T_R(z) =
+  Gamma [c_Y(1 + tau_chi z) + beta]
+  /
+  [(1 + tau_chi z)(kappa^2 + z^2)].
+```
+
+Status: Proven. At the relaxation pole `z=-1/tau_chi`, the numerator is
+`Gamma beta`; therefore the pole survives unless the channel is blind or the
+projection has a zero at the same point.
+
 ## Triple Carrier Bridge
 
 Status: Counterexample candidate. Existing triple inner/outer carriers sample

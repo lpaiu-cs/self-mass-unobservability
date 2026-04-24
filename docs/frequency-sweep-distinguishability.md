@@ -148,6 +148,11 @@ Status: Proven. For a power-law invariant `(a/r)^p`, the `n` and `2n`
 harmonics through `O(e^2)` provide the first two-point positive-frequency test
 whenever `e != 0`, `p != 0`, and `p != -3`.
 
+Status: Counterexample candidate. Projection-channel assumptions are audited in
+[`projection-channel-audit.md`](projection-channel-audit.md). The frequency
+sweep theorem applies directly after deprojection when `Lambda(z)` is known, or
+after nuisance accounting when `Lambda(z)` has shared finite parameters.
+
 ## Machine Outputs
 
 Status: Proven. The frequency-sweep audit writes the minimality table to

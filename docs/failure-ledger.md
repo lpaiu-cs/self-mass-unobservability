@@ -28,6 +28,9 @@ with `F(t) = F0 cos(Omega t)` for the first derivation.
 | Proven | Low-frequency sweep with `|Omega tau_chi| <= rho` and tolerance above `|alpha c_chi| rho^(N+1)` | Taylor truncation through order `N` is within tolerance over the band. | Operational derivative-EFT collapse. |
 | Proven | Concrete orbital template with `e = 0`, `p = 0`, or `p = -3` at `O(e^2)` | The two-harmonic `n, 2n` sweep is absent or incomplete. | Insufficient forcing dictionary. |
 | Proven | Observable projection with arbitrary complex `Lambda(Omega_k)` at each frequency | The projection nuisance can absorb `G(i Omega_k)` point by point. | Observable dictionary collapse. |
+| Proven | Acceleration-like projection with `Gamma = 0` | `delta a_hat = Gamma q_hat` is blind to the body response. | Projection-channel collapse. |
+| Proven | Range-like projection sampled at `kappa^2 + z_k^2 = 0` without a resonance model | Deprojection by `(kappa^2+z^2)/Gamma` is singular. | Projection-channel singularity. |
+| Proven | Projection with a zero at `z=-1/tau_chi` | The observable projection cancels the relaxation pole. | Pole-cancellation degeneracy. |
 | Proven | Triple bridge with `Omega_in = Omega_out` or `F_in F_out = 0` | The inner/outer carrier inventory has fewer than two usable frequency samples. | One-frequency derivative degeneracy. |
 | Proven | Triple bridge against real degree `N >= 3` derivative EFT with only two carriers | The real odd channel has enough coefficients to interpolate both positive-frequency samples. | Need additional carrier or derivative-order prior. |
 | Proven | Triple bridge against complex degree `N >= 1` polynomial comparator with only two carriers | Complex polynomial interpolation absorbs two samples. | Conservative complex-comparator degeneracy. |
@@ -63,6 +66,11 @@ Status: Counterexample candidate. The hierarchical-triple shared-tau bridge is
 the current clean carrier-inventory route: existing inner/outer carriers can
 test real degree-`1` and degree-`2` shared derivative comparators without
 requiring a new tensor harmonic.
+
+Status: Counterexample candidate. The current projection-channel audit shows
+that a range-like linear readout has finite shared nuisance parameters
+`Gamma,kappa`, not arbitrary frequency-local nuisance, but a named measurement
+channel still needs its own projection justification.
 
 ## Failed Sideband Attempt
 

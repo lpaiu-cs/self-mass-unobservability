@@ -41,6 +41,8 @@ Status: Counterexample candidate. The M2 frequency-sweep target is sharper: a re
 
 Status: Counterexample candidate. The M3 forcing dictionary lowers that target to a concrete template: a normalized power-law invariant `(a/r)^p` on a small-eccentricity orbit produces `n` and `2n` harmonics through `O(e^2)`, and a calibrated linear observable projection preserves the same pole-bearing transfer relation.
 
+Status: Counterexample candidate. The M4 projection audit fixes two concrete free-fall-style readouts: an acceleration-like channel with constant projection and a range-like channel with `Lambda_R(z)=Gamma/(kappa^2+z^2)`. The relaxation pole survives both unless the channel is blind, singular, or allowed an arbitrary frequency-local nuisance.
+
 Status: Counterexample candidate. The triple shared-tau bridge gives a cleaner
 carrier inventory: existing hierarchical-triple inner and outer GR carriers
 provide two distinct samples, enough to test real shared-coefficient degree-1
@@ -56,11 +58,13 @@ Status: Proven. For the linear readout above and a two-frequency linear drive, n
 - `docs/nonadiabatic-regime.md`: finite-frequency response and observable classification.
 - `docs/frequency-sweep-distinguishability.md`: finite-derivative EFT distinguishability theorem candidate.
 - `docs/forcing-observable-dictionary.md`: concrete forcing templates and observable projection boundaries.
+- `docs/projection-channel-audit.md`: concrete projection-channel audit for acceleration/range readouts.
 - `docs/failure-ledger.md`: exact failure modes and next escalation paths.
 - `symbolic/chi_relaxation_response.py`: monochromatic response formulas.
 - `symbolic/chi_two_frequency_response.py`: two-frequency superposition and sideband check.
 - `symbolic/frequency_sweep_distinguishability.py`: polynomial interpolation and Taylor-residual checks.
 - `symbolic/forcing_observable_dictionary.py`: harmonic forcing and projection checks.
+- `symbolic/projection_channel_audit.py`: projection deconvolution and pole-survival checks.
 - `symbolic/triple_shared_tau_bridge.py`: inner/outer carrier bridge to the shared-`tau_chi` frequency-sweep test.
 - `symbolic/checks/test_symbolic.py`: deterministic symbolic checks.
 - `counterexamples/README.md`: loophole framing and escalation list.

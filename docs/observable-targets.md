@@ -99,6 +99,23 @@ Status: Proven. If `Lambda(Omega_k)` is an arbitrary complex nuisance at every
 frequency, the observable target collapses because the nuisance can absorb the
 pole relation.
 
+## Projection Channel Target
+
+Status: Counterexample candidate. An acceleration-like channel
+`delta a_hat = Gamma q_hat` preserves the pole relation up to one shared scale.
+
+Status: Counterexample candidate. A range-like channel
+`ddot R + kappa^2 R = Gamma q_A` has
+`Lambda_R(z)=Gamma/(kappa^2+z^2)`, a finite rational projection rather than an
+arbitrary frequency-local nuisance.
+
+Status: Proven. If `Gamma` and `kappa` are known or calibrated, the range-like
+channel deprojects exactly to `G(z)` away from projection poles.
+
+Status: Counterexample candidate. If `Gamma` and `kappa` are unknown but shared,
+the projection remains finite-dimensional; exact distinguishability then needs
+independent calibration or additional frequency samples.
+
 ## Triple Shared-Tau Carrier Bridge
 
 Status: Counterexample candidate. A hierarchical triple can provide two

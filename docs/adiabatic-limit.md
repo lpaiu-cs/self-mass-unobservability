@@ -50,6 +50,10 @@ orbital-harmonic dictionary when all retained harmonics satisfy
 `|k n tau_chi| <= rho` and the observable tolerance exceeds the Taylor
 residual bound.
 
+Status: Proven. In the range-like projection channel, the same adiabatic
+collapse statement applies after deprojection when
+`Gamma != 0` and `kappa^2 + z_k^2 != 0` on the sampled band.
+
 Status: Proven. Exact reproduction of `alpha / (1 + i Omega tau_chi)` for arbitrary `Omega` requires either the explicit state `chi`, a hereditary kernel, or an infinite derivative tower.
 
 ## Boundary Statement

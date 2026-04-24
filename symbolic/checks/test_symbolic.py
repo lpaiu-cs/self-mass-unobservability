@@ -54,6 +54,20 @@ from forcing_observable_dictionary import (  # noqa: E402
     symbols as forcing_symbols,
     validate_rows as validate_forcing_dictionary_rows,
 )
+from projection_channel_audit import (  # noqa: E402
+    arbitrary_projection_solution,
+    observed_range_transfer,
+    payload as projection_channel_payload,
+    projection_pole_condition,
+    range_deprojection_residual,
+    range_equation_residual,
+    range_projection,
+    range_relaxation_pole_residue,
+    relaxation_transfer as projection_relaxation_transfer,
+    rows_as_dicts as projection_channel_rows,
+    symbols as projection_symbols,
+    validate_rows as validate_projection_channel_rows,
+)
 from triple_shared_tau_bridge import (  # noqa: E402
     complex_two_frequency_verdict,
     payload as triple_bridge_payload,
@@ -337,6 +351,65 @@ def test_forcing_dictionary_payload_has_required_columns() -> None:
     assert "missing_assumption" in schema
 
 
+def test_range_projection_deprojects_to_relaxation_transfer() -> None:
+    assert range_deprojection_residual() == 0
+
+
+def test_range_projection_satisfies_linear_channel_equation() -> None:
+    assert range_equation_residual() == 0
+
+
+def test_range_relaxation_pole_survives_unless_couplings_collapse() -> None:
+    sym = projection_symbols()
+    residue = range_relaxation_pole_residue()
+
+    assert residue != 0
+    assert sp.simplify(residue.subs(sym["Gamma"], 0)) == 0
+    assert sp.simplify(residue.subs(sym["beta"], 0)) == 0
+
+
+def test_observed_range_transfer_contains_projection_factor() -> None:
+    observed = observed_range_transfer()
+    expected = sp.factor(range_projection() * projection_relaxation_transfer())
+
+    assert sp.simplify(observed - expected) == 0
+
+
+def test_arbitrary_projection_solution_fits_pointwise_observable() -> None:
+    sym = projection_symbols()
+    lambda_solution = arbitrary_projection_solution()
+    reconstructed = sp.simplify(
+        lambda_solution * projection_relaxation_transfer() * sym["F_hat"]
+    )
+
+    assert sp.simplify(reconstructed - sym["O_hat"]) == 0
+
+
+def test_projection_channel_rows_are_classified() -> None:
+    rows = projection_channel_rows()
+    validate_projection_channel_rows(rows)
+    assert rows
+    assert all(row["claim_status"] for row in rows)
+    assert all(row["projection_channel"] for row in rows)
+    assert all(row["verdict"] for row in rows)
+
+
+def test_projection_channel_payload_has_required_columns() -> None:
+    data = projection_channel_payload()
+    schema = set(data["schema"])
+
+    assert "projection_channel" in schema
+    assert "lambda_form" in schema
+    assert "collapse_condition" in schema
+    assert data["range_deprojection_residual"] == "0"
+    assert data["range_equation_residual"] == "0"
+
+
+def test_projection_pole_condition_is_range_denominator() -> None:
+    sym = projection_symbols()
+    assert projection_pole_condition() == sym["kappa"] ** 2 + sym["z"] ** 2
+
+
 def test_triple_bridge_rows_are_classified() -> None:
     rows = triple_bridge_rows()
     validate_triple_bridge_rows(rows)
@@ -415,6 +488,14 @@ def main() -> None:
     test_orbital_two_harmonic_dotf_obstruction()
     test_forcing_dictionary_rows_are_classified()
     test_forcing_dictionary_payload_has_required_columns()
+    test_range_projection_deprojects_to_relaxation_transfer()
+    test_range_projection_satisfies_linear_channel_equation()
+    test_range_relaxation_pole_survives_unless_couplings_collapse()
+    test_observed_range_transfer_contains_projection_factor()
+    test_arbitrary_projection_solution_fits_pointwise_observable()
+    test_projection_channel_rows_are_classified()
+    test_projection_channel_payload_has_required_columns()
+    test_projection_pole_condition_is_range_denominator()
     test_triple_bridge_rows_are_classified()
     test_triple_bridge_two_carriers_break_low_real_derivative_orders()
     test_triple_bridge_two_carriers_are_not_enough_for_complex_degree1()

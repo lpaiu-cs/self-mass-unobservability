@@ -89,6 +89,11 @@ projection polynomial, the distinguishability test must increase the derivative
 order by the projection nuisance order and then apply the same frequency-sweep
 counting.
 
+Status: Counterexample candidate. The first concrete channel audit is
+[`projection-channel-audit.md`](projection-channel-audit.md), which treats an
+acceleration-like readout and a range-like readout
+`Lambda_R(z)=Gamma/(kappa^2+z^2)`.
+
 ## Concrete Forcing Class 2: Multi-System Sweep
 
 Status: Conjectural. A set of systems with different orbital frequencies can
@@ -126,3 +131,7 @@ unconstrained complex nuisance at every sampled frequency.
 Status: Counterexample candidate. The next required step after this dictionary
 is to choose a specific free-fall observable channel and decide whether its
 projection factor is known, finite-dimensional, or an arbitrary nuisance.
+
+Status: Counterexample candidate. M4 supplies the first such channel audit, but
+the remaining open step is to justify the projection assumptions for a named
+measurement channel rather than a symbolic linear readout.

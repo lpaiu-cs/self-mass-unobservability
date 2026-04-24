@@ -74,6 +74,10 @@ Status: Counterexample candidate. The observable projection is modeled as
 requires `Lambda` to be known, calibrated, or finite-dimensional rather than an
 arbitrary complex nuisance at each sampled frequency.
 
+Status: Counterexample candidate. The first concrete projection channels are
+`delta a_hat = Gamma q_hat` and `ddot R + kappa^2 R = Gamma q_A`, representing
+acceleration-like and range-like linearized free-fall readouts.
+
 ## Deferred Secondary Model
 
 Status: Counterexample candidate. If first-order relaxation is insufficient, the next model is
