@@ -25,9 +25,9 @@ Out of scope for this phase:
 
 ## Current Layout
 
-- [`docs/`](docs): theorem candidates, the conditional collapse lemma, power counting, the primitive catalog, ledgers, and the roadmap.
+- [`docs/`](docs): theorem candidates, the conditional collapse lemma, power counting, the primitive catalog, explicit reduction rules, ledgers, and the roadmap.
 - [`lemmas/`](lemmas): free-fall lemmas and reduction notes.
-- [`symbolic/`](symbolic): small SymPy scripts for worldline expansion, sensitivity jets, candidate enumeration, and normal-form reduction.
+- [`symbolic/`](symbolic): small SymPy scripts for worldline expansion, sensitivity jets, basis enumeration, contraction enumeration, and normal-form reduction.
 - [`counterexamples/`](counterexamples): explicit loophole classes and minimal models.
 - [`notes/scratch/`](notes/scratch): disposable local notes that should not become theorem claims without promotion.
 
@@ -48,6 +48,7 @@ Run the current symbolic scaffold:
 ```powershell
 make worldline-expand
 make enumerate-basis
+make enumerate-contractions
 make normal-form-reduce
 make symbolic-check
 ```

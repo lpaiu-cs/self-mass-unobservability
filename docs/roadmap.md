@@ -29,14 +29,23 @@ Status: Conjectural. The repository roadmap is organized around theorem progress
 | --- | --- | --- | --- |
 | M3.1 | Proven | [`docs/primitive-catalog.md`](primitive-catalog.md) | Exact `Delta<=4` primitive and candidate operator content is fixed. |
 | M3.2 | Proven | [`../symbolic/normal_form_reduce.py`](../symbolic/normal_form_reduce.py) | Total-derivative, lower-order EOM, and algebraic reductions run without error. |
-| M3.3 | Conjectural | [`../lemmas/06-normal-form-completeness-delta4.md`](../lemmas/06-normal-form-completeness-delta4.md) | A real Delta<=4 completeness path or explicit obstruction is recorded. |
-| M3.4 | Conjectural | [`docs/theorem-A-freefall.md`](theorem-A-freefall.md) | The current burden is written uniformly as `normal-form completeness modulo total derivatives and lower-order equations of motion`. |
+| M3.3 | Proven | [`../lemmas/06-normal-form-completeness-delta4.md`](../lemmas/06-normal-form-completeness-delta4.md) | The old five-element target is recognized as incomplete rather than silently assumed. |
+
+## M4: Contraction-Level Exhaustiveness Audit
+
+| Item | Status | Deliverable | Exit condition |
+| --- | --- | --- | --- |
+| M4.1 | Proven | [`../symbolic/enumerate_contractions_delta4.py`](../symbolic/enumerate_contractions_delta4.py) | All parity-even scalar contractions from the exact current primitive blocks through `Delta<=4` are enumerated. |
+| M4.2 | Proven | [`docs/reduction-rules.md`](reduction-rules.md) | Every allowed reduction rule is listed explicitly. |
+| M4.3 | Conjectural | [`../lemmas/07-gradient-sector-audit.md`](../lemmas/07-gradient-sector-audit.md) | The gradient sector is audited and the surviving basis is identified explicitly. |
+| M4.4 | Proven | [`../lemmas/08-mixed-time-derivative-audit.md`](../lemmas/08-mixed-time-derivative-audit.md) | Mixed `E-E-D_tau E` terms are audited explicitly. |
+| M4.5 | Conjectural | [`docs/theorem-A-freefall.md`](theorem-A-freefall.md) | The corrected seven-element `Delta<=4` normal-form path is stated explicitly. |
 
 ## Near-Term Sequence
 
-1. Status: Conjectural. Close `normal-form completeness modulo total derivatives and lower-order equations of motion` for the exact `Delta<=4` primitive catalog.
-2. Status: Conjectural. Either prove catalog exhaustiveness at `Delta<=4` or isolate the smallest additional admissible scalar obstruction.
-3. Status: Counterexample candidate. Promote the dominant loophole class only if it produces a genuine failure of the `Delta<=4` normal-form target list.
+1. Status: Conjectural. Confirm the corrected seven-element `Delta<=4` normal-form basis against any future primitive-set extension.
+2. Status: Conjectural. Decide whether any extra gradient identity should be introduced explicitly, rather than silently collapsing `divE2` or `mixedGradE2`.
+3. Status: Counterexample candidate. Promote the dominant loophole class only if it produces a genuine failure of the explicit M4 enumeration/reduction path.
 4. Status: Conjectural. Revisit the scalar `s_A` corollary only after the higher-dimensional sensitivity manifold statement is sharp.
 
 ## Explicit Non-Goals For M1

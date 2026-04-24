@@ -9,6 +9,11 @@ SYMBOLIC_ROOT = Path(__file__).resolve().parents[1]
 if str(SYMBOLIC_ROOT) not in sys.path:
     sys.path.insert(0, str(SYMBOLIC_ROOT))
 
+from enumerate_contractions_delta4 import (
+    enumerate_contraction_classes,
+    gradient_sector_classes,
+    mixed_time_derivative_classes,
+)
 from enumerate_basis import enumerate_minimal_scalar_monomials
 from normal_form_reduce import (
     operator_symbols,
@@ -62,11 +67,24 @@ def test_total_derivative_reduction() -> None:
     assert reduce_total_derivatives(ops["E_DtE"]) == 0
     assert reduce_total_derivatives(ops["Dt2_E2"]) == 0
     assert reduce_total_derivatives(ops["E_Dt2E"]) == -ops["dotE2"]
+    assert reduce_total_derivatives(ops["TrE2DtE"]) == 0
 
 
 def test_lower_order_eom_reduction() -> None:
     ops = operator_symbols()
-    assert reduce_lower_order_eom(ops["a2"] + ops["aEa"]) == 0
+    expr = (
+        ops["a2"]
+        + ops["aEa"]
+        + ops["aDivE"]
+        + ops["aDtEa"]
+        + ops["a2E2"]
+        + ops["aE2a"]
+        + ops["a4"]
+        + ops["aEGradE_1"]
+        + ops["aEGradE_2"]
+        + ops["aEGradE_3"]
+    )
+    assert reduce_lower_order_eom(expr) == 0
 
 
 def test_algebraic_reduction() -> None:
@@ -76,10 +94,48 @@ def test_algebraic_reduction() -> None:
 
 def test_combined_normal_form_reduction() -> None:
     ops = operator_symbols()
-    expr = ops["E4"] + ops["E_Dt2E"] + ops["a2"] + ops["gradE2"]
+    expr = (
+        ops["E4"]
+        + ops["E_Dt2E"]
+        + ops["TrE2DtE"]
+        + ops["a2"]
+        + ops["gradE2"]
+        + ops["divE2"]
+    )
     reduced = reduce_to_normal_form(expr)
-    expected = sp.Rational(1, 2) * ops["E2"] ** 2 - ops["dotE2"] + ops["gradE2"]
+    expected = (
+        sp.Rational(1, 2) * ops["E2"] ** 2
+        - ops["dotE2"]
+        + ops["gradE2"]
+        + ops["divE2"]
+    )
     assert sp.expand(reduced - expected) == 0
+
+
+def test_contraction_enumeration_counts() -> None:
+    classes = enumerate_contraction_classes()
+    assert len(classes) == 21
+
+
+def test_gradient_sector_audit() -> None:
+    labels = [item.label for item in gradient_sector_classes()]
+    assert labels == ["divE2", "gradE2", "mixedGradE2"]
+
+
+def test_mixed_time_derivative_audit() -> None:
+    items = mixed_time_derivative_classes()
+    assert len(items) == 1
+    assert items[0].label == "TrE2DtE"
+    assert items[0].classification == "Proven reducible"
+
+
+def test_a_e_grade_labels_are_unique() -> None:
+    labels = sorted(
+        item.label
+        for item in enumerate_contraction_classes()
+        if item.signature == ("E", "GradE", "a")
+    )
+    assert labels == ["aEGradE_1", "aEGradE_2", "aEGradE_3"]
 
 
 def main() -> None:
@@ -90,6 +146,10 @@ def main() -> None:
     test_lower_order_eom_reduction()
     test_algebraic_reduction()
     test_combined_normal_form_reduction()
+    test_contraction_enumeration_counts()
+    test_gradient_sector_audit()
+    test_mixed_time_derivative_audit()
+    test_a_e_grade_labels_are_unique()
     print("symbolic checks passed")
 
 

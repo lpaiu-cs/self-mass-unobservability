@@ -1,6 +1,6 @@
 PYTHON ?= python
 
-.PHONY: worldline-expand sensitivity-expand enumerate-basis normal-form-reduce symbolic-check legacy-request1 legacy-request2 legacy-request7
+.PHONY: worldline-expand sensitivity-expand enumerate-basis enumerate-contractions normal-form-reduce symbolic-check legacy-request1 legacy-request2 legacy-request7
 
 worldline-expand:
 	$(PYTHON) symbolic/worldline_expand.py
@@ -10,6 +10,9 @@ sensitivity-expand:
 
 enumerate-basis:
 	$(PYTHON) symbolic/enumerate_basis.py
+
+enumerate-contractions:
+	$(PYTHON) symbolic/enumerate_contractions_delta4.py
 
 normal-form-reduce:
 	$(PYTHON) symbolic/normal_form_reduce.py
