@@ -63,6 +63,16 @@ Status: Proven. The physical projection-manifold rank gate is also independent
 of the adiabatic expansion. It asks whether the carrier projection has rank
 `5` with a phase lock or rank `6` with independent complex nuisance.
 
+Status: Proven. The named timing-model projection audit is also independent
+of the adiabatic expansion. It classifies the implementation projection class,
+not the small-`Omega tau_chi` derivative truncation.
+
+Status: Counterexample candidate. For the standard finite state/geometry
+projection core, the adiabatic collapse condition remains the same
+low-frequency or finite-derivative condition as above. For explicit
+per-harmonic nuisance, the bridge collapses by projection freedom even away
+from the adiabatic regime.
+
 Status: Proven. Exact reproduction of `alpha / (1 + i Omega tau_chi)` for arbitrary `Omega` requires either the explicit state `chi`, a hereditary kernel, or an infinite derivative tower.
 
 ## Boundary Statement

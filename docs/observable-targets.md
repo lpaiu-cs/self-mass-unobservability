@@ -191,6 +191,23 @@ Status: Conjectural. External timing runtime is justified only if the named
 timing model preserves the phase/geometric links instead of fitting
 independent complex carrier amplitudes.
 
+## Named Timing-Model Projection Audit
+
+Status: Counterexample candidate. The public `Nutimo` triple timing core is
+source-inspected as a finite fitted-parameter, state-vector, and geometry
+projection model. That class is compatible with the runtime-worthy side of
+the Request 10.5 gate.
+
+Status: Proven. An explicit sinusoid special case with per-harmonic amplitudes
+and phases is also present in the source tree. If that nuisance is enabled on
+the target carrier frequencies, the dynamic-chi bridge collapses before a
+runtime fit can be scientifically informative.
+
+Status: Counterexample candidate. The named-code observable target is
+therefore not a generic `J0337` detectability claim. It is a conditional
+hand-off target: test a dynamic-chi column against the standard finite
+three-body timing Jacobian while excluding arbitrary harmonic soak-up terms.
+
 ## Sideband Test
 
 Status: Proven. A linear time-invariant one-state model driven by `F1 cos(Omega1 t) + F2 cos(Omega2 t)` cannot create sidebands in the linear readout.

@@ -42,6 +42,8 @@ with `F(t) = F0 cos(Omega t)` for the first derivation.
 | Proven | Three-carrier gate with a projection/comparator class whose effective dimension exceeds the three-sample pressure | The finite carrier inventory is below the obstruction count after nuisance parameters are admitted. | Need more carriers, order prior, or external projection prior. |
 | Proven | Physical projection gate with independently floated combination-carrier phase | The three carrier amplitudes span six real projection directions, matching arbitrary complex per-carrier freedom. | Runtime-worthiness collapse. |
 | Conjectural | Physical projection gate with phase-locked outer-dipole manifold but no named timing model enforcing the lock | The symbolic manifold is finite, but the implementation could still fit an effectively arbitrary carrier. | Conditional until implementation/prior gate. |
+| Proven | Named timing-model audit with explicit per-harmonic amplitude/phase nuisance enabled on target carriers | The `RN_PL`-style sinusoid branch supplies carrier-local harmonic amplitudes and phases. | Shared-`tau_chi` bridge collapse. |
+| Counterexample candidate | Named timing-model audit on the standard finite state/geometry core | The public source path maps residuals through finite fitted parameters, recomputed state vectors, and shared geometry. | Conditional runtime-worthy implementation class. |
 | Proven | Linear first-order `chi` plus linear two-frequency forcing and linear readout | Superposition leaves only the input frequencies; no `Omega_1 +/- Omega_2` terms appear. | No sideband loophole in the linear MVP. |
 | Proven | Nonlinear sideband model with `beta_F2 = lambda_Fchi = lambda_chi2 = 0` | The model reduces to the linear no-sideband one-state response. | Nonlinear sideband collapse. |
 | Proven | Mixed sideband test with `F1 F2 = 0` | Sum and difference sideband amplitudes vanish because only one harmonic is present. | Insufficient nonlinear forcing. |
@@ -99,6 +101,15 @@ Status: Counterexample candidate. The physical projection-manifold gate shows
 that the phase-locked outer-dipole ansatz is rank `5`, not rank `6`, so it is a
 finite shared manifold. Runtime-worthiness remains conditional on the named
 timing model preserving that phase lock.
+
+Status: Counterexample candidate. The named `Nutimo` source-inspection audit
+places the standard triple timing core on the finite state/geometry side of
+the gate, making dynamic-chi conditionally runtime-worthy for configurations
+that exclude arbitrary harmonic carrier nuisance.
+
+Status: Proven. If an explicit per-harmonic sinusoid nuisance is enabled on
+the target carriers, the named implementation falls into the collapse class
+and the shared-`tau_chi` bridge is not runtime-motivated.
 
 ## Failed Sideband Attempt
 

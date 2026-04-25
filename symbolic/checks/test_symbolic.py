@@ -116,6 +116,13 @@ from triple_projection_manifold_gate import (  # noqa: E402
     rows_as_dicts as triple_projection_manifold_rows,
     validate_rows as validate_triple_projection_manifold_rows,
 )
+from named_timing_model_projection_audit import (  # noqa: E402
+    payload as named_timing_model_payload,
+    rows_as_dicts as named_timing_model_rows,
+    source_release_ledger as named_timing_source_release_ledger,
+    validate_rows as validate_named_timing_model_rows,
+    verdict_summary as named_timing_verdict_summary,
+)
 
 
 def test_monochromatic_response_solves_relaxation_equation() -> None:
@@ -736,6 +743,45 @@ def test_triple_projection_manifold_payload_records_gate_rule() -> None:
     assert data["rank_summary"]["arbitrary_complex_rank"] == 6
 
 
+def test_named_timing_model_rows_are_classified() -> None:
+    rows = named_timing_model_rows()
+    validate_named_timing_model_rows(rows)
+
+    assert rows
+    assert all(row["claim_status"] for row in rows)
+    assert all(row["bridge_verdict"] for row in rows)
+    assert all(row["runtime_worthiness"] for row in rows)
+
+
+def test_named_timing_model_core_is_conditional_runtime_motivated() -> None:
+    rows = {row["term"]: row for row in named_timing_model_rows()}
+    core = rows["named_model_projection_class_verdict"]
+
+    assert core["bridge_verdict"] == "conditional"
+    assert core["runtime_worthiness"] == "runtime-motivated"
+    assert "finite shared" in core["projection_nuisance_class"]
+
+
+def test_named_timing_model_harmonic_specialcase_collapses() -> None:
+    rows = {row["term"]: row for row in named_timing_model_rows()}
+    specialcase = rows["rn_pl_specialcase_harmonic_nuisance"]
+
+    assert specialcase["bridge_verdict"] == "collapse"
+    assert specialcase["runtime_worthiness"] == "not-runtime-motivated"
+    assert "per-harmonic" in specialcase["projection_nuisance_class"]
+
+
+def test_named_timing_model_payload_records_sources_and_verdict() -> None:
+    data = named_timing_model_payload()
+    summary = named_timing_verdict_summary(data["rows"])
+    releases = named_timing_source_release_ledger()
+
+    assert data["source_releases"]["2025_zenodo"] == releases["2025_zenodo"]
+    assert "source_releases" in data
+    assert summary["standard_core_runtime_worthiness"] == "runtime-motivated"
+    assert summary["specialcase_bridge_verdict"] == "collapse"
+
+
 def main() -> None:
     test_monochromatic_response_solves_relaxation_equation()
     test_transfer_function_components_match_real_solution()
@@ -804,6 +850,10 @@ def main() -> None:
     test_triple_projection_manifold_phase_lock_constraint()
     test_triple_projection_manifold_runtime_worthiness_gate()
     test_triple_projection_manifold_payload_records_gate_rule()
+    test_named_timing_model_rows_are_classified()
+    test_named_timing_model_core_is_conditional_runtime_motivated()
+    test_named_timing_model_harmonic_specialcase_collapses()
+    test_named_timing_model_payload_records_sources_and_verdict()
     print("dynamic chi symbolic checks passed")
 
 

@@ -104,6 +104,16 @@ Status: Proven. This phase-locked ansatz has generic Jacobian rank `5` in the
 six-real-dimensional carrier vector, whereas independent complex carrier
 amplitudes have rank `6`.
 
+Status: Counterexample candidate. The named `Nutimo` timing-model source
+inspection maps the standard triple core to a finite state/geometry projection
+class: finite orbital and geometry parameters generate shared state vectors,
+and delays are projected from those shared states rather than from independent
+complex carrier coefficients.
+
+Status: Proven. If a named fit configuration enables explicit per-harmonic
+amplitude/phase nuisance on the target carriers, that configuration belongs
+to the collapse class for the shared-`tau_chi` bridge.
+
 ## Minimal Nonlinear Extensions
 
 Status: Counterexample candidate. Before adding a second-order mode, M5 tests

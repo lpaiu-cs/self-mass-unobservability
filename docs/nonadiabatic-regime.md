@@ -205,6 +205,22 @@ phase and geometry tied to the inner and outer carrier phases.
 Status: Proven. A model that fits the combination carrier as an independent
 complex amplitude destroys the bridge before any external runtime is useful.
 
+## Named Timing-Model Projection Audit
+
+Status: Counterexample candidate. Source inspection of the public `Nutimo`
+triple timing core supports the finite shared projection side of the
+non-adiabatic gate: delay projections are generated from fitted physical
+parameters, recomputed state vectors, and shared line-of-sight geometry.
+
+Status: Proven. The same source tree contains an explicit harmonic nuisance
+special case. If that per-harmonic amplitude/phase model is admitted on the
+target carriers, it implements the collapse class and removes the shared
+finite-`tau_chi` target.
+
+Status: Counterexample candidate. The non-adiabatic branch is therefore
+runtime-motivated only for named configurations that preserve the finite
+state/geometry projection manifold.
+
 ## Large-Frequency Behavior
 
 Status: Proven. For `x = Omega tau_chi >> 1`,

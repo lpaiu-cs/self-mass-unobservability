@@ -71,6 +71,15 @@ Status: Proven. If the combination carrier amplitude and phase are floated
 independently from the inner and outer carrier phases, the projection rank
 becomes `6` and the bridge collapses as arbitrary per-carrier complex nuisance.
 
+Status: Counterexample candidate. The named timing-model projection audit
+places the standard public `Nutimo` triple timing core on the finite
+state/geometry side of the gate, so dynamic-chi is conditionally
+runtime-worthy for a configuration that preserves those links.
+
+Status: Proven. The same source inspection finds an explicit harmonic
+special case (`RN_PL`) with per-harmonic amplitudes and phases; enabling that
+kind of nuisance on the target carriers collapses the shared-`tau_chi` bridge.
+
 Status: Counterexample candidate. The M5 nonlinear sideband test adds the
 minimal nonlinear drive/readout terms. These generate frequencies absent from
 the linear input, including `Omega1+Omega2`, `|Omega1-Omega2|`, and the orbital
@@ -98,6 +107,7 @@ Status: Proven. For the linear readout above and a two-frequency linear drive, n
 - `symbolic/triple_gr_carrier_inventory.py`: three-carrier GR triple inventory and comparator-count audit.
 - `symbolic/triple_projection_nuisance_gate.py`: projection-nuisance realism gate for the three-carrier bridge.
 - `symbolic/triple_projection_manifold_gate.py`: physical projection-manifold rank and runtime-worthiness gate.
+- `symbolic/named_timing_model_projection_audit.py`: named `Nutimo` source-inspection projection-class audit.
 - `symbolic/nonlinear_sideband_test.py`: minimal nonlinear sideband generation checks.
 - `symbolic/checks/test_symbolic.py`: deterministic symbolic checks.
 - `counterexamples/README.md`: loophole framing and escalation list.
