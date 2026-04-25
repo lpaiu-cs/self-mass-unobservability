@@ -123,6 +123,14 @@ from named_timing_model_projection_audit import (  # noqa: E402
     validate_rows as validate_named_timing_model_rows,
     verdict_summary as named_timing_verdict_summary,
 )
+from nutimo_runtime_worthiness_pilot import (  # noqa: E402
+    jacobian_rank_gate_verdict,
+    minimal_external_artifacts as nutimo_pilot_minimal_external_artifacts,
+    payload as nutimo_runtime_pilot_payload,
+    pilot_stage_order as nutimo_pilot_stage_order,
+    rows_as_dicts as nutimo_runtime_pilot_rows,
+    validate_rows as validate_nutimo_runtime_pilot_rows,
+)
 
 
 def test_monochromatic_response_solves_relaxation_equation() -> None:
@@ -782,6 +790,56 @@ def test_named_timing_model_payload_records_sources_and_verdict() -> None:
     assert summary["specialcase_bridge_verdict"] == "collapse"
 
 
+def test_nutimo_runtime_pilot_rows_are_classified() -> None:
+    rows = nutimo_runtime_pilot_rows()
+    validate_nutimo_runtime_pilot_rows(rows)
+
+    assert rows
+    assert all(row["claim_status"] for row in rows)
+    assert all(row["bridge_verdict_if_pass"] for row in rows)
+    assert all(row["bridge_verdict_if_fail"] for row in rows)
+
+
+def test_nutimo_runtime_pilot_enforces_configuration_closure() -> None:
+    rows = {row["gate"]: row for row in nutimo_runtime_pilot_rows()}
+    config = rows["configuration_closure_standard_core"]
+
+    assert config["bridge_verdict_if_pass"] == "conditional"
+    assert config["bridge_verdict_if_fail"] == "collapse"
+    assert "harmonic" in config["fail_condition"]
+
+
+def test_nutimo_runtime_pilot_rank_gate_boundary() -> None:
+    alive = jacobian_rank_gate_verdict(
+        projection_rank=5,
+        dynamic_chi_column_in_span=False,
+    )
+    rank_collapse = jacobian_rank_gate_verdict(
+        projection_rank=6,
+        dynamic_chi_column_in_span=False,
+    )
+    span_collapse = jacobian_rank_gate_verdict(
+        projection_rank=5,
+        dynamic_chi_column_in_span=True,
+    )
+
+    assert alive["bridge_verdict"] == "conditional"
+    assert alive["runtime_worthiness"] == "runtime-motivated"
+    assert rank_collapse["bridge_verdict"] == "collapse"
+    assert span_collapse["bridge_verdict"] == "collapse"
+
+
+def test_nutimo_runtime_pilot_payload_records_required_artifacts() -> None:
+    data = nutimo_runtime_pilot_payload()
+    artifacts = nutimo_pilot_minimal_external_artifacts()
+
+    assert data["stage_order"] == nutimo_pilot_stage_order()
+    assert "finite_jacobian" in data["minimal_external_artifacts"]
+    assert "dynamic_chi_column" in data["minimal_external_artifacts"]
+    assert data["minimal_external_artifacts"]["finite_jacobian"] == artifacts["finite_jacobian"]
+    assert "rank_gate_examples" in data
+
+
 def main() -> None:
     test_monochromatic_response_solves_relaxation_equation()
     test_transfer_function_components_match_real_solution()
@@ -854,6 +912,10 @@ def main() -> None:
     test_named_timing_model_core_is_conditional_runtime_motivated()
     test_named_timing_model_harmonic_specialcase_collapses()
     test_named_timing_model_payload_records_sources_and_verdict()
+    test_nutimo_runtime_pilot_rows_are_classified()
+    test_nutimo_runtime_pilot_enforces_configuration_closure()
+    test_nutimo_runtime_pilot_rank_gate_boundary()
+    test_nutimo_runtime_pilot_payload_records_required_artifacts()
     print("dynamic chi symbolic checks passed")
 
 

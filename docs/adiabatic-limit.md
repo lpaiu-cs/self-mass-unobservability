@@ -73,6 +73,10 @@ low-frequency or finite-derivative condition as above. For explicit
 per-harmonic nuisance, the bridge collapses by projection freedom even away
 from the adiabatic regime.
 
+Status: Proven. The external runtime-worthiness pilot is not a new adiabatic
+approximation. Its stop rules classify projection and fitted-Jacobian
+degeneracy before any finite-`tau_chi` synthetic injection is promoted.
+
 Status: Proven. Exact reproduction of `alpha / (1 + i Omega tau_chi)` for arbitrary `Omega` requires either the explicit state `chi`, a hereditary kernel, or an infinite derivative tower.
 
 ## Boundary Statement

@@ -1,6 +1,6 @@
 PYTHON ?= python
 
-.PHONY: chi-response chi-two-frequency chi-basis-audit frequency-sweep forcing-dictionary projection-audit triple-shared-tau-bridge triple-gr-carrier-inventory triple-projection-nuisance-gate triple-projection-manifold-gate named-timing-model-projection-audit nonlinear-sideband symbolic-check
+.PHONY: chi-response chi-two-frequency chi-basis-audit frequency-sweep forcing-dictionary projection-audit triple-shared-tau-bridge triple-gr-carrier-inventory triple-projection-nuisance-gate triple-projection-manifold-gate named-timing-model-projection-audit nutimo-runtime-worthiness-pilot nonlinear-sideband symbolic-check
 
 chi-response:
 	$(PYTHON) symbolic/chi_relaxation_response.py
@@ -34,6 +34,9 @@ triple-projection-manifold-gate:
 
 named-timing-model-projection-audit:
 	$(PYTHON) symbolic/named_timing_model_projection_audit.py
+
+nutimo-runtime-worthiness-pilot:
+	$(PYTHON) symbolic/nutimo_runtime_worthiness_pilot.py
 
 nonlinear-sideband:
 	$(PYTHON) symbolic/nonlinear_sideband_test.py

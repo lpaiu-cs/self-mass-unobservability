@@ -80,6 +80,15 @@ Status: Proven. The same source inspection finds an explicit harmonic
 special case (`RN_PL`) with per-harmonic amplitudes and phases; enabling that
 kind of nuisance on the target carriers collapses the shared-`tau_chi` bridge.
 
+Status: Counterexample candidate. Request 10.7 promotes this to a narrow
+external runtime-worthiness pilot contract: configuration closure first,
+finite Jacobian rank gate second, and a minimal synthetic shared-`tau_chi`
+injection only if the first two gates pass.
+
+Status: Proven. A build-only or dependency-repair exercise does not count as
+Request 10.7 progress. Runtime is scientifically motivated only if it tests
+the named projection class and excludes carrier-local harmonic soak-up.
+
 Status: Counterexample candidate. The M5 nonlinear sideband test adds the
 minimal nonlinear drive/readout terms. These generate frequencies absent from
 the linear input, including `Omega1+Omega2`, `|Omega1-Omega2|`, and the orbital
@@ -108,6 +117,7 @@ Status: Proven. For the linear readout above and a two-frequency linear drive, n
 - `symbolic/triple_projection_nuisance_gate.py`: projection-nuisance realism gate for the three-carrier bridge.
 - `symbolic/triple_projection_manifold_gate.py`: physical projection-manifold rank and runtime-worthiness gate.
 - `symbolic/named_timing_model_projection_audit.py`: named `Nutimo` source-inspection projection-class audit.
+- `symbolic/nutimo_runtime_worthiness_pilot.py`: external `Nutimo` runtime-worthiness pilot contract.
 - `symbolic/nonlinear_sideband_test.py`: minimal nonlinear sideband generation checks.
 - `symbolic/checks/test_symbolic.py`: deterministic symbolic checks.
 - `counterexamples/README.md`: loophole framing and escalation list.

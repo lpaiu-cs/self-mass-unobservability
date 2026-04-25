@@ -1,0 +1,140 @@
+{
+  "assumptions": {
+    "carrier_set": "Omega_in, Omega_out, abs(Omega_in-Omega_out)",
+    "dynamic_transfer": "G(z)=c_Y+beta/(1+tau_chi z)",
+    "named_model_boundary": "standard Nutimo core is finite state/geometry unless the fit enables explicit harmonic soak-up on target carriers",
+    "scope": "external runtime-worthiness pilot contract; no local Nutimo build or TOA fit is performed by this script"
+  },
+  "minimal_external_artifacts": {
+    "carrier_projection_rank_summary": "effective rank of the three-carrier projection nuisance manifold; rank <= 5 keeps the 10.5 phase/geometric lock gate alive",
+    "configuration_manifest": "active parameter blocks, specialcase flag, delay flags, target carrier list, and whether RN_PL-like harmonic soak-up is disabled",
+    "dynamic_chi_column": "synthetic shared-tau carrier response column evaluated at Omega_in, Omega_out, and abs(Omega_in-Omega_out)",
+    "finite_jacobian": "residual derivative matrix for the standard fitted parameter set near the baseline solution",
+    "injection_recovery_table": "carrier amplitudes/phases before and after refit, with the shared G(z)=c_Y+beta/(1+tau_chi z) relation tested across all carriers"
+  },
+  "pilot_verdict": "conditional runtime pilot is scientifically motivated, but only after configuration closure and before any long posterior run",
+  "rank_gate_examples": {
+    "rank5_but_column_absorbed": {
+      "bridge_verdict": "collapse",
+      "classification": "effective per-carrier complex freedom or dynamic-chi column absorbed by the named nuisance span",
+      "runtime_worthiness": "not-runtime-motivated"
+    },
+    "rank5_unabsorbed": {
+      "bridge_verdict": "conditional",
+      "classification": "finite shared projection rank with an unabsorbed dynamic-chi test column",
+      "runtime_worthiness": "runtime-motivated"
+    },
+    "rank6_collapse": {
+      "bridge_verdict": "collapse",
+      "classification": "effective per-carrier complex freedom or dynamic-chi column absorbed by the named nuisance span",
+      "runtime_worthiness": "not-runtime-motivated"
+    }
+  },
+  "rows": [
+    {
+      "bridge_verdict_if_fail": "collapse",
+      "bridge_verdict_if_pass": "conditional",
+      "claim_status": "Conjectural",
+      "fail_condition": "local dependency repair becomes open-ended or changes the timing model configuration",
+      "gate": "external_environment_boundary",
+      "notes": "This gate authorizes runtime only as a science test. It is not a request to reopen local build infrastructure work.",
+      "pass_condition": "environment can compute residuals and finite-parameter gradients without changing the scientific comparator class",
+      "pilot_stage": "source_and_environment_boundary",
+      "projection_class_if_fail": "not applicable",
+      "projection_class_if_pass": "not yet classified",
+      "required_inputs": "pre-provisioned Nutimo/Tempo2/Boost/Minuit environment or external collaborator runtime",
+      "runtime_action": "prepare_external_environment_only_if_needed"
+    },
+    {
+      "bridge_verdict_if_fail": "collapse",
+      "bridge_verdict_if_pass": "conditional",
+      "claim_status": "Counterexample candidate",
+      "fail_condition": "RN_PL-like per-harmonic amplitude/phase nuisance or equivalent carrier-local soak-up is enabled",
+      "gate": "configuration_closure_standard_core",
+      "notes": "This is the runtime version of the 10.6 source-inspection boundary.",
+      "pass_condition": "standard integrated three-body core is active and explicit harmonic soak-up terms are disabled for target carriers",
+      "pilot_stage": "configuration_closure",
+      "projection_class_if_fail": "effectively per-harmonic complex nuisance",
+      "projection_class_if_pass": "finite shared state/geometry manifold",
+      "required_inputs": "active par/tim configuration, delay flags, fitted parameter map, specialcase flag, and target carrier list",
+      "runtime_action": "proceed_to_jacobian_gate"
+    },
+    {
+      "bridge_verdict_if_fail": "collapse",
+      "bridge_verdict_if_pass": "conditional",
+      "claim_status": "Counterexample candidate",
+      "fail_condition": "carrier inventory collapses to one or two usable samples",
+      "gate": "carrier_inventory_closure",
+      "notes": "Two carriers only test low-order real derivative comparators; the named pilot targets the stronger three-carrier bridge.",
+      "pass_condition": "three distinct positive carrier samples are present and not lost to 2:1 resonance, zero projection, or missing component",
+      "pilot_stage": "configuration_closure",
+      "projection_class_if_fail": "insufficient carrier inventory",
+      "projection_class_if_pass": "three-sample finite carrier inventory",
+      "required_inputs": "nonzero fitted projections for Omega_in, Omega_out, abs(Omega_in-Omega_out); inner and outer periods from the named model",
+      "runtime_action": "proceed_to_jacobian_gate"
+    },
+    {
+      "bridge_verdict_if_fail": "collapse",
+      "bridge_verdict_if_pass": "conditional",
+      "claim_status": "Counterexample candidate",
+      "fail_condition": "effective projection rank reaches 6/6 or the dynamic-chi column is absorbed by the fitted parameter span",
+      "gate": "named_jacobian_projection_rank",
+      "notes": "This is the decisive runtime-worthiness gate. It should be run before any posterior or long MCMC experiment.",
+      "pass_condition": "effective projection nuisance rank is <=5 in the six-real three-carrier amplitude space and the dynamic-chi test column is not in the fitted nuisance span",
+      "pilot_stage": "named_jacobian_rank_gate",
+      "projection_class_if_fail": "effectively per-carrier complex projection",
+      "projection_class_if_pass": "finite shared phase/geometric manifold",
+      "required_inputs": "finite residual Jacobian for standard fitted parameters and a carrier-projection extraction around the baseline fit",
+      "runtime_action": "proceed_to_synthetic_injection"
+    },
+    {
+      "bridge_verdict_if_fail": "collapse",
+      "bridge_verdict_if_pass": "distinguishable",
+      "claim_status": "Counterexample candidate",
+      "fail_condition": "standard finite parameters or admitted harmonic nuisance remove the shared-tau residual across the target carriers",
+      "gate": "minimal_synthetic_shared_tau_injection",
+      "notes": "This is a synthetic sanity pilot only. It is not a final J0337 constraint or detection claim.",
+      "pass_condition": "after refitting standard finite parameters, the remaining carrier relation is still best described by one shared tau_chi rather than by the admitted finite derivative comparator",
+      "pilot_stage": "minimal_synthetic_shared_tau_injection",
+      "projection_class_if_fail": "named-model nuisance collapse",
+      "projection_class_if_pass": "runtime-visible shared-tau relation",
+      "required_inputs": "synthetic carrier perturbation generated by G(z)=c_Y+beta/(1+tau_chi z) on the three target carriers",
+      "runtime_action": "promote_to_external_runtime_experiment"
+    },
+    {
+      "bridge_verdict_if_fail": "collapse",
+      "bridge_verdict_if_pass": "distinguishable",
+      "claim_status": "Conjectural",
+      "fail_condition": "any earlier gate collapses or requires arbitrary per-carrier complex nuisance to describe the named fit",
+      "gate": "runtime_promotion_decision",
+      "notes": "A pass promotes external runtime work to a real observable experiment; a fail closes the current dynamic-chi branch for this named implementation class.",
+      "pass_condition": "standard core is finite shared, rank gate is <=5, and shared tau_chi injection survives the finite nuisance refit",
+      "pilot_stage": "runtime_promotion_decision",
+      "projection_class_if_fail": "named implementation no-go or conditional no-go",
+      "projection_class_if_pass": "conditional positive named runtime branch",
+      "required_inputs": "configuration manifest, rank-gate result, and synthetic injection recovery table",
+      "runtime_action": "record_conditional_no_go"
+    }
+  ],
+  "schema": [
+    "gate",
+    "claim_status",
+    "pilot_stage",
+    "required_inputs",
+    "pass_condition",
+    "fail_condition",
+    "projection_class_if_pass",
+    "projection_class_if_fail",
+    "bridge_verdict_if_pass",
+    "bridge_verdict_if_fail",
+    "runtime_action",
+    "notes"
+  ],
+  "stage_order": [
+    "source_and_environment_boundary",
+    "configuration_closure",
+    "named_jacobian_rank_gate",
+    "minimal_synthetic_shared_tau_injection",
+    "runtime_promotion_decision"
+  ]
+}

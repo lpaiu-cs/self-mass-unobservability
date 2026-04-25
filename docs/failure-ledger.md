@@ -44,6 +44,10 @@ with `F(t) = F0 cos(Omega t)` for the first derivation.
 | Conjectural | Physical projection gate with phase-locked outer-dipole manifold but no named timing model enforcing the lock | The symbolic manifold is finite, but the implementation could still fit an effectively arbitrary carrier. | Conditional until implementation/prior gate. |
 | Proven | Named timing-model audit with explicit per-harmonic amplitude/phase nuisance enabled on target carriers | The `RN_PL`-style sinusoid branch supplies carrier-local harmonic amplitudes and phases. | Shared-`tau_chi` bridge collapse. |
 | Counterexample candidate | Named timing-model audit on the standard finite state/geometry core | The public source path maps residuals through finite fitted parameters, recomputed state vectors, and shared geometry. | Conditional runtime-worthy implementation class. |
+| Proven | Runtime pilot becomes dependency repair rather than a projection-class test | The work no longer checks configuration closure, Jacobian rank, or synthetic shared-`tau_chi` injection. | Stop; not science progress. |
+| Proven | Runtime pilot configuration enables target-carrier harmonic soak-up | The fit has admitted the collapse comparator before the dynamic-chi column is tested. | Stop; not runtime-motivated. |
+| Proven | Runtime pilot Jacobian rank reaches `6/6` or absorbs the dynamic-chi column | The named fit behaves like independent complex carrier projection or the test column lies in the nuisance span. | Named implementation collapse. |
+| Counterexample candidate | Runtime pilot rank gate is `<=5/6` and dynamic-chi column is outside the finite nuisance span | The named implementation preserves a finite shared projection manifold near the baseline solution. | Proceed to synthetic injection. |
 | Proven | Linear first-order `chi` plus linear two-frequency forcing and linear readout | Superposition leaves only the input frequencies; no `Omega_1 +/- Omega_2` terms appear. | No sideband loophole in the linear MVP. |
 | Proven | Nonlinear sideband model with `beta_F2 = lambda_Fchi = lambda_chi2 = 0` | The model reduces to the linear no-sideband one-state response. | Nonlinear sideband collapse. |
 | Proven | Mixed sideband test with `F1 F2 = 0` | Sum and difference sideband amplitudes vanish because only one harmonic is present. | Insufficient nonlinear forcing. |
@@ -110,6 +114,11 @@ that exclude arbitrary harmonic carrier nuisance.
 Status: Proven. If an explicit per-harmonic sinusoid nuisance is enabled on
 the target carriers, the named implementation falls into the collapse class
 and the shared-`tau_chi` bridge is not runtime-motivated.
+
+Status: Counterexample candidate. The external runtime-worthiness pilot is now
+the first appropriate runtime escalation, but only as a gate sequence:
+configuration closure, named Jacobian rank test, then minimal synthetic
+shared-`tau_chi` injection.
 
 ## Failed Sideband Attempt
 

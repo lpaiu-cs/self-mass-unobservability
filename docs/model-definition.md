@@ -114,6 +114,10 @@ Status: Proven. If a named fit configuration enables explicit per-harmonic
 amplitude/phase nuisance on the target carriers, that configuration belongs
 to the collapse class for the shared-`tau_chi` bridge.
 
+Status: Counterexample candidate. The external runtime-worthiness pilot does
+not change the one-state model. It fixes the named implementation gates needed
+to test the same shared transfer law in an external `Nutimo` environment.
+
 ## Minimal Nonlinear Extensions
 
 Status: Counterexample candidate. Before adding a second-order mode, M5 tests

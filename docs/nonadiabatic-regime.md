@@ -221,6 +221,20 @@ Status: Counterexample candidate. The non-adiabatic branch is therefore
 runtime-motivated only for named configurations that preserve the finite
 state/geometry projection manifold.
 
+## External Runtime-Worthiness Pilot
+
+Status: Counterexample candidate. The next non-adiabatic gate is external and
+minimal: verify the named fit configuration, compute a finite Jacobian rank
+test around the baseline solution, and only then try a synthetic
+shared-`tau_chi` injection.
+
+Status: Proven. The pilot must stop if the fit configuration admits arbitrary
+carrier-local harmonic amplitudes and phases on the target carriers.
+
+Status: Counterexample candidate. If the named Jacobian gate passes, runtime
+work becomes a scientific test of the shared rational transfer law rather than
+infrastructure recovery.
+
 ## Large-Frequency Behavior
 
 Status: Proven. For `x = Omega tau_chi >> 1`,

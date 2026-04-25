@@ -208,6 +208,26 @@ therefore not a generic `J0337` detectability claim. It is a conditional
 hand-off target: test a dynamic-chi column against the standard finite
 three-body timing Jacobian while excluding arbitrary harmonic soak-up terms.
 
+## External Runtime-Worthiness Pilot
+
+Status: Counterexample candidate. Runtime is now justified only as a narrow
+gate sequence:
+
+```text
+configuration closure
+-> named Jacobian rank gate
+-> minimal synthetic shared-tau_chi injection
+```
+
+Status: Proven. A runtime configuration with `RN_PL`-like per-harmonic carrier
+soak-up enabled is not an observable test of dynamic-chi; it is the collapse
+comparator already identified in Request 10.6.
+
+Status: Counterexample candidate. The first runtime observable target is a
+finite Jacobian question, not a posterior question: whether the named
+three-carrier projection stays below rank `6/6` and whether a dynamic-chi
+test column remains outside the standard fitted-parameter span.
+
 ## Sideband Test
 
 Status: Proven. A linear time-invariant one-state model driven by `F1 cos(Omega1 t) + F2 cos(Omega2 t)` cannot create sidebands in the linear readout.
