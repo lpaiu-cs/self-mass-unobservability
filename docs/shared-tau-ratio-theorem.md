@@ -1,7 +1,8 @@
 # Shared-Tau Ratio Theorem
 
 Status: Counterexample candidate. This note promotes the M6 ratio target into
-the next theorem/no-go test for the dynamic-visibility loophole.
+the next theorem/no-go test for the dynamic-visibility loophole. The main
+result is now a sample-budget statement, not a sideband-existence statement.
 
 ## Normalized Observables
 
@@ -73,6 +74,11 @@ Status: Proven. Within that budget, a static nonlinear comparator can absorb a
 finite set of measured line and sideband amplitudes without proving a dynamic
 state.
 
+Status: Proven. The explicit budget-breaking criterion is recorded in
+[`sample-budget-theorem.md`](sample-budget-theorem.md). A shared-tau ratio is
+not a novelty claim unless its linear samples, sideband-pair samples, and
+projection nuisance budget satisfy that theorem's inequalities.
+
 Status: Counterexample candidate. Beyond that budget, exact absorption of the
 shared relaxation law requires a finite polynomial representation of rational
 pole factors. That is impossible unless a collapse condition removes the pole
@@ -107,3 +113,7 @@ Status: Counterexample candidate. The M7 theorem target is not that nonlinear
 local polynomials cannot reproduce exactly once enough distinct samples are
 available.
 
+Status: Proven. The current orbital `n,2n,3n` dictionary and the current
+two-tone dictionary are classified in [`orbital-budget-case.md`](orbital-budget-case.md)
+and [`two-tone-budget-case.md`](two-tone-budget-case.md); neither beats a
+realistic `N=1` linear comparator by itself.

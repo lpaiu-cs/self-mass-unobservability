@@ -38,6 +38,10 @@ Status: Counterexample candidate. The practical targets are:
 - a multi-sideband sweep whose residual cannot be killed by a finite shared
   static derivative polynomial.
 
+Status: Proven. These targets count only when the sample design breaks the
+finite comparator budget in [`sample-budget-theorem.md`](sample-budget-theorem.md).
+Below that budget they are static-mimic candidates, not new observable claims.
+
 ## Projection Rule
 
 Status: Proven. A linear time-invariant projection can multiply an existing
@@ -67,3 +71,7 @@ Status: Counterexample candidate. The sideband channel remains a theorem-level
 loophole candidate only when a finite shared nuisance model is enforced across
 multiple lines.
 
+Status: Proven. The current orbital and two-tone dictionaries are
+underbudget for realistic first-derivative linear comparators; see
+[`orbital-budget-case.md`](orbital-budget-case.md) and
+[`two-tone-budget-case.md`](two-tone-budget-case.md).

@@ -1,7 +1,8 @@
 # Shared-Tau Observable Targets
 
 Status: Counterexample candidate. This note defines the observable targets for
-the shared-tau theorem/no-go track.
+the shared-tau theorem/no-go track. The controlling requirement is
+sample-budget breaking, not sideband existence.
 
 ## Primary Targets
 
@@ -39,6 +40,8 @@ following:
 - the same `tau_chi` appears in both fits;
 - the number of distinct samples exceeds the finite static comparator
   interpolation budget.
+- the number of shared projection nuisance parameters is included in the
+  budget count.
 
 Status: Proven. A single ratio point does not count if an unconstrained complex
 nonlinear coefficient is allowed for that point.
@@ -66,3 +69,5 @@ Status: Counterexample candidate. A successful M7 result should report the
 minimum sample count, comparator class, surviving ratio law, and collapse
 condition together. Otherwise it is only another sideband existence statement.
 
+Status: Proven. The explicit minimum-sample rule is maintained in
+[`sample-budget-theorem.md`](sample-budget-theorem.md).

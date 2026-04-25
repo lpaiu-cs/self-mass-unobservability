@@ -66,3 +66,4 @@ This ledger records the active assumptions behind the free-fall sensitivity-coll
 - Status: Proven. If nonlinear static coefficients or projection nuisances are allowed independently at every generated frequency, the sideband-ratio test is not identifiable.
 - Status: Proven. The shared-tau ratio theorem does not assume that finite data defeat a sufficiently large finite static polynomial comparator.
 - Status: Conjectural. Its positive branch requires either overbudget frequency samples or external calibration that fixes the finite nuisance dimensions.
+- Status: Proven. Projection nuisance parameters must be counted explicitly as `K_Lambda`; allowing arbitrary per-frequency projection nuisance collapses every finite sample-budget claim.

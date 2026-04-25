@@ -94,6 +94,9 @@ static primitive families.
 | D5 | Counterexample candidate | [`shared-tau-ratio-theorem.md`](shared-tau-ratio-theorem.md) | The generated-line and linear-line ratio law is stated as a theorem/no-go target. |
 | D6 | Proven | [`shared-tau-observable-targets.md`](shared-tau-observable-targets.md) | Ratio success and failure conditions are separated from sideband existence. |
 | D7 | Proven | [`../symbolic/shared_tau_ratio_audit.py`](../symbolic/shared_tau_ratio_audit.py) | The exact shared-tau diagnostic residual and finite interpolation budgets are checked symbolically. |
+| D8 | Proven | [`sample-budget-theorem.md`](sample-budget-theorem.md) | The minimum sample count is stated in terms of linear samples, sideband pairs, and projection nuisance parameters. |
+| D9 | Proven | [`orbital-budget-case.md`](orbital-budget-case.md) and [`two-tone-budget-case.md`](two-tone-budget-case.md) | The current orbital and two-tone dictionaries are classified against realistic comparator classes. |
+| D10 | Proven | [`../symbolic/sample_budget_audit.py`](../symbolic/sample_budget_audit.py) | The sample-budget theorem and case classifications are checked symbolically. |
 
 ## Explicit Non-Goals For M1
 

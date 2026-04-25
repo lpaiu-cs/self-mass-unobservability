@@ -44,6 +44,13 @@ from shared_tau_ratio_audit import (
     symbols as shared_tau_symbols,
     tau_zero_limit,
 )
+from sample_budget_audit import (
+    classification_rows,
+    classify_design,
+    compute_sample_budget,
+    orbital_design,
+    two_tone_design,
+)
 from normal_form_reduce import (
     operator_symbols,
     reduce_algebraic_identities,
@@ -409,6 +416,78 @@ def test_shared_tau_ratio_audit_rows_record_no_go_boundary() -> None:
     assert "per-sideband nuisance" in rows[2].collapse_boundary
 
 
+def test_sample_budget_minimum_for_realistic_first_derivative_case() -> None:
+    budget = compute_sample_budget(linear_order=1, sideband_degree=1, projection_nuisance=0)
+    assert budget.linear_parameter_budget == 2
+    assert budget.sideband_parameter_budget == 3
+    assert budget.total_shared_budget == 5
+    assert budget.minimum_linear_samples == 3
+    assert budget.minimum_sideband_pairs == 4
+    assert budget.minimum_total_samples == 7
+
+
+def test_sample_budget_projection_nuisance_increases_sideband_requirement() -> None:
+    budget = compute_sample_budget(linear_order=1, sideband_degree=1, projection_nuisance=2)
+    assert budget.minimum_linear_samples == 3
+    assert budget.minimum_sideband_pairs == 5
+    assert budget.minimum_total_samples == 8
+
+
+def test_orbital_design_is_underbudget_for_trivial_sideband_comparator() -> None:
+    linear_samples, sideband_pairs = orbital_design()
+    classification = classify_design(
+        "orbital",
+        linear_samples,
+        sideband_pairs,
+        linear_order=0,
+        sideband_degree=0,
+        projection_nuisance=0,
+    )
+    assert classification.verdict == "underbudget-no-go"
+    assert classification.beats_linear_budget
+    assert not classification.beats_sideband_budget
+
+
+def test_two_tone_design_beats_only_trivial_comparator() -> None:
+    linear_samples, sideband_pairs = two_tone_design(include_difference=False)
+    trivial = classify_design(
+        "two-tone",
+        linear_samples,
+        sideband_pairs,
+        linear_order=0,
+        sideband_degree=0,
+        projection_nuisance=0,
+    )
+    realistic = classify_design(
+        "two-tone",
+        linear_samples,
+        sideband_pairs,
+        linear_order=1,
+        sideband_degree=1,
+        projection_nuisance=0,
+    )
+    assert trivial.verdict == "budget-breaking"
+    assert realistic.verdict == "underbudget-no-go"
+    assert not realistic.beats_linear_budget
+
+
+def test_sample_budget_classification_rows_include_current_cases() -> None:
+    rows = classification_rows()
+    assert len(rows) == 15
+    assert any(
+        row.name == "two-tone sum-only"
+        and row.budget.linear_order == 0
+        and row.budget.sideband_degree == 0
+        and row.verdict == "budget-breaking"
+        for row in rows
+    )
+    assert all(
+        row.verdict == "underbudget-no-go"
+        for row in rows
+        if row.name == "orbital n,2n -> 3n"
+    )
+
+
 def main() -> None:
     test_symmetric_quadratic_jet()
     test_worldline_force_structure()
@@ -439,6 +518,11 @@ def main() -> None:
     test_shared_tau_ratio_matches_definition()
     test_static_ratio_template_and_budget_counts()
     test_shared_tau_ratio_audit_rows_record_no_go_boundary()
+    test_sample_budget_minimum_for_realistic_first_derivative_case()
+    test_sample_budget_projection_nuisance_increases_sideband_requirement()
+    test_orbital_design_is_underbudget_for_trivial_sideband_comparator()
+    test_two_tone_design_beats_only_trivial_comparator()
+    test_sample_budget_classification_rows_include_current_cases()
     print("symbolic checks passed")
 
 
