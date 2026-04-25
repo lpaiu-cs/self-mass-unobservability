@@ -59,6 +59,10 @@ projection nuisance collapses the transfer relation even outside the
 adiabatic limit. This is a projection degeneracy, not a low-frequency
 derivative-EFT collapse.
 
+Status: Proven. The physical projection-manifold rank gate is also independent
+of the adiabatic expansion. It asks whether the carrier projection has rank
+`5` with a phase lock or rank `6` with independent complex nuisance.
+
 Status: Proven. Exact reproduction of `alpha / (1 + i Omega tau_chi)` for arbitrary `Omega` requires either the explicit state `chi`, a hereditary kernel, or an infinite derivative tower.
 
 ## Boundary Statement

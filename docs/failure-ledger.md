@@ -40,6 +40,8 @@ with `F(t) = F0 cos(Omega t)` for the first derivation.
 | Proven | Triple projection gate with arbitrary complex `Lambda_k` independently assigned to each carrier | Choosing `Lambda_k=O_k/(G(i Omega_k)F_k)` fits every carrier pointwise. | Projection-nuisance collapse. |
 | Proven | Triple projection gate with zero, singular, or pole-cancelling projection | A carrier sample is blind, cannot be deprojected, or cancels the relaxation pole. | Carrier sample lost. |
 | Proven | Three-carrier gate with a projection/comparator class whose effective dimension exceeds the three-sample pressure | The finite carrier inventory is below the obstruction count after nuisance parameters are admitted. | Need more carriers, order prior, or external projection prior. |
+| Proven | Physical projection gate with independently floated combination-carrier phase | The three carrier amplitudes span six real projection directions, matching arbitrary complex per-carrier freedom. | Runtime-worthiness collapse. |
+| Conjectural | Physical projection gate with phase-locked outer-dipole manifold but no named timing model enforcing the lock | The symbolic manifold is finite, but the implementation could still fit an effectively arbitrary carrier. | Conditional until implementation/prior gate. |
 | Proven | Linear first-order `chi` plus linear two-frequency forcing and linear readout | Superposition leaves only the input frequencies; no `Omega_1 +/- Omega_2` terms appear. | No sideband loophole in the linear MVP. |
 | Proven | Nonlinear sideband model with `beta_F2 = lambda_Fchi = lambda_chi2 = 0` | The model reduces to the linear no-sideband one-state response. | Nonlinear sideband collapse. |
 | Proven | Mixed sideband test with `F1 F2 = 0` | Sum and difference sideband amplitudes vanish because only one harmonic is present. | Insufficient nonlinear forcing. |
@@ -92,6 +94,11 @@ calibrated or finite-dimensional and shared across carriers.
 
 Status: Proven. The same gate collapses if the standard timing nuisance model
 is allowed arbitrary per-carrier complex projection amplitudes.
+
+Status: Counterexample candidate. The physical projection-manifold gate shows
+that the phase-locked outer-dipole ansatz is rank `5`, not rank `6`, so it is a
+finite shared manifold. Runtime-worthiness remains conditional on the named
+timing model preserving that phase lock.
 
 ## Failed Sideband Attempt
 

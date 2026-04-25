@@ -109,6 +109,13 @@ from triple_projection_nuisance_gate import (  # noqa: E402
     triple_projection_mapping,
     validate_rows as validate_triple_projection_gate_rows,
 )
+from triple_projection_manifold_gate import (  # noqa: E402
+    payload as triple_projection_manifold_payload,
+    phase_lock_residual,
+    rank_summary as triple_projection_rank_summary,
+    rows_as_dicts as triple_projection_manifold_rows,
+    validate_rows as validate_triple_projection_manifold_rows,
+)
 
 
 def test_monochromatic_response_solves_relaxation_equation() -> None:
@@ -679,6 +686,56 @@ def test_triple_projection_gate_payload_records_projection_boundary() -> None:
     )
 
 
+def test_triple_projection_manifold_rows_are_classified() -> None:
+    rows = triple_projection_manifold_rows()
+    validate_triple_projection_manifold_rows(rows)
+
+    assert rows
+    assert all(row["claim_status"] for row in rows)
+    assert all(row["generic_jacobian_rank"] for row in rows)
+    assert all(row["runtime_worthiness"] for row in rows)
+
+
+def test_triple_projection_manifold_rank_boundary() -> None:
+    ranks = triple_projection_rank_summary()
+
+    assert ranks["observable_vector_real_dimension"] == 6
+    assert ranks["phase_locked_rank"] == 5
+    assert ranks["linked_amplitude_rank"] == 5
+    assert ranks["arbitrary_complex_rank"] == 6
+
+
+def test_triple_projection_manifold_phase_lock_constraint() -> None:
+    assert phase_lock_residual() == 0
+
+
+def test_triple_projection_manifold_runtime_worthiness_gate() -> None:
+    rows = {row["term"]: row for row in triple_projection_manifold_rows()}
+
+    assert rows["phase_locked_outer_dipole_projection"]["bridge_verdict"] == "conditional"
+    assert (
+        rows["phase_locked_outer_dipole_projection"]["runtime_worthiness"]
+        == "runtime-motivated"
+    )
+    assert (
+        rows["effective_per_carrier_complex_projection"]["bridge_verdict"]
+        == "collapse"
+    )
+    assert (
+        rows["effective_per_carrier_complex_projection"]["runtime_worthiness"]
+        == "not-runtime-motivated"
+    )
+
+
+def test_triple_projection_manifold_payload_records_gate_rule() -> None:
+    data = triple_projection_manifold_payload()
+
+    assert data["phase_lock_residual"] == "0"
+    assert "runtime_worthiness_rule" in data
+    assert "rank_summary" in data
+    assert data["rank_summary"]["arbitrary_complex_rank"] == 6
+
+
 def main() -> None:
     test_monochromatic_response_solves_relaxation_equation()
     test_transfer_function_components_match_real_solution()
@@ -742,6 +799,11 @@ def main() -> None:
     test_triple_projection_gate_arbitrary_projection_collapses()
     test_triple_projection_gate_keeps_finite_shared_nuisance_conditional()
     test_triple_projection_gate_payload_records_projection_boundary()
+    test_triple_projection_manifold_rows_are_classified()
+    test_triple_projection_manifold_rank_boundary()
+    test_triple_projection_manifold_phase_lock_constraint()
+    test_triple_projection_manifold_runtime_worthiness_gate()
+    test_triple_projection_manifold_payload_records_gate_rule()
     print("dynamic chi symbolic checks passed")
 
 

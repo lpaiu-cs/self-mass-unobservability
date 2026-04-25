@@ -62,6 +62,15 @@ Status: Proven. If the timing projection is granted arbitrary complex nuisance
 freedom independently at each carrier, the shared-`tau_chi` bridge collapses
 point by point and is not runtime-motivated.
 
+Status: Counterexample candidate. The physical projection-manifold gate shows
+that a phase-locked outer-dipole combination projection has generic rank `5`
+inside the six-real-dimensional three-carrier complex-amplitude vector. This
+keeps dynamic-chi runtime-worthy if the timing model enforces the phase link.
+
+Status: Proven. If the combination carrier amplitude and phase are floated
+independently from the inner and outer carrier phases, the projection rank
+becomes `6` and the bridge collapses as arbitrary per-carrier complex nuisance.
+
 Status: Counterexample candidate. The M5 nonlinear sideband test adds the
 minimal nonlinear drive/readout terms. These generate frequencies absent from
 the linear input, including `Omega1+Omega2`, `|Omega1-Omega2|`, and the orbital
@@ -88,6 +97,7 @@ Status: Proven. For the linear readout above and a two-frequency linear drive, n
 - `symbolic/triple_shared_tau_bridge.py`: inner/outer carrier bridge to the shared-`tau_chi` frequency-sweep test.
 - `symbolic/triple_gr_carrier_inventory.py`: three-carrier GR triple inventory and comparator-count audit.
 - `symbolic/triple_projection_nuisance_gate.py`: projection-nuisance realism gate for the three-carrier bridge.
+- `symbolic/triple_projection_manifold_gate.py`: physical projection-manifold rank and runtime-worthiness gate.
 - `symbolic/nonlinear_sideband_test.py`: minimal nonlinear sideband generation checks.
 - `symbolic/checks/test_symbolic.py`: deterministic symbolic checks.
 - `counterexamples/README.md`: loophole framing and escalation list.

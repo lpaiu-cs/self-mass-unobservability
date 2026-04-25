@@ -170,6 +170,27 @@ Status: Proven. Arbitrary per-carrier complex projection nuisance collapses
 the target because each carrier can choose
 `Lambda_k=O_k/(G(i Omega_k)F_k)`.
 
+## Physical Projection-Manifold Gate
+
+Status: Counterexample candidate. The runtime-worthy dynamic-chi target is the
+phase-locked triple projection manifold
+
+```text
+Lambda_c = A_c exp(i(phi_in - phi_out)).
+```
+
+Status: Proven. This manifold has generic rank `5` in the six-real-dimensional
+three-carrier complex-amplitude vector, so it is finite and shared rather than
+pointwise arbitrary.
+
+Status: Proven. If the combination carrier phase is floated independently as
+`A_c exp(i phi_c)`, the projection rank becomes `6` and the bridge collapses
+to arbitrary per-carrier complex nuisance.
+
+Status: Conjectural. External timing runtime is justified only if the named
+timing model preserves the phase/geometric links instead of fitting
+independent complex carrier amplitudes.
+
 ## Sideband Test
 
 Status: Proven. A linear time-invariant one-state model driven by `F1 cos(Omega1 t) + F2 cos(Omega2 t)` cannot create sidebands in the linear readout.

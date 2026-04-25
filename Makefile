@@ -1,6 +1,6 @@
 PYTHON ?= python
 
-.PHONY: chi-response chi-two-frequency chi-basis-audit frequency-sweep forcing-dictionary projection-audit triple-shared-tau-bridge triple-gr-carrier-inventory triple-projection-nuisance-gate nonlinear-sideband symbolic-check
+.PHONY: chi-response chi-two-frequency chi-basis-audit frequency-sweep forcing-dictionary projection-audit triple-shared-tau-bridge triple-gr-carrier-inventory triple-projection-nuisance-gate triple-projection-manifold-gate nonlinear-sideband symbolic-check
 
 chi-response:
 	$(PYTHON) symbolic/chi_relaxation_response.py
@@ -28,6 +28,9 @@ triple-gr-carrier-inventory:
 
 triple-projection-nuisance-gate:
 	$(PYTHON) symbolic/triple_projection_nuisance_gate.py
+
+triple-projection-manifold-gate:
+	$(PYTHON) symbolic/triple_projection_manifold_gate.py
 
 nonlinear-sideband:
 	$(PYTHON) symbolic/nonlinear_sideband_test.py

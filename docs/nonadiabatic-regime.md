@@ -184,6 +184,27 @@ Lambda_k = O_k/(G(z_k)F_k)
 
 fits every carrier pointwise and removes the shared-`tau_chi` target.
 
+## Physical Projection-Manifold Gate
+
+Status: Counterexample candidate. A physical outer-dipole projection supplies
+a phase-locked combination carrier:
+
+```text
+Lambda_in  = A_in  exp(i phi_in)
+Lambda_out = A_out exp(i phi_out)
+Lambda_c   = A_c   exp(i(phi_in - phi_out)).
+```
+
+Status: Proven. The corresponding real Jacobian rank is `5`, while arbitrary
+complex projection over the same three carriers has rank `6`.
+
+Status: Counterexample candidate. This means the dynamic-chi three-carrier
+bridge is runtime-worthy only for timing models that keep the combination
+phase and geometry tied to the inner and outer carrier phases.
+
+Status: Proven. A model that fits the combination carrier as an independent
+complex amplitude destroys the bridge before any external runtime is useful.
+
 ## Large-Frequency Behavior
 
 Status: Proven. For `x = Omega tau_chi >> 1`,

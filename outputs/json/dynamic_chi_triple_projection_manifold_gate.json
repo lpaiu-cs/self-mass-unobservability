@@ -1,0 +1,126 @@
+{
+  "assumptions": {
+    "carrier_set": "Omega_in, Omega_out, abs(Omega_in-Omega_out)",
+    "observable_vector": "three complex carrier amplitudes = six real coordinates",
+    "scope": "symbolic physical projection-manifold gate; no runtime"
+  },
+  "phase_lock_constraint": "arg Lambda_c - arg Lambda_in + arg Lambda_out = 0 mod pi for the minimal outer-dipole phase-locked model",
+  "phase_lock_residual": "0",
+  "rank_summary": {
+    "arbitrary_complex_rank": 6,
+    "linked_amplitude_rank": 5,
+    "observable_vector_real_dimension": 6,
+    "phase_locked_rank": 5
+  },
+  "rows": [
+    {
+      "bridge_verdict": "distinguishable",
+      "carrier_set": "Omega_in, Omega_out, abs(Omega_in-Omega_out)",
+      "claim_status": "Counterexample candidate",
+      "generic_jacobian_rank": "0 projection-rank contribution",
+      "notes": "This is the clean 10.4 positive gate: carrier ratios or deprojection recover the shared G(i Omega_k).",
+      "nuisance_class": "finite shared calibrated",
+      "parameterization": "Lambda_k=Gamma or known Lambda_k(theta)",
+      "projection_manifold": "calibrated/common real projection",
+      "real_parameter_count": "0 fitted projection nuisance after calibration",
+      "runtime_worthiness": "runtime-motivated",
+      "term": "calibrated_common_projection"
+    },
+    {
+      "bridge_verdict": "conditional",
+      "carrier_set": "Omega_in, Omega_out, abs(Omega_in-Omega_out)",
+      "claim_status": "Counterexample candidate",
+      "generic_jacobian_rank": "5",
+      "notes": "The combination-carrier phase is locked to the two orbital phases. The manifold has one constraint inside the six-real dimensional complex carrier vector.",
+      "nuisance_class": "finite shared, not arbitrary per carrier",
+      "parameterization": "Lambda_in=A_in e^{i phi_in}, Lambda_out=A_out e^{i phi_out}, Lambda_c=A_c e^{i(phi_in-phi_out)}",
+      "projection_manifold": "finite shared real manifold",
+      "real_parameter_count": "5 real parameters",
+      "runtime_worthiness": "runtime-motivated",
+      "term": "phase_locked_outer_dipole_projection"
+    },
+    {
+      "bridge_verdict": "conditional",
+      "carrier_set": "Omega_in, Omega_out, abs(Omega_in-Omega_out)",
+      "claim_status": "Counterexample candidate",
+      "generic_jacobian_rank": "5",
+      "notes": "A product-like outer-dipole amplitude link is still finite and shared. It strengthens the case that the projection is not three independent complex amplitudes.",
+      "nuisance_class": "finite shared, geometry-linked",
+      "parameterization": "Lambda_c=H A_in A_out e^{i(phi_in-phi_out+sigma)} with calibrated H",
+      "projection_manifold": "finite shared real manifold with amplitude link",
+      "real_parameter_count": "5 fitted real parameters when sigma floats; 4 if sigma is calibrated",
+      "runtime_worthiness": "runtime-motivated",
+      "term": "amplitude_linked_outer_dipole_projection"
+    },
+    {
+      "bridge_verdict": "conditional",
+      "carrier_set": "Omega_in, Omega_out, abs(Omega_in-Omega_out)",
+      "claim_status": "Counterexample candidate",
+      "generic_jacobian_rank": "at most 4 before carrier-response parameters",
+      "notes": "This class can consume much of the three-carrier pressure. It needs either a projection prior, more carriers, or a stricter physical derivation.",
+      "nuisance_class": "finite shared but overpowered",
+      "parameterization": "Lambda_k=ell0+ell1 z_k or equivalent shared complex model",
+      "projection_manifold": "finite shared complex nuisance",
+      "real_parameter_count": "4 real parameters for degree-1 complex template",
+      "runtime_worthiness": "conditional",
+      "term": "finite_shared_complex_projection"
+    },
+    {
+      "bridge_verdict": "collapse",
+      "carrier_set": "Omega_in, Omega_out, abs(Omega_in-Omega_out)",
+      "claim_status": "Proven",
+      "generic_jacobian_rank": "6",
+      "notes": "This rank fills the full carrier-amplitude space, so the projection can absorb the shared transfer relation pointwise.",
+      "nuisance_class": "effectively arbitrary per carrier",
+      "parameterization": "Lambda_in, Lambda_out, Lambda_c are independent complex numbers",
+      "projection_manifold": "arbitrary per-carrier complex nuisance",
+      "real_parameter_count": "6 real parameters",
+      "runtime_worthiness": "not-runtime-motivated",
+      "term": "effective_per_carrier_complex_projection"
+    },
+    {
+      "bridge_verdict": "collapse",
+      "carrier_set": "Omega_in, Omega_out, abs(Omega_in-Omega_out)",
+      "claim_status": "Proven",
+      "generic_jacobian_rank": "6",
+      "notes": "If the combination phase is allowed to float independently of the inner and outer phases, the physical phase-lock is lost and the gate reduces to arbitrary complex projection.",
+      "nuisance_class": "effectively arbitrary per carrier",
+      "parameterization": "A_k e^{i phi_k} for k in {in,out,c}",
+      "projection_manifold": "carrier phases independently floated",
+      "real_parameter_count": "6 real parameters",
+      "runtime_worthiness": "not-runtime-motivated",
+      "term": "phase_unlocked_combination_nuisance"
+    },
+    {
+      "bridge_verdict": "conditional",
+      "carrier_set": "Omega_in, Omega_out, abs(Omega_in-Omega_out)",
+      "claim_status": "Conjectural",
+      "generic_jacobian_rank": "model-dependent",
+      "notes": "Runtime work becomes scientifically justified only if the actual projection is closer to the finite phase-locked manifold than to independent complex carrier amplitudes.",
+      "nuisance_class": "finite shared if phase locks and geometry links are enforced",
+      "parameterization": "must be derived for the named timing model",
+      "projection_manifold": "actual hierarchical-triple timing projection",
+      "real_parameter_count": "model-dependent",
+      "runtime_worthiness": "conditional",
+      "term": "runtime_worthiness_gate"
+    }
+  ],
+  "runtime_worthiness_rule": {
+    "conditional": "projection rank or priors must be closed before runtime",
+    "not-runtime-motivated": "projection spans independent complex carrier amplitudes and collapses the bridge",
+    "runtime-motivated": "projection is calibrated or finite shared with phase/geometric links, so runtime can test a specific shared-tau target"
+  },
+  "schema": [
+    "term",
+    "claim_status",
+    "carrier_set",
+    "projection_manifold",
+    "parameterization",
+    "real_parameter_count",
+    "generic_jacobian_rank",
+    "nuisance_class",
+    "bridge_verdict",
+    "runtime_worthiness",
+    "notes"
+  ]
+}

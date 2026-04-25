@@ -91,6 +91,19 @@ between finite shared `theta` and arbitrary independent complex `Lambda_k`.
 Only the former can leave the shared-`tau_chi` transfer relation as a
 runtime-worthy target.
 
+Status: Counterexample candidate. The minimal physical outer-dipole projection
+manifold is phase locked:
+
+```text
+Lambda_in  = A_in  exp(i phi_in)
+Lambda_out = A_out exp(i phi_out)
+Lambda_c   = A_c   exp(i(phi_in - phi_out)).
+```
+
+Status: Proven. This phase-locked ansatz has generic Jacobian rank `5` in the
+six-real-dimensional carrier vector, whereas independent complex carrier
+amplitudes have rank `6`.
+
 ## Minimal Nonlinear Extensions
 
 Status: Counterexample candidate. Before adding a second-order mode, M5 tests
