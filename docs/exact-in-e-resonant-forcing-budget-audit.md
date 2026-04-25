@@ -99,3 +99,6 @@ Status: Counterexample candidate. The next empirical-theory boundary is
 therefore not the comparator theorem. It is whether a concrete system supplies
 the required `H_min` usable harmonics around the internal resonance.
 
+Status: Counterexample candidate. The first amplitude-weighted version of that
+usable-harmonic boundary is recorded in
+[`amplitude-weighted-resonant-design-theorem.md`](amplitude-weighted-resonant-design-theorem.md).

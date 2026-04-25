@@ -106,6 +106,8 @@ static primitive families.
 | D17 | Proven | [`../symbolic/second_order_projection_audit.py`](../symbolic/second_order_projection_audit.py) and [`../symbolic/resonant_comparator_audit.py`](../symbolic/resonant_comparator_audit.py) | Projection residuals and resonance-aware comparator budgets are checked symbolically. |
 | D18 | Counterexample candidate | [`exact-in-e-resonant-forcing-budget-audit.md`](exact-in-e-resonant-forcing-budget-audit.md) | Exact-in-e orbital harmonics are audited as a sample-provisioning dictionary for the second-order resonance target. |
 | D19 | Proven | [`../symbolic/exact_in_e_resonant_forcing_audit.py`](../symbolic/exact_in_e_resonant_forcing_audit.py) | The minimum usable harmonic cutoff `H_min` is computed from comparator budget and resonance bracketing. |
+| D20 | Counterexample candidate | [`amplitude-weighted-resonant-design-theorem.md`](amplitude-weighted-resonant-design-theorem.md) | Exact-in-e harmonics are weighted by forcing coefficient, second-order transfer, projection, and a usable-sample cutoff. |
+| D21 | Proven | [`../symbolic/amplitude_weighted_resonant_design.py`](../symbolic/amplitude_weighted_resonant_design.py) | The amplitude-weighted usable-sample count is checked for low- and moderate-eccentricity designs. |
 
 ## Explicit Non-Goals For M1
 

@@ -89,6 +89,13 @@ from exact_in_e_resonant_forcing_audit import (
     minimum_cutoff_for_bracket,
     minimum_cutoff_for_budget_and_bracket,
 )
+from amplitude_weighted_resonant_design import (
+    classify_amplitude_design,
+    exact_in_e_coefficient_formula,
+    forcing_cosine_coefficient,
+    minimum_amplitude_cutoff_design,
+    weighted_harmonics,
+)
 from fractions import Fraction
 from normal_form_reduce import (
     operator_symbols,
@@ -727,6 +734,91 @@ def test_exact_in_e_design_classification_rows() -> None:
     assert any(row.minimum_harmonic_cutoff == 6 for row in rows)
 
 
+def test_amplitude_weighted_exact_in_e_coefficient_formula_and_circular_limit() -> None:
+    assert "A_k(p,e)" in exact_in_e_coefficient_formula()
+    circular = forcing_cosine_coefficient(
+        p=2.0,
+        eccentricity=0.0,
+        harmonic=1,
+        samples=1024,
+    )
+    eccentric = forcing_cosine_coefficient(
+        p=2.0,
+        eccentricity=0.3,
+        harmonic=1,
+        samples=1024,
+    )
+    assert abs(circular) < 1.0e-12
+    assert abs(eccentric) > 0.1
+
+
+def test_amplitude_weighted_design_splits_low_and_moderate_eccentricity() -> None:
+    low = classify_amplitude_design(
+        "low-e",
+        p=2.0,
+        eccentricity=0.1,
+        rho=Fraction(3, 2),
+        damping=0.2,
+        channel="acceleration",
+        harmonic_cutoff=6,
+        relative_cutoff=1.0e-3,
+        polynomial_order=1,
+        projection_nuisance=1,
+        samples=2048,
+    )
+    moderate = classify_amplitude_design(
+        "moderate-e",
+        p=2.0,
+        eccentricity=0.3,
+        rho=Fraction(3, 2),
+        damping=0.2,
+        channel="acceleration",
+        harmonic_cutoff=6,
+        relative_cutoff=1.0e-3,
+        polynomial_order=1,
+        projection_nuisance=1,
+        samples=2048,
+    )
+    assert low.verdict == "amplitude-underbudget-no-go"
+    assert moderate.verdict == "amplitude-budget-breaking"
+    assert moderate.lower_usable_count > 0
+    assert moderate.upper_usable_count > 0
+
+
+def test_amplitude_weighted_minimum_cutoff_example() -> None:
+    design = minimum_amplitude_cutoff_design(
+        "minimum",
+        p=2.0,
+        eccentricity=0.3,
+        rho=Fraction(3, 2),
+        damping=0.2,
+        channel="acceleration",
+        relative_cutoff=1.0e-3,
+        polynomial_order=1,
+        projection_nuisance=1,
+        max_harmonic_cutoff=8,
+        samples=2048,
+    )
+    assert design is not None
+    assert design.harmonic_cutoff == 4
+    assert design.usable_count >= design.budget.minimum_frequency_samples
+
+
+def test_amplitude_weighted_harmonics_mark_unusable_high_threshold() -> None:
+    rows = weighted_harmonics(
+        p=2.0,
+        eccentricity=0.3,
+        rho=Fraction(3, 2),
+        damping=0.2,
+        channel="acceleration",
+        harmonic_cutoff=4,
+        relative_cutoff=2.0,
+        samples=1024,
+    )
+    assert rows
+    assert not any(row.usable for row in rows)
+
+
 def main() -> None:
     test_symmetric_quadratic_jet()
     test_worldline_force_structure()
@@ -779,6 +871,10 @@ def main() -> None:
     test_exact_in_e_harmonic_bracket_examples()
     test_exact_in_e_minimum_cutoffs_for_budget_and_bracket()
     test_exact_in_e_design_classification_rows()
+    test_amplitude_weighted_exact_in_e_coefficient_formula_and_circular_limit()
+    test_amplitude_weighted_design_splits_low_and_moderate_eccentricity()
+    test_amplitude_weighted_minimum_cutoff_example()
+    test_amplitude_weighted_harmonics_mark_unusable_high_threshold()
     print("symbolic checks passed")
 
 

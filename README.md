@@ -62,6 +62,7 @@ make second-order-mode
 make second-order-projection
 make resonant-comparator
 make exact-in-e-resonant-forcing
+make amplitude-weighted-resonance
 make symbolic-check
 ```
 

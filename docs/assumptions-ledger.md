@@ -71,3 +71,4 @@ This ledger records the active assumptions behind the free-fall sensitivity-coll
 - Status: Counterexample candidate. The second-order mode branch violates A4 by keeping an orbital-timescale internal oscillator rather than a single relaxation coordinate.
 - Status: Conjectural. The second-order projection and resonance audits assume calibrated or finite shared projection nuisance; they do not claim identifiability under arbitrary per-frequency projection freedom.
 - Status: Conjectural. The exact-in-e resonant forcing audit assumes the counted eccentric harmonics are usable complex samples; detectability, coefficient size, and data-estimator questions remain outside this theorem repo.
+- Status: Conjectural. The amplitude-weighted audit replaces that assumption by a dimensionless relative cutoff `eta`, not by a real noise model; absolute detectability remains out of scope.
