@@ -138,6 +138,15 @@ from nonlinear_robustness_map import (
     robustness_grid,
     summarize_rows,
 )
+from analytic_phase_boundary import (
+    analytic_harmonic_minimum,
+    boundary_matches_robustness,
+    classify_boundary,
+    default_boundary_rows,
+    generated_count_minimum,
+    qbeta_minor_numerator,
+    qbeta_minor_vanishes_for_static_proportional_generated,
+)
 from fractions import Fraction
 from normal_form_reduce import (
     operator_symbols,
@@ -1293,6 +1302,57 @@ def test_nonlinear_robustness_channel_counts_and_representatives() -> None:
     assert {"robust-positive", "generated-component-degenerate"}.issubset(verdicts)
 
 
+def test_analytic_phase_boundary_count_and_bracket_minima() -> None:
+    assert generated_count_minimum(sideband_order=1, projection_nuisance=1) == 4
+    assert generated_count_minimum(sideband_order=1, projection_nuisance=2) == 5
+    assert analytic_harmonic_minimum(Fraction(3, 2), 1, 1) == 4
+    assert analytic_harmonic_minimum(Fraction(3, 2), 1, 2) == 5
+    assert analytic_harmonic_minimum(Fraction(3, 4), 1, 1) is None
+
+
+def test_analytic_phase_boundary_qbeta_minor_collapse() -> None:
+    numerator = qbeta_minor_numerator()
+    assert "rho_sq" in str(numerator)
+    assert qbeta_minor_vanishes_for_static_proportional_generated() == 0
+
+
+def test_analytic_phase_boundary_classifies_examples() -> None:
+    low = classify_boundary(
+        "low",
+        p=2.0,
+        eccentricity=0.1,
+        rho=Fraction(3, 2),
+        damping=0.2,
+        channel="acceleration",
+        harmonic_cutoff=6,
+        sideband_order=1,
+        projection_nuisance=1,
+        samples=1024,
+    )
+    positive = classify_boundary(
+        "positive",
+        p=2.0,
+        eccentricity=0.3,
+        rho=Fraction(3, 2),
+        damping=0.2,
+        channel="acceleration",
+        harmonic_cutoff=6,
+        sideband_order=1,
+        projection_nuisance=1,
+        samples=1024,
+    )
+    assert low.analytic_verdict == "usable-count-underbudget"
+    assert positive.analytic_verdict == "analytic-positive"
+
+
+def test_analytic_phase_boundary_matches_robustness_grid() -> None:
+    rows = robustness_grid(samples=512)
+    assert all(boundary_matches_robustness(row) for row in rows)
+    defaults = default_boundary_rows()
+    assert len(defaults) == 3
+    assert any(row.analytic_verdict == "analytic-positive" for row in defaults)
+
+
 def main() -> None:
     test_symmetric_quadratic_jet()
     test_worldline_force_structure()
@@ -1374,6 +1434,10 @@ def main() -> None:
     test_nonlinear_robustness_row_requires_budget_and_bracket()
     test_nonlinear_robustness_default_grid_counts_regions()
     test_nonlinear_robustness_channel_counts_and_representatives()
+    test_analytic_phase_boundary_count_and_bracket_minima()
+    test_analytic_phase_boundary_qbeta_minor_collapse()
+    test_analytic_phase_boundary_classifies_examples()
+    test_analytic_phase_boundary_matches_robustness_grid()
     print("symbolic checks passed")
 
 

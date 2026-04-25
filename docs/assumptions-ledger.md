@@ -82,3 +82,5 @@ This ledger records the active assumptions behind the free-fall sensitivity-coll
 - Status: Proven. Component separability is necessary but not sufficient: a locally identifiable `Q_beta` still does not count as novelty if the generated sample count remains inside the static nonlinear comparator budget.
 - Status: Conjectural. The nonlinear robustness map is a finite grid over dimensionless design variables; its positive fraction is not a physical prior or population measure.
 - Status: Proven. A robustness-map point counts as positive only if it is component-separable, generated-budget-ready, and resonance-bracketed under finite shared nuisance.
+- Status: Proven. The analytic phase-boundary theorem treats count, bracket, amplitude usability, and component-rank as separate necessary boundaries; passing only one of them is not a positive result.
+- Status: Conjectural. The rank-minor formula is an analytic sufficient diagnostic for the fixed-nuisance amplitude submodel; the full shared-parameter result still uses the real Jacobian-rank audit.

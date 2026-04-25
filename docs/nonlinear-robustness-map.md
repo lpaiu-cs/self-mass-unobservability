@@ -86,3 +86,10 @@ one-state branch as control/no-go, the linear second-order branch as a
 parameterized design theorem, and the nonlinear second-order branch as the
 current strongest conditional positive result with an explicit robustness
 map.
+
+## Analytic Boundary
+
+Status: Counterexample candidate. The analytic count/bracket/rank boundary
+that explains this finite grid is recorded in
+[`analytic-phase-boundary-theorem.md`](analytic-phase-boundary-theorem.md).
+The associated audit reproduces all `162/162` default grid verdicts.

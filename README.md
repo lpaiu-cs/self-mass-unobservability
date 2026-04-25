@@ -68,6 +68,7 @@ make nonlinear-second-order
 make nonlinear-second-order-detectability
 make component-separability
 make nonlinear-robustness-map
+make analytic-phase-boundary
 make symbolic-check
 ```
 

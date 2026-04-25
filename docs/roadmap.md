@@ -118,6 +118,8 @@ static primitive families.
 | D29 | Proven | [`../symbolic/component_separability_audit.py`](../symbolic/component_separability_audit.py) | The `Q_beta` rank contribution, full shared-parameter rank, and budget-ready minimum cutoffs are checked numerically. |
 | D30 | Counterexample candidate | [`nonlinear-robustness-map.md`](nonlinear-robustness-map.md) | The nonlinear second-order positive region is stress-tested over a finite dimensionless design grid. |
 | D31 | Proven | [`../symbolic/nonlinear_robustness_map.py`](../symbolic/nonlinear_robustness_map.py) | Robust-positive, underdesigned, and degenerate grid regions are counted by projection mode. |
+| D32 | Counterexample candidate | [`analytic-phase-boundary-theorem.md`](analytic-phase-boundary-theorem.md) | The nonlinear positive region is rewritten as count, bracket, amplitude-usability, and rank-boundary conditions. |
+| D33 | Proven | [`../symbolic/analytic_phase_boundary.py`](../symbolic/analytic_phase_boundary.py) | The analytic boundary rules reproduce the default robustness-map verdicts and record the `Q_beta` rank minor. |
 
 ## Explicit Non-Goals For M1
 
