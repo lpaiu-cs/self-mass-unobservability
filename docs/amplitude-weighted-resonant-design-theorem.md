@@ -110,4 +110,5 @@ amplitude-weighted design establishes the shared second-order line shape.
 
 Status: Counterexample candidate. The next concrete boundary is to replace
 the dimensionless cutoff `eta` by a channel-specific calibrated noise model.
-
+That boundary is started in [`physical-detectability-map.md`](physical-detectability-map.md),
+where a parameterized SNR criterion replaces the relative cutoff.

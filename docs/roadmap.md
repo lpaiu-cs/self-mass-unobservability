@@ -108,6 +108,8 @@ static primitive families.
 | D19 | Proven | [`../symbolic/exact_in_e_resonant_forcing_audit.py`](../symbolic/exact_in_e_resonant_forcing_audit.py) | The minimum usable harmonic cutoff `H_min` is computed from comparator budget and resonance bracketing. |
 | D20 | Counterexample candidate | [`amplitude-weighted-resonant-design-theorem.md`](amplitude-weighted-resonant-design-theorem.md) | Exact-in-e harmonics are weighted by forcing coefficient, second-order transfer, projection, and a usable-sample cutoff. |
 | D21 | Proven | [`../symbolic/amplitude_weighted_resonant_design.py`](../symbolic/amplitude_weighted_resonant_design.py) | The amplitude-weighted usable-sample count is checked for low- and moderate-eccentricity designs. |
+| D22 | Counterexample candidate | [`physical-detectability-map.md`](physical-detectability-map.md) | The relative amplitude cutoff is replaced by a parameterized SNR criterion and minimum physical scale boundary. |
+| D23 | Proven | [`../symbolic/physical_detectability_map.py`](../symbolic/physical_detectability_map.py) | The SNR-budget classifications and minimum physical scale examples are checked symbolically. |
 
 ## Explicit Non-Goals For M1
 

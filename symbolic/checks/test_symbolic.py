@@ -96,6 +96,12 @@ from amplitude_weighted_resonant_design import (
     minimum_amplitude_cutoff_design,
     weighted_harmonics,
 )
+from physical_detectability_map import (
+    classify_physical_design,
+    default_physical_design_rows,
+    harmonic_noise_sigma,
+    minimum_physical_amplitude_scale,
+)
 from fractions import Fraction
 from normal_form_reduce import (
     operator_symbols,
@@ -819,6 +825,90 @@ def test_amplitude_weighted_harmonics_mark_unusable_high_threshold() -> None:
     assert not any(row.usable for row in rows)
 
 
+def test_physical_detectability_noise_scales_by_harmonic() -> None:
+    assert harmonic_noise_sigma(1.0e-3, 4, harmonic_noise_slope=0.5) == 2.0e-3
+
+
+def test_physical_detectability_splits_low_and_high_signal_scale() -> None:
+    low = classify_physical_design(
+        "low-scale",
+        p=2.0,
+        eccentricity=0.3,
+        rho=Fraction(3, 2),
+        damping=0.2,
+        channel="acceleration",
+        harmonic_cutoff=6,
+        amplitude_scale=0.1,
+        base_noise_sigma=1.0e-3,
+        snr_threshold=5.0,
+        polynomial_order=1,
+        projection_nuisance=1,
+        samples=2048,
+    )
+    high = classify_physical_design(
+        "high-scale",
+        p=2.0,
+        eccentricity=0.3,
+        rho=Fraction(3, 2),
+        damping=0.2,
+        channel="acceleration",
+        harmonic_cutoff=6,
+        amplitude_scale=1.0,
+        base_noise_sigma=1.0e-3,
+        snr_threshold=5.0,
+        polynomial_order=1,
+        projection_nuisance=1,
+        samples=2048,
+    )
+    assert low.verdict == "snr-underbudget-no-go"
+    assert high.verdict == "physically-budget-breaking"
+    assert high.detectable_count >= high.budget.minimum_frequency_samples
+
+
+def test_physical_detectability_minimum_scale_examples() -> None:
+    acceleration = minimum_physical_amplitude_scale(
+        "minimum",
+        p=2.0,
+        eccentricity=0.3,
+        rho=Fraction(3, 2),
+        damping=0.2,
+        channel="acceleration",
+        harmonic_cutoff=6,
+        base_noise_sigma=1.0e-3,
+        snr_threshold=5.0,
+        polynomial_order=1,
+        projection_nuisance=1,
+        samples=2048,
+    )
+    range_channel = minimum_physical_amplitude_scale(
+        "minimum",
+        p=2.0,
+        eccentricity=0.3,
+        rho=Fraction(3, 2),
+        damping=0.2,
+        channel="range",
+        harmonic_cutoff=6,
+        base_noise_sigma=1.0e-6,
+        snr_threshold=5.0,
+        polynomial_order=1,
+        projection_nuisance=2,
+        samples=2048,
+    )
+    assert acceleration is not None
+    assert range_channel is not None
+    assert acceleration.verdict == "physically-budget-breaking"
+    assert range_channel.verdict == "physically-budget-breaking"
+    assert 0.8 < acceleration.amplitude_scale < 1.0
+    assert 0.2 < range_channel.amplitude_scale < 0.4
+
+
+def test_physical_detectability_default_rows_include_no_go_and_positive() -> None:
+    rows = default_physical_design_rows()
+    assert len(rows) == 6
+    assert any(row.verdict == "snr-underbudget-no-go" for row in rows)
+    assert any(row.verdict == "physically-budget-breaking" for row in rows)
+
+
 def main() -> None:
     test_symmetric_quadratic_jet()
     test_worldline_force_structure()
@@ -875,6 +965,10 @@ def main() -> None:
     test_amplitude_weighted_design_splits_low_and_moderate_eccentricity()
     test_amplitude_weighted_minimum_cutoff_example()
     test_amplitude_weighted_harmonics_mark_unusable_high_threshold()
+    test_physical_detectability_noise_scales_by_harmonic()
+    test_physical_detectability_splits_low_and_high_signal_scale()
+    test_physical_detectability_minimum_scale_examples()
+    test_physical_detectability_default_rows_include_no_go_and_positive()
     print("symbolic checks passed")
 
 

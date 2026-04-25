@@ -72,3 +72,5 @@ This ledger records the active assumptions behind the free-fall sensitivity-coll
 - Status: Conjectural. The second-order projection and resonance audits assume calibrated or finite shared projection nuisance; they do not claim identifiability under arbitrary per-frequency projection freedom.
 - Status: Conjectural. The exact-in-e resonant forcing audit assumes the counted eccentric harmonics are usable complex samples; detectability, coefficient size, and data-estimator questions remain outside this theorem repo.
 - Status: Conjectural. The amplitude-weighted audit replaces that assumption by a dimensionless relative cutoff `eta`, not by a real noise model; absolute detectability remains out of scope.
+- Status: Conjectural. The physical detectability map parameterizes absolute detectability by `sigma_0`, harmonic noise slope `q`, `SNR_min`, and channel scale `Q_0`; these are design inputs, not empirical instrument claims.
+- Status: Proven. A physical second-order resonance claim requires enough SNR-detectable harmonics to exceed `N+2+K_Lambda` and to bracket `rho`; formal nonzero harmonics alone do not count.

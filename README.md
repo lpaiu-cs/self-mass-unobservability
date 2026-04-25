@@ -63,6 +63,7 @@ make second-order-projection
 make resonant-comparator
 make exact-in-e-resonant-forcing
 make amplitude-weighted-resonance
+make physical-detectability
 make symbolic-check
 ```
 
