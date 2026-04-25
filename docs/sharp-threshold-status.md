@@ -13,6 +13,7 @@
 | Rank-1 vector family | `V2` | `2` | `EVV` | `3` | `2` | Self-only | `w_V \ge 3`, or explicit exclusion or absorption of the primitive vector family. |
 | Rank-3 STF family | `T2` | `2` | `ETT` | `3` | `2` | Self-only | `w_T \ge 3`, or explicit exclusion or absorption of the primitive rank-3 family. |
 | Rank-4 STF family | `Q2` | `2` | `EQQ` | `3` | `2` | Self-only | `w_Q \ge 3`, or explicit exclusion or absorption of the primitive rank-4 family. |
+| Rank-5 STF family | `U2` | `2` | `EUU` | `3` | `2` | Self-only | `w_U \ge 3`, or explicit exclusion or absorption of the primitive rank-5 family. |
 
 ## Current Readout
 
@@ -23,7 +24,8 @@
 - Status: Proven. The genuine vector class is self-only at the current fixed-order threshold.
 - Status: Proven. The genuine rank-3 STF class is self-only at the current fixed-order threshold.
 - Status: Proven. The genuine rank-4 STF class is self-only at the current fixed-order threshold.
+- Status: Proven. The genuine rank-5 STF class is self-only at the current fixed-order threshold.
 - Status: Proven. No audited family class currently exhibits a mixed witness below its first self witness at `\Delta \le 4`.
 - Status: Proven. The sharp-threshold classification bottleneck is closed for the currently audited family classes.
-- Status: Proven. The repo-level live bottleneck has moved from threshold sharpness to family-envelope completeness and the next smallest unaudited family gate `Rodd5+`.
-- Status: Conjectural. What remains open is not witness sharpness inside the currently audited classes, but the next envelope gate beyond the closed Reven4+ composition layer.
+- Status: Proven. The repo-level live bottleneck has moved from threshold sharpness to the `Rodd5+` obstruction and the required post-`Rodd5+` composition re-close.
+- Status: Conjectural. What remains open is not witness sharpness inside the currently audited classes, but the enlarged audited-set composition step beyond the closed Reven4+ composition layer.

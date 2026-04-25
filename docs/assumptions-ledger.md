@@ -78,3 +78,10 @@ This ledger records the active assumptions behind the free-fall sensitivity-coll
 - Status: Proven. Derivative-generated rank-3 blocks such as `\nabla E`, `\nabla B`, `\nabla V`, or scalar-derivative descendants are assigned to their parent families and are not counted as new primitive-family admissions.
 - Status: Proven. The `Rodd+` audit uses a fully symmetric trace-free rank-3 representative explicitly, because trace descendants reduce to the already audited vector gate `R1`, while parity-odd or spin-like antisymmetric pieces are already outside the current MVP theorem domain by `A2`.
 - Status: Proven. No rank-3 ordering, absorption rule, or rank-3 background restriction is currently active that would remove a genuine primitive family `T_{ijk}` from the theorem domain.
+
+## Explicit Representative Choice For M15
+
+- Status: Proven. No current MVP assumption says that every local parity-even rank-5 tensor block must be derivative-generated from an audited lower-rank family.
+- Status: Proven. Derivative-generated rank-5 blocks such as `\nabla Q`, `\nabla T`, higher-gradient vector descendants, or scalar descendants dressed only by derivatives are assigned to their parent families and are not counted as new primitive-family admissions.
+- Status: Proven. The `Rodd5+` audit uses a fully symmetric trace-free rank-5 representative explicitly, because trace descendants reduce to already audited lower-rank classes, while antisymmetric or spin-carrying pieces are already outside the current MVP theorem domain by `A2`.
+- Status: Proven. No rank-5 ordering, absorption rule, or rank-5 background restriction is currently active that would remove a genuine primitive family `U_{ijklm}` from the theorem domain.

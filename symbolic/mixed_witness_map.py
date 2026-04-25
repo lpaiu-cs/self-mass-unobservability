@@ -108,6 +108,18 @@ def mixed_witness_entries(delta_max: int = DELTA_MAX) -> tuple[MixedWitnessEntry
             sharpness_status="self-only",
             confidence_level="Proven",
         ),
+        MixedWitnessEntry(
+            family_class="rank5_tensor_stf",
+            first_self_witness="U2",
+            self_weight=2,
+            first_mixed_witness="EUU",
+            mixed_weight=3,
+            w_min=2,
+            current_threshold_statement="w_U >= 3, or explicit rule excluding or absorbing the primitive rank-5 family",
+            theorem_layer_obstructed="promotion of the enlarged audited-set result to MVP-envelope sufficiency after the Reven4+-closed composition layer",
+            sharpness_status="self-only",
+            confidence_level="Proven",
+        ),
     )
 
 

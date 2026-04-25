@@ -26,6 +26,8 @@
   the first audited witness is `T2`, so MVP-envelope sufficiency up to `\Delta \le 4` requires `w_T \ge 3`, or an explicit rule excluding or absorbing the primitive rank-3 family.
 - Status: Proven. Genuine rank-4 STF class:
   the first audited witness is `Q2`, so MVP-envelope sufficiency up to `\Delta \le 4` requires `w_Q \ge 3`, or an explicit rule excluding or absorbing the primitive rank-4 family.
+- Status: Proven. Genuine rank-5 STF class:
+  the first audited witness is `U2`, so MVP-envelope sufficiency up to `\Delta \le 4` requires `w_U \ge 3`, or an explicit rule excluding or absorbing the primitive rank-5 family.
 
 ## M9 Sharpness Status Within The Audited Classes
 
@@ -35,6 +37,7 @@
 - Status: Proven. For the audited rank-1 vector class, the current threshold is self-only and sharp because `W_{\mathrm{self}} = 2 < 3 = W_{\mathrm{mix}}`.
 - Status: Proven. For the audited rank-3 STF class, the current threshold is self-only and sharp because `W_{\mathrm{self}} = 2 < 3 = W_{\mathrm{mix}}`.
 - Status: Proven. For the audited rank-4 STF class, the current threshold is self-only and sharp because `W_{\mathrm{self}} = 2 < 3 = W_{\mathrm{mix}}`.
+- Status: Proven. For the audited rank-5 STF class, the current threshold is self-only and sharp because `W_{\mathrm{self}} = 2 < 3 = W_{\mathrm{mix}}`.
 - Status: Proven. Therefore the current class-limited threshold map is no longer only about witness existence; it also records whether the active threshold is self-only, mixed-aware, or tied-sharp.
 
 ## What This Theorem Buys
@@ -58,6 +61,7 @@
 - Status: Proven. After the rank-3 family gate is audited, the further enlarged pairwise, triple, quadruple, and five-family composition audits for `{R2, R0a, R0b, R1, Rodd+}` likewise find no new surviving operator beyond the baseline electric sector once the current thresholds are imposed together.
 - Status: Proven. After the rank-4 family gate is audited, the further enlarged pairwise, triple, quadruple, quintuple, and six-family composition audits for `{R2, R0a, R0b, R1, Rodd+, Reven4+}` likewise find no new surviving operator beyond the baseline electric sector once the current thresholds are imposed together.
 - Status: Proven. Therefore the current thresholds are jointly sufficient for the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+}` at `\Delta \le 4`.
+- Status: Proven. After the rank-5 family gate is audited, the threshold layer now includes `w_U \ge 3`, but audited-set joint sufficiency has not yet been re-closed for the further enlarged family set that includes `Rodd5+`.
 - Status: Proven. This audited-set joint sufficiency does not upgrade the theorem into a universal composition statement for arbitrary family catalogs.
 
 ## Boundary

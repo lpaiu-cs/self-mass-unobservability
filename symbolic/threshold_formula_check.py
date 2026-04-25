@@ -35,7 +35,7 @@ def threshold_formula_entries(delta_max: int = DELTA_MAX) -> tuple[ThresholdForm
         raise ValueError("The current threshold-formula audit is only fixed at Delta_max = 4.")
 
     mixed = mixed_witness_summary(delta_max)
-    rank2, bare_scalar, derivative_only, vector, rank3, rank4 = mixed.entries
+    rank2, bare_scalar, derivative_only, vector, rank3, rank4, rank5 = mixed.entries
 
     _require(rank2.self_weight == 2 and rank2.mixed_weight == 2 and rank2.w_min == 2, "Rank-2 current-case values drifted.")
     _require(bare_scalar.self_weight == 1 and bare_scalar.mixed_weight == 3 and bare_scalar.w_min == 1, "Bare-scalar current-case values drifted.")
@@ -43,6 +43,7 @@ def threshold_formula_entries(delta_max: int = DELTA_MAX) -> tuple[ThresholdForm
     _require(vector.self_weight == 2 and vector.mixed_weight == 3 and vector.w_min == 2, "Vector current-case values drifted.")
     _require(rank3.self_weight == 2 and rank3.mixed_weight == 3 and rank3.w_min == 2, "Rank-3 current-case values drifted.")
     _require(rank4.self_weight == 2 and rank4.mixed_weight == 3 and rank4.w_min == 2, "Rank-4 current-case values drifted.")
+    _require(rank5.self_weight == 2 and rank5.mixed_weight == 3 and rank5.w_min == 2, "Rank-5 current-case values drifted.")
 
     return (
         ThresholdFormulaEntry(
@@ -96,6 +97,15 @@ def threshold_formula_entries(delta_max: int = DELTA_MAX) -> tuple[ThresholdForm
             mixed_formula="2*w_Q + 1",
             w_min_formula="2*w_Q",
             current_case_value="w_Q=1 -> (W_self, W_mix, W_min) = (2, 3, 2)",
+            sharpness_status="self-only sharp",
+            threshold_type="self-only",
+        ),
+        ThresholdFormulaEntry(
+            family_class="rank5_tensor_stf",
+            self_formula="2*w_U",
+            mixed_formula="2*w_U + 1",
+            w_min_formula="2*w_U",
+            current_case_value="w_U=1 -> (W_self, W_mix, W_min) = (2, 3, 2)",
             sharpness_status="self-only sharp",
             threshold_type="self-only",
         ),

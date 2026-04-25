@@ -52,6 +52,10 @@ for every admitted family class under the currently allowed rules.
 | Rank-2 STF | `2 w_X` | `w_X + 1` | `\min(2 w_X,\ w_X + 1)` | Mixed-aware |
 | Rank-0 bare scalar | `w_S` | `w_S + 2` | `w_S` | Self-only |
 | Rank-0 derivative-only scalar | `2 w_D` | `w_D + 2` | `\min(2 w_D,\ w_D + 2)` | Tied-sharp |
+| Rank-1 vector | `2 w_V` | `2 w_V + 1` | `2 w_V` | Self-only |
+| Rank-3 STF | `2 w_T` | `2 w_T + 1` | `2 w_T` | Self-only |
+| Rank-4 STF | `2 w_Q` | `2 w_Q + 1` | `2 w_Q` | Self-only |
+| Rank-5 STF | `2 w_U` | `2 w_U + 1` | `2 w_U` | Self-only |
 
 ## Immediate Consequences At `\Delta_{\max}=4`
 
@@ -61,6 +65,14 @@ for every admitted family class under the currently allowed rules.
   `W_{\min} = w_S`, so the current threshold is self-only and sharp: `w_S \ge 5`, or explicit exclusion of bare `S`.
 - Status: Proven. Rank-0 derivative-only scalar class:
   `W_{\mathrm{self}} = 2 w_D` and `W_{\mathrm{mix}} = w_D + 2` give the same sharp budget at `\Delta_{\max}=4`, namely `w_D \ge 3`.
+- Status: Proven. Rank-1 vector class:
+  `W_{\min} = 2 w_V`, so the current threshold is self-only and sharp: `w_V \ge 3`, or explicit exclusion or absorption of the primitive vector family.
+- Status: Proven. Rank-3 STF class:
+  `W_{\min} = 2 w_T`, so the current threshold is self-only and sharp: `w_T \ge 3`, or explicit exclusion or absorption of the primitive rank-3 family.
+- Status: Proven. Rank-4 STF class:
+  `W_{\min} = 2 w_Q`, so the current threshold is self-only and sharp: `w_Q \ge 3`, or explicit exclusion or absorption of the primitive rank-4 family.
+- Status: Proven. Rank-5 STF class:
+  `W_{\min} = 2 w_U`, so the current threshold is self-only and sharp: `w_U \ge 3`, or explicit exclusion or absorption of the primitive rank-5 family.
 
 ## Boundary
 

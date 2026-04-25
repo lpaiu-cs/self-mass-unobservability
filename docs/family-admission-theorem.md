@@ -14,6 +14,7 @@
 - Status: Proven. Class R1: genuine local parity-even rank-1 vector families `V_i`, excluding derivative-generated vectors already belonging to audited scalar or rank-2 families.
 - Status: Proven. Class Rodd+: genuine local parity-even fully symmetric trace-free rank-3 tensor families `T_{ijk}`, excluding derivative-generated rank-3 blocks already belonging to audited scalar, STF rank-2, or vector families.
 - Status: Proven. Class Reven4+: genuine local parity-even fully symmetric trace-free rank-4 tensor families `Q_{ijkl}`, excluding trace descendants reducible to audited lower-rank families and derivative-generated rank-4 blocks already belonging to audited scalar, STF rank-2, vector, or rank-3 families.
+- Status: Proven. Class Rodd5+: genuine local parity-even fully symmetric trace-free rank-5 tensor families `U_{ijklm}`, excluding trace descendants reducible to audited lower-rank families and derivative-generated rank-5 blocks already belonging to audited scalar, STF rank-2, vector, rank-3, or rank-4 families.
 
 ## Theorem Statement
 
@@ -23,6 +24,7 @@
 - Status: Proven. For Class R1, the first self witness is `V2` at weight `2`, while the first mixed witness is `EVV` at weight `3`.
 - Status: Proven. For Class Rodd+, the first self witness is `T2` at weight `2`, while the first mixed witness is `ETT` at weight `3`.
 - Status: Proven. For Class Reven4+, the first self witness is `Q2` at weight `2`, while the first mixed witness is `EQQ` at weight `3`.
+- Status: Proven. For Class Rodd5+, the first self witness is `U2` at weight `2`, while the first mixed witness is `EUU` at weight `3`.
 - Status: Proven. Therefore minimal-sector uniqueness is not stable under unsuppressed admission of these audited family classes.
 
 ## What The Theorem Does Not Say
@@ -37,6 +39,6 @@
 - Status: Proven. The positive theorem target must therefore be finite-family fixed-order collapse, not minimal-sector uniqueness.
 - Status: Proven. New family-admission audits are classification steps: a new witness reinforces the uniqueness no-go unless it also destroys fixed-order finiteness.
 - Status: Proven. The audited-set composition question is now closed positively for the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+}` at `\Delta \le 4`.
-- Status: Proven. The next live bottleneck is no longer Reven4+ composition, but family-envelope completeness and the next smallest unaudited family gate `Rodd5+`.
+- Status: Proven. The current live bottleneck is no longer Reven4+ composition, but the `Rodd5+` obstruction and the required post-`Rodd5+` enlarged audited-set composition re-close.
 - Status: Proven. [`../symbolic/family_witness_map.py`](../symbolic/family_witness_map.py) records the current witness table linking each audited family class to the exact theorem layer it obstructs.
 - Status: Proven. [`suppression-budget-theorem.md`](suppression-budget-theorem.md) and [`../symbolic/witness_threshold_map.py`](../symbolic/witness_threshold_map.py) now promote those witnesses into necessary suppression thresholds for the audited classes.

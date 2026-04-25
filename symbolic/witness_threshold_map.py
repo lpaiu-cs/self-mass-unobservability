@@ -103,6 +103,18 @@ def witness_threshold_entries(delta_max: int = DELTA_MAX) -> tuple[WitnessThresh
             theorem_layer_at_risk="MVP-envelope sufficiency after the Rodd+-closed audited set",
             sufficient_for_uniqueness=False,
         ),
+        WitnessThresholdEntry(
+            family_class="rank5_tensor_stf",
+            witness="U2",
+            witness_weight=2,
+            self_only_lower_bound_formula="2 w_U > Delta_max",
+            self_only_lower_bound_at_delta4="w_U >= 3",
+            necessary_threshold_formula="2 w_U > Delta_max",
+            necessary_threshold_at_delta4="w_U >= 3, or explicit rule excluding or absorbing the primitive rank-5 family",
+            threshold_type="self-only",
+            theorem_layer_at_risk="MVP-envelope sufficiency after the Reven4+-closed audited set",
+            sufficient_for_uniqueness=False,
+        ),
     )
 
 
