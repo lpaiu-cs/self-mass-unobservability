@@ -9,12 +9,13 @@
 ## Why The Live Bottleneck Now Moves There
 
 - Status: Proven. The rank-4 gate `Reven4+` has now been resolved explicitly at the census level.
-- Status: Proven. However, the theorem-layer live bottleneck does not yet move to `Rodd5+`, because the newly audited `Reven4+` family must first be folded into a fresh enlarged audited-set composition audit.
+- Status: Proven. The post-Reven4+ composition audit is now closed positively for the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+}`.
+- Status: Proven. Therefore the theorem-layer live bottleneck can now move to `Rodd5+`.
 - Status: Proven. No current MVP assumption removes the remaining odd-rank tensor class from the family envelope.
 
 ## What This Does And Does Not Say
 
-- Status: Proven. This note does not claim that the even-rank class `Reven4+` has already been audited and shown to survive.
+- Status: Proven. This note treats the even-rank class `Reven4+` as already audited and already folded into the enlarged audited-set composition closure.
 - Status: Proven. It does not claim that the odd-rank class `Rodd5+` has already been audited and shown to survive.
-- Status: Proven. It does not claim that the post-Reven4+ composition layer is already closed.
-- Status: Proven. It identifies the next smallest unaudited family class in the census while keeping the theorem-layer live bottleneck on the fresh re-close forced by `Reven4+`.
+- Status: Proven. It does not claim that auditing `Rodd5+` will preserve audited-set composition or family-envelope closure.
+- Status: Proven. It identifies the next smallest unaudited family class in the census after the Reven4+ composition layer has already been re-closed.

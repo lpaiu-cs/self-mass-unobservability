@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from itertools import combinations
 
 from enumerate_contractions_delta4 import (
     BLOCK_TYPES,
@@ -55,6 +56,32 @@ R3_BLOCK_TYPES = (
         tracefree_pairs=((1, 2), (1, 3), (2, 3)),
     ),
 )
+R4_BLOCK_TYPES = (
+    BlockType(
+        "Q",
+        3,
+        4,
+        parity=0,
+        sym_groups=((0, 1), (1, 2), (2, 3)),
+        tracefree_pairs=((0, 1), (0, 2), (0, 3), (1, 2), (1, 3), (2, 3)),
+    ),
+    BlockType(
+        "DtQ",
+        4,
+        4,
+        parity=0,
+        sym_groups=((0, 1), (1, 2), (2, 3)),
+        tracefree_pairs=((0, 1), (0, 2), (0, 3), (1, 2), (1, 3), (2, 3)),
+    ),
+    BlockType(
+        "GradQ",
+        4,
+        5,
+        parity=1,
+        sym_groups=((1, 2), (2, 3), (3, 4)),
+        tracefree_pairs=((1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)),
+    ),
+)
 
 FAMILY_BLOCKS = {
     "R2": R2_BLOCK_TYPES,
@@ -62,6 +89,7 @@ FAMILY_BLOCKS = {
     "R0b": R0B_BLOCK_TYPES,
     "R1": R1_BLOCK_TYPES,
     "Rodd+": R3_BLOCK_TYPES,
+    "Reven4+": R4_BLOCK_TYPES,
 }
 
 FAMILY_THRESHOLDS = {
@@ -70,6 +98,7 @@ FAMILY_THRESHOLDS = {
     "R0b": "w_D >= 3, or explicit rule removing the mixed derivative witnesses",
     "R1": "w_V >= 3, or explicit rule excluding or absorbing the primitive vector family",
     "Rodd+": "w_T >= 3, or explicit rule excluding or absorbing the primitive rank-3 STF family",
+    "Reven4+": "w_Q >= 3, or explicit rule excluding or absorbing the primitive rank-4 STF family",
 }
 
 FAMILY_NAMES = {
@@ -84,16 +113,19 @@ FAMILY_NAMES = {
     "T",
     "DtT",
     "GradT",
+    "Q",
+    "DtQ",
+    "GradQ",
 }
 
-OLD_AUDITED_SET_CASES = (
+PRE_R1_AUDITED_SET_CASES = (
     ("R2", "R0a"),
     ("R2", "R0b"),
     ("R0a", "R0b"),
     ("R2", "R0a", "R0b"),
 )
 
-POST_R1_AUDITED_SET_CASES = (
+PRE_RODD_AUDITED_SET_CASES = (
     ("R1", "R2"),
     ("R1", "R0a"),
     ("R1", "R0b"),
@@ -103,7 +135,7 @@ POST_R1_AUDITED_SET_CASES = (
     ("R2", "R0a", "R0b", "R1"),
 )
 
-POST_RODD_AUDITED_SET_CASES = (
+PRE_REVEN_AUDITED_SET_CASES = (
     ("Rodd+", "R2"),
     ("Rodd+", "R0a"),
     ("Rodd+", "R0b"),
@@ -119,6 +151,35 @@ POST_RODD_AUDITED_SET_CASES = (
     ("Rodd+", "R2", "R0b", "R1"),
     ("Rodd+", "R0a", "R0b", "R1"),
     ("R2", "R0a", "R0b", "R1", "Rodd+"),
+)
+
+PRE_REVEN_BASE_FAMILIES = ("R2", "R0a", "R0b", "R1", "Rodd+")
+
+POST_REVEN_PAIRWISE_CASES = (
+    ("Reven4+", "R2"),
+    ("Reven4+", "R0a"),
+    ("Reven4+", "R0b"),
+    ("Reven4+", "R1"),
+    ("Reven4+", "Rodd+"),
+)
+POST_REVEN_TRIPLE_CASES = tuple(
+    ("Reven4+",) + combo for combo in combinations(PRE_REVEN_BASE_FAMILIES, 2)
+)
+POST_REVEN_QUADRUPLE_CASES = tuple(
+    ("Reven4+",) + combo for combo in combinations(PRE_REVEN_BASE_FAMILIES, 3)
+)
+POST_REVEN_QUINTUPLE_CASES = tuple(
+    ("Reven4+",) + combo for combo in combinations(PRE_REVEN_BASE_FAMILIES, 4)
+)
+POST_REVEN_FULL_SET_CASES = (
+    PRE_REVEN_BASE_FAMILIES + ("Reven4+",),
+)
+POST_REVEN_AUDITED_SET_CASES = (
+    POST_REVEN_PAIRWISE_CASES
+    + POST_REVEN_TRIPLE_CASES
+    + POST_REVEN_QUADRUPLE_CASES
+    + POST_REVEN_QUINTUPLE_CASES
+    + POST_REVEN_FULL_SET_CASES
 )
 
 
@@ -140,12 +201,14 @@ class CompositionCaseSummary:
 @dataclass(frozen=True)
 class CompositionSummary:
     baseline_survivors: tuple[str, ...]
-    old_audited_set_joint_sufficient: bool
-    old_smallest_surviving_cross_family: str | None
-    post_r1_audited_set_joint_sufficient: bool
-    post_r1_smallest_surviving_cross_family: str | None
-    post_rodd_audited_set_joint_sufficient: bool
-    post_rodd_smallest_surviving_cross_family: str | None
+    pre_r1_audited_set_joint_sufficient: bool
+    pre_r1_smallest_surviving_cross_family: str | None
+    pre_rodd_audited_set_joint_sufficient: bool
+    pre_rodd_smallest_surviving_cross_family: str | None
+    pre_reven_audited_set_joint_sufficient: bool
+    pre_reven_smallest_surviving_cross_family: str | None
+    post_reven_audited_set_joint_sufficient: bool
+    post_reven_smallest_surviving_cross_family: str | None
     cases: tuple[CompositionCaseSummary, ...]
 
 
@@ -170,11 +233,13 @@ def classify_composition_contraction(
 
 
 def case_scope(families: tuple[str, ...]) -> str:
+    if "Reven4+" in families:
+        return "post_reven_audited_set"
     if "Rodd+" in families:
-        return "post_rodd_audited_set"
+        return "pre_reven_audited_set"
     if "R1" in families:
-        return "post_r1_audited_set"
-    return "old_audited_set"
+        return "pre_rodd_audited_set"
+    return "pre_r1_audited_set"
 
 
 def combination_kind(families: tuple[str, ...]) -> str:
@@ -186,6 +251,8 @@ def combination_kind(families: tuple[str, ...]) -> str:
     if size == 4:
         return "quadruple"
     if size == 5:
+        return "quintuple"
+    if size == 6:
         return "full-set"
     raise ValueError(f"Unsupported composition arity {size} for families {families}")
 
@@ -251,40 +318,55 @@ def _smallest_surviving_case(
 
 
 def composition_summary(max_weight: int = DELTA_MAX) -> CompositionSummary:
-    old_cases = tuple(
+    pre_r1_cases = tuple(
         composition_case_summary(families, max_weight=max_weight)
-        for families in OLD_AUDITED_SET_CASES
+        for families in PRE_R1_AUDITED_SET_CASES
     )
-    post_r1_cases = tuple(
+    pre_rodd_cases = tuple(
         composition_case_summary(families, max_weight=max_weight)
-        for families in POST_R1_AUDITED_SET_CASES
+        for families in PRE_RODD_AUDITED_SET_CASES
     )
-    post_rodd_cases = tuple(
+    pre_reven_cases = tuple(
         composition_case_summary(families, max_weight=max_weight)
-        for families in POST_RODD_AUDITED_SET_CASES
+        for families in PRE_REVEN_AUDITED_SET_CASES
     )
-    old_smallest_case = _smallest_surviving_case(old_cases)
-    post_r1_smallest_case = _smallest_surviving_case(post_r1_cases)
-    post_rodd_smallest_case = _smallest_surviving_case(post_rodd_cases)
+    post_reven_cases = tuple(
+        composition_case_summary(families, max_weight=max_weight)
+        for families in POST_REVEN_AUDITED_SET_CASES
+    )
+
+    pre_r1_smallest_case = _smallest_surviving_case(pre_r1_cases)
+    pre_rodd_smallest_case = _smallest_surviving_case(pre_rodd_cases)
+    pre_reven_smallest_case = _smallest_surviving_case(pre_reven_cases)
+    post_reven_smallest_case = _smallest_surviving_case(post_reven_cases)
+
     return CompositionSummary(
         baseline_survivors=baseline_survivor_labels(max_weight=max_weight),
-        old_audited_set_joint_sufficient=all(case.sufficient for case in old_cases),
-        old_smallest_surviving_cross_family=(
-            None if old_smallest_case is None else old_smallest_case.smallest_surviving_cross_family
-        ),
-        post_r1_audited_set_joint_sufficient=all(case.sufficient for case in post_r1_cases),
-        post_r1_smallest_surviving_cross_family=(
+        pre_r1_audited_set_joint_sufficient=all(case.sufficient for case in pre_r1_cases),
+        pre_r1_smallest_surviving_cross_family=(
             None
-            if post_r1_smallest_case is None
-            else post_r1_smallest_case.smallest_surviving_cross_family
+            if pre_r1_smallest_case is None
+            else pre_r1_smallest_case.smallest_surviving_cross_family
         ),
-        post_rodd_audited_set_joint_sufficient=all(case.sufficient for case in post_rodd_cases),
-        post_rodd_smallest_surviving_cross_family=(
+        pre_rodd_audited_set_joint_sufficient=all(case.sufficient for case in pre_rodd_cases),
+        pre_rodd_smallest_surviving_cross_family=(
             None
-            if post_rodd_smallest_case is None
-            else post_rodd_smallest_case.smallest_surviving_cross_family
+            if pre_rodd_smallest_case is None
+            else pre_rodd_smallest_case.smallest_surviving_cross_family
         ),
-        cases=old_cases + post_r1_cases + post_rodd_cases,
+        pre_reven_audited_set_joint_sufficient=all(case.sufficient for case in pre_reven_cases),
+        pre_reven_smallest_surviving_cross_family=(
+            None
+            if pre_reven_smallest_case is None
+            else pre_reven_smallest_case.smallest_surviving_cross_family
+        ),
+        post_reven_audited_set_joint_sufficient=all(case.sufficient for case in post_reven_cases),
+        post_reven_smallest_surviving_cross_family=(
+            None
+            if post_reven_smallest_case is None
+            else post_reven_smallest_case.smallest_surviving_cross_family
+        ),
+        cases=pre_r1_cases + pre_rodd_cases + pre_reven_cases + post_reven_cases,
     )
 
 
@@ -292,23 +374,37 @@ def composition_report(max_weight: int = DELTA_MAX) -> str:
     summary = composition_summary(max_weight=max_weight)
     lines = [
         "key\tvalue",
-        f"old_audited_set_joint_sufficient\t{str(summary.old_audited_set_joint_sufficient).lower()}",
-        f"old_smallest_surviving_cross_family\t{summary.old_smallest_surviving_cross_family or 'none'}",
         (
-            "post_r1_audited_set_joint_sufficient\t"
-            f"{str(summary.post_r1_audited_set_joint_sufficient).lower()}"
+            "pre_r1_audited_set_joint_sufficient\t"
+            f"{str(summary.pre_r1_audited_set_joint_sufficient).lower()}"
         ),
         (
-            "post_r1_smallest_surviving_cross_family\t"
-            f"{summary.post_r1_smallest_surviving_cross_family or 'none'}"
+            "pre_r1_smallest_surviving_cross_family\t"
+            f"{summary.pre_r1_smallest_surviving_cross_family or 'none'}"
         ),
         (
-            "post_rodd_audited_set_joint_sufficient\t"
-            f"{str(summary.post_rodd_audited_set_joint_sufficient).lower()}"
+            "pre_rodd_audited_set_joint_sufficient\t"
+            f"{str(summary.pre_rodd_audited_set_joint_sufficient).lower()}"
         ),
         (
-            "post_rodd_smallest_surviving_cross_family\t"
-            f"{summary.post_rodd_smallest_surviving_cross_family or 'none'}"
+            "pre_rodd_smallest_surviving_cross_family\t"
+            f"{summary.pre_rodd_smallest_surviving_cross_family or 'none'}"
+        ),
+        (
+            "pre_reven_audited_set_joint_sufficient\t"
+            f"{str(summary.pre_reven_audited_set_joint_sufficient).lower()}"
+        ),
+        (
+            "pre_reven_smallest_surviving_cross_family\t"
+            f"{summary.pre_reven_smallest_surviving_cross_family or 'none'}"
+        ),
+        (
+            "post_reven_audited_set_joint_sufficient\t"
+            f"{str(summary.post_reven_audited_set_joint_sufficient).lower()}"
+        ),
+        (
+            "post_reven_smallest_surviving_cross_family\t"
+            f"{summary.post_reven_smallest_surviving_cross_family or 'none'}"
         ),
         "",
         (

@@ -150,8 +150,8 @@ Status: Conjectural. The repository roadmap is organized around theorem progress
 2. Status: Proven. The rank-3 family gate `Rodd+` is now resolved as a genuine new obstruction class rather than an absorbed derivative block.
 3. Status: Proven. Re-close audited-set composition for the further enlarged family set that now includes `Rodd+`.
 4. Status: Proven. The rank-4 family gate `Reven4+` is now resolved as a genuine new obstruction class rather than an absorbed trace descendant or derivative block.
-5. Status: Conjectural. Re-close audited-set composition for the further enlarged family set that now includes `Reven4+`.
-6. Status: Conjectural. Only after that re-close may the live envelope gate move to `Rodd5+`, the next smallest unaudited family class.
+5. Status: Proven. Audited-set composition is now re-closed for the further enlarged family set that includes `Reven4+`.
+6. Status: Conjectural. The live envelope gate can now move to `Rodd5+`, the next smallest unaudited family class.
 7. Status: Conjectural. Push the positive branch from audited finite examples toward an abstract finite-family fixed-order collapse theorem.
 8. Status: Counterexample candidate. Promote the dominant loophole class only if it produces a genuine failure of the corrected finite-family collapse candidate rather than only another uniqueness obstruction.
 9. Status: Conjectural. Revisit the scalar `s_A` corollary only after the higher-dimensional sensitivity manifold statement is sharp.

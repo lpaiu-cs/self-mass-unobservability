@@ -89,7 +89,7 @@ def family_envelope_entries() -> tuple[FamilyEnvelopeEntry, ...]:
             parity="even",
             derivative_character="unsuppressed local family",
             smallest_expected_witness_type="Q2 / EQQ",
-            current_theorem_role="audited uniqueness obstruction and threshold class; enlarged audited-set composition re-close required next",
+            current_theorem_role="audited uniqueness obstruction and threshold class; enlarged audited-set composition now re-closed",
             rank_order=4,
         ),
         FamilyEnvelopeEntry(
@@ -99,7 +99,7 @@ def family_envelope_entries() -> tuple[FamilyEnvelopeEntry, ...]:
             parity="even",
             derivative_character="unsuppressed local family",
             smallest_expected_witness_type="U2-type self contraction",
-            current_theorem_role="next smallest unaudited family gate after the Reven4+ composition re-close",
+            current_theorem_role="next smallest unaudited family gate",
             rank_order=5,
         ),
         FamilyEnvelopeEntry(

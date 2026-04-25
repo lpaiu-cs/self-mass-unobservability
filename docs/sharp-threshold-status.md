@@ -25,5 +25,5 @@
 - Status: Proven. The genuine rank-4 STF class is self-only at the current fixed-order threshold.
 - Status: Proven. No audited family class currently exhibits a mixed witness below its first self witness at `\Delta \le 4`.
 - Status: Proven. The sharp-threshold classification bottleneck is closed for the currently audited family classes.
-- Status: Proven. The repo-level live bottleneck has moved from threshold sharpness to the `Reven4+` obstruction and the composition re-close it now forces.
-- Status: Conjectural. What remains open is the fresh enlarged audited-set composition audit after adding the rank-4 threshold, not witness sharpness inside the currently audited classes.
+- Status: Proven. The repo-level live bottleneck has moved from threshold sharpness to family-envelope completeness and the next smallest unaudited family gate `Rodd5+`.
+- Status: Conjectural. What remains open is not witness sharpness inside the currently audited classes, but the next envelope gate beyond the closed Reven4+ composition layer.

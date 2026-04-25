@@ -24,5 +24,5 @@
 ## Physical Role
 
 - Status: Proven. The audit tests whether unsuppressed admission of this genuine STF rank-4 family creates a new low-order witness inside `\Delta \le 4`.
-- Status: Proven. If it does, the theorem layer obstructed is promotion of the enlarged audited-set result `{R2, R0a, R0b, R1, Rodd+}` to an MVP-envelope theorem.
+- Status: Proven. If it does, the theorem layer obstructed is promotion of the pre-Reven4+ enlarged audited-set result `{R2, R0a, R0b, R1, Rodd+}` to an MVP-envelope theorem.
 - Status: Proven. If it does not, the audit must still say why: reduction, exclusion, or absorption into already audited families.

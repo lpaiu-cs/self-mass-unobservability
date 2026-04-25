@@ -16,12 +16,14 @@
 
 - Status: Proven. Audited-set sufficiency does not by itself imply MVP-envelope completeness.
 - Status: Proven. The `R1` audit yielded a genuine new obstruction class with smallest explicit witness `V2`.
-- Status: Proven. The `Rodd+` audit now yields a genuine new obstruction class with smallest explicit witness `T2` and first mixed witness `ETT`.
-- Status: Proven. The `Reven4+` audit now yields a genuine new obstruction class with smallest explicit witness `Q2` and first mixed witness `EQQ`.
+- Status: Proven. The `Rodd+` audit yielded a genuine new obstruction class with smallest explicit witness `T2` and first mixed witness `ETT`.
+- Status: Proven. The `Reven4+` audit yielded a genuine new obstruction class with smallest explicit witness `Q2` and first mixed witness `EQQ`.
+- Status: Proven. The post-Reven4+ composition audit finds no pairwise, higher-order, or full-set cross-family survivor beyond the baseline electric sector once the current thresholds are imposed.
+- Status: Proven. Therefore the current thresholds are jointly sufficient for the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+}` at `\Delta \le 4`.
 - Status: Proven. The audited family set still does not yet exhaust the primitive-family envelope.
-- Status: Proven. The smallest remaining unaudited family class under the current MVP assumptions is now `Rodd5+`, the local parity-even odd-rank tensor class beyond the rank-3 representative.
+- Status: Proven. The smallest remaining unaudited family class under the current MVP assumptions is now `Rodd5+`, the local parity-even odd-rank tensor class beyond the current rank-3 representative.
 - Status: Proven. Therefore the envelope census still does not upgrade the theorem to MVP-envelope sufficiency.
-- Status: Proven. The theorem-layer live bottleneck does not yet move to `Rodd5+`, because the new `Reven4+` obstruction must first be folded into a fresh enlarged audited-set composition audit.
+- Status: Proven. The current live bottleneck is family-envelope completeness or the next smallest unaudited family obstruction, currently `Rodd5+`.
 
 ## Boundary
 

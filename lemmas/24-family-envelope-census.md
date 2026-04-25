@@ -39,6 +39,6 @@
 
 ## Boundary
 
-- Status: Proven. This lemma is a census lemma, not a composition theorem for the newly enlarged audited family set.
-- Status: Proven. It identifies the next smallest unaudited family class in the census, but it does not by itself move the live theorem bottleneck past the newly audited `Rodd+` obstruction.
+- Status: Proven. This lemma is a census lemma, not a universal composition theorem for arbitrary primitive-family sets.
+- Status: Proven. It identifies the next smallest unaudited family class in the census, and after the post-Reven4+ composition closure the live theorem bottleneck can now move there.
 - Status: Proven. It only proves that the current assumptions still leave higher-rank parity-even family classes inside the MVP envelope and therefore keep the theorem family-envelope incomplete.

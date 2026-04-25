@@ -78,7 +78,8 @@
 20. Status: Proven. [`rank3-family-ordering.md`](rank3-family-ordering.md), [`../lemmas/30-rank3-family-admission.md`](../lemmas/30-rank3-family-admission.md), [`../lemmas/31-rank3-threshold-formula.md`](../lemmas/31-rank3-threshold-formula.md), [`../symbolic/r3_sector_delta4.py`](../symbolic/r3_sector_delta4.py), and [`../symbolic/r3_survivor_rank_check.py`](../symbolic/r3_survivor_rank_check.py) now show that `Rodd+` is a genuine new obstruction class rather than a derivative-generated artifact.
 21. Status: Proven. [`../lemmas/32-r3-pairwise-composition-audit.md`](../lemmas/32-r3-pairwise-composition-audit.md), [`../lemmas/33-r3-augmented-composition-audit.md`](../lemmas/33-r3-augmented-composition-audit.md), [`composition-status.md`](composition-status.md), and [`../symbolic/composition_attack_delta4.py`](../symbolic/composition_attack_delta4.py) re-close the pairwise, triple, quadruple, and five-family composition layer for the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+}`.
 22. Status: Proven. [`rank4-family-ordering.md`](rank4-family-ordering.md), [`../lemmas/34-rank4-family-admission.md`](../lemmas/34-rank4-family-admission.md), [`../lemmas/35-rank4-threshold-formula.md`](../lemmas/35-rank4-threshold-formula.md), [`../symbolic/r4_sector_delta4.py`](../symbolic/r4_sector_delta4.py), and [`../symbolic/r4_survivor_rank_check.py`](../symbolic/r4_survivor_rank_check.py) now show that `Reven4+` is a genuine new obstruction class rather than a trace-descended or derivative-generated artifact.
-23. Status: Conjectural. The remaining broader positive burden is no longer family-envelope census alone; it is a fresh enlarged audited-set composition re-close that includes the new rank-4 threshold, and only after that the next envelope gate can move beyond `Reven4+`.
+23. Status: Proven. [`../lemmas/36-r4-pairwise-composition-audit.md`](../lemmas/36-r4-pairwise-composition-audit.md), [`../lemmas/37-r4-augmented-composition-audit.md`](../lemmas/37-r4-augmented-composition-audit.md), [`composition-status.md`](composition-status.md), and [`../symbolic/composition_attack_delta4.py`](../symbolic/composition_attack_delta4.py) re-close the pairwise, triple, quadruple, quintuple, and six-family composition layer for the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+}`.
+24. Status: Conjectural. The remaining broader positive burden is now family-envelope completeness or the next smallest unaudited family gate beyond the closed Reven4+ composition layer.
 
 ## Current Verdict
 
@@ -103,9 +104,11 @@
 - Status: Proven. The raw R4-extended survivor list is not linearly independent; its first exact quartic mixed dependence relation is `-E2Q2/2 + 2 E2Q2_mixed_1 - E2Q2_mixed_2 + E2Q2_mixed_3 = 0`.
 - Status: Proven. The raw R4-extended `22`-element survivor list has rank `19` and nullity `3`, and it is bookkeeping only rather than a corrected basis statement.
 - Status: Proven. The current MVP assumptions still do not close the family envelope.
-- Status: Proven. The family-envelope census now points to `Rodd5+` as the next smallest unaudited class, but the theorem does not move there yet because the `Reven4+` composition re-close is still pending.
-- Status: Proven. The current live bottleneck is the `Reven4+` obstruction: a genuine parity-even rank-4 STF family yields smallest witness `Q2`, so the enlarged audited set must be re-closed before the theorem can move to the next envelope gate.
-- Status: Conjectural. The broad positive target remains finite-family fixed-order collapse, and it remains plausible because the audited enlarged family catalogs, including the current rank-3 extension, still close finitely at `\Delta \le 4`.
+- Status: Proven. The post-Reven4+ pairwise, triple, quadruple, quintuple, and six-family composition audits find no surviving operator beyond the baseline electric sector once the current audited thresholds are imposed across the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+}`.
+- Status: Proven. Therefore the current thresholds are jointly sufficient for the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+}` at `\Delta \le 4`, and no explicit post-Reven4+ cross-family obstruction has appeared in the audited set.
+- Status: Proven. The family-envelope census now points to `Rodd5+` as the next smallest unaudited class, and the theorem can now move there because the post-Reven4+ composition re-close is complete.
+- Status: Proven. The current live bottleneck is family-envelope completeness or the next smallest unaudited family obstruction, currently `Rodd5+`.
+- Status: Conjectural. The broad positive target remains finite-family fixed-order collapse, and it remains plausible because the audited enlarged family catalogs, including the current rank-4 extension, still close finitely at `\Delta \le 4`.
 
 ## Dependencies
 
@@ -138,6 +141,12 @@
 - Status: Proven. [`../lemmas/29-r1-augmented-composition-audit.md`](../lemmas/29-r1-augmented-composition-audit.md)
 - Status: Proven. [`../lemmas/30-rank3-family-admission.md`](../lemmas/30-rank3-family-admission.md)
 - Status: Proven. [`../lemmas/31-rank3-threshold-formula.md`](../lemmas/31-rank3-threshold-formula.md)
+- Status: Proven. [`../lemmas/32-r3-pairwise-composition-audit.md`](../lemmas/32-r3-pairwise-composition-audit.md)
+- Status: Proven. [`../lemmas/33-r3-augmented-composition-audit.md`](../lemmas/33-r3-augmented-composition-audit.md)
+- Status: Proven. [`../lemmas/34-rank4-family-admission.md`](../lemmas/34-rank4-family-admission.md)
+- Status: Proven. [`../lemmas/35-rank4-threshold-formula.md`](../lemmas/35-rank4-threshold-formula.md)
+- Status: Proven. [`../lemmas/36-r4-pairwise-composition-audit.md`](../lemmas/36-r4-pairwise-composition-audit.md)
+- Status: Proven. [`../lemmas/37-r4-augmented-composition-audit.md`](../lemmas/37-r4-augmented-composition-audit.md)
 - Status: Conjectural. [`conditional-collapse-lemma.md`](conditional-collapse-lemma.md)
 - Status: Conjectural. [`eb-conditional-collapse.md`](eb-conditional-collapse.md)
 - Status: Conjectural. [`power-counting.md`](power-counting.md)
@@ -145,6 +154,7 @@
 - Status: Proven. [`family-admission-theorem.md`](family-admission-theorem.md)
 - Status: Proven. [`family-envelope-theorem.md`](family-envelope-theorem.md)
 - Status: Proven. [`family-envelope-table.md`](family-envelope-table.md)
+- Status: Proven. [`rank4-family-ordering.md`](rank4-family-ordering.md)
 - Status: Proven. [`rank3-family-ordering.md`](rank3-family-ordering.md)
 - Status: Proven. [`vector-family-ordering.md`](vector-family-ordering.md)
 - Status: Proven. [`mixed-witness-thresholds.md`](mixed-witness-thresholds.md)
@@ -169,6 +179,8 @@
 - Status: Proven. [`../symbolic/r1_survivor_rank_check.py`](../symbolic/r1_survivor_rank_check.py)
 - Status: Proven. [`../symbolic/r3_sector_delta4.py`](../symbolic/r3_sector_delta4.py)
 - Status: Proven. [`../symbolic/r3_survivor_rank_check.py`](../symbolic/r3_survivor_rank_check.py)
+- Status: Proven. [`../symbolic/r4_sector_delta4.py`](../symbolic/r4_sector_delta4.py)
+- Status: Proven. [`../symbolic/r4_survivor_rank_check.py`](../symbolic/r4_survivor_rank_check.py)
 
 ## Failure Triggers
 

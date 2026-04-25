@@ -83,7 +83,7 @@ def family_witness_entries() -> tuple[FamilyWitness, ...]:
             smallest_surviving_operator=r3.first_self_witness or "T2",
             audited_instance=r3.smallest_new_witness or "T2",
             weight=2,
-            obstructed_theorem_layer="promotion of the enlarged audited-set result to MVP-envelope sufficiency; enlarged audited-set composition must be re-closed next",
+            obstructed_theorem_layer="promotion of the enlarged audited-set result to MVP-envelope sufficiency",
             finite_family_collapse_obstructed=False,
             harmless_without_extra_assumptions=False,
         ),

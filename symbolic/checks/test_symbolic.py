@@ -438,95 +438,53 @@ def test_composition_attack_delta4() -> None:
         "gradE2",
         "mixedGradE2",
     )
-    assert summary.old_audited_set_joint_sufficient is True
-    assert summary.old_smallest_surviving_cross_family is None
-    assert summary.post_r1_audited_set_joint_sufficient is True
-    assert summary.post_r1_smallest_surviving_cross_family is None
-    assert summary.post_rodd_audited_set_joint_sufficient is True
-    assert summary.post_rodd_smallest_surviving_cross_family is None
-    assert tuple(case.combo_id for case in summary.cases) == (
-        "R2+R0a",
-        "R2+R0b",
-        "R0a+R0b",
-        "R2+R0a+R0b",
-        "R1+R2",
-        "R1+R0a",
-        "R1+R0b",
-        "R1+R2+R0a",
-        "R1+R2+R0b",
-        "R1+R0a+R0b",
-        "R2+R0a+R0b+R1",
-        "Rodd++R2",
-        "Rodd++R0a",
-        "Rodd++R0b",
-        "Rodd++R1",
-        "Rodd++R2+R0a",
-        "Rodd++R2+R0b",
-        "Rodd++R2+R1",
-        "Rodd++R0a+R0b",
-        "Rodd++R0a+R1",
-        "Rodd++R0b+R1",
-        "Rodd++R2+R0a+R0b",
-        "Rodd++R2+R0a+R1",
-        "Rodd++R2+R0b+R1",
-        "Rodd++R0a+R0b+R1",
-        "R2+R0a+R0b+R1+Rodd+",
-    )
-    assert tuple(case.case_scope for case in summary.cases) == (
-        "old_audited_set",
-        "old_audited_set",
-        "old_audited_set",
-        "old_audited_set",
-        "post_r1_audited_set",
-        "post_r1_audited_set",
-        "post_r1_audited_set",
-        "post_r1_audited_set",
-        "post_r1_audited_set",
-        "post_r1_audited_set",
-        "post_r1_audited_set",
-        "post_rodd_audited_set",
-        "post_rodd_audited_set",
-        "post_rodd_audited_set",
-        "post_rodd_audited_set",
-        "post_rodd_audited_set",
-        "post_rodd_audited_set",
-        "post_rodd_audited_set",
-        "post_rodd_audited_set",
-        "post_rodd_audited_set",
-        "post_rodd_audited_set",
-        "post_rodd_audited_set",
-        "post_rodd_audited_set",
-        "post_rodd_audited_set",
-        "post_rodd_audited_set",
-        "post_rodd_audited_set",
-    )
-    assert tuple(case.combination_kind for case in summary.cases) == (
-        "pairwise",
-        "pairwise",
-        "pairwise",
-        "triple",
-        "pairwise",
-        "pairwise",
-        "pairwise",
-        "triple",
-        "triple",
-        "triple",
-        "quadruple",
-        "pairwise",
-        "pairwise",
-        "pairwise",
-        "pairwise",
-        "triple",
-        "triple",
-        "triple",
-        "triple",
-        "triple",
-        "triple",
-        "quadruple",
-        "quadruple",
-        "quadruple",
-        "quadruple",
-        "full-set",
+    assert summary.pre_r1_audited_set_joint_sufficient is True
+    assert summary.pre_r1_smallest_surviving_cross_family is None
+    assert summary.pre_rodd_audited_set_joint_sufficient is True
+    assert summary.pre_rodd_smallest_surviving_cross_family is None
+    assert summary.pre_reven_audited_set_joint_sufficient is True
+    assert summary.pre_reven_smallest_surviving_cross_family is None
+    assert summary.post_reven_audited_set_joint_sufficient is True
+    assert summary.post_reven_smallest_surviving_cross_family is None
+    assert len(summary.cases) == 57
+    scope_counts = {
+        "pre_r1_audited_set": 0,
+        "pre_rodd_audited_set": 0,
+        "pre_reven_audited_set": 0,
+        "post_reven_audited_set": 0,
+    }
+    kind_counts = {
+        "pairwise": 0,
+        "triple": 0,
+        "quadruple": 0,
+        "quintuple": 0,
+        "full-set": 0,
+    }
+    case_by_id = {case.combo_id: case for case in summary.cases}
+    for case in summary.cases:
+        scope_counts[case.case_scope] += 1
+        kind_counts[case.combination_kind] += 1
+    assert scope_counts == {
+        "pre_r1_audited_set": 4,
+        "pre_rodd_audited_set": 7,
+        "pre_reven_audited_set": 15,
+        "post_reven_audited_set": 31,
+    }
+    assert kind_counts == {
+        "pairwise": 15,
+        "triple": 20,
+        "quadruple": 15,
+        "quintuple": 6,
+        "full-set": 1,
+    }
+    assert case_by_id["Reven4++R2"].case_scope == "post_reven_audited_set"
+    assert case_by_id["Reven4++R2"].combination_kind == "pairwise"
+    assert case_by_id["Reven4++R2+R0a"].combination_kind == "triple"
+    assert case_by_id["Reven4++R2+R0a+R0b"].combination_kind == "quadruple"
+    assert case_by_id["Reven4++R2+R0a+R0b+R1"].combination_kind == "quintuple"
+    assert (
+        case_by_id["R2+R0a+R0b+R1+Rodd++Reven4+"].combination_kind
+        == "full-set"
     )
     assert all(case.sufficient for case in summary.cases)
     assert all(case.new_surviving_labels == () for case in summary.cases)
