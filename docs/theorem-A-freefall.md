@@ -68,8 +68,9 @@
 13. Status: Proven. [`suppression-budget-theorem.md`](suppression-budget-theorem.md), [`../lemmas/17-witness-threshold-classification.md`](../lemmas/17-witness-threshold-classification.md), and [`../symbolic/witness_threshold_map.py`](../symbolic/witness_threshold_map.py) promote the audited witnesses into necessary suppression thresholds for minimal-sector uniqueness at `\Delta_{\max} = 4`.
 14. Status: Proven. [`mixed-witness-thresholds.md`](mixed-witness-thresholds.md), [`../lemmas/18-rank2-mixed-witness-threshold.md`](../lemmas/18-rank2-mixed-witness-threshold.md), [`../lemmas/19-rank0-mixed-witness-threshold.md`](../lemmas/19-rank0-mixed-witness-threshold.md), and [`../symbolic/mixed_witness_map.py`](../symbolic/mixed_witness_map.py) classify the first self and first mixed witnesses for the audited family classes.
 15. Status: Proven. [`threshold-formulas.md`](threshold-formulas.md), [`../lemmas/20-rank2-threshold-formula.md`](../lemmas/20-rank2-threshold-formula.md), [`../lemmas/21-rank0-threshold-formula.md`](../lemmas/21-rank0-threshold-formula.md), and [`../symbolic/threshold_formula_check.py`](../symbolic/threshold_formula_check.py) lift the audited family classes into formula-level threshold statements.
-16. Status: Conjectural. The live negative-branch bottleneck is now sharp mixed-aware threshold classification beyond mere witness existence.
-17. Status: Conjectural. The remaining positive burden is to prove the finite-family fixed-order collapse statement for arbitrary explicit admitted catalogs rather than just the audited examples.
+16. Status: Proven. [`budget-composition-theorem.md`](budget-composition-theorem.md), [`../lemmas/22-pairwise-composition-audit.md`](../lemmas/22-pairwise-composition-audit.md), [`../lemmas/23-three-family-composition-audit.md`](../lemmas/23-three-family-composition-audit.md), and [`../symbolic/composition_attack_delta4.py`](../symbolic/composition_attack_delta4.py) audit whether the current audited thresholds are jointly sufficient or admit a cross-family obstruction at `\Delta \le 4`.
+17. Status: Conjectural. The current audited-set composition question is joint sufficiency or explicit cross-family obstruction for the audited suppression budgets at `\Delta \le 4`.
+18. Status: Conjectural. The remaining positive burden is to prove the finite-family fixed-order collapse statement for arbitrary explicit admitted catalogs rather than just the audited examples.
 
 ## Current Verdict
 
@@ -80,8 +81,9 @@
 - Status: Proven. Minimal-sector uniqueness is already effectively dead across the audited unsuppressed family classes.
 - Status: Proven. No audited family class is currently harmless without extra assumptions.
 - Status: Proven. Necessary suppression budgets are explicit for the audited classes: for rank-2 STF families the self-only lower bound is `w_X \ge 3` but the mixed-aware necessary threshold is `w_X \ge 4` unless an explicit `EX = 0`-type rule removes the mixed quadratic witness; for bare scalar families the self-only sharp threshold is `w_S \ge 5`; for derivative-only scalar families the tied-sharp threshold is `w_D \ge 3`.
-- Status: Proven. No audited family class currently exhibits a mixed witness below its first self witness at `\Delta \le 4`; the live negative-branch bottleneck is sharp mixed-aware threshold classification beyond mere witness existence.
-- Status: Proven. The rank-2 STF class is now explicitly mixed-aware, the bare scalar class is self-only, and the derivative-only scalar class is tied-sharp.
+- Status: Proven. The current audited-set composition question is joint sufficiency or explicit cross-family obstruction for the audited suppression budgets at `\Delta \le 4`.
+- Status: Proven. The pairwise and triple composition audits find no surviving operator beyond the baseline electric sector once the current audited thresholds are imposed together.
+- Status: Proven. Therefore the current thresholds are jointly sufficient for the currently audited family classes at `\Delta \le 4`, and no explicit cross-family obstruction has appeared in the audited set.
 - Status: Conjectural. The broad positive target remains finite-family fixed-order collapse, and it remains plausible because the audited enlarged family catalogs still close finitely at `\Delta \le 4`.
 
 ## Dependencies
@@ -105,6 +107,8 @@
 - Status: Proven. [`../lemmas/19-rank0-mixed-witness-threshold.md`](../lemmas/19-rank0-mixed-witness-threshold.md)
 - Status: Proven. [`../lemmas/20-rank2-threshold-formula.md`](../lemmas/20-rank2-threshold-formula.md)
 - Status: Proven. [`../lemmas/21-rank0-threshold-formula.md`](../lemmas/21-rank0-threshold-formula.md)
+- Status: Proven. [`../lemmas/22-pairwise-composition-audit.md`](../lemmas/22-pairwise-composition-audit.md)
+- Status: Proven. [`../lemmas/23-three-family-composition-audit.md`](../lemmas/23-three-family-composition-audit.md)
 - Status: Conjectural. [`conditional-collapse-lemma.md`](conditional-collapse-lemma.md)
 - Status: Conjectural. [`eb-conditional-collapse.md`](eb-conditional-collapse.md)
 - Status: Conjectural. [`power-counting.md`](power-counting.md)
@@ -112,6 +116,8 @@
 - Status: Proven. [`family-admission-theorem.md`](family-admission-theorem.md)
 - Status: Proven. [`mixed-witness-thresholds.md`](mixed-witness-thresholds.md)
 - Status: Proven. [`threshold-formulas.md`](threshold-formulas.md)
+- Status: Proven. [`budget-composition-theorem.md`](budget-composition-theorem.md)
+- Status: Proven. [`composition-status.md`](composition-status.md)
 - Status: Proven. [`suppression-budget-theorem.md`](suppression-budget-theorem.md)
 - Status: Proven. [`sharp-threshold-status.md`](sharp-threshold-status.md)
 - Status: Proven. [`broad-collapse-reformulation.md`](broad-collapse-reformulation.md)
@@ -124,6 +130,7 @@
 - Status: Proven. [`../symbolic/witness_threshold_map.py`](../symbolic/witness_threshold_map.py)
 - Status: Proven. [`../symbolic/mixed_witness_map.py`](../symbolic/mixed_witness_map.py)
 - Status: Proven. [`../symbolic/threshold_formula_check.py`](../symbolic/threshold_formula_check.py)
+- Status: Proven. [`../symbolic/composition_attack_delta4.py`](../symbolic/composition_attack_delta4.py)
 
 ## Failure Triggers
 

@@ -102,9 +102,19 @@ Status: Conjectural. The repository roadmap is organized around theorem progress
 | M10.4 | Proven | [`../symbolic/threshold_formula_check.py`](../symbolic/threshold_formula_check.py) | The audited formula layer reproduces the current `\Delta \le 4` witness map deterministically. |
 | M10.5 | Conjectural | [`docs/theorem-A-freefall.md`](theorem-A-freefall.md) and [`family-admission-theorem.md`](family-admission-theorem.md) | The live negative-branch bottleneck is written uniformly as sharp mixed-aware threshold classification beyond mere witness existence. |
 
+## M11: Audited-Set Budget Composition
+
+| Item | Status | Deliverable | Exit condition |
+| --- | --- | --- | --- |
+| M11.1 | Proven | [`budget-composition-theorem.md`](budget-composition-theorem.md) | The joint-sufficiency question is stated explicitly for the already audited family classes. |
+| M11.2 | Proven | [`../lemmas/22-pairwise-composition-audit.md`](../lemmas/22-pairwise-composition-audit.md) | All three pairwise combinations are audited separately. |
+| M11.3 | Proven | [`../lemmas/23-three-family-composition-audit.md`](../lemmas/23-three-family-composition-audit.md) | The simultaneous three-family admission is audited separately from the pairwise cases. |
+| M11.4 | Proven | [`../symbolic/composition_attack_delta4.py`](../symbolic/composition_attack_delta4.py) | The current audited thresholds are tested jointly against all relevant `\Delta \le 4` scalar candidates. |
+| M11.5 | Proven | [`composition-status.md`](composition-status.md), [`docs/theorem-A-freefall.md`](theorem-A-freefall.md), and [`failure-ledger.md`](failure-ledger.md) | The repo records whether the audited thresholds are jointly sufficient or whether an explicit cross-family obstruction survives. |
+
 ## Near-Term Sequence
 
-1. Status: Conjectural. Extend the mixed-witness sharpness analysis beyond the currently audited family classes and decide whether a genuinely mixed-dominant class appears.
+1. Status: Conjectural. Extend the audited-set composition audit beyond the currently audited family classes and determine where the first genuine cross-family obstruction appears.
 2. Status: Conjectural. Push the positive branch from audited finite examples toward an abstract finite-family fixed-order collapse theorem.
 3. Status: Conjectural. Decide whether any further mixed-trace or gradient identity should be introduced explicitly, rather than silently collapsing enlarged-sector operators.
 4. Status: Counterexample candidate. Promote the dominant loophole class only if it produces a genuine failure of the corrected finite-family collapse candidate rather than only another uniqueness obstruction.

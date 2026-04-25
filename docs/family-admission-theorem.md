@@ -30,6 +30,6 @@
 
 - Status: Proven. The positive theorem target must therefore be finite-family fixed-order collapse, not minimal-sector uniqueness.
 - Status: Proven. New family-admission audits are classification steps: a new witness reinforces the uniqueness no-go unless it also destroys fixed-order finiteness.
-- Status: Proven. The live negative-branch bottleneck is now sharp mixed-aware threshold classification beyond mere witness existence.
+- Status: Proven. The current audited-set composition question is joint sufficiency or explicit cross-family obstruction for the audited suppression budgets at `\Delta \le 4`.
 - Status: Proven. [`../symbolic/family_witness_map.py`](../symbolic/family_witness_map.py) records the current witness table linking each audited family class to the exact theorem layer it obstructs.
 - Status: Proven. [`suppression-budget-theorem.md`](suppression-budget-theorem.md) and [`../symbolic/witness_threshold_map.py`](../symbolic/witness_threshold_map.py) now promote those witnesses into necessary suppression thresholds for the audited classes.

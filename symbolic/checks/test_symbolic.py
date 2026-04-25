@@ -20,6 +20,7 @@ from eb_survivor_rank_check import eb_rank_summary
 from es_sector_delta4 import es_summary
 from es_survivor_rank_check import es_rank_summary
 from family_witness_map import family_witness_summary
+from composition_attack_delta4 import composition_summary
 from mixed_witness_map import mixed_witness_summary
 from primitive_family_attack import primitive_attack_summary
 from shift_scalar_sector_delta4 import shift_scalar_summary
@@ -368,6 +369,28 @@ def test_threshold_formula_check() -> None:
     assert derivative_only.threshold_type == "tied-sharp"
 
 
+def test_composition_attack_delta4() -> None:
+    summary = composition_summary()
+    assert summary.baseline_survivors == (
+        "E2",
+        "E3",
+        "dotE2",
+        "E2^2",
+        "divE2",
+        "gradE2",
+        "mixedGradE2",
+    )
+    assert tuple(case.combo_id for case in summary.cases) == (
+        "R2+R0a",
+        "R2+R0b",
+        "R0a+R0b",
+        "R2+R0a+R0b",
+    )
+    assert all(case.sufficient for case in summary.cases)
+    assert all(case.new_surviving_labels == () for case in summary.cases)
+    assert all(case.smallest_surviving_cross_family is None for case in summary.cases)
+
+
 def main() -> None:
     test_symmetric_quadratic_jet()
     test_worldline_force_structure()
@@ -391,6 +414,7 @@ def main() -> None:
     test_witness_threshold_map()
     test_mixed_witness_map()
     test_threshold_formula_check()
+    test_composition_attack_delta4()
     print("symbolic checks passed")
 
 

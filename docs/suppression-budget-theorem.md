@@ -42,6 +42,12 @@
 - Status: Conjectural. It remains open whether broader subclasses or future family audits could produce a smaller mixed witness than the currently audited class-limited `W_{\min}` values.
 - Status: Conjectural. It remains open whether there is an abstract theorem computing `W_{\min}(\mathcal F)` beyond the currently audited family classes.
 
+## Audited-Set Joint Sufficiency At `\Delta_{\max} = 4`
+
+- Status: Proven. The current pairwise and triple composition audits for the audited family classes `R2`, `R0a`, and `R0b` find no new surviving operator beyond the baseline electric sector once the current thresholds are imposed together.
+- Status: Proven. Therefore the current thresholds are jointly sufficient for the currently audited family classes at `\Delta \le 4`.
+- Status: Proven. This audited-set joint sufficiency does not upgrade the theorem into a universal composition statement for arbitrary family catalogs.
+
 ## Boundary
 
 - Status: Proven. This theorem is about minimal-sector uniqueness only.
