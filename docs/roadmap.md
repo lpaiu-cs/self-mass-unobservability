@@ -99,6 +99,8 @@ static primitive families.
 | D10 | Proven | [`../symbolic/sample_budget_audit.py`](../symbolic/sample_budget_audit.py) | The sample-budget theorem and case classifications are checked symbolically. |
 | D11 | Counterexample candidate | [`richer-orbital-forcing-budget-audit.md`](richer-orbital-forcing-budget-audit.md) | The bounded exact-in-e/higher-harmonic rescue route is classified by `(H,R)` harmonic budgets. |
 | D12 | Proven | [`../symbolic/orbital_harmonic_budget_audit.py`](../symbolic/orbital_harmonic_budget_audit.py) | The minimum richer-orbital harmonic counts are computed for the comparator grid. |
+| D13 | Counterexample candidate | [`second-order-internal-mode.md`](second-order-internal-mode.md) | The next dynamic loophole model is defined with resonance, phase wrapping, and first-order collapse limits. |
+| D14 | Proven | [`../symbolic/second_order_mode_response.py`](../symbolic/second_order_mode_response.py) | The second-order transfer, low-frequency expansion, and resonance condition are checked symbolically. |
 
 ## Explicit Non-Goals For M1
 

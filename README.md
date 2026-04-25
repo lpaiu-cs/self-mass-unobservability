@@ -58,6 +58,7 @@ make nonlinear-comparator
 make shared-tau-ratio
 make sample-budget
 make orbital-harmonic-budget
+make second-order-mode
 make symbolic-check
 ```
 

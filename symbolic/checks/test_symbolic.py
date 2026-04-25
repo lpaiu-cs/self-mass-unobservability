@@ -57,6 +57,15 @@ from orbital_harmonic_budget_audit import (
     find_minimum_orbital_design,
     classify_orbital_harmonic_design,
 )
+from second_order_mode_response import (
+    cos_sin_components as second_order_cos_sin_components,
+    first_order_limit as second_order_first_order_limit,
+    low_frequency_series as second_order_low_frequency_series,
+    phase_tangent as second_order_phase_tangent,
+    resonance_frequency_squared,
+    symbols as second_order_symbols,
+    transfer_function as second_order_transfer_function,
+)
 from normal_form_reduce import (
     operator_symbols,
     reduce_algebraic_identities,
@@ -537,6 +546,63 @@ def test_exact_in_e_has_no_clean_new_line_count() -> None:
     assert exact_in_e_clean_new_line_count() == 0
 
 
+def test_second_order_transfer_and_first_order_limit() -> None:
+    syms = second_order_symbols()
+    z = syms["z"]
+    expected = syms["alpha"] * syms["omega_chi_sq"] / (
+        syms["mu_chi"] * z**2 + syms["gamma_chi"] * z + syms["omega_chi_sq"]
+    )
+    assert sp.simplify(second_order_transfer_function() - expected) == 0
+    first_order_expected = syms["alpha"] / (
+        1 + syms["gamma_chi"] * z / syms["omega_chi_sq"]
+    )
+    assert sp.simplify(second_order_first_order_limit() - first_order_expected) == 0
+
+
+def test_second_order_phase_tangent_and_resonance() -> None:
+    syms = second_order_symbols()
+    omega = syms["Omega"]
+    expected_phase = syms["gamma_chi"] * omega / (
+        syms["omega_chi_sq"] - syms["mu_chi"] * omega**2
+    )
+    assert sp.simplify(second_order_phase_tangent() - expected_phase) == 0
+    expected_peak = (
+        syms["omega_chi_sq"] / syms["mu_chi"]
+        - syms["gamma_chi"] ** 2 / (2 * syms["mu_chi"] ** 2)
+    )
+    assert sp.simplify(resonance_frequency_squared() - expected_peak) == 0
+
+
+def test_second_order_low_frequency_series_coefficients() -> None:
+    syms = second_order_symbols()
+    z = syms["z"]
+    series = second_order_low_frequency_series(order=4)
+    assert sp.simplify(series.subs(z, 0) - syms["alpha"]) == 0
+    assert sp.simplify(
+        series.coeff(z, 1) + syms["alpha"] * syms["gamma_chi"] / syms["omega_chi_sq"]
+    ) == 0
+    assert sp.simplify(
+        series.coeff(z, 2)
+        - syms["alpha"]
+        * (
+            syms["gamma_chi"] ** 2 / syms["omega_chi_sq"] ** 2
+            - syms["mu_chi"] / syms["omega_chi_sq"]
+        )
+    ) == 0
+
+
+def test_second_order_cos_sin_components_have_common_denominator() -> None:
+    syms = second_order_symbols()
+    omega = syms["Omega"]
+    cos_component, sin_component = second_order_cos_sin_components()
+    expected_denominator = (
+        (syms["omega_chi_sq"] - syms["mu_chi"] * omega**2) ** 2
+        + syms["gamma_chi"] ** 2 * omega**2
+    )
+    assert sp.simplify(sp.denom(cos_component) - expected_denominator) == 0
+    assert sp.simplify(sp.denom(sin_component) - expected_denominator) == 0
+
+
 def main() -> None:
     test_symmetric_quadratic_jet()
     test_worldline_force_structure()
@@ -576,6 +642,10 @@ def main() -> None:
     test_richer_orbital_minimum_for_first_derivative_linear_sideband()
     test_richer_orbital_projection_nuisance_minimum()
     test_exact_in_e_has_no_clean_new_line_count()
+    test_second_order_transfer_and_first_order_limit()
+    test_second_order_phase_tangent_and_resonance()
+    test_second_order_low_frequency_series_coefficients()
+    test_second_order_cos_sin_components_have_common_denominator()
     print("symbolic checks passed")
 
 
