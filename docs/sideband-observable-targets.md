@@ -75,3 +75,24 @@ Status: Proven. The current orbital and two-tone dictionaries are
 underbudget for realistic first-derivative linear comparators; see
 [`orbital-budget-case.md`](orbital-budget-case.md) and
 [`two-tone-budget-case.md`](two-tone-budget-case.md).
+
+## Second-Order Nonlinear Upgrade
+
+Status: Counterexample candidate. In the second-order branch, the stronger
+sideband target is not just a common relaxation factor. It is a common
+quadratic denominator
+
+```math
+D_2(z)=\mu_\chi z^2+\gamma_\chi z+\omega_\chi^2
+```
+
+shared by the linear response and nonlinear generated response.
+
+Status: Proven. The generated line remains a static-mimic candidate below its
+finite nonlinear comparator budget. For a degree-`M` static sideband
+polynomial and `K` shared projection nuisances, the generated-sideband sweep
+needs at least `M+2+K` complex samples before it can claim a residual.
+
+Status: Counterexample candidate. The nonlinear second-order target and its
+current collapse boundaries are recorded in
+[`nonlinear-second-order-mode.md`](nonlinear-second-order-mode.md).

@@ -110,6 +110,8 @@ static primitive families.
 | D21 | Proven | [`../symbolic/amplitude_weighted_resonant_design.py`](../symbolic/amplitude_weighted_resonant_design.py) | The amplitude-weighted usable-sample count is checked for low- and moderate-eccentricity designs. |
 | D22 | Counterexample candidate | [`physical-detectability-map.md`](physical-detectability-map.md) | The relative amplitude cutoff is replaced by a parameterized SNR criterion and minimum physical scale boundary. |
 | D23 | Proven | [`../symbolic/physical_detectability_map.py`](../symbolic/physical_detectability_map.py) | The SNR-budget classifications and minimum physical scale examples are checked symbolically. |
+| D24 | Counterexample candidate | [`nonlinear-second-order-mode.md`](nonlinear-second-order-mode.md) | Minimal nonlinear second-order drive/readout is defined and the shared quadratic-denominator target is separated from sideband existence. |
+| D25 | Proven | [`../symbolic/nonlinear_second_order_mode.py`](../symbolic/nonlinear_second_order_mode.py) | The nonlinear second-order transfers, shared-denominator residual, and generated-sideband interpolation boundary are checked symbolically. |
 
 ## Explicit Non-Goals For M1
 

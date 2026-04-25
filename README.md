@@ -64,6 +64,7 @@ make resonant-comparator
 make exact-in-e-resonant-forcing
 make amplitude-weighted-resonance
 make physical-detectability
+make nonlinear-second-order
 make symbolic-check
 ```
 

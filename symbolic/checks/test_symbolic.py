@@ -102,6 +102,18 @@ from physical_detectability_map import (
     harmonic_noise_sigma,
     minimum_physical_amplitude_scale,
 )
+from nonlinear_second_order_mode import (
+    audit_rows as nonlinear_second_order_rows,
+    denominator as nonlinear_second_order_denominator,
+    drive_sideband_interpolation_obstruction,
+    internal_linear_transfer as nonlinear_second_order_internal_transfer,
+    nonlinear_drive_sideband_transfer,
+    nonlinear_readout_sideband_transfer,
+    nonlinear_sideband_budget,
+    observable_linear_transfer as nonlinear_second_order_observable_transfer,
+    shared_denominator_residual,
+    symbols as nonlinear_second_order_symbols,
+)
 from fractions import Fraction
 from normal_form_reduce import (
     operator_symbols,
@@ -909,6 +921,58 @@ def test_physical_detectability_default_rows_include_no_go_and_positive() -> Non
     assert any(row.verdict == "physically-budget-breaking" for row in rows)
 
 
+def test_nonlinear_second_order_transfers_share_denominator() -> None:
+    syms = nonlinear_second_order_symbols()
+    z = syms["z"]
+    denominator = nonlinear_second_order_denominator(z)
+    expected_internal = syms["alpha"] * syms["omega_chi_sq"] / denominator
+    expected_observable = syms["c_Y"] + syms["c_chi"] * expected_internal
+    expected_sideband = syms["c_chi"] * syms["beta_F2"] / denominator
+    assert sp.simplify(nonlinear_second_order_internal_transfer(z) - expected_internal) == 0
+    assert sp.simplify(nonlinear_second_order_observable_transfer(z) - expected_observable) == 0
+    assert sp.simplify(nonlinear_drive_sideband_transfer(z) - expected_sideband) == 0
+
+
+def test_nonlinear_second_order_readout_sideband_law() -> None:
+    syms = nonlinear_second_order_symbols()
+    u = syms["u"]
+    v = syms["v"]
+    h_u = nonlinear_second_order_internal_transfer(u)
+    h_v = nonlinear_second_order_internal_transfer(v)
+    expected = syms["lambda_Fchi"] * (h_u + h_v) + syms["lambda_chi2"] * h_u * h_v
+    assert sp.factor(nonlinear_readout_sideband_transfer(u, v) - expected) == 0
+
+
+def test_nonlinear_second_order_shared_denominator_residual_vanishes() -> None:
+    assert shared_denominator_residual() == 0
+
+
+def test_nonlinear_second_order_interpolation_obstruction_boundaries() -> None:
+    syms = nonlinear_second_order_symbols()
+    obstruction = drive_sideband_interpolation_obstruction(order=1)
+    assert obstruction.order == 1
+    assert len(obstruction.nodes) == 2
+    assert sp.simplify(obstruction.residual.subs(syms["beta_F2"], 0)) == 0
+    assert sp.simplify(obstruction.residual.subs(syms["c_chi"], 0)) == 0
+    assert sp.simplify(obstruction.residual.subs(obstruction.target, obstruction.nodes[0])) == 0
+    assert sp.simplify(
+        obstruction.residual.subs({
+            syms["mu_chi"]: 0,
+            syms["gamma_chi"]: 0,
+        })
+    ) == 0
+
+
+def test_nonlinear_second_order_budget_and_rows() -> None:
+    budget = nonlinear_sideband_budget(polynomial_order=1, projection_nuisance=1)
+    assert budget.minimum_frequency_samples == 4
+    rows = nonlinear_second_order_rows()
+    assert len(rows) == 4
+    assert rows[0].status == "Proven"
+    assert "not unique" in rows[0].verdict
+    assert any("shared" in row.target for row in rows)
+
+
 def main() -> None:
     test_symmetric_quadratic_jet()
     test_worldline_force_structure()
@@ -969,6 +1033,11 @@ def main() -> None:
     test_physical_detectability_splits_low_and_high_signal_scale()
     test_physical_detectability_minimum_scale_examples()
     test_physical_detectability_default_rows_include_no_go_and_positive()
+    test_nonlinear_second_order_transfers_share_denominator()
+    test_nonlinear_second_order_readout_sideband_law()
+    test_nonlinear_second_order_shared_denominator_residual_vanishes()
+    test_nonlinear_second_order_interpolation_obstruction_boundaries()
+    test_nonlinear_second_order_budget_and_rows()
     print("symbolic checks passed")
 
 

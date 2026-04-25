@@ -132,3 +132,8 @@ Status: Counterexample candidate. The first projection and line-shape budget
 versions of that target are recorded in
 [`second-order-projection-audit.md`](second-order-projection-audit.md) and
 [`resonant-comparator-theorem.md`](resonant-comparator-theorem.md).
+
+Status: Counterexample candidate. The next nonlinear extension is recorded in
+[`nonlinear-second-order-mode.md`](nonlinear-second-order-mode.md). It asks
+whether generated sidebands and linear lines can be tied by the same
+quadratic denominator after static nonlinear comparator budgets are counted.
