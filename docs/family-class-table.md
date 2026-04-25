@@ -22,4 +22,4 @@
 - Status: Proven. Crossing the listed threshold does not automatically prove uniqueness; it only removes the current lowest audited witness from the `\Delta \le 4` window.
 - Status: Proven. The threshold-class column explains whether the current budget is self-only, mixed-aware, or tied-sharp.
 - Status: Proven. The composition columns now close for the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+, Rodd5+}`.
-- Status: Proven. The family-envelope census still points to `Reven6+` as the next unaudited class, but the live theorem bottleneck is the omitted rank-4 contraction `EEQ` and the resulting high-rank exhaustiveness patch before any move there.
+- Status: Proven. The family-envelope census still points to `Reven6+` as the next unaudited class, but the live theorem bottleneck is the failed STF tower abstraction at rank `L = 4`.

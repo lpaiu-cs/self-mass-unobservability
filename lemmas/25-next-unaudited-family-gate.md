@@ -9,8 +9,8 @@
 ## Why The Live Bottleneck Now Moves There
 
 - Status: Proven. The rank-5 gate `Rodd5+` has now been resolved explicitly at the census level.
-- Status: Proven. The post-`Rodd5+` composition re-close is now complete, but the next theorem-layer task is still not the `Reven6+` audit because the higher-rank manual survivor bookkeeping first needed an explicit exhaustiveness patch.
-- Status: Proven. Therefore the census points to `Reven6+`, while the current theorem-layer bottleneck is the omitted rank-4 contraction `EEQ` and the resulting high-rank exhaustiveness patch.
+- Status: Proven. The post-`Rodd5+` composition re-close is now complete, but the next theorem-layer task is still not the `Reven6+` audit because the higher-rank STF branch first had to be abstracted into a class theorem.
+- Status: Proven. Therefore the census points to `Reven6+`, while the current theorem-layer bottleneck is the failed STF-tower abstraction at rank `L = 4`.
 - Status: Proven. No current MVP assumption removes the remaining even-rank tensor class from the family envelope.
 
 ## What This Does And Does Not Say

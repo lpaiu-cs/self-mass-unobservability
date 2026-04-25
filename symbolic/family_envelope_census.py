@@ -5,7 +5,7 @@ from dataclasses import dataclass
 
 DELTA_MAX = 4
 LIVE_BOTTLENECK = (
-    "the omitted rank-4 contraction EEQ and the resulting high-rank exhaustiveness patch before any move to Reven6+"
+    "the failed STF tower abstraction at rank L = 4: the mixed cubic EEQ survives, so the higher-rank STF branch must split before any move to Reven6+"
 )
 
 
@@ -89,7 +89,7 @@ def family_envelope_entries() -> tuple[FamilyEnvelopeEntry, ...]:
             parity="even",
             derivative_character="unsuppressed local family",
             smallest_expected_witness_type="Q2 / EEQ and EQQ",
-            current_theorem_role="audited uniqueness obstruction and threshold class; enlarged audited-set composition now re-closed, but exhaustive bookkeeping patch still active",
+            current_theorem_role="audited uniqueness obstruction and threshold class; enlarged audited-set composition now re-closed, but the higher-rank STF tower abstraction fails here",
             rank_order=4,
         ),
         FamilyEnvelopeEntry(

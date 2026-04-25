@@ -43,9 +43,9 @@
 - Status: Proven. For unsuppressed rank-0 scalar-family admission, the self witness `S` appears before the first mixed witness `SE2`.
 - Status: Proven. For derivative-only or shift-symmetric scalar-family admission, the self witness `dotS2` and the mixed witness `DtS_E2` both first appear at weight `4`.
 - Status: Proven. For a genuine parity-even rank-1 vector-family admission, the self witness `V2` appears at weight `2` and the first mixed witness `EVV` appears at weight `3`.
-- Status: Proven. For a genuine parity-even rank-3 STF family admission, the self witness `T2` appears at weight `2` and the first mixed witness `ETT` appears at weight `3`.
-- Status: Proven. For a genuine parity-even rank-4 STF family admission, the self witness `Q2` appears at weight `2`, while the manual audit already exhibited `EQQ` at weight `3` and the later exhaustive check adds an omitted equally low mixed cubic witness `EEQ`.
-- Status: Proven. For a genuine parity-even rank-5 STF family admission, the self witness `U2` appears at weight `2` and the first mixed witness `EUU` appears at weight `3`.
+- Status: Proven. The higher-rank STF branch does not currently collapse into one uniform `L \ge 3` class theorem.
+- Status: Proven. The audited odd-rank STF instances `L = 3` and `L = 5` follow the pattern `Y2` then `EYY`.
+- Status: Proven. The attempted uniform STF-tower theorem fails at audited rank `L = 4`, because the mixed cubic `EEQ` survives alongside `EQQ`.
 - Status: Proven. Therefore a stronger physically justified minimal-sector theorem is already on the no-go branch unless explicit suppression, ordering, or background-restriction assumptions are added family by family.
 
 ## Scope Separation
@@ -84,6 +84,7 @@
 25. Status: Proven. [`../lemmas/40-r5-pairwise-composition-audit.md`](../lemmas/40-r5-pairwise-composition-audit.md), [`../lemmas/41-r5-augmented-composition-audit.md`](../lemmas/41-r5-augmented-composition-audit.md), [`composition-status.md`](composition-status.md), and [`../symbolic/composition_attack_delta4.py`](../symbolic/composition_attack_delta4.py) re-close the pairwise, triple, quadruple, quintuple, six-family, and seven-family composition layer for the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+, Rodd5+}`.
 26. Status: Proven. [`high-rank-audit-methodology.md`](high-rank-audit-methodology.md), [`../lemmas/42-rank3-exhaustiveness-check.md`](../lemmas/42-rank3-exhaustiveness-check.md), [`../lemmas/43-rank4-exhaustiveness-check.md`](../lemmas/43-rank4-exhaustiveness-check.md), [`../lemmas/44-rank5-exhaustiveness-check.md`](../lemmas/44-rank5-exhaustiveness-check.md), [`../symbolic/high_rank_family_enumerator.py`](../symbolic/high_rank_family_enumerator.py), and [`../symbolic/high_rank_diff_report.py`](../symbolic/high_rank_diff_report.py) now separate manual high-rank survivor bookkeeping from exhaustive contraction generation.
 27. Status: Proven. The exhaustive high-rank audit validates the current manual rank-3 and rank-5 candidate-survivor lists, but it finds omitted rank-4 classes `\{EEQ,\ Q3,\ EEDtQ,\ EEEQ,\ EQQQ_1,\ EQQQ_2,\ GradEGradQ\}`.
+28. Status: Proven. [`stf-tower-theorem.md`](stf-tower-theorem.md), [`../lemmas/42-stf-rankL-admission.md`](../lemmas/42-stf-rankL-admission.md), [`../lemmas/43-stf-rankL-threshold-formula.md`](../lemmas/43-stf-rankL-threshold-formula.md), [`stf-family-class-table.md`](stf-family-class-table.md), and [`../symbolic/stf_rankL_pattern_check.py`](../symbolic/stf_rankL_pattern_check.py) show that the attempted single STF-tower theorem for all genuine parity-even STF ranks `L \ge 3` fails at `L = 4`.
 
 ## Current Verdict
 
@@ -101,6 +102,7 @@
 - Status: Proven. The smallest explicit rank-4 obstruction remains `Q2`, while the exhaustive audit now shows that the mixed cubic layer at weight `3` includes both the previously recorded `EQQ` and the omitted `EEQ`.
 - Status: Proven. The rank-5 clarification shows that trace descendants and derivative-generated rank-5 blocks do not absorb a genuine primitive STF family `U_{ijklm}`.
 - Status: Proven. The smallest explicit rank-5 obstruction is `U2`, with first mixed witness `EUU`.
+- Status: Proven. The attempted single STF-tower theorem for all genuine parity-even ranks `L \ge 3` is false at the first audited even-rank member `L = 4`.
 - Status: Proven. Necessary suppression budgets are explicit for the audited classes: for rank-2 STF families the self-only lower bound is `w_X \ge 3` but the mixed-aware necessary threshold is `w_X \ge 4` unless an explicit `EX = 0`-type rule removes the mixed quadratic witness; for bare scalar families the self-only sharp threshold is `w_S \ge 5`; for derivative-only scalar families the tied-sharp threshold is `w_D \ge 3`; for genuine vector families the self-only sharp threshold is `w_V \ge 3`; for genuine rank-3 STF families the self-only sharp threshold is `w_T \ge 3`; for genuine rank-4 STF families the self-only sharp threshold is `w_Q \ge 3`; for genuine rank-5 STF families the self-only sharp threshold is `w_U \ge 3`.
 - Status: Proven. The pairwise, triple, and quadruple composition audits already found no surviving operator beyond the baseline electric sector once the current audited thresholds were imposed across the enlarged audited family set `{R2, R0a, R0b, R1}`.
 - Status: Proven. The post-Rodd+ pairwise, triple, quadruple, and five-family composition audits likewise find no surviving operator beyond the baseline electric sector once the current audited thresholds are imposed across the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+}`.
@@ -115,8 +117,8 @@
 - Status: Proven. The post-Reven4+ pairwise, triple, quadruple, quintuple, and six-family composition audits find no surviving operator beyond the baseline electric sector once the current audited thresholds are imposed across the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+}`.
 - Status: Proven. The post-Rodd5+ pairwise, triple, quadruple, quintuple, six-family, and seven-family composition audits likewise find no surviving operator beyond the baseline electric sector once the current audited thresholds are imposed across the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+, Rodd5+}`.
 - Status: Proven. Therefore the current thresholds are jointly sufficient for the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+, Rodd5+}` at `\Delta \le 4`, and no explicit post-Rodd5+ cross-family obstruction has appeared in the audited set.
-- Status: Proven. The family-envelope census still points to `Reven6+` as the next smallest unaudited class, but the theorem layer cannot move there yet because the high-rank exhaustiveness patch is incomplete.
-- Status: Proven. The current live bottleneck is the omitted rank-4 contraction `EEQ` and the resulting high-rank exhaustiveness patch before any move to `Reven6+`.
+- Status: Proven. The family-envelope census still points to `Reven6+` as the next smallest unaudited class, but the theorem layer cannot move there yet because the higher-rank STF branch does not yet admit a uniform class theorem.
+- Status: Proven. The current live bottleneck is the failed STF tower abstraction at rank `L = 4`: the mixed cubic `EEQ` survives, so the higher-rank STF branch must split before any move to `Reven6+`.
 - Status: Conjectural. The broad positive target remains finite-family fixed-order collapse, and it remains plausible because the audited enlarged family catalogs, including the current rank-5 extension, still close finitely at `\Delta \le 4`.
 
 ## Dependencies

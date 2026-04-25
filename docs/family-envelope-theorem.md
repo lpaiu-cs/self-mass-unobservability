@@ -24,7 +24,7 @@
 - Status: Proven. The audited family set still does not yet exhaust the primitive-family envelope.
 - Status: Proven. The smallest remaining unaudited family class under the current MVP assumptions is now `Reven6+`, the local parity-even even-rank tensor class beyond the current rank-4 representative.
 - Status: Proven. Therefore the envelope census still does not upgrade the theorem to MVP-envelope sufficiency.
-- Status: Proven. The current live bottleneck is the omitted rank-4 contraction `EEQ` and the resulting high-rank exhaustiveness patch before any move to `Reven6+`.
+- Status: Proven. The current live bottleneck is the failed STF tower abstraction at rank `L = 4`: the mixed cubic `EEQ` survives, so the higher-rank STF branch must split before any move to `Reven6+`.
 
 ## Boundary
 

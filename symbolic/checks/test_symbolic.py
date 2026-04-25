@@ -35,6 +35,7 @@ from r4_survivor_rank_check import r4_rank_summary
 from r5_sector_delta4 import r5_summary
 from r5_survivor_rank_check import r5_rank_summary
 from shift_scalar_sector_delta4 import shift_scalar_summary
+from stf_rankL_pattern_check import stf_rank_pattern_summary
 from threshold_formula_check import threshold_formula_summary
 from witness_threshold_map import witness_threshold_summary
 from normal_form_reduce import (
@@ -534,7 +535,7 @@ def test_family_envelope_census() -> None:
     assert summary.delta_max == 4
     assert (
         summary.live_bottleneck
-        == "the omitted rank-4 contraction EEQ and the resulting high-rank exhaustiveness patch before any move to Reven6+"
+        == "the failed STF tower abstraction at rank L = 4: the mixed cubic EEQ survives, so the higher-rank STF branch must split before any move to Reven6+"
     )
     assert summary.envelope_closed is False
     assert summary.smallest_unaudited_class == "Reven6+"
@@ -591,6 +592,21 @@ def test_high_rank_diff_report_mentions_eeq() -> None:
     assert "\tQ\tomitted_from_manual\tQ3\t3\tQ,Q,Q\t" in report
     assert "\tT\tmatched\tETDtT\t4\tE,T,DtT\t" in report
     assert "\tU\tmatched\tEUDtU\t4\tE,U,DtU\t" in report
+
+
+def test_stf_rank_pattern_summary() -> None:
+    summary = stf_rank_pattern_summary()
+    assert summary.attempted_tower_theorem_holds is False
+    assert summary.failure_rank == 4
+    assert "EEQ" in (summary.failure_reason or "")
+    assert tuple(entry.rank for entry in summary.entries) == (3, 4, 5)
+    assert summary.entries[0].first_self_witness == "T2"
+    assert summary.entries[0].first_mixed_witness_layer == "ETT"
+    assert summary.entries[1].first_self_witness == "Q2"
+    assert summary.entries[1].first_mixed_witness_layer == "EEQ and EQQ"
+    assert "exception" in summary.entries[1].current_audited_status
+    assert summary.entries[2].first_self_witness == "U2"
+    assert summary.entries[2].first_mixed_witness_layer == "EUU"
 
 
 def test_r1_sector_delta4() -> None:
@@ -816,6 +832,7 @@ def main() -> None:
     test_family_envelope_census()
     test_high_rank_exhaustiveness_audit()
     test_high_rank_diff_report_mentions_eeq()
+    test_stf_rank_pattern_summary()
     test_r1_sector_delta4()
     test_r1_survivor_rank_check()
     test_r3_sector_delta4()

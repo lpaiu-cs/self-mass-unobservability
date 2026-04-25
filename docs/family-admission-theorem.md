@@ -8,23 +8,23 @@
 
 ## Family Classes Covered
 
-- Status: Proven. Class R2: unsuppressed STF rank-2 families admitted into the parity-even scalar sector at weight `1`.
+- Status: Proven. STF rank-2 families are kept as a separate special class.
+- Status: Proven. The higher-rank STF branch is now treated as an attempted tower theorem rather than as three unrelated rank notes.
 - Status: Proven. Class R0a: unsuppressed scalar-like rank-0 families with bare source `S`.
 - Status: Proven. Class R0b: derivative-only or shift-symmetric scalar families whose primitive catalog excludes bare `S` but admits `D_\tau S`, `\nabla_i S`, and `D_\tau^2 S`.
 - Status: Proven. Class R1: genuine local parity-even rank-1 vector families `V_i`, excluding derivative-generated vectors already belonging to audited scalar or rank-2 families.
-- Status: Proven. Class Rodd+: genuine local parity-even fully symmetric trace-free rank-3 tensor families `T_{ijk}`, excluding derivative-generated rank-3 blocks already belonging to audited scalar, STF rank-2, or vector families.
-- Status: Proven. Class Reven4+: genuine local parity-even fully symmetric trace-free rank-4 tensor families `Q_{ijkl}`, excluding trace descendants reducible to audited lower-rank families and derivative-generated rank-4 blocks already belonging to audited scalar, STF rank-2, vector, or rank-3 families.
-- Status: Proven. Class Rodd5+: genuine local parity-even fully symmetric trace-free rank-5 tensor families `U_{ijklm}`, excluding trace descendants reducible to audited lower-rank families and derivative-generated rank-5 blocks already belonging to audited scalar, STF rank-2, vector, rank-3, or rank-4 families.
+- Status: Proven. The audited higher-rank STF instances are `Rodd+`, `Reven4+`, and `Rodd5+`, represented by `T_{ijk}`, `Q_{ijkl}`, and `U_{ijklm}`.
 
 ## Theorem Statement
 
-- Status: Proven. For Class R2, the quadratic invariant `X2 = Tr(X^2)` is a new parity-even low-order survivor unless an explicit extra identity, ordering rule, or background restriction is imposed.
+- Status: Proven. For the rank-2 STF special class, the quadratic invariant `X2 = Tr(X^2)` is a new parity-even low-order survivor unless an explicit extra identity, ordering rule, or background restriction is imposed.
+- Status: Proven. The rank-2 STF class remains mixed-aware because the mixed quadratic witness `EX` already exists.
 - Status: Proven. For Class R0a, the bare scalar `S` itself is the smallest new survivor.
 - Status: Proven. For Class R0b, the smallest new survivors appear at weight `4`; a canonical witness is `dotS2`, and the full smallest-weight audited witness set is `\{DtS_B2,\ dotS2,\ DtS_E2,\ divEGradS,\ gradS2\}`.
 - Status: Proven. For Class R1, the first self witness is `V2` at weight `2`, while the first mixed witness is `EVV` at weight `3`.
-- Status: Proven. For Class Rodd+, the first self witness is `T2` at weight `2`, while the first mixed witness is `ETT` at weight `3`.
-- Status: Proven. For Class Reven4+, the first self witness is `Q2` at weight `2`; the manual audit already exhibited `EQQ` at weight `3`, and the later exhaustive check adds the omitted equally low mixed cubic `EEQ`.
-- Status: Proven. For Class Rodd5+, the first self witness is `U2` at weight `2`, while the first mixed witness is `EUU` at weight `3`.
+- Status: Proven. The attempted higher-rank STF tower theorem would say that every genuine parity-even STF rank-`L` primitive family with `L \ge 3` has first self witness `Y2` and first mixed witness `EYY`.
+- Status: Proven. The audited odd-rank instances `L = 3` and `L = 5` support that pattern, with witnesses `T2 / ETT` and `U2 / EUU`.
+- Status: Proven. The attempted tower theorem fails at the first audited even-rank member `L = 4`, because the mixed cubic `EEQ` survives alongside the manual `EQQ` witness.
 - Status: Proven. Therefore minimal-sector uniqueness is not stable under unsuppressed admission of these audited family classes.
 
 ## What The Theorem Does Not Say
@@ -39,6 +39,6 @@
 - Status: Proven. The positive theorem target must therefore be finite-family fixed-order collapse, not minimal-sector uniqueness.
 - Status: Proven. New family-admission audits are classification steps: a new witness reinforces the uniqueness no-go unless it also destroys fixed-order finiteness.
 - Status: Proven. The audited-set composition question is now closed positively for the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+, Rodd5+}` at `\Delta \le 4`.
-- Status: Proven. The current live bottleneck is no longer audited-set composition, but the omitted rank-4 contraction `EEQ` and the resulting high-rank exhaustiveness patch before any move to `Reven6+`.
+- Status: Proven. The current live bottleneck is the failed STF tower abstraction at rank `L = 4`: the mixed cubic `EEQ` survives, so the higher-rank STF branch must split before any move to `Reven6+`.
 - Status: Proven. [`../symbolic/family_witness_map.py`](../symbolic/family_witness_map.py) records the current witness table linking each audited family class to the exact theorem layer it obstructs.
 - Status: Proven. [`suppression-budget-theorem.md`](suppression-budget-theorem.md) and [`../symbolic/witness_threshold_map.py`](../symbolic/witness_threshold_map.py) now promote those witnesses into necessary suppression thresholds for the audited classes.

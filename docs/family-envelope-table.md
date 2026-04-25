@@ -26,4 +26,4 @@
 - Status: Proven. The excluded rows are outside the current theorem domain because the required assumptions already remove them.
 - Status: Proven. The remaining unaudited rows are the reason family-envelope completeness still fails under the current MVP assumptions.
 - Status: Proven. Among the remaining unaudited rows, `Reven6+` is now the smallest next envelope gate.
-- Status: Proven. The family-envelope census still points to `Reven6+` as the next unaudited gate, but the live theorem bottleneck is the omitted rank-4 contraction `EEQ` and the resulting high-rank exhaustiveness patch before any move there.
+- Status: Proven. The family-envelope census still points to `Reven6+` as the next unaudited gate, but the live theorem bottleneck is the failed STF tower abstraction at rank `L = 4`.

@@ -164,9 +164,9 @@ Status: Conjectural. The repository roadmap is organized around theorem progress
 5. Status: Proven. Audited-set composition is now re-closed for the further enlarged family set that includes `Reven4+`.
 6. Status: Proven. The live envelope gate `Rodd5+` is now resolved as a genuine new obstruction class rather than a trace descendant or derivative-generated artifact.
 7. Status: Proven. Audited-set composition is now re-closed for the further enlarged family set that includes `Rodd5+`.
-8. Status: Proven. The family-envelope census points to `Reven6+`, but the upward march is paused until the high-rank exhaustiveness patch is resolved.
-9. Status: Proven. The first explicit omitted high-rank contraction is the rank-4 mixed cubic `EEQ`; this is the immediate bounded audit bottleneck.
-10. Status: Conjectural. Push the positive branch from audited finite examples toward an abstract finite-family fixed-order collapse theorem only after the high-rank exhaustive bookkeeping layer is stable.
+8. Status: Proven. The family-envelope census points to `Reven6+`, but the upward march is paused because the attempted STF-tower abstraction fails at rank `L = 4`.
+9. Status: Proven. The exact failing reason is the extra mixed cubic `EEQ`, which prevents a single uniform higher-rank STF theorem for all `L \ge 3`.
+10. Status: Conjectural. Push the positive branch from audited finite examples toward an abstract finite-family fixed-order collapse theorem only after the higher-rank STF branch is split correctly.
 11. Status: Counterexample candidate. Promote the dominant loophole class only if it produces a genuine failure of the corrected finite-family collapse candidate rather than only another uniqueness obstruction.
 12. Status: Conjectural. Revisit the scalar `s_A` corollary only after the higher-dimensional sensitivity manifold statement is sharp.
 
