@@ -20,7 +20,7 @@
 - Status: Proven. The audited family set still does not yet exhaust the primitive-family envelope.
 - Status: Proven. The smallest remaining unaudited family class under the current MVP assumptions is now `Reven4+`, the local parity-even even-rank tensor class.
 - Status: Proven. Therefore the envelope census still does not upgrade the theorem to MVP-envelope sufficiency.
-- Status: Proven. The theorem-layer live bottleneck does not yet move to `Reven4+`, because the new `Rodd+` obstruction must first be folded into a fresh enlarged audited-set composition audit.
+- Status: Proven. The theorem-layer live bottleneck can now move to `Reven4+`, because the post-Rodd+ enlarged audited-set composition audit is now closed.
 
 ## Boundary
 

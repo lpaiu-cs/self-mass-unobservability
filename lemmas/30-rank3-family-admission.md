@@ -20,6 +20,7 @@
 - Status: Proven. [`../symbolic/r3_survivor_rank_check.py`](../symbolic/r3_survivor_rank_check.py) shows that the raw R3-extended survivor list is not linearly independent; it has nullity `2`.
 - Status: Proven. The first exact dependence relation already extracted is
   `-E2T2/2 + 2 E2T2_mixed_1 - E2T2_mixed_2 + E2T2_mixed_3 = 0`.
+- Status: Proven. The raw R3-extended survivor bookkeeping is therefore `21` raw labels, rank `19`, nullity `2`; no corrected rank-3 basis is claimed here yet.
 - Status: Proven. This linear-dependence correction does not rescue minimal-sector uniqueness, because the no-go already follows from the lower-weight witnesses `T2` and `ETT`.
 
 ## Theorem Layer Obstructed

@@ -421,8 +421,10 @@ def test_composition_attack_delta4() -> None:
     )
     assert summary.old_audited_set_joint_sufficient is True
     assert summary.old_smallest_surviving_cross_family is None
-    assert summary.enlarged_audited_set_joint_sufficient is True
-    assert summary.enlarged_smallest_surviving_cross_family is None
+    assert summary.post_r1_audited_set_joint_sufficient is True
+    assert summary.post_r1_smallest_surviving_cross_family is None
+    assert summary.post_rodd_audited_set_joint_sufficient is True
+    assert summary.post_rodd_smallest_surviving_cross_family is None
     assert tuple(case.combo_id for case in summary.cases) == (
         "R2+R0a",
         "R2+R0b",
@@ -435,19 +437,49 @@ def test_composition_attack_delta4() -> None:
         "R1+R2+R0b",
         "R1+R0a+R0b",
         "R2+R0a+R0b+R1",
+        "Rodd++R2",
+        "Rodd++R0a",
+        "Rodd++R0b",
+        "Rodd++R1",
+        "Rodd++R2+R0a",
+        "Rodd++R2+R0b",
+        "Rodd++R2+R1",
+        "Rodd++R0a+R0b",
+        "Rodd++R0a+R1",
+        "Rodd++R0b+R1",
+        "Rodd++R2+R0a+R0b",
+        "Rodd++R2+R0a+R1",
+        "Rodd++R2+R0b+R1",
+        "Rodd++R0a+R0b+R1",
+        "R2+R0a+R0b+R1+Rodd+",
     )
     assert tuple(case.case_scope for case in summary.cases) == (
         "old_audited_set",
         "old_audited_set",
         "old_audited_set",
         "old_audited_set",
-        "enlarged_audited_set",
-        "enlarged_audited_set",
-        "enlarged_audited_set",
-        "enlarged_audited_set",
-        "enlarged_audited_set",
-        "enlarged_audited_set",
-        "enlarged_audited_set",
+        "post_r1_audited_set",
+        "post_r1_audited_set",
+        "post_r1_audited_set",
+        "post_r1_audited_set",
+        "post_r1_audited_set",
+        "post_r1_audited_set",
+        "post_r1_audited_set",
+        "post_rodd_audited_set",
+        "post_rodd_audited_set",
+        "post_rodd_audited_set",
+        "post_rodd_audited_set",
+        "post_rodd_audited_set",
+        "post_rodd_audited_set",
+        "post_rodd_audited_set",
+        "post_rodd_audited_set",
+        "post_rodd_audited_set",
+        "post_rodd_audited_set",
+        "post_rodd_audited_set",
+        "post_rodd_audited_set",
+        "post_rodd_audited_set",
+        "post_rodd_audited_set",
+        "post_rodd_audited_set",
     )
     assert tuple(case.combination_kind for case in summary.cases) == (
         "pairwise",
@@ -461,6 +493,21 @@ def test_composition_attack_delta4() -> None:
         "triple",
         "triple",
         "quadruple",
+        "pairwise",
+        "pairwise",
+        "pairwise",
+        "pairwise",
+        "triple",
+        "triple",
+        "triple",
+        "triple",
+        "triple",
+        "triple",
+        "quadruple",
+        "quadruple",
+        "quadruple",
+        "quadruple",
+        "full-set",
     )
     assert all(case.sufficient for case in summary.cases)
     assert all(case.new_surviving_labels == () for case in summary.cases)

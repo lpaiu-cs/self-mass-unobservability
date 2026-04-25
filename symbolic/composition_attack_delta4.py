@@ -29,12 +29,39 @@ R1_BLOCK_TYPES = (
     BlockType("DtV", 4, 1, parity=0),
     BlockType("GradV", 4, 2, parity=1),
 )
+R3_BLOCK_TYPES = (
+    BlockType(
+        "T",
+        3,
+        3,
+        parity=0,
+        sym_groups=((0, 1), (1, 2)),
+        tracefree_pairs=((0, 1), (0, 2), (1, 2)),
+    ),
+    BlockType(
+        "DtT",
+        4,
+        3,
+        parity=0,
+        sym_groups=((0, 1), (1, 2)),
+        tracefree_pairs=((0, 1), (0, 2), (1, 2)),
+    ),
+    BlockType(
+        "GradT",
+        4,
+        4,
+        parity=1,
+        sym_groups=((1, 2), (2, 3)),
+        tracefree_pairs=((1, 2), (1, 3), (2, 3)),
+    ),
+)
 
 FAMILY_BLOCKS = {
     "R2": R2_BLOCK_TYPES,
     "R0a": R0A_BLOCK_TYPES,
     "R0b": R0B_BLOCK_TYPES,
     "R1": R1_BLOCK_TYPES,
+    "Rodd+": R3_BLOCK_TYPES,
 }
 
 FAMILY_THRESHOLDS = {
@@ -42,9 +69,22 @@ FAMILY_THRESHOLDS = {
     "R0a": "w_S >= 5, or explicit exclusion of bare S",
     "R0b": "w_D >= 3, or explicit rule removing the mixed derivative witnesses",
     "R1": "w_V >= 3, or explicit rule excluding or absorbing the primitive vector family",
+    "Rodd+": "w_T >= 3, or explicit rule excluding or absorbing the primitive rank-3 STF family",
 }
 
-FAMILY_NAMES = {"X", "S", "DtS", "GradS", "Dt2S", "V", "DtV", "GradV"}
+FAMILY_NAMES = {
+    "X",
+    "S",
+    "DtS",
+    "GradS",
+    "Dt2S",
+    "V",
+    "DtV",
+    "GradV",
+    "T",
+    "DtT",
+    "GradT",
+}
 
 OLD_AUDITED_SET_CASES = (
     ("R2", "R0a"),
@@ -53,7 +93,7 @@ OLD_AUDITED_SET_CASES = (
     ("R2", "R0a", "R0b"),
 )
 
-ENLARGED_AUDITED_SET_CASES = (
+POST_R1_AUDITED_SET_CASES = (
     ("R1", "R2"),
     ("R1", "R0a"),
     ("R1", "R0b"),
@@ -61,6 +101,24 @@ ENLARGED_AUDITED_SET_CASES = (
     ("R1", "R2", "R0b"),
     ("R1", "R0a", "R0b"),
     ("R2", "R0a", "R0b", "R1"),
+)
+
+POST_RODD_AUDITED_SET_CASES = (
+    ("Rodd+", "R2"),
+    ("Rodd+", "R0a"),
+    ("Rodd+", "R0b"),
+    ("Rodd+", "R1"),
+    ("Rodd+", "R2", "R0a"),
+    ("Rodd+", "R2", "R0b"),
+    ("Rodd+", "R2", "R1"),
+    ("Rodd+", "R0a", "R0b"),
+    ("Rodd+", "R0a", "R1"),
+    ("Rodd+", "R0b", "R1"),
+    ("Rodd+", "R2", "R0a", "R0b"),
+    ("Rodd+", "R2", "R0a", "R1"),
+    ("Rodd+", "R2", "R0b", "R1"),
+    ("Rodd+", "R0a", "R0b", "R1"),
+    ("R2", "R0a", "R0b", "R1", "Rodd+"),
 )
 
 
@@ -84,8 +142,10 @@ class CompositionSummary:
     baseline_survivors: tuple[str, ...]
     old_audited_set_joint_sufficient: bool
     old_smallest_surviving_cross_family: str | None
-    enlarged_audited_set_joint_sufficient: bool
-    enlarged_smallest_surviving_cross_family: str | None
+    post_r1_audited_set_joint_sufficient: bool
+    post_r1_smallest_surviving_cross_family: str | None
+    post_rodd_audited_set_joint_sufficient: bool
+    post_rodd_smallest_surviving_cross_family: str | None
     cases: tuple[CompositionCaseSummary, ...]
 
 
@@ -110,8 +170,10 @@ def classify_composition_contraction(
 
 
 def case_scope(families: tuple[str, ...]) -> str:
+    if "Rodd+" in families:
+        return "post_rodd_audited_set"
     if "R1" in families:
-        return "enlarged_audited_set"
+        return "post_r1_audited_set"
     return "old_audited_set"
 
 
@@ -123,6 +185,8 @@ def combination_kind(families: tuple[str, ...]) -> str:
         return "triple"
     if size == 4:
         return "quadruple"
+    if size == 5:
+        return "full-set"
     raise ValueError(f"Unsupported composition arity {size} for families {families}")
 
 
@@ -168,54 +232,59 @@ def composition_case_summary(
     )
 
 
+def _smallest_surviving_case(
+    cases: tuple[CompositionCaseSummary, ...],
+) -> CompositionCaseSummary | None:
+    return min(
+        (
+            case
+            for case in cases
+            if case.smallest_surviving_cross_family is not None
+            and case.smallest_surviving_cross_family_weight is not None
+        ),
+        key=lambda case: (
+            case.smallest_surviving_cross_family_weight,
+            case.smallest_surviving_cross_family or "",
+        ),
+        default=None,
+    )
+
+
 def composition_summary(max_weight: int = DELTA_MAX) -> CompositionSummary:
     old_cases = tuple(
         composition_case_summary(families, max_weight=max_weight)
         for families in OLD_AUDITED_SET_CASES
     )
-    enlarged_cases = tuple(
+    post_r1_cases = tuple(
         composition_case_summary(families, max_weight=max_weight)
-        for families in ENLARGED_AUDITED_SET_CASES
+        for families in POST_R1_AUDITED_SET_CASES
     )
-    old_smallest_case = min(
-        (
-            case
-            for case in old_cases
-            if case.smallest_surviving_cross_family is not None
-            and case.smallest_surviving_cross_family_weight is not None
-        ),
-        key=lambda case: (
-            case.smallest_surviving_cross_family_weight,
-            case.smallest_surviving_cross_family or "",
-        ),
-        default=None,
+    post_rodd_cases = tuple(
+        composition_case_summary(families, max_weight=max_weight)
+        for families in POST_RODD_AUDITED_SET_CASES
     )
-    enlarged_smallest_case = min(
-        (
-            case
-            for case in enlarged_cases
-            if case.smallest_surviving_cross_family is not None
-            and case.smallest_surviving_cross_family_weight is not None
-        ),
-        key=lambda case: (
-            case.smallest_surviving_cross_family_weight,
-            case.smallest_surviving_cross_family or "",
-        ),
-        default=None,
-    )
+    old_smallest_case = _smallest_surviving_case(old_cases)
+    post_r1_smallest_case = _smallest_surviving_case(post_r1_cases)
+    post_rodd_smallest_case = _smallest_surviving_case(post_rodd_cases)
     return CompositionSummary(
         baseline_survivors=baseline_survivor_labels(max_weight=max_weight),
         old_audited_set_joint_sufficient=all(case.sufficient for case in old_cases),
         old_smallest_surviving_cross_family=(
             None if old_smallest_case is None else old_smallest_case.smallest_surviving_cross_family
         ),
-        enlarged_audited_set_joint_sufficient=all(case.sufficient for case in enlarged_cases),
-        enlarged_smallest_surviving_cross_family=(
+        post_r1_audited_set_joint_sufficient=all(case.sufficient for case in post_r1_cases),
+        post_r1_smallest_surviving_cross_family=(
             None
-            if enlarged_smallest_case is None
-            else enlarged_smallest_case.smallest_surviving_cross_family
+            if post_r1_smallest_case is None
+            else post_r1_smallest_case.smallest_surviving_cross_family
         ),
-        cases=old_cases + enlarged_cases,
+        post_rodd_audited_set_joint_sufficient=all(case.sufficient for case in post_rodd_cases),
+        post_rodd_smallest_surviving_cross_family=(
+            None
+            if post_rodd_smallest_case is None
+            else post_rodd_smallest_case.smallest_surviving_cross_family
+        ),
+        cases=old_cases + post_r1_cases + post_rodd_cases,
     )
 
 
@@ -225,10 +294,21 @@ def composition_report(max_weight: int = DELTA_MAX) -> str:
         "key\tvalue",
         f"old_audited_set_joint_sufficient\t{str(summary.old_audited_set_joint_sufficient).lower()}",
         f"old_smallest_surviving_cross_family\t{summary.old_smallest_surviving_cross_family or 'none'}",
-        f"enlarged_audited_set_joint_sufficient\t{str(summary.enlarged_audited_set_joint_sufficient).lower()}",
         (
-            "enlarged_smallest_surviving_cross_family\t"
-            f"{summary.enlarged_smallest_surviving_cross_family or 'none'}"
+            "post_r1_audited_set_joint_sufficient\t"
+            f"{str(summary.post_r1_audited_set_joint_sufficient).lower()}"
+        ),
+        (
+            "post_r1_smallest_surviving_cross_family\t"
+            f"{summary.post_r1_smallest_surviving_cross_family or 'none'}"
+        ),
+        (
+            "post_rodd_audited_set_joint_sufficient\t"
+            f"{str(summary.post_rodd_audited_set_joint_sufficient).lower()}"
+        ),
+        (
+            "post_rodd_smallest_surviving_cross_family\t"
+            f"{summary.post_rodd_smallest_surviving_cross_family or 'none'}"
         ),
         "",
         (
