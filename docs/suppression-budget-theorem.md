@@ -47,8 +47,9 @@
 
 ## Audited-Set Joint Sufficiency At `\Delta_{\max} = 4`
 
-- Status: Proven. The current pairwise and triple composition audits for the audited family classes `R2`, `R0a`, and `R0b` find no new surviving operator beyond the baseline electric sector once the current thresholds are imposed together.
-- Status: Proven. Therefore the current thresholds are jointly sufficient for the currently audited family classes at `\Delta \le 4`.
+- Status: Proven. The old audited-set composition audits for `R2`, `R0a`, and `R0b` find no new surviving operator beyond the baseline electric sector once the current thresholds are imposed together.
+- Status: Proven. After the vector-family gate is audited, the enlarged pairwise, triple, and quadruple composition audits for `{R2, R0a, R0b, R1}` also find no new surviving operator beyond the baseline electric sector once the current thresholds are imposed together.
+- Status: Proven. Therefore the current thresholds are jointly sufficient for the enlarged audited family set `{R2, R0a, R0b, R1}` at `\Delta \le 4`.
 - Status: Proven. This audited-set joint sufficiency does not upgrade the theorem into a universal composition statement for arbitrary family catalogs.
 
 ## Boundary

@@ -400,15 +400,53 @@ def test_composition_attack_delta4() -> None:
         "gradE2",
         "mixedGradE2",
     )
+    assert summary.old_audited_set_joint_sufficient is True
+    assert summary.old_smallest_surviving_cross_family is None
+    assert summary.enlarged_audited_set_joint_sufficient is True
+    assert summary.enlarged_smallest_surviving_cross_family is None
     assert tuple(case.combo_id for case in summary.cases) == (
         "R2+R0a",
         "R2+R0b",
         "R0a+R0b",
         "R2+R0a+R0b",
+        "R1+R2",
+        "R1+R0a",
+        "R1+R0b",
+        "R1+R2+R0a",
+        "R1+R2+R0b",
+        "R1+R0a+R0b",
+        "R2+R0a+R0b+R1",
+    )
+    assert tuple(case.case_scope for case in summary.cases) == (
+        "old_audited_set",
+        "old_audited_set",
+        "old_audited_set",
+        "old_audited_set",
+        "enlarged_audited_set",
+        "enlarged_audited_set",
+        "enlarged_audited_set",
+        "enlarged_audited_set",
+        "enlarged_audited_set",
+        "enlarged_audited_set",
+        "enlarged_audited_set",
+    )
+    assert tuple(case.combination_kind for case in summary.cases) == (
+        "pairwise",
+        "pairwise",
+        "pairwise",
+        "triple",
+        "pairwise",
+        "pairwise",
+        "pairwise",
+        "triple",
+        "triple",
+        "triple",
+        "quadruple",
     )
     assert all(case.sufficient for case in summary.cases)
     assert all(case.new_surviving_labels == () for case in summary.cases)
     assert all(case.smallest_surviving_cross_family is None for case in summary.cases)
+    assert all(case.smallest_surviving_cross_family_weight is None for case in summary.cases)
 
 
 def test_family_envelope_census() -> None:

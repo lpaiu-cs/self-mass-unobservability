@@ -135,7 +135,7 @@ Status: Conjectural. The repository roadmap is organized around theorem progress
 
 ## Near-Term Sequence
 
-1. Status: Proven. The audited-set composition question is closed positively for the currently audited family classes `R2`, `R0a`, and `R0b`.
+1. Status: Proven. The enlarged audited-set composition question is now closed positively for the audited family classes `{R2, R0a, R0b, R1}`.
 2. Status: Proven. The rank-1 vector gate `R1` is now resolved as a genuine new obstruction class rather than an absorbed derivative block.
 3. Status: Conjectural. Audit the next family-envelope gate, currently the local parity-even rank-3 tensor class `Rodd+`.
 4. Status: Conjectural. Push the positive branch from audited finite examples toward an abstract finite-family fixed-order collapse theorem.
