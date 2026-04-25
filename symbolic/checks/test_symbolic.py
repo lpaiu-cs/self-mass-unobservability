@@ -26,6 +26,8 @@ from mixed_witness_map import mixed_witness_summary
 from primitive_family_attack import primitive_attack_summary
 from r1_sector_delta4 import r1_summary
 from r1_survivor_rank_check import r1_rank_summary
+from r3_sector_delta4 import r3_summary
+from r3_survivor_rank_check import r3_rank_summary
 from shift_scalar_sector_delta4 import shift_scalar_summary
 from threshold_formula_check import threshold_formula_summary
 from witness_threshold_map import witness_threshold_summary
@@ -302,6 +304,7 @@ def test_family_witness_map() -> None:
         "rank0_scalar_unsuppressed",
         "rank0_scalar_derivative_only",
         "rank1_vector",
+        "rank3_tensor_stf",
     )
     assert summary.entries[0].smallest_surviving_operator == "X2"
     assert summary.entries[0].audited_instance == "B2"
@@ -310,6 +313,8 @@ def test_family_witness_map() -> None:
     assert summary.entries[2].weight == 4
     assert summary.entries[3].smallest_surviving_operator == "V2"
     assert summary.entries[3].weight == 2
+    assert summary.entries[4].smallest_surviving_operator == "T2"
+    assert summary.entries[4].weight == 2
 
 
 def test_witness_threshold_map() -> None:
@@ -320,6 +325,7 @@ def test_witness_threshold_map() -> None:
         "rank0_scalar_unsuppressed",
         "rank0_scalar_derivative_only",
         "rank1_vector",
+        "rank3_tensor_stf",
     )
     assert summary.entries[0].self_only_lower_bound_at_delta4 == "w_X >= 3"
     assert summary.entries[0].necessary_threshold_at_delta4.startswith("w_X >= 4")
@@ -330,6 +336,8 @@ def test_witness_threshold_map() -> None:
     assert summary.entries[2].threshold_type == "tied-sharp"
     assert summary.entries[3].necessary_threshold_at_delta4.startswith("w_V >= 3")
     assert summary.entries[3].threshold_type == "self-only"
+    assert summary.entries[4].necessary_threshold_at_delta4.startswith("w_T >= 3")
+    assert summary.entries[4].threshold_type == "self-only"
     assert all(entry.sufficient_for_uniqueness is False for entry in summary.entries)
 
 
@@ -342,8 +350,9 @@ def test_mixed_witness_map() -> None:
         "rank0_scalar_unsuppressed",
         "rank0_scalar_derivative_only",
         "rank1_vector",
+        "rank3_tensor_stf",
     )
-    rank2, bare_scalar, derivative_only, vector = summary.entries
+    rank2, bare_scalar, derivative_only, vector, rank3 = summary.entries
     assert rank2.first_self_witness == "X2"
     assert rank2.first_mixed_witness == "EX"
     assert rank2.self_weight == rank2.mixed_weight == rank2.w_min == 2
@@ -362,6 +371,11 @@ def test_mixed_witness_map() -> None:
     assert vector.self_weight == vector.w_min == 2
     assert vector.mixed_weight == 3
     assert vector.sharpness_status == "self-only"
+    assert rank3.first_self_witness == "T2"
+    assert rank3.first_mixed_witness == "ETT"
+    assert rank3.self_weight == rank3.w_min == 2
+    assert rank3.mixed_weight == 3
+    assert rank3.sharpness_status == "self-only"
 
 
 def test_threshold_formula_check() -> None:
@@ -372,8 +386,9 @@ def test_threshold_formula_check() -> None:
         "rank0_scalar_unsuppressed",
         "rank0_scalar_derivative_only",
         "rank1_vector",
+        "rank3_tensor_stf",
     )
-    rank2, bare_scalar, derivative_only, vector = summary.entries
+    rank2, bare_scalar, derivative_only, vector, rank3 = summary.entries
     assert rank2.self_formula == "2*w_X"
     assert rank2.mixed_formula == "w_X + 1"
     assert rank2.threshold_type == "mixed-aware"
@@ -387,6 +402,10 @@ def test_threshold_formula_check() -> None:
     assert vector.mixed_formula == "2*w_V + 1"
     assert vector.w_min_formula == "2*w_V"
     assert vector.threshold_type == "self-only"
+    assert rank3.self_formula == "2*w_T"
+    assert rank3.mixed_formula == "2*w_T + 1"
+    assert rank3.w_min_formula == "2*w_T"
+    assert rank3.threshold_type == "self-only"
 
 
 def test_composition_attack_delta4() -> None:
@@ -457,14 +476,16 @@ def test_family_envelope_census() -> None:
         == "family-envelope completeness or the next smallest unaudited family obstruction"
     )
     assert summary.envelope_closed is False
-    assert summary.smallest_unaudited_class == "Rodd+"
+    assert summary.smallest_unaudited_class == "Reven4+"
     entries = {entry.class_id: entry for entry in summary.entries}
     assert entries["R2"].envelope_state == "audited"
     assert entries["R0a"].envelope_state == "audited"
     assert entries["R0b"].envelope_state == "audited"
     assert entries["R1"].envelope_state == "audited"
     assert entries["R1"].smallest_expected_witness_type == "V2 / EVV"
-    assert entries["Rodd+"].envelope_state == "still unaudited"
+    assert entries["Rodd+"].envelope_state == "audited"
+    assert entries["Rodd+"].smallest_expected_witness_type == "T2 / ETT"
+    assert entries["Reven4+"].envelope_state == "still unaudited"
     assert entries["Podd"].envelope_state == "excluded by explicit assumption"
 
 
@@ -507,6 +528,55 @@ def test_r1_survivor_rank_check() -> None:
     )
 
 
+def test_r3_sector_delta4() -> None:
+    summary = r3_summary()
+    assert summary.total_classes == 43
+    assert summary.first_self_witness == "T2"
+    assert summary.first_mixed_witness == "ETT"
+    assert summary.smallest_new_witness == "T2"
+    assert summary.new_surviving_labels == (
+        "T2",
+        "ETT",
+        "dotT2",
+        "ETDtT",
+        "E2T2",
+        "E2T2_mixed_1",
+        "E2T2_mixed_2",
+        "E2T2_mixed_3",
+        "divT2",
+        "gradT2",
+        "mixedGradT2",
+        "T2^2",
+        "T4_chain",
+        "T4_tetra",
+    )
+
+
+def test_r3_survivor_rank_check() -> None:
+    summary = r3_rank_summary()
+    assert summary.rank == 19
+    assert summary.count == 21
+    assert summary.nullity == 2
+    assert "E2T2_mixed_1" in str(summary.null_relation)
+    assert "E2T2_mixed_2" in str(summary.null_relation)
+    assert summary.new_labels == (
+        "T2",
+        "ETT",
+        "dotT2",
+        "ETDtT",
+        "E2T2",
+        "E2T2_mixed_1",
+        "E2T2_mixed_2",
+        "E2T2_mixed_3",
+        "divT2",
+        "gradT2",
+        "mixedGradT2",
+        "T2^2",
+        "T4_chain",
+        "T4_tetra",
+    )
+
+
 def main() -> None:
     test_symmetric_quadratic_jet()
     test_worldline_force_structure()
@@ -534,6 +604,8 @@ def main() -> None:
     test_family_envelope_census()
     test_r1_sector_delta4()
     test_r1_survivor_rank_check()
+    test_r3_sector_delta4()
+    test_r3_survivor_rank_check()
     print("symbolic checks passed")
 
 

@@ -74,12 +74,12 @@ def family_envelope_entries() -> tuple[FamilyEnvelopeEntry, ...]:
         ),
         FamilyEnvelopeEntry(
             class_id="Rodd+",
-            envelope_state="still unaudited",
+            envelope_state="audited",
             tensor_rank="odd >= 3",
             parity="even",
             derivative_character="unsuppressed local family",
-            smallest_expected_witness_type="Y2-type self contraction",
-            current_theorem_role="next smallest unaudited family gate",
+            smallest_expected_witness_type="T2 / ETT",
+            current_theorem_role="audited uniqueness obstruction and threshold class; enlarged audited-set composition re-close required next",
             rank_order=3,
         ),
         FamilyEnvelopeEntry(
@@ -89,7 +89,7 @@ def family_envelope_entries() -> tuple[FamilyEnvelopeEntry, ...]:
             parity="even",
             derivative_character="unsuppressed local family",
             smallest_expected_witness_type="Z2-type self contraction",
-            current_theorem_role="later unaudited family gate",
+            current_theorem_role="next smallest unaudited family gate after the Rodd+ composition re-close",
             rank_order=4,
         ),
         FamilyEnvelopeEntry(

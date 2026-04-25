@@ -133,13 +133,24 @@ Status: Conjectural. The repository roadmap is organized around theorem progress
 | M13.5 | Proven | [`../lemmas/27-rank1-threshold-formula.md`](../lemmas/27-rank1-threshold-formula.md) | The vector-family threshold is classified as self-only, mixed-aware, or tied-sharp. |
 | M13.6 | Proven | [`family-envelope-table.md`](family-envelope-table.md), [`theorem-A-freefall.md`](theorem-A-freefall.md), and [`failure-ledger.md`](failure-ledger.md) | The R1 row is resolved explicitly and the next live envelope gate is stated uniformly. |
 
+## M14: Rank-3 Family Gate
+
+| Item | Status | Deliverable | Exit condition |
+| --- | --- | --- | --- |
+| M14.1 | Proven | [`rank3-family-ordering.md`](rank3-family-ordering.md) | A genuine primitive rank-3 family is distinguished from derivative-generated rank-3 descendants already attached to audited families. |
+| M14.2 | Proven | [`../lemmas/30-rank3-family-admission.md`](../lemmas/30-rank3-family-admission.md) | The first self and mixed witnesses for the genuine rank-3 family are identified explicitly. |
+| M14.3 | Proven | [`../symbolic/r3_sector_delta4.py`](../symbolic/r3_sector_delta4.py) | The Rodd+-extended `\Delta \le 4` scalar sector enumerates without error and reports the smallest new witness. |
+| M14.4 | Proven | [`../symbolic/r3_survivor_rank_check.py`](../symbolic/r3_survivor_rank_check.py) | The raw Rodd+-extended survivor list is checked for linear dependence whenever multiple new survivors appear. |
+| M14.5 | Proven | [`../lemmas/31-rank3-threshold-formula.md`](../lemmas/31-rank3-threshold-formula.md) | The rank-3 family threshold is classified as self-only, mixed-aware, or tied-sharp. |
+| M14.6 | Proven | [`family-envelope-table.md`](family-envelope-table.md), [`theorem-A-freefall.md`](theorem-A-freefall.md), and [`failure-ledger.md`](failure-ledger.md) | The Rodd+ row is resolved explicitly and the post-audit live bottleneck is stated uniformly. |
+
 ## Near-Term Sequence
 
 1. Status: Proven. The enlarged audited-set composition question is now closed positively for the audited family classes `{R2, R0a, R0b, R1}`.
-2. Status: Proven. The rank-1 vector gate `R1` is now resolved as a genuine new obstruction class rather than an absorbed derivative block.
-3. Status: Conjectural. Audit the next family-envelope gate, currently the local parity-even rank-3 tensor class `Rodd+`.
-4. Status: Conjectural. Push the positive branch from audited finite examples toward an abstract finite-family fixed-order collapse theorem.
-5. Status: Conjectural. Decide whether any further mixed-trace or gradient identity should be introduced explicitly, rather than silently collapsing enlarged-sector operators.
+2. Status: Proven. The rank-3 family gate `Rodd+` is now resolved as a genuine new obstruction class rather than an absorbed derivative block.
+3. Status: Conjectural. Re-close audited-set composition for the further enlarged family set that now includes `Rodd+`.
+4. Status: Conjectural. Only after that re-close, decide whether the live envelope gate can move to `Reven4+`.
+5. Status: Conjectural. Push the positive branch from audited finite examples toward an abstract finite-family fixed-order collapse theorem.
 6. Status: Counterexample candidate. Promote the dominant loophole class only if it produces a genuine failure of the corrected finite-family collapse candidate rather than only another uniqueness obstruction.
 7. Status: Conjectural. Revisit the scalar `s_A` corollary only after the higher-dimensional sensitivity manifold statement is sharp.
 

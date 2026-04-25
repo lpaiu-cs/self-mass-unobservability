@@ -43,6 +43,7 @@
 - Status: Proven. For unsuppressed rank-0 scalar-family admission, the self witness `S` appears before the first mixed witness `SE2`.
 - Status: Proven. For derivative-only or shift-symmetric scalar-family admission, the self witness `dotS2` and the mixed witness `DtS_E2` both first appear at weight `4`.
 - Status: Proven. For a genuine parity-even rank-1 vector-family admission, the self witness `V2` appears at weight `2` and the first mixed witness `EVV` appears at weight `3`.
+- Status: Proven. For a genuine parity-even rank-3 STF family admission, the self witness `T2` appears at weight `2` and the first mixed witness `ETT` appears at weight `3`.
 - Status: Proven. Therefore a stronger physically justified minimal-sector theorem is already on the no-go branch unless explicit suppression, ordering, or background-restriction assumptions are added family by family.
 
 ## Scope Separation
@@ -72,9 +73,10 @@
 16. Status: Proven. [`budget-composition-theorem.md`](budget-composition-theorem.md), [`../lemmas/22-pairwise-composition-audit.md`](../lemmas/22-pairwise-composition-audit.md), [`../lemmas/23-three-family-composition-audit.md`](../lemmas/23-three-family-composition-audit.md), and [`../symbolic/composition_attack_delta4.py`](../symbolic/composition_attack_delta4.py) first closed the old audited-set composition layer for `R2`, `R0a`, and `R0b`.
 17. Status: Proven. [`vector-family-ordering.md`](vector-family-ordering.md), [`../lemmas/26-rank1-family-admission.md`](../lemmas/26-rank1-family-admission.md), [`../lemmas/27-rank1-threshold-formula.md`](../lemmas/27-rank1-threshold-formula.md), [`../symbolic/r1_sector_delta4.py`](../symbolic/r1_sector_delta4.py), and [`../symbolic/r1_survivor_rank_check.py`](../symbolic/r1_survivor_rank_check.py) show that a genuine local parity-even rank-1 vector family is a real obstruction class rather than a derivative-generated artifact.
 18. Status: Proven. [`../lemmas/28-r1-pairwise-composition-audit.md`](../lemmas/28-r1-pairwise-composition-audit.md), [`../lemmas/29-r1-augmented-composition-audit.md`](../lemmas/29-r1-augmented-composition-audit.md), [`composition-status.md`](composition-status.md), and [`../symbolic/composition_attack_delta4.py`](../symbolic/composition_attack_delta4.py) re-close the pairwise, triple, and quadruple composition layer for the enlarged audited family set `{R2, R0a, R0b, R1}`.
-19. Status: Proven. [`family-envelope-theorem.md`](family-envelope-theorem.md), [`family-envelope-table.md`](family-envelope-table.md), [`../lemmas/24-family-envelope-census.md`](../lemmas/24-family-envelope-census.md), [`../lemmas/25-next-unaudited-family-gate.md`](../lemmas/25-next-unaudited-family-gate.md), and [`../symbolic/family_envelope_census.py`](../symbolic/family_envelope_census.py) now show that the enlarged audited family set still does not yet upgrade to MVP-envelope sufficiency because higher-rank tensor classes remain beyond the resolved vector gate.
-20. Status: Proven. The enlarged audited-set composition closes positively for `{R2, R0a, R0b, R1}`, so the next live gate returns to family-envelope completeness rather than post-R1 composition.
-21. Status: Conjectural. The remaining positive burden is to prove the finite-family fixed-order collapse statement for arbitrary explicit admitted catalogs rather than just the audited examples.
+19. Status: Proven. [`family-envelope-theorem.md`](family-envelope-theorem.md), [`family-envelope-table.md`](family-envelope-table.md), [`../lemmas/24-family-envelope-census.md`](../lemmas/24-family-envelope-census.md), [`../lemmas/25-next-unaudited-family-gate.md`](../lemmas/25-next-unaudited-family-gate.md), and [`../symbolic/family_envelope_census.py`](../symbolic/family_envelope_census.py) separate audited-set sufficiency from envelope completeness and identify the odd-rank tensor gate beyond the resolved vector gate.
+20. Status: Proven. [`rank3-family-ordering.md`](rank3-family-ordering.md), [`../lemmas/30-rank3-family-admission.md`](../lemmas/30-rank3-family-admission.md), [`../lemmas/31-rank3-threshold-formula.md`](../lemmas/31-rank3-threshold-formula.md), [`../symbolic/r3_sector_delta4.py`](../symbolic/r3_sector_delta4.py), and [`../symbolic/r3_survivor_rank_check.py`](../symbolic/r3_survivor_rank_check.py) now show that `Rodd+` is a genuine new obstruction class rather than a derivative-generated artifact.
+21. Status: Proven. The post-Rodd+ live positive burden is no longer family-envelope census alone; it is a fresh enlarged audited-set composition re-close that includes the new rank-3 threshold.
+22. Status: Conjectural. The remaining broader positive burden is to prove the finite-family fixed-order collapse statement for arbitrary explicit admitted catalogs rather than just the audited examples.
 
 ## Current Verdict
 
@@ -86,13 +88,16 @@
 - Status: Proven. No audited family class is currently harmless without extra assumptions.
 - Status: Proven. The vector-family clarification shows that derivative-generated vector blocks do not absorb a genuine primitive family `V_i`.
 - Status: Proven. The smallest explicit vector-family obstruction is `V2`, with first mixed witness `EVV`.
-- Status: Proven. Necessary suppression budgets are explicit for the audited classes: for rank-2 STF families the self-only lower bound is `w_X \ge 3` but the mixed-aware necessary threshold is `w_X \ge 4` unless an explicit `EX = 0`-type rule removes the mixed quadratic witness; for bare scalar families the self-only sharp threshold is `w_S \ge 5`; for derivative-only scalar families the tied-sharp threshold is `w_D \ge 3`; for genuine vector families the self-only sharp threshold is `w_V \ge 3`.
+- Status: Proven. The rank-3 clarification shows that derivative-generated rank-3 blocks do not absorb a genuine primitive STF family `T_{ijk}`.
+- Status: Proven. The smallest explicit rank-3 obstruction is `T2`, with first mixed witness `ETT`.
+- Status: Proven. Necessary suppression budgets are explicit for the audited classes: for rank-2 STF families the self-only lower bound is `w_X \ge 3` but the mixed-aware necessary threshold is `w_X \ge 4` unless an explicit `EX = 0`-type rule removes the mixed quadratic witness; for bare scalar families the self-only sharp threshold is `w_S \ge 5`; for derivative-only scalar families the tied-sharp threshold is `w_D \ge 3`; for genuine vector families the self-only sharp threshold is `w_V \ge 3`; for genuine rank-3 STF families the self-only sharp threshold is `w_T \ge 3`.
 - Status: Proven. The pairwise, triple, and quadruple composition audits find no surviving operator beyond the baseline electric sector once the current audited thresholds are imposed across the enlarged audited family set `{R2, R0a, R0b, R1}`.
 - Status: Proven. Therefore the current thresholds are jointly sufficient for the enlarged audited family set `{R2, R0a, R0b, R1}` at `\Delta \le 4`, and no explicit post-R1 cross-family obstruction has appeared in the audited set.
-- Status: Proven. The current live bottleneck is family-envelope completeness or the next smallest unaudited family obstruction, currently the local parity-even rank-3 tensor class `Rodd+`.
-- Status: Proven. The current MVP assumptions do not yet close the family envelope.
-- Status: Proven. The smallest remaining unaudited family class is now a local parity-even rank-3 tensor family, so the theorem remains family-envelope incomplete at `\Delta \le 4`.
-- Status: Conjectural. The broad positive target remains finite-family fixed-order collapse, and it remains plausible because the audited enlarged family catalogs still close finitely at `\Delta \le 4`.
+- Status: Proven. The raw R3-extended survivor list is not linearly independent; its first exact quartic mixed dependence relation is `-E2T2/2 + 2 E2T2_mixed_1 - E2T2_mixed_2 + E2T2_mixed_3 = 0`.
+- Status: Proven. The current live bottleneck is the `Rodd+` obstruction: a genuine parity-even rank-3 STF family yields smallest witness `T2`, so the enlarged audited set must be re-closed before the theorem can move to the next envelope gate.
+- Status: Proven. The current MVP assumptions still do not close the family envelope.
+- Status: Proven. The family-envelope census now points to `Reven4+` as the next smallest unaudited class, but the theorem does not move there yet because the `Rodd+` composition re-close is still pending.
+- Status: Conjectural. The broad positive target remains finite-family fixed-order collapse, and it remains plausible because the audited enlarged family catalogs, including the current rank-3 extension, still close finitely at `\Delta \le 4`.
 
 ## Dependencies
 
@@ -123,6 +128,8 @@
 - Status: Proven. [`../lemmas/27-rank1-threshold-formula.md`](../lemmas/27-rank1-threshold-formula.md)
 - Status: Proven. [`../lemmas/28-r1-pairwise-composition-audit.md`](../lemmas/28-r1-pairwise-composition-audit.md)
 - Status: Proven. [`../lemmas/29-r1-augmented-composition-audit.md`](../lemmas/29-r1-augmented-composition-audit.md)
+- Status: Proven. [`../lemmas/30-rank3-family-admission.md`](../lemmas/30-rank3-family-admission.md)
+- Status: Proven. [`../lemmas/31-rank3-threshold-formula.md`](../lemmas/31-rank3-threshold-formula.md)
 - Status: Conjectural. [`conditional-collapse-lemma.md`](conditional-collapse-lemma.md)
 - Status: Conjectural. [`eb-conditional-collapse.md`](eb-conditional-collapse.md)
 - Status: Conjectural. [`power-counting.md`](power-counting.md)
@@ -130,6 +137,7 @@
 - Status: Proven. [`family-admission-theorem.md`](family-admission-theorem.md)
 - Status: Proven. [`family-envelope-theorem.md`](family-envelope-theorem.md)
 - Status: Proven. [`family-envelope-table.md`](family-envelope-table.md)
+- Status: Proven. [`rank3-family-ordering.md`](rank3-family-ordering.md)
 - Status: Proven. [`vector-family-ordering.md`](vector-family-ordering.md)
 - Status: Proven. [`mixed-witness-thresholds.md`](mixed-witness-thresholds.md)
 - Status: Proven. [`threshold-formulas.md`](threshold-formulas.md)
@@ -151,6 +159,8 @@
 - Status: Proven. [`../symbolic/family_envelope_census.py`](../symbolic/family_envelope_census.py)
 - Status: Proven. [`../symbolic/r1_sector_delta4.py`](../symbolic/r1_sector_delta4.py)
 - Status: Proven. [`../symbolic/r1_survivor_rank_check.py`](../symbolic/r1_survivor_rank_check.py)
+- Status: Proven. [`../symbolic/r3_sector_delta4.py`](../symbolic/r3_sector_delta4.py)
+- Status: Proven. [`../symbolic/r3_survivor_rank_check.py`](../symbolic/r3_survivor_rank_check.py)
 
 ## Failure Triggers
 
