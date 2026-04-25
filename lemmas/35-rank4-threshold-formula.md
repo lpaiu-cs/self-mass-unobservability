@@ -42,4 +42,4 @@ W_{\min}(Reven4+; w_Q) = \min(2 w_Q,\ 2 w_Q + 1) = 2 w_Q.
 ## Boundary
 
 - Status: Proven. This threshold theorem is class-limited to the audited genuine STF rank-4 family.
-- Status: Proven. Meeting the threshold does not yet prove harmless composition; a new enlarged audited-set composition re-close is required next.
+- Status: Proven. Meeting the threshold does not by itself prove enlarged-set harmlessness; the separate composition closure for the enlarged audited set is recorded in [`36-r4-pairwise-composition-audit.md`](36-r4-pairwise-composition-audit.md) and [`37-r4-augmented-composition-audit.md`](37-r4-augmented-composition-audit.md).

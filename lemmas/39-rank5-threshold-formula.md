@@ -24,4 +24,4 @@
 ## Boundary
 
 - Status: Proven. This threshold is necessary for the audited rank-5 family class only; it is not sufficient for harmless enlarged-set composition.
-- Status: Proven. Meeting `w_U \ge 3` does not by itself re-close the enlarged audited-set composition layer that now includes `Rodd5+`; that audit remains the next theorem task.
+- Status: Proven. Meeting `w_U \ge 3` does not by itself prove enlarged-set harmlessness; the separate composition closure for the enlarged audited set is recorded in [`40-r5-pairwise-composition-audit.md`](40-r5-pairwise-composition-audit.md) and [`41-r5-augmented-composition-audit.md`](41-r5-augmented-composition-audit.md).

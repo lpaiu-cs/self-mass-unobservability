@@ -16,4 +16,4 @@
 
 - Status: Proven. The physical question is whether unsuppressed admission of a genuine primitive rank-5 family produces a new `\Delta \le 4` survivor beyond the enlarged audited-set baseline `{R2, R0a, R0b, R1, Rodd+, Reven4+}`.
 - Status: Proven. If such a survivor appears, it obstructs promotion of the current enlarged audited-set result to MVP-envelope sufficiency.
-- Status: Proven. If `Rodd5+` is confirmed as a genuine obstruction class, the next theorem task is not a jump to `Reven6+`, but a post-`Rodd5+` enlarged audited-set composition re-close.
+- Status: Proven. `Rodd5+` is now confirmed as a genuine obstruction class, and the required post-`Rodd5+` enlarged audited-set composition re-close is recorded separately in [`../lemmas/40-r5-pairwise-composition-audit.md`](../lemmas/40-r5-pairwise-composition-audit.md) and [`../lemmas/41-r5-augmented-composition-audit.md`](../lemmas/41-r5-augmented-composition-audit.md).

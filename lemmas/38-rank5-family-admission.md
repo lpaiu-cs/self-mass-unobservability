@@ -23,9 +23,9 @@
 ## Theorem Layer Obstructed
 
 - Status: Proven. Unsuppressed admission of `Rodd5+` obstructs promotion of the enlarged audited-set result `{R2, R0a, R0b, R1, Rodd+, Reven4+}` to MVP-envelope sufficiency.
-- Status: Proven. The next theorem-layer task is a post-`Rodd5+` enlarged audited-set composition re-close at `\Delta \le 4`.
+- Status: Proven. The next theorem-layer task after this admission was a post-`Rodd5+` enlarged audited-set composition re-close at `\Delta \le 4`, now recorded separately in [`40-r5-pairwise-composition-audit.md`](40-r5-pairwise-composition-audit.md) and [`41-r5-augmented-composition-audit.md`](41-r5-augmented-composition-audit.md).
 
 ## Boundary
 
 - Status: Proven. This lemma does not claim that the raw `23`-label `Rodd5+` survivor list is a corrected basis.
-- Status: Proven. This lemma does not move the live bottleneck past `Rodd5+`.
+- Status: Proven. This lemma by itself does not move the live bottleneck past `Rodd5+`; that required the separate composition closure recorded in Lemmas 40 and 41.

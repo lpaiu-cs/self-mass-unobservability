@@ -81,7 +81,8 @@
 22. Status: Proven. [`rank4-family-ordering.md`](rank4-family-ordering.md), [`../lemmas/34-rank4-family-admission.md`](../lemmas/34-rank4-family-admission.md), [`../lemmas/35-rank4-threshold-formula.md`](../lemmas/35-rank4-threshold-formula.md), [`../symbolic/r4_sector_delta4.py`](../symbolic/r4_sector_delta4.py), and [`../symbolic/r4_survivor_rank_check.py`](../symbolic/r4_survivor_rank_check.py) now show that `Reven4+` is a genuine new obstruction class rather than a trace-descended or derivative-generated artifact.
 23. Status: Proven. [`../lemmas/36-r4-pairwise-composition-audit.md`](../lemmas/36-r4-pairwise-composition-audit.md), [`../lemmas/37-r4-augmented-composition-audit.md`](../lemmas/37-r4-augmented-composition-audit.md), [`composition-status.md`](composition-status.md), and [`../symbolic/composition_attack_delta4.py`](../symbolic/composition_attack_delta4.py) re-close the pairwise, triple, quadruple, quintuple, and six-family composition layer for the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+}`.
 24. Status: Proven. [`rank5-family-ordering.md`](rank5-family-ordering.md), [`../lemmas/38-rank5-family-admission.md`](../lemmas/38-rank5-family-admission.md), [`../lemmas/39-rank5-threshold-formula.md`](../lemmas/39-rank5-threshold-formula.md), [`../symbolic/r5_sector_delta4.py`](../symbolic/r5_sector_delta4.py), and [`../symbolic/r5_survivor_rank_check.py`](../symbolic/r5_survivor_rank_check.py) now show that `Rodd5+` is a genuine new obstruction class rather than a trace-descended or derivative-generated artifact.
-25. Status: Conjectural. The next broader positive burden is a post-`Rodd5+` enlarged audited-set composition re-close before the theorem can move to the next census gate `Reven6+`.
+25. Status: Proven. [`../lemmas/40-r5-pairwise-composition-audit.md`](../lemmas/40-r5-pairwise-composition-audit.md), [`../lemmas/41-r5-augmented-composition-audit.md`](../lemmas/41-r5-augmented-composition-audit.md), [`composition-status.md`](composition-status.md), and [`../symbolic/composition_attack_delta4.py`](../symbolic/composition_attack_delta4.py) re-close the pairwise, triple, quadruple, quintuple, six-family, and seven-family composition layer for the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+, Rodd5+}`.
+26. Status: Conjectural. The next broader positive burden is family-envelope completeness and the next census gate `Reven6+`.
 
 ## Current Verdict
 
@@ -111,9 +112,10 @@
 - Status: Conjectural. The raw R5-extended `23`-element survivor list has sample-stable rank `19` and nullity `4`, and it is bookkeeping only rather than a corrected basis statement.
 - Status: Proven. The current MVP assumptions still do not close the family envelope.
 - Status: Proven. The post-Reven4+ pairwise, triple, quadruple, quintuple, and six-family composition audits find no surviving operator beyond the baseline electric sector once the current audited thresholds are imposed across the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+}`.
-- Status: Proven. Therefore the current thresholds are jointly sufficient for the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+}` at `\Delta \le 4`, and no explicit post-Reven4+ cross-family obstruction has appeared in the audited set.
-- Status: Proven. The family-envelope census now points to `Reven6+` as the next smallest unaudited class, but theorem progress cannot move there yet because the newly audited `Rodd5+` class still forces a composition re-close first.
-- Status: Proven. The current live bottleneck is the `Rodd5+` obstruction and the required post-`Rodd5+` enlarged audited-set composition re-close at `\Delta \le 4`.
+- Status: Proven. The post-Rodd5+ pairwise, triple, quadruple, quintuple, six-family, and seven-family composition audits likewise find no surviving operator beyond the baseline electric sector once the current audited thresholds are imposed across the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+, Rodd5+}`.
+- Status: Proven. Therefore the current thresholds are jointly sufficient for the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+, Rodd5+}` at `\Delta \le 4`, and no explicit post-Rodd5+ cross-family obstruction has appeared in the audited set.
+- Status: Proven. The family-envelope census now points to `Reven6+` as the next smallest unaudited class, and the post-`Rodd5+` composition re-close no longer blocks theorem progress from moving back to that gate.
+- Status: Proven. The current live bottleneck is family-envelope completeness or the next smallest unaudited family obstruction, currently `Reven6+`.
 - Status: Conjectural. The broad positive target remains finite-family fixed-order collapse, and it remains plausible because the audited enlarged family catalogs, including the current rank-5 extension, still close finitely at `\Delta \le 4`.
 
 ## Dependencies
@@ -155,6 +157,8 @@
 - Status: Proven. [`../lemmas/37-r4-augmented-composition-audit.md`](../lemmas/37-r4-augmented-composition-audit.md)
 - Status: Proven. [`../lemmas/38-rank5-family-admission.md`](../lemmas/38-rank5-family-admission.md)
 - Status: Proven. [`../lemmas/39-rank5-threshold-formula.md`](../lemmas/39-rank5-threshold-formula.md)
+- Status: Proven. [`../lemmas/40-r5-pairwise-composition-audit.md`](../lemmas/40-r5-pairwise-composition-audit.md)
+- Status: Proven. [`../lemmas/41-r5-augmented-composition-audit.md`](../lemmas/41-r5-augmented-composition-audit.md)
 - Status: Conjectural. [`conditional-collapse-lemma.md`](conditional-collapse-lemma.md)
 - Status: Conjectural. [`eb-conditional-collapse.md`](eb-conditional-collapse.md)
 - Status: Conjectural. [`power-counting.md`](power-counting.md)

@@ -82,6 +82,65 @@ R4_BLOCK_TYPES = (
         tracefree_pairs=((1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)),
     ),
 )
+R5_BLOCK_TYPES = (
+    BlockType(
+        "U",
+        3,
+        5,
+        parity=0,
+        sym_groups=((0, 1), (1, 2), (2, 3), (3, 4)),
+        tracefree_pairs=(
+            (0, 1),
+            (0, 2),
+            (0, 3),
+            (0, 4),
+            (1, 2),
+            (1, 3),
+            (1, 4),
+            (2, 3),
+            (2, 4),
+            (3, 4),
+        ),
+    ),
+    BlockType(
+        "DtU",
+        4,
+        5,
+        parity=0,
+        sym_groups=((0, 1), (1, 2), (2, 3), (3, 4)),
+        tracefree_pairs=(
+            (0, 1),
+            (0, 2),
+            (0, 3),
+            (0, 4),
+            (1, 2),
+            (1, 3),
+            (1, 4),
+            (2, 3),
+            (2, 4),
+            (3, 4),
+        ),
+    ),
+    BlockType(
+        "GradU",
+        4,
+        6,
+        parity=1,
+        sym_groups=((1, 2), (2, 3), (3, 4), (4, 5)),
+        tracefree_pairs=(
+            (1, 2),
+            (1, 3),
+            (1, 4),
+            (1, 5),
+            (2, 3),
+            (2, 4),
+            (2, 5),
+            (3, 4),
+            (3, 5),
+            (4, 5),
+        ),
+    ),
+)
 
 FAMILY_BLOCKS = {
     "R2": R2_BLOCK_TYPES,
@@ -90,6 +149,7 @@ FAMILY_BLOCKS = {
     "R1": R1_BLOCK_TYPES,
     "Rodd+": R3_BLOCK_TYPES,
     "Reven4+": R4_BLOCK_TYPES,
+    "Rodd5+": R5_BLOCK_TYPES,
 }
 
 FAMILY_THRESHOLDS = {
@@ -99,6 +159,7 @@ FAMILY_THRESHOLDS = {
     "R1": "w_V >= 3, or explicit rule excluding or absorbing the primitive vector family",
     "Rodd+": "w_T >= 3, or explicit rule excluding or absorbing the primitive rank-3 STF family",
     "Reven4+": "w_Q >= 3, or explicit rule excluding or absorbing the primitive rank-4 STF family",
+    "Rodd5+": "w_U >= 3, or explicit rule excluding or absorbing the primitive rank-5 STF family",
 }
 
 FAMILY_NAMES = {
@@ -116,6 +177,9 @@ FAMILY_NAMES = {
     "Q",
     "DtQ",
     "GradQ",
+    "U",
+    "DtU",
+    "GradU",
 }
 
 PRE_R1_AUDITED_SET_CASES = (
@@ -155,31 +219,65 @@ PRE_REVEN_AUDITED_SET_CASES = (
 
 PRE_REVEN_BASE_FAMILIES = ("R2", "R0a", "R0b", "R1", "Rodd+")
 
-POST_REVEN_PAIRWISE_CASES = (
+PRE_RODD5_PAIRWISE_CASES = (
     ("Reven4+", "R2"),
     ("Reven4+", "R0a"),
     ("Reven4+", "R0b"),
     ("Reven4+", "R1"),
     ("Reven4+", "Rodd+"),
 )
-POST_REVEN_TRIPLE_CASES = tuple(
+PRE_RODD5_TRIPLE_CASES = tuple(
     ("Reven4+",) + combo for combo in combinations(PRE_REVEN_BASE_FAMILIES, 2)
 )
-POST_REVEN_QUADRUPLE_CASES = tuple(
+PRE_RODD5_QUADRUPLE_CASES = tuple(
     ("Reven4+",) + combo for combo in combinations(PRE_REVEN_BASE_FAMILIES, 3)
 )
-POST_REVEN_QUINTUPLE_CASES = tuple(
+PRE_RODD5_QUINTUPLE_CASES = tuple(
     ("Reven4+",) + combo for combo in combinations(PRE_REVEN_BASE_FAMILIES, 4)
 )
-POST_REVEN_FULL_SET_CASES = (
+PRE_RODD5_FULL_SET_CASES = (
     PRE_REVEN_BASE_FAMILIES + ("Reven4+",),
 )
-POST_REVEN_AUDITED_SET_CASES = (
-    POST_REVEN_PAIRWISE_CASES
-    + POST_REVEN_TRIPLE_CASES
-    + POST_REVEN_QUADRUPLE_CASES
-    + POST_REVEN_QUINTUPLE_CASES
-    + POST_REVEN_FULL_SET_CASES
+PRE_RODD5_AUDITED_SET_CASES = (
+    PRE_RODD5_PAIRWISE_CASES
+    + PRE_RODD5_TRIPLE_CASES
+    + PRE_RODD5_QUADRUPLE_CASES
+    + PRE_RODD5_QUINTUPLE_CASES
+    + PRE_RODD5_FULL_SET_CASES
+)
+
+PRE_RODD5_BASE_FAMILIES = PRE_REVEN_BASE_FAMILIES + ("Reven4+",)
+
+POST_RODD5_PAIRWISE_CASES = (
+    ("Rodd5+", "R2"),
+    ("Rodd5+", "R0a"),
+    ("Rodd5+", "R0b"),
+    ("Rodd5+", "R1"),
+    ("Rodd5+", "Rodd+"),
+    ("Rodd5+", "Reven4+"),
+)
+POST_RODD5_TRIPLE_CASES = tuple(
+    ("Rodd5+",) + combo for combo in combinations(PRE_RODD5_BASE_FAMILIES, 2)
+)
+POST_RODD5_QUADRUPLE_CASES = tuple(
+    ("Rodd5+",) + combo for combo in combinations(PRE_RODD5_BASE_FAMILIES, 3)
+)
+POST_RODD5_QUINTUPLE_CASES = tuple(
+    ("Rodd5+",) + combo for combo in combinations(PRE_RODD5_BASE_FAMILIES, 4)
+)
+POST_RODD5_SIX_FAMILY_CASES = tuple(
+    ("Rodd5+",) + combo for combo in combinations(PRE_RODD5_BASE_FAMILIES, 5)
+)
+POST_RODD5_FULL_SET_CASES = (
+    PRE_RODD5_BASE_FAMILIES + ("Rodd5+",),
+)
+POST_RODD5_AUDITED_SET_CASES = (
+    POST_RODD5_PAIRWISE_CASES
+    + POST_RODD5_TRIPLE_CASES
+    + POST_RODD5_QUADRUPLE_CASES
+    + POST_RODD5_QUINTUPLE_CASES
+    + POST_RODD5_SIX_FAMILY_CASES
+    + POST_RODD5_FULL_SET_CASES
 )
 
 
@@ -207,8 +305,10 @@ class CompositionSummary:
     pre_rodd_smallest_surviving_cross_family: str | None
     pre_reven_audited_set_joint_sufficient: bool
     pre_reven_smallest_surviving_cross_family: str | None
-    post_reven_audited_set_joint_sufficient: bool
-    post_reven_smallest_surviving_cross_family: str | None
+    pre_rodd5_audited_set_joint_sufficient: bool
+    pre_rodd5_smallest_surviving_cross_family: str | None
+    post_rodd5_audited_set_joint_sufficient: bool
+    post_rodd5_smallest_surviving_cross_family: str | None
     cases: tuple[CompositionCaseSummary, ...]
 
 
@@ -233,8 +333,10 @@ def classify_composition_contraction(
 
 
 def case_scope(families: tuple[str, ...]) -> str:
+    if "Rodd5+" in families:
+        return "post_rodd5_audited_set"
     if "Reven4+" in families:
-        return "post_reven_audited_set"
+        return "pre_rodd5_audited_set"
     if "Rodd+" in families:
         return "pre_reven_audited_set"
     if "R1" in families:
@@ -243,7 +345,32 @@ def case_scope(families: tuple[str, ...]) -> str:
 
 
 def combination_kind(families: tuple[str, ...]) -> str:
+    scope = case_scope(families)
     size = len(families)
+    if scope == "post_rodd5_audited_set":
+        if size == 2:
+            return "pairwise"
+        if size == 3:
+            return "triple"
+        if size == 4:
+            return "quadruple"
+        if size == 5:
+            return "quintuple"
+        if size == 6:
+            return "six-family"
+        if size == 7:
+            return "full-set"
+    if scope == "pre_rodd5_audited_set":
+        if size == 2:
+            return "pairwise"
+        if size == 3:
+            return "triple"
+        if size == 4:
+            return "quadruple"
+        if size == 5:
+            return "quintuple"
+        if size == 6:
+            return "full-set"
     if size == 2:
         return "pairwise"
     if size == 3:
@@ -251,8 +378,6 @@ def combination_kind(families: tuple[str, ...]) -> str:
     if size == 4:
         return "quadruple"
     if size == 5:
-        return "quintuple"
-    if size == 6:
         return "full-set"
     raise ValueError(f"Unsupported composition arity {size} for families {families}")
 
@@ -330,15 +455,20 @@ def composition_summary(max_weight: int = DELTA_MAX) -> CompositionSummary:
         composition_case_summary(families, max_weight=max_weight)
         for families in PRE_REVEN_AUDITED_SET_CASES
     )
-    post_reven_cases = tuple(
+    pre_rodd5_cases = tuple(
         composition_case_summary(families, max_weight=max_weight)
-        for families in POST_REVEN_AUDITED_SET_CASES
+        for families in PRE_RODD5_AUDITED_SET_CASES
+    )
+    post_rodd5_cases = tuple(
+        composition_case_summary(families, max_weight=max_weight)
+        for families in POST_RODD5_AUDITED_SET_CASES
     )
 
     pre_r1_smallest_case = _smallest_surviving_case(pre_r1_cases)
     pre_rodd_smallest_case = _smallest_surviving_case(pre_rodd_cases)
     pre_reven_smallest_case = _smallest_surviving_case(pre_reven_cases)
-    post_reven_smallest_case = _smallest_surviving_case(post_reven_cases)
+    pre_rodd5_smallest_case = _smallest_surviving_case(pre_rodd5_cases)
+    post_rodd5_smallest_case = _smallest_surviving_case(post_rodd5_cases)
 
     return CompositionSummary(
         baseline_survivors=baseline_survivor_labels(max_weight=max_weight),
@@ -360,13 +490,19 @@ def composition_summary(max_weight: int = DELTA_MAX) -> CompositionSummary:
             if pre_reven_smallest_case is None
             else pre_reven_smallest_case.smallest_surviving_cross_family
         ),
-        post_reven_audited_set_joint_sufficient=all(case.sufficient for case in post_reven_cases),
-        post_reven_smallest_surviving_cross_family=(
+        pre_rodd5_audited_set_joint_sufficient=all(case.sufficient for case in pre_rodd5_cases),
+        pre_rodd5_smallest_surviving_cross_family=(
             None
-            if post_reven_smallest_case is None
-            else post_reven_smallest_case.smallest_surviving_cross_family
+            if pre_rodd5_smallest_case is None
+            else pre_rodd5_smallest_case.smallest_surviving_cross_family
         ),
-        cases=pre_r1_cases + pre_rodd_cases + pre_reven_cases + post_reven_cases,
+        post_rodd5_audited_set_joint_sufficient=all(case.sufficient for case in post_rodd5_cases),
+        post_rodd5_smallest_surviving_cross_family=(
+            None
+            if post_rodd5_smallest_case is None
+            else post_rodd5_smallest_case.smallest_surviving_cross_family
+        ),
+        cases=pre_r1_cases + pre_rodd_cases + pre_reven_cases + pre_rodd5_cases + post_rodd5_cases,
     )
 
 
@@ -399,12 +535,20 @@ def composition_report(max_weight: int = DELTA_MAX) -> str:
             f"{summary.pre_reven_smallest_surviving_cross_family or 'none'}"
         ),
         (
-            "post_reven_audited_set_joint_sufficient\t"
-            f"{str(summary.post_reven_audited_set_joint_sufficient).lower()}"
+            "pre_rodd5_audited_set_joint_sufficient\t"
+            f"{str(summary.pre_rodd5_audited_set_joint_sufficient).lower()}"
         ),
         (
-            "post_reven_smallest_surviving_cross_family\t"
-            f"{summary.post_reven_smallest_surviving_cross_family or 'none'}"
+            "pre_rodd5_smallest_surviving_cross_family\t"
+            f"{summary.pre_rodd5_smallest_surviving_cross_family or 'none'}"
+        ),
+        (
+            "post_rodd5_audited_set_joint_sufficient\t"
+            f"{str(summary.post_rodd5_audited_set_joint_sufficient).lower()}"
+        ),
+        (
+            "post_rodd5_smallest_surviving_cross_family\t"
+            f"{summary.post_rodd5_smallest_surviving_cross_family or 'none'}"
         ),
         "",
         (

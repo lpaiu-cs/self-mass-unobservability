@@ -105,7 +105,7 @@ def family_witness_entries() -> tuple[FamilyWitness, ...]:
             smallest_surviving_operator=r5.first_self_witness or "U2",
             audited_instance=r5.smallest_new_witness or "U2",
             weight=2,
-            obstructed_theorem_layer="promotion of the enlarged audited-set result to MVP-envelope sufficiency after the Reven4+-closed composition layer; enlarged audited-set composition must be re-closed next",
+            obstructed_theorem_layer="promotion of the enlarged audited-set result to MVP-envelope sufficiency; post-Rodd5+ composition now closes, so the next live gate is the unaudited family-envelope class Reven6+",
             finite_family_collapse_obstructed=False,
             harmless_without_extra_assumptions=False,
         ),

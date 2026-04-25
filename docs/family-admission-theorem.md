@@ -38,7 +38,7 @@
 
 - Status: Proven. The positive theorem target must therefore be finite-family fixed-order collapse, not minimal-sector uniqueness.
 - Status: Proven. New family-admission audits are classification steps: a new witness reinforces the uniqueness no-go unless it also destroys fixed-order finiteness.
-- Status: Proven. The audited-set composition question is now closed positively for the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+}` at `\Delta \le 4`.
-- Status: Proven. The current live bottleneck is no longer Reven4+ composition, but the `Rodd5+` obstruction and the required post-`Rodd5+` enlarged audited-set composition re-close.
+- Status: Proven. The audited-set composition question is now closed positively for the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+, Rodd5+}` at `\Delta \le 4`.
+- Status: Proven. The current live bottleneck is no longer audited-set composition, but family-envelope completeness and the next smallest unaudited family class `Reven6+`.
 - Status: Proven. [`../symbolic/family_witness_map.py`](../symbolic/family_witness_map.py) records the current witness table linking each audited family class to the exact theorem layer it obstructs.
 - Status: Proven. [`suppression-budget-theorem.md`](suppression-budget-theorem.md) and [`../symbolic/witness_threshold_map.py`](../symbolic/witness_threshold_map.py) now promote those witnesses into necessary suppression thresholds for the audited classes.
