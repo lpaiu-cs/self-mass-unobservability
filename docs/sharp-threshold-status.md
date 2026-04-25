@@ -18,5 +18,6 @@
 - Status: Proven. The bare scalar class remains self-only.
 - Status: Proven. The derivative-only scalar class is tied-sharp at the current fixed-order threshold.
 - Status: Proven. No audited family class currently exhibits a mixed witness below its first self witness at `\Delta \le 4`.
-- Status: Proven. The current live bottleneck is sharp mixed-aware threshold classification beyond mere witness existence.
-- Status: Conjectural. What remains open is whether this class-limited sharpness map extends beyond the currently audited family classes.
+- Status: Proven. The sharp-threshold classification bottleneck is closed for the currently audited family classes.
+- Status: Proven. The repo-level live bottleneck has moved to family-envelope completeness or the next smallest unaudited family obstruction.
+- Status: Conjectural. What remains open is whether the current family-envelope census can be closed without a new family audit or a new explicit exclusion assumption.

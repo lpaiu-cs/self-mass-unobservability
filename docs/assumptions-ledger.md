@@ -59,3 +59,9 @@ This ledger records the active assumptions behind the free-fall sensitivity-coll
 - Status: Proven. In that audit, non-shift-symmetric total-derivative preimages such as `D_\tau(S X)` are not used to reduce operators, because bare `S` is excluded by construction.
 - Status: Proven. No cross-family orthogonality or alignment condition such as `Tr(EX) = 0`, `SE2 = 0`, or `DtS_E2 = 0` is assumed in the mixed-witness threshold audit.
 - Status: Proven. The mixed-witness threshold notes do not infer mixed-sector harmlessness from self-witness analysis alone; self and mixed survivors are checked separately.
+
+## Non-Assumption For M12
+
+- Status: Proven. The repository does not currently assume that the audited family set `{R2, R0a, R0b}` already exhausts the parity-even local MVP primitive-family envelope.
+- Status: Proven. No explicit assumption restricts admitted parity-even local primitive families to scalar and rank-2 classes only.
+- Status: Proven. Therefore local parity-even rank-1 and higher-rank tensor families remain open family-envelope targets unless they are audited directly or excluded by a new explicit assumption.

@@ -69,8 +69,9 @@
 14. Status: Proven. [`mixed-witness-thresholds.md`](mixed-witness-thresholds.md), [`../lemmas/18-rank2-mixed-witness-threshold.md`](../lemmas/18-rank2-mixed-witness-threshold.md), [`../lemmas/19-rank0-mixed-witness-threshold.md`](../lemmas/19-rank0-mixed-witness-threshold.md), and [`../symbolic/mixed_witness_map.py`](../symbolic/mixed_witness_map.py) classify the first self and first mixed witnesses for the audited family classes.
 15. Status: Proven. [`threshold-formulas.md`](threshold-formulas.md), [`../lemmas/20-rank2-threshold-formula.md`](../lemmas/20-rank2-threshold-formula.md), [`../lemmas/21-rank0-threshold-formula.md`](../lemmas/21-rank0-threshold-formula.md), and [`../symbolic/threshold_formula_check.py`](../symbolic/threshold_formula_check.py) lift the audited family classes into formula-level threshold statements.
 16. Status: Proven. [`budget-composition-theorem.md`](budget-composition-theorem.md), [`../lemmas/22-pairwise-composition-audit.md`](../lemmas/22-pairwise-composition-audit.md), [`../lemmas/23-three-family-composition-audit.md`](../lemmas/23-three-family-composition-audit.md), and [`../symbolic/composition_attack_delta4.py`](../symbolic/composition_attack_delta4.py) audit whether the current audited thresholds are jointly sufficient or admit a cross-family obstruction at `\Delta \le 4`.
-17. Status: Conjectural. The current audited-set composition question is joint sufficiency or explicit cross-family obstruction for the audited suppression budgets at `\Delta \le 4`.
-18. Status: Conjectural. The remaining positive burden is to prove the finite-family fixed-order collapse statement for arbitrary explicit admitted catalogs rather than just the audited examples.
+17. Status: Proven. The pairwise and triple composition audits close positively for the already audited family classes `R2`, `R0a`, and `R0b`.
+18. Status: Proven. [`family-envelope-theorem.md`](family-envelope-theorem.md), [`family-envelope-table.md`](family-envelope-table.md), [`../lemmas/24-family-envelope-census.md`](../lemmas/24-family-envelope-census.md), [`../lemmas/25-next-unaudited-family-gate.md`](../lemmas/25-next-unaudited-family-gate.md), and [`../symbolic/family_envelope_census.py`](../symbolic/family_envelope_census.py) show that audited-set sufficiency does not yet upgrade to MVP-envelope sufficiency because a parity-even local rank-1 vector family remains unaudited.
+19. Status: Conjectural. The remaining positive burden is to prove the finite-family fixed-order collapse statement for arbitrary explicit admitted catalogs rather than just the audited examples.
 
 ## Current Verdict
 
@@ -81,9 +82,11 @@
 - Status: Proven. Minimal-sector uniqueness is already effectively dead across the audited unsuppressed family classes.
 - Status: Proven. No audited family class is currently harmless without extra assumptions.
 - Status: Proven. Necessary suppression budgets are explicit for the audited classes: for rank-2 STF families the self-only lower bound is `w_X \ge 3` but the mixed-aware necessary threshold is `w_X \ge 4` unless an explicit `EX = 0`-type rule removes the mixed quadratic witness; for bare scalar families the self-only sharp threshold is `w_S \ge 5`; for derivative-only scalar families the tied-sharp threshold is `w_D \ge 3`.
-- Status: Proven. The current audited-set composition question is joint sufficiency or explicit cross-family obstruction for the audited suppression budgets at `\Delta \le 4`.
 - Status: Proven. The pairwise and triple composition audits find no surviving operator beyond the baseline electric sector once the current audited thresholds are imposed together.
 - Status: Proven. Therefore the current thresholds are jointly sufficient for the currently audited family classes at `\Delta \le 4`, and no explicit cross-family obstruction has appeared in the audited set.
+- Status: Proven. The current live bottleneck is family-envelope completeness or the next smallest unaudited family obstruction.
+- Status: Proven. The current MVP assumptions do not yet close the family envelope.
+- Status: Proven. The smallest remaining unaudited family class is a local parity-even rank-1 vector family, so the theorem remains audited-set only at `\Delta \le 4`.
 - Status: Conjectural. The broad positive target remains finite-family fixed-order collapse, and it remains plausible because the audited enlarged family catalogs still close finitely at `\Delta \le 4`.
 
 ## Dependencies
@@ -109,11 +112,15 @@
 - Status: Proven. [`../lemmas/21-rank0-threshold-formula.md`](../lemmas/21-rank0-threshold-formula.md)
 - Status: Proven. [`../lemmas/22-pairwise-composition-audit.md`](../lemmas/22-pairwise-composition-audit.md)
 - Status: Proven. [`../lemmas/23-three-family-composition-audit.md`](../lemmas/23-three-family-composition-audit.md)
+- Status: Proven. [`../lemmas/24-family-envelope-census.md`](../lemmas/24-family-envelope-census.md)
+- Status: Proven. [`../lemmas/25-next-unaudited-family-gate.md`](../lemmas/25-next-unaudited-family-gate.md)
 - Status: Conjectural. [`conditional-collapse-lemma.md`](conditional-collapse-lemma.md)
 - Status: Conjectural. [`eb-conditional-collapse.md`](eb-conditional-collapse.md)
 - Status: Conjectural. [`power-counting.md`](power-counting.md)
 - Status: Proven. [`family-admission-no-go.md`](family-admission-no-go.md)
 - Status: Proven. [`family-admission-theorem.md`](family-admission-theorem.md)
+- Status: Proven. [`family-envelope-theorem.md`](family-envelope-theorem.md)
+- Status: Proven. [`family-envelope-table.md`](family-envelope-table.md)
 - Status: Proven. [`mixed-witness-thresholds.md`](mixed-witness-thresholds.md)
 - Status: Proven. [`threshold-formulas.md`](threshold-formulas.md)
 - Status: Proven. [`budget-composition-theorem.md`](budget-composition-theorem.md)
@@ -131,6 +138,7 @@
 - Status: Proven. [`../symbolic/mixed_witness_map.py`](../symbolic/mixed_witness_map.py)
 - Status: Proven. [`../symbolic/threshold_formula_check.py`](../symbolic/threshold_formula_check.py)
 - Status: Proven. [`../symbolic/composition_attack_delta4.py`](../symbolic/composition_attack_delta4.py)
+- Status: Proven. [`../symbolic/family_envelope_census.py`](../symbolic/family_envelope_census.py)
 
 ## Failure Triggers
 

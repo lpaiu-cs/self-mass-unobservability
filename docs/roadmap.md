@@ -112,13 +112,24 @@ Status: Conjectural. The repository roadmap is organized around theorem progress
 | M11.4 | Proven | [`../symbolic/composition_attack_delta4.py`](../symbolic/composition_attack_delta4.py) | The current audited thresholds are tested jointly against all relevant `\Delta \le 4` scalar candidates. |
 | M11.5 | Proven | [`composition-status.md`](composition-status.md), [`docs/theorem-A-freefall.md`](theorem-A-freefall.md), and [`failure-ledger.md`](failure-ledger.md) | The repo records whether the audited thresholds are jointly sufficient or whether an explicit cross-family obstruction survives. |
 
+## M12: Family-Envelope Census
+
+| Item | Status | Deliverable | Exit condition |
+| --- | --- | --- | --- |
+| M12.1 | Proven | [`family-envelope-theorem.md`](family-envelope-theorem.md) | Audited-set sufficiency is separated from MVP-envelope completeness. |
+| M12.2 | Proven | [`family-envelope-table.md`](family-envelope-table.md) | Covered, excluded, and still unaudited family classes are listed explicitly. |
+| M12.3 | Proven | [`../lemmas/24-family-envelope-census.md`](../lemmas/24-family-envelope-census.md) | The current MVP family-class census is derived under the active assumptions. |
+| M12.4 | Proven | [`../symbolic/family_envelope_census.py`](../symbolic/family_envelope_census.py) | The family-envelope census runs and reports the current next unaudited class deterministically. |
+| M12.5 | Proven | [`../lemmas/25-next-unaudited-family-gate.md`](../lemmas/25-next-unaudited-family-gate.md), [`theorem-A-freefall.md`](theorem-A-freefall.md), and [`failure-ledger.md`](failure-ledger.md) | The repo states explicitly whether the audited-set result upgrades to envelope sufficiency or remains audited-set only. |
+
 ## Near-Term Sequence
 
-1. Status: Conjectural. Extend the audited-set composition audit beyond the currently audited family classes and determine where the first genuine cross-family obstruction appears.
-2. Status: Conjectural. Push the positive branch from audited finite examples toward an abstract finite-family fixed-order collapse theorem.
-3. Status: Conjectural. Decide whether any further mixed-trace or gradient identity should be introduced explicitly, rather than silently collapsing enlarged-sector operators.
-4. Status: Counterexample candidate. Promote the dominant loophole class only if it produces a genuine failure of the corrected finite-family collapse candidate rather than only another uniqueness obstruction.
-5. Status: Conjectural. Revisit the scalar `s_A` corollary only after the higher-dimensional sensitivity manifold statement is sharp.
+1. Status: Proven. The audited-set composition question is closed positively for the currently audited family classes.
+2. Status: Conjectural. Audit the next family-envelope gate, currently the local parity-even rank-1 vector class `R1`.
+3. Status: Conjectural. Push the positive branch from audited finite examples toward an abstract finite-family fixed-order collapse theorem.
+4. Status: Conjectural. Decide whether any further mixed-trace or gradient identity should be introduced explicitly, rather than silently collapsing enlarged-sector operators.
+5. Status: Counterexample candidate. Promote the dominant loophole class only if it produces a genuine failure of the corrected finite-family collapse candidate rather than only another uniqueness obstruction.
+6. Status: Conjectural. Revisit the scalar `s_A` corollary only after the higher-dimensional sensitivity manifold statement is sharp.
 
 ## Explicit Non-Goals For M1
 

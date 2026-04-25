@@ -19,6 +19,7 @@ from eb_sector_delta4 import eb_summary
 from eb_survivor_rank_check import eb_rank_summary
 from es_sector_delta4 import es_summary
 from es_survivor_rank_check import es_rank_summary
+from family_envelope_census import family_envelope_summary
 from family_witness_map import family_witness_summary
 from composition_attack_delta4 import composition_summary
 from mixed_witness_map import mixed_witness_summary
@@ -391,6 +392,24 @@ def test_composition_attack_delta4() -> None:
     assert all(case.smallest_surviving_cross_family is None for case in summary.cases)
 
 
+def test_family_envelope_census() -> None:
+    summary = family_envelope_summary()
+    assert summary.delta_max == 4
+    assert (
+        summary.live_bottleneck
+        == "family-envelope completeness or the next smallest unaudited family obstruction"
+    )
+    assert summary.envelope_closed is False
+    assert summary.smallest_unaudited_class == "R1"
+    entries = {entry.class_id: entry for entry in summary.entries}
+    assert entries["R2"].envelope_state == "audited"
+    assert entries["R0a"].envelope_state == "audited"
+    assert entries["R0b"].envelope_state == "audited"
+    assert entries["R1"].envelope_state == "still unaudited"
+    assert entries["R1"].smallest_expected_witness_type == "V2-type self contraction"
+    assert entries["Podd"].envelope_state == "excluded by explicit assumption"
+
+
 def main() -> None:
     test_symmetric_quadratic_jet()
     test_worldline_force_structure()
@@ -415,6 +434,7 @@ def main() -> None:
     test_mixed_witness_map()
     test_threshold_formula_check()
     test_composition_attack_delta4()
+    test_family_envelope_census()
     print("symbolic checks passed")
 
 
