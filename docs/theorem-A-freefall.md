@@ -88,6 +88,7 @@
 27. Status: Proven. The exhaustive high-rank audit validates the current manual rank-3 and rank-5 candidate-survivor lists, but it finds omitted rank-4 classes `\{EEQ,\ Q3,\ EEDtQ,\ EEEQ,\ EQQQ_1,\ EQQQ_2,\ GradEGradQ\}`.
 28. Status: Proven. [`stf-tower-theorem.md`](stf-tower-theorem.md), [`../lemmas/42-stf-rankL-admission.md`](../lemmas/42-stf-rankL-admission.md), [`../lemmas/43-stf-rankL-threshold-formula.md`](../lemmas/43-stf-rankL-threshold-formula.md), [`stf-family-class-table.md`](stf-family-class-table.md), and [`../symbolic/stf_rankL_pattern_check.py`](../symbolic/stf_rankL_pattern_check.py) show that the attempted single STF-tower theorem for all genuine parity-even STF ranks `L \ge 3` fails at `L = 4`.
 29. Status: Proven. [`rank6-family-ordering.md`](rank6-family-ordering.md), [`../lemmas/44-rank6-family-admission.md`](../lemmas/44-rank6-family-admission.md), [`../lemmas/45-rank6-threshold-formula.md`](../lemmas/45-rank6-threshold-formula.md), [`../symbolic/r6_sector_delta4.py`](../symbolic/r6_sector_delta4.py), and [`../symbolic/r6_survivor_rank_check.py`](../symbolic/r6_survivor_rank_check.py) audit `Reven6+` exhaustively and show that the first mixed layer is `EZZ`, not a new `EEY`-type even-rank exception.
+30. Status: Proven. [`../lemmas/46-r6-pairwise-composition-audit.md`](../lemmas/46-r6-pairwise-composition-audit.md), [`../lemmas/47-r6-augmented-composition-audit.md`](../lemmas/47-r6-augmented-composition-audit.md), [`composition-status.md`](composition-status.md), and [`../symbolic/composition_attack_delta4.py`](../symbolic/composition_attack_delta4.py) re-close the pairwise, triple, quadruple, quintuple, six-family, seven-family, and eight-family composition layer for the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+, Rodd5+, Reven6+}`.
 
 ## Current Verdict
 
@@ -123,9 +124,10 @@
 - Status: Proven. The post-Rodd5+ pairwise, triple, quadruple, quintuple, six-family, and seven-family composition audits likewise find no surviving operator beyond the baseline electric sector once the current audited thresholds are imposed across the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+, Rodd5+}`.
 - Status: Proven. Therefore the current thresholds are jointly sufficient for the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+, Rodd5+}` at `\Delta \le 4`, and no explicit post-Rodd5+ cross-family obstruction has appeared in the audited set.
 - Status: Proven. The `Reven6+` audit now resolves the next even-rank gate as a genuine obstruction class with smallest witness `Z2` and first mixed witness `EZZ`.
-- Status: Proven. The family-envelope census can therefore move on to `Rodd7+`, but the theorem layer cannot move there yet because the enlarged audited-set composition has not yet been re-closed after admitting `Reven6+`.
-- Status: Proven. The current live bottleneck is the post-`Reven6+` enlarged audited-set composition re-close at `\Delta \le 4`.
-- Status: Conjectural. The broad positive target remains finite-family fixed-order collapse, and it remains plausible because the audited enlarged family catalogs, including the current rank-5 extension, still close finitely at `\Delta \le 4`.
+- Status: Proven. The post-Reven6+ pairwise, triple, quadruple, quintuple, six-family, seven-family, and eight-family composition audits find no surviving operator beyond the baseline electric sector once the current audited thresholds are imposed across the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+, Rodd5+, Reven6+}`.
+- Status: Proven. Therefore the current thresholds are jointly sufficient for the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+, Rodd5+, Reven6+}` at `\Delta \le 4`, and no explicit post-Reven6+ cross-family obstruction has appeared in the audited set.
+- Status: Proven. The current live bottleneck is family-envelope completeness or the next smallest unaudited family obstruction, currently `Rodd7+`.
+- Status: Conjectural. The broad positive target remains finite-family fixed-order collapse, and it remains plausible because the audited enlarged family catalogs, including the current rank-6 extension, still close finitely at `\Delta \le 4`.
 
 ## Dependencies
 

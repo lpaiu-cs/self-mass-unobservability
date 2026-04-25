@@ -42,4 +42,4 @@
 ## Consequence
 
 - Status: Proven. The current theorem-layer task is no longer to decide whether `Reven6+` is real.
-- Status: Proven. The current theorem-layer task is the post-`Reven6+` enlarged audited-set composition re-close at `\Delta \le 4`.
+- Status: Proven. The current theorem-layer task is no longer a pending Reven6+ composition closure; it has moved back to family-envelope completeness or the next smallest unaudited family obstruction, currently `Rodd7+`.

@@ -36,4 +36,4 @@
 
 - Status: Proven. Unsuppressed `Reven6+` admission is a genuine new obstruction class with smallest explicit witness `Z2`.
 - Status: Proven. This obstructs promotion of the enlarged audited-set result to MVP-envelope sufficiency unless the rank-6 family is explicitly suppressed or excluded.
-- Status: Proven. Because `Reven6+` is now audited and obstructive, the next theorem-layer step is a post-`Reven6+` enlarged audited-set composition re-close rather than an immediate move to the next family gate.
+- Status: Proven. Because `Reven6+` is now audited and obstructive, the immediate next theorem-layer step was the post-`Reven6+` enlarged audited-set composition re-close rather than an immediate move to the next family gate.

@@ -487,15 +487,18 @@ def test_composition_attack_delta4() -> None:
     assert summary.pre_reven_smallest_surviving_cross_family is None
     assert summary.pre_rodd5_audited_set_joint_sufficient is True
     assert summary.pre_rodd5_smallest_surviving_cross_family is None
-    assert summary.post_rodd5_audited_set_joint_sufficient is True
-    assert summary.post_rodd5_smallest_surviving_cross_family is None
-    assert len(summary.cases) == 120
+    assert summary.pre_reven6_audited_set_joint_sufficient is True
+    assert summary.pre_reven6_smallest_surviving_cross_family is None
+    assert summary.post_reven6_audited_set_joint_sufficient is True
+    assert summary.post_reven6_smallest_surviving_cross_family is None
+    assert len(summary.cases) == 247
     scope_counts = {
         "pre_r1_audited_set": 0,
         "pre_rodd_audited_set": 0,
         "pre_reven_audited_set": 0,
         "pre_rodd5_audited_set": 0,
-        "post_rodd5_audited_set": 0,
+        "pre_reven6_audited_set": 0,
+        "post_reven6_audited_set": 0,
     }
     kind_counts = {
         "pairwise": 0,
@@ -503,6 +506,7 @@ def test_composition_attack_delta4() -> None:
         "quadruple": 0,
         "quintuple": 0,
         "six-family": 0,
+        "seven-family": 0,
         "full-set": 0,
     }
     case_by_id = {case.combo_id: case for case in summary.cases}
@@ -514,15 +518,17 @@ def test_composition_attack_delta4() -> None:
         "pre_rodd_audited_set": 7,
         "pre_reven_audited_set": 15,
         "pre_rodd5_audited_set": 31,
-        "post_rodd5_audited_set": 63,
+        "pre_reven6_audited_set": 63,
+        "post_reven6_audited_set": 127,
     }
     assert kind_counts == {
-        "pairwise": 21,
-        "triple": 35,
-        "quadruple": 35,
-        "quintuple": 20,
-        "six-family": 6,
-        "full-set": 3,
+        "pairwise": 28,
+        "triple": 56,
+        "quadruple": 70,
+        "quintuple": 55,
+        "six-family": 27,
+        "seven-family": 7,
+        "full-set": 4,
     }
     assert case_by_id["Reven4++R2"].case_scope == "pre_rodd5_audited_set"
     assert case_by_id["Reven4++R2"].combination_kind == "pairwise"
@@ -533,7 +539,7 @@ def test_composition_attack_delta4() -> None:
         case_by_id["R2+R0a+R0b+R1+Rodd++Reven4+"].combination_kind
         == "full-set"
     )
-    assert case_by_id["Rodd5++R2"].case_scope == "post_rodd5_audited_set"
+    assert case_by_id["Rodd5++R2"].case_scope == "pre_reven6_audited_set"
     assert case_by_id["Rodd5++R2"].combination_kind == "pairwise"
     assert case_by_id["Rodd5++R2+R0a"].combination_kind == "triple"
     assert case_by_id["Rodd5++R2+R0a+R0b"].combination_kind == "quadruple"
@@ -541,6 +547,20 @@ def test_composition_attack_delta4() -> None:
     assert case_by_id["Rodd5++R2+R0a+R0b+R1+Rodd+"].combination_kind == "six-family"
     assert (
         case_by_id["R2+R0a+R0b+R1+Rodd++Reven4++Rodd5+"].combination_kind
+        == "full-set"
+    )
+    assert case_by_id["Reven6++R2"].case_scope == "post_reven6_audited_set"
+    assert case_by_id["Reven6++R2"].combination_kind == "pairwise"
+    assert case_by_id["Reven6++R2+R0a"].combination_kind == "triple"
+    assert case_by_id["Reven6++R2+R0a+R0b"].combination_kind == "quadruple"
+    assert case_by_id["Reven6++R2+R0a+R0b+R1"].combination_kind == "quintuple"
+    assert case_by_id["Reven6++R2+R0a+R0b+R1+Rodd+"].combination_kind == "six-family"
+    assert (
+        case_by_id["Reven6++R2+R0a+R0b+R1+Rodd++Reven4+"].combination_kind
+        == "seven-family"
+    )
+    assert (
+        case_by_id["R2+R0a+R0b+R1+Rodd++Reven4++Rodd5++Reven6+"].combination_kind
         == "full-set"
     )
     assert all(case.sufficient for case in summary.cases)
@@ -554,7 +574,7 @@ def test_family_envelope_census() -> None:
     assert summary.delta_max == 4
     assert (
         summary.live_bottleneck
-        == "post-Reven6+ enlarged audited-set composition re-close at Delta <= 4"
+        == "family-envelope completeness or the next smallest unaudited family obstruction, currently Rodd7+"
     )
     assert summary.envelope_closed is False
     assert summary.smallest_unaudited_class == "Rodd7+"

@@ -5,7 +5,7 @@ from dataclasses import dataclass
 
 DELTA_MAX = 4
 LIVE_BOTTLENECK = (
-    "post-Reven6+ enlarged audited-set composition re-close at Delta <= 4"
+    "family-envelope completeness or the next smallest unaudited family obstruction, currently Rodd7+"
 )
 
 
@@ -109,7 +109,7 @@ def family_envelope_entries() -> tuple[FamilyEnvelopeEntry, ...]:
             parity="even",
             derivative_character="unsuppressed local family",
             smallest_expected_witness_type="Z2 / EZZ",
-            current_theorem_role="audited uniqueness obstruction and threshold class; post-Reven6+ enlarged audited-set composition re-close now required",
+            current_theorem_role="audited uniqueness obstruction and threshold class; enlarged audited-set composition now re-closed",
             rank_order=6,
         ),
         FamilyEnvelopeEntry(
@@ -119,7 +119,7 @@ def family_envelope_entries() -> tuple[FamilyEnvelopeEntry, ...]:
             parity="even",
             derivative_character="unsuppressed local family",
             smallest_expected_witness_type="rank-7 self-contraction type",
-            current_theorem_role="next smallest unaudited family gate after the pending post-Reven6+ composition re-close",
+            current_theorem_role="next smallest unaudited family gate after the post-Reven6+ composition closure",
             rank_order=7,
         ),
         FamilyEnvelopeEntry(
