@@ -120,3 +120,6 @@ Status: Counterexample candidate. The surviving M6 novelty candidate is the
 shared pole law: sidebands plus linear lines must be fit by one common
 `tau_chi`, while a finite shared static derivative polynomial fails once the
 number of distinct generated samples exceeds its interpolation budget.
+
+Status: Counterexample candidate. The promoted ratio version of this target is
+recorded in [`shared-tau-ratio-theorem.md`](shared-tau-ratio-theorem.md).

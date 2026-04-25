@@ -32,6 +32,18 @@ from nonlinear_comparator_audit import (
     symbols as nonlinear_symbols,
     two_tone_sideband_ratio,
 )
+from shared_tau_ratio_audit import (
+    bivariate_monomial_count,
+    g_linear as shared_g_linear,
+    interpolation_budget,
+    no_sideband_limit,
+    ratio_audit_rows,
+    shared_tau_diagnostic_residual,
+    shared_tau_ratio,
+    static_ratio_template,
+    symbols as shared_tau_symbols,
+    tau_zero_limit,
+)
 from normal_form_reduce import (
     operator_symbols,
     reduce_algebraic_identities,
@@ -353,6 +365,50 @@ def test_nonlinear_comparator_audit_rows_classify_boundaries() -> None:
     assert any("shared sideband pole" in row.observable for row in rows)
 
 
+def test_shared_tau_ratio_diagnostic_residual_vanishes() -> None:
+    assert shared_tau_diagnostic_residual() == 0
+
+
+def test_shared_tau_ratio_collapse_limits() -> None:
+    syms = shared_tau_symbols()
+    expected_tau_zero = syms["C_side"] / (syms["beta"] + syms["c_Y"]) ** 2
+    assert sp.simplify(tau_zero_limit() - expected_tau_zero) == 0
+    assert no_sideband_limit() == 0
+
+
+def test_shared_tau_ratio_matches_definition() -> None:
+    syms = shared_tau_symbols()
+    u = syms["u"]
+    v = syms["v"]
+    tau_chi = syms["tau_chi"]
+    expected = syms["C_side"] / (
+        (1 + tau_chi * (u + v)) * shared_g_linear(u) * shared_g_linear(v)
+    )
+    assert sp.cancel(shared_tau_ratio() - expected) == 0
+
+
+def test_static_ratio_template_and_budget_counts() -> None:
+    syms = shared_tau_symbols()
+    ratio = static_ratio_template(linear_order=1, sideband_degree=2)
+    assert syms["u"] in ratio.free_symbols
+    assert syms["v"] in ratio.free_symbols
+    assert bivariate_monomial_count(2) == 6
+    assert interpolation_budget(1, 2) == {
+        "linear_complex_samples": 2,
+        "linear_obstruction_sample": 3,
+        "sideband_pair_samples": 6,
+        "sideband_obstruction_pair": 7,
+    }
+
+
+def test_shared_tau_ratio_audit_rows_record_no_go_boundary() -> None:
+    rows = ratio_audit_rows()
+    assert len(rows) == 3
+    assert rows[0].status == "Proven"
+    assert "interpolation budget" in rows[1].verdict
+    assert "per-sideband nuisance" in rows[2].collapse_boundary
+
+
 def main() -> None:
     test_symmetric_quadratic_jet()
     test_worldline_force_structure()
@@ -378,6 +434,11 @@ def main() -> None:
     test_two_tone_ratio_has_shared_sideband_pole()
     test_orbital_three_n_ratio_has_shared_sideband_pole()
     test_nonlinear_comparator_audit_rows_classify_boundaries()
+    test_shared_tau_ratio_diagnostic_residual_vanishes()
+    test_shared_tau_ratio_collapse_limits()
+    test_shared_tau_ratio_matches_definition()
+    test_static_ratio_template_and_budget_counts()
+    test_shared_tau_ratio_audit_rows_record_no_go_boundary()
     print("symbolic checks passed")
 
 

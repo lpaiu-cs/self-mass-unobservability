@@ -91,6 +91,9 @@ static primitive families.
 | D2 | Proven | [`nonlinear-comparator-audit.md`](nonlinear-comparator-audit.md) | Single-sideband static nonlinear mimicry and the shared-pole obstruction are separated. |
 | D3 | Proven | [`sideband-observable-targets.md`](sideband-observable-targets.md) | Sideband existence, shared phase law, ratio target, projection collapse, and nuisance collapse are classified. |
 | D4 | Proven | [`../symbolic/nonlinear_comparator_audit.py`](../symbolic/nonlinear_comparator_audit.py) | The shared `tau_chi` phase law and finite-polynomial interpolation residual are checked symbolically. |
+| D5 | Counterexample candidate | [`shared-tau-ratio-theorem.md`](shared-tau-ratio-theorem.md) | The generated-line and linear-line ratio law is stated as a theorem/no-go target. |
+| D6 | Proven | [`shared-tau-observable-targets.md`](shared-tau-observable-targets.md) | Ratio success and failure conditions are separated from sideband existence. |
+| D7 | Proven | [`../symbolic/shared_tau_ratio_audit.py`](../symbolic/shared_tau_ratio_audit.py) | The exact shared-tau diagnostic residual and finite interpolation budgets are checked symbolically. |
 
 ## Explicit Non-Goals For M1
 

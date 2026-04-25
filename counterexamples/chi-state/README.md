@@ -94,3 +94,4 @@ up to total derivatives.
 - Status: Proven. A nonlinear extension of the `chi` response can create sidebands, but sideband existence alone is not a unique dynamic signature once static nonlinear local comparators are admitted.
 - Status: Counterexample candidate. The stronger observable target is a shared relaxation pole across generated sidebands and the linear-frequency response.
 - Status: Proven. The current comparator boundary is recorded in [`../../docs/nonlinear-comparator-audit.md`](../../docs/nonlinear-comparator-audit.md) and checked in [`../../symbolic/nonlinear_comparator_audit.py`](../../symbolic/nonlinear_comparator_audit.py).
+- Status: Counterexample candidate. The current ratio theorem/no-go target is recorded in [`../../docs/shared-tau-ratio-theorem.md`](../../docs/shared-tau-ratio-theorem.md) and checked in [`../../symbolic/shared_tau_ratio_audit.py`](../../symbolic/shared_tau_ratio_audit.py).

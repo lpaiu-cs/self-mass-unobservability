@@ -25,9 +25,9 @@ Out of scope for this phase:
 
 ## Current Layout
 
-- [`docs/`](docs): theorem candidates, electric and `E/B` conditional collapse notes, power counting, the primitive catalog, magnetic-ordering and primitive-set adequacy notes, dynamic sideband comparator notes, explicit reduction rules, ledgers, and the roadmap.
+- [`docs/`](docs): theorem candidates, electric and `E/B` conditional collapse notes, power counting, the primitive catalog, magnetic-ordering and primitive-set adequacy notes, dynamic sideband and shared-tau comparator notes, explicit reduction rules, ledgers, and the roadmap.
 - [`lemmas/`](lemmas): free-fall lemmas and reduction notes.
-- [`symbolic/`](symbolic): small SymPy scripts for worldline expansion, sensitivity jets, basis enumeration, contraction enumeration, electric and `E/B` survivor-rank checks, primitive-family attacks, full `E/B`-sector audits, normal-form reduction, and nonlinear dynamic-comparator checks.
+- [`symbolic/`](symbolic): small SymPy scripts for worldline expansion, sensitivity jets, basis enumeration, contraction enumeration, electric and `E/B` survivor-rank checks, primitive-family attacks, full `E/B`-sector audits, normal-form reduction, and dynamic-comparator checks.
 - [`counterexamples/`](counterexamples): explicit loophole classes and minimal models.
 - [`notes/scratch/`](notes/scratch): disposable local notes that should not become theorem claims without promotion.
 
@@ -55,6 +55,7 @@ make eb-sector
 make eb-rank
 make normal-form-reduce
 make nonlinear-comparator
+make shared-tau-ratio
 make symbolic-check
 ```
 
