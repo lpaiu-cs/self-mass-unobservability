@@ -67,6 +67,18 @@ def witness_threshold_entries(delta_max: int = DELTA_MAX) -> tuple[WitnessThresh
             theorem_layer_at_risk="minimal-sector uniqueness after removing bare S",
             sufficient_for_uniqueness=False,
         ),
+        WitnessThresholdEntry(
+            family_class="rank1_vector",
+            witness="V2",
+            witness_weight=2,
+            self_only_lower_bound_formula="2 w_V > Delta_max",
+            self_only_lower_bound_at_delta4="w_V >= 3",
+            necessary_threshold_formula="2 w_V > Delta_max",
+            necessary_threshold_at_delta4="w_V >= 3, or explicit rule excluding or absorbing the primitive vector family",
+            threshold_type="self-only",
+            theorem_layer_at_risk="MVP-envelope sufficiency",
+            sufficient_for_uniqueness=False,
+        ),
     )
 
 

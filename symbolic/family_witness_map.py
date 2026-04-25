@@ -4,6 +4,7 @@ from dataclasses import dataclass
 
 from eb_sector_delta4 import eb_summary
 from es_sector_delta4 import es_summary
+from r1_sector_delta4 import r1_summary
 from shift_scalar_sector_delta4 import shift_scalar_summary
 
 
@@ -29,6 +30,7 @@ def family_witness_entries() -> tuple[FamilyWitness, ...]:
     eb = eb_summary()
     es = es_summary()
     shift = shift_scalar_summary()
+    r1 = r1_summary()
 
     entries = (
         FamilyWitness(
@@ -58,6 +60,16 @@ def family_witness_entries() -> tuple[FamilyWitness, ...]:
             audited_instance=", ".join(shift.first_new_labels),
             weight=shift.first_new_weight or 4,
             obstructed_theorem_layer="rescue of minimal-sector uniqueness after removing bare S",
+            finite_family_collapse_obstructed=False,
+            harmless_without_extra_assumptions=False,
+        ),
+        FamilyWitness(
+            family_class="rank1_vector",
+            audited_profile="genuine local parity-even vector family excluding derivative-generated vector blocks",
+            smallest_surviving_operator=r1.first_self_witness or "V2",
+            audited_instance=r1.smallest_new_witness or "V2",
+            weight=2,
+            obstructed_theorem_layer="promotion of the current audited-set result to MVP-envelope sufficiency",
             finite_family_collapse_obstructed=False,
             harmless_without_extra_assumptions=False,
         ),

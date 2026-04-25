@@ -72,6 +72,18 @@ def mixed_witness_entries(delta_max: int = DELTA_MAX) -> tuple[MixedWitnessEntry
             sharpness_status="tied-sharp",
             confidence_level="Proven",
         ),
+        MixedWitnessEntry(
+            family_class="rank1_vector",
+            first_self_witness="V2",
+            self_weight=2,
+            first_mixed_witness="EVV",
+            mixed_weight=3,
+            w_min=2,
+            current_threshold_statement="w_V >= 3, or explicit rule excluding or absorbing the primitive vector family",
+            theorem_layer_obstructed="promotion of the current audited-set result to MVP-envelope sufficiency",
+            sharpness_status="self-only",
+            confidence_level="Proven",
+        ),
     )
 
 

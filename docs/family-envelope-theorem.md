@@ -3,7 +3,7 @@
 ## Question
 
 - Status: Proven. The current question is no longer witness existence, within-class sharpness, or audited-set composition for the already audited family classes.
-- Status: Proven. The current question is whether the audited family set `{R2, R0a, R0b}` already exhausts the parity-even, nonspinning, local MVP primitive-family envelope at `\Delta \le 4`.
+- Status: Proven. The current question is whether the audited family set `{R2, R0a, R0b, R1}` already exhausts the parity-even, nonspinning, local MVP primitive-family envelope at `\Delta \le 4`.
 
 ## Distinctions
 
@@ -14,10 +14,12 @@
 ## Current Census Verdict
 
 - Status: Proven. Audited-set sufficiency does not by itself imply MVP-envelope completeness.
-- Status: Proven. Under the current MVP assumptions as presently written, the audited family set does not yet exhaust the primitive-family envelope.
-- Status: Proven. The smallest remaining unaudited family class is a local parity-even rank-1 vector family.
-- Status: Proven. Therefore the theorem remains audited-set only at `\Delta \le 4`; it does not yet upgrade to MVP-envelope sufficiency.
-- Status: Conjectural. A direct audit of that rank-1 vector class, or a new explicit assumption excluding it, is the next bounded gate toward any stronger MVP-envelope theorem.
+- Status: Proven. Under the current MVP assumptions as presently written, a genuine local parity-even rank-1 vector family is not derivative-generated, excluded, or absorbed by the already audited scalar and rank-2 classes.
+- Status: Proven. The `R1` audit therefore yields a genuine new obstruction class with smallest explicit witness `V2`.
+- Status: Proven. The audited family set still does not yet exhaust the primitive-family envelope.
+- Status: Proven. The smallest remaining unaudited family class is now a local parity-even rank-3 tensor family.
+- Status: Proven. Therefore the theorem remains family-envelope incomplete at `\Delta \le 4`; it does not yet upgrade to MVP-envelope sufficiency.
+- Status: Conjectural. The next bounded gate toward any stronger MVP-envelope theorem is a direct audit of that remaining rank-3 class, or a new explicit assumption excluding it.
 
 ## Boundary
 

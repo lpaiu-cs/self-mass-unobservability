@@ -46,5 +46,6 @@ W_{\min}(\mathcal F) := \min\!\bigl(W_{\mathrm{self}}(\mathcal F),\ W_{\mathrm{m
 - Status: Proven. For the audited STF rank-2 family class, `W_{\mathrm{self}} = 2` and `W_{\mathrm{mix}} = 2`, so the current threshold is sharp within the audited class but not purely self-witness-driven.
 - Status: Proven. For the audited bare scalar family class, `W_{\mathrm{self}} = 1` and `W_{\mathrm{mix}} = 3`, so the current threshold is sharp and self-dominated within the audited class.
 - Status: Proven. For the audited derivative-only scalar family class, `W_{\mathrm{self}} = 4` and `W_{\mathrm{mix}} = 4`, so the current threshold is sharp within the audited class but not purely self-witness-driven.
+- Status: Proven. For the audited genuine vector family class, `W_{\mathrm{self}} = 2` and `W_{\mathrm{mix}} = 3`, so the current threshold is sharp and self-dominated within the audited class.
 - Status: Proven. No audited family class currently exhibits `W_{\mathrm{mix}} < W_{\mathrm{self}}` at `\Delta \le 4`.
 - Status: Conjectural. The remaining negative-branch burden is to determine whether the same sharp class-limited pattern persists beyond the currently audited families, not to re-establish witness existence.

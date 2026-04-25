@@ -64,12 +64,12 @@ def family_envelope_entries() -> tuple[FamilyEnvelopeEntry, ...]:
         ),
         FamilyEnvelopeEntry(
             class_id="R1",
-            envelope_state="still unaudited",
+            envelope_state="audited",
             tensor_rank="1",
             parity="even",
             derivative_character="unsuppressed local family",
-            smallest_expected_witness_type="V2-type self contraction",
-            current_theorem_role="next smallest unaudited family gate",
+            smallest_expected_witness_type="V2 / EVV",
+            current_theorem_role="audited uniqueness obstruction and threshold class",
             rank_order=1,
         ),
         FamilyEnvelopeEntry(
@@ -79,7 +79,7 @@ def family_envelope_entries() -> tuple[FamilyEnvelopeEntry, ...]:
             parity="even",
             derivative_character="unsuppressed local family",
             smallest_expected_witness_type="Y2-type self contraction",
-            current_theorem_role="later unaudited family gate",
+            current_theorem_role="next smallest unaudited family gate",
             rank_order=3,
         ),
         FamilyEnvelopeEntry(

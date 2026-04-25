@@ -62,6 +62,12 @@ This ledger records the active assumptions behind the free-fall sensitivity-coll
 
 ## Non-Assumption For M12
 
-- Status: Proven. The repository does not currently assume that the audited family set `{R2, R0a, R0b}` already exhausts the parity-even local MVP primitive-family envelope.
+- Status: Proven. The repository does not currently assume that the audited family set `{R2, R0a, R0b, R1}` already exhausts the parity-even local MVP primitive-family envelope.
 - Status: Proven. No explicit assumption restricts admitted parity-even local primitive families to scalar and rank-2 classes only.
-- Status: Proven. Therefore local parity-even rank-1 and higher-rank tensor families remain open family-envelope targets unless they are audited directly or excluded by a new explicit assumption.
+- Status: Proven. Therefore local parity-even higher-rank tensor families remain open family-envelope targets unless they are audited directly or excluded by a new explicit assumption.
+
+## Non-Assumption For M13
+
+- Status: Proven. No current MVP assumption says that every local parity-even vector block must be derivative-generated from an audited scalar or rank-2 family.
+- Status: Proven. Derivative-generated vectors such as `\nabla_i S` or `\nabla_j X_i{}^j` are assigned to their parent families and are not counted as new primitive-family admissions.
+- Status: Proven. No vector-family ordering, absorption rule, or vector-background restriction is currently active that would remove a genuine primitive family `V_i` from the theorem domain.

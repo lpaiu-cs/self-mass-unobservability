@@ -10,8 +10,8 @@
 | `R2` | Proven | Audited | `2` STF | Even | Unsuppressed local family | `X2` and `EX` audited explicitly | Audited uniqueness obstruction class and threshold class |
 | `R0a` | Proven | Audited | `0` | Even | Bare source allowed | `S` audited explicitly | Audited uniqueness obstruction class and threshold class |
 | `R0b` | Proven | Audited | `0` | Even | Derivative-only or shift-symmetric | `dotS2` and `DtS_E2` audited explicitly | Audited uniqueness obstruction class and threshold class |
-| `R1` | Proven | Still unaudited | `1` | Even | Unsuppressed local family | `V2`-type self contraction (Counterexample candidate) | Next smallest unaudited family gate; blocks envelope completeness |
-| `Rodd+` | Proven | Still unaudited | Odd `\ge 3` | Even | Unsuppressed local family | `Y2`-type self contraction (Counterexample candidate) | Later unaudited family gate |
+| `R1` | Proven | Audited | `1` | Even | Unsuppressed local family | `V2` audited explicitly; first mixed witness `EVV` | Audited uniqueness obstruction class and threshold class |
+| `Rodd+` | Proven | Still unaudited | Odd `\ge 3` | Even | Unsuppressed local family | `Y2`-type self contraction (Counterexample candidate) | Next smallest unaudited family gate |
 | `Reven4+` | Proven | Still unaudited | Even `\ge 4` | Even | Unsuppressed local family | `Z2`-type self contraction (Counterexample candidate) | Later unaudited family gate |
 | `Podd` | Proven | Excluded by explicit assumption | Any | Odd | Any local derivative character | Not in the MVP domain | Excluded by A2 |
 | `Spin` | Proven | Excluded by explicit assumption | Any | Any | Spin- or orientation-carrying | Not in the MVP domain | Excluded by A2 |
@@ -20,7 +20,7 @@
 
 ## Reading Rule
 
-- Status: Proven. The three audited rows are exactly the family classes whose thresholds are already jointly sufficient at `\Delta \le 4`.
+- Status: Proven. The rows `R2`, `R0a`, `R0b`, and `R1` are now the explicitly audited primitive-family classes.
 - Status: Proven. The excluded rows are outside the current theorem domain because the required assumptions already remove them.
 - Status: Proven. The unaudited rows are the reason audited-set sufficiency does not yet upgrade to MVP-envelope sufficiency.
-- Status: Proven. Among the unaudited rows, `R1` is currently the smallest next gate.
+- Status: Proven. Among the remaining unaudited rows, `Rodd+` is currently the smallest next gate.

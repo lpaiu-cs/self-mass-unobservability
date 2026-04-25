@@ -11,12 +11,14 @@
 - Status: Proven. Class R2: unsuppressed STF rank-2 families admitted into the parity-even scalar sector at weight `1`.
 - Status: Proven. Class R0a: unsuppressed scalar-like rank-0 families with bare source `S`.
 - Status: Proven. Class R0b: derivative-only or shift-symmetric scalar families whose primitive catalog excludes bare `S` but admits `D_\tau S`, `\nabla_i S`, and `D_\tau^2 S`.
+- Status: Proven. Class R1: genuine local parity-even rank-1 vector families `V_i`, excluding derivative-generated vectors already belonging to audited scalar or rank-2 families.
 
 ## Theorem Statement
 
 - Status: Proven. For Class R2, the quadratic invariant `X2 = Tr(X^2)` is a new parity-even low-order survivor unless an explicit extra identity, ordering rule, or background restriction is imposed.
 - Status: Proven. For Class R0a, the bare scalar `S` itself is the smallest new survivor.
 - Status: Proven. For Class R0b, the smallest new survivors appear at weight `4`; a canonical witness is `dotS2`, and the full smallest-weight audited witness set is `\{DtS_B2,\ dotS2,\ DtS_E2,\ divEGradS,\ gradS2\}`.
+- Status: Proven. For Class R1, the first self witness is `V2` at weight `2`, while the first mixed witness is `EVV` at weight `3`.
 - Status: Proven. Therefore minimal-sector uniqueness is not stable under unsuppressed admission of these audited family classes.
 
 ## What The Theorem Does Not Say

@@ -35,11 +35,13 @@ def threshold_formula_entries(delta_max: int = DELTA_MAX) -> tuple[ThresholdForm
         raise ValueError("The current threshold-formula audit is only fixed at Delta_max = 4.")
 
     mixed = mixed_witness_summary(delta_max)
-    rank2, bare_scalar, derivative_only = mixed.entries
+    rank2, bare_scalar, derivative_only, _vector = mixed.entries
 
     _require(rank2.self_weight == 2 and rank2.mixed_weight == 2 and rank2.w_min == 2, "Rank-2 current-case values drifted.")
     _require(bare_scalar.self_weight == 1 and bare_scalar.mixed_weight == 3 and bare_scalar.w_min == 1, "Bare-scalar current-case values drifted.")
     _require(derivative_only.self_weight == 4 and derivative_only.mixed_weight == 4 and derivative_only.w_min == 4, "Derivative-only current-case values drifted.")
+    vector = mixed.entries[3]
+    _require(vector.self_weight == 2 and vector.mixed_weight == 3 and vector.w_min == 2, "Vector current-case values drifted.")
 
     return (
         ThresholdFormulaEntry(
@@ -68,6 +70,15 @@ def threshold_formula_entries(delta_max: int = DELTA_MAX) -> tuple[ThresholdForm
             current_case_value="w_D=2 -> (W_self, W_mix, W_min) = (4, 4, 4)",
             sharpness_status="tied-sharp",
             threshold_type="tied-sharp",
+        ),
+        ThresholdFormulaEntry(
+            family_class="rank1_vector",
+            self_formula="2*w_V",
+            mixed_formula="2*w_V + 1",
+            w_min_formula="2*w_V",
+            current_case_value="w_V=1 -> (W_self, W_mix, W_min) = (2, 3, 2)",
+            sharpness_status="self-only sharp",
+            threshold_type="self-only",
         ),
     )
 

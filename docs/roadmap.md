@@ -122,14 +122,26 @@ Status: Conjectural. The repository roadmap is organized around theorem progress
 | M12.4 | Proven | [`../symbolic/family_envelope_census.py`](../symbolic/family_envelope_census.py) | The family-envelope census runs and reports the current next unaudited class deterministically. |
 | M12.5 | Proven | [`../lemmas/25-next-unaudited-family-gate.md`](../lemmas/25-next-unaudited-family-gate.md), [`theorem-A-freefall.md`](theorem-A-freefall.md), and [`failure-ledger.md`](failure-ledger.md) | The repo states explicitly whether the audited-set result upgrades to envelope sufficiency or remains audited-set only. |
 
+## M13: Rank-1 Vector Family Gate
+
+| Item | Status | Deliverable | Exit condition |
+| --- | --- | --- | --- |
+| M13.1 | Proven | [`vector-family-ordering.md`](vector-family-ordering.md) | A genuine primitive vector family is distinguished from derivative-generated vector blocks already belonging to audited families. |
+| M13.2 | Proven | [`../lemmas/26-rank1-family-admission.md`](../lemmas/26-rank1-family-admission.md) | The first self and mixed witnesses for a genuine rank-1 vector family are identified explicitly. |
+| M13.3 | Proven | [`../symbolic/r1_sector_delta4.py`](../symbolic/r1_sector_delta4.py) | The R1-extended `\Delta \le 4` scalar sector enumerates without error and reports the smallest new witness. |
+| M13.4 | Proven | [`../symbolic/r1_survivor_rank_check.py`](../symbolic/r1_survivor_rank_check.py) | The corrected R1-extended survivor list is checked for linear dependence whenever more than one new survivor appears. |
+| M13.5 | Proven | [`../lemmas/27-rank1-threshold-formula.md`](../lemmas/27-rank1-threshold-formula.md) | The vector-family threshold is classified as self-only, mixed-aware, or tied-sharp. |
+| M13.6 | Proven | [`family-envelope-table.md`](family-envelope-table.md), [`theorem-A-freefall.md`](theorem-A-freefall.md), and [`failure-ledger.md`](failure-ledger.md) | The R1 row is resolved explicitly and the next live envelope gate is stated uniformly. |
+
 ## Near-Term Sequence
 
-1. Status: Proven. The audited-set composition question is closed positively for the currently audited family classes.
-2. Status: Conjectural. Audit the next family-envelope gate, currently the local parity-even rank-1 vector class `R1`.
-3. Status: Conjectural. Push the positive branch from audited finite examples toward an abstract finite-family fixed-order collapse theorem.
-4. Status: Conjectural. Decide whether any further mixed-trace or gradient identity should be introduced explicitly, rather than silently collapsing enlarged-sector operators.
-5. Status: Counterexample candidate. Promote the dominant loophole class only if it produces a genuine failure of the corrected finite-family collapse candidate rather than only another uniqueness obstruction.
-6. Status: Conjectural. Revisit the scalar `s_A` corollary only after the higher-dimensional sensitivity manifold statement is sharp.
+1. Status: Proven. The audited-set composition question is closed positively for the currently audited family classes `R2`, `R0a`, and `R0b`.
+2. Status: Proven. The rank-1 vector gate `R1` is now resolved as a genuine new obstruction class rather than an absorbed derivative block.
+3. Status: Conjectural. Audit the next family-envelope gate, currently the local parity-even rank-3 tensor class `Rodd+`.
+4. Status: Conjectural. Push the positive branch from audited finite examples toward an abstract finite-family fixed-order collapse theorem.
+5. Status: Conjectural. Decide whether any further mixed-trace or gradient identity should be introduced explicitly, rather than silently collapsing enlarged-sector operators.
+6. Status: Counterexample candidate. Promote the dominant loophole class only if it produces a genuine failure of the corrected finite-family collapse candidate rather than only another uniqueness obstruction.
+7. Status: Conjectural. Revisit the scalar `s_A` corollary only after the higher-dimensional sensitivity manifold statement is sharp.
 
 ## Explicit Non-Goals For M1
 

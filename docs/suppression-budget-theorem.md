@@ -20,12 +20,15 @@
   the witness is `S`, so uniqueness up to `\Delta \le 4` requires `w_S \ge 5`, or a symmetry/background rule that forbids bare `S`.
 - Status: Proven. Derivative-only scalar class:
   the first audited witnesses are `\{DtS_B2,\ dotS2,\ DtS_E2,\ divEGradS,\ gradS2\}` at weight `4`, so uniqueness up to `\Delta \le 4` requires derivative-family blocks to be pushed above their current weight-`2` admission, for example to effective weight `3`, or an explicit rule removing those mixed derivative witnesses.
+- Status: Proven. Genuine rank-1 vector class:
+  the first audited witness is `V2`, so MVP-envelope sufficiency up to `\Delta \le 4` requires `w_V \ge 3`, or an explicit rule excluding or absorbing the primitive vector family.
 
 ## M9 Sharpness Status Within The Audited Classes
 
 - Status: Proven. For the audited rank-2 STF class, the current threshold is mixed-aware: `W_{\mathrm{self}} = W_{\mathrm{mix}} = 2` in the unsuppressed audit, but the true `\Delta_{\max}=4` budget is governed by the mixed branch.
 - Status: Proven. For the audited bare scalar class, the current threshold is self-only and sharp because `W_{\mathrm{self}} = 1 < 3 = W_{\mathrm{mix}}`.
 - Status: Proven. For the audited derivative-only scalar class, the current threshold is tied-sharp because `W_{\mathrm{self}} = W_{\mathrm{mix}} = 4` in the current audit and both branches give `w_D \ge 3`.
+- Status: Proven. For the audited rank-1 vector class, the current threshold is self-only and sharp because `W_{\mathrm{self}} = 2 < 3 = W_{\mathrm{mix}}`.
 - Status: Proven. Therefore the current class-limited threshold map is no longer only about witness existence; it also records whether the active threshold is self-only, mixed-aware, or tied-sharp.
 
 ## What This Theorem Buys
