@@ -120,6 +120,8 @@ static primitive families.
 | D31 | Proven | [`../symbolic/nonlinear_robustness_map.py`](../symbolic/nonlinear_robustness_map.py) | Robust-positive, underdesigned, and degenerate grid regions are counted by projection mode. |
 | D32 | Counterexample candidate | [`analytic-phase-boundary-theorem.md`](analytic-phase-boundary-theorem.md) | The nonlinear positive region is rewritten as count, bracket, amplitude-usability, and rank-boundary conditions. |
 | D33 | Proven | [`../symbolic/analytic_phase_boundary.py`](../symbolic/analytic_phase_boundary.py) | The analytic boundary rules reproduce the default robustness-map verdicts and record the `Q_beta` rank minor. |
+| D34 | Counterexample candidate | [`dynamic-loophole-paper-synthesis.md`](dynamic-loophole-paper-synthesis.md) | The dynamic side track is packaged as one-state control/no-go plus nonlinear second-order conditional positive theorem. |
+| D35 | Conjectural | [`../paper/dynamic-loophole-outline.md`](../paper/dynamic-loophole-outline.md) | A paper-facing outline separates the dynamic loophole manuscript from the older manuscript path. |
 
 ## Explicit Non-Goals For M1
 

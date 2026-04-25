@@ -84,3 +84,5 @@ This ledger records the active assumptions behind the free-fall sensitivity-coll
 - Status: Proven. A robustness-map point counts as positive only if it is component-separable, generated-budget-ready, and resonance-bracketed under finite shared nuisance.
 - Status: Proven. The analytic phase-boundary theorem treats count, bracket, amplitude usability, and component-rank as separate necessary boundaries; passing only one of them is not a positive result.
 - Status: Conjectural. The rank-minor formula is an analytic sufficient diagnostic for the fixed-nuisance amplitude submodel; the full shared-parameter result still uses the real Jacobian-rank audit.
+- Status: Proven. The paper-level dynamic loophole claim remains a parameterized design theorem. It does not assume that `Q_0`, `Q_beta`, `sigma_0`, `Gamma`, `kappa`, cadence, or harmonic extraction errors have been fixed by a real instrument model.
+- Status: Counterexample candidate. The nonlinear second-order branch is the live A4-violating counterexample class for manuscript packaging; opening a new internal-state family is not required for the current theorem-level result.
