@@ -61,6 +61,7 @@ make orbital-harmonic-budget
 make second-order-mode
 make second-order-projection
 make resonant-comparator
+make exact-in-e-resonant-forcing
 make symbolic-check
 ```
 

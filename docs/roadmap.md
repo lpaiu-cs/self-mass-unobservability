@@ -104,6 +104,8 @@ static primitive families.
 | D15 | Counterexample candidate | [`second-order-projection-audit.md`](second-order-projection-audit.md) | Acceleration-like and range-like readouts are audited for resonance survival under finite shared projection nuisance. |
 | D16 | Counterexample candidate | [`resonant-comparator-theorem.md`](resonant-comparator-theorem.md) | The second-order line-shape budget theorem is stated with resonance bracketing and projection nuisance counts. |
 | D17 | Proven | [`../symbolic/second_order_projection_audit.py`](../symbolic/second_order_projection_audit.py) and [`../symbolic/resonant_comparator_audit.py`](../symbolic/resonant_comparator_audit.py) | Projection residuals and resonance-aware comparator budgets are checked symbolically. |
+| D18 | Counterexample candidate | [`exact-in-e-resonant-forcing-budget-audit.md`](exact-in-e-resonant-forcing-budget-audit.md) | Exact-in-e orbital harmonics are audited as a sample-provisioning dictionary for the second-order resonance target. |
+| D19 | Proven | [`../symbolic/exact_in_e_resonant_forcing_audit.py`](../symbolic/exact_in_e_resonant_forcing_audit.py) | The minimum usable harmonic cutoff `H_min` is computed from comparator budget and resonance bracketing. |
 
 ## Explicit Non-Goals For M1
 

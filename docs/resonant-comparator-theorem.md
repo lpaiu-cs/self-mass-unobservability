@@ -97,3 +97,6 @@ Status: Counterexample candidate. The second-order program is stronger than
 the one-state program only if it samples the resonance/phase-wrap structure
 with enough points to exceed the finite shared static comparator budget.
 
+Status: Counterexample candidate. The exact-in-e orbital sample-provisioning
+version of this rule is recorded in
+[`exact-in-e-resonant-forcing-budget-audit.md`](exact-in-e-resonant-forcing-budget-audit.md).

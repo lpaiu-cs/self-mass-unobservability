@@ -81,6 +81,15 @@ from resonant_comparator_audit import (
     phase_wrap_pole,
     resonance_audit_rows,
 )
+from exact_in_e_resonant_forcing_audit import (
+    classify_resonant_forcing_design,
+    default_design_rows as exact_in_e_design_rows,
+    harmonic_bracket,
+    harmonics,
+    minimum_cutoff_for_bracket,
+    minimum_cutoff_for_budget_and_bracket,
+)
+from fractions import Fraction
 from normal_form_reduce import (
     operator_symbols,
     reduce_algebraic_identities,
@@ -673,6 +682,51 @@ def test_resonant_comparator_rows_record_budget_and_bracket_conditions() -> None
     assert "bracketing" in rows[1].verdict
 
 
+def test_exact_in_e_harmonic_bracket_examples() -> None:
+    assert harmonics(4) == (1, 2, 3, 4)
+    half = harmonic_bracket(Fraction(3, 2), 4)
+    assert half.lower_count == 1
+    assert half.upper_count == 3
+    assert not half.exact_hit
+    assert half.bracketed
+    integer_hit = harmonic_bracket(Fraction(4, 1), 4)
+    assert integer_hit.exact_hit
+    assert not integer_hit.bracketed
+    integer_bracket = harmonic_bracket(Fraction(4, 1), 5)
+    assert integer_bracket.bracketed
+
+
+def test_exact_in_e_minimum_cutoffs_for_budget_and_bracket() -> None:
+    assert minimum_cutoff_for_bracket(Fraction(3, 2)) == 2
+    assert minimum_cutoff_for_bracket(Fraction(4, 1)) == 5
+    assert minimum_cutoff_for_bracket(Fraction(3, 4)) is None
+    assert minimum_cutoff_for_budget_and_bracket(Fraction(3, 2), 1, 1) == 4
+    assert minimum_cutoff_for_budget_and_bracket(Fraction(3, 2), 1, 2) == 5
+    assert minimum_cutoff_for_budget_and_bracket(Fraction(4, 1), 1, 1) == 5
+
+
+def test_exact_in_e_design_classification_rows() -> None:
+    acceleration = classify_resonant_forcing_design(
+        "near 3/2 acceleration",
+        Fraction(3, 2),
+        polynomial_order=1,
+        projection_nuisance=1,
+    )
+    sub_fundamental = classify_resonant_forcing_design(
+        "subfundamental",
+        Fraction(3, 4),
+        polynomial_order=1,
+        projection_nuisance=1,
+    )
+    assert acceleration.minimum_harmonic_cutoff == 4
+    assert acceleration.verdict == "budget-breaking-if-usable"
+    assert sub_fundamental.minimum_harmonic_cutoff is None
+    assert sub_fundamental.verdict == "no single-system harmonic bracket"
+    rows = exact_in_e_design_rows()
+    assert len(rows) == 12
+    assert any(row.minimum_harmonic_cutoff == 6 for row in rows)
+
+
 def main() -> None:
     test_symmetric_quadratic_jet()
     test_worldline_force_structure()
@@ -722,6 +776,9 @@ def main() -> None:
     test_resonance_condition_and_phase_wrap_pole()
     test_exact_polynomial_collapse_residual_is_not_identity_generically()
     test_resonant_comparator_rows_record_budget_and_bracket_conditions()
+    test_exact_in_e_harmonic_bracket_examples()
+    test_exact_in_e_minimum_cutoffs_for_budget_and_bracket()
+    test_exact_in_e_design_classification_rows()
     print("symbolic checks passed")
 
 
