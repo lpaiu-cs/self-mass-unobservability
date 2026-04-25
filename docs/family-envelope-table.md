@@ -12,7 +12,7 @@
 | `R0b` | Proven | Audited | `0` | Even | Derivative-only or shift-symmetric | `dotS2` and `DtS_E2` audited explicitly | Audited uniqueness obstruction class and threshold class |
 | `R1` | Proven | Audited | `1` | Even | Unsuppressed local family | `V2` audited explicitly; first mixed witness `EVV` | Audited uniqueness obstruction class and threshold class |
 | `Rodd+` | Proven | Audited | Odd `\ge 3`; current representative = STF rank `3` | Even | Unsuppressed local family | `T2` audited explicitly; first mixed witness `ETT` | Audited uniqueness obstruction class and threshold class; enlarged audited-set composition now re-closed |
-| `Reven4+` | Proven | Audited | Even `\ge 4`; current representative = STF rank `4` | Even | Unsuppressed local family | `Q2` audited explicitly; first mixed witness `EQQ` | Audited uniqueness obstruction class and threshold class; enlarged audited-set composition now re-closed |
+| `Reven4+` | Proven | Audited | Even `\ge 4`; current representative = STF rank `4` | Even | Unsuppressed local family | `Q2` audited explicitly; manual `EQQ` plus omitted exhaustive `EEQ` at the same mixed order | Audited uniqueness obstruction class and threshold class; enlarged audited-set composition now re-closed, but exhaustive bookkeeping patch is still active |
 | `Rodd5+` | Proven | Audited | Odd `\ge 5`; current representative = STF rank `5` | Even | Unsuppressed local family | `U2` audited explicitly; first mixed witness `EUU` | Audited uniqueness obstruction class and threshold class; enlarged audited-set composition now re-closed |
 | `Reven6+` | Proven | Still unaudited | Even `\ge 6` | Even | Unsuppressed local family | Rank-6 self-contraction type (Counterexample candidate) | Next smallest unaudited family gate after the closed `Rodd5+` composition layer |
 | `Podd` | Proven | Excluded by explicit assumption | Any | Odd | Any local derivative character | Not in the MVP domain | Excluded by A2 |
@@ -26,4 +26,4 @@
 - Status: Proven. The excluded rows are outside the current theorem domain because the required assumptions already remove them.
 - Status: Proven. The remaining unaudited rows are the reason family-envelope completeness still fails under the current MVP assumptions.
 - Status: Proven. Among the remaining unaudited rows, `Reven6+` is now the smallest next envelope gate.
-- Status: Proven. The live theorem bottleneck has now moved back to family-envelope completeness and the next unaudited gate `Reven6+`.
+- Status: Proven. The family-envelope census still points to `Reven6+` as the next unaudited gate, but the live theorem bottleneck is the omitted rank-4 contraction `EEQ` and the resulting high-rank exhaustiveness patch before any move there.

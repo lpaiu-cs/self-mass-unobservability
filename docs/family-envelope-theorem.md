@@ -17,14 +17,14 @@
 - Status: Proven. Audited-set sufficiency does not by itself imply MVP-envelope completeness.
 - Status: Proven. The `R1` audit yielded a genuine new obstruction class with smallest explicit witness `V2`.
 - Status: Proven. The `Rodd+` audit yielded a genuine new obstruction class with smallest explicit witness `T2` and first mixed witness `ETT`.
-- Status: Proven. The `Reven4+` audit yielded a genuine new obstruction class with smallest explicit witness `Q2` and first mixed witness `EQQ`.
+- Status: Proven. The `Reven4+` audit yielded a genuine new obstruction class with smallest explicit witness `Q2`; the original manual mixed witness `EQQ` survives, and the later exhaustive check adds the omitted equally low mixed cubic `EEQ`.
 - Status: Proven. The `Rodd5+` audit yielded a genuine new obstruction class with smallest explicit witness `U2` and first mixed witness `EUU`.
 - Status: Proven. The post-Rodd5+ composition audit finds no pairwise, higher-order, or full-set cross-family survivor beyond the baseline electric sector once the current thresholds are imposed.
 - Status: Proven. Therefore the current thresholds are jointly sufficient for the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+, Rodd5+}` at `\Delta \le 4`.
 - Status: Proven. The audited family set still does not yet exhaust the primitive-family envelope.
 - Status: Proven. The smallest remaining unaudited family class under the current MVP assumptions is now `Reven6+`, the local parity-even even-rank tensor class beyond the current rank-4 representative.
 - Status: Proven. Therefore the envelope census still does not upgrade the theorem to MVP-envelope sufficiency.
-- Status: Proven. The current live bottleneck is family-envelope completeness or the next smallest unaudited family obstruction, currently `Reven6+`.
+- Status: Proven. The current live bottleneck is the omitted rank-4 contraction `EEQ` and the resulting high-rank exhaustiveness patch before any move to `Reven6+`.
 
 ## Boundary
 

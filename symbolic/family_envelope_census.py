@@ -5,7 +5,7 @@ from dataclasses import dataclass
 
 DELTA_MAX = 4
 LIVE_BOTTLENECK = (
-    "family-envelope completeness or the next smallest unaudited family obstruction"
+    "the omitted rank-4 contraction EEQ and the resulting high-rank exhaustiveness patch before any move to Reven6+"
 )
 
 
@@ -88,8 +88,8 @@ def family_envelope_entries() -> tuple[FamilyEnvelopeEntry, ...]:
             tensor_rank="even >= 4",
             parity="even",
             derivative_character="unsuppressed local family",
-            smallest_expected_witness_type="Q2 / EQQ",
-            current_theorem_role="audited uniqueness obstruction and threshold class; enlarged audited-set composition now re-closed",
+            smallest_expected_witness_type="Q2 / EEQ and EQQ",
+            current_theorem_role="audited uniqueness obstruction and threshold class; enlarged audited-set composition now re-closed, but exhaustive bookkeeping patch still active",
             rank_order=4,
         ),
         FamilyEnvelopeEntry(

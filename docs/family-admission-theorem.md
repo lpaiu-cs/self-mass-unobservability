@@ -23,7 +23,7 @@
 - Status: Proven. For Class R0b, the smallest new survivors appear at weight `4`; a canonical witness is `dotS2`, and the full smallest-weight audited witness set is `\{DtS_B2,\ dotS2,\ DtS_E2,\ divEGradS,\ gradS2\}`.
 - Status: Proven. For Class R1, the first self witness is `V2` at weight `2`, while the first mixed witness is `EVV` at weight `3`.
 - Status: Proven. For Class Rodd+, the first self witness is `T2` at weight `2`, while the first mixed witness is `ETT` at weight `3`.
-- Status: Proven. For Class Reven4+, the first self witness is `Q2` at weight `2`, while the first mixed witness is `EQQ` at weight `3`.
+- Status: Proven. For Class Reven4+, the first self witness is `Q2` at weight `2`; the manual audit already exhibited `EQQ` at weight `3`, and the later exhaustive check adds the omitted equally low mixed cubic `EEQ`.
 - Status: Proven. For Class Rodd5+, the first self witness is `U2` at weight `2`, while the first mixed witness is `EUU` at weight `3`.
 - Status: Proven. Therefore minimal-sector uniqueness is not stable under unsuppressed admission of these audited family classes.
 
@@ -39,6 +39,6 @@
 - Status: Proven. The positive theorem target must therefore be finite-family fixed-order collapse, not minimal-sector uniqueness.
 - Status: Proven. New family-admission audits are classification steps: a new witness reinforces the uniqueness no-go unless it also destroys fixed-order finiteness.
 - Status: Proven. The audited-set composition question is now closed positively for the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+, Rodd5+}` at `\Delta \le 4`.
-- Status: Proven. The current live bottleneck is no longer audited-set composition, but family-envelope completeness and the next smallest unaudited family class `Reven6+`.
+- Status: Proven. The current live bottleneck is no longer audited-set composition, but the omitted rank-4 contraction `EEQ` and the resulting high-rank exhaustiveness patch before any move to `Reven6+`.
 - Status: Proven. [`../symbolic/family_witness_map.py`](../symbolic/family_witness_map.py) records the current witness table linking each audited family class to the exact theorem layer it obstructs.
 - Status: Proven. [`suppression-budget-theorem.md`](suppression-budget-theorem.md) and [`../symbolic/witness_threshold_map.py`](../symbolic/witness_threshold_map.py) now promote those witnesses into necessary suppression thresholds for the audited classes.

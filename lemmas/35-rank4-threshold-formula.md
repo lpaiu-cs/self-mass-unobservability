@@ -13,7 +13,9 @@
 W_{\mathrm{self}}(Reven4+; w_Q) = 2 w_Q.
 ```
 
-- Status: Proven. The first mixed witness is `EQQ`, so
+- Status: Proven. The original manual note used `EQQ` as a canonical first mixed witness.
+- Status: Proven. After the exhaustive check in [`43-rank4-exhaustiveness-check.md`](43-rank4-exhaustiveness-check.md), the first mixed-witness layer is understood to contain both `EEQ` and `EQQ` at the same effective order.
+- Status: Proven. Either canonical choice gives the same mixed-weight formula, namely
 
 ```math
 W_{\mathrm{mix}}(Reven4+; w_Q) = 2 w_Q + 1.

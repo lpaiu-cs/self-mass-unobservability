@@ -21,6 +21,8 @@ from es_sector_delta4 import es_summary
 from es_survivor_rank_check import es_rank_summary
 from family_envelope_census import family_envelope_summary
 from family_witness_map import family_witness_summary
+from high_rank_diff_report import high_rank_diff_report
+from high_rank_family_enumerator import high_rank_audit_summary
 from composition_attack_delta4 import composition_summary
 from mixed_witness_map import mixed_witness_summary
 from primitive_family_attack import primitive_attack_summary
@@ -532,7 +534,7 @@ def test_family_envelope_census() -> None:
     assert summary.delta_max == 4
     assert (
         summary.live_bottleneck
-        == "family-envelope completeness or the next smallest unaudited family obstruction"
+        == "the omitted rank-4 contraction EEQ and the resulting high-rank exhaustiveness patch before any move to Reven6+"
     )
     assert summary.envelope_closed is False
     assert summary.smallest_unaudited_class == "Reven6+"
@@ -545,11 +547,50 @@ def test_family_envelope_census() -> None:
     assert entries["Rodd+"].envelope_state == "audited"
     assert entries["Rodd+"].smallest_expected_witness_type == "T2 / ETT"
     assert entries["Reven4+"].envelope_state == "audited"
-    assert entries["Reven4+"].smallest_expected_witness_type == "Q2 / EQQ"
+    assert entries["Reven4+"].smallest_expected_witness_type == "Q2 / EEQ and EQQ"
     assert entries["Rodd5+"].envelope_state == "audited"
     assert entries["Rodd5+"].smallest_expected_witness_type == "U2 / EUU"
     assert entries["Reven6+"].envelope_state == "still unaudited"
     assert entries["Podd"].envelope_state == "excluded by explicit assumption"
+
+
+def test_high_rank_exhaustiveness_audit() -> None:
+    rank3 = high_rank_audit_summary(3)
+    assert rank3.generated_count == 14
+    assert rank3.manual_count == 14
+    assert rank3.matched_count == 14
+    assert rank3.omitted_from_manual == ()
+    assert rank3.manual_only == ()
+
+    rank4 = high_rank_audit_summary(4)
+    assert rank4.generated_count == 22
+    assert rank4.manual_count == 15
+    assert rank4.matched_count == 15
+    assert rank4.omitted_from_manual == (
+        "EEDtQ",
+        "EEEQ",
+        "EEQ",
+        "EQQQ_1",
+        "EQQQ_2",
+        "GradEGradQ",
+        "Q3",
+    )
+    assert rank4.manual_only == ()
+
+    rank5 = high_rank_audit_summary(5)
+    assert rank5.generated_count == 16
+    assert rank5.manual_count == 16
+    assert rank5.matched_count == 16
+    assert rank5.omitted_from_manual == ()
+    assert rank5.manual_only == ()
+
+
+def test_high_rank_diff_report_mentions_eeq() -> None:
+    report = high_rank_diff_report()
+    assert "\tQ\tomitted_from_manual\tEEQ\t3\tE,E,Q\t" in report
+    assert "\tQ\tomitted_from_manual\tQ3\t3\tQ,Q,Q\t" in report
+    assert "\tT\tmatched\tETDtT\t4\tE,T,DtT\t" in report
+    assert "\tU\tmatched\tEUDtU\t4\tE,U,DtU\t" in report
 
 
 def test_r1_sector_delta4() -> None:
@@ -773,6 +814,8 @@ def main() -> None:
     test_threshold_formula_check()
     test_composition_attack_delta4()
     test_family_envelope_census()
+    test_high_rank_exhaustiveness_audit()
+    test_high_rank_diff_report_mentions_eeq()
     test_r1_sector_delta4()
     test_r1_survivor_rank_check()
     test_r3_sector_delta4()
