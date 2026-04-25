@@ -57,3 +57,10 @@ This ledger records the active assumptions behind the free-fall sensitivity-coll
 
 - Status: Proven. The derivative-only scalar audit is a separate family-admission test, not a new global theorem assumption.
 - Status: Proven. In that audit, non-shift-symmetric total-derivative preimages such as `D_\tau(S X)` are not used to reduce operators, because bare `S` is excluded by construction.
+
+## Dynamic-Visibility Side Track
+
+- Status: Counterexample candidate. The nonlinear sideband comparator audit deliberately violates A4 by keeping an orbital-timescale `chi` state.
+- Status: Proven. It does not assume that sideband existence alone is dynamic evidence once static nonlinear local comparators are admitted.
+- Status: Conjectural. The active discriminator is a finite shared nuisance structure: one common `tau_chi` must organize the generated sidebands and the linear transfer lines.
+- Status: Proven. If nonlinear static coefficients or projection nuisances are allowed independently at every generated frequency, the sideband-ratio test is not identifiable.

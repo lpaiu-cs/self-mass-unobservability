@@ -79,6 +79,19 @@ Status: Conjectural. The repository roadmap is organized around theorem progress
 4. Status: Counterexample candidate. Promote the dominant loophole class only if it produces a genuine failure of the corrected `E/B` basis or of the next primitive-family attack.
 5. Status: Conjectural. Revisit the scalar `s_A` corollary only after the higher-dimensional sensitivity manifold statement is sharp.
 
+## Dynamic-Loophole Addendum
+
+Status: Counterexample candidate. This addendum is separate from the numbered
+static-family milestones above. It attacks A4 directly rather than adding more
+static primitive families.
+
+| Item | Status | Deliverable | Exit condition |
+| --- | --- | --- | --- |
+| D1 | Counterexample candidate | [`../counterexamples/chi-state/README.md`](../counterexamples/chi-state/README.md) | A one-state `chi` loophole is written as an explicit A4 violation. |
+| D2 | Proven | [`nonlinear-comparator-audit.md`](nonlinear-comparator-audit.md) | Single-sideband static nonlinear mimicry and the shared-pole obstruction are separated. |
+| D3 | Proven | [`sideband-observable-targets.md`](sideband-observable-targets.md) | Sideband existence, shared phase law, ratio target, projection collapse, and nuisance collapse are classified. |
+| D4 | Proven | [`../symbolic/nonlinear_comparator_audit.py`](../symbolic/nonlinear_comparator_audit.py) | The shared `tau_chi` phase law and finite-polynomial interpolation residual are checked symbolically. |
+
 ## Explicit Non-Goals For M1
 
 - Status: Proven. No new LLR, MLRS, PEP, Nutimo, or TOA pipeline work belongs in M1.

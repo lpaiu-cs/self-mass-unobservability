@@ -88,3 +88,9 @@ up to total derivatives.
 ## Smallest-Model Reason
 
 - Status: Counterexample candidate. Only one new degree of freedom is added, and the rest of the worldline EFT remains local and analytic.
+
+## Nonlinear Sideband Comparator Boundary
+
+- Status: Proven. A nonlinear extension of the `chi` response can create sidebands, but sideband existence alone is not a unique dynamic signature once static nonlinear local comparators are admitted.
+- Status: Counterexample candidate. The stronger observable target is a shared relaxation pole across generated sidebands and the linear-frequency response.
+- Status: Proven. The current comparator boundary is recorded in [`../../docs/nonlinear-comparator-audit.md`](../../docs/nonlinear-comparator-audit.md) and checked in [`../../symbolic/nonlinear_comparator_audit.py`](../../symbolic/nonlinear_comparator_audit.py).

@@ -1,6 +1,6 @@
 PYTHON ?= python
 
-.PHONY: worldline-expand sensitivity-expand enumerate-basis enumerate-contractions survivor-rank primitive-attack eb-sector eb-rank normal-form-reduce symbolic-check legacy-request1 legacy-request2 legacy-request7
+.PHONY: worldline-expand sensitivity-expand enumerate-basis enumerate-contractions survivor-rank primitive-attack eb-sector eb-rank normal-form-reduce nonlinear-comparator symbolic-check legacy-request1 legacy-request2 legacy-request7
 
 worldline-expand:
 	$(PYTHON) symbolic/worldline_expand.py
@@ -28,6 +28,9 @@ eb-rank:
 
 normal-form-reduce:
 	$(PYTHON) symbolic/normal_form_reduce.py
+
+nonlinear-comparator:
+	$(PYTHON) symbolic/nonlinear_comparator_audit.py
 
 symbolic-check:
 	$(PYTHON) symbolic/checks/test_symbolic.py

@@ -21,6 +21,17 @@ from es_sector_delta4 import es_summary
 from es_survivor_rank_check import es_rank_summary
 from primitive_family_attack import primitive_attack_summary
 from shift_scalar_sector_delta4 import shift_scalar_summary
+from nonlinear_comparator_audit import (
+    audit_rows,
+    dynamic_sideband_transfer,
+    linear_dynamic_transfer,
+    orbital_three_n_ratio,
+    shared_tau_phase_law,
+    sideband_pole_interpolation_obstruction,
+    static_single_line_mimic_coefficient,
+    symbols as nonlinear_symbols,
+    two_tone_sideband_ratio,
+)
 from normal_form_reduce import (
     operator_symbols,
     reduce_algebraic_identities,
@@ -286,6 +297,62 @@ def test_shift_scalar_sector_survivors() -> None:
     )
 
 
+def test_dynamic_sideband_phase_law_returns_tau() -> None:
+    syms = nonlinear_symbols()
+    assert sp.simplify(shared_tau_phase_law() - syms["tau_chi"]) == 0
+
+
+def test_single_sideband_static_mimic_is_exact() -> None:
+    syms = nonlinear_symbols()
+    nu = syms["nu"]
+    assert sp.simplify(
+        static_single_line_mimic_coefficient(nu) - dynamic_sideband_transfer(sp.I * nu)
+    ) == 0
+
+
+def test_sideband_pole_interpolation_residual_collapse_limits() -> None:
+    syms = nonlinear_symbols()
+    obstruction = sideband_pole_interpolation_obstruction(order=1)
+    assert obstruction.order == 1
+    assert len(obstruction.nodes) == 2
+    assert sp.simplify(obstruction.residual.subs(syms["C_dyn"], 0)) == 0
+    assert sp.simplify(obstruction.residual.subs(syms["tau_chi"], 0)) == 0
+    assert sp.simplify(obstruction.residual.subs(obstruction.target, obstruction.nodes[0])) == 0
+
+
+def test_two_tone_ratio_has_shared_sideband_pole() -> None:
+    syms = nonlinear_symbols()
+    omega1 = syms["Omega1"]
+    omega2 = syms["Omega2"]
+    tau_chi = syms["tau_chi"]
+    expected = syms["C_dyn"] / (
+        (1 + sp.I * (omega1 + omega2) * tau_chi)
+        * linear_dynamic_transfer(omega1)
+        * linear_dynamic_transfer(omega2)
+    )
+    assert sp.simplify(two_tone_sideband_ratio() - expected) == 0
+
+
+def test_orbital_three_n_ratio_has_shared_sideband_pole() -> None:
+    syms = nonlinear_symbols()
+    n = syms["n"]
+    tau_chi = syms["tau_chi"]
+    expected = syms["C_dyn"] / (
+        (1 + 3 * sp.I * n * tau_chi)
+        * linear_dynamic_transfer(n)
+        * linear_dynamic_transfer(2 * n)
+    )
+    assert sp.simplify(orbital_three_n_ratio() - expected) == 0
+
+
+def test_nonlinear_comparator_audit_rows_classify_boundaries() -> None:
+    rows = audit_rows()
+    assert len(rows) == 4
+    assert rows[0].status == "Proven"
+    assert "not unique" in rows[0].verdict
+    assert any("shared sideband pole" in row.observable for row in rows)
+
+
 def main() -> None:
     test_symmetric_quadratic_jet()
     test_worldline_force_structure()
@@ -305,6 +372,12 @@ def main() -> None:
     test_es_sector_survivor_list()
     test_es_survivor_rank_independence()
     test_shift_scalar_sector_survivors()
+    test_dynamic_sideband_phase_law_returns_tau()
+    test_single_sideband_static_mimic_is_exact()
+    test_sideband_pole_interpolation_residual_collapse_limits()
+    test_two_tone_ratio_has_shared_sideband_pole()
+    test_orbital_three_n_ratio_has_shared_sideband_pole()
+    test_nonlinear_comparator_audit_rows_classify_boundaries()
     print("symbolic checks passed")
 
 
