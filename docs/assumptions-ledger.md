@@ -69,3 +69,4 @@ This ledger records the active assumptions behind the free-fall sensitivity-coll
 - Status: Proven. Projection nuisance parameters must be counted explicitly as `K_Lambda`; allowing arbitrary per-frequency projection nuisance collapses every finite sample-budget claim.
 - Status: Conjectural. The richer orbital harmonic audit assumes generic nonzero eccentric harmonics and counts only clean generated frequencies beyond the retained linear harmonic dictionary.
 - Status: Counterexample candidate. The second-order mode branch violates A4 by keeping an orbital-timescale internal oscillator rather than a single relaxation coordinate.
+- Status: Conjectural. The second-order projection and resonance audits assume calibrated or finite shared projection nuisance; they do not claim identifiability under arbitrary per-frequency projection freedom.

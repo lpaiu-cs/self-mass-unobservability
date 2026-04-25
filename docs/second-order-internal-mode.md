@@ -128,3 +128,7 @@ sample-budgeted line-shape test: determine the minimum number of frequency
 samples needed to distinguish `H_2(z)` from a finite static polynomial
 comparator with projection nuisance included.
 
+Status: Counterexample candidate. The first projection and line-shape budget
+versions of that target are recorded in
+[`second-order-projection-audit.md`](second-order-projection-audit.md) and
+[`resonant-comparator-theorem.md`](resonant-comparator-theorem.md).

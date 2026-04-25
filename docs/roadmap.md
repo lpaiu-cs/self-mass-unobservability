@@ -101,6 +101,9 @@ static primitive families.
 | D12 | Proven | [`../symbolic/orbital_harmonic_budget_audit.py`](../symbolic/orbital_harmonic_budget_audit.py) | The minimum richer-orbital harmonic counts are computed for the comparator grid. |
 | D13 | Counterexample candidate | [`second-order-internal-mode.md`](second-order-internal-mode.md) | The next dynamic loophole model is defined with resonance, phase wrapping, and first-order collapse limits. |
 | D14 | Proven | [`../symbolic/second_order_mode_response.py`](../symbolic/second_order_mode_response.py) | The second-order transfer, low-frequency expansion, and resonance condition are checked symbolically. |
+| D15 | Counterexample candidate | [`second-order-projection-audit.md`](second-order-projection-audit.md) | Acceleration-like and range-like readouts are audited for resonance survival under finite shared projection nuisance. |
+| D16 | Counterexample candidate | [`resonant-comparator-theorem.md`](resonant-comparator-theorem.md) | The second-order line-shape budget theorem is stated with resonance bracketing and projection nuisance counts. |
+| D17 | Proven | [`../symbolic/second_order_projection_audit.py`](../symbolic/second_order_projection_audit.py) and [`../symbolic/resonant_comparator_audit.py`](../symbolic/resonant_comparator_audit.py) | Projection residuals and resonance-aware comparator budgets are checked symbolically. |
 
 ## Explicit Non-Goals For M1
 

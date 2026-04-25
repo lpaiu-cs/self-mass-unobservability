@@ -59,6 +59,8 @@ make shared-tau-ratio
 make sample-budget
 make orbital-harmonic-budget
 make second-order-mode
+make second-order-projection
+make resonant-comparator
 make symbolic-check
 ```
 

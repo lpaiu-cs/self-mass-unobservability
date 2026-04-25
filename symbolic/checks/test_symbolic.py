@@ -66,6 +66,21 @@ from second_order_mode_response import (
     symbols as second_order_symbols,
     transfer_function as second_order_transfer_function,
 )
+from second_order_projection_audit import (
+    acceleration_diagnostic_residual,
+    deproject_acceleration,
+    deproject_range,
+    projection_audit_rows,
+    projection_nuisance_budget,
+    range_diagnostic_residual,
+)
+from resonant_comparator_audit import (
+    dynamic_peak_condition,
+    exact_polynomial_collapse_residual,
+    line_shape_budget,
+    phase_wrap_pole,
+    resonance_audit_rows,
+)
 from normal_form_reduce import (
     operator_symbols,
     reduce_algebraic_identities,
@@ -603,6 +618,61 @@ def test_second_order_cos_sin_components_have_common_denominator() -> None:
     assert sp.simplify(sp.denom(sin_component) - expected_denominator) == 0
 
 
+def test_second_order_projection_diagnostics_deproject_to_internal_transfer() -> None:
+    assert acceleration_diagnostic_residual() == 0
+    assert range_diagnostic_residual() == 0
+    assert sp.simplify(deproject_acceleration() - second_order_transfer_function()) == 0
+    assert sp.simplify(deproject_range() - second_order_transfer_function()) == 0
+
+
+def test_second_order_projection_nuisance_budgets_and_rows() -> None:
+    assert projection_nuisance_budget("acceleration") == 1
+    assert projection_nuisance_budget("range") == 2
+    rows = projection_audit_rows()
+    assert len(rows) == 2
+    assert rows[0].status == "Proven"
+    assert "resonance survives" in rows[1].verdict
+
+
+def test_resonant_line_shape_budget_counts_projection_nuisance() -> None:
+    calibrated = line_shape_budget(polynomial_order=1, projection_nuisance=0)
+    range_channel = line_shape_budget(polynomial_order=1, projection_nuisance=2)
+    assert calibrated.static_parameter_budget == 2
+    assert calibrated.minimum_frequency_samples == 3
+    assert range_channel.static_parameter_budget == 4
+    assert range_channel.minimum_frequency_samples == 5
+    assert range_channel.resonance_bracket_samples == 5
+
+
+def test_resonance_condition_and_phase_wrap_pole() -> None:
+    syms = second_order_symbols()
+    assert sp.simplify(
+        dynamic_peak_condition()
+        - (2 * syms["mu_chi"] * syms["omega_chi_sq"] - syms["gamma_chi"] ** 2)
+    ) == 0
+    assert sp.simplify(phase_wrap_pole() - syms["omega_chi_sq"] / syms["mu_chi"]) == 0
+
+
+def test_exact_polynomial_collapse_residual_is_not_identity_generically() -> None:
+    syms = second_order_symbols()
+    residual = exact_polynomial_collapse_residual()
+    assert residual.coeff(syms["z"], 4) == syms["mu_chi"] * sp.Symbol("p2")
+    assert residual.subs({
+        syms["mu_chi"]: 0,
+        syms["gamma_chi"]: 0,
+        sp.Symbol("p0"): syms["alpha"],
+        sp.Symbol("p1"): 0,
+        sp.Symbol("p2"): 0,
+    }) == 0
+
+
+def test_resonant_comparator_rows_record_budget_and_bracket_conditions() -> None:
+    rows = resonance_audit_rows()
+    assert len(rows) == 2
+    assert "N+1+K" in rows[0].verdict
+    assert "bracketing" in rows[1].verdict
+
+
 def main() -> None:
     test_symmetric_quadratic_jet()
     test_worldline_force_structure()
@@ -646,6 +716,12 @@ def main() -> None:
     test_second_order_phase_tangent_and_resonance()
     test_second_order_low_frequency_series_coefficients()
     test_second_order_cos_sin_components_have_common_denominator()
+    test_second_order_projection_diagnostics_deproject_to_internal_transfer()
+    test_second_order_projection_nuisance_budgets_and_rows()
+    test_resonant_line_shape_budget_counts_projection_nuisance()
+    test_resonance_condition_and_phase_wrap_pole()
+    test_exact_polynomial_collapse_residual_is_not_identity_generically()
+    test_resonant_comparator_rows_record_budget_and_bracket_conditions()
     print("symbolic checks passed")
 
 

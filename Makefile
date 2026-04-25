@@ -1,6 +1,6 @@
 PYTHON ?= python
 
-.PHONY: worldline-expand sensitivity-expand enumerate-basis enumerate-contractions survivor-rank primitive-attack eb-sector eb-rank normal-form-reduce nonlinear-comparator shared-tau-ratio sample-budget orbital-harmonic-budget second-order-mode symbolic-check legacy-request1 legacy-request2 legacy-request7
+.PHONY: worldline-expand sensitivity-expand enumerate-basis enumerate-contractions survivor-rank primitive-attack eb-sector eb-rank normal-form-reduce nonlinear-comparator shared-tau-ratio sample-budget orbital-harmonic-budget second-order-mode second-order-projection resonant-comparator symbolic-check legacy-request1 legacy-request2 legacy-request7
 
 worldline-expand:
 	$(PYTHON) symbolic/worldline_expand.py
@@ -43,6 +43,12 @@ orbital-harmonic-budget:
 
 second-order-mode:
 	$(PYTHON) symbolic/second_order_mode_response.py
+
+second-order-projection:
+	$(PYTHON) symbolic/second_order_projection_audit.py
+
+resonant-comparator:
+	$(PYTHON) symbolic/resonant_comparator_audit.py
 
 symbolic-check:
 	$(PYTHON) symbolic/checks/test_symbolic.py
