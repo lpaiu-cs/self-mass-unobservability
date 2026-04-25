@@ -80,3 +80,5 @@ This ledger records the active assumptions behind the free-fall sensitivity-coll
 - Status: Conjectural. The nonlinear generated-line SNR examples use parameterized `Q_beta`, `sigma_0`, harmonic noise slope, and `SNR_min`; they are not instrument forecasts.
 - Status: Conjectural. The component-separability audit treats `Q_Y`, `Q_L`, `Q_beta`, `rho`, `delta`, and optional range `kappa` as shared real fit parameters and tests local identifiability by Jacobian rank.
 - Status: Proven. Component separability is necessary but not sufficient: a locally identifiable `Q_beta` still does not count as novelty if the generated sample count remains inside the static nonlinear comparator budget.
+- Status: Conjectural. The nonlinear robustness map is a finite grid over dimensionless design variables; its positive fraction is not a physical prior or population measure.
+- Status: Proven. A robustness-map point counts as positive only if it is component-separable, generated-budget-ready, and resonance-bracketed under finite shared nuisance.

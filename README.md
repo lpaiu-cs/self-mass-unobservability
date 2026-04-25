@@ -67,6 +67,7 @@ make physical-detectability
 make nonlinear-second-order
 make nonlinear-second-order-detectability
 make component-separability
+make nonlinear-robustness-map
 make symbolic-check
 ```
 

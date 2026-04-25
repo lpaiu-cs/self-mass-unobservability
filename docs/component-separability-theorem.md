@@ -103,3 +103,10 @@ frequency-local nuisance.
 Status: Counterexample candidate. The current positive branch therefore
 requires moderate eccentricity, enough usable harmonics, finite shared
 projection nuisance, and full joint rank including the generated amplitude.
+
+## Robustness Follow-Up
+
+Status: Counterexample candidate. The finite-grid robustness test is recorded
+in [`nonlinear-robustness-map.md`](nonlinear-robustness-map.md). It asks
+whether the component-separable-and-budget-ready region persists across
+nearby `p`, `e`, `rho`, `delta`, projection-channel, and nuisance choices.

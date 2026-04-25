@@ -132,6 +132,12 @@ from component_separability_audit import (
     minimum_separable_cutoff,
     usable_harmonics as separability_usable_harmonics,
 )
+from nonlinear_robustness_map import (
+    classify_robustness_row,
+    representative_rows,
+    robustness_grid,
+    summarize_rows,
+)
 from fractions import Fraction
 from normal_form_reduce import (
     operator_symbols,
@@ -1239,6 +1245,54 @@ def test_component_separability_jacobian_shape() -> None:
     assert matrix.shape == (6, 5)
 
 
+def test_nonlinear_robustness_row_requires_budget_and_bracket() -> None:
+    low = classify_robustness_row(
+        p=2.0,
+        eccentricity=0.1,
+        rho=Fraction(3, 2),
+        damping=0.2,
+        channel="acceleration",
+        projection_mode="acceleration",
+        projection_nuisance=1,
+        include_projection_nuisance=False,
+        samples=1024,
+    )
+    moderate = classify_robustness_row(
+        p=2.0,
+        eccentricity=0.3,
+        rho=Fraction(3, 2),
+        damping=0.2,
+        channel="acceleration",
+        projection_mode="acceleration",
+        projection_nuisance=1,
+        include_projection_nuisance=False,
+        samples=1024,
+    )
+    assert low.verdict == "component-separable-but-budget-underdesigned"
+    assert low.bracketed
+    assert moderate.verdict == "robust-positive"
+
+
+def test_nonlinear_robustness_default_grid_counts_regions() -> None:
+    rows = robustness_grid(samples=512)
+    summary = summarize_rows(rows)
+    assert summary.total == 162
+    assert summary.verdict_counts["robust-positive"] == 107
+    assert summary.verdict_counts["component-separable-but-budget-underdesigned"] == 40
+    assert summary.verdict_counts["generated-component-degenerate"] == 15
+    assert 0.6 < summary.positive_fraction < 0.7
+
+
+def test_nonlinear_robustness_channel_counts_and_representatives() -> None:
+    rows = robustness_grid(samples=512)
+    summary = summarize_rows(rows)
+    assert summary.channel_counts["acceleration"]["robust-positive"] == 37
+    assert summary.channel_counts["range-free-kappa"]["generated-component-degenerate"] == 15
+    representatives = representative_rows(rows)
+    verdicts = {row.verdict for row in representatives}
+    assert {"robust-positive", "generated-component-degenerate"}.issubset(verdicts)
+
+
 def main() -> None:
     test_symmetric_quadratic_jet()
     test_worldline_force_structure()
@@ -1317,6 +1371,9 @@ def main() -> None:
     test_component_separability_default_rows_cover_positive_and_negative()
     test_component_separability_joint_observable_is_complex()
     test_component_separability_jacobian_shape()
+    test_nonlinear_robustness_row_requires_budget_and_bracket()
+    test_nonlinear_robustness_default_grid_counts_regions()
+    test_nonlinear_robustness_channel_counts_and_representatives()
     print("symbolic checks passed")
 
 
