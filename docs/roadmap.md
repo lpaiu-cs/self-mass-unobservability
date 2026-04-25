@@ -114,6 +114,8 @@ static primitive families.
 | D25 | Proven | [`../symbolic/nonlinear_second_order_mode.py`](../symbolic/nonlinear_second_order_mode.py) | The nonlinear second-order transfers, shared-denominator residual, and generated-sideband interpolation boundary are checked symbolically. |
 | D26 | Counterexample candidate | [`nonlinear-second-order-detectability.md`](nonlinear-second-order-detectability.md) | Exact-in-e nonlinear generated lines are audited against relative and SNR usable-sample criteria. |
 | D27 | Proven | [`../symbolic/nonlinear_second_order_detectability.py`](../symbolic/nonlinear_second_order_detectability.py) | Generated-line sample count, amplitude threshold, projection nuisance, and minimum generated-amplitude scales are checked symbolically. |
+| D28 | Counterexample candidate | [`component-separability-theorem.md`](component-separability-theorem.md) | Overlapping linear and nonlinear generated harmonic components are tested for local identifiability by joint-model rank. |
+| D29 | Proven | [`../symbolic/component_separability_audit.py`](../symbolic/component_separability_audit.py) | The `Q_beta` rank contribution, full shared-parameter rank, and budget-ready minimum cutoffs are checked numerically. |
 
 ## Explicit Non-Goals For M1
 

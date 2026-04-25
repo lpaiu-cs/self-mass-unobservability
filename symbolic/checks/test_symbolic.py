@@ -123,6 +123,15 @@ from nonlinear_second_order_detectability import (
     minimum_generated_amplitude_scale,
     nonlinear_drive_transfer_magnitude,
 )
+from component_separability_audit import (
+    JointModelParameters,
+    classify_separability_design,
+    default_design_rows as component_separability_rows,
+    jacobian_matrix,
+    joint_observable,
+    minimum_separable_cutoff,
+    usable_harmonics as separability_usable_harmonics,
+)
 from fractions import Fraction
 from normal_form_reduce import (
     operator_symbols,
@@ -1106,6 +1115,130 @@ def test_nonlinear_detectability_generated_rows_mark_unusable_high_cutoff() -> N
     assert not any(row.usable for row in rows)
 
 
+def test_component_separability_uses_same_usable_harmonics() -> None:
+    harmonics = separability_usable_harmonics(
+        p=2.0,
+        eccentricity=0.3,
+        rho=Fraction(3, 2),
+        damping=0.2,
+        channel="acceleration",
+        harmonic_cutoff=6,
+        relative_cutoff=1.0e-3,
+        samples=2048,
+    )
+    assert harmonics == (1, 2, 3, 4, 5)
+
+
+def test_component_separability_jacobian_generated_column_adds_rank() -> None:
+    design = classify_separability_design(
+        "moderate-e",
+        p=2.0,
+        eccentricity=0.3,
+        rho=Fraction(3, 2),
+        damping=0.2,
+        channel="acceleration",
+        harmonic_cutoff=6,
+        relative_cutoff=1.0e-3,
+        projection_nuisance=1,
+        samples=2048,
+    )
+    assert design.verdict == "component-separable-and-budget-ready"
+    assert design.generated_adds_rank
+    assert design.full_rank == design.parameter_count
+
+
+def test_component_separability_distinguishes_underbudget_and_degenerate_cases() -> None:
+    low_acceleration = classify_separability_design(
+        "low-e",
+        p=2.0,
+        eccentricity=0.1,
+        rho=Fraction(3, 2),
+        damping=0.2,
+        channel="acceleration",
+        harmonic_cutoff=6,
+        relative_cutoff=1.0e-3,
+        projection_nuisance=1,
+        samples=2048,
+    )
+    low_range_free_kappa = classify_separability_design(
+        "low-e range",
+        p=2.0,
+        eccentricity=0.1,
+        rho=Fraction(3, 2),
+        damping=0.2,
+        channel="range",
+        harmonic_cutoff=6,
+        relative_cutoff=1.0e-3,
+        projection_nuisance=2,
+        include_range_projection_nuisance=True,
+        samples=2048,
+    )
+    assert low_acceleration.verdict == "component-separable-but-budget-underdesigned"
+    assert low_range_free_kappa.verdict == "generated-component-degenerate"
+
+
+def test_component_separability_minimum_cutoffs() -> None:
+    acceleration = minimum_separable_cutoff(
+        "minimum",
+        p=2.0,
+        eccentricity=0.3,
+        rho=Fraction(3, 2),
+        damping=0.2,
+        channel="acceleration",
+        projection_nuisance=1,
+        max_harmonic_cutoff=8,
+        samples=2048,
+    )
+    range_channel = minimum_separable_cutoff(
+        "minimum",
+        p=2.0,
+        eccentricity=0.3,
+        rho=Fraction(3, 2),
+        damping=0.2,
+        channel="range",
+        projection_nuisance=2,
+        include_range_projection_nuisance=True,
+        max_harmonic_cutoff=8,
+        samples=2048,
+    )
+    assert acceleration is not None
+    assert range_channel is not None
+    assert acceleration.harmonic_cutoff == 4
+    assert range_channel.harmonic_cutoff == 5
+
+
+def test_component_separability_default_rows_cover_positive_and_negative() -> None:
+    rows = component_separability_rows()
+    assert len(rows) == 9
+    assert any(row.verdict == "component-separable-and-budget-ready" for row in rows)
+    assert any(row.verdict == "component-separable-but-budget-underdesigned" for row in rows)
+    assert any(row.verdict == "generated-component-degenerate" for row in rows)
+
+
+def test_component_separability_joint_observable_is_complex() -> None:
+    value = joint_observable(
+        harmonic=2,
+        p=2.0,
+        eccentricity=0.3,
+        channel="acceleration",
+        params=JointModelParameters(),
+        samples=1024,
+    )
+    assert abs(value.imag) > 0
+
+
+def test_component_separability_jacobian_shape() -> None:
+    matrix = jacobian_matrix(
+        harmonics=(1, 2, 3),
+        p=2.0,
+        eccentricity=0.3,
+        channel="acceleration",
+        params=JointModelParameters(),
+        samples=1024,
+    )
+    assert matrix.shape == (6, 5)
+
+
 def main() -> None:
     test_symmetric_quadratic_jet()
     test_worldline_force_structure()
@@ -1177,6 +1310,13 @@ def main() -> None:
     test_nonlinear_detectability_snr_minimum_scales()
     test_nonlinear_detectability_default_rows_include_no_go_and_positive()
     test_nonlinear_detectability_generated_rows_mark_unusable_high_cutoff()
+    test_component_separability_uses_same_usable_harmonics()
+    test_component_separability_jacobian_generated_column_adds_rank()
+    test_component_separability_distinguishes_underbudget_and_degenerate_cases()
+    test_component_separability_minimum_cutoffs()
+    test_component_separability_default_rows_cover_positive_and_negative()
+    test_component_separability_joint_observable_is_complex()
+    test_component_separability_jacobian_shape()
     print("symbolic checks passed")
 
 

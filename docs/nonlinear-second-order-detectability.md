@@ -144,3 +144,12 @@ nuisance is arbitrary per frequency, if generated-line amplitudes fall below
 the cutoff/SNR threshold, or if the sample count remains below
 `M+2+K_Lambda`, the nonlinear second-order branch collapses back to a static
 nonlinear mimicry/no-go statement.
+
+## Component-Separability Follow-Up
+
+Status: Counterexample candidate. The generated-line component-separability
+test is recorded in
+[`component-separability-theorem.md`](component-separability-theorem.md). It
+uses a joint harmonic model and a Jacobian rank audit to decide whether
+`Q_beta` is locally identifiable from the overlapping linear response at the
+same harmonics.
