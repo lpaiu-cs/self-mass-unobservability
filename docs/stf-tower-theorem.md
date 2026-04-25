@@ -4,6 +4,8 @@
 
 - Status: Proven. This note is class-limited to genuinely new parity-even fully symmetric trace-free primitive families in the MVP free-fall sector at `\Delta \le 4`.
 - Status: Proven. It does not claim a theorem for mixed-symmetry, antisymmetric, trace-descended, or derivative-generated higher-rank families.
+- Status: Proven. This note now records the failed stronger mixed-pattern theorem only.
+- Status: Proven. The active higher-rank positive result has moved to [`stf-self-witness-theorem.md`](stf-self-witness-theorem.md).
 
 ## Sharper Split
 
@@ -41,5 +43,5 @@
 
 ## Consequence
 
-- Status: Proven. The current theorem-layer task is no longer to decide whether `Reven6+` is real.
-- Status: Proven. The current theorem-layer task is no longer a pending Reven6+ composition closure; it has moved back to family-envelope completeness or the next smallest unaudited family obstruction, currently `Rodd7+`.
+- Status: Proven. This failed stronger theorem does not block the weaker universal self-witness threshold theorem for genuine parity-even STF primitive families with `L \ge 3`.
+- Status: Proven. The mixed-pattern theorem no longer sets the live bottleneck by itself; see [`stf-self-witness-theorem.md`](stf-self-witness-theorem.md) and [`stf-mixed-pattern-classification.md`](stf-mixed-pattern-classification.md).

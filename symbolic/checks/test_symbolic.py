@@ -38,6 +38,7 @@ from r6_sector_delta4 import r6_summary
 from r6_survivor_rank_check import r6_rank_summary
 from shift_scalar_sector_delta4 import shift_scalar_summary
 from stf_rankL_pattern_check import stf_rank_pattern_summary
+from stf_self_witness_check import stf_self_witness_summary
 from threshold_formula_check import threshold_formula_summary
 from witness_threshold_map import witness_threshold_summary
 from normal_form_reduce import (
@@ -652,6 +653,26 @@ def test_stf_rank_pattern_summary() -> None:
     assert summary.entries[3].first_mixed_witness_layer == "EZZ"
 
 
+def test_stf_self_witness_summary() -> None:
+    summary = stf_self_witness_summary()
+    assert summary.theorem_holds is True
+    assert summary.failure_rank is None
+    assert summary.failure_reason is None
+    assert tuple(entry.rank for entry in summary.entries) == (3, 4, 5, 6)
+    for entry in summary.entries:
+        assert entry.linear_scalar_exists is False
+        assert entry.mixed_quadratic_witness_exists is False
+        assert entry.threshold_at_delta4 == "w_Y >= 3"
+    assert summary.entries[0].first_self_witness == "T2"
+    assert summary.entries[0].first_mixed_witness_layer == "ETT"
+    assert summary.entries[1].first_self_witness == "Q2"
+    assert summary.entries[1].first_mixed_witness_layer == "EEQ and EQQ"
+    assert summary.entries[2].first_self_witness == "U2"
+    assert summary.entries[2].first_mixed_witness_layer == "EUU"
+    assert summary.entries[3].first_self_witness == "Z2"
+    assert summary.entries[3].first_mixed_witness_layer == "EZZ"
+
+
 def test_r1_sector_delta4() -> None:
     summary = r1_summary()
     assert summary.total_classes == 39
@@ -950,6 +971,7 @@ def main() -> None:
     test_high_rank_exhaustiveness_audit()
     test_high_rank_diff_report_mentions_eeq()
     test_stf_rank_pattern_summary()
+    test_stf_self_witness_summary()
     test_r1_sector_delta4()
     test_r1_survivor_rank_check()
     test_r3_sector_delta4()

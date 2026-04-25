@@ -26,7 +26,8 @@
 - Status: Proven. The audited family set still does not yet exhaust the primitive-family envelope.
 - Status: Proven. The smallest remaining unaudited family class under the current MVP assumptions is now `Rodd7+`, the local parity-even odd-rank tensor class beyond the current rank-5 representative.
 - Status: Proven. Therefore the envelope census still does not upgrade the theorem to MVP-envelope sufficiency.
-- Status: Proven. The current live bottleneck is family-envelope completeness or the next smallest unaudited family obstruction, currently `Rodd7+`.
+- Status: Proven. The current concrete census gate is still `Rodd7+`.
+- Status: Proven. The current theorem-layer bottleneck is broader: family-envelope completeness beyond the audited STF and scalar/vector classes.
 
 ## Boundary
 
