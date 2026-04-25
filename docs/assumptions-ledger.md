@@ -86,3 +86,5 @@ This ledger records the active assumptions behind the free-fall sensitivity-coll
 - Status: Conjectural. The rank-minor formula is an analytic sufficient diagnostic for the fixed-nuisance amplitude submodel; the full shared-parameter result still uses the real Jacobian-rank audit.
 - Status: Proven. The paper-level dynamic loophole claim remains a parameterized design theorem. It does not assume that `Q_0`, `Q_beta`, `sigma_0`, `Gamma`, `kappa`, cadence, or harmonic extraction errors have been fixed by a real instrument model.
 - Status: Counterexample candidate. The nonlinear second-order branch is the live A4-violating counterexample class for manuscript packaging; opening a new internal-state family is not required for the current theorem-level result.
+- Status: Proven. The clean submission-style draft removes internal status labels only as prose packaging; the status-labeled repository artifacts remain the scientific authority.
+- Status: Proven. The paper package assumes no new empirical data, no new instrument calibration, and no new clock-sector or pulsar-timing observable branch.

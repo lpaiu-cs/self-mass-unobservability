@@ -7,6 +7,14 @@ This directory keeps the manuscript source and the current LaTeX draft.
   dynamic-loophole branch after the M16 analytic phase-boundary result.
 - `dynamic-loophole-manuscript.md`: prose-first dynamic-loophole manuscript
   package built from the outline without overwriting the older draft.
+- `dynamic-loophole-submission-draft.md`: clean paper-style draft without
+  internal `Status:` labels.
+- `claim-stack.md`, `result-ledger.md`, and `non-claims.md`: package-level
+  scientific traceability and claim boundaries.
+- `figure-inventory.md` and `table-inventory.md`: minimal visual/table plan.
+- `reviewer-risk-notes.md`: likely objections and repository answers.
+- `submission-readiness-checklist.md`: final package checklist and
+  verification commands.
 - `build_manuscript.py`: converts the markdown draft into `main.tex`.
 - `main.tex`: generated LaTeX draft committed to the repository for review.
 - `Makefile`: local build helpers.

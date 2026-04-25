@@ -123,6 +123,7 @@ static primitive families.
 | D34 | Counterexample candidate | [`dynamic-loophole-paper-synthesis.md`](dynamic-loophole-paper-synthesis.md) | The dynamic side track is packaged as one-state control/no-go plus nonlinear second-order conditional positive theorem. |
 | D35 | Conjectural | [`../paper/dynamic-loophole-outline.md`](../paper/dynamic-loophole-outline.md) | A paper-facing outline separates the dynamic loophole manuscript from the older manuscript path. |
 | D36 | Conjectural | [`../paper/dynamic-loophole-manuscript.md`](../paper/dynamic-loophole-manuscript.md) | The outline is promoted into a prose-first paper package with claim ledger, non-claims, figure plan, and section-level narrative. |
+| D37 | Conjectural | [`../paper/dynamic-loophole-submission-draft.md`](../paper/dynamic-loophole-submission-draft.md), [`../paper/claim-stack.md`](../paper/claim-stack.md), [`../paper/non-claims.md`](../paper/non-claims.md), [`../paper/result-ledger.md`](../paper/result-ledger.md), [`../paper/figure-inventory.md`](../paper/figure-inventory.md), [`../paper/table-inventory.md`](../paper/table-inventory.md), [`../paper/reviewer-risk-notes.md`](../paper/reviewer-risk-notes.md), [`../paper/submission-readiness-checklist.md`](../paper/submission-readiness-checklist.md) | The dynamic branch is closed as a paper-ready package for human prose polishing, without opening a new model line. |
 
 ## Explicit Non-Goals For M1
 

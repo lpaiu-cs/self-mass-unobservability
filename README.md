@@ -29,6 +29,7 @@ Out of scope for this phase:
 - [`lemmas/`](lemmas): free-fall lemmas and reduction notes.
 - [`symbolic/`](symbolic): small SymPy scripts for worldline expansion, sensitivity jets, basis enumeration, contraction enumeration, electric and `E/B` survivor-rank checks, primitive-family attacks, full `E/B`-sector audits, normal-form reduction, and dynamic-comparator checks.
 - [`counterexamples/`](counterexamples): explicit loophole classes and minimal models.
+- [`paper/`](paper): legacy manuscript material plus a separate dynamic-loophole paper package with claim stack, non-claims, clean submission draft, figure/table inventories, reviewer-risk notes, and readiness checklist.
 - [`notes/scratch/`](notes/scratch): disposable local notes that should not become theorem claims without promotion.
 
 Legacy request-stage material remains in `request1/` through `request7/`, `data/`, `paper/`, and `section6/` as provenance only. The root workflow should now start from the theorem documents above, not from the old pipeline entry points.
