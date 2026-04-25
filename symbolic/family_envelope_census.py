@@ -5,7 +5,7 @@ from dataclasses import dataclass
 
 DELTA_MAX = 4
 LIVE_BOTTLENECK = (
-    "the failed STF tower abstraction at rank L = 4: the mixed cubic EEQ survives, so the higher-rank STF branch must split before any move to Reven6+"
+    "post-Reven6+ enlarged audited-set composition re-close at Delta <= 4"
 )
 
 
@@ -104,13 +104,23 @@ def family_envelope_entries() -> tuple[FamilyEnvelopeEntry, ...]:
         ),
         FamilyEnvelopeEntry(
             class_id="Reven6+",
-            envelope_state="still unaudited",
+            envelope_state="audited",
             tensor_rank="even >= 6",
             parity="even",
             derivative_character="unsuppressed local family",
-            smallest_expected_witness_type="rank-6 self-contraction type",
-            current_theorem_role="next smallest unaudited family gate after the closed Rodd5+ composition layer",
+            smallest_expected_witness_type="Z2 / EZZ",
+            current_theorem_role="audited uniqueness obstruction and threshold class; post-Reven6+ enlarged audited-set composition re-close now required",
             rank_order=6,
+        ),
+        FamilyEnvelopeEntry(
+            class_id="Rodd7+",
+            envelope_state="still unaudited",
+            tensor_rank="odd >= 7",
+            parity="even",
+            derivative_character="unsuppressed local family",
+            smallest_expected_witness_type="rank-7 self-contraction type",
+            current_theorem_role="next smallest unaudited family gate after the pending post-Reven6+ composition re-close",
+            rank_order=7,
         ),
         FamilyEnvelopeEntry(
             class_id="Podd",

@@ -10,11 +10,12 @@
   `R1` genuine parity-even rank-1 vector families,
   `Rodd+` via the genuine parity-even STF rank-3 representative,
   `Reven4+` via the genuine parity-even STF rank-4 representative,
-  and `Rodd5+` via the genuine parity-even STF rank-5 representative.
+  `Rodd5+` via the genuine parity-even STF rank-5 representative,
+  and `Reven6+` via the genuine parity-even STF rank-6 representative.
 - Status: Proven. The same assumptions explicitly exclude parity-odd, spin-carrying, stateful, and nonlocal family classes.
 - Status: Proven. No current assumption excludes additional local parity-even higher-rank tensor families once the rank-5 gate is resolved.
 - Status: Proven. Therefore the audited family set still does not yet exhaust the current MVP primitive-family envelope.
-- Status: Proven. The smallest remaining unaudited class is now the parity-even even-rank tensor class `Reven6+`.
+- Status: Proven. The smallest remaining unaudited class is now the parity-even odd-rank tensor class `Rodd7+`.
 
 ## Derivation
 
@@ -28,7 +29,8 @@
 8. Status: Proven. The minimal odd-rank tensor gate is now resolved by the genuine rank-3 audit of [`30-rank3-family-admission.md`](30-rank3-family-admission.md).
 9. Status: Proven. The minimal even-rank tensor gate is now resolved by the genuine rank-4 audit of [`34-rank4-family-admission.md`](34-rank4-family-admission.md).
 10. Status: Proven. The next odd-rank tensor gate is now resolved by the genuine rank-5 audit of [`38-rank5-family-admission.md`](38-rank5-family-admission.md).
-11. Status: Proven. The next remaining parity-even local tensor ranks not yet audited are even ranks `\ge 6`, with `Reven6+` the smallest.
+11. Status: Proven. The next even-rank tensor gate is now resolved by the genuine rank-6 audit of [`44-rank6-family-admission.md`](44-rank6-family-admission.md).
+12. Status: Proven. The next remaining parity-even local tensor ranks not yet audited are odd ranks `\ge 7`, with `Rodd7+` the smallest.
 
 ## Coverage Map
 
@@ -38,6 +40,7 @@
 - Status: Proven. `Rodd+` is now covered only through the current genuine rank-3 STF representative.
 - Status: Proven. `Reven4+` is now covered only through the current genuine rank-4 STF representative.
 - Status: Proven. `Rodd5+` is now covered only through the current genuine rank-5 STF representative.
+- Status: Proven. `Reven6+` is now covered only through the current genuine rank-6 STF representative.
 - Status: Proven. The current census still does not justify a claim that all parity-even local higher-rank tensor families are already covered by those audits.
 
 ## Boundary

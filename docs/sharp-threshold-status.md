@@ -12,8 +12,9 @@
 | Rank-0 derivative-only scalar family | `dotS2` | `4` | `DtS_E2` | `4` | `4` | Tied-sharp | `w_D \ge 3`; the self and mixed branches yield the same sharp budget at `\Delta_{\max}=4`. |
 | Rank-1 vector family | `V2` | `2` | `EVV` | `3` | `2` | Self-only | `w_V \ge 3`, or explicit exclusion or absorption of the primitive vector family. |
 | Rank-3 STF family | `T2` | `2` | `ETT` | `3` | `2` | Self-only | `w_T \ge 3`, or explicit exclusion or absorption of the primitive rank-3 family. |
-| Rank-4 STF family | `Q2` | `2` | `EQQ` | `3` | `2` | Self-only | `w_Q \ge 3`, or explicit exclusion or absorption of the primitive rank-4 family. |
+| Rank-4 STF family | `Q2` | `2` | `EEQ` and `EQQ` | `3` | `2` | Self-only | `w_Q \ge 3`, or explicit exclusion or absorption of the primitive rank-4 family. |
 | Rank-5 STF family | `U2` | `2` | `EUU` | `3` | `2` | Self-only | `w_U \ge 3`, or explicit exclusion or absorption of the primitive rank-5 family. |
+| Rank-6 STF family | `Z2` | `2` | `EZZ` | `3` | `2` | Self-only | `w_Z \ge 3`, or explicit exclusion or absorption of the primitive rank-6 family. |
 
 ## Current Readout
 
@@ -25,7 +26,8 @@
 - Status: Proven. The genuine rank-3 STF class is self-only at the current fixed-order threshold.
 - Status: Proven. The genuine rank-4 STF class is self-only at the current fixed-order threshold.
 - Status: Proven. The genuine rank-5 STF class is self-only at the current fixed-order threshold.
+- Status: Proven. The genuine rank-6 STF class is self-only at the current fixed-order threshold.
 - Status: Proven. No audited family class currently exhibits a mixed witness below its first self witness at `\Delta \le 4`.
 - Status: Proven. The sharp-threshold classification bottleneck is closed for the currently audited family classes.
-- Status: Proven. The repo-level live bottleneck has moved from threshold sharpness to the failed STF tower abstraction at rank `L = 4`.
+- Status: Proven. The repo-level live bottleneck has moved from threshold sharpness to the post-`Reven6+` enlarged audited-set composition re-close at `\Delta \le 4`.
 - Status: Conjectural. What remains open is not witness sharpness inside the currently audited classes, but family-envelope completeness beyond the currently audited and composition-closed family set.

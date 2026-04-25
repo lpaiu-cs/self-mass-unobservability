@@ -35,7 +35,7 @@ def threshold_formula_entries(delta_max: int = DELTA_MAX) -> tuple[ThresholdForm
         raise ValueError("The current threshold-formula audit is only fixed at Delta_max = 4.")
 
     mixed = mixed_witness_summary(delta_max)
-    rank2, bare_scalar, derivative_only, vector, rank3, rank4, rank5 = mixed.entries
+    rank2, bare_scalar, derivative_only, vector, rank3, rank4, rank5, rank6 = mixed.entries
 
     _require(rank2.self_weight == 2 and rank2.mixed_weight == 2 and rank2.w_min == 2, "Rank-2 current-case values drifted.")
     _require(bare_scalar.self_weight == 1 and bare_scalar.mixed_weight == 3 and bare_scalar.w_min == 1, "Bare-scalar current-case values drifted.")
@@ -44,6 +44,7 @@ def threshold_formula_entries(delta_max: int = DELTA_MAX) -> tuple[ThresholdForm
     _require(rank3.self_weight == 2 and rank3.mixed_weight == 3 and rank3.w_min == 2, "Rank-3 current-case values drifted.")
     _require(rank4.self_weight == 2 and rank4.mixed_weight == 3 and rank4.w_min == 2, "Rank-4 current-case values drifted.")
     _require(rank5.self_weight == 2 and rank5.mixed_weight == 3 and rank5.w_min == 2, "Rank-5 current-case values drifted.")
+    _require(rank6.self_weight == 2 and rank6.mixed_weight == 3 and rank6.w_min == 2, "Rank-6 current-case values drifted.")
 
     return (
         ThresholdFormulaEntry(
@@ -94,10 +95,10 @@ def threshold_formula_entries(delta_max: int = DELTA_MAX) -> tuple[ThresholdForm
         ThresholdFormulaEntry(
             family_class="rank4_tensor_stf",
             self_formula="2*w_Q",
-            mixed_formula="2*w_Q + 1",
-            w_min_formula="2*w_Q",
+            mixed_formula="min(w_Q + 2, 2*w_Q + 1)",
+            w_min_formula="min(2*w_Q, w_Q + 2)",
             current_case_value="w_Q=1 -> (W_self, W_mix, W_min) = (2, 3, 2)",
-            sharpness_status="self-only sharp",
+            sharpness_status="self-only sharp; mixed formula exception at the first audited even rank",
             threshold_type="self-only",
         ),
         ThresholdFormulaEntry(
@@ -106,6 +107,15 @@ def threshold_formula_entries(delta_max: int = DELTA_MAX) -> tuple[ThresholdForm
             mixed_formula="2*w_U + 1",
             w_min_formula="2*w_U",
             current_case_value="w_U=1 -> (W_self, W_mix, W_min) = (2, 3, 2)",
+            sharpness_status="self-only sharp",
+            threshold_type="self-only",
+        ),
+        ThresholdFormulaEntry(
+            family_class="rank6_tensor_stf",
+            self_formula="2*w_Z",
+            mixed_formula="2*w_Z + 1",
+            w_min_formula="2*w_Z",
+            current_case_value="w_Z=1 -> (W_self, W_mix, W_min) = (2, 3, 2)",
             sharpness_status="self-only sharp",
             threshold_type="self-only",
         ),

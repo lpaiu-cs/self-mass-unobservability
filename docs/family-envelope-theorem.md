@@ -19,12 +19,13 @@
 - Status: Proven. The `Rodd+` audit yielded a genuine new obstruction class with smallest explicit witness `T2` and first mixed witness `ETT`.
 - Status: Proven. The `Reven4+` audit yielded a genuine new obstruction class with smallest explicit witness `Q2`; the original manual mixed witness `EQQ` survives, and the later exhaustive check adds the omitted equally low mixed cubic `EEQ`.
 - Status: Proven. The `Rodd5+` audit yielded a genuine new obstruction class with smallest explicit witness `U2` and first mixed witness `EUU`.
+- Status: Proven. The `Reven6+` audit yields a genuine new obstruction class with smallest explicit witness `Z2`, first mixed witness `EZZ`, and no audited `EEZ`-type analogue at the first mixed order.
 - Status: Proven. The post-Rodd5+ composition audit finds no pairwise, higher-order, or full-set cross-family survivor beyond the baseline electric sector once the current thresholds are imposed.
 - Status: Proven. Therefore the current thresholds are jointly sufficient for the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+, Rodd5+}` at `\Delta \le 4`.
 - Status: Proven. The audited family set still does not yet exhaust the primitive-family envelope.
-- Status: Proven. The smallest remaining unaudited family class under the current MVP assumptions is now `Reven6+`, the local parity-even even-rank tensor class beyond the current rank-4 representative.
+- Status: Proven. The smallest remaining unaudited family class under the current MVP assumptions is now `Rodd7+`, the local parity-even odd-rank tensor class beyond the current rank-5 representative.
 - Status: Proven. Therefore the envelope census still does not upgrade the theorem to MVP-envelope sufficiency.
-- Status: Proven. The current live bottleneck is the failed STF tower abstraction at rank `L = 4`: the mixed cubic `EEQ` survives, so the higher-rank STF branch must split before any move to `Reven6+`.
+- Status: Proven. The current live bottleneck is the post-`Reven6+` enlarged audited-set composition re-close at `\Delta \le 4`.
 
 ## Boundary
 

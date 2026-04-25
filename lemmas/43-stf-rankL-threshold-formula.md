@@ -64,4 +64,4 @@ W_{\mathrm{mix}}(L = 4; w_Q) = \min(w_Q + 2,\ 2 w_Q + 1),
 
 - Status: Proven. The attempted theorem "all genuine parity-even STF rank-`L` primitive families with `L \ge 3` fall into one self-only sharp theorem class with mixed formula `2 w_Y + 1`" fails at `L = 4`.
 - Status: Proven. The precise failing reason is the extra mixed cubic `EEQ`.
-- Status: Proven. Therefore the higher-rank STF branch must be split before any move to `Reven6+`.
+- Status: Proven. The later audited rank-6 result does not remove that failure; it only shows that the audited even-rank branch is split into a rank-4 exception plus a rank-6 return to the `EYY`-type mixed layer.

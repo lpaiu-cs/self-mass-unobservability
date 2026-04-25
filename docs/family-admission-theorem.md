@@ -24,7 +24,9 @@
 - Status: Proven. For Class R1, the first self witness is `V2` at weight `2`, while the first mixed witness is `EVV` at weight `3`.
 - Status: Proven. The attempted higher-rank STF tower theorem would say that every genuine parity-even STF rank-`L` primitive family with `L \ge 3` has first self witness `Y2` and first mixed witness `EYY`.
 - Status: Proven. The audited odd-rank instances `L = 3` and `L = 5` support that pattern, with witnesses `T2 / ETT` and `U2 / EUU`.
-- Status: Proven. The attempted tower theorem fails at the first audited even-rank member `L = 4`, because the mixed cubic `EEQ` survives alongside the manual `EQQ` witness.
+- Status: Proven. The audited rank-6 instance also returns to the `Y2 / EYY` pattern, now as `Z2 / EZZ`.
+- Status: Proven. The attempted tower theorem still fails at the first audited even-rank member `L = 4`, because the mixed cubic `EEQ` survives alongside the manual `EQQ` witness.
+- Status: Proven. Therefore the currently audited higher-rank STF split is not a single `L \ge 3` theorem, but an odd-rank audited pattern plus an isolated audited rank-4 even-rank exception.
 - Status: Proven. Therefore minimal-sector uniqueness is not stable under unsuppressed admission of these audited family classes.
 
 ## What The Theorem Does Not Say
@@ -39,6 +41,6 @@
 - Status: Proven. The positive theorem target must therefore be finite-family fixed-order collapse, not minimal-sector uniqueness.
 - Status: Proven. New family-admission audits are classification steps: a new witness reinforces the uniqueness no-go unless it also destroys fixed-order finiteness.
 - Status: Proven. The audited-set composition question is now closed positively for the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+, Rodd5+}` at `\Delta \le 4`.
-- Status: Proven. The current live bottleneck is the failed STF tower abstraction at rank `L = 4`: the mixed cubic `EEQ` survives, so the higher-rank STF branch must split before any move to `Reven6+`.
+- Status: Proven. The current live bottleneck is the post-`Reven6+` enlarged audited-set composition re-close at `\Delta \le 4`.
 - Status: Proven. [`../symbolic/family_witness_map.py`](../symbolic/family_witness_map.py) records the current witness table linking each audited family class to the exact theorem layer it obstructs.
 - Status: Proven. [`suppression-budget-theorem.md`](suppression-budget-theorem.md) and [`../symbolic/witness_threshold_map.py`](../symbolic/witness_threshold_map.py) now promote those witnesses into necessary suppression thresholds for the audited classes.

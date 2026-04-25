@@ -8,6 +8,7 @@ from r1_sector_delta4 import r1_summary
 from r3_sector_delta4 import r3_summary
 from r4_sector_delta4 import r4_summary
 from r5_sector_delta4 import r5_summary
+from r6_sector_delta4 import r6_summary
 from shift_scalar_sector_delta4 import shift_scalar_summary
 
 
@@ -37,6 +38,7 @@ def family_witness_entries() -> tuple[FamilyWitness, ...]:
     r3 = r3_summary()
     r4 = r4_summary()
     r5 = r5_summary()
+    r6 = r6_summary()
 
     entries = (
         FamilyWitness(
@@ -106,6 +108,16 @@ def family_witness_entries() -> tuple[FamilyWitness, ...]:
             audited_instance=r5.smallest_new_witness or "U2",
             weight=2,
             obstructed_theorem_layer="promotion of the enlarged audited-set result to MVP-envelope sufficiency; this audited instance supports the odd-rank STF pattern but does not rescue a uniform L>=3 tower theorem",
+            finite_family_collapse_obstructed=False,
+            harmless_without_extra_assumptions=False,
+        ),
+        FamilyWitness(
+            family_class="rank6_tensor_stf",
+            audited_profile="genuine local parity-even fully symmetric trace-free rank-6 family excluding trace descendants and derivative-generated rank-6 blocks",
+            smallest_surviving_operator=r6.first_self_witness or "Z2",
+            audited_instance=r6.smallest_new_witness or "Z2",
+            weight=2,
+            obstructed_theorem_layer="promotion of the enlarged audited-set result to MVP-envelope sufficiency after the Rodd5+-closed composition layer; this audited even-rank instance supports the isolated-rank4 exception picture rather than a broader even-rank EEY pattern",
             finite_family_collapse_obstructed=False,
             harmless_without_extra_assumptions=False,
         ),

@@ -6,6 +6,7 @@ from high_rank_family_enumerator import high_rank_audit_summary
 from r3_sector_delta4 import r3_summary
 from r4_sector_delta4 import r4_summary
 from r5_sector_delta4 import r5_summary
+from r6_sector_delta4 import r6_summary
 
 
 @dataclass(frozen=True)
@@ -29,6 +30,7 @@ def stf_rank_pattern_entries() -> tuple[StfRankPatternEntry, ...]:
     r3 = r3_summary()
     r4 = r4_summary()
     r5 = r5_summary()
+    r6 = r6_summary()
     rank4_exhaustive = high_rank_audit_summary(4)
 
     rank4_layer = "EQQ"
@@ -56,6 +58,17 @@ def stf_rank_pattern_entries() -> tuple[StfRankPatternEntry, ...]:
             first_mixed_witness_layer=r5.first_mixed_witness or "EUU",
             threshold_type="self-only sharp",
             current_audited_status="supports attempted odd-rank STF pattern",
+        ),
+        StfRankPatternEntry(
+            rank=6,
+            first_self_witness=r6.first_self_witness or "Z2",
+            first_mixed_witness_layer=(
+                ", ".join(r6.first_mixed_layer_labels)
+                if r6.first_mixed_layer_labels
+                else (r6.first_mixed_witness or "EZZ")
+            ),
+            threshold_type="self-only sharp",
+            current_audited_status="supports the isolated-rank4 even-rank exception picture within the audited STF sector",
         ),
     )
 

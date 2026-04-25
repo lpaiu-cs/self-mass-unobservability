@@ -45,7 +45,7 @@ class HighRankAuditSummary:
 
 
 def family_symbol(rank: int) -> str:
-    return {3: "T", 4: "Q", 5: "U"}[rank]
+    return {3: "T", 4: "Q", 5: "U", 6: "Z"}[rank]
 
 
 def family_rank(rank: int, name: str) -> int:
@@ -239,9 +239,9 @@ def family_rank_from_signature_name(name: str) -> int:
     if name == "E":
         return 2
     if name.startswith("Dt") and not name.startswith("DtE"):
-        return {"DtT": 3, "DtQ": 4, "DtU": 5}[name]
-    if name in {"T", "Q", "U"}:
-        return {"T": 3, "Q": 4, "U": 5}[name]
+        return {"DtT": 3, "DtQ": 4, "DtU": 5, "DtZ": 6}[name]
+    if name in {"T", "Q", "U", "Z"}:
+        return {"T": 3, "Q": 4, "U": 5, "Z": 6}[name]
     raise ValueError(f"Unhandled pure STF signature name {name}")
 
 
@@ -430,6 +430,8 @@ def manual_survivor_classes(rank: int) -> tuple[ContractionClass, ...]:
         4: r4_surviving_classes,
         5: r5_surviving_classes,
     }
+    if rank not in by_rank:
+        return ()
     return tuple(
         item for item in by_rank[rank]() if item.label not in BASELINE_SURVIVOR_LABELS
     )

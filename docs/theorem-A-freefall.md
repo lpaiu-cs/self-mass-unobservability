@@ -45,7 +45,9 @@
 - Status: Proven. For a genuine parity-even rank-1 vector-family admission, the self witness `V2` appears at weight `2` and the first mixed witness `EVV` appears at weight `3`.
 - Status: Proven. The higher-rank STF branch does not currently collapse into one uniform `L \ge 3` class theorem.
 - Status: Proven. The audited odd-rank STF instances `L = 3` and `L = 5` follow the pattern `Y2` then `EYY`.
-- Status: Proven. The attempted uniform STF-tower theorem fails at audited rank `L = 4`, because the mixed cubic `EEQ` survives alongside `EQQ`.
+- Status: Proven. The audited rank-6 STF instance also returns to the `Y2 / EYY` first-witness pattern, now as `Z2 / EZZ`.
+- Status: Proven. The attempted uniform STF-tower theorem still fails at audited rank `L = 4`, because the mixed cubic `EEQ` survives alongside `EQQ`.
+- Status: Proven. Therefore the current audited STF split is: rank-2 mixed-aware special case, odd-rank audited pattern, rank-4 even-rank exception, and rank-6 even-rank reversion to the odd-rank-style first mixed layer.
 - Status: Proven. Therefore a stronger physically justified minimal-sector theorem is already on the no-go branch unless explicit suppression, ordering, or background-restriction assumptions are added family by family.
 
 ## Scope Separation
@@ -85,6 +87,7 @@
 26. Status: Proven. [`high-rank-audit-methodology.md`](high-rank-audit-methodology.md), [`../lemmas/42-rank3-exhaustiveness-check.md`](../lemmas/42-rank3-exhaustiveness-check.md), [`../lemmas/43-rank4-exhaustiveness-check.md`](../lemmas/43-rank4-exhaustiveness-check.md), [`../lemmas/44-rank5-exhaustiveness-check.md`](../lemmas/44-rank5-exhaustiveness-check.md), [`../symbolic/high_rank_family_enumerator.py`](../symbolic/high_rank_family_enumerator.py), and [`../symbolic/high_rank_diff_report.py`](../symbolic/high_rank_diff_report.py) now separate manual high-rank survivor bookkeeping from exhaustive contraction generation.
 27. Status: Proven. The exhaustive high-rank audit validates the current manual rank-3 and rank-5 candidate-survivor lists, but it finds omitted rank-4 classes `\{EEQ,\ Q3,\ EEDtQ,\ EEEQ,\ EQQQ_1,\ EQQQ_2,\ GradEGradQ\}`.
 28. Status: Proven. [`stf-tower-theorem.md`](stf-tower-theorem.md), [`../lemmas/42-stf-rankL-admission.md`](../lemmas/42-stf-rankL-admission.md), [`../lemmas/43-stf-rankL-threshold-formula.md`](../lemmas/43-stf-rankL-threshold-formula.md), [`stf-family-class-table.md`](stf-family-class-table.md), and [`../symbolic/stf_rankL_pattern_check.py`](../symbolic/stf_rankL_pattern_check.py) show that the attempted single STF-tower theorem for all genuine parity-even STF ranks `L \ge 3` fails at `L = 4`.
+29. Status: Proven. [`rank6-family-ordering.md`](rank6-family-ordering.md), [`../lemmas/44-rank6-family-admission.md`](../lemmas/44-rank6-family-admission.md), [`../lemmas/45-rank6-threshold-formula.md`](../lemmas/45-rank6-threshold-formula.md), [`../symbolic/r6_sector_delta4.py`](../symbolic/r6_sector_delta4.py), and [`../symbolic/r6_survivor_rank_check.py`](../symbolic/r6_survivor_rank_check.py) audit `Reven6+` exhaustively and show that the first mixed layer is `EZZ`, not a new `EEY`-type even-rank exception.
 
 ## Current Verdict
 
@@ -113,12 +116,15 @@
 - Status: Proven. The old raw R4 bookkeeping with `22` labels, rank `19`, and nullity `3` now applies only to the pre-exhaustiveness manual subset, not to an exhaustive corrected rank-4 basis.
 - Status: Conjectural. The raw R5-extended survivor list is not linearly independent; its first sample-extracted quartic mixed dependence relation is `E2U2 - 4 E2U2_mixed_1 + 2 E2U2_mixed_2 - 2 E2U2_mixed_3 = 0`.
 - Status: Conjectural. The raw R5-extended `23`-element survivor list has sample-stable rank `19` and nullity `4`, and it is bookkeeping only rather than a corrected basis statement.
+- Status: Conjectural. The raw R6-extended survivor list is not linearly independent; its first sample-revalidated mixed quartic dependence relation is `E2Z2 + 2 E2Z2_mixed_1 - 2 E2Z2_mixed_2 - 4 E2Z2_mixed_3 = 0`.
+- Status: Conjectural. The raw R6-extended `22`-label family list has sample-stable rank `16` and nullity `6`, and it is bookkeeping only rather than a corrected basis statement.
 - Status: Proven. The current MVP assumptions still do not close the family envelope.
 - Status: Proven. The post-Reven4+ pairwise, triple, quadruple, quintuple, and six-family composition audits find no surviving operator beyond the baseline electric sector once the current audited thresholds are imposed across the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+}`.
 - Status: Proven. The post-Rodd5+ pairwise, triple, quadruple, quintuple, six-family, and seven-family composition audits likewise find no surviving operator beyond the baseline electric sector once the current audited thresholds are imposed across the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+, Rodd5+}`.
 - Status: Proven. Therefore the current thresholds are jointly sufficient for the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+, Rodd5+}` at `\Delta \le 4`, and no explicit post-Rodd5+ cross-family obstruction has appeared in the audited set.
-- Status: Proven. The family-envelope census still points to `Reven6+` as the next smallest unaudited class, but the theorem layer cannot move there yet because the higher-rank STF branch does not yet admit a uniform class theorem.
-- Status: Proven. The current live bottleneck is the failed STF tower abstraction at rank `L = 4`: the mixed cubic `EEQ` survives, so the higher-rank STF branch must split before any move to `Reven6+`.
+- Status: Proven. The `Reven6+` audit now resolves the next even-rank gate as a genuine obstruction class with smallest witness `Z2` and first mixed witness `EZZ`.
+- Status: Proven. The family-envelope census can therefore move on to `Rodd7+`, but the theorem layer cannot move there yet because the enlarged audited-set composition has not yet been re-closed after admitting `Reven6+`.
+- Status: Proven. The current live bottleneck is the post-`Reven6+` enlarged audited-set composition re-close at `\Delta \le 4`.
 - Status: Conjectural. The broad positive target remains finite-family fixed-order collapse, and it remains plausible because the audited enlarged family catalogs, including the current rank-5 extension, still close finitely at `\Delta \le 4`.
 
 ## Dependencies
@@ -171,6 +177,7 @@
 - Status: Proven. [`family-envelope-table.md`](family-envelope-table.md)
 - Status: Proven. [`rank4-family-ordering.md`](rank4-family-ordering.md)
 - Status: Proven. [`rank5-family-ordering.md`](rank5-family-ordering.md)
+- Status: Proven. [`rank6-family-ordering.md`](rank6-family-ordering.md)
 - Status: Proven. [`rank3-family-ordering.md`](rank3-family-ordering.md)
 - Status: Proven. [`vector-family-ordering.md`](vector-family-ordering.md)
 - Status: Proven. [`mixed-witness-thresholds.md`](mixed-witness-thresholds.md)
