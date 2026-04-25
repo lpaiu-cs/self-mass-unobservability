@@ -131,6 +131,13 @@ from nutimo_runtime_worthiness_pilot import (  # noqa: E402
     rows_as_dicts as nutimo_runtime_pilot_rows,
     validate_rows as validate_nutimo_runtime_pilot_rows,
 )
+from nutimo_external_handoff_packet import (  # noqa: E402
+    expected_return_files as nutimo_handoff_expected_return_files,
+    payload as nutimo_handoff_payload,
+    rows_as_dicts as nutimo_handoff_rows,
+    target_carriers as nutimo_handoff_target_carriers,
+    validate_rows as validate_nutimo_handoff_rows,
+)
 
 
 def test_monochromatic_response_solves_relaxation_equation() -> None:
@@ -840,6 +847,34 @@ def test_nutimo_runtime_pilot_payload_records_required_artifacts() -> None:
     assert "rank_gate_examples" in data
 
 
+def test_nutimo_handoff_rows_are_classified() -> None:
+    rows = nutimo_handoff_rows()
+    validate_nutimo_handoff_rows(rows)
+
+    assert rows
+    assert all(row["claim_status"] for row in rows)
+    assert all(row["requested_artifact"] for row in rows)
+    assert all(row["validation_rule"] for row in rows)
+
+
+def test_nutimo_handoff_requires_configuration_and_jacobian() -> None:
+    rows = {row["packet_item"]: row for row in nutimo_handoff_rows()}
+
+    assert rows["configuration_manifest"]["requested_artifact"] == "configuration_manifest.json"
+    assert rows["finite_parameter_jacobian"]["requested_artifact"] == "finite_jacobian.npy_or_tsv"
+    assert "RN_PL" in rows["configuration_manifest"]["validation_rule"]
+
+
+def test_nutimo_handoff_payload_records_return_files_and_stops() -> None:
+    data = nutimo_handoff_payload()
+    expected = nutimo_handoff_expected_return_files()
+
+    assert data["target_carriers"] == nutimo_handoff_target_carriers()
+    assert data["expected_return_files"] == expected
+    assert "carrier projection rank is 6/6" in data["hard_stop_rules"]
+    assert "configuration_manifest.json" in data["expected_return_files"]
+
+
 def main() -> None:
     test_monochromatic_response_solves_relaxation_equation()
     test_transfer_function_components_match_real_solution()
@@ -916,6 +951,9 @@ def main() -> None:
     test_nutimo_runtime_pilot_enforces_configuration_closure()
     test_nutimo_runtime_pilot_rank_gate_boundary()
     test_nutimo_runtime_pilot_payload_records_required_artifacts()
+    test_nutimo_handoff_rows_are_classified()
+    test_nutimo_handoff_requires_configuration_and_jacobian()
+    test_nutimo_handoff_payload_records_return_files_and_stops()
     print("dynamic chi symbolic checks passed")
 
 

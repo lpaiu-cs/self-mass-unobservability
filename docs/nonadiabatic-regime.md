@@ -235,6 +235,10 @@ Status: Counterexample candidate. If the named Jacobian gate passes, runtime
 work becomes a scientific test of the shared rational transfer law rather than
 infrastructure recovery.
 
+Status: Counterexample candidate. The external handoff packet defines the
+minimal runtime return artifacts needed to decide this gate without escalating
+straight to a full posterior fit.
+
 ## Large-Frequency Behavior
 
 Status: Proven. For `x = Omega tau_chi >> 1`,

@@ -48,6 +48,8 @@ with `F(t) = F0 cos(Omega t)` for the first derivation.
 | Proven | Runtime pilot configuration enables target-carrier harmonic soak-up | The fit has admitted the collapse comparator before the dynamic-chi column is tested. | Stop; not runtime-motivated. |
 | Proven | Runtime pilot Jacobian rank reaches `6/6` or absorbs the dynamic-chi column | The named fit behaves like independent complex carrier projection or the test column lies in the nuisance span. | Named implementation collapse. |
 | Counterexample candidate | Runtime pilot rank gate is `<=5/6` and dynamic-chi column is outside the finite nuisance span | The named implementation preserves a finite shared projection manifold near the baseline solution. | Proceed to synthetic injection. |
+| Proven | External handoff returns no configuration manifest or no finite Jacobian | The pilot cannot distinguish standard finite geometry from carrier-local soak-up. | Inconclusive; do not promote runtime. |
+| Proven | External handoff promotes a posterior run before the rank gate | The decisive implementation-class question has not been answered. | Stop; reorder pilot. |
 | Proven | Linear first-order `chi` plus linear two-frequency forcing and linear readout | Superposition leaves only the input frequencies; no `Omega_1 +/- Omega_2` terms appear. | No sideband loophole in the linear MVP. |
 | Proven | Nonlinear sideband model with `beta_F2 = lambda_Fchi = lambda_chi2 = 0` | The model reduces to the linear no-sideband one-state response. | Nonlinear sideband collapse. |
 | Proven | Mixed sideband test with `F1 F2 = 0` | Sum and difference sideband amplitudes vanish because only one harmonic is present. | Insufficient nonlinear forcing. |
@@ -119,6 +121,10 @@ Status: Counterexample candidate. The external runtime-worthiness pilot is now
 the first appropriate runtime escalation, but only as a gate sequence:
 configuration closure, named Jacobian rank test, then minimal synthetic
 shared-`tau_chi` injection.
+
+Status: Counterexample candidate. The external handoff packet fixes the
+minimum useful return artifacts. Missing configuration or Jacobian artifacts
+make the pilot inconclusive rather than positive.
 
 ## Failed Sideband Attempt
 

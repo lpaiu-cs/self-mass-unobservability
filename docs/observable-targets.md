@@ -228,6 +228,11 @@ finite Jacobian question, not a posterior question: whether the named
 three-carrier projection stays below rank `6/6` and whether a dynamic-chi
 test column remains outside the standard fitted-parameter span.
 
+Status: Counterexample candidate. The external handoff packet makes this
+operational by requiring a configuration manifest, finite nuisance Jacobian,
+carrier projection rank report, dynamic-chi test column, synthetic injection
+recovery table, and one-page decision summary.
+
 ## Sideband Test
 
 Status: Proven. A linear time-invariant one-state model driven by `F1 cos(Omega1 t) + F2 cos(Omega2 t)` cannot create sidebands in the linear readout.

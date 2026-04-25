@@ -1,0 +1,135 @@
+{
+  "expected_return_files": {
+    "baseline_fit_summary.json": "baseline parameter vector, timing span, residual RMS or chi2 summary, and code/data release identifiers",
+    "carrier_projection_rank.json": "six-real-coordinate three-carrier projection rank, singular values, and rank threshold",
+    "configuration_manifest.json": "active Nutimo configuration, specialcase flag, delay flags, fitted parameter names, and target carrier extraction settings",
+    "decision_summary.md": "one-page verdict using the Request 10.7 pass/fail language",
+    "dynamic_chi_test_column.tsv": "synthetic dynamic-chi residual column and carrier-level complex amplitudes for the shared-tau transfer",
+    "finite_jacobian.npy_or_tsv": "ntoa by nfit residual derivative matrix for the standard fitted parameter set",
+    "synthetic_injection_recovery.json": "refit result for the minimal shared-tau injection, including pre/post carrier amplitudes and residual projection onto the finite nuisance span"
+  },
+  "hard_stop_rules": [
+    "dependency repair replaces the science gate",
+    "RN_PL-like harmonic soak-up is enabled on target carriers",
+    "target carrier inventory collapses below the required sample count",
+    "carrier projection rank is 6/6",
+    "dynamic-chi test column lies in the finite nuisance span"
+  ],
+  "promotion_rule": "promote only if configuration closure passes, projection rank is <=5, dynamic-chi column survives the finite nuisance span, and minimal synthetic shared-tau injection is recovered after refit",
+  "rows": [
+    {
+      "claim_status": "Conjectural",
+      "external_owner_action": "Declare the pre-provisioned Nutimo/Tempo2/Boost/Minuit environment; do not report dependency repair as science.",
+      "fail_interpretation": "handoff stops; no implementation-class evidence",
+      "notes": "This keeps the pilot from becoming an infrastructure project.",
+      "packet_item": "environment_boundary",
+      "pass_interpretation": "runtime gate can start",
+      "pilot_stage": "preflight",
+      "requested_artifact": "baseline_fit_summary.json",
+      "required_input": "public Nutimo source/data release and runnable environment",
+      "validation_rule": "must identify code release, data release, executable path, and whether residuals plus finite gradients can be computed"
+    },
+    {
+      "claim_status": "Counterexample candidate",
+      "external_owner_action": "Export active fit parameters, delay flags, specialcase flag, target carrier list, and any harmonic nuisance blocks.",
+      "fail_interpretation": "collapse if target-carrier harmonic soak-up is enabled",
+      "notes": "This is the first stop rule from Request 10.7.",
+      "packet_item": "configuration_manifest",
+      "pass_interpretation": "standard finite state/geometry core is testable",
+      "pilot_stage": "configuration_closure",
+      "requested_artifact": "configuration_manifest.json",
+      "required_input": "baseline par/tim and active Nutimo run configuration",
+      "validation_rule": "RN_PL-like or equivalent harmonic soak-up must be explicitly listed as enabled or disabled for the target carriers"
+    },
+    {
+      "claim_status": "Counterexample candidate",
+      "external_owner_action": "Extract the three target carrier frequencies: Omega_in, Omega_out, abs(Omega_in-Omega_out).",
+      "fail_interpretation": "falls back to weaker two-carrier or one-carrier gate",
+      "notes": "This is not a new harmonic search; it uses existing GR carriers.",
+      "packet_item": "target_carrier_inventory",
+      "pass_interpretation": "three-carrier shared-tau bridge remains available",
+      "pilot_stage": "configuration_closure",
+      "requested_artifact": "configuration_manifest.json",
+      "required_input": "inner/outer periods and outer-dipole combination component",
+      "validation_rule": "frequencies must be positive, distinct, nonresonant at the 2:1 collapse cases, and nonzero in projection"
+    },
+    {
+      "claim_status": "Counterexample candidate",
+      "external_owner_action": "Compute residual derivatives with respect to the standard finite fitted parameter set near the baseline solution.",
+      "fail_interpretation": "cannot classify named runtime projection",
+      "notes": "This is the minimal useful runtime calculation before posterior work.",
+      "packet_item": "finite_parameter_jacobian",
+      "pass_interpretation": "finite nuisance span is available for rank test",
+      "pilot_stage": "named_jacobian_rank_gate",
+      "requested_artifact": "finite_jacobian.npy_or_tsv",
+      "required_input": "runnable residual function and fitted parameter scales",
+      "validation_rule": "columns must correspond to named fitted parameters, not carrier-local Fourier amplitudes"
+    },
+    {
+      "claim_status": "Counterexample candidate",
+      "external_owner_action": "Project the finite nuisance Jacobian onto the six real coordinates of the three carrier complex amplitudes.",
+      "fail_interpretation": "named implementation behaves like carrier-local soak-up",
+      "notes": "Report singular values and rank threshold, not just an integer.",
+      "packet_item": "carrier_projection_rank",
+      "pass_interpretation": "dynamic-chi remains runtime-motivated if test column also survives",
+      "pilot_stage": "named_jacobian_rank_gate",
+      "requested_artifact": "carrier_projection_rank.json",
+      "required_input": "finite_jacobian.npy_or_tsv and carrier extraction operator",
+      "validation_rule": "rank <= 5 supports finite shared phase/geometric manifold; rank 6/6 is the per-carrier complex collapse class"
+    },
+    {
+      "claim_status": "Counterexample candidate",
+      "external_owner_action": "Construct the synthetic shared-tau residual column using G(z)=c_Y+beta/(1+tau_chi z) on the target carriers.",
+      "fail_interpretation": "dynamic-chi collapses into named finite nuisance span",
+      "notes": "Use several finite tau_chi values away from zero-frequency collapse.",
+      "packet_item": "dynamic_chi_test_column",
+      "pass_interpretation": "proceed to minimal synthetic injection",
+      "pilot_stage": "named_jacobian_rank_gate",
+      "requested_artifact": "dynamic_chi_test_column.tsv",
+      "required_input": "chosen tau_chi, beta, c_Y, carrier amplitudes, and projection convention",
+      "validation_rule": "column must be tested for membership in the finite nuisance Jacobian span"
+    },
+    {
+      "claim_status": "Counterexample candidate",
+      "external_owner_action": "Inject the shared-tau carrier perturbation and refit only the standard finite nuisance parameters.",
+      "fail_interpretation": "record named implementation conditional no-go",
+      "notes": "This is a sanity pilot, not a detection or final posterior.",
+      "packet_item": "minimal_synthetic_injection",
+      "pass_interpretation": "promote to external runtime experiment",
+      "pilot_stage": "synthetic_injection",
+      "requested_artifact": "synthetic_injection_recovery.json",
+      "required_input": "baseline residuals, finite Jacobian or fit routine, dynamic_chi_test_column",
+      "validation_rule": "post-refit carrier relation must be tested against one shared tau_chi and against the admitted finite derivative comparator"
+    },
+    {
+      "claim_status": "Conjectural",
+      "external_owner_action": "Return a one-page verdict using the exact labels: runtime-motivated, conditional, collapse.",
+      "fail_interpretation": "dynamic-chi closes for this named implementation class",
+      "notes": "Do not convert a failed pilot into an open-ended source chase.",
+      "packet_item": "decision_summary",
+      "pass_interpretation": "dynamic-chi is a named runtime-worthy positive branch",
+      "pilot_stage": "decision",
+      "requested_artifact": "decision_summary.md",
+      "required_input": "all prior handoff artifacts",
+      "validation_rule": "must state which stop rule triggered, or why external runtime work is promoted"
+    }
+  ],
+  "schema": [
+    "packet_item",
+    "claim_status",
+    "pilot_stage",
+    "external_owner_action",
+    "required_input",
+    "requested_artifact",
+    "validation_rule",
+    "pass_interpretation",
+    "fail_interpretation",
+    "notes"
+  ],
+  "scope": "external handoff packet for Request 10.7; this repo does not perform the Nutimo runtime run",
+  "target_carriers": [
+    "Omega_in",
+    "Omega_out",
+    "abs(Omega_in-Omega_out)"
+  ]
+}
