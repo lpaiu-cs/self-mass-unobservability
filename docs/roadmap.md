@@ -97,6 +97,8 @@ static primitive families.
 | D8 | Proven | [`sample-budget-theorem.md`](sample-budget-theorem.md) | The minimum sample count is stated in terms of linear samples, sideband pairs, and projection nuisance parameters. |
 | D9 | Proven | [`orbital-budget-case.md`](orbital-budget-case.md) and [`two-tone-budget-case.md`](two-tone-budget-case.md) | The current orbital and two-tone dictionaries are classified against realistic comparator classes. |
 | D10 | Proven | [`../symbolic/sample_budget_audit.py`](../symbolic/sample_budget_audit.py) | The sample-budget theorem and case classifications are checked symbolically. |
+| D11 | Counterexample candidate | [`richer-orbital-forcing-budget-audit.md`](richer-orbital-forcing-budget-audit.md) | The bounded exact-in-e/higher-harmonic rescue route is classified by `(H,R)` harmonic budgets. |
+| D12 | Proven | [`../symbolic/orbital_harmonic_budget_audit.py`](../symbolic/orbital_harmonic_budget_audit.py) | The minimum richer-orbital harmonic counts are computed for the comparator grid. |
 
 ## Explicit Non-Goals For M1
 

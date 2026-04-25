@@ -57,6 +57,7 @@ make normal-form-reduce
 make nonlinear-comparator
 make shared-tau-ratio
 make sample-budget
+make orbital-harmonic-budget
 make symbolic-check
 ```
 

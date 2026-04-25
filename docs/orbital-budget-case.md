@@ -50,3 +50,5 @@ Status: Counterexample candidate. A minimum orbital-style upgrade for the
 `N=1, M=1, K_Lambda=0` comparator would need at least three linear harmonics
 and four generated sideband-pair samples.
 
+Status: Counterexample candidate. The bounded higher-harmonic version of this
+upgrade is worked out in [`richer-orbital-forcing-budget-audit.md`](richer-orbital-forcing-budget-audit.md).

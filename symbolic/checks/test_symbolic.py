@@ -51,6 +51,12 @@ from sample_budget_audit import (
     orbital_design,
     two_tone_design,
 )
+from orbital_harmonic_budget_audit import (
+    clean_sum_sideband_pairs,
+    exact_in_e_clean_new_line_count,
+    find_minimum_orbital_design,
+    classify_orbital_harmonic_design,
+)
 from normal_form_reduce import (
     operator_symbols,
     reduce_algebraic_identities,
@@ -488,6 +494,49 @@ def test_sample_budget_classification_rows_include_current_cases() -> None:
     )
 
 
+def test_clean_orbital_pair_count_reproduces_current_case() -> None:
+    assert clean_sum_sideband_pairs(2, 3) == ((1, 2, 3),)
+    current = classify_orbital_harmonic_design(
+        2,
+        3,
+        linear_order=1,
+        sideband_degree=1,
+        projection_nuisance=0,
+    )
+    assert current.classification.linear_samples == 2
+    assert current.classification.sideband_pairs == 1
+    assert current.classification.verdict == "underbudget-no-go"
+
+
+def test_richer_orbital_minimum_for_first_derivative_linear_sideband() -> None:
+    design = find_minimum_orbital_design(
+        linear_order=1,
+        sideband_degree=1,
+        projection_nuisance=0,
+    )
+    assert design is not None
+    assert design.linear_harmonics == 3
+    assert design.sideband_harmonic_cutoff == 6
+    assert len(design.clean_sideband_pairs) == 4
+    assert design.classification.verdict == "budget-breaking"
+
+
+def test_richer_orbital_projection_nuisance_minimum() -> None:
+    design = find_minimum_orbital_design(
+        linear_order=1,
+        sideband_degree=1,
+        projection_nuisance=2,
+    )
+    assert design is not None
+    assert design.linear_harmonics == 4
+    assert design.sideband_harmonic_cutoff == 6
+    assert len(design.clean_sideband_pairs) == 4
+
+
+def test_exact_in_e_has_no_clean_new_line_count() -> None:
+    assert exact_in_e_clean_new_line_count() == 0
+
+
 def main() -> None:
     test_symmetric_quadratic_jet()
     test_worldline_force_structure()
@@ -523,6 +572,10 @@ def main() -> None:
     test_orbital_design_is_underbudget_for_trivial_sideband_comparator()
     test_two_tone_design_beats_only_trivial_comparator()
     test_sample_budget_classification_rows_include_current_cases()
+    test_clean_orbital_pair_count_reproduces_current_case()
+    test_richer_orbital_minimum_for_first_derivative_linear_sideband()
+    test_richer_orbital_projection_nuisance_minimum()
+    test_exact_in_e_has_no_clean_new_line_count()
     print("symbolic checks passed")
 
 
