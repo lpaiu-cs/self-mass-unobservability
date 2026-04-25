@@ -90,3 +90,10 @@ This ledger records the active assumptions behind the free-fall sensitivity-coll
 
 - Status: Proven. The repository does not assume that the current manual rank-3, rank-4, or rank-5 survivor lists are already exhaustive.
 - Status: Proven. High-rank survivor exhaustiveness is now checked by explicit contraction generation in [`high-rank-audit-methodology.md`](high-rank-audit-methodology.md), [`../symbolic/high_rank_family_enumerator.py`](../symbolic/high_rank_family_enumerator.py), and [`../symbolic/high_rank_diff_report.py`](../symbolic/high_rank_diff_report.py).
+
+## Explicit Rule For The Irreducible-Envelope Theorem
+
+- Status: Proven. Primitive-family distinctness is tested after linear `O(3)` irrep decomposition rather than before it.
+- Status: Proven. Trace descendants are not counted as new primitive-family admissions once their lower-rank scalar/vector/STF outputs are already present in the audited catalog.
+- Status: Proven. Epsilon-dual pseudo sectors are excluded from the current theorem domain by the parity-even nonspinning assumption `A2`.
+- Status: Proven. Even-dual mixed-symmetry sectors are reduced to ordinary lower-rank tensors and then decomposed again into STF plus trace-descendant pieces rather than counted as new primitive families.

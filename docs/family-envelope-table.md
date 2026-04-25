@@ -2,29 +2,23 @@
 
 ## Purpose
 
-- Status: Proven. This table records which primitive-family classes are already covered, excluded by explicit assumptions, or still unaudited under the current MVP free-fall assumptions at `\Delta \le 4`.
-- Status: Proven. The table is a census tool, not a universal theorem.
+- Status: Proven. This table records the irreducible family-envelope census under the current MVP free-fall assumptions at `\Delta \le 4`.
+- Status: Proven. The table is theorem-domain specific, not universal.
 
-| Class ID | Status | Envelope state | Tensor rank | Parity | Derivative character | Smallest expected witness type | Current theorem role |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| `R2` | Proven | Audited | `2` STF | Even | Unsuppressed local family | `X2` and `EX` audited explicitly | Audited uniqueness obstruction class and threshold class |
-| `R0a` | Proven | Audited | `0` | Even | Bare source allowed | `S` audited explicitly | Audited uniqueness obstruction class and threshold class |
-| `R0b` | Proven | Audited | `0` | Even | Derivative-only or shift-symmetric | `dotS2` and `DtS_E2` audited explicitly | Audited uniqueness obstruction class and threshold class |
-| `R1` | Proven | Audited | `1` | Even | Unsuppressed local family | `V2` audited explicitly; first mixed witness `EVV` | Audited uniqueness obstruction class and threshold class |
-| `Rodd+` | Proven | Audited | Odd `\ge 3`; current representative = STF rank `3` | Even | Unsuppressed local family | `T2` audited explicitly; first mixed witness `ETT` | Audited uniqueness obstruction class and threshold class; enlarged audited-set composition now re-closed |
-| `Reven4+` | Proven | Audited | Even `\ge 4`; current representative = STF rank `4` | Even | Unsuppressed local family | `Q2` audited explicitly; manual `EQQ` plus omitted exhaustive `EEQ` at the same mixed order | Audited uniqueness obstruction class and threshold class; enlarged audited-set composition now re-closed, but exhaustive bookkeeping patch is still active |
-| `Rodd5+` | Proven | Audited | Odd `\ge 5`; current representative = STF rank `5` | Even | Unsuppressed local family | `U2` audited explicitly; first mixed witness `EUU` | Audited uniqueness obstruction class and threshold class; enlarged audited-set composition now re-closed |
-| `Reven6+` | Proven | Audited | Even `\ge 6`; current representative = STF rank `6` | Even | Unsuppressed local family | `Z2` audited explicitly; first mixed witness `EZZ` and no audited `EEZ` analogue at the first mixed order | Audited uniqueness obstruction class and threshold class; enlarged audited-set composition now re-closed |
-| `Rodd7+` | Proven | Still unaudited | Odd `\ge 7` | Even | Unsuppressed local family | Rank-7 self-contraction type (Counterexample candidate) | Next smallest unaudited family gate after the post-`Reven6+` composition closure |
-| `Podd` | Proven | Excluded by explicit assumption | Any | Odd | Any local derivative character | Not in the MVP domain | Excluded by A2 |
-| `Spin` | Proven | Excluded by explicit assumption | Any | Any | Spin- or orientation-carrying | Not in the MVP domain | Excluded by A2 |
-| `State` | Proven | Excluded by explicit assumption | Not a local tensor family | Any | Orbital-timescale internal state variable | `chi_A`-type loophole | Excluded by A4; recorded as loophole class instead |
-| `Nonlocal` | Proven | Excluded by explicit assumption | Not a local primitive family | Any | Hereditary or nonlocal kernel | Retarded-kernel loophole | Excluded by A3; recorded as loophole class instead |
+| Class ID | Status | Envelope state | Family group | Irreducible character | Resolution mechanism | Current theorem role |
+| --- | --- | --- | --- | --- | --- | --- |
+| `Scalar` | Proven | Already audited | Scalar | Rank-0 ordinary tensor | Audited directly as `R0a` and `R0b` | Audited irreducible family class |
+| `Vector` | Proven | Already audited | Vector | Rank-1 ordinary tensor | Audited directly as `R1` | Audited irreducible family class |
+| `STF2` | Proven | Already audited | STF rank-2 | Rank-2 STF | Audited directly as the rank-2 STF special case | Audited irreducible family class |
+| `STFge3` | Proven | Already audited | STF rank-`L \ge 3` | Rank-`L` STF | Covered by the STF self-witness threshold theorem and audited through `L = 6` | Audited irreducible family theorem class |
+| `TraceDesc` | Proven | Absorbed by trace reduction | Mixed-symmetry / non-STF | Ordinary tensor with explicit delta traces | Reduced to lower-rank scalar/vector/STF classes | Not a genuinely new primitive family |
+| `PseudoOdd` | Proven | Excluded by explicit assumption | Mixed-symmetry / non-STF | Odd epsilon-dual pseudo sector | Excluded by parity-even nonspinning assumption `A2` | Outside the theorem domain |
+| `MixedEvenDual` | Proven | Absorbed by irrep reduction | Mixed-symmetry / non-STF | Even-dual mixed-symmetry sector | Dualized to ordinary lower-rank tensors and then reduced to scalar/vector/STF classes | Not a genuinely new primitive family |
+| `State` | Proven | Excluded by explicit assumption | Loophole sector | Orbital-timescale internal state variable | Excluded by `A4` | Tracked separately as loophole class |
+| `Nonlocal` | Proven | Excluded by explicit assumption | Loophole sector | Hereditary or nonlocal kernel | Excluded by `A3` | Tracked separately as loophole class |
 
 ## Reading Rule
 
-- Status: Proven. The rows `R2`, `R0a`, `R0b`, `R1`, `Rodd+`, `Reven4+`, `Rodd5+`, and `Reven6+` are now the explicitly audited primitive-family classes.
-- Status: Proven. The excluded rows are outside the current theorem domain because the required assumptions already remove them.
-- Status: Proven. The remaining unaudited rows are the reason family-envelope completeness still fails under the current MVP assumptions.
-- Status: Proven. Among the remaining unaudited rows, `Rodd7+` is now the smallest next envelope gate.
-- Status: Proven. The live theorem bottleneck has therefore moved back to family-envelope completeness or the next smallest unaudited family obstruction, currently `Rodd7+`.
+- Status: Proven. The only genuinely new irreducible parity-even local primitive-family classes left inside the theorem domain are the already audited scalar/vector/STF classes.
+- Status: Proven. No unresolved mixed-symmetry or otherwise non-STF family gate remains.
+- Status: Proven. The rank-by-rank STF march is therefore superseded inside the current theorem domain.

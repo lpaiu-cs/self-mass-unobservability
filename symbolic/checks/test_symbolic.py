@@ -23,6 +23,7 @@ from family_envelope_census import family_envelope_summary
 from family_witness_map import family_witness_summary
 from high_rank_diff_report import high_rank_diff_report
 from high_rank_family_enumerator import high_rank_audit_summary
+from irrep_family_census import irrep_family_summary
 from composition_attack_delta4 import composition_summary
 from mixed_witness_map import mixed_witness_summary
 from primitive_family_attack import primitive_attack_summary
@@ -575,26 +576,43 @@ def test_family_envelope_census() -> None:
     assert summary.delta_max == 4
     assert (
         summary.live_bottleneck
-        == "family-envelope completeness or the next smallest unaudited family obstruction, currently Rodd7+"
+        == 'the former live bottleneck "prove or refute irreducible family-envelope closure beyond the audited scalar/vector/STF classes" is now resolved positively'
     )
-    assert summary.envelope_closed is False
-    assert summary.smallest_unaudited_class == "Rodd7+"
+    assert summary.envelope_closed is True
+    assert summary.smallest_unaudited_class is None
     entries = {entry.class_id: entry for entry in summary.entries}
-    assert entries["R2"].envelope_state == "audited"
-    assert entries["R0a"].envelope_state == "audited"
-    assert entries["R0b"].envelope_state == "audited"
-    assert entries["R1"].envelope_state == "audited"
-    assert entries["R1"].smallest_expected_witness_type == "V2 / EVV"
-    assert entries["Rodd+"].envelope_state == "audited"
-    assert entries["Rodd+"].smallest_expected_witness_type == "T2 / ETT"
-    assert entries["Reven4+"].envelope_state == "audited"
-    assert entries["Reven4+"].smallest_expected_witness_type == "Q2 / EEQ and EQQ"
-    assert entries["Rodd5+"].envelope_state == "audited"
-    assert entries["Rodd5+"].smallest_expected_witness_type == "U2 / EUU"
-    assert entries["Reven6+"].envelope_state == "audited"
-    assert entries["Reven6+"].smallest_expected_witness_type == "Z2 / EZZ"
-    assert entries["Rodd7+"].envelope_state == "still unaudited"
-    assert entries["Podd"].envelope_state == "excluded by explicit assumption"
+    assert entries["Scalar"].envelope_state == "audited"
+    assert entries["Scalar"].smallest_expected_witness_type == "S / dotS2"
+    assert entries["Vector"].envelope_state == "audited"
+    assert entries["Vector"].smallest_expected_witness_type == "V2 / EVV"
+    assert entries["STF2"].envelope_state == "audited"
+    assert entries["STF2"].smallest_expected_witness_type == "X2 / EX"
+    assert entries["STFge3"].envelope_state == "audited"
+    assert entries["STFge3"].smallest_expected_witness_type == "Y2 / class-limited mixed pattern"
+    assert entries["TraceDesc"].envelope_state == "absorbed by trace reduction"
+    assert entries["MixedEvenDual"].envelope_state == "absorbed by trace reduction"
+    assert entries["PseudoOdd"].envelope_state == "excluded by explicit assumption"
+    assert entries["State"].envelope_state == "excluded by explicit assumption"
+    assert entries["Nonlocal"].envelope_state == "excluded by explicit assumption"
+
+
+def test_irrep_family_census() -> None:
+    summary = irrep_family_summary()
+    assert summary.delta_max == 4
+    assert (
+        summary.live_statement
+        == 'the former live bottleneck "prove or refute irreducible family-envelope closure beyond the audited scalar/vector/STF classes" is now resolved positively'
+    )
+    assert summary.envelope_closes_on_audited_classes is True
+    assert summary.first_open_nonstf_family is None
+    entries = {entry.class_id: entry for entry in summary.entries}
+    assert entries["Scalar"].resolution_state == "already audited"
+    assert entries["Vector"].resolution_state == "already audited"
+    assert entries["STF2"].resolution_state == "already audited"
+    assert entries["STFge3"].resolution_state == "already audited"
+    assert entries["TraceDesc"].resolution_state == "absorbed by trace reduction"
+    assert entries["MixedEvenDual"].resolution_state == "absorbed by trace reduction"
+    assert entries["PseudoOdd"].resolution_state == "excluded by parity/nonspin assumptions"
 
 
 def test_high_rank_exhaustiveness_audit() -> None:
@@ -968,6 +986,7 @@ def main() -> None:
     test_threshold_formula_check()
     test_composition_attack_delta4()
     test_family_envelope_census()
+    test_irrep_family_census()
     test_high_rank_exhaustiveness_audit()
     test_high_rank_diff_report_mentions_eeq()
     test_stf_rank_pattern_summary()

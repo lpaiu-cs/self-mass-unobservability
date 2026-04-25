@@ -167,9 +167,10 @@ Status: Conjectural. The repository roadmap is organized around theorem progress
 8. Status: Proven. The `Reven6+` gate is now resolved as a genuine new obstruction class, with `Z2` first and `EZZ` the only audited first mixed-layer label.
 9. Status: Proven. The audited rank-6 result supports the interpretation that rank `L = 4` is an isolated even-rank exception inside the audited STF sector rather than the first confirmed member of a broader audited even-rank `EEY` pattern.
 10. Status: Proven. Audited-set composition is now re-closed for the further enlarged family set that includes `Reven6+`.
-11. Status: Proven. The next concrete family-envelope census gate is `Rodd7+`, but the theorem-layer bottleneck is first the broader family-envelope completeness question beyond the audited STF and scalar/vector classes.
-12. Status: Counterexample candidate. Promote the dominant loophole class only if it produces a genuine failure of the corrected finite-family collapse candidate rather than only another uniqueness obstruction.
-13. Status: Conjectural. Revisit the scalar `s_A` corollary only after the higher-dimensional sensitivity manifold statement is sharp.
+11. Status: Proven. The rank-by-rank STF march is now superseded by the irreducible family-envelope theorem inside the current theorem domain.
+12. Status: Conjectural. The next mainline task is the positive finite-family fixed-order collapse theorem once the irreducible scalar/vector/STF envelope is fixed.
+13. Status: Counterexample candidate. Promote the dominant loophole class only if it produces a genuine failure of the corrected finite-family collapse candidate rather than only another uniqueness obstruction.
+14. Status: Conjectural. Revisit the scalar `s_A` corollary only after the higher-dimensional sensitivity manifold statement is sharp.
 
 ## Explicit Non-Goals For M1
 

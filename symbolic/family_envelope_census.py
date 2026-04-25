@@ -2,11 +2,10 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
+from irrep_family_census import LIVE_STATEMENT, irrep_family_summary
+
 
 DELTA_MAX = 4
-LIVE_BOTTLENECK = (
-    "family-envelope completeness or the next smallest unaudited family obstruction, currently Rodd7+"
-)
 
 
 @dataclass(frozen=True)
@@ -33,114 +32,74 @@ class FamilyEnvelopeSummary:
 def family_envelope_entries() -> tuple[FamilyEnvelopeEntry, ...]:
     return (
         FamilyEnvelopeEntry(
-            class_id="R2",
-            envelope_state="audited",
-            tensor_rank="2 STF",
-            parity="even",
-            derivative_character="unsuppressed local family",
-            smallest_expected_witness_type="X2 / EX",
-            current_theorem_role="audited uniqueness obstruction and threshold class",
-            rank_order=2,
-        ),
-        FamilyEnvelopeEntry(
-            class_id="R0a",
+            class_id="Scalar",
             envelope_state="audited",
             tensor_rank="0",
             parity="even",
-            derivative_character="bare source allowed",
-            smallest_expected_witness_type="S",
-            current_theorem_role="audited uniqueness obstruction and threshold class",
+            derivative_character="bare or derivative-only local family",
+            smallest_expected_witness_type="S / dotS2",
+            current_theorem_role="audited irreducible family class",
             rank_order=0,
         ),
         FamilyEnvelopeEntry(
-            class_id="R0b",
-            envelope_state="audited",
-            tensor_rank="0",
-            parity="even",
-            derivative_character="derivative-only or shift-symmetric",
-            smallest_expected_witness_type="dotS2 / DtS_E2",
-            current_theorem_role="audited uniqueness obstruction and threshold class",
-            rank_order=0,
-        ),
-        FamilyEnvelopeEntry(
-            class_id="R1",
+            class_id="Vector",
             envelope_state="audited",
             tensor_rank="1",
             parity="even",
             derivative_character="unsuppressed local family",
             smallest_expected_witness_type="V2 / EVV",
-            current_theorem_role="audited uniqueness obstruction and threshold class",
+            current_theorem_role="audited irreducible family class",
             rank_order=1,
         ),
         FamilyEnvelopeEntry(
-            class_id="Rodd+",
+            class_id="STF2",
             envelope_state="audited",
-            tensor_rank="odd >= 3",
+            tensor_rank="2 STF",
             parity="even",
             derivative_character="unsuppressed local family",
-            smallest_expected_witness_type="T2 / ETT",
-            current_theorem_role="audited uniqueness obstruction and threshold class; enlarged audited-set composition now re-closed",
+            smallest_expected_witness_type="X2 / EX",
+            current_theorem_role="audited irreducible family class",
+            rank_order=2,
+        ),
+        FamilyEnvelopeEntry(
+            class_id="STFge3",
+            envelope_state="audited",
+            tensor_rank="L >= 3 STF",
+            parity="even",
+            derivative_character="unsuppressed local family",
+            smallest_expected_witness_type="Y2 / class-limited mixed pattern",
+            current_theorem_role="audited irreducible family theorem class",
             rank_order=3,
         ),
         FamilyEnvelopeEntry(
-            class_id="Reven4+",
-            envelope_state="audited",
-            tensor_rank="even >= 4",
+            class_id="TraceDesc",
+            envelope_state="absorbed by trace reduction",
+            tensor_rank="ordinary tensor with traces",
             parity="even",
-            derivative_character="unsuppressed local family",
-            smallest_expected_witness_type="Q2 / EEQ and EQQ",
-            current_theorem_role="audited uniqueness obstruction and threshold class; enlarged audited-set composition now re-closed, but the higher-rank STF tower abstraction fails here",
-            rank_order=4,
+            derivative_character="local descendant sector",
+            smallest_expected_witness_type="reduces to lower-rank audited class",
+            current_theorem_role="not a genuinely new primitive family",
+            rank_order=90,
         ),
         FamilyEnvelopeEntry(
-            class_id="Rodd5+",
-            envelope_state="audited",
-            tensor_rank="odd >= 5",
-            parity="even",
-            derivative_character="unsuppressed local family",
-            smallest_expected_witness_type="U2 / EUU",
-            current_theorem_role="audited uniqueness obstruction and threshold class; enlarged audited-set composition now re-closed",
-            rank_order=5,
-        ),
-        FamilyEnvelopeEntry(
-            class_id="Reven6+",
-            envelope_state="audited",
-            tensor_rank="even >= 6",
-            parity="even",
-            derivative_character="unsuppressed local family",
-            smallest_expected_witness_type="Z2 / EZZ",
-            current_theorem_role="audited uniqueness obstruction and threshold class; enlarged audited-set composition now re-closed",
-            rank_order=6,
-        ),
-        FamilyEnvelopeEntry(
-            class_id="Rodd7+",
-            envelope_state="still unaudited",
-            tensor_rank="odd >= 7",
-            parity="even",
-            derivative_character="unsuppressed local family",
-            smallest_expected_witness_type="rank-7 self-contraction type",
-            current_theorem_role="next smallest unaudited family gate after the post-Reven6+ composition closure",
-            rank_order=7,
-        ),
-        FamilyEnvelopeEntry(
-            class_id="Podd",
+            class_id="PseudoOdd",
             envelope_state="excluded by explicit assumption",
-            tensor_rank="any",
-            parity="odd",
-            derivative_character="any",
-            smallest_expected_witness_type="not in MVP domain",
+            tensor_rank="epsilon-dual pseudo sector",
+            parity="odd or pseudo",
+            derivative_character="local irrep sector",
+            smallest_expected_witness_type="outside current domain",
             current_theorem_role="excluded by A2",
-            rank_order=99,
+            rank_order=91,
         ),
         FamilyEnvelopeEntry(
-            class_id="Spin",
-            envelope_state="excluded by explicit assumption",
-            tensor_rank="any",
-            parity="any",
-            derivative_character="spin- or orientation-carrying",
-            smallest_expected_witness_type="not in MVP domain",
-            current_theorem_role="excluded by A2",
-            rank_order=99,
+            class_id="MixedEvenDual",
+            envelope_state="absorbed by trace reduction",
+            tensor_rank="even-dual mixed-symmetry sector",
+            parity="even",
+            derivative_character="local irrep sector",
+            smallest_expected_witness_type="reduces to STF + traces",
+            current_theorem_role="not a genuinely new primitive family",
+            rank_order=92,
         ),
         FamilyEnvelopeEntry(
             class_id="State",
@@ -160,7 +119,7 @@ def family_envelope_entries() -> tuple[FamilyEnvelopeEntry, ...]:
             derivative_character="hereditary or nonlocal kernel",
             smallest_expected_witness_type="retarded-kernel loophole",
             current_theorem_role="excluded by A3; tracked as loophole class",
-            rank_order=99,
+            rank_order=100,
         ),
     )
 
@@ -168,18 +127,13 @@ def family_envelope_entries() -> tuple[FamilyEnvelopeEntry, ...]:
 def family_envelope_summary(delta_max: int = DELTA_MAX) -> FamilyEnvelopeSummary:
     if delta_max != 4:
         raise ValueError("The current family-envelope census is only fixed at Delta <= 4.")
-
-    entries = family_envelope_entries()
-    unaudited = tuple(
-        entry for entry in entries if entry.envelope_state == "still unaudited"
-    )
-    smallest = min(unaudited, key=lambda item: (item.rank_order, item.class_id), default=None)
+    irrep_summary = irrep_family_summary(delta_max=delta_max)
     return FamilyEnvelopeSummary(
         delta_max=delta_max,
-        live_bottleneck=LIVE_BOTTLENECK,
-        envelope_closed=not unaudited,
-        smallest_unaudited_class=None if smallest is None else smallest.class_id,
-        entries=entries,
+        live_bottleneck=LIVE_STATEMENT,
+        envelope_closed=irrep_summary.envelope_closes_on_audited_classes,
+        smallest_unaudited_class=irrep_summary.first_open_nonstf_family,
+        entries=family_envelope_entries(),
     )
 
 

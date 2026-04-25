@@ -29,5 +29,5 @@
 - Status: Proven. The genuine rank-6 STF class is self-only at the current fixed-order threshold.
 - Status: Proven. No audited family class currently exhibits a mixed witness below its first self witness at `\Delta \le 4`.
 - Status: Proven. The sharp-threshold classification bottleneck is closed for the currently audited family classes.
-- Status: Proven. The repo-level live bottleneck has moved from threshold sharpness to family-envelope completeness or the next smallest unaudited family obstruction, currently `Rodd7+`.
-- Status: Conjectural. What remains open is not witness sharpness inside the currently audited classes, but family-envelope completeness beyond the currently audited and composition-closed family set.
+- Status: Proven. The former repo-level live bottleneck `"prove or refute irreducible family-envelope closure beyond the audited scalar/vector/STF classes"` is now resolved positively.
+- Status: Conjectural. What remains open is not witness sharpness inside the currently audited classes, but the positive finite-family collapse theorem once the irreducible scalar/vector/STF envelope is fixed.

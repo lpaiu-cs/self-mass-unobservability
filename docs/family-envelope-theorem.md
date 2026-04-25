@@ -2,36 +2,33 @@
 
 ## Question
 
-- Status: Proven. The current question is no longer witness existence, within-class sharpness, or audited-set composition for the already audited family classes.
-- Status: Proven. The current envelope question is whether the audited family set already exhausts the parity-even, nonspinning, local MVP primitive-family envelope at `\Delta \le 4`.
+- Status: Proven. The current question is no longer witness existence, within-class sharpness, audited-set composition, or another rank-by-rank STF march.
+- Status: Proven. The current question is whether the parity-even, nonspinning, local MVP primitive-family envelope closes irreducibly on the audited scalar/vector/STF classes.
 
 ## Distinctions
 
 - Status: Proven. Audited-set sufficiency means that the current thresholds are jointly sufficient for the already audited family classes only.
-- Status: Proven. Envelope completeness would mean that no further parity-even, nonspinning, local primitive-family class remains under the current MVP assumptions at `\Delta \le 4`.
-- Status: Proven. The next unaudited-family obstruction is the smallest remaining family class that is not assumption-excluded and has not yet been audited directly.
-- Status: Proven. The live theorem bottleneck can lag behind the census if a newly audited family first forces a composition re-close before the theorem can move on to the next unaudited gate.
+- Status: Proven. The STF self-witness theorem says only that genuine parity-even STF primitive families with `L \ge 3` share the same universal threshold layer.
+- Status: Proven. Irreducible-envelope closure says that no genuinely new parity-even local primitive family remains after irrep reduction, trace-descendant absorption, and parity/nonspin exclusions.
+- Status: Proven. An explicit counterexample at this stage would have to be a genuinely new mixed-symmetry or otherwise non-STF parity-even local primitive family that survives all those reductions.
 
-## Current Census Verdict
+## Current Verdict
 
-- Status: Proven. Audited-set sufficiency does not by itself imply MVP-envelope completeness.
-- Status: Proven. The `R1` audit yielded a genuine new obstruction class with smallest explicit witness `V2`.
-- Status: Proven. The `Rodd+` audit yielded a genuine new obstruction class with smallest explicit witness `T2` and first mixed witness `ETT`.
-- Status: Proven. The `Reven4+` audit yielded a genuine new obstruction class with smallest explicit witness `Q2`; the original manual mixed witness `EQQ` survives, and the later exhaustive check adds the omitted equally low mixed cubic `EEQ`.
-- Status: Proven. The `Rodd5+` audit yielded a genuine new obstruction class with smallest explicit witness `U2` and first mixed witness `EUU`.
-- Status: Proven. The `Reven6+` audit yields a genuine new obstruction class with smallest explicit witness `Z2`, first mixed witness `EZZ`, and no audited `EEZ`-type analogue at the first mixed order.
-- Status: Proven. The pre-Reven6+ composition audit finds no pairwise, higher-order, or full-set cross-family survivor beyond the baseline electric sector once the current thresholds are imposed.
-- Status: Proven. The post-Reven6+ composition audit likewise finds no pairwise, higher-order, or full-set cross-family survivor beyond the baseline electric sector once the current thresholds are imposed.
-- Status: Proven. Therefore the current thresholds are jointly sufficient for the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+, Rodd5+, Reven6+}` at `\Delta \le 4`.
-- Status: Proven. The audited family set still does not yet exhaust the primitive-family envelope.
-- Status: Proven. The smallest remaining unaudited family class under the current MVP assumptions is now `Rodd7+`, the local parity-even odd-rank tensor class beyond the current rank-5 representative.
-- Status: Proven. Therefore the envelope census still does not upgrade the theorem to MVP-envelope sufficiency.
-- Status: Proven. The current concrete census gate is still `Rodd7+`.
-- Status: Proven. The current theorem-layer bottleneck is broader: family-envelope completeness beyond the audited STF and scalar/vector classes.
+- Status: Imported from prior work. In three spatial dimensions, local Cartesian tensors decompose into STF irreps, trace descendants, and epsilon-dual pseudo sectors.
+- Status: Proven. Trace descendants reduce to already audited lower-rank scalar/vector/STF classes.
+- Status: Proven. Pseudo sectors are excluded by the parity-even nonspinning theorem domain.
+- Status: Proven. Even-dual mixed-symmetry sectors reduce back to ordinary lower-rank tensors and are again absorbed into the audited scalar/vector/STF classes.
+- Status: Proven. Therefore the MVP parity-even nonspinning local family envelope closes on the audited scalar/vector/STF classes.
+- Status: Proven. No explicit mixed-symmetry or otherwise non-STF family obstruction survives in the current theorem domain.
+- Status: Proven. The former live bottleneck `"prove or refute irreducible family-envelope closure beyond the audited scalar/vector/STF classes"` is now resolved positively.
+
+## Consequence
+
+- Status: Proven. The old pointer to `Rodd7+` is superseded; the rank-by-rank STF march is no longer the mainline path.
+- Status: Conjectural. The positive branch now returns to the finite-family fixed-order collapse theorem with the irreducible family envelope fixed.
 
 ## Boundary
 
 - Status: Proven. This note is class-limited to the currently stated MVP assumptions.
-- Status: Proven. It does not claim a universal census for every imaginable external family.
-- Status: Proven. It does not say that the positive finite-family fixed-order collapse branch fails.
-- Status: Proven. It only says that audited-set joint sufficiency is not the same thing as family-envelope closure.
+- Status: Proven. It does not claim anything about parity-odd, spinning, nonlocal, or internal-state loophole sectors.
+- Status: Proven. It does not say that the positive finite-family fixed-order collapse branch is already proved.

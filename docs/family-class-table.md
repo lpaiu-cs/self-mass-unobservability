@@ -23,5 +23,5 @@
 - Status: Proven. Crossing the listed threshold does not automatically prove uniqueness; it only removes the current lowest audited witness from the `\Delta \le 4` window.
 - Status: Proven. The threshold-class column explains whether the current budget is self-only, mixed-aware, or tied-sharp.
 - Status: Proven. The composition columns now close for the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+, Rodd5+, Reven6+}`.
-- Status: Proven. The next concrete census gate remains `Rodd7+`.
-- Status: Proven. The current theorem-layer bottleneck is family-envelope completeness beyond the audited STF and scalar/vector classes.
+- Status: Proven. The irreducible family-envelope theorem now closes on the audited scalar/vector/STF classes within the current theorem domain.
+- Status: Conjectural. The next mainline bottleneck is the positive finite-family collapse theorem once the irreducible scalar/vector/STF envelope is fixed.

@@ -77,7 +77,7 @@
 16. Status: Proven. [`budget-composition-theorem.md`](budget-composition-theorem.md), [`../lemmas/22-pairwise-composition-audit.md`](../lemmas/22-pairwise-composition-audit.md), [`../lemmas/23-three-family-composition-audit.md`](../lemmas/23-three-family-composition-audit.md), and [`../symbolic/composition_attack_delta4.py`](../symbolic/composition_attack_delta4.py) first closed the old audited-set composition layer for `R2`, `R0a`, and `R0b`.
 17. Status: Proven. [`vector-family-ordering.md`](vector-family-ordering.md), [`../lemmas/26-rank1-family-admission.md`](../lemmas/26-rank1-family-admission.md), [`../lemmas/27-rank1-threshold-formula.md`](../lemmas/27-rank1-threshold-formula.md), [`../symbolic/r1_sector_delta4.py`](../symbolic/r1_sector_delta4.py), and [`../symbolic/r1_survivor_rank_check.py`](../symbolic/r1_survivor_rank_check.py) show that a genuine local parity-even rank-1 vector family is a real obstruction class rather than a derivative-generated artifact.
 18. Status: Proven. [`../lemmas/28-r1-pairwise-composition-audit.md`](../lemmas/28-r1-pairwise-composition-audit.md), [`../lemmas/29-r1-augmented-composition-audit.md`](../lemmas/29-r1-augmented-composition-audit.md), [`composition-status.md`](composition-status.md), and [`../symbolic/composition_attack_delta4.py`](../symbolic/composition_attack_delta4.py) re-close the pairwise, triple, and quadruple composition layer for the enlarged audited family set `{R2, R0a, R0b, R1}`.
-19. Status: Proven. [`family-envelope-theorem.md`](family-envelope-theorem.md), [`family-envelope-table.md`](family-envelope-table.md), [`../lemmas/24-family-envelope-census.md`](../lemmas/24-family-envelope-census.md), [`../lemmas/25-next-unaudited-family-gate.md`](../lemmas/25-next-unaudited-family-gate.md), and [`../symbolic/family_envelope_census.py`](../symbolic/family_envelope_census.py) separate audited-set sufficiency from envelope completeness and identify the odd-rank tensor gate beyond the resolved vector gate.
+19. Status: Proven. [`family-envelope-theorem.md`](family-envelope-theorem.md), [`family-envelope-table.md`](family-envelope-table.md), [`../lemmas/24-family-envelope-census.md`](../lemmas/24-family-envelope-census.md), [`../lemmas/25-next-unaudited-family-gate.md`](../lemmas/25-next-unaudited-family-gate.md), and [`../symbolic/family_envelope_census.py`](../symbolic/family_envelope_census.py) first separated audited-set sufficiency from envelope completeness in the earlier family-envelope census stage before the later irreducible-envelope closure superseded the rank-by-rank gate march.
 20. Status: Proven. [`rank3-family-ordering.md`](rank3-family-ordering.md), [`../lemmas/30-rank3-family-admission.md`](../lemmas/30-rank3-family-admission.md), [`../lemmas/31-rank3-threshold-formula.md`](../lemmas/31-rank3-threshold-formula.md), [`../symbolic/r3_sector_delta4.py`](../symbolic/r3_sector_delta4.py), and [`../symbolic/r3_survivor_rank_check.py`](../symbolic/r3_survivor_rank_check.py) now show that `Rodd+` is a genuine new obstruction class rather than a derivative-generated artifact.
 21. Status: Proven. [`../lemmas/32-r3-pairwise-composition-audit.md`](../lemmas/32-r3-pairwise-composition-audit.md), [`../lemmas/33-r3-augmented-composition-audit.md`](../lemmas/33-r3-augmented-composition-audit.md), [`composition-status.md`](composition-status.md), and [`../symbolic/composition_attack_delta4.py`](../symbolic/composition_attack_delta4.py) re-close the pairwise, triple, quadruple, and five-family composition layer for the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+}`.
 22. Status: Proven. [`rank4-family-ordering.md`](rank4-family-ordering.md), [`../lemmas/34-rank4-family-admission.md`](../lemmas/34-rank4-family-admission.md), [`../lemmas/35-rank4-threshold-formula.md`](../lemmas/35-rank4-threshold-formula.md), [`../symbolic/r4_sector_delta4.py`](../symbolic/r4_sector_delta4.py), and [`../symbolic/r4_survivor_rank_check.py`](../symbolic/r4_survivor_rank_check.py) now show that `Reven4+` is a genuine new obstruction class rather than a trace-descended or derivative-generated artifact.
@@ -91,6 +91,8 @@
 30. Status: Proven. [`../lemmas/46-r6-pairwise-composition-audit.md`](../lemmas/46-r6-pairwise-composition-audit.md), [`../lemmas/47-r6-augmented-composition-audit.md`](../lemmas/47-r6-augmented-composition-audit.md), [`composition-status.md`](composition-status.md), and [`../symbolic/composition_attack_delta4.py`](../symbolic/composition_attack_delta4.py) re-close the pairwise, triple, quadruple, quintuple, six-family, seven-family, and eight-family composition layer for the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+, Rodd5+, Reven6+}`.
 31. Status: Proven. [`stf-self-witness-theorem.md`](stf-self-witness-theorem.md), [`../lemmas/48-stf-self-witness-theorem.md`](../lemmas/48-stf-self-witness-theorem.md), [`../lemmas/49-stf-threshold-theorem.md`](../lemmas/49-stf-threshold-theorem.md), and [`../symbolic/stf_self_witness_check.py`](../symbolic/stf_self_witness_check.py) promote the repeated audited higher-rank STF cases into a single universal self-witness threshold theorem for genuine parity-even STF primitive families of rank `L \ge 3`.
 32. Status: Proven. [`stf-mixed-pattern-classification.md`](stf-mixed-pattern-classification.md), [`stf-family-class-table.md`](stf-family-class-table.md), and [`stf-tower-theorem.md`](stf-tower-theorem.md) now separate the closed threshold theorem from the still-split mixed-pattern story.
+33. Status: Proven. [`irreducible-envelope-theorem.md`](irreducible-envelope-theorem.md), [`../lemmas/50-cartesian-irrep-reduction.md`](../lemmas/50-cartesian-irrep-reduction.md), and [`../lemmas/51-trace-descendant-absorption.md`](../lemmas/51-trace-descendant-absorption.md) replace the old rank-by-rank family march with a three-dimensional irreducible-envelope reduction.
+34. Status: Proven. [`../lemmas/52-mixed-symmetry-family-gate.md`](../lemmas/52-mixed-symmetry-family-gate.md), [`mixed-symmetry-risk-register.md`](mixed-symmetry-risk-register.md), [`../symbolic/irrep_family_census.py`](../symbolic/irrep_family_census.py), and [`../symbolic/family_envelope_census.py`](../symbolic/family_envelope_census.py) show that no explicit mixed-symmetry or otherwise non-STF primitive family survives inside the current theorem domain.
 
 ## Current Verdict
 
@@ -122,14 +124,15 @@
 - Status: Conjectural. The raw R5-extended `23`-element survivor list has sample-stable rank `19` and nullity `4`, and it is bookkeeping only rather than a corrected basis statement.
 - Status: Conjectural. The raw R6-extended survivor list is not linearly independent; its first sample-revalidated mixed quartic dependence relation is `E2Z2 + 2 E2Z2_mixed_1 - 2 E2Z2_mixed_2 - 4 E2Z2_mixed_3 = 0`.
 - Status: Conjectural. The raw R6-extended `22`-label family list has sample-stable rank `16` and nullity `6`, and it is bookkeeping only rather than a corrected basis statement.
-- Status: Proven. The current MVP assumptions still do not close the family envelope.
+- Status: Proven. The irreducible family-envelope theorem now closes the parity-even nonspinning local MVP family domain on the audited scalar/vector/STF classes.
 - Status: Proven. The post-Reven4+ pairwise, triple, quadruple, quintuple, and six-family composition audits find no surviving operator beyond the baseline electric sector once the current audited thresholds are imposed across the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+}`.
 - Status: Proven. The post-Rodd5+ pairwise, triple, quadruple, quintuple, six-family, and seven-family composition audits likewise find no surviving operator beyond the baseline electric sector once the current audited thresholds are imposed across the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+, Rodd5+}`.
 - Status: Proven. Therefore the current thresholds are jointly sufficient for the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+, Rodd5+}` at `\Delta \le 4`, and no explicit post-Rodd5+ cross-family obstruction has appeared in the audited set.
 - Status: Proven. The `Reven6+` audit now resolves the next even-rank gate as a genuine obstruction class with smallest witness `Z2` and first mixed witness `EZZ`.
 - Status: Proven. The post-Reven6+ pairwise, triple, quadruple, quintuple, six-family, seven-family, and eight-family composition audits find no surviving operator beyond the baseline electric sector once the current audited thresholds are imposed across the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+, Rodd5+, Reven6+}`.
 - Status: Proven. Therefore the current thresholds are jointly sufficient for the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+, Rodd5+, Reven6+}` at `\Delta \le 4`, and no explicit post-Reven6+ cross-family obstruction has appeared in the audited set.
-- Status: Proven. The current live bottleneck is family-envelope completeness beyond the audited STF and scalar/vector classes.
+- Status: Proven. The former live bottleneck `"prove or refute irreducible family-envelope closure beyond the audited scalar/vector/STF classes"` is now resolved positively.
+- Status: Conjectural. The next mainline bottleneck is the positive finite-family collapse theorem once the irreducible scalar/vector/STF envelope is fixed.
 - Status: Conjectural. The broad positive target remains finite-family fixed-order collapse, and it remains plausible because the audited enlarged family catalogs, including the current rank-6 extension, still close finitely at `\Delta \le 4`.
 
 ## Dependencies
@@ -175,6 +178,9 @@
 - Status: Proven. [`../lemmas/41-r5-augmented-composition-audit.md`](../lemmas/41-r5-augmented-composition-audit.md)
 - Status: Proven. [`../lemmas/48-stf-self-witness-theorem.md`](../lemmas/48-stf-self-witness-theorem.md)
 - Status: Proven. [`../lemmas/49-stf-threshold-theorem.md`](../lemmas/49-stf-threshold-theorem.md)
+- Status: Proven. [`../lemmas/50-cartesian-irrep-reduction.md`](../lemmas/50-cartesian-irrep-reduction.md)
+- Status: Proven. [`../lemmas/51-trace-descendant-absorption.md`](../lemmas/51-trace-descendant-absorption.md)
+- Status: Proven. [`../lemmas/52-mixed-symmetry-family-gate.md`](../lemmas/52-mixed-symmetry-family-gate.md)
 - Status: Conjectural. [`conditional-collapse-lemma.md`](conditional-collapse-lemma.md)
 - Status: Conjectural. [`eb-conditional-collapse.md`](eb-conditional-collapse.md)
 - Status: Conjectural. [`power-counting.md`](power-counting.md)
@@ -182,6 +188,8 @@
 - Status: Proven. [`family-admission-theorem.md`](family-admission-theorem.md)
 - Status: Proven. [`family-envelope-theorem.md`](family-envelope-theorem.md)
 - Status: Proven. [`family-envelope-table.md`](family-envelope-table.md)
+- Status: Proven. [`irreducible-envelope-theorem.md`](irreducible-envelope-theorem.md)
+- Status: Proven. [`mixed-symmetry-risk-register.md`](mixed-symmetry-risk-register.md)
 - Status: Proven. [`rank4-family-ordering.md`](rank4-family-ordering.md)
 - Status: Proven. [`rank5-family-ordering.md`](rank5-family-ordering.md)
 - Status: Proven. [`rank6-family-ordering.md`](rank6-family-ordering.md)
@@ -206,6 +214,7 @@
 - Status: Proven. [`../symbolic/mixed_witness_map.py`](../symbolic/mixed_witness_map.py)
 - Status: Proven. [`../symbolic/threshold_formula_check.py`](../symbolic/threshold_formula_check.py)
 - Status: Proven. [`../symbolic/composition_attack_delta4.py`](../symbolic/composition_attack_delta4.py)
+- Status: Proven. [`../symbolic/irrep_family_census.py`](../symbolic/irrep_family_census.py)
 - Status: Proven. [`../symbolic/family_envelope_census.py`](../symbolic/family_envelope_census.py)
 - Status: Proven. [`../symbolic/r1_sector_delta4.py`](../symbolic/r1_sector_delta4.py)
 - Status: Proven. [`../symbolic/r1_survivor_rank_check.py`](../symbolic/r1_survivor_rank_check.py)
