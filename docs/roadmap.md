@@ -112,6 +112,8 @@ static primitive families.
 | D23 | Proven | [`../symbolic/physical_detectability_map.py`](../symbolic/physical_detectability_map.py) | The SNR-budget classifications and minimum physical scale examples are checked symbolically. |
 | D24 | Counterexample candidate | [`nonlinear-second-order-mode.md`](nonlinear-second-order-mode.md) | Minimal nonlinear second-order drive/readout is defined and the shared quadratic-denominator target is separated from sideband existence. |
 | D25 | Proven | [`../symbolic/nonlinear_second_order_mode.py`](../symbolic/nonlinear_second_order_mode.py) | The nonlinear second-order transfers, shared-denominator residual, and generated-sideband interpolation boundary are checked symbolically. |
+| D26 | Counterexample candidate | [`nonlinear-second-order-detectability.md`](nonlinear-second-order-detectability.md) | Exact-in-e nonlinear generated lines are audited against relative and SNR usable-sample criteria. |
+| D27 | Proven | [`../symbolic/nonlinear_second_order_detectability.py`](../symbolic/nonlinear_second_order_detectability.py) | Generated-line sample count, amplitude threshold, projection nuisance, and minimum generated-amplitude scales are checked symbolically. |
 
 ## Explicit Non-Goals For M1
 

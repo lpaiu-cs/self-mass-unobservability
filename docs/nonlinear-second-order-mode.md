@@ -145,3 +145,19 @@ Status: Counterexample candidate. The next useful test is a resonance-assisted
 sideband sample design: count generated lines, linear lines, readout nuisance
 coefficients, and projection nuisance, then ask whether the shared `D_2`
 residual survives beyond that budget.
+
+## Detectability Follow-Up
+
+Status: Counterexample candidate. The generated-line detectability version is
+recorded in
+[`nonlinear-second-order-detectability.md`](nonlinear-second-order-detectability.md).
+It combines exact-in-e `F^2` coefficients, nonlinear-drive transfer, projection
+magnitude, and relative/SNR usable-sample criteria.
+
+Status: Counterexample candidate. The live bottleneck after the structural
+M12 result is all three of:
+
+- generated-line sample count beyond `M+2+K_Lambda`;
+- generated-line amplitude above a relative cutoff or SNR threshold;
+- finite shared projection and component-separation nuisance rather than
+  arbitrary per-frequency freedom.

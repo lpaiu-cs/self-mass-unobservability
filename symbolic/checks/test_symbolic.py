@@ -114,6 +114,15 @@ from nonlinear_second_order_mode import (
     shared_denominator_residual,
     symbols as nonlinear_second_order_symbols,
 )
+from nonlinear_second_order_detectability import (
+    classify_nonlinear_detectability,
+    default_relative_rows as nonlinear_detectability_relative_rows,
+    default_snr_rows as nonlinear_detectability_snr_rows,
+    generated_forcing_coefficient,
+    generated_line_rows,
+    minimum_generated_amplitude_scale,
+    nonlinear_drive_transfer_magnitude,
+)
 from fractions import Fraction
 from normal_form_reduce import (
     operator_symbols,
@@ -973,6 +982,130 @@ def test_nonlinear_second_order_budget_and_rows() -> None:
     assert any("shared" in row.target for row in rows)
 
 
+def test_nonlinear_detectability_uses_exact_f_squared_coefficients() -> None:
+    generated = generated_forcing_coefficient(
+        p=2.0,
+        eccentricity=0.3,
+        harmonic=3,
+        samples=1024,
+    )
+    direct = forcing_cosine_coefficient(
+        p=4.0,
+        eccentricity=0.3,
+        harmonic=3,
+        samples=1024,
+    )
+    assert abs(generated - direct) < 1.0e-15
+
+
+def test_nonlinear_detectability_transfer_has_resonant_shape() -> None:
+    transfer = nonlinear_drive_transfer_magnitude(
+        harmonic=2,
+        rho=Fraction(3, 2),
+        damping=0.2,
+    )
+    expected = 1 / (((2.25 - 4.0) ** 2 + 0.4**2) ** 0.5)
+    assert abs(transfer - expected) < 1.0e-15
+
+
+def test_nonlinear_detectability_relative_audit_splits_eccentricity() -> None:
+    low = classify_nonlinear_detectability(
+        "low-e",
+        p=2.0,
+        eccentricity=0.1,
+        rho=Fraction(3, 2),
+        damping=0.2,
+        channel="acceleration",
+        generated_cutoff=6,
+        criterion="relative",
+        relative_cutoff=1.0e-3,
+        sideband_order=1,
+        projection_nuisance=1,
+        samples=2048,
+    )
+    moderate = classify_nonlinear_detectability(
+        "moderate-e",
+        p=2.0,
+        eccentricity=0.3,
+        rho=Fraction(3, 2),
+        damping=0.2,
+        channel="acceleration",
+        generated_cutoff=6,
+        criterion="relative",
+        relative_cutoff=1.0e-3,
+        sideband_order=1,
+        projection_nuisance=1,
+        samples=2048,
+    )
+    assert low.verdict == "generated-underbudget-no-go"
+    assert moderate.verdict == "nonlinear-generated-budget-breaking"
+    assert moderate.usable_count >= moderate.budget.minimum_frequency_samples
+
+
+def test_nonlinear_detectability_snr_minimum_scales() -> None:
+    acceleration = minimum_generated_amplitude_scale(
+        "minimum",
+        p=2.0,
+        eccentricity=0.3,
+        rho=Fraction(3, 2),
+        damping=0.2,
+        channel="acceleration",
+        generated_cutoff=6,
+        base_noise_sigma=1.0e-3,
+        snr_threshold=5.0,
+        sideband_order=1,
+        projection_nuisance=1,
+        samples=2048,
+    )
+    range_channel = minimum_generated_amplitude_scale(
+        "minimum",
+        p=2.0,
+        eccentricity=0.3,
+        rho=Fraction(3, 2),
+        damping=0.2,
+        channel="range",
+        generated_cutoff=6,
+        base_noise_sigma=1.0e-6,
+        snr_threshold=5.0,
+        sideband_order=1,
+        projection_nuisance=2,
+        samples=2048,
+    )
+    assert acceleration is not None
+    assert range_channel is not None
+    assert acceleration.verdict == "nonlinear-generated-budget-breaking"
+    assert range_channel.verdict == "nonlinear-generated-budget-breaking"
+    assert 0.3 < acceleration.amplitude_scale < 0.6
+    assert 0.09 < range_channel.amplitude_scale < 0.2
+
+
+def test_nonlinear_detectability_default_rows_include_no_go_and_positive() -> None:
+    relative_rows = nonlinear_detectability_relative_rows()
+    snr_rows = nonlinear_detectability_snr_rows()
+    assert len(relative_rows) == 6
+    assert len(snr_rows) == 6
+    assert any(row.verdict == "generated-underbudget-no-go" for row in relative_rows)
+    assert any(row.verdict == "nonlinear-generated-budget-breaking" for row in relative_rows)
+    assert any(row.verdict == "generated-underbudget-no-go" for row in snr_rows)
+    assert any(row.verdict == "nonlinear-generated-budget-breaking" for row in snr_rows)
+
+
+def test_nonlinear_detectability_generated_rows_mark_unusable_high_cutoff() -> None:
+    rows = generated_line_rows(
+        p=2.0,
+        eccentricity=0.3,
+        rho=Fraction(3, 2),
+        damping=0.2,
+        channel="acceleration",
+        generated_cutoff=4,
+        criterion="relative",
+        relative_cutoff=2.0,
+        samples=1024,
+    )
+    assert rows
+    assert not any(row.usable for row in rows)
+
+
 def main() -> None:
     test_symmetric_quadratic_jet()
     test_worldline_force_structure()
@@ -1038,6 +1171,12 @@ def main() -> None:
     test_nonlinear_second_order_shared_denominator_residual_vanishes()
     test_nonlinear_second_order_interpolation_obstruction_boundaries()
     test_nonlinear_second_order_budget_and_rows()
+    test_nonlinear_detectability_uses_exact_f_squared_coefficients()
+    test_nonlinear_detectability_transfer_has_resonant_shape()
+    test_nonlinear_detectability_relative_audit_splits_eccentricity()
+    test_nonlinear_detectability_snr_minimum_scales()
+    test_nonlinear_detectability_default_rows_include_no_go_and_positive()
+    test_nonlinear_detectability_generated_rows_mark_unusable_high_cutoff()
     print("symbolic checks passed")
 
 
