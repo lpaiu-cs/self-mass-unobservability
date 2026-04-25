@@ -12,6 +12,7 @@
 | Rank-0 derivative-only scalar family | `dotS2` | `4` | `DtS_E2` | `4` | `4` | Tied-sharp | `w_D \ge 3`; the self and mixed branches yield the same sharp budget at `\Delta_{\max}=4`. |
 | Rank-1 vector family | `V2` | `2` | `EVV` | `3` | `2` | Self-only | `w_V \ge 3`, or explicit exclusion or absorption of the primitive vector family. |
 | Rank-3 STF family | `T2` | `2` | `ETT` | `3` | `2` | Self-only | `w_T \ge 3`, or explicit exclusion or absorption of the primitive rank-3 family. |
+| Rank-4 STF family | `Q2` | `2` | `EQQ` | `3` | `2` | Self-only | `w_Q \ge 3`, or explicit exclusion or absorption of the primitive rank-4 family. |
 
 ## Current Readout
 
@@ -21,7 +22,8 @@
 - Status: Proven. The derivative-only scalar class is tied-sharp at the current fixed-order threshold.
 - Status: Proven. The genuine vector class is self-only at the current fixed-order threshold.
 - Status: Proven. The genuine rank-3 STF class is self-only at the current fixed-order threshold.
+- Status: Proven. The genuine rank-4 STF class is self-only at the current fixed-order threshold.
 - Status: Proven. No audited family class currently exhibits a mixed witness below its first self witness at `\Delta \le 4`.
 - Status: Proven. The sharp-threshold classification bottleneck is closed for the currently audited family classes.
-- Status: Proven. The repo-level live bottleneck has moved from threshold sharpness to the `Rodd+` obstruction and the composition re-close it now forces.
-- Status: Conjectural. What remains open is the fresh enlarged audited-set composition audit after adding the rank-3 threshold, not witness sharpness inside the currently audited classes.
+- Status: Proven. The repo-level live bottleneck has moved from threshold sharpness to the `Reven4+` obstruction and the composition re-close it now forces.
+- Status: Conjectural. What remains open is the fresh enlarged audited-set composition audit after adding the rank-4 threshold, not witness sharpness inside the currently audited classes.

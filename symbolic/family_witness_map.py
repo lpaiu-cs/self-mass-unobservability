@@ -6,6 +6,7 @@ from eb_sector_delta4 import eb_summary
 from es_sector_delta4 import es_summary
 from r1_sector_delta4 import r1_summary
 from r3_sector_delta4 import r3_summary
+from r4_sector_delta4 import r4_summary
 from shift_scalar_sector_delta4 import shift_scalar_summary
 
 
@@ -33,6 +34,7 @@ def family_witness_entries() -> tuple[FamilyWitness, ...]:
     shift = shift_scalar_summary()
     r1 = r1_summary()
     r3 = r3_summary()
+    r4 = r4_summary()
 
     entries = (
         FamilyWitness(
@@ -80,6 +82,16 @@ def family_witness_entries() -> tuple[FamilyWitness, ...]:
             audited_profile="genuine local parity-even fully symmetric trace-free rank-3 family excluding derivative-generated rank-3 blocks",
             smallest_surviving_operator=r3.first_self_witness or "T2",
             audited_instance=r3.smallest_new_witness or "T2",
+            weight=2,
+            obstructed_theorem_layer="promotion of the enlarged audited-set result to MVP-envelope sufficiency; enlarged audited-set composition must be re-closed next",
+            finite_family_collapse_obstructed=False,
+            harmless_without_extra_assumptions=False,
+        ),
+        FamilyWitness(
+            family_class="rank4_tensor_stf",
+            audited_profile="genuine local parity-even fully symmetric trace-free rank-4 family excluding trace descendants and derivative-generated rank-4 blocks",
+            smallest_surviving_operator=r4.first_self_witness or "Q2",
+            audited_instance=r4.smallest_new_witness or "Q2",
             weight=2,
             obstructed_theorem_layer="promotion of the enlarged audited-set result to MVP-envelope sufficiency; enlarged audited-set composition must be re-closed next",
             finite_family_collapse_obstructed=False,

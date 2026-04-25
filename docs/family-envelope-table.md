@@ -12,7 +12,8 @@
 | `R0b` | Proven | Audited | `0` | Even | Derivative-only or shift-symmetric | `dotS2` and `DtS_E2` audited explicitly | Audited uniqueness obstruction class and threshold class |
 | `R1` | Proven | Audited | `1` | Even | Unsuppressed local family | `V2` audited explicitly; first mixed witness `EVV` | Audited uniqueness obstruction class and threshold class |
 | `Rodd+` | Proven | Audited | Odd `\ge 3`; current representative = STF rank `3` | Even | Unsuppressed local family | `T2` audited explicitly; first mixed witness `ETT` | Audited uniqueness obstruction class and threshold class; enlarged audited-set composition now re-closed |
-| `Reven4+` | Proven | Still unaudited | Even `\ge 4` | Even | Unsuppressed local family | `Z2`-type self contraction (Counterexample candidate) | Current next smallest unaudited family gate under the MVP assumptions |
+| `Reven4+` | Proven | Audited | Even `\ge 4`; current representative = STF rank `4` | Even | Unsuppressed local family | `Q2` audited explicitly; first mixed witness `EQQ` | Audited uniqueness obstruction class and threshold class; enlarged audited-set composition re-close required next |
+| `Rodd5+` | Proven | Still unaudited | Odd `\ge 5` | Even | Unsuppressed local family | `U2`-type self contraction (Counterexample candidate) | Next smallest unaudited family gate after the `Reven4+` composition re-close |
 | `Podd` | Proven | Excluded by explicit assumption | Any | Odd | Any local derivative character | Not in the MVP domain | Excluded by A2 |
 | `Spin` | Proven | Excluded by explicit assumption | Any | Any | Spin- or orientation-carrying | Not in the MVP domain | Excluded by A2 |
 | `State` | Proven | Excluded by explicit assumption | Not a local tensor family | Any | Orbital-timescale internal state variable | `chi_A`-type loophole | Excluded by A4; recorded as loophole class instead |
@@ -20,8 +21,8 @@
 
 ## Reading Rule
 
-- Status: Proven. The rows `R2`, `R0a`, `R0b`, `R1`, and `Rodd+` are now the explicitly audited primitive-family classes.
+- Status: Proven. The rows `R2`, `R0a`, `R0b`, `R1`, `Rodd+`, and `Reven4+` are now the explicitly audited primitive-family classes.
 - Status: Proven. The excluded rows are outside the current theorem domain because the required assumptions already remove them.
 - Status: Proven. The remaining unaudited rows are the reason family-envelope completeness still fails under the current MVP assumptions.
-- Status: Proven. Among the remaining unaudited rows, `Reven4+` is now the smallest next envelope gate.
-- Status: Proven. Because the post-Rodd+ composition re-close is now complete, the live theorem bottleneck can move to `Reven4+`.
+- Status: Proven. Among the remaining unaudited rows, `Rodd5+` is now the smallest next envelope gate.
+- Status: Proven. The live theorem bottleneck does not move there yet, because the new `Reven4+` obstruction must first be absorbed into a fresh enlarged audited-set composition re-close.
