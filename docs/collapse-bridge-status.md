@@ -25,3 +25,10 @@
 - Status: Proven. Monopole jet collapse is not being smuggled in; it is closed explicitly through analyticity `A5`.
 - Status: Proven. Sensitivity coefficients and Wilson coefficients are no longer conflated.
 - Status: Proven. The remaining risks are explicit assumption-drop failures, not a hidden unresolved bridge step inside the present theorem domain.
+
+## First Explicit Assumption-Drop Stress Test
+
+- Status: Proven. The former boundary-stress bottleneck `"construct or refute the smallest local nonanalytic counterexample to analytic monopole jet collapse (A5 boundary)"` is now resolved positively by the one-coordinate smooth flat monopole model `m_A(Y)=m_0+\alpha e^{-1/Y^2}\Theta(Y)`.
+- Status: Proven. This stress test leaves irreducible family-envelope closure, finite admitted family content, fixed-order operator finiteness, and finite normal-form closure intact.
+- Status: Proven. It breaks only the analytic Taylor-jet step of [`../lemmas/55-monopole-jet-collapse.md`](../lemmas/55-monopole-jet-collapse.md).
+- Status: Proven. The replacement bookkeeping is non-Taylor monopole germ data, not Wilson coefficients.

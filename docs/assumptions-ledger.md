@@ -105,3 +105,9 @@ This ledger records the active assumptions behind the free-fall sensitivity-coll
 - Status: Proven. Fixed-order operator finiteness uses `A7` and `A8` together with positive intrinsic weights; it does not use analyticity `A5`.
 - Status: Proven. Monopole jet collapse uses analyticity `A5` only after the finite scalar normal-form basis `Y^I` has already been established.
 - Status: Proven. The sensitivity/Wilson split uses locality `A3` and finite admitted family content `A8`; it is not being smuggled in as an automatic consequence of family-envelope closure alone.
+
+## Explicit Rule For The A5 Boundary Stress Test
+
+- Status: Proven. The `A5` boundary-stress program drops analyticity only; it keeps locality `A3`, fixed-order truncation `A7`, and finite admitted family content `A8`.
+- Status: Proven. Nonanalytic monopole-response data are not merged with higher-multipole Wilson coefficients.
+- Status: Proven. Failure of the analytic jet does not by itself count as failure of irreducible family-envelope closure or fixed-order operator finiteness.

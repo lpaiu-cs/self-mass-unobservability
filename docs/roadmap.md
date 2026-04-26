@@ -165,6 +165,16 @@ Status: Conjectural. The repository roadmap is organized around theorem progress
 | M16.4 | Proven | [`../lemmas/55-monopole-jet-collapse.md`](../lemmas/55-monopole-jet-collapse.md) and [`../lemmas/56-sensitivity-vs-wilson-split.md`](../lemmas/56-sensitivity-vs-wilson-split.md) | The finite monopole jet and the sensitivity-versus-Wilson split are closed sharply inside the current theorem domain. |
 | M16.5 | Proven | [`collapse-bridge-status.md`](collapse-bridge-status.md), [`theorem-A-freefall.md`](theorem-A-freefall.md), and [`failure-ledger.md`](failure-ledger.md) | The former positive-branch bottleneck is recorded as resolved positively, with only explicit assumption-drop or domain-escape risks left. |
 
+## M17: Local Nonanalytic `A5` Boundary Stress
+
+| Item | Status | Deliverable | Exit condition |
+| --- | --- | --- | --- |
+| M17.1 | Proven | [`nonanalytic-counterexample-program.md`](nonanalytic-counterexample-program.md) | The `A5` counterexample target is separated from family-envelope closure and operator finiteness. |
+| M17.2 | Proven | [`../lemmas/57-local-finite-but-nonanalytic.md`](../lemmas/57-local-finite-but-nonanalytic.md) | Dropping `A5` alone is shown not to destroy locality, finite admitted family content, or finite operator closure. |
+| M17.3 | Proven | [`../lemmas/58-nonanalytic-jet-failure.md`](../lemmas/58-nonanalytic-jet-failure.md) | The smallest explicit local nonanalytic monopole model is constructed and the exact failure step of Lemma 55 is isolated. |
+| M17.4 | Proven | [`../lemmas/59-nonanalytic-sensitivity-replacement.md`](../lemmas/59-nonanalytic-sensitivity-replacement.md) and [`nonanalytic-model-table.md`](nonanalytic-model-table.md) | The replacement non-Taylor monopole bookkeeping is separated from Wilson data. |
+| M17.5 | Proven | [`../symbolic/nonanalytic_jet_demo.py`](../symbolic/nonanalytic_jet_demo.py), [`collapse-bridge-status.md`](collapse-bridge-status.md), [`theorem-A-freefall.md`](theorem-A-freefall.md), and [`failure-ledger.md`](failure-ledger.md) | The explicit `A5` boundary stress test is recorded uniformly across theorem and failure layers. |
+
 ## Near-Term Sequence
 
 1. Status: Proven. The enlarged audited-set composition question is now closed positively for the audited family classes `{R2, R0a, R0b, R1}`.
@@ -179,8 +189,9 @@ Status: Conjectural. The repository roadmap is organized around theorem progress
 10. Status: Proven. Audited-set composition is now re-closed for the further enlarged family set that includes `Reven6+`.
 11. Status: Proven. The rank-by-rank STF march is now superseded by the irreducible family-envelope theorem inside the current theorem domain.
 12. Status: Proven. The positive finite-family fixed-order collapse bridge is now closed inside the current parity-even nonspinning local MVP free-fall theorem domain.
-13. Status: Counterexample candidate. The remaining explicit failure modes are now ordered as `A7/A8` failure of fixed-order finiteness, `A5` failure of analytic monopole dependence, `A3` failure of the sensitivity/Wilson split, or escape beyond the present theorem domain.
-14. Status: Conjectural. Revisit the scalar `s_A` corollary only after deciding whether to weaken the current theorem-domain assumptions or extend the theorem beyond the present domain.
+13. Status: Proven. The first explicit `A5` boundary stress test now succeeds: the one-coordinate smooth flat monopole model breaks analytic jet collapse while leaving locality and finite operator closure intact.
+14. Status: Counterexample candidate. The remaining explicit failure modes are now ordered as `A7/A8` failure of fixed-order finiteness, `A3` failure of the sensitivity/Wilson split, or theorem-domain escape beyond the present envelope, together with broader nonanalytic monopole classes beyond the minimal smooth-flat model.
+15. Status: Conjectural. Revisit the scalar `s_A` corollary only after deciding whether to weaken the current theorem-domain assumptions or extend the theorem beyond the present domain.
 
 ## Explicit Non-Goals For M1
 

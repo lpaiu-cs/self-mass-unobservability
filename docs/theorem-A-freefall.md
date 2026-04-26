@@ -106,6 +106,9 @@
 37. Status: Proven. [`../lemmas/55-monopole-jet-collapse.md`](../lemmas/55-monopole-jet-collapse.md) now closes the finite analytic monopole jet step once `A5` is imposed.
 38. Status: Proven. [`../lemmas/56-sensitivity-vs-wilson-split.md`](../lemmas/56-sensitivity-vs-wilson-split.md) now closes the finite sensitivity-versus-Wilson split once `A3`, `A5`, and `A8` are imposed.
 39. Status: Proven. [`collapse-bridge-status.md`](collapse-bridge-status.md) makes the bridge status explicit and records that the former positive-branch bottleneck is now resolved positively.
+40. Status: Proven. [`nonanalytic-counterexample-program.md`](nonanalytic-counterexample-program.md), [`../lemmas/57-local-finite-but-nonanalytic.md`](../lemmas/57-local-finite-but-nonanalytic.md), and [`../lemmas/58-nonanalytic-jet-failure.md`](../lemmas/58-nonanalytic-jet-failure.md) isolate the `A5` boundary and show that locality plus finite operator closure survive even when the analytic monopole jet fails.
+41. Status: Proven. [`../lemmas/59-nonanalytic-sensitivity-replacement.md`](../lemmas/59-nonanalytic-sensitivity-replacement.md) separates non-Taylor monopole germ data from higher-multipole Wilson coefficients.
+42. Status: Proven. [`nonanalytic-model-table.md`](nonanalytic-model-table.md) and [`../symbolic/nonanalytic_jet_demo.py`](../symbolic/nonanalytic_jet_demo.py) record the explicit analytic control, smooth-flat, and threshold models side by side.
 
 ## Current Verdict
 
@@ -149,6 +152,9 @@
 - Status: Proven. Fixed-order operator-space non-closure is no longer a live failure mode inside the current theorem domain once finite admitted family content and irreducible-envelope closure are imposed.
 - Status: Proven. Finite normal-form basis closure is no longer a live failure mode inside the current theorem domain once the explicit quotient rules are imposed.
 - Status: Proven. The positive finite-family collapse theorem now closes inside the current theorem domain.
+- Status: Proven. The former boundary-stress bottleneck `"construct or refute the smallest local nonanalytic counterexample to analytic monopole jet collapse (A5 boundary)"` is now resolved positively by the one-coordinate smooth flat monopole model `m_A(Y)=m_0+\alpha e^{-1/Y^2}\Theta(Y)`.
+- Status: Proven. That model preserves locality, finite admitted family content, fixed-order operator finiteness, and finite scalar normal-form closure, but it destroys the finite analytic Taylor jet at the reference point.
+- Status: Proven. The replacement bookkeeping is non-Taylor monopole germ data and remains separate from the residual Wilson coefficients.
 - Status: Counterexample candidate. The remaining explicit risks are assumption-drop failures: nonanalytic monopole dependence at `A5`, locality failure of the sensitivity/Wilson split at `A3`, failure of finite admitted family content at `A8`, or escape beyond the present theorem domain.
 
 ## Dependencies
@@ -201,10 +207,15 @@
 - Status: Proven. [`../lemmas/54-normal-form-basis-closure.md`](../lemmas/54-normal-form-basis-closure.md)
 - Status: Proven. [`../lemmas/55-monopole-jet-collapse.md`](../lemmas/55-monopole-jet-collapse.md)
 - Status: Proven. [`../lemmas/56-sensitivity-vs-wilson-split.md`](../lemmas/56-sensitivity-vs-wilson-split.md)
+- Status: Proven. [`../lemmas/57-local-finite-but-nonanalytic.md`](../lemmas/57-local-finite-but-nonanalytic.md)
+- Status: Proven. [`../lemmas/58-nonanalytic-jet-failure.md`](../lemmas/58-nonanalytic-jet-failure.md)
+- Status: Proven. [`../lemmas/59-nonanalytic-sensitivity-replacement.md`](../lemmas/59-nonanalytic-sensitivity-replacement.md)
 - Status: Conjectural. [`conditional-collapse-lemma.md`](conditional-collapse-lemma.md)
 - Status: Conjectural. [`eb-conditional-collapse.md`](eb-conditional-collapse.md)
 - Status: Proven. [`finite-family-collapse-theorem.md`](finite-family-collapse-theorem.md)
 - Status: Proven. [`collapse-bridge-status.md`](collapse-bridge-status.md)
+- Status: Proven. [`nonanalytic-counterexample-program.md`](nonanalytic-counterexample-program.md)
+- Status: Proven. [`nonanalytic-model-table.md`](nonanalytic-model-table.md)
 - Status: Conjectural. [`power-counting.md`](power-counting.md)
 - Status: Proven. [`family-admission-no-go.md`](family-admission-no-go.md)
 - Status: Proven. [`family-admission-theorem.md`](family-admission-theorem.md)
@@ -239,6 +250,7 @@
 - Status: Proven. [`../symbolic/irrep_family_census.py`](../symbolic/irrep_family_census.py)
 - Status: Proven. [`../symbolic/family_envelope_census.py`](../symbolic/family_envelope_census.py)
 - Status: Proven. [`../symbolic/fixed_family_operator_count.py`](../symbolic/fixed_family_operator_count.py)
+- Status: Proven. [`../symbolic/nonanalytic_jet_demo.py`](../symbolic/nonanalytic_jet_demo.py)
 - Status: Proven. [`../symbolic/r1_sector_delta4.py`](../symbolic/r1_sector_delta4.py)
 - Status: Proven. [`../symbolic/r1_survivor_rank_check.py`](../symbolic/r1_survivor_rank_check.py)
 - Status: Proven. [`../symbolic/r3_sector_delta4.py`](../symbolic/r3_sector_delta4.py)

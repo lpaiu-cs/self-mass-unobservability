@@ -25,6 +25,7 @@ from fixed_family_operator_count import fixed_family_operator_count_summary
 from high_rank_diff_report import high_rank_diff_report
 from high_rank_family_enumerator import high_rank_audit_summary
 from irrep_family_census import irrep_family_summary
+from nonanalytic_jet_demo import nonanalytic_jet_summary
 from composition_attack_delta4 import composition_summary
 from mixed_witness_map import mixed_witness_summary
 from primitive_family_attack import primitive_attack_summary
@@ -653,6 +654,34 @@ def test_fixed_family_operator_count_summary() -> None:
     assert entries["stf_rank6_representative_sector"].reduced_operator_count == 23
 
 
+def test_nonanalytic_jet_demo() -> None:
+    summary = nonanalytic_jet_summary()
+    assert summary.delta_max == 4
+    assert summary.locality_kept_in_all_cases is True
+    assert summary.finite_family_operator_closure_kept_in_all_cases is True
+    assert summary.smallest_local_nonanalytic_counterexample == "smooth_flat_single_coordinate"
+    assert summary.broken_layer == "analytic monopole jet collapse (Lemma 55 / A5)"
+    cases = {case.case_id: case for case in summary.cases}
+    analytic = cases["analytic_control_quadratic"]
+    assert analytic.finite_taylor_jet_valid is True
+    assert analytic.theorem_layer_broken is None
+    assert analytic.jet_value_at_sample == analytic.model_value_at_sample
+    flat = cases["smooth_flat_single_coordinate"]
+    assert flat.locality_kept is True
+    assert flat.finite_family_operator_closure_kept is True
+    assert flat.finite_taylor_jet_valid is False
+    assert flat.canonical_counterexample is True
+    assert "all Taylor coefficients" in (flat.first_exact_failure_mode or "")
+    assert flat.jet_value_at_sample == 1.0
+    assert flat.model_value_at_sample > flat.jet_value_at_sample
+    threshold = cases["threshold_sqrt_activation"]
+    assert threshold.locality_kept is True
+    assert threshold.finite_family_operator_closure_kept is True
+    assert threshold.finite_taylor_jet_valid is False
+    assert "branch point" in (threshold.first_exact_failure_mode or "")
+    assert threshold.jet_value_at_sample is None
+
+
 def test_high_rank_exhaustiveness_audit() -> None:
     rank3 = high_rank_audit_summary(3)
     assert rank3.generated_count == 14
@@ -1026,6 +1055,7 @@ def main() -> None:
     test_family_envelope_census()
     test_irrep_family_census()
     test_fixed_family_operator_count_summary()
+    test_nonanalytic_jet_demo()
     test_high_rank_exhaustiveness_audit()
     test_high_rank_diff_report_mentions_eeq()
     test_stf_rank_pattern_summary()
