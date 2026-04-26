@@ -1,3 +1,7 @@
+> SUPPORTING THEOREM NOTE
+>
+> Status: Proven. The authoritative front-door theorem statement is [`theorem-package.md`](theorem-package.md).
+
 # STF Self-Witness Threshold Theorem
 
 ## Scope

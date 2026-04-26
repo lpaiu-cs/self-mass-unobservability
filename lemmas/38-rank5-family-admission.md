@@ -28,4 +28,4 @@
 ## Boundary
 
 - Status: Proven. This lemma does not claim that the raw `23`-label `Rodd5+` survivor list is a corrected basis.
-- Status: Proven. This lemma by itself does not move the live bottleneck past `Rodd5+`; that required the separate composition closure recorded in Lemmas 40 and 41.
+- Status: Proven. This lemma by itself did not close the contemporaneous composition step; that required the separate closure recorded in Lemmas 40 and 41.

@@ -1,3 +1,7 @@
+> SUPPORTING THEOREM NOTE
+>
+> Status: Proven. The authoritative front-door theorem statement is [`theorem-package.md`](theorem-package.md).
+
 # Finite-Family Collapse Theorem
 
 ## Scope
@@ -32,8 +36,6 @@
 
 ## Current Verdict
 
-- Status: Proven. The former live bottleneck `"prove or refute the positive finite-family collapse theorem once the irreducible scalar/vector/STF envelope is fixed"` is now resolved positively.
-- Status: Proven. The former live bottleneck `"replace A8 by a sharp local weight-spectrum finiteness condition"` is now resolved positively.
 - Status: Proven. The positive theorem is not rescued by minimal-sector uniqueness; it survives because local weight-spectrum finiteness below fixed order, explicit reduction rules, and analytic local monopole response are enough inside the current theorem domain.
 - Status: Proven. The explicit infinite low-weight STF tower is the sharp `A8` failure mode when that weaker condition is dropped.
-- Status: Proven. The remaining explicit risks are assumption-drop failures, not another rank-by-rank family march.
+- Status: Proven. The remaining explicit risks are assumption-drop failures rather than unresolved bridge steps inside the stated domain.

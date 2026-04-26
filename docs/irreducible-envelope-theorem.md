@@ -1,3 +1,7 @@
+> SUPPORTING THEOREM NOTE
+>
+> Status: Proven. The authoritative front-door theorem statement is [`theorem-package.md`](theorem-package.md).
+
 # Irreducible-Envelope Theorem
 
 ## Scope
@@ -30,5 +34,5 @@
 
 ## Consequence
 
-- Status: Proven. The former live bottleneck `"prove or refute irreducible family-envelope closure beyond the audited scalar/vector/STF classes"` is now resolved positively.
 - Status: Proven. The rank-by-rank STF march is no longer the mainline path in this repo.
+- Status: Proven. The irreducible family envelope is closed positively inside the current theorem domain and now feeds the closed positive finite-family collapse theorem.

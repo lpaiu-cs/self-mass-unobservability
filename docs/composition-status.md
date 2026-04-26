@@ -1,3 +1,7 @@
+> RAW BOOKKEEPING NOTE
+>
+> Status: Proven. This file is a supporting audit ledger, not an authoritative theorem statement.
+
 # Composition Status
 
 ## Purpose

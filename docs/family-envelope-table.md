@@ -1,3 +1,7 @@
+> RAW BOOKKEEPING NOTE
+>
+> Status: Proven. This file is a supporting family-census table, not an authoritative theorem statement.
+
 # Family-Envelope Table
 
 ## Purpose

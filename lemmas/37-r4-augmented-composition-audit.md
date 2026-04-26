@@ -64,4 +64,4 @@
 
 - Status: Proven. This lemma is only an audited-set composition theorem for the six currently audited family classes.
 - Status: Proven. It does not imply MVP-envelope completeness by itself.
-- Status: Proven. After this closure, the live positive bottleneck moves back to family-envelope completeness and the next smallest unaudited family gate.
+- Status: Proven. After this closure, the then-open next step returned to family-envelope completeness; that route is now superseded by the irreducible-envelope theorem.

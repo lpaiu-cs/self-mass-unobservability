@@ -580,11 +580,11 @@ def test_family_envelope_census() -> None:
     summary = family_envelope_summary()
     assert summary.delta_max == 4
     assert (
-        summary.live_bottleneck
-        == 'the former live bottleneck "prove or refute irreducible family-envelope closure beyond the audited scalar/vector/STF classes" is now resolved positively'
+        summary.package_status
+        == "irreducible scalar/vector/STF family-envelope closure is resolved positively inside the current theorem domain"
     )
     assert summary.envelope_closed is True
-    assert summary.smallest_unaudited_class is None
+    assert summary.first_open_class is None
     entries = {entry.class_id: entry for entry in summary.entries}
     assert entries["Scalar"].envelope_state == "audited"
     assert entries["Scalar"].smallest_expected_witness_type == "S / dotS2"
@@ -605,8 +605,8 @@ def test_irrep_family_census() -> None:
     summary = irrep_family_summary()
     assert summary.delta_max == 4
     assert (
-        summary.live_statement
-        == 'the former live bottleneck "prove or refute irreducible family-envelope closure beyond the audited scalar/vector/STF classes" is now resolved positively'
+        summary.package_status
+        == "irreducible scalar/vector/STF family-envelope closure is resolved positively inside the current theorem domain"
     )
     assert summary.envelope_closes_on_audited_classes is True
     assert summary.first_open_nonstf_family is None

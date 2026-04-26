@@ -1,3 +1,7 @@
+> SUPPORTING THEOREM NOTE
+>
+> Status: Proven. The authoritative front-door theorem statement is [`theorem-package.md`](theorem-package.md).
+
 # Weight-Spectrum Theorem
 
 ## Target
@@ -24,6 +28,5 @@
 
 ## Current Verdict
 
-- Status: Proven. The former live bottleneck `"replace A8 by a sharp local weight-spectrum finiteness condition"` is now resolved positively.
 - Status: Proven. `A8` was stronger than necessary: local weight-spectrum finiteness below fixed `\Delta_{\max}` suffices.
 - Status: Proven. The explicit infinite low-weight STF tower is the sharp `A8` failure mode when that weaker condition is dropped.

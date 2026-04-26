@@ -4,8 +4,8 @@ from dataclasses import dataclass
 
 
 DELTA_MAX = 4
-LIVE_STATEMENT = (
-    'the former live bottleneck "prove or refute irreducible family-envelope closure beyond the audited scalar/vector/STF classes" is now resolved positively'
+PACKAGE_STATUS = (
+    "irreducible scalar/vector/STF family-envelope closure is resolved positively inside the current theorem domain"
 )
 
 
@@ -23,7 +23,7 @@ class IrrepFamilyEntry:
 @dataclass(frozen=True)
 class IrrepFamilySummary:
     delta_max: int
-    live_statement: str
+    package_status: str
     envelope_closes_on_audited_classes: bool
     first_open_nonstf_family: str | None
     entries: tuple[IrrepFamilyEntry, ...]
@@ -106,7 +106,7 @@ def irrep_family_summary(delta_max: int = DELTA_MAX) -> IrrepFamilySummary:
     )
     return IrrepFamilySummary(
         delta_max=delta_max,
-        live_statement=LIVE_STATEMENT,
+        package_status=PACKAGE_STATUS,
         envelope_closes_on_audited_classes=not open_entries,
         first_open_nonstf_family=None if not open_entries else open_entries[0].class_id,
         entries=entries,
@@ -118,7 +118,7 @@ def irrep_family_report(delta_max: int = DELTA_MAX) -> str:
     lines = [
         "key\tvalue",
         f"delta_max\t{summary.delta_max}",
-        f"live_statement\t{summary.live_statement}",
+        f"package_status\t{summary.package_status}",
         f"envelope_closes_on_audited_classes\t{str(summary.envelope_closes_on_audited_classes).lower()}",
         f"first_open_nonstf_family\t{summary.first_open_nonstf_family or 'none'}",
         "",

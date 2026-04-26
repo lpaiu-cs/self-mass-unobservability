@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
-from irrep_family_census import LIVE_STATEMENT, irrep_family_summary
+from irrep_family_census import PACKAGE_STATUS, irrep_family_summary
 
 
 DELTA_MAX = 4
@@ -23,9 +23,9 @@ class FamilyEnvelopeEntry:
 @dataclass(frozen=True)
 class FamilyEnvelopeSummary:
     delta_max: int
-    live_bottleneck: str
+    package_status: str
     envelope_closed: bool
-    smallest_unaudited_class: str | None
+    first_open_class: str | None
     entries: tuple[FamilyEnvelopeEntry, ...]
 
 
@@ -130,9 +130,9 @@ def family_envelope_summary(delta_max: int = DELTA_MAX) -> FamilyEnvelopeSummary
     irrep_summary = irrep_family_summary(delta_max=delta_max)
     return FamilyEnvelopeSummary(
         delta_max=delta_max,
-        live_bottleneck=LIVE_STATEMENT,
+        package_status=PACKAGE_STATUS,
         envelope_closed=irrep_summary.envelope_closes_on_audited_classes,
-        smallest_unaudited_class=irrep_summary.first_open_nonstf_family,
+        first_open_class=irrep_summary.first_open_nonstf_family,
         entries=family_envelope_entries(),
     )
 
@@ -142,9 +142,9 @@ def family_envelope_report(delta_max: int = DELTA_MAX) -> str:
     lines = [
         "key\tvalue",
         f"delta_max\t{summary.delta_max}",
-        f"live_bottleneck\t{summary.live_bottleneck}",
+        f"package_status\t{summary.package_status}",
         f"envelope_closed\t{str(summary.envelope_closed).lower()}",
-        f"smallest_unaudited_class\t{summary.smallest_unaudited_class or 'none'}",
+        f"first_open_class\t{summary.first_open_class or 'none'}",
         "",
         (
             "class_id\tenvelope_state\ttensor_rank\tparity\tderivative_character\t"

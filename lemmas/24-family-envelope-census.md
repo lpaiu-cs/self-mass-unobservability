@@ -46,5 +46,5 @@
 ## Boundary
 
 - Status: Proven. This lemma is a census lemma, not a universal composition theorem for arbitrary primitive-family sets.
-- Status: Proven. It identifies the next smallest unaudited family class in the census, while allowing the live theorem bottleneck to lag if a newly audited family still forces a composition re-close.
+- Status: Proven. It identifies the then-smallest unaudited family class in the historical census while allowing the theorem layer of that stage to remain at composition closure.
 - Status: Proven. It only proves that the current assumptions still leave higher-rank parity-even family classes inside the MVP envelope and therefore keep the theorem family-envelope incomplete.

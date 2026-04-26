@@ -1,3 +1,7 @@
+> LEGACY / HISTORICAL NOTE
+>
+> Status: Proven. This file records a failed stronger theorem attempt. The active higher-rank result is [`stf-self-witness-theorem.md`](stf-self-witness-theorem.md).
+
 # STF Tower Theorem
 
 ## Scope

@@ -1,3 +1,7 @@
+> HISTORICAL STATUS LEDGER
+>
+> Status: Proven. This file preserves milestone chronology and checkpoint structure. It is not an authoritative theorem entry point.
+
 # Roadmap
 
 Status: Conjectural. The repository roadmap is organized around theorem progress first and loophole progress second.

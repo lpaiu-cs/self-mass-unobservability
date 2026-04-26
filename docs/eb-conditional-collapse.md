@@ -1,3 +1,7 @@
+> LEGACY / HISTORICAL NOTE
+>
+> Status: Proven. This exact-current-set conditional note is retained for provenance only. It is not part of the authoritative front-door theorem package.
+
 # `E/B` Conditional Collapse
 
 ## Statement

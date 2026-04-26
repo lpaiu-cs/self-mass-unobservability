@@ -1,3 +1,7 @@
+> SUPPORTING AUDIT NOTE
+>
+> Status: Proven. This file records the closed audited-set composition theorem. It is not the front-door theorem statement.
+
 # Budget-Composition Theorem
 
 ## Question
