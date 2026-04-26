@@ -32,3 +32,11 @@
 - Status: Proven. This stress test leaves irreducible family-envelope closure, finite admitted family content, fixed-order operator finiteness, and finite normal-form closure intact.
 - Status: Proven. It breaks only the analytic Taylor-jet step of [`../lemmas/55-monopole-jet-collapse.md`](../lemmas/55-monopole-jet-collapse.md).
 - Status: Proven. The replacement bookkeeping is non-Taylor monopole germ data, not Wilson coefficients.
+
+## A3 Boundary-Stress: Hereditary Counterexample Program
+
+- Status: Proven. The former boundary-stress bottleneck `"construct or refute the smallest genuinely hereditary counterexample to the local finite-family collapse theorem (A3 boundary)"` is now resolved positively by the one-coordinate causal power-law kernel model of [`hereditary-counterexample-program.md`](hereditary-counterexample-program.md).
+- Status: Proven. The exponential-memory control case is not the sharp `A3` escape because it is finitely Markovianizable and collapses into a finite auxiliary-state `A4`-type extension.
+- Status: Proven. The genuine power-law kernel keeps the finite primitive-family envelope, fixed admitted family content, fixed-order local operator finiteness, and finite scalar normal-form quotient intact.
+- Status: Proven. The first theorem layer it breaks is the reduction of the monopole response to a local function `m_A(Y(\tau))` of finitely many instantaneous normal-form coordinates, so Lemmas 55 and 56 are no longer applicable in their local form.
+- Status: Proven. The replacement bookkeeping is kernel or spectral memory data, not Wilson coefficients.

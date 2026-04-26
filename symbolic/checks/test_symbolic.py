@@ -26,6 +26,7 @@ from high_rank_diff_report import high_rank_diff_report
 from high_rank_family_enumerator import high_rank_audit_summary
 from irrep_family_census import irrep_family_summary
 from nonanalytic_jet_demo import nonanalytic_jet_summary
+from hereditary_kernel_demo import hereditary_kernel_summary
 from composition_attack_delta4 import composition_summary
 from mixed_witness_map import mixed_witness_summary
 from primitive_family_attack import primitive_attack_summary
@@ -682,6 +683,36 @@ def test_nonanalytic_jet_demo() -> None:
     assert threshold.jet_value_at_sample is None
 
 
+def test_hereditary_kernel_demo() -> None:
+    summary = hereditary_kernel_summary()
+    assert summary.delta_max == 4
+    assert summary.finite_primitive_family_envelope_kept_in_all_cases is True
+    assert summary.analyticity_kept_in_all_cases is True
+    assert summary.smallest_genuinely_hereditary_counterexample == "power_law_single_coordinate"
+    assert "A3" in summary.broken_layer
+    cases = {case.case_id: case for case in summary.cases}
+    local_control = cases["local_analytic_control"]
+    assert local_control.locality_kept is True
+    assert local_control.finite_local_jet_valid is True
+    assert local_control.theorem_layer_first_broken is None
+    assert local_control.same_point_response_difference == 0.0
+    exponential = cases["exponential_memory_control"]
+    assert exponential.locality_kept is False
+    assert exponential.analyticity_kept is True
+    assert exponential.finite_local_jet_valid is False
+    assert exponential.finite_state_markovianizable is True
+    assert exponential.same_point_response_difference > 0.0
+    assert "A4-type extension" in (exponential.theorem_layer_first_broken or "")
+    power_law = cases["power_law_single_coordinate"]
+    assert power_law.locality_kept is False
+    assert power_law.analyticity_kept is True
+    assert power_law.finite_local_jet_valid is False
+    assert power_law.finite_state_markovianizable is False
+    assert power_law.canonical_counterexample is True
+    assert power_law.same_point_response_difference > 0.0
+    assert "Lemmas 55 and 56" in (power_law.theorem_layer_first_broken or "")
+
+
 def test_high_rank_exhaustiveness_audit() -> None:
     rank3 = high_rank_audit_summary(3)
     assert rank3.generated_count == 14
@@ -1056,6 +1087,7 @@ def main() -> None:
     test_irrep_family_census()
     test_fixed_family_operator_count_summary()
     test_nonanalytic_jet_demo()
+    test_hereditary_kernel_demo()
     test_high_rank_exhaustiveness_audit()
     test_high_rank_diff_report_mentions_eeq()
     test_stf_rank_pattern_summary()

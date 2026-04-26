@@ -175,6 +175,16 @@ Status: Conjectural. The repository roadmap is organized around theorem progress
 | M17.4 | Proven | [`../lemmas/59-nonanalytic-sensitivity-replacement.md`](../lemmas/59-nonanalytic-sensitivity-replacement.md) and [`nonanalytic-model-table.md`](nonanalytic-model-table.md) | The replacement non-Taylor monopole bookkeeping is separated from Wilson data. |
 | M17.5 | Proven | [`../symbolic/nonanalytic_jet_demo.py`](../symbolic/nonanalytic_jet_demo.py), [`collapse-bridge-status.md`](collapse-bridge-status.md), [`theorem-A-freefall.md`](theorem-A-freefall.md), and [`failure-ledger.md`](failure-ledger.md) | The explicit `A5` boundary stress test is recorded uniformly across theorem and failure layers. |
 
+## M18: Genuine Hereditary `A3` Boundary Stress
+
+| Item | Status | Deliverable | Exit condition |
+| --- | --- | --- | --- |
+| M18.1 | Proven | [`hereditary-counterexample-program.md`](hereditary-counterexample-program.md) | The `A3` counterexample target is separated from both local nonanalytic `A5` escape and finite-state Markovianizable memory. |
+| M18.2 | Proven | [`../lemmas/60-hereditary-kernel-construction.md`](../lemmas/60-hereditary-kernel-construction.md) | Local analytic, exponential-memory, and genuine hereditary power-law kernel models are written explicitly at fixed primitive-family content. |
+| M18.3 | Proven | [`../lemmas/61-markovianizable-vs-genuine-hereditary.md`](../lemmas/61-markovianizable-vs-genuine-hereditary.md) | The exponential control is shown finite-state Markovianizable, while the power-law kernel is shown genuinely hereditary in the current class. |
+| M18.4 | Proven | [`../lemmas/62-hereditary-collapse-failure.md`](../lemmas/62-hereditary-collapse-failure.md) | The first exact theorem layer broken by the genuine hereditary branch is isolated sharply. |
+| M18.5 | Proven | [`../lemmas/63-hereditary-replacement-bookkeeping.md`](../lemmas/63-hereditary-replacement-bookkeeping.md), [`hereditary-model-table.md`](hereditary-model-table.md), and [`../symbolic/hereditary_kernel_demo.py`](../symbolic/hereditary_kernel_demo.py) | Replacement hereditary bookkeeping is separated from Wilson data and the boundary is recorded uniformly across theorem and failure layers. |
+
 ## Near-Term Sequence
 
 1. Status: Proven. The enlarged audited-set composition question is now closed positively for the audited family classes `{R2, R0a, R0b, R1}`.
@@ -190,8 +200,9 @@ Status: Conjectural. The repository roadmap is organized around theorem progress
 11. Status: Proven. The rank-by-rank STF march is now superseded by the irreducible family-envelope theorem inside the current theorem domain.
 12. Status: Proven. The positive finite-family fixed-order collapse bridge is now closed inside the current parity-even nonspinning local MVP free-fall theorem domain.
 13. Status: Proven. The first explicit `A5` boundary stress test now succeeds: the one-coordinate smooth flat monopole model breaks analytic jet collapse while leaving locality and finite operator closure intact.
-14. Status: Counterexample candidate. The remaining explicit failure modes are now ordered as `A7/A8` failure of fixed-order finiteness, `A3` failure of the sensitivity/Wilson split, or theorem-domain escape beyond the present envelope, together with broader nonanalytic monopole classes beyond the minimal smooth-flat model.
-15. Status: Conjectural. Revisit the scalar `s_A` corollary only after deciding whether to weaken the current theorem-domain assumptions or extend the theorem beyond the present domain.
+14. Status: Proven. The first explicit genuine `A3` boundary stress test now succeeds: the one-coordinate power-law hereditary kernel breaks local monopole reduction while leaving the primitive-family envelope and fixed-order local operator closure intact.
+15. Status: Counterexample candidate. The remaining explicit failure modes are now documented rather than hidden: broader `A3` hereditary branches beyond the minimal power-law model, broader `A5` nonanalytic monopole classes beyond the smooth-flat model, `A7/A8` failure of fixed-order finiteness, or theorem-domain escape beyond the present envelope.
+16. Status: Conjectural. Revisit the scalar `s_A` corollary only after deciding whether to weaken the current theorem-domain assumptions or extend the theorem beyond the present domain.
 
 ## Explicit Non-Goals For M1
 

@@ -155,7 +155,10 @@
 - Status: Proven. The former boundary-stress bottleneck `"construct or refute the smallest local nonanalytic counterexample to analytic monopole jet collapse (A5 boundary)"` is now resolved positively by the one-coordinate smooth flat monopole model `m_A(Y)=m_0+\alpha e^{-1/Y^2}\Theta(Y)`.
 - Status: Proven. That model preserves locality, finite admitted family content, fixed-order operator finiteness, and finite scalar normal-form closure, but it destroys the finite analytic Taylor jet at the reference point.
 - Status: Proven. The replacement bookkeeping is non-Taylor monopole germ data and remains separate from the residual Wilson coefficients.
-- Status: Counterexample candidate. The remaining explicit risks are assumption-drop failures: nonanalytic monopole dependence at `A5`, locality failure of the sensitivity/Wilson split at `A3`, failure of finite admitted family content at `A8`, or escape beyond the present theorem domain.
+- Status: Proven. The former boundary-stress bottleneck `"construct or refute the smallest genuinely hereditary counterexample to the local finite-family collapse theorem (A3 boundary)"` is now resolved positively by the one-coordinate causal power-law kernel model.
+- Status: Proven. The exponential-memory control is not the sharp `A3` escape because it collapses into a finite auxiliary-state `A4`-type extension.
+- Status: Proven. The exact broken layer for the genuine hereditary branch is the reduction of the monopole response to a local function `m_A(Y(\tau))`; therefore Lemmas 55 and 56 no longer apply in the local theorem form.
+- Status: Counterexample candidate. The remaining explicit risks are now explicit assumption-drop or domain-escape failures: nonanalytic monopole dependence at `A5`, genuinely hereditary nonlocal monopole dependence at `A3`, failure of finite admitted family content at `A8`, or escape beyond the present theorem domain.
 
 ## Dependencies
 
@@ -210,6 +213,10 @@
 - Status: Proven. [`../lemmas/57-local-finite-but-nonanalytic.md`](../lemmas/57-local-finite-but-nonanalytic.md)
 - Status: Proven. [`../lemmas/58-nonanalytic-jet-failure.md`](../lemmas/58-nonanalytic-jet-failure.md)
 - Status: Proven. [`../lemmas/59-nonanalytic-sensitivity-replacement.md`](../lemmas/59-nonanalytic-sensitivity-replacement.md)
+- Status: Proven. [`../lemmas/60-hereditary-kernel-construction.md`](../lemmas/60-hereditary-kernel-construction.md)
+- Status: Proven. [`../lemmas/61-markovianizable-vs-genuine-hereditary.md`](../lemmas/61-markovianizable-vs-genuine-hereditary.md)
+- Status: Proven. [`../lemmas/62-hereditary-collapse-failure.md`](../lemmas/62-hereditary-collapse-failure.md)
+- Status: Proven. [`../lemmas/63-hereditary-replacement-bookkeeping.md`](../lemmas/63-hereditary-replacement-bookkeeping.md)
 - Status: Conjectural. [`conditional-collapse-lemma.md`](conditional-collapse-lemma.md)
 - Status: Conjectural. [`eb-conditional-collapse.md`](eb-conditional-collapse.md)
 - Status: Proven. [`finite-family-collapse-theorem.md`](finite-family-collapse-theorem.md)
@@ -250,6 +257,7 @@
 - Status: Proven. [`../symbolic/irrep_family_census.py`](../symbolic/irrep_family_census.py)
 - Status: Proven. [`../symbolic/family_envelope_census.py`](../symbolic/family_envelope_census.py)
 - Status: Proven. [`../symbolic/fixed_family_operator_count.py`](../symbolic/fixed_family_operator_count.py)
+- Status: Proven. [`../symbolic/hereditary_kernel_demo.py`](../symbolic/hereditary_kernel_demo.py)
 - Status: Proven. [`../symbolic/nonanalytic_jet_demo.py`](../symbolic/nonanalytic_jet_demo.py)
 - Status: Proven. [`../symbolic/r1_sector_delta4.py`](../symbolic/r1_sector_delta4.py)
 - Status: Proven. [`../symbolic/r1_survivor_rank_check.py`](../symbolic/r1_survivor_rank_check.py)
@@ -267,7 +275,7 @@
 
 - Status: Counterexample candidate. An explicit `chi_A` state invalidates the no-state reduction step.
 - Status: Counterexample candidate. Nonanalytic activation invalidates the analytic collapse step.
-- Status: Counterexample candidate. Hereditary couplings invalidate locality before basis closure is even applied.
+- Status: Counterexample candidate. Genuinely hereditary kernels invalidate the reduction of the monopole response to a local function of the instantaneous normal-form coordinates even when the local operator basis is already finite.
 - Status: Counterexample candidate. Infinite or uncontrolled external field content invalidates the fixed-order closure theorem candidate.
 - Status: Counterexample candidate. Any additional `\Delta \le 4` scalar contraction from the exact current electric-only primitive set that evades the explicit enumeration/reduction pipeline obstructs the electric-only exact-current-set theorem.
 - Status: Counterexample candidate. Any further physically admissible primitive family that yields new survivors beyond the corrected explicit audited family catalogs reinforces the uniqueness no-go branch.

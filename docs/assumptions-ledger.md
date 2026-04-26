@@ -111,3 +111,10 @@ This ledger records the active assumptions behind the free-fall sensitivity-coll
 - Status: Proven. The `A5` boundary-stress program drops analyticity only; it keeps locality `A3`, fixed-order truncation `A7`, and finite admitted family content `A8`.
 - Status: Proven. Nonanalytic monopole-response data are not merged with higher-multipole Wilson coefficients.
 - Status: Proven. Failure of the analytic jet does not by itself count as failure of irreducible family-envelope closure or fixed-order operator finiteness.
+
+## Explicit Rule For The A3 Boundary Stress Test
+
+- Status: Proven. The `A3` boundary-stress program drops locality only after the finite primitive-family envelope, fixed-order local operator finiteness, and local scalar normal-form quotient have already been fixed.
+- Status: Proven. Instantaneous analyticity is kept on the local-coordinate side whenever possible; the intended stress point is hereditary memory, not a mixed `A3+A5` escape.
+- Status: Proven. Exponential or finite multi-exponential kernels are not counted as sharp `A3` counterexamples if they are finitely Markovianizable and can be rewritten as finite auxiliary-state extensions.
+- Status: Proven. Genuine hereditary kernel or spectral data are kept separate from higher-multipole Wilson coefficients.
