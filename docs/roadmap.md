@@ -160,7 +160,7 @@ Status: Conjectural. The repository roadmap is organized around theorem progress
 | Item | Status | Deliverable | Exit condition |
 | --- | --- | --- | --- |
 | M16.1 | Proven | [`finite-family-collapse-theorem.md`](finite-family-collapse-theorem.md) | The positive bridge target is stated explicitly and separated from both minimal-sector uniqueness and irreducible-envelope closure. |
-| M16.2 | Proven | [`../lemmas/53-fixed-order-operator-finiteness.md`](../lemmas/53-fixed-order-operator-finiteness.md) and [`../symbolic/fixed_family_operator_count.py`](../symbolic/fixed_family_operator_count.py) | Fixed-order candidate operator-space finiteness is closed explicitly once finite admitted family content is fixed. |
+| M16.2 | Proven | [`../lemmas/53-fixed-order-operator-finiteness.md`](../lemmas/53-fixed-order-operator-finiteness.md) and [`../symbolic/fixed_family_operator_count.py`](../symbolic/fixed_family_operator_count.py) | Fixed-order candidate operator-space finiteness is closed explicitly once the admitted family spectrum is locally finite below the fixed cutoff. |
 | M16.3 | Proven | [`../lemmas/54-normal-form-basis-closure.md`](../lemmas/54-normal-form-basis-closure.md) | The reduced scalar operator quotient is shown finite-dimensional under the explicit reduction rules. |
 | M16.4 | Proven | [`../lemmas/55-monopole-jet-collapse.md`](../lemmas/55-monopole-jet-collapse.md) and [`../lemmas/56-sensitivity-vs-wilson-split.md`](../lemmas/56-sensitivity-vs-wilson-split.md) | The finite monopole jet and the sensitivity-versus-Wilson split are closed sharply inside the current theorem domain. |
 | M16.5 | Proven | [`collapse-bridge-status.md`](collapse-bridge-status.md), [`theorem-A-freefall.md`](theorem-A-freefall.md), and [`failure-ledger.md`](failure-ledger.md) | The former positive-branch bottleneck is recorded as resolved positively, with only explicit assumption-drop or domain-escape risks left. |
@@ -170,7 +170,7 @@ Status: Conjectural. The repository roadmap is organized around theorem progress
 | Item | Status | Deliverable | Exit condition |
 | --- | --- | --- | --- |
 | M17.1 | Proven | [`nonanalytic-counterexample-program.md`](nonanalytic-counterexample-program.md) | The `A5` counterexample target is separated from family-envelope closure and operator finiteness. |
-| M17.2 | Proven | [`../lemmas/57-local-finite-but-nonanalytic.md`](../lemmas/57-local-finite-but-nonanalytic.md) | Dropping `A5` alone is shown not to destroy locality, finite admitted family content, or finite operator closure. |
+| M17.2 | Proven | [`../lemmas/57-local-finite-but-nonanalytic.md`](../lemmas/57-local-finite-but-nonanalytic.md) | Dropping `A5` alone is shown not to destroy locality, local weight-spectrum finiteness below the cutoff, or finite operator closure. |
 | M17.3 | Proven | [`../lemmas/58-nonanalytic-jet-failure.md`](../lemmas/58-nonanalytic-jet-failure.md) | The smallest explicit local nonanalytic monopole model is constructed and the exact failure step of Lemma 55 is isolated. |
 | M17.4 | Proven | [`../lemmas/59-nonanalytic-sensitivity-replacement.md`](../lemmas/59-nonanalytic-sensitivity-replacement.md) and [`nonanalytic-model-table.md`](nonanalytic-model-table.md) | The replacement non-Taylor monopole bookkeeping is separated from Wilson data. |
 | M17.5 | Proven | [`../symbolic/nonanalytic_jet_demo.py`](../symbolic/nonanalytic_jet_demo.py), [`collapse-bridge-status.md`](collapse-bridge-status.md), [`theorem-A-freefall.md`](theorem-A-freefall.md), and [`failure-ledger.md`](failure-ledger.md) | The explicit `A5` boundary stress test is recorded uniformly across theorem and failure layers. |
@@ -195,6 +195,15 @@ Status: Conjectural. The repository roadmap is organized around theorem progress
 | M19.4 | Proven | [`../lemmas/66-a4-collapse-failure.md`](../lemmas/66-a4-collapse-failure.md) | The first exact theorem layer broken by the genuine local-state branch is isolated sharply. |
 | M19.5 | Proven | [`../lemmas/67-state-augmented-collapse.md`](../lemmas/67-state-augmented-collapse.md), [`../lemmas/68-state-vs-wilson-split.md`](../lemmas/68-state-vs-wilson-split.md), [`stateful-model-table.md`](stateful-model-table.md), and [`../symbolic/stateful_counterexample_demo.py`](../symbolic/stateful_counterexample_demo.py) | The finite state-augmented positive salvage theorem is separated from the original no-state theorem and from Wilson bookkeeping. |
 
+## M20: `A8` Weight-Spectrum Sharpness
+
+| Item | Status | Deliverable | Exit condition |
+| --- | --- | --- | --- |
+| M20.1 | Proven | [`weight-spectrum-theorem.md`](weight-spectrum-theorem.md) | Finite total family content is separated from local weight-spectrum finiteness below the fixed cutoff. |
+| M20.2 | Proven | [`../lemmas/69-local-weight-spectrum-finiteness.md`](../lemmas/69-local-weight-spectrum-finiteness.md) | The positive fixed-order theorem is shown to survive under the weaker local-spectrum condition. |
+| M20.3 | Proven | [`../lemmas/70-infinite-low-weight-tower-counterexample.md`](../lemmas/70-infinite-low-weight-tower-counterexample.md) | A pure `A8` infinite low-weight tower counterexample is constructed and the first broken layer is isolated sharply. |
+| M20.4 | Proven | [`../lemmas/71-a8-sharpness.md`](../lemmas/71-a8-sharpness.md), [`weight-spectrum-model-table.md`](weight-spectrum-model-table.md), and [`../symbolic/weight_spectrum_demo.py`](../symbolic/weight_spectrum_demo.py) | The sharp replacement for the old `A8` assumption is stated explicitly and recorded uniformly across the theorem and failure layers. |
+
 ## Near-Term Sequence
 
 1. Status: Proven. The enlarged audited-set composition question is now closed positively for the audited family classes `{R2, R0a, R0b, R1}`.
@@ -214,8 +223,10 @@ Status: Conjectural. The repository roadmap is organized around theorem progress
 15. Status: Proven. The first explicit `A4` boundary stress test now succeeds: the one-state local analytic `\chi` model breaks the original Y-only no-state theorem while preserving locality, analyticity, finite primitive-family content, and fixed-order operator closure.
 16. Status: Proven. The adiabatic or slaved local-state control is not the sharp `A4` escape, because it eliminates back into the original `Y`-only bookkeeping.
 17. Status: Proven. A second positive branch now survives beyond the original theorem: finite local state-augmented collapse with explicit `(Y^I,\chi^a)` state-space data and a separate Wilson sector.
-18. Status: Counterexample candidate. The remaining explicit failure modes are now documented rather than hidden: broader `A3` hereditary branches beyond the minimal power-law model, broader `A5` nonanalytic monopole classes beyond the smooth-flat model, mixed `A4+A5` or `A3+A4` state-memory escapes beyond the sharp one-state local branch, `A7/A8` failure of fixed-order finiteness, or theorem-domain escape beyond the present envelope.
-19. Status: Conjectural. Revisit the scalar `s_A` corollary only after deciding whether to weaken the current theorem-domain assumptions or extend the theorem beyond the present domain.
+18. Status: Proven. The former live bottleneck `"replace A8 by a sharp local weight-spectrum finiteness condition"` is now resolved positively: local weight-spectrum finiteness below the fixed cutoff suffices for the positive theorem.
+19. Status: Proven. The explicit infinite low-weight STF tower is the sharp `A8` failure mode when that weaker condition is dropped.
+20. Status: Counterexample candidate. The remaining explicit failure modes are now documented rather than hidden: broader `A3` hereditary branches beyond the minimal power-law model, broader `A5` nonanalytic monopole classes beyond the smooth-flat model, mixed `A4+A5` or `A3+A4` state-memory escapes beyond the sharp one-state local branch, all-orders `A7` failure beyond the fixed cutoff theorem, or theorem-domain escape beyond the present envelope.
+21. Status: Conjectural. Revisit the scalar `s_A` corollary only after deciding whether to weaken the current theorem-domain assumptions or extend the theorem beyond the present domain.
 
 ## Explicit Non-Goals For M1
 

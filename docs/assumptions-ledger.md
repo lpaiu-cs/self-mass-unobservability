@@ -13,7 +13,7 @@ This ledger records the active assumptions behind the free-fall sensitivity-coll
 | A5 | Conjectural | Couplings to the relevant external invariants are analytic near the reference background. | Needed to define a finite Taylor jet of sensitivity coordinates at fixed order. | Threshold or cusp behavior can evade a polynomial sensitivity jet. |
 | A6 | Conjectural | The object admits a self-bound equilibrium before external perturbations are applied. | Separates body formation from later passive coupling to external gravity. | Otherwise the theorem can mix equilibrium failure with observational coupling. |
 | A7 | Conjectural | The theorem is stated at fixed order in the operator counting rule of [`power-counting.md`](power-counting.md). | This prevents the proof target from silently becoming an all-orders closure claim. | Without fixed-order truncation, finite-dimensionality needs an extra closure theorem. |
-| A8 | Conjectural | The minimal sector uses finite external field content: only finitely many primitive external tensor species are admitted at the chosen order. | This is the explicit hypothesis that replaces the older hidden finite-basis assumption. | An uncontrolled field catalog can generate infinitely many primitive directions before normal-form reduction starts. |
+| A8 | Conjectural | The admitted primitive-family spectrum is locally finite below the fixed theorem cutoff: only finitely many primitive-family species have intrinsic weight `w \le \Delta_{\max}`. | This is the weakest proved hypothesis that replaces the older hidden finite-basis assumption at fixed order. | An infinite low-weight tower can generate infinitely many primitive directions before normal-form reduction starts. |
 
 ## Imported Exclusions From Earlier Work
 
@@ -102,13 +102,13 @@ This ledger records the active assumptions behind the free-fall sensitivity-coll
 
 - Status: Proven. The scalar normal-form coordinates `Y^I` refer only to the reduced parity-even scalar operator basis at fixed order; they are not a placeholder for higher-multipole Wilson data.
 - Status: Proven. The higher-multipole Wilson coefficients `C_{A,\alpha}` remain separate from the monopole sensitivity jet and are not merged into the same coefficient family.
-- Status: Proven. Fixed-order operator finiteness uses `A7` and `A8` together with positive intrinsic weights; it does not use analyticity `A5`.
+- Status: Proven. Fixed-order operator finiteness uses `A7` and the sharpened local weight-spectrum condition `A8` together with positive intrinsic weights; it does not use analyticity `A5`.
 - Status: Proven. Monopole jet collapse uses analyticity `A5` only after the finite scalar normal-form basis `Y^I` has already been established.
-- Status: Proven. The sensitivity/Wilson split uses locality `A3` and finite admitted family content `A8`; it is not being smuggled in as an automatic consequence of family-envelope closure alone.
+- Status: Proven. The sensitivity/Wilson split uses locality `A3` and the finite reduced operator set guaranteed by `A7` plus the sharpened `A8`; it is not being smuggled in as an automatic consequence of family-envelope closure alone.
 
 ## Explicit Rule For The A5 Boundary Stress Test
 
-- Status: Proven. The `A5` boundary-stress program drops analyticity only; it keeps locality `A3`, fixed-order truncation `A7`, and finite admitted family content `A8`.
+- Status: Proven. The `A5` boundary-stress program drops analyticity only; it keeps locality `A3`, fixed-order truncation `A7`, and the sharpened local weight-spectrum condition `A8`.
 - Status: Proven. Nonanalytic monopole-response data are not merged with higher-multipole Wilson coefficients.
 - Status: Proven. Failure of the analytic jet does not by itself count as failure of irreducible family-envelope closure or fixed-order operator finiteness.
 
@@ -121,7 +121,14 @@ This ledger records the active assumptions behind the free-fall sensitivity-coll
 
 ## Explicit Rule For The A4 Boundary Stress Test
 
-- Status: Proven. The `A4` boundary-stress program drops only the no-orbital-timescale-state assumption while keeping locality `A3`, analyticity `A5`, fixed-order truncation `A7`, and finite admitted family content `A8`.
+- Status: Proven. The `A4` boundary-stress program drops only the no-orbital-timescale-state assumption while keeping locality `A3`, analyticity `A5`, fixed-order truncation `A7`, and the sharpened local weight-spectrum condition `A8`.
+
+## Explicit Rule For The A8 Sharpness Theorem
+
+- Status: Proven. Finite total admitted primitive-family content implies the sharpened `A8` condition, but it is stronger than necessary at fixed order.
+- Status: Proven. The fixed-order positive theorem only needs local family-spectrum finiteness below `\Delta_{\max}`, not a globally finite family catalog.
+- Status: Proven. Infinite admitted family count is harmless by itself if only finitely many species survive with intrinsic weight `w \le \Delta_{\max}`.
+- Status: Proven. The sharp `A8` failure is the infinite low-weight tower in which infinitely many species survive below the fixed cutoff and produce infinitely many pre-reduction scalar witnesses.
 - Status: Proven. Adiabatically eliminable or algebraically slaved local state variables do not count as sharp `A4` counterexamples, because they collapse back into a `Y`-only monopole model.
 - Status: Proven. The sharp `A4` counterexample must keep finitely many genuinely dynamical local state variables explicit and distinct from the scalar normal-form coordinates `Y^I`.
 - Status: Proven. Explicit local state variables `\chi^a` are not merged with higher-multipole Wilson coefficients.

@@ -4,7 +4,7 @@
 
 - Status: Proven. Work in the free-fall MVP sector only: nonspinning, nearly spherical, parity-even, local worldline EFT, fixed truncation order `\Delta \le 4`, and finite admitted external field content.
 - Status: Proven. Within that theorem domain, the irreducible primitive-family envelope is already closed on the audited scalar/vector/STF classes.
-- Status: Proven. For any explicit finite admitted primitive-family catalog drawn from that closed envelope, the candidate parity-even local free-fall scalar operator space at `\Delta \le 4` is finite before reduction.
+- Status: Proven. For any admitted primitive-family spectrum drawn from that closed envelope which is locally finite below `\Delta \le 4`, the candidate parity-even local free-fall scalar operator space at `\Delta \le 4` is finite before reduction.
 - Status: Proven. Modulo the explicit family-envelope, total-derivative, lower-order-EOM, algebraic, and extracted linear-dependence relations already fixed in this repo, the reduced scalar operator space is finite-dimensional and admits a finite normal-form basis `Y^I`.
 - Status: Proven. Under the locality and analyticity assumptions `A3` and `A5`, the monopole term `m_A(Y)` therefore has a finite fixed-order Taylor jet in finitely many scalar normal-form coordinates.
 - Status: Proven. The residual higher-multipole sector is then carried by finitely many Wilson coefficients `C_{A,\alpha}` that are separate from the monopole sensitivity coefficients.
@@ -13,10 +13,10 @@
 ## Positive Bridge Layers
 
 - Status: Proven. Layer 1 is irreducible family-envelope closure; this is already closed positively on the audited scalar/vector/STF classes.
-- Status: Proven. Layer 2 is fixed-order candidate operator finiteness; this now follows from finite admitted family content, positive weights, and fixed `\Delta \le 4`.
+- Status: Proven. Layer 2 is fixed-order candidate operator finiteness; this now follows from local weight-spectrum finiteness below the cutoff, positive weights, and fixed `\Delta \le 4`.
 - Status: Proven. Layer 3 is finite normal-form basis closure; this now follows because the reduced operator space is a quotient of a finite-dimensional candidate space.
 - Status: Proven. Layer 4 is analytic monopole jet collapse; this now follows conditionally on `A5` once the finite scalar basis `Y^I` is fixed.
-- Status: Proven. Layer 5 is the sensitivity/Wilson split; this now follows conditionally on `A3`, `A5`, and `A8`.
+- Status: Proven. Layer 5 is the sensitivity/Wilson split; this now follows conditionally on `A3`, `A5`, and the sharpened `A8`.
 
 ## Exact-Current-Set Specializations
 
@@ -68,7 +68,7 @@
 ## Proof Route
 
 1. Status: Proven. Use the fixed-order counting rule in [`power-counting.md`](power-counting.md) to define a bounded-weight operator search space.
-2. Status: Proven. Finite admitted family content and positive weights imply a finite set of decorated primitive building blocks at order `\Delta \le 4`.
+2. Status: Proven. Local weight-spectrum finiteness below the cutoff and positive weights imply a finite set of decorated primitive building blocks at order `\Delta \le 4`.
 3. Status: Proven. [`../symbolic/enumerate_contractions_delta4.py`](../symbolic/enumerate_contractions_delta4.py) exhaustively enumerates all parity-even scalar contractions from the exact current electric-only primitive set.
 4. Status: Proven. [`../symbolic/normal_form_reduce.py`](../symbolic/normal_form_reduce.py) reduces all total-derivative, lower-order-EOM, and single-family Cayley-Hamilton-reducible electric classes explicitly.
 5. Status: Proven. [`../symbolic/survivor_rank_check.py`](../symbolic/survivor_rank_check.py) shows that the corrected seven electric-only survivors are linearly independent as operators.
@@ -104,11 +104,12 @@
 35. Status: Proven. [`finite-family-collapse-theorem.md`](finite-family-collapse-theorem.md), [`../lemmas/53-fixed-order-operator-finiteness.md`](../lemmas/53-fixed-order-operator-finiteness.md), and [`../symbolic/fixed_family_operator_count.py`](../symbolic/fixed_family_operator_count.py) now close the pre-reduction finite-candidate-operator step for any explicit finite admitted family catalog inside the current theorem domain.
 36. Status: Proven. [`../lemmas/54-normal-form-basis-closure.md`](../lemmas/54-normal-form-basis-closure.md), [`reduction-rules.md`](reduction-rules.md), and [`../symbolic/normal_form_reduce.py`](../symbolic/normal_form_reduce.py) now close the finite-dimensional scalar normal-form quotient step.
 37. Status: Proven. [`../lemmas/55-monopole-jet-collapse.md`](../lemmas/55-monopole-jet-collapse.md) now closes the finite analytic monopole jet step once `A5` is imposed.
-38. Status: Proven. [`../lemmas/56-sensitivity-vs-wilson-split.md`](../lemmas/56-sensitivity-vs-wilson-split.md) now closes the finite sensitivity-versus-Wilson split once `A3`, `A5`, and `A8` are imposed.
-39. Status: Proven. [`collapse-bridge-status.md`](collapse-bridge-status.md) makes the bridge status explicit and records that the former positive-branch bottleneck is now resolved positively.
-40. Status: Proven. [`nonanalytic-counterexample-program.md`](nonanalytic-counterexample-program.md), [`../lemmas/57-local-finite-but-nonanalytic.md`](../lemmas/57-local-finite-but-nonanalytic.md), and [`../lemmas/58-nonanalytic-jet-failure.md`](../lemmas/58-nonanalytic-jet-failure.md) isolate the `A5` boundary and show that locality plus finite operator closure survive even when the analytic monopole jet fails.
-41. Status: Proven. [`../lemmas/59-nonanalytic-sensitivity-replacement.md`](../lemmas/59-nonanalytic-sensitivity-replacement.md) separates non-Taylor monopole germ data from higher-multipole Wilson coefficients.
-42. Status: Proven. [`nonanalytic-model-table.md`](nonanalytic-model-table.md) and [`../symbolic/nonanalytic_jet_demo.py`](../symbolic/nonanalytic_jet_demo.py) record the explicit analytic control, smooth-flat, and threshold models side by side.
+38. Status: Proven. [`../lemmas/56-sensitivity-vs-wilson-split.md`](../lemmas/56-sensitivity-vs-wilson-split.md) now closes the finite sensitivity-versus-Wilson split once `A3`, `A5`, and the sharpened `A8` are imposed.
+39. Status: Proven. [`weight-spectrum-theorem.md`](weight-spectrum-theorem.md), [`../lemmas/69-local-weight-spectrum-finiteness.md`](../lemmas/69-local-weight-spectrum-finiteness.md), [`../lemmas/70-infinite-low-weight-tower-counterexample.md`](../lemmas/70-infinite-low-weight-tower-counterexample.md), [`../lemmas/71-a8-sharpness.md`](../lemmas/71-a8-sharpness.md), and [`../symbolic/weight_spectrum_demo.py`](../symbolic/weight_spectrum_demo.py) sharpen the old finite-family-content assumption to local weight-spectrum finiteness below the cutoff and record the explicit infinite low-weight tower failure when it is dropped.
+40. Status: Proven. [`collapse-bridge-status.md`](collapse-bridge-status.md) makes the bridge status explicit and records that the former positive-branch bottleneck is now resolved positively.
+41. Status: Proven. [`nonanalytic-counterexample-program.md`](nonanalytic-counterexample-program.md), [`../lemmas/57-local-finite-but-nonanalytic.md`](../lemmas/57-local-finite-but-nonanalytic.md), and [`../lemmas/58-nonanalytic-jet-failure.md`](../lemmas/58-nonanalytic-jet-failure.md) isolate the `A5` boundary and show that locality plus finite operator closure survive even when the analytic monopole jet fails.
+42. Status: Proven. [`../lemmas/59-nonanalytic-sensitivity-replacement.md`](../lemmas/59-nonanalytic-sensitivity-replacement.md) separates non-Taylor monopole germ data from higher-multipole Wilson coefficients.
+43. Status: Proven. [`nonanalytic-model-table.md`](nonanalytic-model-table.md) and [`../symbolic/nonanalytic_jet_demo.py`](../symbolic/nonanalytic_jet_demo.py) record the explicit analytic control, smooth-flat, and threshold models side by side.
 
 ## Current Verdict
 
@@ -149,11 +150,13 @@
 - Status: Proven. Therefore the current thresholds are jointly sufficient for the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+, Rodd5+, Reven6+}` at `\Delta \le 4`, and no explicit post-Reven6+ cross-family obstruction has appeared in the audited set.
 - Status: Proven. The former live bottleneck `"prove or refute irreducible family-envelope closure beyond the audited scalar/vector/STF classes"` is now resolved positively.
 - Status: Proven. The former live bottleneck `"prove or refute the positive finite-family collapse theorem once the irreducible scalar/vector/STF envelope is fixed"` is now resolved positively.
-- Status: Proven. Fixed-order operator-space non-closure is no longer a live failure mode inside the current theorem domain once finite admitted family content and irreducible-envelope closure are imposed.
+- Status: Proven. The former live bottleneck `"replace A8 by a sharp local weight-spectrum finiteness condition"` is now resolved positively.
+- Status: Proven. Fixed-order operator-space non-closure is no longer a live failure mode inside the current theorem domain once local weight-spectrum finiteness below the cutoff and irreducible-envelope closure are imposed.
 - Status: Proven. Finite normal-form basis closure is no longer a live failure mode inside the current theorem domain once the explicit quotient rules are imposed.
 - Status: Proven. The positive finite-family collapse theorem now closes inside the current theorem domain.
+- Status: Proven. The explicit infinite low-weight STF tower is the sharp `A8` failure mode when the local spectrum condition is dropped.
 - Status: Proven. The former boundary-stress bottleneck `"construct or refute the smallest local nonanalytic counterexample to analytic monopole jet collapse (A5 boundary)"` is now resolved positively by the one-coordinate smooth flat monopole model `m_A(Y)=m_0+\alpha e^{-1/Y^2}\Theta(Y)`.
-- Status: Proven. That model preserves locality, finite admitted family content, fixed-order operator finiteness, and finite scalar normal-form closure, but it destroys the finite analytic Taylor jet at the reference point.
+- Status: Proven. That model preserves locality, local weight-spectrum finiteness below the cutoff, fixed-order operator finiteness, and finite scalar normal-form closure, but it destroys the finite analytic Taylor jet at the reference point.
 - Status: Proven. The replacement bookkeeping is non-Taylor monopole germ data and remains separate from the residual Wilson coefficients.
 - Status: Proven. The former boundary-stress bottleneck `"construct or refute the smallest genuinely hereditary counterexample to the local finite-family collapse theorem (A3 boundary)"` is now resolved positively by the one-coordinate causal power-law kernel model.
 - Status: Proven. The exponential-memory control is not the sharp `A3` escape because it collapses into a finite auxiliary-state `A4`-type extension.
@@ -162,7 +165,7 @@
 - Status: Proven. The exact broken layer in that genuinely dynamical local-state branch is the original no-state reduction to `m_A(Y)` alone; Lemma 55 fails in Y-only form, and Lemma 56 fails in Y-only form as well.
 - Status: Proven. The adiabatic or slaved local-state control does not count as the sharp `A4` escape, because it is eliminable back into a `Y`-only monopole model.
 - Status: Proven. A second positive branch survives beyond the original theorem: once finitely many local state variables `\chi^a` are kept explicitly, a finite state-augmented collapse theorem survives as a finite-dimensional local state-space statement with state data kept separate from Wilson coefficients.
-- Status: Counterexample candidate. The remaining explicit risks are now explicit assumption-drop or domain-escape failures: nonanalytic monopole dependence at `A5`, genuinely hereditary nonlocal monopole dependence at `A3`, failure of finite admitted family content at `A8`, mixed `A4+A5` or `A3+A4` escape beyond the sharp one-state local branch, or escape beyond the present theorem domain.
+- Status: Counterexample candidate. The remaining explicit risks are now explicit assumption-drop or domain-escape failures: nonanalytic monopole dependence at `A5`, genuinely hereditary nonlocal monopole dependence at `A3`, failure of local weight-spectrum finiteness at `A8` through an infinite low-weight tower, mixed `A4+A5` or `A3+A4` escape beyond the sharp one-state local branch, or escape beyond the present theorem domain.
 
 ## Dependencies
 
@@ -226,6 +229,9 @@
 - Status: Proven. [`../lemmas/66-a4-collapse-failure.md`](../lemmas/66-a4-collapse-failure.md)
 - Status: Proven. [`../lemmas/67-state-augmented-collapse.md`](../lemmas/67-state-augmented-collapse.md)
 - Status: Proven. [`../lemmas/68-state-vs-wilson-split.md`](../lemmas/68-state-vs-wilson-split.md)
+- Status: Proven. [`../lemmas/69-local-weight-spectrum-finiteness.md`](../lemmas/69-local-weight-spectrum-finiteness.md)
+- Status: Proven. [`../lemmas/70-infinite-low-weight-tower-counterexample.md`](../lemmas/70-infinite-low-weight-tower-counterexample.md)
+- Status: Proven. [`../lemmas/71-a8-sharpness.md`](../lemmas/71-a8-sharpness.md)
 - Status: Conjectural. [`conditional-collapse-lemma.md`](conditional-collapse-lemma.md)
 - Status: Conjectural. [`eb-conditional-collapse.md`](eb-conditional-collapse.md)
 - Status: Proven. [`finite-family-collapse-theorem.md`](finite-family-collapse-theorem.md)
@@ -269,6 +275,7 @@
 - Status: Proven. [`../symbolic/hereditary_kernel_demo.py`](../symbolic/hereditary_kernel_demo.py)
 - Status: Proven. [`../symbolic/nonanalytic_jet_demo.py`](../symbolic/nonanalytic_jet_demo.py)
 - Status: Proven. [`../symbolic/stateful_counterexample_demo.py`](../symbolic/stateful_counterexample_demo.py)
+- Status: Proven. [`../symbolic/weight_spectrum_demo.py`](../symbolic/weight_spectrum_demo.py)
 - Status: Proven. [`../symbolic/r1_sector_delta4.py`](../symbolic/r1_sector_delta4.py)
 - Status: Proven. [`../symbolic/r1_survivor_rank_check.py`](../symbolic/r1_survivor_rank_check.py)
 - Status: Proven. [`../symbolic/r3_sector_delta4.py`](../symbolic/r3_sector_delta4.py)
@@ -286,7 +293,7 @@
 - Status: Proven. An explicit orbital-timescale `chi_A` state invalidates the original no-state reduction step; the canonical one-state local analytic model in [`state-variable-counterexample-program.md`](state-variable-counterexample-program.md) now realizes this trigger explicitly.
 - Status: Counterexample candidate. Nonanalytic activation invalidates the analytic collapse step.
 - Status: Counterexample candidate. Genuinely hereditary kernels invalidate the reduction of the monopole response to a local function of the instantaneous normal-form coordinates even when the local operator basis is already finite.
-- Status: Counterexample candidate. Infinite or uncontrolled external field content invalidates the fixed-order closure theorem candidate.
+- Status: Proven. An infinite low-weight family tower invalidates the fixed-order closure theorem candidate already at the candidate-operator-finiteness layer.
 - Status: Counterexample candidate. Any additional `\Delta \le 4` scalar contraction from the exact current electric-only primitive set that evades the explicit enumeration/reduction pipeline obstructs the electric-only exact-current-set theorem.
 - Status: Counterexample candidate. Any further physically admissible primitive family that yields new survivors beyond the corrected explicit audited family catalogs reinforces the uniqueness no-go branch.
 - Status: Counterexample candidate. Any further physically admissible primitive family obstructs the positive finite-family collapse branch only if it also destroys fixed-order finiteness or the family-conditioned reduction path.

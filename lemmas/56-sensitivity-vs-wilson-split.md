@@ -34,5 +34,5 @@ where `Y^I` is a finite scalar normal-form basis and `{\cal O}_\alpha` is a fini
 ## Conditionality
 
 - Status: Proven. The sensitivity side uses analyticity `A5`.
-- Status: Proven. The Wilson side uses locality `A3` and finite admitted family content `A8`.
+- Status: Proven. The Wilson side uses locality `A3` and the sharpened local weight-spectrum condition `A8`.
 - Status: Proven. Therefore the positive finite-family collapse theorem is closed inside the current theorem domain, but its exact assumption-drop failure modes remain `A3`, `A5`, and `A8`.

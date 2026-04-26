@@ -45,6 +45,7 @@ from stateful_counterexample_demo import stateful_counterexample_summary
 from stf_rankL_pattern_check import stf_rank_pattern_summary
 from stf_self_witness_check import stf_self_witness_summary
 from threshold_formula_check import threshold_formula_summary
+from weight_spectrum_demo import weight_spectrum_summary
 from witness_threshold_map import witness_threshold_summary
 from normal_form_reduce import (
     operator_symbols,
@@ -744,6 +745,33 @@ def test_stateful_counterexample_demo() -> None:
     assert "Y-only form" in (dynamic.theorem_layer_first_broken or "")
 
 
+def test_weight_spectrum_demo() -> None:
+    summary = weight_spectrum_summary()
+    assert summary.delta_max == 4
+    assert summary.local_weight_spectrum_finiteness_suffices is True
+    assert summary.a8_stronger_than_necessary is True
+    assert summary.sharp_a8_failure_mode == "infinite_low_weight_stf_tower"
+    cases = {case.case_id: case for case in summary.cases}
+    finite_control = cases["finite_family_catalog_control"]
+    assert finite_control.finite_primitive_family_content is True
+    assert finite_control.locally_finite_below_delta_max is True
+    assert finite_control.candidate_operator_space_finite is True
+    assert finite_control.normal_form_quotient_finite is True
+    assert finite_control.theorem_layer_first_broken is None
+    local_infinite = cases["infinite_but_locally_finite_weight_spectrum"]
+    assert local_infinite.finite_primitive_family_content is False
+    assert local_infinite.locally_finite_below_delta_max is True
+    assert local_infinite.candidate_operator_space_finite is True
+    assert local_infinite.normal_form_quotient_finite is True
+    assert local_infinite.theorem_layer_first_broken is None
+    low_weight = cases["infinite_low_weight_stf_tower"]
+    assert low_weight.finite_primitive_family_content is False
+    assert low_weight.locally_finite_below_delta_max is False
+    assert low_weight.candidate_operator_space_finite is False
+    assert low_weight.normal_form_quotient_finite is False
+    assert "Lemma 53" in (low_weight.theorem_layer_first_broken or "")
+
+
 def test_high_rank_exhaustiveness_audit() -> None:
     rank3 = high_rank_audit_summary(3)
     assert rank3.generated_count == 14
@@ -1120,6 +1148,7 @@ def main() -> None:
     test_nonanalytic_jet_demo()
     test_hereditary_kernel_demo()
     test_stateful_counterexample_demo()
+    test_weight_spectrum_demo()
     test_high_rank_exhaustiveness_audit()
     test_high_rank_diff_report_mentions_eeq()
     test_stf_rank_pattern_summary()

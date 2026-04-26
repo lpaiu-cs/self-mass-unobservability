@@ -2,13 +2,13 @@
 
 ## Statement
 
-- Status: Proven. Fix the counting rule of [`../docs/power-counting.md`](../docs/power-counting.md), a truncation order `\Delta \le \Delta_{\max}`, and finite external field content.
+- Status: Proven. Fix the counting rule of [`../docs/power-counting.md`](../docs/power-counting.md), a truncation order `\Delta \le \Delta_{\max}`, and local weight-spectrum finiteness below the chosen cutoff.
 - Status: Proven. Once a candidate primitive catalog is fixed, the abstract set of parity-even scalar monomials and parity-even higher-rank tensor contractions with total weight `\le \Delta_{\max}` is finite.
 - Status: Proven. This proposition establishes abstract candidate-set finiteness only; it does not establish `normal-form completeness modulo total derivatives and lower-order equations of motion`.
 
 ## Proof Of Abstract Finiteness
 
-1. Status: Proven. Finite external field content gives only finitely many primitive tensor species `X_a`.
+1. Status: Proven. Local weight-spectrum finiteness below `\Delta_{\max}` gives only finitely many primitive tensor species `X_a` that can contribute at the chosen order.
 2. Status: Proven. Positive weights and a fixed cutoff `\Delta_{\max}` imply that only finitely many decorated building blocks `D_\tau^p \nabla^q X_a` satisfy `w(X_a) + p + q \le \Delta_{\max}`.
 3. Status: Proven. Each admissible monomial has exponent vector `n = (n_1, \dots, n_r)` constrained by
 

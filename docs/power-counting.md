@@ -4,7 +4,7 @@
 
 - Status: Proven. The current M2 symbolic enumerator uses a fixed truncation order `\Delta_{\max} = 4`.
 - Status: Conjectural. The same counting rule is intended to scale to higher `\Delta_{\max}`, but only the `\Delta_{\max} = 4` catalog is exercised in code at present.
-- Status: Proven. Let the external field content be a finite set of primitive parity-even tensor species `{\cal F} = \{X_a\}_{a=1}^{r}`.
+- Status: Proven. Let the admitted primitive-family spectrum be locally finite below the fixed cutoff `\Delta_{\max}`: only finitely many primitive parity-even tensor species satisfy `w(X_a) \le \Delta_{\max}`.
 - Status: Proven. Assign each primitive species a positive intrinsic weight `w(X_a) \ge 1`.
 - Status: Proven. Assign `w(D_\tau) = 1` and `w(\nabla) = 1`.
 - Status: Proven. A decorated building block `D_\tau^{p}\nabla^{q}X_a` has weight
@@ -35,6 +35,6 @@ w(X_a) + p + q.
 
 ## What Is Proven Versus Unresolved
 
-- Status: Proven. Fixed order plus finite external field content implies a finite set of decorated primitive building blocks.
+- Status: Proven. Fixed order plus local weight-spectrum finiteness below the cutoff implies a finite set of decorated primitive building blocks.
 - Status: Proven. Positive weights imply a finite set of candidate monomials built from those primitives.
 - Status: Conjectural. The unresolved step is `normal-form completeness modulo total derivatives and lower-order equations of motion` for the chosen `Delta<=4` primitive catalog.

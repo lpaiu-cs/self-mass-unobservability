@@ -3,7 +3,7 @@
 ## Exact M4 Delta<=4 Catalog
 
 - Status: Proven. This document fixes the exact primitive field/operator content used for the `Delta_max = 4` contraction-level exhaustiveness audit.
-- Status: Proven. It is not an extra theorem assumption beyond finite external field content; it is the explicit primitive set whose contraction-level completeness is being checked.
+- Status: Proven. It is not an extra theorem assumption beyond the sharpened local weight-spectrum condition; it is the explicit primitive set whose contraction-level completeness is being checked.
 
 ## Primitive External Field Content
 

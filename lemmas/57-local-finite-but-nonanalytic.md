@@ -15,7 +15,7 @@
 
 1. Status: Proven. The irreducible family-envelope theorem uses only the parity-even nonspinning local tensor decomposition, trace-descendant absorption, and explicit theorem-domain exclusions. It does not use analyticity `A5`.
 2. Status: Proven. Finite admitted primitive-family content is the explicit assumption `A8`. Dropping `A5` does not enlarge the primitive-family catalog.
-3. Status: Proven. [`53-fixed-order-operator-finiteness.md`](53-fixed-order-operator-finiteness.md) uses finite admitted family content, positive operator weights, and fixed `\Delta \le 4`. It does not use analyticity `A5`.
+3. Status: Proven. [`53-fixed-order-operator-finiteness.md`](53-fixed-order-operator-finiteness.md) uses local weight-spectrum finiteness below the cutoff, positive operator weights, and fixed `\Delta \le 4`. It does not use analyticity `A5`.
 4. Status: Proven. [`54-normal-form-basis-closure.md`](54-normal-form-basis-closure.md) identifies the reduced scalar operator space as a finite-dimensional quotient of that already finite candidate space. It also does not use analyticity `A5`.
 5. Status: Proven. Therefore locality and finite operator closure survive the isolated `A5` drop.
 

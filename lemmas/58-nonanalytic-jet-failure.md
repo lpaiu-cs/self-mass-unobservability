@@ -15,7 +15,7 @@ e^{-1/Y^2}, & Y > 0.
 \end{cases}
 ```
 
-- Status: Proven. This model preserves locality, finite admitted family content, fixed-order operator finiteness, and finite scalar normal-form closure.
+- Status: Proven. This model preserves locality, local weight-spectrum finiteness below the cutoff, fixed-order operator finiteness, and finite scalar normal-form closure.
 - Status: Proven. It violates only analyticity `A5`.
 - Status: Proven. Therefore it is the smallest explicit local counterexample to the analytic Taylor-jet step of [`55-monopole-jet-collapse.md`](55-monopole-jet-collapse.md).
 
