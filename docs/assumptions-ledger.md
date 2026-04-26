@@ -118,3 +118,11 @@ This ledger records the active assumptions behind the free-fall sensitivity-coll
 - Status: Proven. Instantaneous analyticity is kept on the local-coordinate side whenever possible; the intended stress point is hereditary memory, not a mixed `A3+A5` escape.
 - Status: Proven. Exponential or finite multi-exponential kernels are not counted as sharp `A3` counterexamples if they are finitely Markovianizable and can be rewritten as finite auxiliary-state extensions.
 - Status: Proven. Genuine hereditary kernel or spectral data are kept separate from higher-multipole Wilson coefficients.
+
+## Explicit Rule For The A4 Boundary Stress Test
+
+- Status: Proven. The `A4` boundary-stress program drops only the no-orbital-timescale-state assumption while keeping locality `A3`, analyticity `A5`, fixed-order truncation `A7`, and finite admitted family content `A8`.
+- Status: Proven. Adiabatically eliminable or algebraically slaved local state variables do not count as sharp `A4` counterexamples, because they collapse back into a `Y`-only monopole model.
+- Status: Proven. The sharp `A4` counterexample must keep finitely many genuinely dynamical local state variables explicit and distinct from the scalar normal-form coordinates `Y^I`.
+- Status: Proven. Explicit local state variables `\chi^a` are not merged with higher-multipole Wilson coefficients.
+- Status: Proven. The surviving positive salvage statement in the finite-state branch is a finite-dimensional local state-space theorem; an additional coefficient-counting truncation in `(Y^I,\chi^a)` is not smuggled in automatically.

@@ -40,3 +40,19 @@
 - Status: Proven. The genuine power-law kernel keeps the finite primitive-family envelope, fixed admitted family content, fixed-order local operator finiteness, and finite scalar normal-form quotient intact.
 - Status: Proven. The first theorem layer it breaks is the reduction of the monopole response to a local function `m_A(Y(\tau))` of finitely many instantaneous normal-form coordinates, so Lemmas 55 and 56 are no longer applicable in their local form.
 - Status: Proven. The replacement bookkeeping is kernel or spectral memory data, not Wilson coefficients.
+
+## A4 Boundary-Stress: Finite Local State-Variable Counterexample Program
+
+- Status: Proven. The former boundary-stress bottleneck `"construct or refute the smallest local finite-state counterexample to the no-state theorem (A4 boundary), and determine whether a finite state-augmented collapse theorem survives"` is now resolved positively by the one-state local analytic model of [`state-variable-counterexample-program.md`](state-variable-counterexample-program.md):
+
+```math
+m_A(Y,\chi)=m_0+\alpha Y+\lambda\chi,
+\qquad
+\dot{\chi}=-(1/T_h)\chi+(\beta/T_h)Y.
+```
+
+- Status: Proven. The adiabatic or slaved control case is not the sharp `A4` escape, because when `\chi` is algebraically or adiabatically eliminable the model collapses back into a `Y`-only monopole description.
+- Status: Proven. The genuinely dynamical one-state branch keeps locality `A3`, analyticity `A5`, finite primitive-family content, fixed-order operator finiteness, and the finite scalar normal-form quotient intact.
+- Status: Proven. The first theorem layer it breaks is the original no-state reduction to a monopole function `m_A(Y)` of instantaneous scalar normal-form coordinates alone; equivalently, Lemma 55 and the Y-only reading of Lemma 56 fail in that branch.
+- Status: Proven. A second positive branch survives: once finitely many local state variables `\chi^a` are kept explicitly, a finite state-augmented collapse theorem survives as a finite-dimensional local state-space statement.
+- Status: Proven. The replacement bookkeeping is finite augmented state-space data `(Y^I,\chi^a)` plus local state-evolution parameters, and it remains separate from higher-multipole Wilson coefficients.

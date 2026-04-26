@@ -41,6 +41,7 @@ from r5_survivor_rank_check import r5_rank_summary
 from r6_sector_delta4 import r6_summary
 from r6_survivor_rank_check import r6_rank_summary
 from shift_scalar_sector_delta4 import shift_scalar_summary
+from stateful_counterexample_demo import stateful_counterexample_summary
 from stf_rankL_pattern_check import stf_rank_pattern_summary
 from stf_self_witness_check import stf_self_witness_summary
 from threshold_formula_check import threshold_formula_summary
@@ -713,6 +714,36 @@ def test_hereditary_kernel_demo() -> None:
     assert "Lemmas 55 and 56" in (power_law.theorem_layer_first_broken or "")
 
 
+def test_stateful_counterexample_demo() -> None:
+    summary = stateful_counterexample_summary()
+    assert summary.delta_max == 4
+    assert summary.locality_kept_in_all_cases is True
+    assert summary.analyticity_kept_in_all_cases is True
+    assert summary.finite_primitive_family_envelope_kept_in_all_cases is True
+    assert summary.smallest_local_finite_state_counterexample == "dynamical_one_state_chi"
+    assert "A4" in summary.broken_layer
+    assert summary.finite_state_augmented_collapse_survives is True
+    cases = {case.case_id: case for case in summary.cases}
+    local_control = cases["local_analytic_no_state_control"]
+    assert local_control.y_only_finite_jet_valid is True
+    assert local_control.finite_state_augmented_bookkeeping_valid is True
+    assert local_control.theorem_layer_first_broken is None
+    assert local_control.same_point_response_difference == 0.0
+    slaved = cases["adiabatic_slaved_local_state"]
+    assert slaved.y_only_finite_jet_valid is True
+    assert slaved.finite_state_augmented_bookkeeping_valid is True
+    assert slaved.theorem_layer_first_broken is None
+    assert slaved.same_point_response_difference == 0.0
+    dynamic = cases["dynamical_one_state_chi"]
+    assert dynamic.locality_kept is True
+    assert dynamic.analyticity_kept is True
+    assert dynamic.y_only_finite_jet_valid is False
+    assert dynamic.finite_state_augmented_bookkeeping_valid is True
+    assert dynamic.canonical_counterexample is True
+    assert dynamic.same_point_response_difference > 0.0
+    assert "Y-only form" in (dynamic.theorem_layer_first_broken or "")
+
+
 def test_high_rank_exhaustiveness_audit() -> None:
     rank3 = high_rank_audit_summary(3)
     assert rank3.generated_count == 14
@@ -1088,6 +1119,7 @@ def main() -> None:
     test_fixed_family_operator_count_summary()
     test_nonanalytic_jet_demo()
     test_hereditary_kernel_demo()
+    test_stateful_counterexample_demo()
     test_high_rank_exhaustiveness_audit()
     test_high_rank_diff_report_mentions_eeq()
     test_stf_rank_pattern_summary()

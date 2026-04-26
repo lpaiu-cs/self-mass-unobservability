@@ -2,7 +2,7 @@
 
 ## Minimal Action
 
-- Status: Counterexample candidate. Introduce one explicit orbital-timescale internal coordinate `\chi_A(\tau)` with inertial scale `\mu_\chi`:
+- Status: Proven. Introduce one explicit orbital-timescale internal coordinate `\chi_A(\tau)` with inertial scale `\mu_\chi`:
 
 ```math
 S_A
@@ -15,18 +15,18 @@ S_A
 \right].
 ```
 
-- Status: Counterexample candidate. The action remains local and analytic in the fields kept explicitly.
-- Status: Counterexample candidate. The only directly violated theorem assumption is A4: no orbital-timescale internal state variable.
+- Status: Proven. The action remains local and analytic in the fields kept explicitly.
+- Status: Proven. The only directly violated theorem assumption is A4: no orbital-timescale internal state variable.
 
 ## Explicit Dynamics
 
-- Status: Counterexample candidate. The Euler-Lagrange equation is
+- Status: Proven. The Euler-Lagrange equation is
 
 ```math
 \ddot{\chi}_A + \omega_\chi^2 \chi_A = \frac{g_\chi}{\mu_\chi} Y(z_A).
 ```
 
-- Status: Counterexample candidate. The formal solution is
+- Status: Proven. The formal solution is
 
 ```math
 \chi_A
@@ -35,18 +35,18 @@ S_A
 + \frac{g_\chi}{\mu_\chi}\left(\omega_\chi^2 + D_\tau^2\right)^{-1} Y.
 ```
 
-- Status: Counterexample candidate. The homogeneous piece `\chi_{A,\mathrm{hom}}` carries independent initial data.
-- Status: Counterexample candidate. The free-fall response therefore depends on more than the instantaneous local invariant `Y`; it depends on the extra state and its initial conditions.
+- Status: Proven. The homogeneous piece `\chi_{A,\mathrm{hom}}` carries independent initial data.
+- Status: Proven. The free-fall response therefore depends on more than the instantaneous local invariant `Y`; it depends on the extra state and its initial conditions.
 
 ## Why This Escapes Instantaneous Sensitivity Collapse
 
-- Status: Counterexample candidate. When `\omega_\chi \sim \Omega_{\rm orb}`, the resolvent `(\omega_\chi^2 + D_\tau^2)^{-1}` is not reducible to a short local derivative expansion over the orbital timescale.
-- Status: Counterexample candidate. In that regime the effective monopole response is not an algebraic function of finitely many instantaneous sensitivity coordinates.
-- Status: Counterexample candidate. This is a genuine loophole to the theorem candidate if A4 is false, even though locality and analyticity remain intact.
+- Status: Proven. When `\omega_\chi \sim \Omega_{\rm orb}`, the resolvent `(\omega_\chi^2 + D_\tau^2)^{-1}` is not reducible to a short local derivative expansion over the orbital timescale.
+- Status: Proven. In that regime the effective monopole response is not an algebraic function of finitely many instantaneous sensitivity coordinates.
+- Status: Proven. This is a genuine loophole to the original no-state theorem if A4 is false, even though locality and analyticity remain intact.
 
 ## Adiabatic-Collapse Limit
 
-- Status: Counterexample candidate. If `\omega_\chi \gg \Omega_{\rm orb}` and the homogeneous mode is absent or decays, then
+- Status: Proven. If `\omega_\chi \gg \Omega_{\rm orb}` and the homogeneous mode is absent or decays, then
 
 ```math
 \chi_A
@@ -58,7 +58,7 @@ S_A
 \right] Y.
 ```
 
-- Status: Counterexample candidate. Substituting back gives a local expansion of the form
+- Status: Proven. Substituting back gives a local expansion of the form
 
 ```math
 \Delta L_{\rm eff}
@@ -70,21 +70,27 @@ S_A
 
 up to total derivatives.
 
-- Status: Counterexample candidate. In this heavy-state limit the loophole collapses back into ordinary local sensitivity and Wilson-coefficient data.
-- Status: Counterexample candidate. The `chi` loophole is therefore minimal in a precise sense: it fails only when the extra state survives on the orbital timescale.
+- Status: Proven. In this heavy-state limit the loophole collapses back into ordinary local sensitivity and Wilson-coefficient data.
+- Status: Proven. The `chi` loophole is therefore minimal in a precise sense: it fails only when the extra state survives on the orbital timescale.
 
 ## Explicit Boundary Between Collapse And Non-Collapse
 
-- Status: Counterexample candidate. Define the adiabatic parameter
+- Status: Proven. Define the adiabatic parameter
 
 ```math
 \varepsilon_\chi := \frac{\Omega_{\rm orb}}{\omega_\chi}.
 ```
 
-- Status: Counterexample candidate. `adiabatic-collapse` requires both `\varepsilon_\chi \ll 1` and absence or decay of the homogeneous mode `\chi_{A,\mathrm{hom}}`.
-- Status: Counterexample candidate. `non-collapse` occurs whenever either `\varepsilon_\chi = O(1)` or larger, or the homogeneous mode survives with independent initial data.
-- Status: Counterexample candidate. The theorem-relevant boundary is therefore not vague heaviness; it is the explicit failure or success of `\varepsilon_\chi \ll 1` plus homogeneous-mode suppression.
+- Status: Proven. `adiabatic-collapse` requires both `\varepsilon_\chi \ll 1` and absence or decay of the homogeneous mode `\chi_{A,\mathrm{hom}}`.
+- Status: Proven. `non-collapse` occurs whenever either `\varepsilon_\chi = O(1)` or larger, or the homogeneous mode survives with independent initial data.
+- Status: Proven. The theorem-relevant boundary is therefore not vague heaviness; it is the explicit failure or success of `\varepsilon_\chi \ll 1` plus homogeneous-mode suppression.
 
 ## Smallest-Model Reason
 
-- Status: Counterexample candidate. Only one new degree of freedom is added, and the rest of the worldline EFT remains local and analytic.
+- Status: Proven. Only one new degree of freedom is added, and the rest of the worldline EFT remains local and analytic.
+
+## Current Boundary Verdict
+
+- Status: Proven. The smallest explicit local finite-state counterexample to the no-state theorem is this one-state analytic `\chi_A` model.
+- Status: Proven. It breaks the original Y-only theorem, not locality or analyticity.
+- Status: Proven. A finite state-augmented collapse theorem nevertheless survives once `\chi_A` is kept explicitly as part of the local state-space bookkeeping.

@@ -158,7 +158,11 @@
 - Status: Proven. The former boundary-stress bottleneck `"construct or refute the smallest genuinely hereditary counterexample to the local finite-family collapse theorem (A3 boundary)"` is now resolved positively by the one-coordinate causal power-law kernel model.
 - Status: Proven. The exponential-memory control is not the sharp `A3` escape because it collapses into a finite auxiliary-state `A4`-type extension.
 - Status: Proven. The exact broken layer for the genuine hereditary branch is the reduction of the monopole response to a local function `m_A(Y(\tau))`; therefore Lemmas 55 and 56 no longer apply in the local theorem form.
-- Status: Counterexample candidate. The remaining explicit risks are now explicit assumption-drop or domain-escape failures: nonanalytic monopole dependence at `A5`, genuinely hereditary nonlocal monopole dependence at `A3`, failure of finite admitted family content at `A8`, or escape beyond the present theorem domain.
+- Status: Proven. The former boundary-stress bottleneck `"construct or refute the smallest local finite-state counterexample to the no-state theorem (A4 boundary), and determine whether a finite state-augmented collapse theorem survives"` is now resolved positively by the one-state local analytic `\chi` model of [`state-variable-counterexample-program.md`](state-variable-counterexample-program.md).
+- Status: Proven. The exact broken layer in that genuinely dynamical local-state branch is the original no-state reduction to `m_A(Y)` alone; Lemma 55 fails in Y-only form, and Lemma 56 fails in Y-only form as well.
+- Status: Proven. The adiabatic or slaved local-state control does not count as the sharp `A4` escape, because it is eliminable back into a `Y`-only monopole model.
+- Status: Proven. A second positive branch survives beyond the original theorem: once finitely many local state variables `\chi^a` are kept explicitly, a finite state-augmented collapse theorem survives as a finite-dimensional local state-space statement with state data kept separate from Wilson coefficients.
+- Status: Counterexample candidate. The remaining explicit risks are now explicit assumption-drop or domain-escape failures: nonanalytic monopole dependence at `A5`, genuinely hereditary nonlocal monopole dependence at `A3`, failure of finite admitted family content at `A8`, mixed `A4+A5` or `A3+A4` escape beyond the sharp one-state local branch, or escape beyond the present theorem domain.
 
 ## Dependencies
 
@@ -217,6 +221,11 @@
 - Status: Proven. [`../lemmas/61-markovianizable-vs-genuine-hereditary.md`](../lemmas/61-markovianizable-vs-genuine-hereditary.md)
 - Status: Proven. [`../lemmas/62-hereditary-collapse-failure.md`](../lemmas/62-hereditary-collapse-failure.md)
 - Status: Proven. [`../lemmas/63-hereditary-replacement-bookkeeping.md`](../lemmas/63-hereditary-replacement-bookkeeping.md)
+- Status: Proven. [`../lemmas/64-local-finite-state-construction.md`](../lemmas/64-local-finite-state-construction.md)
+- Status: Proven. [`../lemmas/65-adiabatic-vs-dynamical-state-boundary.md`](../lemmas/65-adiabatic-vs-dynamical-state-boundary.md)
+- Status: Proven. [`../lemmas/66-a4-collapse-failure.md`](../lemmas/66-a4-collapse-failure.md)
+- Status: Proven. [`../lemmas/67-state-augmented-collapse.md`](../lemmas/67-state-augmented-collapse.md)
+- Status: Proven. [`../lemmas/68-state-vs-wilson-split.md`](../lemmas/68-state-vs-wilson-split.md)
 - Status: Conjectural. [`conditional-collapse-lemma.md`](conditional-collapse-lemma.md)
 - Status: Conjectural. [`eb-conditional-collapse.md`](eb-conditional-collapse.md)
 - Status: Proven. [`finite-family-collapse-theorem.md`](finite-family-collapse-theorem.md)
@@ -259,6 +268,7 @@
 - Status: Proven. [`../symbolic/fixed_family_operator_count.py`](../symbolic/fixed_family_operator_count.py)
 - Status: Proven. [`../symbolic/hereditary_kernel_demo.py`](../symbolic/hereditary_kernel_demo.py)
 - Status: Proven. [`../symbolic/nonanalytic_jet_demo.py`](../symbolic/nonanalytic_jet_demo.py)
+- Status: Proven. [`../symbolic/stateful_counterexample_demo.py`](../symbolic/stateful_counterexample_demo.py)
 - Status: Proven. [`../symbolic/r1_sector_delta4.py`](../symbolic/r1_sector_delta4.py)
 - Status: Proven. [`../symbolic/r1_survivor_rank_check.py`](../symbolic/r1_survivor_rank_check.py)
 - Status: Proven. [`../symbolic/r3_sector_delta4.py`](../symbolic/r3_sector_delta4.py)
@@ -273,7 +283,7 @@
 
 ## Failure Triggers
 
-- Status: Counterexample candidate. An explicit `chi_A` state invalidates the no-state reduction step.
+- Status: Proven. An explicit orbital-timescale `chi_A` state invalidates the original no-state reduction step; the canonical one-state local analytic model in [`state-variable-counterexample-program.md`](state-variable-counterexample-program.md) now realizes this trigger explicitly.
 - Status: Counterexample candidate. Nonanalytic activation invalidates the analytic collapse step.
 - Status: Counterexample candidate. Genuinely hereditary kernels invalidate the reduction of the monopole response to a local function of the instantaneous normal-form coordinates even when the local operator basis is already finite.
 - Status: Counterexample candidate. Infinite or uncontrolled external field content invalidates the fixed-order closure theorem candidate.

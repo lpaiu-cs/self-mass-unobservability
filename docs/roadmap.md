@@ -185,6 +185,16 @@ Status: Conjectural. The repository roadmap is organized around theorem progress
 | M18.4 | Proven | [`../lemmas/62-hereditary-collapse-failure.md`](../lemmas/62-hereditary-collapse-failure.md) | The first exact theorem layer broken by the genuine hereditary branch is isolated sharply. |
 | M18.5 | Proven | [`../lemmas/63-hereditary-replacement-bookkeeping.md`](../lemmas/63-hereditary-replacement-bookkeeping.md), [`hereditary-model-table.md`](hereditary-model-table.md), and [`../symbolic/hereditary_kernel_demo.py`](../symbolic/hereditary_kernel_demo.py) | Replacement hereditary bookkeeping is separated from Wilson data and the boundary is recorded uniformly across theorem and failure layers. |
 
+## M19: Finite Local State `A4` Boundary Stress
+
+| Item | Status | Deliverable | Exit condition |
+| --- | --- | --- | --- |
+| M19.1 | Proven | [`state-variable-counterexample-program.md`](state-variable-counterexample-program.md) | The `A4` counterexample target is separated from the closed no-state theorem, the genuine hereditary `A3` branch, and the local nonanalytic `A5` branch. |
+| M19.2 | Proven | [`../lemmas/64-local-finite-state-construction.md`](../lemmas/64-local-finite-state-construction.md) | Adiabatic/slaved and genuinely dynamical one-state local models are written explicitly at fixed primitive-family content. |
+| M19.3 | Proven | [`../lemmas/65-adiabatic-vs-dynamical-state-boundary.md`](../lemmas/65-adiabatic-vs-dynamical-state-boundary.md) | The sharp boundary between eliminable and genuinely orbital-timescale local state variables is recorded explicitly. |
+| M19.4 | Proven | [`../lemmas/66-a4-collapse-failure.md`](../lemmas/66-a4-collapse-failure.md) | The first exact theorem layer broken by the genuine local-state branch is isolated sharply. |
+| M19.5 | Proven | [`../lemmas/67-state-augmented-collapse.md`](../lemmas/67-state-augmented-collapse.md), [`../lemmas/68-state-vs-wilson-split.md`](../lemmas/68-state-vs-wilson-split.md), [`stateful-model-table.md`](stateful-model-table.md), and [`../symbolic/stateful_counterexample_demo.py`](../symbolic/stateful_counterexample_demo.py) | The finite state-augmented positive salvage theorem is separated from the original no-state theorem and from Wilson bookkeeping. |
+
 ## Near-Term Sequence
 
 1. Status: Proven. The enlarged audited-set composition question is now closed positively for the audited family classes `{R2, R0a, R0b, R1}`.
@@ -201,8 +211,11 @@ Status: Conjectural. The repository roadmap is organized around theorem progress
 12. Status: Proven. The positive finite-family fixed-order collapse bridge is now closed inside the current parity-even nonspinning local MVP free-fall theorem domain.
 13. Status: Proven. The first explicit `A5` boundary stress test now succeeds: the one-coordinate smooth flat monopole model breaks analytic jet collapse while leaving locality and finite operator closure intact.
 14. Status: Proven. The first explicit genuine `A3` boundary stress test now succeeds: the one-coordinate power-law hereditary kernel breaks local monopole reduction while leaving the primitive-family envelope and fixed-order local operator closure intact.
-15. Status: Counterexample candidate. The remaining explicit failure modes are now documented rather than hidden: broader `A3` hereditary branches beyond the minimal power-law model, broader `A5` nonanalytic monopole classes beyond the smooth-flat model, `A7/A8` failure of fixed-order finiteness, or theorem-domain escape beyond the present envelope.
-16. Status: Conjectural. Revisit the scalar `s_A` corollary only after deciding whether to weaken the current theorem-domain assumptions or extend the theorem beyond the present domain.
+15. Status: Proven. The first explicit `A4` boundary stress test now succeeds: the one-state local analytic `\chi` model breaks the original Y-only no-state theorem while preserving locality, analyticity, finite primitive-family content, and fixed-order operator closure.
+16. Status: Proven. The adiabatic or slaved local-state control is not the sharp `A4` escape, because it eliminates back into the original `Y`-only bookkeeping.
+17. Status: Proven. A second positive branch now survives beyond the original theorem: finite local state-augmented collapse with explicit `(Y^I,\chi^a)` state-space data and a separate Wilson sector.
+18. Status: Counterexample candidate. The remaining explicit failure modes are now documented rather than hidden: broader `A3` hereditary branches beyond the minimal power-law model, broader `A5` nonanalytic monopole classes beyond the smooth-flat model, mixed `A4+A5` or `A3+A4` state-memory escapes beyond the sharp one-state local branch, `A7/A8` failure of fixed-order finiteness, or theorem-domain escape beyond the present envelope.
+19. Status: Conjectural. Revisit the scalar `s_A` corollary only after deciding whether to weaken the current theorem-domain assumptions or extend the theorem beyond the present domain.
 
 ## Explicit Non-Goals For M1
 
