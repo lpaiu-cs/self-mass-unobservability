@@ -2,6 +2,8 @@
 
 - Status: Proven. This is the authoritative front-door theorem document for the free-fall theorem repo.
 - Status: Proven. It is paper-facing, non-historical, and limited to the currently closed theorem and counterexample statements already established in the repository.
+- Status: Proven. The mathematical content of this repository is now frozen unless a direct contradiction is found during cleanup or later review.
+- Status: Proven. Further work belongs to empirical branches, runtime branches, or paper writing rather than new theorem expansion inside this repo.
 
 ## Theorem Domain
 

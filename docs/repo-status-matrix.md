@@ -6,10 +6,15 @@
 | --- | --- | --- |
 | [`README.md`](../README.md) | Main theorem | Root landing page that should route only to the authoritative package entry points. |
 | [`theorem-package.md`](theorem-package.md) | Main theorem | Authoritative paper-facing theorem and counterexample summary. |
+| [`release-note.md`](release-note.md) | Main theorem | Compact publication and handoff summary for the frozen package. |
+| [`paper-outline.md`](paper-outline.md) | Main theorem | Converts the repo into a paper structure rather than a milestone log. |
 | [`theorem-A-freefall.md`](theorem-A-freefall.md) | Main theorem | Compressed technical backbone of the free-fall theorem package. |
 | [`boundary-escape-map.md`](boundary-escape-map.md) | Boundary theorem / counterexample | Authoritative map of exact assumption-drop escapes. |
-| [`paper-outline.md`](paper-outline.md) | Main theorem | Converts the repo into a paper structure rather than a milestone log. |
-| [`repo-status-matrix.md`](repo-status-matrix.md) | Main theorem | Declares file roles so the package has a stable document hierarchy. |
+| [`repo-status-matrix.md`](repo-status-matrix.md) | Supporting lemma | Declares file roles so the package has a stable document hierarchy. |
+| [`reproducibility-note.md`](reproducibility-note.md) | Supporting lemma | Records the reliable smoke-test path and the current monolithic-runner timeout status. |
+| [`theorem-dependency-map.md`](theorem-dependency-map.md) | Supporting lemma | Compact dependency graph from theorem assumptions to positive closure and boundary escapes. |
+| [`paper-claims-vs-nonclaims.md`](paper-claims-vs-nonclaims.md) | Supporting lemma | Prevents later overstatement by separating proved claims from classifications, non-claims, and empirical questions. |
+| [`archive-freeze-note.md`](archive-freeze-note.md) | Supporting lemma | Summarizes the final authoritative, supporting, historical, and bookkeeping file tiers. |
 | [`archive-index.md`](archive-index.md) | Supporting lemma | Records which notes are authoritative, archived, or quarantined as bookkeeping. |
 | [`legacy-note-policy.md`](legacy-note-policy.md) | Supporting lemma | Defines the classification rule that prevents raw or historical notes from being mistaken for theorem statements. |
 | [`finite-family-collapse-theorem.md`](finite-family-collapse-theorem.md) | Supporting lemma | Detailed positive theorem note behind the package-level statement. |
@@ -43,6 +48,7 @@
 | [`eb-conditional-collapse.md`](eb-conditional-collapse.md) | Historical / superseded | Earlier exact-current-set conditional note retained for provenance only. |
 | [`stf-tower-theorem.md`](stf-tower-theorem.md) | Historical / superseded | Failed stronger mixed-pattern STF theorem retained because the failure itself is scientifically relevant. |
 | [`family-envelope-theorem.md`](family-envelope-theorem.md) | Historical / superseded | Earlier gateway note superseded by the irreducible-envelope closure and theorem package front door. |
-| [`roadmap.md`](roadmap.md) | Historical / superseded | Milestone chronology retained for provenance, not for front-door navigation. |
+| [`roadmap.md`](roadmap.md) | Supporting lemma | Frozen closeout routing note that redirects future work away from theorem expansion inside this repo. |
 | [`archive/failure-ledger-history.md`](archive/failure-ledger-history.md) | Historical / superseded | Snapshot of the older milestone-style failure ledger kept to preserve provenance. |
 | [`archive/theorem-A-freefall-history.md`](archive/theorem-A-freefall-history.md) | Historical / superseded | Snapshot of the longer exploratory theorem-A notebook kept to preserve provenance. |
+| [`archive/roadmap-history.md`](archive/roadmap-history.md) | Historical / superseded | Snapshot of the full milestone chronology kept after the public roadmap was frozen into a closeout note. |
