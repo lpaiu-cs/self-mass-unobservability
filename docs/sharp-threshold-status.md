@@ -30,4 +30,5 @@
 - Status: Proven. No audited family class currently exhibits a mixed witness below its first self witness at `\Delta \le 4`.
 - Status: Proven. The sharp-threshold classification bottleneck is closed for the currently audited family classes.
 - Status: Proven. The former repo-level live bottleneck `"prove or refute irreducible family-envelope closure beyond the audited scalar/vector/STF classes"` is now resolved positively.
-- Status: Conjectural. What remains open is not witness sharpness inside the currently audited classes, but the positive finite-family collapse theorem once the irreducible scalar/vector/STF envelope is fixed.
+- Status: Proven. The former live bottleneck `"prove or refute the positive finite-family collapse theorem once the irreducible scalar/vector/STF envelope is fixed"` is now resolved positively.
+- Status: Proven. What remains explicit after sharp-threshold closure is only the theorem-domain and assumption-drop risk bookkeeping, not another witness-threshold bridge step.

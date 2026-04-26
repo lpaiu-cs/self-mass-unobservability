@@ -24,4 +24,5 @@
 - Status: Proven. The threshold-class column explains whether the current budget is self-only, mixed-aware, or tied-sharp.
 - Status: Proven. The composition columns now close for the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+, Rodd5+, Reven6+}`.
 - Status: Proven. The irreducible family-envelope theorem now closes on the audited scalar/vector/STF classes within the current theorem domain.
-- Status: Conjectural. The next mainline bottleneck is the positive finite-family collapse theorem once the irreducible scalar/vector/STF envelope is fixed.
+- Status: Proven. The former live bottleneck `"prove or refute the positive finite-family collapse theorem once the irreducible scalar/vector/STF envelope is fixed"` is now resolved positively.
+- Status: Proven. This threshold table now feeds a closed positive finite-family fixed-order collapse theorem rather than a still-open bridge question inside the current theorem domain.

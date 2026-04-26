@@ -97,3 +97,11 @@ This ledger records the active assumptions behind the free-fall sensitivity-coll
 - Status: Proven. Trace descendants are not counted as new primitive-family admissions once their lower-rank scalar/vector/STF outputs are already present in the audited catalog.
 - Status: Proven. Epsilon-dual pseudo sectors are excluded from the current theorem domain by the parity-even nonspinning assumption `A2`.
 - Status: Proven. Even-dual mixed-symmetry sectors are reduced to ordinary lower-rank tensors and then decomposed again into STF plus trace-descendant pieces rather than counted as new primitive families.
+
+## Explicit Rule For The Positive Collapse Bridge
+
+- Status: Proven. The scalar normal-form coordinates `Y^I` refer only to the reduced parity-even scalar operator basis at fixed order; they are not a placeholder for higher-multipole Wilson data.
+- Status: Proven. The higher-multipole Wilson coefficients `C_{A,\alpha}` remain separate from the monopole sensitivity jet and are not merged into the same coefficient family.
+- Status: Proven. Fixed-order operator finiteness uses `A7` and `A8` together with positive intrinsic weights; it does not use analyticity `A5`.
+- Status: Proven. Monopole jet collapse uses analyticity `A5` only after the finite scalar normal-form basis `Y^I` has already been established.
+- Status: Proven. The sensitivity/Wilson split uses locality `A3` and finite admitted family content `A8`; it is not being smuggled in as an automatic consequence of family-envelope closure alone.

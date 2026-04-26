@@ -155,6 +155,16 @@ Status: Conjectural. The repository roadmap is organized around theorem progress
 | M15.5 | Proven | [`../lemmas/39-rank5-threshold-formula.md`](../lemmas/39-rank5-threshold-formula.md) | The rank-5 family threshold is classified as self-only, mixed-aware, or tied-sharp. |
 | M15.6 | Proven | [`family-envelope-table.md`](family-envelope-table.md), [`theorem-A-freefall.md`](theorem-A-freefall.md), and [`failure-ledger.md`](failure-ledger.md) | The `Rodd5+` row is resolved explicitly and the post-audit live bottleneck is stated uniformly. |
 
+## M16: Positive Finite-Family Collapse Bridge
+
+| Item | Status | Deliverable | Exit condition |
+| --- | --- | --- | --- |
+| M16.1 | Proven | [`finite-family-collapse-theorem.md`](finite-family-collapse-theorem.md) | The positive bridge target is stated explicitly and separated from both minimal-sector uniqueness and irreducible-envelope closure. |
+| M16.2 | Proven | [`../lemmas/53-fixed-order-operator-finiteness.md`](../lemmas/53-fixed-order-operator-finiteness.md) and [`../symbolic/fixed_family_operator_count.py`](../symbolic/fixed_family_operator_count.py) | Fixed-order candidate operator-space finiteness is closed explicitly once finite admitted family content is fixed. |
+| M16.3 | Proven | [`../lemmas/54-normal-form-basis-closure.md`](../lemmas/54-normal-form-basis-closure.md) | The reduced scalar operator quotient is shown finite-dimensional under the explicit reduction rules. |
+| M16.4 | Proven | [`../lemmas/55-monopole-jet-collapse.md`](../lemmas/55-monopole-jet-collapse.md) and [`../lemmas/56-sensitivity-vs-wilson-split.md`](../lemmas/56-sensitivity-vs-wilson-split.md) | The finite monopole jet and the sensitivity-versus-Wilson split are closed sharply inside the current theorem domain. |
+| M16.5 | Proven | [`collapse-bridge-status.md`](collapse-bridge-status.md), [`theorem-A-freefall.md`](theorem-A-freefall.md), and [`failure-ledger.md`](failure-ledger.md) | The former positive-branch bottleneck is recorded as resolved positively, with only explicit assumption-drop or domain-escape risks left. |
+
 ## Near-Term Sequence
 
 1. Status: Proven. The enlarged audited-set composition question is now closed positively for the audited family classes `{R2, R0a, R0b, R1}`.
@@ -168,9 +178,9 @@ Status: Conjectural. The repository roadmap is organized around theorem progress
 9. Status: Proven. The audited rank-6 result supports the interpretation that rank `L = 4` is an isolated even-rank exception inside the audited STF sector rather than the first confirmed member of a broader audited even-rank `EEY` pattern.
 10. Status: Proven. Audited-set composition is now re-closed for the further enlarged family set that includes `Reven6+`.
 11. Status: Proven. The rank-by-rank STF march is now superseded by the irreducible family-envelope theorem inside the current theorem domain.
-12. Status: Conjectural. The next mainline task is the positive finite-family fixed-order collapse theorem once the irreducible scalar/vector/STF envelope is fixed.
-13. Status: Counterexample candidate. Promote the dominant loophole class only if it produces a genuine failure of the corrected finite-family collapse candidate rather than only another uniqueness obstruction.
-14. Status: Conjectural. Revisit the scalar `s_A` corollary only after the higher-dimensional sensitivity manifold statement is sharp.
+12. Status: Proven. The positive finite-family fixed-order collapse bridge is now closed inside the current parity-even nonspinning local MVP free-fall theorem domain.
+13. Status: Counterexample candidate. The remaining explicit failure modes are now ordered as `A7/A8` failure of fixed-order finiteness, `A5` failure of analytic monopole dependence, `A3` failure of the sensitivity/Wilson split, or escape beyond the present theorem domain.
+14. Status: Conjectural. Revisit the scalar `s_A` corollary only after deciding whether to weaken the current theorem-domain assumptions or extend the theorem beyond the present domain.
 
 ## Explicit Non-Goals For M1
 

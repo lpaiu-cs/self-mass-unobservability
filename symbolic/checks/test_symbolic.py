@@ -21,6 +21,7 @@ from es_sector_delta4 import es_summary
 from es_survivor_rank_check import es_rank_summary
 from family_envelope_census import family_envelope_summary
 from family_witness_map import family_witness_summary
+from fixed_family_operator_count import fixed_family_operator_count_summary
 from high_rank_diff_report import high_rank_diff_report
 from high_rank_family_enumerator import high_rank_audit_summary
 from irrep_family_census import irrep_family_summary
@@ -615,6 +616,43 @@ def test_irrep_family_census() -> None:
     assert entries["PseudoOdd"].resolution_state == "excluded by parity/nonspin assumptions"
 
 
+def test_fixed_family_operator_count_summary() -> None:
+    summary = fixed_family_operator_count_summary()
+    assert summary.delta_max == 4
+    assert summary.theorem_domain_classes == ("Scalar", "Vector", "STF2", "STFge3")
+    assert summary.baseline_sector == "electric parity-even free-fall scalar sector"
+    assert summary.envelope_closed is True
+    assert summary.candidate_operator_space_finite is True
+    assert summary.reduced_operator_space_finite is True
+    assert summary.reduction_layers_applied == (
+        "irreducible family-envelope closure",
+        "trace-descendant absorption",
+        "total derivatives",
+        "lower-order EOM",
+        "explicit algebraic identities",
+        "sector-specific linear-dependence quotient when present",
+    )
+    entries = {entry.catalog_id: entry for entry in summary.entries}
+    assert entries["electric_exact_current_set"].candidate_operator_count == 21
+    assert entries["electric_exact_current_set"].reduced_operator_count == 7
+    assert entries["rank2_stf_special_case"].candidate_operator_count == 42
+    assert entries["rank2_stf_special_case"].reduced_operator_count == 18
+    assert entries["scalar_bare_source_extension"].candidate_operator_count == 72
+    assert entries["scalar_bare_source_extension"].reduced_operator_count == 33
+    assert entries["scalar_derivative_only_extension"].candidate_operator_count == 52
+    assert entries["scalar_derivative_only_extension"].reduced_operator_count == 23
+    assert entries["vector_representative_sector"].candidate_operator_count == 39
+    assert entries["vector_representative_sector"].reduced_operator_count == 17
+    assert entries["stf_rank3_representative_sector"].candidate_operator_count == 43
+    assert entries["stf_rank3_representative_sector"].reduced_operator_count == 19
+    assert entries["stf_rank4_representative_sector"].candidate_operator_count == 44
+    assert entries["stf_rank4_representative_sector"].reduced_operator_count == 19
+    assert entries["stf_rank5_representative_sector"].candidate_operator_count == 45
+    assert entries["stf_rank5_representative_sector"].reduced_operator_count == 19
+    assert entries["stf_rank6_representative_sector"].candidate_operator_count == 43
+    assert entries["stf_rank6_representative_sector"].reduced_operator_count == 23
+
+
 def test_high_rank_exhaustiveness_audit() -> None:
     rank3 = high_rank_audit_summary(3)
     assert rank3.generated_count == 14
@@ -987,6 +1025,7 @@ def main() -> None:
     test_composition_attack_delta4()
     test_family_envelope_census()
     test_irrep_family_census()
+    test_fixed_family_operator_count_summary()
     test_high_rank_exhaustiveness_audit()
     test_high_rank_diff_report_mentions_eeq()
     test_stf_rank_pattern_summary()

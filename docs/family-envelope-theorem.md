@@ -25,10 +25,10 @@
 ## Consequence
 
 - Status: Proven. The old pointer to `Rodd7+` is superseded; the rank-by-rank STF march is no longer the mainline path.
-- Status: Conjectural. The positive branch now returns to the finite-family fixed-order collapse theorem with the irreducible family envelope fixed.
+- Status: Proven. With the irreducible family envelope fixed, the positive branch now closes on the finite-family fixed-order collapse theorem inside the current theorem domain.
 
 ## Boundary
 
 - Status: Proven. This note is class-limited to the currently stated MVP assumptions.
 - Status: Proven. It does not claim anything about parity-odd, spinning, nonlocal, or internal-state loophole sectors.
-- Status: Proven. It does not say that the positive finite-family fixed-order collapse branch is already proved.
+- Status: Proven. This note does not itself prove the positive collapse branch; that proof is now recorded separately in [`finite-family-collapse-theorem.md`](finite-family-collapse-theorem.md) and [`collapse-bridge-status.md`](collapse-bridge-status.md).

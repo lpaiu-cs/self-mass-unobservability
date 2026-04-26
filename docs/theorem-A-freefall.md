@@ -1,14 +1,22 @@
 # Theorem A Candidate: Free-Fall Fixed-Order Collapse
 
-## Main Positive Target: Finite-Family Fixed-Order Collapse Candidate
+## Main Positive Target: Finite-Family Fixed-Order Collapse Theorem
 
-- Status: Conjectural. Work in the free-fall MVP sector only: nonspinning, nearly spherical, parity-even, local worldline EFT, fixed truncation order `\Delta \le 4`, and finite admitted external field content.
-- Status: Conjectural. Assume the body is quasi-static, self-bound in equilibrium, and carries no orbital-timescale internal state variable in the free-fall sector.
-- Status: Conjectural. Assume couplings to the admitted external-family catalog are analytic once the local operator space has been reduced to normal form at fixed order.
-- Status: Imported from prior work. Exclude literal internal self-unobservability as an equilibrium mechanism.
-- Status: Imported from prior work. Exclude COM self-subtraction as a source of a new monopole force.
-- Status: Conjectural. Then, for an explicit finite admitted primitive-family catalog, the admissible local free-fall scalar operator space should collapse to a finite family-conditioned normal form modulo the explicitly stated total-derivative, lower-order-EOM, and algebraic reduction rules.
-- Status: Conjectural. Consequently, by the relevant conditional collapse lemma, the leading body-dependent free-fall deviation should collapse to finitely many sensitivity coordinates plus finitely many higher-multipole Wilson coefficients for that admitted family catalog.
+- Status: Proven. Work in the free-fall MVP sector only: nonspinning, nearly spherical, parity-even, local worldline EFT, fixed truncation order `\Delta \le 4`, and finite admitted external field content.
+- Status: Proven. Within that theorem domain, the irreducible primitive-family envelope is already closed on the audited scalar/vector/STF classes.
+- Status: Proven. For any explicit finite admitted primitive-family catalog drawn from that closed envelope, the candidate parity-even local free-fall scalar operator space at `\Delta \le 4` is finite before reduction.
+- Status: Proven. Modulo the explicit family-envelope, total-derivative, lower-order-EOM, algebraic, and extracted linear-dependence relations already fixed in this repo, the reduced scalar operator space is finite-dimensional and admits a finite normal-form basis `Y^I`.
+- Status: Proven. Under the locality and analyticity assumptions `A3` and `A5`, the monopole term `m_A(Y)` therefore has a finite fixed-order Taylor jet in finitely many scalar normal-form coordinates.
+- Status: Proven. The residual higher-multipole sector is then carried by finitely many Wilson coefficients `C_{A,\alpha}` that are separate from the monopole sensitivity coefficients.
+- Status: Proven. Therefore the positive finite-family collapse theorem closes inside the current theorem domain.
+
+## Positive Bridge Layers
+
+- Status: Proven. Layer 1 is irreducible family-envelope closure; this is already closed positively on the audited scalar/vector/STF classes.
+- Status: Proven. Layer 2 is fixed-order candidate operator finiteness; this now follows from finite admitted family content, positive weights, and fixed `\Delta \le 4`.
+- Status: Proven. Layer 3 is finite normal-form basis closure; this now follows because the reduced operator space is a quotient of a finite-dimensional candidate space.
+- Status: Proven. Layer 4 is analytic monopole jet collapse; this now follows conditionally on `A5` once the finite scalar basis `Y^I` is fixed.
+- Status: Proven. Layer 5 is the sensitivity/Wilson split; this now follows conditionally on `A3`, `A5`, and `A8`.
 
 ## Exact-Current-Set Specializations
 
@@ -55,7 +63,7 @@
 - Status: Proven. The exact-current-set electric-only theorem and the corrected exact-current-set `E/B` theorem are special audited instances of the broader positive finite-family target.
 - Status: Proven. The stronger physically justified minimal-sector theorem is a separate claim and is not rescued by current audits.
 - Status: Proven. The negative branch is the family-admission no-go for minimal-sector uniqueness.
-- Status: Conjectural. The positive branch is the finite-family fixed-order collapse candidate.
+- Status: Proven. The positive branch is the finite-family fixed-order collapse theorem inside the current theorem domain.
 
 ## Proof Route
 
@@ -93,6 +101,11 @@
 32. Status: Proven. [`stf-mixed-pattern-classification.md`](stf-mixed-pattern-classification.md), [`stf-family-class-table.md`](stf-family-class-table.md), and [`stf-tower-theorem.md`](stf-tower-theorem.md) now separate the closed threshold theorem from the still-split mixed-pattern story.
 33. Status: Proven. [`irreducible-envelope-theorem.md`](irreducible-envelope-theorem.md), [`../lemmas/50-cartesian-irrep-reduction.md`](../lemmas/50-cartesian-irrep-reduction.md), and [`../lemmas/51-trace-descendant-absorption.md`](../lemmas/51-trace-descendant-absorption.md) replace the old rank-by-rank family march with a three-dimensional irreducible-envelope reduction.
 34. Status: Proven. [`../lemmas/52-mixed-symmetry-family-gate.md`](../lemmas/52-mixed-symmetry-family-gate.md), [`mixed-symmetry-risk-register.md`](mixed-symmetry-risk-register.md), [`../symbolic/irrep_family_census.py`](../symbolic/irrep_family_census.py), and [`../symbolic/family_envelope_census.py`](../symbolic/family_envelope_census.py) show that no explicit mixed-symmetry or otherwise non-STF primitive family survives inside the current theorem domain.
+35. Status: Proven. [`finite-family-collapse-theorem.md`](finite-family-collapse-theorem.md), [`../lemmas/53-fixed-order-operator-finiteness.md`](../lemmas/53-fixed-order-operator-finiteness.md), and [`../symbolic/fixed_family_operator_count.py`](../symbolic/fixed_family_operator_count.py) now close the pre-reduction finite-candidate-operator step for any explicit finite admitted family catalog inside the current theorem domain.
+36. Status: Proven. [`../lemmas/54-normal-form-basis-closure.md`](../lemmas/54-normal-form-basis-closure.md), [`reduction-rules.md`](reduction-rules.md), and [`../symbolic/normal_form_reduce.py`](../symbolic/normal_form_reduce.py) now close the finite-dimensional scalar normal-form quotient step.
+37. Status: Proven. [`../lemmas/55-monopole-jet-collapse.md`](../lemmas/55-monopole-jet-collapse.md) now closes the finite analytic monopole jet step once `A5` is imposed.
+38. Status: Proven. [`../lemmas/56-sensitivity-vs-wilson-split.md`](../lemmas/56-sensitivity-vs-wilson-split.md) now closes the finite sensitivity-versus-Wilson split once `A3`, `A5`, and `A8` are imposed.
+39. Status: Proven. [`collapse-bridge-status.md`](collapse-bridge-status.md) makes the bridge status explicit and records that the former positive-branch bottleneck is now resolved positively.
 
 ## Current Verdict
 
@@ -132,8 +145,11 @@
 - Status: Proven. The post-Reven6+ pairwise, triple, quadruple, quintuple, six-family, seven-family, and eight-family composition audits find no surviving operator beyond the baseline electric sector once the current audited thresholds are imposed across the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+, Rodd5+, Reven6+}`.
 - Status: Proven. Therefore the current thresholds are jointly sufficient for the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+, Rodd5+, Reven6+}` at `\Delta \le 4`, and no explicit post-Reven6+ cross-family obstruction has appeared in the audited set.
 - Status: Proven. The former live bottleneck `"prove or refute irreducible family-envelope closure beyond the audited scalar/vector/STF classes"` is now resolved positively.
-- Status: Conjectural. The next mainline bottleneck is the positive finite-family collapse theorem once the irreducible scalar/vector/STF envelope is fixed.
-- Status: Conjectural. The broad positive target remains finite-family fixed-order collapse, and it remains plausible because the audited enlarged family catalogs, including the current rank-6 extension, still close finitely at `\Delta \le 4`.
+- Status: Proven. The former live bottleneck `"prove or refute the positive finite-family collapse theorem once the irreducible scalar/vector/STF envelope is fixed"` is now resolved positively.
+- Status: Proven. Fixed-order operator-space non-closure is no longer a live failure mode inside the current theorem domain once finite admitted family content and irreducible-envelope closure are imposed.
+- Status: Proven. Finite normal-form basis closure is no longer a live failure mode inside the current theorem domain once the explicit quotient rules are imposed.
+- Status: Proven. The positive finite-family collapse theorem now closes inside the current theorem domain.
+- Status: Counterexample candidate. The remaining explicit risks are assumption-drop failures: nonanalytic monopole dependence at `A5`, locality failure of the sensitivity/Wilson split at `A3`, failure of finite admitted family content at `A8`, or escape beyond the present theorem domain.
 
 ## Dependencies
 
@@ -181,8 +197,14 @@
 - Status: Proven. [`../lemmas/50-cartesian-irrep-reduction.md`](../lemmas/50-cartesian-irrep-reduction.md)
 - Status: Proven. [`../lemmas/51-trace-descendant-absorption.md`](../lemmas/51-trace-descendant-absorption.md)
 - Status: Proven. [`../lemmas/52-mixed-symmetry-family-gate.md`](../lemmas/52-mixed-symmetry-family-gate.md)
+- Status: Proven. [`../lemmas/53-fixed-order-operator-finiteness.md`](../lemmas/53-fixed-order-operator-finiteness.md)
+- Status: Proven. [`../lemmas/54-normal-form-basis-closure.md`](../lemmas/54-normal-form-basis-closure.md)
+- Status: Proven. [`../lemmas/55-monopole-jet-collapse.md`](../lemmas/55-monopole-jet-collapse.md)
+- Status: Proven. [`../lemmas/56-sensitivity-vs-wilson-split.md`](../lemmas/56-sensitivity-vs-wilson-split.md)
 - Status: Conjectural. [`conditional-collapse-lemma.md`](conditional-collapse-lemma.md)
 - Status: Conjectural. [`eb-conditional-collapse.md`](eb-conditional-collapse.md)
+- Status: Proven. [`finite-family-collapse-theorem.md`](finite-family-collapse-theorem.md)
+- Status: Proven. [`collapse-bridge-status.md`](collapse-bridge-status.md)
 - Status: Conjectural. [`power-counting.md`](power-counting.md)
 - Status: Proven. [`family-admission-no-go.md`](family-admission-no-go.md)
 - Status: Proven. [`family-admission-theorem.md`](family-admission-theorem.md)
@@ -216,6 +238,7 @@
 - Status: Proven. [`../symbolic/composition_attack_delta4.py`](../symbolic/composition_attack_delta4.py)
 - Status: Proven. [`../symbolic/irrep_family_census.py`](../symbolic/irrep_family_census.py)
 - Status: Proven. [`../symbolic/family_envelope_census.py`](../symbolic/family_envelope_census.py)
+- Status: Proven. [`../symbolic/fixed_family_operator_count.py`](../symbolic/fixed_family_operator_count.py)
 - Status: Proven. [`../symbolic/r1_sector_delta4.py`](../symbolic/r1_sector_delta4.py)
 - Status: Proven. [`../symbolic/r1_survivor_rank_check.py`](../symbolic/r1_survivor_rank_check.py)
 - Status: Proven. [`../symbolic/r3_sector_delta4.py`](../symbolic/r3_sector_delta4.py)
