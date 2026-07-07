@@ -8,7 +8,7 @@
 
 We study a proposed principle of **self-mass unobservability** and ask a narrower question than its initial philosophical form suggests: can any physically viable remnant of the idea survive as a testable effective theory, and if so, what do the current local results actually say? The work proceeds in staged form. First, we show that self-subtraction by itself does not generate a new center-of-mass force: through quadrupole order, the center-of-mass equation remains independent of the self-subtraction parameter. Second, we show that a literal internal-structure implementation is inconsistent with self-gravitating compact objects: in Newtonian barotropes the \(\lambda\to 1\) limit decompactifies the star rather than producing a new equilibrium. These two results force a restricted interpretation in which any anomaly can survive only in an effective passive-coupling sector, a clock sector, or both.
 
-On that restricted footing we analyze three observational branches. In the weak field, a mock LLR program recovers injected linear signals at the expected millimeter synodic scale while remaining nearly blind to the quadratic term. In the strong field, a published-bound translator for PSR J0337+1715 yields ridge-like but usable posteriors in \((\sigma_1,\sigma_2)\), establishing the strong-field free-fall scale even without a full TOA refit. In the clock sector, a corrected leave-one-out \(\gamma\)-based audit yields only a local amplitude constraint and does not by itself decide the tied-versus-decoupled question. Combining the living local branches, a provisional joint consistency scaffold shows that the current clock audit is compatible with the strong-field free-fall posterior under the tied relation. The current repository therefore supports a conservative conclusion: self-mass unobservability is not viable as a literal structural principle, but a restricted EFT survives as a coherent target for further external weak-field and full-TOA tests.
+On that restricted footing we analyze three observational branches. In the weak field, a mock LLR program recovers injected linear signals at the expected millimeter synodic scale while remaining nearly blind to the quadratic term. In the strong field, a published-bound translator for PSR J0337+1715 (inputs: Voisin et al. 2025) yields data-driven conditional-slice constraints at the \(10^{-5}\) (\(\sigma_1\)) and \(10^{-4}\) (\(\sigma_2\)) level, while the joint two-parameter marginals remain an explicitly prior-box-conditional degeneracy ridge. In the clock sector, a corrected leave-one-out \(\gamma\)-based audit yields only a local amplitude constraint and does not by itself decide the tied-versus-decoupled question. Combining the living local branches, a provisional joint consistency scaffold shows that the current clock audit is compatible with the strong-field free-fall posterior under the tied relation, with the tied-versus-decoupled Bayes factor remaining a prior-volume-dominated audit rather than a data-driven discriminant. The current repository therefore supports a conservative conclusion: self-mass unobservability is not viable as a literal structural principle, but a restricted EFT survives as a coherent target for further external weak-field and full-TOA tests.
 
 ---
 
@@ -237,14 +237,9 @@ The strong-field anchor currently implemented in-workspace is the Phase A transl
 \sigma_2 (s_{\rm NS}^2-s_{\rm WD}^2).
 \]
 
-Using the project’s optimistic and conservative bound inputs and the wide EOS surrogate prior \(s_{\rm NS}\in[0.10,0.20]\), the fully marginalized \(2D\) posteriors give approximately
+The two input bounds are the most recent published limits, from Voisin et al. (2025), A&A 693, A143 (arXiv:2411.10066): the optimistic input is \(|\Delta|<1.5\times 10^{-6}\) (95% CL, circum-ternary planet timing-noise hypothesis) and the conservative input is \(|\Delta|<2.3\times 10^{-6}\) (95% CL, achromatic red-noise hypothesis). Earlier limits (Archibald et al. 2018; Voisin et al. 2020) are compatible with and superseded by these inputs.
 
-\[
-|\sigma_1|_{95}\sim 4.7\times 10^{-5},\qquad
-|\sigma_2|_{95}\sim 3.57\times 10^{-4}.
-\]
-
-Because both \(\sigma_1\) and \(\sigma_2\) float simultaneously, the posterior is ridge-like. The cleaner one-parameter slices are tighter:
+With the wide EOS surrogate prior \(s_{\rm NS}\in[0.10,0.20]\), the **data-driven headline numbers are the conditional slices**:
 
 - optimistic, \(\sigma_2=0\):
   \[
@@ -252,8 +247,12 @@ Because both \(\sigma_1\) and \(\sigma_2\) float simultaneously, the posterior i
   \]
 - optimistic, \(\sigma_1=0\):
   \[
-  |\sigma_2|_{95}\sim 1.00\times 10^{-4}.
+  |\sigma_2|_{95}\sim 1.00\times 10^{-4},
   \]
+
+with the conservative input giving \(1.75\times 10^{-5}\) and \(1.53\times 10^{-4}\) respectively.
+
+Because both \(\sigma_1\) and \(\sigma_2\) float simultaneously, the joint posterior is ridge-like: the single published bound constrains one EOS-smeared linear combination, leaving a slowly decaying degeneracy ridge. The fully marginalized \(2D\) quantiles (\(|\sigma_1|_{95}\sim 4.7\times 10^{-5}\), \(|\sigma_2|_{95}\sim 3.57\times 10^{-4}\)) are therefore **prior-box-conditional, not standalone constraints**: an explicit box-scale diagnostic in the repository shows they grow essentially linearly (\(\times 3.96/\times 4.04\)) when the flat prior box is enlarged \(\times 4\), and they are identical for the optimistic and conservative inputs, while the conditional slices stay flat under the same test.
 
 The project later established that Phase B is **public-input-ready**: public TOA files, par files, and `Nutimo` code releases are mirrored locally. But the current host still lacks the runtime stack (`Boost`, `Tempo2`, `Minuit`/`root-config`, `cython`, OpenMP-compatible compiler path), so a full local TOA refit is not closed here.
 
@@ -290,10 +289,12 @@ The current clock likelihood does **not** separately identify \(\zeta_1\) and \(
 \kappa_* := \zeta_1 + 2s_* \zeta_2.
 \]
 
-After the corrected base fit and the later additions of `B1913+16`, `J1141-6545`, and `J1906+0746`, the branch still behaves as a local audit rather than a global slope discriminator. At the combined stage:
+A caveat applies to the two-system base stage: because the two base systems sample nearly the same self-gravity fraction (spread \(\sim 0.6\%\)), the \(\gamma\) data there constrain only the band \(\eta(\bar s)\) (\(|\eta_*|_{95}=1.48\times 10^{-3}\)); the separate \((\zeta_1,\zeta_2)\) marginals and the slope quantile of that grid stage are set by the flat \(\zeta\) prior box, not by the data (an explicit box-scale diagnostic in the repository shows them growing linearly with the box, while the Fisher lever-arm audit of the same two systems gives only \(|\kappa_*|_{95}\simeq 8.4\)).
+
+After the corrected base fit and the later additions of `B1913+16`, `J1141-6545`, and `J1906+0746`, the branch still behaves as a local audit rather than a global slope discriminator. At the combined stage (Fisher-style audit; the `B1913+16` lever arm at \(s\simeq 0.16\) makes these slope numbers approximately data-driven, unlike the base-stage grid quantiles):
 \[
-s_{\rm ref}=0.155832,\qquad
-|\eta_*|_{95}=2.106\times 10^{-3},\qquad
+s_{\rm ref}=0.155833,\qquad
+|\eta_*|_{95}=2.105\times 10^{-3},\qquad
 |\kappa_*|_{95}=4.628\times 10^{-2}.
 \]
 
@@ -332,34 +333,39 @@ with projection into the local clock basis
 \kappa_*=\sigma_1+2s_*\sigma_2.
 \]
 
-### 8.2 Result
+### 8.2 Clock surrogate variants
 
-For the reference scenario (`optimistic / wide / medium`), the scaffold gives:
+The clock branch enters as a Gaussian surrogate in \((\eta_*,\kappa_*)\) built from the two-system Request 6 stage. Because the \(\kappa_*\) width of that grid posterior is set by its \(\zeta\) prior box, the scaffold sweeps two surrogate variants: `grid_matched` (moments taken directly from the grid; overstates the clock slope information) and `eta_only_kappa_free` (the reference variant: \(\eta_*\) from the grid posterior, \(\kappa_*\) width from the Fisher lever-arm audit, \(|\kappa_*|_{95}\simeq 8.42\)).
+
+### 8.3 Result
+
+For the reference scenario (`optimistic / wide / medium / eta_only_kappa_free`), the scaffold gives:
 
 - pre-clock projected tension:
   \[
-  0.592\ \text{Mahalanobis},
+  0.591\ \text{Mahalanobis}
   \]
+  (0.592 under `grid_matched`; the tension is carried by the \(\eta_*\) direction, so the surrogate choice barely moves it),
 - tied posterior projection:
   \[
-  |\eta_*|_{95}\approx 1.99\times 10^{-6},\qquad
-  |\kappa_*|_{95}\approx 5.62\times 10^{-5},
+  |\eta_*|_{95}\approx 1.99\times 10^{-6}\ \text{(data-limited direction)},\qquad
+  |\kappa_*|_{95}\approx 5.62\times 10^{-5}\ \text{(box-conditional, inherited from the Phase A ridge)},
   \]
 - standalone clock audit:
   \[
-  |\eta_*|_{95}\approx 1.48\times 10^{-3},\qquad
-  |\kappa_*|_{95}\approx 3.59\times 10^{-2}.
+  |\eta_*|_{95}\approx 1.48\times 10^{-3}\ \text{(data-driven)},
   \]
+  with the clock slope direction essentially unconstrained at the two-system stage (Fisher \(|\kappa_*|_{95}\simeq 8.42\)).
 
 Thus the tied image of the J0337 Phase A posterior sits deep inside the region allowed by the current local clock audit.
 
-Across the full prior sweep:
+Across the full sweep (2 surrogate variants \(\times\) 2 bounds \(\times\) 3 EOS priors \(\times\) 3 clock priors = 36 scenarios):
 \[
-\log_{10} BF(\text{decoupled}/\text{tied}) \in [-2.41,-0.82],
+\log_{10} BF(\text{decoupled}/\text{tied}) \in [-2.41,-0.49],
 \]
-but the variation is driven mainly by the chosen clock-prior box rather than by a sharp data clash. The projected tension and the J0337-averaged clock likelihood remain nearly unchanged.
+(\([-2.41,-0.82]\) under `grid_matched`, \([-1.49,-0.49]\) under `eta_only_kappa_free`). The variation is driven almost entirely by the chosen clock-prior box: the clock surrogate likelihood is nearly constant over the J0337 \(\sigma\) grid, so the J0337 factor cancels in the evidence ratio and the Bayes factor reduces to an Occam-volume ratio (only a handful of distinct values occur across all 36 scenarios). The projected tension and the J0337-averaged clock likelihood remain nearly unchanged, the former structurally so, because the symmetric J0337 posterior always projects to a near-zero mean.
 
-**Interpretation.** The current local data do **not** reveal a strong inconsistency between the strong-field free-fall anchor and the clock local audit under the tied relation. Nor do they provide a decisive empirical victory for the tied model. At present, model comparison is mainly a **prior-sensitivity audit**.
+**Interpretation.** The current local data do **not** reveal a strong inconsistency between the strong-field free-fall anchor and the clock local audit under the tied relation. Nor do they provide a decisive empirical victory for the tied model. At present, model comparison is a **prior-sensitivity audit**, not a data-driven discriminant.
 
 ---
 
@@ -391,7 +397,8 @@ The repository does **not** currently justify any of the following stronger clai
 - a final empirical verdict for tied versus decoupled physics,
 - a real weak-field LLR posterior,
 - a full self-consistent `J0337` TOA reanalysis,
-- or a complete physical realization of Nordtvedt dynamics inside the local `MLRS` lab.
+- a complete physical realization of Nordtvedt dynamics inside the local `MLRS` lab,
+- or standalone limits read off the joint \(2D\) marginals of the Phase A ridge or off the two-system clock-sector \((\zeta_1,\zeta_2)\) grid quantiles: the repository's box-scale diagnostics show those numbers track the flat prior boxes, so only the conditional slices (Phase A) and the local band \(\eta(\bar s)\) (clock sector) are data-driven at this stage.
 
 These boundaries are not a weakness of presentation; they are the result of explicit stop rules and bounded-search artifacts.
 
@@ -434,6 +441,8 @@ That is a narrower result than a discovery claim, but it is also a more reliable
 
 The repository is public and organized around staged `REQUEST*.md` memos, executable `request*.py` scripts, and checked-in generated artifacts. The current public `README` explicitly presents the repository as a staged research workspace and states that it does **not** yet contain a final weak-field posterior for Request 4, that Request 5 Phase A is implemented while Phase B stops at public-input/build-feasibility gates, that Request 6 is a local clock-sector audit, and that Request 7 is a provisional joint consistency scaffold. This manuscript is written to that repository-defined scope and deliberately avoids stronger claims.
 
+Two reproducibility upgrades accompany this revision: the Request 5 and Request 6 grid stages now ship explicit `box_scale_check` diagnostics that rerun each posterior with the flat prior box enlarged \(\times 2\) and \(\times 4\) (separating data-limited from box-limited quantiles, as used throughout Sections 6–8), and all Monte-Carlo stages now use deterministic seeding (the earlier per-source offsets used Python's process-salted `hash()`, which made checked-in outputs non-reproducible). A `references.bib` file with the citation metadata is included alongside the manuscript source.
+
 ---
 
 ## Selected references (draft; convert to BibTeX before submission)
@@ -441,15 +450,16 @@ The repository is public and organized around staged `REQUEST*.md` memos, execut
 1. Chandler, J. F., Battat, J. B. R., Murphy, T. W., Reardon, D., Reasenberg, R. D., and Shapiro, I. I. (2021). *The Planetary Ephemeris Program: Capability, Comparison, and Open Source Availability*. arXiv:2103.16745.
 2. APOLLO normal-point public archive. University of California San Diego APOLLO normal points page.
 3. ILRS format documentation and CRD manuals, including the CRD overview and format manuals.
-4. Voisin, G. et al. (2020). A&A 638, A24. Public data/code release for the PSR J0337+1715 SEP analysis.
-5. Voisin, G. et al. (2025). A&A 693, A143. Public data/code release for the updated PSR J0337+1715 analysis.
+4. Voisin, G. et al. (2020). *An improved test of the strong equivalence principle with the pulsar in a triple star system*. A&A 638, A24. arXiv:2005.01388. Public data/code release for the PSR J0337+1715 SEP analysis.
+5. Voisin, G. et al. (2025). *Explanation of the exceptionally strong timing noise of PSR J0337+1715 by a circum-ternary planet and consequences for gravity tests*. A&A 693, A143. arXiv:2411.10066. Source of the \(|\Delta|<1.5\times 10^{-6}\) (planet hypothesis) and \(|\Delta|<2.3\times 10^{-6}\) (red-noise hypothesis) 95% inputs used in Phase A.
 6. Fonseca, E. et al. (2014). Timing and post-Keplerian analysis for PSR B1534+12. arXiv:1402.4836.
 7. Kramer, M. et al. (2021). Double Pulsar timing analysis. arXiv:2112.06795.
 8. Kramer, M. et al. (2006). Double Pulsar mass-ratio result, as used in the later Request 6 reconstruction.
 9. Weisberg, J. M., Nice, D. J., and Taylor, J. H. (2010). PSR B1913+16 timing analysis. arXiv:1011.0718.
 10. Bhat, N. D. R., Bailes, M., and Verbiest, J. P. W. (2008). PSR J1141-6545 timing inputs. arXiv:0804.0956.
 11. Venkatraman Krishnan, V. et al. (2020). Spin-orbit / \( \dot{x} \) structure in PSR J1141-6545. arXiv:2001.11405.
-12. van Leeuwen, J. et al. (2026). PSR J1906+0746 long-baseline timing with explicit \( \dot{x}-\gamma \) correlation. arXiv:2602.05947.
+12. Vleeschower, L. et al. (2026). *Long-term timing of the relativistic binary PSR J1906+0746*, with explicit \( \dot{x}-\gamma \) correlation. arXiv:2602.05947.
 13. Cameron, A. D. et al. (2017). PSR J1757-1854 timing constraints. arXiv:1711.07697.
 14. Ferdman, R. D. et al. (2014). PSR J1756-2251 timing constraints. arXiv:1406.5507.
 15. Ferdman, R. D. et al. (2020). PSR J1913+1102 timing constraints. arXiv:2007.04175.
+16. Archibald, A. M. et al. (2018). *Universality of free fall from the orbital motion of a pulsar in a stellar triple system*. Nature 559, 73. arXiv:1807.02059.

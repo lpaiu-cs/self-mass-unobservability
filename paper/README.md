@@ -3,8 +3,9 @@
 This directory keeps the manuscript source and the current LaTeX draft.
 
 - `manuscript.md`: prose-first draft source copied into the repository.
-- `build_manuscript.py`: converts the markdown draft into `main.tex`.
+- `build_manuscript.py`: converts the markdown draft into `main.tex` (requires `pandoc`; `pip install pypandoc-binary` provides a bundled binary).
 - `main.tex`: generated LaTeX draft committed to the repository for review.
+- `references.bib`: citation metadata for the selected references.
 - `Makefile`: local build helpers.
 
 Typical workflow:
@@ -22,5 +23,6 @@ make paper-pdf
 ```
 
 The LaTeX draft is intentionally conservative. It keeps the current prose,
-equations, and section structure, but it does not yet convert the selected
-references into a full BibTeX-driven citation pass.
+equations, and section structure. Citation metadata for the selected
+references is provided in `references.bib`; wiring the prose into a full
+BibTeX-driven `\cite` pass is still left for the journal-style revision.
