@@ -3,7 +3,7 @@
 <text x="48" y="46" font-family="sans-serif" font-size="24" font-weight="700" fill="#111827">Request 5 Phase A: J0337 Published-Bound Translation</text>
 <text x="48" y="72" font-family="sans-serif" font-size="14" fill="#4b5563">Posterior mapping from published Delta bounds to (sigma1, sigma2), marginalized over s_NS priors.</text>
 <rect x="110.0" y="130.0" width="400.0" height="320.0" fill="none" stroke="#111827" stroke-width="1.2"/>
-<text x="110.0" y="120.0" font-family="sans-serif" font-size="14" font-weight="700" fill="#111827">Optimistic bound: |Delta| < 1.5e-6 (95%)</text>
+<text x="110.0" y="120.0" font-family="sans-serif" font-size="14" font-weight="700" fill="#111827">Optimistic: |Delta| < 1.5e-6 (95%, Voisin+25 planet hyp.)</text>
 <rect x="110.00" y="448.67" width="2.00" height="1.33" fill="rgb(255,247,255)" stroke="none"/>
 <rect x="110.00" y="447.33" width="2.00" height="1.33" fill="rgb(255,247,255)" stroke="none"/>
 <rect x="110.00" y="446.00" width="2.00" height="1.33" fill="rgb(255,247,255)" stroke="none"/>
@@ -48019,7 +48019,7 @@
 <text x="290.0" y="490.0" font-family="sans-serif" font-size="12" fill="#111827">sigma1</text>
 <text x="50.0" y="290.0" font-family="sans-serif" font-size="12" fill="#111827" transform="rotate(-90 50.0,290.0)">sigma2</text>
 <rect x="700.0" y="130.0" width="400.0" height="320.0" fill="none" stroke="#111827" stroke-width="1.2"/>
-<text x="700.0" y="120.0" font-family="sans-serif" font-size="14" font-weight="700" fill="#111827">Conservative bound: |Delta| < 2.3e-6 (95%)</text>
+<text x="700.0" y="120.0" font-family="sans-serif" font-size="14" font-weight="700" fill="#111827">Conservative: |Delta| < 2.3e-6 (95%, Voisin+25 red-noise hyp.)</text>
 <rect x="700.00" y="448.67" width="2.00" height="1.33" fill="rgb(255,247,255)" stroke="none"/>
 <rect x="700.00" y="447.33" width="2.00" height="1.33" fill="rgb(255,247,255)" stroke="none"/>
 <rect x="700.00" y="446.00" width="2.00" height="1.33" fill="rgb(255,247,255)" stroke="none"/>
@@ -96039,5 +96039,7 @@
 <text x="90" y="617.0" font-family="monospace" font-size="13" fill="#111827">low      [0.10,0.15]   4.60e-05         3.70e-04         4.60e-05         3.70e-04</text>
 <text x="90" y="651.0" font-family="monospace" font-size="13" fill="#111827">wide     [0.10,0.20]   4.70e-05         3.57e-04         4.70e-05         3.57e-04</text>
 <text x="90" y="685.0" font-family="monospace" font-size="13" fill="#111827">high     [0.15,0.20]   4.75e-05         2.90e-04         4.75e-05         3.00e-04</text>
-<text x="90" y="760" font-family="sans-serif" font-size="13" fill="#4b5563">Interpretation: sigma1 is constrained at the 10^-5 level, while sigma2 remains broader but still lands in the 10^-4 regime once strong-field s_NS ~ 0.1-0.2 is used.</text>
+<text x="90" y="742" font-family="sans-serif" font-size="13" fill="#4b5563">Interpretation: the data-driven numbers are the conditional slices (|sigma1|_95 ~ 1e-5 at sigma2=0, |sigma2|_95 ~ 1e-4 at sigma1=0).</text>
+<text x="90" y="762" font-family="sans-serif" font-size="13" fill="#4b5563">The joint 2D marginal quantiles sit on an open degeneracy ridge and track the flat prior box (see box_scale_check); they are box-conditional, not standalone constraints.</text>
+<text x="90" y="782" font-family="sans-serif" font-size="13" fill="#4b5563">Delta inputs: Voisin et al. (2025), A&amp;A 693, A143 (arXiv:2411.10066), planet vs red-noise timing-noise hypotheses.</text>
 </svg>

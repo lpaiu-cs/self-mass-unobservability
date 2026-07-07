@@ -15,12 +15,12 @@ This is the **Phase A** implementation from the repaired plan:
 + \sigma_2 (s_{\rm NS}^2 - s_{\rm WD}^2).
 ```
 
-The code uses the two bounds quoted in the research note as input hypotheses:
+The code uses the two most recent published `J0337+1715` SEP bounds as input hypotheses, from Voisin et al. (2025), A&A 693, A143 ([arXiv:2411.10066](https://arxiv.org/abs/2411.10066)):
 
-- optimistic: `|Delta| < 1.5e-6` at `95%`
-- conservative: `|Delta| < 2.3e-6` at `95%`
+- optimistic: `|Delta| < 1.5e-6` at `95%` (circum-ternary planet timing-noise hypothesis)
+- conservative: `|Delta| < 2.3e-6` at `95%` (achromatic red-noise timing-noise hypothesis)
 
-and interprets each as a Gaussian upper limit with width `sigma_Delta = Delta_95 / 1.96`.
+and interprets each as a Gaussian upper limit with width `sigma_Delta = Delta_95 / 1.96`. Earlier published limits (Archibald et al. 2018, `|Delta| < 2.6e-6`; Voisin et al. 2020) are compatible with and superseded by these inputs.
 
 Implementation: [request5_j0337_phaseA.py](request5_j0337_phaseA.py)
 
@@ -61,18 +61,7 @@ and the published-bound posterior is obtained by averaging over the EOS prior.
 
 ## Results
 
-For the wide prior `s_NS in [0.10, 0.20]`, the fully marginalized `2D` posterior gives:
-
-- optimistic:
-  `|sigma_1|_95 ~ 4.7e-5`,
-  `|sigma_2|_95 ~ 3.57e-4`
-- conservative:
-  `|sigma_1|_95 ~ 4.7e-5`,
-  `|sigma_2|_95 ~ 3.57e-4`
-
-These are broader than the one-parameter estimates in the research note because the Phase A posterior keeps both `sigma_1` and `sigma_2` free at once, so the published-bound translation contains a real degeneracy ridge.
-
-To make contact with the one-parameter estimates, the script also reports conditional slices:
+The **data-driven headline numbers are the conditional slices** (wide prior `s_NS in [0.10, 0.20]`):
 
 - optimistic, fixing `sigma_2 = 0`:
   `|sigma_1|_95 ~ 1.15e-5`
@@ -84,6 +73,24 @@ To make contact with the one-parameter estimates, the script also reports condit
   `|sigma_2|_95 ~ 1.53e-4`
 
 Those conditional values are the right comparison to the back-of-the-envelope statements in the research note. In particular, the optimistic `sigma_1` slice lands at the expected `~1e-5` level.
+
+The fully marginalized `2D` posterior also produces joint quantiles
+(`|sigma_1|_95 ~ 4.7e-5`, `|sigma_2|_95 ~ 3.57e-4` for both bounds), but these
+are **box-conditional, not standalone constraints**: the published `|Delta|`
+bound constrains one EOS-smeared linear combination of `(sigma_1, sigma_2)`,
+leaving a slowly decaying degeneracy ridge, and under the flat prior box the
+joint marginal quantiles track the prior box. Two facts in the summary JSON
+make this explicit:
+
+- the joint quantiles are identical for the optimistic and conservative
+  inputs, i.e. they do not respond to the data;
+- the `box_scale_check` diagnostic reruns the same posterior with the prior
+  box enlarged `x2` and `x4`, and the joint marginals grow by `x3.96/x4.04`
+  (essentially linearly with the box), while the conditional slices stay flat
+  (`x1.04/x0.93`).
+
+Earlier revisions of this memo quoted the joint marginal quantiles as results;
+they should not be used that way.
 
 ## EOS Sensitivity
 

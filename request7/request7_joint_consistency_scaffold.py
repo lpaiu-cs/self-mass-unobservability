@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parent
 REPO_ROOT = ROOT.parent
 REQ5_SUMMARY = REPO_ROOT / "request5" / "request5_j0337_phaseA_summary.json"
 REQ6_SUMMARY = REPO_ROOT / "request6" / "request6_clock_sector_summary.json"
+REQ6_LEVER_ARM_SUMMARY = REPO_ROOT / "request6" / "request6_lever_arm_audit_summary.json"
 REQ3_SUMMARY = REPO_ROOT / "request3" / "request3_llr_mock_summary.json"
 
 SUMMARY_JSON = ROOT / "request7_joint_consistency_summary.json"
@@ -26,6 +27,9 @@ REFERENCE_TIED_TSV = ROOT / "request7_joint_consistency_reference_tied_posterior
 class PhaseABound:
     name: str
     delta_95: float
+    hypothesis: str = ""
+    source_label: str = ""
+    source_url: str = ""
 
 
 @dataclass(frozen=True)
@@ -161,6 +165,57 @@ def load_clock_surrogate(summary_path: Path) -> dict[str, object]:
     }
 
 
+def build_clock_surrogate_variants(
+    req6_summary_path: Path,
+    lever_arm_path: Path,
+) -> dict[str, dict[str, object]]:
+    """Return the clock-branch Gaussian surrogates used in the joint scaffold.
+
+    grid_matched: moments matched to the Request 6 clock-only grid posterior.
+    Its kappa_* width inherits the flat zeta prior box of that grid
+    (box-conditional), so it overstates the clock slope information.
+
+    eta_only_kappa_free: eta_* moments from the same grid posterior (the
+    data-driven band constraint), while the kappa_* width is taken from the
+    Request 6 Fisher lever-arm audit of the same systems and the eta-kappa
+    correlation is dropped. This removes the zeta-prior-box artifact and is
+    the reference variant.
+    """
+    grid_matched = load_clock_surrogate(req6_summary_path)
+    grid_matched["note"] = (
+        "Moment-matched to the Request 6 clock-only grid posterior; kappa_* width is "
+        "zeta-prior-box-conditional and overstates the clock slope information."
+    )
+    variants: dict[str, dict[str, object]] = {"grid_matched": grid_matched}
+    if lever_arm_path.exists():
+        lever = json.loads(lever_arm_path.read_text())
+        kappa95 = float(lever["current_basis_gaussian"]["abs95_kappa_star"])
+        eta_mean = float(grid_matched["mean"][0])
+        eta_std = float(math.sqrt(grid_matched["cov"][0, 0]))
+        kappa_std = kappa95 / 1.96
+        cov = np.array([[eta_std**2, 0.0], [0.0, kappa_std**2]], dtype=float)
+        variants["eta_only_kappa_free"] = {
+            "sstar": grid_matched["sstar"],
+            "mean": np.array([eta_mean, 0.0], dtype=float),
+            "cov": cov,
+            "inv_cov": np.linalg.inv(cov),
+            "eta_stats": grid_matched["eta_stats"],
+            "kappa_stats": {
+                "mean": 0.0,
+                "std": kappa_std,
+                "abs_95": kappa95,
+                "source": "request6_lever_arm_audit_summary.json:current_basis_gaussian.abs95_kappa_star",
+            },
+            "correlation": 0.0,
+            "note": (
+                "Data-driven variant: eta_* from the Request 6 grid posterior (band "
+                f"constraint); kappa_* width from the Fisher lever-arm audit (|kappa_*|_95 = "
+                f"{kappa95:.3e}); correlation dropped. Removes the zeta-prior-box artifact."
+            ),
+        }
+    return variants
+
+
 def local_clock_likelihood(
     eta: np.ndarray,
     kappa: np.ndarray,
@@ -240,60 +295,97 @@ def write_posterior_table(path: Path, sigma1: np.ndarray, sigma2: np.ndarray, po
 
 
 def write_summary_svg(path: Path, summary: dict[str, object]) -> None:
-    width, height = 1500, 1180
+    width, height = 1560, 1500
+    surrogates = summary["clock_surrogates"]
     parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
         '<rect width="100%" height="100%" fill="#f8fafc"/>',
         '<text x="48" y="46" font-family="sans-serif" font-size="24" font-weight="700" fill="#111827">Request 7: provisional joint consistency scaffold</text>',
         '<text x="48" y="74" font-family="sans-serif" font-size="14" fill="#475569">Decoupled vs tied comparison using J0337 Phase A plus the Request 6 local clock audit. Request 3 is reference-only and not used in the likelihood.</text>',
-        '<rect x="48" y="108" width="1404" height="170" fill="white" stroke="#cbd5e1"/>',
-        '<text x="66" y="138" font-family="sans-serif" font-size="16" font-weight="700" fill="#111827">Clock Surrogate</text>',
-        f'<text x="66" y="170" font-family="monospace" font-size="13" fill="#111827">s* = {summary["clock_surrogate"]["sstar"]:.5f}</text>',
-        f'<text x="66" y="194" font-family="monospace" font-size="13" fill="#111827">eta_* = {summary["clock_surrogate"]["eta_star"]["mean"]:.3e} ± {summary["clock_surrogate"]["eta_star"]["std"]:.3e}, |eta_*|_95 = {summary["clock_surrogate"]["eta_star"]["abs_95"]:.3e}</text>',
-        f'<text x="66" y="218" font-family="monospace" font-size="13" fill="#111827">kappa_* = {summary["clock_surrogate"]["kappa_star"]["mean"]:.3e} ± {summary["clock_surrogate"]["kappa_star"]["std"]:.3e}, |kappa_*|_95 = {summary["clock_surrogate"]["kappa_star"]["abs_95"]:.3e}</text>',
-        f'<text x="66" y="242" font-family="monospace" font-size="13" fill="#111827">corr(eta_*,kappa_*) = {summary["clock_surrogate"]["correlation"]:.3f}</text>',
-        '<text x="66" y="266" font-family="sans-serif" font-size="12" fill="#475569">The clock branch is represented by a local Gaussian surrogate in (eta_*, kappa_*) derived from Request 6, not by a new TOA fit.</text>',
-        '<text x="66" y="316" font-family="sans-serif" font-size="16" font-weight="700" fill="#111827">Scenario Table (Bayes factor decoupled over tied)</text>',
+        '<rect x="48" y="108" width="1464" height="190" fill="white" stroke="#cbd5e1"/>',
+        f'<text x="66" y="138" font-family="sans-serif" font-size="16" font-weight="700" fill="#111827">Clock Surrogate Variants (reference: {summary["reference_variant"]})</text>',
+        f'<text x="66" y="166" font-family="monospace" font-size="13" fill="#111827">s* = {summary["clock_surrogate"]["sstar"]:.5f}</text>',
     ]
-
-    y = 346
-    parts.append('<text x="66" y="346" font-family="monospace" font-size="12" fill="#374151">bound        eos    clock_prior   log10 BF(dec/tied)   pre-clock tension(Mah)   tied |sigma1|_95   tied |sigma2|_95   tied |eta_*|_95   tied |kappa_*|_95</text>')
-    for row in summary["scenario_rows"]:
-        y += 24
+    y = 190
+    for name, payload in surrogates.items():
         parts.append(
             f'<text x="66" y="{y}" font-family="monospace" font-size="12" fill="#111827">'
-            f'{row["bound"]:<11}{row["eos"]:<7}{row["clock_prior"]:<14}'
-            f'{row["log10_bf_dec_over_tied"]:>9.3f}{"":6}'
-            f'{row["pre_clock_mahalanobis"]:>9.3f}{"":11}'
-            f'{row["tied_sigma1_abs95"]:>9.3e}{"":5}'
-            f'{row["tied_sigma2_abs95"]:>9.3e}{"":5}'
+            f'{name}: eta_* = {payload["eta_star"]["mean"]:.3e} ± {payload["eta_star"]["std"]:.3e}, '
+            f'kappa_* std = {payload["kappa_star"]["std"]:.3e}, corr = {payload["correlation"]:.3f}</text>'
+        )
+        y += 22
+    parts.append('<text x="66" y="258" font-family="sans-serif" font-size="12" fill="#475569">grid_matched inherits the Request 6 zeta prior box in kappa_* (box-conditional); eta_only_kappa_free uses the Fisher lever-arm kappa_* width and is the data-driven reference.</text>')
+    parts.append('<text x="66" y="278" font-family="sans-serif" font-size="12" fill="#475569">The clock branch is a local Gaussian surrogate in (eta_*, kappa_*) derived from Request 6, not a new TOA fit.</text>')
+    parts.append('<text x="66" y="330" font-family="sans-serif" font-size="16" font-weight="700" fill="#111827">Scenario Table (Bayes factor decoupled over tied; BF is an Occam-volume ratio set by the clock prior box)</text>')
+
+    parts.append('<text x="66" y="358" font-family="monospace" font-size="11" fill="#374151">surrogate            bound        eos    clock_prior   log10 BF(dec/tied)   pre-clock(Mah)   tied |sigma1|_95   tied |sigma2|_95   tied |eta_*|_95   tied |kappa_*|_95</text>')
+    y = 358
+    for row in summary["scenario_rows"]:
+        y += 18
+        parts.append(
+            f'<text x="66" y="{y}" font-family="monospace" font-size="11" fill="#111827">'
+            f'{row["clock_surrogate"]:<21}{row["bound"]:<11}{row["eos"]:<7}{row["clock_prior"]:<14}'
+            f'{row["log10_bf_dec_over_tied"]:>9.3f}{"":8}'
+            f'{row["pre_clock_mahalanobis"]:>9.3f}{"":8}'
+            f'{row["tied_sigma1_abs95"]:>9.3e}{"":6}'
+            f'{row["tied_sigma2_abs95"]:>9.3e}{"":6}'
             f'{row["tied_eta_abs95"]:>9.3e}{"":5}'
             f'{row["tied_kappa_abs95"]:>9.3e}</text>'
         )
 
     ref = summary["reference_scenario"]
+    box_y = y + 26
     parts.extend(
         [
-            '<rect x="48" y="830" width="1404" height="286" fill="white" stroke="#cbd5e1"/>',
-            '<text x="66" y="860" font-family="sans-serif" font-size="16" font-weight="700" fill="#111827">Reference Scenario</text>',
-            f'<text x="66" y="890" font-family="monospace" font-size="13" fill="#111827">{ref["name"]}</text>',
-            f'<text x="66" y="918" font-family="monospace" font-size="13" fill="#111827">log10 BF(dec/tied) = {ref["comparison"]["log10_bf_dec_over_tied"]:.3f}</text>',
-            f'<text x="66" y="942" font-family="monospace" font-size="13" fill="#111827">pre-clock projected tension = {ref["comparison"]["pre_clock_mahalanobis"]:.3f}</text>',
-            f'<text x="66" y="966" font-family="monospace" font-size="13" fill="#111827">tied |sigma1|_95 = {ref["tied"]["sigma_stats"]["sigma1"]["abs_95"]:.3e}, tied |sigma2|_95 = {ref["tied"]["sigma_stats"]["sigma2"]["abs_95"]:.3e}</text>',
-            f'<text x="66" y="990" font-family="monospace" font-size="13" fill="#111827">tied |eta_*|_95 = {ref["tied"]["basis_stats"]["eta_star"]["abs_95"]:.3e}, tied |kappa_*|_95 = {ref["tied"]["basis_stats"]["kappa_star"]["abs_95"]:.3e}</text>',
-            f'<text x="66" y="1014" font-family="monospace" font-size="13" fill="#111827">clock prior box = eta in [-{ref["clock_prior"]["eta_abs_max"]:.2e}, +{ref["clock_prior"]["eta_abs_max"]:.2e}], kappa in [-{ref["clock_prior"]["kappa_abs_max"]:.2e}, +{ref["clock_prior"]["kappa_abs_max"]:.2e}]</text>',
-            f'<text x="66" y="1046" font-family="sans-serif" font-size="12" fill="#475569">{summary["request3_reference"]["note"]}</text>',
+            f'<rect x="48" y="{box_y}" width="1464" height="330" fill="white" stroke="#cbd5e1"/>',
+            f'<text x="66" y="{box_y + 30}" font-family="sans-serif" font-size="16" font-weight="700" fill="#111827">Reference Scenario</text>',
+            f'<text x="66" y="{box_y + 60}" font-family="monospace" font-size="13" fill="#111827">{ref["name"]}</text>',
+            f'<text x="66" y="{box_y + 88}" font-family="monospace" font-size="13" fill="#111827">log10 BF(dec/tied) = {ref["comparison"]["log10_bf_dec_over_tied"]:.3f} [prior-volume-driven]</text>',
+            f'<text x="66" y="{box_y + 112}" font-family="monospace" font-size="13" fill="#111827">pre-clock projected tension = {ref["comparison"]["pre_clock_mahalanobis"]:.3f}</text>',
+            f'<text x="66" y="{box_y + 136}" font-family="monospace" font-size="13" fill="#111827">tied |sigma1|_95 = {ref["tied"]["sigma_stats"]["sigma1"]["abs_95"]:.3e}, tied |sigma2|_95 = {ref["tied"]["sigma_stats"]["sigma2"]["abs_95"]:.3e} [box-conditional, open ridge]</text>',
+            f'<text x="66" y="{box_y + 160}" font-family="monospace" font-size="13" fill="#111827">tied |eta_*|_95 = {ref["tied"]["basis_stats"]["eta_star"]["abs_95"]:.3e} [data-limited], tied |kappa_*|_95 = {ref["tied"]["basis_stats"]["kappa_star"]["abs_95"]:.3e} [box-conditional]</text>',
+            f'<text x="66" y="{box_y + 184}" font-family="monospace" font-size="13" fill="#111827">clock prior box = eta in [-{ref["clock_prior"]["eta_abs_max"]:.2e}, +{ref["clock_prior"]["eta_abs_max"]:.2e}], kappa in [-{ref["clock_prior"]["kappa_abs_max"]:.2e}, +{ref["clock_prior"]["kappa_abs_max"]:.2e}]</text>',
+            f'<text x="66" y="{box_y + 212}" font-family="monospace" font-size="12" fill="#111827">Delta inputs: Voisin et al. (2025), A&amp;A 693, A143 (arXiv:2411.10066), planet vs red-noise hypotheses.</text>',
+            f'<text x="66" y="{box_y + 240}" font-family="sans-serif" font-size="12" fill="#475569">{summary["request3_reference"]["note"]}</text>',
             '</svg>',
         ]
     )
     path.write_text("\n".join(parts) + "\n")
 
 
+def surrogate_payload(surrogate: dict[str, object]) -> dict[str, object]:
+    cov = np.asarray(surrogate["cov"], dtype=float)
+    return {
+        "sstar": float(surrogate["sstar"]),
+        "eta_star": surrogate["eta_stats"],
+        "kappa_star": surrogate["kappa_stats"],
+        "covariance": {
+            "eta_eta": float(cov[0, 0]),
+            "eta_kappa": float(cov[0, 1]),
+            "kappa_kappa": float(cov[1, 1]),
+        },
+        "correlation": float(surrogate["correlation"]),
+        "note": surrogate.get("note", ""),
+    }
+
+
 def main() -> None:
     phase_config = PhaseAConfig()
     bounds = {
-        "optimistic": PhaseABound("optimistic", 1.5e-6),
-        "conservative": PhaseABound("conservative", 2.3e-6),
+        "optimistic": PhaseABound(
+            "optimistic",
+            1.5e-6,
+            hypothesis="circum-ternary planet timing-noise model",
+            source_label="Voisin et al. (2025), A&A 693, A143, |Delta| < 1.5e-6 (95% CL, planet hypothesis)",
+            source_url="https://arxiv.org/abs/2411.10066",
+        ),
+        "conservative": PhaseABound(
+            "conservative",
+            2.3e-6,
+            hypothesis="achromatic red-noise timing-noise model",
+            source_label="Voisin et al. (2025), A&A 693, A143, |Delta| < 2.3e-6 (95% CL, red-noise hypothesis)",
+            source_url="https://arxiv.org/abs/2411.10066",
+        ),
     }
     eos_priors = {
         "low": EOSPrior("low", 0.10, 0.15),
@@ -306,86 +398,92 @@ def main() -> None:
         "wide": ClockPrior("wide", 3.0e-2, 2.0e-1, 401),
     }
 
-    clock_surrogate = load_clock_surrogate(REQ6_SUMMARY)
+    surrogate_variants = build_clock_surrogate_variants(REQ6_SUMMARY, REQ6_LEVER_ARM_SUMMARY)
+    reference_variant = "eta_only_kappa_free" if "eta_only_kappa_free" in surrogate_variants else "grid_matched"
     clock_prior_results = {
-        name: clock_prior_stats(prior, clock_surrogate) for name, prior in clock_priors.items()
+        variant_name: {name: clock_prior_stats(prior, surrogate) for name, prior in clock_priors.items()}
+        for variant_name, surrogate in surrogate_variants.items()
     }
 
     sigma1, sigma2 = sigma_grids(phase_config)
     scenario_rows: list[dict[str, object]] = []
     scenarios: list[dict[str, object]] = []
-    reference_name = "optimistic / wide / medium"
+    reference_name = f"optimistic / wide / medium / {reference_variant}"
     reference_scenario: dict[str, object] | None = None
 
-    eta_map = sigma1[:, None] * clock_surrogate["sstar"] + sigma2[None, :] * clock_surrogate["sstar"] ** 2
-    kappa_map = sigma1[:, None] + 2.0 * clock_surrogate["sstar"] * sigma2[None, :]
-    clock_like_map = local_clock_likelihood(eta_map, kappa_map, clock_surrogate["mean"], clock_surrogate["inv_cov"])
+    sstar = float(surrogate_variants["grid_matched"]["sstar"])
+    eta_map = sigma1[:, None] * sstar + sigma2[None, :] * sstar**2
+    kappa_map = sigma1[:, None] + 2.0 * sstar * sigma2[None, :]
 
-    for bound_name, bound in bounds.items():
-        for eos_name, eos_prior in eos_priors.items():
-            _, _, jlike = phase_a_likelihood(phase_config, bound, eos_prior)
-            jposterior = normalize(jlike)
-            sigma_stats_dec = summarize_sigma_posterior(sigma1, sigma2, jposterior)
-            projected_basis = transformed_basis_stats(eta_map, kappa_map, jposterior)
-            projected_mean = np.array(
-                [
-                    projected_basis["eta_star"]["mean"],
-                    projected_basis["kappa_star"]["mean"],
-                ],
-                dtype=float,
-            )
-            pre_clock_mahal = mahalanobis_distance(projected_mean, clock_surrogate["mean"], clock_surrogate["inv_cov"])
-            clock_like_expectation = float(np.sum(jposterior * clock_like_map))
+    for variant_name, surrogate in surrogate_variants.items():
+        clock_like_map = local_clock_likelihood(eta_map, kappa_map, surrogate["mean"], surrogate["inv_cov"])
+        for bound_name, bound in bounds.items():
+            for eos_name, eos_prior in eos_priors.items():
+                _, _, jlike = phase_a_likelihood(phase_config, bound, eos_prior)
+                jposterior = normalize(jlike)
+                sigma_stats_dec = summarize_sigma_posterior(sigma1, sigma2, jposterior)
+                projected_basis = transformed_basis_stats(eta_map, kappa_map, jposterior)
+                projected_mean = np.array(
+                    [
+                        projected_basis["eta_star"]["mean"],
+                        projected_basis["kappa_star"]["mean"],
+                    ],
+                    dtype=float,
+                )
+                pre_clock_mahal = mahalanobis_distance(projected_mean, surrogate["mean"], surrogate["inv_cov"])
+                clock_like_expectation = float(np.sum(jposterior * clock_like_map))
 
-            for clock_prior_name, clock_prior_result in clock_prior_results.items():
-                tied_like = jlike * clock_like_map
-                tied_posterior = normalize(tied_like)
-                tied_sigma_stats = summarize_sigma_posterior(sigma1, sigma2, tied_posterior)
-                tied_basis_stats = transformed_basis_stats(eta_map, kappa_map, tied_posterior)
-                dec_evidence = float(np.mean(jlike) * clock_prior_result["evidence"])
-                tied_evidence = float(np.mean(tied_like))
-                bf_dec_over_tied = dec_evidence / tied_evidence
-                scenario = {
-                    "name": f"{bound_name} / {eos_name} / {clock_prior_name}",
-                    "bound": bound_name,
-                    "eos": eos_name,
-                    "clock_prior": clock_prior_result["prior"],
-                    "decoupled": {
-                        "sigma_stats": sigma_stats_dec,
-                        "clock_stats": clock_prior_result["stats"],
-                        "evidence": dec_evidence,
-                    },
-                    "tied": {
-                        "sigma_stats": tied_sigma_stats,
-                        "basis_stats": tied_basis_stats,
-                        "evidence": tied_evidence,
-                    },
-                    "comparison": {
-                        "bf_dec_over_tied": bf_dec_over_tied,
-                        "log10_bf_dec_over_tied": float(math.log10(bf_dec_over_tied)),
-                        "pre_clock_mahalanobis": pre_clock_mahal,
-                        "clock_like_expectation_under_j0337": clock_like_expectation,
-                    },
-                }
-                scenarios.append(scenario)
-                scenario_rows.append(
-                    {
+                for clock_prior_name, clock_prior_result in clock_prior_results[variant_name].items():
+                    tied_like = jlike * clock_like_map
+                    tied_posterior = normalize(tied_like)
+                    tied_sigma_stats = summarize_sigma_posterior(sigma1, sigma2, tied_posterior)
+                    tied_basis_stats = transformed_basis_stats(eta_map, kappa_map, tied_posterior)
+                    dec_evidence = float(np.mean(jlike) * clock_prior_result["evidence"])
+                    tied_evidence = float(np.mean(tied_like))
+                    bf_dec_over_tied = dec_evidence / tied_evidence
+                    scenario = {
+                        "name": f"{bound_name} / {eos_name} / {clock_prior_name} / {variant_name}",
                         "bound": bound_name,
                         "eos": eos_name,
-                        "clock_prior": clock_prior_name,
-                        "bf_dec_over_tied": bf_dec_over_tied,
-                        "log10_bf_dec_over_tied": float(math.log10(bf_dec_over_tied)),
-                        "pre_clock_mahalanobis": pre_clock_mahal,
-                        "clock_like_expectation_under_j0337": clock_like_expectation,
-                        "tied_sigma1_abs95": tied_sigma_stats["sigma1"]["abs_95"],
-                        "tied_sigma2_abs95": tied_sigma_stats["sigma2"]["abs_95"],
-                        "tied_eta_abs95": tied_basis_stats["eta_star"]["abs_95"],
-                        "tied_kappa_abs95": tied_basis_stats["kappa_star"]["abs_95"],
+                        "clock_surrogate": variant_name,
+                        "clock_prior": clock_prior_result["prior"],
+                        "decoupled": {
+                            "sigma_stats": sigma_stats_dec,
+                            "clock_stats": clock_prior_result["stats"],
+                            "evidence": dec_evidence,
+                        },
+                        "tied": {
+                            "sigma_stats": tied_sigma_stats,
+                            "basis_stats": tied_basis_stats,
+                            "evidence": tied_evidence,
+                        },
+                        "comparison": {
+                            "bf_dec_over_tied": bf_dec_over_tied,
+                            "log10_bf_dec_over_tied": float(math.log10(bf_dec_over_tied)),
+                            "pre_clock_mahalanobis": pre_clock_mahal,
+                            "clock_like_expectation_under_j0337": clock_like_expectation,
+                        },
                     }
-                )
-                if scenario["name"] == reference_name:
-                    reference_scenario = scenario
-                    write_posterior_table(REFERENCE_TIED_TSV, sigma1, sigma2, tied_posterior)
+                    scenarios.append(scenario)
+                    scenario_rows.append(
+                        {
+                            "clock_surrogate": variant_name,
+                            "bound": bound_name,
+                            "eos": eos_name,
+                            "clock_prior": clock_prior_name,
+                            "bf_dec_over_tied": bf_dec_over_tied,
+                            "log10_bf_dec_over_tied": float(math.log10(bf_dec_over_tied)),
+                            "pre_clock_mahalanobis": pre_clock_mahal,
+                            "clock_like_expectation_under_j0337": clock_like_expectation,
+                            "tied_sigma1_abs95": tied_sigma_stats["sigma1"]["abs_95"],
+                            "tied_sigma2_abs95": tied_sigma_stats["sigma2"]["abs_95"],
+                            "tied_eta_abs95": tied_basis_stats["eta_star"]["abs_95"],
+                            "tied_kappa_abs95": tied_basis_stats["kappa_star"]["abs_95"],
+                        }
+                    )
+                    if scenario["name"] == reference_name:
+                        reference_scenario = scenario
+                        write_posterior_table(REFERENCE_TIED_TSV, sigma1, sigma2, tied_posterior)
 
     if reference_scenario is None:
         raise RuntimeError("reference scenario was not created")
@@ -399,23 +497,36 @@ def main() -> None:
             "decoupled_model": "L_J0337(sigma1,sigma2) times L_clock(eta_*,kappa_*) with independent parameters",
             "tied_model": "zeta_i = sigma_i, mapped to eta_* and kappa_* at the Request 6 local expansion point",
             "request3_usage": "weak-field scale reference only; not included in the joint likelihood or evidence",
-            "clock_surrogate_note": "Clock likelihood is a Gaussian surrogate in (eta_*,kappa_*) matched to the Request 6 clock-only posterior near s*.",
+            "clock_surrogate_note": (
+                "Clock likelihood is a Gaussian surrogate in (eta_*,kappa_*). Two variants are "
+                "swept: grid_matched (moments from the Request 6 grid posterior; kappa_* width "
+                "is zeta-prior-box-conditional) and eta_only_kappa_free (eta_* from the grid "
+                "posterior, kappa_* width from the Fisher lever-arm audit; reference variant)."
+            ),
+            "bounds_source": {name: asdict(bound) for name, bound in bounds.items()},
+            "bayes_factor_note": (
+                "The clock surrogate likelihood is nearly constant over the J0337 sigma grid, "
+                "so BF(dec/tied) reduces to an Occam-volume ratio set almost entirely by the "
+                "assumed clock prior box; it is a prior-sensitivity audit, not a data-driven "
+                "discriminant. The pre_clock_mahalanobis is likewise structurally stable "
+                "because the symmetric J0337 posterior always projects to a near-zero mean."
+            ),
+            "tied_marginals_note": (
+                "tied_sigma1_abs95/tied_sigma2_abs95/tied_kappa_abs95 inherit the open "
+                "degeneracy ridge of the Phase A translation and its prior box "
+                "(see request5 box_scale_check); only the eta_* direction is data-limited."
+            ),
         },
         "inputs": {
             "request5_phaseA_summary": repo_relative(REQ5_SUMMARY),
             "request6_clock_sector_summary": repo_relative(REQ6_SUMMARY),
+            "request6_lever_arm_audit_summary": repo_relative(REQ6_LEVER_ARM_SUMMARY),
             "request3_mock_summary": repo_relative(REQ3_SUMMARY),
         },
-        "clock_surrogate": {
-            "sstar": clock_surrogate["sstar"],
-            "eta_star": clock_surrogate["eta_stats"],
-            "kappa_star": clock_surrogate["kappa_stats"],
-            "covariance": {
-                "eta_eta": float(clock_surrogate["cov"][0, 0]),
-                "eta_kappa": float(clock_surrogate["cov"][0, 1]),
-                "kappa_kappa": float(clock_surrogate["cov"][1, 1]),
-            },
-            "correlation": clock_surrogate["correlation"],
+        "reference_variant": reference_variant,
+        "clock_surrogate": surrogate_payload(surrogate_variants[reference_variant]),
+        "clock_surrogates": {
+            name: surrogate_payload(surrogate) for name, surrogate in surrogate_variants.items()
         },
         "clock_prior_sweeps": clock_prior_results,
         "scenario_rows": scenario_rows,

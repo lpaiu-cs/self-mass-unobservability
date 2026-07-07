@@ -337,6 +337,37 @@ def delta_gamma_stats_from_eta(eta_stats: dict[str, float], xc: float) -> dict[s
     }
 
 
+def likelihood_grid_from_samples(
+    system: PulsarClockSystem,
+    samples: dict[str, np.ndarray],
+    z1: np.ndarray,
+    z2: np.ndarray,
+    config: ClockConfig,
+) -> np.ndarray:
+    pb = samples["pb_days"]
+    eccentricity = samples["eccentricity"]
+    mp = samples["mp_msun"]
+    mc = samples["mc_msun"]
+    sg = samples["self_gravity_fraction"]
+    weights = samples["weights"]
+    like_sum = np.zeros((z1.size, z2.size), dtype=float)
+    for start in range(0, pb.size, config.batch_size):
+        stop = min(start + config.batch_size, pb.size)
+        model = gamma_clock(
+            pb[start:stop],
+            eccentricity[start:stop],
+            mp[start:stop],
+            mc[start:stop],
+            sg[start:stop],
+            z1,
+            z2,
+            config.observable_model,
+        )
+        resid = system.gamma_obs_s - model
+        like_sum += (np.exp(-0.5 * (resid / system.gamma_sigma_s) ** 2) * weights[None, None, start:stop]).sum(axis=2)
+    return like_sum
+
+
 def system_likelihood_grid(
     system: PulsarClockSystem,
     z1: np.ndarray,
@@ -356,23 +387,9 @@ def system_likelihood_grid(
         shapiro_range_model = 1.0e6 * T_SUN * mc
         weights *= np.exp(-0.5 * ((system.shapiro_range_us - shapiro_range_model) / system.shapiro_range_sigma_us) ** 2)
     weights /= np.sum(weights)
+    samples["weights"] = weights
 
-    like_sum = np.zeros((z1.size, z2.size), dtype=float)
-    for start in range(0, gamma0.size, config.batch_size):
-        stop = min(start + config.batch_size, gamma0.size)
-        model = gamma_clock(
-            pb[start:stop],
-            eccentricity[start:stop],
-            mp[start:stop],
-            mc[start:stop],
-            sg[start:stop],
-            z1,
-            z2,
-            config.observable_model,
-        )
-        resid = system.gamma_obs_s - model
-        like_sum += (np.exp(-0.5 * (resid / system.gamma_sigma_s) ** 2) * weights[None, None, start:stop]).sum(axis=2)
-    likelihood = like_sum
+    likelihood = likelihood_grid_from_samples(system, samples, z1, z2, config)
 
     meta = {
         "mp_mean_msun": float(np.sum(weights * mp)),
@@ -386,7 +403,6 @@ def system_likelihood_grid(
         "gamma_pred_gr_std_s": float(np.sqrt(np.sum(weights * (gamma0 - np.sum(weights * gamma0)) ** 2))),
         "gamma_obs_over_gr_minus_one": float(system.gamma_obs_s / np.sum(weights * gamma0) - 1.0),
     }
-    samples["weights"] = weights
     return likelihood, meta, samples
 
 
@@ -406,6 +422,66 @@ def joint_clock_likelihood(
         meta[system.name] = sys_meta
         cached_samples[system.name] = sys_samples
     return like, meta, cached_samples
+
+
+def clock_only_box_scale_check(
+    config: ClockConfig,
+    cached_samples: dict[str, dict[str, np.ndarray]],
+    systems: list[PulsarClockSystem],
+    sbar: float,
+    evidence_tied_optimistic: float,
+    scales: tuple[float, ...] = (1.0, 2.0, 4.0),
+) -> dict[str, object]:
+    """Rerun the flat-prior clock-only posterior with the zeta prior box enlarged.
+
+    The current systems sample nearly the same self-gravity fraction, so the
+    gamma data constrain only the band eta(sbar); the orthogonal slope
+    direction is prior-box-limited. A data-limited number stays flat across
+    scales, a box-limited number grows with the box. Mass and self-gravity
+    samples are reused across scales so only the prior box changes.
+    """
+    rows: list[dict[str, float]] = []
+    for scale in scales:
+        z1 = np.linspace(config.zeta1_min * scale, config.zeta1_max * scale, config.zeta1_points)
+        z2 = np.linspace(config.zeta2_min * scale, config.zeta2_max * scale, config.zeta2_points)
+        like = np.ones((z1.size, z2.size), dtype=float)
+        for system in systems:
+            like *= likelihood_grid_from_samples(system, cached_samples[system.name], z1, z2, config)
+        prior = np.ones_like(like) / like.size
+        evidence = evidence_under_prior(prior, like)
+        posterior = posterior_from_prior(prior, like)
+        stats = summarize_posterior(z1, z2, posterior)
+        eta = eta_stats_at_sbar(z1, z2, posterior, sbar)
+        basis = basis_stats_at_sstar(z1, z2, posterior, sbar)
+        rows.append(
+            {
+                "box_scale": float(scale),
+                "zeta1_abs_95": stats["zeta1"]["abs_95"],
+                "zeta2_abs_95": stats["zeta2"]["abs_95"],
+                "eta_sbar_abs_95": eta["abs_95"],
+                "kappa_star_abs_95": basis["kappa_star"]["abs_95"],
+                "evidence": evidence,
+                "bayes_factor_clock_over_tied_optimistic": evidence / evidence_tied_optimistic,
+            }
+        )
+    growth = {
+        "zeta1": rows[-1]["zeta1_abs_95"] / rows[0]["zeta1_abs_95"],
+        "zeta2": rows[-1]["zeta2_abs_95"] / rows[0]["zeta2_abs_95"],
+        "eta_sbar": rows[-1]["eta_sbar_abs_95"] / rows[0]["eta_sbar_abs_95"],
+        "kappa_star": rows[-1]["kappa_star_abs_95"] / rows[0]["kappa_star_abs_95"],
+        "bayes_factor": rows[-1]["bayes_factor_clock_over_tied_optimistic"]
+        / rows[0]["bayes_factor_clock_over_tied_optimistic"],
+    }
+    return {
+        "scales": rows,
+        "growth_x4": growth,
+        "box_limited": {
+            "zeta1": bool(growth["zeta1"] > 1.5),
+            "zeta2": bool(growth["zeta2"] > 1.5),
+            "eta_sbar": bool(growth["eta_sbar"] > 1.5),
+            "kappa_star": bool(growth["kappa_star"] > 1.5),
+        },
+    }
 
 
 def load_tied_prior(summary_path: str | Path, bound_name: str = "optimistic") -> tuple[np.ndarray, np.ndarray, np.ndarray]:
@@ -536,8 +612,11 @@ def write_summary_svg(path: str | Path, summary: dict[str, object]) -> Path:
     _svg_heatmap(parts, 90, 130, 430, 330, np.array(summary["decoupled_grid"]["zeta1"]), np.array(summary["decoupled_grid"]["zeta2"]), np.array(dec["posterior"]), "Clock-only posterior")
     _svg_heatmap(parts, 770, 130, 430, 330, np.array(summary["tied_grid"]["zeta1"]), np.array(summary["tied_grid"]["zeta2"]), np.array(tied["posterior"]), "Tied posterior (Request 5 prior)")
     _svg_pull_panel(parts, 140, 560, 1040, 220, dec["pulls"], "System-by-system pulls at the clock-only posterior mean")
-    parts.append(f'<text x="90" y="830" font-family="monospace" font-size="13" fill="#111827">eta(sbar={eta_global["sbar"]:.3f}) = {eta_global["mean"]:.3e} +- {eta_global["std"]:.3e}, |eta|_95 = {eta_global["abs_95"]:.3e}</text>')
-    parts.append(f'<text x="90" y="852" font-family="monospace" font-size="13" fill="#111827">Bayes factors: B(clock/tied_opt) = {summary["bayes_factors"]["clock_over_tied_optimistic"]:.3e}, B(clock/tied_cons) = {summary["bayes_factors"]["clock_over_tied_conservative"]:.3e}</text>')
+    parts.append(f'<text x="90" y="830" font-family="monospace" font-size="13" fill="#111827">eta(sbar={eta_global["sbar"]:.3f}) = {eta_global["mean"]:.3e} +- {eta_global["std"]:.3e}, |eta|_95 = {eta_global["abs_95"]:.3e} [data-driven]</text>')
+    parts.append(f'<text x="90" y="852" font-family="monospace" font-size="13" fill="#111827">Bayes factors: B(clock/tied_opt) = {summary["bayes_factors"]["clock_over_tied_optimistic"]:.3e}, B(clock/tied_cons) = {summary["bayes_factors"]["clock_over_tied_conservative"]:.3e} [box-conditional]</text>')
+    growth = summary["box_scale_check"]["growth_x4"]
+    parts.append(f'<text x="90" y="874" font-family="sans-serif" font-size="12" fill="#4b5563">Prior-box scale check (zeta box x4): eta(sbar) grows x{growth["eta_sbar"]:.2f} [data-limited]; zeta1/zeta2/kappa_* grow x{growth["zeta1"]:.2f}/x{growth["zeta2"]:.2f}/x{growth["kappa_star"]:.2f} and the Bayes factor grows x{growth["bayes_factor"]:.2f} [box-limited].</text>')
+    parts.append('<text x="90" y="894" font-family="sans-serif" font-size="12" fill="#4b5563">Only eta(sbar) is a data-driven constraint; the zeta marginals, kappa_*, and the Bayes factors track the flat zeta prior box.</text>')
     parts.append("</svg>")
     output_path.write_text("\n".join(parts))
     return output_path
@@ -642,6 +721,42 @@ def run_request6(output_dir: str | Path = ".") -> dict[str, object]:
         },
     }
 
+    box_check = clock_only_box_scale_check(config, dec_samples, SYSTEMS, global_sbar, evidence_tied_opt)
+
+    lever_arm_path = output_root / "request6_lever_arm_audit_summary.json"
+    lever_arm_cross_reference: dict[str, object] | None = None
+    if lever_arm_path.exists():
+        lever_arm = json.loads(lever_arm_path.read_text())
+        lever_arm_cross_reference = {
+            "path": lever_arm_path.name,
+            "abs95_kappa_star": float(lever_arm["current_basis_gaussian"]["abs95_kappa_star"]),
+            "note": (
+                "Fisher-style Gaussian audit of the same systems: the data-driven slope "
+                "bound is O(10), so the grid-posterior kappa_star quantile is set by the "
+                "zeta prior box, not by the gamma data."
+            ),
+        }
+
+    reporting_policy = {
+        "data_driven": [
+            "effective_combinations.global_sbar / per_system_sbar (eta at the sampled self-gravity)",
+            "effective_combinations.delta_gamma_per_system",
+        ],
+        "box_conditional": [
+            "models.clock_only.stats.zeta1 / zeta2 marginals",
+            "effective_combinations.linearized_basis.clock_only.kappa_star",
+            "bayes_factors (flat-prior Occam volume; scales with the zeta box, see box_scale_check)",
+        ],
+        "lever_arm_cross_reference": lever_arm_cross_reference,
+        "note": (
+            "The sampled systems span only a ~0.6% range in self-gravity fraction, so the "
+            "gamma likelihood constrains the single band eta(sbar). The orthogonal slope "
+            "direction (kappa_star) and both zeta marginals track the flat zeta prior box; "
+            "see box_scale_check for the explicit scale test. Earlier revisions quoted the "
+            "box-set zeta and kappa_star quantiles as limits; they should not be used that way."
+        ),
+    }
+
     write_posterior_table(output_root / "request6_clock_sector_posterior_clock_only.tsv", z1_dec, z2_dec, posterior_dec)
     write_posterior_table(output_root / "request6_clock_sector_posterior_tied_optimistic.tsv", z1_tied_opt, z2_tied_opt, posterior_tied_opt)
     write_posterior_table(output_root / "request6_clock_sector_posterior_tied_conservative.tsv", z1_tied_cons, z2_tied_cons, posterior_tied_cons)
@@ -653,6 +768,8 @@ def run_request6(output_dir: str | Path = ".") -> dict[str, object]:
         "decoupled_grid": {"zeta1": z1_dec.tolist(), "zeta2": z2_dec.tolist()},
         "tied_grid": {"zeta1": z1_tied_opt.tolist(), "zeta2": z2_tied_opt.tolist()},
         "effective_combinations": effective_combinations,
+        "box_scale_check": box_check,
+        "reporting_policy": reporting_policy,
         "models": {
             "clock_only": {
                 "stats": stats_dec,
@@ -692,11 +809,11 @@ def print_summary(summary: dict[str, object]) -> None:
     stats = summary["models"]["clock_only"]["stats"]
     print(
         f"zeta1 = {stats['zeta1']['mean']:.3e} ± {stats['zeta1']['std']:.3e}, "
-        f"|zeta1|_95 = {stats['zeta1']['abs_95']:.3e}"
+        f"|zeta1|_95 = {stats['zeta1']['abs_95']:.3e} [box-conditional]"
     )
     print(
         f"zeta2 = {stats['zeta2']['mean']:.3e} ± {stats['zeta2']['std']:.3e}, "
-        f"|zeta2|_95 = {stats['zeta2']['abs_95']:.3e}"
+        f"|zeta2|_95 = {stats['zeta2']['abs_95']:.3e} [box-conditional]"
     )
     print()
     eta_global = summary["effective_combinations"]["global_sbar"]["clock_only"]
@@ -718,7 +835,28 @@ def print_summary(summary: dict[str, object]) -> None:
     )
     print(
         f"kappa_* = {basis['kappa_star']['mean']:.3e} ± {basis['kappa_star']['std']:.3e}, "
-        f"|kappa_*|_95 = {basis['kappa_star']['abs_95']:.3e}"
+        f"|kappa_*|_95 = {basis['kappa_star']['abs_95']:.3e} [box-conditional]"
+    )
+    lever = summary["reporting_policy"]["lever_arm_cross_reference"]
+    if lever is not None:
+        print(
+            f"(cross-check: Fisher lever-arm audit gives data-driven |kappa_*|_95 = "
+            f"{lever['abs95_kappa_star']:.3e})"
+        )
+    print()
+    print("=== Zeta prior-box scale check (clock-only) ===")
+    for row in summary["box_scale_check"]["scales"]:
+        print(
+            f"box x{row['box_scale']:.0f}: "
+            f"|zeta1|_95 = {row['zeta1_abs_95']:.3e}, |zeta2|_95 = {row['zeta2_abs_95']:.3e}, "
+            f"|eta(sbar)|_95 = {row['eta_sbar_abs_95']:.3e}, |kappa_*|_95 = {row['kappa_star_abs_95']:.3e}, "
+            f"B(clock/tied_opt) = {row['bayes_factor_clock_over_tied_optimistic']:.3e}"
+        )
+    growth = summary["box_scale_check"]["growth_x4"]
+    print(
+        f"x4 growth: zeta1 = {growth['zeta1']:.2f}, zeta2 = {growth['zeta2']:.2f}, "
+        f"eta(sbar) = {growth['eta_sbar']:.2f}, kappa_* = {growth['kappa_star']:.2f}, "
+        f"BF = {growth['bayes_factor']:.2f}"
     )
     print()
     print("=== System GR leave-one-out diagnostics ===")
@@ -740,7 +878,7 @@ def print_summary(summary: dict[str, object]) -> None:
             f"|zeta2|_95 = {stats['zeta2']['abs_95']:.3e}"
         )
     print()
-    print("=== Bayes factors ===")
+    print("=== Bayes factors (flat-prior Occam volume; box-conditional) ===")
     print(
         f"B(clock/tied_opt) = {summary['bayes_factors']['clock_over_tied_optimistic']:.3e}, "
         f"B(clock/tied_cons) = {summary['bayes_factors']['clock_over_tied_conservative']:.3e}"

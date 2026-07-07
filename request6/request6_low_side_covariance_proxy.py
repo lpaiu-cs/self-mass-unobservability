@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 import json
 import math
 from dataclasses import asdict, dataclass
@@ -111,7 +112,7 @@ J1906 = CovarianceProxySource(
     periastron_advance_deg_yr=7.5841,
     periastron_advance_sigma_deg_yr=2.0e-4,
     system_type="compact companion (DNS or WD)",
-    source_label="van Leeuwen et al. (2026)",
+    source_label="Vleeschower et al. (2026)",
     source_url="https://arxiv.org/abs/2602.05947",
     branches=(
         TimingBranch(
@@ -218,7 +219,10 @@ def sample_branch(source: CovarianceProxySource, branch: TimingBranch, config: C
 
 
 def sample_source(source: CovarianceProxySource, config: CovarianceProxyConfig) -> dict[str, dict[str, np.ndarray]]:
-    rng = np.random.default_rng(config.rng_seed + abs(hash(source.name)) % 10_000)
+    # Stable per-source offset: Python's str hash is salted per process, so
+    # hash(source.name) would make checked-in outputs non-reproducible.
+    name_digest = int.from_bytes(hashlib.sha256(source.name.encode("utf-8")).digest()[:4], "big")
+    rng = np.random.default_rng(config.rng_seed + name_digest % 10_000)
     return {branch.label: sample_branch(source, branch, config, rng) for branch in source.branches}
 
 

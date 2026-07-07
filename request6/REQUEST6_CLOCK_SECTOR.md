@@ -61,17 +61,44 @@ Running `python3 request6_clock_sector.py` now gives:
 observable model: potential_only
 
 clock-only:
-|zeta1|_95 = 3.40e-2
-|zeta2|_95 = 2.375e-1
-eta(sbar=0.134)|_95 = 1.482e-3
+|zeta1|_95 = 3.40e-2      [box-conditional]
+|zeta2|_95 = 2.375e-1     [box-conditional]
+eta(sbar=0.134)|_95 = 1.482e-3   [data-driven]
 
 tied model:
 |zeta1|_95 = 4.70e-5
 |zeta2|_95 = 3.567e-4
 
 Bayes factor:
-B(clock/tied) ~= 1.60e-1
+B(clock/tied) ~= 1.60e-1  [box-conditional Occam volume]
 ```
+
+### Which of these numbers are data-driven
+
+At this two-system stage the sampled self-gravity fractions span only `~0.6%`,
+so the `gamma` data constrain the single band `eta(sbar)`. The `zeta_1`,
+`zeta_2` marginals and the slope combination `kappa_*` are set by the flat
+`zeta` prior box, not by the data. The script now demonstrates this with an
+explicit `box_scale_check` (rerunning the same likelihood with the `zeta` box
+enlarged `x2` and `x4`, reusing the same mass samples):
+
+```text
+box x1: |zeta1|_95 = 3.400e-2, |zeta2|_95 = 2.375e-1, |eta(sbar)|_95 = 1.482e-3, |kappa_*|_95 = 3.586e-2, B(clock/tied_opt) = 1.604e-1
+box x2: |zeta1|_95 = 6.600e-2, |zeta2|_95 = 4.792e-1, |eta(sbar)|_95 = 1.723e-3, |kappa_*|_95 = 6.794e-2, B(clock/tied_opt) = 8.199e-2
+box x4: |zeta1|_95 = 1.320e-1, |zeta2|_95 = 9.583e-1, |eta(sbar)|_95 = 2.470e-3, |kappa_*|_95 = 1.341e-1, B(clock/tied_opt) = 4.286e-2
+x4 growth: zeta1 = 3.88, zeta2 = 4.04, eta(sbar) = 1.67, kappa_* = 3.74, BF = 0.27
+```
+
+So `zeta_1`, `zeta_2`, `kappa_*`, and the Bayes factor all track the prior box
+essentially linearly and must not be quoted as standalone limits. `eta(sbar)`
+grows only sub-linearly (`x1.67` under a `x4` box) — it is dominantly
+data-limited, with residual box sensitivity leaking in through the
+unconstrained slope direction; the `x1` box value `1.48e-3` is quoted as the
+local-audit number with that caveat. The Fisher lever-arm audit of the same
+two systems (`REQUEST6_LEVER_ARM_AUDIT.md`) gives the data-driven slope bound
+`|kappa_*|_95 ~= 8.42`, i.e. two orders of magnitude weaker than the box-set
+grid quantile `3.59e-2`. Earlier revisions of this memo quoted the box-set
+numbers as limits; they should not be used that way.
 
 The important point is that the present sample does **not** separately identify `\zeta_1` and `\zeta_2`. The exact per-system compressed observable is
 
@@ -169,27 +196,37 @@ Fisher-style audit now gives
 
 - baseline after `B1913`: `|kappa_*|_95 = 4.877e-2`
 - `+ J1141`: `4.874e-2`
-- `+ J1906`: `4.864e-2`
-- `+ both`: `4.861e-2`
+- `+ J1906`: `4.865e-2`
+- `+ both`: `4.862e-2`
 
 So adding both low-side systems only improves the current staged audit by about
-`0.3%` relative to the `B1913` baseline.
+`0.3%` relative to the `B1913` baseline. (These low-side numbers were
+regenerated after fixing the per-source RNG seeding to a deterministic
+`sha256`-based offset; the shifts from the earlier revision are at the
+last-digit Monte-Carlo level.)
 
 This is consistent with the source-specific effective rows found in the current
 surrogate implementation:
 
-- `J1141`: genuine low-side source, but `sigma_delta = 1.787e-2` is far too
+- `J1141`: genuine low-side source, but `sigma_delta = 1.794e-2` is far too
   broad to drive the slope direction
-- `J1906`: better nominal precision with `sigma_delta = 6.163e-3`, but the
+- `J1906`: better nominal precision with `sigma_delta = 6.165e-3`, but the
   `xdot`-conditioned branch is effectively suppressed by the `gamma`
   likelihood, so the source does not become the hoped-for low-side rescue
 
 At the combined `B1913 + J1141 + J1906` stage, the front-page local-amplitude
 summary is still modestly better constrained than the slope direction:
 
-- local basis point: `s_ref = 0.155832`
-- `|eta_*|_95 = 2.106e-3`
+- local basis point: `s_ref = 0.155833`
+- `|eta_*|_95 = 2.105e-3`
 - `|kappa_*|_95 = 4.628e-2`
+
+Unlike the two-system stage above, these post-`B1913` slope numbers come from
+the updated Fisher-style audit and agree with the genuine lever arm that
+`B1913` (at `s ~= 0.16`) adds against the `s ~= 0.134` pair, so they are
+approximately data-driven rather than box-set. The box caveat applies to the
+two-system `request6_clock_sector.py` grid stage, which is also the stage that
+Request 7 consumes as its clock surrogate input.
 
 So the present Request 6 branch remains what it was already becoming after the
 earlier conceptual fixes: a legitimate local clock-sector audit, not the place
@@ -216,7 +253,7 @@ inclination branch.
 The result is decisive at the current staging level:
 
 - baseline after `B1913`: `|kappa_*|_95 = 4.877e-2`
-- previous simple low-side stage (`J1141 + J1906`): `4.861e-2`
+- previous simple low-side stage (`J1141 + J1906`): `4.862e-2`
 - covariance-proxy `J1141 + J1906`: `4.875e-2`
 
 So the stronger covariance-aware push does not improve the slope direction at
@@ -227,7 +264,7 @@ The physical reason is also now clearer.
 - `J1141` remains genuinely low-side, but too broad to matter.
 - `J1906` stops behaving like a useful low-side source once its published
   `xdot-gamma` covariance is respected; the correlated branch dominates and
-  shifts its effective `sbar` upward to about `0.154`.
+  shifts its effective `sbar` upward to about `0.153`.
 
 So the low-side bottleneck is no longer just a plausible interpretation. At the
 published-summary covariance level, it has now been demonstrated numerically.
