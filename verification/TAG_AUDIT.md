@@ -69,8 +69,16 @@ we recorded this" dilutes the tag.
 conservative sweep (353 lines): the whole `archive/` tree (superseded history)
 and every self-describing meta line (`This note/file/document/table/... `) in
 active docs/lemmas are now `Note`; genuine mathematical `Proven` claims are
-untouched. Borderline `This lemma ...` and `The repository does not assume ...`
-lines were left for individual review.
+untouched. The borderline `This lemma ...` / `The repository does not assume ...` lines
+were then **individually reviewed** and swept (110 more lines): scope caveats,
+disclaimers ("does not ...", "not a universal ..."), task/role descriptions,
+and bookkeeping -> `Note`; genuine positive results ("proves/derives ...",
+"model is/preserves ...", "minimally irreducible ... class", "self-only ...",
+"necessary conditions", "EEQ class exists ...") kept `Proven`. The one
+remaining related category is the `assumptions-ledger.md` "Non-Assumption For
+M*" sections ("No X is assumed ...", "Y is a working restriction, not a
+theorem"), which are scope-declaration bookkeeping and could be swept to `Note`
+in a final pass, but were left as defensible scope claims for now.
 
 ## What the tags *should* read, per this verification
 
