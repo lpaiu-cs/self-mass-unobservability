@@ -11,6 +11,9 @@ import numpy as np
 class PhaseABounds:
     name: str
     delta_95: float
+    hypothesis: str = ""
+    source_label: str = ""
+    source_url: str = ""
 
 
 @dataclass(frozen=True)
@@ -74,11 +77,14 @@ def marginal_stats(grid: np.ndarray, marginal: np.ndarray) -> dict[str, float]:
     cumulative = np.cumsum(marginal[order])
     idx_95 = int(np.searchsorted(cumulative, 0.95, side="left"))
     bound_95 = float(np.abs(grid[order[min(idx_95, grid.size - 1)]]))
+    grid_abs_max = float(np.max(np.abs(grid)))
     return {
         "mean": mean,
         "std": std,
         "mode": mode,
         "abs_95": bound_95,
+        "grid_abs_max": grid_abs_max,
+        "abs95_over_grid_max": bound_95 / grid_abs_max if grid_abs_max > 0.0 else 0.0,
     }
 
 
@@ -92,6 +98,60 @@ def summarize_posterior(sigma1: np.ndarray, sigma2: np.ndarray, posterior: np.nd
         "sigma2": marginal_stats(sigma2, p2),
         "sigma1_given_sigma2_eq_0": marginal_stats(sigma1, posterior[:, zero_s2]),
         "sigma2_given_sigma1_eq_0": marginal_stats(sigma2, posterior[zero_s1, :]),
+    }
+
+
+def box_scale_check(
+    config: PhaseAConfig,
+    bound: PhaseABounds,
+    prior: EOSPrior,
+    scales: tuple[float, ...] = (1.0, 2.0, 4.0),
+) -> dict[str, object]:
+    """Rerun the grid posterior with the (sigma1, sigma2) prior box enlarged by each scale.
+
+    The EOS-marginalized Delta likelihood leaves a slowly decaying ridge in the
+    (sigma1, sigma2) plane, so under a flat prior the joint 2D marginal
+    quantiles track the prior box instead of converging. This check makes that
+    box-dependence explicit: a data-limited bound stays flat across scales,
+    while a box-limited bound grows with the box.
+    """
+    rows: list[dict[str, float]] = []
+    for scale in scales:
+        scaled = PhaseAConfig(
+            sigma1_min=config.sigma1_min * scale,
+            sigma1_max=config.sigma1_max * scale,
+            sigma1_points=config.sigma1_points,
+            sigma2_min=config.sigma2_min * scale,
+            sigma2_max=config.sigma2_max * scale,
+            sigma2_points=config.sigma2_points,
+            s_ns_points=config.s_ns_points,
+            s_wd=config.s_wd,
+        )
+        g1, g2, posterior = posterior_grid(scaled, bound, prior)
+        stats = summarize_posterior(g1, g2, posterior)
+        rows.append(
+            {
+                "box_scale": float(scale),
+                "sigma1_abs_95": stats["sigma1"]["abs_95"],
+                "sigma2_abs_95": stats["sigma2"]["abs_95"],
+                "sigma1_cond_abs_95": stats["sigma1_given_sigma2_eq_0"]["abs_95"],
+                "sigma2_cond_abs_95": stats["sigma2_given_sigma1_eq_0"]["abs_95"],
+            }
+        )
+    growth_sigma1 = rows[-1]["sigma1_abs_95"] / rows[0]["sigma1_abs_95"]
+    growth_sigma2 = rows[-1]["sigma2_abs_95"] / rows[0]["sigma2_abs_95"]
+    growth_cond_sigma1 = rows[-1]["sigma1_cond_abs_95"] / rows[0]["sigma1_cond_abs_95"]
+    growth_cond_sigma2 = rows[-1]["sigma2_cond_abs_95"] / rows[0]["sigma2_cond_abs_95"]
+    return {
+        "scales": rows,
+        "growth_x4": {
+            "sigma1_marginal": growth_sigma1,
+            "sigma2_marginal": growth_sigma2,
+            "sigma1_conditional": growth_cond_sigma1,
+            "sigma2_conditional": growth_cond_sigma2,
+        },
+        "marginals_box_limited": bool(growth_sigma1 > 1.5 or growth_sigma2 > 1.5),
+        "conditionals_box_limited": bool(growth_cond_sigma1 > 1.5 or growth_cond_sigma2 > 1.5),
     }
 
 
@@ -167,7 +227,7 @@ def write_summary_svg(path: str | Path, summary: dict[str, object]) -> Path:
         np.array(summary["sigma1_grid"]),
         np.array(summary["sigma2_grid"]),
         np.array(optimistic["posterior"]),
-        "Optimistic bound: |Delta| < 1.5e-6 (95%)",
+        "Optimistic: |Delta| < 1.5e-6 (95%, Voisin+25 planet hyp.)",
     )
     _svg_heatmap(
         parts,
@@ -178,7 +238,7 @@ def write_summary_svg(path: str | Path, summary: dict[str, object]) -> Path:
         np.array(summary["sigma1_grid"]),
         np.array(summary["sigma2_grid"]),
         np.array(conservative["posterior"]),
-        "Conservative bound: |Delta| < 2.3e-6 (95%)",
+        "Conservative: |Delta| < 2.3e-6 (95%, Voisin+25 red-noise hyp.)",
     )
     parts.append('<text x="90" y="545" font-family="sans-serif" font-size="16" font-weight="700" fill="#111827">EOS sensitivity summary (95% bounds on |sigma|)</text>')
     y = 585
@@ -193,7 +253,9 @@ def write_summary_svg(path: str | Path, summary: dict[str, object]) -> Path:
             f'{cons["sigma1"]["abs_95"]:.2e}         {cons["sigma2"]["abs_95"]:.2e}</text>'
         )
         y += 34
-    parts.append('<text x="90" y="760" font-family="sans-serif" font-size="13" fill="#4b5563">Interpretation: sigma1 is constrained at the 10^-5 level, while sigma2 remains broader but still lands in the 10^-4 regime once strong-field s_NS ~ 0.1-0.2 is used.</text>')
+    parts.append('<text x="90" y="742" font-family="sans-serif" font-size="13" fill="#4b5563">Interpretation: the data-driven numbers are the conditional slices (|sigma1|_95 ~ 1e-5 at sigma2=0, |sigma2|_95 ~ 1e-4 at sigma1=0).</text>')
+    parts.append('<text x="90" y="762" font-family="sans-serif" font-size="13" fill="#4b5563">The joint 2D marginal quantiles sit on an open degeneracy ridge and track the flat prior box (see box_scale_check); they are box-conditional, not standalone constraints.</text>')
+    parts.append('<text x="90" y="782" font-family="sans-serif" font-size="13" fill="#4b5563">Delta inputs: Voisin et al. (2025), A&amp;A 693, A143 (arXiv:2411.10066), planet vs red-noise timing-noise hypotheses.</text>')
     parts.append("</svg>")
     output_path.write_text("\n".join(parts))
     return output_path
@@ -207,8 +269,20 @@ def run_phase_a(output_dir: str | Path = ".") -> dict[str, object]:
     sigma1, sigma2 = sigma_grids(config)
 
     bounds = {
-        "optimistic": PhaseABounds("optimistic", 1.5e-6),
-        "conservative": PhaseABounds("conservative", 2.3e-6),
+        "optimistic": PhaseABounds(
+            "optimistic",
+            1.5e-6,
+            hypothesis="circum-ternary planet timing-noise model",
+            source_label="Voisin et al. (2025), A&A 693, A143, |Delta| < 1.5e-6 (95% CL, planet hypothesis)",
+            source_url="https://arxiv.org/abs/2411.10066",
+        ),
+        "conservative": PhaseABounds(
+            "conservative",
+            2.3e-6,
+            hypothesis="achromatic red-noise timing-noise model",
+            source_label="Voisin et al. (2025), A&A 693, A143, |Delta| < 2.3e-6 (95% CL, red-noise hypothesis)",
+            source_url="https://arxiv.org/abs/2411.10066",
+        ),
     }
     priors = {
         "low": EOSPrior("low", 0.10, 0.15),
@@ -232,13 +306,33 @@ def run_phase_a(output_dir: str | Path = ".") -> dict[str, object]:
             payload = {
                 "delta_95": bound.delta_95,
                 "gaussian_sigma": gaussian_sigma_from_95(bound.delta_95),
+                "source": asdict(bound),
                 "stats": stats,
             }
             if prior_name == "wide":
                 payload["posterior"] = posterior.tolist()
+                payload["box_scale_check"] = box_scale_check(config, bound, prior)
                 write_posterior_table(output_root / f"request5_j0337_phaseA_posterior_{bound_name}.tsv", g1, g2, posterior)
             bound_summary[prior_name] = payload
         summary["bounds"][bound_name] = bound_summary
+
+    summary["reporting_policy"] = {
+        "data_driven": [
+            "sigma1_given_sigma2_eq_0 (conditional slice)",
+            "sigma2_given_sigma1_eq_0 (conditional slice)",
+        ],
+        "box_conditional": [
+            "sigma1 joint 2D marginal",
+            "sigma2 joint 2D marginal",
+        ],
+        "note": (
+            "The published |Delta| bound constrains one EOS-smeared linear combination of "
+            "(sigma1, sigma2), leaving a slowly decaying degeneracy ridge. Under the flat "
+            "prior box the joint 2D marginal 95% quantiles therefore track the prior box "
+            "(see box_scale_check) and must not be quoted as standalone constraints; only "
+            "the conditional slices are data-driven at this stage."
+        ),
+    }
 
     summary_path = output_root / "request5_j0337_phaseA_summary.json"
     summary_path.write_text(json.dumps(summary, indent=2))
@@ -249,16 +343,34 @@ def run_phase_a(output_dir: str | Path = ".") -> dict[str, object]:
 def print_summary(summary: dict[str, object]) -> None:
     print("=== J0337 Phase A translation ===")
     for bound_name in ["optimistic", "conservative"]:
+        source = summary["bounds"][bound_name]["wide"]["source"]
+        print(f"{bound_name}: input {source['source_label']}")
+    for bound_name in ["optimistic", "conservative"]:
         wide = summary["bounds"][bound_name]["wide"]["stats"]
         print(
             f"{bound_name}: "
-            f"sigma1 = {wide['sigma1']['mean']:.3e} ± {wide['sigma1']['std']:.3e}, "
-            f"|sigma1|_95 = {wide['sigma1']['abs_95']:.3e}; "
-            f"sigma2 = {wide['sigma2']['mean']:.3e} ± {wide['sigma2']['std']:.3e}, "
-            f"|sigma2|_95 = {wide['sigma2']['abs_95']:.3e}; "
             f"conditional(|sigma1|,|sigma2|)_95 = "
             f"({wide['sigma1_given_sigma2_eq_0']['abs_95']:.3e}, "
-            f"{wide['sigma2_given_sigma1_eq_0']['abs_95']:.3e})"
+            f"{wide['sigma2_given_sigma1_eq_0']['abs_95']:.3e}) [data-driven]; "
+            f"joint marginals |sigma1|_95 = {wide['sigma1']['abs_95']:.3e}, "
+            f"|sigma2|_95 = {wide['sigma2']['abs_95']:.3e} [box-conditional]"
+        )
+    print()
+    print("=== Prior-box scale check (wide EOS prior) ===")
+    for bound_name in ["optimistic", "conservative"]:
+        check = summary["bounds"][bound_name]["wide"]["box_scale_check"]
+        for row in check["scales"]:
+            print(
+                f"{bound_name} box x{row['box_scale']:.0f}: "
+                f"marginal(|s1|,|s2|)_95 = ({row['sigma1_abs_95']:.3e}, {row['sigma2_abs_95']:.3e}), "
+                f"conditional = ({row['sigma1_cond_abs_95']:.3e}, {row['sigma2_cond_abs_95']:.3e})"
+            )
+        print(
+            f"{bound_name}: x4 growth marginal(s1,s2) = "
+            f"({check['growth_x4']['sigma1_marginal']:.2f}, {check['growth_x4']['sigma2_marginal']:.2f}), "
+            f"conditional = ({check['growth_x4']['sigma1_conditional']:.2f}, {check['growth_x4']['sigma2_conditional']:.2f}) "
+            f"-> marginals box-limited: {check['marginals_box_limited']}, "
+            f"conditionals box-limited: {check['conditionals_box_limited']}"
         )
     print()
     print("=== EOS sensitivity (95% bounds) ===")

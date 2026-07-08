@@ -188,4 +188,4 @@ free-fall sector (`LLR`, `J0337`, and any later real-data orbital tests).
 - `PSR J1756-2251`: [Ferdman et al. 2014](https://arxiv.org/abs/1406.5507)
 - `PSR J1913+1102`: [Ferdman et al. 2020](https://arxiv.org/abs/2007.04175)
 - `PSR J1141-6545`: [Bhat, Bailes, Verbiest 2008](https://arxiv.org/abs/0804.0956), [Venkatraman Krishnan et al. 2020](https://arxiv.org/abs/2001.11405)
-- `PSR J1906+0746`: [van Leeuwen et al. 2026](https://arxiv.org/abs/2602.05947)
+- `PSR J1906+0746`: [Vleeschower et al. (2026)](https://arxiv.org/abs/2602.05947)

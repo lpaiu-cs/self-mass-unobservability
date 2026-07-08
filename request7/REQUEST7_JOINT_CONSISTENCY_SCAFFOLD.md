@@ -90,8 +90,17 @@ study, not a real-data weak-field evidence branch.
 ## Clock Likelihood Surrogate
 
 The clock branch is represented by a local Gaussian surrogate in
-`(\eta_*, \kappa_*)`, matched to the `Request 6` clock-only posterior at the
-current expansion point `s_*`.
+`(\eta_*, \kappa_*)` derived from the `Request 6` two-system clock-only
+posterior at the current expansion point `s_*`. Two variants are swept:
+
+- `grid_matched`: moments matched directly to the `Request 6` grid posterior.
+  Its `kappa_*` width (`~2.0e-2`) inherits the flat `zeta` prior box of that
+  grid and therefore **overstates** the clock slope information (the Fisher
+  lever-arm audit of the same two systems gives `|kappa_*|_95 ~= 8.42`).
+- `eta_only_kappa_free` (**reference variant**): `eta_*` moments from the same
+  grid posterior (the data-driven band constraint), `kappa_*` width taken from
+  the Fisher lever-arm audit (`sigma = 8.42/1.96 ~= 4.3`), correlation
+  dropped. This removes the `zeta`-prior-box artifact from the surrogate.
 
 This is a deliberate approximation.
 
@@ -100,6 +109,12 @@ It is justified here because:
 - `Request 6` was already shown to be local-basis dominated,
 - the current purpose is a provisional consistency scaffold,
 - not a final clock-sector TOA analysis.
+
+A natural future upgrade is to moment-match the final
+`B1913 + low-side` combined posterior (whose slope information is
+approximately data-driven, `|kappa_*|_95 ~= 4.6e-2`) instead of the two-system
+stage; that is left to the next revision because it also requires re-deriving
+the expansion point consistently.
 
 ## Prior Sensitivity Sweep
 
@@ -121,21 +136,27 @@ remain prior-dominated.
 The executed scaffold gives a very consistent picture.
 
 For the reference scenario
-`optimistic / wide / medium`:
+`optimistic / wide / medium / eta_only_kappa_free`:
 
 - the pre-clock projected tension is only
-  `0.592` Mahalanobis,
+  `0.591` Mahalanobis
+  (`0.592` under the `grid_matched` surrogate — the tension is carried by the
+  `eta_*` direction, so the surrogate choice barely moves it),
 - the tied posterior projects to
-  `|eta_*|_95 ≈ 1.99e-6`,
-  `|kappa_*|_95 ≈ 5.62e-5`,
+  `|eta_*|_95 ≈ 1.99e-6` (data-limited direction),
+  `|kappa_*|_95 ≈ 5.62e-5` (box-conditional: it inherits the open `Phase A`
+  degeneracy ridge and its `sigma` prior box, see the `request5`
+  `box_scale_check`),
 - while the standalone `Request 6` clock audit is much broader:
-  `|eta_*|_95 ≈ 1.48e-3`,
-  `|kappa_*|_95 ≈ 3.59e-2`.
+  `|eta_*|_95 ≈ 1.48e-3` (data-driven),
+  with the clock slope direction essentially unconstrained at the two-system
+  stage (Fisher `|kappa_*|_95 ~= 8.42`; the earlier quoted `3.59e-2` was set
+  by the `zeta` grid box, not by the data).
 
 So, at the current local-data level, the tied image of the `J0337 Phase A`
 posterior sits deep inside the allowed clock local-basis region.
-Numerically, the tied local basis is narrower than the standalone clock audit
-by factors of about `7.5e2` in `eta_*` and `6.4e2` in `kappa_*`.
+In the data-limited `eta_*` direction the tied projection is narrower than
+the standalone clock audit by a factor of about `7.5e2`.
 
 That means the present clock branch is **not** creating a strong inconsistency
 with the strong-field free-fall branch.
@@ -146,18 +167,28 @@ The current joint scaffold therefore reads primarily as
 - and the tied-vs-decoupled Bayes factor being strongly affected by prior
   volume rather than by a sharp data clash.
 
-Across the full prior sweep:
+Across the full sweep (2 surrogates x 2 bounds x 3 EOS priors x 3 clock
+priors = 36 scenarios):
 
-- `log10 BF(decoupled/tied)` stays between about `-0.82` and `-2.41`,
-- the span is driven mostly by the chosen clock prior box,
+- `log10 BF(decoupled/tied)` stays between about `-2.41` and `-0.49`
+  (`[-2.41, -0.82]` under `grid_matched`, `[-1.49, -0.49]` under
+  `eta_only_kappa_free`),
+- the span is driven almost entirely by the chosen clock prior box: the clock
+  surrogate likelihood is nearly constant over the `J0337` `sigma` grid, so
+  the `J0337` factor cancels in the ratio and the BF reduces to an
+  Occam-volume ratio (only a handful of distinct BF values occur across all
+  scenarios),
 - while the projected pre-clock tension and the `J0337`-averaged clock
-  likelihood stay nearly unchanged.
+  likelihood stay nearly unchanged (the tension is structurally stable
+  because the symmetric `J0337` posterior always projects to a near-zero
+  mean).
 
 That is exactly the signature of a provisional scaffold in which
 
 - the identifiable tension direction is weak,
 - the clock branch is local and broad,
-- and model comparison is informative mainly as a prior-sensitivity audit.
+- and model comparison is informative mainly as a prior-sensitivity audit,
+  **not** as a data-driven discriminant.
 
 ## Current Reading
 
