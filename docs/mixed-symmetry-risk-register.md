@@ -2,7 +2,7 @@
 
 ## Purpose
 
-- Status: Proven. This register records whether any mixed-symmetry or otherwise non-STF primitive-family risk remains inside the current theorem domain.
+- Status: Note. This register records whether any mixed-symmetry or otherwise non-STF primitive-family risk remains inside the current theorem domain.
 
 | Sector | Status | Resolution | Residual risk |
 | --- | --- | --- | --- |

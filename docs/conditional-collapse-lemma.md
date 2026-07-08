@@ -1,6 +1,6 @@
 > LEGACY / HISTORICAL NOTE
 >
-> Status: Proven. This note is retained for provenance only. The closed bridge statement now lives in [`collapse-bridge-status.md`](collapse-bridge-status.md) and [`finite-family-collapse-theorem.md`](finite-family-collapse-theorem.md).
+> Status: Note. This note is retained for provenance only. The closed bridge statement now lives in [`collapse-bridge-status.md`](collapse-bridge-status.md) and [`finite-family-collapse-theorem.md`](finite-family-collapse-theorem.md).
 
 # Conditional Collapse Lemma
 

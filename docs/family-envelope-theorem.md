@@ -33,6 +33,6 @@
 
 ## Boundary
 
-- Status: Proven. This note is class-limited to the currently stated MVP assumptions.
+- Status: Note. This note is class-limited to the currently stated MVP assumptions.
 - Status: Proven. It does not claim anything about parity-odd, spinning, nonlocal, or internal-state loophole sectors.
-- Status: Proven. This note does not itself prove the positive collapse branch; that proof is now recorded separately in [`finite-family-collapse-theorem.md`](finite-family-collapse-theorem.md) and [`collapse-bridge-status.md`](collapse-bridge-status.md).
+- Status: Note. This note does not itself prove the positive collapse branch; that proof is now recorded separately in [`finite-family-collapse-theorem.md`](finite-family-collapse-theorem.md) and [`collapse-bridge-status.md`](collapse-bridge-status.md).

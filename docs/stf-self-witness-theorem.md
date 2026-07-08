@@ -6,7 +6,7 @@
 
 ## Scope
 
-- Status: Proven. This note is class-limited to genuinely new parity-even fully symmetric trace-free primitive families `Y_L` of rank `L \ge 3` in the MVP free-fall sector at fixed order `\Delta \le 4`.
+- Status: Note. This note is class-limited to genuinely new parity-even fully symmetric trace-free primitive families `Y_L` of rank `L \ge 3` in the MVP free-fall sector at fixed order `\Delta \le 4`.
 - Status: Proven. It does not claim anything about mixed-symmetry, antisymmetric, trace-descended, or derivative-generated higher-rank structures.
 - Status: Proven. It is a threshold theorem only.
 - Status: Proven. It is not a theorem about the full first mixed-witness pattern.

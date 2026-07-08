@@ -1,6 +1,6 @@
 # Theorem A: Free-Fall Collapse Backbone
 
-- Status: Proven. This note is the compressed technical backbone of the free-fall theorem package.
+- Status: Note. This note is the compressed technical backbone of the free-fall theorem package.
 - Status: Proven. The authoritative front-door statement is [`theorem-package.md`](theorem-package.md).
 
 ## Closed Theorem Domain

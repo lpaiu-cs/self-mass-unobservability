@@ -1,6 +1,6 @@
 # Release Note
 
-- Status: Proven. This note is the short publication and handoff summary of the frozen free-fall theorem package.
+- Status: Note. This note is the short publication and handoff summary of the frozen free-fall theorem package.
 - Status: Proven. It restates only closed results already established elsewhere in the repository.
 
 ## Theorem Domain

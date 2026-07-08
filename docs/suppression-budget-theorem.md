@@ -2,7 +2,7 @@
 
 ## Scope
 
-- Status: Proven. This note is a class-limited theorem for the currently audited family classes only.
+- Status: Note. This note is a class-limited theorem for the currently audited family classes only.
 - Status: Proven. It does not claim a universal statement for every imaginable primitive family.
 - Status: Proven. The theorem gives necessary suppression budgets for minimal-sector uniqueness up to fixed order `\Delta_{\max}`, not automatic sufficient conditions for every subclass.
 

@@ -2,7 +2,7 @@
 
 ## Purpose
 
-- Status: Proven. This note separates two statements that must not be conflated:
+- Status: Note. This note separates two statements that must not be conflated:
 - Status: Proven. Statement 1: theorem candidate for the exact current primitive set.
 - Status: Proven. Statement 2: theorem candidate for a physically justified minimal free-fall sector.
 

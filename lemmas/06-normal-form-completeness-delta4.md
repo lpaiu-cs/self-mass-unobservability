@@ -2,7 +2,7 @@
 
 ## Statement
 
-- Status: Proven. This note records the pre-M4 internal reduction attempt before the full contraction-level audit was added.
+- Status: Note. This note records the pre-M4 internal reduction attempt before the full contraction-level audit was added.
 - Status: Conjectural. In the minimal free-fall sector with the pre-M4 catalog, every listed `Delta<=4` scalar candidate reduces to the normal-form target set
 
 ```math

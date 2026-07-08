@@ -1,6 +1,6 @@
 # Paper Outline
 
-- Status: Proven. This note maps the current repository into a stable paper structure.
+- Status: Note. This note maps the current repository into a stable paper structure.
 - Status: Proven. The outline separates main text from appendix-facing support so that the paper does not read like the historical exploration log.
 
 ## Proposed Main Text

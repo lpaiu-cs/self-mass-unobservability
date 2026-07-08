@@ -1,14 +1,14 @@
 > LEGACY / HISTORICAL NOTE
 >
-> Status: Proven. This file records a failed stronger theorem attempt. The active higher-rank result is [`stf-self-witness-theorem.md`](stf-self-witness-theorem.md).
+> Status: Note. This file records a failed stronger theorem attempt. The active higher-rank result is [`stf-self-witness-theorem.md`](stf-self-witness-theorem.md).
 
 # STF Tower Theorem
 
 ## Scope
 
-- Status: Proven. This note is class-limited to genuinely new parity-even fully symmetric trace-free primitive families in the MVP free-fall sector at `\Delta \le 4`.
+- Status: Note. This note is class-limited to genuinely new parity-even fully symmetric trace-free primitive families in the MVP free-fall sector at `\Delta \le 4`.
 - Status: Proven. It does not claim a theorem for mixed-symmetry, antisymmetric, trace-descended, or derivative-generated higher-rank families.
-- Status: Proven. This note now records the failed stronger mixed-pattern theorem only.
+- Status: Note. This note now records the failed stronger mixed-pattern theorem only.
 - Status: Proven. The active higher-rank positive result has moved to [`stf-self-witness-theorem.md`](stf-self-witness-theorem.md).
 
 ## Sharper Split

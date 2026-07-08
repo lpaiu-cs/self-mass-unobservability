@@ -19,7 +19,7 @@
 
 ## What This Does And Does Not Say
 
-- Status: Proven. This note treats the even-rank class `Reven6+` as already audited at the family-admission level.
+- Status: Note. This note treats the even-rank class `Reven6+` as already audited at the family-admission level.
 - Status: Proven. It does not claim that the next class `Rodd7+` has already been audited or shown to preserve audited-set composition.
 - Status: Proven. It does not claim that the future `Rodd7+` audit will preserve audited-set composition or family-envelope closure.
 - Status: Proven. It identifies the next smallest unaudited family class in that historical census while keeping the family-envelope question explicit.

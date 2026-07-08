@@ -1,6 +1,6 @@
 # Archive Freeze Note
 
-- Status: Proven. This note records the final document hierarchy of the frozen theorem package.
+- Status: Note. This note records the final document hierarchy of the frozen theorem package.
 - Status: Proven. It points readers to the authoritative package, supporting appendices, and the preserved historical or bookkeeping material.
 
 ## Authoritative Notes

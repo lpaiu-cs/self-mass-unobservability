@@ -1,6 +1,6 @@
 # Roadmap
 
-- Status: Proven. This file is now frozen as a closeout routing note rather than an active milestone tracker.
+- Status: Note. This file is now frozen as a closeout routing note rather than an active milestone tracker.
 - Status: Proven. The full milestone chronology is preserved in [`archive/roadmap-history.md`](archive/roadmap-history.md).
 
 ## Closed Theorem Work In This Repo

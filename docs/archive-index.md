@@ -1,6 +1,6 @@
 # Archive Index
 
-- Status: Proven. This note records how historical material is quarantined without deleting provenance.
+- Status: Note. This note records how historical material is quarantined without deleting provenance.
 - Status: Proven. The repo is using banner-in-place plus targeted snapshot copies rather than a destructive move sweep.
 
 ## Authoritative Front Door

@@ -2,7 +2,7 @@
 
 ## Purpose
 
-- Status: Proven. This table now separates the special rank-2 STF case from the weaker universal self-witness threshold theorem for genuine STF families with `L \ge 3`.
+- Status: Note. This table now separates the special rank-2 STF case from the weaker universal self-witness threshold theorem for genuine STF families with `L \ge 3`.
 - Status: Proven. It is class-limited to genuine parity-even fully symmetric trace-free primitive families.
 
 | STF class | Audited representatives | Linear scalar witness | Mixed quadratic witness | First self witness | Threshold theorem status | Mixed-pattern status |

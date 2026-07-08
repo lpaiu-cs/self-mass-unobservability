@@ -1,12 +1,12 @@
 > RAW BOOKKEEPING NOTE
 >
-> Status: Proven. This file is a supporting audit ledger, not an authoritative theorem statement.
+> Status: Note. This file is a supporting audit ledger, not an authoritative theorem statement.
 
 # Composition Status
 
 ## Purpose
 
-- Status: Proven. This note records whether the current audited thresholds are jointly sufficient for the pre-R1 audited set `{R2, R0a, R0b}`, the pre-Rodd+ audited set `{R2, R0a, R0b, R1}`, the pre-Reven4+ audited set `{R2, R0a, R0b, R1, Rodd+}`, the pre-Rodd5+ audited set `{R2, R0a, R0b, R1, Rodd+, Reven4+}`, the pre-Reven6+ audited set `{R2, R0a, R0b, R1, Rodd+, Reven4+, Rodd5+}`, and the post-Reven6+ enlarged audited set `{R2, R0a, R0b, R1, Rodd+, Reven4+, Rodd5+, Reven6+}` at `\Delta \le 4`.
+- Status: Note. This note records whether the current audited thresholds are jointly sufficient for the pre-R1 audited set `{R2, R0a, R0b}`, the pre-Rodd+ audited set `{R2, R0a, R0b, R1}`, the pre-Reven4+ audited set `{R2, R0a, R0b, R1, Rodd+}`, the pre-Rodd5+ audited set `{R2, R0a, R0b, R1, Rodd+, Reven4+}`, the pre-Reven6+ audited set `{R2, R0a, R0b, R1, Rodd+, Reven4+, Rodd5+}`, and the post-Reven6+ enlarged audited set `{R2, R0a, R0b, R1, Rodd+, Reven4+, Rodd5+, Reven6+}` at `\Delta \le 4`.
 - Status: Proven. The current post-Reven6+ question is whether any pairwise, triple, quadruple, quintuple, six-family, seven-family, or eight-family combination involving the genuine primitive rank-6 family `Reven6+` leaves a surviving cross-family witness once the current thresholds are imposed.
 
 ## Fixed Threshold Budget

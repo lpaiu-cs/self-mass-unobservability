@@ -1,6 +1,6 @@
 # Collapse Bridge Status
 
-- Status: Proven. This note is frozen as a closed bridge document.
+- Status: Note. This note is frozen as a closed bridge document.
 - Status: Proven. The bridge from irreducible family-envelope closure to the positive finite-family collapse theorem is closed inside the current theorem domain.
 
 | Layer | Status | Closed outcome |

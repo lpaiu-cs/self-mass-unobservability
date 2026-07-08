@@ -64,8 +64,13 @@ records the pre-M4 internal reduction attempt", `lemmas/06`, which then contains
 `Conjectural` steps). Mixing "the proof step is proven" with "it is proven that
 we recorded this" dilutes the tag.
 
-**Fix:** add `Status: Note` / `Status: Bookkeeping` for provenance and
-historical lines; keep `Proven` for the mathematical content only.
+**Fixed:** a `Status: Note` label is now defined in
+[`../docs/status-labels.md`](../docs/status-labels.md) and applied by a
+conservative sweep (353 lines): the whole `archive/` tree (superseded history)
+and every self-describing meta line (`This note/file/document/table/... `) in
+active docs/lemmas are now `Note`; genuine mathematical `Proven` claims are
+untouched. Borderline `This lemma ...` and `The repository does not assume ...`
+lines were left for individual review.
 
 ## What the tags *should* read, per this verification
 

@@ -1,6 +1,6 @@
 # Paper Claims Versus Non-Claims
 
-- Status: Proven. This note separates what the theorem repo proves from what it only classifies, what it does not claim, and what remains empirical.
+- Status: Note. This note separates what the theorem repo proves from what it only classifies, what it does not claim, and what remains empirical.
 
 ## Proved In This Repo
 

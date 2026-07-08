@@ -1,6 +1,6 @@
 # Theorem Dependency Map
 
-- Status: Proven. This note gives the compact dependency graph for the closed free-fall theorem package.
+- Status: Note. This note gives the compact dependency graph for the closed free-fall theorem package.
 - Status: Proven. It is paper-facing and records only the final theorem-layer structure.
 
 ```mermaid

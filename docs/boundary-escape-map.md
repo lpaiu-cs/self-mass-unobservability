@@ -1,6 +1,6 @@
 # Boundary Escape Map
 
-- Status: Proven. This note records the exact assumption-drop failures of the closed free-fall theorem package.
+- Status: Note. This note records the exact assumption-drop failures of the closed free-fall theorem package.
 - Status: Proven. It is not a work log; it is the paper-facing counterexample map.
 
 | Boundary | Status | Smallest explicit counterexample | Exact theorem layer broken | Replacement bookkeeping data |

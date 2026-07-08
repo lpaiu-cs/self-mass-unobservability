@@ -6,7 +6,7 @@
 
 ## Target
 
-- Status: Proven. This note sharpens the old `A8` assumption in the parity-even, nonspinning, local MVP free-fall theorem domain at fixed order `\Delta \le 4`.
+- Status: Note. This note sharpens the old `A8` assumption in the parity-even, nonspinning, local MVP free-fall theorem domain at fixed order `\Delta \le 4`.
 - Status: Proven. The exact question is whether finite total admitted primitive-family content is really needed for the positive finite-family collapse theorem, or whether the weaker condition of local family-spectrum finiteness below the chosen cutoff already suffices.
 
 ## Layer Separation

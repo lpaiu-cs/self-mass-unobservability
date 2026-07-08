@@ -1,6 +1,6 @@
 > LEGACY / HISTORICAL NOTE
 >
-> Status: Proven. This note is retained for provenance only. The authoritative front-door package begins at [`theorem-package.md`](theorem-package.md).
+> Status: Note. This note is retained for provenance only. The authoritative front-door package begins at [`theorem-package.md`](theorem-package.md).
 
 # Broad Collapse Reformulation
 

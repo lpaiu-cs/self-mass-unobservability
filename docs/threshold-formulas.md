@@ -2,7 +2,7 @@
 
 ## Purpose
 
-- Status: Proven. This note lifts the audited witness-threshold results from case labels into formula-level statements for the currently audited family classes.
+- Status: Note. This note lifts the audited witness-threshold results from case labels into formula-level statements for the currently audited family classes.
 - Status: Proven. The formulas are class-limited to the audited families only; they are not universal statements for every imaginable primitive family.
 
 ## Notation

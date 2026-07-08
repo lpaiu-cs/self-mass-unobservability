@@ -2,7 +2,7 @@
 
 ## Purpose
 
-- Status: Proven. This note separates the weaker self-witness threshold theorem from the stronger mixed-pattern story.
+- Status: Note. This note separates the weaker self-witness threshold theorem from the stronger mixed-pattern story.
 - Status: Proven. The threshold theorem is now closed for genuine parity-even STF primitive families with `L \ge 3`.
 - Status: Proven. The mixed-pattern story remains split and must not be smuggled back into the threshold theorem.
 

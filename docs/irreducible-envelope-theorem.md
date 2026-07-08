@@ -6,7 +6,7 @@
 
 ## Scope
 
-- Status: Proven. This note is class-limited to parity-even, nonspinning, local primitive families in the MVP free-fall sector at `\Delta \le 4`.
+- Status: Note. This note is class-limited to parity-even, nonspinning, local primitive families in the MVP free-fall sector at `\Delta \le 4`.
 - Status: Proven. It does not claim anything about clock observables, parity-odd sectors, spinning sectors, nonlocal kernels, or orbital-timescale internal state variables.
 
 ## Target

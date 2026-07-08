@@ -1,6 +1,6 @@
 > HISTORICAL STATUS LEDGER
 >
-> Status: Proven. This file preserves milestone chronology and checkpoint structure. It is not an authoritative theorem entry point.
+> Status: Note. This file preserves milestone chronology and checkpoint structure. It is not an authoritative theorem entry point.
 
 # Roadmap
 
@@ -210,33 +210,33 @@ Status: Conjectural. The repository roadmap is organized around theorem progress
 
 ## Near-Term Sequence
 
-1. Status: Proven. The enlarged audited-set composition question is now closed positively for the audited family classes `{R2, R0a, R0b, R1}`.
-2. Status: Proven. The rank-3 family gate `Rodd+` is now resolved as a genuine new obstruction class rather than an absorbed derivative block.
-3. Status: Proven. Re-close audited-set composition for the further enlarged family set that now includes `Rodd+`.
-4. Status: Proven. The rank-4 family gate `Reven4+` is now resolved as a genuine new obstruction class rather than an absorbed trace descendant or derivative block.
-5. Status: Proven. Audited-set composition is now re-closed for the further enlarged family set that includes `Reven4+`.
-6. Status: Proven. The live envelope gate `Rodd5+` is now resolved as a genuine new obstruction class rather than a trace descendant or derivative-generated artifact.
-7. Status: Proven. Audited-set composition is now re-closed for the further enlarged family set that includes `Rodd5+`.
-8. Status: Proven. The `Reven6+` gate is now resolved as a genuine new obstruction class, with `Z2` first and `EZZ` the only audited first mixed-layer label.
-9. Status: Proven. The audited rank-6 result supports the interpretation that rank `L = 4` is an isolated even-rank exception inside the audited STF sector rather than the first confirmed member of a broader audited even-rank `EEY` pattern.
-10. Status: Proven. Audited-set composition is now re-closed for the further enlarged family set that includes `Reven6+`.
-11. Status: Proven. The rank-by-rank STF march is now superseded by the irreducible family-envelope theorem inside the current theorem domain.
-12. Status: Proven. The positive finite-family fixed-order collapse bridge is now closed inside the current parity-even nonspinning local MVP free-fall theorem domain.
-13. Status: Proven. The first explicit `A5` boundary stress test now succeeds: the one-coordinate smooth flat monopole model breaks analytic jet collapse while leaving locality and finite operator closure intact.
-14. Status: Proven. The first explicit genuine `A3` boundary stress test now succeeds: the one-coordinate power-law hereditary kernel breaks local monopole reduction while leaving the primitive-family envelope and fixed-order local operator closure intact.
-15. Status: Proven. The first explicit `A4` boundary stress test now succeeds: the one-state local analytic `\chi` model breaks the original Y-only no-state theorem while preserving locality, analyticity, finite primitive-family content, and fixed-order operator closure.
-16. Status: Proven. The adiabatic or slaved local-state control is not the sharp `A4` escape, because it eliminates back into the original `Y`-only bookkeeping.
-17. Status: Proven. A second positive branch now survives beyond the original theorem: finite local state-augmented collapse with explicit `(Y^I,\chi^a)` state-space data and a separate Wilson sector.
-18. Status: Proven. The former live bottleneck `"replace A8 by a sharp local weight-spectrum finiteness condition"` is now resolved positively: local weight-spectrum finiteness below the fixed cutoff suffices for the positive theorem.
-19. Status: Proven. The explicit infinite low-weight STF tower is the sharp `A8` failure mode when that weaker condition is dropped.
+1. Status: Note. The enlarged audited-set composition question is now closed positively for the audited family classes `{R2, R0a, R0b, R1}`.
+2. Status: Note. The rank-3 family gate `Rodd+` is now resolved as a genuine new obstruction class rather than an absorbed derivative block.
+3. Status: Note. Re-close audited-set composition for the further enlarged family set that now includes `Rodd+`.
+4. Status: Note. The rank-4 family gate `Reven4+` is now resolved as a genuine new obstruction class rather than an absorbed trace descendant or derivative block.
+5. Status: Note. Audited-set composition is now re-closed for the further enlarged family set that includes `Reven4+`.
+6. Status: Note. The live envelope gate `Rodd5+` is now resolved as a genuine new obstruction class rather than a trace descendant or derivative-generated artifact.
+7. Status: Note. Audited-set composition is now re-closed for the further enlarged family set that includes `Rodd5+`.
+8. Status: Note. The `Reven6+` gate is now resolved as a genuine new obstruction class, with `Z2` first and `EZZ` the only audited first mixed-layer label.
+9. Status: Note. The audited rank-6 result supports the interpretation that rank `L = 4` is an isolated even-rank exception inside the audited STF sector rather than the first confirmed member of a broader audited even-rank `EEY` pattern.
+10. Status: Note. Audited-set composition is now re-closed for the further enlarged family set that includes `Reven6+`.
+11. Status: Note. The rank-by-rank STF march is now superseded by the irreducible family-envelope theorem inside the current theorem domain.
+12. Status: Note. The positive finite-family fixed-order collapse bridge is now closed inside the current parity-even nonspinning local MVP free-fall theorem domain.
+13. Status: Note. The first explicit `A5` boundary stress test now succeeds: the one-coordinate smooth flat monopole model breaks analytic jet collapse while leaving locality and finite operator closure intact.
+14. Status: Note. The first explicit genuine `A3` boundary stress test now succeeds: the one-coordinate power-law hereditary kernel breaks local monopole reduction while leaving the primitive-family envelope and fixed-order local operator closure intact.
+15. Status: Note. The first explicit `A4` boundary stress test now succeeds: the one-state local analytic `\chi` model breaks the original Y-only no-state theorem while preserving locality, analyticity, finite primitive-family content, and fixed-order operator closure.
+16. Status: Note. The adiabatic or slaved local-state control is not the sharp `A4` escape, because it eliminates back into the original `Y`-only bookkeeping.
+17. Status: Note. A second positive branch now survives beyond the original theorem: finite local state-augmented collapse with explicit `(Y^I,\chi^a)` state-space data and a separate Wilson sector.
+18. Status: Note. The former live bottleneck `"replace A8 by a sharp local weight-spectrum finiteness condition"` is now resolved positively: local weight-spectrum finiteness below the fixed cutoff suffices for the positive theorem.
+19. Status: Note. The explicit infinite low-weight STF tower is the sharp `A8` failure mode when that weaker condition is dropped.
 20. Status: Counterexample candidate. The remaining explicit failure modes are now documented rather than hidden: broader `A3` hereditary branches beyond the minimal power-law model, broader `A5` nonanalytic monopole classes beyond the smooth-flat model, mixed `A4+A5` or `A3+A4` state-memory escapes beyond the sharp one-state local branch, all-orders `A7` failure beyond the fixed cutoff theorem, or theorem-domain escape beyond the present envelope.
 21. Status: Conjectural. Revisit the scalar `s_A` corollary only after deciding whether to weaken the current theorem-domain assumptions or extend the theorem beyond the present domain.
 
 ## Explicit Non-Goals For M1
 
-- Status: Proven. No new LLR, MLRS, PEP, Nutimo, or TOA pipeline work belongs in M1.
-- Status: Proven. No clock-sector theorem is attempted in M1.
-- Status: Proven. No build or runtime chores count as theorem progress.
+- Status: Note. No new LLR, MLRS, PEP, Nutimo, or TOA pipeline work belongs in M1.
+- Status: Note. No clock-sector theorem is attempted in M1.
+- Status: Note. No build or runtime chores count as theorem progress.
 
 ## Classification Rule
 

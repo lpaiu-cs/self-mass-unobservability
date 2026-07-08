@@ -1,12 +1,12 @@
 > RAW BOOKKEEPING NOTE
 >
-> Status: Proven. This file is a supporting family-census table, not an authoritative theorem statement.
+> Status: Note. This file is a supporting family-census table, not an authoritative theorem statement.
 
 # Family-Envelope Table
 
 ## Purpose
 
-- Status: Proven. This table records the irreducible family-envelope census under the current MVP free-fall assumptions at `\Delta \le 4`.
+- Status: Note. This table records the irreducible family-envelope census under the current MVP free-fall assumptions at `\Delta \le 4`.
 - Status: Proven. The table is theorem-domain specific, not universal.
 
 | Class ID | Status | Envelope state | Family group | Irreducible character | Resolution mechanism | Current theorem role |

@@ -1,12 +1,12 @@
 > RAW BOOKKEEPING NOTE
 >
-> Status: Proven. This file is a supporting threshold and composition table, not an authoritative theorem statement.
+> Status: Note. This file is a supporting threshold and composition table, not an authoritative theorem statement.
 
 # Family-Class Table
 
 ## Purpose
 
-- Status: Proven. This table compresses the current audited family classes into a single witness-threshold and composition view.
+- Status: Note. This table compresses the current audited family classes into a single witness-threshold and composition view.
 - Status: Proven. The thresholds listed below are necessary budgets for minimal-sector uniqueness up to `\Delta_{\max} = 4`.
 - Status: Proven. The self-versus-mixed split below is class-limited to the currently audited family classes.
 

@@ -1,12 +1,12 @@
 > RAW BOOKKEEPING NOTE
 >
-> Status: Proven. This file is a supporting threshold-status ledger, not an authoritative theorem statement.
+> Status: Note. This file is a supporting threshold-status ledger, not an authoritative theorem statement.
 
 # Sharp Threshold Status
 
 ## Purpose
 
-- Status: Proven. This note records whether the current suppression budget for each audited family class is already sharp, merely a lower bound, or still unresolved.
+- Status: Note. This note records whether the current suppression budget for each audited family class is already sharp, merely a lower bound, or still unresolved.
 - Status: Proven. The classification below is class-limited to the currently audited family classes at `\Delta_{\max} = 4`.
 
 | Family class | First self witness | Self weight | First mixed witness | Mixed weight | `W_min` | Threshold class | Current consistency statement |

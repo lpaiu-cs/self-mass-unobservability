@@ -1,6 +1,6 @@
 # Reproducibility Note
 
-- Status: Proven. This note records the release-stage validation path for the frozen theorem package.
+- Status: Note. This note records the release-stage validation path for the frozen theorem package.
 - Status: Proven. It separates reliable smoke checks from the slower monolithic symbolic runner.
 
 ## Reliable Checks

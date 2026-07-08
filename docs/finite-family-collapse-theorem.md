@@ -6,7 +6,7 @@
 
 ## Scope
 
-- Status: Proven. This note is class-limited to the parity-even, nonspinning, local MVP free-fall sector at fixed order `\Delta \le 4`.
+- Status: Note. This note is class-limited to the parity-even, nonspinning, local MVP free-fall sector at fixed order `\Delta \le 4`.
 - Status: Proven. It works only inside the current theorem domain defined by `A1`-`A8` in [`assumptions-ledger.md`](assumptions-ledger.md).
 - Status: Proven. It does not claim minimal-sector uniqueness.
 - Status: Proven. It does not claim anything about parity-odd, spinning, nonlocal, or orbital-timescale internal-state sectors.

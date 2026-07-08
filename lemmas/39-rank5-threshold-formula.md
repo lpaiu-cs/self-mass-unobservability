@@ -2,7 +2,7 @@
 
 ## Scope
 
-- Status: Proven. This note classifies the witness threshold for the genuine local parity-even fully symmetric trace-free rank-5 family `U_{ijklm}` audited in [`38-rank5-family-admission.md`](38-rank5-family-admission.md).
+- Status: Note. This note classifies the witness threshold for the genuine local parity-even fully symmetric trace-free rank-5 family `U_{ijklm}` audited in [`38-rank5-family-admission.md`](38-rank5-family-admission.md).
 - Status: Proven. The formula is class-limited to the audited `Rodd5+` family class.
 
 ## Formulae
