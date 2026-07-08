@@ -69,7 +69,7 @@ This ledger records exact failure modes, not vague concerns. If a proof step bre
 - Status: Proven. The raw R3-extended survivor list is not linearly independent; its first exact quartic mixed dependence relation is `-E2T2/2 + 2 E2T2_mixed_1 - E2T2_mixed_2 + E2T2_mixed_3 = 0`.
 - Status: Proven. The raw R3-extended `21`-element survivor list is bookkeeping only and should not be read as a corrected basis statement; the composition audit uses the thresholded rank-3 family instead.
 - Status: Proven. The raw R4-extended survivor list is not linearly independent; its first exact quartic mixed dependence relation is `-E2Q2/2 + 2 E2Q2_mixed_1 - E2Q2_mixed_2 + E2Q2_mixed_3 = 0`.
-- Status: Proven. The raw R4-extended `22`-element survivor list has rank `19` and nullity `3`, and it is bookkeeping only rather than a corrected basis statement.
+- Status: Proven. The raw R4-extended `22`-element survivor list has rank `19` and nullity `3`, and it is bookkeeping only rather than a corrected basis statement. (Superseded: the corrected rank-4 survivor dimension is `25`; the `22`-element list omitted the higher-degree mixed survivors `EEQ, QQQ, E3Q, EQ3, EDtEQ, GradEGradQ`, now restored in `../../symbolic/r4_survivor_rank_check.py`.)
 - Status: Conjectural. The raw R5-extended `23`-element survivor list has sample-stable rank `19` and nullity `4`, and it is bookkeeping only rather than a corrected basis statement.
 - Status: Conjectural. The raw R6-extended `22`-label family list has sample-stable rank `16` and nullity `6`, and it is bookkeeping only rather than a corrected basis statement.
 - Status: Proven. The irreducible family-envelope theorem now closes the parity-even nonspinning local MVP family domain on the audited scalar/vector/STF classes.

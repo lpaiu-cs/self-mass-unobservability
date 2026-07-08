@@ -17,9 +17,11 @@ recommended fixes:
   ...").
 
 An assumption is neither proven nor conjectural — it is an **assumption**.
-**Fix:** introduce a third tag `Status: Assumption` (or `Hypothesis`) for
-`A1`-`A8` and any sentence that merely *states* the domain, in both files.
-Reserve `Proven`/`Conjectural` for derived claims.
+**Fixed:** `A1`-`A8` are now tagged `Status: Assumption` in
+`assumptions-ledger.md` (with a header note explaining the label), and the
+`theorem-package.md:11` line that lists them now reads `Status: Assumption`.
+`Proven`/`Conjectural` are reserved for derived claims. The remaining broad use
+of `Proven` for bookkeeping/history lines (§3) is not yet swept.
 
 ## 2. Envelope-closure claim tagged `Proven` but is INCOMPLETE at rank 4
 

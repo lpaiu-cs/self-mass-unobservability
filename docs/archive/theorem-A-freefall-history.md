@@ -136,7 +136,7 @@
 - Status: Proven. The raw R3-extended survivor list is not linearly independent; its first exact quartic mixed dependence relation is `-E2T2/2 + 2 E2T2_mixed_1 - E2T2_mixed_2 + E2T2_mixed_3 = 0`.
 - Status: Proven. The raw R3-extended `21`-element survivor list is bookkeeping only and should not be read as a corrected basis statement; the composition audit uses the thresholded rank-3 family instead.
 - Status: Proven. The old raw R4-extended survivor bookkeeping is not linearly independent; its first exact quartic mixed dependence relation is `-E2Q2/2 + 2 E2Q2_mixed_1 - E2Q2_mixed_2 + E2Q2_mixed_3 = 0`.
-- Status: Proven. The old raw R4 bookkeeping with `22` labels, rank `19`, and nullity `3` now applies only to the pre-exhaustiveness manual subset, not to an exhaustive corrected rank-4 basis.
+- Status: Proven. The old raw R4 bookkeeping with `22` labels, rank `19`, and nullity `3` now applies only to the pre-exhaustiveness manual subset, not to an exhaustive corrected rank-4 basis. (The exhaustive corrected rank-4 basis has survivor dimension `25`; see `../../symbolic/r4_survivor_rank_check.py` and `../../verification/rederive_rank4.py`.)
 - Status: Conjectural. The raw R5-extended survivor list is not linearly independent; its first sample-extracted quartic mixed dependence relation is `E2U2 - 4 E2U2_mixed_1 + 2 E2U2_mixed_2 - 2 E2U2_mixed_3 = 0`.
 - Status: Conjectural. The raw R5-extended `23`-element survivor list has sample-stable rank `19` and nullity `4`, and it is bookkeeping only rather than a corrected basis statement.
 - Status: Conjectural. The raw R6-extended survivor list is not linearly independent; its first sample-revalidated mixed quartic dependence relation is `E2Z2 + 2 E2Z2_mixed_1 - 2 E2Z2_mixed_2 - 4 E2Z2_mixed_3 = 0`.

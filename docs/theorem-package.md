@@ -8,8 +8,8 @@
 ## Theorem Domain
 
 - Status: Proven. The closed positive theorem domain is the free-fall sector only.
-- Status: Proven. The domain assumptions are the active `A1`-`A8` ledger assumptions in [`assumptions-ledger.md`](assumptions-ledger.md): quasi-static regime, nearly spherical and nonspinning parity-even sector, local worldline EFT, no orbital-timescale internal state variable, analytic monopole response, self-bound equilibrium, fixed operator cutoff, and local weight-spectrum finiteness below that cutoff.
-- Status: Proven. Within that domain, the irreducible primitive-family envelope closes on the audited scalar, vector, rank-2 STF, and genuine rank-`L >= 3` STF classes.
+- Status: Assumption. The domain assumptions are the active `A1`-`A8` ledger assumptions in [`assumptions-ledger.md`](assumptions-ledger.md): quasi-static regime, nearly spherical and nonspinning parity-even sector, local worldline EFT, no orbital-timescale internal state variable, analytic monopole response, self-bound equilibrium, fixed operator cutoff, and local weight-spectrum finiteness below that cutoff. (These are premises, not derived results; see the ledger.)
+- Status: Proven. Within that domain, the irreducible primitive-family envelope closes on the audited scalar, vector, rank-2 STF, and genuine rank-`L >= 3` STF classes. (The rank-4 survivor bookkeeping was corrected from 19 to the complete count 25; see [`family-class-table.md`](family-class-table.md) and `../symbolic/r4_survivor_rank_check.py`.)
 
 ## Main Positive Theorem
 
