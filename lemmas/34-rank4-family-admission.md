@@ -2,7 +2,7 @@
 
 ## Scope
 
-- Status: Proven. This lemma audits unsuppressed admission of a genuine local parity-even rank-4 family in the MVP free-fall sector at `\Delta \le 4`.
+- Status: Note. This lemma audits unsuppressed admission of a genuine local parity-even rank-4 family in the MVP free-fall sector at `\Delta \le 4`.
 - Status: Proven. The chosen representative is the fully symmetric trace-free primitive family `Q_{ijkl}` defined in [`../docs/rank4-family-ordering.md`](../docs/rank4-family-ordering.md).
 - Status: Proven. Trace descendants reducible to lower-rank audited families and derivative-generated rank-4 blocks already attached to audited families are excluded from the primitive-family definition and are not double-counted here.
 
@@ -29,7 +29,7 @@
   and
   `-Q2^2 / 5 + 2 Q4_chain / 5 + Q4_tetra = 0`.
 - Status: Proven. The raw R4 bookkeeping is therefore doubly non-final: it is neither exhaustive nor a corrected basis statement.
-- Status: Proven. This linear-dependence correction does not rescue minimal-sector uniqueness, because the no-go already follows from the lower-weight witnesses `Q2` and `EQQ`.
+- Status: Note. This linear-dependence correction does not rescue minimal-sector uniqueness, because the no-go already follows from the lower-weight witnesses `Q2` and `EQQ`.
 
 ## Theorem Layer Obstructed
 
@@ -39,5 +39,5 @@
 
 ## Boundary
 
-- Status: Proven. This lemma does not yet re-close audited-set composition after admitting the rank-4 threshold.
+- Status: Note. This lemma does not yet re-close audited-set composition after admitting the rank-4 threshold.
 - Status: Proven. The next positive-step burden is a new enlarged audited-set composition audit that includes `Reven4+`.

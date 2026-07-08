@@ -1,6 +1,6 @@
 # Legacy Note Policy
 
-- Status: Proven. This policy defines how theorem-facing notes are classified in the closed theorem package.
+- Status: Note. This policy defines how theorem-facing notes are classified in the closed theorem package.
 
 ## Authoritative
 

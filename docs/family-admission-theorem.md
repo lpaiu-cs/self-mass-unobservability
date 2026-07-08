@@ -33,7 +33,7 @@
 
 ## What The Theorem Does Not Say
 
-- Status: Proven. This is not a universal theorem for every imaginable primitive family.
+- Status: Note. This is not a universal theorem for every imaginable primitive family.
 - Status: Proven. The no-go is only claimed for the explicitly stated family classes above.
 - Status: Proven. The theorem does not say that broad finite-family fixed-order collapse fails.
 - Status: Proven. The theorem does not say that every new family causes fixed-order blowup; it only says that uniqueness fails generically across the audited classes unless extra suppressions are written down.

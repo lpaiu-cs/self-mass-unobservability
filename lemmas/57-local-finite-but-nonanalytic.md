@@ -21,5 +21,5 @@
 
 ## Boundary
 
-- Status: Proven. This lemma does not preserve the finite Taylor sensitivity jet.
+- Status: Note. This lemma does not preserve the finite Taylor sensitivity jet.
 - Status: Proven. It preserves only the local finite operator scaffold on which the nonanalytic monopole counterexample is built.

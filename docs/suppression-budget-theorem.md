@@ -62,11 +62,11 @@
 - Status: Proven. After the rank-4 family gate is audited, the further enlarged pairwise, triple, quadruple, quintuple, and six-family composition audits for `{R2, R0a, R0b, R1, Rodd+, Reven4+}` likewise find no new surviving operator beyond the baseline electric sector once the current thresholds are imposed together.
 - Status: Proven. Therefore the current thresholds are jointly sufficient for the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+}` at `\Delta \le 4`.
 - Status: Proven. After the rank-5 family gate is audited, the threshold layer now includes `w_U \ge 3`, but audited-set joint sufficiency has not yet been re-closed for the further enlarged family set that includes `Rodd5+`.
-- Status: Proven. This audited-set joint sufficiency does not upgrade the theorem into a universal composition statement for arbitrary family catalogs.
+- Status: Note. This audited-set joint sufficiency does not upgrade the theorem into a universal composition statement for arbitrary family catalogs.
 
 ## Boundary
 
-- Status: Proven. This theorem is about minimal-sector uniqueness only.
+- Status: Note. This theorem is about minimal-sector uniqueness only.
 - Status: Proven. Failure to meet the threshold reinforces the negative uniqueness branch.
 - Status: Proven. Meeting the threshold does not by itself prove the stronger theorem, because additional witnesses may still survive in some subclasses.
 - Status: Proven. The positive finite-family collapse branch remains separate and is not falsified merely by the appearance of new witnesses below threshold.

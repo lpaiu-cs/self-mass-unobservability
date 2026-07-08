@@ -14,7 +14,7 @@
   the finitely many local state variables `\chi^a`,
   the local analytic monopole function `m_A(Y,\chi)`,
   and the local state-evolution data encoded in `{\cal L}_{\rm state}` or equivalently in the state equations.
-- Status: Proven. These data belong to the low-multipole response manifold, now enlarged from `Y^I` to `(Y^I,\chi^a)`.
+- Status: Note. These data belong to the low-multipole response manifold, now enlarged from `Y^I` to `(Y^I,\chi^a)`.
 
 ## Wilson Sector
 

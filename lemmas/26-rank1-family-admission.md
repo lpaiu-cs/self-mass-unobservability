@@ -36,9 +36,9 @@ which appears at weight `3`.
 - Status: Proven. Unsuppressed admission of a genuine vector family yields a new low-order survivor.
 - Status: Proven. The smallest explicit vector-family obstruction is `V2`.
 - Status: Proven. The theorem layer obstructed is promotion of the current audited-set result to MVP-envelope sufficiency.
-- Status: Proven. This enlarges the negative family-admission branch but does not by itself obstruct the broader finite-family fixed-order collapse program.
+- Status: Note. This enlarges the negative family-admission branch but does not by itself obstruct the broader finite-family fixed-order collapse program.
 
 ## Boundary
 
-- Status: Proven. This lemma does not say that every vector-shaped block in the repo is a new family admission.
+- Status: Note. This lemma does not say that every vector-shaped block in the repo is a new family admission.
 - Status: Proven. It only applies after derivative-generated vector blocks have been separated from genuinely new primitive vector families.

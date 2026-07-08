@@ -14,7 +14,7 @@
 
 ## Representative Choice
 
-- Status: Proven. This audit uses option (c): a fully symmetric trace-free rank-3 representative.
+- Status: Note. This audit uses option (c): a fully symmetric trace-free rank-3 representative.
 - Status: Proven. That choice is explicit rather than tacit.
 - Status: Proven. It is justified because:
   1. Any trace component of a parity-even rank-3 tensor reduces to a parity-even vector descendant and therefore belongs to the already audited `R1` gate rather than defining a genuinely new odd-rank family.

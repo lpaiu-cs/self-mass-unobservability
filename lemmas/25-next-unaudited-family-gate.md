@@ -1,6 +1,6 @@
 > LEGACY / HISTORICAL LEMMA NOTE
 >
-> Status: Proven. This lemma records an earlier family-gate stage of the rank-march program. It is retained for provenance only.
+> Status: Note. This lemma records an earlier family-gate stage of the rank-march program. It is retained for provenance only.
 
 # Lemma 25: Next Unaudited Family Gate
 

@@ -2,7 +2,7 @@
 
 ## Scope
 
-- Status: Proven. This lemma applies after the Cartesian irrep reduction of Lemma 50.
+- Status: Note. This lemma applies after the Cartesian irrep reduction of Lemma 50.
 - Status: Proven. It concerns only ordinary parity-even tensor sectors that still carry explicit `\delta_{ij}` traces.
 
 ## Claim

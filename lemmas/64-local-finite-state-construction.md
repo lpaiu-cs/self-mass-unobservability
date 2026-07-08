@@ -38,5 +38,5 @@ m_A(Y,\chi)=m_0+\alpha Y+\lambda \chi,
 
 ## Boundary
 
-- Status: Proven. This lemma constructs the local state models only.
+- Status: Note. This lemma constructs the local state models only.
 - Status: Proven. The next step is to distinguish adiabatic eliminability from genuine orbital-timescale state dynamics.

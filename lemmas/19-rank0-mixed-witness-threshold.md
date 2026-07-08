@@ -71,5 +71,5 @@ W_{\min}(\mathrm{R0b}) = 4.
 
 ## Boundary
 
-- Status: Proven. These conclusions are class-limited to the audited bare-scalar and derivative-only scalar subclasses.
-- Status: Proven. This lemma does not claim that scalar-family admission destroys finite-family fixed-order collapse.
+- Status: Note. These conclusions are class-limited to the audited bare-scalar and derivative-only scalar subclasses.
+- Status: Note. This lemma does not claim that scalar-family admission destroys finite-family fixed-order collapse.

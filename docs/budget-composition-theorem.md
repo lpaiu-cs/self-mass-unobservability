@@ -48,6 +48,6 @@
 
 ## Boundary
 
-- Status: Proven. This is not a universal theorem for arbitrary primitive-family sets.
+- Status: Note. This is not a universal theorem for arbitrary primitive-family sets.
 - Status: Proven. It is only a jointly sufficient audited-set statement for the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+, Rodd5+, Reven6+}` at the fixed order `\Delta \le 4`.
 - Status: Proven. The positive broad target remains finite-family fixed-order collapse.

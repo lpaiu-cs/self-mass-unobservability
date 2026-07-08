@@ -23,9 +23,9 @@
 
 ## Reading Rule
 
-- Status: Proven. The table records necessary thresholds only.
+- Status: Note. The table records necessary thresholds only.
 - Status: Proven. Crossing the listed threshold does not automatically prove uniqueness; it only removes the current lowest audited witness from the `\Delta \le 4` window.
 - Status: Proven. The threshold-class column explains whether the current budget is self-only, mixed-aware, or tied-sharp.
 - Status: Proven. The composition columns now close for the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+, Rodd5+, Reven6+}`.
 - Status: Proven. The irreducible family-envelope theorem now closes on the audited scalar/vector/STF classes within the current theorem domain.
-- Status: Proven. This threshold table now feeds a closed positive finite-family fixed-order collapse theorem rather than a still-open bridge question inside the current theorem domain.
+- Status: Note. This threshold table now feeds a closed positive finite-family fixed-order collapse theorem rather than a still-open bridge question inside the current theorem domain.

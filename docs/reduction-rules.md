@@ -31,7 +31,7 @@ This note lists every reduction rule currently allowed in the `Delta<=4` minimal
 | --- | --- | --- |
 | `a_i = 0` modulo lower-order worldline EOM | Proven | Every operator with at least one explicit `a_i` factor is reducible. |
 
-- Status: Proven. This covers `a2`, `aEa`, `aDivE`, `aDtEa`, `a2E2`, `aE2a`, `a4`, `aEGradE_1`, `aEGradE_2`, and `aEGradE_3`.
+- Status: Note. This covers `a2`, `aEa`, `aDivE`, `aDtEa`, `a2E2`, `aE2a`, `a4`, `aEGradE_1`, `aEGradE_2`, and `aEGradE_3`.
 - Status: Proven. Once the scalar-like family is admitted, this also covers `aGradS`, `a2S`, `a2DtS`, `aSEa`, `aEGradS`, `SaDivE`, `SaGradS`, and `a2S2`.
 
 ## Allowed Algebraic Identities

@@ -15,7 +15,7 @@
 ```
 
 with `\chi_A` the auxiliary local memory state.
-- Status: Proven. This is not a pure hereditary replacement because it can be absorbed into an explicit local state extension.
+- Status: Note. This is not a pure hereditary replacement because it can be absorbed into an explicit local state extension.
 
 ## Genuine Hereditary Case
 
@@ -31,7 +31,7 @@ with `\chi_A` the auxiliary local memory state.
 K(s)=\int_0^{\infty} d\mu\, \rho(\mu)e^{-\mu s}.
 ```
 
-- Status: Proven. This is generally not a finite local sensitivity jet and not a finite auxiliary-state list.
+- Status: Note. This is generally not a finite local sensitivity jet and not a finite auxiliary-state list.
 
 ## Separation From Wilson Data
 

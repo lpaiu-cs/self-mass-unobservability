@@ -23,8 +23,8 @@
 
 ## What This Does And Does Not Kill
 
-- Status: Proven. This no-go kills minimal-sector uniqueness as a default theorem target.
-- Status: Proven. This no-go does not kill the broader finite-family fixed-order collapse program.
+- Status: Note. This no-go kills minimal-sector uniqueness as a default theorem target.
+- Status: Note. This no-go does not kill the broader finite-family fixed-order collapse program.
 - Status: Proven. The negative result is about uniqueness of the physically justified minimal sector, not about existence of finite family-conditioned normal forms.
 
 ## Use In Theorem A

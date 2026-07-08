@@ -23,7 +23,7 @@
 
 - Status: Proven. The scalar-family extension falsifies any attempt to treat the corrected `E/B` exact-current-set theorem as though it already described a physically justified minimal free-fall sector without extra assumptions.
 - Status: Proven. The smallest explicit obstruction is the bare scalar survivor `S`.
-- Status: Proven. This obstruction is sharper than a vague completeness worry because it identifies a specific additional primitive family and the first operator it contributes.
+- Status: Note. This obstruction is sharper than a vague completeness worry because it identifies a specific additional primitive family and the first operator it contributes.
 - Status: Proven. The obstruction does not presently falsify the broader fixed-order collapse program, because the enlarged `E/B+scalar` sector still closes on a finite linearly independent basis at `\Delta \le 4`.
 
 ## Boundary Of What Is Still Open

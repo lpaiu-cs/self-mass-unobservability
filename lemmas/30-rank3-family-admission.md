@@ -2,7 +2,7 @@
 
 ## Scope
 
-- Status: Proven. This lemma audits unsuppressed admission of a genuine local parity-even rank-3 family in the MVP free-fall sector at `\Delta \le 4`.
+- Status: Note. This lemma audits unsuppressed admission of a genuine local parity-even rank-3 family in the MVP free-fall sector at `\Delta \le 4`.
 - Status: Proven. The chosen representative is the fully symmetric trace-free primitive family `T_{ijk}` defined in [`../docs/rank3-family-ordering.md`](../docs/rank3-family-ordering.md).
 - Status: Proven. Derivative-generated rank-3 blocks already attached to audited families are excluded from the primitive-family definition and are not double-counted here.
 
@@ -21,7 +21,7 @@
 - Status: Proven. The first exact dependence relation already extracted is
   `-E2T2/2 + 2 E2T2_mixed_1 - E2T2_mixed_2 + E2T2_mixed_3 = 0`.
 - Status: Proven. The raw R3-extended survivor bookkeeping is therefore `21` raw labels, rank `19`, nullity `2`; no corrected rank-3 basis is claimed here yet.
-- Status: Proven. This linear-dependence correction does not rescue minimal-sector uniqueness, because the no-go already follows from the lower-weight witnesses `T2` and `ETT`.
+- Status: Note. This linear-dependence correction does not rescue minimal-sector uniqueness, because the no-go already follows from the lower-weight witnesses `T2` and `ETT`.
 
 ## Theorem Layer Obstructed
 
@@ -31,5 +31,5 @@
 
 ## Boundary
 
-- Status: Proven. This lemma does not yet re-close audited-set composition after admitting the rank-3 threshold.
+- Status: Note. This lemma does not yet re-close audited-set composition after admitting the rank-3 threshold.
 - Status: Proven. The next positive-step burden is a new enlarged audited-set composition audit that includes `Rodd+`.

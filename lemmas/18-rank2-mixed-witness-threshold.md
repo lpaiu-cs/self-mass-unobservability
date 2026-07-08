@@ -56,5 +56,5 @@ W_{\min}(\mathrm{R2}) = 2.
 
 ## Boundary
 
-- Status: Proven. This lemma is class-limited to the audited parity-even STF rank-2 family and does not claim a universal statement for every rank-2 tensor family.
-- Status: Proven. This lemma does not say that finite-family fixed-order collapse fails.
+- Status: Note. This lemma is class-limited to the audited parity-even STF rank-2 family and does not claim a universal statement for every rank-2 tensor family.
+- Status: Note. This lemma does not say that finite-family fixed-order collapse fails.

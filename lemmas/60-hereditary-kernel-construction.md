@@ -57,5 +57,5 @@ K_{\gamma}(s)
 
 ## Boundary
 
-- Status: Proven. This lemma constructs the kernel classes only; it does not yet classify which of them are reducible to finitely many local states.
+- Status: Note. This lemma constructs the kernel classes only; it does not yet classify which of them are reducible to finitely many local states.
 - Status: Proven. That classification is the next step of the `A3` boundary-stress program.

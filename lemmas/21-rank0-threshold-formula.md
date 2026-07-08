@@ -69,6 +69,6 @@ W_{\mathrm{self}} = W_{\mathrm{mix}} = W_{\min} = 4.
 
 ## Boundary
 
-- Status: Proven. These formulas are class-limited to the audited scalar subclasses only.
+- Status: Note. These formulas are class-limited to the audited scalar subclasses only.
 - Status: Proven. The lemma does not imply sufficiency of the thresholds for uniqueness.
 - Status: Proven. The positive finite-family fixed-order collapse target remains separate.

@@ -47,7 +47,7 @@ under `Proven`; both now read `Assumption` for these eight.)
 ## Non-Assumption For M6
 
 - Status: Proven. No magnetic-ordering assumption is currently active that suppresses `B_ij` relative to `E_ij`.
-- Status: Proven. The repository does not currently assume `B_ij = 0` on the allowed backgrounds.
+- Status: Note. The repository does not currently assume `B_ij = 0` on the allowed backgrounds.
 - Status: Proven. Therefore any stronger electric-only minimal-sector theorem would require a new explicit assumption, recorded rather than implied.
 
 ## Explicit Rule For M7
@@ -70,7 +70,7 @@ under `Proven`; both now read `Assumption` for these eight.)
 
 ## Non-Assumption For M12
 
-- Status: Proven. The repository does not currently assume that the audited family set `{R2, R0a, R0b, R1}` already exhausts the parity-even local MVP primitive-family envelope.
+- Status: Note. The repository does not currently assume that the audited family set `{R2, R0a, R0b, R1}` already exhausts the parity-even local MVP primitive-family envelope.
 - Status: Proven. No explicit assumption restricts admitted parity-even local primitive families to scalar and rank-2 classes only.
 - Status: Proven. Therefore local parity-even higher-rank tensor families remain open family-envelope targets unless they are audited directly or excluded by a new explicit assumption.
 
@@ -96,7 +96,7 @@ under `Proven`; both now read `Assumption` for these eight.)
 
 ## Non-Assumption For The High-Rank Exhaustiveness Patch
 
-- Status: Proven. The repository does not assume that the current manual rank-3, rank-4, or rank-5 survivor lists are already exhaustive.
+- Status: Note. The repository does not assume that the current manual rank-3, rank-4, or rank-5 survivor lists are already exhaustive.
 - Status: Proven. High-rank survivor exhaustiveness is now checked by explicit contraction generation in [`high-rank-audit-methodology.md`](high-rank-audit-methodology.md), [`../symbolic/high_rank_family_enumerator.py`](../symbolic/high_rank_family_enumerator.py), and [`../symbolic/high_rank_diff_report.py`](../symbolic/high_rank_diff_report.py).
 
 ## Explicit Rule For The Irreducible-Envelope Theorem

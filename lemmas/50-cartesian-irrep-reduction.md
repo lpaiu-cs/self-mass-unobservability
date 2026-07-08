@@ -2,7 +2,7 @@
 
 ## Scope
 
-- Status: Proven. This lemma works in the three-dimensional spatial tensor language appropriate to the MVP free-fall sector.
+- Status: Note. This lemma works in the three-dimensional spatial tensor language appropriate to the MVP free-fall sector.
 - Status: Proven. It is class-limited to local parity-even nonspinning primitive families.
 
 ## Imported Representation Fact
@@ -24,7 +24,7 @@
 
 - Status: Proven. Mixed symmetry is therefore not excluded automatically at the `GL(3)` level.
 - Status: Proven. It is excluded or absorbed only after the explicit `O(3)` irrep decomposition is applied.
-- Status: Proven. This is exactly why the present theorem is stated as an irreducible-envelope theorem rather than as a raw index-symmetry slogan.
+- Status: Note. This is exactly why the present theorem is stated as an irreducible-envelope theorem rather than as a raw index-symmetry slogan.
 
 ## Verdict
 

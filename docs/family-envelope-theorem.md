@@ -1,6 +1,6 @@
 > LEGACY / HISTORICAL NOTE
 >
-> Status: Proven. This gateway note is retained for provenance only. The active closure statement now lives in [`irreducible-envelope-theorem.md`](irreducible-envelope-theorem.md) and [`theorem-package.md`](theorem-package.md).
+> Status: Note. This gateway note is retained for provenance only. The active closure statement now lives in [`irreducible-envelope-theorem.md`](irreducible-envelope-theorem.md) and [`theorem-package.md`](theorem-package.md).
 
 # Family-Envelope Theorem
 

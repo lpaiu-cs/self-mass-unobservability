@@ -17,7 +17,7 @@ w(T^{(n)}) = 1
 \text{for all } n.
 ```
 
-- Status: Proven. This stays inside the already audited STF branch and introduces no nonlocality, no nonanalyticity, and no orbital-timescale internal state.
+- Status: Note. This stays inside the already audited STF branch and introduces no nonlocality, no nonanalyticity, and no orbital-timescale internal state.
 
 ## Infinite Family Of Surviving Witnesses
 

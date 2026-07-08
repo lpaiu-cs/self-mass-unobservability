@@ -2,7 +2,7 @@
 
 ## Scope
 
-- Status: Proven. This lemma compares the manual `Rodd+` survivor bookkeeping against the exhaustive generator introduced in [`../docs/high-rank-audit-methodology.md`](../docs/high-rank-audit-methodology.md).
+- Status: Note. This lemma compares the manual `Rodd+` survivor bookkeeping against the exhaustive generator introduced in [`../docs/high-rank-audit-methodology.md`](../docs/high-rank-audit-methodology.md).
 - Status: Proven. The comparison is restricted to the current primitive-family definition used in the rank-3 audit: a genuine parity-even fully symmetric trace-free primitive family `T_{ijk}` plus the baseline electric sector at `\Delta \le 4`.
 
 ## Exhaustive Result

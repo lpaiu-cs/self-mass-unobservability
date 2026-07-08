@@ -41,5 +41,5 @@ W_{\min}(Rodd+; w_T) = \min(2 w_T,\ 2 w_T + 1) = 2 w_T.
 
 ## Boundary
 
-- Status: Proven. This threshold theorem is class-limited to the audited genuine STF rank-3 family.
+- Status: Note. This threshold theorem is class-limited to the audited genuine STF rank-3 family.
 - Status: Proven. Meeting the threshold does not by itself prove enlarged-set harmlessness; the separate composition closure for the enlarged audited set is recorded in [`32-r3-pairwise-composition-audit.md`](32-r3-pairwise-composition-audit.md) and [`33-r3-augmented-composition-audit.md`](33-r3-augmented-composition-audit.md).

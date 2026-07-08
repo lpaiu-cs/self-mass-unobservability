@@ -27,5 +27,5 @@
 
 ## Boundary
 
-- Status: Proven. This lemma does not claim that the raw `23`-label `Rodd5+` survivor list is a corrected basis.
-- Status: Proven. This lemma by itself did not close the contemporaneous composition step; that required the separate closure recorded in Lemmas 40 and 41.
+- Status: Note. This lemma does not claim that the raw `23`-label `Rodd5+` survivor list is a corrected basis.
+- Status: Note. This lemma by itself did not close the contemporaneous composition step; that required the separate closure recorded in Lemmas 40 and 41.

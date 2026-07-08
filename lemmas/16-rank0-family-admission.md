@@ -30,5 +30,5 @@
 
 ## Boundary
 
-- Status: Proven. This lemma does not say that finite-family fixed-order collapse fails.
+- Status: Note. This lemma does not say that finite-family fixed-order collapse fails.
 - Status: Proven. It only says that rank-0 family admission is not harmless without additional explicit suppression assumptions.

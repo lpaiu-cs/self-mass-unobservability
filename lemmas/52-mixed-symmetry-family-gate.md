@@ -2,7 +2,7 @@
 
 ## Scope
 
-- Status: Proven. This lemma audits whether any genuinely new parity-even mixed-symmetry local tensor family survives after the reductions of Lemmas 50 and 51.
+- Status: Note. This lemma audits whether any genuinely new parity-even mixed-symmetry local tensor family survives after the reductions of Lemmas 50 and 51.
 
 ## Audit
 

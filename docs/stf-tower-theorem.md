@@ -34,7 +34,7 @@
   is false because rank `L = 4` admits the extra mixed cubic `EEQ`.
 - Status: Proven. The audited rank-6 result does not extend the rank-4 exception.
 - Status: Proven. Therefore the current audited evidence supports the interpretation that rank `4` is an isolated even-rank exception inside the audited STF sector.
-- Status: Proven. This is still not a universal even-rank theorem; it is only a statement about the audited ranks `L = 4, 6`.
+- Status: Note. This is still not a universal even-rank theorem; it is only a statement about the audited ranks `L = 4, 6`.
 
 ## What Survives
 
@@ -47,5 +47,5 @@
 
 ## Consequence
 
-- Status: Proven. This failed stronger theorem does not block the weaker universal self-witness threshold theorem for genuine parity-even STF primitive families with `L \ge 3`.
+- Status: Note. This failed stronger theorem does not block the weaker universal self-witness threshold theorem for genuine parity-even STF primitive families with `L \ge 3`.
 - Status: Proven. The mixed-pattern theorem no longer sets the live bottleneck by itself; see [`stf-self-witness-theorem.md`](stf-self-witness-theorem.md) and [`stf-mixed-pattern-classification.md`](stf-mixed-pattern-classification.md).

@@ -2,7 +2,7 @@
 
 ## Scope
 
-- Status: Proven. This lemma audits unsuppressed admission of a genuine parity-even fully symmetric trace-free rank-6 primitive family `Z_{ijklmn}` in the MVP free-fall sector at `\Delta \le 4`.
+- Status: Note. This lemma audits unsuppressed admission of a genuine parity-even fully symmetric trace-free rank-6 primitive family `Z_{ijklmn}` in the MVP free-fall sector at `\Delta \le 4`.
 - Status: Proven. The audit uses the exhaustive high-rank methodology from the start via [`../symbolic/r6_sector_delta4.py`](../symbolic/r6_sector_delta4.py), not manual survivor bookkeeping.
 - Status: Proven. Trace descendants reducible to lower-rank audited families and derivative-generated rank-6 descendants are excluded from the primitive-family definition itself.
 
@@ -35,5 +35,5 @@
 ## Theorem-Layer Effect
 
 - Status: Proven. Unsuppressed `Reven6+` admission is a genuine new obstruction class with smallest explicit witness `Z2`.
-- Status: Proven. This obstructs promotion of the enlarged audited-set result to MVP-envelope sufficiency unless the rank-6 family is explicitly suppressed or excluded.
+- Status: Note. This obstructs promotion of the enlarged audited-set result to MVP-envelope sufficiency unless the rank-6 family is explicitly suppressed or excluded.
 - Status: Proven. Because `Reven6+` was audited and obstructive at that stage, the immediate next step was the post-`Reven6+` enlarged audited-set composition re-close rather than an immediate move to a further family gate.

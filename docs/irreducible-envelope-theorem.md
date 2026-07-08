@@ -16,7 +16,7 @@
   vector,
   rank-2 STF special class,
   or genuine STF rank-`L` classes with `L \ge 3`.
-- Status: Proven. This is stronger than audited-family sufficiency, because it removes the need for a further rank-by-rank family march inside the current theorem domain.
+- Status: Note. This is stronger than audited-family sufficiency, because it removes the need for a further rank-by-rank family march inside the current theorem domain.
 
 ## Distinctions
 

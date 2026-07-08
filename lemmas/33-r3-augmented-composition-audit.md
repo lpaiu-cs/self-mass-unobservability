@@ -2,7 +2,7 @@
 
 ## Scope
 
-- Status: Proven. This lemma audits all Rodd+-containing triple combinations, all Rodd+-containing quadruple combinations, and the full enlarged audited set `(R2, R0a, R0b, R1, Rodd+)` at `\Delta \le 4`.
+- Status: Note. This lemma audits all Rodd+-containing triple combinations, all Rodd+-containing quadruple combinations, and the full enlarged audited set `(R2, R0a, R0b, R1, Rodd+)` at `\Delta \le 4`.
 - Status: Proven. The imposed threshold set is the current audited one:
   `w_X \ge 4` unless an explicit `EX = 0`-type rule removes the mixed quadratic witness,
   `w_S \ge 5` or explicit exclusion of bare `S`,
@@ -34,5 +34,5 @@
 
 ## Boundary
 
-- Status: Proven. This is not a universal composition theorem for arbitrary family catalogs.
+- Status: Note. This is not a universal composition theorem for arbitrary family catalogs.
 - Status: Proven. It is only a jointly sufficient audited-set result for the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+}` at fixed order `\Delta \le 4`.

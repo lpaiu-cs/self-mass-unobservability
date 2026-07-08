@@ -28,5 +28,5 @@ is a parity-even scalar of weight `2`.
 
 ## Boundary
 
-- Status: Proven. This lemma does not say that fixed-order finiteness fails.
+- Status: Note. This lemma does not say that fixed-order finiteness fails.
 - Status: Proven. It only says that the stronger minimal-sector theorem is not stable under unsuppressed admission of the stated rank-2 STF family class.

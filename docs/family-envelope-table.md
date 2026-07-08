@@ -7,7 +7,7 @@
 ## Purpose
 
 - Status: Note. This table records the irreducible family-envelope census under the current MVP free-fall assumptions at `\Delta \le 4`.
-- Status: Proven. The table is theorem-domain specific, not universal.
+- Status: Note. The table is theorem-domain specific, not universal.
 
 | Class ID | Status | Envelope state | Family group | Irreducible character | Resolution mechanism | Current theorem role |
 | --- | --- | --- | --- | --- | --- | --- |

@@ -2,7 +2,7 @@
 
 ## Scope
 
-- Status: Proven. This lemma compares the manual `Reven4+` survivor bookkeeping against the exhaustive generator introduced in [`../docs/high-rank-audit-methodology.md`](../docs/high-rank-audit-methodology.md).
+- Status: Note. This lemma compares the manual `Reven4+` survivor bookkeeping against the exhaustive generator introduced in [`../docs/high-rank-audit-methodology.md`](../docs/high-rank-audit-methodology.md).
 - Status: Proven. The comparison uses the current primitive-family definition of a genuine parity-even fully symmetric trace-free primitive family `Q_{ijkl}` together with the baseline electric sector at `\Delta \le 4`.
 - Status: Proven. Trace descendants reducible to lower-rank audited families and derivative-generated rank-4 descendants are still excluded from the primitive-family definition itself; the present issue is exhaustiveness inside that definition, not family misdefinition.
 

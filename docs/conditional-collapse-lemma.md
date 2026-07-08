@@ -40,7 +40,7 @@ so the leading body-dependent free-fall deviation collapses to finitely many sen
 
 ## Why This Lemma Is Conditional
 
-- Status: Proven. This lemma does not prove basis closure.
+- Status: Note. This lemma does not prove basis closure.
 - Status: Proven. The burden moved out of this lemma is exactly the proof that the admissible operator space at fixed order has a finite normal-form basis.
 
 ## Proof Skeleton

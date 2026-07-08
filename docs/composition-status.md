@@ -297,4 +297,4 @@
 - Status: Proven. No seven-family obstruction appears in the post-Reven6+ audited set.
 - Status: Proven. No eight-family obstruction appears in the full enlarged audited set `(R2, R0a, R0b, R1, Rodd+, Reven4+, Rodd5+, Reven6+)`.
 - Status: Proven. Therefore the current thresholds are jointly sufficient for the enlarged audited family set `{R2, R0a, R0b, R1, Rodd+, Reven4+, Rodd5+, Reven6+}` at `\Delta \le 4`.
-- Status: Proven. This result is audited-set only and does not promote the repo to a universal composition theorem.
+- Status: Note. This result is audited-set only and does not promote the repo to a universal composition theorem.

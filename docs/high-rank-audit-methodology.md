@@ -23,7 +23,7 @@
 ## Representative Generation
 
 - Status: Proven. For signatures built only from fully symmetric trace-free blocks, scalar contraction classes are generated as colored multigraphs with fixed vertex degrees rather than by brute-force slot permutations.
-- Status: Proven. This colored-multigraph representation is exact for the present higher-rank STF candidate layer because each STF block is symmetric in all tensor slots and forbids trace loops.
+- Status: Note. This colored-multigraph representation is exact for the present higher-rank STF candidate layer because each STF block is symmetric in all tensor slots and forbids trace loops.
 - Status: Proven. For the two-block gradient signatures `(\nabla Y_L)^2` and, when allowed, `\nabla E \nabla Y_L`, the exhaustive generator uses explicit derivative-versus-STF edge-count descriptors rather than a manually curated representative list.
 
 ## Output Rule

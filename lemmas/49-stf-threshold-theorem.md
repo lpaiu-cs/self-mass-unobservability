@@ -2,7 +2,7 @@
 
 ## Scope
 
-- Status: Proven. This lemma is class-limited to genuinely new parity-even fully symmetric trace-free primitive families `Y_L` with rank `L \ge 3`.
+- Status: Note. This lemma is class-limited to genuinely new parity-even fully symmetric trace-free primitive families `Y_L` with rank `L \ge 3`.
 - Status: Proven. It uses the fixed-order counting rule of [`../docs/power-counting.md`](../docs/power-counting.md).
 
 ## Formula Layer

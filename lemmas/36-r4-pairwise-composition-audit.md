@@ -33,6 +33,6 @@
 
 ## Boundary
 
-- Status: Proven. This lemma is only a pairwise audited-set composition result.
+- Status: Note. This lemma is only a pairwise audited-set composition result.
 - Status: Proven. It does not prove triple, quadruple, quintuple, or full-set sufficiency by itself.
 - Status: Proven. It does not re-interpret the raw `22`-element rank-4 survivor list as a corrected basis statement.

@@ -2,7 +2,7 @@
 
 ## Scope
 
-- Status: Proven. This lemma abstracts the common admission structure behind the audited genuine parity-even fully symmetric trace-free primitive families of ranks `L = 3, 4, 5`.
+- Status: Note. This lemma abstracts the common admission structure behind the audited genuine parity-even fully symmetric trace-free primitive families of ranks `L = 3, 4, 5`.
 - Status: Proven. The primitive family is denoted `Y_L`, with `L \ge 3`, parity even, no trace descendants counted as primitive, and no derivative-generated descendants counted as new primitive-family admissions.
 - Status: Proven. The present statement is class-limited to the STF tower only; it is not a theorem for all higher-rank tensor families.
 
@@ -14,7 +14,7 @@
   is the first self witness candidate for every genuine STF family.
 - Status: Proven. This quadratic self contraction exists for every `L \ge 1`, hence in particular for every `L \ge 3`.
 - Status: Proven. A mixed quadratic scalar `E Y_L` exists only when `L = 2`, because a two-block full contraction requires equal ranks.
-- Status: Proven. This is the exact structural place where the rank-2 STF family is exceptional.
+- Status: Note. This is the exact structural place where the rank-2 STF family is exceptional.
 - Status: Proven. For every `L \ge 3`, the mixed cubic contraction
   `EYY = E_{ab} Y_{aA} Y_{bA}`
   exists by contracting one electric index into each STF block and pairing the remaining `L-1` STF indices between the two `Y_L` copies.

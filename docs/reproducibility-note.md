@@ -5,7 +5,7 @@
 
 ## Reliable Checks
 
-- Status: Proven. The following checks pass reliably in the current Windows worktree and are the recommended release validation path:
+- Status: Note. The following checks pass reliably in the current Windows worktree and are the recommended release validation path:
   - `python symbolic\checks\test_symbolic_smoke.py`
   - `python symbolic\family_envelope_census.py`
   - `python symbolic\irrep_family_census.py`
@@ -14,7 +14,7 @@
   - `python symbolic\hereditary_kernel_demo.py`
   - `python symbolic\stateful_counterexample_demo.py`
   - `python -m compileall symbolic`
-- Status: Proven. These checks cover the closed family-envelope statement, the A8 sharpening, the explicit A5/A3/A4 boundary escapes, and a syntax sweep of the symbolic package.
+- Status: Note. These checks cover the closed family-envelope statement, the A8 sharpening, the explicit A5/A3/A4 boundary escapes, and a syntax sweep of the symbolic package.
 
 ## Monolithic Runner Status
 
@@ -31,7 +31,7 @@
   4. `python symbolic\hereditary_kernel_demo.py`
   5. `python symbolic\stateful_counterexample_demo.py`
   6. `python -m compileall symbolic`
-- Status: Proven. This subset is intentionally lightweight and is the preferred reproducibility path for future readers unless the monolithic runner is separately hardened.
+- Status: Note. This subset is intentionally lightweight and is the preferred reproducibility path for future readers unless the monolithic runner is separately hardened.
 
 ## Reading Rule
 

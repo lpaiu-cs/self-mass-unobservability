@@ -1,6 +1,6 @@
 # Repo Status Matrix
 
-- Status: Proven. This matrix classifies the major theorem-facing files so that the repo has one clear front door and no competing pseudo-main theorems.
+- Status: Note. This matrix classifies the major theorem-facing files so that the repo has one clear front door and no competing pseudo-main theorems.
 
 | File | Classification | Rationale |
 | --- | --- | --- |

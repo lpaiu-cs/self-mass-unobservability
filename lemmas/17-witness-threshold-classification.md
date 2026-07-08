@@ -33,7 +33,7 @@
 - Status: Proven. The threshold map explains why `B2`, `S`, and `dotS2` belong to one structural pattern.
 - Status: Proven. They differ in whether the current threshold is self-only, mixed-aware, or tied-sharp.
 - Status: Proven. For the rank-2 class, the old `w_X \ge 3` line is only a self-only lower bound, not the current mixed-aware necessary threshold.
-- Status: Proven. This is a classification lemma for the audited classes, not a universal theorem for all primitive families.
+- Status: Note. This is a classification lemma for the audited classes, not a universal theorem for all primitive families.
 
 ## Boundary
 

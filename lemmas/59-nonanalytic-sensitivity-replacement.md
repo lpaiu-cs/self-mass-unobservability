@@ -34,7 +34,7 @@ the minimal replacement bookkeeping is the tuple
 
 ## Interpretation
 
-- Status: Proven. These tuples are not finite Taylor sensitivity coordinates.
+- Status: Note. These tuples are not finite Taylor sensitivity coordinates.
 - Status: Proven. They are finite generalized branch data only because the model class has been fixed explicitly in advance.
 - Status: Proven. If the model class is not fixed, locality plus finite operator closure alone do not force a universal finite replacement; one may need the full nonanalytic function germ.
 

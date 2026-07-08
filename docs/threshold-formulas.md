@@ -76,6 +76,6 @@ for every admitted family class under the currently allowed rules.
 
 ## Boundary
 
-- Status: Proven. These formulas classify the audited family classes only.
+- Status: Note. These formulas classify the audited family classes only.
 - Status: Proven. They do not by themselves prove uniqueness once the thresholds are met.
 - Status: Proven. The positive theorem target remains finite-family fixed-order collapse.

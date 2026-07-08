@@ -2,7 +2,7 @@
 
 ## Scope
 
-- Status: Proven. This lemma audits the three new pairwise combinations that arise once the genuine primitive vector class `R1` is added to the already audited threshold set at `\Delta \le 4`.
+- Status: Note. This lemma audits the three new pairwise combinations that arise once the genuine primitive vector class `R1` is added to the already audited threshold set at `\Delta \le 4`.
 - Status: Proven. The imposed thresholds are:
   `R2`: `w_X \ge 4` unless an explicit `EX = 0`-type rule removes the mixed quadratic witness,
   `R0a`: `w_S \ge 5` or explicit exclusion of bare `S`,

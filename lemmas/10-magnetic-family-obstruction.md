@@ -20,7 +20,7 @@ B2 = B_{ij} B^{ij}
 
 appears already at `\Delta = 2`.
 - Status: Proven. Therefore the electric-only normal-form list is not closed under the enlarged physically motivated primitive family.
-- Status: Proven. This blocks promotion of the electric-only theorem candidate into a physically justified minimal-sector theorem unless an extra magnetic-ordering assumption is made explicit.
+- Status: Note. This blocks promotion of the electric-only theorem candidate into a physically justified minimal-sector theorem unless an extra magnetic-ordering assumption is made explicit.
 
 ## What `B2` Does Not Obstruct
 

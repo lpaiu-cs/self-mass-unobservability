@@ -4,7 +4,7 @@
 
 - Status: Proven. The `Reven6+` audit uses a genuinely new parity-even fully symmetric trace-free rank-6 primitive family
   `Z_{ijklmn}`.
-- Status: Proven. This primitive family is local in the worldline EFT sense and is treated as a new admitted external-family block rather than as a derived descendant of an already audited family.
+- Status: Note. This primitive family is local in the worldline EFT sense and is treated as a new admitted external-family block rather than as a derived descendant of an already audited family.
 - Status: Proven. Trace descendants reducible to lower-rank audited families are excluded from the primitive-family definition itself.
 
 ## What Is Excluded

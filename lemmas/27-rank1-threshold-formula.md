@@ -45,5 +45,5 @@ w_V \ge 3.
 
 ## Boundary
 
-- Status: Proven. This formula applies only to a genuinely new primitive vector family.
+- Status: Note. This formula applies only to a genuinely new primitive vector family.
 - Status: Proven. It does not apply to derivative-generated vectors already attached to `R0b` or `R2`.

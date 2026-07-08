@@ -2,7 +2,7 @@
 
 ## Scope
 
-- Status: Proven. This lemma applies only to genuinely new parity-even fully symmetric trace-free primitive families `Y_L` with rank `L \ge 3`.
+- Status: Note. This lemma applies only to genuinely new parity-even fully symmetric trace-free primitive families `Y_L` with rank `L \ge 3`.
 - Status: Proven. Derived tensors such as gradients of lower-rank families and trace descendants are excluded from the primitive-family definition and are not part of this lemma.
 
 ## Claim
@@ -46,7 +46,7 @@ Y2 := Y_{i_1 \cdots i_L} Y^{i_1 \cdots i_L}.
 
 - Status: Proven. The previous mixed-quadratic argument fails at `L = 2`, because after contracting the two indices of `E_{ij}` into `X_{kl}`, no leftover indices remain.
 - Status: Proven. Therefore `E_{ij} X^{ij}` exists for the rank-2 STF class.
-- Status: Proven. This is exactly why rank `2` must remain outside the present `L \ge 3` theorem.
+- Status: Note. This is exactly why rank `2` must remain outside the present `L \ge 3` theorem.
 
 ## Consequence
 

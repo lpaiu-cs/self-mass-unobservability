@@ -16,24 +16,24 @@
 ### Option 2: Mild One-Step Suppression
 
 - Status: Conjectural. One may assign `B_ij` one extra unit of fixed-order weight relative to `E_ij`.
-- Status: Proven. This is not enough to recover the electric-only `\Delta \le 4` theorem, because `B2` would still appear at `\Delta = 4`.
+- Status: Note. This is not enough to recover the electric-only `\Delta \le 4` theorem, because `B2` would still appear at `\Delta = 4`.
 - Status: Proven. Mild suppression can delay `EB2`, but it does not remove the smallest magnetic obstruction.
 
 ### Option 3: Strong Suppression Beyond The MVP Window
 
 - Status: Conjectural. One may impose a stronger ordering principle that pushes `B_ij` to weight `3` or higher, or otherwise pushes every scalar containing `B` beyond `\Delta \le 4`.
-- Status: Proven. This would rescue the electric-only theorem at the current fixed order.
+- Status: Note. This would rescue the electric-only theorem at the current fixed order.
 - Status: Proven. It would also be an extra physical assumption, not a consequence of the present theorem setup.
 
 ### Option 4: Background Restriction
 
 - Status: Conjectural. One may restrict the allowed external environments so that `B_ij` vanishes or is negligible on the theorem domain.
-- Status: Proven. This is a background-selection assumption, not a general ordering theorem for the minimal sector.
+- Status: Note. This is a background-selection assumption, not a general ordering theorem for the minimal sector.
 
 ### Option 5: Matching-Level Coefficient Suppression
 
 - Status: Conjectural. One may assume the relevant body family has vanishing or parametrically suppressed magnetic Wilson data.
-- Status: Proven. This is a body-dependent matching assumption, not a structural closure result for the sector itself.
+- Status: Note. This is a body-dependent matching assumption, not a structural closure result for the sector itself.
 
 ## Current Verdict
 

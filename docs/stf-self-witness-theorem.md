@@ -42,9 +42,9 @@ w_Y \ge 3.
 
 ## What This Theorem Does Not Say
 
-- Status: Proven. This theorem does not say that the first mixed witness is always `EYY`.
-- Status: Proven. This theorem does not say that all higher-rank tensor families fall into one universal mixed-pattern class.
-- Status: Proven. This theorem does not rescue minimal-sector uniqueness.
+- Status: Note. This theorem does not say that the first mixed witness is always `EYY`.
+- Status: Note. This theorem does not say that all higher-rank tensor families fall into one universal mixed-pattern class.
+- Status: Note. This theorem does not rescue minimal-sector uniqueness.
 - Status: Proven. It only identifies a universal necessary threshold layer for the genuine parity-even STF branch with `L \ge 3`.
 
 ## Audited Instances

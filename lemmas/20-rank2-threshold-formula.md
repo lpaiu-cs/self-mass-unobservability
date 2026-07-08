@@ -42,7 +42,7 @@ W_{\mathrm{self}} = W_{\mathrm{mix}} = W_{\min} = 2.
 ## Threshold Consequence At `\Delta_{\max}=4`
 
 - Status: Proven. The self-only lower bound is obtained from `2 w_X > 4`, namely `w_X \ge 3`.
-- Status: Proven. This self-only bound is not the true current necessary threshold, because it does not remove the mixed witness `EX`.
+- Status: Note. This self-only bound is not the true current necessary threshold, because it does not remove the mixed witness `EX`.
 - Status: Proven. The mixed-aware necessary threshold comes from
 
 ```math
@@ -63,5 +63,5 @@ w_X \ge 4.
 ## Boundary
 
 - Status: Proven. If one explicitly adds a cross-family rule killing `EX`, then the old self-only lower bound `w_X \ge 3` can reappear, but that rule is not active in the current repo.
-- Status: Proven. This lemma is class-limited to the audited parity-even STF rank-2 family.
+- Status: Note. This lemma is class-limited to the audited parity-even STF rank-2 family.
 - Status: Proven. The lemma obstructs the stronger minimal-sector uniqueness claim, not the positive finite-family collapse branch.

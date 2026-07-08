@@ -33,5 +33,5 @@ whenever `\chi_1(\tau_0)\neq \chi_2(\tau_0)` and `\lambda \neq 0`.
 
 ## Boundary
 
-- Status: Proven. This is a genuine `A4` failure, not an `A3` or `A5` failure, because locality and analyticity remain active in the explicit model.
+- Status: Note. This is a genuine `A4` failure, not an `A3` or `A5` failure, because locality and analyticity remain active in the explicit model.
 - Status: Proven. The next step is not another failure statement but a salvage question: whether the collapse theorem revives once `\chi` is kept explicitly.

@@ -2,7 +2,7 @@
 
 ## Scope
 
-- Status: Proven. This lemma audits the three pairwise combinations of the currently audited family classes at `\Delta \le 4`.
+- Status: Note. This lemma audits the three pairwise combinations of the currently audited family classes at `\Delta \le 4`.
 - Status: Proven. The imposed thresholds are:
   `R2`: `w_X \ge 4` unless an explicit `EX = 0`-type rule removes the mixed quadratic witness,
   `R0a`: `w_S \ge 5` or explicit exclusion of bare `S`,
