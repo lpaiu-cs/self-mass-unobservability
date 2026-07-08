@@ -38,10 +38,16 @@ total derivative), but the repo's `r4` mixed candidates cap at degree 2 in `E`
 exception" needing a "manual exhaustive patch" (`docs/family-class-table.md`,
 `lemmas/43-*`).
 
-**Fix:** downgrade `theorem-package.md:12` (and the corresponding
-`family-envelope-theorem`, `family-class-table` rank-4 rows) from `Proven` to
-`Status: Open — rank-4 enumeration incomplete` until the rank-4 mixed sector is
-re-derived. Ranks `0-3,5,6` are exact-confirmed and may keep `Proven`.
+The rank-4 sector has now been **re-derived** (`verification/rederive_rank4.py`):
+under the theorem's own rules the correct survivor dimension is **25, not 19** —
+the audited list omits 6 genuine higher-E-degree mixed survivors (constructed
+and verified there). Ranks `0-3,5,6` are exact-confirmed (`7,18,33,17,19,23`).
+
+**Fix:** update the `r4` audit and `family-class-table` rank-4 row to the
+corrected count `25` (add the omitted `E^3 Q`, `E Q^3`, and cross-gradient
+operators), and only then may `theorem-package.md:12` keep `Proven`. Until the
+repo's own `r4` scripts reflect `25`, that envelope-closure line should read
+`Status: Open — rank-4 count corrected to 25 pending script update`.
 
 ## 3. `Proven` used for bookkeeping / historical notes
 

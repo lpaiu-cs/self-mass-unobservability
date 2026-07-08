@@ -65,15 +65,20 @@ method **exactly reproduces 7 of the 8 audited sectors**:
 spin-4+ precision limit. (`tier1_highrank_molien.py` separately confirms the
 exact rank-4/5/6 quartic relations `EEQQ=3, QQQQ=2, ...` behind their nullities.)
 
-**Finding — rank-4 (`Q`) enumeration is incomplete.** The exact method gives
-`survivor = 25` for `E/Q`, versus the repo's audited `19`. The 6-operator
-excess is a genuine gap: e.g. `Q_abcd (E^2)_ab E_cd` (degree 3 in `E`, 1 in `Q`)
-is a nonzero, rotation-invariant, pure-primitive (non-total-derivative) weight-4
-survivor, but the repo's `r4` mixed candidates cap at degree 2 in `E` (`E2Q2`).
-This lands **exactly** on the sector the repo's own docs flag as the "isolated
-rank-4 exception" needing a "manual exhaustive patch" (`family-class-table.md`,
-`lemma 43`). Rank-4 completeness should be re-derived before publication; the
-other seven sectors are exact-confirmed complete.
+**Finding + re-derivation — rank-4 (`Q`) corrected to 25.** The exact character
+method gives `survivor = 25` for `E/Q` versus the repo's audited `19`; the
+numeric brute-force independently also gives `25`, so both independent methods
+agree and the audited `19` is an under-count. `rederive_rank4.py` closes the gap
+legitimately (no new rule — only the repo's own total-derivative / EOM / STF
+identities): it constructs the omitted survivors and proves each is a nonzero,
+rotation-invariant, pure-primitive (non-total-derivative) weight-4 scalar —
+`Q_abcd (E^2)_ab E_cd` (degree 3 in `E`), `E_ab Q...Q...Q...` (degree 3 in `Q`),
+etc. The repo's `r4` mixed candidates stop at degree 2 in `E` (`E2Q2`), so its
+enumeration never generates these higher-degree mixed operators. This lands
+**exactly** on the sector the repo's own docs flag as the "isolated rank-4
+exception" needing a "manual exhaustive patch" (`family-class-table.md`,
+`lemma 43`). **Corrected rank-4 survivor dimension: 25.** The other seven
+sectors are exact-confirmed complete (`7,18,33,17,19,·,19,23`).
 
 ### Tier 2 — family-envelope closure (`tier2_irrep_census.py`, `tier2_tower.py`)
 
