@@ -74,11 +74,13 @@ were then **individually reviewed** and swept (110 more lines): scope caveats,
 disclaimers ("does not ...", "not a universal ..."), task/role descriptions,
 and bookkeeping -> `Note`; genuine positive results ("proves/derives ...",
 "model is/preserves ...", "minimally irreducible ... class", "self-only ...",
-"necessary conditions", "EEQ class exists ...") kept `Proven`. The one
-remaining related category is the `assumptions-ledger.md` "Non-Assumption For
-M*" sections ("No X is assumed ...", "Y is a working restriction, not a
-theorem"), which are scope-declaration bookkeeping and could be swept to `Note`
-in a final pass, but were left as defensible scope claims for now.
+"necessary conditions", "EEQ class exists ...") kept `Proven`. Finally, the `assumptions-ledger.md` scope/rule sections ("Non-Assumption For
+M*", "Explicit Rule For *", "Explicit Representative Choice For *", the boundary
+stress-test rules) were swept as well: all 57 `Status: Proven` lines there are
+scope declarations, rule records, representative choices, or methodology
+bookkeeping -> `Note`. The ledger now carries only `Assumption` (A1-A8),
+`Imported from prior work` (E1-E3), and `Note`; the mathematical proofs of these
+facts live in the `lemmas/` files, which keep `Proven`.
 
 ## What the tags *should* read, per this verification
 
