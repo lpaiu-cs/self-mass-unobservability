@@ -1,0 +1,73 @@
+# Status-Tag Audit
+
+Every claim in `docs/` and `lemmas/` carries a `Status: Proven` / `Status:
+Conjectural` tag. A scan finds **2076 `Proven`** vs **125 `Conjectural`**. The
+tag is applied so broadly — to posited assumptions, to bookkeeping notes, and
+to claims that are actually open — that `Proven` no longer distinguishes
+machine/hand-verified mathematics from framing prose. This will draw reviewer
+skepticism and should be tidied before publication. Concrete issues and
+recommended fixes:
+
+## 1. Assumptions tagged inconsistently (`Proven` vs `Conjectural`)
+
+- `docs/assumptions-ledger.md` marks each of `A1`-`A8` **`Conjectural`** (correct
+  in spirit: they are posited hypotheses, not theorems).
+- `docs/theorem-package.md:11` lists the same `A1`-`A8` under **`Status:
+  Proven`** ("The domain assumptions are the active A1-A8 ledger assumptions
+  ...").
+
+An assumption is neither proven nor conjectural — it is an **assumption**.
+**Fix:** introduce a third tag `Status: Assumption` (or `Hypothesis`) for
+`A1`-`A8` and any sentence that merely *states* the domain, in both files.
+Reserve `Proven`/`Conjectural` for derived claims.
+
+## 2. Envelope-closure claim tagged `Proven` but is INCOMPLETE at rank 4
+
+- `docs/theorem-package.md:12` — **`Status: Proven`**: "the irreducible
+  primitive-family envelope closes on the audited scalar, vector, rank-2 STF,
+  and genuine rank-`L >= 3` STF classes."
+
+Independent exact character-integral verification
+(`verification/tier1_survivor_exact.py`) reproduces the survivor dimension for
+7 of 8 audited sectors exactly (`E,B,S,V,T,U,Z = 7,18,33,17,19,19,23`) but finds
+the **rank-4 (`Q`) sector incomplete**: exact survivor dimension `25` vs the
+repo's audited `19`. A confirmed missing survivor is `Q_abcd (E^2)_ab E_cd`
+(degree 3 in `E`, 1 in `Q`): nonzero, rotation-invariant, pure-primitive (not a
+total derivative), but the repo's `r4` mixed candidates cap at degree 2 in `E`
+(`E2Q2`). This coincides with the repo's own flag of an "isolated rank-4
+exception" needing a "manual exhaustive patch" (`docs/family-class-table.md`,
+`lemmas/43-*`).
+
+**Fix:** downgrade `theorem-package.md:12` (and the corresponding
+`family-envelope-theorem`, `family-class-table` rank-4 rows) from `Proven` to
+`Status: Open — rank-4 enumeration incomplete` until the rank-4 mixed sector is
+re-derived. Ranks `0-3,5,6` are exact-confirmed and may keep `Proven`.
+
+## 3. `Proven` used for bookkeeping / historical notes
+
+Many `Status: Proven` lines are not theorems but records (e.g. "This note
+records the pre-M4 internal reduction attempt", `lemmas/06`, which then contains
+`Conjectural` steps). Mixing "the proof step is proven" with "it is proven that
+we recorded this" dilutes the tag.
+
+**Fix:** add `Status: Note` / `Status: Bookkeeping` for provenance and
+historical lines; keep `Proven` for the mathematical content only.
+
+## What the tags *should* read, per this verification
+
+Confirmed `Proven` (independently reproduced in `verification/`):
+- COM decoupling (Request 1), internal-structure no-go (Request 2).
+- The three algebraic reductions (`Tr E^4`, `Tr B^4`, and the exact `Tr(EBEB)`
+  identity); the seven-scalar `Delta<=4` electric basis and its linear
+  independence; electric-sector catalog completeness.
+- All four boundary escapes (`A5`, `A3`, `A4`, `A8`).
+- Family completeness for ranks `0-3,5,6` (exact survivor dimensions match).
+- Irrep/trace-absorption census; the uniform STF-tower self-witness structure
+  (`L=2..12`).
+
+Should NOT read `Proven` yet:
+- Rank-4 (`Q`) family completeness / the unqualified envelope-closure claim
+  (incomplete — see §2).
+- `A1`-`A8` (assumptions, not theorems — see §1).
+
+Everything above is reproducible from the scripts in this directory.

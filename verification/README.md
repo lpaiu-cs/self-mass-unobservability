@@ -52,16 +52,28 @@ So the `Delta<=4` enumeration misses no operator and posits no spurious survivor
 for every family of rank `0-3`, including the physical magnetic sector and the
 3-family `E/B/S` composition.
 
-**High-rank `Q/U/Z` (ranks 4/5/6).** The numeric matrix-rank in
-`verify_family_survivors.py` loses precision at spin-4+ and fails to resolve
-some exact algebraic relations among high-rank quartic contractions, so it
-over-counts there (`E/Q` gives 25 vs their 19). Those relations are real and
-the audit found them (`r4/r5/r6_survivor_rank_check` nullities 3/4/6).
-`tier1_highrank_molien.py` reproduces them with **exact** `O(3)` character
-(Molien) dimensions: `EEQQ=3` (not 4 → 1 relation), `QQQQ=2` (not 4 → 2
-relations), etc., recovering the reported nullities and confirming no operator
-and no relation was missed. This corroborates their exact symbolic ranks
-`Q:19, U:19, Z:23`.
+**High-rank `Q/U/Z` (ranks 4/5/6) — exact character method.**
+`tier1_survivor_exact.py` computes each sector's survivor dimension with **exact
+integer `O(3)` character integrals only** (no matchings, no numeric rank), via
+the identity `survivor(w) = dim inv_trunc(w) - dim inv_prom(w-1)` (validated on
+the electric sector = 7). The `sig_dim` gate is the load-bearing subtlety: a
+delta-only scalar needs an **even total Cartesian index count**, else it would
+require an epsilon (pseudoscalar, excluded) — without this gate the character
+count spuriously includes gradient-block pseudoscalars. With the gate, the
+method **exactly reproduces 7 of the 8 audited sectors**:
+`E,B,S,V,T,U,Z = 7,18,33,17,19,19,23`, resolving the numeric method's
+spin-4+ precision limit. (`tier1_highrank_molien.py` separately confirms the
+exact rank-4/5/6 quartic relations `EEQQ=3, QQQQ=2, ...` behind their nullities.)
+
+**Finding — rank-4 (`Q`) enumeration is incomplete.** The exact method gives
+`survivor = 25` for `E/Q`, versus the repo's audited `19`. The 6-operator
+excess is a genuine gap: e.g. `Q_abcd (E^2)_ab E_cd` (degree 3 in `E`, 1 in `Q`)
+is a nonzero, rotation-invariant, pure-primitive (non-total-derivative) weight-4
+survivor, but the repo's `r4` mixed candidates cap at degree 2 in `E` (`E2Q2`).
+This lands **exactly** on the sector the repo's own docs flag as the "isolated
+rank-4 exception" needing a "manual exhaustive patch" (`family-class-table.md`,
+`lemma 43`). Rank-4 completeness should be re-derived before publication; the
+other seven sectors are exact-confirmed complete.
 
 ### Tier 2 — family-envelope closure (`tier2_irrep_census.py`, `tier2_tower.py`)
 
