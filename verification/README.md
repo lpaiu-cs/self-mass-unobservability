@@ -28,28 +28,74 @@ and posits no spurious relation. For this block set, delta-contractibility
 `a` carry the parity), so the pure-delta enumerator counts precisely the
 theorem's epsilon-free sector.
 
-Remaining Tier-1 families (magnetic `B`, scalar `S`, vector `V`, and the STF
-towers `T/Q/U/Z` at ranks 3-6, plus cross-terms) reuse the same enumerator but
-require an explicit **parity filter**: e.g. `B` is STF rank-2 (even index count)
-but parity-odd, so `E:B` is a pseudoscalar that must be excluded. That filter,
-plus each family's exact weight/parity assignment from the `*-family-ordering`
-docs, is the mechanical remainder of Tier 1.
+### Tier 1 — all audited families (`stf.py`, `verify_family_survivors.py`)
+
+`stf.py` builds a general symmetric-trace-free rank-`L` tensor generator
+(nullspace of the trace map; self-tested to dimension `2L+1` for `L=0..6`).
+`verify_family_survivors.py` computes each sector's **survivor dimension**
+independently — using the theorem's exact truncated block set
+`{E,DtE,Dt2E,GradE} + {X,DtX,Dt2X,GradX}` and the correct total-derivative
+(`D_tau`) quotient with the lower-order EOM (`a=0`) — and compares to the
+repo's own survivor rank. Parity is handled exactly per family (`E,S,V,T,Q,U,Z`
+parity-even; the physical magnetic `B` parity-odd, so `E:B` is excluded but
+`EB2` survives).
+
+| sector | family rank | independent survivor dim | their rank | verdict |
+| --- | --- | --- | --- | --- |
+| electric `E` | – | 7 | 7 | MATCH |
+| `E/B` (magnetic) | 2 (odd) | 18 | 18 | MATCH |
+| `E/B/S` (scalar) | 0 | 33 | 33 | MATCH |
+| `E/V` (vector) | 1 | 17 | 17 | MATCH |
+| `E/T` | 3 | 19 | 19 | MATCH |
+
+So the `Delta<=4` enumeration misses no operator and posits no spurious survivor
+for every family of rank `0-3`, including the physical magnetic sector and the
+3-family `E/B/S` composition.
+
+**High-rank `Q/U/Z` (ranks 4/5/6).** The numeric matrix-rank in
+`verify_family_survivors.py` loses precision at spin-4+ and fails to resolve
+some exact algebraic relations among high-rank quartic contractions, so it
+over-counts there (`E/Q` gives 25 vs their 19). Those relations are real and
+the audit found them (`r4/r5/r6_survivor_rank_check` nullities 3/4/6).
+`tier1_highrank_molien.py` reproduces them with **exact** `O(3)` character
+(Molien) dimensions: `EEQQ=3` (not 4 → 1 relation), `QQQQ=2` (not 4 → 2
+relations), etc., recovering the reported nullities and confirming no operator
+and no relation was missed. This corroborates their exact symbolic ranks
+`Q:19, U:19, Z:23`.
+
+### Tier 2 — family-envelope closure (`tier2_irrep_census.py`, `tier2_tower.py`)
+
+- **Irrep census / trace absorption** (`tier2_irrep_census.py`): confirms the
+  STF-`L` are the complete irreducible parity-even set (dim `2L+1`), a symmetric
+  rank-`r` tensor is `STF_r + STF_{r-2} + ...` (trace descendants are strictly
+  lower STF), and every Cartesian rank-`r` tensor decomposes into `STF_L` pieces
+  only (`sum = 3^r`) — so `TraceDesc` and `MixedEvenDual` genuinely reduce to
+  STF + traces and no exotic irreducible family exists. The envelope classes are
+  exhaustive up to trace/symmetry reduction.
+- **Uniform STF-tower closure** (`tier2_tower.py`): the infinite tower `L>=3` is
+  closed by a single uniform self-witness structure, verified via exact Molien
+  for `L=2..12` (past the audited `L<=6`): for every `L>=3` the smallest self
+  witness is `X2` at weight 2, `E:X` vanishes (no weight-2 mixed), and the
+  smallest mixed witness is `EXX` at weight 3 — no new lower witness ever
+  appears, so the tower closes with one theorem. `L=2` is the sole special case
+  (`E:X` at weight 2 = the `R2` mixed witness).
+- **Composition closure**: the `E/B/S` = 33 match above is a genuine 3-family
+  admission-level composition with no unexpected cross-family survivor; the
+  repo's `composition_attack_delta4.py` (all combos "sufficient / none") was
+  cross-run and is consistent.
 
 ## Scope and limits
 
 Verified independently: the electric-sector `Delta<=4` basis, the three
-algebraic identities, seven-survivor independence, and the physical core of all
-four boundary escapes (A5 exact, A4 exact, A3 exact via Laplace transform,
-plus the magnetic no-go witness). Cross-checked by running the repo's own
-`symbolic/` scripts (`survivor_rank_check`, `enumerate_contractions_delta4`,
-`normal_form_reduce`, the four counterexample demos, `stf_self_witness_check`,
-`r3/r4_survivor_rank_check`, `family_envelope_census`) and confirming their
-output matches the memos.
+algebraic identities, seven-survivor independence, all four boundary escapes
+(A5/A4/A3 exact, A8), the magnetic no-go witness, **catalog completeness for
+every audited family of rank 0-3 (exact survivor-dimension agreement) and the
+rank 4-6 relation structure (exact Molien nullities)**, and the family-envelope
+closure (irrep census + uniform tower). Cross-checked against the repo's own
+`symbolic/` scripts throughout.
 
-**Not independently re-derived here:** catalog exhaustiveness across the full
-family envelope (primitive-set adequacy) and the higher-rank STF-tower /
-composition-closure chain (lemmas ~22-71). Those remain the residual
-verification burden the theorem package itself flags as open; the recommended
-route is a Molien/Hilbert-series count of the SO(3) invariant ring graded by
-weight, cross-checked with the numeric-rank enumerator extended to all
-audited families.
+**Not independently re-derived here:** a fully exact (non-numeric) survivor
+dimension for ranks 4-6 — the numeric quotient is precision-limited there, so
+those ranks rest on exact per-signature Molien dims + the repo's exact symbolic
+`survivor_rank_check`. The full 71-lemma composition-closure chain
+(lemmas ~22-71) is corroborated but not re-derived line by line.
