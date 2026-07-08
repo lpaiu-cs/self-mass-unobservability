@@ -38,16 +38,22 @@ total derivative), but the repo's `r4` mixed candidates cap at degree 2 in `E`
 exception" needing a "manual exhaustive patch" (`docs/family-class-table.md`,
 `lemmas/43-*`).
 
-The rank-4 sector has now been **re-derived** (`verification/rederive_rank4.py`):
-under the theorem's own rules the correct survivor dimension is **25, not 19** —
-the audited list omits 6 genuine higher-E-degree mixed survivors (constructed
-and verified there). Ranks `0-3,5,6` are exact-confirmed (`7,18,33,17,19,23`).
+The rank-4 sector was **re-derived** (`verification/rederive_rank4.py`) and the
+repo's `r4` scripts have now been **fixed**: under the theorem's own rules the
+correct survivor dimension is **25, not 19**. The 6 omitted higher-degree mixed
+survivors — `EEQ`, `QQQ`, `E3Q`, `EQ3`, `EDtEQ`, `GradEGradQ` — were added to
+`symbolic/r4_survivor_rank_check.py::_r4_new_specs()` and
+`symbolic/r4_sector_delta4.py::_r4_family_classes()` (with the evaluator
+extended to the `DtE`/`GradE` blocks). Both scripts now report `Total survivor
+rank: 25`, and an exact O(3) character integral cross-checks it. Ranks
+`0-3,5,6` were already exact-confirmed (`7,18,33,17,19,23`); the smoke test and
+the other sector scripts still pass.
 
-**Fix:** update the `r4` audit and `family-class-table` rank-4 row to the
-corrected count `25` (add the omitted `E^3 Q`, `E Q^3`, and cross-gradient
-operators), and only then may `theorem-package.md:12` keep `Proven`. Until the
-repo's own `r4` scripts reflect `25`, that envelope-closure line should read
-`Status: Open — rank-4 count corrected to 25 pending script update`.
+**Remaining tag fix:** with the `r4` scripts now at `25`, `theorem-package.md:12`
+(envelope closure) may keep `Proven` for the *dimension*, but note that the
+`family-class-table.md` rank-4 row and any prose quoting "19" should be updated
+to `25`. The `A1`-`A8` assumption/`Proven` inconsistency in §1 above still
+stands.
 
 ## 3. `Proven` used for bookkeeping / historical notes
 

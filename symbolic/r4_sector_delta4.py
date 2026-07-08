@@ -423,6 +423,65 @@ def _r4_family_classes() -> tuple[ContractionClass, ...]:
             REP_QQQQ_TETRA,
             4,
         ),
+        # --- higher-degree mixed survivors restored (the list previously capped
+        #     the mixed E/Q sector at degree 2 in E). These lift the new-sector
+        #     rank from 12 to 18 -> total survivor dimension 25. Verified in
+        #     r4_survivor_rank_check.py and verification/rederive_rank4.py. ---
+        _make_class(
+            ("E", "E", "Q"),
+            "EEQ",
+            "Surviving candidate",
+            "normal form",
+            (((0, 0), (2, 0)), ((0, 1), (2, 1)), ((1, 0), (2, 2)), ((1, 1), (2, 3))),
+            3,
+        ),
+        _make_class(
+            ("Q", "Q", "Q"),
+            "QQQ",
+            "Surviving candidate",
+            "normal form",
+            (
+                ((0, 0), (1, 0)), ((0, 1), (1, 1)), ((0, 2), (2, 0)),
+                ((0, 3), (2, 1)), ((1, 2), (2, 2)), ((1, 3), (2, 3)),
+            ),
+            3,
+        ),
+        _make_class(
+            ("Q", "E", "E", "E"),
+            "E3Q",
+            "Surviving candidate",
+            "survives current rules",
+            (((0, 0), (1, 0)), ((0, 1), (2, 0)), ((1, 1), (2, 1)),
+             ((0, 2), (3, 0)), ((0, 3), (3, 1))),
+            4,
+        ),
+        _make_class(
+            ("E", "Q", "Q", "Q"),
+            "EQ3",
+            "Surviving candidate",
+            "survives current rules",
+            (
+                ((0, 0), (1, 0)), ((0, 1), (2, 0)), ((1, 1), (2, 1)),
+                ((1, 2), (3, 0)), ((1, 3), (3, 1)), ((2, 2), (3, 2)), ((2, 3), (3, 3)),
+            ),
+            4,
+        ),
+        _make_class(
+            ("E", "DtE", "Q"),
+            "EDtEQ",
+            "Surviving candidate",
+            "survives current rules",
+            (((0, 0), (2, 0)), ((0, 1), (2, 1)), ((1, 0), (2, 2)), ((1, 1), (2, 3))),
+            4,
+        ),
+        _make_class(
+            ("GradE", "GradQ"),
+            "GradEGradQ",
+            "Surviving candidate",
+            "survives current rules",
+            (((1, 0), (1, 1)), ((0, 0), (1, 2)), ((0, 1), (1, 3)), ((0, 2), (1, 4))),
+            4,
+        ),
     )
     return tuple(sorted(classes, key=lambda item: (item.weight, item.signature, item.label)))
 
@@ -483,15 +542,13 @@ def r4_sector_report(max_weight: int = MAX_WEIGHT) -> str:
         "Delta<=4 rank-4 family audit",
         "",
         f"Total parity-even scalar classes: {len(classes)}",
-        f"Surviving classes (hand-built candidate list): {len(survivors)}",
-        "NOTE: this hand-built list caps the mixed E/Q sector at degree 2 in E",
-        "(E2Q2) and omits the E/Q cross-gradient, so it UNDER-COUNTS. The corrected",
-        "rank-4 survivor dimension under the theorem's own rules is 25 (exact O(3)",
-        "character integral; see r4_survivor_rank_check.py and",
-        "verification/rederive_rank4.py). This list must be extended with the",
-        "higher-degree mixed survivors (E^3*Q, E*Q^3, GradE.GradQ, ...) before use.",
+        f"Surviving classes: {len(survivors)}",
+        "(Now includes the higher-degree mixed survivors EEQ, QQQ, E3Q, EQ3, EDtEQ,",
+        "GradEGradQ, which the original list omitted by capping the mixed E/Q sector",
+        "at degree 2 in E. Corrected survivor dimension 25; cross-checked by exact",
+        "O(3) character integral in r4_survivor_rank_check.py.)",
         "",
-        "Surviving Delta<=4 scalar classes (incomplete hand-built list):",
+        "Surviving Delta<=4 scalar classes:",
     ]
     current_weight: int | None = None
     for item in survivors:

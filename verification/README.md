@@ -80,6 +80,15 @@ exception" needing a "manual exhaustive patch" (`family-class-table.md`,
 `lemma 43`). **Corrected rank-4 survivor dimension: 25.** The other seven
 sectors are exact-confirmed complete (`7,18,33,17,19,·,19,23`).
 
+**Fixed in the repo scripts.** The 6 omitted survivors (`EEQ, QQQ, E3Q, EQ3,
+EDtEQ, GradEGradQ`) have been added to `symbolic/r4_survivor_rank_check.py`
+(`_r4_new_specs`, evaluator extended to `DtE`/`GradE`) and
+`symbolic/r4_sector_delta4.py` (`_r4_family_classes`); both now report
+`Total survivor rank: 25`, cross-checked by the exact character integral, with
+no regression in the smoke test or other sector scripts. `rederive_rank4.py`
+constructs and verifies each omitted operator, and `test`-style spec checks
+confirm the new-sector rank rises from 12 to 18 (total 25).
+
 ### Tier 2 — family-envelope closure (`tier2_irrep_census.py`, `tier2_tower.py`)
 
 - **Irrep census / trace absorption** (`tier2_irrep_census.py`): confirms the

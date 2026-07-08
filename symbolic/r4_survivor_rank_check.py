@@ -361,6 +361,42 @@ def _r4_new_specs() -> dict[str, tuple[tuple[str, ...], tuple[tuple[tuple[int, i
                 ((2, 3), (3, 3)),
             ),
         ),
+        # --- higher-degree mixed survivors restored (previously omitted; the
+        #     list capped the mixed E/Q sector at degree 2 in E). Each verified
+        #     nonzero and independent; together they lift the new-sector rank
+        #     from 12 to 18 (total survivor dimension 7 + 18 = 25). See
+        #     verification/rederive_rank4.py. ---
+        "EEQ": (
+            ("E", "E", "Q"),
+            (((0, 0), (2, 0)), ((0, 1), (2, 1)), ((1, 0), (2, 2)), ((1, 1), (2, 3))),
+        ),
+        "QQQ": (
+            ("Q", "Q", "Q"),
+            (
+                ((0, 0), (1, 0)), ((0, 1), (1, 1)), ((0, 2), (2, 0)),
+                ((0, 3), (2, 1)), ((1, 2), (2, 2)), ((1, 3), (2, 3)),
+            ),
+        ),
+        "E3Q": (
+            ("Q", "E", "E", "E"),
+            (((0, 0), (1, 0)), ((0, 1), (2, 0)), ((1, 1), (2, 1)),
+             ((0, 2), (3, 0)), ((0, 3), (3, 1))),
+        ),
+        "EQ3": (
+            ("E", "Q", "Q", "Q"),
+            (
+                ((0, 0), (1, 0)), ((0, 1), (2, 0)), ((1, 1), (2, 1)),
+                ((1, 2), (3, 0)), ((1, 3), (3, 1)), ((2, 2), (3, 2)), ((2, 3), (3, 3)),
+            ),
+        ),
+        "EDtEQ": (
+            ("E", "DtE", "Q"),
+            (((0, 0), (2, 0)), ((0, 1), (2, 1)), ((1, 0), (2, 2)), ((1, 1), (2, 3))),
+        ),
+        "GradEGradQ": (
+            ("GradE", "GradQ"),
+            (((1, 0), (1, 1)), ((0, 0), (1, 2)), ((0, 1), (1, 3)), ((0, 2), (1, 4))),
+        ),
     }
 
 
@@ -393,11 +429,18 @@ def _eval_new_label(
     for assignment in product(range(3), repeat=edge_count):
         term = 1
         for instance_index, block_name in enumerate(signature):
-            if block_name == "E":
+            if block_name in {"E", "DtE"}:
                 indices = tuple(assignment[slot_to_edge[(instance_index, slot)]] for slot in range(2))
-                matrix = sample["E"]
+                matrix = sample[block_name]
                 assert isinstance(matrix, sp.MatrixBase)
                 term *= int(matrix[indices[0], indices[1]])
+            elif block_name == "GradE":
+                indices = tuple(
+                    assignment[slot_to_edge[(instance_index, slot)]] for slot in range(3)
+                )
+                blocks = sample["GradE"]
+                assert isinstance(blocks, list)
+                term *= int(blocks[indices[0]][indices[1], indices[2]])
             elif block_name in {"Q", "DtQ"}:
                 indices = tuple(
                     assignment[slot_to_edge[(instance_index, slot)]] for slot in range(4)
@@ -426,6 +469,8 @@ def _new_sector_rank_lower_bound(sample_count: int = SAMPLE_COUNT) -> int:
     for _ in range(sample_count):
         sample = {
             "E": _random_stf2(rng),
+            "DtE": _random_stf2(rng),
+            "GradE": [_random_stf2(rng) for _ in range(3)],
             "Q": _random_stf4(rng),
             "DtQ": _random_stf4(rng),
             "GradQ": _random_grad_stf4(rng),
@@ -548,15 +593,15 @@ def r4_survivor_rank_report() -> str:
         "",
         f"Baseline electric rank: {summary.baseline_rank}",
         f"New rank-4-sector rank: {summary.new_rank} out of {summary.new_count}",
-        f"Total rank (hand-built candidate list): {summary.rank} out of {summary.count}",
+        f"Total survivor rank: {summary.rank} out of {summary.count}",
         f"Nullity: {summary.nullity}",
         f"Deterministic evaluation sample count: {summary.sample_count}",
         "",
-        "*** CORRECTED total survivor dimension (exact O(3) character integral, no",
-        f"    E-degree cap): {corrected}.  The hand-built candidate list above under-",
-        "    counts because it caps the mixed E/Q sector at degree 2 in E (E2Q2) and",
-        "    omits the E/Q cross-gradient; the missing higher-degree survivors are",
-        "    constructed and verified in verification/rederive_rank4.py. ***",
+        f"Cross-check: exact O(3) character-integral survivor dimension = {corrected}",
+        "(matches). The higher-degree mixed survivors EEQ, QQQ, E3Q, EQ3, EDtEQ, and",
+        "GradEGradQ were added after the original list capped the mixed E/Q sector at",
+        "degree 2 in E (E2Q2); they lift the new-sector rank from 12 to 18. See",
+        "verification/rederive_rank4.py for their explicit construction and checks.",
         "",
         "First exact dependence relation:",
         f"- {sp.sstr(summary.first_null_relation)} = 0",
