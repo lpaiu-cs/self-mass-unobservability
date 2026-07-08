@@ -4,6 +4,7 @@ from dataclasses import dataclass
 from itertools import product
 import random
 
+import numpy as np
 import sympy as sp
 
 from enumerate_contractions_delta4 import enumerate_contraction_classes
@@ -13,6 +14,93 @@ from survivor_rank_check import rank_summary
 
 SAMPLE_COUNT = 30
 RNG_SEED = 424242
+
+# ---------------------------------------------------------------------------
+# Corrected rank-4 survivor dimension (exact O(3) character integral).
+#
+# The hand-built candidate list in `_r4_new_specs()` below caps the mixed E/Q
+# sector at degree 2 in E (`E2Q2`) and has no E/Q cross-gradient, so it
+# under-counts the rank-4 survivors as 19. Under the theorem's OWN reduction
+# rules (total derivative, lower-order EOM, and the STF algebraic identities,
+# all of which the O(3) character dimension already respects), the correct
+# rank-4 survivor dimension is 25. The omitted survivors are the higher-degree
+# mixed operators such as `Q_abcd (E^2)_ab E_cd` (degree 3 in E), `E Q^3`
+# (degree 3 in Q), and the `GradE.GradQ` cross-gradient. See
+# `verification/rederive_rank4.py` for their explicit construction and
+# nonzero/rotation-invariance checks; two independent methods (this character
+# integral and a delta-only contraction enumerator) agree on 25.
+# ---------------------------------------------------------------------------
+CORRECTED_SURVIVOR_DIMENSION = 25
+
+
+def _character_survivor_dimension(family_rank: int = 4, wmax: int = 4) -> int:
+    """Exact parity-even, delta-only survivor dimension of the E/(rank-r) sector
+    via O(3) character integrals:  survivor(w) = inv_trunc(w) - inv_prom(w-1),
+    with inv over the truncated block set {E,DtE,Dt2E,GradE}+{X,DtX,Dt2X,GradX}
+    and inv_prom over the D_tau-promotable subset {E,DtE}+{X,DtX}. A delta-only
+    scalar needs an even total Cartesian index count (else it would need an
+    epsilon -> pseudoscalar, excluded). For a parity-even family (this function's
+    case) it reproduces the audited survivor rank exactly at family ranks
+    1,3,5,6 (V=17, T=19, U=19, Z=23) and the electric baseline (7); at rank 4
+    (Q) it gives 25, the corrected value. (The magnetic rank-2 family is
+    parity-odd, a separate case handled by the eb sector.)"""
+    n = 4000
+    theta = (np.arange(n) + 0.5) * np.pi / n
+    measure = (1.0 - np.cos(theta)) / np.pi * (np.pi / n)
+
+    def chi(irreps, k):
+        s = np.zeros_like(theta)
+        for l in irreps:
+            s = s + np.sin((2 * l + 1) * (k * theta) / 2) / np.sin((k * theta) / 2)
+        return s
+
+    def sym_power(pk, m):
+        h = [np.ones_like(theta)]
+        for j in range(1, m + 1):
+            acc = np.zeros_like(theta)
+            for k in range(1, j + 1):
+                acc = acc + pk[k - 1] * h[j - k]
+            h.append(acc / j)
+        return h[m]
+
+    def grad_irreps(r):
+        return tuple(sorted({abs(r - 1), r, r + 1})) if r >= 1 else (1,)
+
+    # block -> (irreps, parity, weight, cartesian_rank)
+    def blocks(sym, r, par):
+        return {
+            sym: ((r,), par, 1, r),
+            "Dt" + sym: ((r,), par, 2, r),
+            "Dt2" + sym: ((r,), par, 3, r),
+            "Grad" + sym: (grad_irreps(r), -par, 2, r + 1),
+        }
+
+    B = {**blocks("E", 2, +1), **blocks("Q", family_rank, +1)}
+
+    def sig_dim(sig):
+        if sum(B[nm][3] * c for nm, c in sig.items()) % 2 == 1:  # odd Cartesian index count
+            return 0
+        if sum(c for nm, c in sig.items() if B[nm][1] == -1) % 2 == 1:  # parity-odd
+            return 0
+        prod = np.ones_like(theta)
+        for nm, c in sig.items():
+            prod = prod * sym_power([chi(B[nm][0], k) for k in range(1, c + 1)], c)
+        return round(float(np.sum(prod * measure)))
+
+    def inv_dim(names, w):
+        caps = [range(0, w // B[nm][2] + 1) for nm in names]
+        total = 0
+        for counts in product(*caps):
+            if sum(c * B[nm][2] for c, nm in zip(counts, names)) == w and sum(counts) >= 1:
+                total += sig_dim({nm: c for nm, c in zip(names, counts) if c > 0})
+        return total
+
+    trunc = ["E", "DtE", "Dt2E", "GradE", "Q", "DtQ", "Dt2Q", "GradQ"]
+    prom = ["E", "DtE", "Q", "DtQ"]
+    survivor = inv_dim(trunc, 1)
+    for w in range(2, wmax + 1):
+        survivor += inv_dim(trunc, w) - inv_dim(prom, w - 1)
+    return survivor
 
 
 @dataclass(frozen=True)
@@ -448,6 +536,7 @@ def r4_rank_summary() -> R4RankSummary:
 
 def r4_survivor_rank_report() -> str:
     summary = r4_rank_summary()
+    corrected = _character_survivor_dimension()
     lines = [
         "Delta<=4 rank-4 family survivor rank audit",
         "",
@@ -459,9 +548,15 @@ def r4_survivor_rank_report() -> str:
         "",
         f"Baseline electric rank: {summary.baseline_rank}",
         f"New rank-4-sector rank: {summary.new_rank} out of {summary.new_count}",
-        f"Total rank: {summary.rank} out of {summary.count}",
+        f"Total rank (hand-built candidate list): {summary.rank} out of {summary.count}",
         f"Nullity: {summary.nullity}",
         f"Deterministic evaluation sample count: {summary.sample_count}",
+        "",
+        "*** CORRECTED total survivor dimension (exact O(3) character integral, no",
+        f"    E-degree cap): {corrected}.  The hand-built candidate list above under-",
+        "    counts because it caps the mixed E/Q sector at degree 2 in E (E2Q2) and",
+        "    omits the E/Q cross-gradient; the missing higher-degree survivors are",
+        "    constructed and verified in verification/rederive_rank4.py. ***",
         "",
         "First exact dependence relation:",
         f"- {sp.sstr(summary.first_null_relation)} = 0",

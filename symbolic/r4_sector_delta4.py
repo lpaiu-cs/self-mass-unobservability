@@ -483,9 +483,15 @@ def r4_sector_report(max_weight: int = MAX_WEIGHT) -> str:
         "Delta<=4 rank-4 family audit",
         "",
         f"Total parity-even scalar classes: {len(classes)}",
-        f"Surviving classes under the current allowed rules: {len(survivors)}",
+        f"Surviving classes (hand-built candidate list): {len(survivors)}",
+        "NOTE: this hand-built list caps the mixed E/Q sector at degree 2 in E",
+        "(E2Q2) and omits the E/Q cross-gradient, so it UNDER-COUNTS. The corrected",
+        "rank-4 survivor dimension under the theorem's own rules is 25 (exact O(3)",
+        "character integral; see r4_survivor_rank_check.py and",
+        "verification/rederive_rank4.py). This list must be extended with the",
+        "higher-degree mixed survivors (E^3*Q, E*Q^3, GradE.GradQ, ...) before use.",
         "",
-        "Surviving Delta<=4 scalar classes:",
+        "Surviving Delta<=4 scalar classes (incomplete hand-built list):",
     ]
     current_weight: int | None = None
     for item in survivors:
