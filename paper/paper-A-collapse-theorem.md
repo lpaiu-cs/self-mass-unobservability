@@ -2,7 +2,7 @@
 
 **Status:** draft manuscript (Paper A of the two-paper split; static free-fall sector)
 **Repository:** `lpaiu-cs/self-mass-unobservability`, branch `collapse-theorem`
-**Author:** _(replace the GitHub alias with the author's full name before release)_
+**Author:** Juneyoung, Kim
 
 ---
 

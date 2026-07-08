@@ -106,4 +106,4 @@ steps. See [`data/README.md`](data/README.md) for the directory-level policy.
 
 - Cache files and local machine artifacts are ignored in `.gitignore`.
 - Generated artifacts and vendored data/code are marked in `.gitattributes` so GitHub language stats stay readable.
-- `LICENSE` (MIT) and `CITATION.cff` are now included. The citation author field currently uses the GitHub alias; replace it with the author's full name before the final release.
+- `LICENSE` (MIT) and `CITATION.cff` are now included with release-stage citation metadata.
