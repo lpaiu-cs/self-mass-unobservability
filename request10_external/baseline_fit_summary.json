@@ -1,0 +1,22 @@
+{
+ "packet": "Request 10.7a external Nutimo handoff - baseline_fit_summary",
+ "model": "planetGR max-posterior Minuit refit (parfile-planetGR-max-bestfit)",
+ "code_release": "Nutimo Zenodo 13899771 (Voisin+24)",
+ "data_release": "Zenodo 13899771 Data + Analysis (PSR J0337+1715, Nancay, 2013-2021)",
+ "ntoa": 12474,
+ "lnposterior_reduced": -0.676412770118035,
+ "wrms_us": 1.886920097992,
+ "efac_fixed": 1.1225367227659222,
+ "cross_check_vs_release_residuals": {
+  "released_file": "residuals-planetGR-max-bestfit.npz",
+  "rms_difference_us": 0.6661450573536389,
+  "max_abs_difference_us": 0.9854059187438984,
+  "released_wrms_us": 1.7700644483122465,
+  "difference_structure": {
+   "corr_with_time": -0.9881130195868756,
+   "carrier_amp_Omega_in_us": 0.0376,
+   "carrier_amp_Omega_out_us": 0.1105,
+   "interpretation": "difference vs released residuals is a nearly pure linear drift (corr -0.988 with time), attributable to clock/EOP runtime-file differences (release ressources/ updates are not in the public tarball; tempo2 T2runtime @2021-03 used instead). A linear drift lies inside the fitted span (spinfreq, spinfreq1) and has negligible projection onto the target carriers, so it does not affect the carrier projection rank gate."
+  }
+ }
+}

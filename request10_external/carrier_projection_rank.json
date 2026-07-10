@@ -1,0 +1,60 @@
+{
+ "carriers_rad_per_day": {
+  "Omega_in": 3.856136695791377,
+  "Omega_out": 0.019199654300698213,
+  "Omega_dif": 3.836937041490679
+ },
+ "periods_days": {
+  "P_inner": 1.6293990080893948,
+  "P_outer": 327.25512703377643
+ },
+ "nonresonance": {
+  "Omega_in/Omega_out": 200.8440691378045,
+  "excluded_cases": [
+   "1:1",
+   "2:1",
+   "1:2"
+  ],
+  "pass": true
+ },
+ "principal_cosines_spanJ_vs_carrier6D": [
+  0.9999999065846031,
+  0.9999975516512171,
+  0.999978727121822,
+  0.9967067251819757,
+  0.9775244558463062,
+  0.27533368576586037
+ ],
+ "per_coordinate_absorption": {
+  "cos_in": 0.9999104304489552,
+  "sin_in": 0.9999926416371425,
+  "cos_out": 0.9946252069585095,
+  "sin_out": 0.9837972423323404,
+  "cos_dif": 0.8560880775221664,
+  "sin_dif": 0.6003890733431194
+ },
+ "effective_rank_at_cosine_threshold": {
+  "0.9": 5,
+  "0.99": 4,
+  "0.999": 3,
+  "0.9999": 3
+ },
+ "svd_of_normalized_carrier_projection_of_J": [
+  0.04190812951764907,
+  0.03630271116611944,
+  0.030869293086858738,
+  0.02062931831134129,
+  0.0020699826775656864,
+  0.000892971854874494
+ ],
+ "jacobian_numerical_rank": 28,
+ "rank_at_relative_sv_cutoff": {
+  "1e-6": 28,
+  "1e-8": 28,
+  "1e-10": 28,
+  "1e-12": 28
+ },
+ "nfit": 28,
+ "ntoa": 12474,
+ "gate_rule": "collapse if effective rank = 6/6 (all six carrier coordinates absorbable by finite nuisance span)"
+}
