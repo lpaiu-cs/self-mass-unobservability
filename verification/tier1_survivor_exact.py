@@ -120,7 +120,7 @@ SECTORS = [
     ("E/B/S scalar",  [("B", 2, -1), ("S", 0, +1)],         33),
     ("E/V vector",    [("V", 1, +1)],                       17),
     ("E/T rank-3",    [("T", 3, +1)],                       19),
-    ("E/Q rank-4",    [("Q", 4, +1)],                       19),
+    ("E/Q rank-4",    [("Q", 4, +1)],                       25),   # corrected 19->25; see rederive_rank4.py
     ("E/U rank-5",    [("U", 5, +1)],                       19),
     ("E/Z rank-6",    [("Z", 6, +1)],                       23),
 ]
@@ -129,7 +129,7 @@ if __name__ == "__main__":
     print("=" * 76)
     print("EXACT survivor dimension via O(3) character integrals (all ranks 0-6)")
     print("=" * 76)
-    print(f"{'sector':<16}{'inv_trunc(1..4)':<20}{'survivor':>9}{'their rank':>12}  verdict")
+    print(f"{'sector':<16}{'inv_trunc(1..4)':<20}{'survivor':>9}{'audit':>12}  verdict")
     print("-" * 76)
     allok = True
     for label, fams, target in SECTORS:
@@ -139,14 +139,13 @@ if __name__ == "__main__":
         allok = allok and ok
         print(f"{label:<16}{str(wv):<20}{tot:>9}{target:>12}  {'MATCH' if ok else '*** MISMATCH ***'}")
     print("-" * 76)
-    print(f"exact-match their survivor rank: 7 of 8 sectors "
-          f"(E,B,S,V,T,U,Z = 7,18,33,17,19,19,23).")
-    print("Only rank-4 (Q) differs: this method gives 25, their audit 19.  This is")
-    print("EXACTLY the sector their own docs flag as the 'isolated rank-4 exception'")
-    print("needing a 'manual exhaustive patch' (family-class-table.md, lemma 43).")
-    print("The 6-operator excess sits in weight-4 Q signatures their r4 list omits.")
-    print("Confirmed example: Q_abcd (E^2)_ab E_cd  (degree 3 in E, 1 in Q) is a")
-    print("nonzero, rotation-invariant, pure-primitive (non-total-derivative) survivor,")
-    print("but their r4 mixed candidates cap at degree 2 in E (E2Q2). So the rank-4")
-    print("enumeration is genuinely INCOMPLETE -- consistent with their own flagged")
-    print("'isolated rank-4 exception'. Rank-4 needs a completeness fix before publication.")
+    print("exact-match survivor rank: 8 of 8 sectors against the corrected audit")
+    print("(E,B,S,V,T,Q,U,Z = 7,18,33,17,19,25,19,23).")
+    print("Historical note: the rank-4 (Q) audit originally recorded 19; that count")
+    print("was incomplete and has since been corrected to 25 (now frozen). The six")
+    print("omitted survivors are the higher-degree mixed operators the original r4")
+    print("list capped out of (degree > 2 in E): EEQ, QQQ, E3Q, EQ3, EDtEQ, GradEGradQ.")
+    print("Smallest example: Q_abcd (E^2)_ab E_cd  (degree 3 in E, 1 in Q) -- nonzero,")
+    print("rotation-invariant, pure-primitive (non-total-derivative); the original")
+    print("mixed candidates capped at degree 2 in E (E2Q2). Independent re-derivation")
+    print("and cross-check: rederive_rank4.py, rank4_spec_check.py; docs/family-class-table.md.")

@@ -2,12 +2,12 @@
 
 - Status: Proven. Inside the stated theorem domain `A1`-`A8`, the positive finite-family collapse theorem is closed.
 - Status: Note. This file is no longer a to-do list. It is the sharp boundary-risk register for exact assumption-drop failures and scope escapes.
-- Status: Proven. The older milestone-style ledger is preserved in [`archive/failure-ledger-history.md`](archive/failure-ledger-history.md).
+- Status: Note. The older milestone-style ledger is preserved in [`archive/failure-ledger-history.md`](archive/failure-ledger-history.md).
 
 ## Theorem-Domain Assumptions
 
 - Status: Proven. The closed positive theorem holds only inside the stated free-fall theorem domain recorded in [`assumptions-ledger.md`](assumptions-ledger.md).
-- Status: Proven. The assumption-drop rows below are not open tasks. They are the exact places where the closed theorem stops applying or changes form.
+- Status: Note. The assumption-drop rows below are not open tasks. They are the exact places where the closed theorem stops applying or changes form.
 
 ## Exact Boundary Escapes
 
@@ -28,5 +28,5 @@
 
 ## Reading Rule
 
-- Status: Proven. The negative uniqueness no-go is not listed here as a failure of the positive theorem, because it is a separate closed theorem branch.
-- Status: Proven. Raw survivor-count, rank, and nullity notes are not failure statements unless an authoritative or supporting theorem note promotes them.
+- Status: Note. The negative uniqueness no-go is not listed here as a failure of the positive theorem, because it is a separate closed theorem branch.
+- Status: Note. Raw survivor-count, rank, and nullity notes are not failure statements unless an authoritative or supporting theorem note promotes them.
