@@ -1,0 +1,102 @@
+{
+ "columns": [
+  "right_ascension",
+  "declination",
+  "right_ascension1",
+  "declination1",
+  "spinfreq",
+  "spinfreq1",
+  "eta_p",
+  "apsini_i",
+  "kappa_p",
+  "delta_i",
+  "tasc_p",
+  "period_i",
+  "eta_b",
+  "absini_o",
+  "kappa_b",
+  "abcosi_o",
+  "tasc_b",
+  "period_o",
+  "masspar_p",
+  "oman",
+  "deltaoman",
+  "eta_extra1",
+  "kappa_extra1",
+  "asini_extra1",
+  "acosi_extra1",
+  "tasc_extra1",
+  "P_extra1",
+  "oman_extra1"
+ ],
+ "abs_steps": [
+  4.667731255664804e-10,
+  1.730413680527719e-09,
+  0.07637792849744625,
+  0.27893591817812075,
+  9.808438769118662e-07,
+  8.158636035430422e-10,
+  3.992295314601706e-08,
+  16.103204044529964,
+  3.6383267241307356e-08,
+  0.00022329063344055734,
+  1.9135751281297584e-06,
+  4.0947600332519054e-09,
+  2.728766153369201e-09,
+  65.61824796979334,
+  1.8900160065128992e-09,
+  10488600.687132377,
+  7.904047974434002e-07,
+  1.050008514429761e-06,
+  1.2279979881435787e-05,
+  0.02895262117948976,
+  2.1697266499006118e-06,
+  0.01,
+  0.01,
+  15.0,
+  320.0,
+  3.0,
+  0.3,
+  0.1
+ ],
+ "units": "us per parameter unit",
+ "ntoa": 12474,
+ "definition": "central difference (res(p+h)-res(p-h))/(2h) around parfile-planetGR-max-bestfit; v2: the 7 *_extra1 columns re-derived with small (perturbative) steps, see jac_v2/rederive_report.json",
+ "v2_replaced_columns": {
+  "eta_extra1": {
+   "h_abs": 0.01,
+   "maxdev_us": 0.05115739351443427,
+   "halfstep_lin_dev": 0.0065633283811889565
+  },
+  "kappa_extra1": {
+   "h_abs": 0.01,
+   "maxdev_us": 0.03960755524095849,
+   "halfstep_lin_dev": 0.010496119020402272
+  },
+  "asini_extra1": {
+   "h_abs": 15.0,
+   "maxdev_us": 0.05577726505855729,
+   "halfstep_lin_dev": 0.001600423838235303
+  },
+  "acosi_extra1": {
+   "h_abs": 320.0,
+   "maxdev_us": 0.03902109450422486,
+   "halfstep_lin_dev": 0.016465138199123586
+  },
+  "tasc_extra1": {
+   "h_abs": 3.0,
+   "maxdev_us": 0.039064544394557865,
+   "halfstep_lin_dev": 0.001991771844524734
+  },
+  "P_extra1": {
+   "h_abs": 0.3,
+   "maxdev_us": 0.1324738873523264,
+   "halfstep_lin_dev": 0.005944143077807799
+  },
+  "oman_extra1": {
+   "h_abs": 0.1,
+   "maxdev_us": 0.15935485566339846,
+   "halfstep_lin_dev": 0.024809643923675222
+  }
+ }
+}

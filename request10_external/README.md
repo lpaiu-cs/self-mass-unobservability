@@ -37,3 +37,28 @@ requested return artifacts on a side branch.
 
 Reproduction scripts (`jacobian_runner.py`, `prep_steps.py`,
 `make_manifest.py`, `analysis_stage23.py`) are included under `scripts/`.
+
+## Request 10.7b: joint-fit real-data upper limit
+
+The conditional promotion of the 10.7a verdict was executed as the
+pre-registered experiment `../notes/REQUEST10_EXTERNAL_JOINT_FIT_UPPER_LIMIT.md`
+(pre-registration committed before the first real-data fit). Additional
+artifacts:
+
+| file | content |
+| --- | --- |
+| `baseline_planetGR.npz` | real-data input of record (res/errs/toas of the 10.7a baseline run) |
+| `joint_fit_upper_limit[_v2|_v2trunc].json` | pipeline outputs: v1 Jacobian / corrected v2 (QUOTED conservative) / truncated (CANDIDATE) |
+| `beta_limit_curve[_v2|_v2trunc].tsv` | `tau_chi, beta_hat, sigma_beta, u95` over quoted [10,327] d + diagnostic grids |
+| `finite_jacobian_v2.npy` (+`_meta.json`, `jac_v2/`) | corrected Jacobian: 7 planet columns re-derived at perturbative steps |
+| `carrier_projection_rank_v2.json` | 10.7a Stage-2 gates re-adjudicated with v2 (unchanged: rank <= 5/6) |
+| `jointfit_linearization_check.json`, `jointfit_lindiag.json` | 10.7b stop-rule firing + failure diagnosis (planet secant columns) |
+| `jointfit_gateLA.json`, `gateLA_params.json` | 10.7c gates: A (absorption reality) PASS 0.003%, L (displacement linearity) FAIL 0.10 vs 0.05 |
+| `jointfit_dtheta52*.npy`, `xb52.npy`, `xc52.npy` | validation displacements and signal columns |
+| `joint_fit_summary.md` | 10.7b/c verdict with Request 10.7 labels, quoted + candidate limits, 10.7d flag |
+
+Reproduction: `scripts/joint_fit_upper_limit.py` (deterministic, artifacts-only;
+argv: jacobian, suffix, SV cut), `scripts/build_jac_v2.py`,
+`scripts/rank_gate_v2.py`, and the WSL-side scripts described in
+`../notes/REQUEST10_EXTERNAL_JOINT_FIT_UPPER_LIMIT.md` and
+`../notes/REQUEST10_EXTERNAL_JOINT_FIT_AMENDMENT_10_7C.md`.

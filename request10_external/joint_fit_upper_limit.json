@@ -1,0 +1,117 @@
+{
+ "preregistration": "../notes/REQUEST10_EXTERNAL_JOINT_FIT_UPPER_LIMIT.md",
+ "seed": 20260710,
+ "nsim": 500,
+ "noise": {
+  "chi2_red_29par": 1.2461749789535757,
+  "s_scale": 1.1163220767115445,
+  "stop_rule_s_max": 1.75,
+  "nuisance_rank": 29
+ },
+ "real_data": {
+  "Z_max_abs_z": 0.24490757991414897,
+  "p_global": 0.95,
+  "null_z_median": 0.8408260314217361,
+  "null_z_997": 3.368477423814672,
+  "detection_criterion_met": false,
+  "min_u95_us": 11.626712793155228,
+  "tau_at_min_u95_d": 10.0
+ },
+ "controls_off_carrier": {
+  "0.87": {
+   "Z": 2.0110424755436775,
+   "p": 0.11
+  },
+  "0.93": {
+   "Z": 0.5764249700450418,
+   "p": 0.808
+  },
+  "1.07": {
+   "Z": 2.1507588506924846,
+   "p": 0.064
+  },
+  "1.13": {
+   "Z": 1.9974621060273523,
+   "p": 0.094
+  }
+ },
+ "comparator": {
+  "chi2_shared_tau_3par_min": 15508.54427044563,
+  "tau_at_chi2_min_d": 10.0,
+  "chi2_complex_deg1_4par": 15507.000073233758,
+  "chi2_nuisance_only": 15508.647613077248,
+  "shared_fits_at_least_as_well": false
+ },
+ "injections": {
+  "tau_26": {
+   "beta_inj_us": 28.52272559304165,
+   "beta_hat_at_tau_star": 29.68518944966714,
+   "beta_hat_minus_beta_inj_over_sigma": 0.08013555738785873,
+   "beta_hat_baseline_at_tau_star": 1.1624638566292933,
+   "differenced_recovery_exact": true,
+   "tau_hat_chi2min": 10.0,
+   "coverage_pass": true
+  },
+  "tau_52": {
+   "beta_inj_us": 53.76291725873074,
+   "beta_hat_at_tau_star": 53.01432704697298,
+   "beta_hat_minus_beta_inj_over_sigma": -0.027300536129871558,
+   "beta_hat_baseline_at_tau_star": -0.748590211760336,
+   "differenced_recovery_exact": true,
+   "tau_hat_chi2min": 10.0,
+   "coverage_pass": true
+  },
+  "tau_104": {
+   "beta_inj_us": 102.17238858484254,
+   "beta_hat_at_tau_star": 101.43183988190917,
+   "beta_hat_minus_beta_inj_over_sigma": -0.01420731452964963,
+   "beta_hat_baseline_at_tau_star": -0.7405487029395782,
+   "differenced_recovery_exact": true,
+   "tau_hat_chi2min": 10.0,
+   "coverage_pass": true
+  }
+ },
+ "sequential_bias_diagnostic": {
+  "tau_star_d": 52.0,
+  "note": "beyond-preregistration pure-linear-algebra diagnostic; quoted limits unaffected",
+  "amp_1x_u95": {
+   "beta_inj_us": 53.76291725873074,
+   "tau_hat_sequential_d": 0.11806830176813111,
+   "tau_hat_joint_d": 10.0,
+   "joint_z_at_52d": 1.9333936354153956,
+   "joint_beta_hat_at_52d": 53.01432704697298
+  },
+  "amp_5x_u95": {
+   "beta_inj_us": 268.8145862936537,
+   "tau_hat_sequential_d": 0.11879108023054805,
+   "tau_hat_joint_d": 42.762349981573045,
+   "joint_z_at_52d": 9.776170321595414,
+   "joint_beta_hat_at_52d": 268.0659960818671
+  }
+ },
+ "anchors": {
+  "tau_26": {
+   "beta_hat": 1.1624638566292933,
+   "sigma_beta": 14.50621789524875,
+   "u95": 28.52272559304165,
+   "z": 0.08013555738812095
+  },
+  "tau_52": {
+   "beta_hat": -0.748590211760336,
+   "sigma_beta": 27.42034838424545,
+   "u95": 53.76291725873074,
+   "z": -0.027300536129965573
+  },
+  "tau_104": {
+   "beta_hat": -0.7405487029395782,
+   "sigma_beta": 52.124467392334836,
+   "u95": 102.17238858484254,
+   "z": -0.01420731452976879
+  }
+ },
+ "quoted_window_d": [
+  10.0,
+  327.0
+ ],
+ "convention": "unit drive Lambda_k F_k = 1; beta, c_Y, u95 in us of common pre-transfer drive amplitude"
+}
