@@ -3,11 +3,7 @@
 **Status:** draft manuscript (Paper B of the two-paper split; dynamic free-fall sector)
 **Repository:** `lpaiu-cs/self-mass-unobservability`, branch `lpaiu/minimal-nonlinear-sideband`
 **Author:** Juneyoung, Kim
-
-Draft: 2026-07-12. Companion to Paper A (the static finite-family collapse
-theorem). Source of record for all numbers: the `request10_external/`
-artifact tree and the `notes/REQUEST10_*` request chain on branch
-`lpaiu/minimal-nonlinear-sideband` (commit-chain audit in Appendix D).
+**Note:** Draft 2026-07-12. Companion to Paper A (the static finite-family collapse theorem). Source of record for all numbers: the `request10_external/` artifact tree and the `notes/REQUEST10_*` request chain on branch `lpaiu/minimal-nonlinear-sideband` (commit-chain audit in Appendix D).
 
 ---
 
