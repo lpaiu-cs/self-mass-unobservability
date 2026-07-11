@@ -164,3 +164,34 @@ published scale (lever arm confirmed; proceed to T2), or it stays orders
 tighter (then our conditional-sensitivity claim must be explicitly downgraded
 to the published marginal before any dynamic-channel projection is quoted).
 F2/F3 remain blocked on the R5-resolved span.
+
+## R5 resolution (executed 2026-07-11) — DOWNGRADE branch taken
+
+Status: Proven. Of the four candidate absorber columns, THREE are null in
+this parfile's active parametrization: `masspar_i`, `mass_o`, `apcosi_i`
+each produce max|d res| = 0.000 us even at 30x-inflated steps (they are
+either redundant given the fitted mass/geometry coordinates — the
+construction log shows "Parameter set ... : 6" selecting a specific mass
+parametrization — or not reached by the value-edit route). Only `distance`
+moves residuals (0.211 us at 900 pc). Adding the live `distance` direction to
+the 10.7e nuisance span changes the marginal by 0.2% (`sigma_Delta`
+1.922e-9 -> 1.926e-9). The fixed-absorber hypothesis is therefore REFUTED:
+the 934x gap between our point-estimate Fisher sensitivity (1.9e-9) and the
+published marginal (1.8e-6, Voisin+20) is NOT recoverable by adding these
+columns. It reflects covariance the full published Bayesian analysis carries
+(mass/inclination priors, Kopeikin/parallax terms) that a local
+finite-difference span at one fixed parfile cannot reconstruct.
+
+Status: Counterexample candidate. DECISION (pre-registered downgrade branch):
+our Fisher `sigma_Delta` is untrustworthy as a physical sensitivity; the
+channel's static anchor is set to the PUBLISHED marginal
+`sigma_Delta = 1.8e-6` for all downstream projection. What survives from F0/F1
+as solid: (i) the lever arm is real and enormous — `|d res/d Delta| ~ 3.4e10 us`,
+so `Delta = 1.8e-6` corresponds to ~61 ms of orbital-polarization signal
+absorbed by the orbital fit; (ii) the free-fall channel therefore carries
+~10^6 x more raw signal per unit coupling than the clock channel's us-scale
+Einstein-delay drive. The dynamic projection `sigma_beta_ff` will be quoted
+RELATIVE to the 1.8e-6 anchor times the static/dynamic non-degeneracy ratio
+measured by F2 (T2 templates). Even at the conservative anchor, a plausible
+`sigma_beta_ff ~ 1e-6..1e-5` would still be 10^4-10^5 tighter than the 10.7e
+clock bound (`beta_phys ~ 0.4`). F2/F3 require the T2 integrator patch.

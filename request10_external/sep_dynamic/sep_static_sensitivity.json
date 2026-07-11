@@ -10,6 +10,20 @@
  "nuisance_rank_rn": 70,
  "nuisance_rank_white": 26,
  "reference_published_sigma": 1.8e-06,
- "pass_F1": true,
- "R5_review_needed": true
+ "R5_extended": {
+  "columns_kept": [
+   "distance"
+  ],
+  "columns_null": [
+   "apcosi_i",
+   "mass_o",
+   "masspar_i"
+  ],
+  "sigma_Delta_rn_R5": 1.926257926483138e-09,
+  "survival_fraction_rn_R5": 0.0006124757693049466,
+  "nuisance_rank_rn_R5": 71
+ },
+ "pass_F1_validation": false,
+ "decision": "Fisher sigma untrustworthy (1.93e-09, 934x vs published); DOWNGRADE: anchor to published sigma_Delta = 1.8e-06",
+ "static_anchor_used": 1.8e-06
 }
