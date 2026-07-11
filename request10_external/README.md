@@ -67,3 +67,23 @@ argv: jacobian, suffix, SV cut), `scripts/build_jac_v2.py`,
 `scripts/rank_gate_v2.py`, and the WSL-side scripts described in
 `../notes/REQUEST10_EXTERNAL_JOINT_FIT_UPPER_LIMIT.md` and
 `../notes/REQUEST10_EXTERNAL_JOINT_FIT_AMENDMENT_10_7C.md`.
+
+## Request 10.8/10.8b: dynamic free-fall SEP channel (`sep_dynamic/`)
+
+Design and gates: `../notes/REQUEST10_8_DYNAMIC_SEP_POLARIZATION_CHANNEL.md`,
+`../notes/REQUEST10_8B_REALDATA_DYNAMIC_SEP_FIT.md`.
+
+| file | content |
+| --- | --- |
+| `sep_dynamic/col_SEP_D.npz`, `sep_F0_report.json` | static SEP response column (F0; lever arm ~3.4e10 us/Delta, linear below the turn-wrap) |
+| `sep_dynamic/col_R5_*.npz`, `sep_R5_report.json` | fixed-absorber hypothesis test (refuted; anchor downgraded to published 1.8e-6) |
+| `sep_dynamic/patches/sepdyn.patch` | integrator patch: SEP_D(t) on pulsar pairs in rhs_GR_nbody (A=0 gate bit-exact) |
+| `sep_dynamic/sep_ramp_probe.npz`, `sep_t2_results_v4.json` | time-convention calibration (integral-kernel 1/2 signature; TIMEDAYS units) |
+| `sep_dynamic/sep_dynamic_columns.npz` | 6 exact dynamic response columns ({in,out,dif} x {cos,sin}) |
+| `sep_dynamic/sep_feasibility_gates.json` | F2 (survival to 43.8%) and F3 (anchored 6.1e-8) — both PASS |
+| `sep_dynamic/sep_joint_fit_10_8b.json`, `sep_beta_limit_curve_10_8b.tsv` | **QUOTED 10.8b limit: beta_ff < 1.1e-7 (95%, tau = 2 d), window [2,500] d** |
+| `sep_dynamic/sep_gateG.json` | live gates: G1, G2a, G2b all PASS (6/6) |
+
+Reproduction: `scripts/sep_static_sensitivity.py`,
+`scripts/sep_feasibility_gates.py`, `scripts/sep_joint_fit_10_8b.py`
+(all deterministic, artifacts-only), plus the WSL-side scripts per the notes.

@@ -1,4 +1,4 @@
-# Request 10.7b/c/d/e Joint-Fit Real-Data Result: Decision Summary
+# Request 10.7b-e / 10.8b Joint-Fit Real-Data Results: Decision Summary
 
 Status: Imported from prior work. Contracts, each committed BEFORE the data
 look it governs: `../notes/REQUEST10_EXTERNAL_JOINT_FIT_UPPER_LIMIT.md`
@@ -45,6 +45,52 @@ reached 1.1001 (at tau = 297 d), and the projected-residual periodogram
 confirms real low-frequency excess (median amplitude ratio 12.6 between
 f < 10/T and the mid-band). The 10.7c conservative full-rank quote
 (u95(52 d) = 53.8 us) remains recorded; both are superseded by the above.
+
+## Request 10.8b: dynamic free-fall SEP channel (HEADLINE)
+
+Status: Counterexample candidate. **No detection; first upper limit on a
+dynamically-responding SEP violation.** Contract:
+`../notes/REQUEST10_8B_REALDATA_DYNAMIC_SEP_FIT.md` (pre-registered commit
+`2282924`; G2 amendment `6e55569` committed before the gate rerun). Signal:
+the shared one-state pole transfer applied to the SEP parameter `Delta` in
+the free-fall sector, templates from the T2 MEASURED integrator response
+columns (patched build, A=0 gate bit-exact; time convention resolved by the
+quasi-static ramp with the integral-kernel 1/2 signature).
+
+```text
+No detection: Z = 0.318 over tau_chi in [2, 500] d, global p = 0.95;
+              anti-causal (advanced-response) control quiet (p = 0.48).
+
+QUOTED 95% upper limit (anchored estimator, K = 934; window [2, 500] d):
+  beta_ff < 1.09e-7 (tau = 2 d, curve minimum)
+  anchors: 1.09 / 1.20 / 1.31 / 1.73 / 4.73 x 1e-7 at tau = 2/5/18/52/200 d
+  (Fisher statistical floor: 1.2e-10, reported alongside; curve in
+   sep_dynamic/sep_beta_limit_curve_10_8b.tsv)
+```
+
+`beta_ff` = dimensionless amplitude of the `Delta`-oscillation pole residue
+at unit drive per carrier. Compared with the same data's clock-sector bound
+(`beta_phys < 0.36-0.59`, 10.7e), the free-fall channel is **~3 x 10^6
+deeper**, and it probes a coupling the published static SEP analyses cannot
+see by construction (an oscillating `Delta` is 99.94% -> 11-28% LESS
+absorbable than a static one; F2).
+
+Status: Proven (10.8b gates, 6/6). G1 live null: `|z_GN - z_lin| <= 0.019`
+at both anchors (tol 0.3). G2a detection-regime (4 sigma_F injections,
+undamped live GN): recovery within 0.06 sigma_F (tol 0.5). G2b
+limit-amplitude (u95_anchored injections ~ 48,000 whitened units, damped GN
+capped at 30x validated steps): the live model absorbs essentially nothing
+(|w r| unchanged) and recovery holds to 0.16-0.23% relative (tol 2%). The
+original G2 (undamped at 1830 sigma_F) segfaulted the integrator and was
+amended BEFORE rerun (commit `6e55569`) — recorded, not hidden.
+
+Status: Note. Caveats: (a) the anchored headline carries the unexplained
+K = 934 static Fisher-vs-published gap as a conservative multiplier; the
+Fisher floor is likely closer to the truth for these 11-28%-surviving
+templates (10.8c should resolve K); (b) drive normalization is unit-drive
+per carrier (physical source factors as in 10.7e E2 pending); (c) tau below
+2 d and the c_Y quadrature structure are unexplored; (d) white + 30-pair
+Fourier noise model as in the 10.7e headline.
 
 ## Gate record
 
