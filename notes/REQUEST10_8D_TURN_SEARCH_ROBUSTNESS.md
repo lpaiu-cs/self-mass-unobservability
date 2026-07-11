@@ -74,6 +74,29 @@ implements exactly. Stage L proceeds with reference-epoch freedom covered by
 the phase-offset grid (linear aliases) plus a quadratic-reference grid
 {start, mid-span}.
 
+## Stage L amendment (2026-07-12, after the first scan, before the beta-scan)
+
+Status: Proven (measured, first scan). The chi2-margin criterion FAILED in
+an unanticipated and informative way: minimum lattice margins are ~0 (-0.79)
+— turn-alias solutions exist at NO chi2 cost. Mechanism: the optimizer finds
+aliases whose integer-turn steps fall inside OBSERVING GAPS, so the sampled
+sawtooth is piecewise-smooth and fully within the marginalized span. This is
+the classic phase-connection-across-gaps ambiguity, here quantified against
+the 10.8b span. Meanwhile the (0,0) recovery sanity PASSED at all three
+amplitudes (beta recovered within ~1%).
+
+Status: Note. Amendment: the margin criterion conflated "does a turn-aliased
+solution exist cheaply" (yes, gap-hidden slips) with the question that
+matters for the limit: "can such a solution MIMIC OR HIDE the dynamic
+template". Amended pre-registered criterion, fixed before the beta-scan is
+run: over ALL lattice cells with margin < 25 (the chi2-viable alternative
+turn solutions, best tref2/phi0 per cell), compute the 10.8b estimator's
+beta-hat after subtracting the cell's sawtooth; PASS iff
+`max_cell |beta_hat(cell) - beta_inj| <= max(0.1 beta_inj, 3 sigma_Fisher)`
+at all three test amplitudes. FAIL -> K10 reverts to K934 pending a fully
+turn-marginalized analysis. The gap census (largest gaps, teeth locations of
+the degenerate cells) is reported as a diagnostic.
+
 ## Quote-upgrade rule
 
 Status: Counterexample candidate. V PASS and L PASS -> the 10.8c K10 quote
