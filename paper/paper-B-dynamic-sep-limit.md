@@ -1,6 +1,8 @@
 # Dynamic sensitivity as the residual free-fall observable: a first upper limit on lag-responding equivalence-principle violation from the pulsar triple PSR J0337+1715
 
-Author: (replace the GitHub alias with the author's full name before release)
+**Status:** draft manuscript (Paper B of the two-paper split; dynamic free-fall sector)
+**Repository:** `lpaiu-cs/self-mass-unobservability`, branch `lpaiu/minimal-nonlinear-sideband`
+**Author:** Juneyoung, Kim
 
 Draft: 2026-07-12. Companion to Paper A (the static finite-family collapse
 theorem). Source of record for all numbers: the `request10_external/`
@@ -443,6 +445,7 @@ the stage it governs.
    gravity for extended objects," Phys. Rev. D 73, 104029 (2006).
 8. K. Nordtvedt, "Equivalence principle for massive bodies," Phys. Rev.
    169, 1014 (1968).
-9. Paper A (companion): "Finite-family collapse of free-fall sensitivity at
-   fixed order, and its sharp assumption boundaries," this repository,
+9. J. Kim, "Finite-Family Collapse of Free-Fall Self-Energy Couplings: A
+   Fixed-Order Worldline-EFT Theorem, its Uniqueness No-Go, and Sharp
+   Boundary Escapes" (Paper A, companion), this repository,
    `paper/paper-A-collapse-theorem.md` (branch `main`).
