@@ -84,13 +84,31 @@ capped at 30x validated steps): the live model absorbs essentially nothing
 original G2 (undamped at 1830 sigma_F) segfaulted the integrator and was
 amended BEFORE rerun (commit `6e55569`) — recorded, not hidden.
 
-Status: Note. Caveats: (a) the anchored headline carries the unexplained
-K = 934 static Fisher-vs-published gap as a conservative multiplier; the
-Fisher floor is likely closer to the truth for these 11-28%-surviving
-templates (10.8c should resolve K); (b) drive normalization is unit-drive
-per carrier (physical source factors as in 10.7e E2 pending); (c) tau below
-2 d and the c_Y quadrature structure are unexplored; (d) white + 30-pair
-Fourier noise model as in the 10.7e headline.
+Status: Counterexample candidate (10.8c re-anchor, executed per the
+pre-registered rule of `../notes/REQUEST10_8C_ANCHOR_RESOLUTION.md`, commit
+`26abfa1`). The ratio spectrum `rho_j = sigma_MCMC/sigma_Fisher` over the 20
+core parameters REJECTS the global-optimism hypothesis: `rho <= 1`
+everywhere (median ~0; 0.8-0.94 on convention-clean directions, i.e. Fisher
+calibrated-to-conservative), so the static 934x gap is direction-specific —
+the turn-wrap manifold seen directly in F0 (onset at `|Delta| ~ 1e-7`) sets
+the published static width and was proven inoperative on the dynamic
+templates (G2b). Rule branch 1 fires: `K_dyn = max(10, ceil(max rho)) = 10`:
+
+```text
+RE-ANCHORED 95% upper limit (K_dyn = 10, window [2, 500] d):
+  beta_ff < 1.17e-9 (tau = 2 d);  1.29 / 1.40 / 1.86 / 5.07 x 1e-9
+  at tau = 5/18/52/200 d   (curve: sep_beta_limit_curve_10_8c.tsv;
+  Fisher floor and the K = 934 ultra-conservative bracket recorded alongside)
+```
+
+Status: Note. Caveats: (a) ONE absorber remains unprobed — turn
+re-assignment (our GN fixes turns at construction; the published pipeline
+re-searches them): flagged as 10.8d, REQUIRED before publication-grade
+claims; (b) drive normalization is unit-drive per carrier (physical source
+factors as in 10.7e E2 pending); (c) zero-drive-phase convention (a
+phase-marginalized two-quadrature variant is a mechanical extension); (d)
+tau below 2 d diagnostic only; (e) white + 30-pair Fourier noise model as in
+the 10.7e headline.
 
 ## Gate record
 
