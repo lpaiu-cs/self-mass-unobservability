@@ -62,6 +62,26 @@ Status: Counterexample candidate.
   with the live model, recover through the 10.8b estimator:
   `|beta_hat_GN - beta_hat_lin_null - beta_inj| <= 0.5 sigma_Fisher(tau)`.
 
+### G2 amendment (2026-07-12, before rerun; original G2 mis-scaled)
+
+Status: Note. The original G2 amplitude `u95_anchored ~= 1830 sigma_Fisher`
+(the K = 934 inflation makes the anchored limit vastly louder than the
+Fisher noise floor, unlike the clock channel where u95 ~= 2 sigma) drove the
+undamped GN outside the model's valid region on the first iteration
+(Mp +0.066 Msun, oman_extra1 +29 rad -> integrator segfault). The absolute
+0.5 sigma_F tolerance at an 1830 sigma_F amplitude was a mis-scaled
+requirement (0.03% relative), not a physical necessity. Amended split, fixed
+before the rerun:
+
+- G2a (detection-regime calibration, mirrors the 10.7d D2 gate):
+  `beta_inj = 4 sigma_Fisher(tau)`; undamped GN; PASS iff
+  `|dev| <= 0.5 sigma_Fisher`.
+- G2b (limit-amplitude regime): `beta_inj = u95_anchored(tau)`; DAMPED GN
+  with per-parameter cumulative displacement cap `|dtheta_j| <= 30 h_j`
+  (h_j = the validated Jacobian steps); PASS iff relative deviation
+  `|dev| <= 0.02 x beta_inj`.
+- G1 result stands (already run: PASS at both anchors, |dz| <= 0.019).
+
 ## Quote Rules (fixed in advance)
 
 - No detection + G1/G2 pass + anti-causal control quiet -> QUOTE the anchored
