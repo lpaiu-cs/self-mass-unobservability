@@ -25,11 +25,15 @@ os.chdir(HERE)
 
 # optional: argv[1] = jacobian file (default v1), argv[2] = output suffix,
 #           argv[3] = relative-SV cut for the nuisance span (default 1e-10 = full rank),
-#           argv[4] = quoted-window minimum tau in days (default 10.0; 10.7d uses 1.0)
+#           argv[4] = quoted-window minimum tau in days (default 10.0; 10.7d uses 1.0),
+#           argv[5] = number of red-noise Fourier pairs appended to the nuisance (10.7e E3),
+#           argv[6] = signal template: 'unit' (default) or 'phys' (10.7e E2 dictionary drive)
 JAC_PATH = sys.argv[1] if len(sys.argv) > 1 else 'finite_jacobian.npy'
 SUFFIX = sys.argv[2] if len(sys.argv) > 2 else ''
 SV_CUT = float(sys.argv[3]) if len(sys.argv) > 3 else 1e-10
 WIN_MIN = float(sys.argv[4]) if len(sys.argv) > 4 else 10.0
+M_RN = int(sys.argv[5]) if len(sys.argv) > 5 else 0
+TEMPLATE = sys.argv[6] if len(sys.argv) > 6 else 'unit'
 
 SEED = 20260710
 NSIM = 500
@@ -58,6 +62,29 @@ assert all(abs(a-b) < 1e-9 for a, b in zip(OMS, W_re)), 'carrier mismatch vs art
 sw = 1.0/errs
 t = toas
 
+# ---- 10.7e E2: Request-8 dictionary drive template (unit template = 1) ----
+if TEMPLATE == 'phys':
+    GMSUN = 1.32712440018e20; C2 = 8.9875517873681764e16
+    M_A, M_B, M_C = 1.43781441, 0.19753639, 0.41010271          # Msun, Nutimo construction
+    P_in_s, P_out_s = P_i*86400.0, P_o*86400.0
+    a_in = (GMSUN*(M_A+M_B)*P_in_s**2/(4*np.pi**2))**(1.0/3.0)
+    a_out = (GMSUN*(M_A+M_B+M_C)*P_out_s**2/(4*np.pi**2))**(1.0/3.0)
+    E_IN = math.hypot(6.9373227475173604e-4, -8.5950920080896147e-5)   # eta_p, kappa_p
+    E_OUT = math.hypot(3.5114692182346233e-2, -3.5249206779379461e-3)  # eta_b, kappa_b
+    BETA_A = M_B/(M_A+M_B); EPS = a_in/a_out
+    OM_S = [w/86400.0 for w in OMS]                              # rad/s
+    D_K = [GMSUN*M_B/(a_in*C2)*E_IN/OM_S[0]*1e6,
+           GMSUN*M_C/(a_out*C2)*E_OUT/OM_S[1]*1e6,
+           GMSUN*M_C/(a_out*C2)*BETA_A*EPS/OM_S[2]*1e6]          # us
+    TASC_P, TASC_B = -575.13824374291314, -262.10186433770934    # internal days
+    PH = [-OMS[0]*TASC_P - np.pi/2.0, -OMS[1]*TASC_B - np.pi/2.0]
+    PH.append(PH[0] - PH[1])                                     # 10.5 phase lock
+    AMPW = [D_K[k]*np.exp(1j*PH[k]) for k in range(3)]
+    print('phys template: D_k = (%.4g, %.4g, %.4g) us (in, out, dif); phases locked to tasc'
+          % tuple(D_K))
+else:
+    AMPW = [1.0+0j, 1.0+0j, 1.0+0j]
+
 # ---- nuisance block: column-normalized weighted Jacobian + constant column ----
 A = sw[:, None] * J
 colnorm = np.linalg.norm(A, axis=0)
@@ -65,12 +92,26 @@ An = A / colnorm[None, :]
 cvec = sw / np.linalg.norm(sw)
 B0 = np.column_stack([An, cvec])               # N x 29
 
+# ---- 10.7e E3: red-noise Fourier nuisance (exact sinusoids, linear by construction) ----
+if M_RN > 0:
+    T_SPAN = float(t.max() - t.min())
+    fcols = []
+    for j in range(1, M_RN + 1):
+        arg = 2.0*np.pi*j*(t - t.min())/T_SPAN
+        fcols += [np.cos(arg), np.sin(arg)]
+    FB = sw[:, None]*np.column_stack(fcols)
+    FB = FB/np.linalg.norm(FB, axis=0, keepdims=True)
+    B0 = np.column_stack([B0, FB])             # N x (29 + 2M)
+    print('red-noise marginalization: %d Fourier pairs appended (f = 1/T .. %d/T, T = %.2f d)'
+          % (M_RN, M_RN, T_SPAN))
+
 U0, s0, V0t = np.linalg.svd(B0, full_matrices=False)
 rel0 = s0 / s0[0]
 rank0 = int(np.sum(rel0 > SV_CUT))
 Q0 = U0[:, :rank0]
 if SV_CUT > 1e-10:
-    print('nuisance span truncated at rel SV %g -> rank %d/29 (10.7c protocol)' % (SV_CUT, rank0))
+    print('nuisance span truncated at rel SV %g -> rank %d/%d (10.7c protocol)'
+          % (SV_CUT, rank0, B0.shape[1]))
 
 def proj_out(X):
     return X - Q0 @ (Q0.T @ X)
@@ -87,11 +128,11 @@ if s_scale > STOP_S:
 
 # ---- signal columns ----
 def sig_cols_raw(tau, oms):
-    """(x_cY, x_beta) raw us columns at unit drive, zero phase."""
+    """(x_cY, x_beta) raw us columns; template weights AMPW (unit or phys)."""
     x_c = np.zeros(N); x_b = np.zeros(N)
-    for w in oms:
-        x_c += np.cos(w*t)
-        a = 1.0/(1.0 + 1j*w*tau)
+    for w, aw in zip(oms, AMPW):
+        x_c += aw.real*np.cos(w*t) - aw.imag*np.sin(w*t)
+        a = aw/(1.0 + 1j*w*tau)
         x_b += a.real*np.cos(w*t) - a.imag*np.sin(w*t)
     return x_c, x_b
 
@@ -293,6 +334,7 @@ def strip(rows):
 out = {
     'preregistration': '../notes/REQUEST10_EXTERNAL_JOINT_FIT_UPPER_LIMIT.md',
     'jacobian': JAC_PATH,
+    'template': TEMPLATE, 'rn_fourier_pairs': M_RN,
     'seed': SEED, 'nsim': NSIM,
     'noise': {'chi2_red_29par': chi2_nuis/dof_nuis, 's_scale': s_scale,
               'stop_rule_s_max': STOP_S, 'nuisance_rank': rank0},
@@ -315,8 +357,16 @@ out = {
                                      for r in rows_q if abs(r['tau']-a) < 1e-9)
                 for a in ANCHORS},
     'quoted_window_d': [WIN_MIN, 327.0],
-    'convention': 'unit drive Lambda_k F_k = 1; beta, c_Y, u95 in us of common pre-transfer drive amplitude',
+    'convention': ('unit drive Lambda_k F_k = 1; beta, c_Y, u95 in us of common pre-transfer drive amplitude'
+                   if TEMPLATE == 'unit' else
+                   'Request-8 dictionary drive template (10.7e E2): beta, c_Y, u95 DIMENSIONLESS '
+                   '(amplitude of the dynamic alpha_A response); D_k and phases recorded here'),
 }
+if TEMPLATE == 'phys':
+    out['phys_template'] = {'D_k_us': D_K, 'phases_rad': PH,
+                            'masses_msun': [M_A, M_B, M_C], 'e_in': E_IN, 'e_out': E_OUT,
+                            'a_in_m': a_in, 'a_out_m': a_out,
+                            'note': 'O(1) geometric projection factors set to 1; see 10.7e note'}
 with open('joint_fit_upper_limit%s.json' % SUFFIX, 'w') as fh:
     json.dump(out, fh, indent=1)
 
