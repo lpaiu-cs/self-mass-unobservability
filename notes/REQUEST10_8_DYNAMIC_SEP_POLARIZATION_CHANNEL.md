@@ -131,3 +131,36 @@ Status: Note. This note; then `request10_external/sep_dynamic/` with
 `patches/` + `sep_dynamic_columns.npz` (T2), `sep_feasibility_gates.json`
 (F2/F3), and — only if F3 passes — a separate 10.8b pre-registration note
 before any real-data fit.
+
+## F0/F1 execution record (2026-07-11)
+
+Status: Proven (F0 — PASS). `j_Delta` computed via parfile edit +
+reconstruction (SEP_D is outside the fitted map; no full-parameter shift API
+in the interface). Adaptive stepping revealed two facts: (i) the raw lever
+arm is enormous — `|d res/d Delta| ~ 3.4e10 us` (a `Delta` of 1e-6 produces
+~34 ms residuals); (ii) at `h = 1e-6` and `1e-7` the response saturates at
+maxdev ~1.4e3 us ~ P_spin/2 = 1.37 ms — TURN WRAPPING, not orbital
+nonlinearity (turns are assigned at construction). In the wrap-free regime
+`h <= 1e-8` the response is linear to numerical precision (half-step
+deviation 0.0000 at h = 1e-8, maxdev 340 us). The template column is taken
+there.
+
+Status: Counterexample candidate (F1 — R5 REVIEW TRIGGERED, as designed).
+Against the 10.7e headline nuisance the marginal is
+`sigma_Delta = 1.9e-9` (survival 0.1%), one thousand times tighter than the
+published `~1.8e-6` — far outside the trust window, so the over-tight branch
+fires: DO NOT accept. Working hypothesis: `Delta` rescales the pulsar's
+effective GM, whose natural absorbers include parameters FIXED in this
+parfile's fit set (`masspar_i`, `mass_o`, `apcosi_i`, possibly `distance`);
+our 28-parameter span cannot absorb what the full published analysis
+marginalized, leaving a spuriously large "surviving" direction.
+
+Status: Counterexample candidate. R5 resolution plan (next bounded step,
+still data-independent): derive central-difference columns for the fixed
+physically-degenerate parameters (`masspar_i`, `mass_o`, `apcosi_i`,
+`distance`; parfile-edit route, 2 reconstructions each), extend the nuisance
+span, re-adjudicate F1. Expected outcomes: `sigma_Delta` relaxes toward the
+published scale (lever arm confirmed; proceed to T2), or it stays orders
+tighter (then our conditional-sensitivity claim must be explicitly downgraded
+to the published marginal before any dynamic-channel projection is quoted).
+F2/F3 remain blocked on the R5-resolved span.
