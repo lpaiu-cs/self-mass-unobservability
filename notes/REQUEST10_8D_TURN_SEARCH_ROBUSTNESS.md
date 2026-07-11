@@ -52,6 +52,28 @@ and at (0,0) the recovered `beta'` is within 10% of `beta_inj` (sanity).
 Report the minimum lattice margin. FAIL in any cell -> the K10 quote reverts
 to K934 pending a fully live turn-marginalized analysis.
 
+## Stage V outcome and amendment (2026-07-12, before Stage L)
+
+Status: Proven (measured). The live alias shifts produced maxdev = 760.8 /
+1521.7 us for n = 0.5 / 1.0 — the n = 1 value EXCEEDS P/2 = 1366 us, proving
+the interface performs NO nearest-turn re-assignment (turns are fixed at
+construction, as the runtime notes said); the response is a smooth unwrapped
+ramp (rms/max = 0.563 ~= 1/sqrt(3)), with an effective mid-span phase
+reference (slope factor 0.557 vs a start-referenced model).
+
+Status: Note. Amendment: the pre-registered V criterion ("measured matches
+the WRAPPED-ramp model") was ill-posed — there are no wraps in this
+interface to validate against. What Stage V actually establishes is
+sufficient for Stage L: (i) turn-fixing confirmed (so our earlier gates
+could never have seen wrap-assisted absorption — the concession stands);
+(ii) alias shifts produce ramps of the expected scale; (iii) the wrap
+operation itself is DEFINITIONAL integer-pulse arithmetic (P fixed by the
+parfile spin frequency) and the published pipeline's turn freedom is exactly
+a smooth-model-generated integer field k(t) = round(ramp/P), which Stage L
+implements exactly. Stage L proceeds with reference-epoch freedom covered by
+the phase-offset grid (linear aliases) plus a quadratic-reference grid
+{start, mid-span}.
+
 ## Quote-upgrade rule
 
 Status: Counterexample candidate. V PASS and L PASS -> the 10.8c K10 quote
