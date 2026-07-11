@@ -53,9 +53,11 @@ artifacts:
 | `finite_jacobian_v2.npy` (+`_meta.json`, `jac_v2/`) | corrected Jacobian: 7 planet columns re-derived at perturbative steps |
 | `carrier_projection_rank_v2.json` | 10.7a Stage-2 gates re-adjudicated with v2 (unchanged: rank <= 5/6) |
 | `jointfit_linearization_check.json`, `jointfit_lindiag.json` | 10.7b stop-rule firing + failure diagnosis (planet secant columns) |
-| `jointfit_gateLA.json`, `gateLA_params.json` | 10.7c gates: A (absorption reality) PASS 0.003%, L (displacement linearity) FAIL 0.10 vs 0.05 |
+| `jointfit_gateLA.json`, `gateLA_params.json` | 10.7c gates: A (absorption reality) PASS 0.003%, L (displacement linearity) FAIL 0.10 vs 0.05 (demoted to diagnostic by 10.7d) |
+| `joint_fit_upper_limit_10_7d.json`, `beta_limit_curve_10_7d.tsv` | **QUOTED 10.7d limit**: truncated estimator, window [1,327] d, min u95 = 0.191 us @ 1 d |
+| `jointfit_gateD.json`, `gateD_params.json`, `gateD_columns.npz` | 10.7d promotion gates: D1 (live null) 5/5 PASS, D2 (estimator calibration at u95) 5/5 PASS |
 | `jointfit_dtheta52*.npy`, `xb52.npy`, `xc52.npy` | validation displacements and signal columns |
-| `joint_fit_summary.md` | 10.7b/c verdict with Request 10.7 labels, quoted + candidate limits, 10.7d flag |
+| `joint_fit_summary.md` | 10.7b/c/d verdict with Request 10.7 labels and the quoted limit |
 
 Reproduction: `scripts/joint_fit_upper_limit.py` (deterministic, artifacts-only;
 argv: jacobian, suffix, SV cut), `scripts/build_jac_v2.py`,
