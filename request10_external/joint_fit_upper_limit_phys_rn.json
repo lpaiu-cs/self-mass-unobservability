@@ -1,0 +1,172 @@
+{
+ "preregistration": "../notes/REQUEST10_EXTERNAL_JOINT_FIT_UPPER_LIMIT.md",
+ "jacobian": "finite_jacobian_v2.npy",
+ "template": "phys",
+ "rn_fourier_pairs": 30,
+ "seed": 20260710,
+ "nsim": 500,
+ "noise": {
+  "chi2_red_29par": 1.2428838735544954,
+  "s_scale": 1.1148470180049348,
+  "stop_rule_s_max": 1.75,
+  "nuisance_rank": 70
+ },
+ "real_data": {
+  "Z_max_abs_z": 1.0941909258671254,
+  "p_global": 0.532,
+  "null_z_median": 1.1402207923031904,
+  "null_z_997": 3.441880269430118,
+  "detection_criterion_met": false,
+  "min_u95_us": 0.3646912218766749,
+  "tau_at_min_u95_d": 26.0
+ },
+ "controls_off_carrier": {
+  "0.87": {
+   "Z": 0.7512390256319933,
+   "p": 0.812
+  },
+  "0.93": {
+   "Z": 1.400803647629494,
+   "p": 0.396
+  },
+  "1.07": {
+   "Z": 0.784231862959661,
+   "p": 0.806
+  },
+  "1.13": {
+   "Z": 1.215534816994227,
+   "p": 0.376
+  }
+ },
+ "comparator": {
+  "chi2_shared_tau_3par_min": 15415.232613605402,
+  "tau_at_chi2_min_d": 327.0,
+  "chi2_complex_deg1_4par": 15414.328246816603,
+  "chi2_nuisance_only": 15416.73156756996,
+  "shared_fits_at_least_as_well": false
+ },
+ "injections": {
+  "tau_1": {
+   "beta_inj_us": 0.5114943671671994,
+   "beta_hat_at_tau_star": 0.6532406928402126,
+   "beta_hat_minus_beta_inj_over_sigma": 0.6368540310651974,
+   "beta_hat_baseline_at_tau_star": 0.14174632567301995,
+   "differenced_recovery_exact": true,
+   "tau_hat_chi2min": 1.0,
+   "coverage_pass": true
+  },
+  "tau_3": {
+   "beta_inj_us": 0.5052454802635704,
+   "beta_hat_at_tau_star": 0.6183951627469149,
+   "beta_hat_minus_beta_inj_over_sigma": 0.4860768418995009,
+   "beta_hat_baseline_at_tau_star": 0.11314968248334875,
+   "differenced_recovery_exact": true,
+   "tau_hat_chi2min": 1.7842461785343506,
+   "coverage_pass": true
+  },
+  "tau_26": {
+   "beta_inj_us": 0.3646912218766749,
+   "beta_hat_at_tau_star": 0.28640266167095724,
+   "beta_hat_minus_beta_inj_over_sigma": -0.46193876828872515,
+   "beta_hat_baseline_at_tau_star": -0.07828856020571141,
+   "differenced_recovery_exact": true,
+   "tau_hat_chi2min": 3.506054637446003,
+   "coverage_pass": true
+  },
+  "tau_52": {
+   "beta_inj_us": 0.4023511884904689,
+   "beta_hat_at_tau_star": 0.2732656349381555,
+   "beta_hat_minus_beta_inj_over_sigma": -0.7800393251713243,
+   "beta_hat_baseline_at_tau_star": -0.12908555355231682,
+   "differenced_recovery_exact": true,
+   "tau_hat_chi2min": 8.356046395158797,
+   "coverage_pass": true
+  },
+  "tau_104": {
+   "beta_inj_us": 0.58830391347768,
+   "beta_hat_at_tau_star": 0.3707193828747844,
+   "beta_hat_minus_beta_inj_over_sigma": -0.9663875982235082,
+   "beta_hat_baseline_at_tau_star": -0.21758453060288638,
+   "differenced_recovery_exact": true,
+   "tau_hat_chi2min": 16.41968219796102,
+   "coverage_pass": true
+  }
+ },
+ "sequential_bias_diagnostic": {
+  "tau_star_d": 52.0,
+  "note": "beyond-preregistration pure-linear-algebra diagnostic; quoted limits unaffected",
+  "amp_1x_u95": {
+   "beta_inj_us": 0.4023511884904689,
+   "tau_hat_sequential_d": 0.041328033131986644,
+   "tau_hat_joint_d": 8.356046395158797,
+   "joint_z_at_52d": 1.6512919966933983,
+   "joint_beta_hat_at_52d": 0.2732656349381555
+  },
+  "amp_5x_u95": {
+   "beta_inj_us": 2.0117559424523446,
+   "tau_hat_sequential_d": 0.029007804988691616,
+   "tau_hat_joint_d": 35.53348312997096,
+   "joint_z_at_52d": 11.376617284152239,
+   "joint_beta_hat_at_52d": 1.882670388900023
+  }
+ },
+ "anchors": {
+  "tau_1": {
+   "beta_hat": 0.14174632567301995,
+   "sigma_beta": 0.2225727070235063,
+   "u95": 0.5114943671671994,
+   "z": 0.636854031065228
+  },
+  "tau_3": {
+   "beta_hat": 0.11314968248334875,
+   "sigma_beta": 0.2327814714257438,
+   "u95": 0.5052454802635704,
+   "z": 0.4860768418995194
+  },
+  "tau_26": {
+   "beta_hat": -0.07828856020571141,
+   "sigma_beta": 0.16947822001548277,
+   "u95": 0.3646912218766749,
+   "z": -0.4619387682886882
+  },
+  "tau_52": {
+   "beta_hat": -0.12908555355231682,
+   "sigma_beta": 0.16548595613940575,
+   "u95": 0.4023511884904689,
+   "z": -0.7800393251713448
+  },
+  "tau_104": {
+   "beta_hat": -0.21758453060288638,
+   "sigma_beta": 0.22515244504676699,
+   "u95": 0.58830391347768,
+   "z": -0.9663875982234674
+  }
+ },
+ "quoted_window_d": [
+  1.0,
+  327.0
+ ],
+ "convention": "Request-8 dictionary drive template (10.7e E2): beta, c_Y, u95 DIMENSIONLESS (amplitude of the dynamic alpha_A response); D_k and phases recorded here",
+ "phys_template": {
+  "D_k_us": [
+   0.9565260037552866,
+   544.9231831498155,
+   0.252570087189469
+  ],
+  "phases_rad": [
+   2216.240890523258,
+   3.461468860057624,
+   2212.7794216632
+  ],
+  "masses_msun": [
+   1.43781441,
+   0.19753639,
+   0.41010271
+  ],
+  "e_in": 0.0006990365009747136,
+  "e_out": 0.035291169899093484,
+  "a_in_m": 4776191540.704919,
+  "a_out_m": 176487508162.87866,
+  "note": "O(1) geometric projection factors set to 1; see 10.7e note"
+ }
+}

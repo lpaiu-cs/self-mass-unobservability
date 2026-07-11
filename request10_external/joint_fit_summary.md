@@ -1,35 +1,50 @@
-# Request 10.7b/c/d Joint-Fit Real-Data Result: Decision Summary
+# Request 10.7b/c/d/e Joint-Fit Real-Data Result: Decision Summary
 
 Status: Imported from prior work. Contracts, each committed BEFORE the data
 look it governs: `../notes/REQUEST10_EXTERNAL_JOINT_FIT_UPPER_LIMIT.md`
 (10.7b, commit `3d9337c`), `../notes/REQUEST10_EXTERNAL_JOINT_FIT_AMENDMENT_10_7C.md`
 (10.7c, commit `92667cf`), `../notes/REQUEST10_EXTERNAL_JOINT_FIT_PROMOTION_10_7D.md`
-(10.7d, commit `e7bf8e9`). Labels used exactly as required:
+(10.7d, commit `e7bf8e9`), `../notes/REQUEST10_EXTERNAL_PHYSICAL_ANCHOR_REDNOISE_10_7E.md`
+(10.7e, commit `e7f5f5a`). Labels used exactly as required:
 `runtime-motivated`, `conditional`, `collapse`.
 
 ## Verdict (final for this request chain)
 
-Status: Counterexample candidate. **No detection; the program's first quoted
-real-data upper limit, promoted to the validated truncated estimator over the
-extended window by the pre-registered 10.7d gates (10/10 anchors passed).**
-On the real `J0337+1715` baseline residuals (12474 TOAs, Nancay 2013-2021),
-fitting the shared-relaxation transfer `G(z) = c_Y + beta/(1 + tau_chi z)`
-jointly with all 28 standard timing parameters plus an offset:
+Status: Counterexample candidate. **No detection in any pipeline mode
+(global p = 0.50-0.95, off-carrier controls quiet). The program's first
+quoted real-data upper limit, promoted by the 10.7d gates (10/10 anchors) and
+finalized by the pre-registered 10.7e red-noise rule.** On the real
+`J0337+1715` baseline residuals (12474 TOAs, Nancay 2013-2021), fitting the
+shared-relaxation transfer `G(z) = c_Y + beta/(1 + tau_chi z)` jointly with
+all 28 standard timing parameters, an offset, and (headline mode) 30
+low-frequency Fourier pairs:
 
 ```text
-No detection:  Z = 0.271 over tau_chi in [1, 327] d, global p = 0.81,
-               off-carrier controls quiet (p >= 0.20).
+QUOTED 95% upper limit (truncated estimator, red-noise marginalized,
+window [1, 327] d; unit drive):
+  u95(1 d)  = 0.202 us     u95(3 d)  = 0.573 us
+  u95(26 d) = 4.95 us      u95(52 d) = 9.98 us     u95(104 d) = 20.2 us
+  (curve: beta_limit_curve_rn.tsv; minimum 0.202 us at the 1 d edge)
 
-QUOTED 95% upper limit (truncated estimator, SVD cut 1e-3, window [1, 327] d):
-  u95(1 d)  = 0.191 us     u95(3 d)  = 0.540 us
-  u95(26 d) = 4.61 us      u95(52 d) = 9.18 us     u95(104 d) = 18.4 us
-  (full curve: beta_limit_curve_10_7d.tsv; minimum 0.191 us at the 1 d edge)
+E1 — implied per-carrier pole-amplitude bounds (headline rn curve):
+  inner and difference carriers:  A_pole,95 ~= 49-51 ns for ALL tau in [1, 104] d
+  outer carrier:                  A_pole,95 = 0.20 us (1 d) ... 9.0 us (104 d)
+
+E2 — dictionary-anchored physical bound (Conjectural, model-anchored,
+Request-8 leading-order drive D_k = (0.96, 545, 0.25) us, O(1) geometry):
+  dimensionless dynamic sensitivity-response amplitude
+  beta_phys < 0.36-0.59 (95%) across tau_chi in [1, 104] d
+  (red-marginalized; minimum 0.36 at tau = 26 d) — an order-unity lagged
+  response of the effective sensitivity to the companion driving potential
+  is excluded.
 ```
 
-`beta`, `u95` in us of common pre-transfer drive amplitude at unit drive
-(`Lambda_k F_k = 1`); physical drives rescale per 10.7a caveat (c). The
-10.7c conservative full-rank quote (u95(10 d) = 11.7 us, ..., 53.8 us at
-52 d) remains recorded and is superseded by the above.
+The white-noise 10.7d curve (min u95 = 0.191 us) is superseded per the
+pre-registered 10% rule — the maximum red/white ratio on the quoted window
+reached 1.1001 (at tau = 297 d), and the projected-residual periodogram
+confirms real low-frequency excess (median amplitude ratio 12.6 between
+f < 10/T and the mid-band). The 10.7c conservative full-rank quote
+(u95(52 d) = 53.8 us) remains recorded; both are superseded by the above.
 
 ## Gate record
 
@@ -79,30 +94,50 @@ gates D1/D2 (replacing L, with written rationale) plus the extended window
 3 d is the operative testability check). All 10 anchor-gates PASSED ->
 truncated curve quoted over the extended window.
 
+Status: Proven. (8) 10.7e ran the pre-registered physical-anchor and
+red-noise modes (all deterministic, same seed; no detection in any mode):
+the red/white u95 ratio reached 1.1001 > 1.10 at tau = 297 d, so per the
+pre-registered rule the red-marginalized curve became the headline quote
+(anchor-level inflation is only 6-10%); the projected-residual periodogram
+(`residual_periodogram.json`) shows a 12.6x low-frequency amplitude excess,
+independently justifying the marginalization. Gate carry-over per the 10.7e
+note: the added Fourier columns and the dictionary re-weighting are exactly
+linear; the D1/D2-validated 28-parameter model content is unchanged.
+E1 arithmetic in `pole_amplitude_bounds.json` (both the letter-of-contract
+10.7d version and the headline-consistent rn version). E2 template:
+`D_k = (0.9565, 544.9, 0.2526) us`, phases locked to `tasc_p/tasc_b` with the
+10.5 phase-lock for the combination carrier.
+
 ## Files
 
-Status: Note. QUOTED: `joint_fit_upper_limit_10_7d.json`,
-`beta_limit_curve_10_7d.tsv`, gates in `jointfit_gateD.json`
-(+ `gateD_params.json`, `gateD_columns.npz`). Superseded quotes and
-validation record: `joint_fit_upper_limit[_v2|_v2trunc].json`,
-`beta_limit_curve[_v2|_v2trunc].tsv`, `jointfit_gateLA.json`,
-`jointfit_linearization_check.json`, `jointfit_lindiag.json`. Corrected
-Jacobian: `finite_jacobian_v2.npy` (+meta, `jac_v2/`),
-`carrier_projection_rank_v2.json`. Inputs: `baseline_planetGR.npz`,
-`xb52.npy`, `xc52.npy`, `jointfit_dtheta52*.npy`. Reproduction:
-`scripts/joint_fit_upper_limit.py` (deterministic, seed 20260710; argv:
-jacobian, suffix, SV cut, window min), `scripts/build_jac_v2.py`,
-`scripts/rank_gate_v2.py`, WSL gate scripts per the notes.
+Status: Note. QUOTED (headline): `joint_fit_upper_limit_rn.json`,
+`beta_limit_curve_rn.tsv`; physical anchor `joint_fit_upper_limit_phys_rn.json`
+(+ `_phys` white cross-check); E1 `pole_amplitude_bounds.json`; periodogram
+`residual_periodogram.json`. Promotion record: `joint_fit_upper_limit_10_7d.json`,
+`beta_limit_curve_10_7d.tsv` (white-noise version, superseded by the 10% rule),
+gates in `jointfit_gateD.json` (+ `gateD_params.json`, `gateD_columns.npz`).
+Superseded quotes and validation record:
+`joint_fit_upper_limit[_v2|_v2trunc].json`, `beta_limit_curve[_v2|_v2trunc].tsv`,
+`jointfit_gateLA.json`, `jointfit_linearization_check.json`,
+`jointfit_lindiag.json`. Corrected Jacobian: `finite_jacobian_v2.npy`
+(+meta, `jac_v2/`), `carrier_projection_rank_v2.json`. Inputs:
+`baseline_planetGR.npz`, `xb52.npy`, `xc52.npy`, `jointfit_dtheta52*.npy`.
+Reproduction: `scripts/joint_fit_upper_limit.py` (deterministic, seed
+20260710; argv: jacobian, suffix, SV cut, window min, rn-pairs, template),
+`scripts/build_jac_v2.py`, `scripts/rank_gate_v2.py`, WSL gate scripts per
+the notes.
 
 ## Caveats
 
-Status: Note. (a) Noise is white with release EFAC 1.1225 plus global scale
-s = 1.116 (chi2_red 1.25: mild excess only); no explicit red-noise model.
-(b) Unit-drive convention; physical mapping needs the Request 10.2/10.6
-source factors. (c) tau is not localizable at limit amplitudes (~2 sigma;
-expected); the 5x diagnostic shows joint tau recovery works where sequential
-fails. (d) The u95 minimum sits at the 1 d window edge; below ~0.3 d the
-beta/c_Y degeneracy opens (diagnostic rows only). (e) Estimator validity is
-gate-checked at the five anchors; between anchors it is interpolated by the
-linearity of the same estimator (D1 holds across the whole curve by
-construction of the single GN remainder).
+Status: Note. (a) The headline noise model is white (release EFAC 1.1225 +
+global scale) plus 30 unconstrained low-frequency Fourier pairs — a
+prior-free red-noise marginalization, not a spectral-model fit. (b) The E2
+physical anchor sets all O(1) geometric projection factors to 1 and adopts
+the Request-8 leading-order clock drive (`Conjectural` per the ledger); its
+numbers scale inversely with the true D_k. (c) tau is not localizable at
+limit amplitudes (~2 sigma; expected); the 5x diagnostic shows joint tau
+recovery works where sequential fails. (d) The unit-drive u95 minimum sits at
+the 1 d window edge; below ~0.3 d the beta/c_Y degeneracy opens (diagnostic
+rows only). (e) Estimator validity is gate-checked at the five anchors under
+the white-noise span; the 10.7e extensions add exactly-linear columns only
+(carry-over argument in the 10.7e note).

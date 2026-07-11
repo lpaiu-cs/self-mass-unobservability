@@ -1,0 +1,150 @@
+{
+ "preregistration": "../notes/REQUEST10_EXTERNAL_JOINT_FIT_UPPER_LIMIT.md",
+ "jacobian": "finite_jacobian_v2.npy",
+ "template": "unit",
+ "rn_fourier_pairs": 30,
+ "seed": 20260710,
+ "nsim": 500,
+ "noise": {
+  "chi2_red_29par": 1.2428838735544954,
+  "s_scale": 1.1148470180049348,
+  "stop_rule_s_max": 1.75,
+  "nuisance_rank": 70
+ },
+ "real_data": {
+  "Z_max_abs_z": 0.5235511205436961,
+  "p_global": 0.624,
+  "null_z_median": 0.6911328844793958,
+  "null_z_997": 3.2102288535825285,
+  "detection_criterion_met": false,
+  "min_u95_us": 0.20231856484040905,
+  "tau_at_min_u95_d": 1.0
+ },
+ "controls_off_carrier": {
+  "0.87": {
+   "Z": 0.7791037088210069,
+   "p": 0.428
+  },
+  "0.93": {
+   "Z": 0.4915312942848163,
+   "p": 0.656
+  },
+  "1.07": {
+   "Z": 0.23089737000010774,
+   "p": 0.844
+  },
+  "1.13": {
+   "Z": 1.917657026068214,
+   "p": 0.056
+  }
+ },
+ "comparator": {
+  "chi2_shared_tau_3par_min": 15416.38468719232,
+  "tau_at_chi2_min_d": 327.0,
+  "chi2_complex_deg1_4par": 15414.328246816603,
+  "chi2_nuisance_only": 15416.73156756996,
+  "shared_fits_at_least_as_well": false
+ },
+ "injections": {
+  "tau_1": {
+   "beta_inj_us": 0.20231856484040905,
+   "beta_hat_at_tau_star": 0.24270000040221545,
+   "beta_hat_minus_beta_inj_over_sigma": 0.42388857975898,
+   "beta_hat_baseline_at_tau_star": 0.04038143556180642,
+   "differenced_recovery_exact": true,
+   "tau_hat_chi2min": 327.0,
+   "coverage_pass": true
+  },
+  "tau_3": {
+   "beta_inj_us": 0.5726194925965951,
+   "beta_hat_at_tau_star": 0.6870685421586731,
+   "beta_hat_minus_beta_inj_over_sigma": 0.4245726594046498,
+   "beta_hat_baseline_at_tau_star": 0.11444904956207841,
+   "differenced_recovery_exact": true,
+   "tau_hat_chi2min": 327.0,
+   "coverage_pass": true
+  },
+  "tau_26": {
+   "beta_inj_us": 4.949793768164788,
+   "beta_hat_at_tau_star": 5.985293200469081,
+   "beta_hat_minus_beta_inj_over_sigma": 0.4479715079414335,
+   "beta_hat_baseline_at_tau_star": 1.0354994323042914,
+   "differenced_recovery_exact": true,
+   "tau_hat_chi2min": 327.0,
+   "coverage_pass": true
+  },
+  "tau_52": {
+   "beta_inj_us": 9.983365460814852,
+   "beta_hat_at_tau_star": 12.192596856269448,
+   "beta_hat_minus_beta_inj_over_sigma": 0.4791019069600301,
+   "beta_hat_baseline_at_tau_star": 2.2092313954546454,
+   "differenced_recovery_exact": true,
+   "tau_hat_chi2min": 327.0,
+   "coverage_pass": true
+  },
+  "tau_104": {
+   "beta_inj_us": 20.152557100468172,
+   "beta_hat_at_tau_star": 24.832945816985223,
+   "beta_hat_minus_beta_inj_over_sigma": 0.5081617620841784,
+   "beta_hat_baseline_at_tau_star": 4.680388716516946,
+   "differenced_recovery_exact": true,
+   "tau_hat_chi2min": 327.0,
+   "coverage_pass": true
+  }
+ },
+ "sequential_bias_diagnostic": {
+  "tau_star_d": 52.0,
+  "note": "beyond-preregistration pure-linear-algebra diagnostic; quoted limits unaffected",
+  "amp_1x_u95": {
+   "beta_inj_us": 9.983365460814852,
+   "tau_hat_sequential_d": 0.10386578353847618,
+   "tau_hat_joint_d": 327.0,
+   "joint_z_at_52d": 2.644130631427836,
+   "joint_beta_hat_at_52d": 12.192596856269448
+  },
+  "amp_5x_u95": {
+   "beta_inj_us": 49.91682730407426,
+   "tau_hat_sequential_d": 0.11486983549970353,
+   "tau_hat_joint_d": 327.0,
+   "joint_z_at_52d": 11.304245529299083,
+   "joint_beta_hat_at_52d": 52.12605869952896
+  }
+ },
+ "anchors": {
+  "tau_1": {
+   "beta_hat": 0.04038143556180642,
+   "sigma_beta": 0.0952642687018532,
+   "u95": 0.20231856484040905,
+   "z": 0.4238885797589802
+  },
+  "tau_3": {
+   "beta_hat": 0.11444904956207841,
+   "sigma_beta": 0.26956292881073024,
+   "u95": 0.5726194925965951,
+   "z": 0.4245726594046512
+  },
+  "tau_26": {
+   "beta_hat": 1.0354994323042914,
+   "sigma_beta": 2.3115296708550286,
+   "u95": 4.949793768164788,
+   "z": 0.447971507941433
+  },
+  "tau_52": {
+   "beta_hat": 2.2092313954546454,
+   "sigma_beta": 4.6111930747103145,
+   "u95": 9.983365460814852,
+   "z": 0.4791019069600408
+  },
+  "tau_104": {
+   "beta_hat": 4.680388716516946,
+   "sigma_beta": 9.210430744180494,
+   "u95": 20.152557100468172,
+   "z": 0.5081617620841671
+  }
+ },
+ "quoted_window_d": [
+  1.0,
+  327.0
+ ],
+ "convention": "unit drive Lambda_k F_k = 1; beta, c_Y, u95 in us of common pre-transfer drive amplitude"
+}

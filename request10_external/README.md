@@ -54,7 +54,10 @@ artifacts:
 | `carrier_projection_rank_v2.json` | 10.7a Stage-2 gates re-adjudicated with v2 (unchanged: rank <= 5/6) |
 | `jointfit_linearization_check.json`, `jointfit_lindiag.json` | 10.7b stop-rule firing + failure diagnosis (planet secant columns) |
 | `jointfit_gateLA.json`, `gateLA_params.json` | 10.7c gates: A (absorption reality) PASS 0.003%, L (displacement linearity) FAIL 0.10 vs 0.05 (demoted to diagnostic by 10.7d) |
-| `joint_fit_upper_limit_10_7d.json`, `beta_limit_curve_10_7d.tsv` | **QUOTED 10.7d limit**: truncated estimator, window [1,327] d, min u95 = 0.191 us @ 1 d |
+| `joint_fit_upper_limit_rn.json`, `beta_limit_curve_rn.tsv` | **QUOTED headline limit (10.7e)**: truncated + red-marginalized, window [1,327] d, min u95 = 0.202 us @ 1 d |
+| `joint_fit_upper_limit_phys[_rn].json`, `beta_limit_curve_phys[_rn].tsv` | 10.7e E2 physical anchor: dimensionless beta_phys < 0.36-0.59 (Request-8 dictionary drive) |
+| `pole_amplitude_bounds.json`, `residual_periodogram.json` | 10.7e E1 per-carrier pole bounds (inner/dif ~50 ns); low-frequency excess 12.6x justifying E3 |
+| `joint_fit_upper_limit_10_7d.json`, `beta_limit_curve_10_7d.tsv` | 10.7d white-noise version (superseded by the pre-registered 10% rule at ratio 1.1001) |
 | `jointfit_gateD.json`, `gateD_params.json`, `gateD_columns.npz` | 10.7d promotion gates: D1 (live null) 5/5 PASS, D2 (estimator calibration at u95) 5/5 PASS |
 | `jointfit_dtheta52*.npy`, `xb52.npy`, `xc52.npy` | validation displacements and signal columns |
 | `joint_fit_summary.md` | 10.7b/c/d verdict with Request 10.7 labels and the quoted limit |
