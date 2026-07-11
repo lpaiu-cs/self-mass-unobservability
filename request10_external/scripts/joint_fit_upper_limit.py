@@ -24,16 +24,18 @@ HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # request10_
 os.chdir(HERE)
 
 # optional: argv[1] = jacobian file (default v1), argv[2] = output suffix,
-#           argv[3] = relative-SV cut for the nuisance span (default 1e-10 = full rank)
+#           argv[3] = relative-SV cut for the nuisance span (default 1e-10 = full rank),
+#           argv[4] = quoted-window minimum tau in days (default 10.0; 10.7d uses 1.0)
 JAC_PATH = sys.argv[1] if len(sys.argv) > 1 else 'finite_jacobian.npy'
 SUFFIX = sys.argv[2] if len(sys.argv) > 2 else ''
 SV_CUT = float(sys.argv[3]) if len(sys.argv) > 3 else 1e-10
+WIN_MIN = float(sys.argv[4]) if len(sys.argv) > 4 else 10.0
 
 SEED = 20260710
 NSIM = 500
 STOP_S = 1.75
 CONTROL_FACTORS = [0.87, 0.93, 1.07, 1.13]
-ANCHORS = [26.0, 52.0, 104.0]
+ANCHORS = [26.0, 52.0, 104.0] if WIN_MIN >= 10.0 else [1.0, 3.0, 26.0, 52.0, 104.0]
 
 # ---- load artifacts of record ----
 base = np.load('baseline_planetGR.npz', allow_pickle=True)
@@ -136,10 +138,11 @@ def u95_of(beta_hat, sigma):
             hi = mid
     return 0.5*(lo+hi)
 
-# ---- grids (pre-registered) ----
-quoted_grid = sorted(set(np.geomspace(10.0, 327.0, 49).tolist() + ANCHORS))
-diag_grid = [x for x in np.geomspace(1.0, 1000.0, 61).tolist()
-             if not (10.0 <= x <= 327.0)]
+# ---- grids (pre-registered; 10.7d extends the window to [1, 327] d) ----
+npts = 49 if WIN_MIN >= 10.0 else 61
+quoted_grid = sorted(set(np.geomspace(WIN_MIN, 327.0, npts).tolist() + ANCHORS))
+diag_grid = [x for x in np.geomspace(min(1.0, WIN_MIN), 1000.0, 61).tolist()
+             if not (WIN_MIN <= x <= 327.0)]
 
 # ---- real-data scan ----
 def scan(yv_perp, grid, oms, keep_X2=False):
@@ -311,7 +314,7 @@ out = {
                                       'u95': r['u95'], 'z': r['z']}
                                      for r in rows_q if abs(r['tau']-a) < 1e-9)
                 for a in ANCHORS},
-    'quoted_window_d': [10.0, 327.0],
+    'quoted_window_d': [WIN_MIN, 327.0],
     'convention': 'unit drive Lambda_k F_k = 1; beta, c_Y, u95 in us of common pre-transfer drive amplitude',
 }
 with open('joint_fit_upper_limit%s.json' % SUFFIX, 'w') as fh:
