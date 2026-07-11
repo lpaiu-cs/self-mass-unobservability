@@ -195,3 +195,53 @@ RELATIVE to the 1.8e-6 anchor times the static/dynamic non-degeneracy ratio
 measured by F2 (T2 templates). Even at the conservative anchor, a plausible
 `sigma_beta_ff ~ 1e-6..1e-5` would still be 10^4-10^5 tighter than the 10.7e
 clock bound (`beta_phys ~ 0.4`). F2/F3 require the T2 integrator patch.
+
+## T2/F2/F3 execution record (2026-07-11/12) — BOTH GATES PASS
+
+Status: Proven (patch + integrity). `SEP_D(t) = SEP_D + A cos(w t + ph)` on
+the pulsar pairs inside `rhs_GR_nbody` (the active integrator-3 RHS; the
+published static semantics enter as `Gg[0][j] = Gg[j][0] = 1 + SEP_D`,
+`Parameters.cpp:1629`). Env-driven (`SEPDYN_A/W/PH`), separate build tree,
+original untouched. A=0 integrity gate: max|diff| = 0.0 us (bit-exact).
+
+Status: Proven (time-convention calibration; two line-search designs stopped
+per rule before this one). The decisive test is the quasi-static RAMP: drive
+period 30000 d, phase pi/2, template = static F0 column times Delta(t). Both
+unit hypotheses fit with R2 = 0.999 (deep-adiabatic shape degeneracy) but the
+amplitudes decide: `a_hat(timedays) = 0.502`, `a_hat(days) = 0.0219`. The 1/2
+is the INTEGRAL-KERNEL signature — the secular-dominated response accumulates
+as `int Delta dt` (phase drift), so a ramp yields exactly half the
+instantaneous-factorization template; both measured amplitudes match ONE
+story: integrator time in TIMEDAYS units (1 unit = 24.0774 d) with the
+integral kernel (predicted 0.5 and 0.5/24.077 = 0.0208). Calibration
+CONFIRMED and the patch normalization validated end-to-end.
+
+Status: Proven (production columns). Six exact dynamic response columns at
+`{Omega_in, Omega_out, Omega_dif} x {cos, sin}` (central differences;
+adaptive A down to 3.3e-10 where the response reaches 2.6e12 us per unit
+oscillation amplitude at the inner carrier).
+
+Status: Proven (F2 — PASS). Against the FULL 10.7e headline nuisance span
+(28 params + offset + 30 Fourier pairs, SV cut 1e-3), per-column survival is
+11-28% and the shared-tau template survival peaks at 43.8% (tau = 17.7 d) —
+versus 0.06% for the static SEP column and ~0.6% for the clock-channel
+column. The timing model CANNOT absorb oscillating-G signatures: the dynamic
+free-fall channel is structurally non-degenerate.
+
+Status: Counterexample candidate (F3 — PASS by two orders of magnitude).
+Projected sensitivity on the shared-tau template over tau in [5, 500] d:
+Fisher floor `sigma_beta_ff ~ 6.6e-11`; with the pre-registered conservative
+anchor ratio K = 934 applied, `min sigma_anchored = 6.1e-8` at the tau = 5 d
+grid edge — 160x below the 1e-5 promotion threshold, and a projected
+~3 x 10^6 gain over the 10.7e clock bound. (K was derived from the static
+direction's absorbers; for 40%-surviving dynamic templates it is very likely
+over-conservative — quoted as the safe bracket.)
+
+Status: Note. PROMOTION per the design's quote rules: F2 and F3 both pass ->
+proceed to a separately pre-registered 10.8b REAL-DATA experiment
+(detection statistics, nulls, controls, comparator, and u95 quoting on the
+dynamic free-fall channel). Caveats carried forward: projections are
+data-independent; the real-data fit must handle the tau = 5 d edge (extend
+the grid), the integral-kernel template convention fixed here, and the
+anchored-vs-Fisher bracket must be resolved by an estimator-calibration gate
+(D-gate analogue) before any quoted number.
