@@ -114,11 +114,33 @@ amplitudes, 3.2e-11 vs 1.3e-8 at K934. Pulse-number re-assignment cannot
 mimic or hide the dynamic template. The former "unprobed absorber" caveat is
 RESOLVED; the K_dyn = 10 quote stands with this record.
 
-Status: Note. Remaining caveats: (a) drive normalization is unit-drive per
-carrier (physical source factors as in 10.7e E2 pending); (b)
-zero-drive-phase convention (a phase-marginalized two-quadrature variant is
-a mechanical extension); (c) tau below 2 d diagnostic only; (d) white +
-30-pair Fourier noise model as in the 10.7e headline.
+Status: Counterexample candidate (10.8e, pre-registered commit `3827649`,
+executed). BOTH remaining review items resolved:
+
+```text
+FINAL HEADLINE (phase-marginalized over the time-origin freedom, worst
+phase per tau; K_dyn = 10; window [2, 500] d; no detection, trials-
+corrected p = 0.30, anti-causal control quiet):
+
+  amplitude of any lag-responding Delta-oscillation
+  |delta Delta| < 1.30e-9   (95%, tau_chi = 2 d)
+  1.36 / 1.42 / 1.84 / 4.95 x 1e-9  at tau = 5/18/52/200 d
+  (zero-phase curve 1.17e-9 recorded; Fisher floor 1.9e-10; K934
+   bracket 1.2e-7; curve: sep_limit_curve_10_8e.tsv)
+```
+
+Note that `Delta` is itself the dimensionless SEP parameter, so this
+amplitude bound is a physical statement independent of any drive model. The
+dictionary-anchored COUPLING version (Conjectural, Request-8 `U/c^2` drive,
+f_w ~ 1e-10..1e-11, tasc-locked phases): `beta_phys < 14-17` for
+`tau in [2, 52] d` — the free-fall channel's drive lacks the clock channel's
+1/Omega integration amplification, so in coupling units the two channels
+bound different composites (clock: 0.4-0.6 on the rate-coupling; free-fall:
+~15 on the potential-coupling but 3e8 deeper in raw Delta amplitude).
+
+Status: Note. Remaining caveats: (a) tau below 2 d diagnostic only;
+(b) white + 30-pair Fourier noise model as in the 10.7e headline; (c) E2
+coupling numbers carry O(1) geometric drive factors.
 
 ## Gate record
 

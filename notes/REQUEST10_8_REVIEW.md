@@ -86,11 +86,13 @@ bracket `1.09e-7` (K = 934, 10.8b).
 
 ## Verdict
 
-Status: Note. Quotable now (with caveats stated): the bracketed limit
-`beta_ff < 1.2e-9 (K_dyn = 10) .. 1.1e-7 (K = 934)`, Fisher floor 1.2e-10,
-no detection, full gate record, and (10.8d) turn-search robustness RESOLVED
-(beta-hat stable across all chi2-viable turn-alias solutions). Remaining
-publication items, in order: (1) phase-marginalized estimator variant;
-(2) physical drive anchoring (Request-8 weights). Paper B structure stands:
-theorem frame (F-A4+) -> methods (10.7 chain + gate discipline) -> headline
-(10.8b/c/d) -> loophole map and remaining items as future work.
+Status: Note. ALL review items now resolved (A1 by 10.8d; A3 and A4 by
+10.8e). FINAL quotable package: phase-marginalized worst-phase limit
+`|delta Delta| < 1.30e-9 (95%, tau = 2 d; K_dyn = 10)` over [2, 500] d, with
+the zero-phase curve, Fisher floor (1.9e-10), K934 bracket (1.2e-7), the
+Conjectural coupling version (`beta_phys < 14-17`, U/c^2 drive), no
+detection anywhere (trials-corrected), anti-causal control quiet, and the
+complete gate record (F0-F3, G1/G2a/G2b, V/L turn-search, 10.8c rho
+diagnosis). Paper B structure: theorem frame (F-A4+) -> methods (10.7 chain
++ gate discipline) -> headline (10.8b/c/d/e) -> loophole map; remaining
+future work: sub-2 d window, spectral red-noise model, second dataset.
