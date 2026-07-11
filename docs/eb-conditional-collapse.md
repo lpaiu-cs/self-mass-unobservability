@@ -1,3 +1,7 @@
+> LEGACY / HISTORICAL NOTE
+>
+> Status: Note. This exact-current-set conditional note is retained for provenance only. It is not part of the authoritative front-door theorem package.
+
 # `E/B` Conditional Collapse
 
 ## Statement
@@ -41,8 +45,8 @@ so the leading body-dependent free-fall deviation still collapses to finitely ma
 
 ## What This Does And Does Not Claim
 
-- Status: Proven. This note is conditional on the corrected `E/B` basis; it does not prove magnetic-family ordering.
-- Status: Proven. This note does not rescue the electric-only minimal-sector theorem.
+- Status: Note. This note is conditional on the corrected `E/B` basis; it does not prove magnetic-family ordering.
+- Status: Note. This note does not rescue the electric-only minimal-sector theorem.
 - Status: Conjectural. This note shows the broader finite-dimensional collapse program remains structurally plausible after explicit magnetic-family admission.
 
 ## Proof Skeleton

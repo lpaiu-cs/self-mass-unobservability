@@ -1,160 +1,32 @@
 # Failure Ledger
 
-Status: Imported from prior work. This ledger replaces static primitive-family bookkeeping as the main failure surface for this worktree.
+- Status: Proven. Inside the stated theorem domain `A1`-`A8`, the positive finite-family collapse theorem is closed.
+- Status: Note. This file is no longer a to-do list. It is the sharp boundary-risk register for exact assumption-drop failures and scope escapes.
+- Status: Note. The older milestone-style ledger is preserved in [`archive/failure-ledger-history.md`](archive/failure-ledger-history.md).
 
-## Current Minimal Model
+## Theorem-Domain Assumptions
 
-Status: Counterexample candidate. The tested model is
+- Status: Proven. The closed positive theorem holds only inside the stated free-fall theorem domain recorded in [`assumptions-ledger.md`](assumptions-ledger.md).
+- Status: Note. The assumption-drop rows below are not open tasks. They are the exact places where the closed theorem stops applying or changes form.
 
-```text
-tau_chi * d chi / dt + chi = alpha F(t)
-m / m0 = 1 + c_Y F(t) + c_chi chi(t)
-```
+## Exact Boundary Escapes
 
-with `F(t) = F0 cos(Omega t)` for the first derivation.
+| ID | Status | Boundary drop | Smallest explicit model | Exact theorem layer broken | Replacement bookkeeping |
+| --- | --- | --- | --- | --- | --- |
+| F-A5 | Proven | `A5` dropped, locality kept | Smooth-flat local monopole model `m_A(Y)=m_0+\alpha e^{-1/Y^2}\Theta(Y)` | Finite analytic Taylor jet in Lemma 55 | Non-Taylor monopole germ data |
+| F-A3 | Proven | `A3` dropped, analyticity kept on the instantaneous side | One-coordinate causal power-law hereditary kernel | Local reduction to a monopole function of instantaneous normal-form coordinates, so the local forms of Lemmas 55 and 56 fail | Memory kernel or spectral data |
+| F-A4 | Proven | `A4` dropped, locality and analyticity kept | One-state local analytic `chi` model | Y-only monopole reduction, so the Y-only forms of Lemmas 55 and 56 fail | Finite local state-space data `(Y^I, chi^a)` and state-evolution parameters |
+| F-A4+ | Proven | `A4` dropped but finitely many local states retained explicitly | Same one-state `chi` model | Original no-state theorem fails, but a second positive branch survives | Finite state-augmented collapse theorem with state data kept separate from Wilson coefficients |
+| F-A8 | Proven | Local weight-spectrum finiteness dropped | Infinite low-weight STF tower | Candidate operator-space finiteness before reduction | No finite pre-reduction primitive-family catalog exists below the cutoff |
 
-## Exact Collapse Conditions
+## Empirical Or Out-Of-Domain Non-Closure
 
-| Status | Condition | Exact failing step | Classification |
-| --- | --- | --- | --- |
-| Proven | `tau_chi = 0` | The equation becomes `chi = alpha F`, so `m/m0 = 1 + (c_Y + c_chi alpha)F`. | Static sensitivity redefinition. |
-| Proven | `Omega = 0` | The quadrature coefficient `alpha F0 Omega tau_chi / (1 + Omega^2 tau_chi^2)` vanishes. | Static or secular shift only. |
-| Proven | `alpha c_chi = 0` | The internal state either is not driven or is not read out in the mass response. | No dynamic observable. |
-| Proven | `Omega tau_chi << 1` with a local derivative EFT truncated at order `N` | `chi = alpha sum_{n=0}^N (-tau_chi d/dt)^n F + O((Omega tau_chi)^{N+1})`. | Order-by-order derivative collapse. |
-| Proven | Single known drive frequency with an unconstrained local `dot F` Wilson coefficient | The leading quadrature can be fit by one derivative coefficient without proving an internal state. | Static-basis-degenerate signal. |
-| Proven | Single known drive frequency with unconstrained `{F, dot F}` coefficients | Both cosine and sine quadratures are fit by `a0 F + a1 dot F`, but the fitted `a1` depends on `Omega`. | Single-frequency derivative degeneracy. |
-| Proven | `K <= floor((N+1)/2)` positive sampled frequencies with freely fitted real degree-`N` derivative coefficients | Even and odd channels can be interpolated at all sampled points. | Physical finite-sample degeneracy. |
-| Proven | `K <= N + 1` sampled frequencies with freely fitted complex degree-`N` derivative coefficients | Polynomial interpolation can match the relaxation transfer at all sampled points. | Conservative complex finite-sample degeneracy. |
-| Proven | Low-frequency sweep with `|Omega tau_chi| <= rho` and tolerance above `|alpha c_chi| rho^(N+1)` | Taylor truncation through order `N` is within tolerance over the band. | Operational derivative-EFT collapse. |
-| Proven | Concrete orbital template with `e = 0`, `p = 0`, or `p = -3` at `O(e^2)` | The two-harmonic `n, 2n` sweep is absent or incomplete. | Insufficient forcing dictionary. |
-| Proven | Observable projection with arbitrary complex `Lambda(Omega_k)` at each frequency | The projection nuisance can absorb `G(i Omega_k)` point by point. | Observable dictionary collapse. |
-| Proven | Acceleration-like projection with `Gamma = 0` | `delta a_hat = Gamma q_hat` is blind to the body response. | Projection-channel collapse. |
-| Proven | Range-like projection sampled at `kappa^2 + z_k^2 = 0` without a resonance model | Deprojection by `(kappa^2+z^2)/Gamma` is singular. | Projection-channel singularity. |
-| Proven | Projection with a zero at `z=-1/tau_chi` | The observable projection cancels the relaxation pole. | Pole-cancellation degeneracy. |
-| Proven | Triple bridge with `Omega_in = Omega_out` or `F_in F_out = 0` | The inner/outer carrier inventory has fewer than two usable frequency samples. | One-frequency derivative degeneracy. |
-| Proven | Triple bridge against real degree `N >= 3` derivative EFT with only two carriers | The real odd channel has enough coefficients to interpolate both positive-frequency samples. | Need additional carrier or derivative-order prior. |
-| Proven | Triple bridge against complex degree `N >= 1` polynomial comparator with only two carriers | Complex polynomial interpolation absorbs two samples. | Conservative complex-comparator degeneracy. |
-| Proven | Three-carrier triple inventory with `Omega_in = 2 Omega_out` or `Omega_out = 2 Omega_in` | The combination carrier `|Omega_in-Omega_out|` duplicates one monopole carrier. | Falls back to two-carrier bridge. |
-| Proven | Three-carrier triple inventory against real degree `N >= 5` or complex degree `N >= 2` comparator | Three samples are below the corresponding obstruction count. | Need sideband carrier, order prior, or projection prior. |
-| Proven | Three-carrier triple inventory with arbitrary complex projection nuisance per carrier | The projection absorbs the shared transfer law point by point. | Observable bridge collapse. |
-| Proven | Triple projection gate with arbitrary complex `Lambda_k` independently assigned to each carrier | Choosing `Lambda_k=O_k/(G(i Omega_k)F_k)` fits every carrier pointwise. | Projection-nuisance collapse. |
-| Proven | Triple projection gate with zero, singular, or pole-cancelling projection | A carrier sample is blind, cannot be deprojected, or cancels the relaxation pole. | Carrier sample lost. |
-| Proven | Three-carrier gate with a projection/comparator class whose effective dimension exceeds the three-sample pressure | The finite carrier inventory is below the obstruction count after nuisance parameters are admitted. | Need more carriers, order prior, or external projection prior. |
-| Proven | Physical projection gate with independently floated combination-carrier phase | The three carrier amplitudes span six real projection directions, matching arbitrary complex per-carrier freedom. | Runtime-worthiness collapse. |
-| Conjectural | Physical projection gate with phase-locked outer-dipole manifold but no named timing model enforcing the lock | The symbolic manifold is finite, but the implementation could still fit an effectively arbitrary carrier. | Conditional until implementation/prior gate. |
-| Proven | Named timing-model audit with explicit per-harmonic amplitude/phase nuisance enabled on target carriers | The `RN_PL`-style sinusoid branch supplies carrier-local harmonic amplitudes and phases. | Shared-`tau_chi` bridge collapse. |
-| Counterexample candidate | Named timing-model audit on the standard finite state/geometry core | The public source path maps residuals through finite fitted parameters, recomputed state vectors, and shared geometry. | Conditional runtime-worthy implementation class. |
-| Proven | Runtime pilot becomes dependency repair rather than a projection-class test | The work no longer checks configuration closure, Jacobian rank, or synthetic shared-`tau_chi` injection. | Stop; not science progress. |
-| Proven | Runtime pilot configuration enables target-carrier harmonic soak-up | The fit has admitted the collapse comparator before the dynamic-chi column is tested. | Stop; not runtime-motivated. |
-| Proven | Runtime pilot Jacobian rank reaches `6/6` or absorbs the dynamic-chi column | The named fit behaves like independent complex carrier projection or the test column lies in the nuisance span. | Named implementation collapse. |
-| Counterexample candidate | Runtime pilot rank gate is `<=5/6` and dynamic-chi column is outside the finite nuisance span | The named implementation preserves a finite shared projection manifold near the baseline solution. | Proceed to synthetic injection. |
-| Proven | External handoff returns no configuration manifest or no finite Jacobian | The pilot cannot distinguish standard finite geometry from carrier-local soak-up. | Inconclusive; do not promote runtime. |
-| Proven | External handoff promotes a posterior run before the rank gate | The decisive implementation-class question has not been answered. | Stop; reorder pilot. |
-| Proven | Linear first-order `chi` plus linear two-frequency forcing and linear readout | Superposition leaves only the input frequencies; no `Omega_1 +/- Omega_2` terms appear. | No sideband loophole in the linear MVP. |
-| Proven | Nonlinear sideband model with `beta_F2 = lambda_Fchi = lambda_chi2 = 0` | The model reduces to the linear no-sideband one-state response. | Nonlinear sideband collapse. |
-| Proven | Mixed sideband test with `F1 F2 = 0` | Sum and difference sideband amplitudes vanish because only one harmonic is present. | Insufficient nonlinear forcing. |
-| Proven | Orbital `3n` sideband test with `e = 0`, `p = 0`, `p = -3`, or `beta_F2 = 0` | The `n,2n` input pair or nonlinear drive coefficient vanishes. | Orbital sideband collapse. |
+| ID | Status | Scope break | Smallest explicit model | Exact package limit | Replacement path |
+| --- | --- | --- | --- | --- | --- |
+| F-A7 | Counterexample candidate | Fixed-order cutoff dropped | No explicit smallest all-orders model is promoted in the current repo | The fixed-order operator-finiteness statement no longer applies automatically | A separate all-orders closure theorem would be required |
+| F-Scope | Counterexample candidate | Package applied outside the parity-even, nonspinning, local free-fall theorem domain | Nonmetric clock coupling or another out-of-domain sector | The closed theorem package no longer applies as stated | Separate sector-specific theory or empirical bookkeeping |
 
-## Non-Collapse Candidate
+## Reading Rule
 
-Status: Counterexample candidate. At finite `Omega tau_chi`, the exact transfer
-
-```text
-H(Omega) = alpha / (1 + i Omega tau_chi)
-```
-
-has a relaxation pole and cannot be represented exactly by a finite instantaneous static sensitivity basis.
-
-Status: Counterexample candidate. If the allowed comparator is a finite local derivative EFT, the loophole is not a single quadrature point; it is the frequency-dependent transfer relation across drives or the need for an infinite derivative tower to reproduce the pole exactly.
-
-Status: Counterexample candidate. For a fixed derivative order `N`,
-`floor((N+1)/2)+1` distinct positive frequencies give the first exact
-obstruction to real shared-coefficient absorption. The obstruction is zero only
-when `alpha c_chi = 0`, `tau_chi = 0`, or the frequencies are not distinct.
-
-Status: Counterexample candidate. If complex derivative coefficients are
-allowed, `N + 2` distinct frequencies give the conservative exact obstruction.
-The obstruction is zero only when `alpha c_chi = 0`, `tau_chi = 0`, the
-frequencies are not distinct, or a sampled point lies on the pole.
-
-Status: Counterexample candidate. The current concrete forcing candidate is
-`F(Y(t))=(a/r(t))^p` on a small-eccentricity orbit. It is a structural
-observable dictionary, not an empirical detectability claim.
-
-Status: Counterexample candidate. The hierarchical-triple shared-tau bridge is
-the current clean carrier-inventory route: existing inner/outer carriers can
-test real degree-`1` and degree-`2` shared derivative comparators without
-requiring a new tensor harmonic.
-
-Status: Counterexample candidate. Adding the existing GR outer-dipole
-combination carrier `|Omega_in-Omega_out|` strengthens the same route to real
-degree `N <= 4` and complex degree `N <= 1`, subject to nonresonance and finite
-projection assumptions.
-
-Status: Counterexample candidate. The current projection-channel audit shows
-that a range-like linear readout has finite shared nuisance parameters
-`Gamma,kappa`, not arbitrary frequency-local nuisance, but a named measurement
-channel still needs its own projection justification.
-
-Status: Counterexample candidate. The triple projection-nuisance realism gate
-keeps the dynamic-chi branch alive only when the carrier projection is
-calibrated or finite-dimensional and shared across carriers.
-
-Status: Proven. The same gate collapses if the standard timing nuisance model
-is allowed arbitrary per-carrier complex projection amplitudes.
-
-Status: Counterexample candidate. The physical projection-manifold gate shows
-that the phase-locked outer-dipole ansatz is rank `5`, not rank `6`, so it is a
-finite shared manifold. Runtime-worthiness remains conditional on the named
-timing model preserving that phase lock.
-
-Status: Counterexample candidate. The named `Nutimo` source-inspection audit
-places the standard triple timing core on the finite state/geometry side of
-the gate, making dynamic-chi conditionally runtime-worthy for configurations
-that exclude arbitrary harmonic carrier nuisance.
-
-Status: Proven. If an explicit per-harmonic sinusoid nuisance is enabled on
-the target carriers, the named implementation falls into the collapse class
-and the shared-`tau_chi` bridge is not runtime-motivated.
-
-Status: Counterexample candidate. The external runtime-worthiness pilot is now
-the first appropriate runtime escalation, but only as a gate sequence:
-configuration closure, named Jacobian rank test, then minimal synthetic
-shared-`tau_chi` injection.
-
-Status: Counterexample candidate. The external handoff packet fixes the
-minimum useful return artifacts. Missing configuration or Jacobian artifacts
-make the pilot inconclusive rather than positive.
-
-## Failed Sideband Attempt
-
-Status: Proven. The linear two-frequency MVP does not produce sidebands.
-
-Exact failing step:
-
-```text
-F(t) = F1 cos(Omega1 t) + F2 cos(Omega2 t)
-```
-
-implies
-
-```text
-chi(t) = chi_1(t) + chi_2(t)
-```
-
-by linearity, so the readout `c_Y F + c_chi chi` contains only `Omega1` and `Omega2`.
-
-Minimal missing assumption for sidebands:
-
-Status: Proven. Adding `beta_F2 F^2` to the internal drive or
-`lambda_Fchi F chi + lambda_chi2 chi^2` to the readout is sufficient to
-generate sidebands under two-frequency forcing.
-
-## Next Escalations
-
-Status: Counterexample candidate. If the one-state model is judged insufficient against a derivative-EFT comparator, the next smallest escalations are:
-
-1. hereditary kernel with non-rational memory response,
-2. second-order internal mode with resonant phase behavior,
-3. projection-specific sideband survival checks for named measurement channels,
-4. nonanalytic threshold or hysteresis to break local analytic expansion.
+- Status: Note. The negative uniqueness no-go is not listed here as a failure of the positive theorem, because it is a separate closed theorem branch.
+- Status: Note. Raw survivor-count, rank, and nullity notes are not failure statements unless an authoritative or supporting theorem note promotes them.

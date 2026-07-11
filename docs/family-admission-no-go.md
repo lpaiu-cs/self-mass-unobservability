@@ -5,6 +5,7 @@
 - Status: Proven. The current repository no longer treats minimal-sector uniqueness as the positive theorem target.
 - Status: Proven. For every explicitly audited unsuppressed primitive-family enlargement so far, a new low-order survivor appears.
 - Status: Proven. Therefore a stronger theorem that claims physical minimal-sector uniqueness is already obstructed unless explicit suppression, ordering, or background-restriction assumptions are added family by family.
+- Status: Proven. [`family-admission-theorem.md`](family-admission-theorem.md) records the sharp class-limited theorem statement, while this note remains the shorter no-go summary.
 
 ## Audited Families
 
@@ -22,11 +23,12 @@
 
 ## What This Does And Does Not Kill
 
-- Status: Proven. This no-go kills minimal-sector uniqueness as a default theorem target.
-- Status: Proven. This no-go does not kill the broader finite-family fixed-order collapse program.
+- Status: Note. This no-go kills minimal-sector uniqueness as a default theorem target.
+- Status: Note. This no-go does not kill the broader finite-family fixed-order collapse program.
 - Status: Proven. The negative result is about uniqueness of the physically justified minimal sector, not about existence of finite family-conditioned normal forms.
 
 ## Use In Theorem A
 
 - Status: Proven. [`theorem-A-freefall.md`](theorem-A-freefall.md) should therefore separate the no-go for minimal-sector uniqueness from the positive finite-family collapse candidate.
 - Status: Proven. [`failure-ledger.md`](failure-ledger.md) should record new unsuppressed-family survivors as uniqueness obstructions unless they also destroy fixed-order finiteness.
+- Status: Proven. [`../symbolic/family_witness_map.py`](../symbolic/family_witness_map.py) records the current witness table linking each audited family class to the theorem layer it obstructs.

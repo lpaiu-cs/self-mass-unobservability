@@ -12,7 +12,7 @@
 \{E2,\ B2,\ E3,\ EB2,\ E2^2,\ B2^2,\ dotE2,\ dotB2,\ EBDtB,\ E2B2,\ EB\_sq,\ TrE2B2,\ EBEB,\ gradE2,\ divE2,\ mixedGradE2,\ gradB2,\ divB2,\ mixedGradB2\}.
 ```
 
-- Status: Proven. This raw list contains `19` candidate survivors.
+- Status: Note. This raw list contains `19` candidate survivors.
 
 ## Exact Rank Check
 
@@ -34,7 +34,7 @@ EBEB + 2 TrE2B2 - EB\_sq - \frac12 E2B2 = 0.
 EBEB = EB\_sq + \frac12 E2B2 - 2 TrE2B2.
 ```
 
-- Status: Proven. This is now promoted into the explicit reduction rules as the mixed quartic STF identity.
+- Status: Note. This is now promoted into the explicit reduction rules as the mixed quartic STF identity.
 
 ## Corrected `E/B` Basis
 

@@ -5,7 +5,7 @@
 - Status: Proven. The scalar-like adequacy attack adjoins one parity-even external scalar family `S` to the corrected `E/B` free-fall sector.
 - Status: Proven. At the same fixed-order counting level used elsewhere in the repo, the primitive blocks are
   `S`, `D_\tau S`, `\nabla_i S`, and `D_\tau^2 S`.
-- Status: Proven. This is the minimal scalar-like extension that still tests whether a new rank-0 external source can enter the local worldline EFT at `\Delta \le 4`.
+- Status: Note. This is the minimal scalar-like extension that still tests whether a new rank-0 external source can enter the local worldline EFT at `\Delta \le 4`.
 
 ## Exact Physical Question
 

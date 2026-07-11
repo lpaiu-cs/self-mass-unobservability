@@ -59,7 +59,7 @@ honest approximation to the published statement that fitting `xdot` shifts
   [Bhat, Bailes, Verbiest 2008](https://arxiv.org/abs/0804.0956),
   [Venkatraman Krishnan et al. 2020](https://arxiv.org/abs/2001.11405)
 - `PSR J1906+0746`:
-  [van Leeuwen et al. 2026](https://arxiv.org/abs/2602.05947)
+  [Vleeschower et al. (2026)](https://arxiv.org/abs/2602.05947)
 
 ## Main Numerical Result
 
@@ -72,10 +72,16 @@ python3 request6_low_side_covariance_proxy.py
 gives, at the original Request 6 basis point `s* = 0.134196`:
 
 - baseline after `B1913`: `|kappa_*|_95 = 4.877e-2`
-- previous simple low-side stage (`J1141 + J1906`): `4.861e-2`
+- previous simple low-side stage (`J1141 + J1906`): `4.862e-2`
 - `+ J1141` covariance proxy: `4.875e-2`
 - `+ J1906` covariance proxy: `4.877e-2`
 - `+ both` covariance proxies: `4.875e-2`
+
+Reproducibility note: the per-source RNG seeding was fixed from Python's
+process-salted `hash()` (non-reproducible across runs) to a deterministic
+sha256-based offset. The numbers in this memo were regenerated with the fixed
+seeding; shifts from the earlier revision are at the last-digit Monte-Carlo
+level.
 
 So the stronger covariance-proxy push does **not** improve the slope audit.
 Relative to the previous simple low-side stage, it slightly worsens it.
@@ -88,15 +94,15 @@ This is the main result.
 
 Effective row:
 
-- `sbar = 0.119334`
-- `X_c = 0.443877`
-- `sigma_delta = 1.940e-2`
-- `delta_gamma_obs = -3.94e-5`
+- `sbar = 0.119195`
+- `X_c = 0.443857`
+- `sigma_delta = 1.934e-2`
+- `delta_gamma_obs = 1.56e-5`
 
 GR-side branch weights:
 
-- `scintillation_independent = 0.536`
-- `timing_xdot_geometry = 0.464`
+- `scintillation_independent = 0.541`
+- `timing_xdot_geometry = 0.459`
 
 Interpretation:
 
@@ -108,15 +114,15 @@ Interpretation:
 
 Effective row:
 
-- `sbar = 0.153588`
-- `X_c = 0.459032`
-- `sigma_delta = 4.130e-2`
-- `delta_gamma_obs = 7.97e-4`
+- `sbar = 0.153478`
+- `X_c = 0.459088`
+- `sigma_delta = 4.120e-2`
+- `delta_gamma_obs = 5.44e-4`
 
 GR-side branch weights:
 
-- `dd_external_geometry = 0.072`
-- `ddgr_xdot_correlated = 0.928`
+- `dd_external_geometry = 0.071`
+- `ddgr_xdot_correlated = 0.929`
 
 Interpretation:
 

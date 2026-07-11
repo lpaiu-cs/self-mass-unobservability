@@ -1,146 +1,119 @@
-# dynamic-chi-observable
+# self-mass-unobservability
 
-Status: Imported from prior work. This worktree treats the previous collapse-theorem repository as background and attacks assumption A4 directly: no orbital-timescale internal state variable in the free-fall sector.
+Status: Note. This repository carries two closed tracks: the frozen static theorem-and-counterexample package (Paper A), and the dynamic-chi measurement program that instruments the theorem's `A4` escape (Paper B).
+Status: Note. The static mathematical content is frozen unless a direct contradiction is found during cleanup or later review.
 
-Status: Conjectural. The central question is whether a one-state internal-visibility variable `chi_A` can generate an observable that cannot be absorbed into a static finite-dimensional sensitivity-manifold EFT.
+## Authoritative Entry Points
 
-## Success Modes
+- Start with [`docs/theorem-package.md`](docs/theorem-package.md) for the closed theorem domain, the main positive theorem, the negative uniqueness no-go, and the sharp boundary escapes.
+- Use [`docs/boundary-escape-map.md`](docs/boundary-escape-map.md) for the exact assumption-drop counterexamples and their replacement bookkeeping.
+- Use [`docs/paper-outline.md`](docs/paper-outline.md) for the paper-facing structure of the theorem track, and [`paper/paper-A-collapse-theorem.md`](paper/paper-A-collapse-theorem.md) for the current Paper A draft.
+- Use [`docs/release-note.md`](docs/release-note.md) for the compact publication and handoff summary.
+- Use [`docs/reproducibility-note.md`](docs/reproducibility-note.md) for the recommended smoke tests, and [`verification/`](verification/README.md) for the independent re-derivation of the family survivor counts (including the corrected rank-4 = 25).
 
-Status: Counterexample candidate. Success mode 1 is an explicit dynamic loophole: `chi_A` produces phase lag, quadrature response, sidebands, or frequency-dependent transfer that is not reducible to a finite static sensitivity/Wilson basis.
+## Dynamic-Chi Program (Requests 10.x, Paper B)
 
-Status: Conjectural. Success mode 2 is a sharp no-go boundary for the minimal model: the notes must state the exact limit or degeneracy in which the one-state `chi_A` model collapses back to the static description.
+The dynamic track instruments the theorem's `F-A4+` state-augmented salvage — the finite state pair `(beta, tau_chi)` of an orbital-timescale internal state — on the pulsar triple PSR J0337+1715, and quotes the program's first real-data upper limits.
 
-## MVP Model
+- Entry point: [`paper/paper-B-dynamic-sep-limit.md`](paper/paper-B-dynamic-sep-limit.md) (draft manuscript; LaTeX via `paper/build_paper_b.py`).
+- Headline: `|delta Delta| < 1.3e-9` (95% CL, `tau_chi = 2 d`, phase-marginalized) over `tau_chi in [2, 500] d`; clock-sector companion limits from the same data in the 10.7 chain.
+- Request chain and pre-registrations: `notes/REQUEST10_*.md` (10.1 counting theorems through 10.8e; every stage pre-registered and committed before its data look).
+- Return artifacts, gate record, and deterministic reproduction scripts: [`request10_external/`](request10_external/README.md).
+- The dynamic track's early working ledger is preserved at [`docs/failure-ledger-dynamic-chi.md`](docs/failure-ledger-dynamic-chi.md); the theorem track's boundary-risk register remains [`docs/failure-ledger.md`](docs/failure-ledger.md).
 
-Status: Counterexample candidate. The first model is the one-state relaxation system
+## Empirical Program (Requests 1-7)
 
-```text
-tau_chi * d chi_A / dt + chi_A = alpha * F(Y)
-m_A(Y, chi_A) = m_A^(0) * [1 + c_Y F(Y) + c_chi chi_A]
-```
+The repository also carries the data-side program that motivated the theorem track. It is organized by request:
 
-Status: Conjectural. The default drive is the simplest deterministic scalar drive, `F(t) = F0 cos(Omega t)`, standing in for one selected free-fall-sector invariant or normalized invariant.
+- `Request 1`: center-of-mass decoupling through quadrupole order.
+- `Request 2`: internal-structure consistency check showing literal self-gravity removal is not a viable stellar-structure model.
+- `Request 3`: mock LLR injection-recovery study for the weak-field free-fall sector.
+- `Request 4`: real-data LLR ingest / estimator hand-off program. The data-side and software-interface scouts are present, but this repo does not yet contain a final weak-field posterior.
+- `Request 5`: strong-field `J0337` program. Phase A is implemented; Phase B currently stops at public-input and build-feasibility gates.
+- `Request 6`: local clock-sector audit with leave-one-out mass reconstruction and follow-up covariance probes.
+- `Request 7`: provisional joint consistency scaffold combining the living strong-field and clock branches.
 
-Status: Proven. The periodic response has transfer function
+## Repository Layout
 
-```text
-H(Omega) = chi_hat / F_hat = alpha / (1 + i Omega tau_chi)
-```
+The repository is organized by request so the root stays clean and each stage
+keeps its memo, script, notebooks, and generated outputs together.
 
-with an in-phase component and a quadrature component.
-
-## Current MVP Classification
-
-Status: Proven. In the strict instantaneous limit `Omega tau_chi = 0`, or when `alpha c_chi = 0`, the dynamic state produces no new observable and collapses to a static sensitivity redefinition.
-
-Status: Proven. In the adiabatic regime `Omega tau_chi << 1`, the model is locally expandable as an infinite derivative series and is absorbable order-by-order by a derivative EFT to any fixed truncation order.
-
-Status: Counterexample candidate. At finite `Omega tau_chi`, the full rational transfer function and its associated phase lag cannot be represented exactly by any finite static instantaneous sensitivity basis. If the admissible static EFT also allows arbitrary time-derivative Wilson coefficients, the one-frequency quadrature alone is not sufficient; novelty then requires frequency dependence across more than one drive frequency or the full pole structure.
-
-Status: Counterexample candidate. The M2 frequency-sweep target is sharper: a real-coefficient degree-`N` finite derivative EFT can absorb at most `floor((N+1)/2)` positive frequency samples before the next sample exposes the relaxation pole. Even a complex-coefficient polynomial comparator fails at `N + 2` distinct samples if `alpha c_chi tau_chi != 0`.
-
-Status: Counterexample candidate. The M3 forcing dictionary lowers that target to a concrete template: a normalized power-law invariant `(a/r)^p` on a small-eccentricity orbit produces `n` and `2n` harmonics through `O(e^2)`, and a calibrated linear observable projection preserves the same pole-bearing transfer relation.
-
-Status: Counterexample candidate. The M4 projection audit fixes two concrete free-fall-style readouts: an acceleration-like channel with constant projection and a range-like channel with `Lambda_R(z)=Gamma/(kappa^2+z^2)`. The relaxation pole survives both unless the channel is blind, singular, or allowed an arbitrary frequency-local nuisance.
-
-Status: Counterexample candidate. The triple shared-tau bridge gives a cleaner
-carrier inventory: existing hierarchical-triple inner and outer GR carriers
-provide two distinct samples, enough to test real shared-coefficient degree-1
-and degree-2 derivative comparators when both carrier amplitudes are nonzero.
-
-Status: Counterexample candidate. The triple GR carrier inventory adds the
-outer-dipole combination carrier `|Omega_in-Omega_out|` as a conditional third
-sample. In a nonresonant hierarchy with finite projection nuisance, this
-pressures real degree-`N<=4` and complex degree-`N<=1` comparators.
-
-Status: Counterexample candidate. The triple projection-nuisance realism gate
-keeps the three-carrier bridge alive for calibrated or finite shared projection
-models, but downgrades the result to conditional whenever the projection
-parameters consume rank.
-
-Status: Proven. If the timing projection is granted arbitrary complex nuisance
-freedom independently at each carrier, the shared-`tau_chi` bridge collapses
-point by point and is not runtime-motivated.
-
-Status: Counterexample candidate. The physical projection-manifold gate shows
-that a phase-locked outer-dipole combination projection has generic rank `5`
-inside the six-real-dimensional three-carrier complex-amplitude vector. This
-keeps dynamic-chi runtime-worthy if the timing model enforces the phase link.
-
-Status: Proven. If the combination carrier amplitude and phase are floated
-independently from the inner and outer carrier phases, the projection rank
-becomes `6` and the bridge collapses as arbitrary per-carrier complex nuisance.
-
-Status: Counterexample candidate. The named timing-model projection audit
-places the standard public `Nutimo` triple timing core on the finite
-state/geometry side of the gate, so dynamic-chi is conditionally
-runtime-worthy for a configuration that preserves those links.
-
-Status: Proven. The same source inspection finds an explicit harmonic
-special case (`RN_PL`) with per-harmonic amplitudes and phases; enabling that
-kind of nuisance on the target carriers collapses the shared-`tau_chi` bridge.
-
-Status: Counterexample candidate. Request 10.7 promotes this to a narrow
-external runtime-worthiness pilot contract: configuration closure first,
-finite Jacobian rank gate second, and a minimal synthetic shared-`tau_chi`
-injection only if the first two gates pass.
-
-Status: Proven. A build-only or dependency-repair exercise does not count as
-Request 10.7 progress. Runtime is scientifically motivated only if it tests
-the named projection class and excludes carrier-local harmonic soak-up.
-
-Status: Counterexample candidate. The external handoff packet fixes what a
-pre-provisioned `Nutimo` environment must return: configuration manifest,
-finite fitted-parameter Jacobian, carrier projection rank, dynamic-chi test
-column, synthetic injection recovery, and a decision summary.
-
-Status: Counterexample candidate. The M5 nonlinear sideband test adds the
-minimal nonlinear drive/readout terms. These generate frequencies absent from
-the linear input, including `Omega1+Omega2`, `|Omega1-Omega2|`, and the orbital
-`3n` sideband from M3's `n,2n` forcing.
-
-Status: Proven. For the linear readout above and a two-frequency linear drive, no sidebands are generated. Sidebands require a nonlinear drive/readout, a hereditary kernel with mixing, a second-order internal mode coupled nonlinearly, or a threshold/hysteretic extension.
-
-## Layout
-
-- `docs/model-definition.md`: one-state and deferred second-order model definitions.
-- `docs/observable-targets.md`: criteria for new versus absorbed observables.
-- `docs/adiabatic-limit.md`: low-frequency collapse derivation.
-- `docs/nonadiabatic-regime.md`: finite-frequency response and observable classification.
-- `docs/frequency-sweep-distinguishability.md`: finite-derivative EFT distinguishability theorem candidate.
-- `docs/forcing-observable-dictionary.md`: concrete forcing templates and observable projection boundaries.
-- `docs/projection-channel-audit.md`: concrete projection-channel audit for acceleration/range readouts.
-- `docs/nonlinear-sideband-test.md`: minimal nonlinear drive/readout sideband test.
-- `docs/failure-ledger.md`: exact failure modes and next escalation paths.
-- `symbolic/chi_relaxation_response.py`: monochromatic response formulas.
-- `symbolic/chi_two_frequency_response.py`: two-frequency superposition and sideband check.
-- `symbolic/frequency_sweep_distinguishability.py`: polynomial interpolation and Taylor-residual checks.
-- `symbolic/forcing_observable_dictionary.py`: harmonic forcing and projection checks.
-- `symbolic/projection_channel_audit.py`: projection deconvolution and pole-survival checks.
-- `symbolic/triple_shared_tau_bridge.py`: inner/outer carrier bridge to the shared-`tau_chi` frequency-sweep test.
-- `symbolic/triple_gr_carrier_inventory.py`: three-carrier GR triple inventory and comparator-count audit.
-- `symbolic/triple_projection_nuisance_gate.py`: projection-nuisance realism gate for the three-carrier bridge.
-- `symbolic/triple_projection_manifold_gate.py`: physical projection-manifold rank and runtime-worthiness gate.
-- `symbolic/named_timing_model_projection_audit.py`: named `Nutimo` source-inspection projection-class audit.
-- `symbolic/nutimo_runtime_worthiness_pilot.py`: external `Nutimo` runtime-worthiness pilot contract.
-- `symbolic/nutimo_external_handoff_packet.py`: external runtime handoff artifact checklist.
-- `symbolic/nonlinear_sideband_test.py`: minimal nonlinear sideband generation checks.
-- `symbolic/checks/test_symbolic.py`: deterministic symbolic checks.
-- `counterexamples/README.md`: loophole framing and escalation list.
-
-Status: Imported from prior work. Other inherited theorem files remain as background provenance only; the current worktree entry points are the dynamic-chi files listed above.
+- `request1/` ... `request7/`: per-request scripts, memos, notebooks, and checked-in outputs.
+- `section6/`: repaired orchestration note for the staged program.
+- [`data/`](data/README.md): mirrored public inputs, vendored external code, and bounded hand-off workspaces used by Requests 4 and 5.
+- [`paper/`](paper/README.md): manuscript source and LaTeX draft for the interim paper.
 
 ## Quick Start
 
-Use Python `3.10+`.
+Use Python `3.10+` (tested in this workspace with Python `3.12`).
 
-```powershell
-python -m pip install -r requirements.txt
-python symbolic/checks/test_symbolic.py
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 ```
 
-If GNU Make is available:
+Optional notebook environment:
 
-```powershell
-make symbolic-check
+```bash
+pip install -r requirements-notebooks.txt
 ```
+
+## Common Entry Points
+
+You can run the main self-contained stages either directly or through `make`. If your default `python3` is older than `3.10`, override it explicitly, for example `make PYTHON=python3.12 request7`.
+
+```bash
+make request1
+make request2
+make request3
+make request5-phaseA
+make request6
+make request7
+make paper-tex
+```
+
+Equivalent direct commands:
+
+```bash
+(cd request1 && python3 request1_com_decoupling.py)
+(cd request2 && python3 request2_internal_structure.py)
+(cd request3 && python3 request3_llr_mock.py)
+(cd request5 && python3 request5_j0337_phaseA.py)
+(cd request6 && python3 request6_clock_sector.py)
+(cd request7 && python3 request7_joint_consistency_scaffold.py)
+```
+
+Most scripts write outputs into their own request directory by default when run
+from that directory or via `make`. Request 4 and Request 5 Phase B scouts
+additionally depend on the mirrored assets under `data/`, and some of those
+probes assume host tools such as `make`, `gfortran`, or macOS `textutil`.
+
+## Request Index
+
+- [`request1/REQUEST1_COM_DECOUPLING.md`](request1/REQUEST1_COM_DECOUPLING.md)
+- [`request2/REQUEST2_INTERNAL_STRUCTURE.md`](request2/REQUEST2_INTERNAL_STRUCTURE.md)
+- [`request3/REQUEST3_LLR_MOCK.md`](request3/REQUEST3_LLR_MOCK.md)
+- [`request4/REQUEST4_LLR_REALDATA.md`](request4/REQUEST4_LLR_REALDATA.md)
+- [`request5/REQUEST5_J0337_PHASEA.md`](request5/REQUEST5_J0337_PHASEA.md)
+- [`request5/REQUEST5_J0337_PHASEB_PUBLIC_INPUTS.md`](request5/REQUEST5_J0337_PHASEB_PUBLIC_INPUTS.md)
+- [`request5/REQUEST5_J0337_PHASEB_BUILD_FEASIBILITY.md`](request5/REQUEST5_J0337_PHASEB_BUILD_FEASIBILITY.md)
+- [`request6/REQUEST6_CLOCK_SECTOR.md`](request6/REQUEST6_CLOCK_SECTOR.md)
+- [`request6/REQUEST6_B1913_COVARIANCE.md`](request6/REQUEST6_B1913_COVARIANCE.md)
+- [`request6/REQUEST6_LOW_SIDE_EXTENSIONS.md`](request6/REQUEST6_LOW_SIDE_EXTENSIONS.md)
+- [`request6/REQUEST6_LOW_SIDE_COVARIANCE_PROXY.md`](request6/REQUEST6_LOW_SIDE_COVARIANCE_PROXY.md)
+- [`request7/REQUEST7_JOINT_CONSISTENCY_SCAFFOLD.md`](request7/REQUEST7_JOINT_CONSISTENCY_SCAFFOLD.md)
+- [`section6/SECTION6_REPAIRED.md`](section6/SECTION6_REPAIRED.md)
+
+## Data And External Code
+
+The workspace uses mirrored public releases and vendored external code snapshots
+for the bounded Request 4 and Request 5 scouts, but the public repository keeps
+only the manifests, memos, summaries, and patches needed to reconstruct those
+steps. See [`data/README.md`](data/README.md) for the directory-level policy.
+
+## Notes For Public Release
+
+- Cache files and local machine artifacts are ignored in `.gitignore`.
+- Generated artifacts and vendored data/code are marked in `.gitattributes` so GitHub language stats stay readable.
+- `LICENSE` (MIT) and `CITATION.cff` are now included with release-stage citation metadata.

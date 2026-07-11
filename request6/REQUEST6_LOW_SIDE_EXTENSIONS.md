@@ -54,7 +54,7 @@ covariance-closed timing fit.
   [Bhat, Bailes, Verbiest 2008](https://arxiv.org/abs/0804.0956),
   [Venkatraman Krishnan et al. 2020](https://arxiv.org/abs/2001.11405)
 - `PSR J1906+0746`:
-  [van Leeuwen et al. 2026](https://arxiv.org/abs/2602.05947)
+  [Vleeschower et al. (2026)](https://arxiv.org/abs/2602.05947)
 
 ## Main Numerical Result
 
@@ -69,8 +69,14 @@ currently gives, at the original Request 6 local basis point
 
 - baseline after `B1913`: `|kappa_*|_95 = 4.877e-2`
 - `+ J1141`: `4.874e-2`
-- `+ J1906`: `4.864e-2`
-- `+ both`: `4.861e-2`
+- `+ J1906`: `4.865e-2`
+- `+ both`: `4.862e-2`
+
+Reproducibility note: the per-source RNG seeding was fixed from Python's
+process-salted `hash()` (non-reproducible across runs) to a deterministic
+sha256-based offset. The numbers in this memo were regenerated with the fixed
+seeding; shifts from the earlier revision are at the last-digit Monte-Carlo
+level.
 
 So the combined low-side follow-up only improves the current staged
 `kappa_*` bound by about `0.3%` relative to the `B1913` baseline.
@@ -83,16 +89,16 @@ That is the main result of this stage.
 
 Effective row:
 
-- `sbar = 0.120135`
-- `X_c = 0.441328`
-- `sigma_delta = 1.787e-2`
-- `delta_gamma_obs = 7.520e-3`
+- `sbar = 0.120209`
+- `X_c = 0.441316`
+- `sigma_delta = 1.794e-2`
+- `delta_gamma_obs = 7.559e-3`
 
 GR-side branch-selected metadata:
 
-- `m_p = 1.278868 +- 0.008243 M_sun`
-- `m_c = 1.010255 +- 0.008251 M_sun`
-- `i = 74.799 +- 1.734 deg`
+- `m_p = 1.278891 +- 0.008338 M_sun`
+- `m_c = 1.010223 +- 0.008336 M_sun`
+- `i = 74.807 +- 1.752 deg`
 
 Interpretation:
 
@@ -104,21 +110,21 @@ Interpretation:
 
 Effective row:
 
-- `sbar = 0.128679`
-- `X_c = 0.496944`
-- `sigma_delta = 6.163e-3`
-- `delta_gamma_obs = 2.813e-4`
+- `sbar = 0.129280`
+- `X_c = 0.496969`
+- `sigma_delta = 6.165e-3`
+- `delta_gamma_obs = 2.142e-4`
 
 GR-side branch-selected metadata:
 
-- `m_p = 1.314632 +- 0.004248 M_sun`
-- `m_c = 1.298658 +- 0.004248 M_sun`
-- `i = 44.693 +- 0.185 deg`
+- `m_p = 1.314567 +- 0.004253 M_sun`
+- `m_c = 1.298724 +- 0.004251 M_sun`
+- `i = 44.690 +- 0.186 deg`
 
 Branch weights at GR:
 
 - `external_i = 1.000000`
-- `xdot_conditioned_i = 4.96e-21`
+- `xdot_conditioned_i = 1.65e-17`
 
 Interpretation:
 
@@ -137,8 +143,8 @@ already informative about the local amplitude direction. After combining the
 baseline with both low-side follow-ups, the posterior around its own weighted
 reference point is
 
-- `s_ref = 0.155832`
-- `|eta_*|_95 = 2.106e-3`
+- `s_ref = 0.155833`
+- `|eta_*|_95 = 2.105e-3`
 - `|kappa_*|_95 = 4.628e-2`
 
 But it **does** show that the slope direction remains effectively closed at the

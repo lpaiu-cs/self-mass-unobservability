@@ -54,12 +54,19 @@ def pairings(items: list[tuple[int, int]]) -> tuple[tuple[tuple[int, int], tuple
 def slot_permutations(block: BlockType) -> tuple[tuple[int, ...], ...]:
     base = tuple(range(block.rank))
     perms = {base}
-    for group in block.sym_groups:
-        if len(group) == 2:
-            perm = list(base)
+    frontier = [base]
+    while frontier:
+        current = frontier.pop()
+        for group in block.sym_groups:
+            if len(group) != 2:
+                continue
+            perm = list(current)
             i, j = group
             perm[i], perm[j] = perm[j], perm[i]
-            perms.add(tuple(perm))
+            candidate = tuple(perm)
+            if candidate not in perms:
+                perms.add(candidate)
+                frontier.append(candidate)
     return tuple(sorted(perms))
 
 

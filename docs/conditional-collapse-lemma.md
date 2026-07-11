@@ -1,3 +1,7 @@
+> LEGACY / HISTORICAL NOTE
+>
+> Status: Note. This note is retained for provenance only. The closed bridge statement now lives in [`collapse-bridge-status.md`](collapse-bridge-status.md) and [`finite-family-collapse-theorem.md`](finite-family-collapse-theorem.md).
+
 # Conditional Collapse Lemma
 
 ## Statement
@@ -36,7 +40,7 @@ so the leading body-dependent free-fall deviation collapses to finitely many sen
 
 ## Why This Lemma Is Conditional
 
-- Status: Proven. This lemma does not prove basis closure.
+- Status: Note. This lemma does not prove basis closure.
 - Status: Proven. The burden moved out of this lemma is exactly the proof that the admissible operator space at fixed order has a finite normal-form basis.
 
 ## Proof Skeleton

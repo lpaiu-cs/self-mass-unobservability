@@ -30,5 +30,5 @@
 
 ## Boundary
 
-- Status: Proven. This audit is evidence against minimal-sector uniqueness, not against the broader finite-family collapse program.
+- Status: Note. This audit is evidence against minimal-sector uniqueness, not against the broader finite-family collapse program.
 - Status: Conjectural. The remaining positive question is whether the finite-family collapse theorem can be stated for arbitrary explicit admitted catalogs rather than just the audited examples.

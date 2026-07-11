@@ -12,8 +12,8 @@
 \{E2,\ E3,\ E2^2,\ dotE2,\ gradE2,\ divE2,\ mixedGradE2\}.
 ```
 
-- Status: Proven. This lemma asks for linear operator independence over constant coefficients after quotienting by the allowed total-derivative, lower-order-EOM, and Cayley-Hamilton reductions.
-- Status: Proven. This lemma does not claim algebraic functional independence.
+- Status: Note. This lemma asks for linear operator independence over constant coefficients after quotienting by the allowed total-derivative, lower-order-EOM, and Cayley-Hamilton reductions.
+- Status: Note. This lemma does not claim algebraic functional independence.
 - Status: Proven. In particular, `E2^2` is algebraically dependent on `E2` as a product, but it can still be linearly independent as a separate weight-4 operator.
 
 ## Exact Rank Check
