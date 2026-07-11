@@ -381,7 +381,11 @@ which is sharp. The two most physically suggestive escapes are \(A4\) (an intern
 dynamical variable on the orbital timescale) and \(A8\) (an unbounded low-weight
 family tower); the former is the subject of the companion dynamic paper, where a
 second-order internal mode generates orbital sidebands that evade the static
-collapse. The uniqueness no-go is, we think, the honest headline: the idea does not
+collapse. That companion analysis (Paper B, `paper/paper-B-dynamic-sep-limit.md`
+on the dynamic branch) is now complete: instrumenting the salvaged \(A4\) state
+data \((\beta,\tau_\chi)\) on PSR J0337+1715, it bounds the amplitude of any
+lag-responding SEP oscillation at \(|\delta\Delta|<1.3\times10^{-9}\) (95% CL,
+\(\tau_\chi\in[2,500]\) d, worst drive phase). The uniqueness no-go is, we think, the honest headline: the idea does not
 select a canonical coupling, and any stronger "minimal-sector" claim must import an
 explicit suppression principle.
 
