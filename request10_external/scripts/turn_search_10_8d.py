@@ -126,7 +126,12 @@ for label, tau, b_inj in CASES:
     th = np.linalg.solve(X2.T @ X2, X2.T @ (d - Qb @ (Qb.T @ d)))
     b_rec = float(th[1])
     rec_ok = abs(b_rec - b_inj) <= 0.1*b_inj + 3*fit10_8b['anchors']['tau_%g' % tau]['sigma_fisher']
+    sigF = fit10_8b['anchors']['tau_%g' % tau]['sigma_fisher']
+    tol = max(0.1*b_inj, 3.0*sigF)
+    Minv2 = np.linalg.inv(X2.T @ X2)
     min_margin = None
+    worst = None            # (|beta-beta_inj|, beta, n1, n2, margin)
+    n_viable = 0
     for n1 in N1:
         for n2 in N2:
             if n1 == 0 and n2 == 0:
@@ -140,21 +145,37 @@ for label, tau, b_inj in CASES:
                     ds = d - sw*s
                     dsp = ds - Q @ (Q.T @ ds)
                     c2 = float(dsp @ dsp)
-                    if best_cell is None or c2 < best_cell:
-                        best_cell = c2
-            margin = best_cell - chi2_0
+                    if best_cell is None or c2 < best_cell[0]:
+                        best_cell = (c2, ds)
+            margin = best_cell[0] - chi2_0
             if min_margin is None or margin < min_margin:
                 min_margin = margin
                 argmin = (n1, n2)
-    ok = min_margin >= 25.0
+            if margin < 25.0:                       # chi2-viable alternative
+                n_viable += 1
+                dsb = best_cell[1]
+                thc = Minv2 @ (X2.T @ (dsb - Qb @ (Qb.T @ dsb)))
+                bc = float(thc[1])
+                dev = abs(bc - b_inj)
+                if worst is None or dev > worst[0]:
+                    worst = (dev, bc, n1, n2, margin)
+    ok = (worst is None) or (worst[0] <= tol)
     l_pass = l_pass and ok and rec_ok
     out['stage_L'][label] = {'tau': tau, 'beta_inj': b_inj, 'chi2_0': chi2_0,
-                             'beta_recovered': b_rec, 'recovery_ok': bool(rec_ok),
+                             'beta_recovered_00': b_rec, 'recovery_ok': bool(rec_ok),
                              'min_lattice_margin': min_margin,
                              'argmin_lattice': list(argmin),
+                             'n_chi2_viable_cells': n_viable,
+                             'beta_stability_tol': tol,
+                             'worst_cell': (None if worst is None else
+                                            {'abs_dev': worst[0], 'beta_hat': worst[1],
+                                             'n1': worst[2], 'n2': worst[3],
+                                             'margin': worst[4]}),
                              'pass': bool(ok)}
-    print('Stage L %s: beta_inj=%.4g rec=%.4g | min lattice margin = %.3g at %s -> %s'
-          % (label, b_inj, b_rec, min_margin, argmin, 'PASS' if ok else 'FAIL'))
+    print('Stage L %s: beta_inj=%.4g rec00=%.4g | viable cells %d | worst beta dev = %s (tol %.3g) -> %s'
+          % (label, b_inj, b_rec, n_viable,
+             'none' if worst is None else '%.3g at (%d,%d)' % (worst[0], worst[2], worst[3]),
+             tol, 'PASS' if ok else 'FAIL'))
 
 out['stage_L_pass'] = bool(l_pass)
 out['verdict'] = 'PASS' if (v_pass and l_pass) else 'FAIL'

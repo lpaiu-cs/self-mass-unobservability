@@ -101,14 +101,24 @@ RE-ANCHORED 95% upper limit (K_dyn = 10, window [2, 500] d):
   Fisher floor and the K = 934 ultra-conservative bracket recorded alongside)
 ```
 
-Status: Note. Caveats: (a) ONE absorber remains unprobed — turn
-re-assignment (our GN fixes turns at construction; the published pipeline
-re-searches them): flagged as 10.8d, REQUIRED before publication-grade
-claims; (b) drive normalization is unit-drive per carrier (physical source
-factors as in 10.7e E2 pending); (c) zero-drive-phase convention (a
-phase-marginalized two-quadrature variant is a mechanical extension); (d)
-tau below 2 d diagnostic only; (e) white + 30-pair Fourier noise model as in
-the 10.7e headline.
+Status: Proven (10.8d turn-search robustness, executed per the
+pre-registered-and-amended `../notes/REQUEST10_8D_TURN_SEARCH_ROBUSTNESS.md`,
+commits `349c70c/5df4870/94c04c3`). Stage V measured that the runtime fixes
+turns (alias-shift maxdev 1522 us > P/2), so wrap arithmetic is definitional.
+Stage L found the REAL structure: 14 chi2-viable turn-alias solutions exist
+at every test amplitude (integer-turn slips hidden inside observing gaps —
+the classic phase-connection ambiguity, quantified here against the full
+span), but the estimator's beta-hat is STABLE across all of them: worst
+deviation 5.6e-11 vs tolerance 1.8e-10 (3 sigma_F) at the Fisher and K10
+amplitudes, 3.2e-11 vs 1.3e-8 at K934. Pulse-number re-assignment cannot
+mimic or hide the dynamic template. The former "unprobed absorber" caveat is
+RESOLVED; the K_dyn = 10 quote stands with this record.
+
+Status: Note. Remaining caveats: (a) drive normalization is unit-drive per
+carrier (physical source factors as in 10.7e E2 pending); (b)
+zero-drive-phase convention (a phase-marginalized two-quadrature variant is
+a mechanical extension); (c) tau below 2 d diagnostic only; (d) white +
+30-pair Fourier noise model as in the 10.7e headline.
 
 ## Gate record
 

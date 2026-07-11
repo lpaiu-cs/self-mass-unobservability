@@ -1,0 +1,86 @@
+{
+ "stage_V": {
+  "n0.5": {
+   "maxdev_us": 760.848708473068,
+   "rms_us": 428.60353152186167,
+   "exceeds_P_over_2": false
+  },
+  "n1": {
+   "maxdev_us": 1521.6973990372146,
+   "rms_us": 857.2070525630422,
+   "exceeds_P_over_2": true
+  }
+ },
+ "stage_V_amended_pass": true,
+ "stage_V_note": "no nearest-turn re-assignment in the interface; wrap arithmetic is definitional (see 10.8d note amendment)",
+ "stage_L": {
+  "fisher_2d": {
+   "tau": 2.0,
+   "beta_inj": 1.1813654456766576e-10,
+   "chi2_0": 15391.978193974579,
+   "beta_recovered_00": 1.2829819210227455e-10,
+   "recovery_ok": true,
+   "min_lattice_margin": -0.7910425880927505,
+   "argmin_lattice": [
+    -3,
+    3
+   ],
+   "n_chi2_viable_cells": 14,
+   "beta_stability_tol": 1.782475480521984e-10,
+   "worst_cell": {
+    "abs_dev": 5.631861242880352e-11,
+    "beta_hat": 1.7445515699646928e-10,
+    "n1": 0,
+    "n2": -1,
+    "margin": 0.04006180647229485
+   },
+   "pass": true
+  },
+  "K10_2d": {
+   "tau": 2.0,
+   "beta_inj": 1.164550647274363e-09,
+   "chi2_0": 15391.97819397458,
+   "beta_recovered_00": 1.1747122948089667e-09,
+   "recovery_ok": true,
+   "min_lattice_margin": -0.7910425881018455,
+   "argmin_lattice": [
+    -3,
+    3
+   ],
+   "n_chi2_viable_cells": 14,
+   "beta_stability_tol": 1.782475480521984e-10,
+   "worst_cell": {
+    "abs_dev": 5.631861242881453e-11,
+    "beta_hat": 1.2208692597031776e-09,
+    "n1": 0,
+    "n2": -1,
+    "margin": 0.040061806510493625
+   },
+   "pass": true
+  },
+  "K934_18d": {
+   "tau": 18.0,
+   "beta_inj": 1.3076082836713587e-07,
+   "chi2_0": 15391.42665602459,
+   "beta_recovered_00": 1.3073980958710012e-07,
+   "recovery_ok": true,
+   "min_lattice_margin": -0.7839157806538424,
+   "argmin_lattice": [
+    0,
+    3
+   ],
+   "n_chi2_viable_cells": 14,
+   "beta_stability_tol": 1.3076082836713588e-08,
+   "worst_cell": {
+    "abs_dev": 3.232943515551254e-11,
+    "beta_hat": 1.3072849893198036e-07,
+    "n1": 3,
+    "n2": -3,
+    "margin": 0.9235916452453239
+   },
+   "pass": true
+  }
+ },
+ "stage_L_pass": true,
+ "verdict": "PASS"
+}

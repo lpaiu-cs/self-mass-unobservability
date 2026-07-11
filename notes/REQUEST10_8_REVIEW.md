@@ -17,12 +17,16 @@ bracket `1.09e-7` (K = 934, 10.8b).
 - **A1 (turn re-assignment).** "Your live gates fix pulse-number assignments
   at construction; the published pipeline re-searches turns. A dynamic
   template at 300 us amplitudes might be partially absorbable by a different
-  turn solution + parameter shifts." — CONCEDED as the one unprobed
-  absorber. Discrete P_spin/2-scale sawtooth rewraps mimicking a smooth
-  oscillatory-growing template is implausible but unquantified. 10.8d
-  (turn-search robustness at injected u95 amplitude) is REQUIRED before
-  publication; until then the K_dyn = 10 quote carries this caveat
-  explicitly.
+  turn solution + parameter shifts." — RESOLVED by 10.8d (was conceded).
+  Measured: the runtime fixes turns (alias maxdev > P/2); the turn-alias
+  lattice scan found 14 chi2-viable alternative turn solutions per amplitude
+  (slips hidden in observing gaps — the phase-connection ambiguity,
+  quantified), and the estimator's beta-hat is stable across ALL of them
+  (worst deviation 5.6e-11 vs 1.8e-10 tolerance; sub-sigma_F). Turn freedom
+  cannot mimic or hide the dynamic template. Two documented amendments were
+  needed en route (the wrap-validation target was ill-posed; the chi2-margin
+  criterion conflated existence with absorption) — both committed before the
+  stages they governed.
 
 - **A2 (K_dyn = 10 is a rule artifact).** "The rho spectrum is muddied by
   convention differences (your wider Fourier marginalization), and the rule
@@ -84,8 +88,9 @@ bracket `1.09e-7` (K = 934, 10.8b).
 
 Status: Note. Quotable now (with caveats stated): the bracketed limit
 `beta_ff < 1.2e-9 (K_dyn = 10) .. 1.1e-7 (K = 934)`, Fisher floor 1.2e-10,
-no detection, full gate record. Publication blockers, in order: (1) 10.8d
-turn-search robustness; (2) phase-marginalized estimator variant; (3)
-physical drive anchoring (Request-8 weights). Paper B structure stands:
+no detection, full gate record, and (10.8d) turn-search robustness RESOLVED
+(beta-hat stable across all chi2-viable turn-alias solutions). Remaining
+publication items, in order: (1) phase-marginalized estimator variant;
+(2) physical drive anchoring (Request-8 weights). Paper B structure stands:
 theorem frame (F-A4+) -> methods (10.7 chain + gate discipline) -> headline
-(10.8b/c) -> loophole map and blockers as future work.
+(10.8b/c/d) -> loophole map and remaining items as future work.
