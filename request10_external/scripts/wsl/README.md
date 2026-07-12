@@ -45,8 +45,9 @@ The dynamic-drive integrator patch is committed at
 | `wsl_t2cols_v3.py` | 10.8 T2 | none | superseded iteration of v2; no artifact of record |
 | `wsl_t2cols_v4.py` | 10.8 T2 | `sep_dynamic/sep_t2_results_v4.json`, `sep_dynamic/sep_dynamic_columns.npz`, `sep_dynamic/sep_ramp_probe.npz` | **calibration + production columns of record** (quasi-static ramp: integrator time in TIMEDAYS; integral-kernel 1/2 signature 0.502/0.0219) |
 | `wsl_turnV.py` | 10.8d V | `sep_dynamic/turnV_columns.npz`, `sep_dynamic/turnV_meta.json` | of record |
-| `wsl_gateG.py` | 10.8b G / 10.8f R6 | `sep_dynamic/sep_gateG.json` (inputs: `sep_dynamic/gateG_inputs.npz`, `sep_dynamic/gateG_params.json`) | of record — CAUSAL-template re-run; the pre-C1 anticausal run is in git history (52153b3) |
+| `wsl_gateG.py` | 10.8b G / 10.8f R6 | `sep_dynamic/sep_gateG.json` (inputs: `sep_dynamic/gateG_inputs.npz`, `sep_dynamic/gateG_params.json`) | superseded by `wsl_gateG2.py` — its measurement span omitted the C4 guard direction (amendment G-2); the pre-C1 anticausal run is in git history (52153b3) |
+| `wsl_gateG2.py` | 10.8f G-2 | `sep_dynamic/sep_gateG2.json` (inputs: `sep_dynamic/gateG2_inputs.npz`, `sep_dynamic/gateG2_params.json`) | **live gates of record** — C4-complete guard-kept span, anchors tau = 2/18/52 d, 9/9 PASS |
 
-Adjudication of the 10.8f R6 gate outcome (G1/G2a FAIL, G2b PASS, common-mode
-null-offset diagnosis): `scripts/gateG_adjudicate.py` →
+Adjudication of the gate record (R6 FAIL diagnosed as a harness span
+defect; gateG2 supersession, 9/9 PASS): `scripts/gateG_adjudicate.py` →
 `sep_dynamic/sep_gateG_adjudication.json`.

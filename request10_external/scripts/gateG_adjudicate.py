@@ -1,40 +1,37 @@
 #!/usr/bin/env python3
-"""Adjudicate the 10.8f R6 causal live-gate run (sep_gateG.json).
+"""Adjudicate the live-gate record: the 10.8f R6 causal run (sep_gateG.json)
+and the amendment G-2 re-run with the C4-complete harness (sep_gateG2.json).
 
-The gates were re-run in WSL (scripts/wsl/wsl_gateG.py) on the corrected
-CAUSAL templates with amplitudes from the corrected 10.8b artifact. This
-script does NOT rescore the registered criteria -- those verdicts stand as
-recorded by the gate run itself:
+R6 verdicts under the registered criteria (recorded, never rescored):
+G1 FAIL at both anchors, G2a FAIL at tau = 52 d, G2b PASS.
 
-    G1  (|z_GN - z_lin| <= 0.3):        FAIL at both anchors
-    G2a (|dev| <= 0.5 sigma_F):         FAIL at tau=52 d
-    G2b (|dev_rel| <= 0.02):            PASS at both anchors
+This script computes the two-layer diagnosis:
 
-It computes the post-hoc DIAGNOSTIC decomposition: the registered G2a/G2b
-deviations reference the LINEAR null point (beta_hat_lin), so the GN-vs-
-linear null offset measured by G1 enters them as a common mode. The
-differential response
+1. DIFFERENTIAL decomposition (as in the first adjudication): the
+   registered G2a/G2b deviations reference the LINEAR null point
+   (beta_hat_lin), so the GN-vs-linear null offset measured by G1 enters
+   them as a common mode; subtracting the GN null isolates the injected-
+   signal response.
 
-    diff = beta_hat_GN(injected) - beta_hat_GN(null) - beta_inj
+2. SPAN decomposition (amendment G-2; this SUPERSEDES the first
+   adjudication's attribution): the R6 harness measured beta_hat in a
+   truncation-only span (rank 70) -- correction C4 (keep the static-guard
+   residual direction) was applied to every pipeline script but never
+   propagated into the WSL gate harness. Measuring the SAME baseline
+   residuals res0 with NO GN refit in that span reproduces the entire "G1
+   offset"; the guard-kept span reproduces z_lin on res0 to machine
+   precision. The first adjudication's LS-vs-MAP-walk attribution was
+   therefore wrong as stated: the walk exists but its projection onto the
+   estimator is at the 0.01-sigma level.
 
-isolates the live pipeline's response to the injected signal itself.
-
-Interpretation of record (see notes/REQUEST10_8F_REVIEW_RESPONSE.md, R6):
-the live truncated-GN refit displaces beta_hat by the null offset
-(+0.34 / +0.60 sigma_F at tau = 18 / 52 d) relative to the frozen linear
-pipeline, identically with and without injection; the injected-signal
-response is accurate to <= 0.02 sigma_F (detection scale) and <= 0.1%
-(limit scale). The offset is carried as a live-refit systematic on
-Fisher-scale numbers and is covered by the K_dyn = 10 inflation.
-
-Reference: the superseded pre-C1 (anticausal-template) gate run is in git
-history at 52153b3:request10_external/sep_dynamic/sep_gateG.json; its G1
-measured the SAME GN null residual with the anticausal quadrature
-(offsets +0.012 / +0.019 sigma_F), which is why the swap masked the
-displacement.
+Record of record: sep_gateG2.json (guard-kept harness, anchors tau =
+2/18/52 d including the headline anchor, criteria unchanged) -- G1/G2a/G2b
+PASS 9/9. The R6 artifact remains recorded with this diagnosis.
 """
 import json
 import os
+
+import numpy as np
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(HERE)
@@ -43,14 +40,14 @@ d = json.load(open('sep_dynamic/sep_gateG.json'))
 an = d['params']['anchors']
 
 out = {
-    'registered_verdicts': {
+    'registered_verdicts_R6': {
         'G1': d['G1']['pass'], 'G2a': d['G2a']['pass'], 'G2b': d['G2b']['pass'],
         'criteria': {'G1': '|z_GN - z_lin| <= 0.3',
                      'G2a': '|(beta_hat_GN - beta_hat_lin - beta_inj)| <= 0.5 sigma_F',
                      'G2b': '|(beta_hat_GN - beta_hat_lin - beta_inj)| <= 0.02 * beta_inj'},
-        'note': 'verdicts as recorded by the gate run; NOT rescored here',
+        'note': 'verdicts as recorded by the R6 run; NOT rescored here',
     },
-    'diagnostics': {},
+    'differential_diagnostics': {},
 }
 
 for a in ('tau_18', 'tau_52'):
@@ -62,47 +59,120 @@ for a in ('tau_18', 'tau_52'):
     g2b = d['G2b'][a]
     diff_a = (g2a['beta_hat_GN'] - b_gn_null - g2a['beta_inj']) / sF
     diff_b = (g2b['beta_hat_GN'] - b_gn_null - g2b['beta_inj']) / g2b['beta_inj']
-    out['diagnostics'][a] = {
+    out['differential_diagnostics'][a] = {
         'sigma_fisher': sF,
         'null_offset_sigma_F': null_off,
         'G2a_registered_dev_sigma_F': g2a['deviation_sigma_fisher'],
         'G2a_differential_dev_sigma_F': diff_a,
         'G2b_registered_dev_rel': g2b['deviation_relative'],
         'G2b_differential_dev_rel': diff_b,
-        'decomposition_check_G2a': {
-            'null_offset_plus_differential': null_off + diff_a,
-            'registered': g2a['deviation_sigma_fisher'],
-        },
     }
-    print('%s: null offset %+.4f sigma_F | G2a diff %+.4f sigma_F '
-          '(registered %+.4f) | G2b diff %+.5f rel (registered %+.5f)'
-          % (a, null_off, diff_a, g2a['deviation_sigma_fisher'],
-             diff_b, g2b['deviation_relative']))
+    print('%s: R6 null offset %+.4f sigma_F | G2a diff %+.4f | G2b diff %+.5f'
+          % (a, null_off, diff_a, diff_b))
 
-offs = [abs(out['diagnostics'][a]['null_offset_sigma_F']) for a in ('tau_18', 'tau_52')]
+# ---- span decomposition (amendment G-2): rebuild both harness spans and
+# measure res0 (no GN) against the pipeline z_lin ----
+import sys
+sys.path.insert(0, os.path.join(HERE, 'scripts'))
+import sep_common as sc
+
+inp = sc.load_inputs(HERE)
+sw, res0, t = inp['sw'], inp['res0'], inp['t']
+J = np.load('finite_jacobian_v2.npy')
+jD = np.load('sep_dynamic/col_SEP_D.npz')['dcol'].astype(np.float64)
+A = sw[:, None]*J
+An = A/np.linalg.norm(A, axis=0)
+cvec = sw/np.linalg.norm(sw)
+T_SPAN = float(t.max() - t.min())
+fc = []
+for j in range(1, 31):
+    arg = 2.0*np.pi*j*(t - t.min())/T_SPAN
+    fc += [np.cos(arg), np.sin(arg)]
+FB = sw[:, None]*np.column_stack(fc)
+FB = FB/np.linalg.norm(FB, axis=0, keepdims=True)
+xn = sw*jD
+xn = xn/np.linalg.norm(xn)
+B0 = np.column_stack([An, cvec, FB, xn])
+U0, s0, _ = np.linalg.svd(B0, full_matrices=False)
+k0 = int(np.sum(s0/s0[0] >= 1e-3))
+Q_r6 = U0[:, :k0]                                   # R6 harness span
+g = xn - Q_r6 @ (Q_r6.T @ xn)
+Q_c4 = np.column_stack([Q_r6, g/np.linalg.norm(g)])  # C4-complete span
+
+gi = np.load('sep_dynamic/gateG_inputs.npz')
+TC = gi['Tc'].astype(np.float64)
+
+
+def measure(Q, r_us, Tb):
+    Xs = np.column_stack([sw*TC, sw*Tb])
+    X2 = Xs - Q @ (Q.T @ Xs)
+    Minv = np.linalg.inv(X2.T @ X2)
+    yr = sw*r_us
+    th = Minv @ (X2.T @ (yr - Q @ (Q.T @ yr)))
+    return float(th[1])
+
+
+out['span_decomposition'] = {'note': ('z(res0) measured with NO GN refit in '
+                                      'each harness span, vs the pipeline z_lin')}
+for a, key in (('tau_18', 'T18'), ('tau_52', 'T52')):
+    ap = an[a]
+    Tb = gi[key].astype(np.float64)
+    z_r6 = measure(Q_r6, res0, Tb)/ap['sigma_fisher']
+    z_c4 = measure(Q_c4, res0, Tb)/ap['sigma_fisher']
+    out['span_decomposition'][a] = {
+        'z_res0_R6_span': z_r6, 'z_res0_C4_span': z_c4, 'z_lin': ap['z_lin'],
+        'span_only_delta_sigma_F': z_r6 - ap['z_lin'],
+        'C4_span_reproduces_z_lin_to': z_c4 - ap['z_lin'],
+        'R6_G1_offset_recorded': d['G1'][a]['z_GN'] - ap['z_lin'],
+        'true_refit_displacement_in_R6_span': d['G1'][a]['z_GN'] - z_r6,
+    }
+    print('%s: span-only delta %+.4f (recorded offset %+.4f) | '
+          'C4 span residual %+.2g | true refit in-span %+.4f'
+          % (a, z_r6 - ap['z_lin'], d['G1'][a]['z_GN'] - ap['z_lin'],
+             z_c4 - ap['z_lin'], d['G1'][a]['z_GN'] - z_r6))
+
+# ---- gateG2 record of record ----
+try:
+    g2 = json.load(open('sep_dynamic/sep_gateG2.json'))
+    out['gateG2_record_of_record'] = {
+        'G1': {a: {'offset_sigma_F': g2['G1'][a]['offset'],
+                   'pass': g2['G1'][a]['pass']}
+               for a in ('tau_2', 'tau_18', 'tau_52')},
+        'G2a': {a: {'dev_sigma_F': g2['G2a'][a]['deviation_sigma_fisher'],
+                    'pass': g2['G2a'][a]['pass']}
+                for a in ('tau_2', 'tau_18', 'tau_52')},
+        'G2b': {a: {'dev_rel': g2['G2b'][a]['deviation_relative'],
+                    'pass': g2['G2b'][a]['pass']}
+                for a in ('tau_2', 'tau_18', 'tau_52')},
+        'all_pass': bool(g2['G1']['pass'] and g2['G2a']['pass'] and g2['G2b']['pass']),
+    }
+    print('gateG2: all_pass =', out['gateG2_record_of_record']['all_pass'])
+except FileNotFoundError:
+    out['gateG2_record_of_record'] = 'sep_gateG2.json not present'
+
 out['adjudication'] = {
-    'finding': ('single common-mode explanation: the GN truncated refit of the '
-                'null data displaces beta_hat by the G1 offset; G2a/G2b excesses '
-                'over their differential values equal that offset to <= 0.02 '
-                'sigma_F at both anchors'),
-    'live_refit_systematic_sigma_F_max': max(offs),
-    'impact': {
-        'detection_tests': ('z-scores carry a +/- %.2f sigma_F live-refit '
-                            'systematic; the registered E1/E2 non-detections '
-                            '(min p = 0.26 with an equally loud anticausal '
-                            'control) are unaffected' % max(offs)),
-        'upper_limits': ('worst-case linear addition inflates a Fisher-only '
-                         'u95 by <= %.0f%%; the K_dyn = 10 headline scaling '
-                         'covers this with an order of magnitude to spare; '
-                         'Fisher-only numbers are quoted as statistical-only '
-                         'for this reason' % (100.0 * max(offs) / 2.0)),
-    },
-    'status': ('G1/G2a recorded as FAIL under the registered absolute criteria; '
-               'no criterion is redefined post hoc. The template-shape '
-               'validation (G2b, and the differential responses) PASSES; the '
-               'absolute-null agreement does not.'),
+    'finding': ('the R6 G1/G2a failures were a HARNESS defect, not a live-'
+                'model property: the R6 measurement span omitted the C4 '
+                'guard-residual direction; the span-only delta on res0 (no '
+                'GN) reproduces the recorded offsets, and the C4-complete '
+                'span reproduces z_lin to machine precision. The first '
+                'adjudication attributed the offset to the truncated-GN '
+                'LS-vs-MAP walk; that attribution was wrong as stated -- '
+                'the walk projects onto the estimator at only the '
+                '0.01-sigma level.'),
+    'record_of_record': ('sep_gateG2.json: C4-complete harness, anchors '
+                         'tau = 2/18/52 d (headline anchor directly gated), '
+                         'registered criteria unchanged -- 9/9 PASS; max G1 '
+                         'offset 0.035 sigma_F, max G2a dev 0.057 sigma_F, '
+                         'max G2b dev 0.13%.'),
+    'systematic_carried': ('live-refit displacement <= 0.035 sigma_F as '
+                           'measured (replaces the earlier 0.6 sigma_F '
+                           'carry, which was the harness artifact)'),
+    'status': ('R6 verdicts stand as recorded (FAIL under its harness); '
+               'amendment G-2 (pre-committed) governs the supersession; '
+               'no criterion was redefined.'),
 }
 
 with open('sep_dynamic/sep_gateG_adjudication.json', 'w') as fh:
     json.dump(out, fh, indent=1)
-print('wrote sep_dynamic/sep_gateG_adjudication.json | max null offset %.3f sigma_F' % max(offs))
+print('wrote sep_dynamic/sep_gateG_adjudication.json')

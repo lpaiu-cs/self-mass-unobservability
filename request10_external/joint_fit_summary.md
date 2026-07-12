@@ -85,26 +85,28 @@ the published static SEP analyses cannot see by construction (an
 oscillating `Delta` is 99.94% -> 8-27% LESS absorbable than a static one;
 F2 causal shared-tau peak 21.1% at tau = 5 d).
 
-Status: Counterexample candidate (10.8b live gates, 10.8f R6 re-run on the
-causal templates; adjudication `sep_dynamic/sep_gateG_adjudication.json`).
-**G1 live null: FAIL** — `z_GN - z_lin = +0.342 / +0.599` at
-tau = 18 / 52 d (tol 0.3). **G2a (4 sigma_F injections, undamped live GN):
-PASS at 18 d (0.346), FAIL at 52 d (0.619 vs tol 0.5)** under the
-registered linear-null reference; the GN-null-referenced differential
-response is +0.004 / +0.021 sigma_F. **G2b (K934-anchored limit-amplitude
-injections, damped GN capped at 30x validated steps): PASS** — 0.060% /
-0.116% relative (tol 2%); differential 0.041% / 0.083%. Diagnosis: one
-common-mode quantity — the truncated live refit converges to the
-unregularized least-squares point rather than the maximum-posterior point,
-displacing beta_hat by <= 0.6 sigma_F on the causal template identically
-with and without injection (the pre-C1 anticausal gate read the same
-displacement at only 0.01-0.02 sigma_F, which is how the swap masked it).
-Template-shape validation PASSES (G2b + both differentials); absolute null
-agreement FAILS and is carried as a live-refit systematic on Fisher-tier
-numbers (worst-case +30% on a Fisher u95), well inside the K_dyn = 10
-margin. No criterion was rescored. The original G2 (undamped at
-1830 sigma_F) segfaulted the integrator and was amended BEFORE rerun
-(commit `6e55569`) — recorded, not hidden.
+Status: Proven (live gates of record: gateG2, amendment G-2 of the 10.8f
+note, C4-complete harness, anchors tau = 2 / 18 / 52 d INCLUDING the
+headline anchor; sep_dynamic/sep_gateG2.json). **9/9 PASS under the
+unchanged registered criteria**: G1 offsets -0.002 / -0.015 / -0.035
+sigma_F (tol 0.3); G2a +0.009 / +0.056 / +0.057 sigma_F (tol 0.5); G2b
+-0.109% / -0.024% / +0.128% (tol 2%). The live-refit systematic carried
+on Fisher-tier numbers is <= 0.035 sigma_F as measured.
+
+Audit trail (recorded, superseded): the first causal-branch gate run (R6,
+sep_gateG.json) recorded G1 FAIL (+0.342/+0.599 sigma_F) and G2a FAIL at
+52 d, and a first adjudication mis-attributed this to the live refit
+walking to the unregularized LS point. The pre-committed amendment G-2
+located the defect in the gate HARNESS: its measurement span omitted the
+C4 guard-residual direction — measuring the untouched baseline residuals
+(no live refit) in that span reproduces the entire offset
+(+0.344/+0.607), and the guard-kept span reproduces the pipeline z_lin to
+machine precision (sep_gateG_adjudication.json carries the two-layer
+decomposition). The pre-C1 anticausal gate had read the same span
+artifact at only 0.01-0.02 sigma_F, which is how the quadrature swap
+originally passed. No criterion was rescored at any point. The original
+G2 (undamped at 1830 sigma_F) segfaulted the integrator and was amended
+BEFORE rerun (commit `6e55569`) — recorded, not hidden.
 
 Status: Counterexample candidate (10.8c re-anchor, executed per the
 pre-registered rule of `../notes/REQUEST10_8C_ANCHOR_RESOLUTION.md`, commit
@@ -175,10 +177,11 @@ raw Delta amplitude).
 Status: Note. Remaining caveats: (a) tau below 2 d diagnostic only;
 (b) white + 30-pair Fourier noise model as in the 10.7e headline; (c) E2
 coupling numbers carry O(1) geometric drive factors; (d) the live-refit
-null offset measured by gate G1 (<= 0.6 sigma_F, 10.8f R6) applies to all
-Fisher-tier numbers and is covered by the K_dyn = 10 anchor; (e) turn
-robustness is established for the tested alias lattice, not for arbitrary
-re-assignments.
+displacement measured by gate G1 with the corrected harness is
+<= 0.035 sigma_F at all anchors including the headline lag (gateG2,
+amendment G-2) and is carried at that size on Fisher-tier numbers;
+(e) turn robustness is established for the tested alias lattice, not for
+arbitrary re-assignments.
 
 ## Gate record
 

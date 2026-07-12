@@ -180,3 +180,18 @@ Registered plan (gateG2):
   of order 0.01 sigma_F at 18/52 d per the decomposition; tau = 2 d is
   the genuinely new measurement (different quadrature mix: the outer
   carrier is near-instantaneous, g1 = 0.999).
+
+### G-2 outcome (recorded post-run, 2026-07-12)
+
+gateG2 (sep_gateG2.json): **9/9 PASS** under the unchanged registered
+criteria, with the headline anchor directly gated.
+G1 offsets: -0.0018 / -0.0152 / -0.0350 sigma_F at tau = 2 / 18 / 52 d
+(tol 0.3). G2a: +0.0085 / +0.0562 / +0.0570 sigma_F (tol 0.5). G2b:
+-0.109% / -0.024% / +0.128% (tol 2%). The live-refit systematic carried
+on Fisher-tier numbers is therefore <= 0.035 sigma_F AS MEASURED
+(replacing the earlier 0.6 sigma_F carry, which the span decomposition
+proved to be the R6 harness artifact). The R6 artifact and its FAIL
+verdicts remain recorded; sep_gateG_adjudication.json now carries the
+full two-layer diagnosis (differential + span decomposition) and the
+supersession. The live gate battery record of record: PASS at all
+anchors including tau = 2 d.
