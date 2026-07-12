@@ -33,8 +33,11 @@ def stf_rank_pattern_entries() -> tuple[StfRankPatternEntry, ...]:
     r6 = r6_summary()
     rank4_exhaustive = high_rank_audit_summary(4)
 
+    # The rank-4 mixed layer opens with BOTH cubics. Before the sector
+    # completion EEQ surfaced only through the exhaustive audit's omission
+    # set; after the completion it is the sector's own first mixed witness.
     rank4_layer = "EQQ"
-    if "EEQ" in rank4_exhaustive.omitted_from_manual:
+    if r4.first_mixed_witness == "EEQ" or "EEQ" in rank4_exhaustive.omitted_from_manual:
         rank4_layer = "EEQ and EQQ"
 
     return (
