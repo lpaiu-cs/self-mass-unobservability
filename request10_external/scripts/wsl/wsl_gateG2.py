@@ -34,7 +34,10 @@ TEMPL = {'2': gi['T2'].astype(np.float64),
          '18': gi['T18'].astype(np.float64),
          '52': gi['T52'].astype(np.float64)}
 TC = gi['Tc'].astype(np.float64)
-jD = np.load('jac_sep/col_SEP_D.npz')['dcol'].astype(np.float64)
+# the committed static-guard column, staged inside gateG2_inputs.npz (the
+# run of record used the scratch jac_sep/ copy, verified md5-identical to
+# the committed sep_dynamic/col_SEP_D.npz)
+jD = gi['jD'].astype(np.float64)
 
 # ---- 10.8b nuisance span, C4-complete: guard residual kept ----
 A = w[:, None]*J

@@ -23,6 +23,9 @@ fit = json.load(open('sep_dynamic/sep_joint_fit_10_8b.json'))
 TAUS = (2.0, 18.0, 52.0)
 tpl = {('T%d' % t): sc.templates(inp, float(t))[1] for t in (2, 18, 52)}
 tpl['Tc'] = sc.templates(inp, 18.0)[0]
+# stage the committed static-guard column too, so the WSL harness builds
+# its C4 span from the archived inputs alone (no scratch jac_sep/ needed)
+tpl['jD'] = inp['jD']
 np.savez('sep_dynamic/gateG2_inputs.npz', **tpl)
 
 gg = {'amendment': '../notes/REQUEST10_8F_REVIEW_RESPONSE.md (G-2)',
