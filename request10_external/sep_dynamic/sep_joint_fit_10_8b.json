@@ -1,103 +1,121 @@
 {
  "preregistration": "../notes/REQUEST10_8B_REALDATA_DYNAMIC_SEP_FIT.md",
+ "correction": "../notes/REQUEST10_8F_REVIEW_RESPONSE.md",
  "seed": 20260710,
  "nsim": 500,
- "K_anchor": 934.0,
+ "K_dyn": 10.0,
+ "K_static": 934.4352966473425,
  "noise": {
-  "chi2_red": 1.2428839220834909,
-  "s": 1.1148470397698023,
-  "rank": 70
+  "chi2_red": 1.2429791969836317,
+  "s": 1.114889768983298,
+  "rank": 71,
+  "guard_residual_norm": 1.6482751918900362e-07
  },
  "real_data": {
-  "Z": 0.31814341739344243,
-  "p_global": 0.952,
+  "Z": 1.3280931004504637,
+  "p_global": 0.39,
   "detection_candidate": false,
-  "min_u95_anchored": 1.0876703362243027e-07,
+  "min_u95_Kdyn": 1.3647519810859438e-09,
   "tau_at_min": 2.0,
-  "min_u95_fisher": 1.1813654456766576e-10
+  "min_u95_fisher": 1.9330719420400812e-10
  },
  "anticausal_control": {
-  "Z": 1.195084561251923,
-  "p": 0.482,
+  "Z": 0.5984919229917453,
+  "p": 0.866,
   "quiet": true
  },
  "injections": {
   "tau_2": {
-   "beta_inj": 1.0876703362243027e-07,
-   "beta_hat": 1.0877719526996474e-07,
-   "deviation_sigma_fisher": -2.450251732495638e-12,
+   "beta_inj": 1.3647519810859438e-09,
+   "beta_hat": 1.2730778026956216e-09,
+   "deviation_sigma_fisher": -1.8274760107619758e-13,
    "pass": true
   },
   "tau_5": {
-   "beta_inj": 1.2013865441151413e-07,
-   "beta_hat": 1.201257962599204e-07,
-   "deviation_sigma_fisher": 4.436650556357527e-12,
+   "beta_inj": 1.4476373117508655e-09,
+   "beta_hat": 1.3738770477033944e-09,
+   "deviation_sigma_fisher": -5.62771362757239e-14,
    "pass": true
   },
   "tau_18": {
-   "beta_inj": 1.3076082836713587e-07,
-   "beta_hat": 1.3073980958710012e-07,
-   "deviation_sigma_fisher": 5.558516637338423e-12,
+   "beta_inj": 1.6148011490688513e-09,
+   "beta_hat": 1.5374769156466513e-09,
+   "deviation_sigma_fisher": 2.7731974981641828e-14,
    "pass": true
   },
   "tau_52": {
-   "beta_inj": 1.732295769015299e-07,
-   "beta_hat": 1.7322230340665073e-07,
-   "deviation_sigma_fisher": 2.517478433121869e-12,
+   "beta_inj": 2.4402661867262157e-09,
+   "beta_hat": 2.3060838270921684e-09,
+   "deviation_sigma_fisher": -3.341287443962385e-15,
    "pass": true
   },
   "tau_200": {
-   "beta_inj": 4.7312585533729937e-07,
-   "beta_hat": 4.7318698979901004e-07,
-   "deviation_sigma_fisher": 2.253156225929958e-12,
+   "beta_inj": 6.999132271274184e-09,
+   "beta_hat": 6.673108009375038e-09,
+   "deviation_sigma_fisher": 2.093447527191733e-14,
    "pass": true
   }
  },
  "anchors": {
   "tau_2": {
-   "beta_hat": 1.0161647534608833e-11,
-   "sigma_fisher": 5.94158493507328e-11,
-   "u95_anchored": 1.0876703362243027e-07,
-   "u95_fisher": 1.1813654456766576e-10,
-   "z": 0.17102587349419932,
-   "survival": 0.22578515909919572
+   "tau": 2.0,
+   "c_hat": 1.1030966993845644e-11,
+   "beta_hat": -9.167417839030966e-11,
+   "sigma_fisher": 6.90269216512122e-11,
+   "z": -1.3280931004504637,
+   "u95_fisher": 2.0521904795040903e-10,
+   "u95_Kdyn": 1.3647519810859438e-09,
+   "u95_Kstatic": 1.2642014098534741e-07,
+   "survival": 0.1824615387725406
   },
   "tau_5": {
-   "beta_hat": -1.2858151594018472e-11,
-   "sigma_fisher": 6.562779103741567e-11,
-   "u95_anchored": 1.2013865441151413e-07,
-   "u95_fisher": 1.310598067576729e-10,
-   "z": -0.19592540584960097,
-   "survival": 0.2757863833950142
+   "tau": 5.0,
+   "c_hat": 6.3146955800450166e-12,
+   "beta_hat": -7.37602640474671e-11,
+   "sigma_fisher": 7.349171149188752e-11,
+   "z": -1.0036541883448886,
+   "u95_fisher": 1.9473566476931806e-10,
+   "u95_Kdyn": 1.4476373117508655e-09,
+   "u95_Kstatic": 1.3459717282842603e-07,
+   "survival": 0.21134027751864623
   },
   "tau_18": {
-   "beta_hat": -2.101878003614251e-11,
-   "sigma_fisher": 7.143033293421438e-11,
-   "u95_anchored": 1.3076082836713587e-07,
-   "u95_fisher": 1.458563744165041e-10,
-   "z": -0.2942556638438225,
-   "survival": 0.43716902611634595
+   "tau": 18.0,
+   "c_hat": 4.936338411050209e-12,
+   "beta_hat": -7.732423342220224e-11,
+   "sigma_fisher": 8.202613358863463e-11,
+   "z": -0.9426780227139235,
+   "u95_fisher": 2.124093632708462e-10,
+   "u95_Kdyn": 1.6148011490688513e-09,
+   "u95_Kstatic": 1.5022762029420973e-07,
+   "survival": 0.1477241753076577
   },
   "tau_52": {
-   "beta_hat": -7.273494879411004e-12,
-   "sigma_fisher": 9.462961560304241e-11,
-   "u95_anchored": 1.732295769015299e-07,
-   "u95_fisher": 1.8601724414804592e-10,
-   "z": -0.07686277528508904,
-   "survival": 0.1982127957444146
+   "tau": 52.0,
+   "c_hat": 4.586260503385678e-12,
+   "beta_hat": -1.3418235963404686e-10,
+   "sigma_fisher": 1.2378171983492776e-10,
+   "z": -1.0840240369336371,
+   "u95_fisher": 3.3786741348393433e-10,
+   "u95_Kdyn": 2.4402661867262157e-09,
+   "u95_Kstatic": 2.2670136264547108e-07,
+   "survival": 0.08748952511447054
   },
   "tau_200": {
-   "beta_hat": 6.113446171010334e-11,
-   "sigma_fisher": 2.584530733091892e-10,
-   "u95_anchored": 4.7312585533729937e-07,
-   "u95_fisher": 5.204193138399415e-10,
-   "z": 0.2365398906940749,
-   "survival": 0.11939058827085675
+   "tau": 200.0,
+   "c_hat": 4.015139391622667e-12,
+   "beta_hat": -3.260242618991536e-10,
+   "sigma_fisher": 3.556155774758723e-10,
+   "z": -0.9167884720158909,
+   "u95_fisher": 9.118232378766888e-10,
+   "u95_Kdyn": 6.999132271274184e-09,
+   "u95_Kstatic": 6.512958508927365e-07,
+   "survival": 0.07448385899174545
   }
  },
  "quoted_window_d": [
   2.0,
   500.0
  ],
- "convention": "beta_ff = dimensionless amplitude of the Delta-oscillation pole residue at unit drive per carrier, zero drive phase; templates from T2 measured integrator response columns"
+ "convention": "CAUSAL template of record: response to the lagging pole; col_s is the +pi/2 (-sin) drive response, causal = g1*col_c - g2*col_s. beta_ff = dimensionless Delta-oscillation pole amplitude at unit drive."
 }

@@ -1,15 +1,15 @@
 {
  "column": "sep_dynamic/col_SEP_D.npz",
- "h_abs": 1e-08,
- "maxdev_us": 339.83727971100734,
- "halfstep_lin_dev": 4.3976392757321654e-05,
- "sigma_Delta_rn_marginalized": 1.9220541323450736e-09,
- "sigma_Delta_white": 1.8548845857731012e-09,
+ "sigma_Delta_rn_marginalized": 1.9221351972452167e-09,
+ "sigma_Delta_white": 1.8572975783119115e-09,
+ "noise_scale_rn": 1.1148470180049348,
+ "noise_scale_white": 1.1162502272016803,
+ "chi2_red_rn": 1.2428838735544954,
+ "chi2_red_white": 1.246014569727803,
  "survival_fraction_rn": 0.0006138153372210537,
  "survival_fraction_white": 0.0006360429724045529,
  "nuisance_rank_rn": 70,
  "nuisance_rank_white": 26,
- "reference_published_sigma": 1.8e-06,
  "R5_extended": {
   "columns_kept": [
    "distance"
@@ -19,11 +19,11 @@
    "mass_o",
    "masspar_i"
   ],
-  "sigma_Delta_rn_R5": 1.926257926483138e-09,
-  "survival_fraction_rn_R5": 0.0006124757693049466,
-  "nuisance_rank_rn_R5": 71
+  "sigma_Delta_rn_R5": 1.9262970977853837e-09
  },
+ "reference_published_sigma": 1.8e-06,
+ "K_static_ratio": 934.4352966473425,
  "pass_F1_validation": false,
- "decision": "Fisher sigma untrustworthy (1.93e-09, 934x vs published); DOWNGRADE: anchor to published sigma_Delta = 1.8e-06",
+ "decision": "Fisher sigma untrustworthy (1.926e-09, 934x vs published); DOWNGRADE: anchor to published sigma_Delta = 1.8e-06",
  "static_anchor_used": 1.8e-06
 }
