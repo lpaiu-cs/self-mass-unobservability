@@ -119,7 +119,10 @@ def gn_absorb(beta_inj, tpl, label, cap=None):
 
 
 ANCHORS = ('tau_2', 'tau_18', 'tau_52')
-out = {'params': gp, 'harness': 'C4-complete (guard-kept measurement span)',
+# embed only the anchors this battery gates, so the artifact is stable
+# under later additions to gateG2_params.json (e.g. the tau_2_wp addendum)
+out = {'params': {**gp, 'anchors': {a: gp['anchors'][a] for a in ANCHORS}},
+       'harness': 'C4-complete (guard-kept measurement span)',
        'G1': {}, 'G2a': {}, 'G2b': {}}
 
 # G1: live null (one absorb, measured at all three anchors)

@@ -140,7 +140,11 @@ R6 recorded: **G1 FAIL (both anchors), G2a FAIL (tau = 52 d), G2b PASS.**
 R7 in progress: Paper B numbers/claims regenerated from the corrected
    artifacts; README and joint-fit summary updated to the same numbers.
 
-## Amendment G-2 (2026-07-12; committed BEFORE the gateG2 run it governs)
+## Amendment G-2 (2026-07-12; committed BEFORE the gateG2 run it governs
+## -- registration commit `497bab1`, harness commit `26ca8c7`, outcome
+## commit `18b6396`; the addendum below: registration `b931210`, outcome
+## `3ad80e6`. AUDIT NOTE: merge this branch with a merge commit, not a
+## squash -- the committed-before ordering lives in these commits)
 
 Post-R6 decomposition (span_mismatch_check, local, no live evaluations):
 measuring the SAME baseline residuals res0 -- no GN refit at all -- in the
