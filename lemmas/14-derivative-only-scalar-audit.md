@@ -9,16 +9,17 @@
 
 ## Symbolic Audit Result
 
-- Status: Proven. [`../symbolic/shift_scalar_sector_delta4.py`](../symbolic/shift_scalar_sector_delta4.py) finds `52` parity-even scalar classes in the `E/B+derivative-only-scalar` sector at `\Delta \le 4`.
-- Status: Proven. The surviving list has `23` elements:
+- Status: Proven. [`../symbolic/shift_scalar_sector_delta4.py`](../symbolic/shift_scalar_sector_delta4.py) finds `46` parity-even scalar classes in the `E/B+derivative-only-scalar` sector at `\Delta \le 4`.
+- Status: Proven. The surviving list has `20` elements:
 
 ```math
-\{B2,\ E2,\ EB2,\ E3,\ B2^2,\ DtS\_B2,\ E2B2,\ EB\_sq,\ TrE2B2,\ EBDtB,\ dotB2,\ dotE2,\ dotS2,\ DtS\_E2,\ E2^2,\ divB2,\ gradB2,\ mixedGradB2,\ divE2,\ gradE2,\ mixedGradE2,\ divEGradS,\ gradS2\}.
+\{B2,\ E2,\ EB2,\ E3,\ B2^2,\ DtS\_B2,\ E2B2,\ EB\_sq,\ TrE2B2,\ EBDtB,\ dotB2,\ dotE2,\ dotS2,\ DtS\_E2,\ E2^2,\ divB2,\ gradB2,\ mixedGradB2,\ gradE2,\ gradS2\}.
 ```
 
+- Status: Note (corrected 2026-07-12). The pre-correction list additionally carried `divE2`, `mixedGradE2`, and `divEGradS`; under the STF-3 kinematics of `\nabla E` these are not independent operators (see [`07-gradient-sector-audit.md`](07-gradient-sector-audit.md)).
 - Status: Proven. The first new survivors beyond the corrected `E/B` basis appear only at weight `4`.
 - Status: Proven. The full smallest-weight new-survivor set is
-  `\{DtS_B2,\ dotS2,\ DtS_E2,\ divEGradS,\ gradS2\}`.
+  `\{DtS_B2,\ dotS2,\ DtS_E2,\ gradS2\}`.
 - Status: Proven. A canonical explicit obstruction is `dotS2`.
 
 ## Consequence

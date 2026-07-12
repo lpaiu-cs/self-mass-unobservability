@@ -10,14 +10,14 @@ from r5_sector_delta4 import r5_surviving_classes
 
 
 MAX_WEIGHT = 4
+# Corrected electric baseline (2026-07-12): the gradient sector is the single
+# invariant gradE2 (GradE is an STF-3 octupole; divE2 = 0, mixedGradE2 = gradE2).
 BASELINE_SURVIVOR_LABELS = {
     "E2",
     "E3",
     "dotE2",
     "E2^2",
-    "divE2",
     "gradE2",
-    "mixedGradE2",
 }
 
 

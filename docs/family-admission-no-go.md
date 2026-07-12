@@ -18,7 +18,7 @@
 - Status: Proven. Class A: if an admitted family carries its own parity-even scalar at weight `1` or `2`, minimal-sector uniqueness fails immediately.
 - Status: Proven. The audited examples are `S` and `B2`.
 - Status: Proven. Class B: even if shift symmetry removes the bare scalar source, derivative invariants can still survive at the same fixed truncation order.
-- Status: Proven. The audited derivative-only scalar examples are `dotS2`, `gradS2`, `DtS_E2`, `DtS_B2`, and `divEGradS`.
+- Status: Proven. The audited derivative-only scalar examples are `dotS2`, `gradS2`, `DtS_E2`, and `DtS_B2`. (Corrected 2026-07-12: the former fifth example `divEGradS` vanishes under the STF-3 gradient kinematics.)
 - Status: Conjectural. Additional unsuppressed primitive families are expected to behave similarly unless an explicit reduction or ordering principle is written down in advance.
 
 ## What This Does And Does Not Kill

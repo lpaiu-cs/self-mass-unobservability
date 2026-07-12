@@ -1,18 +1,25 @@
 """Legitimate re-derivation of the rank-4 (E/Q) Delta<=4 survivor set.
 
-Two independent exact methods -- the O(3) character integral
-(tier1_survivor_exact.py) and the delta-only contraction enumerator
-(verify_family_survivors.py) -- BOTH give survivor dimension 25 for E/Q, versus
-the repo's audited 19. No new reduction rule is introduced; the repo's own
-rules (total derivative, lower-order EOM, STF algebraic identities) are all
+HISTORICAL FINDING (pre-correction convention): two independent exact methods
+-- the O(3) character integral (tier1_survivor_exact.py) and the delta-only
+contraction enumerator (verify_family_survivors.py) -- both gave survivor
+dimension 25 for E/Q under the then-current generic gradient model, versus the
+repo's audited 19. No new reduction rule was introduced; the repo's own rules
+(total derivative, lower-order EOM, STF algebraic identities) were all
 respected, and the O(3) character dimension already accounts for every 3D
-algebraic identity. So under the theorem's own rules the correct rank-4
-survivor dimension is 25, and the audited r4 list omits 6 genuine survivors.
+algebraic identity. The audited r4 list omitted 6 genuine survivors.
+
+CURRENT VALUE: after the 2026-07-12 gradient-kinematics correction (GradE is
+an STF-3 octupole: divE2 = 0, mixedGradE2 = gradE2), the corrected E/Q
+survivor dimension is 23 = 5 (electric) + 18 (new); the 6 operators
+constructed below all survive that correction (GradEGradQ shares the l=3
+irrep).  tier1_survivor_exact now encodes the corrected kinematics, so the
+character dimension printed below is 23.
 
 Here we CONSTRUCT the omitted higher-E-degree mixed survivors and prove each is
 a nonzero, rotation-invariant, non-total-derivative parity-even scalar that is
-absent from the repo's r4 candidate list (which caps the E/Q mixed sector at
-degree 2 in E, i.e. E2Q2).
+absent from the repo's original r4 candidate list (which capped the E/Q mixed
+sector at degree 2 in E, i.e. E2Q2).
 """
 
 import numpy as np
@@ -65,8 +72,8 @@ if __name__ == "__main__":
     print("Rank-4 (E/Q) re-derivation -- omitted survivors")
     print("=" * 74)
     tot, it, _ = EX.survivor_exact([("Q", 4, +1)])
-    print(f"exact character survivor dimension = {tot}   (repo audited 19; "
-          f"numeric brute-force independently also gave 25)")
+    print(f"exact character survivor dimension = {tot}   (corrected kinematics; "
+          f"history: audited 19 -> 25 generic-gradient convention -> 23 corrected)")
     print(f"inv_trunc(w) w=1..4 = {[it[w] for w in range(1,5)]}   "
           f"(sum of exact per-signature O(3) dims)")
     print()

@@ -19,7 +19,7 @@
 - Status: Proven. [`14-derivative-only-scalar-audit.md`](14-derivative-only-scalar-audit.md) shows that this does not make the scalar family harmless.
 - Status: Proven. The first new survivors now appear at weight `4`.
 - Status: Proven. The full smallest-weight audited witness set is
-  `\{DtS_B2,\ dotS2,\ DtS_E2,\ divEGradS,\ gradS2\}`.
+  `\{DtS_B2,\ dotS2,\ DtS_E2,\ gradS2\}` (corrected 2026-07-12: `divEGradS` vanishes under the STF-3 gradient kinematics).
 - Status: Proven. A canonical explicit derivative-only scalar witness is `dotS2`.
 
 ## Consequence

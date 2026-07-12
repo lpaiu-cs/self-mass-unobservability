@@ -121,7 +121,27 @@ def _random_stf2(rng: random.Random) -> sp.Matrix:
 
 
 def _random_grad_e(rng: random.Random) -> list[sp.Matrix]:
-    return [_random_stf2(rng) for _ in range(3)]
+    """Random integer STF-3 octupole (GradE), as its three k-slices.
+
+    GradE = partial^3 Phi is totally symmetric (Schwarz) and vacuum
+    trace-free: 7 free components, the rest fixed by the trace conditions.
+    (Corrected 2026-07-12 from three independent STF-2 slices.)
+    """
+    c000, c001, c002, c011, c012, c111, c112 = [
+        sp.Integer(rng.randint(-3, 3)) for _ in range(7)
+    ]
+    comp = {
+        (0, 0, 0): c000, (0, 0, 1): c001, (0, 0, 2): c002,
+        (0, 1, 1): c011, (0, 1, 2): c012, (0, 2, 2): -c000 - c011,
+        (1, 1, 1): c111, (1, 1, 2): c112, (1, 2, 2): -c001 - c111,
+        (2, 2, 2): -c002 - c112,
+    }
+    def entry(a: int, b: int, c: int) -> sp.Integer:
+        return comp[tuple(sorted((a, b, c)))]
+    return [
+        sp.Matrix(3, 3, lambda i, j, k=k: entry(k, i, j))
+        for k in range(3)
+    ]
 
 
 def _component(values: object, rank: int, indices: tuple[int, ...]) -> int:

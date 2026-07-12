@@ -43,7 +43,7 @@ W_{\min}(\mathrm{R0a}; w_S) = w_S.
 W_{\mathrm{self}}(\mathrm{R0b}; w_D) = 2 w_D.
 ```
 
-- Status: Proven. The first mixed witnesses are `DtS_E2`, `divEGradS`, and, on the corrected `E/B` baseline, also `DtS_B2`, so
+- Status: Proven. The first mixed witnesses are `DtS_E2` and, on the corrected `E/B` baseline, also `DtS_B2` (corrected 2026-07-12: `divEGradS` vanishes under the STF-3 gradient kinematics), so
 
 ```math
 W_{\mathrm{mix}}(\mathrm{R0b}; w_D) = w_D + 2.

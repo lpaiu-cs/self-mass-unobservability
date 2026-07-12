@@ -49,7 +49,7 @@ W_{\min}(\mathrm{R0a}) = 1.
 
 ### First Mixed Witness
 
-- Status: Proven. On the electric baseline, the mixed survivors `DtS_E2` and `divEGradS` both appear at weight `4`.
+- Status: Proven. On the electric baseline, the mixed survivor `DtS_E2` appears at weight `4`. (Corrected 2026-07-12: the former companion `divEGradS` contains the vanishing vacuum trace `\nabla_i E^{ij}` and is not generated under the STF-3 gradient kinematics.)
 - Status: Proven. On the corrected `E/B` baseline, `DtS_B2` joins the same first mixed weight and does not appear earlier.
 - Status: Proven. No mixed witness appears below weight `4`, because every weight-`2` or weight-`3` candidate either reduces by total derivatives, vanishes by the lower-order EOM, or fails to produce a parity-even scalar.
 - Status: Proven. Therefore `W_{\mathrm{mix}}(\mathrm{R0b}) = 4`.

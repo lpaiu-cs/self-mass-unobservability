@@ -83,7 +83,7 @@ def fixed_family_operator_entries() -> tuple[OperatorCountEntry, ...]:
             primitive_family_classes=("baseline electric sector",),
             candidate_operator_count=len(enumerate_contraction_classes()),
             reduced_operator_count=electric.total_rank,
-            reduced_count_kind="exact polynomial rank of the corrected seven-element basis",
+            reduced_count_kind="exact polynomial rank of the corrected five-element basis",
             finite_before_reduction=True,
             finite_after_reduction=True,
             reduction_layers_applied=REDUCTION_LAYERS,

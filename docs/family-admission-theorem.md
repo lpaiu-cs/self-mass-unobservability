@@ -24,7 +24,7 @@
 - Status: Proven. For the rank-2 STF special class, the quadratic invariant `X2 = Tr(X^2)` is a new parity-even low-order survivor unless an explicit extra identity, ordering rule, or background restriction is imposed.
 - Status: Proven. The rank-2 STF class remains mixed-aware because the mixed quadratic witness `EX` already exists.
 - Status: Proven. For Class R0a, the bare scalar `S` itself is the smallest new survivor.
-- Status: Proven. For Class R0b, the smallest new survivors appear at weight `4`; a canonical witness is `dotS2`, and the full smallest-weight audited witness set is `\{DtS_B2,\ dotS2,\ DtS_E2,\ divEGradS,\ gradS2\}`.
+- Status: Proven. For Class R0b, the smallest new survivors appear at weight `4`; a canonical witness is `dotS2`, and the full smallest-weight audited witness set is `\{DtS_B2,\ dotS2,\ DtS_E2,\ gradS2\}`. (Corrected 2026-07-12: the former `divEGradS` witness contains the vanishing vacuum trace `\nabla_i E^{ij}` and is not generated under the STF-3 gradient kinematics; the weight-`4` threshold is unchanged.)
 - Status: Proven. For Class R1, the first self witness is `V2` at weight `2`, while the first mixed witness is `EVV` at weight `3`.
 - Status: Proven. For every genuinely new parity-even STF primitive family with rank `L \ge 3`, the first unavoidable self witness is the quadratic norm `Y2`, no linear scalar witness exists, and no mixed quadratic scalar `E Y_L` exists.
 - Status: Proven. Therefore the higher-rank STF branch obeys a universal self-only sharp threshold `w_Y \ge 3` at `\Delta \le 4`.

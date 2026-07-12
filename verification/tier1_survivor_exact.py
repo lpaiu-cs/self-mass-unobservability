@@ -84,6 +84,14 @@ def registry(families):
         B["Dt2"+sym]  = ((r,),        par,  3, r)
         B["Grad"+sym] = (grad_irr(r), -par, 2, r + 1)
     add("E", 2, +1)
+    # CORRECTION (2026-07-12): GradE = partial_k partial_i partial_j Phi is an
+    # STF-3 octupole -- totally symmetric (Schwarz) and trace-free in the
+    # external vacuum (the same condition that makes E traceless) -- so its
+    # O(3) content is the single l=3 irrep, not the generic
+    # (STF-2) x vector content {1,2,3}.  Admitted families' own Grad blocks
+    # keep the generic content: they are independent primitives with no
+    # assumed potential structure.
+    B["GradE"] = ((3,), -1, 2, 3)
     for sym, r, par in families:
         if sym != "E":
             add(sym, r, par)
@@ -114,15 +122,21 @@ def survivor_exact(families, wmax=4):
     return total, inv_t, inv_p
 
 
+# Targets: corrected family table (2026-07-12, STF-3 electric gradient block).
+# Every sector loses the two spurious electric gradient survivors
+# (divE2, mixedGradE2); the E/B/S sector additionally loses divEGradS
+# (GradE l=3 shares no irrep with GradS l=1, so the mixed scalar vanishes).
+# GradEGradQ survives (l=3 in GradQ = {3,4,5}), so the rank-4 sector's
+# higher-degree-mixed correction (19 -> 25 old bookkeeping) persists as 23.
 SECTORS = [
-    ("E (electric)",  [("E", 2, +1)],                       7),
-    ("E/B magnetic",  [("B", 2, -1)],                       18),
-    ("E/B/S scalar",  [("B", 2, -1), ("S", 0, +1)],         33),
-    ("E/V vector",    [("V", 1, +1)],                       17),
-    ("E/T rank-3",    [("T", 3, +1)],                       19),
-    ("E/Q rank-4",    [("Q", 4, +1)],                       25),   # corrected 19->25; see rederive_rank4.py
-    ("E/U rank-5",    [("U", 5, +1)],                       19),
-    ("E/Z rank-6",    [("Z", 6, +1)],                       23),
+    ("E (electric)",  [("E", 2, +1)],                       5),
+    ("E/B magnetic",  [("B", 2, -1)],                       16),
+    ("E/B/S scalar",  [("B", 2, -1), ("S", 0, +1)],         30),
+    ("E/V vector",    [("V", 1, +1)],                       15),
+    ("E/T rank-3",    [("T", 3, +1)],                       17),
+    ("E/Q rank-4",    [("Q", 4, +1)],                       23),
+    ("E/U rank-5",    [("U", 5, +1)],                       17),
+    ("E/Z rank-6",    [("Z", 6, +1)],                       21),
 ]
 
 if __name__ == "__main__":
@@ -141,15 +155,15 @@ if __name__ == "__main__":
     print("-" * 76)
     n_ok = sum(1 for label, fams, target in SECTORS if survivor_exact(fams)[0] == target)
     print(f"exact-match survivor rank: {n_ok} of 8 sectors against the corrected audit")
-    print("(targets E,B,S,V,T,Q,U,Z = 7,18,33,17,19,25,19,23).")
+    print("(targets E,B,S,V,T,Q,U,Z = 5,16,30,15,17,23,17,21).")
     if not allok:
         print("*** AT LEAST ONE SECTOR MISMATCHED -- see the rows above ***")
-    print("Historical note: the rank-4 (Q) audit originally recorded 19; that count")
-    print("was incomplete and has since been corrected to 25 (now frozen). The six")
-    print("omitted survivors are the higher-degree mixed operators the original r4")
-    print("list capped out of (degree > 2 in E): EEQ, QQQ, E3Q, EQ3, EDtEQ, GradEGradQ.")
-    print("Smallest example: Q_abcd (E^2)_ab E_cd  (degree 3 in E, 1 in Q) -- nonzero,")
-    print("rotation-invariant, pure-primitive (non-total-derivative); the original")
-    print("mixed candidates capped at degree 2 in E (E2Q2). Independent re-derivation")
-    print("and cross-check: rederive_rank4.py, rank4_spec_check.py; docs/family-class-table.md.")
+    print("Historical notes. (1) The rank-4 (Q) audit originally recorded 19; that")
+    print("count omitted six higher-degree mixed operators (degree > 2 in E): EEQ,")
+    print("QQQ, E3Q, EQ3, EDtEQ, GradEGradQ -- see rederive_rank4.py. (2) The")
+    print("2026-07-12 gradient-kinematics correction (GradE is an STF-3 octupole:")
+    print("Schwarz + vacuum) then removed the two spurious electric gradient")
+    print("survivors (divE2, mixedGradE2) from every sector and divEGradS from the")
+    print("E/B/S sector, moving the audited table from 7,18,33,17,19,25,19,23 to")
+    print("5,16,30,15,17,23,17,21. GradEGradQ survives the correction (l=3 shared).")
     raise SystemExit(0 if allok else 1)

@@ -20,7 +20,10 @@ EB_BLOCK_TYPES = (
     BlockType("a", 1, 1, parity=1),
     BlockType("DtE", 2, 2, parity=0, sym_groups=((0, 1),), tracefree_pairs=((0, 1),)),
     BlockType("DtB", 2, 2, parity=1, sym_groups=((0, 1),), tracefree_pairs=((0, 1),)),
-    BlockType("GradE", 2, 3, parity=1, sym_groups=((1, 2),), tracefree_pairs=((1, 2),)),
+    # GradE is an STF-3 octupole (Schwarz total symmetry + vacuum trace-free);
+    # GradB stays generic: B is an independent primitive with no assumed
+    # potential structure.  See lemmas/07-gradient-sector-audit.md.
+    BlockType("GradE", 2, 3, parity=1, sym_groups=((0, 1), (1, 2)), tracefree_pairs=((0, 1), (1, 2), (0, 2))),
     BlockType("GradB", 2, 3, parity=0, sym_groups=((1, 2),), tracefree_pairs=((1, 2),)),
     BlockType("Dt2E", 3, 2, parity=0, sym_groups=((0, 1),), tracefree_pairs=((0, 1),)),
     BlockType("Dt2B", 3, 2, parity=1, sym_groups=((0, 1),), tracefree_pairs=((0, 1),)),

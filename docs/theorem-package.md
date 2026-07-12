@@ -3,13 +3,14 @@
 - Status: Note. This is the authoritative front-door theorem document for the free-fall theorem repo.
 - Status: Note. It is paper-facing, non-historical, and limited to the currently closed theorem and counterexample statements already established in the repository.
 - Status: Note. The mathematical content of this repository is now frozen unless a direct contradiction is found during cleanup or later review.
+- Status: Note (2026-07-12). One such direct contradiction was found by external adversarial review and is now incorporated: the gradient block `grad E = partial^3 Phi` is an STF-3 octupole (Schwarz total symmetry + vacuum trace-free), so the electric normal-form basis is five-dimensional (`{E2, E3, E2^2, dotE2, gradE2}`; the former `divE2`/`mixedGradE2` entries were artifacts of a generic gradient model), and the audited family survivor table is `E,B,S,V,T,Q,U,Z = 5,16,30,15,17,23,17,21`. The theorem statements below are unchanged; only the computed dimensions moved. See [`../lemmas/07-gradient-sector-audit.md`](../lemmas/07-gradient-sector-audit.md) and [`reduction-rules.md`](reduction-rules.md).
 - Status: Note. Further work belongs to empirical branches, runtime branches, or paper writing rather than new theorem expansion inside this repo.
 
 ## Theorem Domain
 
 - Status: Proven. The closed positive theorem domain is the free-fall sector only.
 - Status: Assumption. The domain assumptions are the active `A1`-`A8` ledger assumptions in [`assumptions-ledger.md`](assumptions-ledger.md): quasi-static regime, nearly spherical and nonspinning parity-even sector, local worldline EFT, no orbital-timescale internal state variable, analytic monopole response, self-bound equilibrium, fixed operator cutoff, and local weight-spectrum finiteness below that cutoff. (These are premises, not derived results; see the ledger.)
-- Status: Proven. Within that domain, the irreducible primitive-family envelope closes on the audited scalar, vector, rank-2 STF, and genuine rank-`L >= 3` STF classes. (The rank-4 survivor bookkeeping was corrected from 19 to the complete count 25; see [`family-class-table.md`](family-class-table.md) and `../symbolic/r4_survivor_rank_check.py`.)
+- Status: Proven. Within that domain, the irreducible primitive-family envelope closes on the audited scalar, vector, rank-2 STF, and genuine rank-`L >= 3` STF classes. (The rank-4 survivor bookkeeping was corrected in two steps, `19 -> 25 -> 23`: first restoring the omitted higher-degree mixed survivors, then the 2026-07-12 gradient-kinematics correction; see [`family-class-table.md`](family-class-table.md) and `../symbolic/r4_survivor_rank_check.py`.)
 
 ## Main Positive Theorem
 

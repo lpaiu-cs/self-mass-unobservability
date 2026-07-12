@@ -11,7 +11,7 @@
 ```math
 Y^{I}_{EB}
 =
-\{E2,\ B2,\ E3,\ EB2,\ E2^2,\ B2^2,\ dotE2,\ dotB2,\ EBDtB,\ E2B2,\ EB\_sq,\ TrE2B2,\ gradE2,\ divE2,\ mixedGradE2,\ gradB2,\ divB2,\ mixedGradB2\}.
+\{E2,\ B2,\ E3,\ EB2,\ E2^2,\ B2^2,\ dotE2,\ dotB2,\ EBDtB,\ E2B2,\ EB\_sq,\ TrE2B2,\ gradE2,\ gradB2,\ divB2,\ mixedGradB2\}.
 ```
 
 - Status: Conjectural. Assume the body is quasi-static, nearly spherical, nonspinning, parity-even, self-bound in equilibrium, locally described by a worldline EFT, and carries no orbital-timescale internal state variable.
@@ -51,7 +51,7 @@ so the leading body-dependent free-fall deviation still collapses to finitely ma
 
 ## Proof Skeleton
 
-1. Status: Proven. [`../lemmas/11-eb-survivor-independence-delta4.md`](../lemmas/11-eb-survivor-independence-delta4.md) supplies a corrected finite `18`-element `E/B` basis.
+1. Status: Proven. [`../lemmas/11-eb-survivor-independence-delta4.md`](../lemmas/11-eb-survivor-independence-delta4.md) supplies a corrected finite `16`-element `E/B` basis (2026-07-12 gradient-kinematics correction).
 2. Status: Conjectural. Use the no-internal-state assumption to exclude extra explicit orbital-timescale coordinates and hereditary functionals in the monopole sector.
 3. Status: Conjectural. Expand the analytic monopole function `m_A(Y_{EB})` in the finitely many corrected `E/B` coordinates.
 4. Status: Conjectural. Truncate at fixed order `\Delta \le 4`; only finitely many Taylor coefficients survive.

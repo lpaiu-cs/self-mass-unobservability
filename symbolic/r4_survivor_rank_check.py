@@ -18,19 +18,19 @@ RNG_SEED = 424242
 # ---------------------------------------------------------------------------
 # Corrected rank-4 survivor dimension (exact O(3) character integral).
 #
-# The hand-built candidate list in `_r4_new_specs()` below caps the mixed E/Q
-# sector at degree 2 in E (`E2Q2`) and has no E/Q cross-gradient, so it
-# under-counts the rank-4 survivors as 19. Under the theorem's OWN reduction
-# rules (total derivative, lower-order EOM, and the STF algebraic identities,
-# all of which the O(3) character dimension already respects), the correct
-# rank-4 survivor dimension is 25. The omitted survivors are the higher-degree
-# mixed operators such as `Q_abcd (E^2)_ab E_cd` (degree 3 in E), `E Q^3`
-# (degree 3 in Q), and the `GradE.GradQ` cross-gradient. See
-# `verification/rederive_rank4.py` for their explicit construction and
-# nonzero/rotation-invariance checks; two independent methods (this character
-# integral and a delta-only contraction enumerator) agree on 25.
+# Two corrections are layered here. (1) The original hand-built candidate list
+# capped the mixed E/Q sector at degree 2 in E (`E2Q2`) and had no E/Q
+# cross-gradient, under-counting the rank-4 survivors as 19; the omitted
+# survivors are the higher-degree mixed operators such as `Q_abcd (E^2)_ab
+# E_cd` (degree 3 in E), `E Q^3` (degree 3 in Q), and the `GradE.GradQ`
+# cross-gradient -- see `verification/rederive_rank4.py`. (2) The 2026-07-12
+# gradient-kinematics correction: GradE = partial^3 Phi is an STF-3 octupole
+# (Schwarz total symmetry + vacuum trace-free), which removes the two spurious
+# electric gradient survivors (divE2, mixedGradE2) from the sector. The
+# corrected rank-4 survivor dimension is 23 = 5 (electric) + 18 (new);
+# `GradE.GradQ` survives the kinematic correction (the l=3 irrep is shared).
 # ---------------------------------------------------------------------------
-CORRECTED_SURVIVOR_DIMENSION = 25
+CORRECTED_SURVIVOR_DIMENSION = 23
 
 
 def _character_survivor_dimension(family_rank: int = 4, wmax: int = 4) -> int:
@@ -40,10 +40,10 @@ def _character_survivor_dimension(family_rank: int = 4, wmax: int = 4) -> int:
     and inv_prom over the D_tau-promotable subset {E,DtE}+{X,DtX}. A delta-only
     scalar needs an even total Cartesian index count (else it would need an
     epsilon -> pseudoscalar, excluded). For a parity-even family (this function's
-    case) it reproduces the audited survivor rank exactly at family ranks
-    1,3,5,6 (V=17, T=19, U=19, Z=23) and the electric baseline (7); at rank 4
-    (Q) it gives 25, the corrected value. (The magnetic rank-2 family is
-    parity-odd, a separate case handled by the eb sector.)"""
+    case) it reproduces the corrected audited survivor rank exactly at family
+    ranks 1,3,5,6 (V=15, T=17, U=17, Z=21) and the electric baseline (5); at
+    rank 4 (Q) it gives 23. (The magnetic rank-2 family is parity-odd, a
+    separate case handled by the eb sector.)"""
     n = 4000
     theta = (np.arange(n) + 0.5) * np.pi / n
     measure = (1.0 - np.cos(theta)) / np.pi * (np.pi / n)
@@ -76,6 +76,10 @@ def _character_survivor_dimension(family_rank: int = 4, wmax: int = 4) -> int:
         }
 
     B = {**blocks("E", 2, +1), **blocks("Q", family_rank, +1)}
+    # GradE is an STF-3 octupole (Schwarz + vacuum): single l=3 irrep, not the
+    # generic (STF-2) x vector content {1,2,3}.  GradQ stays generic (Q is an
+    # independent primitive with no assumed potential structure).
+    B["GradE"] = ((3,), -1, 2, 3)
 
     def sig_dim(sig):
         if sum(B[nm][3] * c for nm, c in sig.items()) % 2 == 1:  # odd Cartesian index count
@@ -176,6 +180,31 @@ def _symbolic_stf_rank4(prefix: str) -> tuple[sp.MutableDenseNDimArray, tuple[sp
 def _random_stf2(rng: random.Random) -> sp.Matrix:
     a, b, c, d, e = [sp.Integer(rng.randint(-3, 3)) for _ in range(5)]
     return sp.Matrix([[a, b, c], [b, d, e], [c, e, -a - d]])
+
+
+def _random_stf3_slices(rng: random.Random) -> list[sp.Matrix]:
+    """Random integer STF-3 octupole (GradE), returned as its three k-slices.
+
+    GradE = partial^3 Phi is totally symmetric (Schwarz) and trace-free on
+    every index pair in vacuum: 7 free components; the rest follow from the
+    trace conditions.  Each slice G[k] is a symmetric traceless 3x3 matrix
+    and the slices obey the cross-slice symmetry constraints.
+    """
+    c000, c001, c002, c011, c012, c111, c112 = [
+        sp.Integer(rng.randint(-3, 3)) for _ in range(7)
+    ]
+    comp = {
+        (0, 0, 0): c000, (0, 0, 1): c001, (0, 0, 2): c002,
+        (0, 1, 1): c011, (0, 1, 2): c012, (0, 2, 2): -c000 - c011,
+        (1, 1, 1): c111, (1, 1, 2): c112, (1, 2, 2): -c001 - c111,
+        (2, 2, 2): -c002 - c112,
+    }
+    def entry(a: int, b: int, c: int) -> sp.Integer:
+        return comp[tuple(sorted((a, b, c)))]
+    return [
+        sp.Matrix(3, 3, lambda i, j, k=k: entry(k, i, j))
+        for k in range(3)
+    ]
 
 
 def _random_stf4(rng: random.Random) -> list[int]:
@@ -470,7 +499,7 @@ def _new_sector_rank_lower_bound(sample_count: int = SAMPLE_COUNT) -> int:
         sample = {
             "E": _random_stf2(rng),
             "DtE": _random_stf2(rng),
-            "GradE": [_random_stf2(rng) for _ in range(3)],
+            "GradE": _random_stf3_slices(rng),
             "Q": _random_stf4(rng),
             "DtQ": _random_stf4(rng),
             "GradQ": _random_grad_stf4(rng),

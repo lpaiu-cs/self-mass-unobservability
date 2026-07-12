@@ -5,7 +5,7 @@ from dataclasses import dataclass
 import sympy as sp
 
 from r1_sector_delta4 import r1_summary
-from survivor_rank_check import stf_matrix, survivor_polynomials
+from survivor_rank_check import stf3_tensor, stf_matrix, survivor_polynomials
 
 
 @dataclass(frozen=True)
@@ -34,10 +34,9 @@ def matrix(prefix: str) -> tuple[sp.Matrix, tuple[sp.Symbol, ...]]:
 def r1_variables() -> tuple[sp.Symbol, ...]:
     _, electric_vars = stf_matrix("E")
     _, electric_dot_vars = stf_matrix("DtE")
-    grad_e_vars: list[sp.Symbol] = []
-    for grad_index in range(3):
-        _, block_vars = stf_matrix(f"GradE{grad_index}")
-        grad_e_vars.extend(block_vars)
+    # GradE is an STF-3 octupole (7 components), matching the corrected
+    # electric baseline in survivor_rank_check.py.
+    _, grad_e_vars = stf3_tensor("GradE")
 
     _, vector_vars = vector("V")
     _, vector_dot_vars = vector("DtV")
@@ -51,11 +50,6 @@ def r1_survivor_expression_map() -> dict[str, sp.Expr]:
     vector_field, _ = vector("V")
     vector_dot, _ = vector("DtV")
     grad_v, _ = matrix("GradV")
-
-    grad_blocks: list[sp.Matrix] = []
-    for grad_index in range(3):
-        block, _ = stf_matrix(f"GradE{grad_index}")
-        grad_blocks.append(block)
 
     baseline = dict(survivor_polynomials())
 
@@ -84,7 +78,7 @@ def r1_survivor_expression_map() -> dict[str, sp.Expr]:
             "mixedGradV2": mixed_grad_v2,
         }
     )
-    _ = electric_dot, grad_blocks
+    _ = electric_dot
     return baseline
 
 
