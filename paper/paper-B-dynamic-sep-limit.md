@@ -385,16 +385,27 @@ full origin domain: `Z = 2.285`, `p = 0.26` — and the anti-causal control
 is *equally* elevated (`Z = 2.340`, `p = 0.28`), marking the mild elevation
 as noise/structure common to both quadrature conventions rather than a
 causal-response feature. A design-only geometry measurement (10.8g;
-`sep_dynamic/sep_quadrature_overlap_10_8g.json`) quantifies why: in the
-estimator's nuisance-projected metric, after marginalizing the co-fitted
-instantaneous direction, the causal and advanced `beta` templates overlap
-at `|cos| = 0.47` at the `tau = 2 d` headline phase, `0.86-0.91` at
-`tau = 5-18 d`, `0.29` at `52 d`, and `0.93-0.99` (opposite sign) at
-`200-500 d`, where the two conventions span nearly the same line. The
-channel therefore has limited leverage on the lag *sign* over most of the
-window: the quoted limit bounds the amplitude of an oscillating-`Delta`
-response in the causal single-pole convention, and the advanced template
-functions as a common-mode control rather than a lag-sign discriminator. Dictionary-anchored: `Z = 1.815`, `p = 0.47`
+`sep_dynamic/sep_quadrature_overlap_10_8g.json`) illustrates why. It is not a
+scan over the origin domain: it evaluates the template geometry at two
+reference phases per lag — the common origin `t_off = 0` and the single
+`tau = 2 d` worst-phase headline offset (`104.349 d`, reused at every `tau`).
+In the estimator's nuisance-projected metric, after marginalizing the
+co-fitted instantaneous direction, the causal and advanced `beta` templates
+have marginalized overlap (`cos`, at the two phases) `+0.61 / +0.47` at
+`tau = 2 d`, `+0.91 / +0.86` at `5 d`, `+0.84 / +0.64` at `18 d`,
+`+0.18 / -0.29` at `52 d`, `-0.83 / -0.93` at `200 d`, and `-0.97 / -0.99` at
+`500 d`; from `tau = 200 d` outward the overlap is large and opposite-sign,
+the two conventions spanning nearly the same line. Except near `tau = 2` and
+`52 d`, where `|cos|` dips into `0.2-0.6`, the templates are nearly collinear
+at both sampled phases. At these reference phases the channel therefore has
+limited leverage on the lag *sign* over most of the window: the quoted limit
+bounds the amplitude of an oscillating-`Delta` response in the causal
+single-pole convention, and the advanced template functions as a common-mode
+control rather than a lag-sign discriminator. A full-origin overlap scan is
+not carried out here; the independent evidence that this near-collinearity
+holds across the window is the phase-marginalized detection statistic itself
+(Section 6.1), whose anti-causal control is equally elevated over the full
+4,821-origin domain. Dictionary-anchored: `Z = 1.815`, `p = 0.47`
 (reported, not gating). Linear injection-recovery is exact at all anchors;
 live-model injection-recovery is exact to `<= 0.10 sigma_F` at detection
 amplitudes and `<= 0.13%` at limit amplitudes across all gated pairs
