@@ -139,3 +139,44 @@ R6 recorded: **G1 FAIL (both anchors), G2a FAIL (tau = 52 d), G2b PASS.**
    <= 0.1% differential).
 R7 in progress: Paper B numbers/claims regenerated from the corrected
    artifacts; README and joint-fit summary updated to the same numbers.
+
+## Amendment G-2 (2026-07-12; committed BEFORE the gateG2 run it governs)
+
+Post-R6 decomposition (span_mismatch_check, local, no live evaluations):
+measuring the SAME baseline residuals res0 -- no GN refit at all -- in the
+R6 gate harness's measurement span reproduces the entire "G1 offset":
+span-only delta = +0.3439 / +0.6068 sigma_F at tau = 18 / 52 d, against
+the recorded G1 offsets +0.3423 / +0.5987. The R6 harness's measurement
+span was truncation-only (rank 70): it dropped the static-guard residual
+direction that correction C4 added to every pipeline script -- C4 was
+never propagated into the WSL gate harness. The genuine live-refit
+displacement is the remainder: z_GN - z(gate span, res0) =
+-0.0015 / -0.0081 sigma_F. The R6 adjudication's attribution (an
+LS-vs-MAP refit walk projecting onto the causal template) is therefore
+WRONG as stated; the walk exists (max|dth| ~ 14 steps) but its projection
+onto the estimator is ~0.01 sigma_F, not 0.6.
+
+Verified locally before this amendment: appending the guard-residual
+direction to the gate span (rank 71) reproduces z_lin on res0 to machine
+precision (delta ~ 1e-16) at both R6 anchors.
+
+Registered plan (gateG2):
+- Harness: identical to R6 except the measurement span is the guard-kept
+  span (C4 completed in the harness); the GN absorb is unchanged.
+- Anchors: tau = 2 d (the headline anchor, newly added), 18 d, 52 d.
+  Inputs from the committed 10.8b artifact via
+  scripts/make_gateG2_inputs.py -> sep_dynamic/gateG2_inputs.npz,
+  gateG2_params.json.
+- Criteria: unchanged from the R6 registration -- G1 |z_GN - z_lin| <=
+  0.3; G2a (4 sigma_F injection, undamped GN) |dev| <= 0.5 sigma_F;
+  G2b (u95_Kstatic injection, GN capped at 30x validated steps)
+  |dev_rel| <= 2%. The dev formulas keep the beta_hat_lin reference for
+  continuity with R6.
+- Record rule: gateG2 supersedes R6 as the live-gate record of record;
+  the R6 run remains recorded with the corrected diagnosis above. If any
+  gateG2 criterion still fails, the failure is carried at its measured
+  size as a genuine live-refit systematic -- no rescoring.
+- Registered expectation (stated for honesty, not a criterion): offsets
+  of order 0.01 sigma_F at 18/52 d per the decomposition; tau = 2 d is
+  the genuinely new measurement (different quadrature mix: the outer
+  carrier is near-instantaneous, g1 = 0.999).
