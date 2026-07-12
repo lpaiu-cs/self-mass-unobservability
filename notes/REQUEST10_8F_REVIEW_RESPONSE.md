@@ -181,6 +181,21 @@ Registered plan (gateG2):
   the genuinely new measurement (different quadrature mix: the outer
   carrier is near-instantaneous, g1 = 0.999).
 
+### G-2 addendum: worst-phase headline template (committed BEFORE its run)
+
+Review point (PR #2): the gateG2 tau = 2 d anchor exercised the
+ZERO-PHASE template/params pair (t_off = 0, 10.8b artifact), while the
+quoted headline is the 10.8e worst-phase row (t_off = 104.3494 d,
+u95pm_K10 = 1.68e-9). Registered addendum: gate the exact worst-phase
+pair. Inputs: T2wp/Tc2wp = causal templates at tau = 2 d,
+t_off = 104.3494 d; params (beta_hat_lin = +0.0643 sigma_F, sigma_fisher,
+u95 tiers) recomputed on the pipeline span by make_gateG2_inputs.py and
+ASSERTED to reproduce the committed u95pm_K10 to < 1e-6. Criteria
+unchanged (G1 0.3 sigma_F on |z_GN - z_lin|; G2a 0.5 sigma_F at
+4 sigma_F injection; G2b 2% at the K_static-scaled amplitude). Runner:
+scripts/wsl/wsl_gateG2wp.py -> sep_dynamic/sep_gateG2wp.json; the
+adjudication derives its verdict from the recorded output.
+
 ### G-2 outcome (recorded post-run, 2026-07-12)
 
 gateG2 (sep_gateG2.json): **9/9 PASS** under the unchanged registered
