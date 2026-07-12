@@ -70,5 +70,6 @@ This note lists every reduction rule currently allowed in the `Delta<=4` minimal
 - Status: Proven. Under the currently allowed rules, every acceleration-bearing scalar is reducible.
 - Status: Proven. Under the corrected gradient kinematics, `gradE2` is the unique surviving gradient invariant; `divE2` vanishes and `mixedGradE2` coincides with `gradE2`.
 - Status: Conjectural. Under the currently allowed rules, `divB2`, `mixedGradB2`, and `EBDtB` remain surviving `E/B`-sector candidates once the magnetic family is admitted.
-- Status: Conjectural. Under the currently allowed rules, `S`, `SE2`, `SB2`, `DtS_E2`, `DtS_B2`, `gradS2`, and `divEGradS` remain surviving scalar-family candidates once the scalar-like family is admitted.
-- Status: Conjectural. Under the derivative-only scalar rule, `dotS2`, `gradS2`, `DtS_E2`, `DtS_B2`, and `divEGradS` remain surviving candidates even after bare `S` has been excluded.
+- Status: Conjectural. Under the currently allowed rules, `S`, `SE2`, `SB2`, `DtS_E2`, `DtS_B2`, and `gradS2` remain surviving scalar-family candidates once the scalar-like family is admitted.
+- Status: Conjectural. Under the derivative-only scalar rule, `dotS2`, `gradS2`, `DtS_E2`, and `DtS_B2` remain surviving candidates even after bare `S` has been excluded.
+- Status: Proven (corrected 2026-07-12). The mixed scalar cross-gradient `divEGradS` is no longer a survivor in either scalar audit: it contains `\nabla_i E^{ij}`, which vanishes in the external vacuum under the corrected STF-3 gradient kinematics. See [`../lemmas/07-gradient-sector-audit.md`](../lemmas/07-gradient-sector-audit.md).
