@@ -150,6 +150,36 @@ try:
 except FileNotFoundError:
     out['gateG2_record_of_record'] = 'sep_gateG2.json not present'
 
+# verdict text is DERIVED from the gateG2 output, never hardcoded: a
+# missing or failing re-run must show up in this artifact as such
+g2rec = out['gateG2_record_of_record']
+if isinstance(g2rec, dict):
+    max_g1 = max(abs(v['offset_sigma_F']) for v in g2rec['G1'].values())
+    max_g2a = max(abs(v['dev_sigma_F']) for v in g2rec['G2a'].values())
+    max_g2b = max(abs(v['dev_rel']) for v in g2rec['G2b'].values())
+    n_pass = sum(bool(v['pass']) for blk in ('G1', 'G2a', 'G2b')
+                 for v in g2rec[blk].values())
+    n_tot = sum(len(g2rec[blk]) for blk in ('G1', 'G2a', 'G2b'))
+    record = ('sep_gateG2.json: C4-complete harness, anchors tau = 2/18/52 d '
+              '(headline anchor directly gated), registered criteria '
+              'unchanged -- %d/%d %s; max |G1 offset| %.3f sigma_F, max '
+              '|G2a dev| %.3f sigma_F, max |G2b dev| %.3f%%.'
+              % (n_pass, n_tot, 'PASS' if g2rec['all_pass'] else
+                 'with FAILURES', max_g1, max_g2a, 100.0*max_g2b))
+    if g2rec['all_pass']:
+        systematic = ('live-refit displacement <= %.3f sigma_F as measured '
+                      '(replaces the earlier 0.6 sigma_F carry, which was '
+                      'the harness artifact)' % max_g1)
+    else:
+        systematic = ('gateG2 recorded FAILURES: carry each failed '
+                      'deviation at its measured size; the supersession '
+                      'claim does NOT hold until adjudicated')
+else:
+    record = ('sep_gateG2.json NOT PRESENT -- there is no superseding '
+              'live-gate record; the R6 verdicts (G1/G2a FAIL) stand')
+    systematic = ('R6-era carry applies: the span decomposition bounds the '
+                  'harness artifact, but no corrected-harness measurement '
+                  'exists')
 out['adjudication'] = {
     'finding': ('the R6 G1/G2a failures were a HARNESS defect, not a live-'
                 'model property: the R6 measurement span omitted the C4 '
@@ -160,14 +190,8 @@ out['adjudication'] = {
                 'LS-vs-MAP walk; that attribution was wrong as stated -- '
                 'the walk projects onto the estimator at only the '
                 '0.01-sigma level.'),
-    'record_of_record': ('sep_gateG2.json: C4-complete harness, anchors '
-                         'tau = 2/18/52 d (headline anchor directly gated), '
-                         'registered criteria unchanged -- 9/9 PASS; max G1 '
-                         'offset 0.035 sigma_F, max G2a dev 0.057 sigma_F, '
-                         'max G2b dev 0.13%.'),
-    'systematic_carried': ('live-refit displacement <= 0.035 sigma_F as '
-                           'measured (replaces the earlier 0.6 sigma_F '
-                           'carry, which was the harness artifact)'),
+    'record_of_record': record,
+    'systematic_carried': systematic,
     'status': ('R6 verdicts stand as recorded (FAIL under its harness); '
                'amendment G-2 (pre-committed) governs the supersession; '
                'no criterion was redefined.'),

@@ -91,13 +91,13 @@ def eval_at(dth):
     return fit.Get_time_residuals().copy()
 
 
-STEPS = np.array(json.load(open('artifacts/finite_jacobian_meta.json'))['abs_steps'])
+# validated steps: the committed v2 metadata is the primary (and the one
+# the run of record used); the legacy artifacts/ tree is only a fallback
 try:
-    STEPS_V2 = json.load(open(os.path.expanduser(
-        '~/work/nutimo_pilot/run_planetGR/finite_jacobian_v2_meta.json')))['abs_steps']
-    STEPS = np.array(STEPS_V2)
-except Exception:
-    pass
+    STEPS = np.array(json.load(open('finite_jacobian_v2_meta.json'))['abs_steps'])
+except FileNotFoundError:
+    STEPS = np.array(json.load(
+        open('artifacts/finite_jacobian_meta.json'))['abs_steps'])
 
 
 def gn_absorb(beta_inj, tpl, label, cap=None):
