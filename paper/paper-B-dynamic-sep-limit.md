@@ -487,10 +487,15 @@ All quoted numbers reproduce deterministically from
 `scripts/sep_feasibility_gates.py` and `scripts/turn_search_10_8d.py`,
 anchor diagnosis from `scripts/anchor_resolution_10_8c.py`
 (-> `sep_dynamic/anchor_resolution_10_8c.json`), static sensitivity and
-`K_static` from `scripts/sep_static_sensitivity.py`, live-gate inputs and
-adjudication from `scripts/make_gateG2_inputs.py` and
-`scripts/gateG_adjudicate.py` (-> `sep_dynamic/sep_gateG2.json`,
-`sep_dynamic/sep_gateG_adjudication.json`). Inputs of record:
+`K_static` from `scripts/sep_static_sensitivity.py`. The live-gate chain
+is three-stage: `scripts/make_gateG2_inputs.py` stages the templates and
+parameters (`gateG2_inputs.npz`, `gateG2_params.json`); the gate records
+themselves are produced *in the WSL runtime* by
+`scripts/wsl/wsl_gateG2.py` and `scripts/wsl/wsl_gateG2wp.py`
+(-> `sep_dynamic/sep_gateG2.json`, `sep_dynamic/sep_gateG2wp.json`); and
+`scripts/gateG_adjudicate.py` (stock numpy) derives the adjudication from
+those returned records (-> `sep_dynamic/sep_gateG_adjudication.json`).
+Inputs of record:
 `baseline_planetGR.npz`, `finite_jacobian_v2.npy` (+ `jac_v2/`),
 `sep_dynamic/col_SEP_D.npz`, `sep_dynamic/sep_dynamic_columns.npz`, and the
 integrator patch `sep_dynamic/patches/sepdyn.patch`. Live-model
