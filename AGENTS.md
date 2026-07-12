@@ -67,9 +67,9 @@ Maintain these files during dynamic-chi work:
 - `docs/observable-targets.md`
 - `docs/adiabatic-limit.md`
 - `docs/nonadiabatic-regime.md`
-- `docs/failure-ledger.md`
+- `docs/failure-ledger-dynamic-chi.md`
 
-If a model fails to escape collapse, record the exact failing step and the minimal missing assumption in `docs/failure-ledger.md`.
+If a model fails to escape collapse, record the exact failing step and the minimal missing assumption in `docs/failure-ledger-dynamic-chi.md` (the theorem track owns `docs/failure-ledger.md`).
 
 ## MVP Done Rule
 

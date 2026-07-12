@@ -6,7 +6,8 @@ standard fitted parameter set of parfile-planetGR-max-bestfit, one column
 per fitted parameter, checkpointed to jac/col_*.npz.
 
 Usage: jacobian_runner.py <worker_id> <n_workers>
-Steps: absolute step per fitted parameter from steps.npz (0.3 * MCMC sigma).
+Steps: absolute step per fitted parameter from steps.npz (FRAC * MCMC
+sigma; the run of record used FRAC = 1.0 -- see prep_steps.py, 10.8f C11).
 Column definition: J[:,j] = (res(p_j + h) - res(p_j - h)) / (2 h_abs)  [us / unit]
 """
 import sys, os, time

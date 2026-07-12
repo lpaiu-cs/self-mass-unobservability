@@ -90,8 +90,11 @@ def parse_document(text: str) -> tuple[str, dict[str, str], str, list[str]]:
         i += 1
 
     abstract_lines: list[str] = []
+    in_fence = False
     while i < len(lines):
-        if lines[i].strip() == "---":
+        if lines[i].strip().startswith("```"):
+            in_fence = not in_fence
+        if lines[i].strip() == "---" and not in_fence:
             i += 1
             break
         abstract_lines.append(lines[i])
@@ -172,9 +175,11 @@ def table_latex(lines: list[str]) -> str:
     ]
     if max(maxlens) > 40:
         total = sum(maxlens)
-        cols = "".join(
-            r"p{%.2f\textwidth}" % max(0.07, 0.92 * ml / total) for ml in maxlens
-        )
+        widths = [max(0.07, 0.92 * ml / total) for ml in maxlens]
+        budget = 0.92 - 0.02 * len(maxlens)   # leave room for column padding
+        scale = budget / sum(widths)
+        widths = [w * scale for w in widths]
+        cols = "".join(r"p{%.2f\textwidth}" % w for w in widths)
     else:
         cols = "l" * len(header)
 

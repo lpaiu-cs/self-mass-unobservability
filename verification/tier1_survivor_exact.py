@@ -139,8 +139,11 @@ if __name__ == "__main__":
         allok = allok and ok
         print(f"{label:<16}{str(wv):<20}{tot:>9}{target:>12}  {'MATCH' if ok else '*** MISMATCH ***'}")
     print("-" * 76)
-    print("exact-match survivor rank: 8 of 8 sectors against the corrected audit")
-    print("(E,B,S,V,T,Q,U,Z = 7,18,33,17,19,25,19,23).")
+    n_ok = sum(1 for label, fams, target in SECTORS if survivor_exact(fams)[0] == target)
+    print(f"exact-match survivor rank: {n_ok} of 8 sectors against the corrected audit")
+    print("(targets E,B,S,V,T,Q,U,Z = 7,18,33,17,19,25,19,23).")
+    if not allok:
+        print("*** AT LEAST ONE SECTOR MISMATCHED -- see the rows above ***")
     print("Historical note: the rank-4 (Q) audit originally recorded 19; that count")
     print("was incomplete and has since been corrected to 25 (now frozen). The six")
     print("omitted survivors are the higher-degree mixed operators the original r4")
@@ -149,3 +152,4 @@ if __name__ == "__main__":
     print("rotation-invariant, pure-primitive (non-total-derivative); the original")
     print("mixed candidates capped at degree 2 in E (E2Q2). Independent re-derivation")
     print("and cross-check: rederive_rank4.py, rank4_spec_check.py; docs/family-class-table.md.")
+    raise SystemExit(0 if allok else 1)

@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Prepare per-parameter absolute finite-difference steps (0.3 * MCMC sigma)."""
+"""Prepare per-parameter absolute finite-difference steps (FRAC * MCMC sigma).
+
+PROVENANCE (10.8f C11): the steps of record used FRAC = 1.0 (below); older
+docstrings said 0.3 * sigma, which is wrong -- FRAC as stored in steps.npz
+is authoritative. The source chain lives in the runtime tree at
+Analysis/Synthesis/MCMC-planetGR.npz (not in this repository)."""
 import os
 import numpy as np
 
