@@ -25,7 +25,11 @@ automatically.
 
 Building-block tensor conventions (match survivor_rank_check.py):
   E, DtE, Dt2E : 3x3 symmetric trace-free                      (rank 2)
-  G = grad E   : G[k] is 3x3 STF for each k (free k, STF ij)   (rank 3)
+  G = grad E   : totally symmetric trace-free rank-3 (STF-3)   (rank 3)
+                 [grad E = partial_k partial_i partial_j Phi is symmetric in
+                  ALL indices by Schwarz and trace-free in the external vacuum
+                  (nabla^2 Phi = 0, the same condition that makes E traceless);
+                  7 components, not the 15 of a generic (STF-2) x vector]
   a            : 3-vector                                       (rank 1)
 """
 
@@ -51,13 +55,30 @@ def rand_stf():
     return S - np.eye(3) * np.trace(S) / 3.0
 
 
+def rand_stf3():
+    """Random totally symmetric trace-free rank-3 tensor (STF-3, 7 dof)."""
+    T = rng.standard_normal((3, 3, 3))
+    S = np.zeros((3, 3, 3))
+    for p in itertools.permutations(range(3)):
+        S += np.transpose(T, p)
+    S /= 6.0
+    t = np.einsum("aac->c", S)  # trace vector (same for every pair by symmetry)
+    d = np.eye(3)
+    S -= (
+        np.einsum("ab,c->abc", d, t)
+        + np.einsum("bc,a->abc", d, t)
+        + np.einsum("ca,b->abc", d, t)
+    ) / 5.0
+    return S
+
+
 def sample_tensors():
     """One shared random instance per block type (identical factors share it)."""
     return {
         "E": rand_stf(),
         "DtE": rand_stf(),
         "Dt2E": rand_stf(),
-        "G": np.stack([rand_stf() for _ in range(3)]),  # G[k] STF
+        "G": rand_stf3(),  # grad E: STF-3 octupole (Schwarz + vacuum)
         "a": rng.standard_normal(3),
     }
 
@@ -129,17 +150,18 @@ THEIR = {
     (("DtE", 1), ("E", 1)): (1, 1),
     (("E", 3),): (1, 1),
     (("E", 1), ("a", 2)): (1, 1),
-    (("G", 1), ("a", 1)): (1, 1),
     (("Dt2E", 1), ("E", 1)): (1, 1),
     (("DtE", 2),): (1, 1),
     (("DtE", 1), ("E", 2)): (1, 1),
     (("DtE", 1), ("a", 2)): (1, 1),
     (("E", 4),): (2, 1),   # E2^2, E4 with 1 relation E4 = E2^2/2
     (("E", 2), ("a", 2)): (2, None),   # a2E2, aE2a
-    (("E", 1), ("G", 1), ("a", 1)): (3, None),  # aEGradE_1,2,3
-    (("G", 2),): (3, 3),   # divE2, gradE2, mixedGradE2
+    (("E", 1), ("G", 1), ("a", 1)): (1, 1),  # aEGradE_2 (STF-3 G: single class)
+    (("G", 2),): (1, 1),   # gradE2 only (STF-3 G: divE2 = 0, mixedGradE2 = gradE2)
     (("a", 4),): (1, 1),
 }
+# NOTE: the (G, a) signature (old aDivE) is absent: with G an STF-3 octupole
+# its only contraction a_j G_iij is an internal trace and vanishes identically.
 
 
 def norm_sig(sig):

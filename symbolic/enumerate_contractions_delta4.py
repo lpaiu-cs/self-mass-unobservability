@@ -33,7 +33,12 @@ BLOCK_TYPES = (
     BlockType("E", 1, 2, parity=0, sym_groups=((0, 1),), tracefree_pairs=((0, 1),)),
     BlockType("a", 1, 1, parity=1),
     BlockType("DtE", 2, 2, parity=0, sym_groups=((0, 1),), tracefree_pairs=((0, 1),)),
-    BlockType("GradE", 2, 3, parity=1, sym_groups=((1, 2),), tracefree_pairs=((1, 2),)),
+    # GradE = \nabla_k E_ij = \partial_k\partial_i\partial_j\Phi is TOTALLY symmetric in
+    # (k,i,j) by equality of mixed partials (Schwarz), and in the external vacuum
+    # (\nabla^2\Phi = 0 -- the same condition that makes E itself traceless) it is fully
+    # trace-free: an STF-3 octupole. Modeling it as symmetric/trace-free only on the E
+    # indices (k free) over-counts the gradient sector 1 -> 3.
+    BlockType("GradE", 2, 3, parity=1, sym_groups=((0, 1), (1, 2)), tracefree_pairs=((0, 1), (1, 2), (0, 2))),
     BlockType("Dt2E", 3, 2, parity=0, sym_groups=((0, 1),), tracefree_pairs=((0, 1),)),
 )
 
@@ -188,15 +193,10 @@ def classify_and_label(
             return "aEGradE_3", "Proven reducible", "lower-order EOM"
         return "aEGradE_2", "Proven reducible", "lower-order EOM"
     if signature == ("GradE", "GradE"):
-        if len(internal_pairs) == 2:
-            return "divE2", "Surviving candidate", "survives current rules"
-        if representative == (
-            ((0, 0), (1, 0)),
-            ((0, 1), (1, 1)),
-            ((0, 2), (1, 2)),
-        ):
-            return "gradE2", "Surviving candidate", "normal form"
-        return "mixedGradE2", "Surviving candidate", "survives current rules"
+        # With GradE an STF-3 octupole (totally symmetric by Schwarz, trace-free in
+        # vacuum), divE2 (an internal trace) is removed by bad_trace and mixedGradE2
+        # collapses onto gradE2 under total symmetry: a single gradient invariant.
+        return "gradE2", "Surviving candidate", "normal form"
     raise ValueError(f"Unhandled signature {signature} with representative {representative}")
 
 

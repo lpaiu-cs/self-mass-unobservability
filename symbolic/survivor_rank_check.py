@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from itertools import permutations
 
 import sympy as sp
 
@@ -27,55 +28,68 @@ def stf_matrix(prefix: str) -> tuple[sp.Matrix, tuple[sp.Symbol, ...]]:
     return matrix, (xx, xy, xz, yy, yz)
 
 
+def stf3_tensor(prefix: str) -> tuple[list[list[list[sp.Expr]]], tuple[sp.Symbol, ...]]:
+    """A totally symmetric, trace-free rank-3 tensor in 3D (an STF-3 octupole).
+
+    grad E = \\partial_k\\partial_i\\partial_j\\Phi is symmetric in ALL three indices
+    by equality of mixed partials (Schwarz) and, in the external vacuum
+    (\\nabla^2\\Phi = 0, the same condition that makes E traceless), trace-free on
+    every pair.  It therefore carries 7 independent components, not the 15 of a
+    generic (STF-2)\\otimes vector object.
+    """
+    xxx, xxy, xxz, xyy, xyz, yyy, yyz = sp.symbols(
+        f"{prefix}_xxx {prefix}_xxy {prefix}_xxz {prefix}_xyy {prefix}_xyz {prefix}_yyy {prefix}_yyz"
+    )
+    # trace-free conditions sum_a G_aaj = 0 fix the remaining three components
+    xzz = -(xxx + xyy)
+    yzz = -(xxy + yyy)
+    zzz = -(xxz + yyz)
+    seed = {
+        (0, 0, 0): xxx, (0, 0, 1): xxy, (0, 0, 2): xxz,
+        (0, 1, 1): xyy, (0, 1, 2): xyz, (0, 2, 2): xzz,
+        (1, 1, 1): yyy, (1, 1, 2): yyz, (1, 2, 2): yzz,
+        (2, 2, 2): zzz,
+    }
+    comp: dict[tuple[int, int, int], sp.Expr] = {}
+    for key, val in seed.items():
+        for perm in set(permutations(key)):
+            comp[perm] = val
+    tensor = [[[comp[(a, b, c)] for c in range(3)] for b in range(3)] for a in range(3)]
+    return tensor, (xxx, xxy, xxz, xyy, xyz, yyy, yyz)
+
+
 def survivor_polynomials() -> tuple[tuple[str, sp.Expr], ...]:
     electric, electric_vars = stf_matrix("E")
     electric_dot, dot_vars = stf_matrix("DtE")
-
-    grad_vars: list[sp.Symbol] = []
-    grad_blocks: list[sp.Matrix] = []
-    for grad_index in range(3):
-        block, block_vars = stf_matrix(f"GradE{grad_index}")
-        grad_blocks.append(block)
-        grad_vars.extend(block_vars)
+    grad, grad_vars = stf3_tensor("GradE")
 
     e2 = sp.expand(sum(electric[i, j] ** 2 for i in range(3) for j in range(3)))
     e3 = sp.expand((electric**3).trace())
     e2_sq = sp.expand(e2**2)
     dot_e2 = sp.expand(sum(electric_dot[i, j] ** 2 for i in range(3) for j in range(3)))
     grad_e2 = sp.expand(
-        sum(grad_blocks[k][i, j] ** 2 for k in range(3) for i in range(3) for j in range(3))
-    )
-    divergence = [
-        sp.expand(sum(grad_blocks[i][i, j] for i in range(3)))
-        for j in range(3)
-    ]
-    div_e2 = sp.expand(sum(entry**2 for entry in divergence))
-    mixed_grad_e2 = sp.expand(
-        sum(grad_blocks[k][i, j] * grad_blocks[i][k, j] for i in range(3) for j in range(3) for k in range(3))
+        sum(grad[k][i][j] ** 2 for k in range(3) for i in range(3) for j in range(3))
     )
 
-    _ = electric_vars, dot_vars, tuple(grad_vars)
+    _ = electric_vars, dot_vars, grad_vars
+    # divE2 and mixedGradE2 are no longer independent survivors: with grad E an
+    # STF-3 octupole, divE2 == 0 (trace-free) and mixedGradE2 == gradE2 (total
+    # symmetry).  The corrected Delta<=4 electric survivor set is the following five.
     return (
         ("E2", e2),
         ("E3", e3),
         ("E2^2", e2_sq),
         ("dotE2", dot_e2),
         ("gradE2", grad_e2),
-        ("divE2", div_e2),
-        ("mixedGradE2", mixed_grad_e2),
     )
 
 
 def survivor_variables() -> tuple[sp.Symbol, ...]:
     electric, electric_vars = stf_matrix("E")
     electric_dot, dot_vars = stf_matrix("DtE")
-    _ = electric, electric_dot
-    grad_vars: list[sp.Symbol] = []
-    for grad_index in range(3):
-        block, block_vars = stf_matrix(f"GradE{grad_index}")
-        _ = block
-        grad_vars.extend(block_vars)
-    return electric_vars + dot_vars + tuple(grad_vars)
+    grad, grad_vars = stf3_tensor("GradE")
+    _ = electric, electric_dot, grad
+    return electric_vars + dot_vars + grad_vars
 
 
 def coefficient_rank(polynomials: tuple[tuple[str, sp.Expr], ...]) -> tuple[sp.Matrix, tuple[tuple[int, ...], ...]]:
@@ -118,7 +132,7 @@ def survivor_rank_report() -> str:
         "Delta<=4 survivor rank audit",
         "",
         "Linear independence target:",
-        "- E2, E3, E2^2, dotE2, gradE2, divE2, mixedGradE2",
+        "- E2, E3, E2^2, dotE2, gradE2",
         "",
         f"Exact polynomial coefficient rank: {summary.total_rank}",
         f"E-sector rank: {summary.e_sector_rank}",
@@ -127,7 +141,9 @@ def survivor_rank_report() -> str:
         f"Monomial support size: {summary.monomial_count}",
         "",
         "Interpretation:",
-        "- The seven survivors are linearly independent as operators over constant coefficients.",
+        "- The five survivors are linearly independent as operators over constant coefficients.",
+        "- The gradient sector is one-dimensional (gradE2): with grad E an STF-3 octupole,",
+        "  divE2 vanishes (trace-free) and mixedGradE2 coincides with gradE2 (total symmetry).",
         "- This is a basis-independence statement modulo the allowed reductions, not algebraic functional independence.",
         "- In particular, E2^2 is a separate weight-4 operator even though it is the square of the weight-2 invariant E2.",
     ]

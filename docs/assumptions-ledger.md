@@ -34,8 +34,7 @@ under `Proven`; both now read `Assumption` for these eight.)
 ## Non-Assumption For M4
 
 - Status: Note. Finite invariant basis closure is not listed as an assumption in M4.
-- Status: Note. No transversality condition such as `\nabla_i E^{ij} = 0` is assumed in the current `Delta<=4` audit.
-- Status: Note. No vacuum/Bianchi identity is assumed to collapse `divE2` or `mixedGradE2` into `gradE2`.
+- Status: Note (corrected 2026-07-12). The gradient-block collapse `mixedGradE2 = gradE2`, `divE2 = 0` is **not an assumption**: it follows from the Schwarz total symmetry of `\nabla_k E_{ij} = \partial^3\Phi` (kinematics) and the external-vacuum condition `\nabla^2\Phi = 0` already in force for `E` itself. The pre-correction ledger listed these as optional identities that were declined; that bookkeeping was internally inconsistent and is superseded — see [`reduction-rules.md`](reduction-rules.md) and [`../lemmas/07-gradient-sector-audit.md`](../lemmas/07-gradient-sector-audit.md).
 - Status: Note. Contraction-level exhaustiveness for the exact current primitive blocks is attacked by explicit enumeration rather than by absence arguments.
 
 ## Non-Assumption For M5

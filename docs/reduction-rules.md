@@ -42,10 +42,20 @@ This note lists every reduction rule currently allowed in the `Delta<=4` minimal
 | `Tr(B^4) = \frac12 (Tr(B^2))^2` for a symmetric trace-free `3x3` tensor `B` | Proven | `B4` reduces to `B2^2 / 2` once the magnetic family is admitted. |
 | `Tr(EBEB) = (E:B)^2 + \frac12 Tr(E^2) Tr(B^2) - 2 Tr(E^2 B^2)` for symmetric trace-free `3x3` tensors `E, B` | Proven | `EBEB` reduces to `EB_sq + E2B2/2 - 2 TrE2B2` once the mixed quartic STF identity is admitted explicitly. |
 
+## Kinematic Identities Of The Gradient Block (Corrected 2026-07-12)
+
+- Status: Proven. `\nabla_k E_{ij} = \partial_k\partial_i\partial_j \Phi_{\rm ext}` is totally symmetric in `(k,i,j)` by equality of mixed partials (Schwarz). This is a kinematic property of the object itself, not an optional reduction rule; the audit has no license to decline it.
+- Status: Proven. In the external vacuum (`\nabla^2\Phi_{\rm ext} = 0` — the same condition that makes `E_{ij}` trace-free), `\nabla_k E_{ij}` is trace-free on every index pair. The gradient block is therefore an STF-3 octupole (7 components).
+
+| Rule | Status | Consequence |
+| --- | --- | --- |
+| Schwarz total symmetry of `\nabla_k E_{ij}` | Proven | `mixedGradE2 = gradE2`. |
+| Vacuum trace `\nabla_i E^{ij} = 0` | Proven | `divE2 = 0`; `aDivE` vanishes identically. |
+
+- Status: Note. The pre-correction audit declared these reductions "not allowed unless added explicitly" and modeled the gradient block as a generic `(STF\text{-}2)\otimes\text{vector}` object; that was internally inconsistent (the vacuum condition was already imposed on `E` itself) and dropped a kinematic identity. See [`../lemmas/07-gradient-sector-audit.md`](../lemmas/07-gradient-sector-audit.md) for the corrected audit and the recorded history.
+
 ## Not Allowed Unless Added Explicitly
 
-- Status: Proven. No transversality condition such as `\nabla_i E^{ij} = 0` is used in the current audit.
-- Status: Proven. No vacuum/Bianchi relation is used to collapse `divE2` or `mixedGradE2` into `gradE2`.
 - Status: Proven. No parity-odd epsilon-tensor identity is used in the current audit.
 - Status: Proven. No extra mixed `E/B` trace identity beyond the explicit quartic STF relation above is used to collapse `E2B2`, `EB_sq`, or `TrE2B2`.
 - Status: Proven. No scalar shift symmetry, derivative-only scalar rule, or scalar-background restriction is used unless stated explicitly in [`scalar-family-ordering.md`](scalar-family-ordering.md).
@@ -58,7 +68,7 @@ This note lists every reduction rule currently allowed in the `Delta<=4` minimal
 - Status: Proven. Under the currently allowed rules, `DtS`, `S_DtS`, `Dt2S`, `S_Dt2S`, `SE_DtE`, and `S_BDtB` are reducible once the scalar-like family is admitted.
 - Status: Proven. Under the currently allowed rules, `EBEB` is reducible once the explicit mixed quartic STF identity is admitted.
 - Status: Proven. Under the currently allowed rules, every acceleration-bearing scalar is reducible.
-- Status: Conjectural. Under the currently allowed rules, `divE2` and `mixedGradE2` remain surviving gradient candidates.
+- Status: Proven. Under the corrected gradient kinematics, `gradE2` is the unique surviving gradient invariant; `divE2` vanishes and `mixedGradE2` coincides with `gradE2`.
 - Status: Conjectural. Under the currently allowed rules, `divB2`, `mixedGradB2`, and `EBDtB` remain surviving `E/B`-sector candidates once the magnetic family is admitted.
 - Status: Conjectural. Under the currently allowed rules, `S`, `SE2`, `SB2`, `DtS_E2`, `DtS_B2`, `gradS2`, and `divEGradS` remain surviving scalar-family candidates once the scalar-like family is admitted.
 - Status: Conjectural. Under the derivative-only scalar rule, `dotS2`, `gradS2`, `DtS_E2`, `DtS_B2`, and `divEGradS` remain surviving candidates even after bare `S` has been excluded.
