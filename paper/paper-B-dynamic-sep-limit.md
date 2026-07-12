@@ -360,8 +360,9 @@ is *equally* elevated (`Z = 2.340`, `p = 0.28`), marking the mild elevation
 as noise/structure common to both quadrature conventions rather than a
 causal-response feature. Dictionary-anchored: `Z = 1.815`, `p = 0.47`
 (reported, not gating). Linear injection-recovery is exact at all anchors;
-live-model injection-recovery is exact to `<= 0.06 sigma_F` at detection
-amplitudes and `<= 0.13%` at limit amplitudes (Section 5).
+live-model injection-recovery is exact to `<= 0.10 sigma_F` at detection
+amplitudes and `<= 0.13%` at limit amplitudes across all gated pairs
+including the worst-phase headline pair (Section 5).
 
 ### 6.2 The upper limit
 

@@ -193,14 +193,28 @@ if isinstance(g2rec, dict):
               '|G2a dev| %.3f sigma_F, max |G2b dev| %.3f%%%s'
               % (n_pass, n_tot, 'PASS' if g2rec['all_pass'] else
                  'with FAILURES', max_g1, max_g2a, 100.0*max_g2b, wp_txt))
+    # the "all gated pairs" supersession statement requires BOTH the
+    # zero-phase battery AND the worst-phase headline addendum to pass
+    wp_pass = isinstance(gwp_rec, dict) and gwp_rec['all_pass']
     max_g1_all = max_g1
     if isinstance(gwp_rec, dict):
         max_g1_all = max(max_g1, abs(gwp_rec['G1_offset_sigma_F']))
-    if g2rec['all_pass']:
+    if g2rec['all_pass'] and wp_pass:
         systematic = ('live-refit displacement <= %.3f sigma_F as measured '
-                      'over all gated pairs (replaces the earlier 0.6 '
-                      'sigma_F carry, which was the harness artifact)'
-                      % max_g1_all)
+                      'over all gated pairs including the worst-phase '
+                      'headline pair (replaces the earlier 0.6 sigma_F '
+                      'carry, which was the harness artifact)' % max_g1_all)
+    elif g2rec['all_pass'] and isinstance(gwp_rec, dict):
+        systematic = ('zero-phase battery passes but the worst-phase '
+                      'headline pair recorded FAILURES (max |G1 offset| '
+                      '%.3f sigma_F): carry the failed deviations at their '
+                      'measured size; the headline-pair validation does '
+                      'NOT hold' % max_g1_all)
+    elif g2rec['all_pass']:
+        systematic = ('zero-phase battery passes but the worst-phase '
+                      'headline pair is UNGATED (sep_gateG2wp.json '
+                      'absent): the <= %.3f sigma_F carry applies to the '
+                      'zero-phase pairs only' % max_g1)
     else:
         systematic = ('gateG2 recorded FAILURES: carry each failed '
                       'deviation at its measured size; the supersession '
