@@ -3,7 +3,7 @@
 **Status:** draft manuscript (Paper A of the two-paper split; static free-fall sector)
 **Repository:** `lpaiu-cs/self-mass-unobservability` (main branch)
 **Author:** Juneyoung, Kim
-**Note:** Draft 2026-07-12, revision 1 (adversarial-review corrections: the gradient block \(\nabla E\) is an STF-3 octupole, collapsing the electric normal-form dimension from seven to five and shifting every family dimension — see Sections 3.2, 3.3, 7; framing and citation fixes throughout).
+**Note:** Draft 2026-07-12, revision 2. Revision 1 (adversarial-review corrections): the gradient block \(\nabla E\) is an STF-3 octupole, collapsing the electric normal-form dimension from seven to five and shifting every family dimension — see Sections 3.2, 3.3, 7; framing and citation fixes throughout. Revision 2 (review response): the STF-3 gradient reduction is made explicitly conditional on the leading-Newtonian harmonic-scalar-potential representation, promoted to premise \(A9\), and the tidal-EFT positioning is qualified accordingly — see Sections 2, 8.
 
 ---
 
@@ -20,7 +20,7 @@ equilibrium. What survives is a restricted EFT in which the body's self-energy c
 enter only through body-dependent sensitivity couplings of an already-formed
 object. We then prove, in the parity-even, nonspinning, local free-fall sector at
 fixed operator order \(\Delta \le 4\) and under an explicit assumption ledger
-\(A1\)–\(A8\): **(i)** the admissible parity-even scalar sensitivity operator space
+\(A1\)–\(A9\): **(i)** the admissible parity-even scalar sensitivity operator space
 is finite, reduces to an explicit finite normal-form basis of computed dimension (five for the electric sector), and — under locality
 and analyticity — the monopole response collapses to a finite Taylor jet in
 finitely many scalar coordinates (the *positive finite-family collapse theorem*);
@@ -99,7 +99,7 @@ remainder of this paper classifies those couplings.
 ### 1.3 Results
 
 Working in the worldline EFT (Section 2) at fixed order \(\Delta\le 4\) under the
-ledger \(A1\)–\(A8\):
+ledger \(A1\)–\(A9\):
 
 1. **Positive finite-family collapse (Section 3).** The parity-even scalar
    sensitivity operator space is finite; after explicit reductions it has a finite
@@ -125,17 +125,27 @@ ledger \(A1\)–\(A8\):
 ## 2. Worldline setup and assumptions
 
 We treat the body as a point worldline dressed by finite-size operators built from
-the external field evaluated on the worldline. The leading tidal object is the
-electric tidal tensor \(E_{ij}=\partial_i\partial_j\Phi_{\rm ext}\), a symmetric
-trace-free (STF) rank-2 tensor; its worldline time derivative \(D_\tau E_{ij}\) and
-spatial gradient \(\nabla_k E_{ij}\) enter at higher order, as do higher-multipole
-and additional primitive families. The gradient block carries kinematic structure
-that the enumeration must respect: \(\nabla_k E_{ij}=\partial_k\partial_i\partial_j
-\Phi_{\rm ext}\) is totally symmetric in \((k,i,j)\) by equality of mixed partials,
-and in the external vacuum (\(\nabla^2\Phi_{\rm ext}=0\), the same condition that
-makes \(E\) itself trace-free) it is trace-free on every index pair — an STF-3
-octupole with seven components, not a generic \(({\rm STF\text{-}2})\otimes
-{\rm vector}\) object with fifteen. The **monopole sensitivity** is the piece of the
+the external field evaluated on the worldline. Throughout we work in the
+leading-Newtonian, purely-electric regime in which the external field is a harmonic
+Newtonian scalar potential — the representation \(E_{ij}=\partial_i\partial_j
+\Phi_{\rm ext}\) with \(\nabla^2\Phi_{\rm ext}=0\), promoted to an explicit premise
+\(A9\) in the ledger below. The leading tidal object is then the electric tidal
+tensor \(E_{ij}\), a symmetric trace-free (STF) rank-2 tensor; its worldline time
+derivative \(D_\tau E_{ij}\) and spatial gradient \(\nabla_k E_{ij}\) enter at higher
+order, as do higher-multipole and additional primitive families. In this
+representation the gradient block carries kinematic structure that the enumeration
+must respect: \(\nabla_k E_{ij}=\partial_k\partial_i\partial_j\Phi_{\rm ext}\) is
+totally symmetric in \((k,i,j)\) by equality of mixed partials, and the harmonic
+condition \(\nabla^2\Phi_{\rm ext}=0\) (the same condition that makes \(E\) itself
+trace-free) makes it trace-free on every index pair — an STF-3 octupole with seven
+components, not a generic \(({\rm STF\text{-}2})\otimes{\rm vector}\) object with
+fifteen. This reduction is a consequence of the scalar-potential representation
+\(A9\), not of tracelessness of a generic electric tidal tensor: for the electric
+part of the Weyl tensor in the fully relativistic theory the covariant gradient
+\(\nabla_k E_{ij}\) additionally carries divergence and curl pieces fixed by the
+Bianchi (gravitoelectromagnetic) constraint equations (Danehkar 2022), which the
+harmonic-scalar-potential restriction removes; relaxing \(A9\) therefore restores
+the generic gradient sector (Sections 3.2, 8). The **monopole sensitivity** is the piece of the
 worldline action that renormalizes how the body's mass responds to the external
 field — the operator analogue of the coefficients in (1) — and is a scalar function
 of finitely many local invariants \(Y^I\).
@@ -155,6 +165,7 @@ assumption ledger, whose entries are **premises**, not derived results:
 | \(A6\) | self-bound equilibrium before external perturbation | separates formation from coupling |
 | \(A7\) | fixed operator order \(\Delta\le4\) | prevents a silent all-orders claim |
 | \(A8\) | locally finite primitive-family spectrum below the cutoff | finitely many species with \(w\le\Delta_{\max}\) |
+| \(A9\) | leading-Newtonian harmonic external potential: \(E_{ij}=\partial_i\partial_j\Phi_{\rm ext}\), \(\nabla^2\Phi_{\rm ext}=0\) (purely electric) | fixes the tidal representation; licenses the STF-3 gradient reduction |
 
 The classification criterion we use is explicit: an assumption is *load-bearing*
 if removing it changes a named conclusion, and the interesting load-bearing cases
@@ -166,7 +177,10 @@ all-orders tower, and there is no finite-basis claim left to test, so it is kept
 as a stated scope choice rather than a Section 5 entry. \(A1, A6\) delimit the
 sector, and \(A2\) is the sector restriction whose cost is quantified by Theorem 2:
 each family excluded by \(A2\) would, if admitted unsuppressed, contribute new
-survivors.
+survivors. \(A9\) is a representation premise: relaxing it to a generic
+electric-Weyl tidal tensor restores the divergence and curl gradient pieces
+(Section 3.2), so it is load-bearing for the gradient-sector dimensions, though we
+do not work it as a Section 5 escape.
 
 ---
 
@@ -240,7 +254,8 @@ where \(E2=E_{ij}E^{ij}\), \(E3=E_i{}^jE_j{}^kE_k{}^i\), and
 \(\nabla\!E2=(\nabla_kE_{ij})(\nabla^kE^{ij})\). The gradient sector is
 one-dimensional for a kinematic reason: as noted in Section 2, \(\nabla_kE_{ij}\)
 is an STF-3 octupole — totally symmetric by equality of mixed partials and
-trace-free in the external vacuum — and a single \(SO(3)\) irreducible carries
+trace-free in the external vacuum, both properties of the harmonic-scalar-potential
+representation \(A9\) — and a single \(SO(3)\) irreducible carries
 exactly one quadratic invariant. The two further contractions admitted by a
 generic \(({\rm STF\text{-}2})\otimes{\rm vector}\) model,
 \({\rm div}E2=(\nabla_iE^{ij})(\nabla^kE_{kj})\) and
@@ -456,7 +471,7 @@ The verification scripts and a written audit are in `verification/` and
 will accompany submission so that referees need no repository access. This
 manuscript's status labels follow the taxonomy in
 `docs/status-labels.md`: `Proven` marks a computationally or analytically established
-claim, `Assumption` marks the \(A1\)–\(A8\) premises, and bookkeeping/provenance is
+claim, `Assumption` marks the \(A1\)–\(A9\) premises, and bookkeeping/provenance is
 tagged `Note`.
 
 Finally, because the character/Molien count is order-agnostic — the same
@@ -500,9 +515,20 @@ waveform modeling. What this paper adds is orthogonal to that goal: a
 dependence on the body's own self-energy in free fall — together with the exact
 fixed-order reduction quotient with computed dimensions, the family-admission
 no-go, and the sharp assumption-boundary map. We are not aware of a prior
-classification of this sector under this question; the operator kinematics,
-however, deliberately match the established tidal-EFT conventions so that the
-two programs can be composed.
+classification of this sector under this question. The rank-2 tidal objects and the
+total-derivative and equation-of-motion reductions deliberately match the
+established tidal-EFT conventions so that the two programs can be composed. One
+qualification applies to the gradient sector: our STF-3 collapse of
+\(\nabla_kE_{ij}\) uses the leading-Newtonian harmonic-scalar-potential
+representation (premise \(A9\)), \(E_{ij}=\partial_i\partial_j\Phi_{\rm ext}\) with
+\(\nabla^2\Phi_{\rm ext}=0\). For the electric part of the Weyl tensor in the fully
+relativistic tidal EFT this representation does not hold — the covariant gradient
+carries additional divergence and curl pieces fixed by the Bianchi
+(gravitoelectromagnetic) constraint equations (Danehkar 2022) — so outside the
+harmonic-scalar-potential regime the gradient block is richer. The composition with
+the relativistic programs therefore holds at leading-Newtonian order, where the
+representations agree; the gradient-sector dimensions quoted here are specific to
+that regime.
 
 **The empirical anchor.** The theorem is structural, but its leading coordinate is
 already measured. The linear coefficient \(\sigma_1\) in (1) is, to leading
@@ -554,3 +580,4 @@ track.
 10. M. Levi and J. Steinhoff, *Spinning gravitating objects in the effective field theory in the post-Newtonian scheme*, JHEP **09**, 219 (2015). arXiv:1501.04956.
 11. Q. Henry, G. Faye, and L. Blanchet, *Tidal effects in the gravitational-wave phase evolution of compact binary systems to next-to-next-to-leading post-Newtonian order*, Phys. Rev. D **102**, 044033 (2020). arXiv:2005.13367.
 12. G. Kälin and R. A. Porto, *Post-Minkowskian effective field theory for conservative binary dynamics*, JHEP **11**, 106 (2020). arXiv:2006.01184.
+13. A. Danehkar, *Covariant evolution of gravitoelectromagnetism*, Universe **8**, 318 (2022). arXiv:2206.13946.

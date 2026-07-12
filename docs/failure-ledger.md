@@ -1,6 +1,6 @@
 # Failure Ledger
 
-- Status: Proven. Inside the stated theorem domain `A1`-`A8`, the positive finite-family collapse theorem is closed.
+- Status: Proven. Inside the stated theorem domain `A1`-`A9`, the positive finite-family collapse theorem is closed.
 - Status: Note. This file is no longer a to-do list. It is the sharp boundary-risk register for exact assumption-drop failures and scope escapes.
 - Status: Note. The older milestone-style ledger is preserved in [`archive/failure-ledger-history.md`](archive/failure-ledger-history.md).
 

@@ -8,7 +8,7 @@
 
 ## Layer Separation
 
-- Status: Proven. The original local no-state theorem is the positive collapse theorem already closed under `A1`-`A8`, including the no-orbital-timescale-state assumption `A4`.
+- Status: Proven. The original local no-state theorem is the positive collapse theorem already closed under `A1`-`A9`, including the no-orbital-timescale-state assumption `A4`.
 - Status: Proven. The finite-state local extension branch keeps locality `A3` and analyticity `A5` but admits finitely many explicit local state variables `\chi^a`.
 - Status: Proven. The hereditary branch is separate: it drops locality `A3` and is now represented sharply by the causal power-law kernel model in [`hereditary-counterexample-program.md`](hereditary-counterexample-program.md).
 - Status: Proven. The local nonanalytic branch is also separate: it keeps locality but drops analyticity `A5`, as recorded in [`nonanalytic-counterexample-program.md`](nonanalytic-counterexample-program.md).

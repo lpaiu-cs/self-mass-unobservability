@@ -6,7 +6,7 @@
 ## Theorem Domain
 
 - Status: Proven. The closed theorem domain is the parity-even, nonspinning, local MVP free-fall sector at fixed order `Delta <= 4`.
-- Status: Proven. The active domain assumptions are the `A1`-`A8` ledger assumptions in [`assumptions-ledger.md`](assumptions-ledger.md): quasi-static regime, nearly spherical body, local worldline EFT, no orbital-timescale internal state variable, analytic monopole response, fixed-order truncation, and local weight-spectrum finiteness below the cutoff.
+- Status: Proven. The active domain assumptions are the `A1`-`A9` ledger assumptions in [`assumptions-ledger.md`](assumptions-ledger.md): quasi-static regime, nearly spherical body, local worldline EFT, no orbital-timescale internal state variable, analytic monopole response, fixed-order truncation, local weight-spectrum finiteness below the cutoff, and a leading-Newtonian harmonic-scalar-potential tidal representation.
 - Status: Proven. Within that domain, the irreducible primitive-family envelope closes on the audited scalar, vector, rank-2 STF, and genuine rank-`L >= 3` STF classes.
 
 ## Main Positive Theorem
