@@ -95,8 +95,12 @@ Confirmed `Proven` (independently reproduced in `verification/`):
   (`L=2..12`).
 
 Should NOT read `Proven` yet:
-- Rank-4 (`Q`) family completeness / the unqualified envelope-closure claim
-  (incomplete — see §2).
-- `A1`-`A8` (assumptions, not theorems — see §1).
+- `A1`-`A8` (assumptions, not theorems — see §1; now tagged `Assumption`).
+
+Resolved since this audit:
+- Rank-4 (`Q`) family completeness: the omitted higher-degree survivors were
+  re-derived, the survivor dimension corrected from 19 to 25, and the `r4`
+  scripts plus `docs/family-class-table.md` updated (see §2). The
+  envelope-closure dimension now reads `Proven` at the corrected count 25.
 
 Everything above is reproducible from the scripts in this directory.

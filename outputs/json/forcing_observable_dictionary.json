@@ -1,0 +1,94 @@
+{
+  "assumptions": {
+    "drive_template": "F(Y(t)) = (a/r(t))^p through O(e^2)",
+    "observable_template": "O_hat(Omega_k) = Lambda(Omega_k) G(i Omega_k) F_hat(Omega_k)",
+    "scope": "symbolic forcing/observable dictionary; no data fitting",
+    "transfer": "G(z) = c_Y + beta/(1 + tau_chi z)"
+  },
+  "observable_harmonic_components": {
+    "calibrated_cos": "beta/(Omega**2*tau_chi**2 + 1) + c_Y",
+    "calibrated_sin": "Omega*beta*tau_chi/(Omega**2*tau_chi**2 + 1)",
+    "cos_coefficient": "F_k*Lambda*(beta + c_Y*(Omega**2*tau_chi**2 + 1))/(Omega**2*tau_chi**2 + 1)",
+    "sin_coefficient": "F_k*Lambda*Omega*beta*tau_chi/(Omega**2*tau_chi**2 + 1)"
+  },
+  "orbital_two_harmonic_dotf_obstruction": "3*beta*n**2*tau_chi**3/((n**2*tau_chi**2 + 1)*(4*n**2*tau_chi**2 + 1))",
+  "power_law_orbital_harmonics_to_e2": {
+    "constant": "e**2*p*(p - 1)/4 + 1",
+    "first_harmonic": "e*p*cos(n*t)",
+    "full_to_e2": "e**2*p*(p - 1)/4 + e**2*p*(p + 3)*cos(2*n*t)/4 + e*p*cos(n*t) + 1",
+    "second_harmonic": "e**2*p*(p + 3)*cos(2*n*t)/4"
+  },
+  "power_law_series_residual_to_e2": "0",
+  "rows": [
+    {
+      "claim_status": "Counterexample candidate",
+      "forcing_class": "normalized invariant Y(r)/Y_* = (a/r)^p",
+      "frequency_source": "single eccentric orbit gives n and 2n through O(e^2)",
+      "missing_assumption": "nonzero e, p, p+3, beta, tau_chi, and Lambda",
+      "notes": "This supplies the first concrete F(Y(t)) template without using data or clock-sector assumptions.",
+      "observable_projection": "linear channel O_hat = Lambda G F_hat",
+      "term": "orbital_power_law_harmonics",
+      "verdict": "concrete single-system sweep candidate"
+    },
+    {
+      "claim_status": "Counterexample candidate",
+      "forcing_class": "any known harmonic drive F_k cos(Omega_k t)",
+      "frequency_source": "one or more known drive frequencies",
+      "missing_assumption": "projection must not be arbitrary per frequency",
+      "notes": "If Lambda is common, O_hat/(Lambda F_hat) recovers G. If Lambda is a finite polynomial nuisance, raise the comparator order accordingly.",
+      "observable_projection": "known nonzero Lambda or finite-dimensional Lambda(Omega)",
+      "term": "calibrated_linear_projection",
+      "verdict": "preserves the pole relation after calibration"
+    },
+    {
+      "claim_status": "Conjectural",
+      "forcing_class": "same drive construction across several systems",
+      "frequency_source": "different orbital frequencies across systems",
+      "missing_assumption": "common tau_chi or independently specified body-dependence",
+      "notes": "Without shared parameters, each system can be fit by its own effective derivative coefficients.",
+      "observable_projection": "system-specific but modeled projection",
+      "term": "multi_system_sweep",
+      "verdict": "usable only with shared tau_chi relation"
+    },
+    {
+      "claim_status": "Counterexample candidate",
+      "forcing_class": "F = F1 cos(Omega1 t) + F2 cos(Omega2 t)",
+      "frequency_source": "two known distinct drives in one system",
+      "missing_assumption": "known distinct drives and nonzero projection",
+      "notes": "Enough to beat real degree-1 or degree-2 derivative EFTs, not arbitrary higher finite order.",
+      "observable_projection": "linear channel O_hat = Lambda G F_hat",
+      "term": "independent_two_tone_forcing",
+      "verdict": "two transfer samples but no sidebands"
+    },
+    {
+      "claim_status": "Proven",
+      "forcing_class": "any",
+      "frequency_source": "any finite sampled set",
+      "missing_assumption": "finite or calibrated observable projection",
+      "notes": "An arbitrary frequency-local projection nuisance can absorb the pole relation.",
+      "observable_projection": "unconstrained complex Lambda(Omega_k)",
+      "term": "arbitrary_projection_failure",
+      "verdict": "dictionary collapses"
+    },
+    {
+      "claim_status": "Proven",
+      "forcing_class": "power-law orbital harmonic template",
+      "frequency_source": "e=0, p=0, or p=-3 at O(e^2)",
+      "missing_assumption": "nonzero harmonic content in selected invariant",
+      "notes": "No eccentric modulation, no first harmonic, or no second harmonic at this order removes the two-point test.",
+      "observable_projection": "any",
+      "term": "circular_or_flat_drive_failure",
+      "verdict": "insufficient harmonic sweep"
+    }
+  ],
+  "schema": [
+    "term",
+    "claim_status",
+    "forcing_class",
+    "frequency_source",
+    "observable_projection",
+    "verdict",
+    "missing_assumption",
+    "notes"
+  ]
+}

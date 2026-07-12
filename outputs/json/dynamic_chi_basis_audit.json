@@ -1,0 +1,131 @@
+{
+  "assumptions": {
+    "main_drive": "F(t) = F0 cos(Omega t)",
+    "model": "tau_chi dot chi + chi = alpha F(t)",
+    "readout": "delta(m/m0) = c_Y F + c_chi chi",
+    "scope": "symbolic basis audit; no empirical runtime"
+  },
+  "derivative_series_residual_order_3": "-I*Omega**4*alpha*c_chi*tau_chi**4/(Omega*tau_chi - I)",
+  "monochromatic_components": {
+    "in_phase": "F0*(alpha*c_chi + c_Y*(Omega**2*tau_chi**2 + 1))/(Omega**2*tau_chi**2 + 1)",
+    "quadrature": "F0*Omega*alpha*c_chi*tau_chi/(Omega**2*tau_chi**2 + 1)",
+    "quadrature_over_in_phase_chi_only": "Omega*tau_chi"
+  },
+  "polynomial_obstruction_order_3": {
+    "conclusion": "no finite polynomial in i Omega matches alpha/(1+i Omega tau_chi) when alpha and tau_chi are nonzero",
+    "constant_coefficient_after_recursion": "-alpha",
+    "highest_power_coefficient": "d3*tau_chi",
+    "polynomial_identity": "Omega**4*d3*tau_chi + Omega**3*(-I*d2*tau_chi - I*d3) + Omega**2*(-d1*tau_chi - d2) + Omega*(I*d0*tau_chi + I*d1) - alpha + d0"
+  },
+  "readout_transfer": "alpha*c_chi/(I*Omega*tau_chi + 1) + c_Y",
+  "rows": [
+    {
+      "absorption_target": "static sensitivity coefficient c_Y_eff",
+      "claim_status": "Proven",
+      "comparator_basis": "instantaneous static F coefficient",
+      "drive_scope": "single monochromatic drive",
+      "notes": "The cos component alone is not novel; it can be absorbed into a frequency-local static amplitude.",
+      "observable_status": "degenerate",
+      "projection_result": "in-phase cos(Omega t) component is fit by one amplitude",
+      "term": "static_in_phase_amplitude"
+    },
+    {
+      "absorption_target": "none in instantaneous static basis",
+      "claim_status": "Counterexample candidate",
+      "comparator_basis": "instantaneous static F coefficient only",
+      "drive_scope": "single monochromatic drive with finite Omega tau_chi",
+      "notes": "The unmatched quadrature is proportional to alpha c_chi F0 Omega tau_chi/(1+Omega^2 tau_chi^2).",
+      "observable_status": "observable",
+      "projection_result": "sin(Omega t) quadrature remains outside static basis",
+      "term": "static_quadrature_phase_lag"
+    },
+    {
+      "absorption_target": "frequency-local dot F Wilson coefficient",
+      "claim_status": "Proven",
+      "comparator_basis": "local derivative basis {F, dot F} with free coefficients",
+      "drive_scope": "one known drive frequency",
+      "notes": "At one frequency, a0 F + a1 dot F fits both quadratures. This does not prove a dynamical internal state.",
+      "observable_status": "degenerate",
+      "projection_result": "one derivative coefficient fits the quadrature exactly",
+      "term": "single_frequency_dotF_fit"
+    },
+    {
+      "absorption_target": "derivative Wilson coefficients through order N",
+      "claim_status": "Proven",
+      "comparator_basis": "finite local derivative EFT through chosen order N",
+      "drive_scope": "Omega tau_chi << 1",
+      "notes": "The expansion of (1+tau_chi d/dt)^-1 reproduces the response to any fixed order after choosing N.",
+      "observable_status": "absorbed",
+      "projection_result": "absorbed order-by-order up to the truncation error",
+      "term": "adiabatic_derivative_series"
+    },
+    {
+      "absorption_target": "none for finite shared-coefficient polynomial basis",
+      "claim_status": "Counterexample candidate",
+      "comparator_basis": "finite static or finite-order polynomial derivative basis",
+      "drive_scope": "frequency-dependent response or varying drive frequency",
+      "notes": "The surviving object is not one quadrature point but the shared transfer relation alpha c_chi/(1+i Omega tau_chi).",
+      "observable_status": "observable",
+      "projection_result": "rational transfer with pole is outside any finite polynomial basis",
+      "term": "finite_tau_rational_transfer"
+    },
+    {
+      "absorption_target": "static sensitivity redefinition",
+      "claim_status": "Proven",
+      "comparator_basis": "instantaneous static F coefficient",
+      "drive_scope": "tau_chi = 0",
+      "notes": "The readout reduces to c_Y -> c_Y + alpha c_chi.",
+      "observable_status": "null",
+      "projection_result": "quadrature vanishes and chi = alpha F",
+      "term": "tau_zero_collapse"
+    },
+    {
+      "absorption_target": "static or secular offset",
+      "claim_status": "Proven",
+      "comparator_basis": "instantaneous static or secular basis",
+      "drive_scope": "Omega = 0",
+      "notes": "Zero-frequency forcing has no delayed quadrature.",
+      "observable_status": "null",
+      "projection_result": "phase lag vanishes",
+      "term": "omega_zero_collapse"
+    },
+    {
+      "absorption_target": "not applicable",
+      "claim_status": "Proven",
+      "comparator_basis": "any timing basis",
+      "drive_scope": "alpha c_chi = 0",
+      "notes": "There is no dynamic contribution in the measured readout.",
+      "observable_status": "null",
+      "projection_result": "internal state is either undriven or unread",
+      "term": "alpha_cchi_zero_collapse"
+    },
+    {
+      "absorption_target": "not applicable",
+      "claim_status": "Proven",
+      "comparator_basis": "sideband search basis",
+      "drive_scope": "linear two-frequency drive",
+      "notes": "Linearity gives superposition only; sidebands need nonlinear input or readout.",
+      "observable_status": "null",
+      "projection_result": "no Omega1+Omega2 or |Omega1-Omega2| rows are generated",
+      "term": "linear_two_frequency_sidebands"
+    }
+  ],
+  "schema": [
+    "term",
+    "claim_status",
+    "drive_scope",
+    "comparator_basis",
+    "projection_result",
+    "observable_status",
+    "absorption_target",
+    "notes"
+  ],
+  "single_frequency_derivative_fit": {
+    "a0": "(alpha*c_chi + c_Y*(Omega**2*tau_chi**2 + 1))/(Omega**2*tau_chi**2 + 1)",
+    "a1": "-alpha*c_chi*tau_chi/(Omega**2*tau_chi**2 + 1)"
+  },
+  "static_only_residual": {
+    "matched_static_amplitude": "F0*(alpha*c_chi + c_Y*(Omega**2*tau_chi**2 + 1))/(Omega**2*tau_chi**2 + 1)",
+    "unmatched_quadrature": "F0*Omega*alpha*c_chi*tau_chi/(Omega**2*tau_chi**2 + 1)"
+  }
+}

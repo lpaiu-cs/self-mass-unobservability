@@ -1,7 +1,7 @@
-# collapse-theorem
+# self-mass-unobservability
 
-Status: Proven. This repository is now a closed theorem and counterexample package for the free-fall sector of the self-mass-unobservability program.
-Status: Proven. The mathematical content is frozen unless a direct contradiction is found during cleanup or later review.
+Status: Note. This repository carries two closed tracks: the frozen static theorem-and-counterexample package (Paper A), and the dynamic-chi measurement program that instruments the theorem's `A4` escape (Paper B).
+Status: Note. The static mathematical content is frozen unless a direct contradiction is found during cleanup or later review.
 
 ## Authoritative Entry Points
 
@@ -10,6 +10,16 @@ Status: Proven. The mathematical content is frozen unless a direct contradiction
 - Use [`docs/paper-outline.md`](docs/paper-outline.md) for the paper-facing structure of the theorem track, and [`paper/paper-A-collapse-theorem.md`](paper/paper-A-collapse-theorem.md) for the current Paper A draft.
 - Use [`docs/release-note.md`](docs/release-note.md) for the compact publication and handoff summary.
 - Use [`docs/reproducibility-note.md`](docs/reproducibility-note.md) for the recommended smoke tests, and [`verification/`](verification/README.md) for the independent re-derivation of the family survivor counts (including the corrected rank-4 = 25).
+
+## Dynamic-Chi Program (Requests 10.x, Paper B)
+
+The dynamic track instruments the theorem's `F-A4+` state-augmented salvage — the finite state pair `(beta, tau_chi)` of an orbital-timescale internal state — on the pulsar triple PSR J0337+1715, and quotes the program's first real-data upper limits.
+
+- Entry point: [`paper/paper-B-dynamic-sep-limit.md`](paper/paper-B-dynamic-sep-limit.md) (draft manuscript; LaTeX via `paper/build_paper_b.py`).
+- Headline: `|delta Delta| < 1.68e-9` (95% statistical CL x `K_dyn = 10` systematic anchor; `tau_chi = 2 d`, worst drive phase) over `tau_chi in [2, 500] d`, per `request10_external/sep_dynamic/sep_phase_marg_10_8e.json`; Fisher-only floor `2.79e-10` and the full anchor bracket quoted alongside; clock-sector companion limits from the same data in the 10.7 chain.
+- Request chain and pre-registrations: `notes/REQUEST10_*.md` (10.1 counting theorems through the 10.8f review response; every stage pre-registered and committed before its data look).
+- Return artifacts, gate record, and deterministic reproduction scripts: [`request10_external/`](request10_external/README.md).
+- The dynamic track's early working ledger is preserved at [`docs/failure-ledger-dynamic-chi.md`](docs/failure-ledger-dynamic-chi.md); the theorem track's boundary-risk register remains [`docs/failure-ledger.md`](docs/failure-ledger.md).
 
 ## Empirical Program (Requests 1-7)
 
@@ -106,4 +116,4 @@ steps. See [`data/README.md`](data/README.md) for the directory-level policy.
 
 - Cache files and local machine artifacts are ignored in `.gitignore`.
 - Generated artifacts and vendored data/code are marked in `.gitattributes` so GitHub language stats stay readable.
-- `LICENSE` (MIT) and `CITATION.cff` are now included. The citation author field currently uses the GitHub alias; replace it with the author's full name before the final release.
+- `LICENSE` (MIT) and `CITATION.cff` are now included with release-stage citation metadata.

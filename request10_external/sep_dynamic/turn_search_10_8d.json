@@ -1,0 +1,124 @@
+{
+ "stage_V": {
+  "n0.5": {
+   "maxdev_us": 760.848708473068,
+   "exceeds_P_over_2": false
+  },
+  "n1": {
+   "maxdev_us": 1521.6973990372146,
+   "exceeds_P_over_2": true
+  }
+ },
+ "stage_V_pass": true,
+ "rules_of_record": "amended criteria; see module docstring and the 10.8d note",
+ "stage_L": {
+  "fisher_2d": {
+   "tau": 2.0,
+   "beta_inj": 2.0521904795040903e-10,
+   "chi2_0": 15412.467633756552,
+   "beta_recovered_00": 1.1354486956009872e-10,
+   "recovery_tol": 2.070807649536366e-10,
+   "recovery_ok": true,
+   "lattice": {
+    "n1": [
+     -12,
+     12
+    ],
+    "n2": [
+     -6,
+     6
+    ],
+    "n_phi0": 16,
+    "n_tref2": 3
+   },
+   "min_lattice_margin": 2.0978637212137983,
+   "argmin_lattice": [
+    0,
+    -1
+   ],
+   "n_chi2_viable_cells": 7,
+   "beta_stability_tol": 2.070807649536366e-10,
+   "worst_cell": {
+    "abs_dev": 1.0127080948205946e-10,
+    "beta_hat": 1.0394823846834958e-10,
+    "n1": 1,
+    "n2": -2,
+    "margin": 19.141617484607195
+   },
+   "pass": true
+  },
+  "Kdyn_2d": {
+   "tau": 2.0,
+   "beta_inj": 1.3647519810859438e-09,
+   "chi2_0": 15412.467633756552,
+   "beta_recovered_00": 1.2730778026956212e-09,
+   "recovery_tol": 2.070807649536366e-10,
+   "recovery_ok": true,
+   "lattice": {
+    "n1": [
+     -12,
+     12
+    ],
+    "n2": [
+     -6,
+     6
+    ],
+    "n_phi0": 16,
+    "n_tref2": 3
+   },
+   "min_lattice_margin": 2.0978637212174363,
+   "argmin_lattice": [
+    0,
+    -1
+   ],
+   "n_chi2_viable_cells": 7,
+   "beta_stability_tol": 2.070807649536366e-10,
+   "worst_cell": {
+    "abs_dev": 1.0127080948206385e-10,
+    "beta_hat": 1.26348117160388e-09,
+    "n1": 1,
+    "n2": -2,
+    "margin": 19.14161748460174
+   },
+   "pass": true
+  },
+  "Kstatic_18d": {
+   "tau": 18.0,
+   "beta_inj": 1.5022762029420973e-07,
+   "chi2_0": 15413.555476010151,
+   "beta_recovered_00": 1.501502960607878e-07,
+   "recovery_tol": 1.5022762029420973e-08,
+   "recovery_ok": true,
+   "lattice": {
+    "n1": [
+     -12,
+     12
+    ],
+    "n2": [
+     -6,
+     6
+    ],
+    "n_phi0": 16,
+    "n_tref2": 3
+   },
+   "min_lattice_margin": 2.220499850802298,
+   "argmin_lattice": [
+    0,
+    -1
+   ],
+   "n_chi2_viable_cells": 7,
+   "beta_stability_tol": 1.5022762029420973e-08,
+   "worst_cell": {
+    "abs_dev": 8.503383170303167e-11,
+    "beta_hat": 1.501425864625067e-07,
+    "n1": 2,
+    "n2": -2,
+    "margin": 19.393412013316265
+   },
+   "pass": true
+  }
+ },
+ "stage_L_pass": true,
+ "verdict": "PASS",
+ "scope_note": "robustness is established for the TESTED lattice (|n1|<=12, |n2|<=6, 48 phase/reference combos per cell), not for arbitrary turn re-assignments"
+}

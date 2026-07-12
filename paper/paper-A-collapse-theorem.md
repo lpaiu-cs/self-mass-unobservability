@@ -2,7 +2,7 @@
 
 **Status:** draft manuscript (Paper A of the two-paper split; static free-fall sector)
 **Repository:** `lpaiu-cs/self-mass-unobservability`, branch `collapse-theorem`
-**Author:** _(replace the GitHub alias with the author's full name before release)_
+**Author:** Juneyoung, Kim
 
 ---
 
@@ -20,7 +20,7 @@ enter only through body-dependent sensitivity couplings of an already-formed
 object. We then prove, in the parity-even, nonspinning, local free-fall sector at
 fixed operator order \(\Delta \le 4\) and under an explicit assumption ledger
 \(A1\)–\(A8\): **(i)** the admissible parity-even scalar sensitivity operator space
-is finite, reduces to an explicit finite normal-form basis, and — under locality
+is finite, reduces to an explicit finite normal-form basis of computed dimension (seven for the electric sector), and — under locality
 and analyticity — the monopole response collapses to a finite Taylor jet in
 finitely many scalar coordinates (the *positive finite-family collapse theorem*);
 **(ii)** this does *not* single out a unique minimal sector — admitting any
@@ -158,6 +158,22 @@ explicit rules (Section 3.2); (d) analyticity turns the monopole response into a
 finite jet, and the sensitivity/Wilson split isolates it. We state the load-bearing
 content and the numbers we independently verified.
 
+**Remark (where the content is).** Finiteness of the candidate space is, by
+itself, the weakest part of Theorem 1: given a fixed order \(A7\) and a locally
+finite primitive spectrum \(A8\), boundedness of a graded invariant space is
+expected on general invariant-theory grounds. The theorem's nontrivial content is
+therefore *not* "the space is finite" but three sharper facts that finiteness alone
+does not supply: **(i)** the reduced space is a *specific* normal-form quotient of
+computed dimension — seven for the electric sector (2), and the tabulated
+dimensions for each admitted family (Section 3.3) — obtained by quotienting the raw
+contractions by total worldline derivatives, the lower-order equation of motion,
+and the STF identities (3); **(ii)** that quotient is exact, i.e. the redundancy is
+removed by a *closed, finite* set of algebraic identities rather than an open-ended
+reduction; and **(iii)** the irreducible family envelope itself closes (Section
+3.1). Assumptions \(A7\)–\(A8\) deliver only boundedness; layers (a), (c), (d)
+deliver the actual collapse, and it is the explicit dimensions and identities — not
+the bare word "finite" — that the verification in Section 7 is designed to certify.
+
 ### 3.1 The irreducible family envelope
 
 In three spatial dimensions the only \(SO(3)\) irreducibles are the STF-\(L\)
@@ -275,7 +291,13 @@ counterexample. We verified all four (Section 7).
 
 * **\(A5\).** The smooth-flat model is \(C^\infty\) with every derivative vanishing at
   \(Y=0\) yet nonzero for \(Y>0\); its Taylor jet is trivial while the function is
-  not, so no finite analytic jet captures the response.
+  not, so no finite analytic jet captures the response. Physically this escape is
+  not merely a mathematical sharpener: a non-analytic monopole germ is what a sharp
+  phase transition in the dense-matter equation of state would produce — near a
+  strong first-order or near-critical transition the bulk response to an external
+  tidal control parameter can turn non-analytic — so \(A5\) marks a candidate
+  physical regime for compact stars with a stiff-to-soft transition, not only a
+  contrived function.
 * **\(A3\).** An exponential memory kernel is finitely Markovianizable (a single local
   auxiliary state), but a power-law kernel has a non-rational transfer function
   \(\sim p^{\gamma-1}\) with a branch point at \(p=0\); no finite local state-space
@@ -341,6 +363,12 @@ The verification scripts and a written audit are in `verification/` on the
 claim, `Assumption` marks the \(A1\)–\(A8\) premises, and bookkeeping/provenance is
 tagged `Note`.
 
+Finally, because the character/Molien count is order-agnostic — the same
+Hilbert-series machinery applies at any \(\Delta_{\max}\) — extending the
+electric-sector count to \(\Delta\le6\) is mechanical, and is the natural
+robustness check that the \(\Delta\le4\) cutoff (\(A7\)) is a scope choice rather
+than an artifact of the order. We flag it as the first planned extension.
+
 ---
 
 ## 8. Discussion
@@ -353,9 +381,27 @@ which is sharp. The two most physically suggestive escapes are \(A4\) (an intern
 dynamical variable on the orbital timescale) and \(A8\) (an unbounded low-weight
 family tower); the former is the subject of the companion dynamic paper, where a
 second-order internal mode generates orbital sidebands that evade the static
-collapse. The uniqueness no-go is, we think, the honest headline: the idea does not
+collapse. That companion analysis (Paper B, `paper/paper-B-dynamic-sep-limit.md`
+on the dynamic branch) is now complete: instrumenting the salvaged \(A4\) state
+data \((\beta,\tau_\chi)\) on PSR J0337+1715, it bounds the amplitude of any
+lag-responding SEP oscillation at \(|\delta\Delta|<1.3\times10^{-9}\) (95% CL,
+\(\tau_\chi\in[2,500]\) d, worst drive phase). The uniqueness no-go is, we think, the honest headline: the idea does not
 select a canonical coupling, and any stronger "minimal-sector" claim must import an
 explicit suppression principle.
+
+**The empirical anchor.** The theorem is structural, but its leading coordinate is
+already measured. The linear coefficient \(\sigma_1\) in (1) is, to leading
+post-Newtonian order, the Nordtvedt parameter, which lunar laser ranging constrains
+at the \(|\eta|\sim10^{-4}\) level (Will 2014). In the normal-form language
+\(\sigma_1\) is the coefficient of the lowest scalar coordinate — the
+linear-in-\(E2\) monopole response — so existing Nordtvedt/LLR data already pins the
+*first* survivor. What the collapse theorem adds is the structure above it: a finite
+but non-unique tower (\(\sigma_2\) and the tabulated family survivors) that current
+weak-field data does not separately resolve, and whose strong-field entries
+(\(s_{\rm NS}\sim0.1\)–\(0.2\)) are where the additional couplings first become
+numerically relevant. Translating the full \(\{Y^I\}\) basis into a data-facing
+bound table is the natural bridge to the empirical program and is left to that
+track.
 
 ---
 

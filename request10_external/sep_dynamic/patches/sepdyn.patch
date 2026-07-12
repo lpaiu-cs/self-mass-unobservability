@@ -1,0 +1,73 @@
+--- /home/lpaiu/work/nutimo_pilot/nutimo/src/AllTheories3Bodies.cpp	2024-11-21 19:30:10.000000000 +0900
++++ AllTheories3Bodies.cpp	2026-07-11 23:23:31.200307353 +0900
+@@ -1,3 +1,4 @@
++#include <cstdlib> // 10.8 T2 patch: getenv for SEPDYN_A/W/PH
+ // SPDX-FileCopyrightText: 2024 Guillaume VOISIN (researcher at LUTH, Observatoire de Paris, PSL, CNRS) <guillaume.voisin@obspm.fr> <astro.guillaume.voisin@gmail.com>
+ //
+ // SPDX-License-Identifier: GPL-3.0-or-later
+@@ -63,6 +64,7 @@
+     
+ // SEP violation parameters
+     value_type SEP_D; // In newtonian : M0_gravitational = (1 + SEP_D) M0_inertial
++    value_type SEPdyn_A, SEPdyn_w, SEPdyn_ph; // 10.8 T2: pulsar-pair G_eff += A*cos(w*t+ph), env SEPDYN_A/W/PH (w in integrator time units)
+ 
+ // Quadrupole parameters
+     vector<value_type> quadrupole(4,zero);
+@@ -171,6 +173,10 @@
+     M2 = int_M2;
+ 
+     SEP_D = int_SEP_D;
++    { const char* e_; // 10.8 T2: dynamic-SEP drive from environment
++      SEPdyn_A  = (e_ = getenv("SEPDYN_A"))  ? atof(e_) : 0.0;
++      SEPdyn_w  = (e_ = getenv("SEPDYN_W"))  ? atof(e_) : 0.0;
++      SEPdyn_ph = (e_ = getenv("SEPDYN_PH")) ? atof(e_) : 0.0; }
+     Gg = int_Gg;
+     gammabar = int_gammabar;
+     betabar = int_betabar;
+@@ -580,6 +586,9 @@
+ // RHS for n-body integration at first post-newtonian order 
+ void Integrateur::rhs_GR_nbody(const state_type& xvect, state_type& dxdtvect, const value_type& t) // Version with equations from equation from Soffel, Relativity in astrometry, Celestial mechanics and Geodesy 1989
+ {
++    const value_type sepdyn_t = SEPdyn_A * cos( SEPdyn_w * t + SEPdyn_ph ); // 10.8 T2
++#define GGEFF(i_,j_) ( Gg[i_][j_] + ( ((i_)==0) != ((j_)==0) ? sepdyn_t : zero ) )
++
+     for ( n1=0 ; n1 < xvect.size() ; n1++)
+     {
+         x[n1] = xvect[n1];
+@@ -640,7 +649,7 @@
+               sinter = dotprod3d<value_type>(ns[n1][n2], inter);//quatre * vs[n1] - trois * vs[n2] - deux * gammabar[n1][n2] * (vs[n2] - vs[n1]));
+               inter1 += (vs[n2] - vs[n1]) * sinter ;
+             // Prefactor 2-body
+-              inter1 *= Gg[n1][n2] * Ms[n2] / (rs[n1][n2]*rs[n1][n2]) ;
++              inter1 *= GGEFF(n1,n2) * Ms[n2] / (rs[n1][n2]*rs[n1][n2]) ;
+ 
+             // 3-body terms
+             inter2 = zero;
+@@ -660,7 +669,7 @@
+                     inter += sinter * ns[n2][n3];
+ 
+                     // prefactor
+-                    inter *=  Gg[n1][n2] * Gg[n2][n3] * Ms[n2] * Ms[n3] / (rs[n1][n2]*rs[n2][n3]);
++                    inter *=  GGEFF(n1,n2) * GGEFF(n2,n3) * Ms[n2] * Ms[n3] / (rs[n1][n2]*rs[n2][n3]);
+ 
+                     inter2 += inter;
+                 }
+@@ -668,7 +677,7 @@
+                 if (n3 != n1)
+                 {
+                     sinter = (quatre + deux * gammabar[n1][n3] + betabar[n1][n2][n3] + betabar[n1][n3][n2]) ;
+-                    sinter *= Gg[n1][n2] * Gg[n1][n3] * Ms[n2] * Ms[n3] / (rs[n1][n2]*rs[n1][n2]*rs[n1][n3]);
++                    sinter *= GGEFF(n1,n2) * GGEFF(n1,n3) * Ms[n2] * Ms[n3] / (rs[n1][n2]*rs[n1][n2]*rs[n1][n3]);
+                     inter3 -= ns[n1][n2] * sinter ;
+                 }
+             }
+@@ -691,7 +700,8 @@
+ 
+  };
+ 
+- void Integrateur::retro_rhs_GR_nbody(const state_type& xvect, state_type& dxdtvect, const value_type& t)
++ #undef GGEFF // 10.8 T2
++void Integrateur::retro_rhs_GR_nbody(const state_type& xvect, state_type& dxdtvect, const value_type& t)
+  {
+      rhs_GR_nbody(xvect, dxdtvect, t);
+      for ( n1=0 ; n1 < dxdtvect.size() ; n1++)

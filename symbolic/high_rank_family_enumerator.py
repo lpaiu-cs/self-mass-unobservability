@@ -450,8 +450,15 @@ def manual_class_key(rank: int, item: ContractionClass) -> tuple:
 
 
 def manual_label_map(rank: int) -> dict[tuple, str]:
+    # The completed manual survivor lists may use blocks outside this
+    # enumerator's candidate universe (DtE entered at the rank-4
+    # completion); such classes can never match a generated class, so they
+    # are keyed out here and surface through manual_only in the audit.
+    universe = set(available_block_names(rank))
     mapping: dict[tuple, str] = {}
     for item in manual_survivor_classes(rank):
+        if not set(item.signature) <= universe:
+            continue
         mapping[manual_class_key(rank, item)] = item.label
     return mapping
 

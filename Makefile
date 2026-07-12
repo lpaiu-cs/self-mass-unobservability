@@ -1,42 +1,48 @@
 PYTHON ?= python
 
-.PHONY: worldline-expand sensitivity-expand enumerate-basis enumerate-contractions survivor-rank primitive-attack eb-sector eb-rank normal-form-reduce symbolic-check legacy-request1 legacy-request2 legacy-request7
+.PHONY: chi-response chi-two-frequency chi-basis-audit frequency-sweep forcing-dictionary projection-audit triple-shared-tau-bridge triple-gr-carrier-inventory triple-projection-nuisance-gate triple-projection-manifold-gate named-timing-model-projection-audit nutimo-runtime-worthiness-pilot nutimo-external-handoff-packet nonlinear-sideband symbolic-check
 
-worldline-expand:
-	$(PYTHON) symbolic/worldline_expand.py
+chi-response:
+	$(PYTHON) symbolic/chi_relaxation_response.py
 
-sensitivity-expand:
-	$(PYTHON) symbolic/sensitivity_expand.py
+chi-two-frequency:
+	$(PYTHON) symbolic/chi_two_frequency_response.py
 
-enumerate-basis:
-	$(PYTHON) symbolic/enumerate_basis.py
+chi-basis-audit:
+	$(PYTHON) symbolic/chi_basis_audit.py
 
-enumerate-contractions:
-	$(PYTHON) symbolic/enumerate_contractions_delta4.py
+frequency-sweep:
+	$(PYTHON) symbolic/frequency_sweep_distinguishability.py
 
-survivor-rank:
-	$(PYTHON) symbolic/survivor_rank_check.py
+forcing-dictionary:
+	$(PYTHON) symbolic/forcing_observable_dictionary.py
 
-primitive-attack:
-	$(PYTHON) symbolic/primitive_family_attack.py
+projection-audit:
+	$(PYTHON) symbolic/projection_channel_audit.py
 
-eb-sector:
-	$(PYTHON) symbolic/eb_sector_delta4.py
+triple-shared-tau-bridge:
+	$(PYTHON) symbolic/triple_shared_tau_bridge.py
 
-eb-rank:
-	$(PYTHON) symbolic/eb_survivor_rank_check.py
+triple-gr-carrier-inventory:
+	$(PYTHON) symbolic/triple_gr_carrier_inventory.py
 
-normal-form-reduce:
-	$(PYTHON) symbolic/normal_form_reduce.py
+triple-projection-nuisance-gate:
+	$(PYTHON) symbolic/triple_projection_nuisance_gate.py
+
+triple-projection-manifold-gate:
+	$(PYTHON) symbolic/triple_projection_manifold_gate.py
+
+named-timing-model-projection-audit:
+	$(PYTHON) symbolic/named_timing_model_projection_audit.py
+
+nutimo-runtime-worthiness-pilot:
+	$(PYTHON) symbolic/nutimo_runtime_worthiness_pilot.py
+
+nutimo-external-handoff-packet:
+	$(PYTHON) symbolic/nutimo_external_handoff_packet.py
+
+nonlinear-sideband:
+	$(PYTHON) symbolic/nonlinear_sideband_test.py
 
 symbolic-check:
 	$(PYTHON) symbolic/checks/test_symbolic.py
-
-legacy-request1:
-	cd request1 && $(PYTHON) request1_com_decoupling.py
-
-legacy-request2:
-	cd request2 && $(PYTHON) request2_internal_structure.py
-
-legacy-request7:
-	cd request7 && $(PYTHON) request7_joint_consistency_scaffold.py

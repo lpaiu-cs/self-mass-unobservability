@@ -1,0 +1,118 @@
+{
+ "preregistration": "../notes/REQUEST10_EXTERNAL_JOINT_FIT_UPPER_LIMIT.md",
+ "jacobian": "finite_jacobian_v2.npy",
+ "seed": 20260710,
+ "nsim": 500,
+ "noise": {
+  "chi2_red_29par": 1.2462209536600322,
+  "s_scale": 1.1163426685655404,
+  "stop_rule_s_max": 1.75,
+  "nuisance_rank": 29
+ },
+ "real_data": {
+  "Z_max_abs_z": 0.27804250609039255,
+  "p_global": 0.93,
+  "null_z_median": 0.8294310516409056,
+  "null_z_997": 3.383732784429003,
+  "detection_criterion_met": false,
+  "min_u95_us": 11.71827492550057,
+  "tau_at_min_u95_d": 10.0
+ },
+ "controls_off_carrier": {
+  "0.87": {
+   "Z": 1.860441472380801,
+   "p": 0.16
+  },
+  "0.93": {
+   "Z": 0.5335211511210753,
+   "p": 0.85
+  },
+  "1.07": {
+   "Z": 1.6974448864584148,
+   "p": 0.18
+  },
+  "1.13": {
+   "Z": 1.9392625336584968,
+   "p": 0.12
+  }
+ },
+ "comparator": {
+  "chi2_shared_tau_3par_min": 15509.10059331821,
+  "tau_at_chi2_min_d": 10.0,
+  "chi2_complex_deg1_4par": 15507.636162749885,
+  "chi2_nuisance_only": 15509.219768299099,
+  "shared_fits_at_least_as_well": false
+ },
+ "injections": {
+  "tau_26": {
+   "beta_inj_us": 28.620656265081188,
+   "beta_hat_at_tau_star": 30.264313719468515,
+   "beta_hat_minus_beta_inj_over_sigma": 0.1132774378034786,
+   "beta_hat_baseline_at_tau_star": 1.6436574543825764,
+   "differenced_recovery_exact": true,
+   "tau_hat_chi2min": 10.0,
+   "coverage_pass": true
+  },
+  "tau_52": {
+   "beta_inj_us": 53.77079091612798,
+   "beta_hat_at_tau_star": 53.503638262159264,
+   "beta_hat_minus_beta_inj_over_sigma": -0.009738268645033315,
+   "beta_hat_baseline_at_tau_star": -0.26715265396100124,
+   "differenced_recovery_exact": true,
+   "tau_hat_chi2min": 10.0,
+   "coverage_pass": true
+  },
+  "tau_104": {
+   "beta_inj_us": 102.19093364973608,
+   "beta_hat_at_tau_star": 101.11373950422748,
+   "beta_hat_minus_beta_inj_over_sigma": -0.020664381378832728,
+   "beta_hat_baseline_at_tau_star": -1.0771941455107048,
+   "differenced_recovery_exact": true,
+   "tau_hat_chi2min": 10.0,
+   "coverage_pass": true
+  }
+ },
+ "sequential_bias_diagnostic": {
+  "tau_star_d": 52.0,
+  "note": "beyond-preregistration pure-linear-algebra diagnostic; quoted limits unaffected",
+  "amp_1x_u95": {
+   "beta_inj_us": 53.77079091612798,
+   "tau_hat_sequential_d": 0.11806830176813111,
+   "tau_hat_joint_d": 10.0,
+   "joint_z_at_52d": 1.9503186479465258,
+   "joint_beta_hat_at_52d": 53.503638262159264
+  },
+  "amp_5x_u95": {
+   "beta_inj_us": 268.8539545806399,
+   "tau_hat_sequential_d": 0.11879108023054805,
+   "tau_hat_joint_d": 39.765686598556236,
+   "joint_z_at_52d": 9.790546314313472,
+   "joint_beta_hat_at_52d": 268.58680192669067
+  }
+ },
+ "anchors": {
+  "tau_26": {
+   "beta_hat": 1.6436574543825764,
+   "sigma_beta": 14.510016171436149,
+   "u95": 28.620656265081188,
+   "z": 0.11327743780315119
+  },
+  "tau_52": {
+   "beta_hat": -0.26715265396100124,
+   "sigma_beta": 27.43328036087477,
+   "u95": 53.77079091612798,
+   "z": -0.009738268644752131
+  },
+  "tau_104": {
+   "beta_hat": -1.0771941455107048,
+   "sigma_beta": 52.12806160323813,
+   "u95": 102.19093364973608,
+   "z": -0.02066438137887312
+  }
+ },
+ "quoted_window_d": [
+  10.0,
+  327.0
+ ],
+ "convention": "unit drive Lambda_k F_k = 1; beta, c_Y, u95 in us of common pre-transfer drive amplitude"
+}

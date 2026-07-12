@@ -2,84 +2,97 @@
 
 ## Mission
 
-This repository pursues a theorem-level follow-up:
+This repository is dynamic-loophole-first.
 
-Prove or refute that self-mass-unobservability hypotheses collapse to a
-finite-dimensional sensitivity-manifold EFT under explicit assumptions.
+Status: Imported from prior work. The earlier theorem work left A4 as the active assumption to attack: no orbital-timescale internal state variable in the free-fall sector.
 
-If the theorem fails, the required output is not hand-waving.
-It is the smallest explicit loophole model and the exact assumption it violates.
+Status: Conjectural. This repository asks whether the smallest such state, `chi_A`, creates a real observable beyond a static finite-dimensional sensitivity-manifold EFT.
 
-## Primary scope
+## Primary Scope
 
-Work on the free-fall sector first.
-Do NOT start with the clock sector.
-Do NOT reopen LLR / MLRS / PEP / Nutimo / build-environment work in this repo.
+Work on the free-fall-style response model first.
+Do not start with the clock sector.
+Do not reopen LLR / MLRS / PEP / Nutimo / runtime / build-environment work.
+Do not make static primitive-family audits the mainline unless they are strictly needed to define the drive basis `Y`.
 
-## Core theorem target
+## Core Target
 
-Target theorem:
+Status: Counterexample candidate. The first target is
 
-Given a quasi-static, nearly spherical, nonspinning compact body with
-self-bound equilibrium, a local worldline EFT, no orbital-timescale internal
-state variable, and analytic coupling to external fields, the leading
-body-dependent deviation must collapse to sensitivity coordinates
-(s_A,I, s_A,IJ, ...) plus higher-multipole Wilson coefficients.
+```text
+tau_chi * d chi_A / dt + chi_A = alpha * F(Y)
+m_A(Y, chi_A) = m_A^(0) * [1 + c_Y F(Y) + c_chi chi_A]
+```
 
-The 1D scalar-s EFT is only a corollary if manifold reduction is separately justified.
+Status: Conjectural. The target observable must be one of:
 
-## Allowed outputs
+- phase-lagged quadrature relative to a static drive,
+- sidebands or mixed-frequency response,
+- frequency-dependent transfer not absorbable into static coefficients,
+- a sharply stated no-go boundary showing collapse of the minimal model.
+
+## Allowed Outputs
 
 Codex may produce:
-- theorem statements
-- assumption ledgers
-- proof skeletons
-- symbolic derivations
-- explicit counterexample candidates
-- comparison notes to the current project artifacts
 
-Codex must NOT:
-- do more real-data LLR work
-- do more pulsar runtime/build work
-- invent empirical claims without a derivation or source
-- silently strengthen assumptions
+- theorem or no-go statements,
+- assumption ledgers,
+- short analytic derivations,
+- symbolic response checks,
+- explicit counterexample candidates,
+- failure ledgers with exact collapse conditions.
 
-## Working rules
+Codex must not:
 
-Every nontrivial claim must be labeled as one of:
+- do more empirical LLR / MLRS / PEP work,
+- do more pulsar / Nutimo runtime work,
+- invent empirical claims without derivation or source,
+- silently strengthen assumptions,
+- count a static parameter redefinition as novelty.
+
+## Claim Labels
+
+Every substantive scientific claim must be tagged as exactly one of:
+
 - Proven
 - Imported from prior work
 - Conjectural
 - Counterexample candidate
 
-Maintain these files at all times:
-- docs/assumptions-ledger.md
-- docs/failure-ledger.md
-- docs/roadmap.md
+## Maintained Files
 
-If a proof attempt fails, record the exact failing step and the minimal missing assumption.
-Do not patch over it with prose.
+Maintain these files during dynamic-chi work:
 
-## First milestone
+- `docs/model-definition.md`
+- `docs/observable-targets.md`
+- `docs/adiabatic-limit.md`
+- `docs/nonadiabatic-regime.md`
+- `docs/failure-ledger-dynamic-chi.md`
 
-Milestone M1 is complete only when all of the following exist:
-1. Theorem A draft for free-fall sensitivity collapse
-2. Lemma note for internal-structure no-go
-3. Lemma note for COM decoupling
-4. Generic worldline action note
-5. One explicit loophole candidate
+If a model fails to escape collapse, record the exact failing step and the minimal missing assumption in `docs/failure-ledger-dynamic-chi.md` (the theorem track owns `docs/failure-ledger.md`).
 
-## Done-when rule
+## MVP Done Rule
 
 A task is done only if:
+
 - the relevant markdown notes are updated,
 - symbolic checks run without error,
 - and the result is classified as theorem progress or loophole progress.
 
-## Git discipline
+For this MVP, done means:
+
+1. the one-state `chi_A` model is defined,
+2. the monochromatic response is solved,
+3. the adiabatic collapse boundary is written,
+4. the non-adiabatic observable classification is written,
+5. either a genuine observable candidate is isolated or the exact no-go boundary is stated.
+
+## Git Discipline
 
 Before each major task:
-- create a checkpoint commit
+
+- create a checkpoint commit.
 
 After each major task:
-- create a checkpoint commit with a one-line scientific summary
+
+- create a checkpoint commit with a one-line scientific summary.

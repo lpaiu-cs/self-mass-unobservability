@@ -1,0 +1,305 @@
+{
+ "packet": "Request 10.7a external Nutimo handoff - configuration_manifest",
+ "pilot_stage": "configuration_closure",
+ "code_release": {
+  "name": "Nutimo (Numerical Timing Model), G. Voisin",
+  "source": "https://zenodo.org/records/13899771 (nutimo.tar.bz2)",
+  "paper": "Voisin et al., A&A 2024/2025, doi:10.1051/0004-6361/202452100",
+  "md5_nutimo_tar": "d2b7896291f00f0a70613248af3c78fb",
+  "build": {
+   "platform": "WSL2 Ubuntu 22.04 on Windows 11, x86_64",
+   "compiler": "g++-9 (Ubuntu 9.x), -O2 -fPIC, OpenMP enabled in Nutimo, disabled in tempo2",
+   "tempo2": "bitbucket.org/psrsoft/tempo2 @ f9fd985 (2021-03-29), static libs, matches Voisin+24 \"2021.04\" era",
+   "minuit2": "Minuit2 5.34.14 core compiled from root-project/root tag v5-34-14 (math/minuit2), ROOT wrappers excluded",
+   "boost": "boost 1.55.0 headers (archives.boost.io)",
+   "python_interface": "python_Fittriple_interface (cython 0.29.28, python 3.10) over libFittriplecpp.so"
+  },
+  "executable_path": "~/work/nutimo_pilot/nutimo/src/python_Fittriple_interface.cpython-310-x86_64-linux-gnu.so",
+  "residuals_and_gradients_computable": true,
+  "gradient_method": "central finite differences via Set_fitted_parameter_relativeshifts (parameters_ini + scale*shift, non-cumulative) + Compute_lnposterior + Get_time_residuals"
+ },
+ "data_release": {
+  "source": "https://zenodo.org/records/13899771 (Data.tar.bz2, Analysis.tar.bz2)",
+  "timfile": "0337_20211005-sorted-sun5deg-res25microsec-58631_58780_clipped.tim",
+  "md5_timfile": "35032f759f9c1884701e7647c1032f62",
+  "clip_note": "release analysis timfile: MJD 58631-58780 window removed relative to the full 0337_20211005 tim (matches released residual count)",
+  "ntoa": 12474,
+  "toa_span_internal_days": [
+   0.006297516552233873,
+   2987.8668386056393
+  ],
+  "baseline_parfile": "parfile-planetGR-max-bestfit",
+  "md5_parfile": "68e417aaac274f11efada329b8cb6d91",
+  "tempo2_init_parfile": "0337+1715.par-nofit-DE430",
+  "ephemeris": "DE430 (via 0337+1715.par-nofit-DE430; tempo2 T2runtime DE430.1950.2050)"
+ },
+ "active_configuration": {
+  "delay_flags": {
+   "geometric": 1,
+   "kopeikin": 1,
+   "shklovskii": 1,
+   "roemer": 1,
+   "einstein": 1,
+   "shapiro": 1,
+   "aberration": 1,
+   "truefreq": 1
+  },
+  "integrator": 3,
+  "integrator_meaning": "3 = 1PN n-body including extra bodies (circum-ternary planet as 4th body)",
+  "parameter_set": 6,
+  "interpsteps_per_inner_period": 250,
+  "integration_tolerance": 1e-16,
+  "specialcase": "",
+  "harmonic_soakup_on_target_carriers": {
+   "RN_PL_enabled": false,
+   "statement": "specialcase is empty in parfile-planetGR-max-bestfit: the RN_PL per-harmonic amplitude/phase special case (Fittriple-compute.cpp RN_PL branch) is NOT active. The planet signal is modelled as integrated 4th-body dynamics (extra_body block), i.e. finite physical parameters, not carrier-local Fourier nuisance. The PL*GR parfiles in the same release enable specialcase RN_PL and are the Request 10.6 collapse-class comparator; they are NOT used as the pilot baseline."
+  },
+  "carrier_level_amplitude_phase_nuisance_enabled": false
+ },
+ "fitted_parameters": {
+  "count": 28,
+  "names": [
+   "right_ascension",
+   "declination",
+   "right_ascension1",
+   "declination1",
+   "spinfreq",
+   "spinfreq1",
+   "eta_p",
+   "apsini_i",
+   "kappa_p",
+   "delta_i",
+   "tasc_p",
+   "period_i",
+   "eta_b",
+   "absini_o",
+   "kappa_b",
+   "abcosi_o",
+   "tasc_b",
+   "period_o",
+   "masspar_p",
+   "oman",
+   "deltaoman",
+   "eta_extra1",
+   "kappa_extra1",
+   "asini_extra1",
+   "acosi_extra1",
+   "tasc_extra1",
+   "P_extra1",
+   "oman_extra1"
+  ]
+ },
+ "parameter_blocks": {
+  "sky_position_and_motion": {
+   "right_ascension": {
+    "value": 0.9500283096525477,
+    "fitted": true
+   },
+   "declination": {
+    "value": 0.3011411334141046,
+    "fitted": true
+   },
+   "right_ascension1": {
+    "value": 5.969673988767676,
+    "fitted": true
+   },
+   "declination1": {
+    "value": -4.796970742212931,
+    "fitted": true
+   },
+   "distance": {
+    "value": 3623.017815867634,
+    "fitted": false
+   },
+   "distance1": {
+    "value": 5.6196096553728445,
+    "fitted": false
+   }
+  },
+  "dispersion": {
+   "dispmeasure": {
+    "value": 21.316462621823224,
+    "fitted": false
+   },
+   "dispmeasure1": {
+    "value": 1.6823753778655844e-05,
+    "fitted": false
+   }
+  },
+  "spin": {
+   "spinfreq": {
+    "value": 365.9533379022439,
+    "fitted": true
+   },
+   "spinfreq1": {
+    "value": -2.356327389537369e-15,
+    "fitted": true
+   },
+   "dphase0": {
+    "value": 0.0,
+    "fitted": false
+   }
+  },
+  "inner_orbit": {
+   "eta_p": {
+    "value": 0.0006937322747517361,
+    "fitted": true
+   },
+   "apsini_i": {
+    "value": 1.2175276138630107,
+    "fitted": true
+   },
+   "kappa_p": {
+    "value": -8.595092008089614e-05,
+    "fitted": true
+   },
+   "apcosi_i": {
+    "value": 1.4902931205694283,
+    "fitted": false
+   },
+   "delta_i": {
+    "value": 0.0019526700790789813,
+    "fitted": true
+   },
+   "tasc_p": {
+    "value": 55917.15894889768,
+    "fitted": true
+   },
+   "period_i": {
+    "value": 1.6293990080893948,
+    "fitted": true
+   }
+  },
+  "outer_orbit": {
+   "eta_b": {
+    "value": 0.03511469218234623,
+    "fitted": true
+   },
+   "absini_o": {
+    "value": 74.67234446271327,
+    "fitted": true
+   },
+   "kappa_b": {
+    "value": -0.003524920677937946,
+    "fitted": true
+   },
+   "abcosi_o": {
+    "value": 91.40771924185728,
+    "fitted": true
+   },
+   "tasc_b": {
+    "value": 56230.195328302885,
+    "fitted": true
+   },
+   "period_o": {
+    "value": 327.25512703377643,
+    "fitted": true
+   },
+   "oman": {
+    "value": 148.1340567209858,
+    "fitted": true
+   },
+   "deltaoman": {
+    "value": 0.00018365592348701986,
+    "fitted": true
+   }
+  },
+  "masses": {
+   "masspar_p": {
+    "value": 0.13738656682173273,
+    "fitted": true
+   },
+   "masspar_i": {
+    "value": 0.6201274537989921,
+    "fitted": false
+   },
+   "mass_o": {
+    "value": 0.41010270686976497,
+    "fitted": false
+   }
+  },
+  "SEP_violation": {
+   "SEP_D": {
+    "value": 0.0,
+    "fitted": false
+   },
+   "SEP_gamma": {
+    "value": 0.0,
+    "fitted": false
+   },
+   "SEP_beta_0pp": {
+    "value": 0.0,
+    "fitted": false
+   },
+   "SEP_beta_p00": {
+    "value": 0.0,
+    "fitted": false
+   },
+   "SEP_beta_0p0": {
+    "value": 0.0,
+    "fitted": false
+   }
+  },
+  "harmonic_or_specialcase_block": {
+   "quadrupole1": {
+    "value": 0.0,
+    "fitted": false
+   }
+  },
+  "extra_body_planet": {
+   "eta_extra1": {
+    "value": 0.06596937098590042,
+    "fitted": true
+   },
+   "kappa_extra1": {
+    "value": 0.23954379344912222,
+    "fitted": true
+   },
+   "asini_extra1": {
+    "value": 5.176737545302052e-06,
+    "fitted": true
+   },
+   "acosi_extra1": {
+    "value": -1.0796042024556554e-05,
+    "fitted": true
+   },
+   "tasc_extra1": {
+    "value": -45072.71553144647,
+    "fitted": true
+   },
+   "P_extra1": {
+    "value": 3079.721624803824,
+    "fitted": true
+   },
+   "oman_extra1": {
+    "value": 89.5439697613039,
+    "fitted": true
+   }
+  },
+  "noise_scaling": {
+   "efac": {
+    "value": 1.1225367227659222,
+    "fitted": false
+   }
+  }
+ },
+ "target_carrier_extraction": {
+  "carriers_rad_per_day": {
+   "Omega_in": 3.856136695791377,
+   "Omega_out": 0.019199654300698213,
+   "Omega_dif": 3.836937041490679
+  },
+  "periods_days": {
+   "P_inner": 1.6293990080893948,
+   "P_outer": 327.25512703377643
+  },
+  "frequencies_positive_distinct": true,
+  "nonresonant_2to1": {
+   "Omega_in_over_Omega_out": 200.8440691378045,
+   "pass": true
+  },
+  "epoch_convention": "t = internal TOA epochs (timeshift-subtracted MJD, days) from Get_toas()",
+  "basis": "[cos(Omega_k t), sin(Omega_k t)] k in {in, out, dif}; weighted LSQ with W = diag(1/err_us^2)",
+  "complex_amplitude_convention": "signal = Re[A_k exp(i Omega_k t)], A_k = a_cos - i a_sin"
+ }
+}

@@ -1,0 +1,195 @@
+{
+  "assumptions": {
+    "carrier_source": "existing hierarchical-triple inner/outer GR clock carriers",
+    "forcing": "F_in cos(Omega_in t + phi_in) + F_out cos(Omega_out t + phi_out)",
+    "model": "tau_chi dot chi + chi = alpha F(t)",
+    "scope": "symbolic carrier bridge; no triple timing runtime"
+  },
+  "collapse_conditions": [
+    "Omega_in = Omega_out",
+    "F_in = 0 or F_out = 0",
+    "beta = alpha c_chi = 0",
+    "tau_chi = 0",
+    "low-frequency band below derivative truncation tolerance"
+  ],
+  "complex_degree_boundaries": {
+    "0": {
+      "N_frequencies": 2,
+      "degree": 0,
+      "first_obstruction_count": 2,
+      "surviving_target": "full rational transfer pole residual",
+      "verdict": "distinguishable"
+    },
+    "1": {
+      "N_frequencies": 2,
+      "degree": 1,
+      "first_obstruction_count": 3,
+      "surviving_target": "none without more distinct carrier frequencies",
+      "verdict": "degenerate at two carriers"
+    },
+    "2": {
+      "N_frequencies": 2,
+      "degree": 2,
+      "first_obstruction_count": 4,
+      "surviving_target": "none without more distinct carrier frequencies",
+      "verdict": "degenerate at two carriers"
+    },
+    "3": {
+      "N_frequencies": 2,
+      "degree": 3,
+      "first_obstruction_count": 5,
+      "surviving_target": "none without more distinct carrier frequencies",
+      "verdict": "degenerate at two carriers"
+    }
+  },
+  "forcing_model": {
+    "inner_carrier": "F_in*cos(Omega_in*t + phi_in)",
+    "outer_carrier": "F_out*cos(Omega_out*t + phi_out)",
+    "total": "F_in*cos(Omega_in*t + phi_in) + F_out*cos(Omega_out*t + phi_out)"
+  },
+  "real_degree_boundaries": {
+    "0": {
+      "N_frequencies": 2,
+      "degree": 0,
+      "first_obstruction_count": 1,
+      "surviving_target": "shared tau_chi odd-channel pole residual",
+      "verdict": "distinguishable"
+    },
+    "1": {
+      "N_frequencies": 2,
+      "degree": 1,
+      "first_obstruction_count": 2,
+      "surviving_target": "shared tau_chi odd-channel pole residual",
+      "verdict": "distinguishable"
+    },
+    "2": {
+      "N_frequencies": 2,
+      "degree": 2,
+      "first_obstruction_count": 2,
+      "surviving_target": "shared tau_chi odd-channel pole residual",
+      "verdict": "distinguishable"
+    },
+    "3": {
+      "N_frequencies": 2,
+      "degree": 3,
+      "first_obstruction_count": 3,
+      "surviving_target": "none without more distinct carrier frequencies",
+      "verdict": "degenerate at two carriers"
+    },
+    "4": {
+      "N_frequencies": 2,
+      "degree": 4,
+      "first_obstruction_count": 3,
+      "surviving_target": "none without more distinct carrier frequencies",
+      "verdict": "degenerate at two carriers"
+    }
+  },
+  "rows": [
+    {
+      "N_frequencies": "2 if Omega_in != Omega_out and both amplitudes are nonzero",
+      "carrier_inventory": "Omega_in, Omega_out",
+      "claim_status": "Proven",
+      "comparator_basis": "frequency inventory only",
+      "notes": "The carriers need not be new tensor harmonics. Dynamic-chi uses existing distinct carrier frequencies as samples of the same relaxation transfer.",
+      "surviving_target": "shared tau_chi transfer-law test input",
+      "term": "triple_inner_outer_inventory",
+      "verdict": "two existing GR carrier samples available"
+    },
+    {
+      "N_frequencies": "1",
+      "carrier_inventory": "either Omega_in or Omega_out alone",
+      "claim_status": "Proven",
+      "comparator_basis": "frequency-local {F, dot F}",
+      "notes": "Each carrier by itself has the Request 10.1 one-frequency degeneracy.",
+      "surviving_target": "none",
+      "term": "single_carrier_local_derivative",
+      "verdict": "degenerate"
+    },
+    {
+      "N_frequencies": "2",
+      "carrier_inventory": "Omega_in, Omega_out",
+      "claim_status": "Counterexample candidate",
+      "comparator_basis": "real shared-coefficient degree-1 derivative EFT",
+      "notes": "Two distinct positive frequencies are the first obstruction for a real degree-1 comparator.",
+      "surviving_target": "shared tau_chi odd-channel pole residual",
+      "term": "two_carrier_real_degree1",
+      "verdict": "distinguishable"
+    },
+    {
+      "N_frequencies": "2",
+      "carrier_inventory": "Omega_in, Omega_out",
+      "claim_status": "Counterexample candidate",
+      "comparator_basis": "real shared-coefficient degree-2 derivative EFT",
+      "notes": "The odd channel still has only one coefficient through degree 2, so the second positive frequency exposes the pole relation.",
+      "surviving_target": "shared tau_chi odd-channel pole residual",
+      "term": "two_carrier_real_degree2",
+      "verdict": "distinguishable"
+    },
+    {
+      "N_frequencies": "2",
+      "carrier_inventory": "Omega_in, Omega_out",
+      "claim_status": "Proven",
+      "comparator_basis": "real shared-coefficient degree-N derivative EFT, N >= 3",
+      "notes": "Two carriers are insufficient once the real derivative EFT has enough odd-channel coefficients. More distinct carrier frequencies are required.",
+      "surviving_target": "none without more distinct carrier frequencies",
+      "term": "two_carrier_real_degree3_or_higher",
+      "verdict": "degenerate at two carriers"
+    },
+    {
+      "N_frequencies": "2",
+      "carrier_inventory": "Omega_in, Omega_out",
+      "claim_status": "Counterexample candidate",
+      "comparator_basis": "complex shared-coefficient degree-0 polynomial",
+      "notes": "This overpowered complex static comparator is still broken by two distinct samples.",
+      "surviving_target": "full rational transfer pole residual",
+      "term": "two_carrier_complex_degree0",
+      "verdict": "distinguishable"
+    },
+    {
+      "N_frequencies": "2",
+      "carrier_inventory": "Omega_in, Omega_out",
+      "claim_status": "Proven",
+      "comparator_basis": "complex shared-coefficient degree-N polynomial, N >= 1",
+      "notes": "An overpowered complex degree-1 polynomial can interpolate two samples, so the conservative complex-comparator gate needs at least three carriers.",
+      "surviving_target": "none without more distinct carrier frequencies",
+      "term": "two_carrier_complex_degree1_or_higher",
+      "verdict": "degenerate at two carriers"
+    },
+    {
+      "N_frequencies": "less than 2",
+      "carrier_inventory": "Omega_in = Omega_out or F_in F_out = 0",
+      "claim_status": "Proven",
+      "comparator_basis": "any multi-frequency bridge comparator",
+      "notes": "The bridge requires two distinct positive carrier frequencies with nonzero readout amplitudes.",
+      "surviving_target": "none",
+      "term": "commensurate_or_missing_carrier_collapse",
+      "verdict": "collapses to one-frequency degeneracy"
+    },
+    {
+      "N_frequencies": "2",
+      "carrier_inventory": "Omega_in, Omega_out",
+      "claim_status": "Proven",
+      "comparator_basis": "sideband search basis",
+      "notes": "The linear one-state model still produces no Omega_in +/- Omega_out sidebands. The bridge is transfer-law based.",
+      "surviving_target": "none",
+      "term": "linear_sideband_check",
+      "verdict": "null"
+    }
+  ],
+  "schema": [
+    "term",
+    "claim_status",
+    "carrier_inventory",
+    "N_frequencies",
+    "comparator_basis",
+    "verdict",
+    "surviving_target",
+    "notes"
+  ],
+  "transfer_at_carriers": {
+    "G_in": "beta/(I*Omega_in*tau_chi + 1) + c_Y",
+    "G_out": "beta/(I*Omega_out*tau_chi + 1) + c_Y",
+    "difference": "I*beta*tau_chi*(-Omega_in + Omega_out)/((I*Omega_in*tau_chi + 1)*(I*Omega_out*tau_chi + 1))"
+  },
+  "two_carrier_real_odd_residual_order1": "-beta*tau_chi**3*(u0 - u_star)/((tau_chi**2*u0 + 1)*(tau_chi**2*u_star + 1))"
+}

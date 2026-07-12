@@ -1,0 +1,81 @@
+{
+  "acceleration_projection": "Gamma",
+  "arbitrary_projection_solution": "O_hat*(tau_chi*z + 1)/(F_hat*(beta + c_Y*(tau_chi*z + 1)))",
+  "assumptions": {
+    "acceleration_channel": "delta a_hat = Gamma q_hat",
+    "body_response": "q_hat(z) = G(z) F_hat(z)",
+    "range_channel": "ddot R + kappa^2 R = Gamma q_A",
+    "scope": "symbolic projection audit; no empirical data channel",
+    "transfer": "G(z) = c_Y + beta/(1 + tau_chi z)"
+  },
+  "observed_acceleration_transfer": "Gamma*(beta + c_Y*tau_chi*z + c_Y)/(tau_chi*z + 1)",
+  "observed_range_transfer": "Gamma*(beta + c_Y*tau_chi*z + c_Y)/((kappa**2 + z**2)*(tau_chi*z + 1))",
+  "projection_pole_condition": "kappa**2 + z**2",
+  "range_deprojection_residual": "0",
+  "range_equation_residual": "0",
+  "range_projection": "Gamma/(kappa**2 + z**2)",
+  "range_relaxation_pole_residue": "Gamma*beta*tau_chi/(kappa**2*tau_chi**2 + 1)",
+  "relaxation_transfer": "beta/(tau_chi*z + 1) + c_Y",
+  "rows": [
+    {
+      "claim_status": "Counterexample candidate",
+      "collapse_condition": "Gamma = 0 or beta tau_chi = 0",
+      "lambda_form": "Gamma",
+      "next_requirement": "calibrate Gamma or use ratios insensitive to scale",
+      "notes": "A constant projection cannot create arbitrary frequency dependence. It only rescales c_Y and beta.",
+      "projection_channel": "delta a_hat = Gamma q_hat",
+      "term": "acceleration_constant_projection",
+      "verdict": "pole relation survives up to one scale"
+    },
+    {
+      "claim_status": "Proven",
+      "collapse_condition": "Gamma = 0 or kappa^2 + z_k^2 = 0",
+      "lambda_form": "Gamma/(kappa^2 + z^2)",
+      "next_requirement": "known Gamma and kappa",
+      "notes": "Multiplying by (kappa^2+z^2)/Gamma recovers the same relaxation transfer.",
+      "projection_channel": "ddot R + kappa^2 R = Gamma q_A",
+      "term": "range_known_projection",
+      "verdict": "exactly deprojects to G(z) off projection poles"
+    },
+    {
+      "claim_status": "Counterexample candidate",
+      "collapse_condition": "too few samples to fit both pole and projection nuisance",
+      "lambda_form": "Gamma/(kappa^2 + z^2) with shared Gamma,kappa",
+      "next_requirement": "independent calibration or higher-frequency count",
+      "notes": "The relaxation pole survives, but exact distinguishability must include the shared projection parameters.",
+      "projection_channel": "shared range response",
+      "term": "range_shared_finite_nuisance",
+      "verdict": "finite nuisance, not arbitrary per-frequency nuisance"
+    },
+    {
+      "claim_status": "Proven",
+      "collapse_condition": "Gamma beta = 0 or projection zero at relaxation pole",
+      "lambda_form": "Gamma/(kappa^2 + z^2)",
+      "next_requirement": "avoid pole-cancelling projection",
+      "notes": "At z=-1/tau_chi the numerator of the range transfer is Gamma beta.",
+      "projection_channel": "range response",
+      "term": "range_relaxation_pole_survival",
+      "verdict": "relaxation pole remains in observed transfer"
+    },
+    {
+      "claim_status": "Proven",
+      "collapse_condition": "Lambda_k free at every sampled frequency",
+      "lambda_form": "unconstrained complex Lambda_k",
+      "next_requirement": "finite-dimensional or calibrated projection model",
+      "notes": "Choosing Lambda_k=O_hat_k/(G_k F_hat_k) absorbs the pole point by point.",
+      "projection_channel": "O_hat(z_k)=Lambda_k G(z_k) F_hat(z_k)",
+      "term": "arbitrary_frequency_projection",
+      "verdict": "projection degeneracy"
+    }
+  ],
+  "schema": [
+    "term",
+    "claim_status",
+    "projection_channel",
+    "lambda_form",
+    "verdict",
+    "collapse_condition",
+    "next_requirement",
+    "notes"
+  ]
+}
