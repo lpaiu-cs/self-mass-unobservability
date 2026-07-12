@@ -74,7 +74,34 @@ not cover the free-fall rows.
   work); the sub-2-day window; any change to the estimator or spans other
   than `m_rn`.
 
-## Outcomes (to be recorded post-run; nothing below this line is
-## pre-registered except the section's existence)
+## Outcomes (recorded post-run, 2026-07-12; registration commit `878b65c`)
 
-- (pending)
+- Integrity stop-rule: **PASS** — the `m_rn = 30` row reproduces every
+  committed 10.8e anchor to relative `< 1e-6` and the `tau = 500 d` tsv row
+  to `< 0.5%`.
+- Stability criterion: **STABLE at all six anchors.**
+  `R_max over m in {45, 60}` = 1.005 / 1.006 / 1.006 / 1.006 / 1.006 / 1.006
+  at `tau = 2 / 5 / 18 / 52 / 200 / 500 d` — enriching the red-noise model
+  from the of-record 30 pairs to 60 moves every quoted anchor by `<= 0.6%`,
+  a factor ~80 inside the registered `1.5x` flag.
+- Structure of the full grid (descriptive): the of-record choice sits on a
+  conservative plateau. Removing the block entirely (`m_rn = 0`) TIGHTENS
+  the limits by ~25% (`R = 0.750-0.786`); the cost is incurred as modes
+  approach and bracket the outer carrier (`m_rn` 10 -> 30 accounts for
+  nearly all of it) and saturates by `m_rn = 30`. The below-carrier control
+  `m_rn = 5` differs from `m_rn = 0` by `< 1%`, confirming the cost is
+  carrier-proximity, not the block as such.
+- The registered expectation of possible large-`tau` weakening is NOT borne
+  out: the `R(tau, m)` profile is uniform in `tau` to within ~4% across the
+  whole window — the worst-phase statistic loads the outer-carrier
+  quadrature at every `tau`, so the red-noise coupling is common-mode
+  rather than large-`tau`-specific.
+- Span diagnostics: rank 27 / 35 / 71 / 123 and noise scale
+  `s = 1.1163 / 1.1159 / 1.1149 / 1.1133` at `m_rn = 0 / 5 / 30 / 60`;
+  `max|z|` stays in `[0.89, 2.42]` over all spans and anchors (descriptive;
+  no detection rescoring).
+- Registered consequence applied: consequence 3 (all pass) — the manuscript
+  now states the measured `<= 0.6%` deviation and the outer-carrier/
+  Fourier-grid proximity fact, replacing the clock-channel-derived "6-10%"
+  reassurance. The of-record limits are unchanged.
+- Artifact: `sep_dynamic/sep_rn_robustness_10_8h.json`.

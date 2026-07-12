@@ -248,7 +248,11 @@ weighted fit (Frisch-Waugh-Lovell block elimination; seed 20260710):
   seven planet-block columns re-derived at perturbative steps after the
   original one-sigma-scale steps were shown to be nonperturbative secants),
   an offset column, thirty low-frequency Fourier pairs (prior-free red-noise
-  marginalization), and the static-`Delta` column (static-leakage guard);
+  marginalization; the Fourier grid brackets the outer carrier -- the
+  `j = 9` mode lies 1.4% from `P_out` -- and a pre-registered order scan
+  shows the quoted limits sit on a conservative plateau in the model order;
+  Section 7 and 10.8h), and the static-`Delta` column (static-leakage
+  guard);
   truncated at relative singular value `10^-3` *with the guard column's
   truncated residual retained as an explicit extra nuisance direction*
   (rank 71 of 90; guard residual norm `1.6 x 10^-7`), so static-`Delta`
@@ -423,7 +427,10 @@ three orders of magnitude below the published static bound for lags up to
 at the full-rank bracket, 1.1 dex at `K = 934`), shrinking to about
 two orders at the 500 d window edge; the exclusion is robust to the timing
 model, to pulse-number ambiguity on the tested lattice, to the drive phase,
-and to the noise model at the levels recorded in Section 5.
+to the red-noise model order (enriching the Fourier block from the
+of-record 30 pairs to 60 moves every quoted anchor by `<= 0.6%`, uniformly
+in `tau`; pre-registered scan 10.8h), and to the noise model at the levels
+recorded in Section 5.
 
 ### 6.3 Coupling units and channel complementarity
 
@@ -459,8 +466,12 @@ tested alias lattice; any statement below `tau_chi = 2 d` (the
 diagnostic); any statement for other systems or other state models (the
 one-pole transfer is the minimal `F-A4+` branch; higher-order state dynamics
 would need more carriers per the counting boundaries); an absolute
-maximum-likelihood red-noise treatment (the prior-free Fourier
-marginalization shifted the clock-channel limits by only 6-10%); physical
+maximum-likelihood red-noise treatment (a pre-registered scan of the
+Fourier order, 10.8h, measured the free-fall channel directly: 30 -> 60
+pairs moves every quoted anchor by <= 0.6%, removing the block entirely
+tightens them by ~25%, and the profile is uniform in tau -- the of-record
+order sits on the conservative plateau; DM/chromatic modeling and a
+GP-based cross-check remain future work); physical
 drive factors beyond leading order.
 
 ## 8. Discussion
@@ -511,7 +522,10 @@ classes) -> `REQUEST10_NAMED_TIMING_MODEL_PROJECTION_AUDIT.md` (10.6) ->
 -> `REQUEST10_8D_TURN_SEARCH_ROBUSTNESS.md` ->
 `REQUEST10_8E_PHASE_MARG_PHYSICAL_ANCHOR.md` -> `REQUEST10_8_REVIEW.md` ->
 `REQUEST10_8F_REVIEW_RESPONSE.md` (independent-review corrections C1-C12 and
-the R1-R7 re-run record).
+the R1-R7 re-run record) -> `REQUEST10_8G_REVIEW_RESPONSE_2.md` (second-round
+label/framing adjudication D1-D8 + the causal/advanced overlap measurement)
+-> `REQUEST10_8H_REDNOISE_ROBUSTNESS.md` (pre-registered red-noise-order
+robustness scan; all anchors stable).
 
 ## Appendix B: artifacts and reproduction
 
@@ -526,7 +540,10 @@ anchor diagnosis from `scripts/anchor_resolution_10_8c.py`
 `K_static` from `scripts/sep_static_sensitivity.py`, and the causal/advanced
 template-geometry overlap from `scripts/sep_quadrature_overlap_10_8g.py`
 (-> `sep_dynamic/sep_quadrature_overlap_10_8g.json`; design-only, no
-residuals consumed). The live-gate chain
+residuals consumed), and the red-noise-order robustness scan from
+`scripts/sep_rn_robustness_10_8h.py`
+(-> `sep_dynamic/sep_rn_robustness_10_8h.json`; pre-registered in
+`notes/REQUEST10_8H_REDNOISE_ROBUSTNESS.md`, committed before its run). The live-gate chain
 is three-stage: `scripts/make_gateG2_inputs.py` stages the templates and
 parameters (`gateG2_inputs.npz`, `gateG2_params.json`); the gate records
 themselves are produced *in the WSL runtime* by
