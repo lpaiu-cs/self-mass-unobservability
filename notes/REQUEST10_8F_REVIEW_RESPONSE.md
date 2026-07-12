@@ -139,3 +139,86 @@ R6 recorded: **G1 FAIL (both anchors), G2a FAIL (tau = 52 d), G2b PASS.**
    <= 0.1% differential).
 R7 in progress: Paper B numbers/claims regenerated from the corrected
    artifacts; README and joint-fit summary updated to the same numbers.
+
+## Amendment G-2 (2026-07-12; committed BEFORE the gateG2 run it governs
+## -- registration commit `497bab1`, harness commit `26ca8c7`, outcome
+## commit `18b6396`; the addendum below: registration `b931210`, outcome
+## `3ad80e6`. AUDIT NOTE: merge this branch with a merge commit, not a
+## squash -- the committed-before ordering lives in these commits)
+
+Post-R6 decomposition (span_mismatch_check, local, no live evaluations):
+measuring the SAME baseline residuals res0 -- no GN refit at all -- in the
+R6 gate harness's measurement span reproduces the entire "G1 offset":
+span-only delta = +0.3439 / +0.6068 sigma_F at tau = 18 / 52 d, against
+the recorded G1 offsets +0.3423 / +0.5987. The R6 harness's measurement
+span was truncation-only (rank 70): it dropped the static-guard residual
+direction that correction C4 added to every pipeline script -- C4 was
+never propagated into the WSL gate harness. The genuine live-refit
+displacement is the remainder: z_GN - z(gate span, res0) =
+-0.0015 / -0.0081 sigma_F. The R6 adjudication's attribution (an
+LS-vs-MAP refit walk projecting onto the causal template) is therefore
+WRONG as stated; the walk exists (max|dth| ~ 14 steps) but its projection
+onto the estimator is ~0.01 sigma_F, not 0.6.
+
+Verified locally before this amendment: appending the guard-residual
+direction to the gate span (rank 71) reproduces z_lin on res0 to machine
+precision (delta ~ 1e-16) at both R6 anchors.
+
+Registered plan (gateG2):
+- Harness: identical to R6 except the measurement span is the guard-kept
+  span (C4 completed in the harness); the GN absorb is unchanged.
+- Anchors: tau = 2 d (the headline anchor, newly added), 18 d, 52 d.
+  Inputs from the committed 10.8b artifact via
+  scripts/make_gateG2_inputs.py -> sep_dynamic/gateG2_inputs.npz,
+  gateG2_params.json.
+- Criteria: unchanged from the R6 registration -- G1 |z_GN - z_lin| <=
+  0.3; G2a (4 sigma_F injection, undamped GN) |dev| <= 0.5 sigma_F;
+  G2b (u95_Kstatic injection, GN capped at 30x validated steps)
+  |dev_rel| <= 2%. The dev formulas keep the beta_hat_lin reference for
+  continuity with R6.
+- Record rule: gateG2 supersedes R6 as the live-gate record of record;
+  the R6 run remains recorded with the corrected diagnosis above. If any
+  gateG2 criterion still fails, the failure is carried at its measured
+  size as a genuine live-refit systematic -- no rescoring.
+- Registered expectation (stated for honesty, not a criterion): offsets
+  of order 0.01 sigma_F at 18/52 d per the decomposition; tau = 2 d is
+  the genuinely new measurement (different quadrature mix: the outer
+  carrier is near-instantaneous, g1 = 0.999).
+
+### G-2 addendum: worst-phase headline template (committed BEFORE its run)
+
+Review point (PR #2): the gateG2 tau = 2 d anchor exercised the
+ZERO-PHASE template/params pair (t_off = 0, 10.8b artifact), while the
+quoted headline is the 10.8e worst-phase row (t_off = 104.3494 d,
+u95pm_K10 = 1.68e-9). Registered addendum: gate the exact worst-phase
+pair. Inputs: T2wp/Tc2wp = causal templates at tau = 2 d,
+t_off = 104.3494 d; params (beta_hat_lin = +0.0643 sigma_F, sigma_fisher,
+u95 tiers) recomputed on the pipeline span by make_gateG2_inputs.py and
+ASSERTED to reproduce the committed u95pm_K10 to < 1e-6. Criteria
+unchanged (G1 0.3 sigma_F on |z_GN - z_lin|; G2a 0.5 sigma_F at
+4 sigma_F injection; G2b 2% at the K_static-scaled amplitude). Runner:
+scripts/wsl/wsl_gateG2wp.py -> sep_dynamic/sep_gateG2wp.json; the
+adjudication derives its verdict from the recorded output.
+
+### G-2 outcome (recorded post-run, 2026-07-12)
+
+gateG2 (sep_gateG2.json): **9/9 PASS** under the unchanged registered
+criteria, with the headline anchor directly gated.
+G1 offsets: -0.0018 / -0.0152 / -0.0350 sigma_F at tau = 2 / 18 / 52 d
+(tol 0.3). G2a: +0.0085 / +0.0562 / +0.0570 sigma_F (tol 0.5). G2b:
+-0.109% / -0.024% / +0.128% (tol 2%). The live-refit systematic carried
+on Fisher-tier numbers is therefore <= 0.035 sigma_F AS MEASURED
+(replacing the earlier 0.6 sigma_F carry, which the span decomposition
+proved to be the R6 harness artifact). The R6 artifact and its FAIL
+verdicts remain recorded; sep_gateG_adjudication.json now carries the
+full two-layer diagnosis (differential + span decomposition) and the
+supersession. The live gate battery record of record: PASS at all
+anchors including tau = 2 d.
+
+Addendum outcome (sep_gateG2wp.json): the WORST-PHASE headline pair
+(tau = 2 d, t_off = 104.3494 d) passes 3/3 -- G1 offset +0.0391 sigma_F
+(tol 0.3), G2a +0.0962 sigma_F (tol 0.5), G2b -0.007% (tol 2%). The
+live-refit systematic carried over ALL gated pairs is therefore
+<= 0.039 sigma_F as measured, and the exact template/params pair that
+sets the quoted headline (asserted to reproduce u95pm_K10 = 1.6795e-9)
+is now directly live-gated.

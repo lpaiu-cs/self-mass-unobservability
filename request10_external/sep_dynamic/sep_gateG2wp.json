@@ -1,0 +1,44 @@
+{
+ "anchor": {
+  "t_off_d": 104.34942814305832,
+  "u95_Kdyn": 1.6795275232327546e-09,
+  "u95_Kstatic": 1.5693773197081654e-07,
+  "sigma_fisher": 8.568998072763623e-11,
+  "beta_hat_lin": 5.51335150728245e-12,
+  "z_lin": 0.06434067857719002,
+  "note": "headline worst-phase row of sep_phase_marg_10_8e.json; params recomputed on the pipeline span and asserted against the committed u95pm_K10"
+ },
+ "harness": "C4-complete (guard-kept measurement span)",
+ "G1": {
+  "z_GN": 0.10346306286471103,
+  "z_lin": 0.06434067857719002,
+  "offset": 0.03912238428752102,
+  "pass": true
+ },
+ "G2a": {
+  "beta_inj": 3.427599229105449e-10,
+  "beta_hat_GN": 3.565163586251361e-10,
+  "deviation_sigma_fisher": 0.09619659308255894,
+  "W_hist": [
+   155.21579515267757,
+   139.11105111069512,
+   166.04045793391123,
+   126.50697043820638,
+   407.8540209470264
+  ],
+  "pass": true
+ },
+ "G2b": {
+  "beta_inj": 1.5693773197081654e-07,
+  "beta_hat_GN": 1.5693268891892744e-07,
+  "deviation_relative": -6.726491624302421e-05,
+  "W_hist": [
+   30958.70433565939,
+   31617.316871045237,
+   31946.444112681267,
+   31979.69387907143
+  ],
+  "pass": true
+ },
+ "all_pass": true
+}

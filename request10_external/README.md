@@ -89,12 +89,14 @@ the corrected causal templates — the rows below are the corrected record).
 | `sep_dynamic/anchor_resolution_10_8c.json`, `sep_beta_limit_curve_10_8c.tsv` | K anchor diagnosis (rho spectrum; K_dyn = 10, rule branch 1) + re-anchored curve; generator `scripts/anchor_resolution_10_8c.py` |
 | `sep_dynamic/turnV_columns.npz`, `turn_search_10_8d.json` | turn-fixing measurement + lattice turn-search: PASS on the tested lattice (7 viable cells; worst beta dev 1.01e-10 vs tol 2.07e-10) |
 | `sep_dynamic/sep_phase_marg_10_8e.json`, `sep_limit_curve_10_8e.tsv` | **HEADLINE: \|dDelta\| < 1.68e-9 (95% statistical CL x K_dyn = 10, worst phase, tau = 2 d)**; Fisher floor 2.79e-10; full-rank bracket 3.53e-9; K934 1.57e-7; no detection (E1 p = 0.26, control equally elevated) |
-| `sep_dynamic/sep_gateG.json`, `sep_gateG_adjudication.json` | live gates on causal templates: G1 FAIL (+0.34/+0.60 sigma_F null offset), G2a 18 d PASS / 52 d FAIL, G2b PASS (<= 0.12%); differential response +0.004/+0.021 sigma_F and 0.04%/0.08% — offset carried as a <= 0.6 sigma_F live-refit systematic inside K_dyn = 10 |
+| `sep_dynamic/sep_gateG2.json`, `sep_gateG2wp.json`, `gateG2_inputs.npz`, `gateG2_params.json` | **live gates of record (C4-complete harness): 9/9 PASS at tau = 2/18/52 d + 3/3 PASS on the worst-phase headline pair (t_off = 104.35 d)** — G1 offsets <= 0.039 sigma_F, G2a <= 0.096 sigma_F, G2b <= 0.13% |
+| `sep_dynamic/sep_gateG.json`, `sep_gateG_adjudication.json` | superseded first gate run (G1/G2a FAIL) + two-layer diagnosis: the offsets were a harness span defect (C4 guard direction missing) — span-only delta reproduces them on res0 with no live refit; guard-kept span reproduces z_lin to ~1e-16 |
 
 Reproduction: `scripts/sep_common.py` (shared estimator core; seed
 20260710), `scripts/sep_static_sensitivity.py`,
 `scripts/sep_feasibility_gates.py`, `scripts/sep_joint_fit_10_8b.py`,
 `scripts/anchor_resolution_10_8c.py`, `scripts/turn_search_10_8d.py`,
-`scripts/sep_phase_marg_10_8e.py`, `scripts/gateG_adjudicate.py`
+`scripts/sep_phase_marg_10_8e.py`, `scripts/make_gateG2_inputs.py`,
+`scripts/gateG_adjudicate.py`
 (all deterministic, artifacts-only), plus the WSL runtime scripts archived
 verbatim with an artifact map in `scripts/wsl/README.md`.

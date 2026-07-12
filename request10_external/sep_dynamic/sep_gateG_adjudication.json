@@ -1,5 +1,5 @@
 {
- "registered_verdicts": {
+ "registered_verdicts_R6": {
   "G1": false,
   "G2a": false,
   "G2b": true,
@@ -8,20 +8,16 @@
    "G2a": "|(beta_hat_GN - beta_hat_lin - beta_inj)| <= 0.5 sigma_F",
    "G2b": "|(beta_hat_GN - beta_hat_lin - beta_inj)| <= 0.02 * beta_inj"
   },
-  "note": "verdicts as recorded by the gate run; NOT rescored here"
+  "note": "verdicts as recorded by the R6 run; NOT rescored here"
  },
- "diagnostics": {
+ "differential_diagnostics": {
   "tau_18": {
    "sigma_fisher": 8.202613358863463e-11,
    "null_offset_sigma_F": 0.34233951428928966,
    "G2a_registered_dev_sigma_F": 0.3464479413415597,
    "G2a_differential_dev_sigma_F": 0.004108427052270233,
    "G2b_registered_dev_rel": 0.00059777787801128,
-   "G2b_differential_dev_rel": 0.00041085628079246005,
-   "decomposition_check_G2a": {
-    "null_offset_plus_differential": 0.3464479413415599,
-    "registered": 0.3464479413415597
-   }
+   "G2b_differential_dev_rel": 0.00041085628079246005
   },
   "tau_52": {
    "sigma_fisher": 1.2378171983492776e-10,
@@ -29,20 +25,86 @@
    "G2a_registered_dev_sigma_F": 0.6191986945546663,
    "G2a_differential_dev_sigma_F": 0.0204788290323123,
    "G2b_registered_dev_rel": 0.0011564523274841653,
-   "G2b_differential_dev_rel": 0.0008295439499214813,
-   "decomposition_check_G2a": {
-    "null_offset_plus_differential": 0.6191986945546661,
-    "registered": 0.6191986945546663
-   }
+   "G2b_differential_dev_rel": 0.0008295439499214813
   }
  },
- "adjudication": {
-  "finding": "single common-mode explanation: the GN truncated refit of the null data displaces beta_hat by the G1 offset; G2a/G2b excesses over their differential values equal that offset to <= 0.02 sigma_F at both anchors",
-  "live_refit_systematic_sigma_F_max": 0.5987198655223538,
-  "impact": {
-   "detection_tests": "z-scores carry a +/- 0.60 sigma_F live-refit systematic; the registered E1/E2 non-detections (min p = 0.26 with an equally loud anticausal control) are unaffected",
-   "upper_limits": "worst-case linear addition inflates a Fisher-only u95 by <= 30%; the K_dyn = 10 headline scaling covers this with an order of magnitude to spare; Fisher-only numbers are quoted as statistical-only for this reason"
+ "span_decomposition": {
+  "note": "z(res0) measured with NO GN refit in each harness span, vs the pipeline z_lin",
+  "tau_18": {
+   "z_res0_R6_span": -0.5987751573720271,
+   "z_res0_C4_span": -0.9426780227139236,
+   "z_lin": -0.9426780227139235,
+   "span_only_delta_sigma_F": 0.3439028653418964,
+   "C4_span_reproduces_z_lin_to": -1.1102230246251565e-16,
+   "R6_G1_offset_recorded": 0.34233951428928966,
+   "true_refit_displacement_in_R6_span": -0.001563351052606743
   },
-  "status": "G1/G2a recorded as FAIL under the registered absolute criteria; no criterion is redefined post hoc. The template-shape validation (G2b, and the differential responses) PASSES; the absolute-null agreement does not."
+  "tau_52": {
+   "z_res0_R6_span": -0.4771948760859478,
+   "z_res0_C4_span": -1.084024036933637,
+   "z_lin": -1.0840240369336371,
+   "span_only_delta_sigma_F": 0.6068291608476893,
+   "C4_span_reproduces_z_lin_to": 2.220446049250313e-16,
+   "R6_G1_offset_recorded": 0.5987198655223538,
+   "true_refit_displacement_in_R6_span": -0.008109295325335553
+  }
+ },
+ "gateG2_record_of_record": {
+  "G1": {
+   "tau_2": {
+    "offset_sigma_F": -0.0018159148226102317,
+    "pass": true
+   },
+   "tau_18": {
+    "offset_sigma_F": -0.01518036438557313,
+    "pass": true
+   },
+   "tau_52": {
+    "offset_sigma_F": -0.03495199679189298,
+    "pass": true
+   }
+  },
+  "G2a": {
+   "tau_2": {
+    "dev_sigma_F": 0.008505700375603255,
+    "pass": true
+   },
+   "tau_18": {
+    "dev_sigma_F": 0.05618369729078176,
+    "pass": true
+   },
+   "tau_52": {
+    "dev_sigma_F": 0.056951018268374475,
+    "pass": true
+   }
+  },
+  "G2b": {
+   "tau_2": {
+    "dev_rel": -0.0010926982527972675,
+    "pass": true
+   },
+   "tau_18": {
+    "dev_rel": -0.00023862411615201864,
+    "pass": true
+   },
+   "tau_52": {
+    "dev_rel": 0.0012787937318104318,
+    "pass": true
+   }
+  },
+  "all_pass": true
+ },
+ "gateG2_worst_phase_headline": {
+  "t_off_d": 104.34942814305832,
+  "G1_offset_sigma_F": 0.03912238428752102,
+  "G2a_dev_sigma_F": 0.09619659308255894,
+  "G2b_dev_rel": -6.726491624302421e-05,
+  "all_pass": true
+ },
+ "adjudication": {
+  "finding": "the R6 G1/G2a failures were a HARNESS defect, not a live-model property: the R6 measurement span omitted the C4 guard-residual direction; the span-only delta on res0 (no GN) reproduces the recorded offsets, and the C4-complete span reproduces z_lin to machine precision. The first adjudication attributed the offset to the truncated-GN LS-vs-MAP walk; that attribution was wrong as stated -- the walk projects onto the estimator at only the 0.01-sigma level.",
+  "record_of_record": "sep_gateG2.json: C4-complete harness, anchors tau = 2/18/52 d (zero-phase pairs), registered criteria unchanged -- 9/9 PASS; max |G1 offset| 0.035 sigma_F, max |G2a dev| 0.057 sigma_F, max |G2b dev| 0.128%; worst-phase headline pair (t_off = 104.35 d): PASS (G1 +0.039 sigma_F, G2a +0.096 sigma_F, G2b -0.007%)",
+  "systematic_carried": "live-refit displacement <= 0.039 sigma_F as measured over all gated pairs including the worst-phase headline pair (replaces the earlier 0.6 sigma_F carry, which was the harness artifact)",
+  "status": "R6 verdicts stand as recorded (FAIL under its harness); amendment G-2 (pre-committed) governs the supersession; no criterion was redefined."
  }
 }

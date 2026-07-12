@@ -26,15 +26,18 @@ we construct *exact* dynamic response templates by making `Delta`
 time-dependent inside the published nonlinear three-body timing integrator.
 The oscillating-`Delta` signature proves structurally non-degenerate with
 the timing model (8-27% survival per column, versus 0.06% for static
-`Delta`). The template shape is validated end-to-end against the live
-integrator at limit amplitude (differential recovery to `<= 0.1%`) and the
-result is robust to pulse-number (turn) ambiguity over the tested alias
-lattice and to the drive phase; one live gate — absolute agreement between
-the frozen linear pipeline and a live refit on the *null* data — failed at
-the `0.6 sigma` level and is carried, diagnosed, as a systematic inside the
-anchor factor. A pre-registered, gate-audited pipeline on 12,474 public
-Nancay TOAs (2013-2021) yields no detection and a first upper limit on the
-amplitude of any lag-responding SEP oscillation:
+`Delta`). The analysis is validated end-to-end against the live
+integrator: null calibration, detection-regime and limit-amplitude
+injection recovery all pass at every anchor — *including the exact
+worst-phase template pair that sets the quoted headline* (live-refit
+displacement `<= 0.04 sigma`, template recovery to `<= 0.13%` at limit
+amplitude) — and the result is robust to pulse-number (turn) ambiguity
+over the tested alias lattice and to the drive phase.
+(An intermediate run of these gates failed and was diagnosed as a defect
+of the gate harness itself — the audit trail, including the failure, is
+part of the record; Section 5.) A pre-registered, gate-audited pipeline
+on 12,474 public Nancay TOAs (2013-2021) yields no detection and a first
+upper limit on the amplitude of any lag-responding SEP oscillation:
 
 ```text
 |delta Delta| < 1.7 x 10^-9   (tau_chi = 2 d, worst drive phase;
@@ -282,9 +285,10 @@ inflates the static posterior demonstrably does not act on the dynamic
 templates (Section 5). Per a pre-registered rule the working anchor is
 `K_dyn = 10` (a safety floor, not a measurement), and every quoted quantity
 carries the full bracket: the statistical Fisher floor, the `K_dyn = 10`
-headline, and the `K = 934` ultra-conservative fallback. The `0.6 sigma`
-live-refit systematic measured by gate G1 (Section 5) sits well inside the
-`K_dyn = 10` margin.
+headline, and the `K = 934` ultra-conservative fallback. The live-refit
+displacement measured by gate G1 (`<= 0.04 sigma_F` over every gated
+pair, including the worst-phase headline template; Section 5) is
+negligible against this bracket.
 
 ## 5. Validation-gate record
 
@@ -305,28 +309,34 @@ criteria, unchanged.
 | Ramp | time convention + normalization | integral-kernel `1/2` signature, both hypotheses coherent (Sec. 3.2) |
 | F2 | dynamic non-degeneracy | PASS: survival 8-27% per column; 21.1% causal shared-`tau` peak (threshold 3%) |
 | F3 | projected sensitivity | PASS: anchored `6.9 x 10^-8 <= 10^-5` threshold (x146 margin) |
-| G1 | live null calibration: does a live-integrator refit of the *null* data leave the estimator where the frozen linear pipeline puts it? | **FAIL**: `z_GN - z_lin = +0.34 / +0.60` at `tau = 18 / 52 d` (tolerance 0.3). Diagnosis below. |
-| G2a | estimator calibration, detection regime (`4 sigma_F` injections, undamped live GN) | PASS at 18 d (0.35 `sigma_F`), **FAIL** at 52 d (0.62 `sigma_F`, tolerance 0.5) under the registered null reference; the *differential* (GN-null-referenced) response is `+0.004 / +0.021 sigma_F` |
-| G2b | estimator calibration, limit amplitude (injections at the `K = 934`-anchored limit, step-capped live GN) | PASS: 0.06% / 0.12% relative under the registered reference; differential 0.04% / 0.08% — the live model absorbs essentially none of the template |
+| G1 | live null calibration: does a live-integrator refit of the *null* data leave the estimator where the frozen linear pipeline puts it? | PASS at `tau = 2 / 18 / 52 d`: offsets `-0.002 / -0.015 / -0.035 sigma_F`, and `+0.039 sigma_F` on the worst-phase headline pair (tolerance 0.3) — after one recorded harness failure, diagnosed below |
+| G2a | estimator calibration, detection regime (`4 sigma_F` injections, undamped live GN) | PASS at `2 / 18 / 52 d`: `+0.009 / +0.056 / +0.057 sigma_F`, worst-phase headline pair `+0.096 sigma_F` (tolerance 0.5) |
+| G2b | estimator calibration, limit amplitude (injections at the `K = 934`-anchored limit, step-capped live GN) | PASS at `2 / 18 / 52 d`: `-0.11% / -0.02% / +0.13%` relative, worst-phase headline pair `-0.007%` (tolerance 2%) — the live model absorbs essentially none of the template |
 | Turn V | does the interface re-assign pulse numbers? | PASS: alias-shift response exceeds `P/2` (1522 vs 1366 us) — turns fixed, wrap arithmetic definitional |
 | Turn L | can any turn-aliased solution mimic/hide the template? | PASS on the tested lattice (`|n1| <= 12`, `|n2| <= 6`, 48 phase/reference combos per cell, tie-broken wrap): 7 chi2-viable alternative turn solutions per amplitude (integer slips hidden in observing gaps), estimator stable across *all* of them — worst `beta` deviation `1.0 x 10^-10` vs `2.1 x 10^-10` tolerance |
 
-The G1/G2a failures have a single, quantified common-mode explanation
-(`sep_gateG_adjudication.json`): the gate's live refit is a truncated
-Gauss-Newton least-squares absorb, which converges to the unregularized
-least-squares point rather than the maximum-posterior point of the
-published solution — a genuinely displaced timing solution whose projection
-onto the causal template is `+0.34 / +0.60 sigma_F` (the pre-correction
-anticausal gate read the same displacement at only `0.01-0.02 sigma_F`,
-which is how the swap masked it). The displacement is identical with and
-without injection: subtracting the GN null point, injected-signal recovery
-is exact to `<= 0.02 sigma_F` at detection amplitudes and `<= 0.1%` at
-limit amplitudes. We therefore treat the gate battery as: template-shape
-validation **passed** (G2b and both differential responses); absolute
-null-point agreement **failed** and its magnitude (`<= 0.6 sigma_F`) is
-carried as a live-refit systematic on all Fisher-tier numbers — worst-case
-`+30%` on a Fisher-only `u95`, comfortably inside the `K_dyn = 10` anchor.
-No registered criterion was rescored.
+The G-gate row deserves its full history, because an intermediate run
+*failed* and the failure is part of the record. The first causal-branch
+gate run recorded G1 FAIL at both of its anchors (`+0.34 / +0.60
+sigma_F`) and G2a FAIL at 52 d; a first adjudication attributed this to
+the live refit converging to the unregularized least-squares point. That
+attribution was wrong, and a pre-committed amendment
+(`sep_gateG_adjudication.json`, amendment G-2) records the correct
+decomposition: the gate harness's *measurement span* had omitted the
+static-guard residual direction that the C4 correction added to every
+pipeline script — measuring the untouched baseline residuals (no live
+refit at all) in that defective span reproduces the entire offset, and
+the guard-kept span reproduces the pipeline `z_lin` to machine precision.
+With the harness completed (and the headline anchor `tau = 2 d` added),
+the full battery was re-run under the unchanged registered criteria:
+**9/9 PASS**. A further pre-committed addendum then gated the *exact
+worst-phase template pair that sets the quoted headline* (`tau = 2 d`,
+`t_off = 104.35 d`; its staged parameters asserted to reproduce the
+committed `u95pm_K10` to `< 10^-6`): 3/3 PASS. The genuine live-refit
+displacement over all gated pairs is `<= 0.039 sigma_F` — carried at
+that measured size on Fisher-tier numbers, negligible against the anchor
+bracket. The failed run and its superseded adjudication remain
+committed; no criterion was rescored at any point.
 
 Two by-products deserve independent note. First, the turn-fixing behavior of
 the interface is now a measured fact, not a documentation claim. Second, the
@@ -350,8 +360,9 @@ is *equally* elevated (`Z = 2.340`, `p = 0.28`), marking the mild elevation
 as noise/structure common to both quadrature conventions rather than a
 causal-response feature. Dictionary-anchored: `Z = 1.815`, `p = 0.47`
 (reported, not gating). Linear injection-recovery is exact at all anchors;
-live-model injection-recovery is exact to `<= 0.02 sigma_F` differentially,
-with the absolute-null caveat of Section 5.
+live-model injection-recovery is exact to `<= 0.10 sigma_F` at detection
+amplitudes and `<= 0.13%` at limit amplitudes across all gated pairs
+including the worst-phase headline pair (Section 5).
 
 ### 6.2 The upper limit
 
@@ -404,9 +415,9 @@ fallback) published.
 
 Not claimed: any detection; a probabilistic confidence statement for the
 `K`-scaled tiers (the anchors are systematic safety factors, not
-coverage-calibrated multipliers); absolute live-null agreement of the
-linear pipeline (gate G1 failed; the measured `<= 0.6 sigma_F` live-refit
-systematic is stated and covered by the anchor); turn robustness beyond the
+coverage-calibrated multipliers); live-refit agreement beyond the measured
+`<= 0.04 sigma_F` (gate G1, all three anchors plus the worst-phase
+headline pair); turn robustness beyond the
 tested alias lattice; any statement below `tau_chi = 2 d` (the
 `c_Y`-degeneracy grows toward the instantaneous limit; sub-edge rows are
 diagnostic); any statement for other systems or other state models (the
@@ -428,25 +439,24 @@ the published integrator itself — and returns the first number:
 `|delta Delta| < 1.7 x 10^-9`. The method (pre-registration with committed
 amendments, live-model gates, adversarial controls, bracketed anchors)
 travelled two failed template-calibration designs, one integrator segfault,
-one refuted absorber hypothesis, one mis-scaled gate, and — caught by
-independent review after the first complete run — one quadrature-convention
-swap whose correction and full re-run are themselves pre-registered and
-committed (10.8f), plus one live gate that failed on the corrected branch
-and is reported as failed with its diagnosis. Nothing here was quoted
-unvalidated; we consider that audit trail as much a result as the limit.
+one refuted absorber hypothesis, one mis-scaled gate, one
+quadrature-convention swap caught by independent review after the first
+complete run (its correction and full re-run pre-registered and committed,
+10.8f), one live-gate failure on the corrected branch, and one *wrong
+diagnosis of that failure* — superseded, under a further pre-committed
+amendment, by the measurement that located the defect in the gate harness
+itself and by a full re-run that passes at every anchor. Nothing here was
+quoted unvalidated; we consider that audit trail as much a result as the
+limit.
 
-Four continuations are natural. A second, independent data set (the
+Three continuations are natural. A second, independent data set (the
 published multi-telescope TOAs) would test the limit's pipeline-dependence
 and could tighten the anchor bracket from the data side. The sub-2-day
 window — where the pole approaches instantaneity — needs the two-quadrature
 degeneracy treated as a joint confidence region rather than a profiled
-bound. The anchor question itself (`K_dyn`) reduces to reproducing the
-published static posterior within a linearized-plus-turn-manifold model; the
-lattice machinery of Section 5 is the starting point. And the live-refit
-null offset (gate G1) invites a nonlinear-likelihood treatment — priors on
-the truncated directions, or a posterior-consistent live absorb — that
-would either close the offset or promote it to a measured property of the
-timing solution.
+bound. And the anchor question itself (`K_dyn`) reduces to reproducing the
+published static posterior within a linearized-plus-turn-manifold model;
+the lattice machinery of Section 5 is the starting point.
 
 ## Appendix A: request-chain map
 
@@ -477,9 +487,15 @@ All quoted numbers reproduce deterministically from
 `scripts/sep_feasibility_gates.py` and `scripts/turn_search_10_8d.py`,
 anchor diagnosis from `scripts/anchor_resolution_10_8c.py`
 (-> `sep_dynamic/anchor_resolution_10_8c.json`), static sensitivity and
-`K_static` from `scripts/sep_static_sensitivity.py`, live-gate adjudication
-from `scripts/gateG_adjudicate.py`
-(-> `sep_dynamic/sep_gateG_adjudication.json`). Inputs of record:
+`K_static` from `scripts/sep_static_sensitivity.py`. The live-gate chain
+is three-stage: `scripts/make_gateG2_inputs.py` stages the templates and
+parameters (`gateG2_inputs.npz`, `gateG2_params.json`); the gate records
+themselves are produced *in the WSL runtime* by
+`scripts/wsl/wsl_gateG2.py` and `scripts/wsl/wsl_gateG2wp.py`
+(-> `sep_dynamic/sep_gateG2.json`, `sep_dynamic/sep_gateG2wp.json`); and
+`scripts/gateG_adjudicate.py` (stock numpy) derives the adjudication from
+those returned records (-> `sep_dynamic/sep_gateG_adjudication.json`).
+Inputs of record:
 `baseline_planetGR.npz`, `finite_jacobian_v2.npy` (+ `jac_v2/`),
 `sep_dynamic/col_SEP_D.npz`, `sep_dynamic/sep_dynamic_columns.npz`, and the
 integrator patch `sep_dynamic/patches/sepdyn.patch`. Live-model
@@ -498,11 +514,16 @@ All rows from the corrected (causal-branch) re-run of record. F0:
 anchored `6.87 x 10^-8` (Fisher `7.3 x 10^-11`). 10.8b fit: `Z = 1.328`,
 `p = 0.39`, anti-causal control `Z = 0.598` (`p = 0.87`), `s = 1.1149`,
 nuisance rank 71/90 (guard direction kept; guard residual
-`1.65 x 10^-7`). G1: `dz = +0.342 / +0.599` at `tau = 18 / 52 d` — FAIL
-(tolerance 0.3). G2a: registered dev `0.346 / 0.619 sigma_F`
-(PASS / FAIL at 0.5); differential `+0.004 / +0.021 sigma_F`. G2b:
-registered rel. dev `0.060% / 0.116%` — PASS (tolerance 2%); differential
-`0.041% / 0.083%`. Turn V: 1522 us > P/2 = 1366 us. Turn L (lattice
+`1.65 x 10^-7`). Live gates of record (C4-complete harness, anchors
+`tau = 2 / 18 / 52 d`): G1 offsets `-0.002 / -0.015 / -0.035 sigma_F`
+(tol 0.3); G2a `+0.009 / +0.056 / +0.057 sigma_F` (tol 0.5); G2b
+`-0.109% / -0.024% / +0.128%` (tol 2%) — 9/9 PASS. Worst-phase headline
+pair (`tau = 2 d`, `t_off = 104.35 d`): G1 `+0.039 sigma_F`, G2a
+`+0.096 sigma_F`, G2b `-0.007%` — 3/3 PASS. Superseded first
+gate run (defective harness span, recorded): G1 `+0.342 / +0.599` FAIL,
+G2a `0.346 / 0.619` PASS/FAIL, G2b PASS; span-only delta on `res0`
+reproduces those offsets (`+0.344 / +0.607`), guard-kept span reproduces
+`z_lin` to `~1e-16`. Turn V: 1522 us > P/2 = 1366 us. Turn L (lattice
 `|n1| <= 12`, `|n2| <= 6`, 48 combos/cell): 7 viable cells; worst `beta`
 dev `1.01 x 10^-10` (tol `2.07 x 10^-10`). 10.8c: core `rho` median 0.005,
 max 0.838; `K_static = 934.4`. 10.8e (4,821 origins): `Z = 2.285`
