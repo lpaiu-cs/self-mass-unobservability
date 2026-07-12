@@ -64,6 +64,14 @@ def make_sector_blocks(families):
         B["Grad"+sym]  = (rank+1,   2, -parity,       'grad', "GradDt"+sym)
         B["GradDt"+sym]= (rank+1,   3, -parity,       'grad', None)      # ambient only
     fam("E", 2, +1)
+    # CORRECTION (2026-07-12): GradE = partial^3 Phi (and GradDtE = partial^3
+    # of the harmonic dtau Phi) are STF-3 octupoles: totally symmetric by
+    # Schwarz and trace-free in the external vacuum.  Model them as true
+    # STF rank-3 blocks (7 comps), not generic 'grad' objects (15 comps).
+    # Admitted families' own Grad blocks stay generic ('grad'): independent
+    # primitives with no assumed potential structure.
+    B["GradE"]   = (3, 2, -1, 'stf', "GradDtE")
+    B["GradDtE"] = (3, 3, -1, 'stf', None)      # ambient only
     for sym, rank, parity in families:
         if sym != "E":
             fam(sym, rank, parity)
@@ -209,15 +217,17 @@ def survivor_dim(families, wmax=4):
 
 
 # sector label -> (families list, their independent survivor rank)
+# Targets: corrected family table (2026-07-12, STF-3 electric gradient block);
+# cross-checked against the exact character method (tier1_survivor_exact.py).
 SECTORS = [
-    ("E (electric)",   [("E", 2, +1)],                            7),
-    ("E/B (r2 magn.)", [("B", 2, -1)],                            18),
-    ("E/B/S (es)",     [("B", 2, -1), ("S", 0, +1)],              33),
-    ("E/V (r1)",       [("V", 1, +1)],                            17),
-    ("E/T (r3)",       [("T", 3, +1)],                            19),
-    ("E/Q (r4)",       [("Q", 4, +1)],                            25),   # corrected 19->25; see rederive_rank4.py
-    ("E/U (r5)",       [("U", 5, +1)],                            19),
-    ("E/Z (r6)",       [("Z", 6, +1)],                            23),
+    ("E (electric)",   [("E", 2, +1)],                            5),
+    ("E/B (r2 magn.)", [("B", 2, -1)],                            16),
+    ("E/B/S (es)",     [("B", 2, -1), ("S", 0, +1)],              30),
+    ("E/V (r1)",       [("V", 1, +1)],                            15),
+    ("E/T (r3)",       [("T", 3, +1)],                            17),
+    ("E/Q (r4)",       [("Q", 4, +1)],                            23),
+    ("E/U (r5)",       [("U", 5, +1)],                            17),
+    ("E/Z (r6)",       [("Z", 6, +1)],                            21),
 ]
 
 if __name__ == "__main__":

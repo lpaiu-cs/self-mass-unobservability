@@ -19,7 +19,7 @@
 - Status: Proven. Unsuppressed bare scalar class:
   the witness is `S`, so uniqueness up to `\Delta \le 4` requires `w_S \ge 5`, or a symmetry/background rule that forbids bare `S`.
 - Status: Proven. Derivative-only scalar class:
-  the first audited witnesses are `\{DtS_B2,\ dotS2,\ DtS_E2,\ divEGradS,\ gradS2\}` at weight `4`, so uniqueness up to `\Delta \le 4` requires derivative-family blocks to be pushed above their current weight-`2` admission, for example to effective weight `3`, or an explicit rule removing those mixed derivative witnesses.
+  the first audited witnesses are `\{DtS_B2,\ dotS2,\ DtS_E2,\ gradS2\}` at weight `4` (corrected 2026-07-12: `divEGradS` vanishes under the STF-3 gradient kinematics), so uniqueness up to `\Delta \le 4` requires derivative-family blocks to be pushed above their current weight-`2` admission, for example to effective weight `3`, or an explicit rule removing those mixed derivative witnesses.
 - Status: Proven. Genuine rank-1 vector class:
   the first audited witness is `V2`, so MVP-envelope sufficiency up to `\Delta \le 4` requires `w_V \ge 3`, or an explicit rule excluding or absorbing the primitive vector family.
 - Status: Proven. Genuine rank-3 STF class:

@@ -48,8 +48,8 @@ def reduction_examples() -> tuple[ReductionExample, ...]:
         ReductionExample("E2^2", 4, "already normal form", ops["E2"] ** 2),
         ReductionExample("dotE2", 4, "already normal form", ops["dotE2"]),
         ReductionExample("gradE2", 4, "already normal form", ops["gradE2"]),
-        ReductionExample("divE2", 4, "already normal form", ops["divE2"]),
-        ReductionExample("mixedGradE2", 4, "already normal form", ops["mixedGradE2"]),
+        ReductionExample("divE2", 4, "kinematic identity (vacuum trace)", ops["divE2"]),
+        ReductionExample("mixedGradE2", 4, "kinematic identity (Schwarz)", ops["mixedGradE2"]),
         ReductionExample("E_DtE", 3, "total derivative", ops["E_DtE"]),
         ReductionExample("Dt2_E2", 4, "total derivative", ops["Dt2_E2"]),
         ReductionExample("E_Dt2E", 4, "total derivative", ops["E_Dt2E"]),
@@ -66,6 +66,24 @@ def reduction_examples() -> tuple[ReductionExample, ...]:
         ReductionExample("aEGradE_2", 4, "lower-order EOM", ops["aEGradE_2"]),
         ReductionExample("aEGradE_3", 4, "lower-order EOM", ops["aEGradE_3"]),
     )
+
+
+def reduce_kinematic_identities(expr: sp.Expr) -> sp.Expr:
+    """Identities of the gradient block itself, prior to any quotient rule.
+
+    grad E = \\nabla_k E_ij = \\partial_k\\partial_i\\partial_j\\Phi is totally
+    symmetric in (k,i,j) by equality of mixed partials (Schwarz), and trace-free
+    on every index pair in the external vacuum (\\nabla^2\\Phi = 0 -- the same
+    condition that makes E itself traceless).  Hence:
+      mixedGradE2 = (\\nabla_k E_ij)(\\nabla^i E^{kj}) = gradE2   (Schwarz),
+      divE2       = (\\nabla_i E^{ij})(\\nabla^k E_{kj}) = 0      (vacuum trace).
+    """
+    ops = operator_symbols()
+    rules = {
+        ops["mixedGradE2"]: ops["gradE2"],
+        ops["divE2"]: sp.Integer(0),
+    }
+    return sp.expand(expr.subs(rules))
 
 
 def reduce_total_derivatives(expr: sp.Expr) -> sp.Expr:
@@ -105,7 +123,8 @@ def reduce_algebraic_identities(expr: sp.Expr) -> sp.Expr:
 
 
 def reduce_to_normal_form(expr: sp.Expr) -> sp.Expr:
-    reduced = reduce_total_derivatives(expr)
+    reduced = reduce_kinematic_identities(expr)
+    reduced = reduce_total_derivatives(reduced)
     reduced = reduce_lower_order_eom(reduced)
     reduced = reduce_algebraic_identities(reduced)
     return sp.expand(reduced)
@@ -119,8 +138,6 @@ def normal_form_basis() -> tuple[sp.Expr, ...]:
         ops["E2"] ** 2,
         ops["dotE2"],
         ops["gradE2"],
-        ops["divE2"],
-        ops["mixedGradE2"],
     )
 
 
@@ -145,8 +162,10 @@ def reduction_report() -> str:
         [
             "",
             "Status note:",
-            "- The earlier five-element target was incomplete.",
-            "- The corrected Delta<=4 basis keeps divE2 and mixedGradE2 as surviving gradient invariants.",
+            "- The M4-era seven-element basis over-counted the gradient sector by modeling",
+            "  grad E as a generic (STF-2 x vector) object.",
+            "- grad E = partial^3 Phi is totally symmetric (Schwarz) and vacuum trace-free,",
+            "  so mixedGradE2 = gradE2 and divE2 = 0: the corrected basis is five-dimensional.",
             "- This script applies only the explicitly stated reduction rules.",
         ]
     )

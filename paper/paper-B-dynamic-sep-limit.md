@@ -3,7 +3,7 @@
 **Status:** draft manuscript (Paper B of the two-paper split; dynamic free-fall sector)
 **Repository:** `lpaiu-cs/self-mass-unobservability`, branch `lpaiu/minimal-nonlinear-sideband`
 **Author:** Juneyoung, Kim
-**Note:** Draft 2026-07-12, revision 2 (post 10.8f review response: a quadrature-convention error found in independent review was corrected and the full measurement chain re-run; see `notes/REQUEST10_8F_REVIEW_RESPONSE.md`). Companion to Paper A (the static finite-family collapse theorem). Source of record for all numbers: the `request10_external/` artifact tree and the `notes/REQUEST10_*` request chain on branch `lpaiu/minimal-nonlinear-sideband` (commit-chain audit in Appendix D).
+**Note:** Draft 2026-07-12, revision 3 (post 10.8g second-round review response: anchor-tier labels corrected to the as-computed definition `u95(beta_hat, K sigma_F)`, causal/advanced discriminability measured and reported, ramp-calibration and turn-lattice scope statements tightened; no quoted number changed — see `notes/REQUEST10_8G_REVIEW_RESPONSE_2.md`. Revision 2 was the post-10.8f corrected re-run; see `notes/REQUEST10_8F_REVIEW_RESPONSE.md`). Companion to Paper A (the static finite-family collapse theorem). Source of record for all numbers: the `request10_external/` artifact tree and the `notes/REQUEST10_*` request chain on branch `lpaiu/minimal-nonlinear-sideband` (commit-chain audit in Appendix D).
 
 ---
 
@@ -41,7 +41,8 @@ upper limit on the amplitude of any lag-responding SEP oscillation:
 
 ```text
 |delta Delta| < 1.7 x 10^-9   (tau_chi = 2 d, worst drive phase;
-                               95% statistical CL x K_dyn = 10 anchor),
+                               95% interval at the K_dyn = 10 inflated
+                               Fisher width -- Sec. 4.1),
 rising to 7.2 x 10^-9 at tau_chi = 200 d and 1.7 x 10^-8 at the 500 d
 window edge,
 ```
@@ -197,12 +198,17 @@ single-line and naive-spectral tests). The decisive probe is quasi-static: a
 ramp drive (period 30,000 d, phase pi/2) fitted against the *measured*
 static column. Both unit hypotheses fit with `R^2 = 0.999` (deep-adiabatic
 shape degeneracy) but the amplitudes decide, and they decide coherently:
-`a_hat(timedays) = 0.502` and `a_hat(days) = 0.0219`, exactly the `1/2` and
-`1/(2 x 24.077)` predicted if (i) the integrator time unit is 24.0774 days
+`a_hat(timedays) = 0.502` and `a_hat(days) = 0.0219`, against the
+predictions `1/2` and `1/(2 x 24.077) = 0.0208` — residuals of 0.4% and
+5.3% respectively, small against the factor `~24` separating the two unit
+hypotheses — if (i) the integrator time unit is 24.0774 days
 and (ii) the secular-dominated response accumulates as the *integral* of
 `Delta(t)` (a phase-drift kernel), for which a ramp yields half the
 instantaneous-factorization template. One measurement therefore fixes the
-convention and validates the patch normalization end-to-end.
+convention and validates the patch normalization end-to-end. The
+integral-kernel (secular) reasoning is used *only* here, to calibrate the
+convention and normalization; the production templates of Section 3.3 are
+exact integrator outputs with no adiabatic element.
 
 ### 3.3 Production columns
 
@@ -242,7 +248,11 @@ weighted fit (Frisch-Waugh-Lovell block elimination; seed 20260710):
   seven planet-block columns re-derived at perturbative steps after the
   original one-sigma-scale steps were shown to be nonperturbative secants),
   an offset column, thirty low-frequency Fourier pairs (prior-free red-noise
-  marginalization), and the static-`Delta` column (static-leakage guard);
+  marginalization; the Fourier grid brackets the outer carrier -- the
+  `j = 9` mode lies 1.4% from `P_out` -- and a pre-registered order scan
+  shows the quoted limits sit on a conservative plateau in the model order;
+  Section 7 and 10.8h), and the static-`Delta` column (static-leakage
+  guard);
   truncated at relative singular value `10^-3` *with the guard column's
   truncated residual retained as an explicit extra nuisance direction*
   (rank 71 of 90; guard residual norm `1.6 x 10^-7`), so static-`Delta`
@@ -257,11 +267,19 @@ weighted fit (Frisch-Waugh-Lovell block elimination; seed 20260710):
   anti-causal control (the unphysical advanced-response template,
   `g2 -> -g2`) is scanned identically. The pre-registered detection rule
   requires global `p < 0.003` *and* a quiet control.
-- **Limits**: flat-prior Gaussian-posterior 95% amplitudes `u95(tau)`.
-  These are *statistical* 95% intervals; the anchor factors of Section 4.2
-  are systematic safety multipliers applied on top and are not themselves
-  probabilistic confidence statements. Quoted limits name their tier
-  explicitly.
+- **Limits**: flat-prior Gaussian-posterior 95% amplitudes `u95(tau)`:
+  the `u` such that a Gaussian centered on the fitted amplitude `beta_hat`
+  with width `sigma` carries 95% of its mass in `[-u, u]`. The statistical
+  tier uses `sigma = sigma_Fisher`. The anchor tiers of Section 4.2 are
+  **not** `K` times the statistical limit: each is the same 95%
+  construction evaluated at the `K`-inflated width,
+  `u95(beta_hat, K sigma_Fisher)` (approximately `1.96 K sigma_Fisher`
+  when `|beta_hat| << K sigma_Fisher`). Because the worst phase is tracked
+  per tier and the `beta_hat` term matters more at small widths, tier
+  ratios differ from `K` (the `K_dyn = 10` headline is 6.0x the
+  statistical tier at `tau = 2 d`, not 10x). The anchors are safety
+  constructions, not coverage-calibrated confidence statements; quoted
+  limits name their tier explicitly.
 - **Phase marginalization**: the one unresolved convention is a common
   time-origin `t_off`; carrier phases rotate as `w t_off` (independent
   per-carrier phases belong to the excluded arbitrary-projection collapse
@@ -285,7 +303,8 @@ inflates the static posterior demonstrably does not act on the dynamic
 templates (Section 5). Per a pre-registered rule the working anchor is
 `K_dyn = 10` (a safety floor, not a measurement), and every quoted quantity
 carries the full bracket: the statistical Fisher floor, the `K_dyn = 10`
-headline, and the `K = 934` ultra-conservative fallback. The live-refit
+headline, and the `K = 934` ultra-conservative fallback -- each tier
+evaluated as the 95% interval at its inflated width (Section 4.1). The live-refit
 displacement measured by gate G1 (`<= 0.04 sigma_F` over every gated
 pair, including the worst-phase headline template; Section 5) is
 negligible against this bracket.
@@ -345,7 +364,14 @@ gap-hidden pulse-number-slip degeneracy against a full timing-model span for
 this data set — and simultaneously a proof that the degeneracy is harmless
 for the dynamic observable *on the tested lattice*: pulse-number freedom is
 chi2-free but orthogonal to the template in the estimator's measurement
-space. Robustness against arbitrary turn re-assignments beyond the lattice
+space. The lattice indices are the coefficients of a smooth low-order
+reassignment: a candidate solution shifts pulse numbers by the wrapped ramp
+`n1 P (t - tau0)/T + n2 P ((t - t_ref2)/T)^2 + phi0 P` across the full span
+(`P` the spin period; 16 phase offsets and 3 quadratic references per
+cell), so the scanned family is smooth linear-plus-quadratic
+reassignments. An isolated slip introduced in one observing gap and undone
+in another is not a member of that family and remains outside scope.
+Robustness against arbitrary turn re-assignments beyond the lattice
 is not claimed.
 
 ## 6. Results
@@ -358,7 +384,28 @@ No pipeline mode meets the pre-registered detection rule (global
 full origin domain: `Z = 2.285`, `p = 0.26` — and the anti-causal control
 is *equally* elevated (`Z = 2.340`, `p = 0.28`), marking the mild elevation
 as noise/structure common to both quadrature conventions rather than a
-causal-response feature. Dictionary-anchored: `Z = 1.815`, `p = 0.47`
+causal-response feature. A design-only geometry measurement (10.8g;
+`sep_dynamic/sep_quadrature_overlap_10_8g.json`) illustrates why. It is not a
+scan over the origin domain: it evaluates the template geometry at two
+reference phases per lag — the common origin `t_off = 0` and the single
+`tau = 2 d` worst-phase headline offset (`104.349 d`, reused at every `tau`).
+In the estimator's nuisance-projected metric, after marginalizing the
+co-fitted instantaneous direction, the causal and advanced `beta` templates
+have marginalized overlap (`cos`, at the two phases) `+0.61 / +0.47` at
+`tau = 2 d`, `+0.91 / +0.86` at `5 d`, `+0.84 / +0.64` at `18 d`,
+`+0.18 / -0.29` at `52 d`, `-0.83 / -0.93` at `200 d`, and `-0.97 / -0.99` at
+`500 d`; from `tau = 200 d` outward the overlap is large and opposite-sign,
+the two conventions spanning nearly the same line. Except near `tau = 2` and
+`52 d`, where `|cos|` dips into `0.2-0.6`, the templates are nearly collinear
+at both sampled phases. At these reference phases the channel therefore has
+limited leverage on the lag *sign* over most of the window: the quoted limit
+bounds the amplitude of an oscillating-`Delta` response in the causal
+single-pole convention, and the advanced template functions as a common-mode
+control rather than a lag-sign discriminator. A full-origin overlap scan is
+not carried out here; the independent evidence that this near-collinearity
+holds across the window is the phase-marginalized detection statistic itself
+(Section 6.1), whose anti-causal control is equally elevated over the full
+4,821-origin domain. Dictionary-anchored: `Z = 1.815`, `p = 0.47`
 (reported, not gating). Linear injection-recovery is exact at all anchors;
 live-model injection-recovery is exact to `<= 0.10 sigma_F` at detection
 amplitudes and `<= 0.13%` at limit amplitudes across all gated pairs
@@ -368,7 +415,8 @@ including the worst-phase headline pair (Section 5).
 
 ```text
 Upper limit on the amplitude of a lag-responding SEP oscillation:
-95% statistical CL x K_dyn = 10 systematic anchor, phase-marginalized
+95% interval at the K_dyn = 10 inflated Fisher width
+(u95(beta_hat, 10 sigma_F); Sec. 4.1), phase-marginalized
 (worst phase), window tau_chi in [2, 500] d:
 
   tau_chi        2 d       5 d      18 d      52 d      200 d
@@ -384,11 +432,16 @@ Upper limit on the amplitude of a lag-responding SEP oscillation:
 Interpretation: any mechanism — an internal mode, a light dynamical degree
 of freedom, a relaxation response of the pulsar's effective self-gravity —
 that makes the SEP parameter of this neutron star *oscillate* at the triple
-system's carriers is excluded at amplitudes about three orders of magnitude
-below the published static bound for lags up to ~50 d, shrinking to about
+system's carriers is excluded, at the `K_dyn = 10` tier, at amplitudes about
+three orders of magnitude below the published static bound for lags up to
+~50 d (per tier at `tau = 2 d`: 3.0 dex at `K_dyn = 10` truncated, 2.7 dex
+at the full-rank bracket, 1.1 dex at `K = 934`), shrinking to about
 two orders at the 500 d window edge; the exclusion is robust to the timing
 model, to pulse-number ambiguity on the tested lattice, to the drive phase,
-and to the noise model at the levels recorded in Section 5.
+to the red-noise model order (enriching the Fourier block from the
+of-record 30 pairs to 60 moves every quoted anchor by `<= 0.6%`, uniformly
+in `tau`; pre-registered scan 10.8h), and to the noise model at the levels
+recorded in Section 5.
 
 ### 6.3 Coupling units and channel complementarity
 
@@ -406,16 +459,17 @@ same `(beta, tau_chi)` datum.
 
 ## 7. Scope: what is and is not claimed
 
-Claimed: a first, reproducible upper limit — a 95% *statistical* interval
-carrying a stated systematic anchor factor — on the amplitude of
+Claimed: a first, reproducible upper limit — a statistical 95% interval
+(`K = 1`) together with anchor tiers defined as 95% intervals at
+`K`-inflated Fisher widths (Section 4.1) — on the amplitude of
 lag-responding SEP violation of PSR J0337+1715 over
 `tau_chi in [2, 500] d`, in the stated conventions, with the full anchor
 bracket (Fisher floor, full-rank bracket, `K = 10` headline, `K = 934`
 fallback) published.
 
-Not claimed: any detection; a probabilistic confidence statement for the
-`K`-scaled tiers (the anchors are systematic safety factors, not
-coverage-calibrated multipliers); live-refit agreement beyond the measured
+Not claimed: any detection; a coverage-calibrated confidence statement for
+the `K`-scaled tiers (each is a 95% interval at a `K`-inflated width — a
+safety construction, not a calibrated multiplier); live-refit agreement beyond the measured
 `<= 0.04 sigma_F` (gate G1, all three anchors plus the worst-phase
 headline pair); turn robustness beyond the
 tested alias lattice; any statement below `tau_chi = 2 d` (the
@@ -423,8 +477,12 @@ tested alias lattice; any statement below `tau_chi = 2 d` (the
 diagnostic); any statement for other systems or other state models (the
 one-pole transfer is the minimal `F-A4+` branch; higher-order state dynamics
 would need more carriers per the counting boundaries); an absolute
-maximum-likelihood red-noise treatment (the prior-free Fourier
-marginalization shifted the clock-channel limits by only 6-10%); physical
+maximum-likelihood red-noise treatment (a pre-registered scan of the
+Fourier order, 10.8h, measured the free-fall channel directly: 30 -> 60
+pairs moves every quoted anchor by <= 0.6%, removing the block entirely
+tightens them by ~25%, and the profile is uniform in tau -- the of-record
+order sits on the conservative plateau; DM/chromatic modeling and a
+GP-based cross-check remain future work); physical
 drive factors beyond leading order.
 
 ## 8. Discussion
@@ -475,7 +533,10 @@ classes) -> `REQUEST10_NAMED_TIMING_MODEL_PROJECTION_AUDIT.md` (10.6) ->
 -> `REQUEST10_8D_TURN_SEARCH_ROBUSTNESS.md` ->
 `REQUEST10_8E_PHASE_MARG_PHYSICAL_ANCHOR.md` -> `REQUEST10_8_REVIEW.md` ->
 `REQUEST10_8F_REVIEW_RESPONSE.md` (independent-review corrections C1-C12 and
-the R1-R7 re-run record).
+the R1-R7 re-run record) -> `REQUEST10_8G_REVIEW_RESPONSE_2.md` (second-round
+label/framing adjudication D1-D8 + the causal/advanced overlap measurement)
+-> `REQUEST10_8H_REDNOISE_ROBUSTNESS.md` (pre-registered red-noise-order
+robustness scan; all anchors stable).
 
 ## Appendix B: artifacts and reproduction
 
@@ -487,7 +548,13 @@ All quoted numbers reproduce deterministically from
 `scripts/sep_feasibility_gates.py` and `scripts/turn_search_10_8d.py`,
 anchor diagnosis from `scripts/anchor_resolution_10_8c.py`
 (-> `sep_dynamic/anchor_resolution_10_8c.json`), static sensitivity and
-`K_static` from `scripts/sep_static_sensitivity.py`. The live-gate chain
+`K_static` from `scripts/sep_static_sensitivity.py`, and the causal/advanced
+template-geometry overlap from `scripts/sep_quadrature_overlap_10_8g.py`
+(-> `sep_dynamic/sep_quadrature_overlap_10_8g.json`; design-only, no
+residuals consumed), and the red-noise-order robustness scan from
+`scripts/sep_rn_robustness_10_8h.py`
+(-> `sep_dynamic/sep_rn_robustness_10_8h.json`; pre-registered in
+`notes/REQUEST10_8H_REDNOISE_ROBUSTNESS.md`, committed before its run). The live-gate chain
 is three-stage: `scripts/make_gateG2_inputs.py` stages the templates and
 parameters (`gateG2_inputs.npz`, `gateG2_params.json`); the gate records
 themselves are produced *in the WSL runtime* by

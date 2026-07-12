@@ -1,8 +1,9 @@
 # Finite-Family Collapse of Free-Fall Self-Energy Couplings: A Fixed-Order Worldline-EFT Theorem, its Uniqueness No-Go, and Sharp Boundary Escapes
 
 **Status:** draft manuscript (Paper A of the two-paper split; static free-fall sector)
-**Repository:** `lpaiu-cs/self-mass-unobservability`, branch `collapse-theorem`
+**Repository:** `lpaiu-cs/self-mass-unobservability` (main branch)
 **Author:** Juneyoung, Kim
+**Note:** Draft 2026-07-12, revision 2. Revision 1 (adversarial-review corrections): the gradient block \(\nabla E\) is an STF-3 octupole, collapsing the electric normal-form dimension from seven to five and shifting every family dimension — see Sections 3.2, 3.3, 7; framing and citation fixes throughout. Revision 2 (review response): the STF-3 gradient reduction is made explicitly conditional on the leading-Newtonian harmonic-scalar-potential representation, promoted to premise \(A9\), and the tidal-EFT positioning is qualified accordingly — see Sections 2, 8.
 
 ---
 
@@ -19,19 +20,24 @@ equilibrium. What survives is a restricted EFT in which the body's self-energy c
 enter only through body-dependent sensitivity couplings of an already-formed
 object. We then prove, in the parity-even, nonspinning, local free-fall sector at
 fixed operator order \(\Delta \le 4\) and under an explicit assumption ledger
-\(A1\)–\(A8\): **(i)** the admissible parity-even scalar sensitivity operator space
-is finite, reduces to an explicit finite normal-form basis of computed dimension (seven for the electric sector), and — under locality
+\(A1\)–\(A9\): **(i)** the admissible parity-even scalar sensitivity operator space
+is finite, reduces to an explicit finite normal-form basis of computed dimension (five for the electric sector), and — under locality
 and analyticity — the monopole response collapses to a finite Taylor jet in
 finitely many scalar coordinates (the *positive finite-family collapse theorem*);
 **(ii)** this does *not* single out a unique minimal sector — admitting any
 unsuppressed primitive family (magnetic, scalar, vector, or higher-rank
-symmetric-trace-free) produces a new low-order witness, a *class-limited
+symmetric-trace-free) produces a new low-order witness that survives the reduction
+quotient and is linearly independent of the electric basis, a *class-limited
 family-admission no-go*; and **(iii)** each of the four load-bearing assumptions
 \(A3, A4, A5, A8\) is sharp: dropping it admits an explicit counterexample, with
 \(A4\) additionally admitting a finite state-augmented salvage. All load-bearing
-counts and identities are reproduced by two independent computational methods; in
-the course of that verification we corrected the rank-4 survivor dimension of the
-enumeration from 19 to 25. We are explicit about the theorem's boundaries: nothing
+counts and identities are reproduced by independent computational methods, and the
+verification process itself exposed and corrected two errors in earlier
+bookkeeping — an undercount of the rank-4 survivor dimension, and an over-count of
+the gradient sector in every dimension quoted previously (the tidal gradient
+\(\nabla E = \partial^3\Phi\) is a totally symmetric, vacuum trace-free octupole,
+not a generic tensor) — so the dimensions quoted here are the twice-corrected
+values. We are explicit about the theorem's boundaries: nothing
 here is claimed for parity-odd, spinning, nonlocal, clock, or orbital-timescale-state
 sectors, for a unique physically privileged minimal sector, or beyond the fixed
 cutoff.
@@ -81,15 +87,19 @@ imported inputs here (Appendix A):
   \(P_c\propto\alpha^{3}\); as \(\lambda\to1\) the object decompactifies into an
   unbound cloud rather than reaching a new equilibrium.
 
-Together these force the only coherent remnant: an effective description in which
-self-energy enters through *sensitivity couplings of an already-formed body*, i.e.
-the coefficients of (1) and their higher analogues. The remainder of this paper
-classifies those couplings.
+Together these motivate the restricted setting adopted here: an effective
+description in which self-energy enters through *sensitivity couplings of an
+already-formed body*, i.e. the coefficients of (1) and their higher analogues. We
+emphasize that the two no-gos rule out alternatives but do not by themselves
+entail this description; the restricted EFT is *adopted as premises* — the
+worldline-EFT existence, sector, and equilibrium assumptions \(A2, A3, A6\) of
+Section 2 — and everything downstream is conditional on that ledger. The
+remainder of this paper classifies those couplings.
 
 ### 1.3 Results
 
 Working in the worldline EFT (Section 2) at fixed order \(\Delta\le 4\) under the
-ledger \(A1\)–\(A8\):
+ledger \(A1\)–\(A9\):
 
 1. **Positive finite-family collapse (Section 3).** The parity-even scalar
    sensitivity operator space is finite; after explicit reductions it has a finite
@@ -101,20 +111,41 @@ ledger \(A1\)–\(A8\):
 3. **Sharp boundary escapes (Section 5).** \(A3, A4, A5, A8\) are each necessary —
    dropping any one admits an explicit counterexample — with a finite
    state-augmented salvage for \(A4\).
-4. **Independent verification (Section 7).** Two independent computational methods
-   reproduce every load-bearing count and identity; the rank-4 survivor dimension
-   was corrected from 19 to 25 in the process.
+4. **Independent verification (Section 7).** Independent computational methods
+   reproduce every load-bearing count and identity. The verification corrected two
+   errors in earlier bookkeeping: a rank-4 survivor undercount (six omitted
+   higher-degree mixed operators), and a gradient-sector over-count — the earlier
+   enumeration modeled \(\nabla_k E_{ij}\) as a generic tensor, missing the Schwarz
+   total symmetry of \(\partial_k\partial_i\partial_j\Phi\) and the vacuum trace
+   condition already imposed on \(E\) itself, which had inflated the electric
+   dimension from five to seven and every family dimension with it.
 
 ---
 
 ## 2. Worldline setup and assumptions
 
 We treat the body as a point worldline dressed by finite-size operators built from
-the external field evaluated on the worldline. The leading tidal object is the
-electric tidal tensor \(E_{ij}=\partial_i\partial_j\Phi_{\rm ext}\), a symmetric
-trace-free (STF) rank-2 tensor; its worldline time derivative \(D_\tau E_{ij}\) and
-spatial gradient \(\nabla_k E_{ij}\) enter at higher order, as do higher-multipole
-and additional primitive families. The **monopole sensitivity** is the piece of the
+the external field evaluated on the worldline. Throughout we work in the
+leading-Newtonian, purely-electric regime in which the external field is a harmonic
+Newtonian scalar potential — the representation \(E_{ij}=\partial_i\partial_j
+\Phi_{\rm ext}\) with \(\nabla^2\Phi_{\rm ext}=0\), promoted to an explicit premise
+\(A9\) in the ledger below. The leading tidal object is then the electric tidal
+tensor \(E_{ij}\), a symmetric trace-free (STF) rank-2 tensor; its worldline time
+derivative \(D_\tau E_{ij}\) and spatial gradient \(\nabla_k E_{ij}\) enter at higher
+order, as do higher-multipole and additional primitive families. In this
+representation the gradient block carries kinematic structure that the enumeration
+must respect: \(\nabla_k E_{ij}=\partial_k\partial_i\partial_j\Phi_{\rm ext}\) is
+totally symmetric in \((k,i,j)\) by equality of mixed partials, and the harmonic
+condition \(\nabla^2\Phi_{\rm ext}=0\) (the same condition that makes \(E\) itself
+trace-free) makes it trace-free on every index pair — an STF-3 octupole with seven
+components, not a generic \(({\rm STF\text{-}2})\otimes{\rm vector}\) object with
+fifteen. This reduction is a consequence of the scalar-potential representation
+\(A9\), not of tracelessness of a generic electric tidal tensor: for the electric
+part of the Weyl tensor in the fully relativistic theory the covariant gradient
+\(\nabla_k E_{ij}\) additionally carries divergence and curl pieces fixed by the
+Bianchi (gravitoelectromagnetic) constraint equations (Danehkar 2022), which the
+harmonic-scalar-potential restriction removes; relaxing \(A9\) therefore restores
+the generic gradient sector (Sections 3.2, 8). The **monopole sensitivity** is the piece of the
 worldline action that renormalizes how the body's mass responds to the external
 field — the operator analogue of the coefficients in (1) — and is a scalar function
 of finitely many local invariants \(Y^I\).
@@ -134,9 +165,22 @@ assumption ledger, whose entries are **premises**, not derived results:
 | \(A6\) | self-bound equilibrium before external perturbation | separates formation from coupling |
 | \(A7\) | fixed operator order \(\Delta\le4\) | prevents a silent all-orders claim |
 | \(A8\) | locally finite primitive-family spectrum below the cutoff | finitely many species with \(w\le\Delta_{\max}\) |
+| \(A9\) | leading-Newtonian harmonic external potential: \(E_{ij}=\partial_i\partial_j\Phi_{\rm ext}\), \(\nabla^2\Phi_{\rm ext}=0\) (purely electric) | fixes the tidal representation; licenses the STF-3 gradient reduction |
 
-The four assumptions \(A3, A4, A5, A8\) are load-bearing and are shown sharp in
-Section 5; \(A1, A2, A6, A7\) delimit the sector.
+The classification criterion we use is explicit: an assumption is *load-bearing*
+if removing it changes a named conclusion, and the interesting load-bearing cases
+are those whose failure modes are structurally informative. By that criterion
+\(A3, A4, A5, A8\) are load-bearing and individually non-redundant — dropping any
+one admits the explicit counterexample of Section 5. \(A7\) is also load-bearing
+for finiteness, but trivially so: removing the cutoff reopens the infinite
+all-orders tower, and there is no finite-basis claim left to test, so it is kept
+as a stated scope choice rather than a Section 5 entry. \(A1, A6\) delimit the
+sector, and \(A2\) is the sector restriction whose cost is quantified by Theorem 2:
+each family excluded by \(A2\) would, if admitted unsuppressed, contribute new
+survivors. \(A9\) is a representation premise: relaxing it to a generic
+electric-Weyl tidal tensor restores the divergence and curl gradient pieces
+(Section 3.2), so it is load-bearing for the gradient-sector dimensions, though we
+do not work it as a Section 5 escape.
 
 ---
 
@@ -164,10 +208,11 @@ finite primitive spectrum \(A8\), boundedness of a graded invariant space is
 expected on general invariant-theory grounds. The theorem's nontrivial content is
 therefore *not* "the space is finite" but three sharper facts that finiteness alone
 does not supply: **(i)** the reduced space is a *specific* normal-form quotient of
-computed dimension — seven for the electric sector (2), and the tabulated
+computed dimension — five for the electric sector (2), and the tabulated
 dimensions for each admitted family (Section 3.3) — obtained by quotienting the raw
 contractions by total worldline derivatives, the lower-order equation of motion,
-and the STF identities (3); **(ii)** that quotient is exact, i.e. the redundancy is
+the kinematic identities of the gradient block, and the STF identities (3);
+**(ii)** that quotient is exact, i.e. the redundancy is
 removed by a *closed, finite* set of algebraic identities rather than an open-ended
 reduction; and **(iii)** the irreducible family envelope itself closes (Section
 3.1). Assumptions \(A7\)–\(A8\) deliver only boundedness; layers (a), (c), (d)
@@ -184,25 +229,43 @@ STF}_{r-2}\oplus\cdots\) so that its trace descendants are strictly lower-rank S
 **scalar (rank 0), vector (rank 1), rank-2 STF, and genuine rank-\(L\ge3\) STF**
 classes; trace-descendant and even-dual mixed-symmetry sectors reduce to STF +
 traces, and parity-odd/pseudo sectors are excluded by \(A2\). The rank-\(L\ge3\)
-tower is closed uniformly rather than rank-by-rank: for every \(L\ge3\) the smallest
-self witness is \(X2=X\!\cdot\!X\) at weight 2, the mixed contraction \(E\!:\!X\)
-vanishes (no weight-2 mixed witness for \(L\ne2\)), and the smallest mixed witness is
-\(E X X\) at weight 3. We confirmed this uniform structure by exact character
-integrals for \(L=2,\dots,12\), well past the audited \(L\le6\) (Section 7).
+tower is closed uniformly rather than rank-by-rank, by elementary rank arithmetic
+valid for all \(L\): the full contraction \(X2=X\!\cdot\!X\) exists at weight 2 for
+every rank (smallest self witness); a \(\delta\)-contraction scalar of two STF
+tensors requires equal rank, so the mixed quadratic \(E\!:\!X\) exists only at
+\(L=2\) (no weight-2 mixed witness for \(L\ne2\)); and \(X\otimes X\) contains an
+STF-2 for every \(L\ge1\), so the mixed cubic \(E X X\) exists at weight 3
+(smallest mixed witness). We additionally confirmed this uniform structure by
+exact character integrals for \(L=2,\dots,12\), well past the audited \(L\le6\)
+(Section 7).
 
 ### 3.2 The electric-sector normal-form basis
 
 For the minimal electric sector \(\{E, D_\tau E, D_\tau^2 E, \nabla E\}\) at
 \(\Delta\le4\), all parity-even scalar contractions reduce — modulo total
-worldline derivatives, the lower-order equation of motion (\(a_i=0\)), and the STF
-algebraic identities — to the seven-dimensional normal-form basis
+worldline derivatives, the lower-order equation of motion (\(a_i=0\)), the
+kinematic identities of the gradient block, and the STF algebraic identities — to
+the five-dimensional normal-form basis
 \[
-\{\,E2,\; E3,\; E2^2,\; \dot E2,\; \nabla\!E2,\; {\rm div}E2,\; {\rm mixedGrad}E2\,\},
+\{\,E2,\; E3,\; E2^2,\; \dot E2,\; \nabla\!E2\,\},
 \tag{2}
 \]
-where \(E2=E_{ij}E^{ij}\), \(E3=E_i{}^jE_j{}^kE_k{}^i\), and the three gradient
-scalars are the independent contractions of \(\nabla_kE_{ij}\) that survive because no
-transversality or Bianchi relation is imposed. The only genuinely algebraic
+where \(E2=E_{ij}E^{ij}\), \(E3=E_i{}^jE_j{}^kE_k{}^i\), and
+\(\nabla\!E2=(\nabla_kE_{ij})(\nabla^kE^{ij})\). The gradient sector is
+one-dimensional for a kinematic reason: as noted in Section 2, \(\nabla_kE_{ij}\)
+is an STF-3 octupole — totally symmetric by equality of mixed partials and
+trace-free in the external vacuum, both properties of the harmonic-scalar-potential
+representation \(A9\) — and a single \(SO(3)\) irreducible carries
+exactly one quadratic invariant. The two further contractions admitted by a
+generic \(({\rm STF\text{-}2})\otimes{\rm vector}\) model,
+\({\rm div}E2=(\nabla_iE^{ij})(\nabla^kE_{kj})\) and
+\({\rm mixedGrad}E2=(\nabla_kE_{ij})(\nabla^iE^{kj})\), respectively vanish
+(vacuum trace) and coincide with \(\nabla\!E2\) (Schwarz symmetry). An earlier
+version of this enumeration modeled the gradient block generically and quoted a
+seven-dimensional electric basis; the error — declining for \(\nabla E\) the very
+vacuum condition already used to make \(E\) trace-free, and overlooking the Schwarz
+symmetry entirely — was caught in adversarial review and corrected throughout
+(Section 7). The only genuinely algebraic
 reductions are the STF identities
 \[
 {\rm Tr}\,E^4 = \tfrac12({\rm Tr}\,E^2)^2,\qquad
@@ -212,8 +275,10 @@ reductions are the STF identities
 \]
 the third of which we verified as an exact symbolic identity. The basis (2) is both
 **complete** (no weight-\(\le4\) parity-even scalar is missed) and **linearly
-independent** (the coefficient matrix has rank 7); we verified completeness by two
-independent methods and independence by explicit polynomial rank (Section 7).
+independent** (the coefficient matrix has rank 5); we verified completeness by two
+independent methods, independence by explicit polynomial rank, and the two
+kinematic identities both exactly (on the explicit 7-parameter STF-3
+parametrization) and numerically to machine precision (Section 7).
 
 ### 3.3 Survivor dimensions of the audited families
 
@@ -223,20 +288,29 @@ finite and equals, for the electric baseline plus one family:
 
 | Sector | family rank / parity | survivor dimension |
 | --- | --- | --- |
-| electric \(E\) | — | 7 |
-| \(E\) + magnetic \(B\) | rank 2, parity-odd | 18 |
-| \(E\) + \(B\) + scalar \(S\) | rank 0 | 33 |
-| \(E\) + vector \(V\) | rank 1 | 17 |
-| \(E\) + rank-3 STF \(T\) | rank 3 | 19 |
-| \(E\) + rank-4 STF \(Q\) | rank 4 | **25** |
-| \(E\) + rank-5 STF \(U\) | rank 5 | 19 |
-| \(E\) + rank-6 STF \(Z\) | rank 6 | 23 |
+| electric \(E\) | — | 5 |
+| \(E\) + magnetic \(B\) | rank 2, parity-odd | 16 |
+| \(E\) + \(B\) + scalar \(S\) | rank 0 | 30 |
+| \(E\) + vector \(V\) | rank 1 | 15 |
+| \(E\) + rank-3 STF \(T\) | rank 3 | 17 |
+| \(E\) + rank-4 STF \(Q\) | rank 4 | **23** |
+| \(E\) + rank-5 STF \(U\) | rank 5 | 17 |
+| \(E\) + rank-6 STF \(Z\) | rank 6 | 21 |
 
-The rank-4 entry is the corrected value: the original hand-built enumeration capped
-the mixed \(E/Q\) sector at degree 2 in \(E\) and returned 19, omitting six genuine
-higher-degree survivors (\(EEQ, QQQ, E^3Q, EQ^3, E\,D_\tau E\,Q, \nabla E\,\nabla
-Q\)); restoring them gives 25 (Section 7 and Appendix C). Every other sector matched
-its audited value exactly. In all cases the space is finite — the content of
+The table reflects the two corrections found in verification (Section 7). First,
+the original hand-built enumeration capped the mixed \(E/Q\) sector at degree 2 in
+\(E\), omitting six genuine higher-degree survivors (\(EEQ, QQQ, E^3Q, EQ^3,
+E\,D_\tau E\,Q, \nabla E\,\nabla Q\)); restoring them lifts the new-sector rank
+from 12 to 18 (Appendix C). Second, the gradient-kinematics correction of Section
+3.2 removes the two spurious electric-gradient entries from every sector, and
+additionally removes the mixed invariant \((\nabla_iE^{ij})(\nabla_jS)\) from the
+scalar sector (the \(\ell=3\) octupole shares no irreducible with the scalar
+gradient); the cross-gradient \(\nabla E\,\nabla Q\) itself survives, because
+\(\nabla Q\) does contain an \(\ell=3\) piece. Admitted families' own gradient
+blocks are kept generic: they are independent primitives with no assumed potential
+structure, so no analogue of the Schwarz/vacuum collapse applies to them. Every
+number shown is reproduced independently by an exact \(O(3)\) character identity
+(Section 7). In all cases the space is finite — the content of
 Theorem 1's finiteness at the family level.
 
 ### 3.4 Monopole jet and the sensitivity/Wilson split
@@ -253,13 +327,22 @@ jet and are not merged into the same coefficient family. This completes Theorem 
 
 Theorem 1 does **not** identify a unique, physically privileged minimal sector.
 
-**Theorem 2 (class-limited family-admission no-go).** *Across the audited
-unsuppressed primitive-family classes, admission of a genuinely new primitive family
-yields a low-order surviving witness at \(\Delta\le4\). Hence no theorem can single
+**Theorem 2 (class-limited family-admission no-go).** *Fix the domain and
+reduction rules of Theorem 1, and admit alongside \(E\) any one primitive family
+from the audited classes — scalar, vector, rank-2 STF (magnetic), or genuine
+rank-\(L\ge3\) STF — at its natural weight assignment and with untuned
+coefficients. Then the enlarged sector contains, already at \(\Delta\le4\), at
+least one new operator that survives the full reduction quotient and is linearly
+independent of the electric basis (2). Hence no theorem can single
 out a unique minimal sector without adding explicit suppression, ordering, or
 background-restriction assumptions family by family.*
 
-The smallest new survivors are:
+The existence of *some* new invariant upon admitting a new field is, of course,
+immediate (the family supplies its own quadratic norm); the theorem's content is
+that this invariant **survives the reduction quotient** — it is not a total
+derivative, not EOM-reducible, and not algebraically dependent on the electric
+basis — which we verified by explicit rank computation for every audited class
+(Section 7). The smallest new survivors are:
 
 | Admitted family | smallest new witness | weight |
 | --- | --- | --- |
@@ -279,8 +362,12 @@ not pick out one canonical coupling.
 
 ## 5. Sharp boundary escapes
 
-Each load-bearing assumption is necessary: dropping it admits an explicit
-counterexample. We verified all four (Section 7).
+Each of \(A3, A4, A5, A8\) is individually non-redundant: dropping it, with the
+rest of the ledger held fixed, admits an explicit counterexample. (This
+establishes sharpness of each assumption separately, not minimality or
+completeness of the set; and \(A7\) is absent here because its removal breaks
+finiteness trivially rather than informatively — see Section 2.) We verified all
+four counterexamples (Section 7).
 
 | Dropped | Smallest explicit counterexample | Layer broken | Replacement data |
 | --- | --- | --- | --- |
@@ -334,33 +421,57 @@ belong to the separate data-side program and to Paper B (the dynamic loophole).
 ## 7. Independent verification
 
 Every load-bearing count and identity in Sections 3–5 was reproduced by methods
-independent of the repository's own enumeration scripts, and the two families of
-methods agree.
+independent of the repository's own enumeration scripts. The verification is not
+merely confirmatory: it exposed and corrected two errors, and the second of them
+carries a methodological lesson we state explicitly.
 
 * **Algebraic identities (3).** Verified numerically over random STF tensors and, for
   the mixed quartic, as an exact symbolic identity.
+* **Gradient kinematic identities.** \({\rm div}E2=0\) and \({\rm mixedGrad}E2
+  =\nabla\!E2\) verified exactly on the explicit 7-parameter STF-3 parametrization
+  and numerically to machine precision over random octupoles; a diagnostic control
+  confirms that the *generic* gradient model reproduces the defective rank-3
+  gradient sector, isolating the old error to the modeling choice.
 * **Electric basis (2).** *Completeness* confirmed two ways — a from-scratch
-  \(\delta\)-only contraction enumerator over every weight-\(\le4\) signature, and an
+  \(\delta\)-only contraction enumerator over every weight-\(\le4\) signature
+  (fourteen signatures with nonzero invariant content), and an
   \(O(3)\) character (Molien) count anchored by the pure-\(E\) Hilbert series
-  \(1/((1-t^2)(1-t^3))\) — and *independence* by explicit polynomial rank 7.
+  \(1/((1-t^2)(1-t^3))\) — and *independence* by explicit polynomial rank 5.
 * **Family completeness.** Survivor dimensions computed by an exact character
   identity, \({\rm survivor}(w)=\dim{\rm inv}_{\rm trunc}(w)-\dim{\rm inv}_{\rm
-  prom}(w-1)\), reproducing seven of eight audited sectors exactly and, for the
-  eighth, exposing and correcting the rank-4 undercount (19\(\to\)25); the six omitted
-  operators were constructed explicitly and shown nonzero, rotation-invariant, and
-  non-total-derivative, and were added to the repository's enumeration.
+  prom}(w-1)\), reproducing all eight audited sectors
+  (\(5,16,30,15,17,23,17,21\)) after the two corrections below were applied to the
+  enumeration; the numeric \(D_\tau\)-quotient method independently confirms the
+  brute-force-feasible sectors.
+* **Correction 1 (rank-4 undercount).** The original hand-built rank-4 candidate
+  list capped the mixed \(E/Q\) sector at degree 2 in \(E\); the character identity
+  exposed six omitted operators, which were constructed explicitly and shown
+  nonzero, rotation-invariant, and non-total-derivative, lifting the rank-4
+  new-sector rank from 12 to 18.
+* **Correction 2 (gradient-sector over-count).** An external adversarial review
+  found that *every* method — including the nominally independent ones — had
+  modeled \(\nabla E\) as a generic \(({\rm STF\text{-}2})\otimes{\rm vector}\)
+  object, dropping the Schwarz symmetry of \(\partial^3\Phi\) and the vacuum trace
+  condition already imposed on \(E\) itself. Agreement between two methods is no
+  protection against a wrong ansatz they share; the corrected kinematics is now
+  encoded in all methods, which again agree, and the diagnostic control above
+  keeps the failure mode visible. This moved the electric dimension from seven to
+  five and shifted every family dimension in Section 3.3.
 * **Family-envelope closure.** The STF-\(L\) irrep census and the uniform tower
   self-witness structure (\(X2\) at weight 2, \(EXX\) at weight 3, no weight-2 mixed
-  witness for \(L\ge3\)) verified for \(L=2,\dots,12\).
+  witness for \(L\ge3\)) proven by rank arithmetic (Section 3.1) and confirmed by
+  exact character integrals for \(L=2,\dots,12\).
 * **Boundary escapes.** All four counterexamples verified from their explicit models
   (flat Taylor jet for \(A5\); non-rational transfer function for \(A3\); adiabatic
   collapse coefficients and genuine state dependence for \(A4\); infinite pre-reduction
   count for \(A8\)).
 
-The verification scripts and a written audit are in `verification/` on the
-`collapse-theorem` branch. This manuscript's status labels follow the taxonomy in
+The verification scripts and a written audit are in `verification/` and
+`symbolic/` in the repository; a DOI-archived snapshot of the verification tree
+will accompany submission so that referees need no repository access. This
+manuscript's status labels follow the taxonomy in
 `docs/status-labels.md`: `Proven` marks a computationally or analytically established
-claim, `Assumption` marks the \(A1\)–\(A8\) premises, and bookkeeping/provenance is
+claim, `Assumption` marks the \(A1\)–\(A9\) premises, and bookkeeping/provenance is
 tagged `Note`.
 
 Finally, because the character/Molien count is order-agnostic — the same
@@ -384,10 +495,40 @@ second-order internal mode generates orbital sidebands that evade the static
 collapse. That companion analysis (Paper B, `paper/paper-B-dynamic-sep-limit.md`
 on the dynamic branch) is now complete: instrumenting the salvaged \(A4\) state
 data \((\beta,\tau_\chi)\) on PSR J0337+1715, it bounds the amplitude of any
-lag-responding SEP oscillation at \(|\delta\Delta|<1.3\times10^{-9}\) (95% CL,
-\(\tau_\chi\in[2,500]\) d, worst drive phase). The uniqueness no-go is, we think, the honest headline: the idea does not
+lag-responding SEP oscillation at \(|\delta\Delta|<1.7\times10^{-9}\)
+(a 95% interval evaluated at a systematically inflated width, anchor tier
+\(K_{\rm dyn}=10\); \(\tau_\chi=2\) d, worst drive phase, over the window
+\(\tau_\chi\in[2,500]\) d). The uniqueness no-go is, we think, the honest headline: the idea does not
 select a canonical coupling, and any stronger "minimal-sector" claim must import an
 explicit suppression principle.
+
+**Relation to existing tidal worldline-EFT bases.** The operator language used
+here is the standard worldline EFT of extended bodies (Goldberger–Rothstein), and
+finite-size operator towers built from \(E_{ij}\), \(B_{ij}\), and their
+derivatives have long been organized for post-Newtonian and effective-one-body
+tidal dynamics — notably by Bini, Damour and Faye; Levi and Steinhoff;
+Henry, Faye and Blanchet; and, within modern scattering-amplitude/worldline
+programs, Kälin and Porto. Those constructions classify *tidal response*
+operators (Love-number couplings and their spin/derivative refinements) for
+waveform modeling. What this paper adds is orthogonal to that goal: a
+*sensitivity* reading of the same operator space — which couplings can carry
+dependence on the body's own self-energy in free fall — together with the exact
+fixed-order reduction quotient with computed dimensions, the family-admission
+no-go, and the sharp assumption-boundary map. We are not aware of a prior
+classification of this sector under this question. The rank-2 tidal objects and the
+total-derivative and equation-of-motion reductions deliberately match the
+established tidal-EFT conventions so that the two programs can be composed. One
+qualification applies to the gradient sector: our STF-3 collapse of
+\(\nabla_kE_{ij}\) uses the leading-Newtonian harmonic-scalar-potential
+representation (premise \(A9\)), \(E_{ij}=\partial_i\partial_j\Phi_{\rm ext}\) with
+\(\nabla^2\Phi_{\rm ext}=0\). For the electric part of the Weyl tensor in the fully
+relativistic tidal EFT this representation does not hold — the covariant gradient
+carries additional divergence and curl pieces fixed by the Bianchi
+(gravitoelectromagnetic) constraint equations (Danehkar 2022) — so outside the
+harmonic-scalar-potential regime the gradient block is richer. The composition with
+the relativistic programs therefore holds at leading-Newtonian order, where the
+representations agree; the gradient-sector dimensions quoted here are specific to
+that regime.
 
 **The empirical anchor.** The theorem is structural, but its leading coordinate is
 already measured. The linear coefficient \(\sigma_1\) in (1) is, to leading
@@ -435,3 +576,8 @@ track.
 6. B. Kol and M. Smolkin, *Black hole stereotyping: induced gravito-static polarization*, JHEP **02**, 010 (2012).
 7. R. A. Porto, *The effective field theorist's approach to gravitational dynamics*, Phys. Rep. **633**, 1 (2016).
 8. T. Damour, *The problem of motion in Newtonian and Einsteinian gravity*, in *300 Years of Gravitation*, eds. Hawking and Israel (Cambridge, 1987).
+9. D. Bini, T. Damour, and G. Faye, *Effective action approach to higher-order relativistic tidal interactions in binary systems and their effective one body description*, Phys. Rev. D **85**, 124034 (2012). arXiv:1202.3565.
+10. M. Levi and J. Steinhoff, *Spinning gravitating objects in the effective field theory in the post-Newtonian scheme*, JHEP **09**, 219 (2015). arXiv:1501.04956.
+11. Q. Henry, G. Faye, and L. Blanchet, *Tidal effects in the gravitational-wave phase evolution of compact binary systems to next-to-next-to-leading post-Newtonian order*, Phys. Rev. D **102**, 044033 (2020). arXiv:2005.13367.
+12. G. Kälin and R. A. Porto, *Post-Minkowskian effective field theory for conservative binary dynamics*, JHEP **11**, 106 (2020). arXiv:2006.01184.
+13. A. Danehkar, *Covariant evolution of gravitoelectromagnetism*, Universe **8**, 318 (2022). arXiv:2206.13946.

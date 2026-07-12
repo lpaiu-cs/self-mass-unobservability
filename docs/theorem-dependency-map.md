@@ -5,7 +5,7 @@
 
 ```mermaid
 flowchart TD
-    A["Theorem-domain assumptions A1-A8"] --> B["Irreducible family-envelope closure"]
+    A["Theorem-domain assumptions A1-A9"] --> B["Irreducible family-envelope closure"]
     A --> C["Fixed-order local weight-spectrum finiteness"]
     B --> D["Candidate scalar operator finiteness"]
     C --> D
@@ -33,5 +33,5 @@ flowchart TD
 
 ## Reading Rule
 
-- Status: Proven. The positive theorem is the chain `A1-A8 -> envelope closure -> operator finiteness -> finite quotient -> finite jet -> sensitivity/Wilson split`.
+- Status: Proven. The positive theorem is the chain `A1-A9 -> envelope closure -> operator finiteness -> finite quotient -> finite jet -> sensitivity/Wilson split`.
 - Status: Proven. The boundary-escape map records the smallest exact place where that chain breaks when one assumption is dropped.

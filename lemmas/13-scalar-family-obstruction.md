@@ -9,15 +9,16 @@
 
 ## Symbolic Audit Result
 
-- Status: Proven. [`../symbolic/es_sector_delta4.py`](../symbolic/es_sector_delta4.py) finds `72` parity-even scalar classes in the `E/B+scalar` sector at `\Delta \le 4`.
-- Status: Proven. The surviving list has `33` elements:
+- Status: Proven. [`../symbolic/es_sector_delta4.py`](../symbolic/es_sector_delta4.py) finds `65` parity-even scalar classes in the `E/B+scalar` sector at `\Delta \le 4`.
+- Status: Proven. The surviving list has `30` elements:
 
 ```math
-\{S,\ B2,\ E2,\ S2,\ EB2,\ SB2,\ E3,\ SE2,\ S3,\ B2^2,\ DtS\_B2,\ E2B2,\ EB\_sq,\ TrE2B2,\ SEB2,\ S2B2,\ EBDtB,\ dotB2,\ dotE2,\ dotS2,\ DtS\_E2,\ E2^2,\ SE3,\ S2E2,\ divB2,\ gradB2,\ mixedGradB2,\ divE2,\ gradE2,\ mixedGradE2,\ divEGradS,\ gradS2,\ S4\}.
+\{S,\ B2,\ E2,\ S2,\ EB2,\ SB2,\ E3,\ SE2,\ S3,\ B2^2,\ DtS\_B2,\ E2B2,\ EB\_sq,\ TrE2B2,\ SEB2,\ S2B2,\ EBDtB,\ dotB2,\ dotE2,\ dotS2,\ DtS\_E2,\ E2^2,\ SE3,\ S2E2,\ divB2,\ gradB2,\ mixedGradB2,\ gradE2,\ gradS2,\ S4\}.
 ```
 
+- Status: Note (corrected 2026-07-12). The pre-correction list additionally carried `divE2`, `mixedGradE2`, and `divEGradS`. Under the STF-3 kinematics of `\nabla E` (Schwarz + vacuum), `divE2 = 0`, `mixedGradE2 = gradE2`, and `divEGradS` — which contains the vanishing `\nabla_i E^{ij}` — is not generated. See [`07-gradient-sector-audit.md`](07-gradient-sector-audit.md).
 - Status: Proven. The first explicit new survivor beyond the corrected `E/B` basis is `S`.
-- Status: Proven. [`../symbolic/es_survivor_rank_check.py`](../symbolic/es_survivor_rank_check.py) finds rank `33` out of `33`, so no new linear dependence appears at this stage.
+- Status: Proven. [`../symbolic/es_survivor_rank_check.py`](../symbolic/es_survivor_rank_check.py) finds rank `30` out of `30`, so no new linear dependence appears at this stage.
 
 ## Obstruction Statement
 

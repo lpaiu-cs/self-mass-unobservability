@@ -9,14 +9,14 @@ Status: Note. The static mathematical content is frozen unless a direct contradi
 - Use [`docs/boundary-escape-map.md`](docs/boundary-escape-map.md) for the exact assumption-drop counterexamples and their replacement bookkeeping.
 - Use [`docs/paper-outline.md`](docs/paper-outline.md) for the paper-facing structure of the theorem track, and [`paper/paper-A-collapse-theorem.md`](paper/paper-A-collapse-theorem.md) for the current Paper A draft.
 - Use [`docs/release-note.md`](docs/release-note.md) for the compact publication and handoff summary.
-- Use [`docs/reproducibility-note.md`](docs/reproducibility-note.md) for the recommended smoke tests, and [`verification/`](verification/README.md) for the independent re-derivation of the family survivor counts (including the corrected rank-4 = 25).
+- Use [`docs/reproducibility-note.md`](docs/reproducibility-note.md) for the recommended smoke tests, and [`verification/`](verification/README.md) for the independent re-derivation of the family survivor counts (twice-corrected: the rank-4 undercount fix and the 2026-07-12 gradient-kinematics correction; corrected table `E,B,S,V,T,Q,U,Z = 5,16,30,15,17,23,17,21`).
 
 ## Dynamic-Chi Program (Requests 10.x, Paper B)
 
 The dynamic track instruments the theorem's `F-A4+` state-augmented salvage — the finite state pair `(beta, tau_chi)` of an orbital-timescale internal state — on the pulsar triple PSR J0337+1715, and quotes the program's first real-data upper limits.
 
 - Entry point: [`paper/paper-B-dynamic-sep-limit.md`](paper/paper-B-dynamic-sep-limit.md) (draft manuscript; LaTeX via `paper/build_paper_b.py`).
-- Headline: `|delta Delta| < 1.68e-9` (95% statistical CL x `K_dyn = 10` systematic anchor; `tau_chi = 2 d`, worst drive phase) over `tau_chi in [2, 500] d`, per `request10_external/sep_dynamic/sep_phase_marg_10_8e.json`; Fisher-only floor `2.79e-10` and the full anchor bracket quoted alongside; clock-sector companion limits from the same data in the 10.7 chain.
+- Headline: `|delta Delta| < 1.68e-9` (95% interval at the `K_dyn = 10` inflated Fisher width, `u95(beta_hat, K sigma_F)`; `tau_chi = 2 d`, worst drive phase) over `tau_chi in [2, 500] d`, per `request10_external/sep_dynamic/sep_phase_marg_10_8e.json`; Fisher-only floor `2.79e-10` and the full anchor bracket quoted alongside; clock-sector companion limits from the same data in the 10.7 chain.
 - Request chain and pre-registrations: `notes/REQUEST10_*.md` (10.1 counting theorems through the 10.8f review response; every stage pre-registered and committed before its data look).
 - Return artifacts, gate record, and deterministic reproduction scripts: [`request10_external/`](request10_external/README.md).
 - The dynamic track's early working ledger is preserved at [`docs/failure-ledger-dynamic-chi.md`](docs/failure-ledger-dynamic-chi.md); the theorem track's boundary-risk register remains [`docs/failure-ledger.md`](docs/failure-ledger.md).

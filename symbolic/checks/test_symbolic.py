@@ -265,25 +265,29 @@ def test_combined_normal_form_reduction() -> None:
         + ops["a2"]
         + ops["gradE2"]
         + ops["divE2"]
+        + ops["mixedGradE2"]
     )
     reduced = reduce_to_normal_form(expr)
+    # divE2 -> 0 (vacuum trace) and mixedGradE2 -> gradE2 (Schwarz), so the
+    # gradient contribution collapses onto 2 * gradE2.
     expected = (
         sp.Rational(1, 2) * ops["E2"] ** 2
         - ops["dotE2"]
-        + ops["gradE2"]
-        + ops["divE2"]
+        + 2 * ops["gradE2"]
     )
     assert sp.expand(reduced - expected) == 0
 
 
 def test_contraction_enumeration_counts() -> None:
     classes = enumerate_contraction_classes()
-    assert len(classes) == 21
+    assert len(classes) == 16
 
 
 def test_gradient_sector_audit() -> None:
+    # grad E is an STF-3 octupole (Schwarz total symmetry + vacuum trace-free):
+    # divE2 vanishes and mixedGradE2 coincides with gradE2.
     labels = [item.label for item in gradient_sector_classes()]
-    assert labels == ["divE2", "gradE2", "mixedGradE2"]
+    assert labels == ["gradE2"]
 
 
 def test_mixed_time_derivative_audit() -> None:
@@ -294,20 +298,22 @@ def test_mixed_time_derivative_audit() -> None:
 
 
 def test_a_e_grade_labels_are_unique() -> None:
+    # With the STF-3 gradient block a single (E, GradE, a) contraction class
+    # survives the internal-trace filter (all its cousins carry a G-trace).
     labels = sorted(
         item.label
         for item in enumerate_contraction_classes()
         if item.signature == ("E", "GradE", "a")
     )
-    assert labels == ["aEGradE_1", "aEGradE_2", "aEGradE_3"]
+    assert labels == ["aEGradE_2"]
 
 
 def test_survivor_rank_independence() -> None:
     summary = rank_summary()
-    assert summary.total_rank == 7
+    assert summary.total_rank == 5
     assert summary.e_sector_rank == 3
     assert summary.dt_sector_rank == 1
-    assert summary.gradient_sector_rank == 3
+    assert summary.gradient_sector_rank == 1
 
 
 def test_magnetic_family_attack_finds_new_survivor() -> None:
@@ -319,7 +325,7 @@ def test_magnetic_family_attack_finds_new_survivor() -> None:
 
 def test_eb_sector_survivor_list() -> None:
     summary = eb_summary()
-    assert summary.total_classes == 42
+    assert summary.total_classes == 37
     assert summary.smallest_new_survivor == "B2"
     assert summary.surviving_labels == (
         "B2",
@@ -337,18 +343,16 @@ def test_eb_sector_survivor_list() -> None:
         "divB2",
         "gradB2",
         "mixedGradB2",
-        "divE2",
         "gradE2",
-        "mixedGradE2",
     )
 
 
 def test_eb_survivor_rank_correction() -> None:
     summary = eb_rank_summary()
-    assert summary.raw_rank == 18
-    assert summary.raw_count == 19
-    assert summary.corrected_rank == 18
-    assert summary.corrected_count == 18
+    assert summary.raw_rank == 16
+    assert summary.raw_count == 17
+    assert summary.corrected_rank == 16
+    assert summary.corrected_count == 16
     relation = str(summary.null_relation)
     assert "EBEB" in relation
     assert "TrE2B2" in relation
@@ -356,7 +360,7 @@ def test_eb_survivor_rank_correction() -> None:
 
 def test_es_sector_survivor_list() -> None:
     summary = es_summary()
-    assert summary.total_classes == 72
+    assert summary.total_classes == 65
     assert summary.smallest_new_survivor == "S"
     assert summary.surviving_labels == (
         "S",
@@ -386,10 +390,7 @@ def test_es_sector_survivor_list() -> None:
         "divB2",
         "gradB2",
         "mixedGradB2",
-        "divE2",
         "gradE2",
-        "mixedGradE2",
-        "divEGradS",
         "gradS2",
         "S4",
     )
@@ -397,22 +398,24 @@ def test_es_sector_survivor_list() -> None:
 
 def test_es_survivor_rank_independence() -> None:
     summary = es_rank_summary()
-    assert summary.rank == 33
-    assert summary.count == 33
+    assert summary.rank == 30
+    assert summary.count == 30
     assert summary.nullity == 0
-    assert "divEGradS" in summary.labels
+    # divEGradS is no longer generated: it contains div E, which vanishes in
+    # vacuum under the corrected STF-3 gradient kinematics.
+    assert "divEGradS" not in summary.labels
+    assert "gradE2" in summary.labels
     assert "S" in summary.labels
 
 
 def test_shift_scalar_sector_survivors() -> None:
     summary = shift_scalar_summary()
-    assert summary.total_classes == 52
+    assert summary.total_classes == 46
     assert summary.first_new_weight == 4
     assert summary.first_new_labels == (
         "DtS_B2",
         "dotS2",
         "DtS_E2",
-        "divEGradS",
         "gradS2",
     )
     assert summary.canonical_new_survivor == "dotS2"
@@ -435,10 +438,7 @@ def test_shift_scalar_sector_survivors() -> None:
         "divB2",
         "gradB2",
         "mixedGradB2",
-        "divE2",
         "gradE2",
-        "mixedGradE2",
-        "divEGradS",
         "gradS2",
     )
 
@@ -613,9 +613,7 @@ def test_composition_attack_delta4() -> None:
         "E3",
         "dotE2",
         "E2^2",
-        "divE2",
         "gradE2",
-        "mixedGradE2",
     )
     assert summary.pre_r1_audited_set_joint_sufficient is True
     assert summary.pre_r1_smallest_surviving_cross_family is None
@@ -768,24 +766,24 @@ def test_fixed_family_operator_count_summary() -> None:
         "sector-specific linear-dependence quotient when present",
     )
     entries = {entry.catalog_id: entry for entry in summary.entries}
-    assert entries["electric_exact_current_set"].candidate_operator_count == 21
-    assert entries["electric_exact_current_set"].reduced_operator_count == 7
-    assert entries["rank2_stf_special_case"].candidate_operator_count == 42
-    assert entries["rank2_stf_special_case"].reduced_operator_count == 18
-    assert entries["scalar_bare_source_extension"].candidate_operator_count == 72
-    assert entries["scalar_bare_source_extension"].reduced_operator_count == 33
-    assert entries["scalar_derivative_only_extension"].candidate_operator_count == 52
-    assert entries["scalar_derivative_only_extension"].reduced_operator_count == 23
-    assert entries["vector_representative_sector"].candidate_operator_count == 39
-    assert entries["vector_representative_sector"].reduced_operator_count == 17
-    assert entries["stf_rank3_representative_sector"].candidate_operator_count == 43
-    assert entries["stf_rank3_representative_sector"].reduced_operator_count == 19
-    assert entries["stf_rank4_representative_sector"].candidate_operator_count == 50
-    assert entries["stf_rank4_representative_sector"].reduced_operator_count == 25
-    assert entries["stf_rank5_representative_sector"].candidate_operator_count == 45
-    assert entries["stf_rank5_representative_sector"].reduced_operator_count == 19
-    assert entries["stf_rank6_representative_sector"].candidate_operator_count == 43
-    assert entries["stf_rank6_representative_sector"].reduced_operator_count == 23
+    assert entries["electric_exact_current_set"].candidate_operator_count == 16
+    assert entries["electric_exact_current_set"].reduced_operator_count == 5
+    assert entries["rank2_stf_special_case"].candidate_operator_count == 37
+    assert entries["rank2_stf_special_case"].reduced_operator_count == 16
+    assert entries["scalar_bare_source_extension"].candidate_operator_count == 65
+    assert entries["scalar_bare_source_extension"].reduced_operator_count == 30
+    assert entries["scalar_derivative_only_extension"].candidate_operator_count == 46
+    assert entries["scalar_derivative_only_extension"].reduced_operator_count == 20
+    assert entries["vector_representative_sector"].candidate_operator_count == 34
+    assert entries["vector_representative_sector"].reduced_operator_count == 15
+    assert entries["stf_rank3_representative_sector"].candidate_operator_count == 38
+    assert entries["stf_rank3_representative_sector"].reduced_operator_count == 17
+    assert entries["stf_rank4_representative_sector"].candidate_operator_count == 45
+    assert entries["stf_rank4_representative_sector"].reduced_operator_count == 23
+    assert entries["stf_rank5_representative_sector"].candidate_operator_count == 40
+    assert entries["stf_rank5_representative_sector"].reduced_operator_count == 17
+    assert entries["stf_rank6_representative_sector"].candidate_operator_count == 38
+    assert entries["stf_rank6_representative_sector"].reduced_operator_count == 21
 
 
 def test_nonanalytic_jet_demo() -> None:
@@ -988,7 +986,7 @@ def test_stf_self_witness_summary() -> None:
 
 def test_r1_sector_delta4() -> None:
     summary = r1_summary()
-    assert summary.total_classes == 39
+    assert summary.total_classes == 34
     assert summary.first_self_witness == "V2"
     assert summary.first_mixed_witness == "EVV"
     assert summary.smallest_new_witness == "V2"
@@ -1008,8 +1006,8 @@ def test_r1_sector_delta4() -> None:
 
 def test_r1_survivor_rank_check() -> None:
     summary = r1_rank_summary()
-    assert summary.rank == 17
-    assert summary.count == 17
+    assert summary.rank == 15
+    assert summary.count == 15
     assert summary.nullity == 0
     assert summary.new_labels == (
         "V2",
@@ -1027,7 +1025,7 @@ def test_r1_survivor_rank_check() -> None:
 
 def test_r3_sector_delta4() -> None:
     summary = r3_summary()
-    assert summary.total_classes == 43
+    assert summary.total_classes == 38
     assert summary.first_self_witness == "T2"
     assert summary.first_mixed_witness == "ETT"
     assert summary.smallest_new_witness == "T2"
@@ -1051,8 +1049,8 @@ def test_r3_sector_delta4() -> None:
 
 def test_r3_survivor_rank_check() -> None:
     summary = r3_rank_summary()
-    assert summary.rank == 19
-    assert summary.count == 21
+    assert summary.rank == 17
+    assert summary.count == 19
     assert summary.nullity == 2
     assert "E2T2_mixed_1" in str(summary.null_relation)
     assert "E2T2_mixed_2" in str(summary.null_relation)
@@ -1076,7 +1074,7 @@ def test_r3_survivor_rank_check() -> None:
 
 def test_r4_sector_delta4() -> None:
     summary = r4_summary()
-    assert summary.total_classes == 50
+    assert summary.total_classes == 45
     assert summary.first_self_witness == "Q2"
     assert summary.first_mixed_witness == "EEQ"
     assert summary.smallest_new_witness == "Q2"
@@ -1107,8 +1105,8 @@ def test_r4_sector_delta4() -> None:
 
 def test_r4_survivor_rank_check() -> None:
     summary = r4_rank_summary()
-    assert summary.rank == 25
-    assert summary.count == 28
+    assert summary.rank == 23
+    assert summary.count == 26
     assert summary.nullity == 3
     assert summary.new_rank == 18
     assert summary.new_count == 21
@@ -1141,7 +1139,7 @@ def test_r4_survivor_rank_check() -> None:
 
 def test_r5_sector_delta4() -> None:
     summary = r5_summary()
-    assert summary.total_classes == 45
+    assert summary.total_classes == 40
     assert summary.first_self_witness == "U2"
     assert summary.first_mixed_witness == "EUU"
     assert summary.smallest_new_witness == "U2"
@@ -1167,8 +1165,8 @@ def test_r5_sector_delta4() -> None:
 
 def test_r5_survivor_rank_check() -> None:
     summary = r5_rank_summary()
-    assert summary.rank == 19
-    assert summary.count == 23
+    assert summary.rank == 17
+    assert summary.count == 21
     assert summary.nullity == 4
     assert summary.new_rank == 12
     assert summary.new_count == 16
@@ -1196,7 +1194,7 @@ def test_r5_survivor_rank_check() -> None:
 
 def test_r6_sector_delta4() -> None:
     summary = r6_summary()
-    assert summary.total_classes == 43
+    assert summary.total_classes == 38
     assert summary.total_new_family_classes == 22
     assert summary.first_self_witness == "Z2"
     assert summary.first_mixed_witness == "EZZ"
@@ -1231,8 +1229,8 @@ def test_r6_sector_delta4() -> None:
 
 def test_r6_survivor_rank_check() -> None:
     summary = r6_rank_summary()
-    assert summary.rank == 23
-    assert summary.count == 29
+    assert summary.rank == 21
+    assert summary.count == 27
     assert summary.nullity == 6
     assert summary.new_rank == 16
     assert summary.new_count == 22

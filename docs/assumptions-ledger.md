@@ -2,13 +2,13 @@
 
 This ledger records the active assumptions behind the free-fall sensitivity-collapse target.
 
-**Status label for `A1`-`A8`: `Assumption`.** These are posited hypotheses that
+**Status label for `A1`-`A9`: `Assumption`.** These are posited hypotheses that
 define the theorem domain -- they are neither `Proven` (they are not derived) nor
 `Conjectural` (they are not open questions); they are the premises the positive
 theorem is conditional on. The `If dropped` column records the counterexample or
 failure mode that follows when a premise is removed. (Earlier revisions tagged them
 `Conjectural`, which conflicted with `theorem-package.md` listing the same premises
-under `Proven`; both now read `Assumption` for these eight.)
+under `Proven`; both now read `Assumption` for these; the representation premise `A9` (added in the review-response revision) carries the same `Assumption` label.)
 
 ## Active Theorem Assumptions
 
@@ -22,6 +22,7 @@ under `Proven`; both now read `Assumption` for these eight.)
 | A6 | Assumption | The object admits a self-bound equilibrium before external perturbations are applied. | Separates body formation from later passive coupling to external gravity. | Otherwise the theorem can mix equilibrium failure with observational coupling. |
 | A7 | Assumption | The theorem is stated at fixed order in the operator counting rule of [`power-counting.md`](power-counting.md). | This prevents the proof target from silently becoming an all-orders closure claim. | Without fixed-order truncation, finite-dimensionality needs an extra closure theorem. |
 | A8 | Assumption | The admitted primitive-family spectrum is locally finite below the fixed theorem cutoff: only finitely many primitive-family species have intrinsic weight `w \le \Delta_{\max}`. | This is the weakest hypothesis that replaces the older hidden finite-basis assumption at fixed order. | An infinite low-weight tower can generate infinitely many primitive directions before normal-form reduction starts. |
+| A9 | Assumption | The external tidal field enters through a leading-Newtonian harmonic scalar potential: `E_{ij} = \partial_i\partial_j \Phi_ext` with `\nabla^2\Phi_ext = 0` (purely electric, leading order). | Fixes the tidal representation. It -- not tracelessness of a generic electric-Weyl tidal tensor -- makes `\nabla_k E_{ij}` totally symmetric (Schwarz) and trace-free on every index pair, i.e. an STF-3 octupole, which licenses the gradient-sector reduction. | A generic electric-Weyl tidal tensor restores the divergence and curl gradient pieces fixed by the Bianchi / gravitoelectromagnetic constraint equations (Danehkar 2022); the pre-correction generic-gradient model returns three quadratic gradient invariants. |
 
 ## Imported Exclusions From Earlier Work
 
@@ -34,8 +35,7 @@ under `Proven`; both now read `Assumption` for these eight.)
 ## Non-Assumption For M4
 
 - Status: Note. Finite invariant basis closure is not listed as an assumption in M4.
-- Status: Note. No transversality condition such as `\nabla_i E^{ij} = 0` is assumed in the current `Delta<=4` audit.
-- Status: Note. No vacuum/Bianchi identity is assumed to collapse `divE2` or `mixedGradE2` into `gradE2`.
+- Status: Note (corrected 2026-07-12; representation premise made explicit in the review response). Given the leading-Newtonian harmonic-scalar-potential representation (premise `A9`: `E_{ij} = \partial_i\partial_j\Phi`, `\nabla^2\Phi = 0`), the gradient-block collapse `mixedGradE2 = gradE2`, `divE2 = 0` is **not a separate assumption**: it then follows from the Schwarz total symmetry of `\nabla_k E_{ij} = \partial^3\Phi` (kinematics) and the same external-vacuum condition `\nabla^2\Phi = 0` already in force for `E` itself. What *is* a premise is the representation `A9` — the choice of a harmonic scalar potential rather than a generic electric-Weyl tidal tensor, now recorded in the active ledger above; for the generic Weyl gradient the divergence and curl pieces survive (Danehkar 2022). The pre-correction ledger instead listed the collapse identities as optional reductions that were declined, without recording the representation they rest on; that bookkeeping was internally inconsistent and is superseded — see [`reduction-rules.md`](reduction-rules.md) and [`../lemmas/07-gradient-sector-audit.md`](../lemmas/07-gradient-sector-audit.md).
 - Status: Note. Contraction-level exhaustiveness for the exact current primitive blocks is attacked by explicit enumeration rather than by absence arguments.
 
 ## Non-Assumption For M5

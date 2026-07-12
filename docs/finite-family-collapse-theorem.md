@@ -7,7 +7,7 @@
 ## Scope
 
 - Status: Note. This note is class-limited to the parity-even, nonspinning, local MVP free-fall sector at fixed order `\Delta \le 4`.
-- Status: Proven. It works only inside the current theorem domain defined by `A1`-`A8` in [`assumptions-ledger.md`](assumptions-ledger.md).
+- Status: Proven. It works only inside the current theorem domain defined by `A1`-`A9` in [`assumptions-ledger.md`](assumptions-ledger.md).
 - Status: Proven. It does not claim minimal-sector uniqueness.
 - Status: Proven. It does not claim anything about parity-odd, spinning, nonlocal, or orbital-timescale internal-state sectors.
 
@@ -21,7 +21,7 @@
 
 ## Positive Theorem Target
 
-- Status: Proven. Conditional on the current theorem-domain assumptions `A1`-`A8`, once the irreducible primitive-family envelope closes on the audited scalar/vector/STF classes, every admitted primitive-family spectrum that is locally finite below `\Delta \le 4` yields a finite candidate local free-fall scalar operator space.
+- Status: Proven. Conditional on the current theorem-domain assumptions `A1`-`A9`, once the irreducible primitive-family envelope closes on the audited scalar/vector/STF classes, every admitted primitive-family spectrum that is locally finite below `\Delta \le 4` yields a finite candidate local free-fall scalar operator space.
 - Status: Proven. Conditional on the same theorem-domain assumptions and the explicit reduction rules already written in the repo, that finite candidate space collapses to a finite-dimensional scalar normal-form quotient.
 - Status: Proven. Conditional on locality `A3` and analyticity `A5`, the monopole term can then be written as a finite Taylor jet in finitely many scalar normal-form coordinates `Y^I`.
 - Status: Proven. Conditional on the same theorem-domain assumptions, the residual higher-multipole operator sector carries finitely many Wilson coefficients that are not merged with the monopole sensitivities.

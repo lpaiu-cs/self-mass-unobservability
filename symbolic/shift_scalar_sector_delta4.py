@@ -52,6 +52,9 @@ def classify_shift_scalar_contraction(
     if signature == ("E", "GradS", "a"):
         return "aEGradS", "Proven reducible", "lower-order EOM"
     if signature == ("GradE", "GradS"):
+        # Unreachable under the corrected STF-3 GradE block: every (GradE, GradS)
+        # pairing carries an internal GradE trace (div E = 0 in vacuum), so the
+        # enumerator generates no class here.  Branch kept for classifier totality.
         return "divEGradS", "Surviving candidate", "survives current rules"
     if signature == ("GradS", "GradS"):
         return "gradS2", "Surviving candidate", "shift-symmetric normal form"

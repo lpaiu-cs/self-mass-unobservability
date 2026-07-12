@@ -28,8 +28,10 @@ appears already at `\Delta = 2`.
 - Status: Proven. [`../symbolic/eb_sector_delta4.py`](../symbolic/eb_sector_delta4.py) and [`../lemmas/11-eb-survivor-independence-delta4.md`](../lemmas/11-eb-survivor-independence-delta4.md) together show that the corrected `E/B` enlargement still closes on a finite explicit `\Delta \le 4` basis:
 
 ```math
-\{E2,\ B2,\ E3,\ EB2,\ E2^2,\ B2^2,\ dotE2,\ dotB2,\ EBDtB,\ E2B2,\ EB\_sq,\ TrE2B2,\ gradE2,\ divE2,\ mixedGradE2,\ gradB2,\ divB2,\ mixedGradB2\}.
+\{E2,\ B2,\ E3,\ EB2,\ E2^2,\ B2^2,\ dotE2,\ dotB2,\ EBDtB,\ E2B2,\ EB\_sq,\ TrE2B2,\ gradE2,\ gradB2,\ divB2,\ mixedGradB2\}.
 ```
+
+- Status: Note (corrected 2026-07-12). The former `divE2`/`mixedGradE2` entries were artifacts of the generic gradient model; under the STF-3 kinematics of `\nabla E` (Schwarz + vacuum) the corrected `E/B` basis has `16` elements. See [`07-gradient-sector-audit.md`](07-gradient-sector-audit.md).
 
 - Status: Conjectural. The broader finite-dimensional collapse conjecture therefore remains plausible after the magnetic extension, even though the electric-only minimal-sector claim fails.
 
