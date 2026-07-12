@@ -100,3 +100,42 @@ Deferred to 10.9 (future work, stated in the paper): nonlinear likelihood /
 physical priors on the truncated directions, full pulse-number
 marginalization beyond the widened lattice, an independent holdout data set,
 environment container/CI.
+
+## Outcomes (recorded post-run, 2026-07-12; the matrix above was the
+## pre-committed plan)
+
+R1 PASS: F2 best survival 0.2113 at tau = 5 d; F3 min anchored 6.867e-8.
+R2 done: rank 71/90 with the guard direction kept (guard residual 1.65e-7);
+   s = 1.1149; Z = 1.328 (p = 0.39), anticausal control Z = 0.598 (p = 0.87);
+   min u95_Kdyn = 1.365e-9 at tau = 2 d.
+R3 done -> HEADLINE: phase-marginalized curve over the full t_off domain
+   (4821 offsets), per-K worst-phase tracking; min u95pm_K10 = 1.68e-9 at
+   tau = 2 d (Fisher-only 2.794e-10; full-rank bracket 3.534e-9; K934
+   1.569e-7). E1 Z = 2.285 p = 0.26 with control equally loud; E2 Z = 1.815
+   p = 0.47: no detection under the registered rules.
+R4 PASS: widened lattice (|n1| <= 12, |n2| <= 6, 48 combos/cell),
+   tie-broken wrap; 7 viable cells, worst beta deviation 1.01e-10 against
+   tolerance 2.07e-10.
+R5 done: K_static ratio refreshed = 934.44 (R5-ext sigma 1.9263e-9).
+R6 recorded: **G1 FAIL (both anchors), G2a FAIL (tau = 52 d), G2b PASS.**
+   The registered criteria stand; no post-hoc rescoring. Diagnosis
+   (sep_gateG_adjudication.json, scripts/gateG_adjudicate.py): one
+   common-mode quantity explains every excess -- the live truncated-GN
+   refit of the NULL data displaces beta_hat by +0.342 / +0.599 sigma_F
+   (tau = 18 / 52 d) relative to the frozen linear pipeline; subtracting
+   the GN null point, the injected-signal response is accurate to
+   +0.004 / +0.021 sigma_F (G2a) and +0.04% / +0.08% (G2b). The registered
+   G2a/G2b deviations referenced the LINEAR null (beta_hat_lin), so the
+   offset entered them whole (0.342 + 0.004 = 0.346; 0.599 + 0.021 =
+   0.619 -- exact). The pre-C1 anticausal gate run (git 52153b3) measured
+   the SAME GN null residual with the swapped quadrature and read offsets
+   of only +0.012 / +0.019 sigma_F, which is how the swap masked the
+   displacement. Consequence: the live-refit null offset (<= 0.6 sigma_F)
+   is carried as a systematic on all Fisher-only numbers (worst-case
+   <= +30% on a Fisher u95) and is covered by the K_dyn = 10 headline
+   scaling with an order of magnitude to spare; the non-detection verdicts
+   are unaffected. Paper B states the gate outcome as FAIL-with-diagnosis;
+   template-shape validation at limit amplitude rests on G2b (PASS,
+   <= 0.1% differential).
+R7 in progress: Paper B numbers/claims regenerated from the corrected
+   artifacts; README and joint-fit summary updated to the same numbers.

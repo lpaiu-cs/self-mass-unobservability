@@ -68,10 +68,14 @@ argv: jacobian, suffix, SV cut), `scripts/build_jac_v2.py`,
 `../notes/REQUEST10_EXTERNAL_JOINT_FIT_UPPER_LIMIT.md` and
 `../notes/REQUEST10_EXTERNAL_JOINT_FIT_AMENDMENT_10_7C.md`.
 
-## Request 10.8/10.8b: dynamic free-fall SEP channel (`sep_dynamic/`)
+## Request 10.8-10.8f: dynamic free-fall SEP channel (`sep_dynamic/`)
 
 Design and gates: `../notes/REQUEST10_8_DYNAMIC_SEP_POLARIZATION_CHANNEL.md`,
-`../notes/REQUEST10_8B_REALDATA_DYNAMIC_SEP_FIT.md`.
+`../notes/REQUEST10_8B_REALDATA_DYNAMIC_SEP_FIT.md`, then
+`..._10_8C/D/E` and the 10.8f review response
+(`../notes/REQUEST10_8F_REVIEW_RESPONSE.md`: an independent review caught a
+causal/anticausal quadrature swap; every data-touching stage was re-run on
+the corrected causal templates — the rows below are the corrected record).
 
 | file | content |
 | --- | --- |
@@ -80,10 +84,17 @@ Design and gates: `../notes/REQUEST10_8_DYNAMIC_SEP_POLARIZATION_CHANNEL.md`,
 | `sep_dynamic/patches/sepdyn.patch` | integrator patch: SEP_D(t) on pulsar pairs in rhs_GR_nbody (A=0 gate bit-exact) |
 | `sep_dynamic/sep_ramp_probe.npz`, `sep_t2_results_v4.json` | time-convention calibration (integral-kernel 1/2 signature; TIMEDAYS units) |
 | `sep_dynamic/sep_dynamic_columns.npz` | 6 exact dynamic response columns ({in,out,dif} x {cos,sin}) |
-| `sep_dynamic/sep_feasibility_gates.json` | F2 (survival to 43.8%) and F3 (anchored 6.1e-8) — both PASS |
-| `sep_dynamic/sep_joint_fit_10_8b.json`, `sep_beta_limit_curve_10_8b.tsv` | **QUOTED 10.8b limit: beta_ff < 1.1e-7 (95%, tau = 2 d), window [2,500] d** |
-| `sep_dynamic/sep_gateG.json` | live gates: G1, G2a, G2b all PASS (6/6) |
+| `sep_dynamic/sep_feasibility_gates.json` | F2 (per-column survival 8-27%; causal shared-tau peak 21.1%) and F3 (anchored 6.87e-8) — both PASS |
+| `sep_dynamic/sep_joint_fit_10_8b.json`, `sep_beta_limit_curve_10_8b.tsv` | zero-phase fit: no detection (Z = 1.328, p = 0.39; anticausal control quiet); K10 curve min 1.36e-9 (2 d) |
+| `sep_dynamic/anchor_resolution_10_8c.json`, `sep_beta_limit_curve_10_8c.tsv` | K anchor diagnosis (rho spectrum; K_dyn = 10, rule branch 1) + re-anchored curve; generator `scripts/anchor_resolution_10_8c.py` |
+| `sep_dynamic/turnV_columns.npz`, `turn_search_10_8d.json` | turn-fixing measurement + lattice turn-search: PASS on the tested lattice (7 viable cells; worst beta dev 1.01e-10 vs tol 2.07e-10) |
+| `sep_dynamic/sep_phase_marg_10_8e.json`, `sep_limit_curve_10_8e.tsv` | **HEADLINE: \|dDelta\| < 1.68e-9 (95% statistical CL x K_dyn = 10, worst phase, tau = 2 d)**; Fisher floor 2.79e-10; full-rank bracket 3.53e-9; K934 1.57e-7; no detection (E1 p = 0.26, control equally elevated) |
+| `sep_dynamic/sep_gateG.json`, `sep_gateG_adjudication.json` | live gates on causal templates: G1 FAIL (+0.34/+0.60 sigma_F null offset), G2a 18 d PASS / 52 d FAIL, G2b PASS (<= 0.12%); differential response +0.004/+0.021 sigma_F and 0.04%/0.08% — offset carried as a <= 0.6 sigma_F live-refit systematic inside K_dyn = 10 |
 
-Reproduction: `scripts/sep_static_sensitivity.py`,
-`scripts/sep_feasibility_gates.py`, `scripts/sep_joint_fit_10_8b.py`
-(all deterministic, artifacts-only), plus the WSL-side scripts per the notes.
+Reproduction: `scripts/sep_common.py` (shared estimator core; seed
+20260710), `scripts/sep_static_sensitivity.py`,
+`scripts/sep_feasibility_gates.py`, `scripts/sep_joint_fit_10_8b.py`,
+`scripts/anchor_resolution_10_8c.py`, `scripts/turn_search_10_8d.py`,
+`scripts/sep_phase_marg_10_8e.py`, `scripts/gateG_adjudicate.py`
+(all deterministic, artifacts-only), plus the WSL runtime scripts archived
+verbatim with an artifact map in `scripts/wsl/README.md`.

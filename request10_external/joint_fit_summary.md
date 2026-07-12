@@ -57,32 +57,54 @@ the free-fall sector, templates from the T2 MEASURED integrator response
 columns (patched build, A=0 gate bit-exact; time convention resolved by the
 quasi-static ramp with the integral-kernel 1/2 signature).
 
-```text
-No detection: Z = 0.318 over tau_chi in [2, 500] d, global p = 0.95;
-              anti-causal (advanced-response) control quiet (p = 0.48).
+[10.8f-corrected record: the first run fit the ADVANCED (anticausal)
+quadrature as "causal"; an independent review caught the swap and every
+data-touching stage was re-run on the corrected causal templates per the
+pre-committed `../notes/REQUEST10_8F_REVIEW_RESPONSE.md` (commit
+`52153b3`). Numbers below are the corrected zero-phase record.]
 
-QUOTED 95% upper limit (anchored estimator, K = 934; window [2, 500] d):
-  beta_ff < 1.09e-7 (tau = 2 d, curve minimum)
-  anchors: 1.09 / 1.20 / 1.31 / 1.73 / 4.73 x 1e-7 at tau = 2/5/18/52/200 d
-  (Fisher statistical floor: 1.2e-10, reported alongside; curve in
-   sep_dynamic/sep_beta_limit_curve_10_8b.tsv)
+```text
+No detection: Z = 1.328 over tau_chi in [2, 500] d, global p = 0.39;
+              anti-causal (advanced-response) control quiet
+              (Z = 0.598, p = 0.87).
+
+Zero-phase curve (window [2, 500] d; 95% statistical CL x anchor tiers;
+curve in sep_dynamic/sep_beta_limit_curve_10_8b.tsv):
+  K_dyn = 10:  beta_ff < 1.36e-9 (tau = 2 d, curve minimum)
+     anchors: 1.36 / 1.45 / 1.61 / 2.44 / 7.00 x 1e-9 at tau = 2/5/18/52/200 d
+  K = 934 bracket: 1.26e-7 (2 d); Fisher-only floor: 1.93e-10 (min).
+  Nuisance rank 71/90 with the static-guard residual kept explicitly
+  (guard norm 1.6e-7); s = 1.1149.
 ```
 
 `beta_ff` = dimensionless amplitude of the `Delta`-oscillation pole residue
 at unit drive per carrier. Compared with the same data's clock-sector bound
-(`beta_phys < 0.36-0.59`, 10.7e), the free-fall channel is **~3 x 10^6
-deeper**, and it probes a coupling the published static SEP analyses cannot
-see by construction (an oscillating `Delta` is 99.94% -> 11-28% LESS
-absorbable than a static one; F2).
+(`beta_phys < 0.36-0.59`, 10.7e), the free-fall channel is far deeper in
+raw `Delta` amplitude (~3 x 10^8 at the K10 tier), and it probes a coupling
+the published static SEP analyses cannot see by construction (an
+oscillating `Delta` is 99.94% -> 8-27% LESS absorbable than a static one;
+F2 causal shared-tau peak 21.1% at tau = 5 d).
 
-Status: Proven (10.8b gates, 6/6). G1 live null: `|z_GN - z_lin| <= 0.019`
-at both anchors (tol 0.3). G2a detection-regime (4 sigma_F injections,
-undamped live GN): recovery within 0.06 sigma_F (tol 0.5). G2b
-limit-amplitude (u95_anchored injections ~ 48,000 whitened units, damped GN
-capped at 30x validated steps): the live model absorbs essentially nothing
-(|w r| unchanged) and recovery holds to 0.16-0.23% relative (tol 2%). The
-original G2 (undamped at 1830 sigma_F) segfaulted the integrator and was
-amended BEFORE rerun (commit `6e55569`) — recorded, not hidden.
+Status: Counterexample candidate (10.8b live gates, 10.8f R6 re-run on the
+causal templates; adjudication `sep_dynamic/sep_gateG_adjudication.json`).
+**G1 live null: FAIL** — `z_GN - z_lin = +0.342 / +0.599` at
+tau = 18 / 52 d (tol 0.3). **G2a (4 sigma_F injections, undamped live GN):
+PASS at 18 d (0.346), FAIL at 52 d (0.619 vs tol 0.5)** under the
+registered linear-null reference; the GN-null-referenced differential
+response is +0.004 / +0.021 sigma_F. **G2b (K934-anchored limit-amplitude
+injections, damped GN capped at 30x validated steps): PASS** — 0.060% /
+0.116% relative (tol 2%); differential 0.041% / 0.083%. Diagnosis: one
+common-mode quantity — the truncated live refit converges to the
+unregularized least-squares point rather than the maximum-posterior point,
+displacing beta_hat by <= 0.6 sigma_F on the causal template identically
+with and without injection (the pre-C1 anticausal gate read the same
+displacement at only 0.01-0.02 sigma_F, which is how the swap masked it).
+Template-shape validation PASSES (G2b + both differentials); absolute null
+agreement FAILS and is carried as a live-refit systematic on Fisher-tier
+numbers (worst-case +30% on a Fisher u95), well inside the K_dyn = 10
+margin. No criterion was rescored. The original G2 (undamped at
+1830 sigma_F) segfaulted the integrator and was amended BEFORE rerun
+(commit `6e55569`) — recorded, not hidden.
 
 Status: Counterexample candidate (10.8c re-anchor, executed per the
 pre-registered rule of `../notes/REQUEST10_8C_ANCHOR_RESOLUTION.md`, commit
@@ -95,52 +117,68 @@ the published static width and was proven inoperative on the dynamic
 templates (G2b). Rule branch 1 fires: `K_dyn = max(10, ceil(max rho)) = 10`:
 
 ```text
-RE-ANCHORED 95% upper limit (K_dyn = 10, window [2, 500] d):
-  beta_ff < 1.17e-9 (tau = 2 d);  1.29 / 1.40 / 1.86 / 5.07 x 1e-9
-  at tau = 5/18/52/200 d   (curve: sep_beta_limit_curve_10_8c.tsv;
-  Fisher floor and the K = 934 ultra-conservative bracket recorded alongside)
+RE-ANCHORED zero-phase limit (95% statistical CL x K_dyn = 10,
+window [2, 500] d; 10.8f-corrected):
+  beta_ff < 1.36e-9 (tau = 2 d);  1.45 / 1.61 / 2.44 / 7.00 x 1e-9
+  at tau = 5/18/52/200 d   (curve: sep_beta_limit_curve_10_8c.tsv,
+  regenerated by scripts/anchor_resolution_10_8c.py; Fisher floor and the
+  K = 934 ultra-conservative bracket recorded alongside)
 ```
 
-Status: Proven (10.8d turn-search robustness, executed per the
-pre-registered-and-amended `../notes/REQUEST10_8D_TURN_SEARCH_ROBUSTNESS.md`,
-commits `349c70c/5df4870/94c04c3`). Stage V measured that the runtime fixes
-turns (alias-shift maxdev 1522 us > P/2), so wrap arithmetic is definitional.
-Stage L found the REAL structure: 14 chi2-viable turn-alias solutions exist
-at every test amplitude (integer-turn slips hidden inside observing gaps —
-the classic phase-connection ambiguity, quantified here against the full
-span), but the estimator's beta-hat is STABLE across all of them: worst
-deviation 5.6e-11 vs tolerance 1.8e-10 (3 sigma_F) at the Fisher and K10
-amplitudes, 3.2e-11 vs 1.3e-8 at K934. Pulse-number re-assignment cannot
-mimic or hide the dynamic template. The former "unprobed absorber" caveat is
-RESOLVED; the K_dyn = 10 quote stands with this record.
+Status: Proven on the tested lattice (10.8d turn-search robustness,
+executed per the pre-registered-and-amended
+`../notes/REQUEST10_8D_TURN_SEARCH_ROBUSTNESS.md`, commits
+`349c70c/5df4870/94c04c3`; 10.8f re-run: causal templates, tie-broken
+round-half-away wrap, lattice WIDENED to |n1| <= 12, |n2| <= 6 with 48
+phase/reference combos per cell, tolerance max(0.1 b_inj, 3 sigma_F)).
+Stage V measured that the runtime fixes turns (alias-shift maxdev
+1522 us > P/2 = 1366 us), so wrap arithmetic is definitional. Stage L found
+the REAL structure: 7 chi2-viable turn-alias solutions exist at every test
+amplitude (integer-turn slips hidden inside observing gaps — the classic
+phase-connection ambiguity, quantified here against the full span), but the
+estimator's beta-hat is STABLE across all of them: worst deviation 1.01e-10
+vs tolerance 2.07e-10 at the Fisher and K10 amplitudes, 8.5e-11 vs 1.5e-8
+at K_static. Pulse-number re-assignment on the tested lattice cannot mimic
+or hide the dynamic template (arbitrary re-assignments beyond the lattice
+are not claimed). The former "unprobed absorber" caveat is RESOLVED at this
+scope; the K_dyn = 10 quote stands with this record.
 
 Status: Counterexample candidate (10.8e, pre-registered commit `3827649`,
 executed). BOTH remaining review items resolved:
 
 ```text
-FINAL HEADLINE (phase-marginalized over the time-origin freedom, worst
-phase per tau; K_dyn = 10; window [2, 500] d; no detection, trials-
-corrected p = 0.30, anti-causal control quiet):
+FINAL HEADLINE (10.8f-corrected; phase-marginalized over the FULL
+time-origin domain [0, P_out = 327.26 d) in 4,821 steps, worst phase per
+tau and per anchor tier; window [2, 500] d; no detection under the
+registered rule: E1 Z = 2.285, p = 0.26, with the anti-causal control
+equally elevated Z = 2.340, p = 0.28 — elevation common to both
+conventions, not causal-response-like; E2 Z = 1.815, p = 0.47):
 
   amplitude of any lag-responding Delta-oscillation
-  |delta Delta| < 1.30e-9   (95%, tau_chi = 2 d)
-  1.36 / 1.42 / 1.84 / 4.95 x 1e-9  at tau = 5/18/52/200 d
-  (zero-phase curve 1.17e-9 recorded; Fisher floor 1.9e-10; K934
-   bracket 1.2e-7; curve: sep_limit_curve_10_8e.tsv)
+  |delta Delta| < 1.68e-9   (95% statistical CL x K_dyn = 10; tau_chi = 2 d)
+  1.85 / 1.98 / 2.60 / 7.16 x 1e-9  at tau = 5/18/52/200 d
+  (zero-phase curve 1.36e-9 recorded; Fisher-only floor 2.79e-10;
+   full-rank (no-truncation) bracket 3.53e-9; K934 bracket 1.57e-7;
+   window edge 1.74e-8 at 500 d; curve: sep_limit_curve_10_8e.tsv)
 ```
 
 Note that `Delta` is itself the dimensionless SEP parameter, so this
 amplitude bound is a physical statement independent of any drive model. The
 dictionary-anchored COUPLING version (Conjectural, Request-8 `U/c^2` drive,
-f_w ~ 1e-10..1e-11, tasc-locked phases): `beta_phys < 14-17` for
-`tau in [2, 52] d` — the free-fall channel's drive lacks the clock channel's
-1/Omega integration amplification, so in coupling units the two channels
-bound different composites (clock: 0.4-0.6 on the rate-coupling; free-fall:
-~15 on the potential-coupling but 3e8 deeper in raw Delta amplitude).
+f_w ~ 1e-10..1e-11, tasc-locked phases): `beta_phys < 18-23` for
+`tau in [2, 52] d` (59.7 at 200 d) — the free-fall channel's drive lacks
+the clock channel's 1/Omega integration amplification, so in coupling units
+the two channels bound different composites (clock: 0.4-0.6 on the
+rate-coupling; free-fall: ~20 on the potential-coupling but ~3e8 deeper in
+raw Delta amplitude).
 
 Status: Note. Remaining caveats: (a) tau below 2 d diagnostic only;
 (b) white + 30-pair Fourier noise model as in the 10.7e headline; (c) E2
-coupling numbers carry O(1) geometric drive factors.
+coupling numbers carry O(1) geometric drive factors; (d) the live-refit
+null offset measured by gate G1 (<= 0.6 sigma_F, 10.8f R6) applies to all
+Fisher-tier numbers and is covered by the K_dyn = 10 anchor; (e) turn
+robustness is established for the tested alias lattice, not for arbitrary
+re-assignments.
 
 ## Gate record
 
