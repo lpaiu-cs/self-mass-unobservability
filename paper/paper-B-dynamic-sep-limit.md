@@ -28,10 +28,11 @@ The oscillating-`Delta` signature proves structurally non-degenerate with
 the timing model (8-27% survival per column, versus 0.06% for static
 `Delta`). The analysis is validated end-to-end against the live
 integrator: null calibration, detection-regime and limit-amplitude
-injection recovery all pass at every anchor *including the headline lag*
-(live-refit displacement `<= 0.035 sigma`, template recovery to
-`<= 0.13%` at limit amplitude), and the result is robust to pulse-number
-(turn) ambiguity over the tested alias lattice and to the drive phase.
+injection recovery all pass at every anchor — *including the exact
+worst-phase template pair that sets the quoted headline* (live-refit
+displacement `<= 0.04 sigma`, template recovery to `<= 0.13%` at limit
+amplitude) — and the result is robust to pulse-number (turn) ambiguity
+over the tested alias lattice and to the drive phase.
 (An intermediate run of these gates failed and was diagnosed as a defect
 of the gate harness itself — the audit trail, including the failure, is
 part of the record; Section 5.) A pre-registered, gate-audited pipeline
@@ -285,9 +286,9 @@ templates (Section 5). Per a pre-registered rule the working anchor is
 `K_dyn = 10` (a safety floor, not a measurement), and every quoted quantity
 carries the full bracket: the statistical Fisher floor, the `K_dyn = 10`
 headline, and the `K = 934` ultra-conservative fallback. The live-refit
-displacement measured by gate G1 (`<= 0.035 sigma_F` at every anchor
-including the headline lag; Section 5) is negligible against this
-bracket.
+displacement measured by gate G1 (`<= 0.04 sigma_F` over every gated
+pair, including the worst-phase headline template; Section 5) is
+negligible against this bracket.
 
 ## 5. Validation-gate record
 
@@ -308,9 +309,9 @@ criteria, unchanged.
 | Ramp | time convention + normalization | integral-kernel `1/2` signature, both hypotheses coherent (Sec. 3.2) |
 | F2 | dynamic non-degeneracy | PASS: survival 8-27% per column; 21.1% causal shared-`tau` peak (threshold 3%) |
 | F3 | projected sensitivity | PASS: anchored `6.9 x 10^-8 <= 10^-5` threshold (x146 margin) |
-| G1 | live null calibration: does a live-integrator refit of the *null* data leave the estimator where the frozen linear pipeline puts it? | PASS at `tau = 2 / 18 / 52 d`: offsets `-0.002 / -0.015 / -0.035 sigma_F` (tolerance 0.3) — after one recorded harness failure, diagnosed below |
-| G2a | estimator calibration, detection regime (`4 sigma_F` injections, undamped live GN) | PASS at `2 / 18 / 52 d`: `+0.009 / +0.056 / +0.057 sigma_F` (tolerance 0.5) |
-| G2b | estimator calibration, limit amplitude (injections at the `K = 934`-anchored limit, step-capped live GN) | PASS at `2 / 18 / 52 d`: `-0.11% / -0.02% / +0.13%` relative (tolerance 2%) — the live model absorbs essentially none of the template |
+| G1 | live null calibration: does a live-integrator refit of the *null* data leave the estimator where the frozen linear pipeline puts it? | PASS at `tau = 2 / 18 / 52 d`: offsets `-0.002 / -0.015 / -0.035 sigma_F`, and `+0.039 sigma_F` on the worst-phase headline pair (tolerance 0.3) — after one recorded harness failure, diagnosed below |
+| G2a | estimator calibration, detection regime (`4 sigma_F` injections, undamped live GN) | PASS at `2 / 18 / 52 d`: `+0.009 / +0.056 / +0.057 sigma_F`, worst-phase headline pair `+0.096 sigma_F` (tolerance 0.5) |
+| G2b | estimator calibration, limit amplitude (injections at the `K = 934`-anchored limit, step-capped live GN) | PASS at `2 / 18 / 52 d`: `-0.11% / -0.02% / +0.13%` relative, worst-phase headline pair `-0.007%` (tolerance 2%) — the live model absorbs essentially none of the template |
 | Turn V | does the interface re-assign pulse numbers? | PASS: alias-shift response exceeds `P/2` (1522 vs 1366 us) — turns fixed, wrap arithmetic definitional |
 | Turn L | can any turn-aliased solution mimic/hide the template? | PASS on the tested lattice (`|n1| <= 12`, `|n2| <= 6`, 48 phase/reference combos per cell, tie-broken wrap): 7 chi2-viable alternative turn solutions per amplitude (integer slips hidden in observing gaps), estimator stable across *all* of them — worst `beta` deviation `1.0 x 10^-10` vs `2.1 x 10^-10` tolerance |
 
@@ -328,11 +329,14 @@ refit at all) in that defective span reproduces the entire offset, and
 the guard-kept span reproduces the pipeline `z_lin` to machine precision.
 With the harness completed (and the headline anchor `tau = 2 d` added),
 the full battery was re-run under the unchanged registered criteria:
-**9/9 PASS**, and the genuine live-refit displacement is
-`<= 0.035 sigma_F` — carried at that measured size on Fisher-tier
-numbers, negligible against the anchor bracket. The failed run and its
-superseded adjudication remain committed; no criterion was rescored at
-any point.
+**9/9 PASS**. A further pre-committed addendum then gated the *exact
+worst-phase template pair that sets the quoted headline* (`tau = 2 d`,
+`t_off = 104.35 d`; its staged parameters asserted to reproduce the
+committed `u95pm_K10` to `< 10^-6`): 3/3 PASS. The genuine live-refit
+displacement over all gated pairs is `<= 0.039 sigma_F` — carried at
+that measured size on Fisher-tier numbers, negligible against the anchor
+bracket. The failed run and its superseded adjudication remain
+committed; no criterion was rescored at any point.
 
 Two by-products deserve independent note. First, the turn-fixing behavior of
 the interface is now a measured fact, not a documentation claim. Second, the
@@ -411,8 +415,8 @@ fallback) published.
 Not claimed: any detection; a probabilistic confidence statement for the
 `K`-scaled tiers (the anchors are systematic safety factors, not
 coverage-calibrated multipliers); live-refit agreement beyond the measured
-`<= 0.035 sigma_F` (gate G1, all three anchors including the headline
-lag); turn robustness beyond the
+`<= 0.04 sigma_F` (gate G1, all three anchors plus the worst-phase
+headline pair); turn robustness beyond the
 tested alias lattice; any statement below `tau_chi = 2 d` (the
 `c_Y`-degeneracy grows toward the instantaneous limit; sub-edge rows are
 diagnostic); any statement for other systems or other state models (the
@@ -507,7 +511,9 @@ nuisance rank 71/90 (guard direction kept; guard residual
 `1.65 x 10^-7`). Live gates of record (C4-complete harness, anchors
 `tau = 2 / 18 / 52 d`): G1 offsets `-0.002 / -0.015 / -0.035 sigma_F`
 (tol 0.3); G2a `+0.009 / +0.056 / +0.057 sigma_F` (tol 0.5); G2b
-`-0.109% / -0.024% / +0.128%` (tol 2%) — 9/9 PASS. Superseded first
+`-0.109% / -0.024% / +0.128%` (tol 2%) — 9/9 PASS. Worst-phase headline
+pair (`tau = 2 d`, `t_off = 104.35 d`): G1 `+0.039 sigma_F`, G2a
+`+0.096 sigma_F`, G2b `-0.007%` — 3/3 PASS. Superseded first
 gate run (defective harness span, recorded): G1 `+0.342 / +0.599` FAIL,
 G2a `0.346 / 0.619` PASS/FAIL, G2b PASS; span-only delta on `res0`
 reproduces those offsets (`+0.344 / +0.607`), guard-kept span reproduces

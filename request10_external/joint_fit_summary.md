@@ -90,8 +90,13 @@ note, C4-complete harness, anchors tau = 2 / 18 / 52 d INCLUDING the
 headline anchor; sep_dynamic/sep_gateG2.json). **9/9 PASS under the
 unchanged registered criteria**: G1 offsets -0.002 / -0.015 / -0.035
 sigma_F (tol 0.3); G2a +0.009 / +0.056 / +0.057 sigma_F (tol 0.5); G2b
--0.109% / -0.024% / +0.128% (tol 2%). The live-refit systematic carried
-on Fisher-tier numbers is <= 0.035 sigma_F as measured.
+-0.109% / -0.024% / +0.128% (tol 2%). The pre-committed addendum then
+gated the EXACT worst-phase pair that sets the quoted headline
+(tau = 2 d, t_off = 104.35 d; staged params asserted to reproduce
+u95pm_K10 to <1e-6; sep_gateG2wp.json): G1 +0.039 sigma_F, G2a +0.096
+sigma_F, G2b -0.007% -- 3/3 PASS. The live-refit systematic carried on
+Fisher-tier numbers is <= 0.039 sigma_F as measured over all gated
+pairs.
 
 Audit trail (recorded, superseded): the first causal-branch gate run (R6,
 sep_gateG.json) recorded G1 FAIL (+0.342/+0.599 sigma_F) and G2a FAIL at
@@ -178,8 +183,9 @@ Status: Note. Remaining caveats: (a) tau below 2 d diagnostic only;
 (b) white + 30-pair Fourier noise model as in the 10.7e headline; (c) E2
 coupling numbers carry O(1) geometric drive factors; (d) the live-refit
 displacement measured by gate G1 with the corrected harness is
-<= 0.035 sigma_F at all anchors including the headline lag (gateG2,
-amendment G-2) and is carried at that size on Fisher-tier numbers;
+<= 0.039 sigma_F over all gated pairs including the worst-phase headline
+template (gateG2 + addendum, amendment G-2) and is carried at that size
+on Fisher-tier numbers;
 (e) turn robustness is established for the tested alias lattice, not for
 arbitrary re-assignments.
 

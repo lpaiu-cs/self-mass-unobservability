@@ -210,3 +210,11 @@ verdicts remain recorded; sep_gateG_adjudication.json now carries the
 full two-layer diagnosis (differential + span decomposition) and the
 supersession. The live gate battery record of record: PASS at all
 anchors including tau = 2 d.
+
+Addendum outcome (sep_gateG2wp.json): the WORST-PHASE headline pair
+(tau = 2 d, t_off = 104.3494 d) passes 3/3 -- G1 offset +0.0391 sigma_F
+(tol 0.3), G2a +0.0962 sigma_F (tol 0.5), G2b -0.007% (tol 2%). The
+live-refit systematic carried over ALL gated pairs is therefore
+<= 0.039 sigma_F as measured, and the exact template/params pair that
+sets the quoted headline (asserted to reproduce u95pm_K10 = 1.6795e-9)
+is now directly live-gated.

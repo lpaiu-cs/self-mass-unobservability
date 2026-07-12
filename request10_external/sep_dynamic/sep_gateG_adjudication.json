@@ -94,10 +94,17 @@
   },
   "all_pass": true
  },
+ "gateG2_worst_phase_headline": {
+  "t_off_d": 104.34942814305832,
+  "G1_offset_sigma_F": 0.03912238428752102,
+  "G2a_dev_sigma_F": 0.09619659308255894,
+  "G2b_dev_rel": -6.726491624302421e-05,
+  "all_pass": true
+ },
  "adjudication": {
   "finding": "the R6 G1/G2a failures were a HARNESS defect, not a live-model property: the R6 measurement span omitted the C4 guard-residual direction; the span-only delta on res0 (no GN) reproduces the recorded offsets, and the C4-complete span reproduces z_lin to machine precision. The first adjudication attributed the offset to the truncated-GN LS-vs-MAP walk; that attribution was wrong as stated -- the walk projects onto the estimator at only the 0.01-sigma level.",
-  "record_of_record": "sep_gateG2.json: C4-complete harness, anchors tau = 2/18/52 d (headline anchor directly gated), registered criteria unchanged -- 9/9 PASS; max |G1 offset| 0.035 sigma_F, max |G2a dev| 0.057 sigma_F, max |G2b dev| 0.128%.",
-  "systematic_carried": "live-refit displacement <= 0.035 sigma_F as measured (replaces the earlier 0.6 sigma_F carry, which was the harness artifact)",
+  "record_of_record": "sep_gateG2.json: C4-complete harness, anchors tau = 2/18/52 d (zero-phase pairs), registered criteria unchanged -- 9/9 PASS; max |G1 offset| 0.035 sigma_F, max |G2a dev| 0.057 sigma_F, max |G2b dev| 0.128%; worst-phase headline pair (t_off = 104.35 d): PASS (G1 +0.039 sigma_F, G2a +0.096 sigma_F, G2b -0.007%)",
+  "systematic_carried": "live-refit displacement <= 0.039 sigma_F as measured over all gated pairs (replaces the earlier 0.6 sigma_F carry, which was the harness artifact)",
   "status": "R6 verdicts stand as recorded (FAIL under its harness); amendment G-2 (pre-committed) governs the supersession; no criterion was redefined."
  }
 }

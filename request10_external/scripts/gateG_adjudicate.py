@@ -150,6 +150,22 @@ try:
 except FileNotFoundError:
     out['gateG2_record_of_record'] = 'sep_gateG2.json not present'
 
+# ---- G-2 addendum: worst-phase headline template gate ----
+try:
+    gwp = json.load(open('sep_dynamic/sep_gateG2wp.json'))
+    out['gateG2_worst_phase_headline'] = {
+        't_off_d': gwp['anchor']['t_off_d'],
+        'G1_offset_sigma_F': gwp['G1']['offset'],
+        'G2a_dev_sigma_F': gwp['G2a']['deviation_sigma_fisher'],
+        'G2b_dev_rel': gwp['G2b']['deviation_relative'],
+        'all_pass': gwp['all_pass'],
+    }
+    print('gateG2wp (headline worst-phase): all_pass =', gwp['all_pass'])
+except FileNotFoundError:
+    out['gateG2_worst_phase_headline'] = (
+        'sep_gateG2wp.json not present -- the tau = 2 d gate covers the '
+        'ZERO-PHASE pair only; the worst-phase headline row is ungated')
+
 # verdict text is DERIVED from the gateG2 output, never hardcoded: a
 # missing or failing re-run must show up in this artifact as such
 g2rec = out['gateG2_record_of_record']
@@ -160,16 +176,31 @@ if isinstance(g2rec, dict):
     n_pass = sum(bool(v['pass']) for blk in ('G1', 'G2a', 'G2b')
                  for v in g2rec[blk].values())
     n_tot = sum(len(g2rec[blk]) for blk in ('G1', 'G2a', 'G2b'))
+    gwp_rec = out['gateG2_worst_phase_headline']
+    if isinstance(gwp_rec, dict):
+        wp_txt = ('; worst-phase headline pair (t_off = %.2f d): %s '
+                  '(G1 %+.3f sigma_F, G2a %+.3f sigma_F, G2b %+.3f%%)'
+                  % (gwp_rec['t_off_d'],
+                     'PASS' if gwp_rec['all_pass'] else 'FAILURES',
+                     gwp_rec['G1_offset_sigma_F'],
+                     gwp_rec['G2a_dev_sigma_F'],
+                     100.0*gwp_rec['G2b_dev_rel']))
+    else:
+        wp_txt = '; worst-phase headline pair UNGATED (zero-phase only)'
     record = ('sep_gateG2.json: C4-complete harness, anchors tau = 2/18/52 d '
-              '(headline anchor directly gated), registered criteria '
+              '(zero-phase pairs), registered criteria '
               'unchanged -- %d/%d %s; max |G1 offset| %.3f sigma_F, max '
-              '|G2a dev| %.3f sigma_F, max |G2b dev| %.3f%%.'
+              '|G2a dev| %.3f sigma_F, max |G2b dev| %.3f%%%s'
               % (n_pass, n_tot, 'PASS' if g2rec['all_pass'] else
-                 'with FAILURES', max_g1, max_g2a, 100.0*max_g2b))
+                 'with FAILURES', max_g1, max_g2a, 100.0*max_g2b, wp_txt))
+    max_g1_all = max_g1
+    if isinstance(gwp_rec, dict):
+        max_g1_all = max(max_g1, abs(gwp_rec['G1_offset_sigma_F']))
     if g2rec['all_pass']:
         systematic = ('live-refit displacement <= %.3f sigma_F as measured '
-                      '(replaces the earlier 0.6 sigma_F carry, which was '
-                      'the harness artifact)' % max_g1)
+                      'over all gated pairs (replaces the earlier 0.6 '
+                      'sigma_F carry, which was the harness artifact)'
+                      % max_g1_all)
     else:
         systematic = ('gateG2 recorded FAILURES: carry each failed '
                       'deviation at its measured size; the supersession '
