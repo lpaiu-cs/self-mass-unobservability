@@ -9,7 +9,7 @@ Status: Note. The static mathematical content is frozen unless a direct contradi
 - Use [`docs/boundary-escape-map.md`](docs/boundary-escape-map.md) for the exact assumption-drop counterexamples and their replacement bookkeeping.
 - Use [`docs/paper-outline.md`](docs/paper-outline.md) for the paper-facing structure of the theorem track, and [`paper/paper-A-collapse-theorem.md`](paper/paper-A-collapse-theorem.md) for the current Paper A draft.
 - Use [`docs/release-note.md`](docs/release-note.md) for the compact publication and handoff summary.
-- Use [`docs/reproducibility-note.md`](docs/reproducibility-note.md) for the recommended smoke tests, and [`verification/`](verification/README.md) for the independent re-derivation of the family survivor counts (including the corrected rank-4 = 25).
+- Use [`docs/reproducibility-note.md`](docs/reproducibility-note.md) for the recommended smoke tests, and [`verification/`](verification/README.md) for the independent re-derivation of the family survivor counts (twice-corrected: the rank-4 undercount fix and the 2026-07-12 gradient-kinematics correction; corrected table `E,B,S,V,T,Q,U,Z = 5,16,30,15,17,23,17,21`).
 
 ## Dynamic-Chi Program (Requests 10.x, Paper B)
 
