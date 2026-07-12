@@ -190,7 +190,9 @@ def eb_sector_report(max_weight: int = MAX_WEIGHT) -> str:
             "",
             "Operational verdict:",
             f"- Smallest new survivor beyond the electric-only exact current set: {summary.smallest_new_survivor}.",
-            "- The raw E/B survivor candidate set has one explicit quartic dependence relation, so the corrected linearly independent E/B basis has 18 elements.",
+            "- The raw E/B survivor candidate set has one explicit quartic dependence"
+            " relation (EBEB, a reducible class here), so the corrected linearly"
+            f" independent E/B basis has {len(summary.surviving_labels)} elements.",
             "- The E/B enlargement still yields a corrected finite linearly independent basis at Delta<=4.",
             "- Therefore the magnetic family obstructs the electric-only minimal-sector claim, not finite fixed-order closure by itself.",
         ]

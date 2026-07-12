@@ -425,8 +425,10 @@ def _r4_family_classes() -> tuple[ContractionClass, ...]:
         ),
         # --- higher-degree mixed survivors restored (the list previously capped
         #     the mixed E/Q sector at degree 2 in E). These lift the new-sector
-        #     rank from 12 to 18 -> total survivor dimension 25. Verified in
-        #     r4_survivor_rank_check.py and verification/rederive_rank4.py. ---
+        #     rank from 12 to 18; total survivor dimension = 5 (corrected electric
+        #     baseline) + 18 = 23 after the 2026-07-12 gradient-kinematics
+        #     correction (was 25 under the earlier generic-gradient convention).
+        #     Verified in r4_survivor_rank_check.py and rederive_rank4.py. ---
         _make_class(
             ("E", "E", "Q"),
             "EEQ",
@@ -545,8 +547,9 @@ def r4_sector_report(max_weight: int = MAX_WEIGHT) -> str:
         f"Surviving classes: {len(survivors)}",
         "(Now includes the higher-degree mixed survivors EEQ, QQQ, E3Q, EQ3, EDtEQ,",
         "GradEGradQ, which the original list omitted by capping the mixed E/Q sector",
-        "at degree 2 in E. Corrected survivor dimension 25; cross-checked by exact",
-        "O(3) character integral in r4_survivor_rank_check.py.)",
+        "at degree 2 in E. Corrected survivor dimension 23 (= 5 corrected electric",
+        "baseline + 18 new; the earlier generic-gradient convention gave 25);",
+        "cross-checked by exact O(3) character integral in r4_survivor_rank_check.py.)",
         "",
         "Surviving Delta<=4 scalar classes:",
     ]
