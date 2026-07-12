@@ -481,7 +481,7 @@ collapse. That companion analysis (Paper B, `paper/paper-B-dynamic-sep-limit.md`
 on the dynamic branch) is now complete: instrumenting the salvaged \(A4\) state
 data \((\beta,\tau_\chi)\) on PSR J0337+1715, it bounds the amplitude of any
 lag-responding SEP oscillation at \(|\delta\Delta|<1.7\times10^{-9}\)
-(95% statistical CL \(\times\) a stated systematic anchor factor
+(a 95% interval evaluated at a systematically inflated width, anchor tier
 \(K_{\rm dyn}=10\); \(\tau_\chi=2\) d, worst drive phase, over the window
 \(\tau_\chi\in[2,500]\) d). The uniqueness no-go is, we think, the honest headline: the idea does not
 select a canonical coupling, and any stronger "minimal-sector" claim must import an
