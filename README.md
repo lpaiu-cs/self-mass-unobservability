@@ -16,8 +16,8 @@ Status: Note. The static mathematical content is frozen unless a direct contradi
 The dynamic track instruments the theorem's `F-A4+` state-augmented salvage — the finite state pair `(beta, tau_chi)` of an orbital-timescale internal state — on the pulsar triple PSR J0337+1715, and quotes the program's first real-data upper limits.
 
 - Entry point: [`paper/paper-B-dynamic-sep-limit.md`](paper/paper-B-dynamic-sep-limit.md) (draft manuscript; LaTeX via `paper/build_paper_b.py`).
-- Headline: `|delta Delta| < 1.3e-9` (95% CL, `tau_chi = 2 d`, phase-marginalized) over `tau_chi in [2, 500] d`; clock-sector companion limits from the same data in the 10.7 chain.
-- Request chain and pre-registrations: `notes/REQUEST10_*.md` (10.1 counting theorems through 10.8e; every stage pre-registered and committed before its data look).
+- Headline: `|delta Delta| < 1.68e-9` (95% statistical CL x `K_dyn = 10` systematic anchor; `tau_chi = 2 d`, worst drive phase) over `tau_chi in [2, 500] d`, per `request10_external/sep_dynamic/sep_phase_marg_10_8e.json`; Fisher-only floor `2.79e-10` and the full anchor bracket quoted alongside; clock-sector companion limits from the same data in the 10.7 chain.
+- Request chain and pre-registrations: `notes/REQUEST10_*.md` (10.1 counting theorems through the 10.8f review response; every stage pre-registered and committed before its data look).
 - Return artifacts, gate record, and deterministic reproduction scripts: [`request10_external/`](request10_external/README.md).
 - The dynamic track's early working ledger is preserved at [`docs/failure-ledger-dynamic-chi.md`](docs/failure-ledger-dynamic-chi.md); the theorem track's boundary-risk register remains [`docs/failure-ledger.md`](docs/failure-ledger.md).
 
