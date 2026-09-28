@@ -1,0 +1,111 @@
+{
+  "classification": "Counterexample candidate",
+  "saved_input_bindings_passed": true,
+  "actual_material_energy_exchange_nonzero": true,
+  "endpoint": {
+    "fine-128": {
+      "material_energy_increment_erg": [
+        5.928111054750208e+24,
+        -5.927372195990201e+24
+      ],
+      "photon_energy_increment_erg": [
+        6.896266230302168e+24,
+        -6.896235318529574e+24
+      ],
+      "nonadiabatic_energy_erg": [
+        1.290460840634338e+25,
+        -1.2904608406351717e+25
+      ],
+      "compression_subtraction_erg": [
+        -8.023112129100338e+22,
+        8.100089183194188e+22
+      ],
+      "material_temperature_increment_K": [
+        0.2535223135803234,
+        -0.2535100114253661
+      ],
+      "ion_population_increment_norm_cm3": [
+        1140934195.1089134,
+        1140317516.78666
+      ],
+      "net_nonadiabatic_balance": 3.2300598588622834e-13
+    },
+    "one-way": {
+      "material_energy_increment_erg": [
+        6.004988215274828e+24,
+        -6.004988215286132e+24
+      ],
+      "photon_energy_increment_erg": [
+        6.895856576571498e+24,
+        -6.895856576571606e+24
+      ],
+      "nonadiabatic_energy_erg": [
+        1.2900844791846642e+25,
+        -1.2900844791857728e+25
+      ],
+      "compression_subtraction_erg": [
+        -315680096256.0,
+        -10737418240.0
+      ],
+      "material_temperature_increment_K": [
+        0.2542672394976315,
+        -0.2542621055885135
+      ],
+      "ion_population_increment_norm_cm3": [
+        1202766124.816948,
+        1202741839.7670293
+      ],
+      "net_nonadiabatic_balance": 4.2963506537095827e-13
+    },
+    "spatial-p2": {
+      "material_energy_increment_erg": [
+        5.928108677567084e+24,
+        -5.927369777375241e+24
+      ],
+      "photon_energy_increment_erg": [
+        6.896266171041177e+24,
+        -6.896235257552244e+24
+      ],
+      "nonadiabatic_energy_erg": [
+        1.2904608445479608e+25,
+        -1.290460844548921e+25
+      ],
+      "compression_subtraction_erg": [
+        -8.023359687134776e+22,
+        8.10034105617246e+22
+      ],
+      "material_temperature_increment_K": [
+        0.25352229003840204,
+        -0.2535099874731877
+      ],
+      "ion_population_increment_norm_cm3": [
+        1140932291.125871,
+        1140315579.6778862
+      ],
+      "net_nonadiabatic_balance": 3.7201436334814673e-13
+    }
+  },
+  "numerical_target_passed": true,
+  "seconds": 39.383219801999985,
+  "scope": "Endpoint component accounting and binding replay only; independent of the stage solver but not a continuum error certificate.",
+  "GR_return_temperature_increment_K": [
+    -0.0007449259173081257,
+    0.0007520941631473654
+  ],
+  "GR_return_thermal_state_norm_relative": 0.011614098212670463,
+  "independent_thermodynamic_ports_relative": [
+    1.154005005262085e-15,
+    7.493690300304649e-17,
+    1.6227072970776423e-15,
+    1.1269064272201262e-16
+  ],
+  "material_collision_power_erg_s": [
+    2.1643298835495693e+29,
+    -2.1643305044444283e+29
+  ],
+  "photon_collision_power_erg_s": [
+    -2.1643298835494007e+29,
+    2.1643305044450183e+29
+  ],
+  "collision_power_cancellation_relative": 2.004815793631416e-13
+}

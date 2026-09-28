@@ -1,0 +1,51 @@
+{
+  "algebra": {
+    "classification": "Proven",
+    "passed": true,
+    "checks": [
+      "polarized constraint",
+      "interior mass and lapse expansion through h^2",
+      "dual-cell gradient energy",
+      "fixed baryon and a^2*S perfect-fluid identity",
+      "nonzero-heat obstruction at v=0"
+    ],
+    "scope": "Conditional algebra only: smooth interior and isentropic fixed-composition matter first law. No global nonlinear PDE bound or nonequilibrium heat Hamiltonian."
+  },
+  "regular_operator": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "secant_relative_defect": 3.2635418554090846e-20,
+    "time_reversal_relative_defect": 0.0,
+    "zero_state_exact": true,
+    "all_momenta_zero_start_passed": true,
+    "flat_eigen_identity_max_defect": 8.101436459618389e-14,
+    "predecessor_flat_eigen_defect": 0.5153734383016492,
+    "scope": "Polarized mass identity and zero-momentum regularity retained; the complete flat radial operator including both boundaries has the exact cell-centered sine eigenmode."
+  },
+  "saved_endpoints": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "paths": 8,
+    "maximum_relative_mass_drift": 1.1020349213565397e-18,
+    "flat_orders": [
+      [
+        2.0007599380218792,
+        1.9963020634919335
+      ],
+      [
+        2.000190555547127,
+        1.9990765111152375
+      ]
+    ],
+    "time_orders": [
+      2.0000179184566136,
+      1.9988183112495195
+    ],
+    "space_orders": [
+      2.0009357124901377,
+      1.9952724334943965
+    ],
+    "scope": "Source hashes, eight saved endpoints, constraints, flat exact errors and convergence orders replayed. Intermediate trajectories and their step diagnostics are bound, not independently reconstructed."
+  },
+  "proof_source_sha256": "db531b08f7172a33707e7b48059e3cb581fba2e18a4d81cdb7ae042cc555c7c3"
+}

@@ -1,0 +1,57 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "WK_bulk": "Delta F^(2)/V = hbar^2*4*pi*e^2*n_e*sum(n_j Z_j/m_j)/(24*k_B*T). This is the coefficient of the assumed bulk WK expansion, not a bound on its physical remainder.",
+  "proof": "Mass-weighted WK trace contains sum_a <Laplacian_a U>/m_a. Coulomb Poisson: Laplacian_a U = -4*pi*e^2*Z_a*sum_{b!=a} Z_b delta(r_a-r_b)+4*pi*e^2*Z_a*n_e. Repulsive classical contact weights vanish. The background term gives the displayed coefficient. Bulk/surface and WK existence assumptions are explicit.",
+  "chemical": "For K=hbar^2*4*pi*e^2/(24*k_B), Qm=sum n_j Z_j/m_j: mu_j^(2)=K Z_j(Qm+n_e/m_j)/T, Hessian_jk=K Z_j Z_k(1/m_j+1/m_k)/T. Holding n_e fixed while changing all ion numbers is a different derivative.",
+  "positive_product": "log(sinh(y/2)/(y/2))=sum_{l>=1} log(1+y^2/(4*pi^2*l^2)). Uniform convergence on compact positive y permits the two derivatives used here.",
+  "WK_remainder": "0<=y^2/24-f(y)<=y^4/2880; |Delta(u,s,cv)| <= (4,3,12)*y^4/2880.",
+  "polynomial_remainder": "For degree12 P6, log(1+q)-P6(q)=integral_0^q t^6/(1+t)dt. Value,u,s,cv bounds are (1,14,13,182)*y^14/1046139494400.",
+  "R_uniform": "C1^2/C3^2<1/6, |D3|<1/6, |D1_prime|<=1/4, |D3_prime|<1/2. Therefore 0<a_i<=2/3 and |a_i+a_i^2+D_i_prime/9|<=7/6 for all R>0.",
+  "field_order": [
+    "F",
+    "U",
+    "P",
+    "S",
+    "CV",
+    "PDT",
+    "PDR"
+  ],
+  "WK_multipliers": [
+    "1",
+    "4",
+    "8/3",
+    "3",
+    "12",
+    "8",
+    "10"
+  ],
+  "polynomial_multipliers": [
+    "1",
+    "14",
+    "28/3",
+    "13",
+    "182",
+    "364/3",
+    "875/9"
+  ],
+  "uniform_theta_point_one_WK_bounds": [
+    "1/28800000",
+    "1/7200000",
+    "1/10800000",
+    "1/9600000",
+    "1/2400000",
+    "1/3600000",
+    "1/2880000"
+  ],
+  "uniform_theta_point_one_polynomial_bounds": [
+    "1/104613949440000000000000000",
+    "1/7472424960000000000000000",
+    "1/11208637440000000000000000",
+    "1/8047226880000000000000000",
+    "1/574801920000000000000000",
+    "1/862202880000000000000000",
+    "1/1076029194240000000000000"
+  ],
+  "scope": "A conditional coefficient theorem and exact-real fit remainder theorem. No physical higher-order quantum-mixture or screened-EOS error bound."
+}

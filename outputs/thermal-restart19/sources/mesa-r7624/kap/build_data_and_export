@@ -1,0 +1,41 @@
+#!/bin/bash
+
+function check_okay {
+	if [ $? -ne 0 ]
+	then
+		exit 1
+	fi
+}
+
+echo 'create kap_data'
+
+mkdir -p data
+cd data
+check_okay
+
+rm -rf kap_data
+
+cp ../kap_data.tar.bz2 .
+check_okay
+
+echo 'bzip2 -d kap_data.tar.bz2'
+bzip2 -d kap_data.tar.bz2
+check_okay
+
+tar -xvf kap_data.tar
+check_okay
+rm kap_data.tar
+
+cd ..
+
+rm -rf ../data/kap_data
+check_okay
+
+mkdir ../data/kap_data
+check_okay
+
+mv data/kap_data/*.data ../data/kap_data
+check_okay
+
+mkdir ../data/kap_data/cache
+check_okay

@@ -1,0 +1,11 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "At low density and20000K, initially negligible high charge stages become populated. The earlier active-stage-only constraint then cannot preserve total target inventories.",
+  "intervention": "Freeze initially populated stages; suppress newly populated initially negligible stages to their declared1e-18 elemental fraction ceiling. Keep the original full-vector1e-12 acceptance check and16iteration cap. This explicitly extends the trace-stage closure off the original adiabat; it is not a claim that the old unconstrained trace model worked there.",
+  "reserved_prior_calls": 41,
+  "remaining_calls": 1959,
+  "reserved_prior_seconds": 2,
+  "remaining_seconds": 58,
+  "reuse": "Recover the eight accepted first density-column states from their saved native rows.",
+  "source_sha256": "219426bf59cd3bc871af7c160d238e40dc369484be3f0e732dc95ddc276460a0"
+}

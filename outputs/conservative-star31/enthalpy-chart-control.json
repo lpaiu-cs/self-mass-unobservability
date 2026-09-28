@@ -1,0 +1,10 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "independent_coordinates": "X and H_ref(X,s), where the reference baryon-shell pressure is fixed throughout a path.",
+  "local_proper_time_equation": "dH_ref/dtau=(T_ref/T)(-r dot f-epsilon_nu-q_flux)+(mu_ref-(T_ref/T)mu) dot f",
+  "chemical_difference": "H_X_ref-(T_ref/T)H_X+T_ref(s_X-s_X_ref), with each derivative at its own fixed pressure and temperature.",
+  "entropy_composition_gauge_invariant": true,
+  "ideal_gas_composition_log_singularity_cancels": true,
+  "limits": "Requires the same differentiable thermodynamic EOS, positive heat capacity, a common composition/entropy branch and a differentiable constraint map. Cancellation of an additive composition-only entropy reference does not prove smoothness across physical EOS phase or ionization boundaries. No stellar residual-corrected path is implemented by this identity."
+}

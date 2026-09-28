@@ -1,0 +1,52 @@
+{
+  "classification": "Counterexample candidate",
+  "bindings": {
+    "verification/def_centered_matter.py": "72a0499a914594cf1b79a39835c616a2d577e671b3a61fbe9838f87526c3bdb1",
+    "verification/def_exponential_coupled.py": "865bbfdd9655944a9d0a9206189a6ff6263c53d887a2f437c7eba93734a80eca",
+    "outputs/direct-eos-gr33/def-centered-matter/plan.json": "61c5f8b68c26dc514e7f7f19d0d94576e0455a16754f7e4a7470f02c0d159436",
+    "outputs/direct-eos-gr33/def-centered-matter/result.json": "a868f1a5a351185da92ef498ce2c7723fecbb75e120fca32cddd04ea6b4cae8a",
+    "outputs/direct-eos-gr33/def-centered-matter/controls.json": "618e43d2d2a4bf88cdf69a26af92c226f0327429cc074a789fa539dd9a055d81",
+    "outputs/direct-eos-gr33/def-centered-matter/initial.npz": "936c87fafa40d349560c646a6c96d460e5e977b520b6ba2a033fd6e9000ef457",
+    "outputs/direct-eos-gr33/def-centered-matter/step-001.npz": "c455793d23a887bcc6a8501947d1359d1166771dfdfb4182c5009d470bcb3934",
+    "outputs/direct-eos-gr33/def-centered-matter/step-002.npz": "31844a0dfd38229d02365fdb40a717511352d5cd5e2e3739bd5991ff452ff306",
+    "verification/def_exponential_coupled_run.py": "9cd05dd4243b0863b5cb3234d691771c47e0e371dc2799ee6b24f07510184b43"
+  },
+  "time_steps": [
+    12,
+    24,
+    48
+  ],
+  "paths": [
+    "minus",
+    "undriven",
+    "plus"
+  ],
+  "amplitude": 1e-05,
+  "duration_crossing_times": 1,
+  "gates": {
+    "native_norm": 1.0,
+    "scalar": 2e-17,
+    "mass_work_identity": 2e-15,
+    "baryon": 1e-09,
+    "isotope": 1e-09,
+    "minimum_time_order": 0.7,
+    "maximum_relative_last_difference": 0.2,
+    "minimum_signal_over_time_difference": 5
+  },
+  "method": "Time-centered matter transport/force and the same conservative species faces; exponential reciprocal scalar with boundary reservoir. Both stiff heat closures remain backward Euler; no global second-order claim.",
+  "comparison": "Same failed Phase45 input, grids, cutoff readouts and original gates; only temporal material quadrature changes. Two new-method pilot steps reused, no old-method state reused.",
+  "budget": {
+    "hard_timeout_seconds": 600,
+    "expected_wall_seconds": [
+      430,
+      590
+    ],
+    "measured_projection_seconds": 539.434121436,
+    "native_steps": 126,
+    "reused_native_steps": 2,
+    "workers": 4,
+    "blas_threads": 1,
+    "automatic_expansion": false
+  },
+  "limitation": "Finite reflecting matter/heat cavity. No physical free surface, outgoing exterior, orbital result or full completion."
+}

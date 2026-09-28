@@ -1,0 +1,26 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "2ba5f1ea",
+  "bindings": {
+    "verification/def_exponential_coupled.py": "865bbfdd9655944a9d0a9206189a6ff6263c53d887a2f437c7eba93734a80eca",
+    "verification/def_nonstationary_interior.py": "d14aa1f9817f722c62c0f84dc39dc5134c6b3885d366a804222a15076b4abc84",
+    "verification/def_resolved_scalar_pulse.py": "6e05b94e44fbc27c2b4e10fb686f52a74eb384695c4db3db91a40a4d399c4b1f",
+    "verification/def_spherical_regular.py": "9023b81412cb33aa1b90ba5b036a05dbdd57f5e2416639ad4ed873def6fd59f3",
+    "verification/def_spherical_coupled.py": "421ce377f7d150788681ca599f8f201bfdfb33beb053455803914f7e298e9f91",
+    "outputs/direct-eos-gr33/def-nonstationary-interior/manifest.json": "eaf4d3c6aa20d7f15701ac2a3053bfcf682ab2e2345daf021a2242d596333d82",
+    "outputs/direct-eos-gr33/def-nonstationary-interior/plus-12/initial.npz": "e6a11ce18c5bc147571eab685251dc10e265317c28484359a88941700f4e5534"
+  },
+  "claim": "First native reciprocal coupling of the exponential scalar carrier and boundary energy reservoir; no defect assigned to material heat.",
+  "gates": {
+    "native": 1.0,
+    "scalar": 2e-17,
+    "mass_work_identity": 2e-15
+  },
+  "budget": {
+    "native_steps": 2,
+    "hard_timeout_seconds": 90,
+    "workers": 4,
+    "automatic_expansion": false
+  },
+  "scope": "Same finite cavity; no free surface, radiative boundary or orbital/observational completion. Pilot is not a time convergence claim."
+}

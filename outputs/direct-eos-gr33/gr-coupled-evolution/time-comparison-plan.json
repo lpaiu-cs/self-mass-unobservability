@@ -1,0 +1,19 @@
+{
+  "classification": "Counterexample candidate",
+  "runs": [
+    "radial-5735-4",
+    "radial-5735-8",
+    "radial-5735-16"
+  ],
+  "fields": [
+    "delta_lnrho",
+    "delta_lnT",
+    "v_over_c",
+    "delta_Q_over_initial_enthalpy"
+  ],
+  "gate": "All four maximum endpoint differences must decrease on halving dt; lnT and Q must have observed order at least 1.5. Report differences directly, without claiming a rigorous continuous-time error bound.",
+  "minimum_thermal_heat_order": 1.5,
+  "restrictions": "Same 5735 spatial cells and end time. No mass rescaling, omitted failed state or modified EOS/heat parameter. The 8-step runner has no memoization and an incorrect grams-to-kilograms factor only in its final original-baryon diagnostic; recompute that diagnostic here from the actual gram-valued input. The 4/16 runners memoize only identical native-EOS and opacity arguments. Evolution equations are unchanged.",
+  "physical_EOS_certified": false,
+  "observational_closure": false
+}

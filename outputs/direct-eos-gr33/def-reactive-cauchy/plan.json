@@ -1,0 +1,59 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "5a72dea4",
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "mass_identity": "(N*a*J)_prime=4*pi*r^2*N*a*(E_nu-A^4*loss_J)",
+    "conservative_mass": "J=-(G/c^4)*1e-7*integrated_redshifted_face_energy/(Rstar*N*a)",
+    "lifted_pressure": "eta_ad=Delta p/p+Gamma*rho_ref; Delta ln rho=eta_ad/Gamma",
+    "source_order": "With initial neutrino intensity zero, metric and displacement corrections to the O(epsilon) rays are O(epsilon^2). This is a first-order frozen-source expansion, not nonlinear metric transport.",
+    "radiation_terms": "Delta g includes 4*pi*r*P_nu/b; Delta F includes 4*pi*r*Phi*(E_nu-P_nu)/b.",
+    "scope": "Linear identities about the declared static mechanical background; photon/conductive heat transport and physical opacity certification are excluded."
+  },
+  "bindings": {
+    "verification/def_reactive_cauchy.py": "7ddb7e14f1edee6b0656b924076dcabe39145bd5e1eeffbecf4fa3bbd4d95cda",
+    "verification/def_causal_neutrinos.py": "a447028ee3ea1da0ada65ed3c4802abb620e63e61c16eae45aeecd8657aa2290",
+    "verification/def_reactive_structure.py": "80179058d88579c5d439a26b194535f4e3bd64459ba5c931e47c4e7d41194202",
+    "outputs/direct-eos-gr33/def-free-surface-response/normalized/background.npz": "c42374d2a79ab37cc716bad52e6b72a4940dc82f0923f71856601f213f0c4a2c",
+    "outputs/direct-eos-gr33/def-free-surface-thermal/coefficients.npz": "8fa9ddf79c966965a3a3fa26e6b4c738f82eec0b6ad257e521ae37c9403fb46c",
+    "outputs/direct-eos-gr33/def-free-surface-thermal/sources.npz": "87c71aebfa10fb222030a1f818ab350e14362e1d0c5eb9c8d14959a4809168fe",
+    "outputs/direct-eos-gr33/def-free-surface-thermal/reactive-tangent/paired-native/energy-consistent/forcing.npz": "133210ab54e74de9375156105ae8de3646f492ac2002dfacaf90ee8f52e1d4b6",
+    "outputs/direct-eos-gr33/gr-causal-neutrino-milestone-manifest.json": "39b3aee688ed8ac0a2e4033084e927c4ace8e1e96285571dee10fa75a16babad"
+  },
+  "claim": "Evolve actual native initial reaction directions, material inertia, scalar waves and metric constraints with causal neutrino energy and radial pressure on the same free-surface background.",
+  "approximation": "First order in the frozen native thermochemical source; no photons/conductive heat flux, no nonlinear reaction update, no external orbital drive. Exterior displacement is a coordinate label, not vacuum matter.",
+  "sources": "Support-aligned ray cells; identical redshifted energy removed from matter and credited to neutrinos. Replace the native neutrino loss in the fixed-pressure thermochemical tangent by that exact shared-bin debit; preserve its chemical contribution.",
+  "grid": "Original 5863 interior intervals; 128 exterior intervals per Rstar. Radiation 48x24 and 96x48, no adaptive refinement.",
+  "boundary": "Regular centre, dynamic pressure regularity at the true free surface, zero Eulerian scalar at 2Rstar. Control at 3Rstar with identical dx. Horizon Rstar/c.",
+  "time_steps": [
+    16,
+    32,
+    64
+  ],
+  "horizon_crossings": 1.0,
+  "gates": {
+    "linear_residual": 1e-09,
+    "event_replay": 2e-12,
+    "energy_balance": 2e-13,
+    "time_readout_relative": 0.02,
+    "time_order_min": 1.5,
+    "radiation_readout_relative": 0.03,
+    "outer_readout_relative": 0.002
+  },
+  "readouts": [
+    "velocity_mass_RMS_m_s",
+    "scalar_mass_RMS"
+  ],
+  "budget": {
+    "pilot_hard_seconds": 60,
+    "production_hard_seconds": 180,
+    "workers": 1,
+    "BLAS_threads": 1,
+    "native_calls": 0,
+    "GPU": false,
+    "estimated_peak_memory_MiB": 600,
+    "maximum_production_paths": 5,
+    "automatic_expansion": false
+  }
+}

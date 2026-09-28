@@ -1,0 +1,15 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "positive_support_reference_bases_checked": 32,
+  "nuclear_counts": [
+    1,
+    1,
+    2,
+    2
+  ],
+  "basis": "For every nonempty positive support and any reference b, e_i-(A_i/A_b)*e_b is nuclear conserving. These vectors have rank |support|-1 and span every internal H redistribution.",
+  "projection": "The minimum of sum nu_i*(g_i-A_i*lambda)^2 occurs at lambda=sum(nu_i*A_i*g_i)/sum(nu_i*A_i^2). Any chosen positive reference gives an upper bound on this minimum.",
+  "molecular_constants": "The H2+ native correction is relative to H2; adding the H2 formation correction gives the H2+ correction relative to two neutral H atoms, with the electron chemical potential already included by charge pullback.",
+  "scope": "Exact linear algebra and projection identities. They do not certify primitive EOS evaluation, current-state numerical derivatives, omitted species, a continuous root neighborhood, or physical stellar stability."
+}

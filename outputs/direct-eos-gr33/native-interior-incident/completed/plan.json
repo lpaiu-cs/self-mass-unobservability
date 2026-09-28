@@ -1,0 +1,72 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "e725cf704",
+  "previous_goal_turn": "Progress: Phase159 applied the missing exterior interaction and bounded selected exterior terms, preserving the failed original point controls.",
+  "claim": "Apply the current saved interior background metric to the actual incoming primary, pair the interface trace with the exterior domain, and measure the resulting null-infinity charge contribution.",
+  "decision": "Does this previously omitted interior scalar-operator return change the stored matter charge sign or magnitude? A material contribution changes the next mixed-constraint/feedback priority; a failed control remains a failure, not a license to refine.",
+  "current_background": "Use the Phase154 current-source composition: Phase152 full retained/native/motion sources plus its GR return and Phase153 native-acoustic return once. Build the newly combined scalar/metric field on the existing33 knots. Reuse actual original128 emission intervals and all three saved signed SDIRK packet histories.",
+  "operator": "Initial polar constraint coefficients; current background f,lambda,zeta are separate increments. Apply -deltaL_background to the exact existing incident primary. Integrate the derivative divergence analytically and the remaining volume on its characteristic cuts; do not approximate the primary by saved waveform samples.",
+  "representation": "Existing531 cells,33 source knots and4/8 radial reconstruction. The17-knot subset is an interpolation control, not a new evolution path. Five time Gauss points and degree-dependent spatial Gauss points integrate the declared polynomial times the degree8 pulse; no physical mesh or source degree is enlarged.",
+  "boundary": "The full current background interface trace is used in both domain terms, which cancel exactly. Reuse the Phase159 failed exterior point only as an explicitly unaccepted displayed estimate; use its selected-term envelope when bounding that unknown correction.",
+  "exclusions": [
+    "Reciprocal mixed scalar-metric constraints and incident metric acting on generated background scalar.",
+    "Higher/Born incident field interaction and return of this new wave into photons/free matter.",
+    "Complete physical background, EOS/derivative/spatial/interpolation/nonlinear errors, static and observational comparison."
+  ],
+  "settings": [
+    [
+      128,
+      8
+    ],
+    [
+      128,
+      4
+    ],
+    [
+      "128-17",
+      8
+    ]
+  ],
+  "gates": {
+    "quadrature": 0.002,
+    "cadence": 0.02,
+    "port": 1e-12,
+    "boundary": 1e-12,
+    "independent": 1e-10
+  },
+  "budgets": {
+    "prepare": 30,
+    "background": 180,
+    "coefficients": 90,
+    "readout": 120,
+    "audit": 60
+  },
+  "total_seconds": 480,
+  "CPU_threads": 1,
+  "virtual_GiB": 3,
+  "new_EOS_calls": 0,
+  "new_fluid_steps": 0,
+  "forecast": "Measure and save the first fine background field. Twice its cost for each remaining field plus10s must fit180s. Reuse that field. Measure the first fine charge integral before remaining controls within120s.",
+  "stop": "Preserve raw failures; do not expand clocks, spatial degree, physical interval, repeated fluid trajectories or acceptance thresholds.",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/couple_native_interior_incident.py": "9f8cf452e6bd7b4ac26bc3d41ef7e57662ad8df76b51567200e6e60c5ba716f9",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/def_retained_static_response.py": "2e5ae50e9647565c1cfd432b820d35c930af4fbb8ab7f8443440230bc9bda2e9",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/def_retained_metric_fields.py": "1bc05f0f39d1cc34db6f465d9c0d6481e94dce49157aeaab652c6c727968045a",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_characteristic_gr.py": "1630d3f008a1e59748d318f921eed7da8fbea4c49d33e5b86617f67009a27076",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_anisotropic_gr.py": "8c70ea3234a101e81db0c159c0fcf4edf02b16f0910b066f2781699d74efca85",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/read_native_incident_infinity.py": "31fdcc3bec5a89504151337d85457a9ad1dc2d7b12f4b10e5f98eebc83817183",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/couple_native_exterior_incident.py": "22470c64ace061b6158b4e3acc8416fa5e6d32791c9f7985ae5e19262deaf6b3",
+    "/home/lpaiu/work/native-retained-tail-runtime/outputs/direct-eos-gr33/def-native-initial-constraints/finite-volume/balanced-20.npz": "72ae702c85db57f0c02c1e5ca15dfad7df50d901b4270531e5b49c8c3746d3cb",
+    "retained-metric-return152-work/fields/source-128.npz": "e735ad243244f455a3a84f702299b897b9e753f9af5382f9483a195666982725",
+    "outputs/direct-eos-gr33/native-retained-completion/evolution/accepted-ports-128.npz": "e2d02607c5815cd1b23a6ea1ce822ecbb384f185ac7a83074247d0350abc8ecf",
+    "outputs/direct-eos-gr33/native-retained-completion/infinity/completed/retained-128-a8-r8.npz": "55ddaec7e139c588cb4b9dcaf47c3a3b01735e72df958f6f6b1f7c89fa263235",
+    "native-incident-infinity158-work/charge-parts.npz": "b5f07843085aee64ffa3c9ee1932ed7e0f53a0fdac62ce8b2c360ebc146e1712",
+    "native-exterior-incident159-work/bound-result.json": "52288c2cd43d3f18186f4087e062126f2e40d11b99bb0223f2bde59f620fd003",
+    "native-exterior-incident159-work/charge-128-a8-t8-r8.npz": "faca6e2dce2bd080b3f73ea1f925d90632185ba0f52499c0456e30e51454dd62",
+    "retained-motion-return151-work/photons/steps-128-reference-128.npz": "a2ce81caea97d3b4c0985acf1612c5c6796d5ed3356b45261eb173ca20cb5915",
+    "retained-metric-return152-work/photons/steps-128-reference-128.npz": "81ef818acf92fcd6c4eca8c1578a9e7a086a7048ec2131dd0f0253a81bca566b",
+    "retained-native-acoustic153-work/response-centered/photons/steps-128-reference-128.npz": "79f9280bc1a8de209feb7de07a93598a5d61a75c0ce9717256ebdddae5c1918e",
+    "retained-metric-return152-work/gr/source-128-reference-128.npz": "2ad83ad49b1489e28f5f404204af225c2231fdbfb46dff913710d13b7ae5d9fa",
+    "retained-native-acoustic153-work/response-centered/gr-precision/source-128-reference-128.npz": "365f5ec4633449f10eb709ecf12feded55aa5e61221e94795d9eeaf0aca79297"
+  }
+}

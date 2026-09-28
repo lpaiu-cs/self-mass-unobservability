@@ -1,0 +1,33 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "90a5106",
+  "input_sha256": {
+    "outputs/direct-eos-gr33/opacity/baseline-type1-captured.npz": "c61392f904c083f1424c53b26cf7235c49cc72ae4ed0ccdf362521fad72d21cf",
+    "outputs/direct-eos-gr33/opacity/derivatives/result.json": "b26401fe4dfa42778f59fcfd0c0bae7f1aa923e8479284b5c7933e02700f7d5c",
+    "verification/native_opacity.py": "4c9850f868ae02b4323d1a40f483b279563dce07b3e945161c5e7ac87c21e82b",
+    "verification/opacity_internal.py": "ef10af6dc96f2d84a84389cac63619ef93c57d043ec9bf14ccb1a170ecfedc87"
+  },
+  "source_sha256": {
+    "kap/public/kap_def.f90": "7631141e83b9ede8ea0ccefb82ace2c3fdc4c3f0bdb5c32862495d92b61a09d1",
+    "kap/private/kap_eval_fixed.f90": "580fe7c6e5ce79313fd478f2512d07f1098946aa933bcd411f8c766fc305746b",
+    "kap/private/kap_eval.f90": "fbc201fc45aa84f07cc36bea9581cedf9d6a59d06f30f5535ee3fd0231248292",
+    "kap/public/kap_lib.f90": "ddd2608dbc8fa2392d5a596a2a406503e9753cf49e70f98909cf00d75026d90b",
+    "kap/private/kap_eval_support.f90": "d844637eb0b542e98f65e0b65769fc0794b200f7d2d618c3c2cdc92cbd385cf4"
+  },
+  "executable_sha256": "2ea64f04641b18285d2e0721495fd6269db5c08930d579d673ad9d008c6e7a3c",
+  "purpose": "Read actual inputs to the radiative/conductive combiner, its radiative component and runtime blend boundaries. Reproduce the original outputs bitwise before inferring which branch was active.",
+  "internal_columns": [
+    "rho",
+    "log10rho",
+    "T",
+    "log10T",
+    "zbar",
+    "lnfree_e",
+    "free_e_rho",
+    "free_e_T",
+    "kap_rad",
+    "kap_rad_rho",
+    "kap_rad_T"
+  ],
+  "physical_opacity_certified": false
+}

@@ -1,0 +1,28 @@
+{
+  "classification": "Counterexample candidate",
+  "bindings": {
+    "verification/def_reactive_thermal_tangent.py": "da567fe58432dcd0c0b0773b5d347cfe7e85e36cca8192e45b02b7427f186be0",
+    "verification/def_free_surface_thermal.py": "fe248273b1b6da56fd210ed67c818093622cd217c53f0c78fda683b6d8aec092",
+    "outputs/direct-eos-gr33/def-free-surface-thermal/coefficients.npz": "8fa9ddf79c966965a3a3fa26e6b4c738f82eec0b6ad257e521ae37c9403fb46c",
+    "outputs/direct-eos-gr33/def-free-surface-thermal/sources.npz": "87c71aebfa10fb222030a1f818ab350e14362e1d0c5eb9c8d14959a4809168fe"
+  },
+  "claim": "Compute the coupled thermal/composition EOS forcing at fixed instantaneous pressure, conserving atomic rest plus native enthalpy minus actual neutrino loss. Includes u(X) without 26 separate EOS Jacobian directions.",
+  "probe_coordinate_seconds": [
+    8.0,
+    4.0
+  ],
+  "scope": "Directional probes along the initial native reaction vector. They are not finite physical evolution; radiation/heat-flux divergence vanishes initially because the specified initial flux is zero. Transport starts through its flux time derivative.",
+  "gates": {
+    "energy_absolute_floor_erg_g": 2,
+    "energy_ulp": 32,
+    "energy_relative": 1e-08,
+    "weighted_forcing_refinement": 0.01
+  },
+  "budget": {
+    "workers": 8,
+    "pilot_cells": 32,
+    "hard_timeout_seconds": 200,
+    "maximum_EOS_calls": 57350,
+    "automatic_expansion": false
+  }
+}

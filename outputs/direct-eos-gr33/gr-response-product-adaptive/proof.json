@@ -1,0 +1,10 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "exact_orthogonality_checks": 528,
+  "near": "For |z|<=5/4, split |log|z-x|| into negative and positive parts. Their integrals are <=2 and <=2 log(9/4). Since e>5/2>9/4, the sum is <4. Use |Pn(x)|<=1 from the previously certified Legendre representation.",
+  "far_uniform": "For |z|>=5/4 subtract log|z| using orthogonality. Then |log(1-x/z)|<=log 5 and 2 log 5<4 since e^2>19/3>5. This proves a universal bound even for intervals crossing 5/4.",
+  "far_degree": "The uniformly absolutely convergent log series has no contributions for powers k<n. Bound each integral by2, 1/k<=1/n and the remaining geometric series. Its bound decreases with n, so the first omitted degree bounds every discarded moment.",
+  "allocation": "The panel bound uses a suffix sum of outward absolute coefficient bounds, maximized over six jets. Its upper endpoint must be <= the lower endpoint of 5e-19*(b-a)/P. Exact panel coverage implies the mathematical sum <=5e-19. The computed outward sum must additionally pass1e-18 and is explicitly added to every response component.",
+  "recurrence": "Every requested prefix retains the whole continued-fraction terminal interval [0,rho]. Changing the finite depth changes tightness only. Endpoint and near-endpoint formulas are unchanged; d=0 uses the continuous analytic J0 directly."
+}

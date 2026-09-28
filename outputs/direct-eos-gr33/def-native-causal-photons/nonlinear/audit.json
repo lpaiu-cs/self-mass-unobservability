@@ -1,0 +1,71 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "numerical_native_audit_only": true,
+  "actual_trajectory_native_checks": [
+    {
+      "cell": 0,
+      "logT_change": -0.00021110931858173333,
+      "neutral_ratio": 1.021063468737283,
+      "constitutive": 8.031372233929801e-10,
+      "rate": 3.956493155321539e-07
+    },
+    {
+      "cell": 3,
+      "logT_change": 0.00025012117266469234,
+      "neutral_ratio": 1.0151598141261409,
+      "constitutive": 8.585849808895318e-10,
+      "rate": 4.934988153681985e-07
+    },
+    {
+      "cell": 6,
+      "logT_change": 0.0006920217835543399,
+      "neutral_ratio": 1.0170657880745515,
+      "constitutive": 2.2353603412739176e-09,
+      "rate": 1.8892522635205466e-06
+    },
+    {
+      "cell": 9,
+      "logT_change": 0.012826246777664268,
+      "neutral_ratio": 0.789241999596677,
+      "constitutive": 4.33504372399085e-08,
+      "rate": 5.5335906724240935e-05
+    },
+    {
+      "cell": 10,
+      "logT_change": 0.024789178584716864,
+      "neutral_ratio": 0.6676125124613341,
+      "constitutive": 5.569323224818845e-08,
+      "rate": 0.0001124154959204482
+    },
+    {
+      "cell": 12,
+      "logT_change": 0.004439876872221498,
+      "neutral_ratio": 0.8835750236601543,
+      "constitutive": 4.523731500505335e-09,
+      "rate": 3.143602759236863e-05
+    },
+    {
+      "cell": 15,
+      "logT_change": -0.00020584945921072934,
+      "neutral_ratio": 1.9711735551630802,
+      "constitutive": 1.2776002478176451e-11,
+      "rate": 1.4684428608635614e-06
+    }
+  ],
+  "analytic_jacobian_directional_relative": 3.098028416523647e-10,
+  "radiation_reconstruction": {
+    "classification": "Counterexample candidate",
+    "maximum_reconstructed_bolometric_flux_ratio": 0.594946896990515,
+    "P1_positive_moment_limit": 0.5773502691896258,
+    "initial_maximum_reconstructed_ratio": 0.5023434771146982,
+    "independently_sampled_initial_face_ratio": 0.5022772097791648,
+    "physical_realizability_certified": false,
+    "interpretation": "Averaging adjacent face H and pairing with midpoint J exceeds the P1 positive-moment bound in this coarse discretization. Its initial Wien-tail reconstruction already fails severely although every initial face moment is realizable. Spatial/angle reconstruction must be resolved before treating this trajectory as a physical photon distribution; positive J and exact energy alone are insufficient."
+  },
+  "native_calls": 35,
+  "seconds": 1.3545788770000007,
+  "physical_photon_transport_certified": false,
+  "final_charge_solved": false,
+  "source_sha256": "2a53f2e7f8ee2b02c8ad5591ed903be7d0900b568d59bb57d7c8e699c7c1ae37"
+}

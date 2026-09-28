@@ -1,0 +1,237 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "bindings_checked": 36,
+  "actual_updated_material_motion_returned_to_photons": true,
+  "actual_new_photon_transfer_returned_to_material": true,
+  "actual_returned_sources_applied_to_compact_GR": true,
+  "additional_compact_charge": 1.6455016426906029e-44,
+  "additional_over_primary_charge": 1.6114436510430294e-17,
+  "compact_charge_change_from_first_material_return": -9.781320089940402e-50,
+  "material_history_change": [
+    {
+      "steps": 64,
+      "reference": 128,
+      "relative": [
+        2.277027359759911e-06,
+        7.238866860073513e-06,
+        0.04778699078215563,
+        1.2117726618852347
+      ]
+    },
+    {
+      "steps": 128,
+      "reference": 128,
+      "relative": [
+        1.9209006949560472e-06,
+        4.336218147373584e-06,
+        0.04777377714360857,
+        1.211126347156919
+      ]
+    },
+    {
+      "steps": 128,
+      "reference": 64,
+      "relative": [
+        8.990451907989718e-07,
+        2.5094741348118542e-06,
+        0.04765218393305134,
+        1.2128759199098194
+      ]
+    }
+  ],
+  "conserved_order": [
+    "baryon",
+    "radial_momentum_c",
+    "reference_energy",
+    "neutral_H"
+  ],
+  "prior_energy_H_waveform_residual": [
+    1.0223738237077278,
+    0.4398824115156218
+  ],
+  "energy_H_waveform_residual": [
+    0.000334497839373634,
+    0.001606654554830289
+  ],
+  "updated_feedback_GR_reapplied_to_transport": false,
+  "coupled_fixed_point_verified": false,
+  "full_EOS_history_error_enclosed": false,
+  "full_exterior_scalar": false,
+  "discarded_material_transport_closed": false,
+  "nonlinear_GR": false,
+  "final_charge_solved": false,
+  "full_goal_complete": false,
+  "before_checkpoint": "8dc7db609",
+  "progress_class": "loophole progress",
+  "source_identity_relative": 1.322598598471188e-16,
+  "common_saved_time_waveform_residual": [
+    {
+      "steps": 64,
+      "reference": 128,
+      "common_saved_times": 17,
+      "material_endpoints": 65,
+      "energy_H_relative": [
+        0.0007084633666380975,
+        0.002106810007617937
+      ],
+      "maximum_at_time": [
+        0.0032197791730581584,
+        0.0032197791730581584
+      ]
+    },
+    {
+      "steps": 128,
+      "reference": 128,
+      "common_saved_times": 17,
+      "material_endpoints": 129,
+      "energy_H_relative": [
+        0.000334497839373634,
+        0.001606654554830289
+      ],
+      "maximum_at_time": [
+        0.0027904752833170705,
+        0.0034344311179287023
+      ]
+    },
+    {
+      "steps": 128,
+      "reference": 64,
+      "common_saved_times": 18,
+      "material_endpoints": 129,
+      "energy_H_relative": [
+        9.662141094627104e-05,
+        0.001440163785835584
+      ],
+      "maximum_at_time": [
+        0.00010732597243527195,
+        0.0034344311179287023
+      ]
+    }
+  ],
+  "absolute_residual_after_over_before": [
+    0.0003314540663267862,
+    0.0025481741132480002
+  ],
+  "material_all_endpoint_comparisons": {
+    "time_at_all_65_common_endpoints": [
+      6.248610106989967e-06,
+      8.84634037397815e-06,
+      0.001054854892674384,
+      0.0009403844363166074
+    ],
+    "background_at_all_129_endpoints": [
+      0.0021901759477587247,
+      0.0010302746640997052,
+      0.0018825267134242088,
+      0.0021345835664308573
+    ]
+  },
+  "residual_scope": "Only17 canonical photon/material times, plus saved pilot endpoint where present. All65/129 material endpoints are compared separately. No missing photon-time reconstruction, continuous-time supremum, contraction constant or full coupled-error bound.",
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "scope": "With fixed k, E=Etilde+k*B transfers the same baryon source exactly. Opposite collision transfers cancel under the same SDIRK weights. Neither identity bounds EOS derivatives or continuum integration error."
+  },
+  "accepted_angular_port_relative": [
+    9.961337030995191e-17,
+    0.0,
+    9.963476745697251e-17
+  ],
+  "original_angular_writer_verdict": false,
+  "original_postprocess_time_assumption_verdict": false,
+  "sha256": {
+    "docs/adiabatic-limit.md": "faefba6476c3b28637df383c2f56601ef2641cc33b41c6554e4bb2509a73b353",
+    "docs/dynamic-charge-completion.md": "651fd65d6a6c7280993d728b4f670c7f2600000b3b030e60bfb11720db4933bc",
+    "docs/failure-ledger-dynamic-chi.md": "59186172753ee60b894794d8568d6329e2c165b5bee75d4be05b51e6b2d8cb30",
+    "docs/model-definition.md": "dfd3bf256b05977b6b8b444e8b1733c755321841d3ce1f99df6f1fea5d61a35e",
+    "docs/nonadiabatic-regime.md": "9a40c58b130a8a0f4275c7e0621f24dc0998b14d96a9f34a76eadaccdce1857a",
+    "docs/observable-targets.md": "209eaa1574f8fffb5d9a2f5755199e61cb5cc9b5b087cc334beebac074ddb37a",
+    "notes/REQUEST134_UPDATED_JOINT_FEEDBACK_KO.md": "994cfcdc94f815972e290dbddd68f6636febb9637f532eb09fa313b73642abb6",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/angular-prefix-failure.json": "1b9b760d635f4bddb39b320d30a0672434b5a3f3128d278828da4c0407d6e96c",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/angular-repair-plan.json": "14dc72869f71e2f67996ed655fc1ac23f3c3f869f50495175f7377a507f4569b",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/audit.json": "b7455a943e136e689f092aba84cf2332f94c1fcb42acfbe9bca52cab5f574db2",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-pilot-128-128.json": "b0410d542c9bc7442a8a87a18afdae1e3b6a0198f6a7c9e9d26e7e9f1cef15db",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-pilot-128-128.log": "cb02be0faa75dfe3f2a39ddbfad684d50983e910ed51be1109a41d4ba4d4270a",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-pilot-128-128.npz": "ee08fba1ebe7ba4ff35c4e22e839482dd1d6086e0c0f8b4001a250dd165277b9",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-pilot-128-64.json": "821a5432b93355ae2b6927bd5ff58ad42a35e8d102b566689bfa1bde8cfaaeaf",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-pilot-128-64.log": "40c8bac7a7eb994af134792438933ceff15285ae7b1ce07459b294c2a5090c4a",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-pilot-128-64.npz": "0e6e60818b7623860e8517dc7bc3d352b68bfd610e2d233c021a64d437f3d219",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-pilot-64-128.json": "2522cd55c090c6f2ee5b0cd18aeb96be7204bf1ef4d2abb99dd6b89450b343c4",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-pilot-64-128.log": "43250d8834722d8b0781eccf84ec37da41ae8ef6cf116a6a9875c2d21dd66a95",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-pilot-64-128.npz": "31fcc1ac2c34027d1d658e002ecfff598d93271c7a12eb6a9fa7ba706f666244",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-pilot.json": "1f14b0c37ca05a4dd187cf3e70251c630a4833434ff3203560bfe331bb532db5",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/execution-plan.json": "2b4ce867440f66876939252de4537be26c69f295c4ed84704f06afd730e4b642",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/expanded-run.py": "9384fa813965706c2802946334155f1f14d72312efc87e8912917e4c233460ef",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/first-execution-plan.json": "56554dd8cfc8fccac819774a20c4ffa28dabfbc1d12b82b229fddc1da3c7aea6",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/first-producer.py": "c6f7c026f12644146147c3a903f2bbfaa42e499033a7830e90a86ef3d0ee66e9",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/pilot-128-128.json": "dc36b4f0847ca8ebaedd76b612143e9cc7f62549eb5c23deaee262e6596820c8",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/pilot-128-128.log": "634f8c7f3979f5082fbe1e067ac72a9a8722a722fd15452d3ff161067402ed0f",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/pilot-128-128.npz": "1855d866d3efb07b5bbfba1bad0be0ce45a78ec3fd9ff00db4309e08657a6683",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/pilot-128-64.json": "5ac7bcc21ffb20eff5683f1f06367e5b75ae2979558623b1d29d9b815bd4fa87",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/pilot-128-64.log": "0e93d5a7840787fce6d7e28fb47c076bc1be8251d984567a78447a8a885712ee",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/pilot-128-64.npz": "a6cdbe418457ed2564a48c25972b5289c4373e43138a9c71634c7d8b97192ad4",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/pilot-64-128.json": "d4cff404718cef04e6c3a42a708d729f41da683a6312be3f3f17952d590d8be7",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/pilot-64-128.log": "e6e99fe114e37df64b8f45d6f3da9da62045756e3f948d542cf9e8e9828ca5b0",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/pilot-64-128.npz": "a27b84a719c6bc967a866d90be945b7802f2df2bb57b528cf0fcb1ff2ff396da",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/pilot.json": "26d9dc0e3722c71aed469c99b3a715d8abb427344a8cc2ea198dcee360e0dc44",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/plan.json": "6f5dadae7371030113a7d9fdba4f744b3a78dcce50c0a32111f9eb3fea67bc66",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/result.json": "a39af4cc1180e7c9235ae3a3de24d510c6ba9b6a62708dc9b7a40a1cf1c397be",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/audit.json": "6d1e8d1c74df9bbba1c7f0cbeed06dd20e72f94dac531d2dfd64f68452407f91",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/closure-audit.json": "f23dba4352602cd738f07794328189a6b60b87167dde634aabefcb60ddba5aa4",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/closure-first-check.py": "a15363332f2f81b08ca7935c8678903168301ad885bf2cc1c5f4c4bb9f0b4c78",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/closure-readout-failure.json": "9fdacd66e7f6a5ea8b896fbe844fbb38442a051a51f7835681bbeb9db1aea160",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/execution-plan.json": "548fa0050cc5f8db9cf3f0fdcd94a302a9d7d7c123e1afb072659fbdfcc0a1b0",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/gr/fields-128-reference-128-g4.json": "e2abca17ec15998951ed59fa9ade54a2680e9960e2d4ff62c10092b4810dbb28",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/gr/fields-128-reference-128-g4.npz": "74f2960db2f5af5369c75a33c1be8a5c685c10cad3f3ac72b87d80146873d651",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/gr/fields-128-reference-128-g8.json": "02c49b79a80769b6557cd60205abf38aaf59c61d15c68dbffdd733aa71544337",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/gr/fields-128-reference-128-g8.npz": "32d38c4c7c64d913a172f7a9ac5acc41d83daef35971dfcbfc33857fb703b06e",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/gr/fields-128-reference-64-g8.json": "0371ed210fd65134abffdc6d0463ad705c83701f5bcbdcc97b9ed2ae24a13141",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/gr/fields-128-reference-64-g8.npz": "832b8d8661c7b3af69c8e3c72becb12abaf8e4108d366d5a444079fac5ab528a",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/gr/fields-64-reference-128-g8.json": "8e3d2e11747cae1f3dffff4053a21cc5911d65d550a035dfcc7118d18bd2f12c",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/gr/fields-64-reference-128-g8.npz": "600a51cc847d0df3df63cea4dab2f53a612ad4064ade354092c2bad0fb4bae5a",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/gr/plan.json": "249cbf4d36d8ad0f4e4199a46fb02c6895b7bbbbae0d46756f857197a16b3edd",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/gr/result.json": "1634785640d2049c430f1d020ba3358272fb4367c51ab17a56b6f865657b3426",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/gr/source-128-reference-128.npz": "aa5d83cf102b7f66b28e21986f45cd75e00b54320c86d77e6bee033634129dad",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/gr/source-128-reference-64.npz": "9472f5aa6296a3aab38ca3457184c38183f8e5d55ac3d1186466a53a0743dd3e",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/gr/source-64-reference-128.npz": "6c81727b5e9ceef494d0f1c01ca0d8aa9275efed100b1c68847f9d8dd22f3e49",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/pilot-128-128.json": "c341d868ac7260d25c7a12887492df537f81ca204a54d0cac2ec96ba7a73b96d",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/pilot-128-128.log": "5b9a32302c390760f5c601277589dc9206c7cfbff99d216ca38ac996def57034",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/pilot-128-128.npz": "93aae1060dd7a208dbdd56cc7bc696774ab95c3066dac54f53cc208e68e34c90",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/pilot-128-64.json": "49cb9e67d833f45083f1e7c06ddcbc3162bec15699021091538965f754da9cfd",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/pilot-128-64.log": "a798c3d947448c06e06a1e5ae6713d84dd53a279e950430ef4c564de2b4884e1",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/pilot-128-64.npz": "e7519d3bd9aacd05ccb142430ef457193fb92af8e41003ab6d5ffb32d354a1ce",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/pilot-64-128.json": "00e4cbd4114163d0e095f8fc89fb5a3068c6f80ab2d5b8351faead6395befd28",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/pilot-64-128.log": "82d7b8dd56d72ca2dbff574cf8bd1e49d171a5420545eda74b4f5ce873e18630",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/pilot-64-128.npz": "945a20cc2d8198cb1b2b5b8629a43c260a7ca462f2950d39086edf91af5d8d2d",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/pilot.json": "ef668bc606f3c0f4d0001bd3f9e73294ea7ad0259d34ddd1a220a3f86a459752",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/plan.json": "fcabd8ba86e850c00bc14a8cc6c9ac97f1a64f1829b2eff6708098174fe0069d",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/production.json": "60607be8be5278dbeb3d610f8a9753956b2e9e1087947a17bab5e64c290364fb",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/source-plan.json": "54c7a86b0f13d1d736162dd12bd22fffbc50e01367f5d464fbeeaa562c2c583e",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/sources.json": "bdc778d36e115b97c8814b207a7bb46b920c0008c8394532a60ac16fdd2b5b8d",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/steps-128-reference-128.json": "4a98fb63272fcca46b6d3e1965fb13636923f1f8cc5a2e77b74a107183ca9b76",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/steps-128-reference-128.log": "3762ff6a7e99c526161413f06535ddfb2a05c3addf9c9d98abc9f953e456e660",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/steps-128-reference-128.npz": "dc0d1b2f098362f8ab5fafcf0ec233d5f5edbf78064a811f5c4c01dd22931493",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/steps-128-reference-64.json": "10a60327da1cc0f85af54e0c62e316b0a0a7ea1c6d290dda780cd28c1823833d",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/steps-128-reference-64.log": "6db49576ab35e1d49730bd1562c22d7010e6f0671203c6d2ab75bbebf2cb89c6",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/steps-128-reference-64.npz": "fc409221b0d6ff76981a5d34d02706e3f4e18815288fec828b91d5a98fb8c099",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/steps-64-reference-128.json": "bdcf16e71ba095563e582ae2c1b3f964dcab8f719209c0e888f18ea6d23eae9e",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/steps-64-reference-128.log": "ed51191eb1b3a1ce806e1eb0213dbf2a770622fc6230dd47990b64e7ee886c55",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/steps-64-reference-128.npz": "93c8e823f8b41e9ff1c6c1c28c6d6a9ac056a6c1f23a49d5077b9b6f25edebc4",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/stress-128-reference-128.npz": "1bc90b8681d7e30ea6f9b6734d0a4ba4bd39215f9c10c10dde3982e96f76bfa7",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/stress-128-reference-64.npz": "4cf913369b19f658093d5ff3a90091ba27502271aaa020c4c46166b1652bf752",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/stress-64-reference-128.npz": "54e46cfde190c5898a594f5265aa4e3eada31a890aa0fa129db6be352ac6f3f5",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/steps-128-reference-128.json": "fe9273226eb66201c1c328384b703f9a79caeab6c0da0d1ea684098fa5153ac6",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/steps-128-reference-128.log": "3f3bd23b021050701c3e3410f4c5ee002f8fd16d2dfc5b8c18c70b3c4ceee2a3",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/steps-128-reference-128.npz": "c8ce34089456d20b64bf2a48754c4f696a2a7b30f252dae09bb3a87e9a228215",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/steps-128-reference-64.json": "f8417210aa8f3525b516de640381929f7bcd2c61dc31740368ac166d9b842f50",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/steps-128-reference-64.log": "41d6ddf2e45c2a9de20bc7e8d4375b4388e2d2f6a28017608cf9acb7a7de7b55",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/steps-128-reference-64.npz": "edfc376b599ffecbd973a14754e5ed81dce2f2958e38af9801f14b6f2c0fd903",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/steps-64-reference-128.json": "477e632bfea9d1171130115d5ee78f2d91b22036e268396bb088b9a851b112ef",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/steps-64-reference-128.log": "76f943ca6cfc4ecfe38cf2d6597f2406d1f58d91d57399adc4d36fbc04e62a91",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/steps-64-reference-128.npz": "e2311288737c92cc3611f0ad81d0e4b307da9f7ccb89afdbca37cf0f9ff971ea",
+    "verification/def_native_updated_joint_feedback.py": "d576b977693d273c0acd0cabd98bb87049e4fbff4019d40df21dddf4a27f57fe",
+    "verification/verify_native_updated_joint_closure.py": "e820606e064fe3d044cf519c16108a161b7c2b279768ab68bdf0de07fba8ac45",
+    "verification/verify_native_updated_joint_feedback.py": "cd4fb3ab49d21b351c8107cae9db4d75375cf569719c920ff075bc0d49195cb8"
+  }
+}

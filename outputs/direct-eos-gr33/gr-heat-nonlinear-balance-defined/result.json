@@ -1,0 +1,22 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "Eulerian_fields": "W=(1-v^2)^(-1/2), D=nW, E=(epsilon+P)W^2-P+2QW^2v, S=(epsilon+P)W^2v+QW^2(1+v^2), R=(epsilon+P)W^2v^2+P+2QW^2v.",
+  "baryon": "(aD)_t+(N*r^2*D*v)_r/r^2=0.",
+  "energy": "(aE)_t+(N*r^2*S)_r/r^2=-a_t*R-N_r*S.",
+  "momentum": "(aS)_t+(N*r^2*R)_r/r^2=-a_t*S-N_r*E+2*N*P/r.",
+  "metric": "m=r*(1-a^-2)/2; m_r=4*pi*r^2*E; a_t=-4*pi*r*N*a^2*S; m_t=-4*pi*r^2*N*S/a; N_r/N=a^2*(m/r^2+4*pi*r*R).",
+  "angular_equation": "The exact radial contracted Bianchi identity is checked from the full metric. If the tt,tr,rr Einstein equations and radial matter conservation hold, the angular Einstein residual vanishes for r>0, by its nonzero 2/r coefficient and spherical symmetry.",
+  "nonlinear_constraint": "C=m_r-4*pi*r^2*E satisfies C_t=4*pi*r*N*a*S*C under the mass-rate law, energy balance and polar lapse. Hence C(t,r)=C(0,r)*exp(integral_0^t 4*pi*r*N*a*S dt) for a smooth solution. C=0 propagates without setting v or Q to zero; a numerical constraint defect is not automatically damped.",
+  "material_worldtube": "For dr_s/dt=N*v/a, baryon flux cancels exactly and dm(t,r_s)/dt=-4*pi*r_s^2*N/a*(P*v+Q). The algebraic identity S-vE=P*v+Q is checked at every |v|<1.",
+  "comoving_derivatives": "D_u=cosh(zeta)/N*partial_t+sinh(zeta)/a*partial_r; D_s=sinh(zeta)/N*partial_t+cosh(zeta)/a*partial_r; v=tanh(zeta).",
+  "acceleration": "a_s=D_u zeta+cosh(zeta)*N_r/(N*a)+sinh(zeta)*a_t/(N*a).",
+  "expansion": "theta=D_s zeta+cosh(zeta)*a_t/(N*a)+sinh(zeta)*(N_r/(N*a)+2/(a*r)).",
+  "full_heat_law": "tau*D_u Q+Q=-K*(D_s T+T*a_s)-(tau*Q/2)*(theta+D_u ln[tau/(K*T^2)]). The projected covariant derivative has radial component D_u Q; no extra spurious basis derivative is retained.",
+  "constant_tau": "For fixed composition, constant proper tau and differentiable K(n,T), baryon conservation reduces the last parenthesis to -(1+dlnK/dlnn)*D_u lnn-(2+dlnK/dlnT)*D_u lnT. This reproduces the earlier kr,kt entropy-closure coefficients at finite velocity.",
+  "scope": "Conditional smooth nonlinear equations. They identify the coupled matter, heat and metric problem; they do not solve a finite trajectory or prove nonlinear well-posedness. The moving-surface mass flux is not by itself a measured luminosity or a radiative exterior matching condition.",
+  "actual_time_trajectory_computed": false,
+  "physical_EOS_certified": false,
+  "physical_transport_calibrated": false,
+  "observational_closure": false
+}

@@ -1,0 +1,64 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "bounds": {
+    "constraint_mass": 2.9326005924256925e-63,
+    "constraint_smooth_stress": 2.296594261153755e-68,
+    "static_gradient_smooth": 6.88984095106078e-68,
+    "moving_constraint_shell": 8.888329131318804e-65,
+    "photon_shell_amplitude_and_front": 2.3906761552342093e-62,
+    "photon_shell_angle": 1.77728036086017e-64,
+    "additional_potential": 5.80907498409215e-68,
+    "homogeneous_mass_cm": 9.982148637228289e-51,
+    "lambda_bound": 1.6886682655663255e-38,
+    "zeta_bound": 1.6886825222972662e-38,
+    "photon_energy_fraction": 4.312603978498607e-33,
+    "photon_delay_seconds": 3.05768313406696e-35,
+    "H_bound": 1.3262955711066167e-34,
+    "weighted_potential_addition": 2.1106559845964687e-06,
+    "potential_contraction": 2.1430858601669983e-06,
+    "free_scalar_norm": 2.710606533651911e-62
+  },
+  "new_scalar_charge_envelope": 2.710612342726895e-62,
+  "new_homogeneous_mass_charge_envelope": 1.3690044818347936e-57,
+  "new_sector_charge_envelope": 1.3690315879582209e-57,
+  "previous_selected_exterior_envelope_remapped": 1.811580612337769e-53,
+  "combined_selected_exterior_envelope": 1.8117175154965646e-53,
+  "combined_envelope_over_selected": 0.00713952276984648,
+  "selected_endpoint": -2.5375890992998707e-51,
+  "conditional_selected_interval": [
+    -2.5557062744548365e-51,
+    -2.5194719241449047e-51
+  ],
+  "selected_sign_survives": true,
+  "old_arrived_photon_mass_counted_once": true,
+  "original_point_verdict": "FAILED and unchanged",
+  "original_point_controls": {
+    "angular": 2.713137145308373e-09,
+    "temporal_quadrature": 6.580601047936563e-05,
+    "radial": 1.2264663674139005e-11,
+    "background_history": 0.023615989612540602
+  },
+  "emission_family": "The original nonnegative64/128 accepted-port histories and every nonnegative emission satisfying their energy/luminosity caps, with the prescribed primary plus continuous finite-source first Born on the exact initial scalar vacuum. No initially exterior photons, fixed emission inventory and launch angles.",
+  "exclusions": [
+    "Later signed background emission corrections and generated background scalar, including its reciprocal constraints and metric action.",
+    "Returned material fields in the external input metric, additional inner/interface ports, exact initial ADM/momentum/flux conservation.",
+    "Full direct-field, EOS, uniform derivative, source interpolation, spatial, boundary, nonlinear and same-inventory static/observational errors."
+  ],
+  "direct_photon_mixed_sector_enclosed": true,
+  "additional_exterior_mixed_stress_closed": false,
+  "exact_ADM_conservation_verified": false,
+  "physical_final_charge_solved": false,
+  "full_goal_complete": false,
+  "scope": "A contribution envelope around the stored Phase163 selected endpoint. It is not a confidence interval or enclosure of the body response, complete exterior source or physical/observational error.",
+  "cost": {
+    "recorded_action_seconds": 5.913059409000002,
+    "CPU_seconds": 3.572346136,
+    "maximum_recorded_RSS_bytes": 406134784,
+    "registered_total_seconds": 135,
+    "CPU_threads": 1,
+    "virtual_GiB": 3,
+    "scope": "Action bodies only. Imports, derivation, inspection, writing, publication and Git are not included. No new EOS roots, fluid steps or rays."
+  },
+  "audit_passed": true
+}

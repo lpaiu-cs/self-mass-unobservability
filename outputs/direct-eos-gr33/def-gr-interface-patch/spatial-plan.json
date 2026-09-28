@@ -1,0 +1,27 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Apply the original1/2/4 polynomial-space acceptance to the single frozen local geometry repair, preserving all four native readouts.",
+  "gates": {
+    "propagation_relative": 0.02,
+    "propagation_order": 1.5,
+    "contour": 0.0002,
+    "spatial_relative": 0.02,
+    "spatial_decrease": true
+  },
+  "budget": {
+    "pilot_seconds": 60,
+    "production_seconds": 300,
+    "parent_total_compute_seconds": 1800,
+    "CPU_threads": 1,
+    "memory_GB": 4,
+    "new_EOS_calls": 0
+  },
+  "decision": "Measure4 resolvents on each remaining space; run only within300s forecast. Stop on a time failure or the final spatial failure. No further cell split or degree increase.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-interface-patch/spatial.py": "b6cc3ddd93e47c62c0878b82d97a4f2a05777cde2f0608a2dcbe82f0e4666d2d",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_interface_patch.py": "880442c647572d55272819dcde5ae735337ddbb62fc3d3e600ca1ea680faf888",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_full_weeks.py": "c0be4c1870a4aa5416892ae7f50523a8df515fcbf1455fa067fee7486489bc36",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-interface-patch/plan.json": "970527ee67d6927e2e424194bb7c0097e536b7091decd03c35c503d55657b236",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-interface-patch/p4-result.json": "864cc33471cf416b974382f35da2cf9e4c95387704ae68249c9cd23fcb8d3472"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "identity": "Delta(M)/Ggeom = scalar_boundary_work - matter_boundary_outflow + sum(H V energy_residual)",
+  "assumptions": [
+    "Regular positive radial constraint branch; Cstar,Dstar and H from the same material metric secant.",
+    "Same scalar kinetic/gradient weights in the constraint and wave equations; zero central gradient port.",
+    "Shared matter transport face and identical reciprocal trace source.",
+    "This implementation starts at phi=Pi=0 and performs one stage."
+  ],
+  "not_proved": [
+    "Nonlinear continuum convergence",
+    "Full Einstein angular/momentum constraint preservation",
+    "Finite step entropy monotonicity",
+    "Physical stellar response or observational closure"
+  ],
+  "source_sha256": "de3974a758701377cad408d350f61d8c155aa24894b82e7507a3435390222372"
+}

@@ -1,0 +1,11 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "prepare reached the angular-control serialization and raised TypeError: Object of type bool is not JSON serializable (numpy.bool_). No full-cohort production had run.",
+  "change": "Convert diagnostic scalars to builtin float/bool. Re-run the same angular controls, then the unchanged production function, gates, grid sizes and 60s hard budget.",
+  "sources": {
+    "verification/def_electron_response_resume.py": "f54d8bbc0f9167c06eb3ceb351771607a44d5ba8e4f57a777329e7fabc3a72e4",
+    "verification/def_electron_correlated_response.py": "d732fdc651824c6714880a5c3cdef7411e5892def31d3f9f2dcea41b4d37e5b7",
+    "outputs/direct-eos-gr33/def-electron-collision-response/correlated-ions/plan.json": "2365916e03319c2a24fee9d56d6b941ad16e30953b82b5ca001e784254fc722d",
+    "outputs/direct-eos-gr33/def-electron-collision-response/correlated-ions/pilot.json": "bd6969b4e31ffc34c7680e0817b1dafd5329fdfcfb1035037fde9aa6f5d51aea"
+  }
+}

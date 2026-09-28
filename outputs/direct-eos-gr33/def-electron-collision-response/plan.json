@@ -1,0 +1,37 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "2ceb61f0",
+  "bindings": {
+    "verification/def_electron_collision_response.py": "9457f26158a3d1ec44aaefea64c4eddf8fe361be6c9f6da1945609eb0a70bad3",
+    "outputs/direct-eos-gr33/def-free-surface-thermal/coefficients.npz": "8fa9ddf79c966965a3a3fa26e6b4c738f82eec0b6ad257e521ae37c9403fb46c",
+    "verification/def_free_surface_thermal.py": "fe248273b1b6da56fd210ed67c818093622cd217c53f0c78fda683b6d8aec092",
+    "outputs/direct-eos-gr33/def-resolved-scalar-pulse/companion-benchmark.json": "810073ff038513cb97b36f6a1f58046c6f48952f152b32ddf8a9152157df631a",
+    "outputs/direct-eos-gr33/def-electron-collision-response/potekhin-yakovlev1996.html": "26ec969b8522948129edeb2a3a1db0b5115ac482aeed4292371c08f5cd669f57"
+  },
+  "primary_source": {
+    "classification": "Imported from prior work",
+    "url": "https://arxiv.org/html/astro-ph/9604130",
+    "equations": "Nonmagnetic limit of sections 3.2 and 4.2-4.3, transport cross sections and statistical energy averaging. The Born screened potential is the declared approximation; full stellar validity is not inherited."
+  },
+  "model": "B=0 ideal relativistic Fermi electrons matched to actual native free-electron density, full nuclear charges within selected near-full-ionization cohort, classical Debye ion screening plus ideal electron compressibility, elastic screened Born scattering summed over ions, no electron-electron collision or correlated ion structure factor.",
+  "selection": "T/T_F<0.1 and absolute fractional native free-electron deficit relative to fully stripped nuclei <1e-4. These are declared cohort cuts, not physical error certificates.",
+  "decision": "Construct actual energy-dependent thermal memory without an adjustable tau; compare the static conductivity to the saved native value before replacing a full-star closure. A mismatch is preserved and cannot be fitted away.",
+  "gates": {
+    "density_relative": 2e-11,
+    "angular_relative": 2e-10,
+    "energy_quadrature_relative": 1e-06,
+    "native_conductivity_compatibility_relative": 0.2
+  },
+  "budget": {
+    "pilot_cells": 32,
+    "production_orders": [
+      128,
+      256
+    ],
+    "production_hard_seconds": 60,
+    "native_calls": 0,
+    "new_stellar_time_steps": 0,
+    "CPU_workers": 1,
+    "automatic_expansion": false
+  }
+}

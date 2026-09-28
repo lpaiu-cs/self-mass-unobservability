@@ -1,0 +1,75 @@
+{
+  "classification": "Counterexample candidate",
+  "source_sha256": "19ee8e8e584ddac26145a47a055bc8090480e56afa936affbb9c9fddad2b2cfb",
+  "failed_time_comparison": [
+    0.007046401749122289,
+    0.009423408163237305,
+    0.006787999500030355,
+    0.0038444576333129476,
+    0.022574106093209083,
+    0.008950946522758584
+  ],
+  "wrong_closing_intervals": {
+    "64": [
+      {
+        "step": 12,
+        "actual_interval": 3,
+        "left_interval": 2,
+        "time_roundoff": 1.0842021724855044e-19
+      },
+      {
+        "step": 48,
+        "actual_interval": 12,
+        "left_interval": 11,
+        "time_roundoff": 4.336808689942018e-19
+      },
+      {
+        "step": 52,
+        "actual_interval": 13,
+        "left_interval": 12,
+        "time_roundoff": 4.336808689942018e-19
+      },
+      {
+        "step": 56,
+        "actual_interval": 14,
+        "left_interval": 13,
+        "time_roundoff": 4.336808689942018e-19
+      }
+    ],
+    "128": [
+      {
+        "step": 48,
+        "actual_interval": 6,
+        "left_interval": 5,
+        "time_roundoff": 2.168404344971009e-19
+      },
+      {
+        "step": 56,
+        "actual_interval": 7,
+        "left_interval": 6,
+        "time_roundoff": 2.168404344971009e-19
+      }
+    ]
+  },
+  "repair": "Snap only near-equal canonical source evaluation times within16 machine epsilons before left-interval differentiation, as already done by the free-material owner. Four coarse and two fine closing stages had selected the next metric derivative because t+h lay one ulp above a stored knot. No lift, forcing, waveform, stage method or tolerance changes.",
+  "controls": "Check the actual source jump against the frequency/angular temporal derivative jump. Reuse first4/8 accepted prefixes only after exact equality of all their stage times. Recompute only the affected photon tails; preserve the rejected full histories.",
+  "upper_remaining_seconds": 1167.6526599626245,
+  "eligible": true,
+  "production_cap": 1250,
+  "total_action_cap": 4600,
+  "budget_reassessment": "The completed self-GR paths provide a slower measured late-step floor than the earlier incident run. Allocate1250s to this corrected photon action inside the unchanged4600s total. No extra physical path, cell, horizon or automatic GR return. Each subsequent sweep still needs its measured admission.",
+  "bindings": {
+    "native-incident-self-gr157-work/unaligned-producer.py": "555a22e78a324a7d31f6183c8ba9e3a348bbe9c723cb29b25e38643ab5230e6a",
+    "native-incident-self-gr157-work/unaligned-expanded-run.py": "f32c18289497acb8e6aba46409cb319bee7f8baf1e7c0f5735c9288e77e36fe2",
+    "native-incident-self-gr157-work/sweep-1/photons-precise/result.json": "9a78d4faac731c5e30e2a0d35a81a58f1bf727a389b52f85ac09fde049fc1aea",
+    "native-incident-self-gr157-work/sweep-1/photons-precise/pilot.json": "acad8aaf9ac590dbb035a3704077dd39fc8461879913b89e5faf85a7e75edc27",
+    "native-incident-self-gr157-work/sweep-1/photons-precise/pilot-64.json": "f2e09b64798e1263ad51e1e3e8d32f6d2ee2063d1a0f597740e25ed132a13973",
+    "native-incident-self-gr157-work/sweep-1/photons-precise/pilot-64.npz": "fa6ccb86157be99694a0665d1ba1bf7bbab5ea14f1dcf141a71148625496b669",
+    "native-incident-self-gr157-work/sweep-1/photons-precise/steps-64-reference-128.json": "6d45a20a9ea30c382580c2dcdba458fc1268fbbf254503af34ea31e8976233d0",
+    "native-incident-self-gr157-work/sweep-1/photons-precise/steps-64-reference-128.npz": "372474062f4c38b6c610fef490ff8a4199b3cec6cbe08c41fb6c9372ed62d31c",
+    "native-incident-self-gr157-work/sweep-1/photons-precise/pilot-128.json": "887eed2636dcc8e51ca83cb9c29fb1015cf64ab3bd9143dbd9196d94259e00bd",
+    "native-incident-self-gr157-work/sweep-1/photons-precise/pilot-128.npz": "e7da8223cfb3ca61eadcc9829ed98c2c1355783d5bf33093063c87b1cd03cccb",
+    "native-incident-self-gr157-work/sweep-1/photons-precise/steps-128-reference-128.json": "f4d1496a1f7460f20686c4857730070e6a23ebd1ad9d418a669d087a8cfec7cd",
+    "native-incident-self-gr157-work/sweep-1/photons-precise/steps-128-reference-128.npz": "60b022ca324b6942e91aefc0aff8e7df62cd9b640a936c91893e77f1d8d0cbab"
+  }
+}

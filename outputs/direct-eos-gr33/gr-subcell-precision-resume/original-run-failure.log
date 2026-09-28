@@ -1,0 +1,64 @@
+FULL SUBCELL block-0256 128 True {'calls': 3072, 'evaluations': 9935, 'maximum_score': 0.24995888321129378, 'label': 'block-0256'}
+FULL SUBCELL block-0128 128 True {'calls': 3072, 'evaluations': 11418, 'maximum_score': 0.24914435548913147, 'label': 'block-0128'}
+FULL SUBCELL block-0384 128 True {'calls': 3072, 'evaluations': 10712, 'maximum_score': 0.249525620749084, 'label': 'block-0384'}
+FULL SUBCELL block-0000 128 True {'calls': 3072, 'evaluations': 11337, 'maximum_score': 0.2492443554168977, 'label': 'block-0000'}
+FULL SUBCELL block-0512 128 True {'calls': 3072, 'evaluations': 10938, 'maximum_score': 0.24773050656708367, 'label': 'block-0512'}
+FULL SUBCELL block-0640 128 True {'calls': 3072, 'evaluations': 10956, 'maximum_score': 0.2498990715696165, 'label': 'block-0640'}
+FULL SUBCELL block-0768 128 True {'calls': 3072, 'evaluations': 11452, 'maximum_score': 0.2497975732987437, 'label': 'block-0768'}
+FULL SUBCELL block-0896 128 True {'calls': 3072, 'evaluations': 12943, 'maximum_score': 0.39865844498941966, 'label': 'block-0896'}
+FULL SUBCELL block-1024 128 True {'calls': 3072, 'evaluations': 15070, 'maximum_score': 0.534708979798374, 'label': 'block-1024'}
+FULL SUBCELL block-1280 128 True {'calls': 3072, 'evaluations': 19269, 'maximum_score': 0.7522407910963215, 'label': 'block-1280'}
+FULL SUBCELL block-1152 128 True {'calls': 3072, 'evaluations': 22842, 'maximum_score': 0.5659131542503074, 'label': 'block-1152'}
+FULL SUBCELL block-1408 128 True {'calls': 3072, 'evaluations': 22161, 'maximum_score': 0.663311786461069, 'label': 'block-1408'}
+FULL SUBCELL block-1536 128 True {'calls': 3072, 'evaluations': 21139, 'maximum_score': 0.7213939205947701, 'label': 'block-1536'}
+FULL SUBCELL block-1664 128 True {'calls': 3072, 'evaluations': 21914, 'maximum_score': 0.6678615498983987, 'label': 'block-1664'}
+FULL SUBCELL block-1792 128 True {'calls': 3072, 'evaluations': 22833, 'maximum_score': 0.9673211256499203, 'label': 'block-1792'}
+FULL SUBCELL block-1920 128 True {'calls': 3072, 'evaluations': 22911, 'maximum_score': 0.6288168687746338, 'label': 'block-1920'}
+FULL SUBCELL block-2048 128 True {'calls': 3072, 'evaluations': 23921, 'maximum_score': 0.8956289982529263, 'label': 'block-2048'}
+FULL SUBCELL block-2176 128 True {'calls': 3072, 'evaluations': 22429, 'maximum_score': 0.9134017268241137, 'label': 'block-2176'}
+FULL SUBCELL block-2304 128 True {'calls': 3072, 'evaluations': 22402, 'maximum_score': 0.6537201888805562, 'label': 'block-2304'}
+FULL SUBCELL block-2432 128 True {'calls': 3072, 'evaluations': 24208, 'maximum_score': 0.7724736038298579, 'label': 'block-2432'}
+FULL SUBCELL block-2560 128 True {'calls': 3072, 'evaluations': 20312, 'maximum_score': 0.8189852184683934, 'label': 'block-2560'}
+FULL SUBCELL block-2816 128 True {'calls': 3072, 'evaluations': 21571, 'maximum_score': 0.7100440587355278, 'label': 'block-2816'}
+FULL SUBCELL block-3200 128 True {'calls': 3072, 'evaluations': 11110, 'maximum_score': 0.25154753588952944, 'label': 'block-3200'}
+FULL SUBCELL block-2944 128 True {'calls': 3072, 'evaluations': 21780, 'maximum_score': 0.5739928036368653, 'label': 'block-2944'}
+FULL SUBCELL block-3072 128 True {'calls': 3072, 'evaluations': 17293, 'maximum_score': 0.48405979033349006, 'label': 'block-3072'}
+FULL SUBCELL block-3328 128 True {'calls': 3072, 'evaluations': 10827, 'maximum_score': 0.22971874758503458, 'label': 'block-3328'}
+FULL SUBCELL block-3584 128 True {'calls': 3072, 'evaluations': 10450, 'maximum_score': 0.23426971435232355, 'label': 'block-3584'}
+FULL SUBCELL block-3456 128 True {'calls': 3072, 'evaluations': 10624, 'maximum_score': 0.23259297087506187, 'label': 'block-3456'}
+FULL SUBCELL block-3712 128 True {'calls': 3072, 'evaluations': 10314, 'maximum_score': 0.31313366898732625, 'label': 'block-3712'}
+FULL SUBCELL block-3840 128 True {'calls': 3072, 'evaluations': 11138, 'maximum_score': 0.274397919317264, 'label': 'block-3840'}
+concurrent.futures.process._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/concurrent/futures/process.py", line 246, in _process_worker
+    r = call_item.fn(*call_item.args, **call_item.kwargs)
+  File "/usr/lib/python3.10/concurrent/futures/process.py", line 205, in _process_chunk
+    return [fn(*args) for args in chunk]
+  File "/usr/lib/python3.10/concurrent/futures/process.py", line 205, in <listcomp>
+    return [fn(*args) for args in chunk]
+  File "/mnt/e/lab/self-mass-unobservability/verification/gr_full_subcell_reference.py", line 105, in block
+    value,lt,_=inverse(solver.eos,float(lp),solver.ref[i,3],m.eps[i],m.lt[i])
+  File "/mnt/e/lab/self-mass-unobservability/verification/audit_structured_enthalpy.py", line 41, in strict_invert
+    raise ValueError(('energy-unit entropy inverse',lp,best[0],best[5]))
+ValueError: ('energy-unit entropy inverse', 41.8523281442074, np.float64(1.0014343486391484), np.float64(16.0))
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/e/lab/self-mass-unobservability/verification/gr_full_subcell_reference.py", line 186, in <module>
+    if __name__=='__main__':globals()[sys.argv[1]]()
+  File "/mnt/e/lab/self-mass-unobservability/verification/gr_full_subcell_reference.py", line 163, in run
+    for record in pool.map(block,jobs):
+  File "/usr/lib/python3.10/concurrent/futures/process.py", line 575, in _chain_from_iterable_of_lists
+    for element in iterable:
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 621, in result_iterator
+    yield _result_or_cancel(fs.pop())
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 319, in _result_or_cancel
+    return fut.result(timeout)
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+ValueError: ('energy-unit entropy inverse', 41.8523281442074, np.float64(1.0014343486391484), np.float64(16.0))

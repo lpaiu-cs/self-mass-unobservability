@@ -1,0 +1,38 @@
+{
+  "classification": "Imported from prior work",
+  "database": "NIST ASD 5.12, Kramida et al. (2024), DOI 10.18434/T4W30F",
+  "retrieved_date": "2026-09-10",
+  "acquisition": "Values transcribed from primary NIST pages returned by the web tool. Direct local CSV/form HTTP requests returned 403; no downloaded CSV is claimed.",
+  "local_http_failure": "HTTP Error 403: Forbidden",
+  "rows": [
+    {
+      "Z": 3,
+      "url": "https://physics.nist.gov/cgi-bin/ASD/ie.pl?at_num_out=on&biblio=on&e_out=0&el_name_out=on&level_out=on&seq_out=on&shells_out=on&spectra=Li&unc_out=on&units=1",
+      "energies_eV": [5.391714996, 75.6400970, 122.45435913],
+      "uncertainties_eV": [0.000000022, 0.0000012, 0.00000011],
+      "flags": ["", "theoretical", "theoretical"]
+    },
+    {
+      "Z": 4,
+      "url": "https://physics.nist.gov/cgi-bin/ASD/ie.pl?at_num_out=1&biblio=1&e_out=0&el_name_out=1&ion_charge_out=1&spectra=beryllium&unc_out=1&units=1",
+      "energies_eV": [9.322699, 18.21115, 153.896205, 217.71858459],
+      "uncertainties_eV": [0.000007, 0.00004, 0.000004, 0.00000010],
+      "flags": ["", "", "theoretical", "theoretical"]
+    },
+    {
+      "Z": 5,
+      "url": "https://physics.nist.gov/cgi-bin/ASD/ie.pl?at_num_out=1&biblio=1&e_out=0&el_name_out=1&ion_charge_out=1&spectra=boron&unc_out=1&units=1",
+      "energies_eV": [8.298019, 25.15483, 37.93059, 259.374379, 340.2260225],
+      "uncertainties_eV": [0.000003, 0.00005, 0.00007, 0.000009, 0.0000006],
+      "flags": ["", "", "", "theoretical", "theoretical"]
+    },
+    {
+      "Z": 9,
+      "url": "https://physics.nist.gov/cgi-bin/ASD/ie.pl?at_num_out=1&biblio=1&e_out=0&el_name_out=1&ion_charge_out=1&spectra=fluorine&unc_out=1&units=1",
+      "energies_eV": [17.42282, 34.97081, 62.70798, 87.175, 114.249, 157.16311, 185.1868, 953.8983, 1103.1175302],
+      "uncertainties_eV": [0.00005, 0.00012, 0.00025, 0.017, 0.006, 0.00025, 0.0006, 0.0003, 0.0000019],
+      "flags": ["", "", "evaluated", "evaluated", "evaluated", "", "", "theoretical", "theoretical"]
+    }
+  ],
+  "scope": "Element ground states. Database uncertainties are not rigorous error intervals; isotope shifts and pressure ionization remain outside this table."
+}

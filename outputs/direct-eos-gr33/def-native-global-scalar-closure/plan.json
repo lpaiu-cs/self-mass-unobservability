@@ -1,0 +1,36 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "71ed2659e",
+  "claim": "Compute actual angular exterior photon mass-debit/stress scalar forcing at null infinity on the inventory-matched background; close its declared global potential and deeper causal domain before combining the charge.",
+  "decision": "Can exterior and unrepresented deep scalar forcing erase the existing compact residual? Preserve source/constitutive/nonlinear limits and do not inherit the old-background positive interval.",
+  "method": "Use the same four outward angular bins and their constant sub-bin occupation, actual64/128 emission histories and exact scalar vacuum. Integrate the finite nonradial-minus-radial delay in a compactified angle coordinate all the way to infinity. Split radial and angular quadrature at saved-history causal delay knots; these are integration cuts, not new physical bins.",
+  "reuse": "Stored Phase121 trajectories, Phase122 compact fields and Phase126 additional response. No new EOS, fluid step, frequency/physical-angle bin, time path or duration.",
+  "conditions": "No initially exterior photons and zero initial scalar increments, as in the current initial data. Exterior packets debit the body by the same Killing energy. The compact source port mismatch must remain explicit; this is not a full physical error certificate.",
+  "gates": {
+    "quadrature": 0.002,
+    "time": 0.02,
+    "port": 1e-11,
+    "manufactured": 1e-10,
+    "delay_inverse_seconds": 1e-12,
+    "contraction": 1.0
+  },
+  "budget": {
+    "prepare_seconds": 30,
+    "pilot_seconds": 30,
+    "production_seconds": 100,
+    "bound_seconds": 40,
+    "CPU_threads": 1,
+    "memory_GB": 2,
+    "new_native_calls": 0
+  },
+  "stop": "Measure the real exterior kernel and one history before production. Keep2x measured forecast within100s. Stop on gate/cap; no automatic quadrature, physical mesh or horizon enlargement.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_global_scalar_closure.py": "b8f8cbab5f052100dc57963d747c200d0fa871993db62df5fc295881201f9db2",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_characteristic_gr.py": "1630d3f008a1e59748d318f921eed7da8fbea4c49d33e5b86617f67009a27076",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_anisotropic_gr.py": "8c70ea3234a101e81db0c159c0fcf4edf02b16f0910b066f2781699d74efca85",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_projected_evolution.py": "abb57285b6f1b1dc0fa3dcd9488e441dba381d4ad4282c64e2f7bf57f5355a6b",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-initial-constraints/finite-volume/balanced-20.npz": "72ae702c85db57f0c02c1e5ca15dfad7df50d901b4270531e5b49c8c3746d3cb",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-anisotropic-gr/audit.json": "ae11915b0e535eccc392f629de0a4eacc27ce2e33faa3069734656f560e38916",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-projected-evolution/result.json": "b40d624b72b77ee38570ee79c51a322571b74374a6e2e0d7084bb698bc5538ae"
+  }
+}

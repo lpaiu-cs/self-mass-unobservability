@@ -1,0 +1,178 @@
+
+ INPUT KEYWORD PARAMETERS:
+ -------------------------
+ ND=1                                                                            
+ IFMOL=0                                                                         
+ TMOLIM=10000.                                                                   
+                               *******************************************
+                               I                                         I
+                               I   S Y N T H E T I C   S P E C T R U M   I
+                               I                                         I
+                               I        FOR MODEL ATMOSPHERE WITH        I
+                               I                                         I
+                               I              TEFF  = 18828.             I
+                               I              LOG G =   4.00             I
+                               I                                         I
+                               *******************************************
+0
+
+ CHEMICAL ELEMENTS INCLUDED
+ --------------------------
+
+ NUMBER  ELEMENT           ABUNDANCE
+                 A=N(ELEM)/N(H)  A/A(SOLAR)
+
+    1     H        1.00E+00      1.00E+00   EXPLICIT: IAT=  1  N0A=  0  NKA=  0
+    2     He       3.02E-02      3.55E-01   EXPLICIT: IAT=  2  N0A=  0  NKA=  0
+    6     C        2.51E-06      1.02E-02   EXPLICIT: IAT=  3  N0A=  0  NKA=  0
+    7     N        1.14E-04      1.88E+00   EXPLICIT: IAT=  4  N0A=  0  NKA=  0
+    8     O        8.57E-05      1.87E-01   EXPLICIT: IAT=  5  N0A=  0  NKA=  0
+    9     F        2.61E-09      7.18E-02
+   10     Ne       2.29E-05      3.31E-01   EXPLICIT: IAT=  6  N0A=  0  NKA=  0
+   12     Mg       4.26E-05      1.26E+00   EXPLICIT: IAT=  7  N0A=  0  NKA=  0
+   20     Ca       2.24E-07      1.10E-01   EXPLICIT: IAT=  8  N0A=  0  NKA=  0
+   21     Sc       1.12E-09      1.00E+00
+   22     Ti       7.94E-08      1.00E+00
+   23     V        1.00E-08      1.00E+00
+   24     Cr       4.37E-07      1.00E+00
+   25     Mn       2.45E-07      1.00E+00
+   26     Fe       2.82E-05      1.00E+00
+   27     Co       8.32E-08      1.00E+00
+   28     Ni       1.70E-06      1.00E+00
+   29     Cu       1.62E-08      1.00E+00
+   30     Zn       3.98E-08      1.00E+00
+   31     Ga       7.59E-10      1.00E+00
+   32     Ge       3.80E-09      1.00E+00
+   33     As       1.95E-10      1.00E+00
+   34     Se       2.14E-09      1.00E+00
+   35     Br       3.63E-10      1.00E+00
+   36     Kr       1.91E-09      1.00E+00
+   37     Rb       3.98E-10      1.00E+00
+   38     Sr       8.32E-10      1.00E+00
+   39     Y        1.62E-10      1.00E+00
+   40     Zr       3.89E-10      1.00E+00
+   41     Nb       2.63E-11      1.00E+00
+   42     Mo       8.32E-11      1.00E+00
+   43     Tc       1.02E-22      1.00E+00
+   44     Ru       6.92E-11      1.00E+00
+   45     Rh       1.32E-11      1.00E+00
+   46     Pd       4.90E-11      1.00E+00
+   47     Ag       8.71E-12      1.00E+00
+   48     Cd       5.89E-11      1.00E+00
+   49     In       3.98E-11      1.00E+00
+   50     Sn       1.00E-10      1.00E+00
+   51     Sb       1.00E-11      1.00E+00
+   52     Te       1.55E-10      1.00E+00
+   53     I        3.24E-11      1.00E+00
+   54     Xe       1.86E-10      1.00E+00
+   55     Cs       1.17E-11      1.00E+00
+   56     Ba       1.48E-10      1.00E+00
+   57     La       1.35E-11      1.00E+00
+   58     Ce       3.80E-11      1.00E+00
+   59     Pr       5.13E-12      1.00E+00
+   60     Nd       2.82E-11      1.00E+00
+   61     Pm       1.02E-22      1.00E+00
+   62     Sm       1.02E-11      1.00E+00
+   63     Eu       3.31E-12      1.00E+00
+   64     Gd       1.32E-11      1.00E+00
+   65     Tb       1.91E-12      1.00E+00
+   66     Dy       1.38E-11      1.00E+00
+   67     Ho       3.24E-12      1.00E+00
+   68     Er       8.51E-12      1.00E+00
+   69     Tm       1.00E-12      1.00E+00
+   70     Yb       1.20E-11      1.00E+00
+   71     Lu       1.15E-12      1.00E+00
+   72     Hf       7.59E-12      1.00E+00
+   73     Ta       6.76E-13      1.00E+00
+At line 806 of file synspec54.f (unit = 94, file = 'data/Ca1kas_F_zat.sy')
+Fortran runtime error: Bad real number in item 1 of list input
+
+Error termination. Backtrace:
+#0  0x783505e23960 in ???
+#1  0x783505e244d9 in ???
+#2  0x783505e2510f in ???
+#3  0x7835060701b6 in ???
+#4  0x7835060715fd in ???
+#5  0x7835060722aa in ???
+#6  0x636ad46dcf23 in rdata_
+	at /home/lpaiu/work/direct-eos-gr33/photon-actual-opacity/build-r8/synspec54.f:802
+#7  0x636ad46d94e6 in initia_
+	at /home/lpaiu/work/direct-eos-gr33/photon-actual-opacity/build-r8/synspec54.f:547
+#8  0x636ad46d3c68 in start_
+	at /home/lpaiu/work/direct-eos-gr33/photon-actual-opacity/build-r8/synspec54.f:273
+#9  0x636ad46e9ea8 in synspec
+	at /home/lpaiu/work/direct-eos-gr33/photon-actual-opacity/build-r8/synspec54.f:66
+#10  0x636ad46ea884 in main
+	at /home/lpaiu/work/direct-eos-gr33/photon-actual-opacity/build-r8/synspec54.f:174
+   74     W        1.29E-11      1.00E+00
+   75     Re       1.70E-12      1.00E+00
+   76     Os       2.82E-11      1.00E+00
+   77     Ir       2.40E-11      1.00E+00
+   78     Pt       4.37E-11      1.00E+00
+   79     Au       1.02E-11      1.00E+00
+   80     Hg       1.35E-11      1.00E+00
+   81     Tl       7.94E-12      1.00E+00
+   82     Pb       1.00E-10      1.00E+00
+   83     Bi       4.47E-12      1.00E+00
+   84     Po       1.02E-22      1.00E+00
+   85     At       1.02E-22      1.00E+00
+   86     Rn       1.02E-22      1.00E+00
+   87     Fr       1.02E-22      1.00E+00
+   88     Ra       1.02E-22      1.00E+00
+   89     Ac       1.02E-22      1.00E+00
+   90     Th       1.15E-12      1.00E+00
+   91     Pa       1.02E-22      1.00E+00
+   92     U        3.02E-13      1.00E+00
+   93     Np       1.02E-22      1.00E+00
+   94     Pu       1.02E-22      1.00E+00
+   95     Am       1.02E-22      1.00E+00
+   96     Cm       1.02E-22      1.00E+00
+   97     Bk       1.02E-22      1.00E+00
+   98     Cf       1.02E-22      1.00E+00
+   99     Es       1.02E-22      1.00E+00
+
+
+
+ YTOT   =    1.03049
+ WMY    =    1.13507E+00
+ WMM    =    1.84315E-24
+
+
+ EXPLICIT IONS INCLUDED
+ ----------------------
+
+ ION     N0    N1    NK    IZ
+
+H 1      1     9    10     1
+He 1    11    34    35     1
+He 2    35    54    55     2
+Z06     56    95    96     1
+Z06     96   117   118     2
+Z06    118   163   164     3
+Z07    165   198   199     1
+Z07    199   240   241     2
+Z07    241   272   273     3
+Z08    274   306   307     1
+Z08    307   354   355     2
+Z08    355   395   396     3
+Z10    397   431   432     1
+Z10    432   463   464     2
+Z10    464   497   498     3
+Z12    499   523   524     2
+Z20    525   603   604     1
+Z20    604   635   636     2
+
+
+ BASIC INPUT PARAMETERS
+ ----------------------
+ INMOD  =    1
+ ND     =    1
+ IDSTD  =    0
+ INTRPL =    0
+ ICHANG =    0
+ NATOM  =    8
+ NION   =   18
+ NLEVEL =  636
+ IELH   =    1
+ IELHM  =    0
+ IATH   =    1

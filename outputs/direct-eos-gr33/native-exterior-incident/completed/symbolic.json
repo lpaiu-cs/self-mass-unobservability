@@ -1,0 +1,10 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "metric": "For a packet e=G E/c^4 outside r, lambda_B=-e/(r a); zeta_B=e*[I(r,rp)+1/(r a)-mu_p^2/(rp a_p)], I=int_r^rp ds/(a b s^2). Outside the packet both direct radiation metric increments vanish. Its interior mass debit is paired with its emitted energy.",
+  "derivative": "The smooth zeta_x=-2e/(b r^2). Its shell term is -e*(1-mu_p^2)/(rp a_p)*delta(x-xp).",
+  "operator": "S=2*zeta*(U_xx-Vgeom*U)+zeta_x*(U_x-a*U/r)+zeta_t*U_t/c^2, Vgeom=a*a_r/r. This is variation of the scalar wave operator on the direct radiation metric.",
+  "primary": "For the exact incoming primary U=g(t+x/c), the first three derivative terms equal (partial_x+partial_t/c)(zeta*U_x). At outgoing infinity their causal-edge terms cancel, leaving -int_0^u zeta(0,t)*U_x(0,t)dt at the inner edge of the exterior domain.",
+  "reduced": "The remaining volume integrand in dr dt per unit e is [2/(b*r^3)-4*zeta_unit*a*m/(b*r^3)]*U. The moving-shell integrand in dt per e is (1-mu_p^2)*U(t,xp)/rp^2. Multiply the sum of boundary, volume and shell integrals by c/2.",
+  "scope": "These are exterior operator and distribution identities. Reciprocal scalar-metric mixed constraints, interior background operator variation and complete physical errors are not certified."
+}

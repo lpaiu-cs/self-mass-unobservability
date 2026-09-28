@@ -1,0 +1,9 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "caloric_identity": "At fixed density and nuclear composition, if du/dlnT=cv*T along the path, Delta u=delta*integral_0^1 [cv*T](lnT_old+delta*x) dx. An arbitrary constant energy offset cancels exactly from this representation.",
+  "Gaussian_polynomial_control": "Two-point Gauss integrates every cubic capacity exactly, including negative delta.",
+  "compensated_face_control": "Zero shifts reproduce the original face value/Jacobian. A 1e-18 log-temperature difference at absolute logT=16 remains a nonzero flux in the separate-shift formula, while adding it to binary64 absolute temperatures erases it.",
+  "conditional_four_point_remainder": "If the capacity has an eighth log-temperature derivative bounded by M8 on the segment, the exact four-point Gaussian remainder is at most 1/1778112000*abs(delta)^9*M8. Node/evaluation rounding is additional.",
+  "physical_EOS_or_native_derivative_certificate": false
+}

@@ -1,0 +1,191 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": false,
+  "actual_source_applied_to_coupled_prefix": true,
+  "source_primitive_verified": true,
+  "simultaneous_photon_thermal_H_prefix_completed": true,
+  "free_material_production_completed": false,
+  "time_accuracy_accepted": false,
+  "full_horizon_coupled_response_completed": false,
+  "GR_charge_correction": null,
+  "actual_mass_flux_balance_verified": false,
+  "exact_ADM_conservation_verified": false,
+  "physical_final_charge_solved": false,
+  "full_goal_complete": false,
+  "original_time_gate": 0.02,
+  "completed_steps": [
+    4,
+    8
+  ],
+  "planned_steps": [
+    64,
+    128
+  ],
+  "interval_seconds": 0.0002146519448705439,
+  "rows": [
+    {
+      "method": "unlifted",
+      "time_comparison": [
+        0.018193359056562004,
+        0.13227596431590716,
+        0.12660289249065837,
+        0.13249307066188443,
+        0.019020452135410256,
+        0.2305645884064614
+      ],
+      "maximum_energy_error": 6.505158747750135e-16,
+      "maximum_H_error": 5.571910221407205e-16,
+      "maximum_stage_residual": 9.309928663332341e-15,
+      "cost_forecast_seconds": 1074.3154731046666,
+      "accepted": false
+    },
+    {
+      "method": "leading_lift",
+      "time_comparison": [
+        0.01855672629556791,
+        0.050360949894808146,
+        0.05232909932630283,
+        0.04818282899417213,
+        0.022651738285357412,
+        0.02167100948769653
+      ],
+      "maximum_energy_error": 2.2568738552816565e-12,
+      "maximum_H_error": 1.6642648192439045e-12,
+      "maximum_stage_residual": 4.9864036790282276e-15,
+      "cost_forecast_seconds": 1069.1759842579995,
+      "accepted": false
+    },
+    {
+      "method": "exact_source_primitive",
+      "time_comparison": [
+        0.012650611249618414,
+        0.04670496517563988,
+        0.04406463053531844,
+        0.04811581025638585,
+        0.016210739774494217,
+        0.10215464286642444
+      ],
+      "maximum_energy_error": 1.1540786511146195e-12,
+      "maximum_H_error": 8.35821208804162e-13,
+      "maximum_stage_residual": 4.699297056740361e-15,
+      "cost_forecast_seconds": 1141.1739723053324,
+      "accepted": false
+    }
+  ],
+  "decision": "Reject all three early-time pairs. The exact photon source primitive passes its identity checks and photon energy/pressure clock controls, but the material energy/H/impulse/pressure transfer still fails the unchanged2percent gate. No full-horizon production or new GR charge is accepted.",
+  "next": "Repair the time integration of the simultaneous photon-to-material transfer at the same physical input and existing clocks. A higher-order coupled stage method must preserve actual stage times, weights, collisions, work and angular ports. Validate a bounded prefix before forecasting production; do not refine the physical grid or reinterpret a failed gate as success.",
+  "cost": {
+    "recorded_action_seconds": 244.94024793499997,
+    "CPU_seconds": 193.266560362,
+    "maximum_recorded_RSS_bytes": 2598072320,
+    "original_total_seconds": 3600,
+    "CPU_threads": 1,
+    "virtual_GiB": 3,
+    "scope": "Action bodies including failed actions; imports, read-only exploration, derivation, writing, publication and Git excluded. Three4/8-step coupled prefixes only; no full-horizon or free-material production."
+  },
+  "previous_master_commit": "027adc70c4575def0a7a326f21e1c7623f2c66cf",
+  "previous_master_sha256": "027de5676021f4434646c0a2a1b21168f0c0ca6dab5d299d2ce7001fc8ee1e1e",
+  "preserved_phase166_nondoc_files": 36,
+  "preserved_document_prefixes": {
+    "docs/model-definition.md": {
+      "bytes": 247065,
+      "sha256": "ebc54b56426c9257b8fd54e1746975f623541b19fb9fce8df8e6db4191ddfc26"
+    },
+    "docs/observable-targets.md": {
+      "bytes": 238703,
+      "sha256": "0aeee2579cb01e1562622c65da91ca79883efb80af5dae3d7306f8c5cadfe349"
+    },
+    "docs/adiabatic-limit.md": {
+      "bytes": 233134,
+      "sha256": "3cd7364966df15fd4c3ec94c483d79f23844f49467dc6e1e3837d96a2236e805"
+    },
+    "docs/nonadiabatic-regime.md": {
+      "bytes": 240943,
+      "sha256": "bf5538bafb0e6e13a8478f0cf41828209e0f5f24260238bb5203c0b13ec15d75"
+    },
+    "docs/failure-ledger-dynamic-chi.md": {
+      "bytes": 275925,
+      "sha256": "58c44148f70374dffe64cc9699f26d6b3771e35d4eb727d15fd3385fc964ce10"
+    },
+    "docs/dynamic-charge-completion.md": {
+      "bytes": 104829,
+      "sha256": "e1544fe54b15eedfd250a9057a9e4b7c91ee662706c85b6f89469c4112137fea"
+    }
+  },
+  "raw_files": 61,
+  "sha256": {
+    "verification/apply_native_conservative_redshift.py": "0ad6876eecf7c828bc26e473ab3bc5080cbee835809be97d0506a75884943ce1",
+    "notes/REQUEST167_CONSERVATIVE_REDSHIFT_COUPLED_PREFIX_KO.md": "e3edb6cec78313ecf011171927d2eb233d042249a471b184da1797a5278ab66b",
+    "docs/model-definition.md": "da88115fdc1e5e796a689b3a57cfd813061793c4cc4b3c202adf45c07a20384e",
+    "docs/observable-targets.md": "9712686e75993bbf325d5cef62bf13a062eec212ba0e1d10647920c6936612c3",
+    "docs/adiabatic-limit.md": "6cf2214a47022012275d60a1b81925695653fb9b988353892605474028dd2787",
+    "docs/nonadiabatic-regime.md": "4b263c75f808f86a3a411884c91d7ca319971ed1699f416bdeaacbb760a4674e",
+    "docs/failure-ledger-dynamic-chi.md": "f6f6700be886af81a41e68364d70bd207c86dcaaa634685509e3414f7a4c999d",
+    "docs/dynamic-charge-completion.md": "38cfb27854de2443d35dc327c8cc9852a7785913e2e195b4c5d331b25a211692",
+    "outputs/direct-eos-gr33/native-conservative-redshift/final-result.json": "19158e1711d44f0af5844f37ab4c31a71f89167461260be62e8222c593accc6d",
+    "outputs/direct-eos-gr33/native-conservative-redshift/preservation.json": "ac19bb92753506537d6fd002a91f48457a38c8c1ea6e78401d52ea8ca7e6ed3a",
+    "outputs/direct-eos-gr33/native-conservative-redshift/publication-producer.py": "d1cbf88b40aa966d25ca231bd552615129357af614926de1836cd12c08cd4ebf",
+    "outputs/direct-eos-gr33/native-conservative-redshift/publication.json": "88a207f910adc40e9d55d49dc66d54c77334de856ef2974b5b980b85a99661c6",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/affine-producer.py": "2910599e412e98c09a3633877cf563c73541905df6496395cfc3fe3de7283482",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/check-1-receipt.json": "80bc5d87ef686ea3e7a11b1ba54a1b4f5a71963556255e49609fd10d355d1f89",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/final-producer.py": "0ad6876eecf7c828bc26e473ab3bc5080cbee835809be97d0506a75884943ce1",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/finalize-1-receipt.json": "d80d0c09ca1bf823506322667e55527f8175b93a501c70e87c7e51175504e063",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/finish-1-receipt.json": "84dcf42612a41522b087bc6ab8725a7b2c4ef14c9eb7c98c8077ea665f27738f",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/first-finish-producer.py": "ae855bd98f4c7a28be6e6975c4a4278328f043e10903adb2213a9fc760e5c707",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/lift-check.json": "ed0478ea2db512a7cc89f80bcab52d567c2c75991b52bf92f74659b81f9a66c4",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/lift-plan.json": "6daf610a5bbe5c19923d650f7da9fdb763edf0bedd4fd5ea0c3a301b1805913e",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/lift_check-1-receipt.json": "2099f440251ef94b41bd76b35b9533e3c76c566ac62e65bc1db52b3169f423d8",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/lift_plan-1-receipt.json": "e08d070336971bbc728d0ce26cd4eae32ded911cb990891fdcdd6d99f8b63cc1",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/normalization.json": "820244d5d23554811c792b52a45a3e28317392019f5aac7d8733eeb3b4d28706",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/photon-conservation-plan.json": "248525a3b9808f00f193c48d9739000a1c32eea1cf8197cf8c3ad8b939a0bb2d",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/photon_exact-1-receipt.json": "5ade14ddebdf2e3fdb4e602c87f36454d13d56d6460019fb27ec7cee4135d371",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/photon_pilot-1-receipt.json": "1326c4ee61e09691daf10282c849803174fc8033ec3158d4cc1d9abd72498586",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/photon_retry-1-receipt.json": "7fbded28fbda14349f97d3d157fd67f8d63517bcb4f099d0be3f003a25499de8",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/plan.json": "9be70dc24cc10d33f36ed49b210d6642a7ed9764776e04ed922eda6d05e169d0",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/prepare-0-receipt.json": "ad6f5d9dd02ba3047e91be76719945951ab7124a7641f388eb253c1cafc7a65a",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/primitive-check.json": "67ae729578800aa879c0d3cfc0b5e9f7bf93098afcd6e945b8e50839ea5912a7",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/primitive-plan.json": "b6a2230645d90f6ef1f15b83689e5697e6640f6943c88347cfdaae04983c2c36",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/primitive-producer.py": "854fb3f4e6bba3a38f113030edbb01ecc144d1057c506dc411045b54df0cf5a5",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/primitive_check-1-receipt.json": "d57244f5883bb37fd8338666568d84c0bd1710beacd9c86078b6a36f69cd2b8a",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/primitive_plan-1-receipt.json": "f51c64d54bfc46182a869e1a7cc44f1df78514fa02c0f9e3ce38e5444f1d246f",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/registered-producer.py": "9dc66f0b67b44e24e5e7f507d502bc5052d836806a7ace9c8ad1ae79014999e0",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/result.json": "925c4d42d0e4373514629458e0f847ca7fd2414307c6a120d81f2e0fc83b5342",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/symbolic.json": "43149f0a86ceceb936b83e73913bb1322f2b36fc1e00c60a04067c678f0d9d82",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/sweep-0/material/steps-128-reference-128.npz": "dcb46e493c360e33ac6df6c6e7bb4e5d7cc80e218006a1fbcc08033d6926580f",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/sweep-0/material/steps-64-reference-128.npz": "76e5a3c54e5f5e2ed88a9c3957903569db4397d4088898f4ce6f4729124359d4",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/sweep-0/photons/steps-128-reference-128.npz": "5d2b1936e44617760120a61ca6445a044ad0b91c0a4c6799b59f51832adc2678",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/sweep-0/photons/steps-64-reference-128.npz": "5d2b1936e44617760120a61ca6445a044ad0b91c0a4c6799b59f51832adc2678",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/sweep-1/check.json": "5b0f26770ee9ac8ce3ea953b24673bea079db4e22605ff70977f9aef93122900",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/sweep-1/expanded-moment-run.py": "8345268535344a95b049d80966821d6d23db738a0870085bba97ea27ba404327",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/sweep-1/expanded-refined-run.py": "f32c18289497acb8e6aba46409cb319bee7f8baf1e7c0f5735c9288e77e36fe2",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/sweep-1/expanded-run.py": "391495a5832815036d143c0b955c138440204aef1c38abb46a7510ed39086a3d",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/sweep-1/source-check.json": "bb18ea2bebd6be8b11746697e7e52d197244f8c481ba82234a41c6968875b00c",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/sweep-1/photons/pilot-128-checkpoint.npz": "d9f5308b485f3b7b16f8c44c6ac570cd6ec4756194478712b9cf220ac057cb40",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/sweep-1/photons/pilot-128-progress.json": "35fcee8536347c8d0571de4b2b003ae31dfab8a01292ac0c18d5d86da60f2889",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/sweep-1/photons/pilot-128.json": "73c95976fae6af778cc22d828f1d0a5f339ba16b4e738e9148ad7a440f0255a7",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/sweep-1/photons/pilot-128.npz": "36df9679cae657b45b4cce476ad8d35bf93c45d8d6c312fff57e5b7f1953f5b1",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/sweep-1/photons/pilot-64-checkpoint.npz": "c3c0b5ef754c10b9f22b60dfbe3a808f952f5d7638dd9363e8d39561e7147d68",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/sweep-1/photons/pilot-64-progress.json": "c43ffbdc1b1371e58e990a3d657d5e1a5a50fa5e468f83f81087fc1cbcb0e4e2",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/sweep-1/photons/pilot-64.json": "5fb9b951bac32c1b5a5df788a4eefe1d706eafa6562381fd051daa9401add717",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/sweep-1/photons/pilot-64.npz": "5e58ea8b155da6e2222d8b6c76d60837f3f822e2ca8d2f32c1113b9aa1679470",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/sweep-1/photons/pilot.json": "2abadcc860edb7cef6b560a5ac591d36181e8e439c72494c17f73d8468d248e0",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/sweep-1/photons-leading-lift-rejected/pilot-128-checkpoint.npz": "b036e5d592d619e33b852c27895f5917e34612ad8e43635c552e969026606f0c",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/sweep-1/photons-leading-lift-rejected/pilot-128-progress.json": "d7f6023f2a68e48e98b41ac38bc1103c6ca9c08b55085e5e0fa33248ead0c90d",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/sweep-1/photons-leading-lift-rejected/pilot-128.json": "591461e16c0dd578d88cb838f35be65576aae75476b0d3a4162df610d1463118",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/sweep-1/photons-leading-lift-rejected/pilot-128.npz": "aecd9634d5fea905d92bc359b13ef45fda94bce7a979378e5f4f52575857b76a",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/sweep-1/photons-leading-lift-rejected/pilot-64-checkpoint.npz": "91006d697a1a96f29f98ae5434cd33455ec6f28a9b1789471b68d7c727acbed5",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/sweep-1/photons-leading-lift-rejected/pilot-64-progress.json": "d839bafbe695c6d0169e3c5987edc65cbbb3a5d7c19841befbca7feab87f4095",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/sweep-1/photons-leading-lift-rejected/pilot-64.json": "8a9c4f47965513a97ee6e988af991709ee405ee910d30fdbc5888b0b9d5fef02",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/sweep-1/photons-leading-lift-rejected/pilot-64.npz": "576dadac442736920303f3a069a954b3edf9bd0662b9737e694267384eef61d1",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/sweep-1/photons-leading-lift-rejected/pilot.json": "4baf7dbb6e1e5a0f85c3501e8b5ed30cfa6e3f09aee8474e0dabb31a93099a1a",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/sweep-1/photons-rejected/pilot-128-checkpoint.npz": "7337e9d37ef98ab3b9035ae2a345d8e777a0cad51e90da7763405fc4d8194601",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/sweep-1/photons-rejected/pilot-128-progress.json": "61f6893082f54bee5cf842c2cc30e3ea4fc51530de0616377839e48a69100d10",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/sweep-1/photons-rejected/pilot-128.json": "ebb3c29cb4149290e933bd0cce4e9121c2e1b890ca34953d0c5698e63a315116",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/sweep-1/photons-rejected/pilot-128.npz": "dfbe822d15a1afb6542e64a646f137702636bdcf4fa1b96528c32b7635579608",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/sweep-1/photons-rejected/pilot-64-checkpoint.npz": "bc1045f8b190d99040ae63d0da5bf9239987f240fc3e427020fd1bd145faac2a",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/sweep-1/photons-rejected/pilot-64-progress.json": "e2feea0d531a3cf14345e016b74a137a61537eb73f642279463e4d045bf02907",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/sweep-1/photons-rejected/pilot-64.json": "3ff143adbe010b21ee9157b1dfd5f3590880d3708eab99b709e84b71d9bc534b",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/sweep-1/photons-rejected/pilot-64.npz": "2fb683e779239cd4da813faf3ebbb16b3281492cdfef86dbc3e654eae3b73f80",
+    "outputs/direct-eos-gr33/native-conservative-redshift/completed/sweep-1/photons-rejected/pilot.json": "010695cb846be6c25cde93d42454a92d0e072b4b83968164588339ae445c7b37"
+  }
+}

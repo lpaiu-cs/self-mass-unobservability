@@ -1,0 +1,11 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "decomposition": "K_p dp/Sref=[A+B*(log(1+u)-log|1-u|)]du, A=Q^3*u^2/(gamma*Sref), B=Q*u*(1+Q^2*(u^2-1))/(2*gamma*Sref). Multiply by the same occupation derivative for each field.",
+  "complex_bounds": "For Re E>=0, E=exp(t-eta), |1/(1+E)|<=min(1,1/|E|), |E/(1+E)|<=1 and |(E-1)/(E+1)|<=1. The six occupation bounds are qmax*[1,1,1,tmax,tmax,tmax^2+tmax].",
+  "gamma": "For |u-1|<=R<=1/8, Re(1+Q^2*u^2)>=1+Q^2*(1-2R)>0. The principal gamma is analytic, Re gamma>=gmin; Im gamma=Q^2*Re(u)*Im(u)/Re(gamma). tmin=Q^2*(1-2R)/(beta*(gmin+1)); |t|<=Q^2*(1+R)^2/(beta*(gmin+1)).",
+  "prefactors": "|A|<=Q^3*(1+R)^2/(gmin*Sref), |B|<=Q*(1+R)*(1+Q^2*R*(2+R))/(2*gmin*Sref), |log(1+u)|<=log(2)-log(1-R/2).",
+  "Cauchy": "For each real u in [1-h,1+h], a disk of radius R-h lies in the analytic R disk. Hence M8<=8!*M/(R-h)^8. The total two-sided window remainder is <=2*h^9*[norm_unit*M_smooth+(norm_log+abs(log(h))*norm_unit)*M_B]/(R-h)^8.",
+  "omission": "The whole window modulus is <=2*h*(M_smooth+(1-log(h))*M_B). This permits a signed enclosure around zero only when that full bound satisfies the fixed budget.",
+  "boundary": "This proves a local momentum-window contribution at true certified eta, not a full response or EOS certificate."
+}

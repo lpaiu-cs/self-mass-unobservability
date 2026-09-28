@@ -1,0 +1,58 @@
+{
+  "classification": "Counterexample candidate",
+  "all_original_contrasts_passed": true,
+  "cases": {
+    "coefficient": {
+      "passed": true,
+      "propagation_passed": true,
+      "relative": {
+        "velocity_mass_RMS_m_s": 0.00449305247994281,
+        "scalar_mass_RMS": 0.0001530140200798405,
+        "old_interface_velocity_RMS_m_s": 3.343982726535736e-16,
+        "new_interface_velocity_RMS_m_s": 1.127595841104779e-16
+      },
+      "gate": 0.02,
+      "seconds": 227.75388480499998
+    },
+    "outer": {
+      "passed": true,
+      "propagation_passed": true,
+      "relative": {
+        "velocity_mass_RMS_m_s": 0.0,
+        "scalar_mass_RMS": 2.053958267465785e-14,
+        "old_interface_velocity_RMS_m_s": 1.1146609088452454e-16,
+        "new_interface_velocity_RMS_m_s": 0.0
+      },
+      "gate": 0.002,
+      "seconds": 183.770215001
+    },
+    "quadrature": {
+      "passed": true,
+      "propagation_passed": true,
+      "relative": {
+        "velocity_mass_RMS_m_s": 2.7222144637891635e-13,
+        "scalar_mass_RMS": 1.3026878606218954e-11,
+        "old_interface_velocity_RMS_m_s": 4.289215177236505e-12,
+        "new_interface_velocity_RMS_m_s": 4.446110401476144e-13
+      },
+      "gate": 0.002,
+      "seconds": 181.281717115
+    },
+    "abscissa": {
+      "passed": true,
+      "propagation_passed": true,
+      "relative": {
+        "velocity_mass_RMS_m_s": 2.377059478976562e-06,
+        "scalar_mass_RMS": 8.259585194601623e-12,
+        "old_interface_velocity_RMS_m_s": 1.8687903200290405e-09,
+        "new_interface_velocity_RMS_m_s": 1.383109058699122e-12
+      },
+      "gate": 0.0002,
+      "seconds": 184.32257396599994
+    }
+  },
+  "seconds": 777.201404581,
+  "parent_accounted_compute_seconds": 1388.6227397389998,
+  "original_failure_resolved": false,
+  "full_dynamic_charge_solved": false
+}

@@ -1,0 +1,8 @@
+{
+  "classification": "Counterexample candidate",
+  "finding": "The archived net_derivs weaklib branch explicitly assigns rate_screened_dT=0 and rate_screened_dRho=0. Therefore none of the tabulated weak-rate derivatives, including derivatives that eval_weak computed, reaches the final vector/heat derivative.",
+  "test": "Verify that both native pure-table and pure-low controls have identical final dxdt_T and heat_T at every cell; reconstruct the old returned weak derivative as zero, and add the complete derivative of the declared double model.",
+  "previous_blend_only_and_pre_routing_results_preserved": true,
+  "derivative_gate": 0.001,
+  "physical_certification": false
+}

@@ -1,0 +1,54 @@
+{
+  "classification": "Counterexample candidate",
+  "actual_same_input_evolved": true,
+  "passed": false,
+  "propagation_passed": false,
+  "spatial_passed": false,
+  "propagation": {
+    "4": {
+      "velocity_mass_RMS_m_s": {
+        "previous": 0.001476957665091615,
+        "last": 0.0003753653783400621,
+        "order": 1.97626097879917
+      },
+      "scalar_mass_RMS": {
+        "previous": 0.2070056002653993,
+        "last": 0.20300176175509982,
+        "order": 0.02817755055306767
+      },
+      "old_interface_velocity_RMS_m_s": {
+        "previous": 0.0019756418297596076,
+        "last": 0.0028254958743111737,
+        "order": -0.5161826626523013
+      },
+      "new_interface_velocity_RMS_m_s": {
+        "previous": 0.0001233307212910306,
+        "last": 1.717183178376923e-05,
+        "order": 2.8444163649021736
+      }
+    }
+  },
+  "comparisons": {},
+  "checks": [
+    {
+      "degree": 4,
+      "seconds": 47.719815784999994,
+      "setup_seconds": 10.287614091999998,
+      "basis_seconds": 13.95518449,
+      "factor_seconds": 21.245733230000003,
+      "orthogonality": 1.5543122344752192e-15,
+      "linear_residual": 1.0944109060412841e-16,
+      "stiffness_skew": 2.190223650415028e-16,
+      "coordinates": "endpoint and bubbles",
+      "constant_scalar_gradient_before": 0.03369140625,
+      "constant_scalar_gradient_after": 0.0
+    }
+  ],
+  "paths": [
+    "4"
+  ],
+  "seconds": 47.723616166,
+  "memory_GB": 1.256574976,
+  "original_failure_resolved": false,
+  "full_dynamic_charge_solved": false
+}

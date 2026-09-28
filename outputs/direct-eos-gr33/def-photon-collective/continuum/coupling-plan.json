@@ -1,0 +1,80 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "9b1fce346",
+  "reason": "Discrete velocity atoms cause response aliasing. Fix the representation, not the rejected thresholds. An arctan-to-linear interpolation pilot also failed; log-distance wings fix that separate interpolation defect. Preserve all failures.",
+  "claim": "Resolve the EOS-matched collective correction in the SAME 2.316801 ms matter/absorption/photon/spatial problem with unchanged response and conservation gates.",
+  "reuse": "Native EOS and opacity, photon cells, SDIRK2 solver, prior free-electron 64-step path; no repeated long GR history. Source-cell geometry and atomic opacity remain conditional.",
+  "primary": {
+    "mesh": 128,
+    "q_grid": 129,
+    "angles": 24,
+    "modes": 8,
+    "steps": [
+      16,
+      32,
+      64
+    ]
+  },
+  "comparisons": [
+    {
+      "name": "density-mesh",
+      "mesh": 256,
+      "q_grid": 129,
+      "angles": 24,
+      "modes": 8
+    },
+    {
+      "name": "q-grid",
+      "mesh": 256,
+      "q_grid": 257,
+      "angles": 24,
+      "modes": 8
+    },
+    {
+      "name": "angular",
+      "mesh": 256,
+      "q_grid": 257,
+      "angles": 48,
+      "modes": 12
+    }
+  ],
+  "controls": "Free Gaussian 32-step path only; reuse saved 64-step result. Pair collective-minus-free at 32/64. Preserve previous Gaussian-vs-Sazonov control.",
+  "gates": {
+    "time_order": 1.8,
+    "time_difference_initial": 0.001,
+    "response_comparison_initial": 1e-06,
+    "paired_time_difference_initial": 1e-06,
+    "energy_balance": 1e-09,
+    "energy_residual": 1e-09,
+    "null_modes": 1e-10,
+    "solver_residual": 1e-11,
+    "entropy_growth": 1e-10,
+    "spectral_moments": 0.0002
+  },
+  "measured": "Discrete original: 604.928 s total, 2.279 GB; cached kernel 17.782 s at 48 angles. Continuous ten-x 32/64/128 control took 0.122 s; all-q 64/128 tables completed in the same sub-4-second command including imports. Extra arithmetic in continuous CDF queries is unmeasured at full size.",
+  "forecast_seconds": [
+    400,
+    850
+  ],
+  "hard_seconds": 1200,
+  "memory_cap_GB": 4,
+  "CPU_workers": 1,
+  "GPU": false,
+  "new_native_EOS_calls": 0,
+  "new_opacity_queries": 0,
+  "new_stellar_steps": 0,
+  "automatic_expansion": false,
+  "stop": "Stop at bound or failed positivity/solver/spectral algebra; record response failures without changing gates. Do not expand duration or matrices automatically.",
+  "limitations": "Classical collisionless Maxwell/RPA with specified FDT, pole residue approximation, neutral atomic mass convention and vacuum photon kinematics. Nonideal/quantum/collisional, bound-electron, actual-temperature absorption, atmosphere and GR are not certified.",
+  "bindings": {
+    "verification/def_photon_collective_continuum_validate.py": "2c79de1ecfc69fd3ae7ab1cf80acf76bf8d60c082e86391d4e22039954a5adcc",
+    "verification/def_photon_collective_continuum.py": "998e8ddd1f1f194736518fd1c12b16e69792fa84095991aa18539c4c14dbeb87",
+    "verification/def_photon_collective.py": "212d40aeca126e3b79ecd76d04b4be88dc90a73428953ba68d29a7dcae0359c0",
+    "verification/def_photon_collective_validate.py": "542cf8abfdf8ce728f2ac2afe5c263e2450223364b8dde61db568e6df293e6b8",
+    "outputs/direct-eos-gr33/def-photon-collective/continuum/uniform-log-pilot.json": "8a7b778db3c369a8d54340b5f0e070302907f97e0ed0420c581d6fcfa7ae28b0",
+    "outputs/direct-eos-gr33/def-photon-collective/result.json": "0d595513f8863320e0eae6e4bb1177b4cebdaee0068ea61bcd79c5b70ba0fbc8",
+    "outputs/direct-eos-gr33/def-photon-collective/independent-electron.npz": "ff3111e0c7140cc4a0b0193da63d8dfb1412b06492f26c13e8016a8f0dede06f",
+    "outputs/direct-eos-gr33/def-photon-collective/inventory.npz": "977692961cb6e6e5cc0165db9a88db0323f1d8099040fe4c0b7876a08b848047",
+    "outputs/direct-eos-gr33/def-photon-spatial-coupling/bank.npz": "adb6377b93e4a48a8530e2e1bcccf6f433e700dac69d80cf434ff47dcd25705b"
+  }
+}

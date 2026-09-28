@@ -1,0 +1,7 @@
+{
+  "classification": "Counterexample candidate",
+  "source_sha256": "abb57285b6f1b1dc0fa3dcd9488e441dba381d4ad4282c64e2f7bf57f5355a6b",
+  "issue": "Pre-production inspection found that a restart would evaluate the history-only pressure baseline using the current perturbed density. Both completed two-step pilots began at zero displacement, so their reference was correct.",
+  "correction": "Read the installed immutable f0 pressure baseline when recording histories, including restarts. No RHS, initial state, accepted step or gate changes. Continue the saved pilot prefixes.",
+  "pilot_producer_sha256": "ded83e22881244c82a3e278c6bdfb8794f2236b64082978b676840fb0c5b8c0b"
+}

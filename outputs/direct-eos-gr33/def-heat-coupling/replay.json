@@ -1,0 +1,29 @@
+{
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "entropy": "Sigma=a*W*(rho*s+v*Q/T-sum(beta_j*q_j^2)/2); Sigma_dot=a*sum(beta_j*q_j^2/tau_j)>=0",
+    "rest_matrix_determinant": "-C1*ct - C2*ct + bt1*q1**2 + bt1*q1*q2 + bt2*q1*q2 + bt2*q2**2 + ct*w",
+    "scope": "Homogeneous radial metric deformation, fixed composition, Gibbs relation and full diagonal quadratic entropy closure. A dynamical heat/temperature lift, not a fixed-entropy canonical heat coordinate or a full GR theorem."
+  },
+  "native_initial_lift": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "cells": 5735,
+    "minimum_scaled_rest_determinant": 0.9999999595011664,
+    "maximum_local_linear_residual": 1.045712995362269e-16,
+    "maximum_relative_energy_identity_residual": 1.0829646874326505e-19,
+    "scope": "All saved native initial states, local reversible homogeneous metric deformation only. No spatial evolution, new EOS call or global well-posedness claim."
+  },
+  "saved_paths": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "paths": 5,
+    "maximum_reconstructed_work_defect": 5.6597751565775245e-15,
+    "maximum_entropy_record_difference": 6.004702589869441e-19,
+    "observed_time_order": 2.0105293717889716,
+    "fresh_native_calls": 75,
+    "scope": "Stored binary64 path states reconstructed with fresh native EOS/opacity; energy, entropy records and endpoint refinement checked. Does not independently recompute every nonlinear stage residual."
+  },
+  "source_sha256": "db1775462e9aee51f31739cda918873a604aa465373b4365d24eb969bb00f7cf"
+}

@@ -1,0 +1,72 @@
+{
+  "checked_utc": "2026-09-15T00:41:56.0710573Z",
+  "task_name": "SelfMassGR-Budget24-20260915",
+  "state": "Running",
+  "trigger_count": 0,
+  "execution_time_limit": "PT0S",
+  "launcher": {
+    "ProcessId": 67308,
+    "ParentProcessId": 2644,
+    "Name": "powershell.exe",
+    "CreationDate": "2026-09-15T09:41:00.552604+09:00",
+    "CommandLine": "\"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -NoLogo -NoProfile -NonInteractive -WindowStyle Hidden -ExecutionPolicy Bypass -File \"E:\\lab\\self-mass-unobservability\\verification\\run_gr_budget_recovery.ps1\""
+  },
+  "owner_service": {
+    "Name": "Schedule",
+    "State": "Running",
+    "ProcessId": 2644
+  },
+  "wsl": {
+    "ProcessId": 47724,
+    "ParentProcessId": 67308,
+    "Name": "wsl.exe",
+    "CreationDate": "2026-09-15T09:41:01.016441+09:00",
+    "CommandLine": "\"C:\\WINDOWS\\System32\\wsl.exe\" -d Ubuntu-22.04 --cd /mnt/e/lab/self-mass-unobservability -- /bin/bash -c \"set -C; exec /usr/bin/env OPENBLAS_NUM_THREADS=1 PYTHONPATH=/home/lpaiu/work/nutimo_pilot/request13_deps:verification /usr/bin/taskset -c 0-15 /usr/bin/python3 -u verification/gr_budget_repaired_full_duration.py chain --workers 15 > outputs/direct-eos-gr33/gr-compatible-equilibrium-v2/production-budget-repaired/run.log 2>&1\""
+  },
+  "linux": {
+    "launch": {
+      "pid": 390,
+      "started_utc": "2026-09-15T09:41:04.62102+09:00",
+      "cwd": "/mnt/e/lab/self-mass-unobservability",
+      "command": [
+        "verification/gr_budget_repaired_full_duration.py",
+        "chain",
+        "--workers",
+        "15"
+      ],
+      "boot_id": "2f3bc8e2-f2ed-4b2d-a640-6d9a7285a11e",
+      "start_ticks": "25345",
+      "plan_sha256": "6f9d0fb5db85026cfe481d793bc25aaf789d0f3d828e5868529a0d565e9bc039",
+      "cpu_affinity": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    "identity_verified": true,
+    "frozen_bindings_verified": true,
+    "command": "/usr/bin/python3 -u verification/gr_budget_repaired_full_duration.py chain --workers 15 ",
+    "children": "394 395 396 397 398 399 400 401 402 403 404 405 406 407 408",
+    "accepted_step": 53,
+    "last_log": [
+      "CONSERVATIVE NATIVE STAGE 1 53 10 101.13720153740998",
+      "CONSERVATIVE NATIVE STAGE 1 53 11 0.0031088194360316037",
+      "CONSERVATIVE TWO CARRIER STEP 1 {\"classification\": \"Counterexample candidate\", \"step\": 53, \"time_seconds\": 0.19896637930197744, \"elapsed_seconds\": 25.99666866199999, \"maximum_changes\": [0.0017387094669089904, 0.5069303151172078, 1.8635237435859262e-06, 1.7895604541011243e-10, 1.7895604528626762e-10], \"maximum_local_energy_defect\": 1.708395535259588e-09, \"maximum_local_baryon_defect\": 7.211709882179376e-15, \"maximum_isotope_inventory_defect\": 1.3758387638369532e-21, \"isotope_inventory_defects\": [-1.3326151739998216e-21, -5.996111342227456e-39, -4.436498671615917e-25, 1.3758387638369532e-21, -8.375530114300505e-37, -2.9291865735868807e-31, -4.445272983279726e-37, 2.3112040722852746e-25, 4.102724885301313e-26, -5.786190489469819e-31, 1.578417269778994e-23, 2.788791436109436e-29, -2.760622736048297e-39, -1.3909269858040705e-31, -2.3240000304455638e-23, 5.724236504792626e-25, -5.713890297451628e-28, -1.2255025005869587e-33, -2.794635594300249e-32, -9.670662055375414e-28, -2.7290465448712605e-47, -4.2919542917242994e-42, -4.759174373271785e-25, 1.7789450087820815e-26, -1.7399853755210288e-24, -1.6705580763702734e-26], \"total_energy_defect_over_initial_heat_capacity\": -3.069870108213117e-15, \"relative_total_baryon_defect\": 3.3952353077626115e-23, \"maximum_local_rest_characteristic_speed_over_c\": 0.4650024155850421, \"maximum_characteristic_imaginary_part\": 0.0, \"sampled_cone_inside_light_cone\": true}"
+    ],
+    "failure_files": []
+  },
+  "actual_step54_within_budget_verified": false
+}

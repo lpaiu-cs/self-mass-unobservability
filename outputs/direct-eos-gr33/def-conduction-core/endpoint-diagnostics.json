@@ -1,0 +1,32 @@
+{
+  "classification": "Counterexample candidate",
+  "endpoint_velocity_difference_RMS": 1.4898760958659372e-14,
+  "top_error_native_cells": [
+    4051,
+    4055,
+    4184,
+    4179,
+    4056,
+    4048,
+    4183,
+    4188,
+    4050,
+    4189,
+    4180,
+    4054
+  ],
+  "interface_shell_error_fraction": 0.9997787055781816,
+  "interface_shell_half_width_m": 538217.5389709643,
+  "core_first_face_radius_m": 9274642.573806763,
+  "interface_cell_absolute_energy_fraction": 0.47122263154218863,
+  "maximum_heat_flux_erg_s": 1.6777591575308232e+30,
+  "maximum_redistributed_energy_erg": 3.872351280047155e+29,
+  "microscopic_inertial_susceptibility_range": [
+    1.0575269313947046e-08,
+    1.0782634285734341e-08
+  ],
+  "max_temperature_increment": 3.2027336848566694e-11,
+  "heat_mass_exterior": 0.0,
+  "interpretation": "Spatial attribution of the existing 32/64 endpoint difference only. Does not prove the artificial core cutoff is the sole cause. The susceptibility is sum(K_j*lambda_j)*T/(w*c^2), not a certified nonlinear feedback error.",
+  "full_dynamic_charge_solved": false
+}

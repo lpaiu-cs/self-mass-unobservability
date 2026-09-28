@@ -1,0 +1,7 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": false,
+  "failure": "SuperLU reported not enough memory under unchanged5GB address-space cap before completing the first pilot stage.",
+  "evolution_completed": false,
+  "action": "Use SuperLU COLAMD for the coupled block. Keep the separate GR solve unchanged. The cache-only repair still failed during the first LU factorization at5GB; measured post-assembly VmRSS was0.452GB and VmSize0.699GB. This targets LU fill, not physical memory-budget expansion. All equation residual checks remain."
+}

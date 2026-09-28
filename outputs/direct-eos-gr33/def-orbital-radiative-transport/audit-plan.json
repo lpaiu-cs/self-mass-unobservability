@@ -1,0 +1,22 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Project the already solved grey radiative addition into the same declared derivative comparator, and compare its outer Rosseland conductivity with the zero-frequency first angular moment of the saved actual spectral collision operator.",
+  "decision": "If microscopic and native grey conductivities differ, retain their difference as a model discrepancy; do not renormalize or extend one outer state throughout the star. Neither a small grey charge nor a local conductivity match certifies the missing atmosphere or stationary background.",
+  "formula": "K_spectral=c^2/3 * sqrt(C_gamma)^T C_l1^{-1} sqrt(C_gamma). Retain full absorption and finite frequency redistribution in the l=1 collision operator. No Rosseland-to-Planck substitution.",
+  "budget": {
+    "hard_seconds": 90,
+    "CPU_threads": 1,
+    "memory_GB": 4,
+    "new_EOS_calls": 0,
+    "new_frequency_cells": 0
+  },
+  "gates": {
+    "spectral_solve_residual": 1e-10,
+    "positive_conductivity": true
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_radiative_transport_audit.py": "6ee807d91a3f7e4801a5e6777b136340533c78645a36d21bde28fc2ac640ad94",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-orbital-radiative-transport/result.json": "ebc6b074528239c93820d6ad055a2321ba77e0ed7667b63fff0bc7bccbf17830",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-orbital-radiative-transport/plan.json": "37d276a803a077505d2f87eca33c3fed80db55b5f926c7580dea391177e5ecb1"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "classification": "Counterexample candidate",
+  "domain": "Original 896 zones with abs(eps_nuc)>1 erg/g/s and stable added-intermediate block.",
+  "initialization": "Solve four intermediate source equations with their added baryon mass removed from He4. This is a declared changed-composition state; no GR rematching is asserted.",
+  "temperature_drive": "External delta ln T at fixed baryon density and held bulk abundances. Intermediate changes exchange mass with the He4 reservoir. Heat is the output.",
+  "periods_days": [
+    1.6294,
+    327.26
+  ],
+  "derivative_steps": [
+    0.0001,
+    5e-05
+  ],
+  "derivative_tolerance": 1e-05,
+  "steady_relative_tolerance": 1e-06,
+  "limits": "A conditional nuclear heat-transfer pole does not establish a scalar charge, a free-fall force, or SEP violation. At the GR zero-scalar branch linear thermal-to-scalar coupling remains zero."
+}

@@ -1,0 +1,17 @@
+{
+  "classification": "Counterexample candidate",
+  "repair": "Native Ions constructed Fan twice, which loads a complete unused stellar envelope and opacity model. Read only the exact saved rho,T,X,cx actually consumed by Native.state. Restore the Fan class immediately after construction. Keep the actual native library and all constraint/optical equations.",
+  "validation": "Require bitwise equality at the three saved native corners; remeasure their state cost and keep the2x maximum forecast plus40s output/margin within the same remaining bank allocation.",
+  "hard_seconds": 143.79774375099987,
+  "bank_total_seconds": 260,
+  "already_spent_seconds": 116.20225624900013,
+  "GR_seconds": 10,
+  "native_call_cap": 1981,
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/native_tail_supported_temperature.py": "56a6e1ed2467ef842d73153f4e710f2699d01c1920738a23b7c7bd7826267d54",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/executed-reallocation.py": "b230407985e9d00ed6f8c19158a44db68605b33078db681fcd16b889114ea749",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/cached-bank-pilot.json": "bd1e53bf4e44877be8dd3729603919ae4b6069146834bfb0f899d2c7f03f0837",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/reallocated-bank-dispatch.json": "b0fa194818d4a07595fc6394927405fd63d7d2e7c9d5cd6ae8b95b9b6535050d",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/warm-probe.npz": "92bd747761b01a25ce0e42f6a0445b2c2128ec5cd4c5fa65f558041e6186aa45"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "f470378f3",
+  "claim": "Actually solve a conservative two-volume spectral photon/material patch and unreduced radial GR together, including photon pressure, stored ion energy, heat momentum and GR compression/velocity feedback.",
+  "scope": "A local P1 finite-volume candidate inside the actual outer native cell. All24134 photon frequencies and18 retained ionization edges are retained. Two reservoirs exchange through one physical interior face; omitted surrounding photon channels are not certified zero. Frozen transport geometry and coefficients; no whole-atmosphere or full nonlinear claim.",
+  "thermodynamics": "Use the Phase70 MHD chemical Hessian and radiation-free material heat capacity. Radiation energy/pressure are counted once. The small local MHD/background value mismatch is recorded: local free-energy constants anchor static pressure/energy to the saved background, while the new native tangent and its difference from the reference GR tangent enter the actual source ports. This is an explicit local matched-tangent candidate, not a new global native-EOS background.",
+  "domain": "Patch half-width0.001 of the measured proper temperature scale;64 fixed mechanical subintervals; coordinate duration0.008*H/c, eight local half-width light crossings. The local frozen AN factor is retained in collision rates. Native outer-cell coordinates and no new EOS states.",
+  "method": "Full GR5-port Schur coupling at every SDIRK2 stage. P1 source currents and spectral collisions share the same energy ledger. Compare32/64/128 time steps, then fixed p2 spatial and one-way controls at128 only if time passes. The one-way counterfactual prescribes thermal energy/pressure/current without GR compression, velocity or reference-adiabat subtraction; it is a code control, not another conservative physical star.",
+  "gates": {
+    "time_relative": 0.02,
+    "time_order": 1.5,
+    "spatial_relative": 0.02,
+    "linear_residual": 1e-09,
+    "energy_balance": 1e-08,
+    "photon_residual": 1e-09
+  },
+  "budget": {
+    "pilot_seconds": 120,
+    "production_seconds": 600,
+    "total_seconds": 900,
+    "CPU_threads": 1,
+    "memory_GB": 6,
+    "new_EOS_calls": 0,
+    "automatic_expansion": false
+  },
+  "references": [
+    "https://academic.oup.com/mnras/article/367/4/1739/1747567",
+    "verification/def_photon_matter_split.py"
+  ],
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_photon_radial_gr.py": "548a39a697b29ebe73b993680844d8b82b68207fe00b29a77fcf2722d31198b2",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_photon_population_coupled.py": "27903d949b0405c72d11ebc55e498dc3cf03f29c358257498a2566bfb6a341fb",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_interface_patch.py": "880442c647572d55272819dcde5ae735337ddbb62fc3d3e600ca1ea680faf888",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_full_weeks.py": "c0be4c1870a4aa5416892ae7f50523a8df515fcbf1455fa067fee7486489bc36",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-population-coupled/thermo.npz": "d35a68993740d3675399b8db966ab7ec1bc9180747eb33e2c6af0aa6e6b4ccab",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-population-coupled/moments.npz": "50d313b16537965c43db287a16c6543e95f9422a7aac7067c245ff377776ba98",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-hhe-coupled/bank.npz": "46d8a089a6776ff19f23a3aa8e6223c1f243643e1963acdf70734d77e0ee7d61",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-interface-patch/result.json": "d8f16158ddc560f2da863808cecfb1143f65cd796f07722163f5fdf05247f6ed"
+  }
+}

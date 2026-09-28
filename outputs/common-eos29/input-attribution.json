@@ -1,0 +1,24 @@
+{
+  "classification": "Counterexample candidate",
+  "h": 5e-05,
+  "rows": [
+    {
+      "output": "dxdt",
+      "frozen_vs_reported": 0.10701428527862997,
+      "Ye_chain_term": 1.1750251597153856e-05,
+      "eta_chain_term": 0.0,
+      "additive_reconstruction_error": 1.7720029484322692e-09,
+      "corrected_vs_total": 0.10701428527862997
+    },
+    {
+      "output": "heat",
+      "frozen_vs_reported": 0.00627192472488698,
+      "Ye_chain_term": 0.00012115771770041927,
+      "eta_chain_term": 9.128791183204534e-05,
+      "additive_reconstruction_error": 6.970445070988298e-10,
+      "corrected_vs_total": 0.006271924728870394
+    }
+  ],
+  "analytic_derivative_certified": false,
+  "scope": "Separate native fixed-auxiliary temperature derivative and Ye/eta chain directions at every initial cell. Finite directional attribution only; no composition Jacobian or continuous error certificate."
+}

@@ -1,0 +1,8 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "free": "f_q=sum log(2*sinh(C_i(R)*theta/2)/(C_i(R)*theta)); R proportional n^(-1/3), theta proportional n^(1/2)/T at fixed species.",
+  "derivatives": "D_i=d ln C_i/d ln R; a_i=1/2-D_i/3; u_i=y_i*f_i_prime, cv_i=u_i-y_i*u_i_prime; p_i=a_i*u_i; PDT_i=a_i*cv_i; PDR_i=(a_i+a_i^2+D_i_prime/9)*u_i-a_i^2*cv_i, D_i_prime=dD_i/dlnR.",
+  "printed_equation39": "The derivative of eq34/36 differs term by term from printed eq39 by D_i*(2D_i-3)*(u_i-cv_i)/18 even if the exact D_i_prime is used. This need not sum to zero. The distributed source also substitutes -R/(90+R)*D_i for every D_i_prime, which is not the exact D_3_prime.",
+  "scope": "Conditional algebra for the declared BC2022 free-energy fit. No new many-body calculation or physical uncertainty bound."
+}

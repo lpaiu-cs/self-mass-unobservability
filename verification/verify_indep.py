@@ -7,7 +7,8 @@ whether they agree.
 Two things here:
   (A) The A5 non-analytic activation counterexample: e^{-1/Y^2} is C-infinity
       but non-analytic at 0, so its Taylor jet at 0 is trivial while the
-      function is not. This is what "breaks the finite Taylor-jet collapse".
+      function is not. Exact analytic-germ reconstruction fails, while every
+      finite-order asymptotic jet remains valid.
   (B) Method validation for the invariant counter: functionally-independent
       SO(3) scalar invariants of building-block tensors, counted by the
       generic rank of the Jacobian d(invariants)/d(components). For a single
@@ -46,9 +47,9 @@ def check_nonanalytic():
     f_at_1 = float(sp.exp(-sp.Integer(1)))
     print(f"  Taylor jet at 0 is identically 0, yet f(1) = e^-1 = {f_at_1:.6f} != 0")
     print(f"  => all derivatives vanish at 0 : {all_zero}")
-    print(f"  => finite Taylor-jet reconstruction FAILS (function != its jet): "
+    print(f"  => exact analytic-germ reconstruction FAILS (function != its series): "
           f"{all_zero and f_at_1 != 0}")
-    print("  VERDICT: A5 counterexample is genuine (C-inf, flat jet, nonzero fn).")
+    print("  VERDICT: Exact-germ counterexample verified; every finite asymptotic jet survives.")
     return all_zero and f_at_1 != 0
 
 
@@ -142,6 +143,6 @@ if __name__ == "__main__":
     b = check_single_E_rotinvariance()
     print()
     print("=" * 70)
-    print(f"A5 counterexample genuine   : {a}")
+    print(f"A5 exact-germ failure       : {a}")
     print(f"invariant-counter validated : {b}")
     print("=" * 70)

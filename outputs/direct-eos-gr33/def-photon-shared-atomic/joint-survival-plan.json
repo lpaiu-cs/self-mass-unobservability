@@ -1,0 +1,17 @@
+{
+  "classification": "Conjectural",
+  "decision": "Implement bounded reciprocal conditional optical factors for non-monotone occupations without changing the EOS or fitting strengths.",
+  "observation": "Four doubly ionized stages have w_upper/w_lower > 1; the largest is 1.00000410107. Upward-only interpretation as a probability fails there.",
+  "joint_model": "p_ij=min(w_i,w_j), common U in [0,1] and level i survives iff U<w_i. Up=p_ij/w_i, down=p_ij/w_j.",
+  "gates": {
+    "conditional_probabilities_le_one": true,
+    "positive_absorption": true,
+    "kirchhoff_relative": 1e-10
+  },
+  "budget": {
+    "new_EOS_calls": 0,
+    "new_stellar_steps": 0,
+    "seconds": 10
+  },
+  "metadata_repair": "Catalog parent_weight now records the candidate N III ground weight; old values retained as original_parent_weight. The native library already used the candidate value. No numeric EOS input changed."
+}

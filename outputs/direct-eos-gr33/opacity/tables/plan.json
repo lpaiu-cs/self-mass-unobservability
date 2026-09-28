@@ -1,0 +1,20 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "2438b36",
+  "inputs_sha256": {
+    "outputs/direct-eos-gr33/opacity/baseline-type1-captured.npz": "c61392f904c083f1424c53b26cf7235c49cc72ae4ed0ccdf362521fad72d21cf",
+    "verification/native_opacity.py": "1022d950fb9f6a1f811816833576a1e11c75866030761835eb96eeb29f3a9f35",
+    "verification/opacity_tables.py": "4e1c5e6b10fd58fd645e4e7994bf187399c238cf9fad111245c6c56f9dce1475"
+  },
+  "method": "Read the loaded native radiative spline coefficients and conduction coefficients from a disposable child, with unchanged stellar outputs. Retain the saved binary32 data exactly; evaluate the nominal bicubic polynomials in binary64, differentiate the selected X cubic, retain linear Z interpolation and the harmonic radiative/conductive combination.",
+  "boundary": "Restricted to the actually loaded Type1 high-temperature tables below Compton blending, logR>-19.5 and logT>3.5. Reject missing tables. Differentiate coordinate clipping explicitly; do not claim differentiability on a clipping or limiter boundary.",
+  "value_relative_tolerance": 0.0001,
+  "finite_log_steps": [
+    5e-05,
+    2.5e-05
+  ],
+  "finite_derivative_relative_tolerance": 0.001,
+  "model_change": "Remove intermediate binary32 rounding and the artificial 1e-7 upper-bound snap; use nominal exact 1/6 and 1/36 spline coefficients. Preserve all original failed derivative verdicts.",
+  "physical_opacity_certified": false,
+  "continuous_full_derivatives_certified": false
+}

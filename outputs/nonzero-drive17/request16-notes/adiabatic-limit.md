@@ -1,0 +1,53 @@
+# Adiabatic limit and exact collapse
+
+Status: Proven. There are two separate reductions. The charge oscillator I deltaQddot+Gamma deltaQdot+kappa deltaQ=delta phi approaches a one-pole response only if epsilon_I=I omega^2/|kappa+i Gamma omega| is small; its relative transfer error is bounded by epsilon_I/(1-epsilon_I). The resulting pole approaches a static derivative expansion under the different condition |omega Gamma/kappa|<<1. Neither reduction follows just from the presence of dissipation. See [Request 11.3](../notes/REQUEST11_3_MATCHING_RESULT.md).
+
+Status: Proven. For the settled response `G(z)=c_Y+beta/(1+tau_chi z)`, the degree-N Taylor derivative comparator has exact residual
+
+```math
+G(z)-\left[c_Y+\beta\sum_{n=0}^{N}(-\tau_\chi z)^n\right]
+=\frac{\beta(-\tau_\chi z)^{N+1}}{1+\tau_\chi z}.
+```
+
+Status: Proven. On `z=i omega` and `|omega tau_chi|<=rho<1`, its modulus is at most `|beta| rho^(N+1)`. A convergent infinite geometric expansion requires this frequency restriction; a formal inverse operator is not convergence for arbitrary forcing.
+
+Status: Proven. At zero lag the readout is `(c_Y+beta)F`. At zero frequency only the settled solution becomes constant; an initial transient may still evolve. Zero beta removes the driven-state contribution but does not remove an independently initialized transient when c_chi is nonzero.
+
+Status: Proven. At a single known frequency, `a0 F+a1 dot F` exactly matches the pole with `a0=c_Y+beta/(1+omega^2 tau_chi^2)` and `a1=-beta tau_chi/(1+omega^2 tau_chi^2)`. This is exact finite-sample collapse even away from small lag.
+
+Status: Proven. With K distinct positive carriers and freely shared real coefficients, degree `N>=2K-1` interpolates the pole exactly. Thus low-frequency truncation is one collapse mechanism, not a necessary condition for all finite local-comparator collapse. See [the exact sampling proof](../paper/manuscript.md).
+
+Status: Proven. Nuisance absorption and finite precision give additional boundaries independent of adiabaticity. A projected signal must survive the specified covariance-weighted nuisance span before any response distinction becomes measurable.
+
+Status: Proven. A reciprocal positive relaxation spectrum with all rates >=Lambda supplies a physically specified fast comparator without selecting a Taylor order. Its two-frequency quadrature-ratio inequality is violated by a positive pole with tau_chi>1/Lambda. The gap is a separate premise; it is not inferred from an observed lag or introduced as a favorable prior.
+
+Status: Proven. Settling to a fraction epsilon of an independent homogeneous amplitude takes tau_chi*log(1/epsilon). For tau_chi=500 days, one-per-mille settling takes 3453.88 days. Without an initial-amplitude bound, this relative decay supplies no uniform absolute signal bound.
+
+
+## Request 12 follow-through
+
+Status: Proven. Equilibrium susceptibility alone does not fix damping or inertia; Gamma=kappa*tau permits arbitrary relaxation at fixed equilibrium in the admitted EFT class. A specific microscopic theory can relate these coefficients and must be matched separately.
+
+Details: [remaining-lever report](remaining-levers-2026-09-09.md).
+
+## Request 13 remediation
+
+Status: Imported from prior work. For the specified SLy/DEF candidate, static susceptibility/c is about 0.1387 ms and the computed scalar-pole decay time is about 0.1995 ms. This supplies a numerical fast-response example. It does not establish a uniform fast-rate gap over EOS, gravity coupling or stellar branches. See [matching equations and numerical checks](../notes/REQUEST13_STELLAR_DERIVATION.md).
+
+## Request 14 validated flow
+
+Status: Proven. The validated GR IVP has no dynamic-chi coupling. Its numerical error enclosures therefore neither constrain tau_chi nor change the analytic adiabatic-collapse boundary. A certificate for a nonzero chi signal must also enclose the matched force and readout. See [scope and missing links](../notes/REQUEST14_VALIDATED_VARIATIONAL.md).
+
+
+## Request 15 후속 검증
+
+분류: Proven. 초기화 규약의 수정과 매개변수 재매핑은 새 완화 pole을 만들지 않는다. 이번 질량·Kepler·대수 관측식의 부분 인증은 기존 단일 pole의 단열 붕괴 조건을 변경하지 않는다. 분류: Conjectural. EOS 응답의 전체 이체 구동·힘·관측량 연결은 여전히 별도의 물리 조건이다.
+
+세부 근거: [한글 실행·검증 보고서](../notes/REQUEST15_REMAINING_LEVERS_KO.md).
+
+
+## Request 16 다체 관측식과 영 구동 경계
+
+분류: Proven. 비균일 셀에서 끝점 오차 eps, 곡률 잔차 rho, 셀 폭 h를 알면 정확한 cubic에 대한 값·시간 미분·셀 적분 오차는 각각 eps+rho*h²/8, 2eps/h+rho*h/2, eps*h+rho*h³/12 이하이다. 자연 경계조건에 C4 전역 오차 공식을 강제로 적용하지 않는다. native 산술 반올림과 이동 격자 매개변수 미분은 별도 항이다. 영 구동 가지의 정확한 영 응답은 단열 근사를 요구하지 않는다.
+
+세부 근거: [한글 실행·검증 보고서](../notes/REQUEST16_NBODY_READOUT_KO.md).

@@ -1,0 +1,81 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "3d70a3b",
+  "source": {
+    "classification": "Imported from prior work",
+    "version": "7.4, upstream date 12.10.2022",
+    "archive": "https://www.fuw.edu.pl/~krp/h2spectre_7.4.tar.gz",
+    "author_index": "https://www.fuw.edu.pl/~krp/codes.html",
+    "methods": "Komasa et al. 2019, Phys. Rev. A 100,032519, DOI 10.1103/PhysRevA.100.032519",
+    "methods_pdf": "https://www.fuw.edu.pl/~krp/papers/H2spectr19.pdf",
+    "additional_references": [
+      "10.1021/ct200438t",
+      "10.1021/acs.jpca.1c06468"
+    ],
+    "support": "The upstream check_vJ table specifies 302 H2 X-state bound keys, including the explicitly warned weak (14,4) state. This support is imported, not a proof of completeness or bound-state existence.",
+    "physical_uncertainty": "Upstream componentwise truncation/potential error estimates are not rigorous bounds; README explicitly warns about high/weak states. CODATA versions in four-body inputs and current potentials differ as documented upstream."
+  },
+  "baseline_grids": [
+    [
+      200,
+      10
+    ],
+    [
+      400,
+      10
+    ],
+    [
+      400,
+      20
+    ]
+  ],
+  "Nmax_by_v": [
+    31,
+    30,
+    28,
+    27,
+    25,
+    23,
+    22,
+    20,
+    18,
+    16,
+    14,
+    12,
+    10,
+    7,
+    4
+  ],
+  "finite_energy_difference_gate_cm_inverse": 0.0001,
+  "baseline_interpretation": "Compare 200/10 versus 400/10 for spacing, and 400/10 versus 400/20 for range, separately. Retain nonpositive energies and all failures. No failed baseline level is silently dropped from support.",
+  "weak_state_grids": [
+    [
+      800,
+      40
+    ],
+    [
+      1000,
+      50
+    ],
+    [
+      1200,
+      60
+    ]
+  ],
+  "execution": "Unmodified upstream Makefile and Fortran/data; skip all upstream prebuilt objects. Run native Levels mode, default mixed FULL/NAPT policy, -V 1 -P 12. Each output binds exact stdin, command, elapsed time and return code. Four workers on spare CPUs 12-15. No forced -Dv validity override.",
+  "scope": "Finite numerical spectral calculation. No interval eigensolver, physical EOS, continuous derivative, plasma occupation, continuum or excited-electronic completeness certificate.",
+  "bindings": {
+    "verification/h2_spectre_data.py": "cde3034e6604e4e6eaa80acaa9c08d7ad41c2546bf017be0714e98ba9e65c7f8",
+    "outputs/direct-eos-gr33/gr-h2-spectre-audit/archive-members.json": "1dfa559b62701b2564d5503b4439ac5a6fae2024141884a6f5cf01d1959d98aa",
+    "outputs/direct-eos-gr33/gr-h2-spectre-audit/source-tree.json": "66a6a5e3f3b6294f508f474b3051f5954f4d0e3698092ee37f7389a36143116b",
+    "outputs/direct-eos-gr33/gr-h2-spectre-source/h2spectre_7.4.tar.gz": "16ce0f84bc5d57480f2153f6ef28a6f6a531dc56d3ebb932db82c72b21b90c51",
+    "outputs/direct-eos-gr33/gr-h2-spectre-source/h2-pachucki-codes.html": "9b0297b81a333833502d51260b271716ee945ba0df404054bd2d1123993ee617",
+    "outputs/direct-eos-gr33/gr-h2-spectre-source/h2-napt2019.pdf": "e3a9022606eb58300bfa5211fa63422c9eaaeddcf38183d25bd97649031d5dad",
+    "outputs/direct-eos-gr33/gr-h2-spectre-source/h2-qed2011-metadata.json": "0fb5b5a8610bf919a9b97e8e56c9699bcf6d038357564e5523369764cf6ecfd2",
+    "outputs/direct-eos-gr33/gr-h2-spectre-source/h2-qed2011-supplement.pdf": "e6addfae6a9db41a1413d31982d92ffaf1239de120af848f41888386b79a874c",
+    "outputs/direct-eos-gr33/gr-h2-spectre-source/h2-partition2021-data-metadata.json": "a20051fea2f7305e04b9340cbb565770b0b8326b40717483796b52a966eb3a56",
+    "outputs/direct-eos-gr33/gr-h2-spectre-source/h2-partition2021-data.zip": "567c054058f789ad039c6d5b15d793ead421f85b8e31a06457cd2a1c108f75c1",
+    "outputs/direct-eos-gr33/gr-h2-spectre-source/h2-partition2021-supplement-metadata.json": "8ec60a4bc627343048d82327d7da4704082f43a29750a296a5a8b390b4666cfe",
+    "outputs/direct-eos-gr33/gr-h2-spectre-source/h2-partition2021-supplement.pdf": "f23ba79f5828735b785e35f9709c3bd6a76c8e540c4de6b8f45be66a9af5752e"
+  }
+}

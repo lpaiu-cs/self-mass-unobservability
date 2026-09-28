@@ -1,0 +1,95 @@
+{
+ "classification": "Imported from prior work",
+ "passed": true,
+ "verdict": "CONFIRMATION_REVIEW_PASSED__REVISION_6_INTEGRATED_AS_SECTION_4_6",
+ "confirmation_review_of_revision_5": {
+  "fable5.1 (subagent)": "accept",
+  "gpt-6-astra (Codex CLI, read-only)": "accept after minor revision",
+  "opus5.5 (subagent)": "accept after minor revision"
+ },
+ "revision_6": [
+  "instantaneous response: full bound 1.24e-9 a_p^2 + 8.2e-10 |a_p a_o|; reaches only the smallest stored scales for |a_p| >~ 0.5; static SEP limits (<= 2.6e-6) give |a_p| <~ 4e-3 for Cassini-scale a_o, or need |a_o| <~ 5e-6",
+  "outer white dwarf has the analogous zero-lag response (leading-order estimate 1.86e-9 a_p^2)",
+  "structural parts each <= 2.13e-18 (4.3e-18 together); about eight orders",
+  "summary: deeper layers with orbital-scale local thermal times expected; pole structure and coupling not computed",
+  "abstract: permanent charge zero only as t -> infinity with slow thermal modes damped",
+  "data availability: verdict, classification and derived-bound fields superseded; rerun limit narrowed; Born source"
+ ],
+ "integration": {
+  "manuscript_lines": [
+   697,
+   850
+  ],
+  "pandoc": "3.11",
+  "main_tex_reproduced_before_edit_sha256": "29bb4eaf94c500132a6a178b576866fa79c34871b5b3726bd9b9b2022c100d95",
+  "edits": [
+   "date 28 September 2026",
+   "abstract: two Conjectural sentences",
+   "Section 4.6 after Section 4.5",
+   "Section 6: one paragraph after the physical-target paragraph",
+   "data availability: paragraph, list, paragraph",
+   "references: three entries restored from a322c6462",
+   "README: PDF and submission archive predate Section 4.6"
+  ],
+  "pdf_and_submission_archive": "predate Section 4.6 (no TeX on this host)"
+ },
+ "errata": [
+  "16 manifest numeric and classification fields",
+  "17 REQUEST276 line 47 last sentence",
+  "18 failure ledger lines 2578 and 2588",
+  "19 REQUEST285 details (tracked arrays, run commands, 1.8 ms, line numbers)"
+ ],
+ "repository_classification": "conditional theorem progress on the lag amplitude within the chosen response family; no observational exclusion; A4 not established",
+ "full_goal_complete": false,
+ "snapshot_KST": "2026-09-28T00:11:42.227015+09:00",
+ "document_prefixes": {
+  "docs/model-definition.md": {
+   "bytes": 302007,
+   "sha256": "d64f3bf9d0cf8e1a967c4d32f8badd4f348e4255f16b4e69a5d7565192ad352a"
+  },
+  "docs/observable-targets.md": {
+   "bytes": 292826,
+   "sha256": "8aa0e0fd71182ed6c838643e0eab08db44e48273722e659985bab7b263f0309b"
+  },
+  "docs/adiabatic-limit.md": {
+   "bytes": 287165,
+   "sha256": "4cb17ca7380570ea43cd4fe4fd7fd4b7a556e37bed6332cab184e1b98fa2428c"
+  },
+  "docs/nonadiabatic-regime.md": {
+   "bytes": 295657,
+   "sha256": "fa8f33a98f2b463888f5be374cfd8967985d063884364dbedf46564bf08b4257"
+  },
+  "docs/failure-ledger-dynamic-chi.md": {
+   "bytes": 333261,
+   "sha256": "9eb70abaeca1740019c1f075b7acc63de4f6af533da49b03cbded4840ad6474b"
+  },
+  "docs/dynamic-charge-completion.md": {
+   "bytes": 161425,
+   "sha256": "55a241bcfcb22ad8f1d1a5e8bb0629fdd133e888170dd63308bf1241c7c17c4c"
+  }
+ },
+ "sha256": {
+  "notes/REQUEST286_MANUSCRIPT_REINTEGRATION_KO.md": "47a9aceecb1074088d558aa7eef8ee0d35e1aac2603da0acc21bf61563944e68",
+  "paper/manuscript.md": "5096f7dcaccf7b930c6dbafe03c876dd2239834f9b214c92f2ff7824ee473197",
+  "paper/main.tex": "e3a7b399bd40a14342ba61ae56e17628a0100d936b52cdba500cf17cb69dd96c",
+  "paper/references.bib": "c82f30221a7e7214cf9e06c673b6a1bbc10c60f4b18aa79d5413270e89618618",
+  "paper/README.md": "cd7461d6e143bd502e2113bd90707662c2b4deb8af180a54f2e2b5db235c174d",
+  "docs/white-dwarf-free-fall-charge-section.md": "4271b60ce6696bce62418d5b5f81222296987ce2f51b77ae39be46418c946b42",
+  "docs/model-definition.md": "89b3f5686825c194492bf8fdbf08623025e6c2a877c705f79d7493ac5a476866",
+  "docs/observable-targets.md": "7094140ceb3a4c016532d92c90662aeb03df88a2285431bc0b1e37d0ceb5fa3b",
+  "docs/adiabatic-limit.md": "9d4a02e64dfbe58584d5e5d358e506a61b0966ecbcb3f38b053baeafade4accd",
+  "docs/nonadiabatic-regime.md": "af2a3b15c6cd837a18dc6f02fa77620914daaa03c0c1c5fab9743fcf35e37915",
+  "docs/failure-ledger-dynamic-chi.md": "5dbf1130ecd9ac38b37c8e9fa4cea8a8e40149bdb055ece93057ad5db8732366",
+  "docs/dynamic-charge-completion.md": "adb9cd35369f72df7fe00064202202f57f3c725461ed2687c69989dbc7a7ea57",
+  "outputs/direct-eos-gr33/native-manuscript-reintegration/confirm-fable-5.1.md": "ab4ae5e764cc8ba523c5a3fbccda3b6f2a7a1af35a3c1a3ece9608c7cea3540c",
+  "outputs/direct-eos-gr33/native-manuscript-reintegration/confirm-gpt-6-astra-cli.log": "0ee73a80b20c3038739836969af8e4867ec40af908b67765b0b4680d1315eeaf",
+  "outputs/direct-eos-gr33/native-manuscript-reintegration/confirm-gpt-6-astra-prompt.md": "f0c30eb52cbf2a401edeff41396e24d1bc7bde21d8d6794c91d5f4d212ac4efd",
+  "outputs/direct-eos-gr33/native-manuscript-reintegration/confirm-gpt-6-astra.md": "8fbbb43df2b4017b91a6a7037e9cc4addc6532000dba22c2e4cc6c9b5a0437ff",
+  "outputs/direct-eos-gr33/native-manuscript-reintegration/confirm-opus-5.5.md": "e27191ab0eae99f63656d0bed97ea0fc3b53bba675ab24a34d1dcdd081db5470",
+  "outputs/direct-eos-gr33/native-manuscript-reintegration/confirm-prompt.md": "5f229a76185d788be63b64ab3edc5bd9e4f8d613758c7b46cb8572a613433bb7",
+  "outputs/direct-eos-gr33/native-manuscript-reintegration/publication.json": "c64171584b51404c4dc05f3b4f9bfc13006de6d9c700da1c012329533ea28c19",
+  "outputs/direct-eos-gr33/native-manuscript-reintegration/result.json": "32ba354e380ccc88550c000947fb51c5bc3bf104890c651fd4ae31c9d96a6b07",
+  "outputs/direct-eos-gr33/native-manuscript-reintegration/scripts/phase286-integrate.py": "999a847160ebf19769d07d135d29ff1850bccc3bc31367d616957820e38da7f1",
+  "outputs/direct-eos-gr33/native-manuscript-reintegration/scripts/phase286-publish.py": "d008db830ceec1c3e6bdf82248d9d38637ee67b291d6ef6c47f4b49ebb273a12"
+ }
+}

@@ -1,0 +1,18 @@
+{
+  "classification": "Counterexample candidate",
+  "command": [
+    "gfortran",
+    "-O2",
+    "-fPIC",
+    "-shared",
+    "-I/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/coulomb-curvature/coulomb_bridge.f90",
+    "-L/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src",
+    "-Wl,-rpath,/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src",
+    "-lfree_eos_direct24_molecular_spectral",
+    "-o",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/excitation.so"
+  ],
+  "bridge_sha256": "061c66f09a6468735ce46bde98297ed5fae4409bc4503e58cc9fa5391a82da49",
+  "library_sha256": "195f3658eb0cc8fe3447c6b690f246b5a4fb770bd8ffa764d19248fec857ec50"
+}

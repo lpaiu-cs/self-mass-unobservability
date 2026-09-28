@@ -1,0 +1,46 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "1a36074b8",
+  "claim": "Solve a whole fixed-inventory mechanical background with an actual native radiative envelope and regular scalar centre/asymptotic field. Eliminate artificial envelope addition or scaling of all original baryons.",
+  "material": "Retain native cell132 inner half plus cells133..5734, their isotope fractions and entropy. Replace the remaining native cells and the previously integrated native atmosphere by a grey envelope containing exactly the same total baryons and uniform outer composition. The older unresolved cold tail remains separately bounded.",
+  "unknowns": "central logP, surface logR/logM, central scaled scalar, surface scalar flux, logL; five mechanical junction conditions plus native entropy/temperature continuity at the fixed material junction.",
+  "thermal": "Solve Eddington radiation transport in the envelope. Core entropy remains its initial profile, so the core need not be in thermal equilibrium. Determine a single common base face flux and explicitly compute residual core heating rather than deleting a flux mismatch.",
+  "gates": {
+    "junction_maximum": 1e-08,
+    "base_logT": 1e-07,
+    "inventory_relative_to_envelope": 1e-08,
+    "refinement_logL": 0.0001,
+    "refinement_logR": 1e-06,
+    "refinement_alpha_relative": 1e-07,
+    "native_core_logrho": 1e-07,
+    "native_core_entropy_over_cv": 1e-07
+  },
+  "budget": {
+    "total_seconds": 600,
+    "pilot_seconds": 60,
+    "maximum_objective_calls": 45,
+    "native_calls": 60000,
+    "BLAS_threads": 1,
+    "automatic_expansion": false,
+    "old_long_evolutions": 0
+  },
+  "production": "One six-variable root using existing core RK4/sub4 and native envelope tolerance2e-6; one fixed-parameter core sub8/envelope2e-7 refinement, no automatic new fit.",
+  "decision": "If material and thermal junctions pass, use the saved whole-star background for revised coupled response; do not count a finite-pressure grey surface as a complete physical atmosphere.",
+  "bindings": {
+    "verification/def_native_whole_star_match.py": "ad91b95ad3bb0f0fd7629e9d23677375b806ba2bf373fc6765c5627d132634c8",
+    "verification/def_native_radiative_envelope.py": "143b0a62d0b52abb29ad35f71c4270b921dd1ae1a8e72af9625e446f873b3105",
+    "verification/def_hydrostatic_background.py": "d89d4714153409fbe2edadc4918dd269c27183db342b6643ecf7eb0806d06346",
+    "outputs/direct-eos-gr33/def-hydrostatic-background/absolute-shoot/background-0.001.npz": "774e2bff821f5863291167f069a8673562bfee8b0ab648468c8dfc5a2a9b04d3",
+    "outputs/direct-eos-gr33/def-hydrostatic-background/extended-table.npz": "12b4877cd975997e24a5afc6b36354afb48290d86fa95fbede468511e391961b",
+    "outputs/direct-eos-gr33/gr-molecular-structure-defined/molecular-state-17-8.npz": "27bc78be6b5f9bb028e0323f0c225eefc5bd89244c9b14b5068fb9c7ba5df885",
+    "outputs/direct-eos-gr33/gr-molecular-structure-defined/molecular-adiabats-17.npz": "b383b972f16f27d52a68ef461fa3f01d10f378e7dff5f20b50bda3a1422d5b7f",
+    "outputs/direct-eos-gr33/def-native-radiative-envelope/fine.npz": "1f551d5a1635ad3af71d7f6ba760d442f2f3e618dba3861ebd215c53cf3e2616",
+    "outputs/direct-eos-gr33/def-native-atmosphere/density-coordinate/result.json": "34c40214c0870899ce84eb1047095dbd06748c6c67b73de82ac5b1cab78f83a6"
+  },
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "identity": "Pgas prime=-(e_gas+Pgas)*g+rho*kappa*A*a*F/c; lnT prime=-g-rho*kappa*A*a*F/(4*Prad*c). Their sum gives Ptotal prime=-(etotal+Ptotal)*g.",
+    "assumptions": "Isotropic E=3Prad=a_rad*T^4, grey flux transport, g=(ln(A*N)) prime; primes use Einstein radius. Hydrostatic/thermal constraints only, not the time-radial Einstein equation."
+  }
+}

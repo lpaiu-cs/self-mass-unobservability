@@ -1,0 +1,70 @@
+{
+  "classification": "Counterexample candidate",
+  "rows": [
+    {
+      "steps": 64,
+      "lagged_B_S_relative": [
+        4.705830944915349,
+        0.24801477799271784
+      ],
+      "lift_reconstruction_relative": 0.0
+    },
+    {
+      "steps": 128,
+      "lagged_B_S_relative": [
+        4.578000768374725,
+        0.24592222209460063
+      ],
+      "lift_reconstruction_relative": 0.0
+    }
+  ],
+  "new_evolution_steps": 0,
+  "original_lagged_input_gate": 0.002,
+  "lagged_B_S_accepted": false,
+  "baryon_time_top8": [
+    {
+      "cell": 147,
+      "absolute_scaled": 5.042826181136659e-07,
+      "fraction": 0.29526815423628994
+    },
+    {
+      "cell": 145,
+      "absolute_scaled": 2.922504782182274e-07,
+      "fraction": 0.17111884522404597
+    },
+    {
+      "cell": 148,
+      "absolute_scaled": 2.531320004312585e-07,
+      "fraction": 0.1482141479019421
+    },
+    {
+      "cell": 144,
+      "absolute_scaled": 2.4903330192957574e-07,
+      "fraction": 0.14581427311369363
+    },
+    {
+      "cell": 146,
+      "absolute_scaled": 1.8297074056450613e-07,
+      "fraction": 0.10713324414753356
+    },
+    {
+      "cell": 143,
+      "absolute_scaled": 7.393989168232402e-08,
+      "fraction": 0.04329337271852991
+    },
+    {
+      "cell": 149,
+      "absolute_scaled": 5.301863139658071e-08,
+      "fraction": 0.031043531683009565
+    },
+    {
+      "cell": 21,
+      "absolute_scaled": 1.9162711104456078e-08,
+      "fraction": 0.011220173241625895
+    }
+  ],
+  "scope": "Saved prefix state comparison only. Do not count178 neutral-transport acceptance as full block or final charge acceptance.",
+  "scale_correction": "Use the original component L1 denominator with1e-290 floor. The prior checker used an unintended absolute1floor which hid the small scaled baryon denominator; archive it and replace only this read-only audit. The prior reject verdict is unchanged.",
+  "seconds": 0.22069729300000063,
+  "source_sha256": "3d6adfec146e5cc6656f41ebcc6cb56b8245faaf77f8aeea2db367637a329389"
+}

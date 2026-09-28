@@ -1,0 +1,49 @@
+{
+  "classification": "Counterexample candidate",
+  "rows": [
+    {
+      "output": "dxdt",
+      "affine_reconstruction_score": 2.039648313756779e-16,
+      "original_frozen_derivative_score": 0.10701428527862997,
+      "corrected_frozen_derivative_score": 0.10701428527862997,
+      "fresh_EOS": [
+        {
+          "h": 0.0001,
+          "score": 0.10724516507192963,
+          "passed": false,
+          "active_stencil_crossings": 1
+        },
+        {
+          "h": 5e-05,
+          "score": 0.10701428527862997,
+          "passed": false,
+          "active_stencil_crossings": 0
+        }
+      ]
+    },
+    {
+      "output": "heat",
+      "affine_reconstruction_score": 4.4062098014798054e-17,
+      "original_frozen_derivative_score": 0.00627192472488698,
+      "corrected_frozen_derivative_score": 0.00627192472488698,
+      "fresh_EOS": [
+        {
+          "h": 0.0001,
+          "score": 0.006276615050459679,
+          "passed": false,
+          "active_stencil_crossings": 1
+        },
+        {
+          "h": 5e-05,
+          "score": 0.006271924728870394,
+          "passed": false,
+          "active_stencil_crossings": 0
+        }
+      ]
+    }
+  ],
+  "physical_weak_rates_certified": false,
+  "full_composition_Jacobian_certified": false,
+  "original_native_values_unchanged": true,
+  "original_failed_derivative_verdict_preserved": true
+}

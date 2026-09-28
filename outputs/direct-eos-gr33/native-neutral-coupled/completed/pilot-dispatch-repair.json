@@ -1,0 +1,15 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": {
+    "seconds": 16.186714834999975,
+    "CPU_seconds": 11.074608943,
+    "peak_RSS_bytes": 2092474368,
+    "error": "KeyError('neutral_faces')",
+    "source_sha256": "c33be85d14e6e801239d64f186eaf761a81b9b97a70f7d9bfffb64644d5ee8b6"
+  },
+  "repair": "Parent.local calls self.collision with zero gas while forming the lifted photon source, before the native face matrix is attached. Require that gas is exactly zero on this construction call; its linear transport is identically zero. Nonzero gas must use the assembled face operator. No actual stage was evolved in the failed call.",
+  "original_pilot_seconds": 240,
+  "remaining_seconds": 220,
+  "source_sha256": "aad46b7ed3206c23209546d0f553ef762934804a7acea70de914d8ecf7b25a90",
+  "rejected_producer_sha256": "c33be85d14e6e801239d64f186eaf761a81b9b97a70f7d9bfffb64644d5ee8b6"
+}

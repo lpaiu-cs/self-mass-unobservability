@@ -1,0 +1,8 @@
+PASS full nonlinear spherical balances, homogeneous Hamiltonian-constraint propagation and complete scalar heat law; finite GR trajectory remains open
+PASS shared material heat faces and regular-centre initial reference bindings
+Traceback (most recent call last):
+  File "/mnt/e/lab/self-mass-unobservability/verification/gr_radiating_surface_connection.py", line 81, in <module>
+    if __name__=='__main__':globals()[sys.argv[1]]()
+  File "/mnt/e/lab/self-mass-unobservability/verification/gr_radiating_surface_connection.py", line 49, in run
+    assert sp.cancel(ratio-(1+v)/(a*a*(1-v)))==0
+AssertionError

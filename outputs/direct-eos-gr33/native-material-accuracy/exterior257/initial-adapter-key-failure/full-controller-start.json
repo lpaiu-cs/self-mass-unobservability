@@ -1,0 +1,68 @@
+{
+  "pid": 460,
+  "process_start_ticks": "8947",
+  "boot_id": "abb8c3bc-36fe-4e31-929d-1d66b6717368",
+  "started_unix": 1790297008.963765,
+  "controller_sha256": "291453bafc2e1b552751ab143c99ddc977f839bfab12a7eb81f4c319ed4d8163",
+  "bindings": {
+    "verification/read_material_return_exterior.py": "d4919c04e25c6d07b0ffafb936fe7e61cea333341e8a41d72a2e59b5e46ed329",
+    "verification/read_returned_exterior.py": "150dd3de2d879346911a6d10fc6376737f2daca9b33cebd9908311542192b364",
+    "verification/verify_returned_exterior.py": "ef2d7dad3235adaa19362f2ff3a0eb49c331d160412821fed464e93ddebc23ab",
+    ".phase251-reader-launch.py": "83275ae7dcb1efbf286a21a4f3bc78d92defdf80c01159fd2cc360764c921086",
+    "native-material-exterior257-work/common/result.json": "9c306c0c1e79edfe3155f317a9d173f09b25faca8316447004d187b8c61982ed",
+    "native-material-exterior257-work/common/audit.json": "9597c3d37ca3fc3a5e67f53a01b149b1db7f16d998fe7f7572f501d92882e5dc",
+    "native-material-charge257-work/full/controller-start.json": "c83277e12be516f7c02c7ad25599b4a7a9f5907fb0eebb33977308f9e816420e"
+  },
+  "dependency": {
+    "pid": 430,
+    "process_start_ticks": "6921",
+    "boot_id": "abb8c3bc-36fe-4e31-929d-1d66b6717368",
+    "started_unix": 1790296990.2518466,
+    "controller_sha256": "a6bf8494a5bc37d8cb2f0303e9637d8d1cd4342ba5bdfd88d7b26b75e449b6bf",
+    "bindings": {
+      "verification/read_material_return_charge.py": "79eccad698d4fae78b277c8065be51934baed445c7e7898d3f4fdef150cc0818",
+      ".phase251-reader-launch.py": "83275ae7dcb1efbf286a21a4f3bc78d92defdf80c01159fd2cc360764c921086",
+      ".phase247-polynomial-audit.py": "1c5aa0306c4641f572e6f349f457862c749d261c00dd56372dc8faa012941e85",
+      "native-material-charge257-work/regression.json": "a607393ab441003e04c59501b102b641aa8d4d01690e21eeb278b53fba662334",
+      "native-material-accuracy257-work/controller-start.json": "53e42431a36e1005a1378c171d7f943e1cddabe32e14d8efce20f5f3371e6d5d"
+    },
+    "dependency": {
+      "pid": 318,
+      "process_start_ticks": "4585",
+      "boot_id": "abb8c3bc-36fe-4e31-929d-1d66b6717368",
+      "started_unix": 1790296967.0757442,
+      "producer_sha256": "1479510b5cd0734107bdfacb01b79224e836033379fa632537a0841efc222c73",
+      "controller_sha256": "c088ff6748f826bdd222202ad4ecc6767ed44feba68b631da46332717b2b688b",
+      "CPU_affinity": 3,
+      "virtual_GiB": 16,
+      "actions": [
+        "check",
+        "fine",
+        "audit"
+      ],
+      "budgets": {
+        "check": 600,
+        "fine": 21600,
+        "audit": 600
+      },
+      "scientific_gates_changed": false
+    },
+    "max_dependency_wait_seconds": 43200,
+    "field_cap_seconds": 10800,
+    "virtual_GiB_per_process": 16,
+    "parallel_field_CPUs": [
+      4,
+      10,
+      14
+    ],
+    "physical_steps": 0,
+    "final_charge_conclusion": "unadjudicated",
+    "full_goal_complete": false
+  },
+  "wait_cap_seconds": 43200,
+  "action_cap_seconds": 1800,
+  "CPU_affinity": 2,
+  "virtual_GiB": 16,
+  "measured_common_seconds": 16.832778724000036,
+  "new_physical_steps": 0
+}

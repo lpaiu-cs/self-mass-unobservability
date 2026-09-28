@@ -1,0 +1,27 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Apply actual updated-source GR/lapse fields to simultaneous moving photon/thermal/H equations across all531 physical cells.",
+  "reuse": "Same64/128 clocks,17 background knots,8 angles,152 frequencies and3.434ms. Actual SDIRK stage-time coefficients; GMRES/full residual1e-12. Store full angular response,thermal/H and radial ports for the next actual material return.",
+  "limits": "Prescribed background baryon/momentum/inventory; this sweep does not solve their extra mechanical response or a GR fixed point.",
+  "budgets": {
+    "pilot_seconds": 65,
+    "production_seconds": 650,
+    "CPU_threads": 1,
+    "memory_GB": 3
+  },
+  "gates": {
+    "time": 0.02,
+    "background_time": 0.02,
+    "energy": 1e-08,
+    "species": 1e-08,
+    "linear": 1e-12
+  },
+  "forecast": "Equal-horizon4/8 steps;51 operator points plus remaining60/248 steps and25s setup/export,2x margin; no dispatch above650s. Later Krylov cost extrapolated.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_updated_gr_return.py": "d2c456a74a41ee97b07f026effdadd08c72d583b059420e933b8d72094c719d9",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_monolithic_response.py": "76eab50e7cb8115bff4ce959641ed3cc9e7eabcf13bcae54b321b33f2ac5a695",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_collision_response.py": "f35bf0b4e25dbb4c53503181b24378a989aadc34313a52a4fc4876d52871dfb7",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/collision/bank-result.json": "fb2429019b5501c2f4c50e067ca3a9de295d674df478768ef2223b9e85a38382",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/lapse/result.json": "1105dde11dd591b41d08f1fa0a5775806c54af9110f5ed45c58c927f952871e5"
+  }
+}

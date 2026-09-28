@@ -1,0 +1,36 @@
+{
+  "classification": "Counterexample candidate",
+  "bindings": {
+    "verification/def_free_surface_contrast_refined.py": "8b8c19372cb64f9868daf5c5d043995a717905d7e5fd2ff1c553ad0e5e8e483e",
+    "verification/def_free_surface_contrast.py": "abd92c394efc65f6b724b315da3e8fb152270614aa19326c108e6aac91718dd2",
+    "verification/def_free_surface_response_normalized.py": "1969a06c3eac29abab56e8a51ea6a019ba64d3f1c98cf382bda6a3614d17cb94",
+    "verification/def_free_surface_response.py": "340f50f60e44246ea6680d934bc9a36f6778567c2018bb430bd411698f207965",
+    "outputs/direct-eos-gr33/def-free-surface-response/normalized/background.npz": "c42374d2a79ab37cc716bad52e6b72a4940dc82f0923f71856601f213f0c4a2c",
+    "outputs/direct-eos-gr33/def-free-surface-response/normalized/charge-result.json": "22df31da4293b0edbf3c12714770477a1f4e67ac428763ea277eb0ae7f72738a"
+  },
+  "precision_control": "Two extended-precision residual corrections, same meshes, same equations and unchanged 2 percent gate.",
+  "claim": "Resolve the material-motion outgoing charge without subtracting near-unit scalar fields, with exactly the same discrete baryon/scalar rows in free and supported comparisons.",
+  "identity": "M delta=(M_clamped-M) y_clamped; RHS is supported only on replaced momentum rows. M(y_clamped+delta)=b in exact arithmetic.",
+  "gates": {
+    "residual": 1e-09,
+    "reconstruction_relative": 1e-10,
+    "charge_grid_relative": 0.02
+  },
+  "budget": {
+    "hard_timeout_seconds": 60,
+    "native_calls": 0,
+    "time_steps": 0,
+    "solves": 16,
+    "grids": [
+      1,
+      2
+    ],
+    "harmonics": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "stop": "No additional grid or frequency if gates fail; preserve failed direct subtraction."
+}

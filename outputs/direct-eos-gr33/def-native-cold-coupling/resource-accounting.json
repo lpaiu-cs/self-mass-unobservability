@@ -1,0 +1,25 @@
+{
+  "classification": "Counterexample candidate",
+  "measured_native_calls": 669,
+  "measured_breakdown": {
+    "audit": 8,
+    "diagnostic": 8,
+    "logarithmic-controls": 58,
+    "lowest-probe": 6,
+    "partition-diagnostic": 3,
+    "partition-operands": 6,
+    "scaled-controls": 26,
+    "support-controls": 18,
+    "support": 536
+  },
+  "additional_constructor_call_upper_bound": 36,
+  "reason": "Conservative upper bound for table/model constructors in support controls, one actual continuation, readout attempts and endpoint audit; no full trajectory repetition.",
+  "actual_continuation_seconds": 106.162870919,
+  "continuation_budget_seconds": 190,
+  "fluid_macroscopic_steps": 24,
+  "reused_complete_steps": 104,
+  "reused_coarse_paths": 2,
+  "CPU_threads": 1,
+  "peak_memory_measured": false,
+  "note": "The original signed Infinity/NaN diagnostic values and wrong-slot partition inspection are preserved as failed diagnostic output, not accepted finite constitutive data."
+}

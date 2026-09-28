@@ -1,0 +1,10 @@
+{
+  "classification": "Counterexample candidate",
+  "preserved_prebuild_error": "TypeError: build_at() missing 1 required positional argument: 'prefix'",
+  "correction": "Carry over the existing build_at defaults when cloning it. The first call failed before any compiler/build command. No precision, physical option, experimental input or acceptance gate changes.",
+  "bindings": {
+    "verification/gr_eos_precision_runner.py": "a5c9d64cee4075e0cd83e5c15b81a41eea24c71c891dda09494bf7d2d8223413",
+    "outputs/direct-eos-gr33/gr-eos-extended-precision/plan.json": "074edc0bbd516291c893e182878d260e2f17466e67d93d685f686b29c5fa700c",
+    "outputs/direct-eos-gr33/gr-eos-extended-precision/candidate-build.py": "40460ecbef59071dc9d1b358888c9e1ea7818bf70b9e5edbb1916bcff0124e1d"
+  }
+}

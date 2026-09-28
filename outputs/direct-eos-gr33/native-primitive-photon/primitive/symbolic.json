@@ -1,0 +1,10 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "transform": "k=h+mu^2*lambda; kdot=-v*nu_prime+2*mu*mudot*lambda+mu^2*v*lambda_prime; k_launch=mu_launch^2*lambda_launch.",
+  "scope": "Exact change of variables for the declared linear nonstiff null characteristic ODE. Numerical equivalence needs a direct-jet control. Work reconstructed from k is not an independent energy-integral test.",
+  "primitive_transform": "q=h-mu*Phi*U+mu^2*K*C_infinity+G/c^4*K*mu*sum weight*mu_source*F(t-travel). Keep its nonzero launch and endpoint terms.",
+  "crossing": "Fdot=(1-mu/mu_source)*L. The pressure coefficient contains this exact factor; no division by a nearly tangent crossing is needed.",
+  "work": "Reconstructed work is an identity, not an independent energy-integral check. Actual direct-jet comparison remains required.",
+  "outgoing_identity": true
+}

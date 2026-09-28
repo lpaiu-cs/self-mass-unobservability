@@ -1,0 +1,32 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Apply the actual declared orbital scalar drive to the full coupled conductive GR temperature response on all4012 computed internal faces, and extract the same-incoming outgoing thermal contribution.",
+  "model": "Physical q and integrated active face energy E; (K+z^2 M)q=(F-z^2 M H)E+external drive; [diag(1/gain)-GEraw]E=Gq*q+gL. Original positive microscopic poles, native EOS thermal tangent, heat energy debit, mass constraint and heat momentum retained. Coefficients/geometry stay frozen.",
+  "scope": "Driven harmonic perturbation relative to the same affine frozen background. This does not prove that the actual nonstationary background is fixed over an orbit. Unknown outer faces and photons are omitted contributions, never a certified insulating boundary.",
+  "cases": "p4 and p2 harmonics1,2,3 plus original coarse-bank coefficient contrast. No zero-frequency thermal inverse or extra carriers.",
+  "gates": {
+    "linear_residual": 1e-09,
+    "heat_law_residual": 1e-09,
+    "heat_balance": 2e-13,
+    "spatial": 0.02,
+    "coefficient": 0.02
+  },
+  "budget": {
+    "pilot_seconds": 120,
+    "total_compute_seconds": 600,
+    "CPU_threads": 1,
+    "memory_GB": 4,
+    "new_EOS_calls": 0,
+    "new_time_steps": 0
+  },
+  "decision": "Reuse pilot. Stop on failed solve or spatial/coefficient gate, without automatic enlargement. Use solved heat correction, not fixed-point convergence extrapolated from short-time contours.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_orbital_conductive_feedback.py": "22f44a6e9f3a1c94bdd1506a2d034e92104c3510c83d72b086dab2718cd89366",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_temperature_feedback.py": "f2bebf74f9e7460b164320d36639e408ce5c949c54bb0465546b6415c11fd2ee",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_orbital_charge_fem.py": "1bc74a38778c6832103050bb8356cddf4bf6da87eba4eadff3878ace029ab5b1",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/fine-bank.npz": "b4493a6e4cfb20d741725ecb61cec154ab9fc51a694001865748741060018d7e",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/coarse-bank.npz": "ea020f69b240c5c5cdd8810f963d88e5cc2d3269aff12c659422a7a6541ae0df",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-orbital-charge-fem/result.json": "29e00a6ab0dbe3d22b801c076d9401334656878753b0f3fd72d136e735fa7f30",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-orbital-charge-fem/pilot.json": "7706a9fcd783d815e6a50493ff509ddd39dbd7f78c0fe266984533fec06f1cb9"
+  }
+}

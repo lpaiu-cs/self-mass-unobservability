@@ -1,0 +1,22 @@
+{
+  "classification": "Counterexample candidate",
+  "reason": "Discrete velocity and angular differences exceed the 1e-6 response gate and are comparable to the proposed collective effect. Replace discrete continuum atoms by the positive Maxwell dielectric density. Do not densify the failed velocity matrix or change its verdict.",
+  "claim": "Resolve the same collisionless RPA continuum and its very narrow plasmon contribution before any further coupled production.",
+  "controls": "Static and second sum rules plus the independent positive-imaginary-frequency dielectric response at x=1e-7,.01,.1,.13,.2,.3,.5,1,10,1000. No normalization; fixed 32/64/128 subdivisions per interval.",
+  "gates": {
+    "moment_relative": 0.0002,
+    "imaginary_response_relative": 0.0002
+  },
+  "hard_seconds": 120,
+  "CPU_workers": 1,
+  "GPU": false,
+  "new_EOS_calls": 0,
+  "new_stellar_steps": 0,
+  "decision": "Only after the spectral controls pass, reuse the existing solver and compare the same response at unchanged 1e-6 gates. Measure and declare that production budget first.",
+  "bindings": {
+    "verification/def_photon_collective_continuum.py": "8a8fe184cef469d00405ae6f3750c5a106256ee058752a89ff72d395a6a7492c",
+    "verification/def_photon_collective.py": "212d40aeca126e3b79ecd76d04b4be88dc90a73428953ba68d29a7dcae0359c0",
+    "outputs/direct-eos-gr33/def-photon-collective/inventory.npz": "977692961cb6e6e5cc0165db9a88db0323f1d8099040fe4c0b7876a08b848047",
+    "outputs/direct-eos-gr33/def-photon-collective/result.json": "0d595513f8863320e0eae6e4bb1177b4cebdaee0068ea61bcd79c5b70ba0fbc8"
+  }
+}

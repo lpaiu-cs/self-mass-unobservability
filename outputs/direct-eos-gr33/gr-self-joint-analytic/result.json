@@ -1,0 +1,116 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "product_phase_upper": "59579378076717639372099569049183511311/42535295865117307932921825928971026432",
+  "c_lower": "42160125979998169573277602805501078619/42535295865117307932921825928971026432",
+  "c_upper": "86498049198048696195901468188108823605/85070591730234615865843651857942052864",
+  "reference_moment_lower": "206132833632832995179709654094002058225/3064991081731777716716694054300618367237478244367204352",
+  "tail_upper_coefficient": "5476584484696290627049755352742759031/50216813883093446110686315385661331328818843555712276103168",
+  "positive_real_response_lower_coefficient": "42240416117625179980636588235975855495/49039857307708443467467104868809893875799651909875269632",
+  "self_integrand_modulus_upper": "85073208320777499558506848328533155905/85070591730234615865843651857942052864",
+  "parameter_orders": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      0,
+      2
+    ]
+  ],
+  "derivative_majorants": [
+    "85073208320777499558506848328533155905/85070591730234615865843651857942052864",
+    "265853776002429686120333901026666112205/2658455991569831745807614120560689152",
+    "207698262501898192281510860177082900161/10384593717069655257060992658440192",
+    "332317220003037107650417376283332640255/332306998946228968225951765070086144",
+    "259622828127372740351888575221353625201/2596148429267413814265248164610048",
+    "162264267579607962719930359513346015751/81129638414606681695789005144064"
+  ],
+  "monomial_controls": [
+    {
+      "order": [
+        0,
+        0
+      ],
+      "saturating_derivative": "C",
+      "passed": true
+    },
+    {
+      "order": [
+        1,
+        0
+      ],
+      "saturating_derivative": "C/H_E",
+      "passed": true
+    },
+    {
+      "order": [
+        2,
+        0
+      ],
+      "saturating_derivative": "2*C/H_E**2",
+      "passed": true
+    },
+    {
+      "order": [
+        0,
+        1
+      ],
+      "saturating_derivative": "C/H_T",
+      "passed": true
+    },
+    {
+      "order": [
+        1,
+        1
+      ],
+      "saturating_derivative": "C/(H_E*H_T)",
+      "passed": true
+    },
+    {
+      "order": [
+        0,
+        2
+      ],
+      "saturating_derivative": "2*C/H_T**2",
+      "passed": true
+    }
+  ],
+  "display_only": {
+    "product_phase_upper": 1.4007044470937366,
+    "positive_coefficient": 8.613486750701765e-19,
+    "modulus_upper": 1.0000307578740157,
+    "derivative_majorants": [
+      1.0000307578740157,
+      100.00307578740157,
+      20000.615157480315,
+      1000.0307578740158,
+      100003.07578740157,
+      2000061.5157480314
+    ]
+  },
+  "joint_domain": "eta=eta0+delta_eta, beta=beta0*exp(tau), with the declared complex radii. With a=q0*sqrt(1-2r), t_a=(sqrt(1+a^2*u^2)-1)/beta0: c_lower*t_a<=Re t, |t|<=c_upper*t_a, and |arg t|<=2theta+h_tau. These follow from |gamma+1|<=kappa*(gamma_a+1), |Q|>=a and |Q|<=kappa*a.",
+  "inner": "Until t_a=(max(Re eta,0)+128)/c_lower, |Im(t-eta)|<=c_upper*Tmax*sin(2theta+h_tau)+h_eta. Add 3theta for the kernel phase. The saved product phase is below pi/2. Also |q|>=f(c_upper*t_a-Re eta)>=exp(-(c_upper-1)*Tmax)*f(t_a-Re eta). Thus the inner real part is at least L times the positive real-reference integral.",
+  "tail": "Outside that cutoff, |q|<=2exp(Re eta-c_lower*t_a)<=4exp((24+h_eta-128)/2)*f(c_lower*t_a/2). The real-reference tail is <=2exp((24+h_eta-128)/2)*f(t_a/2). Bound both by the eta=0 response at beta=2beta0/c_lower. Its coefficient is at most the old common coefficient/c_lower^4. The complex tail has the additional factor kappa^3.",
+  "positive": "The real-reference lower moment with Re eta>=-17-h_eta is at least exp(-h_eta) times the former W0 bound. Therefore Re S(Q,eta,beta)>=[L*Wnew-(L+2*kappa^3)*Ttail]/max(1,a^2)>0, uniformly on the joint domain. Fermi poles, square-root branch points and dielectric zeros are excluded; exponential domination proves joint analyticity.",
+  "modulus": "Let X=Q^2/B and S have positive real part. |arg X|<=2theta and |arg S|<pi/2. Hence |X+S|^2/|S|^2 >=1+v^2-2v*sin(2theta)=(v-sin(2theta))^2+cos(2theta)^2, v=|X|/|S|. Thus |G|<=sec(2theta), uniformly for every B>0.",
+  "Cauchy": "For each Q in the full Q disk, the six eta/tau derivatives at the real reference state are bounded by n!*m!*sec(2theta)/(h_eta^n*h_tau^m). These are also uniform complex-Q bounds, so Q Cauchy/Gauss can be applied afterward. The six holomorphic monomials saturate the factorial/radius factors and provide exact symbolic controls.",
+  "actual_outer_integral_certified": false,
+  "physical_EOS_certified": false
+}

@@ -1,0 +1,129 @@
+{
+  "classification": "Counterexample candidate",
+  "bindings": {
+    "verification/def_spherical_physical_exchange.py": "cf2282bd257b48047b7334e60eae22b60b6d8dc1386b2aa2c587d7d531699d60",
+    "verification/def_spherical_coupled.py": "421ce377f7d150788681ca599f8f201bfdfb33beb053455803914f7e298e9f91",
+    "outputs/direct-eos-gr33/def-spherical-coupled/plan.json": "cbb5f3912e09751d11726da3ea910dfaffcf240af746147368e029166057fb30",
+    "outputs/direct-eos-gr33/def-spherical-coupled/failure.json": "66310748d04aabe47efe3eb3185d065ee69f516c3bed2982d7f7b76f4eb5168a",
+    "outputs/direct-eos-gr33/def-spherical-coupled/path-0/result.json": "4d32a21d67aafa2ac021affd451d98ad7c0c6ca153b4c6d9df27250769fdd6ee",
+    "outputs/direct-eos-gr33/def-spherical-coupled/path-0/endpoint.npz": "9e8e08dcd270f265694eea98f911c58b69549d3d0c4159d191b6b40ee49ff001",
+    "outputs/direct-eos-gr33/def-spherical-coupled/path-1/failed-iterate.npz": "067559237625d9700ca4fe6a2eb87e8e51efada233808f15c5ef8352a2442cf3"
+  },
+  "predecessor_plan": {
+    "classification": "Counterexample candidate",
+    "bindings": {
+      "verification/def_spherical_coupled.py": "421ce377f7d150788681ca599f8f201bfdfb33beb053455803914f7e298e9f91",
+      "verification/gr_molecular_compatible_step.py": "4ef5430eafccde5569fe1e20d1db1001d94f0136b84243e38120e9deb24b9df9",
+      "verification/gr_molecular_shell_initial.py": "60177855e9f43b70eb12be68017bac42e73b333ed995c732fad19c9260f4a820",
+      "verification/gr_compatible_equilibrium_evolution.py": "eef028a87aba8ac96687994f42513853e80b8e270d6c499cc7bc56da4efe5a4c",
+      "verification/gr_conservative_two_carrier.py": "baa2ebf45375f7f1729344831748c1b3ddfa21bdbe95ec22265f4ed93f90909c",
+      "verification/gr_conservative_composition_tangent.py": "f86901a46537de3af713c23121d5f7dd922aee5e86e00a5ea1b2b56de8d8c080",
+      "verification/gr_two_carrier_evolution.py": "973f86e4fdb3cb008cb928288e7d87e8906a6e46ae317bc311ab03f9bc291f26",
+      "outputs/direct-eos-gr33/gr-molecular-shell-initial/initial-manifest.json": "fc630f882ca17dbadeb2fdf39a8b29fe4698cf7b3209738dbcc17470a0980477",
+      "outputs/direct-eos-gr33/gr-molecular-shell-initial/initial.npz": "6cd05a8951e09861c874bb6e685ccdfb17529be787f5e1e661a65eb2146700be",
+      "outputs/direct-eos-gr33/gr-molecular-compatible-step/manifest.json": "40376f79988df436f3f8708e87e3903fdc396b2878110b2884c141adbf4f386c"
+    },
+    "cells": 5735,
+    "h_seconds": "3.2132813194763796874e-06",
+    "boundary_amplitudes": [
+      "0",
+      "0.000001"
+    ],
+    "method": "Same molecular initial Cauchy state, phi=Pi=Phi=0. One BE native matter step coupled to a midpoint massless DEF scalar step. Scalar and radial Einstein constraints solved inside every native matter residual. Staggered scalar gradient energy and reciprocal finite work. New piecewise-constant quadrature of log(N*a); fixed zero-scalar hydrostatic momentum projection. Reflecting matter wall, prescribed linear Dirichlet scalar ramp at the wall.",
+    "beta": -4,
+    "frame": "A=exp(-2*phi^2); native Jordan EOS and opacity; Einstein rho,T,P,u,kappa,tau transformations.",
+    "decision": "Can the full 5735-cell native matter/heat/26-species and scalar wave evolve simultaneously, pass original matter gates and reciprocal field budgets, and produce a driven-minus-undriven endpoint?",
+    "nonlinear_absolute_tolerances": [
+      1e-13,
+      1e-09,
+      1e-14,
+      1e-17,
+      1e-17,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13
+    ],
+    "maximum_iterations": 24,
+    "scalar_residual_tolerance": 2e-17,
+    "scalar_relative_budget_tolerance": 2e-15,
+    "finite_conservation_gates": {
+      "local_energy_over_initial_heat_capacity": 1e-06,
+      "local_baryon_relative": 1e-09,
+      "isotope_inventory_over_total_initial_baryons": 1e-09
+    },
+    "budget": {
+      "workers": 8,
+      "blas_threads": 1,
+      "hard_timeout_seconds": 1200,
+      "maximum_paired_runs": 1,
+      "expected_wall_seconds": [
+        350,
+        1000
+      ],
+      "basis": "Previous native molecular single step 156.5s, including 12905 material calls; two paths plus nested scalar/metric scans. New scalar overhead unmeasured, capped by 1200s. No automatic amplitude/grid/time expansion."
+    },
+    "symbolic": {
+      "classification": "Proven",
+      "passed": true,
+      "scope": "Finite product identity and shared-face scalar work identity for the declared staggered energy quadrature; no continuum error bound."
+    },
+    "finite_operator_check": {
+      "classification": "Counterexample candidate",
+      "passed": true,
+      "scalar_residual": 2.9705543462228726e-23,
+      "scalar_relative_balance": 1.0562208761546643e-19
+    },
+    "limitations": [
+      "Boundary wave is a numerical control, not companion-matched orbital forcing.",
+      "Single step; no time convergence or continuum error certificate.",
+      "Discrete reciprocal energy work is a spatial/time discretization; no independent Einstein angular/momentum constraint convergence proof.",
+      "No physical EOS/atmosphere or observational closure."
+    ]
+  },
+  "vacuum_negative_control": {
+    "classification": "Counterexample candidate",
+    "vacuum_physical_matter_work": 0,
+    "predecessor_nonzero_vacuum_work": true,
+    "maximum_spurious_energy_density_increment": 1195138544900.7583,
+    "integrated_spurious_energy_erg": -1.4818306522335517e+33,
+    "scalar_energy_erg": 3.8174181416261035e+44,
+    "scalar_residual": 1.325779358837063e-22,
+    "old_scheme_relative_energy_residual": 4.865058757970369e-20
+  },
+  "correction": "Use the derived continuous scalar-matter geometric cross work with midpoint scalar and averaged matter. Never turn the scalar scheme energy defect into material heating. Preserve and apply the unchanged scalar and matter acceptance gates.",
+  "decision": "Does removing the false matter source recover the native joint solve, and what scalar/metric conservation defect remains? A native solve alone cannot pass the milestone.",
+  "reuse": "Do not recompute the identical undriven path. One corrected driven attempt only.",
+  "budget": {
+    "workers": 8,
+    "hard_timeout_seconds": 600,
+    "maximum_runs": 1,
+    "expected_wall_seconds": [
+      140,
+      450
+    ],
+    "basis": "Undriven native path measured 142.2s. Failed paired attempt 393.5s. This one driven correction remains within the original 1200s overall wall budget; stop at 24 iterations or 600s."
+  }
+}

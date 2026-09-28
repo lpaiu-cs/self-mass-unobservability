@@ -1,0 +1,33 @@
+{
+  "classification": "Counterexample candidate",
+  "executable_sha256": "2ea64f04641b18285d2e0721495fd6269db5c08930d579d673ad9d008c6e7a3c",
+  "call": "__opacities_MOD_eval_kap_type1; actual Type1 path, 17 by-reference arguments.",
+  "controls": "First read-only baseline: actual rho,T,26-species X, species sums, and returned opacity against the collected profile. A later identity-input replay must reproduce outputs before changing EOS electron inputs.",
+  "argument_slots": {
+    "cell": 1,
+    "zbar": 2,
+    "XH": 3,
+    "Z": 4,
+    "q": 5,
+    "Pgas_div_P": 6,
+    "log10_rho": 7,
+    "log10_T": 8,
+    "composition": 9,
+    "lnfree_e": 10,
+    "free_e_rho": 11,
+    "free_e_T": 12,
+    "opacity": 13,
+    "opacity_rho": 14,
+    "opacity_T": 15,
+    "ierr": 16
+  },
+  "input_log_tolerance": 1e-12,
+  "composition_absolute_tolerance": 1e-12,
+  "profile_opacity_relative_tolerance": 1e-12,
+  "source_contract": "Total free electron plus positron number per nucleon, not merely nuclear net Ye. Original total opacity already includes conduction.",
+  "physical_opacity_certified": false,
+  "nonlinear_transport_completed": false,
+  "retained_failure": "Type2 breakpoint had zero hits before normal native exit; it was not the active opacity path.",
+  "before_plan_sha256": "04f8068b4b55d36ec40adaf8c6d26467538eb1f5902f1f94db5f8028d29a4c54",
+  "controls_source_sha256": "412ae05148d8b700dfc0e5a2322e6d4cf9ae51e6d3d2f700a83db507b3400149"
+}

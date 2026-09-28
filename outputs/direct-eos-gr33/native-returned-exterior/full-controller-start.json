@@ -1,0 +1,154 @@
+{
+  "pid": 16960,
+  "process_start_ticks": "318945",
+  "boot_id": "668d9702-2b45-40f7-b597-a59d21cbb64c",
+  "started_unix": 1790286950.7004428,
+  "controller_sha256": "2a83957c87784c5557807b188d68a737b607c1a4f6c641004e69cb1fe69f0cd7",
+  "bindings": {
+    "verification/read_returned_exterior.py": "150dd3de2d879346911a6d10fc6376737f2daca9b33cebd9908311542192b364",
+    "verification/verify_returned_exterior.py": "ef2d7dad3235adaa19362f2ff3a0eb49c331d160412821fed464e93ddebc23ab",
+    ".phase251-reader-launch.py": "83275ae7dcb1efbf286a21a4f3bc78d92defdf80c01159fd2cc360764c921086",
+    "native-returned-exterior252-work/common/result.json": "9c306c0c1e79edfe3155f317a9d173f09b25faca8316447004d187b8c61982ed",
+    "native-returned-exterior252-work/common/audit.json": "9597c3d37ca3fc3a5e67f53a01b149b1db7f16d998fe7f7572f501d92882e5dc",
+    "native-full-charge251-work/full/controller-start.json": "13e30d56109a8895f07eb3396d988c5e10faf98a48be8dd912b33ef52488aea3"
+  },
+  "dependency": {
+    "pid": 454,
+    "process_start_ticks": "186878",
+    "boot_id": "668d9702-2b45-40f7-b597-a59d21cbb64c",
+    "started_unix": 1790285693.7574759,
+    "controller_sha256": "c681ad94686e39c01a29e9f66de18f5e786abcf06e3210c529bc45628aa0c554",
+    "bindings": {
+      "verification/read_full_return_charge.py": "69cca194ef8def5a79fd56b4aff0e0629dfe83ec91e0fc3e70e74765d28a68c1",
+      ".phase251-reader-launch.py": "83275ae7dcb1efbf286a21a4f3bc78d92defdf80c01159fd2cc360764c921086",
+      ".phase247-polynomial-audit.py": "1c5aa0306c4641f572e6f349f457862c749d261c00dd56372dc8faa012941e85",
+      "native-full-charge251-work/regression.json": "a607393ab441003e04c59501b102b641aa8d4d01690e21eeb278b53fba662334",
+      "native-full-return249-work/controller-start.json": "cac849b86d14d1a0222fff7c33f5604bc6c7cffa439e63026fecc24abc046d26"
+    },
+    "dependency": {
+      "pid": 390,
+      "process_start_ticks": "180030",
+      "boot_id": "668d9702-2b45-40f7-b597-a59d21cbb64c",
+      "started_unix": 1790285625.4561772,
+      "controller_sha256": "137bd64d1bb7cd04c0a9c16342c9fb2a472e643a51d380d2ac252a18781a4b84",
+      "producer_sha256": "28b5911f2e0e6236bc3827cae35eae499c1d152cfa2670485a375fdfb114a309",
+      "dependencies": {
+        "native-complete-return236-work": {
+          "pid": 156055,
+          "process_start_ticks": "1284093",
+          "boot_id": "8261121e-12db-4df6-81ef-d017b65fa802",
+          "started_unix": 1790271433.0793488,
+          "producer_sha256": "624f92fb21cdec45ef79360920511fff3d18d25f1a87ed4aca3bf4f5e528b1fc",
+          "controller_sha256": "68b50650c45967d7e6ef12fa1bcdaff40d66403f2e7fdae18eae07a53999a602",
+          "parallel_fields": {
+            "field1288": 4,
+            "field648": 6,
+            "field1284": 8
+          },
+          "sequential_actions": [
+            "collect",
+            "metric",
+            "coarse",
+            "fine",
+            "audit"
+          ]
+        },
+        "native-retarded-extension248-work": {
+          "pid": 336,
+          "process_start_ticks": "22324",
+          "boot_id": "668d9702-2b45-40f7-b597-a59d21cbb64c",
+          "started_unix": 1790284117.4268475,
+          "controller_sha256": "535078a913e17ddeaaf0beb7324aa21edd0cc48d6c896dfb9544ed5d436457bf",
+          "bindings": {
+            "verification/extend_unchanged_source_prefix.py": "cdc7d3fb1e71edc8b5bfa326dd6d7c9c671c973dd9258ccac95a21f829d4e077",
+            ".phase251-reader-launch.py": "83275ae7dcb1efbf286a21a4f3bc78d92defdf80c01159fd2cc360764c921086"
+          },
+          "producer_sha256": "cdc7d3fb1e71edc8b5bfa326dd6d7c9c671c973dd9258ccac95a21f829d4e077",
+          "resumption_after_boot_change": true,
+          "interrupted_start": {
+            "pid": 228453,
+            "process_start_ticks": "2563627",
+            "boot_id": "8261121e-12db-4df6-81ef-d017b65fa802",
+            "started_unix": 1790283439.3508315,
+            "controller_sha256": "da9bfbcce43066ebef321798c11ca170c0efe1521d16cf94c990f72d4276a833",
+            "producer_sha256": "cdc7d3fb1e71edc8b5bfa326dd6d7c9c671c973dd9258ccac95a21f829d4e077",
+            "dependency": {
+              "pid": 214700,
+              "process_start_ticks": "2443604",
+              "boot_id": "8261121e-12db-4df6-81ef-d017b65fa802",
+              "started_unix": 1790282316.219934,
+              "producer_sha256": "65181e02ca85c998a9612abfc79cc3f5b130d6dd7d2432f9c9c2701f1c6e0d5e",
+              "controller_sha256": "92ed7faf4b3e092b316afe5e903905ff64661415f99e847b3c5c8c610a8b5a77",
+              "dependency": {
+                "pid": 167049,
+                "process_start_ticks": "1440923",
+                "boot_id": "8261121e-12db-4df6-81ef-d017b65fa802",
+                "started_unix": 1790272907.7851486,
+                "producer_sha256": "9173213c15b4fe69d4e7c814f907a7e3c87164caa3fa0a94a06842128b0239cb",
+                "controller_sha256": "fa9d79299090d1b2e6bf6fd4eae37a8dab1a1b53dfb18f97b2d7125cf260f10d",
+                "actions": [
+                  "fine",
+                  "audit"
+                ],
+                "CPU_affinity": 10
+              },
+              "CPU_affinity": 2,
+              "actions": [
+                "prepare",
+                "assemble",
+                "endpoints",
+                "source"
+              ],
+              "max_dependency_wait_seconds": 21600,
+              "final_charge_conclusion": "unadjudicated",
+              "full_goal_complete": false
+            },
+            "max_dependency_wait_seconds": 43200,
+            "parallel_fields": {
+              "field1288": 1,
+              "field648": 5,
+              "field1284": 9
+            },
+            "field_cap_seconds": 7200,
+            "virtual_GiB_per_worker": 16,
+            "final_charge_conclusion": "unadjudicated",
+            "full_goal_complete": false
+          },
+          "archive": "native-full-charge251-work/interruption-0605/248",
+          "policy": "Keep completed receipts and scientific gates. Resume only missing actions, preserve unfinished files/logs. Serialize shared generated-code initialization only.",
+          "final_charge_conclusion": "unadjudicated",
+          "full_goal_complete": false
+        }
+      },
+      "max_dependency_wait_seconds": 43200,
+      "CPU_affinity": 3,
+      "virtual_GiB": 16,
+      "actions": [
+        "prepare",
+        "metric",
+        "coarse",
+        "fine",
+        "audit"
+      ],
+      "final_charge_conclusion": "unadjudicated",
+      "full_goal_complete": false
+    },
+    "max_dependency_wait_seconds": 43200,
+    "field_cap_seconds": 10800,
+    "virtual_GiB_per_process": 16,
+    "parallel_field_CPUs": [
+      4,
+      10,
+      14
+    ],
+    "physical_steps": 0,
+    "final_charge_conclusion": "unadjudicated",
+    "full_goal_complete": false
+  },
+  "wait_cap_seconds": 43200,
+  "action_cap_seconds": 1800,
+  "CPU_affinity": 2,
+  "virtual_GiB": 16,
+  "measured_common_seconds": 16.832778724000036,
+  "new_physical_steps": 0
+}

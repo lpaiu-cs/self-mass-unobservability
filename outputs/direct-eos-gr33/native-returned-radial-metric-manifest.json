@@ -1,0 +1,118 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "verdict": "RETURNED_RADIAL_METRIC_MATCHED_PHOTON_PROPAGATION_PENDING",
+  "actual_same_joint_solution_GR_computed": false,
+  "same_accepted_returned_boundary_reproduced": true,
+  "returned_metric_photon_propagation_complete": false,
+  "physical_GR_boundary_applied": false,
+  "physical_final_charge_solved": false,
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false,
+  "snapshot_KST": "2026-09-25T18:56:18.657644+09:00",
+  "controls": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "applied_boundary_relative": 3.9775615222794e-12,
+    "inverse_ray_age_fraction": 3.544120552589902e-11,
+    "kernel_controls": {
+      "packet": [
+        4.613297723035811e-14,
+        2.3105513895366514e-10
+      ],
+      "scalar": [
+        1.5984902133297456e-15,
+        7.713586134530668e-13
+      ]
+    },
+    "independent_metric_derivative_relative": {
+      "nt": 4.965770754110218e-10,
+      "lt": 5.163828049486952e-10,
+      "nup": 1.270619375229957e-08
+    },
+    "returned_metric_scale": 6.829406422338143e-59,
+    "source_knots": 575,
+    "same_applied_outgoing_continuation": true,
+    "complete_physical_boundary": false
+  },
+  "arithmetic": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "same_queries": 256,
+    "old_seconds": 0.14504317400002265,
+    "new_seconds": 0.032806515999993735,
+    "relative": {
+      "nu": 3.245639503578516e-17,
+      "lam": 3.215170278132171e-17,
+      "zeta": 1.0094790763475178e-18,
+      "lt": 3.412103894048264e-20,
+      "nt": 3.4226221649331163e-20,
+      "nup": 1.2699806309755604e-16,
+      "N": 0.0,
+      "b": 0.0,
+      "a": 0.0,
+      "nr": 0.0,
+      "lr": 0.0
+    },
+    "scope": "Finite metric and derivative comparisons; not a universal rounding-error certificate."
+  },
+  "document_prefixes": {
+    "docs/model-definition.md": {
+      "bytes": 280185,
+      "sha256": "975120caebe602afd0c194837d1594548045b06552734a0beb0189ee2dbcb8af"
+    },
+    "docs/observable-targets.md": {
+      "bytes": 271004,
+      "sha256": "67ab834cd955c9e584e4973a48b41536821e189e020792d9c0deabba73915510"
+    },
+    "docs/adiabatic-limit.md": {
+      "bytes": 265343,
+      "sha256": "559e9f542a6e877a0f537e64598d5326a079dc5ab9ba4dd9ff4f40a90bc0ce47"
+    },
+    "docs/nonadiabatic-regime.md": {
+      "bytes": 273835,
+      "sha256": "f863ff42e7e68aa655254ecd0bbb4ed84c198ca89a9f9e6ce3923e790451ed91"
+    },
+    "docs/failure-ledger-dynamic-chi.md": {
+      "bytes": 311439,
+      "sha256": "90cb4243120b34e770efbacfef71af5482c13e2d0ff6d38a47fd87865c8c9fa3"
+    },
+    "docs/dynamic-charge-completion.md": {
+      "bytes": 139603,
+      "sha256": "8f486e070287cd9ccf649a43e110240a8dcf4450f12adc22214e60355202effd"
+    }
+  },
+  "sha256": {
+    "verification/propagate_returned_exterior.py": "ed80f53154f4f195f28eeebf3fee45d1fe2057883a93832643060f48c1df4634",
+    "verification/propagate_returned_moments.py": "9a6a67de2c7e5571b1c0d0ebad03dd16c2b58316f3184c293c092fa1d02a8c87",
+    "notes/REQUEST262_RETURNED_RADIAL_METRIC_KO.md": "e035d91ce1ae34d65e84db742cc4efd017f9a86cfde982a98dde91a9a3a59907",
+    "docs/model-definition.md": "d4e734c2a8aae16c1a78158267f0d14cc760305026539dcaf61c359792607099",
+    "docs/observable-targets.md": "3766de0b43d92eeb1fc98acbf387d8c0a37165b4dd2c8c1925f12f15183b3cc2",
+    "docs/adiabatic-limit.md": "9620ee8f044514739eb03683a55ba221d60f906a5a9ee864acd4601b836f366b",
+    "docs/nonadiabatic-regime.md": "cc6d25659b0648c01682ab76a0b67f6fdbfef27960ed3831216c45d38d5613ac",
+    "docs/failure-ledger-dynamic-chi.md": "35f80ec58502ade35c9be12f8a3b46f0613a1d8ac34cb61ba9215366f8dd8067",
+    "docs/dynamic-charge-completion.md": "c93208e1894cab61ec161e950fc42c03c93ec2d638fec1ac0ee2554baa9ddbb7",
+    "outputs/direct-eos-gr33/native-returned-radial-metric/phase262-check-repair.py": "b0fe65e1f8d93c88deef36b9221ff66be6045519588468e0390199cd9603bdc8",
+    "outputs/direct-eos-gr33/native-returned-radial-metric/phase262-controller.py": "254a3fd820df33f92e0af27a75ce8baeb31e27d62ee672700c0add385f64d4bb",
+    "outputs/direct-eos-gr33/native-returned-radial-metric/phase262-production.py": "b49041188a7314bdb667b8ec84f7d13cd6b4f8a5489eb3ed5b852676ed11af8e",
+    "outputs/direct-eos-gr33/native-returned-radial-metric/pipeline-snapshot.json": "7c4ca4361fbb6b5c307d58c9c81f28978d48787b23fcbf8adec6f62ac6ff3455",
+    "outputs/direct-eos-gr33/native-returned-radial-metric/publication-producer.py": "21bcbd369223ef6638c72111512441ca9774630c78a308e6e6c8b438fd3286b9",
+    "outputs/direct-eos-gr33/native-returned-radial-metric/publication.json": "d2e5956382cc8a43f36a584c007c35d21cb7674794c2a8013d4d0b56aa58ec7c",
+    "outputs/direct-eos-gr33/native-returned-radial-metric/result.json": "1a251e99830763b35a932a496ca9f3e1aca35a439463e518c10ae2683dd2438c",
+    "outputs/direct-eos-gr33/native-returned-radial-metric/continued/arithmetic-check.json": "3782c87c4e83c5d93a2a63ed86219ba33d495e5b8440e18394483cd7fc9242bb",
+    "outputs/direct-eos-gr33/native-returned-radial-metric/continued/check-receipt.json": "e6f4c76be65a82cfb12cd613ffc50edf922ce1334a1b99731a482b51a2bb8b91",
+    "outputs/direct-eos-gr33/native-returned-radial-metric/continued/check-repair-receipt.json": "7f1ccf9d0b2ec5650f91e8416110b82716ab4f1247813a40f081fa1bdf346a62",
+    "outputs/direct-eos-gr33/native-returned-radial-metric/continued/check.json": "c07de4c63b88a2a680b6314d2d98aab51c74fdadf54058e8919553859fd32f95",
+    "outputs/direct-eos-gr33/native-returned-radial-metric/continued/controller-start.json": "6b4fc5a74834c8d7dece9ed86561772431019876d26d6609c17f25febaa34c19",
+    "outputs/direct-eos-gr33/native-returned-radial-metric/continued/execution-plan.json": "246c25bb85bd5c32e97389dd8ab04c5a14f4a35518ff740ca72eb93df612a32e",
+    "outputs/direct-eos-gr33/native-returned-radial-metric/continued/plan.json": "7079b1513495d8bdd9dde6fa638be66fc1a419a4a77c5a1c0df1847c3dd5f4e4",
+    "outputs/direct-eos-gr33/native-returned-radial-metric/continued/prepare-receipt.json": "bd0ae72c09d03e7b1b07e389fb3603fd4945b71216d9438bb61e9e6c664dd83c",
+    "outputs/direct-eos-gr33/native-returned-radial-metric/continued/symbolic.json": "f3671bf239516ebca4afa40a22c10a6c144b494b0f80e0f7fed598568753199e",
+    "outputs/direct-eos-gr33/native-returned-radial-metric/original/check-receipt.json": "32bf6f1af0d936d01cadbaecd5225e6b4c465f2251c6257dbe27f253b5a09cbd",
+    "outputs/direct-eos-gr33/native-returned-radial-metric/original/check.json": "7ed5efe3f2c748c563278d215e8528f8b9628fa27de80e477d4131a85f21a207",
+    "outputs/direct-eos-gr33/native-returned-radial-metric/original/cost-stop.json": "daa4e7514548f93d9d52d51c04a644ae6c863ca6fb7ffbce67a864dc74bed50e",
+    "outputs/direct-eos-gr33/native-returned-radial-metric/original/plan.json": "ce1a837dd28c75159b81f3d37e4b1c10c9055053ec0348a26683a6d04f1dfa96",
+    "outputs/direct-eos-gr33/native-returned-radial-metric/original/prepare-receipt.json": "754db8b0d1c63a63a037e45203b17e8052f90cdb6baea5193cc12a4a7f50fed0",
+    "outputs/direct-eos-gr33/native-returned-radial-metric/original/symbolic.json": "53b42d99bfcecae804b151f72d4dee45e5f66460cc3e8bf69ff71af1158df3e3"
+  }
+}

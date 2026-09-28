@@ -1,0 +1,20 @@
+{
+  "classification": "Counterexample candidate",
+  "original650s_forecast_verdict": false,
+  "measured_point_seconds": 589.519579738834,
+  "measured_upper_seconds": 1179.039159477668,
+  "decision": "Reassess once before any full production: finish the original three corrected-motion paths with1200s total wall cap, retaining the2x measured margin. This evaluates the dominant unresolved coupling using changed actual forcing, not another negligible GR correction.",
+  "cheaper_alternatives": "All existing EOS/background/primary-GR histories and successful prefixes are reused. The previous full photons used a different mechanical source and cannot decide the corrected late waveform residual. Early-only results cannot bound the final signal. No GPU port or unregistered coarser physics model is introduced.",
+  "scope": "One original-horizon production,three existing paths,three CPU processes,one thread each,3GiB virtual memory each. No new physical grid,clock,frequency,angle,EOS call,extended horizon or repeated waveform sweep.",
+  "stop": "Hard1200s total. Stop all paths on any original numerical gate failure. Preserve prefixes/completed paths. No further automatic increase or physical production repeat.",
+  "physical_response_and_port_methods_AST_identical": true,
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_corrected_motion_feedback.py": "669ecac5d3d9e7a626a7423db2acd319f1915409d543c66a15adbb60e091a371",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/first-producer.py": "3b2f7c628af9f0a0392eeff9dfbacbb920a088826b5c824d21d5936f696de050",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/plan.json": "82dce97b1d57a247b136ce6a91e0ef4e3e41d26915f326657b3da77ac3960dfa",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/pilot.json": "c007b910a3e29ee55028042b550ab86239ae488a424aec28af05b8c76fb52b5e",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_updated_joint_feedback.py": "d576b977693d273c0acd0cabd98bb87049e4fbff4019d40df21dddf4a27f57fe",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_corrected_joint_return.py": "f8991930808a653d659a4a1d97da558a00762137617932121c266b90b9bb855c",
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_corrected_joint_return.py": "60fdc8467692dae6f57eb032dbe35f54b1c6cb3bfc1e1e225e087e9b62a2b59f"
+  }
+}

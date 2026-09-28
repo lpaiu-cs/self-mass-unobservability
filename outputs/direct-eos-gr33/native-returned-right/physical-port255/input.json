@@ -1,0 +1,85 @@
+{
+  "classification": "Counterexample candidate",
+  "rows": [
+    {
+      "component": "high",
+      "clock": 64,
+      "geometry_order": 4,
+      "physical_launch_energy_conversion_erg": -0.008695808385643386
+    },
+    {
+      "component": "low",
+      "clock": 64,
+      "geometry_order": 4,
+      "physical_launch_energy_conversion_erg": -7.579857763316415e-28
+    },
+    {
+      "component": "high",
+      "clock": 128,
+      "geometry_order": 4,
+      "physical_launch_energy_conversion_erg": -0.008695842724288524
+    },
+    {
+      "component": "low",
+      "clock": 128,
+      "geometry_order": 4,
+      "physical_launch_energy_conversion_erg": -7.579879231053771e-28
+    },
+    {
+      "component": "high",
+      "clock": 64,
+      "geometry_order": 8,
+      "physical_launch_energy_conversion_erg": -0.008695808385643418
+    },
+    {
+      "component": "low",
+      "clock": 64,
+      "geometry_order": 8,
+      "physical_launch_energy_conversion_erg": -7.579858102076161e-28
+    },
+    {
+      "component": "high",
+      "clock": 128,
+      "geometry_order": 8,
+      "physical_launch_energy_conversion_erg": -0.008695842724288512
+    },
+    {
+      "component": "low",
+      "clock": 128,
+      "geometry_order": 8,
+      "physical_launch_energy_conversion_erg": -7.5798795698511635e-28
+    }
+  ],
+  "controls": {
+    "high": {
+      "time": 3.948857653458379e-06,
+      "quadrature": 1.2715464669771067e-15
+    },
+    "low": {
+      "time": 2.8322052883155036e-06,
+      "quadrature": 4.4696935980264006e-08
+    }
+  },
+  "passed": true,
+  "actual_applied_low_metric": "128-g8 for both physical clocks",
+  "propagation_work_complete": false,
+  "corrected_metric_applied_to_actual_return": false,
+  "physical_final_charge_solved": false,
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false,
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/.phase255-port-input.py": "faa8d22895da4cbee8a3ccb45e85b947556b26584cb61327a7772c168249412b",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/reconcile_native_mass_energy.py": "6d44226622af1a8da0f49362167141ec320b21ea436774cf544e9b66a0aa3502",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_incident_drive.py": "3e01fc956f56354fc8be01be9ccdf864eb7c6435591fe83b3db10cc90bfbecb0",
+    "outputs/direct-eos-gr33/native-retained-completion/evolution/coupled-128.npz": "08990bcd0980c8f45b1777e071734c3601a75f90096c8c6f5edc8d16d76ab2b0",
+    "native-incident-drive155-work/metric/corrected/metric-128-g8.npz": "046094350776146c01a52a793b4932239b3404eb85e6be4be5c156ef0e95d9a0",
+    "native-returned-krylov254-work/metric/metric-128-g4.npz": "0032d3a60fd390c516820f8e6259abb704469676b1fe708f33e799fd8b2c0ee4",
+    "native-retarded-extension248-work/gr/fields-128-g4.npz": "de01ffb00dfce6313367b1123b94ae46dc28c2c10b295b738abfeced52b081d4",
+    "native-incident-drive155-work/fields/born-g4.npz": "f18d3a96206992b5878fcb927a43fab403a19b393f3413a0e3a8121019ca9083",
+    "native-common-arithmetic239-work/sweep-1/photons/complete-64.npz": "78293a016d40373449f40c8f57fd36c6cb7cc5422e23cb6f21935cc96c5fc1bc",
+    "native-common-arithmetic239-work/sweep-1/photons/complete-128.npz": "21f4bb184474f832e26b8d5bb309e7f1050bce7070b8ddd7325e262eacbf8645",
+    "native-returned-krylov254-work/metric/metric-128-g8.npz": "925bb2065144ac3ffb57df89a5853e6792fdcf8de68a6c80d04d589c03bd8aca",
+    "native-retarded-extension248-work/gr/fields-128-g8.npz": "6315597ed437d4d5cd667e44c30dd5faa28ba1ab663a6332ff03df508b9b6ea5",
+    "native-incident-drive155-work/fields/born-g8.npz": "4a4f1299caa9675a4a5a87c178b883ba242aeec296361a555182328dc429a058"
+  }
+}

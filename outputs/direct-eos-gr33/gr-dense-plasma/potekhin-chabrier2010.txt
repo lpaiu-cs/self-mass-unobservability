@@ -1,0 +1,441 @@
+arXiv:1001.0690v1  [physics.plasm-ph]  5 Jan 2010
+Contributions to Plasma Physics, to be published in vol. 50,issue 1 (Jan. 2010)
+Thermodynamic functions of dense plasmas: analytic approx i-
+mations for astrophysical applications
+Alexander Y. Potekhin∗ 1,2 and Gilles Chabrier2
+1 Ioffe Physical-Technical Institute, 194021 St. Petersburg, Russia
+2 Ecole Normale Sup´ erieure de Lyon, CRAL (UMR CNRS No. 5574),69364 Lyon Cedex 07, France
+Received 18 September 2009, revised 18 November 2009, accepted 18 November 2009
+Key words Thermodynamics of plasmas, strongly-coupled plasmas, degenerate stars.
+PACS 52.25.Kn, 05.70.Ce, 52.27.Gr, 97.20.Rp
+We brieﬂy review analytic approximations of thermodynamic functions of fully ionized nonideal electron-
+ion plasmas, applicable in a wide range of plasma parameters , including the domains of nondegenerate and
+degenerate, nonrelativistic and relativistic electrons, weakly and strongly coupled Coulomb liquids, classical
+and quantum Coulomb crystals. We present improvements to pr eviously published approximations. Our code
+for calculation of thermodynamic functions based on the reviewed approximations is made publicly available.
+Copyright line will be provided by the publisher
+1 Introduction
+In a previous work [1, 2], we performed hypernetted chain (HN C) calculations and proposed analytic formulae
+for the equation of state (EOS) of electron-ion plasmas (EIP). An alternative analytic approximation for the EOS
+of EIP was proposed in [3,4]. A comparison (e.g., [1,4]) shows that the formulae in [2] have a higher accuracy, in
+particular for the thermodynamic contributions of ion-ionand ion-electron correlations in the regime of moderate
+Coulomb coupling. Recently [5, 6], we studied classical ion mixtures and proposed a correction to the linear
+mixing rule. In this paper we review the analytic expressions for all contributions to thermodynamic functions and
+introduce some practical modiﬁcations to the previously pu blished formulae. The reviewed analytic description
+of the thermodynamic functions of Coulomb plasmas is realized in a publicly available computer code.
+Let ne and ni be the electron and ion number densities,A and Z the ion mass and charge numbers, respectively.
+The electric neutrality implies ne = Zn i. In this paper we neglect positrons (they can be described us ing the
+same formulae as the electrons; see, e.g., Ref. [7]) and free neutrons (see, e.g., Ref. [8]), and consider mainly
+plasmas containing a single type of ions (for the extension to multicomponent mixtures, see [5, 6]).
+The state of a free electron gas is determined by the electron number density ne and temperature T . Instead
+of ne it is convenient to introduce the dimensionless density parameter rs = ae/a 0, where a0 is the Bohr radius
+and ae = ( 4
+3 πn e)− 1/ 3. The parameter rs can be easily evaluated from the relations rs = 1 . 1723 n− 1/ 3
+24 , where
+n24 ≡ ne/ 1024 cm− 3, or rs = (ρ0/ρ )1/ 3, where ρ0 = 2. 6752 (A/Z ) g cm− 3. The analogous density parameter
+for the ion one-component plasma (OCP) isRS = aimi(Ze)2/ ℏ2 = 1822. 89 rsAZ 7/ 3, where mi is the ion mass
+and ai ≡ ( 4
+3 πn i)− 1/ 3 = aeZ 1/ 3 is the ion sphere radius.
+At stellar densities it is convenient to use, instead of rs, the relativity parameter [9] xr = pF/m ec =
+1. 00884 ( ρ6Z/A )1/ 3 = 0 . 014005 r− 1
+s , where pF = ℏ (3π 2ne)1/ 3 is the electron Fermi momentum and ρ6 ≡
+ρ/ 106 g cm− 3. The Fermi kinetic energy is ǫF = c
+√
+(mec)2 + p2
+F − mec2, and the Fermi temperature equals
+TF ≡ ǫF/k B = Tr (γr − 1), where Tr ≡ mec2/k B = 5 . 93 × 109 K, γr ≡
+√
+1 + x2
+r , and kB is the Boltzmann
+constant. If xr ≪ 1, then TF ≈ 1. 163 × 106 r− 2
+s K. The effects of special relativity are controlled by xr in
+degenerate plasmas (T ≪ TF) and by τ ≡ T /T r in nondegenerate plasmas (T ≫ TF).
+The ions are nonrelativistic in most applications. The stre ngth of the Coulomb interaction of ions is char-
+acterized by the Coulomb coupling parameter Γ = ( Ze)2/a ikBT = Γ eZ 5/ 3, where Γe ≡ e2/a ekBT ≈
+22. 747 T − 1
+6 (ρ6Z/A )1/ 3 and T6 ≡ T / 106 K.
+∗ Corresponding author: e-mail: palex@astro.ioffe.ru
+Copyright line will be provided by the publisher
+2 A. Y . Potekhin and G. Chabrier: Analytic equation of state o f fully ionized plasmas
+Thermal de Broglie wavelengths of the ions and electrons areusually deﬁned as λ i =
+(
+2π ℏ2/m ikBT
+) 1/ 2
+and
+λ e =
+(
+2π ℏ2/m ekBT
+) 1/ 2
+. The quantum effects on ion motion are important either at λ i ≳ ai or at T ≪ Tp,
+where Tp ≡ (ℏω p/k B) ≈ 7. 832 × 106 (Z/A ) √ ρ6 K is the plasma temperature determined by the ion plasma
+frequency ω p =
+(
+4πe 2 niZ 2/m i
+) 1/ 2
+. The corresponding dimensionless parameter is η ≡ Tp/T .
+Assuming commutativity of the kinetic and potential energy operators and separation of the traces of the
+electronic and ionic parts of the Hamiltonian, the total Hel mholtz free energy F can be conveniently written as
+F = F (i)
+id + F (e)
+id + Fee + Fii + Fie, where F (i)
+id and F (e)
+id denote the ideal free energy of ions and electrons,
+and the last three terms represent an excess free energy aris ing from the electron-electron, ion-ion, and ion-
+electron interactions, respectively. This decompositioninduces analogous decompositions of pressure P , internal
+energy U, entropy S, the heat capacity CV , and the pressure derivatives χ T = ( ∂ ln P/∂ ln T )V and χ ρ =
+− (∂ ln P/∂ ln V )T . Other second-order functions can be expressed through these ones by Maxwell relations.
+2 Ideal part of the free energy
+The free energy of a gas of Ni = niV nonrelativistic classical ions is F (i)
+id = NikBT
+[
+ln(niλ 3
+i /M ) − 1
+]
+, where
+M is the spin multiplicity. In the OCP, it can be written in term s of the dimensionless plasma parameters as
+F (i)
+id = NikBT [3 ln η − 1. 5 ln Γ − 0. 5 ln(6/π ) − ln M − 1] .
+The free energy of the electron gas is given by F (e)
+id = µ eNe − P (e)
+id V, where µ e is the electron chemical
+potential. The pressure and the number density are functions of µ e and T :
+P (e)
+id = 8
+3√ π
+kBT
+λ 3
+e
+[
+I3/ 2(χ e, τ ) + τ
+2 I5/ 2(χ e, τ )
+]
+, n e = 4√ π λ 3
+e
+[
+I1/ 2(χ e, τ ) + τ I3/ 2(χ e, τ )
+]
+, (1)
+where χ e = µ e/k BT (here, we do not include the rest energy mec2 in µ e) and
+Iν (χ e, τ ) ≡
+∫ ∞
+0
+xν (1 + τ x/ 2)1/ 2
+exp(x − χ e) + 1 dx (2)
+is a Fermi-Dirac integral. An analytic approximation for µ e(ne) has been derived in [1].
+In Ref. [1] we calculated Iν (χ e, τ ) using analytical approximations [7]. These approximations are piecewise:
+below, within, and above the interval 0. 6 ≤ χ e < 14. Their typical fractional accuracy is a few × 10− 4, the
+maximum error and discontinuities at the boundaries reach ∼ 0. 2%. For the ﬁrst and second derivatives, the
+errors and discontinuities lie within 1.5%. At χ e ≥ 14 we use the Sommerfeld expansion (e.g., [10])
+Iν (χ e, τ ) ≈ I (0)
+ν (˜µ ) + π 2
+6 τ2I (2)
+ν (˜µ ) + 7π 4
+360 τ4I (4)
+ν (˜µ ) + . . . , (3)
+where we have deﬁned ˜µ = χ eτ = µ e/m ec2,
+I (0)
+ν (ǫ) =
+∫ ǫ
+0
+I (1)
+ν (ǫ′) dǫ′ =
+∫ x0
+0
+( √
+1 + x2 − 1
+) ν − 1/ 2 x2 dx√
+1 + x2 , I (n+1)
+ν (˜µ ) = dI (n)
+ν (˜µ )
+d˜µ , (4)
+I (1)
+ν (ǫ) = ǫν √ 2 + ǫ and x0 ≡
+√
+˜µ (2 + ˜µ ). In particular,
+I (0)
+1/ 2(˜µ ) = [ x0γ0 − ln(x0 + γ0)]/ 2, I (0)
+3/ 2(˜µ ) = x3
+0/ 3 − I (0)
+1/ 2(˜µ ), I (0)
+5/ 2(˜µ ) = x3
+0γ0/ 4 − 2x3
+0/ 3 + 1. 25 I (0)
+1/ 2(˜µ ),
+where γ0 ≡
+√
+1 + x2
+0 = 1 + ˜µ (note that, if ˜µ = ˜ǫ, where ˜ǫ ≡ ǫF/m ec2, then x0 = xr and γ0 = γr).
+At small ˜µ, accuracy can be lost because of numerical cancellations ofclose terms of opposite signs in Eq. (3)
+and in the respective partial derivatives. In this case we use the expansion
+Iν (χ, τ ) = I nr
+ν (χ ) +
+∞∑
+m=0
+(− 1)m (2m − 1)!! τm+1
+4m+1m! I nr
+ν +m+1(χ ), I nr
+ν (χ ) =
+∫ ∞
+0
+xν dx
+ex− χ + 1 , (5)
+Copyright line will be provided by the publisher
+cpp header will be provided by the publisher 3
+where (2m − 1)!! ≡ ∏m
+k=1(2k − 1) should be replaced by 1 for m = 0 . At large χ , the nonrelativistic Fermi
+integrals I nr
+ν (χ ) are calculated with the use of the Sommerfeld expansion. Suf ﬁciently smooth and accurate
+overall approximations for functions Iν (χ e, τ ) with ν = 1
+2, 3
+2, and 5
+2 are provided by switching to Eq. (5) at
+χ e ≥ 14 and ˜µ < 0. 1, while retaining the terms up to m = 3.
+The chemical potential at ﬁxedne is obtained with fractional accuracy∼ T 2/T 2
+F by using Eqs. (1), (3), setting
+I (n)
+ν (˜µ ) ≈ I (n)
+ν (˜ǫ) + I (n+1)
+ν (˜ǫ) (˜µ − ˜ǫ), and dropping the terms that contain the product (˜µ − ˜ǫ) τ2. Then at
+T ≪ TF
+∆˜ǫ ≡ ˜ǫ − ˜µ ≈ π 2τ2
+6 ˜ǫ
+1 + 2x2
+r
+γr(1 + γr) , ∆F ≡ F (e)
+id − F (e)
+0 ≈ − 1
+2 T S(e)
+id ≈ − PrV xrγrτ2
+6 , (6)
+where F (e)
+0 = (PrV / 8π 2)[xr (1+2 x2
+r ) γr − ln(xr +γr)]− Nemec2 is the zero-temperature limit [11] (without the
+rest energy Nemec2), and Pr ≡ mec2 (mec/ ℏ)3 = 1. 4218 × 1025 dyn cm− 2 is the relativistic unit of pressure.
+Accordingly, P (e)
+id ≈ P (e)
+0 + ∆P, where P (e)
+0 = ( Pr/ 8π 2)
+[
+xr
+( 2
+3 x2
+r − 1
+)
+γr + ln(xr + γr)
+]
+, and ∆P =
+(Pr/ 18) τ2xr (2 + x2
+r )/γ r. In this case, χ (e)
+ρ ≈ Prx5
+r / 9π 2γrP (e)
+id , χ (e)
+T ≈ 2∆P/P (e)
+id , C (e)
+V ≈ π 2kBNe γrτ /x 2
+r .
+In order to minimize numerical jumps at the transition between the ﬁt at χ e < 14 and the Sommerfeld expansion
+at χ e > 14, we multiply the expressions for ∆F by empirical correction factor (1 + ∆˜ǫ/ ˜ǫ)− 1, and those for χ (e)
+T
+and C(e)
+V by [1 + (4 − 2xr/γ r) ∆˜ǫ/ ˜ǫ]− 1.
+At xr < 10− 5 we replace F (e)
+0 and P (e)
+0 by their nonrelativistic limits, F (e)
+0 /V = Prx5
+r / 10π 2 and P (e)
+0 =
+Prx5
+r / 15π 2 ∝ n5/ 3
+e . In the opposite case of xr ≫ 1, one has P (e)
+0 = Prx4
+r / 12π 2 ∝ n4/ 3
+e .
+3 Electron exchange and correlation
+Electron exchange-correlation effects were studied by many authors. For the reasons explained in [1], we adopt
+the ﬁt to Fee presented in Ref. [12]. It is valid at any densities and temperatures, provided that xr ≪ 1.
+In Ref. [2] we implemented an interpolation between the nonrelativistic ﬁt [12] and approximation [3,4] valid
+for strongly degenerate relativistic electrons. However, later on we found that such an interpolation may cause
+an unphysical behavior of the heat capacity in a certain density-temperature domain. Therefore we have reverted
+to the original formula [12], taking into account that in applications, as long as the electrons are relativistic, their
+exchange and correlation contributions are orders of magni tude smaller than the other contributions to the EOS
+of EIP (see, e.g., [8, 13]).
+4 One-component plasma
+4.1 Coulomb liquid
+For the reduced free energy of the ion-ion interaction fii ≡ Fii/N ikBT in the liquid OCP at any values of Γ we
+use the analytic approximation derived in Ref. [2]. In order to extend its applicability range from T ≫ Tp to
+T ∼ Tp, we add the lowest-order quantum corrections to the Helmhol tz free energy [14]: f (2)
+q = η2/ 24. The
+next-order correction ∝ ℏ4 has been obtained in [15]. These corrections have limited ap plicability, because as
+soon as η becomes large, the Wigner expansion diverges and the plasma forms a quantum liquid, whose free
+energy is not known in an analytic form.
+A classical OCP freezes at temperature Tm corresponding to Γ = 175 , but in real plasmas Tm is affected by
+electron polarization [2, 16] and quantum effects (e.g., [17–19]). Hence the liquid does not freeze, regardless of
+T , at densities larger than the critical one. The critical den sity values in the OCP correspond to RS ≈ 140 – 160
+for bosons and RS ≈ 90 – 110 for fermions. In astrophysical applications, the appearance of quantum liquid can
+be important for hydrogen and helium plasmas (see, e.g., Ref. [18] for discussion).
+4.2 Coulomb crystal
+The reduced free energy of the Coulomb crystal isflat ≡ Flat/N ikBT = C0Γ+1 . 5u1η+fth+fah. Here, the ﬁrst
+term is the Madelung energy ( C0 ≈ − 0. 9), the second represents zero-point ion vibrations energy ( u1 ≈ 0. 5),
+Copyright line will be provided by the publisher
+4 A. Y . Potekhin and G. Chabrier: Analytic equation of state o f fully ionized plasmas
+Fig. 1 Anharmonic contribution to the reduced free energy
+of an ion lattice as a function of the quantum parameter
+η = Tp/T for two values of the Coulomb coupling param-
+eter, Γ = 175 (upper curves) and 1000 (lower curves). A
+comparison of different approximations (see text): Wigner
+expansion (long-dashed lines); an approximation from [25]
+(IOI, dotted lines); the same approximation with the coefﬁ-
+cients adjusted to Ref. [21] (short-dashed lines); and present
+interpolation (8) (solid lines). The points with errorbars
+show simulation results from [25] for Γ = 1000 .
+Fig. 2 Harmonic and anharmonic lattice contributions to
+the reduced heat capacity at Γ = 175 and 1000. The har-
+monic lattice contribution according to Ref. [20] (dot-dashed
+lines) is compared to the model [18] (long-short-dash lines )
+and to the anharmonic correction in different approximations
+(see text): a derivative of the IOI ﬁt [25] (dotted lines: ori g-
+inal; short-dashed lines: improved; see text) and a corre-
+sponding derivative of Eq. (8) (solid lines).
+fth is the thermal correction in the harmonic approximation, an d fah is the anharmonic correction. We use the
+most accurate values of C0, u1, and analytic approximations to fth for bcc and fcc Coulomb OCP lattices, which
+have been obtained in [20].
+For the classical anharmonic corrections, 11 ﬁtting expressions were given in [21]. We have chosen one of
+them: f (0)
+ah (Γ) = a1/ Γ + a2/ 2Γ2 + a3/ 3Γ3, with a1 = 10 . 9, a2 = 247 , and a3 = 1 . 765 × 105, because this
+choice is most consistent with the perturbation theory [17, 22].
+In applications one needs a continuous extension for the fre e energy to η ̸= 0 . With the leading quantum
+anharmonic correction at small η one has [15]
+fah ≈ f (0)
+ah (Γ) − (0. 0018/ Γ + 0. 085/ Γ2) η4. (7)
+At T → 0, the quantum anharmonic corrections were studied in [17, 23 , 24], where an expansion in powers of
+R− 1/ 2
+S was obtained, assumingRS ≫ 1. The leading term of this expansion can be written in the formfah,T → 0 =
+− b1η2/ Γ. In the literature one ﬁnds different estimates for b1; we use b1 = 0 . 12 as an approximation consistent
+with [23, 24]. Free and internal energies of ﬁnite-temperature quantum crystals were calculated using quantum
+Monte Carlo methods in [19, 25, 26]. Iyetomi et al. in Ref. [25 ] (hereafter IOI) proposed an analytic expression
+for the quantum anharmonic corrections. However, differen ces between the numerical results in [19, 25, 26]
+are comparable to the differences between the numerical res ults and the harmonic approximation. Therefore,
+ﬁnite-temperature anharmonic corrections cannot be accurately determined from the listed results.
+In order to reproduce the zero-temperature and classical li mits, we multiply f (0)
+ah by exponential suppression
+factor e− c1η 2
+and add fah,T → 0. Then we have
+fah = f (0)
+ah (Γ) e− c1η 2
+− b1η2/ Γ. (8)
+Copyright line will be provided by the publisher
+cpp header will be provided by the publisher 5
+According to Eq. (7), the Taylor expansion coefﬁcient at η2/ Γ equals zero. In order to reproduce this property,
+we set c1 = b1/a 1 ≈ 0. 0112. In Fig. 1, the resulting approximation for the free energy a s a function of η (solid
+lines) is compared to the semiclassical expression [Eq. (7) ; long-dashed lines] and to the elaborated IOI ﬁtting
+formula: the dotted lines correspond to the original coefﬁc ients of this ﬁt, chosen by IOI so as to reproduce the
+results of Ref. [22] at η → 0, while the short-dashed curves show the same ﬁt, but with the coefﬁcients adjusted
+to more recent results [21] at η → 0. The curves of the two latter types nearly coincide at Γ = 1000 , but differ
+near the melting point Γ = 175 .
+Interpolation (8) (unlike, for example, Pad´ e approximations [27]) does not produce an unphysical behavior of
+thermodynamic functions. In particular, anharmonic corre ctions to the heat capacity and entropy do not exceed
+the reference (harmonic-lattice) values of these quantities at any η. In Fig. 2, we show the ion contributions to the
+reduced heat capacity of the ion lattice cV,i ≡ CV,i /N ikB, calculated through derivatives of Eq. (8) (solid lines),
+and compare it to the contributions calculated through deri vatives of the ﬁtting formula in [25] (short-dashed
+and dotted lines). In the same ﬁgure we plot the harmonic-cry stal contribution to the reduced heat capacity: the
+short-dash–long-dash line corresponds to the model of Ref. [18] (which we adopted in [2]), while the dot-dashed
+line corresponds to the most accurate formula [20].
+Interpolation Eq. (8) should be replaced by a more accurate f ormula in the future when accurate ﬁnite-
+temperature anharmonic quantum corrections become available.
+5 Electron polarization
+5.1 Coulomb liquid
+Electron polarization in Coulomb liquid was studied by pert urbation [13, 28] and HNC [1, 2, 29, 30] techniques.
+The results for Fie are ﬁtted by analytic expressions in [2]. This ﬁt is accurate within several percents, and it
+exactly recovers the Debye-H¨ uckel limit for EIP atΓ → 0 and the Thomas-Fermi result [9] atΓ ≫ 1 and Z ≫ 1.
+5.2 Coulomb crystal
+Calculation of thermodynamic functions for a Coulomb cryst al with allowance for the electron polarization is a
+complex problem. For classical ions, the simplest screening model consists in replacing the Coulomb potential by
+the Yukawa potential. For instance, there were molecular dynamics simulations of classical Yukawa systems [16]
+and path-integral Monte Carlo simulations of a quantum Yukawa crystal at RS = 200 [31]. However, the Yukawa
+interaction reﬂects only the small-wavenumber asymptote of the electron dielectric function. A rigorous treatment
+would consist in calculating the dynamical matrix and solving a corresponding dispersion relation for the phonon
+spectrum. The ﬁrst-order perturbation approximation for the dynamical matrix of a classical Coulomb solid with
+the polarization corrections was developed in Ref. [32]. The phonon spectrum in such a quantum crystal has been
+calculated only in the harmonic approximation [33], which h as a restricted applicability: for example, it cannot
+reproduce the known classical (T ≫ Tp) limit of the anharmonic ie contribution to the heat capacity.
+A semiclassical perturbation approach was used in [2]. The results were ﬁtted by the analytic expression
+fie = − f∞ (xr) Γ [1 + A(xr) (Q(η)/ Γ)s] . (9)
+In the classical Coulomb crystal, Q = 1 , f∞ (x) = b1
+√
+1 + b2/x 2, and A(x) = ( b3 + a3x2)/ (1 + b4x2).
+Parameters s and b1–b4 depend on Z and are chosen so as to ﬁt the perturbational results; a3 is a constant. All
+the parameters weakly depend on the lattice type; they are explicit in [2] for the bcc and fcc lattices.
+The factor Q(η) in Eq. (9) is designed to reproduce the suppression of the dependence of Fie on T at T ≪ Tp.
+For the classical solid, Q(0) = 1 . In the quantum limit ( η → ∞ ) Q(η) ≃ qη, so that the ratio Q/ Γ in Eq. (9)
+becomes independent of T . The proportionality coefﬁcient q was found numerically in [2]; it equals 0.205 for
+the bcc lattice.
+The form of Q(η) suggested in [2] assumed a too slow decrease of the heat capac ity (CV,ie ∝ η− 1 ∝ T ) at
+η → ∞ , which signals the violation of the employed semiclassical perturbation theory in the strong quantum
+limit, related to the approximate form of the ion structure factor used in the calculations, as discussed in [2,8]. In
+order to ﬁx this problem, we have changed the form of Q(η) to
+Q(η) =
+[
+ln
+(
+1 + e(qη )2 )] 1/ 2 [
+ln
+(
+e − (e − 2)e− (qη )2 )] − 1/ 2
+. (10)
+Copyright line will be provided by the publisher
+6 A. Y . Potekhin and G. Chabrier: Analytic equation of state o f fully ionized plasmas
+This form of Q(η) has the correct limits at η → 0 and η → ∞ and is compatible with the numerical results [2].
+In addition, it eliminates the problematic ie contributions to the heat capacity and entropy at η ≫ 1. It can
+be improved in the future when the polarization corrections for the quantum Coulomb crystal are accurately
+evaluated.
+6 Conclusions
+We have reviewed analytic approximations for the EOS of full y ionized electron-ion plasmas and described
+recent improvements to the previously published approximations, taking into account nonideality due to ion-ion,
+electron-electron, and electron-ion interactions. The presented formulae are applicable in a wide range of plasma
+parameters, including the domains of nondegenerate and deg enerate, nonrelativistic and relativistic electrons,
+weakly and strongly coupled Coulomb liquids, classical and quantum Coulomb crystals.
+For brevity we have considered plasmas composed of electron s and one type of ions. Extension to the case
+where several types of ions are present is provided by [5, 6].
+We have made the Fortran code that realizes the analytical ap proximations for the free energy and its deriva-
+tives, described in this paper, freely available in the Internet 1.
+Acknowledgements The work of A.Y .P. was partially supported by the Rosnauka Grant NSh-2600.2008.2 and the RFBR
+Grant 08-02-00837, and by CompStar, a Research Networking Programme of the European Science Foundation.
+References
+[1] G. Chabrier and A. Y . Potekhin, Phys. Rev. E58, 4941 (1998).
+[2] A. Y . Potekhin and G. Chabrier, Phys. Rev. E62, 8554 (2000).
+[3] W. Stolzmann and T. Bl¨ ocker, Phys. Lett. A221, 99 (1996).
+[4] W. Stolzmann and T. Bl¨ ocker, Astron. Astrophys.361, 1152 (2000).
+[5] A. Y . Potekhin, G. Chabrier, and F. J. Rogers, Phys. Rev. E79, 016411 (2009).
+[6] A. Y . Potekhin, G. Chabrier, A. I. Chugunov, H. E. DeWitt,and F. J. Rogers, Phys. Rev. E80, 047401 (2009).
+[7] S. I. Blinnikov, N. V . Dunina-Barkovskaya, and D. K. Nadyozhin, Astrophys. J. Suppl. Ser. 106 171 (1996); erratum:
+ibid. 118, 603 (1998).
+[8] P. Haensel, A. Y . Potekhin, and D. G. Yakovlev,Neutron Stars 1: Equation of State and Structure (Springer, New York,
+2007).
+[9] E. E. Salpeter, Astrophys. J. 134, 669 (1961).
+[10] S. Chandrasekhar, An Introduction to the Study of Stellar Structure(University of Chicago Press, Chicago, 1939; Dover,
+New York, 1957), Chap. X.
+[11] J. Frenkel, Z. f. Physik 50, 234 (1928).
+[12] S. Ichimaru, H. Iyetomi, and S. Tanaka, Phys. Rep. 149, 91 (1987).
+[13] D. G. Yakovlev and D. A. Shalybkov, Sov. Astron. Lett.13, 308 (1987); Astrophys. Space Phys. Rev. 7, 311 (1989).
+[14] J. P. Hansen, Phys. Rev. A 8, 3096 (1973).
+[15] J. P. Hansen and P. Vieillefosse, Phys. Lett. A 53, 187 (1975).
+[16] S. Hamaguchi, R. T. Farouki, and D. H. E. Dubin, Phys. Rev. E 56, 4671 (1997).
+[17] H. Nagara, Y . Nagata, and T. Nakamura, Phys. Rev. A36, 1859 (1987).
+[18] G. Chabrier, Astrophys. J. 414 695 (1993).
+[19] M. D. Jones and D. M. Ceperley, Phys. Rev. Lett. 76, 4572 (1996).
+[20] D. A. Baiko, A. Y . Potekhin, and D. G. Yakovlev, Phys. Rev. E 64, 057402 (2001).
+[21] R. T. Farouki and S. Hamaguchi, Phys. Rev. E 47, 4330 (1993).
+[22] D. H. E. Dubin, Phys. Rev. A 42, 4972 (1990).
+[23] W. J. Carr, Jr., R. A. Coldwell-Horsfall, and A. E. Fein,Phys. Rev. 124, 747 (1961).
+[24] R. C. Albers and J. E. Gubernatis, Phys. Rev. B 33, 5180 (1986); erratum: ibid. 42, 11373 (1990).
+[25] H. Iyetomi, S. Ogata, and S. Ichimaru, Phys. Rev. B 47, 11703 (1993).
+[26] G. Chabrier, F. Douchin, and A. Y . Potekhin, J. Phys.: Condens. Matter 14, 9133 (2002).
+[27] A. I. Chugunov and D. A. Baiko, Physica A 352, 397 (2005)
+[28] S. Galam and J. P. Hansen, Phys. Rev. A 14, 816 (1976).
+[29] G. Chabrier, J. Phys. (France) 51, 1607 (1990).
+[30] G. Chabrier and N. W. Ashcroft, Phys. Rev. A 42, 2284 (1990).
+[31] B. Militzer and R. L. Graham, J. Phys. Chem. Sol. 67, 2136 (2006).
+[32] E. L. Pollock and J. P. Hansen, Phys. Rev. A 8, 3110 (1973).
+[33] D. A. Baiko, Phys. Rev. E 66, 056405 (2002).
+1 http://www.ioffe.ru/astro/EIP/
+Copyright line will be provided by the publisher

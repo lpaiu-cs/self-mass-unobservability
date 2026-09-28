@@ -1,0 +1,8 @@
+patched True gate strings 2 newton True
+gas_gate first proposal of 265b -> True
+gas_gate H 2.1e-13 -> False ; Etilde 1.1e-13 -> False ; stage1 S 1.1e-13 -> False
+plan gate {'Etilde': 1e-13, 'H': 2e-13, 'B': 1e-13, 'S': 1e-13} H attempts {'first': [1.00394, 1.003, 1.00232], 'newton12': [1.00394, 1.003, 1.00232, 1.00282, 1.00274, 1.00282, 1.00274, 1.00282, 1.00274, 1.00282, 1.00274, 1.00282]}
+stage globals gas_gate True names True consts 12 True consts 11 True
+full solve globals gas_gate True names True refinement consts [12, 11]
+short solve present True OUT scratch-hgate265-dryrun/work
+scratch removed True

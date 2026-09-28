@@ -1,0 +1,39 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "constraints": "C_prime=a*r*q_lambda=e*[zeta_I_prime*H(rp-r)+(g-zeta_I(rp))*delta(r-rp)-rho*delta_prime(r-rp)]. Thus C=e*[(zeta_I(r)-zeta_I(R))*H(rp-r)+(g-zeta_I(R))*H(r-rp)-rho*delta(r-rp)], with zero additional inner port.",
+    "scalar_measure": "The mass-source measure is 2*Phi*C/(r*b) dr. The smooth known constraint stress is -4*e*Phi*lambda_I/(r*b)*H(rp-r) dr.",
+    "static_gradient": "Also include 2*a*r*Phi*(zeta_B*zeta_I_prime+zeta_I*zeta_B_prime) dr. Its smooth part is 4*a*Phi*lambda_I*zeta_B/b-4*e*Phi*zeta_I/(b*r); its shell is -2*e*Phi*zeta_I*(1-mu^2)*delta dr.",
+    "shell_pullback": "At fixed radius, the ray time Jacobian adds a second -zeta_I. Together with the static-gradient shell it cancels: delta shell integrand is -e*Phi/(2*a)*[g*(1-mu^2)/mu-(1+mu^2)*delta_mu/mu^2] H dr, plus the arrival-front shift. delta_mu=(1-mu^2)*h/mu and |h|<=Hmax*(1-R/r).",
+    "uniform_domain": "On t>=0,t-x/c<=T each source radius has time width at most T+x(r)/c. This also covers the noncausal-in-radius constraint tail. Reuse the old c*T potential norm only after adding its positive x-weighted vacuum integral.",
+    "scope": "Distribution and first-variation identities in the declared sector, plus elementary tail integrals. No assertion of exact ADM conservation or physical EOS closure."
+  },
+  "scalar_arithmetic_relative": {
+    "constraint_mass": 6.529956213636956e-17,
+    "constraint_smooth_stress": 3.206233454241271e-17,
+    "static_gradient_smooth": 3.0152435907577156e-17,
+    "moving_constraint_shell": 9.251540292719771e-17,
+    "photon_shell_amplitude_and_front": 1.61152418232783e-16,
+    "photon_shell_angle": 5.5332916640639023e-17,
+    "additional_potential": 3.8959424118906933e-17,
+    "homogeneous_mass_cm": 1.1187775922223185e-16,
+    "lambda_bound": 9.442361965687947e-17,
+    "zeta_bound": 4.7269231702471613e-17,
+    "photon_energy_fraction": 7.524280297437263e-17,
+    "photon_delay_seconds": 1.6606153097975575e-16,
+    "H_bound": 6.020778261292281e-17,
+    "weighted_potential_addition": 1.5776624663465218e-16,
+    "potential_contraction": 9.979827145257213e-17,
+    "free_scalar_norm": 3.6163741612595937e-17
+  },
+  "zero_source_and_nonzero_controls": true,
+  "linear_inventory_scaling": true,
+  "interval_precision": 50,
+  "independent_scalar_precision": 100,
+  "limitation": "Arithmetic, distribution and elementary integral checks for the conditional inequalities. They do not independently certify the saved vacuum/EOS, emission caps against a continuum evolution, or omitted scalar sectors.",
+  "physical_final_charge_solved": false,
+  "full_goal_complete": false
+}

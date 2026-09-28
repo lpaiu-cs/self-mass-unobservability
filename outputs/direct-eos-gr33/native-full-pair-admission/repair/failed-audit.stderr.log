@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/complete_common_arithmetic_fine.py", line 71, in <module>
+    globals()[action]()
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/complete_common_arithmetic_fine.py", line 59, in audit
+    bind(prior.prior.prior.audit,OUT=OUT)()
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_precise_conserved_native.py", line 69, in audit
+    FunctionType(prior.audit.__code__,dict(prior.audit.__globals__,OUT=OUT))()
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_integer_native.py", line 92, in audit
+    def audit():FunctionType(prior.prior.audit.__code__,dict(prior.prior.audit.__globals__,OUT=OUT))()
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_precise_momentum.py", line 114, in audit
+    FunctionType(old.audit.__code__,dict(old.audit.__globals__,OUT=OUT))()
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_postfloor_native.py", line 122, in audit
+    fn=FunctionType(before.audit.__code__,dict(before.audit.__globals__,OUT=OUT));fn()
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/complete_stable_full_interval.py", line 85, in audit
+    report,ph,gas,clock=prior.verify(OUT/f'sweep-1/photons/complete-{n}.npz',OUT/f'sweep-1/photons/interval-15-{n}.npz')
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/complete_full_incident_horizon.py", line 78, in verify
+    port,moments,count=packet_owner.verify_packet(file,prefix)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_native_pressure_response.py", line 61, in verify_packet
+    with np.load(path) as p,np.load(prefix) as old:
+  File "/home/lpaiu/.local/lib/python3.10/site-packages/numpy/lib/_npyio_impl.py", line 451, in load
+    fid = stack.enter_context(open(os.fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: 'native-common-arithmetic239-work/sweep-1/photons/interval-15-64.npz'

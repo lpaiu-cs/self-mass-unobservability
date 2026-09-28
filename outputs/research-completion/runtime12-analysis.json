@@ -1,0 +1,320 @@
+{
+  "status": "Imported from prior work",
+  "scope": "New live external evaluations; registered finite amplitudes, steps and displacement only, no full nonlinear noise/pulse fit or EOS matching",
+  "transient": [
+    {
+      "tau": 2.0,
+      "weighted_derivative_change": 0.00043875896556502906,
+      "nuisance_projected_derivative_change": 0.0038979135664868347,
+      "convergence_5percent_pass": true,
+      "fits": [
+        {
+          "a": 0.0,
+          "beta": -2.0152976586669747e-10,
+          "sigma_beta": 1.8615193963940065e-10,
+          "initial_coupling": 3.2337156368747883e-09,
+          "sigma_initial_coupling": 5.6683952964241625e-08,
+          "sigma_beta_ratio": 1.0048952927706492,
+          "conditional_U": 5.07847563574565e-10
+        },
+        {
+          "a": 0.08316109496333533,
+          "beta": -1.6298974453168875e-10,
+          "sigma_beta": 1.880334696767894e-10,
+          "initial_coupling": 9.762169401177408e-09,
+          "sigma_initial_coupling": 5.95153636573225e-08,
+          "sigma_beta_ratio": 1.0037712908904184,
+          "conditional_U": 4.729352007656462e-10
+        },
+        {
+          "a": 1.0,
+          "beta": -1.1452278455460375e-10,
+          "sigma_beta": 1.9006147384824144e-10,
+          "initial_coupling": -6.43388635411468e-08,
+          "sigma_initial_coupling": 8.762879478449058e-08,
+          "sigma_beta_ratio": 1.0046363304545345,
+          "conditional_U": 4.309894564154107e-10
+        }
+      ]
+    },
+    {
+      "tau": 52.0,
+      "weighted_derivative_change": 1.147362880258087e-05,
+      "nuisance_projected_derivative_change": 5.751561020149497e-05,
+      "convergence_5percent_pass": true,
+      "fits": [
+        {
+          "a": 0.0,
+          "beta": -1.4561613703308197e-10,
+          "sigma_beta": 3.182124146063812e-10,
+          "initial_coupling": -9.083350582209581e-10,
+          "sigma_initial_coupling": 7.662531720507627e-10,
+          "sigma_beta_ratio": 1.0039526524263789,
+          "conditional_U": 6.837012614523687e-10
+        },
+        {
+          "a": 0.08316109496333533,
+          "beta": -7.688723708557348e-11,
+          "sigma_beta": 3.2358804059804266e-10,
+          "initial_coupling": -9.112574144124959e-10,
+          "sigma_initial_coupling": 7.671400973794653e-10,
+          "sigma_beta_ratio": 1.0042538630579867,
+          "conditional_U": 6.517282103914832e-10
+        },
+        {
+          "a": 1.0,
+          "beta": -3.80974587957312e-11,
+          "sigma_beta": 3.277404616209489e-10,
+          "initial_coupling": -1.1071258204221602e-09,
+          "sigma_initial_coupling": 7.919632885991179e-10,
+          "sigma_beta_ratio": 1.0052293694788208,
+          "conditional_U": 6.466764846460658e-10
+        }
+      ]
+    },
+    {
+      "tau": 500.0,
+      "weighted_derivative_change": 5.673385798027921e-07,
+      "nuisance_projected_derivative_change": 7.3246803486544064e-06,
+      "convergence_5percent_pass": true,
+      "fits": [
+        {
+          "a": 0.0,
+          "beta": 3.0617180538715424e-11,
+          "sigma_beta": 5.688715839327775e-09,
+          "initial_coupling": -1.148560082625729e-10,
+          "sigma_initial_coupling": 9.332697189317713e-11,
+          "sigma_beta_ratio": 1.001358485968376,
+          "conditional_U": 1.1149839647304414e-08
+        },
+        {
+          "a": 0.08316109496333533,
+          "beta": 1.6001970203436872e-09,
+          "sigma_beta": 5.880594599736824e-09,
+          "initial_coupling": -1.2267283368194675e-10,
+          "sigma_initial_coupling": 9.379446657712247e-11,
+          "sigma_beta_ratio": 1.001241065968354,
+          "conditional_U": 1.19400932120056e-08
+        },
+        {
+          "a": 1.0,
+          "beta": 1.9237082495640304e-09,
+          "sigma_beta": 6.010869526604139e-09,
+          "initial_coupling": -1.3551146958477145e-10,
+          "sigma_initial_coupling": 9.565080719296148e-11,
+          "sigma_beta_ratio": 1.0009641471461825,
+          "conditional_U": 1.2360231216793325e-08
+        }
+      ]
+    }
+  ],
+  "derivative_rows": [
+    {
+      "name": "right_ascension",
+      "half_vs_archived_weighted_relative": 0.0009088527576432892
+    },
+    {
+      "name": "declination",
+      "half_vs_archived_weighted_relative": 0.0009691396519248293
+    },
+    {
+      "name": "right_ascension1",
+      "half_vs_archived_weighted_relative": 0.00025751741813921007
+    },
+    {
+      "name": "declination1",
+      "half_vs_archived_weighted_relative": 0.00020775735292559574
+    },
+    {
+      "name": "spinfreq",
+      "half_vs_archived_weighted_relative": 4.456714951248215e-06
+    },
+    {
+      "name": "spinfreq1",
+      "half_vs_archived_weighted_relative": 1.945619248439643e-06
+    },
+    {
+      "name": "eta_p",
+      "half_vs_archived_weighted_relative": 0.0011229265174898487
+    },
+    {
+      "name": "apsini_i",
+      "half_vs_archived_weighted_relative": 0.0006280544223195541
+    },
+    {
+      "name": "kappa_p",
+      "half_vs_archived_weighted_relative": 0.0012990220408950679
+    },
+    {
+      "name": "delta_i",
+      "half_vs_archived_weighted_relative": 2.2288964418279494e-05
+    },
+    {
+      "name": "tasc_p",
+      "half_vs_archived_weighted_relative": 2.4038561265816824e-06
+    },
+    {
+      "name": "period_i",
+      "half_vs_archived_weighted_relative": 7.57818512825101e-07
+    },
+    {
+      "name": "eta_b",
+      "half_vs_archived_weighted_relative": 0.0002636550798498848
+    },
+    {
+      "name": "absini_o",
+      "half_vs_archived_weighted_relative": 0.00011933524733664193
+    },
+    {
+      "name": "kappa_b",
+      "half_vs_archived_weighted_relative": 0.0004213875340060081
+    },
+    {
+      "name": "abcosi_o",
+      "half_vs_archived_weighted_relative": 1.078424601611371e-06
+    },
+    {
+      "name": "tasc_b",
+      "half_vs_archived_weighted_relative": 6.2929571093983e-05
+    },
+    {
+      "name": "period_o",
+      "half_vs_archived_weighted_relative": 5.6449214240537414e-06
+    },
+    {
+      "name": "masspar_p",
+      "half_vs_archived_weighted_relative": 1.7376015021751821e-06
+    },
+    {
+      "name": "oman",
+      "half_vs_archived_weighted_relative": 0.0001473313702910989
+    },
+    {
+      "name": "deltaoman",
+      "half_vs_archived_weighted_relative": 4.9014404932556475e-05
+    },
+    {
+      "name": "eta_extra1",
+      "half_vs_archived_weighted_relative": 0.0010398879828043032,
+      "quarter_vs_half_weighted_relative": 0.002330138920614523
+    },
+    {
+      "name": "kappa_extra1",
+      "half_vs_archived_weighted_relative": 0.0008136194710964656,
+      "quarter_vs_half_weighted_relative": 0.002436740033972784
+    },
+    {
+      "name": "asini_extra1",
+      "half_vs_archived_weighted_relative": 0.00033526991854365934,
+      "quarter_vs_half_weighted_relative": 0.002074144610190476
+    },
+    {
+      "name": "acosi_extra1",
+      "half_vs_archived_weighted_relative": 0.0030210812941778007,
+      "quarter_vs_half_weighted_relative": 0.003096829568582814
+    },
+    {
+      "name": "tasc_extra1",
+      "half_vs_archived_weighted_relative": 0.0006060110958172203,
+      "quarter_vs_half_weighted_relative": 0.004046074824989923
+    },
+    {
+      "name": "P_extra1",
+      "half_vs_archived_weighted_relative": 0.00033759255328792297,
+      "quarter_vs_half_weighted_relative": 0.00030722598268499083
+    },
+    {
+      "name": "oman_extra1",
+      "half_vs_archived_weighted_relative": 0.006651768980985527,
+      "quarter_vs_half_weighted_relative": 0.0016831910864403715
+    }
+  ],
+  "halfstep_basis": {
+    "rank": 90,
+    "maximum_principal_sine": 0.9999134678191223,
+    "normalized_matrix_change_norm": 0.006857050693755642,
+    "archived_smin": 1.1220738598376006e-06,
+    "rigorous_derivative_error_bound": null
+  },
+  "physical_diagonal_projection_comparison": [
+    {
+      "tau": 2.0,
+      "new_sigma_over_archived": 0.8779715696082263,
+      "new_beta": -3.62272665287194e-10,
+      "new_conditional_U": 6.297915621529862e-10
+    },
+    {
+      "tau": 5.0,
+      "new_sigma_over_archived": 0.8692099138339793,
+      "new_beta": -3.326836912242128e-10,
+      "new_conditional_U": 6.028945056452833e-10
+    },
+    {
+      "tau": 18.0,
+      "new_sigma_over_archived": 0.8679799870871365,
+      "new_beta": -3.240744400786139e-10,
+      "new_conditional_U": 6.104587156017807e-10
+    },
+    {
+      "tau": 52.0,
+      "new_sigma_over_archived": 0.8702145610837304,
+      "new_beta": -4.718560033222621e-10,
+      "new_conditional_U": 9.2554475250301e-10
+    },
+    {
+      "tau": 200.0,
+      "new_sigma_over_archived": 0.8756201795431862,
+      "new_beta": -1.9679928215372995e-09,
+      "new_conditional_U": 4.338326171195158e-09
+    },
+    {
+      "tau": 500.0,
+      "new_sigma_over_archived": 0.8784875434279082,
+      "new_beta": -5.400317425243807e-09,
+      "new_conditional_U": 1.361263416509134e-08
+    }
+  ],
+  "nonlinear_gap": [
+    {
+      "fraction": 0.001,
+      "weighted_nonlinear_error_ratio": 0.004797356286692172,
+      "residual_error_unit_noise_norm": 0.48846116985247384,
+      "remaining_error_after_nuisance_norm": 0.008852693240936765,
+      "max_actual_us": 4.359198036299372,
+      "linear_5percent_pass": true
+    },
+    {
+      "fraction": 0.003,
+      "weighted_nonlinear_error_ratio": 0.015042223758737767,
+      "residual_error_unit_noise_norm": 4.594744548007252,
+      "remaining_error_after_nuisance_norm": 0.009232619312121724,
+      "max_actual_us": 13.10768203785998,
+      "linear_5percent_pass": true
+    },
+    {
+      "fraction": 0.01,
+      "weighted_nonlinear_error_ratio": 0.04079921918510232,
+      "residual_error_unit_noise_norm": 41.54128470196179,
+      "remaining_error_after_nuisance_norm": 0.014865319936164792,
+      "max_actual_us": 44.22668300243199,
+      "linear_5percent_pass": true
+    }
+  ],
+  "original_displacement_rejection": [
+    {
+      "fraction": 0.25,
+      "eccentricity": 6.5805140991147315,
+      "reason": "Outside bound-orbit domain; runtime would clamp eccentricity"
+    },
+    {
+      "fraction": 0.5,
+      "eccentricity": 13.08835851641367,
+      "reason": "Outside bound-orbit domain; runtime would clamp eccentricity"
+    },
+    {
+      "fraction": 1.0,
+      "eccentricity": 26.107291031751117,
+      "reason": "Outside bound-orbit domain; runtime would clamp eccentricity"
+    }
+  ]
+}

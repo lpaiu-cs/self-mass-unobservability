@@ -1,0 +1,159 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": false,
+  "rows": [
+    {
+      "name": "base",
+      "coefficients": {
+        "seconds": 26.330330333,
+        "pairs": 4048932,
+        "frequency_cells": 24134,
+        "nangle": 24,
+        "collective": true,
+        "velocity_order": 8,
+        "q_points": 129,
+        "model": "Maxwell collisionless multi-ion RPA plus detailed-balance FDT factor; exact rectangular-cell convolution of positive velocity spectral atoms. Vacuum photon kinematics; no native scalar-rate normalization."
+      },
+      "time_order": 2.013667498805149,
+      "time_differences_initial": [
+        4.830583338984245e-05,
+        1.196259117040805e-05
+      ],
+      "algebra": {
+        "energy_number_null_relative": [
+          2.999047825690279e-16,
+          4.271154394213549e-16
+        ],
+        "initial_heating": 1.338933919164586e-05,
+        "continuum_heating": 1.335984951737599e-05,
+        "heating_relative": 0.0022073358110445973
+      },
+      "balance": 2.475971946952322e-12,
+      "energy_residual": 3.4901054669274957e-12,
+      "entropy_growth": 0.0,
+      "solver_residual": 6.590330458488181e-13,
+      "iterations": 3
+    },
+    {
+      "name": "velocity",
+      "difference_initial": 1.0275009081588074e-05,
+      "coefficients": {
+        "seconds": 127.308561967,
+        "pairs": 4048932,
+        "frequency_cells": 24134,
+        "nangle": 24,
+        "collective": true,
+        "velocity_order": 16,
+        "q_points": 129,
+        "model": "Maxwell collisionless multi-ion RPA plus detailed-balance FDT factor; exact rectangular-cell convolution of positive velocity spectral atoms. Vacuum photon kinematics; no native scalar-rate normalization."
+      },
+      "algebra": {
+        "energy_number_null_relative": [
+          3.0362634311410897e-16,
+          4.235961988221308e-16
+        ],
+        "initial_heating": 1.3389338392731796e-05,
+        "continuum_heating": 1.335984951737599e-05,
+        "heating_relative": 0.0022072760114140166
+      },
+      "balance": 2.7357867444780186e-12,
+      "energy_residual": 2.7827157402413768e-12,
+      "entropy_growth": 0.0,
+      "solver_residual": 6.58926769997596e-13,
+      "iterations": 3
+    },
+    {
+      "name": "q-grid",
+      "difference_initial": 5.65938499464194e-08,
+      "coefficients": {
+        "seconds": 125.59642758199999,
+        "pairs": 4048932,
+        "frequency_cells": 24134,
+        "nangle": 24,
+        "collective": true,
+        "velocity_order": 16,
+        "q_points": 257,
+        "model": "Maxwell collisionless multi-ion RPA plus detailed-balance FDT factor; exact rectangular-cell convolution of positive velocity spectral atoms. Vacuum photon kinematics; no native scalar-rate normalization."
+      },
+      "algebra": {
+        "energy_number_null_relative": [
+          3.028144261476247e-16,
+          4.2810758708435383e-16
+        ],
+        "initial_heating": 1.338934401236874e-05,
+        "continuum_heating": 1.335984951737599e-05,
+        "heating_relative": 0.0022076966476598514
+      },
+      "balance": 2.4553708228613192e-12,
+      "energy_residual": 2.8677655435601742e-12,
+      "entropy_growth": 0.0,
+      "solver_residual": 6.591039732447062e-13,
+      "iterations": 3
+    },
+    {
+      "name": "angular",
+      "difference_initial": 3.3936944573184475e-06,
+      "coefficients": {
+        "seconds": 17.781917367999995,
+        "pairs": 4048932,
+        "frequency_cells": 24134,
+        "nangle": 48,
+        "collective": true,
+        "velocity_order": 16,
+        "q_points": 257,
+        "model": "Maxwell collisionless multi-ion RPA plus detailed-balance FDT factor; exact rectangular-cell convolution of positive velocity spectral atoms. Vacuum photon kinematics; no native scalar-rate normalization."
+      },
+      "algebra": {
+        "energy_number_null_relative": [
+          3.0716884660552564e-16,
+          4.2477403725975715e-16
+        ],
+        "initial_heating": 1.3389343881432509e-05,
+        "continuum_heating": 1.335984951737599e-05,
+        "heating_relative": 0.0022076868469331767
+      },
+      "balance": 2.4464310771992474e-12,
+      "energy_residual": 1.5147743442081879e-12,
+      "entropy_growth": 0.0,
+      "solver_residual": 6.591213371035259e-13,
+      "iterations": 3
+    },
+    {
+      "name": "independent-electron",
+      "algebra": {
+        "energy_number_null_relative": [
+          3.1070804696362574e-16,
+          4.4141392752152086e-16
+        ],
+        "initial_heating": 1.3394037809952137e-05,
+        "continuum_heating": 1.335984951737599e-05,
+        "heating_relative": 0.0025590327594393614
+      },
+      "balance": 1.7979499397072957e-12,
+      "energy_residual": 3.3439122274297398e-12,
+      "entropy_growth": 0.0,
+      "solver_residual": 6.716627341750325e-13,
+      "iterations": 3
+    }
+  ],
+  "comparisons": {
+    "velocity": 1.0275009081588074e-05,
+    "q-grid": 5.65938499464194e-08,
+    "angular": 3.3936944573184475e-06
+  },
+  "paired_time_difference_initial": 9.231978989082931e-10,
+  "free_reference_difference_initial": 2.2178804487935506e-07,
+  "collective_effect_initial": 9.53138453965984e-06,
+  "collective_temperature_effect_K": -1.9022074362034185e-07,
+  "below_plasma_LTE_capacity_fraction": 0.0,
+  "seconds": 604.9280579919999,
+  "peak_memory_GB": 2.278895616,
+  "EOS_population_matched_collective_response_evolved": true,
+  "bound_electron_kernel_complete": false,
+  "nonideal_collisional_quantum_error_certified": false,
+  "native_scalar_kernel_identified": false,
+  "actual_temperature_absorption_certified": false,
+  "physical_atmosphere_closed": false,
+  "full_GR_feedback_evolved": false,
+  "full_dynamic_charge_solved": false
+}

@@ -1,0 +1,31 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Apply actual new native-thermal coupled matter/photon sources and accepted stage ports to retarded charge; recompute its source-dependent conditional bounds and independently check the new native endpoint.",
+  "reuse": "Same corrected initial GR operator, same64/128 clocks and531 cells. No new evolution. Reuse coefficient geometry only; no old source norm or interval is inherited.",
+  "gates": {
+    "time": 0.02,
+    "quadrature": 0.002,
+    "independent": 1e-09,
+    "energy": 1e-08,
+    "baryon": 1e-10,
+    "native": 0.002,
+    "net_H": 0.02
+  },
+  "budget": {
+    "seconds": 60,
+    "native_calls": 200,
+    "CPU_threads": 1,
+    "memory_GB": 3
+  },
+  "limits": "Current initial first-variation GR operator, restricted finite H/Thomson model and declared floor condition. Initial thermodynamic coefficients in the GR operator retain their prior representation; not nonlinear GR or a certified full EOS/transport fixed point.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_refined_thermochemistry.py": "45bd570cb599e223797b19147ded33d2e7199ced928eb264b0f95bbed190d342",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_refined_thermochemistry.py": "d58a3a9511fff956ca2e14dd15419d052cfd62db159539a3ce69199047f91ebb",
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_stage_energy_charge.py": "a7b4b93650663f17ab5cedbe6562cb3ed752fc0e125979b16bfd84d8e31c920d",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/evolution/source-64.npz": "f7e694bc9bbaabb3612916204fd97b2eefe12053137119ad629b33b096ad7b56",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/evolution/source-128.npz": "ab75b15bd0b3e8de9b6803dff7afe288e5eecac56089bdf74055de1b1db7c0bf",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/evolution/result.json": "b383055f487aa3da68d2b9f8b07ea0d21924d7d8f4d54c2c2c4fe766f809a3d2",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/bank.npz": "1ef9b4bb62b7bd9320b891126dd5f9a81d6cb0b48d01c5861962a2a5bf26188f",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/controls/result.json": "f337f3df253bcfbec915191c238808cf830cb6af6844ea595877b9c56d783993"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "rows": [
+    {
+      "clock": 64,
+      "interval_midpoints": 517,
+      "errors": {
+        "baryon_g": 8.113307672080645e-17,
+        "gas_nonrest_energy_erg": 2.4009163355309295e-16,
+        "nonrest_trace_erg": 2.5242109848786953e-16,
+        "nonrest_stress_erg": 1.6399786509919131e-16,
+        "pressure_volume_erg": 4.07612968286698e-17,
+        "photon_energy_erg": 2.5464716858137223e-16,
+        "photon_radial_pressure_erg": 1.9374373376925342e-16,
+        "metric_stress_erg": 3.795664440690945e-16,
+        "inner_cumulative_energy_erg": 4.1093245246481396e-17,
+        "outer_cumulative_energy_erg": 1.3852108430902698e-16
+      }
+    },
+    {
+      "clock": 128,
+      "interval_midpoints": 519,
+      "errors": {
+        "baryon_g": 2.933187741066754e-18,
+        "gas_nonrest_energy_erg": 1.626408558277748e-16,
+        "nonrest_trace_erg": 1.634355825141318e-16,
+        "nonrest_stress_erg": 8.065313750190369e-17,
+        "pressure_volume_erg": 3.960453439160263e-17,
+        "photon_energy_erg": 1.7917148420170483e-16,
+        "photon_radial_pressure_erg": 2.1241781765449893e-16,
+        "metric_stress_erg": 1.2023035580072793e-16,
+        "inner_cumulative_energy_erg": 3.5348637790497673e-17,
+        "outer_cumulative_energy_erg": 3.620665269025239e-18
+      }
+    }
+  ],
+  "seconds": 17.947251941000104,
+  "source_sha256": "624e4c2cede5bc16b084ffd1331060d4d9290e22e53e777812d3495f978d13d3",
+  "bindings": {
+    "native-driver-radau212-work/gr/source-64.npz": "cfbe46c552d661e9af82601a0a611c849f421037cb31f031cd3c9dde527b2fcf",
+    "native-driver-radau212-work/gr/source-128.npz": "6ccb4978cc1c5ceeefe812fd9805020dd367bd0933ccee063a2ad173de34f144"
+  },
+  "scope": "Actual consumer polynomial versus the original live Driver at every support-segment midpoint; no physical-state or final-charge acceptance."
+}

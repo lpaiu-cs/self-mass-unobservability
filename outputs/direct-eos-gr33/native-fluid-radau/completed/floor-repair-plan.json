@@ -1,0 +1,21 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": {
+    "seconds": 20.86151736299996,
+    "CPU_seconds": 15.397936321,
+    "peak_RSS_bytes": 2163372032,
+    "error": "AssertionError('Changing material support')",
+    "source_sha256": "07bd4f22244695c58a8e904c2eb5236d7441d40db2638819c013c0491209de1b"
+  },
+  "change": "The background activity mask changes inside the prefix. Withdraw fixed-support assumption. Restore the existing native material floor projection after each accepted Radau substep, applying its actual endpoint mask to all four gas variables. Record removed conserved quantities, subtract their Etilde from the energy ledger and add their H to the photon-minus-H ledger. No stage solution is replaced by another trajectory.",
+  "physical_equation": "Native flux and collisions evolve all cells in both stages, as in the original free material RHS. The floor is a separate explicit finite map at accepted boundaries. Test the true pre-projection equations and post-projection balances, and store both stage and projected endpoint states.",
+  "original_check_seconds": 80,
+  "remaining_check_seconds": 50,
+  "full_horizon_authorized": false,
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/couple_native_fluid_radau.py": "c517425ef314673e1a4653bb3cd31c29364df3b67e26b997ff7c33e27a56f151",
+    "native-fluid-radau179-work/initial-producer.py": "07bd4f22244695c58a8e904c2eb5236d7441d40db2638819c013c0491209de1b",
+    "native-fluid-radau179-work/fixed-support-plan.json": "4044927ec9e8dafae205c2a24fce49d5c562935339eae94dad80158b25804992",
+    "native-fluid-radau179-work/check-receipt.json": "ba6109b1a27950314237d131afa28d3bbb28eccc98ed65a139c5134e8a24951f"
+  }
+}

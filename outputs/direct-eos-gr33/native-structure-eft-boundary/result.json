@@ -1,0 +1,96 @@
+{
+ "classification": "Counterexample candidate",
+ "passed": true,
+ "verdict": "SIGN_STRUCTURALLY_ROBUST_MAGNITUDE_DENSITY_SET__MEMORY_COLLAPSES_AT_ORBITAL_TIMESCALES",
+ "background_structure": {
+  "interior_freefall_charge": -2.337286716137425e-51,
+  "additivity": 2.220446049250313e-16,
+  "sign_margin_Linf": 0.9987907655359466,
+  "opposite_sign_share": -0.0006053492411917924,
+  "centroid_depth_km": 363.4021863466177,
+  "families_relative": {
+   "shift -100 km": -0.8842046408823176,
+   "shift -30 km": -0.4360840378800066,
+   "shift -10 km": -0.17006950837693358,
+   "shift +10 km": 0.18957474983021516,
+   "shift +30 km": 0.663839620388933,
+   "shift +100 km": 3.5466020721158813,
+   "scale height -50%": 0.3298197862097507,
+   "scale height -30%": 0.050088416614253006,
+   "scale height -10%": -0.0016373555728531608,
+   "scale height +10%": 0.010637852185832353,
+   "scale height +30%": 0.046428530892389075,
+   "scale height +50%": 0.08989503563210022,
+   "uniform -50%": -0.5,
+   "uniform +50%": 0.5
+  }
+ },
+ "static_eft": {
+  "history_closure": 2.531589723835616e-16,
+  "state_share_min": 0.9999994781816817,
+  "radial_mode_periods_s": [
+   177.80320989827618,
+   140.2205196397929,
+   115.6952749938354,
+   97.85965723116848
+  ],
+  "omega0": 0.03533786207107447,
+  "dynamical_time_s": 112.18178456448803,
+  "charge_layers": {
+   "c_s_cm_s": [
+    1704045.6361668115,
+    2763024.9606748517
+   ],
+   "H_km": [
+    37.82126333749868,
+    103.59974623228261
+   ],
+   "omega_ac": [
+    0.13335095215773166,
+    0.22642858608229546
+   ],
+   "period_ac_s": [
+    27.749081579725814,
+    47.117663620036545
+   ],
+   "sound_crossing_17km_s": [
+    0.615267695440864,
+    0.9976258639551978
+   ]
+  },
+  "long_wavelength_force_ratio": [
+   3.316908683875503e-08,
+   3.350043653684212e-08
+  ],
+  "orbital_drives": {
+   "10 min": {
+    "omega": 0.010471975511965976,
+    "over_omega0_squared": 0.08781661513925124,
+    "over_omega_ac_squared": 0.00616687284725254
+   },
+   "1 h": {
+    "omega": 0.0017453292519943296,
+    "over_omega0_squared": 0.002439350420534757,
+    "over_omega_ac_squared": 0.00017130202353479284
+   },
+   "1 d": {
+    "omega": 7.27220521664304e-05,
+    "over_omega0_squared": 4.234983368983953e-06,
+    "over_omega_ac_squared": 2.973993464145709e-07
+   },
+   "1.629 d (J0337 inner)": {
+    "omega": 4.4642143748576055e-05,
+    "over_omega0_squared": 1.5959142057964712e-06,
+    "over_omega_ac_squared": 1.1207218550458439e-07
+   }
+  }
+ },
+ "not_covered": [
+  "non-radial (tidal, l>=2) displacement channels",
+  "dissipation (quadrature)",
+  "background metric/scalar response to density changes (<1e-5 in the envelope)"
+ ],
+ "final_charge_conclusion": "conditional negative charge: sign structurally robust to envelope structure; magnitude set by the envelope density at 240-465 km; the free-fall memory collapses to static coefficients at orbital timescales",
+ "full_goal_complete": false,
+ "snapshot_KST": "2026-09-27T17:24:51.809161+09:00"
+}

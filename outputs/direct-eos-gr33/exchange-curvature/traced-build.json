@@ -1,0 +1,55 @@
+{
+  "classification": "Counterexample candidate",
+  "commands": [
+    {
+      "command": [
+        "cmake",
+        "-S",
+        "/home/lpaiu/work/direct-eos-gr33/exchange-curvature/source",
+        "-B",
+        "/home/lpaiu/work/direct-eos-gr33/exchange-curvature/build",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DBUILD_SHARED_LIBS=ON",
+        "-DBUILD_TEST=ON",
+        "-DBUILD_DOC=OFF",
+        "-DBUILD_DOX_DOC=OFF"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "/home/lpaiu/work/direct-eos-gr33/exchange-curvature/build",
+        "--target",
+        "free_eos",
+        "-j",
+        "2"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "gfortran",
+        "-O2",
+        "-fPIC",
+        "-shared",
+        "-I/home/lpaiu/work/direct-eos-gr33/exchange-curvature/build/src",
+        "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/exchange-curvature/direct_ion_bridge.f90",
+        "-L/home/lpaiu/work/direct-eos-gr33/exchange-curvature/build/src",
+        "-Wl,-rpath,/home/lpaiu/work/direct-eos-gr33/exchange-curvature/build/src",
+        "-lfree_eos_direct24_exchange_trace",
+        "-o",
+        "/home/lpaiu/work/direct-eos-gr33/exchange-curvature/unused-inventory.so"
+      ],
+      "returncode": 0
+    }
+  ],
+  "completed": true,
+  "sha256": {
+    "/home/lpaiu/work/direct-eos-gr33/exchange-curvature/unused-inventory.so": "1d2f334891d1faf2247dead15572e7b871037e73cf76fecdd1f8a60db64b7503",
+    "/home/lpaiu/work/direct-eos-gr33/exchange-curvature/build/src/libfree_eos_direct24_exchange_trace.so.1.0.0": "44181551e1043875bfa8ca8483cba37ca236d62940dc1c519c4a6e6fd065d548"
+  },
+  "original_runtime_modified": false,
+  "physical_EOS_certified": false
+}

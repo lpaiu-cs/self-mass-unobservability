@@ -1,0 +1,8 @@
+{
+  "classification": "Counterexample candidate",
+  "registered_before_evolution": true,
+  "reason": "Request28 already showed failure of frozen-temperature reaction splitting. Reuse its coupled 29-dimensional reaction/log-temperature/neutrino affine exponential before any Request29 evolution run.",
+  "changes": "Native reaction Jacobian and temperature derivatives; composition energy derivatives from the new neutral-reference EOS in the He4 baryon gauge, using Richardson-extrapolated positive composition directions of 1e-5 and 5e-6. Actual nonlinear EOS energy projection after every source step. Then same-entropy baryon TOV readjustment.",
+  "remaining_approximations": "Frozen local Jacobian, heat-capacity/composition-Hessian/thermal-neutrino derivative terms omitted; nuclear neutrino Jacobian inferred from the native Q/heat source relation. For max absolute composition rate <=1e-30 per second the thermal composition-gradient contribution is omitted. These approximations require time refinement, not an exact-Jacobian claim.",
+  "unchanged": "Original 1/2/4 time gates, actual nuclear rest masses, baryon inventory, fixed surface pressure and prescribed initial luminosity profile. No physical EOS/transport/observation completion is inferred."
+}

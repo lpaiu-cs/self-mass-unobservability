@@ -1,0 +1,98 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "rows": [
+    {
+      "steps": 64,
+      "source_identity": 6.1974155794775955e-31,
+      "port": 8.901748639875723e-17,
+      "material_balance": 2.113867522307361e-16,
+      "mechanical_collision_partition": [
+        8.358191125798312e-16,
+        1.148152013095228e-13
+      ],
+      "photon_and_material_prefixes_reused": true
+    },
+    {
+      "steps": 128,
+      "source_identity": 1.2396255977540413e-30,
+      "port": 1.487769989838475e-16,
+      "material_balance": 1.1870425018750436e-16,
+      "mechanical_collision_partition": [
+        8.942386422231691e-16,
+        9.061574773865198e-14
+      ],
+      "photon_and_material_prefixes_reused": true
+    }
+  ],
+  "directional": [
+    {
+      "k": 1,
+      "balanced_original_scale": 0.007928114559377275,
+      "additivity": [
+        3.1861209671474767e-06,
+        4.2150274659483425e-07,
+        1.857969547506477e-07,
+        3.100530900811458e-11
+      ],
+      "positive_homogeneity": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "k": 8,
+      "balanced_original_scale": 0.006053032907391772,
+      "additivity": [
+        5.626694421815665e-08,
+        1.1981693736821049e-11,
+        9.982533629690572e-09,
+        6.235410529034027e-13
+      ],
+      "positive_homogeneity": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "k": 16,
+      "balanced_original_scale": 0.01019815432061291,
+      "additivity": [
+        2.3458346352305853e-09,
+        8.241380947277353e-13,
+        3.3114010410903275e-09,
+        2.835221966956846e-11
+      ],
+      "positive_homogeneity": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "old_independent_observer_reproduction": 2.2712214783258253e-15,
+  "corrected_mixed_endpoint": -8.789266951480438e-55,
+  "physical_transport_return_endpoint": -2.0088782264382117e-79,
+  "transport_over_corrected_mixed": 2.285603836506345e-25,
+  "selected_endpoint_without_tiny_return": -2.5375925822713353e-51,
+  "normalization": {
+    "factor": 4.951760157141521e+27,
+    "power_two_exponent": 92,
+    "physical_metric_maximum": 1.6187593976720747e-58,
+    "normalized_maximum": 8.015708289390987e-31
+  },
+  "inherited_readout_metadata": "The compact owner incident_amplitude and endpoint_over_incident_amplitude describe its original primary driver, not this mixed metric. Only the explicit current metric normalization and the separately divided physical return are used here.",
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "identity": "For source at x=-y<=0, (T+R/c)-(R+y)/c=T-y/c. The corrected compact retarded boundary field is its leading outgoing null readout."
+  },
+  "actual_mixed_field_returned": true,
+  "full_goal_complete": false,
+  "scope": "Retained finite model and sampled directions only. Additional exterior mixed source, physical mixed ADM normalization, full EOS/derivative/nonlinear error and static/observational comparison remain open."
+}

@@ -1,0 +1,24 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Use all223 conserved native fine endpoint states with the actual angular photons and atmospheric moving collision owner. Compare positive channels and net H,energy,momentum transfers, including the changed primitive and electrons.",
+  "reuse": "Saved native roots, fractions and affinities; no new native state evaluations or time steps. Hydro is zeroed for both evaluations to isolate the implemented local collision exchange.",
+  "gates": {
+    "positive_channels": 0.002,
+    "net_exchange": 0.02,
+    "paired_energy": 1e-10
+  },
+  "budget": {
+    "seconds": 40,
+    "CPU_threads": 1,
+    "memory_GB": 3,
+    "new_native_states": 0
+  },
+  "limits": "Actual fine endpoint only. No complete atmospheric history, spectral continuum, derivative or feedback certificate.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_atmosphere_inverse.py": "e0634027500bde4ba7cdccfde24dae2034784c0574aec81c3ce9d95f0138ddda",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_atmosphere_inverse.py": "831fab9d3772f1bce0f70fb7e802f7e1c69c289367a346df403c2d8321cb4538",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-atmosphere-inverse/production-samples.json": "9bd1e839e0104a42561dc2c05e62a118572b710d69601647c3968dce43db0797",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-atmosphere-inverse/production.json": "d444c06cc7a9283368dc8be68146293e176ea800c57170b50fd3ca5b7a5414b3",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/evolution/final-128.npz": "00d481913a542c7182c88bf10ced1759b24f3fcb825d90f422c1079002218809"
+  }
+}

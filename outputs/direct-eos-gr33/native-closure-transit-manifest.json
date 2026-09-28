@@ -1,0 +1,107 @@
+{
+ "classification": "Counterexample candidate (history); Proven (long-time limit of a stable linear system)",
+ "passed": true,
+ "verdict": "GR_NONLINEAR_CLOSED__ENDPOINT_CHARGE_IS_EARLY_RETARDED_SCATTERING__PERMANENT_CHARGE_ZERO",
+ "closure": {
+  "fixed_point_residual": 4.529005537907819e-18,
+  "adm_cross": 6.754615886954982e-11,
+  "infinity_tail_bound": 4.221258511463531e-06,
+  "infinity_measured": 4.4134540217784925e-15,
+  "nonlinear": 1.0161793889859292e-27,
+  "mass_normalization": {
+   "phase252_common_period": 3.30957e-05,
+   "phase260_full_period_1x": 2.241582006152479e-05
+  },
+  "continuum_mass_normalized": -2.3350180598198245e-51,
+  "phi_inf": "q/eta even in phi_inf (parity); state part proportional to phi_inf^2 (source weight alpha(phi0)/r); direct part (1e-8) exponent open"
+ },
+ "history": {
+  "validation": {
+   "freefall_displacement_rel_Linf_charge_layers": 1.178148368938184e-06,
+   "q_T": -2.316201687093965e-51,
+   "chain_continuum_mass_normalized": -2.3350180598198245e-51,
+   "relative": -0.008058341410563385,
+   "static_window_T": 3.622463951143273e-54
+  },
+  "center_arrival_s": 0.2304972921545272,
+  "exit_s": 0.46271179986801875,
+  "transit_max_abs": 3.489397591962473e-36,
+  "transit_t_max": 0.46259999999999735,
+  "transit_sign_changes": 1108,
+  "relaxation_rms": 8.109571859943415e-45,
+  "relaxation_max": 1.986656267412671e-44,
+  "relaxation_mean_2s_1e4s": 3.6330851738572816e-48,
+  "dominant_periods_s": [
+   50.66492677545201,
+   47.88752779231195,
+   54.126409481464876,
+   44.61940055436106
+  ],
+  "lowest_periods_s": [
+   177.80323874165077,
+   140.22053023544785,
+   115.69527149283309
+  ],
+  "relaxation_check": {
+   "static_window_newmark": -1.7575321305552501e-44,
+   "static_window_modal": -1.757532146377838e-44,
+   "zeta_rel_L2": 0.007584719000625164
+  }
+ },
+ "final_charge_conclusion": "endpoint (T=2D) charge negative, and negative for every endpoint up to 0.35 s; it is the earliest photospheric part of the matter-mediated monopole scattering of the pulse, which oscillates in sign on the outgoing pass (max 3.5e-36, 1.5e-11 of the incident amplitude) and then rings in radial p modes with zero mean; the permanent charge is zero at first order in eta for positive mode damping",
+ "remaining": [
+  "radial-mode damping rates not computed (stability assumed)",
+  "interior Born scattering neglected (core compactness ~1e-4)",
+  "direct-part phi_inf exponent",
+  "atmosphere: gray, two opacity limits (phase 279)"
+ ],
+ "full_goal_complete": false,
+ "snapshot_KST": "2026-09-27T19:03:20.996598+09:00",
+ "document_prefixes": {
+  "docs/model-definition.md": {
+   "bytes": 294028,
+   "sha256": "49e00b488a58d707d9acd150180e279a0e2e995e7dd971ee4200a6fb93575164"
+  },
+  "docs/observable-targets.md": {
+   "bytes": 284847,
+   "sha256": "a63ad3a582957a2bd92cf27e1281f8e11bff89c1152e6c27df26b22e33ee747a"
+  },
+  "docs/adiabatic-limit.md": {
+   "bytes": 279186,
+   "sha256": "eba38a44fd09757ac32d7030ae13f9e9107379c3bb3fbc7076ee980004a572ca"
+  },
+  "docs/nonadiabatic-regime.md": {
+   "bytes": 287678,
+   "sha256": "ceecb57c85f24bc54cff693363fb5e17df983b5014fa38c47214b573f0e746c3"
+  },
+  "docs/failure-ledger-dynamic-chi.md": {
+   "bytes": 325282,
+   "sha256": "324671a74f64b0101eaf1d77f0385f5f498d290733678a0082ac03189cd0a383"
+  },
+  "docs/dynamic-charge-completion.md": {
+   "bytes": 153446,
+   "sha256": "7a4d1ac3dee5e0a3528336a7963e3b56a12688568e9abb50e51488c35e98b20f"
+  }
+ },
+ "sha256": {
+  "notes/REQUEST277_GR_NONLINEAR_CLOSURE_KO.md": "720dae6361a56674c9fc176a03d1239910c5a0a28f1c8afa590f563fbad86c01",
+  "notes/REQUEST278_TRANSIT_LONG_TIME_KO.md": "51d4259917a7f7882163baacd90ed2ab1e75ee644c9d1b5a6bbc1dc94609b509",
+  "docs/model-definition.md": "d624cf689f9477841c8ad28129272a7520fbe426f80ba7e13c9545881081f8ce",
+  "docs/observable-targets.md": "f57419f3b4121d2745b306066297d2b21da0ec235828acc1c64027ccd6af5fe8",
+  "docs/adiabatic-limit.md": "b85520518d7710b7678660bb3d9d45ab662282e017beb279e9c2a16233a599b4",
+  "docs/nonadiabatic-regime.md": "32f238bd6cb19db810169715f6476262bd769adf7c9d6cb4856f9cad0847ce77",
+  "docs/failure-ledger-dynamic-chi.md": "32135e95fb4dd4cf383d922ea8a19dd0c8203e53950dfba37d43b1ee329738b0",
+  "docs/dynamic-charge-completion.md": "4550d95cc2f87eb09116a722df7033fe09c06371b8afc490a42b86b3a9d0e9d1",
+  "outputs/direct-eos-gr33/native-closure-transit/publication.json": "1f8976f133a91e732c32e0574a026316fd8573d7a023e2e172ed4eed1c11e7ed",
+  "outputs/direct-eos-gr33/native-closure-transit/result.json": "718b391768f7b9116a4258b10d0a85a9c75e794d0981a25572c976dc69767511",
+  "outputs/direct-eos-gr33/native-closure-transit/phase277/bounds.json": "a3baf221eff2b8381cb190ecafff787fbe80b1fcaa12e76d06d07f4f5ab99f0d",
+  "outputs/direct-eos-gr33/native-closure-transit/phase277/bounds.log": "82f43617a8aae7aa57ec718381d1745bd8f4ca09e551ee1b419cdfb12813d05d",
+  "outputs/direct-eos-gr33/native-closure-transit/phase278/transit.json": "fba62547eb95ef14551b6b722682a305a028cf6de57a24fc0ce937faa0d24e9d",
+  "outputs/direct-eos-gr33/native-closure-transit/phase278/transit.log": "1955e875d847ee05d92c79558449eb2c912a7c7e95bc6b55382020943335f293",
+  "outputs/direct-eos-gr33/native-closure-transit/scripts/phase277-bounds.py": "ef317d3b358025201fd4832ba89af6d1d172246b2e76188d4ddac9fa22f325bb",
+  "outputs/direct-eos-gr33/native-closure-transit/scripts/phase278-publish.py": "050edf6e99b4da4cc5c8abb23547f8242693ff30b5fc7f100f41b77ff5c8f4a6",
+  "outputs/direct-eos-gr33/native-closure-transit/scripts/phase278-transit.py": "67b656ae41636e57e5dce862e3a0ff607d97f9f6028681c5796ec9806b87b49d",
+  "outputs/direct-eos-gr33/native-closure-transit/scripts/run277.sh": "43ab6c0b6fbf76c84e6eef8c681cb03b36de2c3004a49a58a6a9dcc4961e7911",
+  "outputs/direct-eos-gr33/native-closure-transit/scripts/run278b.sh": "e3c560ef25b087b123c29e3a3f250d5d86cb15860cca9e55e46051796d7fa8b9"
+ }
+}

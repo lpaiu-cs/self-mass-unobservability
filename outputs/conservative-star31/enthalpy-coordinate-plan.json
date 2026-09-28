@@ -1,0 +1,14 @@
+{
+  "classification": "Counterexample candidate",
+  "dt": 140780.16,
+  "coordinates": "26 composition increments, reference-pressure enthalpy increment/C0, neutrino energy at infinity/C0; C0 is the initial positive dH/dlnT at fixed P,X.",
+  "initial_tangent_sha256": "5a1618979c48c8c731483136c17fabe1eaa9108251eaa636b5692d8deaca5dcb",
+  "original_source_sha256": "877414d781cc24a9d6da02b6a140093d7dbec633b4c9e6c1872b7bcf9ed24502",
+  "gates": {
+    "composition_absolute": 1e-16,
+    "composition_relative_to_total_change": 0.001,
+    "unsigned_thermal_energy_difference_relative_to_release": 1e-06,
+    "unsigned_neutrino_energy_difference_relative_to_release": 1e-06
+  },
+  "scope": "Finite covariance/replay control before reusing a saved GR predictor. A successful coordinate transformation does not turn the failed original GR path into a pass."
+}

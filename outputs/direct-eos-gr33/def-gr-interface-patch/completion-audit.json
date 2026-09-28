@@ -1,0 +1,103 @@
+{
+  "classification": "Counterexample candidate",
+  "objective": "전체 속도, scalar, 기존 절단면 속도, 새 지지 경계 속도의 동시 수렴",
+  "scope": "Original declared numerical gates on the frozen-source linear GR model, same0.23080495568542375s horizon and65 native readouts; no full nonlinear/EOS/observational closure.",
+  "every_declared_numerical_gate_verified": true,
+  "requirements": {
+    "same_input_horizon_and_readouts": {
+      "passed": true,
+      "evidence": [
+        "outputs/direct-eos-gr33/def-gr-interface-patch/plan.json",
+        "outputs/direct-eos-gr33/def-gr-interface-patch/pilot-budget.json",
+        "outputs/direct-eos-gr33/def-gr-interface-patch/operator-check.json"
+      ]
+    },
+    "all_four_time_gates_on_degrees1_2_4": {
+      "passed": true,
+      "evidence": [
+        "outputs/direct-eos-gr33/def-gr-interface-patch/p1-result.json",
+        "outputs/direct-eos-gr33/def-gr-interface-patch/p2-result.json",
+        "outputs/direct-eos-gr33/def-gr-interface-patch/p4-result.json",
+        "outputs/direct-eos-gr33/def-gr-interface-patch/replay.json"
+      ]
+    },
+    "all_four_spatial_relative_and_decrease": {
+      "passed": true,
+      "evidence": [
+        "outputs/direct-eos-gr33/def-gr-interface-patch/spatial-result.json",
+        "outputs/direct-eos-gr33/def-gr-interface-patch/replay.json"
+      ]
+    },
+    "original_coefficient_gate": {
+      "passed": true,
+      "evidence": [
+        "outputs/direct-eos-gr33/def-gr-interface-patch/coefficient-contrast.json",
+        "outputs/direct-eos-gr33/def-gr-interface-patch/replay.json"
+      ]
+    },
+    "original_outer_gate": {
+      "passed": true,
+      "evidence": [
+        "outputs/direct-eos-gr33/def-gr-interface-patch/outer-contrast.json",
+        "outputs/direct-eos-gr33/def-gr-interface-patch/replay.json"
+      ]
+    },
+    "original_quadrature_gate": {
+      "passed": true,
+      "evidence": [
+        "outputs/direct-eos-gr33/def-gr-interface-patch/quadrature-contrast.json",
+        "outputs/direct-eos-gr33/def-gr-interface-patch/replay.json"
+      ]
+    },
+    "original_abscissa_gate": {
+      "passed": true,
+      "evidence": [
+        "outputs/direct-eos-gr33/def-gr-interface-patch/abscissa-contrast.json",
+        "outputs/direct-eos-gr33/def-gr-interface-patch/replay.json"
+      ]
+    },
+    "linear_residual_heat_balance_initial_state": {
+      "passed": true,
+      "evidence": [
+        "outputs/direct-eos-gr33/def-gr-interface-patch/replay.json"
+      ]
+    },
+    "symbolic_source_identity": {
+      "passed": true,
+      "evidence": [
+        "outputs/direct-eos-gr33/def-gr-interface-patch/control.json"
+      ]
+    },
+    "unmodified_equation_cache_check": {
+      "passed": true,
+      "evidence": [
+        "outputs/direct-eos-gr33/def-gr-interface-patch/cached-plan.json",
+        "outputs/direct-eos-gr33/def-gr-interface-patch/cached-pilot.json"
+      ]
+    },
+    "computation_budget": {
+      "passed": true,
+      "evidence": [
+        "outputs/direct-eos-gr33/def-gr-interface-patch/cached-execution-plan.json",
+        "outputs/direct-eos-gr33/def-gr-interface-patch/contrasts-result.json"
+      ]
+    },
+    "maintained_notes_and_classification": {
+      "passed": true,
+      "evidence": [
+        "docs/model-definition.md",
+        "docs/observable-targets.md",
+        "docs/adiabatic-limit.md",
+        "docs/nonadiabatic-regime.md",
+        "docs/failure-ledger-dynamic-chi.md",
+        "docs/dynamic-charge-completion.md",
+        "notes/REQUEST80_GR_COMMON_CONVERGENCE_KO.md"
+      ],
+      "progress_class": "loophole progress; the requested common four-component numerical convergence is resolved for the declared frozen-source GR model"
+    }
+  },
+  "original_failed_grid_preserved": "outputs/direct-eos-gr33/def-gr-full-weeks/beta1024/spatial-result.json",
+  "original_thresholds_preserved": true,
+  "component_splicing": false,
+  "new_EOS_calls": 0
+}

@@ -1,0 +1,45 @@
+{
+  "classification": "Counterexample candidate",
+  "failure_preserved": "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-anisotropic-gr/fields.json",
+  "failure": {
+    "time": 0.0010591286447555327,
+    "quadrature": 0.0049668913595886655,
+    "direct_reproduction": 2.220446049250313e-16
+  },
+  "cause_candidate": "Unsplit absolute-distance cusp and retarded stored-time knots cross existing source cells. Resolve these integration cuts at the same4/8 interpolation order and same physical cells/times.",
+  "method": "Interpolate source density in optical distance within each existing cell. Split only cells containing the target or a retarded time knot. Integrate each smooth polynomial piece exactly; keep existing quadrature elsewhere.",
+  "claim": "Does correcting characteristic quadrature close the original0.002 field gate without increasing physical resolution?",
+  "gates": {
+    "sources": [
+      64,
+      128
+    ],
+    "radial_orders": [
+      4,
+      8
+    ],
+    "field_times": 17,
+    "field_locations": "actual531 centers plus outer face",
+    "identity": 1e-12,
+    "direct_reproduction": 1e-09,
+    "time": 0.02,
+    "quadrature": 0.002,
+    "iteration": 1e-08,
+    "contraction": 0.01
+  },
+  "budget": {
+    "seconds": 90,
+    "CPU_threads": 1,
+    "memory_GB": 3,
+    "new_fluid_steps": 0,
+    "new_native_calls": 0
+  },
+  "measured_basis": "Original three field paths took12.43s. Extra split cells are at most35 per target/time. Halt90s; no automatic order/grid enlargement.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_characteristic_gr.py": "1630d3f008a1e59748d318f921eed7da8fbea4c49d33e5b86617f67009a27076",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_anisotropic_gr.py": "8c70ea3234a101e81db0c159c0fcf4edf02b16f0910b066f2781699d74efca85",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-anisotropic-gr/fields.json": "3b6697c0e8260ca5dc46ca9193e9b608863c731252cbb169148ee1b9982e376b",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-anisotropic-gr/source-64.npz": "a82f5b9e0e93962ce274b3e5e91337cb7869ae7b1b411193d6b574be9deec1f3",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-anisotropic-gr/source-128.npz": "9990c6eac97d9b3fe94a37ae7901a99bdbeefcc9a93c923ccba80fb136531d30"
+  }
+}

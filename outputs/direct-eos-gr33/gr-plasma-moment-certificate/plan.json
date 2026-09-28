@@ -1,0 +1,104 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "d5246ee",
+  "bindings": {
+    "verification/gr_plasma_moment_certificate.py": "965b60ef158a891b0ac0059313d5db80acaa9dd04b5efa3750cd03c5086e7d42",
+    "verification/fermi_uniform.py": "8d968e87c3faa6124040fd734f63726d462dbebbcd62f6c0264c06f42605bfc5",
+    "verification/interval_records.py": "5781af2bf247d9e5f707b89874c0486959293ebe9fefdcbf2b15d5fc841c7caa",
+    "outputs/direct-eos-gr33/gr-plasma-dispersion/manifest.json": "06cb255901358a7b9f1e2cd72af0ed0841fbd772cf12c37b47f04711d6050cd6",
+    "outputs/direct-eos-gr33/gr-fermi-plasma/manifest.json": "0d0021a38d69d6eb004670f80a9bde5eba56fdb7b277cae6e7ea53bcce7b0d0e"
+  },
+  "eta_interval": [
+    -17,
+    24
+  ],
+  "beta_interval": [
+    "0",
+    "0.006"
+  ],
+  "velocity_powers": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "orders": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      0,
+      2
+    ]
+  ],
+  "normalization": "Bounds apply to exp(-min(eta,0)) times the value or partial derivative of the UNNORMALIZED moment. The normalizing factor is held constant while differentiating; no derivative through min(eta,0). Common physical sqrt(2)*beta^(3/2) is factored out.",
+  "definition": "J_j=integral_0^infinity sqrt(t)*sqrt(1+beta*t/2)*[1-(1+beta*t)^(-2)]^j*(f_e+f_p)dt, with f_e=1/(1+exp(t-eta)), f_p=1/(1+exp(t+eta+2/beta)). At beta=0 use the electron right limit and zero positron limit.",
+  "exact_rule": "Composite four-point Gauss on s=sqrt(t) in [0,10], evaluating only the electron term. Include electron tail and all omitted positron derivatives in the error. This is a newly declared exact-real rule, not a certificate for the prior adaptive binary.",
+  "coarse_intervals": 256,
+  "fine_panels": [
+    256,
+    512,
+    1024,
+    2048,
+    4096,
+    8192,
+    16384,
+    32768,
+    65536,
+    131072
+  ],
+  "eta_complex_radius": "0.25",
+  "beta_complex_radius": "0.001",
+  "precision_decimal_digits": 60,
+  "uniform_moment_absolute_error": "1e-14",
+  "uniform_kernel_absolute_error": "1e-10",
+  "corner": [
+    24,
+    "0.006"
+  ],
+  "corner_components": [
+    25,
+    "longitudinal_tail_24"
+  ],
+  "controls": "Verify symbolic parameter and disk derivative bounds. Independently validate exported decimal arithmetic using exact Fractions. Interval-evaluate the dominating high-eta/high-beta corner for both series-tail moments.",
+  "scope": "Conditional continuous-domain moment value and derivative quadrature errors. Interval corner includes arithmetic/serialization. Does not certify all native binary values, all state derivatives of the dispersion root, physical higher-order plasma effects or actual GR evolution."
+}

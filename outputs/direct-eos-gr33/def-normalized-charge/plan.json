@@ -1,0 +1,47 @@
+{
+  "classification": "Counterexample candidate",
+  "bindings": {
+    "verification/def_normalized_charge.py": "a3cec87ebc79804995bfff514b002aaa62770e6b1971de162aef222177233c43",
+    "verification/def_resolved_scalar_pulse.py": "6e05b94e44fbc27c2b4e10fb686f52a74eb384695c4db3db91a40a4d399c4b1f",
+    "verification/def_spherical_regular.py": "9023b81412cb33aa1b90ba5b036a05dbdd57f5e2416639ad4ed873def6fd59f3",
+    "verification/gr_scalar_nonlinear_exterior.py": "ae8af4f607fa60690742b08b60ee27b17225fb4fbd73ed854721cdd3a8873de1",
+    "outputs/direct-eos-gr33/def-resolved-scalar-pulse/initial.npz": "da7d0ec50e6f0d75bcd7c673d78099dd8f759a3c0ffc5a8546f62e54488017a1",
+    "outputs/direct-eos-gr33/def-resolved-scalar-pulse/initial-manifest.json": "e0acff44d88031ef710169aae7b105c43774e0b92527571d4b3f7655b41b6a10",
+    "outputs/direct-eos-gr33/def-resolved-scalar-pulse/companion-benchmark.json": "810073ff038513cb97b36f6a1f58046c6f48952f152b32ddf8a9152157df631a",
+    "outputs/direct-eos-gr33/gr-resolved-response-milestone-manifest.json": "7b72c3950fe4edeea190b98d5c58ae9468e59125c88a766a60f44d8289db8f5d",
+    "outputs/direct-eos-gr33/gr-scalar-nonlinear-exterior/manifest.json": "832f01fa32bdbc3cd75d35914f61d6e25b2e38e9535b97d8d4fff93f13a48cda"
+  },
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "scope": "Fixed shell B,V implies dlnrho=-dlna; full charge derivative includes mass normalization. Solving for psi-1 is algebraically equivalent. No physical coefficient-error bound."
+  },
+  "phi0": 0.001,
+  "thermal_steps": [
+    0.001,
+    0.0003,
+    0.0001
+  ],
+  "directions": [
+    "uniform",
+    "sign_of_leading_charge_gradient"
+  ],
+  "gates": {
+    "snapshot_residual": 2e-13,
+    "leading_derivative_relative_agreement": 0.005,
+    "derivative_last_two_relative_difference": 0.005,
+    "complex_step_relative_agreement": 1e-10
+  },
+  "budget": {
+    "workers": 4,
+    "blas_threads": 1,
+    "hard_timeout_seconds": 180,
+    "maximum_snapshot_iterations": 30,
+    "maximum_snapshots": 15,
+    "automatic_expansion": false
+  },
+  "claim": "Construct finite nonzero scalar background snapshots on the Phase40 full-radius grid with fixed shell baryons, composition, radii and declared Jordan temperature. Compute normalized exterior charge and the leading fixed-inventory thermal derivative including ADM mass normalization. Compare two directions against native finite-background central differences.",
+  "physical_scope": "Constraint-consistent quasistatic scalar readout on constrained Cauchy snapshots, not hydrostatic equilibrium or physical atmosphere. No time evolution, scalar-frequency response, fluid resolvent, orbital stationarity or observed signal. Leading derivative is phi0->0; finite phi0 native comparisons do not certify its remainder.",
+  "boundary": "Just vacuum map has no distant-radius cutoff; the finite-pressure truncated matter surface is a declared wall, not a physical vacuum photosphere.",
+  "decisions": "Use the thermal readout norm to state the minimum normalized fluid amplification needed for the existing 1e-9 target. Without a fluid resolvent bound this is not a no-go. Do not run a long orbit."
+}

@@ -1,0 +1,11 @@
+{
+  "classification": "Counterexample candidate",
+  "pre_execution_repairs": [
+    "Use redshift-weighted proper volume for the enclosed heat mass, as in the old conservative source. Radius-linear interpolation violates the central r cubed mass constraint.",
+    "Use the regular central heat-lift limit.",
+    "Store the Eulerian mass perturbation with the displacement term proportional to e+p."
+  ],
+  "remaining_physical_boundary": "Finite external pressure work and moving-emitter corrections are outside the frozen photon geometry approximation. Thermal face-energy conservation alone is not a full surface stress-energy junction certificate. Measure the omitted pressure work before interpreting mass or charge.",
+  "source_sha256": "f67b01b3271f1e7774788757ab2a1bb85da49cec89cc94fc93e5399bd2645cc2",
+  "registered_total_seconds": 600
+}

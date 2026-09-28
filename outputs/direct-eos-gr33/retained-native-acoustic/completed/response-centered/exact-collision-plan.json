@@ -1,0 +1,12 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "Original k8 coarse source rounding ratio3936079 includes unmodified deep cells with exactly zero conserved change and exactly zero collision difference. Original failed result remains in collision/.",
+  "repair": "Cellwise exact-zero identity, with support from all four conserved variables plus the advected-inventory displacement xi. Require zero incoming photon/thermal increment and assert all excluded photon/bound/escape changes are exactly zero. Count gross rounding on changed cells; original0.2percent gate retained.",
+  "physical_amplitude_unchanged": true,
+  "new_native_calls": 0,
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/apply_retained_native_acoustic.py": "e8c0bb379a5093ac5220c559706e1d4cd526df118ffc9de81641df396cbe1c8b",
+    "retained-native-acoustic153-work/response-centered/registered-gross-collision-producer.py": "b6427a26ef7e1aaefd3f647896cf8d30252b5fd340b9496179dc69dd21ac577a",
+    "retained-native-acoustic153-work/response-centered/collision/64/point-8.json": "23356e25801337e912082e2241de7447d7a487a79c4ad76460c139d39c64e0fe"
+  }
+}

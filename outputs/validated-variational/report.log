@@ -1,0 +1,18 @@
+
+## Recorded results
+
+Status: Proven. At the binary64 internal epoch 0.07 (approximately 1.68542119 days), the Jacobi run encloses the 24-state flow with midpoint state error norm at most 4.1463103E-11 and initial-state Jacobian operator error at most 0.0000055316127, in the original dimensionless coordinates. The geometric-delay box width is at most 0.000044770472 microseconds. These displayed upper bounds are rounded upward. Raw IVP Jacobian norms cannot be compared directly to singular values of the normalized timing nuisance matrix.
+
+Status: Proven. The Cartesian, scaled and Jacobi state/Jacobian intervals at this common epoch intersect component by component. The augmented mass calculation also agrees with the scaled state block. The four independent fractional-mass column error norms, in pulsar/inner/outer/extra order, are bounded by 1.8732067E-7, 3.6273306E-8, 7.6514719E-11, 1.0275596E-19.
+
+Status: Imported from prior work. The full observation interval extends to approximately 2989.511 days after the reference epoch. Every long-run representation below stopped at the declared Jacobian-width ceiling, without restarting its uncertainty. The listed last epochs are not useful-accuracy guarantees over the whole preceding interval.
+
+| Representation | Last returned epoch (days) | Full horizon completed |
+|---|---:|---|
+| full-forward | 6.09714964 | False |
+| ho-forward | 6.12213234 | False |
+| scaled-forward | 31.94608159 | False |
+| jacobi-translation-forward | 45.78006494 | False |
+
+Status: Conjectural. The next dependency is a long-span variational representation that avoids this interval overestimation, with the same inclusion test retained. In parallel mathematical preparation, the timing-parameter-to-IVP chain and full delay/inverse-time map must be defined. Extra numerical precision or Kepler-based coordinates are candidate remedies, not established solutions. D2 and full physical inference remain open.
+

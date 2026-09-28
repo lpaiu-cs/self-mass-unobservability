@@ -1,0 +1,40 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "energy_primitive": "K_E(xi)=xi*(E-E0*H(-xi))-S. dK_E/dxi=E-E0*H(-xi). It vanishes at both ends of a complete conservative vacuum fan.",
+    "trace_integral": "Integral delta(e-3p) dxi = -Integral[S*v+3*(p-p0*H(-xi))] dxi, if total lab energy is conserved. Never multiply a raw baryon quadrature residual by c^2 and call it charge.",
+    "general_weight": "Integral w*delta(trace) = [w*K_E] - Integral w_prime*K_E - Integral w*(S*v+3*delta p).",
+    "mass_constraint": "In the local thin-layer limit, delta m_geom=(G/c^4)*A_s*sqrt(b_s)*area_s*c*tau*K_E; its time derivative obeys the radial energy-flux constraint.",
+    "scope": "Conservation identities and leading local constraint map, not an error-certified spherical solution or Bondi scalar charge."
+  },
+  "exact_gamma_law_relative": {
+    "baryon": 5.241189183571488e-07,
+    "energy": 9.631521190690304e-07,
+    "momentum": 3.8387288192609503e-07
+  },
+  "native_momentum_relative": 0.00032574394533613216,
+  "conservative_trace_refinement_relative": 0.0017412807063644463,
+  "conservative_resolved_trace_integral": -3.115433101149108e-05,
+  "conditional_tail_trace_integral_upper": 2.3546058448863747e-09,
+  "resolved_trace_energy_erg": -1.9245807743415042e+24,
+  "instantaneous_normalized_scalar_source_proxy": 2.1807567045329948e-32,
+  "conditional_tail_proxy_absolute_upper": 1.6481889727866702e-36,
+  "naive_uncorrected_source_proxy": -2.0150761815077194e-27,
+  "numerical_scope": "The source proxy freezes alpha*A*N and area at the actual surface. It is a conservative local source moment, NOT an evolved asymptotic charge; coarse/fine agreement is numerical evidence, not a rigorous discretization enclosure.",
+  "tail_scope": "Tail interval is conditional on the explicit sound-speed and thermodynamic premises; no native EOS calls below rho/rho0=exp(-18).",
+  "gr_source_packet": {
+    "maximum_abs_delta_m_geom_cm": 3.998470146160259e-17,
+    "maximum_abs_delta_lapse": 5.435789675734939e-33,
+    "energy_primitive_at_resolved_tail": -0.00013560592979916522,
+    "full_tail_mass_constraint_closed": false,
+    "scope": "The tail endpoint lapse is set to zero only for this resolved source packet. The unqueried tail, variable coefficients, spherical fluid backreaction and photon exchange remain unclosed."
+  },
+  "seconds": 0.2227001660000001,
+  "full_spherical_GR_evolution": false,
+  "photon_matter_exchange_solved": false,
+  "final_charge_solved": false,
+  "full_goal_complete": false
+}

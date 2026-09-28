@@ -1,0 +1,29 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "46eea1643e7850c669d40025a312da4e9fd068a7",
+  "cells": 128,
+  "core_cells": 16,
+  "workers": 15,
+  "fd_scaled_step": "0.001",
+  "fields": [
+    "lnrho_B",
+    "lnT",
+    "v/c"
+  ],
+  "refinements": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32
+  ],
+  "assumptions": "Affine rho/T/velocity sector about the actual initial data; frozen heat flux and composition perturbations; exact original gravity reconstruction; symmetric derivative of the zero-velocity upwind branch; zero perturbations outside the selected window. This control is not a new full-GR or physical-EOS certificate.",
+  "diagnostic_scope": "Post-failure selected central region. Test reproduction of actual 1/2/4 errors, finer-step response and native EOS/cache agreement. Do not overwrite or relax the original convergence gate.",
+  "sha256": {
+    "verification/gr_time_convergence_cause.py": "8213f7ba7d97e748606037d1f66cf83219b1a0bf0e0568b58e9e450f76d62070",
+    "outputs/direct-eos-gr33/gr-conservative-composition-recovery-20260914/plan.json": "9e653fcdf9244ca4b7dd1f1ff7df00ac60ac3ee2cf7a2092c80e37a281b34883",
+    "outputs/direct-eos-gr33/gr-conservative-composition-recovery-20260914/time-refinement.json": "95fae9c541a44e0d25ebc60b6f974e3dc08617fec35627ed6ded475f211f5c72",
+    "outputs/direct-eos-gr33/gr-conservative-composition-recovery-20260914/time-refinement-manifest.json": "386e6f36a2c9a37daffb871ddd6d769f2f9c22856c979ae582878866bca37c55"
+  }
+}

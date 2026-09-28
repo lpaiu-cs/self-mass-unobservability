@@ -1,0 +1,34 @@
+{
+  "classification": "Counterexample candidate",
+  "reason": "The 8/rate_C control is time-converged but differs from the infinite-time invariant projection by 0.006355. The old plan had no decay-gap evidence for equilibrium by that time. Also the dense expanded null residual was normalized by the physical coupling rate rather than the stiff matrix scale. Preserve both failed tests.",
+  "claim": "Independently evaluate the same finite-time Kompaneets problem by symmetric eigendecomposition on logarithmic frequency cells. Do not extend the physical duration or relax the old gates.",
+  "method": "Remove the known energy and photon-number null modes by orthogonal projection, diagonalize the symmetric positive dissipative block, and evaluate its exponential at y=8. Frequency counts 256,512,1024. Compare temperature and energy-norm spectrum with the previous unsplit native-grid result.",
+  "gates": {
+    "reference_last_difference_initial": 0.001,
+    "native_to_reference_initial": 0.001,
+    "temperature_difference_K": 0.001,
+    "stiff_null_backward_error": 1e-12
+  },
+  "original_asymptotic_gate_retained": false,
+  "original_failed_result_preserved": true,
+  "budget": {
+    "hard_seconds": 90,
+    "frequency_counts": [
+      256,
+      512,
+      1024
+    ],
+    "new_stellar_steps": 0,
+    "new_network_queries": 0,
+    "new_EOS_calls": 0,
+    "automatic_expansion": false
+  },
+  "bindings": {
+    "verification/def_photon_compton_reference.py": "32c55eb1e57e40700b52c891501d05c0426e211b62f76edbfde9932d71422505",
+    "verification/def_photon_spatial_coupling.py": "0e24d3e8f745fd7e33a5010c29da3d85a48906a9497c6989d15985cd1f719170",
+    "outputs/direct-eos-gr33/def-photon-spatial-coupling/bank.npz": "adb6377b93e4a48a8530e2e1bcccf6f433e700dac69d80cf434ff47dcd25705b",
+    "outputs/direct-eos-gr33/def-photon-spatial-coupling/controls.json": "e10b8e1d779724be3187e48ab480e284f49a236305df405387d039f328dfd0f9",
+    "outputs/direct-eos-gr33/def-photon-spatial-coupling/compton-control.npz": "19485b707135e4df433ff75167a89dddb4b5a72af9b439efec8ab0edd1132f2a",
+    "outputs/direct-eos-gr33/def-photon-spatial-coupling/result.json": "cd157d4dd62ba90aaebd1ec3203d4d39c5c2fbe3a0f586870ad1927b2a2fb483"
+  }
+}

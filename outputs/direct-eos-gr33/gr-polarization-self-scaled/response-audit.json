@@ -1,0 +1,57 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "previous_grid_maximum_absolute_difference": 1.0842021724855044e-19,
+  "grid_points": 41678,
+  "largest_k_over_kappa": 104165.25919165752,
+  "old_zero_states": 338,
+  "new_zero_states": 0,
+  "controls": [
+    {
+      "cell": 2529,
+      "Q": 522.1044197238274,
+      "old": 1.971607730563955e-18,
+      "new": 1.907760798050902e-08,
+      "reference": 1.907760798050902e-08,
+      "relative_difference": 0.0,
+      "passed": true
+    },
+    {
+      "cell": 3330,
+      "Q": 2129.500128915164,
+      "old": 9.784205559187591e-198,
+      "new": 2.5634283841575515e-09,
+      "reference": 2.563428384165893e-09,
+      "relative_difference": 3.2539526628738713e-12,
+      "passed": true
+    },
+    {
+      "cell": 4132,
+      "Q": 2645.8097042700415,
+      "old": 2.7308631420128865e-249,
+      "new": 3.415892011859872e-09,
+      "reference": 3.415892011866842e-09,
+      "relative_difference": 2.0403678746561127e-12,
+      "passed": true
+    },
+    {
+      "cell": 4933,
+      "Q": 3024.4945927243116,
+      "old": 1.6882760921890847e-293,
+      "new": 4.147670706294744e-09,
+      "reference": 4.147670706294756e-09,
+      "relative_difference": 2.9976021664879227e-15,
+      "passed": true
+    },
+    {
+      "cell": 5734,
+      "Q": 3359.6109165601792,
+      "old": 0.0,
+      "new": 4.775371137321478e-09,
+      "reference": 4.77537113732153e-09,
+      "relative_difference": 1.0880185641326534e-14,
+      "passed": true
+    }
+  ],
+  "scope": "Actual old quadrature failure reproduced at fixed high Q, resolved by exact change of variable and independently checked. No floor or epsilon shift."
+}

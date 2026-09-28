@@ -1,0 +1,71 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "rows": [
+    {
+      "file": "native-full-charge251-work/check-retry/endpoint/gr/endpoint-64.npz",
+      "reference": "native-returned-source245-work/check/gr/endpoint-64.npz",
+      "exact_arrays": 25
+    },
+    {
+      "file": "native-full-charge251-work/check-retry/endpoint/gr/endpoint-128.npz",
+      "reference": "native-returned-source245-work/check/gr/endpoint-128.npz",
+      "exact_arrays": 25
+    },
+    {
+      "file": "native-full-charge251-work/check-retry/dense/geometry.npz",
+      "reference": "native-dense-returned246-work/check/geometry.npz",
+      "exact_arrays": 7
+    },
+    {
+      "file": "native-full-charge251-work/check-retry/dense/gr/source-64.npz",
+      "reference": "native-dense-returned246-work/check/gr/source-64.npz",
+      "exact_arrays": 59
+    },
+    {
+      "file": "native-full-charge251-work/check-retry/dense/gr/source-128.npz",
+      "reference": "native-dense-returned246-work/check/gr/source-128.npz",
+      "exact_arrays": 59
+    },
+    {
+      "file": "native-full-charge251-work/check-retry/charge/gr/fields-128-g8.npz",
+      "reference": "native-compensated-charge247-work/check/gr/fields-128-g8.npz",
+      "exact_arrays": 18
+    },
+    {
+      "file": "native-full-charge251-work/check-retry/charge/gr/fields-64-g8.npz",
+      "reference": "native-compensated-charge247-work/check/gr/fields-64-g8.npz",
+      "exact_arrays": 18
+    },
+    {
+      "file": "native-full-charge251-work/check-retry/charge/gr/fields-128-g4.npz",
+      "reference": "native-compensated-charge247-work/check/gr/fields-128-g4.npz",
+      "exact_arrays": 18
+    }
+  ],
+  "componentwise_charge_exact": true,
+  "new_physical_steps": 0,
+  "bindings": {
+    "verification/read_full_return_charge.py": "69cca194ef8def5a79fd56b4aff0e0629dfe83ec91e0fc3e70e74765d28a68c1",
+    ".phase247-polynomial-audit.py": "1c5aa0306c4641f572e6f349f457862c749d261c00dd56372dc8faa012941e85",
+    "native-full-charge251-work/check-retry/endpoint/gr/endpoint-64.npz": "35261194a2aa0767751043ef34fde50aaedc3d79da9ba86f5410010bea430f4d",
+    "native-returned-source245-work/check/gr/endpoint-64.npz": "babf9550edf6b3a0b5532c0acdac3be3e40b6bbdd09ab728fc577c3b5769a4fc",
+    "native-full-charge251-work/check-retry/endpoint/gr/endpoint-128.npz": "a6b586877263319311e63cae8e826b31aeae9cf839176a327354a7585c10e6da",
+    "native-returned-source245-work/check/gr/endpoint-128.npz": "70315f843aa5468af91cab3345d2f958e1f59647bd5aac01a963b505c7d871bd",
+    "native-full-charge251-work/check-retry/dense/geometry.npz": "e3368971518a160f1b1bf2307a6556a5f80e663d810cb96690610a6bc5acd13b",
+    "native-dense-returned246-work/check/geometry.npz": "e3368971518a160f1b1bf2307a6556a5f80e663d810cb96690610a6bc5acd13b",
+    "native-full-charge251-work/check-retry/dense/gr/source-64.npz": "47b8a507734ce7d7c527a1f91a914f44b73cbb15daefbb25a2e7a5c0d5720837",
+    "native-dense-returned246-work/check/gr/source-64.npz": "f3bd6d2ba767f4f7f02fe6b42c46325d52835349cb3cd2aeca7d5a531192dcce",
+    "native-full-charge251-work/check-retry/dense/gr/source-128.npz": "af0de7e656a01c8f33829b35f9dda30655ca69eda4ab0fb382dc1e3c367107a3",
+    "native-dense-returned246-work/check/gr/source-128.npz": "eddfa0cd3059e604802f42aa5e460b3ac2f7df916040b0888802e80fd1ce5375",
+    "native-full-charge251-work/check-retry/charge/gr/fields-128-g8.npz": "79f99350d2cae5e02c792c1ee2c19fbb5623b4974ade94c98f9632c33feb294c",
+    "native-compensated-charge247-work/check/gr/fields-128-g8.npz": "79f99350d2cae5e02c792c1ee2c19fbb5623b4974ade94c98f9632c33feb294c",
+    "native-full-charge251-work/check-retry/charge/gr/fields-64-g8.npz": "6f8853bfc4fe7c6bac8c433f538d7773a13f108875ae20af7a2b14c8675fc707",
+    "native-compensated-charge247-work/check/gr/fields-64-g8.npz": "6f8853bfc4fe7c6bac8c433f538d7773a13f108875ae20af7a2b14c8675fc707",
+    "native-full-charge251-work/check-retry/charge/gr/fields-128-g4.npz": "e5aeb88696c6f40580267ec0439021d78fd2002a8a076cb0a95421844d1277ae",
+    "native-compensated-charge247-work/check/gr/fields-128-g4.npz": "e5aeb88696c6f40580267ec0439021d78fd2002a8a076cb0a95421844d1277ae"
+  },
+  "scope": "Full reader route reproduces the completed short same-return endpoints, geometry, source, three GR fields and charge. No physical or full-period error certificate.",
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false
+}

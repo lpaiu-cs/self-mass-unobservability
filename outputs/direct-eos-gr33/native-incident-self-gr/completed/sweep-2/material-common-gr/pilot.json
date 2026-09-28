@@ -1,0 +1,141 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "rows": [
+    {
+      "classification": "Counterexample candidate",
+      "passed": true,
+      "steps": 64,
+      "reference": 128,
+      "completed": 2,
+      "substeps": 8,
+      "balance_relative": [
+        1.3465238863507873e-19,
+        3.3183257221152285e-17,
+        9.209826539878643e-19,
+        6.795553987838923e-17
+      ],
+      "directional": [
+        {
+          "time": 0.00010732597243527195,
+          "relative": [
+            4.3945665505572715e-05,
+            3.1523304266835125e-09,
+            2.8325796907537678e-08,
+            2.3477002759111898e-11
+          ]
+        }
+      ],
+      "directional_relative": 4.3945665505572715e-05,
+      "forward_probe_indicator": 0.00019708377134729658,
+      "maximum_true_relative_state": 1.8435425039096616e-37,
+      "endpoint_sum": [
+        2.1619042141337794e-15,
+        1.837357913409716e+20,
+        416752286490859.2,
+        -4.42917383617553e+23
+      ],
+      "endpoint_L1": [
+        0.06425647576269525,
+        1.894909978534215e+20,
+        5566829193579392.0,
+        1.9191465451652485e+24
+      ],
+      "endpoint_sum_physical": [
+        2.1619042141337794e-41,
+        1.837357913409716e-06,
+        4.167522864908592e-12,
+        -0.0044291738361755305
+      ],
+      "endpoint_L1_physical": [
+        6.425647576269526e-28,
+        1.894909978534215e-06,
+        5.566829193579392e-11,
+        0.019191465451652484
+      ],
+      "discard_physical": [
+        -2.1617695617451444e-41,
+        -9.699237062566191e-24,
+        -3.3066608764940276e-27,
+        3.182443695441109e-18
+      ],
+      "raw_owner_calls": 86,
+      "seconds": 1.0861835419998442,
+      "full_GR_feedback": false,
+      "final_charge_solved": false,
+      "worker_wall_seconds": 5.862293141999999,
+      "physical_branch_ratio": 2.2117930975018725e-21,
+      "maximum_owner_error": 1.8890685044047918e-13,
+      "nominal_arithmetic_probe": 512
+    },
+    {
+      "classification": "Counterexample candidate",
+      "passed": true,
+      "steps": 128,
+      "reference": 128,
+      "completed": 2,
+      "substeps": 8,
+      "balance_relative": [
+        1.0127182767693235e-20,
+        2.195448587578846e-18,
+        4.406786368513115e-18,
+        4.974708569079138e-17
+      ],
+      "directional": [
+        {
+          "time": 5.3662986217635974e-05,
+          "relative": [
+            3.960388942283499e-05,
+            9.560740729041913e-10,
+            6.189934491850812e-09,
+            5.283409398622055e-12
+          ]
+        }
+      ],
+      "directional_relative": 3.960388942283499e-05,
+      "forward_probe_indicator": 0.00019668341536369996,
+      "maximum_true_relative_state": 8.156650771465767e-38,
+      "endpoint_sum": [
+        1.001535991998221e-16,
+        4.5935885229949305e+19,
+        208897538434804.47,
+        -2.2066624274479942e+23
+      ],
+      "endpoint_L1": [
+        0.00803427393906412,
+        4.736965179475465e+19,
+        2783903139463610.5,
+        9.593846822837022e+23
+      ],
+      "endpoint_sum_physical": [
+        1.001535991998221e-42,
+        4.5935885229949303e-07,
+        2.088975384348045e-12,
+        -0.0022066624274479944
+      ],
+      "endpoint_L1_physical": [
+        8.034273939064119e-29,
+        4.736965179475465e-07,
+        2.7839031394636106e-11,
+        0.009593846822837022
+      ],
+      "discard_physical": [
+        -1.001434720170544e-42,
+        -7.85199329717928e-25,
+        -4.264256803906222e-28,
+        1.5058695027673286e-18
+      ],
+      "raw_owner_calls": 86,
+      "seconds": 1.0161972230000629,
+      "full_GR_feedback": false,
+      "final_charge_solved": false,
+      "worker_wall_seconds": 5.370445699000129,
+      "physical_branch_ratio": 5.534370480988724e-22,
+      "maximum_owner_error": 1.8890685044047918e-13,
+      "nominal_arithmetic_probe": 512
+    }
+  ],
+  "seconds": 11.232987893999962,
+  "upper_remaining_seconds": 367.39074478890393,
+  "eligible": true
+}

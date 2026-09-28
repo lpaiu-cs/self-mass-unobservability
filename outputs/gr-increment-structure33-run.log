@@ -1,0 +1,16 @@
+PASS exact saved RK mass-addition replay; finite shifted-cell comparison only
+INCREMENT STRUCTURE CELL 4 5000
+INCREMENT STRUCTURE CELL 4 0
+INCREMENT STRUCTURE CELL 4 1000
+INCREMENT STRUCTURE CELL 4 2000
+INCREMENT STRUCTURE CELL 4 3000
+INCREMENT STRUCTURE CELL 4 4000
+INCREMENT STRUCTURE RESULT {'classification': 'Counterexample candidate', 'subdivision': 4, 'cells': 5735, 'interface_max': 2.282618538629322e-13, 'interface_passed': True, 'interface_components': [-1.67242521914579e-14, -2.0244927696061454e-14, 2.282618538629322e-13], 'shell_mass_integral_geom_m': 291.6871724623933, 'shell_integral_minus_boundary_mass_geom_m': -5.902556221570876e-12, 'shell_integral_relative_boundary_difference': -2.0235928818029825e-14, 'first_three_shell_mass_geom_cm': [3.0500406785050487e-10, 3.0500406712448953e-10, 3.050040667587686e-10], 'maximum_radius_relative_initial_difference': 1.0162121863075683e-14, 'maximum_mass_relative_initial_difference': 2.1518177943146898e-14, 'EOS_lookups': 99739, 'direct_inverse_calls': 2627, 'entropy_root_statistics': {'calls': 2627, 'evaluations': 10916, 'maximum_score': 0.24942215934106904, 'label': 'increment-structure-4'}, 'full_GR_evolution': False, 'physical_EOS_certified': False, 'continuous_error_certified': False}
+INCREMENT STRUCTURE CELL 8 5000
+INCREMENT STRUCTURE CELL 8 0
+INCREMENT STRUCTURE CELL 8 1000
+INCREMENT STRUCTURE CELL 8 2000
+INCREMENT STRUCTURE CELL 8 3000
+INCREMENT STRUCTURE CELL 8 4000
+INCREMENT STRUCTURE RESULT {'classification': 'Counterexample candidate', 'subdivision': 8, 'cells': 5735, 'interface_max': 2.6462012095440635e-10, 'interface_passed': True, 'interface_components': [4.801911459065798e-12, -9.726119107149322e-13, -2.6462012095440635e-10], 'shell_mass_integral_geom_m': 291.6871724621157, 'shell_integral_minus_boundary_mass_geom_m': -2.8350119474218616e-10, 'shell_integral_relative_boundary_difference': -9.719357480300617e-13, 'first_three_shell_mass_geom_cm': [3.0500406777018945e-10, 3.0500406705581777e-10, 3.050040666889172e-10], 'maximum_radius_relative_initial_difference': 6.242429768891355e-12, 'maximum_mass_relative_initial_difference': 9.520161945673015e-13, 'EOS_lookups': 199383, 'direct_inverse_calls': 5240, 'entropy_root_statistics': {'calls': 5240, 'evaluations': 21778, 'maximum_score': 0.24946267793351218, 'label': 'increment-structure-8'}, 'full_GR_evolution': False, 'physical_EOS_certified': False, 'continuous_error_certified': False, 'finite_endpoint_refinement_max': 6.959400642575497e-10, 'finite_endpoint_refinement_passed': True}
+PASS complete increment-structure bindings; finite static constraint audit only

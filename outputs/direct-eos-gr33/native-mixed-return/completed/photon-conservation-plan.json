@@ -1,0 +1,29 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "The second fine photon prefix passes the Euclidean stage residual but exceeds the1e-8 energy/species ledger gate. Both original rows and the subsequent JSON writer failure are preserved.",
+  "repair": "Refine the unchanged stage equation until both its existing1e-14 Euclidean criterion and physical energy/number weighted-L1 residuals below1e-13 hold. Keep the same operator, preconditioner, extended stage states and at most three residual corrections. Do not project away conservation defects or alter any energy/source ledger.",
+  "norm": "For each conserved moment, sum absolute photon residual times its existing Eweight/Nweight and absolute gas residual times eu/nu; divide by the corresponding absolute weighted RHS, with the same unit floor1 used by the stage ledger.",
+  "output_repair": "The metadata interception now uses the existing NumPy scalar converter for every row, preserving the original live module namespace.",
+  "reuse": "Reuse the accepted64 prefix byte-for-byte; rerun only the failed128 prefix. All full first-sweep photon and material histories remain untouched.",
+  "budget_seconds": 70,
+  "original_photon_pilot_budget_seconds": 120,
+  "total_action_seconds": 4200,
+  "unchanged_gates": {
+    "energy_species": 1e-08,
+    "stage": 1e-12,
+    "time": 0.02
+  },
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/return_native_mixed_gr.py": "ba23ce0c8dcc4b3ddfe1d8e9b470ede3130ae37b5e5be2ef730219be328d038d",
+    "native-mixed-return162-work/pre-conservation-producer.py": "5585570a9a0e3a2aff5b6471f61f056674cfc7040ebe099f88796385363e7468",
+    "native-mixed-return162-work/photon_pilot-2-receipt.json": "8e33854fbfddc6168280232945ccb1ceb45d0dc4d8a608a9e0f670667287773e",
+    "native-mixed-return162-work/sweep-2/photons-rejected/pilot-64-progress.json": "0226fef330d89421b8c795e94ea684a108aecb965ef4a6b66580f90b42576a18",
+    "native-mixed-return162-work/sweep-2/photons-rejected/pilot-128.npz": "c2a35e23f30bf483b09424c2005beff03ef3f8ef6d641ad7f2385ea71c077ad9",
+    "native-mixed-return162-work/sweep-2/photons-rejected/pilot-128-checkpoint.npz": "80c4b83cc726c9122dc23f566144e13cbb3b864d10bf1161072b06feb3dbd2d1",
+    "native-mixed-return162-work/sweep-2/photons-rejected/pilot-64.npz": "0bbbeada7a0ff9e4a086f0a93b454d322b1c43569bace17eb4aa369c190feaf6",
+    "native-mixed-return162-work/sweep-2/photons-rejected/pilot-128-progress.json": "2817658e8593dfc1df4948f6711394cbde8d867a4d35421143186ac19dbe2e8e",
+    "native-mixed-return162-work/sweep-2/photons-rejected/pilot-128.json": "737784792256380420a4af7a806044379623300588f3a321bd805e19dfe9472f",
+    "native-mixed-return162-work/sweep-2/photons-rejected/pilot-64.json": "311f1cae1ae116f2072c6c6328dec6f3eede1b2beab9fb4751144a9515608c33",
+    "native-mixed-return162-work/sweep-2/photons-rejected/pilot-64-checkpoint.npz": "e0fb6f13def147ac1cb4b87dda8e518cb48b2ac5a34b3cdb392ad3d472a24049"
+  }
+}

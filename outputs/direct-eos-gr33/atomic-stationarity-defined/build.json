@@ -1,0 +1,55 @@
+{
+  "classification": "Counterexample candidate",
+  "commands": [
+    {
+      "command": [
+        "cmake",
+        "-S",
+        "/home/lpaiu/work/direct-eos-gr33/atomic-stationarity-defined/source",
+        "-B",
+        "/home/lpaiu/work/direct-eos-gr33/atomic-stationarity-defined/build",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DBUILD_SHARED_LIBS=ON",
+        "-DBUILD_TEST=ON",
+        "-DBUILD_DOC=OFF",
+        "-DBUILD_DOX_DOC=OFF"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "/home/lpaiu/work/direct-eos-gr33/atomic-stationarity-defined/build",
+        "--target",
+        "free_eos",
+        "-j",
+        "2"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "gfortran",
+        "-O2",
+        "-fPIC",
+        "-shared",
+        "-I/home/lpaiu/work/direct-eos-gr33/atomic-stationarity-defined/build/src",
+        "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/atomic-stationarity-defined/direct_ion_bridge.f90",
+        "-L/home/lpaiu/work/direct-eos-gr33/atomic-stationarity-defined/build/src",
+        "-Wl,-rpath,/home/lpaiu/work/direct-eos-gr33/atomic-stationarity-defined/build/src",
+        "-lfree_eos_direct24_atomic_defined",
+        "-o",
+        "/home/lpaiu/work/direct-eos-gr33/atomic-stationarity-defined/unused-inventory.so"
+      ],
+      "returncode": 0
+    }
+  ],
+  "completed": true,
+  "sha256": {
+    "/home/lpaiu/work/direct-eos-gr33/atomic-stationarity-defined/unused-inventory.so": "3d31ad581c9f6af8a55b943792ec4252ac8ca1d4deb0d626885782ff07b59cd1",
+    "/home/lpaiu/work/direct-eos-gr33/atomic-stationarity-defined/build/src/libfree_eos_direct24_atomic_defined.so.1.0.0": "38bb383c7dd274897aeac114a2bfa9a6e64181a90041c94593b11853c8b49fea"
+  },
+  "original_runtime_modified": false,
+  "physical_EOS_certified": false
+}

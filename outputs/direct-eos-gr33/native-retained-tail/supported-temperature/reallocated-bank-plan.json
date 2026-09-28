@@ -1,0 +1,18 @@
+{
+  "classification": "Counterexample candidate",
+  "original_forecasts_accepted": false,
+  "decision": "Keep both rejected dispatch forecasts. Transfer80s from the unstarted90s GR readout to the bank, preserving the total action allocation1195s, all physical states and all scientific gates. Bank setup already spent39.095s is deducted. This targets the actual coupled material bottleneck; GR readout has only10s left in this phase.",
+  "bank_total_seconds": 260,
+  "bank_already_spent_seconds": 39.09529325199992,
+  "hard_seconds": 220.90470674800008,
+  "GR_seconds": 10,
+  "total_original_seconds": 1195,
+  "total_reallocated_seconds": 1195,
+  "native_call_cap": 1983,
+  "forecast": "Use the already measured cached maximum per-state cost, doubled plus20s and10s output allowance. Add the actual new setup cost before dispatch; stop if it no longer fits.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/native_tail_supported_temperature.py": "b230407985e9d00ed6f8c19158a44db68605b33078db681fcd16b889114ea749",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/executed-cache-pilot.py": "78700645832d362bd0cd7d93348a34d4692e0ff554fc2527e8498f18bb0b6d2c",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/cached-bank-pilot.json": "bd1e53bf4e44877be8dd3729603919ae4b6069146834bfb0f899d2c7f03f0837"
+  }
+}

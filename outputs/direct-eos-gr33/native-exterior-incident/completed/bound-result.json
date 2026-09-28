@@ -1,0 +1,80 @@
+{
+  "classification": "Counterexample candidate",
+  "analytic_envelope_verified": true,
+  "original_point_readout_passed": false,
+  "original_point_controls": {
+    "angular": 2.713137145308373e-09,
+    "temporal_quadrature": 6.580601047936563e-05,
+    "radial": 1.2264663674139005e-11,
+    "background_history": 0.023615989612540602
+  },
+  "original_component_controls": {
+    "angular": [
+      2.4957280311510256e-17,
+      9.450825005067035e-08,
+      1.3081840791929344e-06
+    ],
+    "temporal_quadrature": [
+      7.139726460372675e-05,
+      0.0007587517445108029,
+      0.0026206316108187576
+    ],
+    "radial": [
+      1.0398866796462607e-19,
+      1.2537479172029339e-06,
+      9.772639432422443e-20
+    ],
+    "background_history": [
+      0.02364329681892506,
+      0.014065460194389635,
+      0.010521711336160233
+    ]
+  },
+  "primary_boundary_bound": 1.8036244262093915e-53,
+  "primary_volume_bound": 9.937230223710938e-58,
+  "primary_shell_bound": 6.66896452719334e-56,
+  "primary_total_bound": 1.810392763038822e-53,
+  "finite_Born_input_interaction_bound": 4.419283558776187e-57,
+  "additional_static_potential_bound": 2.4845559855021767e-58,
+  "photon_arrival_mass_bound": 7.210753832141578e-57,
+  "total_selected_envelope": 1.8115806123377687e-53,
+  "envelope_over_stored_body": 0.0071422388043385545,
+  "conditional_interval_around_stored_body": [
+    -2.554548235738198e-51,
+    -2.518316623491442e-51
+  ],
+  "same_input_radiation_metric_cannot_erase_stored_body": true,
+  "emission_caps": {
+    "through_D_erg": 6.319952030012523e+30,
+    "through_T_erg": 2.8013014149690235e+31,
+    "binwise_luminosity_erg_per_second": 1.6859593151814305e+34,
+    "port_relative": [
+      1.628091217761828e-16,
+      2.9197023875958456e-16
+    ]
+  },
+  "photon_energy_fraction_bound": 4.312603978498607e-33,
+  "photon_arrival_shift_seconds_bound": 3.05768313406696e-35,
+  "Born_source": {
+    "integral": 2.9582263041740938e-36,
+    "absolute": 2.4325164826822505e-44,
+    "U": 1.5229193757942285e-28,
+    "Ut": 4.434269675243036e-26,
+    "Ux": 1.4791131520870469e-36,
+    "Uxx": 9.923783735350395e-43
+  },
+  "global_potential_contraction": 3.24298755705297e-08,
+  "new_free_field_norm": 7.661313612988355e-51,
+  "scope": "Only the listed exterior contributions, for the saved emission caps and continuous finite-source input on the exact static-vacuum idealization. This interval does not enclose the previous body response error or all physical exterior effects.",
+  "remaining": [
+    "Reciprocal mixed scalar-metric constraints and already-generated scalar background response.",
+    "Scalar readout change from perturbed packet paths, beyond the arrived-mass bound.",
+    "Interior evolving-background operator and input interpolation errors.",
+    "Full EOS, uniform derivatives, spatial/boundary/nonlinear errors and static/observational comparison."
+  ],
+  "physical_exterior_closed": false,
+  "full_goal_complete": false,
+  "seconds": 4.955571494000001,
+  "CPU_seconds": 2.938018403,
+  "peak_RSS_bytes": 404230144
+}

@@ -1,0 +1,311 @@
+{
+  "status": "Counterexample candidate",
+  "theory": "massless DEF, beta=-4, phi_infinity=0, unscalarized branch",
+  "scope": "Specified-EOS structure and linear scalar scattering; not companion matching or a J0337 gravity limit",
+  "eos_sha256": "eddb8321e8ad97b30eccebe5d6a5bf8147bfb6baf3c1783aa32fa4ce94d30052",
+  "prototype": [
+    {
+      "baryon_mass_solar": 0.9,
+      "c2": 0.07044286155999996,
+      "c4": 0.7631769999999998,
+      "charge_solar": 0.0,
+      "omega_real_per_solar_mass": 0.02280900230199999,
+      "omega_damping_per_solar_mass": 0.048037203779999996,
+      "inertia_solar_mass": 24.91062852317455,
+      "pole_matched_damping": 2.3932738773112328,
+      "decay_seconds": 0.00010253492210327127,
+      "low_frequency_tau_seconds": 0.0001673419926003756
+    },
+    {
+      "baryon_mass_solar": 1.18,
+      "c2": 0.019861470302399993,
+      "c4": 0.5854042160000001,
+      "charge_solar": 0.0,
+      "omega_real_per_solar_mass": 0.0064695249283680005,
+      "omega_damping_per_solar_mass": 0.019190841127199997,
+      "inertia_solar_mass": 48.42570449341775,
+      "pole_matched_damping": 1.85866000281183,
+      "decay_seconds": 0.0002566584192425083,
+      "low_frequency_tau_seconds": 0.0004609332984520449
+    },
+    {
+      "baryon_mass_solar": 1.2,
+      "c2": 0.017161133439999993,
+      "c4": 0.5796639999999993,
+      "charge_solar": 0.0,
+      "omega_real_per_solar_mass": 0.005284382567200001,
+      "omega_damping_per_solar_mass": 0.017077587119999998,
+      "inertia_solar_mass": 53.70092397217932,
+      "pole_matched_damping": 1.8341644151187773,
+      "decay_seconds": 0.0002884184348193369,
+      "low_frequency_tau_seconds": 0.0005264314419988148
+    },
+    {
+      "baryon_mass_solar": 1.3,
+      "c2": 0.005044336439999985,
+      "c4": 0.558460999999999,
+      "charge_solar": 0.0,
+      "omega_real_per_solar_mass": 0.0007032134123999971,
+      "omega_damping_per_solar_mass": 0.005846662019999987,
+      "inertia_solar_mass": 145.46229319014003,
+      "pole_matched_damping": 1.7009377298737889,
+      "decay_seconds": 0.0008424449593276265,
+      "low_frequency_tau_seconds": 0.0016608633247696023
+    },
+    {
+      "baryon_mass_solar": 1.34,
+      "c2": 0.0007616993455999843,
+      "c4": 0.552280951999998,
+      "charge_solar": 0.0,
+      "omega_real_per_solar_mass": 1.887211403199925e-05,
+      "omega_damping_per_solar_mass": 0.000939762496799981,
+      "inertia_solar_mass": 862.1290060497449,
+      "pole_matched_damping": 1.6203930145779883,
+      "decay_seconds": 0.005241208246140098,
+      "low_frequency_tau_seconds": 0.01047819086497741
+    },
+    {
+      "baryon_mass_solar": 1.35,
+      "c2": -0.000265475990000016,
+      "c4": 0.5508411249999989,
+      "charge_solar": 0.05377433784986631,
+      "omega_real_per_solar_mass": 8.587667400001054e-06,
+      "omega_damping_per_solar_mass": 0.0006404368100000395,
+      "inertia_solar_mass": 1294.2691299679593,
+      "pole_matched_damping": 1.6577951857564126,
+      "decay_seconds": 0.007690830493707824,
+      "low_frequency_tau_seconds": 0.01537889580991108
+    },
+    {
+      "baryon_mass_solar": 1.4,
+      "c2": -0.005167971039999996,
+      "c4": 0.5438719999999995,
+      "charge_solar": 0.23877415152025946,
+      "omega_real_per_solar_mass": 0.002764103910400005,
+      "omega_damping_per_solar_mass": 0.01119104976000001,
+      "inertia_solar_mass": 77.78411023888339,
+      "pole_matched_damping": 1.7409716964413406,
+      "decay_seconds": 0.00044012769608498843,
+      "low_frequency_tau_seconds": 0.0008296428389932977
+    },
+    {
+      "baryon_mass_solar": 1.5,
+      "c2": -0.014026229000000001,
+      "c4": 0.527874999999999,
+      "charge_solar": 0.3992827431465864,
+      "omega_real_per_solar_mass": 0.012504990120000071,
+      "omega_damping_per_solar_mass": 0.022696961000000036,
+      "inertia_solar_mass": 41.774144098475915,
+      "pole_matched_damping": 1.896292238822979,
+      "decay_seconds": 0.00021701103278281439,
+      "low_frequency_tau_seconds": 0.0003329537203622219
+    }
+  ],
+  "stars": [
+    {
+      "interpolation": "pchip",
+      "rtol": 2e-08,
+      "r0_m": 1.0,
+      "central_pressure_geom": 1.2128416176208117e-10,
+      "gravitational_mass_solar": 1.4378144085038291,
+      "radius_m": 11698.672699817047,
+      "compactness": 0.18148321695496167,
+      "static": {
+        "beta": -4.0,
+        "central_normalization_phi_infinity": 0.1025564424962142,
+        "charge_per_central_scalar_m": 4262.956777862831,
+        "susceptibility_m": 41566.93303807018
+      }
+    },
+    {
+      "interpolation": "pchip",
+      "rtol": 2e-10,
+      "r0_m": 0.25,
+      "central_pressure_geom": 1.2128416587572364e-10,
+      "gravitational_mass_solar": 1.437814408474891,
+      "radius_m": 11698.671772319854,
+      "compactness": 0.1814832313397095,
+      "static": {
+        "beta": -4.0,
+        "central_normalization_phi_infinity": 0.10255629000160743,
+        "charge_per_central_scalar_m": 4262.958036606344,
+        "susceptibility_m": 41567.007119110174
+      }
+    },
+    {
+      "interpolation": "lal",
+      "rtol": 2e-08,
+      "r0_m": 1.0,
+      "central_pressure_geom": 1.2128049703417395e-10,
+      "gravitational_mass_solar": 1.4378144085045266,
+      "radius_m": 11699.22930036862,
+      "compactness": 0.18147458274025957,
+      "static": {
+        "beta": -4.0,
+        "central_normalization_phi_infinity": 0.10255890060208023,
+        "charge_per_central_scalar_m": 4262.968116494084,
+        "susceptibility_m": 41566.047329563684
+      }
+    },
+    {
+      "interpolation": "lal",
+      "rtol": 2e-10,
+      "r0_m": 0.25,
+      "central_pressure_geom": 1.2128049699622722e-10,
+      "gravitational_mass_solar": 1.437814408379181,
+      "radius_m": 11699.228337296865,
+      "compactness": 0.18147459766329138,
+      "static": {
+        "beta": -4.0,
+        "central_normalization_phi_infinity": 0.1025589799957386,
+        "charge_per_central_scalar_m": 4262.967369679948,
+        "susceptibility_m": 41566.00787036959
+      }
+    }
+  ],
+  "frequency_response": [
+    {
+      "omega_per_s": 1.0,
+      "far_cycles": 30.0,
+      "susceptibility_real_m": 41567.85869218914,
+      "susceptibility_imag_m": 5.763610316229975,
+      "raw_response_real_m": 41567.85858734809,
+      "raw_response_imag_m": -6.475742393068033,
+      "inferred_inverse_real_per_m": 2.4057048215538025e-05,
+      "inferred_damping": 0.9999999966338848
+    },
+    {
+      "omega_per_s": 3.0,
+      "far_cycles": 30.0,
+      "susceptibility_real_m": 41571.56621342646,
+      "susceptibility_imag_m": 17.29391821237903,
+      "raw_response_real_m": 41571.566903875944,
+      "raw_response_imag_m": -15.54585068497955,
+      "inferred_inverse_real_per_m": 2.4054899009749664e-05,
+      "inferred_damping": 0.9999999999593708
+    },
+    {
+      "omega_per_s": 10.0,
+      "far_cycles": 30.0,
+      "susceptibility_real_m": 41584.58806602215,
+      "susceptibility_imag_m": 57.68261494819296,
+      "raw_response_real_m": 41584.611045150166,
+      "raw_response_imag_m": -37.63148142926971,
+      "inferred_inverse_real_per_m": 2.4047324319467046e-05,
+      "inferred_damping": 1.0000000000079872
+    },
+    {
+      "omega_per_s": 30.0,
+      "far_cycles": 30.0,
+      "susceptibility_real_m": 41622.07215619429,
+      "susceptibility_imag_m": 173.36262793782953,
+      "raw_response_real_m": 41622.36750323665,
+      "raw_response_imag_m": -73.94999471423753,
+      "inferred_inverse_real_per_m": 2.4025297154426792e-05,
+      "inferred_damping": 0.9999999999910548
+    },
+    {
+      "omega_per_s": 100.0,
+      "far_cycles": 30.0,
+      "susceptibility_real_m": 41754.95234141888,
+      "susceptibility_imag_m": 581.6738690347706,
+      "raw_response_real_m": 41758.877585074086,
+      "raw_response_imag_m": -102.62728134413612,
+      "inferred_inverse_real_per_m": 2.3944608206160402e-05,
+      "inferred_damping": 0.9999999999994034
+    },
+    {
+      "omega_per_s": 300.0,
+      "far_cycles": 30.0,
+      "susceptibility_real_m": 42136.05761609389,
+      "susceptibility_imag_m": 1779.846514727373,
+      "raw_response_real_m": 42173.50403848809,
+      "raw_response_imag_m": 103.7408232061068,
+      "inferred_inverse_real_per_m": 2.3690372991655962e-05,
+      "inferred_damping": 1.0000000000000397
+    },
+    {
+      "omega_per_s": 1.0,
+      "far_cycles": 60.0,
+      "susceptibility_real_m": 41567.858703843216,
+      "susceptibility_imag_m": 5.763610349513625,
+      "raw_response_real_m": 41567.858598964085,
+      "raw_response_imag_m": -6.475986861469556,
+      "inferred_inverse_real_per_m": 2.405704820879332e-05,
+      "inferred_damping": 1.0000000018479511
+    },
+    {
+      "omega_per_s": 3.0,
+      "far_cycles": 60.0,
+      "susceptibility_real_m": 41571.566248346986,
+      "susceptibility_imag_m": 17.293918240115403,
+      "raw_response_real_m": 41571.56693852422,
+      "raw_response_imag_m": -15.546578748158463,
+      "inferred_inverse_real_per_m": 2.40548989895433e-05,
+      "inferred_damping": 0.9999999998831728
+    },
+    {
+      "omega_per_s": 10.0,
+      "far_cycles": 60.0,
+      "susceptibility_real_m": 41584.58818241481,
+      "susceptibility_imag_m": 57.68261527437272,
+      "raw_response_real_m": 41584.611159352185,
+      "raw_response_imag_m": -37.63390253514803,
+      "inferred_inverse_real_per_m": 2.404732425215983e-05,
+      "inferred_damping": 1.000000000064834
+    },
+    {
+      "omega_per_s": 30.0,
+      "far_cycles": 60.0,
+      "susceptibility_real_m": 41622.07250511208,
+      "susceptibility_imag_m": 173.36263084682045,
+      "raw_response_real_m": 41622.367839259496,
+      "raw_response_imag_m": -73.9572576363518,
+      "inferred_inverse_real_per_m": 2.402529695301575e-05,
+      "inferred_damping": 1.0000000000045695
+    },
+    {
+      "omega_per_s": 100.0,
+      "far_cycles": 60.0,
+      "susceptibility_real_m": 41754.953500872536,
+      "susceptibility_imag_m": 581.6739013452058,
+      "raw_response_real_m": 41758.87868523415,
+      "raw_response_imag_m": -102.6515437344605,
+      "inferred_inverse_real_per_m": 2.3944607541007198e-05,
+      "inferred_damping": 0.9999999999998588
+    },
+    {
+      "omega_per_s": 300.0,
+      "far_cycles": 60.0,
+      "susceptibility_real_m": 42136.06105090569,
+      "susceptibility_imag_m": 1779.8468054220477,
+      "raw_response_real_m": 42173.50766277697,
+      "raw_response_imag_m": 103.66751716379339,
+      "inferred_inverse_real_per_m": 2.3690371053580435e-05,
+      "inferred_damping": 0.9999999999999937
+    }
+  ],
+  "independent_LAL": {
+    "radius_m": 11748.002024597803,
+    "gravitational_mass_solar": 1.450443775299219,
+    "love_k2": 0.0742705374449329,
+    "radius_relative_difference": 0.00416896618261986,
+    "mass_relative_difference": 0.00878372538655725
+  },
+  "independent_LAL_refinement": [
+    {
+      "points": 4096,
+      "radius_m": 11699.243988244716,
+      "gravitational_mass_solar": 1.4378206737977934,
+      "radius_relative_difference": 1.337776082355191e-06,
+      "mass_relative_difference": 4.357598988979916e-06
+    },
+    {
+      "points": 16384,
+      "radius_m": 11699.230355151878,
+      "gravitational_mass_solar": 1.4378148003879234,
+      "radius_relative_difference": 1.724776159672814e-07,
+      "mass_relative_difference": 2.7264210178401527e-07
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "39e0bae7e",
+  "claim": "Evolve the actual interior pressure, heat, hydrogen and photons together with baryon/momentum motion, including material compression/advection and opposite photon momentum/work. Decide whether the Phase115 charge cancellation survives this feedback.",
+  "reuse": "Existing16 native volumes,152 frequencies,8 angles,448 atmosphere path and3.434ms. Native EOS/rho derivatives from Phase115; new missing spectral derivatives only. No fine896 path or duration increase.",
+  "equations": "Existing nonlinear unsplit radiation/H/heat stage and moving atmospheric SSP stages. Interior mechanical half stages use actual current pressure and conservative face mass/enthalpy/species fluxes. Radiation impulse and moving-frame work use the opposite moments of the same collision. Native density and advected initial-inventory gradients are retained to first order.",
+  "boundary": "Same shared photon face. Actual atmosphere inner mass/species flux supplies the opposite deep boundary flux. The mechanical pressure boundary and full scalar/metric evolution are not yet free matched.",
+  "native": {
+    "missing_spectral_derivatives": "16 cells, initial/final thermo-chemical points, rho offsets-1e-4/0/+1e-4 and frequency offsets+-1e-4",
+    "call_cap": 900,
+    "seconds": 45
+  },
+  "pilot": {
+    "steps": 2,
+    "paths": [
+      64,
+      128
+    ],
+    "seconds": 30
+  },
+  "production": {
+    "paths": [
+      64,
+      128
+    ],
+    "seconds": 360,
+    "CPU_threads": 1,
+    "memory_GB": 3,
+    "forecast": "Measure actual full coupled pilot seconds per step; require2x projected remainder within360s. Late cold primitive recovery and outer iterations remain unmeasured."
+  },
+  "gates": {
+    "native": 0.002,
+    "source_exchange": 1e-09,
+    "energy": 1e-08,
+    "baryon": 1e-10,
+    "species": 1e-09,
+    "time_trace": 0.02,
+    "time_charge": 0.02,
+    "linear_density": 0.001,
+    "linear_velocity": 1e-05
+  },
+  "limits": "First-order interior perturbative density/inventory/moving-frame closure on the original16 cells, finite H and Thomson microphysics, fixed GR metric. Numerical convergence of this model is not final physical charge or a continuum EOS/GR certificate.",
+  "stop": "Stop on support, positivity, conservation, pilot forecast or time budget failure. Preserve failed paths. No automatic extra paths, grid, horizon or weaker gate.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_interior_feedback.py": "ced765f003640b215dd831c28a2bb6ef547b118d5114b701ebacef8db5524a50",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_interior_motion.py": "80a3614034e611c12789f1a7bbf6d0c4cb1b8b1f636ef5b8e5174dc3aca74a18",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_two_way_atmosphere.py": "27276810bbbb4f5ac9fbed3decfb77d4b725942e39ad47ed3eaf9fa709daea52",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_cold_coupling.py": "0eb2bc3108dd815e3a51288ad866d3f2abe8e10ea7bbdce0969745eb537aca6e",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-interior-motion/native.npz": "11888b7221460d0b5c0af7fc1ec9f2077dacfe0585b858ecbdf657b3042a5605",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-interior-motion/forcing-896.npz": "445d7e130c8f2b242cdeffd01d31c88ee2f69b295cee4709f7610d21ab4d85bf",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-two-way-atmosphere/cells-448-steps-128.npz": "c022f43edb26ceddeaf91e8038f383299eef70b9c83e6822809a3b7ff90ec221",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-two-way-atmosphere/cells-448-steps-64.npz": "6b62e7b34c6be7dadf63a1b38278b8be405f66f8293bd002110f3ae8adc63d4f"
+  }
+}

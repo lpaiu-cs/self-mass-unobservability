@@ -1,0 +1,28 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "nonlinear_scalar_errors": [
+    {
+      "steps": 16,
+      "error": 0.00012835253661822033
+    },
+    {
+      "steps": 32,
+      "error": 3.245337197849141e-05
+    },
+    {
+      "steps": 64,
+      "error": 8.160941404489197e-06
+    },
+    {
+      "steps": 128,
+      "error": 2.0463119506652916e-06
+    }
+  ],
+  "ratios": [
+    3.9549830662677037,
+    3.9766701376681066,
+    3.9881218510383682
+  ],
+  "scope": "Implemented matrix-function/correction control with an analytic scalar solution. No claim of a uniform stiff bound or stellar convergence."
+}

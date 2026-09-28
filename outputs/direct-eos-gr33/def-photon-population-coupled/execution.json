@@ -1,0 +1,28 @@
+{
+  "classification": "Counterexample candidate",
+  "source_sha256": "2f95dc80bfa1b5cddabddffce19fe1968898f1cf55fff9c25eb013b9ce418399",
+  "plan_sha256": "f01ed8b2baed9a22684222a631d3282573434529f6d3261eea00d96b1ed1c316",
+  "budget": {
+    "build_seconds": 60,
+    "EOS_calls": 75,
+    "input_seconds": 90,
+    "coupled_paths": 5,
+    "coupled_seconds": 480,
+    "cpu_threads": 1,
+    "memory_GB": 4,
+    "new_stellar_steps": 0
+  },
+  "gates": {
+    "native_unbiased_bitwise": true,
+    "susceptibility_symmetry": 1e-05,
+    "susceptibility_step": 1e-05,
+    "positive_frozen_capacity": true,
+    "time_order": 1.8,
+    "time_error": 0.001,
+    "input_error": 0.001,
+    "energy_balance": 1e-09,
+    "solver": 1e-11,
+    "entropy_growth": 1e-10
+  },
+  "note": "Implementation completed after preregistration; source frozen before coupled execution."
+}

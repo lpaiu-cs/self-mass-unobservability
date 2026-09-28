@@ -1,0 +1,82 @@
+
+
+                                         version_number        7623
+load saved model input.mod
+
+ net name cno_extras.net
+ extra_terminal_output_file: log1
+ do_element_diffusion T
+                                               tau_base    2.5118800000000000D+01
+                     which_atm_option: WD_tau_25_tables
+ kappa_file_prefix gn93
+ kappa_lowT_prefix lowT_fa05_gs98
+   eos_file_prefix mesa
+                                        OMP_NUM_THREADS           4
+
+
+ central hydrogen    1.0000002839123822E-099
+save profile for model number            1
+save LOGS1/profile1.data for model 1
+
+
+
+                                                     m2    1.3999999999999999D+00
+                                                     m1    1.9750000000000001D-01
+                                 initial_period_in_days    3.3999999999999999D+00
+                             initial_separation_in_Rsun    1.1120285091613601D+01
+                                        jdot_multiplier    1.0000000000000000D+00
+                                                     fr    1.0000000000000001D-01
+
+__________________________________________________________________________________________________________________________________________________
+
+       step    lg_Tcntr    Teff       lg_LH     lg_Lnuc     Mass       H_rich     H_cntr     N_cntr     Y_surf     X_avg     eta_cntr  zones retry
+   lg_dt_yr    lg_Dcntr    lg_R       lg_L3a    lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf     Y_avg     gam_cntr  iters bckup
+     age_yr    lg_Pcntr    lg_L       lg_LZ     lg_Psurf    lg_Dsurf   C_core     C_cntr     Ne_cntr    Z_cntr     Z_avg     v_div_cs     dt_limit
+__________________________________________________________________________________________________________________________________________________
+
+                star               model                 age                mass             lg_mdot           (r-rl)/rl          last photo
+                   1                   2     5.732487253E+09     1.974585137E-01    -9.900000000E+01    -9.608864576E-01        
+hydro_newton_step returned ierr
+       retry cnt, step, log10(dt/yr), retry_factor     1     2        4.397940        0.500000
+                           1st model retry log10(dt/yr)    4.6989700043360187D+00
+                star               model                 age                mass             lg_mdot           (r-rl)/rl          last photo
+                   1                   2     5.732487253E+09     1.974585137E-01    -9.900000000E+01    -9.608864576E-01        
+hydro_newton_step returned ierr
+       retry cnt, step, log10(dt/yr), retry_factor     2     2        4.096910        0.500000
+                           1st model retry log10(dt/yr)    4.3979400086720375D+00
+                star               model                 age                mass             lg_mdot           (r-rl)/rl          last photo
+                   1                   2     5.732487253E+09     1.974585137E-01    -9.900000000E+01    -9.608864576E-01        
+ have reached retry limit so now backup
+                           1st model retry log10(dt/yr)    2.3979400086720375D+00
+                star               model                 age                mass             lg_mdot           (r-rl)/rl          last photo
+                   1                   2     5.732512253E+09     1.974585137E-01    -9.900000000E+01    -9.608864576E-01        
+hydro_newton_step returned ierr
+       retry cnt, step, log10(dt/yr), retry_factor     1     2        1.795880        0.500000
+                           1st model retry log10(dt/yr)    2.0969100130080562D+00
+                star               model                 age                mass             lg_mdot           (r-rl)/rl          last photo
+                   1                   2     5.732487378E+09     1.974585137E-01    -9.900000000E+01    -9.602655537E-01        
+
+stop because model_number >= max_model_number
+        2        1
+          2   7.316238  1.514E+04   2.299636   2.299637   0.197459   0.006167   0.000000   0.011795   0.107286   0.009793  22.949831   5735      3
+   2.096910   5.123948  -0.996273 -26.912795   1.154124 -99.000000   0.191291   0.980012   0.001635   0.003983   0.970090   1.448758     76      1
+ 5.7325E+09  21.034860  -0.318649  -3.250625   3.221772  -8.868448   0.000000   0.000103   0.002146  1.999E-02  2.012E-02  0.149E-07 neg_mass_frac
+                            surface ca40    7.9461647290866249D-06
+                              surface h1        0.8887314440736646
+              log_total_angular_momentum      -98.9999999999999858
+
+reduce dt because of max decrease       2
+save LOGS1/profile2.data for model 2
+save photos1/x002 for model 2
+save final_profile.data for model 2
+ saved to final.mod
+termination code: max_model_number
+
+                  runtime, retries, backups, steps         -0.117317          1.000000         3         1         2
+          2   7.316238  1.514E+04   2.299636   2.299637   0.197459   0.006167   0.000000   0.011795   0.107286   0.009793  22.949831   5735      3
+   2.096910   5.123948  -0.996273 -26.912795   1.154124 -99.000000   0.191291   0.980012   0.001635   0.003983   0.970090   1.448758     76      1
+ 5.7325E+09  21.034860  -0.318649  -3.250625   3.221772  -8.868448   0.000000   0.000103   0.002146  1.999E-02  2.012E-02  0.149E-07  max decrease
+                            surface ca40    7.9461647290866249D-06
+                              surface h1        0.8887314440736646
+              log_total_angular_momentum      -98.9999999999999858
+

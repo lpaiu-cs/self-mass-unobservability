@@ -1,0 +1,51 @@
+{
+  "classification": "Counterexample candidate",
+  "bindings": {
+    "verification/def_exponential_coupled_run.py": "9cd05dd4243b0863b5cb3234d691771c47e0e371dc2799ee6b24f07510184b43",
+    "verification/def_exponential_coupled.py": "865bbfdd9655944a9d0a9206189a6ff6263c53d887a2f437c7eba93734a80eca",
+    "outputs/direct-eos-gr33/def-exponential-coupled/plan.json": "cfe71cbcd0719c8816b28a7eb0e474b63f7da03ae79aaafca18d11c27d37cd9a",
+    "outputs/direct-eos-gr33/def-exponential-coupled/result.json": "33f4158d2537a36f82c3d6a30ec25d5cd7fb00639763a042bb4c0174c1013c59",
+    "outputs/direct-eos-gr33/def-exponential-coupled/controls.json": "ae061c9f92b4f558f6ac053d941c36a533264adbc9480f2db09f3722e3f90709",
+    "outputs/direct-eos-gr33/def-exponential-coupled/initial.npz": "c661d745c021cafe727165b859398b7836202e5d2ca5d97239ad56e24d04c4b6",
+    "outputs/direct-eos-gr33/def-exponential-coupled/step-001.npz": "6c6a5ced965246d1fcc0bb7a6037b8d7e4394bfa66d184a7ba4849d59fe87e0f",
+    "outputs/direct-eos-gr33/def-exponential-coupled/step-002.npz": "80b6bfad453b879d8d1717e7f479c2a8118641cc0a56cc496571cc9eb736bbf4"
+  },
+  "time_steps": [
+    12,
+    24,
+    48
+  ],
+  "paths": [
+    "minus",
+    "undriven",
+    "plus"
+  ],
+  "amplitude": 1e-05,
+  "duration_crossing_times": 1,
+  "gates": {
+    "native_norm": 1.0,
+    "scalar": 2e-17,
+    "mass_work_identity": 2e-15,
+    "baryon": 1e-09,
+    "isotope": 1e-09,
+    "minimum_time_order": 0.7,
+    "maximum_relative_last_difference": 0.2,
+    "minimum_signal_over_time_difference": 5
+  },
+  "method": "Native Phase44 matter and unprojected momentum; exponential discrete-gradient scalar with autonomous prescribed-boundary energy reservoir. Full nonlinear scalar/metric iteration, no artificial matter heat correction.",
+  "comparison": "Same initial Cauchy data, grids, pulse, cutoff readouts and gates as the failed Phase44 paths. Reuse the two successful new-method pilot steps. Do not import any old-method step.",
+  "budget": {
+    "hard_timeout_seconds": 600,
+    "expected_wall_seconds": [
+      430,
+      590
+    ],
+    "measured_projection_seconds": 582.4988628480002,
+    "native_steps": 126,
+    "reused_native_steps": 2,
+    "workers": 4,
+    "blas_threads": 1,
+    "automatic_expansion": false
+  },
+  "limitation": "Finite reflecting matter/heat cavity. No physical free surface, outgoing exterior, orbital result or full completion."
+}

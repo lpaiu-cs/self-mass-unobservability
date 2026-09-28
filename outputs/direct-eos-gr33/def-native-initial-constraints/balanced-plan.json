@@ -1,0 +1,31 @@
+{
+  "classification": "Counterexample candidate",
+  "reason": "The valid fixed-scalar Cauchy constraint projection retains a nonzero scalar acceleration from the old Hermite background. This is unsuitable as a silently stationary baseline for a1e-27 differential signal.",
+  "change": "Solve the mass constraint, polar lapse and instantaneous static scalar equation together, retaining regular center, phi_infinity=.001, the same coordinate baryon inventory, native-anchored Gamma constitutive continuation and actual Cauchy photon moments. Permit nonzero Krr from the actual photon flux. This is momentarily scalar-balanced initial data, not a stationary radiating star.",
+  "scalar_equation": "Q_prime=4*pi*G/c^4*N*r^2*A^4*alpha*(E-Pr-2Pt)/sqrt(b); Phi=Q/(N*sqrt(b)*r^2); Q(0)=0. Use the existing exact Just vacuum map at the outer compact Cauchy edge. Photon trace is zero for the actual angular distribution.",
+  "premise_change": "The old fixed scalar Cauchy solution is preserved, including its large initial acceleration. The new condition is stated before any new dynamical charge is computed; no initial pulse amplitude or charge sign is fitted.",
+  "budget": {
+    "seconds": 35,
+    "orders": [
+      12,
+      20
+    ],
+    "max_iterations": 8,
+    "new_fluid_steps": 0,
+    "CPU_threads": 1,
+    "native_audit_calls": 100
+  },
+  "resource_reassessment": "The previous two-order global constraint solve took4.83s. Reuse its source constructor and vectorized quadrature. Add at most35s for the coupled momentary scalar balance, with no automatic mesh/order/iteration expansion.",
+  "gates": {
+    "metric_comparison": 1e-11,
+    "charge_comparison": 1e-11,
+    "inventory": 1e-14,
+    "fixed_point": 1e-16
+  },
+  "limitations": "An initial-data solve does not yet apply the changed gravity, EOS anchors or lapse to the actual evolving photon/material trajectories. Deep-core radiation momentum and full native constitutive continuation remain unverified.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_initial_constraints.py": "6df77cb1717722b0df51c61aaa96f0c8823c88fea41cc6e719307b330964da7a",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-initial-constraints/cauchy-producer.py": "d6a50920993d8a9480f94168a5dbc8b9111c9eedd001788ff79f2899e294781d",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-initial-constraints/result.json": "069d3d1a9b11440f27d2ed2a5cacf7654052acddd7d1bc78acbb1b585026c65c"
+  }
+}

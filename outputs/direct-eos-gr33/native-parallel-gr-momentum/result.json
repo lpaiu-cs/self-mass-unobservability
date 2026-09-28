@@ -1,0 +1,182 @@
+{
+  "classification": "Counterexample candidate",
+  "actual_same_joint_solution_GR_computed": true,
+  "last_coarse_failure_preserved": true,
+  "momentum_controls": {
+    "classification": "Counterexample candidate",
+    "exact_saved_actual_defect": true,
+    "original_relative": 1.1524601464714174e-11,
+    "accumulation_only_relative": 1.2260762417535872e-11,
+    "precise_native_S_relative": [
+      3.067122169381904e-12,
+      3.067122169381904e-12
+    ],
+    "precision_change": 0.0,
+    "native_S_arithmetic_effect": 1.1984021874056291e-11,
+    "physical": [
+      1.4649440577590366e-17,
+      1.273628797150792e-18,
+      2.510615651468795e-20,
+      3.067884379206044e-20
+    ],
+    "constitutive_S": [
+      5.0119820396099355e-23,
+      2.9680468243739187e-23,
+      3.823796538878698e-23,
+      2.2813293271305683e-23
+    ],
+    "controls_passed": true,
+    "saved_proposal_actual_stage_passed": false,
+    "physical_state_accepted": false,
+    "new_physical_steps": 0,
+    "final_charge_conclusion": "unadjudicated",
+    "full_goal_complete": false
+  },
+  "actual_coarse_period_completed": true,
+  "coarse_path_result": {
+    "classification": "Counterexample candidate",
+    "reference": 128,
+    "steps": 64,
+    "completed_steps": 64,
+    "new_steps": 1,
+    "seconds": 94.72028652500012,
+    "operator_point_seconds": 5.3412975680003,
+    "operator_points": 2,
+    "stepping_seconds": 84.80116489700049,
+    "energy_balance_relative": 6.553619354568896e-16,
+    "species_balance_relative": 2.7464143120233573e-11,
+    "linear_relative": 1e-14,
+    "max_Krylov_iterations": 4212,
+    "frequency_moment_relative": 1.2053673820520243e-16,
+    "endpoint_photon_reference_energy_erg": 8.726498624367313,
+    "endpoint_material_reference_energy_erg": 317.57231835115465,
+    "endpoint_material_energy_L1_erg": 379.7388084827968,
+    "additional_material_motion_evolved": true,
+    "full_GR_feedback": false,
+    "final_charge_solved": false,
+    "endpoint_material_nonrest_energy_erg": 207.3505528850704,
+    "velocity_jet_relative": 6.152641209909017e-09,
+    "primitive_mapping_relative": 4.235164736271502e-22,
+    "conserved_material_input_applied": true,
+    "maximum_extended_stage_residual": 1e-14,
+    "maximum_refinement_steps": 9,
+    "initial_GMRES_stagnations": 9,
+    "actual_completed_steps": 119,
+    "actual_new_steps": 1,
+    "split_completed_macro_steps": 55,
+    "base_steps": 64,
+    "passed": true,
+    "audit": {
+      "angular_port_relative": 1.3204030258084554e-16,
+      "local_material_balance": [
+        1.0589579420797338e-16,
+        1.3391471860366573e-13,
+        3.1337041109812574e-17,
+        4.559725750304821e-17
+      ],
+      "maximum_true_stage": 9.613052275339579e-13,
+      "maximum_true_physical_stage": 4.693600205884594e-15,
+      "maximum_newton_iterations": 8,
+      "actual_completed_steps": 119,
+      "accepted_prefix_preserved": true
+    },
+    "physical_equation_and_gates_unchanged": true,
+    "self_GR_return_closed": false,
+    "final_charge_conclusion": "unadjudicated"
+  },
+  "live_snapshots": {
+    "236/controller-status.json": {
+      "state": "running",
+      "action": "parallel_fields",
+      "workers": {
+        "field1288": 156056,
+        "field648": 156057,
+        "field1284": 156058
+      },
+      "completed": []
+    },
+    "238/controller-status.json": {
+      "state": "running",
+      "action": "prefix",
+      "completed": [
+        {
+          "action": "coarse",
+          "returncode": 0
+        }
+      ],
+      "elapsed_seconds": 117.7826668079997
+    },
+    "238/stage-progress-64.json": {
+      "last_stage_time": 0.003434431117928702,
+      "solved_actual_steps": 119,
+      "original_stage_relative": 9.167083482563306e-15,
+      "physical_stage_relative": [
+        1.464944057759037e-17,
+        1.2736290864573177e-18,
+        2.5106156514714052e-20,
+        3.067884379206045e-20
+      ]
+    },
+    "238/coarse-receipt.json": {
+      "seconds": 116.37966638200123,
+      "error": null,
+      "source_sha256": "d088243e67a92e6dc8845d420df759f118d77129c9db2149ea3e75951c671b5a",
+      "peak_RSS_bytes": 2733760512
+    },
+    "238/path-64.json": {
+      "classification": "Counterexample candidate",
+      "reference": 128,
+      "steps": 64,
+      "completed_steps": 64,
+      "new_steps": 1,
+      "seconds": 94.72028652500012,
+      "operator_point_seconds": 5.3412975680003,
+      "operator_points": 2,
+      "stepping_seconds": 84.80116489700049,
+      "energy_balance_relative": 6.553619354568896e-16,
+      "species_balance_relative": 2.7464143120233573e-11,
+      "linear_relative": 1e-14,
+      "max_Krylov_iterations": 4212,
+      "frequency_moment_relative": 1.2053673820520243e-16,
+      "endpoint_photon_reference_energy_erg": 8.726498624367313,
+      "endpoint_material_reference_energy_erg": 317.57231835115465,
+      "endpoint_material_energy_L1_erg": 379.7388084827968,
+      "additional_material_motion_evolved": true,
+      "full_GR_feedback": false,
+      "final_charge_solved": false,
+      "endpoint_material_nonrest_energy_erg": 207.3505528850704,
+      "velocity_jet_relative": 6.152641209909017e-09,
+      "primitive_mapping_relative": 4.235164736271502e-22,
+      "conserved_material_input_applied": true,
+      "maximum_extended_stage_residual": 1e-14,
+      "maximum_refinement_steps": 9,
+      "initial_GMRES_stagnations": 9,
+      "actual_completed_steps": 119,
+      "actual_new_steps": 1,
+      "split_completed_macro_steps": 55,
+      "base_steps": 64,
+      "passed": true,
+      "audit": {
+        "angular_port_relative": 1.3204030258084554e-16,
+        "local_material_balance": [
+          1.0589579420797338e-16,
+          1.3391471860366573e-13,
+          3.1337041109812574e-17,
+          4.559725750304821e-17
+        ],
+        "maximum_true_stage": 9.613052275339579e-13,
+        "maximum_true_physical_stage": 4.693600205884594e-15,
+        "maximum_newton_iterations": 8,
+        "actual_completed_steps": 119,
+        "accepted_prefix_preserved": true
+      },
+      "physical_equation_and_gates_unchanged": true,
+      "self_GR_return_closed": false,
+      "final_charge_conclusion": "unadjudicated"
+    }
+  },
+  "snapshot_KST": "2026-09-25T02:50:44.520532+09:00",
+  "paired_time_admitted": false,
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false
+}

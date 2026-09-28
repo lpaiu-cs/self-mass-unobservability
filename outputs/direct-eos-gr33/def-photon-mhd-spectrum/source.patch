@@ -1,0 +1,105 @@
+--- phase66/excitation_sum.f90
++++ phase68/excitation_sum.f90
+@@ -556,8 +556,8 @@
+            endif
+ 
+            if(shared_has(ion)) then
+-              if(.not.ifpl_logical.or.ifpi_fit.ne.1.or.nmax.ne.10) &
+-                   error stop 'shared atomic requires frozen PL/MHD options'
++              if(ifpl_logical.or..not.ifmhd_logical.or.ifpi_fit.ne.1.or.nmax.ne.10) &
++                   error stop 'shared atomic requires MHD-only options'
+               if(ifmhd_logical) then
+                  call shared_atomic(ion,tl,x,qa,qat,qax,qatt,qatx,qaxx)
+               else
+@@ -593,10 +593,8 @@
+            endif
+            ! if(exparg.gt.exparg_lim) then
+            exparg = exp(exparg)
+-           if(shared_has(ion)) then
+-              shared_ground_logw(ion)=plop(ion)
+-              if(ifmhd_logical) shared_ground_logw(ion)=plop(ion)+ln_ground_occ
+-           endif
++           shared_ground_logw(ion)=plop(ion)
++           if(ifmhd_logical) shared_ground_logw(ion)=plop(ion)+ln_ground_occ
+            ! else
+            !   exparg = 0.d0
+            ! endif
+--- phase66/excitation_pi.f90
++++ phase68/excitation_pi.f90
+@@ -510,8 +510,8 @@
+            endif
+ 
+            if(shared_has(ion)) then
+-              if(.not.ifpl_logical.or.ifpi_fit.ne.1.or.nmax.ne.10) &
+-                   error stop 'shared atomic requires frozen PL/MHD options'
++              if(ifpl_logical.or..not.ifmhd_logical.or.ifpi_fit.ne.1.or.nmax.ne.10) &
++                   error stop 'shared atomic requires MHD-only options'
+               if(ifmhd_logical) then
+                  call shared_atomic(ion,tl,x,qa,qat,qax,qatt,qatx,qaxx)
+               else
+--- phase66/mod_excitation.f90
++++ phase68/mod_excitation.f90
+@@ -1784,7 +1784,7 @@
+   if(lo<1.or.hi<lo) error stop 'shared atomic catalog missing'
+   qx=0; qtx=0; qxx=0
+   ! Finite imported levels only. Native radius approximation ignores ell.
+-  call qmhd_calc(1,1._fp_kind,.true.,.false.,1._fp_kind,11,10,tl,nion(ion),1._fp_kind, &
++  call qmhd_calc(1,1._fp_kind,.false.,.false.,1._fp_kind,11,10,tl,nion(ion),1._fp_kind, &
+        shared_weight(lo:hi),shared_neff(lo:hi),0._fp_kind*shared_neff(lo:hi),x,q,qt,qx,qtt,qtx,qxx)
+   q=q/iqion(ion);qt=qt/iqion(ion);qx=qx/iqion(ion)
+   qtt=qtt/iqion(ion);qtx=qtx/iqion(ion);qxx=qxx/iqion(ion)
+@@ -1803,7 +1803,7 @@
+   if(.not.shared_has(ion)) error stop 'shared optical catalog missing'
+   do j=shared_start(ion),shared_end(ion)
+      qx=0;qtx=0;qxx=0
+-     call qmhd_calc(1,1._fp_kind,.true.,.false.,1._fp_kind,11,10,tl,nion(ion),1._fp_kind, &
++     call qmhd_calc(1,1._fp_kind,.false.,.false.,1._fp_kind,11,10,tl,nion(ion),1._fp_kind, &
+           shared_weight(j:j),shared_neff(j:j),0._fp_kind*shared_neff(j:j),x,q,qt,qx,qtt,qtx,qxx)
+      k=j-shared_start(ion)+1
+      values(:,k)=[q,qt,qtt,qx,qtx,reshape(qxx,[25])]
+@@ -1819,4 +1819,21 @@
+ #include "qryd_calc.f90"
+ #include "plsum.f90"
+ #include "plsum_approx.f90"
++
++subroutine hydrogen_terms(z,tl,x,values) bind(C)
++  use iso_c_binding
++  implicit none
++  integer(c_int),value :: z
++  real(c_double),value :: tl
++  real(c_double),intent(in) :: x(5)
++  real(c_double),intent(out) :: values(10,3)
++  real(fp_kind) :: q(10),qt(10),qtt(10),qx(5,10),qtx(5,10),qxx(5,5,10)
++  integer :: n
++  do n=1,10
++     call qstar_calc(1,.false.,.true.,z.eq.1,.false.,1._fp_kind,n,10,z,tl,x, &
++          q(:n),qt(:n),qx(:,:n),qtt(:n),qtx(:,:n),qxx(:,:,:n))
++     values(n,:)=[q(n),qt(n),qtt(n)]
++  enddo
++end subroutine
++
+ end module mod_excitation
+--- original/mod_free_eos.f90
++++ phase68/mod_free_eos.f90
+@@ -1410,7 +1410,7 @@
+        elseif(ifmodified.eq.11) then
+           ! EOS1 without radiation pressure
+           ifcoulomb = 5
+-          ifpi = 3
++          ifpi = -3
+           ifrad = 0
+        elseif(ifmodified.eq.2) then
+           ! modified version to fit old opal table
+--- original/free_eos_detailed.f90
++++ phase68/free_eos_detailed.f90
+@@ -1281,6 +1281,10 @@
+   endif
+   t = exp(tl)
+   tc2 = c2/t
++  ! PL-off still passes these arrays to excitation and molecular consumers.
++  ! They are newly allocated each call, so never inherit allocator contents.
++  plop=0._fp_kind;plopt=0._fp_kind;plopt2=0._fp_kind
++  dv_pl=0._fp_kind;dv_plt=0._fp_kind
+   ! calculate planck-larkin occupation probabilities and equilibrium
+   ! constant changes.
+   if(ifpl.eq.1)&

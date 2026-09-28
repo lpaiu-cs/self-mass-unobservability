@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/.phase251-reader-launch.py", line 14, in <module>
+    runpy.run_path(sys.argv[0],run_name='__main__')
+  File "/usr/lib/python3.10/runpy.py", line 289, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/usr/lib/python3.10/runpy.py", line 96, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "verification/check_returned_krylov_cost.py", line 103, in <module>
+    globals()[action]()
+  File "verification/check_returned_krylov_cost.py", line 77, in check
+    assert reconstruction['passed'],reconstruction
+AssertionError: {'passed': False, 'vector_relative': 7.373692806427674e-10, 'physical_relative': [0.0052031859686002295, 0.00024310211596868358, 2.274489071300664e-16, 5.506765519465015e-06], 'material_relative': [0.05217145159786414, 0.14114118391463445, 1.7278004872805982e-16, 2.2741645287646063e-06, 0.1330821208376707, 0.31366961232369595, 2.622077987848797e-16, 7.938430313942068e-06]}

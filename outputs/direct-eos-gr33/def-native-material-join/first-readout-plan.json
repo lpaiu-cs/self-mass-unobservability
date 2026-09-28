@@ -1,0 +1,31 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Use actual shared-material64/128 histories to judge the conditional direct charge after releasing the copied ghost. Cell momenta come from this run, not the old staggered face interpolation.",
+  "method": "Same radial retarded integral and continuous vacuum rays as Phase114. Retain17 common saved times, stable conserved rest/nonrest sources, and all actual emitted photons. Compare direct charge and direct-plus-photon mass separately.",
+  "gates": {
+    "time_direct": 0.02,
+    "time_total": 0.02,
+    "time_deep_trace": 0.02,
+    "history_direct": 0.02,
+    "cadence_direct": 0.02,
+    "quadrature_direct": 0.02,
+    "ray_quadrature": 0.002,
+    "native_anchor": 0.002
+  },
+  "budget": {
+    "saved_readout_seconds": 60,
+    "independent_audit_seconds": 30,
+    "native_call_cap": 400,
+    "new_fluid_steps": 0,
+    "CPU_threads": 1,
+    "memory_GB": 3
+  },
+  "stop": "Keep any failed gate; no automatic time/radial/frequency refinement. A cancelled direct residual does not justify normalizing its error by the much larger photon term.",
+  "limits": "Acoustic interior mechanics and first-order density/inventory; background-reconstructed native face at34km center-to-face gap. Fixed metric and unresolved spatial/frequency/interior-angle errors. Not final physical charge.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_material_join.py": "907b8a9182efea2951b7771a0b6bb858b3d33ca73c2a6e6576fb8f06e01332e0",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_material_join.py": "be1bcb8ccabcf1e980210f95db4053627eccd31466659e3237479feed495b505",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_interior_feedback.py": "4a06f0d969c4a63f83bb8fac96827d16dd4d6dc5415936bf648b01ae613a492b",
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_interior_feedback.py": "25257cafa767e717d89f766ff1ea5828955b22ecd777458374d3de441d7792d9"
+  }
+}

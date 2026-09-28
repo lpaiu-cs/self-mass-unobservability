@@ -1,0 +1,47 @@
+{
+  "classification": "Counterexample candidate",
+  "completed": true,
+  "corrected_cubic_cells": 3207,
+  "native_radiative_derivative_reconstruction_maximum": 0.0,
+  "maximum_total_log_derivative_changes": [
+    0.00415866481945848,
+    0.042092821819021076
+  ],
+  "finite_rows": [
+    {
+      "axis": "lnd",
+      "step": 0.001,
+      "maximum_score": 0.0028765655757895573,
+      "worst_cell": 5,
+      "failed_cells": 621,
+      "passed": false
+    },
+    {
+      "axis": "lnd",
+      "step": 0.0005,
+      "maximum_score": 0.0042044409584844015,
+      "worst_cell": 185,
+      "failed_cells": 2166,
+      "passed": false
+    },
+    {
+      "axis": "lnT",
+      "step": 0.001,
+      "maximum_score": 0.0022964625436757294,
+      "worst_cell": 5376,
+      "failed_cells": 409,
+      "passed": false
+    },
+    {
+      "axis": "lnT",
+      "step": 0.0005,
+      "maximum_score": 0.0052041859397090355,
+      "worst_cell": 3411,
+      "failed_cells": 1564,
+      "passed": false
+    }
+  ],
+  "all_original_finite_gates_passed": false,
+  "physical_opacity_certified": false,
+  "continuous_full_derivatives_certified": false
+}

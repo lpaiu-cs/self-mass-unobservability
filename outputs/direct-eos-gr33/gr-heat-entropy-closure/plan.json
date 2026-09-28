@@ -1,0 +1,39 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "7c9cc12",
+  "bindings": {
+    "verification/gr_heat_entropy_closure.py": "d404fd2e727784f1b42474933c3ffd3c6c63c9ec40e4e91a97dcec8e09d75bd2",
+    "outputs/direct-eos-gr33/gr-heat-initial-tangent/manifest.json": "16ede84499fe46ee86689206461753744e70a89d392864fb9f7d6723f938e4a3",
+    "outputs/direct-eos-gr33/gr-heat-characteristics/coefficients.npz": "c3e942d127fc698ae0edd8c5ead2d3047d1180aa017024c2ec895ba756683eb8",
+    "outputs/direct-eos-gr33/gr-heat-initial-constraints/initial-data.npz": "9c67262c1df8beab8d7ce8e7e2ce50693c60101fdf83961322b148ec4a0a2c99",
+    "outputs/direct-eos-gr33/gr-heat-fluid-frame/rate-coefficients.npz": "d13cafb2c75719a7209f0efece95c053179edda6610be5fb3e7ad512998e9402",
+    "outputs/direct-eos-gr33/gr-heat-relaxation-boundary/thresholds.npz": "029e7ec7c2d1cd1f30734626a55ef142bcc696abb1923df84f225581215dd4c3",
+    "outputs/direct-eos-gr33/gr-opacity/evaluation.npz": "4d1274167b4b26a23308e9e978841f774d9d41d350ae79c4aad125108c4a2b2c",
+    "outputs/direct-eos-gr33/gr-heat-entropy-closure/maartens-9609119.pdf": "45b7d06aed3bda036b1eeb323d2e356f641053a48bf75caa8ad1b34793dff0fd"
+  },
+  "source": {
+    "classification": "Imported from prior work",
+    "url": "https://arxiv.org/pdf/astro-ph/9609119",
+    "author": "Roy Maartens",
+    "year": 1996,
+    "equations": [
+      "2.17",
+      "2.20",
+      "2.22",
+      "2.24"
+    ],
+    "scope": "Heat-only specialization, no viscosity/heat cross coupling or vorticity. The lecture explicitly cautions that neglected terms require checking."
+  },
+  "time_rule": "Find max_i h_i*lambda_star_i using the previously defined local zero-flux cone rule. Use 2 and 3 times this single frozen maximum as spatially and temporally constant proper times in separate declared models.",
+  "root_bracket_halfwidth_powers": [
+    45,
+    40,
+    35,
+    30,
+    25,
+    20
+  ],
+  "initial_target": "Q_F=Q from the existing discrete face-to-cell target, as in the previous tangent. No independent continuous gradient certificate.",
+  "physical_heat_time_calibrated": false,
+  "full_GR_evolution": false
+}

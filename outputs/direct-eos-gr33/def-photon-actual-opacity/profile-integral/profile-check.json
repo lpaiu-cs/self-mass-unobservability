@@ -1,0 +1,15 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "tail_inequality_sample_checks": 189,
+  "normalization_relative": [
+    4.440892098500626e-16,
+    2.220446049250313e-16,
+    7.771561172376096e-16,
+    8.881784197001252e-16,
+    1.1102230246251565e-15
+  ],
+  "statement": "For the exact finite-bin LTE Voigt model, the omitted wing response is at most t*c*epsilon*(1+Cgamma/Cm) times the initial energy norm, where epsilon is the sum of the uniform volume-opacity tail bounds. The common streaming operator is skew and collisions are dissipative. This follows from the positive absorption block bound and Duhamel contraction.",
+  "limitation": "The analytic statement is conditional. Floating-point checks do not constitute outward-rounded interval certification of atomic profiles or quadrature.",
+  "source_sha256": "90853c141a6dd945f4fe9acd145c1c1e83daf7f09c16700fd8734c4c00ed930c"
+}

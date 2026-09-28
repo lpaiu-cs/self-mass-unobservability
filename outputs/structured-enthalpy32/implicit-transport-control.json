@@ -1,0 +1,44 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "rows": [
+    {
+      "step_seconds": 35195.04,
+      "weighted_invariant_relative_defect": 3.158542696941729e-18,
+      "constant_state_maximum_defect": 1.9723400690452308e-10,
+      "maximum_normalized_equation_residual": 2.0136886949573274e-15,
+      "temperature_log_change_range": [
+        -1.722926091727739e-05,
+        2.5001046972848413
+      ],
+      "minimum_normalized_q": 2.1773718788607874e-09,
+      "maximum_normalized_q": 0.9999960025330844
+    },
+    {
+      "step_seconds": 70390.08,
+      "weighted_invariant_relative_defect": 9.490088950317769e-19,
+      "constant_state_maximum_defect": 4.1155812091631105e-10,
+      "maximum_normalized_equation_residual": 3.847562459607934e-15,
+      "temperature_log_change_range": [
+        -2.1981767740347877e-05,
+        2.628977300980373
+      ],
+      "minimum_normalized_q": 3.6459209930601226e-09,
+      "maximum_normalized_q": 0.9999920037732369
+    },
+    {
+      "step_seconds": 140780.16,
+      "weighted_invariant_relative_defect": 3.482249665377104e-18,
+      "constant_state_maximum_defect": 3.678366500281527e-10,
+      "maximum_normalized_equation_residual": 9.192624959852846e-15,
+      "temperature_log_change_range": [
+        -2.9651243392430753e-05,
+        2.757160766260108
+      ],
+      "minimum_normalized_q": 6.0881415372223815e-09,
+      "maximum_normalized_q": 0.9999840029534232
+    }
+  ],
+  "meaning": "An O(n) band solve on the actual frozen 5735-cell coefficients. It preserves the linear weighted invariant and positivity at the listed steps. The invariant is not the nonlinear physical stellar energy.",
+  "missing": "Temperature/EOS capacity, opacity, GR metric and composition feedback, nonzero surface transport, convection and atmosphere. No full stellar evolution or physical conservation verdict."
+}

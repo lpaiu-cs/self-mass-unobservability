@@ -1,0 +1,65 @@
+{
+ "classification": "Imported from prior work",
+ "passed": true,
+ "verdict": "THREE_INDEPENDENT_REVIEWS_MAJOR_REVISION__INTEGRATION_REVERTED__REVISION_PLANNED",
+ "reviews": {
+  "gpt-6-astra (Codex CLI 0.154.0, read-only)": "major revision; one blocking item (Section 5 coefficient interval used as white-dwarf observational sensitivity)",
+  "opus5.5 (subagent)": "major revision then re-review; no blocking item",
+  "fable5.1 (subagent)": "major revision; no blocking item"
+ },
+ "integration_commit": "a322c6462",
+ "revert_commit": "b40864a22",
+ "verify_after_revert": "PASS",
+ "consensus": [
+  "J0337 comparison: coefficient envelope vs amplitude, two pair channels, scale range, Cassini rescaling, drop NS-sector conclusion",
+  "claim labels per manuscript convention; define A4; per-item labels; soften abstract and discussion",
+  "history in readout time; static-window sign; kernel-weighted 0.25% (max 0.38%)",
+  "tidal: selection rule and equilibrium-tide bound only; dynamical tide dissipative; damping-depth formula outside validity",
+  "symbol collisions with Sections 3-5; define local notation"
+ ],
+ "full_goal_complete": false,
+ "snapshot_KST": "2026-09-27T21:51:23.148711+09:00",
+ "document_prefixes": {
+  "docs/model-definition.md": {
+   "bytes": 297976,
+   "sha256": "1752bfe72dca95adf89f2896db4dfb62d29eefb8dfb8157b9cd2b3f026a85dff"
+  },
+  "docs/observable-targets.md": {
+   "bytes": 288795,
+   "sha256": "78a060b14b97f93859573a45cc15c2a3e167059f40a0bf8ce4a5829d21c87ea1"
+  },
+  "docs/adiabatic-limit.md": {
+   "bytes": 283134,
+   "sha256": "dab5bab88d254c5a445a5643780724502bb664ad3fce8435698a6b999b193062"
+  },
+  "docs/nonadiabatic-regime.md": {
+   "bytes": 291626,
+   "sha256": "ed1df0ed200b609e164abf8bbb71f2b6eff8ebaee89d172942654188a4ebec64"
+  },
+  "docs/failure-ledger-dynamic-chi.md": {
+   "bytes": 329230,
+   "sha256": "6597b74ff13d2c85e85b979b39106ffc20c7cf2b5f5da076a437cbff583dc71d"
+  },
+  "docs/dynamic-charge-completion.md": {
+   "bytes": 157394,
+   "sha256": "2ccf22de15bb606f02ab5a81148f9d0498bc61a084bedd39273aad2e1f796cbc"
+  }
+ },
+ "sha256": {
+  "notes/REQUEST282_INDEPENDENT_REVIEW_REVISION_KO.md": "93eb6544d214e20ee24f97bcdbc3bbc3f0349b766affeeda807645f5460fa800",
+  "docs/model-definition.md": "92b80d947796551c4cdfbb7697b653c356bb93294b8f8d59c209afd2192eef64",
+  "docs/observable-targets.md": "896c1396d6183936df4548697a7f944ef4c1e35e9292c4aa8db4a8d7c56e3b4d",
+  "docs/adiabatic-limit.md": "131e672232aa77d30c596587109e10623663c6b6b3c928a8d2108bba340c2afc",
+  "docs/nonadiabatic-regime.md": "fe43079ef1e8f9398cc0ffead183ecb01a8be182c79111010cb2201ed3d1672b",
+  "docs/failure-ledger-dynamic-chi.md": "a3bb691d1a5879967796fbe804a7825f1c5f6244912aa873f9166f3887c4bbd5",
+  "docs/dynamic-charge-completion.md": "3fb67ec198384642fa2b44fb4a33b200fc050695514da568fed4956db388cb1f",
+  "outputs/direct-eos-gr33/native-manuscript-review/publication.json": "6baa42c0bcd3b9912db596512c0914215c9f9ecbdc919e287aa471d76c3de755",
+  "outputs/direct-eos-gr33/native-manuscript-review/result.json": "67dbc2095fa523f86e61aa62b516dbadd56f6b18a438f51e1bbc273a40df548f",
+  "outputs/direct-eos-gr33/native-manuscript-review/review-fable-5.1.md": "93e6e87ab25736bd42c1a63e0e4f5f7e6bb9ac4183dced46d730562153b2ce37",
+  "outputs/direct-eos-gr33/native-manuscript-review/review-gpt-6-astra-cli.log": "4729f8a56f8b139e86d10319a8b78e784ddc40d4df5d0a64213f200120c88c9d",
+  "outputs/direct-eos-gr33/native-manuscript-review/review-gpt-6-astra.md": "4fa4e50b86aae87bdd4fc64050142892a8478a662083393dacc8ea08bb074b64",
+  "outputs/direct-eos-gr33/native-manuscript-review/review-opus-5.5.md": "a25401722e520e81a08e8fb3043b2234b60227d2d078c02160d57ac506d8988e",
+  "outputs/direct-eos-gr33/native-manuscript-review/review-prompt.md": "2e5048a8803b65b8f1152e2cd4b65f4348e6819e0c5812c5c8ea4d91b6272032",
+  "outputs/direct-eos-gr33/native-manuscript-review/scripts/phase282-publish.py": "c07412ba692c150f56a22d0aaf7b2d1dc3323c3320655a66760772bf72960264"
+ }
+}

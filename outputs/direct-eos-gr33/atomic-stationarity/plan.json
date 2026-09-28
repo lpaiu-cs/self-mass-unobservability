@@ -1,0 +1,73 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "b22682b",
+  "cells": 5735,
+  "processes": 4,
+  "block_cells": 128,
+  "control_cells": [
+    0,
+    2972,
+    5734
+  ],
+  "source_changes": {
+    "mod_nuvar.f90": {
+      "before": "f61e7b745ca66fc5f8fd66265a2d5bb413ece276f6263226cdb87b23b2732e98",
+      "after": "053ee2a7124f48982140577c53425c3492d13a93a6abd495d54df5401a94f564"
+    },
+    "ionize.f90": {
+      "before": "1de80b8cd0063a798ff945cb95f5cafffb85ba4ab98ce25f46428975b56942f0",
+      "after": "be428b5adbcdbf15c4349d21eaa9605269fb5a5b775dc66991561b37d06c29d8"
+    },
+    "CMakeLists.txt": {
+      "before": "e90535dcb973f851768c9cff3837559aad638e98c2c85684b5237d4caf380366",
+      "after": "036f38cefe70269c286e35a998492595813e891420a88d99e1b953b9be65ff95"
+    }
+  },
+  "bindings": {
+    "verification/eos_atomic_stationarity.py": "f8730687824eaca7a930a19990d41f18672fb7c635efa570307a5d7371b1c72e",
+    "verification/excitation_scaled.py": "ff1ad8866837f49ae384a8478221931b5c124ab2143a94bc950f991f5392f5df",
+    "verification/excitation_curvature.py": "146f3c44204e19f99324eb1454f3a7efefca0d09b773e1a802da642dab438531",
+    "outputs/direct-eos-gr33/excitation-scaled/manifest.json": "b87bcb565e2bd73fb2801ca6bce0853ef9ab640dfd6342f9f1bd77a6f277bbaa",
+    "outputs/direct-eos-gr33/reference-state.npz": "17cbbb101628ca9bc111dca0cfe902210f13697c632b91c03913a1718cf7d2ef"
+  },
+  "original_library_sha256": "6348e235763db0112687f391ab1c06c34b33aa530973ea4a414a5d0f21b1dfb4",
+  "expected_excitation_modes": [
+    2,
+    12
+  ],
+  "allowed_component_tags": [
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      25,
+      0
+    ],
+    [
+      26,
+      1
+    ]
+  ],
+  "original_EOS_and_MDH_bitwise_required": true,
+  "moment_relative_tolerance": 1e-10,
+  "component_population_relative_tolerance": 1e-10,
+  "aggregate_normalized_tolerance": 1e-10,
+  "moment_Hessian_direction_tolerance": 1e-10,
+  "method": "Capture actual final atomic dv, reference shifts, statistical/binding constants, and optional temperature-only PL weights. Reconstruct chemical-potential differences independently from electron/exchange, Coulomb, MDH and scaled excitation gradients at the saved final state. Compare final positive atomic log ratios and largest-population reference differences; do not require a numerically absent neutral atom as the residual reference.",
+  "coordinates": "Four physical moments alpha0,alpha1,alpha2,beta; at fixed native density scale S and radius unit L, use S*diag(1,L,L^2,1) to transform derivatives to existing nu-moment coordinates.",
+  "scope": "Finite final-state atomic redistribution on current positive support. Molecular dissociation/ionization equilibrium, continuous root enclosures and physical EOS error are separate.",
+  "full_EOS_Hessian_certified": false,
+  "physical_EOS_certified": false,
+  "full_GR_evolution": false,
+  "atomic_gradient_absolute_tolerance": 1e-08,
+  "atomic_log_population_tolerance": 1e-08
+}

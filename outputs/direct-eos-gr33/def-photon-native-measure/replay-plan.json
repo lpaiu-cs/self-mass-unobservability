@@ -1,0 +1,26 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "48d04e7",
+  "claim": "Use the already frozen native-node opacity field to predict the exact window whose provider 1/3/999-group means disagreed. No new fit or physical query.",
+  "method": "Integrate the same piecewise-constant source-node opacities over arbitrary new boundaries through one cumulative Planck/Rosseland primitive. Compare its 1/3/999 partitions and the prior native one-group mean.",
+  "gates": {
+    "native_gray_relative": 0.001,
+    "partition_relative": 1e-11,
+    "complex_energy_balance": 1e-12
+  },
+  "budget": {
+    "hard_seconds": 30,
+    "new_physical_queries": 0,
+    "new_native_EOS_calls": 0,
+    "new_stellar_steps": 0
+  },
+  "bindings": {
+    "verification/def_photon_measure_replay.py": "5a00382cb65c05579cc5306a490db2dbbd391da74bd82d248a339cf6d5321668",
+    "verification/def_photon_native_measure.py": "b2fcd1b59febb12c5900358f68167b2830975b44308950c97a09ac1d8243d925",
+    "outputs/direct-eos-gr33/def-photon-native-measure/plan.json": "f7d11ce0073ee02e7db4843906698d45ffea5cbbd312c859f0b77af2eb764a0a",
+    "outputs/direct-eos-gr33/def-photon-native-measure/result.json": "78dd75471a4bd35f2a27b712823d381831b3d2bb8d2c13035a30ac98f8b71921",
+    "outputs/direct-eos-gr33/def-photon-native-measure/surf1000T0015-bank.npz": "fedea1753942c08f3e8dd7325bc932417a42e6ff3c962c4d162745777008a0fd",
+    "outputs/direct-eos-gr33/def-photon-partition-audit/result.json": "c485073e8a21cb19e298e483ee4ddd2b6e060ab81e83fa300c5c3f4fd5c22615",
+    "outputs/direct-eos-gr33/def-photon-display-fixed/requests.json": "5fa430e08f3eb3e2e84e0ec0f60a21ddf0676bdf940ae5ae7211d8671ce91e08"
+  }
+}

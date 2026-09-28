@@ -1,0 +1,22 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "361c8e0",
+  "bindings": {
+    "verification/lanl_tops_cutoff_audit.py": "77d20a4eb99faed08fbb6b576c7069b084d6c72e095dc2425ef05b2fc52ddb8e",
+    "outputs/direct-eos-gr33/lanl-tops-boundary-control/manifest.json": "d1fd62e5bd9e437c8ef095dc8c6e335eef7f38102a4930e391ac70d733544181",
+    "outputs/direct-eos-gr33/lanl-tops-stellar-audit/manifest.json": "5b8407ea0aaf8c02434d430e16fded7a26676406e0677670254858bf14d967af",
+    "outputs/direct-eos-gr33/lanl-tops-cutoff-audit/lanl-opacity-tables2025.pdf": "10035c27cde4ac547eb26eca82fe73a894c30dc499a396404a70675203128d8d",
+    "outputs/direct-eos-gr33/lanl-tops-cutoff-audit/lanl-opacity-tables2025.txt": "54f24153999590b81cc5ec89d7c2d6758ab8289dfda81515c2a5c080b91a6747",
+    "verification/lanl_tops_cutoff_reader.py": "0c3ac5c9b010705effe8be622205449de0521f47a0da6b5d29ecdf1440147435",
+    "outputs/direct-eos-gr33/lanl-tops-cutoff-audit/failure-manifest.json": "18e56e0e91dd11e4eed2982f301380610ea9274ee7918222859c5bb7b5c35c71",
+    "outputs/direct-eos-gr33/lanl-tops-cutoff-reader/corrected-header.py": "1bd6715b2067086b65f1f945eab585d3f2222c4735236b21d5206dd84fd39729"
+  },
+  "source_url": "https://www.osti.gov/servlets/purl/2570872",
+  "input_gate": "Exact decimal printing intervals for all composition fractions, temperatures and densities; same material IDs as prior accepted mixtures. Reject warnings. The table reports group lower edges; validate all submitted boundaries including the final upper edge against the actual returned request form.",
+  "group_gate": "Compare cutoff-OFF group means with positive log-interpolation of the already retrieved spectra, both Simpson and trapezoid quadrature, each normalized over its own requested energy interval. Relative tolerance 1e-3, fixed before reconstruction. Do not widen any failed gate.",
+  "group_relative_tolerance": 0.001,
+  "cutoff_diagnostic": "Exploratory, after observing ON/OFF gray values: compute the nonrelativistic electron plasma energy using returned free electrons per atom, the submitted neutral mass density and mean atomic mass. Compare normalized integrals above this independently computed threshold to both central ON tables. Do not fit a threshold to the gray data. Report errors with no physical acceptance claim; the service source and dense-plasma dispersion remain distinct from this diagnostic.",
+  "outer": "A successful gray output is a separate output-path result. The earlier frequency request remains failed, and low-density LTE physical validity is not asserted.",
+  "physical_acceptance": false,
+  "reader_correction": "The full submitted grid is checked by the returned lower-edge rows plus the actual returned egplow/egphigh. Compare exact decimal numbers; only a nonexistent field lookup changes. Original failure is frozen. Numerical and physical acceptance gates are unchanged."
+}

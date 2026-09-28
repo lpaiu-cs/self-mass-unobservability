@@ -1,0 +1,23 @@
+{
+  "classification": "Counterexample candidate",
+  "conditional": true,
+  "theorem": "Retarded-Green contraction and Neumann remainder under the stated coefficient and source bounds.",
+  "potential_absolute_integral_bound_per_cm": 6.202318965359839e-16,
+  "contraction_bound": 3.1933772602710244e-08,
+  "free_field_norm_bound_cm": 2.5458242447221405e-21,
+  "free_field_component_bounds_cm": {
+    "trace": 2.5458134946122234e-21,
+    "stress": 1.0747554509320083e-26
+  },
+  "all_orders_change_bound_cm": 8.129777511356804e-29,
+  "higher_Born_terms_bound_cm": 2.5961446635829574e-36,
+  "omitted_compact_first_Born_bound_cm": 3.508179800201891e-33,
+  "all_orders_change_normalized_bound": 2.7871619117682798e-33,
+  "higher_Born_normalized_bound": 8.900459469734339e-41,
+  "compact_normalized_bound": 1.2027223506545514e-37,
+  "coefficient_enclosure": "On the causal inner shell use extrema of the frozen piecewise-linear background, N<=1, A<=1, m<=M and r>=R+qmin. Outside use the exact positive-mass vacuum, C>=C_surface and Phi=K/(C*r^2).",
+  "source_enclosure": "Piecewise-linear saved source histories, the declared local acoustic port profile and prescribed forcing J. The norm uses absolute source envelopes, not cancellation in the observed charge.",
+  "exclusions": "Additional material displacement feedback, nonlinear metric terms, physical EOS/chemistry, unknown dilute-tail stress and causal scattered-photon forcing are not enclosed by this potential bound.",
+  "first_Born_quadrature_certified": false,
+  "all_physical_charge_enclosed": false
+}

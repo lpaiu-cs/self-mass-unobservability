@@ -1,0 +1,55 @@
+{
+  "classification": "Counterexample candidate",
+  "commands": [
+    {
+      "command": [
+        "cmake",
+        "-S",
+        "/home/lpaiu/work/direct-eos-gr33/excitation-curvature/source",
+        "-B",
+        "/home/lpaiu/work/direct-eos-gr33/excitation-curvature/build",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DBUILD_SHARED_LIBS=ON",
+        "-DBUILD_TEST=ON",
+        "-DBUILD_DOC=OFF",
+        "-DBUILD_DOX_DOC=OFF"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "/home/lpaiu/work/direct-eos-gr33/excitation-curvature/build",
+        "--target",
+        "free_eos",
+        "-j",
+        "2"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "gfortran",
+        "-O2",
+        "-fPIC",
+        "-shared",
+        "-I/home/lpaiu/work/direct-eos-gr33/excitation-curvature/build/src",
+        "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/excitation-curvature/direct_ion_bridge.f90",
+        "-L/home/lpaiu/work/direct-eos-gr33/excitation-curvature/build/src",
+        "-Wl,-rpath,/home/lpaiu/work/direct-eos-gr33/excitation-curvature/build/src",
+        "-lfree_eos_direct24_excitation_trace",
+        "-o",
+        "/home/lpaiu/work/direct-eos-gr33/excitation-curvature/unused-inventory.so"
+      ],
+      "returncode": 0
+    }
+  ],
+  "completed": true,
+  "sha256": {
+    "/home/lpaiu/work/direct-eos-gr33/excitation-curvature/unused-inventory.so": "6c00edd78f1ec612eea76142399a3b09490eac5b772b309cd168f0bdcb6ae6af",
+    "/home/lpaiu/work/direct-eos-gr33/excitation-curvature/build/src/libfree_eos_direct24_excitation_trace.so.1.0.0": "cf187d453945979bcbcc2a1c8a41083f887e77614cbd5b4d25a36abe849384a1"
+  },
+  "original_runtime_modified": false,
+  "physical_EOS_certified": false
+}

@@ -1,0 +1,55 @@
+{
+  "completed": 9,
+  "total": 9,
+  "last": {
+    "case": "flat",
+    "mu": 0,
+    "scalar_flux": 0,
+    "omega_R_over_c": 0.2,
+    "refinement_difference": 0.0,
+    "static_exact_error": 0.0,
+    "flat_error": 0.0,
+    "passed": true,
+    "static_control": null,
+    "solves": [
+      {
+        "impedance": [
+          -1.0,
+          0.2
+        ],
+        "amplitude_transfer": [
+          1.0,
+          0.0
+        ],
+        "h": [
+          1.0,
+          0.0
+        ],
+        "current": 0.2,
+        "current_relative_error": 0.0,
+        "rhs_calls": 86,
+        "background_rhs_calls": 0,
+        "cutoff_x": 0.005
+      },
+      {
+        "impedance": [
+          -1.0,
+          0.2
+        ],
+        "amplitude_transfer": [
+          1.0,
+          0.0
+        ],
+        "h": [
+          1.0,
+          0.0
+        ],
+        "current": 0.2,
+        "current_relative_error": 0.0,
+        "rhs_calls": 86,
+        "background_rhs_calls": 0,
+        "cutoff_x": 0.0025
+      }
+    ]
+  }
+}

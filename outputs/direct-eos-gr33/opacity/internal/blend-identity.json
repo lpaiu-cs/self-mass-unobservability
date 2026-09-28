@@ -1,0 +1,8 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "assumptions": "Positive differentiable component opacities, interior of a blend interval, t=log10 T, and fixed blend endpoints lo<hi.",
+  "identity": "For k=w*a+(1-w)*b and w=(t-lo)/(hi-lo), d ln k/d ln T equals the component-weighted logarithmic derivatives plus (a-b)/(ln(10)*(hi-lo)*k).",
+  "source_boundary": "The saved low/high-temperature and Compton blend formulas omit this weight-derivative term. This is an algebraic statement about the displayed smooth formulas, not a claim that a current cell entered a blend region.",
+  "positive_control": "Constant a=2,b=1,lo=0,hi=1 gives nonzero missing derivative 1/(ln(10)*(1+t)); equal constants give zero."
+}

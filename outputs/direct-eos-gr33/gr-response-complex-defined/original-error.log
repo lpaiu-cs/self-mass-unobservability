@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/mnt/e/lab/self-mass-unobservability/verification/gr_response_complex_domain.py", line 99, in <module>
+    if __name__=='__main__':globals()[sys.argv[1]]()
+  File "/mnt/e/lab/self-mass-unobservability/verification/gr_response_complex_domain.py", line 65, in run
+    plan=bindings();symbolic();iv.prec=plan['bits'];data=dict(np.load(cusp.OUT/'inputs.npz'));stored=dict(np.load(cusp.THERMO/'states.npz'));B=I(float(stored['B']))
+KeyError: 'B'

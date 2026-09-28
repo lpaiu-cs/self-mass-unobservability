@@ -1,0 +1,121 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": false,
+  "rows": [
+    {
+      "classification": "Counterexample candidate",
+      "reference": 128,
+      "steps": 64,
+      "completed_steps": 4,
+      "new_steps": 4,
+      "seconds": 42.455847752,
+      "operator_point_seconds": 5.100600467999996,
+      "operator_points": 3,
+      "stepping_seconds": 36.92417242799999,
+      "energy_balance_relative": 8.673023747300523e-14,
+      "species_balance_relative": 6.114565884706136e-15,
+      "linear_relative": 6.8425339354764614e-15,
+      "max_Krylov_iterations": 32,
+      "frequency_moment_relative": 6.732112993353671e-17,
+      "endpoint_photon_reference_energy_erg": 2.268158221420804e-06,
+      "endpoint_material_reference_energy_erg": -2.3917372366457798e-12,
+      "endpoint_material_energy_L1_erg": 6.502208043216923e-12,
+      "additional_material_motion_evolved": false,
+      "full_GR_feedback": false,
+      "final_charge_solved": false,
+      "endpoint_material_nonrest_energy_erg": -2.3917372366457798e-12,
+      "velocity_jet_relative": 6.085966434433605e-09,
+      "primitive_mapping_relative": 0.0,
+      "conserved_material_input_applied": true,
+      "maximum_extended_stage_residual": 6.8425339354764614e-15,
+      "maximum_refinement_steps": 0,
+      "initial_GMRES_stagnations": 0,
+      "passed": true,
+      "actual_angular_quadrature_relative": 3.515611835036106e-17,
+      "angular_quadrature_includes_separate_known_correction": true,
+      "time_integrator": "RadauIIA2"
+    },
+    {
+      "classification": "Counterexample candidate",
+      "reference": 128,
+      "steps": 128,
+      "completed_steps": 8,
+      "new_steps": 8,
+      "seconds": 75.311093578,
+      "operator_point_seconds": 4.820532423000003,
+      "operator_points": 3,
+      "stepping_seconds": 70.12269912299999,
+      "energy_balance_relative": 3.078632617400955e-13,
+      "species_balance_relative": 1.2254969369573305e-14,
+      "linear_relative": 8.896893316087608e-15,
+      "max_Krylov_iterations": 34,
+      "frequency_moment_relative": 6.60820349428787e-17,
+      "endpoint_photon_reference_energy_erg": 2.2362133417707833e-06,
+      "endpoint_material_reference_energy_erg": -2.365777977341977e-12,
+      "endpoint_material_energy_L1_erg": 6.649649326124268e-12,
+      "additional_material_motion_evolved": false,
+      "full_GR_feedback": false,
+      "final_charge_solved": false,
+      "endpoint_material_nonrest_energy_erg": -2.365777977341977e-12,
+      "velocity_jet_relative": 6.085966434433605e-09,
+      "primitive_mapping_relative": 0.0,
+      "conserved_material_input_applied": true,
+      "maximum_extended_stage_residual": 8.896893316087608e-15,
+      "maximum_refinement_steps": 0,
+      "initial_GMRES_stagnations": 0,
+      "passed": true,
+      "actual_angular_quadrature_relative": 4.192858686051856e-17,
+      "angular_quadrature_includes_separate_known_correction": true,
+      "time_integrator": "RadauIIA2"
+    }
+  ],
+  "time_comparison": [
+    0.08710686829235625,
+    0.022206936154379728,
+    0.025067733928442217,
+    0.02217230823690462,
+    0.10745928594259976,
+    0.032111206263047164
+  ],
+  "original_time_gate": 0.02,
+  "full_horizon_completed": false,
+  "physical_final_charge_solved": false,
+  "full_goal_complete": false,
+  "remaining": "A prefix alone is not a full-path result. Full-path angular/time consumers and a measured budget must be checked separately; the original physical gates remain unchanged.",
+  "final_charge_conclusion": "unadjudicated on the corrected coupled solution",
+  "angular_representation": "Actual physical samples plus a separately stored known-source quadrature correction; raw point samples are preserved.",
+  "actual_coupled_Radau_prefix_completed": true,
+  "time_accuracy_accepted": false,
+  "stiff_limit": {
+    "classification": "Proven",
+    "passed": true,
+    "equation": "xprime=lambda*x+t^3, step h=1, x(0)=0, lambda->-infinity",
+    "direct_Radau_scaled_limit": [
+      "-1/27",
+      "-1"
+    ],
+    "exact_primitive_scaled_limit": [
+      "-7/54",
+      "-11/18"
+    ],
+    "fitted_known_stream_unscaled_limit": [
+      "-1/45",
+      "17/135"
+    ],
+    "interpretation": "Direct Radau preserves lambda*x_j=-S_j at leading stiff order. Exact primitive stage forcing gives -A_inverse*H instead. Moment-fitting L*H creates a nonzero H-Heff limit, although the actual stiff solution tends to zero.",
+    "scope": "Exact scalar counterexample to a generic stiff-accuracy claim for these quadratures; it is not proof of the unique cause in the full time-dependent transport system.",
+    "bindings": {
+      "/home/lpaiu/work/native-retained-tail-runtime/native-known-forcing170-work/stiff-limit-producer.py": "b75c4e4938b09de68d665fa092c1a7eb7237e8fe89f06bdc062291a7da1216cf"
+    }
+  },
+  "failure_reason": "All six original2percent time gates failed; physical stage equations and conservation passed.",
+  "cost": {
+    "recorded_action_seconds": 174.671158315,
+    "CPU_seconds": 159.824760743,
+    "maximum_recorded_RSS_bytes": 2435350528,
+    "original_total_seconds": 390,
+    "CPU_threads": 1,
+    "virtual_GiB": 3,
+    "scope": "Action bodies including failed symbolic preparation; imports, derivation, writing, publication and Git excluded. One4/8-step pair, no full-horizon or free-material production."
+  }
+}

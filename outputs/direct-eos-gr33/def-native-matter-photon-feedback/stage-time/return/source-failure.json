@@ -1,0 +1,7 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": false,
+  "error": "TypeError: bad operand type for abs(): list at pressure_errors reduction",
+  "producer": "source-producer.py",
+  "scope": "Readout-only type failure after pressure computation; no material or photon trajectory changed. Convert the pressure-error list to an ndarray before abs and rerun only the source readout."
+}

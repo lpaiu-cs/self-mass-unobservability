@@ -1,0 +1,1618 @@
+arXiv:1704.05944v1  [quant-ph]  19 Apr 2017
+Finite-temperature electromagnetic responses of relativ istic electrons
+C. A. A. de Carvalho 1, 2
+1Centro Brasileriro de Pesquisas F ´ ısicas - CBPF,
+Rua Dr. Xavier Sigaud 150, Rio de Janeiro - RJ, 22290-180, Bra zil
+2Instituto de F ´ ısica, Universidade Federal do Rio de Janeir o - UFRJ,
+Caixa Postal 68528, Rio de Janeiro - RJ, 21945-972, Brazil
+(Dated: September 26, 2018)
+We compute the real and imaginary parts of the electric permi ttivities and magnetic permeabil-
+ities for relativistic electrons from quantum electrodyna mics at ﬁnite temperature and density. A
+semiclassical approximation establishes the conditions f or neglecting nonlinear terms in the external
+electromagnetic ﬁelds as well as electron-electron intera ctions. We obtain both the electric and mag-
+netic responses in a uniﬁed manner and relate them to longitu dinal and transverse collective plasma
+oscillations. We demonstrate that such collective modes ar e thresholds for a metamaterial regime
+of the electron plasma which exhibits simultaneously negat ive longitudinal permittities and perme-
+abilities. For nonzero temperatures, we obtain electromag netic responses given by one-dimensional
+integrals to be numerically calculated, whereas for zero te mperature we ﬁnd analytic expressions for
+both their real/dispersive and imaginary/absorptive part s.
+PACS numbers: 11.10.Wx, 42.50.Ct, 78.20.Ci
+I. INTRODUCTION
+We have recently proposed [1] that a gas of relativis-
+tic electrons, in the long wavelength limit, for weak ﬁelds
+and densities where electron-electron interactions may be
+neglected, exhibits Drude-like expressions for both elec-
+tric and magnetic responses. As a consequence, we ar-
+gued that the relativistic electron gas represents a natu-
+ral realization of a metamaterial, understood as a system
+that displays simultaneously negative electric permittiv-
+ity and magnetic permeability [2–4].
+As a preliminary test on the accuracy of the approx-
+imations, we have compared our predictions with non-
+relativistic data from metallic systems [5], whose quasi-
+free electrons exhibited responses that agreed well with
+the theoretical calculations at ﬁnite temperature, giv-
+ing quite good estimates for physical quantities such as
+plasma frequencies. Clearly, the truly relativistic elec-
+tron gases found, for instance, in synchrotron beams, are
+the physical systems required to check theoretical pre-
+dictions. Since the formalism for the relativistic electron
+gas [1] may be extended to other charged fermions, rela-
+tivistic plasmas are also an appropriate testing ground.
+Quantum electrodynamics (QED) at ﬁnite tempera-
+ture and density provides a uniﬁed treatment that relates
+electromagnetic responses to the well-known polarization
+tensor [6] with both vacuum and medium contributions.
+Using QED, we have shown [1] that (i) all responses de-
+pend on three scalar functions (one for the vacuum; two
+for the medium), (ii) polarizations depend on both the
+electric and magnetic ﬁelds, just as magnetizations de-
+pend on both magnetic and electric ﬁelds, and (iii) many
+aspects of the analysis of electric responses will carry over
+to the magnetic ones, due to the analogy between permit-
+tivitiesǫ and inverse permeabilities µ − 1. Furthermore, in
+the present work, we will show that (iv) electromagnetic
+responses may be related to collective plasma oscillations
+and used to calculate the corresponding plasma frequen-
+cies.
+The present study is devoted to the calculation of the
+real and imaginary parts of the ﬁnite-temperature elec-
+tromagnetic responses of relativistic electrons. At T ̸= 0,
+the problem is reduced to one-dimensional (1D) integrals
+which involve the Fermi-Dirac occupation numbers for
+electrons and positrons. At T = 0, however, as the
+occupation numbers become step functions, one obtains
+analytic expressions for the medium contributions. The
+existence of imaginary parts in longitudinal responses in-
+dicates instabilities that may be associated to plasmons
+decaying into electron-hole pairs or to electron-positron
+pair creation. Moreover, such results may then be used
+to calculate the dispersion relations for both longitudi-
+nal and transverse plasmons. Although numerical and
+analytic theoretical results for response functions have
+already appeared in the literature [7], especially in the
+context of plasma physics, we stress that the present
+derivation obtains both electric and magnetic responses
+in a uniﬁed way, relates them to physical quantities that
+may be measured in the previously described experimen-
+tal scenarios, and connects them to collective plasma os-
+cillations and to the metamaterial regime that occurs at
+frequencies where both electric and magnetic responses
+are simultaneuosly negative. At T ̸= 0, for instance, we
+may produce numerical results that will describe ﬁnite-
+temperature eﬀects in hot plasmas.
+The article is organized as follows. Section II reviews
+the theoretical framework of the present article. It con-
+sists of a semiclassical expansion that allows us to gen-
+erate and interpret the various contributions to the elec-
+tromagnetic responses, essentially establishing the con-
+ditions for the use of linear response and non-interacting
+electrons. Electromagnetic responses are then obtained
+from the polarization tensor. Section III relates elec-
+tromagnetic responses to collective plasmon excitations.
+2
+Section IV obtains the imaginary and real parts of the
+response functions at T ̸= 0 in terms of 1D integrals. Sec-
+tion V exhibits the explicit analytic expressions at T = 0.
+Finally, Section VI presents our conclusions.
+II. THEORETICAL FRAMEWORK
+The QED ﬁnite-temperature partition function Z =
+Tre− β ( ˆH− ξ∆ ˆN ) describes a relativistic electron gas, with
+ﬁxed ∆N =Ne − Np (Ne is the number of electrons and
+Np the number of positrons) at temperature T =β − 1 and
+chemical potential ξ, interacting with an electromagnetic
+ﬁeldAν . It may be expressed as a functional integral over
+gauge and fermion ﬁelds [8]
+Z =
+∮
+[dAν ] det(δG/δ Λ)δ(G)e− SA[A]Ze[A], (1)
+Ze[A] =
+∮
+[idψ †][dψ ]e− Se[ψ †,ψ,A ]. (2)
+The determinant is the Jacobian of the gauge trans-
+formation Aν → Aν − ∂ν Λ, while the delta function im-
+poses the gauge condition G[A] = 0, typically G[A] =
+∂νAν . The actions S∗ =
+∫β
+0 dx4
+∫
+d3x L∗ (∗ = A, e)
+have LA = − 1
+4FµνFµν and Le = ¯ψ ΓAψ , where Γ A =
+G− 1
+A = i/D − m − iξγ4 is the inverse of the electron
+propagator at ﬁnite density in the presence of the gauge
+ﬁeld, /D ≡ γ. (∂ − ieA) and ¯ψ = ψ †γ4. We use e and
+m for the electron charge and mass, and natural units
+ℏ = 1 ,c = 1. The integral
+∮
+runs over gauge ﬁelds
+obeying Aν (0,⃗ x) = Aν (β,⃗ x) and electron ﬁelds obeying
+ψ (0,⃗ x) = −ψ (β,⃗ x) [9].
+In (1), we write Aµ = ¯Aµ +aµ where ¯Aµ is a classi-
+cal solution of the sourceless equation of motion for Aµ ,
+which we identify with an external classical ﬁeld incident
+on the electron gas [10], and aµ is a quantum ﬂuctuation
+ﬁeld so that
+LA = − 1
+4
+¯Fµν ¯Fµν − 1
+4fµνfµν. (3)
+We perform the integral over aµ before the fermion inte-
+gration,
+∮
+[daµ ] det(δG/δ Λ)δ(G)e− Sa[aµ,ψ, ¯ψ ], (4)
+where Sa is given by the quadratic form
+Sa = 1
+2
+∫ ∫
+dxdyaµ (Gγ
+µν )− 1aν +e
+∫
+dx ( ¯ψγµψ )aµ (5)
+and
+∫
+dx ≡
+∫β
+0 dx4
+∫
+d3x, with Gγ
+µν being the photon
+propagator in the chosen gauge. We take minus the log-
+arithm of the quadratic integral to obtain
+S(i)
+e = − e2
+2
+∫ ∫
+dxdy( ¯ψγµψ )xGγ
+µν (x − y)( ¯ψγνψ )y, (6)
+which shows that the integral over quantum ﬂuctuations
+of the gauge ﬁeld leads to electron-electron interactions
+mediated by the photon propagator.
+The remaining fermionic integral is
+Z (sc)
+e [ ¯A] =
+∮
+[idψ †][dψ ]e− S(sc)
+e [ψ †,ψ, ¯A], (7)
+with the fermionic semiclassical action given by S(sc)
+e =
+Se +S(i)
+e . Expanding exp( −S(i)
+e ) to order α , the fermion
+integral reads
+Z (sc)
+e [ ¯A] ∼
+=
+∮
+[idψ †][dψ ]e− Se[ψ †,ψ, ¯A][1 − S(i)
+e ], (8)
+and by neglecting the interaction term one obtains
+Z (sc)
+e [ ¯A] ∼
+= det[−βγ 4Γ ¯A] = exp Tr ln[−βγ 4Γ ¯A]. (9)
+This leads to a modiﬁed action for the ¯Aµ ﬁeld,S(sc)[ ¯A] =
+S ¯A[ ¯A] − Tr ln[−βγ 4Γ ¯A], which takes into account the re-
+sponse of the electrons.
+The extremal condition δS(sc)/δ ¯Aν = 0 gives the equa-
+tion of motion
+∂µFµν = −Tr [eγνG ¯A] = Jν. (10)
+Splitting J into free JF (for ¯A = 0) and induced JI
+currents, we may write
+∂µ (Fµν +Pµν ) = JF
+ν , (11)
+−∂µPµν =JI
+ν =Tr [eγνG ¯A] − Tr [eγνG0], (12)
+withG0 being the free electron propagator at ﬁnite den-
+sity. Pµν deﬁnes the polarization ⃗P (P4j = iPj) and
+magnetization ⃗M (Pij = −ǫijkMk) vectors.
+The electron propagator at ﬁnite density may be ex-
+panded in the background ﬁeld, so that Tr ln[ −βγ 4Γ ¯A] −
+Tr ln[−βγ 4G− 1
+0 ] is given as an inﬁnite sum of one-loop
+graphs, i.e., a fermion loop with an even number (due to
+Furry’s theorem [11]) of insertions of the classical ﬁeld.
+The ﬁrst term of the series is
+− e2
+2 Tr(G0γ. ¯AG0γ. ¯A), (13)
+which may be written as
+1
+2
+[
+1
+β
+∑
+n
+∫ d3q
+(2π )3
+˜Aµ (q) ˜Πµν (q) ˜Aν (−q)
+]
+, (14)
+in terms of the Fourier transform ˜A of ¯A, with ˜Πµν (q)
+being the one-loop vacuum polarization tensor [11] given
+by
+˜Πµν = − e2
+β
++∞∑
+n=−∞
+∫ d3p
+(2π )3 Sp[γµG0(p)γνG0(p − q)], (15)
+where the sum is over Matsubara frequencies p4 = (2n +
+1)πT and Sp denotes trace over Dirac matrices. The next
+3
+term, with four insertions, is still one-loop but nonlinear
+in the ﬁelds. It depends on ( T,ξ ) and is typically of order
+α 2E2/m 4 or α 2B2/m 4.
+If we consider the ﬁrst contribution from the e − e
+interaction, we have to contract the four fermion term
+in S(i)
+e with the electron propagator at ﬁnite density in
+the presence of the external ﬁeld, which yields a two-loop
+contribution. When we expand in the external ﬁeld, the
+ﬁrst contribution is quadratic in the ﬁeld, of order α 2,
+and contributes in the linear response. The next terms
+in the expansion in the external ﬁeld are nonlinear ( T,ξ )-
+dependent contributions of order α 2E2/m 4 orα 2B2/m 4.
+Our calculations neglect nonlinear one-loop contribu-
+tions, the two-loop contribution to linear response of or-
+der α 2, and nonlinear ones that also come in with e − e
+interactions. Although nonlinear terms might bring in
+interesting eﬀects [12], we will restrict our analysis to
+ﬁelds that are not strong enough to invalidate the linear-
+response approximation. Therefore, we only consider the
+interaction of independent electrons with weak external
+ﬁelds.
+We note that the expansion of the current in the clas-
+sical ﬁeld ¯Aν yields an inﬁnite series of one-loop graphs.
+We only retain the linear term, which amounts to the
+linear-response approximation. This is related to the
+well-known RPA approximation [13, 14] of Condensed
+Matter Physics. Then, Eq. (12) leads to the momentum
+space equation
+iqµ ˜Pµν (q) = ˜Πνσ (q) ˜Aσ (q). (16)
+whose solution,
+˜Pµν =
+˜Πµσ
+q2
+˜Fνσ −
+˜Πνσ
+q2
+˜Fµσ , (17)
+relates polarization and magnetization to the ﬁelds ⃗E
+( ˜F4j = i ˜Ej) and ⃗B ( ˜Fij = ǫijk ˜Bk), thus yielding the
+electric and magnetic susceptibilities and, ultimately, the
+electric permittivity and magnetic permeability tensors.
+One may write ˜Πνσ = ˜Π(v)
+νσ + ˜Π(m)
+νσ to separate vacuum
+(T = ξ = 0) and medium contributions. The vacuum
+contribution has the structure
+−
+˜Π(v)
+νσ
+q2 =
+(
+δνσ − qνqσ
+q2
+)
+C(q2). (18)
+The medium , however, introduces a preferred reference
+frame (that of its center of mass). The symmetry of
+the problem is then reduced to 3D rotations and gauge
+invariance leading to [6]
+−
+˜Π(m)
+ij
+q2 =
+(
+δij − qiqj
+|⃗ q|2
+)
+A +δij
+q2
+4
+|⃗ q|2 B, (19)
+−
+˜Π(m)
+44
+q2 = B, −
+˜Π(m)
+4i
+q2 = − q4qi
+|⃗ q|2 B, (20)
+where the three scalar functions A(q4, |⃗ q|), B(q4, |⃗ q|), and
+C(q2) are determined from the Feynman graph in Eq.
+(15), the QED polarization tensor at ﬁnite temperature,
+and density. A and B are calculated from the ˜Πµµ trace
+and ˜Π44, once we subtract the vacuum part, i.e,
+A = −e2
+2π 3q2 Re
+∫ d3p
+ωp
+nF (p)p. (p +q)
+q2 − 2p.q +
+(
+1 − 3q2
+2|⃗ q|2
+)
+B,
+(21)
+B = −e2
+2π 3q2 Re
+∫ d3p
+ωp
+nF (p)p.q − 2p4(q4 − p4)
+q2 − 2p.q , (22)
+where p4 = iωp = i
+√
+|⃗ p|2 +m2 and nF (p) is the Fermi-
+Dirac occupation number for particles and antiparticles,
+nF (p) = 1
+eβ (ω p− ξ) + 1 + 1
+eβ (ω p+ξ) + 1. (23)
+We now introduce Hµν ≡ Fµν + Pµν which deﬁnes
+H4j = iDj and Hij = ǫijkHk, with ⃗D = ⃗E + ⃗P and
+⃗H = ⃗B − ⃗M . The constitutive equations are derived
+from Eqs. (18), (19), and (20), i.e,
+˜Dj =ǫjk ˜Ek +τjk ˜Bk, (24)
+˜Hj =νjk ˜Bk +σjk ˜Ek , (25)
+where we have deﬁned νjk ≡ (µ − 1)jk as the inverse of
+the magnetic permeability tensor. Using ˆ qi ≡ qi/ |⃗ q|, we
+obtain the linear-response tensors
+ǫjk =ǫδjk +ǫ′ˆqj ˆqk, (26)
+νjk =νδjk +ν′ˆqj ˆqk, (27)
+τjk =τǫjkl ˆql, (28)
+σjk =σǫjkl ˆql. (29)
+Again, ν ≡ µ − 1, ν′ ≡ µ ′− 1. One should stress that there
+are contributions to ( ⃗D, ⃗H) along the directions of the
+ﬁelds (⃗E, ⃗B), of the wavevector ⃗ q, and of ( ⃗ q∧ ⃗B,⃗ q∧ ⃗E).
+Also note that bianisotropic crystals satisfy similar rela-
+tions [15].
+The Euclidean space ˜Πµν is a function of q4. In order
+to obtain Minkowski expressions, we follow the proce-
+dure justiﬁed in [1] and let q4 = ωn → iω − 0+. Note
+that the Euclidean q2 =q2
+4 + |⃗ q|2 goes to the Minkowski
+−q2 = −q2
+0 + |⃗ q|2 = −ω 2 + |⃗ q|2. We then arrive at the
+Minkowski expressions below, with the asterisk corre-
+sponding to q4 = ωn → iω − 0+. The permittivities
+and inverse permeabilities
+ǫ = 1 + (2 − ω 2
+q2 )C∗ + A∗ + (1 − ω 2
+|⃗ q|2 )B∗, (30)
+ν = 1 + (2 + |⃗ q|2
+q2 )C∗ + A∗ − 2ω 2
+|⃗ q|2 B∗, (31)
+ǫ′ = −ν′ = |⃗ q|2
+q2 C∗ − A ∗, (32)
+τ =σ = ω
+|⃗ q|( |⃗ q|2
+q2 C∗ − B ∗), (33)
+4
+are determined by the three scalar functions A∗ , B∗ , and
+C∗ , where again the asterisk means q4 → iω − 0+. C∗
+may be obtained at T =ξ = 0 [11]
+C∗ = −e2
+12π 2 { 1
+3 + 2(1 + 2m2
+q2 )[h arccot(h) − 1]} (34)
+where h =
+√
+(4m2/q 2) − 1. The renormalization condi-
+tion is α = e2/ (4π ℏc) = 1/ 137, with e2 = e2(ω = 0,⃗ q=
+⃗0). Note that the vacuum contributions to permittiv-
+ities and inverse permeabilities are obtained by setting
+A∗ = B∗ = 0.
+For further discussions, it is important to diagonal-
+ize the tensors appearing in (26), (27). For ǫjk, the
+eigenvalues λ satisfy det( ǫjk − λδjk ) = 0, leading to
+(ǫ − λ)2(ǫ +ǫ′ − λ) = 0. The eigenvector associated to
+ǫ +ǫ′ is ˆqk, so that it is longitudinal, whereas the two
+eigenvaluesǫ are transverse to ˆqk. The same occurs for
+νjk . Therefore, from (30), (31) one derives
+ǫL =ǫ +ǫ′ = 1 + C∗ + (1 − ω 2
+|⃗ q|2 )B∗, (35)
+νL =ν +ν′ = 1 + 2( C∗ + A∗ − ω 2
+|⃗ q|2 B∗). (36)
+Clearly, the linear-response tensors τjk andσjk [cf. Eqs.
+(28) and (29))] are transverse.
+III. COLLECTIVE PLASMON EXCITATIONS
+We return to the partition function (1), normalized by
+the free fermion result Ze[0], in Euclidean space. Instead
+of doing a semiclassical approximation for the electro-
+magnetic ﬁelds, we integrate over the electrons to obtain
+Ze[A]
+Ze[0] = det[G− 1
+A ]
+det[G− 1
+0 ] = − exp Tr ln[GAG− 1
+0 ]. (37)
+We now expand in the ﬁeld Aµ and keep only the
+quadratic part
+Se = − ln
+(Ze[A]
+Ze[0]
+)
+= − 1
+2
+∑∫
+˜Aµ (q) ˜Πµν (q) ˜Aν (q), (38)
+where we have used (15) and the simpliﬁed notation
+∑∫
+≡ 1
+β
++∞∑
+n=−∞
+∫ d3q
+(2π )3. (39)
+The partition function is then given by a quadratic inte-
+gral [8]
+Z[A]
+Ze[0] =
+∮
+[dAµ ] det[−∂ 2] exp(− 1
+2
+∑∫
+˜Aµ ˜Γµν ˜Aν ), (40)
+where
+˜Γµν =q2δµν − (1 − 1
+λ )qµqν − ˜Πµν, (41)
+and the determinant comes from the Lorentz gauge con-
+dition, with λ being a gauge parameter.
+Following [8], we introduce the Pµν projectors
+Pµν =δµν − qµqν
+q2 , (42)
+where q2 =q2
+4 + |⃗ q|2 and the transverse PT
+µν
+PT
+ij =δij − ˆqi ˆqj, (43)
+PT
+44 = PT
+4i = 0, (44)
+with ˆqi =qi/ |⃗ q|. We may deﬁne a longitudinal projector
+PL
+µν ≡ P µν − P T
+µν and the polarization tensor may then
+be written as
+˜Πµν = ˜Π(v)
+µν + ˜Π(m)
+µν = F PL
+µν + GPT
+µν, (45)
+where
+F = −q2
+(
+1 + C + B + q2
+4
+|⃗ q|2 B
+)
+, (46)
+G = −q2
+(
+1 + C + A + q2
+4
+|⃗ q|2 B
+)
+. (47)
+The expression for the quadratic kernel is given by
+˜Γµν = (q2 − F )PL
+µν + (q2 − G )PT
+µν + 1
+λqµqν, (48)
+and its inverse, the photon propagator, reads
+˜Γ− 1
+µν = PL
+µν
+q2 − F + PT
+µν
+q2 − G + λ
+q2
+qµqν
+q2 . (49)
+In Minkowski space ( q4 → iω − 0+, q2 → − q2),
+1
+q2 − F → 1
+−q2ǫL
+, (50)
+1
+q2 − G → 2
+−q2[νL + 1], (51)
+which leads to poles in the PL
+µν longitudinal and PT
+µν
+transverse propagators whenever, respectively,
+ǫL(ω, |⃗ q|) = 0, (52)
+νL(ω, |⃗ q|) = − 1. (53)
+We remark that (52) corresponds to the usual Con-
+densed Matter dispersion relation of longitudinal plas-
+mon collective excitations. Analogously, Eq. (53) yields
+the dispersion relation of transverse plasmon collective
+excitations. Indeed, we may write the projectors as
+Pµν =n(1)
+µ n(1)
+ν +n(2)
+µ n(2)
+ν +n(3)
+µ n(3)
+ν , (54)
+PT
+µν =n(1)
+µ n(1)
+ν +n(2)
+µ n(2)
+ν , (55)
+where n(i)
+µ = (0, ˆn(i)), ˆq. ˆn(i) = 0, |ˆn(i)| = 1, for i = 1, 2,
+satisfying ˆn(1)
+i ˆn(1)
+j + ˆn(2)
+i ˆn(2)
+j + ˆqi ˆqj = δij. For n(3)
+µ , we
+ﬁnd
+n(3)
+µ =
+(
+−|⃗ q|
+√
+q2
+, q4 ˆq√
+q2
+)
+, (56)
+5
+if we demand that it must be normalized and orthogonal
+toqµ andn(i)
+µ ,i = 1, 2, thus satisfyingn(1)
+µ n(1)
+ν +n(2)
+µ n(2)
+ν +
+n(3)
+µ n(3)
+ν + (qµqν/q 2) = δµν . Then
+PL
+µν =n(3)
+µ n(3)
+ν , (57)
+PT
+µν =n(1)
+µ n(1)
+ν +n(2)
+µ n(2)
+ν . (58)
+A few observations are in order:
+(i) in Minkowski space, we have
+n(3)
+µ =
+(
+i|⃗ q|
+√
+q2, ω ˆq√
+q2
+)
+, (59)
+which in the long-wavelength limit becomes n(3)
+µ = (0, ˆq);
+(ii) in that limit, we obtained [1] Drude expres-
+sions for ǫL = 1 − (ω 2
+e/ω 2) and νL = 1 − (ω 2
+m/ω 2).
+Inserting this into (50) and (51), and using the fact that
+ω 2
+m = 2ω 2
+e , we ﬁnd ω 2
+e − ω 2 as the denominator for both
+longitudinal and transverse propagators.
+Finally, the collective plasmon excitations correspond
+to charge density and current density oscillations. In-
+deed, the collective ﬁeld AL ≡ n(3)
+µ PL
+µνAν = Aνn(3)
+ν , in
+Euclidean space, is given by
+AL = −i⃗ q.(−i⃗ qA4 +iq4⃗A)
+√
+q2|⃗ q|
+= − ⃗∇. ⃗E√
+q2|⃗ q|
+= −ρ(q)√
+q2|⃗ q|
+, (60)
+whereas the collective ﬁeld AT
+µ ≡ P T
+µνAν is given by
+(0, ⃗AT ), where ⃗AT = A1 ˆn(1) +A2 ˆn(2) and Ai = ⃗A. ˆn(i).
+One then obtains
+⃗AT = i⃗ q∧ (i⃗ q∧ ⃗A)
+|⃗ q|2 =
+⃗∇ ∧ ⃗B
+|⃗ q|2 =
+⃗j(q)
+|⃗ q|2. (61)
+If we use (46), (47), and (48), and leave aside a gauge
+term, the integrand in (38) may be written, in Minkowski
+space, as
+ρ(q)
+(ǫL
+⃗ q2
+)
+ρ(q) +jk(q)
+
+ (νL + 1)(1 − ω 2
+|⃗ q|2 )
+2⃗ q2
+
+ jk(q), (62)
+where q = (ω,⃗ q).
+The above expression physically describes the interac-
+tion of charge densities induced by the longitudinal com-
+ponent of the ﬂuctuating electric ﬁelds and current den-
+sities (loops in the plane perpendicular to ˆ q) induced by
+the longitudinal component of the ﬂuctuating magnetic
+ﬁelds.
+IV. REAL AND IMAGINAR Y P AR TS OF THE
+RESPONSES
+We now turn to Eqs. (21) and (22) which may be
+integrated over angles and continued to Minkowski space
+(q4 → iω − 0+) to yield
+B∗ = −e2
+π 2q2
+∫ ∞
+0
+dpp 2nF
+ωp
+(
+1 + 4ω 2
+p +q2
+8p|⃗ q| f1 + ωpω
+p|⃗ q|f2
+)
+,
+(63)
+A∗ = D∗ +
+(
+1 + 3q2
+2|⃗ q|2
+)
+B∗, (64)
+where
+D∗ = −e2
+π 2q2
+∫ ∞
+0
+dpp 2nF
+ωp
+(
+1 + 2m2 +q2
+8p|⃗ q| f1
+)
+, (65)
+with q2 =ω 2 − |⃗ q|2. The functions f1 and f2 are
+f1 = ln
+{
+(q2 − 2p|⃗ q|)2 − 4ω 2
+pω 2
+(q2 + 2p|⃗ q|)2 − 4ω 2pω 2
+}
+, (66)
+f2 = arctanh
+( 2ωω p
+q2 − 2|⃗ q|p
+)
+− arctanh
+( 2ωω p
+q2 + 2|⃗ q|p
+)
+.
+(67)
+In terms of the dimensionless variables x ≡ ωp/m , y ≡
+p/m =
+√
+x2 − 1, a ≡ ω/ 2m, b ≡ |⃗ q|/ 2m, and c2 ≡ a2 −
+b2 =q2/ 4m2, one obtains
+f1 = ln
+{(c2 − by)2 − a2x2
+(c2 +by)2 − a2x2
+}
+, (68)
+f2 = ln
+{⏐
+⏐
+⏐
+⏐
+c2 − by +ax
+c2 +by +ax
+⏐
+⏐
+⏐
+⏐
+}
+− f1
+2 . (69)
+A. Imaginary parts
+From (69), Imf2 = − Imf1/ 2, so that imaginary parts
+will appear when the argument of the logarithm in f1
+becomes negative, i.e., when the product of its numerator
+N times its denominator D satisﬁes,
+ND = [(c2 − by)2 − a2x2][(c2 +by)2 − a2x2]< 0. (70)
+The roots of the related biquadratic equation in x (≥ 0)
+are x± =a ± bγ, where γ 2 ≡ 1 − (1/c 2), leading to
+(a − bγ)2<x 2 < (a +bγ)2. (71)
+There are three cases to be considered:
+(i) c2 < 0 (γ > 1; a < b < bγ), i.e., −a +bγ < x <
+a +bγ;
+(ii) 0 < c2 < 1 (γ purely imaginary): (71) is never
+satisﬁed and Imf1 = 0;
+(iii)c2> 1 (γ <1;a>b>bγ ), i.e.,a−bγ <x<a +bγ.
+The diﬀerence between numerator N and denominator
+D is given by −c2by. For case (i), this implies N >
+6
+0 1 b0
+1
+a
+(iii)
+(ii)
+(i)
+FIG. 1: Regions (i), (ii), (iii) of the ( a, b ) = ( ℏω, ℏ|⃗ q|) plane.
+0, D < 0 whereas for case (iii) N < 0, D > 0. As a
+consequence, for case (ii), 0 < c2 < 1, corresponding to
+the same sign for N and D, we obtain Im B∗ = ImD∗ = 0.
+For cases (i) and (iii), we take Im f1 = ε(N)π , where
+ε(r) ≡ sign(r). The choice of sign corresponds to the
+continuationq4 → iω − 0+ [cf. Appendix A]. Therefore
+ImB∗ = ε(c2)e2
+16πbc 2
+∫ a+bγ
+xl
+dxnF [(x − a)2 − b2)], (72)
+ImD∗ = ε(c2)e2
+32πbc 2
+∫ a+bγ
+xl
+dxnF (1 + 2c2). (73)
+For case (i), c2 < 0, N > 0, and xl = −a +bγ whereas
+for case (iii), c2 > 1, N< 0, and xl =a − bγ. It is easy
+to show that −a +bγ > 1 in case (i) and a − bγ > 1 in
+case (iii). Thus, imaginary parts appear for both B∗ and
+D∗ in the regions c2 < 0 and c2 > 1 of the ( a,b ) plane,
+and they vanish for 0 <c 2< 1.
+Leaving aside the vacuum contribution, the expressions
+for the longitudinal parts of the electric permittivity and
+inverse magnetic permeability become
+ImǫL = − ε(c2)e2
+16πb 3
+∫ a+bγ
+xl
+dxnF [(x − a)2 − b2)], (74)
+ImνL = − ε(c2)e2
+16πb 3
+∫ a+bγ
+xl
+dxnF
+[
+(x − a)2 +b2 + b2
+c2
+]
+.
+(75)
+Again, they vanish in region (ii) of the ( a,b ) plane,
+whiereas in region (i) xl = −a +bγ, and in region (iii)
+xl =a − bγ. These various regions are shown in Fig. 1.
+One should note that the appearance of nonzero imagi-
+nary parts may be associated to the creation of electron-
+hole (lower energies) or electron-positron (higher ener-
+gies) pairs.
+B. Real parts
+The real parts of B∗ and D∗ may also be reduced to 1D
+integrals which depend on the a =ω/ 2m andb = |⃗ q|/ 2m
+parameters. We may write them as
+ReB∗ = −e2
+4π 2c2 [R +RB], (76)
+ReD∗ = −e2
+4π 2c2 [R +RD], (77)
+where
+R =
+∫ ∞
+1
+dxnF
+√
+x2 − 1, (78)
+RB = 1
+4b
+∫ ∞
+1
+dxnF [(x2 +c2)R1 + 4axR2], (79)
+RD = 1
+8b
+∫ ∞
+1
+dxnF (1 + 2c2)R1. (80)
+with
+R1 ≡ Ref1 = ln
+{⏐
+⏐
+⏐
+⏐
+(c2 − by)2 − a2x2
+(c2 +by)2 − a2x2
+⏐
+⏐
+⏐
+⏐
+}
+, (81)
+R2 ≡ Ref2 = 1
+2 ln
+{⏐
+⏐
+⏐
+⏐
+c4 − (ax − by)2
+c4 − (ax +by)2
+⏐
+⏐
+⏐
+⏐
+}
+. (82)
+From the above expressions, one may obtain the electro-
+magnetic responses as functions of a, b, T/m , and ξ/m ,
+the latter dependences coming from the Fermi-Dirac dis-
+tribution function.
+V. ANALYTIC RESULTS AT T = 0
+At zero temperature, the Fermi-Dirac distribution
+function nF (x) becomes Θ( xF − x) where xF ≡ ξ/m .
+We may then analytically perform the integrals for both
+the imaginary and real parts of the response functions.
+In the sequel, we will present the details of the calcu-
+lations and obtain explicit analytic expressions for the
+imaginary and real parts of both the electric and mag-
+netic response functions as well as their corresponding
+regions in the ( a,b ) plane.
+A. Imaginary parts at T = 0
+Only two of the three cases studied in Section IV A
+have nonvanishing imaginary parts. Nevertheless, at zero
+temperature, as we shall see below, additional restric-
+tions come into play because of the integration limit xF
+imposed by the distribution function Θ( xF − x).
+In case (i) [ c2 < 0, γ > 1 (a < b < bγ)], the lower
+integration limit of (72), (73) is xl = −a+bγ whereas the
+upper one is xu =a +bγ. For a nonvanishing result, we
+needxl = −a +bγ <xF . This will occur if b− <b<b +,
+where
+b± = ± yF
+2 +
+√
+y2
+F
+4 +a(xF +a), (83)
+7
+with xF ≡ ǫF/m = ξ/m and yF = 1
+m
+√
+ǫ2
+F − m2 =
+pF/m . Depending on whether xu < xF or xu > xF , re-
+sults for the imaginary part will diﬀer. For xu =a+bγ <
+xF , one needs a<x F and
+b2 − yFb +a(xF − a)< 0, (84)
+b2 +yFb +a(xF − a)> 0. (85)
+To satisfy (84), the argument fo the square-root appear-
+ing in the roots of the associated equation has to be posi-
+tive, so that 0 <a< (xF − 1)/ 2 and (xF +1)/ 2<a<x F .
+Then, (85) will always be satisﬁed whereas (84) implies
+¯b− <b< ¯b+, where
+¯b± = yF
+2 ±
+√
+y2
+F
+4 − a(xF − a). (86)
+As a result, the integrals in (72) and (73), with nF =
+Θ(x − xF ), and the deﬁnition
+[f (x)]xu
+xl ≡ f (xu) − f (xl), (87)
+will have the values
+A) for 0 <a < (xF − 1)/ 2 and (xF + 1)/ 2< a < xF ,
+¯b− <b< ¯b+, xl = −a +bγ,xu =a +bγ,
+ImB∗ = − e2
+48πbc 2
+[
+(x − a)3 − 3b2x
+] a+bγ
+− a+bγ, (88)
+ImD∗ = − e2
+32πbc 2
+[
+(1 + 2c2)(2a)
+]
+; (89)
+B) for ( xF − 1)/ 2 < a < (xF + 1)/ 2 and a > xF ,
+b− <b<b +, xl = −a +bγ,xu =xF ,
+ImB∗ = − e2
+48πbc 2
+[
+(x − a)3 − 3b2x
+] xF
+− a+bγ, (90)
+ImD∗ = − e2
+32πbc 2 [(1 + 2c2)(xF +a − bγ)]. (91)
+Outside regions (A) and (B), for c2 < 0 the imaginary
+parts of B∗ and D∗ vanish.
+In case (iii) [ c2 > 1, γ < 1 (a > b > bγ)], the lower
+integration limit of (72), (73) is xl =a − bγ whereas the
+upper one is xu = a +bγ. For a nonvanishing result,
+xl = a − bγ < xF . This will always occur if a < xF
+whereas for a>x F ,b′
+− <b<b ′
++, where
+b′
+± = ± yF
+2 +
+√
+y2
+F
+4 − a(xF − a). (92)
+Again, depending on whether xu < xF or xu > xF , re-
+sults for the imaginary part will diﬀer. For xu =a+bγ <
+xF ,a<x F and
+b2 − yFb +a(xF − a)> 0, (93)
+b2 +yFb +a(xF − a)> 0. (94)
+To satisfy (93), the argument fo the square-root appear-
+ing in the roots of the associated equation has to be posi-
+tive, so that 0 <a< (xF − 1)/ 2 and (xF +1)/ 2<a<x F .
+2pF
+0
+2
+D
+B
+C
+A
+FIG. 2: Regions in the ( a, b ) = ( ℏω, ℏ|⃗ q|) plane.
+Then, (94) will always be satisﬁed whereas (93) implies
+¯b′
+− <b< ¯b′
++, with
+¯b′
+± = yF
+2 ±
+√
+y2
+F
+4 − a(xF − a). (95)
+C) for 0 <a < (xF − 1)/ 2 and (xF + 1)/ 2< a <xF ,
+¯b′
+− <b< ¯b′
++, xl =a − bγ,xu =a +bγ,
+ImB∗ = e2
+48πbc 2
+[
+(x − a)3 − 3b2x
+] a+bγ
+a− bγ, (96)
+ImD∗ = e2
+32πbc 2
+[
+(1 + 2c2)(2bγ)
+]
+; (97)
+D) for or ( xF − 1)/ 2 < a <(xF + 1)/ 2 and a > xF ,
+b′
+− <b<b ′
++, xl =a − bγ,xu =xF ,
+ImB∗ = e2
+48πbc 2
+[
+(x − a)3 − 3b2x
+] xF
+a− bγ , (98)
+ImD∗ = e2
+32πbc 2 [(1 + 2c2)(xF − a +bγ)]. (99)
+Outside regions (C) and (D), for c2 > 1 the imaginary
+parts of B∗ and D∗ vanish.
+Finally, in case (ii), 0 < c2 < 1, one has Im B∗ =
+ImD∗ = 0. The various regions of the ( a,b ) plane that
+correspond to the diﬀerent expressions discussed above
+are depicted in Fig. 2.
+Before moving on to the real parts of the electromag-
+netic responses, let us look at the nonrelativistic (NR)
+limit of cases (A) and (B). At T = 0, ǫF =ξ and one may
+deﬁneǫ′
+F ≡ ǫF −m. In the NR-limit, ǫF ≈ 1,ǫ′
+F/m<< 1.
+Furthermore,ω ≈ |⃗ q|2/ 2m, so that a,b<< 1,ǫ′
+F/m ≈ b2,
+a2 ≈ b4, a2 << b2, c2 < 0, |c2|<< 1. As a result,
+bγ → 1 + [(a2 +b4)/ 2b2] so that (88), (90) yield (A8),
+(A7), respectively (cf. Appendix A). One then recovers
+the standard nonrelativistic results [14].
+8
+B. Real parts at T = 0
+AtT = 0, (79)-(80) become
+R =
+∫ xF
+1
+dx
+√
+x2 − 1, (100)
+RB = 1
+4b
+∫ xF
+1
+dx [(x2 +c2)R1 + 4axR2], (101)
+RD = 1
+8b
+∫ xF
+1
+dx (1 + 2c2)R1, (102)
+where the ﬁrst integral is simply
+R = 1
+2 [xFyF − ln(xF +yF )], (103)
+and the two latter expressions may be integrated by
+parts. Since R1(1) = R2(1) = 0, if we write RB,D =
+UB,D +VB,D , with
+UB = xF
+12b [(x2
+F + 3c2)R1F + 6axFR2F ], (104)
+UD = xF
+8b (1 + 2c2)R1F, (105)
+where
+R1F = ln
+(⏐
+⏐
+⏐
+⏐
+(c2 − byF )2 − a2x2
+F
+(c2 +byF )2 − a2x2
+F
+⏐
+⏐
+⏐
+⏐
+)
+, (106)
+R2F = 1
+2 ln
+(⏐
+⏐
+⏐
+⏐
+c4 − (axF − byF )2
+c4 − (axF +byF )2
+⏐
+⏐
+⏐
+⏐
+)
+. (107)
+VB,D will involve the derivatives of R1 and R2. We
+rewrite Ref1 and Ref2 in terms of
+La,b (x) ≡ ln(|ax +by +c2|), (108)
+L± a(x) ≡ L± a,b (x) − L± a, − b(x), (109)
+to obtain
+Ref1 = − (La + L− a), (110)
+Ref2 = − (La − L− a)/ 2. (111)
+Then, VB,D =V +
+B,D +V −
+B,D where
+V ±
+B = 1
+12b
+∫ xF
+1
+dx [x3 ± 3ax2 + 3c2]L′
+± a, (112)
+V ±
+D = 1
+8b
+∫ xF
+1
+dx (1 + 2c2)xL′
+± a, (113)
+with primes denoting derivatives in x. Alternatively,
+V ±
+B = 1
+6
+∫ xF
+1
+dx√
+x2 − 1
+P ±
+B (x)
+Q± (x), (114)
+V ±
+D = 1
+4
+∫ xF
+1
+dx√
+x2 − 1
+P ±
+D (x)
+Q± (x), (115)
+with
+P ±
+B = (x3 ± 3ax2 + 3c2)
+(
+x ± a
+c2
+)
+, (116)
+P ±
+D =
+[
+(1 + 2c2)x
+] (
+x ± a
+c2
+)
+, (117)
+Q± (x) = x2 ± 2ax +d2, (118)
+whered2 ≡ (a2 − b2γ 2). By dividing out the polynomials
+in (114) and (115) and adding V +
+B,D +V −
+B,D , one obtains
+VB,D =YB,D +ZB,D , (119)
+where
+YB = 1
+3
+∫ xF
+1
+dx√
+x2 − 1 (x2 + 1 − 2b2), (120)
+YD = 1
+2
+∫ xF
+1
+dx√
+x2 − 1
+(
+1 + 2c2)
+, (121)
+which leads to
+YB = 1
+6
+[
+xFyF +
+(
+3 − 4b2)
+ln(xF +yF )
+]
+, (122)
+YD = 1
+2
+(
+1 + 2c2)
+ln(xF +yF ), (123)
+and ZB,D is given by
+ZB,D =CB,D
+∫ xF
+1
+dx√
+x2 − 1
+MB,D x2 +NB,D
+(x2 +d2)2 − 4a2x2, (124)
+where CB = (1/ 3) and CD = (1/ 2)(1 + 2c2). The ex-
+pressions for MB,D and NB,D depend solely on a and
+b,
+MB = − 2a2(1 + 4b2) − [1 − 2b2 − 2a2(2 − γ 2)]d2,
+NB = −d4(1 − 2b2),
+MD = 2a2(1 +γ 2) − d2,
+ND = −d4.
+Deﬁning t =
+√
+(x2 − 1)/x 2 =y/x , (124) reduces to
+ZB,D =CB,D [(MB,D +NB,D )I0 − NB,D I2], (125)
+where Ij is
+Ij =
+∫ tF
+0
+dttj
+Ct4 + Bt2 + A, (126)
+and the coeﬃcients are
+C =d4, (127)
+B = − 2[d2(d2 + 1) − 2a2], (128)
+A = (d2 + 1)2 − 4a2. (129)
+The above integrals are analytically evaluated in Ap-
+pendix B and have diﬀerent expressions depending on
+9
+whether γ 2 < 0 or γ 2 > 0. From (76) and (77), we
+obtain
+ReB∗ = −e2
+4π 2c2 [UB +WB +ZB], (130)
+ReD∗ = −e2
+4π 2c2 [UD +WD +ZD], (131)
+where the WB,D ≡ R +YB,D are
+WB = 2
+3 [xFyF − b2 ln(xF +yF )], (132)
+WD = 1
+2 [xFyF + 2c2 ln(xF +yF )], (133)
+with ZB,D given in terms of Ij (cf. Appendix B)
+ZB = 1
+3 [(MB +NB)I0 − NBI2], (134)
+ZD = 1
+2 (1 + 2c2)[(MD +ND)I0 − NDI2]. (135)
+The results for Re B∗ and Re D∗ provide us with an-
+alytic expressions for both the electric and magnetic
+response functions. In particular, the longitudinal re-
+sponses (35) and (36) are given by
+ǫL = (1 + C∗) − c2
+b2 B∗, (136)
+νL = (1 + 2 C∗) + 2D∗ + c2
+b2 B∗. (137)
+Leaving aside the C∗ vacuum contribution, Re ǫL and
+ReνL will follow from (130) and (131).
+We emphasize that the results of the present section
+yield analytic expressions for the real and imaginary
+parts of both the electric and magnetic responses of rel-
+ativistic electrons. As already indicated both in this sec-
+tion and in Appendix A, the T = 0 nonrelativistic limit of
+the present theoretical results for the dielectric response
+coincide with the well-known Lindhardt dieletric function
+[16].
+VI. CONCLUSIONS
+The present theoretical results for the temperature-
+dependent electromagnetic responses of the relativistic
+electron gas provide us with expressions for both imagi-
+nary and real parts in terms of 1D integrals. They may be
+evaluated numerically to yield functions of ω , |⃗ q|, ξ, and
+T . Such functions, in turn, may be used to obtain the dis-
+persion relation for longitudinal plasmons, i.e., the ω (|⃗ q|)
+that satisﬁes ǫL = 0, as well as their transverse mag-
+netic analogues for which νL = − 1. Furthermore, the
+appearance of nonzero imaginary parts may then be as-
+sociated to the creation of electron-hole (lower energies)
+or electron-positron (higher energies) pairs. For T = 0,
+the explicit analytic expressions obtained will contain all
+that information.
+The relativistic electron plasma will support longitudi-
+nal and transverse plasmons which are related to collec-
+tive charge density oscillations and collective current den-
+sity oscillations, respectively. Just as longitudinal plas-
+mons have their dispersion relation given by ǫL = 0, for
+transverse ones it is νL = − 1 that deﬁnes the dispersion
+relation. Clearly then, for frequencies below the longi-
+tudinal and transverse plasmon frequencies, both ǫL and
+νL will be negative, a behavior characteristic of metama-
+terials. This is typical of relativistic systems, since in the
+nonrelativistic limit νL ∼ 1.
+Acknowledgments
+The author wishes to thank L. E. Oliveira for
+many fruitful discussions, for a critical reading of the
+manuscript, and for his warm hospitality at the Institute
+of Physics of the Universidade Estadual de Campinas,
+where part of this work was done. Thanks are also due
+to D. M. Reis and E. Reyes-G´ omez for help with the ﬁg-
+ures and graphs, and to CNPq and F APESP for partial
+ﬁnancial support.
+Appendix A: The nonrelativistic limit at T = 0
+In order to make contact with standard results [14],
+here we outline how to obtain the T = 0 nonrelativistic
+expressions for Im B∗ from our formulae. We begin with
+the nonrelativistic expression [1] for B at T = 0
+B = − e2
+π 2|⃗ q|2 Re
+∫ pF
+0
+dpp 2
+∫ 1
+− 1
+dχ
+p|⃗ q|χ
+m − |⃗ q|2
+2m +iq4
+, (A1)
+where p2
+F = 2mǫ′
+F , ǫ′
+F =ξ − m. Performing the integral
+over χ , taking the real part of the resulting logarithm,
+and letting q4 → iω − η, η → 0+, leads to
+B∗ = − e2m
+2π 2|⃗ q|3
+∫ pF
+0
+dpp ln
+(|⃗ q|2(|⃗ q| − 2p)2 − 4m2ω 2
+|⃗ q|2(|⃗ q|+ 2p)2 − 4m2ω 2
+)
+.
+(A2)
+The argument of the log will be negative for
+m
+|⃗ q|(ω − ǫq)<p< m
+|⃗ q|(ω +ǫq) if ǫq <ω, (A3)
+m
+|⃗ q|(ǫq − ω )<p< m
+|⃗ q|(ω +ǫq) if ǫq >ω, (A4)
+whereǫq ≡ |⃗ q|2/ 2m. We note that in both cases it is the
+N numerator that becomes negative.
+In order to obtain the imaginary part of the logarithm,
+we let q4 → iω − η in
+ln
+(|⃗ q|2(|⃗ q| − 2p)2 + 4m2q2
+4
+|⃗ q|2(|⃗ q|+ 2p)2 + 4m2q2
+4
+)
+, (A5)
+so (A2) becomes
+ln [− |N/ D|+iη′(N − D)], (A6)
+10
+where η′ ≡ (2ax2)/ D2 → 0+. Since sign( N − D) =
+sign(N), the argument of (A6) will lie in the second
+quadrant if sign( N) is positive and in the third if it is
+negative. Thus, we choose [sign( N)π ] for its imaginary
+part ( −π , in the present case) and therefore Im B∗ is
+given by trivial integrals.
+Case 1 : ω >ǫq
+1(a) if pF <m (ω − ǫq)/ |⃗ q|, then Im B∗ = 0;
+1(b) if m(ω − ǫq)/ |⃗ q| < pF < m (ω + ǫq)/ |⃗ q|, the
+lower integration limit of the imaginary part of (A2) is
+m(ω − ǫq)/ |⃗ q| and the upper limit is pF , then
+ImB∗ = e2m2ǫ′
+F
+2π |⃗ q|3
+[
+1 − (ω − ǫq)2
+4ǫ′
+Fǫq
+]
+; (A7)
+1(c) if pF > m(ω +ǫq)/ |⃗ q|, the lower integration limit
+of the imaginary part of (A2) is [ m(ω − ǫq)/ |⃗ q|] and the
+upper limit is [ m(ω +ǫq)/ |⃗ q|], then
+ImB∗ = e2m2ω
+2π |⃗ q|3 ; (A8)
+Case 2 : ω <ǫq
+2(a) if pF <m (ǫq − ω )/ |⃗ q|, then Im B∗ = 0;
+2(b) if m(ǫq − ω )/ |⃗ q| < pF < m (ǫq + ω )/ |⃗ q|, the
+lower integration limit of the imaginary part of (A2) is
+m(ǫq − ω )/ |⃗ q| and the upper limit is pF , then we obtain
+the same as in (A7)
+ImB∗ = e2m2ǫ′
+F
+2π |⃗ q|3
+[
+1 − (ω − ǫq)2
+4ǫ′
+Fǫq
+]
+; (A9)
+2(c) if pF > m(ǫq +ω )/ |⃗ q|, the lower integration limit
+of the imaginary part of (A2) is m(ǫq − ω )/ |⃗ q| and the
+upper limit is m(ǫq +ω )/ |⃗ q|, then we obtain the same as
+in (A8)
+ImB∗ = e2m2ω
+2π |⃗ q|3. (A10)
+The various regions deﬁned above are plotted in Fig.
+3, which is well-known in Condensed Matter texts [14].
+As already mentioned previously, the nonrelativistic
+expressions may also be directly obtained as limits of
+their relativistic counterparts.
+Appendix B: The integrals Ij
+In this Appendix, we calculate the integrals
+Ij =
+∫ tF
+0
+dttj
+Ct4 + Bt2 + A, (B1)
+0
+h q0
+a
+B
+C
+pF 2pF
+FIG. 3: Regions in the ( ω, |⃗ q|) plane.
+with coeﬃcients given by
+C =d4, (B2)
+B = − 2[d2(d2 + 1) − 2a2], (B3)
+A = (d2 + 1)2 − 4a2. (B4)
+There are two cases to be considered, depending on the
+roots of the biquadratic equation Ct4 + Bt2 + A = 0:
+(i) For γ 2> 0, the roots are real
+t2
+± = d2(d2 + 1) − 2a2 ± 2ab|γ|
+d4 , (B5)
+so that the integrals become
+Ij = 1
+4ab|γ|
+[
+tj
++
+∫ tF
+0
+dt
+t2 − t2
++
+− tj
+−
+∫ tF
+0
+dt
+t2 − t2
+−
+]
+. (B6)
+One may show that t2
+± > 0, therefore
+∫ tF
+0
+dt
+t2 − t2
+±
+= 1
+2t±
+ln
+⏐
+⏐
+⏐
+⏐
+tF − t±
+tF +t±
+⏐
+⏐
+⏐
+⏐, (B7)
+where, from (B5), we may write t± = (y±/ |x± |), with
+x± =a ± bγ and y± =
+√
+x2
+± − 1. Then,
+I0 = 1
+4ab|γ|
+[ 1
+2t+
+ln
+⏐
+⏐
+⏐
+⏐
+tF − t+
+tF +t+
+⏐
+⏐
+⏐
+⏐ − (tF → t− )
+]
+, (B8)
+I2 = 1
+4ab|γ|
+[ t+
+2 ln
+⏐
+⏐
+⏐
+⏐
+tF − t+
+tF +t+
+⏐
+⏐
+⏐
+⏐ − (t+ → t− )
+]
+. (B9)
+(ii) For γ 2 < 0, the roots are complex conjugate ( t2
+c,
+¯t2
+c), with
+t2
+c = [d2(d2 + 1) − 2a2] +i[2ab|γ|]
+d4 . (B10)
+We may decompose (B1) into partial fractions to obtain
+Ij = I+
+j − I−
+j (tr ≡ Retc; ti ≡ Imtc)
+I±
+j = 1
+4d4tr|tc|2
+∫ tF
+0
+[ dttj(t ± 2tr)
+t2 ± 2trt + |tc|2
+]
+, (B11)
+11
+and write
+I0 = 1
+8d4tr|tc|2
+{
+ln
+⏐
+⏐
+⏐
+⏐
+t2
+F + 2trtF + |tc|2
+t2
+F − 2trtF + |tc|2
+⏐
+⏐
+⏐
+⏐ +
+2tr
+|ti|[arctan(tF +tr
+|ti| ) + arctan(tF − tr
+|ti| )]
+}
+, (B12)
+as well as
+I2 = 1
+8d4tr
+{
+− ln
+⏐
+⏐
+⏐
+⏐
+t2
+F + 2trtF + |tc|2
+t2
+F − 2trtF + |tc|2
+⏐
+⏐
+⏐
+⏐ +
+2tr
+|ti|[arctan(tF +tr
+|ti| ) + arctan(tF − tr
+|ti| )]
+}
+, (B13)
+where, from (B10), one may show that tc = (yc/x c), with
+xc =a +ib|γ| and yc =
+√
+x2
+c − 1.
+[1] C. A. A. de Carvalho, Phys. Rev. D 93, 105005 (2016).
+[2] V. G. Veselago, Sov. Phys. Usp. 10, 509 (1968).
+[3] R. A. Shelby, D. R. Smith, and S. Schultz, Science 292,
+77 (2001).
+[4] J. Pendry, Optics Express 11, 639 (2003).
+[5] E. Reyes-G´ omez, L. E. Oliveira, and C. A. A. de Car-
+valho, Europhys. Lett. 114, 17009 (2016).
+[6] I. A. Akhiezer and S. V. Peletminskii, Sov. Phys. JETP
+11, 1316 (1969). See also E. S. Fradkin, Proceedings of
+the P. N. Lebedev Physics Institute, vol. 29, Consultants
+Bureau (1967).
+[7] B. Jancovici, Il Nuovo Cimento 25, 428 (1962); H. A.
+Weldon, Phys. Rev. D 26, 1394 (1982); D. B. Melrose and
+L. M. Hayes, Aust. J. Phys. 37, 639 (1984); G. Barton,
+Ann. Phys. 200, 271 (1990); M.B. Barbaro, R. Cenni,
+and M.R. Quaglia, Eur. Phys. J. A 25, 299 (2005); J.
+McOrist, D. B. Melrose, and J. I. Weise, J. Plasma Phys.,
+73, 495 (2007); B. Eliasson and P. K. Shukla, Phys. Rev.
+E 83, 046407 (2011).
+[8] J. I. Kapusta and C. Gale, Finite-Temperature Field
+Theory, Cambridge University Press (2006); M. Le Bel-
+lac, Thermal Field Theory , Cambridge University Press
+(1996).
+[9] Euclidean and Minkowski coordinates are related by x4 =
+ix0 and xj = xj. For gauge ﬁelds, A4 = iA0 and Aj = Aj.
+For Dirac matrices, γ4 = γ 0 and γj = γ j . The Minkowski
+metric is ηµν = (+, −).
+[10] For recent references of QED in external backgrounds,
+see A. E. Shabad and V. V. Usov, Phys. Rev. 83, 105006
+(2011) and S. Villalba-Chavez and A. E. Shabad, Phys.
+Rev. 86, 105040 (2012).
+[11] C. Itzykson and J.B. Zuber, Quantum Field Theory ,
+McGraw-Hill (1980).
+[12] F. Karbstein and R. Shaisultanov, Phys. Rev. 91, 113002
+(2015).
+[13] P. Nozi` eres and D. Pines, Phys. Rev. 109, 741, 762, 1062
+(1958); Nuovo Cimento 9, 470 (1958); Phys. Rev. 111,
+442 (1958).
+[14] D. Pines, Elementary Excitations in Solids , p. 149, New
+York: Benjamin (1963); A. A. Abrikosov, L.. P. Gorkov,
+and I. E. Dzyaloshinski, Methods of Quantum Field The-
+ory in Statistical Physics , Dover (1975); A. L. Fetter, J.
+D. Walecka, Quantum Theory of Many-Particle Systems ,
+Dover (2003).
+[15] M. V. Berry, Proc. R. Soc. A 461, 2071 (2005); X.Q. Gu,
+S.Y. Wang, and W.Y. Yin, Opt. Comm. 313, 9 (2014).
+[16] J. Lindhard, Kgl. Danske Videnskab Selskab, Mat. Fys.
+Medd. 28, 8 (1954).

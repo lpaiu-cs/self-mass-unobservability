@@ -1,0 +1,14 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "flat_poisson_error": 9.939423416260862e-17,
+  "normalized_charge_identity": 1.977576033165425e-16,
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "flux": "B=a*r^2*f_prime; B_prime=(V-Vgeom)*r^2*f/a-r*S/a; Vgeom=a*a_prime/r; a=N*sqrt(b).",
+    "scope": "Algebraic rewriting of the existing anisotropic first variation only; no new equilibrium or physical closure theorem."
+  },
+  "endpoint_core_profile_charge_difference": -6.886692659774147e-29,
+  "limits": "These examples do not enclose core-source uncertainty and are not causal3.434ms solutions. No comparison to the whole retarded Bondi charge is certified."
+}

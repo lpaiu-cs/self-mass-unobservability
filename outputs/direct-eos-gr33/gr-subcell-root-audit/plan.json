@@ -1,0 +1,25 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "3d70a3b",
+  "discovery": "The original full-subcell block 2688 stopped at score 1.0014343486391484. A preliminary scan of 129 neighboring binary64 lnT values found no pass. This is a confirming audit, not a blind discovery.",
+  "neighbors_each_side": 64,
+  "orders": [
+    "ascending",
+    "descending"
+  ],
+  "gate": "Unchanged abs(exp(lnT)*(s_native-s_target)) <= max(2 erg/g,32 ulp(abs(u+P/rho))). No entropy/pressure/temperature target, EOS, native solver or tolerance is changed.",
+  "implication": "If adjacent representable lnT inputs straddle the target entropy but neither meets the gate, increasing the number of Newton iterations cannot insert another binary64 input between them. This is a local representability obstruction for this native point representation, not a proof of physical nonexistence or global root nonexistence.",
+  "bindings": {
+    "verification/gr_subcell_root_audit.py": "b45be68d9b7927c724b3be354d14aa20471cbc2337172253002ab0f2f09dc72f",
+    "verification/audit_structured_enthalpy.py": "294b4bdf416cbb7f546c79e350d07be727cbcd605f1be0f2de322817c20c73aa",
+    "verification/direct_eos_gr.py": "5709a4cbf5830de09001481813617d43ee2c935a0dff3cd813110d73a7066fdf",
+    "verification/direct_ion_eos.py": "58d24ef14b89fcde3fca118b95ca629d121b433f2d29bfdce77fc32c520a1589",
+    "outputs/direct-eos-gr33/gr-subcell-root-audit/original-failure.json": "0b245e679e9fc798e1ec0cb7d8e0592452331c262e504c0c298e64b32374a3cf",
+    "outputs/direct-eos-gr33/gr-full-subcell-reference/plan.json": "3e4aaf93005db70e82a57eb0f7ec9364d361077e64ab27365e582ad3e5ec3f1f",
+    "outputs/structured-enthalpy32/direct-ions/full-integral-build.json": "09a117e64bd62d13740b28b2237e203e527d7b4b052ae5dbeedca7d9d824f45a"
+  },
+  "runtime": {
+    "/home/lpaiu/work/direct-ions32/direct_ion_integral_full_bridge.so": "54d8cd3aa8af1be5c433cee9eed253ffc814ab23e1d212e547697d918a9fed32",
+    "/home/lpaiu/work/direct-ions32/full-integral-build/src/libfree_eos_direct24_integral_full.so.1.0.0": "6348e235763db0112687f391ab1c06c34b33aa530973ea4a414a5d0f21b1dfb4"
+  }
+}

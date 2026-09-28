@@ -1,0 +1,33 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "156009b",
+  "bindings": {
+    "verification/gr_transport_state.py": "462adb466af639defa80f39e866aa070022ac74f982b720a52fcd2913e79b775",
+    "verification/gr_microphysics.py": "b3b75b3e65698416114ee38ebd1b32780a967795d47542530b13276cc0215d14",
+    "verification/conservative_star.py": "9bcfe7bd2c07504abb6da3a5e7deea07c9c9b08f27ed12b33dd9310497cd60b7",
+    "outputs/direct-eos-gr33/transport-sources/thorne-1976.pdf": "346aa4ec1a0e6ec655185748edac5f4cb39cae1cb1585d9673ff70c9b3e68d5e"
+  },
+  "sources": [
+    {
+      "url": "https://ntrs.nasa.gov/api/citations/19760017020/downloads/19760017020.pdf",
+      "author": "K. S. Thorne",
+      "title": "The relativistic equations of stellar structure and evolution",
+      "inspected": "NASA report printed pages 6-7, PDF pages 9-10, equations 8-10",
+      "imported_scope": "Local proper-frame mixing-length variables and homogeneous-composition convective equations. The energy-density buoyancy diagnostic below is derived separately; turbulent closure is not inferred."
+    }
+  ],
+  "state": "outputs/direct-eos-gr33/initial-state-17-4.npz",
+  "state_existed_at_prepare": false,
+  "criterion": "Report all signed buoyancy diagnostics; no physical stability pass from finite radial differences.",
+  "thermal_identity_relative_tolerance": 0.0001,
+  "algebraic_tolerance": 1e-12,
+  "approximation": "Static pressure-equilibrated local parcels, frozen entropy and nuclear composition; radiation/conduction diffusion on the actual GR baryon faces. Report first-order and three-point radial derivatives separately.",
+  "missing": [
+    "Convective composition and energy flux",
+    "Radiating atmosphere",
+    "Time-dependent fluid and metric",
+    "Physical EOS and opacity errors"
+  ],
+  "physical_EOS_certified": false,
+  "full_GR_evolution": false
+}

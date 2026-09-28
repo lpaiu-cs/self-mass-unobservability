@@ -1,0 +1,482 @@
+arXiv:1310.3162v1  [physics.plasm-ph]  11 Oct 2013
+Contributions to Plasma Physics, 30 October 2018
+Electron screening effect on stellar thermonuclear fusion
+Alexander Y. Potekhin∗ 1,2 and Gilles Chabrier2,3
+1 Ioffe Physical-Technical Institute, Politekhnicheskaya 26, 194021 St. Petersburg, Russia
+2 Ecole Normale Sup´ erieure de Lyon, 69364 Lyon Cedex 07, France
+3 School of Physics, University of Exeter, Exeter, UK EX4 4QL
+Received 30 October 2012, revised 21 December 2012, accepted 21 December 2012
+Published online 13 May 2013
+Key words Dense matter, stellar nucleosynthesis.
+We study the impact of plasma correlation effects on nonreso nant thermonuclear reactions for various stellar
+objects, namely in the liquid envelopes of neutron stars, an d the interiors of white dwarfs, low-mass stars,
+and substellar objects. We examine in particular the effect of electron screening on the enhancement of ther-
+monuclear reactions in dense plasmas within and beyond the l inear mixing rule approximation as well as the
+corrections due to quantum effects at high density. In addit ion, we examine some recent unconventional theo-
+retical results on stellar thermonuclear fusions and show that these scenarios do not apply to stellar conditions.
+Copyright line will be provided by the publisher
+1 Introduction
+Thermonuclear reactions play a crucial role in stellar evol ution. Nuclear fusion rates in stellar interiors can be
+signiﬁcantly enhanced over the binary Gamow [1] rates becau se of the many-body screening effect in the dense
+plasma (ﬁrst recognized by E. Schatzman [2]; for reviews, see [3, 4]).
+In the envelopes of neutron stars (NSs) and interiors of white dwarfs (WDs), where the electrons are strongly
+degenerate, the screening effect is usually treated under t he assumption that the electron gas can be considered
+as a uniform “rigid” background, and the screening is provid ed solely by ions. On the other hand, in ordinary
+stars this effect is often treated with Salpeter formula, wh ich implies Debye screening (see, e.g., Ref. [5] and
+references therein). The latter approximation is applicable in a gaseous phase. In the present article, we consider
+the electron screening effect on nuclear fusion at arbitrar y electron degeneracy and arbitrary Coulomb coupling
+of ions in gaseous and liquid plasmas.
+The inﬂuence of the electron polarization on the enhancemen t of nuclear reaction rates has been studied in
+some detail in several papers [3, 6–9]. At the time of those st udies, uncertainties in the reaction rates due to
+other factors, viz. quantum effects and deviations from the linear mixing rule in strongly coupled plasmas, as
+well as theoretical uncertainties in the nuclear effective potentials at short distances, were more important than
+the electron-screening effects. For this reason, more rece nt works were aimed at reducing these uncertainties
+and mostly neglected the electron polarization (e.g., [10–12]). In this paper, we show, however, that the effect of
+the electron-polarization on the enhancement factor of the nuclear reaction rates is typically of the same order of
+magnitude as the other recently proposed corrections.
+In Sect. 2 we compare different approximations for the enhancement factors. In Sect. 3 we describe the results
+of the application of the electron-screening correction tothe nuclear reaction rates in stellar conditions. In Sect. 4
+we discuss the origin of discrepancies between our results a nd some other results published recently. Sect. 5 is
+devoted to the conclusion.
+2 Theory
+A review of the theory of nuclear fusion in stars with extensi ve bibliography was given in the Nobel lecture
+by Fowler [13]. One should discriminate between the reactio ns related to nuclear resonances and nonresonant
+∗ Corresponding author: e-mail: palex@astro.ioffe.ru
+Copyright line will be provided by the publisher
+398 A. Y . Potekhin and G. Chabrier:
+reactions. We consider only the latter ones. It is customary to write the cross section of binary nuclear fusion
+reactions in the form
+σ (E) = e − 2πη S(E)/E, (1)
+where E is the center-of-mass energy of the reacting nuclei “1” and “2”,
+η =
+√
+ER/E, E R = (Z1Z2e2)2 m12/ 2ℏ2, (2)
+Zje is the charge of nucleus “j”, e is the elementary charge, m12 = m1m2/ (m1 + m2) is the reduced mass, and
+S(E) is a function called “astrophysical factor.” Then the reaction rate (the number of fusion events per unit time
+in unit volume) in the absence of plasma screening is given by
+R12 = w12 n1n2
+√
+2
+m12
+∫ ∞
+0
+e− 2πηS(E) w(E) dE
+/ ∫ ∞
+0
+w(E)
+√
+E dE, (3)
+where nj is the number density of the ions of type “j”, w(E) is the statistical distribution function of the center-
+of-mass energies of the reacting nuclei, and the factor w12 accounts for statistics: w12 = 1
+2, if nuclei “1” and “2”
+are identical; otherwise w12 = 1 . With Boltzmann statistics, w(E) = wB(E) ≡ T − 1 exp(− E/T ), where T is
+temperature in energy units.
+In order to take the plasma screening into account, it is convenient to write the radial pair-distribution function
+for ions in the form [14]
+g12(r) = exp
+(
+− Z1Z2e2/rT
+)
+exp
+[
+H12(r)/T
+]
+, (4)
+where the ﬁrst factor is the Boltzmann formula for an ideal gas, while the second one shows how the probability
+of separation of two chosen ions is affected by the surrounding plasma particles.
+It is convenient to introduce parameters
+Γ12 = Z1Z2e2/a 12T , a 12 = (a1 + a2)/ 2, τ = 3(π 2ER/T )1/3, ζ = 3Γ 12/τ. (5)
+where aj = (3Zj/ 4πn e)1/3 are the ion-sphere radii, and ne is the electron number density. As shown in Ref. [4],
+under the condition ζ ≪ 1 the function H12(r) slowly varies on the scale of the classical turning point dis tance
+and the nuclei behave as classical particles. Then the react ion rate with allowance for the plasma screening is
+approximately given by R12 exp(h), where h = H12(0)/T and R12 is expressed by Eq. (3) [6]. Furthermore,
+one can prove [14–17] that H12(0) equals the difference between the excess free energiesFex before and after an
+individual act of fusion. Here, Fex = F − Fid, F is the total Helmholtz free energy, and Fid is the free energy of
+the ensemble of noninteracting ions and electrons. In the thermodynamic limit this gives the relation
+h =
+( ∂
+∂n 1
++ ∂
+∂n 2
+− ∂
+∂n 3
+) [
+nionfex({nj}, n e, T )
+]
+, (6)
+where nion = ∑
+j nj is the total number density of ions, including number density n3 of composite nuclei, which
+have charge number Z3 = Z1 + Z2 and mass m3 ≈ m1 + m2, and fex ≡ Fex/n ionV T is the normalized excess
+energy.
+In the linear-mixing approximation,
+fex ≈ flm({nj}, n e, T ) ≡
+∑
+j
+xj fj(ne, T ). (7)
+Here, xj ≡ nj/n ion denotes the number fractions, and fj(ne, T ) is fex for a plasma containing only the jth type
+of ions. In this approximation, the enhancement exponent h becomes
+hlm = f1(ne, T ) + f2(ne, T ) − f3(ne, T ). (8)
+In the model of a rigid electron background, this reduces to
+hlm,ii = fii(Γ1) + fii(Γ2) − fii(Γ3), (9)
+Copyright line will be provided by the publisher
+cpp header will be provided by the publisher 399
+where fii(Γ) is the normalized excess free energy of the one-component pl asma and Γj = ( Zje)2/a jT are
+coupling parameters of individual ion species. In the ion sphere approximation, fii(Γ) = − 0. 9 Γ, and then hlm,ii
+becomes [6]
+hS = 0. 9 (Γ3 − Γ1 − Γ2). (10)
+The linear mixing rule works in strongly coupled Coulomb pla smas, i.e., at Γj ≫ 1 [18, 19]. In the opposite
+limit Γj ≪ 1 (∀j), the Debye-H¨ uckel approximation is applicable: FDH = − V T / 12πD 3, where D is the
+screening length:
+Fex ≈ − V T
+12πD 3 , D − 2 = k2
+TF + D− 2
+ion, D − 2
+ion = 4πe 2
+T
+∑
+j
+njZ 2
+j , k 2
+TF = 4πe 2 ∂n e
+∂µ e
+, (11)
+where µ e is the chemical potential of the electron Fermi gas. Using Eq . (24) of Ref. [20], one can write
+kTF(ne, T ) in an analytic form. In the two limiting approximations of nondegenerate electrons (k2
+TF → 4πe 2ne/T )
+and rigid background (kTF → 0), Eqs. (6) and (11) give the Salpeter formula [6]
+hDH = Z1Z2e2/DT . (12)
+Salpeter and Van Horn [21] proposed a simple interpolation b etween the Debye-H¨ uckel and strong-coupling
+limits:
+hSVH = hS hDH√
+h2
+S + h2
+DH
+, (13)
+where hS and hDH are given by Eqs. (10) and (12), respectively. A more elabora ted approximation for the en-
+hancement factor between the Debye-H¨ uckel and strong-coupling limits was constructed for the rigid background
+model in Ref. [12].
+These analytic approximations can be compared to the accura te result. We write the normalized excess free
+energy in the formfex = flm+fmix, where flm is given by Eq. (7), andfmix is the correction to the linear-mixing.
+Then Eq. (6) gives
+h0 = hlm + dfmix(x1 + ξ, x 2 + ξ, x 3 − ξ)
+dξ
+⏐
+⏐
+⏐
+⏐
+ξ=0
+, (14)
+where hlm is given by Eq. (8). The right-hand side of Eq. (14) can be written in an analytic form using our ﬁtting
+formulae for fex(ne, T ) and fmix({xj }, {Zj}; ne, T ) (see [22] and references therein).
+Equation (14) is obtained assuming that H12(r) ≈ H12(0), which is true for small values of the parameter ζ
+deﬁned in Eq. (5). When this condition is not satisﬁed, the classical enhancement exponenth0 should be corrected
+for the quantum effects. We denote this corrected valuehq. Alastuey and Jancovici [24] showed thathq < h 0 and
+developed a perturbation expansion of hq in powers of ζ. More recently, Militzer and Pollock [25,26] performed
+simulations of the contact probabilities in the quantum regime and extended numerical results beyond the appli-
+cability range of the perturbation theory [24]. Chugunov an d DeWitt [11] found that the quantum effects can be
+described in the linear-mixing, rigid-background approximation by substitution of ˜Γj = Γ j/t 12 instead of Γj into
+Eq. (9), where t12 =
+[
+1 + c1ζ + c2ζ2 + c3ζ3] 1/3
+, c1 = 0. 013 z2, c2 = 0. 406 z0.14, c3 = 0. 062 z0.19 + 1. 8/ Γ12,
+and z = 4Z1Z2/ (Z1 + Z2)2. An analogous correction is not known for the polarizable background. Fortunately,
+the quantum effects are important only in the domain of high d ensities and relatively low temperatures, whereas
+the deviations from the linear-mixing and rigid-backgroun d approximations are most important in the opposite
+case. Therefore, in order to take all these effects into account, we multiply the classical expression (14) by factor
+q = ˜
+hlm,ii/h lm,ii, where hlm,ii and ˜hlm,ii are given by Eq. (9) with Γj and ˜Γj, respectively.
+3 Results
+3.1 Degenerate stars
+The electron-screening effects on the enhancement factors and ignition curves for carbon and oxygen fusion
+reactions in the liquid layers of WDs and NSs were studied in R ef. [27]. Under the typical conditions in these
+Copyright line will be provided by the publisher
+400 A. Y . Potekhin and G. Chabrier:
+Fig. 1 Plasma enhancement exponents for deuterium fu-
+sion in hydrogen medium as a function of mass density
+at T = 10 6 K (upper panel) and 105.5 K (lower panel)
+in different approximations. Three lines show results for
+classical nuclei: ( 1) h0 in the linear-mixing, rigid back-
+ground approximation [Eq. (9)] (dotted lines), ( 2) h0 for
+the linear mixing with polarizable electron background
+[Eq. (8)] (dot-dashed lines), ( 3) h0 beyond the linear-
+mixing approximation with a polarizable electron back-
+ground [Eq. (14)], the most general classical approxima-
+tion] (short dashes). The other two lines take into account
+quantum corrections: (4) the ﬁt of Ref. [11] for hq (long
+dashes), and (5) the approximation hq = qh0 (with q de-
+ﬁned in the text), which includes both the ionic and elec-
+tronic screening contributions and takes both the quantum
+effects and the deviations from the linear-mixing rule into
+account (solid lines).
+Fig. 2 Physical conditions (at two ages) and enhancement
+exponents (in two approximations) at the centers of LMSs
+and SSOs with the solar abundance of heavy elements. In
+all three panels solid and dashed lines are drawn at the
+ages 5 Gyr and 100 Myr, respectively. The top and middle
+panels reproduce, respectively, the central temperature and
+density along the LMS-SSO mass range. The bottom panel
+shows the normalized enhancement exponent h/hSVH for
+the deuterium burning along these temperatures and densi-
+ties with (upper pair of curves) and without (lower pair of
+curves) account of electron polarization.
+layers, the electron screening proved to increase the enhan cement exponent h by several to tens percent, which
+translates into a factor of a few for the reaction rate ∝ eh. The deviations from the linear-mixing approximation
+have the opposite effect of a similar magnitude. Therefore, the corrections beyond the linear mixing [12] must
+be considered only together with the electron polarization. In some cases the two effects nearly compensate each
+other.
+All the discussed corrections, except the quantum one, prov ed to have almost no effect on the positions of
+the carbon and oxygen ignition curves. In the WDs, the heat pr oduced by the nuclear reactions is evacuated
+by neutrino emission. In this case, the position of the ignit ion curves may be even stronger affected by the
+current uncertainties in the neutrino reaction rates in den se plasma environment than by the departures from the
+linear-mixing approximation or by electron-polarization corrections. In the NSs, the heat is not only taken away
+by neutrinos, but also effectively sinks through the envelo pe. In the latter case, the one-zone approximation of
+the heat diffusion is often applied to the analysis of stabil ity of the nuclear fusion (e.g., Refs. [28, 29]). We
+Copyright line will be provided by the publisher
+cpp header will be provided by the publisher 401
+Fig. 3 (a) Ratios of the deuterium burning rates with account of electron screening to the rates in the rigid-background model
+at the same temperatures and densities as in Fig. 2. The inset shows the absolute reaction rates per one nucleus with account
+of electron screening (solid line for age 5 Gyr, dashed line f or 100 Myr) and for the rigid background (dotted lines). (b) The
+same for lithium burning.
+have found [27] that it is more important to go beyond the one- zone approximation than to introduce all other
+corrections mentioned above. In magnetars (NSs with supers trong magnetic ﬁelds of 1014 – 1015 G) an account
+of the magnetic modiﬁcation of the heat transport coefﬁcients is equally signiﬁcant.
+3.2 Low-mass objects
+As another astrophysical example, let us consider the elect ron-screening effect on nuclear fusion in low-mass
+stars (LMSs) and substellar objects (SSOs; see Ref. [30] for a review). Important indicators of the ages and
+masses of these objects are the so called lithium and deuterium tests, which are based on depletion of lithium and
+deuterium by nuclear burning.
+Figure 1 displays the enhancement exponent h, normalized with respect to hSVH, for the reaction p + d →
+3He+γ, in different approximations. The accurate result is compa red to the result of application of the linear-
+mixing approximation in the cases of polarizable electron background according to Eq. (8) and rigid background
+according to Eq. (9), with and without the quantum corrections.
+We note that the simple Salpeter – Van Horn approximation (13 ) performs surprisingly well: its accuracy in
+the LMS-SSO conditions, as we see in Fig. 1, is within a few tens percent. We recall that in WD-NS conditions its
+accuracy is still better, typically a few percent [27]. The quantum effects in Fig. 1 are signiﬁcant only atρ ≫ 103
+g cm− 3. From the lower panel of Fig. 2 we see that such densities are n ot reached in the LMS-SSO conditions,
+therefore the quantum effects do not play role in theoretical models of nuclear fusion in LMSs and SSOs (unlike
+the NS-WD case [27]).
+Figure 2 shows the dependences of LMS-SSO central densities and temperatures at two characteristic ages of
+these objects (the two lower panels, from Ref. [30]), together with the respective normalized enhancement expo-
+nents h/h SVH with and without the rigid-background approximation. As pr eviously, we see that the corrections
+beyond the Salpeter – Van Horn approximation are of the same magnitude for the rigid and polarizable electron
+backgrounds (to ∼ 30% in this case), but of different sign.
+This difference can translate into factors of a few for the re action rate R12 ∝ eh in the objects of very small
+mass, because they are relatively cool and therefore have a l arge factor h = H12(0)/T in their central parts.
+Figure 3a demonstrates this for the SSO deuterium fusion. Fo r masses M ∼ 10− 2M⊙ , the minimum mass for
+D-fusion [30], where M⊙ is the solar mass, the electron polarization effect changes R12 by a factor of 1.5 – 2.
+This change does not signiﬁcantly affect the deuterium depl etion curves and therefore is unimportant for the
+Copyright line will be provided by the publisher
+402 A. Y . Potekhin and G. Chabrier:
+mass-age deuterium test. As seen from the inset in Fig. 3, the corresponding corrections are of the order of a
+few× 10− 4M⊙ , which is astrophysically negligible.
+Figure 3b shows the rates of the reaction 7Li+p → 24He. This case is similar to the previous one, with the
+difference that the latter reaction takes place for more massive objects. At very small masses the difference in the
+reaction rates calculated with and without the allowance for the electron polarization is huge, but astrophysically
+unimportant, because these rates are so low that one may negl ect this reaction altogether. At contrast, for M ≈
+0. 07 M⊙ this reaction is crucially important for stellar diagnosti cs, but in this case the polarization correction is
+smaller, and it translates into a negligible correction for the mass-age relation.
+4 Remarks on some controversial approaches
+4.1 Yukawa potential
+For an arbitrary degree of degeneracy (but at not too strong Coulomb coupling; see [23]), the screened interaction
+between ions is approximately described by the Yukawa poten tial (Z1Z2e2/r ) exp(− r/D ), where D is given
+in Eq. (11). Pollock and Militzer [25] studied the contact pr obabilities of Yukawa systems with the intention
+to simulate the electron-screening effect (see also Ref. [1 6]). Based on these simulations, they arrived at the
+conclusion that electron screening “reduces the enhanceme nt effect,” in obvious contradiction with our ﬁndings
+above and with the earlier results [3, 8, 9, 14, 21].
+We note, however, that the Yukawa model corresponds to the Th omas-Fermi limit, ǫ(k) ∼ 1 + ( kTF/k )2,
+for the static dielectric function ǫ(k), which is only justiﬁed at k ≪ kTF (see, e.g., [31]). Therefore, this
+model is inappropriate at short distances (i.e., large wave numbers k). In particular, it is not applicable for the
+evaluation of the screening potential at zero separation, H12(0). Therefore, a Yukawa system cannot correctly
+reproduce the effect of electron polarization on the nuclea r fusion rates. This fact was recognized by Ichimaru
+[4], who mentioned two opposite effects of electron screeni ng: ﬁrst, the binary repulsive potentials between
+reacting nuclei are reduced by electrons (“short-range effect”), which increases H12(0); second, the reduction of
+particle interactions by the screening affects the many-bo dy correlation function in such a way that it decreases
+H12(0) (“long-range effect”). In real electron-ion plasmas (with out the Yukawa approximation) the ﬁrst effect
+overpowers the second one. The Yukawa model grasps the second effect, but misses the ﬁrst, dominant one.
+4.2 “Quantum tail” in energy distribution
+Starostin and coworkers [32–36] noted that in dense plasmas, in addition to the potential lowering that results in
+the enhancement factor discussed above, there is another ef fect capable to modify the reaction rates. Because a
+state with deﬁnite momentum has a ﬁnite lifetime, its moment um distribution (or, equivalently, the distribution
+of kinetic energies) is broadened due to Heisenberg uncertainty principle. Therefore the probability to ﬁnd a pair
+of nuclei in a state with a high center-of-mass energy is larger than predicted by the Boltzmann statistics. These
+use in Eq. (3), instead of wB(E), a modiﬁed distribution function
+wmod(Ep) =
+∫ ∞
+0
+wB(E) φ(E, E p) dE, (15)
+where φ(E) describes the quantum broadening of the kinetic energy, deﬁ ned through the particles’ momenta p.
+The authors suggest to use for this broadening the spectral function [37, 38]
+φ(E, E p) = ( γ/π )
+/ [
+(E − Ep − ∆)2 + γ 2]
+, (16)
+where γ = γ(p) = ℏνcoll is a collisional width, νcoll is an effective collision frequency, and ∆ is the collisional
+energy shift, which is inessential for our discussion and wi ll be suppressed. The use of the Lorentz proﬁle (16)
+in Eq. (15) implies the necessary condition γ ≪ T , which is satisﬁed in all examples discussed hereafter. For
+Coulomb scattering of a light particle with chargeZ1e, momentum p and velocity v from ambient heavy particles
+with charges Z2e, the collision frequency is νcoll = n2⟨σcollv⟩ =
+[
+4πn 2(Z1Z2e2)2/p 2v
+]
+Λ(p), where σcoll is
+an effective collisional cross section and Λ(p) is a Coulomb logarithm. For estimates we will use this formul a
+for any particle masses and adopt the nonmagnetic nonrelativistic limit of the transport Coulomb logarithm from
+Copyright line will be provided by the publisher
+cpp header will be provided by the publisher 403
+Fig. 4 Power of the carbon fusion reaction as func-
+tion of temperature T at constant density ρ according
+to the conventional calculation (solid lines) and with
+statistical averaging over momenta including “quan-
+tum tails” in their distribution according to Eq. (15)
+(dashed lines). For comparison, neutrino emission
+power is shown by dotted lines. The upper line of each
+type corresponds to ρ = 10 8 g cm−3 and the lower
+line to ρ = 0.1 g cm−3.
+Ref. [39]: Λ(p) = 0 . 5 ln(1 + u) − 0. 5u/ (1 +u), where u =
+[
+(D2
+ion + (2ai/ 3)2)− 1 + k2
+TF
+]
+(ℏ/ 2p)2 (numerically,
+Λ ∼ 1 – 10 in the examples below).
+In the limitγ → 0, the functionφ turns into a Dirac delta function, and the Boltzmann distribution is recovered.
+However, for ﬁnite γ and for energies much higher than the thermal energy, so that
+Ep/T ≫ ln(πE 2
+p /γT ), (17)
+the exponential decay of wB(E) is overpowered by so called “quantum tail” wqt(Ep) → γT /πE 2
+p. For nonrela-
+tivistic Coulomb particles, γ(p) ∝ E− 3/2
+p , therefore the tail decays as wqt ∝ E− 7/2
+p .1
+This approach was criticized by Bahcall et al. [5] and by Zubarev [41]. Bahcall et al. merely state that the term
+d3p1d3p2 in the quantum-mechanical expression R ∝
+∫ ∫
+d3p1d3p2 exp(− E/T ) |⟨f |H|i⟩|2 for the reaction
+rate represents the density of states and should not be confused with the expectation values of particle momenta,
+distributed according to wmod(Ep). While the statement is certainly true in general, the argum ent misses the
+point because it says nothing about ⟨f |H|i⟩, which needs not be just a ﬁrst-order perturbation matrix el ement.
+Indeed, the kinetic Green function derivation of the distri bution (15) [34, 38] implies that multiple scattering is
+taken into account in addition to the fusion matrix element per se. Thus one may say that φ(E) is effectively
+contained in |⟨f |H|i⟩|2 in the above expression for R.
+Zubarev [41] put forward another argument. He noted that the pp-fusion rates calculated with wB(E) and
+with wmod(E) differ by three orders of magnitude for the Sun, and conclude d that in the second case “one has
+neglected the coupling between the various probability amplitudes of velocity which is introduced by the quantum
+uncertainty.” These statements are refuted in [36], but if t here were indeed such a large difference, the second
+(nonstandard) method of averaging must have a ﬂaw. Indeed, the agreement between the current stellar evolution
+theory and observations does not leave room for such a huge change of the basic reaction rates.
+Let us consider the fusion reaction 12C+12C → 24Mg, which plays a crucial role in the theory of WDs, red
+giants, and accreting NSs. We calculate the astrophysical f actor S(E) for this reaction using the most recent
+effective potential model [42] derived from laboratory results. In Fig. 4 we show thermonuclear heat rates Qnuc
+per unit volume as functions ofT at densities ρ = 10 8 g cm− 3 and 0.1 g cm− 3, calculated with using the classical
+statistical weight wB(E) and the modiﬁed weight wmod(E). The conventional results show steep decrease with
+1 The authors [36] obtain wqt ∝ E−4
+p , because they replace v =
+√
+2Ep/m12 by
+√
+2E/m1 in ⟨σcollv⟩, which introduces an error
+in Eq. (15) at Ep ≫ T . However, this difference in the power index does not qualit atively change any results or conclusions. We note in
+passing that the parallel to Kimball’s power law p−8 [40], drawn in [33–36], appears ungrounded, because the Kim ball’s result is speciﬁc
+to the distribution of fast particles scattered by a potential with asymptotic behavior ∼ r−1 at r → 0, whereas the collisional broadening is
+present for any scattering potential [37].
+Copyright line will be provided by the publisher
+404 A. Y . Potekhin and G. Chabrier:
+decreasing temperature below T ≲ 109 K. At contrast, the modiﬁed calculation gives a minimum at T ≳ 109 K
+and then an increase of the rate with decreasingT . The origin of this behavior is mathematically obvious. At low
+T , the denominator in Eq. (3) remains determined by the Boltzmann part of w(E) and provides the normalization
+∝
+√
+T , while the largest contribution to the numerator comes from the integration of Se− 2πη with the weight
+w ≈ wqt over the energies above the Coulomb barrier, which is temperature-independent. Thus the ratio becomes
+∝ T − 1/2. The latter dependence is well discerned in Fig. 4 for T ≲ 109 K and ρ = 0 . 1 g cm− 3. At ρ = 10 8
+g cm− 3, there is a stronger increase of Qnuc with decreasing T , caused by the increase of the factor eh.
+From the physics point of view, this enhancement of nuclear power at low T is unacceptable. For example, it
+is incompatible with the existence of carbon WDs. To show thi s, we have additionally plotted in Fig. 4 neutrino
+emission rates Qν, calculated following Ref. [43] as the sum of the power carri ed away by neutrino emission
+due to annihilation of electron-positron pairs, plasmon de cay, and bremsstrahlung. The intersection Qnuc = Qν
+is the ignition point, beyond which nuclear burning becomes unstable. We see that with the modiﬁed statistical
+averaging the intersection is absent, i.e., the burning is a lways unstable. If it were true, all carbon WDs should
+have exploded, but they do exist. The modiﬁed calculation al so predicts cold fusion at the normal conditions,
+which does not happen.
+What is the basic ﬂaw of the “quantum-tail” calculation? As c an be seen, for example, from Ref. [34],
+Eq. (15) is related to a perturbation correction of the order ℏ2 to the Maxwellian distribution. Different forms
+of this correction can be equivalent to the same order. For ex ample, the original Wigner expansion of his prob-
+ability function in powers of ℏ2 [44] can be rewritten in several ways: exp(− Ep/T ) [1 + ℏ2g2Ep/T 4 + . . . ] ∼
+exp[− Ep/T + ℏ2g2Ep/T 4 + . . . ] ∼ exp[− Ep/ (T + ℏ2g2/T 3 + . . . )] (cf. [45], §33). Here, g2 is a coefﬁcient
+involving average products of derivatives of the interacti on potential. These different forms, however, are not
+equivalent if ℏ2g2Ep/T 4 is large, which indicates that applicability of this correc tion is restricted to relatively
+low energies or high temperatures. However, the “quantum-t ail” contribution to the numerator of Eq. (3) at low
+T comes mainly from high energies, whose difference from T exceeds the collisional width γ by many orders
+of magnitude. Therefore we think that such evaluation of Eq. (3) falls beyond the applicability range of the
+distribution (15).
+The quantum uncertainty of particles’ momenta is conjugate to the quantum uncertainty of their coordinates.
+The thermonuclear fusion enhancement and the cold (pycnonu clear) fusion due to these quantum uncertainties
+are well known (e.g., [21]). However, these effects are impo rtant only at very high densities (e.g., at ρ ≫ 109
+g cm− 3 for the carbon fusion [10]).
+5 Conclusions
+We have studied the effects of electron screening on thermon uclear reactions in dense plasmas and compared
+different approximations to determine plasma enhancement factors for the nuclear fusion rates. The electron
+screening always increases the enhancement effect. The opp osite conclusion may come from using the Yukawa
+potential model, which is inappropriate to calculate the co ntact probability for fusing nuclei. The method of
+taking quantum uncertainties in particles’ momenta by a con volution of Boltzmann and Lorentz distributions,
+suggested in some publications, leads to physically unreasonable results. We argue that it may be a consequence
+of violation of applicability conditions of underlying theory.
+Although the electron polarization correction can increase a fusion rate by orders of magnitude, we ﬁnd that it
+does not signiﬁcantly affect theoretical models of WDs, NSs, LMSs, and SSOs.
+Acknowledgements We are grateful to the organizers of the 14th International C onference on Physics of Nonideal Plas-
+mas for invitation to present our results. We thank A. N. Star ostin for drawing our attention to the “quantum tail” prob-
+lem. A.Y .P. acknowledges useful discussions with G´ erard Massacrier and Dima Yakovlev. The work of A.Y .P. was partially
+supported by the Ministry of Education and Science of the Rus sian Federation (Agreement No. 8409, 2012), the Russian
+Foundation for Basic Research (RFBR grant 11-02-00253-a), and the Russian Leading Scientiﬁc Schools program (grant
+NSh-4035.2012.2).
+Copyright line will be provided by the publisher
+cpp header will be provided by the publisher 405
+References
+[1] G. Gamow, Z. Phys. 51, 204 (1928)
+[2] E. Schatzman, J. Phys. Radium 9, 46 (1948)
+[3] D. G. Yakovlev and D. A. Shalybkov, Sov. Sci. Rev., Ser. E:Astrophys. Space Phys. 7, 311 (1989)
+[4] S. Ichimaru, Rev. Mod. Phys. 65, 255 (1993)
+[5] J. N. Bahcall, L. S. Brown, A. Gruzinov, and R. F. Sawyer, Astron. Astrophys. 383, 291 (2002); erratum: Astron. Astro-
+phys. 388, 660 (2002)
+[6] E. E. Salpeter, Australian J. Phys. 7, 373 (1954)
+[7] N. Itoh, H. Totsuji, and S. Ichimaru, Astrophys. J. 218, 477 (1977)
+[8] M. Sahrling and G. Chabrier, Astrophys. J. 493, 879 (1998)
+[9] H. Kitamura, Astrophys. J. 539, 888 (2000)
+[10] D. G. Yakovlev, L. R. Gasques, A. V . Afanasjev, M. Beard,and M. Wiescher, Phys. Rev. C74, 035803 (2006)
+[11] A. I. Chugunov and H. E. DeWitt, Phys. Rev. C 80, 014611 (2009)
+[12] A. I. Chugunov and H. E. DeWitt, Contrib. Plasma Phys. 49, 696 (2009)
+[13] W. A. Fowler, Rev. Mod. Phys. 56, 149 (1984)
+[14] H. E. DeWitt, H. C. Graboske, and M. S. Cooper, Astrophys. J. 181, 439 (1973)
+[15] B. Jancovici, J. Stat. Phys. 17, 357 (1977)
+[16] Y . Rosenfeld and G. Chabrier, J. Stat. Phys. 89, 283 (1989)
+[17] S. Ichimaru and H. Kitamura, Publ. Astron. Soc. Paciﬁc 48, 613 (1996)
+[18] J. P. Hansen and P. Vieillefosse, Phys. Rev. Lett.37, 391 (1976)
+[19] G. Chabrier and N. W. Ashcroft, Phys. Rev. A 42, 2284 (1990)
+[20] G. Chabrier and A. Y . Potekhin, Phys. Rev. E58, 4941 (1998)
+[21] E. E. Salpeter and H. M. Van Horn, Astrophys. J. 155, 183 (1969)
+[22] A. Y . Potekhin and G. Chabrier, Contrib. Plasma Phys.50, 82 (2010)
+[23] G. Chabrier, J. Phys. (Paris) 51, 1607 (1990)
+[24] A. Alastuey and B. Jancovici, Astrophys. J. 226, 1034 (1978)
+[25] E. L. Pollock and B. Militzer, Phys. Rev. Lett. 92, 021101 (2004)
+[26] B. Militzer and E. L. Pollock, Phys. Rev. B 71, 134303 (2005)
+[27] A. Y . Potekhin and G. Chabrier, Astron. Astrophys.538, A115 (2012)
+[28] E. F. Brown and L. Bildsten, Astrophys. J. 496, 915 (1998)
+[29] L. R. Gasques, E. F. Brown, A. Chiefﬁ, et al., Phys. Rev. C 76, 035802 (2007)
+[30] G. Chabrier and I. Baraffe, Annu. Rev. Astron. Astrophy s. 38, 337 (2000)
+[31] S. Galam and J. P Hansen, Phys. Rev. A 14, 816 (1976)
+[32] N. L. Aleksandrov and A. N. Starostin, Zh. Eksp. Teor. Fiz. 113, 1661 (1998) [JETP 86, 903 (1998)]
+[33] A. N. Starostin, V . I. Savchenko, N. J. Fisch, Phys. Lett. A 274, 64 (2000)
+[34] A. N. Starostin, A. B. Mironov, N. L. Aleksandrov, N. J. Fisch, and R. M. Karlsrud, Physica A 305, 287 (2002)
+[35] A. V . Eletski˘ ı, A. N. Starostin, and M. D. Taran, Phys. Usp. 48, 281 (2005)
+[36] N. J. Fisch, M. G. Gladush, Y . V . Petrushevich, P. Quarati, and A. N. Starostin, Eur. Phys. J. D66, 154 (2012)
+[37] L. P. Kadanoff and G. Baym, Quantum Statistical Mechanics (New York: Benjamin, 1962)
+[38] V . M. Galitski˘ ı and V . V . Yakimets, Zh. Teor. Eksp. Fiz.51, 957 (1966) [Sov. Phys. – JETP 24, 637 (1967)]
+[39] A. Y . Potekhin and D. G. Yakovlev, Astron. Astrophys.314, 341 (1996)
+[40] J. C. Kimball, J. Phys. A: Math. Gen. 8, 1513 (1975)
+[41] A. V . Zubarev, J. Phys. A: Math. Theor.41, 312004 (2008)
+[42] D. G. Yakovlev, M. Beard, L. R. Gasques, and M. Wiescher,Phys. Rev. C 82, 044609 (2010)
+[43] D. G. Yakovlev, A. D. Kaminker, O. Y . Gnedin, and P. Haensel, Phys. Rep. 354, 1 (2001)
+[44] E. Wigner, Phys. Rev. 40, 749 (1932)
+[45] L. D. Landau and E. M. Lifshitz, Statistical Physics (Th eoretical Physics, V ol. 5) (Butterworth-Heinemann, 1980)
+Copyright line will be provided by the publisher

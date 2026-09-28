@@ -1,0 +1,20 @@
+{
+  "classification": "Counterexample candidate",
+  "reason": "General sparse resolvent solves forecast1267s for the fixed comparison and were not launched. Use the already narrow bandwidth with pivoted band LU; do not change any equation, input or cutoff.",
+  "budget": {
+    "pilot_models": 3,
+    "pilot_solves_each": 16,
+    "hard_seconds": 90,
+    "new_EOS_calls": 0
+  },
+  "gates": {
+    "component_transform_relative": 1e-08,
+    "linear_residual": 1e-09
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-spatial-repair/banded-pilot.py": "7172ced0fc9fea11a26cd47d4183e7499388642c13a3abca05d4560330085583",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_spatial_banded.py": "ef4fa39c883a50413f9e00590f9c82874f54620e8921e1dd66994a88f9898248",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_spatial_direct.py": "33cc61073723cd82ce082fb19c3fd001bf0525403519645799394c0bf8e97419",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-spatial-repair/direct/pilot-budget.json": "aa3669671c739539871fb511d88cbed1f6fd542b90d4f89042a7a05fe91e577c"
+  }
+}

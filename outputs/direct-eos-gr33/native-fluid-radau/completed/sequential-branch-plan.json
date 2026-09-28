@@ -1,0 +1,13 @@
+{
+  "classification": "Conjectural",
+  "admission": "Paired forecast425.685s exceeded the conservative420s allocation. Do not launch that pair blindly. Run only the original64prefix first, max240s; save its actual joint stages for reuse. The original480s budget includes the prior54.097s failure. Admit the original128prefix only if its measured forecast fits the remaining original budget.",
+  "remaining_original_pilot_seconds": 425.9028700900001,
+  "fine_forecast": "Coarse stepping time times2 for twice the actual steps, plus measured coarse operator construction and20s I/O reserve. Late step/iteration cost is still an assumption. Strict remaining wall cap; no extra clock, period or rerun of accepted coarse prefix.",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/couple_native_fluid_radau.py": "b3dd6768a7b7d5c3944ad0c66253a9b8ce5e2268617610435474cbd807904591",
+    "native-fluid-radau179-work/finite-jacobian-producer.py": "c517425ef314673e1a4653bb3cd31c29364df3b67e26b997ff7c33e27a56f151",
+    "native-fluid-radau179-work/pilot-receipt.json": "b6550a788cc4356cab8a8619231c86f6ea5b4ef878004dc32ebab1f692b5c5ad",
+    "native-fluid-radau179-work/branch-check-result.json": "9e738775c8b9e59938dfcc049497c8b02ee4336fad15a9a5df83770d6688d1fd",
+    "native-fluid-radau179-work/branch-plan.json": "336fc8bc2e01f9fc27f2fdb3c1ac83604b15f5349afe08028356d6fbd137df8f"
+  }
+}

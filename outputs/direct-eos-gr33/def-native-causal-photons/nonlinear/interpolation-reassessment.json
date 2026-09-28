@@ -1,0 +1,8 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "Maximum frequencywise reverse-rate interpolation error0.004064 exceeds the original0.002 gate. The exact exp(-photon_energy/kT) was interpolated in log-temperature.",
+  "repair": "Factor the known Boltzmann exponential analytically and interpolate only its prefactor. Reuse all96 native states and keep all physical supports and gates. No extra table node, frequency or fluid cell.",
+  "remaining_native_calls": 700,
+  "remaining_native_seconds": 36.219895393,
+  "source_sha256": "30a951fc7c2e22602c412cabc44e411d72574720dc7a6e001ea410466f57738a"
+}

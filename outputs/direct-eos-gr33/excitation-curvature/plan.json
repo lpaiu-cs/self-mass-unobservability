@@ -1,0 +1,70 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "96f08fa",
+  "cells": 5735,
+  "processes": 4,
+  "block_cells": 128,
+  "control_cells": [
+    0,
+    2972,
+    5734
+  ],
+  "source_changes": {
+    "mod_excitation_block.f90": {
+      "before": "919e3652a80b3dd6e7b9ab2611d847c92811d99fa89ed5ba8019a6d7a7b06a00",
+      "after": "0a7de7f6485282623c21183227bcc1a645286d9bcd1b580102381dfce666eb4b"
+    },
+    "excitation_sum.f90": {
+      "before": "437628640c341a449a7514652b689cabbd822d48ff42fb20a1e0c1ee17c77dcd",
+      "after": "28238943fb1ef253590e7395eaf28cce8070c9b47abae42bcbeb3f0b87ed017d"
+    },
+    "CMakeLists.txt": {
+      "before": "e9bf78617e949a3b0561eb252a497121eb7bc6426db609d0f3f7dad8c3b239dd",
+      "after": "b074447c7fceb9d8a29d2ab8362e61e636e68666f40dcbc611b66f0add2b7b7c"
+    }
+  },
+  "bindings": {
+    "verification/excitation_curvature.py": "146f3c44204e19f99324eb1454f3a7efefca0d09b773e1a802da642dab438531",
+    "outputs/direct-eos-gr33/pressure-ionization/manifest.json": "3afdd17267e6b54d4e85b165fc1a0c9bd9ca5cd3d59a5a7c99fd8bb041834e4d",
+    "outputs/direct-eos-gr33/reference-state.npz": "17cbbb101628ca9bc111dca0cfe902210f13697c632b91c03913a1718cf7d2ef",
+    "outputs/direct-eos-gr33/excitation-curvature/direct_ion_bridge.f90": "ee9375deb6941add7ec549dd7b07aa0835f3b9fbfbb37b84139400a5f38a7927"
+  },
+  "original_library_sha256": "6348e235763db0112687f391ab1c06c34b33aa530973ea4a414a5d0f21b1dfb4",
+  "expected_excitation_modes": [
+    2,
+    12
+  ],
+  "allowed_component_tags": [
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      25,
+      0
+    ],
+    [
+      26,
+      1
+    ]
+  ],
+  "original_EOS_and_MDH_bitwise_required": true,
+  "moment_relative_tolerance": 1e-10,
+  "component_population_relative_tolerance": 1e-10,
+  "aggregate_normalized_tolerance": 1e-10,
+  "moment_Hessian_direction_tolerance": 1e-10,
+  "method": "Capture the final excitation_sum contributions after their log(1+ratio) transformation, divided by their explicit exp(600) storage scale. Read only source-defined lower-triangular Hessian entries and only the fourth coordinate for non-neutral atomic ions. Include H2+ neutral-radius convention.",
+  "coordinates": "Four physical moments alpha0,alpha1,alpha2,beta; at fixed native density scale S and radius unit L, use S*diag(1,L,L^2,1) to transform derivatives to existing nu-moment coordinates.",
+  "scope": "Saved positive species support and fixed branch of the declared native model. Partition cutoffs, infinite-state tails, rounding/continuous errors and physical calibration are not certified.",
+  "full_EOS_Hessian_certified": false,
+  "physical_EOS_certified": false,
+  "full_GR_evolution": false
+}

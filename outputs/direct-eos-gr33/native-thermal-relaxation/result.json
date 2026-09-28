@@ -1,0 +1,46 @@
+{
+ "classification": "Imported from prior work (computation); Conjectural (per-layer relaxation model)",
+ "passed": true,
+ "verdict": "THERMAL_RELAXATION_LAG_COMPUTED__4E-9_INNER_3E-7_OUTER_OF_S_STRUCT__ACCEPTANCE_1PCT_MET",
+ "acceptance": "Debye-weighted quadrature <= 1e-2 |S_struct| replaces the strength assumption within the per-layer model; >= 1 would be loophole progress",
+ "model": "overlying thermal time tau_th = int c_p T dm / L (ideal monatomic, no ionization energy); relaxed limit bracketed by isothermal Gamma_T = P_gas/P; 161 cuts 1e-3..1e13 s; positive-definite operator throughout",
+ "scanned": {
+  "last_cut_s": 10000000000000.0,
+  "depth_km": 47655.50678968734,
+  "mass_fraction": 0.017033375097147627,
+  "dS_rel": -0.05274653815875415,
+  "total_variation_rel": 0.056599294147355574
+ },
+ "lag": {
+  "n_in": {
+   "debye_quadrature_over_S_struct": 3.977918758044201e-09,
+   "window_TV_half": 7.185002575325023e-07,
+   "depth_km_tau_1_over_omega": 2627.9684911349377,
+   "mass_fraction_above": 1.8727805516915757e-09,
+   "deeper_than_scan_suppression": 2.240584473979071e-09
+  },
+  "2 n_in": {
+   "debye_quadrature_over_S_struct": 2.2107679427450354e-09,
+   "window_TV_half": 3.862394293151051e-07,
+   "depth_km_tau_1_over_omega": 2326.4345836119783,
+   "mass_fraction_above": 1.0662312553281432e-09,
+   "deeper_than_scan_suppression": 1.1202922369895354e-09
+  },
+  "n_out": {
+   "debye_quadrature_over_S_struct": 3.3476197703282516e-07,
+   "window_TV_half": 8.919938438701978e-05,
+   "depth_km_tau_1_over_omega": 6557.967710431594,
+   "mass_fraction_above": 1.448030690631762e-07,
+   "deeper_than_scan_suppression": 4.50008102468079e-07
+  }
+ },
+ "lagged_pair_factor_bound": "<= 3.3e-7 x 2.13e-18 ~ 7e-25",
+ "analytic_notes": [
+  "non-common channels enter timing through the same inner-coupling and SEP-like differential-acceleration paths as the common template; O(1)-O(10) weights expected; not computed (Nutimo work excluded by AGENTS.md)",
+  "Section 4.3 stiffness shift with weak-field kappa ~ 1/(|beta_p| m_p): |beta_s| m_wd m_p |beta_p| / a_in^2 ~ 1.1e-13 |beta_p|"
+ ],
+ "repository_classification": "theorem progress: computed quantitative boundary for this state within the per-layer relaxation model; no observational exclusion; not a general A4",
+ "manuscript_changed": false,
+ "full_goal_complete": false,
+ "snapshot_KST": "2026-09-28T00:35:20.844016+09:00"
+}

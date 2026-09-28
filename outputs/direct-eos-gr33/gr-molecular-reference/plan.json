@@ -1,0 +1,21 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "226f237",
+  "cells": 5735,
+  "block_size": 128,
+  "workers": 3,
+  "inventory_tolerance": 1e-10,
+  "charge_tolerance": 1e-10,
+  "intervention": "Hold every current baryon cell mass, nuclear fraction, baryon density and temperature fixed; reevaluate both the original GR EOS and the new two-spectrum/chemical-anchor EOS. The new EOS defines new reference entropies for a subsequent GR solve. Old geometry is an initial guess only; no gravitational mass or baryon mass fitting occurs here.",
+  "comparison": "Pair old and new evaluations at the same saved rho,T,X. Do not demand bit equality to the saved old pressure-inverse energy, which followed a different rounded inverse path. No fitted normalization or after-result smallness gate for model differences.",
+  "scope": "Full-grid finite EOS/source connection and conserved inventory check, not a GR solution, time evolution, physical EOS error certificate or observational inference.",
+  "runtime": {
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/libfree_eos_direct24_molecular_spectral.so.1.0.0": "195f3658eb0cc8fe3447c6b690f246b5a4fb770bd8ffa764d19248fec857ec50",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/excitation.so": "061c66f09a6468735ce46bde98297ed5fae4409bc4503e58cc9fa5391a82da49"
+  },
+  "bindings": {
+    "verification/gr_molecular_reference.py": "7f4f65917a9b5a20ba5a4ca9ad726b45d1e0d1b8acc7187cb1767f1c6e6ba552",
+    "outputs/direct-eos-gr33/eos-molecular-spectral/manifest.json": "26a927b885902564d2f3fb47b43216e0c60c809cfe1d64b47a20bf9b22e6d98a",
+    "outputs/direct-eos-gr33/initial-state-17-4.npz": "5dcc8ffb8b32a9f15ccc4c8bb7111d19be8dcdc66611ad2942e3a4a0cf6cc6d6"
+  }
+}

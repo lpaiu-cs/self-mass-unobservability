@@ -1,0 +1,12 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "entropy_current": "In c=1 units S^mu=s*n*u^mu+q^mu/T-[tau/(2*K*T^2)]*q_alpha*q^alpha*u^mu. Assume baryon/energy conservation, a differentiable Gibbs relation and this heat-only quadratic nonequilibrium entropy ansatz.",
+  "divergence": "D_mu S^mu=-q.(grad T+T*a)/T^2-tau*q.Dq/(K*T^2)-(q^2/2)*D_mu[(tau/(K*T^2))*u^mu].",
+  "full_heat_law": "tau*Delta*Dq+q=-K*(Delta*grad T+T*a)-(K*T^2/2)*q*div[(tau/(K*T^2))*u]. This gives div S=q^2/(K*T^2)>=0 for positive K,T within the declared model.",
+  "truncated_boundary": "Omitting the last transport term leaves div S=q^2/(K*T^2)-(q^2/2)*div(beta*u). A declared local jet with div(beta*u)=3/(K*T^2) makes this negative. This is an algebraic counterexample to an unconditional entropy guarantee, not an observed violation in the stored star.",
+  "frozen_constant_tau": "For constant tau, define kr=dlnK/dlnrho+1 and kt=dlnK/dlnT+2. At initial v=0 and fixed composition, dln(beta)/dt+N*theta=-kr*dlnrho/dt-kt*dlnT/dt.",
+  "initial_equations": "For Q_F=Q: Q_dot+w*v_dot=R; tau*Q_dot+w*h*v_dot=(tau*Q/2)*(kr*rho_log_dot+kt*T_log_dot); T_log_dot=Y+V*v_dot. The extra term changes the initial tangent, so the old truncated tangent is not reused.",
+  "principal_matrix": "Variables (delta ln rho,delta ln T,delta v,delta Q/w), M=[[1,0,0,0],[0,b,2j,0],[0,0,1,1],[-j*kr/2,-j*kt/2,a,1]], N=[[0,0,1,0],[0,0,e,1],[r,d,2j,0],[0,a,0,0]], a=h/tau; system M*y_t+c*N*y_x=lower-order terms.",
+  "scope": "Formal entropy identity and local principal matrix of this chosen quadratic heat-only model. It neither calibrates the ansatz/coefficients nor supplies physical EOS derivative error, nonequilibrium validity, nonlinear well-posedness, viscosity/convection/reactions, atmosphere or a finite GR trajectory."
+}

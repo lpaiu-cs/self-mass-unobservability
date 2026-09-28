@@ -1,0 +1,627 @@
+{
+ "classification": "Counterexample candidate",
+ "passed": true,
+ "verdict": "CONDITIONAL_NEGATIVE_CHARGE_KEPT_EOS_OPTICS_NOT_DOMINANT",
+ "rule": "kept if the PL-off endpoint charge is negative; magnitude change vs PL/MHD 2x reported",
+ "endpoint_negative_ploff": true,
+ "rows": {
+  "61": {
+   "q_ploff_2x": -1.5118781613464895e-51,
+   "q_plmhd_2x": -1.5118781616754487e-51,
+   "q_plmhd_4x": -1.4903360454241468e-51,
+   "same_time_as_2x": true,
+   "evaluation_time": 0.003273442159275794,
+   "magnitude_change_vs_plmhd_2x": -2.1758308047964407e-10,
+   "relative_change_vs_plmhd_2x": 2.1758308047964407e-10,
+   "inexact_inverse_max": null
+  },
+  "62": {
+   "q_ploff_2x": -1.7644376533467758e-51,
+   "q_plmhd_2x": -1.7644376536883866e-51,
+   "q_plmhd_4x": -1.7408806672138882e-51,
+   "same_time_as_2x": true,
+   "evaluation_time": 0.00332710514549343,
+   "magnitude_change_vs_plmhd_2x": -1.936088612076476e-10,
+   "relative_change_vs_plmhd_2x": 1.936088612076476e-10,
+   "inexact_inverse_max": null
+  },
+  "63": {
+   "q_ploff_2x": -2.0501963263721837e-51,
+   "q_plmhd_2x": -2.0501963266859924e-51,
+   "q_plmhd_4x": -2.0245376210118192e-51,
+   "same_time_as_2x": true,
+   "evaluation_time": 0.0033807681317110662,
+   "magnitude_change_vs_plmhd_2x": -1.5306272310010657e-10,
+   "relative_change_vs_plmhd_2x": 1.5306272310010657e-10,
+   "inexact_inverse_max": null
+  },
+  "64": {
+   "q_ploff_2x": -2.3721176159035226e-51,
+   "q_plmhd_2x": -2.372117616121833e-51,
+   "q_plmhd_4x": -2.3442699996854763e-51,
+   "same_time_as_2x": true,
+   "evaluation_time": 0.003434431117928702,
+   "magnitude_change_vs_plmhd_2x": -9.20319125002892e-11,
+   "relative_change_vs_plmhd_2x": 9.20319125002892e-11,
+   "inexact_inverse_max": null
+  }
+ },
+ "max_abs_relative_change": 2.1758308047964407e-10,
+ "eos_variant": {
+  "call": "free_eos_modern(ifoption=3, ifmodified=11, ifion=-2): EOS1 without radiation pressure, ifcoulomb=5, ifpi=3 (PL+MDH)",
+  "ploff": "ifpi=-3 (MDH only) and PL arrays zeroed before use; H level library qstar_calc PL flag off",
+  "identity_rebuild_bitwise": true,
+  "scope": "EOS-derived arrays of interior cells 0-26 (2x grid) from the PL-off libraries; background geometry and atmosphere tables PL/MHD"
+ },
+ "grid": {
+  "cells": 539,
+  "interior": 27,
+  "refined_cells": "8-15 split 2x (phase 267 grid)"
+ },
+ "run": {
+  "segments": 18,
+  "actual_steps": 128,
+  "seconds": 11515.446266194002,
+  "fallbacks": 18,
+  "linear_exceptions": {
+   "count": 16,
+   "max_vector": 8.806547766042926e-09,
+   "max_physical": 3.42301693012452e-19,
+   "max_material": 1.1740055312809627e-16
+  },
+  "nonlinear_exceptions": {
+   "count": 5,
+   "max_defect": 5.869258321759062e-09,
+   "max_physical": 4.554573198729432e-17,
+   "max_material": 2.1155697291582725e-14
+  },
+  "long_double_corrections": 24,
+  "first_preparation_attempt": "stopped at the thermal step: kept-cell EOS arrays were PL/MHD while the native y0 check requires the running EOS (preserved)"
+ },
+ "depth_T": {
+  "all": [
+   -2.372117616121833e-51,
+   -2.3721176159035226e-51
+  ],
+  "closure_ploff": -3.752804962944077e-16,
+  "0-7": [
+   -7.310055657958104e-58,
+   -7.31005566384662e-58
+  ],
+  "8": [
+   2.3884498705785062e-54,
+   2.3884498694604973e-54
+  ],
+  "9": [
+   2.362220446976486e-52,
+   2.3622204427231468e-52
+  ],
+  "10": [
+   -2.3410153779030727e-52,
+   -2.3410153907970604e-52
+  ],
+  "11": [
+   -1.461194806232234e-51,
+   -1.461194807647091e-51
+  ],
+  "12": [
+   -7.065366048709118e-52,
+   -7.065366023575745e-52
+  ],
+  "13": [
+   -1.6706243059370577e-52,
+   -1.6706242962416873e-52
+  ],
+  "14": [
+   -3.3948594300807806e-53,
+   -3.3948594406072328e-53
+  ],
+  "15": [
+   -6.344575930382264e-54,
+   -6.344575937990433e-54
+  ],
+  "16": [
+   -6.338941381216446e-56,
+   -6.3389377304854595e-56
+  ],
+  "17": [
+   -3.7330140517621183e-56,
+   -3.73305400684094e-56
+  ],
+  "18": [
+   -2.2243777219791424e-56,
+   -2.2205166420070946e-56
+  ],
+  "atmosphere": [
+   -1.415866634596063e-54,
+   -1.4159049033357284e-54
+  ],
+  "boundary": [
+   -1.3415189125147082e-71,
+   -5.443833462941524e-72
+  ]
+ },
+ "source_components_T": {
+  "B": {
+   "max_abs_plmhd": 1.0000042874112949,
+   "max_diff_over_max": 0.0,
+   "shape": [
+    539
+   ]
+  },
+  "K_cm": {
+   "max_abs_plmhd": 116.68542044431166,
+   "max_diff_over_max": 0.0,
+   "shape": []
+  },
+  "M_cm": {
+   "max_abs_plmhd": 29168.754076187735,
+   "max_diff_over_max": 0.0,
+   "shape": []
+  },
+  "RJ": {
+   "max_abs_plmhd": 6909832483.970193,
+   "max_diff_over_max": 0.0,
+   "shape": []
+  },
+  "a": {
+   "max_abs_plmhd": 0.99999377867538,
+   "max_diff_over_max": 0.0,
+   "shape": [
+    539
+   ]
+  },
+  "baryon_g": {
+   "max_abs_plmhd": 2.4412813107339284e-12,
+   "max_diff_over_max": 1.8351649904192654e-09,
+   "shape": [
+    129,
+    539
+   ]
+  },
+  "cx": {
+   "max_abs_plmhd": 1.0070231612220188,
+   "max_diff_over_max": 0.0,
+   "shape": []
+  },
+  "delay": {
+   "max_abs_plmhd": 0.003554579742481327,
+   "max_diff_over_max": 0.0,
+   "shape": [
+    539
+   ]
+  },
+  "drive_amplitude": {
+   "max_abs_plmhd": 1e-30,
+   "max_diff_over_max": 0.0,
+   "shape": []
+  },
+  "drive_born": {
+   "max_abs_plmhd": 1.2011349304314443e-30,
+   "max_diff_over_max": 0.0,
+   "shape": [
+    33,
+    539
+   ]
+  },
+  "drive_centers": {
+   "max_abs_plmhd": 6909966148.105416,
+   "max_diff_over_max": 0.0,
+   "shape": [
+    539
+   ]
+  },
+  "drive_duration": {
+   "max_abs_plmhd": 0.0017172155589643512,
+   "max_diff_over_max": 0.0,
+   "shape": []
+  },
+  "drive_radius": {
+   "max_abs_plmhd": 6909966304.355728,
+   "max_diff_over_max": 0.0,
+   "shape": []
+  },
+  "drive_times": {
+   "max_abs_plmhd": 0.0034344311179287023,
+   "max_diff_over_max": 0.0,
+   "shape": [
+    33
+   ]
+  },
+  "drive_x": {
+   "max_abs_plmhd": 106683621.06867006,
+   "max_diff_over_max": 0.0,
+   "shape": [
+    539
+   ]
+  },
+  "edges": {
+   "max_abs_plmhd": 6909952483.970193,
+   "max_diff_over_max": 0.0,
+   "shape": [
+    540
+   ]
+  },
+  "gas_nonrest_energy_erg": {
+   "max_abs_plmhd": 99.75181436569336,
+   "max_diff_over_max": 0.08492282672576162,
+   "shape": [
+    129,
+    539
+   ]
+  },
+  "geometry_coeff_baryon_g": {
+   "max_abs_plmhd": 0.0,
+   "max_diff_over_max": 0.0,
+   "shape": [
+    2,
+    16,
+    539
+   ]
+  },
+  "geometry_coeff_gas_nonrest_energy_erg": {
+   "max_abs_plmhd": 410067922.3423891,
+   "max_diff_over_max": 0.10505848292416485,
+   "shape": [
+    2,
+    16,
+    539
+   ]
+  },
+  "geometry_coeff_inner_cumulative_energy_erg": {
+   "max_abs_plmhd": 0.0,
+   "max_diff_over_max": 0.0,
+   "shape": [
+    2,
+    16
+   ]
+  },
+  "geometry_coeff_metric_stress_erg": {
+   "max_abs_plmhd": 412678625.55724066,
+   "max_diff_over_max": 0.10405644899197447,
+   "shape": [
+    2,
+    16,
+    539
+   ]
+  },
+  "geometry_coeff_nonrest_stress_erg": {
+   "max_abs_plmhd": 412637746.74401146,
+   "max_diff_over_max": 0.10440855258488575,
+   "shape": [
+    2,
+    16,
+    539
+   ]
+  },
+  "geometry_coeff_nonrest_trace_erg": {
+   "max_abs_plmhd": 417777395.61564523,
+   "max_diff_over_max": 0.10313267892529587,
+   "shape": [
+    2,
+    16,
+    539
+   ]
+  },
+  "geometry_coeff_outer_cumulative_energy_erg": {
+   "max_abs_plmhd": 0.0,
+   "max_diff_over_max": 0.0,
+   "shape": [
+    2,
+    16
+   ]
+  },
+  "geometry_coeff_photon_energy_erg": {
+   "max_abs_plmhd": 8596165.689095207,
+   "max_diff_over_max": 0.17555579551756345,
+   "shape": [
+    2,
+    16,
+    539
+   ]
+  },
+  "geometry_coeff_photon_radial_pressure_erg": {
+   "max_abs_plmhd": 2926524.130293794,
+   "max_diff_over_max": 0.1795065101776207,
+   "shape": [
+    2,
+    16,
+    539
+   ]
+  },
+  "geometry_coeff_pressure_volume_erg": {
+   "max_abs_plmhd": 3143690.9657326774,
+   "max_diff_over_max": 0.0035225928128304208,
+   "shape": [
+    2,
+    16,
+    539
+   ]
+  },
+  "geometry_times": {
+   "max_abs_plmhd": 0.003434431117928702,
+   "max_diff_over_max": 0.0,
+   "shape": [
+    17
+   ]
+  },
+  "inner_cumulative_energy_erg": {
+   "max_abs_plmhd": 0.001720587109144129,
+   "max_diff_over_max": 0.4260583338621553,
+   "shape": [
+    129
+   ]
+  },
+  "inner_material_face_cm": {
+   "max_abs_plmhd": 6909792483.970194,
+   "max_diff_over_max": 0.0,
+   "shape": []
+  },
+  "metric_stress_erg": {
+   "max_abs_plmhd": 2209523894.060962,
+   "max_diff_over_max": 1.8206170936347045e-09,
+   "shape": [
+    129,
+    539
+   ]
+  },
+  "nonrest_stress_erg": {
+   "max_abs_plmhd": 55.637244304985416,
+   "max_diff_over_max": 0.061278989806286904,
+   "shape": [
+    129,
+    539
+   ]
+  },
+  "nonrest_trace_erg": {
+   "max_abs_plmhd": 33.21690759477875,
+   "max_diff_over_max": 0.325231860530464,
+   "shape": [
+    129,
+    539
+   ]
+  },
+  "outer_cumulative_energy_erg": {
+   "max_abs_plmhd": 0.03666333121630211,
+   "max_diff_over_max": 0.9065059098863364,
+   "shape": [
+    129
+   ]
+  },
+  "photon_energy_erg": {
+   "max_abs_plmhd": 2.2120477677233046,
+   "max_diff_over_max": 0.7811015425817528,
+   "shape": [
+    129,
+    539
+   ]
+  },
+  "photon_radial_pressure_erg": {
+   "max_abs_plmhd": 0.7425556797240742,
+   "max_diff_over_max": 0.782697607811433,
+   "shape": [
+    129,
+    539
+   ]
+  },
+  "pressure_volume_erg": {
+   "max_abs_plmhd": 44.42707594988208,
+   "max_diff_over_max": 0.14401728741069308,
+   "shape": [
+    129,
+    539
+   ]
+  },
+  "radius": {
+   "max_abs_plmhd": 6909952327.720194,
+   "max_diff_over_max": 0.0,
+   "shape": [
+    539
+   ]
+  },
+  "re": {
+   "max_abs_plmhd": 1.0000173439443387,
+   "max_diff_over_max": 0.0,
+   "shape": [
+    539
+   ]
+  },
+  "state_coeff_baryon_g": {
+   "max_abs_plmhd": 2.2809650013379603e-12,
+   "max_diff_over_max": 1.878393390220867e-09,
+   "shape": [
+    4,
+    128,
+    539
+   ]
+  },
+  "state_coeff_gas_nonrest_energy_erg": {
+   "max_abs_plmhd": 53.53601443410007,
+   "max_diff_over_max": 0.17164032649439742,
+   "shape": [
+    4,
+    128,
+    539
+   ]
+  },
+  "state_coeff_inner_cumulative_energy_erg": {
+   "max_abs_plmhd": 0.0012900775206870958,
+   "max_diff_over_max": 0.4545555418070563,
+   "shape": [
+    4,
+    128
+   ]
+  },
+  "state_coeff_metric_stress_erg": {
+   "max_abs_plmhd": 2064426813.2001646,
+   "max_diff_over_max": 1.8626408179310673e-09,
+   "shape": [
+    4,
+    128,
+    539
+   ]
+  },
+  "state_coeff_nonrest_stress_erg": {
+   "max_abs_plmhd": 26.935938435959304,
+   "max_diff_over_max": 0.11069153483707796,
+   "shape": [
+    4,
+    128,
+    539
+   ]
+  },
+  "state_coeff_nonrest_trace_erg": {
+   "max_abs_plmhd": 74.99607738705022,
+   "max_diff_over_max": 0.12357696313511432,
+   "shape": [
+    4,
+    128,
+    539
+   ]
+  },
+  "state_coeff_outer_cumulative_energy_erg": {
+   "max_abs_plmhd": 0.03666333121630211,
+   "max_diff_over_max": 0.8981103157735013,
+   "shape": [
+    4,
+    128
+   ]
+  },
+  "state_coeff_photon_energy_erg": {
+   "max_abs_plmhd": 2.632812116701796,
+   "max_diff_over_max": 0.6655194458424605,
+   "shape": [
+    4,
+    128,
+    539
+   ]
+  },
+  "state_coeff_photon_radial_pressure_erg": {
+   "max_abs_plmhd": 0.8823453847985823,
+   "max_diff_over_max": 0.6674557947938755,
+   "shape": [
+    4,
+    128,
+    539
+   ]
+  },
+  "state_coeff_pressure_volume_erg": {
+   "max_abs_plmhd": 37.152250285136155,
+   "max_diff_over_max": 0.16485364633743035,
+   "shape": [
+    4,
+    128,
+    539
+   ]
+  },
+  "t": {
+   "max_abs_plmhd": 0.003434431117928702,
+   "max_diff_over_max": 0.0,
+   "shape": [
+    129
+   ]
+  },
+  "volume": {
+   "max_abs_plmhd": 4.0554818552390626e+27,
+   "max_diff_over_max": 0.0,
+   "shape": [
+    539
+   ]
+  },
+  "weight": {
+   "max_abs_plmhd": 5.879577709264057e-13,
+   "max_diff_over_max": 0.0,
+   "shape": [
+    539
+   ]
+  }
+ },
+ "reused_scripts_sha256": {
+  "phase267-template.py": {
+   "sha256": "5b913bb903e2d3c85cb18935cab94b76705ecd6db187dc0257d79a8cef19d2c6",
+   "published": "outputs/direct-eos-gr33/native-refined-primary/scripts/phase267-template.py"
+  },
+  "phase267-undriven.py": {
+   "sha256": "58dfaecaf3d4851f2eb2fc169b2e98241c2d9b1643c2916d87bcad2128b92940",
+   "published": "outputs/direct-eos-gr33/native-refined-primary/scripts/phase267-undriven.py"
+  },
+  "phase267-p150-setup.py": {
+   "sha256": "5109291c920607a23d282f76a24da38b60c3201cc25f6eb5addb4aa95109bae8",
+   "published": "outputs/direct-eos-gr33/native-refined-primary/scripts/phase267-p150-setup.py"
+  },
+  "phase267-p150.py": {
+   "sha256": "d7d1adbbb61c12387cbd3d61ab2427b76095de091871f27d1dfe7dc7528bdb27",
+   "published": "outputs/direct-eos-gr33/native-refined-primary/scripts/phase267-p150.py"
+  },
+  "phase267-born.py": {
+   "sha256": "0ea09bb195519666e16a8359c23654972532d05538f12eecf657ffab3ac2b0c5",
+   "published": "outputs/direct-eos-gr33/native-refined-primary/scripts/phase267-born.py"
+  },
+  "phase267-placeholders.py": {
+   "sha256": "f273c46215925e674aa33794b0300cd165b86c7a508f49bfab81d01035a98da7",
+   "published": "outputs/direct-eos-gr33/native-refined-primary/scripts/phase267-placeholders.py"
+  },
+  "phase267-readout.py": {
+   "sha256": "7dfd3fba7bb1e615fa644cd243b7254f39609a2d0bdf04993b50cd239c5513d5",
+   "published": "outputs/direct-eos-gr33/native-refined-primary/scripts/phase267-readout.py"
+  },
+  "phase267-depth.py": {
+   "sha256": "c6f1426196aa7ddf1036029e8653892804c190e44e0c128dc68d764d6f920f75",
+   "published": "outputs/direct-eos-gr33/native-refined-primary/scripts/phase267-depth.py"
+  },
+  "phase267-audited.py": {
+   "sha256": "941f2135a6a79b8520ea6af8cd6bac0723f639a199194231de674e9b790b754e",
+   "published": "outputs/direct-eos-gr33/native-refined-primary/scripts/phase267-audited.py"
+  },
+  "phase268-driver.py": {
+   "sha256": "de3c1a3cccbecb9348f7d38fee3144f5eca56d1c230edbf0be80b86628362359",
+   "published": "outputs/direct-eos-gr33/native-quad-refined-primary/scripts/phase268-driver.py"
+  },
+  "phase268-thermal.py": {
+   "sha256": "0c1d25339e95baa4b5c0313fc679c83c533dc60d040161f292cb22dad332a95e",
+   "published": "outputs/direct-eos-gr33/native-quad-refined-primary/scripts/phase268-thermal.py"
+  },
+  "phase268-initial.py": {
+   "sha256": "ff34fd86b35a3219946006902e4e94ffdf563b32604266760253f74312cf80bc",
+   "published": "outputs/direct-eos-gr33/native-quad-refined-primary/scripts/phase268-initial.py"
+  },
+  "phase268-initial-audit.py": {
+   "sha256": "8e5adf8ffddb8efc5aa06b6a2fe1be6313aba0f2e18ed47c503f08febbf41668",
+   "published": "outputs/direct-eos-gr33/native-quad-refined-primary/scripts/phase268-initial-audit.py"
+  },
+  "launch268.sh": {
+   "sha256": "acef21e5ca020e365a501b25028478494daa0811916fb6d770c2e2117862b190",
+   "published": "outputs/direct-eos-gr33/native-quad-refined-primary/scripts/launch268.sh"
+  }
+ },
+ "large_arrays_sha256": {
+  "direct-eos-gr33/native-cold-population-ploff/libfree_eos_native_cold_stable.so": "71c937a32c9a9904b7594441086fab8fa8d66e06df48752ca19aedeaff23e1f2",
+  "direct-eos-gr33/native-cold-population-ploff/stable/gas.so": "ec248325381f8ce7fca3da6692cbd8853b62a208fce1b0482d4b5d7d3cd39c1c",
+  "direct-eos-gr33/native-cold-population-ploff/gas-stable-verbose.so": "ffed6b2dc71ff16be93000cd94dd41059a365e53fb302f5505e76315621c573c",
+  "direct-eos-gr33/photon-eos-levels-ploff/levels.so": "4a8d94b6c22cc133be72ba6b83c5ef7c3441d251c183a35bdd53090815bba1a7",
+  "direct-eos-gr33/native-cold-population-identity/libfree_eos_native_cold_stable.so": "34c98dd962486631eb12e6315a00f6d0ea1d8fd5e8a33e19243aef842a155974",
+  "direct-eos-gr33/photon-eos-levels-identity/levels.so": "f5ebb8b31b67cfb8591cad491abd7930738d22e3eb9eebe90bed1519dd610b31",
+  "native-eos269-runtime/primary269-eos64-work/sweep-1/photons/seg-61.npz": "daca5cda15cf6531e8e1acd7fe5b15db81eda825a44bc8e522f4b6058680ba9c",
+  "native-eos269-runtime/primary269-eos64-work/sweep-1/photons/seg-62.npz": "208c462d3203f6a1d5f18d1041b73f50dae564bbf76b0a64ed8784b0841f949f",
+  "native-eos269-runtime/primary269-eos64-work/sweep-1/photons/seg-63.npz": "be3f2dc4bfbd06c87f5f7931a4f62f3c36b5adea54fe4cc93fb9ccf96e3b58c6",
+  "native-eos269-runtime/primary269-eos64-work/sweep-1/photons/seg-64.npz": "57d18ad7b64fca5cfb5c93a7ccfe086c53af1d2260d233c5dd112cf743d1b932",
+  "native-eos269-runtime/readout269-eos64-work/gr/source-64.npz": "aab457614b7e4afc345ae90bcb6d3f8071c9d2a98975a1adc5e4dfd7a21a3563",
+  "native-eos269-runtime/readout269-eos64-work/gr/field-source-64.npz": "ef64e86ccc2dbe9c3152b5e368236cd550ff6f23a2195c4f395fae2e3c235ae3",
+  "native-eos269-runtime/readout269-eos64-work/recovered-64.npz": "0cc82535aee00d7b41d0746143dc74d257abed5e074076c47195ab0efdb6cf57",
+  "native-eos269-runtime/outputs/direct-eos-gr33/def-native-boundary-layer/geometry.npz": "c4d54145798d80b9c25217e0dbb864cf06da13cf90f881bd82d122470b9308b9",
+  "native-eos269-runtime/outputs/direct-eos-gr33/def-native-boundary-layer/bank.npz": "52b2edf89e54a66a65927ed72a7fc9fd225598518f5b47bdc275d07e0e9edd64",
+  "native-eos269-runtime/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/bank.npz": "d697e99965402bda498314c6ef37c43de0b53528c815d6c3dce9018f47ed3a57",
+  "native-eos269-runtime/outputs/direct-eos-gr33/def-native-initial-constraints/finite-volume/balanced-initial-state.npz": "c0361a7fde2c42397fdb8a8fe3f1c04946ad582b7c69a6a3d09713c4c6abe5cb",
+  "native-eos269-runtime/outputs/direct-eos-gr33/native-retained-completion/evolution/coupled-128.npz": "fb932ad3832f695bebd197f3288cf9138bc230d1f626cfb3dad85d5825536524",
+  "native-eos269-runtime/outputs/direct-eos-gr33/native-retained-completion/evolution/source-128.npz": "dd2afa5b5f9514e39aeb4a84a9e6fd9f893c4cf411907c17f2a2860103991af0",
+  "native-eos269-runtime/native-incident-drive155-work/fields/born-g8.npz": "a5a4f0de888b23a9cfe727a288a6a8613b7083b117e7b72e09dabe1be04aad5f",
+  "native-eos269-runtime/primary269-eos64-work/captures (256, sha256 of the ordered list of file hashes)": "7fb6d838e1efaca1b8ffbc31c2f4218c7a5347ceb88de2362d4e04173be9e9e8"
+ },
+ "not_tested": [
+  "background structure (density/temperature profile) EOS and opacity dependence",
+  "atmosphere tables"
+ ],
+ "final_charge_conclusion": "conditional negative charge kept under the PL-off EOS/optics (2x, 64 clock); final physical charge unadjudicated",
+ "full_goal_complete": false,
+ "snapshot_KST": "2026-09-27T16:10:32.741314+09:00"
+}

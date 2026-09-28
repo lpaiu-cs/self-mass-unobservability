@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/.phase263-direct-reference.py", line 23, in <module>
+    z,row=m.propagate(m.d.T,8,[0]);row['packet_index']=index;row['work_identity_independent']=True
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/propagate_physical_exterior.py", line 174, in propagate
+    sol=solve_ivp(rhs,[0.,1.],np.zeros(3*n),method='DOP853',rtol=2e-8,atol=2e-11)
+  File "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/integrate/_ivp/ivp.py", line 655, in solve_ivp
+    message = solver.step()
+  File "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/integrate/_ivp/base.py", line 197, in step
+    success, message = self._step_impl()
+  File "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/integrate/_ivp/rk.py", line 144, in _step_impl
+    y_new, f_new = rk_step(self.fun, t, y, self.f, h, self.A,
+  File "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/integrate/_ivp/rk.py", line 64, in rk_step
+    K[s] = fun(t + c * h, y + dy)
+  File "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/integrate/_ivp/base.py", line 154, in fun
+    return self.fun_single(t, y)
+  File "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/integrate/_ivp/base.py", line 23, in fun_wrapped
+    return np.asarray(fun(t, y), dtype=dtype)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/propagate_physical_exterior.py", line 168, in rhs
+    rr,mu=self.ray(age*s,owner);z=self.metric.at(te+age*s,rr)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/propagate_returned_exterior.py", line 141, in at
+    v=self.emission.convolution(t,age,bins,self.coeff[:,k])
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/propagate_returned_exterior.py", line 52, in convolution
+    answer+=(-1)**j*shifted*self.primitive(end,bins,j)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/def_retained_native_acoustic.py", line 21, in stop
+    def stop(*_):raise TimeoutError('Registered native acoustic budget')
+TimeoutError: Registered native acoustic budget

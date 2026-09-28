@@ -1,0 +1,8 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "The composition-gradient estimate differenced positive spectral coefficients across different-temperature cells and divided by a tiny Wien-tail endpoint. That quotient is not a local relative derivative and made a submicron displacement produce a negative linear opacity.",
+  "repair": "Differentiate log of the positive coefficient directly, subtract the native density, temperature, H and redshift derivatives in the same logarithmic variables. Keep the linear-density model, positivity gate, EOS support and time limits unchanged.",
+  "preserved": "second-pilot and second-pilot-producer.py",
+  "completed_coupled_steps": 0,
+  "remaining_pilot_seconds": 28
+}

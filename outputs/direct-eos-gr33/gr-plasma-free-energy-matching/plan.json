@@ -1,0 +1,27 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "fbcfefe",
+  "bindings": {
+    "verification/gr_plasma_free_energy_matching.py": "10ead290bcf2fb2b5fc8e0a73a1ec7e802890dbf2d2ed4bcc1235b21b1ca8725",
+    "outputs/direct-eos-gr33/gr-fermi-plasma/manifest.json": "0d0021a38d69d6eb004670f80a9bde5eba56fdb7b277cae6e7ea53bcce7b0d0e",
+    "outputs/direct-eos-gr33/eos-molecular-spectral/manifest.json": "26a927b885902564d2f3fb47b43216e0c60c809cfe1d64b47a20bf9b22e6d98a",
+    "outputs/direct-eos-gr33/gr-molecular-reference-defined/manifest.json": "144c1a4691bf26823f70c17367a4aa3ccba7a70c208474cbc484086df425d282",
+    "verification/direct_eos_gr.py": "5709a4cbf5830de09001481813617d43ee2c935a0dff3cd813110d73a7066fdf",
+    "outputs/direct-eos-gr33/gr-plasma-free-energy-matching/coulomb.f90": "f1f6471fe1ffc6ad18a4e174e0605a75050c9db6b371155133cc203c54ee3066",
+    "outputs/direct-eos-gr33/gr-plasma-free-energy-matching/coulomb.tex": "e219a11483fd5c1ac050e5ca39e67c17d3ce5f9cc62f8c5cc507eb800d990617",
+    "outputs/direct-eos-gr33/gr-plasma-free-energy-matching/debye-huckel-two-component2017.pdf": "d3c89cb5be87ba1029a9773a6564f04a5f30e55003926197cbe7693d026e8d76",
+    "outputs/direct-eos-gr33/gr-plasma-free-energy-matching/debye-huckel-two-component2017.txt": "2ae0b24cad53450f79ddc4ed80ea62109ecd93ebe7a3be0c09dd5aca86c08340",
+    "outputs/direct-eos-gr33/gr-plasma-free-energy-matching/direct_ion_bridge.f90": "ee9375deb6941add7ec549dd7b07aa0835f3b9fbfbb37b84139400a5f38a7927",
+    "outputs/direct-eos-gr33/gr-plasma-free-energy-matching/mod_free_eos.f90": "5c2a2b75d69d8c88da96f175e0e0c694a077e5a087a4b2aafff7ea0620e5769a",
+    "outputs/direct-eos-gr33/gr-plasma-free-energy-matching/mod_pi_fit.f90": "bde405721fcdcb9e95e174c87b94a0aced43b5c9650ef39c8fe2897b08202f88"
+  },
+  "sources": [
+    "https://arxiv.org/abs/1704.06502",
+    "https://freeeos.sourceforge.net/coulomb.pdf",
+    "https://arxiv.org/abs/hep-ph/9302213"
+  ],
+  "original_freeeos_pdf_download": "HTTP 403 from urllib; retain native repository Coulomb paper TeX and active implementation instead. Public PDF was independently readable through web retrieval.",
+  "target": "Prove the classical weak-coupling Coulomb ring functional matches the already-present native Debye-Huckel free-energy term. Derive the finite longitudinal-branch boundary term before any EOS substitution. Count actual saved native Coulomb regimes without treating their fit as physically certified.",
+  "numerical_control": "80-decimal independent logarithmic ring integral against its analytic value, absolute tolerance 1e-30. Symbolic DH thermodynamic derivatives, native algebra matching, and finite-boundary integration by parts.",
+  "scope": "Conditional matching/no-double-count boundary, not a complete RPA/free-energy replacement, a fitted dense-plasma EOS, atmosphere, transport or GR evolution."
+}

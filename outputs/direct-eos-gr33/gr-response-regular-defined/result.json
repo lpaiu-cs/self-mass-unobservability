@@ -1,0 +1,21 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "phase_upper": "100167132717708743495887331388945992751/85070591730234615865843651857942052864",
+  "positive_response_lower_coefficient": "319192941149549473717312484325962446233/12259964326927110866866776217202473468949912977468817408",
+  "real_energy_shift_upper": "85071588668755798722984702666958214749/43556142965880123323311949751266331066368",
+  "tail_coefficient_upper": "135542099624078105547315962430747001455/421249166674228746791672110734681729275580381602196445017243910144",
+  "display_only": {
+    "phase_upper": 1.1774589864773295,
+    "positive_coefficient": 2.6035389062959316e-17
+  },
+  "primitives": "For gamma_p=sqrt(1+p^2), f=1/(1+exp((gamma_p-1)/beta-eta)), define V1(p)=integral_gamma_p^infinity f(gamma) dgamma and V0(p)=integral_gamma_p^infinity gamma^2 f(gamma) dgamma. Both are even in p. W(p)=V0(p)-p^2 V1(p) and H(p)=f(p)/gamma_p+2V1(p) satisfy W_prime(p)=-p*H(p), H>0.",
+  "identity": "Integrate the original logarithmic kernel by parts, in the principal-value sense: S=A0-PV integral [V0(p)-Q^2 V1(p)]/(p^2-Q^2) dp. Since integral V1(p)dp=A0=integral p^2 f(p)/gamma_p dp, the constant terms cancel exactly. PV integral_0^infinity 1/(p^2-Q^2)dp=0, hence S=integral_0^infinity [W(Q)-W(p)]/(p^2-Q^2) dp. The diagonal limit is H(Q)/2. No finite-temperature approximation is introduced.",
+  "positive_double_integral": "Using W_prime=-pH gives S(Q)=1/2 integral_0^infinity dp integral_0^1 du H(sqrt((1-u)*Q^2+u*p^2)). The integrand is positive for real p,Q. At Q=0 its limit is integral H(p)dp, agreeing with the original zero-Q kernel. The diagonal p=Q and Q=p=0 are removable. The same identity holds for all five eta/tau partials by dominated differentiation.",
+  "analytic_definition": "For complex Q=x+iy and lambda=1-u, put a^2=lambda*x^2+u*p^2 and gamma_a=sqrt(1+a^2). In the double integral use gamma=sqrt(1+lambda*Q^2+u*p^2) directly, so no auxiliary square-root branch in p is introduced. Re gamma lies in [gamma_a/kappa,gamma_a], |gamma|<=plus*gamma_a and |arg gamma|<=atan(sigma_max*kappa^2).",
+  "energy": "Writing t=(gamma-1)/beta and t_a=(gamma_a-1)/beta, t_a-D<=Re t<=t_a, D=delta^2*kappa/2, delta=1/16. For t_a<=Tc=176, |Im t|<=delta*kappa*sqrt(2Tc). This follows from lambda*|x|<=a, Im gamma=lambda*x*y/Re gamma and a^2/gamma_a^2<=2beta*t_a. The saved phase includes the inverse-gamma factor and is below pi/2.",
+  "inner": "For t_a<=Tc, |arg f(t-eta)|<=|Im t| and |f(t-eta)|>=f(t_a-eta). V1=beta*integral_0^infinity f(t+s-eta)ds has the same phase bound and real lower comparison. Therefore Re H_complex >= L*H_real with L=cos(total_phase)/plus.",
+  "tail": "For t_a>Tc, Re(t-eta)>log 2 and |f|, |V1|/beta <=2exp(eta+D-t_a). Compare with eta=0 at twice beta: f(t_a/2)>=exp(-t_a/2)/2 and log(1+exp(-t_a/2))>=exp(-t_a/2)/2. Thus |H_complex|<=4kappa exp(eta+D-Tc/2)H_half, while H_real<=2exp(eta-Tc/2)H_half. Integrating these enlarged positive tails uses the previously certified C/max(1,x^2).",
+  "conclusion": "For every real x, beta in the declared box and eta in the declared box, Re S(x+iy)>=[L*W0-(2L+4kappa*exp(D))*exp(24-Tc/2)*C]/max(1,x^2)>0 when |y|<=sqrt(beta)/16. Exponential Fermi tails and the positive double integral supply integrable domination, proving analyticity on the open strip and continuity on its boundary. Fermi poles and gamma branch points are excluded by the same inner/tail split.",
+  "limitation": "Re S>0 does not exclude dielectric zeros when Re(Q^2)<0. No stronger G-domain, joint parameter domain or actual outer integral is claimed."
+}

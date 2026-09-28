@@ -1,0 +1,37 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "51f42a5f4",
+  "claim": "At the actual updated initial state and both final states, invert the native atmosphere EOS at fixed conserved D,S,K,H and insert its pressure/velocity into the exact trace and radial metric stress.",
+  "decision": "A0.2percent constitutive failure or2percent atmospheric endpoint source change requires repair of the EOS owner before another coupled path. Small endpoint corrections remain limited evidence, not a final-charge or whole-trajectory certificate.",
+  "reuse": "All128 initial and223+223 final active atmospheric cells saved by Phase130; no fluid replay or enlarged mesh. Native ion/molecule constraints and H definition remain those of the existing atmospheric owner.",
+  "gates": {
+    "conservative_energy": 1e-12,
+    "conservative_momentum": 1e-12,
+    "density": 1e-10,
+    "root_logT_shift": 0.02,
+    "root_reseed": 1e-10,
+    "constitutive": 0.002,
+    "endpoint_source": 0.02
+  },
+  "budget": {
+    "pilot_seconds": 40,
+    "pilot_native_calls": 1000,
+    "production_seconds": 180,
+    "production_native_calls": 18000,
+    "CPU_threads": 1,
+    "memory_GB": 3,
+    "new_fluid_steps": 0
+  },
+  "forecast": "Six actual cells span initial/deep atmosphere, pressure fan and dilute front. Reuse pilot states; require twice slowest measured root time for remaining states plus10s to fit180s. Do not extend the budget or support automatically.",
+  "stop": "Preserve failed native root, constitutive or source gate. Endpoints do not determine the intervening retarded charge; do not interpolate an invented correction history or launch a full replay for diagnostics.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_atmosphere_inverse.py": "884bc91fba6bd5897b4fb2d0ec58f30042afdb3ab75b43b2eb4620d2de2777c3",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_refined_thermochemistry.py": "d58a3a9511fff956ca2e14dd15419d052cfd62db159539a3ce69199047f91ebb",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/evolution/final-64.npz": "5071210a586ee85db9eb58784719233d154f2cafb48c13e1e063fbe419aeb039",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/evolution/final-128.npz": "00d481913a542c7182c88bf10ced1759b24f3fcb825d90f422c1079002218809",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/evolution/gr/result.json": "089b7fdcdebf5b61488fc9105100b10785bdae9c70b325587006b6a39460bf78",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-initial-constraints/finite-volume/balanced-20.npz": "72ae702c85db57f0c02c1e5ca15dfad7df50d901b4270531e5b49c8c3746d3cb",
+    "/home/lpaiu/work/direct-eos-gr33/native-cold-population/stable/gas.so": "b2db87a38c316cac016a9c3bba333a52839db0c13c360c402dac310ee3e3b2c7",
+    "/home/lpaiu/work/direct-eos-gr33/photon-eos-levels-repaired/levels.so": "f5ebb8b31b67cfb8591cad491abd7930738d22e3eb9eebe90bed1519dd610b31"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "b3552307",
+  "bindings": {
+    "verification/def_reactive_structure_balanced.py": "254fb545fc4a6cc05c1e78073239b88db7b26bf37278f8dfc5fc11971ecaae37",
+    "verification/def_reactive_structure.py": "80179058d88579c5d439a26b194535f4e3bd64459ba5c931e47c4e7d41194202",
+    "outputs/direct-eos-gr33/def-free-surface-thermal/reactive-tangent/paired-native/energy-consistent/structure/result.json": "9ec6616ce2425190462e70a3135e2da589c2d1a06b958aecfbd0d35378682e27",
+    "outputs/direct-eos-gr33/def-free-surface-thermal/reactive-tangent/paired-native/energy-consistent/forcing.npz": "133210ab54e74de9375156105ae8de3646f492ac2002dfacaf90ee8f52e1d4b6",
+    "outputs/direct-eos-gr33/def-free-surface-thermal/reactive-tangent/paired-native/energy-consistent/result.json": "46038ed4cbaf2f4515c2a89702b1d76e5e0943a71466a3d29e056aa3708b83e2",
+    "outputs/direct-eos-gr33/def-free-surface-response/normalized/background.npz": "c42374d2a79ab37cc716bad52e6b72a4940dc82f0923f71856601f213f0c4a2c",
+    "outputs/direct-eos-gr33/def-free-surface-thermal/sources.npz": "87c71aebfa10fb222030a1f818ab350e14362e1d0c5eb9c8d14959a4809168fe",
+    "outputs/direct-eos-gr33/def-free-surface-thermal/coefficients.npz": "8fa9ddf79c966965a3a3fa26e6b4c738f82eec0b6ad257e521ae37c9403fb46c"
+  },
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "equations": [
+      "Delta ln rho=eta/Gamma1+rho_ref; Delta e=w*eta/Gamma1+e_ref",
+      "xi_prime=-eta/Gamma1-rho_ref-2*zeta-Delta lambda-3*alpha*f",
+      "Delta p_prime=-g*(Delta e+Delta p+w*xi_prime)-w*Delta g",
+      "f_prime=V+xi_prime*Phi; V_prime=Delta F+xi_prime*F",
+      "Delta m_prime=Delta M+xi_prime*M"
+    ],
+    "source_identity": "At fixed pressure, d(e/rho+p/rho)=-loss: e_ref=w*rho_ref-rho*loss. Nuclear rest-to-thermal conversion must not be counted as added total energy.",
+    "scope": "Lagrangian variation of static field equations at fixed baryon inventory. No assumption of a stationary thermal background or a dynamic transport solution."
+  },
+  "mass_identity": {
+    "classification": "Proven",
+    "passed": true,
+    "definition": "J=Delta m-[r^2*b*Phi*f-(4*pi*r^2*A^4*p+r^2*b*Phi^2/2)*xi]",
+    "equation": "J_prime=-(4*pi*r*A^4*(e+p)/b+r*Phi^2)*J-4*pi*r^2*A^4*loss",
+    "integrating_factor": "N*a; (N*a*J)_prime=-4*pi*r^2*A^4*N*a*loss",
+    "ADM_first_law": "At fixed phi_infinity: dot M_geom=-(G/c^4)*1e-7*sum(dm*A^2*N^2*epsilon_nu) for dm in grams and epsilon_nu in erg/g/s.",
+    "scope": "Linear quasi-static first law. Nuclear rest energy becomes internal energy; only specified escaped neutrino energy is removed at the initial zero-flux state."
+  },
+  "preserved_failure": "Original independent-mass solve lost precision through reversible-work cancellation. Original first-law reporting also used the energy-density conversion 0.1 for luminosity, whose correct conversion is 1e-7. Preserve its failed results.",
+  "claim": "Connect native reaction plus chemical energy to baryon-preserving quasi-static free-surface displacement, independent mass constraint and exact Just scalar/mass readout at fixed asymptotic scalar.",
+  "missing": "This tangent omits inertia and evolving heat transport. It is neither a physical trajectory nor a measured orbital charge.",
+  "outer_source": "Reference source is zero beyond the original native inventory. Compare constant fractional density source and density-scaled volumetric loss outside it; both are declared continuations, not physical certification.",
+  "gates": {
+    "linear_residual": 1e-09,
+    "adiabatic_control_relative": 0.001,
+    "spatial_displacement": 0.02,
+    "spatial_charge": 0.02,
+    "probe_readout": 0.01,
+    "mass_first_law": 0.02
+  },
+  "budget": {
+    "hard_timeout_seconds": 60,
+    "native_calls": 0,
+    "new_time_steps": 0,
+    "maximum_solves": 6,
+    "refinements": [
+      1,
+      2
+    ],
+    "automatic_expansion": false
+  }
+}

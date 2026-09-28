@@ -1,0 +1,8 @@
+{
+  "classification": "Counterexample candidate",
+  "split_failure_sha256": "cd88575c50cd54a9388a127aa3441a8889ec074e2f920e6c913b3532a29eec43",
+  "changes": "Couple all 26 reaction variables, delta lnT and an integrated neutrino-energy variable in one exponential step. Project endpoint T using the actual HELM energy. This resolves the fast linear nuclear transients in the loss quadrature.",
+  "Jacobian": "Use native f_X,f_T,heat_X,heat_T; use the source identity nu=-q*f-heat for an approximate reaction-neutrino Jacobian. Use a checked initial HELM energy composition gradient. Heat-capacity derivatives, thermal-neutrino derivatives, weak-Q state corrections, and subsequent composition-gradient changes are omitted from this approximate step matrix; the base vector and endpoint EOS/nu are evaluated natively. This is not a full physical Jacobian certificate.",
+  "controls": "Same strict energy and composition/temperature refinement gates; additionally require integrated neutrino step-refinement <1e-3. Check an analytic irreversible conversion with finite heat capacity and known neutrino fraction.",
+  "HELM_gradient": "At fixed rho,T, HELM internal energy depends on abar,zbar. Use independent H1/He4 and C12/He4 directions at absolute steps 1e-6 and 5e-7, check refinement <1e-4; reconstruct its abundance gradient up to a baryon constant."
+}

@@ -1,0 +1,12 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "constitutive_model": "tau*Delta^mu_nu*u^alpha*nabla_alpha q^nu+q^mu=-K*(Delta^mu_nu*nabla^nu T+T*a^mu), with consistent c factors restored in the physical-second initial equations. No viscosity, baryon diffusion or extra Israel-Stewart expansion terms are included.",
+  "nonzero_heat_principal_part": "With j=Q/w and initial material v=0, energy has the added 2*j*v_dot and momentum the added 2*c*j*v_x. The projected Cattaneo time/spatial principal coefficients are unchanged at this instant. Coefficients and background are frozen only for this local characteristic test.",
+  "polynomial": "b*(lambda-1)*v^4+2*j*(lambda*(d-b)-1)*v^3-[lambda*(b*r+d*e)+1-e-d]*v^2+2*j*v+r; v is characteristic speed/c.",
+  "root_certificate": "A nonzero real quartic with opposite endpoint signs in four disjoint intervals contained in (-1,1) has exactly four distinct real subluminal roots, by the intermediate value theorem and its degree. This certifies the frozen principal matrix, not lower-order finite-k stability on a non-equilibrium background.",
+  "covariant_initial_reduction": "At v=0, the projected derivative of radial Q/a is Q_dot/(a*N), because the time derivative of the spatial basis cancels the connection. The material acceleration includes (ln N)_r/a + v_dot/(N*c). Thus tau*Q_dot+w*h*v_dot=N*(Q_F-Q), h=K*T/(w*c^2), where tau is a proper time and dots use the same coordinate seconds.",
+  "coupled_initial_rates": "Let R=2*c*N*A*Q. Momentum gives Q_dot+w*v_dot=R. Hence Q_dot=[N*(Q_F-Q)-h*R]/(tau-h), v_dot=[tau*R-N*(Q_F-Q)]/[w*(tau-h)].",
+  "initial_target_specialization": "For Q_F=Q, Q_dot=-h*R/(tau-h) and v_dot=tau*R/[w*(tau-h)]. Insert this v_dot into the earlier corrected material energy and temperature rates. It is generally nonzero despite initial v=0.",
+  "limitations": "This is a specified initial tangent and pointwise cone audit. No finite time step, spatial truncation certificate, lapse update, nonlinear stability, physical transport calibration, reaction/convection/atmosphere or complete GR solution is claimed."
+}

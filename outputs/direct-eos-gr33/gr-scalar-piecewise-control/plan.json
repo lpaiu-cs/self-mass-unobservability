@@ -1,0 +1,23 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "427ebf8",
+  "bindings": {
+    "verification/gr_scalar_piecewise_control.py": "4a0dae2f12795d898b871a1069fcbe3c3d861a7a0575d5cf045144ca97373239",
+    "outputs/direct-eos-gr33/gr-scalar-residual-dyadic/manifest.json": "55468b80c8bc805e7711f8fdf49b4eff5b4c63ea0b7ba72fdbff88e90eb45394",
+    "outputs/direct-eos-gr33/gr-scalar-global-regular/manifest.json": "1aec3bc7c56238587e8bc4ea735604938a93fbf6053327c99204876fc68b4cb9",
+    "outputs/direct-eos-gr33/gr-scalar-pressure-readout/field-2e-12.npz": "77516afd35cf18cb0ea07bf3c5e914a142411cd2fc884f3e68f1b69b367138e8"
+  },
+  "cases": [
+    {
+      "tolerance": 2e-12,
+      "centre_seed": 1e-09
+    },
+    {
+      "tolerance": 2e-13,
+      "centre_seed": 1e-12
+    }
+  ],
+  "method": "Reuse DOP853 and the stored cubics but restart at every coefficient boundary, passing the previous field/flux onward. The first case retains the original tolerance and seed. The second lowers both. The same declared exterior normalization and R/M are used.",
+  "comparison": "Check the computed coefficient against the already frozen rigorous residual enclosure; retain noninclusion. This is an independent finite numerical control, not a replacement for the certificate or a new physical model.",
+  "boundary": "Seed approximation, floating coefficient evaluation and IVP error are not certified by these two runs. The independent exact-polynomial certificate includes the full centre interval and remains authoritative for the declared coefficients."
+}

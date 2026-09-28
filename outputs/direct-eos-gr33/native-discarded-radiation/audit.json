@@ -1,0 +1,51 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "paths": [
+    {
+      "steps": 64,
+      "exact_rational_dose_relative": 2.220446049250313e-16,
+      "native_discard_mass_absolute_g": 3.885305934104809e-07,
+      "native_discard_Killing_energy_absolute_erg": 351646386206763.6,
+      "native_discard_additional_dose_bound_erg": 1215237918215365.8,
+      "fixed_mass_scalar_bound": 9.577277526181397e-32,
+      "normalized_charge_bound": 1.032846216533024e-29,
+      "fixed_scalar_fraction": 9.379107371296767e-05,
+      "normalized_over_scalar": 0.010114748723130385,
+      "passive_normalized_interval": [
+        5.2277956079662975e-27,
+        5.2484525322969596e-27
+      ]
+    },
+    {
+      "steps": 128,
+      "exact_rational_dose_relative": 0.0,
+      "native_discard_mass_absolute_g": 3.34845405494511e-07,
+      "native_discard_Killing_energy_absolute_erg": 303057674080323.6,
+      "native_discard_additional_dose_bound_erg": 1047282345365388.4,
+      "fixed_mass_scalar_bound": 9.225458310634275e-32,
+      "normalized_charge_bound": 9.903642958922453e-30,
+      "fixed_scalar_fraction": 9.034567893466942e-05,
+      "normalized_over_scalar": 0.00969871974836219,
+      "passive_normalized_interval": [
+        5.228220427172706e-27,
+        5.2480277130905514e-27
+      ]
+    }
+  ],
+  "numerical_subproblem_passed": true,
+  "production_budget_passed": false,
+  "overall_phase_passed": false,
+  "deadline_repair_tested": true,
+  "production_repeated": false,
+  "conservative_boundary_lapse_used": true,
+  "signed_native_discard_envelope_included": true,
+  "interpretation": "This closes the passive radiative energy-growth subproblem of the declared compact reservoir. It does not verify confinement or the incident envelope in a full live coupled trajectory, or bound pressure-work and changed-photon amplification by retained matter. Preserve the resource failure.",
+  "full_floor_feedback_enclosed": false,
+  "full_source_error_enclosed": false,
+  "coupled_fixed_point_verified": false,
+  "nonlinear_GR": false,
+  "final_charge_solved": false,
+  "full_goal_complete": false,
+  "seconds": 0.28479223000000076
+}

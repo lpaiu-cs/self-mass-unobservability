@@ -1,0 +1,1082 @@
+arXiv:2104.09964v1  [physics.plasm-ph]  20 Apr 2021
+Electrostatic energy of Coulomb crystals with polarized el ectron background ∗
+A. A. Kozhberov † and A. Y. Potekhin ‡
+Ioﬀe Institute, Politekhnicheskaya 26, Saint Petersburg, 1 94021, Russia
+(Dated: April 21, 2021)
+Outer crusts of neutron stars and interiors of cool white dwa rfs consist of bare atomic nuclei,
+arranged in a crystal lattice and immersed in a Fermi gas of de generate electrons. We study electro-
+static properties of such Coulomb crystals, taking into acc ount the polarizability of the electron gas
+and considering diﬀerent structures, which can form the gro und state: body-centered cubic (bcc),
+face-centered cubic (fcc), hexagonal close-packed (hcp), and MgB 2-like lattices. At zero tempera-
+ture the electrostatic energy brings a fundamental contrib ution to the total energy of the classical
+Coulomb crystal, which allows us to study structural transi tions in the neutron-star crusts and crys-
+tallized white-dwarf interiors. To take the electron backg round polarization into account, we use
+the linear response theory with the electron dielectric fun ction given either by the Thomas-Fermi
+approximation or by the random-phase approximation (RPA). We compare the widely used nonrela-
+tivistic (Lindhard) version of the RPA approximation with t he more general, relativistic (Jancovici)
+version. The results of the diﬀerent approximations are com pared to assess the importance of going
+beyond the Thomas-Fermi or Lindhard approximations. We als o include contribution of zero-point
+vibrations of ions into the ground-state energy. We show tha t the bcc lattice forms the ground
+state for any charge number Z of the atomic nuclei at the densities where the electrons are rela-
+tivistic ( ρ ≳ 106 g cm −3), while at the nonrelativistic densities ( ρ ≲ 106 g cm −3) the fcc and hcp
+lattices can form the ground state. The MgB 2-like lattice never forms the ground state at realistic
+densities in the crystallized regions of degenerate stars. The RPA corrections strongly aﬀect the
+boundaries between the phases. As a result, transitions bet ween diﬀerent ground-state structures
+depend on Z in a nontrivial way. The relativistic and quantum correctio ns produce less dramatic
+eﬀects, moderately shifting the phase boundaries.
+P ACS numbers 52.27.Gr, 52.27.Lw, 52.25.Kn, 05.70.Ce
+I. INTRODUCTION
+A model of Coulomb plasma assumes that the system
+consists of point-like charged particles and the neutral-
+izing background. The basic physics behind this model
+was explored in many works and summarized in a num-
+ber of review papers, textbooks and monographs (e.g.,
+[1–3], and references therein). This model is quite uni-
+versal and is used in many areas of physics, for example,
+in astrophysics, for description of such diﬀerent objects as
+neutron stars, white dwarfs, gas giants, and dusty clouds
+(e.g., [4–10]).
+At suﬃciently low temperatures or high densities, the
+Coulomb plasma forms a crystal (see, e.g., Ref. [11] for
+a discussion of the phase diagram of Coulomb crystals
+in classical and quantum plasmas). In particular, some
+regions of the degenerate stars, namely crusts of neu-
+tron stars (e.g., [9], and references therein) and cores of
+suﬃciently cool white dwarfs (e.g., [9, 12], and references
+therein), are formed by Coulomb crystals, where a lattice
+of bare atomic nuclei is embedded in the background of
+degenerate electrons. The question, which type of crys-
+tal lattice forms in such stars, is not solved completely.
+For crystals with the same ion charge number Z it was
+∗Published in Phys. Rev. E 103, 043205 (2021),
+https://doi.org/10.1103/PhysRevE.103.043205
+†Electronic address: kozhberov@gmail.com
+‡Electronic address: palex@astro.ioﬀe.ru
+discussed in [9, 13–15]. More complex systems with two
+or three diﬀerent charged ions were studied in [14–17]. In
+all of the papers cited above, the uniform electron back-
+ground was considered.
+The aim of the present paper is to take into account the
+inﬂuence of the electron background polarization on the
+electrostatic energy and the ground state of a Coulomb
+crystal. Previously this problem was studied only for
+the body-centered cubic (bcc) and face-centered cubic
+(fcc) lattices [1, 18–21]. In this paper, we investigate
+other lattices, such as hexagonal close-packed (hcp) and
+one-component MgB 2. It allows us to construct a more
+complete picture of structural transitions in degenerate
+stars. As well as the previous authors, we assume that the
+electron screening is weak, which is justiﬁed in the case
+of strongly degenerate electrons. We consider diﬀerent
+lattices, calculate their ground-state energies, and ﬁnd
+which lattice is most preferable. The electron polariza-
+tion eﬀects are described in frames of the linear response
+theory by the dielectric function, for which we use and
+compare three approximations: the widely used Thomas-
+Fermi theory, the Lindhard model [22] based on the non-
+relativistic random-phase approximation (RPA), and the
+extension of the Lindhard model for the relativistic elec-
+trons [23] (see also, e.g., [1, 24]). Comparing the results
+obtained using these three models, we will estimate the
+importance of the corrections beyond the Thomas-Fermi
+approximation and of the eﬀects of special relativity.
+The paper is organized as follows. In Sec. II we in-
+troduce basic parameters of the polarized electron back-
+2
+ground and present the three diﬀerent approximations
+for the dielectric function, which are used in the sub-
+sequent sections. In Sec. III we determine the ground
+state structure of the Coulomb plasma, following the ap-
+proach of Chamel and Fantina [14]. According to this
+approach, at zero temperature the type of the lattice is
+mainly determined by the electrostatic energy, all point-
+like ions being in equilibrium positions Rl. We compute
+the electrostatic energy in diﬀerent approximations and
+compare the results for the phase boundaries between dif-
+ferent ground-state structures. In Sec. IV we go beyond
+the approach of Chamel and Fantina [14] by taking into
+account the zero-point vibrations of ions around their
+equilibrium positions. In Sec. V we check the accuracy
+of the calculated ground-state energy and positions of
+phase boundaries by evaluation of possible corrections to
+our approximations. Results are discussed and conclu-
+sions are given in Sec. VI.
+II. P ARAMETERS AND APPROXIMATIONS
+FOR POLARIZED BACKGROUND
+Since ions move slowly, it is suﬃcient to use the linear
+response approximation and the static longitudinal di-
+electric function ǫ(q) to describe the degenerate electron
+background [25]. In the approximation of the uniform
+(“rigid”) background, ǫ(q) = 1. In the present paper we
+take the background nonuniformity into account by con-
+sidering only the ﬁrst-order perturbation corrections to
+the dielectric function ǫ(q). It is convenient to write
+ǫ(q) = 1 + κ 2
+TF
+q2 ǫ2(q) , (1)
+where q is the wavenumber, ǫ2(q) is the correction, which
+will be discussed later, and
+κ TF =
+√
+4πe 2 ∂n e
+∂µ e
+≈ 2
+√
+e2
+π ℏvF
+pF
+ℏ (2)
+is the Thomas-Fermi electron wavenumber. Here, ne is
+the electron number density, µ e is the electron chemical
+potential, pF = ℏ(3π 2ne)1/3 is the Fermi momentum, and
+vF = ∂E F /∂p F is the Fermi velocity, EF being the Fermi
+energy. The ﬁrst equality in Eq. (2) is quite general, while
+the second is approximately valid in the case of strongly
+degenerate electrons, where µ e ≈ EF .
+In the degenerate stars, the electrons can be relativistic
+due to high densities. The relativity parameter [26] is
+x ≡ pF
+mec ≈ 0. 01 (ρ Z/A )1/3, (3)
+where me is the electron mass, ρ is mass density in units
+of g cm − 3, Z is the ion charge number and A is the rela-
+tive atomic weight of the considered isotope. The second
+part of Eq. (3) assumes the neutrality condition ne = Zn,
+where n is the ion number density.
+In plasma physics, it is customary to use the dimen-
+sionless density parameter rs = ae/a B, where ae =
+(4πn e/ 3)− 1/3 is the electron sphere radius and aB ≡
+ℏ2/m ee2 is the Bohr radius. It is related to the rela-
+tivity parameter as rs = (9π/ 4)1/3α/x ≈ 0. 014/x , where
+α ≡ e2/ ℏc is the ﬁne structure constant.
+In general, Eq. (2) is valid both for the the nonrel-
+ativistic treatment and for the special relativity taken
+into account. In the latter case, Eq. (2) leads to the
+expression
+κ TF ae =
+( 18
+√ π
+) 1/3 √ αγ
+x ≈ 0. 185
+√γ
+x , (4)
+where γ ≡
+√
+1 + x2 is the electron Lorentz factor on the
+Fermi surface.
+The importance of the electron polarization is mainly
+indicated by the Thomas-Fermi parameter κ TFa, where
+a ≡ (4πn/ 3)− 1/3 is the ion sphere radius. The charge
+neutrality requires that a = aeZ 1/3, and then Eq. (4)
+yields
+κ TFa ≈ 0. 185 Z 1/3
+√ γ
+x . (5)
+The model of uniform electron background is equiva-
+lent to neglecting the term with ǫ2(q) in Eq. (1). To go
+beyond this approximation, we use three expressions for
+ǫ2(q). The most common of them is the Thomas-Fermi
+approximation, which is valid in the long-distance (short
+wavenumber) limit at any x. It gives
+ǫ2TF(q) = 1 . (6)
+In the non-relativistic case ( x ≪ 1) and for strongly
+degenerate electrons, the RPA leads to the Lindhard (L)
+dielectric function [22],
+ǫ2L(q) = 1
+2 + 1 − y2
+4y ln
+⏐
+⏐
+⏐
+⏐
+1 + y
+1 − y
+⏐
+⏐
+⏐
+⏐ . (7)
+where y = ℏq/ (2pF ) ≈ 0. 26qae.
+The RPA with allowance for the electron relativity
+leads to the Jancovici (J) model [23]
+ǫ2J(q) = 2
+3 − 2
+3
+y2x
+γ ln(x + γ) + x2 + 1 − 3x2y2
+6yx2 ln
+⏐
+⏐
+⏐
+⏐
+1 + y
+1 − y
+⏐
+⏐
+⏐
+⏐
++ 2y2x2 − 1
+6yx2
+√
+1 + x2y2
+γ ln
+⏐
+⏐
+⏐
+⏐
+⏐
+yγ +
+√
+1 + x2y2
+yγ −
+√
+1 + x2y2
+⏐
+⏐
+⏐
+⏐
+⏐ . (8)
+The Jancovici dielectric function reduces to the Lind-
+hard dielectric function in the nonrelativistic limit x → 0,
+and both Lindhard and Jancovici models reduce to the
+Thomas-Fermi model in the long-wavelength limit y → 0.
+III. ELECTROSTATIC ENERGY
+A. Uniform background
+First let us outline the main results for the Coulomb
+crystals with the uniform background. The electrostatic
+3
+TABLE I: Madelung constant ζ in Eq. (9) and coeﬃcient ηTF
+of the quadratic approximation (15) for the bcc, fcc, hcp, an d
+MgB2 lattice types.
+lattice ζ η TF
+bcc −0.895929255682 −0.103732333707
+fcc −0.895873615195 −0.103795687531
+hcp −0.895838120459 −0.103809851801
+MgB2 −0.89450562823 −0.104080616256
+energy of such crystals can be written as
+UM = N Z 2e2
+a ζ , (9)
+where ζ is called a Madelung constant, and N is the
+total number of ions. Accurate values of the Madelung
+constant for four lattices with the lowest UM are quoted
+in Table I from the previous works (see the recent review
+[15] and references therein).
+Here we use the traditional geometry of the hcp lattice
+(e.g., [27]) with the distance between hexagonal layers
+h0/ 2 =
+√
+2/ 3 al ≈ 0. 816497al, where al is the lattice
+constant and h0 is the height of the primitive Bravais cell,
+while for the one-component lattice of the MgB 2 type
+the lowest-energy conﬁguration is used. The electrostatic
+energy of the Coulomb hcp lattice is the lowest for the
+lattice with h0/ 2 replaced by hmin/ 2 ≈ 0. 81782al, but
+this diﬀerence aﬀects only the 7th signiﬁcant digit of UM
+and is unimportant, as we show in Sec. V below.
+From Table I we see that the bcc lattice has the low-
+est electrostatic energy. So its formation among all lat-
+tices with one type of ion in the elementary cell and uni-
+form background is most likely. For the multi-component
+crystals, formation of other lattices is also possible (e.g.,
+[14, 15], and references therein).
+B. Polarized background. Basic notations
+Expressions for the electron screening corrections to
+the thermodynamic functions of the one-component plas-
+mas have been derived in frames of the thermodynamic
+perturbation theory by Galam and Hansen [28]. In the
+particular case of the one-component Coulomb crystal in
+the harmonic approximation, the polarization correction
+to the electrostatic energy can be written as [20]
+∆Upol = N Z 2e2
+a
+3
+2N 2
+cell
+∑′
+m
+1
+(Gma)2
+[ 1
+ǫ(Gm) − 1
+]
+×
+∑
+p,p′
+eiGm(χp− χp′) , (10)
+where Ncell is the number of ions in the elementary cell
+and the sums run over all basis vectors χp in the ele-
+mentary cell ( p and p′) and all reciprocal lattice vectors
+Gm with the exception of G = 0. The total electrostatic
+energy with the polarization correction becomes
+U = UM + ∆Upol. (11)
+Three approximations for the dielectric function, given
+by Eqs. (6), (7), and (8), yield three diﬀerent values of
+electrostatic energy, which we denote UTF, UL and UJ ,
+respectively.
+Equation (1) is written in the linear response approxi-
+mation, which is valid if the typical energy of electron-ion
+interaction Ze 2/a is small compared to the Fermi energy
+EF . Since
+Ze 2/a
+EF
+= x2
+γ(γ − 1)
+(κ TFa)2
+34/3 < 0. 463 (κ TFa)2, (12)
+the condition Ze 2/a ≪ EF is satisﬁed to a good accuracy,
+provided that κ TFa ≲ 1. This condition is usually well
+fulﬁlled in the crystallized regions of the degenerate stars.
+It justiﬁes that ǫ(q) in Eq. (1) contains only polarization
+corrections proportional to κ 2
+TF. Higher order corrections
+to the dielectric function are unknown. To estimate a
+possible eﬀect of the higher-order terms, we expand the
+electrostatic energy in a series in powers of κ TFa up to
+the quadratic terms. Then Eq. (10) is reduced to
+U2pol = − N Z 2e2
+a (κ TFa)2
+× 3
+2N 2
+cell
+∑′
+m
+ǫ2(Gm)
+(Gma)4
+∑
+p,p′
+eiGm(χp− χp′) . (13)
+Energies U2 ≡ UM + U2pol are denoted further in the text
+as U2J, U2L and U2TF for the Thomas-Fermi, Lindhard,
+and Jancovici models, respectively.
+C. Thomas-Fermi model
+The Thomas-Fermi model is the simplest and most
+widely used approximation for describing the eﬀects of
+electron polarization. It was applied to studies of the
+Coulomb crystals in degenerate stars in many works (e.g.,
+[18–20] and references therein). However, all previous in-
+vestigations concerned only the bcc and fcc lattices. Here
+we extend the consideration to two other lattice types,
+hcp and MgB 2.
+As can be seen from Eqs. (1), (6), (9), and
+(10), for each lattice type the dimensionless ratio
+UTF/ (N Z2e2a− 1) depends only on the single parameter
+κ TFa.
+To obtain the electrostatic energy, as can be seen from
+Eq. (13), one has to calculate slowly converging sums
+like ∑
+m(− 1)mG− 4
+m . In the Thomas-Fermi model, this
+diﬃculty can be overcome by the Ewald rearrangement
+4
+FIG. 1: Electrostatic energy of the bcc lattice in units of
+N Z2e2/a in diﬀerent approximations. The full Thomas-Fermi
+approximation UTF (Eq. (14), solid curve) and in the second-
+order approximation U2TF (Eq. (15), dashed curve) are com-
+pared with the rigid background approximation UM (Eq. (9),
+the horizontal line) and with the more accurate approxima-
+tions due to Lindhard ( UL, Sec. III D, dotted lines) and Jan-
+covici ( UJ , Sec. III E, dot-dashed lines) for carbon ( Z = 6)
+and iron ( Z = 26). The triangle and the heavy dot mark the
+minimum of κTFa in the relativistic (Jancovici) theory for C
+and Fe, respectively.
+[29], which reduces Eqs. (9) and (10) to
+UTF = N Z2e2
+{ 1
+Ncell
+∑
+l,p,p′
+(1 − δRl0δpp′) E− + E+
+4Yl
+− κ TF
+2 erf
+( κ TF
+2A
+)
+− A√ π exp
+(
+− κ 2
+TF
+4A2
+)
+− 2πn
+κ 2
+TF
++ 1
+N 2
+cell
+∑
+m,p,p′
+2πn
+G2
+m + κ 2
+TF
+× exp
+[
+− G2
+m + κ 2
+TF
+4A2 − iGm(χp − χp′)
+] }
+, (14)
+where E± = e± κTFYl erfc (AYl ± κ TF/ (2A)), Yl = Rl +
+χp − χp′, erf( x) is the error function, erfc( x) ≡ 1− erf(x),
+and A is an arbitrary constant; a good numerical conver-
+gence of both sums is provided by A ≈ 2/a [20].
+In Fig. 1, the electrostatic energy U is plotted by in
+diﬀerent approximations for the bcc lattice. In the cho-
+sen scale, the diﬀerence between the results for diﬀerent
+lattice types is not noticeable. In the full Thomas-Fermi
+model, Eq. (14), the bcc lattice has the lowest electro-
+static energy at κ TFa < 1. 065714, while the fcc lattice
+has the lowest UTF at larger κ TFa.
+The situation changes if we take the ﬁrst two terms of
+the series expansion in the parameter κ TFa only. This
+approximation gives
+U2TF = N Z 2e2
+a (ζ + ηTF(κ TFa)2) , (15)
+where constant ηTF depends on the type of the lattice and
+is presented in the last column of Table I. At the selected
+scale in Fig. 1 the diﬀerence between UTF (the solid line)
+and U2TF (the dashed line) is noticeable only at κ TFa ≳
+1. The diﬀerence between energies of diﬀerent lattices is
+very small, and the structural transition between the bcc
+and fcc lattice moves from κ TFa = 1 . 065714 to κ TFa =
+0. 93715, furthermore at κ TFa > 1. 58301 the hcp lattice
+will possess the smallest U2TF, while at κ TFa > 2. 21838
+the MgB 2 lattice becomes more energetically preferable.
+However, with the exception of the bcc-fcc transition,
+all other transitions are outside the limits of the theory
+applicability.
+The dotted and dot-dashed curves in Fig. 1 show the
+electrostatic energy in more advanced approximations,
+which are discussed below.
+D. Lindhard model
+The Lindhard expression for the dielectric function [22]
+and its generalization by Mermin [30] are widely used in
+the plasma physics (e.g., [28, 31]). The underlying RPA
+approximation makes this model more accurate than the
+Thomas-Fermi model.
+In this case, the Ewald resummation cannot be per-
+formed explicitly. Therefore we calculate the total elec-
+trostatic energy UL according to Eqs. (7), (10), and (11).
+Unlike the Thomas-Fermi model, the single parameter
+κ TFa is not suﬃcient anymore. Since ǫ2L(q) in Eq. (7)
+contains an argument y ∝ qae, the second dimension-
+less parameter appears, ae/a , which equals Z − 1/3 due to
+the charge neutrality. In Fig. 1, the dotted lines show
+UL for carbon and iron, which are most typical chemical
+elements in the white dwarf cores and neutron star en-
+velopes. In both cases the polarization correction appears
+smaller than in the Thomas-Fermi model. The diﬀerence
+UL − UTF is smaller for the larger Z, which reﬂects the
+well known fact that the Thomas-Fermi theory becomes
+more accurate with increasing Z.
+Results for the ground-state structure are presented in
+Fig. 2, where the diﬀerent regions hatched by the dashed
+lines show the range of parameters Z and x at which the
+fcc or hcp lattice has the lowest total energy, while the
+white area corresponds to the bcc lattice. The MgB 2 lat-
+tice is never energetically preferred in the density range
+shown in this ﬁgure, where formation of Coulomb crys-
+tals can be expected in the degenerate stars. The right
+vertical axis displays the density parameter rs, which is
+more customary than x in the nonrelativistic theory. The
+dot-dashed line corresponds to κ TFa = 1. 0657, which de-
+scribes the structural transition between the bcc and fcc
+5
+lattices in the Thomas-Fermi model. Recalling that the
+linear response theory is justiﬁed at κ TFa ≲ 1, we should
+accept the results in the region below this line with cau-
+tion. Anyway, we see a remarkable diﬀerence between the
+results obtained using the Thomas-Fermi and Lindhard
+models. For the latter model (unlike the former one), the
+ground state structure depends on Z in a nontrivial way,
+if the density parameter rs ≳ 0. 01 ( x ≲ 1. 4). However,
+in any case the bcc lattice forms the true ground state at
+rs < 0. 01.
+E. Jancovici model
+The Lindhard expression for the dielectric function is
+derived in the nonrelativistic formalism, therefore it is
+applicable only at x ≪ 1. The Jancovici model [23] gen-
+eralizes the Lindhard model taking the eﬀects of special
+relativity into account. Since the relativity parameter x
+is not small in the crystallized regions of the most typical
+neutron stars and white dwarfs, the Jancovici model is
+more suitable in the theory of these stars (e.g., [1, 9]), al-
+though it is used relatively rarely (e.g., [20, 32, 33]). For
+studying the electrostatic energy it was employed only in
+Ref. [20] for the bcc and fcc (but not hcp) lattices.
+The electrostatic energy for the Coulomb plasma of
+carbon and iron, calculated using the Jancovici model
+(UJ ), is shown in Fig. 1 by dot-dashed curves (see
+the data in [34]). These curves are not continued to
+κ TFa = 0, because in the relativistic theory the Thomas-
+Fermi parameter cannot be smaller than ( κ TFa)min =
+0. 185 Z 1/3, according to Eq. (5). Hence the electrostatic
+energy noticeably diﬀers from the limit UM at any den-
+sity. We see that UL and UJ are almost identical at
+κ TFa ≳ 2(κ TFa)min, but the results of the two models
+substantially diﬀer at smaller values of κ TFa; thus, the
+special relativity eﬀects reduce the polarization correc-
+tion by ∼ 30% at κ TFa ∼ (κ TFa)min.
+The areas hatched with the solid lines in Fig. 2 show
+the ranges of parameters Z and x where the fcc or hcp
+lattices have the lowest electrostatic energy according to
+the relativistic (Jancovici) model of the dielectric func-
+tion. They can be compared with the areas hatched with
+the dashed lines, which show analogous regions according
+to the nonrelativistic (Lindhard) model, which we con-
+sidered in Sec. III D. The diﬀerence between these two
+approximations is noticeable only at x ∼ 1. Qualita-
+tively, the results are very similar. It means that the rel-
+ativistic corrections to the dielectric function are not very
+important for the structural transitions of the Coulomb
+crystals. It is quite expected since the structural tran-
+sitions occur mostly at x ≲ 1. Note that relativistic
+corrections are rather insigniﬁcant also for the phonon
+spectra of Coulomb crystals [17, 20].
+In Fig. 3 we plot structural transitions for the second-
+order approximation U2J. Here, x and κ TFa are chosen as
+independent parameters. Our results for the bcc and fcc
+lattices reproduce the results of Baiko [20]. At high x the
+FIG. 2: The ranges of charge number Z, relativity parameter
+x, and density parameter rs, at which the fcc or hcp lat-
+tice (hatched areas according to the legend) form the ground
+state of a classical Coulomb crystal with polarizable elect ron
+background. The dashed and solid hatchings correspond to
+the Lindhard and Jancovici approximations to the dielectri c
+function of the electron background. In the white area, the
+ground state is formed by the bcc lattice. The dot-dashed
+line corresponds to κTFa = 1 .065714 and separates the re-
+gions where the ground state is bcc (above the line, where
+κTFa is smaller) or fcc (below the line, where κTFa is larger)
+in the Thomas-Fermi approximation.
+transition between the bcc and fcc lattices takes place at
+κ TFa between 0.935 and 0.945, which is consistent with
+the result of the Thomas-Fermi approximation (it gives
+the transition at κ TFa ≈ 0. 93715). At low densities the
+pattern of ground-state structures is more complicated.
+In the latter case, there appear several domains in the
+parameter plane where the hcp lattice is energetically
+preferable according to the Jancovici model.
+IV. ZERO-POINT VIBRATIONS
+In the previous sections we did not consider zero-point
+quantum vibrations of ions around their equilibrium po-
+sitions. This model would be accurate for very massive
+ions. In reality, the relative atomic weight A varies from
+A ≈ 2Z in the outer shells of neutron star crusts or crys-
+tallized cores of white dwarfs to A ≈ 3. 5Z near the neu-
+tron drip point in the neutron-star crust. In this section,
+we consider the eﬀects of the quantum vibrations on the
+ground-state structure of a Coulomb crystal, assuming
+A = 2Z. In this way we obtain an estimate of the upper
+limits for these eﬀects, because a larger A would result in
+a smaller vibration energy and accordingly a smaller dif-
+6
+FIG. 3: The ranges of parameters x and κTFa at which one
+or another lattice has the smallest U2J. The bcc lattice forms
+the ground state in the white region, the fcc lattice in the bl ue
+cross-hatched regions, and the hcp in the red ﬁlled regions.
+The dashed lines corresponds to Z = 3, 4, 6, 8, 26, and 40
+(marked near the curves).
+ference from the results obtained for the classical (ﬁxed
+in space) ions.
+The energy of the ground-state quantum vibrations
+of a three-dimensional harmonic lattice equals (cf., e.g.,
+[24])
+E0 = 3
+2 N ℏ⟨ω ⟩, (16)
+where ⟨ω ⟩ is the phonon frequency ω ν(k), averaged over
+all phonon modes ν and wavevectors k in the ﬁrst Bril-
+louin zone. In the ﬁrst approximation, the total ground-
+state energy is given by the sum E = U + E0, where
+U is the electrostatic energy (11). Equation (16) can be
+written in the dimensionless form as
+E0
+N Z2e2/a = 3
+2
+√
+3
+RS
+u1 , (17)
+where RS ≡ a/ [ℏ/m ion(Ze)2] ≈ 1823AZ 7/3rs is the ion
+density parameter (analogous to rs for the electrons),
+u1 ≡ ⟨ ω ⟩/ω p, ω p =
+√
+4πnZ 2e2/m ion is the ion plasma
+frequency, mion = Amu is the ion mass, and mu is the
+uniﬁed atomic mass unit.
+To calculate ⟨ω ⟩ and thus u1, the phonon spectrum
+was obtained by solving the dispersion equation, as de-
+scribed in Ref. [17]: det
+{
+Dαβ
+ss′(k) − ω 2
+ν(k)δαβδss′
+}
+= 0,
+where s and s′ run over the ions in the elementary cell,
+and Dαβ
+ss′(k) is the dynamic matrix. Generally, Dαβ
+ss′(k)
+is given, e.g., by Eq. (5.6) of Ref. [18], but in this sec-
+FIG. 4: Top panel : Dependence of the ﬁrst phonon moment
+u1 on the Thomas-Fermi parameter: computed values (black
+dots, blue squares, and red triangles for the bcc, fcc, and hc p
+Coulomb lattices, respectively) and the analytic ﬁt, Eq. (1 8)
+(the solid, dashed, and dotted lines, respectively). Middle
+panel: The ﬁt residuals, multiplied by 10 6. Bottom panel :
+The excess of the ﬁrst phonon moment u1 for the fcc and hcp
+Coulomb lattice over that for the bcc lattice, calculated fr om
+the numerical results (the symbols) and the analytic ﬁt (the
+lines).
+tion we calculate it in the Thomas-Fermi approximation
+(according to Eqs. (3) – (5) of Ref. [16]).
+The electron polarization decreases u1 and slightly af-
+fects the diﬀerences ∆ u1 between the diﬀerent lattice
+types. In the Thomas-Fermi model this dependence is
+well described by the simple Pad´ e approximation:
+u1 = u0
+1
+[
+1 + p4(κ TFa)3]
+1 + p1(κ TFa)2 + p2(κ TFa)4 + p3(κ TFa)6 , (18)
+where u0
+1 is the value of u1 in the one-component plasma
+model with the rigid background and pi are ﬁtting pa-
+rameters, which are given in Table II. The computed and
+ﬁtted dependencies of u1 on κ TFa are shown in Fig. 4.
+The residuals between the ﬁt, Eq. (18), and the numeri-
+cal results are smaller than 5 × 10− 6 (see the middle panel
+of Fig. 4), which provides a good analytic approximation
+to the diﬀerences ∆ u1, which are typically a few times
+10− 3 − 10− 4 in this approximation (the bottom panel).
+The zero-point energy given by Eqs. (16) and (18) was
+added to the electrostatic energy, computed according to
+Eqs. (10) and (9), to obtain the total ground-state en-
+ergy E of a Coulomb crystal. Its absolute ground state
+is formed by the lattice that delivers the lowest ground-
+state energy. The results of this evaluation are shown in
+Fig. 5. Here we have assumed A = 2Z. A larger value of
+7
+TABLE II: Parameters of Eq. (18).
+lattice u0
+1 p1 p2 p3 p4
+bcc 0.5113874 0.246236 0.05496 0.0026 0.08457
+fcc 0.5131940 0.244996 0.05490 0.0025 0.08463
+hcp 0.5133369 0.245250 0.05663 0.0021 0.08599
+FIG. 5: The same as in Fig. 2, but taking the zero-point ion
+vibrations into account (solid lines and hatched areas). Fo r
+comparison, the dashed lines and dashed hatched areas show
+the results without the zero-point vibrations. The Jancovi ci
+model for the electron dielectric function is used in all the
+cases.
+A would lead to smaller diﬀerences from the classical-ion
+model, whose results are also reproduced in this ﬁgure.
+We see that the zero-point vibrations almost do not af-
+fect the boundaries of the hcp domain. They somewhat
+decrease the densities of the fcc/bcc transition, but this
+eﬀect is not profound; it is is even smaller than the one
+due to the special relativity corrections (cf. Fig. 3).
+V. POSSIBLE SMALL CORRECTIONS
+One may note that the results presented in Figs. 4
+and 5 rely on the dependence of u1 on the polariza-
+tion parameter κ TFa obtained using the Thomas-Fermi
+model, which results in the one-parameter dependence
+u1(κ TFa). A more accurate (e.g., Lindhard or Jancovici)
+model gives a two-parametric dependence u1(κ TFa, x ).
+An example of the bcc Coulomb lattice at κ TFa = 0 . 5
+presented in Ref. [35] indicates that the diﬀerence of the
+ﬁrst phonon moment in the Thomas-Fermi approxima-
+tion u1 relative to its rigid-background value u(0)
+1 may
+be slightly smaller in the Jancovici model than in the
+Thomas-Fermi model. It is diﬃcult to evaluate the dif-
+ferences between ∆ u1 between the diﬀerent lattice types
+beyond the Thomas-Fermi approximation with the ac-
+curacy that is needed to determine the eﬀect on the
+boundaries between diﬀerent ground-state lattice types,
+but the rough estimation for κ TFa = 0 . 5 shows that u1
+of the fcc lattice is greater than the u1 of the bcc lat-
+tice at any x. For instance, at x = 1 u1,bcc ≈ 0. 48587
+while u1,fcc ≈ 0. 48686. Hence we expect that the x-
+dependence of u1 cannot qualitatively change the results
+presented in Fig. 5. To check the last statement, we re-
+peated our calculations in the extreme case, where the
+polarization dependence of u1 is completely suppressed
+(i.e., u1 = u(0)
+1 ) and found that the boundaries between
+diﬀerent structural phases in Fig. 5 shift no more than by
+∆ log10 x ≲ 0. 0065, provided that x ≳ 0. 1, which means
+that the densities of phase boundaries vary by less than
+1.5%. Clearly, such small shift of the boundary cannot
+have any observable consequence, so that it is safe to
+use Eq. (16) with the one-parametric expression (18) for
+evaluation of the zero-point ion vibrations energy.
+As mentioned above, in the bulk of our numerical cal-
+culations we ﬁxed the height of the primitive cell in the
+hcp lattice at h0 =
+√
+8/ 3 al. However, the true minimum
+of the electrostatic energy U (h) as a function of the cell
+height h is reached at a slightly larger height value, hmin.
+In the Thomas-Fermi approximation for the polarizable
+electron background, hmin slowly decreases with increas-
+ing κ TFa and can be reproduced at κ TFa ≲ 3 by the
+ﬁtting expression
+hmin ≈ h0 + 0. 00265
+{
+1 − 0. 155 (κ TFa)2
+1 + 0. 11 (κ TFa)2
+}
+. (19)
+The corresponding diﬀerence in the ground-state energy
+is described by the ﬁt
+∆ζh ≡ U (hmin) − U (h0)
+N Z2e2/a ≈ − 3. 3× 10− 7 exp
+[
+− (κ TFa)2
+2
+]
+.
+(20)
+At κ TFa ≲ 3 these expressions provide the absolute ac-
+curacy within ∼ 10− 5 for hmin and within ∼ 5 × 10− 9
+for ∆ ζh. This correction shifts the densities of transi-
+tions between diﬀerent ground-state structural phases in
+Figs. 2 and 5 by ≲ 0. 7%.
+The MgB 2 lattice has a similar insigniﬁcant depen-
+dence hmin on κ TFa (see discussion in Ref. [21]).
+VI. DISCUSSION AND CONCLUSIONS
+We used and compared several theoretical models to
+study the inﬂuence of the polarization of degenerate
+electron background to the electrostatic properties of
+Coulomb crystals and to their structure in the neutron
+star crusts and white dwarf interiors.
+The studies of the electrostatic energies of Coulomb
+crystals with uniform background appear to be quite
+complete now, as presented in the review [15]. Based
+8
+on the results of Ref. [15], we chose four lattices with
+the lowest Madelung constant (bcc, fcc, hcp and MgB 2)
+and investigated polarization eﬀects for them. Since the
+MgB2 lattice never has the lowest energy the formation
+of other lattices, which were not considered in the present
+work, is very unlikely.
+The Thomas-Fermi model predicts that at κ TFa <
+1. 065714 the bcc lattice forms the ground state, while
+at higher κ TFa the fcc lattice is energetically prefer-
+able. The Thomas-Fermi model, as well as the linear
+response theory in general, allows one to obtain only cor-
+rections ∼ (κ TFa)2. Our estimate of the eﬀect of the
+higher order corrections shows that they can noticeably
+change the general picture of structural transitions. For
+instance, omitting all higher order corrections to the elec-
+trostatic energy within the Thomas-Fermi model leads to
+the shift of the transition between bcc and fcc lattice to
+κ TFa ≈ 0. 93715, while at κ TFa ≈ 1. 58301 transition be-
+tween the fcc and hcp lattices appear.
+The Lindhard and Jancovici RPA-based models give
+quite similar results as concerns the ground-state lattice
+structure, which qualitatively diﬀer from the Thomas-
+Fermi approximation. Instead of a single structural tran-
+sition from the bcc to fcc lattice, a strong nontrivial de-
+pendence on the charge number Z appears. In addition,
+it the hcp lattice can form the ground state for some Z at
+relatively low density. The relativistic corrections to the
+dielectric function, given by the Jancovici model, as well
+as the quantum corrections due to zero-point vibrations
+of ions, only moderately shift the structural transition
+densities. In all considered models, the bcc lattice pos-
+sesses the lowest electrostatic energy at the density pa-
+rameters rs < 0. 01 (mass densities ρ ≳ 5 × 106 g cm − 3)
+for any Z. In the most advanced of the models (Fig. 5),
+the unconditional bcc stability range extends down to
+the relativity parameters x ≳ 0. 8 (mass densities ρ ≳ 106
+g cm − 3).
+As shown in Ref. [21], the equation for the electrostatic
+energy of the Coulomb crystal with the Thomas-Fermi
+dielectric function is almost the same as the equation
+for the electrostatic energy of the Yukawa crystal, which
+is a usual model for ordered dusty plasmas [6, 8, 36–
+39]. A slight diﬀerence is that in the Yukawa crystal
+the screening parameter is the Debye wavenumber κ D
+and there is no restriction analogous to κ TFa ≲ 1. The
+Yukawa crystal model is used up to κ Da = 4 . 76, when
+it becomes unstable against phonon oscillations [21, 40].
+Hence both systems have the same structural transitions.
+Thus, while in the Lindhard model at κ TFa ≳ 1 the fcc
+and hcp lattices become energetically preferable and the
+strong dependence of structural transitions on Z appears,
+we can expect a similar situation if higher order correc-
+tions to the Yukawa crystal model are taken into account.
+Since in the dusty plasmas it is impossible to maintain
+strictly the same charge for all grains, the formation of
+the hcp-fcc crystal mixture is more likely.
+The appearance of the hcp ground state at suﬃciently
+large κ TFa in the linear response theory may be a key
+to explanation of data of the experiment KPT-10 “Ku-
+lonovskiy Kristall” (“Coulomb Crystal”) onboard the
+International Space Station. This experiment has re-
+vealed that dusty particles with κ Da = 0 . 5 − 3 form
+an ordered system with the hcp and fcc structures (e.g.,
+[41, 42]). Since equations for the electrostatic energy of
+the Coulomb crystal with the Thomas-Fermi dielectric
+function and of the Yukawa crystal are the same, it makes
+sense to assume that for systems with a non-degenerate
+background (such as the dusty crystals) the higher or-
+der screening corrections may bring us to the situation
+similar to the degenerate case, which is described above,
+where the fcc and hcp lattices may form the ground state.
+It may be of interest for the reader to note that, beside
+the dusty plasmas mentioned above, the normal electron-
+hole plasmas in semiconductors also demonstrate some
+similarities to the dense ion-electron plasmas. The crys-
+tallization of the electron-hole plasmas with heavy holes
+was studied in Refs. [43, 44], using the path integral
+Monte Carlo simulations.
+Back to degenerate stars, let us note that our re-
+ported model improvements are likely unimportant for
+the ground-state equation of state or chemical compo-
+sition. Previously, Chamel and Fantina [45] studied
+this problem based on the Thomas-Fermi model of elec-
+tron polarization, scaled so as to approach the more
+accurate polarization results of Ref. [19]. In particu-
+lar, Chamel and Fantina found that corrections to the
+electron-capture threshold in white-dwarf cores are very
+small and the neutron-drip density and pressure in the
+crusts of neutron stars are only slightly shifted. Although
+electron polarization may change the composition of the
+crust of nonaccreting neutron stars, uncertainties in the
+masses of neutron-rich isotopes were found to be more im-
+portant than electron exchange and polarization eﬀects.
+As can be seen from our Fig. 1, the polarization correc-
+tion to the energy has the same order of magnitude in the
+Thomas-Fermi model as in the more accurate Lindhard
+and Jancovici models. Therefore, these improvements in
+the model cannot qualitatively change the conclusions
+by Chamel and Fantina [45]. Let us also note that some
+modern neutron-star equations of state take suﬃciently
+accurate account of the electron polarization eﬀects (e.g.,
+Ref. [46]).
+On the other hand, our results show that the re-
+placement of the traditional Thomas-Fermi model by the
+RPA-based models of the polarization corrections can
+strongly shift the boundaries between the bcc and fcc lat-
+tice types and lead to appearance of the hcp lattices in
+the cores of white dwarfs and crusts of neutron stars. The
+interfaces between diﬀerent lattice structures may aﬀect
+the kinetic properties of the crust. For example, crust
+failure due to accumulated stresses during neutron-star
+evolution (e.g., Refs. [47–49]) can likely develop along the
+surfaces separating the diﬀerent lattice types, where the
+breaking stress can be smaller than its standard value in
+the bulk of the crust [50].
+Based on the presented results, we can conclude that
+9
+the most part of the crust of neutron stars and crystal-
+lized cores of white dwarfs at ρ ≳ 106 g/cm3 consist of the
+bcc lattice at any Z, which is the standard assumption
+for their modeling. At lower densities, however, the fcc
+and hcp lattices can form the true ground state. Crystal-
+lization of the one-component plasma occurs at Γ ≈ 175,
+where Γ ≡ Z 2e2/ (akBT ) = 22 . 5Z 5/3x/T 6 is the Coulomb
+coupling parameter, T is temperature, T6 ≡ T / 106 K,
+and kB is the Boltzmann constant [19]. This implies
+T ≲ 1. 3 × 105Z 5/3x K, which leads to T ≲ (3 × 107) x K
+for an envelope of a neutron star composed of iron or
+nickel or T ≲ (2. 5 × 106) x K for a carbon plasma in a
+white dwarf or in an accreted crust of a neutron star.
+Taking the electron polarization into account, one ﬁnds
+that the crystallization may occur at somewhat smaller
+Γ (larger T ) [51]. Hence the Coulomb crystals can exist
+in the degenerate stars not only at x ≳ 1, but also in the
+nonrelativistic ( x < 1) parts of envelopes of suﬃciently
+old and cold neutron stars (see, e.g., Fig. 2.2. in Ref. [9])
+or white dwarfs (e.g., Fig. 4 in Ref. [52]), where one can
+anticipate formation of the fcc and hcp structures.
+However, the smallness of energy diﬀerences between
+these structures makes it possible that thermal ﬂuctu-
+ations destroy the long-range order at the temperature
+of crystallization and thus make the structure of some
+domains out of the true ground state. Therefore, the
+neutron star crust and white dwarf matter at such low
+densities and temperatures may consist of polycrystalline
+mixtures of diﬀerent types of lattices or even amorphous
+solid. Beside the inﬂuence on the elastic and breaking
+properties of the crust, the presence of polycrystalline
+or amorphous structures can suppress the electrical and
+thermal conductivities, causing observable consequences
+for the magnetic and thermal evolution of a neutron star.
+This possibility deserves a further study.
+Acknowledgments
+This research was supported by The Ministry of Sci-
+ence and Higher Education of the Russian Federation
+(Agreement with Joint Institute for High Temperatures
+RAS No. 075-15-2020-785).
+[1] D. G. Yakovlev and D. A. Shalybkov, Degenerate cores of
+white dwarfs and envelopes of neutron stars: thermody-
+namics and plasma screening in thermonuclear reactions,
+Sov. Sci. Rev., Ser. E: Astrophys. Space Phys. Rev. 7, 311
+(1989).
+[2] V. Fortov, Thermodynamics and Equations of State for
+Matter: From Ideal Gas to Quark-Gluon Plasma (World
+Scientiﬁc, 2016).
+[3] W. Ebeling, V. Fortov, and V. Filinov, Quantum Statis-
+tics of Dense Gases and Nonideal Plasmas (Springer,
+2017).
+[4] M. Born and K. Huang, Dynamical Theory of Crystal
+Lattices (Oxford University Press, Oxford, 1954).
+[5] S.L. Shapiro, and S.A. Teukolsky, Black Holes, White
+Dwarfs, and Neutron Stars (Wiley-Interscience, New
+York, 1983).
+[6] V. E. Fortov, A. G. Khrapak, S. A. Khrapak, V. I.
+Molotkov and O. F. Petrov, Dusty plasmas, Phys. Usp.
+47, 447 (2004).
+[7] C. Kittel, Introduction to Solid State Physics (Wiley,
+Hoboken, 2004).
+[8] V. E. Fortov, A. V. Ivlev, S. A. Khrapak, A. G. Khra-
+pak, and G. E. Morﬁll, Complex (dusty) plasmas: Cur-
+rent status, open issues, perspectives, Phys. Rep. 421, 1
+(2005).
+[9] P. Haensel, A. Y. Potekhin, and D. G. Yakovlev, Neutron
+Stars 1: Equation of State and Structure (Springer, New
+York, 2007).
+[10] L. G. Althaus, A. H. Corsico, J. Isern, and E. Garcia-
+Berro, Evolutionary and pulsational properties of white
+dwarf stars, Astron. Astrophys. Rev. 18, 471 (2010).
+[11] M. Bonitz, P. Ludwig, H. Baumgartner, et al., Classical
+and quantum Coulomb crystals, Physics of Plasmas 15,
+055704 (2008).
+[12] H. M. van Horn, The crystallization of white dwarf stars ,
+Nature Astronomy 3, 129 (2019).
+[13] D. A. Baiko, A. Y. Potekhin, and D. G. Yakovlev, Phys.
+Rev. E 64, 057402 (2001).
+[14] N. Chamel and A.F. Fantina, Binary and ternary ionic
+compounds in the outer crust of a cold nonaccreting neu-
+tron star, Phys. Rev. C 94, 065802 (2016).
+[15] A.A. Kozhberov, Electrostatic properties and stabili ty of
+Coulomb crystals, Contrib. Plasm. Phys. 60, e202000021
+(2020).
+[16] A.A. Kozhberov and D.A. Baiko, Physical features of
+binary Coulomb crystals: Madelung energy, collective
+modes and phonon heat capacity, Contrib. Plasm. Phys.
+52, 153 (2012).
+[17] A. A. Kozhberov, Structure and thermodynamic proper-
+ties of Coulomb crystals in interiors of degenerate stars,
+Ph.D. Thesis , Ioﬀe Institute, Saint Petersburg, 2018.
+[18] E. L. Pollock and J.P. Hansen, Statistical mechan-
+ics of dense ionized matter. II. Equilibrium properties
+and melting transition of the crystallized one-component
+plasma, Phys. Rev. A 8, 3110 (1973).
+[19] A. Y. Potekhin and G. Chabrier, Equation of state of
+fully ionized electron-ion plasmas. II. Extension to rela-
+tivistic densities and to the solid phase, Phys. Rev. E 62,
+8554 (2000).
+[20] D. A. Baiko, Eﬀect of the electron gas polarizability on
+the speciﬁc heat of phonons in Coulomb crystals, Phys.
+Rev. E 66, 056405 (2002).
+[21] A. A. Kozhberov, Electrostatic energy and phonon prop-
+erties of Yukawa crystals, Phys. Rev. E 98, 063205
+(2018).
+[22] J. Lindhard, On the properties of a gas of charged par-
+ticles, Kgl. Danske Videnskab. Selskab, Mat.-Fys. Medd.
+28, 8 (1954).
+[23] B. Jancovici, On the relativistic degenerate electron gas,
+Nuovo Cim. 25, 428 (1962).
+10
+[24] N. W. Ashcroft and N. D. Mermin, Solid State Physics
+(Thomson Learning, Toronto, 1976).
+[25] W. B. Hubbard and W. L. Slattery, Statistical mechanics
+of light elements at high pressure. I. Theory and results
+for metallic hydrogen with simple screening, Astrophys.
+J. 168, 131 (1971).
+[26] E. E. Salpeter, Energy and pressure of a zero-
+temperature plasma, Astrophys. J. 134, 669 (1961).
+[27] T. Nagai and H. Fukuyama, Ground state of a Wigner
+crystal in a magnetic ﬁeld. II. Hexagonal close-packed
+structure, J. Phys. Soc. Japan 52, 44 (1983).
+[28] S. Galam and J.-P. Hansen, Statistical mechanics of
+dense ionized matter. VI. Electron screening corrections
+to the thermodynamic properties of the one-component
+plasma, Phys. Rev. A 14, 816 (1976).
+[29] P. Ewald, Die Berechnung Optischer und Elektrostatis-
+cher Gitterpotentiale, Annalen der Physik 369, 253
+(1921).
+[30] N. D. Mermin, Lindhard dielectric function in the
+relaxation-time approximation, Phys. Rev. B 1, 2362
+(1970).
+[31] T. Dornheim, S. Groth, and M. Bonitz, The uniform elec-
+tron gas at warm dense matter conditions, Phys. Rep.
+744, 1 (2018).
+[32] A. Y. Potekhin, D. A. Baiko, P. Haensel, and D. G.
+Yakovlev, Transport properties of degenerate electrons
+in neutron star envelopes and white dwarf cores, Astron.
+Astrophys., 346, 345 (1999).
+[33] J. Daligault and S. Gupta, Electron-ion scattering in
+dense multi-component plasmas: Application to the
+outer crust of an accreting neutron star, Astrophys. J.
+703, 994 (2009).
+[34] Supplemental Material (ﬁle supplement.txt) presents
+the computed polarization correction ∆ Upol to the elec-
+trostatic energy of the classical bcc, fcc, and hcp Coulomb
+crystals on the polarizable electron background in the
+Jancovici model.
+[35] A. A. Kozhberov, Properties of magnetized Coulomb
+crystals of ions with polarizable electron background,
+Phys. Plasmas 25, 062706 (2018).
+[36] R. T. Farouki and S. Hamaguchi, Thermal energy of the
+crystalline one-component plasma from dynamical simu-
+lations, Phys. Rev. E 47, 4330 (1993).
+[37] S. Hamaguchi and R. T. Farouki, Thermodynam-
+ics of strongly-coupled Yukawa systems near the one-
+component-plasma limit. I. Derivation of the excess en-
+ergy, J. Chem. Phys. 101, 9876 (1994).
+[38] R. T. Farouki and S. Hamaguchi, Thermodynam-
+ics of strongly-coupled Yukawa systems near the one-
+component-plasma limit. II. Molecular dynamics simu-
+lations, J. Chem. Phys. 101, 9885 (1994).
+[39] S. Hamaguchi, R. T. Farouki, and D. H. E. Dubin, Triple
+point of Yukawa systems, Phys. Rev. E. 56, 4671 (1997).
+[40] M. O. Robbins, K. Kremer, and G. S. Grest, Phase dia-
+gram and dynamics of Yukawa systems, J. Chem. Phys.
+88, 3286 (1988).
+[41] B. Klumov, G. Joyce, C. R¨ ath, P. Huber, H. Thomas,
+G. E. Morﬁll, V. Molotkov, and V. Fortov, Structural
+properties of 3D complex plasmas under microgravity
+conditions, Europhys. Lett. 92, 15003 (2010).
+[42] B. A. Klumov, On melting criteria for complex plasma
+Phys. Usp. 53, 1053 (2010).
+[43] V. Filinov,M. Bonitz, V. Fortov, H. Fehske, and P. Lev-
+ashov, Coulomb crystal and quantum melting in electron-
+hole plasmas of semiconductors under high pressure,
+Phys. Stat. Sol. B 244, 474 (2007).
+[44] V. S. Filinov, H. Fehske, M. Bonitz, V. E. Fortov, and P.
+Levashov, Correlation eﬀects in partially ionized mass
+asymmetric electron-hole plasmas, Phys. Rev. E 75,
+036401 (2007).
+[45] N. Chamel and A.F. Fantina, Electron exchange and po-
+larization eﬀects on electron captures and neutron emis-
+sions by nuclei in white dwarfs and neutron stars, Phys.
+Rev. D 93, 063001 (2016).
+[46] J. M. Pearson, N. Chamel, A. Y. Potekhin, A. F. Fantina,
+C. Ducoin, A. K. Dutta, and S. Goriely, Uniﬁed equa-
+tions of state for cold non-accreting neutron stars with
+Brussels-Montreal functionals. I. Role of symmetry en-
+ergy, Mon. Not. R. Astron. Soc. 481, 2994 (2018); erra-
+tum: Mon. Not. R. Astron. Soc. 486, 768 (2019).
+[47] M. Ruderman, Neutron Star Crustal Plate Tectonics. III .
+Cracking, Glitches, and Gamma-Ray Bursts, Astrophys.
+J. 382, 587 (1991).
+[48] G. Ushomirsky, C. Cutler, and L. Bildsten, Deformation s
+of accreting neutron star crusts and gravitational wave
+emission, Mon. Not. R. Astron. Soc. 319, 902 (2000).
+[49] S. K. Lander and K. N. Gourgouliatos, Magnetic-ﬁeld
+evolution in a plastically failing neutron-star crust, Mon .
+Not. R. Astron. Soc. 486, 4130 (2019).
+[50] A. A. Kozhberov and D. G. Yakovlev, Deformed crystals
+and torsional oscillations of neutron star crust, Mon. Not.
+R. Astron. Soc. 498, 5149 (2020)
+[51] A. Y. Potekhin and G. Chabrier, Equation of state for
+magnetized Coulomb plasmas, Astron. Astrophys. 550,
+A43 (2013).
+[52] F. D’Antona and I. Mazzitelli, Cooling of white dwarfs,
+Annu. Rev. Astron. Astrophys. 28, 139 (1990).

@@ -1,46 +1,18 @@
-# Lemma 55: Monopole Jet Collapse
+# Lemma 55: finite-order response expansion
 
-## Statement
+Corrected 2026-09-09; the earlier assertion that analyticity is necessary for a finite jet is withdrawn.
 
-- Status: Proven. Let `Y^I` be any finite basis of the reduced scalar normal-form space `{\cal N}({\cal F}, \Delta \le 4)`.
-- Status: Proven. Let each coordinate `Y^I` carry a positive operator weight `\Delta_I \ge 1`.
-- Status: Proven. Assume locality `A3` and analyticity `A5`, so that the monopole response is a local analytic function `m_A(Y)` near the reference background.
-- Status: Proven. Then the fixed-order monopole sector collapses to finitely many Taylor coefficients at `\Delta \le 4`.
-
-## Proof
-
-1. Status: Proven. Because the basis `Y^I` is finite, there are only finitely many coordinate directions in the monopole argument list.
-2. Status: Proven. Because `m_A(Y)` is analytic by `A5`, it admits a Taylor expansion in the coordinates `Y^I`.
-3. Status: Proven. The retained multi-indices are exactly those satisfying
+Status: Proven. Let f be `C^(D+1)` in a neighborhood of zero in finitely many arguments x_i. Suppose `x_i=epsilon^(w_i) xbar_i` with bounded xbar and positive integer weights w_i. Then
 
 ```math
-\sum_I n_I \Delta_I \le 4.
+f(x)=\sum_{\sum_i n_iw_i\le D}\frac{\partial^{\mathbf n}f(0)}{\mathbf n!}x^{\mathbf n}
++O(\epsilon^{D+1}).
 ```
 
-4. Status: Proven. Since the set of coordinates is finite and each `\Delta_I \ge 1`, only finitely many multi-indices satisfy that bound.
-5. Status: Proven. Therefore the truncated jet
+Status: Proven. Taylor expansion through total degree D has remainder `O(norm(x)^(D+1))`. Since norm(x)=O(epsilon), this is the stated order. Each discarded weighted monomial has integer weight at least D+1, so it also belongs to the remainder. There are finitely many retained multi-indices. At D=4, C5 suffices. The constant term appears exactly once in this sum.
 
-```math
-m_A(Y)
-=
-m_A^{(0)}
-+
-\sum_{\sum_I n_I \Delta_I \le 4}
-\frac{m_{A,\mathbf{n}}}{\mathbf{n}!}
-\prod_I (Y^I)^{n_I}
-+
-O(\Delta > 4)
-```
+Status: Proven. If the arguments are redundant invariant representatives, such as I2 and I2^2, their algebraic relations must be reduced before counting independent response coefficients. Calling the coefficients sensitivities does not make them different from the corresponding EFT action coefficients without an explicit matching convention.
 
-contains only finitely many coefficients `m_{A,\mathbf{n}}`.
+Status: Proven. Analyticity A5 suffices but is unnecessary for the finite-order statement. A smooth-flat response has a valid zero jet with a beyond-all-orders remainder. Analyticity instead addresses exact reconstruction by the convergent Taylor series. See [Lemma 58](58-nonanalytic-jet-failure.md).
 
-## Sensitivity Interpretation
-
-- Status: Proven. The monopole Taylor coefficients `m_{A,\mathbf{n}}` are the sensitivity coordinates of the finite response manifold at fixed order.
-- Status: Proven. They are not Wilson coefficients.
-- Status: Proven. They depend on analyticity `A5`, not on minimal-sector uniqueness.
-
-## Exact Failure Point If The Lemma Is Dropped
-
-- Status: Counterexample candidate. If analyticity `A5` fails, the exact failing step is the existence of the finite Taylor jet, not the finiteness of the operator space itself.
-- Status: Counterexample candidate. The current explicit loophole model for this step remains the nonanalytic activation branch in [`../counterexamples/nonanalytic-activation/README.md`](../counterexamples/nonanalytic-activation/README.md).
+Status: Proven. The threshold `sqrt(Y) Theta(Y)` lacks the required regularity at zero and is not approximable by an ordinary polynomial with `O(Y^5)` error there. This is an expansion failure at the threshold, not a change in the specified polynomial catalog's size.

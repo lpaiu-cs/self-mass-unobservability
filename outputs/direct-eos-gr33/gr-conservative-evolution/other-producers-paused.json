@@ -1,0 +1,128 @@
+{
+  "reason": "Prioritize 8/16 actual conservative coupled trajectories",
+  "processes": [
+    {
+      "pid": 15474,
+      "ppid": 15466,
+      "state": "S",
+      "start": "6863709",
+      "command": [
+        "python3",
+        "verification/gr_outer_product_adaptive_table.py",
+        "run"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    },
+    {
+      "pid": 15488,
+      "ppid": 15474,
+      "state": "S",
+      "start": "6870339",
+      "command": [
+        "python3",
+        "verification/gr_outer_product_adaptive_table.py",
+        "run"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    },
+    {
+      "pid": 18402,
+      "ppid": 15488,
+      "state": "R",
+      "start": "9080036",
+      "command": [
+        "/home/lpaiu/work/direct-eos-gr33/response-product-adaptive/product",
+        "response",
+        "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-response-H-table-defined/inputs.tsv",
+        "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-response-product-128/rule.tsv",
+        "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-outer-product-adaptive-table/cell-0099/cell-0099-native.jsonl",
+        "99",
+        "/home/lpaiu/work/direct-eos-gr33/outer-product-adaptive-table/cell-0099/H.tsv",
+        "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-outer-product-adaptive-table/cell-0099/cell-0099-q.tsv"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    },
+    {
+      "pid": 18339,
+      "ppid": 15486,
+      "state": "R",
+      "start": "9060523",
+      "command": [
+        "/home/lpaiu/work/direct-eos-gr33/response-product-adaptive/product",
+        "response",
+        "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-response-H-table-defined/inputs.tsv",
+        "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-response-product-128/rule.tsv",
+        "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-outer-product-adaptive-table/cell-0098/cell-0098-native.jsonl",
+        "98",
+        "/home/lpaiu/work/direct-eos-gr33/outer-product-adaptive-table/cell-0098/H.tsv",
+        "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-outer-product-adaptive-table/cell-0098/cell-0098-q.tsv"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    },
+    {
+      "pid": 18426,
+      "ppid": 15487,
+      "state": "R",
+      "start": "9080832",
+      "command": [
+        "/home/lpaiu/work/direct-eos-gr33/response-product-adaptive/product",
+        "response",
+        "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-response-H-table-defined/inputs.tsv",
+        "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-response-product-128/rule.tsv",
+        "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-outer-product-adaptive-table/cell-0100/cell-0100-native.jsonl",
+        "100",
+        "/home/lpaiu/work/direct-eos-gr33/outer-product-adaptive-table/cell-0100/H.tsv",
+        "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-outer-product-adaptive-table/cell-0100/cell-0100-q.tsv"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    },
+    {
+      "pid": 15485,
+      "ppid": 15474,
+      "state": "R",
+      "start": "6870336",
+      "command": [
+        "python3",
+        "verification/gr_outer_product_adaptive_table.py",
+        "run"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    },
+    {
+      "pid": 15486,
+      "ppid": 15474,
+      "state": "S",
+      "start": "6870337",
+      "command": [
+        "python3",
+        "verification/gr_outer_product_adaptive_table.py",
+        "run"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    },
+    {
+      "pid": 15487,
+      "ppid": 15474,
+      "state": "S",
+      "start": "6870337",
+      "command": [
+        "python3",
+        "verification/gr_outer_product_adaptive_table.py",
+        "run"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    },
+    {
+      "pid": 18161,
+      "ppid": 5223,
+      "state": "R",
+      "start": "8781648",
+      "command": [
+        "python3",
+        "verification/gr_molecular_structure_runner.py",
+        "project"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    }
+  ]
+}

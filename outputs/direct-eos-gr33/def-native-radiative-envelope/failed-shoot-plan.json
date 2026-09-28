@@ -1,0 +1,44 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "5e753c069",
+  "claim": "Construct a native EOS, state-dependent opacity envelope with outward luminosity and simultaneous hydrostatic/radiative constraints, joined at native cell132. Test the old nonstationary outer temperature/flux against the new matched boundary.",
+  "model": "Quasistatic DEF hydrostatic constraints plus grey Eddington E=3P=aT^4 and constant redshifted luminosity. Separate gas radiation force and Tolman-corrected thermal gradient. At low gas pressure impose E=2F/c (no incoming half-isotropic Eddington boundary). No Rosseland-to-Planck substitution.",
+  "physical_limits": "Grey angular closure, LTE and constant-luminosity envelope are explicit assumptions. Nonzero flux forbids an exactly static metric: record required mass loss and heat-stress scale. No stationary spacetime, exact spectral atmosphere, fixed-inventory whole-star replacement, convection closure or new observable claim.",
+  "junction": "Fix original r,m,phi,phi prime,N,total P,T and uniform outer composition at cell132. Solve only L to meet the exterior temperature boundary. Compare resulting L with the old diffusive inner L; do not silently declare those matched. Added/replaced exterior baryons are recorded, not forced equal.",
+  "paths": [
+    "Pgas cutoff1dyn/cm2 tolerance2e-5",
+    "same cutoff tolerance2e-6",
+    "cutoff0.25dyn/cm2 tolerance2e-6"
+  ],
+  "gates": {
+    "boundary_log": 1e-05,
+    "luminosity_tolerance_relative": 0.002,
+    "temperature_tolerance_relative": 0.001,
+    "luminosity_cutoff_relative": 0.002,
+    "positive_outward_flux": true
+  },
+  "budget": {
+    "pilot_seconds": 120,
+    "total_seconds": 600,
+    "CPU_threads": 1,
+    "memory_GB": 4,
+    "native_calls": 60000,
+    "maximum_shoot_evaluations": 24,
+    "automatic_expansion": false,
+    "maximum_production_integrations": 30
+  },
+  "forecast": "EOS finite controls in Phase89 about1.21s for35 calls; new envelope step rate unmeasured. Measure one full native integration before shooting.",
+  "references": [
+    "https://docs.mesastar.org/en/24.03.1/atm/t-tau.html"
+  ],
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_radiative_envelope.py": "59706b749a365c59435d259343f1008ef20004f3740abe19f7fb9fbcd83be436",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_free_surface_thermal.py": "fe248273b1b6da56fd210ed67c818093622cd217c53f0c78fda683b6d8aec092",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-free-surface-thermal/coefficients.npz": "8fa9ddf79c966965a3a3fa26e6b4c738f82eec0b6ad257e521ae37c9403fb46c",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-free-surface-response/normalized/background.npz": "c42374d2a79ab37cc716bad52e6b72a4940dc82f0923f71856601f213f0c4a2c",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-matter-split/matter.npz": "b16421e0625e909788b1151a67378bebc8e80743d0cb2b8980618710ab1c4a33",
+    "/mnt/e/lab/self-mass-unobservability/verification/opacity_tables.py": "ba01a5ebe3062eb1b13b23ccb918f99158fba6fd0c72fcba191c1ba4a028c7b9",
+    "/mnt/e/lab/self-mass-unobservability/verification/direct_ion_eos.py": "58d24ef14b89fcde3fca118b95ca629d121b433f2d29bfdce77fc32c520a1589"
+  },
+  "resource_revision": "Preserve initial940s forecast and pilot. Reuse pilot objective and previous shooting roots; cap production at30 integrations including final profiles. Original cases/gates and600s wall cap unchanged."
+}

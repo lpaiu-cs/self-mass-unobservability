@@ -1,0 +1,9 @@
+{
+  "classification": "Counterexample candidate",
+  "pilot": "Direct-call pilot results retained in gr-match.json and newtonian-match.json. Pilot optical cut failed and mass residual did not reach 1e-8 after tighter integration.",
+  "repair": "Use linear abundance interpolation to preserve normalization; use fixed EOS samples and refine both EOS sampling and TOV integration. Retain pilot results, do not infer an ODE error certificate from solver tolerance.",
+  "original_temperature_scale": 1.0,
+  "temperature_scale_fit": "Not part of the primary frozen-temperature test.",
+  "grid": "All original pressure knots, subdivisions of each interval, and a central extension of 0.4 in ln P with frozen central T and composition.",
+  "model_source_unchanged": true
+}

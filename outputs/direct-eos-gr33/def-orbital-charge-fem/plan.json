@@ -1,0 +1,33 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Resolve outgoing material-motion response of the existing finite-temperature adiabatic GR benchmark and apply actual declared Kepler harmonics.",
+  "scope": "Frozen mechanical background, linear l=0 regular incident scalar. No thermal stationarity assumption is certified. Companion alpha=beta*phi0 remains a leading weak-body input. Clamped comparison requires support force and is not the same-inventory static comparator.",
+  "method": "Accepted hierarchical GR stiffness/inertia; constant scalar lifting; variational boundary reaction; direct fluid-row contrast; outgoing impedance and common surface-referenced tortoise phase. Static and harmonics1,2,3, degree2/4; outer3 and quadrature8 conditional.",
+  "gates": {
+    "spatial_relative": 0.02,
+    "outer_relative": 0.002,
+    "quadrature_relative": 0.002,
+    "linear_residual": 1e-09,
+    "current": 2e-08,
+    "endpoint_reaction": 0.02
+  },
+  "decision": "Pilot p4 harmonic1 reused in production. Stop after gate failure, no automatic degree/frequency expansion. Static-subtracted differences require their own spatial comparison before interpretation.",
+  "budget": {
+    "pilot_seconds": 120,
+    "total_compute_seconds": 600,
+    "CPU_threads": 1,
+    "memory_GB": 4,
+    "new_EOS_calls": 0,
+    "time_steps": 0
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_orbital_charge_fem.py": "1bc74a38778c6832103050bb8356cddf4bf6da87eba4eadff3878ace029ab5b1",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_interface_patch.py": "880442c647572d55272819dcde5ae735337ddbb62fc3d3e600ca1ea680faf888",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_full_weeks.py": "c0be4c1870a4aa5416892ae7f50523a8df515fcbf1455fa067fee7486489bc36",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_hierarchical.py": "7861123d4adfdfdaa21daee3fc7d79dcdffdd024ca48b3f453921b5cb745992b",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_spatial_repair.py": "d13044861c2b4761d5e6349d809c3368f46112974f374aa050aada516c80f8e5",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_radiative_exterior.py": "6354268656ac9b46f656d628b7c64ea9c98f12e137c91a9a5b0c7aec173af315",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-resolved-scalar-pulse/companion-benchmark.json": "810073ff038513cb97b36f6a1f58046c6f48952f152b32ddf8a9152157df631a",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-interface-patch/p4-result.json": "864cc33471cf416b974382f35da2cf9e4c95387704ae68249c9cd23fcb8d3472"
+  }
+}

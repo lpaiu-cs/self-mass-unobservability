@@ -1,0 +1,66 @@
+{
+  "classification": "Proven",
+  "coordinate": "sqrt_pressure",
+  "passed": true,
+  "result": "Independent inventory agreement passed. No interval or physical EOS error certificate is implied.",
+  "results": {
+    "primary": {
+      "differential_Gauss_4_and_8_g": [
+        {
+          "h1": 3.321993469572473e+30,
+          "he4": 3.812924608837613e+32,
+          "baryon": 3.925139212812396e+32
+        },
+        {
+          "h1": 3.321993469437543e+30,
+          "he4": 3.812924608779825e+32,
+          "baryon": 3.92513921275207e+32
+        }
+      ],
+      "relative_difference_from_cumulative_midpoint": {
+        "h1": -2.0230316311042884e-08,
+        "he4": 1.6500845134714837e-10,
+        "baryon": -1.2189138587359594e-12
+      },
+      "Gauss_refinement": {
+        "h1": -4.0617176289003964e-11,
+        "he4": -1.5155876553762937e-11,
+        "baryon": -1.536915039679343e-11
+      },
+      "frozen_full_source_Gauss_4_and_8_Lsun": [
+        1.735162596308724,
+        1.7351626064249408
+      ],
+      "frozen_full_source_difference_from_midpoint_Lsun": 4.645436111783141e-06
+    },
+    "calibrated": {
+      "differential_Gauss_4_and_8_g": [
+        {
+          "h1": 3.6383816027022345e+30,
+          "he4": 3.8097588219872885e+32,
+          "baryon": 3.9251162755661676e+32
+        },
+        {
+          "h1": 3.6383816025508544e+30,
+          "he4": 3.809758821970055e+32,
+          "baryon": 3.925116275547053e+32
+        }
+      ],
+      "relative_difference_from_cumulative_midpoint": {
+        "h1": -1.9049125943304546e-08,
+        "he4": 1.7210943781265087e-10,
+        "baryon": 4.640732242933154e-13
+      },
+      "Gauss_refinement": {
+        "h1": -4.160638500394498e-11,
+        "he4": -4.523492691532738e-12,
+        "baryon": -4.869882275215787e-12
+      },
+      "frozen_full_source_Gauss_4_and_8_Lsun": [
+        0.2740171655991277,
+        0.2740171766085215
+      ],
+      "frozen_full_source_difference_from_midpoint_Lsun": 4.093172362107378e-06
+    }
+  }
+}

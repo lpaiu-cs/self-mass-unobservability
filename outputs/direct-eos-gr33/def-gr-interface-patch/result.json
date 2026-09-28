@@ -1,0 +1,114 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "959bc940f",
+  "decision": "ACCEPT_ALL_FOUR_COMMON_PROPAGATION_SPATIAL_AND_ORIGINAL_CONTRAST_GATES",
+  "progress_class": "loophole progress; the requested common four-component numerical convergence is resolved for the declared frozen-source GR model",
+  "actual_same_input_applied": true,
+  "propagation_passed": true,
+  "spatial_passed": true,
+  "all_original_contrasts_passed": true,
+  "original_failure_resolved": true,
+  "goal_complete": true,
+  "full_nonlinear_star_solved": false,
+  "full_dynamic_charge_solved": false,
+  "time_comparisons": {
+    "velocity_mass_RMS_m_s": {
+      "previous": 0.6387659973288344,
+      "last": 3.5182686258562736e-05,
+      "order": 14.148134257810964,
+      "contour": 3.1200550728430777e-08
+    },
+    "scalar_mass_RMS": {
+      "previous": 0.6434065409499821,
+      "last": 7.131006813993171e-07,
+      "order": 19.78319338944326,
+      "contour": 4.680661281085803e-12
+    },
+    "old_interface_velocity_RMS_m_s": {
+      "previous": 0.641667018551958,
+      "last": 1.934219860440879e-05,
+      "order": 15.017785417143743,
+      "contour": 1.0207172003648847e-12
+    },
+    "new_interface_velocity_RMS_m_s": {
+      "previous": 0.6397433118123058,
+      "last": 1.2322819427317642e-07,
+      "order": 22.307729350560333,
+      "contour": 4.5937913204586495e-14
+    }
+  },
+  "spatial_comparisons": {
+    "velocity_mass_RMS_m_s": {
+      "previous": 0.006797572446705668,
+      "last": 0.004630326698746208,
+      "decreased": true
+    },
+    "scalar_mass_RMS": {
+      "previous": 0.00019984246290789557,
+      "last": 6.105088035442106e-06,
+      "decreased": true
+    },
+    "old_interface_velocity_RMS_m_s": {
+      "previous": 0.012895046555784957,
+      "last": 0.0065877289113115784,
+      "decreased": true
+    },
+    "new_interface_velocity_RMS_m_s": {
+      "previous": 0.05659128029870689,
+      "last": 0.016710906688829425,
+      "decreased": true
+    }
+  },
+  "contrasts": {
+    "coefficient": {
+      "passed": true,
+      "propagation_passed": true,
+      "relative": {
+        "velocity_mass_RMS_m_s": 0.00449305247994281,
+        "scalar_mass_RMS": 0.0001530140200798405,
+        "old_interface_velocity_RMS_m_s": 3.343982726535736e-16,
+        "new_interface_velocity_RMS_m_s": 1.127595841104779e-16
+      },
+      "gate": 0.02,
+      "seconds": 227.75388480499998
+    },
+    "outer": {
+      "passed": true,
+      "propagation_passed": true,
+      "relative": {
+        "velocity_mass_RMS_m_s": 0.0,
+        "scalar_mass_RMS": 2.053958267465785e-14,
+        "old_interface_velocity_RMS_m_s": 1.1146609088452454e-16,
+        "new_interface_velocity_RMS_m_s": 0.0
+      },
+      "gate": 0.002,
+      "seconds": 183.770215001
+    },
+    "quadrature": {
+      "passed": true,
+      "propagation_passed": true,
+      "relative": {
+        "velocity_mass_RMS_m_s": 2.7222144637891635e-13,
+        "scalar_mass_RMS": 1.3026878606218954e-11,
+        "old_interface_velocity_RMS_m_s": 4.289215177236505e-12,
+        "new_interface_velocity_RMS_m_s": 4.446110401476144e-13
+      },
+      "gate": 0.002,
+      "seconds": 181.281717115
+    },
+    "abscissa": {
+      "passed": true,
+      "propagation_passed": true,
+      "relative": {
+        "velocity_mass_RMS_m_s": 2.377059478976562e-06,
+        "scalar_mass_RMS": 8.259585194601623e-12,
+        "old_interface_velocity_RMS_m_s": 1.8687903200290405e-09,
+        "new_interface_velocity_RMS_m_s": 1.383109058699122e-12
+      },
+      "gate": 0.0002,
+      "seconds": 184.32257396599994
+    }
+  },
+  "new_EOS_calls": 0,
+  "next_physical_boundary": "Full outer heat/photon support, nonlinear temperature feedback, physical EOS uncertainty, dynamical charge and observational inference remain separate incomplete tasks."
+}

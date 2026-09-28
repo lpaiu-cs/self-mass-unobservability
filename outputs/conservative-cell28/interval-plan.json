@@ -1,0 +1,13 @@
+{
+  "classification": "Conjectural",
+  "target": "Outward interval enclosure of the fixed-GR-PCHIP potential-shape derivative, without treating floating ODE agreement as a proof.",
+  "coefficients": "Treat saved binary64 PCHIP coefficients and radial knots as exact numbers defining this interpolant. Interval Horner evaluation encloses each polynomial on each subcell; no unproved continuum EOS/TOV error is omitted from the scope statement.",
+  "subdivisions": [
+    1,
+    4
+  ],
+  "interval_decimal_precision": 40,
+  "method": "Bound the static Green operator sup norm using positive envelopes of its absolute kernel. The convergent Neumann series gives a global interval for phi. Integrate phi^2 times the exact shape source with outward intervals.",
+  "gates": "Operator norm <1/2; both enclosures contain independently integrated derivative; 4-subcell enclosure narrower than 1-subcell enclosure; analytic constant-density sphere is enclosed.",
+  "excludes": "Physical profile, EOS, atomic data, moving-star and observation derivatives. Exact interval enclosure is conditional on the frozen interpolant and specified constants."
+}

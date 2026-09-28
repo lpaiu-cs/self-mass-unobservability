@@ -1,0 +1,43 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "rows": [
+    {
+      "clock": 64,
+      "angular_port_relative": 1.057481683623226e-17,
+      "local_material_balance": [
+        6.914006307586693e-16,
+        2.7792569995181037e-15,
+        4.872536919542157e-16,
+        2.621196348629166e-17
+      ],
+      "maximum_true_stage": 5.530494375636922e-14,
+      "maximum_true_physical_stage": 4.693600205884594e-15,
+      "maximum_newton_iterations": 3,
+      "actual_completed_steps": 8,
+      "accepted_prefix_preserved": true
+    },
+    {
+      "clock": 128,
+      "angular_port_relative": 2.8688623842841316e-17,
+      "local_material_balance": [
+        3.440653064661889e-15,
+        1.2253595093983728e-13,
+        3.775971858038206e-15,
+        3.315058184411499e-17
+      ],
+      "maximum_true_stage": 4.71935316535276e-14,
+      "maximum_true_physical_stage": 9.405872048556147e-14,
+      "maximum_newton_iterations": 2,
+      "actual_completed_steps": 16,
+      "accepted_prefix_preserved": true
+    }
+  ],
+  "new_physical_steps": 0,
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "scope": "Exact Radau moments0..2 only."
+  },
+  "final_charge_conclusion": "unadjudicated"
+}

@@ -1,0 +1,17 @@
+{
+  "classification": "Proven",
+  "claim": "Determine whether the saved static thermal inputs and generic admissibility conditions uniquely supply the missing dynamic radiation/conduction closure before extending stellar evolution.",
+  "bindings": {
+    "verification/def_thermal_closure_identifiability.py": "bd2afff3427848c03bb1e2de0bd1006f1b195d86688b43a8ce9cd1e3ac0b293d",
+    "verification/def_reactive_cauchy.py": "7ddb7e14f1edee6b0656b924076dcabe39145bd5e1eeffbecf4fa3bbd4d95cda",
+    "outputs/direct-eos-gr33/def-free-surface-thermal/coefficients.npz": "8fa9ddf79c966965a3a3fa26e6b4c738f82eec0b6ad257e521ae37c9403fb46c",
+    "verification/gr_two_carrier_evolution.py": "973f86e4fdb3cb008cb928288e7d87e8906a6e46ae317bc311ab03f9bc291f26",
+    "outputs/direct-eos-gr33/gr-radiative-boundary/spectral-nonuniqueness.json": "678a09021f1d93078da4ab879c990da77b8fe6da53c0271089d8387c8a6de3cc"
+  },
+  "budget": {
+    "hard_seconds": 30,
+    "new_native_calls": 0,
+    "new_stellar_time_steps": 0
+  },
+  "decision": "If nonunique, do not turn the existing guessed relaxation time or Rosseland mean into a physically certified full-star calculation. Specify exactly which missing inputs each evolution block needs."
+}

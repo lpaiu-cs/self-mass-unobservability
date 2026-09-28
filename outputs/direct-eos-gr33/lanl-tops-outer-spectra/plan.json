@@ -1,0 +1,13 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "f305247",
+  "bindings": {
+    "verification/lanl_tops_outer_spectra.py": "fcc8e8152725cbd7ff87ea8f8b0e6b986ecda8460b128a5027d773d2c3a85b56",
+    "outputs/direct-eos-gr33/lanl-tops-boundary-control/manifest.json": "d1fd62e5bd9e437c8ef095dc8c6e335eef7f38102a4930e391ac70d733544181",
+    "outputs/direct-eos-gr33/lanl-tops-stellar-names/manifest.json": "2f4171d1f0cfe4c811d29a34ce820e2087aab65757f02f3071752dc235ff229b",
+    "outputs/direct-eos-gr33/lanl-tops-outer-spectra/requests.json": "a51ecd8ad58aded12e1b8bf158d64bf80129a17c6d6ac3503564f836d9e70547",
+    "outputs/direct-eos-gr33/lanl-tops-outer-spectra/lanl-tops-form.html": "b5f1093f7912a1842803c411f375e86db6c21af3d6d9074a1c25a936211ef9d5"
+  },
+  "changes": "The exact same outer composition and density are kept. Try each of the original two temperatures individually, the original pair with cutoff OFF, and the original pair requesting both spectral and default group output. Each query recomputes through /submit and /results; original failed pair remains frozen.",
+  "acceptance": "Retrieval is not acceptance. Check all echoes/warnings and compare spectra with the saved gray means. A successful alternate output mode does not prove non-LTE atmospheric physics or full GR evolution."
+}

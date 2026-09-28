@@ -1,5 +1,7 @@
 # Finite-Family Collapse of Free-Fall Self-Energy Couplings: A Fixed-Order Worldline-EFT Theorem, its Uniqueness No-Go, and Sharp Boundary Escapes
 
+> HISTORICAL DRAFT — superseded on 2026-09-09 by [the unified manuscript](manuscript.md). Scientific corrections and the current submission scope are recorded in [the revision record](../docs/unified-revision-2026-09-09.md). This draft is preserved as history, not a current submission manuscript.
+
 **Status:** draft manuscript (Paper A of the two-paper split; static free-fall sector)
 **Repository:** `lpaiu-cs/self-mass-unobservability` (main branch)
 **Author:** Juneyoung, Kim

@@ -1,0 +1,26 @@
+{
+  "classification": "Counterexample candidate",
+  "cause": "The new adapter introduced every-eighth thermal-face coarsening, whereas the accepted old weak solver kept source interfaces. Temperature passed but the maximum velocity at native133 and scalar at native2593 did not. This is a defect of the new mechanical trial-space choice, not an EOS or physical failure.",
+  "method": "Restore every thermal face. Split the full predetermined80-cell core-envelope junction window (40 each side) into64, to resolve the measured half132 sound distance10866.6cm against36889.7cm width. Preserve exact source/thermal cells, original readouts, fields, horizon and all gates. Restore extended-precision direct weak-source assembly used by the old accepted solver.",
+  "paths": [
+    "resolved-p4-8 pilot",
+    "resolved-p4-32",
+    "resolved-p4-64",
+    "resolved-p2-64"
+  ],
+  "budget": {
+    "previous_seconds": 280.473590444,
+    "hard_additional_seconds": 300,
+    "registered_total_cap_seconds": 600,
+    "new_EOS_calls": 0,
+    "memory_GB": 5,
+    "pilot_seconds": 60,
+    "automatic_expansion": false
+  },
+  "decision": "Measure the restored-space pilot before production. No new patch or interval after failure. Use the original global max-norm criteria, never replace the failed velocity/scalar criteria by mass RMS or temperature.",
+  "bindings": {
+    "graded-result.json": "b82f6610ff1ca39508c00140ce583246549f2f1d8a0d558ec3f7d44908e9666c",
+    "graded-source.py": "6be841a142e9030152f30e1e780139a078271df720f7a7872df10f51329927d6",
+    "spatial-diagnosis.json": "03152eb8c38ce0829284ca24682e16ceecfd5a315b247e7a3f86d4aa709a70bb"
+  }
+}

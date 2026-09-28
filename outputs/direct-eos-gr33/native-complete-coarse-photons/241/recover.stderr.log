@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/resume_versioned_photon_history.py", line 95, in <module>
+    globals()[action]()
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/resume_versioned_photon_history.py", line 78, in recover
+    exec(compile(source,__file__,'exec'),ns);(OUT/'expanded-recovery-64.py').write_text(source);ns['run'](64)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/resume_versioned_photon_history.py", line 71, in run
+    b="sol=np.tile(x[None],(2,1,1,1)).ravel();calls=[]\n        if step==begin:\n            proposal=np.load(OLD/'rejected-original-64.npz');assert np.array_equal(x,proposal['x_initial'])\n            sol=proposal['photon_stage_solution'].copy().ravel()"
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/complete_coarse_photon_history.py", line 103, in original_equation
+    defect=flux.precise_defect(m,t,h,v,sol,defect)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_native_flux_precision.py", line 70, in precise_defect
+    saved,rate=m.precise_values[t+c*h];assert np.array_equal(saved,g);rates.append(rate)
+KeyError: np.float64(0.003336048976529703)

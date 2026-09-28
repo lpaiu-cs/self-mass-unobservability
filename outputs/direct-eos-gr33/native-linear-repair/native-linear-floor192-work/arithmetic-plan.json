@@ -1,0 +1,16 @@
+{
+  "classification": "Conjectural",
+  "claim": "Resolve whether the dominant baryon residual is inaccurate evaluation or an inaccurate stored iterate. Reconstruct the same operator without Krylov work and evaluate all baryon rows using80decimal digits.",
+  "decision": "Compare original residual with exact-binary-coefficient reference and with the algebraically identical preassembled material block. Accept no physical step or tolerance change.",
+  "budget_seconds": 45,
+  "CPU_threads": 1,
+  "virtual_GiB": 4,
+  "new_physical_steps": 0,
+  "new_Krylov_iterations": 0,
+  "forecast": "The same model/operator setup previously consumed about28s; sparse gas-row arithmetic is small compared with the1.3million-dimensional system.45s cap.",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/diagnose_linear_residual_floor.py": "bd87b5976741811173b784eb2476d03cd1b769fe844a63805cd7938d8b6e34fd",
+    "native-linear-floor192-work/rejected-system.npz": "6aa78dd0deef0e59e81394f9e1ecdac348411693c9fba47a0cdae4c2867b68a7",
+    "native-linear-floor192-work/diagnosis.json": "5f3e2c78c3f49c2afd29b48fa9e43f421479820d72d0b6991a90f399c8d2c980"
+  }
+}

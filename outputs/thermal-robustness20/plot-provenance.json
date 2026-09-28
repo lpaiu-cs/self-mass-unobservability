@@ -1,0 +1,14 @@
+{
+  "classification": "Proven",
+  "rendering_only": true,
+  "versions": {
+    "numpy": "1.21.5",
+    "matplotlib": "3.5.1"
+  },
+  "module_file_sha256": {
+    "/usr/lib/python3/dist-packages/numpy/__init__.py": "02e54b39a5825a5eb95c74639b22593a8af816212f9bb1fdcb78f17112a5d27f",
+    "/usr/lib/python3/dist-packages/matplotlib/__init__.py": "1d09036dbd2d233ac69cf1cc6ae99aad3f592bc887af8ae60ce913eac6804eb9"
+  },
+  "command": "PYTHONPATH= python3 -s verification/thermal_robustness.py plot",
+  "reason": "System matplotlib uses NumPy 1.x ABI; scientific calculations retain their separately bound NumPy 2 environment."
+}

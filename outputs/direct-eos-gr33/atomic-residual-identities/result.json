@@ -1,0 +1,14 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "reaction_identity": "The derivative along atomic transfer x->y equals ln(y/x)+(c1-c0)+partial_y(phi)-partial_x(phi).",
+  "Fisher_identity": "Subtracting the weighted mean minimizes sum_i nu_i*(r_i-lambda)^2; fixing the reference residual to zero gives a valid upper bound.",
+  "positive_control": {
+    "gradient_shift": "1/10000",
+    "certified_shifted_residual_lower": "99999997997834742055090617004594369450708541807/1000000000000000000000000000000000000000000000000000",
+    "gate": "1/50000000",
+    "detected": true,
+    "method": "Adding delta times the receiving species population shifts its reaction residual by delta and leaves the Hessian unchanged. Even the worst frozen observed residual cannot cancel this registered-scale perturbation."
+  },
+  "scope": "Algebraic identities and a manufactured additive-gradient control. This is not an injected native-library run or a bound on native/physical EOS discrepancy."
+}

@@ -1,0 +1,9 @@
+{
+  "classification": "Counterexample candidate",
+  "registered_before_quarter_step_result": true,
+  "reason": "The isobaric method's 1-to-2 comparison already passes temperature but fails the original componentwise composition gate. Test a separately declared second-order Richardson construction; retain all raw first-order failures.",
+  "method": "For equal final coordinate time and fixed baryon faces, form X_ext=2 X_fine-X_coarse and s_ext=2 s_fine-s_coarse for the 1/2 and 2/4 pairs. Solve the physical EOS entropy inversion and the same baryon TOV constraints again. Extrapolate the accumulated neutrino energy using the same coefficients; keep the prescribed photon loss and exact finite surface-pressure work.",
+  "positive_state_gate": "Reject if any negative extrapolated abundance exceeds 1e-16+1e-3 times its total physical change. Otherwise project the roundoff-scale negative component to zero and compensate He4, recording the projection. This correction is included in the energy and time comparisons.",
+  "unchanged_acceptance": "Compare the two independently reconstructed extrapolated endpoints with the original 1e-3 composition-change, 2e-6 log-temperature and 1e-6 GR energy-release criteria. Passing is a result for this numerical construction, not a change to the raw trajectory verdict.",
+  "limits": "This does not certify the continuous EOS, physical transport, scalar driving or observation likelihood. A Richardson construction is not an exact time solution."
+}

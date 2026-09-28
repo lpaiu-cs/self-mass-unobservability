@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/mnt/e/lab/self-mass-unobservability/verification/gr_response_regular_identity.py", line 117, in <module>
+    if __name__=='__main__':globals()[sys.argv[1]]()
+  File "/mnt/e/lab/self-mass-unobservability/verification/gr_response_regular_identity.py", line 50, in prove
+    x=sp.symbols('x',positive=True);assert sp.cancel(2*x-(2*x+x*x)/(1+x)**2)==x*x*(2*x+3)/(x+1)**2
+AssertionError

@@ -1,0 +1,31 @@
+{
+ "classification": "Imported from prior work",
+ "passed": true,
+ "verdict": "REVISION_3_REREVIEWED__REVISION_4_DRAFTED__ERRATA_RECORDED__REREVIEW_PENDING",
+ "rereview_of_revision_3": {
+  "gpt-6-astra (Codex CLI, read-only)": "major revision; blocking item kept (Section 5 sensitivity conclusion)",
+  "opus5.5 (subagent)": "accept after minor revision; three sentence-level majors (instantaneous response, relaxation strength, sign sentence)",
+  "fable5.1 (subagent)": "accept after minor revision"
+ },
+ "revision_4": [
+  "sensitivity-exclusion conclusions removed; scale comparison only; timing response of the two non-common channels not computed",
+  "relaxation strength <= S_struct and single relaxation stated as uncomputed assumptions; A4 inference removed",
+  "instantaneous response beta_s*dphi_mod separated (no lag; Section 4.3 feedback-stiffness condition)",
+  "sign sentence corrected: no face-density change below 99.87% (max norm) reverses the sign",
+  "sources and norms: 3.5/4.0 ms and static window in the whole-star paragraph; Born comparison for orientation only; peak from the 0.2 ms grid",
+  "numbers: 2.13e-18, 7.53e-21, |S_struct|<=8.84e-9, non-gray 1.9-2.4 (1 sigma), -8.0e-41 at 0.23 s",
+  "notation, labels, blank lines before lists (Pandoc: 10 lists, 4 equations), companion edits incl. bib restore and PDF note"
+ ],
+ "errata": [
+  "REQUEST272 line 19 sign statement false",
+  "REQUEST278 history table values and time labels",
+  "REQUEST282 peak grid; core conclusion conditional",
+  "REQUEST273/274/276/280 orbital-timescale no-go and A4 statements unproven: conditional theorem progress only",
+  "REQUEST274 |kappa_struct|<=8.8e-9 rounded down (8.8366e-9)",
+  "REQUEST283 verifier table-row reason inaccurate"
+ ],
+ "repository_classification": "conditional theorem progress (no-go only under the two stated relaxation assumptions; A4 remains an assumption)",
+ "previous_draft_sha256": "cf5460324d19230beaee42f64863d43fc30a216e800df889f2425917fa0b5be4",
+ "full_goal_complete": false,
+ "snapshot_KST": "2026-09-27T23:06:13.409932+09:00"
+}

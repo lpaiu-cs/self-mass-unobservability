@@ -1,0 +1,22 @@
+{
+ "classification": "Imported from prior work",
+ "passed": true,
+ "verdict": "THREE_INDEPENDENT_REVIEWS_MAJOR_REVISION__INTEGRATION_REVERTED__REVISION_PLANNED",
+ "reviews": {
+  "gpt-6-astra (Codex CLI 0.154.0, read-only)": "major revision; one blocking item (Section 5 coefficient interval used as white-dwarf observational sensitivity)",
+  "opus5.5 (subagent)": "major revision then re-review; no blocking item",
+  "fable5.1 (subagent)": "major revision; no blocking item"
+ },
+ "integration_commit": "a322c6462",
+ "revert_commit": "b40864a22",
+ "verify_after_revert": "PASS",
+ "consensus": [
+  "J0337 comparison: coefficient envelope vs amplitude, two pair channels, scale range, Cassini rescaling, drop NS-sector conclusion",
+  "claim labels per manuscript convention; define A4; per-item labels; soften abstract and discussion",
+  "history in readout time; static-window sign; kernel-weighted 0.25% (max 0.38%)",
+  "tidal: selection rule and equilibrium-tide bound only; dynamical tide dissipative; damping-depth formula outside validity",
+  "symbol collisions with Sections 3-5; define local notation"
+ ],
+ "full_goal_complete": false,
+ "snapshot_KST": "2026-09-27T21:51:23.148711+09:00"
+}

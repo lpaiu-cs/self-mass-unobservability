@@ -1,0 +1,7 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": false,
+  "label": "base 17-point, subdivision-4 refinement attempt",
+  "error": "A relative finite-difference step on a near-zero log-mass parameter generated a numerically unresolved Jacobian and an unbounded central-log-pressure trial 0.19462909159453545; FreeEOS rejected that state.",
+  "correction": "Use SciPy's absolute-scale 3-point default steps and explicit physical parameter bounds. EOS failures are not suppressed. Preserve the original failed trial log."
+}

@@ -1,0 +1,142 @@
+{
+  "classification": "Counterexample candidate",
+  "actual_coupled_evolution": true,
+  "numerical_response_passed": true,
+  "time_order": 2.013306286758256,
+  "time_differences_initial": [
+    4.8147576419365715e-05,
+    1.1926385645809571e-05
+  ],
+  "differences_initial": {
+    "coarse": 1.594308839996876e-05,
+    "quadrature4": 5.529480867066783e-07,
+    "zero-atomic": 0.3859779340917813
+  },
+  "source_grid_plus_two_tails": 0.0004158684315455939,
+  "temperature_perturbation_K": 0.8136857590920158,
+  "duration_seconds": 0.0023168013831055567,
+  "rows": [
+    {
+      "name": "fine-16",
+      "algebra": {
+        "energy_number_null_relative": [
+          3.062490490811851e-16,
+          4.329888803708035e-16
+        ],
+        "initial_heating": 1.3388421347378537e-05,
+        "continuum_heating": 1.3358819962750974e-05,
+        "heating_relative": 0.002215868221152828
+      },
+      "balance": 2.048563782375223e-12,
+      "energy_residual": 4.708494403499801e-12,
+      "entropy_growth": 0.0,
+      "solver_residual": 1.2796193879584545e-13,
+      "iterations": 3
+    },
+    {
+      "name": "fine-32",
+      "algebra": {
+        "energy_number_null_relative": [
+          3.062490490811851e-16,
+          4.329888803708035e-16
+        ],
+        "initial_heating": 1.3388421347378537e-05,
+        "continuum_heating": 1.3358819962750974e-05,
+        "heating_relative": 0.002215868221152828
+      },
+      "balance": 7.918257239421831e-14,
+      "energy_residual": 6.8525623412416156e-12,
+      "entropy_growth": 0.0,
+      "solver_residual": 1.2796193879584545e-13,
+      "iterations": 3
+    },
+    {
+      "name": "fine-64",
+      "algebra": {
+        "energy_number_null_relative": [
+          3.062490490811851e-16,
+          4.329888803708035e-16
+        ],
+        "initial_heating": 1.3388421347378537e-05,
+        "continuum_heating": 1.3358819962750974e-05,
+        "heating_relative": 0.002215868221152828
+      },
+      "balance": 3.1644009818954356e-12,
+      "energy_residual": 6.272388086342845e-12,
+      "entropy_growth": 0.0,
+      "solver_residual": 6.517552121187722e-13,
+      "iterations": 3
+    },
+    {
+      "name": "coarse-64",
+      "algebra": {
+        "energy_number_null_relative": [
+          3.062490490811851e-16,
+          4.329888803708035e-16
+        ],
+        "initial_heating": 1.3388421347378537e-05,
+        "continuum_heating": 1.3358819962750974e-05,
+        "heating_relative": 0.002215868221152828
+      },
+      "balance": 2.962158563632333e-12,
+      "energy_residual": 4.809278010801724e-12,
+      "entropy_growth": 0.0,
+      "solver_residual": 6.518515687446352e-13,
+      "iterations": 3
+    },
+    {
+      "name": "quadrature4-64",
+      "algebra": {
+        "energy_number_null_relative": [
+          3.062490490811851e-16,
+          4.329888803708035e-16
+        ],
+        "initial_heating": 1.3388421347378537e-05,
+        "continuum_heating": 1.3358819962750974e-05,
+        "heating_relative": 0.002215868221152828
+      },
+      "balance": 3.170106641361333e-12,
+      "energy_residual": 6.181038167650509e-12,
+      "entropy_growth": 0.0,
+      "solver_residual": 6.517328042723188e-13,
+      "iterations": 3
+    },
+    {
+      "name": "zero-atomic-64",
+      "algebra": {
+        "energy_number_null_relative": [
+          3.062490490811851e-16,
+          4.329888803708035e-16
+        ],
+        "initial_heating": 1.3388421347378537e-05,
+        "continuum_heating": 1.3358819962750974e-05,
+        "heating_relative": 0.002215868221152828
+      },
+      "balance": 2.6269663472186904e-13,
+      "energy_residual": 3.2905767508985965e-19,
+      "entropy_growth": 0.0,
+      "solver_residual": 8.921938558519517e-15,
+      "iterations": 1
+    }
+  ],
+  "coefficients": {
+    "seconds": 24.765771650000005,
+    "pairs": 4048929,
+    "frequency_cells": 24134,
+    "nangle": 24,
+    "collective": true,
+    "velocity_order": 256,
+    "q_points": 257,
+    "model": "Maxwell collisionless multi-ion RPA plus detailed-balance FDT factor; exact rectangular-cell convolution of positive velocity spectral atoms. Vacuum photon kinematics; no native scalar-rate normalization."
+  },
+  "seconds": 218.07310986599998,
+  "memory_GB": 1.590030336,
+  "same_EOS_retained_channels": true,
+  "physical_opacity_certified": false,
+  "original_complete_input_failure_resolved": false,
+  "full_GR_photon_feedback_evolved": false,
+  "full_dynamic_charge_solved": false,
+  "decision": "Same-EOS H/HeII bound and charged-ion free-free inputs were actually evolved. Their previous absence is fixed. Other missing channels, pressure/dissolved-state physics and full GR feedback remain; the original complete-input failure is still open.",
+  "hydrogen_helium_coupled": true,
+  "charged_ion_free_free_coupled": true
+}

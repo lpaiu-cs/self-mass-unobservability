@@ -1,0 +1,1443 @@
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/fusion/functional/invocation/detail/that_ptr.hpp:12,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/fusion/functional/invocation/invoke.hpp:51,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/fusion/functional/adapter/fused.hpp:16,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/fusion/functional/generation/make_fused.hpp:12,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/fusion/include/make_fused.hpp:10,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/resize.hpp:28,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.cpp:6:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/get_pointer.hpp:27:40: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   27 | template<class T> T * get_pointer(std::auto_ptr<T> const& p)
+      |                                        ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.cpp:6:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:32,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.cpp:6:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/detail/shared_count.hpp:323:33: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  323 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.cpp:6:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.cpp:6:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:247:65: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  247 | template< class T, class R > struct sp_enable_if_auto_ptr< std::auto_ptr< T >, R >
+      |                                                                 ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.cpp:6:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.cpp:6:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:446:31: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  446 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.cpp:6:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.cpp:6:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:459:22: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  459 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.cpp:6:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.cpp:6:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:525:34: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  525 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.cpp:6:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.cpp:6:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:534:34: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  534 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.cpp:6:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.cpp:6:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp: In member function ‘boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)’:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:536:38: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  536 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.cpp:6:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/fusion/functional/invocation/detail/that_ptr.hpp:12,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/fusion/functional/invocation/invoke.hpp:51,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/fusion/functional/adapter/fused.hpp:16,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/fusion/functional/generation/make_fused.hpp:12,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/fusion/include/make_fused.hpp:10,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/resize.hpp:28,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Delay_brut.cpp:16:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/get_pointer.hpp:27:40: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   27 | template<class T> T * get_pointer(std::auto_ptr<T> const& p)
+      |                                        ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Delay_brut.cpp:16:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:32,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.h:23,
+                 from Delay_brut.cpp:16:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/detail/shared_count.hpp:323:33: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  323 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Delay_brut.cpp:16:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.h:23,
+                 from Delay_brut.cpp:16:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:247:65: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  247 | template< class T, class R > struct sp_enable_if_auto_ptr< std::auto_ptr< T >, R >
+      |                                                                 ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Delay_brut.cpp:16:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.h:23,
+                 from Delay_brut.cpp:16:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:446:31: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  446 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Delay_brut.cpp:16:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.h:23,
+                 from Delay_brut.cpp:16:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:459:22: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  459 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Delay_brut.cpp:16:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.h:23,
+                 from Delay_brut.cpp:16:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:525:34: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  525 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Delay_brut.cpp:16:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.h:23,
+                 from Delay_brut.cpp:16:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:534:34: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  534 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Delay_brut.cpp:16:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.h:23,
+                 from Delay_brut.cpp:16:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp: In member function ‘boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)’:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:536:38: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  536 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Delay_brut.cpp:16:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+Delay_brut.cpp: In function ‘void Delays_Brut_nogeometric(value_type*, const value_type&, const long int&, const long int&, value_type**, value_type**, value_type**, value_type*, const value_type&, const value_type&, const value_type&, const value_type&, bool, bool, bool, value_type*, int, value_type&, bool&, value_type*, const std::vector<std::vector<long double> >*, const value_type*, int, value_type)’:
+Delay_brut.cpp:732:99: warning: format ‘%Le’ expects a matching ‘long double’ argument [-Wformat=]
+  732 |                   printf(" --> Rapport isnan aberration : %.19Le %.19Le %.19Le %.19Le %.19Le %.19Le \n", spin_cross_nss[0], vp_dot_spin_cross_nss, rotaxis[0], rotaxis[1], rotaxis[2]);
+      |                                                                                              ~~~~~^
+      |                                                                                                   |
+      |                                                                                                   long double
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/fusion/functional/invocation/detail/that_ptr.hpp:12,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/fusion/functional/invocation/invoke.hpp:51,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/fusion/functional/adapter/fused.hpp:16,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/fusion/functional/generation/make_fused.hpp:12,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/fusion/include/make_fused.hpp:10,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/resize.hpp:28,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-compute.cpp:21:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/get_pointer.hpp:27:40: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   27 | template<class T> T * get_pointer(std::auto_ptr<T> const& p)
+      |                                        ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-compute.cpp:21:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:32,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-compute.cpp:21:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/detail/shared_count.hpp:323:33: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  323 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-compute.cpp:21:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-compute.cpp:21:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:247:65: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  247 | template< class T, class R > struct sp_enable_if_auto_ptr< std::auto_ptr< T >, R >
+      |                                                                 ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-compute.cpp:21:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-compute.cpp:21:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:446:31: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  446 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-compute.cpp:21:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-compute.cpp:21:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:459:22: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  459 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-compute.cpp:21:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-compute.cpp:21:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:525:34: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  525 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-compute.cpp:21:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-compute.cpp:21:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:534:34: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  534 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-compute.cpp:21:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-compute.cpp:21:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp: In member function ‘boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)’:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:536:38: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  536 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-compute.cpp:21:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/fusion/functional/invocation/detail/that_ptr.hpp:12,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/fusion/functional/invocation/invoke.hpp:51,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/fusion/functional/adapter/fused.hpp:16,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/fusion/functional/generation/make_fused.hpp:12,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/fusion/include/make_fused.hpp:10,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/resize.hpp:28,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-init.cpp:19:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/get_pointer.hpp:27:40: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   27 | template<class T> T * get_pointer(std::auto_ptr<T> const& p)
+      |                                        ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-init.cpp:19:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:32,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-init.cpp:19:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/detail/shared_count.hpp:323:33: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  323 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-init.cpp:19:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-init.cpp:19:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:247:65: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  247 | template< class T, class R > struct sp_enable_if_auto_ptr< std::auto_ptr< T >, R >
+      |                                                                 ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-init.cpp:19:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-init.cpp:19:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:446:31: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  446 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-init.cpp:19:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-init.cpp:19:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:459:22: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  459 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-init.cpp:19:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-init.cpp:19:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:525:34: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  525 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-init.cpp:19:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-init.cpp:19:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:534:34: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  534 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-init.cpp:19:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-init.cpp:19:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp: In member function ‘boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)’:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:536:38: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  536 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-init.cpp:19:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+Fittriple-init.cpp: In member function ‘void Fittriple::Compute_fake_BATs_from_parameters(value_type*)’:
+Fittriple-init.cpp:1177:23: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ 1177 |     Save_turn_numbers("turns_Fake_Bats.dat");
+      |                       ^~~~~~~~~~~~~~~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/fusion/functional/invocation/detail/that_ptr.hpp:12,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/fusion/functional/invocation/invoke.hpp:51,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/fusion/functional/adapter/fused.hpp:16,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/fusion/functional/generation/make_fused.hpp:12,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/fusion/include/make_fused.hpp:10,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/resize.hpp:28,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-IO.cpp:16:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/get_pointer.hpp:27:40: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   27 | template<class T> T * get_pointer(std::auto_ptr<T> const& p)
+      |                                        ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-IO.cpp:16:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:32,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-IO.cpp:16:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/detail/shared_count.hpp:323:33: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  323 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-IO.cpp:16:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-IO.cpp:16:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:247:65: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  247 | template< class T, class R > struct sp_enable_if_auto_ptr< std::auto_ptr< T >, R >
+      |                                                                 ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-IO.cpp:16:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-IO.cpp:16:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:446:31: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  446 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-IO.cpp:16:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-IO.cpp:16:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:459:22: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  459 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-IO.cpp:16:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-IO.cpp:16:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:525:34: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  525 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-IO.cpp:16:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-IO.cpp:16:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:534:34: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  534 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-IO.cpp:16:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-IO.cpp:16:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp: In member function ‘boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)’:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:536:38: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  536 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-IO.cpp:16:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+Fittriple-IO.cpp: In member function ‘void Fittriple::Load_turn_numbers(char*)’:
+Fittriple-IO.cpp:91:11: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+   91 |      fgets(line, sizechar, fp);
+      |      ~~~~~^~~~~~~~~~~~~~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/fusion/functional/invocation/detail/that_ptr.hpp:12,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/fusion/functional/invocation/invoke.hpp:51,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/fusion/functional/adapter/fused.hpp:16,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/fusion/functional/generation/make_fused.hpp:12,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/fusion/include/make_fused.hpp:10,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/resize.hpp:28,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/state_wrapper.hpp:26,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:28,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-diagnostics.cpp:11:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/get_pointer.hpp:27:40: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+   27 | template<class T> T * get_pointer(std::auto_ptr<T> const& p)
+      |                                        ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-diagnostics.cpp:11:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:32,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-diagnostics.cpp:11:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/detail/shared_count.hpp:323:33: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  323 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-diagnostics.cpp:11:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-diagnostics.cpp:11:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:247:65: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  247 | template< class T, class R > struct sp_enable_if_auto_ptr< std::auto_ptr< T >, R >
+      |                                                                 ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-diagnostics.cpp:11:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-diagnostics.cpp:11:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:446:31: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  446 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-diagnostics.cpp:11:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-diagnostics.cpp:11:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:459:22: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  459 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-diagnostics.cpp:11:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-diagnostics.cpp:11:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:525:34: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  525 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-diagnostics.cpp:11:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-diagnostics.cpp:11:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:534:34: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  534 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-diagnostics.cpp:11:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/shared_ptr.hpp:17,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/alt_sstream.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format/internals.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/format.hpp:38,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/policies/error_handling.hpp:31,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/gamma.hpp:21,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/factorials.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/math/special_functions/binomial.hpp:13,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:45,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-diagnostics.cpp:11:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp: In member function ‘boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)’:
+/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp:536:38: warning: ‘template<class> class std::auto_ptr’ is deprecated [-Wdeprecated-declarations]
+  536 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+In file included from /usr/include/c++/9/memory:80,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/fwd.hpp:18,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/detail/config.hpp:290,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/exception.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/storage.hpp:25,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/ublas/vector.hpp:19,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint/util/ublas_wrapper.hpp:23,
+                 from /home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0/boost/numeric/odeint.hpp:25,
+                 from AllTheories3Bodies.h:23,
+                 from Fittriple.h:16,
+                 from Fittriple-diagnostics.cpp:11:
+/usr/include/c++/9/bits/unique_ptr.h:53:28: note: declared here
+   53 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+Utilities.cpp: In function ‘void Loadtxt(char*, double**, int, int)’:
+Utilities.cpp:371:46: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+  371 |         for (j = 0 ; j < ncols-1; j++) fscanf(myfile, "%le ", &table[i][j] );
+      |                                        ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Utilities.cpp:372:15: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+  372 |         fscanf(myfile, "%le\n", &table[i][j] );
+      |         ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Parameters.cpp: In member function ‘void Parametres::Read_parfile(const char*)’:
+Parameters.cpp:1057:38: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<long double>::size_type’ {aka ‘long unsigned int’} [-Wformat=]
+ 1057 |                     printf("fd size %i\n", FD.size());
+      |                                     ~^     ~~~~~~~~~
+      |                                      |            |
+      |                                      int          std::vector<long double>::size_type {aka long unsigned int}
+      |                                     %li
+Parameters.cpp:1058:38: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<long double>::size_type’ {aka ‘long unsigned int’} [-Wformat=]
+ 1058 |                     printf("fd size %i\n", FD.size());
+      |                                     ~^     ~~~~~~~~~
+      |                                      |            |
+      |                                      int          std::vector<long double>::size_type {aka long unsigned int}
+      |                                     %li
+Parameters.cpp: In member function ‘void Parametres::Print()’:
+Parameters.cpp:1451:32: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<long double>::size_type’ {aka ‘long unsigned int’} [-Wformat=]
+ 1451 |     printf("\n   DMX ranges : %d \n", DMXranges.size());
+      |                               ~^      ~~~~~~~~~~~~~~~~
+      |                                |                    |
+      |                                int                  std::vector<long double>::size_type {aka long unsigned int}
+      |                               %ld
+Parameters.cpp: In member function ‘value_type Parametres::Parameter_scale(int)’:
+Parameters.cpp:324:1: warning: control reaches end of non-void function [-Wreturn-type]
+  324 | }
+      | ^

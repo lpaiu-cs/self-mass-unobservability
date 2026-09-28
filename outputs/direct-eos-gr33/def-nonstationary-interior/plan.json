@@ -1,0 +1,69 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "7950a546",
+  "bindings": {
+    "verification/def_nonstationary_interior.py": "d14aa1f9817f722c62c0f84dc39dc5134c6b3885d366a804222a15076b4abc84",
+    "verification/def_resolved_scalar_pulse.py": "6e05b94e44fbc27c2b4e10fb686f52a74eb384695c4db3db91a40a4d399c4b1f",
+    "verification/def_spherical_coupled.py": "421ce377f7d150788681ca599f8f201bfdfb33beb053455803914f7e298e9f91",
+    "verification/def_spherical_regular.py": "9023b81412cb33aa1b90ba5b036a05dbdd57f5e2416639ad4ed873def6fd59f3",
+    "verification/gr_compatible_equilibrium_evolution.py": "eef028a87aba8ac96687994f42513853e80b8e270d6c499cc7bc56da4efe5a4c",
+    "verification/gr_conservative_two_carrier.py": "baa2ebf45375f7f1729344831748c1b3ddfa21bdbe95ec22265f4ed93f90909c",
+    "verification/gr_conservative_composition_tangent.py": "f86901a46537de3af713c23121d5f7dd922aee5e86e00a5ea1b2b56de8d8c080",
+    "outputs/direct-eos-gr33/def-normalized-charge/finite.npz": "c67d930459ff9af39956adf9030faf2af2f924d4be4f95310474f3d02371c769",
+    "outputs/direct-eos-gr33/def-normalized-charge/manifest.json": "b8c67953eb695190f26f09a93e63e80b6c7bbbaa67a6053c63e4fbabf7f750ca",
+    "outputs/direct-eos-gr33/def-resolved-scalar-pulse/initial.npz": "da7d0ec50e6f0d75bcd7c673d78099dd8f759a3c0ffc5a8546f62e54488017a1",
+    "outputs/direct-eos-gr33/def-resolved-scalar-pulse/initial-manifest.json": "e0acff44d88031ef710169aae7b105c43774e0b92527571d4b3f7655b41b6a10",
+    "outputs/direct-eos-gr33/def-nonstationary-interior/pilot-source.py": "4b739982aa8ed81b235b5c7886493a8648f71b7f21d7a7d66d99038f40441a6d"
+  },
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "scope": "Removing the three reference momentum terms recovers the unprojected finite-volume radial momentum balance. Nonzero heat flux requires evolving mass at zero material velocity. No continuum error certificate."
+  },
+  "cells": 24,
+  "phi_infinity": 0.001,
+  "drive_amplitude": 1e-05,
+  "time_steps": [
+    12,
+    24,
+    48
+  ],
+  "paths": [
+    "minus",
+    "undriven",
+    "plus"
+  ],
+  "duration_crossing_times": 1,
+  "pulse_duration_crossing_times": 1,
+  "drive": "Same finite nonzero initial constrained state; add signed sin^8 pulse to the common scalar surface value. Reflecting material and heat wall remain explicit.",
+  "primary": "Odd paired response (plus-minus)/2 of Jordan temperature, material momentum and interior scalar field; report even part and unforced background drift separately.",
+  "decision": "Can the native finite-temperature, two-heat-carrier, 26-species matter and scalar evolve on the same nonstationary nonzero background without artificial hydrostatic force subtraction? If not, fix that coupled solve before exterior or orbit integration.",
+  "gates": {
+    "native_norm": 1.0,
+    "scalar": 2e-17,
+    "mass_work_identity": 2e-15,
+    "baryon": 1e-09,
+    "isotope": 1e-09,
+    "minimum_time_order": 0.7,
+    "maximum_relative_last_difference": 0.2,
+    "minimum_signal_over_time_difference": 5
+  },
+  "budget": {
+    "workers": 4,
+    "blas_threads": 1,
+    "gpu": false,
+    "pilot_steps": 2,
+    "pilot_timeout_seconds": 90,
+    "production_timeout_seconds": 600,
+    "maximum_steps": 126,
+    "automatic_expansion": false,
+    "prior_measurement": "Phase40: 4 small early pulse steps took 5.34 s. Nonzero-background and unprojected-force iteration counts unmeasured. Pilot must forecast full work within 600 s before continuation.",
+    "estimated_wall_seconds": [
+      450,
+      600
+    ]
+  },
+  "scope": "Actual nonlinear interior evolution of the declared finite cavity, not stationary transfer, physical atmosphere, vacuum outgoing charge, EOS certification, orbital response or full dynamic-charge completion. The saved GR fine structure is not silently substituted for this conserved coarse Cauchy state.",
+  "pre_execution_correction": "Before any run, use the actual conformally transformed conduction time in the reused cone control, matching the matter equations.",
+  "execution_reassessment": "Measured pilot 8.9119 s / 2 steps projects 1122.9 s for 252 steps, above 600 s. Complete only the finite pulse through its cutoff at R/c, using the same 12/24/48 nominal time grids (6/12/24 actual steps), all three paths and unchanged convergence gates. Total 126 actual steps including two reused pilot steps. No post-cutoff tail or longer evolution. No residual/evolution equations changed; only resume, report and execution scheduling added. Preserve the pre-pilot source and plans. No final response comparison was inspected before this change."
+}

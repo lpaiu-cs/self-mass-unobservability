@@ -1,0 +1,22 @@
+{
+  "classification": "Counterexample candidate",
+  "bindings": {
+    "verification/def_reactive_cauchy_readout.py": "fa138e2cef9989d59577157c9ad8e330fa4caa89438ac545adf63e8934120c9e",
+    "verification/def_reactive_cauchy.py": "7ddb7e14f1edee6b0656b924076dcabe39145bd5e1eeffbecf4fa3bbd4d95cda",
+    "outputs/direct-eos-gr33/def-reactive-cauchy/plan.json": "bcc22b02269e5b5ed7cc38e1c209910351d674280612317ee0b693d1c6156515",
+    "outputs/direct-eos-gr33/def-reactive-cauchy/result.json": "dcedcb4cd22ff4d4f0218ccbd521a0fba209a70a6bc5339a7c7b8e58fc0fd3f7",
+    "outputs/direct-eos-gr33/def-reactive-cauchy/fine-64.npz": "ca82daf1fc43e84f856a6cc61b655b948926fddc98f02559ace24407c5da65e5",
+    "outputs/direct-eos-gr33/def-reactive-cauchy/fine-rays.npz": "fbfe0865b245bdfd1e36a163a455c5d9bfeb698f37f656a9981af10ebe2a17d3"
+  },
+  "claim": "Reconstruct baryon density, pressure, temperature, composition, radial motion and metric constraints from the actual saved linear time solution. Independently compare the conservative mass defect to direct ray crossings.",
+  "scope": "Postprocessing only; no added time paths, rays or native calls. Lapse normalized at the causally unperturbed 2Rstar boundary; this is not an asymptotic outgoing charge extraction.",
+  "gates": {
+    "surface_and_outer_mass_source_relative": 2e-13,
+    "linear_pressure_operator_replay": 1e-11
+  },
+  "budget": {
+    "hard_seconds": 30,
+    "new_time_steps": 0,
+    "native_calls": 0
+  }
+}

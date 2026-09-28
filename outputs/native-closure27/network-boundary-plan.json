@@ -1,0 +1,6 @@
+{
+  "classification": "Counterexample candidate",
+  "intervention": "At original peak-heating zone 2592 only, transfer its entire H1 fraction to He4. Keep rho,T and all other abundances unchanged. Evaluate the original 22-species network.",
+  "positivity_gate": "At X_H1=0, the returned dX_H1/dt must be nonnegative for an ODE invariant on the abundance simplex.",
+  "reason": "The effective PP-II/III stoichiometry consumes H1 although its initial He3+He4 rate omits H1. This boundary probe checks the validity domain of the eliminated-intermediate network; it is not the actual GR initial state."
+}

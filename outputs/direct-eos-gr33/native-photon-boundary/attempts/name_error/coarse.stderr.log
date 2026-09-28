@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/.phase251-reader-launch.py", line 14, in <module>
+    runpy.run_path(sys.argv[0],run_name='__main__')
+  File "/usr/lib/python3.10/runpy.py", line 289, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/usr/lib/python3.10/runpy.py", line 96, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "verification/apply_photon_geometric_boundary_newton.py", line 76, in <module>
+    elif action in ['coarse','fine']:first.evolve(64 if action=='coarse' else 128)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/apply_photon_geometric_boundary.py", line 130, in evolve
+    def evolve(n):bind(live.evolve,OUT=OUT,initialize=initialize)(n)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/repair_returned_metric_endpoint.py", line 119, in evolve
+    exec(compile(source,__file__,'exec'),ns);ns['evolve'](n)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/repair_returned_metric_endpoint.py", line 17, in evolve
+    base=prior.base;joint=prior.joint
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_full_material_front.py", line 39, in run
+    
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/repair_returned_metric_endpoint.py", line 6, in observed
+    """
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/finish_returned_material_accuracy.py", line 4, in stages
+    separate material residual decide their acceptance. No readout is patched.
+NameError: name 'NEWTON' is not defined

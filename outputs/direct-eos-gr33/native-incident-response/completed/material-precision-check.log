@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/solve_native_incident_material.py", line 119, in <module>
+    else:globals()[action]()
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/solve_native_incident_material.py", line 69, in check
+    t=d['t'][i];z=d['history_scaled'][i];rates=[m.rhs(t,z,p)[0] for p in [.5,1.,2.]]
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/solve_native_incident_material.py", line 69, in <listcomp>
+    t=d['t'][i];z=d['history_scaled'][i];rates=[m.rhs(t,z,p)[0] for p in [.5,1.,2.]]
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/solve_native_incident_material.py", line 44, in rhs
+    force=field[4]*((1-f)*self.ap_map(j)+f*self.ap_map(j+1))
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/solve_native_incident_material.py", line 32, in ap_map
+    row=self.point(k);delta=np.zeros_like(row['Q']);field=np.zeros((5,self.n))
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_updated_material_return.py", line 31, in point
+    cached=k in self.cache;row=super().point(k)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_material_response.py", line 89, in point
+    flux,gravity,dt,_=self.raw(k,np.zeros_like(Q),np.zeros((5,self.n)),0.,row)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/solve_native_incident_material.py", line 25, in raw
+    return super().raw(k,delta,field,eps,row)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_material_branch_response.py", line 39, in raw
+    result=super().raw(k,delta,field,eps,row)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_material_response.py", line 99, in raw
+    V,a=self.geometry(field,eps);Q=row['Q']+eps*delta*np.asarray(row['active'])[None]
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_material_response.py", line 59, in geometry
+    uf=interp(u);lf=interp(lam);df=interp(aden)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_material_response.py", line 58, in <lambda>
+    u,ell,lam,aden,ap=field;interp=lambda v:np.interp(self.rEf,self.rE,v)
+  File "/home/lpaiu/.local/lib/python3.10/site-packages/numpy/lib/_function_base_impl.py", line 1642, in interp
+    return interp_func(x, xp, fp, left, right)
+TypeError: Cannot cast array data from dtype('float128') to dtype('float64') according to the rule 'safe'

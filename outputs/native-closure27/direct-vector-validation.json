@@ -1,0 +1,33 @@
+{
+  "classification": "Counterexample candidate",
+  "zones": 5735,
+  "species": 22,
+  "trace_input_errors": {
+    "logT": 7.105427357601002e-15,
+    "logrho": 7.105427357601002e-15,
+    "X": 3.3306690738754696e-16
+  },
+  "untraced_profile_errors": {
+    "rho": 0.0,
+    "logT": 0.0,
+    "eps_nuc": 0.0,
+    "eps_nuc_neu_total": 0.0,
+    "energy": 0.0,
+    "pressure": 0.0,
+    "opacity": 0.0
+  },
+  "direct_output_errors": {
+    "eps_nuc": 0.0,
+    "eps_nuc_neu_total": 0.0
+  },
+  "vector_max_relative_to_zone_max": 8.479548694755615e-10,
+  "worst_zone": 2592,
+  "worst_species": "f19",
+  "vector_max_absolute": 1.4336976886642445e-22,
+  "baryon_relative": 1.467076133650089e-16,
+  "jacobian_baryon_relative": 2.1800625775778547e-16,
+  "max_F_generation_per_s": 1.0489288114666952e-14,
+  "positive_F_generation_cells": 4559,
+  "independently_validated": true,
+  "meaning": "Direct dxdt returned by the unchanged native net_get, independently compared with the previous channel-energy reconstruction. The native Jacobian is exported but not yet certified; time evolution, EOS consistency and GR structure remain separate gates."
+}

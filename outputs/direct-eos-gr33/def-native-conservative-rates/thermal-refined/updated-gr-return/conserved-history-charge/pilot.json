@@ -1,0 +1,94 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "eligible": false,
+  "totals": {
+    "deep": 323,
+    "atmosphere": 3017
+  },
+  "remaining": {
+    "deep": 302,
+    "atmosphere": 3008
+  },
+  "exact_cached_states": 19,
+  "native_calls": 187,
+  "root_seconds": {
+    "deep": [
+      0.3234840479999548,
+      0.31365207800001826,
+      0.17263977899995098
+    ],
+    "atmosphere": [
+      0.24054353600001832,
+      0.15332105600009527,
+      0.2156072379999614,
+      0.47543157400002656,
+      0.5061852599999384,
+      0.47959206500001983,
+      0.3618466509999507,
+      0.5376771329999883,
+      0.4922555170001033
+    ]
+  },
+  "forecast_upper_wall_seconds": 1303.6062423679493,
+  "forecast_upper_worker_seconds": 3430.0499971199024,
+  "reseed": [
+    {
+      "kind": "atmosphere",
+      "it": 0,
+      "cell": 127,
+      "reseed_relative": 1.34781075189494e-13
+    },
+    {
+      "kind": "atmosphere",
+      "it": 8,
+      "cell": 176,
+      "reseed_relative": 1.3600232051658168e-13
+    },
+    {
+      "kind": "atmosphere",
+      "it": 16,
+      "cell": 222,
+      "reseed_relative": 1.149080830487037e-13
+    },
+    {
+      "kind": "deep",
+      "it": 0,
+      "cell": 0,
+      "reseed_relative": 1.425526363618701e-13
+    },
+    {
+      "kind": "deep",
+      "it": 8,
+      "cell": 9,
+      "reseed_relative": 1.2856382625159313e-13
+    },
+    {
+      "kind": "deep",
+      "it": 16,
+      "cell": 18,
+      "reseed_relative": 1.191269305422793e-13
+    }
+  ],
+  "active_atmosphere_per_time": [
+    128,
+    139,
+    145,
+    150,
+    155,
+    161,
+    166,
+    172,
+    177,
+    183,
+    189,
+    194,
+    200,
+    206,
+    212,
+    217,
+    223
+  ],
+  "seconds": 13.079855616000032,
+  "source_sha256": "07c45d71c3519fad41ca4d87bd914b94198f7e972f884d62c708d25bfd04eb9b"
+}

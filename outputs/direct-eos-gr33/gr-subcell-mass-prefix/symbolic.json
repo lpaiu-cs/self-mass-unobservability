@@ -1,0 +1,7 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "argument": "For any finite ordered cells with prescribed target coordinate energies T_i and centre mass m_0, the radial constraint m_(i+1)-m_i=k*T_i uniquely supplies m_i=m_0+k*sum_(j<i)T_j by induction. If every local primitive solve reproduces its T_i and the other target moments using that supplied inner mass, all common mass faces agree. Conversely any global solution with those energies must use these same inner masses. Thus known conserved energies eliminate the apparent cross-cell mass-prefix dependence from local primitive inversion; local nodal metric feedback remains.",
+  "conditions": "Fixed radius chart, shared positive conversion k=G/c^4, prescribed energies and centre mass. Does not establish local root existence/uniqueness, lapse reconstruction, Q evolution, a valid chart or continuous GR error.",
+  "imported_shared_flux": "The previously proved common-face conservative energy flux and telescoping identity remain in gr-balanced-conservation; they are not counted as a new proof here."
+}

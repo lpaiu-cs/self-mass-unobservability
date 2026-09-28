@@ -1,0 +1,20 @@
+{
+  "classification": "Conjectural",
+  "claim": "Locate the remaining true-vector residual before any further solver change. Repeat the identical saved-system solve once solely because the prior failure did not serialize its accumulated solution.",
+  "decision": "Distinguish incomplete Krylov convergence from floating-point operator/solution cancellation by saving the rejected iterate, per-channel norms and a two-part evaluation of the same linear operator. Neither evaluation is accepted as a physical solution.",
+  "budget_seconds": 75,
+  "CPU_threads": 1,
+  "virtual_GiB": 4,
+  "new_physical_steps": 0,
+  "forecast": "Identical reconstruction and solver took49.24s; allow75s including serialization. One diagnostic, no extra iteration/grid/tolerance change.",
+  "stop": "One reproduction,75s cap or reconstructed-system mismatch. No physical continuation admitted.",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/diagnose_linear_residual_floor.py": "687cea0b143dce463800195839f09b56dcd4ef2d9b7382f32567f2beee0c4844",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/right_precondition_full_interval.py": "a2e70205712eac5c8686a4bee171db769faebd03dc6a8a6d68219adecdf07779",
+    "native-right-precondition191-work/system-reconstruction.json": "0ca01bfc15fd8a60dfc59012260b34fc5f55b72eab48d47c8a1c76981ab78205",
+    "native-right-precondition191-work/check-receipt.json": "aa2c5366193a158466661705b66ddbae206b3efd251607cdbc2b75251168864b",
+    "native-right-precondition191-work/right-calls.json": "a378a7243c14a4f7fda318cb2b9d8b81ee47ed0b3c8ce65ba706b01a61e3e2f4",
+    "native-full-finish190-work/failed-linear-system.npz": "7bf8f2c3c4e4a5374fda0d6c3168fa3b68f4a3c7a39a97da021588753a6c2464"
+  },
+  "final_charge_conclusion": "unadjudicated"
+}

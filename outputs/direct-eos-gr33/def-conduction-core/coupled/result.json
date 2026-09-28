@@ -1,0 +1,42 @@
+{
+  "classification": "Counterexample candidate",
+  "coupled_core_heat_time_path_completed": true,
+  "passed": true,
+  "comparisons": {
+    "velocity_mass_RMS_m_s": {
+      "time_previous": 0.00076399354978359,
+      "time_last": 0.00021916528595172625,
+      "order": 1.8015411530730698,
+      "coefficients": 2.3987443028328238e-14,
+      "outer": 2.611536136148639e-15
+    },
+    "scalar_mass_RMS": {
+      "time_previous": 0.0020698142920144258,
+      "time_last": 0.0005199427966877965,
+      "order": 1.9930765179791394,
+      "coefficients": 1.3700882723370169e-10,
+      "outer": 2.344373436460041e-13
+    }
+  },
+  "superposition": {
+    "response": 3.189750489909565e-15,
+    "velocity": 3.014504259811797e-13
+  },
+  "seconds": 46.93142048600001,
+  "peak_RSS_KiB": 319492,
+  "heat_only_endpoint": {
+    "tau": 1.0,
+    "velocity_mass_RMS_m_s": 4.062983967905882e-13,
+    "scalar_mass_RMS": 5.6069143724831474e-30
+  },
+  "combined_endpoint": {
+    "tau": 1.0,
+    "velocity_mass_RMS_m_s": 6.841605974288716e-08,
+    "scalar_mass_RMS": 5.986082054330695e-26
+  },
+  "full_temperature_feedback": false,
+  "physical_core_interface_closed": false,
+  "spatial_error_certified": false,
+  "photon_transport": false,
+  "full_dynamic_charge_solved": false
+}

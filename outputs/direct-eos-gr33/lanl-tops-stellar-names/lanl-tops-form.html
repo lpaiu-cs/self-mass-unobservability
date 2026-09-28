@@ -1,0 +1,706 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>TOPS Opacities</title>
+  <link href="/static/css/global.css" rel="stylesheet">
+  <script id="_fed_an_ua_tag" async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOE"></script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+<header class="shadow-50">
+  <div class="container header-inner">
+    <div class="row align-items-center">
+      <div class="col text-center text-lg-left">
+        <div><a href="http://www.lanl.gov" class="lanl-logo"><span class="text-accent">Los Alamos</span>&nbsp;National Laboratory</a></div>
+        <div class="lanl-logo-tag-line">Delivering science and technology to protect our nation and promote world stability</div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- END_HEADER -->
+
+
+  <main>
+
+
+    <!-- PAGE BANNER WITH TITLE AND LOGO -->
+    <div class="container-fluid">
+  <div class="row">
+    <div class="col p-0">
+      <div class="d-flex flex-column justify-content-center align-items-center text-center banner banner-sm" style="background-image: url(/static/images/banner.png);">
+        <span class="h1">T-1</span>
+        <span class="h3">Physics and Chemistry of Materials</span>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+    <!-- INTRODUCTION TO SERVICE -->
+    <div class="container">
+  <div class="row">
+    <div class="col-12 text-center p-5">
+      <h2>TOPS Opacities</h1>
+      <div class="h4">Opacities of mixtures (calculated by TOPS using ATOMIC or LEDCOP elemental opacities)</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-8">
+      <p>The material data were last updated on August 19, 2015. This latest
+        update includes OPLIB tables generated with the ATOMIC code, which
+        (compared to the earlier LEDCOP release) cover additional
+        temperatures and extend to higher densities.</p>
+      <strong>
+        Users are encouraged to view the
+        <a href="/static/opacdocs/avmat.html">File of currently available materials</a>
+        page to learn about the new data options.</strong></p>
+      <p><strong>Precalculated Rosseland opacity tables for complex astrophysical mixtures are also available.</strong><br>
+         Links to Los Alamos Astrophysical Opacity Pages:<br>
+         <a href="astro">LEDCOP data</a><br>
+         <a href="astro_atomic">ATOMIC data</a></p>
+      <p>Fill in form, then submit.  Multiple values (where appropriate) must be
+        separated by <em>spaces</em>.  Leave field empty for default value.  As a
+        help to new users, the initial Web page defaults to calculating gray mean
+        opacities for aluminum.</p>
+    </div>
+    <div class="col-lg-4">
+      <span>Relevant information:</span>
+      <ul>
+        <li><a href="/static/opacdocs/avmat.html">File of currently available materials</a></li>
+        <li><a href="/static/opacdocs/opactemps.html">Temperature list</a></li>
+        <li><a href="/static/opacdocs/photgrid.html">Photon energy grid</a></li>
+        <li><a href="/static/opacdocs/opac-help.html">Help</a></li>
+        <li><a href="/static/opacdocs/opac-faq.html">Frequently asked questions</a></li>
+        <li><a href="/static/opacdocs/opac-physics.html">Opacity methods and references</a></li>
+        <li><a href="/static/opacdocs/disclaimer.html">Disclaimer</a></li>
+        <li><a href="/static/opacdocs/newroutine.html">Graphics and data options</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+    <!-- APP CONTENT -->
+    <div class="container">
+  <div class="row">
+    <div class="col-12">
+      
+      <form method="POST" action="/submit">
+        <INPUT TYPE="hidden" NAME="userid" VALUE="ajj">
+        <INPUT TYPE="hidden" NAME="pageid" VALUE="formpage">
+        <INPUT TYPE="hidden" NAME="idnumber" VALUE="19000">
+        <INPUT TYPE="hidden" NAME="numhits" VALUE="1">
+        <INPUT TYPE="hidden" NAME="unique" VALUE="">
+
+        <hr>
+
+        <!-- Source of elemental opacities -->
+        <div class="form-group">
+  <label for=""><h3>Source of elemental opacities</h3></label>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="lib" value="new" id="soeo-new">
+    <label class="form-check-label" for="soeo-new">ATOMIC/New</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="lib" value="old" id="soeo-old">
+    <label class="form-check-label" for="soeo-old">LEDCOP/Old</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="lib" value="any" id="soeo-recent" checked>
+    <label class="form-check-label" for="soeo-recent">Most recent available</label>
+  </div>
+</div>
+
+
+        <hr>
+
+        <!-- Mix Specification -->
+        <div class="form-group">
+  <label for=""><h3>Mix specification</h3></label>
+  <div class="row">
+
+    <div class="col-lg-6">
+      <p>In specifying a mix, the fraction represents relative numbers of atoms
+      if the number fraction box is checked.  If the mass fraction box is
+      checked, the fraction represents relative masses of the specified
+      elements.  The fractions need not be normalized.</p>
+      <p>The element specification can be the atomic number, the chemical symbol
+      (case insensitive) or the OPLIB matid.  Thus aluminum can be specified as
+      Al, al, 13, or n13719.</p>
+      <p>If the "Fraction, Element, Isotope" box is checked, a specific isotopic
+      weight must be entered for each element of the mixture.  If this box is
+      not checked, no isotopic weight should be entered, the Web Page will use
+      the normal values.</p>
+      <p>User can choose to supply a name for the mixture, up to 15
+      characters.</p>
+    </div>
+    <div class="col-lg-6">
+      <div class="form-group row">
+        <legend class="col-form-label col-4 text-right pt-0">Fraction by</legend>
+        <div class="col-8">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="fractype" value="atomic" id="mix-spec-number" checked>
+            <label class="form-check-label" for="mix-spec-number">Number</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="fractype" value="mass" id="mix-spec-mass">
+            <label class="form-check-label" for="mix-spec-mass">Mass</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <legend class="col-form-label col-4 text-right pt-0">Input format:</legend>
+        <div class="col-8">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="isotope" value="noniso" id="mix-spec-noniso" checked>
+            <label class="form-check-label" for="mix-spec-noniso">Fraction, Element</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="isotope" value="isotope" id="mix-spec-isotope">
+            <label class="form-check-label" for="mix-spec-isotope">Fraction, Element, Isotopic weight</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-4 text-right" for="user-spec-mix-value">User specified mixture:</label>
+        <div class="col-8">
+          <input id="user-spec-mix-value" type="text" class="form-control" name="mixture" value="1. al" aria-describedby="user-spec-mix-help-block">
+          <small id="user-spec-mix-help-block" class="form-text text-muted">Up to 450 characters may be used for the mixture specification.</small>
+        </div>
+        <label class="col-4 text-right" for="optional-mix-name">Optional <a href="/static/opacdocs/name.html">Mixture Name: </a></label>
+        <div class="col-8">
+          <input id="optional-mix-name" type="text" class="form-control" name="mixname" value="" aria-describedby="mix-name-help-block" maxlength="15">
+          <small id="mix-name-help-block" class="form-text text-muted">User supplied, maximum of 15 characters</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        <hr>
+
+        <!-- Temperature -->
+        <h3>Temperatures (in <strong>keV</strong>)</h3>
+<div class="p-3">
+
+  <div class="form-group row">
+    <div class="col-6 col-md-5 col-lg-4">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="tgrid" value="specific" id="temp-specific">
+        <label class="form-check-label" for="temp-specific">Specific temperatures:</label>
+      </div>
+    </div>
+    <div class="col-6 col-md-7 col-lg-8">
+      <input id="temp-spec-value"class="form-control" type="text" name="temps" value="1.">
+      <label for="temp-spec-value"><small>Must be in database, see <em>range of temperatures</em> or <a href="/static/opacdocs/opactemps.html">Temperature list</a></small></label>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-6 col-md-5 col-lg-4">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="tgrid" value="range" id="temp-range" checked>
+        <label class="form-check-label" for="temp-range">Range of temperatures:</label>
+      </div>
+    </div>
+    <div class="col-6 col-md-7 col-lg-8">
+      <div class="form-row">
+        <div class="col-md-6">
+          <div class="input-group">
+            <div class="input-group-prepend" for="temperature-low"><span class="input-group-text">Min</span></div>
+              <select id="temperature-low" name="tlow" class="form-control">
+                <option> 0.0005</option>
+                <option> 0.0006</option>
+                <option> 0.0008</option>
+                <option> 0.001</option>
+                <option> 0.00125</option>
+                <option> 0.0015</option>
+                <option> 0.002</option>
+                <option> 0.0025</option>
+                <option> 0.003</option>
+                <option> 0.0035</option>
+                <option> 0.004</option>
+                <option> 0.005</option>
+                <option> 0.006</option>
+                <option> 0.007</option>
+                <option> 0.008</option>
+                <option> 0.009</option>
+                <option> 0.01</option>
+                <option> 0.0125</option>
+                <option> 0.015</option>
+                <option> 0.02</option>
+                <option> 0.025</option>
+                <option> 0.03</option>
+                <option> 0.04</option>
+                <option> 0.05</option>
+                <option> 0.06</option>
+                <option> 0.07</option>
+                <option> 0.08</option>
+                <option> 0.09</option>
+                <option SELECTED> 0.1</option>
+                <option> 0.125</option>
+                <option> 0.15</option>
+                <option> 0.175</option>
+                <option> 0.2</option>
+                <option> 0.225</option>
+                <option> 0.25</option>
+                <option> 0.275</option>
+                <option> 0.3</option>
+                <option> 0.35</option>
+                <option> 0.4</option>
+                <option> 0.45</option>
+                <option> 0.5</option>
+                <option> 0.55</option>
+                <option> 0.6</option>
+                <option> 0.65</option>
+                <option> 0.7</option>
+                <option> 0.8</option>
+                <option> 0.9</option>
+                <option> 1</option>
+                <option> 1.125</option>
+                <option> 1.25</option>
+                <option> 1.375</option>
+                <option> 1.5</option>
+                <option> 1.625</option>
+                <option> 1.75</option>
+                <option> 1.875</option>
+                <option> 2</option>
+                <option> 2.125</option>
+                <option> 2.25</option>
+                <option> 2.375</option>
+                <option> 2.5</option>
+                <option> 2.625</option>
+                <option> 2.75</option>
+                <option> 3</option>
+                <option> 3.5</option>
+                <option> 4</option>
+                <option> 5</option>
+                <option> 6</option>
+                <option> 8</option>
+                <option> 10</option>
+                <option> 15</option>
+                <option> 25</option>
+                <option> 40</option>
+                <option> 60</option>
+                <option> 100</option>
+              </SELECT>
+            <div class="input-group-append"><span class="input-group-text">keV</span></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="input-group">
+            <div class="input-group-prepend" for="temperature-high"><span class="input-group-text">Max</span></div>
+              <select id="temperature-high" name="tup" class="form-control">
+                <option> 0.0005</option>
+                <option> 0.0006</option>
+                <option> 0.0008</option>
+                <option> 0.001</option>
+                <option> 0.00125</option>
+                <option> 0.0015</option>
+                <option> 0.002</option>
+                <option> 0.0025</option>
+                <option> 0.003</option>
+                <option> 0.0035</option>
+                <option> 0.004</option>
+                <option> 0.005</option>
+                <option> 0.006</option>
+                <option> 0.007</option>
+                <option> 0.008</option>
+                <option> 0.009</option>
+                <option> 0.01</option>
+                <option> 0.0125</option>
+                <option> 0.015</option>
+                <option> 0.02</option>
+                <option> 0.025</option>
+                <option> 0.03</option>
+                <option> 0.04</option>
+                <option> 0.05</option>
+                <option> 0.06</option>
+                <option> 0.07</option>
+                <option> 0.08</option>
+                <option> 0.09</option>
+                <option> 0.1</option>
+                <option> 0.125</option>
+                <option> 0.15</option>
+                <option> 0.175</option>
+                <option> 0.2</option>
+                <option> 0.225</option>
+                <option> 0.25</option>
+                <option> 0.275</option>
+                <option> 0.3</option>
+                <option> 0.35</option>
+                <option> 0.4</option>
+                <option> 0.45</option>
+                <option> 0.5</option>
+                <option> 0.55</option>
+                <option> 0.6</option>
+                <option> 0.65</option>
+                <option> 0.7</option>
+                <option> 0.8</option>
+                <option> 0.9</option>
+                <option> 1</option>
+                <option> 1.125</option>
+                <option> 1.25</option>
+                <option> 1.375</option>
+                <option> 1.5</option>
+                <option> 1.625</option>
+                <option> 1.75</option>
+                <option> 1.875</option>
+                <option> 2</option>
+                <option> 2.125</option>
+                <option> 2.25</option>
+                <option> 2.375</option>
+                <option> 2.5</option>
+                <option> 2.625</option>
+                <option> 2.75</option>
+                <option> 3</option>
+                <option> 3.5</option>
+                <option> 4</option>
+                <option> 5</option>
+                <option> 6</option>
+                <option> 8</option>
+                <option selected> 10</option>
+                <option> 15</option>
+                <option> 25</option>
+                <option> 40</option>
+                <option> 60</option>
+                <option> 100</option>
+              </select>
+            <div class="input-group-append"><span class="input-group-text">keV</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-6 col-md-5 col-lg-4">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="tgrid" value="thin" id="thin-db-table-stride">
+        <label class="form-check-label" for="thin-db-table-stride">Thin database table with stride of...</label>
+      </div>
+    </div>
+    <div class="col-6 col-md-7 col-lg-8">
+      <input id="thin-db-stride-help-block" type="text" name="nthin" value="10" class="form-control">
+      <label for="thin-db-stride-help-block">
+        <small class="form-text text-muted">(The resulting grid always starts with the lowest temperature.)</small>
+      </label>
+    </div>
+  </div>
+</div>
+
+
+        <hr>
+
+        <!-- Densities -->
+        <h3>Densities (in <strong>g/cm<sup>3</sup></strong>)</h3>
+<p>Read <a href="/static/opacdocs/sesgrid.html">Standard SESAME densities</a> to get normal SESAME library density grid.</p>
+
+<div class="p-3">
+
+  <div class="form-group row">
+    <div class="col-6 col-md-5 col-lg-4">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="rgrid" value="specific" id="spec-dens">
+        <label class="form-check-label" for="spec-dens">Specific densities:</label>
+      </div>
+    </div>
+    <div class="col-6 col-md-7 col-lg-8">
+      <div class="input-group">
+        <input class="form-control" type="text" name="dens" value="1.">
+        <div class="input-group-append">
+          <span class="input-group-text">g/cm<sup>3</sup></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-6 col-md-5 col-lg-4">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="rgrid" value="range" id="density-range-values" checked>
+        <label class="form-check-label" for="density-range-values">Range of densities:</label>
+      </div>
+    </div>
+    <div class="col-6 col-md-7 col-lg-8">
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <div class="input-group">
+            <div class="input-group-prepend"><span class="input-group-text">Min</span></div>
+            <input type="text" class="form-control" name="rlow" value=".1">
+            <div class="input-group-append"><span class="input-group-text">g/cm<sup>3</sup></span></div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <div class="input-group">
+            <div class="input-group-prepend"><span class="input-group-text">Max</span></div>
+            <input type="text" class="form-control" name="rup" value="10.">
+            <div class="input-group-append"><span class="input-group-text">g/cm<sup>3</sup></span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-start">
+        <label class="pr-3" for="">Number of densities:<br><small class="text-muted">(max 100)</small></label>
+        <input type="number" class="form-control w-25" name="nr" value="3" id="" min="1" max="100">
+      </div>
+
+      <div class="form-group d-flex">
+        <div class="pr-3">Spacing:</div>
+        <div class="d-flex flex-column">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="rspace" value="log" id="density-spacing-log" checked>
+            <label class="form-check-label" for="density-spacing-log">log</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="rspace" value="linear" id="density-spacing-linear">
+            <label class="form-check-label" for="density-spacing-linear">linear</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        <hr>
+
+        <!-- Photon energy -->
+        <h3>Photon energy group bounds (in <strong>keV</strong>)</h3>
+<p>Photon energy grid need not be specified for gray mean opacities or frequency dependent opacities.</p>
+
+<div class="p-3">
+
+  <div class="form-group row">
+    <div class="col-6 col-md-5 col-lg-4">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="egrid" value="specific" id="photon-specific-energies">
+        <label class="form-check-label" for="photon-specific-energies">Specific photon energies: <small class="form-text text-muted">(Minimum of 2)</small></label>
+      </div>
+    </div>
+    <div class="col-6 col-md-7 col-lg-8">
+      <div class="form-group">
+        <div class="input-group">
+          <input id="photon-energy-list" class="form-control" type="text" name="energies" value=".1 1. 10.">
+          <div class="input-group-append"><span class="input-group-text">keV</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-6 col-md-5 col-lg-4">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="egrid" value="range" id="photon-range-values" checked>
+        <label class="form-check-label text-nowrap" for="photon-range-values">Range of photon energies:</label>
+      </div>
+    </div>
+    <div class="col-6 col-md-7 col-lg-8">
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <div class="input-group">
+              <div class="input-group-prepend"><span class="input-group-text">Min</span></div>
+              <input type="text" class="form-control" name="egplow" value=".001">
+              <div class="input-group-append"><span class="input-group-text">keV</span></div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <div class="input-group">
+              <div class="input-group-prepend"><span class="input-group-text">Max</span></div>
+              <input type="text" class="form-control" name="egphigh" value="300.">
+              <div class="input-group-append"><span class="input-group-text">keV</span></div>
+            </div>
+          </div>
+        </div>
+
+      <div class="d-flex align-items-start">
+        <label class="pr-3" for="photon-range-value">Number of energies:<br><small class="text-muted">(max 1000)</small></label>
+        <input type="number" class="form-control w-25" name="ngpengs" value="33" id="photon-range-value" min="1" max="1000">
+      </div>
+      <div class="form-group d-flex">
+        <div class="pr-3">Spacing:</div>
+        <div class="d-flex flex-column">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="espace" value="log" id="photon-spacing-log" checked>
+            <label class="form-check-label" for="photon-spacing-log">log</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="espace" value="linear" id="photon-spacing-linear">
+            <label class="form-check-label" for="photon-spacing-linear">linear</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        <hr>
+
+        <!-- Physics Options specification -->
+<div class="form-group">
+  <label for=""><h3>Physics Options specification </h3></label>
+  <div class="row">
+
+    <div class="col-lg-5">
+      <p>Choose physics options here.</p>
+    </div>
+    <div class="col-lg-7">
+      <div class="form-group row">
+        <legend class="col-form-label col-4 text-right pt-0">Plasma cutoff frequency:</legend>
+        <div class="col-8">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="plasnu" value="on" id="plasnu-spec-on" checked>
+            <label class="form-check-label" for="plasnu-spec">On</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="plasnu" value="off" id="plasnu-spec-off">
+            <label class="form-check-label" for="plasnu-spec">Off</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <hr>
+
+        <!-- Output Data Types -->
+        <div class="form-group row">
+  <label class="col-12"><h3>Output Data Type options (Gray mean opacities by default)</h3></label>
+  <div class="col-lg-6">
+    <p>All options provide the Gray mean opacities but users should restrict the number of temperature-density-multigroup energy points to maintain a reasonable size data base for plotting and transmitting the data.</p>
+    <p>No more than <strong>6</strong> temperature-density points for the last 2 options.</p>
+  </div>
+  <div class="col-lg-6">
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="datype" value="gray" id="output-data-gray" checked>
+      <label class="form-check-label" for="output-data-gray">Gray mean opacities only</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="datype" value="groups" id="output-data-groups">
+      <label class="form-check-label" for="output-data-groups">Multigroup opacities</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="datype" value="cont" id="output-data-cont">
+      <label class="form-check-label" for="output-data-cont">
+        Frequency dependent opacities (<a href="/static/opacdocs/spectra.html">Not Spectroscopically Resolved</a>)
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="datype" value="contgrup" id="output-data-contgrup">
+      <label class="form-check-label" for="output-data-contgrup">Both multigroup and frequency dependent opacities</label>
+    </div>
+  </div>
+</div>
+
+
+        <hr>
+
+        <div class="form-group row">
+          <div class="col-4"></div>
+          <div class="col-4 d-flex justify-content-around">
+            <button type="submit" value="Submit" class="btn btn-lg btn-secondary m-1">Submit</button>
+            <button type="reset" class="btn btn-lg btn-secondary m-1">Reset</button>
+          </div>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+  <div class="row mb-3">
+    <div class="col-12 col-lg-4 mb-3">
+      <div class="card shadow-25 border-0">
+        <div class="card-header">Useful Links</div>
+        <div class="card-body">
+          <div class="card-text">
+            <p><a href="https://www.lanl.gov/engage/organizations/aldsct/theoretical">Group T-1 Home Page</a></p>
+            <p><a href="https://www.lanl.gov/engage/organizations/xcp">Group XCP-5 Home Page</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-4 mb-3">
+      <div class="card shadow-25 border-0">
+        <div class="card-header">Please mail questions or comments to:</div>
+        <div class="card-body">
+          <div class="card-text">
+            <p>LANL T-1 Opacities</p>
+            <a href="mailto:opacity@lanl.gov">opacity@lanl.gov</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-4 mb-3">
+      <div class="card shadow-25 border-0">
+        <div class="card-header">Los Alamos Report No.</div>
+        <div class="card-body">
+          <div class="card-text">
+            <p>LA-UR-01-1257</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  </main>
+
+  <footer>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-sm-3">
+          <img src="/static/images/lanl-logo-solid.png" alt="" class="img-fluid mb-1 mx-auto">
+        </div>
+        <div class="col-sm-6">
+          <ul class="list-inline text-center mb-1">
+            <li class="list-inline-item"><a href="https://www.lanl.gov/resources/contacts.php"><small>Contacts</small></a></li>
+            <li class="list-inline-item"><a href="https://www.lanl.gov/newsroom/media-contacts/index.php"><small>Media</small></a></li>
+            <li class="list-inline-item"><a href="http://www.lanl.gov/calendar/index.php"><small>Calendar</small></a></li>
+          </ul>
+          <ul class="list-inline text-center mb-1">
+            <li class="list-inline-item"><a href="http://int.lanl.gov/"><small>Inside</small></a></li>
+            <li class="list-inline-item"><a href="https://www.lanl.gov/resources/web-policies/copyright-legal.php"><small>Terms of Use, Privacy</small></a></li>
+            <li class="list-inline-item"><a href="http://www.lanl.gov/www-team/forms/wwwgen.php"><small>Site Feedback</small></a></li>
+          </ul>
+          <p class="text-center txt-sm mb-1"><small>Operated by Los Alamos National Security, LLC for the U.S Dept. of Energy's NNSA</small></p>
+          <p class="text-center mb-0"><small>&copy; Copyright 2018 LANS, LLC</small></p>
+        </div>
+        <div class="col-sm-3">
+          <div class="row align-items-center">
+            <div class="col-md-5">
+              <img src="/static/images/DOE_Seal_White.png" alt="" class="img-fluid mx-auto align-middle">
+            </div>
+            <div class="col-md-7">
+              <img src="/static/images/NNSA_Logo.png" alt="" class="img-fluid mx-auto align-middle">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  <!-- <script src="http://dev-g.lanl.gov/_assets/2018/javascript/global.js" type="text/javascript"></script> -->
+
+
+</body>
+
+</html>
+

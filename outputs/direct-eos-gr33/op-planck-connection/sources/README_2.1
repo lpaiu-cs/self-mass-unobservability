@@ -1,0 +1,63 @@
+Revisions of OPCD_2.0 to obtain OPCD_2.1
+****************************************
+
+19.02.05. Contents of OPCD_update_2.1
+
+Revised codes opfit.f and accfit.f.
+***********************************
+The codes interpolate to a mesh in (R,T) (R=RHO/T_6^3)
+For given R interpolations in T require at least 
+5 tabulated T values. In some exceptional circumstances
+that condition is not satisfied and a run will fail.
+The modification of 06.01.05 changes, if necessary,
+the mesh in (R ,T) such that the condition is satisfied.
+
+The codes opfit.f.gz and accfit.f.gz in OPCD_update_2.1 should 
+replace the corresponding codes in OPCD_2.0/codes.
+
+The new code accfitP.f.
+***********************
+The original code accfit.f reads a file acc.zz created
+by accv.f containing vales of GAMMA on the (T,Ne) mesh 
+points. The code accfit.f interpolates to values of
+(T,RHO) for a stellar model and gives output of LOG10(GAMMA)
+and LOG10(g_rad). If GAMMA is negative it prints a message
+and sets LOG10(GAMMA) and LOG10(g_rad) equal to 1.E-30. 
+The new code, accfitP.f, gives output values of GAMMA and 
+g_rad (NOT LOG10). It is to be preferred if negative values 
+GAMMA occur on the (T,RHO) mesh.
+Input to accfitP.f is the same as that to accfit.f
+
+The code accfitP.f.gz should be added to the codes in OPCD_2.0/codes.
+  
+The new code accvff.f.
+***********************
+The original code accv.f calculates data for radiative 
+accelerations allowing for momentum-transfer-to-electrons
+(mte corrections) for bound-free (bf) processes but not for
+free-free (ff). The new code accvff.f includes allowance for
+mte for ff. It uses the theory of
+K. El-Murr and G. Massacrier, J. Phys. B, 31, 4303, 1998
+and of K. El-Murr, Thesis, Lyon, 1999.
+Input to accvff.f is the same as that to accv.f
+The importance of mte for ff processes is discussed by
+M.J. Seaton, "Updated radiative accelerations from the 
+Opacity Project", to be submitted MNRAS.
+In most cases inclusion of mte for ff does not produce
+important changes in g_rad, but there are some exceptional
+cases. Negative values of GAMMA are more likely to occur
+with accvff.f and when they do occur it will be advisable
+to process the output from accvff.f using  accfitP.f rather 
+than accfit.f.
+
+The code accvff.f.gz should be added to the codes in OPCD_2.0/codes.
+
+The new makefile and BASHOP
+***************************
+The makefile and BASHOP in OPCD_update_2.1 should 
+replace the corresponding files in OPCD_2.0. To recompile codes
+just type "make" or "./BASHOP". Note: BASHOP will also reinstall
+the data files and proceed with tests, and will not work if the
+data formatted files have been erased with procedures CLEANOP or
+"make clean".
+Finally, the directory OPCD_2.0 should be renamed OPCD_2.1

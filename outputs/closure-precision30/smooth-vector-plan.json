@@ -1,0 +1,9 @@
+{
+  "classification": "Counterexample candidate",
+  "prior_native_contrast_reconstruction_sha256": "962b4b77d17747dfd3e5da6b540457ea577cfbc128febd767f5addf768440ed9",
+  "reconstruction_gate": 1e-10,
+  "derivative_gate": 0.001,
+  "model": "Replace only the four identified tabulated weak vector contributions by bilinear interpolation in double precision, preserving the captured float32 table knots/data, low-T rates, linear blend, nuclide inventory and all other native terms. Add the blend product-rule term to the derivative.",
+  "validation": "Compare analytic partial derivative plus the previously saved finite EOS auxiliary chain directions against the new function evaluated at all original frozen/fresh auxiliary temperature stencils. Preserve failed native and blend-only verdicts. The finite auxiliary chain is not an analytic composition Jacobian.",
+  "limits": "This is a new declared numerical vector evaluator. Heat, neutrino, EOS physical accuracy, continuous-domain rigorous derivatives and GR evolution are separate gates."
+}

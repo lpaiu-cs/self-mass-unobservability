@@ -1,0 +1,23 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Resolve the failed material directional derivative, then complete the same three material response paths; no changed physical flux or acceptance threshold.",
+  "root_cause": "Amplified finite probes cross tiny nonzero deep mass-flux signs, changing donor thermochemical cells. The physical1e-26 response stays on the original branch. A step-size limit cannot be represented by unguarded finite probes across that branch.",
+  "repair": "Use the saved nonzero mass-flux donor; at exactly zero flux choose the directional donor. Apply consistently to deep energy/H, atmosphere H and the shared H face. Require actual-amplitude flux variation/background ratio<.01. Keep original HLL flux, native primitive recovery and all other branches.",
+  "costs": "First failed complete64 path cost40.82s including setup. Preserve it. Corrected three-path cap250s after measured prefixes and2x margin; additional check35s,pilot35s. No native bank, new horizon, spatial grid or clock path.",
+  "gates": {
+    "owner": 1e-08,
+    "directional": 0.002,
+    "conservation": 1e-08,
+    "time": 0.02,
+    "background": 0.02,
+    "small_relative": 1e-06,
+    "physical_branch_ratio": 0.01
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_material_branch_response.py": "23689a7ea601c98d59fd0da967def868f00ffdc9342ae36ac7ea1f0ca71920e7",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_material_response.py": "56bb3c3814c5fad05d2a975d441ad824648825582d82a2cc8a15b50a4c9c4f38",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-material-response/production.json": "d72cc94e93bcf25ce0c6b2369679f5f2f970344e8ae1bd72e41b9973a958ec2d",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-material-response/probe-diagnostic.json": "986db5585c8fd962d5e9b2a306773b0681ac7e593895036032a97386c5f70019",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-material-response/steps-64-reference-128.npz": "2db9fd1ed2c6f1a8d2ac4b8f73311dcfc858f7810dd5eb141443b4ea458370ef"
+  }
+}

@@ -1,0 +1,11 @@
+--- phase68/excitation_sum.f90
++++ phase69/excitation_sum.f90
+@@ -1213,6 +1213,8 @@
+         endif
+         ! if(exparg.gt.exparg_lim) then
+         exparg = exp(exparg)
++        shared_ground_logw(ion)=plop(ion)
++        if(ifmhd_logical) shared_ground_logw(ion)=plop(ion)+ln_ground_occ
+         ! else
+         !   exparg = 0.d0
+         ! endif

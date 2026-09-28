@@ -1,0 +1,59 @@
+{
+  "classification": "Counterexample candidate",
+  "spectra": {
+    "infrared": {
+      "samples": 51254,
+      "unique_samples": 51254,
+      "duplicate_count": 0,
+      "duplicate_opacity_relative": 0.0,
+      "native_Kirchhoff_max": 1.8706277866709087e-06,
+      "frequency_Hz": [
+        300435670729.0381,
+        149896250000000.0
+      ]
+    },
+    "coarse": {
+      "samples": 54810,
+      "unique_samples": 54810,
+      "duplicate_count": 0,
+      "duplicate_opacity_relative": 0.0,
+      "native_Kirchhoff_max": 1.414493605467193e-05,
+      "frequency_Hz": [
+        149900504670384.66,
+        2.997925e+16
+      ],
+      "capacity_relative": 6.439293542825908e-15,
+      "spectral_segments": 128961,
+      "u_range": [
+        0.0007658104189300292,
+        76.41709769681178
+      ],
+      "below_source_capacity_fraction": 5.763341069574805e-12,
+      "mapping": "Exact source-knot splits; positive 8-point integration of piecewise-linear volume opacity with Planck derivative. Constant lowest opacity below first source frequency. No mean or relaxation-rate fitting."
+    },
+    "fine": {
+      "samples": 125520,
+      "unique_samples": 125520,
+      "duplicate_count": 0,
+      "duplicate_opacity_relative": 0.0,
+      "native_Kirchhoff_max": 1.414502878738233e-05,
+      "frequency_Hz": [
+        149900504670384.9,
+        2.997925e+16
+      ],
+      "capacity_relative": 5.662137425588298e-15,
+      "spectral_segments": 196015,
+      "u_range": [
+        0.0007658104189300292,
+        76.41709769681178
+      ],
+      "below_source_capacity_fraction": 5.763341069574805e-12,
+      "mapping": "Exact source-knot splits; positive 8-point integration of piecewise-linear volume opacity with Planck derivative. Constant lowest opacity below first source frequency. No mean or relaxation-rate fitting."
+    }
+  },
+  "direct_temperature": true,
+  "populations_passed": false,
+  "native_emission_passed": false,
+  "physical_opacity_certified": false,
+  "scope": "Conditional LTE absorption candidate on the inherited finite photon bins. Emission is defined by Kirchhoff in that candidate; this does not reclassify the native emission residual as passing. Subcell transport/line redistribution, missing atomic continua and mass/partition consistency are not bounded by the source-grid comparison."
+}

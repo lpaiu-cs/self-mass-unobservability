@@ -1,0 +1,40 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "f5c11912",
+  "claim": "Propagate the original failed GR response by the exact-source resolvent without changing K,D, the heat source, initial state, grid, duration or outputs.",
+  "method": "Unwindowed Fourier inversion of the Bromwich line, sigma=6, period=4; cutoffs128/256/512. Reuse nested transform samples. Same65 physical sample times. These are frequency quadratures, not renamed16/32/64 time steps.",
+  "decision": "First measure16 actual resolvents. Then evaluate one512-frequency response; stop if any original component fails cutoff relative2% or order1.5. Only if all pass, perform fixed coefficient, outer and sigma8 contrasts. No automatic frequency/cutoff expansion.",
+  "gates": {
+    "relative": 0.02,
+    "order": 1.5,
+    "coefficient": 0.02,
+    "outer": 0.002,
+    "alias": 0.0002,
+    "linear_residual": 1e-09,
+    "heat_balance": 2e-13
+  },
+  "budget": {
+    "pilot_resolvents": 16,
+    "main_resolvents": 513,
+    "conditional_contrast_resolvents": 1539,
+    "hard_seconds": 400,
+    "CPU_threads": 1,
+    "memory_GB": 3,
+    "native_EOS_calls": 0,
+    "main_branch_expected_seconds": [
+      55,
+      110
+    ]
+  },
+  "forecast": "Measured16 actual resolvents in1.54931s. Main513 transform evaluations forecast55-110s; all three conditional contrasts bring conservative total forecast343.53s. Revised cap400s before any production; stop after main if failed. No extra cutoffs, grids, time horizon or paths.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_laplace.py": "ce5f7f7a0b52b7597c8cd5eff02e55f2f837aa35d3c1c64dfbec36c88ca4c806",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_conductive_cauchy.py": "16c558db20b7355e60d1008d9ee297d4ffd525dbbbbae0a53c53d43be7e84fc5",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_reactive_cauchy.py": "7ddb7e14f1edee6b0656b924076dcabe39145bd5e1eeffbecf4fa3bbd4d95cda",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/fine-bank.npz": "b4493a6e4cfb20d741725ecb61cec154ab9fc51a694001865748741060018d7e",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/coarse-bank.npz": "ea020f69b240c5c5cdd8810f963d88e5cc2d3269aff12c659422a7a6541ae0df",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/solver-source.py": "b4c4b9784211e117a669c4bac66f5b418e1e1a7753ef70621bf8e9e131d781e9",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/result.json": "d3cccdf9f50857fbd44dd2ce798e53b9801fa8a41842a19493885894da7093f1"
+  },
+  "budget_revision_reason": "Original240s estimate did not cover measured conservative full conditional branch. Preserve pilot plan/source; this is a preproduction cost reassessment for the same finite experiment, not an expansion after a failed result."
+}

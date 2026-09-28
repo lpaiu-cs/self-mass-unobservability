@@ -1,0 +1,17 @@
+{
+  "classification": "Counterexample candidate",
+  "reason": "The actual first conservative step needs sigma0.799, inside the failed wide entropy interpolant. Temperature recovery avoids that ill-shaped coordinate, but neighboring density columns need real native support and resolved ionization curvature.",
+  "decision": "Reuse1470 native states; pad each temperature column by0.08 in lnT and refine only native midpoint disagreements. No fluid grid or time enlargement. The original wide-entropy audit stays failed.",
+  "additional_native_calls": 3000,
+  "seconds": 60,
+  "maximum_depth": 7,
+  "column_midpoint_gate": 0.0005,
+  "final_independent_gate": 0.002,
+  "stop": "Persist each finished column and stop on budget, depth, native domain or final independent control failure. No extrapolation, tolerance change or automatic further run.",
+  "bindings": {
+    "verification/def_native_energy_columns.py": "94a94a7eae38ad2c6b5a63887d842ae1d38eab28ed5a47b6b9702d430ea302a0",
+    "outputs/direct-eos-gr33/def-native-energy-release/eos.npz": "13baeabce50ff4b662697e5e5bc99b2d61194b41a5b00018a32b1788d0ba1065",
+    "outputs/direct-eos-gr33/def-native-energy-release/eos.json": "d3883cc9a5c5daa9fbfc9217517eee74ecde1e148b52bcfc7a3da959112583ba",
+    "outputs/direct-eos-gr33/def-native-energy-release/first-step-native.json": "29d3c0d08de90cd16656d884071a5776b759ce515fd3f13e49b525a879abd008"
+  }
+}

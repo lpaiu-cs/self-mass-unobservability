@@ -1,0 +1,40 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "b35f5c16",
+  "claim": "Remove the false identification of a density-independent PL thermal weight with plasma dissolution, changing the EOS chemical/free-energy calculation and optical weights together. Reconnect the actual atomic amplitudes to the resulting MHD-only common state.",
+  "decision": "Adopt this separate candidate only after total EOS derivatives, chemical inventory, common optical partition and detailed balance pass unchanged gates, and the zero-environment weights recover one. Do not transfer old GR or opacity results to the new EOS.",
+  "model": "Keep the finite catalog, native radii/fitting parameters and nmax10. Switch only PL off through native ifpi=-3 in gas option11; retain MHD, Coulomb, molecules, statistical weights and all thermodynamic derivatives. The catalog truncation, MHD optical interpretation and full spectrum remain explicit limitations.",
+  "budget": {
+    "build_attempts": 2,
+    "build_seconds": 120,
+    "native_EOS_calls": 12,
+    "analysis_seconds": 60,
+    "atomic_extractions": 0,
+    "coupled_runs": 0,
+    "new_stellar_steps": 0,
+    "cpu_threads": 1
+  },
+  "forecast": "The prior common EOS build took6.06s and12calls plus checks0.410s; this changed branch is unmeasured. Hard caps120s build and60s evaluation, no grid expansion or automatic new state calls after failure.",
+  "gates": {
+    "total_derivative_relative": 1e-05,
+    "free_energy_relative": 1e-05,
+    "inventory_relative": 1e-10,
+    "chemical_log_ratio": 1e-09,
+    "partition_relative": 1e-12,
+    "kirchhoff_relative": 1e-10,
+    "dilute_occupation_absolute": 1e-12
+  },
+  "original_runtime": {
+    "/home/lpaiu/work/direct-eos-gr33/photon-shared-atomic/libfree_eos_shared_atomic.so": "ec647ec9f811094aceb4e826f1eac1bfc1c9ee4866bed036aeafb0405ec661fa",
+    "/home/lpaiu/work/direct-eos-gr33/photon-shared-atomic/gas.so": "28a8eaec64169d8660829526799cb868bf8be1618b2f868e18ff62e75c2b1b12",
+    "/home/lpaiu/work/direct-eos-gr33/photon-atomic-rates/atomic-rates": "0ee9f29bd95f2423666c7cec467e92cda71d5b79441a95b07aeb29ac448eed30"
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_photon_mhd_spectrum.py": "8915cf536f84050f109b0b8efbfd5b70802638f6629d860cbc081801b5fc0724",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-shared-atomic/catalog.json": "95f0dc96f4b10f2e50bd570f583848b9202588686c882e4271d76859cfac98a4",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-shared-atomic/eos-state.npz": "0f4823d27e65805890f78bff051f18abd1028459341ccfcc25f578357a5eb6f8",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-atomic-rates/cross-sections.npz": "4a9f1f6aed789e9449b961dbc6676bdf1a242678e3e525601e067df918bc135c",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-atomic-rates/fort.92": "22e8b29583dfeae820ceac6cd9246502af0af55e6c4c0dd3650bba2e6a63f1a6",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-atomic-rates/fort.98": "d6c9d7204df7edfff408df64fc4d01829e028fa7a287fa8058b36659a3c2e981"
+  }
+}

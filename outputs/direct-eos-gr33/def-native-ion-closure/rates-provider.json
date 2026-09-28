@@ -1,0 +1,18 @@
+{
+  "classification": "Imported from prior work",
+  "url": "https://www.pa.uky.edu/~verner/dima/rec/rrfit.f",
+  "sha256": "81ff692a44622665d4d216e8f66445bfaa6699701f80ec9c02c80ebe8fd42cf9",
+  "library_sha256": "3fc4e59ee3762969382fb03adb3e47baa524066f9d8d26b6ca2040618ae18664",
+  "command": [
+    "gfortran",
+    "-O2",
+    "-fPIC",
+    "-shared",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-ion-closure/rrfit.f",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-ion-closure/rr-bridge.f90",
+    "-o",
+    "/home/lpaiu/work/direct-eos-gr33/native-ion-closure/rr.so"
+  ],
+  "build_seconds": 0.5805473800000005,
+  "attribution": "D.A.Verner and G.J.Ferland1996,ApJS103,467; authors rrfit version4,1999-06-29. Spontaneous radiative recombination to all levels; do not call this the finite native partition inverse."
+}

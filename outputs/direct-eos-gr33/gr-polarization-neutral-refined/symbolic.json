@@ -1,0 +1,10 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "occupation": "For 0<=q<=1, |q_eta|, |q_etaeta|, |q_etaetaeta|<=q. The cubic logistic factor uses -1<=1-6q+6q^2<=1.",
+  "response": "With H_j=X*M_j/(X+S)^2, the six raw-integral absolute bounds are [I0,I0,3I0,H1,3H1,H1+3H2]. Their eta derivatives are bounded by [I0,3I0,13I0,3H1,13H1,3H1+13H2]. Here H_j denotes its z integral. These follow by differentiating S/(X+S), positivity and M1^2<=S*M2.",
+  "lower_response": "For 0<=Q<=a choose pL>=a and pH>pL. K_p>=p^2/sqrt(1+p^2) on p>=Q. Thus R>=q(pH,eta_min)*(pH^3-pL^3)/(3*sqrt(1+pH^2)*Sref)=rmin>0.",
+  "integrated": "Let c=a^2/(B*Sref), A_j=int M_j(Q)dQ/(a*Sref). Then I0<=0.5*(6*A0/c)^(1/3). On z<=1 use X/(X+S)^2<=1/(4S), and on z>=1 use <=1/X: int H_j dz<=max(1/(4*rmin),1/c)*A_j.",
+  "error": "For the exact matrix M(coeff), reference center c_eta and true neutral root e, |field(e,coeff_true)-field(c_eta,coeff_saved)| <= pref*sum_i[|M_true_i|*L_i*|e-c_eta|+|M_true_i-M_saved_i|*B_i]. Coefficients at the true root use their certified intervals. No numerical-interior or floating-operation error is included.",
+  "units": "All seven errors are per ion in the same reference kBT/kB units as the thermodynamic numerical table. Constants and stored coordinate scales are exact declared inputs; alpha/pi is evaluated outward."
+}

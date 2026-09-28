@@ -1,0 +1,8 @@
+{
+  "classification": "Proven",
+  "checkpoint": "932888a",
+  "comparison": "Two variational free-energy models on exactly the same feasible populations. Change only the monatomic charge-dependent isotope translational masses after aligning neutral-atom mass entropy gauges. Keep all electronic, molecular and nonideal terms fixed.",
+  "masses": "Treat the saved nuclear/reference masses and the source-constant census electron mass as declared exact binary64 inputs. No experimental mass-uncertainty or electronic isotope-shift claim.",
+  "bound": "With delta_iq=(3/2)log[(1-q me/M_i)/(1-q me/R_i)], a_i=min(0,delta_iZ), b_i=max(0,delta_iZ), the minimized free-energy change per baryon gram lies in [-NA kB T sum_i(X_i/A_i)b_i, -NA kB T sum_i(X_i/A_i)a_i].",
+  "scope": "All admissible ion fractions for each specified T,X, including a non-monatomic pool unchanged between these two models. Not all isotope/molecular physics, not pressure/entropy/derivative errors and not full EOS certification."
+}

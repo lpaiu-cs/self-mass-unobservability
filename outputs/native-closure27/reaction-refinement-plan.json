@@ -1,0 +1,23 @@
+{
+  "classification": "Counterexample candidate",
+  "duration_proper_s": 140780.16,
+  "step_counts": [
+    16
+  ],
+  "method": "Backward Euler with native dxdt and native approximate Jacobian, reevaluating the complete native EOS/network/opacity at every Newton iterate. Keep each zone rho,T fixed. Initial trace result provides the first guess; use fresh result for acceptance.",
+  "residual_tolerance": 1e-07,
+  "abundance_floor_for_residual": 1e-24,
+  "refinement_tolerance": 0.001,
+  "gates": "Nonnegative 22-species fractions; baryon sum error <1e-12; residual per species normalized to max(current change, dt*initial source, 1e-24) <1e-7. Compare successive end states relative to max(total change,1e-20).",
+  "interpretation": "Externally thermostated, fixed-density reaction control. All 22 species including generated F enter the same native EOS and reaction evaluator. This is not GR thermal evolution or proof of common EOS thermodynamic consistency.",
+  "original_plan_sha256": "f2b74ebfe0ef74efe1be9596e6e227e62ebd15099198863b116b832a5b0da4f3",
+  "residual_budget": "1e-7*max(abs(X-X0),dt*abs(f0),1e-24) + 64*eps*max(abs(X),abs(X0))",
+  "refinement_denominator": "max(abs(total change),128*eps*abs(X),1e-20)",
+  "scope": "Separate arithmetic-aware solve; preserve the strict relative-residual failure. The rounding term covers storage/subtraction scale only, not EOS or physical-model error.",
+  "previous_plan_sha256": "42898a31b346ba7a9f09b02a5471e1bb126f46704b3f5545d05ab2227345c977",
+  "absolute_residual_tolerance": 1e-24,
+  "correction": "Add an explicit absolute reaction-balance tolerance of 1e-24 in mass fraction. The prior arithmetic-only residual failed near F17 balance with an absolute residual of about 5e-30. Preserve that gate and all its iterates; do not describe this tolerance as a physical error certificate.",
+  "previous_result_sha256": "b660850a09e4d92b30400ca333371bb7c3ea50c3813739ad1f158f21aafb31d6",
+  "additional_mixed_refinement_budget": "1e-16 + 1e-3*abs(total change) per isotope and zone",
+  "original_relative_change_gate_preserved": true
+}

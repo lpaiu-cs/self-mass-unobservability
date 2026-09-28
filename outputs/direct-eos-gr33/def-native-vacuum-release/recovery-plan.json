@@ -1,0 +1,16 @@
+{
+  "classification": "Counterexample candidate",
+  "decision": "Finish the originally registered fine grid by reusing all73 coarse native states. Solve only72 missing midpoints with the exact entropy derivative cvT/T, saving every completed state. No domain, resolution, horizon or physical gate change.",
+  "additional_native_call_cap": 400,
+  "total_native_call_cap_including_failed_run": 2000,
+  "additional_wall_seconds": 40,
+  "CPU_threads": 1,
+  "forecast": "The saved coarse run cost10.84s/607calls. Up to400 more calls forecast7.2s native work;40s includes cache writes, EOS setup and integral checks, excluding module imports.",
+  "accounting": "The original wall-clock total was not saved on assertion. Only the coarse timing and1600native-call count survive; no precise whole-run time is inferred.",
+  "bindings": {
+    "verification/def_native_vacuum_release.py": "c6646433a61119649da36abfe3e8ef94cc575a663c6dea8e9289d64efe32adaa",
+    "outputs/direct-eos-gr33/def-native-vacuum-release/coarse.npz": "5556e9c821e84f43bae9b0616f489c9911836426e694ae2aacbdcd67df5e43e8",
+    "outputs/direct-eos-gr33/def-native-vacuum-release/coarse.json": "50ff29c9305224a49bc937991a465b3363c702305981213490fcbb34e7d22da0",
+    "outputs/direct-eos-gr33/def-native-vacuum-release/registered-source.py": "f2e2c49c109bebb0b70216cc22ab45f7345cd9258daaaa7f69e9a90c475b9432"
+  }
+}

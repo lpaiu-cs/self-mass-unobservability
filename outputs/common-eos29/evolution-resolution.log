@@ -1,0 +1,55 @@
+SOURCE evolve-1-0 0 dlnT -0.041916027943393885
+SOURCE evolve-1-0 1000 dlnT -1.8270790391738956e-07
+SOURCE evolve-1-0 2000 dlnT -5.612081295680582e-06
+SOURCE evolve-1-0 3000 dlnT 8.938052076246095e-09
+SOURCE evolve-1-0 4000 dlnT -6.938449814697378e-12
+SOURCE evolve-1-0 5000 dlnT -8.739675649849232e-13
+GR EOS table evolve-1-0 17 0
+GR EOS table evolve-1-0 17 1000
+GR EOS table evolve-1-0 17 2000
+GR EOS table evolve-1-0 17 3000
+GR EOS table evolve-1-0 17 4000
+GR EOS table evolve-1-0 17 5000
+GR STRUCTURE evolve-1-0 17 4 {'classification': 'Counterexample candidate', 'parameters': [48.49328826849145, -3.673151469360697e-05, -2.916930274829807e-11], 'interface_max': 5.044853423896711e-13, 'radius_m': np.float64(68817120.7855963), 'mass_geom_m': np.float64(291.6871724617247), 'baryon_g': 3.925101446571372e+32, 'EOS_calls': 2991202, 'direct_calls': 78450, 'physical_EOS_certified': False, 'boundary': 'Nonzero photospheric pressure; exterior is a boundary normalization, not a solved radiating atmosphere.'}
+EVOLUTION 1 energy_score 2.9290244409362365e-06 refinement None
+SOURCE evolve-2-0 0 dlnT -0.021223734985474252
+SOURCE evolve-2-0 1000 dlnT -9.135394485326742e-08
+SOURCE evolve-2-0 2000 dlnT -2.8060358410186836e-06
+SOURCE evolve-2-0 3000 dlnT 4.469026038123047e-09
+SOURCE evolve-2-0 4000 dlnT -3.4710012641880894e-12
+SOURCE evolve-2-0 5000 dlnT -4.369837824924616e-13
+GR EOS table evolve-2-0 17 0
+GR EOS table evolve-2-0 17 1000
+GR EOS table evolve-2-0 17 2000
+GR EOS table evolve-2-0 17 3000
+GR EOS table evolve-2-0 17 4000
+GR EOS table evolve-2-0 17 5000
+GR STRUCTURE evolve-2-0 17 4 {'classification': 'Counterexample candidate', 'parameters': [48.49328830879828, -1.8449894766982396e-05, -2.914942462093721e-11], 'interface_max': 7.034373084024992e-13, 'radius_m': np.float64(68818378.88554296), 'mass_geom_m': np.float64(291.6871724617305), 'baryon_g': 3.925101446571372e+32, 'EOS_calls': 2991202, 'direct_calls': 78485, 'physical_EOS_certified': False, 'boundary': 'Nonzero photospheric pressure; exterior is a boundary normalization, not a solved radiating atmosphere.'}
+evolve-2-1 PASS import {'logrho': 7.105427357601002e-15, 'logT': 5.329070518200751e-15, 'X_absolute': 3.3306690738754696e-16, 'dm_relative': 5.995204332975845e-15}
+TRACE evolve-2-1 5735 native calls
+SOURCE evolve-2-1 0 dlnT -0.02092527684080281
+SOURCE evolve-2-1 1000 dlnT -9.13539892621884e-08
+SOURCE evolve-2-1 2000 dlnT -2.8060444137167906e-06
+SOURCE evolve-2-1 3000 dlnT 4.469029590836726e-09
+SOURCE evolve-2-1 4000 dlnT -3.4710012641880894e-12
+SOURCE evolve-2-1 5000 dlnT -4.369837824924616e-13
+GR EOS table evolve-2-1 17 0
+GR EOS table evolve-2-1 17 1000
+GR EOS table evolve-2-1 17 2000
+GR EOS table evolve-2-1 17 3000
+GR EOS table evolve-2-1 17 4000
+GR EOS table evolve-2-1 17 5000
+GR STRUCTURE evolve-2-1 17 4 {'classification': 'Counterexample candidate', 'parameters': [48.49328826849529, -3.66468040648898e-05, -2.916509052375952e-11], 'interface_max': 5.613287612504791e-13, 'radius_m': np.float64(68817126.61513811), 'mass_geom_m': np.float64(291.68717246172594), 'baryon_g': 3.925101446571372e+32, 'EOS_calls': 2991202, 'direct_calls': 78485, 'physical_EOS_certified': False, 'boundary': 'Nonzero photospheric pressure; exterior is a boundary normalization, not a solved radiating atmosphere.'}
+EVOLUTION 2 energy_score 2.0443203494405495e-06 refinement {'composition_score': 51.891150852605115, 'temperature_difference': 0.00010204938730495883, 'passed': False}
+SOURCE evolve-4-0 0 dlnT -0.010669703993810842
+SOURCE evolve-4-0 1000 dlnT -4.567697153845529e-08
+SOURCE evolve-4-0 2000 dlnT -1.4030162560629833e-06
+SOURCE evolve-4-0 3000 dlnT 2.2344934791362903e-09
+Traceback (most recent call last):
+  File "/mnt/e/lab/self-mass-unobservability/verification/common_eos.py", line 612, in <module>
+    a=np.full(22,np.nan);info=ctypes.c_int(-999)
+  File "/mnt/e/lab/self-mass-unobservability/verification/common_eos.py", line 457, in evolution
+    
+  File "/mnt/e/lab/self-mass-unobservability/verification/common_eos.py", line 421, in source_step
+    delta=expm(h*mat)[:,-1];xx=x[i]+delta[:26]
+ValueError: ('energy inverse', 3587, np.float64(19.0))

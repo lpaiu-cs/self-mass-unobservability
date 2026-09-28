@@ -1,0 +1,26 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Expose the SAME finite PL/MHD level sum used by the gas EOS for H and He II. This is a thermodynamic level-weight interface; interpretation as optical survival probabilities remains a separate assumption.",
+  "budget": {
+    "build_seconds": 90,
+    "evaluation_seconds": 30,
+    "native_EOS_calls": 0,
+    "new_stellar_steps": 0,
+    "coupled_runs": 0
+  },
+  "gates": {
+    "native_cumulative_relative": 1e-12,
+    "positive_levels": true,
+    "derivative_relative": 1e-05
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_photon_eos_levels.py": "497c20652ab9e7454c6089cc706547490d290be11bdf22d399a454eb355156fe",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-eos-populations/eos-state.npz": "5d921d5857f41f8f58c63b282198a6ca6ecd64b4e7a816b1fa88cd6f48845614",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-eos-populations/levels/bridge.F90": "16bf5035bbee40f75cce8b19ed4cdb2c8833db6e295a5d90df1afceb50628195",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-eos-populations/levels/qstar_calc.f90": "6c94e62090749c5942a3907b96accb78696cd81df8f366d5b3555059026d94bd",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-eos-populations/levels/qryd_calc.f90": "29409920c159c8d55b924e52accac7261c1fa4ba0c04d45862f9920a684995bb",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-eos-populations/levels/qryd_approx.f90": "ae4d3e34dc6e56acc4cde6a9e9989688d3498084e4df8d5fd79c58a38a3529e2",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-eos-populations/levels/plsum.f90": "1446c466e6297272fb71826fab352c46f2624dda8cc98ff375883b88baa943e9",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-eos-populations/levels/plsum_approx.f90": "7ce1908ec30961fef19461ae5ce5c8850e073dba7cca62a01a57c6e185b44041"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "paths": [
+    {
+      "steps": 64,
+      "actual_material_baseline_exact": true,
+      "collision_only_ledger_exact": true,
+      "accepted_port_relative": [
+        3.55656872639043e-17,
+        5.3632691602825095e-17
+      ],
+      "source_identity_relative": 5.137706261437518e-17,
+      "energy_H_waveform_residual": [
+        4.930598633408352e-12,
+        7.479147484132069e-12
+      ],
+      "material_update_relative": [
+        2.6886136867260563e-05,
+        3.229163547666273e-06,
+        1.2875684453152067e-06,
+        1.5998199077230777e-06
+      ],
+      "direct_increment_energy_identity": 0.0
+    },
+    {
+      "steps": 128,
+      "actual_material_baseline_exact": true,
+      "collision_only_ledger_exact": true,
+      "accepted_port_relative": [
+        9.461310732208674e-17,
+        2.159817045881067e-16
+      ],
+      "source_identity_relative": 4.241751113187054e-17,
+      "energy_H_waveform_residual": [
+        4.925332986546338e-12,
+        7.48097435498288e-12
+      ],
+      "material_update_relative": [
+        2.6847592204117422e-05,
+        3.2413570671873114e-06,
+        1.2869317697098476e-06,
+        1.5987220901634915e-06
+      ],
+      "direct_increment_energy_identity": 0.0
+    }
+  ],
+  "normalized_identity_relative": 2.346814929368782e-16,
+  "actual_reciprocal_sweep_completed": true,
+  "direct_motion_controls": {
+    "angular": 5.53983910639093e-10,
+    "radial": 2.476366156295843e-16,
+    "time": 0.007691156072973347
+  },
+  "first_readout_failure_preserved": true,
+  "pressure_increment_arithmetic_diagnostic": [
+    {
+      "steps": 64,
+      "arithmetic_over_pressure_increment": 0.014421022032512726
+    },
+    {
+      "steps": 128,
+      "arithmetic_over_pressure_increment": 0.014439470896330386
+    }
+  ],
+  "no_native_defect_or_mechanical_double_count": true,
+  "coupled_fixed_point_verified": false,
+  "uniform_EOS_derivative_bound": false,
+  "final_charge_solved": false,
+  "full_goal_complete": false
+}

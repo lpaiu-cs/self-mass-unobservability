@@ -1,0 +1,28 @@
+{
+  "classification": "Counterexample candidate",
+  "bindings": {
+    "verification/def_native_atmosphere_cold.py": "b1560c1271cd69e6e5a8490b4409a0780865f26872edd8421b7f0d88ab574065",
+    "verification/def_native_atmosphere_density.py": "e4e1f5dc4a15dadb791896a4c8b99e249be6cc59c53e68687b341cbe025727b6",
+    "outputs/direct-eos-gr33/def-native-atmosphere/density-coordinate/table.json": "1c61facf503d5b6d82013c8387630551d53dd815b3945d909a809155af92c457",
+    "outputs/direct-eos-gr33/def-native-atmosphere/density-coordinate/result.json": "34c40214c0870899ce84eb1047095dbd06748c6c67b73de82ac5b1cab78f83a6",
+    "outputs/direct-eos-gr33/def-hydrostatic-background/absolute-shoot/background-0.001.npz": "774e2bff821f5863291167f069a8673562bfee8b0ab648468c8dfc5a2a9b04d3",
+    "outputs/direct-eos-gr33/def-hydrostatic-background/absolute-shoot/lapse.npz": "9c08b16699d7bfaa696a93e68ad2eb42a9ea98f8373d036f3c7018d5dc374dba"
+  },
+  "claim": "Extend the same native entropy/composition toward its dilute cold limit, then reuse the same full DEF atmosphere equations. No EOS substitution or extrapolation.",
+  "decision": "Locate the remaining material boundary and measure the enthalpy left to the native molecular ground state; finite-temperature endpoints remain finite pressure.",
+  "density_step": 0.5,
+  "maximum_new_roots": 64,
+  "stop_temperature_K": 0.1,
+  "budget": {
+    "hard_timeout_seconds": 60,
+    "expected_seconds": [
+      2,
+      15
+    ],
+    "workers": 1,
+    "new_evolution_steps": 0,
+    "automatic_expansion": false
+  },
+  "entropy_energy_gate": 1,
+  "stop": "First native failure or entropy-gate failure, 50 seconds, 64 new roots, or T <= 0.1 K. Preserve every accepted row."
+}

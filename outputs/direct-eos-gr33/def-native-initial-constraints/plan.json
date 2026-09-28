@@ -1,0 +1,44 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "537d57c",
+  "claim": "Construct an actual initial mass/lapse solution for the material inventory and photon moments used by Phase119, and supply the missing momentum-constraint extrinsic curvature. Retain compensated differences for the downstream physical evolution.",
+  "equations": "Pi_phi=0; m_prime+r*Phi^2*m=4*pi*r^2*A^4*G*E/c^4+r^2*Phi^2/2. nu_prime=m/(r^2*b)+4*pi*r*A^4*G*Pr/(c^4*b)+r*Phi^2/2. Krr=4*pi*r*A^4*G*F/(c^5*sqrt(b)); m_t=-4*pi*r^2*N*sqrt(b)*A^4*G*F/c^4.",
+  "sources": "Retain the full saved stellar energy/pressure profiles below the causal shell. In that shell use the actual native gas and angular photon moments at all19+512 centers, preserving the saved deep stratification between native anchors. Exterior initial radiation and gas stop at the declared outer numerical face; this is a compact Cauchy field, not an eternal luminosity.",
+  "inventory": "Hold the coordinate baryon measure A^3*rho/sqrt(b) fixed. Thus rho/rho_ref=sqrt(b/b_ref). At every point the gas uses the isentropic Gamma-law anchored to its actual initial energy, pressure and bulk modulus. This is an explicit local constitutive continuation, not replacement by a new globally certified EOS. Native anchor checks are required before any downstream use.",
+  "scalar": "Preserve the stored scalar values and gradients with a C1 Hermite interpolant, continued by the old exact exterior profile. Pi_phi=0 is free Cauchy data; scalar acceleration must be evaluated, not silently set to zero. Flux/extrinsic curvature is evaluated where the actual angular Cauchy field is known; unknown deeper heat flux is not certified.",
+  "decision": "Export corrected initial material/metric variables and evaluate their scalar-stationarity defect. If the correction or that defect invalidates the old tiny-charge interpretation, do not certify or rerun the old subtraction unchanged. Continue with the physical projection/coupling indicated by the measured defect.",
+  "gates": {
+    "quadrature_metric": 1e-11,
+    "inventory": 1e-14,
+    "picard_density": 1e-17,
+    "analytic_uniform_star": 1e-11,
+    "native_anchor": 0.002
+  },
+  "budget": {
+    "seconds": 120,
+    "orders": [
+      12,
+      20
+    ],
+    "max_picard": 8,
+    "CPU_threads": 1,
+    "memory_GB": 3,
+    "new_fluid_steps": 0,
+    "native_calls": 100
+  },
+  "measured_basis": "The existing19+512 model construction and moment inspection took9.59s including WSL startup. Constraint integration is vectorized over the saved source knots, with two fixed quadrature orders and at most8 Picard passes. No old fluid history is repeated.",
+  "stop": "Preserve a failed projection or gate. Do not automatically increase mesh, quadrature, horizon or Picard cap. Initial constraint matching alone is not final charge, hydrostatic/scalar stationarity, full EOS certification or dynamic GR.",
+  "references": [
+    "https://arxiv.org/abs/gr-qc/0201064 (RGPS equations233-235)",
+    "https://arxiv.org/abs/gr-qc/9707041 (equations2.23-2.26)"
+  ],
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_initial_constraints.py": "d6a50920993d8a9480f94168a5dbc8b9111c9eedd001788ff79f2899e294781d",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_boundary_layer.py": "7a6b8329e9bd402d1bc7bf4b236e63094c6b2f53467cf7be49fd021ca7cb2951",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-boundary-layer/geometry.npz": "045edac0aa98e28171687b12bb605a5654961fdc6cf29d744a2f3674fbb19697",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-boundary-layer/coupled-128.npz": "a0b6b28116231883c38f58869141f4a20b7fa7513176ccec796e48414fa4d387",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-boundary-layer/result.json": "e6af8464d031fe0dfce3f8076c69ff0f326df337f79bb6c713a2dab7e2a5afa3",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-whole-star-match/background.npz": "07cf1bdca40788799b7aea67273e73fafb5bda615103bdd73aac38bc020a5acf"
+  },
+  "source_review": "Before first execution, use the actual EOS return interface p,u,Gamma,T,kappa and preserve exact initial gas vacuum above R. Original draft retained."
+}

@@ -1,0 +1,69 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "statement": "No positive representation of an absent nuclear charge Z by other charges can preserve ion number, mean charge and charge squared simultaneously. Unit weights and preserved mean imply E[(Zprime-Z)^2]=E[Zprime^2]-Z^2; a zero value requires every nonzero weight at Z itself.",
+  "two_neighbor_excess": "(Z-Zlo)*(Zhi-Z)",
+  "unsupported_species_excess": {
+    "li7": 3.0,
+    "be7": 4.0,
+    "b8": 3.0,
+    "f17": 1.0,
+    "f18": 1.0,
+    "f19": 1.0
+  },
+  "source_sha256": {
+    "src/master_coulomb.f90": "4e4c6bb2847c7563d50046d13c0608e43dd87e61cd543f3b8441d8f2c9e2809a",
+    "src/ionize.f90": "c0bc4a49a928d3319e66ccd29a5ed67260fc097be0dc59149ecb6bfa34ab3e40",
+    "src/mod_free_eos.f90": "a687e129ceee0cfa6103f5f66cfaea5cf6aed4ffe579f910b5c72777b3182c9a"
+  },
+  "rows": [
+    {
+      "label": "initial-state",
+      "state_sha256": "149c037371ca90bb0f1599243f57c313a843d99a91714747b13469609ea85b58",
+      "maximum_fractional_second_moment_excess": 1.1267336569271892e-08,
+      "worst_cell": 2590,
+      "maximum_absolute_moment_excess": 1.1931654581611857e-08,
+      "affected_cells": 5735,
+      "maximum_excess_fraction_of_classical_screening_sum": 6.897326841622763e-09
+    },
+    {
+      "label": "E-1-0-corrector-state-17-4",
+      "state_sha256": "7e529c4596b2cb93c2fdfb7a0076bcde3918b17824dd76fb1fbaba1cbfda4a67",
+      "maximum_fractional_second_moment_excess": 1.1267251257646352e-08,
+      "worst_cell": 2590,
+      "maximum_absolute_moment_excess": 1.1931563947628e-08,
+      "affected_cells": 5735,
+      "maximum_excess_fraction_of_classical_screening_sum": 6.897274584270214e-09
+    },
+    {
+      "label": "E-2-1-corrector-state-17-4",
+      "state_sha256": "31536608ef1ba0fe814ee555f78dc8dab2000015470a07b21da720d4fb97d570",
+      "maximum_fractional_second_moment_excess": 1.1267251305700973e-08,
+      "worst_cell": 2590,
+      "maximum_absolute_moment_excess": 1.1931563998515794e-08,
+      "affected_cells": 5735,
+      "maximum_excess_fraction_of_classical_screening_sum": 6.8972746136869386e-09
+    },
+    {
+      "label": "E-4-3-corrector-state-17-4",
+      "state_sha256": "08a4cb3ec2f6bd8285dd7ae8035aabfae613b3a62335b0b44ba49deda039496e",
+      "maximum_fractional_second_moment_excess": 1.1267251317727023e-08,
+      "worst_cell": 2590,
+      "maximum_absolute_moment_excess": 1.1931564011250868e-08,
+      "affected_cells": 5735,
+      "maximum_excess_fraction_of_classical_screening_sum": 6.897274621048706e-09
+    }
+  ],
+  "bridge_source_sha256": "41abc4076c7974aeedf94ff07668e9aad235cd47dee6a1eccefd3abb9fc73687",
+  "declared_EOS_options": {
+    "ifoption": 3,
+    "ifmodified": 1,
+    "ifion": -2,
+    "model": "EOS1",
+    "ifcoulomb": 5
+  },
+  "consequence": "Even in the completely ionized limit the present embedding changes the ion charge-squared input to Coulomb free energy. A rho,T-independent atomic energy offset cannot correct a rho,T-dependent Coulomb term. This disproves exact non-ideal EOS equivalence; it is not a lower or upper bound on the physical stellar pressure error.",
+  "scope": "The theorem concerns positive composition representations and the stated charge moments. Saved-state numbers evaluate the fully stripped moments only; they do not assert actual complete ionization, a Debye-Huckel validity regime or a physical EOS error certificate.",
+  "primary_reference": "https://freeeos.sourceforge.net/coulomb.pdf",
+  "physical_EOS_certified": false
+}

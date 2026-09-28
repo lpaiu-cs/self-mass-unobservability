@@ -1,0 +1,30 @@
+{
+  "classification": "Counterexample candidate",
+  "source_sha256": "f6b57a5c83259f3800e85bb26da685fc367547cf7cdcf28a5e6894018429fe44",
+  "failure": "Second photon prefix energy/pressure differs44.7/45.1percent. Its actual previous free-material first-knot energy differs46.01percent, while first-knot metric inputs differ at most0.30percent. Whole-history material norms had hidden this initially tiny response. Do not waive the prefix gate or substitute a common fine input.",
+  "repair": "Replace SSP2 by SSPRK3 for the same conservative material RHS, original64/128 macro clocks and physical hydro CFL. Evaluate the closing stage on its left interval and the third stage at the midpoint. Use identical positive1/6,1/6,2/3 weights for rate, ledger and absolute norm. Repeat only the material paths; preserve all photons and the failed second-sweep prefixes.",
+  "controls": "First complete canonical interval4/8 macro steps must pass2percent componentwise, plus original0.2percent directional and1e-8 conservation/owner,1percent donor gates. Reuse these prefixes in production; then original full time/source and reciprocal gates still apply.",
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "scope": "SSPRK3 integrates a time-quadratic prescribed force exactly. SSP2 has c*h^3/6 local quadrature error. Not a proof of the full coupled response error."
+  },
+  "budget": {
+    "pilot": 90,
+    "material_production": 450,
+    "total_actions": 4600,
+    "CPU_threads": 1,
+    "virtual_GiB": 3
+  },
+  "forecast": "Use1.6 times the completed SSP2 raw-call counts times the measured SSPRK3 seconds/call, plus measured setup, and2x margin below450s. One additional RHS stage; no finer grid or macro clock. Stop if the short interval remains unresolved.",
+  "bindings": {
+    "native-incident-self-gr157-work/ssp2-producer.py": "3e883437f31e642497c5046e58330121a281774e34bfbfe0d12dda1142d13f91",
+    "native-incident-self-gr157-work/material-budget-plan.json": "f2ee1eefa495640688963ff2a2b3fa5e2f23e6f1df6a200692cd68d0d0ab3c44",
+    "native-incident-self-gr157-work/sweep-2/photons-aligned/pilot.json": "e57436cb658c1a886a7410b91d08c8d73fdc7f5f43a257b294d4756124b1c0d3",
+    "native-incident-self-gr157-work/sweep-1/residual-ssp2.json": "2957b7e5715e48372316d8e87952b6253115c844f2386a122483b604281a1c76",
+    "native-incident-self-gr157-work/sweep-1/material-analytic/steps-64-reference-128.npz": "dd5db178176cf0ee6803fb8869a87bc33b6cc8a75f8d983ec4bf40b92b653e8e",
+    "native-incident-self-gr157-work/sweep-1/material-analytic/steps-64-reference-128.json": "92753930deed101708c664dce411b0911ad12f7425eb51bee06116b24dbacf8b",
+    "native-incident-self-gr157-work/sweep-1/material-analytic/steps-128-reference-128.npz": "d68f09d7e5577679cd463a3c6da6ff1147ea4221cfb8bc4443c4d4081e1abff2",
+    "native-incident-self-gr157-work/sweep-1/material-analytic/steps-128-reference-128.json": "0212fc8f9c0afcc8822e6350b14fa86ff0de07d543836184771174684af10e2a"
+  }
+}

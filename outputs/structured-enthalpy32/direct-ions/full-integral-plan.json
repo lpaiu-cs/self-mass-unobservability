@@ -1,0 +1,9 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "792a8e2",
+  "change": "Keep morder=21 and fderr=1e-12, and replace the common fermi_dirac_ct evaluator for the exchange K/I call as well. Use F_3/2 prime = 3/2 F_1/2 and F_3/2 double prime = 3/4 F_-1/2, with the existing direct integrator for higher eta derivatives.",
+  "root_cause": "The EOS1 exchange_gcpf call independently uses CT derivatives in its K integral. Changing the main Fermi morder alone leaves this branch in the actual flow.",
+  "controls": "Independent 60-digit polylog values for orders 0 through 5, the observed branch scan, original representative and whole-mixture derivative controls.",
+  "supported_scope": "The registered EOS1 option path. Alternate FreeEOS options and the unused CT entropy-difference approximation are not claimed validated.",
+  "physical_or_continuous_certificate": false
+}

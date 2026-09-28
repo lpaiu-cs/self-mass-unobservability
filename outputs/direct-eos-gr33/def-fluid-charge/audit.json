@@ -1,0 +1,165 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "frozen_bindings_verified": true,
+  "new_native_calls": 0,
+  "new_evolution_steps": 0,
+  "kinematic_heat_positive_control": {
+    "expected": 0.0316898615739172,
+    "central_differences": [
+      0.031689857458102245,
+      0.03168986120349448
+    ],
+    "incorrect_rest_trace_derivative": -2.7247930191887455e-06,
+    "scope": "Manufactured Q=0.01(eps+P), fixed primitive density/temperature. Verifies Lorentz stress and trace handling, not a physical heat-flow solution."
+  },
+  "baseline_velocity_native_control_unresolved": true,
+  "baseline_velocity_derivative_l1": 3.932459281886989e-20,
+  "native_derivative_absolute_floor": 2e-12,
+  "endpoints": [
+    {
+      "label": "driven",
+      "steps": 48,
+      "actual_increment": -1.249196186119475e-08,
+      "linear_terms": {
+        "baryon": -1.3063878647668428e-08,
+        "temperature": 3.854381056706816e-10,
+        "velocity": -1.5977290828537274e-25
+      },
+      "remaining_increment": 1.8647868080299703e-10,
+      "relative_total_baryon_change": 3.2282547183825105e-18,
+      "maximum_composition_change": 1.3320840133709193e-05
+    },
+    {
+      "label": "undriven",
+      "steps": 48,
+      "actual_increment": 8.673617379884035e-19,
+      "linear_terms": {
+        "baryon": 1.9083350384686967e-20,
+        "temperature": 2.565337747463107e-19,
+        "velocity": -4.7287775880093294e-32
+      },
+      "remaining_increment": 5.917446128574532e-19,
+      "relative_total_baryon_change": 2.3993308654326473e-21,
+      "maximum_composition_change": 9.315741800033993e-13
+    },
+    {
+      "label": "decoupled",
+      "steps": 48,
+      "actual_increment": -4.574088809973509e-09,
+      "linear_terms": {
+        "baryon": -4.711925252690475e-09,
+        "temperature": 1.1036052814757295e-10,
+        "velocity": -7.164658546320688e-26
+      },
+      "remaining_increment": 2.747591456939303e-11,
+      "relative_total_baryon_change": 3.3202870600712346e-18,
+      "maximum_composition_change": 5.108921871478677e-06
+    },
+    {
+      "label": "driven",
+      "steps": 96,
+      "actual_increment": -1.1920260347807882e-08,
+      "linear_terms": {
+        "baryon": -1.2489903341037671e-08,
+        "temperature": 3.6838338061785e-10,
+        "velocity": -1.6898646828204978e-25
+      },
+      "remaining_increment": 2.0125961261193973e-10,
+      "relative_total_baryon_change": 2.8614876691005022e-18,
+      "maximum_composition_change": 1.3075191433566826e-05
+    },
+    {
+      "label": "undriven",
+      "steps": 96,
+      "actual_increment": 4.336808689942018e-19,
+      "linear_terms": {
+        "baryon": 6.659522575927952e-21,
+        "temperature": 5.575091606921491e-20,
+        "velocity": -4.697934985653181e-32
+      },
+      "remaining_increment": 3.712704303491059e-19,
+      "relative_total_baryon_change": 2.3193738329622068e-20,
+      "maximum_composition_change": 8.94740279881339e-13
+    },
+    {
+      "label": "decoupled",
+      "steps": 96,
+      "actual_increment": -4.357341133742754e-09,
+      "linear_terms": {
+        "baryon": -4.492560257207358e-09,
+        "temperature": 1.0645036426551214e-10,
+        "velocity": -7.55471694977016e-26
+      },
+      "remaining_increment": 2.8768759199092663e-11,
+      "relative_total_baryon_change": 1.0210609809056013e-17,
+      "maximum_composition_change": 5.006122938696136e-06
+    },
+    {
+      "label": "driven",
+      "steps": 192,
+      "actual_increment": -1.1721018603177286e-08,
+      "linear_terms": {
+        "baryon": -1.2287523157777356e-08,
+        "temperature": 3.579846873595697e-10,
+        "velocity": -1.7122001126153022e-25
+      },
+      "remaining_increment": 2.0851986724050072e-10,
+      "relative_total_baryon_change": 2.8985082360896307e-18,
+      "maximum_composition_change": 1.2934292609112166e-05
+    },
+    {
+      "label": "undriven",
+      "steps": 192,
+      "actual_increment": 1.3010426069826053e-18,
+      "linear_terms": {
+        "baryon": 5.831398771279379e-20,
+        "temperature": -2.1485263346024123e-20,
+        "velocity": -4.675651049733145e-32
+      },
+      "remaining_increment": 1.2642138826158825e-18,
+      "relative_total_baryon_change": 3.585672894422309e-20,
+      "maximum_composition_change": 8.817731268145709e-13
+    },
+    {
+      "label": "decoupled",
+      "steps": 192,
+      "actual_increment": -4.283414091303672e-09,
+      "linear_terms": {
+        "baryon": -4.417451564666529e-09,
+        "temperature": 1.0449010015221264e-10,
+        "velocity": -7.625455396860489e-26
+      },
+      "remaining_increment": 2.9547373210644716e-11,
+      "relative_total_baryon_change": 1.0629564149522042e-19,
+      "maximum_composition_change": 4.950161910912811e-06
+    }
+  ],
+  "finest_contrasts": [
+    {
+      "name": "driven_minus_undriven",
+      "actual": -1.1721018604478328e-08,
+      "linear_terms": {
+        "baryon": -1.228752315783567e-08,
+        "temperature": 3.5798468738105493e-10,
+        "velocity": -1.7121996450501972e-25
+      },
+      "remainder": 2.085198659762875e-10,
+      "remainder_over_actual": 0.017790251258249595
+    },
+    {
+      "name": "driven_minus_decoupled",
+      "actual": -7.437604511873613e-09,
+      "linear_terms": {
+        "baryon": -7.870071593110826e-09,
+        "temperature": 2.5349458720735703e-10,
+        "velocity": -9.496545729292533e-26
+      },
+      "remainder": 1.78972494029856e-10,
+      "remainder_over_actual": 0.024063190472703812
+    }
+  ],
+  "seconds": 0.29320180800000006,
+  "interpretation": "Linear baryon and thermal decomposition is at the original background; the remainder retains composition, nonlinear and cross contributions. Radius and Eulerian baryon terms are alternative perturbation coordinates, not additive descriptions of the same material displacement.",
+  "source_sha256": "2d7a3c343778edad0b7fd6dad0e240253bd43c7e2b49f905cad55328bbfa5a6f"
+}

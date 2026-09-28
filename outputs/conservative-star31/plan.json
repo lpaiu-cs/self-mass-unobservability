@@ -1,0 +1,69 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "d7a8331",
+  "previous_manifest_sha256": "4f79d033469c87e27f57ebd07cc70ecb23cbbb836e2d8e6fdfb7fd8c57265407",
+  "objective": "Continue the full original physical EOS, GR evolution, scalar driving and observational-inference goal. This stage closes source derivative and conservative time-integration prerequisites without redefining that goal.",
+  "ordered_work": [
+    "All 25 independent composition directions of the same corrected 26-species source",
+    "Common-EOS density and temperature directions including neutrino loss",
+    "Increment accumulation with extended precision and an explicit conservation gauge",
+    "New fixed-baryon GR time paths, original energy/composition/temperature refinement criteria",
+    "Self-consistent transport, physical EOS/GR, scalar and observation closure remain required"
+  ],
+  "composition": {
+    "pivot": "he4",
+    "steps": [
+      1e-06,
+      5e-07
+    ],
+    "directions": [
+      "h1",
+      "h2",
+      "he3",
+      "li7",
+      "be7",
+      "b8",
+      "c12",
+      "c13",
+      "n13",
+      "n14",
+      "n15",
+      "o14",
+      "o15",
+      "o16",
+      "o17",
+      "o18",
+      "f17",
+      "f18",
+      "f19",
+      "ne18",
+      "ne19",
+      "ne20",
+      "mg22",
+      "mg24",
+      "ca40"
+    ],
+    "method": "One-sided simplex directions e_i-e_He4; second-order extrapolation of two step sizes. Compare each with the actual returned Jacobian and record discrepancies. Do not silently promote a finite derivative to a rigorous certificate."
+  },
+  "density_temperature_steps": [
+    0.0001,
+    5e-05
+  ],
+  "controls": {
+    "source_derivative_relative": 0.001,
+    "composition_absolute": 1e-16,
+    "composition_relative_to_total_change": 0.001,
+    "temperature_log_absolute": 2e-06,
+    "global_energy_relative_to_release": 1e-06
+  },
+  "time": {
+    "coordinate_seconds": 140780.16,
+    "step_counts": [
+      1,
+      2,
+      4
+    ],
+    "flux": "Exact registered Request30 face luminosities for an explicit forced control. A later transport closure must replace this boundary prescription."
+  },
+  "policy": "Use the unchanged native binary and the declared Request30 double-table correction. Use seeded FreeEOS for all fresh auxiliary inputs. Preserve all prior raw verdicts and any new failed directions. Do not equate same-time endpoint inverses or fixed-flux TOV sequences with full physical GR evolution."
+}

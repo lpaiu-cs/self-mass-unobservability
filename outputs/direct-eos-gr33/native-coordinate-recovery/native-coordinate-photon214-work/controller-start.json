@@ -1,0 +1,15 @@
+{
+  "pid": 422,
+  "process_start_ticks": "52026",
+  "boot_id": "aa8f5350-eb7c-4b5c-bd02-5906310422d5",
+  "started_unix": 1790257143.4523215,
+  "source_sha256": "a85f53fa2429ea58043b74b7aa7c656ff14a52e5435814614bc384a20e419198",
+  "producer_sha256": "b93f36a9e7e35c436a71517bda41a2643070ff159a3b2d5367086d964efedd48",
+  "actions": [
+    "coarse",
+    "fine",
+    "audit"
+  ],
+  "parallel_paths": 2,
+  "stop_policy": "First failed path cancels the other owned reconstruction; both preserve their last accepted atomic checkpoint."
+}

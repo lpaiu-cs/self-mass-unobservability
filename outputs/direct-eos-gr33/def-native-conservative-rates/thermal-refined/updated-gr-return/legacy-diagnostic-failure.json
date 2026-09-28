@@ -1,0 +1,9 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "Inherited old-EOS snapshot comparison required an endpoint on its 17-node grid; a two-step resumed pilot ended at coarse step6. The physical checkpoint was saved before the diagnostic assertion.",
+  "completed": {
+    "64": 6,
+    "128": 2
+  },
+  "repair": "Remove obsolete cross-model diagnostic only; retain physical conservation gates and final exact comparison against Phase130 accepted sources and terminal states."
+}

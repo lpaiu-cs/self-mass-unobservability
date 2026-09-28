@@ -1,0 +1,77 @@
+{
+ "label": "seg-62",
+ "limit": 62,
+ "restart": "seg-61",
+ "construct_seconds": 7.973000821999449,
+ "passed": true,
+ "fallbacks": 5,
+ "row": {
+  "classification": "Counterexample candidate",
+  "reference": 128,
+  "steps": 64,
+  "completed_steps": 62,
+  "new_steps": 1,
+  "seconds": 804.3414139339984,
+  "operator_point_seconds": 4.025601531000575,
+  "operator_points": 2,
+  "stepping_seconds": 796.4327431710008,
+  "energy_balance_relative": 4.68353905813367e-16,
+  "species_balance_relative": 2.9293687344580145e-11,
+  "linear_relative": 9.142288830217357e-15,
+  "max_Krylov_iterations": 138,
+  "frequency_moment_relative": 1.5831599860555304e-16,
+  "endpoint_photon_reference_energy_erg": 7.4378117965664,
+  "endpoint_material_reference_energy_erg": 258.3615022605632,
+  "endpoint_material_energy_L1_erg": 314.3572083339353,
+  "additional_material_motion_evolved": true,
+  "full_GR_feedback": false,
+  "final_charge_solved": false,
+  "endpoint_material_nonrest_energy_erg": 168.8921258228385,
+  "velocity_jet_relative": 6.169808388137557e-09,
+  "primitive_mapping_relative": 4.235164736271502e-22,
+  "conserved_material_input_applied": true,
+  "maximum_extended_stage_residual": 9.38155190134071e-12,
+  "maximum_refinement_steps": 4,
+  "initial_GMRES_stagnations": 12,
+  "actual_completed_steps": 124,
+  "actual_new_steps": 2,
+  "split_completed_macro_steps": 62,
+  "base_steps": 64,
+  "passed": true
+ },
+ "nonlinear_exception": Infinity,
+ "nonlinear_exceptions": [
+  {
+   "time": 0.0033002736523846123,
+   "step": 2.6831493108817987e-05,
+   "newton": 2,
+   "vector_defect": 4.6980912844517225e-12,
+   "physical_moment_max": 1.034309230054006e-17,
+   "material_component_max": 1.0571188015418658e-15
+  }
+ ],
+ "vector_gate_exception": Infinity,
+ "vector_gate_exceptions": [
+  {
+   "stage_count": 246,
+   "vector_relative": 9.38155190134071e-12,
+   "physical_moment_max": 2.6104058726375815e-19,
+   "material_component_max": 2.4032648275711916e-17
+  },
+  {
+   "stage_count": 246,
+   "vector_relative": 5.063369819061278e-12,
+   "physical_moment_max": 3.720067066265647e-19,
+   "material_component_max": 1.8251950341987178e-17
+  },
+  {
+   "stage_count": 246,
+   "vector_relative": 6.163437968309059e-12,
+   "physical_moment_max": 1.7803314606852207e-19,
+   "material_component_max": 1.0897434663698119e-17
+  }
+ ],
+ "vector_gate_exception_max": 9.38155190134071e-12,
+ "seconds": 812.3210625269967,
+ "peak_RSS_bytes": 3783118848
+}

@@ -1,0 +1,29 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "e6aa3f1",
+  "bindings": {
+    "verification/gr_heat_initial_tangent.py": "14a8ea62432730900d481613b47ca322c7b3cabd1c250b9f52428338548d6829",
+    "outputs/direct-eos-gr33/gr-heat-characteristics/manifest.json": "c8e98d1ca353397d1707351f2190496eec60f5b54d9483bba32d3b3f5983994c",
+    "outputs/direct-eos-gr33/gr-heat-characteristics/coefficients.npz": "c3e942d127fc698ae0edd8c5ead2d3047d1180aa017024c2ec895ba756683eb8",
+    "outputs/direct-eos-gr33/gr-heat-initial-constraints/initial-data.npz": "9c67262c1df8beab8d7ce8e7e2ce50693c60101fdf83961322b148ec4a0a2c99",
+    "outputs/direct-eos-gr33/gr-heat-fluid-frame/manifest.json": "367404af8beb4088aa801054a6ddacc87ced6803f233f77a06dc341c717469ff",
+    "outputs/direct-eos-gr33/gr-heat-fluid-frame/rate-coefficients.npz": "d13cafb2c75719a7209f0efece95c053179edda6610be5fb3e7ad512998e9402",
+    "outputs/direct-eos-gr33/gr-heat-relaxation-boundary/thresholds.npz": "029e7ec7c2d1cd1f30734626a55ef142bcc696abb1923df84f225581215dd4c3"
+  },
+  "trial_multipliers": [
+    2,
+    3
+  ],
+  "root_bracket_halfwidth_powers": [
+    45,
+    40,
+    35,
+    30,
+    25,
+    20
+  ],
+  "method": "Use floating eigenvalues only to propose disjoint rational sign brackets. Four opposite-sign intervals strictly inside (-1,1) certify all roots of the exact frozen quartic. No unbracketed approximate eigenvalue is accepted.",
+  "initial_constitutive_condition": "The discrete initial Fourier target Q_F is set equal to the stored initial proper Q=heat_flux/c. This matches the existing face-to-cell heat current; it is an explicit collocation assumption, not an independent continuum gradient or atmosphere validation.",
+  "physical_heat_time_calibrated": false,
+  "full_GR_evolution": false
+}

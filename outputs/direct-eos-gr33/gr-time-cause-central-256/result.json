@@ -1,0 +1,205 @@
+{
+  "classification": "Counterexample candidate",
+  "geometry": {
+    "sound_time_window_to_core": 2.6586433274296506,
+    "duration_seconds": 0.42117120910640804
+  },
+  "derivative_checks": [
+    {
+      "kind": "spatial",
+      "relative": [
+        5.292007625900962e-11,
+        5.377516429412021e-07,
+        6.800029446666598e-12
+      ]
+    },
+    {
+      "kind": "mass",
+      "relative": [
+        2.7059110027740947e-16,
+        6.348170914763093e-14,
+        6.908657190492538e-17
+      ]
+    }
+  ],
+  "runs": [
+    {
+      "refinement": 1,
+      "steps": 39,
+      "linear_solve_residual": 6.209681161906285e-16,
+      "distinct_factors": 10
+    },
+    {
+      "refinement": 2,
+      "steps": 78,
+      "linear_solve_residual": 6.560074775337874e-16,
+      "distinct_factors": 18
+    },
+    {
+      "refinement": 4,
+      "steps": 156,
+      "linear_solve_residual": 1.1728473870196813e-15,
+      "distinct_factors": 20
+    },
+    {
+      "refinement": 8,
+      "steps": 312,
+      "linear_solve_residual": 1.0481778490786611e-15,
+      "distinct_factors": 20
+    },
+    {
+      "refinement": 16,
+      "steps": 624,
+      "linear_solve_residual": 9.876297347437727e-16,
+      "distinct_factors": 20
+    },
+    {
+      "refinement": 32,
+      "steps": 1248,
+      "linear_solve_residual": 1.2523490491483599e-15,
+      "distinct_factors": 20
+    }
+  ],
+  "pairs": [
+    {
+      "refinements": [
+        1,
+        2
+      ],
+      "errors": [
+        2.5123352464254374e-05,
+        1.6551431860445203e-05,
+        8.528934736255646e-08
+      ],
+      "full_GR_errors": [
+        2.5122662400412896e-05,
+        1.6540954517535735e-05,
+        8.526852385604436e-08
+      ],
+      "difference_reproduction_relative": [
+        0.00024273357384064055,
+        0.0010700327410909296,
+        0.00031652844312031356
+      ]
+    },
+    {
+      "refinements": [
+        2,
+        4
+      ],
+      "errors": [
+        3.211609275032722e-05,
+        2.1155592237623753e-05,
+        1.389454814578536e-07
+      ],
+      "full_GR_errors": [
+        3.2104301067779305e-05,
+        2.1163762854088564e-05,
+        1.3891599645269582e-07
+      ],
+      "difference_reproduction_relative": [
+        0.0003672929219989363,
+        0.0008323036291338445,
+        0.000304635396176758
+      ]
+    },
+    {
+      "refinements": [
+        4,
+        8
+      ],
+      "errors": [
+        2.789703754512974e-05,
+        1.8377941620515783e-05,
+        5.98488056889628e-08
+      ]
+    },
+    {
+      "refinements": [
+        8,
+        16
+      ],
+      "errors": [
+        8.045310939860247e-06,
+        5.300205215756635e-06,
+        1.9643327713037213e-08
+      ]
+    },
+    {
+      "refinements": [
+        16,
+        32
+      ],
+      "errors": [
+        1.978026190220775e-06,
+        1.3031272947754934e-06,
+        6.275981157101007e-09
+      ]
+    }
+  ],
+  "dominant_center_velocity_modes": [
+    {
+      "real": 4.0031169545584655e-08,
+      "imag": 34.37813864404753,
+      "center_velocity_amplitude": 1.2645552774938036e-08
+    },
+    {
+      "real": 4.003116954558466e-08,
+      "imag": -34.37813864404754,
+      "center_velocity_amplitude": 1.2645552774938018e-08
+    },
+    {
+      "real": -1.1018615743097091e-07,
+      "imag": 31.76203009952057,
+      "center_velocity_amplitude": 1.135793662010054e-08
+    },
+    {
+      "real": -1.1018615743097092e-07,
+      "imag": -31.76203009952057,
+      "center_velocity_amplitude": 1.1357936620100528e-08
+    },
+    {
+      "real": 0.01889972706901553,
+      "imag": 6.419805402773778,
+      "center_velocity_amplitude": 6.15534761253104e-09
+    },
+    {
+      "real": 0.018899727069015534,
+      "imag": -6.419805402773777,
+      "center_velocity_amplitude": 6.155347612531027e-09
+    },
+    {
+      "real": -0.018899832089618644,
+      "imag": 6.419805548321411,
+      "center_velocity_amplitude": 6.155346030948017e-09
+    },
+    {
+      "real": -0.018899832089618644,
+      "imag": -6.41980554832141,
+      "center_velocity_amplitude": 6.1553460309480046e-09
+    },
+    {
+      "real": -1.0021290567987851e-08,
+      "imag": 22.930585217118832,
+      "center_velocity_amplitude": 5.35698790213524e-09
+    },
+    {
+      "real": -1.0021290567987851e-08,
+      "imag": -22.930585217118832,
+      "center_velocity_amplitude": 5.356987902135233e-09
+    },
+    {
+      "real": -1.4541792365504779e-08,
+      "imag": -12.969677586587974,
+      "center_velocity_amplitude": 4.550056117388093e-09
+    },
+    {
+      "real": -1.4541792365504779e-08,
+      "imag": 12.969677586587974,
+      "center_velocity_amplitude": 4.5500561173880875e-09
+    }
+  ],
+  "physical_EOS_certified": false,
+  "full_GR_time_convergence_fixed": false,
+  "scope": "Affine rho/T/velocity sector about the actual initial data; frozen heat flux and composition perturbations; exact original gravity reconstruction; symmetric derivative of the zero-velocity upwind branch; zero perturbations outside the selected window. This control is not a new full-GR or physical-EOS certificate."
+}

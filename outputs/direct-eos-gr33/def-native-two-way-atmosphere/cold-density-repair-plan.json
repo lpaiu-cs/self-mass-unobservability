@@ -1,0 +1,12 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "Native status125 comes from eos_calc trial mass-density underflow. It occurs inside the density-variable initializer for a finite requested density, before the constraint solver can return the desired cold state.",
+  "repair": "Route status125 through the existing electron-variable solve used for status4. Solve exactly the same density equation with unchanged monotonicity and residual gates; do not substitute an ideal EOS or change any table support.",
+  "decision": "A native root below240K confirms the missing constitutive support. Only after that repair may a separate bounded support-and-resume plan be considered. No fluid replay in this control.",
+  "additional_native_call_cap": 40,
+  "wall_seconds": 20,
+  "previous_probe_call_upper_bound": 16,
+  "reason_for_reassessment": "The original cold probe terminated at160K before recording its counter; retain its16call upper bound. Register this bounded initializer repair separately from the original1100call phase budget.",
+  "source_sha256": "b123fdac4cf3eb39f8030bf86f398fd49e7631311cc1d3621556bbadcedc3a16",
+  "ion_source_sha256": "6232826537db049f88babf5b8783285dffac4a79dcaf583b08fab2af379889d7"
+}

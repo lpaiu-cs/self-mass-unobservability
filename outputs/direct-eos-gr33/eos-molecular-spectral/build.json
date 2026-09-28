@@ -1,0 +1,55 @@
+{
+  "classification": "Counterexample candidate",
+  "commands": [
+    {
+      "command": [
+        "cmake",
+        "-S",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/source",
+        "-B",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DBUILD_SHARED_LIBS=ON",
+        "-DBUILD_TEST=ON",
+        "-DBUILD_DOC=OFF",
+        "-DBUILD_DOX_DOC=OFF"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build",
+        "--target",
+        "free_eos",
+        "-j",
+        "2"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "gfortran",
+        "-O2",
+        "-fPIC",
+        "-shared",
+        "-I/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src",
+        "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/eos-molecular-spectral/direct_ion_bridge.f90",
+        "-L/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src",
+        "-Wl,-rpath,/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src",
+        "-lfree_eos_direct24_molecular_spectral",
+        "-o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/unused-inventory.so"
+      ],
+      "returncode": 0
+    }
+  ],
+  "completed": true,
+  "sha256": {
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/unused-inventory.so": "0e592a8332d49e0bde131d3b46aecdb480631c25ea2a57745ecf114f2576cbe8",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/libfree_eos_direct24_molecular_spectral.so.1.0.0": "195f3658eb0cc8fe3447c6b690f246b5a4fb770bd8ffa764d19248fec857ec50"
+  },
+  "original_runtime_modified": false,
+  "physical_EOS_certified": false
+}

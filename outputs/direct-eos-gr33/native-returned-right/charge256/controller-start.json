@@ -1,0 +1,46 @@
+{
+  "pid": 545,
+  "process_start_ticks": "511441",
+  "boot_id": "46b03569-5557-4c36-8448-d5519ab05c96",
+  "started_unix": 1790292911.0690262,
+  "controller_sha256": "609988a260a8d52dc320537e58a27649f681f21fdd458c252f28a274fe0ce5f8",
+  "bindings": {
+    "verification/read_right_return_charge.py": "409de35d85cbedf68c29b9d6b74323b3e89537c6563f67040a5fe0d0695a0ccf",
+    ".phase251-reader-launch.py": "83275ae7dcb1efbf286a21a4f3bc78d92defdf80c01159fd2cc360764c921086",
+    ".phase247-polynomial-audit.py": "1c5aa0306c4641f572e6f349f457862c749d261c00dd56372dc8faa012941e85",
+    "native-right-charge256-work/regression.json": "a607393ab441003e04c59501b102b641aa8d4d01690e21eeb278b53fba662334",
+    "native-returned-right256-work/controller-start.json": "1c6d6d5cfb91e90c63dde79e850fd76d6d2d55af8ce0be7da7019baf0bdfd042"
+  },
+  "dependency": {
+    "pid": 416,
+    "process_start_ticks": "504735",
+    "boot_id": "46b03569-5557-4c36-8448-d5519ab05c96",
+    "started_unix": 1790292848.685794,
+    "producer_sha256": "deff9fadf947429cf90c217a77e9248768a8f3c34963d3ce3c817a1aae005c0c",
+    "controller_sha256": "df2b6ff41abd48cbeffa733e10a7a4ad53fca4c7e21b3ef417a3551df6553cb9",
+    "CPU_affinity": 3,
+    "virtual_GiB": 16,
+    "actions": [
+      "check",
+      "fine",
+      "audit"
+    ],
+    "budgets": {
+      "check": 3600,
+      "fine": 21600,
+      "audit": 600
+    },
+    "scientific_gates_changed": false
+  },
+  "max_dependency_wait_seconds": 43200,
+  "field_cap_seconds": 10800,
+  "virtual_GiB_per_process": 16,
+  "parallel_field_CPUs": [
+    4,
+    10,
+    14
+  ],
+  "physical_steps": 0,
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false
+}

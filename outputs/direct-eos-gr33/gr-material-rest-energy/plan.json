@@ -1,0 +1,17 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "b84cb63",
+  "bindings": {
+    "verification/gr_material_rest_energy.py": "ec7debfdb2e1dfb84cdf949698fe9bd8a8d1e721a464a78f4962162f0ed3b1c0",
+    "outputs/direct-eos-gr33/gr-material-conservation/manifest.json": "75c20d61b1f2b86c679c156bdf045c16b20d8381a11a0d2aee385c4c7946a06a",
+    "outputs/direct-eos-gr33/gr-heat-initial-constraints/initial-data.npz": "9c67262c1df8beab8d7ce8e7e2ce50693c60101fdf83961322b148ec4a0a2c99",
+    "outputs/direct-eos-gr33/initial-state-17-4.npz": "5dcc8ffb8b32a9f15ccc4c8bb7111d19be8dcdc66611ad2942e3a4a0cf6cc6d6"
+  },
+  "tangent_probe_seconds": [
+    1e-06,
+    1e-12
+  ],
+  "arithmetic_relative_tolerance": 1e-12,
+  "assumptions": "Smooth polar-areal spherical GR, c=G=1 for algebra; material baryon measure dB conserved, composition/rest constant C within each cell. Positive f=1-2m/r at both compared states.",
+  "scope": "Exact conditional change-of-energy-variable identity plus arithmetic tests of saved initial metric tangents. The probes are not solutions of the coupled GR equations and do not certify continuum truncation or physical EOS."
+}

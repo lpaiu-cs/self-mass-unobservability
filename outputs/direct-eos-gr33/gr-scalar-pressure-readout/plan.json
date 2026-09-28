@@ -1,0 +1,33 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "5090e6f",
+  "bindings": {
+    "verification/gr_scalar_reference.py": "e1798424c4090b1c7220aaedb5dda30a3ac95547845782fc812ca42bce3675f7",
+    "verification/common_eos.py": "01812cb068991dd6d72def58a78d158bef2bb3d00028312efc271c50dfdcb123",
+    "outputs/direct-eos-gr33/initial-state-17-4.npz": "5dcc8ffb8b32a9f15ccc4c8bb7111d19be8dcdc66611ad2942e3a4a0cf6cc6d6",
+    "outputs/direct-eos-gr33/gr-microphysics/auxiliaries.npz": "63744d1a041ebc39bd33dfa0f5e181d64378966c1ee22364c477009bee08d976",
+    "outputs/direct-eos-gr33/gr-increment-structure/manifest.json": "4d9f644224d54d87af386a9ebb65c1ed8233a9ae9c0c2674099f79f6e171ef86",
+    "outputs/common-eos29/scalar-connection.json": "e9cf88b9196556a7e5b25ace7fbe6c3c4151c4eaa884eddf6afa917c1a4c14f7",
+    "verification/gr_scalar_pressure_readout.py": "43fcba54edb4ee3afdb24ee91792125a652a73dc627914ed29bd2a537be74f1b",
+    "outputs/direct-eos-gr33/gr-scalar-reference/manifest.json": "e2d2473feac7abe38fe420523869d7624b610224b3a597c817e5711d10c2c9dc",
+    "outputs/direct-eos-gr33/gr-scalar-native-audit/manifest.json": "bf773a40e9e4244ceb2eefaaa711fddcfe660e65b7ff5a495aa812497e8aeacc",
+    "outputs/direct-eos-gr33/gr-scalar-pressure-readout/pressure-run.py": "fb8c72a534c51e0402482b18274d2631a3c23f2ba2ffd48dcfa058ad036ec38b"
+  },
+  "beta": -4,
+  "tolerances": [
+    1e-10,
+    2e-12
+  ],
+  "relative_coefficient_tolerance": 1e-08,
+  "equation": "Use the existing linearized DEF scalar equation on the current initial GR background and its declared PCHIP coefficients. (x^2*a*phi_prime)_prime=x^2*b*phi, including the exact Schwarzschild exterior logarithmic tail. a=N*sqrt(f), b=4*pi*beta*R^2*N*(epsilon-3P)/sqrt(f).",
+  "interpretation": "Response coefficient alpha_A/phi_infinity at infinitesimal nonzero boundary scalar. No finite scalar amplitude is fitted or assumed. Independently integrate the Riccati flux/value equation and compare two ODE tolerances.",
+  "limits": "Current fixed reference only. No actual orbital drive, relaxation response, finite scalar backreaction, physical EOS or atmosphere, continuous error enclosure, observed force or likelihood claim. A static response coefficient is not a dynamic-chi observable.",
+  "change": "Preserve the original pressure-root GR state and every scalar IVP coefficient/formula/gate. Replace only the failed exact equality with the independently completed, existing 2 erg/g or 32-ULP energy comparison. The two rounded EOS calls remain distinct; no state entry is overwritten.",
+  "substitutions": {
+    "assert not OUT.exists();OUT.mkdir()": "assert OUT.exists()",
+    "save('plan.json',dict(classification='Counterexample candidate',checkpoint='5090e6f',\n        bindings={p.relative_to(g.ROOT).as_posix():g.c.sha(p) for p in paths},\n        beta=-4,tolerances=[1e-10,2e-12],relative_coefficient_tolerance=1e-8,\n        equation='Use the existing linearized DEF scalar equation on the current initial GR background and its declared PCHIP coefficients. (x^2*a*phi_prime)_prime=x^2*b*phi, including the exact Schwarzschild exterior logarithmic tail. a=N*sqrt(f), b=4*pi*beta*R^2*N*(epsilon-3P)/sqrt(f).',\n        interpretation='Response coefficient alpha_A/phi_infinity at infinitesimal nonzero boundary scalar. No finite scalar amplitude is fitted or assumed. Independently integrate the Riccati flux/value equation and compare two ODE tolerances.',\n        limits='Current fixed reference only. No actual orbital drive, relaxation response, finite scalar backreaction, physical EOS or atmosphere, continuous error enclosure, observed force or likelihood claim. A static response coefficient is not a dynamic-chi observable.'))": "plan=json.loads((OUT/'plan.json').read_text())",
+    "assert np.array_equal(native[:,2],state['u_W'])": "assert json.loads((audit.OUT/'result.json').read_text())['existing_energy_budget_passed']"
+  },
+  "original_bitwise_entry_failed": true,
+  "original_GR_state_preserved": true
+}

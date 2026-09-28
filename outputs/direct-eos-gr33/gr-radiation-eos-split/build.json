@@ -1,0 +1,21 @@
+{
+  "classification": "Counterexample candidate",
+  "command": [
+    "gfortran",
+    "-O2",
+    "-fPIC",
+    "-shared",
+    "-I/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-radiation-eos-split/gas-bridge.f90",
+    "-L/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src",
+    "-Wl,-rpath,/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src",
+    "-lfree_eos_direct24_molecular_spectral",
+    "-o",
+    "/home/lpaiu/work/direct-eos-gr33/radiation-eos-split/gas.so"
+  ],
+  "completed": true,
+  "runtime": {
+    "/home/lpaiu/work/direct-eos-gr33/radiation-eos-split/gas.so": "6779b197aa500652e4db02363754f8b40c2c4eecd71b169714bfa02b188892df",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/libfree_eos_direct24_molecular_spectral.so.1.0.0": "195f3658eb0cc8fe3447c6b690f246b5a4fb770bd8ffa764d19248fec857ec50"
+  }
+}

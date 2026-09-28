@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/mnt/e/lab/self-mass-unobservability/verification/gr_finite_wavenumber_response.py", line 213, in <module>
+    if __name__=='__main__':globals()[sys.argv[1]]()
+  File "/mnt/e/lab/self-mass-unobservability/verification/gr_finite_wavenumber_response.py", line 160, in run
+    plan=bindings();symbolic();controls();mp.mp.dps=plan['mp_decimal_digits'];iv.prec=plan['interval_bits']
+  File "/mnt/e/lab/self-mass-unobservability/verification/gr_finite_wavenumber_response.py", line 72, in symbolic
+    assert sp.limit((x*x/gamma+x*(1+x*x-Q*Q)/(2*Q*gamma)*sp.log((x+Q)/(x-Q))),Q,0)==(2*x*x+1)/gamma
+AssertionError

@@ -1,0 +1,16 @@
+{
+  "classification": "Counterexample candidate",
+  "reason": "Measured cell lapse weighting and angular-moment work are too small to explain the0.307erg paired residual. Test the spatial geometry counterterm at the same finite-volume interface before any replay.",
+  "prediction": "The initial canonical energy removed by the GR operator is evaluated at quadrature points, whereas the exported add-back uses cell centers. Compare them without fitting any correction.",
+  "budget_seconds": 60,
+  "original_total_seconds": 270,
+  "new_fluid_steps": 0,
+  "new_roots": 0,
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/reconcile_native_mass_energy.py": "9f48f5c0e0b2365e187070d259977e7c1917861cba51a6abc6ac96ebd93a4ea5",
+    "native-mass-energy166-work/registered-producer.py": "c898330f4311456710a63fa5e677db249b5687987a8263a6382840e4523a4975",
+    "native-mass-energy166-work/work-producer.py": "b08ec3273a46ef033f61fff35e32e37d8888514b4b580acaf4e4558e21a091b7",
+    "native-mass-energy166-work/ledger.json": "21e7b6cf1df128b749427ed60606da6b046820cc1f90da734db1ad9d2e4d4614",
+    "native-mass-energy166-work/work.json": "6346e950d8cd899dd15df47445752983e585b67d2deac9787f856a2d431e6dc0"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "a4fb34c",
+  "bindings": {
+    "verification/gr_heat_fluid_frame.py": "0d8bd6b378cca5559f8e2b13c146456c2a695d82de3dd81d8b1514ca95180997",
+    "outputs/direct-eos-gr33/gr-heat-initial-constraints/plan.json": "590f3c335ad453f8d0d387ecbddf65eabce7df871c7eb34cc2cdf43259a80691",
+    "outputs/direct-eos-gr33/gr-heat-initial-constraints/manifest.json": "31880fca31f3ed19c0cc08c30efb8c6789b9f36c1b34dd9901f8036acbbe96b8",
+    "outputs/direct-eos-gr33/gr-heat-initial-constraints/symbolic.json": "9b1058a912b8fa896e08399758179c6f01751daf7db1bafcc6f2e34b44cb6267",
+    "outputs/direct-eos-gr33/gr-heat-initial-constraints/initial-data.npz": "9c67262c1df8beab8d7ce8e7e2ce50693c60101fdf83961322b148ec4a0a2c99",
+    "outputs/direct-eos-gr33/gr-microphysics/auxiliaries.npz": "63744d1a041ebc39bd33dfa0f5e181d64378966c1ee22364c477009bee08d976"
+  },
+  "correction": "The original initial normal velocity v=0 fixes E_normal=epsilon only at that instant. Its time derivative is E_normal_dot=epsilon_dot+2*Q*v_dot, with Q=q_proper/c. Do not differentiate the instantaneous equality while leaving v_dot unconstrained.",
+  "unchanged": "Initial A=4*pi*r*a*q, pointwise momentum solution and zero added Hamiltonian term are unchanged. The original density rate remains valid at v=0. The stored material energy/temperature rate is conditional on v_dot=0.",
+  "physical_EOS_certified": false,
+  "full_GR_evolution": false
+}

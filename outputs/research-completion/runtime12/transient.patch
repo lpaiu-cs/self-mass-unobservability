@@ -1,0 +1,30 @@
+--- archived/AllTheories3Bodies.cpp
++++ request12/AllTheories3Bodies.cpp
+@@ -64,7 +64,7 @@
+     
+ // SEP violation parameters
+     value_type SEP_D; // In newtonian : M0_gravitational = (1 + SEP_D) M0_inertial
+-    value_type SEPdyn_A, SEPdyn_w, SEPdyn_ph; // 10.8 T2: pulsar-pair G_eff += A*cos(w*t+ph), env SEPDYN_A/W/PH (w in integrator time units)
++    value_type SEPdyn_A, SEPdyn_w, SEPdyn_ph, SEPdyn_tau; // 10.8 T2: pulsar-pair G_eff += A*cos(w*t+ph), env SEPDYN_A/W/PH (w in integrator time units)
+ 
+ // Quadrupole parameters
+     vector<value_type> quadrupole(4,zero);
+@@ -176,7 +176,8 @@
+     { const char* e_; // 10.8 T2: dynamic-SEP drive from environment
+       SEPdyn_A  = (e_ = getenv("SEPDYN_A"))  ? atof(e_) : 0.0;
+       SEPdyn_w  = (e_ = getenv("SEPDYN_W"))  ? atof(e_) : 0.0;
+-      SEPdyn_ph = (e_ = getenv("SEPDYN_PH")) ? atof(e_) : 0.0; }
++      SEPdyn_ph = (e_ = getenv("SEPDYN_PH")) ? atof(e_) : 0.0;
++      SEPdyn_tau = (e_ = getenv("SEPDYN_TAU")) ? atof(e_) : 0.0; }
+     Gg = int_Gg;
+     gammabar = int_gammabar;
+     betabar = int_betabar;
+@@ -586,7 +587,7 @@
+ // RHS for n-body integration at first post-newtonian order 
+ void Integrateur::rhs_GR_nbody(const state_type& xvect, state_type& dxdtvect, const value_type& t) // Version with equations from equation from Soffel, Relativity in astrometry, Celestial mechanics and Geodesy 1989
+ {
+-    const value_type sepdyn_t = SEPdyn_A * cos( SEPdyn_w * t + SEPdyn_ph ); // 10.8 T2
++    const value_type sepdyn_t = (SEPdyn_A == zero ? zero : SEPdyn_A * (SEPdyn_tau > zero ? exp(-t/SEPdyn_tau) : cos( SEPdyn_w * t + SEPdyn_ph ))); // 10.8 T2
+ #define GGEFF(i_,j_) ( Gg[i_][j_] + ( ((i_)==0) != ((j_)==0) ? sepdyn_t : zero ) )
+ 
+     for ( n1=0 ; n1 < xvect.size() ; n1++)

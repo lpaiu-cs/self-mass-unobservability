@@ -1,0 +1,22 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "7772717",
+  "inputs_sha256": {
+    "outputs/direct-eos-gr33/opacity/baseline-type1-captured.npz": "c61392f904c083f1424c53b26cf7235c49cc72ae4ed0ccdf362521fad72d21cf",
+    "outputs/direct-eos-gr33/opacity/identity-control.json": "fe67023ddf154a5bbdd0ab2e15f4c498735ab0db966281a93e436985aa16ccbf",
+    "outputs/structured-enthalpy32/direct-ions/full-integral-build.json": "09a117e64bd62d13740b28b2237e203e527d7b4b052ae5dbeedca7d9d824f45a",
+    "verification/direct_eos_gr.py": "5709a4cbf5830de09001481813617d43ee2c935a0dff3cd813110d73a7066fdf"
+  },
+  "formula": "lnfree_e=ln(rmue)-ln(rho_B), with derivatives at fixed composition. This is the sum of free electrons and the zero positron population in the declared electron-only EOS model.",
+  "states": "Use the actual native Type1 log10 rho, log10 T and 26-species composition captured at entry, including the native input rounding.",
+  "finite_log_steps": [
+    5e-05,
+    2.5e-05
+  ],
+  "derivative_relative_tolerance": 0.001,
+  "block_cells": 128,
+  "processes": 2,
+  "scope": "Input matching to the declared EOS, not a certified physical pair/plasma EOS or opacity derivative enclosure.",
+  "physical_EOS_certified": false,
+  "full_nonlinear_transport": false
+}

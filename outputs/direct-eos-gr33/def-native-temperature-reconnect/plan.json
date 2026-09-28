@@ -1,0 +1,46 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "a3f16fa71",
+  "claim": "Repair the native EOS heat-temperature closure in the actual orbital and background GR feedback equations, then rerun the previously approved finite domains and original gates.",
+  "cause": "The physical-density temperature map took thermo[:,5]=cp*T where thermo[:,3]=cv*T is required. The fixed-pressure source rho_ref correctly keeps cp. Historical files are frozen, and their affected physical temperature/feedback conclusions are superseded, not their raw numerical records.",
+  "repair": "Shared closure rebuilds TE, GE and GEraw/energy scale; both time and orbital consumers use it. No output-only correction, EOS/table replacement, source-energy change or acceptance relaxation.",
+  "cases": [
+    "orbital p4/p2 harmonics1,2,3",
+    "same0.496490906ms background p4-16/32/64 and p2-64"
+  ],
+  "gates": {
+    "native_heat_derivative": 2e-05,
+    "EOS_chain": 1e-07,
+    "GR": 1e-09,
+    "heat": 1e-09,
+    "balance": 2e-13,
+    "adjoint": 1e-05,
+    "orbital_space": 0.02,
+    "temperature_time": 0.01,
+    "temperature_order": 1.5,
+    "temperature_space": 0.01
+  },
+  "background_scope": "Only the original temperature convergence target; velocity/scalar diagnostics retained. Same zero-current state, horizon, frozen coefficients/composition and omitted native outer flux. Physical atmosphere and orbit-long background remain unproved.",
+  "budget": {
+    "pilot_seconds": 120,
+    "total_seconds": 600,
+    "CPU_threads": 1,
+    "memory_GB": 4,
+    "native_control_calls": 35,
+    "new_native_states_for_evolution": 0,
+    "automatic_expansion": false
+  },
+  "forecast": "Recent full assembly about11s, joint harmonic solve0.55s and64-step path about2s. Native controls and corrected stiffness must first be measured; no orbit integration.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_temperature_reconnect.py": "2c0086fde4cc9c4a19db3c783c6195a2f7024a5eebaf1ba976514dfadbf8509c",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_temperature_closure.py": "fadab7b4fc656ebf8b522b8fdc26a8196afa15d646cf76d3b2cd1ec7d0b9fed7",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_orbital_radiative_transport.py": "7de831e6f59c65fa74a5c6486838b245c901da412ce97175336d55b7f49004fb",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_thermal_background_drift.py": "230305d0669efbc43a6d90477bd7fde9fb2b76ea915f298da16dc6e6f54849f1",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_temperature_feedback.py": "f2bebf74f9e7460b164320d36639e408ce5c949c54bb0465546b6415c11fd2ee",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-free-surface-thermal/coefficients.npz": "8fa9ddf79c966965a3a3fa26e6b4c738f82eec0b6ad257e521ae37c9403fb46c",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-orbital-radiative-transport/all/fine-bank.npz": "18cc74ac367cd0f6525ca0344d528f505e570c8a29fae397625d17bb051b0ac6",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-orbital-radiative-transport/result.json": "ebc6b074528239c93820d6ad055a2321ba77e0ed7667b63fff0bc7bccbf17830",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-thermal-background-drift/plan.json": "118488119d3d0ca46ff576b01198b02064e2977f9deff0ff18617e27c6079837",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-thermal-background-drift/result.json": "1e9d143d0248119b7b16037f7ee8393796dab615a4fe3d54bf355d37fc20ca6c"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "classification": "Counterexample candidate",
+  "orders": [
+    1,
+    2,
+    4
+  ],
+  "old_state_sha256": "f6214a2cb17553373dee3e785435177a5df1b47edd5ec1852bde2105bfcde2a8",
+  "new_state_sha256": "d566673d59289c1872c393c5c7b164526f18e61f3e61ed1f366b5689e7ae1fb1",
+  "original_one_step_energy_score": 4.734566377117119e-06,
+  "target": "Separate the saved midpoint mass-functional quadrature from the physical source-step error. Anchor every local integration to the saved r,m,P midpoint and preserve each shell composition and entropy.",
+  "method": "Use the existing local baryon-coordinate RK4 EOS-table path to Gauss nodes, then query seeded FreeEOS at the saved shell entropy. Compare one, two and four nodes without changing the original trajectory or its failed verdict.",
+  "checks": {
+    "midpoint_reconstruction_relative_to_release": 1e-07,
+    "quadrature_refinement_relative_to_release": 1e-07
+  },
+  "scope": "A finite local-quadrature diagnostic. It is not a new globally solved GR trajectory, a rigorous interpolation enclosure or a physical EOS certificate."
+}

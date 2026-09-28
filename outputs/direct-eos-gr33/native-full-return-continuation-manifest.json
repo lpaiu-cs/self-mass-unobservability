@@ -1,0 +1,287 @@
+{
+  "classification": "Counterexample candidate",
+  "actual_same_joint_solution_GR_computed": false,
+  "exact_saved_restart_verified": true,
+  "restart_regression": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "every_saved_array_exact": true,
+    "arrays": 44,
+    "reused_actual_steps": 103,
+    "new_physical_steps": 0,
+    "boundary_replay_required": true,
+    "bindings": {
+      "/home/lpaiu/work/native-retained-tail-runtime/verification/complete_returned_period.py": "7830269a0ee20eeb0b7e989038e8e59d36573913cb4c86b34ad5ef48634685b1",
+      "native-complete-return236-work/sweep-0/photons/steps-128-reference-128.npz": "b03d8792172728376a3a58a4676ef13c00d2e521b31f215228dabdf581f9c090",
+      "native-complete-return236-work/sweep-0/photons/steps-64-reference-128.npz": "acd3d47dbf2c683f824a8b8ae2f82408cab916219ae24a8a8cfd73052170e865",
+      "native-complete-return236-work/sweep-0/material/steps-128-reference-128.npz": "8f74c74de70b7150d6219e1f4de359d4bba1033709984110081fab8a060ebd11",
+      "native-complete-return236-work/sweep-0/material/steps-64-reference-128.npz": "ff1fc64a6650a0e978f30f1bf49abd556f056e8d6d6255db9efa3c6a79193239",
+      "native-complete-return236-work/normalization.json": "820244d5d23554811c792b52a45a3e28317392019f5aac7d8733eeb3b4d28706",
+      "native-complete-return236-work/photon-conservation-plan.json": "248525a3b9808f00f193c48d9739000a1c32eea1cf8197cf8c3ad8b939a0bb2d",
+      "native-complete-return236-work/check-result.json": "69d213635792f32d54a04dd107aa19178d7943261ca23305d6b720862c246106",
+      "native-complete-return236-work/metric/metric-128-g8.npz": "11ba1264e396116c302fe02364956748557b722d3f5e301de3cb09d9bd4a0d41",
+      "native-complete-return236-work/sweep-1/photons/interval-14-64.npz": "43b1517bd1ffe23683252d1209991e7ecb6218df08a8d74f3f1a6a20ea12d19f",
+      "native-complete-return236-work/sweep-1/photons/interval-14-64.json": "108b2f2ae595f53331cd41239c885fb8a923b60b6a8af9aacf6b925e0b4056c3",
+      "native-full-return249-work/boundary-extension.json": "6fe7a73f9e48be7e13e5b0797bf88470c9ab07cdde50a6a26fe8f471a27fc0a7",
+      "native-full-return249-work/anchor/result.json": "ff8fa0aab01ffaff97ecc11a6e2241c1030e5a9cc6925df64b807d7414c04a19"
+    },
+    "scope": "Zero-step restart on the accepted coarse interval14. Actual full-period stages and metric remain required.",
+    "final_charge_conclusion": "unadjudicated"
+  },
+  "native_anchor": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "rows": [
+      {
+        "stage_index": 222,
+        "time": 0.003228723004094431,
+        "native_relative": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "stage_index": 237,
+        "time": 0.003434431117928702,
+        "native_relative": [
+          7.532236588854133e-20,
+          1.6462980434360953e-22,
+          6.288504279221906e-20,
+          2.4902975089540572e-20
+        ]
+      }
+    ],
+    "seconds": 13.402190708002308,
+    "peak_RSS_bytes": 1318387712,
+    "scope": "Original returned-stage high native anchor on the first/last added coarse interval stages; not actual return acceptance.",
+    "bindings": {
+      "/home/lpaiu/work/native-retained-tail-runtime/.phase249-native-anchor.py": "39187cb4bc41032cf94c21406dda9e2917ad3bbd4a19d69356fb1ac6df4e12c4",
+      "native-common-arithmetic239-work/sweep-1/photons/complete-64.npz": "78293a016d40373449f40c8f57fd36c6cb7cc5422e23cb6f21935cc96c5fc1bc"
+    },
+    "final_charge_conclusion": "unadjudicated"
+  },
+  "terminal_derivative_change": {
+    "classification": "Counterexample candidate",
+    "rows": [
+      {
+        "key": "delta_nu",
+        "prefix": 3.843030917324149e-17,
+        "old_final": 1.2009471616637966e-18
+      },
+      {
+        "key": "delta_nu_faces",
+        "prefix": 3.843030884485658e-17,
+        "old_final": 6.004735757008841e-19
+      },
+      {
+        "key": "delta_lambda",
+        "prefix": 2.1967838772576013e-20,
+        "old_final": 0.0
+      },
+      {
+        "key": "delta_phi",
+        "prefix": 0.0,
+        "old_final": 0.0
+      },
+      {
+        "key": "delta_u",
+        "prefix": 0.0,
+        "old_final": 0.0
+      },
+      {
+        "key": "delta_u_t",
+        "prefix": 0.0,
+        "old_final": 0.0
+      },
+      {
+        "key": "delta_u_prime",
+        "prefix": 0.0,
+        "old_final": 0.0
+      },
+      {
+        "key": "delta_nu_prime",
+        "prefix": 7.292758153031642e-14,
+        "old_final": 0.0
+      },
+      {
+        "key": "delta_log_lapse",
+        "prefix": 3.84303091732415e-17,
+        "old_final": 1.2009471616637968e-18
+      },
+      {
+        "key": "delta_log_radial_length",
+        "prefix": 2.196783873644526e-20,
+        "old_final": 0.0
+      },
+      {
+        "key": "delta_log_area_radius",
+        "prefix": 0.0,
+        "old_final": 0.0
+      },
+      {
+        "key": "delta_log_speed",
+        "prefix": 4.3935685105560034e-20,
+        "old_final": 1.7162376994359388e-22
+      },
+      {
+        "key": "actual_delta_lambda_rate",
+        "prefix": 6.106337992679374e-19,
+        "old_final": 0.0034857395561549674
+      }
+    ],
+    "conclusion": "The prior final source-polynomial derivative becomes an interior right-sided derivative after extension. Do not silently retain that formerly terminal stage. Restart one canonical interval earlier and re-evolve the overlap plus the last interval under the extended input.",
+    "bindings": {
+      "/home/lpaiu/work/native-retained-tail-runtime/.phase249-boundary.py": "7051bcc028deed420ec21443923bfd55b57eef18f5469eaeefbf29e8c2c48396",
+      "native-stage-metric227-work/metric/metric-128-g8.npz": "7b6ebab5ce60f6e547c281ccb1c48597a1ff2d8e826f086a1230b7f3b2421ed2",
+      "native-complete-return236-work/metric/metric-128-g8.npz": "11ba1264e396116c302fe02364956748557b722d3f5e301de3cb09d9bd4a0d41"
+    },
+    "final_charge_conclusion": "unadjudicated"
+  },
+  "actual_full_period_return_completed": false,
+  "live_snapshots": {
+    "native-common-arithmetic239-work/controller-status.json": {
+      "state": "failed",
+      "action": "audit",
+      "completed": [
+        {
+          "action": "fine",
+          "returncode": 0
+        },
+        {
+          "action": "audit",
+          "returncode": 1
+        }
+      ],
+      "elapsed_seconds": 9730.847812298
+    },
+    "native-common-arithmetic239-work/stage-progress-128.json": {
+      "last_stage_time": 0.0034344311179287028,
+      "solved_actual_steps": 231,
+      "original_stage_relative": 7.543025122664573e-15,
+      "physical_stage_relative": [
+        1.0490593795251371e-17,
+        5.136104156405568e-19,
+        1.8178233077082443e-20,
+        2.7036959602145913e-20
+      ]
+    },
+    "native-complete-return236-work/controller-status.json": {
+      "state": "completed",
+      "completed": [
+        {
+          "action": "field1288",
+          "returncode": 0
+        },
+        {
+          "action": "field648",
+          "returncode": 0
+        },
+        {
+          "action": "field1284",
+          "returncode": 0
+        },
+        {
+          "action": "collect",
+          "returncode": 0
+        },
+        {
+          "action": "metric",
+          "returncode": 0
+        },
+        {
+          "action": "coarse",
+          "returncode": 0
+        },
+        {
+          "action": "fine",
+          "returncode": 0
+        },
+        {
+          "action": "audit",
+          "returncode": 0
+        }
+      ],
+      "elapsed_seconds": 11286.799907653998,
+      "final_charge_conclusion": "unadjudicated",
+      "full_goal_complete": false
+    },
+    "native-complete-return236-work/capture-128.json": {
+      "actual_steps": 215,
+      "time": 0.003219779173058159
+    },
+    "native-retarded-extension248-work/controller-status.json": {
+      "state": "waiting",
+      "action": "same244full_source",
+      "dependency_pid": 180324,
+      "elapsed_seconds": 961.3763642539998
+    },
+    "native-compensated-charge247-work/full-controller-status.json": {
+      "state": "waiting",
+      "action": "same246long_dense_source",
+      "dependency_pid": 181543,
+      "elapsed_seconds": 2103.140448205999
+    }
+  },
+  "snapshot_KST": "2026-09-25T05:34:13.440679+09:00",
+  "final_charge_conclusion": "unadjudicated",
+  "physical_final_charge_solved": false,
+  "full_goal_complete": false,
+  "document_prefixes": {
+    "docs/model-definition.md": {
+      "bytes": 271600,
+      "sha256": "9852c34a5dbc972a74e6e46ef84cc816ea6ee5f4c95f41b8cf461c94d6456990"
+    },
+    "docs/observable-targets.md": {
+      "bytes": 262419,
+      "sha256": "1fb9afa233bd32da21afc4d8e69eea01776822f365f4a04af7bc3d3566daf664"
+    },
+    "docs/adiabatic-limit.md": {
+      "bytes": 256758,
+      "sha256": "cc44a18db6b9d520f15e1f35ce14c79e64cd79aea4b0a0046bcf9788b14a7423"
+    },
+    "docs/nonadiabatic-regime.md": {
+      "bytes": 265250,
+      "sha256": "ee33cf9f56053f39f93a6342b6bb8c01c87e719fec227672ffed2b75f5dcc99e"
+    },
+    "docs/failure-ledger-dynamic-chi.md": {
+      "bytes": 302854,
+      "sha256": "710b4920c75d63580cb551c265cc6dd8658e9124ba804d91b013508491e18abd"
+    },
+    "docs/dynamic-charge-completion.md": {
+      "bytes": 131018,
+      "sha256": "2450fa8f95d62dfd3f2ebb87fc5422a2bc949c97c2882bc10a4b443fc86c426e"
+    }
+  },
+  "sha256": {
+    "verification/complete_returned_period.py": "7830269a0ee20eeb0b7e989038e8e59d36573913cb4c86b34ad5ef48634685b1",
+    "notes/REQUEST249_FULL_RETURN_CONTINUATION_KO.md": "4644652c5f98b85ae07ca218b624f31cb90eede03cd6877e26306245aebe41ea",
+    "docs/model-definition.md": "8cf42a3caa156a28d9113a54a7925285b039f9e066735dfc5c855c3fa0e89e12",
+    "docs/observable-targets.md": "5054ad9e3aca6fcee6e6eeb4db665d91dd037c00c4150b8d38a6beb72ceb35e2",
+    "docs/adiabatic-limit.md": "04874f7343266368fc7f0a37138ab2c547de8cec3baa20950e8f303e10b6245e",
+    "docs/nonadiabatic-regime.md": "5c191aa975539e6dce7131482cef0128b1892633daf41e0138d3a1efaef1d724",
+    "docs/failure-ledger-dynamic-chi.md": "ccff598077a92fd4597ac35a946961bc434e9b397f225c0f930fe30e30566ba0",
+    "docs/dynamic-charge-completion.md": "034ff810adf17240387fa6a02b73cb92e89f2ba6f2ac5ddc4a458ca4778d9f2c",
+    "outputs/direct-eos-gr33/native-full-return-continuation/boundary-extension.json": "6fe7a73f9e48be7e13e5b0797bf88470c9ab07cdde50a6a26fe8f471a27fc0a7",
+    "outputs/direct-eos-gr33/native-full-return-continuation/check-receipt.json": "dd23fa72dd2e4be409ddbd57d0d487851fe224ea86381ad594da1c58b0b2beac",
+    "outputs/direct-eos-gr33/native-full-return-continuation/controller-start.json": "395d5cb4b161cd892d31c6dde0775b661f8ab2b3061b5f81efec54b9106e087c",
+    "outputs/direct-eos-gr33/native-full-return-continuation/controller-status.json": "ef5e68b7aa331b1865140138af425cde2efd460af439f8dd26437741cbccad64",
+    "outputs/direct-eos-gr33/native-full-return-continuation/native-anchor.json": "ff8fa0aab01ffaff97ecc11a6e2241c1030e5a9cc6925df64b807d7414c04a19",
+    "outputs/direct-eos-gr33/native-full-return-continuation/phase249-boundary.py": "7051bcc028deed420ec21443923bfd55b57eef18f5469eaeefbf29e8c2c48396",
+    "outputs/direct-eos-gr33/native-full-return-continuation/phase249-followthrough.py": "2f6797dd4359de30d095524a0e08d3d01e5b96ce9af4ceba937377b190358940",
+    "outputs/direct-eos-gr33/native-full-return-continuation/phase249-launch.ps1": "578689f9f06437fb782382ca1d774b294a79cb5f3f223fe170c4a701a988b1ae",
+    "outputs/direct-eos-gr33/native-full-return-continuation/phase249-native-anchor.py": "39187cb4bc41032cf94c21406dda9e2917ad3bbd4a19d69356fb1ac6df4e12c4",
+    "outputs/direct-eos-gr33/native-full-return-continuation/publication-producer.py": "88c8c812cf82735854d814b083b5779a2ff7d70c53d379098a236c7910131949",
+    "outputs/direct-eos-gr33/native-full-return-continuation/publication.json": "5f77b717263405835baaabd178001500a565d7536fbce4304877eef9311293fb",
+    "outputs/direct-eos-gr33/native-full-return-continuation/restart-regression.json": "66b6c394bfcbf7ca3735e2873d8ccc2cdae3270f5a5846c5a5129ae4700c8942",
+    "outputs/direct-eos-gr33/native-full-return-continuation/result.json": "823b93d23f75af91829caa147f145625402c46a54a24e6fc3982a1342de8d63c",
+    "outputs/direct-eos-gr33/native-full-return-continuation/snapshot-native-common-arithmetic239-work-controller-status.json": "3935a4332c50f575c23027338e7dba7e66a320a7ba1ef62febb8edee53bda396",
+    "outputs/direct-eos-gr33/native-full-return-continuation/snapshot-native-common-arithmetic239-work-stage-progress-128.json": "ea38dcf631eed8def10bcc5fec48b5e5fbb63bef5220eb931fd3fcab8ccbfb76",
+    "outputs/direct-eos-gr33/native-full-return-continuation/snapshot-native-compensated-charge247-work-full-controller-status.json": "aaf651d4f05f875795a51cc6ea1dc4ebbaaa8a4bd0b497d5d1ddd47a00e880a5",
+    "outputs/direct-eos-gr33/native-full-return-continuation/snapshot-native-complete-return236-work-capture-128.json": "bb020f564f05b395d49ab13228dfd6c699d3e4c75f805ae07eeacd48271980bb",
+    "outputs/direct-eos-gr33/native-full-return-continuation/snapshot-native-complete-return236-work-controller-status.json": "616938e554771bff49be0d76deb75f4f57a27a10fdbc2856ce1d4d26f11cd62c",
+    "outputs/direct-eos-gr33/native-full-return-continuation/snapshot-native-retarded-extension248-work-controller-status.json": "0ec79b282a752bafeee840b27619945f7c30a595595c3de3de9ca3b30ad397c0",
+    "outputs/direct-eos-gr33/native-full-return-continuation/zero-step-readout.json": "a3bf8c737ee49a7fede779062f8c269e7c0e5c47257a3a3beac54a73dc910be8"
+  }
+}

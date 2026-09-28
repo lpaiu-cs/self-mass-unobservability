@@ -1,0 +1,14 @@
+{
+  "classification": "Proven",
+  "total_energy_identity": true,
+  "composition_reference_invariance": true,
+  "chemical_term_in_GR_luminosity": true,
+  "equations": [
+    "e_B = C_X c^2 + u_B",
+    "du_B/dtau + P d(1/rho_B)/dtau = -c^2 dC_X/dtau - q_nu + q_ext",
+    "u_Q = u_W + g(X); e0_Q = e0_W - g(X); q_Q = q_W + dg/dtau",
+    "du_B + P dv_B = T ds_B + sum(mu_thermal_i dY_i)",
+    "dL_inf/dB = exp(2nu) [q_nuc - q_thermal_nu - T ds_B/dtau - sum(mu_thermal_i dY_i/dtau)]"
+  ],
+  "assumptions": "Comoving conserved baryon mass, electrically neutral equilibrium EOS, transparent emitted neutrinos, quasistatic GR luminosity balance as in Request22. No diffusive species flux; otherwise include chemical-energy flux. Rates must use the same reference as u."
+}

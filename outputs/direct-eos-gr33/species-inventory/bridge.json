@@ -1,0 +1,19 @@
+{
+  "classification": "Counterexample candidate",
+  "command": [
+    "gfortran",
+    "-O2",
+    "-fPIC",
+    "-shared",
+    "-I/home/lpaiu/work/direct-ions32/full-integral-build/src",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/species-inventory/inventory_bridge.f90",
+    "-L/home/lpaiu/work/direct-ions32/full-integral-build/src",
+    "-Wl,-rpath,/home/lpaiu/work/direct-ions32/full-integral-build/src",
+    "-lfree_eos_direct24_integral_full",
+    "-o",
+    "/home/lpaiu/work/direct-eos-gr33/species-inventory/inventory.so"
+  ],
+  "bridge_sha256": "5d3ca23fa756be82e069ea43224a12e9f692c1b2847e920212600819d67ca8a8",
+  "source_sha256": "ee9375deb6941add7ec549dd7b07aa0835f3b9fbfbb37b84139400a5f38a7927",
+  "original_library_unchanged": true
+}

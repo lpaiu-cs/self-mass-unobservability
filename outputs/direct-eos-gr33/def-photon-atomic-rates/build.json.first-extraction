@@ -1,0 +1,18 @@
+{
+  "command": [
+    "gfortran",
+    "-std=legacy",
+    "-fno-automatic",
+    "-mcmodel=medium",
+    "-g",
+    "-fcheck=all",
+    "-fbacktrace",
+    "synspec54.f",
+    "-o",
+    "atomic-rates"
+  ],
+  "returncode": 0,
+  "seconds": 3.3163470549999996,
+  "source_sha256": "316ec97aa06e0bc3c3f9ca6cb1fe33633616ab8725dd9cf4975801f0133ef99f",
+  "binary_sha256": "8b7218d7e6dae9810cc8eda21dd07e578d00bbae826ff73a143cee3143f77e95"
+}

@@ -1,0 +1,51 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "The actual16cell spectral/heat/H pilot conserves energy but gives2.55percent logT change and61.7percent neutral change, exceeding the original tangent gates. Preserve it; no spatial refinement can repair that physical approximation.",
+  "repair": "Replace tangent thermochemistry by same-native nonlinear H inventories and gas energy, with nonlinear stimulated/emitted photon rates. Reuse the identical16cells,152frequencies,metric,Cauchy field and time interval. The temperature and chemical response are solved implicitly together with photons.",
+  "support": {
+    "logT_offset": [
+      -0.06,
+      0.06
+    ],
+    "neutral_ratio": [
+      0.25,
+      2.5
+    ],
+    "temperature_nodes": 3,
+    "chemical_planes": 2
+  },
+  "gates": {
+    "native_constitutive": 0.002,
+    "native_rate": 0.002,
+    "newton_scaled": 1e-09,
+    "energy": 1e-08,
+    "time_refinement": 0.02,
+    "positive_populations": true
+  },
+  "budget": {
+    "new_native_calls": 1200,
+    "new_native_seconds": 45,
+    "nonlinear_seconds": 120,
+    "paths_time_steps": [
+      64,
+      128
+    ],
+    "cells": 16,
+    "CPU_threads": 1,
+    "memory_GB": 3
+  },
+  "resource_reassessment": "Native full16cell bank and process startup took7.10s before a NumPy-bool report serialization failure. The saved coefficients are reused. Its exact public-call counter was not serialized; its3500call cap is an upper bound, not an observed count. This new nonlinear constitutive task has its own explicit1200call cap; combined worst-case4700, actual first count unknown. No completed native bank or fluid history is recomputed.",
+  "prior_operational_failures": [
+    "NumPy bool report serialization; bank NPZ survived. Future bank NPZ now saves call count and audit errors before report serialization.",
+    "The first angular precondition used the half-isotropic surface ratio0.5 as an interior maximum. Correct P1 positive-moment condition is(H/J)^2<=1/3; measured maximum0.502277 is allowed. No numerical trajectory was run under the mistaken check."
+  ],
+  "forecast": "Pilot factor0.051s; three Newton factors per step suggest29.4s for64+128steps; state-dependent factor cost and iteration count unmeasured. Hard120s alarm, maximum10 Newton iterations and no automatic extra path.",
+  "limits": "No new spatial convergence claim from16cells; P1 angular closure, prescribed initial spectrum, frozen mechanical density/metric, other ionic inventories frozen and reciprocal rather than microscopic reverse rates remain. Final charge is not solved.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_causal_nonlinear.py": "30d4f91ad0edecbcb65f57537d6307a86e077616190f1834c59f7211cffe377b",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_causal_photons.py": "d16a2d0f46d69cd21f0738e944bab7b1a2c866a771fa2f64a4a55c8cc06c0c82",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-causal-photons/initial-producer.py": "bedc5a6e5c20b87009cc05f77cff87e9a2f3ff9c9512f2bae9fbc0153aa247be",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-causal-photons/bank-16-8.npz": "a1a50db7f12f7111bd87a9e46a514e1db75227f5e74d234f64beafc6a67b6104",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-causal-photons/pilot.json": "4686741a25269fbea39f08a07c469306ef8243fe4dc085b9141ce28856fba151"
+  }
+}

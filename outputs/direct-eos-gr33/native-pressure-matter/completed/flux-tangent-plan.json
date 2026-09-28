@@ -1,0 +1,26 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "The local finite-face endpoint passed, but its actual4step path failed at the middle knot with0.927percent momentum derivative difference. Preserve that trajectory and reject production.",
+  "repair": "Differentiate native HLL/conserved algebra analytically. Sample only local EOS p,u,gamma partials with independent normalized log-density,log-temperature,log-neutral steps. Keep the reused direct primitive map, exact directional minmod, shared face, true donor and fixed-geometry gravity.",
+  "admission": "Check the failed middle and endpoint states at EOS derivative steps5e-6/1e-5/2e-5 and retain0.2percent total RHS gate. Check resolved finite HLL directions independently. Then actual4/8step prefixes and original2percent time/1e-8 conservation/1percent donor gates.",
+  "scope": "Same retained response on the zero-additional-metric sweep only; no full EOS derivative bound, nonlinear star or final charge conclusion.",
+  "budgets": {
+    "check": 40,
+    "pilot": 60,
+    "production": 450,
+    "residual": 30
+  },
+  "original_total_seconds": 640,
+  "CPU_threads": 1,
+  "virtual_GiB": 3,
+  "stop": "No further probe,precision,grid or clock ladder. Any failed physical gate or forecast rejects production.",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/resolve_native_material_flux_tangent.py": "2fa05ed1f22270cd620c9615a7de5c68ef248b938254503ff3678739df356829",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/resolve_native_material_face_response.py": "36a861d334961397b55c25d9f8c3440e67929ce6f01e990dd1fc15c82b991dc8",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/return_native_pressure_matter.py": "87e964fe3eb006fc3a75a3d3461307bf0288ef37ad2240a7ba39571a18ad45fa",
+    "native-pressure-matter174-work/sweep-1/material-local-face/pilot-64.npz": "fcc5db2eb3d9784006d590ff44df71a3c4faddcec804778600421a658db969fe",
+    "native-pressure-matter174-work/sweep-1/material-local-face/pilot-64.json": "92a3f3babad966f5f229c66e47dbc94ec05c1b5ca798a35403730f9d982d3f9b",
+    "native-pressure-matter174-work/local-face-plan.json": "783c11c9b9003b7b1e62f2ae1d08c20578f463a894cc3c1635101095020139a8",
+    "native-pressure-matter174-work/local-face-check.json": "89b86586e548ff94288448df6158b2886965e09891817f543e41bbf8134151b0"
+  }
+}

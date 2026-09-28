@@ -1,0 +1,73 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "5e6501e94",
+  "claim": "Actually propagate the omitted reciprocal compact bilinear Einstein-scalar source and retain the induced field for material/photon return.",
+  "decision": "Does this missing gravitational coupling materially change the stored body charge, and which new field must be returned to transport? A failed control remains failed.",
+  "background": "The exact same Phase160 current-source composition and saved4/8 fields. No background or EOS replay.",
+  "incident": "Existing primary evaluated analytically at source knots, saved first Born, Phase156 actual matter response, and Phase157 physical body and normalized self-return. Divide stored self-return by2^63 exactly. Restore physical stress from initial canonical terms once.",
+  "representation": "Bilinear nodal source on existing531 cells and33 knots, linear source-time interpolation and inverse-Legendre spatial density.17 knots are a source interpolation control, not independent fluid evolution. No new driving waveform is supplied to matter. Higher product interpolation error remains explicit.",
+  "derivatives": "Compute background Uxx by differentiating the exact retarded piecewise-linear source including its saved potential iterate; use Uxx=Utt/c^2-S. No finite differences of tiny sampled waveforms.",
+  "terms": [
+    "Mixed lambda/nu constraints including scalar radial and time stress, propagated through Jx and the scalar stress source.",
+    "Mixed conformal trace factor and static-gradient source.",
+    "Incident metric acting on the generated background scalar."
+  ],
+  "exclusions": [
+    "Exterior mixed source, mixed physical ADM/arrived-mass readout and interface completion.",
+    "Transport return of the newly generated field and complete mixed canonical material Hessian.",
+    "Previous failed upstream controls, body/input interpolation error, complete EOS/boundary/nonlinear/observational closure."
+  ],
+  "gates": {
+    "quadrature": 0.002,
+    "cadence": 0.02,
+    "algebra": 1e-10,
+    "observer": 1e-10,
+    "potential": 0.01
+  },
+  "budgets": {
+    "prepare": 45,
+    "apply": 240,
+    "audit": 60
+  },
+  "total_seconds": 345,
+  "CPU_threads": 1,
+  "virtual_GiB": 3,
+  "new_fluid_steps": 0,
+  "new_EOS_roots": 0,
+  "pilot": "Measure the first fine route including analytic second derivative and propagate. Twice that cost for each remaining route plus15s must fit the remaining240s. Reuse it.",
+  "stop": "Do not automatically enlarge time interval, mesh, source clock, iteration budget or gates. Preserve raw outputs and stop after registered controls.",
+  "reference": "https://arxiv.org/abs/gr-qc/9707041; mixed identities are derived here from the existing repository convention, not imported as a result from that paper.",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/couple_native_mixed_gr.py": "56d9ec04da66c531081c93f59f62ae1aab66174d3a58766e41f035a82e3e6482",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/couple_native_interior_incident.py": "9f8cf452e6bd7b4ac26bc3d41ef7e57662ad8df76b51567200e6e60c5ba716f9",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_characteristic_gr.py": "1630d3f008a1e59748d318f921eed7da8fbea4c49d33e5b86617f67009a27076",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_anisotropic_gr.py": "8c70ea3234a101e81db0c159c0fcf4edf02b16f0910b066f2781699d74efca85",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/read_native_incident_infinity.py": "31fdcc3bec5a89504151337d85457a9ad1dc2d7b12f4b10e5f98eebc83817183",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_incident_drive.py": "3e01fc956f56354fc8be01be9ccdf864eb7c6435591fe83b3db10cc90bfbecb0",
+    "/home/lpaiu/work/native-retained-tail-runtime/outputs/direct-eos-gr33/def-native-initial-constraints/finite-volume/balanced-20.npz": "72ae702c85db57f0c02c1e5ca15dfad7df50d901b4270531e5b49c8c3746d3cb",
+    "native-interior-incident160-work/applied-charge.npz": "a1b92d4bbe65f8b1c0d3997525a80b2843aa4c05de7ca16eb44cb24cdaeb807a",
+    "outputs/direct-eos-gr33/native-retained-completion/infinity/completed/retained-128-a8-r8.npz": "55ddaec7e139c588cb4b9dcaf47c3a3b01735e72df958f6f6b1f7c89fa263235",
+    "native-incident-reciprocal156-work/sweep-2/expanded-incident-source.py": "92edc95fe04b90799f6bf1bdf849db8faae36ef5dbda7a607a7962c45f1bed10",
+    "native-incident-reciprocal156-work/sweep-2/gr/source-128-reference-128.npz": "885db820542d0eabb75bda4306d717938595aac7796f94d8f81844e0bc6010e6",
+    "native-incident-self-gr157-work/sweep-2/gr/source-128-reference-128.npz": "8bab8a95be54de5d0e56e608b5692c3d8530a67a23270f04e6b5e0a079d387e9",
+    "outputs/direct-eos-gr33/def-native-global-scalar-closure/bound.json": "39cbee9c32b2d16c239d8ae14f188be2177e53bca27fe0ec4d8df88a29a66f58",
+    "native-interior-incident160-work/background/source-128.npz": "c232911db50d17c10e4b84fb0cfc72cd6bfc5541f90545e3a0c8d3bf67f69936",
+    "native-interior-incident160-work/background/fields-128-g8.npz": "6bb7624875b6a4edb981f67d53b02c06b4cc22c72b16471b2c5c5f7bb8f74657",
+    "native-interior-incident160-work/operator-128-g8.npz": "6b522cd3011b976982157109bb366cf47b8e633ef1bb461d011828203feb931a",
+    "native-interior-incident160-work/background/fields-128-g4.npz": "96fda2a381d06b81370fe15266dad99f09410237644a5ae28877e52090bd6e8c",
+    "native-interior-incident160-work/operator-128-g4.npz": "9c68771533d0300b564b76270881b8b24ec6c1d256ea11ecdaef414edb904bef",
+    "native-interior-incident160-work/background/source-128-17.npz": "b78c0a44ddc0b54c9b5d08619ef589ce50a367b4115584d05bc61bdaa70142ad",
+    "native-interior-incident160-work/background/fields-128-17-g8.npz": "dea16a90200e8aa5ad6801951f74dd6341ad48c64292de5fd80eb63a792d35d5",
+    "native-interior-incident160-work/operator-128-17-g8.npz": "90cdd0841f792ab7cd585d460e7b046a380818b72f11b5a73115e269d0a9dcd1",
+    "native-incident-drive155-work/fields/born-g4.npz": "f18d3a96206992b5878fcb927a43fab403a19b393f3413a0e3a8121019ca9083",
+    "native-incident-self-gr157-work/fields/fields-128-g4.npz": "dfc1efa42d357b9fcc91f81eed2e2032dbb6b2871d02d6ad5919d41179c1276e",
+    "native-incident-self-gr157-work/metric/metric-128-g4.npz": "be45b5dc7df52841fa2e04bbd8216fb37f6103a6e25ee43b8ee27f4952388611",
+    "native-incident-self-gr157-work/sweep-2/returned-fields/fields-128-g4.npz": "1958dc87c755b31f9b99154da5ffbca0537fc569e94ad1735e25580135c2304c",
+    "native-incident-self-gr157-work/sweep-2/returned-metric/metric-128-g4.npz": "5380d87ced334de07dc812430e547e84e598db7d914e0503d0c7928241a8090a",
+    "native-incident-drive155-work/fields/born-g8.npz": "4a4f1299caa9675a4a5a87c178b883ba242aeec296361a555182328dc429a058",
+    "native-incident-self-gr157-work/fields/fields-128-g8.npz": "5097343f92c2c5d39df48c678c7c8cf7d17282eaf7e7b7d9c0a850ffb54605b8",
+    "native-incident-self-gr157-work/metric/metric-128-g8.npz": "f4e1c733e30c76c5e1ceb5f9186dab10b3996fd24c7fba104d879042582ed8a2",
+    "native-incident-self-gr157-work/sweep-2/returned-fields/fields-128-g8.npz": "16fe2eb09ca2c546a14b8d5f4629da628f7601c1421714f4948dd3d85974827b",
+    "native-incident-self-gr157-work/sweep-2/returned-metric/metric-128-g8.npz": "e0b3381c14b8d04574be83631e281b81960d7218b8b0da1db5ea42e0096a167d"
+  }
+}

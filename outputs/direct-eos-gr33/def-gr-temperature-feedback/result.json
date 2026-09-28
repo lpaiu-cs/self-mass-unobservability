@@ -1,0 +1,44 @@
+{
+  "classification": "Counterexample candidate",
+  "actual_temperature_feedback_evolved": true,
+  "numerical_target_passed": true,
+  "temperature_only_feedback_below_target": true,
+  "comparisons": {
+    "velocity_mass_RMS_m_s": {
+      "correction_relative": 3.990644242451855e-11,
+      "time_absolute_to_baseline": 6.08101600221874e-13,
+      "contour_absolute_to_baseline": 2.6354478124857834e-16
+    },
+    "scalar_mass_RMS": {
+      "correction_relative": 2.290001199735551e-13,
+      "time_absolute_to_baseline": 1.9801095957330379e-19,
+      "contour_absolute_to_baseline": 4.582475519801851e-23
+    },
+    "old_interface_velocity_RMS_m_s": {
+      "correction_relative": 3.0390770364256786e-11,
+      "time_absolute_to_baseline": 8.036879978601125e-16,
+      "contour_absolute_to_baseline": 2.3886180608408205e-23
+    },
+    "new_interface_velocity_RMS_m_s": {
+      "correction_relative": 6.914298573573937e-13,
+      "time_absolute_to_baseline": 1.2440468341337042e-19,
+      "contour_absolute_to_baseline": 1.506556488415528e-26
+    }
+  },
+  "baseline_endpoint_replay": 1.9330713492784788e-16,
+  "heat_balance": 1.7297654724037364e-20,
+  "linear_residual": 2.473235729168419e-13,
+  "feedback_residual": 9.764311904101463e-12,
+  "maximum_corrections": 2,
+  "sampled_second_to_first": 1.0193050736564514e-09,
+  "sampled_heat_feedback_relative": 4.219236214432535e-12,
+  "raw_initial_correction_max": 6.878327597017687e-24,
+  "seconds": 404.95948817100003,
+  "total_compute_seconds": 439.32497006200003,
+  "memory_GB": 1.450504192,
+  "full_temperature_metric_coefficient_feedback": false,
+  "full_GR_photon_feedback_evolved": false,
+  "full_nonlinear_evolution": false,
+  "full_dynamic_charge_solved": false,
+  "scope": "Temperature-only feedback on the fixed transport geometry/rates/coefficients. This new loop is solved at p4 with absolute correction tolerance relative to the accepted baseline, not a new spatial/physical certification or rigorous continuum error bound."
+}

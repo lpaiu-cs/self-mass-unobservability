@@ -1,0 +1,144 @@
+{
+ "classification": "Counterexample candidate",
+ "kind": "native",
+ "variant": "identity",
+ "directory": "/home/lpaiu/work/direct-eos-gr33/native-cold-population-identity",
+ "patches": {},
+ "seconds": 4.1244488669999555,
+ "outputs": {
+  "/home/lpaiu/work/direct-eos-gr33/native-cold-population-identity/libfree_eos_native_cold_stable.so": "34c98dd962486631eb12e6315a00f6d0ea1d8fd5e8a33e19243aef842a155974",
+  "/home/lpaiu/work/direct-eos-gr33/native-cold-population-identity/stable/gas.so": "5b075578d8f786c637e0e789b2924e0c9c11a348866c3681245ca709d5c2ef1a",
+  "/home/lpaiu/work/direct-eos-gr33/native-cold-population-identity/gas-stable-verbose.so": "209ee5c1e3a02ae2abfd955c6419255992c3fab14860d86a4bf6d97b8ef6ce24"
+ },
+ "objects": {
+  "mod_free_eos.o": {
+   "new": "efec94cb9e7c1306afb9565c8f0fe9478c838809699ff51056840fb41f807a36",
+   "recorded": "435a189e57bc2c76873df56cbbe6d675a9a9282246e542659fd0312b4a7dc61b"
+  },
+  "mod_free_eos_detailed.o": {
+   "new": "9ee276628da3938d707d645a0e516d2d0fa29cd92df57dc57ab719695e8d47f7",
+   "recorded": "73d99e94b856d9b6a5470eac31d860e69a7df3aa296679968917b9a6ce174b67"
+  }
+ },
+ "log": [
+  {
+   "command": [
+    "gfortran",
+    "-cpp",
+    "-DUSINGDLL",
+    "-Dfree_eos_EXPORTS",
+    "-I/home/lpaiu/work/direct-eos-gr33/native-cold-population-identity",
+    "-I/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src",
+    "-I/home/lpaiu/work/direct-eos-gr33/molecular-spectral/source/src",
+    "-O3",
+    "-DNDEBUG",
+    "-O3",
+    "-fPIC",
+    "-c",
+    "mod_free_eos_detailed.f90",
+    "-o",
+    "mod_free_eos_detailed.o"
+   ],
+   "returncode": 0,
+   "output": ""
+  },
+  {
+   "command": [
+    "gfortran",
+    "-cpp",
+    "-DUSINGDLL",
+    "-Dfree_eos_EXPORTS",
+    "-I/home/lpaiu/work/direct-eos-gr33/native-cold-population-identity",
+    "-I/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src",
+    "-I/home/lpaiu/work/direct-eos-gr33/molecular-spectral/source/src",
+    "-O3",
+    "-DNDEBUG",
+    "-O3",
+    "-fPIC",
+    "-c",
+    "mod_free_eos.f90",
+    "-o",
+    "mod_free_eos.o"
+   ],
+   "returncode": 0,
+   "output": ""
+  },
+  {
+   "command": [
+    "gfortran",
+    "-shared",
+    "-Wl,-soname,libfree_eos_native_cold_stable.so",
+    "/home/lpaiu/work/direct-eos-gr33/native-ion-closure/mod_eos_calc.o",
+    "mod_excitation-stable.o",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_fermi_dirac_integrator.f90.o",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_bfgs.f90.o",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_molecular_hydrogen.f90.o",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_pi_fit.f90.o",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_ionization_data.f90.o",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_poly_sum.f90.o",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_nuvar.f90.o",
+    "/home/lpaiu/work/direct-eos-gr33/native-cold-population-identity/mod_free_eos.o",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_statistical_weight_data.f90.o",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_free_eos_types.f90.o",
+    "/home/lpaiu/work/direct-eos-gr33/native-cold-population-identity/mod_free_eos_detailed.o",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_coulomb.f90.o",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_pi.f90.o",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_eos_bfgs.f90.o",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_fermi_dirac.f90.o",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_free_eos_constants.f90.o",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_helium1_data.f90.o",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_exchange.f90.o",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_aux_scale.f90.o",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_free_eos_debug.f90.o",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_lapack.f90.o",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_pl.f90.o",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_excitation_block.f90.o",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_isotopic_mass_data.f90.o",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_flow_data.f90.o",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_info_data.f90.o",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_eos_jacobian.f90.o",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_diagnostics.f90.o",
+    "-llapack",
+    "-lblas",
+    "-o",
+    "/home/lpaiu/work/direct-eos-gr33/native-cold-population-identity/libfree_eos_native_cold_stable.so"
+   ],
+   "returncode": 0,
+   "output": ""
+  },
+  {
+   "command": [
+    "gfortran",
+    "-O2",
+    "-fPIC",
+    "-shared",
+    "-I/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-radiation-eos-split/gas-bridge.f90",
+    "-L/home/lpaiu/work/direct-eos-gr33/native-cold-population-identity",
+    "-Wl,-rpath,/home/lpaiu/work/direct-eos-gr33/native-cold-population-identity",
+    "-lfree_eos_native_cold_stable",
+    "-o",
+    "/home/lpaiu/work/direct-eos-gr33/native-cold-population-identity/stable/gas.so"
+   ],
+   "returncode": 0,
+   "output": ""
+  },
+  {
+   "command": [
+    "gfortran",
+    "-O2",
+    "-fPIC",
+    "-shared",
+    "-I/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-cold-population/diagnostic-bridge.f90",
+    "-L/home/lpaiu/work/direct-eos-gr33/native-cold-population-identity",
+    "-Wl,-rpath,/home/lpaiu/work/direct-eos-gr33/native-cold-population-identity",
+    "-lfree_eos_native_cold_stable",
+    "-o",
+    "/home/lpaiu/work/direct-eos-gr33/native-cold-population-identity/gas-stable-verbose.so"
+   ],
+   "returncode": 0,
+   "output": ""
+  }
+ ]
+}

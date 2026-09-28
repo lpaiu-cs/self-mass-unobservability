@@ -1,0 +1,231 @@
+{
+  "classification": "Counterexample candidate",
+  "actual_same_joint_solution_GR_computed": false,
+  "exact_saved_restart_verified": true,
+  "restart_regression": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "every_saved_array_exact": true,
+    "arrays": 44,
+    "reused_actual_steps": 103,
+    "new_physical_steps": 0,
+    "boundary_replay_required": true,
+    "bindings": {
+      "/home/lpaiu/work/native-retained-tail-runtime/verification/complete_returned_period.py": "7830269a0ee20eeb0b7e989038e8e59d36573913cb4c86b34ad5ef48634685b1",
+      "native-complete-return236-work/sweep-0/photons/steps-128-reference-128.npz": "b03d8792172728376a3a58a4676ef13c00d2e521b31f215228dabdf581f9c090",
+      "native-complete-return236-work/sweep-0/photons/steps-64-reference-128.npz": "acd3d47dbf2c683f824a8b8ae2f82408cab916219ae24a8a8cfd73052170e865",
+      "native-complete-return236-work/sweep-0/material/steps-128-reference-128.npz": "8f74c74de70b7150d6219e1f4de359d4bba1033709984110081fab8a060ebd11",
+      "native-complete-return236-work/sweep-0/material/steps-64-reference-128.npz": "ff1fc64a6650a0e978f30f1bf49abd556f056e8d6d6255db9efa3c6a79193239",
+      "native-complete-return236-work/normalization.json": "820244d5d23554811c792b52a45a3e28317392019f5aac7d8733eeb3b4d28706",
+      "native-complete-return236-work/photon-conservation-plan.json": "248525a3b9808f00f193c48d9739000a1c32eea1cf8197cf8c3ad8b939a0bb2d",
+      "native-complete-return236-work/check-result.json": "69d213635792f32d54a04dd107aa19178d7943261ca23305d6b720862c246106",
+      "native-complete-return236-work/metric/metric-128-g8.npz": "11ba1264e396116c302fe02364956748557b722d3f5e301de3cb09d9bd4a0d41",
+      "native-complete-return236-work/sweep-1/photons/interval-14-64.npz": "43b1517bd1ffe23683252d1209991e7ecb6218df08a8d74f3f1a6a20ea12d19f",
+      "native-complete-return236-work/sweep-1/photons/interval-14-64.json": "108b2f2ae595f53331cd41239c885fb8a923b60b6a8af9aacf6b925e0b4056c3",
+      "native-full-return249-work/boundary-extension.json": "6fe7a73f9e48be7e13e5b0797bf88470c9ab07cdde50a6a26fe8f471a27fc0a7",
+      "native-full-return249-work/anchor/result.json": "ff8fa0aab01ffaff97ecc11a6e2241c1030e5a9cc6925df64b807d7414c04a19"
+    },
+    "scope": "Zero-step restart on the accepted coarse interval14. Actual full-period stages and metric remain required.",
+    "final_charge_conclusion": "unadjudicated"
+  },
+  "native_anchor": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "rows": [
+      {
+        "stage_index": 222,
+        "time": 0.003228723004094431,
+        "native_relative": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "stage_index": 237,
+        "time": 0.003434431117928702,
+        "native_relative": [
+          7.532236588854133e-20,
+          1.6462980434360953e-22,
+          6.288504279221906e-20,
+          2.4902975089540572e-20
+        ]
+      }
+    ],
+    "seconds": 13.402190708002308,
+    "peak_RSS_bytes": 1318387712,
+    "scope": "Original returned-stage high native anchor on the first/last added coarse interval stages; not actual return acceptance.",
+    "bindings": {
+      "/home/lpaiu/work/native-retained-tail-runtime/.phase249-native-anchor.py": "39187cb4bc41032cf94c21406dda9e2917ad3bbd4a19d69356fb1ac6df4e12c4",
+      "native-common-arithmetic239-work/sweep-1/photons/complete-64.npz": "78293a016d40373449f40c8f57fd36c6cb7cc5422e23cb6f21935cc96c5fc1bc"
+    },
+    "final_charge_conclusion": "unadjudicated"
+  },
+  "terminal_derivative_change": {
+    "classification": "Counterexample candidate",
+    "rows": [
+      {
+        "key": "delta_nu",
+        "prefix": 3.843030917324149e-17,
+        "old_final": 1.2009471616637966e-18
+      },
+      {
+        "key": "delta_nu_faces",
+        "prefix": 3.843030884485658e-17,
+        "old_final": 6.004735757008841e-19
+      },
+      {
+        "key": "delta_lambda",
+        "prefix": 2.1967838772576013e-20,
+        "old_final": 0.0
+      },
+      {
+        "key": "delta_phi",
+        "prefix": 0.0,
+        "old_final": 0.0
+      },
+      {
+        "key": "delta_u",
+        "prefix": 0.0,
+        "old_final": 0.0
+      },
+      {
+        "key": "delta_u_t",
+        "prefix": 0.0,
+        "old_final": 0.0
+      },
+      {
+        "key": "delta_u_prime",
+        "prefix": 0.0,
+        "old_final": 0.0
+      },
+      {
+        "key": "delta_nu_prime",
+        "prefix": 7.292758153031642e-14,
+        "old_final": 0.0
+      },
+      {
+        "key": "delta_log_lapse",
+        "prefix": 3.84303091732415e-17,
+        "old_final": 1.2009471616637968e-18
+      },
+      {
+        "key": "delta_log_radial_length",
+        "prefix": 2.196783873644526e-20,
+        "old_final": 0.0
+      },
+      {
+        "key": "delta_log_area_radius",
+        "prefix": 0.0,
+        "old_final": 0.0
+      },
+      {
+        "key": "delta_log_speed",
+        "prefix": 4.3935685105560034e-20,
+        "old_final": 1.7162376994359388e-22
+      },
+      {
+        "key": "actual_delta_lambda_rate",
+        "prefix": 6.106337992679374e-19,
+        "old_final": 0.0034857395561549674
+      }
+    ],
+    "conclusion": "The prior final source-polynomial derivative becomes an interior right-sided derivative after extension. Do not silently retain that formerly terminal stage. Restart one canonical interval earlier and re-evolve the overlap plus the last interval under the extended input.",
+    "bindings": {
+      "/home/lpaiu/work/native-retained-tail-runtime/.phase249-boundary.py": "7051bcc028deed420ec21443923bfd55b57eef18f5469eaeefbf29e8c2c48396",
+      "native-stage-metric227-work/metric/metric-128-g8.npz": "7b6ebab5ce60f6e547c281ccb1c48597a1ff2d8e826f086a1230b7f3b2421ed2",
+      "native-complete-return236-work/metric/metric-128-g8.npz": "11ba1264e396116c302fe02364956748557b722d3f5e301de3cb09d9bd4a0d41"
+    },
+    "final_charge_conclusion": "unadjudicated"
+  },
+  "actual_full_period_return_completed": false,
+  "live_snapshots": {
+    "native-common-arithmetic239-work/controller-status.json": {
+      "state": "failed",
+      "action": "audit",
+      "completed": [
+        {
+          "action": "fine",
+          "returncode": 0
+        },
+        {
+          "action": "audit",
+          "returncode": 1
+        }
+      ],
+      "elapsed_seconds": 9730.847812298
+    },
+    "native-common-arithmetic239-work/stage-progress-128.json": {
+      "last_stage_time": 0.0034344311179287028,
+      "solved_actual_steps": 231,
+      "original_stage_relative": 7.543025122664573e-15,
+      "physical_stage_relative": [
+        1.0490593795251371e-17,
+        5.136104156405568e-19,
+        1.8178233077082443e-20,
+        2.7036959602145913e-20
+      ]
+    },
+    "native-complete-return236-work/controller-status.json": {
+      "state": "completed",
+      "completed": [
+        {
+          "action": "field1288",
+          "returncode": 0
+        },
+        {
+          "action": "field648",
+          "returncode": 0
+        },
+        {
+          "action": "field1284",
+          "returncode": 0
+        },
+        {
+          "action": "collect",
+          "returncode": 0
+        },
+        {
+          "action": "metric",
+          "returncode": 0
+        },
+        {
+          "action": "coarse",
+          "returncode": 0
+        },
+        {
+          "action": "fine",
+          "returncode": 0
+        },
+        {
+          "action": "audit",
+          "returncode": 0
+        }
+      ],
+      "elapsed_seconds": 11286.799907653998,
+      "final_charge_conclusion": "unadjudicated",
+      "full_goal_complete": false
+    },
+    "native-complete-return236-work/capture-128.json": {
+      "actual_steps": 215,
+      "time": 0.003219779173058159
+    },
+    "native-retarded-extension248-work/controller-status.json": {
+      "state": "waiting",
+      "action": "same244full_source",
+      "dependency_pid": 180324,
+      "elapsed_seconds": 961.3763642539998
+    },
+    "native-compensated-charge247-work/full-controller-status.json": {
+      "state": "waiting",
+      "action": "same246long_dense_source",
+      "dependency_pid": 181543,
+      "elapsed_seconds": 2103.140448205999
+    }
+  },
+  "snapshot_KST": "2026-09-25T05:34:13.440679+09:00",
+  "final_charge_conclusion": "unadjudicated",
+  "physical_final_charge_solved": false,
+  "full_goal_complete": false
+}

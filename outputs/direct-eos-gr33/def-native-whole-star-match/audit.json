@@ -1,0 +1,126 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "native_core_controls": [
+    {
+      "cell": 132,
+      "logrho_error": 1.5514700635321788e-10,
+      "entropy_over_cv": 2.9982110146554814e-10
+    },
+    {
+      "cell": 133,
+      "logrho_error": 9.14859299427917e-11,
+      "entropy_over_cv": 1.489635485520099e-10
+    },
+    {
+      "cell": 134,
+      "logrho_error": 8.899903036763135e-11,
+      "entropy_over_cv": 1.2532861622560676e-10
+    },
+    {
+      "cell": 135,
+      "logrho_error": 8.550316010769166e-11,
+      "entropy_over_cv": 9.568041541973542e-11
+    },
+    {
+      "cell": 142,
+      "logrho_error": 5.5065285664568364e-11,
+      "entropy_over_cv": 8.386816822252353e-11
+    },
+    {
+      "cell": 162,
+      "logrho_error": 4.3931080995207594e-11,
+      "entropy_over_cv": 3.7013505300456514e-10
+    },
+    {
+      "cell": 232,
+      "logrho_error": 3.0381031024262484e-11,
+      "entropy_over_cv": 1.0675561668233504e-10
+    },
+    {
+      "cell": 332,
+      "logrho_error": 4.533262654149439e-12,
+      "entropy_over_cv": 3.0706216481596375e-11
+    },
+    {
+      "cell": 823,
+      "logrho_error": 2.9309887850104133e-13,
+      "entropy_over_cv": 1.1660123164196124e-12
+    },
+    {
+      "cell": 1314,
+      "logrho_error": 1.412203687323199e-13,
+      "entropy_over_cv": 4.732686823123368e-13
+    },
+    {
+      "cell": 1805,
+      "logrho_error": 9.103828801926284e-14,
+      "entropy_over_cv": 4.04867386393128e-13
+    },
+    {
+      "cell": 2296,
+      "logrho_error": 1.2256862191861728e-13,
+      "entropy_over_cv": 6.490506335953112e-13
+    },
+    {
+      "cell": 2787,
+      "logrho_error": 1.2434497875801753e-13,
+      "entropy_over_cv": 3.0693194110059457e-13
+    },
+    {
+      "cell": 3278,
+      "logrho_error": 7.460698725481052e-14,
+      "entropy_over_cv": 4.2728564301340465e-13
+    },
+    {
+      "cell": 3769,
+      "logrho_error": 2.184918912462308e-13,
+      "entropy_over_cv": 1.2383692225537285e-12
+    },
+    {
+      "cell": 4260,
+      "logrho_error": 2.9309887850104133e-13,
+      "entropy_over_cv": 2.412163049188195e-12
+    },
+    {
+      "cell": 4751,
+      "logrho_error": 2.113864638886298e-13,
+      "entropy_over_cv": 2.6825466843115934e-14
+    },
+    {
+      "cell": 5242,
+      "logrho_error": 2.6645352591003757e-13,
+      "entropy_over_cv": 1.0069288957927041e-14
+    },
+    {
+      "cell": 5734,
+      "logrho_error": 3.4994229736184934e-13,
+      "entropy_over_cv": 2.242361730179486e-15
+    }
+  ],
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "identity": "Shared junction luminosity cancels in the sum of adjacent material energy equations; no zero-volume interface heat reservoir is introduced."
+  },
+  "envelope_baryon_integral_relative": 1.2886496314479245e-09,
+  "luminosity_integral_relative": 1.1270762878545781e-08,
+  "whole_isotope_relative": 2.030479068824224e-16,
+  "core_gamma_interpolant_native_relative": 1.8359571007930953e-06,
+  "omitted_old_cold_tail_baryon_fraction_upper": 6.052248326971134e-21,
+  "base_luminosity": 2.1734826826038517e+33,
+  "first_core_internal_face_luminosity": 2.0911342913602666e+33,
+  "old_reference_face_luminosity": 2.1607503605449922e+33,
+  "first_core_retained_half_cell_heat_erg_g_s": -36560572240556.86,
+  "frozen_density_logT_rate_s": -2.911690366359998,
+  "frozen_density_one_percent_timescale_s": 0.0034344311179287023,
+  "thermal_interpretation": "One luminosity is shared on the actual base face; the neighbouring core flux differs and gives retained-cell heat. This is a nonstationary initial background, not a steady core-envelope flux match or an evolved timescale.",
+  "native_calls": 420,
+  "seconds": 12.577059921,
+  "total_compute_seconds": 567.1361587890001,
+  "same_material_mechanical_background": true,
+  "steady_thermal_match": false,
+  "physical_zero_pressure_surface": false,
+  "final_dynamic_charge_solved": false,
+  "full_goal_complete": false
+}

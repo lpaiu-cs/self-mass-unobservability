@@ -1,0 +1,48 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "rows": [
+    {
+      "x": 0.0,
+      "T": 13368.84039704196,
+      "y": 3.5e-06,
+      "affinity": 1.0210030771079865,
+      "free_energy_derivative_per_y": [
+        -1008597628014.7792,
+        -1008585073807.5511
+      ],
+      "thermodynamic_expected": -1008582061636.5668,
+      "relative": 2.9865403112783184e-06,
+      "step_relative": 1.2447383019737998e-05
+    },
+    {
+      "x": -2.0,
+      "T": 6000.0,
+      "y": 2e-06,
+      "affinity": 15.278516368711681,
+      "free_energy_derivative_per_y": [
+        -6773653317260.742,
+        -6773648285675.049
+      ],
+      "thermodynamic_expected": -6773652055808.251,
+      "relative": 5.565879633850912e-07,
+      "step_relative": 7.428172648822293e-07
+    },
+    {
+      "x": -6.0,
+      "T": 1500.0,
+      "y": 1e-07,
+      "affinity": 95.25532404048671,
+      "free_energy_derivative_per_y": [
+        -10557733186721.8,
+        -10557695224761.963
+      ],
+      "thermodynamic_expected": -10557740129055.652,
+      "relative": 4.253210738380808e-06,
+      "step_relative": 3.5956520404794404e-06
+    }
+  ],
+  "EOS_calls": 46,
+  "seconds": 1.194380378,
+  "scope": "Fixed rho,T,other ionic inventories and molecule fractions; native (du-Tds)/dy equals -nH*k*T*lambda_H. Checks the conjugate affinity used in the inverse rate, not a microscopic Milne derivation."
+}

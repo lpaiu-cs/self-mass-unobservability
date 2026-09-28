@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/def_retained_native_return.py", line 380, in <module>
+    execute(stage,initialized);initialized=True
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/def_retained_native_return.py", line 356, in execute
+    elif action=='bank':bank()
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/def_retained_native_return.py", line 281, in bank
+    ns=dict(vars(old),OUT=PHOTON,Response=collision.Coefficients,signal=NO_ALARM);exec(compile(s,__file__,'exec'),ns);ns['bank']()
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/def_retained_native_return.py", line 26, in bank
+    assert not OUT.exists()
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/def_retained_native_return.py", line 73, in atomic
+    p=Path(path);s=io.BytesIO();saver(s,*args,**kw);tmp=p.with_suffix('.saving');tmp.write_bytes(s.getbuffer());tmp.replace(p)
+  File "/home/lpaiu/.local/lib/python3.10/site-packages/numpy/lib/_npyio_impl.py", line 763, in savez_compressed
+    _savez(file, args, kwds, True, allow_pickle=allow_pickle)
+  File "/home/lpaiu/.local/lib/python3.10/site-packages/numpy/lib/_npyio_impl.py", line 796, in _savez
+    format.write_array(fid, val,
+  File "/home/lpaiu/.local/lib/python3.10/site-packages/numpy/lib/format.py", line 759, in write_array
+    fp.write(chunk.tobytes('C'))
+  File "/usr/lib/python3.10/zipfile.py", line 1158, in write
+    data = self._compressor.compress(data)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_atmosphere_spectrum.py", line 18, in timeout
+    def timeout(*_):raise TimeoutError('Registered phase112 wall-time cap')
+TimeoutError: Registered phase112 wall-time cap

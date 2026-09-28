@@ -1,0 +1,38 @@
+{
+  "classification": "Proven",
+  "missing_second_order_term": "h^2/2 * (F_g G_y) F for a source-local W=F_y, evaluated at the starting state",
+  "linear_symbolic_control": true,
+  "nonlinear_control": [
+    {
+      "steps": 16,
+      "partial_operator_error": 0.0038153581733857134,
+      "residual_corrected_error": 0.00012835253661822033
+    },
+    {
+      "steps": 32,
+      "partial_operator_error": 0.0018717651735937757,
+      "residual_corrected_error": 3.245337197849141e-05
+    },
+    {
+      "steps": 64,
+      "partial_operator_error": 0.0009269923022910131,
+      "residual_corrected_error": 8.160941404489197e-06
+    },
+    {
+      "steps": 128,
+      "partial_operator_error": 0.00046128486841817695,
+      "residual_corrected_error": 2.0463119506652916e-06
+    }
+  ],
+  "residual_corrected_error_ratios": [
+    3.9549830662677037,
+    3.9766701376681066,
+    3.9881218510383682
+  ],
+  "passed": true,
+  "candidate_formula": "d=h phi1(hW) F(y); y_next=y+d+h phi2(hW)[F(y+d)-F(y)-Wd]",
+  "scope": "Classical local Taylor order for smooth finite-dimensional reduced functions and the stated controls. The complete F must include the algebraic structure response in a consistent independent-variable chart. No uniform stiff bound, EOS/GR accuracy, positivity or actual corrected stellar path is established.",
+  "stellar_candidate_implemented": false,
+  "related_method_source": "https://doi.org/10.1137/080717717",
+  "source_boundary": "The cited exponential Rosenbrock work uses flow linearization and its own order assumptions; its higher-order theorems are not transferred to the inexact stellar operator."
+}

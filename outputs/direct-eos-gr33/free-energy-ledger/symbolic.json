@@ -1,0 +1,19 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "identities": [
+    "Hessian_n of ideal translational term is kT*diag(1/n).",
+    "Fixed-temperature linear binding/statistical/PL terms have zero species Hessian.",
+    "Source PL bookkeeping leaves exactly one PL term; the traced ground-state MDH term excludes it.",
+    "Zero species Hessian does not imply zero temperature gradient or mixed derivative."
+  ],
+  "conditional_coverage": "For the declared fixed-temperature, fixed-volume, positive-support, differentiable finite model with exactly the listed free-energy terms, all nonzero species-Hessian contributions are the ideal, electron/exchange, Coulomb, MDH and excitation terms.",
+  "unresolved": [
+    "Native derivative accuracy for partition approximations and cutoffs",
+    "Omitted-species and branch boundaries",
+    "Total gradient and coupled stationarity residual",
+    "Uniform curvature and derivative bounds over the relevant continuous domain",
+    "Physical model discrepancy and calibration",
+    "Self-consistent GR evolution and nonlinear observation closure"
+  ]
+}

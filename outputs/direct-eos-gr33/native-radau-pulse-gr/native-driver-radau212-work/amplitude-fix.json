@@ -1,0 +1,23 @@
+{
+  "classification": "Counterexample candidate",
+  "rows": [
+    {
+      "clock": 64,
+      "before": 1e-26,
+      "actual_driver_ETA": 1e-30,
+      "old_sha256": "1f8ab558ce938e675651f24a6e634e571e27806fea13defdc47431077a57e602",
+      "corrected_sha256": "cfbe46c552d661e9af82601a0a611c849f421037cb31f031cd3c9dde527b2fcf",
+      "all_physical_arrays_bit_identical": true
+    },
+    {
+      "clock": 128,
+      "before": 1e-26,
+      "actual_driver_ETA": 1e-30,
+      "old_sha256": "fcdf69bad953af3cfd42117887b32e93e1106701a96fd7209a916bd6f54ecdc3",
+      "corrected_sha256": "6ccb4978cc1c5ceeefe812fd9805020dd367bd0933ccee063a2ad173de34f144",
+      "all_physical_arrays_bit_identical": true
+    }
+  ],
+  "source_sha256": "eaba9a262b71dcaa47109d48ef651f55f3abea3ccefdf6052f16c0da422faece",
+  "change": "Replace the response coordinate normalization stored by mistake as the driver amplitude with the unchanged live incident.ETA. No physical trajectory, source readout, pulse or acceptance gate changes. The wrong consumer metadata and failed direct-driver audit are preserved."
+}

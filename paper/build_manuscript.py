@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import os
 import re
 import subprocess
 import sys
@@ -23,9 +24,10 @@ def preprocess_math(text: str) -> str:
 
 def pandoc_fragment(text: str) -> str:
     result = subprocess.run(
-        ["pandoc", "--from", "markdown+raw_tex", "--to", "latex"],
+        [os.environ.get("PANDOC", "pandoc"), "--from", "markdown+raw_tex", "--to", "latex"],
         input=text,
         text=True,
+        encoding="utf-8",
         capture_output=True,
     )
     if result.returncode != 0:
@@ -120,6 +122,7 @@ def build_tex(title: str, metadata: dict[str, str], abstract: str, body: str) ->
     status = metadata.get("status", "")
     repo = metadata.get("repository", "")
     date = metadata.get("date", "")
+    author = metadata.get("author", "")
 
     title_tex = title.replace("&", r"\&")
     repo_tex = repo.replace("_", r"\_")
@@ -148,8 +151,13 @@ def build_tex(title: str, metadata: dict[str, str], abstract: str, body: str) ->
 \\usepackage{{microtype}}
 \\usepackage[margin=1in]{{geometry}}
 \\usepackage{{amsmath,amssymb,bm}}
+\\usepackage{{graphicx,booktabs}}
+\\usepackage[numbers,sort&compress]{{natbib}}
 \\usepackage{{hyperref}}
 \\usepackage{{xurl}}
+\\setlength{{\\emergencystretch}}{{2em}}
+\\clubpenalty=10000
+\\widowpenalty=10000
 
 \\hypersetup{{
   colorlinks=true,
@@ -163,7 +171,7 @@ def build_tex(title: str, metadata: dict[str, str], abstract: str, body: str) ->
 }}
 
 \\title{{{title_tex}}}
-\\author{{}}
+\\author{{{author}}}
 \\date{{{date}}}
 
 \\begin{{document}}
@@ -175,14 +183,17 @@ def build_tex(title: str, metadata: dict[str, str], abstract: str, body: str) ->
 
 {body_tex}
 
+\\bibliographystyle{{unsrtnat}}
+\\bibliography{{references}}
+
 \\end{{document}}
 """
     return tex
 
 
 def main() -> int:
-    title, metadata, abstract, body = parse_document(SOURCE.read_text())
-    OUTPUT.write_text(build_tex(title, metadata, abstract, body))
+    title, metadata, abstract, body = parse_document(SOURCE.read_text(encoding="utf-8"))
+    OUTPUT.write_text(build_tex(title, metadata, abstract, body), encoding="utf-8")
     print(f"Wrote {OUTPUT}")
     return 0
 

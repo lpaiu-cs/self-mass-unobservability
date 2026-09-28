@@ -1,0 +1,46 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "39341e99f",
+  "claim": "Resolve the cell15-dominated material time mismatch by integrating the known H collision source over each actual Radau stage interval, then applying the same paired source to both photon and gas equations.",
+  "decision": "User criterion: scientific value is whether the final-charge conclusion survives on the SAME coupled solution after its dominant error is resolved. Source/prefix gates are intermediate prerequisites only. A passed unchanged4/8-step pair supports continuing the corrected coupled solution and final-charge readout with measured budgets; it does not establish that conclusion. If it fails, preserve it and do not expand clocks, horizon or schemes automatically.",
+  "method": "Exact moments0..3 of compact polynomial and separately stored linear Born U/Ut/Ux; combine with original linear photon history and affine collision coefficients. Fit q/qb/qe to the two Radau cumulative integrals. Unknown stages, operator, physical angular samples, stream forcing, gates and physical inputs stay unchanged.",
+  "restrictions": "This increment has zero prior motion and extra metric. Assert its known collision source equals C(t)H(t). Do not silently reuse this specialization for a later nonzero mechanical sweep.",
+  "gates": {
+    "time": 0.02,
+    "energy_H": 1e-08,
+    "stage": 1e-12,
+    "physical_stage_moment": 1e-13,
+    "port": 1e-12,
+    "source": 1e-12,
+    "moment_derivative": 1e-05
+  },
+  "budget": {
+    "actions": {
+      "prepare": 30,
+      "inspect": 60,
+      "check": 90,
+      "pilot": 240,
+      "finish": 30
+    },
+    "total_action_seconds": 450,
+    "CPU_threads": 1,
+    "virtual_GiB": 3
+  },
+  "forecast": "The actual168pair used84.84action seconds and2.412GB peakRSS. Added analytic source moments can increase work and live arrays;240s is a bounded pilot cap, not measured production speed. Reuse both stage coefficient objects and release each clock model. No full-horizon computation admitted.",
+  "inputs": "Same531cells8angles152frequencies64/128 clocks,17background knots,primary plus finite Born and original0.214652ms prefix. No native roots or new background.",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/integrate_native_collision_source.py": "50cae0c9ce2a10458b9970a647139424fe57705cd1744064ba9d83ebcf840b35",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/solve_native_radau_transfer.py": "cade2ee551d8c9b443f283c8055e3bfb4641c1aa550d19c87b0f77c75abff44e",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/apply_native_conservative_redshift.py": "0ad6876eecf7c828bc26e473ab3bc5080cbee835809be97d0506a75884943ce1",
+    "native-radau-transfer168-work/result.json": "84fd04dbc29a876bc29bd78b1f1a6bf7bb1c23d100b6b38cd2d5174e56e19187",
+    "native-radau-transfer168-work/error-profile.json": "07e7a975fd503ea60a6c47217dc5bc5e753cae5236785e39df6f617cf6919e5c",
+    "native-radau-transfer168-work/sweep-0/photons/steps-128-reference-128.npz": "5d2b1936e44617760120a61ca6445a044ad0b91c0a4c6799b59f51832adc2678",
+    "native-radau-transfer168-work/sweep-0/photons/steps-64-reference-128.npz": "5d2b1936e44617760120a61ca6445a044ad0b91c0a4c6799b59f51832adc2678",
+    "native-radau-transfer168-work/sweep-0/material/steps-128-reference-128.npz": "dcb46e493c360e33ac6df6c6e7bb4e5d7cc80e218006a1fbcc08033d6926580f",
+    "native-radau-transfer168-work/sweep-0/material/steps-64-reference-128.npz": "76e5a3c54e5f5e2ed88a9c3957903569db4397d4088898f4ce6f4729124359d4",
+    "native-radau-transfer168-work/normalization.json": "820244d5d23554811c792b52a45a3e28317392019f5aac7d8733eeb3b4d28706",
+    "native-radau-transfer168-work/photon-conservation-plan.json": "248525a3b9808f00f193c48d9739000a1c32eea1cf8197cf8c3ad8b939a0bb2d",
+    "native-radau-transfer168-work/lift-plan.json": "6daf610a5bbe5c19923d650f7da9fdb763edf0bedd4fd5ea0c3a301b1805913e",
+    "native-radau-transfer168-work/primitive-plan.json": "b6a2230645d90f6ef1f15b83689e5697e6640f6943c88347cfdaae04983c2c36"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "classification": "Proven",
+  "n_fake": 128,
+  "native_delay_unit": "seconds",
+  "reported_unit": "microseconds",
+  "preliminary_audit_correction": "초 단위 출력에 중복 적용했던 86400 배율을 제거했다. 원시 live.npz는 변경하지 않았다.",
+  "components": {
+    "geometric": {
+      "max_difference_us": 3.552713678800501e-09,
+      "rms_difference_us": 3.61888430622384e-10,
+      "twice_minus_twice_max_us": 3.552713678800501e-09
+    },
+    "einstein": {
+      "max_difference_us": 0.00448652315299114,
+      "rms_difference_us": 0.00265260187227589,
+      "twice_minus_twice_max_us": 3.552713678800501e-09
+    },
+    "shapiro": {
+      "max_difference_us": 7.652230425377916e-07,
+      "rms_difference_us": 7.243331616463157e-07,
+      "twice_minus_twice_max_us": 6.776263578034403e-15
+    },
+    "aberration": {
+      "max_difference_us": 5.1285197978287716e-17,
+      "rms_difference_us": 1.8913146917053958e-17,
+      "twice_minus_twice_max_us": 5.1285197978287716e-17
+    }
+  },
+  "interpretation": "다른 해의 방출 시각을 포함한 모의 출력 차이이며 같은 시각의 대수 항만 비교한 값은 아니다."
+}

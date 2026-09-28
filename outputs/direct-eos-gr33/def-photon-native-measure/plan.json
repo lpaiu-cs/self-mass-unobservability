@@ -1,0 +1,94 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "48d04e7",
+  "claim": "Recover source-grid photon absorption/scattering without fitting opacities to means and connect its absorptive LTE Jacobian to the same matter EOS.",
+  "reassessment": "The two existing temperatures are development data: restoring the known reduced-energy grid removed their Planck integral mismatch. Use the published seven grid segments, validate every printed energy interval, and test two newly requested temperatures before accepting the reader.",
+  "source_grid_URL": "https://arxiv.org/html/1203.5832",
+  "source_grid_table": 1,
+  "source_grid_segments": [
+    [
+      0,
+      1,
+      800,
+      9600
+    ],
+    [
+      12,
+      1,
+      200,
+      1600
+    ],
+    [
+      20,
+      1,
+      100,
+      1000
+    ],
+    [
+      30,
+      1,
+      10,
+      700
+    ],
+    [
+      100,
+      1,
+      1,
+      900
+    ],
+    [
+      1000,
+      10,
+      1,
+      900
+    ],
+    [
+      10000,
+      100,
+      1,
+      200
+    ]
+  ],
+  "gates": {
+    "native_gray_relative": 0.001,
+    "printed_energy_interval_score": 1,
+    "weight_sum_absolute": 1e-11,
+    "repartition_relative": 1e-12,
+    "coupled_energy_relative": 1e-10,
+    "entropy_growth": 1e-10,
+    "coupled_time_order_min": 1.8,
+    "finest_difference_relative_initial": 0.001
+  },
+  "discrete_model": "One positive absorption/scattering value per native spectral node. Frequency cells are native-node Voronoi bins, with endpoint-node extension at the low/high ends. Integrate blackbody bin weights directly; no opacity or weight calibration to a native mean. This defines a finite spectral candidate, not a continuum certificate.",
+  "coupled_model": "Homogeneous absorptive LTE tangent at each queried native temperature, exact submitted surface composition/density and native gas-only heat capacity. No scattering gain is invented. Evolve the material plus all spectral photon energies for eight harmonic absorption times with SDIRK2 at 16/32/64 steps.",
+  "budget": {
+    "fresh_physical_queries": 2,
+    "forecast_network_seconds": 7,
+    "hard_network_seconds": 60,
+    "per_query_seconds": 20,
+    "offline_hard_seconds": 120,
+    "native_EOS_calls": 4,
+    "CPU_workers": 1,
+    "GPU": false,
+    "new_stellar_steps": 0,
+    "automatic_expansion": false
+  },
+  "bindings": {
+    "verification/def_photon_native_measure.py": "b2fcd1b59febb12c5900358f68167b2830975b44308950c97a09ac1d8243d925",
+    "verification/def_photon_loss_bounds.py": "591c6345aaa06f9b2c30f2f7e5ba9a926f4056b1c2cf3876a4b95200eee8403a",
+    "verification/def_photon_native_groups.py": "e6be475b48a3187542fde9926451ea527d997bcb7ec5b2091e39278a3ea7cd1a",
+    "verification/def_photon_matter_split.py": "0a31ed1aa86a84fe30a1aac4ef24a50cd72c9b17db4f4ca299606a55e7cfa967",
+    "/home/lpaiu/work/direct-eos-gr33/radiation-eos-split/gas.so": "6779b197aa500652e4db02363754f8b40c2c4eecd71b169714bfa02b188892df",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/libfree_eos_direct24_molecular_spectral.so.1.0.0": "195f3658eb0cc8fe3447c6b690f246b5a4fb770bd8ffa764d19248fec857ec50",
+    "outputs/direct-eos-gr33/def-photon-native-groups/plan.json": "a7fc7c591c2ced078629cdc7ad742ef8df8584bff109f8e71442c8100c2e9b17",
+    "outputs/direct-eos-gr33/def-photon-native-groups/result.json": "375a76fe253b87f66ab83521460241f775d665f1b8ba964f0cebcde2b49f4dfb",
+    "outputs/direct-eos-gr33/def-photon-native-measure/requests.json": "b50251828d648b982cbbef543dc1629517e85df9acd2954c4a0efab861ccb7a8",
+    "outputs/direct-eos-gr33/def-photon-native-measure/lanl-tops-form.html": "b5f1093f7912a1842803c411f375e86db6c21af3d6d9074a1c25a936211ef9d5",
+    "outputs/direct-eos-gr33/def-photon-native-groups/surf1000T0015-table.txt": "ef73007d5df7425b31dede7096f5abfd4295d3b5ff7e42847c869b377dc30183",
+    "outputs/direct-eos-gr33/def-photon-native-groups/surf1000T0015.npz": "01c5f7e835e0f5cd7a3f733adaf4d7c1954f05e3e9dc31fa22f105b448b7cffe",
+    "outputs/direct-eos-gr33/def-photon-native-groups/surf1000T002-table.txt": "083ed060bbae6c52ab5b09dcc299ec581758c7e242921017fd0e10f348426314",
+    "outputs/direct-eos-gr33/def-photon-native-groups/surf1000T002.npz": "12c8153e890c9a4abf7e5ab669bfe2fbc9dd25995eb650a3bafc3b5446427334",
+    "outputs/direct-eos-gr33/def-free-surface-thermal/coefficients.npz": "8fa9ddf79c966965a3a3fa26e6b4c738f82eec0b6ad257e521ae37c9403fb46c"
+  },
+  "limits": "No actual-temperature interpolation, atomic/EOS population match, line-resolution/continuum certificate, general scattering redistribution, physical atmosphere or GR evolution. The original fine-group additivity failure remains preserved."
+}

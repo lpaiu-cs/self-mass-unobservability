@@ -1,0 +1,62 @@
+{
+  "classification": "Counterexample candidate",
+  "rows": [
+    {
+      "clock": 64,
+      "energy_terms_erg": {
+        "rest": 1.2125607854714997e-18,
+        "gas_nonrest": -3.983086658738831e-17,
+        "photons": 5.032927591759411e-17,
+        "inner_port": 1.29818844331994e-19,
+        "outer_port": 2.2192791603168585e-20
+      },
+      "total_erg": 1.1862981751612456e-17,
+      "homogeneous_cm": 9.802046857846417e-67,
+      "stored_mass_reproduction_relative": 3.4001051806105014e-14,
+      "exact80_input_sum_erg": "1.1862981751612684243916445145257437543641404930988403972259702501667589124979664E-17",
+      "summation_relative": 1.9155712954436763e-14,
+      "cancellation_condition": 7.71515263554618
+    },
+    {
+      "clock": 128,
+      "energy_terms_erg": {
+        "rest": 1.21256747123208e-18,
+        "gas_nonrest": -4.0055993302067994e-17,
+        "photons": 5.032114393272069e-17,
+        "inner_port": 1.2981062819049118e-19,
+        "outer_port": 2.2190978402999287e-20
+      },
+      "total_erg": 1.1629719708478264e-17,
+      "homogeneous_cm": 9.609309017998727e-67,
+      "stored_mass_reproduction_relative": 6.801753092006863e-14,
+      "exact80_input_sum_erg": "1.1629719708476549813973938925191872175128802838609464917293750072675461331345584E-17",
+      "summation_relative": 1.4748561753254433e-13,
+      "cancellation_condition": 7.888556956857093
+    }
+  ],
+  "clock_difference_terms_erg": {
+    "rest": -6.685760580377797e-24,
+    "gas_nonrest": 2.2512671467968045e-19,
+    "photons": 8.13198487341976e-21,
+    "inner_port": 8.216141502820982e-24,
+    "outer_port": 1.81320016929736e-24
+  },
+  "clock_difference_erg": 2.33262043134192e-19,
+  "relative_clock_difference": 0.020057408861207545,
+  "original_gate": 0.02,
+  "original_audit_passed": false,
+  "original_verdict_preserved": true,
+  "physical_final_charge_solved": false,
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false,
+  "seconds": 3.9514907279999534,
+  "peak_RSS_bytes": 498995200,
+  "bindings": {
+    ".phase257-mass-ledger.py": "25d744410c218136033982409638b608ae936ac63ddbcd75ee8a8088b2028565",
+    "native-material-exterior257-work/mass-ledger-plan.json": "63e20ada817674230aa953b816209422cac8867c49d08a92d832c26114cf743d",
+    "native-material-exterior257-work/full/result.json": "82ae068391328f5eee8298b4ee817e029c18cecc25db530665d379d8a8122e82",
+    "native-material-exterior257-work/full/audit.json": "65952c007f547064dc2ffa3552729f58ec2ba144d107eccab5ebd916f51ae0af",
+    "native-material-charge257-work/full/charge/gr/source-64.npz": "96e42722b0ce3db7062d45c3d1a0779ec36512976cd9135f23d3b365d0f6ebd8",
+    "native-material-charge257-work/full/charge/gr/source-128.npz": "94b8ea800dc5a59acb3a0e303ee0f5b70d9bd2dbfa476f77a1261704e13d160f"
+  }
+}

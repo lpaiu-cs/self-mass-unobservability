@@ -1,0 +1,26 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Expose the SAME finite PL/MHD level sum used by the gas EOS for H and He II. Read the exact final cumulative slot for each n; native slice assignment is nonrecursive. Preserve the first failed extraction. Optical survival interpretation remains separate.",
+  "budget": {
+    "build_seconds": 90,
+    "evaluation_seconds": 30,
+    "native_EOS_calls": 0,
+    "new_stellar_steps": 0,
+    "coupled_runs": 0
+  },
+  "gates": {
+    "native_cumulative_relative": 1e-12,
+    "positive_levels": true,
+    "derivative_relative": 1e-05
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_photon_eos_levels.py": "e3bda7179e8b4ad12a5532a5e95c7ebd34678f3001481a9572a410cb7cfb4581",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-eos-populations/eos-state.npz": "5d921d5857f41f8f58c63b282198a6ca6ecd64b4e7a816b1fa88cd6f48845614",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-eos-populations/levels-repaired/bridge.F90": "bc5cc5de70c8f815d24a95e7832a0d26a4377de552f38c0b3ff492c469445290",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-eos-populations/levels-repaired/qstar_calc.f90": "6c94e62090749c5942a3907b96accb78696cd81df8f366d5b3555059026d94bd",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-eos-populations/levels-repaired/qryd_calc.f90": "29409920c159c8d55b924e52accac7261c1fa4ba0c04d45862f9920a684995bb",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-eos-populations/levels-repaired/qryd_approx.f90": "ae4d3e34dc6e56acc4cde6a9e9989688d3498084e4df8d5fd79c58a38a3529e2",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-eos-populations/levels-repaired/plsum.f90": "1446c466e6297272fb71826fab352c46f2624dda8cc98ff375883b88baa943e9",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-eos-populations/levels-repaired/plsum_approx.f90": "7ce1908ec30961fef19461ae5ce5c8850e073dba7cca62a01a57c6e185b44041"
+  }
+}

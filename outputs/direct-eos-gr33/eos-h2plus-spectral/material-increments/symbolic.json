@@ -1,0 +1,9 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "path": "lnrho(z)=lnrho0+eta*z, lnT(z)=lnT0+theta*z, 0<=z<=1, fixed composition.",
+  "increments": "Delta u=integral[eta*u_lnrho+theta*cvT]dz; Delta P=integral P*(eta*chi_rho+theta*chi_T)dz. If the Gibbs relation holds, Delta s=integral[eta*(u_lnrho-P/rho)+theta*cvT]/T dz.",
+  "stable_density_energy": "Delta(rho*u)=rho0*[u0*expm1(eta)+exp(eta)*Delta u]. Rest mass and changing metric are handled by the separate material-rest-energy identity; this is the internal-energy density term.",
+  "conditional_error": "Four-point Gauss remainder on [0,1] has bound max|f^(8)|/1778112000 for each directional integrand f. Its existence/magnitude and native node errors are not provided by a 2/4 comparison. If a path crosses a branch jump, add each one-sided primitive jump; differentiating only smooth pieces need not reproduce the endpoint.",
+  "no_full_GR_evolution": true
+}

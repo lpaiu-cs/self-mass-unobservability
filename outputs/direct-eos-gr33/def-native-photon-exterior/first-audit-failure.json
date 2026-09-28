@@ -1,0 +1,7 @@
+{
+  "classification": "Counterexample candidate",
+  "error": "AssertionError: nonnegative ray delay at exact surface r=1",
+  "cause": "Cancellation in sqrt(r*r-1+mu0*mu0)-mu0 gives a small negative span at r=1; production FEM only queries r>1.",
+  "repair": "Rationalize the path span using (r-1)*(r+1)/(z1+mu0), exactly zero at r=1. Preserve finished production and verify equivalence on its sampling points.",
+  "elapsed_seconds_charged": 7
+}

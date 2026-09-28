@@ -1,0 +1,13 @@
+{
+  "classification": "Counterexample candidate",
+  "reason": "Original forecast639.05s exceeded the unchanged600s production cap; no full path ran. Preserve baseline three refinements; use one extended residual refinement for each tiny feedback correction, retaining the original1e-9 solve and1e-10 loop residual gates.",
+  "decision": "Run only if the same16 frequencies agree within2e-8 relative in each native correction field and heat increment, and the new40-percent-margin forecast is below600s. Keep total720s including both pilots. No additional optimization or automatic budget increase after failure.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_temperature_feedback_fast.py": "a9add3ae6c1109e90633695d48b07da2b210e7775b88fb26bb22deac448d0e94",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_temperature_feedback.py": "f2bebf74f9e7460b164320d36639e408ce5c949c54bb0465546b6415c11fd2ee",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-temperature-feedback/fast-transform-source.py": "88b0fa096b1f939d72e0a053e667217db89245e549b04be4a2fc94351d6af1ad",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-temperature-feedback/plan.json": "e8a7d5bbf9b7a4400e286ee3a719d8ad6cd9aafda976240519ebdce744107d48",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-temperature-feedback/pilot.json": "faa40a0e082809a25c7026033e9517b4e14c998c3d402ef419e6534f93f390ff",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-temperature-feedback/pilot.npz": "2996daac68bab2b714fe97d42304ec60ba53f584613aa5e3a21ec3f6b5ced511"
+  }
+}

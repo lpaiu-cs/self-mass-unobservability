@@ -1,0 +1,14 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "definitions": "A=exp(beta*phi^2/2), n_E=A^3*n_J, T_E=A*T_J, f_E(n_E,T_E,phi)=A^4*f_J(n_E/A^3,T_E/A,composition).",
+  "identity": "At fixed Einstein-frame baryon density, temperature and composition: d f_E/d ln A = epsilon_E-3P_E; d f_E/d phi = beta*phi*(epsilon_E-3P_E).",
+  "primitive_mapping": "P_E=A^4*P_J; epsilon_E=A^4*epsilon_J; specific total energy per conserved baryon mass scales as A. The nuclear rest-energy contribution must scale along with thermal energy.",
+  "controls": [
+    "Symbolic arbitrary differentiable free energy.",
+    "A=1 exact identity.",
+    "Radiation free energy has zero scalar trace source.",
+    "Cold rest-mass gas has a nonzero trace source."
+  ],
+  "implementation_boundary": "EOS frame map only. Radiation/conduction constitutive transport, metric/scalar dynamics, boundary matching and conservative time discretization still require consistent coupling. Do not merely add a scalar body force while holding rest energy fixed."
+}

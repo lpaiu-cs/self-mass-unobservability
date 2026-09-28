@@ -1,0 +1,73 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "98baf6e",
+  "objective": "Use the same repaired 24-element EOS in GR constraints and fresh native reaction inputs, then advance physical transport and the remaining full original closure goal.",
+  "inputs_sha256": {
+    "outputs/structured-enthalpy32/initial-state.npz": "149c037371ca90bb0f1599243f57c313a843d99a91714747b13469609ea85b58",
+    "outputs/structured-enthalpy32/direct-ions/full-integral-mixture-control.json": "9a9dcc8f443fbcbeec9a5ac0c244117decafead451dddc2278ec0b18cb963b10",
+    "outputs/structured-enthalpy32/direct-ions/full-integral-mixture-control.npz": "ac3f5e3688b352ea6f5d6e27bb0cd5b29c66a3da3cca245412d28d4c6453c545",
+    "outputs/structured-enthalpy32/direct-ions/full-integral-build.json": "09a117e64bd62d13740b28b2237e203e527d7b4b052ae5dbeedca7d9d824f45a",
+    "verification/direct_eos_gr.py": "5709a4cbf5830de09001481813617d43ee2c935a0dff3cd813110d73a7066fdf"
+  },
+  "sequence": [
+    "Pressure/entropy inverse and call-history controls with the new EOS",
+    "Recompute GR at fixed baryon cells and nuclear abundances using new reference entropies",
+    "Reevaluate the native reaction vector with the same new EOS auxiliaries",
+    "Recompute thermal coordinates and advance nonlinear transport and GR time paths"
+  ],
+  "initial_state": "Keep old physical rho_B,T,X only to define the new EOS reference entropy. The inherited geometry is an initial guess, not already a new GR solution. No equality of old and new physical entropy is assumed.",
+  "GR": {
+    "points": 17,
+    "subdivision": 4,
+    "interface_tolerance": 1e-08,
+    "baryon_masses_fixed": true,
+    "table_processes": 8,
+    "table_block_cells": 128,
+    "boundary": "The same finite photospheric pressure. Radius and gravitational mass are outputs of centre/surface matching; baryon mass is not retuned.",
+    "entropy_inverse": "abs(T*(s-s_target)) <= max(2 erg/g,32 ulp(abs(H)))"
+  },
+  "controls": {
+    "inverse_log_density": 1e-10,
+    "known_entropy_log_temperature": 1e-10,
+    "call_history_bitwise": true,
+    "auxiliary_finite_log_steps": [
+      5e-05,
+      2.5e-05
+    ],
+    "auxiliary_derivative_relative": 0.001
+  },
+  "physical_EOS_certified": false,
+  "continuous_EOS_certified": false,
+  "full_GR_evolution": false,
+  "policy": "Preserve prior paths and failures. A model-replacement mass shift is not temporal energy release. Isotope partition physics, physical plasma uncertainty, transport/atmosphere, scalar driving and observation closure remain required.",
+  "output_contract": {
+    "legacy_bridge_slots": 22,
+    "defined_native_slots": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      21
+    ],
+    "returned_slots": 21,
+    "removed_output": "gamma_e: unassigned by the disabled diffraction branch",
+    "effect": "Drop the undefined diagnostic only. Keep all thermodynamic, electron and sound-speed results and the original inverse/history criteria.",
+    "sound_squared_return_index": 20
+  }
+}

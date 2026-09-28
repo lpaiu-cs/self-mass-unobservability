@@ -1,0 +1,34 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Apply the actual updated simultaneous photon/material collision histories back to free material and compact GR; measure the remaining common energy/H waveform mismatch and the change in all four conserved material histories.",
+  "reuse": "Same updated531-cell background,EOS banks,GR/lapse,shared fluxes and three64/128 paths. Retain the2*T deep kinetic stress and established donor/precision checks. No physical background or completed photon replay.",
+  "budgets": {
+    "pilot_seconds": 45,
+    "production_wall_seconds": 350,
+    "CPU_processes": 3,
+    "threads_each": 1,
+    "total_virtual_memory_GiB": 6,
+    "source_seconds": 75,
+    "GR_seconds": 120
+  },
+  "forecast": "Use completed Phase133 raw-call counts including late CFL work with newly measured concurrent prefix seconds/raw-call;2x maximum plus existing overhead must fit350s.",
+  "gates": {
+    "owner": 1e-08,
+    "conservation": 1e-08,
+    "directional": 0.002,
+    "time": 0.02,
+    "background": 0.02,
+    "pressure": 0.002,
+    "GR_quadrature": 0.002,
+    "GR_independent": 1e-09
+  },
+  "interpretation": "A measured small waveform mismatch is not a universal contraction constant. Preserve incomplete fixed-point status and all exterior/floor/EOS conditions; do not repeatedly iterate solely to acquire another passing record.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_updated_joint_feedback.py": "cd4fb3ab49d21b351c8107cae9db4d75375cf569719c920ff075bc0d49195cb8",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_updated_joint_feedback.py": "d576b977693d273c0acd0cabd98bb87049e4fbff4019d40df21dddf4a27f57fe",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_updated_material_return.py": "8fa54ab1fcfa07f0e852905dbb565fe1bf5029b0ba32086e26dbcac48722e8d0",
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_updated_material_return.py": "edf36b27bd05330c7677811291f78226a9dbb2444c68f0cac98c0bf2a2363e01",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/audit.json": "b7455a943e136e689f092aba84cf2332f94c1fcb42acfbe9bca52cab5f574db2",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/audit.json": "51862de343dfe0f30d4552099beac17d44c0b0b40aa7f30b55f72b507fc0ea2c"
+  }
+}

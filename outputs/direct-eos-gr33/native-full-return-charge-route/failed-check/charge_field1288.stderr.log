@@ -1,0 +1,40 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/read_full_return_charge.py", line 107, in <module>
+    try:execute(action)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/read_full_return_charge.py", line 81, in execute
+    elif part=='charge' and verb in charge.FIELDS:charge.field(verb)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/read_compensated_return_charge.py", line 72, in field
+    bind(base.endpoint.initialize,OUT=worker)()
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/return_resolved_joint_history.py", line 22, in initialize
+    FunctionType(metric.initialize.__code__,dict(metric.initialize.__globals__,OUT=OUT))()
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/return_joint_gr_geometry.py", line 27, in initialize
+    prior.run.prior.OUT=OUT;prior.run.prior.initialize()
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_full_material_front.py", line 59, in initialize
+    prior.OUT=OUT;prior.initialize();parent=owner.Model.run
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/resolve_full_material_front.py", line 26, in initialize
+    prior.OUT=OUT;prior.initialize();owner=prior.Model.run
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/couple_full_incident_fluid.py", line 75, in initialize
+    joint.OUT=OUT;joint.initialize();Parent=joint.Model;install_geometry()
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/couple_native_fluid_radau.py", line 98, in initialize
+    previous.OUT=OUT;previous.paths=paths;previous.initialize();Parent=previous.run.c.Response
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/return_native_pressure_reciprocity.py", line 27, in initialize
+    engine.initialize()
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/resolve_native_material_flux_tangent.py", line 94, in initialize
+    face.paths=paths;face.tangent=tangent;face.initialize()
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/resolve_native_material_face_response.py", line 127, in initialize
+    run.original.paths=paths;run.paths=paths;BASE_INIT();Parent=run.c.Material
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/return_native_pressure_matter.py", line 41, in initialize
+    original.OUT=OUT;original.METRIC=OUT/'metric';original.install();original.initialize(1)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/apply_native_conservative_redshift.py", line 121, in initialize
+    parent_initialize(sweep)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/return_native_mixed_gr.py", line 208, in initialize
+    reuse.initialize(sweep)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/solve_native_incident_self_gr.py", line 423, in initialize
+    coupled.OUT=OUT;coupled.paths=paths;original_initialize(sweep)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/solve_native_incident_reciprocal.py", line 42, in initialize
+    prior.initialize();Photon=base.Response;Matter=base.Material
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/solve_native_incident_material.py", line 22, in initialize
+    old_initialize();Parent=base.Material
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/solve_native_incident_lift.py", line 62, in initialize
+    begin=runner.index('    def record(t):');end=runner.index('    count=steps',begin)
+ValueError: substring not found

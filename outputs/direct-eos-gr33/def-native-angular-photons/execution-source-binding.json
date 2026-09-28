@@ -1,0 +1,72 @@
+{
+  "primary_execution_bindings": {
+    "outputs/direct-eos-gr33/def-native-angular-photons/pilot-8-32.json": {
+      "sha256": "9bf6f09012009c4376ad1579c62bc85bc944756c26c79ee6116f6294adac1abf",
+      "archived_source": "outputs/direct-eos-gr33/def-native-angular-photons/initial-producer.py"
+    },
+    "outputs/direct-eos-gr33/def-native-angular-photons/pilot-repaired-8-32.json": {
+      "sha256": "34f4f126481d03301f614f745f3d2229287544c01739a9d376e580a4aa9b8ad0",
+      "archived_source": "outputs/direct-eos-gr33/def-native-angular-photons/before-thermal-producer.py"
+    },
+    "outputs/direct-eos-gr33/def-native-angular-photons/pilot-thermal-8-32.json": {
+      "sha256": "3d965806c3249fe8ce55b0f94e7170cf8c9d5eaca006001431cb7695000feade",
+      "archived_source": "outputs/direct-eos-gr33/def-native-angular-photons/before-arithmetic-producer.py"
+    },
+    "outputs/direct-eos-gr33/def-native-angular-photons/angles-8-steps-64.json": {
+      "sha256": "3d965806c3249fe8ce55b0f94e7170cf8c9d5eaca006001431cb7695000feade",
+      "archived_source": "outputs/direct-eos-gr33/def-native-angular-photons/before-arithmetic-producer.py"
+    },
+    "outputs/direct-eos-gr33/def-native-angular-photons/stable-angles-8-steps-64.json": {
+      "sha256": "9dd745e0bcf10ba65343707dbcb5321b58436abefac9a8ff03f823af0ec6be74",
+      "archived_source": "outputs/direct-eos-gr33/def-native-angular-photons/before-time-repair-producer.py"
+    },
+    "outputs/direct-eos-gr33/def-native-angular-photons/stable-angles-8-steps-128.json": {
+      "sha256": "9dd745e0bcf10ba65343707dbcb5321b58436abefac9a8ff03f823af0ec6be74",
+      "archived_source": "outputs/direct-eos-gr33/def-native-angular-photons/before-time-repair-producer.py"
+    },
+    "outputs/direct-eos-gr33/def-native-angular-photons/stable-angles-16-steps-128.json": {
+      "sha256": "9dd745e0bcf10ba65343707dbcb5321b58436abefac9a8ff03f823af0ec6be74",
+      "archived_source": "outputs/direct-eos-gr33/def-native-angular-photons/before-time-repair-producer.py"
+    },
+    "outputs/direct-eos-gr33/def-native-angular-photons/second-order-pilot.json": {
+      "sha256": "93137ee2acc8f18a9c1ba16dcf62b94f6420176cf9224338c9078769383aacd0",
+      "archived_source": "outputs/direct-eos-gr33/def-native-angular-photons/final-executed-producer.py"
+    },
+    "outputs/direct-eos-gr33/def-native-angular-photons/second-order-angles-8-steps-64.json": {
+      "sha256": "93137ee2acc8f18a9c1ba16dcf62b94f6420176cf9224338c9078769383aacd0",
+      "archived_source": "outputs/direct-eos-gr33/def-native-angular-photons/final-executed-producer.py"
+    },
+    "outputs/direct-eos-gr33/def-native-angular-photons/second-order-angles-8-steps-128.json": {
+      "sha256": "93137ee2acc8f18a9c1ba16dcf62b94f6420176cf9224338c9078769383aacd0",
+      "archived_source": "outputs/direct-eos-gr33/def-native-angular-photons/final-executed-producer.py"
+    },
+    "outputs/direct-eos-gr33/def-native-angular-photons/second-order-angles-16-steps-128.json": {
+      "sha256": "93137ee2acc8f18a9c1ba16dcf62b94f6420176cf9224338c9078769383aacd0",
+      "archived_source": "outputs/direct-eos-gr33/def-native-angular-photons/final-executed-producer.py"
+    },
+    "outputs/direct-eos-gr33/def-native-angular-photons/neutral-support/result.json": {
+      "sha256": "34f4f126481d03301f614f745f3d2229287544c01739a9d376e580a4aa9b8ad0",
+      "archived_source": "outputs/direct-eos-gr33/def-native-angular-photons/before-thermal-producer.py"
+    },
+    "outputs/direct-eos-gr33/def-native-angular-photons/neutral-support/plan.json": {
+      "sha256": "ddff78aae7c05e78553ebd54a824395499a2c60144133d85e00a10d4c50fb757",
+      "archived_source": "outputs/direct-eos-gr33/def-native-angular-photons/neutral-support/failed-low-plane-producer.py"
+    },
+    "outputs/direct-eos-gr33/def-native-angular-photons/thermal-support/result.json": {
+      "sha256": "3d965806c3249fe8ce55b0f94e7170cf8c9d5eaca006001431cb7695000feade",
+      "archived_source": "outputs/direct-eos-gr33/def-native-angular-photons/before-arithmetic-producer.py"
+    },
+    "outputs/direct-eos-gr33/def-native-angular-photons/thermal-support/plan.json": {
+      "sha256": "3d965806c3249fe8ce55b0f94e7170cf8c9d5eaca006001431cb7695000feade",
+      "archived_source": "outputs/direct-eos-gr33/def-native-angular-photons/before-arithmetic-producer.py"
+    }
+  },
+  "executed_source_sha256": "93137ee2acc8f18a9c1ba16dcf62b94f6420176cf9224338c9078769383aacd0",
+  "current_source_sha256": "ee3da788b9519daa0b9b97793cc1ba2a7d2de4a53394e15d2830941426041aed",
+  "subsequent_change": "Only pass the remaining outer wall-time allocation to the nested run; no equations or acceptance gates changed. No numerical rerun required.",
+  "subsequent_change_diff": "--- \n+++ \n@@ -283,8 +283,10 @@\n     signal.alarm(0)\n \n \n-def run(prefix='',second_order=False):\n-    b=json.loads((OUT/'thermal-measured-budget.json').read_text());assert b['eligible'];signal.alarm(int(b['remaining_seconds']));start=time.monotonic();rows=[]\n+def run(prefix='',second_order=False,remaining=None):\n+    b=json.loads((OUT/'thermal-measured-budget.json').read_text());assert b['eligible']\n+    cap=b['remaining_seconds'] if remaining is None else min(b['remaining_seconds'],remaining)\n+    assert cap>0;signal.alarm(max(1,int(cap)));start=time.monotonic();rows=[]\n     for q,n in [(8,64),(8,128),(16,128)]:\n         row=Model(q).run(n,f'{prefix}angles-{q}-steps-{n}',second_order);rows.append(row)\n         if not row['passed']:break\n@@ -317,7 +319,7 @@\n         pilot='A new32step pilot measures nonlinear midpoint cost before the same three production paths. Total new run cap90s within the original120s transport allocation after observed previous costs below12s.',source_sha256=sha(__file__)))\n     pilot=Model(8).run(32,'second-order-pilot',True);forecast=pilot['seconds']*14*3\n     write(OUT/'second-order-budget.json',dict(pilot_seconds=pilot['seconds'],forecast_seconds=forecast,eligible=bool(pilot['passed'] and forecast<90-pilot['seconds'])))\n-    assert pilot['passed'] and forecast<90-pilot['seconds'];signal.alarm(max(1,int(90-(time.monotonic()-start))));run('second-order-',True)\n+    assert pilot['passed'] and forecast<90-pilot['seconds'];run('second-order-',True,90-(time.monotonic()-start))\n \n \n def repair_support(recover=False):\n",
+  "transient_diagnostic_hashes_archived": false,
+  "diagnostic_note": "Two diagnostic commands have recorded transient producer hashes; exact transient scripts were not separately archived. Their functions remain in the final executed source.",
+  "prior_owner_sha256": "a944fd0557f828f0acb722538e589f0b47d5701b88b2046fa239c41218211c60",
+  "current_owner_sha256": "9631f1a84d0800b6127eb5ed90a924b629cb382ac563b27ee5a26948bd91d3fb"
+}

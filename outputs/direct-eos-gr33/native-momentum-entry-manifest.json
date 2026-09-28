@@ -1,0 +1,104 @@
+{
+  "classification": "Counterexample candidate",
+  "momentum_audit": {
+    "classification": "Counterexample candidate",
+    "exact_saved_rhs_and_residual": true,
+    "old_linear_relative": 1.7944029943355525e-14,
+    "precise_momentum_linear_relative": 4.8741439070884e-14,
+    "linear_physical": [
+      2.0310400592099698e-19,
+      2.581031908554668e-20,
+      4.665518739048564e-21,
+      4.0185304011270216e-30
+    ],
+    "momentum_arithmetic_effect": 5.587227623198545e-14,
+    "precision_difference": 0.0,
+    "actual_stage_relative": 9.950524852110494e-12,
+    "actual_stage_physical": [
+      1.2434509038429893e-17,
+      5.79762077385786e-19,
+      2.3296135183248308e-20,
+      2.224441243582539e-20
+    ],
+    "linear_gates_passed": false,
+    "new_Krylov_iterations": 0,
+    "new_physical_steps": 0,
+    "physical_stage_accepted": false,
+    "final_charge_conclusion": "unadjudicated"
+  },
+  "restart": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "exact_saved_state_and_all_histories": true,
+    "new_physical_steps": 0,
+    "accepted_actual_steps": 115,
+    "remaining_coarse_substeps": 4,
+    "remaining_fine_substeps": 16,
+    "symbolic": {
+      "classification": "Proven",
+      "passed": true,
+      "scope": "Unchanged Radau moments0..2."
+    }
+  },
+  "entry_evidence_only": true,
+  "terminal_evolution_result_included": false,
+  "original_failures_preserved": true,
+  "actual_same_joint_solution_GR_computed": false,
+  "physical_final_charge_solved": false,
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false,
+  "sha256": {
+    "verification/repair_native_momentum_residual.py": "41f372f5875a74bac0ea1480593b35994f5aed2fca555809985f62d31980067b",
+    "verification/continue_precise_momentum.py": "8acec5427039af180387227f006a95b66a84ff5277bd2d57a55bfbc9f3035a26",
+    "notes/REQUEST209_210_ACTUAL_MOMENTUM_CONTINUATION_KO.md": "fa39cf37275b0c9432b925c930ef078baf40c0186aa6552e390a19d4edf5c606",
+    "docs/model-definition.md": "a115e0748ef125b27b4af61527eb2787521094c0e5d3cac640c7b9de668b7854",
+    "docs/observable-targets.md": "a1c6ff1b5c05b3a1c5f46ba44a118fcaa1845cdc71e91f197830735906c0150b",
+    "docs/adiabatic-limit.md": "caf3dcce7cd65fdd7931a371ec861734cfcb851c6c1146a7c99f4e2dfecf66e9",
+    "docs/nonadiabatic-regime.md": "73ba60d935bdbbf8d002b54b9ca488636f3c44ef7a63f5f1d7e8bf16a394a1d5",
+    "docs/failure-ledger-dynamic-chi.md": "1eef05191fdfc889ce4732bdc538fbdb66f047d4d90aac62cfe9fb271353472d",
+    "docs/dynamic-charge-completion.md": "8ea5d85d5be2077de4652d1ddaf30feee01b773be77fc1e2044480c032b1fac9",
+    "outputs/direct-eos-gr33/native-momentum-entry/entry-result.json": "884c2b3fcd8774dcd7f4e9bac6d535a041541b5004ec35c533c46065b31b7e08",
+    "outputs/direct-eos-gr33/native-momentum-entry/followthrough-producer.py": "0c6a89a5c9988c5588b501f9f148b445f3df2cba63befe499f74860ea060a7c6",
+    "outputs/direct-eos-gr33/native-momentum-entry/previous-publication-producer.py": "c83b58d55ad5dbf25094c2566a3455fc90359082387d7a45c96b1b977f41bba8",
+    "outputs/direct-eos-gr33/native-momentum-entry/publication-helper.py": "f5153c2b02c6b171dcb35b2d7028cf6666b3ac688f9cc6dc8b0e105c1dd881aa",
+    "outputs/direct-eos-gr33/native-momentum-entry/publication-producer.py": "731c162b761520665e913117707aedcad9087333dbaf9b32ede5d2c9392c6423",
+    "outputs/direct-eos-gr33/native-momentum-entry/publication.json": "97c7ae2a78363d26d23b62d6b2c7a2687d386a407e951f97b95b90b8b8659523",
+    "outputs/direct-eos-gr33/native-momentum-entry/native-momentum-continuation210-work/check-receipt.json": "40b6da97c43c76ba054eb63056eb7e121ea107f52e237cd39bdb3464acfca108",
+    "outputs/direct-eos-gr33/native-momentum-entry/native-momentum-continuation210-work/controller-start.json": "fce10f58cee0b7df673a21e7d30948de46aa85cfd2b3ef2b1f62a8638e045a8a",
+    "outputs/direct-eos-gr33/native-momentum-entry/native-momentum-continuation210-work/plan.json": "4b787a8627331f80f71f77aebbcdda8a94873b099a18bb31ab4d2c945b258ed6",
+    "outputs/direct-eos-gr33/native-momentum-entry/native-momentum-continuation210-work/prepare-receipt.json": "5990c54a9cf10d9f6b77c16b2273184f5851f58f1b74de4732222ab250934598",
+    "outputs/direct-eos-gr33/native-momentum-entry/native-momentum-continuation210-work/restart-check.json": "c409320c943379cd023443161902d45855c8fb789f10fde7c2f8db2944cda1a1",
+    "outputs/direct-eos-gr33/native-momentum-entry/native-momentum-continuation210-work/symbolic.json": "8c7080ab487a3ead128a213649dcb66a4ab2dfb42a363dab4f3bfeeddc6b3872",
+    "outputs/direct-eos-gr33/native-momentum-entry/native-momentum209-work/check-receipt.json": "0ee556812eba5714c7e6d0aeb51ddec914eaa7fae9674618b6c7c6bae5ba2b3c",
+    "outputs/direct-eos-gr33/native-momentum-entry/native-momentum209-work/plan.json": "6781b8fba1019185531c51bc63a6129191102abb1f46da5ed7b14113f8b45024",
+    "outputs/direct-eos-gr33/native-momentum-entry/native-momentum209-work/prepare-receipt.json": "72204ffe14a6f900c4591e675a3ee938fb8c0c86a2463bdef2a16218b15dc547",
+    "outputs/direct-eos-gr33/native-momentum-entry/native-momentum209-work/residual-comparison.npz": "4ada1a587d04a7decce2a091dd67d9e15e5d034f987aecf45612d424c22b623f",
+    "outputs/direct-eos-gr33/native-momentum-entry/native-momentum209-work/result.json": "b41dc5b49804523568205ac06801adf87452307e46ec716b328a42acec6bfb5a"
+  },
+  "document_prefixes": {
+    "docs/model-definition.md": {
+      "bytes": 259326,
+      "sha256": "d40a93b0515e6b9bfa14a360e8b369fe234839bf13cd26e5b05493a8ed0327d7"
+    },
+    "docs/observable-targets.md": {
+      "bytes": 250136,
+      "sha256": "2a5a111b8397534a2d421f6412c01ba1fe99e586cf930eb2076cba96a34ed3a7"
+    },
+    "docs/adiabatic-limit.md": {
+      "bytes": 244582,
+      "sha256": "294c9befefc0165cc9a55ea273a0158863b46aa6485d0233a2e9eba68b0b1bb9"
+    },
+    "docs/nonadiabatic-regime.md": {
+      "bytes": 252972,
+      "sha256": "3c079292013044564df8a2da0caa6a888d35ac4e469b7809eac03e4e599dc835"
+    },
+    "docs/failure-ledger-dynamic-chi.md": {
+      "bytes": 290377,
+      "sha256": "6b76dfb1e5330557ee5ad70ef6693694689b15df01ab4c4f532e39566b60f96b"
+    },
+    "docs/dynamic-charge-completion.md": {
+      "bytes": 118418,
+      "sha256": "bf0a40974662b9d882fb84b930b2c697207ddbd416a4937a19aeed88d2d11edc"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "f305247",
+  "bindings": {
+    "verification/lanl_tops_outer_audit.py": "b900108f8ecc7621c57c8ef61b8d5cf0f9f9961157196d39143f9dbf04911737",
+    "outputs/direct-eos-gr33/lanl-tops-outer-spectra/manifest.json": "f486d6cb36badf0f95185d35410ac158673814e4c8c1103fe1e6cc9bb3c95ef2",
+    "outputs/direct-eos-gr33/lanl-tops-cutoff-reader/manifest.json": "b660702105000a37d0fb1ba3ce5741772a4a5645cf9c5624abdf35a7449e0e4a"
+  },
+  "acceptance": "Same exact decimal input, finite positive/nonflat spectrum and total=absorption+scattering printing interval gates as earlier. Gray means must be bitwise equal to the separately retrieved outer gray table at each temperature. Vacuum mean quadrature against these ON spectra is a finite diagnostic because gray ON/OFF agree at this outer state. Require Simpson/trapezoid means and mutual differences below the same 1e-3 relative gate; preserve any failure.",
+  "mean_relative_tolerance": 0.001,
+  "boundary": "Successful single-temperature queries do not erase failed paired queries or certify an LTE atmosphere. No parameter changes and no high-density cutoff reinterpretation."
+}

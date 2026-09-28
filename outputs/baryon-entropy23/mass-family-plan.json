@@ -1,0 +1,12 @@
+{
+  "classification": "Counterexample candidate",
+  "fixed_material_result_sha256": "d39dc21b2f06e1bc102858c6b5c4cf5dfedf3b35a8e389df30cd296404e3268f",
+  "reason": "The fixed original baryon inventory determines a gravitational mass different from the specified numerical target. This is not an observational exclusion.",
+  "family": "Scale all cell baryon masses by a single positive factor, retaining their isotope fractions and entropy per baryon gram. Fit central pressure, optical radius and this scale, while imposing the target photospheric gravitational mass.",
+  "bounds": "Baryon scale within exp(-0.02) to exp(0.02); no extra temperature or entropy parameter.",
+  "primary_unchanged": true,
+  "normalized_material_profile_preserved": true,
+  "absolute_original_inventory_preserved": false,
+  "atmosphere": "Append and report the tiny atmosphere after the photospheric mass fit; require its mass contribution below the declared 1e-8 tolerance.",
+  "optical": "Evaluate retained-luminosity Teff after the fit; Teff/radius is not a fit target in this family, but retained luminosity and material template remain external assumptions."
+}

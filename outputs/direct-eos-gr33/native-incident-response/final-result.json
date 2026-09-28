@@ -1,0 +1,360 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "photon": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "rows": [
+      {
+        "classification": "Counterexample candidate",
+        "reference": 128,
+        "steps": 64,
+        "completed_steps": 64,
+        "new_steps": 60,
+        "seconds": 89.19847766800012,
+        "operator_point_seconds": 10.027498547000732,
+        "operator_points": 16,
+        "stepping_seconds": 77.4869429169994,
+        "energy_balance_relative": 3.1874484428058954e-09,
+        "species_balance_relative": 7.480580515051553e-10,
+        "linear_relative": 9.498692645272574e-13,
+        "max_Krylov_iterations": 9,
+        "frequency_moment_relative": 2.7177221799118727e-16,
+        "endpoint_photon_reference_energy_erg": 12.546434108225801,
+        "endpoint_material_reference_energy_erg": -8.33014539173567,
+        "endpoint_material_energy_L1_erg": 8.515523105672473,
+        "additional_material_motion_evolved": false,
+        "full_GR_feedback": false,
+        "final_charge_solved": false,
+        "passed": true
+      },
+      {
+        "classification": "Counterexample candidate",
+        "reference": 128,
+        "steps": 128,
+        "completed_steps": 128,
+        "new_steps": 120,
+        "seconds": 132.55058171600012,
+        "operator_point_seconds": 9.224306376000413,
+        "operator_points": 16,
+        "stepping_seconds": 121.8240354549996,
+        "energy_balance_relative": 3.1107363597744256e-09,
+        "species_balance_relative": 5.775885597952543e-10,
+        "linear_relative": 9.976763866746769e-13,
+        "max_Krylov_iterations": 7,
+        "frequency_moment_relative": 2.937778979036844e-16,
+        "endpoint_photon_reference_energy_erg": 12.544015492048192,
+        "endpoint_material_reference_energy_erg": -8.327893310116293,
+        "endpoint_material_energy_L1_erg": 8.51285901114467,
+        "additional_material_motion_evolved": false,
+        "full_GR_feedback": false,
+        "final_charge_solved": false,
+        "passed": true
+      }
+    ],
+    "time_comparison": [
+      0.00046197470162798854,
+      0.000606222386658637,
+      0.0002864836159500279,
+      0.00041080613733602303,
+      0.0004664146568667053,
+      0.0006072290075342388
+    ],
+    "seconds": 233.7501115419998,
+    "actual_external_GR_input_consumed": true,
+    "additional_material_motion": false,
+    "full_goal_complete": false
+  },
+  "material": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "rows": [
+      {
+        "classification": "Counterexample candidate",
+        "passed": true,
+        "steps": 64,
+        "reference": 128,
+        "completed": 64,
+        "substeps": 474,
+        "balance_relative": [
+          1.3381585840973187e-18,
+          3.9029314048435247e-19,
+          7.380544031926477e-18,
+          7.771514713095214e-17
+        ],
+        "directional": [
+          {
+            "time": 0.0017172155589643512,
+            "relative": [
+              1.2596859821460608e-06,
+              3.0982510647427932e-06,
+              1.7320096740273177e-06,
+              1.9876125751089284e-10
+            ]
+          },
+          {
+            "time": 0.0034344311179287023,
+            "relative": [
+              1.98463384047226e-11,
+              6.730402965036649e-07,
+              1.815818751845061e-08,
+              4.956022288984031e-13
+            ]
+          }
+        ],
+        "directional_relative": 3.0982510647427932e-06,
+        "forward_probe_indicator": 0.8826052686028858,
+        "maximum_true_relative_state": 9.233310531265444e-25,
+        "endpoint_sum": [
+          -0.3265149446669966,
+          1.0826903773288816e+36,
+          3.133527719990207e+28,
+          -1.7607268600962686e+35
+        ],
+        "endpoint_L1": [
+          1218744918460893.0,
+          1.0834303293553796e+36,
+          3.7894487107516565e+28,
+          2.6928845360372683e+35
+        ],
+        "endpoint_sum_physical": [
+          -3.265149446669966e-27,
+          10826903773.288816,
+          313.3527719990207,
+          -1760726860.0962687
+        ],
+        "endpoint_L1_physical": [
+          1.2187449184608931e-11,
+          10834303293.553797,
+          378.9448710751657,
+          2692884536.0372686
+        ],
+        "discard_physical": [
+          3.289665932847434e-27,
+          9.703096476381616e-09,
+          3.6658058429908376e-12,
+          3.569103150678567e-08
+        ],
+        "raw_owner_calls": 4603,
+        "seconds": 52.71765356900005,
+        "full_GR_feedback": false,
+        "final_charge_solved": false,
+        "worker_wall_seconds": 57.37964466600033,
+        "physical_branch_ratio": 4.030433971510044e-13,
+        "maximum_owner_error": 1.8890685044047918e-13,
+        "endpoint_probe_4_8_16": [
+          [
+            1.9846338404526317e-11,
+            6.730404491159804e-07,
+            1.815818748242277e-08,
+            4.956022288984035e-13
+          ],
+          [
+            9.932248418867121e-12,
+            7.579362367329268e-07,
+            1.3994522672985286e-08,
+            2.481339288002353e-13
+          ]
+        ]
+      },
+      {
+        "classification": "Counterexample candidate",
+        "passed": true,
+        "steps": 128,
+        "reference": 128,
+        "completed": 128,
+        "substeps": 926,
+        "balance_relative": [
+          6.279767596108288e-19,
+          1.3270070281296397e-18,
+          9.687139549842699e-18,
+          4.7606680408465914e-17
+        ],
+        "directional": [
+          {
+            "time": 0.0017172155589643512,
+            "relative": [
+              1.1313710350678668e-06,
+              2.622002671749193e-06,
+              1.5200449693992314e-06,
+              1.78689429335595e-10
+            ]
+          },
+          {
+            "time": 0.0034344311179287023,
+            "relative": [
+              7.772808817460696e-14,
+              7.871298479287713e-07,
+              1.760961129709149e-08,
+              4.375789395864267e-15
+            ]
+          }
+        ],
+        "directional_relative": 2.622002671749193e-06,
+        "forward_probe_indicator": 0.8850169752259838,
+        "maximum_true_relative_state": 9.590819136192085e-25,
+        "endpoint_sum": [
+          0.11891779280267656,
+          1.0826872498708573e+36,
+          3.1335291166399203e+28,
+          -1.7592913727676246e+35
+        ],
+        "endpoint_L1": [
+          1218737882518543.2,
+          1.0834284437279894e+36,
+          3.789415395016536e+28,
+          2.691844034566304e+35
+        ],
+        "endpoint_sum_physical": [
+          1.1891779280267656e-27,
+          10826872498.708574,
+          313.3529116639921,
+          -1759291372.7676246
+        ],
+        "endpoint_L1_physical": [
+          1.2187378825185434e-11,
+          10834284437.279894,
+          378.9415395016536,
+          2691844034.566304
+        ],
+        "discard_physical": [
+          -1.1776737110910368e-27,
+          8.690372091769042e-09,
+          3.5588923000353685e-12,
+          4.2327419122958046e-08
+        ],
+        "raw_owner_calls": 9007,
+        "seconds": 104.68865509900024,
+        "full_GR_feedback": false,
+        "final_charge_solved": false,
+        "worker_wall_seconds": 109.2080503660004,
+        "physical_branch_ratio": 4.3261728166947415e-13,
+        "maximum_owner_error": 1.8890685044047918e-13,
+        "endpoint_probe_4_8_16": [
+          [
+            7.772808817460646e-14,
+            7.871299230021362e-07,
+            1.760961146504718e-08,
+            4.375789395864269e-15
+          ],
+          [
+            2.53128784293242e-10,
+            4.724268701909554e-07,
+            1.1103153808180866e-08,
+            6.277546889034178e-12
+          ]
+        ]
+      }
+    ],
+    "seconds": 166.73571796499982
+  },
+  "sources": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "comparisons": {
+      "time": [
+        4.577466178840193e-05,
+        5.22671317339471e-05,
+        4.3162121514125094e-05,
+        0.0002691511265362737
+      ],
+      "stress_time": [
+        4.577466377353191e-05,
+        0.0001451209403937869,
+        4.577465988413329e-05,
+        0.00014470441721484465,
+        0.0005963868812827173,
+        0.0005998306529866489
+      ]
+    },
+    "paths": [
+      {
+        "steps": 64,
+        "reference": 128,
+        "conservation": 4.298808376431426e-14,
+        "pressure_probe": 2.2909094294189383e-10,
+        "legacy_material_sweep_comparison": null,
+        "energy_H_waveform_residual": [
+          1.0136350796477531,
+          0.0869984127463339
+        ]
+      },
+      {
+        "steps": 128,
+        "reference": 128,
+        "conservation": 2.7953867997321373e-14,
+        "pressure_probe": 1.508089029678373e-10,
+        "legacy_material_sweep_comparison": null,
+        "energy_H_waveform_residual": [
+          1.013642479497895,
+          0.0870186076290639
+        ]
+      }
+    ],
+    "seconds": 17.689909901999727,
+    "returned_photon_transfer_applied_to_material": true,
+    "coupled_fixed_point_verified": false,
+    "final_charge_solved": false
+  },
+  "compact_GR": {
+    "classification": "Counterexample candidate",
+    "controls": {
+      "time": 1.5099131857285518e-05,
+      "quadrature": 7.019370112338557e-16,
+      "independent": 4.0946499688180564e-15
+    },
+    "compact_return_endpoint": -2.536436922168223e-51,
+    "compact_return_maximum": 2.536436922168223e-51,
+    "incident_amplitude": 1e-30,
+    "endpoint_over_incident_amplitude": -2.536436922168223e-21,
+    "inverse_radius_residual": 4.5634806156158447e-07,
+    "actual_external_input_consumed": true,
+    "actual_free_material_response_evolved": true,
+    "passed": true,
+    "full_null_infinity_charge": false,
+    "complete_reciprocal_fixed_point": false,
+    "full_goal_complete": false
+  },
+  "audit": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "rows": [
+      {
+        "steps": 64,
+        "photon_reference_energy_erg": 12.546434108225807,
+        "material_reference_energy_erg": 313.3527719990207,
+        "outgoing_signed_energy_erg": -0.0197954684898283,
+        "free_material_substeps": 474
+      },
+      {
+        "steps": 128,
+        "photon_reference_energy_erg": 12.544015492048198,
+        "material_reference_energy_erg": 313.3529116639921,
+        "outgoing_signed_energy_erg": -0.01982668678459573,
+        "free_material_substeps": 926
+      }
+    ],
+    "source_identity_relative": 0.0,
+    "angular_port_relative": 1.9714608777368922e-16,
+    "material_conservation": 4.298808376431426e-14,
+    "accepted_photon_prefixes_reused": true,
+    "original_pilot_failure_preserved": true,
+    "claim": "Actual compact matter-mediated response to the external scalar packet, within the declared retained finite model.",
+    "full_goal_complete": false
+  },
+  "cost": {
+    "recorded_body_wall_seconds": 574.0445819239974,
+    "CPU_seconds": 494.8205698830001,
+    "peak_RSS_bytes": 2239442944,
+    "photon_production_seconds": 233.77999073399997,
+    "material_production_seconds": 166.752130546,
+    "CPU_threads": 1,
+    "virtual_GiB": 3,
+    "scope": "Recorded action bodies, including preserved failures. Excludes process imports, inspection, writing, publication/Git and the unreceipted first response-plan export. Not exact total task cost."
+  },
+  "contribution": "Loophole progress: a nonzero incident scalar/GR input actually drives coupled photons/thermal H, free material and a compact retarded scalar return.",
+  "complete_reciprocal_fixed_point": false,
+  "full_null_infinity_charge": false,
+  "orbital_benchmark": false,
+  "full_goal_complete": false
+}

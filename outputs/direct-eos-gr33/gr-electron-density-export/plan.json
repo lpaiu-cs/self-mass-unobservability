@@ -1,0 +1,12 @@
+{
+  "classification": "Proven",
+  "bindings": {
+    "verification/verify_electron_density_export.py": "49636de06d9fae1768b74f909a299471398602f21f59441fe074b5b8e7fe01d7",
+    "outputs/direct-eos-gr33/gr-electron-density-certificate/manifest.json": "2f910117b435f1d89dd485413dec3a0476732615755799e3b98554fdc671bf65",
+    "outputs/direct-eos-gr33/gr-electron-density-certificate/result.json": "768b76950b91c830213d07b80f49db025097a45613e3b09c120e001d1065dc5e",
+    "outputs/direct-eos-gr33/gr-electron-density-certificate/candidates.npz": "7de1b20138e44c3daba986b8591962a4586bc0cfe6dd5d1835b2792156b19254",
+    "outputs/direct-eos-gr33/gr-electron-density-certificate/plan.json": "e7042074347e10b352d4418b3e0e9a23dbff27b9882c5c39ef2d9fcd88e10b26"
+  },
+  "issue": "The mathematical raw interval bounds remain valid, but outward decimal rendering may make the exported interval wider than its raw width/error scalars. Audit the encoded interval itself and retain any original scalar inconsistency.",
+  "repair": "Keep every exported root and derivative enclosure unchanged. Expand only the corresponding scalar width, center-distance and finite-comparison budgets to contain those exact rational decimal endpoints. No root, EOS, arithmetic precision or science threshold change."
+}

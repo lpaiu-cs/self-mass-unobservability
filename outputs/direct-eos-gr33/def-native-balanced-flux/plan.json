@@ -1,0 +1,44 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "9418a4d9b",
+  "claim": "Remove the measured constant-current source and velocity cancellation from the actual native coupled evolution before using surface motion for photon pressure work.",
+  "change": "Analytic reference current plus deviations; factor source action after face differences. Identical p4 consistent mass, C1 source, fixed background and surface physics.",
+  "paths": [
+    "p4-8 pilot",
+    "p4-32",
+    "p4-64"
+  ],
+  "gates": {
+    "temperature": 0.02,
+    "velocity": 0.03,
+    "scalar": 0.03,
+    "linear_residual": 1e-09,
+    "local_heat_identity": 1e-09,
+    "uniform_debit_absolute": 0
+  },
+  "comparison": "Time refinement and saved Phase95 same-order trajectories. No new spatial-convergence verdict. Preserve the failed p4/p6 order control.",
+  "budget": {
+    "total_seconds": 180,
+    "CPU_threads": 1,
+    "memory_GB": 5,
+    "native_EOS_calls": 0,
+    "new_background_roots": 0
+  },
+  "stop": "Stop on local residual, tangent or measured budget failure. No degree, mesh, horizon, threshold or source-profile expansion.",
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "identity": "E=f0*t+e, f=f0+d, v=w-H*f. The transformed stage is exactly the original semidiscrete stage in exact arithmetic. Nonzero initial physical currents remain.",
+    "boundary": "This is a numerical-coordinate identity, not physical convergence or a moving-atmosphere theorem."
+  },
+  "bindings": {
+    "verification/def_native_balanced_flux.py": "30ac81312f6e5457abf04676a967cbe19f0b0ebf8a4bdf57b60f142b152ccdf2",
+    "verification/def_native_conservative_source.py": "d9a336e073116fb06df8ebd3c8a1744a40c48b1564bf7df84aeae968ed6083c2",
+    "verification/def_native_coupled_readjustment.py": "2b619c1e5be68e016b4e05a7ce8879b6cb3de72d42cc8c8804f4a048dbd5a6da",
+    "verification/def_native_source_order.py": "4c05949b9eb755a7d142fabc94f8c9dff81f06cdd5d999dea374631661769b09",
+    "outputs/direct-eos-gr33/def-native-coupled-readjustment/inputs.npz": "8f9fdcb82f703ebdc2e24683a98f966a7c926d797a551ae27e83f8bd9d4d99e2",
+    "outputs/direct-eos-gr33/def-native-coupled-readjustment/coefficients.npz": "0a078ab8f8d7de512b92620141f9a781f7cfa4eb947392b6a795181c24a451a0",
+    "outputs/direct-eos-gr33/def-native-conservative-source/consistent-p4-64.npz": "7507bb25fab9c10b9a945744017d85dd74a128541ce010c5fe30436be965dbe7",
+    "outputs/direct-eos-gr33/def-native-balanced-flux/cancellation-control.json": "6dfe57270b9266cb9ce3ca5577d9b0c1f7c040073dce4ce395fda3f0583bf311"
+  }
+}

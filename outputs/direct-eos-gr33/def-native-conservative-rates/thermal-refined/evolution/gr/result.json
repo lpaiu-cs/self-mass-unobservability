@@ -1,0 +1,69 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "actual_refined_thermal_EOS_evolution_completed": true,
+  "actual_updated_sources_applied_to_GR": true,
+  "endpoint_free_scalar": 1.0211350807243735e-27,
+  "previous_endpoint_free_scalar": 1.0211355821474494e-27,
+  "endpoint_relative_change": -4.910445632333449e-07,
+  "waveform_change_relative": 4.910448043077974e-07,
+  "pressure_only_prediction": 1.0211338921553175e-27,
+  "time_relative": 0.011863030703733821,
+  "quadrature_relative": 2.7226330832236553e-15,
+  "independent_direct_relative": 2.5646151868841116e-14,
+  "retarded_inverse_residual_cm": 4.76837158203125e-07,
+  "conditional_scalar_interval": [
+    1.0200190389241228e-27,
+    1.0222511225246242e-27
+  ],
+  "bound": {
+    "classification": "Counterexample candidate",
+    "global_potential_contraction": 3.24298755705297e-08,
+    "absolute_source_norm_cm": 2.1279522485956716e-20,
+    "potential_normalized_bound": 2.3658649263006251e-32,
+    "exterior_stress_bound": 1.0464102232939131e-30,
+    "exterior_mass_bound": 9.926148407311321e-33,
+    "floor_direct_trace_bound": 3.6046699704788807e-32,
+    "floor_metric_stress_bound": 7.72446713153284e-38,
+    "mass_constraint_uncertainty_bound": 2.3368203518309683e-39,
+    "actual_emitted_energy_erg": 2.7852112713883008e+31,
+    "floor_Killing_energy_erg": 2.103152881842812e+26,
+    "remaining_source_port_error_erg": 3.6581163513260966e+20,
+    "remaining_source_port_relative": 4.677916589887184e-13,
+    "total_conditional_normalized_bound": 1.1160418002505113e-30,
+    "exact_stage_ports_used": true,
+    "piecewise_linear_cumulative_histories": true,
+    "scope": "Current saved first-variation operator and reconstructed source. Same geometry envelope; new source and loss norms. Conditional on positive discarded matter with principal pressures between0 andE and no larger subsequent energy. This bounds its direct GR omission, not changes to opacity/chemistry/transport.",
+    "full_floor_feedback_enclosed": false,
+    "full_source_error_enclosed": false,
+    "nonlinear_GR": false
+  },
+  "native_endpoint_passed": true,
+  "conserved_inventory": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "rows": [
+      {
+        "steps": 64,
+        "baryon_relative_to_initial_atmosphere": 1.3094576183835515e-16,
+        "baryon_relative_to_actual_port": 4.211821744853831e-08
+      },
+      {
+        "steps": 128,
+        "baryon_relative_to_initial_atmosphere": 1.6549809465959318e-16,
+        "baryon_relative_to_actual_port": 1.3026860578454796e-08
+      }
+    ],
+    "nonlinear_stage_residual_upper_from_unchanged_owner": 2e-11,
+    "scope": "Each successful inherited implicit stage exits only below2e-11 or raises; its observed maximum was not separately stored. Whole photon/neutral port history was not captured and is not certified here."
+  },
+  "seconds": 14.38645932199995,
+  "full_source_error_enclosed": false,
+  "atmosphere_native_inverse_audited": false,
+  "full_floor_feedback_enclosed": false,
+  "uniform_EOS_derivative_bound": false,
+  "coupled_fixed_point_verified": false,
+  "nonlinear_GR": false,
+  "final_charge_solved": false,
+  "full_goal_complete": false
+}

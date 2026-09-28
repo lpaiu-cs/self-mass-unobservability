@@ -1,0 +1,26 @@
+{
+  "classification": "Counterexample candidate",
+  "current_compact_source_enclosed": true,
+  "scalar_U_bound": 6.548073663242518e-19,
+  "scalar_Ux_and_Ut_over_c_bound": 6.359720405835653e-27,
+  "compact_source_L1_bound": 1.2719440382211722e-26,
+  "total_photon_variation_geometric_cm": 2.3146366786363204e-18,
+  "signed_emission": [
+    {
+      "path": "retained-motion-return151-work/photons/steps-128-reference-128.npz",
+      "total_variation_energy_erg": 5.04771887585011e+24
+    },
+    {
+      "path": "retained-metric-return152-work/photons/steps-128-reference-128.npz",
+      "total_variation_energy_erg": 22344.66429241996
+    },
+    {
+      "path": "retained-native-acoustic153-work/response-centered/photons/steps-128-reference-128.npz",
+      "total_variation_energy_erg": 85524047903.9328
+    }
+  ],
+  "source_cells": 531,
+  "source_knots": 33,
+  "declared_source_continuation": "Only the outgoing observer strip t>=0,t-x/c<=T is bounded. Exterior scalar fields there use the saved compact source times and paired photons. Integrate the mixed constraint from larger radii toward the inner interface, so no unmeasured later inner history is substituted. The resulting particular solution has zero extra asymptotic mass and a required inner port, whose matching is still open.",
+  "full_goal_complete": false
+}

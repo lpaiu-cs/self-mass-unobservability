@@ -1,0 +1,46 @@
+{
+  "classification": "Counterexample candidate",
+  "actual_same_input_evolved": true,
+  "propagation_passed": false,
+  "comparisons": {
+    "velocity_mass_RMS_m_s": {
+      "previous": 0.0031673996023250787,
+      "last": 0.0014868153779437564,
+      "order": 1.09107337570623
+    },
+    "scalar_mass_RMS": {
+      "previous": 0.02983170018695421,
+      "last": 0.011473687731873699,
+      "order": 1.378517043777967
+    },
+    "old_interface_velocity_RMS_m_s": {
+      "previous": 0.009253818545711943,
+      "last": 0.001771411019250834,
+      "order": 2.3851498115267336
+    },
+    "new_interface_velocity_RMS_m_s": {
+      "previous": 0.0072094977992465045,
+      "last": 0.00012024710145213437,
+      "order": 5.905824743938333
+    }
+  },
+  "seconds": 20.79583681500001,
+  "memory_GB": 1.177509888,
+  "original_failure_resolved": false,
+  "full_dynamic_charge_solved": false,
+  "fields": [
+    {
+      "field": 0,
+      "force_norm": 3.1227071922128893e-19,
+      "orthogonality": 1.1102230246251565e-15,
+      "linear_residual": 9.517248409702796e-17
+    },
+    {
+      "field": 1,
+      "force_norm": 1.4994025927879003e-28,
+      "orthogonality": 1.3322676295501878e-15,
+      "linear_residual": 1.0659578412410484e-16
+    }
+  ],
+  "stiffness_skew": 5.594271226041159e-17
+}

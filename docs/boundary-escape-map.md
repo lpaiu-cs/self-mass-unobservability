@@ -1,23 +1,16 @@
-# Boundary Escape Map
+# Boundary map — unified revision
 
-- Status: Note. This note records the exact assumption-drop failures of the closed free-fall theorem package.
-- Status: Proven. It is not a work log; it is the paper-facing counterexample map.
+| Status | Change of premise/model | Exact consequence | What does not follow |
+| --- | --- | --- | --- |
+| Proven | Add independent primitive | May add a low-order operator; finiteness can survive. | A uniquely selected physical field content. |
+| Proven | Remove analyticity but retain sufficient smoothness | Exact Taylor-series reconstruction may fail. | Failure of the finite-order jet with remainder. |
+| Proven | Admit a nondifferentiable threshold | Ordinary Taylor approximation can fail at activation. | A general nonanalytic no-go for all smooth functions. |
+| Proven | Add finite internal states | External-variable-only instantaneous readout can fail; local state description survives. | Automatic observability or a unique two-parameter escape. |
+| Proven | Admit genuinely nonrational memory | No exact finite linear time-invariant realization on an open domain. | Impossibility of finite-band approximation or arbitrary nonlinear realization. |
+| Proven | Admit infinitely many independent low-weight species | Pre-reduction catalog can be infinite. | That every quotient must remain infinite. |
+| Proven | Measure finitely many pole samples | Degree 2K-1 real interpolation exists at K positive carriers. | Exclusion of all finite derivative EFTs. |
+| Proven | Increase nuisance freedom to span the signal | The signal has zero projected information. | Survival merely because nuisance dimension is finite. |
 
-| Boundary | Status | Smallest explicit counterexample | Exact theorem layer broken | Replacement bookkeeping data |
-| --- | --- | --- | --- | --- |
-| `A5`: analyticity dropped, locality kept | Proven | `m_A(Y)=m_0+\alpha e^{-1/Y^2}\Theta(Y)` | Lemma 55 fails at the finite analytic Taylor-jet step | Non-Taylor monopole germ data |
-| `A3`: locality dropped, analyticity kept on the instantaneous variable side | Proven | One-coordinate causal power-law kernel | Local reduction to `m_A(Y(tau))` fails, so the local forms of Lemmas 55 and 56 no longer apply | Memory kernel or spectral data |
-| `A4`: no-state assumption dropped, locality and analyticity kept | Proven | One-state local analytic `chi` model | Y-only reading of Lemmas 55 and 56 fails because the monopole response is not a function of `Y^I` alone | Finite local state-space data `(Y^I, chi^a)` and state-evolution parameters |
-| `A8`: local weight-spectrum finiteness dropped | Proven | Infinite low-weight STF tower | Candidate scalar operator-space finiteness fails before reduction | No finite pre-reduction primitive-family catalog exists below the cutoff |
+Status: Counterexample candidate. A justified shared drive and constrained observable projection can make the relaxation response a useful benchmark against a bounded derivative comparator. The follow-through supplies conditional scalar-charge matching and linear-model interval calibration. Actual EOS parameters and an astrophysical likelihood are separate requirements; the historical auxiliary physical drive fails the new phase gate.
 
-## A4 Salvage Branch
-
-- Status: Proven. The `A4` counterexample does not kill finite collapse altogether.
-- Status: Proven. Once finitely many local state variables are kept explicit, a finite state-augmented collapse theorem survives.
-- Status: Proven. The augmented bookkeeping remains separate from higher-multipole Wilson coefficients.
-
-## Reading Rule
-
-- Status: Proven. Each row above keeps the primitive-family envelope and fixed-order counting distinct from the exact theorem layer that fails.
-- Status: Proven. The counterexamples are assumption-drop sharp within the current repo scope.
-- Status: Proven. None of these rows should be read as a reopening of the closed positive theorem inside its stated domain.
+See [the theorem package](theorem-package.md), [the dynamic ledger](failure-ledger-dynamic-chi.md), and [the single manuscript](../paper/manuscript.md). The historical A5 finite-jet failure and A4-only novelty claims are withdrawn.

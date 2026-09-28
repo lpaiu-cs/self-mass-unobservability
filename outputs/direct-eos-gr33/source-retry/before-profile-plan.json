@@ -1,0 +1,12 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "2438b36",
+  "original_source_sha256": "aa161b3dcfdf492e68b86bad6acc9f418ef0dfbfbfea3486a7bcf6d3a57a18b7",
+  "replacement_source_sha256": "a0206603f87e4e84f37a1fb264978e00f57464e68d9aaf4d6ac68af8d4daeec9",
+  "reference_auxiliary_sha256": "2d09836144895a532998db491748ff9b7949bf4a88c9c3c9426d79159f428835",
+  "reference_state_sha256": "17cbbb101628ca9bc111dca0cfe902210f13697c632b91c03913a1718cf7d2ef",
+  "original_failure": "The reference native trace exceeded 180 seconds after the new EOS auxiliary calculation passed. The original trace repeatedly decompresses lnd, lnT and X from an NPZ object inside each cell.",
+  "change": "Materialize those immutable input arrays once. Preserve all ABI, scientific inputs, output checks and the 180-second limit. Replay the previous initial source bitwise before using the saved new EOS inputs.",
+  "physical_EOS_certified": false,
+  "full_GR_evolution": false
+}

@@ -1,0 +1,45 @@
+{
+ "classification": "Imported from prior work",
+ "passed": true,
+ "verdict": "CONFIRMATION_REVIEW_PASSED__REVISION_6_INTEGRATED_AS_SECTION_4_6",
+ "confirmation_review_of_revision_5": {
+  "fable5.1 (subagent)": "accept",
+  "gpt-6-astra (Codex CLI, read-only)": "accept after minor revision",
+  "opus5.5 (subagent)": "accept after minor revision"
+ },
+ "revision_6": [
+  "instantaneous response: full bound 1.24e-9 a_p^2 + 8.2e-10 |a_p a_o|; reaches only the smallest stored scales for |a_p| >~ 0.5; static SEP limits (<= 2.6e-6) give |a_p| <~ 4e-3 for Cassini-scale a_o, or need |a_o| <~ 5e-6",
+  "outer white dwarf has the analogous zero-lag response (leading-order estimate 1.86e-9 a_p^2)",
+  "structural parts each <= 2.13e-18 (4.3e-18 together); about eight orders",
+  "summary: deeper layers with orbital-scale local thermal times expected; pole structure and coupling not computed",
+  "abstract: permanent charge zero only as t -> infinity with slow thermal modes damped",
+  "data availability: verdict, classification and derived-bound fields superseded; rerun limit narrowed; Born source"
+ ],
+ "integration": {
+  "manuscript_lines": [
+   697,
+   850
+  ],
+  "pandoc": "3.11",
+  "main_tex_reproduced_before_edit_sha256": "29bb4eaf94c500132a6a178b576866fa79c34871b5b3726bd9b9b2022c100d95",
+  "edits": [
+   "date 28 September 2026",
+   "abstract: two Conjectural sentences",
+   "Section 4.6 after Section 4.5",
+   "Section 6: one paragraph after the physical-target paragraph",
+   "data availability: paragraph, list, paragraph",
+   "references: three entries restored from a322c6462",
+   "README: PDF and submission archive predate Section 4.6"
+  ],
+  "pdf_and_submission_archive": "predate Section 4.6 (no TeX on this host)"
+ },
+ "errata": [
+  "16 manifest numeric and classification fields",
+  "17 REQUEST276 line 47 last sentence",
+  "18 failure ledger lines 2578 and 2588",
+  "19 REQUEST285 details (tracked arrays, run commands, 1.8 ms, line numbers)"
+ ],
+ "repository_classification": "conditional theorem progress on the lag amplitude within the chosen response family; no observational exclusion; A4 not established",
+ "full_goal_complete": false,
+ "snapshot_KST": "2026-09-28T00:11:42.227015+09:00"
+}

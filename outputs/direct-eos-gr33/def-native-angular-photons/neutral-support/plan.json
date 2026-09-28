@@ -1,0 +1,18 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "Positive angular pilot stops after5steps because H0 drops below0.25 of its initial value; no radiation positivity or conservation failure occurred before the EOS-support stop.",
+  "repair": "Keep the old upper2.5 chemical plane and all physical radii,T domain,frequencies and gates. Evaluate one lower plane at1e-4 of the local initial neutral H;48 new native states. Actual finite-reaction depletion, not extra spatial refinement or clipped species.",
+  "new_native_calls": 400,
+  "new_native_seconds": 20,
+  "temperature_offsets": [
+    -0.06,
+    0.0,
+    0.06
+  ],
+  "new_neutral_ratios": [
+    0.0001,
+    2.5
+  ],
+  "stop": "No automatic further support extension. If temperature or rates fail, preserve the exact physical support failure and reassess the model/energy source.",
+  "source_sha256": "ddff78aae7c05e78553ebd54a824395499a2c60144133d85e00a10d4c50fb757"
+}

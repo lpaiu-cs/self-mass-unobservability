@@ -1,0 +1,53 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "b1e26c922e93f7068fa704ff49f57fe22efaa614",
+  "previous_turn": "Progress: Phase162 returned the compact mixed GR field through actual photons and free matter and read its accepted finite response at fixed-operator infinity.",
+  "claim": "Use a common mass-normalized charge for the existing background, incident material response and mixed GR component. Preserve each signed mass port and tiny transport return separately; quantify the cancellation instead of treating J_BI as new photon energy.",
+  "decision": "Does the physically required mass coordinate and homogeneous exterior matching change the selected charge? Separately expose what is not yet a conserved, complete exterior mass.",
+  "scope": "Actual stored conserved-source ports and their declared homogeneous vacuum continuation. Additional exterior mixed scalar/photon stress, changed photon paths and exact ADM/momentum-constraint closure are not assumed zero or solved.",
+  "representation": "The fine33-knot mixed input is sampled at the common17 output knots.64/128 checks change the actual incident response clock;17/33 changes only mixed-source representation.",
+  "gates": {
+    "time": 0.02,
+    "quadrature": 0.002,
+    "cadence": 0.02,
+    "independent": 1e-12,
+    "normalization": 1e-12
+  },
+  "budget": {
+    "actions": {
+      "prepare": 30,
+      "apply": 90,
+      "audit": 60
+    },
+    "total_seconds": 180,
+    "CPU_threads": 1,
+    "virtual_GiB": 3,
+    "new_evolution_steps": 0,
+    "new_EOS_roots": 0
+  },
+  "admission": "Reuse existing mass/field arrays. Only the terminal returned-source energy projection is assembled; no ray, fluid or EOS history replay. Stop at the fixed action caps without enlarging clocks or relaxing gates.",
+  "references": [
+    "https://arxiv.org/pdf/gr-qc/9707041, equations2.11,2.23,2.24; the mixed expansion and readout identities are derived here."
+  ],
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/read_native_matched_mass.py": "2928231ba9fb4a8fd9a502a499586e9e79922aa39ccb64a622c62264d6aadd2a",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/return_native_mixed_gr.py": "ba23ce0c8dcc4b3ddfe1d8e9b470ede3130ae37b5e5be2ef730219be328d038d",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/read_native_incident_infinity.py": "31fdcc3bec5a89504151337d85457a9ad1dc2d7b12f4b10e5f98eebc83817183",
+    "native-mixed-return162-work/audit.json": "3c86a78fed7fdc08e77c41d02d8bfb6e813cd42b16a99c042465764689141db1",
+    "native-mixed-return162-work/charge-parts.npz": "6d70c9a1ff631f8df10313b415369f4ceac4809bd2ed504f67f00f2b39f865fe",
+    "native-mixed-return162-work/result.json": "69462419569191feffce2e6b4bab992e38abbe6059f8463314a7063858661634",
+    "native-incident-infinity158-work/charge-parts.npz": "b5f07843085aee64ffa3c9ee1932ed7e0f53a0fdac62ce8b2c360ebc146e1712",
+    "outputs/direct-eos-gr33/native-retained-completion/infinity/completed/retained-128-a8-r8.npz": "55ddaec7e139c588cb4b9dcaf47c3a3b01735e72df958f6f6b1f7c89fa263235",
+    "native-incident-self-gr157-work/normalization.json": "29be0c1f186e14bc76cb95f37013d58406e96d8fa7fe1396bc1ac695f35dd29c",
+    "native-interior-incident160-work/metric/metric-128-g8.npz": "2fd1ecaa5616cfa0e8f6f7d71b440ffeb2d80cac21481aeb9a004aebd6b61418",
+    "native-mixed-return162-work/sweep-2/gr/source-128-reference-128.npz": "1ecdf4778bf0f89586967932cd6794dd0cf9852d0f13095318a1f3deba9ec774",
+    "native-incident-self-gr157-work/metric/metric-128-g8.npz": "f4e1c733e30c76c5e1ceb5f9186dab10b3996fd24c7fba104d879042582ed8a2",
+    "native-incident-self-gr157-work/metric/metric-128-g4.npz": "be45b5dc7df52841fa2e04bbd8216fb37f6103a6e25ee43b8ee27f4952388611",
+    "native-incident-self-gr157-work/metric/metric-64-g8.npz": "dd0e8ec6570c41bff47c0ed7c1efe3ccfa05eec249ef3ae70a3e312c7c4d0933",
+    "native-mixed-return162-work/metric/metric-128-g8.npz": "b0cb29a3864bd8a5425d643a396894993057cbbbd8cd363e5167575f97c5866f",
+    "native-mixed-return162-work/metric/metric-128-g4.npz": "86d8e706054197e7ae6a43a5d1f923017b76afeb3cb3b83d0f66ddf6eff6d9e9",
+    "native-mixed-return162-work/metric/metric-128-17-g8.npz": "ec85f9d7a08f443660f6aab3a0202c4cae1f694d7aa0a47a876f11caa23eebe2",
+    "native-incident-self-gr157-work/sweep-2/returned-metric/metric-128-g4.npz": "5380d87ced334de07dc812430e547e84e598db7d914e0503d0c7928241a8090a",
+    "native-incident-self-gr157-work/sweep-2/returned-metric/metric-128-g8.npz": "e0b3381c14b8d04574be83631e281b81960d7218b8b0da1db5ea42e0096a167d"
+  }
+}

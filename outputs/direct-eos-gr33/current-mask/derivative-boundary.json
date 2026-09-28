@@ -1,0 +1,20 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "fixed_mask_conditions": "The same nonempty retained set on a neighborhood, twice differentiable current log weights w_i(theta), positive exact exponentials and finite derivative oscillations over all retained and omitted stages.",
+  "value": "0 <= log Z - log Z_retained = log(1+rho) <= rho.",
+  "gradient": "|d(log Z-log Z_retained)/dtheta| <= delta * osc(w_prime).",
+  "Hessian": "|d2(log Z-log Z_retained)/dtheta2| <= delta*osc(w_second) + delta*(5/4-delta)*osc(w_prime)^2. Here delta is the actual omitted probability. The nondecreasing envelope 5*delta_upper/4 may replace the second coefficient for a bound valid for any delta<=delta_upper.",
+  "proof": "First and second derivatives are the mean score and the mean score derivative plus score variance. The distribution splits into retained and omitted conditional distributions. Their variances are in [0,osc(score)^2/4]. The verified mixture identity adds delta*(1-delta) times the squared difference of conditional means. Total variation controls the first- and second-score mean differences.",
+  "hard_cutoff": {
+    "log_weights": [
+      "0",
+      "theta"
+    ],
+    "remove_second_when": "theta<=-288",
+    "left_value": "0",
+    "right_limit_jump": "[8.37894253381936897136257495563503098800913298292005902849728E-126, 8.37894253381936897136257495563503098800913298292005902849729E-126]",
+    "conclusion": "The returned second-stage probability is discontinuous at the threshold. Its classical derivative and Hessian do not exist there. Small truncation amplitude does not supply a global C2 guarantee for the raw hard-masked implementation."
+  },
+  "scope": "Conditional softmax calculus and a hard-cutoff no-go boundary. Actual EOS log-weight derivatives, their evaluation errors, coupled molecular/nonideal equilibrium and global root conditioning are not certified."
+}

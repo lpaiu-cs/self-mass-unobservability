@@ -1,0 +1,177 @@
+{
+  "classification": "Counterexample candidate",
+  "reason": "The completed eight-step path leaves a local energy defect. Its endpoint probe locates the baryon material/coordinate chain mismatch. Preserve this partial sixteen-step path and prioritize the separately bound correction.",
+  "stopped": true,
+  "paths": [
+    {
+      "steps": 16,
+      "last_complete_step": 15,
+      "completed": false
+    }
+  ],
+  "processes": [
+    {
+      "pid": 18577,
+      "ppid": 18569,
+      "state": "S",
+      "start": "9175922",
+      "command": [
+        "python3",
+        "verification/gr_flux_coupled_evolution.py",
+        "run",
+        "--steps",
+        "16",
+        "--workers",
+        "8"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    },
+    {
+      "pid": 18578,
+      "ppid": 18577,
+      "state": "R",
+      "start": "9176653",
+      "command": [
+        "python3",
+        "verification/gr_flux_coupled_evolution.py",
+        "run",
+        "--steps",
+        "16",
+        "--workers",
+        "8"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    },
+    {
+      "pid": 18579,
+      "ppid": 18577,
+      "state": "R",
+      "start": "9176654",
+      "command": [
+        "python3",
+        "verification/gr_flux_coupled_evolution.py",
+        "run",
+        "--steps",
+        "16",
+        "--workers",
+        "8"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    },
+    {
+      "pid": 18580,
+      "ppid": 18577,
+      "state": "R",
+      "start": "9176654",
+      "command": [
+        "python3",
+        "verification/gr_flux_coupled_evolution.py",
+        "run",
+        "--steps",
+        "16",
+        "--workers",
+        "8"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    },
+    {
+      "pid": 18581,
+      "ppid": 18577,
+      "state": "R",
+      "start": "9176655",
+      "command": [
+        "python3",
+        "verification/gr_flux_coupled_evolution.py",
+        "run",
+        "--steps",
+        "16",
+        "--workers",
+        "8"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    },
+    {
+      "pid": 18582,
+      "ppid": 18577,
+      "state": "R",
+      "start": "9176656",
+      "command": [
+        "python3",
+        "verification/gr_flux_coupled_evolution.py",
+        "run",
+        "--steps",
+        "16",
+        "--workers",
+        "8"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    },
+    {
+      "pid": 18583,
+      "ppid": 18577,
+      "state": "R",
+      "start": "9176657",
+      "command": [
+        "python3",
+        "verification/gr_flux_coupled_evolution.py",
+        "run",
+        "--steps",
+        "16",
+        "--workers",
+        "8"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    },
+    {
+      "pid": 18584,
+      "ppid": 18577,
+      "state": "R",
+      "start": "9176658",
+      "command": [
+        "python3",
+        "verification/gr_flux_coupled_evolution.py",
+        "run",
+        "--steps",
+        "16",
+        "--workers",
+        "8"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    },
+    {
+      "pid": 18585,
+      "ppid": 18577,
+      "state": "R",
+      "start": "9176659",
+      "command": [
+        "python3",
+        "verification/gr_flux_coupled_evolution.py",
+        "run",
+        "--steps",
+        "16",
+        "--workers",
+        "8"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    }
+  ],
+  "sha256": {
+    "path-16/progress.json": "1dd058bc5712ed3ab5d2757fc9cd835e9df903713a4f143b7cac959513e0f8a0",
+    "path-16/step-0000.npz": "bb1e13304599b3a540c6916f5b5251f6b3aa819d7a98824d37f908393c6008bb",
+    "path-16/step-0001.npz": "38deb9914320dbba487e54c220395b1041dcb5bda53f3e93910bd1c16c6c6b41",
+    "path-16/step-0002.npz": "b2bbebebf7224464f575d6f9935e066ab48336abb4c7c14160f34f648557ab15",
+    "path-16/step-0003.npz": "65e03929cf40a2e836704c254b71a44b4dc4ecbceb003f59bacc5a5fdb10584e",
+    "path-16/step-0004.npz": "18bde8da6f221fa43774616becb8434f9a74ad191458292cfa65caf043c82fcc",
+    "path-16/step-0005.npz": "6915112a1c8d583cebedb3afe1723bd4432503da32ede0a2f808377b594e1067",
+    "path-16/step-0006.npz": "4ad4a92caf4fe69440e8ee3367706a1ad5fd926a96ea0c766e70a3f79b199b43",
+    "path-16/step-0007.npz": "f19780ef13add528e8bf62f6bdb6f1796df712a8795a65305d0bfb705866c5cf",
+    "path-16/step-0008.npz": "52ac70ed2e73d52910bda1f28490a418bfb559b500204492b227b45942b4c65b",
+    "path-16/step-0009.npz": "69f1dcee278eb5cf86b8871ddf6ff24585b2c143ca33ee539c71dbf6e5367762",
+    "path-16/step-0010.npz": "ace896456100241b8f90c801c7231ec6cb69f547c852c2957c059518e5a7f187",
+    "path-16/step-0011.npz": "3bf347cf39c7e600dd01455aa15f79174c687196b9b94397b5285dbda5a0dae5",
+    "path-16/step-0012.npz": "8572cba48d59cf2a1b30b579a9a73e13c17e92e043b81caa14be0a70065ee00a",
+    "path-16/step-0013.npz": "6b040b422a9c8baea1492bde58527cb438cc2be5a5212cd397a93d183a4a509a",
+    "path-16/step-0014.npz": "89f58f50cf9839aa02d3c6b33f80ede090211b1a1f7fd45072bfc5bbc4207c3e",
+    "path-16/step-0015.npz": "4a474a01cd512ebcfa567badd1bfb86203065aa5aeb36f71de85b055acd3345c"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "3d1976bd7",
+  "claim": "Read the actual Phase156 incident-driven response and Phase157 self-GR correction at outgoing null infinity, with their signed SDIRK angular emission and the same retained mass normalization.",
+  "decision": "Does the matter-mediated compact response survive the exterior photon and arrived-mass terms in the fixed initial GR readout? Separate it from the much larger directly scattered incident field and identify the unresolved error floor.",
+  "input": "Existing eta=1e-30, C3 compact incoming pulse, 3.4344311179287023ms,531cells,17 output times,64/128 response clocks;33-time first-Born input representation at4/8 radial orders.",
+  "method": "Reuse the existing characteristic-cut scalar propagator with independently specified observer times. A finite observer outside ALL compact source support at t=u+x_observer/c equals the outgoing characteristic limit of this declared free Green operator. The free incoming primary is zero there. Reuse the existing causal-support photon packet kernel without changes; integrate actual accepted signed SDIRK stages, never endpoint trapezoids.",
+  "normalization": "Same saved fine retained background for both response clocks and all readout quadratures. Store separate direct, body and physical self-GR contributions; do not add a sub-ulp increment and then subtract the background. Rational normalization is an exact readout identity, not nonlinear evolution.",
+  "gates": {
+    "time": 0.02,
+    "quadrature": 0.002,
+    "port": 1e-12,
+    "independent_observer": 1e-10,
+    "normalization": 1e-12
+  },
+  "budgets": {
+    "prepare": 30,
+    "direct": 120,
+    "packets": 240,
+    "audit": 60
+  },
+  "total_seconds": 450,
+  "CPU_threads": 1,
+  "virtual_GiB": 3,
+  "new_EOS_calls": 0,
+  "new_fluid_steps": 0,
+  "new_background_steps": 0,
+  "forecast": "Measure three causal packet ages at the unchanged angular/radial orders. Twice the slowest cost times319 distinct ages plus5s must fit the remaining240s. Reuse each kernel for both actual histories and all output times.",
+  "stop": "Stop on failed gates or measured budget. No longer horizon, new clocks, higher quadrature orders, additional Born feedback or fluid replay. Preserve original upstream-GR and whole-state iteration failures.",
+  "limits": [
+    "Initial frozen scalar coefficients and null ray geometry; response of background emitted photons to incident metric not yet included.",
+    "Higher potential returns, evolving-background scalar scattering and full physical exterior coupling not enclosed.",
+    "Time/4vs8 comparisons are diagnostics, not continuum/source/EOS/derivative error bounds.",
+    "Same-input direct-only subtraction is bookkeeping, not a same-inventory static EFT or observational comparator."
+  ],
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/read_native_incident_infinity.py": "31fdcc3bec5a89504151337d85457a9ad1dc2d7b12f4b10e5f98eebc83817183",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_incident_drive.py": "3e01fc956f56354fc8be01be9ccdf864eb7c6435591fe83b3db10cc90bfbecb0",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/def_retained_native_return.py": "a8552650499ff3d50dca537be45a7caee2108959399ed71137fdebef5458f4c3",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_characteristic_gr.py": "1630d3f008a1e59748d318f921eed7da8fbea4c49d33e5b86617f67009a27076",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_anisotropic_gr.py": "8c70ea3234a101e81db0c159c0fcf4edf02b16f0910b066f2781699d74efca85",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_global_scalar_closure.py": "b8f8cbab5f052100dc57963d747c200d0fa871993db62df5fc295881201f9db2",
+    "outputs/direct-eos-gr33/native-retained-completion/infinity/completed/retained-128-a8-r8.npz": "55ddaec7e139c588cb4b9dcaf47c3a3b01735e72df958f6f6b1f7c89fa263235",
+    "/home/lpaiu/work/native-retained-tail-runtime/outputs/direct-eos-gr33/def-native-initial-constraints/finite-volume/balanced-20.npz": "72ae702c85db57f0c02c1e5ca15dfad7df50d901b4270531e5b49c8c3746d3cb",
+    "outputs/direct-eos-gr33/native-retained-completion/evolution/coupled-128.npz": "08990bcd0980c8f45b1777e071734c3601a75f90096c8c6f5edc8d16d76ab2b0",
+    "outputs/direct-eos-gr33/native-retained-completion/evolution/source-128.npz": "7d6501151595f2274b0651a6179e3bd24cf4ea8ef6256734d953c9d8d01b79eb",
+    "native-incident-self-gr157-work/normalization.json": "29be0c1f186e14bc76cb95f37013d58406e96d8fa7fe1396bc1ac695f35dd29c",
+    "native-incident-self-gr157-work/block-result.json": "e5cad68f3f91b60699902d82b5d7bfdf228781f823b63dd6edb504e9f10d2ce6",
+    "native-incident-drive155-work/fields/born-g4.npz": "f18d3a96206992b5878fcb927a43fab403a19b393f3413a0e3a8121019ca9083",
+    "native-incident-drive155-work/fields/born-g8.npz": "4a4f1299caa9675a4a5a87c178b883ba242aeec296361a555182328dc429a058",
+    "native-incident-reciprocal156-work/sweep-2/photons-precise/steps-64-reference-128.npz": "43ffbb540805abd573b6b034b44da42030e9218a554263774564c0a763a12c04",
+    "native-incident-reciprocal156-work/sweep-2/gr/wave-64-g8.npz": "b1f25dba73e046f7c75330d734a1b8793d43a5dd2f9dc4ef27092c65edb84b66",
+    "native-incident-reciprocal156-work/sweep-2/photons-precise/steps-128-reference-128.npz": "b312f6825a78511d75248c3dce652006215e26ab5be01cb550e853750f120a6b",
+    "native-incident-reciprocal156-work/sweep-2/gr/wave-128-g8.npz": "ad8587794f7a2ce55ca2d52b3bea744416fcc1863d5ca68a777d967735d3e92e",
+    "native-incident-reciprocal156-work/sweep-2/gr/wave-128-g4.npz": "fbe4dc29cd740788a56573b84c725fa44ae8f656e942d4a60e82c887a51593e4",
+    "native-incident-self-gr157-work/sweep-2/photons-common-gr/steps-64-reference-128.npz": "fec1c6f16cf11740b4dc9fb865f50bf9240bb368a81065966bed2f451d737e47",
+    "native-incident-self-gr157-work/sweep-2/gr/wave-64-g8.npz": "f59550cd3f671d01f02c4935fcd0a68651ca4071762879ec2984810e9a04f314",
+    "native-incident-self-gr157-work/sweep-2/photons-common-gr/steps-128-reference-128.npz": "7020b476351611a8b959090ab3a656592fe9c42601dfe289fab08a27da345260",
+    "native-incident-self-gr157-work/sweep-2/gr/wave-128-g8.npz": "d4f53a85a1d256df8102e876f9857cc99aa3c5f6dbc9e40e6fd0cabdbbaf7e0c",
+    "native-incident-self-gr157-work/sweep-2/gr/wave-128-g4.npz": "706ee5ae739e45989cf41d93ae96d0f3a89c531f7a7b272e7abcf0c534972590"
+  }
+}

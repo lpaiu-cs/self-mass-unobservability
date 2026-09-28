@@ -1,0 +1,243 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "rows": [
+    {
+      "species": [
+        1,
+        0
+      ],
+      "excited_fraction": 0.007511194646413699,
+      "population_sum_relative": 0.0,
+      "conditional_Kirchhoff_relative": 2.7977620220553945e-14,
+      "unmodified_Einstein_relative": 0.9968222631838326,
+      "transitions": 45,
+      "availability_range": [
+        0.0031785262483501227,
+        0.6485194402871944
+      ]
+    },
+    {
+      "species": [
+        2,
+        1
+      ],
+      "excited_fraction": 4.883626836260646e-11,
+      "population_sum_relative": 0.0,
+      "conditional_Kirchhoff_relative": 3.985700658404312e-14,
+      "unmodified_Einstein_relative": 0.9550421149319003,
+      "transitions": 45,
+      "availability_range": [
+        0.04495788506809987,
+        0.996383402008562
+      ]
+    }
+  ],
+  "unsupported_excited_metal_species": [
+    [
+      6,
+      0
+    ],
+    [
+      6,
+      1
+    ],
+    [
+      6,
+      2
+    ],
+    [
+      6,
+      3
+    ],
+    [
+      6,
+      4
+    ],
+    [
+      6,
+      5
+    ],
+    [
+      7,
+      0
+    ],
+    [
+      7,
+      1
+    ],
+    [
+      7,
+      2
+    ],
+    [
+      7,
+      3
+    ],
+    [
+      7,
+      4
+    ],
+    [
+      7,
+      5
+    ],
+    [
+      8,
+      0
+    ],
+    [
+      8,
+      1
+    ],
+    [
+      8,
+      2
+    ],
+    [
+      8,
+      3
+    ],
+    [
+      8,
+      4
+    ],
+    [
+      8,
+      5
+    ],
+    [
+      8,
+      6
+    ],
+    [
+      10,
+      0
+    ],
+    [
+      10,
+      1
+    ],
+    [
+      10,
+      2
+    ],
+    [
+      10,
+      3
+    ],
+    [
+      10,
+      4
+    ],
+    [
+      10,
+      5
+    ],
+    [
+      10,
+      6
+    ],
+    [
+      12,
+      0
+    ],
+    [
+      12,
+      1
+    ],
+    [
+      12,
+      2
+    ],
+    [
+      12,
+      3
+    ],
+    [
+      12,
+      4
+    ],
+    [
+      12,
+      5
+    ],
+    [
+      12,
+      6
+    ],
+    [
+      20,
+      0
+    ],
+    [
+      20,
+      1
+    ],
+    [
+      20,
+      2
+    ],
+    [
+      20,
+      3
+    ],
+    [
+      20,
+      4
+    ],
+    [
+      20,
+      5
+    ],
+    [
+      20,
+      6
+    ],
+    [
+      20,
+      7
+    ],
+    [
+      20,
+      8
+    ],
+    [
+      9,
+      0
+    ],
+    [
+      9,
+      1
+    ],
+    [
+      9,
+      2
+    ],
+    [
+      9,
+      3
+    ],
+    [
+      9,
+      4
+    ],
+    [
+      9,
+      5
+    ],
+    [
+      9,
+      6
+    ]
+  ],
+  "same_EOS_full_optical_model_ready": false,
+  "physical_optical_survival_certified": false,
+  "exact_statement": "For n_i proportional to g_i w_i exp(-E_i/kT), an upward availability factor w_j/w_i and unmodified reverse coefficient give Kirchhoff exactly. At w_j=0 the same model removes BOTH bound-bound directions; keeping positive absorption with zero upper population violates LTE.",
+  "scientific_status": "The algebra is Proven under the declared survival assumption. Applying thermodynamic PL weights as optical survival is Conjectural and is not inferred from matching sums. The current metal EOS has no excited-state partition correction, so an atomic level free-energy extension is required before claiming common-state full opacity.",
+  "sources": [
+    "https://academic.oup.com/mnras/article/335/2/499/1046898",
+    "https://adsabs.harvard.edu/pdf/1988ApJ...331..794H"
+  ],
+  "boundary": "Provider work and a conditional optical contract, not a calibrated opacity or a new coupled/stellar evolution. Exact native hydrogenic energy constants are used; cross sections and optical-survival interpretation still require physical closure."
+}

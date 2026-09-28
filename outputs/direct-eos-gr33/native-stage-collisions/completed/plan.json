@@ -1,0 +1,48 @@
+{
+  "classification": "Conjectural",
+  "checkpoint": "4a63b5900",
+  "claim": "Replace canonical17-knot collision interpolation by the actual accepted Radau stage history, then test original0.2percent neutral-transport consistency in the same short coupled response.",
+  "hypothesis": "The177joint H equation passes but the free material forced by a canonical-linear collision history differs66percent in H-C. The stage history of its strong collision input is missing from that consumer. No unique-cause claim before actual return.",
+  "replay_reason": "177saved neutral transport stages but not gas/collision/impulse stages. These missing same-solution inputs cannot be recovered from its two canonical prefix snapshots. Replay ONLY the acceptedT/16prefix, with unchanged equations and stage times; require bit-identical original physical arrays. No full path, new waveform, clock or resolution.",
+  "material_method": "Use the actual two-stage collocation polynomial C(t) on each accepted Radau interval. Evolve U=z-C(t) with native F(z), z=U+C(t), using explicit SSPRK3 on the original64/128macro clocks and native hydro CFL, cut at recorded source-stage edges. Record floor projection and all conservation ledgers. This source removal is in the forced free-material equation only; the stiff photon/thermal/H Radau equation is unchanged. No H overwrite.",
+  "method_choice": "SSPRK3 is fixed before the trial so a quadratic collocation input is sampled at its midpoint as well as endpoints. No subsequent order/clock/mesh ladder if it fails.",
+  "gates": {
+    "replay_identity": 0.0,
+    "time": 0.02,
+    "transport": 0.002,
+    "directional": 0.002,
+    "conservation": 1e-08,
+    "owner": 1e-08,
+    "branch": 0.01
+  },
+  "forecast": {
+    "previous_capture_equivalent_seconds": 152.78493378,
+    "capture_range_seconds": [
+      150,
+      220
+    ],
+    "previous_material_pair_seconds": 13.92369201999999,
+    "material_range_seconds": [
+      15,
+      60
+    ],
+    "assumption": "Capture adds small O(stage*cell) arrays; material adds one SSP stage and exact source-edge cuts. Costs are not guarantees."
+  },
+  "budgets": {
+    "prepare": 10,
+    "capture": 220,
+    "material": 60
+  },
+  "CPU_threads": 1,
+  "virtual_GiB": 3,
+  "full_horizon_authorized": false,
+  "stop": "Any physical gate, replay difference, future input or action cap rejects the trial. Preserve177failure and all gates. No automatic full path or new refinement.",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/return_native_stage_collisions.py": "b0c25cca96ced69baab325dc74f40e88865435a2325abf6ecae1623b538dec03",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/couple_native_neutral_transport.py": "aad46b7ed3206c23209546d0f553ef762934804a7acea70de914d8ecf7b25a90",
+    "native-neutral-coupled177-work/pilot-result.json": "940c9a44e28101be3edca6704040ee3fa023d964dd497b477e2e0fa7ba49452f",
+    "native-neutral-coupled177-work/material-prefix-result.json": "f2c55eae1e4c40342623202a8b3e34149bae38cf96eb2902e3f5a9e577f766b5",
+    "native-neutral-coupled177-work/sweep-1/photons/pilot-64.npz": "63812333e0ee2744c41cb5b580147e8d3c7aa9c2c86c545d34a58022d2389d43",
+    "native-neutral-coupled177-work/sweep-1/photons/pilot-128.npz": "cc11b0f6e3333166f36805c820581160d501c78c203cab7f8bb602f096fa09c1"
+  }
+}

@@ -1,0 +1,114 @@
+{
+ "classification": "Counterexample candidate at pulse timescales; no-go boundary (theorem progress) at orbital timescales",
+ "passed": true,
+ "verdict": "FINAL_CHARGE_CONCLUSION_KEPT__NEGATIVE_FREE_FALL_MEMORY__NO_J0337_OBSERVABLE__A4_HOLDS_FOR_THIS_STATE",
+ "final_charge": {
+  "continuum": -2.334965719648403e-51,
+  "per_eta_phi_inf_squared": -2.334965719648403e-15,
+  "observed_gravity_kaplan_central": [
+   -7.845837617654315e-51,
+   -8.727436535410666e-51
+  ],
+  "observed_gravity_one_sigma": [
+   -3.832565271879012e-51,
+   -1.7867834656209601e-50
+  ],
+  "observed_gravity_two_sigma": [
+   -1.7493979515428043e-51,
+   -3.4674056059305804e-50
+  ],
+  "sign_kept_all_accepted_variations": true,
+  "normalization_scaling": "eta * phi_inf^2 (derived: force and source coupling both proportional to alpha(phi0); not rerun at another phi_inf)"
+ },
+ "closure": {
+  "cassini_alpha0_max_2sigma": 0.003535556003226812,
+  "phi_inf_max": 0.000883889000806703,
+  "drive_modulation_per_unit_alpha_p": 3.0760784580697786e-10,
+  "paper_b_lag_limit": 1.7e-09,
+  "required_kappa_lag_times_alpha_p": 1563.1252991360914,
+  "freefall_delta_bound_cassini": 7.508179397451038e-21,
+  "freefall_kappa_at_cassini": 6.9036618627106425e-09,
+  "full_beta_relaxing_delta_bound": 4.3502590635301124e-12,
+  "freefall_delta_bound_phase274": 2.7182003308944474e-18
+ },
+ "accepted": {
+  "q4": -2.3442699996854763e-51,
+  "richardson": -2.334965719648403e-51,
+  "observed_order": 1.9974694328182998,
+  "change_2x_to_4x": -0.011739559728022599,
+  "eos_max_relative": 2.1758308047964407e-10,
+  "state_share": 0.9999999900051401,
+  "baryon_share": 0.9999957489442637,
+  "freefall_limits_relative": 5.233094719070408e-05,
+  "sign_margin": 0.9987907655359466,
+  "omega0": 0.03533786207107447,
+  "force_ratio": [
+   3.316908683875503e-08,
+   3.350043653684212e-08
+  ],
+  "j0337_over_omega0_sq": 1.5959142057964712e-06,
+  "k2": 0.00032891797470372135,
+  "tau_wave": 8871071.934301691,
+  "kappa_struct": 8.83657672567982e-09,
+  "photosphere_tau": {
+   "240 km": 0.005128898373260582,
+   "362 km": 1.057389375384417,
+   "466 km": 7.945230910790623
+  }
+ },
+ "failure_ledger": {
+  "failing_step": "omega << omega0 = 0.035 1/s, omega << omega_ac, g-mode traveling-wave regime: the free-fall memory becomes the static structural response |kappa_struct| <= 8.8e-9 (2.2e-9 of beta)",
+  "minimal_missing_assumption": "an internal state with relaxation time ~ orbital period coupled to the inner white-dwarf monopole charge with |kappa_lag| >~ 1.6e3/|alpha_p|; a weak-field white dwarf offers |beta| = 4 (instantaneous) plus a ~1e-8 structural term"
+ },
+ "remaining": [
+  "one GR return; no ADM or infinity charge normalization",
+  "no fully nonlinear run and no rerun at another phi_inf",
+  "endpoint protocol T = 2D; long-time relaxation over 28-178 s not computed",
+  "gray atmosphere, two opacity limits, fixed pulse kernel",
+  "spin period >~ 45 min, WKB and diffusion approximations",
+  "manuscript integration pending Pandoc/TeX"
+ ],
+ "full_goal_complete": false,
+ "snapshot_KST": "2026-09-27T18:14:00.276121+09:00",
+ "document_prefixes": {
+  "docs/model-definition.md": {
+   "bytes": 292239,
+   "sha256": "342deb5d148b98adcab00ec78a9d7e4c1a4356c2cd4167bb9915851e347baf28"
+  },
+  "docs/observable-targets.md": {
+   "bytes": 283058,
+   "sha256": "377a7bd61978e13eb77ca79c89dfb5df3cf79bb3d9f315e50cc76ad8a9f341c5"
+  },
+  "docs/adiabatic-limit.md": {
+   "bytes": 277397,
+   "sha256": "cb7600836909fb4a4f6502bebfff02bd9dcb16983998b7581cc5e173c285b5a9"
+  },
+  "docs/nonadiabatic-regime.md": {
+   "bytes": 285889,
+   "sha256": "68d927b41f72af98d1ce0d0e24ddd77526badf9a0a788264e7229282cfd23137"
+  },
+  "docs/failure-ledger-dynamic-chi.md": {
+   "bytes": 323493,
+   "sha256": "bac9353a76c6a6146d9d049099535c67ba71b7dd145ec571d7236ac1065dd61c"
+  },
+  "docs/dynamic-charge-completion.md": {
+   "bytes": 151657,
+   "sha256": "19df09a8afd4b986c9ce62fb51ac0f135580dd9649812314c14d0118435ae179"
+  }
+ },
+ "sha256": {
+  "notes/REQUEST276_FINAL_CHARGE_CLOSURE_KO.md": "3427217eda947d79db9d540e761d3fe974c1f1aab441fdca87fba6ff4435edc1",
+  "docs/white-dwarf-free-fall-charge-section.md": "6e323627693bec2a97285c8ab9047e620caf83ea3daf19f5f84cb5bce05a06a4",
+  "docs/model-definition.md": "49e00b488a58d707d9acd150180e279a0e2e995e7dd971ee4200a6fb93575164",
+  "docs/observable-targets.md": "a63ad3a582957a2bd92cf27e1281f8e11bff89c1152e6c27df26b22e33ee747a",
+  "docs/adiabatic-limit.md": "eba38a44fd09757ac32d7030ae13f9e9107379c3bb3fbc7076ee980004a572ca",
+  "docs/nonadiabatic-regime.md": "ceecb57c85f24bc54cff693363fb5e17df983b5014fa38c47214b573f0e746c3",
+  "docs/failure-ledger-dynamic-chi.md": "324671a74f64b0101eaf1d77f0385f5f498d290733678a0082ac03189cd0a383",
+  "docs/dynamic-charge-completion.md": "7a4d1ac3dee5e0a3528336a7963e3b56a12688568e9abb50e51488c35e98b20f",
+  "outputs/direct-eos-gr33/native-final-closure/closure.json": "e5a3ea23a3199cab278cb20b8fd9f6e580709cabda072ed399fcd0d82b153059",
+  "outputs/direct-eos-gr33/native-final-closure/publication.json": "1598206ba6e8dc4a27c3cbe33fdb9cc95e90b8935d661b67dd29c749f3619acf",
+  "outputs/direct-eos-gr33/native-final-closure/result.json": "e3f59063454aff962324b444da09ed4c79f24d11fbf634302801356fedb76ff9",
+  "outputs/direct-eos-gr33/native-final-closure/scripts/phase276-closure.py": "6a22334c649872aa1e44ebaa39b46a308f6d4b9679dc37d37c0594f932ec3e1d",
+  "outputs/direct-eos-gr33/native-final-closure/scripts/phase276-publish.py": "0fc2411e4c30090d0827f9dd28bff72ba1c7b375fefa12be57a42388ad800b33"
+ }
+}

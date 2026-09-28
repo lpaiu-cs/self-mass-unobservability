@@ -1,0 +1,24 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Independently reconstruct saved energy/H invariants, local native thermochemical increments and the additional gas/photon GR stress moments.",
+  "budget": {
+    "seconds": 25,
+    "new_native_bank_calls": 0,
+    "new_evolution_steps": 0
+  },
+  "gates": {
+    "energy": 1e-08,
+    "species": 1e-08,
+    "pressure_reconstruction": 1e-10,
+    "small_log_increment": 1e-06
+  },
+  "subtraction": "Photon moments subtract the canonical volume/momentum contribution already present in Phase122. Collision-generated material moments are additional to its canonical gas response.",
+  "limits": "No material advection, momentum response, exterior/deep scalar or GR re-evolution is inferred from this export. No final charge.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_collision_response.py": "7926c20623300736be6fff069ba5be4d513963e4074ec3551ab476a671792ef2",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_monolithic_response.py": "76eab50e7cb8115bff4ce959641ed3cc9e7eabcf13bcae54b321b33f2ac5a695",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_collision_response.py": "f35bf0b4e25dbb4c53503181b24378a989aadc34313a52a4fc4876d52871dfb7",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-collision-response/monolithic/result.json": "974ce60f642b0343fc9273f5380d167edd7636b9b6fbf90a4bc6feb214a4fc2e",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-collision-response/monolithic/steps-128-reference-128.npz": "dfc0d09415b64f08c45c8107ba1dcceccf2ec694f3ad434464853e4599d61bd6"
+  }
+}

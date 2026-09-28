@@ -1,0 +1,55 @@
+{
+  "classification": "Counterexample candidate",
+  "commands": [
+    {
+      "command": [
+        "cmake",
+        "-S",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-switch/source",
+        "-B",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-switch/build",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DBUILD_SHARED_LIBS=ON",
+        "-DBUILD_TEST=ON",
+        "-DBUILD_DOC=OFF",
+        "-DBUILD_DOX_DOC=OFF"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-switch/build",
+        "--target",
+        "free_eos",
+        "-j",
+        "2"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "gfortran",
+        "-O2",
+        "-fPIC",
+        "-shared",
+        "-I/home/lpaiu/work/direct-eos-gr33/molecular-switch/build/src",
+        "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/molecular-switch/direct_ion_bridge.f90",
+        "-L/home/lpaiu/work/direct-eos-gr33/molecular-switch/build/src",
+        "-Wl,-rpath,/home/lpaiu/work/direct-eos-gr33/molecular-switch/build/src",
+        "-lfree_eos_direct24_molecular_switch",
+        "-o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-switch/unused-inventory.so"
+      ],
+      "returncode": 0
+    }
+  ],
+  "completed": true,
+  "sha256": {
+    "/home/lpaiu/work/direct-eos-gr33/molecular-switch/unused-inventory.so": "8744aa5fd3c52a3c8bd611cf62ba72deeb7ed5bfe956e22c2d6c889f99b60194",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-switch/build/src/libfree_eos_direct24_molecular_switch.so.1.0.0": "1bf2d41f92c7550a7596404661502f791afe4ca19cc942ba0ed7e19f5d37030c"
+  },
+  "original_runtime_modified": false,
+  "physical_EOS_certified": false
+}

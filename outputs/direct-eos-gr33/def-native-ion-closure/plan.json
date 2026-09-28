@@ -1,0 +1,37 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "ca1099fc6",
+  "claim": "Connect finite ion populations to the original molecular-spectral atmosphere EOS without substituting the Phase66 finite atomic catalog.",
+  "decision": "Measure the equilibrium versus constrained-ion thermal/pressure response on saved release states. Only a thermodynamically audited constrained EOS may drive a later conservative evolution.",
+  "model": "Conjugate constant dimensionless fields for native ion stages. Original partitions, molecules, Coulomb and photon-free gas EOS are retained. No invented relaxation rate and no opacity transfer from another EOS.",
+  "budget": {
+    "build_seconds": 60,
+    "probe_seconds": 90,
+    "EOS_calls": 240,
+    "cpu_threads": 1,
+    "memory_GB": 1,
+    "new_fluid_steps": 0
+  },
+  "forecast": "Prior related module build was a few seconds; current native calls unmeasured. First probe measures call speed. Stop on call/time/domain/identity failure; do not enlarge the budget or silently adopt biased energy.",
+  "gates": {
+    "unbiased_bitwise": true,
+    "inventory": 1e-10,
+    "charge": 1e-10,
+    "constrained_population": 1e-08,
+    "first_law": 0.0001
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_ion_closure.py": "4bbf773644d77d30fac1e5f9a77828698d7fa99992966dc19912353aa9ac166a",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_vacuum_release.py": "c6646433a61119649da36abfe3e8ef94cc575a663c6dea8e9289d64efe32adaa",
+    "/mnt/e/lab/self-mass-unobservability/verification/eos_species_inventory.py": "56290581f614dd4d8e1ecf4fa493f1f546220f53fa838e3da7907c92eec7f5e9",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/libfree_eos_direct24_molecular_spectral.so.1.0.0": "195f3658eb0cc8fe3447c6b690f246b5a4fb770bd8ffa764d19248fec857ec50",
+    "/home/lpaiu/work/direct-eos-gr33/radiation-eos-split/gas.so": "6779b197aa500652e4db02363754f8b40c2c4eecd71b169714bfa02b188892df",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-vacuum-release/fine.npz": "26566f1dc5777990de94ce297a7add429fd950c45e2eecd1a878dac326665b5f",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-metric-release/cells-1792-progress.npz": "3b72e39108858881f6b84309d78e9e3b8fbd9fb1e761d19aa9b764992322247b",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-metric-release/cells-1792.npz": "3b2f26b0ffb6246fc46cfc533c4a0a6f561a0d3f9bc57b28c56d92c884cdebaf",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-metric-release/cells-896-progress.npz": "6728e2335d7abd20db0385ee273c15398b67360404bd66da1c3117c7d6e8a0c0",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-metric-release/cells-896.npz": "a898b3077496eab9189163b98918786ceec46145b0d58006dde8284c46fafb12",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-metric-release/failed-all-face-progress.npz": "d48708cf473771605f8a7d081aa93524a3201abbf6ea2b02db98bf09a77002d9"
+  },
+  "boundary": "Internal levels and molecules remain conditional equilibrium. Finite collision rates, incident spectrum, nonlinear kinetics, full GR and final charge are not certified by this probe."
+}

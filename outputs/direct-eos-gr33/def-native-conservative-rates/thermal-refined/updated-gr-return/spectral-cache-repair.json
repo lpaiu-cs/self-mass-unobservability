@@ -1,0 +1,12 @@
+{
+  "classification": "Counterexample candidate",
+  "original_pilot_passed": false,
+  "failure": "Second40s pilot completed64 step2, then timed out reading the same spectral frequency coefficients through NpzFile during128 collision",
+  "completed_checkpoint": "64 step2",
+  "repair": "Load immutable spectral arrays once per model, using the same numpy arrays without any arithmetic or physics change. Resume saved64 step2; do not recompute it.",
+  "original_source_sha256": "bfe5d753d9d60f089c9b83397f9f9e9f8ca49dc392a489f3dc0c91c3ccae0408",
+  "repaired_source_sha256": "648798d29011dfaebb1b527d11bc2621356c747355add3a7ad4a12c1cd33b3b2",
+  "pilot_cap_seconds": 40,
+  "capture_cap_seconds": 650,
+  "required_evidence": "Bitwise full terminal state and all-step sources against completed Phase130 paths"
+}

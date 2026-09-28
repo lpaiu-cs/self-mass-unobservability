@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/mnt/e/lab/self-mass-unobservability/verification/lanl_tops_cutoff_audit.py", line 141, in <module>
+    if __name__=='__main__':globals()[sys.argv[1]]()
+  File "/mnt/e/lab/self-mass-unobservability/verification/lanl_tops_cutoff_audit.py", line 93, in run
+    name=request['name'];data=header(retrieval.OUT/(name+'-table.txt'),request);parsed[name]=data
+  File "/mnt/e/lab/self-mass-unobservability/verification/lanl_tops_cutoff_audit.py", line 62, in header
+    assert second['energies'].split()==submitted
+KeyError: 'energies'

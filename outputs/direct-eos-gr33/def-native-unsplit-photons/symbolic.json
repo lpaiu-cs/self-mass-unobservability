@@ -1,0 +1,8 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "scope": "Two-stage stability function and second-order consistency for smooth autonomous ODEs. Does not prove stiff order,positivity or physical convergence.",
+  "stability_function": "(z*(-1 + sqrt(2)) + 1)/(-z*(1 - sqrt(2)/2) + 1)**2",
+  "A_stability": "On z=i*y, denominator modulus squared minus numerator modulus squared equals gamma^4*y^4>=0; the only pole is in the right half-plane.",
+  "conservation": "Apply each stage to gas total internal energy and the photon occupation with identical source and boundary weights; absorption/emission cancels in their sum."
+}

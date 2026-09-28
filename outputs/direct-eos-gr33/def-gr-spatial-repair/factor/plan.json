@@ -1,0 +1,23 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "95d99987",
+  "claim": "Test whether square-root energy arithmetic repairs the unstable projected response, then finish the same fixed degree1/2/4 spatial comparison.",
+  "unchanged": "Same polynomial cells, composite quadrature, heat input,128/256/512 spaces, readouts and acceptance gates. No modal clipping, degree or grid expansion.",
+  "formula": "K_r+shift*M_r=X.T X, evaluated by QR followed by SVD instead of forming the normal matrix. Shift is derived from local potential positivity before response evaluation.",
+  "decision": "First run degree4 with75s cap. Only if all four projection comparisons pass relative2% and order1.5, continue degrees2,1. Only if degree2/4 spatial differences all decrease and are below2%, execute the three original coefficient/outer/quadrature contrasts. Total cap300s; stop on failure without expansion.",
+  "forecast": "Previous degree4 case48.65s included a cold symbolic setup. QR instead of normal-matrix formation is unmeasured; first-case bound75s. Reuse saved raw case as the arithmetic contrast. Entire remaining workflow capped300s.",
+  "budget": {
+    "first_case_seconds": 75,
+    "total_seconds": 300,
+    "CPU_threads": 1,
+    "memory_GB": 4,
+    "new_EOS_calls": 0
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-spatial-repair/factor-run.py": "5e0f095a305acdd7f8937638a46ad184c2ed686cbca0ea099087b9b1abfb2e6e",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_energy_factor.py": "61c84a2f3626f261e1e0f06a7df4d88aaa51589435e934b9744da4ea49ace6d3",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_spatial_repair.py": "d13044861c2b4761d5e6349d809c3368f46112974f374aa050aada516c80f8e5",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-spatial-repair/plan.json": "de746c5711ac529f3d8ccb8c4435429654f189e758a8e706afacac8d25bf0612",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-spatial-repair/measured-budget.json": "eb98617661fb2af3cf164c0aa90d2a713c3c6a650ad6c50d374d849789847e15"
+  }
+}

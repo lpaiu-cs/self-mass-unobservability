@@ -1,0 +1,66 @@
+{
+  "classification": "Proven",
+  "coordinate": "pressure",
+  "passed": false,
+  "result": "Direct lnP Gauss pilot failed near the square-root central endpoint; preserved before regularizing the quadrature coordinate. No interval or physical EOS error certificate is implied.",
+  "results": {
+    "primary": {
+      "differential_Gauss_4_and_8_g": [
+        {
+          "h1": 3.321993469572478e+30,
+          "he4": 3.812998293005018e+32,
+          "baryon": 3.925214399786109e+32
+        },
+        {
+          "h1": 3.3219934694375445e+30,
+          "he4": 3.812935310603997e+32,
+          "baryon": 3.925150132842545e+32
+        }
+      ],
+      "relative_difference_from_cumulative_midpoint": {
+        "h1": -2.0230315866953674e-08,
+        "he4": 2.8068882649279203e-06,
+        "baryon": 2.782088761366097e-06
+      },
+      "Gauss_refinement": {
+        "h1": -4.061817548972613e-11,
+        "he4": -1.6517815162986338e-05,
+        "baryon": -1.637284923006188e-05
+      },
+      "frozen_full_source_Gauss_4_and_8_Lsun": [
+        1.7351626030968814,
+        1.7351626074101119
+      ],
+      "frozen_full_source_difference_from_midpoint_Lsun": 4.646421282838986e-06
+    },
+    "calibrated": {
+      "differential_Gauss_4_and_8_g": [
+        {
+          "h1": 3.6383816027022407e+30,
+          "he4": 3.80980417517513e+32,
+          "baryon": 3.925162553743161e+32
+        },
+        {
+          "h1": 3.6383816025508555e+30,
+          "he4": 3.8097654121807975e+32,
+          "baryon": 3.925123000166703e+32
+        }
+      ],
+      "relative_difference_from_cumulative_midpoint": {
+        "h1": -1.9049125610237638e-08,
+        "he4": 1.729995715349375e-06,
+        "baryon": 1.7132286025400845e-06
+      },
+      "Gauss_refinement": {
+        "h1": -4.160782829387699e-11,
+        "he4": -1.0174537207197076e-05,
+        "baryon": -1.007692698506979e-05
+      },
+      "frozen_full_source_Gauss_4_and_8_Lsun": [
+        0.2740171697778282,
+        0.27401717721572316
+      ],
+      "frozen_full_source_difference_from_midpoint_Lsun": 4.093779563785205e-06
+    }
+  }
+}

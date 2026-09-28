@@ -1,0 +1,44 @@
+{
+  "classification": "Counterexample candidate",
+  "common_frequencies": 4703,
+  "maximum_relative": 0.23277786952562685,
+  "examples": [
+    [
+      1260.7430000000004,
+      5.081203316736953e-09,
+      4.818921209132549e-09,
+      0.05442755675426714
+    ],
+    [
+      1560.706999999998,
+      9.19224425508282e-09,
+      9.803951827983498e-09,
+      0.06239397985970074
+    ],
+    [
+      1260.7350000000004,
+      5.120675739665241e-09,
+      4.819731643309216e-09,
+      0.06244001090263951
+    ],
+    [
+      1329.123,
+      5.855916691583003e-09,
+      5.504699953790177e-09,
+      0.06380306660511104
+    ],
+    [
+      1329.6000000000001,
+      6.093175728246589e-09,
+      6.761003542804441e-09,
+      0.0987764331625891
+    ],
+    [
+      1152.2674999999997,
+      3.919846694833348e-09,
+      5.109141849713991e-09,
+      0.23277786952562685
+    ]
+  ],
+  "cause_candidate": "LINOP computes the line window from IJCNTR and a constant DFRCON although INISET produces a nonuniform frequency grid. Equal physical frequencies then receive different line opacity depending on grid step. Replace integer-distance window estimates by bisection of actual frequencies before further refinement."
+}

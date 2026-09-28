@@ -1,0 +1,41 @@
+{
+  "classification": "Conjectural",
+  "checkpoint": "2029784c4",
+  "claim": "Replace the prescribed atmospheric Planck bath by the same time-dependent angular photons that evolve in the deep native interior, with both directions exchanged at the actual radius.",
+  "decision": "Evolve the moving native interface using actual absorption/emission and paired radiation energy/momentum. Only accepted time/space controls may later supply the final scalar source.",
+  "reuse": "Retain Phase111 deep EOS and its unsplit material-photon integrator, Phase108 physical fluid initialization/recovery/fluxes, and the918 Phase107 constrained atmosphere states. Restore saved native roots once to recover missing spectral level metadata; do not redo the constraint search.",
+  "geometry": "Deep last volume ends at the actual atmosphere inner face; preserve its actual native quadrature point. Remove overlap. Propagate fine atmospheric photons with the same spherical Killing-frequency measure and one shared face flux.",
+  "method": "Keep deep transport/chemistry unsplit. Transparent atmospheric inward/outward transport is eliminated in angular direction order; local atmospheric collisions and conservative moving gas use SSP substeps. Judge this partition on actual coupled controls, not by old separate passes.",
+  "initial": "Keep the registered interior Planck mean and grey flux; extend surface outgoing occupations into initially empty exterior along the declared free-streaming geometry. Incoming exterior is vacuum.",
+  "gates": {
+    "native": 0.002,
+    "energy": 1e-08,
+    "baryon": 1e-10,
+    "species": 1e-09,
+    "positive_photons": true,
+    "time_trace": 0.02,
+    "space_trace": 0.02
+  },
+  "budget": {
+    "cached_native_replays": 918,
+    "new_native_controls_call_cap": 100,
+    "total_native_call_cap": 1100,
+    "spectral_seconds": 60,
+    "coupling_pilot_seconds": 45,
+    "production_seconds": 600,
+    "CPU_threads": 1,
+    "memory_GB": 3
+  },
+  "stop": "No unmeasured dispatch of all production paths, no automatic added grid/horizon/EOS support or weaker gate. Measure the coupled pilot and require the forecast to fit the declared cap. Preserve failures; final charge remains open.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_atmosphere_spectrum.py": "3cc6992c17febeb1ed6314de3deff7ae1afa1a3b97e812d90f06a9cfb15d300f",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-hydrogen-exchange/repaired-bank.npz": "e5f2fd2cfea38b106d5c060b325bade66a8e7db1d86e5346a8c013d72a57f9ad",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-hydrogen-exchange/bank-native-states.npz": "6e639637e48e44112b6fda5e73f2f85ce7175b19cce89722d54dcbd084ae7496",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-hydrogen-exchange/repair-native-states.npz": "74d5f6d8b9e118c408ab30578e95b21ab0f462af8874fce3f6a1eaf8a5b06236",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_hydrogen_exchange.py": "cf590d01753ffd86a00b80ef7be109131b15b8f1619e2246fbea72cd324123d6",
+    "/home/lpaiu/work/direct-eos-gr33/photon-hhe-coupled/atomic.so": "6979f733695aead43e4913e1e349b964ec2a410a8e70d681b12bdab36b47664e",
+    "/home/lpaiu/work/direct-eos-gr33/photon-eos-levels-repaired/levels.so": "f5ebb8b31b67cfb8591cad491abd7930738d22e3eb9eebe90bed1519dd610b31",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-unsplit-photons/result.json": "f475ca9ac5291773d3b66afb334322304e24dfebb8ec8e2a277c22c819af5ce0",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-reactive-interface/physical/result.json": "98043411e12259a1f5358e4da23f6405ef24525890b7b3c1710703542c407b58"
+  }
+}

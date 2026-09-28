@@ -1,0 +1,35 @@
+{
+  "classification": "Conjectural",
+  "checkpoint": "9e32f1896",
+  "claim": "Apply the actually completed177 photon prefix to the unchanged free-material equation. Test whether its noncollisional H inventory and native transport match the photon/H joint solve before spending on a full horizon.",
+  "reuse": "No new photon, background or EOS trajectory. Construct the original17-knot transfer array with ONLY measured prefix values; all future entries are NaN. Reject any use beyond the prefix. Keep the original full-horizon macro clock and stop after4/8steps.",
+  "gates": {
+    "time": 0.02,
+    "conservation": 1e-08,
+    "directional": 0.002,
+    "owner": 1e-08,
+    "branch": 0.01,
+    "paired": 0.002,
+    "mechanical_H": 0.002,
+    "native_H_rate": 0.002
+  },
+  "comparison": "Compare free H-C to the actual Radau integral of native H flux; compare native flux evaluated on the free material trajectory at every actual photon stage. These are the original0.2percent transport gates on the newly implicit H equation, not the obsolete lagged H input.",
+  "forecast": {
+    "previous_same_material_pair_seconds": 12.445505388999997,
+    "estimate_range_seconds": [
+      12.445505388999997,
+      49.78202155599999
+    ],
+    "assumption": "Extra flux comparisons and setup may change timing;60s hard cap,3GiB,one CPU thread. No full horizon or refinement on failure."
+  },
+  "seconds": 60,
+  "full_horizon_authorized": false,
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/complete_native_neutral_transport.py": "3d69852fa6767132e46eb2cf1522ffe2e1fb28492835f2239ba3ee04e01dc683",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/couple_native_neutral_transport.py": "aad46b7ed3206c23209546d0f553ef762934804a7acea70de914d8ecf7b25a90",
+    "native-neutral-coupled177-work/pilot-result.json": "940c9a44e28101be3edca6704040ee3fa023d964dd497b477e2e0fa7ba49452f",
+    "native-neutral-coupled177-work/pilot_retry-receipt.json": "c60477339741e2e5fc8c5eaaaefb406a7f742991798aafd6db8c4204096bb671",
+    "native-neutral-coupled177-work/sweep-1/photons/pilot-64.npz": "63812333e0ee2744c41cb5b580147e8d3c7aa9c2c86c545d34a58022d2389d43",
+    "native-neutral-coupled177-work/sweep-1/photons/pilot-128.npz": "cc11b0f6e3333166f36805c820581160d501c78c203cab7f8bb602f096fa09c1"
+  }
+}

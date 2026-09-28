@@ -1,0 +1,29 @@
+{
+  "known_additional_native_calls": 915,
+  "first_failed_low_support_exact_calls": null,
+  "first_failed_low_support_enforced_call_cap": 400,
+  "combined_native_call_upper_bound": 1315,
+  "diagnostic_and_audit_native_calls": 77,
+  "diagnostic_and_audit_native_call_cap": 80,
+  "support_completion_seconds": 15.135876204,
+  "audit_seconds": 2.8169180260000006,
+  "evolution_seconds_by_path": {
+    "angles-8-steps-64.json": 0.21265127800000272,
+    "pilot-8-32.json": 0.15452932900000071,
+    "pilot-repaired-8-32.json": 0.430711131999999,
+    "pilot-thermal-8-32.json": 0.7727270439999998,
+    "second-order-angles-16-steps-128.json": 3.466069097,
+    "second-order-angles-8-steps-128.json": 3.2025189869999995,
+    "second-order-angles-8-steps-64.json": 1.8782437979999997,
+    "second-order-pilot.json": 1.0801258369999998,
+    "stable-angles-16-steps-128.json": 2.6428116149999994,
+    "stable-angles-8-steps-128.json": 2.461003094000006,
+    "stable-angles-8-steps-64.json": 1.3202805250000011
+  },
+  "combined_evolution_seconds": 17.621671736000007,
+  "evolution_allocated_seconds": 120,
+  "exclusions": "Harness/WSL startup, diagnostic command duration, data serialization and audit are not included in the per-path evolution sum.",
+  "new_long_whole_star_runs": 0,
+  "running_jobs": 0,
+  "CPU_threads": 1
+}

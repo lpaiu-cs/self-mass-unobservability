@@ -1,0 +1,11 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "identity": "At fixed specific entropy s and composition X, du/drho=P/rho^2 gives d^2[rho*(C_X*c^2+u)]/drho^2=(1/rho)*(dP/drho)_s=Gamma1*P/rho^2.",
+  "Jensen": "If this second derivative is positive over the cell density interval, the energy density is strictly convex. With a fixed positive normalized proper-volume measure, <epsilon(rho,s,X)> >= epsilon(<rho>,s,X), with equality only for constant rho (up to measure zero). Affine nuclear rest energy cancels from the difference.",
+  "uniform_state_limit": "A nonuniform isentropic cell cannot in general be replaced by a single uniform state preserving proper volume, baryon mass, internal energy, composition and the original specific entropy simultaneously. At the same mean density, matching the higher averaged energy instead changes the entropy when T>0. This is a coarse-graining effect, not a physical heat source.",
+  "conditional_variance_bound": "If 0<m<=epsilon_rhorho<=M over the entire density interval, then (m/2)*Var(rho)<= <epsilon>-epsilon(<rho>) <=(M/2)*Var(rho). This follows from Taylor remainder bounds around <rho>; the linear term averages to zero. No native continuum m,M are supplied here.",
+  "exact_control": "For two equal-volume ideal polytropic gamma=2 states with K=1 and densities 1 and 3, mean density is 2, the energy-density gap is 1, averaged specific internal energy is 5/2, and the same-entropy uniform value is 2. Any affine rest-energy offset leaves these gaps unchanged.",
+  "required_reconstruction": "Preserve the subcell thermodynamic profile/moments, or explicitly account for the entropy/closure error introduced by finite-volume primitive recovery. Identifying midpoint state values with cell averages without a reconstruction/error analysis is not justified.",
+  "limitations": "No claim that all stored EOS branches satisfy the continuum convexity assumptions, no complete GR finite-volume evolution, no physical EOS certification, and no reinterpretation of numerical averaging entropy as stellar entropy production."
+}

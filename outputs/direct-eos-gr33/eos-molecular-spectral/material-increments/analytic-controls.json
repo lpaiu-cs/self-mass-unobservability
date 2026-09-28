@@ -1,0 +1,26 @@
+{
+  "classification": "Counterexample candidate",
+  "rows": [
+    {
+      "eta": 0.02,
+      "theta": -0.01,
+      "relative_errors": [
+        1.1107389104330253e-16,
+        1.5045308993206746e-16,
+        1.3142530514560785e-16
+      ],
+      "passed": true
+    },
+    {
+      "eta": 1e-25,
+      "theta": 2e-25,
+      "relative_errors": [
+        9.960066349089321e-17,
+        7.51421828674748e-17,
+        1.128861986619978e-16
+      ],
+      "passed": true
+    }
+  ],
+  "model": "Ideal gas plus radiation with an analytic Gibbs-consistent energy/pressure/entropy. Large and sub-ULP changes compared at 80 decimal digits; high-precision comparison is not an interval proof."
+}

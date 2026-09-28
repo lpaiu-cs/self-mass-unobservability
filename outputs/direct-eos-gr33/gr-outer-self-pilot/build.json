@@ -1,0 +1,33 @@
+{
+  "command": [
+    "g++",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-outer-self-pilot/finite-source.cpp",
+    "-I/home/lpaiu/work/nutimo_pilot/request15_deps/usr/include",
+    "-I/home/lpaiu/work/nutimo_pilot/request15_deps/usr/include/x86_64-linux-gnu",
+    "-L/home/lpaiu/work/nutimo_pilot/request15_deps/usr/lib/x86_64-linux-gnu",
+    "-std=c++17",
+    "-O2",
+    "-frounding-math",
+    "-D__USE_FILIB__",
+    "-D__HAVE_MPFR__",
+    "-O2",
+    "-frounding-math",
+    "-DFILIB_EXTENDED",
+    "-DFILIB_HAVE_SSE",
+    "-I/home/lpaiu/work/nutimo_pilot/request14_capd/capdDynSys/include",
+    "-I/home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include",
+    "-I/home/lpaiu/work/nutimo_pilot/request14_capd/capdAux/include",
+    "-I/home/lpaiu/work/nutimo_pilot/request14_capd/capdExt/include",
+    "-I/home/lpaiu/work/nutimo_pilot/request14_capd/capdExt/filibsrc",
+    "-L/home/lpaiu/work/nutimo_pilot/request14_capd/build-request15-mp",
+    "-L/home/lpaiu/work/nutimo_pilot/request14_capd/build-request15-mp/capdExt/filibsrc",
+    "-lcapd",
+    "-lfilib",
+    "-lmpfr",
+    "-lgmp",
+    "-O2",
+    "-o",
+    "/home/lpaiu/work/direct-eos-gr33/outer-self-pilot/finite"
+  ],
+  "returncode": 0
+}

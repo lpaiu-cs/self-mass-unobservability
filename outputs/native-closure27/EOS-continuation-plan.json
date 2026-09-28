@@ -1,0 +1,17 @@
+{
+  "classification": "Counterexample candidate",
+  "steps": [
+    0.02,
+    0.01,
+    0.005
+  ],
+  "local_derivative_tolerance": 0.001,
+  "purpose": "Larger symmetric stencils test whether native single-precision table outputs permit a usable local derivative check. The previous small-step failures remain frozen. No finite-difference agreement is a global error certificate.",
+  "tests": [
+    "pressure derivatives versus chiT and chiRho",
+    "dE/dlnT versus T*cv",
+    "T*dS/dlnT versus T*cv",
+    "dE/dlnrho - T*dS/dlnrho - P/rho"
+  ],
+  "native_HELM_density_note": "Source helm_electron_positron.dek deliberately uses an independently interpolated dP/drho instead of the derivative of its interpolated free-energy pressure. Inspect the source convention separately from the former numerical discrepancy."
+}

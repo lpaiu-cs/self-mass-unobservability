@@ -1,0 +1,39 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "575fae7",
+  "bindings": {
+    "verification/gr_scalar_nonlinear_exterior.py": "ae8af4f607fa60690742b08b60ee27b17225fb4fbd73ed854721cdd3a8873de1",
+    "outputs/direct-eos-gr33/gr-scalar-nonlinear-exterior/def1996.pdf": "134cdc406bbc5e03a65251fed0e4a703c2842cfeb0e4e9471e0f0034eb301dfa",
+    "outputs/direct-eos-gr33/gr-scalar-piecewise-control/manifest.json": "8343eac01f2fe38b08846365c5882e9f113fd9e14ddb7173e20e5dd06829da01",
+    "outputs/direct-eos-gr33/initial-state-17-4.npz": "5dcc8ffb8b32a9f15ccc4c8bb7111d19be8dcdc66611ad2942e3a4a0cf6cc6d6"
+  },
+  "primary_source": {
+    "url": "https://arxiv.org/pdf/gr-qc/9602056",
+    "DOI": "10.1103/PhysRevD.54.1474",
+    "classification": "Imported from prior work",
+    "equations": [
+      "3.6a-e",
+      "3.8-3.10",
+      "3.13a-h"
+    ],
+    "notation": "The source nu is twice log lapse; retain this factor. Its mass is the Einstein ADM mass. Its effective charge ratio is not automatically a derivative along a fixed-baryon stellar sequence."
+  },
+  "surface_fluxes": [
+    0.0,
+    -1e-08,
+    1e-08,
+    -0.0001,
+    0.0001,
+    -0.1,
+    0.1
+  ],
+  "tolerances": [
+    1e-11,
+    2e-13
+  ],
+  "comparison_relative_tolerance": 1e-10,
+  "points": 129,
+  "input": "Use the current star R and surface m/R only as scales for manufactured vacuum boundary controls. q=R*phi_prime(R) is prescribed and phi(R)=0. These are not finite-amplitude interior solutions, actual background estimates or observed source charges.",
+  "method": "Compare the exact source Just matching map in 80-digit arithmetic with an independent compactified vacuum IVP x=R/r from x=1 to x=0, retaining scalar mass/lapse increments separately. No finite outer-radius truncation.",
+  "scope": "Resolve the nonlinear exterior mapping prerequisite only. The finite-pressure photosphere is not matched to vacuum as a physical complete star. No atmosphere, same-baryon nonlinear interior, physical EOS, temporal response or observational inference is claimed."
+}

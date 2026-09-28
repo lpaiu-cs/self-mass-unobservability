@@ -1,0 +1,24 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "d20de02",
+  "previous_manifest_sha256": "bcd390c718fd9870dcd7fcf2919046b17e4563995767bcd73af95806dc6711b9",
+  "steps": [
+    "Full 26-species inventory and atomic energy reference audit",
+    "Charge and ion number preserving trace FreeEOS representation",
+    "Thermodynamic derivative and independent embedding controls",
+    "Baryon-coordinate GR evolution and boundary luminosity/charge connection"
+  ],
+  "controls": {
+    "moment_absolute": 1e-14,
+    "EOS_derivative_relative": 1e-05,
+    "embedding_pressure_relative": 1e-05,
+    "embedding_energy_relative_to_cvT": 1e-05,
+    "time_composition_relative": 0.001,
+    "time_temperature_log_absolute": 2e-06,
+    "GR_interface_absolute": 1e-08,
+    "energy_relative_to_released": 1e-06
+  },
+  "policy": "Retain original physical nuclear abundances and rest masses. Record every failed control. Agreement between two trace embeddings is sensitivity, not a physical error bound. A physically uncertified EOS or transport closure prevents a completed physical-star or observational-inference verdict.",
+  "evolution": "A time-dependent entropy/composition sequence must satisfy the same baryon GR constraints and redshifted energy balance. Independent mass refits or unchanged initial profiles are not evolution.",
+  "exclusions": "No observational runtime reopening, new timing data, runtime environment rebuild, or submission."
+}

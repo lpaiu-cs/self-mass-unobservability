@@ -1,0 +1,40 @@
+{
+  "classification": "Counterexample candidate",
+  "before_checkpoint": "2469970b1",
+  "claim": "Apply updated actual photon collision energy/H/momentum to free shared material mass/momentum/energy/H, then apply its pressure/trace and photons to compact GR and quantify the charge correction.",
+  "reuse": "Completed Phase132 full531-cell spectra, thermal/H histories, corrected EOS, GR/lapse and banks. Original64/128 clocks and3.434ms; no native calls, physical background replay or extra paths.",
+  "method": "Reuse branch-aware actual material fluxes, SSP/CFL and direct conservative primitive map. Keep1x probes on reference128 and the previously established8x arithmetic repair on reference64, with4/8 and8/16 checks. Restore the known deep radial kinetic stress2*T to metric work.",
+  "limits": "This returns actual transfers to material and compact GR. New material motion must still return to photons; a small finite correction is not a contraction bound, complete exterior treatment or final charge.",
+  "budgets": {
+    "pilot_wall_seconds": 45,
+    "production_wall_seconds": 350,
+    "CPU_processes": 3,
+    "threads_each": 1,
+    "total_virtual_memory_GiB": 6,
+    "source_seconds": 75,
+    "GR_seconds": 120
+  },
+  "forecast": "Use the previous completed material paths raw-call counts including late CFL subcycles, times each concurrent pilot seconds/raw-call plus15s; require2x maximum below350s. Measure real contention. Later changed-background subcycles remain uncertain.",
+  "gates": {
+    "owner": 1e-08,
+    "conservation": 1e-08,
+    "directional": 0.002,
+    "branch": 0.01,
+    "small_state": 1e-06,
+    "time": 0.02,
+    "background": 0.02,
+    "pressure": 0.002,
+    "GR_quadrature": 0.002,
+    "independent_GR": 1e-09
+  },
+  "stop": "Stop all workers on failure or350s. No automatic extra path, clock, mesh, horizon, native support or relaxed gate. Preserve all outputs and original failures.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_updated_material_return.py": "8fa54ab1fcfa07f0e852905dbb565fe1bf5029b0ba32086e26dbcac48722e8d0",
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_updated_gr_return.py": "d2c456a74a41ee97b07f026effdadd08c72d583b059420e933b8d72094c719d9",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_material_branch_response.py": "65c24a983afe7bdcfd9b47047622cd789f6cc41fb8b338f3046be9f7cb83cfb2",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_material_response.py": "56bb3c3814c5fad05d2a975d441ad824648825582d82a2cc8a15b50a4c9c4f38",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_feedback_return.py": "a911bec54cf8f83cdc14f820792fcb6f40dc14464370f61adda9b92ac6a2f283",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/audit.json": "5d05c684e3efb7e43bacedefffc769943921bf539c40d074381770903de8b763",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-matter-photon-feedback/stage-time/return/material-audit.json": "80e2a492be76f93e9fb94402aca40bea8b2a203843d4989d158840665979ea40"
+  }
+}

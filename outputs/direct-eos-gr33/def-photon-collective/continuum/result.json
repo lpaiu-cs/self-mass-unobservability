@@ -1,0 +1,161 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "rows": [
+    {
+      "name": "base",
+      "coefficients": {
+        "seconds": 21.737298818000003,
+        "pairs": 4048932,
+        "frequency_cells": 24134,
+        "nangle": 24,
+        "collective": true,
+        "velocity_order": 128,
+        "q_points": 129,
+        "model": "Positive piecewise-linear continuous Maxwell/RPA density plus residues for Landau width below 1e-8 sigma_e; exact cell-overlap moments; no opacity normalization."
+      },
+      "time_order": 2.0136674955601515,
+      "time_differences_initial": [
+        4.8305826409047855e-05,
+        1.196258946857161e-05
+      ],
+      "algebra": {
+        "energy_number_null_relative": [
+          3.0770361774476716e-16,
+          4.219188123292195e-16
+        ],
+        "initial_heating": 1.3389775737867231e-05,
+        "continuum_heating": 1.335984951737599e-05,
+        "heating_relative": 0.0022400117944680886
+      },
+      "balance": 2.645999633330023e-12,
+      "energy_residual": 3.117851060968551e-12,
+      "entropy_growth": 0.0,
+      "solver_residual": 6.589861441469628e-13,
+      "iterations": 3
+    },
+    {
+      "name": "density-mesh",
+      "difference_initial": 4.065103132032705e-09,
+      "coefficients": {
+        "seconds": 22.674146254999997,
+        "pairs": 4048932,
+        "frequency_cells": 24134,
+        "nangle": 24,
+        "collective": true,
+        "velocity_order": 256,
+        "q_points": 129,
+        "model": "Positive piecewise-linear continuous Maxwell/RPA density plus residues for Landau width below 1e-8 sigma_e; exact cell-overlap moments; no opacity normalization."
+      },
+      "algebra": {
+        "energy_number_null_relative": [
+          3.0807578069736097e-16,
+          4.3447618390919924e-16
+        ],
+        "initial_heating": 1.3389447291659132e-05,
+        "continuum_heating": 1.335984951737599e-05,
+        "heating_relative": 0.002215427220542132
+      },
+      "balance": 2.4793643209092652e-12,
+      "energy_residual": 3.4016222931972803e-12,
+      "entropy_growth": 0.0,
+      "solver_residual": 6.590070516424616e-13,
+      "iterations": 3
+    },
+    {
+      "name": "q-grid",
+      "difference_initial": 5.6596461478706484e-08,
+      "coefficients": {
+        "seconds": 25.271565984999995,
+        "pairs": 4048932,
+        "frequency_cells": 24134,
+        "nangle": 24,
+        "collective": true,
+        "velocity_order": 256,
+        "q_points": 257,
+        "model": "Positive piecewise-linear continuous Maxwell/RPA density plus residues for Landau width below 1e-8 sigma_e; exact cell-overlap moments; no opacity normalization."
+      },
+      "algebra": {
+        "energy_number_null_relative": [
+          3.0605476083714584e-16,
+          4.334723192541508e-16
+        ],
+        "initial_heating": 1.3389452984360776e-05,
+        "continuum_heating": 1.335984951737599e-05,
+        "heating_relative": 0.0022158533257641277
+      },
+      "balance": 2.5444098568061834e-12,
+      "energy_residual": 2.8304635088541765e-12,
+      "entropy_growth": 0.0,
+      "solver_residual": 6.59161496453648e-13,
+      "iterations": 3
+    },
+    {
+      "name": "angular",
+      "difference_initial": 2.7956470146271227e-09,
+      "coefficients": {
+        "seconds": 47.45932340000002,
+        "pairs": 4048932,
+        "frequency_cells": 24134,
+        "nangle": 48,
+        "collective": true,
+        "velocity_order": 256,
+        "q_points": 257,
+        "model": "Positive piecewise-linear continuous Maxwell/RPA density plus residues for Landau width below 1e-8 sigma_e; exact cell-overlap moments; no opacity normalization."
+      },
+      "algebra": {
+        "energy_number_null_relative": [
+          3.0525740639188396e-16,
+          4.288147880731907e-16
+        ],
+        "initial_heating": 1.3389452984322087e-05,
+        "continuum_heating": 1.335984951737599e-05,
+        "heating_relative": 0.002215853322868222
+      },
+      "balance": 2.363380351361877e-12,
+      "energy_residual": 1.3127994191569384e-12,
+      "entropy_growth": 0.0,
+      "solver_residual": 6.591741703771319e-13,
+      "iterations": 3
+    },
+    {
+      "name": "independent-electron-32",
+      "algebra": {
+        "energy_number_null_relative": [
+          3.1070804696362574e-16,
+          4.4141392752152086e-16
+        ],
+        "initial_heating": 1.3394037809952137e-05,
+        "continuum_heating": 1.335984951737599e-05,
+        "heating_relative": 0.0025590327594393614
+      },
+      "balance": 5.32583377236827e-13,
+      "energy_residual": 2.943218704728914e-12,
+      "entropy_growth": 0.0,
+      "solver_residual": 1.2474057532672403e-14,
+      "iterations": 3
+    }
+  ],
+  "comparisons": {
+    "density-mesh": 4.065103132032705e-09,
+    "q-grid": 5.6596461478706484e-08,
+    "angular": 2.7956470146271227e-09
+  },
+  "paired_time_difference_initial": 8.434352120412396e-10,
+  "collective_effect_initial": 8.783506260238536e-06,
+  "collective_temperature_effect_K": -1.9009215702969384e-07,
+  "final_temperature_perturbation_K": 0.8025728775955429,
+  "rejected_discrete_difference_initial": 3.704603765576552e-06,
+  "seconds": 384.97886872600003,
+  "peak_memory_GB": 2.233839616,
+  "original_discrete_result_preserved": true,
+  "original_discrete_passed": false,
+  "EOS_population_matched_collective_response_evolved": true,
+  "bound_electron_kernel_complete": false,
+  "nonideal_collisional_quantum_error_certified": false,
+  "native_scalar_kernel_identified": false,
+  "actual_temperature_absorption_certified": false,
+  "physical_atmosphere_closed": false,
+  "full_GR_feedback_evolved": false,
+  "full_dynamic_charge_solved": false
+}

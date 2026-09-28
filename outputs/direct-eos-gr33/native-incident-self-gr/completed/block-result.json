@@ -1,0 +1,64 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "rows": [
+    {
+      "steps": 64,
+      "lagged_inputs": {
+        "xi": 4.2736626868848565e-07,
+        "energy_offset": 3.544531348482948e-07,
+        "B": 3.8740988253500475e-07,
+        "S": 7.897300635009318e-08,
+        "M_Etilde": 8.851697010564771e-10,
+        "dM_Etilde": 1.267592294324983e-09,
+        "M_H": 2.4296103804734253e-06,
+        "dM_H": 1.3919991599535763e-06
+      },
+      "stage_forcing_defect": [
+        1.6228849178207312e-08,
+        1.1396557030134713e-08,
+        2.4379952159202268e-09,
+        1.145631467950831e-08
+      ],
+      "paired_E_H": [
+        1.723069627293523e-10,
+        9.482547923512484e-10
+      ],
+      "stage_count": 128,
+      "stage_operator_identical": true,
+      "forecast_seconds": 283.4877402820009
+    },
+    {
+      "steps": 128,
+      "lagged_inputs": {
+        "xi": 2.167790513141667e-07,
+        "energy_offset": 1.4253238755028099e-07,
+        "B": 1.5254579808684613e-07,
+        "S": 7.898496503298775e-08,
+        "M_Etilde": 3.65772479222405e-10,
+        "dM_Etilde": 3.437706825246706e-10,
+        "M_H": 2.3827354034321192e-06,
+        "dM_H": 1.3918627044670506e-06
+      },
+      "stage_forcing_defect": [
+        8.114731057331133e-09,
+        5.210243166529564e-09,
+        8.500663418490312e-10,
+        4.850946199102387e-09
+      ],
+      "paired_E_H": [
+        6.307879973869606e-11,
+        9.30034983970343e-10
+      ],
+      "stage_count": 256,
+      "stage_operator_identical": true,
+      "forecast_seconds": 268.7122127480005
+    }
+  ],
+  "maximum_block_defect": 2.4296103804734253e-06,
+  "original_waveform_change_test_passed": false,
+  "original_stop_preserved": true,
+  "no_new_evolution_steps": true,
+  "scope": "A separate finite block-equation consistency audit, not the failed whole-state-change convergence criterion, a continuum contraction, or a solution-error bound. Compact readout may be reported only under this explicitly narrower criterion.",
+  "seconds": 137.242735975
+}

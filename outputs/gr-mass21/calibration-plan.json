@@ -1,0 +1,18 @@
+{
+  "classification": "Counterexample candidate",
+  "registered_after": "Frozen-temperature optical failure in the pilot and subdivision-1 refinement; the original failure remains.",
+  "parameters": "Central pressure and a uniform multiplier of the prescribed T(P); composition pressure path unchanged.",
+  "bounds": {
+    "temperature_multiplier": [
+      0.9,
+      1.1
+    ],
+    "central_logP_offset": [
+      -0.4,
+      0.4
+    ]
+  },
+  "targets": "ADM GM mass and Teff=15800 K conditional on the retained MESA photospheric luminosity.",
+  "meaning": "A constructed two-parameter equilibrium candidate. The fitted temperature and radius are not independent predictions, evidence for formation, or an observational posterior.",
+  "gates": "Both residuals below 1e-8 within the sampled EOS model; refine EOS samples and use independent radial TOV integration. Preserve any failed calibration."
+}

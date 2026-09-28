@@ -1,0 +1,14 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "361c8e0",
+  "bindings": {
+    "verification/lanl_tops_boundary_control.py": "87cdcec66bf10f6df2c522aa53ae89bfe2fc32c126c5702f2883fe8b99bff574",
+    "outputs/direct-eos-gr33/lanl-tops-stellar-audit/manifest.json": "5b8407ea0aaf8c02434d430e16fded7a26676406e0677670254858bf14d967af",
+    "outputs/direct-eos-gr33/lanl-tops-stellar-names/manifest.json": "2f4171d1f0cfe4c811d29a34ce820e2087aab65757f02f3071752dc235ff229b",
+    "outputs/direct-eos-gr33/lanl-tops-boundary-control/requests.json": "5fba351b05cc8bbb05b2466db7ecba5c83874a411cb4dc48ee6a2516a6388dff",
+    "outputs/direct-eos-gr33/lanl-tops-boundary-control/lanl-tops-form.html": "b5f1093f7912a1842803c411f375e86db6c21af3d6d9074a1c25a936211ef9d5"
+  },
+  "outer": "Keep the exact original composition, density and both temperatures. Change only requested output to gray, plus a separately marked cutoff-OFF diagnostic. A gray success does not erase the original spectral failure, nor prove LTE in the outer atmosphere.",
+  "centre": "At the same actual central mixture/density, request nine energy groups at the lower existing table temperature 1.75 keV, for both cutoff options. Check documented below-cutoff sentinel 1e10 against the actual group output; preserve unchanged monochromatic arrays and changed gray means from the prior audit.",
+  "acceptance": "Capture every response. Follow-up must validate composition, density, temperature, warnings and group boundaries before physical use. No inference of full GR evolution, full opacity/EOS certification or an actual scattering redistribution kernel."
+}

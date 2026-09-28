@@ -1,0 +1,40 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "d9c3c1b",
+  "cells": 5735,
+  "processes": 4,
+  "block_cells": 128,
+  "control_cells": [
+    0,
+    2972,
+    5734
+  ],
+  "log_population_absolute_tolerance": 1e-10,
+  "output_bitwise_required": true,
+  "source_changes": {
+    "src/mod_nuvar.f90": {
+      "before": "f61e7b745ca66fc5f8fd66265a2d5bb413ece276f6263226cdb87b23b2732e98",
+      "after": "e344c7246faadfadac4fbe66a8aa96e7e4f94635194ee5ad80bd40387db7bd52"
+    },
+    "src/ionize.f90": {
+      "before": "1de80b8cd0063a798ff945cb95f5cafffb85ba4ab98ce25f46428975b56942f0",
+      "after": "ad8a182764e68317fb145cc430ddbc5ec01cf791e36baa7a8a7ee448558e364d"
+    },
+    "src/CMakeLists.txt": {
+      "before": "d1e32f22c0db0934f34342e547c88433c0489b848ced0be26213b4a662ed6d9a",
+      "after": "475374dbcedba96c7aafbb3cd2d273a69832d48354592921741d5de036dd00dc"
+    }
+  },
+  "bindings": {
+    "verification/eos_current_mask.py": "0f9c8ca3befe8eaaed09dfeae1ec2c5954ed93f4c35a82e2eb77c438e93f582d",
+    "outputs/direct-eos-gr33/species-inventory/manifest.json": "1a55133a70949243fa3dc1bdb4681f260e549f8da0690d169017a58eb78ffa9e",
+    "outputs/direct-eos-gr33/reference-state.npz": "17cbbb101628ca9bc111dca0cfe902210f13697c632b91c03913a1718cf7d2ef",
+    "outputs/direct-eos-gr33/current-mask/direct_ion_bridge.f90": "ee9375deb6941add7ec549dd7b07aa0835f3b9fbfbb37b84139400a5f38a7927"
+  },
+  "original_library_sha256": "6348e235763db0112687f391ab1c06c34b33aa530973ea4a414a5d0f21b1dfb4",
+  "measured": "Final ionize call log weights before exponentiation and masks after applying fresh or reused decisions. Compare reconstructed retained atomic softmax with native populations, normalized within each atomic element; hydrogen molecular rescaling cancels in this conditional atomic distribution.",
+  "controls": "The isolated instrumentation must reproduce all original 21 EOS outputs, atomic populations, active stages and molecule fractions bitwise, including an intervening state call and parallel blocks.",
+  "scope": "Current frozen log weights and masks only. Their exponentials and current omitted-to-retained ratio can be enclosed separately. This does not enclose native log-weight calculation, molecular equilibrium or self-consistent nonideal root derivatives.",
+  "physical_EOS_certified": false,
+  "full_GR_evolution": false
+}

@@ -1,0 +1,46 @@
+{
+  "classification": "Counterexample candidate",
+  "seconds": 26.841878296999994,
+  "mass_scale": 1.007022322061226,
+  "native_density_change_from_legacy_request": -8.333108166835856e-07,
+  "charge_relative": 2.9976021664879227e-15,
+  "Cm": 0.5831402394079135,
+  "ne_m3": 1.0444542575890756e+21,
+  "line_integration": [
+    {
+      "seconds": 0.23749144399999977,
+      "segments": 616273,
+      "order": 4,
+      "omitted_wing_response_bound": 9.996487040141649e-05,
+      "tail_budget": 0.0001,
+      "profiles": 3674,
+      "bound_scope": "Exact Voigt model and exact positive bin integration; floating-point quadrature is checked separately. Streaming is skew and the common collision operator is dissipative."
+    },
+    {
+      "seconds": 0.31750604100000146,
+      "segments": 616273,
+      "order": 8,
+      "omitted_wing_response_bound": 9.996487040141649e-05,
+      "tail_budget": 0.0001,
+      "profiles": 3674,
+      "bound_scope": "Exact Voigt model and exact positive bin integration; floating-point quadrature is checked separately. Streaming is skew and the common collision operator is dissipative."
+    }
+  ],
+  "retained_channels_common_EOS": true,
+  "legacy_background_retained": false,
+  "physical_opacity_certified": false,
+  "original_complete_input_failure_resolved": false,
+  "limitations": [
+    "Missing H/He II provider amplitudes in this metal/He I extraction",
+    "Missing ion stages and source model transitions",
+    "Dissolved bound states and oscillator-strength redistribution",
+    "Line broadening, finite-profile redistribution and resonant continuum integration",
+    "Microscopic nonideal recombination activity correction",
+    "Opacity derivatives and off-equilibrium population kinetics"
+  ],
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-mhd-spectrum/coupled/bank.npz": "7fc69e27c5523afd5c1e47a86206b94a7828456456b639de04ecbd4b244c4185",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-mhd-spectrum/coupled/inventory.npz": "91bc978217bc67b7bc13d2ce88b72436940bb528e300ece73a78f155a19c7669",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-mhd-spectrum/coupled/rates/rates.npz": "333de214584f109719cde0b491070dbae75a910c33757846c44efa9e393e1619"
+  }
+}

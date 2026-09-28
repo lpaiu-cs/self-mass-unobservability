@@ -1,0 +1,57 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "e9500e5",
+  "bindings": {
+    "verification/gr_dense_plasma_defined.py": "1a17207250cd529c5f729018888a82fee628f340918af178c3c9e2628bbf665c",
+    "outputs/direct-eos-gr33/gr-dense-plasma-screening-repair/plan.json": "7149ec45b0c58f99da9970bc21ee6dfcfa86ed5ede1edfb3ba647e1b58aa750e",
+    "outputs/direct-eos-gr33/gr-dense-plasma-screening-repair/controls.json": "e78507120372f8acce6ae614340ae434e463f0178f0f6216704cfa6ec5f5097c",
+    "outputs/direct-eos-gr33/gr-dense-plasma-audit/plan.json": "159c188845d20213ce7331fd09974ee3225a5f1bdde25ffdbb2aabfb5e94ca31",
+    "outputs/direct-eos-gr33/gr-dense-plasma-audit/return-audit.json": "761cf9a945083b9a4ba90a54ad078ed8ed7b071f95f16b6dcf299024ac75bfa4",
+    "outputs/direct-eos-gr33/gr-dense-plasma-defined/return-run.py": "4157099adfc5eccfae861ccf861d35db9c22ecb201e066384538e48fdb0c6c17",
+    "outputs/direct-eos-gr33/gr-dense-plasma-defined/screen-controls.py": "224b3c91c80e7c5b27f2ab195779a7e35ce4edbcb4bbf792d2b972ea9f4ece1c",
+    "outputs/direct-eos-gr33/gr-dense-plasma-defined/screen-free.py": "c0405d2256819deb1e4187c8a109d6c2820adef3e9f8589d6bcecd07eeb7daee",
+    "outputs/direct-eos-gr33/gr-dense-plasma-defined/screen-run.py": "03c35bb7b0a0438c8f42d58787720d5c2abb7328bccb6966c254848c5578c473",
+    "outputs/direct-eos-gr33/gr-dense-plasma-defined/return/calibration.json": "00c2b679f884d183a0024b9d38e2fa72a45a059af99b97a9f9f22251613d2c7d",
+    "outputs/direct-eos-gr33/gr-dense-plasma-defined/return/plan.json": "8a179aad5a3d9b6e0871996650bef5d426ddd1ab3e583fb9e4e8d8c1d0142306",
+    "outputs/direct-eos-gr33/gr-dense-plasma-defined/screening/eos22-screening.f": "ff8bd1a54ab8c409e790722f06a6da8731e031e60d9fa75badf91c8dff79b653",
+    "outputs/direct-eos-gr33/gr-dense-plasma-defined/screening/plan.json": "abe5e25fb37fd74b7e92c43c006b3172d66b9fc440476efaca43e3cdc0b58b50"
+  },
+  "reversible_substitutions": {
+    "return-run.py": [
+      [
+        "-1.323515",
+        "-float(np.float32(1.323515))"
+      ]
+    ],
+    "screen-free.py": [
+      [
+        "q('.001')",
+        "mp.mpf(float('.001'))"
+      ]
+    ],
+    "screen-controls.py": [
+      [
+        "before[:6],after[:6]",
+        "before[[0,1,3,4]],after[[0,1,3,4]]"
+      ]
+    ],
+    "screen-run.py": [
+      [
+        "b[:6],saved['corrected'][k,:6]",
+        "b[[0,1,3,4]],saved['corrected'][k,[0,1,3,4]]"
+      ]
+    ],
+    "screening/eos22-screening.f": [
+      [
+        "H1X=.4*X/H1U",
+        "H1X=(2.d0/5.d0)*X/H1U"
+      ],
+      [
+        "H1*(.4/H1U-(.4*X/H1U)**2",
+        "H1*((2.d0/5.d0)/H1U-((2.d0/5.d0)*X/H1U)**2"
+      ]
+    ]
+  },
+  "policy": "Retain both original audit failures. Same 1e-10 independent and group-identity gates, same 1e-5 finite mixture-derivative gate. Classical screening free energy is unchanged; no physical coefficients are fitted. Only derivative algebra and the independent literal reader change.",
+  "numerical_not_physical_certification": true
+}

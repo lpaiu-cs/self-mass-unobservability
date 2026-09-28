@@ -1,0 +1,598 @@
+{
+  "revision": "Unified manuscript with remaining-lever inference, live validation and state identifiability, 2026-09-09",
+  "created_utc": "2026-09-09T04:19:51.979409+00:00",
+  "reviewed_pre_revision_commit": "3bc2fce",
+  "before_task_checkpoint": "14de460",
+  "registration_and_result_commits": {
+    "nuisance": [
+      "e790643",
+      "b8d931b",
+      "3506522"
+    ],
+    "coverage": [
+      "9412142",
+      "12d9f9a",
+      "6217da2"
+    ],
+    "matching": [
+      "1e1cd54",
+      "8edbe84"
+    ],
+    "comparator": [
+      "fb269b9",
+      "65f4b65"
+    ],
+    "phase_state": [
+      "fb269b9",
+      "5b9dba2",
+      "7636d72"
+    ]
+  },
+  "remaining_levers_commits": [
+    "abb973e",
+    "6d7f3f3",
+    "150fa43",
+    "d8eb72d",
+    "a08c36a",
+    "05d7af9"
+  ],
+  "scope": "Conditional theory and inference, plus isolated live transient/derivative and local nonlinear checks. Numerical EOS matching, derivative-error certification, complete pulse reconnection and universal SEP exclusion remain incomplete.",
+  "paths_relative_to": "repository root",
+  "sha256": {
+    "paper/manuscript.md": "2b2ac783365ab7f4f84a1376f29df6ee7b184c969580dd36799355ff87f6729d",
+    "paper/main.tex": "29bb4eaf94c500132a6a178b576866fa79c34871b5b3726bd9b9b2022c100d95",
+    "paper/references.bib": "92f90acafe19e02185d24b48171ef8694f9453d8a8993d48702fd951731e2ace",
+    "paper/build_manuscript.py": "a33637a42e50237a8e90800f8ee6e961a8cc87a27631425ecc619bcd539af7db",
+    "paper/build_figures.py": "79f530b0366c6cc958cd625a624660ff522e6c412d124baddb0979ace1fcf590",
+    "paper/README.md": "3b1a38fdfb24bea164f0a78f490a15150950506a21a1520b51ceb440e0c6684c",
+    "paper/figures/conditional-intervals.pdf": "4e00036b8ca3a4236d7e64b752982a78099aa34f60c6b08d5fe0cc355d4b780b",
+    "paper/figures/coverage-validation.pdf": "dfa00a987ad705a023be5000c1e26e12b6eeca0c1537e25e4627713a484f27da",
+    "paper/package_revision.py": "51133a41e265531b46c683d311f4043ef73bf27f087b43d157f42dd7376ac84b",
+    "paper/figures/comparator-phase-validation.pdf": "6d98b47710c8415c364169bd916748998f6549b76c07292007bfd4373e2287c9",
+    "verification/comparator_audit.py": "06dff5193f4a10119b20603536b3beef4bd9ae0d711a389d780b7e305ab6e164",
+    "verification/phase_state_audit.py": "cc07d6e516fdb9af4a114505bab8aa0e25c74c2187ca38ae4e19293009523629",
+    "verification/phase_refinement.py": "f9317b21051bd38dcc85f998c97daebf3ae76b7397acb44d453d1c7b8cd0abd9",
+    "outputs/research-completion/comparator-audit.json": "bd6213140866220e1ad78e68913dcc93dd24038e3628919d62e18457305ee33a",
+    "outputs/research-completion/phase-state-audit.json": "5a1c6206b4e6acd875dd7a406e3daa7edf30d04682a64d241bafbc9b8884dc41",
+    "outputs/research-completion/phase-refinement.json": "07c7c28b84bf82e854e337d4d9e79e7d733884e17f86f727a215842d7613fb70",
+    "notes/REQUEST11_4_COMPARATOR_PLAN.md": "d74cfb769c02cfa0f46923d73965ab4f2dca8a3b3642afa24016bdf165115a61",
+    "notes/REQUEST11_4_COMPARATOR_RESULT.md": "92dde0f117b85092061a5ee4629ecd54feab2c79f5b574d30f2d79a6111cca66",
+    "notes/REQUEST11_5_PHASE_STATE_PLAN.md": "3ec7ef2b81771969833a45ff368dfb40590b97c72cde7adddd8c6bd5a827cb08",
+    "notes/REQUEST11_5B_PHASE_REFINEMENT_PLAN.md": "f852f19d462c50a54e52b0e36566da3e2d4488ab11bb7c46f9226f89abca630d",
+    "notes/REQUEST11_5_PHASE_STATE_RESULT.md": "e7b465a0dff813c40d8d5f054940ac66b374b6bfcd570b75e1e8a0ed1be93b54",
+    "docs/levers-4-5-completion-2026-09-09.md": "07e7cf59ef80202f7fa5355797b25fe0cd9ef91741603a56cb43c0d0c7a1de84",
+    "verification/nuisance_audit.py": "07bd95724ed44c8c60b841d441391b37835de03adf33791656d489e5658807f6",
+    "verification/coverage_audit.py": "922ef429d470540e774a4154c23abb667946d96bd553b2ff220e51c04c1e2119",
+    "verification/estimated_covariance_audit.py": "fe998ee28c2e1c2c9f1aff366baf78387ae4079ce2ab37907646dc15bf095b68",
+    "symbolic/physical_matching.py": "496cea5ae934c4f88c5c9c97eafe7c6d1ec4feb0258f1249925f986a636f421d",
+    "outputs/research-completion/nuisance-audit.json": "e8dfeaecf6853fbbcd6d42d1beea500393694a7561002fca721f74608141b147",
+    "outputs/research-completion/nuisance-intervals.csv": "4a8dadfd90b457cc5d2c7cd9e2b57d8568eca81bd163d483c6a2fafe912add87",
+    "outputs/research-completion/coverage-audit.json": "183b7e124a1a32b6f37703ada1f4ebba4b7849caccb510ce2168c0eb566db673",
+    "outputs/research-completion/estimated-covariance-audit.json": "f62d5e857c84a5a6d8621fa1a254fa6f0104e44b5d8a74f0feca2a2cfe98b23f",
+    "outputs/research-completion/physical-matching.json": "d10cf67115fcf75aecaa0aa225d651b907bff86990df306858df735fc2e1c91c",
+    "notes/REQUEST11_1_NUISANCE_AUDIT_PLAN.md": "bb6661664ce801472624bca87f9bc0dca9d5d1639304e677be453bf841832cd3",
+    "notes/REQUEST11_1_NUISANCE_AUDIT_RESULT.md": "18ea81d7699d14bee8e0f85189a035148707de40f837f978186136e912546152",
+    "notes/REQUEST11_2_COVERAGE_PLAN.md": "4dcd609ff40cfffe5d89e08049daf49d9aed2aca206ac16f1e9967359c3e4c81",
+    "notes/REQUEST11_2B_ESTIMATED_COVARIANCE_PLAN.md": "fde5e7ff7f4ca3f1264717a5ed64222eb1dde34b2344703acb00adaeba07ce26",
+    "notes/REQUEST11_2_COVERAGE_RESULT.md": "b92722610b5becc1c550d55eb309d3e6a8203382e9d64a67aeb1e432939bb7e9",
+    "notes/REQUEST11_3_MATCHING_PLAN.md": "c3d0444bbae088553931601e49c5d782583726f54630adc558e28fc3919c3b08",
+    "notes/REQUEST11_3_MATCHING_RESULT.md": "1683823c1ff2615e36f01f0ce8fbdfc01ae08191b31832da1ca3c72575c8ec0e",
+    "docs/research-completion-2026-09-09.md": "01afc43672551fdb293c2a691fd46d97f24ee473fcf48e78a37db8ad81a60539",
+    "README.md": "ebe5663db4ff6bf6d5deb2dd84d84691c077630d6881d7915f6c41778d637bf0",
+    "docs/paper-claims-vs-nonclaims.md": "113a6e34031c6dff4ff0fc46864aabd517903b3a5e2760574adb64cf930995ba",
+    "docs/theorem-package.md": "d41fd74f5f9375bd0ed2c36e7083f063ee59667d2f600cc375a53f21d30b453f",
+    "docs/boundary-escape-map.md": "6ef2ffe28081d3240683387a112a3c3ba0a6bad9aa13c256eed3629532fcb695",
+    "docs/release-note.md": "f532215b45f609ae447472776d68fe32a21810517d6e99895d5db97a9372b010",
+    "docs/model-definition.md": "042351348445750da9be1c0475216445f5937ab98a68f918ca670c90cffff5d0",
+    "docs/observable-targets.md": "1d011093f98a958d6020f3e8a90da0e5608b8a6a63be1eafec9b93af34df2224",
+    "docs/adiabatic-limit.md": "f83f8cf6e41950e80d11190ecaf281291da8665b471702d0eac659851e6066ad",
+    "docs/nonadiabatic-regime.md": "a789f6133690b3b8806bc469e8451972452039575c081c7196b8025831ee4eea",
+    "docs/failure-ledger-dynamic-chi.md": "43f68b48bd2c628be3399b18d8105b74921a9b59460caa0c381e633b13792b99",
+    "verification/verify_unified_paper.py": "04e8470d5712eba24f0f5ff7249f67a8135f15953056c57f4a2a70a81b322620",
+    "verification/tier1_survivor_exact.py": "ea51c4ceb9d3d685650602789da1cfa4324c4fe3deb22ff7e986840b1f50f667",
+    "symbolic/nonanalytic_jet_demo.py": "3bc02907bbbd9cff3607f5790e780af8e6544c441b4037cd707162314bd7f52f",
+    "symbolic/chi_relaxation_response.py": "57a7783c1f75f693669418c82d3e245c61e0c520033908ff128d78a143d5fa19",
+    "symbolic/chi_two_frequency_response.py": "8042a3fd225790ffcdfadf02ac1e423072f884b1797406b3912d56707158ba82",
+    "symbolic/frequency_sweep_distinguishability.py": "e997bea41475cd375b9a436b0ca3835e7fd2c26e19756e2761b1520b8d22dc49",
+    "request10_external/scripts/sep_common.py": "78b4ccb1fdbe1265c05953338e4f533ada561445827992c55293fb86d3d2a005",
+    "request10_external/scripts/sep_phase_marg_10_8e.py": "dcf2b07592cc28ccebe42fb3157b61648b7b0da840f70013cc2e35cd892814f2",
+    "request10_external/baseline_planetGR.npz": "44d0403ca91540c7c59ea8f5422b67e827ca243dd6965f7c3a018c4476fae059",
+    "request10_external/finite_jacobian_v2.npy": "29025ab20c263e8ddd9fd43352c1649679abd5c5f6beef718fd02920ac87a3c0",
+    "request10_external/finite_jacobian_v2_meta.json": "f129c4e2447647e8908e89aa117ff40944b52181dee8ec829b1aab0cf21e2d98",
+    "request10_external/finite_jacobian.npy": "70290a189725158ca9a557f99e1ed736c1732ace9d356adc442cf65eec9d4d08",
+    "request10_external/finite_jacobian_meta.json": "f35fb2f5df2a051d8d020d6c36e9627308e75422e9bd834c118cbd7181ed96a9",
+    "request10_external/carrier_projection_rank.json": "accfd9fe32322ce79614afff68601c81272a0ae8ef8d363c377725a2ebdd45eb",
+    "request10_external/sep_dynamic/col_SEP_D.npz": "0fe29967276af38db2e38fa60b6e35415d19a7e4f2f5b20414c9ce276fc4e49d",
+    "request10_external/sep_dynamic/sep_dynamic_columns.npz": "dbeb961e93a7cad2951d9c76e89cd9c016d6e7d133fdb26e7a0a7e73fb22d6c5",
+    "request10_external/sep_dynamic/sep_phase_marg_10_8e.json": "f8d715e5260fcf4268cb2e63d41da4b754fba67b970bc81920f42c68b0a34c36",
+    "request10_external/sep_dynamic/sep_rn_robustness_10_8h.json": "f34acbeb2808ec2f5f441f89dd566fee07f27d596124fff0d5dba462a8239400",
+    "request10_external/sep_dynamic/sep_gateG2.json": "6de1569fdbe031558d03865c2933247c10cbfa4a7112b3941efe83de5d3d96e2",
+    "request10_external/sep_dynamic/sep_gateG2wp.json": "2a1a63bd99a35632ab0638d28638d616e58ba012991903327a7597f8599b3aea",
+    "request10_external/sep_dynamic/sep_quadrature_overlap_10_8g.json": "d2fa9162f69e6b4fa6063eed59ae4b23bba46703022e587ae1f3f57a509455bf",
+    "request10_external/sep_dynamic/turn_search_10_8d.json": "78fef6085c725a0d766832d2c7607a173484edda82af8e886b0a1e1eed3e01fd",
+    "verification/physical_drive_completion.py": "84c9fa4dbde4d314859a0e2909853f02320048454e1523bbe63f33f35cb65752",
+    "verification/simultaneous_inference.py": "fb121e2bc18a22e0709f23411f9ffc57eac422a620b8edf1e36d941a7b0919b7",
+    "verification/prepare_runtime12.py": "97946a0c5850c7cea869702c4e8940c350af62c8ff673db6dd47bdf5e52cfbaa",
+    "verification/runtime_completion.py": "3b8547af11783da9cd0854bcdc686c4f4d72fdb54ce07337dcc78d75e4ec112e",
+    "verification/runtime12_analysis.py": "e77d23ef19463ec19805183da70d391a6fa3a4605caa4652143a41c6f613cd29",
+    "verification/gap_pair_audit.py": "bf0e9b04718abaa459ac5293180ec2fac5f151082aeddf19d4f9e790d16f42a9",
+    "symbolic/state_identifiability.py": "19ed3618824c344db3e3920f8d3954b05b0225946a023b98a50538b758160e0e",
+    "docs/remaining-levers-2026-09-09.md": "a06271997236667f410e7737b8a0204c5dfdb7a3955955d4279b8851b71aaf5f",
+    "paper/figures/remaining-levers-validation.pdf": "9429c5f4f7da298d078a0ce22f23def46744920b6c5e8f5b819ace3c1cc6afc1",
+    "outputs/research-completion/corrected-physical-drive.json": "a74bd8174269cd13a0f045978100bffbf0ed9d9d742f36e7981db1a5ef3355f0",
+    "outputs/research-completion/simultaneous-calibration.json": "4c6a5f2a843e667c44f808b267f6af641490e0d2b0ba75dac5b88b3b6eccbb74",
+    "outputs/research-completion/simultaneous-validation.json": "733de3d490c856cfc58e04ee94ded4bb0e90753f39c2f413178c273b0a5a429a",
+    "outputs/research-completion/state-identifiability.json": "9fde6b8ceeb74b3b94d117da376ef5e788a682fddf567eb8881d3293703cf30e",
+    "outputs/research-completion/gap-pair-audit.json": "a57f275ab3adf27d09537c6f9ce710a70627f07069cd027f7b7791ca3eda6495",
+    "outputs/research-completion/runtime12-analysis.json": "3cc7d66c7a26b80920559bf67ddbfd247020969e2c676167063379f6435bf79b",
+    "notes/REQUEST12_COMPLETION_PLAN.md": "47586ffb4d5d68d0b4211c27be9f25b3ba9eb986198a65a335c2ffc7d2956852",
+    "notes/REQUEST12_DRIVE_INFERENCE_RESULT.md": "0eeb6362161c5ede109e572f55551c1e365b43557ef15706a046ed197d3c17c9",
+    "notes/REQUEST12_NONLINEAR_AMENDMENT.md": "b90858176ca916e4105457f8a99df18fb4178293e2fddc87a37f765d50c47ff7",
+    "notes/REQUEST12_RUNTIME_IMPLEMENTATION.md": "d239a49e5025a1fd9f07f556a705ba4560c4142dd79d0c8591579242471fd010",
+    "notes/REQUEST12_RUNTIME_RESULT.md": "c2bc43eed13f2a50243ea113eab89a10b7c67c8be5c6f62d31e2cb042b2983ef",
+    "notes/REQUEST12_THEORY_RESULT.md": "6e8999c1ddfcfac1dab817cc51d5f3c680deb11af3ef8a49d436c662650e042e",
+    "outputs/research-completion/runtime12/build.json": "b147d03a76a30bf02168dcca28235ced97142e4bd59fdb1007103834a00c236b",
+    "outputs/research-completion/runtime12/build.log": "78ce4d761c110ade6fbf9c6ac5af4d4820524ee6335e36cfe6c62c0cedf159c4",
+    "outputs/research-completion/runtime12/jac-preflight.json": "ed3e987c43492355e72a599cfef51d4fc83e353664dda4d08f4d6d4a654e1e14",
+    "outputs/research-completion/runtime12/jac0-preflight.json": "51c7a99721fd157c3c2cba36d9fc0b6005222ba7c08141ae4c86bb28cba2f74b",
+    "outputs/research-completion/runtime12/jac1-preflight.json": "8b0a6251dcc4382400416125d0eefb8ee061688449fba6e1deb39c6ab84e7c98",
+    "outputs/research-completion/runtime12/jac2-preflight.json": "97600f3c3e7c37e2bb4f2ba66808f6c6494f489134c0f02884bc6c3e3f209054",
+    "outputs/research-completion/runtime12/jac3-preflight.json": "922f56bb22e8fbca96a090661bc5464099f17ad2477cb30712e8c3be1bf524f0",
+    "outputs/research-completion/runtime12/jac_00_0.5.npz": "27e9f3a11c98b8398fccad5ae4c5923d9baa3dc193292143d1a3959e2a7dced2",
+    "outputs/research-completion/runtime12/jac_01_0.5.npz": "2b62881c53b9d70921915acff1558d2314dd5bf0a08015cc74ec7658e345e51f",
+    "outputs/research-completion/runtime12/jac_02_0.5.npz": "9608339eec482666c132377b425c4975c35c33c60825b02656717802922c7d06",
+    "outputs/research-completion/runtime12/jac_03_0.5.npz": "dbeba5e0d92c7d9d9086b05a93636ad5455d98e06363f695d965613ee324c9d6",
+    "outputs/research-completion/runtime12/jac_04_0.5.npz": "bd44898366286f519e49659651872d43bf42fde0ee1e82c46af595cfb112eb93",
+    "outputs/research-completion/runtime12/jac_05_0.5.npz": "1b4a5122862ea5a0bad8fe4cde80747b0e9cb37457da52823cfecbd5c8aa8270",
+    "outputs/research-completion/runtime12/jac_06_0.5.npz": "ffdeca9fa164f36afd3eb5c971e74f496ec0d5beff4231894f08fb649aa5521e",
+    "outputs/research-completion/runtime12/jac_07_0.5.npz": "9793ef1aa770e96a9efee2ec62c28c3e45d5b3db6ce2da48f929c457cdc1adc0",
+    "outputs/research-completion/runtime12/jac_08_0.5.npz": "f537ef627a0a147583a825bb08674c59d446fc133bdcd99b3183edd976993bfd",
+    "outputs/research-completion/runtime12/jac_09_0.5.npz": "afcf0312c6a44b2d2ccf0370c8f4219bdce62092e216fa50498d71e6ec21d38a",
+    "outputs/research-completion/runtime12/jac_10_0.5.npz": "e67aa8a2ae55c8ed0506ee58ab3faab2b73186665575270035f5cde15a68ae1a",
+    "outputs/research-completion/runtime12/jac_11_0.5.npz": "c9c6dac1f1013a5b585c8bbaa1e26830cd4ae894fbd03398e0a9c364ae5532ce",
+    "outputs/research-completion/runtime12/jac_12_0.5.npz": "87924ab81263423ea9bf4a20b3ce0329b4c8905bce39d81e62a318e78bde8063",
+    "outputs/research-completion/runtime12/jac_13_0.5.npz": "1e73c1cb7ef236d2be4b2bb0d446a3be73574cca30dfc50c649c8c3335268b39",
+    "outputs/research-completion/runtime12/jac_14_0.5.npz": "23103c47ae38bbadca9c94e41c6b8b85b6268ca6e90cadd88eb69bde18008b51",
+    "outputs/research-completion/runtime12/jac_15_0.5.npz": "35583c23c799218ce4f4f6cf1a48d0fc6d0874ebfc33f1353738171a8298f405",
+    "outputs/research-completion/runtime12/jac_16_0.5.npz": "8595d1265df0d6ce952fa4f1436d1320303687b1a50f4156c718e14b1da681e2",
+    "outputs/research-completion/runtime12/jac_17_0.5.npz": "57deb7348d5fb2f7c95c997ab0a7c6d336ab83e80881ef82d8106972c718c4d6",
+    "outputs/research-completion/runtime12/jac_18_0.5.npz": "845b80c86a8df8373413c86ff71940b9aa2c3eaf9ff21ca94514b04459cc6d6f",
+    "outputs/research-completion/runtime12/jac_19_0.5.npz": "5d57df5570de1995dee1e5aaf98f7b6963f07a20a52c23bb8337c0415bda95c7",
+    "outputs/research-completion/runtime12/jac_20_0.5.npz": "02efec7c2dfcfb9c3ecc5451bf690dba4b1ae040a69b06753b096714d5734be4",
+    "outputs/research-completion/runtime12/jac_21_0.25.npz": "1165c43f7683103c9c8f9d71821c02b8da185fb30a167befdd3af736b0159f68",
+    "outputs/research-completion/runtime12/jac_21_0.5.npz": "e7ec5dd7627fac029a7fbc59a4fd2f274414f0352d25b94a1ab1f8d95c6fbdde",
+    "outputs/research-completion/runtime12/jac_22_0.25.npz": "a91a1a7e24fc0488d251bd2ca87a78888e3d0d578b6370ff5249258ff3f29759",
+    "outputs/research-completion/runtime12/jac_22_0.5.npz": "4db30faa1de0d6d1ca71b531a63ff128298064d9626c415b5163b8fbb5975970",
+    "outputs/research-completion/runtime12/jac_23_0.25.npz": "bc8f64a02ce76ccf10eb356932266bb2fed3d57294edecbf1aaed78f8b728008",
+    "outputs/research-completion/runtime12/jac_23_0.5.npz": "15354ba003bc1f3778c1b64e1fe3df84a435336c038094912ab24a863cef5cd4",
+    "outputs/research-completion/runtime12/jac_24_0.25.npz": "e2ebf827e231818c161596546a1ec35ac3ef5bea704789923f60ff3e2d81caa0",
+    "outputs/research-completion/runtime12/jac_24_0.5.npz": "0afad43b58874b43fca49c064055740380ad21b658d0b839f6e3a754ad0a5089",
+    "outputs/research-completion/runtime12/jac_25_0.25.npz": "76ed8fb3a61ef939069ce4f148dda62bcc58c07d46293156c1306ee260da2832",
+    "outputs/research-completion/runtime12/jac_25_0.5.npz": "7774217e8c314cc1cdac95255b9edd9648ce5272b01283f9d1d0644bf4180e8d",
+    "outputs/research-completion/runtime12/jac_26_0.25.npz": "36788db3b1cd75f2a146fd4dd61df323b94b4e567a57bb92ec44c7b26672dd10",
+    "outputs/research-completion/runtime12/jac_26_0.5.npz": "9e4756e9c49793d91d5c9f6ff00829ed75674af21e5299c0e69b6693f878133f",
+    "outputs/research-completion/runtime12/jac_27_0.25.npz": "8e7277e8ee43b0ed36ad4a15aa358301e7dcd5b08fccbf0d9b3e9f12bcee68fb",
+    "outputs/research-completion/runtime12/jac_27_0.5.npz": "b4f4bc61f6df89ad45f9f088936021372fc63d9545a9b0bce7210a76f14c1c95",
+    "outputs/research-completion/runtime12/nonlinear-domain-rejection.json": "8b1b074edf577dec287049aac54f7dc37bfdf5219ad6849724300f05f02e8a5b",
+    "outputs/research-completion/runtime12/nonlinear-gap-input.npz": "0fde8f6be55c323fafaff6ed8e27bf1c8c6373526ad53ef357fb4f9e118b9d66",
+    "outputs/research-completion/runtime12/nonlinear-preflight.json": "40d50e7f83f6a8c27c7ae005d0adffbe28493db4cd05afc4419c3c2ece67aa1a",
+    "outputs/research-completion/runtime12/nonlinear_gap_0.001.npz": "8519888a5c3312ec735b28910626b25eb01c4b62f5cac70da6fbe8233a18ce95",
+    "outputs/research-completion/runtime12/nonlinear_gap_0.003.npz": "5bd9981c7265ab90d44b694051d1d68180e982e43c5c4ea074426bcdf0136308",
+    "outputs/research-completion/runtime12/nonlinear_gap_0.01.npz": "ae6296354f5cde905f389d1b563563b236f275d841be2560cbdadaa0e7f03a7e",
+    "outputs/research-completion/runtime12/probe-preflight.json": "46d366b2afcf72489a5969b87b9c8a639fd8d902b0ac59ec6237650a067d9c78",
+    "outputs/research-completion/runtime12/runtime12-jac.log": "e74b328d0ab6f4844a2d757a313bb97a527d6376f90ec7d6a50f2dedac9250ab",
+    "outputs/research-completion/runtime12/runtime12-jac0.log": "53f5ee3bb75ba6bd66ba2588674c91d3df459e1c6b568ffb98014ccc93e235e5",
+    "outputs/research-completion/runtime12/runtime12-jac1.log": "4c919bcbebeefe95a20ec68830fc8de9562a9ae383708be9f78e07a96b2b352f",
+    "outputs/research-completion/runtime12/runtime12-jac2.log": "65c10e7c4b862f2892b6322f5bfc78cfa270024046293fbfcc0d2f8ab3b9ff71",
+    "outputs/research-completion/runtime12/runtime12-jac3.log": "f40e5489d479cf98d11de3eb974a3c8f28158e2ad9b80bf12e79aabb7c3972e2",
+    "outputs/research-completion/runtime12/runtime12-nonlinear-corrected.log": "f21f83845143ece9a392092b1dacab61df5bf3a4409eb3a4f846e67654900759",
+    "outputs/research-completion/runtime12/runtime12-nonlinear-local.log": "f3779ac63f213d27f1ed12780751b855b5bac500509ccf6203c3e1e39bb075a3",
+    "outputs/research-completion/runtime12/runtime12-nonlinear.log": "f618bb577861726eb19979569b9503bab0878c2b045d83fb431750a27f9e3de5",
+    "outputs/research-completion/runtime12/runtime12-probe.log": "f7a85d1b4b6275c36b51c9864f9697548f101ef982ed610f2cab705299a86908",
+    "outputs/research-completion/runtime12/runtime12-transient.log": "b44afe66a47e1bbdc47189df96a02d807149cb93950d2a306e98b055b1c9099e",
+    "outputs/research-completion/runtime12/transient-preflight.json": "e38318a10e5ad0788f045ad8c7a6499412cd1dc33182e4cf560fa1b682fd92d4",
+    "outputs/research-completion/runtime12/transient.patch": "9dd075454094543dc5b0e6de12dbc819448f981ede473e37828b9a3034e3340f",
+    "outputs/research-completion/runtime12/transient_2_1e-08.npz": "eed20c2353c0265a1caa15e5086ed47eff65b949d42235c158e79aa76f6a818f",
+    "outputs/research-completion/runtime12/transient_2_5e-09.npz": "d947799d5857cca68cb50995f47278f25cfdcfbdf9c903bd96b58927734d579b",
+    "outputs/research-completion/runtime12/transient_500_1e-08.npz": "e1d7bb51ec8d51c5a4d958e65b274707943ffc87725e181f1aa7edee450d7ae5",
+    "outputs/research-completion/runtime12/transient_500_5e-09.npz": "9315a31860c1e72d286a9edb57bfa88f9a9553c81fd5b9c2520a1d2d8be02b80",
+    "outputs/research-completion/runtime12/transient_52_1e-08.npz": "0fe9985bbd85fea36bb9c76a32b5f11e30c0f0391c1a9ca6088bde568aefd581",
+    "outputs/research-completion/runtime12/transient_52_5e-09.npz": "20845004b7c6731a2fcdf4c42185064bf792188750ae12c33cd6dc7170e67762",
+    "output/pdf/free-fall-identifiability.pdf": "c51f216b2067cf38ec10b74a8c4e899cd21bec8a06558d2fe1949d32ac1af541"
+  },
+  "request13_supporting_note_update": {
+    "changed_inputs": [
+      "docs/model-definition.md",
+      "docs/observable-targets.md",
+      "docs/adiabatic-limit.md",
+      "docs/nonadiabatic-regime.md",
+      "docs/failure-ledger-dynamic-chi.md"
+    ],
+    "manuscript_pdf_and_source_zip": "Frozen Request12 artifacts; not a completed Request13 submission",
+    "rigorous_derivative_and_full_physical_inference": "incomplete"
+  },
+  "request14_supporting_note_update": {
+    "paths": [
+      "docs/model-definition.md",
+      "docs/observable-targets.md",
+      "docs/adiabatic-limit.md",
+      "docs/nonadiabatic-regime.md",
+      "docs/failure-ledger-dynamic-chi.md"
+    ],
+    "evidence_manifest": "outputs/validated-variational/manifest.json",
+    "status": "Conditional GR IVP/initial-state variational enclosures; full timing D2 remains false",
+    "artifact_status": "The manuscript PDF/source ZIP remain the frozen Request 12 artifacts; they do not contain a completed Request 14 certificate."
+  },
+  "request15_supporting_note_update": {
+    "evidence_manifest": "outputs/remaining-levers15/manifest.json",
+    "historical_notes": "outputs/remaining-levers15/historical-note-bindings.json",
+    "status": "초기화 결함 수정·좌표 재매핑 및 질량·Kepler·대수 관측식 부분 인증; 전체 타이밍·물리 추론 미완료",
+    "artifact_status": "원고 PDF와 ZIP은 Request 12 동결본이다."
+  },
+  "request16_supporting_note_update": {
+    "evidence_manifest": "outputs/nbody-readout16/manifest.json",
+    "historical_notes": "outputs/nbody-readout16/historical-note-bindings.json",
+    "status": "다체 GR 지연 수정 및 조건부 보간 오차·영 scalar 구동 경계; 전체 timing·물리 추론 미완료",
+    "artifact_status": "원고 PDF와 ZIP은 Request 12 동결본이다."
+  },
+  "request17_supporting_note_update": {
+    "evidence_manifest": "outputs/nonzero-drive17/manifest.json",
+    "historical_notes": "outputs/nonzero-drive17/historical-note-bindings.json",
+    "status": "지정 비영 배경 항성·동반성 구동 및 조건부 축약 미분·추적 상계; 전체 물리 timing·추론 미완료",
+    "artifact_status": "원고 PDF와 ZIP은 Request 12 동결본이다."
+  },
+  "request18_supporting_note_update": {
+    "evidence_manifest": "outputs/thermal-wd18/manifest.json",
+    "historical_notes": "outputs/thermal-wd18/historical-note-bindings.json",
+    "status": "공개 열 항성 구조 확보와 고정 구각 scalar 응답의 조건부 정리; 정확한 질량·광학 구조와 전체 timing·추론 미완료",
+    "artifact_status": "원고 PDF와 ZIP은 Request 12 동결본이다."
+  },
+  "request19_supporting_note_update": {
+    "evidence_manifest": "outputs/thermal-restart19/manifest.json",
+    "historical_notes": "outputs/thermal-restart19/historical-note-bindings.json",
+    "status": "MESA 진화 재현·광학 구조 복원·외피 질량 보정 대조 완료; GR 전체 matching·인증·추론 미완료",
+    "artifact_status": "원고 PDF와 ZIP은 Request 12 동결본이다."
+  },
+  "request20_supporting_note_update": {
+    "evidence_manifest": "outputs/thermal-robustness20/manifest.json",
+    "historical_notes": "outputs/thermal-robustness20/historical-note-bindings.json",
+    "status": "유한 열 구조 민감도 검사·질량 정의 감사·조건부 응답 차이 정리; GR matching 및 전체 인증·추론 미완료",
+    "artifact_status": "원고 PDF와 ZIP은 Request 12 동결본이다."
+  },
+  "request21_supporting_note_update": {
+    "evidence_manifest": "outputs/gr-mass21/manifest.json",
+    "historical_notes": "outputs/gr-mass21/historical-note-bindings.json",
+    "status": "명시한 열 EOS·열 경로의 GR 질량 매칭 및 별도 광학 조정 후보; 실제 GR 진화·전체 인증·추론 미완료",
+    "artifact_status": "원고 PDF와 ZIP은 Request 12 동결본이다."
+  },
+  "request22_supporting_note_update": {
+    "evidence_manifest": "outputs/thermal-closure22/manifest.json",
+    "historical_notes": "outputs/thermal-closure22/historical-note-bindings.json",
+    "status": "GR 질량 해 보존; 동일 물질·동결 열수송 이식의 실패 수치와 정확한 정적 열유속 no-go 확인",
+    "artifact_status": "원고 PDF와 ZIP은 Request 12 동결본이다."
+  },
+  "request23_supporting_note_update": {
+    "evidence_manifest": "outputs/baryon-entropy23/manifest.json",
+    "historical_notes": "outputs/baryon-entropy23/historical-note-bindings.json",
+    "status": "물질·기준 엔트로피 보존 TOV 재구성 및 별도 바리온 배율 GR 질량 후보; 실제 열 진화 미완료",
+    "artifact_status": "원고 PDF와 ZIP은 Request 12 동결본이다."
+  },
+  "request24_supporting_note_update": {
+    "evidence_manifest": "outputs/reactive-energy24/manifest.json",
+    "historical_notes": "outputs/reactive-energy24/historical-note-bindings.json",
+    "status": "정지질량·핵 Q·내부에너지 기준 변환 및 조성 화학 항 검증; 실제 반응률·GR 열 진화 미완료",
+    "artifact_status": "원고 PDF와 ZIP은 Request 12 동결본이다."
+  },
+  "request25_supporting_note_update": {
+    "evidence_manifest": "outputs/fresh-microphysics25/manifest.json",
+    "historical_notes": "outputs/fresh-microphysics25/historical-note-bindings.json",
+    "status": "새 GR 상태의 핵 가열·중성미자·불투명도 재평가; native 미분 실패 보존 및 별도 국소 미분 자료",
+    "artifact_status": "원고 PDF와 ZIP은 Request 12 동결본이다."
+  },
+  "request26_supporting_note_update": {
+    "evidence_manifest": "outputs/remaining-closure26/manifest.json",
+    "historical_notes": "outputs/remaining-closure26/historical-note-bindings.json",
+    "status": "PP 미분 원인·반응 채널·조성 방향·GR scalar 응답 및 보존형 열 대조 검산; 물리적 미완료 조건 명시",
+    "artifact_status": "원고 PDF와 ZIP은 Request12 역사 산출물이다."
+  },
+  "request27_supporting_note_update": {
+    "evidence_manifest": "outputs/native-closure27/manifest.json",
+    "historical_notes": "outputs/native-closure27/historical-note-bindings.json",
+    "status": "직접 반응 벡터 독립 검증 및 명시적 핵 가열 상태 후보; 공통 EOS와 실제 GR/관측 폐쇄 미완료",
+    "artifact_status": "원고 PDF/ZIP은 Request12 역사 산출물이며 이번 연구 노트 갱신과 구분한다."
+  },
+  "request28_supporting_note_update": {
+    "evidence_manifest": "outputs/conservative-cell28/manifest.json",
+    "historical_notes": "outputs/conservative-cell28/historical-note-bindings.json",
+    "status": "고온 HELM 26종 반응·열 결합 대조 및 고정 GR scalar 미분 구간 보증; 전체 물리·관측 폐쇄 미완료",
+    "artifact_status": "Request12 원고 PDF/ZIP은 역사 산출물로 보존한다."
+  },
+  "request29_supporting_note_update": {
+    "evidence_manifest": "outputs/common-eos29/manifest.json",
+    "historical_notes": "outputs/common-eos29/historical-note-bindings.json",
+    "status": "26종 EOS 유한 감사·같은 바리온 GR 열 경로와 질량 정규화 scalar 읽기; 미분·시간 실패 보존, 물리 EOS·실제 GR/관측 폐쇄 미완료",
+    "artifact_status": "Request12 원고 PDF/ZIP은 역사 산출물로 보존한다."
+  },
+  "request30_supporting_note_update": {
+    "evidence_manifest": "outputs/closure-precision30/manifest.json",
+    "historical_notes": "outputs/closure-precision30/historical-note-bindings.json",
+    "status": "EOS 국소 역산 재현성·약반응 미분 경로 수정과 지정 약반응 구간 보증; 물리 EOS·새 GR 진화·관측 폐쇄 미완료",
+    "artifact_status": "Request12 원고 PDF/ZIP은 역사 산출물로 보존한다."
+  },
+  "request31_supporting_note_update": {
+    "evidence_manifest": "outputs/conservative-star31/manifest.json",
+    "historical_notes": "outputs/conservative-star31/historical-note-bindings.json",
+    "status": "새 1·2·4단계 고정 광도 GR 경로의 에너지 기준 일괄 판정은 실패다. 가장 미세한 4단계의 에너지 기준은 통과, 마지막 조성·온도 시간 대조는 실패다. 거친 경로의 실패는 미세 경로의 판정과 구분하여 보존한다. 별도 구조 피드백 잔차 보정 1단계의 에너지 점수는 9.7476097e-07로 통과했으며, 그 보정 방법의 시간 수렴은 아직 검증하지 않았다. 물리 EOS·전체 GR·관측 폐쇄는 미완료다.",
+    "artifact_status": "Request12 원고 PDF/ZIP은 역사 산출물로 보존한다."
+  },
+  "request32_supporting_note_update": {
+    "evidence_manifest": "outputs/structured-enthalpy32/manifest.json",
+    "historical_notes": "outputs/structured-enthalpy32/historical-note-bindings.json",
+    "status": "1단계 에너지 9.9518558e-07 (통과); 2단계 에너지 5.0487311e-07 (통과); 4단계 에너지 4.2294414e-07 (통과). 마지막 조성 시간 점수 0.019911438, 로그 온도 차이 6.1622707e-10로 시간 대조는 통과다. 별도 에너지 단위 엔트로피 역산 GR 재투영의 점수는 8.2800499e-07로 통과다. 이 별도 재투영은 강화한 역산법의 전체 시간 재적분이 아니다.",
+    "artifact_status": "Request12 원고 PDF/ZIP은 역사 산출물로 보존한다. 물리 EOS·전체 GR·관측 폐쇄 및 최종 투고 상태는 미완료다."
+  },
+  "request33_in_progress": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "수정 EOS의 정의된 21출력 역산·이력 대조 통과. 새 GR 구조·자체 진화·최종 투고본은 미완료다."
+  },
+  "request33_opacity_in_progress": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "실제 Type1 5735구역 기준·동일 입력·조성 대조 통과. 새 EOS 입력 개입과 유한 미분 검사는 진행 중이다."
+  },
+  "request33_transport_checkpoint": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "새 EOS 원천 입력 연결과 원래 원천 비트 재현 완료. 불투명도 보간·혼합항 결함을 분리하고 조건부 구간 보증을 추가했다. 원래 실패 판정과 전체 물리 폐쇄 미완료를 유지한다."
+  },
+  "request33_GR_preflight": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "全 EOS 표·독립 직렬 대조 완료. 공통 반응/전자 입력 및 수송·부력 기준 고정, 비선형 수송 엔트로피 항등식 검산. 실제 GR 구조·시간 진화·투고본 완료는 아직 아니다."
+  },
+  "request33_EOS_error_transfer": {
+    "report": "notes/REQUEST33_EOS_ERROR_TRANSFER_KO.md",
+    "status": "조건부 평형·기울기·Hessian 및 열역학 오차 전달 정리 검산. 실제 EOS의 물리적 상계 인증과 최종 투고본은 미완료."
+  },
+  "request33_Fermi_uniform": {
+    "report": "notes/REQUEST33_FERMI_UNIFORM_KO.md",
+    "status": "선언한 Fermi 구적법 28성분 연속 오차와 84점 성분 대조·수정 내보내기 감사 완료. 전체 물리 EOS·GR 진화·최종 투고본 미완료."
+  },
+  "request33_ideal_electron": {
+    "report": "notes/REQUEST33_FERMI_UNIFORM_KO.md",
+    "status": "이상 전자 열역학·밀도 역산의 조건부 연속 오차와 독립 유리수 감사 완료. 전체 물리 EOS·GR 진화·최종 투고본 미완료."
+  },
+  "request33_potential_and_ideal_ionization": {
+    "report": "notes/REQUEST33_FERMI_UNIFORM_KO.md",
+    "status": "전자 Legendre 쌍·서로 다른 역산 근의 도함수 오차·이상 이온화 볼록성 검산 완료. 비이상 EOS·자체 GR·관측·투고본 미완료."
+  },
+  "request33_actual_species_inventory": {
+    "report": "notes/REQUEST33_FERMI_UNIFORM_KO.md",
+    "status": "실제 EOS 5735구역의 원자·이온·분자 재고 전수 추출 및 독립 21출력·보존 감사 완료. 수치 영분율 경계·비이상 곡률·물리 EOS·GR·관측·투고본은 미완료."
+  },
+  "request33_cutoff_and_Coulomb": {
+    "report": "notes/REQUEST33_FERMI_UNIFORM_KO.md",
+    "status": "현재 마스크 조건·반례와 실제 Coulomb 5735구역 독립 감사, 고정 행렬 유리수 하한 완료. 전체 물리 EOS·자체 GR·관측·투고본 미완료."
+  },
+  "request33_current_ionization_mask": {
+    "report": "notes/REQUEST33_FERMI_UNIFORM_KO.md",
+    "status": "최종 마스크·로그 가중치 5735구역 추출 및 출력 일치, 현재 절단 조건부 상계 완료. 비이상/물리 EOS·자체 GR·관측·투고본 미완료."
+  },
+  "request33_nonlinear_exchange": {
+    "report": "notes/REQUEST33_FERMI_UNIFORM_KO.md",
+    "status": "실제 내부 교환 인수와 5735구역 출력 감사·성분 곡률·고정 행렬 양성 확장 완료. 전체 물리 EOS·자체 GR·관측·투고본 미완료."
+  },
+  "request33_MDH_pressure_ionization": {
+    "report": "notes/REQUEST33_FERMI_UNIFORM_KO.md",
+    "status": "실제 MDH 5735구역 출력·모멘트·미분 및 고정 성분 곡률 하한 감사 완료. 들뜸/전체 물리 EOS·자체 GR·관측·투고본 미완료."
+  },
+  "request33_excitation_and_free_energy_ledger": {
+    "report": "notes/REQUEST33_FERMI_UNIFORM_KO.md",
+    "status": "실제 스케일 보존 들뜸 5735구역·독립 곡률 하한·자유에너지 항별 기호 검산 완료. 두 수치 처리 실패 보존. 물리/연속 EOS·전체 평형·자체 GR·관측·투고본 미완료."
+  },
+  "request33_atomic_stationarity": {
+    "report": "notes/REQUEST33_FERMI_UNIFORM_KO.md",
+    "status": "실제 5735구역 양의 원자 평형·독립 유리수/구간 잔차·EOS 출력 감사 완료. 비활성 PL 계측 실패 보존. 분자/연속 근·물리 EOS·자체 GR·관측·투고본 미완료."
+  },
+  "request33_molecular_stationarity": {
+    "report": "notes/REQUEST33_FERMI_UNIFORM_KO.md",
+    "status": "실제 분자 평형·전체 양의 종 잔차·핵 수 보존 기호 검산 완료. 4559구역의 분자 모형 비활성 경계를 식별. 연속/물리 EOS·자체 GR·관측·투고본 미완료."
+  },
+  "request33_GR_realized": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "수정 EOS의 실제 GR 구조·원천 입력·수송 독립 감사 완료. 복사/전도 분리 및 대기/스펙트럼 비유일성 경계 확인. 비선형 열수송 연산자 실행 시작; 자체 유체/계량/대류/대기·관측·최종 투고본 미완료."
+  },
+  "request33_molecular_switch": {
+    "report": "notes/REQUEST33_FERMI_UNIFORM_KO.md",
+    "status": "실제 1e6 K 분자 차단 효과 전수 대조와 조건부 자유에너지 불연속 정리 검산. 고온 분배 함수·연속/물리 EOS 인증 미완료."
+  },
+  "request33_nonlinear_thermal_failure": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "실제 EOS/불투명도 반복 갱신의 첫 열수송 단계는 전역 에너지 기준 실패(0.401342 > 1e-8). 원본 동결·정밀도 끝점 진단 재실행 중. 전체 진화·물리 EOS·관측·투고본 미완료."
+  },
+  "request33_caloric_increment": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "원래 전역 에너지 실패 재현 및 4181구역의 온도 저장 정밀도 기여 확인. 작은 온도/에너지 증분 좌표·Gauss 기호/경계 대조 준비 완료. 새 시간 경로·전체 물리/GR/관측 인증 미완료."
+  },
+  "request33_heat_constraints": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "증분 열수송 1단계 및 저장값 정확 유리수 보존 감사 통과. 초기 GR 열유속 제약과 가속도 누락 정정, 균질 열유속 필요조건 검산. 시간 경로·결합 유체·물리 EOS·관측·투고본 미완료."
+  },
+  "request33_heat_characteristics": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "저장 계수의 두 열완화 후보: 평형 전 파수 감쇠·비영 열유속 특성 근 11470건 아광속 인증·조건부 초기 GR 미분. 열수송 2단계 보존 통과, 1/2단계 시간 차이 0.001052>0.0001 미달. 전체 물리/GR/관측 목표 미완료."
+  },
+  "request33_heat_entropy_closure": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "이차 엔트로피 열모형의 전체 수송항 기호 검산 및 두 일정 시간 후보의 비영 열유속 특성 11470건·초기 연립 변화율 정확 산술 통과. 생략항/Q 최대 0.91913. 물리 보정·시간 경로·전체 GR/관측 미완료."
+  },
+  "request33_spherical_mass_balance": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "시간 의존 4D 계량에서 비선형 GR 질량수지·움직이는 닫힌 자유 표면의 외부 질량 영 대조 검산. 별도 동일 알고리즘 8/16/32 시간 경로 진행. 실제 표면·전체 EOS/GR/관측 목표 미완료."
+  },
+  "request33_spatial_integrals": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "4단계 보존 감사 통과·시간 차이 0.000657>0.0001 미달. 점/셀 평균 및 압력 평형 오차 특정, 등엔트로피 평균화 경계 검산, 네 구역 직접 EOS GR 적분 완료. 전체 공간/시간/물리/관측 인증 미완료."
+  },
+  "request33_balanced_conservation": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "구면 공변 보존식·정수압 기준 분리·움직이는 바리온 구역의 일/열/운동량/엔트로피 수지 기호 검산. 중단된 8분할의 네 승인 단계 비트 복구 후 같은 기준으로 재개. 작은 질량 증분 대조와 전체 별 공간 재계산 준비; 전체 물리 EOS/GR/관측 미완료."
+  },
+  "request33_primitive_inverse": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "열유속 포함 원시 변수 국소 역산 조건·5735 동결 행렬식 하한 검산. 원래 25/27·단위 척도 23/27 실패 보존 후 동일 목표 결합 Newton 27/27 통과. 외곽 RK 질량 덧셈의 25.7295% 국소 소실 정확 감사. 셀 재구성·물리 EOS/자체 GR/관측 미완료."
+  },
+  "request33_subcell_reconstruction": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "비균일 네 셀의 양의 8/16점 구적 대조·보존 모멘트 Jacobian 양성·native EOS 역산 12/12 통과. 고정 계량/분포족의 부분 구성; 전체 항성·물리 EOS·관측 미완료."
+  },
+  "request33_eighth_time_audit": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "8분할 보존 감사 통과, 4/8 시간 차이 0.000378>0.0001 미달. 같은 16/32 계산과 전체 5735구역 공간 재계산 진행. 물리 EOS·자체 GR·관측 미완료."
+  },
+  "request33_material_reference": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "계량 정지에너지 가중치 변화 항·안정 증분식 검산, 5735점 두 산술 대조 통과. 전체 4세분 정수압 연결 및 중심 포함 여섯 비균일 구적 사전 대조 통과. 전체 구적/8세분/16·32 열 경로 진행; 실제 GR/물리 EOS/관측 미완료."
+  },
+  "request33_shared_reference": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "5735구역 4/8 공간 연결·면 좌표 대조 통과와 저장 물질/질량 정확 감사. 공유 열 유속·규칙적 중심 및 여섯 셀 초기 열/곡률 대조 통과. 전체 구적/16·32 열 계산 진행; 물리 EOS/자체 GR/관측 미완료."
+  },
+  "request33_scalar_reference": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "EOS 압력 역산/밀도 재호출의 비트 일치 실패·유한 차이 감사 보존. 원래 GR 상태의 선형 scalar 전하 계수 및 Riccati/ODE 대조 통과. 실제 비영 구동·결합 진화·관측 미완료."
+  },
+  "request33_material_thermo": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "밀도·온도 결합 증분/해석 대조 통과. Native 1e6 K 경계의 끝점 실패와 같은 55개 경로의 별도 분자 유지 비교 통과를 보존. 저장 열 구간 86025개 비횡단·EOS 표 8개 경계 포함. 물리 EOS/자체 GR/관측 미완료."
+  },
+  "request33_molecular_data": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "H2 원표/준위 자료·native 분배 함수 대조 확보. 고온 Taylor의 양의 고정 스펙트럼 조건 위반과 별도 유한 준위 10차 미분 구간 검증. 물리 EOS·자체 GR·관측 미완료."
+  },
+  "request33_h2plus_spectral": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "H2+ 원 전이표 284168행에서 실제 337준위 추출·중복 에너지 감사. 부분 스펙트럼의 10차 미분 구간·독립 대조 통과. 누락 준위·물리 EOS·자체 GR·관측 미완료."
+  },
+  "request33_h2plus_mold": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "MOL-D H2+ 실제 423준위 확보로 누락 86키 해소. 전체 키·원자료/참조·Q 비교 및 선언한 모형의 10차 미분 검증. 물리 EOS·자체 GR·관측 미완료."
+  },
+  "request33_h2plus_eos": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "실제 H2+ 423준위의 공통 native EOS 연결. 16온도/물질재고/55증분 검사 통과. H2·물리 점유/전체 EOS·자체 GR·관측 미완료."
+  },
+  "request33_h2_spectre": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "H₂ 302준위 원본 계산·독립 격자/범위·10차 미분 대조. GR 역산 binary64 점 표현의 국소 문턱 실패 확인. native H₂·물리 EOS·정밀 역산·자체 GR·관측 미완료."
+  },
+  "request33_molecular_spectral": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "H₂ 302/H₂⁺ 423준위 및 명시적 해리/이온화 에너지 순환의 native 연결. 16온도·재고·55증분 통과. 물리 EOS·정밀 역산·새 GR·관측 미완료."
+  },
+  "request33_extended_precision": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "128비트 연산 후보가 동일 실패 목표·네 알려진 근을 기존 문턱으로 통과. 원 실패 보존. 구역 재연결·평가/물리/연속 오차·자체 GR·관측 미완료."
+  },
+  "request33_molecular_reference": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "새 분자 EOS의 5735구역 기준/재고 통과. 새 GR 아직 미해결. 16단계 저장 에너지 통과, 8/16 시간 대조 미달; 32단계 진행."
+  },
+  "request33_subcell_precision": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "원 실패 블록 128구역의 별도 혼합 정밀도 검증 통과. 원 실행 실패 보존; 미시작 1767구역 재개. 연속/물리 EOS·새 GR·관측 미완료."
+  },
+  "request33_scalar_global_regular": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "고정 수치 scalar 모형의 전구간 영점 부재/정규화 유일성 조건부 증명. 물리 계수 오차·유한 진폭·실제 구동/관측 미완료."
+  },
+  "request33_molecular_precision": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "새 분자 모형 전용 정밀 EOS 15근 통과. 전체 엔트로피 표/GR 재계산 시작; 저장 오류 보존. 물리/연속 오차·자체 GR·관측 미완료."
+  },
+  "request33_scalar_residual": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "고정 scalar 계수의 엄밀 잔차 구간 확보. 이전 IVP 값 비포함 확인; 모든 구간을 통과한 독립 적분으로 회복. 물리/비선형/관측 미완료."
+  },
+  "request33_scalar_nonlinear_exterior": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "유한 scalar의 비선형 외부 매칭/무한대 compactification 대조 통과. 물리 프레임 점근 계수 분리. 실제 비선형 내부·대기·구동/관측 미완료."
+  },
+  "request33_radiation_eos_split": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "물질/LTE 광자 EOS 분리와 15개 native 대조 통과. 전체 5735개 대수적 양성 확인. 실제 복사 opacity/수송 및 자체 GR 진화 미완료."
+  },
+  "request33_radiation_metric_equations": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "시간 의존 GR 복사/물질 보존식, 계량 제약 전파 및 프레임 변환 기호 검산 통과. 실제 수송/대기/자체 진화 미완료."
+  },
+  "request33_subcell_full_coverage": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "원래 물리 EOS의 전체 5735구역 혼합 정밀 native 유한 대조 통과. 원래 실패 보존. 연속/물리 오차 및 새 분자 GR/실제 진화 계속."
+  },
+  "request33_op_planck_connection": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "실제 OP Planck 흡수 자료 확보와 29563개 reader 대조 통과. 3043구역 연결; 고밀도 2692구역 및 Li/Be/B/F 미지원, 물리/진화 폐쇄 계속."
+  },
+  "request33_lanl_tops_spectra": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "고밀도 및 F 포함 실제 12개 스펙트럼 입력/합산 검증과 cutoff-OFF 적분 대조 통과. cutoff 규약·외곽/전체 coverage·물리/진화 폐쇄 계속."
+  },
+  "request33_lanl_tops_cutoff": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "외곽 gray 입력 검증 및 중심 아홉 그룹 적분 통과. 실제 cutoff 치환 확인; dense plasma 광자/물질 EOS·전체 수송·진화·관측 계속."
+  },
+  "request33_lanl_tops_outer": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "외곽 단색 Planck 구적 미달 보존. 실제 16/32그룹 재합산으로 평균 일관성 확보; 비-LTE/미해상 선·전체 수송·진화/관측 계속."
+  },
+  "request33_plasma_photon_model": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "매질 광자 자유에너지/상태 미분/굴절식 검산, 5735구역 유한 진단 통과. 전자 축퇴·분극·물리 EOS·자체 진화/관측 계속."
+  },
+  "request33_fermi_plasma": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "전5735 전자 밀도 재구성/상대론 plasma moment 및 독립 대조 통과. 일반 분산·물리 EOS·수송/진화/관측 계속."
+  },
+  "request33_plasma_dispersion": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "특성 속도 근사를 제거한 선도 차수 분산 및 5735상태/54로그 적분 대조 통과. 구간 오차·물리 EOS·자체 진화/관측 계속."
+  },
+  "request33_plasma_moment_certificate": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "plasma moment 157성분 연속 값/미분 및 정확 구적법 kernel 오차 인증. native 전체·물리 EOS·자체 GR 진화/관측 계속."
+  },
+  "request33_plasma_free_energy_matching": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "Coulomb 공통 DH 항 및 종파 유한 끝점 경계 검산. 실제 질량 대부분은 보간/수정 OCP 영역; 완전 물리 EOS·진화/관측 계속."
+  },
+  "request33_plasma_interval": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "전5735 상태 63085개 분산근 구간 인증·유리수 내보내기 감사 통과. 물리 EOS·전체 상태 미분·자체 진화/관측 계속."
+  },
+  "request33_dense_plasma": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "3206 실제 상태의 공통 비이상 자유에너지 매칭, 공개 양자/차폐 미분 오류 수정 및 원 문턱 재검산. PIMC 보정 자료 재현; 물리 EOS·자체 진화/관측 미완료."
+  },
+  "request33_quantum_mixture_certificate": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "양자 혼합 선도계수와 선언 fit의 연속 절단·22442개 실제 값/미분 반올림 인증. 물리 EOS·자체 GR·관측 미완료."
+  },
+  "request33_ionic_hamiltonian_bound": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "지정 양의 점이온 Hamiltonian의 비섭동 자유에너지 경계 및 3206상태 적용. 물리 EOS 전체·미분·자체 GR/관측 미완료."
+  },
+  "request33_screened_hamiltonian_matching": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "전자 차폐의 자기/부피 항과 상태 미분 연결, 같은 kappa 반례 및 3206상태 정적 응답 대조. 전체 전자 EOS·GR/관측 미완료."
+  },
+  "request33_finite_wavenumber_response": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "유한 온도/파수 RPA 응답 41678점 및 독립 대조 통과; 모든 파수의 고정 화학 퍼텐셜 열적 양전자 상계. 전체 EOS·GR·관측 미완료."
+  },
+  "request33_polarization_self_energy": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "3206상태 편극 자기항 수치 연결, 전 파수 전역 경계와 2.80e−11 미만 꼬리 인증. 내부 구적/상태 미분·전체 EOS·GR/관측 미완료."
+  },
+  "request33_neutral_electron_density": {
+    "report": "notes/REQUEST33_DIRECT_EOS_GR_KO.md",
+    "status": "실제3206 물질 재고의 이상 전자 중성 근과 역미분/Hessian 지점별 구간 보증. 전체 EOS·자체 GR·관측 미완료."
+  }
+}

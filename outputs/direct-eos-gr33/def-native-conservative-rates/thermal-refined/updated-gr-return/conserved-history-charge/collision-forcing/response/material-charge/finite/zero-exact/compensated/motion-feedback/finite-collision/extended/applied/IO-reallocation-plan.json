@@ -1,0 +1,44 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": {
+    "error": "TimeoutError('Registered phase112 wall-time cap')",
+    "seconds": 330.25891466400003
+  },
+  "observed": "During the interrupted readout the process spent60 CPU seconds in279 wall seconds and was observed waiting in p9_client_rpc. Saved-state initialization dominated before the first new collision point.",
+  "repair": "Load each immutable NPZ byte stream sequentially into BytesIO before NumPy reads its members. No array, physical owner, acceptance gate, state count or interval changes.",
+  "budgets": {
+    "resume_sample_seconds": 330,
+    "material_production_seconds": 450,
+    "previous_material_production_seconds": 780,
+    "aggregate_budget_increase_seconds": 0
+  },
+  "reuse": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    8,
+    16
+  ],
+  "remaining": [
+    5,
+    6,
+    7,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "forecast": "One missing-state prefix after initialization; require twice its measured cost times the remaining count plus10 seconds below the330s remaining allowance. Stop if ineligible. Material pilot must now fit450s.",
+  "stop": "One IO repair and resume only; no automatic second resume or budget extension.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/propagate_native_finite_collision_remainder.py": "9a8fae29db09951b86bd6d1b33e689b9450b76a505affedf5a2fa6617a2c329d",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/finite-collision/extended/applied/first-producer.py": "1b0ec4406aba20bc184cd9a6422044966481dd37669cfba660dfad407b4725ad",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/finite-collision/extended/applied/plan.json": "a3ca872826889d1bdff612cece709fee4e5b851b864c88a048bb5204978efd76",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/finite-collision/extended/applied/sample-failure.json": "b80c4fdf5b410a4a03d4596add12c2220cbe81e74ae9f95fbe2ed4632d93f287"
+  }
+}

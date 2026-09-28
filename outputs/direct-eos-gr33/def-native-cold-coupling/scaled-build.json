@@ -1,0 +1,91 @@
+{
+  "classification": "Counterexample candidate",
+  "seconds": 3.1044699039999983,
+  "receipts": [
+    {
+      "command": [
+        "gfortran",
+        "-ffree-line-length-none",
+        "-cpp",
+        "-DUSINGDLL",
+        "-Dfree_eos_EXPORTS",
+        "-O3",
+        "-DNDEBUG",
+        "-O3",
+        "-fPIC",
+        "-I/home/lpaiu/work/direct-eos-gr33/native-cold-coupling",
+        "-I/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src",
+        "-I/home/lpaiu/work/direct-eos-gr33/molecular-spectral/source/src",
+        "-c",
+        "mod_excitation.f90",
+        "-o",
+        "mod_excitation-scaled.o"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "gfortran",
+        "-shared",
+        "-Wl,-soname,libfree_eos_native_cold_coupling_scaled.so",
+        "/home/lpaiu/work/direct-eos-gr33/native-ion-closure/mod_eos_calc.o",
+        "mod_excitation-scaled.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_fermi_dirac_integrator.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_bfgs.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_molecular_hydrogen.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_pi_fit.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_ionization_data.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_poly_sum.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_nuvar.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_free_eos.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_statistical_weight_data.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_free_eos_types.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_free_eos_detailed.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_coulomb.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_pi.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_eos_bfgs.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_fermi_dirac.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_free_eos_constants.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_helium1_data.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_exchange.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_aux_scale.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_free_eos_debug.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_lapack.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_pl.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_excitation_block.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_isotopic_mass_data.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_flow_data.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_info_data.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_eos_jacobian.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_diagnostics.f90.o",
+        "-llapack",
+        "-lblas",
+        "-o",
+        "/home/lpaiu/work/direct-eos-gr33/native-cold-coupling/libfree_eos_native_cold_coupling_scaled.so"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "gfortran",
+        "-O2",
+        "-fPIC",
+        "-shared",
+        "-I/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src",
+        "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-radiation-eos-split/gas-bridge.f90",
+        "-L/home/lpaiu/work/direct-eos-gr33/native-cold-coupling",
+        "-Wl,-rpath,/home/lpaiu/work/direct-eos-gr33/native-cold-coupling",
+        "-lfree_eos_native_cold_coupling_scaled",
+        "-o",
+        "/home/lpaiu/work/direct-eos-gr33/native-cold-coupling/scaled/gas.so"
+      ],
+      "returncode": 0
+    }
+  ],
+  "bindings": {
+    "/home/lpaiu/work/direct-eos-gr33/native-cold-coupling/excitation_pi.f90": "7e6b896cf6450c5898e96a2d02b71b53d8fc935f53b9dc5560e1ee94c2a9e2b0",
+    "/home/lpaiu/work/direct-eos-gr33/native-cold-coupling/excitation_sum.f90": "2f5763fcde608a331eabb5e842bc79007c3c17ae501f7295f38a59cc3594c8f4",
+    "/home/lpaiu/work/direct-eos-gr33/native-cold-coupling/scaled/gas.so": "baf4b716d3c50e9b2bae61992d72b9acaeba9d98e7912502ca6643b62ffa8089",
+    "/home/lpaiu/work/direct-eos-gr33/native-cold-coupling/libfree_eos_native_cold_coupling_scaled.so": "5b5564092d85198aa944de7069cd585dffa68ee4beb9efb39f657b7e399fa14e"
+  }
+}

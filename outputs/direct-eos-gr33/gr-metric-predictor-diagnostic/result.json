@@ -1,0 +1,447 @@
+{
+  "classification": "Counterexample candidate",
+  "completed": true,
+  "rows": [
+    {
+      "cell": 76,
+      "nodes": 8,
+      "case": 0,
+      "original_passed": false,
+      "original_scaled_residual": 4.431617974122757e-05,
+      "target_changes_exact": [
+        [
+          "-2532831284548911475",
+          "4096"
+        ],
+        [
+          "-559631007151581694792274921404760064",
+          "1"
+        ],
+        [
+          "-559661389834700458204744636489007104",
+          "1"
+        ]
+      ],
+      "errors": [
+        0.0,
+        2.5021488787163593e-15,
+        0.0
+      ],
+      "scaled_residual": 2.7415136133468465e-15,
+      "solver_success": true,
+      "passed": true,
+      "Jacobian_controls": [
+        {
+          "location": "initial",
+          "step": 1e-05,
+          "score": 9.999999996362656e-11,
+          "passed": true,
+          "full_Jacobian_condition": 7.587403011370346
+        },
+        {
+          "location": "initial",
+          "step": 5e-06,
+          "score": 5.979386677561335e-11,
+          "passed": true,
+          "full_Jacobian_condition": 7.587403011370346
+        },
+        {
+          "location": "archived-last",
+          "step": 1e-05,
+          "score": 2.4999341885761934e-10,
+          "passed": true,
+          "full_Jacobian_condition": 111067246.2671814
+        },
+        {
+          "location": "archived-last",
+          "step": 5e-06,
+          "score": 6.251240005098081e-11,
+          "passed": true,
+          "full_Jacobian_condition": 111067246.2671814
+        }
+      ],
+      "predictor_history": [
+        {
+          "iteration": 0,
+          "x": [
+            0.0,
+            0.003,
+            0.0
+          ],
+          "mechanical_merit": 9.999000145764631e-05,
+          "full_merit": 0.5292699926619532,
+          "condition": 1.0000000000460407,
+          "trials": [
+            {
+              "backtrack": 0,
+              "mechanical_merit": 9.997333911861756e-09
+            }
+          ],
+          "accepted_backtrack": 0
+        },
+        {
+          "iteration": 1,
+          "x": [
+            -9.999000066660002e-05,
+            0.003,
+            -9.99900014955887e-05
+          ],
+          "mechanical_merit": 9.997333911861756e-09,
+          "full_merit": 0.0026995542347595237,
+          "condition": 1.0002000000015328,
+          "trials": [
+            {
+              "backtrack": 0,
+              "mechanical_merit": 9.996090582176665e-17
+            }
+          ],
+          "accepted_backtrack": 0
+        },
+        {
+          "iteration": 2,
+          "x": [
+            -9.99999999998996e-05,
+            0.003,
+            -9.999999999560235e-05
+          ],
+          "mechanical_merit": 9.996090582176665e-17,
+          "full_merit": 0.002805966786318861,
+          "condition": 1.0002000200025325,
+          "trials": []
+        }
+      ],
+      "history": [
+        {
+          "iteration": 0,
+          "x": [
+            -9.99999999998996e-05,
+            0.003,
+            -9.999999999560235e-05
+          ],
+          "merit": 0.002805966786318861,
+          "condition": 112893992.53239736,
+          "trials": [
+            {
+              "backtrack": 0,
+              "merit": 5.45350200773561e-06
+            }
+          ],
+          "accepted_backtrack": 0
+        },
+        {
+          "iteration": 1,
+          "x": [
+            -0.0001,
+            0.00020545247478734232,
+            -9.999999999999938e-05
+          ],
+          "merit": 5.45350200773561e-06,
+          "condition": 113333529.9056961,
+          "trials": [
+            {
+              "backtrack": 0,
+              "merit": 2.056934250748224e-11
+            }
+          ],
+          "accepted_backtrack": 0
+        },
+        {
+          "iteration": 2,
+          "x": [
+            -0.0001,
+            0.00020000002056804776,
+            -0.0001
+          ],
+          "merit": 2.056934250748224e-11,
+          "condition": 113334384.98456745,
+          "trials": [
+            {
+              "backtrack": 0,
+              "merit": 2.7415136133468465e-15
+            }
+          ],
+          "accepted_backtrack": 0
+        },
+        {
+          "iteration": 3,
+          "x": [
+            -0.0001,
+            0.00020000000000250216,
+            -0.0001
+          ],
+          "merit": 2.7415136133468465e-15,
+          "condition": 113334384.98766212,
+          "trials": []
+        }
+      ]
+    },
+    {
+      "cell": 83,
+      "nodes": 8,
+      "case": 2,
+      "original_passed": false,
+      "original_scaled_residual": 1.8350384569984323e-05,
+      "target_changes_exact": [
+        [
+          "5066675808620102957",
+          "8192"
+        ],
+        [
+          "559798920964023238088826752086310912",
+          "1"
+        ],
+        [
+          "559773334066647744943085106753437696",
+          "1"
+        ]
+      ],
+      "errors": [
+        0.0,
+        3.8841542829293196e-16,
+        0.0
+      ],
+      "scaled_residual": 0.0,
+      "solver_success": true,
+      "passed": true,
+      "Jacobian_controls": [
+        {
+          "location": "initial",
+          "step": 1e-05,
+          "score": 9.999999998674673e-11,
+          "passed": true,
+          "full_Jacobian_condition": 6.848464266539232
+        },
+        {
+          "location": "initial",
+          "step": 5e-06,
+          "score": 6.398344062971248e-11,
+          "passed": true,
+          "full_Jacobian_condition": 6.848464266539232
+        },
+        {
+          "location": "archived-last",
+          "step": 1e-05,
+          "score": 2.50008533193894e-10,
+          "passed": true,
+          "full_Jacobian_condition": 49749608.02549798
+        },
+        {
+          "location": "archived-last",
+          "step": 5e-06,
+          "score": 6.249191073611894e-11,
+          "passed": true,
+          "full_Jacobian_condition": 49749608.02549798
+        }
+      ],
+      "predictor_history": [
+        {
+          "iteration": 0,
+          "x": [
+            0.0,
+            0.003,
+            0.0
+          ],
+          "mechanical_merit": 0.00010001000154236083,
+          "full_merit": 0.5071844548835848,
+          "condition": 1.0000000000479239,
+          "trials": [
+            {
+              "backtrack": 0,
+              "mechanical_merit": 1.0003500884965426e-08
+            }
+          ],
+          "accepted_backtrack": 0
+        },
+        {
+          "iteration": 1,
+          "x": [
+            0.00010001000066673335,
+            0.003,
+            0.00010001000149500224
+          ],
+          "mechanical_merit": 1.0003500884965426e-08,
+          "full_merit": 0.003309274226348818,
+          "condition": 1.000200040009532,
+          "trials": [
+            {
+              "backtrack": 0,
+              "mechanical_merit": 1.0006732757065527e-16
+            }
+          ],
+          "accepted_backtrack": 0
+        },
+        {
+          "iteration": 2,
+          "x": [
+            0.00010000000000010054,
+            0.003,
+            9.999999999498892e-05
+          ],
+          "mechanical_merit": 1.0006732757065527e-16,
+          "full_merit": 0.0032071927867187594,
+          "condition": 1.0002000200025303,
+          "trials": []
+        }
+      ],
+      "history": [
+        {
+          "iteration": 0,
+          "x": [
+            0.00010000000000010054,
+            0.003,
+            9.999999999498892e-05
+          ],
+          "merit": 0.0032071927867187594,
+          "condition": 103608355.67201896,
+          "trials": [
+            {
+              "backtrack": 0,
+              "merit": 7.89098484670883e-06
+            }
+          ],
+          "accepted_backtrack": 0
+        },
+        {
+          "iteration": 1,
+          "x": [
+            9.999999999999979e-05,
+            -0.00019210736568307102,
+            9.999999999999874e-05
+          ],
+          "merit": 7.89098484670883e-06,
+          "condition": 104119125.82375067,
+          "trials": [
+            {
+              "backtrack": 0,
+              "merit": 4.7647883821009054e-11
+            }
+          ],
+          "accepted_backtrack": 0
+        },
+        {
+          "iteration": 2,
+          "x": [
+            0.0001,
+            -0.0001999999523414801,
+            0.0001
+          ],
+          "merit": 4.7647883821009054e-11,
+          "condition": 104120383.22935286,
+          "trials": [
+            {
+              "backtrack": 0,
+              "merit": 0.0
+            }
+          ],
+          "accepted_backtrack": 0
+        },
+        {
+          "iteration": 3,
+          "x": [
+            0.0001,
+            -0.0001999999999996116,
+            0.0001
+          ],
+          "merit": 0.0,
+          "condition": 104120383.23702039,
+          "trials": []
+        }
+      ]
+    },
+    {
+      "cell": 0,
+      "nodes": 8,
+      "case": 1,
+      "original_passed": true,
+      "original_scaled_residual": 6.503375741019307e-13,
+      "target_changes_exact": [
+        [
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "errors": [
+        4.495440139188054e-23,
+        6.513026331516296e-13,
+        1.9980883740173087e-50
+      ],
+      "scaled_residual": 6.503375741019307e-13,
+      "solver_success": true,
+      "passed": true,
+      "Jacobian_controls": [],
+      "predictor_history": [
+        {
+          "iteration": 0,
+          "x": [
+            0.0,
+            0.003,
+            0.0
+          ],
+          "mechanical_merit": 5.679448119271363e-31,
+          "full_merit": 0.002998188712446245,
+          "condition": 1.0000000000384874,
+          "trials": []
+        }
+      ],
+      "history": [
+        {
+          "iteration": 0,
+          "x": [
+            0.0,
+            0.003,
+            0.0
+          ],
+          "merit": 0.002998188712446245,
+          "condition": 6.047516895587308,
+          "trials": [
+            {
+              "backtrack": 0,
+              "merit": 1.7763574342542581e-06
+            }
+          ],
+          "accepted_backtrack": 0
+        },
+        {
+          "iteration": 1,
+          "x": [
+            4.428300277296833e-20,
+            -1.7763567902976014e-06,
+            -6.07149725268802e-44
+          ],
+          "merit": 1.7763574342542581e-06,
+          "condition": 6.0314923074877935,
+          "trials": [
+            {
+              "backtrack": 0,
+              "merit": 6.503375741019307e-13
+            }
+          ],
+          "accepted_backtrack": 0
+        },
+        {
+          "iteration": 2,
+          "x": [
+            4.495440139188054e-23,
+            -6.513026331516296e-13,
+            -1.9980883740173087e-50
+          ],
+          "merit": 6.503375741019307e-13,
+          "condition": 6.031501884788245,
+          "trials": []
+        }
+      ]
+    }
+  ],
+  "all_passed": true,
+  "original_failures_preserved": true,
+  "full_GR_evolution": false,
+  "physical_EOS_certified": false
+}

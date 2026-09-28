@@ -1,0 +1,49 @@
+{
+  "classification": "Proven",
+  "checkpoint": "fa17efb",
+  "bits": 128,
+  "cells": 3206,
+  "points_per_cell": 12,
+  "bindings": {
+    "verification/gr_logarithmic_response_certificate.py": "9fc16da51b88362fa073b8c787544302f9887f56e0a13592b1203a2b1f106cab",
+    "outputs/direct-eos-gr33/gr-logarithmic-gauss-rule/manifest.json": "cb9793dc0c18993c31c91174838b55a24fdfd049c2f94e4abd5d8596894a591e",
+    "outputs/direct-eos-gr33/gr-logarithmic-gauss-rule/result.json": "c7c864bff573b6dc5f998388cad355e5df45b7a375d5802ca0c482435cc23769",
+    "outputs/direct-eos-gr33/gr-electron-density-refined-export/manifest.json": "87cba8690a71290e5742cf1e4926bf5eb7dde84c6c9fa630e2ff27d7ae9d9e2a",
+    "outputs/direct-eos-gr33/gr-electron-density-refined-export/result.json": "6589248e1b37f0ddf8f14054ea50403aedfe276f87a2715b9dea355e48234bcd",
+    "outputs/direct-eos-gr33/gr-polarization-thermodynamics/states.npz": "a91f70b8277d7984c7954d277b01956dd31dfd4c12b57989fed8b7a2fccceb69",
+    "outputs/direct-eos-gr33/gr-logarithmic-response/inputs.npz": "c9695e054b3ef6bf11b63a24909d7a4e549429d65a72bea4d9ad982b76afda53"
+  },
+  "parameter_order": [
+    "value",
+    "eta",
+    "etaeta",
+    "tau",
+    "etatau",
+    "tautau"
+  ],
+  "processes": 3,
+  "block_size": 128,
+  "initial_radius": "1/8",
+  "maximum_radius_halvings": 40,
+  "phase_bound": "1",
+  "window_radius_ratio": 16,
+  "per_component_absolute_error_budget": "1e-11",
+  "bound_exponent_floor": -128,
+  "control_positions": [
+    0,
+    1603,
+    3205
+  ],
+  "control_z_indices": [
+    0,
+    5,
+    8,
+    11
+  ],
+  "control_digits": 70,
+  "target": "The complete normalized momentum contribution of u in [1-h,1+h], for each actual certified neutral root and each specified finite Q. Includes all six eta/tau response derivatives, with tau=ln(T).",
+  "analytic_domain": "On |u-1|<=R, Re gamma >= sqrt(1+Q^2*(1-2R))=gmin. Require |Im t|<=Q^2*(1+R)*R/(beta*gmin)<=1<pi/2. Then Re exp(t-eta)>0, so q and 1-q have modulus at most one, |1-2q|<=1, and |q|<=min(1,exp(eta_max-tmin)).",
+  "method": "Choose R only from the fixed analyticity rule, h=R/16. Bound the eighth u derivatives by Cauchy on the disk. Apply the certified ordinary/logarithmic Gauss rules, including interval nodes, weights and evaluation rounding. Midpoints and error budgets are computed from the exact encoded interval endpoints.",
+  "small_terms": "Only the analytic upper envelope of q is enlarged to at least exp(-128). If a proved bound on the whole window is below the same budget, return a zero approximation with that full signed enclosure. No floating underflow is treated as an exact zero.",
+  "scope": "The cusp window and six partial derivatives in the declared full-ionization ideal-electron medium. Other momentum regions, the outer wavenumber integral, full correlated EOS, GR and observations remain open."
+}

@@ -1,0 +1,102 @@
+{
+  "classification": "Counterexample candidate",
+  "numerical_response_passed": false,
+  "physical_opacity_certified": false,
+  "populations_passed": false,
+  "native_emission_passed": false,
+  "source_grid_difference_initial": 0.01905324320697528,
+  "time_order": 2.0135612795482216,
+  "time_differences_initial": [
+    4.802105982252084e-05,
+    1.1892944643455776e-05
+  ],
+  "new_atomic_model_difference_initial": 0.036746431945036344,
+  "temperature_perturbation_K": 0.8041053785129177,
+  "temperature_difference_K": 0.0015325009173749128,
+  "rows": [
+    {
+      "name": "fine-16",
+      "algebra": {
+        "energy_number_null_relative": [
+          3.0605476083714584e-16,
+          4.334723192541508e-16
+        ],
+        "initial_heating": 1.3389452984360776e-05,
+        "continuum_heating": 1.335984951737599e-05,
+        "heating_relative": 0.0022158533257641277
+      },
+      "balance": 2.397959243790789e-12,
+      "energy_residual": 2.3526919508352077e-12,
+      "entropy_growth": 0.0,
+      "solver_residual": 1.3053724412604312e-13,
+      "iterations": 3
+    },
+    {
+      "name": "fine-32",
+      "algebra": {
+        "energy_number_null_relative": [
+          3.0605476083714584e-16,
+          4.334723192541508e-16
+        ],
+        "initial_heating": 1.3389452984360776e-05,
+        "continuum_heating": 1.335984951737599e-05,
+        "heating_relative": 0.0022158533257641277
+      },
+      "balance": 4.841978032275366e-14,
+      "energy_residual": 2.5412163548943294e-12,
+      "entropy_growth": 0.0,
+      "solver_residual": 1.3053724412604312e-13,
+      "iterations": 3
+    },
+    {
+      "name": "fine-64",
+      "algebra": {
+        "energy_number_null_relative": [
+          3.0605476083714584e-16,
+          4.334723192541508e-16
+        ],
+        "initial_heating": 1.3389452984360776e-05,
+        "continuum_heating": 1.335984951737599e-05,
+        "heating_relative": 0.0022158533257641277
+      },
+      "balance": 2.3871951217124524e-12,
+      "energy_residual": 3.5883342282413375e-12,
+      "entropy_growth": 0.0,
+      "solver_residual": 6.629021254883908e-13,
+      "iterations": 3
+    },
+    {
+      "name": "coarse-64",
+      "algebra": {
+        "energy_number_null_relative": [
+          3.0605476083714584e-16,
+          4.334723192541508e-16
+        ],
+        "initial_heating": 1.3389452984360776e-05,
+        "continuum_heating": 1.335984951737599e-05,
+        "heating_relative": 0.0022158533257641277
+      },
+      "balance": 2.432424482141331e-12,
+      "energy_residual": 4.741510034637175e-12,
+      "entropy_growth": 0.0,
+      "solver_residual": 6.627043513338669e-13,
+      "iterations": 3
+    }
+  ],
+  "coefficients": {
+    "seconds": 25.406035097,
+    "pairs": 4048932,
+    "frequency_cells": 24134,
+    "nangle": 24,
+    "collective": true,
+    "velocity_order": 256,
+    "q_points": 257,
+    "model": "Positive piecewise-linear continuous Maxwell/RPA density plus residues for Landau width below 1e-8 sigma_e; exact cell-overlap moments; no opacity normalization."
+  },
+  "seconds": 155.573348329,
+  "memory_GB": 1.57970432,
+  "decision": "The direct-T atomic/LTE candidate is coupled, but cannot replace the prior opacity as a certified same-EOS input. Its difference includes the atomic model, populations, lines and spectral representation; it is NOT a measured TOPS temperature-interpolation error.",
+  "atmosphere_closed": false,
+  "GR_feedback_complete": false,
+  "full_dynamic_charge_solved": false
+}

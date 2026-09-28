@@ -1,0 +1,31 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Use actual two-way64/128 histories to decide whether the earlier direct-charge cancellation survives. Use actual redistributed interior baryons; remove the old conditional point debit.",
+  "method": "Same radial retarded integral and continuous vacuum rays as Phase114. Retain17 common saved times, stable conserved rest/nonrest sources, and all actual emitted photons. Compare direct charge and direct-plus-photon mass separately.",
+  "gates": {
+    "time_direct": 0.02,
+    "time_total": 0.02,
+    "time_deep_trace": 0.02,
+    "history_direct": 0.02,
+    "cadence_direct": 0.02,
+    "quadrature_direct": 0.02,
+    "ray_quadrature": 0.002,
+    "native_anchor": 0.002
+  },
+  "budget": {
+    "saved_readout_seconds": 60,
+    "independent_audit_seconds": 30,
+    "native_call_cap": 400,
+    "new_fluid_steps": 0,
+    "CPU_threads": 1,
+    "memory_GB": 3
+  },
+  "stop": "Keep any failed gate; no automatic time/radial/frequency refinement. A cancelled direct residual does not justify normalizing its error by the much larger photon term.",
+  "limits": "Fixed metric,16 deep cells, first-order density/inventory closure, finite microphysics and imposed mechanical interface. Frozen initial outgoing photons are only a mass-term reference, not a fully evolved static comparator. This is not final physical charge.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_interior_feedback.py": "e7ad52bcd57cb0a35c4bbd61527657087a7aff8f7519c6a35b8fe39255b5b0f4",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_interior_feedback.py": "4a06f0d969c4a63f83bb8fac96827d16dd4d6dc5415936bf648b01ae613a492b",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_two_way_atmosphere.py": "3f37fc1fbdece30a3a98d22015fd18bb75995f42a433bc8df9271d8df4ba3c8b",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_coupled_charge.py": "c8bb80458c52f1bf8741c05906f4e47d8184c62ea4ee0357ca0b1dbc3d67d551"
+  }
+}

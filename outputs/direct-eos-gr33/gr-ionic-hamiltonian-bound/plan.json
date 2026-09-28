@@ -1,0 +1,31 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "29cf073",
+  "bindings": {
+    "verification/gr_ionic_hamiltonian_bound.py": "0bcde24032a73789ba081b332809bc4846e04535e8e4bbd6824ec59ced9e8a21",
+    "outputs/direct-eos-gr33/gr-quantum-mixture-certificate/manifest.json": "65eebe178b2a6155447ad6bac051fd2c80d588a33d0eaefcede7456400212b3f",
+    "outputs/direct-eos-gr33/gr-quantum-mixture-certificate/records.json": "794c47a2a7fa19c5e323ddf67f2e1b1ccda67f54a77b255189c691d4146d7da8",
+    "outputs/direct-eos-gr33/gr-molecular-reference-defined/reference-state.npz": "cc3f21745826e6da2a13e6b7bbfc820afe825c688c24e96a009f0bd697a7b348",
+    "outputs/direct-eos-gr33/gr-ionic-hamiltonian-bound/constants.json": "5aa17efb44f145bee7f5d218667083c0e43a4ef86d5558a8efa26a916d5e1cff",
+    "outputs/direct-eos-gr33/gr-ionic-hamiltonian-bound/golden-thompson2014.pdf": "7f0a9028593bc39f4add3e858afea1147c8fca3fbf1f56b819bc070d22ef852a",
+    "outputs/direct-eos-gr33/gr-ionic-hamiltonian-bound/golden-thompson2014.txt": "57c4a06fb04fae2f75d46f13cfbb3f78d94e079a26996474fbfd5d17babe3066",
+    "outputs/direct-eos-gr33/gr-ionic-hamiltonian-bound/inputs.npz": "d89135accb682ac37de76eb6be24214c6c84c448e713ec2d5c5bf9b4495f3167",
+    "outputs/direct-eos-gr33/gr-ionic-hamiltonian-bound/kleinert-smearing1998.pdf": "c047983084c81d748bb1bd9b74b77c13cb62d133e2d9f6d80b1e6153ac913a25",
+    "outputs/direct-eos-gr33/gr-ionic-hamiltonian-bound/kleinert-smearing1998.txt": "60e07dc21114dd13e280b1ed6932d88c9d1629fb5b2c445ddb223d99fcdfb633"
+  },
+  "precision_bits": 128,
+  "input_semantics": "The saved rho,T,X and native constants are exact binary64 parameters. Number densities are recomputed with outward arithmetic: n_j=N_A*rho*X_j/A_j, n_e=sum Z_j*n_j. No rounded sum is assumed exactly neutral.",
+  "Hamiltonian": "H=sum p_a^2/(2*m_a)+sum_{a<b}q_a*q_b*G_L(r_a-r_b)+C, q_a>0. G_L is the zero-mean periodic 3D Coulomb Green function with Laplacian G_L=-4*pi*(delta_L-1/V). C is any position-independent self/background convention common to classical and quantum systems. Boltzmann labelled trace divided by identical species factorials; no exchange.",
+  "proof": "Retain finite-box winding factors in Golden-Thompson. Retain only positive zero-winding paths for the Jensen lower partition bound. Centroid covariance and positive periodic heat kernel give the global smearing bound. Take bulk limit only when the two free-energy densities exist.",
+  "controls": "Symbolic Brownian bridge and Fourier centroid variance, heat-smearing derivative, three-particle pair-sum reduction, and a value-to-derivative counterexample. Exact rational audit of every exported physical-error bracket.",
+  "reduced_upper_diagnostic_ceiling": "0.001",
+  "excluded": "Mobile/polarizable electrons; Fermi/Bose exchange; negative point charges; finite nuclear radii; reactions/partial ionization; thermodynamic derivatives; uncertainty in the classical correlation free energy and in constants/state parameters; curved or evolving stellar cells.",
+  "sources": [
+    "https://journals.aps.org/pr/abstract/10.1103/PhysRev.137.B1127",
+    "https://arxiv.org/abs/1408.2008",
+    "https://link.aps.org/doi/10.1103/PhysRevA.34.5080",
+    "https://arxiv.org/abs/quant-ph/9806016"
+  ],
+  "whole_physical_EOS_certified": false,
+  "native_EOS_replaced": false
+}

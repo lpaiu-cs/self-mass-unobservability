@@ -1,0 +1,28 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "f161e59",
+  "bindings": {
+    "verification/gr_mass_increment_replay.py": "faa2b9d3d7a84a408dd40f36d265bbfc46af282678c6185fada8a12be496ed25",
+    "verification/common_eos.py": "01812cb068991dd6d72def58a78d158bef2bb3d00028312efc271c50dfdcb123",
+    "verification/baryon_entropy.py": "076f40c1c48fa1a687fd5c05eacf16a728713aaabeb16cec0f03ef0fb7d85f3f",
+    "verification/audit_structured_enthalpy.py": "294b4bdf416cbb7f546c79e350d07be727cbcd605f1be0f2de322817c20c73aa",
+    "outputs/direct-eos-gr33/initial-state-17-4.npz": "5dcc8ffb8b32a9f15ccc4c8bb7111d19be8dcdc66611ad2942e3a4a0cf6cc6d6",
+    "outputs/direct-eos-gr33/initial-structure-17-4.json": "142630ac32b71b761e9a6ac04ed00cf37348b6920cbb6b30dc6792845ac90b3b",
+    "outputs/direct-eos-gr33/reference-state.npz": "17cbbb101628ca9bc111dca0cfe902210f13697c632b91c03913a1718cf7d2ef",
+    "outputs/direct-eos-gr33/initial-adiabats-17.npz": "28e0ed028ad6d3b94ef3c5aa127b2c2e0bcb1b24be93fc7e1d44a19fc4d017b1",
+    "outputs/direct-eos-gr33/gr-direct-cell-integrals/manifest.json": "6a13a1e1bd79eb5bebf5f802f7f5426c0bae82ff86ef69be008198d4c903051e"
+  },
+  "cells": [
+    0,
+    1,
+    2
+  ],
+  "baseline": "Original RK4 state/RHS and subdivision 4, with each proposed and stored mass addition recorded. Compare against original step and saved face products bitwise.",
+  "repair": "Same RK4 formula and binary64 RHS evaluation, accumulate small three-coordinate shifts in longdouble from a fixed cell starting point. Retain shell mass increments without subtracting two total masses. No native EOS precision increase is claimed.",
+  "repair_subdivisions": [
+    4,
+    8
+  ],
+  "direct_mass_relative_tolerance": 1e-05,
+  "limits": "Post-diagnostic arithmetic repair on three outer cells. Original source, saved full-star state and time driver remain unchanged. Finite refinement and local mass comparisons do not certify full-star geometry, EOS physics, continuum errors or time evolution."
+}

@@ -1,0 +1,120 @@
+{
+  "reason": "Pause the fine trajectory after the same-time intermediate cone excursion also appears at refinement four. Preserve in memory for investigation.",
+  "boot_id": "9b968b4f-ecbd-483b-ada9-c1c871b6ab20",
+  "root": 1009,
+  "processes": [
+    {
+      "pid": 1009,
+      "parent": 1003,
+      "start": "487098",
+      "state": "S",
+      "command": "python3 verification/gr_implicit_coupled_anderson.py run --refinement 4 --workers 15"
+    },
+    {
+      "pid": 1024,
+      "parent": 1009,
+      "start": "487232",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_coupled_anderson.py run --refinement 4 --workers 15"
+    },
+    {
+      "pid": 1010,
+      "parent": 1009,
+      "start": "487230",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_coupled_anderson.py run --refinement 4 --workers 15"
+    },
+    {
+      "pid": 1011,
+      "parent": 1009,
+      "start": "487230",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_coupled_anderson.py run --refinement 4 --workers 15"
+    },
+    {
+      "pid": 1012,
+      "parent": 1009,
+      "start": "487230",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_coupled_anderson.py run --refinement 4 --workers 15"
+    },
+    {
+      "pid": 1013,
+      "parent": 1009,
+      "start": "487230",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_coupled_anderson.py run --refinement 4 --workers 15"
+    },
+    {
+      "pid": 1014,
+      "parent": 1009,
+      "start": "487230",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_coupled_anderson.py run --refinement 4 --workers 15"
+    },
+    {
+      "pid": 1015,
+      "parent": 1009,
+      "start": "487230",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_coupled_anderson.py run --refinement 4 --workers 15"
+    },
+    {
+      "pid": 1016,
+      "parent": 1009,
+      "start": "487231",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_coupled_anderson.py run --refinement 4 --workers 15"
+    },
+    {
+      "pid": 1017,
+      "parent": 1009,
+      "start": "487231",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_coupled_anderson.py run --refinement 4 --workers 15"
+    },
+    {
+      "pid": 1018,
+      "parent": 1009,
+      "start": "487231",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_coupled_anderson.py run --refinement 4 --workers 15"
+    },
+    {
+      "pid": 1019,
+      "parent": 1009,
+      "start": "487231",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_coupled_anderson.py run --refinement 4 --workers 15"
+    },
+    {
+      "pid": 1020,
+      "parent": 1009,
+      "start": "487231",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_coupled_anderson.py run --refinement 4 --workers 15"
+    },
+    {
+      "pid": 1021,
+      "parent": 1009,
+      "start": "487231",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_coupled_anderson.py run --refinement 4 --workers 15"
+    },
+    {
+      "pid": 1022,
+      "parent": 1009,
+      "start": "487231",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_coupled_anderson.py run --refinement 4 --workers 15"
+    },
+    {
+      "pid": 1023,
+      "parent": 1009,
+      "start": "487232",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_coupled_anderson.py run --refinement 4 --workers 15"
+    }
+  ],
+  "all_stopped": true
+}

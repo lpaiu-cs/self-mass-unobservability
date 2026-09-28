@@ -1,0 +1,10 @@
+NONLINEAR THERMAL 1 0 0 0.019999999999999695
+NONLINEAR THERMAL 1 0 1 0.0001134626872609299
+NONLINEAR THERMAL 1 0 2 7.571698285231673e-09
+NONLINEAR THERMAL 1 0 3 1.3043212410383023e-14
+Traceback (most recent call last):
+  File "/mnt/e/lab/self-mass-unobservability/verification/gr_nonlinear_thermal.py", line 164, in <module>
+    if __name__=='__main__':globals()[sys.argv[1]]()
+  File "/mnt/e/lab/self-mass-unobservability/verification/gr_nonlinear_thermal.py", line 146, in run
+    assert score<plan['global_energy_relative_to_exchange_tolerance'],row
+AssertionError: {'step': 0, 'iterations': 3, 'local_scaled_energy_residual': 1.3043212410383023e-14, 'global_energy_relative_to_exchange': 0.4013423511619498, 'entropy_change_erg_K': 7.204612275626668e+24, 'maximum_logT_change': 0.010351554579864697}

@@ -1,0 +1,70 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "d2361a1ad6adf24732250736b9650faadcc2010c",
+  "claim": "Finish the SAME corrected direct-source photon/thermal/H response over the declared3.434431ms interval, retaining all physical ledgers for the subsequent free-material/GR return.",
+  "decision": "Complete both paths only while every successive shared canonical interval passes the original six2percent time gates and physical checks. This is an actual continuation toward final charge, not a separate diagnostic trajectory. No final charge can be accepted from photons alone.",
+  "reuse": "Copy the accepted1726/12-step states byte-for-byte; restart rather than recompute them. Same source, fixed local bisection rule, spatial grid, physical input, background, stage solver and amplitudes.",
+  "actual_steps": {
+    "base": [
+      64,
+      128
+    ],
+    "full": [
+      117,
+      227
+    ],
+    "completed": [
+      6,
+      12
+    ],
+    "remaining": 326
+  },
+  "budget": {
+    "run_seconds": 4800,
+    "prepare_seconds": 30,
+    "CPU_threads": 1,
+    "virtual_GiB": 3,
+    "pairlets": 15,
+    "max_sweeps": 1
+  },
+  "forecast": {
+    "measured_seconds_per_actual_step": 5.628508720666669,
+    "measured_constructor_seconds": 11.75686752899999,
+    "measured_per_path_overhead_seconds": 16.281993177000047,
+    "nominal_remaining_seconds": 2323.3536382473353,
+    "margin_factor": 1.75,
+    "upper_remaining_seconds": 4065.8688669328367,
+    "limits": "Later Krylov/assembly/IO rates are extrapolations, not guarantees. Rebuild each clock model serially to remain within3GiB; update the cost admission after every actual pairlet."
+  },
+  "gates": {
+    "time": 0.02,
+    "energy_H": 1e-08,
+    "stage": 1e-12,
+    "physical_stage_moment": 1e-13,
+    "port": 1e-12
+  },
+  "stop": "Stop at the first failed physical/time gate, cost admission or80minute hard cap. Preserve last accepted checkpoints and the failed interval. No new grid, extra bisection, automatic restart, extra sweep or source change.",
+  "consumers": "All packet checks use saved actual stage times, step edges and quadrature weights. Legacy uniform SDIRK/Radau packet consumers are not admitted for this path. Free material and retarded GR must later use this same accepted solution and boundary history.",
+  "limits": "One simultaneous photon/thermal/H increment with zero previous free-motion input and extra metric. Free-material reciprocity, additional GR, same-solution energy/mass closure and final charge remain required; full EOS/derivative/spatial/boundary/nonlinear/static/observational limits stay open.",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_native_pressure_response.py": "d84c201a647e376922fb6cf1d698a79e0e94157814482b23a0c2f2fc3d5a1fa3",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/resolve_native_pressure_front.py": "57b11d9cdc5fa54509d6097bd68b5f6b96eaeeb0b349011276e1fa3f21ff0b23",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/apply_native_direct_radau.py": "3fe5db232d9a099a7b5769b16049ed34d89d05a33dc818da7ad5acf7d96b8438",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/solve_native_radau_transfer.py": "cade2ee551d8c9b443f283c8055e3bfb4641c1aa550d19c87b0f77c75abff44e",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/apply_native_conservative_redshift.py": "0ad6876eecf7c828bc26e473ab3bc5080cbee835809be97d0506a75884943ce1",
+    "native-pressure-front172-work/result.json": "e1e7f301b7b74b94790757236e50af96d1b7a31f5c4f4ec7fcb370c7c39ca885",
+    "native-pressure-front172-work/grid-check.json": "0b17311c9e9d2823ac5b419715f80146607fba4a5b6aedc5f4c8414be115e954",
+    "native-pressure-front172-work/plan.json": "9e0d94c8204ad0b179270a7089befc03ec25449d5627859b533ec1e06551443b",
+    "native-pressure-front172-work/grid-sum-repair.json": "ca7d60645683df4a37f45159cf79965a874e266ca07c22214d14844d60b05a38",
+    "native-pressure-front172-work/sweep-0/photons/steps-128-reference-128.npz": "5d2b1936e44617760120a61ca6445a044ad0b91c0a4c6799b59f51832adc2678",
+    "native-pressure-front172-work/sweep-0/photons/steps-64-reference-128.npz": "5d2b1936e44617760120a61ca6445a044ad0b91c0a4c6799b59f51832adc2678",
+    "native-pressure-front172-work/sweep-0/material/steps-128-reference-128.npz": "dcb46e493c360e33ac6df6c6e7bb4e5d7cc80e218006a1fbcc08033d6926580f",
+    "native-pressure-front172-work/sweep-0/material/steps-64-reference-128.npz": "76e5a3c54e5f5e2ed88a9c3957903569db4397d4088898f4ce6f4729124359d4",
+    "native-pressure-front172-work/normalization.json": "820244d5d23554811c792b52a45a3e28317392019f5aac7d8733eeb3b4d28706",
+    "native-pressure-front172-work/photon-conservation-plan.json": "248525a3b9808f00f193c48d9739000a1c32eea1cf8197cf8c3ad8b939a0bb2d",
+    "native-pressure-front172-work/sweep-1/photons/pilot-64.npz": "24748817b3583dccddfb101e9accf6b4121aefba70449aab90fb488834197a3d",
+    "native-pressure-front172-work/sweep-1/photons/pilot-64.json": "8eb54dbda4f1ab9d8b58dff13dab73dd3d9a039bbb7aa174271229dd63c090ac",
+    "native-pressure-front172-work/sweep-1/photons/pilot-128.npz": "ee824dc73fd60ded01c705d8d8ce1902c15a17a76e760936ce30cd3cc5776954",
+    "native-pressure-front172-work/sweep-1/photons/pilot-128.json": "6a48010aaface14ca31b23990a6ab217170265248fa5cf2beb58da409c59263c"
+  }
+}

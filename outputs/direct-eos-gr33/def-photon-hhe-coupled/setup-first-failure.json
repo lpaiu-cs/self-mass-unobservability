@@ -1,0 +1,8 @@
+{
+  "classification": "Counterexample candidate",
+  "EOS_calls": 0,
+  "coupled_paths": 0,
+  "reason": "Preparation stopped on nonunique text anchor; dependent build incorrectly continued and atomic.f/bridge.f90 were absent.",
+  "source_scope": "Unchanged EOS compiled before missing files; never evaluated.",
+  "first_build_log": "f951: Error: Cannot open file ‘atomic.f’\n<built-in>: Fatal Error: cannot open input file: atomic.f\ncompilation terminated.\nf951: Error: Cannot open file ‘bridge.f90’\n<built-in>: Fatal Error: cannot open input file: bridge.f90\ncompilation terminated.\n"
+}

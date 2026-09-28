@@ -1,0 +1,4058 @@
+{
+  "classification": "Counterexample candidate",
+  "actual_same_joint_solution_GR_computed": true,
+  "actual_stage_GR_return_paired_result": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "same_horizon_seconds": 0.0004293038897410878,
+    "time_relative": [
+      0.002250592440201024,
+      0.0028139256746892664,
+      0.00416827613705472,
+      0.0006094076581337445,
+      0.0023097580702614224,
+      0.002806040709086704,
+      0.0010478429471993294,
+      0.001029305745861785,
+      0.0028139256746892664,
+      0.00416827613705472
+    ],
+    "rows": [
+      {
+        "classification": "Counterexample candidate",
+        "reference": 128,
+        "steps": 64,
+        "completed_steps": 8,
+        "new_steps": 4,
+        "seconds": 140.98483238299923,
+        "operator_point_seconds": 4.537912666999546,
+        "operator_points": 3,
+        "stepping_seconds": 135.5975915529998,
+        "energy_balance_relative": 1.5395574775428876e-16,
+        "species_balance_relative": 1.865001777379992e-15,
+        "linear_relative": 7.853938748395182e-19,
+        "max_Krylov_iterations": 74,
+        "frequency_moment_relative": 6.70085635772894e-17,
+        "endpoint_photon_reference_energy_erg": 1.3906182012690935e-27,
+        "endpoint_material_reference_energy_erg": 4.224300439556362e-28,
+        "endpoint_material_energy_L1_erg": 8.655067689625943e-28,
+        "additional_material_motion_evolved": true,
+        "full_GR_feedback": false,
+        "final_charge_solved": false,
+        "endpoint_material_nonrest_energy_erg": 4.223629726132129e-28,
+        "velocity_jet_relative": 6.085966434433605e-09,
+        "primitive_mapping_relative": 1.7516230804060213e-46,
+        "conserved_material_input_applied": true,
+        "maximum_extended_stage_residual": 7.853938748395182e-19,
+        "maximum_refinement_steps": 1,
+        "initial_GMRES_stagnations": 0,
+        "actual_completed_steps": 15,
+        "actual_new_steps": 7,
+        "split_completed_macro_steps": 7,
+        "base_steps": 64,
+        "passed": true,
+        "audit": {
+          "angular_port_relative": 9.61667147217152e-18,
+          "local_material_balance": [
+            3.655615687184395e-17,
+            3.013226657269794e-15,
+            1.4507631468723616e-16,
+            2.8443007844125545e-17
+          ],
+          "maximum_true_stage": 6.336475844320139e-16,
+          "maximum_true_physical_stage": 6.528823560557711e-16,
+          "maximum_newton_iterations": 1,
+          "actual_completed_steps": 15,
+          "accepted_prefix_preserved": true
+        },
+        "intervals": [
+          {
+            "classification": "Counterexample candidate",
+            "reference": 128,
+            "steps": 64,
+            "completed_steps": 4,
+            "new_steps": 4,
+            "seconds": 164.12584584199976,
+            "operator_point_seconds": 5.28545700200084,
+            "operator_points": 3,
+            "stepping_seconds": 158.17273389399998,
+            "energy_balance_relative": 5.536736738846141e-18,
+            "species_balance_relative": 1.865001777379992e-15,
+            "linear_relative": 4.457861346484495e-19,
+            "max_Krylov_iterations": 66,
+            "frequency_moment_relative": 6.399543950259388e-17,
+            "endpoint_photon_reference_energy_erg": 1.1292175866471859e-29,
+            "endpoint_material_reference_energy_erg": 2.591497429566178e-30,
+            "endpoint_material_energy_L1_erg": 5.434393785724371e-30,
+            "additional_material_motion_evolved": true,
+            "full_GR_feedback": false,
+            "final_charge_solved": false,
+            "endpoint_material_nonrest_energy_erg": 2.5912828609692313e-30,
+            "velocity_jet_relative": 6.085966434433605e-09,
+            "primitive_mapping_relative": 1.0947644252537633e-47,
+            "conserved_material_input_applied": true,
+            "maximum_extended_stage_residual": 4.457861346484495e-19,
+            "maximum_refinement_steps": 1,
+            "initial_GMRES_stagnations": 0,
+            "actual_completed_steps": 8,
+            "actual_new_steps": 8,
+            "split_completed_macro_steps": 4,
+            "base_steps": 64,
+            "passed": true
+          },
+          {
+            "classification": "Counterexample candidate",
+            "reference": 128,
+            "steps": 64,
+            "completed_steps": 8,
+            "new_steps": 4,
+            "seconds": 140.98483238299923,
+            "operator_point_seconds": 4.537912666999546,
+            "operator_points": 3,
+            "stepping_seconds": 135.5975915529998,
+            "energy_balance_relative": 1.5395574775428876e-16,
+            "species_balance_relative": 1.865001777379992e-15,
+            "linear_relative": 7.853938748395182e-19,
+            "max_Krylov_iterations": 74,
+            "frequency_moment_relative": 6.70085635772894e-17,
+            "endpoint_photon_reference_energy_erg": 1.3906182012690935e-27,
+            "endpoint_material_reference_energy_erg": 4.224300439556362e-28,
+            "endpoint_material_energy_L1_erg": 8.655067689625943e-28,
+            "additional_material_motion_evolved": true,
+            "full_GR_feedback": false,
+            "final_charge_solved": false,
+            "endpoint_material_nonrest_energy_erg": 4.223629726132129e-28,
+            "velocity_jet_relative": 6.085966434433605e-09,
+            "primitive_mapping_relative": 1.7516230804060213e-46,
+            "conserved_material_input_applied": true,
+            "maximum_extended_stage_residual": 7.853938748395182e-19,
+            "maximum_refinement_steps": 1,
+            "initial_GMRES_stagnations": 0,
+            "actual_completed_steps": 15,
+            "actual_new_steps": 7,
+            "split_completed_macro_steps": 7,
+            "base_steps": 64,
+            "passed": true
+          }
+        ],
+        "anchor_checks": [
+          {
+            "time": 8.943831036272662e-06,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 2.6831493108817987e-05,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 3.577532414509065e-05,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 5.3662986217635974e-05,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 6.260681725390863e-05,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 8.049447932645395e-05,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 8.943831036272661e-05,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00010732597243527195,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00011626980347154461,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00013415746554408994,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00014310129658036262,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00016098895865290794,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00016993278968918058,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.0001878204517617259,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00019676428279799858,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.0002146519448705439,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00022359577590681657,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.0002414834379793619,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00025042726901563454,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.0002683149310881799,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00028620259316072523,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00032197791730581587,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00033092174834208846,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.0003488094104146338,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00035775324145090646,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.0003756409035234518,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00038458473455972445,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.0004024723966322698,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00041141622766854244,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.0004293038897410878,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "branch_checks": [
+          {
+            "time": 8.943831036272662e-06,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 2.6831493108817987e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 8.943831036272662e-06,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 2.6831493108817987e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 8.943831036272662e-06,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 8.943831036272662e-06,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 2.6831493108817987e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 2.6831493108817987e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 3.577532414509065e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 5.3662986217635974e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 3.577532414509065e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 5.3662986217635974e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 3.577532414509065e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 3.577532414509065e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 5.3662986217635974e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 5.3662986217635974e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 6.260681725390863e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 8.049447932645395e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 6.260681725390863e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 8.049447932645395e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 6.260681725390863e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 6.260681725390863e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 8.049447932645395e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 8.049447932645395e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 8.943831036272661e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00010732597243527195,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 8.943831036272661e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00010732597243527195,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 8.943831036272661e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 8.943831036272661e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00010732597243527195,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00010732597243527195,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00011626980347154461,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00013415746554408994,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00011626980347154461,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00013415746554408994,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00011626980347154461,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00011626980347154461,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00013415746554408994,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00013415746554408994,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00014310129658036262,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00016098895865290794,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00014310129658036262,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00016098895865290794,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00014310129658036262,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00014310129658036262,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00016098895865290794,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00016098895865290794,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00016993278968918058,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0001878204517617259,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00016993278968918058,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0001878204517617259,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00016993278968918058,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00016993278968918058,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0001878204517617259,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0001878204517617259,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00019676428279799858,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0002146519448705439,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00019676428279799858,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0002146519448705439,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00019676428279799858,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00019676428279799858,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0002146519448705439,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0002146519448705439,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00022359577590681657,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0002414834379793619,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00022359577590681657,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0002414834379793619,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00022359577590681657,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00022359577590681657,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0002414834379793619,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0002414834379793619,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00025042726901563454,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0002683149310881799,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00025042726901563454,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0002683149310881799,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00025042726901563454,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00025042726901563454,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0002683149310881799,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0002683149310881799,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00028620259316072523,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00032197791730581587,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00028620259316072523,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00032197791730581587,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00028620259316072523,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00028620259316072523,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00032197791730581587,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00032197791730581587,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00033092174834208846,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0003488094104146338,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00033092174834208846,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0003488094104146338,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00033092174834208846,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00033092174834208846,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0003488094104146338,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0003488094104146338,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00035775324145090646,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0003756409035234518,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00035775324145090646,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0003756409035234518,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00035775324145090646,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00035775324145090646,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0003756409035234518,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0003756409035234518,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00038458473455972445,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0004024723966322698,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00038458473455972445,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0004024723966322698,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00038458473455972445,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00038458473455972445,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0004024723966322698,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0004024723966322698,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00041141622766854244,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0004293038897410878,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00041141622766854244,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0004293038897410878,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00041141622766854244,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00041141622766854244,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0004293038897410878,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0004293038897410878,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          }
+        ],
+        "actual_stage_photon_moments_captured": true,
+        "captured_radial_port_relative": 1.0646665674415726e-16,
+        "maximum_true_stage": 6.336475844320139e-16,
+        "maximum_true_physical_stage": 6.528823560557711e-16,
+        "same_saved_stage_equation": true,
+        "actual_return_time_evolved": true,
+        "self_GR_return_closed": false,
+        "final_charge_conclusion": "unadjudicated",
+        "full_goal_complete": false
+      },
+      {
+        "classification": "Counterexample candidate",
+        "reference": 128,
+        "steps": 128,
+        "completed_steps": 16,
+        "new_steps": 8,
+        "seconds": 247.9014084449991,
+        "operator_point_seconds": 4.72867869699985,
+        "operator_points": 3,
+        "stepping_seconds": 242.33948818299905,
+        "energy_balance_relative": 1.8547252486320092e-16,
+        "species_balance_relative": 6.1928197887012505e-15,
+        "linear_relative": 4.0054073436139353e-19,
+        "max_Krylov_iterations": 70,
+        "frequency_moment_relative": 6.424799904548163e-17,
+        "endpoint_photon_reference_energy_erg": 1.3827566779954056e-27,
+        "endpoint_material_reference_energy_erg": 4.202567324219486e-28,
+        "endpoint_material_energy_L1_erg": 8.630782284806567e-28,
+        "additional_material_motion_evolved": true,
+        "full_GR_feedback": false,
+        "final_charge_solved": false,
+        "endpoint_material_nonrest_energy_erg": 4.201895815995716e-28,
+        "velocity_jet_relative": 6.085966434433605e-09,
+        "primitive_mapping_relative": 1.7516230804060213e-46,
+        "conserved_material_input_applied": true,
+        "maximum_extended_stage_residual": 4.0054073436139353e-19,
+        "maximum_refinement_steps": 1,
+        "initial_GMRES_stagnations": 0,
+        "actual_completed_steps": 29,
+        "actual_new_steps": 13,
+        "split_completed_macro_steps": 13,
+        "base_steps": 128,
+        "passed": true,
+        "audit": {
+          "angular_port_relative": 1.9058860135849512e-17,
+          "local_material_balance": [
+            3.64280783441673e-17,
+            9.260322031406901e-16,
+            1.177235606009788e-16,
+            3.0045700582327543e-17
+          ],
+          "maximum_true_stage": 5.690075637426065e-16,
+          "maximum_true_physical_stage": 4.4213065215357654e-16,
+          "maximum_newton_iterations": 1,
+          "actual_completed_steps": 29,
+          "accepted_prefix_preserved": true
+        },
+        "intervals": [
+          {
+            "classification": "Counterexample candidate",
+            "reference": 128,
+            "steps": 128,
+            "completed_steps": 8,
+            "new_steps": 8,
+            "seconds": 321.3588044020016,
+            "operator_point_seconds": 4.920641865997823,
+            "operator_points": 3,
+            "stepping_seconds": 315.8137629260036,
+            "energy_balance_relative": 5.0619747719101056e-18,
+            "species_balance_relative": 6.1928197887012505e-15,
+            "linear_relative": 4.0054073436139353e-19,
+            "max_Krylov_iterations": 70,
+            "frequency_moment_relative": 6.424799904548163e-17,
+            "endpoint_photon_reference_energy_erg": 1.1037757856361064e-29,
+            "endpoint_material_reference_energy_erg": 2.561849807020823e-30,
+            "endpoint_material_energy_L1_erg": 5.398765705461244e-30,
+            "additional_material_motion_evolved": true,
+            "full_GR_feedback": false,
+            "final_charge_solved": false,
+            "endpoint_material_nonrest_energy_erg": 2.5616344921804833e-30,
+            "velocity_jet_relative": 6.085966434433605e-09,
+            "primitive_mapping_relative": 1.0947644252537633e-47,
+            "conserved_material_input_applied": true,
+            "maximum_extended_stage_residual": 4.0054073436139353e-19,
+            "maximum_refinement_steps": 1,
+            "initial_GMRES_stagnations": 0,
+            "actual_completed_steps": 16,
+            "actual_new_steps": 16,
+            "split_completed_macro_steps": 8,
+            "base_steps": 128,
+            "passed": true
+          },
+          {
+            "classification": "Counterexample candidate",
+            "reference": 128,
+            "steps": 128,
+            "completed_steps": 16,
+            "new_steps": 8,
+            "seconds": 247.9014084449991,
+            "operator_point_seconds": 4.72867869699985,
+            "operator_points": 3,
+            "stepping_seconds": 242.33948818299905,
+            "energy_balance_relative": 1.8547252486320092e-16,
+            "species_balance_relative": 6.1928197887012505e-15,
+            "linear_relative": 4.0054073436139353e-19,
+            "max_Krylov_iterations": 70,
+            "frequency_moment_relative": 6.424799904548163e-17,
+            "endpoint_photon_reference_energy_erg": 1.3827566779954056e-27,
+            "endpoint_material_reference_energy_erg": 4.202567324219486e-28,
+            "endpoint_material_energy_L1_erg": 8.630782284806567e-28,
+            "additional_material_motion_evolved": true,
+            "full_GR_feedback": false,
+            "final_charge_solved": false,
+            "endpoint_material_nonrest_energy_erg": 4.201895815995716e-28,
+            "velocity_jet_relative": 6.085966434433605e-09,
+            "primitive_mapping_relative": 1.7516230804060213e-46,
+            "conserved_material_input_applied": true,
+            "maximum_extended_stage_residual": 4.0054073436139353e-19,
+            "maximum_refinement_steps": 1,
+            "initial_GMRES_stagnations": 0,
+            "actual_completed_steps": 29,
+            "actual_new_steps": 13,
+            "split_completed_macro_steps": 13,
+            "base_steps": 128,
+            "passed": true
+          }
+        ],
+        "anchor_checks": [
+          {
+            "time": 4.471915518136331e-06,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 1.3415746554408993e-05,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 1.7887662072545324e-05,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 2.6831493108817987e-05,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 3.130340862695432e-05,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 4.024723966322698e-05,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 4.471915518136331e-05,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 5.3662986217635974e-05,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 5.8134901735772304e-05,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 6.707873277204497e-05,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 7.155064829018131e-05,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 8.049447932645397e-05,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 8.496639484459029e-05,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 9.391022588086295e-05,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 9.838214139899929e-05,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00010732597243527195,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00011179788795340828,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00012074171898968094,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00012521363450781727,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00013415746554408994,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00013862938106222627,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00014757321209849894,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00015204512761663526,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00016098895865290794,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00016546087417104423,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.0001744047052073169,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00017887662072545323,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.0001878204517617259,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00019229236727986223,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.0002012361983161349,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00020570811383427122,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.0002146519448705439,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00021912386038868022,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.0002280676914249529,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00023253960694308922,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.0002414834379793619,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00025042726901563454,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.0002683149310881799,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00027725876212445253,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.0002951464241969979,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.0003040902552332705,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00032197791730581587,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00032644983282395214,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.0003353936638602248,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.0003398655793783611,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00034880941041463376,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00035328132593277013,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.0003622251569690428,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.0003666970724871791,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00037564090352345175,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00038011281904158813,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.0003890566500778608,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.0003935285655959971,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00040247239663226974,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.0004069443121504061,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00041588814318667877,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.0004203600587048151,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "time": 0.00042930388974108774,
+            "native_relative": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "branch_checks": [
+          {
+            "time": 4.471915518136331e-06,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 1.3415746554408993e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 4.471915518136331e-06,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 1.3415746554408993e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 4.471915518136331e-06,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 4.471915518136331e-06,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 1.3415746554408993e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 1.3415746554408993e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 1.7887662072545324e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 2.6831493108817987e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 1.7887662072545324e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 2.6831493108817987e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 1.7887662072545324e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 1.7887662072545324e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 2.6831493108817987e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 2.6831493108817987e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 3.130340862695432e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 4.024723966322698e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 3.130340862695432e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 4.024723966322698e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 3.130340862695432e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 3.130340862695432e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 4.024723966322698e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 4.024723966322698e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 4.471915518136331e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 5.3662986217635974e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 4.471915518136331e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 5.3662986217635974e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 4.471915518136331e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 4.471915518136331e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 5.3662986217635974e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 5.3662986217635974e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 5.8134901735772304e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 6.707873277204497e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 5.8134901735772304e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 6.707873277204497e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 5.8134901735772304e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 5.8134901735772304e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 6.707873277204497e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 6.707873277204497e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 7.155064829018131e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 8.049447932645397e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 7.155064829018131e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 8.049447932645397e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 7.155064829018131e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 7.155064829018131e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 8.049447932645397e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 8.049447932645397e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 8.496639484459029e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 9.391022588086295e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 8.496639484459029e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 9.391022588086295e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 8.496639484459029e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 8.496639484459029e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 9.391022588086295e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 9.391022588086295e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 9.838214139899929e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00010732597243527195,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 9.838214139899929e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00010732597243527195,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 9.838214139899929e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 9.838214139899929e-05,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00010732597243527195,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00010732597243527195,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00011179788795340828,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00012074171898968094,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00011179788795340828,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00012074171898968094,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00011179788795340828,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00011179788795340828,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00012074171898968094,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00012074171898968094,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00012521363450781727,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00013415746554408994,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00012521363450781727,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00013415746554408994,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00012521363450781727,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00012521363450781727,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00013415746554408994,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00013415746554408994,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00013862938106222627,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00014757321209849894,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00013862938106222627,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00014757321209849894,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00013862938106222627,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00013862938106222627,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00014757321209849894,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00014757321209849894,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00015204512761663526,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00016098895865290794,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00015204512761663526,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00016098895865290794,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00015204512761663526,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00015204512761663526,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00016098895865290794,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00016098895865290794,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00016546087417104423,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0001744047052073169,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00016546087417104423,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0001744047052073169,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00016546087417104423,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00016546087417104423,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0001744047052073169,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0001744047052073169,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00017887662072545323,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0001878204517617259,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00017887662072545323,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0001878204517617259,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00017887662072545323,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00017887662072545323,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0001878204517617259,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0001878204517617259,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00019229236727986223,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0002012361983161349,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00019229236727986223,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0002012361983161349,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00019229236727986223,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00019229236727986223,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0002012361983161349,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0002012361983161349,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00020570811383427122,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0002146519448705439,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00020570811383427122,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0002146519448705439,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00020570811383427122,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00020570811383427122,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0002146519448705439,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0002146519448705439,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00021912386038868022,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0002280676914249529,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00021912386038868022,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0002280676914249529,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00021912386038868022,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00021912386038868022,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0002280676914249529,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0002280676914249529,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00023253960694308922,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0002414834379793619,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00023253960694308922,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0002414834379793619,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00023253960694308922,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00023253960694308922,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0002414834379793619,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0002414834379793619,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00025042726901563454,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0002683149310881799,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00025042726901563454,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0002683149310881799,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00025042726901563454,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00025042726901563454,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0002683149310881799,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0002683149310881799,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00027725876212445253,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0002951464241969979,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00027725876212445253,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0002951464241969979,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00027725876212445253,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00027725876212445253,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0002951464241969979,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0002951464241969979,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0003040902552332705,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00032197791730581587,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0003040902552332705,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00032197791730581587,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0003040902552332705,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0003040902552332705,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00032197791730581587,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00032197791730581587,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00032644983282395214,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0003353936638602248,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00032644983282395214,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0003353936638602248,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00032644983282395214,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00032644983282395214,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0003353936638602248,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0003353936638602248,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0003398655793783611,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00034880941041463376,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0003398655793783611,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00034880941041463376,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0003398655793783611,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0003398655793783611,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00034880941041463376,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00034880941041463376,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00035328132593277013,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0003622251569690428,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00035328132593277013,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0003622251569690428,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00035328132593277013,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00035328132593277013,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0003622251569690428,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0003622251569690428,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0003666970724871791,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00037564090352345175,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0003666970724871791,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00037564090352345175,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0003666970724871791,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0003666970724871791,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00037564090352345175,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00037564090352345175,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00038011281904158813,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0003890566500778608,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00038011281904158813,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0003890566500778608,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00038011281904158813,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00038011281904158813,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0003890566500778608,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0003890566500778608,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0003935285655959971,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00040247239663226974,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0003935285655959971,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00040247239663226974,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0003935285655959971,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0003935285655959971,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00040247239663226974,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00040247239663226974,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0004069443121504061,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00041588814318667877,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0004069443121504061,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00041588814318667877,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0004069443121504061,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0004069443121504061,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00041588814318667877,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00041588814318667877,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0004203600587048151,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00042930388974108774,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0004203600587048151,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00042930388974108774,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0004203600587048151,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.0004203600587048151,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00042930388974108774,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          },
+          {
+            "time": 0.00042930388974108774,
+            "iterations": 1,
+            "tie_switches": [
+              0
+            ]
+          }
+        ],
+        "actual_stage_photon_moments_captured": true,
+        "captured_radial_port_relative": 2.5397369525064644e-16,
+        "maximum_true_stage": 5.690075637426065e-16,
+        "maximum_true_physical_stage": 4.4213065215357654e-16,
+        "same_saved_stage_equation": true,
+        "actual_return_time_evolved": true,
+        "self_GR_return_closed": false,
+        "final_charge_conclusion": "unadjudicated",
+        "full_goal_complete": false
+      }
+    ],
+    "actual_return_time_evolved": true,
+    "self_GR_return_closed": false,
+    "final_charge_conclusion": "unadjudicated",
+    "full_goal_complete": false,
+    "original188failure_preserved": true,
+    "original225failure_preserved": true,
+    "original_T64_endpoint_conserved_relative": [
+      0.004021708849375351,
+      0.0012138831503291485,
+      0.024211216173302463,
+      0.18803857775510485
+    ],
+    "limited_to_one_feedback_iterate": true
+  },
+  "metric_result": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "controls": {
+      "time": {
+        "delta_u": 0.0019317250083899173,
+        "delta_lambda": 0.0013884726895672147,
+        "delta_log_lapse": 0.0020461153650415706,
+        "delta_log_speed": 0.0013890296758418018,
+        "delta_u_prime": 0.000813342386121493,
+        "delta_nu_prime": 0.0013891222610664582,
+        "delta_u_t": 0.0015457327611186637,
+        "actual_delta_lambda_rate": 0.013998417636942116
+      },
+      "quadrature": {
+        "delta_u": 0.0,
+        "delta_lambda": 3.599210704498854e-16,
+        "delta_log_lapse": 1.1500990588389519e-13,
+        "delta_log_speed": 5.398816985771216e-16,
+        "delta_u_prime": 0.0,
+        "delta_nu_prime": 4.3430817784803827e-16,
+        "delta_u_t": 0.0,
+        "actual_delta_lambda_rate": 6.252890104503679e-16
+      },
+      "field_quadrature": {
+        "U": 9.058406414108618e-16,
+        "U_t": 6.216537887087047e-16,
+        "U_x": 5.203009773527649e-16
+      }
+    },
+    "rows": [
+      {
+        "ray_invariant": 6.661338147750939e-16,
+        "emitted_energy_relative": 7.164858758903275e-16,
+        "unit_ADM_lapse_kernel_per_cm": 1.447197277876651e-10,
+        "same_Radau_dense_emission": true,
+        "classification": "Counterexample candidate",
+        "steps": 128,
+        "order": 8,
+        "seconds": 11.181771760999254,
+        "maximum_delta_nu": 1.4382262318901465e-59,
+        "endpoint_outer_photon_lapse": -1.816004198517434e-63,
+        "endpoint_outer_scalar_lapse": -8.287366818529642e-71,
+        "maximum_asymptotic_mass_residual_cm": 3.6646789022528444e-53,
+        "maximum_ADM_residual_lapse": 5.303513331632311e-63,
+        "maximum_delta_log_transport_speed": 1.258008805821714e-56,
+        "maximum_delta_lambda_rate": 1.1526012604454108e-52,
+        "actual_exterior_photons_applied": true,
+        "full_spatial_feedback": false,
+        "final_charge_solved": false
+      },
+      {
+        "ray_invariant": 6.661338147750939e-16,
+        "emitted_energy_relative": 8.956966649488607e-16,
+        "unit_ADM_lapse_kernel_per_cm": 1.447197277876651e-10,
+        "same_Radau_dense_emission": true,
+        "classification": "Counterexample candidate",
+        "steps": 64,
+        "order": 8,
+        "seconds": 10.571091891999458,
+        "maximum_delta_nu": 1.437356887044565e-59,
+        "endpoint_outer_photon_lapse": -1.815813080682945e-63,
+        "endpoint_outer_scalar_lapse": -8.273514933555481e-71,
+        "maximum_asymptotic_mass_residual_cm": 3.6762616539444334e-53,
+        "maximum_ADM_residual_lapse": 5.320275858350699e-63,
+        "maximum_delta_log_transport_speed": 1.2579422840134233e-56,
+        "maximum_delta_lambda_rate": 1.1529836364244904e-52,
+        "actual_exterior_photons_applied": true,
+        "full_spatial_feedback": false,
+        "final_charge_solved": false
+      },
+      {
+        "ray_invariant": 8.881784197001252e-16,
+        "emitted_energy_relative": 7.164858553142605e-16,
+        "unit_ADM_lapse_kernel_per_cm": 1.4471972778766513e-10,
+        "same_Radau_dense_emission": true,
+        "classification": "Counterexample candidate",
+        "steps": 128,
+        "order": 4,
+        "seconds": 7.136792429999332,
+        "maximum_delta_nu": 1.4382262318902168e-59,
+        "endpoint_outer_photon_lapse": -1.8160041985174343e-63,
+        "endpoint_outer_scalar_lapse": -8.287366818529642e-71,
+        "maximum_asymptotic_mass_residual_cm": 3.664678903394023e-53,
+        "maximum_ADM_residual_lapse": 5.303513333283821e-63,
+        "maximum_delta_log_transport_speed": 1.2580088058217136e-56,
+        "maximum_delta_lambda_rate": 1.1526012604454084e-52,
+        "actual_exterior_photons_applied": true,
+        "full_spatial_feedback": false,
+        "final_charge_solved": false
+      }
+    ],
+    "actual_stage_fields": true,
+    "final_charge_conclusion": "unadjudicated"
+  },
+  "accepted_common_history_recovered": true,
+  "native_continuation_snapshot": {
+    "state": "failed",
+    "action": "coarse",
+    "completed": [
+      {
+        "action": "coarse",
+        "returncode": 1
+      }
+    ],
+    "elapsed_seconds": 263.89278462400034
+  },
+  "original_failures_preserved": true,
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false,
+  "document_prefixes": {
+    "docs/model-definition.md": {
+      "bytes": 265422,
+      "sha256": "f262cfc28a7e5af15e2830b95e65025460fe16ebe653c8be3440691800a53216"
+    },
+    "docs/observable-targets.md": {
+      "bytes": 256209,
+      "sha256": "c64f6e0dba953bed87333a438eaa4a78cd503ee4a102acca68a8bb19850923a4"
+    },
+    "docs/adiabatic-limit.md": {
+      "bytes": 250562,
+      "sha256": "3556e2dde8b425444cd254a55eb9522aa1b4e2ed65cffc767bb6a261127ae7db"
+    },
+    "docs/nonadiabatic-regime.md": {
+      "bytes": 259090,
+      "sha256": "d12aab016965dbea054e54f8cb5dafbac456ed39b6083afe8afc250c73556c5a"
+    },
+    "docs/failure-ledger-dynamic-chi.md": {
+      "bytes": 296563,
+      "sha256": "3122c742d3f69fabfa705e475d0592ba2f1a299881b81d054a630db3bd994051"
+    },
+    "docs/dynamic-charge-completion.md": {
+      "bytes": 124675,
+      "sha256": "07473fc42fa5e718806d056a8ae46739c564f51a2070bdbd9ef41ceae7e3c0f1"
+    }
+  },
+  "sha256": {
+    "verification/apply_actual_stage_gr.py": "3ee6d93c890f80ccb6a1d2f005f7b7232c7e0ad8f58ddb7778567827ecf307c1",
+    "verification/solve_saved_integer_native.py": "faa61a9a5b30cbd629ed89bdad4392beedc9e1c204d28c6411d45ce89882857a",
+    "verification/continue_integer_native.py": "6cea2127a84eaa537ea98e0d4b147c4fb4f50c2449d6c4e0657f24f480c2a6ba",
+    "verification/repair_native_conserved_precision.py": "a8675fe0c69589767593f6ea896780c705cdef853c264d23d1bec8a3745a9982",
+    "verification/continue_precise_conserved_native.py": "0bce84dbd52ae88458d0a921592ab294db9dee7c0b202b896310f7e81c91f99e",
+    "verification/continue_independent_fine_native.py": "86468e96fb9bd9dec93eb3fa9904421c8c75e773936caf45f0a5c9b878daf063",
+    "notes/REQUEST223_232_ACTUAL_STAGE_GR_KO.md": "c855a25c3df08ffacb574fa0f7169a745e2463bf1183fb6a0026e3cb5fe12692",
+    "docs/model-definition.md": "8c2cd7d51fbf14b8bbe5d333f6e6daba8d0e8ebb8d1c9ceffddec698e43fe408",
+    "docs/observable-targets.md": "ea7273396b3af456748612f53f0a69167a0db8ad7ef8243a4001c744fa3801d2",
+    "docs/adiabatic-limit.md": "605fb3d7a5d753334d2956b3f52a7963e8595661fd381476ecdb5588087e8968",
+    "docs/nonadiabatic-regime.md": "8556bce4325488a2358082c5e8c98ab98351bd3e98245d82234102f297a81e30",
+    "docs/failure-ledger-dynamic-chi.md": "1a4461a4ea0a6804846cf719e8e1f67966b8ce3f3c4667fedc4e544680b4b519",
+    "docs/dynamic-charge-completion.md": "7cef7b9228f157c884790d7cf421858e6c58f4fa42641c5b5a201795b7b39c0d",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/controller-227.py": "9055bae748ab6a354f74d0819bf1908b4d9d4c5e150e339fb4c2040ad86f4df2",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/controller-228.py": "5490709754e5b68011047cc5601b96dadb6347c09590668c9886517cd5d81bf4",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/controller-229.py": "6278aacf9e55de94709b0add70b7403bc5f22c2a8dcc4d31277ba78f9bc1b0a6",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/controller-231.py": "bf7fcaa53f89125969615e172e908f3924adb1ac2731bea5b75f1be0586f9d53",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/controller-232.py": "147316d2c7fbe78450c15cdf8ce57815d9bdb8f73c22455ebb4a32f5b1e0794a",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/defect-location-producer.py": "1ca4a2c8d2339deeee7d8ddee7f8f5fb329206e5874308068ed9e1611a78d52a",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/publication-producer.py": "8ff983a57daf510a81ee041fb52477d9b5f06e206b0d3e886e484595e3816477",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/publication.json": "e1c16ab463e5fd8c08ca97a5174782c6dc65f865566a5e7c8156b056605ee65b",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/rate-alias-producer.py": "041ac2a4e05de58f465171edf0535a8120ee7c995262d29d39812fe579ccba41",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/result.json": "cbb206194f61aa2d7cc7374d4d9524fa9882476c98be3e6b87146ca7ffcbb3bf",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/218/check-receipt.json": "e877c21b2039e389bb39a5c0df05cde25ad0489b2da76c330ad2239c49717cdf",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/218/check-result.json": "69d213635792f32d54a04dd107aa19178d7943261ca23305d6b720862c246106",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/218/coarse-receipt.json": "2410eccfd9b0b4a94c2e782b746622ba40d60f2955c50d4a0445ee633bc89848",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/218/controller-start.json": "4923574f217077e0ef5b8d95b8362ced30474afc381cd2db69b5e6eb61c8a116",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/218/controller-status.json": "7992d1bc608dd9bf6c8e7365e6b4ca76abe956df8083dd56287c1283346a8e11",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/218/controller.stderr.log": "6fb1806c66c69c4d565ae08b7dc155983a5f896c12dd2859d2498ce28e3aa281",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/218/controller.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/218/expanded-affine-jacobian.py": "3e16001f78614321b344c1a125caddfbe24f8b53cdae2d0d7c9d69b4c80443a3",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/218/expanded-balanced-linear.py": "f487c4b99d5dddb7ca2bc4c5f6f96d775f896a24cb09c1df266f8e488b29b661",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/218/expanded-BS-polish.py": "758f7ce899e8b99ec26531fc667bf7a5814f680dd43d08b2c4789a6efe409d9a",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/218/expanded-continuation-run.py": "9a94a85c8ae95c8eced712fbf8848226f3a1ea6e3f23fba1dc4559d491f5c8d7",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/218/expanded-eight-newton-stage.py": "1ef499a77fa9883d92685e7d42e0f4cdb77bca58beefbaf2bfaaf5131352e87b",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/218/expanded-full-stages.py": "5b47a101f75464316867872639fcf3d4018fbabaef13060a3b1ca5f09f0b4ab2",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/218/expanded-geometric-tangent.py": "9f544dcaa6ddd71096377d4556e9c6e17f0a790969a6b1d628df26b416b0c97d",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/218/expanded-high-native-stage.py": "c0ec606e6c8245e68001b549a2cb4b14e101a57d89501e31a192abd75f4d56e5",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/218/expanded-joint-run.py": "6b0d85a25686b8576d71d88f00fa187f213160d85d17ef2b85c01a856e06d7d6",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/218/expanded-postfloor-evolve.py": "d3481c112f53201040c579e3b954fcb18d9ff1bfdce4ee5657c264c9d5e3c1a6",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/218/expanded-precise-native-primitive.py": "13902b98bacd16a281bf9b767239ab9440a3cf39a8b135b83980d3bbed25830f",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/218/expanded-precise-native-stage.py": "acdd18b91be92fc27a607d64aa4c5a38b94364c6738926927ce444af31fba754",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/218/expanded-resumed-run.py": "1f5d76c6a2b933470ba60d4437fc18bb20e406dcd2b4137799ddb73a62b3126a",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/218/failure-64.json": "10f3270ecd5fa9d41a585bd65e8ccb4dfa355aa02cd5126178f80a81ba862ba5",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/218/linear-64.json": "15d7bf303ba9d9b77e500e3398879cd0888f10512c6059901195805f29fd5dd8",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/218/linear-seed-identity.json": "c827fa8220b6706f2f5e04ba8f5b633b70d38bc1a4b7a8366dc1f0d96a79139a",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/218/normalization.json": "820244d5d23554811c792b52a45a3e28317392019f5aac7d8733eeb3b4d28706",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/218/photon-conservation-plan.json": "248525a3b9808f00f193c48d9739000a1c32eea1cf8197cf8c3ad8b939a0bb2d",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/218/plan.json": "55788c8596342152fd2932c1a09e3fe235de08024321be2cf4c3beb110f92893",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/218/polish.json": "6d084279b270244cdf06e726d3110864812a01dcb3fc9ad56b6eed6e1887a68e",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/218/prepare-receipt.json": "d5d9d1a3086af848222c257ee96bab4f8fb28a91ae4af565037f5c2021571b37",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/218/restart-check.json": "a525455daad23dac94f31e11f0be946cfd887da975083249469ce6d496544fa0",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/218/restored-solver-counts.json": "7e1eaefe0e6f6f74a4a5e24da2322a0913c625b3b1cb628f2f476e623f7b79aa",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/218/rounding-64.json": "cd04094ba50fac3bd2a7f8b0f97bd0bc80b356dee3d558bce104fd9064b5cad7",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/218/stage-progress-64.json": "fe38dc27cba11d5e04c6c804774414d0165af36ac48167bc772f066f33a82535",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/218/symbolic.json": "fa7761466f78808999b13ab86e654590d23ef1205798eec1f9249d04e1a9194b",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/223/audit-receipt.json": "e3313dc627fc64a288835942e1b0c1d7073cde00c6b0b978801b94fd8ad26f37",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/223/audit.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/223/audit.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/223/check-result.json": "69d213635792f32d54a04dd107aa19178d7943261ca23305d6b720862c246106",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/223/coarse-receipt.json": "76d4e2dd8948a768441e6fdc60ce4dc886e0838987e8c10187e6eee36609fa41",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/223/coarse.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/223/coarse.stdout.log": "0d55c1069659eb321f60db13e88f493de62bb697d7b44fd5b9430ea44df0d8b3",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/223/controller-start.json": "9729c6efc3795a0750f0fdeb855738d72a97c0ba7e09bfec150ab431e95f72cf",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/223/controller-status.json": "6eedebf8f5228bf7fac9ccb2f348bf1c50bf49cbaef3f65fb568830dcf5e7c40",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/223/expanded-affine-jacobian.py": "3e16001f78614321b344c1a125caddfbe24f8b53cdae2d0d7c9d69b4c80443a3",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/223/expanded-continuation-run.py": "9a94a85c8ae95c8eced712fbf8848226f3a1ea6e3f23fba1dc4559d491f5c8d7",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/223/expanded-full-stages.py": "5b47a101f75464316867872639fcf3d4018fbabaef13060a3b1ca5f09f0b4ab2",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/223/expanded-geometric-tangent.py": "9f544dcaa6ddd71096377d4556e9c6e17f0a790969a6b1d628df26b416b0c97d",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/223/expanded-joint-run.py": "6b0d85a25686b8576d71d88f00fa187f213160d85d17ef2b85c01a856e06d7d6",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/223/expanded-original-128.py": "00de9b7672e416dd1033a94782623cdd5006279b4877e2a0e8781f2195ad2260",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/223/expanded-original-64.py": "00de9b7672e416dd1033a94782623cdd5006279b4877e2a0e8781f2195ad2260",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/223/expanded-recovery-128.py": "8ac83f9bce638f30f9a473c53306b8b7ff811fb79e345d0a4939a443b52fe67d",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/223/expanded-recovery-64.py": "8ac83f9bce638f30f9a473c53306b8b7ff811fb79e345d0a4939a443b52fe67d",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/223/fine-receipt.json": "205ac766d262f61c09513b4627ca06f80eab2f2717854616dfc916334905f5f4",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/223/fine.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/223/fine.stdout.log": "1c675dceef39b3ae2605e8fed698f59365a140c4a271eb934b5bebbd085750c6",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/223/launcher.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/223/launcher.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/223/linear-128.json": "efd20e75fde30e7b3bf529bfda87210673a50e4a9715ede8bb996e41e933ffac",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/223/linear-64.json": "90fb7c43c79793dd52361359bf7de3c2d402dc2e36f0e502c381b6c9a81ff32e",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/223/normalization.json": "820244d5d23554811c792b52a45a3e28317392019f5aac7d8733eeb3b4d28706",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/223/photon-conservation-plan.json": "248525a3b9808f00f193c48d9739000a1c32eea1cf8197cf8c3ad8b939a0bb2d",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/223/plan.json": "516f7f789067a847261379e1e599329fa806dafe027f1353e8d618dceca18db2",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/223/prepare-receipt.json": "0bd9060350a8e3af684e1ab6404fcc8d522536ac0158ee6e41c993c8cfe87d0f",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/223/progress-128.json": "c21f88ebf0fa73d674e9e7911659812285896b8433930f9a5c3334fa620c66ba",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/223/progress-64.json": "22bf2fb8df6a552f19c714c66d7624d73fe005e01df661de817cc2abad0c9972",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/223/recovered-128.json": "010997ba50166df4003fd649da8e19f174bafcad48102a627598d47e3c5aeeed",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/223/recovered-128.npz": "48cb6c33ae4f1d0b7a01cabc495a525ecb26f43745e9af8b51b23feca5d85470",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/223/recovered-64.json": "e74b2dc3687d6385135d5e7aeabdb3878a11b626836d0f66b770c9b1ebf4744f",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/223/recovered-64.npz": "4e54f7d6064caf7ae55f0c94e5433dc5e4f461824ecee0284f4e43a9ef1d6a7b",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/223/restart-check.json": "da7d23a69516b2d656f9a7c26ac6857d2ac447ad3ee8846eff0eaba544736d93",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/223/result.json": "6c9f69c92b1add2a8aaf89ded800684c137f68a64f2f4eaa0a7f8159e0f6924f",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/224/driver-polynomial-audit.json": "ede8d091a25c25d1ce0f6537fffa92d3c0f507357ff8961777c38c966bb83497",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/224/endpoint-sources.json": "9c7a04ce9e6983ac4236ee723939300c39eea6efd01c0742bf007ce115f172a0",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/224/endpoints-receipt.json": "aabe6e8f7ccdf01ccaa8fbe31f094a9d6765bc2433f364b0f27165a37f354afb",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/224/plan.json": "1cd1ca4e6a82dc80ad17c88a75f28dfac61ad1169b62ff469e89de79000d1b88",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/224/prepare-receipt.json": "8915e4b6561f18984b2743f1de70cf0551f61b25fd35b420146f741188ee5e84",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/224/source-receipt.json": "8bf4cb2cc96b7b92a366a4864aa4c4d0f2a7468721d66452efb08c5105962ece",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/224/sources.json": "ef970d55cf75faea51c8df8355552a082e3258c0826cc5277aa079f8de77953d",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/224/status-snapshot.json": "7dc548385752febe8fc88608ead78a0c0f3f21c5a0797d873109e132d56af82a",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/226/audit-receipt.json": "eaeedaf2cdc57fba24b3a69d14482daae3c2db0b6973b05b51ea76ff48f53b13",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/226/audit.stderr.log": "9b10313ff225348db773033fd707cc2f3cf11f74f1a684198f10bba118d1e770",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/226/audit.stdout.log": "979733c339991b5c752b9f2293e7f11328ff12b996bcacb9c011f21bdadc5293",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/226/check-result.json": "69d213635792f32d54a04dd107aa19178d7943261ca23305d6b720862c246106",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/226/checks-128.json": "0c943f037e4b2b5b9d15700280cfe2bc3f8a04020d24beda052bc848e6267406",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/226/checks-64.json": "90db9f52e6b1eb7244abfb455a58c8579f6b2d4c65efd784e2295538e1398b4b",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/226/coarse-receipt.json": "5fe5cb4b3923d845b75955c465da52aeb3072c27faf5bb009f3793ee4a4a2eff",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/226/coarse.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/226/coarse.stdout.log": "57db9496e22740d7c91ca07649667056c756e30a85805d0fc5bc00303b2505d6",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/226/controller-start.json": "536b2e897120ab17bcf82dee425223e325a0827996a89ede92389b511f448402",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/226/controller-status.json": "4ef79d6e67e86d7f2fe0f35ffa6e75f34ed336863fd767c22e6b642f5bf112ab",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/226/expanded-affine-jacobian.py": "3e16001f78614321b344c1a125caddfbe24f8b53cdae2d0d7c9d69b4c80443a3",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/226/expanded-continuation-run.py": "9a94a85c8ae95c8eced712fbf8848226f3a1ea6e3f23fba1dc4559d491f5c8d7",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/226/expanded-full-stages.py": "5b47a101f75464316867872639fcf3d4018fbabaef13060a3b1ca5f09f0b4ab2",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/226/expanded-geometric-tangent.py": "9f544dcaa6ddd71096377d4556e9c6e17f0a790969a6b1d628df26b416b0c97d",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/226/expanded-increment-initialize.py": "00f7a4bf01a45e4633bde4b6c41ad878e33b7eb4ed0d511036079318621e543e",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/226/expanded-increment-jacobian.py": "99b66e7602a4e8106a7c730045c635e8fbfbbe25b01d844722e300c301995de5",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/226/expanded-joint-run.py": "6b0d85a25686b8576d71d88f00fa187f213160d85d17ef2b85c01a856e06d7d6",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/226/fine-receipt.json": "e40fca941e2faf4b563c7e0bd627a866d3d55b5f967ef5d99c3eabc24bd25a16",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/226/fine.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/226/fine.stdout.log": "8e5eb0bd82cfaa5509107b7b9c2d3092b6082f2e48c0fec2707fdcb76065b4c8",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/226/interval-1-128-checks.json": "70825d70a70c280a21591672691c39bb8b9964b32fce61596507762774804b3a",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/226/interval-1-64-checks.json": "3ac3a0c7194638508fe74c7c1598b937517c8ca86942812ef2cdae24dc3d88ea",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/226/interval-2-128-checks.json": "bd3ba0980187f41cb0c6f436bb3b8f050a68d70ea321d6c1a1b3f6609b3c8ae5",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/226/interval-2-64-checks.json": "664039b8371556737967de709b4fae9359c86acd227669d84928a57f9df9fefa",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/226/launcher.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/226/launcher.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/226/metric-result.json": "dccee46977d66a5d8861aa81a42cd76b9ee0403d477f44316b3a9dc98249e10e",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/226/normalization.json": "820244d5d23554811c792b52a45a3e28317392019f5aac7d8733eeb3b4d28706",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/226/photon-conservation-plan.json": "248525a3b9808f00f193c48d9739000a1c32eea1cf8197cf8c3ad8b939a0bb2d",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/226/plan.json": "53f40f5aabb760d56f87d76e1e539aa1b091c306b674ca625253571c4cc5305d",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/226/prefix-replay-identity.json": "55c4a39a7caa1f43bc89d93ede83ea517545918da71f03a59d6b158464691798",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/226/prepare-receipt.json": "ff14faddb5574c1fc71197923dc3b60cdaafce2de6351ea63e5d7e1c59dd7dd6",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/226/result.json": "a787efffceb9054e8f7b2e1f84d05ae50b4ee5125b00684b277f74cdbafca5bd",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/226/run-128.json": "9178b98574923b1d3e790d6d62d8b93860916583cf588c3c82b5e02742963026",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/226/run-64.json": "1c4ed41a8117e137bdd6c643bb69a84593d9b0979257322857fa8141b6e67e92",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/226/symbolic.json": "d7fc76340a65437aad292d0adfcbff3e9051bfb5916018b306e0ac4df9fa92a0",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/audit-receipt.json": "4f761af1f1fb446997f88504faa2959105f104c5b00a6445da39613cd7c1eed2",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/audit.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/audit.stdout.log": "253dee370fbec25cc5df3ed7fd1fbcd15d58f734268ff63016572359bf0c1263",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/capture-128.json": "1cb47ebcf76ef3eae6eb148578928c9a1dfe573ae60e7524a3665d081457432e",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/capture-64.json": "a23fd2dc4035a015ea569006e3a6fd710600c5fc8a2fdf09d8e5b9979f540a53",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/check-result.json": "69d213635792f32d54a04dd107aa19178d7943261ca23305d6b720862c246106",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/checks-128.json": "bc5796848c5c0acf0c725965ff1f6547d38bf15dfe0a12a151801426e10affb2",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/checks-64.json": "a77c2c6076139412c7d039dff574d86ecdd830fbb04fccfed4222836a8e66c6c",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/coarse-receipt.json": "06821e17d3d3e082758c3657f8e23c91fe4064d742879457eae3932403feba51",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/coarse.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/coarse.stdout.log": "c3b6df5a9ad6431e4932b7d813456d50da4c34a0181d4060d2cd71b9198142e4",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/controller-start.json": "2ce7f98124f4cb759fbc92f5192f7d074c061c031ca4a6a15435a35a2c5bd2ce",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/controller-status.json": "316bfea09dc158b3f4bbbd1a767fe15d46c743eabc7cc45f5a445ec79c6f9bb7",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/expanded-affine-jacobian.py": "3e16001f78614321b344c1a125caddfbe24f8b53cdae2d0d7c9d69b4c80443a3",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/expanded-continuation-run.py": "9a94a85c8ae95c8eced712fbf8848226f3a1ea6e3f23fba1dc4559d491f5c8d7",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/expanded-full-stages.py": "5b47a101f75464316867872639fcf3d4018fbabaef13060a3b1ca5f09f0b4ab2",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/expanded-geometric-tangent.py": "9f544dcaa6ddd71096377d4556e9c6e17f0a790969a6b1d628df26b416b0c97d",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/expanded-increment-initialize.py": "00f7a4bf01a45e4633bde4b6c41ad878e33b7eb4ed0d511036079318621e543e",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/expanded-increment-jacobian.py": "99b66e7602a4e8106a7c730045c635e8fbfbbe25b01d844722e300c301995de5",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/expanded-joint-run.py": "6b0d85a25686b8576d71d88f00fa187f213160d85d17ef2b85c01a856e06d7d6",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-rate-probe.py": "8460973492737c64eccce8c831e9725ffeeea93279a4ca1a89bdcd41262b0dca",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/field-128-g4-check.json": "b827b599e26efa871a2be787f6bc295487a56ef8cff125db5d01a45c117aa612",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/field-128-g8-check.json": "0db6c20f7565daeafca5fc691df2451ecf91db3171161ce6c3c3fdf0c4245abb",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/field-64-g8-check.json": "6dc6c577238421d0f8cf64727214e6954ff0ca5196fecdd24be09db632c6ffde",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/field-reuse.json": "84f4182f1d5ef9ebb6243357208717d163e2926a8bb9c8f066c5d2853f26e10f",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/field1284-receipt.json": "4395d90fe0c76f13f0d08c0a4f07de40f9c4d7effafd79ecef405d7f73923a27",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/field1284.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/field1284.stdout.log": "cb90d5a95b8f23942fad26eed7f52a78cedc0d80c4bf3ba197349576c06368aa",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/field1288-receipt.json": "c845e2f9f3916d58ee6d8069f2e6f4409c8aa1bb69a772332011d47948f8e450",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/field1288.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/field1288.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/field648-receipt.json": "c0bdeaa726e12b25dabf19a931def03756630d895ec1d0910362a34633944fb9",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/field648.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/field648.stdout.log": "db443ebb7f26b66709cc8b7ab4fd57b744a079e3df773bc8d79f1339357027e9",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/fine-receipt.json": "8a8a970bdfe2f24449517f9660cb50dbd86b1a89e97f47e916e2f0137a9c30a3",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/fine.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/fine.stdout.log": "88db0c8b0e94719f49a74e1eb28ba5445c2d9a6b6b9d3c3723fa27cfd722f18c",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/launcher.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/launcher.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/metric-receipt.json": "7d7d3596a86efa02b1ba39dc75f19f115f240c0048475a4df04a9d753334f0c0",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/metric-result.json": "c4951b038653f11297cd297b2a6b53b5903307a740176506477a52709acf3b60",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/metric.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/metric.stdout.log": "f9178cdacee10c1996b6cbf3ebed3a2a7ce190afcc8897f8ce004de1e62f72d6",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/normalization.json": "820244d5d23554811c792b52a45a3e28317392019f5aac7d8733eeb3b4d28706",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/photon-conservation-plan.json": "248525a3b9808f00f193c48d9739000a1c32eea1cf8197cf8c3ad8b939a0bb2d",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/plan.json": "cecf2702191bb6e977db0fc52bfe15a40c5a61309042c8681c09b5890d646155",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/prepare-receipt.json": "59f03c349e97ee7b7f4c148b85237b39dc1445b6a118f1decebca50596538cc7",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/rate-alias.json": "c9f5e9ae9c729d59f3c90edd16906ad935460f73aa2b369d8bf905b96023a422",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/recovered-128.npz": "a3fa30262d1ffb3eae5e6e15ed6f1fcb79423270fec9cd155d79acec0fb8de69",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/recovered-64.npz": "3c65722b670137625aa5e5b784684d90efcfd087c1a815bfb50dc2f45eb5b473",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/result.json": "b19c9b4aaa910bc065744731e99940c1610b161ab676c70cd6c79e5664e1b43e",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/run-128.json": "b1c56c7654802f75c2a78571a099aaadbe4ac3134259c23d828fe86ba2d8819a",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/run-64.json": "97604f6aa69e0637e048b5b18ca0a728c260e9a697f9088a90e515b874d32a2e",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/source-endpoint-check.json": "0e620e052e2c2fd00f684fb1e377a8f1d247718dfedded73876ac266b779bf0e",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/symbolic.json": "75f875d9d25e4174e013659e24f3a5090e74727200012d8a1f1101000fc46fbb",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/228/check-result.json": "69d213635792f32d54a04dd107aa19178d7943261ca23305d6b720862c246106",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/228/controller-start.json": "496b2a103de008539818eb78bd89d591d75f67208ff82e6ac3cf6e50737a394a",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/228/controller-status.json": "38e1f9aa0b4b9561892223356daf85eaa88f939d26b64b24e1d9cff149a64614",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/228/expanded-affine-jacobian.py": "3e16001f78614321b344c1a125caddfbe24f8b53cdae2d0d7c9d69b4c80443a3",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/228/expanded-continuation-run.py": "9a94a85c8ae95c8eced712fbf8848226f3a1ea6e3f23fba1dc4559d491f5c8d7",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/228/expanded-eight-newton-stage.py": "1ef499a77fa9883d92685e7d42e0f4cdb77bca58beefbaf2bfaaf5131352e87b",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/228/expanded-full-stages.py": "5b47a101f75464316867872639fcf3d4018fbabaef13060a3b1ca5f09f0b4ab2",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/228/expanded-geometric-tangent.py": "9f544dcaa6ddd71096377d4556e9c6e17f0a790969a6b1d628df26b416b0c97d",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/228/expanded-high-native-stage.py": "c0ec606e6c8245e68001b549a2cb4b14e101a57d89501e31a192abd75f4d56e5",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/228/expanded-integer-corrector.py": "a560a376ca365ecb6384f18d13cbb8ada2f2ac7f0beecebc55239340eb80c989",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/228/expanded-joint-run.py": "6b0d85a25686b8576d71d88f00fa187f213160d85d17ef2b85c01a856e06d7d6",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/228/expanded-precise-native-primitive.py": "13902b98bacd16a281bf9b767239ab9440a3cf39a8b135b83980d3bbed25830f",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/228/expanded-precise-native-stage.py": "acdd18b91be92fc27a607d64aa4c5a38b94364c6738926927ce444af31fba754",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/228/expanded-resumed-run.py": "1f5d76c6a2b933470ba60d4437fc18bb20e406dcd2b4137799ddb73a62b3126a",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/228/full-operator-checks.json": "9a5668f0783a53c7e4553ebda36d2c5a0f5db7c948ebc5ba15f7a970ba3ee9ac",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/228/integer-search.json": "42562779f92a589fd4757b41152fdb779778226e5fe363362c8eaa8d6601f3b1",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/228/launcher.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/228/launcher.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/228/normalization.json": "820244d5d23554811c792b52a45a3e28317392019f5aac7d8733eeb3b4d28706",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/228/photon-conservation-plan.json": "248525a3b9808f00f193c48d9739000a1c32eea1cf8197cf8c3ad8b939a0bb2d",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/228/plan.json": "9c8f6d1cb8d49c35b948efeb6c83145c17c8dd068f24491fe8387d712d4d21bc",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/228/prepare-receipt.json": "23072ffe29bf08369438e2f922d62c0c13c437590e8c90dcc9f5a0a09351ee96",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/228/proposal.npz": "2a35f6064805aabe0470789eb6cc84a53aa71f3cd7257a43aaf87b980640ff29",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/228/result.json": "9e6d742d53471ce7cd0530402d811b2b36a9b1becad31ee7fb98b3ec8e60e566",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/228/solve-receipt.json": "426909e0937310324ea1fcf8f51cbe30f9d3175201a2af8ff7cf9d191bc2f238",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/228/solve.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/228/solve.stdout.log": "6b1d749ecd23ac8b40f521bf200908ba0e2bd3f83f02ebdfd500aa34fab69665",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/228/symbolic.json": "fa7761466f78808999b13ab86e654590d23ef1205798eec1f9249d04e1a9194b",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/229/check-receipt.json": "d7cedcf787b80ce62f3ac62d455b9b8f65d947b0c3b0d5fdfd15baf0fe2d843b",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/229/check-result.json": "69d213635792f32d54a04dd107aa19178d7943261ca23305d6b720862c246106",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/229/coarse-receipt.json": "8d01ea11d3cb6760b041fca49d62d8c399893b5d396f7f545a001869d56271b0",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/229/coarse.stderr.log": "9f43588c3321f646dd11c49a5c6b28bfd6bce69637a931ab6c524f1648c7dc6f",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/229/coarse.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/229/controller-start.json": "4eaa40ea2cfc60c4ae5b045a49b925f46069243ad8a3ada30d729069ef5778f6",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/229/controller-status.json": "1d28f3549323d054f7cbf43f9c61d7dae41318dcff8eca49f3221b9a412f518e",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/229/defect-location.json": "c27bada598d5651a82a1155be2c92141a41ff894e3b1914777a1235ba011bd28",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/229/expanded-affine-jacobian.py": "3e16001f78614321b344c1a125caddfbe24f8b53cdae2d0d7c9d69b4c80443a3",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/229/expanded-balanced-linear.py": "f487c4b99d5dddb7ca2bc4c5f6f96d775f896a24cb09c1df266f8e488b29b661",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/229/expanded-BS-polish.py": "758f7ce899e8b99ec26531fc667bf7a5814f680dd43d08b2c4789a6efe409d9a",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/229/expanded-continuation-run.py": "9a94a85c8ae95c8eced712fbf8848226f3a1ea6e3f23fba1dc4559d491f5c8d7",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/229/expanded-eight-newton-stage.py": "1ef499a77fa9883d92685e7d42e0f4cdb77bca58beefbaf2bfaaf5131352e87b",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/229/expanded-full-stages.py": "5b47a101f75464316867872639fcf3d4018fbabaef13060a3b1ca5f09f0b4ab2",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/229/expanded-geometric-tangent.py": "9f544dcaa6ddd71096377d4556e9c6e17f0a790969a6b1d628df26b416b0c97d",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/229/expanded-high-native-stage.py": "c0ec606e6c8245e68001b549a2cb4b14e101a57d89501e31a192abd75f4d56e5",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/229/expanded-joint-run.py": "6b0d85a25686b8576d71d88f00fa187f213160d85d17ef2b85c01a856e06d7d6",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/229/expanded-postfloor-evolve.py": "d3481c112f53201040c579e3b954fcb18d9ff1bfdce4ee5657c264c9d5e3c1a6",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/229/expanded-precise-native-primitive.py": "13902b98bacd16a281bf9b767239ab9440a3cf39a8b135b83980d3bbed25830f",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/229/expanded-precise-native-stage.py": "acdd18b91be92fc27a607d64aa4c5a38b94364c6738926927ce444af31fba754",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/229/expanded-resumed-run.py": "1f5d76c6a2b933470ba60d4437fc18bb20e406dcd2b4137799ddb73a62b3126a",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/229/failure-64.json": "e3377356a5da0bce3428b14bc5b9cd3fb161ebb4445f90a80ad8f052fcd9195b",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/229/integer-64.json": "9c204cf06de65908b8f8083ed6c37b84147eb6a76c030a49c7e7f188226bcd3a",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/229/launcher.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/229/launcher.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/229/linear-64.json": "f0c3934d0170014e76dcb445f11ea90b143e7e1ab2b2b7f10da16c6413addd94",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/229/normalization.json": "820244d5d23554811c792b52a45a3e28317392019f5aac7d8733eeb3b4d28706",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/229/photon-conservation-plan.json": "248525a3b9808f00f193c48d9739000a1c32eea1cf8197cf8c3ad8b939a0bb2d",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/229/plan.json": "e369a9837cea42fc326f5542c39e961d5b3ad289f7ac7e1ab5ae5f3d9fd2e46f",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/229/polish.json": "0c5b8bf7fd81375b7b85d53febf813420baefe6fc0fbf9e1b71b7a3de82b2ca8",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/229/prepare-receipt.json": "c70b94888d1646df6b3a497569e2ce0aa6e9452b1c61a751f83a46d9932546d9",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/229/prepared-plan.json": "46c98b4b5ed087c32a1a68ecfd296f5b5d0b52b7e4744922012444d7cedeb7f0",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/229/prepared-producer.py": "f11e3ce51e6a0ac48400141e9be72398e8d117787e401d09c97690dedac39a8e",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/229/proposal-identity.json": "fe1b01944cb89c67e415f8d9840e549c947e6dfae9943bd6f70b2fc811b6e56a",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/229/rejected-joint-stage.json": "aeb3d6ea937c5fd74558bd5fbb77240d9f63a7cb13ed8b45a1c83a2ccef607df",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/229/rejected-joint-stage.npz": "de78ab9bf49926c8ce52a5177d3a3703cf25781e2d758603f7a9ae7f62f0f535",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/229/restart-check.json": "e0cfaf691a9f33420b5a6e7856e38f7f2b620e89f227589f82110fb4c23e956e",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/229/restored-solver-counts.json": "7e1eaefe0e6f6f74a4a5e24da2322a0913c625b3b1cb628f2f476e623f7b79aa",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/229/symbolic.json": "fa7761466f78808999b13ab86e654590d23ef1205798eec1f9249d04e1a9194b",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/230/check-receipt.json": "20c18d288b4541e1ef904d1f2d7062a9ebe89182e219b7f17509666659a57982",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/230/check-result.json": "69d213635792f32d54a04dd107aa19178d7943261ca23305d6b720862c246106",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/230/comparison.npz": "ce2ab3047c4ba8a3f61fb117e96dbc1e8ae748e6c7a5321da217f42432064419",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/230/expanded-affine-jacobian.py": "3e16001f78614321b344c1a125caddfbe24f8b53cdae2d0d7c9d69b4c80443a3",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/230/expanded-continuation-run.py": "9a94a85c8ae95c8eced712fbf8848226f3a1ea6e3f23fba1dc4559d491f5c8d7",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/230/expanded-eight-newton-stage.py": "1ef499a77fa9883d92685e7d42e0f4cdb77bca58beefbaf2bfaaf5131352e87b",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/230/expanded-full-stages.py": "5b47a101f75464316867872639fcf3d4018fbabaef13060a3b1ca5f09f0b4ab2",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/230/expanded-geometric-tangent.py": "9f544dcaa6ddd71096377d4556e9c6e17f0a790969a6b1d628df26b416b0c97d",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/230/expanded-high-native-stage.py": "c0ec606e6c8245e68001b549a2cb4b14e101a57d89501e31a192abd75f4d56e5",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/230/expanded-joint-run.py": "6b0d85a25686b8576d71d88f00fa187f213160d85d17ef2b85c01a856e06d7d6",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/230/expanded-precise-native-primitive.py": "13902b98bacd16a281bf9b767239ab9440a3cf39a8b135b83980d3bbed25830f",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/230/expanded-precise-native-stage.py": "acdd18b91be92fc27a607d64aa4c5a38b94364c6738926927ce444af31fba754",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/230/expanded-resumed-run.py": "1f5d76c6a2b933470ba60d4437fc18bb20e406dcd2b4137799ddb73a62b3126a",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/230/normalization.json": "820244d5d23554811c792b52a45a3e28317392019f5aac7d8733eeb3b4d28706",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/230/photon-conservation-plan.json": "248525a3b9808f00f193c48d9739000a1c32eea1cf8197cf8c3ad8b939a0bb2d",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/230/plan.json": "aa79055e3a815cafa403eb18eacb7ac043d7ca01f793c313fc905a288a2fa88b",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/230/prepare-receipt.json": "06626bb43f35ccbb6676610e800d44918d662f4daf198cf6d0935d8e6c4b98ce",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/230/result.json": "312c204cf87b1cd7459200d716b30d9e36a80b7d2e9abd2e2c5752f1b7cdb767",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/230/symbolic.json": "8bbaf5d423fff2b7245ba1969e85be22490d1d09d8853311a350c94e9c951453",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/231/check-receipt.json": "2bd21343a9909f69f0ad78c040bfe35c744a949e1eefb27a51b8dbaece3f7048",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/231/check-result.json": "69d213635792f32d54a04dd107aa19178d7943261ca23305d6b720862c246106",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/231/coarse-receipt.json": "11fe7e32bc560f567e391f8c41725f6946454f6756e18c21432c25bdae5a23a4",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/231/coarse.stderr.log": "e38796111443bc649ff9168846db5f68b11ebe734add18cfe6b7a3a83d757ee7",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/231/coarse.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/231/controller-start.json": "c78f6a01ee078e6b50aef75f857ff6a6714e2acf1c95bedb3fb7819162359625",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/231/controller-status.json": "892d7c2475f54b291241aaa3a476a7bd16bc7fe16e36c787e9f2ae287c14de3b",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/231/failure-64.json": "a5c5ccdf759f8fd0ea0691ddd359785d43daef9731c0796d080d252c00300780",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/231/integer-64.json": "e4ab717c52da46fdb57135726c14fdc2f9a47096067c0bfe1451071747a0623d",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/231/linear-64.json": "b57b5cbf32d2744bc6b516dd366fc8e8743780a6c3cb7f7ef54462be22929f79",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/231/normalization.json": "820244d5d23554811c792b52a45a3e28317392019f5aac7d8733eeb3b4d28706",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/231/photon-conservation-plan.json": "248525a3b9808f00f193c48d9739000a1c32eea1cf8197cf8c3ad8b939a0bb2d",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/231/plan.json": "1b9cfdc25db778972bba91ecc82af20d627f6620f66759adec3c5aea6c3bdcdc",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/231/polish.json": "86010b32a3b9232ad988a5ce0f418358c030251eb8fe637c76d43eecc8bc1571",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/231/prepare-receipt.json": "ab75be45d3a301458512b267040e30c203430902cdc6887c34ba21bc9225c601",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/231/rejected-joint-stage.json": "a6086c96dc93cccf7a29ccc82fed7f16e01598c08c3a3e2c77f000d3b56e63a0",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/231/rejected-joint-stage.npz": "2bb0d6477a40d1deae952acd273bfa0f1cbf76429c8072161389e396d013b78b",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/231/restart-check.json": "e0cfaf691a9f33420b5a6e7856e38f7f2b620e89f227589f82110fb4c23e956e",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/231/restored-solver-counts.json": "7e1eaefe0e6f6f74a4a5e24da2322a0913c625b3b1cb628f2f476e623f7b79aa",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/231/status-snapshot.json": "892d7c2475f54b291241aaa3a476a7bd16bc7fe16e36c787e9f2ae287c14de3b",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/231/symbolic.json": "8bbaf5d423fff2b7245ba1969e85be22490d1d09d8853311a350c94e9c951453",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/232/check-receipt.json": "f14bff1875c9367c50f8ac22ef80e252b95a1132a043b8fdf22b2471a967edd1",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/232/controller-start.json": "4020f34bedc2344c6febe0d969317ecd6d0171a7f5ec3c12ce822300f1743e88",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/232/plan.json": "37a41314d95bf31c4c3bc79b95b1a89626f0c402cc4d1705608c8c94e6d23051",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/232/prepare-receipt.json": "0d69d64d5cabb7ce3cb1fa010f44837cc2681d9a84277015d35e642e91482cc7",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/232/restart-check.json": "65f309988357bcc3db63e2416d67361524d2af0a1e7675690ccfe8f5648b0598",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/232/status-snapshot.json": "73ecdea6e49fdbe00d5111a7c117bf2ebe7dbbb196b90f3eb93e3c04cb2b15cd",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/226/sweep-1/photons/return-128.npz": "ac55b68b25f83bf0b85bacd4bb422676a1d1c3e3afbac3d562b04f2a4854a904",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-field-check/controller-start.json": "e44c88c6d4fc077fa2f2fadbb0481f1a33ba82f836af77d4869994cf2d508a89",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-field-check/controller-status.json": "281a8d5fbb999d6c14414c903ab4372b7bb05de74ae66edd421b419d116fe1d1",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-field-check/field1288-receipt.json": "c5dca02020faf7a56413ff0a0bda25b90e7fc1568d4d218d2c77bb6107fde713",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-field-check/field1288.stderr.log": "da5668523f0c106e2b40523e6de2463f6433369468261a4fbb4ac102d4869077",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-field-check/field1288.stdout.log": "470a0229830923e55de011e4684df72c9f240396fc7bbd298ffc443a8f8fd0ee",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-field-check/launcher.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-field-check/launcher.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-field-check/plan.json": "40a18fd0bd4f9489b16b75f71d9a963a00065c622e172198b9fcd8614d735305",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-field-check/producer.py": "bf463668434452689116b28f5c460ea802ce9d391d64478bd96551b518f6b678",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-field-entry/controller-start.json": "d183877fc6068b767182a8f9443a41594e2bdefd0b1d8401537779290fda88c4",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-field-entry/controller-status.json": "47c69941c67cbf0bf5443fd5d6d2472db67f0f0a6463cfd8334575159a50b791",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-field-entry/field1288-receipt.json": "736789b69229946158c597c1a983cdcf8ef8370ab95181e834a9aedec9f799a5",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-field-entry/field1288.stderr.log": "5a79eed6b5b9c70388c4ec86e9089ea16cc951c5678936c1d736151763cb3e38",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-field-entry/field1288.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-field-entry/launcher.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-field-entry/launcher.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-field-entry/plan.json": "3b980f580e788a50a7a0b4956b15767bcd6a7dad622c0791b421c37963d2e3aa",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-field-entry/producer.py": "e710e7507ed34af602517b1e3cd3e7ec128723f897cadd8a2c012e03477f1958",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-metric-keys/controller-start.json": "daed50e30a5d5123d8297d3c941e9990b2b07f6a126633095f03312c35a161d6",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-metric-keys/controller-status.json": "a48c5792aa41c2f0f043dd51da7bd3c3b72f41a2e534d468ef841ef81a7f850b",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-metric-keys/metric-receipt.json": "66de3c5e880d3b99453bf9a494f1dfcbec348c69d293d784687ef6b429a2c17a",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-metric-keys/metric.stderr.log": "8a8167b51d22db636bffb7d66b7e7d406d2a321dc0ad9583306471688acdadd7",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-metric-keys/metric.stdout.log": "5e685598c615b145e2da8f0bd6dff166d51a478d955ef6977c3786f6fad329bd",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-metric-keys/plan.json": "60a5b4bfb356287263bd48063018d4c8c8dd1b87e9f15ed9fdccbf88a6c59cb2",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-metric-keys/producer.py": "f1364875e45dd92ef9c7ebbbf4a1be9035514453e2f64c8b42d94bdf3baf613d",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-metric-prefix/controller-start.json": "3f1f1c88af98b5f77d4554e9804593f00405caf169fda0db63c83508b6efd71d",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-metric-prefix/controller-status.json": "c6a4b426050efc3214c555e5014f97d6b0c304487256be465d08f5181cf7069b",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-metric-prefix/controller.py": "095937a783176bb5606d7379d8d0084746c99f2b17a8d7533f1165ed0905a7af",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-metric-prefix/launcher.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-metric-prefix/launcher.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-metric-prefix/metric-receipt.json": "062b64a521db8791b65f517edcebe25276b5ff68695b0dc20aa8f958cce1d850",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-metric-prefix/metric.stderr.log": "fa1500dd4e06cbdc5802d519416c9e2fb595e68e3765266ea9a2b2fb17722a21",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-metric-prefix/metric.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-metric-prefix/plan.json": "2bfaf0ddec80c7075832f8c5c3772c9f4f17d602297c19f616e4394ab58070bc",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-metric-prefix/producer.py": "ac75ca4838b70358c40b5425752248f56d1394e072f7195865f28e65fa8291ec",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-preparation/prepare-receipt.json": "3fc2a30bb43a3e9d49012c9b883ff02780066842ff02c623146f983f8dbfbf61",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-preparation/producer.py": "1a9a8e34dd858dccc0f63d71c41b7abe9321e006544327e9822df3b3b077ead6",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/gr/fields-128-g4.json": "a5bae6318a8e9829426cb02181db9f87659ca1cfb16f5afd7bdb1697d75cd9ec",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/gr/fields-128-g4.npz": "bc11f1777ba5c0e2be5301ac7984b249117a490b9984d080c261aebd23a79af6",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/gr/fields-128-g8.json": "7d49e71f41b7d6203d6a77e5ddd0c2c84455bdb82c60376b7343d6cea2c94cd5",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/gr/fields-128-g8.npz": "2c05424a30c137d95bf6e19f47dbc54fe733f97f3096819092cad68def2914bb",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/gr/fields-64-g8.json": "4646dbb025ed38562a74ca8268949deb49c764e8a6348f38c209fe1d24287f86",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/gr/fields-64-g8.npz": "4d589a6edd0af2c8de25af2368aca3e452748bd85357d08a27f28bee2e6b8bff",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/gr/source-128.npz": "dc0057ed1ab01644bcc565d659adbd5419c1374cd9102a986be44e43fcddb7da",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/gr/source-64.npz": "b0f13cdeb5ad55771bed632357b987bf02777d480472436c7d149f5905c0bea5",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/metric/metric-128-g4.json": "9c312c13e0bf05db31e11acb997304bab2122670616e073d5129b66642c7e062",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/metric/metric-128-g4.npz": "76342327dce812fa2f7a82740adc3185c8386f79d400f249372be238140eca64",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/metric/metric-128-g8.json": "94ff4fc0f6708eb94d95ba15704a686cf04d7eae5aecb9bdb82c654ab077da42",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/metric/metric-128-g8.npz": "7b6ebab5ce60f6e547c281ccb1c48597a1ff2d8e826f086a1230b7f3b2421ed2",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/metric/metric-64-g8.json": "59de07bc21f3ccfd02a7dc08a92b697ef7d6b5c3f57fc08fccb526387eb34c7a",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/metric/metric-64-g8.npz": "24491c0c948300605eec437838408c08ca7148b0df607d8778646a87d5baf50b",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-metric-keys/metric/metric-128-g4.json": "c78df2b148afbb7d123c9e7d1f20319ed38e27dcff7cc8ef7110a4d64db691c2",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-metric-keys/metric/metric-128-g8.json": "dac2ff3887552fc8eb757d17570c3db916e47372286bacbfb7e151d9a16c9fa0",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/failed-metric-keys/metric/metric-64-g8.json": "6d29e95f584fbd4ef05b6bcdba8721b9895cc484c004862bca938a13bc231697",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/sweep-1/photons/return-128.npz": "c0e13b715576d81aabcc8b417ee4abee7c71561b225828ca5e9c726aa9355f42",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/227/sweep-1/photons/return-64.npz": "8835fa0c7eb1b5532a37f780e1c2db3df61283880f6b56057c63cab15a9ca704",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/230/failed-report-shape/check-receipt.json": "47b32879a7c1506f10e266dcaa500c66294e70087b63a548b6bf50c7f1c72c14",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/230/failed-report-shape/plan.json": "0defa150057fede646ad015c58b102ad82bc830f2cfb5b037f03679df2d84c2e",
+    "outputs/direct-eos-gr33/native-actual-stage-gr/230/failed-report-shape/producer.py": "f706fdfe94b889ea78c9a101a42a3f100baf7d9b4e29510a2ec02f14d61ba881"
+  }
+}

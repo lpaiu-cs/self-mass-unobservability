@@ -1,0 +1,26 @@
+{
+  "classification": "Conjectural",
+  "checkpoint": "a7ab5430",
+  "bindings": {
+    "verification/gr_heat_rank_one_damping.py": "326e59e1ad8a7927b45864a46ab545b6b542a54ef381ccd265e5f3bb98eb842b",
+    "outputs/direct-eos-gr33/gr-heat-rank-one-damping/chen-levermore-liu1994.pdf": "b3f3687217b15190fde4411219b1762b8a367c35ef821b5d546b7387741ba899",
+    "outputs/direct-eos-gr33/gr-heat-entropy-closure/manifest.json": "d48ed74b8faa1d9bff3d881b78e980d792eb0b762c5ed7ca74120de77813787e",
+    "outputs/direct-eos-gr33/gr-heat-entropy-closure/root-brackets.json": "9caaa09ef9af7abed20452a4a022609c4829ebcd792aab75e00fbd844f65626e",
+    "outputs/direct-eos-gr33/gr-heat-entropy-closure/initial-rates.npz": "c288fbf689b4fdccfef9901bf503363c1cd998fe014a5de023ce9f49d99aba4a",
+    "outputs/direct-eos-gr33/gr-heat-entropy-closure/constant-times.json": "69223b83993cae52e73ba1c514d90493cc38430ce75c1967a4586110751df9c6",
+    "outputs/direct-eos-gr33/gr-heat-characteristics/coefficients.npz": "c3e942d127fc698ae0edd8c5ead2d3047d1180aa017024c2ec895ba756683eb8"
+  },
+  "cells": 5735,
+  "models": 2,
+  "maximum_bisections": 256,
+  "declared_linear_model": "M*y_t+c*N*y_x+E44*y/tau=0 using the exact frozen nonzero-heat entropy-closure M,N and original two constant proper tau values. A constant external forcing balances the background heat source. This is a declared constant-coefficient diagnostic, not the full linearization about the evolving inhomogeneous star.",
+  "omitted_terms": "Background gradients, perturbations of their coefficients, geometry and reactions, metric feedback and boundary/atmosphere conditions are absent. Do not transfer a pass/failure to the complete GR system. Physical heat times and EOS derivatives remain uncertified.",
+  "target": "Test the signs d_i=q3(c_i)/p4_prime(c_i), using only exact rational coefficients and certified simple real characteristic-root brackets. All d_i>0 imply strict damping for every finite nonzero real k. A negative d_i implies a growing branch for sufficiently large |k| in this frozen system. Zero/undecided cases remain unresolved.",
+  "method": "Reuse each original causal root bracket. Exact interval Horner bounds for q3 and p4_prime, with exact bisection of p4 when required. No floating eigenvalues or selected finite k grid establish the verdict.",
+  "source": {
+    "classification": "Imported from prior work",
+    "url": "https://people.maths.ox.ac.uk/chengq/preprints/cll/cll.pdf",
+    "doi": "10.1002/cpa.3160470602",
+    "scope": "Context for entropy, subcharacteristic interlacing and relaxation stability. The rank-one finite-dimensional proof and application below are derived explicitly and do not assume the paper supplies nonlinear GR closure."
+  }
+}

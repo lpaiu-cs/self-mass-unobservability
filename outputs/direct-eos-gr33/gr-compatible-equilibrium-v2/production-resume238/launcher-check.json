@@ -1,0 +1,22 @@
+{
+  "checked_at": "2026-09-17T00:10:37.3241518+09:00",
+  "task_name": "SelfMassGR-Resume238-20260917",
+  "task_state": "Running",
+  "trigger_count": 0,
+  "execution_time_limit": "PT0S",
+  "schedule_service_pid": 3356,
+  "launcher": {
+    "ProcessId": 19872,
+    "ParentProcessId": 3356,
+    "CreationDate": "2026-09-17T00:09:25.435789+09:00",
+    "CommandLine": "\"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -NoLogo -NoProfile -NonInteractive -WindowStyle Hidden -ExecutionPolicy Bypass -File \"E:\\lab\\self-mass-unobservability\\verification\\run_gr_resume238.ps1\""
+  },
+  "foreground_wsl": {
+    "ProcessId": 27144,
+    "ParentProcessId": 19872,
+    "CreationDate": "2026-09-17T00:09:26.887496+09:00",
+    "CommandLine": "\"C:\\WINDOWS\\System32\\wsl.exe\" -d Ubuntu-22.04 --cd /mnt/e/lab/self-mass-unobservability -- /bin/bash -c \"set -C; exec /usr/bin/env OPENBLAS_NUM_THREADS=1 PYTHONPATH=/home/lpaiu/work/nutimo_pilot/request13_deps:verification /usr/bin/taskset -c 0-15 /usr/bin/python3 -u verification/gr_resume238.py chain --workers 15 > outputs/direct-eos-gr33/gr-compatible-equilibrium-v2/production-resume238/run.log 2>&1\""
+  },
+  "outside_harness_process_tree": true,
+  "wsl_shutdown_protection": false
+}

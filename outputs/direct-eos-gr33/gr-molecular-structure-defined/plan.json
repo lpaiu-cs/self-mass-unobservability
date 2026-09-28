@@ -1,0 +1,55 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "37389db",
+  "bindings": {
+    "verification/gr_molecular_structure.py": "642820c4c3f1b41469b0e118a78f646f6f7813ea73ca4b0c2794100bccc457fa",
+    "verification/common_eos.py": "01812cb068991dd6d72def58a78d158bef2bb3d00028312efc271c50dfdcb123",
+    "verification/baryon_entropy.py": "076f40c1c48fa1a687fd5c05eacf16a728713aaabeb16cec0f03ef0fb7d85f3f",
+    "verification/audit_structured_enthalpy.py": "294b4bdf416cbb7f546c79e350d07be727cbcd605f1be0f2de322817c20c73aa",
+    "verification/gr_subcell_precision_fallback.py": "c8d86547d3a8301c9d4c413b40b12fbafd09568f6cb3a9b888b2648d265377ee",
+    "outputs/direct-eos-gr33/gr-molecular-precision/plan.json": "90eaaa31bba1fa1da7bbc1c52bdb3e0426ea2585a2abf19f48cdd84f302ad9c1",
+    "outputs/direct-eos-gr33/gr-molecular-precision/build.json": "a405488d50854c31e377c42e8f1416895a3d5f1e3b438012739ee41371133932",
+    "outputs/direct-eos-gr33/gr-molecular-reference-defined/manifest.json": "144c1a4691bf26823f70c17367a4aa3ccba7a70c208474cbc484086df425d282",
+    "outputs/direct-eos-gr33/initial-adiabats-17.npz": "28e0ed028ad6d3b94ef3c5aa127b2c2e0bcb1b24be93fc7e1d44a19fc4d017b1",
+    "outputs/direct-eos-gr33/initial-structure-17-4.json": "142630ac32b71b761e9a6ac04ed00cf37348b6920cbb6b30dc6792845ac90b3b",
+    "outputs/direct-eos-gr33/initial-state-17-4.npz": "5dcc8ffb8b32a9f15ccc4c8bb7111d19be8dcdc66611ad2942e3a4a0cf6cc6d6",
+    "verification/gr_molecular_structure_runner.py": "0b6e3e83aeac519073e1f76dae290c736a76e4773361a808db3dc675c1845d17",
+    "outputs/direct-eos-gr33/gr-molecular-structure-defined/candidate.py": "d190064a31c8f0183e0d8ddd425e84809b3b7175aa378612e29d7f6c9950cfa7",
+    "outputs/direct-eos-gr33/gr-molecular-structure-defined/original-serialization-failure.log": "e4c7e64baa8e1642d53d0a57226d09440de8fec3b4e36541cb75e7ac5ad8a750",
+    "outputs/direct-eos-gr33/gr-molecular-structure/plan.json": "e8cd541c6c2dad309294ee1327f05a57ed65637a4691da71ab0806775e05359d",
+    "outputs/direct-eos-gr33/gr-molecular-structure/startup-binding.json": "8eff1d3eb73ac881fbf3b0e57b396ac76faa7860888114e00a3b788492207710"
+  },
+  "cells": 5735,
+  "block_size": 128,
+  "workers": 4,
+  "points": 17,
+  "subdivisions": [
+    4,
+    8
+  ],
+  "controls": [
+    0,
+    1175,
+    1176,
+    2972,
+    5734
+  ],
+  "table_control_cells": [
+    0,
+    2972,
+    5734
+  ],
+  "interface_tolerance": 1e-08,
+  "finite_face_refinement_tolerance": 1e-08,
+  "known_root_log_temperature_tolerance": 1e-10,
+  "table": "New EOS pressure and entropy at the frozen rho,T,X reference. Seventeen offsets in [-0.04,0.04] about each new pressure. Old table temperature differences about its midpoint are only Newton seeds added to the new reference temperature; every new entry is solved with the new EOS.",
+  "inverse": "Reuse the frozen strict inverse and precision fallback without changing either energy-unit gate. The fallback uses the matching molecular-precision EOS, never the old physical model. Isolate and retain all failures and switches per block.",
+  "startup_gate": "The molecular extended evaluator controls must complete and all pass. Freeze their manifest at table start.",
+  "GR": "Reuse existing common_eos baryon TOV shooting, 17-point Pchip and direct strict-root fallback. Hold dm,X and the new reference entropy; the same finite photospheric pressure is the boundary. Centre pressure, R and gravitational M are matched outputs, with no baryon tuning. Compute subdivision 4 then 8.",
+  "scope": "Numerical reconstruction of a new model, not physical time evolution. No physical EOS, continuous interpolation/root/geometry, atmosphere, transport or nonlinear observational certificate. Original models and failed paths remain unchanged.",
+  "serialization_correction": "The comparison produced a NumPy bool that stdlib JSON rejected before any table block started. Explicitly convert that predicate to a Python bool; preserve the original code/plan/startup/error log. All inputs, comparisons, seeds, algorithms and gates are unchanged.",
+  "substitutions": {
+    "OUT=g.OUT/'gr-molecular-structure'": "OUT=g.OUT/'gr-molecular-structure-defined'",
+    "passed=abs(actual-t)<plan['known_root_log_temperature_tolerance']": "passed=bool(abs(actual-t)<plan['known_root_log_temperature_tolerance'])"
+  }
+}

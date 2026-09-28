@@ -1,0 +1,15 @@
+{
+  "classification": "Counterexample candidate",
+  "original_profile_sha256": "c3beb8966c1b762dd16da36e8db111440819c2756931a5ec1d89df755daac8fd",
+  "old_input_sha256": "a7e2764410ba86bb8e277e767ecff7346ff0953e155594aace7413a2f9a7d0c4",
+  "mean_restored_F": 2.694516197331162e-08,
+  "max_restored_F": 1.8143162780704699e-07,
+  "method": "Undo the previous non-F renormalization: multiply the entire 26-entry non-F state by 1-F_original and insert original F17/F18/F19 on the same material cells. This retains the introduced PP intermediate bookkeeping while restoring the original bulk F inventory. All rates must be reevaluated.",
+  "boundary_logP": 8.254534518911289,
+  "frozen_controls": [
+    "EOS-probe.json",
+    "base structures",
+    "epoch0 structures"
+  ],
+  "physical_trace_model_certified": false
+}

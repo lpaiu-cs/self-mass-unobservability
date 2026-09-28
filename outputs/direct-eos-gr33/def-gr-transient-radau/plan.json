@@ -1,0 +1,34 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Separate floating-point stage-solve error from low-order temporal resolution, then test one higher-order same-grid method on the actual failed GR component.",
+  "decision": "First run one same64-step two-stage path using extended-precision original-stage residuals and iterative refinement. If readout differences from saved64 exceed1e-4 of their own history norms, stop to repair arithmetic. Otherwise run only the three-stage fifth-order Radau candidate on the original16/32/64 and two input/boundary contrasts.",
+  "retained": "Same frozen-source K,D,material/scalar/metric,source,initial state,5864 interior grid nodes,period and acceptance criteria. No smoothing, cutoff removal, extra time steps, changing readouts or relaxed gates.",
+  "budget": {
+    "precision_paths": 1,
+    "candidate_paths": 5,
+    "hard_seconds": 180,
+    "cpu_threads": 1,
+    "memory_GB": 3,
+    "new_native_EOS_calls": 0,
+    "new_collision_states": 0
+  },
+  "forecast": "Phase71 five paths25.48s. Additional64 precision path and three-stage complex factorizations/stage residuals forecast50-130s, hard180s; changed method cost unmeasured. Stop on arithmetic branch or numerical failure; no next method/refinement automatically.",
+  "gates": {
+    "time_relative": 0.02,
+    "time_order": 1.5,
+    "coefficient_relative": 0.02,
+    "outer_relative": 0.002,
+    "linear_residual": 1e-09,
+    "heat_balance": 2e-13
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_transient_radau.py": "0070eec85a84b0eb6bc9332a3b1f9b2c48cc99ca757ca33c779f25ed3dcb3fb9",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_radial_conduction_reconnect.py": "a58d2b43da6eace2a9661370be4bce241648a282ff548a40bb42bbd26a1ec95f",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_conduction_radau.py": "86daa01d85c964bafb8e4ab2ca2113a1bd0f9540b2f7a69c3bcc5f84c101b230",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/solver-source.py": "b4c4b9784211e117a669c4bac66f5b418e1e1a7753ef70621bf8e9e131d781e9",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/fine-bank.npz": "b4493a6e4cfb20d741725ecb61cec154ab9fc51a694001865748741060018d7e",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/coarse-bank.npz": "ea020f69b240c5c5cdd8810f963d88e5cc2d3269aff12c659422a7a6541ae0df",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/result.json": "d3cccdf9f50857fbd44dd2ce798e53b9801fa8a41842a19493885894da7093f1"
+  },
+  "checkpoint": "2d1f5299"
+}

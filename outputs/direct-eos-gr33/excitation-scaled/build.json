@@ -1,0 +1,55 @@
+{
+  "classification": "Counterexample candidate",
+  "commands": [
+    {
+      "command": [
+        "cmake",
+        "-S",
+        "/home/lpaiu/work/direct-eos-gr33/excitation-scaled/source",
+        "-B",
+        "/home/lpaiu/work/direct-eos-gr33/excitation-scaled/build",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DBUILD_SHARED_LIBS=ON",
+        "-DBUILD_TEST=ON",
+        "-DBUILD_DOC=OFF",
+        "-DBUILD_DOX_DOC=OFF"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "/home/lpaiu/work/direct-eos-gr33/excitation-scaled/build",
+        "--target",
+        "free_eos",
+        "-j",
+        "2"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "gfortran",
+        "-O2",
+        "-fPIC",
+        "-shared",
+        "-I/home/lpaiu/work/direct-eos-gr33/excitation-scaled/build/src",
+        "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/excitation-scaled/direct_ion_bridge.f90",
+        "-L/home/lpaiu/work/direct-eos-gr33/excitation-scaled/build/src",
+        "-Wl,-rpath,/home/lpaiu/work/direct-eos-gr33/excitation-scaled/build/src",
+        "-lfree_eos_direct24_excitation_scaled",
+        "-o",
+        "/home/lpaiu/work/direct-eos-gr33/excitation-scaled/unused-inventory.so"
+      ],
+      "returncode": 0
+    }
+  ],
+  "completed": true,
+  "sha256": {
+    "/home/lpaiu/work/direct-eos-gr33/excitation-scaled/unused-inventory.so": "ce18f1b835d2a45c5ef0a85251cbbe0b32c92eb624edf73e72e3df9679cb10cd",
+    "/home/lpaiu/work/direct-eos-gr33/excitation-scaled/build/src/libfree_eos_direct24_excitation_scaled.so.1.0.0": "1ece7a7b1d5acd54010e307172edae10f4681307a72356c06ac3d1b35443af26"
+  },
+  "original_runtime_modified": false,
+  "physical_EOS_certified": false
+}

@@ -1,0 +1,141 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "controls": {
+    "body": {
+      "compact": {
+        "angular": 0.0,
+        "radial": 0.0,
+        "time": 1.67424690692529e-05
+      },
+      "exterior": {
+        "angular": 0.00026491773367443,
+        "radial": 1.5918928971317756e-14,
+        "time": 0.0005408104122684249
+      },
+      "arrived_energy_erg": {
+        "angular": 0.0,
+        "radial": 0.0,
+        "time": 0.0004702908981759343
+      },
+      "linear_charge_increment": {
+        "angular": 6.5692463597666165e-19,
+        "radial": 0.0,
+        "time": 1.6742470326941933e-05
+      }
+    },
+    "self": {
+      "compact": {
+        "angular": 0.0,
+        "radial": 0.0,
+        "time": 0.00025100729998431753
+      },
+      "exterior": {
+        "angular": 0.0009061228761061906,
+        "radial": 6.727041983022017e-16,
+        "time": 0.0019910141958727643
+      },
+      "arrived_energy_erg": {
+        "angular": 0.0,
+        "radial": 0.0,
+        "time": 0.0017854043433247785
+      },
+      "linear_charge_increment": {
+        "angular": 1.1925240233344245e-15,
+        "radial": 0.0,
+        "time": 0.0002510101484068996
+      }
+    }
+  },
+  "rows": [
+    {
+      "component": "body",
+      "steps": 128,
+      "angular": 8,
+      "radial": 8,
+      "port_relative": 2.3791925844412477e-16,
+      "seconds": 7.153848468999996
+    },
+    {
+      "component": "body",
+      "steps": 128,
+      "angular": 4,
+      "radial": 8,
+      "port_relative": 2.3791925844412477e-16,
+      "seconds": 3.399384258000005
+    },
+    {
+      "component": "body",
+      "steps": 128,
+      "angular": 8,
+      "radial": 4,
+      "port_relative": 2.3791925844412477e-16,
+      "seconds": 0.1094194470000005
+    },
+    {
+      "component": "body",
+      "steps": 64,
+      "angular": 8,
+      "radial": 8,
+      "port_relative": 9.523195118307267e-17,
+      "seconds": 1.8298869000000053
+    },
+    {
+      "component": "self",
+      "steps": 128,
+      "angular": 8,
+      "radial": 8,
+      "port_relative": 1.6746414618947457e-17,
+      "seconds": 0.004826521000005357
+    },
+    {
+      "component": "self",
+      "steps": 128,
+      "angular": 4,
+      "radial": 8,
+      "port_relative": 1.6746414618947457e-17,
+      "seconds": 0.00480907500000427
+    },
+    {
+      "component": "self",
+      "steps": 128,
+      "angular": 8,
+      "radial": 4,
+      "port_relative": 1.6746414618947457e-17,
+      "seconds": 0.0045724490000012
+    },
+    {
+      "component": "self",
+      "steps": 64,
+      "angular": 8,
+      "radial": 8,
+      "port_relative": 1.3066501992553855e-16,
+      "seconds": 0.0028110820000009085
+    }
+  ],
+  "endpoint": {
+    "direct": 2.8269078927903613e-35,
+    "body": -2.53643242961482e-51,
+    "self_GR": -9.691405006971612e-73,
+    "body_compact": -2.5364324225812962e-51,
+    "body_exterior": 6.291760408113953e-66,
+    "body_mass_numerator": -7.03353002732488e-60,
+    "body_arrived_energy_erg": -0.0006206826366761246,
+    "self_arrived_energy_erg": 1.1962509407067144e-22,
+    "body_over_compact": 1.0000000027729987,
+    "self_over_body": 3.8208804200013085e-22
+  },
+  "computed_packet_kernels": 829,
+  "delay_inverse_seconds": 4.466912950640278e-16,
+  "seconds": 14.750324088999996,
+  "same_background_mass_normalization": true,
+  "actual_signed_angular_packets_used": true,
+  "actual_response_at_fixed_operator_null_infinity": true,
+  "background_photon_metric_response_included": false,
+  "scalar_evolving_exterior_interaction_included": false,
+  "upstream_GR_uncertainty_closed": false,
+  "original_waveform_change_test_passed": false,
+  "static_EFT_compared": false,
+  "physical_final_charge_solved": false,
+  "full_goal_complete": false
+}

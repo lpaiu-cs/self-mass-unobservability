@@ -1,0 +1,19 @@
+{
+  "classification": "Counterexample candidate",
+  "remaining_total_seconds": 100,
+  "reason": "The combined conservative forecast exceeds the remaining budget by9.23seconds, but the registered896-cell path itself is affordable and provides an actual energy-evolution speed. Execute that path first, preserve it, then decide the1792-cell path from its measured cost.",
+  "first_path_forecast_seconds": 21.584329309201415,
+  "last_path_rule": "Use the larger of5.2 times the896-cell evolution cost and measured1792 RHS cost times2.5 times the actual896 steps times2 RHS times1.15; add the entire remaining native-call allowance. The2.5 step ratio includes25percent margin above2x spatial scaling and exceeds the prior entropy-evolution1335/567 ratio. The new fine-grid speed is still an assumption.",
+  "paths": [
+    896,
+    1792
+  ],
+  "unchanged": [
+    "horizon",
+    "conservation gates",
+    "EOS native-call cap"
+  ],
+  "stop": "Do not start1792 if its forecast exceeds the remaining100second hard clock; persist accepted intermediate states.",
+  "source_sha256": "82c52211a35fd642bd6bd94a9761cdf8f36ec3e6377a07cf2a55c337cd08f6b6",
+  "EOS_source_sha256": "a59f35e74be97543b7b0fa87a4d8836488fef42069e32be91b95dced363e2c53"
+}

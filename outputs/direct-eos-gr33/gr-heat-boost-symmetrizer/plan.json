@@ -1,0 +1,14 @@
+{
+  "classification": "Proven",
+  "checkpoint": "404f5cc0",
+  "bindings": {
+    "verification/gr_heat_boost_symmetrizer.py": "fbfa54328be60b8ef7ce4f6d8e0326e7ab79c5ff5b32258837811ce8ebbf5579",
+    "outputs/direct-eos-gr33/gr-heat-rank-one-damping/manifest.json": "d7784a1ae4bd1a271a754fb9cfb225085617c281312987d5d6721f997130e940",
+    "outputs/direct-eos-gr33/gr-heat-rank-one-damping/symbolic.json": "ffa882bb818247ea62ea33d5c23b7484aab84f55134d27cdc52593e0dde16ccd",
+    "outputs/direct-eos-gr33/gr-heat-rank-one-damping/result.json": "e0ce573e54412f6566a69ae15826bb24a41342f64237f76221914d719ec1e44e",
+    "outputs/direct-eos-gr33/gr-heat-rank-one-damping/certificates.jsonl.gz": "014b2ce8432fec607b768b9a44d659c00c295e7f366fc2d8971cbd6632bd3818"
+  },
+  "target": "For the same declared constant-coefficient four-variable heat model, prove strict damping at every finite nonzero real radial wavenumber in every constant radial Lorentz-boosted coordinate system. Audit every existing simple causal root and positive residue exactly.",
+  "assumptions": "Light speed is one; time is scaled by the same positive proper tau. The four distinct characteristic speeds satisfy |c_i|<1, all rank-one residues u_i*v_i are positive, and the boost speed satisfies |V|<1. Perturbation amplitudes are expressed in the original constant characteristic basis. Any additional constant invertible change of field components is equivalent.",
+  "boundary": "This is a coordinate boost of the frozen forced diagnostic, not a fresh physical linearization about an evolving star. No transverse directions, variable EOS/transport coefficients, geometry, reactions, metric perturbations, surface matching or nonlinear finite trajectory are supplied."
+}

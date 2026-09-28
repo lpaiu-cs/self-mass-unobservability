@@ -1,0 +1,26 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "checks": [
+    {
+      "index": 1722,
+      "inverse_CDF_absolute": 8.881784197001252e-16,
+      "old_density_normalization": 1.0,
+      "max_weight": 2.0
+    },
+    {
+      "index": 3000,
+      "inverse_CDF_absolute": 7.771561172376096e-16,
+      "old_density_normalization": 0.9999999999999998,
+      "max_weight": 2.0
+    },
+    {
+      "index": 5734,
+      "inverse_CDF_absolute": 8.326672684688674e-16,
+      "old_density_normalization": 1.0,
+      "max_weight": 1.9607291793029689
+    }
+  ],
+  "identity": "q_mix=(q_FD+q_gamma)/2. Multiplying the old collision weight by q_FD(x1)q_FD(x2)/(q_mix(x1)q_mix(x2)) leaves the integral unchanged. Each ratio lies in (0,2], the event measure remains positive, and event kinematics/conservation are unchanged.",
+  "limitation": "Floating controls check the implementation; quadrature convergence and finite energy/basis truncation still require their independent gates."
+}

@@ -1,0 +1,43 @@
+{
+  "classification": "Counterexample candidate",
+  "rows": [
+    {
+      "tol": 1e-10,
+      "h": 0.001,
+      "central_difference_via_exact_identity_m": 251.5861091898974,
+      "derivative_m": 251.5861091898974,
+      "absolute_difference_m": 0.0,
+      "analytic_truncation_bound_m": 0.00032442278862009045
+    },
+    {
+      "tol": 1e-10,
+      "h": 0.0005,
+      "central_difference_via_exact_identity_m": 251.58605073450644,
+      "derivative_m": 251.58605073450627,
+      "absolute_difference_m": 1.7053025658242404e-13,
+      "analytic_truncation_bound_m": 8.110569715502261e-05
+    },
+    {
+      "tol": 2e-12,
+      "h": 0.001,
+      "central_difference_via_exact_identity_m": 251.58610811770916,
+      "derivative_m": 251.5861081177089,
+      "absolute_difference_m": 2.5579538487363607e-13,
+      "analytic_truncation_bound_m": 0.00032442278862009045
+    },
+    {
+      "tol": 2e-12,
+      "h": 0.0005,
+      "central_difference_via_exact_identity_m": 251.58610807747098,
+      "derivative_m": 251.5861080774704,
+      "absolute_difference_m": 5.684341886080801e-13,
+      "analytic_truncation_bound_m": 8.110569715502261e-05
+    }
+  ],
+  "passed": true,
+  "identity": "(chi(+h)-chi(-h))/(2h) = -integral phi(+h)*phi(-h)*v1 dr",
+  "advantage": "Computes the exact nonlinear finite difference from a Wronskian integral, without subtracting independently integrated nearly equal monopoles.",
+  "independent_original_subtracted_results": "scalar-variation.json",
+  "full_numerical_error_certificate": false,
+  "limit": "Analytic truncation bound is rigorous under the envelope; floating ODE errors still lack an interval certificate."
+}

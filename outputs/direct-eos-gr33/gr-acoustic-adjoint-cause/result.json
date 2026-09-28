@@ -1,0 +1,117 @@
+{
+  "classification": "Counterexample candidate",
+  "symbolic": {
+    "classification": "Proven",
+    "original_face_work": "A*(1-2*t)*(p_L-p_R)*(v_L-v_R)",
+    "dual_face_work": 0,
+    "scope": "Exact interior-face algebra for constant-medium linear acoustic energy with the stated cell-volume weights. This is not a theorem for the full GR model."
+  },
+  "spatial_controls": [
+    {
+      "cells": 64,
+      "adjoint_identity_relative": 1.8264901189992024e-16,
+      "original_maximum_real": 10.231251952500292,
+      "dual_maximum_absolute_real": 1.4210854715202004e-14,
+      "leading_original_modes": [
+        [
+          10.231251952500292,
+          83.42893012642251
+        ],
+        [
+          10.231251952500292,
+          -83.42893012642251
+        ],
+        [
+          4.965787832475371,
+          51.37627140644448
+        ],
+        [
+          4.965787832475371,
+          -51.37627140644448
+        ]
+      ]
+    },
+    {
+      "cells": 128,
+      "adjoint_identity_relative": 1.9194456340635763e-16,
+      "original_maximum_real": 10.231251952500298,
+      "dual_maximum_absolute_real": 1.6920818045329522e-14,
+      "leading_original_modes": [
+        [
+          10.231251952500298,
+          83.42893012642293
+        ],
+        [
+          10.231251952500298,
+          -83.42893012642293
+        ],
+        [
+          4.965787832475376,
+          51.37627140644445
+        ],
+        [
+          4.965787832475376,
+          -51.37627140644445
+        ]
+      ]
+    },
+    {
+      "cells": 256,
+      "adjoint_identity_relative": 1.7608637370846367e-16,
+      "original_maximum_real": 10.231251952500259,
+      "dual_maximum_absolute_real": 4.953155940956577e-14,
+      "leading_original_modes": [
+        [
+          10.231251952500259,
+          83.42893012642266
+        ],
+        [
+          10.231251952500259,
+          -83.42893012642266
+        ],
+        [
+          4.965787832475177,
+          51.37627140644484
+        ],
+        [
+          4.965787832475177,
+          -51.37627140644484
+        ]
+      ]
+    }
+  ],
+  "full_control_128_256_history_relative": {
+    "path_1": [
+      1.8097227459346905e-12,
+      1.8110171311230894e-12,
+      1.6532066334321409e-12
+    ],
+    "path_2": [
+      1.5976221522298451e-12,
+      1.5991707499097153e-12,
+      1.6557669813645445e-12
+    ],
+    "path_4": [
+      1.3533373620619461e-12,
+      1.3512760838447905e-12,
+      1.4650138299544979e-12
+    ],
+    "path_8": [
+      1.0975467933564764e-12,
+      1.0958928023040602e-12,
+      1.1698074715662816e-12
+    ],
+    "path_16": [
+      1.852446805264726e-12,
+      1.8395589638154976e-12,
+      1.853567979691406e-12
+    ],
+    "path_32": [
+      1.258980460466375e-12,
+      1.2558528051205464e-12,
+      1.4598422251637555e-12
+    ]
+  },
+  "original_GR_verdict_preserved": true,
+  "full_GR_repaired": false
+}

@@ -1,0 +1,15 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Reconstruct all3340 conserved energies and the applied pressure/trace/stress knots from saved native raw states, with no new native state calls.",
+  "budget_seconds": 30,
+  "original_readout_budget_seconds": 90,
+  "completed_readout_seconds": 68.75137938500006,
+  "original_total_pilot_budget_seconds": 90,
+  "completed_pilot_seconds": 60.10618658100009,
+  "reallocated_unused_pilot_seconds": 8.751379386,
+  "original_total_phase_driver_budget_seconds": 1080,
+  "total_budget_increased": false,
+  "reason": "The original audit dispatch guard stopped before running. Reassign less than9s of the29.89s unused pilot budget to the independent audit; preserve original forecast and stop records. No native or GR calculation is repeated.",
+  "source_sha256": "17995179fe88b556cebe31c525b4c153c39e1354fbc24343a08f08dd89bb9e20",
+  "stop": "No audit retry or automatic cap increase on failure. The30s audit must complete within the unchanged total budget."
+}

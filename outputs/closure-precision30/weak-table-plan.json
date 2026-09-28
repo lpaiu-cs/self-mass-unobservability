@@ -1,0 +1,7 @@
+{
+  "classification": "Counterexample candidate",
+  "prior_corrected_derivative_sha256": "ebba086b171502a40f184db1f8955e692a918132a6b13b7fd031718f5899eb2f",
+  "observation": "The blend correction reduces the native vector error from 0.107 to 0.00214 but does not pass the unchanged 1e-3 gate. The smaller FD step increases the residual; the archived table interpolation uses single precision throughout.",
+  "method": "Read the initialized spline coefficients, coordinates, nuclide IDs and low-temperature rates from our SHA-bound disposable native child. The table capture is read only. Compare this run with the original native values before using the captured coefficients for an independent polynomial derivative check.",
+  "limits": "Keep both failed native derivative tests. A smooth polynomial made from stored coefficients is a declared numerical model, not the rounded executable function or physically certified weak rates."
+}

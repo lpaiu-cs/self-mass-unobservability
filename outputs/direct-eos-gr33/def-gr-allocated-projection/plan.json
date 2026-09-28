@@ -1,0 +1,40 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "caf5c5b",
+  "claim": "Spend the same total trial dimension on unresolved fluid dynamics while retaining the weak scalar and full coupling, instead of increasing time steps or dimensions.",
+  "evidence": "SDIRK and refined Gauss distinguish unresolved global/old velocity from weak-readout arithmetic. Equal-allocation Gram already has scalar order2.64 and last0.0001704; reducing final scalar dimension256 to64 forecasts about0.00662 if that empirical order persists. This forecast is not acceptance.",
+  "predicted_scalar_difference": 0.006623904585679035,
+  "method": "Nested total128/256/512 dimensions now have fluid112/224/448 and scalar16/32/64. Same4,16,64,256,1024 shifts, full coupled Cholesky Gram, source-norm coordinate balance and bounded analytic heat response. One complete solution per level, no field splicing.",
+  "gates": {
+    "propagation_relative": 0.02,
+    "propagation_order": 1.5,
+    "spatial": 0.02,
+    "spatial_decrease": true,
+    "coefficient": 0.02,
+    "outer": 0.002,
+    "quadrature": 0.002,
+    "linear_residual": 1e-09,
+    "heat_balance": 2e-13,
+    "pole_tail_relative": 1e-12
+  },
+  "decision": "Pilot64, then degree4 first only within120s forecast. Stop any failed component; no alternative ratios or shifts in this branch. Conditional fixed degrees2/1 and original three contrasts under300s total. No larger basis,grid,time period or source.",
+  "budget": {
+    "pilot_seconds": 90,
+    "first_case_seconds": 120,
+    "total_seconds": 300,
+    "CPU_threads": 1,
+    "memory_GB": 4,
+    "new_EOS_calls": 0
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_allocated_projection.py": "5e0db8bf5b7a80941cc534e573edcdb1a17a4aba890fb27eb2cf459b326a9b85",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_inverse_gram.py": "c73926433f2236c03febd1af9cf5ca0741f274621a1ffd1d6a0ed2d43818f1b8",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_multishift.py": "6aef0bcae8d7a8abc19e44a5d080d21e1c6499c6aa3e14c3ab63466a736e25a9",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_hierarchical.py": "7861123d4adfdfdaa21daee3fc7d79dcdffdd024ca48b3f453921b5cb745992b",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_spatial_repair.py": "d13044861c2b4761d5e6349d809c3368f46112974f374aa050aada516c80f8e5",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-inverse-projection/inverse-gram/stage-result.json": "e1b7b2dd4a6e6f72abb979ae80ed546287634578e464733c378645f2b1a4d82c",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-gauss-refined/arithmetic-result.json": "3c8aa052bfb2ee5f8ea18700e869afe5befe400494d1a6fefd5677faa23fcbdc",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/fine-bank.npz": "b4493a6e4cfb20d741725ecb61cec154ab9fc51a694001865748741060018d7e",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/coarse-bank.npz": "ea020f69b240c5c5cdd8810f963d88e5cc2d3269aff12c659422a7a6541ae0df"
+  }
+}

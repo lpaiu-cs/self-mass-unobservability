@@ -1,0 +1,36 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Apply native-minus-table collision photon/H/energy/momentum histories to actual free material and the existing retarded GR charge; quantify whether the earlier charge survives.",
+  "reuse": "Two64/128 paths on the existing fine background,531 cells,3.434ms,corrected SSP stage convention, original conservative primitive pressure and retarded one-observer readout. No new EOS roots, mesh, background evolution or horizon.",
+  "model": "Isolated constitutive correction with zero new metric forcing. Preserve its actual amplitude; no rescaling to pass donor/small-state gates. Free-material motion returning to photons and total coupling amplification remain open.",
+  "budgets": {
+    "pilot_seconds": 60,
+    "production_seconds": 900,
+    "source_seconds": 90,
+    "GR_seconds": 90,
+    "CPU_threads": 1,
+    "virtual_GiB": 3
+  },
+  "forecast": "Measure two actual prefix steps per path; extrapolate using prior completed late-CFL raw-call counts and previous full worker wall time as a floor. Require twice sum of forecasts below900s. Resume the prefixes; no repeat of completed physics.",
+  "gates": {
+    "owner": 1e-08,
+    "conservation": 1e-08,
+    "directional": 0.002,
+    "branch": 0.01,
+    "small_state": 1e-06,
+    "time": 0.02,
+    "pressure": 0.002,
+    "quadrature": 0.002,
+    "independent_GR": 1e-09
+  },
+  "stop": "Stop at a physical regime or time-comparison failure. No automatic finer paths, amplitude reduction, relaxed gates or extra response iterations.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_collision_material_charge.py": "4e4db331f198bb4efe72699ebb21ee4f522e282f237b9f0c8ee6feb4cb44ea8c",
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_corrected_motion_feedback.py": "aac29edfd2e534c24a5679f04391b78b30daefa38331e098c0abd880f4b831b3",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_updated_material_return.py": "8fa54ab1fcfa07f0e852905dbb565fe1bf5029b0ba32086e26dbcac48722e8d0",
+    "/mnt/e/lab/self-mass-unobservability/verification/repair_native_collision_defect.py": "138e2e9258f19744e707e1823d580584873bb29c10db4187dce52b6b9ac3c73d",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/result.json": "dd6b7e0eb676f2cac26849e9c86c9620421afb4dfe255f991a465a3e87af5604",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/paired-forcing-v4/result.json": "2c8082c6a5ed7eed062f8d01585a2ea658c24ff411cfaf9ba763ad7f90562525",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/production.json": "e0d9e98d4915d81952d7526d349d3afc10617c91ef2655f79536e2113b8fbb17"
+  }
+}

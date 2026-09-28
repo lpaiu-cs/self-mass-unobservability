@@ -1,0 +1,16 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "electron_log_curvature_lipschitz": "|K_eta_eta_eta|=|D_eta_eta|<=D_eta=K_eta_eta; hence |d ln K_eta_eta/d eta|<=1.",
+  "ideal_ion_hessian": "For fixed positive N_a and T, Phi=F/(kT)=sum_(a,j) N_a p_aj[ln p_aj+c_aj]+Phi_e(sum_(a,j) j N_a p_aj). On sum_j dp_aj=0, d^2 Phi=sum N_a dp_aj^2/p_aj+Phi_e_second*(sum j N_a dp_aj)^2 >= sum N_a dp_aj^2.",
+  "ideal_ion_conditions": "0<p_aj<=1, finite fixed partition/ionization constants, ideal nondegenerate ions, positive ideal-electron compressibility. Zero-abundance elements are removed from the coordinates. No molecular or nonideal coupling is included in the scalar reduction.",
+  "ideal_equilibrium": "p_aj=a_aj exp(-j eta)/sum_k a_ak exp(-k eta), a_aj>0. The charge balance n_e(eta)-sum_a N_a <j>_a has derivative dn_e/deta+sum_a N_a Var_a(j)>0. With at least one positive-abundance element permitting a charged stage, limits at eta=-infinity and +infinity have opposite signs; the unique ideal root exists. All-neutral-only inventories require a separate zero-electron boundary.",
+  "coordinate_boundary": "The weighted norm sum N_a dp_aj^2 gives a dimensionless strong-convexity constant at least one at fixed external density, temperature and abundances. Parameter derivatives require the explicit coordinate dependence or fixed reference weights; no parameter Hessian bound is inferred from this fixed-state assertion.",
+  "nonideal_margin": "If, in the same fixed weighted coordinates and entire feasible domain, the nonideal projected Hessian has lower bound -kappa*I with kappa<1, total strong convexity is at least 1-kappa. Local solver convergence supplies neither this bound nor a global minimum certificate.",
+  "value_only_positive_control": {
+    "uniform_value_perturbation": "1/1000",
+    "curvature_at_zero": -9
+  },
+  "finite_quadrature_boundary_defect": "[0.104489795918367346938775510204081632653061224489795918367345, 0.104489795918367346938775510204081632653061224489795918367350]",
+  "physical_EOS_certified": false
+}

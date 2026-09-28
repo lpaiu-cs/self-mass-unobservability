@@ -1,0 +1,17 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "3b70803",
+  "previous_manifest_sha256": "f2809cf62eaff350f59b66d4bb8066059c8a17176ff7e1ab8da3cc9432c03fb0",
+  "stages": [
+    "Direct native dxdt/Jacobian extraction at the original GR input",
+    "Independent comparison with channel reconstruction and untraced profile",
+    "Generated-fluorine common native EOS and composition continuation controls"
+  ],
+  "tolerances": {
+    "input_absolute": 1e-12,
+    "profile_relative": 1e-10,
+    "vector_relative_to_zone_max": 1e-08,
+    "baryon_relative": 1e-12
+  },
+  "constraints": "No executable file changes, no runtime rebuild, no new empirical observations. A disposable single-thread child is stopped at the net_get entry/return; only breakpoint instruction bytes and instruction pointer are restored. Numerical argument/result memory is read only. Retain failed gates. Initial state evaluation is not stellar evolution."
+}

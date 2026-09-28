@@ -1,0 +1,135 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "paths": [
+    {
+      "free_norm_cm": 7.111812864731708e-48,
+      "compact_potential_contraction": 1.993015410707871e-08,
+      "normalized_box_bound": 2.438161392802557e-52,
+      "normalized_potential_remainder": 4.859293229648464e-60,
+      "actual_source_coefficient_fraction": 0.3376717857828234,
+      "steps": 64,
+      "reference": 128,
+      "actual_signed_free_endpoint": 1.853222938330309e-56,
+      "signed_with_compact_potential_interval": [
+        1.852737009007344e-56,
+        1.853708867653274e-56
+      ]
+    },
+    {
+      "free_norm_cm": 4.2195957681180863e-48,
+      "compact_potential_contraction": 1.993015410707871e-08,
+      "normalized_box_bound": 1.446615046084552e-52,
+      "normalized_potential_remainder": 2.88312608020839e-60,
+      "actual_source_coefficient_fraction": 0.33721382803949823,
+      "steps": 128,
+      "reference": 128,
+      "actual_signed_free_endpoint": -8.609986156530116e-58,
+      "signed_with_compact_potential_interval": [
+        -8.638817417332201e-58,
+        -8.58115489572803e-58
+      ]
+    },
+    {
+      "free_norm_cm": 5.285859298475524e-49,
+      "compact_potential_contraction": 1.993015410707871e-08,
+      "normalized_box_bound": 1.8121649591261593e-53,
+      "normalized_potential_remainder": 3.611672690283236e-61,
+      "actual_source_coefficient_fraction": 0.3398593502244069,
+      "steps": 128,
+      "reference": 64,
+      "actual_signed_free_endpoint": -6.21172511080423e-58,
+      "signed_with_compact_potential_interval": [
+        -6.215336783494514e-58,
+        -6.2081134381139456e-58
+      ]
+    }
+  ],
+  "seconds": 65.31855016500003,
+  "primary_conditional_lower": 1.0200190389241228e-27,
+  "residual_box_over_primary_lower": 1.4182235731701502e-25,
+  "maximum_E_H_box_amplification_before_primary_lower_can_be_erased": 7.051074449176608e+24,
+  "actual_residual_applied_to_native_stress_and_GR": true,
+  "declared_source_box_and_compact_potential_enclosed": true,
+  "theorem_scope": "Frozen binary conservative-pressure and GR coefficient maps. Arbitrary signed E/H inputs within each saved cell box at each knot, and the declared linear time/spatial source reconstruction. Outward binary64 arithmetic encloses nonnegative sums/products/divisions; the compact Volterra norm is below1, giving B/(1-eta). This excludes coefficient-generation and physical interpolation errors.",
+  "amplification_scope": "If the eventual E/H-induced source error is contained in A times this exact box, its charge effect is at most A times this bound. The threshold compares to the old primary conditional lower only. No measured iteration ratio is assigned to A; no assertion that all other coupled channels share this box.",
+  "EOS_derivative_error_enclosed": false,
+  "coupled_fixed_point_verified": false,
+  "continuous_residual_enclosed": false,
+  "exterior_floor_feedback_enclosed": false,
+  "nonlinear_GR": false,
+  "final_charge_solved": false,
+  "full_goal_complete": false,
+  "independent_interval_audit": {
+    "classification": "Proven",
+    "passed": true,
+    "scope": "Independent40-digit interval verification of every fine spatial/potential coefficient bound. Exact frozen binary inputs and the declared linear reconstruction are premises; physical EOS and dynamical error remain outside the certificate.",
+    "coefficient_inequalities_checked": 8496,
+    "pressure_knots": 17,
+    "physical_cells": 531,
+    "normalized_box_interval": [
+      "[1.44661504608442716675548610385400067699718211e-52, 1.44661504608442716675548610385400067699718211e-52]",
+      "[1.44661504608442716675548610385400067701321337e-52, 1.44661504608442716675548610385400067701321337e-52]"
+    ],
+    "potential_norm_interval": [
+      "[0.0000000199301541070773394262670055045148810130691969, 0.0000000199301541070773394262670055045148810130691969]",
+      "[0.0000000199301541070773394262670055045148810132074109, 0.0000000199301541070773394262670055045148810132074109]"
+    ],
+    "zero_pressure_map_residual_E_H_fractions": [
+      2.7411532873472245e-39,
+      4.3073854139958717e-35
+    ],
+    "seconds": 6.535808593000013,
+    "total_phase_conservatively_charged_seconds": 209.1734100300001,
+    "original_enclosure_audit_budget_verdict": false,
+    "physical_EOS_certified": false,
+    "coupled_fixed_point_verified": false,
+    "final_charge_solved": false
+  },
+  "bindings_checked": 35,
+  "before_checkpoint": "310e6e67f",
+  "progress_class": "loophole progress and conditional theorem progress",
+  "next_required": "Enclose the primary source EOS/derivative and time/boundary errors and actual coupled amplification. Do not repeat the negligible E/H residual sweep or equate the compact potential norm with full coupling gain.",
+  "sha256": {
+    "verification/def_native_residual_charge_envelope.py": "2679b5dbc4add804822b954679a6804d6c0fb028af4a58cf1f82e9d185c6170c",
+    "verification/verify_native_residual_charge_envelope.py": "ded713a19c4deac655877977fedce139ce720964b2d493da5e698d464e94ae09",
+    "notes/REQUEST138_RESIDUAL_CHARGE_ENVELOPE_KO.md": "7b6d1e7d26af966e4847cb0cd0669f121fd1cfcf5429e206e5e0a0c95a3f1b68",
+    "docs/model-definition.md": "ff41b873c818b9fc6f7bcbf69c24a72056317c932cff944f50f43f5b54af2018",
+    "docs/observable-targets.md": "aa2dabd5b045177bcf9ebe536604bfffef768006b72e9b153c78a391ef3c3bb4",
+    "docs/adiabatic-limit.md": "32fb63523949683cc23ca6d27e559f83a3ae0b21b203a15a7abeaffa759fe82b",
+    "docs/nonadiabatic-regime.md": "40986d7af663af1a605df36edbfebbb9c9033e93e7e8656b01f2d5babb2f20df",
+    "docs/failure-ledger-dynamic-chi.md": "a2029d5da8e67d72eebf5eda493bd0e4b6a449c64f355ead83a2d43a27429ad2",
+    "docs/dynamic-charge-completion.md": "8ac124adb9dab9c5bf333a74d99c62de9198ebc63e8935a55eb0c8714c5fbe26",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/residual-charge/binding-audit.json": "9ca17fb91b145f3948e1ca78daebe9a21ca577af4eff2470b9675f00c4b9224c",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/residual-charge/enclosure-inputs-128-128.npz": "5d61ee01f4a3060f19e1737feabdde647c72c57fa354ed46a7f3c5fc7fcd4e11",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/residual-charge/enclosure-inputs-128-64.npz": "f9abb2eba95d2fe2107fab5eef00be692a687ceb47307b8626e23f6d72cad3be",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/residual-charge/enclosure-inputs-64-128.npz": "fb5f0fac495d8f5222ffe70e751853c30c9ca0b38bf278dc4d632426092a2226",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/residual-charge/enclosure.json": "6d36f20be538ade6a2e01bfd64d21735d96c4d9565f54b1628e8ae0ce97193bf",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/residual-charge/first-interval-verifier.py": "2f7b943ae94273b46a6722c2cabdac98d02e3dd5f33c202d795cd5aee47da3a0",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/residual-charge/first-producer.py": "d5227935065d8e4d2fa72f20dae9d9f769a7325d6d287494810b46091641acfe",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/residual-charge/interval-audit-failure.json": "761a3810cbe192164f741af0580faabeed4cf0fb0dc4901c8a7eed6d0e42bc0c",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/residual-charge/interval-audit-plan.json": "6b35a4c9d854de77a9d300e582a1ff96aac927f573ae47ede39f8edc66640f94",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/residual-charge/interval-audit-repair-plan.json": "39d2b2ed63eaed8d579f36a4f93b4a27f28e16d5d465951e87f7bac8e74af0b4",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/residual-charge/interval-audit.json": "b9a9162da135c5e4c3451e82f4f0cdb76c92519fa07c8e9b400aa820c598ef26",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/residual-charge/map-pilot.npz": "89db7e2193be8a3c8fbdf962ed9b86861936f20855900543385f4bc8be997f92",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/residual-charge/pilot-failure.json": "700f37ac1870c76494a1a7f6d44cc11a5c37276f94a9873cd2ca4bd9ed570115",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/residual-charge/pilot.json": "5283b06c8eaa6bd6613ea4469b0713d13e66e68f8b627a756f480cb2e92e951d",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/residual-charge/plan.json": "f55316a1517bdef8b70a45e474e4062c4e7ac293955f56f19e86bc7931f1e853",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/residual-charge/pressure-map-128.npz": "7ee119ff35caf02c83c5d070d8759d80650352c0b98711e9955e7259c7ff2bf4",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/residual-charge/pressure-map-64.npz": "4d1b2146c009a506c8c65abf658619be54cff348b8aa33e8eeeb41fe98d62903",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/residual-charge/readout.json": "cc738cb35748b36c016e6712f44bd2270ac07bd652b5971ca98cfa77d399f739",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/residual-charge/repair-plan.json": "cef0e73fb314af2a2da3aa8e2b1e65c84ca0a1f4d6ceb6e1fc64b54c46429913",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/residual-charge/residual-128-128.npz": "2261e990c100343a4af6b15c5701cd829e53035cbda48d3fac6e59db8a1beabe",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/residual-charge/residual-128-64.npz": "ecb9cd591bc546e61aadd6c35fe779d25a2e10e160622ec2b9f2254eea970887",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/residual-charge/residual-64-128.npz": "837a34039bf74efa680ccb4cccf8845858e731c488126ff7530576fc59bc1203",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/residual-charge/source-128-128.npz": "cf25a141788b23c25f3adfb426c85d37028ff69578d8bcb476724431512f4337",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/residual-charge/source-128-64.npz": "2b2e7f922ec1a2789ce7f4f23b6031f53a28e1f98c7f98edaa7722071ba41b97",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/residual-charge/source-64-128.npz": "685e3e32cb2e0d852da332c708d4f222082bc569b0e93c6094cc87b1e3f301a0",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/residual-charge/sources.json": "346dae9216ffb63aabdb937991d180ac7a5958ae1f54745b66c055cb620232f5",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/residual-charge/symbolic.json": "fbda0bea3b1dc3bac904af90fbe63765b7532645e1d3f44eaafd5ca626b99da8",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/residual-charge/wave-128-128-g4.npz": "d1e9ac0ba918b242d93e8e3913abe76fa1ec74e25fa232991a758142ca6b2823",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/residual-charge/wave-128-128-g8.npz": "0b55d7e1948392b339f62e6b019ed86d94d22ed5de1adc9a65edf183683c25c8",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/residual-charge/wave-128-64-g8.npz": "ba71145a1623f71b2813318817694c29a53389ac902dbd9cdf65ff35667604e1",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/residual-charge/wave-64-128-g8.npz": "3431c77eb6eb303ad7a36016ef13c3ecd31f31455d69eb4c5905bd90d8abec34"
+  }
+}

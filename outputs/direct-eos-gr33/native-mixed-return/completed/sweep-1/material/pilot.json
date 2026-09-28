@@ -1,0 +1,143 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "rows": [
+    {
+      "classification": "Counterexample candidate",
+      "passed": true,
+      "steps": 64,
+      "reference": 128,
+      "completed": 2,
+      "substeps": 13,
+      "balance_relative": [
+        2.9591620218700732e-18,
+        5.2256064448906055e-18,
+        2.7152579396407166e-17,
+        6.163032704884374e-17
+      ],
+      "directional": [
+        {
+          "time": 0.00010732597243527195,
+          "relative": [
+            5.028236452814779e-05,
+            1.9868108247396137e-05,
+            1.3539776857098237e-06,
+            9.002517336260534e-10
+          ]
+        }
+      ],
+      "directional_relative": 5.028236452814779e-05,
+      "forward_probe_indicator": 0.00014967815374771474,
+      "maximum_true_relative_state": 2.709538925623447e-31,
+      "endpoint_sum": [
+        -2.6611514161722916e-07,
+        -1.0765674457561455e+23,
+        -1.661394807883138e+20,
+        -8.185846884274679e+28
+      ],
+      "endpoint_L1": [
+        479118.4655203057,
+        1.755780291723064e+23,
+        8.738259520404377e+20,
+        3.952770581510122e+29
+      ],
+      "endpoint_sum_physical": [
+        -2.6611514161722918e-33,
+        -0.0010765674457561456,
+        -1.6613948078831381e-06,
+        -818.5846884274679
+      ],
+      "endpoint_L1_physical": [
+        4.791184655203057e-21,
+        0.0017557802917230643,
+        8.738259520404376e-06,
+        3952.7705815101217
+      ],
+      "discard_physical": [
+        2.6611372370495747e-33,
+        1.1522982670832644e-15,
+        3.730640263827137e-19,
+        7.58288345434252e-15
+      ],
+      "raw_owner_calls": 166,
+      "seconds": 1.9848057549999965,
+      "full_GR_feedback": false,
+      "final_charge_solved": false,
+      "worker_wall_seconds": 6.587843313000008,
+      "physical_branch_ratio": 1.1195016991439112e-17,
+      "maximum_owner_error": 1.8890685044047918e-13,
+      "nominal_arithmetic_probe": 16.0,
+      "inherited_arithmetic_probe": 512
+    },
+    {
+      "classification": "Counterexample candidate",
+      "passed": true,
+      "steps": 128,
+      "reference": 128,
+      "completed": 2,
+      "substeps": 13,
+      "balance_relative": [
+        5.513012932526565e-18,
+        1.4580326470801038e-18,
+        6.985785390469343e-18,
+        6.726941289852122e-17
+      ],
+      "directional": [
+        {
+          "time": 5.3662986217635974e-05,
+          "relative": [
+            4.8559210305610045e-05,
+            9.950231914609815e-06,
+            3.6392927295340325e-07,
+            2.4459587220238505e-10
+          ]
+        }
+      ],
+      "directional_relative": 4.8559210305610045e-05,
+      "forward_probe_indicator": 0.00015398466033113273,
+      "maximum_true_relative_state": 9.845336927462327e-32,
+      "endpoint_sum": [
+        -1.128478907888586e-08,
+        -2.658992626465256e+22,
+        -8.18629825702574e+19,
+        -4.053436402147907e+28
+      ],
+      "endpoint_L1": [
+        65219.743762767415,
+        4.494818634013713e+22,
+        4.3402405089071045e+20,
+        1.9747955574222974e+29
+      ],
+      "endpoint_sum_physical": [
+        -1.128478907888586e-34,
+        -0.0002658992626465256,
+        -8.18629825702574e-07,
+        -405.3436402147907
+      ],
+      "endpoint_L1_physical": [
+        6.521974376276742e-22,
+        0.0004494818634013714,
+        4.340240508907105e-06,
+        1974.7955574222976
+      ],
+      "discard_physical": [
+        1.1285148712132232e-34,
+        8.709521417932893e-17,
+        4.300125273947288e-20,
+        3.262243279573974e-16
+      ],
+      "raw_owner_calls": 166,
+      "seconds": 2.003612270000005,
+      "full_GR_feedback": false,
+      "final_charge_solved": false,
+      "worker_wall_seconds": 6.311964068999998,
+      "physical_branch_ratio": 2.8019137265293565e-18,
+      "maximum_owner_error": 1.8890685044047918e-13,
+      "nominal_arithmetic_probe": 16.0,
+      "inherited_arithmetic_probe": 512
+    }
+  ],
+  "seconds": 12.900081874999998,
+  "upper_remaining_seconds": 251.0235063436388,
+  "eligible": true
+}

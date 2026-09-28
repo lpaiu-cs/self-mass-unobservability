@@ -1,0 +1,28 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": {
+    "action": "block",
+    "seconds": 16.89011878999999,
+    "CPU_seconds": 11.645086769,
+    "peak_RSS_bytes": 2149072896,
+    "error": "AssertionError(('block audit forecast', 428.8324697440118))",
+    "source_sha256": "2ca44884779d3f1618276ac682bf53162517b6c5375bb850159d6d41afa69f01"
+  },
+  "original_material_seconds": 450,
+  "actual_material_seconds": 77.059976621,
+  "transferred_unused_material_seconds": 150,
+  "original_block_seconds": 300,
+  "new_block_total_seconds": 450,
+  "remaining_hard_seconds": 430,
+  "original_total_seconds": 5950,
+  "forecast": "Measured unchanged full-stage forecast428.832s including2x margin; approximately214s nominal.688 actual Radau stages need both source/operator evaluations. Keep all stages and original0.2percent gate; no evolution or extra sweep. Stop at430s or another admission failure.",
+  "decision": "A full equation-residual result gates the SAME completed photon/material history into charge readout. Reuse its saved states; transfer150s from the now-completed material allocation, not a new overall budget.",
+  "bindings": {
+    "native-pressure-reciprocal175-work/pre-block-budget-producer.py": "2ca44884779d3f1618276ac682bf53162517b6c5375bb850159d6d41afa69f01",
+    "native-pressure-reciprocal175-work/block-plan-rejected.json": "1c744a43295fe079343e8344a9103ebecfece90e9cd4f57cf3dcf6c20c48b1be",
+    "native-pressure-reciprocal175-work/expanded-reciprocal-block-rejected.py": "5659d21bfa3f6c1f508e52462d639d2990099f40e3fffb5f8a92584136751494",
+    "native-pressure-reciprocal175-work/closure-block-receipt.json": "26ff3434b46a657d6ebcc51854916e76bf8bac8aab9d30e90229e812783e783d",
+    "native-pressure-reciprocal175-work/closure-material_production-receipt.json": "f8526f6b4e48f467e377ea44bff28ca38670b5579ea9edc8d6a081da20088329",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/complete_native_pressure_reciprocity.py": "b7af2523d1cc9551436219e97d52feaeb4d396288c7aed822a8c9e14a949bacf"
+  }
+}

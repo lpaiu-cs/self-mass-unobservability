@@ -1,0 +1,41 @@
+"""Counterexample candidate: current native collisions AND pressure forces.
+
+One constitutive-defect sweep on the saved retained-material background.
+The atmosphere uses actual native face p,u, with the declared table acoustic
+closure. This is neither native derivative certification nor a fixed point.
+"""
+from pathlib import Path
+from types import FunctionType, MethodType, SimpleNamespace
+import gc, hashlib, inspect, io, json, math, multiprocessing as mp, os, resource, signal, sys, textwrap, time
+
+ROOT=Path('outputs/direct-eos-gr33'); OUT=Path(os.environ.get('RETAINED_NATIVE_OUTPUT',str(ROOT/'retained-native-return')))
+CURRENT=ROOT/'native-retained-completion'; EV=CURRENT/'evolution'
+EOS=ROOT/'retained-eos-source'; FORCE=OUT/'collision'; HYDRO=OUT/'hydro'
+PHOTON=OUT/'photons'; MATERIAL=OUT/'material'; GR=OUT/'gr'; METRIC=OUT/'metric'
+read=lambda p:json.loads(Path(p).read_text())
+
+    def kinetic(self):return .5*self.cx*self.mass*(self.velocity()*C)**2
+
+    def energy(self,u):
+        a=self.bulk.d['a'];a0=self.m.a0
+        return a*(self.mass*u+self.kinetic())+(a-a0)*self.cx*C*C*self.mass
+
+    def gas(self,theta,eta):
+        x=self.x;self.x=self.density_shift+(1+self.density_shift)*x
+        try:return super().gas(theta+self.theta0,eta)
+        finally:self.x=x
+
+    def radiation(self,theta,eta):
+        x=self.x;self.x=self.density_shift+(1+self.density_shift)*x
+        try:v=list(super().radiation(theta+self.theta0,eta))
+        finally:self.x=x
+        df=self.spectral['frequency'][0]*(1-self.f)+self.spectral['frequency'][1]*self.f
+        for k in [0,1]:
+            factor=1+df[:,k]*self.frequency_shift[:,None];assert factor.min()>0
+            for i in [k,k+2,k+4]:v[i]*=factor
+        return v
+
+EOS <class 'def_native_projected_evolution.Table'> ['base', 'd', 'density_shift', 'f', 'frequency_shift', 'initial', 'inventory', 'n', 'nr', 'r', 'ratios', 'rinventory', 'saved', 'spectral', 'temperature_bounds', 'theta0', 'x', 'xi']
+BASE <class 'def_native_refined_thermochemistry.Thermal'> ['R', 'd', 'mask', 'n', 'nec', 'pc', 'rates', 'ratios', 'raw', 'rc', 'u0', 'uc']
+MECH [('xi', (19, 20)), ('K', (2, 19))]
+MODELMASS 1.0070231612220188 0.999993778602165

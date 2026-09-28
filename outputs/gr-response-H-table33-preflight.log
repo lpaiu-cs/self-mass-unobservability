@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/mnt/e/lab/self-mass-unobservability/verification/gr_response_H_table.py", line 131, in <module>
+    if __name__=='__main__':globals()[sys.argv[1]]()
+  File "/mnt/e/lab/self-mass-unobservability/verification/gr_response_H_table.py", line 77, in preflight
+    r=block(0);assert r['passed']
+  File "/mnt/e/lab/self-mass-unobservability/verification/gr_response_H_table.py", line 68, in block
+    with gzip.open(compressed,'rb') as source:assert hashlib.file_digest(source,'sha256').hexdigest()==digest
+AttributeError: module 'hashlib' has no attribute 'file_digest'

@@ -1,0 +1,52 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "7642e22e2",
+  "claim": "Invert the SAME native EOS at all active deep/atmospheric conserved states at all17 saved canonical times of the corrected fine trajectory, and insert full pressure/radial-stress/trace differences into the actual retarded charge.",
+  "decision": "If source replacement changes charge by2percent or constitutive pressure by0.2percent, repair the EOS owner before further physical interpretation. Otherwise quantify this sampled EOS source uncertainty and advance the still-open derivative/feedback terms.",
+  "reuse": "No new trajectory, mesh, horizon, EOS table or waveform iteration. Exact conserved-coordinate matches may reuse native roots; near matches are not accepted as cached proof. All initial pressure offsets are retained.",
+  "closure": "Deep anchors retain original other ionic/molecular inventories and explicit additive first-order inventory corrections. Atmosphere fixes D,S,K,H and lapse. Below-floor cells remain excluded by the original EOS owner; the correction there is NOT certified zero.",
+  "gates": {
+    "energy": 1e-12,
+    "momentum": 1e-12,
+    "density": 1e-10,
+    "reseed": 1e-10,
+    "pressure": 0.002,
+    "charge": 0.02,
+    "cadence": 0.002,
+    "quadrature": 0.002,
+    "linearity": 1e-10
+  },
+  "budget": {
+    "pilot_seconds": 90,
+    "production_wall_seconds": 900,
+    "production_worker_seconds": 2400,
+    "readout_seconds": 90,
+    "workers": 3,
+    "threads_per_worker": 1,
+    "virtual_GiB_per_process": 3,
+    "native_calls_per_worker_job": 24000,
+    "total_new_native_call_cap": 80000
+  },
+  "forecast": "Previous223 atmospheric roots68.17s and323 old deep roots within120s. Pilot actual current initial/middle/final states, forecast at twice the slowest measured root per region plus30s setup. Three process-isolated native workers; no shared Fortran state. Interpreter imports/binding IO reported outside driver caps.",
+  "limits": "17 saved states do not certify all129 integration states or continuous time. Source replacement fixes photons, metric, conserved trajectory and the original initial GR coefficients; it is not EOS re-evolution, derivative enclosure, coupled gain or final physical charge.",
+  "stop": "Stop on failed root, forecast, pressure/materiality gate or cap. Preserve successful states; do not automatically enlarge budget, physical paths or support.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_conserved_history_charge.py": "07c45d71c3519fad41ca4d87bd914b94198f7e972f884d62c708d25bfd04eb9b",
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_updated_gr_return.py": "d2c456a74a41ee97b07f026effdadd08c72d583b059420e933b8d72094c719d9",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_conservative_eos_readout.py": "b1112ccb5b32d8e8fd147b2faf24ec7c520caba8d4c01f83c2d6344f1a67ef7b",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_atmosphere_inverse.py": "831fab9d3772f1bce0f70fb7e802f7e1c69c289367a346df403c2d8321cb4538",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_causal_nonlinear.py": "30a951fc7c2e22602c412cabc44e411d72574720dc7a6e001ea410466f57738a",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_hydrogen_exchange.py": "cf590d01753ffd86a00b80ef7be109131b15b8f1619e2246fbea72cd324123d6",
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_stage_energy_charge.py": "a7b4b93650663f17ab5cedbe6562cb3ed752fc0e125979b16bfd84d8e31c920d",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/background/coupled-128.npz": "af1a02e92d505da3e0d8c033ffc806ae0c4465e5b5f318b54d23c18f54672350",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/bank.npz": "1ef9b4bb62b7bd9320b891126dd5f9a81d6cb0b48d01c5861962a2a5bf26188f",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/evolution/source-128.npz": "ab75b15bd0b3e8de9b6803dff7afe288e5eecac56089bdf74055de1b1db7c0bf",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/evolution/gr/result.json": "089b7fdcdebf5b61488fc9105100b10785bdae9c70b325587006b6a39460bf78",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-eos-readout/production-samples.json": "2c409057123fca22a3240445bfee7d22b346c10b0e4e57e301701a17bb7b0cd0",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-atmosphere-inverse/production-samples.json": "9bd1e839e0104a42561dc2c05e62a118572b710d69601647c3968dce43db0797",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-atmosphere-inverse/source-128.npz": "c51457669154e53d163eae7965a633cb177f7557c564cf09bb0294c74c0d0bd6",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-initial-constraints/finite-volume/balanced-20.npz": "72ae702c85db57f0c02c1e5ca15dfad7df50d901b4270531e5b49c8c3746d3cb",
+    "/home/lpaiu/work/direct-eos-gr33/native-cold-population/stable/gas.so": "b2db87a38c316cac016a9c3bba333a52839db0c13c360c402dac310ee3e3b2c7",
+    "/home/lpaiu/work/direct-eos-gr33/native-cold-population/libfree_eos_native_cold_stable.so": "6d6cd656c7fc93d61df3e69bd127ff2f5caa199d88f42c4ebb9e7e96a21608f4"
+  }
+}

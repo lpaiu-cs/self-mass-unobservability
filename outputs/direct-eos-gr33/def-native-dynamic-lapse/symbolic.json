@@ -1,0 +1,10 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "null_characteristics": "dr/dt=c*a*mu/h; dmu/dt=(1-mu^2)*[c*a/h*(R_prime/R-a_prime/a)+mu*(R_t/R-h_t/h)]; dln(epsilon)/dt=-c*mu*a_prime/h-(h_t/h)*mu^2-(R_t/R)*(1-mu^2). Derived from the null Hamiltonian with zero shift.",
+  "variables": "Fixed Einstein radius: a=A*N, h=A/sqrt(b), R=A*r. zeta=delta_nu-delta_lambda; f=delta_phi; u=alpha*f. Existing frequency coordinate is Eref=a0(r)*epsilon.",
+  "increments": "delta_vr=c*N*sqrt(b)*mu*zeta; delta_mudot=(1-mu^2)*[c*N*sqrt(b)*((1/r-nu_prime)*zeta-delta_nu_prime)-mu*delta_lambda_t]; delta_lnEref_dot=-c*N*sqrt(b)*mu*(delta_nu_prime+u_prime)-u_t-mu^2*delta_lambda_t.",
+  "lapse_packet": "An exterior packet of Killing energy dE at(rp,mup) contributes(G*dE/c^4)*[integral(r0,rp) dr/(N*b^(3/2)*r^2)-mup^2/(rp*Np*sqrt(bp))] to delta_nu(r0), including its compensating interior mass debit.",
+  "scalar_lapse": "delta_nu_scalar(r0)=-Phi(r0)*U(r0)-integral(r0,infinity)2*Phi*U/(r*b)dr, U=r*f. Additional vacuum J contributes -integral J/(r^2*b^2)dr.",
+  "limits": "Algebra for the declared first variation; not a nonlinear stellar or angular-continuum certificate."
+}

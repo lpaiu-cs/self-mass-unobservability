@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-refined268-runtime/.phase268-thermal.py", line 28, in <module>
+    folder.mkdir(parents=True, exist_ok=False)
+  File "/usr/lib/python3.10/pathlib.py", line 1175, in mkdir
+    self._accessor.mkdir(self, mode)
+FileExistsError: [Errno 17] File exists: 'outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined'
+Command exited with non-zero status 1
+0.59 s 138612 KB

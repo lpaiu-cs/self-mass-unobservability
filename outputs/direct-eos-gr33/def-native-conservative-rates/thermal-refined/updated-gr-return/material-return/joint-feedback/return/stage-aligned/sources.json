@@ -1,0 +1,76 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "comparisons": {
+    "time": [
+      6.221628443861261e-06,
+      4.688707407947514e-06,
+      1.805558051227844e-05,
+      0.0008927080716333244
+    ],
+    "background": [
+      0.0021906328555428294,
+      0.0010299871539764282,
+      0.0018801970375409913,
+      0.0021039649157193305
+    ],
+    "stress_time": [
+      6.221628514735305e-06,
+      1.892439952722319e-05,
+      6.221628358513476e-06,
+      1.907275205108251e-05,
+      0.0001959396776519339,
+      0.00032896190649338406
+    ],
+    "stress_background": [
+      0.0021906328590569004,
+      0.0023881381893504413,
+      0.0021906328485348375,
+      0.002390864749253303,
+      0.0024796804735727393,
+      0.0010693724923993935
+    ]
+  },
+  "paths": [
+    {
+      "steps": 64,
+      "reference": 128,
+      "conservation": 1.0115231359763749e-15,
+      "pressure_probe": 6.942975892014865e-11,
+      "legacy_material_sweep_comparison": null,
+      "energy_H_waveform_residual": [
+        0.0008992628888045319,
+        0.0014396073722491155
+      ]
+    },
+    {
+      "steps": 128,
+      "reference": 128,
+      "conservation": 7.774835574947301e-16,
+      "pressure_probe": 7.035109746008264e-11,
+      "legacy_material_sweep_comparison": null,
+      "energy_H_waveform_residual": [
+        0.0008975028921681894,
+        0.0014373505061521586
+      ]
+    },
+    {
+      "steps": 128,
+      "reference": 64,
+      "conservation": 7.5692103767491915e-16,
+      "pressure_probe": 4.4230290627199287e-11,
+      "legacy_material_sweep_comparison": null,
+      "energy_H_waveform_residual": [
+        0.0007627710629317568,
+        0.0012038375493260583
+      ]
+    }
+  ],
+  "seconds": 42.675192972000104,
+  "prior_failed_source_seconds": 75,
+  "sum_peak_RSS_bytes": 2083295232,
+  "original_coarse_export_arrays_identical": true,
+  "returned_photon_transfer_applied_to_material": true,
+  "coupled_fixed_point_verified": false,
+  "final_charge_solved": false
+}

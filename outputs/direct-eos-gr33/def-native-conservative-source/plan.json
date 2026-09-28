@@ -1,0 +1,52 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "88b332112",
+  "claim": "Replace discontinuous pressure forcing by a conservative continuous subcell heat reconstruction in the actual native coupled evolution, testing whether this resolves the rejected pointwise GR velocity.",
+  "changed": "One C1 cumulative heat profile in redshift proper volume. Face slopes are fixed volume-weighted adjacent secants; no fitted smoothing width. The native entropy-to-pressure identity is enforced between native points. All heat loss, enclosed metric source and heat lift use the same profile.",
+  "preserved": "All material face energies, native EOS inputs, background, composition, heat law, emitted history, p2/p4 grid, original max-norm criteria and 3.434431ms horizon.",
+  "boundary": "The same fixed emitting geometry and specified finite gas pressure. This run does not apply Phase94 moving-surface work or close the external stress reservoir.",
+  "scientific_boundary": "This changes the subcell source approximation; it cannot relabel Phase93/94 failures or certify physical interpolation independence. Any eventual charge claim needs its source-profile error controlled.",
+  "paths": [
+    "p4-8 pilot",
+    "p4-32",
+    "p4-64",
+    "p2-64 only after temporal gates"
+  ],
+  "gates": {
+    "temperature_time": 0.02,
+    "temperature_space": 0.02,
+    "GR_time": 0.03,
+    "GR_space": 0.03,
+    "linear_residual": 1e-09,
+    "heat_identity": 1e-09,
+    "inventory": 1e-12,
+    "tangent_temperature": 0.05
+  },
+  "budget": {
+    "total_seconds": 240,
+    "CPU_threads": 1,
+    "memory_GB": 5,
+    "native_calls": 0,
+    "background_roots": 0,
+    "automatic_expansion": false
+  },
+  "decision": "Stop this fixed candidate on a failed gate or measured budget. Do not adjust slopes, source width, mesh, period or thresholds after seeing the response.",
+  "controls": {
+    "classification": "Proven",
+    "passed": true,
+    "identity": "Cubic Hermite enclosed energy matches every thermal face and its common dE/dV slope. Its derivative integrates to the unchanged cell heat debit.",
+    "thermodynamic": "Gamma*P*rho_ref=-ad*heat_density, from the same native cp/cv identities.",
+    "numerical_classification": "Counterexample candidate",
+    "flat_cell_inventory_absolute": 2.4858587410747646e-15,
+    "scope": "Conservation and local thermodynamic algebra; not a physical subcell-profile certificate, whole response convergence or charge bound."
+  },
+  "bindings": {
+    "verification/def_native_conservative_source.py": "1b0ca14410070e0fd8b70620329e1398e8dc0de47ea284ae4e21eac979f0cebe",
+    "verification/def_native_wave_collocation.py": "131c9843872652c587d39bb93c10217e5047fb1b126922df47225006abfada51",
+    "verification/def_native_coupled_readjustment.py": "2b619c1e5be68e016b4e05a7ce8879b6cb3de72d42cc8c8804f4a048dbd5a6da",
+    "outputs/direct-eos-gr33/def-native-coupled-readjustment/inputs.npz": "8f9fdcb82f703ebdc2e24683a98f966a7c926d797a551ae27e83f8bd9d4d99e2",
+    "outputs/direct-eos-gr33/def-native-coupled-readjustment/coefficients.npz": "0a078ab8f8d7de512b92620141f9a781f7cfa4eb947392b6a795181c24a451a0",
+    "outputs/direct-eos-gr33/def-native-whole-star-match/background.npz": "07cf1bdca40788799b7aea67273e73fafb5bda615103bdd73aac38bc020a5acf",
+    "outputs/direct-eos-gr33/def-native-wave-collocation/result.json": "330a73af7e98bd9bb8af221bfe6760c90484245812351c979180c303008fd200"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "classification": "Proven",
+  "checkpoint": "e37efbd",
+  "bits": 128,
+  "z_cut": "1/16777216",
+  "field_budget": "2e-7",
+  "bindings": {
+    "verification/gr_polarization_infrared.py": "98116312929529ce833d2926303f7ec7fb0d5a941ef6abf3da5a8f9537658bb3",
+    "outputs/direct-eos-gr33/gr-response-complex-defined/manifest.json": "8b226e602527679f9757e9735bad51a0aeba4d1a95f3a62466600455c2c9b80b",
+    "outputs/direct-eos-gr33/gr-response-complex-defined/result.json": "fbb5c150b100275a584cc13d06655ece96ebeac054dcec5d9c7d03ecf9eb7516",
+    "outputs/direct-eos-gr33/gr-electron-density-refined-export/manifest.json": "87cba8690a71290e5742cf1e4926bf5eb7dde84c6c9fa630e2ff27d7ae9d9e2a",
+    "outputs/direct-eos-gr33/gr-electron-density-refined-export/result.json": "6589248e1b37f0ddf8f14054ea50403aedfe276f87a2715b9dea355e48234bcd",
+    "outputs/direct-eos-gr33/gr-polarization-thermodynamics/states.npz": "a91f70b8277d7984c7954d277b01956dd31dfd4c12b57989fed8b7a2fccceb69",
+    "outputs/direct-eos-gr33/gr-ionic-hamiltonian-bound/inputs.npz": "d89135accb682ac37de76eb6be24214c6c84c448e713ec2d5c5bf9b4495f3167",
+    "outputs/direct-eos-gr33/gr-ionic-hamiltonian-bound/constants.json": "5aa17efb44f145bee7f5d218667083c0e43a4ef86d5558a8efa26a916d5e1cff",
+    "verification/gr_polarization_neutral_error.py": "0ced111b5e55e55f82da17e408e8180346cf19efa2cfc5043a43cd2f476d63b2",
+    "verification/gr_polarization_thermodynamics.py": "9fa8573f636f7ee896bce66a6f85b22448dc6e54512fcec7a71cea23d367d1b0"
+  },
+  "target": "Approximate the six raw self-integral contributions on 0<=Q<=scale*z_cut by [z_cut,0,0,0,0,0] after dividing the Q integral by the fixed scale. Propagate certified cubic remainder bounds through the true neutral Hessian and exact ion charge inventory into seven physical fields.",
+  "lower_response": "For p>=Q, log((p+Q)/(p-Q))>=2Q/p gives K_p>=1/gamma. On p in [sqrt(beta),2sqrt(beta)], Q<=sqrt(beta) implies R=S/Sref>=sqrt(beta)/(sqrt(1+4beta)*Sref*(1+exp(2-eta_min)))=L>0.",
+  "endpoint": "For X=Q^2/(B*Sref), 0<=1-G<=X/L. The five derivative magnitudes are <=X times the quotient-rule majorants with denominator L. Their integral divided by scale is bounded by Omega=scale^2*z_cut^3/(3B*Sref) times those constants. The value uses 1/L.",
+  "scope": "Same full-ionization ideal-electron self term, exact declared inventory and alpha/pi, certified neutral eta and implicit derivative intervals. Only the infrared endpoint contribution; finite outer integration, full correlated EOS and GR/observations remain open."
+}

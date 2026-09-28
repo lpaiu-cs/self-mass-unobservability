@@ -1,0 +1,76 @@
+{
+  "classification": "Proven",
+  "runs": {
+    "mp256-long": {
+      "execution": {
+        "command": [
+          "/home/lpaiu/work/nutimo_pilot/request15_variational",
+          "/mnt/e/lab/self-mass-unobservability/outputs/validated-variational/ivp.hex",
+          "124.162278493832",
+          "256",
+          "/mnt/e/lab/self-mass-unobservability/outputs/remaining-levers15/mp256-long.jsonl",
+          "1800"
+        ],
+        "exit_code": 2
+      },
+      "requested_horizon_completed": false,
+      "recorded_steps": [
+        1
+      ],
+      "last_recorded_time_internal": [
+        0.0009765625,
+        0.0009765625
+      ],
+      "state_midpoint_error_l2_upper": 1.7253165860342594e-15,
+      "jacobian_midpoint_error_operator_upper": 4.5352235635682755e-15
+    },
+    "mp256-local-v2": {
+      "execution": {
+        "command": [
+          "/home/lpaiu/work/nutimo_pilot/request15_variational_v2",
+          "/mnt/e/lab/self-mass-unobservability/outputs/validated-variational/ivp.hex",
+          "0.07",
+          "256",
+          "/mnt/e/lab/self-mass-unobservability/outputs/remaining-levers15/mp256-local-v2.jsonl",
+          "300",
+          "20",
+          "0.5"
+        ],
+        "exit_code": 2
+      },
+      "requested_horizon_completed": false,
+      "recorded_steps": [],
+      "last_recorded_time_internal": null
+    },
+    "mp256-local-small": {
+      "execution": {
+        "command": [
+          "/home/lpaiu/work/nutimo_pilot/request15_variational_v2",
+          "/mnt/e/lab/self-mass-unobservability/outputs/validated-variational/ivp.hex",
+          "0.07",
+          "256",
+          "/mnt/e/lab/self-mass-unobservability/outputs/remaining-levers15/mp256-local-small.jsonl",
+          "300",
+          "20",
+          "0.125"
+        ],
+        "exit_code": 2
+      },
+      "requested_horizon_completed": false,
+      "recorded_steps": [
+        1,
+        10,
+        20,
+        24
+      ],
+      "last_recorded_time_internal": [
+        0.0234375,
+        0.0234375
+      ],
+      "state_midpoint_error_l2_upper": 7.363677034501279e-13,
+      "jacobian_midpoint_error_operator_upper": 8.600660940715507e-09
+    }
+  },
+  "full_timing_certificate": false,
+  "note": "시각은 실제 저장한 인증 끝점만 보고한다. 내부 구간 폭과 binary64로 바깥 반올림해 저장한 구간 폭은 다를 수 있다."
+}

@@ -1,0 +1,83 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "rows": [
+    {
+      "steps": 64,
+      "source_identity": 4.064348995086508e-30,
+      "mechanical_collision_partition": [
+        1.6984123256000277e-16,
+        5.605919026130472e-15
+      ],
+      "angular_port": 1.3070421487512735e-16,
+      "material_balance": 3.8832141710148192e-16,
+      "accepted_prefix_preserved": true
+    },
+    {
+      "steps": 128,
+      "source_identity": 4.064160853292574e-30,
+      "mechanical_collision_partition": [
+        1.883280483711332e-16,
+        7.861469847069801e-15
+      ],
+      "angular_port": 1.675151093736441e-17,
+      "material_balance": 3.6617208279897144e-16,
+      "accepted_prefix_preserved": true
+    }
+  ],
+  "material_directional_controls": [
+    {
+      "k": 1,
+      "time": 0.0002146519448705439,
+      "balanced_original_direction_scale": 4.751445874353271e-09,
+      "additivity": [
+        4.659768291519374e-05,
+        3.426822672538097e-08,
+        3.5209188185691053e-09,
+        1.0566951327325926e-12
+      ],
+      "positive_homogeneity": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "k": 8,
+      "time": 0.0017172155589643512,
+      "balanced_original_direction_scale": 2.4518706246021324e-06,
+      "additivity": [
+        2.613635464553265e-10,
+        3.9968453071138694e-14,
+        2.0244052650055806e-13,
+        6.488930055246832e-17
+      ],
+      "positive_homogeneity": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "k": 16,
+      "time": 0.0034344311179287023,
+      "balanced_original_direction_scale": 6.150508046650348e-06,
+      "additivity": [
+        2.7065267935674012e-12,
+        1.9243483819676377e-15,
+        2.844190937151202e-14,
+        3.0018984594108742e-16
+      ],
+      "positive_homogeneity": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "scope": "Sampled directions on the retained finite background only; not uniform branch/native derivative or continuum certification.",
+  "full_goal_complete": false
+}

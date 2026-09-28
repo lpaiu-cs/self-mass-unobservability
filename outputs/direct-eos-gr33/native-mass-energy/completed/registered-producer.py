@@ -1,0 +1,122 @@
+"""Counterexample candidate: reconcile saved mass and reference-energy ports.
+
+Reuse the actual finite histories. No new fluid steps or fitted mass offset.
+"""
+from pathlib import Path
+import json, resource, sys, time
+import numpy as np
+import sympy as sp
+import bound_native_generated_scalar as previous
+import solve_native_incident_reciprocal as coupled
+
+OUT=Path('native-mass-energy166-work')
+background=previous.background; inf=previous.inf
+read,write,sha=previous.read,previous.write,previous.sha
+C=inf.C; G=inf.G; LD=np.longdouble
+CAPS=dict(prepare=30,ledger=90,work=120,audit=30)
+TOTAL=sum(CAPS.values())
+
+
+def symbolic():
+    e,n,v,u,nu,zeta=sp.symbols('e n v u nu zeta')
+    h=sp.symbols('h')
+    # Occupation in this code represents count per REFERENCE phase measure.
+    number_flux=(n+h*v)*(1+h*zeta)
+    physical=number_flux*e*(1+h*(u+nu))
+    ref=number_flux*e
+    assert sp.expand(sp.diff(physical-ref,h).subs(h,0)-n*e*(u+nu))==0
+    return dict(classification='Proven',passed=True,
+        identity='For reference-cell photon counts and Eref=a0*epsilon, the instantaneous coordinate-energy port is Lphys=Lref+(u+nu)*L0 at first order. The speed term is already in Lref; no second area/volume factor is added.',
+        boundary='This is instantaneous -p_t at the SAME radius. In a time-dependent metric it is not a conserved Killing energy along the whole ray; propagation work and scalar/matter flux remain necessary.',
+        scope='Algebra for the declared coordinates, not a numerical mass-conservation verdict.')
+
+
+def prepare():
+    assert not OUT.exists();OUT.mkdir()
+    files=[Path(__file__),Path(coupled.__file__),Path(inf.incident.__file__),
+        Path(background.__file__),Path(background.retained.constraints.__file__),
+        Path(coupled.prior.base.old.matter.branch.base.__file__),
+        previous.OUT/'result.json',previous.OUT/'audit.json',
+        previous.previous.matched.OUT/'mass-fine.npz',
+        inf.prior.EV/'coupled-128.npz',inf.prior.EV/'accepted-ports-128.npz']
+    for n in [64,128]:
+        files += [inf.BEFORE/f'gr/source-{n}-reference-128.npz',
+                  inf.BEFORE/f'photons-precise/steps-{n}-reference-128.npz',
+                  inf.BEFORE/f'material-analytic/steps-{n}-reference-128.npz',
+                  inf.SELF/f'metric/metric-{n}-g8.npz']
+    files += [inf.incident.FIELDS/f'born-g{q}.npz' for q in [4,8]]
+    write(OUT/'plan.json',dict(classification='Counterexample candidate',checkpoint='b9ae9ab14',
+        claim='Reconcile the same-interface mass constraint with actual saved photon/material reference-energy histories, canonical geometry subtraction, cell lapse weighting, photon frequency work and the physical boundary energy conversion.',
+        decision='Identify whether a source/port conversion or a stored work/discretization mismatch accounts for the paired mass residual. Apply only a derived correction, never a fitted residual subtraction. If additional evolution is needed, first specify its missing equation.',
+        controls=dict(algebra=1e-12,time=.02,quadrature=.002,mass_closure_fraction=.002),
+        budget=dict(actions=CAPS,total_seconds=TOTAL,CPU_threads=1,virtual_GiB=3,new_fluid_steps=0,new_EOS_roots=0,new_rays=0),
+        measured_basis='Previous generated-scalar input/setup and all actions6.68s; saved archive inspection1.9s. Two saved paths,17 background states and explicit quadratures capped at240s plus prepare/audit60s. No long integration forecast.',
+        stop='No automatic clock/mesh/horizon enlargement or weakened gate. Preserve all historical verdicts and every inspected component. A bookkeeping identity is not physical closure.',
+        bindings={str(p):sha(p) for p in dict.fromkeys(files)}))
+    write(OUT/'symbolic.json',symbolic())
+
+
+def weights(model,d,order):
+    q=background.wave.base.flow.initial.Quadrature(d['edges'],order)
+    _,_,a,B,_=model.geo(q.r.ravel()-model.model.m.RJ)
+    w=q.r*q.r*B.reshape(q.r.shape)
+    return q.h*((w*a.reshape(q.r.shape))@q.w)/(q.h*(w@q.w))
+
+
+def ledger():
+    background.initialize();m=background.wave.Response();rows=[]
+    for n in [64,128]:
+        d=np.load(inf.BEFORE/f'gr/source-{n}-reference-128.npz')
+        z=np.load(inf.BEFORE/f'material-analytic/steps-{n}-reference-128.npz')
+        p=np.load(inf.BEFORE/f'photons-precise/steps-{n}-reference-128.npz')
+        met=np.load(inf.SELF/f'metric/metric-{n}-g8.npz')
+        energy=d['gas_nonrest_energy_erg']+d['photon_energy_erg']+d['baryon_g'].astype(LD)*LD(d['cx'])*LD(C)**2
+        measured=met['asymptotic_mass_residual_cm'].astype(LD)*LD(C)**4/LD(G)
+        a=d['a'].astype(LD);mean=weights(m,d,8).astype(LD)
+        ports=-d['inner_cumulative_energy_erg']+d['outer_cumulative_energy_erg']
+        center=(energy*a).sum(1,dtype=LD)+ports
+        mean_delta=(energy*(mean-a)).sum(1,dtype=LD)
+        mean_mass=center+mean_delta
+        ids=[np.argmin(abs(z['t']-t)) for t in d['t']]
+        rest=LD(m.model.m.a0)*LD(d['cx'])*LD(C)**2
+        state=z['history_scaled'][ids]
+        material=(state[:,2]+rest*state[:,0])*LD(z['amplitude'])
+        photon=p['moments'][:,0].astype(LD)
+        stored=(material+photon).sum(1,dtype=LD)+ports
+        canonical=(energy*a-material-photon).sum(1,dtype=LD)
+        identity=float(np.max(abs(mean_mass-measured))/max(np.max(abs(measured)),LD('1e-290')))
+        expanded=float(np.max(abs(stored+canonical+mean_delta-measured))/max(np.max(abs(measured)),LD('1e-290')))
+        q4=weights(m,d,4).astype(LD)
+        spatial=float(np.max(abs((energy*(mean-q4)).sum(1,dtype=LD)))/max(np.max(abs(measured)),LD('1e-290')))
+        np.savez_compressed(OUT/f'ledger-{n}.npz',t=d['t'],reference_state_and_ports_erg=stored,
+            canonical_counterterm_erg=canonical,cell_lapse_weighting_erg=mean_delta,
+            reconstructed_port_erg=mean_mass,stored_GR_port_erg=measured,
+            center_lapse=a,mean_lapse=mean,cell_energy=energy,
+            material_reference_erg=material,photon_reference_erg=photon,
+            radial_ports_erg=ports,collision_energy_erg=p['collision_transfer'][:,:,0])
+        rows.append(dict(steps=n,identity_relative=identity,expanded_relative=expanded,quadrature_relative=spatial,
+            reference_state_and_ports_erg=float(stored[-1]),canonical_counterterm_erg=float(canonical[-1]),
+            cell_lapse_weighting_erg=float(mean_delta[-1]),constraint_port_erg=float(measured[-1]),
+            photon_reference_frequency_work_erg=float(p['escape'][2]),spectral_ghost_energy_erg=float(p['escape'][1]),
+            material_ledger_energy_erg=float((z['ledger_scaled'][2]+rest*z['ledger_scaled'][0])*LD(z['amplitude'])),
+            material_discard_energy_erg=float((z['discard_scaled'][2]+rest*z['discard_scaled'][0])*LD(z['amplitude']))))
+    result=dict(classification='Counterexample candidate',rows=rows,
+        algebraic_reconstruction_passed=max(max(v['identity_relative'],v['expanded_relative']) for v in rows)<1e-12,
+        physical_mass_closure_verified=False,full_goal_complete=False)
+    write(OUT/'ledger.json',result);print(json.dumps(result),flush=True)
+    assert result['algebraic_reconstruction_passed'],result
+
+
+if __name__=='__main__':
+    action=sys.argv[1];assert action in CAPS
+    receipt=OUT/f'{action}-receipt.json';assert not receipt.exists()
+    resource.setrlimit(resource.RLIMIT_AS,(3*1024**3,3*1024**3));inf.incident.native.deadline(CAPS[action])
+    start=time.monotonic();cpu=time.process_time();error=None
+    try:
+        if action!='prepare':
+            for p,h in read(OUT/'plan.json')['bindings'].items():assert sha(p)==h,p
+        globals()[action]()
+    except Exception as exc:error=repr(exc);raise
+    finally:
+        if OUT.exists():write(receipt,dict(action=action,seconds=time.monotonic()-start,CPU_seconds=time.process_time()-cpu,
+            peak_RSS_bytes=1024*resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,error=error,source_sha256=sha(__file__)))

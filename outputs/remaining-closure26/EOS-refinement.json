@@ -1,0 +1,16 @@
+{
+  "classification": "Counterexample candidate",
+  "results": {
+    "lnT_pressure_step_change": 0.18269474286231105,
+    "lnd_pressure_step_change": 0.17967815311168342,
+    "lnT_energy_step_change": 0.28742555475643317,
+    "lnd_energy_step_change": 0.22471875174056802,
+    "lnT_entropy_step_change": 1.2485421323402255,
+    "lnd_entropy_step_change": 1.224605923264871,
+    "first_law_T": 1.4222341685416249,
+    "first_law_rho": 1.7887010181740488,
+    "Maxwell_Srho_PT": 1.8367956024857317
+  },
+  "full_common_EOS_certified": false,
+  "interpretation": "The small-step differences do not converge. Thus their apparent first-law residuals do not establish a continuum thermodynamic inconsistency. No global derivative or common-EOS certificate follows. The source has single-precision table interpolation, but the binary error budget is not independently certified."
+}

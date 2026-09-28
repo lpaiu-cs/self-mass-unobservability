@@ -1,0 +1,2030 @@
+arXiv:2112.04822v1  [astro-ph.HE]  9 Dec 2021
+MNRAS 000, 1–17 (2022) Preprint 10 December 2021 Compiled using MNRAS L ATEX style ﬁle v3.0
+Ab initio thermodynamics of one-component plasma for
+astrophysics of white dwarfs and neutron stars
+D. A. Baiko
+⋆ and A. I. Chugunov
+Ioﬀe Institute, Politekhnicheskaya 26, 194021 Saint Peter sburg, Russia
+Accepted; Received ; in original form
+ABSTRACT
+Using path-integral Monte Carlo (PIMC) simulations, we have calcula ted energy of a crystal composed of atomic nuclei
+and uniform incompressible electron background in the temperatur e and density range, covering fully ionized layers
+of compact stellar objects, white dwarfs and neutron stars, inclu ding the high-density regime, where ion quantization
+is important. We have approximated the results by convenient analy tic formulae, which allowed us to integrate and
+diﬀerentiate the energy with respect to temperature and density to obtain various thermodynamic functions such as
+Helmholtz free energy, speciﬁc heat, pressure, entropy etc. In particular, we have demonstrated, that the total crystal
+speciﬁc heat can exceed the well-known harmonic lattice contributio n by a factor of 1.5 due to anharmonic eﬀects.
+By combining our results with the PIMC thermodynamics of a quantum Coulomb liquid, updated in the present
+work, we were able to determine density dependences of such meltin g parameters as the Coulomb coupling strength
+at melting, latent heat, and a speciﬁc heat jump. Our results are ne cessary for realistic modelling of thermal evolution
+of compact degenerate stars.
+Key words: dense matter – plasmas – stars: interiors – stars: neutron – white dwarfs.
+1 INTRODUCTION
+Modelling evolution of white dwarfs (WD), in an attempt
+to understand their extremely diverse observational prope r-
+ties, is a hot topic of modern astrophysics. Thanks to Gaia
+(
+Gaia Collaboration et al. 2016 ), the wealth of experimen-
+tal data, awaiting theoretical explanation, is rapidly gro w-
+ing. For instance, a population of WD called the Q branch
+on the Hertzsprung–Russell diagram has been recently dis-
+covered (
+Gaia Collaboration et al. 2018 ), which implies an
+∼ 8 Gyr cooling delay with respect to a standard evolution-
+ary track ( Cheng, Cummings & M´ enard 2019). Such a de-
+lay may be due to core crystallization accompanied by la-
+tent heat release and oxygen sedimentation in massive WD
+(
+Tremblay et al. 2019 ). Other sources of extra thermal en-
+ergy associated with chemical separation and gravitationa l
+energy release in crystallizing matter have been also discu ssed
+(e.g. Bauer et al., 2020 ; Caplan, Horowitz & Cumming 2020 ;
+Blouin, Daligault & Saumon 2021 ; Camisassa et al., 2021 ;
+Blouin & Daligault 2021 ; Caplan et al., 2021 ).
+In this paper, we focus on microphysics of WD interior.
+Plasma in a WD core consists of fully ionized atomic nu-
+clei and electrons. Its energy has three major terms (e.g.
+Haensel, Potekhin & Yakovlev 2007 ; Potekhin & Chabrier
+2010; Baiko 2014 ; Oertel et al., 2017 ): the electron energy
+(the energy of a degenerate electron gas), the ion energy (th e
+energy of an ion plasma with constant and uniform electron
+⋆ E-mail:baiko@astro.ioﬀe.ru
+background), and the ion-electron energy (due to electron
+screening of inter-ion interactions).
+The electron energy is a well studied quantity. Its main
+term is due to the ideal zero-temperature relativistic dege n-
+erate electron gas, and there are several higher-order cor-
+rections (thermal, exchange, correlation). By deﬁnition, at
+a given temperature and density, the electron contribution
+is identical regardless of whether ions constitute a liquid or
+a crystal (see below). For many thermodynamic quantities,
+such as pressure and energy, the electron contribution is do m-
+inant. However, speciﬁc heat and temperature derivative of
+pressure are dominated by ions. The latter quantities are cr u-
+cial for thermal evolution and asteroseismology of WD.
+By contrast, the ion-electron thermodynamic functions
+are not known very reliably. They have been studied by
+two independent methods: perturbatively in the liquid (e.g .
+Potekhin & Chabrier 2000 ) and within the framework of the
+harmonic lattice theory in the solid (e.g. Baiko 2002 ). As
+stressed in the latter work, the two approaches yielded con-
+tradictory results, predicting, for instance, opposite si gns of
+ion-electron corrections to the speciﬁc heat in liquid and s olid
+phases near melting. This discrepancy remains one of the out -
+standing issues in the ﬁeld of WD microphysics, however, the
+relative magnitude of these contributions is small, so that ,
+most likely, it is inconsequential from the WD evolutionary
+theory perspective.
+In what follows, we shall neglect the higher-order electron
+and the ion-electron contributions, focusing on the ion con -
+© 2022 The Authors
+2 D. A. Baiko and A. I. Chugunov
+tribution and utilizing the standard thermodynamics of the
+ideal fully-degenerate electron gas only in Sec.
+7.
+The ion contribution to the thermodynamic quan-
+tities is nontrivial. The ion plasma with rigid charge-
+compensating background has been studied extensively,
+as it is a model system for a branch of plasma physics,
+dealing with strongly coupled Coulomb plasmas. If such
+a plasma contains ions of only one sort, it is called a
+one-component plasma (OCP). In general however, one
+expects a mixture of several ion species in WD interior, i.e.
+a multi-component plasma (for instance, a C/O mixture
+with traces of Ne). Both one- and multi-component plasmas
+have been studied by classic Monte Carlo and molecular
+dynamics methods (e.g.
+Stringfellow, Dewitt & Slattery
+1990; Farouki & Hamaguchi 1993 ; Caillol 1999 ;
+Dewitt & Slattery 1999 , 2003; Horowitz, Berry & Brown
+2007; Horowitz, Schneider & Berry 2010 ;
+Caplan, Horowitz & Cumming 2020 ; Caplan 2020 ;
+Blouin & Daligault 2021 ). For instance, the ﬁrst-order
+melting/crystallization phase transition between a liqui d
+and a body-centered cubic solid in a classic ion OCP is well-
+known. It occurs at Γ = Γ m ≈ 175 (e.g. Potekhin & Chabrier
+2000; Haensel et al. 2007 ), where Γ = Z2
+i e2/(aiT ) is the
+dimensionless Coulomb coupling parameter, T is the temper-
+ature (the Boltzmann constant kB ≡ 1), ai = (4 πni/3)− 1/ 3
+is the Wigner-Seitz radius, ni and Zi are the ion number
+density and charge number, respectively.
+It has been long recognized, that treatment of ions as
+classic particles is not fully adequate in WD interior (e.g.
+Chabrier, Ashcroft & Dewitt 1992 ). The most obvious illus-
+tration of this statement is given by a WD with a crystallized
+core undergoing Debye cooling (e.g.
+Ostriker & Axel 1968 ;
+Lamb & van Horn 1975 ). To the lowest order, the ion ther-
+modynamics in this case is that of a low temperature Bose
+gas of phonons in a harmonic Coulomb solid (
+Kugler 1969 ;
+Chabrier 1993 ; Baiko, Potekhin & Yakovlev 2001 , hereafter
+the latter work will be referred to as Paper I). However,
+anharmonic corrections in the ion crystal are not negligi-
+ble (e.g.
+Farouki & Hamaguchi 1993 ; Potekhin & Chabrier
+2000), and, obviously, they are also subject to quantum mod-
+iﬁcations. Furthermore, for a self-consistent descriptio n, ion
+quantum eﬀects should be properly taken into account in cal-
+culations of the ion liquid thermodynamics as well, at least ,
+at not too high temperatures.
+Typically, though, the ion quantum eﬀects are included
+only into the harmonic lattice contribution in the solid
+phase. For a few exceptions from this trend, we mention a
+semi-analytic study of quantum melting curve by
+Chabrier
+(1993), based on an extended Lindemann criterion, and a
+ﬁrst-principle research of Iyetomi, Ogata & Ichimaru (1993)
+and Jones & Ceperley (1996), employing path-integral Monte
+Carlo (PIMC) simulations. The latter work, while covering
+the important physical parameter range and producing a gen-
+eral picture of ion quantum eﬀects, was not detailed enough
+to allow practical applications of its results to WD modelli ng
+(see Sec.
+5 for more details). In spite of this situation, the ion
+thermodynamics is tacitly viewed as well-known in practica l
+astrophysical applications.
+Recently, a new detailed study by the PIMC method of
+quantum ion thermodynamics in the liquid has been car-
+ried out (
+Baiko 2019 , hereafter Paper II). In particular, it
+has been shown, that the ion quantum eﬀects resulted in a
+sizable reduction of the speciﬁc heat at temperatures above
+crystallization. This was especially pronounced for heavi er
+WD composed of lighter elements, e.g. helium WD in the
+0.3–0.4 M ⊙ mass range or carbon WD exceeding ∼ 1 M ⊙
+(
+Baiko & Yakovlev 2019 , hereafter Paper III). Even though
+these eﬀects were obtained for a quantum OCP (quantum
+multi-component plasmas have not been analyzed in detail
+as of yet), they can be safely expected to aﬀect realistic WD
+and accelerate their cooling.
+Paper III has presented an analytic ﬁt to the energy of
+the quantum one-component ion liquid and has constructed
+its thermodynamics in a closed form. Moreover, the authors
+analyzed the importance of the ion quantum eﬀects for as-
+trophysics of WD, including thermal properties, equation o f
+state, and asteroseismologic applications. In the present pa-
+per, we aim to extend these results to the case of the quantum
+one-component ion crystal. In particular, we shall calcula te
+the crystal energy from the ﬁrst principles using the PIMC
+approach (Sec.
+2). We shall approximate the energy by an an-
+alytic formula (Sec. 3), construct the crystal thermodynamics
+(Sec. 4) as well as compare our results with previous works
+(Sec. 5).
+An important manifestation of the ion quantum nature is
+the fact that the Coulomb coupling parameter at melting,
+Γm, ceases to be a single number and becomes a function of
+the ion density (e.g.
+Chabrier 1993; Jones & Ceperley 1996 ).1
+A combination of our new results in the crystal with those of
+Paper III (updated in Sec.
+6) will allow us to re-analyze in
+detail from the ﬁrst-principles the OCP properties across t he
+phase transition. In particular, we shall establish the exa ct
+dependence of Γ m and the latent heat of crystallization on
+the ion density in the practically relevant range of physica l
+conditions, where the ion quantum eﬀects are important (Sec .
+7).
+In Sec. 8, we shall illustrate the ion thermodynamics de-
+veloped in this work by considering a few examples of astro-
+physical relevance. We conclude in Sec.
+9 with a summary of
+the most important results.
+To ﬁnalize the Introduction, it is worth mentioning, that
+the physics of matter in a WD core is essentially the same
+as that in an outer
+2 neutron star crust. Thus, our results are
+fully applicable to these fascinating objects as well.
+2 P ATH INTEGRAL MONTE CARLO
+We have performed extensive PIMC simulations of body-
+centered cubic (bcc) Coulomb crystals in periodic boundary
+conditions with N = 250 ions in the density range relevant for
+astrophysical applications, 500 ⩽ rs ⩽ 120000, and for tem-
+peratures from the crystallization, parameterized approx i-
+mately by the condition Γ = 175 (see Sec.
+7 for update), down
+to T = Tp/30. In this case, rs = ai/aB, aB = ℏ2/(miZ2
+i e2) is
+the ion Bohr radius, Tp = ℏ
+√
+4πniZ2
+i e2/mi is the ion plasma
+1 This density dependence of Γ m due to the ion quantum eﬀects
+should not be confused with a dependence of Γ m on the density
+via the electron screening length, which occurs already in a classic
+system but with a non-rigid background.
+2 It is also applicable to an inner neutron star crust, provide d that
+the thermodynamic functions of dripped neutrons can be sepa rated
+out.
+MNRAS 000, 1–17 (2022)
+Ab initio thermodynamics of one-component plasma 3
+r
+Figure 1. ρ–rs relationship for several ion species.
+temperature, and mi is the ion mass. Since rs does not de-
+pend on temperature, it determines uniquely density ρ for
+a speciﬁed composition. In Fig. 1, we show the relationship
+between the mass density and rs for several nuclei typical of
+the WD interior.
+The general method of calculations followed that described
+in Paper II for the liquid phase of the same system. Specif-
+ically, we adopt the so-called primitive approximation (e. g.
+Ceperley 1995 ), in which the crystal energy,
+⟨H⟩ = Tr
+[
+He− β H]
+Tr [e− β H] , (1)
+where H is the system Hamiltonian and β = 1/T is the imag-
+inary time, can be expressed as
+⟨H⟩ =
+∫
+dσπ(σ)H(Rm) . (2)
+In this case, σ = {R1, R2, . . . ,RM = R0} is the 3 N M-
+dimensional domain of quantum numbers, i.e. coordinates of
+N ions in M basis states of the coordinate representation.
+A basis state Rl (l = 1 , 2, . . . , M) is speciﬁed by cartesian
+coordinates of all N ions: Rl =
+{
+R(l)
+1 , R(l)
+2 , . . . ,R(l)
+N
+}
+. M is
+a positive integer, which, in this formulation, is called th e
+total number of imaginary time slices. Equivalently, σ is the
+domain of coordinates of N classic ring polymers, each with
+M beads.
+Furthermore,
+π(σ) = 1
+Z exp
+[
+−
+M∑
+l=1
+Sl
+]
+, (3)
+e− Sl = 1
+(4πλτ )3N/ 2 exp
+[
+− (Rl − R l− 1)2
+4λτ − τ V (Rl)
+]
+,
+where Z is the partition function, λ = ℏ2/(2mi), τ = β/M,
+and V (R) is the crystal potential energy, when ion coordi-
+nates are equal to R. Finally, H(Rm) is the energy estima-
+tor. In this work, we use the thermodynamic energy estima-
+tor given, e.g. by equation (6.7) of Ceperley (1995). Possible
+values of m, to which the results should be insensitive, are
+1, 2, . . . , M.
+Since π(σ) is strictly positive and normalized to 1, it is
+natural to interpret it as a probability distribution, and t he
+task of ﬁnding ⟨H⟩ reduces to averaging the energy estimator
+with it. This can be done by sampling with the aid of the
+Metropolis algorithm. We attempt two move types: single
+bead moves and whole polymer moves.
+Unlike in the liquid, the harmonic lattice thermodynamics
+of the crystal is well known (Paper I). Hence, it has been
+decided to separate out the anharmonic contribution to the
+energy. Since anharmonic energy is a subdominant contri-
+bution (it is smaller than the electrostatic, harmonic ther -
+mal and harmonic zero-point energies), this required an im-
+proved precision of numerical computations as compared to
+the liquid. The extra precision was achieved by performing
+several times longer PIMC runs and having multiple PIMC
+runs at ﬁxed physical conditions (i.e. temperature and den-
+sity or rs and Γ), characterized by diﬀerent random sequences
+and imaginary time slices m, at which the energy estimator
+was applied. Overall, the typical error bars for the present
+anharmonic energy calculations are estimated to be about 5
+times smaller than the error bars of the liquid energy calcu-
+lations in Paper II.
+The energy estimates from multiple runs at a given tem-
+perature, density, and a total number M of imaginary time
+slices (or a number of beads in a ring polymer representing a
+quantum ion) were averaged over the runs. Then, the energy
+of a harmonic crystal was subtracted from it. The harmonic
+crystal energy was calculated for the bcc lattice with peri-
+odic boundary conditions and the same N and M as in the
+PIMC simulation (see Appendix
+A for details). This allowed
+us to prevent a contamination of calculated anharmonic ener -
+gies by relatively large ﬁnite-size corrections to the harm onic
+energy.
+A detailed numerical analysis at 5 values of M and several
+(rs, Γ) pairs has shown that the anharmonic energy estimates
+depended on M as c(rs, Γ) − a(rs, Γ)/M2, which is the same
+as the M -dependence of the harmonic energy [cf. equation
+(A7)]. Having established the quadratic dependence on 1 /M,
+the data at all the other physical points were obtained at
+just two diﬀerent M and these data were directly used in the
+ﬁtting procedure.
+Since N -dependence is not studied quantitatively in this
+work (under assumption that N = 250 is large enough for
+this dependence to saturate; see also a discussion of N -
+dependence in Sec.
+3), the ﬁtted energy is treated as the
+thermodynamic limit of the anharmonic energy. Combined
+with the well-known thermodynamic limit of the harmonic
+energy (Paper I) and with the Madelung energy, it represents
+our ﬁnal estimate for the ion energy of the crystal.
+3 ANALYTIC EXPRESSION FOR THE
+ANHARMONIC CR YSTAL ENERGY
+The ion energy (per ion) reads
+U = ∂F θ
+∂θ = UM + Uh + Uah , (4)
+where F is the Helmholtz free energy per ion, θ ≡ Tp/T =
+Γ
+√
+3/rs, indices ‘M’, ‘h’, and ‘ah’ stand for Madelung (static
+MNRAS 000, 1–17 (2022)
+4 D. A. Baiko and A. I. Chugunov
+perfect lattice), harmonic, and anharmonic contributions , re-
+spectively; see Paper I for analytic expressions for the ﬁrs t
+and second terms.
+The numerical anharmonic contribution to the energy, Uah,
+can be approximated by a series over anharmonic corrections
+uah ≡ Uahai
+Z2e2 = AU
+1 (θ)
+Γ2
+q
++ AU
+2 (θ)
+Γ3
+q
++ AU
+3 (θ)
+Γ4
+q
+, (5)
+where Γ q ≡ Z2e2/(aiTp) =
+√
+rs/3 and
+AU
+1 (θ) = − A11
+θ2
+3A12θ2 + 1
+(1 + A12 θ2)2 (6)
+− A13
+θ2
+3A14θ2 + 1
+(1 + A14 θ2)2 + A1q ,
+AU
+2 (θ) = A2cl
+θ3
+2 − A21 θ4
+2 (1 + A21 θ4)1/ 4 , (7)
+AU
+3 (θ) = A3cl
+θ4 + A3q. (8)
+In this case, indices ‘cl’ and ‘q’ indicate coeﬃcients, dete rmin-
+ing classic and quantum asymptotes discussed below. More-
+over, the following set of constraints is assumed to be satis ﬁed
+A13 = − A1cl − A11 , (9)
+A14A13 = A1q − A11A12 , (10)
+A3/ 4
+21 = − 2A2q
+A2cl
+, (11)
+where the quantities on the left-hand sides are calculated
+rather than ﬁtted. Equations (
+10) and ( 11) ensure that the
+anharmonic energy has the same, ∝ T 4, asymptote as the
+harmonic energy at very low temperatures ( θ ≫ 1). This as-
+sumption is unmistakably supported by the PIMC data at
+θ ⩽ 30. Inclusion of terms of higher-order in anharmonism
+is likely required to extend the ﬁt to extremely high densi-
+ties, rs < 500. This is beyond the scope of the present work,
+because, as discussed in Sec.
+7, such densities are unrealistic
+(see also Fig. 1).
+In general, the anharmonic energy can be split into
+two parts, the zero-point and the thermal contributions.
+Both are contained in equation (
+5). The thermal part
+of the anharmonic energy is positive. For a classic crys-
+tal, only thermal contribution to the anharmonic en-
+ergy exists, and it was studied earlier semi-analytically
+(
+Albers & Gubernatis 1986 ; Dubin 1990 ), by classic Monte
+Carlo ( Stringfellow et al. 1990 ), and by molecular dynamics
+methods ( Farouki & Hamaguchi 1993 ). According to the re-
+sults of these studies, the classic anharmonic energy can be
+presented in the form of an expansion over Γ
+Uah, cl
+T = A1cl
+Γ + A2cl
+Γ2 + A3cl
+Γ3 . (12)
+The functional form of equation ( 12) is consistent with our
+data at quasiclassic conditions and is reproduced by equati on
+(5) in the limit θ → 0 by construction.
+The literature values of the classic anharmonic co-
+eﬃcients in equation ( 12) have some scatter (cf.
+Dubin 1990 ; Farouki & Hamaguchi 1993 ). In particular,
+Farouki & Hamaguchi (1993) suggest several sets of anhar-
+monic coeﬃcients, depending on Γ range and the number
+of anharmonic terms in their ﬁt to the numerical data. The
+coeﬃcients vary quite a bit from set to set (for instance, A1cl
+varies from 5.98 to 10.9) with little eﬀect on the ﬁt accuracy .
+A1cl 10. 2
+A2cl 248
+A3cl 2. 03 · 105
+A1q −0. 62/ 6
+A2q −0. 56
+A3q 2. 35
+A11 −10
+A12 6 · 10− 3
+B1 0. 13
+B2 4 · 10− 4
+rms err 5 × 10− 6
+max err 1. 5 × 10− 5
+T able 1. The ﬁtting parameters
+The set from line 1 of table 5 in this reference: Aastro
+1cl = 10.9,
+Aastro
+2cl = 247, and Aastro
+3cl = 1.765 × 105 is widely employed in
+astrophysics (e.g.
+Potekhin & Chabrier 2010 ). On the other
+hand, in plasma community (e.g. Dubin & O’Neil 1999 ;
+Khrapak & Khrapak 2016 ), the set suggested by Dubin
+(1990) is in frequent use: Aplasma
+1cl = 10 .84, Aplasma
+2cl = 352 .8,
+and Aplasma
+3cl = 1.794 × 105.
+Our PIMC data can be ﬁtted quite satisfactorily with the
+‘cl’ ﬁt coeﬃcients in equations (
+5)–(11) ﬁxed to the “astro-
+physical” values above, but if they are ﬁxed to the “plasma
+physics” values, the ﬁt (
+5) becomes noticeably worse (rms er-
+ror increases by ∼ 40%). At the same time, the best ﬁt to our
+data corresponds to a bit diﬀerent set of values: A1cl = 10.2,
+A2cl = 248, and A3cl = 2.03× 105 (cf. Tab. 1), which lie within
+the scatter of published classic anharmonic coeﬃcients.
+As shown by Carr, Coldwell-Horsfall & Fein (1961),
+Ceperley (1978), and Albers & Gubernatis (1986), the an-
+harmonic zero-point energy can be expanded in powers of
+r− 1/ 2
+s , with the lowest-order term being negative and in-
+versely proportional to r2
+s . Our numerical data and ﬁt re-
+produce this behavior with a slightly diﬀerent coeﬃcient.
+Namely, we get 6 A1q = − 0.62, whereas
+Carr et al. (1961)
+and Ceperley (1978) had, for the same quantity, − 0.73, while
+Albers & Gubernatis (1986) reported − 0.703. As above, the
+PIMC data can be ﬁtted satisfactorily with the values for
+6A1q reported by previous authors, whereas − 0.62 is our best
+ﬁt value. On top of that, our ﬁt expression contains higher-
+order terms of the anharmonic zero-point energy expansion.
+Overall, our ﬁt has 8 numerical parameters in equations
+(
+6)–(8), which are listed in Tab. 1 with minimum required
+number of digits along with the rms and maximum ﬁt errors.
+Two additional ﬁtting parameters, B1 and B2, describe the
+dependence of the ﬁnite- M correction coeﬃcient a(rs, Γ) on
+rs and Γ as follows
+a(rs, Γ) = 3 B1
+Γ2
+r2s
+(
+1 + B2 θ2) − 1
+. (13)
+This coeﬃcient is not needed for astrophysical application s,
+but may be usefull for subsequent PIMC studies.
+At intermediate temperatures, where neither classic nor
+quantum asymptotes apply, our results, for the ﬁrst time,
+provide the detailed ﬁrst-principle temperature and densi ty
+dependence of the true quantum anharmonic energy and ther-
+modynamics of a Coulomb crystal.
+In Fig.
+2, bottom panel, we plot harmonic (multiplied by
+102, thin, dashed) and anharmonic (multiplied by 10 4, thick,
+dot-dashed) crystal energies in units of Z2e2/ai as functions
+of Tp/T for several values of rs in the range 500 ⩽ rs ⩽
+MNRAS 000, 1–17 (2022)
+Ab initio thermodynamics of one-component plasma 5
+104 uah; 10 2 uh
+Tp/T
+uh uah
+rs = 500
+rs = 750
+rs = 1500
+rs = 3000
+rs = 6000
+rs = 1.5 ·104
+rs = 1.2 ·105
+uth
+ah; uth
+h
+uth
+h
+uth
+ah
+Figure 2. Bottom panel: thin dashed and thick dot-dashed curves
+show harmonic ( ×102) and anharmonic ( ×104) contributions to
+the one-component quantum ion crystal energy in units of Z 2e2/a i
+[uh, ah ≡ aiUh, ah/ (Z 2e2)]. Diﬀerent density of dashes corresponds
+to diﬀerent rs values. Symbols indicate melting temperatures at
+respective rs. Dotted portions of the curves describe a superheated
+crystal. Top panel: thermal harmonic (thin, solid, same for all rs)
+and anharmonic (thick, dot-dashed) contributions to the en ergy in
+units of T , without multiplication by extra powers of 10 ( uh, ah ≡
+Uh, ah/T ).
+120000. Symbols indicate melting temperatures with accoun t
+of the Γ m(rs) dependence established in Sec.
+7. At higher
+temperatures (lower Tp/T ), the system is assumed to be in
+a superheated crystal state (dotted portions of the curves) .
+The anharmonic energies are given by the present ﬁt, while
+harmonic energies are taken from Paper I.
+Top panel shows only the thermal (‘th’) harmonic and an-
+harmonic contributions to the energy in units of T and with-
+out multiplication by extra numerical factors. If expresse d
+in units of temperature, harmonic contributions to the en-
+ergy (as well as to the Helmholtz free energy, cf. Fig.
+3) are
+independent of rs.
+Since the total anharmonic energy is a sum of the (nega-
+tive) zero-point and (positive) thermal contributions, at any
+density, there is a temperature where the total anharmonic
+energy is zero. For rs > 600, it takes place at T = (10 − 12)Tp.
+Even more peculiar is the fact that there exists a density
+(rs ≈ 735), at which the total anharmonic energy is zero at
+melting!
+Let us note in passing, that for N = 250 particles,
+Dubin
+(1990) has found analytically A1cl = 10 .036, which is closer
+to our best ﬁt value. This represents an 8% deviation from
+the (analytic) thermodynamic limit reported by the same au-
+thor, Aplasma
+1cl = 10 .84, due to a ﬁnite- N eﬀect at N = 250.
+Strong N -dependence of the classic thermal anharmonic en-
+ergy has been seen by
+Albers & Gubernatis (1986), however,
+these authors have also observed unwelcome dependence on
+the mesh type and oscillating N -dependence (cf. their Figs.
+1 and 2).
+In general, 8% seems to be a surprisingly large ﬁnite- N
+correction to an energy at N = 250. Naively, one expects
+the correction to be ∼ 1/N ∼ 0.4%. In fact, this is what we
+ﬁnd for the ﬁnite- N correction to the harmonic zero-point
+energy and to the harmonic classic entropy, determined by
+the phonon frequency moments ⟨ω/ωp⟩ and ⟨ln (ω/ωp)⟩, re-
+spectively (see Fig.
+A2 in the Appendix A; ωp = Tp/ℏ is the
+ion plasma frequency). Classic thermal harmonic energy has
+N -correction of the same, 1 /N, order [e.g. equation (18) of
+Dubin (1990)]. Note also an ≈ 1/N diﬀerence between our
+best ﬁt A2cl and Aastro
+2cl , even though the latter coeﬃcient
+is obtained from a simulation with N = 1024 particles. Fi-
+nally, Fig. 2 of
+Albers & Gubernatis (1986) seems to indicate
+that the lowest-order anharmonic zero-point energy does no t
+demonstrate strong N -dependence either.
+On the other hand, the formulae derived by Dubin (1990)
+for A1cl have phonon frequencies in the denominator, whereas
+the phonon frequency moment ⟨ω2
+p/ω2⟩ does have an N -
+correction of a similar order (cf. Fig. A2). Thus, summarizing
+the discussion, we should warn the reader that our ﬁt for the
+anharmonic energy may be aﬀected by ﬁnite-size eﬀects es-
+pecially noticeable (at the level of ∼ 8%) in the lowest-order
+anharmonic classic term. It would require signiﬁcantly mor e
+computer resources to get rid of said eﬀects in a ﬁrst-princi ple
+PIMC simulation.
+4 THERMODYNAMICS OF THE CR YSTAL
+The ion Helmholtz free energy (per ion) can be written as
+F = FM + Fh + Fah , (14)
+where the Madelung, harmonic, and anharmonic terms can be
+obtained by thermodynamic integration from the respective
+terms in equation (
+4). In particular, the anharmonic term
+also takes the form of a series over anharmonic corrections
+fah ≡ Fahai
+Z2e2 = AF
+1 (θ)
+Γ2
+q
++ AF
+2 (θ)
+Γ3
+q
++ AF
+3 (θ)
+Γ4
+q
+. (15)
+The respective functions are
+AF
+1 (θ) = A11
+θ2
+1
+1 + A12 θ2 + A13
+θ2
+1
+1 + A14 θ2 + A1q ,(16)
+AF
+2 (θ) = − A2cl
+2θ3
+(
+1 + A21θ4) 3/ 4
+, (17)
+AF
+3 (θ) = − A3cl
+3θ4 + A3q . (18)
+Once the free energy is known, it is straightforward to de-
+rive all the other thermodynamic functions. For instance, t he
+MNRAS 000, 1–17 (2022)
+6 D. A. Baiko and A. I. Chugunov
+ion entropy S (per ion) is
+S = − ∂F
+∂T
+⏐
+⏐
+⏐
+⏐
+V,N
+= θ2
+Tp
+∂F
+∂θ = U − F
+T = Sh + Sah, (19)
+where
+Sah = θ2
+Tp
+∂Fah
+∂θ = AS
+1 (θ)
+Γq
++ AS
+2 (θ)
+Γ2
+q
++ AS
+3 (θ)
+Γ3
+q
+. (20)
+The analytic form of the coeﬃcients is:
+AS
+1 (θ) = − 2A11
+θ
+2 A12θ2 + 1
+(1 + A12 θ2)2
+− 2A13
+θ
+2 A14θ2 + 1
+(1 + A14 θ2)2 , (21)
+AS
+2 (θ) = 3 A2cl
+2 θ2
+1
+(1 + A21 θ4)1/ 4 , (22)
+AS
+3 (θ) = 4 A3cl
+3θ3 . (23)
+Similarly, the ion speciﬁc heat C (per ion) reads
+C = ∂S
+∂ ln T
+⏐
+⏐
+⏐
+⏐
+V,N
+= − θ ∂S
+∂θ = Ch + Cah, (24)
+where
+Cah = − θ ∂Sah
+∂θ = AC
+1 (θ)
+Γq
++ AC
+2 (θ)
+Γ2
+q
++ AC
+3 (θ)
+Γ3
+q
+. (25)
+The analytic form of the coeﬃcients is:
+AC
+1 (θ) = − 2 A11
+θ
+6 A2
+12θ4 + 3 A12 θ2 + 1
+(1 + A12θ2)3 (26)
+− 2 A13
+θ
+6 A2
+14θ4 + 3 A14 θ2 + 1
+(1 + A14θ2)3 ,
+AC
+2 (θ) = 3 A2cl
+2 θ2
+2 + 3 A21θ4
+(1 + A21 θ4)5/ 4 , (27)
+AC
+3 (θ) = 4 A3cl
+θ3 . (28)
+Finally, analytic formulae for the ion pressure read:
+P = − N
+( ∂F
+∂V
+)
+T
+= PM + Ph + Pah ,
+Pahai
+niZ2e2 = Sah
+2Γ + 2AF
+1 (θ)
+3Γ2
+q
++ 5AF
+2 (θ)
+6Γ3
+q
++ AF
+3 (θ)
+Γ4
+q
+. (29)
+PM = niUM/3 is the (negative) electrostatic or Madelung
+contribution to the pressure.
+Let us remind, that the thermodynamic functions Fh, Sh,
+Ch, and Ph can be easily derived from the harmonic lattice
+thermodynamics ﬁts of Paper I.
+In Figs.
+3 and 4, we show crystal ion Helmholtz free-energy
+and ion speciﬁc heat as functions of Tp/T for several rs val-
+ues. Thin dashed curves in the bottom panel of Fig. 3 display
+harmonic contributions. Thick dot-dashed curves are anhar -
+monic quantities based on the present ﬁt. Top panel shows
+absolute values of the thermal contributions to the free en-
+ergy, which are actually negative. The harmonic contribu-
+tion, drawn by a thin solid curve, is insensitive to rs. The
+Helmholtz free energy will be discussed further in Sec.
+7.
+In Fig. 4, the harmonic contribution to the ion speciﬁc
+heat is shown by a thin solid line, and it is also the same
+for all rs. In the quantum limit of low temperatures, the an-
+harmonic speciﬁc heat (thick, dot-dashed) exhibits the sam e
+104 fah; 10 2 fh
+Tp/T
+fh fah
+rs = 500
+rs = 750
+rs = 1500
+rs = 3000
+rs = 6000
+rs = 1.5 ·104
+rs = 1.2 ·105
+⏐
+⏐f th
+ah
+⏐
+⏐;
+⏐
+⏐f th
+h
+⏐
+⏐
+⏐
+⏐f th
+h
+⏐
+⏐
+⏐
+⏐f th
+ah
+⏐
+⏐
+Figure 3. Same as in Fig.
+2 but for the crystal ion Helmholtz
+free energy [ fh, ah ≡ aiFh, ah/ (Z 2e2), fh, ah ≡ Fh, ah/T ]. Top panel
+shows absolute values of (negative) thermal contribultion s to the
+free energy.
+T 3 dependence as predicted by the Debye law for the har-
+monic contribution. At high temperatures, the temperature
+dependence of the anharmonic speciﬁc heat is more complex.
+It does not saturate and increases rather rapidly with tem-
+perature increase, even exceeding the harmonic contributi on
+in the superheated phase.
+In the normal crystal phase, the anharmonic speciﬁc heat
+is always smaller than the harmonic one, but its relative im-
+portance grows, as the system becomes denser ( rs decreases).
+For instance, at rs = 120000, the anharmonic speciﬁc heat is
+about 30 times smaller than the harmonic one in the quan-
+tum asymptote regime, becomes almost 100 times smaller at
+θ ∼ 5, and is only 10 times smaller at melting. By contrast,
+at rs = 600, the anharmonic contribution is only about two
+times smaller than the harmonic one in the ∝ T 3 regime, and
+the ratio reaches maximum of about 3 at Tp ∼ 20T .
+It is worth noting, that the anharmonic speciﬁc heat at the
+melting point is ∼ 0.3, being almost independent of rs.
+MNRAS 000,
+1–17 (2022)
+Ab initio thermodynamics of one-component plasma 7
+Cah; Ch
+Tp/T
+Ch
+rs = 500
+rs = 750
+rs = 1500
+rs = 3000
+rs = 6000
+rs = 1.5 ·104
+rs = 1.2 ·105
+Figure 4. Harmonic (thin, solid, one curve for all rs) and anhar-
+monic (thick, dashed) contributions to the speciﬁc heat of t he one-
+component quantum ion crystal. Symbols indicate melting te mper-
+atures. Dotted portions of the curves assume a superheated c rystal.
+5 COMP ARISON WITH EARLIER WORK
+Let us compare the ﬁrst-principle quantum thermodynamics
+of a one-component ion crystal developed above with several
+earlier works.
+First-principle PIMC calculations of the Coulomb crystal
+energy have been performed earlier by
+Iyetomi et al. (1993)
+and Jones & Ceperley (1996). A comparison of the anhar-
+monic energy, reported by Iyetomi et al. (1993) and shown in
+their Fig. 6, reveals an agreement with our ﬁt at nearly clas-
+sic temperatures θ ≲ 4. Deeper into the quantum domain,
+their points deviate from our ﬁt at all Γ, and the discrep-
+ancy steadily grows with increase of Γ. In the ultra-quantum
+regime, 50 ≲ rs ≲ 500, dominated by the zero-point asymp-
+tote, our ﬁt and their data points are again in a rough agree-
+ment with each other except at Γ = 1000, where their data
+is poor. Unfortunately, we do not have a way of identifying
+the source of the disagreement at intermediate θ. What is
+clear is that our approach employs more particles, MC iter-
+ations, beads, contains an accurate subtraction of the har-
+monic energy at a ﬁnite N , and does not use any analogs of a
+cumulant expansion. Besides, their prediction for the anha r-
+monic entropy (Fig. 7 of
+Iyetomi et al. 1993 ) looks implausi-
+ble with a value, greatly exceeding the harmonic contributi on
+at T ≪ Tp, and a minimum at intermediate θ.
+Jones & Ceperley (1996) have presented PIMC calcula-
+tions with N = 54 ions of the bcc solid phase energy (har-
+monic plus anharmonic) at rs = 200, 400, 625, and 1200.
+We assume that the data points shown in their Fig. 2 include
+the ﬁnite-N correction described by their equation (1). These
+data points do not agree with our anharmonic ﬁt combined
+with the harmonic energy taken in the thermodynamic limit
+(from Paper I). However, if one removes the ﬁnite- N cor-
+rection from the data points in Fig. 2 of
+Jones & Ceperley
+(1996), the raw PIMC data obtained in this way agree rea-
+Cah; Ch
+Tp/T
+Ch
+Cah; Ch
+Ch
+Cah; Ch
+Ch
+Figure 5. Various results for ion crystal speciﬁc heat. Thin solid
+lines display the harmonic contribution Ch from Paper I (same
+for all rs). Dashes show the anharmonic contributions calculated
+in this work (and already shown in Fig. 4) at rs values indicated
+near the curves. Thin dot-dashed lines represent previousl y avail-
+able parametrizations: Potekhin & Chabrier (2010) (top panel),
+Chugunov & Baiko (2005) (middle panel), and Stringfellow et al.
+(1990) (bottom panel).
+sonably well with our anharmonic ﬁt combined with the har-
+monic energy of a lattice with N = 54 ions (see Sec.
+A2
+for details). We thus conclude that the data in Fig. 2 of
+Jones & Ceperley (1996) is likely compromised by inaccurate
+treatment of ﬁnite-size eﬀects in a harmonic lattice.
+Thus, the most obvious advantage of our calculations over
+those of Iyetomi et al. (1993) and Jones & Ceperley (1996)
+is their very detailed nature and superior accuracy, which
+allowed us to develop a highly constrained ﬁt. The ﬁt can
+be integrated and diﬀerentiated to produce reliable thermo -
+dynamics free of unphysical artefacts in the astrophysical ly
+meaningful density range.
+MNRAS 000,
+1–17 (2022)
+8 D. A. Baiko and A. I. Chugunov
+In Fig. 5, using the speciﬁc heat as an example, we illus-
+trate the diﬀerence between our PIMC calculations of the ion
+crystal thermodynamics and several earlier parametrizati ons
+available in the literature. For reference, by thin solid li ne,
+we plot the harmonic speciﬁc heat from Paper I (same as
+in Fig.
+4). This contribution is a universal function of θ, i.e.
+it is the same for all densities at ﬁxed θ. Dashes (same as
+in Fig. 4) show the anharmonic contribution to the speciﬁc
+heat calculated in this work at the rs values indicated near
+the curves.
+Thin dot-dashed lines in the top panel display widely used
+interpolation of the anharmonic contribution to the speciﬁ c
+heat suggested by Potekhin & Chabrier (2010). It assumes
+an exponential suppression of the thermal anharmonic energ y
+and speciﬁc heat in quantum regime, which clearly disagrees
+with our data and ﬁt.
+Furthermore, for anharmonic correction to the zero-point
+energy, this interpolation uses only the lowest-order anha r-
+monic term calculated by
+Carr et al. (1961), Ceperley (1978),
+and Albers & Gubernatis (1986). According to our simula-
+tions, this is not accurate enough at rs ≲ 1500.
+Chugunov & Baiko (2005) have analyzed quantum anhar-
+monic corrections to the Coulomb crystal thermodynamics
+based on the harmonic pair correlation function. The main
+aim of that paper was to obtain an estimate of the quan-
+tum anharmonic correction to the crystal speciﬁc heat. The
+lowest-order anharmonic correction at arbitrary strength of
+quantum eﬀects was formally included, but the very ap-
+proach was manifestly approximate. For instance, the zero-
+point properties, obtained in
+Chugunov & Baiko (2005), were
+completely inaccurate. Nevertheless, the anharmonic crys tal
+speciﬁc heat, shown by thin dot-dashed curves in the middle
+panel of Fig.
+5, is seen to be in a rough qualitative agreement
+with the ﬁrst-principle (dashed) curves.
+Thin dot-dashed lines in the bottom panel of Fig. 5
+represent the speciﬁc heat, calculated by diﬀerentiation o f
+the anharmonic energy given by ﬁts in Stringfellow et al.
+(1990). This approach seems to be still applied as micro-
+physics input in WD cooling theory (e.g. Segretain et al.,
+1994; Salaris et al., 2021 ), even though it completely ignores
+the ion quantum eﬀects for the anharmonic term. These ef-
+fects were not considered by
+Stringfellow et al. (1990), whose
+work was based on purely classic Monte Carlo. As a result,
+the anharmonic speciﬁc heat is strongly overestimated at lo w
+temperatures ( T ≪ Tp), has a wrong asymptote, and can
+even exceed the harmonic contribution, thus corrupting mod -
+elling of the Debye cooling stage.
+Finally, let us mention that
+Hansen & Vieillefosse (1975)
+have analyzed the Wigner-Kirkwood expansion of the free
+energy of the OCP up to the terms of order ℏ4. The lowest-
+order, ∝ ℏ2, correction does not depend on the OCP state
+(liquid or crystal). In the solid phase, it is a part of the har -
+monic energy (e.g. Paper I). Moreover, the leading ℏ4-term in
+equation (7) of
+Hansen & Vieillefosse (1975) (which is inde-
+pendent of Γ) almost coincides (the relative diﬀerence is ju st
+∼ 10− 3) with the respective term in the Taylor series for the
+harmonic energy. To verify this, we have used the harmonic
+energy ﬁt from Paper I.
+Thus, the remaining terms in equation (7) of
+Hansen & Vieillefosse (1975) ( ∝ 1/Γ and ∝ 1/Γ2) must cor-
+respond to quantum corrections to the anharmonic energy.
+We have compared these terms with the Taylor expansion of
+our anharmonic coeﬃcients, equations (
+6) and ( 7), at θ → 0,
+and have found a disagreement by a factor of a few. The
+most likely reason for the discrepancy is the replacement by
+Hansen & Vieillefosse (1975) of the three-body correlation
+function by a static-lattice value in their ﬁnal formula for the
+K-term (see Hansen & Vieillefosse 1975 for details). Such
+a replacement removes any Γ-dependence from the K-term
+and can make a quantum correction to the anharmonic
+energy inaccurate.
+Note, that already at θ ∼ 1, the next order, ∝ ℏ6, quan-
+tum corrections are required, which renders the entire WK
+expansion not very useful (cf. a similar situation in the liq uid
+as discussed in
+Jones & Ceperley 1996 , and in Paper II).
+6 LIQUID PHASE THERMODYNAMICS
+UPDATE
+Once the crystal thermodynamics is constructed, it can be
+combined with liquid thermodynamics of Paper III to obtain
+a phase diagram of the strongly-coupled ion plasma at phys-
+ically relevant densities and temperatures. Before doing t his,
+we can take advantage of the fact, that calculations of the
+liquid energies were extended by one of us to rs = 500 (
+Baiko
+2021, these energies are reported here in table 2). Besides
+that, we have performed new PIMC simulations in the liquid
+phase at the lower end of the rs range, studied in this paper,
+in the vicinity of the crystallization, which occurs at Γ > 175
+(cf. Sec.
+1). These energies are presented in table 3.
+Even though these new data points were in an acceptable
+agreement with the ﬁt proposed in Paper III, it was clear
+that the numerical energies and the ﬁt started diverging. Th is
+could have resulted in noticeable inaccuracies of thermody -
+namic quantities, especially those obtained by ﬁt diﬀerent ia-
+tion, in the vicinity of the phase transition and at rs ∼ 500.
+We have therefore modiﬁed the ﬁt of Paper III to improve
+the agreement with the new data in the liquid. [In addition,
+it has been noticed by
+Jermyn et al. (2021) that the ﬁt of Pa-
+per III demonstrated unphysical behaviour in the practical ly
+unattainable region of very high densities, rs ≲ 300. This
+behaviour is also corrected by the present ﬁt modiﬁcation.]
+Let us remind, that the ﬁt proposed in equation (4) of
+Paper III had the following form (note, that our U is the
+energy per ion)
+U
+T = 3
+2 + ucl(Γ) + uq , (30)
+where the ﬁrst two terms on the right-hand side were the same
+as in the classic liquid (
+Potekhin & Chabrier 2000 ), while the
+new term uq was responsible for the ion quantum eﬀects. To
+avoid a confusion, let us stress, that ucl and uq are normalized
+to the temperature, whereas uah from Sec. 3 is normalized to
+the typical Coulomb energy Z2
+i e2/ai.
+In this work, we suggest an updated expression for uq:
+uq = u1 + u2 + u3 , (31)
+ui = θi
+1 − exp (− θi) − θi
+2 − 1 . (32)
+In this case, θi = Ciθ, i = 1 , 2, 3, the quantities C1, C2, and
+C3 are given by
+C1 = P1rs
+P3 + rs
+, C 2 = P2 , C 3 =
+√
+1 − C 2
+1 − C 2
+2 , (33)
+MNRAS 000, 1–17 (2022)
+Ab initio thermodynamics of one-component plasma 9
+T able 2. PIMC energies in the liquid phase at rs = 500
+Γ 90 101 112 123 134 145 156 167 178
+(U − UM)/T 6.344 6.951 7.565 8.185 8.811 9.438 10.072 10.707 11.343
+u
+Γ
+rs = 500
+u − uﬁt
+Γ
+rs = 600
+Γ
+rs = 750
+u
+rs = 1200
+u − uﬁt
+rs = 1900 rs = 3000
+u
+rs = 4800
+u − uﬁt
+rs = 8600 rs = 120000
+Figure 6. PIMC energies in the liquid vs. Γ (crosses) for several value s of rs. Thin solid lines represent the ﬁt ( 30) with uq given by
+equation ( 31), thick dashed lines are the Paper III ﬁt, dotted lines displ ay the right-hand side of equation ( 30) with uq set to 0.
+T able 3. Numerical results for ( U − UM)/T in the liquid phase
+near melting
+rs
+Γ 500 600 750 950 1200 1500
+178 11.343 10.508 9.593 8.736 7.995 7.373
+181 11.517 10.668 9.733 8.860 8.104 7.472
+184 11.692 10.827 9.874 8.985
+187 11.866 10.984 10.015 8.324
+190 12.040 11.143 10.156
+T able 4. Fit coeﬃcients in equation ( 33)
+P1 P2 P3
+0. 351 0 . 294 90
+and the coeﬃcients P1, P2, and P3 are summarized in table
+4. By construction, equations ( 31)–(33) reproduce the lowest-
+order term of the Wigner-Kirkwood expansion.
+It was observed in Paper III, on the basis of the data from
+Paper II (at rs ⩾ 600), that uq depended only on θ and not on
+temperature and density (or any other two parameters, such
+as Γ and rs or θ and rs) separately. This was not expected
+from the very beginning but stemmed from the ﬁtting pro-
+cedure. To emphasize this fact, the term was denoted uq(η)
+in Paper III ( η of Paper III is our θ/
+√
+3). Calculations at
+rs = 500 revealed a subtle departure from this behavior. It
+was found, that uq was better described by a function of θ [cf.
+equation ( 32)] with coeﬃcients C1 and C3 depending explic-
+itly on rs. This means that the quantum correction becomes
+a function of two variables: uq(θ, rs).
+Accuracy of the new ﬁt for rs ≳ 1900 is roughly the same
+MNRAS 000, 1–17 (2022)
+10 D. A. Baiko and A. I. Chugunov
+as that of the Paper III ﬁt, but, at rs ≲ 1900, and especially
+at rs = 500, the present formula ﬁts the data better (cf. Fig.
+6). Additionally, we do not notice any unwanted eﬀects, if the
+present ﬁt is applied in the region rs < 500. More information
+on the properties of the new ﬁt is given in Appendix B.
+The new equation ( 31) for uq results in a modiﬁcation of
+quantum corrections to other ion thermodynamic functions
+and, in particular, to practical formulae (12)–(15) of Pape r III
+describing them. Speciﬁcally, for the Helmholtz free energ y
+(divided by N T), the last line of equation (12) of Paper III
+has to be replaced by fq = f1 + f2 + f3, where
+fi = ln [exp (θi) − 1] − θi
+2 − ln θi . (34)
+For the isochoric speciﬁc heat, the last line of equation (13 )
+of Paper III has to be replaced by cq = c1 + c2 + c3, where
+ci = ∂(T ui)
+∂T = ui − θi
+dui
+dθi
+= θ2
+i exp (θi)
+[exp (θi) − 1]2 − 1 . (35)
+Ion pressure becomes
+P = Pid
+(
+1 + 1
+3 ucl + 1
+2 uq − 1
+3
+3∑
+i=1
+Diui
+)
+, (36)
+where Pid = niT is the ideal ion gas pressure, and Di =
+d ln Ci/d ln rs, so that
+D1 = P3
+P3 + rs
+, D 2 = 0 , D 3 = − C 2
+1
+C 2
+3
+P3
+P3 + rs
+. (37)
+For the temperature derivative of the ion pressure (divided
+by the ion density), the last line of equation (14) of Paper II I
+has to be replaced by
+1
+2 cq − 1
+3
+3∑
+i=1
+Dici . (38)
+Finally, for the density derivative of the ion pressure (div ided
+by T ), the last line of equation (15) of Paper III has to be
+replaced by
+3
+4 uq − 1
+4 cq − 1
+2
+3∑
+i=1
+Di
+(
+ui − 1
+3 ci
+)
++ 1
+9
+3∑
+i=1
+rs
+dDi
+drs
+ui . (39)
+7 THERMODYNAMICS ACROSS MELTING
+TRANSITION
+In this Section, we use the newly available thermodynamic
+information to obtain the phase diagram of the strongly-
+coupled ion plasma at astrophysically relevant densities a nd
+temperatures, neglecting ion-electron and higher-order e lec-
+tron contributions as described in the Introduction. The pr e-
+vious attempts at constructing the OCP phase diagram in-
+cluded the work of
+Chabrier (1993), who used a quantum
+extension of the Lindemann criterion, and Jones & Ceperley
+(1996), who performed a PIMC study of the OCP. In both
+cases, the phase diagrams extended into the domain of very
+high densities, rs ≪ 500, where ion OCP cannot exist due to
+rapid nuclear fusion reactions, which immediately change t he
+composition and eﬀectively increase rs back to the range ad-
+dressed in the present paper (e.g.
+Baiko 2021 , and references
+therein).
+Let us begin by comparing the ion Helmholtz free energies
+fsol; fliq
+Γ
+rs = 500
+rs = 750
+rs = 1500
+rs = 3000
+rs = 6000
+rs = 1.5 ·104
+rs = 1.2 ·10
+5
+fliq
+fsol
+Figure 7. Crystal (solid) and liquid (dashed) Helmholtz free en-
+ergies of the ion OCP [ fsol, liq ≡ aiFsolid, liquid/ (Z 2e2)] for a range
+of rs values. The intersection point of the curves, correspondin g to
+the same rs, represents a phase transition. Dotted curves show
+a continuation of the liquid/solid free energies into the su per-
+cooled/superheated regime.
+of the liquid and solid phases. Their intersection point sig -
+nals a melting/crystallization transition in the OCP, unde r
+assumption that the ion number density is the same in both
+phases. This is illustrated in Fig.
+7, where crystal and liquid
+ion Helmholtz free energies are displayed by solid and dashe d
+lines, respectively, as functions of Γ for several values of rs.
+The Coulomb coupling parameter at melting, Γ m, obtained
+in this way as a function of rs, is shown in panel (a) of Fig.
+8. The dependence of Γ m on rs can be approximated by the
+following analytic expression
+Γm = 175.7 − 1300
+rs
++ 4.1 × 106
+r2s
+. (40)
+This formula is plotted by dots in panel (a) of Fig. 8. It ﬁts
+our numerical results in the range 500 ⩽ rs ⩽ 120000.
+In Fig. 9, we show the temperature-density plane as 100 /rs
+versus T /Ry (Ry = 0 .5miZ4
+i e4/ℏ2 = 0 .5T Γrs is the ion Ry-
+dberg). In this plot, long-dashed line is the crystallizati on
+curve predicted by Chabrier (1993), short-dashed line is the
+prediction of Jones & Ceperley (1996), and solid line is the
+present prediction. Evidently, our prediction is closer to the
+result of Chabrier (1993), but is not exactly the same.
+In reality though, a coexistence of phases is only possible
+at pressures equal on both sides, and the melting transition
+must be studied at a constant total pressure in both phases
+rather than at a ﬁxed ion (and electron) density. The assump-
+tion of a ﬁxed density implies an ion pressure jump between
+the phases, ∆ P = Pliq − Psol. This jump can be easily calcu-
+lated by combining the harmonic pressure from Paper I with
+present equations (
+29) and ( 36). It is shown in panel (b) of
+Fig. 8. In order to compensate the ion pressure jump, the
+density of the solid phase must be slightly higher, so that th e
+electron pressure in the solid phase becomes higher than in
+MNRAS 000, 1–17 (2022)
+Ab initio thermodynamics of one-component plasma 11
+Γm
+rs
+∆P/(niT ) Q/T ∆C
+Figure 8. Coulomb coupling strength at melting Γ m (panel a),
+pressure jump at melting, speciﬁed as Fliq = Fsol, in units of niT
+(panel b), latent heat Q in units of T (panel c), and speciﬁc heat
+jump at melting ∆ C (panel d) vs. rs.
+the liquid. The required density increase is given by
+δni = ∆P ∂ni
+∂Psol
+, (41)
+where Psol is the total solid pressure dominated by degenerate
+electrons. It is easy to show, that the density jump will ensu re
+the equality of the Gibbs free energies in both phases along
+with the pressure equality.
+Due to the density increment, the resulting Γ m at melt-
+ing becomes diﬀerent in the liquid and solid phases, but this
+diﬀerence as well as the diﬀerence with the original, ﬁxed
+density, Γm is extremely small. If we were to plot these quan-
+tities versus rs in Fig.
+8, the three curves would merge. In-
+deed, in Fig. 10, we show the fractional density jump between
+the liquid and solid phases as a function of rs. To calculate
+this quantity, we employed exact formulae for ion thermo-
+dynamic functions and the standard thermodynamics of the
+100/rs
+T [10− 5 Ry]
+Figure 9. Phase diagram of the OCP. Long and short dashes
+are melting temperature predictions by Chabrier (1993) and
+Jones & Ceperley (1996), respectively. Solid line describes present
+results.
+r
+n n
+Figure 10. Fractional ion density jump upon crystallization for
+nuclei species typical of matter in a WD core.
+degenerate electron gas at T = 0 (e.g.
+Haensel et al. 2007 ).
+The density jump depends on the assumed ion species, be-
+cause the functional form of the density dependence of the
+electron pressure is sensitive to the electron relativity d egree.
+If the phase transition is found from the equality of the
+Helmholtz free energies at ﬁxed density (as in the beginning
+of this Section), one sees that the energy diﬀerence between
+the phases, Q ≡ Uliq − Usol > 0, is equal to T ∆S. In this
+case, ∆S is the ion entropy diﬀerence. Introducing the density
+jump, equation (
+41), and imposing the equality of the Gibbs
+MNRAS 000, 1–17 (2022)
+12 D. A. Baiko and A. I. Chugunov
+free energies, one sees, that the same T ∆S (ion quantities
+essentially do not change as a consequence of this procedure )
+becomes equal to the enthalpy diﬀerence between the phases
+also known as the latent heat of crystallization. This quant ity
+plays an important role in astrophysics of white dwarfs. It i s
+released as the matter in a WD core crystallizes, which delay s
+cooling of these stars and aﬀects various age estimates (e.g .
+Tremblay et al. 2019 , and references therein). According to
+our calculations, the latent heat is a slowly varying functi on of
+rs, which is shown in panel (c) of Fig. 8. This dependence can
+be approximated by an analytic expression valid for 500 ⩽
+rs ⩽ 120000, as follows:
+Q
+T = 0.75
+(
+1 + 1.4√ rs
+− 145
+rs
++ 1200
+rs
+√ rs
+)
+. (42)
+This formula is plotted by dots in panel (c) of Fig. 8.
+Note, that at higher rs, where ions are almost classic, our
+calculations indicate that ∆ P ≈ niQ/3 in agreement with
+theory ( Hansen, Torrie & Vieillefosse 1977 ). Let us also ob-
+serve that ∆ S = Q/T is the jump of excess entropy at melt-
+ing.
+Another remarkable quantity is the speciﬁc heat jump be-
+tween the solid and liquid phases. In Fig. 11, we show the ion
+speciﬁc heat of the OCP across the phase transition. In this
+case, we combine updated thermodynamics of the liquid from
+Sec.
+6, Paper I for the harmonic term in the crystal, and the
+results of Sec. 4 for the anharmonic contribution. Diﬀerent
+curves correspond to diﬀerent rs values. The presence of the
+jump is evident and so is its rs dependence. The dependence
+of the speciﬁc heat jump at melting on rs is shown in panel
+(d) of Fig. 8.
+Thin dot-dashed curves in Fig. 11 display the speciﬁc heat
+in the liquid phase obtained from the Paper III ﬁt. It is seen t o
+be suﬃciently accurate at lower Γ or higher rs, but gradually
+worsens, as one approaches the phase transition in the deep
+quantum regime.
+8 ASTROPHYSICAL APPLICATIONS
+As discussed in the Introduction, one-component plasma
+model is relevant for astrophysics of compact degenerate
+stars, white dwarfs and neutron stars. In these objects, mat -
+ter at densities above ∼ 10 − 1000 g cm − 3 (depending on the
+chemical composition) is fully pressure-ionized. The phas e,
+containing bare atomic nuclei and nearly rigid, degenerate
+electron gas, extends all the way down to the center of a
+star, in the case of white dwarfs, or to the outer boundary of
+the inner crust (at ρd ≈ 4.3 × 1011 g cm − 3), in the case of
+neutron stars.
+The chemical elements present in such matter may vary
+from the lighter H, He, and C to the heavier Ne, Fe, and many
+other. As we saw in Secs.
+3, 4, and 6, ion thermodynamics is
+parameterized by just two dimensionless quantities, Γ and rs.
+Consequently, our ﬁtting formulae enable one to determine
+all the necessary thermodynamic functions in the entire tem -
+perature and density range of astrophysical interest for an y
+nuclear species.
+Let us illustrate the results of the preceding sections by
+considering a few ﬁducial astrophysical examples. We shall
+focus on the total heat capacity (ion plus electron) of fully
+ionized matter. The ion contribution to it is probably the
+Csol; Cliq
+Γ
+rs = 500
+rs = 750
+rs = 1500
+rs = 3000
+rs = 6000
+rs = 1.5 ·104
+rs = 1.2 ·105
+Cliq C BY19
+liq
+Csol
+Figure 11. Speciﬁc heat of the OCP vs. Γ for several values of
+rs. Discontinuity indicates melting transition. Solid curve s, Csol,
+and dashed curves, Cliq, represent the crystal and liquid phases,
+respectively. Dotted curves demonstrate the speciﬁc heat o f a su-
+perheated crystal (at lower Γ) and a supercooled liquid (at h igher
+Γ). Thin dot-dashed curves show the speciﬁc heat in the liqui d
+based on the Paper III ﬁt.
+most practically important ion thermodynamic function, as
+it dominates over the electron contribution and thus has a
+signiﬁcant impact on the thermal evolution of a star.
+In Fig.
+12, we plot, in physical units, the total heat capac-
+ity of dense matter composed of helium at T = 3 × 105 K
+or oxygen at T = 3 × 106 K as a function of mass density.
+Thick long-dashed lines describe the liquid phase. Thick so lid
+curves is the total heat capacity of the solid phase. Dots do
+not include the ion anharmonic contribution, whereas thin
+solid curves demonstrate the total solid-phase heat capaci ty
+as parameterized by
+Potekhin & Chabrier (2010) but without
+the ion-electron contribution associated with electron sc reen-
+ing.
+In Fig. 13, the total heat capacity of carbon, oxygen, and
+neon plasma at T = 3 × 107 K is shown as a function of den-
+sity. As the matter becomes hotter and the nuclei heavier,
+the system becomes more classic and the quantum eﬀects
+are less pronounced. Nevertheless, one still observes a dis -
+crepancy with the parameterization of
+Potekhin & Chabrier
+(2010), which can over- or underestimate the actual heat ca-
+pacity.
+In real systems, such as matter in a WD core or an NS
+crust, one expects to ﬁnd a mixture of several ion species
+rather than the OCP. In order to describe such systems from
+ﬁrst principles, one has to introduce new free parameters
+(one per each additional species) and perform numerous ex-
+tra simulations. Such a program for quantum plasmas re-
+quires enormous computer resources and has not been un-
+dertaken yet for exhaustive parameter space (see, however,
+Roggero & Reddy 2016 ). For the crystallized phase, there is
+an additional complication associated with the fact that th e
+structure of a multi-component crystal is still not fully un -
+MNRAS 000, 1–17 (2022)
+Ab initio thermodynamics of one-component plasma 13
+C [erg cm− 3 K− 1]
+ρ [g cm− 3]
+liquid+e
+solid+e
+PC10
+harmonic+e
+4 He,
+T
+= 3
+×
+10
+5 K
+16
+O,
+T
+= 3
+×
+10
+6 K
+Figure 12. Total (ion plus electron) heat capacity of dense matter
+composed of helium at T = 3 ×105 K or oxygen at T = 3 ×106 K vs.
+mass density. Thick long-dashed and solid curves correspon d to the
+liquid and crystal phases, respectively. Dotted lines incl ude only
+ion harmonic and electron contributions. Thin solid line (m erging
+with the thick solid line in the case of oxygen) is the paramet eri-
+zation of Potekhin & Chabrier (2010).
+C [erg cm− 3 K− 1]
+ρ [g cm− 3]
+liquid+e
+solid+e
+PC10
+harmonic+e
+T = 3 × 107 K
+12C
+16O 20Ne
+Figure 13. Same as in Fig.
+12 but for carbon, oxygen, and neon
+plasma at T = 3 × 107 K.
+derstood even in the classic case (see Caplan 2020 for recent
+progress).
+9 CONCLUSION
+We have performed detailed ﬁrst-principle path-integral
+Monte Carlo simulations of a bcc crystal composed of ions
+of a single sort and rigid uniform charge-compensating elec -
+tron background (one-component plasma crystal). The study
+was focused on the density range 500 ⩽ rs ⩽ 120000, cov-
+ering fully-ionized layers in the interior of white dwarfs a nd
+neutron stars, at temperatures, spanning the range from the
+crystallization line down to Tp/30. Ion quantum eﬀects are
+not negligible in a large fraction of this physical paramete r
+domain.
+The crystal anharmonic energy has been extracted from
+the simulation results by subtracting the harmonic energy o f
+a ﬁnite lattice. The anharmonic energy has been ﬁtted by a
+convenient analytic formula (
+5), which incorporated available
+classic and quantum asymptotes.
+The ﬁtting formula has been integrated and diﬀerentiated,
+and explicit expressions for anharmonic contributions to t he
+crystal Helmholtz free energy, entropy, speciﬁc heat, and pres-
+sure are given. These are equations ( 15), (20), (25), and ( 29),
+which should be included in evolutionary codes to ensure ac-
+curate treatment of quantum ion thermodynamics of a crys-
+tal. These formulae cover the entire crystallized region of WD
+or NS interior, where they supercede any previously availab le
+results.
+Naturally, the eﬀect on the results of the evolutionary code s
+is not expected to be drastic, because the crystal thermody-
+namics is dominated by the well-known harmonic and elec-
+tron contributions. Nevertheless, certain thermal proper ties,
+most importantly the speciﬁc heat, will receive a boost of
+up to 50%, depending on density and temperature, which is
+potentially noticeable.
+In parallel to this work, the previously available analytic
+description of the liquid-phase thermodynamics of the same
+system has been updated to include new PIMC data at
+rs = 500 and in the vicinity of the crystallization curve.
+We recommend replacing equations (6) and (9) of Paper
+III by the present equations (
+31) and ( 36), combining equa-
+tions (12)–(15) of Paper III with the present equations ( 34),
+(35), ( 38), and ( 39), and incorporating them into evolution-
+ary codes to describe thermodynamics of a quantum ion liq-
+uid. These formulae cover the entire liquid region of WD core
+or NS crust, where they supercede any previously available
+results.
+By combining the liquid and solid thermodynamics, we
+have analyzed in detail melting properties of the OCP with
+account of ion quantum eﬀects. In particular, we have ob-
+tained from the ﬁrst principles the density dependence of: ( i)
+the Coulomb coupling strength at melting, Γ m; (ii) the energy
+jump, which is equal to the latent heat of crystallization, Q;
+(iii) the pressure jump, accompanying the phase transition,
+if it is determined by equating the liquid and solid Helmholt z
+free energies; ( iv) the respective density jump, which appears
+in the proper formalism based on the Gibbs free energy and
+accompanies crystallization in real systems; and, ﬁnally, (v)
+the speciﬁc heat jump. All these functions are displayed in
+Figs.
+8 and 10. The dependences of Γ m and Q on density have
+been ﬁtted by simple analytic formulae ( 40) and ( 42).
+These results are crucial for reliable modelling of thermal
+evolution and asteroseismology of compact degenerate star s.
+MNRAS 000, 1–17 (2022)
+14 D. A. Baiko and A. I. Chugunov
+ACKNOWLEDGMENTS
+We would like to acknowledge the use of the Maxima pack-
+age for symbolic computations. This work was partially sup-
+ported by the Russian Science Foundation grant 19-12-00133 .
+DATA A V AILABILITY
+The data underlying this article will be shared on reasonabl e
+request to the corresponding author.
+REFERENCES
+Albers R. C., Gubernatis J. E., 1981, Brillouin-zone integr ation
+schemes: An eﬃciency study for the phonon frequency mo-
+ments of the harmonic, solid, one-component plasma, Univer -
+sity of California, LA-8674-MS
+Albers R. C., Gubernatis J. E., 1986,
+Phys. Rev. B , 33, 5180 [Er-
+ratum: Albers R. C., Gubernatis J. E., 1990, Phys. Rev. B ,
+42, 11373 ]
+Baiko D. A., 2002, Phys. Rev. E , 66, 056405
+Baiko D. A., 2014, Journal of Physics: Conference Series , 496,
+012010
+Baiko D. A., 2019, MNRAS, 488, 5042 (Paper II)
+Baiko D. A., 2021, MNRAS, 508, 2134
+Baiko D. A., Yakovlev D. G., 2019, MNRAS, 490, 5839 (Paper III)
+Baiko D. A., Potekhin A. Y., Yakovlev D. G., 2001, Phys. Rev. E ,
+64, 057402 (Paper I)
+Bardeen J., Pines D., 1955, Phys. Rev. , 99, 1140
+Bauer E. B., Schwab J., Bildsten L., Cheng S., 2020, ApJ, 902, 93
+Blouin S., Daligault J., 2021, arXiv e-prints, p. arXiv:2107.07094
+Blouin S., Daligault J., Saumon D., 2021, ApJ, 911, L5
+Brout R., 1959, Phys. Rev. , 113, 43
+Caillol J. M., 1999, J. Chem. Phys. , 111, 6538
+Camisassa M. E., Althaus L. G., Torres S., C´ orsico A. H., Rebassa-
+Mansergas A., Tremblay P.-E., Cheng S., Raddi R., 2021,
+A&A, 649, L7
+Caplan M. E., 2020, Phys. Rev. E , 101, 023201
+Caplan M. E., Horowitz C. J., Cumming A., 2020, ApJ, 902, L44
+Caplan M. E., Freeman I. F., Horowitz C. J., Cumming A.,
+Bellinger E. P., 2021, ApJ, 919, L12
+Carr W. J., Coldwell-Horsfall R. A., Fein A. E., 1961,
+Physical Review , 124, 747
+Ceperley D., 1978, Phys. Rev. B , 18, 3126
+Ceperley D. M., 1995, Reviews of Modern Physics , 67, 279
+Chabrier G., 1993, ApJ, 414, 695
+Chabrier G., Ashcroft N. W., Dewitt H. E., 1992, Nature, 360, 48
+Cheng S., Cummings J. D., M´ enard B., 2019, ApJ, 886, 100
+Chugunov A. I., Baiko D. A., 2005,
+Physica A: Statistical Mechanics and its Applications ,
+352, 397
+Dewitt H., Slattery W., 1999, Contributions to Plasma Physics ,
+39, 97
+Dewitt H., Slattery W., 2003, Contributions to Plasma Physics ,
+43, 279
+Dittrich W., Reuter M., 2020, Partition Function for the Har monic
+Oscillator. Springer International Publishing, Cham, pp 3 17–
+323, doi:10.1007/978-3-030-36786-2˙26
+Dubin D. H. E., 1990, Phys. Rev. A , 42, 4972
+Dubin D. H., O’Neil T. M., 1999, Reviews of Modern Physics ,
+71, 87
+Farouki R. T., Hamaguchi S., 1993, Phys. Rev. E , 47, 4330
+Gaia Collaboration et al., 2016, A&A, 595, A1
+Gaia Collaboration et al., 2018, A&A, 616, A10
+Haensel P., Potekhin A., Yakovlev D., 2007, Neutron Stars 1: Equa-
+tion of State and Structure. Astrophysics and Space Science
+Library, Springer-Verlag, Berlin
+Hansen J. P., Vieillefosse P., 1975,
+Physics Letters A , 53, 187
+Hansen J. P., Torrie G. M., Vieillefosse P., 1977, Phys. Rev. A ,
+16, 2153
+Horowitz C. J., Berry D. K., Brown E. F., 2007, Phys. Rev. E ,
+75, 066101
+Horowitz C. J., Schneider A. S., Berry D. K., 2010,
+Phys. Rev. Lett. , 104, 231101
+Iyetomi H., Ogata S., Ichimaru S., 1993, Phys. Rev. B , 47, 11703
+Jermyn A. S., Schwab J., Bauer E., Timmes F. X., Potekhin A. Y. ,
+2021, ApJ, 913, 72
+Jones M. D., Ceperley D. M., 1996, Phys. Rev. Lett. , 76, 4572
+Khrapak S. A., Khrapak A. G., 2016,
+Contributions to Plasma Physics , 56, 270
+Kugler A. A., 1969, Annals of Physics , 53, 133
+Lamb D. Q., van Horn H. M., 1975, ApJ, 200, 306
+Oertel M., Hempel M., Kl¨ ahn T., Typel S., 2017,
+Reviews of Modern Physics , 89, 015007
+Ostriker J. P., Axel L., 1968, The Astronomical Journal Supp le-
+ment, 73, 31
+Potekhin A. Y., Chabrier G., 2000, Phys. Rev. E , 62, 8554
+Potekhin A. Y., Chabrier G., 2010,
+Contributions to Plasma Physics , 50, 82
+Roggero A., Reddy S., 2016, Phys. Rev. C , 94, 015803
+Salaris M., Cassisi S., Pietrinferni A., Hidalgo S., 2021, a rXiv e-
+prints, p. arXiv:2111.09285
+Segretain L., Chabrier G., Hernanz M., Garcia-Berro E., Ise rn J.,
+Mochkovitch R., 1994, ApJ, 434, 641
+Stringfellow G. S., Dewitt H. E., Slattery W. L., 1990,
+Phys. Rev. A , 41, 1105
+Tremblay P.-E., et al., 2019, Nature, 565, 202
+Vorontsov-Velyaminov P. N., Lyubartsev A. P., 2003,
+Journal of Physics A Mathematical General , 36, 685
+Vorontsov-Velyaminov P. N., Nesvit M. O., Gorbunov R. I., 19 97,
+Phys. Rev. E , 55, 1979
+W allace D., 1972, Thermodynamics of Crystals. Wiley, New Yo rk,
+https://books.google.ru/books?id=vgXwAAAAMAAJ
+APPENDIX A: HARMONIC LATTICE IN PIMC
+SIMULATIONS
+Within the harmonic lattice approximation, the interionic in-
+teraction potential is expanded up to the second order in
+ion displacements from the lattice sites. Since the lattice
+sites correspond to equilibrium positions, the linear term s
+are absent, and the dynamics of the ion system can be con-
+veniently described by a set of independent collective coor -
+dinates (phonon modes). Each mode behaves as a harmonic
+oscillator with the respective frequency.
+In comparison with the well-known thermodynamic limit
+(e.g. Paper I), PIMC simulations of a crystal include a ﬁnite
+number of ions N in a box with periodic boundary condi-
+tions. Moreover, quantum eﬀects are modelled by the PIMC
+approach, i.e. by using the primitive approximation with a ﬁ -
+nite number M of imaginary time slices. Thus, to subtract the
+harmonic energy from the PIMC data, the harmonic lattice
+formalism must be developed for the same ﬁnite N . Then, the
+ion motion will be still described by a set of independent col -
+lective modes, but only those phonons will be present, whose
+wavevectors are consistent with the periodic boundary con-
+ditions. Furthermore, each ﬁnite- N phonon mode must be
+treated in the primitive approximation with M imaginary
+MNRAS 000,
+1–17 (2022)
+Ab initio thermodynamics of one-component plasma 15
+time slices. As we demonstrate in the next two subsections,
+both types of ﬁnite-size eﬀects can be accounted for analyti -
+cally.
+A1 Harmonic oscillator in PIMC
+Accurate thermodynamics of a harmonic oscillator (ho) with
+a frequency ω is well known (e.g.
+Dittrich & Reuter 2020 ;
+Vorontsov-Velyaminov, Nesvit & Gorbunov 1997 , where the
+relation to the PIMC approach is explicitly analyzed). In pa r-
+ticular, the partition function Zho = exp( z/2)/[exp(z) − 1]
+and the energy Uho = U 0
+ho + ℏω/[exp(z) − 1]. In this case,
+z = ℏω/T and U 0
+ho = ℏω/2 is the zero-point energy.
+In a PIMC simulation, quantum harmonic oscillator is
+modelled by a classic ring polymer with M beads in an eﬀec-
+tive potential
+H = µω2
+2M
+∑
+i
+r2
+i + µM T2
+2ℏ2
+∑
+i
+(ri − ri+1)2, (A1)
+where µ is the mass and ri is a (one-dimensional) posi-
+tion of the i-th bead ( rM = r0 due to the ring condi-
+tion). The second term is related to the kinetic energy.
+Let us consider thermodynamics of this system following
+Vorontsov-Velyaminov & Lyubartsev (2003). The partition
+function of this polymer can be written in an explicit form
+Zho,M =
+( M
+2πz
+) M/ 2 ∫
+exp
+[
+−
+( M
+z + z
+2M
+) ∑
+i
+x2
+i
++ M
+z
+∑
+i
+xixi+1
+]
+dx1 . . . dxM , (A2)
+where coordinates xi are measured in natural units
+√
+ℏ/(µω).
+The exponent in square brackets is a quadratic form
+over xi. Changing variables to the main axes of this
+form,
+Vorontsov-Velyaminov & Lyubartsev (2003) arrive at
+Zho,M = (det AM )− 1/ 2, with the matrix
+AM =
+
+
+
+
+
+
+
+
+
+2 C − 1 0 · · · 0 − 1
+− 1 2 C − 1 0 · · · 0
+0 − 1 2 C − 1 · · · 0
+.
+.
+. . . . .
+.
+.
+0 · · · 0 − 1 2 C − 1
+− 1 0 · · · 0 − 1 2 C
+
+
+
+
+
+
+
+
+
+(A3)
+and C = 1+ (z/M)2/2.
+Vorontsov-Velyaminov & Lyubartsev
+(2003) also obtained several useful recurrent relations to de-
+termine det AM . Using mathematical induction, we write
+down det AM in an explicit form:
+det AM =
+M − 1∑
+i=0
+Ai
+M
+( z
+M
+) 2(i+1)
+, (A4)
+where
+Ai
+M = 2 M 2 (M 2 − 12) (M 2 − 22) · · ·(M 2 − i2)
+(2i + 2)! . (A5)
+Knowing the partition function, it is easy to calculate the
+energy of the harmonic oscillator for M beads
+Uho,M = − ∂ ln Zho,M
+∂(1/T ) = ℏω
+2
+d det AM
+dz
+1
+det AM
+. (A6)
+The energy of the harmonic oscillator, as predicted by the
+1
+2
+5
+10
+2
+5
+102
+Uho,M /T
+10− 2 10− 1 1 10 10 2
+z
+M = 16
+M = 32
+M = 64
+M = 128
+M = 256
+M = 512
+M = 1024
+M → ∞
+Zero point
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+(Uho,M − U 0
+ho)/T
+M = 16
+M = 32
+M = 64
+M = 128
+M = 256
+M = 512
+M = 1024
+M → ∞
+Harmonic
+oscillator
+Figure A1. Energy of the harmonic oscillator Uho,M /T (bottom
+panel) and its “thermal energy” ( Uho,M − U 0
+ho)/T (top panel) vs.
+z as obtained in a PIMC simulation with M = 16, 32, 64, 128, 256,
+512, and 1024 beads.
+PIMC simulation, is shown in Fig.
+A1 for several values of M .
+Solid line represents the accurate quantum limit, correspo nd-
+ing to M → ∞ . Upper panel represents the “thermal energy”
+(Uho − U 0
+ho)/T . One can see, that the PIMC simulation, for a
+ﬁxed M , can reproduce the accurate quantum energy only up
+to some value z. At higher z, it strongly underestimates the
+energy (in particular, it does not reproduce the zero-point
+energy). It is worth noting, that for zM ≲ 1, the diﬀerence
+between the PIMC energy and the exact quantum energy is
+well ﬁtted (with an error of less than 0 .01ℏω) by
+Uho,M − Uho = − ℏω
+16
+z2
+M 2 . (A7)
+A2 Finite-size eﬀects for harmonic lattice
+We consider a bcc lattice and a cubic simulation box, thus,
+the number of ions in simulation N = 2 N 3
+L, where NL is
+the number of cubic cells in each direction of the simu-
+lation box. Obviously, the box size is L = NLa1, where
+a1 is the size of the bcc cubic cell. Thanks to the sym-
+metry of the bcc lattice, it suﬃces to consider phonons
+only from the so-called irreducible part of the Brillouin
+zone, which is 1 /48-th of the whole Brillouin zone (e.g.
+Albers & Gubernatis 1981 ). Their wavevectors can be speci-
+ﬁed as: k = (2 πix/L, 2πiy/L, 2πiz/L), where ix = 0 , . . . , Nl,
+iy = 0, . . . ,min(ix, NL − ix), iz = 0, . . . , iy.
+There are three modes for each wavevector, frequencies of
+these modes ωj (j = 1, 2, 3) are determined by the dynamic
+MNRAS 000, 1–17 (2022)
+16 D. A. Baiko and A. I. Chugunov
+1 − ⟨ ωn⟩N /⟨ωn⟩N →∞
+NL
+⟨(ω/ωp)−2⟩
+⟨(ω/ωp)−1⟩
+⟨ln (ω/ωp)⟩
+⟨ω/ωp⟩
+⟨(ω/ωp)2⟩
+⟨(ω/ωp)3⟩
+∝ 1/N
+Figure A2. The relative ﬁnite-size correction for several phonon
+frequency moments as a function of NL. Thin solid line indicates
+a ∝ 1/N = 1/ (2 N 3
+L) dependence.
+matrix of the bcc lattice for the OCP (see, e.g. Paper I for
+an explicit form). In particular, one can calculate phonon
+frequency moments according to
+⟨ωn⟩N = 1
+3N
+∑
+ix,i y ,i z
+w(ix, iy, iz)
+∑
+j
+ωn
+j . (A8)
+In this case, w(ix, iy, iz) is the weight factor, determined
+by the symmetry ( Wallace 1972; Albers & Gubernatis 1981 ).
+Due to ﬁnite N , the resulting phonon moments diﬀer from
+the well known values in thermodynamic limit (see, e.g. Pa-
+per I). The relative diﬀerence is shown in Fig.
+A2. Note, that
+contribution of k = 0 phonons was taken to be zero for all
+phonon moments to avoid divergence of some of them (see
+also below). It is the only reason there is a ﬁnite-size eﬀect
+for the second moment ⟨ω2/ω2
+p⟩N . In fact, thanks to the Kohn
+sum rule (
+Bardeen & Pines 1955 ; Brout 1959 ), ∑
+j ω2
+j = ω2
+p
+for any phonon wavevector. Thus, ⟨ω2/ω2
+p⟩N ≡ 1/3− 1/(3N ),
+where the last term is associated with the zero contribution
+of k = 0 phonons. As is obvious from Fig.
+A2, the relative
+ﬁnite-size correction for moments with a positive n follows
+∝ 1/N trend, but it is not so for n < 0 moments and for the
+⟨ln (ω/ωp)⟩N moment. This is because the dominating con-
+tribution to the latter moments comes from the vicinity of
+the Brillouin zone center, and thus strongly depends on the
+location of phonon wavevectors, available at ﬁnite N .
+The harmonic energy per one ion is calculated as
+Uh,M = 1
+N
+∑
+ix,i y ,i z
+w(ix, iy, iz)
+∑
+j
+Uho,M (ωj, T ). (A9)
+Uho,M (ωj, T ) is the energy given by equation ( A6). Note,
+however, that modes with k = 0 require special attention.
+They correspond to a motion of all ions together, i.e. a mo-
+tion of the center of mass. As long as we consider only inte-
+rionic interactions, it is a free motion not constrained by a ny
+forces. Obviously, the contribution of k = 0 modes must be
+equal to 3 T /2.
+1
+2
+5
+10
+2
+5
+Uh,M /(3T )
+10− 2 10− 1 1 10 10 2
+Tp/T
+N = 250 , M = 32
+N = 250 , M = 64
+N = 250 , M = 128
+N = 250 , M = 256
+N = 250 , M → ∞
+N → ∞ , M → ∞
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+(Uh,M − U 0
+h)/(3T )
+N = 250 , M = 32
+N = 250 , M = 64
+N = 250 , M = 128
+N = 250 , M = 256
+N = 250 , M → ∞
+N = 1024 , M → ∞
+N → ∞ , M → ∞
+Harmonic
+lattice
+Figure A3. Harmonic lattice energy Uh,M / (3T ) (bottom panel)
+and “thermal energy” ( Uh,M − U 0
+h )/ (3T ) (top panel) as functions
+of Tp/T for a PIMC harmonic lattice simulation with N = 250 and
+M = 32, 64, 128, or 256 beads. Thin dotted line corresponds to th e
+accurate quantum thermodynamic limit, while thin solid and long-
+dashed lines provide an accurate quantum description ( M → ∞ )
+of ﬁnite systems with 250 and 1024 particles, respectively.
+The resulting harmonic lattice energy as a function of Tp/T
+(cf. Sec. 3) is shown in the bottom panel of Fig. A3. The
+dotted line represents the energy in the thermodynamic limi t
+(Paper I); in the scale of the bottom panel, it coincides with
+the solid line, which represents accurate quantum descript ion
+for N = 250. Similar to the harmonic oscillator (Fig.
+A1),
+PIMC underestimates the energy at low T due to a ﬁnite
+number of beads.
+To demonstrate the importance of the ﬁnite-size eﬀects in
+the strongly quantum regime ( T ≪ Tp), in the top panel
+of Fig. A3, we plot ( Uh,M − U 0
+h )/3T as a function of Tp/T .
+In this case, U 0
+h /N = ℏωp⟨ω/ωp⟩/2 is the zero-point energy
+calculated in the thermodynamic limit (the ﬁrst frequency
+moment ⟨ω/ωp⟩ = 0 .5113875, Paper I). As it should be, in
+the thermodynamic limit, this diﬀerence represents the the r-
+mal energy and it is positive (see the dotted line). However,
+it is not the case for the ﬁnite- N simulation, even if the quan-
+tum eﬀects are included accurately ( M → ∞ , see thin solid
+line). This is because the ﬁrst frequency moment for N = 250
+(NL = 5) is a bit lower: ⟨ω/ωp⟩250 = 0.5099073 (as expected,
+the correction is of the order of 1 /N, see Fig.
+A2). Usage of a
+ﬁnite number of beads M in a PIMC simulation makes agree-
+ment with the thermodynamic limit even worse. That is why
+we use Uh,M calculated from equation (
+A9) to extract the an-
+harmonic energy from our simulations. In this way, we avoid
+MNRAS 000, 1–17 (2022)
+Ab initio thermodynamics of one-component plasma 17
+log10 rs
+log10 Γ
+Figure B1. Color map of the ion speciﬁc heat derived from the
+new liquid-phase ﬁt. Dashed line represents the melting cur ve, dots
+indicate PIMC points in the liquid, on which the ﬁt is based.
+an impact of the ﬁnite-size eﬀects in the main, harmonic,
+energy on the subdominant anharmonic energy.
+APPENDIX B: EXTRAPOLATION
+PROPER TIES OF THE NEW LIQUID FIT
+In Fig.
+B1, we show a color map of the speciﬁc heat derived
+from the new ﬁt of the liquid phase energy, equations ( 30) and
+(31), in a very broad domain of Γ and rs, covering the solid
+phase as well as the extremely dense region rs ≪ 500. The
+speciﬁc heat is explicitly positive in the extrapolated reg ion.
+A minimum at Γ ≈ 140 and rs ≈ 70 is likely an artefact of
+our ﬁt. Note however, that this artefact should not aﬀect any
+astrophysical applications, because it is located far outs ide
+the region of astrophysical interest.
+MNRAS 000,
+1–17 (2022)

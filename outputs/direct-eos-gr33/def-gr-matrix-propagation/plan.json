@@ -1,0 +1,23 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "f71d0558",
+  "claim": "Keep the exact source and algebraic constraints by the static-plus-range(M) identity, then test source-driven rational Krylov propagation.",
+  "decision": "First verify the full source-face map and measure one128-vector range basis. Require its projected finite spectrum to support a stable modal propagation before any production. Do not clip positive/complex modes or change K,D.",
+  "pilot": {
+    "basis_vectors": 128,
+    "shift_frequency": 256,
+    "hard_seconds": 90,
+    "memory_GB": 3,
+    "CPU_threads": 1,
+    "new_EOS_calls": 0
+  },
+  "forecast": "One sparse LU per shift plus128 static/range solves; cost unmeasured, stop at90s. No time, spatial or Fourier range increase.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_matrix_propagation.py": "08a2f082c39d6c088db08bf2bfae6aa7dddbee7c16bb46e094c9af159300fe6d",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_laplace.py": "ce5f7f7a0b52b7597c8cd5eff02e55f2f837aa35d3c1c64dfbec36c88ca4c806",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_conductive_cauchy.py": "16c558db20b7355e60d1008d9ee297d4ffd525dbbbbae0a53c53d43be7e84fc5",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_reactive_cauchy.py": "7ddb7e14f1edee6b0656b924076dcabe39145bd5e1eeffbecf4fa3bbd4d95cda",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/fine-bank.npz": "b4493a6e4cfb20d741725ecb61cec154ab9fc51a694001865748741060018d7e",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-laplace/result.json": "e986fa377dfeb5dcf628b3f910a7a6e36687cc6a91ea40310d79b62512ad8d62"
+  }
+}

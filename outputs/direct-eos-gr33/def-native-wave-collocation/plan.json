@@ -1,0 +1,56 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Test and, if successful, fix the native-point wave readout by collocating every material face and native readout, with positive GLL inertia in the existing canonical weak equations.",
+  "cause_hypothesis": "The rejected pointwise velocities arise from resolving short source-interface waves with cell-polynomial interpolation and consistent inertia. This is a hypothesis, not a confirmed cause.",
+  "changed": "One global source/readout collocation rule, no additional local patch; GLL inertia except the regular central element. The old physical weak stiffness, extended thermal force and temperature/heat/photons are retained.",
+  "fixed": "Phase93 native EOS, baryons, composition, horizon, physical closures and global max-norm gates. No field smoothing, RMS replacement or source retuning.",
+  "paths": [
+    "p4-8 pilot",
+    "p4-32",
+    "p4-64",
+    "p2-64",
+    "p4-64 consistent-mass contrast only if all primary gates pass"
+  ],
+  "gates": {
+    "temperature_time": 0.02,
+    "temperature_space": 0.02,
+    "GR_time": 0.03,
+    "GR_space": 0.03,
+    "linear_residual": 1e-09,
+    "heat_identity": 1e-09,
+    "inventory": 1e-12,
+    "tangent_temperature": 0.05
+  },
+  "budget": {
+    "total_seconds": 240,
+    "pilot_seconds": 45,
+    "CPU_threads": 1,
+    "memory_GB": 5,
+    "native_calls": 0,
+    "new_background_roots": 0,
+    "automatic_expansion": false
+  },
+  "decision": "Use actual coupled paths and unchanged criteria. Stop the candidate on failed time/space or the measured budget; do not keep modifying this mesh or expand the horizon. The moving-interface identity is separate theorem progress, not a substitute for a converged charge.",
+  "references": [
+    "https://doi.org/10.1046/j.1365-246x.1999.00967.x",
+    "https://doi.org/10.1093/mnras/216.2.403"
+  ],
+  "reference_scope": "The first paper supports the nodal GLL diagonal-mass principle, not our GR solver. The second studies radiating-star junctions; our hemispheric local flux identity is derived here rather than copied from its radial-null closure.",
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "moving_surface": "For a comoving radiation tensor(E,F,P), the stationary-frame energy/momentum fluxes through the moving surface are F+v*P and P+v*F to first order. Equal comoving heat flux and normal pressure match material and radiation regardless of the material rest density.",
+    "hemisphere": "An isotropic outgoing hemisphere has F=c*E/2 and Pr=E/3=2F/(3c), so matching total material pressure to this radiation requires Pgas=0 or an explicit external stress carrier.",
+    "work": "The emitted stationary-frame energy includes pressure work, not only comoving heat. In Phase93 units W=4*pi*R^3*A^4*N*a*P*zeta.",
+    "boundary_limit": "A nonzero maintained gas pressure is an external stress condition, not an isolated material-vacuum interface. A small p*dV/heat ratio does not prove a charge error bound.",
+    "scope": "Local linear Lorentz flux and moment identities. This is not yet a solved moving atmosphere, boosted ray history or final scalar charge."
+  },
+  "bindings": {
+    "verification/def_native_wave_collocation.py": "131c9843872652c587d39bb93c10217e5047fb1b126922df47225006abfada51",
+    "verification/def_native_coupled_readjustment.py": "2b619c1e5be68e016b4e05a7ce8879b6cb3de72d42cc8c8804f4a048dbd5a6da",
+    "outputs/direct-eos-gr33/def-native-coupled-readjustment/inputs.npz": "8f9fdcb82f703ebdc2e24683a98f966a7c926d797a551ae27e83f8bd9d4d99e2",
+    "outputs/direct-eos-gr33/def-native-coupled-readjustment/coefficients.npz": "0a078ab8f8d7de512b92620141f9a781f7cfa4eb947392b6a795181c24a451a0",
+    "outputs/direct-eos-gr33/def-native-coupled-readjustment/resolved-result.json": "6419738be9ea120ee94ba2ae994a231c745adc0c71b6be1fdac9f150b444ada0",
+    "outputs/direct-eos-gr33/def-native-whole-star-match/background.npz": "07cf1bdca40788799b7aea67273e73fafb5bda615103bdd73aac38bc020a5acf"
+  }
+}

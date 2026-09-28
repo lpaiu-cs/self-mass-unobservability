@@ -1,0 +1,14 @@
+{
+  "classification": "Counterexample candidate",
+  "channels": [
+    "r_f18_wk_o18",
+    "r_o18_pa_n15",
+    "r_o18_pg_f19",
+    "r_n15_ap_o18",
+    "r_f19_gp_o18"
+  ],
+  "method": "Retain the entire explicit 26-species network and set each named rate factor to 0.5 in turn. Use the same frozen four native EOS auxiliary inputs at T and T exp(plus/minus 5e-5). Twice the full-minus-halved difference isolates a rate direction while preserving the full network context.",
+  "checks": "Reconstruct the O18 vector component and its analytic/finite-difference temperature derivative. Do not assume that channel heat or weak Q is additive until checked.",
+  "h": 5e-05,
+  "reference_manifest_sha256": "cfcd8224f9eb33c98e0f3f07ed590af107c62a84aa69f52232750d7c81bfe5e4"
+}

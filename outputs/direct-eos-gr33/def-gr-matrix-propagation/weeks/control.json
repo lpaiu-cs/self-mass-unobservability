@@ -1,0 +1,39 @@
+{
+  "classification": "Proven",
+  "symbolic_identity_passed": true,
+  "identity": "Laplace[exp((sigma-beta)t) L_n(2 beta t)] = (s-sigma-beta)^n/(s-sigma+beta)^(n+1)",
+  "numerical_classification": "Counterexample candidate",
+  "oscillator_errors": {
+    "3.0": [
+      5.740099645601404e-09,
+      3.084033028954991e-12,
+      3.028327588694424e-12
+    ],
+    "50.0": [
+      2.9735936088269967e-08,
+      1.587942830613004e-11,
+      1.5497924666686702e-11
+    ],
+    "300.0": [
+      0.00010908565579390917,
+      1.909422327282112e-11,
+      1.8492592711045336e-11
+    ],
+    "600.0": [
+      1.5021777064768036,
+      7.427599112851027e-06,
+      4.992441399613908e-11
+    ],
+    "800.0": [
+      4.787336710959625,
+      0.011820830901019002,
+      2.8891445442644215e-09
+    ],
+    "2000.0": [
+      260.1606272260865,
+      93.74864139018457,
+      5.271839896861511
+    ]
+  },
+  "unresolved_high_frequency_control": "omega2000 remains unresolved; never claim a uniform all-mode guarantee."
+}

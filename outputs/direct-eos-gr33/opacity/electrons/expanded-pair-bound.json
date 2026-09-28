@@ -1,0 +1,13 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "original_bound_sha256": "bbc65278ddceef33ba343a7e0f870314058f441925a552d991c2f98a85e2247b",
+  "domain": {
+    "eta_minimum": -50,
+    "beta_positive": true,
+    "beta_maximum": ".006"
+  },
+  "maximum_total_vs_net_count_relative_difference": "[9.2395513808538720707558651528254677642103400560291773051352342041e-102, 9.2395513808538720707558651528254677642103400560291773051359732714e-102]",
+  "derivation": "Apply the already proved ideal-gas inequality 2r/(1-r), r<=exp(-eta-2/beta)+exp(-2eta-2/beta), to this separately declared larger box.",
+  "scope": "Conditional ideal-pair number bound only. Preserve the original smaller-box failure and all original scientific gates. No interacting-plasma or derivative certificate is inferred."
+}

@@ -1,0 +1,32 @@
+{"stage": "hydro_pilot_resume", "complete": true, "seconds": 7.182104943000013}
+{"stage": "hydro_production", "complete": true, "seconds": 87.49998446100017}
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/def_retained_native_return.py", line 427, in <module>
+    execute(stage,initialized);initialized=True
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/def_retained_native_return.py", line 404, in execute
+    elif action.startswith('material_'):material(action.endswith('pilot'))
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/def_retained_native_return.py", line 340, in material
+    FunctionType(fn.__code__,dict(fn.__globals__,OUT=MATERIAL,worker=worker,signal=NO_ALARM))()
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_finite_collision_return.py", line 81, in pilot
+    start=time.monotonic();signal.alarm(60);rows=[worker(n,f'pilot-{n}',2) for n in [64,128]]
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_finite_collision_return.py", line 81, in <listcomp>
+    start=time.monotonic();signal.alarm(60);rows=[worker(n,f'pilot-{n}',2) for n in [64,128]]
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_finite_collision_return.py", line 72, in worker
+    configure();start=time.monotonic();m=Material(128,n);row=m.run(n,label,limit,restart)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_finite_collision_return.py", line 12, in run
+    class Material(old.Material):
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_stage_aligned_material.py", line 45, in end_rhs
+    try:return self.rhs(t,z)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/def_retained_native_return.py", line 109, in rhs
+    r,l,dt=finite_rhs(self,t,z,probe);j,f,_,_=self.fields(t)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/def_retained_native_return.py", line 12, in rhs
+    CURRENT=ROOT/'native-retained-completion'; EV=CURRENT/'evolution'
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_compensated_finite_return.py", line 3, in raw
+    from types import FunctionType,MethodType,SimpleNamespace
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_material_response.py", line 59, in geometry
+    uf=interp(u);lf=interp(lam);df=interp(aden)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_material_response.py", line 58, in <lambda>
+    u,ell,lam,aden,ap=field;interp=lambda v:np.interp(self.rEf,self.rE,v)
+  File "/home/lpaiu/.local/lib/python3.10/site-packages/numpy/lib/_function_base_impl.py", line 1642, in interp
+    return interp_func(x, xp, fp, left, right)
+TypeError: Cannot cast array data from dtype('float128') to dtype('float64') according to the rule 'safe'

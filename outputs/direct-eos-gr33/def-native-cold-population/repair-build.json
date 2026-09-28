@@ -1,0 +1,104 @@
+{
+  "classification": "Counterexample candidate",
+  "seconds": 3.5231255610000005,
+  "receipts": [
+    {
+      "command": [
+        "gfortran",
+        "-cpp",
+        "-DUSINGDLL",
+        "-Dfree_eos_EXPORTS",
+        "-O3",
+        "-DNDEBUG",
+        "-O3",
+        "-fPIC",
+        "-I/home/lpaiu/work/direct-eos-gr33/native-cold-population",
+        "-I/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src",
+        "-I/home/lpaiu/work/direct-eos-gr33/molecular-spectral/source/src",
+        "-c",
+        "mod_excitation.f90",
+        "-o",
+        "mod_excitation-fixed.o"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "gfortran",
+        "-shared",
+        "-Wl,-soname,libfree_eos_native_cold_fixed.so",
+        "/home/lpaiu/work/direct-eos-gr33/native-ion-closure/mod_eos_calc.o",
+        "mod_excitation-fixed.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_fermi_dirac_integrator.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_bfgs.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_molecular_hydrogen.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_pi_fit.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_ionization_data.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_poly_sum.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_nuvar.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_free_eos.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_statistical_weight_data.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_free_eos_types.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_free_eos_detailed.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_coulomb.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_pi.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_eos_bfgs.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_fermi_dirac.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_free_eos_constants.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_helium1_data.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_exchange.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_aux_scale.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_free_eos_debug.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_lapack.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_pl.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_excitation_block.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_isotopic_mass_data.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_flow_data.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_info_data.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_eos_jacobian.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_diagnostics.f90.o",
+        "-llapack",
+        "-lblas",
+        "-o",
+        "/home/lpaiu/work/direct-eos-gr33/native-cold-population/libfree_eos_native_cold_fixed.so"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "gfortran",
+        "-O2",
+        "-fPIC",
+        "-shared",
+        "-I/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src",
+        "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-radiation-eos-split/gas-bridge.f90",
+        "-L/home/lpaiu/work/direct-eos-gr33/native-cold-population",
+        "-Wl,-rpath,/home/lpaiu/work/direct-eos-gr33/native-cold-population",
+        "-lfree_eos_native_cold_fixed",
+        "-o",
+        "/home/lpaiu/work/direct-eos-gr33/native-cold-population/fixed/gas.so"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "gfortran",
+        "-O2",
+        "-fPIC",
+        "-shared",
+        "-I/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src",
+        "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-cold-population/diagnostic-bridge.f90",
+        "-L/home/lpaiu/work/direct-eos-gr33/native-cold-population",
+        "-Wl,-rpath,/home/lpaiu/work/direct-eos-gr33/native-cold-population",
+        "-lfree_eos_native_cold_fixed",
+        "-o",
+        "/home/lpaiu/work/direct-eos-gr33/native-cold-population/gas-fixed-verbose.so"
+      ],
+      "returncode": 0
+    }
+  ],
+  "source_sha256": "a5428350d1b599ff34fa4351631a1f8f2073b58d487053faf5416043290fe6c6",
+  "library_sha256": "e90740449c17d732fa1e3dee43e00dea7176652468d28211b9bb43f9ea7ada65",
+  "bridge_sha256": "e352a282d67e51e1cc091536d71bd2cf25b4e1849ff8fae4d1a8d30e6470e72a",
+  "intervention": "Parenthesize the molecular mu*qstarx/qstar derivative like the already-stable sibling atomic derivatives. Do not alter partitions, affinities, derivatives or solver thresholds."
+}

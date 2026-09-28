@@ -1,0 +1,51 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Resolve the warm collision-moment quadrature failure by an exactly reweighted incoming-energy proposal. No physical kernel, EI matrices, state, event count, basis order or acceptance threshold changes.",
+  "proposal": "Equal mixture of the original truncated FD-logistic density and Gamma(shape=8,scale=1.5) truncated to the same 0..eta+40 domain. Fixed before the new results; bounded density ratio <=2 for each incoming particle.",
+  "bindings": {
+    "verification/def_electron_warm_quadrature.py": "a77214cba57a36e1155ea85a3472f3afa4bebc3919ebb6bb79c5822552fea4e6",
+    "verification/def_ionic_structure_transport.py": "cdec1f55bf0c9104e94124423c1fdd750bf254104ef92976684e01e13c4454b2",
+    "outputs/direct-eos-gr33/def-ionic-structure-transport/plan.json": "9ad08b1a024bdedddac55da3f0ee6c7925efa9529ab434e56517809576c3c749",
+    "outputs/direct-eos-gr33/def-ionic-structure-transport/result.json": "e78e59f275a359eeb0ab30de91f00f31da93e3fbff40baa168cb834226031c5d",
+    "outputs/direct-eos-gr33/def-ionic-structure-transport/cell-1722.npz": "a05300fb6c034219c35645cd8c8635859f0c7df42fffe443213abb7df6dca446",
+    "outputs/direct-eos-gr33/def-ionic-structure-transport/cell-2000.npz": "a7a9120e66b9492d6b27efafa3378bd730a5915f1954ffb6896b39ffdfd141c4",
+    "outputs/direct-eos-gr33/def-ionic-structure-transport/cell-2500.npz": "81404658cb35366d972859358bce8711cf3e2169624a7a93d615fa0a2e810fd4",
+    "outputs/direct-eos-gr33/def-ionic-structure-transport/cell-2800.npz": "92295a80d267dc281ff7962ff6823c56cb5df55ac7a5ea5f9a8edfa4988c50ca",
+    "outputs/direct-eos-gr33/def-ionic-structure-transport/cell-3000.npz": "4a7621d9ed5f428587e3fb9727384bdf1096b467bfda742cfa18401dba697bc2"
+  },
+  "cells": [
+    1722,
+    2000,
+    2500,
+    2800,
+    3000
+  ],
+  "seeds": [
+    5501,
+    5502,
+    5503,
+    5504
+  ],
+  "powers": [
+    15,
+    17
+  ],
+  "basis": [
+    5,
+    7
+  ],
+  "gates": {
+    "quadrature": 0.03,
+    "basis": 0.02
+  },
+  "budget": {
+    "pilot_cells": 1,
+    "production_cells": 4,
+    "hard_seconds": 90,
+    "workers": 1,
+    "BLAS_threads": 1,
+    "new_native_calls": 0,
+    "new_stellar_steps": 0,
+    "automatic_expansion": false
+  }
+}

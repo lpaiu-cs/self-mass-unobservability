@@ -1,0 +1,39 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "729aca0",
+  "previous_manifest_sha256": "0238d544b38e7f782d0453f6f6dd1298c00fbc463064b575aaca03cebae62ad4",
+  "profile_sha256": "c3beb8966c1b762dd16da36e8db111440819c2756931a5ec1d89df755daac8fd",
+  "closure": "Original cell baryon masses and renormalized non-F isotope fractions are fixed. Each cell has constant composition and entropy per baryon gram, defined by FreeEOS at its original P,T. Pressure, density, temperature and radius adjust by TOV. Piecewise-constant material data are the declared model, not a smoothed stellar evolution solution.",
+  "entropy_reference": "FreeEOS entropy at the source P,T,X, multiplied by C_X. This is not certification of the original MESA blended-EOS absolute entropy.",
+  "primary": "Fixed original baryon mass; central pressure, optical radius and gravitational mass determined by centre/surface matching.",
+  "secondary": "Only if required, separately register and solve a family with all cell baryon masses scaled together to match gravitational mass. Preserve the primary result; the scaled family is not the same original material.",
+  "boundary": "Original nonzero optical pressure; append the previously declared finite gamma=5/3 mathematical atmosphere and report its additional baryon budget separately. No atmosphere transport is solved.",
+  "entropy_table": {
+    "logP_offset": [
+      -1.0,
+      1.0
+    ],
+    "initial_points": 17,
+    "refinement_points": 33
+  },
+  "checks": [
+    "EOS entropy inversion and independent finite-difference heat capacity",
+    "Cell-preserving inventories and entropy",
+    "RK4 step subdivision 1,2,4",
+    "Direct EOS evaluation independent of the lookup tables",
+    "Symbolic baryon-coordinate TOV identities"
+  ],
+  "tolerances": {
+    "interface": 1e-08,
+    "GR_mass_relative": 1e-08,
+    "entropy_relative": 1e-10
+  },
+  "not_solved": [
+    "reactions",
+    "thermal_transport",
+    "rotation",
+    "stability",
+    "fluid_scalar_response",
+    "observational_inference"
+  ]
+}

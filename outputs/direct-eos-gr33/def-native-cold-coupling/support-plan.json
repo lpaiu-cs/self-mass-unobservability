@@ -1,0 +1,27 @@
+{
+  "classification": "Counterexample candidate",
+  "decision": "Apply the demonstrated native arithmetic repair to the original failed fine evolution. Extend only cold constitutive and log optical support; keep every old node and use exactly the old interpolators at and above240K.",
+  "new_temperature_K": [
+    80,
+    120,
+    170,
+    200
+  ],
+  "new_states": 136,
+  "reused_states": 918,
+  "budget": {
+    "native_calls": 1000,
+    "seconds": 60,
+    "CPU_threads": 1,
+    "memory_GB": 1
+  },
+  "forecast": "58 constrained native calls took2.10s.136 states at4-6 calls/state imply20-30s;60s cap includes serialization. Dense cold states remain unmeasured.",
+  "gates": {
+    "constitutive": 0.002,
+    "spectrum": 0.002,
+    "population": 1e-12,
+    "relative_H": 1e-08
+  },
+  "stop": "Stop on native or independent control failure. No floor clamp, further automatic support extension, or change to original evolution paths.",
+  "source_sha256": "3371f47cdd0753c1c1fb384c4668efeadf56b306a8255cb7cd71aa2f29049a29"
+}

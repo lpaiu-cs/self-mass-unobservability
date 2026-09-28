@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_thermal_native.py", line 62, in <module>
+    globals()[action]()
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_thermal_native.py", line 51, in coarse
+    def coarse():FunctionType(prior.evolve.__code__,dict(prior.evolve.__globals__,OUT=OUT,initialize=initialize,factory=factory))(64)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_precise_conserved_native.py", line 56, in evolve
+    def evolve(n):FunctionType(prior.evolve.__code__,dict(prior.evolve.__globals__,OUT=OUT,initialize=initialize,factory=factory))(n)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_integer_native.py", line 91, in evolve
+    def evolve(n):FunctionType(prior.prior.evolve.__code__,dict(prior.prior.evolve.__globals__,OUT=OUT,initialize=initialize,factory=factory))(n)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_precise_momentum.py", line 110, in evolve
+    ns=dict(old.evolve.__globals__,OUT=OUT,initialize=initialize,current_factory=factory);exec(compile(source,__file__,'exec'),ns);ns['evolve'](n)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_precise_momentum.py", line 14, in evolve
+    
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_postfloor_native.py", line 37, in evolve
+    claim='Continue the remaining actual coupled period from114accepted substeps with Newton proposals initialized from the accepted post-floor gas.',
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/balance_full_native_krylov.py", line 42, in run
+    import sympy as sp
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_postfloor_native.py", line 27, in saved_stage
+    assert np.array_equal(cells,[260,261]) and not np.any(q['g'][cells])
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_native_flux_precision.py", line 39, in stages
+    forecast='Independent high evaluation of two actual stages costs1.28s after setup.658saved stages imply about7minutes plus setup, with20minute prefix cap.200used1659s for8failed proposals of one step. Allow2/3hours for5coarse/16fine remaining substeps; later/fine costs remain uncertain, not an ETA. No accepted prefix reintegration.',
+AssertionError: ('True native joint Radau equation', [{'relative': 2.2689940444818773e-06, 'moments': [1.4640409269142835e-17, 1.2721399274786075e-18, 6.770771333565226e-20, 3.386504807261242e-20]}, {'relative': 1.0872305160145953e-11, 'moments': [1.4649440577590366e-17, 1.2736268631394821e-18, 2.5106156514618426e-20, 3.023577137111762e-20]}, {'relative': 5.153964437881836e-12, 'moments': [1.4649440577590366e-17, 1.2736271578303879e-18, 2.5106156514639934e-20, 3.023577137111763e-20]}, {'relative': 9.219684962588887e-12, 'moments': [1.4649440577590366e-17, 1.2736276931445979e-18, 2.5106156514665603e-20, 3.023577137111764e-20]}, {'relative': 7.379367113348992e-12, 'moments': [1.464944057759037e-17, 1.2736281180837967e-18, 2.510615651467578e-20, 3.0235771371117653e-20]}, {'relative': 6.914765002849603e-12, 'moments': [1.4649440577590366e-17, 1.2736281000486189e-18, 2.5106156514675115e-20, 3.023577137111766e-20]}, {'relative': 1.0872290434343002e-11, 'moments': [1.464944057759037e-17, 1.2736289340248566e-18, 2.5106156514669175e-20, 3.0235771371117665e-20]}, {'relative': 1.1524601464714174e-11, 'moments': [1.4649440577590366e-17, 1.273628797150792e-18, 2.510615651468795e-20, 3.0235771371117665e-20]}])

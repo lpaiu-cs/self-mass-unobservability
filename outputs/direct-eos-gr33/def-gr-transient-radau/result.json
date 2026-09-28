@@ -1,0 +1,51 @@
+{
+  "classification": "Counterexample candidate",
+  "actual_GR_fluid_scalar_metric_evolved": true,
+  "passed": false,
+  "comparisons": {
+    "velocity_mass_RMS_m_s": {
+      "time_previous": 0.0001597945259846237,
+      "time_last": 0.0002043935087033558,
+      "order": -0.3551313914094861,
+      "coefficients": 0.004003245711230728,
+      "outer": 4.762098686519541e-16
+    },
+    "scalar_mass_RMS": {
+      "time_previous": 0.0001367844276606819,
+      "time_last": 5.5785841780646756e-05,
+      "order": 1.2939330712307946,
+      "coefficients": 0.00010523233588199406,
+      "outer": 1.4290231232389528e-14
+    },
+    "old_interface_velocity_RMS_m_s": {
+      "time_previous": 0.003326962180914553,
+      "time_last": 0.0008522943078356241,
+      "order": 1.9647818643894432,
+      "coefficients": 9.740369805155494e-14,
+      "outer": 1.7409061313950836e-16
+    },
+    "new_interface_velocity_RMS_m_s": {
+      "time_previous": 7.737130666859847e-06,
+      "time_last": 6.752116223736441e-06,
+      "order": 0.19645890142303696,
+      "coefficients": 2.6992247104084752e-09,
+      "outer": 2.9329637357745444e-16
+    }
+  },
+  "arithmetic_differences": {
+    "velocity_mass_RMS_m_s": 2.4701296841208584e-13,
+    "scalar_mass_RMS": 1.039909956469829e-12,
+    "old_interface_velocity_RMS_m_s": 2.400064421264228e-13,
+    "new_interface_velocity_RMS_m_s": 3.261459957000748e-13
+  },
+  "seconds": 60.27144805499999,
+  "max_heat_balance": 3.551145923447293e-18,
+  "max_linear_residual": 1.939050612537114e-19,
+  "memory_GB": 0.368668672,
+  "original_same_input_numerical_failure_resolved": false,
+  "original_complete_input_failure_resolved": false,
+  "full_temperature_feedback": false,
+  "photon_transport": false,
+  "whole_star_heat_closed": false,
+  "full_dynamic_charge_solved": false
+}

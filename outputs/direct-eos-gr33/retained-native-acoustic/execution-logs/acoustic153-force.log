@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/def_retained_native_acoustic.py", line 266, in <module>
+    if __name__=='__main__':globals()[sys.argv[1]]()
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/def_retained_native_acoustic.py", line 221, in force
+    result=ns['hydro_sources'](False,list(range(17)),'force')
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/def_retained_native_acoustic.py", line 88, in hydro_sources
+    native.prefix=dict(T=np.array([np.exp(t)]),log_density_ratio=np.array([x]),fields=fields[None])
+AssertionError

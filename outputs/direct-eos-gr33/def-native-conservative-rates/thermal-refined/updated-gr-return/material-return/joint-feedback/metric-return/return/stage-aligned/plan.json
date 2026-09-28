@@ -1,0 +1,30 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "Original material pressure time comparison3.17399percent exceeds2percent. Energy/H state comparisons pass. The unchanged primitive-pressure probe passes, so no arbitrary pressure rescaling or relaxed gate is allowed.",
+  "defect": "At a stored source knot, the original SSP closing stage uses searchsorted right and consumes the next interval derivative. The starting stage needs the right interval; the closing stage needs the left interval. Metric-work and cumulative photon-transfer slopes are discontinuous there.",
+  "repair": "Change only closing-stage interval selection and canonical-knot roundoff alignment. Keep the same shared fluxes,SSP2,CFL,macro clocks,paths and gates. Reuse all photon and GR histories. Preserve the failed material/source files.",
+  "budgets": {
+    "pilot_remaining_seconds": 38,
+    "production_remaining_seconds": 279,
+    "source_remaining_seconds": 51,
+    "GR_seconds": 120,
+    "CPU_processes": 3,
+    "threads_each": 1,
+    "total_virtual_GiB": 6
+  },
+  "forecast": "Use original completed Phase135 late-CFL counts and fresh concurrent prefixes. Require2x forecast within the original350s budget remainder. No automatic resolution or period increase.",
+  "stop": "Stop at failed repaired comparison or remaining budget. Do not proceed to GR on a failed source result.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_stage_aligned_material.py": "0bfdd1f79ccdbc2a41840d8f6e4ad53ef7c7c6249af7770b02cd6da63eeb5992",
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_feedback_metric_return.py": "46e9df0869340994cad010b38c6f43be59a425969f720e6ccc03999901a9e57f",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_feedback_metric_return.py": "d1eee97bcbfae9c6422c4401b4bc2406ca5a075758af09848cc797f5a387a001",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/metric-return/return/production.json": "b1873b01c66b32b79a8dcadd4f1fd231a210196ccf60a779cc393eefb9767841",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/metric-return/return/sources.json": "6d157fc164a794d131a2deaf10d6f076edfaf1b1621d7a597bf65cd6c7840570",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/metric-return/return/plan.json": "ecfd2671139b14abf45b854d40ef63615baf72a71a50b301142598cf0b077c0d",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/metric-return/response/result.json": "8fbd88f0e1c9cdf78173bda59317ea41b065e366852491600dadf8b240ff2080",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/metric-return/return/stage-aligned/first-stage-producer.py": "6fa48df7c6de1c96a39caf76fe88d301041c2243f0889d5593c23adbd3660628",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/metric-return/return/stage-aligned/first-plan.json": "2d79ad657493aa4becc3a42dfcfa6fa5f220ba01af89acb6fc3a8d904ba1679d",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/metric-return/return/stage-aligned/forcing-jump.json": "e0358b2ea82f7a76d99c707186d76fbf81e114a8c48c456a29114b2c6d046e14"
+  },
+  "normalization_repair": "The probe-size maximum included zero-weight neighboring states. Left/right representations of the same knot therefore changed the native probe amplitude. Ignore zero-weight states in that maximum; preserve the original failed1e-8 native-jump check. This does not change the exact directional operator or any physics gate."
+}

@@ -1,0 +1,40 @@
+{
+  "classification": "Proven",
+  "steps": 2,
+  "passed": true,
+  "rows": [
+    {
+      "step": 0,
+      "exact_frozen_global_energy_ratio_upper": "1.640965837498705825531141555697763138123E-16",
+      "exact_frozen_local_scaled_residual_upper": "6.019051669736641700909368422990151637282E-17",
+      "exact_frozen_two_four_point_difference_ratio_upper": "1.190987965791091600362520241990904567566E-10",
+      "exact_frozen_entropy_nonnegative": true,
+      "post_result_corruption_control_rejected": true
+    },
+    {
+      "step": 1,
+      "exact_frozen_global_energy_ratio_upper": "2.186091630894182372768016964171195479478E-17",
+      "exact_frozen_local_scaled_residual_upper": "2.885639622968141918532832154828199746113E-17",
+      "exact_frozen_two_four_point_difference_ratio_upper": "1.979683484150919892434820563050661552397E-11",
+      "exact_frozen_entropy_nonnegative": true,
+      "post_result_corruption_control_rejected": true
+    }
+  ],
+  "exact_frozen_path_global_energy_ratio_upper": "7.159308822931544308366212418992772505199E-17",
+  "final_stored_energy_and_temperature_increment_replayed": true,
+  "no_native_continuous_or_physical_certificate": true,
+  "bindings": {
+    "outputs/direct-eos-gr33/gr-caloric-increment/path-2.json": "8c5c1fc9b3c1440de886b80bd176a631037783749b8b9fb60b7e5e7974ba428f",
+    "outputs/direct-eos-gr33/gr-caloric-increment/path-2.npz": "223d2d07bdc08d805edf47b4b370256f875cedaf74be1a1607dc811751091ef5",
+    "outputs/direct-eos-gr33/gr-nonlinear-thermal/duration.json": "f6dc1171e72525bfb375620a999f777f1b49911c7380836427188176e6fa6903",
+    "outputs/direct-eos-gr33/gr-caloric-increment/endpoint-2-0.npz": "4b3e72d1420e77766c793cfdb1a923d2a5a4d193f18ff91679f77d8b31666d30",
+    "outputs/direct-eos-gr33/gr-caloric-increment/endpoint-2-1.npz": "c184fe36df8a6e78a2de88c715c5b3bbc508b99dcea03562f09f2942f3423789",
+    "outputs/direct-eos-gr33/gr-caloric-increment/path-1.npz": "f4d48fbc50b66f85306fd240533978f280d71a6e6bbe441d983e8aa4511553d6"
+  },
+  "finite_time_refinement": {
+    "classification": "Counterexample candidate",
+    "exact_saved_logT_difference_upper": "0.001052427219502866280465003256949785281905",
+    "passed": false,
+    "rigorous_time_error_enclosure": false
+  }
+}

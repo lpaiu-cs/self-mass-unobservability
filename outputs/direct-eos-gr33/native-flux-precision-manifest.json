@@ -1,0 +1,151 @@
+{
+  "classification": "Counterexample candidate",
+  "controller": {
+    "state": "failed",
+    "action": "coarse",
+    "completed": [
+      {
+        "action": "prefix",
+        "returncode": 0
+      },
+      {
+        "action": "coarse",
+        "returncode": 1
+      }
+    ],
+    "elapsed_seconds": 4626.854142013
+  },
+  "accepted_actual_steps": {
+    "64": 115,
+    "128": 215
+  },
+  "full_horizon_completed": false,
+  "original_failures_preserved": true,
+  "high_precision_actual_native_flux": true,
+  "actual_same_joint_solution_GR_computed": false,
+  "gr_controller": null,
+  "gr_fields": null,
+  "physical_final_charge_solved": false,
+  "self_GR_return_closed": false,
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false,
+  "actual_result": null,
+  "actual_failure": {
+    "classification": "Counterexample candidate",
+    "error": "AssertionError(('Four-moment linear residual', 1.7944029943355525e-14, [np.longdouble('2.0310400592099698016e-19'), np.longdouble('2.5810319085546680777e-20'), np.longdouble('4.6655187390485645297e-21'), np.longdouble('2.6807706434439786844e-30')]))",
+    "time": 0.0033271051454934306,
+    "step": 2.6831493108817987e-05,
+    "actual_accepted_steps": 115,
+    "macro_index": 62,
+    "sub_index": 0,
+    "last_accepted_inputs_saved": true,
+    "serialized_substep_restart_validated": false,
+    "final_charge_conclusion": "unadjudicated"
+  },
+  "sha256": {
+    "verification/continue_postfloor_native.py": "25138c17cb3cfb19af96e0068a7d7877441eae209b7d92564011ba86d4d97b93",
+    "verification/precise_native_baryon.py": "967d24417b358449c7731d65bd0cb70f7a55ede38bdac9ff83f7a152d16f09e5",
+    "verification/continue_native_flux_precision.py": "22896147dbd8b961d39c258d73955c2770869d5031583bf17e547a146a3ebe5c",
+    "notes/REQUEST200_202_ACTUAL_PRECISE_NATIVE_FLUX_KO.md": "5cc6d9d90b4a26f91ccc3ab0bc0741dc1fd10e780c7ea0635e0cb7e9d4c7c8cb",
+    "docs/model-definition.md": "d40a93b0515e6b9bfa14a360e8b369fe234839bf13cd26e5b05493a8ed0327d7",
+    "docs/observable-targets.md": "2a5a111b8397534a2d421f6412c01ba1fe99e586cf930eb2076cba96a34ed3a7",
+    "docs/adiabatic-limit.md": "294c9befefc0165cc9a55ea273a0158863b46aa6485d0233a2e9eba68b0b1bb9",
+    "docs/nonadiabatic-regime.md": "3c079292013044564df8a2da0caa6a888d35ac4e469b7809eac03e4e599dc835",
+    "docs/failure-ledger-dynamic-chi.md": "6b76dfb1e5330557ee5ad70ef6693694689b15df01ab4c4f532e39566b60f96b",
+    "docs/dynamic-charge-completion.md": "bf0a40974662b9d882fb84b930b2c697207ddbd416a4937a19aeed88d2d11edc",
+    "outputs/direct-eos-gr33/native-flux-precision/final-result.json": "901d33f40c22c6cf2e912187799fdb17d079765e9733ac5656cadb70bb3920dd",
+    "outputs/direct-eos-gr33/native-flux-precision/followthrough-200-producer.py": "c8b293f2ba40b304a16e5afd68aee882c8dd50d314c3aabda6350b08bfe69978",
+    "outputs/direct-eos-gr33/native-flux-precision/followthrough-202-producer.py": "3cd0b2ade7cb160fc15c6e74ce6ef57eb95f1768cc4006b52624d2d3ab647c4b",
+    "outputs/direct-eos-gr33/native-flux-precision/previous-publication-producer.py": "c83b58d55ad5dbf25094c2566a3455fc90359082387d7a45c96b1b977f41bba8",
+    "outputs/direct-eos-gr33/native-flux-precision/publication-helper.py": "f5153c2b02c6b171dcb35b2d7028cf6666b3ac688f9cc6dc8b0e105c1dd881aa",
+    "outputs/direct-eos-gr33/native-flux-precision/publication-producer.py": "8d56854cebe0da7f423ad2370b2f9402145dcb2153003b7f7b6727aa4b4b0a1d",
+    "outputs/direct-eos-gr33/native-flux-precision/publication.json": "d0d4fa3369a3ae0013f43797dbc204ce58a94be7d96ca6f354890fd958cc3a4b",
+    "outputs/direct-eos-gr33/native-flux-precision/native-energy-coordinate201-work/coordinate-comparison.npz": "4a226450948afefb5c331e81ac99202cd70dce84b39972c507fa1e88be9d03bb",
+    "outputs/direct-eos-gr33/native-flux-precision/native-energy-coordinate201-work/coordinate-producer.py": "3ad945b5b30ac82d30794b76ea584de3edd60214f7904d659a0e4ac0921f6839",
+    "outputs/direct-eos-gr33/native-flux-precision/native-energy-coordinate201-work/failed-high-1-kernel.py": "cff6bf6fd375ddac2dfc89970d405fffe0b1998a14844105f61d9b981299a6ae",
+    "outputs/direct-eos-gr33/native-flux-precision/native-energy-coordinate201-work/failed-high-2-kernel.py": "5a2c3267a652d5445dd42c0183bafc6aca2396e06b5172f47cb0b9bd1e604701",
+    "outputs/direct-eos-gr33/native-flux-precision/native-energy-coordinate201-work/failed-high-3-kernel.py": "bc61a5fcddd65cc04da8a7270eff17b1ad0d49f8ce3c8a8b6f33e97d1597957f",
+    "outputs/direct-eos-gr33/native-flux-precision/native-energy-coordinate201-work/failed-setup-producer.py": "213bbc94a9a95a12b4e839693fe83672568fc65dfc40b5e2fac2e2b4fa9f96fd",
+    "outputs/direct-eos-gr33/native-flux-precision/native-energy-coordinate201-work/fast-comparison.npz": "6fb8348ded1080fd8d548df41864c1ca0ed624f0f17c73f18652468be79ce7a1",
+    "outputs/direct-eos-gr33/native-flux-precision/native-energy-coordinate201-work/fast-kernel.py": "eba7a73e375f5f9da3463a05b68df36f66fc8a95486504b67a76738e801a78ea",
+    "outputs/direct-eos-gr33/native-flux-precision/native-energy-coordinate201-work/fast-producer.py": "af1707faf18c059936bb759cdcb2140c07a100c8e6febce977a17239167c3458",
+    "outputs/direct-eos-gr33/native-flux-precision/native-energy-coordinate201-work/fast-result.json": "e94431b24f4a6ccd536ef546036cac565c33673de49212556ec814d0816706f8",
+    "outputs/direct-eos-gr33/native-flux-precision/native-energy-coordinate201-work/high-comparison.npz": "ca97815db17ef6c20f488e2479ba5c12c6020ee17ebc1e510e5b163093b1fb55",
+    "outputs/direct-eos-gr33/native-flux-precision/native-energy-coordinate201-work/high-kernel.py": "9227007bfc9a55111f773a22a05be326c6d6f5c94be459f93ab0528bcf1dbabe",
+    "outputs/direct-eos-gr33/native-flux-precision/native-energy-coordinate201-work/high-producer.py": "163e73ff714ee215065280b30ef1c64291fad8255c1d9e8f9accc23414ba1465",
+    "outputs/direct-eos-gr33/native-flux-precision/native-energy-coordinate201-work/high-result.json": "46f8bb1e358925cf210c504a6cc57552d2f1b618fa51601eec7bd12ae7fe41cf",
+    "outputs/direct-eos-gr33/native-flux-precision/native-energy-coordinate201-work/result.json": "84d0913ed964e1074bc44ac096595cc5b8d34ce2fa0ea8748aa842882a7700c8",
+    "outputs/direct-eos-gr33/native-flux-precision/native-energy-coordinate201-work/roundoff-comparison.npz": "ec635980bdba1b54ea9f35151f920007fe2bef38d64de1e52c6de5ee90cd0722",
+    "outputs/direct-eos-gr33/native-flux-precision/native-energy-coordinate201-work/roundoff-producer.py": "7a474c48e3a0102800182b3a3e5e92a6219a2862ba2d19adceb0c38618bbf952",
+    "outputs/direct-eos-gr33/native-flux-precision/native-energy-coordinate201-work/roundoff-result.json": "be965e5c584156179e81129790ab4338f20b24abc125a2c191f5d7652a19f659",
+    "outputs/direct-eos-gr33/native-flux-precision/native-flux-precision202-work/check-receipt.json": "eec1f0d134cfbb4b1235df0cce3183aca9db20d3e0b0342c91a05b527377c454",
+    "outputs/direct-eos-gr33/native-flux-precision/native-flux-precision202-work/coarse-receipt.json": "91d6edd802c649a80b4bb2177f740e5a6a33beee99b9f1372f144a2544ef7b92",
+    "outputs/direct-eos-gr33/native-flux-precision/native-flux-precision202-work/controller-start.json": "2eda5dd674d8755891aa6d4575f01d68def1ade1528866c041d4a356dcdbeed6",
+    "outputs/direct-eos-gr33/native-flux-precision/native-flux-precision202-work/controller-status.json": "a8c977ccc1448b91c6d5de4d9ded2721d56e2fa0f98050bcb01aff9e705dd805",
+    "outputs/direct-eos-gr33/native-flux-precision/native-flux-precision202-work/controller.stderr.log": "1fbb307fb994edeb9ebc36b3ec632cf8898f46acf363e955523ac1fff4834a1f",
+    "outputs/direct-eos-gr33/native-flux-precision/native-flux-precision202-work/controls-receipt.json": "8d80ab65ec7a227e0a2a00a8278d2ad6b7e0581abd7fa29d35e18c363c34901b",
+    "outputs/direct-eos-gr33/native-flux-precision/native-flux-precision202-work/controls.json": "c6ca103f45e34ad969d634e970f50a10b337cc40e952d53be43dd8df2b0f2b58",
+    "outputs/direct-eos-gr33/native-flux-precision/native-flux-precision202-work/expanded-high-native-stage.py": "c0ec606e6c8245e68001b549a2cb4b14e101a57d89501e31a192abd75f4d56e5",
+    "outputs/direct-eos-gr33/native-flux-precision/native-flux-precision202-work/failed-linear-64.npz": "c92c0ec151da65cb4f6b1c60c162d8bf515c7927697e3c67269997542c442c8c",
+    "outputs/direct-eos-gr33/native-flux-precision/native-flux-precision202-work/failure-64.json": "44030bf1a0f58e2db0ef6e228cf77292520218a508e6ba80ea1917b993985a51",
+    "outputs/direct-eos-gr33/native-flux-precision/native-flux-precision202-work/last-accepted-64.npz": "254a9d87b6ca65cce0e10feeda9ac1ab52a91436ee8df7700f9e5e797b863423",
+    "outputs/direct-eos-gr33/native-flux-precision/native-flux-precision202-work/linear-64.json": "917badb1904ae01e4e4c4e25d22c740b4ec652a8baadf5b298e00505d7664407",
+    "outputs/direct-eos-gr33/native-flux-precision/native-flux-precision202-work/plan.json": "1619e412927f20811fbdce24cb03ecb8a451c7bfba22245c603bd875ef1f82bc",
+    "outputs/direct-eos-gr33/native-flux-precision/native-flux-precision202-work/polish.json": "c3ca0f5e7a9ef7a344e11f126b1d619a1d0aa7901cbc152a03d735c14711e6fd",
+    "outputs/direct-eos-gr33/native-flux-precision/native-flux-precision202-work/prefix-128.json": "54e9c8da1976e62e9f1b4a30c0bc00f11228360a26e80b678b18f7caf2a5dcff",
+    "outputs/direct-eos-gr33/native-flux-precision/native-flux-precision202-work/prefix-64.json": "4103ebb8291a9468fa105822155bb0ee37fa33247fcc5677771590c67ba9ccb1",
+    "outputs/direct-eos-gr33/native-flux-precision/native-flux-precision202-work/prefix-progress-128.json": "787899eb15ef8164a13eb113b3d2416a0e724b42d244e034e5f6e4e75be2073e",
+    "outputs/direct-eos-gr33/native-flux-precision/native-flux-precision202-work/prefix-progress-64.json": "ff8e543aef987112ae1ae28999f2ceedf8285c7181a38428821eda3d3234ae2e",
+    "outputs/direct-eos-gr33/native-flux-precision/native-flux-precision202-work/prefix-receipt.json": "c059ebe8eb4396d8eba394d5d495889eac249b07405effec95eadedd8e43cdc2",
+    "outputs/direct-eos-gr33/native-flux-precision/native-flux-precision202-work/prefix-result.json": "bc1320b3ceda2ecd2331c52906ebb01de3e1e0fd2dbf6f2b3ac8eff09a83317c",
+    "outputs/direct-eos-gr33/native-flux-precision/native-flux-precision202-work/prepare-receipt.json": "b9e352fbdb65d46c44ac53b573c2462b028883a363b4f73f6448d7f70d81c69f",
+    "outputs/direct-eos-gr33/native-flux-precision/native-flux-precision202-work/stage-progress-64.json": "6f7d7f5cd97f8e67dfa31e6082dc781ca2e1131c343761275fd3d0cd68aa60f1",
+    "outputs/direct-eos-gr33/native-flux-precision/native-flux-precision202-work/symbolic.json": "eedf976de997b581e94fa0fbdb07ed7958d650b6789ceabfb1cfbcc56fe390e9",
+    "outputs/direct-eos-gr33/native-flux-precision/native-postfloor-continuation200-work/check-receipt.json": "c8dbe2cca9f6b8e24c15e9ef246909cde0a65e3017aef1ceae738cc28531d589",
+    "outputs/direct-eos-gr33/native-flux-precision/native-postfloor-continuation200-work/coarse-receipt.json": "e5b22ba9cc0d1c6fcceb70b1ef08f3e0a76261c8b560c8983f56f3ac7fc734da",
+    "outputs/direct-eos-gr33/native-flux-precision/native-postfloor-continuation200-work/controller-start.json": "44cd87cd1835dfe95ecee4412f6b9ef7cb372d6e19d66486532118868c5dafbf",
+    "outputs/direct-eos-gr33/native-flux-precision/native-postfloor-continuation200-work/controller-status.json": "367c218d70774ce1275114279e2f56b4e399c548e9737818167e45e70fb4ccc2",
+    "outputs/direct-eos-gr33/native-flux-precision/native-postfloor-continuation200-work/controller.stderr.log": "27670efda433271dad19c0b6a8906646239d9ec59b671ed193ecf3a80ebe176b",
+    "outputs/direct-eos-gr33/native-flux-precision/native-postfloor-continuation200-work/expanded-postfloor-evolve.py": "d3481c112f53201040c579e3b954fcb18d9ff1bfdce4ee5657c264c9d5e3c1a6",
+    "outputs/direct-eos-gr33/native-flux-precision/native-postfloor-continuation200-work/failure-64.json": "d2fb0163868478d56ca8a394e2c79685815294c88cb194b3a736a051570a900c",
+    "outputs/direct-eos-gr33/native-flux-precision/native-postfloor-continuation200-work/guide-input.json": "6f8d20383c23517153ba0b1be9ddd9a5fbb8b2ec917569036a391a9adee20d45",
+    "outputs/direct-eos-gr33/native-flux-precision/native-postfloor-continuation200-work/last-accepted-64.npz": "d1efebc7be485ecc3024914bf1125016da3aa5eb50924c4c23a452887a2ae7be",
+    "outputs/direct-eos-gr33/native-flux-precision/native-postfloor-continuation200-work/linear-64.json": "5e31b454bae680507fe72dc612f5002d3959abac65735037188f21747e0d999b",
+    "outputs/direct-eos-gr33/native-flux-precision/native-postfloor-continuation200-work/plan.json": "87f03dba31839eda5da8c7bdf2a4bb3228e4eb262bb166c4c941820a0644051c",
+    "outputs/direct-eos-gr33/native-flux-precision/native-postfloor-continuation200-work/polish.json": "5324b5bac0573a9bb00b78f4035ca2e1234e0ef3a520484c74e25cc6d0ea49b5",
+    "outputs/direct-eos-gr33/native-flux-precision/native-postfloor-continuation200-work/prepare-receipt.json": "fcf5334cd43b18078d3d058f71450a985f3d8b83c00e644501ff77a0bdba7d9e",
+    "outputs/direct-eos-gr33/native-flux-precision/native-postfloor-continuation200-work/rejected-joint-stage.json": "303543b7705f4a3fd3e80dace152f9672894991ad56a9a0dc157bb8b68d624c7",
+    "outputs/direct-eos-gr33/native-flux-precision/native-postfloor-continuation200-work/rejected-joint-stage.npz": "e9c62fe5e00950d38d85588e7d1e4e7d0ab510e3bd1be643504344bbd8e8f0c2",
+    "outputs/direct-eos-gr33/native-flux-precision/native-postfloor-continuation200-work/restart-check.json": "118b628ba6815d85dc20b7b9cb857a4beea7ef6f3a9583f296bf347b5740047f",
+    "outputs/direct-eos-gr33/native-flux-precision/native-flux-precision202-work/sweep-1/photons/resume-check-64.json": "07f377911277dbac77ad7c54c7bc51235d17bb138459e7641955a359ccf868f2",
+    "outputs/direct-eos-gr33/native-flux-precision/native-flux-precision202-work/sweep-1/photons/resume-check-64.npz": "76c0d90b7161dea2113698ae5a0f9000f35368103dee6c80c760e8f80b65ee09",
+    "outputs/direct-eos-gr33/native-flux-precision/native-postfloor-continuation200-work/sweep-1/photons/resume-check-64.json": "c39ba15ef0c34bc004146c9f84358c5b138a678af2020c1bdd1d9e239269f2f8",
+    "outputs/direct-eos-gr33/native-flux-precision/native-postfloor-continuation200-work/sweep-1/photons/resume-check-64.npz": "6d218295623427b415c3e424076c05c17f83a180c180b3af971ee0d683a26be0"
+  },
+  "document_prefixes": {
+    "docs/model-definition.md": {
+      "bytes": 258961,
+      "sha256": "aa0196343c79192b6a076bd005ba8068772b7e65a26032340d168dfcfc105942"
+    },
+    "docs/observable-targets.md": {
+      "bytes": 249635,
+      "sha256": "4675e161e75fcf65b6cc22c2c58acebd33cca805783f010a36ea58c304111c96"
+    },
+    "docs/adiabatic-limit.md": {
+      "bytes": 244221,
+      "sha256": "99c0a22f34581c6e8750d53a769ac76554eb455cbc7fc0213865bac34ede4b2f"
+    },
+    "docs/nonadiabatic-regime.md": {
+      "bytes": 252577,
+      "sha256": "2c69c3c922a17d243e250528bf3254ef3a688b11b46246f9d65bbc70773e3b12"
+    },
+    "docs/failure-ledger-dynamic-chi.md": {
+      "bytes": 289868,
+      "sha256": "70f626ae1c3ba3409ec5bd99bb4686ed113baeb64ffa862fafa6dae0865ea07f"
+    },
+    "docs/dynamic-charge-completion.md": {
+      "bytes": 117912,
+      "sha256": "df1fdd7141dece50b530441a57434e3fc7a4e9208fd846dfda1b98b9a8046648"
+    }
+  }
+}

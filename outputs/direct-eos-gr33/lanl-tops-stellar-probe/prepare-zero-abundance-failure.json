@@ -1,0 +1,6 @@
+{
+  "classification": "Counterexample candidate",
+  "stage": "prepare before any stellar network query",
+  "error": "AssertionError at selected=g.c.Z==z; amount=float(Y[selected].sum()); assert amount>0",
+  "cause": "A fixed stellar state can contain exactly zero abundance for an element. Retain negative-abundance rejection; omit only exactly zero amounts from the submitted element list without renormalization."
+}

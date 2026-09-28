@@ -1,0 +1,30 @@
+         33224 function calls (33160 primitive calls) in 1.716 seconds
+
+   Ordered by: cumulative time
+   List reduced from 157 to 22 due to restriction <22>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+       16    0.162    0.010    1.716    0.107 /mnt/e/lab/self-mass-unobservability/verification/def_gr_full_weeks.py:46(transform)
+      208    0.000    0.000    0.612    0.003 /home/lpaiu/work/nutimo_pilot/request13_deps/scipy/sparse/_base.py:728(__matmul__)
+      208    0.001    0.000    0.610    0.003 /home/lpaiu/work/nutimo_pilot/request13_deps/scipy/sparse/_base.py:597(_matmul_dispatch)
+      176    0.001    0.000    0.492    0.003 /home/lpaiu/work/nutimo_pilot/request13_deps/scipy/sparse/_compressed.py:518(_matmul_vector)
+      176    0.486    0.003    0.486    0.003 {built-in method scipy.sparse._sparsetools.csc_matvec}
+       16    0.000    0.000    0.354    0.022 /mnt/e/lab/self-mass-unobservability/verification/def_gr_interface_patch.py:14(<lambda>)
+       16    0.000    0.000    0.354    0.022 /home/lpaiu/work/nutimo_pilot/request13_deps/scipy/sparse/linalg/_dsolve/linsolve.py:328(splu)
+       16    0.351    0.022    0.351    0.022 {built-in method scipy.sparse.linalg._dsolve._superlu.gstrf}
+  176/144    0.280    0.002    0.288    0.002 {built-in method builtins.abs}
+       32    0.000    0.000    0.226    0.007 /home/lpaiu/work/nutimo_pilot/request13_deps/scipy/sparse/_data.py:37(__abs__)
+       64    0.188    0.003    0.188    0.003 {method 'solve' of 'SuperLU' objects}
+       32    0.000    0.000    0.109    0.003 /home/lpaiu/work/nutimo_pilot/request13_deps/scipy/sparse/_compressed.py:546(_matmul_sparse)
+       16    0.000    0.000    0.070    0.004 /home/lpaiu/work/nutimo_pilot/request13_deps/scipy/sparse/_base.py:707(_matmul_sparse)
+       32    0.063    0.002    0.063    0.002 {built-in method scipy.sparse._sparsetools.csr_matmat}
+  208/176    0.001    0.000    0.037    0.000 /home/lpaiu/work/nutimo_pilot/request13_deps/scipy/sparse/_compressed.py:29(__init__)
+       16    0.000    0.000    0.036    0.002 /home/lpaiu/work/nutimo_pilot/request13_deps/scipy/sparse/_base.py:549(__add__)
+       16    0.000    0.000    0.035    0.002 /home/lpaiu/work/nutimo_pilot/request13_deps/scipy/sparse/_compressed.py:385(_add_sparse)
+       16    0.000    0.000    0.035    0.002 /home/lpaiu/work/nutimo_pilot/request13_deps/scipy/sparse/_compressed.py:1352(_binopt)
+       16    0.033    0.002    0.033    0.002 {built-in method scipy.sparse._sparsetools.csc_plus_csc}
+       80    0.000    0.000    0.027    0.000 /home/lpaiu/work/nutimo_pilot/request13_deps/scipy/sparse/_base.py:428(asformat)
+       16    0.000    0.000    0.019    0.001 /home/lpaiu/work/nutimo_pilot/request13_deps/scipy/sparse/_csc.py:44(tocsr)
+      368    0.019    0.000    0.019    0.000 {method 'astype' of 'numpy.ndarray' objects}
+
+

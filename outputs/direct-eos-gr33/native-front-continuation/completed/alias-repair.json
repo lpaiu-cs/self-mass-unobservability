@@ -1,0 +1,18 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "The inherited check-result.json was a hard link. Writing the new restart result at the same name changed its linked runtime gate. Detected before any new physical step or dispatch.",
+  "repair": "Preserve the new result as restart-check.json on a separate inode. Restore the inherited runtime gates from their SHA-bound immutable published bytes. Future restart results use only the distinct filename.",
+  "overwritten_runtime_sha256": "cde0254da4347fa6d5aa735b52c533ee35ba4638048a1677732641598e36a5f1",
+  "restored_runtime_files": {
+    "native-full-incident181-work\\check-result.json": "69d213635792f32d54a04dd107aa19178d7943261ca23305d6b720862c246106",
+    "native-full-time182-work\\check-result.json": "69d213635792f32d54a04dd107aa19178d7943261ca23305d6b720862c246106",
+    "native-material-front183-work\\check-result.json": "69d213635792f32d54a04dd107aa19178d7943261ca23305d6b720862c246106",
+    "native-front-continuation184-work\\check-result.json": "69d213635792f32d54a04dd107aa19178d7943261ca23305d6b720862c246106"
+  },
+  "archive": {
+    "path": "outputs/direct-eos-gr33/native-full-incident/completed/check-result.json",
+    "sha256": "69d213635792f32d54a04dd107aa19178d7943261ca23305d6b720862c246106"
+  },
+  "physical_arrays_unchanged": true,
+  "new_physical_steps": 0
+}

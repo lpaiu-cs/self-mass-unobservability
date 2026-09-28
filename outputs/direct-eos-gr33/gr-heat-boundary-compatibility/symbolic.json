@@ -1,0 +1,10 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "assumptions": "Classical differentiable material boundary, initial material v=0 and Q=0, no additional boundary heat channel, and Q=0 along that material worldtube for a time interval. Consequently Q_dot=0 at the initial event. Use the same complete heat-only quadratic law and momentum equation.",
+  "general_condition": "If Q_dot+w*v_dot=R, the full initial heat equation at Q=0 is tau*Q_dot+w*h*v_dot=N*Q_F. Compatibility therefore requires h*R=N*Q_F.",
+  "hydrostatic_condition": "At an initially hydrostatic boundary R=0, compatibility requires v_dot=0 and Q_F=0. For positive K,T,a,c this means partial_r ln(T*N)=0 at that boundary.",
+  "cannot_retune_tau": "The compatibility condition is independent of tau because Q_dot=0 at the stipulated material boundary. Changing a positive finite relaxation time alone cannot repair a nonzero thermal force.",
+  "alternatives": "A nonzero initial heat time derivative through a pressure-bearing atmosphere/radiation boundary, a consistently non-hydrostatic initial momentum force, or a separately constructed compatible thermal profile changes an explicit premise. None is silently imposed in this audit. A weak initial layer is not ruled out by this classical compatibility condition.",
+  "scope": "Necessary initial-corner condition, not existence of a compatible atmosphere or a finite GR trajectory. A frozen interpolation endpoint test does not certify the physical stellar boundary."
+}

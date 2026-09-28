@@ -1,0 +1,67 @@
+{
+  "classification": "Counterexample candidate",
+  "rows": [
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "projection_absolute": 8.881784197001252e-16,
+      "energy_score": 1.6932142314323574e-06,
+      "energy_passed": false,
+      "mass_change_energy_erg": -1.0088309987575288e+40,
+      "neutrino_infinity_erg": 9.78941560570658e+39,
+      "structure": {
+        "classification": "Counterexample candidate",
+        "parameters": [
+          48.49328826849661,
+          -3.656129916115404e-05,
+          -2.9162772190653166e-11
+        ],
+        "interface_max": 9.237055564881302e-14,
+        "radius_m": 68817132.49934016,
+        "mass_geom_m": 291.6871724617266,
+        "baryon_g": 3.925101446571372e+32,
+        "EOS_calls": 1594870,
+        "direct_calls": 41862,
+        "physical_EOS_certified": false,
+        "boundary": "Nonzero photospheric pressure; exterior is a boundary normalization, not a solved radiating atmosphere."
+      }
+    },
+    {
+      "pair": [
+        2,
+        4
+      ],
+      "projection_absolute": 1.1102230246251565e-15,
+      "energy_score": 7.312171023449117e-07,
+      "energy_passed": true,
+      "mass_change_energy_erg": -1.008818198305964e+40,
+      "neutrino_infinity_erg": 9.789415913330499e+39,
+      "structure": {
+        "classification": "Counterexample candidate",
+        "parameters": [
+          48.49328826849671,
+          -3.656129915841879e-05,
+          -2.916354208279548e-11
+        ],
+        "interface_max": 2.1316282072803006e-14,
+        "radius_m": 68817132.49934034,
+        "mass_geom_m": 291.6871724617264,
+        "baryon_g": 3.925101446571372e+32,
+        "EOS_calls": 1594870,
+        "direct_calls": 41862,
+        "physical_EOS_certified": false,
+        "boundary": "Nonzero photospheric pressure; exterior is a boundary normalization, not a solved radiating atmosphere."
+      },
+      "refinement": {
+        "composition_score": 5.514381960212947,
+        "temperature_difference": 1.403748228767654e-10,
+        "passed": false
+      }
+    }
+  ],
+  "passed": false,
+  "original_first_order_failures_unchanged": true,
+  "physical_evolution_certified": false
+}

@@ -1,0 +1,69 @@
+{
+  "classification": "Counterexample candidate",
+  "completed": true,
+  "reports": [
+    {
+      "classification": "Counterexample candidate",
+      "parameters": [
+        48.49334772870716,
+        -4.521064746857258e-06,
+        -2.6857524252149176e-11
+      ],
+      "interface_max": 2.6290081223123707e-13,
+      "radius_m": 68819337.45172057,
+      "mass_geom_m": 291.687172462399,
+      "baryon_g": 3.925101446571372e+32,
+      "EOS_calls": 1594870,
+      "direct_calls": 41862,
+      "physical_EOS_certified": false,
+      "boundary": "Nonzero photospheric pressure; exterior is a boundary normalization, not a solved radiating atmosphere.",
+      "root_statistics": {
+        "calls": 59067,
+        "evaluations": 291565,
+        "maximum_score": 0.9969720297073149,
+        "label": "GR-4",
+        "extended_fallbacks": 1761,
+        "extended_evaluations": 6460
+      },
+      "model_replacement_radius_change_m": -0.02357478439807892,
+      "model_replacement_mass_change_geom_m": -1.7053025658242404e-13,
+      "maximum_reference_entropy_difference": 5.245208740234375e-06,
+      "physical_time_evolution": false
+    },
+    {
+      "classification": "Counterexample candidate",
+      "parameters": [
+        48.49334772890038,
+        -4.5210661292501535e-06,
+        -2.7812792802713917e-11
+      ],
+      "interface_max": 3.126388037344441e-13,
+      "radius_m": 68819337.45162544,
+      "mass_geom_m": 291.6871724621204,
+      "baryon_g": 3.925101446571372e+32,
+      "EOS_calls": 3188310,
+      "direct_calls": 83512,
+      "physical_EOS_certified": false,
+      "boundary": "Nonzero photospheric pressure; exterior is a boundary normalization, not a solved radiating atmosphere.",
+      "root_statistics": {
+        "calls": 100717,
+        "evaluations": 464114,
+        "maximum_score": 0.9983173344753398,
+        "label": "GR-8",
+        "extended_fallbacks": 1748,
+        "extended_evaluations": 6415
+      },
+      "model_replacement_radius_change_m": -0.023669913411140442,
+      "model_replacement_mass_change_geom_m": -2.788169695122633e-10,
+      "maximum_reference_entropy_difference": 6.198883056640625e-06,
+      "physical_time_evolution": false,
+      "finite_face_refinement": 7.042579852623021e-10,
+      "finite_face_refinement_passed": true
+    }
+  ],
+  "all_interfaces_passed": true,
+  "finite_face_refinement_passed": true,
+  "physical_EOS_certified": false,
+  "continuous_errors_certified": false,
+  "full_GR_evolution": false
+}

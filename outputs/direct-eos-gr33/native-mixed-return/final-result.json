@@ -1,0 +1,581 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "actual_mixed_field_returned": true,
+  "finite_block_coupling_passed": true,
+  "corrected_mixed_charge": -8.789266951480438e-55,
+  "transport_return_charge": -2.0088782264382117e-79,
+  "transport_over_corrected_mixed": 2.285603836506345e-25,
+  "selected_endpoint_without_tiny_return": -2.5375925822713353e-51,
+  "compact_raw": {
+    "classification": "Counterexample candidate",
+    "controls": {
+      "time": 0.00030307533089273073,
+      "quadrature": 5.966057047673366e-16,
+      "independent": 2.296941706606086e-14
+    },
+    "compact_return_endpoint": -9.947490936940153e-52,
+    "compact_return_maximum": 9.947490936940153e-52,
+    "incident_amplitude": 1e-30,
+    "endpoint_over_incident_amplitude": -9.947490936940153e-22,
+    "inverse_radius_residual": 4.5634806156158447e-07,
+    "actual_external_input_consumed": true,
+    "actual_free_material_response_evolved": true,
+    "passed": true,
+    "full_null_infinity_charge": false,
+    "complete_reciprocal_fixed_point": false,
+    "full_goal_complete": false
+  },
+  "infinity": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "controls": {
+      "compact": {
+        "time": 0.00030307533089273073,
+        "angular": 0.0,
+        "radial": 0.0
+      },
+      "exterior": {
+        "time": 8.922462272289351e-05,
+        "angular": 0.0002826133357748816,
+        "radial": 3.5503286185604023e-15
+      },
+      "arrived_energy_erg": {
+        "time": 9.071149603577148e-05,
+        "angular": 0.0,
+        "radial": 0.0
+      },
+      "charge": {
+        "time": 0.0003030754968712101,
+        "angular": 2.480518333289216e-16,
+        "radial": 0.0
+      }
+    },
+    "rows": [
+      {
+        "steps": 128,
+        "angular": 8,
+        "radial": 8,
+        "port_relative": 1.487769989838475e-16
+      },
+      {
+        "steps": 128,
+        "angular": 4,
+        "radial": 8,
+        "port_relative": 1.487769989838475e-16
+      },
+      {
+        "steps": 128,
+        "angular": 8,
+        "radial": 4,
+        "port_relative": 1.487769989838475e-16
+      },
+      {
+        "steps": 64,
+        "angular": 8,
+        "radial": 8,
+        "port_relative": 8.901748639875723e-17
+      }
+    ],
+    "physical_transport_return_endpoint": -2.0088782264382117e-79,
+    "return_over_applied_mixed_charge": 2.28676815790568e-25,
+    "actual_mixed_field_applied_to_photons_and_free_material": true,
+    "cached_exterior_kernels_reused": true,
+    "actual_signed_emission_read_at_fixed_operator_infinity": true,
+    "additional_exterior_mixed_source_closed": false,
+    "physical_final_charge_solved": false,
+    "full_goal_complete": false
+  },
+  "audit": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "rows": [
+      {
+        "steps": 64,
+        "source_identity": 6.1974155794775955e-31,
+        "port": 8.901748639875723e-17,
+        "material_balance": 2.113867522307361e-16,
+        "mechanical_collision_partition": [
+          8.358191125798312e-16,
+          1.148152013095228e-13
+        ],
+        "photon_and_material_prefixes_reused": true
+      },
+      {
+        "steps": 128,
+        "source_identity": 1.2396255977540413e-30,
+        "port": 1.487769989838475e-16,
+        "material_balance": 1.1870425018750436e-16,
+        "mechanical_collision_partition": [
+          8.942386422231691e-16,
+          9.061574773865198e-14
+        ],
+        "photon_and_material_prefixes_reused": true
+      }
+    ],
+    "directional": [
+      {
+        "k": 1,
+        "balanced_original_scale": 0.007928114559377275,
+        "additivity": [
+          3.1861209671474767e-06,
+          4.2150274659483425e-07,
+          1.857969547506477e-07,
+          3.100530900811458e-11
+        ],
+        "positive_homogeneity": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "k": 8,
+        "balanced_original_scale": 0.006053032907391772,
+        "additivity": [
+          5.626694421815665e-08,
+          1.1981693736821049e-11,
+          9.982533629690572e-09,
+          6.235410529034027e-13
+        ],
+        "positive_homogeneity": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "k": 16,
+        "balanced_original_scale": 0.01019815432061291,
+        "additivity": [
+          2.3458346352305853e-09,
+          8.241380947277353e-13,
+          3.3114010410903275e-09,
+          2.835221966956846e-11
+        ],
+        "positive_homogeneity": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    ],
+    "old_independent_observer_reproduction": 2.2712214783258253e-15,
+    "corrected_mixed_endpoint": -8.789266951480438e-55,
+    "physical_transport_return_endpoint": -2.0088782264382117e-79,
+    "transport_over_corrected_mixed": 2.285603836506345e-25,
+    "selected_endpoint_without_tiny_return": -2.5375925822713353e-51,
+    "normalization": {
+      "factor": 4.951760157141521e+27,
+      "power_two_exponent": 92,
+      "physical_metric_maximum": 1.6187593976720747e-58,
+      "normalized_maximum": 8.015708289390987e-31
+    },
+    "inherited_readout_metadata": "The compact owner incident_amplitude and endpoint_over_incident_amplitude describe its original primary driver, not this mixed metric. Only the explicit current metric normalization and the separately divided physical return are used here.",
+    "symbolic": {
+      "classification": "Proven",
+      "passed": true,
+      "identity": "For source at x=-y<=0, (T+R/c)-(R+y)/c=T-y/c. The corrected compact retarded boundary field is its leading outgoing null readout."
+    },
+    "actual_mixed_field_returned": true,
+    "full_goal_complete": false,
+    "scope": "Retained finite model and sampled directions only. Additional exterior mixed source, physical mixed ADM normalization, full EOS/derivative/nonlinear error and static/observational comparison remain open."
+  },
+  "block": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "rows": [
+      {
+        "steps": 64,
+        "lagged_inputs": {
+          "xi": 8.48274758737434e-06,
+          "energy_offset": 6.637905369506194e-05,
+          "B": 5.134431390040122e-05,
+          "S": 5.165342318398167e-10,
+          "M_Etilde": 4.939541948975224e-05,
+          "dM_Etilde": 9.147879169024508e-05,
+          "M_H": 3.4164845704526496e-05,
+          "dM_H": 8.127872600840825e-05
+        },
+        "stage_forcing_defect": [
+          7.835432402386015e-05,
+          7.24238138427246e-05,
+          0.00010126672111317861,
+          8.316639682988239e-05
+        ],
+        "paired_E_H": [
+          5.118358958335355e-05,
+          1.796629674751511e-06
+        ],
+        "stage_count": 128,
+        "stage_operator_identical": true,
+        "forecast_seconds": 294.00966778800097
+      },
+      {
+        "steps": 128,
+        "lagged_inputs": {
+          "xi": 1.3625851031790938e-06,
+          "energy_offset": 1.4010430258054353e-05,
+          "B": 1.0513140371220262e-05,
+          "S": 5.167682934468648e-10,
+          "M_Etilde": 1.03995494853257e-05,
+          "dM_Etilde": 2.1238203132721654e-05,
+          "M_H": 6.642088423395937e-06,
+          "dM_H": 1.8902112544029065e-05
+        },
+        "stage_forcing_defect": [
+          1.720734995901616e-05,
+          1.5732493682235047e-05,
+          2.2183361622439727e-05,
+          1.8084233697902482e-05
+        ],
+        "paired_E_H": [
+          1.0889279790278021e-05,
+          3.490733278719944e-07
+        ],
+        "stage_count": 256,
+        "stage_operator_identical": true,
+        "forecast_seconds": 271.5928408500017
+      }
+    ],
+    "maximum_block_defect": 0.00010126672111317861,
+    "no_new_evolution_steps": true,
+    "scope": "Unchanged original full lagged-input, identical-operator and all384-stage source audit. No optimized source-difference path, no new evolution or threshold change.",
+    "seconds": 139.56880455499999,
+    "criteria_preregistered": true,
+    "budget_reassessed": true,
+    "next_sweep_allowed": false
+  },
+  "photon": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "rows": [
+      {
+        "classification": "Counterexample candidate",
+        "reference": 128,
+        "steps": 64,
+        "completed_steps": 64,
+        "new_steps": 60,
+        "seconds": 168.505086479,
+        "operator_point_seconds": 23.330915349000037,
+        "operator_points": 16,
+        "stepping_seconds": 142.29877386399997,
+        "energy_balance_relative": 1.2542108095861775e-09,
+        "species_balance_relative": 2.0356375411951447e-10,
+        "linear_relative": 9.930722428402897e-15,
+        "max_Krylov_iterations": 28,
+        "frequency_moment_relative": 1.3549487133561016e-16,
+        "endpoint_photon_reference_energy_erg": -298.392902185213,
+        "endpoint_material_reference_energy_erg": 2827.228702009646,
+        "endpoint_material_energy_L1_erg": 6078.792989295231,
+        "additional_material_motion_evolved": false,
+        "full_GR_feedback": false,
+        "final_charge_solved": false,
+        "endpoint_material_nonrest_energy_erg": -966.936243680451,
+        "velocity_jet_relative": 6.152641209909016e-09,
+        "primitive_mapping_relative": 1.8318679906315083e-15,
+        "conserved_material_input_applied": true,
+        "maximum_extended_stage_residual": 9.930722428402897e-15,
+        "maximum_refinement_steps": 1,
+        "initial_GMRES_stagnations": 29,
+        "passed": true,
+        "maximum_physical_moment_stage_residual": 8.952506044536243e-14,
+        "maximum_initial_physical_moment_stage_residual": 1.3982488624566509e-08
+      },
+      {
+        "classification": "Counterexample candidate",
+        "reference": 128,
+        "steps": 128,
+        "completed_steps": 128,
+        "new_steps": 120,
+        "seconds": 249.29419913799998,
+        "operator_point_seconds": 22.730163574000017,
+        "operator_points": 16,
+        "stepping_seconds": 223.615470004,
+        "energy_balance_relative": 3.712352404211226e-15,
+        "species_balance_relative": 3.3798098548303793e-11,
+        "linear_relative": 8.00722872709902e-15,
+        "max_Krylov_iterations": 15,
+        "frequency_moment_relative": 1.2833073758759876e-16,
+        "endpoint_photon_reference_energy_erg": -298.46291902684345,
+        "endpoint_material_reference_energy_erg": 2827.286512936378,
+        "endpoint_material_energy_L1_erg": 6078.96828468563,
+        "additional_material_motion_evolved": false,
+        "full_GR_feedback": false,
+        "final_charge_solved": false,
+        "endpoint_material_nonrest_energy_erg": -967.0965003258135,
+        "velocity_jet_relative": 6.152641209909016e-09,
+        "primitive_mapping_relative": 1.915134717478395e-15,
+        "conserved_material_input_applied": true,
+        "maximum_extended_stage_residual": 9.930722428402897e-15,
+        "maximum_refinement_steps": 1,
+        "initial_GMRES_stagnations": 29,
+        "passed": true,
+        "maximum_physical_moment_stage_residual": 8.952506044536243e-14,
+        "maximum_initial_physical_moment_stage_residual": 1.3982488624566509e-08
+      }
+    ],
+    "time_comparison": [
+      0.0001075484885913036,
+      7.985583284615852e-05,
+      0.0017414815911293373,
+      5.839797516787046e-05,
+      0.0001667838636771716,
+      8.6067937491641e-05
+    ],
+    "seconds": 437.27862387
+  },
+  "material": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "rows": [
+      {
+        "classification": "Counterexample candidate",
+        "passed": true,
+        "steps": 64,
+        "reference": 128,
+        "completed": 64,
+        "substeps": 472,
+        "balance_relative": [
+          3.1446033726870253e-19,
+          1.3321198553289245e-18,
+          1.0139284783285031e-17,
+          4.912240789343554e-17
+        ],
+        "directional": [
+          {
+            "time": 0.0017172155589643512,
+            "relative": [
+              1.8817539965051505e-07,
+              1.9698930940906867e-11,
+              2.5094178188748938e-08,
+              2.0671977602000577e-12
+            ]
+          },
+          {
+            "time": 0.0034344311179287023,
+            "relative": [
+              3.402135509231687e-09,
+              7.81451296228612e-13,
+              3.796818501565011e-09,
+              4.092785168239132e-11
+            ]
+          }
+        ],
+        "directional_relative": 1.8817539965051505e-07,
+        "forward_probe_indicator": 0.06418505227343195,
+        "maximum_true_relative_state": 7.676571628638427e-25,
+        "endpoint_sum": [
+          -0.020734679768793285,
+          5.67055706798874e+37,
+          2.8272284801714855e+29,
+          -3.378456847740358e+37
+        ],
+        "endpoint_L1": [
+          4.830089842096173e+16,
+          5.670557080133376e+37,
+          6.078668163012161e+29,
+          4.0145072305874863e+37
+        ],
+        "endpoint_sum_physical": [
+          -2.0734679768793285e-28,
+          567055706798.874,
+          2827.228480171486,
+          -337845684774.03577
+        ],
+        "endpoint_L1_physical": [
+          4.830089842096172e-10,
+          567055708013.3376,
+          6078.668163012161,
+          401450723058.74866
+        ],
+        "discard_physical": [
+          3.8339104417047826e-29,
+          -2.314781209865929e-10,
+          -6.87840394769632e-14,
+          -5.642599134896904e-09
+        ],
+        "raw_owner_calls": 4596,
+        "seconds": 52.65435374599997,
+        "full_GR_feedback": false,
+        "final_charge_solved": false,
+        "worker_wall_seconds": 57.359633035,
+        "physical_branch_ratio": 1.292668309040599e-16,
+        "maximum_owner_error": 1.8890685044047918e-13,
+        "endpoint_probe_half_nominal_double": [
+          [
+            3.402135510633479e-09,
+            7.814512962286266e-13,
+            3.7968185046527454e-09,
+            4.092785168239132e-11
+          ],
+          [
+            2.969582548644829e-09,
+            4.5243125014705386e-13,
+            1.952830288380886e-09,
+            3.5723737511179226e-11
+          ]
+        ],
+        "nominal_arithmetic_probe": 16.0,
+        "inherited_arithmetic_probe": 512
+      },
+      {
+        "classification": "Counterexample candidate",
+        "passed": true,
+        "steps": 128,
+        "reference": 128,
+        "completed": 128,
+        "substeps": 911,
+        "balance_relative": [
+          4.958743779415104e-19,
+          1.5672329231056432e-18,
+          9.653507108897875e-18,
+          3.827941508907421e-17
+        ],
+        "directional": [
+          {
+            "time": 0.0017172155589643512,
+            "relative": [
+              1.9722592409643548e-07,
+              2.3962440057561354e-11,
+              2.7751514841196235e-08,
+              2.166999642932943e-12
+            ]
+          },
+          {
+            "time": 0.0034344311179287023,
+            "relative": [
+              2.4125266115250825e-09,
+              8.586683441874527e-13,
+              2.987509346711086e-09,
+              2.9155046352694035e-11
+            ]
+          }
+        ],
+        "directional_relative": 1.9722592409643548e-07,
+        "forward_probe_indicator": 0.0808040751253981,
+        "maximum_true_relative_state": 8.105377203986499e-25,
+        "endpoint_sum": [
+          -0.039883927907794714,
+          5.6705570679884935e+37,
+          2.8272864629250122e+29,
+          -3.380845781247243e+37
+        ],
+        "endpoint_L1": [
+          4.830028977996604e+16,
+          5.670557080129913e+37,
+          6.078936397207276e+29,
+          4.016928997620231e+37
+        ],
+        "endpoint_sum_physical": [
+          -3.9883927907794714e-28,
+          567055706798.8494,
+          2827.286462925012,
+          -338084578124.7243
+        ],
+        "endpoint_L1_physical": [
+          4.830028977996605e-10,
+          567055708012.9913,
+          6078.936397207276,
+          401692899762.02313
+        ],
+        "discard_physical": [
+          6.653411589194514e-28,
+          -3.586684489837975e-11,
+          -2.863187918898421e-14,
+          -5.6912177775964974e-09
+        ],
+        "raw_owner_calls": 8808,
+        "seconds": 101.61910851799996,
+        "full_GR_feedback": false,
+        "final_charge_solved": false,
+        "worker_wall_seconds": 106.05430207000006,
+        "physical_branch_ratio": 1.2464048057997887e-16,
+        "maximum_owner_error": 1.8890685044047918e-13,
+        "endpoint_probe_half_nominal_double": [
+          [
+            2.412526614301425e-09,
+            8.586683441874647e-13,
+            2.9875093478382697e-09,
+            2.9155046352694035e-11
+          ],
+          [
+            2.553555386017379e-09,
+            4.817955529751511e-13,
+            2.7700183103834235e-09,
+            3.086158888611705e-11
+          ]
+        ],
+        "nominal_arithmetic_probe": 16.0,
+        "inherited_arithmetic_probe": 512
+      }
+    ],
+    "seconds": 163.53931100300008
+  },
+  "sources": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "comparisons": {
+      "time": [
+        0.00012657590213772775,
+        1.7218134706907676e-12,
+        0.00012016162946442435,
+        0.0017414691361876725
+      ],
+      "stress_time": [
+        0.0001265759027535152,
+        0.00011720354095044428,
+        0.00012657590174558803,
+        0.00011777545812377977,
+        0.0001072995418061888,
+        0.00016640867092621145
+      ]
+    },
+    "paths": [
+      {
+        "steps": 64,
+        "reference": 128,
+        "conservation": 2.113867522307361e-16,
+        "pressure_probe": 1.794749970702092e-10,
+        "legacy_material_sweep_comparison": null,
+        "energy_H_waveform_residual": [
+          5.1183589583353575e-05,
+          1.7966296747515348e-06
+        ]
+      },
+      {
+        "steps": 128,
+        "reference": 128,
+        "conservation": 1.1870425018750436e-16,
+        "pressure_probe": 1.314079690472435e-10,
+        "legacy_material_sweep_comparison": null,
+        "energy_H_waveform_residual": [
+          1.0889279790278015e-05,
+          3.4907332787199875e-07
+        ]
+      }
+    ],
+    "seconds": 16.674549007999985,
+    "returned_photon_transfer_applied_to_material": true,
+    "coupled_fixed_point_verified": false,
+    "final_charge_solved": false
+  },
+  "cost": {
+    "recorded_action_seconds": 2211.63840652,
+    "CPU_seconds": 2077.438102428,
+    "maximum_recorded_RSS_bytes": 2889764864,
+    "CPU_threads": 1,
+    "virtual_GiB": 3,
+    "registered_total_seconds": 4200,
+    "scope": "Recorded action bodies including failures and read-only budget reassessment. Excludes imports, preflight, inspection, writing, publication and Git. Not total task walltime."
+  },
+  "inherited_compact_metadata": "The compact owner incident_amplitude and endpoint_over_incident_amplitude describe its original primary driver, not this mixed metric. Only the explicit current metric normalization and the separately divided physical return are used here.",
+  "exterior_mixed_source_closed": false,
+  "physical_mixed_ADM_closed": false,
+  "physical_final_charge_solved": false,
+  "full_goal_complete": false,
+  "contribution": "Loophole progress: the computed compact mixed field is actually returned through photons and free matter, its finite coupled inputs pass, and actual signed emission is read at fixed-operator infinity. No universal or observational conclusion."
+}

@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/.phase251-reader-launch.py", line 14, in <module>
+    runpy.run_path(sys.argv[0],run_name='__main__')
+  File "/usr/lib/python3.10/runpy.py", line 289, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/usr/lib/python3.10/runpy.py", line 96, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "verification/align_return_restart_clocks.py", line 63, in <module>
+    elif action in ['coarse','fine']:prior.evolve(64 if action=='coarse' else 128)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/complete_returned_period.py", line 130, in evolve
+    m=Model(n);label=f'interval-{j}-{n}';row=m.run(n,label,j*n//16,restart);assert row['passed']
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_full_material_front.py", line 39, in run
+    
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/complete_returned_period.py", line 120, in observed
+    pair,mechanical=stage(m,t,h,x,g,lus)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/couple_full_incident_fluid.py", line 21, in stages
+    CAPS['check_chain']=30
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/couple_native_fluid_radau.py", line 244, in solve
+    assert k<3,('Four-moment linear residual',relative,moments.tolist())
+AssertionError: ('Four-moment linear residual', 1.8817966697761206e-06, [np.longdouble('8.591209781708704813e-06'), np.longdouble('6.7674185276973638827e-07'), np.longdouble('2.8175515716252276326e-12'), np.longdouble('2.6977171542450671768e-12')])

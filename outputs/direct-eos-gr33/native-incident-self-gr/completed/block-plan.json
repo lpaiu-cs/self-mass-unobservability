@@ -1,0 +1,42 @@
+{
+  "classification": "Counterexample candidate",
+  "sweep": 2,
+  "original_verdict": "The registered whole-state change/monotonicity test failed. Stop iteration; no third response is authorized by this audit and no old verdict is changed.",
+  "question": "Does the completed pair satisfy the actual lagged block inputs and all applied stage forcing, despite the large change of E/H already solved simultaneously with photons?",
+  "operator": "L at fixed retained background/GR is independent of the lagged material history. Affine input depends only on B,S,xi(B),geometry and dM/dt, with M=(Etilde,H)-C. Test both64/128 actual SDIRK stages, holding the first-stage mechanical rate at the closing stage exactly as the owner does.",
+  "checks": "All lagged B/S/xi/M histories and interval rates; physical energy/number weighted photon forcing and separate gasE/H rates; unchanged stage matrices; photon/free-material E/H match. Source defects are normalized by maximum stage L1 of the current corresponding source, never by mixed units.",
+  "gates": {
+    "block": 0.002,
+    "paired": 0.002,
+    "time": 0.02,
+    "operator": 0.0,
+    "source_identity": 1e-12
+  },
+  "scope": "A separate finite block-equation consistency audit, not the failed whole-state-change convergence criterion, a continuum contraction, or a solution-error bound. Compact readout may be reported only under this explicitly narrower criterion.",
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "identity": "Adding the same collision transfer to total gas and C leaves M unchanged. Thus total gas iterate change is not by itself the residual of the lagged-input equations."
+  },
+  "budget_seconds": 300,
+  "total_action_seconds": 4600,
+  "new_evolution_steps": 0,
+  "forecast": "Use completed17-point assembly costs and a measured warmed stage-pair cost with2x margin. No Krylov solve, new state, clock, horizon or background.",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/audit_native_incident_self_gr.py": "448fab44bac0be2893dd714e1d93f95cd2d181d72e202e18da9ca253b6da00e5",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/solve_native_incident_self_gr.py": "a39cbbb0ddbd0f21b9989da3d7b5e80290b121a59810d4e10fee24c5e168a745",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/solve_native_incident_reciprocal.py": "3cc4190f7ee1a7acfaf741e9e99d5b526da930c471705d428e440081e84bd73c",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_matter_photon_feedback.py": "19acadd46d8f6059406fc3614c151de187323cec68f73faf9319e663f0466fb9",
+    "native-incident-self-gr157-work/common-input-plan.json": "978429c553fd8ca6cc8e1bb9493871c64f207ef2ab7559aa13c6691ac817a529",
+    "native-incident-self-gr157-work/common-input-producer.py": "69fc3b1e58b705dcb27cc2fa231699e235bddc2027d43182e742512b394b0131",
+    "native-incident-self-gr157-work/sweep-2/residual.json": "fce47083f07346dac3d205fef31439ebf4837cbb2d89c3438542aa90fa78e663",
+    "native-incident-self-gr157-work/sweep-1/photons-common-gr/steps-64-reference-128.npz": "d72ac6eb727ccc084e27c1d09b3dfaf6cf33376b89445b3a8b94f2d0199beaa9",
+    "native-incident-self-gr157-work/sweep-1/photons-common-gr/steps-128-reference-128.npz": "fdf21d04c7aaba05bce3ac75d0f3b0731512e036e2a1d4bf53575ca55e3d9e3f",
+    "native-incident-self-gr157-work/sweep-1/material-common-gr/steps-64-reference-128.npz": "e56292b1553011fadc46671b9b7b37941be32161f3ed65e62894ea891b792df9",
+    "native-incident-self-gr157-work/sweep-1/material-common-gr/steps-128-reference-128.npz": "d68f09d7e5577679cd463a3c6da6ff1147ea4221cfb8bc4443c4d4081e1abff2",
+    "native-incident-self-gr157-work/sweep-2/photons-common-gr/steps-64-reference-128.npz": "fec1c6f16cf11740b4dc9fb865f50bf9240bb368a81065966bed2f451d737e47",
+    "native-incident-self-gr157-work/sweep-2/photons-common-gr/steps-128-reference-128.npz": "7020b476351611a8b959090ab3a656592fe9c42601dfe289fab08a27da345260",
+    "native-incident-self-gr157-work/sweep-2/material-common-gr/steps-64-reference-128.npz": "2e9ae3608510638c8c05cac1a176ea661bb059adcca30c6f8d3c4489d9e25dc0",
+    "native-incident-self-gr157-work/sweep-2/material-common-gr/steps-128-reference-128.npz": "8bd32a41f8a39ca15f03d34bae7143f8001e15ef520f360bdb5f47ad5e875cc9"
+  }
+}

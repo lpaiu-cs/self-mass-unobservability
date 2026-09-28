@@ -1,0 +1,41 @@
+{
+  "command": [
+    "g++-9",
+    "-shared",
+    "-fPIC",
+    "-O2",
+    "-fopenmp",
+    "-std=gnu++11",
+    "-I/home/lpaiu/work/nutimo_pilot/install/third_party/boost_1_55_0",
+    "-I/home/lpaiu/work/nutimo_pilot/install/third_party/tempo2/include",
+    "-I/home/lpaiu/work/nutimo_pilot/install/third_party/Minuit2-5.34.14/include",
+    "AllTheories3Bodies.cpp",
+    "Delay_brut.cpp",
+    "Fittriple-compute.cpp",
+    "Fittriple-init.cpp",
+    "Fittriple-IO.cpp",
+    "Fittriple-diagnostics.cpp",
+    "IO.cpp",
+    "Orbital_elements.cpp",
+    "Spline.cpp",
+    "Utilities.cpp",
+    "Diagnostics.cpp",
+    "Parameters.cpp",
+    "-L/home/lpaiu/work/nutimo_pilot/install/third_party/libstatictempo2/with_fpic",
+    "-ltempo2",
+    "-lsofa",
+    "-llapack",
+    "-lcblas",
+    "-lgfortran",
+    "-lf77blas",
+    "-latlas",
+    "/home/lpaiu/work/nutimo_pilot/install/third_party/Minuit2-5.34.14/lib/libMinuit2.a",
+    "-o",
+    "libFittriplecpp.so"
+  ],
+  "library_sha256": "a73af713afb1cdba35c6948dcf6ecdcc4a38898ff85a1cc1749381bb512ed67a",
+  "source_sha256": {
+    "AllTheories3Bodies.cpp": "2b9193284cbb129b662def8a0917052d8b507257227caddc07487900cc3e79ac",
+    "Fittriple-compute.cpp": "17f6124bb2bdd2afd04c42a66ee245d899cc8fc8b96750fffaa67c49fe644e72"
+  }
+}

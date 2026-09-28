@@ -1,0 +1,16 @@
+{
+  "classification": "Counterexample candidate",
+  "reason": "The background kappa is below the stored longdouble denominator resolution. The original whole-response110-digit check is dominated by the direct field and cannot validate every tiny correction.",
+  "repair": "Keep every original charge and mass port; compute signed mass and background-denominator corrections in110-digit arithmetic and save each separately. Compare each mass correction against an independently differenced rational quotient. No new physical evaluation.",
+  "gate_per_component": 1e-12,
+  "budget_seconds": 45,
+  "total_seconds": 180,
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/read_native_matched_mass.py": "c9346a4e7e26b8342a984151c5690cd9e36c9086c5a4ec23d522a4e303f6099f",
+    "native-matched-mass163-work/registered-producer.py": "2928231ba9fb4a8fd9a502a499586e9e79922aa39ccb64a622c62264d6aadd2a",
+    "native-matched-mass163-work/charge-parts.npz": "0fb16341f199d8a248a3d63a1d0da498873b27a92235823cf1237106267c6eb8",
+    "native-matched-mass163-work/mass-fine.npz": "ac735c7ec40d5e25916c7f23322b1bca0c6f2684101cea6cbabdcc146b9cbafc",
+    "native-matched-mass163-work/audit.json": "00ae736150c8657e310a3d6079891a397081842a864862d480e4d4343bc970ed",
+    "native-matched-mass163-work/result.json": "505a5e09db0fe5b207790db3bf6ab10f15847f9b3fe323f056666d625185231d"
+  }
+}

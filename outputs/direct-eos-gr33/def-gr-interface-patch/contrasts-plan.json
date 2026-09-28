@@ -1,0 +1,56 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Complete the four original conditional contrasts on the same accepted patched coupled GR response.",
+  "retained": "One fixed candidate per contrast,all65 times and four fields,full native histories and unchanged original thresholds. Every contrast also retains its own propagation/contour gates. Coarse pole bank is a sensitivity contrast, not a physical error certificate.",
+  "cases": [
+    {
+      "label": "coefficient",
+      "bank": "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/coarse-bank.npz",
+      "outer": 2,
+      "quadrature": 6,
+      "sigma": 12,
+      "relative_gate": 0.02
+    },
+    {
+      "label": "outer",
+      "bank": "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/fine-bank.npz",
+      "outer": 3,
+      "quadrature": 6,
+      "sigma": 12,
+      "relative_gate": 0.002
+    },
+    {
+      "label": "quadrature",
+      "bank": "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/fine-bank.npz",
+      "outer": 2,
+      "quadrature": 8,
+      "sigma": 12,
+      "relative_gate": 0.002
+    },
+    {
+      "label": "abscissa",
+      "bank": "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/fine-bank.npz",
+      "outer": 2,
+      "quadrature": 6,
+      "sigma": 14,
+      "relative_gate": 0.0002
+    }
+  ],
+  "budget": {
+    "pilot_seconds": 90,
+    "parent_total_compute_seconds": 1800,
+    "used_measured_seconds": 493.55839348,
+    "CPU_threads": 1,
+    "memory_GB": 4,
+    "new_EOS_calls": 0
+  },
+  "decision": "Measure4 representative resolvents per candidate. Require forecast for all four within the remaining1800s parent compute budget before production. Stop on the first propagation or contrast failure; no post-result candidate replacement.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-interface-patch/contrasts.py": "7026c17877acc60f2d742f856c571b6d7cb1fdf56d48b574de219328fd7b908b",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_interface_patch.py": "880442c647572d55272819dcde5ae735337ddbb62fc3d3e600ca1ea680faf888",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_full_weeks.py": "c0be4c1870a4aa5416892ae7f50523a8df515fcbf1455fa067fee7486489bc36",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-interface-patch/spatial-result.json": "7ddf220e46e18bab51b88450c89f61e8efb34a7b26703eb2b6c239f1ae524a91",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-interface-patch/p4-result.json": "864cc33471cf416b974382f35da2cf9e4c95387704ae68249c9cd23fcb8d3472",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/coarse-bank.npz": "ea020f69b240c5c5cdd8810f963d88e5cc2d3269aff12c659422a7a6541ae0df"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "classification": "Counterexample candidate",
+  "native_initial_source": {
+    "file": "native-initial-source-stress.npz",
+    "sha256": "35cb8bf641993df93f147113038e990047497a2d79ee7966ba0fccf98fa6f913",
+    "time_seconds": 0.8078173448989832,
+    "source": "Constant actual Phase50 initial native emissivity; fixed metric and collisionless massless propagation."
+  },
+  "manufactured_control": {
+    "file": "final-stress.npz",
+    "sha256": "e931971eb6669d13da551c372f5209b22284dfe081ff739e817f76d3cb1f6cac",
+    "source": "Artificial independently modulated emitter histories. Do not use this as the native stellar source state."
+  },
+  "bindings": {
+    "verification/def_neutrino_source_coupling.py": "e5db7f6bf68a111aba02ce6cfb4354108896270bf86e1a7a52b81c435dde758b",
+    "outputs/direct-eos-gr33/def-causal-neutrinos/fine.npz": "c88e9f002fb71875d5007b2947fbe75f515eb1c870e86c9d1a7c70175014a025"
+  }
+}

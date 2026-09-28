@@ -1,0 +1,10 @@
+{
+  "classification": "Counterexample candidate",
+  "previous_upper_seconds": 697.1822641095589,
+  "previous_eligible": false,
+  "hard_seconds": 650,
+  "pilot_seconds": 40,
+  "new_steps_each": 4,
+  "change": "Measure physics, canonical-state writes, accepted-port writes, setup and remaining checkpoint overhead separately. The rejected ratio model scales one checkpoint per two pilot steps to every two production steps, while production checkpoints are every16 steps.",
+  "forecast": "Remaining steps times measured physical/port rate; remaining canonical states times maximum measured snapshot cost; ceil(remaining/16)+1 checkpoints times measured residual overhead; two setups;30s final export allowance;1.5x margin plus20s. Late costs remain extrapolated. No higher compute cap or weaker physics gate."
+}

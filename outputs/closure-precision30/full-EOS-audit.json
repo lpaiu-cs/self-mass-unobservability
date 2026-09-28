@@ -1,0 +1,39 @@
+{
+  "classification": "Counterexample candidate",
+  "cells": 5735,
+  "state_sha256": "f6214a2cb17553373dee3e785435177a5df1b47edd5ec1852bde2105bfcde2a8",
+  "step": 5e-05,
+  "columns": [
+    "P_T",
+    "P_rho",
+    "cv",
+    "entropy_T",
+    "Maxwell",
+    "entropy_rho",
+    "trace_pressure",
+    "trace_energy_over_cvT",
+    "cvT",
+    "chi_rho",
+    "sound2_over_c2"
+  ],
+  "max_abs_derivative_errors": [
+    2.358390815970779e-09,
+    1.1156218171493038e-09,
+    1.6789154622109947e-08,
+    1.5803849784390422e-08,
+    2.548950620045537e-09,
+    1.6856157368831457e-10
+  ],
+  "max_trace_pressure_relative": 1.977993324686622e-09,
+  "max_trace_energy_over_cvT": 1.185690126574156e-07,
+  "min_cvT": 6489695147559.492,
+  "min_chi_rho": 0.9426398645322321,
+  "sound2_over_c2_range": [
+    4.374751238231965e-09,
+    1.512548430152172e-05
+  ],
+  "passed": true,
+  "mathematical_global_domain_certified": false,
+  "physical_error_certified": false,
+  "interpretation": "Every saved initial material cell, not every intermediate state in a continuous EOS domain. Finite-difference consistency and two-map sensitivity do not constitute an absolute physical error bound."
+}

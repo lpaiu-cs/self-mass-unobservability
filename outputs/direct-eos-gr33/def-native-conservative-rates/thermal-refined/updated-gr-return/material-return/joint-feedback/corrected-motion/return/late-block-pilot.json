@@ -1,0 +1,81 @@
+{
+  "classification": "Counterexample candidate",
+  "rows": [
+    {
+      "classification": "Counterexample candidate",
+      "steps": 64,
+      "reference": 128,
+      "rows": [
+        {
+          "time": 0.0017172155589643512,
+          "seconds": 0.19346088300017072,
+          "CPU_seconds": 0.19352629499999985,
+          "raw_calls": 16,
+          "repetitions": 8
+        },
+        {
+          "time": 0.0034344311179287023,
+          "seconds": 0.19254436400024133,
+          "CPU_seconds": 0.19260202900000012,
+          "raw_calls": 16,
+          "repetitions": 8
+        }
+      ],
+      "scope": "Timing fixed saved states only; no physical trajectory steps or new derivative certification."
+    },
+    {
+      "classification": "Counterexample candidate",
+      "steps": 128,
+      "reference": 128,
+      "rows": [
+        {
+          "time": 0.0017172155589643512,
+          "seconds": 0.1833345370000643,
+          "CPU_seconds": 0.18339730799999998,
+          "raw_calls": 16,
+          "repetitions": 8
+        },
+        {
+          "time": 0.0034344311179287023,
+          "seconds": 0.20968953400006285,
+          "CPU_seconds": 0.2097580080000001,
+          "raw_calls": 16,
+          "repetitions": 8
+        }
+      ],
+      "scope": "Timing fixed saved states only; no physical trajectory steps or new derivative certification."
+    },
+    {
+      "classification": "Counterexample candidate",
+      "steps": 128,
+      "reference": 64,
+      "rows": [
+        {
+          "time": 0.0017172155589643512,
+          "seconds": 0.17688271399993027,
+          "CPU_seconds": 0.1769355279999998,
+          "raw_calls": 16,
+          "repetitions": 8
+        },
+        {
+          "time": 0.0034344311179287023,
+          "seconds": 0.24342386599983,
+          "CPU_seconds": 0.24349085699999984,
+          "raw_calls": 16,
+          "repetitions": 8
+        }
+      ],
+      "scope": "Timing fixed saved states only; no physical trajectory steps or new derivative certification."
+    }
+  ],
+  "forecast_each_seconds": [
+    140.95300858,
+    283.90694071,
+    291.349626738
+  ],
+  "upper_seconds": 582.699253476,
+  "seconds": 5.036572750000232,
+  "total_pilot_seconds": 15.152122717000111,
+  "original_single_sample_forecast_eligible": false,
+  "eligible": true
+}

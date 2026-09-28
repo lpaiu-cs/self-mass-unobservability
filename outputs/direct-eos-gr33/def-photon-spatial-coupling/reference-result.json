@@ -1,0 +1,44 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "rows": [
+    {
+      "frequency_cells": 256,
+      "temperature_K": 0.8812289496666358,
+      "native_temperature_difference_K": 2.1301141612917185e-05,
+      "native_energy_norm_difference_initial": 3.898096570089494e-05,
+      "equilibrium_distance": 0.006338516549839617,
+      "smallest_positive_rate_over_rate_C": 0.31520701577444055,
+      "slowest_mode_initial": 0.07795280597403202
+    },
+    {
+      "frequency_cells": 512,
+      "temperature_K": 0.8812455614909418,
+      "native_temperature_difference_K": 4.689317306905139e-06,
+      "native_energy_norm_difference_initial": 3.403931650495165e-05,
+      "equilibrium_distance": 0.006333552920823602,
+      "smallest_positive_rate_over_rate_C": 0.31530933468341266,
+      "slowest_mode_initial": 0.07795722773819767
+    },
+    {
+      "frequency_cells": 1024,
+      "temperature_K": 0.8812496963322489,
+      "native_temperature_difference_K": 5.5447599978109e-07,
+      "native_energy_norm_difference_initial": 3.440342846279162e-05,
+      "equilibrium_distance": 0.006332317884553923,
+      "smallest_positive_rate_over_rate_C": 0.3153348058308456,
+      "slowest_mode_initial": 0.0779583280655156
+    }
+  ],
+  "reference_last_energy_norm_difference_initial": 4.784575222188058e-06,
+  "stiff_null_backward_errors": [
+    2.489907084546592e-19,
+    6.478961110272448e-18
+  ],
+  "original_asymptotic_control_passed": false,
+  "original_rate_normalized_null_control_passed": false,
+  "interpretation": "Independent finite-time exponential determines whether the residual is real relaxation. Numerical backward error on the stiff matrix is a separate diagnostic and does not retroactively pass the original physical-rate-normalized null test.",
+  "original_results_preserved": true,
+  "physical_duration_extended": false,
+  "seconds": 0.33702857700000166
+}

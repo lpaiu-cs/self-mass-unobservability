@@ -1,0 +1,50 @@
+{
+  "reason": "The coarse second-time control passed the original critical time. Preserve it in memory and prioritize the original-time reflecting-boundary trajectory and refinement.",
+  "boot_id": "9b968b4f-ecbd-483b-ada9-c1c871b6ab20",
+  "root": 1171,
+  "processes": [
+    {
+      "pid": 1171,
+      "parent": 1163,
+      "start": "620042",
+      "state": "S",
+      "command": "python3 verification/gr_implicit_second_heat_time.py run --refinement 1 --workers 5"
+    },
+    {
+      "pid": 1184,
+      "parent": 1171,
+      "start": "620849",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_second_heat_time.py run --refinement 1 --workers 5"
+    },
+    {
+      "pid": 1185,
+      "parent": 1171,
+      "start": "620849",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_second_heat_time.py run --refinement 1 --workers 5"
+    },
+    {
+      "pid": 1186,
+      "parent": 1171,
+      "start": "620849",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_second_heat_time.py run --refinement 1 --workers 5"
+    },
+    {
+      "pid": 1187,
+      "parent": 1171,
+      "start": "620849",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_second_heat_time.py run --refinement 1 --workers 5"
+    },
+    {
+      "pid": 1188,
+      "parent": 1171,
+      "start": "620849",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_second_heat_time.py run --refinement 1 --workers 5"
+    }
+  ],
+  "all_stopped": true
+}

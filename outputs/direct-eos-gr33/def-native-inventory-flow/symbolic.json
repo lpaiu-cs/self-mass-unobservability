@@ -1,0 +1,8 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "definitions": "D=rho*W; E_nr=(rho*(c_rest+u)+p)*W^2-p-c_rest*D; T_nr=rho*(c_rest+u)-3*p-c_rest*D; u=u0+3p/(2rho)+du.",
+  "identity": "T_nr=-E_nr+2*u0*D+(c_rest+u0)*rho*(W-1)^2+(5/2)*p*(W^2-1)+rho*du*(1+W^2).",
+  "limit": "For fixed u0, monatomic ideal gas and nonrelativistic flow, the volume-integrated trace is determined by conserved energy and mass up to order v^4 rest and v^2 thermal corrections. Deleted dilute inventory must participate in that identity.",
+  "scope": "Local algebra in one orthonormal frame. This is not a retarded scalar-charge identity; lapse, geometric weights, boundary histories and tail locations matter."
+}

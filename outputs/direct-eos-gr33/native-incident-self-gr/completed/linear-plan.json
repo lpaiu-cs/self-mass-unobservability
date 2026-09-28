@@ -1,0 +1,13 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "AssertionError(('Monolithic stage', 5, 3.4291304181832417e-14, 14))",
+  "source_sha256": "0e85fe5c4da3ef6ad5abf980854b791a599a1c116bed2d563bde5814e8a393d0",
+  "repair": "Keep the same finite stage, preconditioner and1e-14 internal target. Form its true residual in longdouble, solve a binary64 correction equation with zero initial guess, and repeat at most3 times. Require extended relative residual<1e-14 and the original binary64 full-equation1e-12 plus physical1e-8 conservation gates.",
+  "evidence": "The first short photon stage stagnated at binary64 residual3.42913e-14 with GMRES info5. No macro prefix or full trajectory completed. Preserve its receipt and expanded owner.",
+  "budget": "Repeat only equal-horizon4/8 prefixes under120s, then require the original1100s forecast admission. Count rejected and repaired actions in4600s.",
+  "bindings": {
+    "native-incident-self-gr157-work/registered-producer.py": "7b72e741a346f363b26c7163dc07f6b5233ef960cc34f5801b72aa246df63ab0",
+    "native-incident-self-gr157-work/rejected-expanded-run.py": "391495a5832815036d143c0b955c138440204aef1c38abb46a7510ed39086a3d",
+    "native-incident-self-gr157-work/photon_pilot-1-receipt.json": "2e86f3a1e5caa3f5077777c89fcffc03cceb53e3a4a49960a2a6955244409834"
+  }
+}

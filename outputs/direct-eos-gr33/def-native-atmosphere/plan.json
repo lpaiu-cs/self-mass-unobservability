@@ -1,0 +1,37 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "fd402042",
+  "bindings": {
+    "verification/def_native_atmosphere.py": "0fb9a870e8c8db8abd59fb99eff0244ccfb5b0a50b18b03b9a184d60b1d1110d",
+    "outputs/direct-eos-gr33/def-hydrostatic-background/absolute-shoot/background-0.001.npz": "774e2bff821f5863291167f069a8673562bfee8b0ab648468c8dfc5a2a9b04d3",
+    "outputs/direct-eos-gr33/def-hydrostatic-background/absolute-shoot/lapse.npz": "9c08b16699d7bfaa696a93e68ad2eb42a9ea98f8373d036f3c7018d5dc374dba",
+    "outputs/direct-eos-gr33/def-hydrostatic-background/absolute-shoot/native-audit.json": "f8630fe061e144bfc76897b77f2d168e490f14847fa536f588ae3c885a89bbcf",
+    "outputs/direct-eos-gr33/gr-molecular-structure-defined/molecular-adiabats-17.npz": "b383b972f16f27d52a68ef461fa3f01d10f378e7dff5f20b50bda3a1422d5b7f",
+    "verification/gr_radiative_boundary.py": "35d8c7b76ceb064706f43e75800be1daf11d64be64cf9494a084657b6f49f2c5"
+  },
+  "claim": "Continue the actual molecular EOS at the outer shell entropy/composition beyond the nonzero-pressure optical boundary; solve material/scalar/metric atmosphere and identify a controlled free-surface limit.",
+  "material": "Original interior inventories are unchanged. Any added atmosphere inventory is recorded separately and must be retained in future paired backgrounds.",
+  "thermal": "Mechanical Cauchy data only. No radiative equilibrium, physical opacity calibration or orbital stationarity is assumed.",
+  "pilot_log_pressure_drops": [
+    0,
+    1,
+    2,
+    4,
+    8,
+    12
+  ],
+  "budget": {
+    "pilot_seconds": 60,
+    "table_seconds": 120,
+    "atmosphere_seconds": 60,
+    "maximum_new_entropy_roots": 128,
+    "automatic_expansion": false
+  },
+  "gates": {
+    "native_root": "Same strict energy-unit entropy inverse as Phase47",
+    "junction": 1e-08,
+    "declared_atmosphere_baryon_fraction": 1e-12,
+    "unresolved_tail_baryon_fraction": 1e-14
+  },
+  "stop": "Stop on EOS/root/domain failure. Do not replace a failed molecular adiabat by a fitted polytrope or claim the mass budget bounds all dynamic boundary errors."
+}

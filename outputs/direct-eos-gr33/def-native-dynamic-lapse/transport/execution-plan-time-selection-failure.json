@@ -1,0 +1,55 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Apply the completed lapse/mass/scalar input to the actual shared531-cell,8-angle,152-frequency photon transport operator and integrate its separate distribution increment over the full original horizon.",
+  "equations": "For conserved phase-space packet count N, d(delta_N)/dt=L0*delta_N-div(delta_characteristic_velocity*N0). Use the original common radial/angular operator for L0. The signed frequency generator transfers neighboring energy-node packets and retains the exact number/energy of two ghost exits.",
+  "source": "Actual saved coupled angular spectra drive the perturbation, with the derived radial-speed, angular-drift and frequency-work coefficients. Interpolate stored fields and spectra linearly in time; use interval derivatives of the same lambda and conformal factor, not an inconsistent background-plus-increment sum.",
+  "boundary": "Hold the prescribed incoming packet flux at the deep edge fixed; no incoming external photons. The perturbed outgoing ports are evolved. This is an explicit drive boundary, not a closure of the deeper star.",
+  "subsystem": "The streaming subsystem is solved here. The stored background already includes actual absorption/emission/scattering/heat/H and hydrodynamics, but their additional response to delta_N is not yet in L0. Do not call this full coupled feedback or use it as the final charge.",
+  "conservation": "Count and reference-frequency energy changes equal the same SDIRK-weighted source, radial ports and spectral ghosts. Frequency drift work is a separate metric-work term, never artificial gas heating.",
+  "controls": {
+    "paths": [
+      [
+        64,
+        128
+      ],
+      [
+        128,
+        128
+      ],
+      [
+        128,
+        64
+      ]
+    ],
+    "time": 0.02,
+    "background_time": 0.02,
+    "conservation": 1E-10,
+    "frequency_moments": 1E-12
+  },
+  "budget": {
+    "seconds": 52,
+    "CPU_threads": 1,
+    "memory_GB": 3,
+    "new_native_calls": 0,
+    "new_nonlinear_fluid_steps": 0
+  },
+  "forecast": "Original linear band/sparse photon stages are already used by the full solver. These paths omit native roots and nonlinear Newton loops; plan only the three named linear paths, halt60s and preserve any prefix on failure. No automatic extra mesh or paths.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_compensated_transport.py": "fc8ef3c2b47e67752a10c43a5bc081d172d15fd661b3e622434cf7cd39da28e6",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_dynamic_lapse.py": "5a1ab9b42211a67a79c2f36bb66a25faed9d05ebb82cf3bdd357b62969757b89",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-dynamic-lapse/result.json": "370dd4202d70a95a44e769d8d56c73ad6b827f07c1513dea3ef131daadba1720",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-dynamic-lapse/metric-128-g8.npz": "e9541942e2ffecc640eccb5af8bfb859c49f22d15c5c98a55d896a2e1ea2a2b1",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-dynamic-lapse/metric-64-g8.npz": "4b04b032c81986e42ff2169274d42f9981d43f20178087070f3629ad7137c620",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-projected-evolution/coupled-128.npz": "abbdb3f8e916aea2273158b5c4a81fa40493d3ac89d8b97739ac888e2eedb82f",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-projected-evolution/coupled-64.npz": "64d78d69391edf426f4bfa59bc3b9f422d2300ae2f49f8e88dabdca92f50bf73",
+    "outputs/direct-eos-gr33/def-native-dynamic-lapse/corrected/metric-128-g8.npz": "249b5cdea23307ec4d88ff262228d6286b72518085237b2a83c1d83758ebe026",
+    "outputs/direct-eos-gr33/def-native-dynamic-lapse/corrected/metric-64-g8.npz": "490050faf7512c09ef976c3f013aed71a8f3c4862248ad7bdaf889784bee27eb",
+    "outputs/direct-eos-gr33/def-native-dynamic-lapse/corrected/audit.json": "b0861c1d39ad0f0b5b317c51adc9727592a72d7e09f405cc411dd82479131e32"
+  },
+  "repairs": [
+    "The initial proposed filename collided with an old module. Its tracked bytes were immediately restored and this new file was given a distinct name; no physical step ran under the collision.",
+    "Constructor rejected one-ulp differences between equivalent saved clocks before any transport step. Align to the canonical metric clock only after the existing1e-18 matching tolerance passes. No source history changes.",
+    "Use the independently corrected scalar lapse boundary. The original photon rays are reused. The original time/accuracy gates are unchanged; the remaining run cap is52s.",
+    "The first execution-plan rewrite addressed relative keys while the producer had stored absolute WSL keys. Hash verification rejected it before model construction. Correct the matching source bindings and preserve that failed plan."
+  ]
+}

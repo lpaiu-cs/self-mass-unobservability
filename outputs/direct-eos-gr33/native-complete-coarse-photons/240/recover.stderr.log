@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/complete_coarse_photon_history.py", line 173, in <module>
+    globals()[action]()
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/complete_coarse_photon_history.py", line 131, in recover
+    ns['run'](64)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/complete_coarse_photon_history.py", line 68, in run
+    new_material_steps=0,missing_photon_steps=6,reused_prefix_steps=111,captured_tail_steps=2,
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/complete_coarse_photon_history.py", line 109, in original_equation
+    assert row['passed'],row
+AssertionError: {'step': 113, 'relative': 2.1329694997819173e-10, 'physical': [1.612673207705345e-17, 4.920764907619156e-19, 2.899780313201496e-20, 2.7183016645832996e-20], 'native_identity_absolute': [769108383629312.0, 585833539174400.0], 'original202_B_arithmetic': False, 'passed': False}

@@ -1,0 +1,58 @@
+{
+  "classification": "Counterexample candidate",
+  "seconds": 1.0909387810000055,
+  "same_EOS_bitwise": true,
+  "new_EOS_calls": 1,
+  "hydrogen_helium_checks": [
+    {
+      "Z": 1,
+      "partition_relative": 6.428191312579656e-14,
+      "chemical_relative": 1.9984014443252818e-15,
+      "native_ground_logw": -1.375662320629543e-08,
+      "previous_ground_logw": 0.0,
+      "stage_population_cm3": 823359095257.3777,
+      "positive_lines": 45
+    },
+    {
+      "Z": 2,
+      "partition_relative": 5.6621374255882984e-14,
+      "chemical_relative": 1.7985612998927536e-14,
+      "native_ground_logw": -6.064078431927383e-10,
+      "previous_ground_logw": -6.064078431927383e-10,
+      "stage_population_cm3": 26526026678370.977,
+      "positive_lines": 45
+    }
+  ],
+  "line_integration": [
+    {
+      "seconds": 0.02066275399999995,
+      "segments": 107399,
+      "order": 4,
+      "omitted_wing_response_bound": 9.999780117139608e-05,
+      "tail_budget": 0.0001,
+      "profiles": 90,
+      "bound_scope": "Exact Voigt model and exact positive bin integration; floating-point quadrature is checked separately. Streaming is skew and the common collision operator is dissipative."
+    },
+    {
+      "seconds": 0.030924365999993597,
+      "segments": 107399,
+      "order": 8,
+      "omitted_wing_response_bound": 0.00019996267157281259,
+      "tail_budget": 0.0001,
+      "profiles": 90,
+      "bound_scope": "Exact Voigt model and exact positive bin integration; floating-point quadrature is checked separately. Streaming is skew and the common collision operator is dissipative."
+    }
+  ],
+  "lines_added": 90,
+  "bound_free_levels_added": 20,
+  "charged_ion_free_free": true,
+  "physical_opacity_certified": false,
+  "original_complete_input_failure_resolved": false,
+  "remaining": "Pressure widths, dissolved/omitted oscillator strength, missing metal transitions, neutral/molecular absorption and bound-electron redistribution; atmosphere, moving GR material and charge/observations.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-hhe-coupled/bank.npz": "46d8a089a6776ff19f23a3aa8e6223c1f243643e1963acdf70734d77e0ee7d61",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-hhe-coupled/inventory.npz": "91bc978217bc67b7bc13d2ce88b72436940bb528e300ece73a78f155a19c7669",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-hhe-coupled/spectrum-256-257.npz": "e4355408a19d70a9510610c5cbfbbc1d3cc5345d2533c5d11be7d4ab335d38e6",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-hhe-coupled/channels.npz": "41bca310839be11eb9c8b2c6fbfaa9fe8414c1a832fcc9ee3a93b8f5a807f07d"
+  }
+}

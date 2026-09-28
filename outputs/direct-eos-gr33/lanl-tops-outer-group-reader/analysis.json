@@ -1,0 +1,119 @@
+{
+  "classification": "Counterexample candidate",
+  "completed": true,
+  "rows": [
+    {
+      "name": "outer16groups",
+      "groups": 16,
+      "T_keV": 0.0015,
+      "input_max_score": 0.9905629826394432,
+      "native_gray_Planck_Rosseland": [
+        1127.3,
+        9.1376
+      ],
+      "recombined_Planck_Rosseland": [
+        1127.2974276845068,
+        9.137659202218591
+      ],
+      "relative_errors": [
+        2.281837570450307e-06,
+        6.478968064937973e-06
+      ],
+      "total_weight": [
+        1.0000000000000002,
+        1.0000000000000002
+      ],
+      "passed": true
+    },
+    {
+      "name": "outer16groups",
+      "groups": 16,
+      "T_keV": 0.002,
+      "input_max_score": 0.9905629826394432,
+      "native_gray_Planck_Rosseland": [
+        400.75,
+        3.5529
+      ],
+      "recombined_Planck_Rosseland": [
+        400.7609955052799,
+        3.552890484969056
+      ],
+      "relative_errors": [
+        2.7437318228074048e-05,
+        2.6781026609690173e-06
+      ],
+      "total_weight": [
+        1.0000000000000002,
+        1.0000000000000002
+      ],
+      "passed": true
+    },
+    {
+      "name": "outer32groups",
+      "groups": 32,
+      "T_keV": 0.0015,
+      "input_max_score": 0.9905629826394432,
+      "native_gray_Planck_Rosseland": [
+        1127.3,
+        9.1376
+      ],
+      "recombined_Planck_Rosseland": [
+        1127.359768707888,
+        9.137669292218824
+      ],
+      "relative_errors": [
+        5.3019345239047055e-05,
+        7.5831967718542614e-06
+      ],
+      "total_weight": [
+        1.0000000000000002,
+        1.0000000000000002
+      ],
+      "passed": true
+    },
+    {
+      "name": "outer32groups",
+      "groups": 32,
+      "T_keV": 0.002,
+      "input_max_score": 0.9905629826394432,
+      "native_gray_Planck_Rosseland": [
+        400.75,
+        3.5529
+      ],
+      "recombined_Planck_Rosseland": [
+        400.77062094222697,
+        3.5529021113145633
+      ],
+      "relative_errors": [
+        5.145587580024369e-05,
+        5.942510521439459e-07
+      ],
+      "total_weight": [
+        1.0000000000000002,
+        1.0000000000000002
+      ],
+      "passed": true
+    }
+  ],
+  "refinement": [
+    {
+      "T_keV": 0.0015,
+      "relative_difference": [
+        5.529825093242291e-05,
+        1.1042203333921918e-06
+      ]
+    },
+    {
+      "T_keV": 0.002,
+      "relative_difference": [
+        2.40173217399553e-05,
+        3.2723517684463133e-06
+      ]
+    }
+  ],
+  "all_passed": true,
+  "original_spectral_quadrature_failure_erased": false,
+  "physical_LTE_atmosphere_certified": false,
+  "monochromatic_shape_certified": false,
+  "full_GR_evolution": false
+}

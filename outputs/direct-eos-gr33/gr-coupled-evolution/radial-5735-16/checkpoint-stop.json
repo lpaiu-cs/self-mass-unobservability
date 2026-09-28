@@ -1,0 +1,117 @@
+{
+  "stopped": true,
+  "step": 4,
+  "reason": "Resume the identical 16-step trajectory with eight workers on freed CPUs; no equations, time grid or state changes",
+  "processes": [
+    {
+      "pid": 18003,
+      "ppid": 17997,
+      "state": "S",
+      "start": "8644779",
+      "command": [
+        "python3",
+        "verification/gr_coupled_evolution.py",
+        "radial-5735-16",
+        "--cells",
+        "5735",
+        "--steps",
+        "16",
+        "--duration-tau",
+        "1",
+        "--workers",
+        "4"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    },
+    {
+      "pid": 18012,
+      "ppid": 18003,
+      "state": "R",
+      "start": "8645027",
+      "command": [
+        "python3",
+        "verification/gr_coupled_evolution.py",
+        "radial-5735-16",
+        "--cells",
+        "5735",
+        "--steps",
+        "16",
+        "--duration-tau",
+        "1",
+        "--workers",
+        "4"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    },
+    {
+      "pid": 18013,
+      "ppid": 18003,
+      "state": "R",
+      "start": "8645028",
+      "command": [
+        "python3",
+        "verification/gr_coupled_evolution.py",
+        "radial-5735-16",
+        "--cells",
+        "5735",
+        "--steps",
+        "16",
+        "--duration-tau",
+        "1",
+        "--workers",
+        "4"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    },
+    {
+      "pid": 18014,
+      "ppid": 18003,
+      "state": "R",
+      "start": "8645028",
+      "command": [
+        "python3",
+        "verification/gr_coupled_evolution.py",
+        "radial-5735-16",
+        "--cells",
+        "5735",
+        "--steps",
+        "16",
+        "--duration-tau",
+        "1",
+        "--workers",
+        "4"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    },
+    {
+      "pid": 18015,
+      "ppid": 18003,
+      "state": "R",
+      "start": "8645028",
+      "command": [
+        "python3",
+        "verification/gr_coupled_evolution.py",
+        "radial-5735-16",
+        "--cells",
+        "5735",
+        "--steps",
+        "16",
+        "--duration-tau",
+        "1",
+        "--workers",
+        "4"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    }
+  ],
+  "sha256": {
+    "candidate.py": "fb18add541a51f1347a2932fc73ff0aaed6782101749e9ba940d072ec92c5374",
+    "plan.json": "67fda1a805fd5a338e0347269300b6b79e5d882dcd6f76e73f4a30ac97d5d40c",
+    "progress.json": "ff5591416d09e2cae7a7c6952a331cf2c81d6d739935a82d708eda95d1b93658",
+    "step-0000.npz": "b6991cc93d261b63c351c688ee3499f513183862a79bbca3fa55fe7a2e7d75c4",
+    "step-0001.npz": "ebc1d7bce64eae7949a08e9fbdd5f0aa28ac3104dc387a40d491c89c00708268",
+    "step-0002.npz": "2b3351d33563a68a3c39e99f63a78f8d0efac68ad7267821f5f02137d9b838ce",
+    "step-0003.npz": "728fbfb04f64a9dc22560ce2a0cc2f043394f920b047a34ac9aa6151adf57fad",
+    "step-0004.npz": "5db535739c8127c3459d8bcd32e2e291021266b536149c128071bc6fb2bb840a"
+  }
+}

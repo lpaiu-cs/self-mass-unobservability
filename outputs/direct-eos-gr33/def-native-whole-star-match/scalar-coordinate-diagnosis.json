@@ -1,0 +1,18 @@
+{
+  "classification": "Counterexample candidate",
+  "rows": [
+    {
+      "path": "corrected",
+      "subtraction": 4.0205375312105485,
+      "increment_form": 4.02053753119376,
+      "difference": -1.6788348489171767e-11
+    },
+    {
+      "path": "control",
+      "subtraction": 4.0205375312105485,
+      "increment_form": 4.020537531221511,
+      "difference": 1.0962786234358646e-11
+    }
+  ],
+  "cause": "Surface-scaled scalar is reconstructed by subtracting nearly equal phi/phi0 and 1, then dividing by mu. Its default increment absolute tolerance1e-16 also dominates the intended refined relative tolerance. Use exact surface u=-j*G plus integrated increment/mu and scale the increment absolute tolerance."
+}

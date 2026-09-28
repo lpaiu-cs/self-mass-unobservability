@@ -1,0 +1,21 @@
+{
+  "classification": "Counterexample candidate",
+  "budget_seconds": 75,
+  "claim": "Convert the updated actual conserved material response to pressure/radial stress/trace; combine actual photon moments without double-counting the initial canonical GR response.",
+  "reuse": "Existing direct conservative primitive variation and sampled per-cell native pressure probes; corrected-EOS derivative banks and full saved Phase132 photons. No physical replay.",
+  "schema": "Set nonrest stress and tangential pressure along with energy,trace,baryon and radial metric stress. Do not leave stale inherited source fields. Preserve the actual paired radial photon ports.",
+  "residual": "Compare the newly returned material reference-energy/H history with the preceding radiation-only material history. This is an unclosed waveform mismatch, not a contraction certificate. Do not compare against an old-EOS material path as if it were the same fixed point.",
+  "gates": {
+    "time": 0.02,
+    "background": 0.02,
+    "conservation": 1e-08,
+    "pressure": 0.002
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_updated_material_return.py": "edf36b27bd05330c7677811291f78226a9dbb2444c68f0cac98c0bf2a2363e01",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_updated_material_return.py": "8fa54ab1fcfa07f0e852905dbb565fe1bf5029b0ba32086e26dbcac48722e8d0",
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_material_response.py": "02862d794865e9d2785b631baeed092ebf3258538f91d4b64340230a270c10a2",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/production.json": "7b43e683a5a2c5eb8aa364bc169e9ada917a8cd45b48675847e5d9340c025268",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/audit.json": "5d05c684e3efb7e43bacedefffc769943921bf539c40d074381770903de8b763"
+  }
+}

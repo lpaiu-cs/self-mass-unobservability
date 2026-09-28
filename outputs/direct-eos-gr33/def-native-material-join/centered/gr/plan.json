@@ -1,0 +1,49 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "b024c099c",
+  "claim": "Apply the unchanged Phase117 GR response and conservative enclosure to the new actual shared-material source, without reusing old numerical bounds.",
+  "closure": "Conserved coordinate inventory, entropy and composition under the additional infinitesimal metric-volume response, with the saved static-background Gamma1. Matter and radiation changes already evolved in Phase116 are prescribed forcing. This is not a second evolution of photons/material in a dynamic metric.",
+  "equations": {
+    "classification": "Proven",
+    "passed": true,
+    "premise": "First-order metric perturbations around the declared static isotropic background. Coordinate baryon inventory, entropy and composition are fixed for this algebraic response; additional material displacement and heating are source terms.",
+    "volume": "dlnV=(3*alpha+r*Phi)*f+J/(r*b); dE=eF-(E+P)*dlnV; dP=pF-Gamma1*P*dlnV.",
+    "mass": "J_prime+(nu_prime+lambda_prime)*J=4*pi*r^2*A^4*eF. Thus J=sqrt(b)/N times the cumulative prescribed Killing-energy perturbation in geometric units. The f-dependent source cancels only after the conserved-volume matter response is included.",
+    "wave": "U_tt/c^2-U_xx+Veff*U=S_forced; Veff=Vfixed-Dv*(3*alpha+r*Phi)/r; KJ_eff=KJ+Dv/(r*b).",
+    "Dv": "4*pi*N^2*A^4*r*[alpha*(E+P-3*Gamma1*P)+r*Phi*(E+P-Gamma1*P)].",
+    "resolvent": "For eta=(c*Delta_u/2)*integral|Veff|dx<1, the retarded Green operator is a contraction. ||U-U0||<=eta*M0/(1-eta); ||U-U0-KU0||<=eta^2*M0/(1-eta), if ||U0||<=M0. This is a bound for the stated potential operator, not for missing physical source equations."
+  },
+  "mass_boundary": "The actual inner photon Killing-energy flux supplies the negative mass change below the represented inner face. Its direct scalar emission cannot reach the observer during this horizon. Independently compare both energy ports with the saved represented energy change.",
+  "exterior": "No incoming photons or matter beyond the outer face. Use the emitted positive energy to bound both exterior anisotropic photon stress and causal mass-debit scalar forcing, for any outward angular distribution. Do not equate trace-free radiation with zero metric forcing.",
+  "scalar": "Compute the forced interior metric-stress and mass terms. Bound all potential iterations by the retarded operator norm using absolute source envelopes; do not use the observed cancellation as the source norm.",
+  "reuse": "Only saved64/128 histories, fixed background and existing response operators. No new EOS bank, fluid steps, grid, frequency, angle or horizon.",
+  "gates": {
+    "port_history": 0.02,
+    "direct_reproduction": 1e-10,
+    "time_complete": 0.02,
+    "history": 0.02,
+    "quadrature": 0.002,
+    "GR_enclosure_over_direct": 0.02,
+    "positive_conditional_lower": true
+  },
+  "budget": {
+    "total_seconds": 30,
+    "new_fluid_steps": 0,
+    "CPU_threads": 1,
+    "memory_GB": 3
+  },
+  "measured_basis": "The previous actual two-path source export and direct/ray readout took9.50s. Reuse those small source arrays; only boundary photon snapshots require decompression. No large evolution is launched.",
+  "stop": "Preserve failed gates and reassess; no automatic extra paths, weaker gates or transfer of old EOS bounds. Keep whole-star and physical charge flags false.",
+  "limitations": "All Phase118 acoustic/constitutive/spatial reconstruction limits remain. Actual material shared flux is now evolved; initial Einstein constraints and dynamic metric re-evolution remain open.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_feedback_gr.py": "c954951960fa54da6eb208882b853370e64117819399b6754f23d1519a7d1d2d",
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_feedback_gr.py": "f5cd7214532a3652403ee89142d102951ccfe335ca388d96eb4b7cea88fa6a69",
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_material_join.py": "b422c6c25b2df3d874a1d73e57f163149f9190e630f8e8de36892ca44f152022",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_material_centered.py": "9e8b0fc38d98876e410cc4205a2de47a93b00f408972d399bac1feb3453e5278",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-material-join/centered/source-64.npz": "bc8f03986f407739a146b645892d3949f475037939567b1419dc93f8ac1e8048",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-material-join/centered/source-128.npz": "407539afd53532e605b00fc489e41b97f6dbda7f238f444dc34a59bed2bc63e0",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-material-join/centered/coupled-64.npz": "49d66a1fe81e87f382f730a7bf34d359eb878674d057e802245a747e2d51103d",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-material-join/centered/coupled-128.npz": "feeeb2ead73aa3cc7d76b880a1900e26b0e15ddc40352dad3e2bb4f45aea0a88",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-material-join/centered/result.json": "81be246012b4284f701087661054c728e128e4c0dada17a8337d5ef9a450c677"
+  }
+}

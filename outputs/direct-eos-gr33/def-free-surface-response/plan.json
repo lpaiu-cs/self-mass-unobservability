@@ -1,0 +1,54 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "Phase49 checkpoint",
+  "bindings": {
+    "verification/def_free_surface_response.py": "340f50f60e44246ea6680d934bc9a36f6778567c2018bb430bd411698f207965",
+    "outputs/direct-eos-gr33/def-native-atmosphere/surface-enclosure/result.json": "802bf0ac9fbc27b3ce662dd4272529a29af42e887ecb1a19ed145c48f066b53d",
+    "outputs/direct-eos-gr33/def-hydrostatic-background/absolute-shoot/background-0.001.npz": "774e2bff821f5863291167f069a8673562bfee8b0ab648468c8dfc5a2a9b04d3",
+    "outputs/direct-eos-gr33/def-hydrostatic-background/absolute-shoot/native-audit.npz": "bd07b549d75cd5606927b0d0374d457bf09db7a7b99957d461ca335d28f26bc3",
+    "outputs/direct-eos-gr33/def-hydrostatic-background/absolute-shoot/lapse.npz": "9c08b16699d7bfaa696a93e68ad2eb42a9ea98f8373d036f3c7018d5dc374dba",
+    "outputs/direct-eos-gr33/def-native-atmosphere/extended-cold/progress.json": "2214746f43be7fb2ec8d93cba02db9e199a3cbf92392ff9c87850cd4b1db9fd4",
+    "outputs/direct-eos-gr33/eos-molecular-spectral/compiled-level-inputs.npz": "b3ea5afb98834101ead8c0ef0db41421e91561a29fdd7bbaca56bdb725c01854",
+    "outputs/direct-eos-gr33/def-resolved-scalar-pulse/companion-benchmark.json": "810073ff038513cb97b36f6a1f58046c6f48952f152b32ddf8a9152157df631a"
+  },
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "equations": [
+      "Delta m=r^2*b*Phi*Delta phi-(4*pi*r^2*A^4*p+r^2*b*Phi^2/2)*xi",
+      "xi_prime=-Delta p/(Gamma1*p)-2*xi/r-Delta lambda-3*alpha*Delta phi",
+      "Delta p_prime=w*(omega^2*xi/(N^2*b)+g*(2*xi/r+Delta lambda+3*alpha*Delta phi)-Delta g)-g*Delta p",
+      "Delta phi_prime=Delta Phi+xi_prime*Phi",
+      "Delta Phi_prime=sum(F_z*Delta z)+xi*F_r+xi_prime*F-omega^2*(Delta phi-xi*Phi)/(N^2*b)"
+    ],
+    "scope": "Adiabatic Delta s=Delta X=0 on a static mechanical background, finite-temperature Gamma1. Not the omitted thermal/reactive perturbation block."
+  },
+  "claim": "Actually solve the finite-temperature adiabatic material/scalar/metric response with regular centre, free material surface and dynamic outgoing exterior. This supplies a necessary mechanical block, not a replacement for thermal/nonstationary response.",
+  "cold_completion": "Neutral ideal mixture + the same 302-level H2 sum + photons, native composition and molecular ground energy. Entropy additive constant set by the last native state; check four additional native overlap states. Excluded nonideal/excited terms and the gas-branch premise remain physical uncertainties.",
+  "gates": {
+    "cold_pressure_relative": 1e-08,
+    "cold_thermal_energy_relative": 1e-08,
+    "cold_Gamma1_relative": 1e-07,
+    "linear_residual": 1e-09,
+    "spatial_response_relative": 0.02
+  },
+  "frequencies_harmonics": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "refinements": [
+    1,
+    2
+  ],
+  "budget": {
+    "build_hard_timeout_seconds": 30,
+    "pilot_hard_timeout_seconds": 30,
+    "remaining_hard_timeout_seconds": 90,
+    "native_calls": 0,
+    "new_time_steps": 0,
+    "automatic_expansion": false
+  },
+  "decision": "Use the coupled result to identify the response scale and whether mechanical amplification is present. Do not turn adiabatic frozen-background output into measured charge, full radiation hydrodynamics or a stationary orbital result."
+}

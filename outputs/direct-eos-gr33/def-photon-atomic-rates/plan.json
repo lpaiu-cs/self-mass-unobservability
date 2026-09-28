@@ -1,0 +1,35 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "69e3dfa9",
+  "claim": "Use parsed atomic oscillator strengths and native photoionization cross sections with the common finite EOS levels; derive reverse-rate factors from native chemical stationarity, not a fitted opacity or population ratio.",
+  "decision": "Accept the reusable pointwise rate provider only if the same EOS state is recovered, chemical ratios agree, amplitudes are finite/nonnegative, subthreshold continuum is zero, and forward/reverse LTE balance passes. Do not run photon or GR evolution on this partial opacity.",
+  "model": "Fixed stored state. Preserve imported excitation differences and translate photoionization energy by the EOS ground threshold shift at fixed outgoing electron energy. Use vacuum photon frequencies. Bound-bound joint survival remains min(w_i,w_j); continuum inverse is a declared thermodynamic closure with frozen native activities, not a microscopic Milne derivation. No guessed dissolved continuum or missing transitions.",
+  "budget": {
+    "cpu_threads": 1,
+    "total_compute_seconds": 240,
+    "build_seconds": 120,
+    "build_attempts": 2,
+    "native_EOS_calls": 1,
+    "extraction_seconds": 30,
+    "analysis_seconds": 60,
+    "native_extractions": 2,
+    "new_stellar_steps": 0,
+    "coupled_runs": 0,
+    "memory_GB": 2
+  },
+  "forecast": "Prior EOS 12 calls took 0.410 s; this one call is capped at10 s. Existing native spectra took about6-13 s; parser plus cross-section sampling has not been measured and is capped at30 s per extraction. Two builds total capped120 s. No unmeasured cost is asserted as an ETA.",
+  "gates": {
+    "same_state_bitwise": true,
+    "chemical_log_ratio": 1e-09,
+    "kirchhoff_relative": 1e-09,
+    "threshold_negative": 0
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-shared-atomic/catalog.json": "95f0dc96f4b10f2e50bd570f583848b9202588686c882e4271d76859cfac98a4",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-shared-atomic/eos-state.npz": "0f4823d27e65805890f78bff051f18abd1028459341ccfcc25f578357a5eb6f8",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-shared-atomic/optical-levels.npz": "33684a356aa91a1acce8f89e9d05914e7c132891f7c1f1a02fc5b01d82153a55",
+    "/home/lpaiu/work/direct-eos-gr33/photon-shared-atomic/libfree_eos_shared_atomic.so": "ec647ec9f811094aceb4e826f1eac1bfc1c9ee4866bed036aeafb0405ec661fa",
+    "/home/lpaiu/work/direct-eos-gr33/photon-shared-atomic/gas.so": "28a8eaec64169d8660829526799cb868bf8be1618b2f868e18ff62e75c2b1b12",
+    "/home/lpaiu/work/direct-eos-gr33/photon-actual-opacity/profile-integral/build/synspec54.f": "91bcb0606afb854c42f7188dd3fa228a2fa5c1ffbf4abaad928b43196cad4f78"
+  }
+}

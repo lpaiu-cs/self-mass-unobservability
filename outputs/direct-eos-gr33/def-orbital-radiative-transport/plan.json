@@ -1,0 +1,42 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "c8db24fa9",
+  "claim": "Solve full native internal-radius grey LTE radiative transport plus the already computed microscopic conduction, actual orbital scalar drive and full GR temperature/energy/momentum feedback.",
+  "decision": "Compare its outgoing charge with the known microscopic conduction and adiabatic comparator. A large change motivates missing photon physics; a small result cannot bound spectral/atmosphere errors. Compare all radiative faces with Kn<=0.01 components to locate sensitivity to the diffusion premise. Neither bank is a physical error envelope.",
+  "model": "Use saved radiative Rosseland K=16 sigma T^3/(3 rho kappa_R) and grey flux-relaxation rate c rho kappa_R. This single-temperature moment model does not introduce a Planck absorption coefficient or duplicate LTE photon energy. Frozen geometry, coefficients and background; all native INTERNAL faces, omitted outer atmosphere flux. Retain existing microscopic electron conduction on its computed faces.",
+  "approximation": "Nonuniform background is affine, not certified stationary. Kn is mean free path over proper Tolman-temperature scale. Small Kn alone does not establish absorption thermalization. Coefficient interpolation and native opacity physics remain conditional.",
+  "cases": [
+    "all-p4 harmonics1,2,3",
+    "all-p2 harmonics1,2,3",
+    "opaque-p4 harmonics1,2,3"
+  ],
+  "gates": {
+    "linear": 1e-09,
+    "heat_law": 1e-09,
+    "internal_balance": 2e-13,
+    "adjoint": 1e-05,
+    "spatial": 0.02
+  },
+  "budget": {
+    "pilot_seconds": 120,
+    "total_seconds": 600,
+    "CPU_threads": 1,
+    "memory_GB": 4,
+    "new_EOS_calls": 0,
+    "new_stellar_time_steps": 0,
+    "automatic_expansion": false
+  },
+  "forecast": "Prior joint setup10.3s, solve0.46s at52029dofs. Extra1722face unknowns and stiff radiative coupling are unmeasured; use one pilot before production. Do not automatically expand upon failure.",
+  "references": [
+    "https://arxiv.org/abs/astro-ph/0601635"
+  ],
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_orbital_radiative_transport.py": "7de831e6f59c65fa74a5c6486838b245c901da412ce97175336d55b7f49004fb",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_orbital_conductive_feedback.py": "22f44a6e9f3a1c94bdd1506a2d034e92104c3510c83d72b086dab2718cd89366",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_temperature_feedback.py": "f2bebf74f9e7460b164320d36639e408ce5c949c54bb0465546b6415c11fd2ee",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-free-surface-thermal/coefficients.npz": "8fa9ddf79c966965a3a3fa26e6b4c738f82eec0b6ad257e521ae37c9403fb46c",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/fine-bank.npz": "b4493a6e4cfb20d741725ecb61cec154ab9fc51a694001865748741060018d7e",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-orbital-conductive-feedback/combined-projection.json": "2617aaac39d9e8618889cdd559cd64004a0757803c3e7514693f2dbd514b5b20"
+  },
+  "repair": "Preserve both failed pilots. Direct weak quadrature alone did not resolve the failure. Residual-row evidence locates scalar bubbles around1e-31 beside fluid coordinates around0.026. Recover the GR correction using its already factored physical block after the joint solve, and recheck both unchanged equations. No row omission, grid or gate change. Charge450s for two failed pilots and two bounded diagnoses against the same600s total cap."
+}

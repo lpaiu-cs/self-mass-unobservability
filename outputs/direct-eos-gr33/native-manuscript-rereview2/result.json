@@ -1,0 +1,32 @@
+{
+ "classification": "Imported from prior work",
+ "passed": true,
+ "verdict": "REVISION_4_REREVIEWED__REVISION_5_DRAFTED__ERRATA_EXTENDED__CONFIRMATION_REVIEW_PENDING",
+ "rereview_of_revision_4": {
+  "gpt-6-astra (Codex CLI, read-only)": "major revision; blocking item lifted; errata no-go and necessary condition wrong (algebraic counterexample)",
+  "opus5.5 (subagent)": "accept after minor revision; sentence-level majors: instantaneous-response attribution, strength assumption in summary and abstract, errata scope",
+  "fable5.1 (subagent)": "accept after minor revision; one sentence-level major: instantaneous-response attribution and scale"
+ },
+ "revision_5": [
+  "instantaneous response: zero-lag coefficient omitted by the fixed-companion reduction; up to about 1.24e-9 a_p^2, reaching Section 5 scales for |a_p| >~ 0.5; timing response and stiffness condition not evaluated",
+  "both relaxation assumptions in abstract and summary; lag bound limits size, does not remove the lag",
+  "Q_c = -Psi_out/m_wd vs Q = Q_c - a_i0 dm/m; window formula and whole-star history are Q_c",
+  "fixed-kernel condition on the 99.87% sign statement; Born wording; a_p = Q_p/m_p; modulation order; permanent zero only as t -> infinity",
+  "data availability: manifest file names, superseded verdict fields, reproduction map in REQUEST285"
+ ],
+ "errata": [
+  "REQUEST284 errata 4 and docs phase-284 sections: no-go under two assumptions wrong",
+  "REQUEST284 and docs: instantaneous response attributed to the Section 4.3 stiffness condition",
+  "REQUEST272 lines 8 and 19",
+  "REQUEST274 lines 48, 54, 58 (4.5e-18 with the outer term), 60",
+  "REQUEST276 lines 37, 39, 43, 47",
+  "REQUEST277 and REQUEST280 closure labels",
+  "REQUEST278 cause: preceding stored samples",
+  "manifest verdict fields superseded",
+  "REQUEST284 self-coupling sum 1.3e-7 may double count"
+ ],
+ "repository_classification": "conditional theorem progress on the lag amplitude within the chosen response family; no observational exclusion; A4 not established; deep thermal relaxation remains an uncomputed loophole candidate",
+ "previous_draft_sha256": "a5984ba254c7b82af29aa621a75c61f3efa27b47aa7d279b2dab4403be48a32e",
+ "full_goal_complete": false,
+ "snapshot_KST": "2026-09-27T23:40:50.763083+09:00"
+}

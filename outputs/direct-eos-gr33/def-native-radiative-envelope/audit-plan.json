@@ -1,0 +1,22 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Reconstruct luminosity from the integrated Tolman temperature gradient, hydrostatic pressure drop and baryon mass from saved radial profiles. Check five states using native density coordinates rather than the producer pressure coordinates.",
+  "gates": {
+    "integral_relative": 0.001,
+    "native_pressure_relative": 1e-07,
+    "native_adiabatic_relative": 1e-07
+  },
+  "limits": "Only integral/numerical consistency of the declared grey envelope. Convective stability and exact incoming/outgoing transport are separate physical gates.",
+  "budget": {
+    "hard_seconds": 60,
+    "maximum_native_calls": 5
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_radiative_envelope.py": "4586d71d16fbaf307f0866539635b33fc1ec68c5166476ae86a38594fa927f80",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_radiative_envelope.py": "143b0a62d0b52abb29ad35f71c4270b921dd1ae1a8e72af9625e446f873b3105",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-radiative-envelope/plan.json": "265b9f5b51b49ae09a059a27b5873fcf7b34964dcf3993699bae185e830578ee",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-radiative-envelope/result.json": "a8202083b7e727efd8f3cbcbd508d5d39151665ceec14e25374627c324e66958",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-radiative-envelope/fine.npz": "1f551d5a1635ad3af71d7f6ba760d442f2f3e618dba3861ebd215c53cf3e2616",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-radiative-envelope/thin.npz": "3e018528eefd3a2b09d5fd7fbf654d030c01281fe61edd1454bb8163354423a2"
+  }
+}

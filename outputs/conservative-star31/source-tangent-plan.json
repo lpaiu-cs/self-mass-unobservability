@@ -1,0 +1,12 @@
+{
+  "classification": "Counterexample candidate",
+  "reason": "The first H1 simplex direction has a 0.03484 native Jacobian discrepancy while the two finite steps agree to 5.84e-7. Use independently measured derivatives, not the known incomplete returned Jacobian.",
+  "inputs": "All 25 composition directions at two sizes, both temperature/density central steps, and thermal-neutrino profiles from those exact runs.",
+  "derivative_normalization": "Vector max-norm per cell with absolute floor 1e-30; scalar heat/neutrino derivatives with absolute floor 1 erg g^-1 s^-1. Keep the existing 1e-3 relative gate.",
+  "operator": "Use the measured initial tangent as an explicit fixed exponential-integrator preconditioner. Reevaluate the full nonlinear source and EOS at each time step. Do not call the fixed preconditioner a current-state exact Jacobian. Step refinement must demonstrate the accuracy of the new trajectory.",
+  "energy": "The coupled temperature equation uses directly differentiated total neutrino loss. It does not infer that derivative by subtracting native heat from a rest-mass source; the latter can omit chemical work.",
+  "conservation": "Carry abundance increments in longdouble, round only native/EOS inputs, and record the increment baryon correction and any positive projection. Evaluate the discrete rest-energy change from the actual rounded endpoint compositions used by the EOS and GR structure.",
+  "thermal_neutrino_boundary": "Check the archived neu_get signature and star caller before including the independently differentiated thermal-neutrino profile.",
+  "physical_EOS_certified": false,
+  "full_GR_dynamics": false
+}

@@ -1,0 +1,29 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "8309f9b0b",
+  "claim": "One finite atomic level catalog enters both chemical potentials and excitation free energy, including analytic derivatives, before the optical populations are exported.",
+  "decision": "Accept the same-state EOS/optical provider only if inventory, total thermodynamic derivatives, free-energy identities and detailed balance pass. No stellar or photon time integration is licensed by this local check.",
+  "budget": {
+    "cpu_threads": 1,
+    "build_seconds": 120,
+    "evaluation_seconds": 60,
+    "native_EOS_calls": 12,
+    "new_stellar_steps": 0,
+    "coupled_runs": 0
+  },
+  "forecast": "Previous four same-state calls took 0.209 s. New source build and EOS root speed are unmeasured; hard caps are 120 s and 60 s, no automatic extension.",
+  "gates": {
+    "inventory_relative": 1e-10,
+    "charge_relative": 1e-10,
+    "derivative_relative": 1e-05,
+    "free_energy_relative": 1e-05,
+    "level_sum_relative": 1e-12,
+    "kirchhoff_relative": 1e-10,
+    "history_bitwise": true
+  },
+  "model": "Retain native H/He II and molecular states. Replace He I and add the frozen explicit metal catalogs; retain EOS ground energies/weights, preserving imported level excitation energies. Retain native n_eff cutoff 10 and PL/MHD weights, with the native rounded-n_eff radius approximation, no added Rydberg tail. Unknown stages and dissolved continua remain unresolved.",
+  "original_runtime": {
+    "/home/lpaiu/work/direct-eos-gr33/radiation-eos-split/gas.so": "6779b197aa500652e4db02363754f8b40c2c4eecd71b169714bfa02b188892df",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/libfree_eos_direct24_molecular_spectral.so.1.0.0": "195f3658eb0cc8fe3447c6b690f246b5a4fb770bd8ffa764d19248fec857ec50"
+  }
+}

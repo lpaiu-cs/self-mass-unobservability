@@ -1,0 +1,15 @@
+&binary_job
+ inlist_names(1) = 'inlist1'
+ inlist_names(2) = 'inlist2'
+ evolve_both_stars = .false.
+/
+&binary_controls
+ m1 = 0.1975
+ m2 = 1.4
+ initial_period_in_days = 3.4
+ do_tidal_sync = .false.
+ do_initial_orbit_sync_1 = .false.
+ do_jdot_mb = .false.
+/
+&binary_pgstar
+/

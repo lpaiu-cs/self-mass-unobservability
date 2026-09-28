@@ -1,0 +1,75 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "controls": {
+    "wave_space": 4.6871604805569525e-06,
+    "wave_time": 0.00199648855587062,
+    "wave_history": 0.0019256606158152706,
+    "wave_saved_cadence": 0.007103567091718561,
+    "wave_quadrature": 7.483404224281459e-06
+  },
+  "paths": {
+    "(448, 64)": {
+      "order": 8,
+      "history": "linear",
+      "stride": 1,
+      "endpoint": 2.2412410369572638e-27,
+      "maximum_future_source_seconds": 0.0
+    },
+    "(448, 128)": {
+      "order": 8,
+      "history": "linear",
+      "stride": 1,
+      "endpoint": 2.2367753405877268e-27,
+      "maximum_future_source_seconds": 0.0
+    },
+    "(896, 128)": {
+      "order": 8,
+      "history": "linear",
+      "stride": 1,
+      "endpoint": 2.236785824761848e-27,
+      "maximum_future_source_seconds": 0.0
+    },
+    "wave_history": {
+      "order": 8,
+      "history": "cubic",
+      "stride": 1,
+      "endpoint": 2.2324785343930903e-27,
+      "maximum_future_source_seconds": 0.0
+    },
+    "wave_saved_cadence": {
+      "order": 8,
+      "history": "linear",
+      "stride": 2,
+      "endpoint": 2.252674982937849e-27,
+      "maximum_future_source_seconds": 0.0
+    },
+    "wave_quadrature": {
+      "order": 4,
+      "history": "linear",
+      "stride": 1,
+      "endpoint": 2.236786912136207e-27,
+      "maximum_future_source_seconds": 0.0
+    }
+  },
+  "endpoint_direct_normalized": 2.236785824761848e-27,
+  "peak_direct_normalized": 2.236785824761848e-27,
+  "endpoint_components": [
+    2.239379075799266e-27,
+    -1.247358165905923e-37,
+    -2.5978793811861693e-30,
+    4.628468504200805e-33
+  ],
+  "source_seed_relative": 1.3668050591548478e-11,
+  "seconds": 4.732050233999999,
+  "new_fluid_steps": 0,
+  "actual_coupled_sources_applied": true,
+  "conditional_inner_baryon_debit": true,
+  "photon_metric_sources_exported": true,
+  "full_interior_mechanics": false,
+  "radial_frequency_certification": false,
+  "full_GR_scalar_feedback": false,
+  "physical_Bondi_mass_normalization": false,
+  "final_charge_solved": false,
+  "full_goal_complete": false
+}

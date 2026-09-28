@@ -1,0 +1,49 @@
+{
+  "classification": "Conjectural",
+  "claim": "Complete the identical returned-metric photon variations using cumulative emission and scalar values after exact integration by parts of all source time jets and moving-ray pressure terms.",
+  "decision": "Compare a completed actual direct-jet cohort, then use only a verified equivalent smoother solve for the full-period stress. If reference is absent or the gate fails, do not promote production.",
+  "reuse": "Identical rays, metric,575source knots, accepted high/low histories and angular bins. k=h+mu^2*lambda with nonzero launch condition; original direct pilot remains unchanged.",
+  "gates": {
+    "actual_direct_comparison": 0.002,
+    "derivative": 0.002,
+    "rtol": 2e-08,
+    "atol": 2e-11,
+    "angular_invariant": 1e-10,
+    "quadrature": 0.002
+  },
+  "budget": {
+    "check_seconds": 600,
+    "pilot_seconds": 1800,
+    "each_path_seconds": 14400,
+    "virtual_GiB": 16,
+    "CPU_threads": 1
+  },
+  "work": "Computed work is the integrated identity and must not be advertised as independent work integration. The old direct-jet pilot supplies that independent check.",
+  "limits": "Same outgoing scalar continuation. Full scalar reciprocal/background operator, source-clock controls, coupled boundary application and final charge remain open.",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/.phase262-controller.py": "254a3fd820df33f92e0af27a75ce8baeb31e27d62ee672700c0add385f64d4bb",
+    ".phase262-production.py": "b49041188a7314bdb667b8ec84f7d13cd6b4f8a5489eb3ed5b852676ed11af8e",
+    ".phase262-check-repair.py": "b0fe65e1f8d93c88deef36b9221ff66be6045519588468e0390199cd9603bdc8",
+    "native-returned-moments262-work/plan.json": "7079b1513495d8bdd9dde6fa638be66fc1a419a4a77c5a1c0df1847c3dd5f4e4",
+    "native-returned-moments262-work/check.json": "c07de4c63b88a2a680b6314d2d98aab51c74fdadf54058e8919553859fd32f95",
+    "native-returned-moments262-work/arithmetic-check.json": "3782c87c4e83c5d93a2a63ed86219ba33d495e5b8440e18394483cd7fc9242bb",
+    "native-returned-moments262-work/check-repair-receipt.json": "7f1ccf9d0b2ec5650f91e8416110b82716ab4f1247813a40f081fa1bdf346a62",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/propagate_returned_exterior.py": "ed80f53154f4f195f28eeebf3fee45d1fe2057883a93832643060f48c1df4634",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/propagate_exterior_vacuum.py": "4969c0e9050fb0f6f41b644370f0512062f22d4efbfd4e51b225b5272efe0b7e",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/propagate_physical_exterior.py": "600392bf42fb4d3086fd4107603b15c4c8e854b6ee6543f8c87aa245ac8bd857",
+    "native-short-return259-work/result.json": "422371c7291edf6385ac11177959bf8e01afd6fc7da0fb2b62476cf6988095ca",
+    "native-short-return259-work/gr/fields-128-g8.npz": "6315597ed437d4d5cd667e44c30dd5faa28ba1ab663a6332ff03df508b9b6ea5",
+    "native-short-return259-work/metric/metric-128-g8.npz": "338444c8a84aa0d4b97ec0ac55226498708c0577f29f78515c2793cb1e0606af",
+    "native-common-arithmetic239-work/sweep-1/photons/complete-128.npz": "21f4bb184474f832e26b8d5bb309e7f1050bce7070b8ddd7325e262eacbf8645",
+    "native-short-return259-work/gr/fields-128-g4.npz": "de01ffb00dfce6313367b1123b94ae46dc28c2c10b295b738abfeced52b081d4",
+    "native-short-return259-work/metric/metric-128-g4.npz": "855f953981600a062ad3e048687eb4b002ef1be628fd575e0e6808cee4b02009",
+    "native-short-return259-work/gr/fields-64-g8.npz": "56dbfbcc6d25d09cadb94fb9d57292a1fb0d2de0a4b139e27bb7a6884f13cc58",
+    "native-short-return259-work/metric/metric-64-g8.npz": "6ae7e56745a9ec35fd235edaf7317151029e8d212f5874d96fc3ee5ab179eca8",
+    "native-common-arithmetic239-work/sweep-1/photons/complete-64.npz": "78293a016d40373449f40c8f57fd36c6cb7cc5422e23cb6f21935cc96c5fc1bc",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/propagate_returned_moments.py": "9a6a67de2c7e5571b1c0d0ebad03dd16c2b58316f3184c293c092fa1d02a8c87",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/propagate_smooth_characteristics.py": "3515bb11350015b33b6a8b9dcc326f4ec799f48448e4656d10f76387c390475f",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/propagate_primitive_characteristics.py": "2230805b9ca574e0076cf9d796eb60f0c9060f374df3208b18332c8fcb698f77",
+    "verification/propagate_outgoing_characteristics.py": "afe88577d4d064cb8ee4f238168fc193a9647807aed78ac3d253955be64a1ba7"
+  },
+  "transform": "The pressure numerator cancels the ray-crossing derivative factor. No small-denominator crossing division, source smoothing, new clock or relaxed ODE tolerance."
+}

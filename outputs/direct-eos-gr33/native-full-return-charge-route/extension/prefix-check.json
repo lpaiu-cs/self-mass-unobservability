@@ -1,0 +1,31 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "reused_through_seconds": 0.002996183397151342,
+  "rows": [
+    {
+      "clock": 64,
+      "original_rejection": "AssertionError(('Source prefix changed', 'geometry_coeff_gas_nonrest_energy_erg'))",
+      "unchanged_past_exact": true,
+      "changed_past_rejected": true
+    },
+    {
+      "clock": 128,
+      "original_rejection": "AssertionError(('Source prefix changed', 'geometry_coeff_gas_nonrest_energy_erg'))",
+      "unchanged_past_exact": true,
+      "changed_past_rejected": true
+    }
+  ],
+  "method": "Reuse only the bit-identical causal input through the last output before canonical14/16. Recompute all later GR outputs, including formerly cached points; do not alter244or224source arrays. Original source-prefix failure remains.",
+  "field_extension_algorithm_unchanged": true,
+  "original_field_regression_sha256": "e8e932653bd7f38481a6738ba76b903c8d4038bb3c68091644b32f59b8731f9a",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/extend_unchanged_source_prefix.py": "cdc7d3fb1e71edc8b5bfa326dd6d7c9c671c973dd9258ccac95a21f829d4e077",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/extend_retarded_history.py": "a67b26ae09aa765182e382841edf1792f2b8537f51288e327abe3f7c4c57a705",
+    "native-full-captured244-work/gr/source-64.npz": "d50057e00016cab9036183a15f06407db45344d095d1cc5910936bf502f9f3bf",
+    "native-complete-radau224-work/gr/source-64.npz": "7e5919f8a8c4d7e8da3ce5f036596db0cdeab94bf303c361d75cf2e73dc60bb9",
+    "native-full-captured244-work/gr/source-128.npz": "fa9b515b6ef8d40265e0ba6d85d4ec5f705af8bee4fe149a85800585fd2349f3",
+    "native-complete-radau224-work/gr/source-128.npz": "371e839a0ed56fb7c47036f5941f37f077d564a883dc8c08c8614620a576816e"
+  },
+  "final_charge_conclusion": "unadjudicated"
+}

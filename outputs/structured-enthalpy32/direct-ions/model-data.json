@@ -1,0 +1,157 @@
+{
+  "classification": "Counterexample candidate",
+  "atomic_weights": [
+    1.007825031898,
+    4.00260325413,
+    12.0,
+    14.00307400425,
+    15.99491461926,
+    19.99244017525,
+    22.98976928195,
+    23.985041689,
+    26.981538408,
+    27.97692653442,
+    30.97376199768,
+    31.97207117354,
+    34.968852694,
+    39.96238312204,
+    39.96259085,
+    47.947940677,
+    51.940504714,
+    54.93804304,
+    55.934935537,
+    57.93534165,
+    7.01600343426,
+    9.012183062,
+    11.009305166,
+    18.99840316207
+  ],
+  "electron_count_term_weights": [
+    1,
+    2,
+    1,
+    2,
+    1,
+    6,
+    9,
+    4,
+    9,
+    6,
+    1
+  ],
+  "NIST_data": {
+    "classification": "Imported from prior work",
+    "database": "NIST ASD 5.12, Kramida et al. (2024), DOI 10.18434/T4W30F",
+    "retrieved_date": "2026-09-10",
+    "acquisition": "Values transcribed from primary NIST pages returned by the web tool. Direct local CSV/form HTTP requests returned 403; no downloaded CSV is claimed.",
+    "local_http_failure": "HTTP Error 403: Forbidden",
+    "rows": [
+      {
+        "Z": 3,
+        "url": "https://physics.nist.gov/cgi-bin/ASD/ie.pl?at_num_out=on&biblio=on&e_out=0&el_name_out=on&level_out=on&seq_out=on&shells_out=on&spectra=Li&unc_out=on&units=1",
+        "energies_eV": [
+          5.391714996,
+          75.640097,
+          122.45435913
+        ],
+        "uncertainties_eV": [
+          2.2e-08,
+          1.2e-06,
+          1.1e-07
+        ],
+        "flags": [
+          "",
+          "theoretical",
+          "theoretical"
+        ]
+      },
+      {
+        "Z": 4,
+        "url": "https://physics.nist.gov/cgi-bin/ASD/ie.pl?at_num_out=1&biblio=1&e_out=0&el_name_out=1&ion_charge_out=1&spectra=beryllium&unc_out=1&units=1",
+        "energies_eV": [
+          9.322699,
+          18.21115,
+          153.896205,
+          217.71858459
+        ],
+        "uncertainties_eV": [
+          7e-06,
+          4e-05,
+          4e-06,
+          1e-07
+        ],
+        "flags": [
+          "",
+          "",
+          "theoretical",
+          "theoretical"
+        ]
+      },
+      {
+        "Z": 5,
+        "url": "https://physics.nist.gov/cgi-bin/ASD/ie.pl?at_num_out=1&biblio=1&e_out=0&el_name_out=1&ion_charge_out=1&spectra=boron&unc_out=1&units=1",
+        "energies_eV": [
+          8.298019,
+          25.15483,
+          37.93059,
+          259.374379,
+          340.2260225
+        ],
+        "uncertainties_eV": [
+          3e-06,
+          5e-05,
+          7e-05,
+          9e-06,
+          6e-07
+        ],
+        "flags": [
+          "",
+          "",
+          "",
+          "theoretical",
+          "theoretical"
+        ]
+      },
+      {
+        "Z": 9,
+        "url": "https://physics.nist.gov/cgi-bin/ASD/ie.pl?at_num_out=1&biblio=1&e_out=0&el_name_out=1&ion_charge_out=1&spectra=fluorine&unc_out=1&units=1",
+        "energies_eV": [
+          17.42282,
+          34.97081,
+          62.70798,
+          87.175,
+          114.249,
+          157.16311,
+          185.1868,
+          953.8983,
+          1103.1175302
+        ],
+        "uncertainties_eV": [
+          5e-05,
+          0.00012,
+          0.00025,
+          0.017,
+          0.006,
+          0.00025,
+          0.0006,
+          0.0003,
+          1.9e-06
+        ],
+        "flags": [
+          "",
+          "",
+          "evaluated",
+          "evaluated",
+          "evaluated",
+          "",
+          "",
+          "theoretical",
+          "theoretical"
+        ]
+      }
+    ],
+    "scope": "Element ground states. Database uncertainties are not rigorous error intervals; isotope shifts and pressure ionization remain outside this table."
+  },
+  "model_parameters": "The added neutral metal radius factors are 1. Ion factors are 1 for the first two stages and exp(2) thereafter, exactly the same generic prescription as supported metals. This is an explicit model assumption, not an independent calibration.",
+  "isotope_entropy": "This first direct-element control retains the existing element-group entropy convention. Isotope-resolved entropy terms need a separately declared consistent correction."
+}

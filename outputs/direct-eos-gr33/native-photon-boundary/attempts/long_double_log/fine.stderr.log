@@ -1,0 +1,68 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_returned_short_krylov.py", line 72, in solve
+    try:answer=short(m,op,P,rhs,guess)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/finish_returned_material_accuracy.py", line 10, in solve
+    import finish_returned_right_residual as prior
+AssertionError: ('Four-moment linear residual', 3.2427038706486246e-09, [np.longdouble('0.00020816453069184770467'), np.longdouble('1.2048111812410271556e-05'), np.longdouble('3.1011493116701090697e-09'), np.longdouble('4.9745620383881983976e-09')])
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "verification/apply_photon_geometric_boundary_ld.py", line 71, in solve
+    try:return original(m,op,P,rhs,guess)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_returned_short_krylov.py", line 80, in solve
+    answer=full(m,op,P,rhs,last)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/finish_returned_material_accuracy.py", line 10, in solve
+    import finish_returned_right_residual as prior
+AssertionError: ('Four-moment linear residual', 1.4786443777561076e-13, [np.longdouble('4.6372572563041049244e-09'), np.longdouble('3.2479769808716033106e-10'), np.longdouble('3.5344642072474028523e-17'), np.longdouble('3.2107885321300936322e-16')])
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/.phase251-reader-launch.py", line 14, in <module>
+    runpy.run_path(sys.argv[0],run_name='__main__')
+  File "/usr/lib/python3.10/runpy.py", line 289, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/usr/lib/python3.10/runpy.py", line 96, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "verification/apply_photon_geometric_boundary_ld.py", line 199, in <module>
+    elif action in ['coarse','fine']:evolve(64 if action=='coarse' else 128)
+  File "verification/apply_photon_geometric_boundary_ld.py", line 171, in evolve
+    exec(compile(source,__file__,'exec'),ns);(OUT/f'expanded-restart-evolve-{n}.py').write_text(source);ns['evolve'](n)
+  File "verification/apply_photon_geometric_boundary_ld.py", line 20, in evolve
+    and a replay of the saved native rates (the phase-259 restart pattern). Only
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_full_material_front.py", line 39, in run
+    
+  File "verification/apply_photon_geometric_boundary_ld.py", line 10, in observed
+    represents the long-double acceptance operator well enough.
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/finish_returned_material_accuracy.py", line 21, in stages
+    assert read(FAILED/'source-64-check.json')['passed']
+  File "verification/apply_photon_geometric_boundary_ld.py", line 78, in solve
+    return refine(m,op,P,rhs,guess if last is None else last)
+  File "verification/apply_photon_geometric_boundary_ld.py", line 65, in refine
+    write(OUT/f'long-double-{first.TAG[0]}.json',dict(classification='Counterexample candidate',events=EVENTS,
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/def_retained_native_return.py", line 17, in write
+    def write(p,x):Path(p).write_text(json.dumps(x,indent=2)+'\n')
+  File "/usr/lib/python3.10/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/usr/lib/python3.10/json/encoder.py", line 201, in encode
+    chunks = list(chunks)
+  File "/usr/lib/python3.10/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/usr/lib/python3.10/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.10/json/encoder.py", line 325, in _iterencode_list
+    yield from chunks
+  File "/usr/lib/python3.10/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.10/json/encoder.py", line 325, in _iterencode_list
+    yield from chunks
+  File "/usr/lib/python3.10/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.10/json/encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "/usr/lib/python3.10/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type bool is not JSON serializable

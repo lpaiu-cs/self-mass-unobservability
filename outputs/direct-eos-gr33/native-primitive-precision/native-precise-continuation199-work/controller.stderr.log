@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_precise_native.py", line 105, in <module>
+    evolve=FunctionType(before.evolve.__code__,dict(before.evolve.__globals__,OUT=OUT,old=old));evolve(n)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/complete_stable_full_interval.py", line 76, in evolve
+    m=owner.Model(n);row=m.run(n,f'complete-{n}',n,restart=f'interval-15-{n}')
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/balance_full_native_krylov.py", line 42, in run
+    import sympy as sp
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/complete_stable_full_interval.py", line 62, in saved_stage
+    result=actual(m,t,h,x,g,lus)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_precise_native.py", line 27, in stages
+    assert stored.keys()==original.keys()
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/complete_stable_full_interval.py", line 47, in solve
+    try:return solver(m,correct,P,rhs,guess)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/polish_full_native_roundoff.py", line 37, in solve
+    files += [prior.OLD/'last-accepted-64.npz',prior.EARLIER/'last-accepted-64.npz']
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/balance_full_native_krylov.py", line 14, in solve
+    LD=joint.LD;read,write,sha=prior.read,prior.write,prior.sha;KEYS=prior.KEYS
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/polish_full_native_roundoff.py", line 22, in krylov
+    assert read(OLD/'controller-status.json')['state']=='failed'
+  File "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/sparse/linalg/_isolve/iterative.py", line 759, in gmres
+    w -= tmp*v[k, :]
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/def_retained_native_acoustic.py", line 21, in stop
+    def stop(*_):raise TimeoutError('Registered native acoustic budget')
+TimeoutError: Registered native acoustic budget

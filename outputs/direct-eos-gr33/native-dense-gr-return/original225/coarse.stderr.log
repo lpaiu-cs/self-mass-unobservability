@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/evolve_dense_same_history_return.py", line 104, in <module>
+    if action in ['coarse','fine']:evolve(64 if action=='coarse' else 128)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/evolve_dense_same_history_return.py", line 74, in evolve
+    row=m.run(n,f'return-{n}',n//8)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_full_material_front.py", line 39, in run
+    
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/couple_full_incident_fluid.py", line 5, in stages
+    """
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/couple_full_incident_fluid.py", line 5, in <listcomp>
+    """
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/evolve_same_solution_gr_return.py", line 2, in jacobian
+    
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/evolve_dense_same_history_return.py", line 33, in native
+    model='Reuse188compensated same-stage equations and actual high/low branch choices. Restore exact conserved gas coordinates. High component is the actual saved joint solution; low component is its same-equation increment, never an independent zero-state solution added to a charge. Reject nonzero high-branch crossings. No converged self-GR or fully nonlinear EOS claim.',
+AssertionError: ('Saved-stage anchor precision', [3.874713105903239e-12, 8.419406927068367e-13, 2.5471547112818384e-12, 2.1456473322988824e-15])

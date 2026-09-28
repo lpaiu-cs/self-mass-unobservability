@@ -1,0 +1,40 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "b024c099c",
+  "failure": "Shared face evolution completed and passed time/energy/baryon checks, but the new coarse upwind acoustic pressure-jump mass flux alone reconstructs100.147percent of the large negative direct charge. The original upwind trajectory, strict neutral-sum failure and producer remain intact.",
+  "repair": "Remove only the artificial interior pressure-jump mass flux and velocity-jump momentum dissipation. Use central acoustic face velocity/pressure on the same native16 volumes. Retain the actual nonlinear shared-face HLL flux, simultaneous SSP material coupling, native thermochemistry and photons. No higher grid or longer history.",
+  "decision": "Does the same free material interface yield a finite direct residual after the diagnosed artificial baryon transport is removed? Keep physical sign unresolved if the original2percent time/readout gates fail.",
+  "stability": "Central acoustic semidiscretization has a skew-adjoint constant-coefficient flat limit. SSP RK2 is not unconditionally energy stable; measure its finite-horizon flat modal amplification on the actual deep acoustic scale, alongside nonlinear support/conservation pilots. No shock or long-time claim.",
+  "resource_reassessment": "The original450s dispatch completed in about325s. A new numerical equation is required; do not silently reuse the remaining budget or rerun the failed upwind equation. Add at most400s for exactly the two corrected64/128 paths, after their two-step pilot forecasts pass1.6x remainder plus10s. Reuse all native banks. Combined production caps850s; actual earlier cost retained.",
+  "budget": {
+    "pilot_seconds": 30,
+    "production_seconds": 400,
+    "saved_readout_seconds": 45,
+    "CPU_threads": 1,
+    "memory_GB": 3,
+    "new_native_bank_calls": 0,
+    "paths": [
+      64,
+      128
+    ]
+  },
+  "gates": {
+    "energy": 1e-08,
+    "baryon": 1e-10,
+    "source": 1e-09,
+    "time_direct": 0.02,
+    "time_total": 0.02,
+    "time_trace": 0.02,
+    "native": 0.002,
+    "flat_modal_growth": 1e-06
+  },
+  "stop": "Stop on original positivity/support/conservation/time gates, measured forecast or hard alarm. No automatic third path, refinement or gate relaxation.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_material_centered.py": "9e8b0fc38d98876e410cc4205a2de47a93b00f408972d399bac1feb3453e5278",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_material_join.py": "be1bcb8ccabcf1e980210f95db4053627eccd31466659e3237479feed495b505",
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_material_join.py": "b422c6c25b2df3d874a1d73e57f163149f9190e630f8e8de36892ca44f152022",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-material-join/diagnostic.json": "748a7089fb20a2e4a5dba360690737b329e653a64f4550c06091db1129e6ca56",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-material-join/production.json": "eaa7a108ca1489774e29c5ee1a2cecb26dfa1d0ab412acd0870d2c2a72c3fc72",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-material-join/result.json": "bcc14f12976dd81e2d7e27aed86fdcb3281d8ccffe87fec2cb89013f2d35b00b"
+  }
+}

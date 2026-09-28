@@ -1,0 +1,20 @@
+{
+  "parent": "outputs/direct-eos-gr33/gr-implicit-coupled-evolution/path-2",
+  "start": 9,
+  "parent_files_sha256": {
+    "failure.json": "f47c9c0f45db0c266ce1c4c09a21785feb2f452ac597dd5994af70d7c3884501",
+    "iterations.jsonl": "9cf98ee8f07a2c7540095de88c301524a4bdd427818e21b25acbb44f3d5fe536",
+    "progress.json": "6cb40c2fc53f9581ae9d0d60253dd5927f1648bb551b05c5377ecea6361c0a3f",
+    "step-0000.npz": "eaf8af084f116d631b8cbf6aa89d15dfddb76fbb34951fa833c300a764865b6b",
+    "step-0001.npz": "5191c8dbad68707a47dd247e507c149a0197750e9e2a2d7a5e63137c8a4e4aac",
+    "step-0002.npz": "33ae7dffea9ec25506514806419358bc8613bd411368d4422d00a071c48aac79",
+    "step-0003.npz": "e57e32d68d0e29adcc1453f0ba223a19a6443877ab3c88cd27653b7a574a5dc2",
+    "step-0004.npz": "eb01592ea1acfe1e73238a553ce78f65a47cda304620ebcd1fe2c53d9215d259",
+    "step-0005.npz": "20bb75a810a09bad00ec60c46df7ce22dbd5390b62f5d7eb2da8dba9d79d7b72",
+    "step-0006.npz": "fa77315c5e7102fb7750ad0917b5460233da2fddc8ed73d83df5840fa442b79f",
+    "step-0007.npz": "694d8e3ac0041c6ad9f0f4d9df5e1d12466b88b2f571d11b4a6543f5140ffb65",
+    "step-0008.npz": "dd80a1442dde1ac1353b5222c6872530b52ee2c73c97f0eb137840efa9025db7",
+    "step-0009.npz": "641ade8f8d6941a44c174b9e173f099e9cafee73d8be3672f19fcc96630dee69"
+  },
+  "rule": "Copy completed steps only; replay the last checkpoint with freshly evaluated native EOS before continuing. The uncompleted parent stage and its failed/stopped status remain in the original parent record."
+}

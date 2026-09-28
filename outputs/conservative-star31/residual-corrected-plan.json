@@ -1,0 +1,20 @@
+{
+  "classification": "Counterexample candidate",
+  "dt": 140780.16,
+  "inputs_sha256": {
+    "enthalpy-coordinate-predictor.npz": "ed43c65df2276a03bac2917008878eeab818b737792aa3cdfc4fa05667c2a272",
+    "residual-chart-source.npz": "679433c2b2c859f8d46e4b6124a87ac8d236e93c6a47fff47738cd6cdccadd23",
+    "initial-state.npz": "f6214a2cb17553373dee3e785435177a5df1b47edd5ec1852bde2105bfcde2a8"
+  },
+  "formula": "d_corrected=d+h phi2(hW)[F_at_GR_predictor-F0-Wd]",
+  "predictor": "Reuse the original failed GR endpoint only after the separate coordinate covariance gate passed. That finite reuse error is recorded and is not a rigorous stage-error bound.",
+  "energy_coordinates": "Reference-pressure enthalpy and neutrino energy at infinity, both divided by C0. Invert the corrected reference enthalpy using the existing EOS inverse budget, then solve the GR constraints.",
+  "criteria": {
+    "composition_minimum_before_tiny_projection": -1e-22,
+    "neutrino_loss_minimum_erg_g": -1e-12,
+    "EOS_inverse": "max(2 erg/g,32 ulp(target),1e-8 abs(target-initial))",
+    "global_energy_relative_to_release": 1e-06
+  },
+  "time_refinement_completed": false,
+  "full_physical_GR_evolution": false
+}

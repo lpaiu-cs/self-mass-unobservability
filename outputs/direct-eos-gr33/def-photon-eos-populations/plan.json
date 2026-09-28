@@ -1,0 +1,29 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Use the actual same-EOS excitation/occupation state and atomic-source partitions to resolve the microscopic population boundary before changing opacity. Do not fit line strengths or relabel an injected population as a consistent LTE EOS.",
+  "decision": "Identify which physical levels and partition corrections exist in the frozen EOS; reconstruct them and connect compatible microscopic absorption. If incompatible state sets require an EOS extension, state it rather than silently adding opacity-only excited states.",
+  "budget": {
+    "native_EOS_calls": 4,
+    "seconds": 60,
+    "native_atomic_runs": 0,
+    "coupled_runs": 0,
+    "new_stellar_steps": 0
+  },
+  "gates": {
+    "history_bitwise": true,
+    "inventory_relative": 1e-10,
+    "saved_state_relative": 1e-12
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_photon_eos_populations.py": "35accb65c7fab0a7c36b2de21b10be7ca12900cca5014ce9becb32b20add7558",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-collective/inventory.npz": "977692961cb6e6e5cc0165db9a88db0323f1d8099040fe4c0b7876a08b848047",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-actual-opacity/profile-integral/populations.json": "6cd998b60f39617f1c3dd191090763d23d5e4fe9cb63af1cb8125833f0e8390f",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-eos-populations/mod_excitation_block.f90": "d96e0e5f7a6832bb34cf2536736fdb765167e8ef7c92cee563bc111bc97a00ff",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-eos-populations/excitation_sum.f90": "f433fcdd4c0629e9605b1ca0e29eb98a295726e36be2e5d83e046c6e4e7110cf",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-eos-populations/qstar_calc.f90": "6c94e62090749c5942a3907b96accb78696cd81df8f366d5b3555059026d94bd",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-eos-populations/qryd_calc.f90": "29409920c159c8d55b924e52accac7261c1fa4ba0c04d45862f9920a684995bb",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-eos-populations/mod_free_eos_constants.f90": "b2343290a6c273e4e1e78079abbc8093c39efd6007a4523bde8063c581469af4",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-eos-populations/mod_ionization_data.f90": "d8ca5caba7776f143976cd3b73fc5410cbb931e652c3b35dc3869edd65951834",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-eos-populations/qmhd_calc.f90": "295d7d0e8d132e461b008c0badf33333d74663dab7c6117ae34f50e6767bb4a7"
+  }
+}

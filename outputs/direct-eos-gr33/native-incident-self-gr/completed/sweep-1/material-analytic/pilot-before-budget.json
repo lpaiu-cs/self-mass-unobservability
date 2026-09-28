@@ -1,0 +1,141 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "rows": [
+    {
+      "classification": "Counterexample candidate",
+      "passed": true,
+      "steps": 64,
+      "reference": 128,
+      "completed": 2,
+      "substeps": 8,
+      "balance_relative": [
+        1.257284552563514e-20,
+        1.6615262162221906e-17,
+        4.355219636916522e-18,
+        1.6697879532703254e-16
+      ],
+      "directional": [
+        {
+          "time": 0.00010732597243527195,
+          "relative": [
+            8.21501136333839e-06,
+            4.5480807537923813e-10,
+            2.247449384542879e-07,
+            4.582206993267775e-12
+          ]
+        }
+      ],
+      "directional_relative": 8.21501136333839e-06,
+      "forward_probe_indicator": 0.0015375269337746,
+      "maximum_true_relative_state": 1.0896908620365299e-38,
+      "endpoint_sum": [
+        2.1678808786096057e-15,
+        2.3399954964521986e+20,
+        2965675369467319.5,
+        -4.05553223106226e+23
+      ],
+      "endpoint_L1": [
+        0.068265047388995,
+        2.3400098596691205e+20,
+        7007127233336415.0,
+        1.878217650483733e+24
+      ],
+      "endpoint_sum_physical": [
+        2.1678808786096057e-41,
+        2.3399954964521985e-06,
+        2.96567536946732e-11,
+        -0.00405553223106226
+      ],
+      "endpoint_L1_physical": [
+        6.8265047388995005e-28,
+        2.3400098596691204e-06,
+        7.007127233336416e-11,
+        0.018782176504837333
+      ],
+      "discard_physical": [
+        -2.1678934514551315e-41,
+        -9.711142608902673e-24,
+        -3.227862820496178e-27,
+        -9.96009594611852e-20
+      ],
+      "raw_owner_calls": 86,
+      "seconds": 1.261772702999906,
+      "full_GR_feedback": false,
+      "final_charge_solved": false,
+      "worker_wall_seconds": 6.123776428999918,
+      "physical_branch_ratio": 2.2141954045442828e-21,
+      "maximum_owner_error": 1.8890685044047918e-13,
+      "nominal_arithmetic_probe": 512
+    },
+    {
+      "classification": "Counterexample candidate",
+      "passed": true,
+      "steps": 128,
+      "reference": 128,
+      "completed": 2,
+      "substeps": 8,
+      "balance_relative": [
+        3.360269176993172e-20,
+        2.7865308964485267e-18,
+        2.807918275866443e-17,
+        1.4481692433521766e-16
+      ],
+      "directional": [
+        {
+          "time": 5.3662986217635974e-05,
+          "relative": [
+            1.495681293144425e-05,
+            3.319502868269597e-10,
+            2.7014353374148847e-07,
+            1.838047575156206e-12
+          ]
+        }
+      ],
+      "directional_relative": 1.495681293144425e-05,
+      "forward_probe_indicator": 0.0016366345797942958,
+      "maximum_true_relative_state": 3.720212231132407e-39,
+      "endpoint_sum": [
+        9.98899601949892e-17,
+        4.5935885262026236e+19,
+        208834466201815.8,
+        -2.0316288494978602e+23
+      ],
+      "endpoint_L1": [
+        0.00803434499470161,
+        4.736965185301015e+19,
+        2783940581143129.5,
+        9.417436289969327e+23
+      ],
+      "endpoint_sum_physical": [
+        9.98899601949892e-43,
+        4.5935885262026235e-07,
+        2.0883446620181582e-12,
+        -0.0020316288494978602
+      ],
+      "endpoint_L1_physical": [
+        8.03434499470161e-29,
+        4.736965185301015e-07,
+        2.7839405811431294e-11,
+        0.009417436289969328
+      ],
+      "discard_physical": [
+        -9.992356288675914e-43,
+        -7.813060414451804e-25,
+        -3.8755200865865294e-28,
+        -2.963164318172199e-20
+      ],
+      "raw_owner_calls": 86,
+      "seconds": 1.2691851130000487,
+      "full_GR_feedback": false,
+      "final_charge_solved": false,
+      "worker_wall_seconds": 6.0809194480000315,
+      "physical_branch_ratio": 5.560314097933436e-22,
+      "maximum_owner_error": 1.8890685044047918e-13,
+      "nominal_arithmetic_probe": 512
+    }
+  ],
+  "seconds": 12.205005131999997,
+  "upper_remaining_seconds": 440.2658497196745,
+  "eligible": false
+}

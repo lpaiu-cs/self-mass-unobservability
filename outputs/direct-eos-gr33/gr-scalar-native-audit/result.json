@@ -1,0 +1,12 @@
+{
+  "classification": "Counterexample candidate",
+  "completed": true,
+  "bitwise_internal_energy_equal": false,
+  "different_states": 3276,
+  "maximum_absolute_difference_erg_g": 40.0,
+  "maximum_difference_over_cvT": 4.728531866856786e-14,
+  "maximum_existing_energy_budget_score": 0.6875,
+  "existing_energy_budget_passed": true,
+  "pressure_root_source": "common_eos.structure calls the native pressure/entropy inverse and stores its energy. gr_microphysics reevaluates at saved log-density/log-temperature/composition; these are distinct rounded calls.",
+  "scope": "The original bitwise scalar-entry assertion failed before any scalar IVP. This does not establish physical scalar failure or authorize silently replacing the original GR state."
+}

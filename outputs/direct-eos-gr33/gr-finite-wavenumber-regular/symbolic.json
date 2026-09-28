@@ -1,0 +1,12 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "definitions": "p and x are momenta/(m_e c); Q=hbar*k/(2*m_e*c); gamma(p)=sqrt(1+p^2); beta=kBT/(m_e*c^2); eta=(mu-m_e*c^2)/(kBT). K(x,Q)=x*gamma(x)*Psi_J(Q/x,x).",
+  "derivative": "dK/dx=x^2/gamma+x*(1+x^2-Q^2)/(2*Q*gamma)*log|(x+Q)/(x-Q)|. The cusp at x=Q is integrable; K itself is continuous.",
+  "transform": "f(t;eta)=integral_t^infinity f(s;eta)*(1-f(s;eta)) ds. Since the vacuum-subtracted one-loop medium response is linear in occupation, S(Q)=integral_0^infinity K(sqrt(beta*t*(2+beta*t)),Q)*f(t)*(1-f(t)) dt = integral_0^infinity f(p)*dK/dp dp. This transforms susceptibility, not epsilon inverse or a nonlinear RPA-resummed energy.",
+  "dielectric": "epsilon_medium(k)=1+(4*alpha/pi)*(m_e*c/hbar)^2*S(Q)/k^2. For Q=0, S(0)=integral f(p)*(1+2*p^2)/sqrt(1+p^2) dp = integral p*gamma*f(t)*(1-f(t)) dt, reproducing kappa_0^2.",
+  "positivity": "For u=p/Q<1 the momentum kernel times dp/du is Q*u^2/sqrt(1+Q^2*u^2)*(h+Q^2*j), h=atanh(u)/u>0, j=sum_{n>=1}2*u^(2n)/((2n-1)*(2n+1))>0. For u>1 both terms of Q/sqrt(1+Q^2*u^2)*(Q^2*u^2+u*(1+Q^2*(u^2-1))*atanh(1/u)) are positive. Hence S(Q)>0 at every finite Q and T>0.",
+  "series": "For u<1/4, use h=sum_{n=0}^{16}u^(2n)/(2n+1), j=sum_{n=1}^{16}2*u^(2n)/((2n-1)*(2n+1)). Each omitted tail is positive; bounds are u^34/(35*(1-u^2)) and 2*u^34/(33*35*(1-u^2)), respectively. This is a local analytic truncation bound, not an interval certificate of the numerical quadrature.",
+  "thermal_pairs": "For eta+1/beta>0 and t>=0, f_plus/f_minus <= exp(-eta-2/beta)*(1+exp(-eta)). Positivity of the common response kernel gives 0<=S_plus(Q)/S_minus(Q)<=the same bound for ALL Q, including Q=0. This compares fixed chemical potential occupations, not a density-retuned EOS or vacuum polarization.",
+  "scope": "Exact conditional algebra of the declared ideal-electron medium model. Full interacting physical EOS remains open."
+}

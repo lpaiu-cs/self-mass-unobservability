@@ -1,0 +1,51 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "a9b8878c",
+  "bindings": {
+    "verification/gr_driven_readout.py": "0ae239dc01f33358ec57445f4f5e9e94a11a4400bf637cbeab8f787c16815cd9",
+    "verification/common_eos.py": "01812cb068991dd6d72def58a78d158bef2bb3d00028312efc271c50dfdcb123",
+    "verification/gr_scalar_reference.py": "e1798424c4090b1c7220aaedb5dda30a3ac95547845782fc812ca42bce3675f7",
+    "outputs/direct-eos-gr33/gr-compatible-equilibrium-v2/production-resume271-consoleless/plan.json": "eb7ca8d7fb57efb548aedbd7dfcda36450ba8de2695c48c828fe2e404804779c",
+    "outputs/direct-eos-gr33/gr-compatible-equilibrium-v2/production-resume271-consoleless/time-refinement.json": "55b5b793ed998c7f4553c33d5ddc3856a194f44c71e68bc9e7531ef4d70bca0b",
+    "outputs/direct-eos-gr33/gr-compatible-equilibrium-v2/production-resume271-consoleless/time-refinement-manifest.json": "891f36fc2b30a8e08bcd706f7ebfd935d22c951bf6dc42a7ee7c259a13db2fe6",
+    "outputs/direct-eos-gr33/gr-compatible-equilibrium-v2/production-resume271-consoleless/path-1/step-0000.npz": "604cce5eb032d716ce28bacf024541faad234c53fd0fde94b786b92ef9a29d6f",
+    "outputs/direct-eos-gr33/gr-compatible-equilibrium-v2/production-resume271-consoleless/path-1/step-0070.npz": "b0ec8b5c42107f32cc1beb45d98b53ac3bf2251ce81e369c0f46f7c3673ee032",
+    "outputs/direct-eos-gr33/gr-compatible-equilibrium-v2/production-resume271-consoleless/path-2/step-0000.npz": "7d1a92dc4fac9323a5738430d6bbc83508fbb34ecd882e62fc76844a6cf251a3",
+    "outputs/direct-eos-gr33/gr-compatible-equilibrium-v2/production-resume271-consoleless/path-2/step-0140.npz": "660191be55014800269a911537f7c630a24638ba31a73af2a08e1ba5700053e2",
+    "outputs/direct-eos-gr33/gr-compatible-equilibrium-v2/production-resume271-consoleless/path-4/step-0000.npz": "266b83dd4515521967d6123c154272709083e657efc1f3be55fabe685565d479",
+    "outputs/direct-eos-gr33/gr-compatible-equilibrium-v2/production-resume271-consoleless/path-4/step-0280.npz": "40f69e898501e82e97451a6edcdb1a8033f62e309590400f3ee4de6df95c626c"
+  },
+  "beta": -4,
+  "tolerances": [
+    1e-10,
+    2e-12
+  ],
+  "quadrature_nodes": [
+    6,
+    12
+  ],
+  "absolute_alpha_readout_agreement": 1e-09,
+  "change_over_discretization_difference_gate": 10,
+  "readout": "alpha/phi_infinity=-chi/M, exact Schwarzschild logarithmic scalar tail on each frozen snapshot. The isotropic comoving trace is rho*(rest+u)-3P; do not use Eulerian E-3P.",
+  "drive": "Subsequent candidate: delta_phi_ext(t) on a specified small nonzero DEF background phi0, with consistent matter source beta*phi*T*d_mu(phi). This run applies no drive; it measures whether the already computed GR trajectory changes the static scalar readout.",
+  "comparator": "For this run: constant initial susceptibility. For a driven experiment: co-fit the registered instantaneous response and justified derivative/nuisance directions; a transient difference alone is not a nonadiabatic observable.",
+  "decision": "Use existing endpoints to assess a resolvable charge-readout change. Closed-GR mass drift is a negative control, never the candidate signal. Do not launch molecular full-duration evolution on this evidence alone.",
+  "resource_budget": {
+    "cpu_workers": 1,
+    "gpu": false,
+    "maximum_wall_seconds": 300,
+    "maximum_model_integrations": 8,
+    "maximum_Riccati_integrations": 6,
+    "native_EOS_calls": 0,
+    "memory_estimate": "Below 1 GiB for saved arrays and two scalar interpolants; measured peak recorded by /usr/bin/time.",
+    "wall_estimate": "Unmeasured scalar-readout runtime: bounded pilot, not a long-run ETA. Hard external timeout 300 seconds.",
+    "reuse": "Saved 70/140/280 endpoints, initial state and native auxiliaries.",
+    "stop": "Stop on input mismatch, failed numerical control, or wall-time cap; preserve partial result; no automatic tolerance/refinement enlargement."
+  },
+  "limitations": [
+    "Frozen nonstationary snapshots do not define a causal time response.",
+    "Finite-pressure wall is not a physical scalar-tensor exterior/atmosphere match.",
+    "Two ODE tolerances and quadratures are finite comparisons, not rigorous error bounds.",
+    "The new molecular EOS, finite scalar backreaction, orbital transfer and data inference are absent."
+  ]
+}

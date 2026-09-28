@@ -1,0 +1,103 @@
+{
+  "classification": "Counterexample candidate",
+  "source_sha256": "69fc3b1e58b705dcb27cc2fa231699e235bddc2027d43182e742512b394b0131",
+  "original_verdict": "The two independent upstream GR histories failed the second photon prefix. SSPRK3 did not repair the first material interval. Both designs remain failed. This conditional fixed-input experiment does not convert their verdict to passed.",
+  "claim": "Return the finest actually generated GR128 field to BOTH evolution clocks and isolate downstream time error at that fixed input. Original coarse/fine upstream GR differences remain a separate uncertainty, including unresolved relative early-force sensitivity.",
+  "evidence": [
+    0.001720586692622263,
+    1.666967332543376e-07,
+    0.006992726456159245,
+    0.003299847058924543
+  ],
+  "equations": "Restore original SSP2; use exactly metric-128-g8 for64 and128. Retain separate photon/collision/material paths, original clock/cells/horizon, source-knot alignment and extended SDIRK state. No finer solve or gate change.",
+  "reuse": "The128 path already used exactly this input and SSP2. Its first-sweep photon/material full histories and second photon prefix are unchanged byte-for-byte. Recompute only affected64 histories and pending reciprocal responses.",
+  "gates": {
+    "time": 0.02,
+    "quadrature": 0.002,
+    "waveform": 0.002,
+    "metric_residual": 0.002,
+    "linear": 1e-12,
+    "conservation": 1e-08,
+    "source_identity": 1e-12,
+    "independent_GR": 1e-09,
+    "port": 1e-12,
+    "ray": 1e-10,
+    "directional": 0.002,
+    "mapping": 1e-10,
+    "velocity": 0.0001,
+    "branch": 0.01
+  },
+  "stop": "Original2percent prefix/full time,0.2percent reciprocal/metric, nondecreasing residual, max3 sweeps and4600s total remain. A conditional pass does not certify upstream forcing uncertainty or the full physical problem.",
+  "budget": {
+    "total_action_seconds": 4600,
+    "photon_action": 1250,
+    "material_action": 450,
+    "CPU_threads": 1,
+    "virtual_GiB": 3
+  },
+  "reuses": {
+    "native-incident-self-gr157-work/sweep-1/photons-common-gr/pilot-128.npz": {
+      "source": "native-incident-self-gr157-work/sweep-1/photons-aligned/pilot-128.npz",
+      "sha256": "e7da8223cfb3ca61eadcc9829ed98c2c1355783d5bf33093063c87b1cd03cccb"
+    },
+    "native-incident-self-gr157-work/sweep-1/photons-common-gr/pilot-128.json": {
+      "source": "native-incident-self-gr157-work/sweep-1/photons-aligned/pilot-128.json",
+      "sha256": "887eed2636dcc8e51ca83cb9c29fb1015cf64ab3bd9143dbd9196d94259e00bd"
+    },
+    "native-incident-self-gr157-work/sweep-1/photons-common-gr/steps-128-reference-128.npz": {
+      "source": "native-incident-self-gr157-work/sweep-1/photons-aligned/steps-128-reference-128.npz",
+      "sha256": "fdf21d04c7aaba05bce3ac75d0f3b0731512e036e2a1d4bf53575ca55e3d9e3f"
+    },
+    "native-incident-self-gr157-work/sweep-1/photons-common-gr/steps-128-reference-128.json": {
+      "source": "native-incident-self-gr157-work/sweep-1/photons-aligned/steps-128-reference-128.json",
+      "sha256": "a49b51029adc652b3fbe404505a3bf7ea9882a3042a981db5c49c726704d7a42"
+    },
+    "native-incident-self-gr157-work/sweep-1/material-common-gr/pilot-128.npz": {
+      "source": "native-incident-self-gr157-work/sweep-1/material-analytic/pilot-128.npz",
+      "sha256": "e26dd38c06079726ad0af718a19047e040dc312665e1c4f8da25e53514222b09"
+    },
+    "native-incident-self-gr157-work/sweep-1/material-common-gr/pilot-128.json": {
+      "source": "native-incident-self-gr157-work/sweep-1/material-analytic/pilot-128.json",
+      "sha256": "b01fcd97446b90296dee1e602d19361e14eda7a61ca8931f4ecb3bbbae204ec9"
+    },
+    "native-incident-self-gr157-work/sweep-1/material-common-gr/steps-128-reference-128.npz": {
+      "source": "native-incident-self-gr157-work/sweep-1/material-analytic/steps-128-reference-128.npz",
+      "sha256": "d68f09d7e5577679cd463a3c6da6ff1147ea4221cfb8bc4443c4d4081e1abff2"
+    },
+    "native-incident-self-gr157-work/sweep-1/material-common-gr/steps-128-reference-128.json": {
+      "source": "native-incident-self-gr157-work/sweep-1/material-analytic/steps-128-reference-128.json",
+      "sha256": "0212fc8f9c0afcc8822e6350b14fa86ff0de07d543836184771174684af10e2a"
+    },
+    "native-incident-self-gr157-work/sweep-2/photons-common-gr/pilot-128.npz": {
+      "source": "native-incident-self-gr157-work/sweep-2/photons-aligned/pilot-128.npz",
+      "sha256": "ea1e3ac40de49a5b27f13f7ad28137e93b6b743122be883bb66ab9187dc7c4c7"
+    },
+    "native-incident-self-gr157-work/sweep-2/photons-common-gr/pilot-128.json": {
+      "source": "native-incident-self-gr157-work/sweep-2/photons-aligned/pilot-128.json",
+      "sha256": "e33b8bff8dbb778e0f843fa2303b4ba857929d2d589e9280cc8a40ad36b11f7b"
+    }
+  },
+  "bindings": {
+    "native-incident-self-gr157-work/rk3-producer.py": "f6b57a5c83259f3800e85bb26da685fc367547cf7cdcf28a5e6894018429fe44",
+    "native-incident-self-gr157-work/rk3-plan.json": "fe410d4e615dd291e21b99ef166d2a46c8f67e1744300e188176923b7b488375",
+    "native-incident-self-gr157-work/input-diagnostic.py": "1eb7d50bd6257be9a73b9b6999094e3feb63c5bc65e7ad5585c99f40c1f7c9e0",
+    "native-incident-self-gr157-work/input-diagnostic.json": "28f29c05985fce80ec8749a95220d83ef0adf2fee5a1d4901d6dabaeccc5db51",
+    "native-incident-self-gr157-work/input-diagnostic-receipt.json": "dfdc4eef36689b164d2f65245947197c9985da8303b0b589532202a8a7d5c124",
+    "native-incident-self-gr157-work/sweep-1/material-rk3/pilot.json": "c434a1e13960fd594b6504ee79c78ae05d4b92ae49fc06df9a44459b44297a7d",
+    "native-incident-self-gr157-work/sweep-1/photons-aligned/pilot-128.npz": "e7da8223cfb3ca61eadcc9829ed98c2c1355783d5bf33093063c87b1cd03cccb",
+    "native-incident-self-gr157-work/sweep-1/photons-aligned/pilot-128.json": "887eed2636dcc8e51ca83cb9c29fb1015cf64ab3bd9143dbd9196d94259e00bd",
+    "native-incident-self-gr157-work/sweep-1/photons-aligned/steps-128-reference-128.npz": "fdf21d04c7aaba05bce3ac75d0f3b0731512e036e2a1d4bf53575ca55e3d9e3f",
+    "native-incident-self-gr157-work/sweep-1/photons-aligned/steps-128-reference-128.json": "a49b51029adc652b3fbe404505a3bf7ea9882a3042a981db5c49c726704d7a42",
+    "native-incident-self-gr157-work/sweep-1/material-analytic/pilot-128.npz": "e26dd38c06079726ad0af718a19047e040dc312665e1c4f8da25e53514222b09",
+    "native-incident-self-gr157-work/sweep-1/material-analytic/pilot-128.json": "b01fcd97446b90296dee1e602d19361e14eda7a61ca8931f4ecb3bbbae204ec9",
+    "native-incident-self-gr157-work/sweep-1/material-analytic/steps-128-reference-128.npz": "d68f09d7e5577679cd463a3c6da6ff1147ea4221cfb8bc4443c4d4081e1abff2",
+    "native-incident-self-gr157-work/sweep-1/material-analytic/steps-128-reference-128.json": "0212fc8f9c0afcc8822e6350b14fa86ff0de07d543836184771174684af10e2a",
+    "native-incident-self-gr157-work/sweep-2/photons-aligned/pilot-128.npz": "ea1e3ac40de49a5b27f13f7ad28137e93b6b743122be883bb66ab9187dc7c4c7",
+    "native-incident-self-gr157-work/sweep-2/photons-aligned/pilot-128.json": "e33b8bff8dbb778e0f843fa2303b4ba857929d2d589e9280cc8a40ad36b11f7b",
+    "native-incident-self-gr157-work/sweep-1/check-different-input.json": "362e853971b8279634cea92031f32301bd9b64921cbc0ea71372f9f400d2c62f",
+    "native-incident-self-gr157-work/sweep-2/check-different-input.json": "1994a0526b27699e1a6f72800fde2d5c62973640e70e7c019379d97285e69444",
+    "native-incident-self-gr157-work/metric/metric-128-g8.npz": "f4e1c733e30c76c5e1ceb5f9186dab10b3996fd24c7fba104d879042582ed8a2",
+    "native-incident-self-gr157-work/sweep-1/residual-ssp2.json": "2957b7e5715e48372316d8e87952b6253115c844f2386a122483b604281a1c76",
+    "native-incident-self-gr157-work/sweep-2/photons-aligned/pilot.json": "e57436cb658c1a886a7410b91d08c8d73fdc7f5f43a257b294d4756124b1c0d3"
+  }
+}

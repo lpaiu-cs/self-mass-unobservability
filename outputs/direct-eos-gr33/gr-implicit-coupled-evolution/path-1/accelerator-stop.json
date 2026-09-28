@@ -1,0 +1,54 @@
+{
+  "stopped": true,
+  "reason": "Continue the same physical SDIRK path with native-residual secant acceleration and backtracking. This is an operator stop of a slow iteration, not a scientific failure verdict.",
+  "last_completed_step": 5,
+  "root": 627,
+  "processes": [
+    {
+      "pid": 627,
+      "parent": 618,
+      "start": "118223",
+      "state": "S",
+      "command": "python3 verification/gr_implicit_coupled_evolution.py run --refinement 1 --workers 4"
+    },
+    {
+      "pid": 628,
+      "parent": 627,
+      "start": "126590",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_coupled_evolution.py run --refinement 1 --workers 4"
+    },
+    {
+      "pid": 629,
+      "parent": 627,
+      "start": "126592",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_coupled_evolution.py run --refinement 1 --workers 4"
+    },
+    {
+      "pid": 630,
+      "parent": 627,
+      "start": "126592",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_coupled_evolution.py run --refinement 1 --workers 4"
+    },
+    {
+      "pid": 631,
+      "parent": 627,
+      "start": "126593",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_coupled_evolution.py run --refinement 1 --workers 4"
+    }
+  ],
+  "boot_id": "9b968b4f-ecbd-483b-ada9-c1c871b6ab20",
+  "sha256": {
+    "iterations.jsonl": "54e13182256b7add3c3b2467d9f487a7ea40af6b80e092e03292c4220bdc03cb",
+    "progress.json": "6a4b8ebf5a1a2f4340b49525d174bc38d1dd2be49b86fc413a5f4851eb39caaf",
+    "step-0000.npz": "d1bf5b4494cac89eb54e1eaf62dc1673347908c286d4df71cbe935b2fb1c971c",
+    "step-0001.npz": "d87527c642ca265a5f13c4971f42c53928c499adf87b760fff9bed4bca66a0ab",
+    "step-0002.npz": "93decf5242faeea594b7e0d53c19388a9455018606e20af18b76cf61cb9b0129",
+    "step-0003.npz": "32d766aa0925f3b43b73d3d84e2dcfdf563367c7178328f732e5fa5d6c5b3458",
+    "step-0004.npz": "ce16cd2fe90eb1b1619c3a292e4d9d468ef61c7fe0855f24cee37c6b931b445b",
+    "step-0005.npz": "6c2d4df8d007bb9b2be048350996ab586b4498d0a77c4992395d30324b9af362"
+  }
+}

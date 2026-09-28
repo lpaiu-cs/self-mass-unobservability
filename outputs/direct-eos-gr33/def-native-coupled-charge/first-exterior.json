@@ -1,0 +1,41 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "controls": {
+    "fluid_grid": 9.257184169173361e-09,
+    "vacuum": 3.8402298571302217e-16,
+    "angular": 1.1520689571390663e-15,
+    "history": 0.0002681090107598389
+  },
+  "rays": {
+    "896": {
+      "minimum_emission_mu": 0.985099669194789,
+      "last_bin_lower_mu": 0.75,
+      "radial_face_delay_seconds": 4.002810941906803e-06,
+      "angular_max_delay_seconds": 0.05762341954075107,
+      "vacuum_order": 32,
+      "angular_order": 8
+    },
+    "448": {
+      "minimum_emission_mu": 0.985099669194789,
+      "last_bin_lower_mu": 0.75,
+      "radial_face_delay_seconds": 4.002810941906803e-06,
+      "angular_max_delay_seconds": 0.05762341954075107,
+      "vacuum_order": 32,
+      "angular_order": 8
+    }
+  },
+  "endpoint_arrived_energy_erg": 3.664818628103211e+29,
+  "endpoint_frozen_initial_energy_erg": 5.533870408225537e+28,
+  "endpoint_radiative_mass_normalization": 4.1529590871828275e-27,
+  "endpoint_direct_plus_mass_normalization": 6.38974450377924e-27,
+  "endpoint_excess_over_frozen_photon_normalization": 5.762648329826777e-27,
+  "positive_subbin_normalization_upper": 1.9713562155153357e-25,
+  "seconds": 4.7365411800000015,
+  "same_vacuum_null_rays_applied": true,
+  "angular_bin_reconstruction": "piecewise constant",
+  "full_angular_error_bounded": false,
+  "missing": "Metric/scalar forcing, deep mechanical response, radial/frequency resolution and complete exterior mass bookkeeping remain outside this component sum.",
+  "final_charge_solved": false,
+  "full_goal_complete": false
+}

@@ -1,0 +1,39 @@
+2026-09-27 07:59:01 code copied identical: 861 modules
+copied grid-independent inputs 43
+2026-09-27 07:59:03 bank start
+cells 43 edges 44
+widths km [68.75, 68.75, 68.75, 68.75, 68.75, 68.75, 68.75, 68.75, 17.188, 17.188, 17.188, 17.188, 17.188, 17.188, 17.188, 17.188, 17.188, 17.188, 17.188, 17.188, 17.188, 17.188, 17.188, 17.188, 17.188, 17.188, 17.188, 17.188, 17.188, 17.188, 17.188, 17.188, 17.188, 17.188, 17.188, 17.188, 16.188, 16.188, 16.188, 16.188, 2.0, 1.0, 1.0]
+2x edges contained bitwise: True
+cells 0-7 bitwise vs 1x: True
+thin cells 40-42 vs 1x 16-18: {'r': True, 'rho': True, 'T': True, 'raw': True, 'coeff': True, 'thermo': True}
+2026-09-27 08:00:14 thermal start
+2026-09-27 08:00:15 FAILED: thermal (see .phase268-thermal.log)
+2026-09-27 08:00:55 thermal start
+thermal raw (43, 2, 9, 21) cells 0-7 bitwise True thin 40-42 vs 16-18 True
+2026-09-27 08:01:25 initial start
+initial state (555,) anchors 43 native err 2.7339330622251287e-07 inventory 2.9419825950394163e-16 matched True
+2026-09-27 08:01:34 template and undriven start
+cells 555 deep 43
+{"classification": "Counterexample candidate", "steps": 128, "completed": 128, "seconds": 239.44237207200058, "local_steps": 484, "conserved_Killing_balance": 8.556406647402344e-13, "prior_state_change": null, "prior_source_change": null, "exact_owner_port_relative": 1.8433606395218325e-16, "complete": true, "passed": true, "full_source_error_enclosed": false, "final_charge_solved": false, "construct_seconds": 0.9465408069991099}
+237.30 s 806988 KB
+2026-09-27 08:05:33 phase-150 bank start
+cells 555
+2026-09-27 08:05:48 photon bank points: 17
+2026-09-27 08:05:48 born and placeholders start
+2026-09-27 08:05:49 FAILED: born (see .phase268-born.log)
+2026-09-27 08:08:53 born and placeholders start (plan JSON set aside, sha256 ccb73f069081c5b3af2e3e952c30a8f9bdffae4df3a336d73953ad26a770fdc4)
+2026-09-27 08:09:05 born done; plan JSON restored bitwise
+{"cells": 555, "files": 9}
+2026-09-27 08:09:05 smoke start
+existence checks 53 disagreements [(False, 'retained-motion-return151-work/immutable-coupled-128.npz')]
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-refined268-runtime/.phase268-checks.py", line 58, in <module>
+    print('existence checks', len(d), 'disagreements', bad); assert not bad
+AssertionError
+2026-09-27 08:12:03 FAILED: exists-check
+2026-09-27 08:13:50 exists check rerun (the first run failed only on the self-created phase-151 alias)
+self-created alias accepted: retained-motion-return151-work/immutable-coupled-128.npz -> /home/lpaiu/work/native-refined268-runtime/retained-native-return150-work/immutable-coupled-128.npz
+existence checks 53 disagreements []
+{"label": "smoke-01", "limit": 1, "restart": null, "construct_seconds": 7.494327070002328, "passed": true, "fallbacks": 0, "nonlinear_exception": null, "nonlinear_exceptions": [], "vector_gate_exception": null, "vector_gate_exceptions": [], "vector_gate_exception_max": null, "seconds": 181.43623534500148, "peak_RSS_bytes": 2340204544}
+2026-09-27 08:13:50 prepared
+2026-09-27 08:13:50 4x primary run launched (pid 414)

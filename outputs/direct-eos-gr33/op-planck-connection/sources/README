@@ -1,0 +1,89 @@
+01-10-06
+
+OPCD_3.0           
+
+The tar file OPCD_3.0.tar
+*************************
+The tar file OPCD_3.0.tar contains data and codes to compute Opacity Project (OP) 
+mean opacities and radiative accelerations. It also includes the software for
+both the local and remote versions of the OPserver. Full documentation is given in 
+the files OPCD.ps (OPCD.pdf) and OPserver.ps (OPserver.pdf).
+
+Extracting from tar file
+************************
+Entering 
+
+tar -xvf OPCD_3.0.tar 
+
+creates a directory OPCD_3.0 with sub-directories mono, codes, testin, testout, 
+opserver and opserver_OSC. The main data files, fmzz.ttt.gz and fazz.ttt.gz, are 
+formatted and gzipped.
+
+Installation of OP codes and data
+*********************************
+The installation enables the compilation of the OP codes and the creation of 
+binary data files used by these codes. Three methods of installation are available.
+  
+(1) Makefile procedure provided in the directory OPCD_3.0. Please enter 
+    ./configure
+    make
+    make install
+The configure script writes the file Makefile.incl listing the active FORTRAN 
+and C compilers and the corresponding compiler and library options. This file is then 
+read by the makefile procedure. The installer may change the selected compiler by 
+editing this file. After installation, test-runs can be performed for all codes with 
+the command
+    make test
+or alternatively, for each individual code, with the command
+    make code_name
+where code_name can be one of the following: accfit, accv, ax, mixv, mixz, mx, mxz 
+or opfit. The test-runs write output files in the directory OPCD_3.0 which should
+be comparable with the standard files provided in the subdirectory testout.
+
+(2) Bash script BASHOP provided in directory OPCD_3.0. Please enter
+    ./BASHOP
+and then, when prompted, enter the name of the FORTRAN compiler to be used.  A set of 
+tests are performed after installation to which the installer must enter "Y" when 
+prompted.
+
+(3) Manual installation. Details of procedure to be used are described in the document
+OPCD.ps in directory OPCD_3.0.
+
+The installation creates binary files mzz.ttt and azz.ttt in subdirectory mono. 
+The files fmzz.ttt.gz and fazz.ttt.gz are retained, but to save disk overhead, they
+can be deleted after installation with the command
+    ./CLEANOP
+or alternatively
+    make clean
+The installation creates in the directory OPCD_3.0 the executable "*.out"
+files for the OP codes mixv, opfit, mx, mxz, mxz, mixz, accv, accfit and ax.
+
+
+Installation of the OPserver
+****************************
+
+(1) Local version
+*****************
+This version requires beforehand the installation of the OP codes and data as 
+described above. Also, OPserver must be compiled with a FORTRAN-90 compiler. It 
+is installed with the command
+    make opserver
+A test run of all the subroutines can be performed with the command
+    make test_opserver
+which produces outputs comparable with those in the subdirectory testout.
+
+(2) Remote version
+******************
+This version of the OPserver acceses the OP data at the Ohio Supercomputer Center, 
+and therefore the installation of the OP data is not necessary. It requires a 
+FORTRAN-90 compiler, the GNU gcc compiler and the libstdc++ and libcurl
+libraries. Most modern linux installations include this software. Installation
+of the libcurl libraries can be verified with the command
+    curl-config
+OPserver is installed with the commands
+    ./configure
+    make
+    make opserver_OSC
+A test run of all the subroutines can be performed with the command
+    make test_opserver_OSC
+which produces outputs comparable with those in the directory testout.

@@ -1,0 +1,10 @@
+{
+  "classification": "Counterexample candidate",
+  "native_calls_completed": 1200,
+  "failure": "Original native cap exhausted during the independent interpolation controls, after all441 bank states were saved.",
+  "preserved_bank_native_calls": 1171,
+  "preserved_states": 441,
+  "unsaved_control_calls": 29,
+  "total_failed_run_wall_seconds": null,
+  "root_cause": "The call forecast did not reserve the bounded independent entropy inversions after the production bank. Reuse the complete bank; do not regenerate it."
+}

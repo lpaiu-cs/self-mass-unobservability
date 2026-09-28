@@ -1,0 +1,12 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "After the shared H2 constraint fix, the same angular path reaches1.717ms; cell10 at378.125km heats from18058.5K to19076.8K and the next nonlinear trial reaches the old+0.06 logT table edge. Positive occupations and energy exchange still hold. Preserve this failure.",
+  "decision": "Complete the physical finite-temperature EOS input for the observed heating rather than clip T, stop the requested horizon, or loosen a numerical gate. The warmer Planck photons are actually streamed from deeper saved layers. Radial numerical diffusion and the partial optical channels are not yet bounded, so this is not evidence of true stellar heating.",
+  "repair": "Reuse every existing native state; append exactly logT offsets0.12 and0.18 at the two existing H planes,64states. Use piecewise cubic interpolation of the slowly varying prefactors, retaining exact ideal-T and photon Boltzmann terms. Independent0.09/0.15 controls, unchanged0.002 gate.",
+  "budget": {
+    "native_calls": 800,
+    "native_seconds": 30
+  },
+  "stop": "No further thermal node/domain addition in this stage. The physical trace remains unaccepted until radial/frequency transport is resolved.",
+  "source_sha256": "3d965806c3249fe8ce55b0f94e7170cf8c9d5eaca006001431cb7695000feade"
+}

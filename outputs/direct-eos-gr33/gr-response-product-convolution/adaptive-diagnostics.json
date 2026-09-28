@@ -1,0 +1,93 @@
+{
+  "classification": "Counterexample candidate",
+  "checks": [
+    {
+      "position": 1603,
+      "z_index": 6,
+      "parts": [
+        {
+          "estimated_error": 1.4341237304909627e-14,
+          "success": true,
+          "status": 0,
+          "message": "Target precision reached.",
+          "neval": 1869,
+          "intervals": 45
+        },
+        {
+          "estimated_error": 1.1975750227498295e-08,
+          "success": false,
+          "status": 1,
+          "message": "Target precision not reached.",
+          "neval": 51675,
+          "intervals": 1723
+        }
+      ]
+    },
+    {
+      "position": 1603,
+      "z_index": 7,
+      "parts": [
+        {
+          "estimated_error": 6.890391368382664e-10,
+          "success": false,
+          "status": 1,
+          "message": "Target precision not reached.",
+          "neval": 67599,
+          "intervals": 1610
+        },
+        {
+          "estimated_error": 3.5258266083804155e-07,
+          "success": false,
+          "status": 1,
+          "message": "Target precision not reached.",
+          "neval": 50325,
+          "intervals": 1678
+        }
+      ]
+    },
+    {
+      "position": 3205,
+      "z_index": 6,
+      "parts": [
+        {
+          "estimated_error": 1.1277393651805787e-14,
+          "success": true,
+          "status": 0,
+          "message": "Target precision reached.",
+          "neval": 1869,
+          "intervals": 45
+        },
+        {
+          "estimated_error": 9.416470268245636e-09,
+          "success": false,
+          "status": 1,
+          "message": "Target precision not reached.",
+          "neval": 48915,
+          "intervals": 1631
+        }
+      ]
+    },
+    {
+      "position": 3205,
+      "z_index": 7,
+      "parts": [
+        {
+          "estimated_error": 3.690865234999439e-14,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "neval": 1869,
+          "intervals": 45
+        },
+        {
+          "estimated_error": 6.000949693173671e-08,
+          "success": false,
+          "status": 1,
+          "message": "Target precision not reached.",
+          "neval": 50325,
+          "intervals": 1678
+        }
+      ]
+    }
+  ]
+}

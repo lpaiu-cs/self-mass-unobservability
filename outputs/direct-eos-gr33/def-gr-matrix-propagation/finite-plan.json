@@ -1,0 +1,12 @@
+{
+  "classification": "Counterexample candidate",
+  "reason": "The full auxiliary-state kinetic projection loses consistency between actual state and nominal kinetic vectors. Eliminate only the original position constraints and omit inertia-free eta,V from dynamic coordinates, rather than regularizing the kinetic form.",
+  "claim": "D E P y=D y on the original position constraints; propagate the resulting finite-coordinate operator P K^-1 D E.",
+  "budget": {
+    "basis_vectors": 128,
+    "hard_seconds": 60,
+    "new_evolution_paths": 0,
+    "new_EOS_calls": 0
+  },
+  "source": "ca1387e6683bbd05f2370a9dba4a1f70e57479828b07ca41002948209f963810"
+}

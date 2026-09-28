@@ -1,0 +1,11 @@
+{
+  "controls": "Same physical eta, donor branch, conserved owners, clock and0.2percent gate. Re-run only two short material prefixes. Require new actual trajectory controls at early/mid/final times and endpoint half/nominal/double. Reuse completed photon trajectories.",
+  "classification": "Counterexample candidate",
+  "source_sha256": "ed485f32ccb12b093c053efae9c6ade86c2f7e15ec2809c214114c34cc9a30aa",
+  "production_cap": 400,
+  "total_action_cap": 5600,
+  "failure": "New early material state fails Richardson comparison at3.2895percent with the old8x arithmetic probe. Saved-state tests show resolution-limited deep cells0..7 and decreasing discrepancies as probes grow.",
+  "original_failure": "sweep-1/material/pilot-64.json",
+  "repair": "Use nominal512x instead of8x arithmetic probes, with half/double controls256/512/1024. Saved-state32x/64x/128x relative to old8x have maximum differences0.172264percent,0.0696592percent,0.0314063percent. This is a sampled finite-precision repair, not a rigorous derivative error certificate.",
+  "pilot_remaining_seconds": 50
+}

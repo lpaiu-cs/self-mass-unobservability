@@ -1,0 +1,54 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "cca3717e",
+  "bindings": {
+    "verification/def_conductive_cauchy.py": "6fdea8f9f7f5852345d8a3ba4250aa6be6b6988a3f5249b0b8e23cc856f1097b",
+    "verification/def_reactive_cauchy.py": "7ddb7e14f1edee6b0656b924076dcabe39145bd5e1eeffbecf4fa3bbd4d95cda",
+    "verification/def_conduction_core.py": "0ecb419bb8cc8720e6e3962ffb59704ae5a908573a6948fcdc51021e19144f59",
+    "outputs/direct-eos-gr33/def-conduction-core/result.json": "b616918c52eabe23564740c66d61b5afeec98876e0b117b23ddd9dfef03f0787",
+    "outputs/direct-eos-gr33/def-conduction-core/bank.npz": "e06cedcea729c9299c2e59ce5b940ea9ccacd947a452cdec80ec209abfad24f9",
+    "outputs/direct-eos-gr33/def-conduction-core/coarse-bank.npz": "31acde08639f4d8713add4454d955985e8df68058bd41cab54f2b1caeb4021ac",
+    "outputs/direct-eos-gr33/def-reactive-cauchy/fine-rays.npz": "fbfe0865b245bdfd1e36a163a455c5d9bfeb698f37f656a9981af10ebe2a17d3",
+    "outputs/direct-eos-gr33/def-reactive-cauchy/fine-64.npz": "ca82daf1fc43e84f856a6cc61b655b948926fddc98f02559ace24407c5da65e5",
+    "outputs/direct-eos-gr33/def-reactive-cauchy/fine-64.json": "58ff05c8d43fda651e26e3f3939328b6c79b7744b2d93e946b496e7bf8bead49",
+    "outputs/direct-eos-gr33/def-free-surface-response/normalized/background.npz": "c42374d2a79ab37cc716bad52e6b72a4940dc82f0923f71856601f213f0c4a2c",
+    "outputs/direct-eos-gr33/def-free-surface-thermal/coefficients.npz": "8fa9ddf79c966965a3a3fa26e6b4c738f82eec0b6ad257e521ae37c9403fb46c",
+    "outputs/direct-eos-gr33/def-free-surface-thermal/sources.npz": "87c71aebfa10fb222030a1f818ab350e14362e1d0c5eb9c8d14959a4809168fe",
+    "outputs/direct-eos-gr33/def-conduction-core/coupled/initial-source.py": "29850b32acd88ded815e7be191b252079827214ff703baddefb49f83a9c9a856",
+    "outputs/direct-eos-gr33/def-conduction-core/coupled/initial-plan.json": "6ae90ed0b7701a2c1fe77efc77b7710c33265e4331179b45d139516d3b94c3f4"
+  },
+  "claim": "Add the microscopic core heat-current contribution to the actual free-surface fluid/scalar/metric time path, including exact pole startup, conservative material energy, GR mass and heat momentum.",
+  "expansion": "First order in the strength of the initially zero heat channel, with its physical microscopic rate bank and initial background gradient. Perturbed temperature/metric/acceleration in the heat drive multiply the channel parameter and are next order; the finite-amplitude feedback error is not bounded.",
+  "domain": "Internal faces of the original degenerate core only; omitted outer currents, photons, physical surface and nonlinear feedback remain unclosed. This is a component of the full linear source response, not an assertion of a physically insulated core.",
+  "horizon_seconds": 0.23080495568542375,
+  "steps": [
+    16,
+    32,
+    64
+  ],
+  "additional_paths": [
+    "heat-only-64",
+    "coarse-bank-64",
+    "outer-64"
+  ],
+  "gates": {
+    "linear_residual": 1e-09,
+    "heat_balance": 2e-13,
+    "time_relative": 0.02,
+    "time_order": 1.5,
+    "coefficient_relative": 0.02,
+    "outer_relative": 0.002,
+    "superposition": 2e-08
+  },
+  "budget": {
+    "pilot_steps": 8,
+    "production_steps": 304,
+    "maximum_paths": 6,
+    "hard_seconds": 180,
+    "CPU_workers": 1,
+    "BLAS_threads": 1,
+    "native_calls": 0,
+    "automatic_expansion": false
+  },
+  "preserved_initial_failure": "The eight-step pilot failed its finite-state assertion before producing an endpoint: initial lift divided zero enclosed face energy by r^2 at the exact central node. The regular L=O(r^3) central limit is now evaluated directly. The endpoint radial metric division is also evaluated at its regular central limit. No collision kernel, gates or production paths changed."
+}

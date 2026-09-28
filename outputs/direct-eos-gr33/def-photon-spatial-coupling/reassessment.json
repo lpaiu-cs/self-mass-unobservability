@@ -1,0 +1,18 @@
+{
+  "classification": "Counterexample candidate",
+  "original_native_temperature_gate_passed": false,
+  "reason": "Native temperature lookup is unavailable by documented provider contract. Preserve the failed request; do not retry or substitute a native temperature for the actual material state.",
+  "next_action": "Use an explicit fixed-physical-frequency positive interpolation candidate at the actual material state. Implement full absorption/elastic-angular/Compton/spatial LTE tangent. Evaluate numerical convergence; do not label interpolation or the differential scattering approximation as physically certified.",
+  "new_network_queries": 0,
+  "previous_scientific_gates_unchanged": true,
+  "new_claim": "Numerical coupling under declared input approximations, not native actual-temperature validation",
+  "bindings": {
+    "verification/def_photon_spatial_coupling.py": "0e24d3e8f745fd7e33a5010c29da3d85a48906a9497c6989d15985cd1f719170",
+    "outputs/direct-eos-gr33/def-photon-spatial-coupling/initial-source.py": "778011f93a9ed56a99b668cd95c1d3ef519e58a1881534c1f80297575a425661",
+    "outputs/direct-eos-gr33/def-photon-spatial-coupling/plan.json": "3f56c2845c6045beef954575afa2c05ea573a182a2cc6067fb9fc5aaf3d795f8",
+    "outputs/direct-eos-gr33/def-photon-spatial-coupling/native-request-failure.json": "cd61243a0cdcfd87a6befe75daa5c080c6f2c13344d82f932ee5463737f7e918",
+    "outputs/direct-eos-gr33/def-photon-native-measure/surf1000T0015-bank.npz": "fedea1753942c08f3e8dd7325bc932417a42e6ff3c962c4d162745777008a0fd",
+    "outputs/direct-eos-gr33/def-photon-native-measure/surf1000T002-bank.npz": "5719890ad7b42601c7e55a71625bd3fa547efd704c08c803f55ed1938a35c1a9",
+    "outputs/direct-eos-gr33/def-photon-spatial-coupling/jiang2022.html": "d228eb6622160ce512337b7c411e9d6149a8bc0f7ca15b9e3241226137e3cc69"
+  }
+}

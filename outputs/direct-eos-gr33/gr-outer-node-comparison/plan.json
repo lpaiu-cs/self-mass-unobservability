@@ -1,0 +1,18 @@
+{
+  "classification": "Proven",
+  "position": 0,
+  "expected_nodes": 13632,
+  "bindings": {
+    "verification/gr_outer_node_comparison.py": "db1befcc8d5e74fa1fb7c523e1919a994e0fc4a691fe7ad2343695d05d4e801e",
+    "outputs/direct-eos-gr33/gr-outer-path-comparison/manifest.json": "e20f05a28119c2102fefce9eb850c05e33a0650b2a93be28963c903f14273b3d",
+    "outputs/direct-eos-gr33/gr-outer-product-pilot/cell-0000-result.json": "588713a9d8b92c14b21a82e0235b67871e60f76134d895b8e8b64ab49b9510c7",
+    "outputs/direct-eos-gr33/gr-outer-product-pilot/cell-0000-points.jsonl.gz": "cb93760921235525dce14d9bced4acc50fd2a844fe018c840ce33ea449b127e1",
+    "outputs/direct-eos-gr33/gr-outer-self-refined/cell-0000-points.jsonl.gz": "657dcabf8f575bcfe31b0b861ecc5927bccd2e66bd1b3f62f479260b277c353e"
+  },
+  "eta_center_distance_upper": "15787266579266967144613051025923726400265667/100000000000000000000000000000000000000000000000000000000000",
+  "exp_delta_upper": "57896044618658106851988395303245950912938380111594023630502996331455489715155/57896044618658097711785492504343953926634992332820282019728792003956564819968",
+  "exp_minus_delta_lower": "14474011154664522142895647426360849982132438828545471708968553767782987298725/14474011154664524427946373126085988481658748083205070504932198000989141204992",
+  "theorem": "At fixed beta,Q,Sref the positive momentum kernel is independent of eta. For f in [0,1], |f_eta|,|f_etaeta|,|f_etaetaeta|<=f and f(eta+d)<=exp(|d|)*f(eta). Thus R0(center) lies in exp([-delta,delta])*R0(root); R_eta and R_etaeta shift by at most delta*exp(delta)*R0(root). The etaetaeta polynomial has range [-1/2,1] by the two exact identities checked here.",
+  "gate": "Both actual Q values must be the same exact dyadic at every index. The three center-adjusted direct response intervals must intersect the product intervals. No tolerance is fitted to the results.",
+  "boundary": "A necessary finite compatibility check on two interval algorithms. The tau derivatives and all possible states are not tested here; shared endpoints/domains remain shared."
+}

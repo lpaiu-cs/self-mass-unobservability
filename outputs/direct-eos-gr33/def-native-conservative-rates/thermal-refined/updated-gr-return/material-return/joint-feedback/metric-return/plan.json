@@ -1,0 +1,48 @@
+{
+  "classification": "Counterexample candidate",
+  "before_checkpoint": "60877e975",
+  "claim": "Apply the actual returned material/photon GR field and SDIRK-stage outgoing photons to asymptotic lapse, then to actual simultaneous photons/energy/H. Return those incremental transfers to matter/GR and measure the next finite correction.",
+  "reuse": "Preserve completed background,primary GR,Phase134 motion and all large response histories. Evolve only the new compensated GR forcing on the same531 cells,8 angles,152 frequencies,3.434ms and original three paths. No new native states or nonlinear physical trajectory.",
+  "compensation": "Never add the sub-ulp metric increment to the primary metric. Streaming and collision drives are affine. For signed frequency upwinding use the exact positive-part increment about the existing primary frequency drift, including sign crossings; do not choose donors from the correction alone.",
+  "boundary": "Propagate actual signed outgoing angular luminosity with its accepted SDIRK stage times and weights, preserving the exact cumulative numerical energy port. This is a discrete-stage representation, not a continuum emission certificate.",
+  "budgets": {
+    "lapse_seconds": 120,
+    "response_pilot_seconds": 65,
+    "response_production_seconds": 650,
+    "material_pilot_seconds": 45,
+    "material_production_seconds": 350,
+    "source_seconds": 75,
+    "GR_seconds": 120,
+    "CPU_processes": 3,
+    "threads_each": 1,
+    "response_total_virtual_GiB": 9,
+    "material_total_virtual_GiB": 6
+  },
+  "forecast": "Lapse owner previously completed three paths within90s; four controls allowed120s. Response uses concurrent4/8/4 prefixes and measured17-point/remaining-step cost with2x margin under650s. Material uses previous full late-CFL raw-call counts and a measured concurrent prefix,2x margin under350s.",
+  "gates": {
+    "lapse_quadrature": 0.002,
+    "time": 0.02,
+    "background": 0.02,
+    "energy": 1e-08,
+    "H": 1e-08,
+    "linear": 1e-12,
+    "angular_port": 1e-12,
+    "ray": 1e-10,
+    "velocity_jet": 0.0001,
+    "primitive": 1e-10,
+    "directional": 0.002,
+    "pressure": 0.002,
+    "GR_independent": 1e-09
+  },
+  "stop": "Stop at a failed gate or measured budget. No automatic extra clock,mesh,horizon,EOS support or repeated waveform sweep. Preserve failures and accepted prefixes.",
+  "limits": "Finite compensated response about the declared updated background. Phase134 material/photon mismatch is a separate remaining error. A small new GR correction is not a contraction theorem, nonlinear GR or final-charge enclosure.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_feedback_metric_return.py": "d1eee97bcbfae9c6422c4401b4bc2406ca5a075758af09848cc797f5a387a001",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_updated_joint_feedback.py": "d576b977693d273c0acd0cabd98bb87049e4fbff4019d40df21dddf4a27f57fe",
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_updated_joint_feedback.py": "cd4fb3ab49d21b351c8107cae9db4d75375cf569719c920ff075bc0d49195cb8",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_dynamic_lapse.py": "5a1ab9b42211a67a79c2f36bb66a25faed9d05ebb82cf3bdd357b62969757b89",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/audit.json": "6d1e8d1c74df9bbba1c7f0cbeed06dd20e72f94dac531d2dfd64f68452407f91",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/closure-audit.json": "f23dba4352602cd738f07794328189a6b60b87167dde634aabefcb60ddba5aa4",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/lapse/result.json": "1105dde11dd591b41d08f1fa0a5775806c54af9110f5ed45c58c927f952871e5"
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "rows": [
+    {
+      "classification": "Counterexample candidate",
+      "passed": true,
+      "steps": 64,
+      "reference": 128,
+      "completed": 4,
+      "substeps": 16,
+      "balance_relative": [
+        2.9637646519660715e-22,
+        2.9318139685076663e-18,
+        6.170926334552706e-18,
+        1.3869426881965623e-17
+      ],
+      "directional": [
+        {
+          "time": 0.00010732597243527195,
+          "relative": [
+            1.2947595400396647e-06,
+            2.4013208672316496e-05,
+            1.2619018789561525e-08,
+            1.0496403853267629e-16
+          ]
+        }
+      ],
+      "directional_relative": 2.4013208672316496e-05,
+      "forward_probe_indicator": 0.0,
+      "maximum_true_relative_state": 3.0993179498579544e-32,
+      "endpoint_sum": [
+        -1.290829761468779e-11,
+        -163306109333246.88,
+        -232560119542240.72,
+        1.0440959441821553e+25
+      ],
+      "endpoint_L1": [
+        0.00042218761003312506,
+        629416612846301.9,
+        665153663368427.1,
+        2.895610694065515e+25
+      ],
+      "endpoint_sum_physical": [
+        -1.290829761468779e-37,
+        -1.6330610933324688e-12,
+        -2.3256011954224075e-12,
+        0.10440959441821553
+      ],
+      "endpoint_L1_physical": [
+        4.221876100331251e-30,
+        6.2941661284630185e-12,
+        6.651536633684271e-12,
+        0.2895610694065515
+      ],
+      "discard_physical": [
+        1.2908297614984167e-37,
+        3.902639688893844e-20,
+        1.3069928600042207e-23,
+        -1.4860804916229883e-13
+      ],
+      "raw_owner_calls": 73,
+      "seconds": 1.307051309000002,
+      "full_GR_feedback": false,
+      "final_charge_solved": false,
+      "worker_wall_seconds": 6.033442076,
+      "physical_branch_ratio": 1.0475890555160628e-24,
+      "maximum_owner_error": 1.8890685044047918e-13,
+      "endpoint_probe_half_nominal_double": [
+        [
+          1.9086951639620375e-06,
+          3.8411679067707116e-07,
+          1.4358666576155608e-10,
+          1.9141660102432158e-18
+        ],
+        [
+          2.3890015855860033e-07,
+          1.7678863813013266e-07,
+          7.100932997568314e-11,
+          2.4938078302464434e-19
+        ]
+      ],
+      "nominal_arithmetic_probe": 16.0
+    },
+    {
+      "classification": "Counterexample candidate",
+      "passed": true,
+      "steps": 128,
+      "reference": 128,
+      "completed": 8,
+      "substeps": 32,
+      "balance_relative": [
+        4.651967473480693e-22,
+        2.658232092681536e-19,
+        2.33264850157431e-18,
+        2.5395520891544858e-17
+      ],
+      "directional": [
+        {
+          "time": 5.3662986217635974e-05,
+          "relative": [
+            2.7657386650236166e-06,
+            1.4358839797623016e-05,
+            7.363817831169929e-09,
+            1.182627392422179e-16
+          ]
+        }
+      ],
+      "directional_relative": 1.4358839797623016e-05,
+      "forward_probe_indicator": 0.0,
+      "maximum_true_relative_state": 3.267021148971017e-32,
+      "endpoint_sum": [
+        -1.6426081958084188e-11,
+        -165853463538667.12,
+        -235536860650462.66,
+        1.0551418738087846e+25
+      ],
+      "endpoint_L1": [
+        0.0004226865693624901,
+        631114561750287.9,
+        667222894199870.9,
+        2.9026729994934644e+25
+      ],
+      "endpoint_sum_physical": [
+        -1.642608195808419e-37,
+        -1.6585346353866711e-12,
+        -2.3553686065046267e-12,
+        0.10551418738087845
+      ],
+      "endpoint_L1_physical": [
+        4.226865693624901e-30,
+        6.311145617502879e-12,
+        6.672228941998709e-12,
+        0.29026729994934647
+      ],
+      "discard_physical": [
+        1.6426081958549386e-37,
+        4.861178367283568e-20,
+        1.5417918632517495e-23,
+        -1.5965498993349517e-13
+      ],
+      "raw_owner_calls": 137,
+      "seconds": 2.2240938260000007,
+      "full_GR_feedback": false,
+      "final_charge_solved": false,
+      "worker_wall_seconds": 6.420276643999998,
+      "physical_branch_ratio": 1.1046955402331244e-24,
+      "maximum_owner_error": 1.8890685044047918e-13,
+      "endpoint_probe_half_nominal_double": [
+        [
+          1.9073698359171623e-06,
+          3.817330265972616e-07,
+          1.427634586351061e-10,
+          1.903079517946605e-18
+        ],
+        [
+          2.3884860628473195e-07,
+          1.7569153130054751e-07,
+          7.060281002629775e-11,
+          2.419168878745684e-19
+        ]
+      ],
+      "nominal_arithmetic_probe": 16.0
+    }
+  ],
+  "time_comparison": [
+    0.003930369617327935,
+    0.004514482051745016,
+    0.004461392079893791,
+    0.0038054339807352135
+  ],
+  "seconds": 12.703899249999992,
+  "photon_paths_recomputed": false,
+  "final_charge_conclusion": "unadjudicated",
+  "physical_final_charge_solved": false,
+  "full_goal_complete": false,
+  "upper_remaining_seconds": 537.5509488006606,
+  "eligible": false
+}

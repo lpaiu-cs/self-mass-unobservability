@@ -1,0 +1,49 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "8ab926a",
+  "bindings": {
+    "verification/gr_nonlinear_thermal.py": "bc8d34d693acbeccc87d18018217452127c218301e7900a14d9f7c0272963e61",
+    "verification/opacity_tables.py": "ba01a5ebe3062eb1b13b23ccb918f99158fba6fd0c72fcba191c1ba4a028c7b9",
+    "verification/conservative_star.py": "9bcfe7bd2c07504abb6da3a5e7deea07c9c9b08f27ed12b33dd9310497cd60b7",
+    "verification/direct_eos_gr.py": "5709a4cbf5830de09001481813617d43ee2c935a0dff3cd813110d73a7066fdf",
+    "outputs/direct-eos-gr33/initial-state-17-4.npz": "5dcc8ffb8b32a9f15ccc4c8bb7111d19be8dcdc66611ad2942e3a4a0cf6cc6d6",
+    "outputs/direct-eos-gr33/initial-GR.json": "b6e5840a94c820af9f729b17c45acc2c8cc03d3b220d09880a487f93640eb3f8",
+    "outputs/direct-eos-gr33/gr-microphysics/auxiliaries.npz": "63744d1a041ebc39bd33dfa0f5e181d64378966c1ee22364c477009bee08d976",
+    "outputs/direct-eos-gr33/gr-opacity/new-GR-captured.npz": "32975fa6317f066f122dfdca8cf88d84fcaa79b182416df5b01b3593d44b6ef3",
+    "outputs/direct-eos-gr33/gr-opacity/evaluation.npz": "4d1274167b4b26a23308e9e978841f774d9d41d350ae79c4aad125108c4a2b2c",
+    "outputs/direct-eos-gr33/gr-transport/diagnostics.npz": "296f6bcdd1623223957e0b1c391f89ea6613141337c6dc308e155650fb98b669"
+  },
+  "processes": 4,
+  "step_counts": [
+    1,
+    2,
+    4
+  ],
+  "duration_rule": "min(1 coordinate second, 0.02/max(abs(initial closed dlnT/dt)))",
+  "max_Newton_iterations": 12,
+  "max_backtracks": 10,
+  "temperature_step_cap": 0.1,
+  "local_energy_residual_scaled_tolerance": 2e-12,
+  "global_energy_relative_to_exchange_tolerance": 1e-08,
+  "finite_time_refinement_logT_tolerance": 0.0001,
+  "boundary": "Both external faces closed, no nuclear or neutrino sources in this operator. Fixed baryon density, fixed GR geometry and fixed nuclear composition.",
+  "equation": "dm_i*N_i*(u_i(T_new)-u_i(T_old))=dt*(Linf_inner-Linf_outer). Face flux and EOS are fully reevaluated at the new temperature. Newton Jacobian includes opacity temperature derivatives.",
+  "limitations": "A nonlinear operator closure control, not a fluid/metric/atmosphere, convection or physical EOS certificate. Finite time refinement is not a rigorous time-error enclosure.",
+  "physical_EOS_certified": false,
+  "full_GR_evolution": false,
+  "endpoint_replay": {
+    "classification": "Counterexample candidate",
+    "checkpoint": "9cf504d",
+    "original_failed_manifest_sha256": "98a196472db0bd935508c3691115f4adc0764b40aadeaf8a3f519a3690db49e3",
+    "diagnostic_code_sha256": "88355d418764b524a41e0a15c982a160f6479c4e4a2f1d351724ed9d83a90e73",
+    "intervention": "No physical, algorithmic or tolerance change. Observe the original Python run frame after constructing its first step record and before its failed assertion. Save the previously uncaptured arrays, and retain the expected failed gate.",
+    "expected_failed_step": {
+      "step": 0,
+      "iterations": 3,
+      "local_scaled_energy_residual": 1.3043212410383023e-14,
+      "global_energy_relative_to_exchange": 0.4013423511619498,
+      "entropy_change_erg_K": 7.204612275626668e+24,
+      "maximum_logT_change": 0.010351554579864697
+    }
+  }
+}

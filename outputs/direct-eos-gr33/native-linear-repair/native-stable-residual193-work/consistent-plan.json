@@ -1,0 +1,18 @@
+{
+  "classification": "Conjectural",
+  "failure": "Selective evaluation exposed a mismatch between the inaccurate float-input Krylov operator and the accurate long-double residual operator: one correction had true relative residual39.4787. The original four-refinement trial remained rejected.",
+  "repair": "Evaluate the same baryon polynomial accurately on every matvec input, including float64 Krylov vectors. Do not switch the arithmetic operator by input dtype. Preserve all equations, gates and iteration limits.",
+  "decision": "One saved-system consistency repair only; no physical continuation unless all original gates pass.",
+  "budget_seconds": 90,
+  "CPU_threads": 1,
+  "virtual_GiB": 4,
+  "new_physical_steps": 0,
+  "forecast": "Selective pass took73.55s including400inner iterations;13exact evaluations cost0.10s, so consistent evaluation adds about3.1s at that count.90s cap.",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/stabilize_full_interval_residual.py": "50822276c7a2cc278c78eb2901f403127f54181bfb8023078e13431443589d94",
+    "native-stable-residual193-work/selective-producer.py": "18be51b1a2ffa44f6fb89eb7fab1f05636337e23585e2ec9498b408e1101426d",
+    "native-stable-residual193-work/check-receipt.json": "832534af329590a3260b18e1b12bfb47d6b9c3483e6ff3fa490ea1e335fa433a",
+    "native-stable-residual193-work/solver-cost.json": "0420e4736579318c48ff3e60a431a2d48a01c9d30f0905aa7700fddfeb8f21cc"
+  },
+  "final_charge_conclusion": "unadjudicated"
+}

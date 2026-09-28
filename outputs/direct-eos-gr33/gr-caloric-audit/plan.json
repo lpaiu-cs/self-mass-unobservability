@@ -1,0 +1,14 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "a4fb34c",
+  "bindings": {
+    "verification/verify_gr_caloric_increment.py": "abca4e755263b6cffe20705ba4efd3c63dae271817173204e9b461d31a6c5a74",
+    "outputs/direct-eos-gr33/gr-caloric-increment/plan.json": "95a35c02ee620b30158e417a73af3e27fab7a6bc23f61f980cae9b311ad03607",
+    "outputs/direct-eos-gr33/initial-state-17-4.npz": "5dcc8ffb8b32a9f15ccc4c8bb7111d19be8dcdc66611ad2942e3a4a0cf6cc6d6"
+  },
+  "already_available_paths_at_prepare": [
+    1
+  ],
+  "scope": "Convert stored binary64 and long-double values by exact as_integer_ratio, with no cast to binary64 first. Audit the caloric coordinate and fixed reconstructed binary64 lapse weights; no native primitive, continuum exp, quadrature-remainder or physical error certificate.",
+  "corruption_control": "Defined after the first path was seen: adding one percent of the exact exchanged energy to the total increment must fail the original global 1e-8 gate. Does not mutate the original output or count as a preregistered native fault injection."
+}

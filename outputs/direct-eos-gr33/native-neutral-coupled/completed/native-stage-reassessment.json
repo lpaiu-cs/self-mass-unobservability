@@ -1,0 +1,20 @@
+{
+  "classification": "Counterexample candidate",
+  "original_linearity_verdict": "failed",
+  "failure": {
+    "seconds": 5.4228107240000005,
+    "CPU_seconds": 3.5165612590000004,
+    "peak_RSS_bytes": 612933632,
+    "error": "AssertionError({'k': 0, 'odd_relative': [0.016576620503768895, 4.591650577387931e-07], 'native_face_relative': [0.0, 0.0, 5.0217817615891645e-09, 9.29422928453623e-09], 'nnz': [156, 226]})",
+    "source_sha256": "2c965ebdfe4e1ec89ddbc5197aa20be7bea885ae8ae236c9941cb5c9e01ae537"
+  },
+  "repair": "A linear surrogate cannot be called the original native flux. Use it only for quasi-Newton proposals; enforce the actual nonlinear native Radau equation and unchanged physical gates. Preserve all old controls. At most two corrections, same240s pilot, no full path authorized.",
+  "original_assembly_seconds": 60,
+  "remaining_seconds": 50,
+  "bindings": {
+    "native-neutral-coupled177-work/linear-producer.py": "2c965ebdfe4e1ec89ddbc5197aa20be7bea885ae8ae236c9941cb5c9e01ae537",
+    "native-neutral-coupled177-work/linear-stage-plan.json": "d862a73ba3e5f0fb56855e88c3d6da3576df340d630f7861de32cb88e4823360",
+    "native-neutral-coupled177-work/assembly-rejected.json": "43dc2a117fe205b6d2c782eed20c0267cd1645b1da9558da3b0d509a997b5444",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/couple_native_neutral_transport.py": "c33be85d14e6e801239d64f186eaf761a81b9b97a70f7d9bfffb64644d5ee8b6"
+  }
+}

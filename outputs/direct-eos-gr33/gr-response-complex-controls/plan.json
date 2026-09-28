@@ -1,0 +1,23 @@
+{
+  "classification": "Counterexample candidate",
+  "digits": 64,
+  "positions": [
+    0,
+    1603,
+    3205
+  ],
+  "z_indices": [
+    0,
+    5,
+    8
+  ],
+  "relative_imaginary_Q": "1/128",
+  "bindings": {
+    "verification/gr_response_complex_controls.py": "fba601d797d392755b05cfa594e21e90b25c93b965b412e8aeabeeea80a28e1a",
+    "outputs/direct-eos-gr33/gr-response-complex-defined/manifest.json": "8b226e602527679f9757e9735bad51a0aeba4d1a95f3a62466600455c2c9b80b",
+    "outputs/direct-eos-gr33/gr-response-complex-defined/result.json": "fbb5c150b100275a584cc13d06655ece96ebeac054dcec5d9c7d03ecf9eb7516",
+    "outputs/direct-eos-gr33/gr-logarithmic-response/inputs.npz": "c9695e054b3ef6bf11b63a24909d7a4e549429d65a72bea4d9ad982b76afda53"
+  },
+  "method": "Integrate the six complex response fields along p=Q*u at the outer analytic circle point Q=q0*(1+i/128). Use real p_a=a*u, a=q0*sqrt(1-2r), to resolve the thermal support. Subtract B(1) from the logarithmic coefficient on u in [0,2], adding back its exact integral. Compare absolute values with the independent uniform analytic majorants.",
+  "boundary": "Finite controls do not replace the analytic proof and do not certify an outer integral. These circle points are outside the smaller certified zero-free neighborhoods; no nonvanishing claim is made there."
+}

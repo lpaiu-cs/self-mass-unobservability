@@ -1,0 +1,33 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "e71ed7eba",
+  "failure": "The completed split evolution conserves energy and H, but64/128 photon energy and momentum impulse differences are3.7903percent and4.6305percent, exceeding the unchanged2percent gate.",
+  "repair": "Solve streaming, actual moving collisions, thermal energy and H in a single SDIRK stage. The split inverse is only a Krylov preconditioner; require the residual of the full equation below1e-10.",
+  "reuse": "All corrected backgrounds, EOS derivative banks,531 cells,8 angles,152 frequencies,64/128 clocks and3.434ms horizon. Old split trajectories remain rejected. Only the time equation changes.",
+  "coefficients": "Freeze the linearized local operator at each full-step midpoint, with both geometric forcing stage times retained. This is a second-order time approximation tested on the unchanged clocks.",
+  "saved_sources": "Save full time histories of photon radial pressure and material pressure, as well as energy, neutral inventory and delivered momentum. The previous split history did not include photon radial pressure and is not a complete GR source export.",
+  "limits": "Additional density, velocity, advected inventory and GR feedback remain open. No final physical charge.",
+  "budget": {
+    "pilot_seconds": 55,
+    "production_seconds": 480,
+    "CPU_threads": 1,
+    "memory_GB": 3,
+    "new_native_bank_calls": 0
+  },
+  "forecast": "Measure both actual four-step prefixes; separate17-point operator preparation from time stepping, include three model/output overheads and2x total margin. Do not dispatch if it exceeds480s. Late Krylov cost is unmeasured.",
+  "gates": {
+    "time": 0.02,
+    "background_time": 0.02,
+    "energy": 1e-08,
+    "species": 1e-08,
+    "linear": 1e-10
+  },
+  "stop": "Preserve the old failure and all new prefixes. No finer mesh or clocks, longer horizon, or weakened gates. Stop on any failed path or480s; no automatic enlargement.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_monolithic_response.py": "e000685ae8684db0aa350ce78cdc09d70214dbf3fed289026df31079e5f8563f",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_collision_response.py": "f35bf0b4e25dbb4c53503181b24378a989aadc34313a52a4fc4876d52871dfb7",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-collision-response/result.json": "fcbd1d0d52547493c32270eb9ae606c3b0ded5dddc4e0ba7a85119bb33d5e27c",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-collision-response/bank-result.json": "9f5583e994e6880e11b7c96f34096921b467d3d0806157a646247ee313094a54",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-collision-response/execution-plan.json": "0ded2151b2f1939f0ddc3c442506134aeab73395cc2cacfb48f3ea1733a7a2d5"
+  }
+}

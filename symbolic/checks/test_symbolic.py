@@ -792,7 +792,7 @@ def test_nonanalytic_jet_demo() -> None:
     assert summary.locality_kept_in_all_cases is True
     assert summary.finite_family_operator_closure_kept_in_all_cases is True
     assert summary.smallest_local_nonanalytic_counterexample == "smooth_flat_single_coordinate"
-    assert summary.broken_layer == "analytic monopole jet collapse (Lemma 55 / A5)"
+    assert summary.broken_layer == "exact analytic-germ reconstruction (A5); finite-order expansion survives"
     cases = {case.case_id: case for case in summary.cases}
     analytic = cases["analytic_control_quadratic"]
     assert analytic.finite_taylor_jet_valid is True
@@ -801,7 +801,7 @@ def test_nonanalytic_jet_demo() -> None:
     flat = cases["smooth_flat_single_coordinate"]
     assert flat.locality_kept is True
     assert flat.finite_family_operator_closure_kept is True
-    assert flat.finite_taylor_jet_valid is False
+    assert flat.finite_taylor_jet_valid is True
     assert flat.canonical_counterexample is True
     assert "all Taylor coefficients" in (flat.first_exact_failure_mode or "")
     assert flat.jet_value_at_sample == 1.0

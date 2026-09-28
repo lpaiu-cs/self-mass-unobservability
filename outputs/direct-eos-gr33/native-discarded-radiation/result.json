@@ -1,0 +1,80 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "paths": [
+    {
+      "steps": 64,
+      "discarded_baryon_g": 236640.53917997645,
+      "discarded_Killing_erg": 2.1417428832492882e+26,
+      "radiation_cap_erg_cm3": 221685.86961414426,
+      "background_cap_erg_cm3": 221685.86960798223,
+      "incident_background_energy_bound_erg": 3.444110797892098e+26,
+      "available_tail_energy_bound_erg": 5.5858536811413866e+26,
+      "photon_difference_L1_bound_erg": 9.029964479033484e+26,
+      "direct_scalar_bound": 9.573797129886517e-32,
+      "metric_stress_bound": 5.368102716327856e-37,
+      "exterior_bound": 3.424780463424659e-35,
+      "mass_constraint_bound": 1.0031880252074675e-38,
+      "fixed_mass_scalar_bound": 9.577276905155029e-32,
+      "normalized_charge_bound": 1.0328462159088449e-29,
+      "fixed_scalar_fraction": 9.37910676312049e-05,
+      "normalized_over_scalar": 0.010114748717017747,
+      "passive_normalized_interval": [
+        5.2277956079725394e-27,
+        5.248452532290718e-27
+      ]
+    },
+    {
+      "steps": 128,
+      "discarded_baryon_g": 232376.74110912264,
+      "discarded_Killing_erg": 2.1031528818428116e+26,
+      "radiation_cap_erg_cm3": 221677.36952818258,
+      "background_cap_erg_cm3": 221677.36952202357,
+      "incident_background_energy_bound_erg": 3.2775146291954346e+26,
+      "available_tail_energy_bound_erg": 5.380667511038246e+26,
+      "photon_difference_L1_bound_erg": 8.658182140233681e+26,
+      "direct_scalar_bound": 9.22212111426549e-32,
+      "metric_stress_bound": 5.156193524113298e-37,
+      "exterior_bound": 3.2837751589714367e-35,
+      "mass_constraint_bound": 9.618846965915492e-39,
+      "fixed_mass_scalar_bound": 9.225457712424845e-32,
+      "normalized_charge_bound": 9.903642952913187e-30,
+      "fixed_scalar_fraction": 9.034567307635481e-05,
+      "normalized_over_scalar": 0.009698719742477267,
+      "passive_normalized_interval": [
+        5.2282204271787145e-27,
+        5.2480277130845426e-27
+      ]
+    }
+  ],
+  "level_cross_section_bounds_cm2": [
+    1.0592186695463235e-17,
+    2.2857289959200272e-17,
+    3.5597536037345467e-17,
+    4.908334607255022e-17,
+    5.573647491478722e-17,
+    7.452403677423178e-17,
+    8.752411981678984e-17,
+    9.896269725792647e-17,
+    1.120537381951851e-16,
+    1.2802223351532663e-16
+  ],
+  "native_owner_polynomial_relative": 2.181906342582276e-16,
+  "opacity_bound_cm2_g": 68516089.7836202,
+  "bound_free_opacity_bound_cm2_g": 68516089.38018614,
+  "Thomson_opacity_bound_cm2_g": 0.40343405070860694,
+  "symbolic_checks": true,
+  "all_original_discard_steps_used": true,
+  "conserved_baryon_opacity_bound": true,
+  "no_subsequent_radiative_energy_growth_assumption_removed": true,
+  "scope": "Passive compact-atmosphere reservoir plus tagged photons under the declared17-knot positive background radiation envelope; freely outgoing exterior photons; same restricted10-level H and Thomson model and frozen first-variation geometry. Reservoir confinement is assumed, not verified for the deleted fluid. No density/temperature/y extrapolation. Photon change is counted in stress, exterior and mass normalization. Budget inequalities are analytic; applying the saved caps to an unsaved coupled history is not proved.",
+  "limitations": "Arbitrary mechanical work from retained gas and amplification of changed photons by that gas are not bounded. The saved cap is not a uniform source/EOS derivative or continuum error certificate. Other opacity channels, nonlinear gravity, static nonabsorbability and observation remain open.",
+  "full_floor_feedback_enclosed": false,
+  "full_source_error_enclosed": false,
+  "coupled_fixed_point_verified": false,
+  "nonlinear_GR": false,
+  "final_charge_solved": false,
+  "full_goal_complete": false,
+  "seconds": 111.666857171,
+  "peak_RSS_bytes": 537423872
+}

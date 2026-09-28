@@ -1,0 +1,14 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "model": "An ideal relativistic electron/positron gas with the same nonnegative density-of-states weight for both charges, beta=kBT/(me c^2), eta_plus=-eta_minus-2/beta, and finite positive Boltzmann integral.",
+  "domain": {
+    "eta_minimum": -50,
+    "beta_maximum": ".005",
+    "beta_positive": true
+  },
+  "proof": "For x>=0, q_plus<=exp(-x-eta-2/beta), whereas q_minus>=exp(eta-x)/(1+exp(eta)). Integrating against the same positive weight gives n_plus/n_minus<=exp(-eta-2/beta)+exp(-2eta-2/beta). This bound decreases with eta and increases with beta. The relative difference of total and net free charge-particle counts is 2r/(1-r).",
+  "maximum_positron_to_electron_ratio": "[5.1482002224120137811558548801067574960646263355385504888968338098e-131, 5.1482002224120137811558548801067574960646263355385504888974510233e-131]",
+  "maximum_total_vs_net_count_relative_difference": "[1.029640044482402756231170976021351499212925267107710097779366762e-130, 1.0296400444824027562311709760213514992129252671077100977794903449e-130]",
+  "scope": "A conditional ideal-gas value bound. It does not bound interacting-plasma pair corrections, opacity derivatives, EOS implicit-root errors or a stellar trajectory. Actual sampled argument-domain checks are separate."
+}

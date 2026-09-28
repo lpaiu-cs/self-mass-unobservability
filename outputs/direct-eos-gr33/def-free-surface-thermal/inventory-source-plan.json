@@ -1,0 +1,26 @@
+{
+  "classification": "Counterexample candidate",
+  "bindings": {
+    "verification/def_thermal_native_inventory.py": "a7de232ca05c2d4593df335c254a2a6dc29c9bf7046ce0b8ae3f46eb7a532499",
+    "verification/def_free_surface_thermal.py": "fe248273b1b6da56fd210ed67c818093622cd217c53f0c78fda683b6d8aec092",
+    "verification/def_thermal_native_carrier.py": "fcec60ccd3730a6bc2cb6bdcc3aa95bc306b033871d91578c8c04762403ea823",
+    "outputs/direct-eos-gr33/gr-molecular-structure-defined/molecular-state-17-8.npz": "27bc78be6b5f9bb028e0323f0c225eefc5bd89244c9b14b5068fb9c7ba5df885"
+  },
+  "preserved_failures": [
+    "32-cell carrier failed set_vars after native evaluations; original log retained.",
+    "The attempted positive-L carrier guard rejected 435 negative archived luminosities before any new native run. Signed luminosities are valid carrier data; no sign change or absolute-value replacement."
+  ],
+  "intervention": "Keep all 5735 original carrier baryon cells and signed archived luminosities. Only requested rho,T,X and actual new EOS auxiliaries define source values. Carrier luminosities do not define physical transport.",
+  "budget": {
+    "full_batches": 2,
+    "hard_timeout_seconds": 60,
+    "CPU_threads": 1,
+    "expected_seconds": [
+      18,
+      40
+    ],
+    "native_EOS_calls": 0
+  },
+  "cost_basis": "The identical full-grid tracer previously took 8.50 seconds. The 32-cell carrier was not a valid speed pilot; use the required full-grid baseline as first measured batch and reuse it.",
+  "stop": "Stop on source/profile/input failure, or first batch above 25 seconds; no larger run."
+}

@@ -1,0 +1,7 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": false,
+  "scope": "Postprocessing reader assumption, not an evolution or physical gate failure.",
+  "failure": "The new audit assumed photon moments were saved at all65/129 macro endpoints; actual files have17 canonical times, plus one pilot endpoint on reference64. No matched full-time photon/material comparison is available.",
+  "repair": "Match only exact saved common times and report this discrete scope; use all material endpoints for separate time/background comparisons. No interpolation or accepted evolution replay."
+}

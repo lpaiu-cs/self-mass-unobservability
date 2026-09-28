@@ -1,0 +1,888 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": false,
+  "overall_phase_passed": false,
+  "scientific_status": "Loophole progress: actual native material retained in the complete coarse coupled trajectory; fine completion and new GR charge remain open.",
+  "result": {
+    "classification": "Counterexample candidate",
+    "overall_phase_passed": false,
+    "contribution": "Loophole progress: native low-density matter is retained in actual coupled photon/material evolution for the complete coarse horizon; full two-clock/GR conclusion remains open.",
+    "native_bank_passed": true,
+    "native_controls_passed": true,
+    "full_coarse_steps": 64,
+    "full_fine_steps": 128,
+    "coarse_completed": 64,
+    "fine_recorded_physical_step": 32,
+    "fine_complete_restart_step": 16,
+    "fine_complete_restart_bitwise_against_canonical": true,
+    "fine_prefix_source_exported": 32,
+    "truncated_checkpoint_recovery_passed": false,
+    "retained_tail_endpoint_g": 3502.096016526371,
+    "maximum_retained_tail_g": 4003.8244018484475,
+    "minimum_retained_tail_temperature_K": 2254.8805654247003,
+    "coarse_discarded_baryon_g": 593.4195263224453,
+    "old_coarse_discarded_baryon_g": 236640.5391799765,
+    "coarse_remaining_discard_ratio": 0.0025076832920462597,
+    "coarse_conserved_Killing_balance": 3.610010717909376e-13,
+    "physical_density_floor_cgs": 1.8552162139336478e-23,
+    "production": {
+      "action": "production",
+      "returncode": 124,
+      "seconds": 900.0717999790004,
+      "external_cap_seconds": 900.0
+    },
+    "GR_attempt": {
+      "action": "coarse_gr",
+      "returncode": 124,
+      "seconds": 25.439933829999973,
+      "external_cap_seconds": 25.0
+    },
+    "source_complete_on_both_clocks": false,
+    "new_GR_charge_available": false,
+    "uniform_EOS_derivative_bound": false,
+    "full_floor_feedback_enclosed": false,
+    "coupled_fixed_point_verified": false,
+    "nonlinear_GR": false,
+    "final_charge_solved": false,
+    "full_goal_complete": false,
+    "original_trace_identity_symbolically_rechecked": true,
+    "post_run_storage_repair_test": {
+      "passed": true,
+      "original_checkpoint_survives_interrupted_write": true,
+      "complete_replacement": true,
+      "history_truncated_to_checkpoint": true,
+      "scientific_re_evolution": false,
+      "source_sha256": "75b29b80ef936c7a160b1474a6cb82b931340585c87e74155cdb9a860a00524f"
+    },
+    "scientific_action_timer_sum": 1300.2700240909999,
+    "bookkeeping_seconds": 3.5138157970004613
+  },
+  "coarse_coupled_subproblem_passed": true,
+  "two_clock_evolution_passed": false,
+  "new_GR_charge_available": false,
+  "final_charge_solved": false,
+  "full_goal_complete": false,
+  "prior_master_sha256": "324244ffc23cb73efae2ffee23937a7dfafd75860411d89ffd16e4558123ee2a",
+  "unchanged_earlier_hashes_inherited": true,
+  "preserved_document_prefixes": {
+    "docs/model-definition.md": {
+      "bytes": 234256,
+      "sha256": "16ecd45d4e284873624015fd5326da533ba987a3d2905e315f94160ffd61d867"
+    },
+    "docs/observable-targets.md": {
+      "bytes": 226992,
+      "sha256": "068c76a0801b8d800389138737333c205537a21ab6b23658f7dbd7789bc348cf"
+    },
+    "docs/adiabatic-limit.md": {
+      "bytes": 222774,
+      "sha256": "8ab05f39f170b7a7019bc72b184aaffddffc9fed356e0683e1dbca5a8d22fb81"
+    },
+    "docs/nonadiabatic-regime.md": {
+      "bytes": 229225,
+      "sha256": "6286faa3588991f1ba22c1d070b1e3256a14747e6d8ee98315fac7354041057e"
+    },
+    "docs/failure-ledger-dynamic-chi.md": {
+      "bytes": 260891,
+      "sha256": "9913368ee60a65bd1bc589ac05fb50ba94978c0b2e534cf5a15822c4ddf68319"
+    },
+    "docs/dynamic-charge-completion.md": {
+      "bytes": 90529,
+      "sha256": "a6156a204b958566f5256df66f4c419a021be365285447641d09e7d4cfca8f98"
+    }
+  },
+  "execution_binding_audit": {
+    "verified": [
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/density-inverse/plan.json",
+        "declared_path": "verification/def_native_retained_tail.py",
+        "sha256": "da673cde796125afc04b039f51dc5b3abb0a757d3a1ef3d5f140234876002509",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\verification\\def_native_retained_tail.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/density-inverse/plan.json",
+        "declared_path": "verification/def_native_cold_coupling.py",
+        "sha256": "0eb2bc3108dd815e3a51288ad866d3f2abe8e10ea7bbdce0969745eb537aca6e",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\verification\\def_native_cold_coupling.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/density-inverse/plan.json",
+        "declared_path": "verification/def_native_hydrogen_exchange.py",
+        "sha256": "cf590d01753ffd86a00b80ef7be109131b15b8f1619e2246fbea72cd324123d6",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\verification\\def_native_hydrogen_exchange.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/density-inverse/plan.json",
+        "declared_path": "verification/def_native_material_join.py",
+        "sha256": "be1bcb8ccabcf1e980210f95db4053627eccd31466659e3237479feed495b505",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\verification\\def_native_material_join.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/density-inverse/plan.json",
+        "declared_path": "verification/def_native_refined_thermochemistry.py",
+        "sha256": "d58a3a9511fff956ca2e14dd15419d052cfd62db159539a3ce69199047f91ebb",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\verification\\def_native_refined_thermochemistry.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/density-inverse/plan.json",
+        "declared_path": "verification/def_native_updated_gr_return.py",
+        "sha256": "2ebdded1c3970bd2e0e038cfd29151b7ac32a84e8c50092584ebce5ed5cdbc77",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\verification\\def_native_updated_gr_return.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/density-inverse/plan.json",
+        "declared_path": "outputs/direct-eos-gr33/def-native-cold-coupling/repaired-bank.npz",
+        "sha256": "64c6458272c0b145e28b6b0f1cbea8ea6a4e43dcc10615ec09010f9071cb71ba",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\def-native-cold-coupling\\repaired-bank.npz"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/density-inverse/plan.json",
+        "declared_path": "outputs/direct-eos-gr33/def-native-cold-coupling/spectrum-bank.npz",
+        "sha256": "b0ec6f2649091a947ed8fc6c6449d88deaf7870f53854fd14f1872a3ca429836",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\def-native-cold-coupling\\spectrum-bank.npz"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/density-inverse/plan.json",
+        "declared_path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/bank.npz",
+        "sha256": "1ef9b4bb62b7bd9320b891126dd5f9a81d6cb0b48d01c5861962a2a5bf26188f",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\def-native-conservative-rates\\thermal-refined\\bank.npz"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/density-inverse/plan.json",
+        "declared_path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/evolution/result.json",
+        "sha256": "b383055f487aa3da68d2b9f8b07ea0d21924d7d8f4d54c2c2c4fe766f809a3d2",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\def-native-conservative-rates\\thermal-refined\\evolution\\result.json"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/density-inverse/plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-discarded-radiation/audit.json",
+        "sha256": "0ce2fa3ed17059ae4eeade1a784aeedc369967fe543e27cd23ef665db36096a9",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-discarded-radiation\\audit.json"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/density-inverse/plan.json",
+        "declared_path": "verification/repair_native_tail_density.py",
+        "sha256": "3ac95739bbc3a4b8eb89e0c3e9db580dbd5bbe4c75f2e9cedbb6614eeeb0c307",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\verification\\repair_native_tail_density.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/density-inverse/plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/probe-failure.json",
+        "sha256": "36b9b6f3d29963a70c46856ccf64414957b610c1649f65dbd98a993e193a93bb",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\probe-failure.json"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/forced-population-continuation/plan.json",
+        "declared_path": "verification/def_native_retained_tail.py",
+        "sha256": "da673cde796125afc04b039f51dc5b3abb0a757d3a1ef3d5f140234876002509",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\verification\\def_native_retained_tail.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/forced-population-continuation/plan.json",
+        "declared_path": "verification/def_native_cold_coupling.py",
+        "sha256": "0eb2bc3108dd815e3a51288ad866d3f2abe8e10ea7bbdce0969745eb537aca6e",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\verification\\def_native_cold_coupling.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/forced-population-continuation/plan.json",
+        "declared_path": "verification/def_native_hydrogen_exchange.py",
+        "sha256": "cf590d01753ffd86a00b80ef7be109131b15b8f1619e2246fbea72cd324123d6",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\verification\\def_native_hydrogen_exchange.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/forced-population-continuation/plan.json",
+        "declared_path": "verification/def_native_material_join.py",
+        "sha256": "be1bcb8ccabcf1e980210f95db4053627eccd31466659e3237479feed495b505",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\verification\\def_native_material_join.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/forced-population-continuation/plan.json",
+        "declared_path": "verification/def_native_refined_thermochemistry.py",
+        "sha256": "d58a3a9511fff956ca2e14dd15419d052cfd62db159539a3ce69199047f91ebb",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\verification\\def_native_refined_thermochemistry.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/forced-population-continuation/plan.json",
+        "declared_path": "verification/def_native_updated_gr_return.py",
+        "sha256": "2ebdded1c3970bd2e0e038cfd29151b7ac32a84e8c50092584ebce5ed5cdbc77",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\verification\\def_native_updated_gr_return.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/forced-population-continuation/plan.json",
+        "declared_path": "outputs/direct-eos-gr33/def-native-cold-coupling/repaired-bank.npz",
+        "sha256": "64c6458272c0b145e28b6b0f1cbea8ea6a4e43dcc10615ec09010f9071cb71ba",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\def-native-cold-coupling\\repaired-bank.npz"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/forced-population-continuation/plan.json",
+        "declared_path": "outputs/direct-eos-gr33/def-native-cold-coupling/spectrum-bank.npz",
+        "sha256": "b0ec6f2649091a947ed8fc6c6449d88deaf7870f53854fd14f1872a3ca429836",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\def-native-cold-coupling\\spectrum-bank.npz"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/forced-population-continuation/plan.json",
+        "declared_path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/bank.npz",
+        "sha256": "1ef9b4bb62b7bd9320b891126dd5f9a81d6cb0b48d01c5861962a2a5bf26188f",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\def-native-conservative-rates\\thermal-refined\\bank.npz"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/forced-population-continuation/plan.json",
+        "declared_path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/evolution/result.json",
+        "sha256": "b383055f487aa3da68d2b9f8b07ea0d21924d7d8f4d54c2c2c4fe766f809a3d2",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\def-native-conservative-rates\\thermal-refined\\evolution\\result.json"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/forced-population-continuation/plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-discarded-radiation/audit.json",
+        "sha256": "0ce2fa3ed17059ae4eeade1a784aeedc369967fe543e27cd23ef665db36096a9",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-discarded-radiation\\audit.json"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/forced-population-continuation/plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/probe-failure.json",
+        "sha256": "36b9b6f3d29963a70c46856ccf64414957b610c1649f65dbd98a993e193a93bb",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\probe-failure.json"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/forced-population-continuation/plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/density-inverse/probe-failure.json",
+        "sha256": "35a365cea58a120b515ef56dd1e0bc9bf7b9ba7df993b176058cbcd550e56888",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\density-inverse\\probe-failure.json"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/forced-population-continuation/plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/population-continuation/probe-failure.json",
+        "sha256": "9eeb9059290b87215a956f2f45722155f53c5efb1ab22443acdc20e84e821799",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\population-continuation\\probe-failure.json"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/forced-population-continuation/plan.json",
+        "declared_path": "verification/repair_native_tail_seed.py",
+        "sha256": "59406e4d8bdadacd3a544ab8a702570b812129f3a43c2768c0189850eae80259",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\verification\\repair_native_tail_seed.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/plan.json",
+        "declared_path": "verification/def_native_retained_tail.py",
+        "sha256": "da673cde796125afc04b039f51dc5b3abb0a757d3a1ef3d5f140234876002509",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\verification\\def_native_retained_tail.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/plan.json",
+        "declared_path": "verification/def_native_cold_coupling.py",
+        "sha256": "0eb2bc3108dd815e3a51288ad866d3f2abe8e10ea7bbdce0969745eb537aca6e",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\verification\\def_native_cold_coupling.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/plan.json",
+        "declared_path": "verification/def_native_hydrogen_exchange.py",
+        "sha256": "cf590d01753ffd86a00b80ef7be109131b15b8f1619e2246fbea72cd324123d6",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\verification\\def_native_hydrogen_exchange.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/plan.json",
+        "declared_path": "verification/def_native_material_join.py",
+        "sha256": "be1bcb8ccabcf1e980210f95db4053627eccd31466659e3237479feed495b505",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\verification\\def_native_material_join.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/plan.json",
+        "declared_path": "verification/def_native_refined_thermochemistry.py",
+        "sha256": "d58a3a9511fff956ca2e14dd15419d052cfd62db159539a3ce69199047f91ebb",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\verification\\def_native_refined_thermochemistry.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/plan.json",
+        "declared_path": "verification/def_native_updated_gr_return.py",
+        "sha256": "2ebdded1c3970bd2e0e038cfd29151b7ac32a84e8c50092584ebce5ed5cdbc77",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\verification\\def_native_updated_gr_return.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/plan.json",
+        "declared_path": "outputs/direct-eos-gr33/def-native-cold-coupling/repaired-bank.npz",
+        "sha256": "64c6458272c0b145e28b6b0f1cbea8ea6a4e43dcc10615ec09010f9071cb71ba",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\def-native-cold-coupling\\repaired-bank.npz"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/plan.json",
+        "declared_path": "outputs/direct-eos-gr33/def-native-cold-coupling/spectrum-bank.npz",
+        "sha256": "b0ec6f2649091a947ed8fc6c6449d88deaf7870f53854fd14f1872a3ca429836",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\def-native-cold-coupling\\spectrum-bank.npz"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/plan.json",
+        "declared_path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/bank.npz",
+        "sha256": "1ef9b4bb62b7bd9320b891126dd5f9a81d6cb0b48d01c5861962a2a5bf26188f",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\def-native-conservative-rates\\thermal-refined\\bank.npz"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/plan.json",
+        "declared_path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/evolution/result.json",
+        "sha256": "b383055f487aa3da68d2b9f8b07ea0d21924d7d8f4d54c2c2c4fe766f809a3d2",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\def-native-conservative-rates\\thermal-refined\\evolution\\result.json"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-discarded-radiation/audit.json",
+        "sha256": "0ce2fa3ed17059ae4eeade1a784aeedc369967fe543e27cd23ef665db36096a9",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-discarded-radiation\\audit.json"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/population-continuation/plan.json",
+        "declared_path": "verification/def_native_retained_tail.py",
+        "sha256": "da673cde796125afc04b039f51dc5b3abb0a757d3a1ef3d5f140234876002509",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\verification\\def_native_retained_tail.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/population-continuation/plan.json",
+        "declared_path": "verification/def_native_cold_coupling.py",
+        "sha256": "0eb2bc3108dd815e3a51288ad866d3f2abe8e10ea7bbdce0969745eb537aca6e",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\verification\\def_native_cold_coupling.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/population-continuation/plan.json",
+        "declared_path": "verification/def_native_hydrogen_exchange.py",
+        "sha256": "cf590d01753ffd86a00b80ef7be109131b15b8f1619e2246fbea72cd324123d6",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\verification\\def_native_hydrogen_exchange.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/population-continuation/plan.json",
+        "declared_path": "verification/def_native_material_join.py",
+        "sha256": "be1bcb8ccabcf1e980210f95db4053627eccd31466659e3237479feed495b505",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\verification\\def_native_material_join.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/population-continuation/plan.json",
+        "declared_path": "verification/def_native_refined_thermochemistry.py",
+        "sha256": "d58a3a9511fff956ca2e14dd15419d052cfd62db159539a3ce69199047f91ebb",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\verification\\def_native_refined_thermochemistry.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/population-continuation/plan.json",
+        "declared_path": "verification/def_native_updated_gr_return.py",
+        "sha256": "2ebdded1c3970bd2e0e038cfd29151b7ac32a84e8c50092584ebce5ed5cdbc77",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\verification\\def_native_updated_gr_return.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/population-continuation/plan.json",
+        "declared_path": "outputs/direct-eos-gr33/def-native-cold-coupling/repaired-bank.npz",
+        "sha256": "64c6458272c0b145e28b6b0f1cbea8ea6a4e43dcc10615ec09010f9071cb71ba",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\def-native-cold-coupling\\repaired-bank.npz"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/population-continuation/plan.json",
+        "declared_path": "outputs/direct-eos-gr33/def-native-cold-coupling/spectrum-bank.npz",
+        "sha256": "b0ec6f2649091a947ed8fc6c6449d88deaf7870f53854fd14f1872a3ca429836",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\def-native-cold-coupling\\spectrum-bank.npz"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/population-continuation/plan.json",
+        "declared_path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/bank.npz",
+        "sha256": "1ef9b4bb62b7bd9320b891126dd5f9a81d6cb0b48d01c5861962a2a5bf26188f",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\def-native-conservative-rates\\thermal-refined\\bank.npz"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/population-continuation/plan.json",
+        "declared_path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/evolution/result.json",
+        "sha256": "b383055f487aa3da68d2b9f8b07ea0d21924d7d8f4d54c2c2c4fe766f809a3d2",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\def-native-conservative-rates\\thermal-refined\\evolution\\result.json"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/population-continuation/plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-discarded-radiation/audit.json",
+        "sha256": "0ce2fa3ed17059ae4eeade1a784aeedc369967fe543e27cd23ef665db36096a9",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-discarded-radiation\\audit.json"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/population-continuation/plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/probe-failure.json",
+        "sha256": "36b9b6f3d29963a70c46856ccf64414957b610c1649f65dbd98a993e193a93bb",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\probe-failure.json"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/population-continuation/plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/density-inverse/probe-failure.json",
+        "sha256": "35a365cea58a120b515ef56dd1e0bc9bf7b9ba7df993b176058cbcd550e56888",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\density-inverse\\probe-failure.json"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/population-continuation/plan.json",
+        "declared_path": "verification/repair_native_tail_seed.py",
+        "sha256": "fdff09233b10154449bae7ddadff8262f31cdaa502f8702e7b7ce3d4c43e6352",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\population-continuation\\executed-producer.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/aggregate-budget-plan.json",
+        "declared_path": "/home/lpaiu/work/native-retained-tail-runtime/outputs/direct-eos-gr33/native-retained-tail/runtime-bank-budget.py",
+        "sha256": "8e8999fdae07203430d0d9fdb9be03dc8b449daa58f0a5aee040e9848f1a85bf",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\runtime-bank-budget.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/aggregate-budget-plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/runtime-bank-plan.json",
+        "sha256": "b1e657f5f9f88c3c13825fa6c45ecf83c440b260d2a113fa84322c239bf39463",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\supported-temperature\\runtime-bank-plan.json"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/aggregate-budget-plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/runtime-bank-dispatch.json",
+        "sha256": "344b86ad9cf865b56f2d95fa4b08d0710ed4a28267ead41a18f297065cb7db6a",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\supported-temperature\\runtime-bank-dispatch.json"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/aggregate-budget-plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/runtime-source.json",
+        "sha256": "a98cb7734203d29a73b374c815a63adfd61096a60f3fdbf01faa3053fdf17d50",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\runtime-source.json"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/cached-bank-plan.json",
+        "declared_path": "/mnt/e/lab/self-mass-unobservability/verification/native_tail_supported_temperature.py",
+        "sha256": "78700645832d362bd0cd7d93348a34d4692e0ff554fc2527e8498f18bb0b6d2c",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\supported-temperature\\executed-cache-pilot.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/cached-bank-plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/executed-probe.py",
+        "sha256": "ec0f1ffc4b9210483fd1dca8f8dac738c03f5a35e30ec7ec336bb375fb7dac24",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\supported-temperature\\executed-probe.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/cached-bank-plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/warm-probe.json",
+        "sha256": "e42630fc1259fc5bff49484ff79181a8bac20bffca6180c21c0e34c5993b2082",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\supported-temperature\\warm-probe.json"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/cached-bank-plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/warm-probe.npz",
+        "sha256": "92bd747761b01a25ce0e42f6a0445b2c2128ec5cd4c5fa65f558041e6186aa45",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\supported-temperature\\warm-probe.npz"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/constructor-reuse-plan.json",
+        "declared_path": "/mnt/e/lab/self-mass-unobservability/verification/native_tail_supported_temperature.py",
+        "sha256": "56a6e1ed2467ef842d73153f4e710f2699d01c1920738a23b7c7bd7826267d54",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\verification\\native_tail_supported_temperature.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/constructor-reuse-plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/executed-reallocation.py",
+        "sha256": "b230407985e9d00ed6f8c19158a44db68605b33078db681fcd16b889114ea749",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\supported-temperature\\executed-reallocation.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/constructor-reuse-plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/cached-bank-pilot.json",
+        "sha256": "bd1e53bf4e44877be8dd3729603919ae4b6069146834bfb0f899d2c7f03f0837",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\supported-temperature\\cached-bank-pilot.json"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/constructor-reuse-plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/reallocated-bank-dispatch.json",
+        "sha256": "b0fa194818d4a07595fc6394927405fd63d7d2e7c9d5cd6ae8b95b9b6535050d",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\supported-temperature\\reallocated-bank-dispatch.json"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/constructor-reuse-plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/warm-probe.npz",
+        "sha256": "92bd747761b01a25ce0e42f6a0445b2c2128ec5cd4c5fa65f558041e6186aa45",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\supported-temperature\\warm-probe.npz"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/coupling-plan.json",
+        "declared_path": "verification/evolve_native_retained_tail.py",
+        "sha256": "bc6286238590936c731c30dd198a9da935001822242846966408aa6056028438",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\supported-temperature\\executed-evolution-pilot.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/coupling-plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/support/repaired-bank.npz",
+        "sha256": "ae67c3c469df177fcd0aa0449ed65baf5fc0bd879f75cc504373693246ecdd61",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\supported-temperature\\support\\repaired-bank.npz"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/coupling-plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/support/spectrum-bank.npz",
+        "sha256": "98db1a866080df533bba6f825b7505f52d08bd29cfbf83b6b2667b5e4b88536a",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\supported-temperature\\support\\spectrum-bank.npz"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/coupling-plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/reallocated-bank-plan.json",
+        "sha256": "9452dc3e8212a96a94e732a6f8592335ecfa9176b548858e59288e121916bb85",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\supported-temperature\\reallocated-bank-plan.json"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/coupling-plan.json",
+        "declared_path": "verification/def_native_updated_gr_return.py",
+        "sha256": "2ebdded1c3970bd2e0e038cfd29151b7ac32a84e8c50092584ebce5ed5cdbc77",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\verification\\def_native_updated_gr_return.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/coupling-plan.json",
+        "declared_path": "verification/def_native_refined_thermochemistry.py",
+        "sha256": "d58a3a9511fff956ca2e14dd15419d052cfd62db159539a3ce69199047f91ebb",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\verification\\def_native_refined_thermochemistry.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/coupling-plan.json",
+        "declared_path": "verification/def_native_cold_coupling.py",
+        "sha256": "0eb2bc3108dd815e3a51288ad866d3f2abe8e10ea7bbdce0969745eb537aca6e",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\verification\\def_native_cold_coupling.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/execution-plan.json",
+        "declared_path": "verification/evolve_native_retained_tail.py",
+        "sha256": "e0cfa78f6db2461a43d09f18e3a96c8353b9af997c147e78ef801c83a572bff7",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\supported-temperature\\executed-production.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/execution-plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/executed-resumed-pilot.py",
+        "sha256": "9cfc98c3e82e7a1b3178d555e3f4552cf2947a08b9465657d4ceea417a23cde2",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\supported-temperature\\executed-resumed-pilot.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/execution-plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/resumed-pilot.json",
+        "sha256": "3d08c7f86df8879d788cea7deafd552e944069975ba89017e62ef8262c68ed69",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\supported-temperature\\resumed-pilot.json"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/execution-plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/preproduction-checkpoint-64.npz",
+        "sha256": "f231e92ea42eb3d375951a696cf99a133aaad428f19b62cb575f3959ae166761",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\supported-temperature\\evolution\\preproduction-checkpoint-64.npz"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/execution-plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/preproduction-history-64.npz",
+        "sha256": "398c304d273cecdc53333ef2505bcd870f3aeea93bcca71f582fdbb617efc1f1",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\supported-temperature\\evolution\\preproduction-history-64.npz"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/execution-plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/preproduction-source-64.npz",
+        "sha256": "8d5a2f3ea7a1f6fd6fec891d5ab4942230eb4a34709853597c10ec1e463aa5c3",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\supported-temperature\\evolution\\preproduction-source-64.npz"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/execution-plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/preproduction-checkpoint-128.npz",
+        "sha256": "107a14d3381019128c6382d47993ac8714ae8e9eefb1b52c5eb3ca4e5147e9ad",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\supported-temperature\\evolution\\preproduction-checkpoint-128.npz"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/execution-plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/preproduction-history-128.npz",
+        "sha256": "04582bf2a3054bd4909c8f2e9efe57cb2d1acc4305692b5bd28612016daf7358",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\supported-temperature\\evolution\\preproduction-history-128.npz"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/execution-plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/preproduction-source-128.npz",
+        "sha256": "de0e8b12fa5e937fc52318aa1bea67e637d555a66a0ebcb9536c1f028c6e2d24",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\supported-temperature\\evolution\\preproduction-source-128.npz"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/gr/coarse-plan.json",
+        "declared_path": "/home/lpaiu/work/native-retained-tail-runtime/verification/verify_native_retained_tail.py",
+        "sha256": "cd53f9a75840c40316bc3e725beacf60e4173436e56dda6ef6e4e065dba8806f",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\verification\\verify_native_retained_tail.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/gr/coarse-plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/source-64.npz",
+        "sha256": "e355fd75305697b78611d53c19bf7d0d821142533cbea5f1b81d53b9a2a093b8",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\supported-temperature\\evolution\\source-64.npz"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/gr/coarse-plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/result-64.json",
+        "sha256": "00c6c2ed968a8a94e0c51bbb6c03044637b2bd3edc721928cb1f42771f692955",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\supported-temperature\\evolution\\result-64.json"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/gr/coarse-plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/production-receipt.json",
+        "sha256": "a20c09e4c206877b7aa64116b3f7e856d3421f67235c86aa8113f8c7aa67c3e7",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\supported-temperature\\production-receipt.json"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/plan.json",
+        "declared_path": "verification/native_tail_supported_temperature.py",
+        "sha256": "ec0f1ffc4b9210483fd1dca8f8dac738c03f5a35e30ec7ec336bb375fb7dac24",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\supported-temperature\\executed-probe.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/plan.json",
+        "declared_path": "verification/def_native_retained_tail.py",
+        "sha256": "da673cde796125afc04b039f51dc5b3abb0a757d3a1ef3d5f140234876002509",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\verification\\def_native_retained_tail.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/plan.json",
+        "sha256": "bc54b53eec7e6cf26489e841904c2cad9baff9a43d44b9a7fa7f40b7fc12ac5a",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\plan.json"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/probe-failure.json",
+        "sha256": "36b9b6f3d29963a70c46856ccf64414957b610c1649f65dbd98a993e193a93bb",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\probe-failure.json"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/density-inverse/probe-failure.json",
+        "sha256": "35a365cea58a120b515ef56dd1e0bc9bf7b9ba7df993b176058cbcd550e56888",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\density-inverse\\probe-failure.json"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/population-continuation/probe-failure.json",
+        "sha256": "9eeb9059290b87215a956f2f45722155f53c5efb1ab22443acdc20e84e821799",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\population-continuation\\probe-failure.json"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/forced-population-continuation/probe-failure.json",
+        "sha256": "202c64617fbc726dc9cee54e499f11272faf9c7f7c018e9d4fd19b65b7018a08",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\forced-population-continuation\\probe-failure.json"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/plan.json",
+        "declared_path": "outputs/direct-eos-gr33/def-native-cold-coupling/repaired-bank.npz",
+        "sha256": "64c6458272c0b145e28b6b0f1cbea8ea6a4e43dcc10615ec09010f9071cb71ba",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\def-native-cold-coupling\\repaired-bank.npz"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/plan.json",
+        "declared_path": "outputs/direct-eos-gr33/def-native-cold-coupling/spectrum-bank.npz",
+        "sha256": "b0ec6f2649091a947ed8fc6c6449d88deaf7870f53854fd14f1872a3ca429836",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\def-native-cold-coupling\\spectrum-bank.npz"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/reallocated-bank-plan.json",
+        "declared_path": "/mnt/e/lab/self-mass-unobservability/verification/native_tail_supported_temperature.py",
+        "sha256": "b230407985e9d00ed6f8c19158a44db68605b33078db681fcd16b889114ea749",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\supported-temperature\\executed-reallocation.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/reallocated-bank-plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/executed-cache-pilot.py",
+        "sha256": "78700645832d362bd0cd7d93348a34d4692e0ff554fc2527e8498f18bb0b6d2c",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\supported-temperature\\executed-cache-pilot.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/reallocated-bank-plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/cached-bank-pilot.json",
+        "sha256": "bd1e53bf4e44877be8dd3729603919ae4b6069146834bfb0f899d2c7f03f0837",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\supported-temperature\\cached-bank-pilot.json"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/resumed-pilot-plan.json",
+        "declared_path": "/home/lpaiu/work/native-retained-tail-runtime/verification/evolve_native_retained_tail.py",
+        "sha256": "9cfc98c3e82e7a1b3178d555e3f4552cf2947a08b9465657d4ceea417a23cde2",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\supported-temperature\\executed-resumed-pilot.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/resumed-pilot-plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/executed-evolution-pilot.py",
+        "sha256": "bc6286238590936c731c30dd198a9da935001822242846966408aa6056028438",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\supported-temperature\\executed-evolution-pilot.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/resumed-pilot-plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/orphaned-pilot-ports-128.npz",
+        "sha256": "3267099e97f216e2ac9b900080f9e3d945867b4366058c7f1788367ce5cf7312",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\supported-temperature\\evolution\\orphaned-pilot-ports-128.npz"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/runtime-bank-plan.json",
+        "declared_path": "/home/lpaiu/work/native-retained-tail-runtime/outputs/direct-eos-gr33/native-retained-tail/runtime-bank.py",
+        "sha256": "9bbb8523f6ef99e04eb1741e312ed06d0839f45fb480fc800da5334ed59b6cc6",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\runtime-bank.py"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/runtime-bank-plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/runtime-source.json",
+        "sha256": "a98cb7734203d29a73b374c815a63adfd61096a60f3fdbf01faa3053fdf17d50",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\runtime-source.json"
+      },
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/runtime-bank-plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/constructor-reuse-dispatch.json",
+        "sha256": "8b2c1bfaa3d2cf634eb3913762a08429cdadec587078ada120bc95f25b60ab3f",
+        "retained_path": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-retained-tail\\supported-temperature\\constructor-reuse-dispatch.json"
+      }
+    ],
+    "unavailable": [
+      {
+        "plan": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/resumed-pilot-plan.json",
+        "declared_path": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/checkpoint-64.npz",
+        "sha256": "87f5271a11623d4f4f2d0bf6aa76abf67aa5e5bf6b09f768edb10040f7bc6f2f"
+      }
+    ],
+    "external_checks_required": [],
+    "all_historical_input_bindings_verified": false
+  },
+  "all_historical_input_bindings_verified": false,
+  "original_execution_source_preserved": true,
+  "post_run_storage_control": {
+    "passed": true,
+    "original_checkpoint_survives_interrupted_write": true,
+    "complete_replacement": true,
+    "history_truncated_to_checkpoint": true,
+    "scientific_re_evolution": false,
+    "source_sha256": "75b29b80ef936c7a160b1474a6cb82b931340585c87e74155cdb9a860a00524f"
+  },
+  "scientific_re_evolution_after_storage_repair": false,
+  "syntax_checked": [
+    "def_native_retained_tail",
+    "repair_native_tail_density",
+    "repair_native_tail_seed",
+    "native_tail_supported_temperature",
+    "evolve_native_retained_tail",
+    "verify_native_retained_tail"
+  ],
+  "sha256": {
+    "docs/adiabatic-limit.md": "120468969dc0ba93a498117384f0aab1cf79ed7b1fbdfb969f2656b617b8f303",
+    "docs/dynamic-charge-completion.md": "9a8d953fd50de6ad691064ca3f18e99bb2f85d0c23bae720b72cef42ef2d565f",
+    "docs/failure-ledger-dynamic-chi.md": "517dd989caff75789a1daa6356204b25a272b92759cd4e807c545b67668dd0bb",
+    "docs/model-definition.md": "803bb60459f23236b0398e7b4fd80f1caceb65fc313595aee55b210e9f7bf573",
+    "docs/nonadiabatic-regime.md": "f4bb0ece4b457e443f80d82cf410bcd71d0a668ecf4067abd8d9b721112ff6e5",
+    "docs/observable-targets.md": "682b953ba8edd95dfc0bc173d46becf4ff91de479822eff5e29a9ea4eadc6209",
+    "notes/REQUEST147_RETAINED_NATIVE_MATERIAL_KO.md": "4c1888154aeec4409f0e44b0ff82fc5aa0444933e654bdf050ce852300a77a58",
+    "outputs/direct-eos-gr33/native-retained-tail/audit-bindings.py": "37d4a6e61d072ffe4fd2395d9c0dcbb5d107178f5776a9375b41992c27809707",
+    "outputs/direct-eos-gr33/native-retained-tail/bindings-audit.json": "548f13bd4332ef870928a5592f2a32594802b042f51ec5bae185315b3f108e44",
+    "outputs/direct-eos-gr33/native-retained-tail/capture-status.py": "ed91908af6ffdc31c74af242de4c736ba6f42d54efb64b74a40fc5162624debe",
+    "outputs/direct-eos-gr33/native-retained-tail/density-inverse/density-roots.json": "cc184676bacf0da62932f2536387df43b0c1a5717f793a7136e1ef977ee57896",
+    "outputs/direct-eos-gr33/native-retained-tail/density-inverse/plan.json": "405d84ebda2a5b6faaa79e939ee0e00811d12de0cf826e5ba5709cc539d3d48a",
+    "outputs/direct-eos-gr33/native-retained-tail/density-inverse/probe-failure.json": "35a365cea58a120b515ef56dd1e0bc9bf7b9ba7df993b176058cbcd550e56888",
+    "outputs/direct-eos-gr33/native-retained-tail/executed-capture-status.py": "8ef65a9cc5f6138b0377eac1414495531aaeee39f4564cb13aea6a7df00f307b",
+    "outputs/direct-eos-gr33/native-retained-tail/executed-run-receipt.py": "1196cec3c5d0e84bb2d19aed23e548d19868209e4ef0d52abfb54a50aa3476f8",
+    "outputs/direct-eos-gr33/native-retained-tail/forced-population-continuation/continuation-prefix.npz": "243747d812d9046f15c3584c54c62347e652f3181aa0faaab23488cdf9f6b633",
+    "outputs/direct-eos-gr33/native-retained-tail/forced-population-continuation/continuation.json": "db89af8b12d57f5971ce572f9c6036049719041ee5fda8f36706bc28012aaa62",
+    "outputs/direct-eos-gr33/native-retained-tail/forced-population-continuation/native-error-104.txt": "ba251511f643425db9ab751c8d110689e614ba24e38df858ccf874aa6ff7a0b0",
+    "outputs/direct-eos-gr33/native-retained-tail/forced-population-continuation/plan.json": "099665eda0c4d9a091d2fd56da43b4d92762701c4c5ba50efd89acf36359de36",
+    "outputs/direct-eos-gr33/native-retained-tail/forced-population-continuation/probe-failure.json": "202c64617fbc726dc9cee54e499f11272faf9c7f7c018e9d4fd19b65b7018a08",
+    "outputs/direct-eos-gr33/native-retained-tail/plan.json": "bc54b53eec7e6cf26489e841904c2cad9baff9a43d44b9a7fa7f40b7fc12ac5a",
+    "outputs/direct-eos-gr33/native-retained-tail/population-continuation/continuation.json": "50ec89dbbf9c3c921d621c694cd659dfe12b9398b88cbf94013aec5816ad0a44",
+    "outputs/direct-eos-gr33/native-retained-tail/population-continuation/executed-producer.py": "fdff09233b10154449bae7ddadff8262f31cdaa502f8702e7b7ce3d4c43e6352",
+    "outputs/direct-eos-gr33/native-retained-tail/population-continuation/native-error-104.txt": "ba251511f643425db9ab751c8d110689e614ba24e38df858ccf874aa6ff7a0b0",
+    "outputs/direct-eos-gr33/native-retained-tail/population-continuation/plan.json": "89313a427150bc88eb65df93d053cde00afd8716f8603f10a7013d351c7705c6",
+    "outputs/direct-eos-gr33/native-retained-tail/population-continuation/probe-failure.json": "9eeb9059290b87215a956f2f45722155f53c5efb1ab22443acdc20e84e821799",
+    "outputs/direct-eos-gr33/native-retained-tail/probe-failure.json": "36b9b6f3d29963a70c46856ccf64414957b610c1649f65dbd98a993e193a93bb",
+    "outputs/direct-eos-gr33/native-retained-tail/recover-checkpoint.py": "60622a232816b0eda75874927be2b56139c601f39f172a4607ccc1459f98afdc",
+    "outputs/direct-eos-gr33/native-retained-tail/run-receipt.py": "2615851824d37ddee67e0887d588cff3f1ed54a2c3ae07866bec1da722d93d81",
+    "outputs/direct-eos-gr33/native-retained-tail/runtime-bank-budget.py": "8e8999fdae07203430d0d9fdb9be03dc8b449daa58f0a5aee040e9848f1a85bf",
+    "outputs/direct-eos-gr33/native-retained-tail/runtime-bank.py": "9bbb8523f6ef99e04eb1741e312ed06d0839f45fb480fc800da5334ed59b6cc6",
+    "outputs/direct-eos-gr33/native-retained-tail/runtime-bootstrap.py": "5d7368dd019f5bec638ea1fba98deaea4954a19a54c937c4fab2f419cf990ca7",
+    "outputs/direct-eos-gr33/native-retained-tail/runtime-import-profile.txt": "790387ff47a215e506472b4402411a086e31892c6f5f424c4ab8a36f47bcf6af",
+    "outputs/direct-eos-gr33/native-retained-tail/runtime-import.json": "d129b9e96c38f7ef84caa16382f97fe866b93b21a50511c02250008adb39d6c2",
+    "outputs/direct-eos-gr33/native-retained-tail/runtime-source.json": "a98cb7734203d29a73b374c815a63adfd61096a60f3fdbf01faa3053fdf17d50",
+    "outputs/direct-eos-gr33/native-retained-tail/runtime-source.zip": "beb86553ee9117729908b747d71566cf1fa75c923faa6911ca1d0e2bf5170885",
+    "outputs/direct-eos-gr33/native-retained-tail/status.json": "18cfa64e24afe777b4911d4ab0b988b99b6c10ac13220d04414761bf5bbd2e9a",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/aggregate-bank-dispatch.json": "69014e0a1826bde84f37f88c8306916596b0b6d5465298c3c76679547edf73a5",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/aggregate-budget-plan.json": "21b4fc4a1efb212e5474ece378b98170ed40e0b2fe5221bd99ebc720d40b345e",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/cached-bank-pilot.json": "bd1e53bf4e44877be8dd3729603919ae4b6069146834bfb0f899d2c7f03f0837",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/cached-bank-plan.json": "c7bbd4a139466b4c30e71fb496e2a5d1f2babf649af08f0fd09de1bb6484e34f",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/checkpoint-control.json": "fbd99a269433b690d630643bcf15ee41b03aabdf0e1d75b38df55e585fcc1bf5",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/checkpoint-recovery.json": "3d62ac0466fd7f902ec7d2a4e16ff316cff6dfabb8c4daa4ee0cc35f7464de12",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/coarse_gr-external.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/coarse_gr-receipt.json": "e9f0725034ae44f26ba5fc7ff244b53a0da6db1a34aabd42216390f4f6ea5945",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/constructor-reuse-dispatch.json": "8b2c1bfaa3d2cf634eb3913762a08429cdadec587078ada120bc95f25b60ab3f",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/constructor-reuse-plan.json": "1c73a2481f1168897ab328edd1f71dc3571cff7a0a16059d2f1900f1a1418d56",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/coupling-controls.json": "817e03d1f7f77f9da23e70b8b53c1694b0600112cbb7bc8d73d483e48b203cbc",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/coupling-plan.json": "6d796846eb4276dccfef1f8f14ec627790a381998f9c3bb4cb9d8c9b84d76c79",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/accepted-ports-128.npz": "351b66fe8bed5355c8a312e2e2bcda898b28f7ab89b5bd25ec57698a98551abb",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/accepted-ports-64.npz": "e774379f5889562471ff1924ca01c8844ce3a99bff1221eaa7a7924663296f83",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/capture-64.json": "76e54cebc296b93583979e04edc4fb19f93929d781e2e90463f050f89d2cfb0e",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/checkpoint-128.npz": "33bd347827eeb383e44c8e05615569f1cad20e02db6ff029c2d0e9a1b8b8850c",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/checkpoint-128.tmp": "907827ddfaa5e6476a3287623baae259b5fb72b419849dbcc8f756f75d09b2bb",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/checkpoint-64.npz": "add6713651fa874607277a76a6015835f7d3b798b7f1226b0bebe4a3ab96330a",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/cost-128-2.json": "059e6572e851cd1e778360f6ab668a1a682d1f890e2b501ed6515a6c6df956a8",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/cost-64-5.json": "b5447f5a2c8bb0c57bbd8a6411129ca5a0e8b58a77133526b599cda8af10cf9e",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/cost-64-64.json": "66f625bfc5e1e236ed6878f98eb589bedbef64ad58baa993c9222d4c812fe83a",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/coupled-64.npz": "77717bfa8e825807d73dd87d70f1a2bf5fe875339483ddc8bc9f7650ad9ef224",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/history-128.npz": "b707286571753fc2e05cb1fb6edad49e58503effb0c124a17a0fc5db7a2bf0b1",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/history-64.npz": "692ca2b8789861481f65d7ab02df15b0f8fa14eb72ca06e71cfa7b9d7513edc5",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/interrupted-accepted-ports-128.npz": "351b66fe8bed5355c8a312e2e2bcda898b28f7ab89b5bd25ec57698a98551abb",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/interrupted-checkpoint-128.npz": "33bd347827eeb383e44c8e05615569f1cad20e02db6ff029c2d0e9a1b8b8850c",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/interrupted-history-128.npz": "b707286571753fc2e05cb1fb6edad49e58503effb0c124a17a0fc5db7a2bf0b1",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/interrupted-tail-128.json": "3b924c361ffaff12b2a7c38588f461588d08afcaf9bb26fa5edf93947e847dd3",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/orphaned-pilot-ports-128.npz": "3267099e97f216e2ac9b900080f9e3d945867b4366058c7f1788367ce5cf7312",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/pilot-128.json": "8082c606c8e316673422d9f71998df86c4be9cbc7b85afb9fa5a19491532aa1c",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/pilot-64.json": "7e8324ed22845e88322197c003b287b109ae14678dea78a6713afce6b0767e79",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/preproduction-checkpoint-128.npz": "107a14d3381019128c6382d47993ac8714ae8e9eefb1b52c5eb3ca4e5147e9ad",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/preproduction-checkpoint-64.npz": "f231e92ea42eb3d375951a696cf99a133aaad428f19b62cb575f3959ae166761",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/preproduction-history-128.npz": "04582bf2a3054bd4909c8f2e9efe57cb2d1acc4305692b5bd28612016daf7358",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/preproduction-history-64.npz": "398c304d273cecdc53333ef2505bcd870f3aeea93bcca71f582fdbb617efc1f1",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/preproduction-source-128.npz": "de0e8b12fa5e937fc52318aa1bea67e637d555a66a0ebcb9536c1f028c6e2d24",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/preproduction-source-64.npz": "8d5a2f3ea7a1f6fd6fec891d5ab4942230eb4a34709853597c10ec1e463aa5c3",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/preproduction-tail-128.json": "1b643be0c2d11602eb8c8b1d857015d91d5603edeb985da6ecab969f97306c25",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/preproduction-tail-64.json": "ff37dc07f999349af198adecbe484fa4d66139b90e51fef5c6cbcae19b894b56",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/result-64.json": "00c6c2ed968a8a94e0c51bbb6c03044637b2bd3edc721928cb1f42771f692955",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/source-128.npz": "de0e8b12fa5e937fc52318aa1bea67e637d555a66a0ebcb9536c1f028c6e2d24",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/source-64.npz": "e355fd75305697b78611d53c19bf7d0d821142533cbea5f1b81d53b9a2a093b8",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/source-prefix-128-32.npz": "66f83552625b500a293e6affd49c0cc5b3620287f0731fa695cba866f2aea826",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/state-128-0.npz": "630de274049848d825871e96ac6f388a0d10a16699bf04168b49243884d35c22",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/state-128-16.npz": "7b42739b36c1f49f6690362160831c7525e6d9b924bfe9b41a74a3d47b8ffe93",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/state-128-24.npz": "ad89d78dab1f1852a66fb1e47e001e655ae716f230ec3c149ed7d2ba7f41d82a",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/state-128-32.npz": "fd21d8e2139c2209df0efd7ecd852bd185739fea5f215b92817c8edda2a939ee",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/state-128-8.npz": "97f4d4faed3493847b0ff32ad643f1c295615cd7b1aec762d551fcfe3d00a776",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/state-64-0.npz": "630de274049848d825871e96ac6f388a0d10a16699bf04168b49243884d35c22",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/state-64-12.npz": "b0353187089037728b0c87b73bcbcd1d58545eef90f663648db4dd1178be43b0",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/state-64-16.npz": "3dbb1f64eeeb07fd7f84eea3b8fa23c93e0c04097a115d66a7a2aa57035d018c",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/state-64-20.npz": "4643f92b3d9f5fc8b73715ef9106c0b0c4fd400e929195c36eb23a787ab54fed",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/state-64-24.npz": "cc4bde9625b9ef58e386d80df3fb52f7c805b440ad7ba1be149527c505b0023f",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/state-64-28.npz": "7f2d92e05098379d64dfaa0deb7dbf4a7a27518f168b3436c6a7b0b3baf50244",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/state-64-32.npz": "0c5d92f20d8cdc43d82a8de01c557e681f5efd8b358e05aedab0dd6770ba97f5",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/state-64-36.npz": "d59fa8f9f5347e7b51049917504a7e6bd806f86048e790314a72ee3912b4ffa8",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/state-64-4.npz": "3898eff0cac7f0c6ed80943761b5379b682a7de80469714b061b7a710b266157",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/state-64-40.npz": "94d3930bf4d4c017339f81385843d1e5fbef62e22602308bc3b76276d18da030",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/state-64-44.npz": "1fe4a695c7c713cdd2721dcfd8daa0f135f2872fbd73fef60dcdd3d5e2213684",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/state-64-48.npz": "fefeefaa7c0ddae0830ccfc728a0adfe7b93c4289244f558179cb168710c1635",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/state-64-52.npz": "b55c0686346adfd087f693c207dfb3f3acfd67f3b06c2797c6407fdc3b4951e3",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/state-64-56.npz": "1f0f7843aa2a9160005ba42d9b03a230059c383ddbe6c2ba020dd9f29b483c15",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/state-64-60.npz": "5358ec4c8657571ccc60bfa872f72269515788ae293be1671d06ff71d2cf3c5e",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/state-64-64.npz": "75f846fe3a87475700f894fb6524209549e5c3d91c83210329eaab31c54d2420",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/state-64-8.npz": "942e1ba123b291d13604c6244474571a23bf627dfc15c427343a8f736818fd92",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/tail-128.json": "3b924c361ffaff12b2a7c38588f461588d08afcaf9bb26fa5edf93947e847dd3",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/tail-64.json": "fbc3dafadebb143c29f1c3f93863d76b039630528c822691af3cfc4966060266",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/executed-cache-pilot.py": "78700645832d362bd0cd7d93348a34d4692e0ff554fc2527e8498f18bb0b6d2c",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/executed-checkpoint-control.py": "0c89417482b6596bede2e97534d0fab63ee2e9bcba3c327bc286ca47698ac285",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/executed-evolution-pilot.py": "bc6286238590936c731c30dd198a9da935001822242846966408aa6056028438",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/executed-probe.py": "ec0f1ffc4b9210483fd1dca8f8dac738c03f5a35e30ec7ec336bb375fb7dac24",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/executed-production.py": "e0cfa78f6db2461a43d09f18e3a96c8353b9af997c147e78ef801c83a572bff7",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/executed-reallocation.py": "b230407985e9d00ed6f8c19158a44db68605b33078db681fcd16b889114ea749",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/executed-resumed-pilot.py": "9cfc98c3e82e7a1b3178d555e3f4552cf2947a08b9465657d4ceea417a23cde2",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/execution-plan.json": "451e594243fcb22b43702a18cd47e521bded5702aeb035a8b40ab0e065581c87",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/first-checkpoint-control.json": "f49990d067f32708b53c38108f0fc18f74a5b4639526cdb3af914fb764a0640d",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/gr/coarse-plan.json": "bca6c61a3603649214c462a8cfece2209c9cfe9feec4908481e9ab518818284d",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/gr/source-64.npz": "48635e7df8f794606d46737e5298fadd4cb7849231dc98324465092ea298b177",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/plan.json": "1b58f15f1acac3c36a0c6d8d7a7731a2c3e7b76cb3b73b2e4e18afc830fbbb56",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/production-external.log": "d070da4a66929b114b3b31fd4f139cc0255c6ef8aee0515e0bbefbe4d7b28ba8",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/production-receipt.json": "a20c09e4c206877b7aa64116b3f7e856d3421f67235c86aa8113f8c7aa67c3e7",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/reallocated-bank-dispatch.json": "b0fa194818d4a07595fc6394927405fd63d7d2e7c9d5cd6ae8b95b9b6535050d",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/reallocated-bank-plan.json": "9452dc3e8212a96a94e732a6f8592335ecfa9176b548858e59288e121916bb85",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/resume_pilot-external.log": "e26e6ee2efc0c5ab1a9da6692a9c43a20f8afe36ba0be81a1cb5baa798cdbd5a",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/resume_pilot-receipt.json": "b4f4e9c63f61eb3cd388bcd8d863e5622bff92a713662e980eed0edd59a3de4a",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/resumed-pilot-plan.json": "c3b692250c806d607a60dcc91ddb3cf6fb25b71f263478f40728b296baef7e47",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/resumed-pilot.json": "3d08c7f86df8879d788cea7deafd552e944069975ba89017e62ef8262c68ed69",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/runtime-bank-dispatch.json": "344b86ad9cf865b56f2d95fa4b08d0710ed4a28267ead41a18f297065cb7db6a",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/runtime-bank-plan.json": "b1e657f5f9f88c3c13825fa6c45ecf83c440b260d2a113fa84322c239bf39463",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/support/repaired-bank.npz": "ae67c3c469df177fcd0aa0449ed65baf5fc0bd879f75cc504373693246ecdd61",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/support/result.json": "622744b79ff5fe68f52f63639a147bd498983b462907bb72319a93ab31470338",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/support/spectrum-bank.npz": "98db1a866080df533bba6f825b7505f52d08bd29cfbf83b6b2667b5e4b88536a",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/warm-probe.json": "e42630fc1259fc5bff49484ff79181a8bac20bffca6180c21c0e34c5993b2082",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/warm-probe.npz": "92bd747761b01a25ce0e42f6a0445b2c2128ec5cd4c5fa65f558041e6186aa45",
+    "verification/def_native_retained_tail.py": "da673cde796125afc04b039f51dc5b3abb0a757d3a1ef3d5f140234876002509",
+    "verification/evolve_native_retained_tail.py": "75b29b80ef936c7a160b1474a6cb82b931340585c87e74155cdb9a860a00524f",
+    "verification/native_tail_supported_temperature.py": "56a6e1ed2467ef842d73153f4e710f2699d01c1920738a23b7c7bd7826267d54",
+    "verification/repair_native_tail_density.py": "3ac95739bbc3a4b8eb89e0c3e9db580dbd5bbe4c75f2e9cedbb6614eeeb0c307",
+    "verification/repair_native_tail_seed.py": "59406e4d8bdadacd3a544ab8a702570b812129f3a43c2768c0189850eae80259",
+    "verification/verify_native_retained_tail.py": "cd53f9a75840c40316bc3e725beacf60e4173436e56dda6ef6e4e065dba8806f"
+  }
+}

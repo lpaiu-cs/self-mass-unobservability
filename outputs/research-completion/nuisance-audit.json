@@ -1,0 +1,3680 @@
+{
+  "status": "Imported from prior work",
+  "interpretation": "New audit of frozen linearized arrays, not a timing refit or physical prior.",
+  "diagnostics": {
+    "rank_full": 90,
+    "rank_truncated": 71,
+    "omitted_dimension": 19,
+    "minimum_relative_singular_value": 4.1843589732874077e-07,
+    "machine_rank": 90,
+    "qr_svd_subspace_residual": 1.2946721772811639e-10,
+    "orthogonality_full": 1.7962600232769098e-14,
+    "orthogonality_truncated": 5.270796392548477e-12,
+    "guard_residual_truncated": 1.1131489381878412e-12
+  },
+  "singular_modes": [
+    {
+      "mode": 1,
+      "relative_sv": 1.0,
+      "lost_fraction": 3.782056534181045e-25,
+      "timing_share": 0.6585857300265917,
+      "fourier_share": 0.3367759520026303,
+      "offset_share": 5.605837124646284e-05,
+      "guard_share": 0.004582259599531884,
+      "top_loadings": [
+        {
+          "name": "right_ascension1",
+          "coefficient": 0.33817296521362006
+        },
+        {
+          "name": "oman",
+          "coefficient": -0.32249887506276925
+        },
+        {
+          "name": "declination1",
+          "coefficient": 0.3147576854236323
+        },
+        {
+          "name": "right_ascension",
+          "coefficient": 0.26774439992680266
+        },
+        {
+          "name": "declination",
+          "coefficient": 0.2648225379051571
+        }
+      ]
+    },
+    {
+      "mode": 2,
+      "relative_sv": 0.9904142348376191,
+      "lost_fraction": 3.123108457163123e-25,
+      "timing_share": 0.7097044634306274,
+      "fourier_share": 0.27593504707965827,
+      "offset_share": 0.0005902951684710889,
+      "guard_share": 0.013770194321243658,
+      "top_loadings": [
+        {
+          "name": "oman_extra1",
+          "coefficient": 0.36740202184125503
+        },
+        {
+          "name": "masspar_p",
+          "coefficient": -0.3605327231264642
+        },
+        {
+          "name": "period_o",
+          "coefficient": 0.35956135503004427
+        },
+        {
+          "name": "delta_i",
+          "coefficient": 0.34466281755285477
+        },
+        {
+          "name": "tasc_b",
+          "coefficient": 0.31833354640190453
+        }
+      ]
+    },
+    {
+      "mode": 3,
+      "relative_sv": 0.8942943324394531,
+      "lost_fraction": 1.151295595107163e-24,
+      "timing_share": 0.656002583099973,
+      "fourier_share": 0.34238127917422745,
+      "offset_share": 0.0009261862812163191,
+      "guard_share": 0.0006899514445811902,
+      "top_loadings": [
+        {
+          "name": "acosi_extra1",
+          "coefficient": -0.38511030046372835
+        },
+        {
+          "name": "spinfreq1",
+          "coefficient": -0.3387897740520992
+        },
+        {
+          "name": "asini_extra1",
+          "coefficient": -0.33612495285930166
+        },
+        {
+          "name": "spinfreq",
+          "coefficient": -0.30509997768575814
+        },
+        {
+          "name": "fourier_1_sin",
+          "coefficient": 0.2867565792214768
+        }
+      ]
+    },
+    {
+      "mode": 4,
+      "relative_sv": 0.8056366222258118,
+      "lost_fraction": 1.8848199230336515e-24,
+      "timing_share": 0.774836237685465,
+      "fourier_share": 0.05117745543005491,
+      "offset_share": 0.00010932773322733392,
+      "guard_share": 0.17387697915125228,
+      "top_loadings": [
+        {
+          "name": "period_i",
+          "coefficient": 0.44058698250976186
+        },
+        {
+          "name": "abcosi_o",
+          "coefficient": 0.4339983073036241
+        },
+        {
+          "name": "static_SEP_guard",
+          "coefficient": -0.4169855862631852
+        },
+        {
+          "name": "tasc_p",
+          "coefficient": 0.39097058168555104
+        },
+        {
+          "name": "deltaoman",
+          "coefficient": 0.30957899214466256
+        }
+      ]
+    },
+    {
+      "mode": 5,
+      "relative_sv": 0.7302745341698321,
+      "lost_fraction": 2.1549548958993443e-25,
+      "timing_share": 0.42750141932018826,
+      "fourier_share": 0.569407247988836,
+      "offset_share": 0.001233278765252828,
+      "guard_share": 0.0018580539257235967,
+      "top_loadings": [
+        {
+          "name": "fourier_18_cos",
+          "coefficient": 0.2568504323132446
+        },
+        {
+          "name": "tasc_extra1",
+          "coefficient": -0.25335662752581467
+        },
+        {
+          "name": "P_extra1",
+          "coefficient": -0.2514483279197203
+        },
+        {
+          "name": "kappa_b",
+          "coefficient": 0.2512650994461895
+        },
+        {
+          "name": "fourier_12_sin",
+          "coefficient": 0.22547730726308676
+        }
+      ]
+    },
+    {
+      "mode": 6,
+      "relative_sv": 0.6893998607795697,
+      "lost_fraction": 1.0669352561022803e-26,
+      "timing_share": 0.23205635566930513,
+      "fourier_share": 0.7646092953381136,
+      "offset_share": 0.0033340819177137115,
+      "guard_share": 2.6707486753587735e-07,
+      "top_loadings": [
+        {
+          "name": "eta_b",
+          "coefficient": 0.2607101570549582
+        },
+        {
+          "name": "fourier_17_sin",
+          "coefficient": 0.243804082168966
+        },
+        {
+          "name": "fourier_22_sin",
+          "coefficient": 0.23679161043952254
+        },
+        {
+          "name": "kappa_extra1",
+          "coefficient": -0.22950884732222163
+        },
+        {
+          "name": "fourier_16_cos",
+          "coefficient": -0.19812509965703176
+        }
+      ]
+    },
+    {
+      "mode": 7,
+      "relative_sv": 0.6538351676429313,
+      "lost_fraction": 7.397247926143717e-26,
+      "timing_share": 0.39756774940566014,
+      "fourier_share": 0.60097504499458,
+      "offset_share": 1.8869422112948272e-05,
+      "guard_share": 0.0014383361776469736,
+      "top_loadings": [
+        {
+          "name": "fourier_2_cos",
+          "coefficient": 0.2967510052524289
+        },
+        {
+          "name": "kappa_b",
+          "coefficient": 0.29249682779385006
+        },
+        {
+          "name": "eta_extra1",
+          "coefficient": 0.2849657707840491
+        },
+        {
+          "name": "P_extra1",
+          "coefficient": 0.24277985515021988
+        },
+        {
+          "name": "tasc_extra1",
+          "coefficient": 0.2421615342095466
+        }
+      ]
+    },
+    {
+      "mode": 8,
+      "relative_sv": 0.6041461688607487,
+      "lost_fraction": 1.6940295159780082e-25,
+      "timing_share": 0.31723359246793487,
+      "fourier_share": 0.666226287070419,
+      "offset_share": 0.01630896919672078,
+      "guard_share": 0.00023115126492628162,
+      "top_loadings": [
+        {
+          "name": "fourier_3_sin",
+          "coefficient": -0.2693235918993104
+        },
+        {
+          "name": "fourier_5_cos",
+          "coefficient": -0.2530117664823575
+        },
+        {
+          "name": "fourier_9_sin",
+          "coefficient": 0.24230726552507423
+        },
+        {
+          "name": "kappa_extra1",
+          "coefficient": 0.2287379819940513
+        },
+        {
+          "name": "declination",
+          "coefficient": -0.2049025892943869
+        }
+      ]
+    },
+    {
+      "mode": 9,
+      "relative_sv": 0.5813060299750619,
+      "lost_fraction": 1.0780480154076295e-27,
+      "timing_share": 0.307104041595205,
+      "fourier_share": 0.6810075725601643,
+      "offset_share": 0.009052861011555467,
+      "guard_share": 0.0028355248330769597,
+      "top_loadings": [
+        {
+          "name": "fourier_18_sin",
+          "coefficient": -0.4004275822240691
+        },
+        {
+          "name": "eta_b",
+          "coefficient": -0.3717910415086623
+        },
+        {
+          "name": "fourier_9_sin",
+          "coefficient": 0.2166034907650045
+        },
+        {
+          "name": "fourier_6_sin",
+          "coefficient": -0.20682708133480868
+        },
+        {
+          "name": "absini_o",
+          "coefficient": -0.18990119839704717
+        }
+      ]
+    },
+    {
+      "mode": 10,
+      "relative_sv": 0.5473644415821549,
+      "lost_fraction": 2.992935033416392e-25,
+      "timing_share": 0.07361332048088974,
+      "fourier_share": 0.9258700717306262,
+      "offset_share": 0.00047282625774310277,
+      "guard_share": 4.3781530741612293e-05,
+      "top_loadings": [
+        {
+          "name": "fourier_4_cos",
+          "coefficient": 0.36258873415424203
+        },
+        {
+          "name": "fourier_17_cos",
+          "coefficient": 0.23307201913467573
+        },
+        {
+          "name": "fourier_15_cos",
+          "coefficient": 0.23262580458042467
+        },
+        {
+          "name": "fourier_24_cos",
+          "coefficient": 0.21583726579791718
+        },
+        {
+          "name": "fourier_21_sin",
+          "coefficient": -0.20818316797204284
+        }
+      ]
+    },
+    {
+      "mode": 11,
+      "relative_sv": 0.5299104464481083,
+      "lost_fraction": 1.5582590306698994e-25,
+      "timing_share": 0.14368763734639542,
+      "fourier_share": 0.7797784410511323,
+      "offset_share": 0.07653140943794809,
+      "guard_share": 2.512164524811143e-06,
+      "top_loadings": [
+        {
+          "name": "fourier_6_sin",
+          "coefficient": -0.38920119801564196
+        },
+        {
+          "name": "fourier_10_cos",
+          "coefficient": -0.3091852215925465
+        },
+        {
+          "name": "offset",
+          "coefficient": 0.2766431084230151
+        },
+        {
+          "name": "eta_b",
+          "coefficient": 0.23706288848759166
+        },
+        {
+          "name": "fourier_20_cos",
+          "coefficient": 0.19140193812544853
+        }
+      ]
+    },
+    {
+      "mode": 12,
+      "relative_sv": 0.5203692360403612,
+      "lost_fraction": 1.2372582736253318e-25,
+      "timing_share": 0.15878827655624578,
+      "fourier_share": 0.829565577541535,
+      "offset_share": 0.011009804969984056,
+      "guard_share": 0.000636340932234894,
+      "top_loadings": [
+        {
+          "name": "fourier_19_cos",
+          "coefficient": 0.29086053055451244
+        },
+        {
+          "name": "fourier_3_sin",
+          "coefficient": -0.2564812982094756
+        },
+        {
+          "name": "kappa_b",
+          "coefficient": -0.24976037500809217
+        },
+        {
+          "name": "fourier_17_cos",
+          "coefficient": -0.23747985902492105
+        },
+        {
+          "name": "fourier_14_cos",
+          "coefficient": 0.20119277118421786
+        }
+      ]
+    },
+    {
+      "mode": 13,
+      "relative_sv": 0.5162923787751851,
+      "lost_fraction": 6.071732600837386e-27,
+      "timing_share": 0.053891408470253206,
+      "fourier_share": 0.9407414040163736,
+      "offset_share": 0.0038067838655783527,
+      "guard_share": 0.0015604036477949402,
+      "top_loadings": [
+        {
+          "name": "fourier_24_sin",
+          "coefficient": 0.3347736796727089
+        },
+        {
+          "name": "fourier_22_cos",
+          "coefficient": -0.32521192420415374
+        },
+        {
+          "name": "fourier_25_sin",
+          "coefficient": 0.2809166552758203
+        },
+        {
+          "name": "fourier_23_cos",
+          "coefficient": -0.26184647424214647
+        },
+        {
+          "name": "fourier_23_sin",
+          "coefficient": 0.23513920631445967
+        }
+      ]
+    },
+    {
+      "mode": 14,
+      "relative_sv": 0.505313490363301,
+      "lost_fraction": 2.1206703645184334e-25,
+      "timing_share": 0.21122347101298297,
+      "fourier_share": 0.7115672815445115,
+      "offset_share": 0.07643922011619148,
+      "guard_share": 0.0007700273263138554,
+      "top_loadings": [
+        {
+          "name": "eta_extra1",
+          "coefficient": 0.29503468735620686
+        },
+        {
+          "name": "fourier_2_cos",
+          "coefficient": 0.2796688207624488
+        },
+        {
+          "name": "offset",
+          "coefficient": -0.27647643681911027
+        },
+        {
+          "name": "fourier_2_sin",
+          "coefficient": 0.26445670254847065
+        },
+        {
+          "name": "fourier_16_sin",
+          "coefficient": -0.2095418633976025
+        }
+      ]
+    },
+    {
+      "mode": 15,
+      "relative_sv": 0.49224031932539647,
+      "lost_fraction": 1.3715284859274356e-25,
+      "timing_share": 0.07903205645569536,
+      "fourier_share": 0.8631062041943769,
+      "offset_share": 0.05785948230115149,
+      "guard_share": 2.257048775993167e-06,
+      "top_loadings": [
+        {
+          "name": "fourier_26_sin",
+          "coefficient": -0.2896989190991862
+        },
+        {
+          "name": "fourier_23_sin",
+          "coefficient": 0.2773614977999324
+        },
+        {
+          "name": "offset",
+          "coefficient": -0.24053998067088866
+        },
+        {
+          "name": "fourier_13_cos",
+          "coefficient": -0.23063145249963754
+        },
+        {
+          "name": "fourier_18_cos",
+          "coefficient": 0.22024747994383057
+        }
+      ]
+    },
+    {
+      "mode": 16,
+      "relative_sv": 0.4672425629459326,
+      "lost_fraction": 7.020958508738104e-26,
+      "timing_share": 0.055259828248573464,
+      "fourier_share": 0.939303933415298,
+      "offset_share": 0.0053713067405788085,
+      "guard_share": 6.493159554984187e-05,
+      "top_loadings": [
+        {
+          "name": "fourier_29_cos",
+          "coefficient": 0.3506144598917015
+        },
+        {
+          "name": "fourier_5_sin",
+          "coefficient": 0.33543222924644506
+        },
+        {
+          "name": "fourier_15_sin",
+          "coefficient": -0.26451896740120745
+        },
+        {
+          "name": "fourier_30_sin",
+          "coefficient": -0.2559527890431856
+        },
+        {
+          "name": "fourier_27_sin",
+          "coefficient": 0.22750851472865016
+        }
+      ]
+    },
+    {
+      "mode": 17,
+      "relative_sv": 0.4653190598405474,
+      "lost_fraction": 5.226515773923927e-26,
+      "timing_share": 0.07345850332335804,
+      "fourier_share": 0.9201258211136275,
+      "offset_share": 0.0063998856866020835,
+      "guard_share": 1.5789876411468006e-05,
+      "top_loadings": [
+        {
+          "name": "fourier_10_sin",
+          "coefficient": -0.3346274820807761
+        },
+        {
+          "name": "fourier_6_cos",
+          "coefficient": -0.3266892765511765
+        },
+        {
+          "name": "fourier_29_cos",
+          "coefficient": -0.22452141275546594
+        },
+        {
+          "name": "fourier_13_sin",
+          "coefficient": 0.21590442267987503
+        },
+        {
+          "name": "fourier_26_cos",
+          "coefficient": 0.20203227823768843
+        }
+      ]
+    },
+    {
+      "mode": 18,
+      "relative_sv": 0.4580434309032809,
+      "lost_fraction": 9.772141060673854e-26,
+      "timing_share": 0.1027407673714792,
+      "fourier_share": 0.8865994102352774,
+      "offset_share": 0.010641889696309165,
+      "guard_share": 1.7932696934464743e-05,
+      "top_loadings": [
+        {
+          "name": "fourier_25_sin",
+          "coefficient": -0.2884037362952094
+        },
+        {
+          "name": "fourier_19_cos",
+          "coefficient": 0.26699959030059994
+        },
+        {
+          "name": "fourier_20_sin",
+          "coefficient": -0.23164102552625732
+        },
+        {
+          "name": "fourier_30_sin",
+          "coefficient": -0.21187689442756577
+        },
+        {
+          "name": "fourier_12_sin",
+          "coefficient": -0.18393805073795222
+        }
+      ]
+    },
+    {
+      "mode": 19,
+      "relative_sv": 0.44917288691572,
+      "lost_fraction": 5.383352192826617e-25,
+      "timing_share": 0.053915431667959125,
+      "fourier_share": 0.945705777958876,
+      "offset_share": 6.436018394171501e-05,
+      "guard_share": 0.00031443018922344137,
+      "top_loadings": [
+        {
+          "name": "fourier_16_sin",
+          "coefficient": 0.33330764970249477
+        },
+        {
+          "name": "fourier_25_cos",
+          "coefficient": 0.32571146626859426
+        },
+        {
+          "name": "fourier_5_sin",
+          "coefficient": 0.3217210076431943
+        },
+        {
+          "name": "fourier_6_cos",
+          "coefficient": -0.24014949304667849
+        },
+        {
+          "name": "fourier_19_cos",
+          "coefficient": 0.22431098961047208
+        }
+      ]
+    },
+    {
+      "mode": 20,
+      "relative_sv": 0.439881211980098,
+      "lost_fraction": 1.587576873135594e-25,
+      "timing_share": 0.09955908607320786,
+      "fourier_share": 0.8593391393258762,
+      "offset_share": 0.04105602762913363,
+      "guard_share": 4.574697178173641e-05,
+      "top_loadings": [
+        {
+          "name": "fourier_20_sin",
+          "coefficient": 0.33239302056017767
+        },
+        {
+          "name": "fourier_27_sin",
+          "coefficient": 0.2613422356887608
+        },
+        {
+          "name": "fourier_2_sin",
+          "coefficient": -0.2216925344447982
+        },
+        {
+          "name": "fourier_17_sin",
+          "coefficient": -0.20907815750270733
+        },
+        {
+          "name": "fourier_14_sin",
+          "coefficient": 0.20815778842588933
+        }
+      ]
+    },
+    {
+      "mode": 21,
+      "relative_sv": 0.43230018053405206,
+      "lost_fraction": 9.405736230437327e-26,
+      "timing_share": 0.09310955701236912,
+      "fourier_share": 0.8731600399621262,
+      "offset_share": 0.033700368902134514,
+      "guard_share": 3.003412336937425e-05,
+      "top_loadings": [
+        {
+          "name": "fourier_29_sin",
+          "coefficient": 0.36066353525187245
+        },
+        {
+          "name": "fourier_21_cos",
+          "coefficient": -0.25856334491921684
+        },
+        {
+          "name": "fourier_27_cos",
+          "coefficient": -0.23160477386931072
+        },
+        {
+          "name": "fourier_16_cos",
+          "coefficient": -0.22435342529473698
+        },
+        {
+          "name": "fourier_3_cos",
+          "coefficient": -0.2187067601702582
+        }
+      ]
+    },
+    {
+      "mode": 22,
+      "relative_sv": 0.428082275639195,
+      "lost_fraction": 2.8342504023775887e-25,
+      "timing_share": 0.05015411800313037,
+      "fourier_share": 0.9113240057137779,
+      "offset_share": 0.038407242821680065,
+      "guard_share": 0.00011463346141091472,
+      "top_loadings": [
+        {
+          "name": "fourier_23_sin",
+          "coefficient": -0.26379289936613287
+        },
+        {
+          "name": "fourier_17_sin",
+          "coefficient": -0.25228571941589717
+        },
+        {
+          "name": "fourier_12_cos",
+          "coefficient": 0.24174230026928276
+        },
+        {
+          "name": "fourier_20_cos",
+          "coefficient": 0.2369740844714715
+        },
+        {
+          "name": "fourier_14_cos",
+          "coefficient": 0.21226997447419998
+        }
+      ]
+    },
+    {
+      "mode": 23,
+      "relative_sv": 0.41883688702832855,
+      "lost_fraction": 1.3149384616968096e-26,
+      "timing_share": 0.03342401184128707,
+      "fourier_share": 0.9479183840774328,
+      "offset_share": 0.01851071980455204,
+      "guard_share": 0.00014688427672837991,
+      "top_loadings": [
+        {
+          "name": "fourier_21_cos",
+          "coefficient": -0.32659758217040274
+        },
+        {
+          "name": "fourier_15_sin",
+          "coefficient": -0.31545076699417235
+        },
+        {
+          "name": "fourier_15_cos",
+          "coefficient": -0.29804184509873644
+        },
+        {
+          "name": "fourier_13_sin",
+          "coefficient": -0.26063144131398297
+        },
+        {
+          "name": "fourier_24_cos",
+          "coefficient": -0.22883477211536501
+        }
+      ]
+    },
+    {
+      "mode": 24,
+      "relative_sv": 0.417402021410632,
+      "lost_fraction": 8.27315441390877e-28,
+      "timing_share": 0.02148506935411077,
+      "fourier_share": 0.9760415614974549,
+      "offset_share": 0.002402476401541861,
+      "guard_share": 7.08927468923537e-05,
+      "top_loadings": [
+        {
+          "name": "fourier_22_cos",
+          "coefficient": 0.4689780392223891
+        },
+        {
+          "name": "fourier_22_sin",
+          "coefficient": -0.27555063649529754
+        },
+        {
+          "name": "fourier_20_cos",
+          "coefficient": 0.2747652212790746
+        },
+        {
+          "name": "fourier_28_sin",
+          "coefficient": -0.2713756184471327
+        },
+        {
+          "name": "fourier_3_sin",
+          "coefficient": -0.21798259248430318
+        }
+      ]
+    },
+    {
+      "mode": 25,
+      "relative_sv": 0.41386848647841373,
+      "lost_fraction": 5.712597112068814e-26,
+      "timing_share": 0.10683595181099534,
+      "fourier_share": 0.8828179300552064,
+      "offset_share": 0.010343589866994655,
+      "guard_share": 2.528266802651927e-06,
+      "top_loadings": [
+        {
+          "name": "fourier_4_sin",
+          "coefficient": 0.38697760395072656
+        },
+        {
+          "name": "fourier_7_sin",
+          "coefficient": -0.28719149934509186
+        },
+        {
+          "name": "fourier_12_cos",
+          "coefficient": 0.2727865372928706
+        },
+        {
+          "name": "fourier_10_sin",
+          "coefficient": 0.26070129516637663
+        },
+        {
+          "name": "fourier_13_cos",
+          "coefficient": 0.2601230462376751
+        }
+      ]
+    },
+    {
+      "mode": 26,
+      "relative_sv": 0.40746669627216675,
+      "lost_fraction": 3.461966285210323e-27,
+      "timing_share": 0.016135459032080874,
+      "fourier_share": 0.9682009798647648,
+      "offset_share": 0.015655496229117653,
+      "guard_share": 8.064874037015142e-06,
+      "top_loadings": [
+        {
+          "name": "fourier_14_sin",
+          "coefficient": -0.4180599977608132
+        },
+        {
+          "name": "fourier_11_cos",
+          "coefficient": 0.2936517044058053
+        },
+        {
+          "name": "fourier_23_cos",
+          "coefficient": -0.288341826039767
+        },
+        {
+          "name": "fourier_30_cos",
+          "coefficient": 0.27705404137928946
+        },
+        {
+          "name": "fourier_26_cos",
+          "coefficient": 0.2526522344736235
+        }
+      ]
+    },
+    {
+      "mode": 27,
+      "relative_sv": 0.4041772773797537,
+      "lost_fraction": 1.5196521032108256e-26,
+      "timing_share": 0.03443529063367917,
+      "fourier_share": 0.9643816415729792,
+      "offset_share": 0.0010764379000795618,
+      "guard_share": 0.00010662989326164882,
+      "top_loadings": [
+        {
+          "name": "fourier_19_cos",
+          "coefficient": 0.32214549635542084
+        },
+        {
+          "name": "fourier_13_cos",
+          "coefficient": 0.2950875548566883
+        },
+        {
+          "name": "fourier_28_cos",
+          "coefficient": 0.2922106047258171
+        },
+        {
+          "name": "fourier_4_cos",
+          "coefficient": 0.2645142174719959
+        },
+        {
+          "name": "fourier_16_cos",
+          "coefficient": -0.24525744071333233
+        }
+      ]
+    },
+    {
+      "mode": 28,
+      "relative_sv": 0.40149077098018193,
+      "lost_fraction": 2.919376788226438e-25,
+      "timing_share": 0.12760492710820073,
+      "fourier_share": 0.87089843854854,
+      "offset_share": 0.001084818194486182,
+      "guard_share": 0.0004118161487726613,
+      "top_loadings": [
+        {
+          "name": "fourier_30_cos",
+          "coefficient": -0.3734875897418989
+        },
+        {
+          "name": "fourier_7_sin",
+          "coefficient": -0.32793441402785567
+        },
+        {
+          "name": "fourier_20_sin",
+          "coefficient": -0.2714243279580288
+        },
+        {
+          "name": "apsini_i",
+          "coefficient": -0.268597991032957
+        },
+        {
+          "name": "fourier_28_sin",
+          "coefficient": 0.23622078957333406
+        }
+      ]
+    },
+    {
+      "mode": 29,
+      "relative_sv": 0.39164198637218584,
+      "lost_fraction": 8.157008992640597e-26,
+      "timing_share": 0.1091439702653177,
+      "fourier_share": 0.8634726416735489,
+      "offset_share": 0.02687382612856644,
+      "guard_share": 0.0005095619325660952,
+      "top_loadings": [
+        {
+          "name": "fourier_14_cos",
+          "coefficient": -0.3184662086151556
+        },
+        {
+          "name": "fourier_5_cos",
+          "coefficient": 0.2890403257034764
+        },
+        {
+          "name": "fourier_15_sin",
+          "coefficient": -0.2774925382378278
+        },
+        {
+          "name": "fourier_24_cos",
+          "coefficient": 0.2027424929555656
+        },
+        {
+          "name": "fourier_27_sin",
+          "coefficient": 0.1984339318585168
+        }
+      ]
+    },
+    {
+      "mode": 30,
+      "relative_sv": 0.38460793591555686,
+      "lost_fraction": 1.286919429177247e-28,
+      "timing_share": 0.13079430646293388,
+      "fourier_share": 0.8682066354822395,
+      "offset_share": 7.104701535746747e-05,
+      "guard_share": 0.0009280110394675994,
+      "top_loadings": [
+        {
+          "name": "fourier_27_cos",
+          "coefficient": 0.3337791264854495
+        },
+        {
+          "name": "fourier_3_cos",
+          "coefficient": 0.2845608223288194
+        },
+        {
+          "name": "apsini_i",
+          "coefficient": -0.2772203937903713
+        },
+        {
+          "name": "fourier_28_cos",
+          "coefficient": 0.2547449146393272
+        },
+        {
+          "name": "fourier_6_sin",
+          "coefficient": -0.20631161311826296
+        }
+      ]
+    },
+    {
+      "mode": 31,
+      "relative_sv": 0.38220040507250097,
+      "lost_fraction": 5.013276593490308e-26,
+      "timing_share": 0.0479378248989118,
+      "fourier_share": 0.9408120474819691,
+      "offset_share": 0.011059790832722415,
+      "guard_share": 0.00019033678639491155,
+      "top_loadings": [
+        {
+          "name": "fourier_16_cos",
+          "coefficient": 0.31524467675468476
+        },
+        {
+          "name": "fourier_26_sin",
+          "coefficient": -0.31294905791283323
+        },
+        {
+          "name": "fourier_4_sin",
+          "coefficient": -0.3058511096323291
+        },
+        {
+          "name": "fourier_29_cos",
+          "coefficient": -0.25837201464446413
+        },
+        {
+          "name": "fourier_19_sin",
+          "coefficient": -0.24438628153279485
+        }
+      ]
+    },
+    {
+      "mode": 32,
+      "relative_sv": 0.380237066382711,
+      "lost_fraction": 5.181509609694616e-25,
+      "timing_share": 0.045423676471598236,
+      "fourier_share": 0.9527368323228267,
+      "offset_share": 0.00177566258089724,
+      "guard_share": 6.382862467748463e-05,
+      "top_loadings": [
+        {
+          "name": "fourier_22_cos",
+          "coefficient": 0.3347062186418379
+        },
+        {
+          "name": "fourier_16_sin",
+          "coefficient": 0.3320642714981398
+        },
+        {
+          "name": "fourier_23_sin",
+          "coefficient": 0.26616568884446734
+        },
+        {
+          "name": "fourier_8_sin",
+          "coefficient": -0.23439843372653701
+        },
+        {
+          "name": "fourier_15_sin",
+          "coefficient": -0.23398615595487818
+        }
+      ]
+    },
+    {
+      "mode": 33,
+      "relative_sv": 0.3733740978632013,
+      "lost_fraction": 8.629576500352854e-29,
+      "timing_share": 0.2733476135749529,
+      "fourier_share": 0.7265971518270622,
+      "offset_share": 4.7929820518144404e-05,
+      "guard_share": 7.304777465459068e-06,
+      "top_loadings": [
+        {
+          "name": "kappa_p",
+          "coefficient": 0.48815571463745766
+        },
+        {
+          "name": "fourier_8_sin",
+          "coefficient": -0.23133584595158552
+        },
+        {
+          "name": "fourier_26_cos",
+          "coefficient": 0.2255905577640121
+        },
+        {
+          "name": "fourier_17_sin",
+          "coefficient": 0.19045906788168923
+        },
+        {
+          "name": "fourier_20_sin",
+          "coefficient": 0.18274068943434366
+        }
+      ]
+    },
+    {
+      "mode": 34,
+      "relative_sv": 0.36943110568479015,
+      "lost_fraction": 1.2928933469569189e-27,
+      "timing_share": 0.20419181760796432,
+      "fourier_share": 0.7946529010105708,
+      "offset_share": 0.0009116018690197118,
+      "guard_share": 0.00024367951244424875,
+      "top_loadings": [
+        {
+          "name": "apsini_i",
+          "coefficient": -0.3341810376411994
+        },
+        {
+          "name": "kappa_p",
+          "coefficient": 0.26095765595480536
+        },
+        {
+          "name": "fourier_21_sin",
+          "coefficient": -0.2176191753851744
+        },
+        {
+          "name": "fourier_20_sin",
+          "coefficient": -0.21589109631728548
+        },
+        {
+          "name": "fourier_25_cos",
+          "coefficient": 0.202426149441426
+        }
+      ]
+    },
+    {
+      "mode": 35,
+      "relative_sv": 0.3627277992695968,
+      "lost_fraction": 4.604217929741436e-26,
+      "timing_share": 0.0687016434841107,
+      "fourier_share": 0.9251188083946698,
+      "offset_share": 0.006134387334450123,
+      "guard_share": 4.516078677016013e-05,
+      "top_loadings": [
+        {
+          "name": "fourier_17_cos",
+          "coefficient": 0.31573793120237825
+        },
+        {
+          "name": "fourier_21_sin",
+          "coefficient": 0.3107179323654875
+        },
+        {
+          "name": "fourier_24_cos",
+          "coefficient": 0.2844984666178705
+        },
+        {
+          "name": "fourier_20_cos",
+          "coefficient": -0.23231256122684882
+        },
+        {
+          "name": "fourier_17_sin",
+          "coefficient": -0.2189570832599705
+        }
+      ]
+    },
+    {
+      "mode": 36,
+      "relative_sv": 0.3608751019703783,
+      "lost_fraction": 4.736124238369203e-26,
+      "timing_share": 0.19649546718959723,
+      "fourier_share": 0.794887923189759,
+      "offset_share": 0.008483654683771415,
+      "guard_share": 0.00013295493687331993,
+      "top_loadings": [
+        {
+          "name": "fourier_17_sin",
+          "coefficient": 0.39472344299749385
+        },
+        {
+          "name": "kappa_p",
+          "coefficient": -0.3877367924450443
+        },
+        {
+          "name": "fourier_15_cos",
+          "coefficient": 0.25767445759576485
+        },
+        {
+          "name": "fourier_23_sin",
+          "coefficient": 0.22288365813101396
+        },
+        {
+          "name": "fourier_29_cos",
+          "coefficient": -0.19957018448857577
+        }
+      ]
+    },
+    {
+      "mode": 37,
+      "relative_sv": 0.35905114822330625,
+      "lost_fraction": 3.839346122404516e-26,
+      "timing_share": 0.14823754988299603,
+      "fourier_share": 0.8465779437760799,
+      "offset_share": 0.00508208892995862,
+      "guard_share": 0.0001024174109659837,
+      "top_loadings": [
+        {
+          "name": "kappa_p",
+          "coefficient": -0.3433568996809353
+        },
+        {
+          "name": "fourier_27_cos",
+          "coefficient": 0.25181211461881425
+        },
+        {
+          "name": "fourier_30_sin",
+          "coefficient": 0.24813939767889875
+        },
+        {
+          "name": "fourier_6_sin",
+          "coefficient": 0.24096575970785142
+        },
+        {
+          "name": "fourier_19_sin",
+          "coefficient": -0.2327628979108965
+        }
+      ]
+    },
+    {
+      "mode": 38,
+      "relative_sv": 0.35560217647306674,
+      "lost_fraction": 4.150542976659979e-26,
+      "timing_share": 0.4656976420792847,
+      "fourier_share": 0.5172004388514596,
+      "offset_share": 0.016237874636236358,
+      "guard_share": 0.0008640444330194211,
+      "top_loadings": [
+        {
+          "name": "apsini_i",
+          "coefficient": -0.6570789680842709
+        },
+        {
+          "name": "fourier_21_cos",
+          "coefficient": -0.271491368495745
+        },
+        {
+          "name": "fourier_6_cos",
+          "coefficient": 0.23982524430665753
+        },
+        {
+          "name": "fourier_28_cos",
+          "coefficient": -0.23474850075804127
+        },
+        {
+          "name": "fourier_29_sin",
+          "coefficient": -0.18604815190956692
+        }
+      ]
+    },
+    {
+      "mode": 39,
+      "relative_sv": 0.34882773847000237,
+      "lost_fraction": 2.8430353158004897e-26,
+      "timing_share": 0.17678027850374206,
+      "fourier_share": 0.8183500686702795,
+      "offset_share": 0.004859480586896752,
+      "guard_share": 1.0172239080362751e-05,
+      "top_loadings": [
+        {
+          "name": "fourier_5_sin",
+          "coefficient": -0.37426690886288927
+        },
+        {
+          "name": "kappa_p",
+          "coefficient": -0.35831523207569704
+        },
+        {
+          "name": "fourier_4_sin",
+          "coefficient": -0.2630916063034032
+        },
+        {
+          "name": "fourier_6_sin",
+          "coefficient": -0.26207558694427174
+        },
+        {
+          "name": "fourier_23_cos",
+          "coefficient": 0.24906947344167488
+        }
+      ]
+    },
+    {
+      "mode": 40,
+      "relative_sv": 0.3461090523205599,
+      "lost_fraction": 8.08566222765015e-26,
+      "timing_share": 0.11526589586243573,
+      "fourier_share": 0.8843644614150216,
+      "offset_share": 0.00032473511000487385,
+      "guard_share": 4.4907612537385264e-05,
+      "top_loadings": [
+        {
+          "name": "kappa_p",
+          "coefficient": -0.27460058622393285
+        },
+        {
+          "name": "fourier_25_sin",
+          "coefficient": 0.2603076949775185
+        },
+        {
+          "name": "fourier_23_cos",
+          "coefficient": 0.24326276714350267
+        },
+        {
+          "name": "fourier_26_sin",
+          "coefficient": -0.21469109364111102
+        },
+        {
+          "name": "fourier_14_cos",
+          "coefficient": -0.2126200450554921
+        }
+      ]
+    },
+    {
+      "mode": 41,
+      "relative_sv": 0.3371588425679292,
+      "lost_fraction": 5.734366991253413e-25,
+      "timing_share": 0.11029765169293443,
+      "fourier_share": 0.8865180588419266,
+      "offset_share": 0.0031472958067559225,
+      "guard_share": 3.699365838390645e-05,
+      "top_loadings": [
+        {
+          "name": "fourier_10_cos",
+          "coefficient": 0.28655928608106335
+        },
+        {
+          "name": "fourier_11_cos",
+          "coefficient": 0.2570647403330911
+        },
+        {
+          "name": "fourier_6_cos",
+          "coefficient": 0.23061214108955255
+        },
+        {
+          "name": "fourier_13_sin",
+          "coefficient": 0.23006242003888167
+        },
+        {
+          "name": "fourier_14_sin",
+          "coefficient": 0.21304394524269563
+        }
+      ]
+    },
+    {
+      "mode": 42,
+      "relative_sv": 0.33449581215187096,
+      "lost_fraction": 1.0246690711993728e-25,
+      "timing_share": 0.027563238263325084,
+      "fourier_share": 0.9475172665629454,
+      "offset_share": 0.024792562220298877,
+      "guard_share": 0.0001269329534301655,
+      "top_loadings": [
+        {
+          "name": "fourier_25_cos",
+          "coefficient": 0.32982005566222994
+        },
+        {
+          "name": "fourier_16_cos",
+          "coefficient": 0.261720694223775
+        },
+        {
+          "name": "fourier_14_cos",
+          "coefficient": -0.2389164923717898
+        },
+        {
+          "name": "fourier_24_sin",
+          "coefficient": -0.2173905672119353
+        },
+        {
+          "name": "fourier_27_sin",
+          "coefficient": -0.21320235508226426
+        }
+      ]
+    },
+    {
+      "mode": 43,
+      "relative_sv": 0.32750754365538615,
+      "lost_fraction": 2.4244885963418968e-25,
+      "timing_share": 0.055007359400765406,
+      "fourier_share": 0.8583784102543608,
+      "offset_share": 0.08652060607174862,
+      "guard_share": 9.362427312478594e-05,
+      "top_loadings": [
+        {
+          "name": "fourier_7_cos",
+          "coefficient": 0.3361049898098466
+        },
+        {
+          "name": "offset",
+          "coefficient": 0.2941438526839353
+        },
+        {
+          "name": "fourier_12_sin",
+          "coefficient": 0.2549315927494727
+        },
+        {
+          "name": "fourier_24_sin",
+          "coefficient": 0.23819845878560755
+        },
+        {
+          "name": "fourier_11_cos",
+          "coefficient": -0.2164350630907242
+        }
+      ]
+    },
+    {
+      "mode": 44,
+      "relative_sv": 0.3080667917934993,
+      "lost_fraction": 2.4867477788902915e-27,
+      "timing_share": 0.1616059469564464,
+      "fourier_share": 0.8347262491558548,
+      "offset_share": 0.0009860808394273875,
+      "guard_share": 0.0026817230482719147,
+      "top_loadings": [
+        {
+          "name": "eta_p",
+          "coefficient": -0.3539578311390311
+        },
+        {
+          "name": "fourier_28_sin",
+          "coefficient": 0.3341373097739347
+        },
+        {
+          "name": "fourier_16_cos",
+          "coefficient": 0.2824557637291021
+        },
+        {
+          "name": "fourier_14_sin",
+          "coefficient": -0.23399541350993064
+        },
+        {
+          "name": "fourier_15_sin",
+          "coefficient": -0.2335302448974229
+        }
+      ]
+    },
+    {
+      "mode": 45,
+      "relative_sv": 0.30508154560465833,
+      "lost_fraction": 1.1342483718522512e-26,
+      "timing_share": 0.6231605468233153,
+      "fourier_share": 0.36895799706790133,
+      "offset_share": 0.0006776245649282185,
+      "guard_share": 0.0072038315438552256,
+      "top_loadings": [
+        {
+          "name": "eta_p",
+          "coefficient": 0.7478397768563239
+        },
+        {
+          "name": "fourier_17_cos",
+          "coefficient": 0.18456959775651546
+        },
+        {
+          "name": "fourier_19_sin",
+          "coefficient": 0.18335055420775087
+        },
+        {
+          "name": "fourier_19_cos",
+          "coefficient": 0.18274763319780996
+        },
+        {
+          "name": "fourier_25_sin",
+          "coefficient": 0.17643036528811354
+        }
+      ]
+    },
+    {
+      "mode": 46,
+      "relative_sv": 0.30271728519978347,
+      "lost_fraction": 1.6350802777943622e-28,
+      "timing_share": 0.06271810208775674,
+      "fourier_share": 0.9372076253832984,
+      "offset_share": 5.706174779178879e-06,
+      "guard_share": 6.856635416532499e-05,
+      "top_loadings": [
+        {
+          "name": "fourier_29_sin",
+          "coefficient": 0.31835727802892594
+        },
+        {
+          "name": "fourier_26_sin",
+          "coefficient": 0.2900961913086596
+        },
+        {
+          "name": "fourier_5_cos",
+          "coefficient": 0.25489410221769565
+        },
+        {
+          "name": "fourier_27_sin",
+          "coefficient": 0.25266711801531183
+        },
+        {
+          "name": "fourier_13_cos",
+          "coefficient": -0.22714228962635408
+        }
+      ]
+    },
+    {
+      "mode": 47,
+      "relative_sv": 0.2877219746702546,
+      "lost_fraction": 2.492474960950291e-26,
+      "timing_share": 0.028551272543675756,
+      "fourier_share": 0.9633835618302153,
+      "offset_share": 0.008057500545149343,
+      "guard_share": 7.665080958775317e-06,
+      "top_loadings": [
+        {
+          "name": "fourier_30_cos",
+          "coefficient": -0.35128019075071903
+        },
+        {
+          "name": "fourier_25_sin",
+          "coefficient": -0.30605344367494336
+        },
+        {
+          "name": "fourier_16_sin",
+          "coefficient": -0.25520030859586657
+        },
+        {
+          "name": "fourier_26_cos",
+          "coefficient": 0.23589841270541498
+        },
+        {
+          "name": "fourier_4_cos",
+          "coefficient": -0.22497996608803178
+        }
+      ]
+    },
+    {
+      "mode": 48,
+      "relative_sv": 0.28496373831377336,
+      "lost_fraction": 2.7302221073496388e-27,
+      "timing_share": 0.1284520991513913,
+      "fourier_share": 0.8566016307501804,
+      "offset_share": 0.01449259710490292,
+      "guard_share": 0.00045367299352528224,
+      "top_loadings": [
+        {
+          "name": "fourier_24_sin",
+          "coefficient": 0.3990920386621963
+        },
+        {
+          "name": "eta_p",
+          "coefficient": -0.3088767292679492
+        },
+        {
+          "name": "fourier_20_cos",
+          "coefficient": 0.2900812728175107
+        },
+        {
+          "name": "fourier_26_cos",
+          "coefficient": -0.2480570698058527
+        },
+        {
+          "name": "fourier_22_cos",
+          "coefficient": 0.22171684491398702
+        }
+      ]
+    },
+    {
+      "mode": 49,
+      "relative_sv": 0.2842428633692896,
+      "lost_fraction": 2.8013453309698154e-26,
+      "timing_share": 0.027523859746243266,
+      "fourier_share": 0.948051938717802,
+      "offset_share": 0.024280982536440603,
+      "guard_share": 0.0001432189995139578,
+      "top_loadings": [
+        {
+          "name": "fourier_23_sin",
+          "coefficient": -0.29854339447782663
+        },
+        {
+          "name": "fourier_25_sin",
+          "coefficient": -0.27709932500642087
+        },
+        {
+          "name": "fourier_14_cos",
+          "coefficient": -0.2716033357303892
+        },
+        {
+          "name": "fourier_23_cos",
+          "coefficient": -0.23103073640232852
+        },
+        {
+          "name": "fourier_3_sin",
+          "coefficient": 0.23057586609883268
+        }
+      ]
+    },
+    {
+      "mode": 50,
+      "relative_sv": 0.2671151987420843,
+      "lost_fraction": 6.650743997146163e-27,
+      "timing_share": 0.020151638566094483,
+      "fourier_share": 0.9785006075576862,
+      "offset_share": 0.0013469389802095817,
+      "guard_share": 8.148960092422841e-07,
+      "top_loadings": [
+        {
+          "name": "fourier_26_cos",
+          "coefficient": 0.2989679042667152
+        },
+        {
+          "name": "fourier_28_sin",
+          "coefficient": 0.29169990687079916
+        },
+        {
+          "name": "fourier_27_sin",
+          "coefficient": -0.24447961664159606
+        },
+        {
+          "name": "fourier_15_cos",
+          "coefficient": -0.24389737592640726
+        },
+        {
+          "name": "fourier_27_cos",
+          "coefficient": -0.23470870244335906
+        }
+      ]
+    },
+    {
+      "mode": 51,
+      "relative_sv": 0.26086519951560194,
+      "lost_fraction": 4.834062043551463e-28,
+      "timing_share": 0.0428874470135546,
+      "fourier_share": 0.9491367093230246,
+      "offset_share": 0.00781709045482912,
+      "guard_share": 0.00015875320859121248,
+      "top_loadings": [
+        {
+          "name": "fourier_11_sin",
+          "coefficient": 0.2584116963422933
+        },
+        {
+          "name": "fourier_26_sin",
+          "coefficient": -0.24211951381737867
+        },
+        {
+          "name": "fourier_27_sin",
+          "coefficient": 0.22005033144068398
+        },
+        {
+          "name": "fourier_17_cos",
+          "coefficient": 0.21987148898643205
+        },
+        {
+          "name": "fourier_30_sin",
+          "coefficient": 0.2146496994541054
+        }
+      ]
+    },
+    {
+      "mode": 52,
+      "relative_sv": 0.25203408018520707,
+      "lost_fraction": 2.734928866497971e-25,
+      "timing_share": 0.026103645200089877,
+      "fourier_share": 0.9454079966905296,
+      "offset_share": 0.02846333744560434,
+      "guard_share": 2.5020663775609857e-05,
+      "top_loadings": [
+        {
+          "name": "fourier_30_sin",
+          "coefficient": -0.43577119133587733
+        },
+        {
+          "name": "fourier_29_sin",
+          "coefficient": 0.3670123725685439
+        },
+        {
+          "name": "fourier_28_sin",
+          "coefficient": -0.267583684480023
+        },
+        {
+          "name": "fourier_24_cos",
+          "coefficient": -0.210977619215446
+        },
+        {
+          "name": "fourier_3_cos",
+          "coefficient": -0.18833639297017069
+        }
+      ]
+    },
+    {
+      "mode": 53,
+      "relative_sv": 0.2262830984530077,
+      "lost_fraction": 7.651026994831965e-27,
+      "timing_share": 0.06519194598264885,
+      "fourier_share": 0.9138452558420744,
+      "offset_share": 0.020752330721999473,
+      "guard_share": 0.00021046745327684438,
+      "top_loadings": [
+        {
+          "name": "fourier_5_cos",
+          "coefficient": 0.23340020963788563
+        },
+        {
+          "name": "fourier_14_cos",
+          "coefficient": 0.22465402091926207
+        },
+        {
+          "name": "fourier_15_cos",
+          "coefficient": 0.21988558931281216
+        },
+        {
+          "name": "fourier_7_sin",
+          "coefficient": 0.20766459626792608
+        },
+        {
+          "name": "fourier_6_cos",
+          "coefficient": 0.2013395830789903
+        }
+      ]
+    },
+    {
+      "mode": 54,
+      "relative_sv": 0.18405032425004833,
+      "lost_fraction": 3.423182517549004e-24,
+      "timing_share": 0.8957288269046075,
+      "fourier_share": 0.03552697808523571,
+      "offset_share": 0.00011704281992007264,
+      "guard_share": 0.0686271521902362,
+      "top_loadings": [
+        {
+          "name": "tasc_p",
+          "coefficient": 0.8396177530694828
+        },
+        {
+          "name": "abcosi_o",
+          "coefficient": -0.3571554464292274
+        },
+        {
+          "name": "static_SEP_guard",
+          "coefficient": 0.261967845718203
+        },
+        {
+          "name": "deltaoman",
+          "coefficient": -0.17737156355542008
+        },
+        {
+          "name": "delta_i",
+          "coefficient": 0.10611767734490955
+        }
+      ]
+    },
+    {
+      "mode": 55,
+      "relative_sv": 0.18048988442996097,
+      "lost_fraction": 1.3686571382773115e-25,
+      "timing_share": 0.059109178286679005,
+      "fourier_share": 0.9224726662579507,
+      "offset_share": 0.01799379114531302,
+      "guard_share": 0.0004243643100573387,
+      "top_loadings": [
+        {
+          "name": "fourier_7_cos",
+          "coefficient": -0.28783187273611344
+        },
+        {
+          "name": "fourier_14_sin",
+          "coefficient": 0.22686328982722165
+        },
+        {
+          "name": "fourier_13_cos",
+          "coefficient": 0.21938461411404223
+        },
+        {
+          "name": "fourier_24_cos",
+          "coefficient": -0.21511483477794083
+        },
+        {
+          "name": "fourier_29_sin",
+          "coefficient": -0.2148970931075424
+        }
+      ]
+    },
+    {
+      "mode": 56,
+      "relative_sv": 0.17325946589535748,
+      "lost_fraction": 1.0122759615084293e-25,
+      "timing_share": 0.048866900894189325,
+      "fourier_share": 0.9298247354884944,
+      "offset_share": 0.020135438887608263,
+      "guard_share": 0.0011729247297089008,
+      "top_loadings": [
+        {
+          "name": "fourier_11_sin",
+          "coefficient": -0.2672237788348545
+        },
+        {
+          "name": "fourier_17_sin",
+          "coefficient": -0.26203816840878513
+        },
+        {
+          "name": "fourier_13_cos",
+          "coefficient": 0.24489680264898445
+        },
+        {
+          "name": "fourier_7_cos",
+          "coefficient": 0.24041443055165426
+        },
+        {
+          "name": "fourier_19_cos",
+          "coefficient": 0.22108915493905468
+        }
+      ]
+    },
+    {
+      "mode": 57,
+      "relative_sv": 0.1672075343551153,
+      "lost_fraction": 2.1306225510386907e-28,
+      "timing_share": 0.014106838968790968,
+      "fourier_share": 0.98464915841969,
+      "offset_share": 0.0012371973820865577,
+      "guard_share": 6.8052294324138126e-06,
+      "top_loadings": [
+        {
+          "name": "fourier_27_sin",
+          "coefficient": 0.25964078824126136
+        },
+        {
+          "name": "fourier_11_cos",
+          "coefficient": -0.2583391007029242
+        },
+        {
+          "name": "fourier_26_cos",
+          "coefficient": 0.25388696351674844
+        },
+        {
+          "name": "fourier_25_cos",
+          "coefficient": -0.2519593675847019
+        },
+        {
+          "name": "fourier_5_sin",
+          "coefficient": 0.2226916468112618
+        }
+      ]
+    },
+    {
+      "mode": 58,
+      "relative_sv": 0.13827244438870398,
+      "lost_fraction": 5.031069225748707e-25,
+      "timing_share": 0.042256388254683856,
+      "fourier_share": 0.9540994118168978,
+      "offset_share": 0.003438769321612252,
+      "guard_share": 0.0002054306068051844,
+      "top_loadings": [
+        {
+          "name": "fourier_22_cos",
+          "coefficient": -0.32177970913256254
+        },
+        {
+          "name": "fourier_28_cos",
+          "coefficient": -0.30381648096087366
+        },
+        {
+          "name": "fourier_23_cos",
+          "coefficient": 0.27784257817010255
+        },
+        {
+          "name": "fourier_29_cos",
+          "coefficient": 0.23950990259382976
+        },
+        {
+          "name": "fourier_21_sin",
+          "coefficient": -0.20126831124517422
+        }
+      ]
+    },
+    {
+      "mode": 59,
+      "relative_sv": 0.12314717257247099,
+      "lost_fraction": 1.2722630509776677e-26,
+      "timing_share": 0.012603719464538482,
+      "fourier_share": 0.985170524358126,
+      "offset_share": 0.0021440568789070874,
+      "guard_share": 8.169929842917539e-05,
+      "top_loadings": [
+        {
+          "name": "fourier_24_sin",
+          "coefficient": -0.321427700437947
+        },
+        {
+          "name": "fourier_26_sin",
+          "coefficient": 0.3056139862840834
+        },
+        {
+          "name": "fourier_30_cos",
+          "coefficient": 0.29588320474379204
+        },
+        {
+          "name": "fourier_21_cos",
+          "coefficient": -0.25786133919353244
+        },
+        {
+          "name": "fourier_25_cos",
+          "coefficient": -0.24349375421742434
+        }
+      ]
+    },
+    {
+      "mode": 60,
+      "relative_sv": 0.07782786773726431,
+      "lost_fraction": 3.690319434653162e-25,
+      "timing_share": 0.5404823191838131,
+      "fourier_share": 0.4485631430918328,
+      "offset_share": 0.010395409813350565,
+      "guard_share": 0.000559127911003473,
+      "top_loadings": [
+        {
+          "name": "fourier_10_sin",
+          "coefficient": 0.3511742940502637
+        },
+        {
+          "name": "declination1",
+          "coefficient": -0.30027168294365747
+        },
+        {
+          "name": "spinfreq",
+          "coefficient": 0.28954446865615047
+        },
+        {
+          "name": "right_ascension1",
+          "coefficient": -0.2695245185973133
+        },
+        {
+          "name": "spinfreq1",
+          "coefficient": 0.25312052744469904
+        }
+      ]
+    },
+    {
+      "mode": 61,
+      "relative_sv": 0.05933282265338685,
+      "lost_fraction": 2.957946908794201e-29,
+      "timing_share": 0.042950879014474724,
+      "fourier_share": 0.9555737850234894,
+      "offset_share": 0.0014653589308169044,
+      "guard_share": 9.97703121911691e-06,
+      "top_loadings": [
+        {
+          "name": "fourier_16_sin",
+          "coefficient": 0.31003528076040293
+        },
+        {
+          "name": "fourier_4_cos",
+          "coefficient": 0.26525060123808597
+        },
+        {
+          "name": "fourier_22_cos",
+          "coefficient": -0.2605757134307163
+        },
+        {
+          "name": "fourier_25_sin",
+          "coefficient": -0.25690816435800995
+        },
+        {
+          "name": "fourier_5_cos",
+          "coefficient": -0.24408170152155745
+        }
+      ]
+    },
+    {
+      "mode": 62,
+      "relative_sv": 0.042583039688390285,
+      "lost_fraction": 1.1632108222158034e-26,
+      "timing_share": 0.06683164920349635,
+      "fourier_share": 0.9330356969968203,
+      "offset_share": 6.1011587434955364e-05,
+      "guard_share": 7.164221224759224e-05,
+      "top_loadings": [
+        {
+          "name": "fourier_14_sin",
+          "coefficient": -0.26384934554210837
+        },
+        {
+          "name": "fourier_3_cos",
+          "coefficient": 0.24732520248570236
+        },
+        {
+          "name": "fourier_19_sin",
+          "coefficient": 0.24460876777062326
+        },
+        {
+          "name": "fourier_2_cos",
+          "coefficient": -0.2346490880984844
+        },
+        {
+          "name": "fourier_23_sin",
+          "coefficient": 0.23280551876518984
+        }
+      ]
+    },
+    {
+      "mode": 63,
+      "relative_sv": 0.03633175458059409,
+      "lost_fraction": 2.3292414142536686e-25,
+      "timing_share": 0.049299405388810384,
+      "fourier_share": 0.904200289246851,
+      "offset_share": 0.046500071657115984,
+      "guard_share": 2.337072220970913e-07,
+      "top_loadings": [
+        {
+          "name": "fourier_21_sin",
+          "coefficient": -0.3392975476840973
+        },
+        {
+          "name": "fourier_20_sin",
+          "coefficient": 0.26716750516449994
+        },
+        {
+          "name": "offset",
+          "coefficient": 0.21563875267937344
+        },
+        {
+          "name": "fourier_12_sin",
+          "coefficient": 0.21403640018250097
+        },
+        {
+          "name": "fourier_3_sin",
+          "coefficient": 0.20846156784520098
+        }
+      ]
+    },
+    {
+      "mode": 64,
+      "relative_sv": 0.02123677493362429,
+      "lost_fraction": 5.034269193551452e-27,
+      "timing_share": 0.9345587226037992,
+      "fourier_share": 0.016174352442665497,
+      "offset_share": 1.5402553003887118e-06,
+      "guard_share": 0.04926538469823538,
+      "top_loadings": [
+        {
+          "name": "deltaoman",
+          "coefficient": -0.8562503726151429
+        },
+        {
+          "name": "oman",
+          "coefficient": -0.25895418000993947
+        },
+        {
+          "name": "abcosi_o",
+          "coefficient": 0.24884404706790378
+        },
+        {
+          "name": "static_SEP_guard",
+          "coefficient": -0.221958069684874
+        },
+        {
+          "name": "period_i",
+          "coefficient": 0.18620698778854294
+        }
+      ]
+    },
+    {
+      "mode": 65,
+      "relative_sv": 0.012385095527557004,
+      "lost_fraction": 4.5519012385365426e-26,
+      "timing_share": 0.046395751976806884,
+      "fourier_share": 0.95339289903608,
+      "offset_share": 0.00020347480002862195,
+      "guard_share": 7.8741870843611e-06,
+      "top_loadings": [
+        {
+          "name": "fourier_16_cos",
+          "coefficient": 0.2856796342666654
+        },
+        {
+          "name": "fourier_13_sin",
+          "coefficient": -0.2804215910319224
+        },
+        {
+          "name": "fourier_11_cos",
+          "coefficient": 0.27925316774293046
+        },
+        {
+          "name": "fourier_14_sin",
+          "coefficient": 0.27250601261380863
+        },
+        {
+          "name": "fourier_7_cos",
+          "coefficient": -0.2645880841708743
+        }
+      ]
+    },
+    {
+      "mode": 66,
+      "relative_sv": 0.011490432616908321,
+      "lost_fraction": 1.96720417743143e-26,
+      "timing_share": 0.5062754699793862,
+      "fourier_share": 0.4926383100624279,
+      "offset_share": 0.0010621547959914041,
+      "guard_share": 2.4065162195702535e-05,
+      "top_loadings": [
+        {
+          "name": "kappa_b",
+          "coefficient": -0.5502824350776363
+        },
+        {
+          "name": "fourier_18_cos",
+          "coefficient": 0.43145671299497446
+        },
+        {
+          "name": "oman",
+          "coefficient": -0.3212951711808655
+        },
+        {
+          "name": "fourier_10_cos",
+          "coefficient": -0.27912370530006514
+        },
+        {
+          "name": "fourier_8_cos",
+          "coefficient": 0.2555755914219345
+        }
+      ]
+    },
+    {
+      "mode": 67,
+      "relative_sv": 0.009115150418127719,
+      "lost_fraction": 1.6741699444995807e-27,
+      "timing_share": 0.05473587453328998,
+      "fourier_share": 0.944230094034575,
+      "offset_share": 0.0010321236946265525,
+      "guard_share": 1.9077375090914584e-06,
+      "top_loadings": [
+        {
+          "name": "fourier_12_cos",
+          "coefficient": -0.35027811033260814
+        },
+        {
+          "name": "fourier_15_sin",
+          "coefficient": -0.26486857520427043
+        },
+        {
+          "name": "fourier_14_cos",
+          "coefficient": 0.2541172180844063
+        },
+        {
+          "name": "fourier_11_sin",
+          "coefficient": -0.24820817796973563
+        },
+        {
+          "name": "fourier_6_cos",
+          "coefficient": 0.22752771750449435
+        }
+      ]
+    },
+    {
+      "mode": 68,
+      "relative_sv": 0.0025628802641506415,
+      "lost_fraction": 2.0739828724583416e-27,
+      "timing_share": 0.49381202865481766,
+      "fourier_share": 0.5058193999202035,
+      "offset_share": 0.0003616684777864285,
+      "guard_share": 6.902947191759845e-06,
+      "top_loadings": [
+        {
+          "name": "eta_b",
+          "coefficient": -0.589246981475428
+        },
+        {
+          "name": "fourier_18_sin",
+          "coefficient": 0.5506621875759754
+        },
+        {
+          "name": "spinfreq",
+          "coefficient": 0.2302485016250405
+        },
+        {
+          "name": "spinfreq1",
+          "coefficient": 0.20234902444812194
+        },
+        {
+          "name": "fourier_19_sin",
+          "coefficient": -0.20053882028568235
+        }
+      ]
+    },
+    {
+      "mode": 69,
+      "relative_sv": 0.001991176363439749,
+      "lost_fraction": 1.369268497644414e-26,
+      "timing_share": 0.09294783838858744,
+      "fourier_share": 0.9027240594277627,
+      "offset_share": 0.0042853381925755975,
+      "guard_share": 4.276399107510445e-05,
+      "top_loadings": [
+        {
+          "name": "fourier_4_cos",
+          "coefficient": 0.37253525450896285
+        },
+        {
+          "name": "fourier_5_cos",
+          "coefficient": -0.3512586207566337
+        },
+        {
+          "name": "fourier_7_sin",
+          "coefficient": 0.325152601959977
+        },
+        {
+          "name": "fourier_8_sin",
+          "coefficient": -0.2471623888501122
+        },
+        {
+          "name": "fourier_13_cos",
+          "coefficient": -0.22755842716448824
+        }
+      ]
+    },
+    {
+      "mode": 70,
+      "relative_sv": 0.0013250790906273217,
+      "lost_fraction": 1.6760141737822756e-26,
+      "timing_share": 0.07898017904802072,
+      "fourier_share": 0.8814788814041384,
+      "offset_share": 0.039478763979722914,
+      "guard_share": 6.217556811798681e-05,
+      "top_loadings": [
+        {
+          "name": "fourier_3_sin",
+          "coefficient": -0.4123242380703233
+        },
+        {
+          "name": "fourier_6_sin",
+          "coefficient": -0.33542881257875745
+        },
+        {
+          "name": "fourier_12_sin",
+          "coefficient": 0.2784570557437357
+        },
+        {
+          "name": "fourier_6_cos",
+          "coefficient": 0.24863059150601768
+        },
+        {
+          "name": "fourier_5_sin",
+          "coefficient": 0.2329927984798874
+        }
+      ]
+    },
+    {
+      "mode": 71,
+      "relative_sv": 0.0007597149573205353,
+      "lost_fraction": 0.9782910627435941,
+      "timing_share": 0.9535142742012687,
+      "fourier_share": 0.045098167361545864,
+      "offset_share": 0.0005254102638935015,
+      "guard_share": 0.0008621481732926865,
+      "top_loadings": [
+        {
+          "name": "delta_i",
+          "coefficient": -0.8834159347846491
+        },
+        {
+          "name": "masspar_p",
+          "coefficient": -0.18661754704978314
+        },
+        {
+          "name": "period_o",
+          "coefficient": 0.16860446244288013
+        },
+        {
+          "name": "oman_extra1",
+          "coefficient": 0.1598104607312522
+        },
+        {
+          "name": "abcosi_o",
+          "coefficient": -0.15639608582734388
+        }
+      ]
+    },
+    {
+      "mode": 72,
+      "relative_sv": 0.0005029422959558714,
+      "lost_fraction": 0.9982019382040517,
+      "timing_share": 0.5414380311876252,
+      "fourier_share": 0.4535662264119922,
+      "offset_share": 0.004832807921402409,
+      "guard_share": 0.00016293447898078415,
+      "top_loadings": [
+        {
+          "name": "kappa_b",
+          "coefficient": 0.41779657575089113
+        },
+        {
+          "name": "fourier_18_cos",
+          "coefficient": -0.3922014745650534
+        },
+        {
+          "name": "oman",
+          "coefficient": -0.3684165234655576
+        },
+        {
+          "name": "fourier_10_cos",
+          "coefficient": -0.28315603319158855
+        },
+        {
+          "name": "tasc_b",
+          "coefficient": -0.27696382623658466
+        }
+      ]
+    },
+    {
+      "mode": 73,
+      "relative_sv": 0.0003911174757111445,
+      "lost_fraction": 0.9944105117348945,
+      "timing_share": 0.9305922440437242,
+      "fourier_share": 0.06838006958575028,
+      "offset_share": 0.0001901526358561553,
+      "guard_share": 0.0008375337346684966,
+      "top_loadings": [
+        {
+          "name": "declination1",
+          "coefficient": -0.7649434687739808
+        },
+        {
+          "name": "right_ascension1",
+          "coefficient": 0.5054576766455854
+        },
+        {
+          "name": "fourier_10_sin",
+          "coefficient": 0.12878577275140007
+        },
+        {
+          "name": "fourier_1_sin",
+          "coefficient": -0.11815705624108395
+        },
+        {
+          "name": "spinfreq",
+          "coefficient": -0.10829730618503566
+        }
+      ]
+    },
+    {
+      "mode": 74,
+      "relative_sv": 0.00029827836893112905,
+      "lost_fraction": 0.03954426684018588,
+      "timing_share": 0.7505230079959877,
+      "fourier_share": 0.0020140157600461823,
+      "offset_share": 1.8059317654815203e-05,
+      "guard_share": 0.24744491692631007,
+      "top_loadings": [
+        {
+          "name": "abcosi_o",
+          "coefficient": 0.7380209361059265
+        },
+        {
+          "name": "static_SEP_guard",
+          "coefficient": 0.49743835490069527
+        },
+        {
+          "name": "period_i",
+          "coefficient": -0.39974272508259323
+        },
+        {
+          "name": "tasc_p",
+          "coefficient": 0.1493393752098702
+        },
+        {
+          "name": "masspar_p",
+          "coefficient": -0.06483869506865958
+        }
+      ]
+    },
+    {
+      "mode": 75,
+      "relative_sv": 0.00024333738005817077,
+      "lost_fraction": 0.992154585513668,
+      "timing_share": 0.626050662680149,
+      "fourier_share": 0.3699735534162075,
+      "offset_share": 0.0009387968530935819,
+      "guard_share": 0.003036987050550768,
+      "top_loadings": [
+        {
+          "name": "acosi_extra1",
+          "coefficient": -0.3436342720139489
+        },
+        {
+          "name": "right_ascension1",
+          "coefficient": -0.33083794590561855
+        },
+        {
+          "name": "oman",
+          "coefficient": 0.2871789604525509
+        },
+        {
+          "name": "fourier_1_sin",
+          "coefficient": -0.25024984034511
+        },
+        {
+          "name": "asini_extra1",
+          "coefficient": 0.2464100734244913
+        }
+      ]
+    },
+    {
+      "mode": 76,
+      "relative_sv": 0.00015283257439115572,
+      "lost_fraction": 0.9999997080461576,
+      "timing_share": 0.9884522291048139,
+      "fourier_share": 0.011546816340526062,
+      "offset_share": 6.680530638457352e-07,
+      "guard_share": 2.865015956420418e-07,
+      "top_loadings": [
+        {
+          "name": "declination",
+          "coefficient": -0.7245783889437618
+        },
+        {
+          "name": "right_ascension",
+          "coefficient": 0.6721545646307242
+        },
+        {
+          "name": "fourier_8_sin",
+          "coefficient": 0.09384248339503995
+        },
+        {
+          "name": "masspar_p",
+          "coefficient": -0.09380281606910981
+        },
+        {
+          "name": "tasc_b",
+          "coefficient": -0.04221806246286721
+        }
+      ]
+    },
+    {
+      "mode": 77,
+      "relative_sv": 0.00013688159127980178,
+      "lost_fraction": 0.9998388136540582,
+      "timing_share": 0.9184603236322322,
+      "fourier_share": 0.0749829226673782,
+      "offset_share": 0.006359564619784936,
+      "guard_share": 0.0001971890806045051,
+      "top_loadings": [
+        {
+          "name": "masspar_p",
+          "coefficient": 0.6811831301511491
+        },
+        {
+          "name": "acosi_extra1",
+          "coefficient": -0.4605958602267737
+        },
+        {
+          "name": "oman",
+          "coefficient": -0.22290019702264693
+        },
+        {
+          "name": "tasc_b",
+          "coefficient": 0.19405875896552133
+        },
+        {
+          "name": "oman_extra1",
+          "coefficient": 0.156385124363092
+        }
+      ]
+    },
+    {
+      "mode": 78,
+      "relative_sv": 0.00011871458265622527,
+      "lost_fraction": 0.9999460867972418,
+      "timing_share": 0.8701949675867015,
+      "fourier_share": 0.1288439265636398,
+      "offset_share": 0.0008734195597979704,
+      "guard_share": 8.768628985852921e-05,
+      "top_loadings": [
+        {
+          "name": "acosi_extra1",
+          "coefficient": 0.5211195103757997
+        },
+        {
+          "name": "right_ascension1",
+          "coefficient": -0.39368905686648076
+        },
+        {
+          "name": "oman",
+          "coefficient": -0.36489554431575993
+        },
+        {
+          "name": "spinfreq1",
+          "coefficient": -0.24321796323045997
+        },
+        {
+          "name": "spinfreq",
+          "coefficient": -0.23559502688231013
+        }
+      ]
+    },
+    {
+      "mode": 79,
+      "relative_sv": 0.00011017094208798416,
+      "lost_fraction": 0.9986055443455903,
+      "timing_share": 0.6212028453834713,
+      "fourier_share": 0.36104873831563017,
+      "offset_share": 0.015115025682241483,
+      "guard_share": 0.002633390618654822,
+      "top_loadings": [
+        {
+          "name": "fourier_8_cos",
+          "coefficient": 0.5693670809822817
+        },
+        {
+          "name": "masspar_p",
+          "coefficient": 0.4202489790902855
+        },
+        {
+          "name": "right_ascension",
+          "coefficient": 0.40180952368453393
+        },
+        {
+          "name": "declination",
+          "coefficient": 0.2816032095689524
+        },
+        {
+          "name": "oman",
+          "coefficient": 0.25005188875477213
+        }
+      ]
+    },
+    {
+      "mode": 80,
+      "relative_sv": 8.497383299157009e-05,
+      "lost_fraction": 0.9995551643718927,
+      "timing_share": 0.8124111836842641,
+      "fourier_share": 0.18559303405395136,
+      "offset_share": 0.0005836549624257831,
+      "guard_share": 0.001412127299357594,
+      "top_loadings": [
+        {
+          "name": "oman_extra1",
+          "coefficient": -0.41966362118613276
+        },
+        {
+          "name": "right_ascension1",
+          "coefficient": -0.34301693736900873
+        },
+        {
+          "name": "kappa_extra1",
+          "coefficient": 0.2834126185298752
+        },
+        {
+          "name": "tasc_b",
+          "coefficient": 0.27343951735506056
+        },
+        {
+          "name": "right_ascension",
+          "coefficient": 0.25171947739791206
+        }
+      ]
+    },
+    {
+      "mode": 81,
+      "relative_sv": 7.003996071879933e-05,
+      "lost_fraction": 0.9998444890460859,
+      "timing_share": 0.6857341700013632,
+      "fourier_share": 0.3111146359363214,
+      "offset_share": 0.0024245630985128695,
+      "guard_share": 0.0007266309638029059,
+      "top_loadings": [
+        {
+          "name": "kappa_extra1",
+          "coefficient": -0.5395736695795528
+        },
+        {
+          "name": "tasc_extra1",
+          "coefficient": -0.4331331366730967
+        },
+        {
+          "name": "fourier_2_sin",
+          "coefficient": -0.33891836726201585
+        },
+        {
+          "name": "fourier_2_cos",
+          "coefficient": 0.2858332842033221
+        },
+        {
+          "name": "acosi_extra1",
+          "coefficient": -0.24667701652670845
+        }
+      ]
+    },
+    {
+      "mode": 82,
+      "relative_sv": 6.631341414509224e-05,
+      "lost_fraction": 0.999839317912504,
+      "timing_share": 0.6489908904213582,
+      "fourier_share": 0.34438531527141497,
+      "offset_share": 0.0057862469131527055,
+      "guard_share": 0.0008375473940742252,
+      "top_loadings": [
+        {
+          "name": "eta_extra1",
+          "coefficient": 0.6581006102644062
+        },
+        {
+          "name": "fourier_2_cos",
+          "coefficient": -0.46725951406914434
+        },
+        {
+          "name": "fourier_2_sin",
+          "coefficient": -0.2631451501866742
+        },
+        {
+          "name": "period_o",
+          "coefficient": -0.2209793521210454
+        },
+        {
+          "name": "oman_extra1",
+          "coefficient": -0.20970663806791615
+        }
+      ]
+    },
+    {
+      "mode": 83,
+      "relative_sv": 6.35485832835556e-05,
+      "lost_fraction": 0.9999628007641849,
+      "timing_share": 0.7752369080227525,
+      "fourier_share": 0.22103315591572362,
+      "offset_share": 0.0035187977837331844,
+      "guard_share": 0.0002111382777906495,
+      "top_loadings": [
+        {
+          "name": "tasc_extra1",
+          "coefficient": 0.649358496858011
+        },
+        {
+          "name": "P_extra1",
+          "coefficient": -0.4204378528314789
+        },
+        {
+          "name": "fourier_1_cos",
+          "coefficient": -0.3361257758958773
+        },
+        {
+          "name": "kappa_extra1",
+          "coefficient": -0.3296434377219622
+        },
+        {
+          "name": "fourier_2_sin",
+          "coefficient": -0.2580675838854698
+        }
+      ]
+    },
+    {
+      "mode": 84,
+      "relative_sv": 3.249074979035962e-05,
+      "lost_fraction": 0.999993968383087,
+      "timing_share": 0.5446886512210448,
+      "fourier_share": 0.45038941487571876,
+      "offset_share": 0.004790967775873811,
+      "guard_share": 0.00013096612736437677,
+      "top_loadings": [
+        {
+          "name": "asini_extra1",
+          "coefficient": -0.7171030677893333
+        },
+        {
+          "name": "fourier_1_sin",
+          "coefficient": -0.659187643306664
+        },
+        {
+          "name": "fourier_1_cos",
+          "coefficient": 0.10562734704019922
+        },
+        {
+          "name": "period_o",
+          "coefficient": -0.10083118782670662
+        },
+        {
+          "name": "P_extra1",
+          "coefficient": 0.08048897334695047
+        }
+      ]
+    },
+    {
+      "mode": 85,
+      "relative_sv": 2.9450770158434898e-05,
+      "lost_fraction": 0.9998292733561032,
+      "timing_share": 0.8946898692627245,
+      "fourier_share": 0.0963825086047565,
+      "offset_share": 0.004415792490835474,
+      "guard_share": 0.004511829641684718,
+      "top_loadings": [
+        {
+          "name": "period_o",
+          "coefficient": -0.6550462526235836
+        },
+        {
+          "name": "oman_extra1",
+          "coefficient": 0.61303204241034
+        },
+        {
+          "name": "absini_o",
+          "coefficient": 0.20587985613167747
+        },
+        {
+          "name": "fourier_9_sin",
+          "coefficient": 0.178614912322563
+        },
+        {
+          "name": "fourier_9_cos",
+          "coefficient": -0.14946357517990835
+        }
+      ]
+    },
+    {
+      "mode": 86,
+      "relative_sv": 1.7655213434494165e-05,
+      "lost_fraction": 0.9999990942562824,
+      "timing_share": 0.47550727870083415,
+      "fourier_share": 0.5076262830273485,
+      "offset_share": 0.016799833692508835,
+      "guard_share": 6.66045793094503e-05,
+      "top_loadings": [
+        {
+          "name": "fourier_1_cos",
+          "coefficient": 0.6874567967303913
+        },
+        {
+          "name": "P_extra1",
+          "coefficient": -0.6461541888811883
+        },
+        {
+          "name": "oman_extra1",
+          "coefficient": 0.17302415769467894
+        },
+        {
+          "name": "offset",
+          "coefficient": -0.12961417242149423
+        },
+        {
+          "name": "fourier_1_sin",
+          "coefficient": 0.10183442777749403
+        }
+      ]
+    },
+    {
+      "mode": 87,
+      "relative_sv": 1.3327010589320348e-05,
+      "lost_fraction": 0.9999996756777012,
+      "timing_share": 0.3641853511385816,
+      "fourier_share": 0.6008865731844696,
+      "offset_share": 0.03488621984014145,
+      "guard_share": 4.1855836807143454e-05,
+      "top_loadings": [
+        {
+          "name": "fourier_9_cos",
+          "coefficient": -0.675716155168572
+        },
+        {
+          "name": "tasc_b",
+          "coefficient": 0.4113866542032492
+        },
+        {
+          "name": "fourier_9_sin",
+          "coefficient": -0.3492793468195199
+        },
+        {
+          "name": "absini_o",
+          "coefficient": 0.3218365415075905
+        },
+        {
+          "name": "right_ascension1",
+          "coefficient": 0.1886475827422885
+        }
+      ]
+    },
+    {
+      "mode": 88,
+      "relative_sv": 9.970690722995645e-06,
+      "lost_fraction": 0.999986716992709,
+      "timing_share": 0.6160362213041113,
+      "fourier_share": 0.380704172814756,
+      "offset_share": 0.00019700344769997536,
+      "guard_share": 0.0030626024334333337,
+      "top_loadings": [
+        {
+          "name": "fourier_9_sin",
+          "coefficient": -0.5551619612730209
+        },
+        {
+          "name": "absini_o",
+          "coefficient": -0.5302148668625227
+        },
+        {
+          "name": "tasc_b",
+          "coefficient": 0.4582787026172992
+        },
+        {
+          "name": "period_o",
+          "coefficient": -0.34085854305664237
+        },
+        {
+          "name": "fourier_9_cos",
+          "coefficient": 0.26186218951063495
+        }
+      ]
+    },
+    {
+      "mode": 89,
+      "relative_sv": 2.418245840970658e-06,
+      "lost_fraction": 0.9999999998445978,
+      "timing_share": 0.9671378065050097,
+      "fourier_share": 0.030698731002750963,
+      "offset_share": 0.002162853385233427,
+      "guard_share": 6.091070079760666e-07,
+      "top_loadings": [
+        {
+          "name": "spinfreq1",
+          "coefficient": -0.7195503307056815
+        },
+        {
+          "name": "spinfreq",
+          "coefficient": 0.6658522388066865
+        },
+        {
+          "name": "fourier_1_cos",
+          "coefficient": 0.15743792981451107
+        },
+        {
+          "name": "tasc_b",
+          "coefficient": -0.07118416657801936
+        },
+        {
+          "name": "fourier_9_cos",
+          "coefficient": 0.05083831988258187
+        }
+      ]
+    },
+    {
+      "mode": 90,
+      "relative_sv": 4.1843589732874077e-07,
+      "lost_fraction": 0.9999969815154272,
+      "timing_share": 0.6048323289572597,
+      "fourier_share": 4.966645059875307e-06,
+      "offset_share": 1.4121415741087916e-07,
+      "guard_share": 0.3951625631835232,
+      "top_loadings": [
+        {
+          "name": "period_i",
+          "coefficient": -0.7434229358999461
+        },
+        {
+          "name": "static_SEP_guard",
+          "coefficient": -0.6286195695200104
+        },
+        {
+          "name": "period_o",
+          "coefficient": -0.16223976034711804
+        },
+        {
+          "name": "tasc_p",
+          "coefficient": 0.15938140628307404
+        },
+        {
+          "name": "tasc_b",
+          "coefficient": 0.020629552650088902
+        }
+      ]
+    }
+  ],
+  "grid_origins": 4821,
+  "intervals": [
+    {
+      "cut": 0.01,
+      "rank": 67,
+      "tau": 2.0,
+      "K": 1.0,
+      "noise_scale": 1.114913690669302,
+      "U": 2.761699592456782e-10,
+      "toff": 275.30054074177065,
+      "beta": -1.4415861958536256e-10,
+      "sigma": 8.025715728684672e-11
+    },
+    {
+      "cut": 0.01,
+      "rank": 67,
+      "tau": 2.0,
+      "K": 10.0,
+      "noise_scale": 1.114913690669302,
+      "U": 1.6681555401652117e-09,
+      "toff": 104.34942814305832,
+      "beta": 8.24256965198929e-12,
+      "sigma": 8.510754921204317e-11
+    },
+    {
+      "cut": 0.01,
+      "rank": 67,
+      "tau": 5.0,
+      "K": 1.0,
+      "noise_scale": 1.114913690669302,
+      "U": 2.853032398516555e-10,
+      "toff": 278.69512200862357,
+      "beta": -1.3786948993024803e-10,
+      "sigma": 8.963273607747421e-11
+    },
+    {
+      "cut": 0.01,
+      "rank": 67,
+      "tau": 5.0,
+      "K": 10.0,
+      "noise_scale": 1.114913690669302,
+      "U": 1.8364284799304634e-09,
+      "toff": 109.37340841800062,
+      "beta": 4.3460636314473024e-11,
+      "sigma": 9.359623430528096e-11
+    },
+    {
+      "cut": 0.01,
+      "rank": 67,
+      "tau": 18.0,
+      "K": 1.0,
+      "noise_scale": 1.114913690669302,
+      "U": 2.9107280891452047e-10,
+      "toff": 295.12489534019164,
+      "beta": -1.33704997094155e-10,
+      "sigma": 9.567029981613766e-11
+    },
+    {
+      "cut": 0.01,
+      "rank": 67,
+      "tau": 18.0,
+      "K": 10.0,
+      "noise_scale": 1.114913690669302,
+      "U": 1.959204617338265e-09,
+      "toff": 122.54438373338989,
+      "beta": 5.281381863036638e-11,
+      "sigma": 9.982169465001302e-11
+    },
+    {
+      "cut": 0.01,
+      "rank": 67,
+      "tau": 52.0,
+      "K": 1.0,
+      "noise_scale": 1.114913690669302,
+      "U": 3.637499528104827e-10,
+      "toff": 317.93648145344315,
+      "beta": -1.541427709762311e-10,
+      "sigma": 1.2741404927154595e-10
+    },
+    {
+      "cut": 0.01,
+      "rank": 67,
+      "tau": 52.0,
+      "K": 10.0,
+      "noise_scale": 1.114913690669302,
+      "U": 2.5771884090105903e-09,
+      "toff": 146.9853688547308,
+      "beta": 7.885621185427029e-11,
+      "sigma": 1.3125507599626716e-10
+    },
+    {
+      "cut": 0.01,
+      "rank": 67,
+      "tau": 200.0,
+      "K": 1.0,
+      "noise_scale": 1.114913690669302,
+      "U": 9.889472101316898e-10,
+      "toff": 185.1404622941575,
+      "beta": 4.1066020865597803e-10,
+      "sigma": 3.515026510520632e-10
+    },
+    {
+      "cut": 0.01,
+      "rank": 67,
+      "tau": 200.0,
+      "K": 10.0,
+      "noise_scale": 1.114913690669302,
+      "U": 7.089462241377685e-09,
+      "toff": 174.61726036691348,
+      "beta": 2.819133574853994e-10,
+      "sigma": 3.606145936329123e-10
+    },
+    {
+      "cut": 0.01,
+      "rank": 67,
+      "tau": 500.0,
+      "K": 1.0,
+      "noise_scale": 1.114913690669302,
+      "U": 2.385686061905899e-09,
+      "toff": 22.404236361229177,
+      "beta": -9.635973169500272e-10,
+      "sigma": 8.642970079281746e-10
+    },
+    {
+      "cut": 0.01,
+      "rank": 67,
+      "tau": 500.0,
+      "K": 10.0,
+      "noise_scale": 1.114913690669302,
+      "U": 1.7196047367620467e-08,
+      "toff": 19.00965509437627,
+      "beta": -7.294817670699699e-10,
+      "sigma": 8.743306019973625e-10
+    },
+    {
+      "cut": 0.001,
+      "rank": 71,
+      "tau": 2.0,
+      "K": 1.0,
+      "noise_scale": 1.114889768983298,
+      "U": 2.793831092772613e-10,
+      "toff": 273.6711417336813,
+      "beta": -1.4637782808106554e-10,
+      "sigma": 8.08614360297291e-11
+    },
+    {
+      "cut": 0.001,
+      "rank": 71,
+      "tau": 2.0,
+      "K": 10.0,
+      "noise_scale": 1.114889768983298,
+      "U": 1.6795275232327852e-09,
+      "toff": 104.34942814305832,
+      "beta": 5.513351507450536e-12,
+      "sigma": 8.568998072763769e-11
+    },
+    {
+      "cut": 0.001,
+      "rank": 71,
+      "tau": 5.0,
+      "K": 1.0,
+      "noise_scale": 1.114889768983298,
+      "U": 2.8843426419591983e-10,
+      "toff": 277.06572300053415,
+      "beta": -1.3963759720908786e-10,
+      "sigma": 9.04613577851734e-11
+    },
+    {
+      "cut": 0.001,
+      "rank": 71,
+      "tau": 5.0,
+      "K": 10.0,
+      "noise_scale": 1.114889768983298,
+      "U": 1.8517269823967827e-09,
+      "toff": 109.37340841800062,
+      "beta": 4.224137469856264e-11,
+      "sigma": 9.438315032907616e-11
+    },
+    {
+      "cut": 0.001,
+      "rank": 71,
+      "tau": 18.0,
+      "K": 1.0,
+      "noise_scale": 1.114889768983298,
+      "U": 2.932924158490794e-10,
+      "toff": 293.4954963321022,
+      "beta": -1.3424011935262675e-10,
+      "sigma": 9.669413665244741e-11
+    },
+    {
+      "cut": 0.001,
+      "rank": 71,
+      "tau": 18.0,
+      "K": 10.0,
+      "noise_scale": 1.114889768983298,
+      "U": 1.976121553505937e-09,
+      "toff": 122.54438373338989,
+      "beta": 5.2520227539670576e-11,
+      "sigma": 1.0068754947004725e-10
+    },
+    {
+      "cut": 0.001,
+      "rank": 71,
+      "tau": 52.0,
+      "K": 1.0,
+      "noise_scale": 1.114889768983298,
+      "U": 3.6685485028183463e-10,
+      "toff": 316.3070824453537,
+      "beta": -1.5475101474888645e-10,
+      "sigma": 1.2893014360193434e-10
+    },
+    {
+      "cut": 0.001,
+      "rank": 71,
+      "tau": 52.0,
+      "K": 10.0,
+      "noise_scale": 1.114889768983298,
+      "U": 2.600308439647164e-09,
+      "toff": 146.9853688547308,
+      "beta": 7.91687064877417e-11,
+      "sigma": 1.3243493336608943e-10
+    },
+    {
+      "cut": 0.001,
+      "rank": 71,
+      "tau": 200.0,
+      "K": 1.0,
+      "noise_scale": 1.114889768983298,
+      "U": 9.955436825751902e-10,
+      "toff": 9.301152671176961,
+      "beta": -4.071395826935117e-10,
+      "sigma": 3.5763175003956133e-10
+    },
+    {
+      "cut": 0.001,
+      "rank": 71,
+      "tau": 200.0,
+      "K": 10.0,
+      "noise_scale": 1.114889768983298,
+      "U": 7.155212296375536e-09,
+      "toff": 174.61726036691348,
+      "beta": 2.857785963403576e-10,
+      "sigma": 3.639492728288316e-10
+    },
+    {
+      "cut": 0.001,
+      "rank": 71,
+      "tau": 500.0,
+      "K": 1.0,
+      "noise_scale": 1.114889768983298,
+      "U": 2.4145194424167716e-09,
+      "toff": 15.81874870353454,
+      "beta": -9.84444660652398e-10,
+      "sigma": 8.691876968120811e-10
+    },
+    {
+      "cut": 0.001,
+      "rank": 71,
+      "tau": 500.0,
+      "K": 10.0,
+      "noise_scale": 1.114889768983298,
+      "U": 1.7355428759271496e-08,
+      "toff": 19.00965509437627,
+      "beta": -7.405133117301016e-10,
+      "sigma": 8.82398665122924e-10
+    },
+    {
+      "cut": 0.0001,
+      "rank": 80,
+      "tau": 2.0,
+      "K": 1.0,
+      "noise_scale": 1.1150834570120136,
+      "U": 6.271097183712207e-10,
+      "toff": 171.63002885208292,
+      "beta": 3.995602253130189e-10,
+      "sigma": 1.3834026890274626e-10
+    },
+    {
+      "cut": 0.0001,
+      "rank": 80,
+      "tau": 2.0,
+      "K": 10.0,
+      "noise_scale": 1.1150834570120136,
+      "U": 3.4358669817972056e-09,
+      "toff": 175.90720124831756,
+      "beta": -2.1669718030706047e-10,
+      "sigma": 1.739610835748117e-10
+    },
+    {
+      "cut": 0.0001,
+      "rank": 80,
+      "tau": 5.0,
+      "K": 1.0,
+      "noise_scale": 1.1150834570120136,
+      "U": 1.3214966513720836e-09,
+      "toff": 178.07973325910342,
+      "beta": 8.450087546355326e-10,
+      "sigma": 2.8968407214419185e-10
+    },
+    {
+      "cut": 0.0001,
+      "rank": 80,
+      "tau": 5.0,
+      "K": 10.0,
+      "noise_scale": 1.1150834570120136,
+      "U": 8.033643385848276e-09,
+      "toff": 179.16599926449638,
+      "beta": -1.4473804837189538e-10,
+      "sigma": 4.096317144090013e-10
+    },
+    {
+      "cut": 0.0001,
+      "rank": 80,
+      "tau": 18.0,
+      "K": 1.0,
+      "noise_scale": 1.1150834570120136,
+      "U": 2.3865519830490638e-09,
+      "toff": 27.36032501083442,
+      "beta": -1.5398091925864715e-09,
+      "sigma": 5.14783064333732e-10
+    },
+    {
+      "cut": 0.0001,
+      "rank": 80,
+      "tau": 18.0,
+      "K": 10.0,
+      "noise_scale": 1.1150834570120136,
+      "U": 1.3496187123711704e-08,
+      "toff": 192.20119132921153,
+      "beta": 9.216990842613094e-10,
+      "sigma": 6.824135825533554e-10
+    },
+    {
+      "cut": 0.0001,
+      "rank": 80,
+      "tau": 52.0,
+      "K": 1.0,
+      "noise_scale": 1.1150834570120136,
+      "U": 3.4198305514612683e-09,
+      "toff": 215.55591044515953,
+      "beta": 2.067781268529404e-09,
+      "sigma": 8.219875985803569e-10
+    },
+    {
+      "cut": 0.0001,
+      "rank": 80,
+      "tau": 52.0,
+      "K": 10.0,
+      "noise_scale": 1.1150834570120136,
+      "U": 1.81536652298664e-08,
+      "toff": 216.8458513265636,
+      "beta": 1.3569265984272308e-09,
+      "sigma": 9.162630153591913e-10
+    },
+    {
+      "cut": 0.0001,
+      "rank": 80,
+      "tau": 200.0,
+      "K": 1.0,
+      "noise_scale": 1.1150834570120136,
+      "U": 9.685612743523017e-09,
+      "toff": 243.2556935826792,
+      "beta": 5.831439034372189e-09,
+      "sigma": 2.34317123760864e-09
+    },
+    {
+      "cut": 0.0001,
+      "rank": 80,
+      "tau": 200.0,
+      "K": 10.0,
+      "noise_scale": 1.1150834570120136,
+      "U": 5.0365606880482625e-08,
+      "toff": 244.6135260894204,
+      "beta": 4.1751175193411946e-09,
+      "sigma": 2.535713472034351e-09
+    },
+    {
+      "cut": 0.0001,
+      "rank": 80,
+      "tau": 500.0,
+      "K": 1.0,
+      "noise_scale": 1.1150834570120136,
+      "U": 2.3489070108371124e-08,
+      "toff": 251.4026886231262,
+      "beta": 1.4087199022609402e-08,
+      "sigma": 5.71593175851712e-09
+    },
+    {
+      "cut": 0.0001,
+      "rank": 80,
+      "tau": 500.0,
+      "K": 10.0,
+      "noise_scale": 1.1150834570120136,
+      "U": 1.2181294068879425e-07,
+      "toff": 252.76052112986736,
+      "beta": 9.917569349199409e-09,
+      "sigma": 6.135727482317202e-09
+    },
+    {
+      "cut": 1e-06,
+      "rank": 90,
+      "tau": 2.0,
+      "K": 1.0,
+      "noise_scale": 1.1151339333390928,
+      "U": 6.538728638904939e-10,
+      "toff": 174.07412736421702,
+      "beta": -3.7983937720557635e-10,
+      "sigma": 1.6660053013366697e-10
+    },
+    {
+      "cut": 1e-06,
+      "rank": 90,
+      "tau": 2.0,
+      "K": 10.0,
+      "noise_scale": 1.1151339333390928,
+      "U": 3.5336059985042156e-09,
+      "toff": 174.27780224022817,
+      "beta": -2.5855204990869987e-10,
+      "sigma": 1.7843147149221186e-10
+    },
+    {
+      "cut": 1e-06,
+      "rank": 90,
+      "tau": 5.0,
+      "K": 1.0,
+      "noise_scale": 1.1151339333390928,
+      "U": 1.530056874658301e-09,
+      "toff": 179.03021601382224,
+      "beta": -7.532925191269999e-10,
+      "sigma": 4.722373451390941e-10
+    },
+    {
+      "cut": 1e-06,
+      "rank": 90,
+      "tau": 5.0,
+      "K": 10.0,
+      "noise_scale": 1.1151339333390928,
+      "U": 9.673498473449483e-09,
+      "toff": 179.16599926449638,
+      "beta": -4.5377191329856457e-10,
+      "sigma": 4.914670458669219e-10
+    },
+    {
+      "cut": 1e-06,
+      "rank": 90,
+      "tau": 18.0,
+      "K": 1.0,
+      "noise_scale": 1.1151339333390928,
+      "U": 5.2644748164453655e-09,
+      "toff": 192.20119132921153,
+      "beta": 2.6433936898358915e-09,
+      "sigma": 1.5935009107200916e-09
+    },
+    {
+      "cut": 1e-06,
+      "rank": 90,
+      "tau": 18.0,
+      "K": 10.0,
+      "noise_scale": 1.1151339333390928,
+      "U": 3.165714055932812e-08,
+      "toff": 192.20119132921153,
+      "beta": 2.6433936898358915e-09,
+      "sigma": 1.5935009107200916e-09
+    },
+    {
+      "cut": 1e-06,
+      "rank": 90,
+      "tau": 52.0,
+      "K": 1.0,
+      "noise_scale": 1.1151339333390928,
+      "U": 9.526473683387235e-09,
+      "toff": 214.87699419178892,
+      "beta": 5.997390648970725e-09,
+      "sigma": 2.1455301411545005e-09
+    },
+    {
+      "cut": 1e-06,
+      "rank": 90,
+      "tau": 52.0,
+      "K": 10.0,
+      "noise_scale": 1.1151339333390928,
+      "U": 4.488271266208678e-08,
+      "toff": 215.2164523184742,
+      "beta": 5.179708243779993e-09,
+      "sigma": 2.2311206914560207e-09
+    },
+    {
+      "cut": 1e-06,
+      "rank": 90,
+      "tau": 200.0,
+      "K": 1.0,
+      "noise_scale": 1.1151339333390928,
+      "U": 2.7298501788492907e-08,
+      "toff": 242.50888570397157,
+      "beta": 1.7545570290455276e-08,
+      "sigma": 5.929361335398774e-09
+    },
+    {
+      "cut": 1e-06,
+      "rank": 90,
+      "tau": 200.0,
+      "K": 10.0,
+      "noise_scale": 1.1151339333390928,
+      "U": 1.2412670446937573e-07,
+      "toff": 242.44099407863453,
+      "beta": 1.6662440354593726e-08,
+      "sigma": 6.1126225081489536e-09
+    },
+    {
+      "cut": 1e-06,
+      "rank": 90,
+      "tau": 500.0,
+      "K": 1.0,
+      "noise_scale": 1.1151339333390928,
+      "U": 6.642028843090424e-08,
+      "toff": 250.65588074441857,
+      "beta": 4.281982178320374e-08,
+      "sigma": 1.4348064934774244e-08
+    },
+    {
+      "cut": 1e-06,
+      "rank": 90,
+      "tau": 500.0,
+      "K": 10.0,
+      "noise_scale": 1.1151339333390928,
+      "U": 3.022453623994105e-07,
+      "toff": 251.13112212177796,
+      "beta": 3.746531342227056e-08,
+      "sigma": 1.4963460850083524e-08
+    },
+    {
+      "cut": 0.0,
+      "rank": 90,
+      "tau": 2.0,
+      "K": 1.0,
+      "noise_scale": 1.1151339333390358,
+      "U": 6.538728639085732e-10,
+      "toff": 174.07412736421702,
+      "beta": -3.7983937722351175e-10,
+      "sigma": 1.6660053013375447e-10
+    },
+    {
+      "cut": 0.0,
+      "rank": 90,
+      "tau": 2.0,
+      "K": 10.0,
+      "noise_scale": 1.1151339333390358,
+      "U": 3.533605998512729e-09,
+      "toff": 174.27780224022817,
+      "beta": -2.5855204993223145e-10,
+      "sigma": 1.784314714923119e-10
+    },
+    {
+      "cut": 0.0,
+      "rank": 90,
+      "tau": 5.0,
+      "K": 1.0,
+      "noise_scale": 1.1151339333390358,
+      "U": 1.5300568748337766e-09,
+      "toff": 179.03021601382224,
+      "beta": -7.532925193010821e-10,
+      "sigma": 4.72237345139948e-10
+    },
+    {
+      "cut": 0.0,
+      "rank": 90,
+      "tau": 5.0,
+      "K": 10.0,
+      "noise_scale": 1.1151339333390358,
+      "U": 9.673498473498961e-09,
+      "toff": 179.16599926449638,
+      "beta": -4.5377191349040725e-10,
+      "sigma": 4.914670458676901e-10
+    },
+    {
+      "cut": 0.0,
+      "rank": 90,
+      "tau": 18.0,
+      "K": 1.0,
+      "noise_scale": 1.1151339333390358,
+      "U": 5.264474814478476e-09,
+      "toff": 192.20119132921153,
+      "beta": 2.6433936878657032e-09,
+      "sigma": 1.5935009107220547e-09
+    },
+    {
+      "cut": 0.0,
+      "rank": 90,
+      "tau": 18.0,
+      "K": 10.0,
+      "noise_scale": 1.1151339333390358,
+      "U": 3.165714055873931e-08,
+      "toff": 192.20119132921153,
+      "beta": 2.6433936878657032e-09,
+      "sigma": 1.5935009107220547e-09
+    },
+    {
+      "cut": 0.0,
+      "rank": 90,
+      "tau": 52.0,
+      "K": 1.0,
+      "noise_scale": 1.1151339333390358,
+      "U": 9.526473680671859e-09,
+      "toff": 214.87699419178892,
+      "beta": 5.997390646251498e-09,
+      "sigma": 2.1455301411568414e-09
+    },
+    {
+      "cut": 0.0,
+      "rank": 90,
+      "tau": 52.0,
+      "K": 10.0,
+      "noise_scale": 1.1151339333390358,
+      "U": 4.48827126609321e-08,
+      "toff": 215.2164523184742,
+      "beta": 5.1797082408593055e-09,
+      "sigma": 2.231120691462205e-09
+    },
+    {
+      "cut": 0.0,
+      "rank": 90,
+      "tau": 200.0,
+      "K": 1.0,
+      "noise_scale": 1.1151339333390358,
+      "U": 2.729850178101471e-08,
+      "toff": 242.50888570397157,
+      "beta": 1.754557028297958e-08,
+      "sigma": 5.929361335397257e-09
+    },
+    {
+      "cut": 0.0,
+      "rank": 90,
+      "tau": 200.0,
+      "K": 10.0,
+      "noise_scale": 1.1151339333390358,
+      "U": 1.2412670446542893e-07,
+      "toff": 242.44099407863453,
+      "beta": 1.6662440346680876e-08,
+      "sigma": 6.112622508150786e-09
+    },
+    {
+      "cut": 0.0,
+      "rank": 90,
+      "tau": 500.0,
+      "K": 1.0,
+      "noise_scale": 1.1151339333390358,
+      "U": 6.642028841276796e-08,
+      "toff": 250.65588074441857,
+      "beta": 4.281982176509933e-08,
+      "sigma": 1.4348064934754875e-08
+    },
+    {
+      "cut": 0.0,
+      "rank": 90,
+      "tau": 500.0,
+      "K": 10.0,
+      "noise_scale": 1.1151339333390358,
+      "U": 3.022453623905999e-07,
+      "toff": 251.13112212177796,
+      "beta": 3.7465313402512745e-08,
+      "sigma": 1.4963460850105e-08
+    }
+  ],
+  "leakage": [
+    {
+      "tau": 2.0,
+      "toff": 104.34942814305832,
+      "unit_noise_sigma": 7.685959913846988e-11,
+      "omitted_unit_bias_sigma": 0.5555753481850215,
+      "bias_sigma_by_R": {
+        "1": 0.5555753481850215,
+        "3": 1.6667260445550647,
+        "10": 5.555753481850215,
+        "30": 16.667260445550646
+      },
+      "fitted_omitted_residual_norm": 4.107750247103733
+    },
+    {
+      "tau": 2.0,
+      "toff": 174.27780224022817,
+      "unit_noise_sigma": 5.7829698585050555e-11,
+      "omitted_unit_bias_sigma": 0.9322901973731127,
+      "bias_sigma_by_R": {
+        "1": 0.9322901973731127,
+        "3": 2.796870592119338,
+        "10": 9.322901973731128,
+        "30": 27.96870592119338
+      },
+      "fitted_omitted_residual_norm": 4.107750247103733
+    },
+    {
+      "tau": 5.0,
+      "toff": 109.37340841800062,
+      "unit_noise_sigma": 8.465693466282949e-11,
+      "omitted_unit_bias_sigma": 0.6299778997757738,
+      "bias_sigma_by_R": {
+        "1": 0.6299778997757738,
+        "3": 1.8899336993273215,
+        "10": 6.299778997757738,
+        "30": 18.899336993273213
+      },
+      "fitted_omitted_residual_norm": 4.107750247103733
+    },
+    {
+      "tau": 5.0,
+      "toff": 179.16599926449638,
+      "unit_noise_sigma": 6.077455973289878e-11,
+      "omitted_unit_bias_sigma": 0.9904365934772419,
+      "bias_sigma_by_R": {
+        "1": 0.9904365934772419,
+        "3": 2.9713097804317257,
+        "10": 9.904365934772418,
+        "30": 29.713097804317258
+      },
+      "fitted_omitted_residual_norm": 4.107750247103733
+    },
+    {
+      "tau": 18.0,
+      "toff": 122.54438373338989,
+      "unit_noise_sigma": 9.03116633331987e-11,
+      "omitted_unit_bias_sigma": 0.6373010140305313,
+      "bias_sigma_by_R": {
+        "1": 0.6373010140305313,
+        "3": 1.911903042091594,
+        "10": 6.373010140305313,
+        "30": 19.11903042091594
+      },
+      "fitted_omitted_residual_norm": 4.107750247103733
+    },
+    {
+      "tau": 18.0,
+      "toff": 192.20119132921153,
+      "unit_noise_sigma": 6.435873539368485e-11,
+      "omitted_unit_bias_sigma": 0.9988281009080336,
+      "bias_sigma_by_R": {
+        "1": 0.9988281009080336,
+        "3": 2.996484302724101,
+        "10": 9.988281009080337,
+        "30": 29.96484302724101
+      },
+      "fitted_omitted_residual_norm": 4.107750247103733
+    },
+    {
+      "tau": 52.0,
+      "toff": 146.9853688547308,
+      "unit_noise_sigma": 1.1878746854665368e-10,
+      "omitted_unit_bias_sigma": 0.6528031118298067,
+      "bias_sigma_by_R": {
+        "1": 0.6528031118298067,
+        "3": 1.9584093354894199,
+        "10": 6.528031118298067,
+        "30": 19.5840933548942
+      },
+      "fitted_omitted_residual_norm": 4.107750247103733
+    },
+    {
+      "tau": 52.0,
+      "toff": 215.2164523184742,
+      "unit_noise_sigma": 8.652765989108198e-11,
+      "omitted_unit_bias_sigma": 0.9990285345759902,
+      "bias_sigma_by_R": {
+        "1": 0.9990285345759902,
+        "3": 2.9970856037279705,
+        "10": 9.9902853457599,
+        "30": 29.970856037279706
+      },
+      "fitted_omitted_residual_norm": 4.107750247103733
+    },
+    {
+      "tau": 200.0,
+      "toff": 174.61726036691348,
+      "unit_noise_sigma": 3.2644417677339344e-10,
+      "omitted_unit_bias_sigma": 0.6707808944661792,
+      "bias_sigma_by_R": {
+        "1": 0.6707808944661792,
+        "3": 2.0123426833985376,
+        "10": 6.7078089446617915,
+        "30": 20.123426833985373
+      },
+      "fitted_omitted_residual_norm": 4.107750247103733
+    },
+    {
+      "tau": 200.0,
+      "toff": 242.44099407863453,
+      "unit_noise_sigma": 2.420472200987053e-10,
+      "omitted_unit_bias_sigma": 0.9988296030548767,
+      "bias_sigma_by_R": {
+        "1": 0.9988296030548767,
+        "3": 2.99648880916463,
+        "10": 9.988296030548767,
+        "30": 29.9648880916463
+      },
+      "fitted_omitted_residual_norm": 4.107750247103733
+    },
+    {
+      "tau": 500.0,
+      "toff": 19.00965509437627,
+      "unit_noise_sigma": 7.914671832782271e-10,
+      "omitted_unit_bias_sigma": 0.6735651244665061,
+      "bias_sigma_by_R": {
+        "1": 0.6735651244665061,
+        "3": 2.0206953733995183,
+        "10": 6.7356512446650605,
+        "30": 20.20695373399518
+      },
+      "fitted_omitted_residual_norm": 4.107750247103733
+    },
+    {
+      "tau": 500.0,
+      "toff": 251.13112212177796,
+      "unit_noise_sigma": 5.89916012387708e-10,
+      "omitted_unit_bias_sigma": 0.9981754932747853,
+      "bias_sigma_by_R": {
+        "1": 0.9981754932747853,
+        "3": 2.994526479824356,
+        "10": 9.981754932747853,
+        "30": 29.945264798243556
+      },
+      "fitted_omitted_residual_norm": 4.107750247103733
+    }
+  ],
+  "artificial_prior_sensitivity": [
+    {
+      "tau": 2.0,
+      "toff": 104.34942814305832,
+      "prior_width": 0.0,
+      "beta": 5.513351507450175e-12,
+      "unit_noise_conditional_sigma": 7.685959913847036e-11
+    },
+    {
+      "tau": 2.0,
+      "toff": 104.34942814305832,
+      "prior_width": 1.0,
+      "beta": -4.027137590686781e-11,
+      "unit_noise_conditional_sigma": 8.358317407192129e-11
+    },
+    {
+      "tau": 2.0,
+      "toff": 104.34942814305832,
+      "prior_width": 3.0,
+      "beta": -8.740037897644181e-11,
+      "unit_noise_conditional_sigma": 9.050082138879128e-11
+    },
+    {
+      "tau": 2.0,
+      "toff": 104.34942814305832,
+      "prior_width": 10.0,
+      "beta": -9.267524098680776e-11,
+      "unit_noise_conditional_sigma": 9.241988047015255e-11
+    },
+    {
+      "tau": 2.0,
+      "toff": 104.34942814305832,
+      "prior_width": "infinity",
+      "beta": -9.14763805568182e-11,
+      "unit_noise_conditional_sigma": 9.266404863639402e-11
+    }
+  ],
+  "input_sha256": {
+    "request10_external/scripts/sep_common.py": "78b4ccb1fdbe1265c05953338e4f533ada561445827992c55293fb86d3d2a005",
+    "request10_external/scripts/sep_phase_marg_10_8e.py": "dcf2b07592cc28ccebe42fb3157b61648b7b0da840f70013cc2e35cd892814f2",
+    "request10_external/baseline_planetGR.npz": "44d0403ca91540c7c59ea8f5422b67e827ca243dd6965f7c3a018c4476fae059",
+    "request10_external/finite_jacobian_v2.npy": "29025ab20c263e8ddd9fd43352c1649679abd5c5f6beef718fd02920ac87a3c0",
+    "request10_external/carrier_projection_rank.json": "accfd9fe32322ce79614afff68601c81272a0ae8ef8d363c377725a2ebdd45eb",
+    "request10_external/sep_dynamic/col_SEP_D.npz": "0fe29967276af38db2e38fa60b6e35415d19a7e4f2f5b20414c9ce276fc4e49d",
+    "request10_external/sep_dynamic/sep_dynamic_columns.npz": "dbeb961e93a7cad2951d9c76e89cd9c016d6e7d133fdb26e7a0a7e73fb22d6c5",
+    "request10_external/sep_dynamic/sep_phase_marg_10_8e.json": "f8d715e5260fcf4268cb2e63d41da4b754fba67b970bc81920f42c68b0a34c36",
+    "request10_external/sep_dynamic/sep_rn_robustness_10_8h.json": "f34acbeb2808ec2f5f441f89dd566fee07f27d596124fff0d5dba462a8239400",
+    "request10_external/sep_dynamic/sep_gateG2.json": "6de1569fdbe031558d03865c2933247c10cbfa4a7112b3941efe83de5d3d96e2",
+    "request10_external/sep_dynamic/sep_gateG2wp.json": "2a1a63bd99a35632ab0638d28638d616e58ba012991903327a7597f8599b3aea",
+    "request10_external/sep_dynamic/sep_quadrature_overlap_10_8g.json": "d2fa9162f69e6b4fa6063eed59ae4b23bba46703022e587ae1f3f57a509455bf",
+    "request10_external/sep_dynamic/turn_search_10_8d.json": "78fef6085c725a0d766832d2c7607a173484edda82af8e886b0a1e1eed3e01fd"
+  }
+}

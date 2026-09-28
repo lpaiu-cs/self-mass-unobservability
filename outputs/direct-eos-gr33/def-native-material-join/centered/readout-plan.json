@@ -1,0 +1,30 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Actual centered-interior/shared-HLL material source and retarded charge; preserve the rejected upwind result separately.",
+  "method": "Same radial retarded integral and continuous vacuum rays as Phase114. Retain17 common saved times, stable conserved rest/nonrest sources, and all actual emitted photons. Compare direct charge and direct-plus-photon mass separately.",
+  "gates": {
+    "time_direct": 0.02,
+    "time_total": 0.02,
+    "time_deep_trace": 0.02,
+    "history_direct": 0.02,
+    "cadence_direct": 0.02,
+    "quadrature_direct": 0.02,
+    "ray_quadrature": 0.002,
+    "native_anchor": 0.002
+  },
+  "budget": {
+    "saved_readout_seconds": 60,
+    "independent_audit_seconds": 30,
+    "native_call_cap": 400,
+    "new_fluid_steps": 0,
+    "CPU_threads": 1,
+    "memory_GB": 3
+  },
+  "stop": "Keep any failed gate; no automatic time/radial/frequency refinement. A cancelled direct residual does not justify normalizing its error by the much larger photon term.",
+  "limits": "Acoustic interior mechanics and first-order density/inventory; background-reconstructed native face at34km center-to-face gap. Fixed metric and unresolved spatial/frequency/interior-angle errors. Not final physical charge.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_material_centered.py": "9e8b0fc38d98876e410cc4205a2de47a93b00f408972d399bac1feb3453e5278",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_material_join.py": "be1bcb8ccabcf1e980210f95db4053627eccd31466659e3237479feed495b505",
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_material_join.py": "b422c6c25b2df3d874a1d73e57f163149f9190e630f8e8de36892ca44f152022"
+  }
+}

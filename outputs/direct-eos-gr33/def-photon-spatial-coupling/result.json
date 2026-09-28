@@ -1,0 +1,108 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": false,
+  "rows": [
+    {
+      "kH": 0,
+      "duration_seconds": 0.0023168013831055567,
+      "time_order": 2.0141088981774318,
+      "time_differences_initial": [
+        4.52034488147258e-05,
+        1.119088358275736e-05
+      ],
+      "angular_difference_initial": 0.0,
+      "tail_capacity_fraction": 4.806270525520045e-21,
+      "final_temperature_K": 0.8048587448873968,
+      "energy_balance": 2.7892596842929767e-13,
+      "energy_equation_residual": 3.4608390043801696e-12,
+      "entropy_growth": 0.0,
+      "passed": true
+    },
+    {
+      "kH": 1,
+      "duration_seconds": 0.0023168013831055567,
+      "time_order": 2.01365673599366,
+      "time_differences_initial": [
+        4.84123992862662e-05,
+        1.1989070886594534e-05
+      ],
+      "angular_difference_initial": 8.169629683623683e-21,
+      "tail_capacity_fraction": 4.806270525520045e-21,
+      "final_temperature_K": 0.8019638328913719,
+      "energy_balance": 1.286514321663385e-13,
+      "energy_equation_residual": 3.39454593871435e-12,
+      "entropy_growth": 0.0,
+      "passed": true
+    },
+    {
+      "kH": 10,
+      "duration_seconds": 0.0023168013831055567,
+      "time_order": 1.9979429102827506,
+      "time_differences_initial": [
+        0.0007777540363058027,
+        0.00019471595007334246
+      ],
+      "angular_difference_initial": 2.3840842321486987e-05,
+      "tail_capacity_fraction": 4.806270525520045e-21,
+      "final_temperature_K": 0.6906252153547373,
+      "energy_balance": 2.0464298837149933e-13,
+      "energy_equation_residual": 1.377517576731324e-12,
+      "entropy_growth": 0.0,
+      "passed": true
+    }
+  ],
+  "controls": {
+    "arrowhead_relative": 1.0071528714928504e-13,
+    "free_angular_16_32": [
+      2.0322354910007334e-12,
+      2.42861286636753e-16
+    ],
+    "Kompaneets_time_order": 2.0174238266988547,
+    "Kompaneets_time_differences_initial": [
+      1.9000215190613597e-05,
+      4.693031117701493e-06
+    ],
+    "Kompaneets_number_relative": 8.952360039891126e-11,
+    "Kompaneets_energy_balance": 1.4525855217943e-10,
+    "Kompaneets_heating_relative": 1.2373677638066738e-09,
+    "Kompaneets_equilibrium_projection": 0.0063550949953619885,
+    "Kompaneets_null_residuals": [
+      4.026747127854645e-09,
+      7.702042264475788e-09
+    ],
+    "momentum_balance_score": 5.169878823912872e-25,
+    "frequency_split_energy_norm_difference_initial": 0.0006220390661042241,
+    "passed": false
+  },
+  "sensitivities": [
+    {
+      "name": "lower-temperature-opacity",
+      "energy_norm_difference_initial": 0.03303903561905741,
+      "temperature_difference_K": -0.012981119141880404
+    },
+    {
+      "name": "upper-temperature-opacity",
+      "energy_norm_difference_initial": 0.09061976982876167,
+      "temperature_difference_K": 0.038616859602585416
+    },
+    {
+      "name": "isotropic-gain",
+      "energy_norm_difference_initial": 1.0062103292453468e-05,
+      "temperature_difference_K": -1.089865564456401e-08
+    },
+    {
+      "name": "no-Compton",
+      "energy_norm_difference_initial": 0.015370849199259804,
+      "temperature_difference_K": 0.0006319152002438592
+    }
+  ],
+  "seconds": 46.703638203,
+  "peak_memory_GB": 1.03600128,
+  "unsplit_absorption_scattering_Compton_spatial_candidate_evolved": true,
+  "actual_temperature_native_request_passed": false,
+  "actual_opacity_interpolation_certified": false,
+  "native_angular_energy_kernel_certified": false,
+  "physical_atmosphere_closed": false,
+  "full_GR_photon_feedback_evolved": false,
+  "full_dynamic_charge_solved": false
+}

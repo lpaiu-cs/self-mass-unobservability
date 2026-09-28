@@ -1,0 +1,593 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "full_goal_complete": false,
+  "compact_GR": {
+    "classification": "Counterexample candidate",
+    "controls": {
+      "time": 0.00025100729998431753,
+      "quadrature": 9.077201064860482e-16,
+      "independent": 2.074797627095871e-15
+    },
+    "compact_return_endpoint": -8.938755896946132e-54,
+    "compact_return_maximum": 8.938755896946132e-54,
+    "incident_amplitude": 1e-30,
+    "inverse_radius_residual": 4.5634806156158447e-07,
+    "actual_external_input_consumed": false,
+    "actual_free_material_response_evolved": true,
+    "passed": true,
+    "full_null_infinity_charge": false,
+    "complete_reciprocal_fixed_point": false,
+    "full_goal_complete": false,
+    "normalized_compact_endpoint": -8.938755896946132e-54,
+    "normalization_factor": 9.223372036854776e+18,
+    "physical_self_GR_correction_endpoint": -9.69141856278661e-73,
+    "baseline_compact_endpoint": -2.5364324225812962e-51,
+    "signed_correction_over_baseline": -3.820885775038222e-22,
+    "total_compact_endpoint": -2.5364324225812962e-51,
+    "original_whole_state_change": 1.2149427040930618,
+    "original_waveform_change_test_passed": false,
+    "finite_block_input_residual": 2.4296103804734253e-06,
+    "finite_block_input_residual_passed": true,
+    "actual_self_GR_returned": true,
+    "common_fine_GR_input": true,
+    "upstream_GR_uncertainty_closed": false,
+    "original_different_GR_prefix_verdict": "failed",
+    "metric_residual_rows": [
+      {
+        "steps": 64,
+        "returned_over_applied_metric": {
+          "delta_u": 4.623123001447038e-21,
+          "delta_lambda": 1.1774194199226928e-20,
+          "delta_log_lapse": 1.1459335854776152e-20,
+          "delta_log_speed": 1.1766076952123485e-20,
+          "delta_u_prime": 5.6238138268683216e-21,
+          "delta_nu_prime": 1.1738049859500815e-20
+        }
+      },
+      {
+        "steps": 128,
+        "returned_over_applied_metric": {
+          "delta_u": 4.623823263508635e-21,
+          "delta_lambda": 1.1775110685488566e-20,
+          "delta_log_lapse": 1.1460784186485498e-20,
+          "delta_log_speed": 1.176699201115316e-20,
+          "delta_u_prime": 5.624521606636099e-21,
+          "delta_nu_prime": 1.1738965405061812e-20
+        }
+      }
+    ],
+    "maximum_self_metric_residual": 1.1775110685488566e-20,
+    "finite_self_metric_residual_passed": true,
+    "full_nonlinear_fixed_point": false,
+    "scope": "Actual self-GR application with finite material/photon and metric residuals; not a contraction, continuum error bound or final null-infinity charge.",
+    "normalized_endpoint_over_reference_eta": -8.938755896946132e-24,
+    "physical_correction_over_incident_amplitude": -9.69141856278661e-43,
+    "external_input_consumed_by_baseline": true,
+    "compact_return_endpoint_units": "Normalized self-GR increment; physical value is physical_self_GR_correction_endpoint."
+  },
+  "compensated_endpoint": {
+    "baseline": -2.5364324225812962e-51,
+    "correction": -9.69141856278661e-73,
+    "decimal_sum": "-2.536432422581296200000969141856278661E-51",
+    "scope": "Arithmetic sum of the recorded numerical estimates; extra digits are not physical accuracy."
+  },
+  "photon": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "rows": [
+      {
+        "classification": "Counterexample candidate",
+        "reference": 128,
+        "steps": 64,
+        "completed_steps": 64,
+        "new_steps": 60,
+        "seconds": 195.52641680200009,
+        "operator_point_seconds": 23.44282816700013,
+        "operator_points": 16,
+        "stepping_seconds": 169.10273622199986,
+        "energy_balance_relative": 4.517662062958889e-16,
+        "species_balance_relative": 1.4468942969762194e-13,
+        "linear_relative": 7.646128602741378e-17,
+        "max_Krylov_iterations": 35,
+        "frequency_moment_relative": 1.1299402539057845e-16,
+        "endpoint_photon_reference_energy_erg": 598.1190262405764,
+        "endpoint_material_reference_energy_erg": 16458.045055864506,
+        "endpoint_material_energy_L1_erg": 16458.045055864506,
+        "additional_material_motion_evolved": false,
+        "full_GR_feedback": false,
+        "final_charge_solved": false,
+        "endpoint_material_nonrest_energy_erg": 16446.27580152995,
+        "velocity_jet_relative": 6.152641209909016e-09,
+        "primitive_mapping_relative": 8.673617379884035e-19,
+        "conserved_material_input_applied": true,
+        "maximum_extended_stage_residual": 7.646128602741378e-17,
+        "maximum_refinement_steps": 1,
+        "initial_GMRES_stagnations": 120,
+        "passed": true
+      },
+      {
+        "classification": "Counterexample candidate",
+        "reference": 128,
+        "steps": 128,
+        "completed_steps": 128,
+        "new_steps": 120,
+        "seconds": 302.0887433930001,
+        "operator_point_seconds": 22.143713996999963,
+        "operator_points": 16,
+        "stepping_seconds": 276.9265889999999,
+        "energy_balance_relative": 4.875980728386801e-16,
+        "species_balance_relative": 1.445653069635794e-13,
+        "linear_relative": 9.934403102944098e-15,
+        "max_Krylov_iterations": 24,
+        "frequency_moment_relative": 1.476070252647671e-16,
+        "endpoint_photon_reference_energy_erg": 598.137387837289,
+        "endpoint_material_reference_energy_erg": 16458.02683445634,
+        "endpoint_material_energy_L1_erg": 16458.02683445634,
+        "additional_material_motion_evolved": false,
+        "full_GR_feedback": false,
+        "final_charge_solved": false,
+        "endpoint_material_nonrest_energy_erg": 16446.25610829912,
+        "velocity_jet_relative": 6.152641209909016e-09,
+        "primitive_mapping_relative": 8.673617379884035e-19,
+        "conserved_material_input_applied": true,
+        "maximum_extended_stage_residual": 9.934403102944098e-15,
+        "maximum_refinement_steps": 1,
+        "initial_GMRES_stagnations": 359,
+        "passed": true
+      }
+    ],
+    "time_comparison": [
+      3.7479618233643876e-05,
+      1.1071441540561875e-06,
+      1.649823845482038e-05,
+      4.218719344073902e-05,
+      1.9960531977566418e-05,
+      1.2733672331934746e-06
+    ],
+    "seconds": 517.0931034000001
+  },
+  "material": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "rows": [
+      {
+        "classification": "Counterexample candidate",
+        "passed": true,
+        "steps": 64,
+        "reference": 128,
+        "completed": 64,
+        "substeps": 369,
+        "balance_relative": [
+          2.844526781034034e-19,
+          2.658620966822839e-18,
+          2.9027005069438616e-16,
+          5.629538027144188e-18
+        ],
+        "directional": [
+          {
+            "time": 0.0017172155589643512,
+            "relative": [
+              3.158056043099836e-10,
+              4.2286462989132786e-14,
+              2.4937697349082514e-13,
+              7.480709836077176e-17
+            ]
+          },
+          {
+            "time": 0.0034344311179287023,
+            "relative": [
+              5.278267550764682e-12,
+              1.2252874568264074e-15,
+              2.626601016717943e-14,
+              5.184624210072058e-16
+            ]
+          }
+        ],
+        "directional_relative": 3.158056043099836e-10,
+        "forward_probe_indicator": 0.0001345582177569219,
+        "maximum_true_relative_state": 4.657110007846903e-28,
+        "endpoint_sum": [
+          4.13298174741783e-05,
+          2.3715450618489474e+35,
+          1.6458045055882584e+30,
+          -1.6564106705772129e+37
+        ],
+        "endpoint_L1": [
+          134084682356925.9,
+          2.3715450618489474e+35,
+          1.6458045055882587e+30,
+          1.6573882684668036e+37
+        ],
+        "endpoint_sum_physical": [
+          4.13298174741783e-31,
+          2371545061.8489475,
+          16458.045055882583,
+          -165641067057.72128
+        ],
+        "endpoint_L1_physical": [
+          1.3408468235692591e-12,
+          2371545061.8489475,
+          16458.045055882587,
+          165738826846.68036
+        ],
+        "discard_physical": [
+          7.359601998827712e-35,
+          4.970579012428128e-17,
+          1.3151504471301989e-20,
+          6.332893146695569e-12
+        ],
+        "raw_owner_calls": 2996,
+        "seconds": 30.741548776000172,
+        "full_GR_feedback": false,
+        "final_charge_solved": false,
+        "worker_wall_seconds": 35.22925288700003,
+        "physical_branch_ratio": 8.149712787431502e-21,
+        "maximum_owner_error": 1.8890685044047918e-13,
+        "endpoint_probe_half_nominal_double": [
+          [
+            5.278267550778404e-12,
+            1.2252874568264072e-15,
+            2.62660101671796e-14,
+            5.184624210072058e-16
+          ],
+          [
+            6.321461663738793e-12,
+            9.294672120472783e-16,
+            2.073970116455739e-14,
+            6.210047651113275e-16
+          ]
+        ],
+        "nominal_arithmetic_probe": 512
+      },
+      {
+        "classification": "Counterexample candidate",
+        "passed": true,
+        "steps": 128,
+        "reference": 128,
+        "completed": 128,
+        "substeps": 728,
+        "balance_relative": [
+          5.493764161182719e-19,
+          7.747981104161567e-18,
+          2.8860022893559965e-16,
+          2.4603426210332278e-17
+        ],
+        "directional": [
+          {
+            "time": 0.0017172155589643512,
+            "relative": [
+              3.971586848588816e-10,
+              4.499056565104149e-14,
+              2.9555698349665226e-13,
+              9.402194257964033e-17
+            ]
+          },
+          {
+            "time": 0.0034344311179287023,
+            "relative": [
+              2.703583099531387e-12,
+              1.884285848201954e-15,
+              2.829454702543495e-14,
+              2.657270702354829e-16
+            ]
+          }
+        ],
+        "directional_relative": 3.971586848588816e-10,
+        "forward_probe_indicator": 0.0003914989831097923,
+        "maximum_true_relative_state": 4.888353926307239e-28,
+        "endpoint_sum": [
+          7.985075314920209e-05,
+          2.3715450618471304e+35,
+          1.64580268344586e+30,
+          -1.656394307818817e+37
+        ],
+        "endpoint_L1": [
+          134097748261363.86,
+          2.3715450618471304e+35,
+          1.64580268344586e+30,
+          1.6573714203476008e+37
+        ],
+        "endpoint_sum_physical": [
+          7.98507531492021e-31,
+          2371545061.8471303,
+          16458.026834458604,
+          -165639430781.8817
+        ],
+        "endpoint_L1_physical": [
+          1.3409774826136387e-12,
+          2371545061.8471303,
+          16458.026834458604,
+          165737142034.76007
+        ],
+        "discard_physical": [
+          -9.408603589490463e-35,
+          -3.869457479202357e-17,
+          -9.143826890784751e-21,
+          6.757327388297227e-12
+        ],
+        "raw_owner_calls": 5864,
+        "seconds": 60.26292083399994,
+        "full_GR_feedback": false,
+        "final_charge_solved": false,
+        "worker_wall_seconds": 64.66858954600002,
+        "physical_branch_ratio": 8.48957641798294e-21,
+        "maximum_owner_error": 1.8890685044047918e-13,
+        "endpoint_probe_half_nominal_double": [
+          [
+            2.7035830995289205e-12,
+            1.8842858482019545e-15,
+            2.8294547025435025e-14,
+            2.657270702354829e-16
+          ],
+          [
+            3.481804452538123e-12,
+            9.21354699855592e-16,
+            1.7521246074012196e-14,
+            3.4195120276926075e-16
+          ]
+        ],
+        "nominal_arithmetic_probe": 512
+      }
+    ],
+    "seconds": 100.01840343200001
+  },
+  "sources": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "comparisons": {
+      "time": [
+        0.00013241292117867625,
+        8.48656179793586e-12,
+        1.107145128901037e-06,
+        1.6498334033875264e-05
+      ],
+      "stress_time": [
+        0.00013241408311222822,
+        1.2985247136897348e-06,
+        0.00013241175905844604,
+        1.2985813796049484e-06,
+        3.7657225123648654e-05,
+        2.0050623527571107e-05
+      ]
+    },
+    "paths": [
+      {
+        "steps": 64,
+        "reference": 128,
+        "conservation": 3.8832141710148192e-16,
+        "pressure_probe": 1.4333372857085967e-10,
+        "legacy_material_sweep_comparison": null,
+        "energy_H_waveform_residual": [
+          1.7230696274620497e-10,
+          9.482547923574337e-10
+        ]
+      },
+      {
+        "steps": 128,
+        "reference": 128,
+        "conservation": 3.6617208279897144e-16,
+        "pressure_probe": 1.4468905393889521e-10,
+        "legacy_material_sweep_comparison": null,
+        "energy_H_waveform_residual": [
+          6.307879973767639e-11,
+          9.300349839762563e-10
+        ]
+      }
+    ],
+    "seconds": 16.885169313999995,
+    "returned_photon_transfer_applied_to_material": true,
+    "coupled_fixed_point_verified": false,
+    "final_charge_solved": false
+  },
+  "residual": {
+    "classification": "Counterexample candidate",
+    "rows": [
+      {
+        "steps": 64,
+        "material_waveform_residual": [
+          3.874098825128553e-07,
+          7.897300633556293e-08,
+          0.048199698365745856,
+          1.2149427040930618
+        ],
+        "photon_material_energy_H_residual": [
+          1.723069627293523e-10,
+          9.482547923512484e-10
+        ],
+        "material_balance": 3.8832141710148192e-16,
+        "angular_port": 6.375876072094531e-17
+      },
+      {
+        "steps": 128,
+        "material_waveform_residual": [
+          1.525457980875702e-07,
+          7.8984965013124e-08,
+          0.04820165591481878,
+          1.2149376695385863
+        ],
+        "photon_material_energy_H_residual": [
+          6.307879973869606e-11,
+          9.30034983970343e-10
+        ],
+        "material_balance": 3.6617208279897144e-16,
+        "angular_port": 2.1798043678362568e-18
+      }
+    ],
+    "time_comparison": [
+      0.00013241292117867625,
+      8.48656179793586e-12,
+      1.107145128901037e-06,
+      1.6498334033875264e-05
+    ],
+    "maximum_residual": 1.2149427040930618,
+    "previous_residual": 1.0,
+    "finite_reciprocal_residual_passed": false,
+    "passed": true,
+    "next_sweep_allowed": false,
+    "full_nonlinear_fixed_point": false,
+    "self_GR_returned": true,
+    "full_goal_complete": false,
+    "self_GR_scope": "Common prescribed fine GR generated by the Phase156 response; raw inherited parent labels remain archived."
+  },
+  "block_coupling": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "rows": [
+      {
+        "steps": 64,
+        "lagged_inputs": {
+          "xi": 4.2736626868848565e-07,
+          "energy_offset": 3.544531348482948e-07,
+          "B": 3.8740988253500475e-07,
+          "S": 7.897300635009318e-08,
+          "M_Etilde": 8.851697010564771e-10,
+          "dM_Etilde": 1.267592294324983e-09,
+          "M_H": 2.4296103804734253e-06,
+          "dM_H": 1.3919991599535763e-06
+        },
+        "stage_forcing_defect": [
+          1.6228849178207312e-08,
+          1.1396557030134713e-08,
+          2.4379952159202268e-09,
+          1.145631467950831e-08
+        ],
+        "paired_E_H": [
+          1.723069627293523e-10,
+          9.482547923512484e-10
+        ],
+        "stage_count": 128,
+        "stage_operator_identical": true,
+        "forecast_seconds": 283.4877402820009
+      },
+      {
+        "steps": 128,
+        "lagged_inputs": {
+          "xi": 2.167790513141667e-07,
+          "energy_offset": 1.4253238755028099e-07,
+          "B": 1.5254579808684613e-07,
+          "S": 7.898496503298775e-08,
+          "M_Etilde": 3.65772479222405e-10,
+          "dM_Etilde": 3.437706825246706e-10,
+          "M_H": 2.3827354034321192e-06,
+          "dM_H": 1.3918627044670506e-06
+        },
+        "stage_forcing_defect": [
+          8.114731057331133e-09,
+          5.210243166529564e-09,
+          8.500663418490312e-10,
+          4.850946199102387e-09
+        ],
+        "paired_E_H": [
+          6.307879973869606e-11,
+          9.30034983970343e-10
+        ],
+        "stage_count": 256,
+        "stage_operator_identical": true,
+        "forecast_seconds": 268.7122127480005
+      }
+    ],
+    "maximum_block_defect": 2.4296103804734253e-06,
+    "original_waveform_change_test_passed": false,
+    "original_stop_preserved": true,
+    "no_new_evolution_steps": true,
+    "scope": "A separate finite block-equation consistency audit, not the failed whole-state-change convergence criterion, a continuum contraction, or a solution-error bound. Compact readout may be reported only under this explicitly narrower criterion.",
+    "seconds": 137.242735975
+  },
+  "audit": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "rows": [
+      {
+        "steps": 64,
+        "source_identity": 4.064348995086508e-30,
+        "mechanical_collision_partition": [
+          1.6984123256000277e-16,
+          5.605919026130472e-15
+        ],
+        "angular_port": 1.3070421487512735e-16,
+        "material_balance": 3.8832141710148192e-16,
+        "accepted_prefix_preserved": true
+      },
+      {
+        "steps": 128,
+        "source_identity": 4.064160853292574e-30,
+        "mechanical_collision_partition": [
+          1.883280483711332e-16,
+          7.861469847069801e-15
+        ],
+        "angular_port": 1.675151093736441e-17,
+        "material_balance": 3.6617208279897144e-16,
+        "accepted_prefix_preserved": true
+      }
+    ],
+    "material_directional_controls": [
+      {
+        "k": 1,
+        "time": 0.0002146519448705439,
+        "balanced_original_direction_scale": 4.751445874353271e-09,
+        "additivity": [
+          4.659768291519374e-05,
+          3.426822672538097e-08,
+          3.5209188185691053e-09,
+          1.0566951327325926e-12
+        ],
+        "positive_homogeneity": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "k": 8,
+        "time": 0.0017172155589643512,
+        "balanced_original_direction_scale": 2.4518706246021324e-06,
+        "additivity": [
+          2.613635464553265e-10,
+          3.9968453071138694e-14,
+          2.0244052650055806e-13,
+          6.488930055246832e-17
+        ],
+        "positive_homogeneity": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "k": 16,
+        "time": 0.0034344311179287023,
+        "balanced_original_direction_scale": 6.150508046650348e-06,
+        "additivity": [
+          2.7065267935674012e-12,
+          1.9243483819676377e-15,
+          2.844190937151202e-14,
+          3.0018984594108742e-16
+        ],
+        "positive_homogeneity": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    ],
+    "scope": "Sampled directions on the retained finite background only; not uniform branch/native derivative or continuum certification.",
+    "full_goal_complete": false
+  },
+  "cost": {
+    "recorded_action_seconds": 2659.2871709200003,
+    "CPU_seconds": 2461.5989230590003,
+    "peak_RSS_bytes": 2911903744,
+    "CPU_threads": 1,
+    "virtual_GiB": 3,
+    "scope": "Recorded action bodies including failed prefixes; excludes imports, inspection, writing, publication and Git. Not total task time."
+  },
+  "original_different_GR_prefix_verdict": "failed",
+  "upstream_GR_uncertainty_closed": false,
+  "original_waveform_change_test_passed": false,
+  "accepted_scope": "Fixed-input finite block-equation consistency and compact readout only.",
+  "contribution": "Conditional loophole progress at one common fine GR input: return the generated metric to photon/material evolution and read compact charge after direct lagged-input/stage-source and metric residual checks. Original different-input and whole-state monotonicity tests remain failed; no third evolution was performed."
+}

@@ -1,0 +1,47 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "8f878bb",
+  "bindings": {
+    "verification/coulomb_curvature.py": "43bea2052b0642d5c20497c22ffa14abd066368f6630c3322b0634820f9082d3",
+    "outputs/direct-eos-gr33/species-inventory/manifest.json": "1a55133a70949243fa3dc1bdb4681f260e549f8da0690d169017a58eb78ffa9e",
+    "outputs/direct-eos-gr33/species-inventory/inventory_bridge.f90": "ee9375deb6941add7ec549dd7b07aa0835f3b9fbfbb37b84139400a5f38a7927",
+    "verification/eos_species_inventory.py": "56290581f614dd4d8e1ecf4fa493f1f546220f53fa838e3da7907c92eec7f5e9",
+    "outputs/direct-eos-gr33/reference-state.npz": "17cbbb101628ca9bc111dca0cfe902210f13697c632b91c03913a1718cf7d2ef",
+    "outputs/direct-eos-gr33/coulomb-curvature/mod_free_eos.f90": "d544eb048083766fda52990ebd8e8b4c44a8574049ae419b12e1f31bf7929a8f",
+    "outputs/direct-eos-gr33/coulomb-curvature/mod_coulomb.f90": "719d388e8e6e5af6e54d4329d2e898c866469b51bf291bf4d1ee7afc31d6640b",
+    "outputs/direct-eos-gr33/coulomb-curvature/master_coulomb.f90": "4e4c6bb2847c7563d50046d13c0608e43dd87e61cd543f3b8441d8f2c9e2809a",
+    "outputs/direct-eos-gr33/coulomb-curvature/coulomb.f90": "f1f6471fe1ffc6ad18a4e174e0605a75050c9db6b371155133cc203c54ee3066",
+    "outputs/direct-eos-gr33/coulomb-curvature/mod_free_eos_constants.f90": "b2343290a6c273e4e1e78079abbc8093c39efd6007a4523bde8063c581469af4"
+  },
+  "library_sha256": "6348e235763db0112687f391ab1c06c34b33aa530973ea4a414a5d0f21b1dfb4",
+  "state": "outputs/direct-eos-gr33/reference-state.npz",
+  "cells": 5735,
+  "processes": 4,
+  "block_cells": 128,
+  "control_cells": [
+    0,
+    2972,
+    5734
+  ],
+  "same_EOS_free_value_relative_tolerance": 1e-09,
+  "same_electron_density_relative_tolerance": 1e-10,
+  "normalized_Hessian_symmetry_tolerance": 1e-12,
+  "finite_log_steps": [
+    0.0001,
+    5e-05
+  ],
+  "normalized_Hessian_derivative_tolerance": 1e-05,
+  "settings": {
+    "fermi_morder": 21,
+    "ifcoulomb": 5,
+    "if_dc": 0,
+    "if_pteh": 0,
+    "master_ifnr": 3
+  },
+  "hypothesis": "EOS1 (3,1,-2) uses non-PTEH Coulomb sums with no metal-sum approximation, ifcoulomb=5 and no diffraction. Reconstruct sum0,sum2 from the actual saved ion and H2+ populations, and verify the Coulomb free energy before interpreting curvature.",
+  "derivative_coordinates": "Independent ln f, ln sum0, ln sum2 at fixed temperature; convert the ln f column to ln ne using dlnne/dlnf. Normalize the physical Hessian as diag(ne,sum0,sum2) H diag(ne,sum0,sum2)/(kT ne).",
+  "curvature": "Use ideal-ion Fisher metric diag(1/n_species), ideal electron compressibility, and actual Coulomb Hessian; project onto each element inventory, counting two H nuclei in H2/H2+. Report signed eigenvalues on saved positive population support, with no pass criterion implying whole-EOS convexity.",
+  "full_EOS_Hessian_certified": false,
+  "physical_EOS_certified": false,
+  "full_GR_evolution": false
+}

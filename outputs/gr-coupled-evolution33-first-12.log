@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/mnt/e/lab/self-mass-unobservability/verification/gr_coupled_evolution.py", line 278, in <module>
+    run(parser.parse_args())
+  File "/mnt/e/lab/self-mass-unobservability/verification/gr_coupled_evolution.py", line 244, in run
+    k1,z=star.rhs(delta)
+  File "/mnt/e/lab/self-mass-unobservability/verification/gr_coupled_evolution.py", line 195, in rhs
+    rates = np.linalg.solve(A,b).astype(ld)
+  File "/home/lpaiu/.local/lib/python3.10/site-packages/numpy/linalg/_linalg.py", line 410, in solve
+    r = gufunc(a, b, signature=signature)
+ValueError: solve: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (m,m),(m,n)->(m,n) (size 12 is different from 4)

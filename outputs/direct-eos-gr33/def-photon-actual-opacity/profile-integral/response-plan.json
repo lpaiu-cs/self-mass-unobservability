@@ -1,0 +1,26 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Check coupled-response convergence after replacing triangular line interpolation. This is a declared atomic candidate, not same-EOS opacity certification.",
+  "paths": "Fine profile Gauss8 at16/32/64 steps; coarse background64; profile Gauss4 with fine background64. One shared collective scattering matrix; saved TOPS response reused.",
+  "forecast_seconds": [
+    180,
+    350
+  ],
+  "hard_seconds": 480,
+  "memory_GB": 4,
+  "CPU_workers": 1,
+  "new_stellar_steps": 0,
+  "gates": {
+    "time_order": 1.8,
+    "time_error": 0.001,
+    "source_grid_plus_two_tails": 0.001,
+    "profile_quadrature": 0.0001
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_photon_profile_integral.py": "fdf6817fd392f87363ad89cff076b3facae77ff0edddece3a5c771a84448f155",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_photon_actual_opacity_validate.py": "b6aa8aca9a9d54eafce38fba6c0bcbfbd1bda180497b31794a4ffcf46ad529be",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-actual-opacity/profile-integral/bank.npz": "923156edec7f1cbc44c8b58bb2771b497852f22d8ceb1c4c8af6d5e0bafe6ba4",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-actual-opacity/profile-integral/preflight.json": "4d443788b4e0072e2d5c6dca5171d0fa3ecc961649650ae58c2eae54f66394c6",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-collective/continuum/q-grid.npz": "a421289fd7658833d21c00d105dd0bf0853317b49cc87b20e34c8a2a790bda2d"
+  }
+}

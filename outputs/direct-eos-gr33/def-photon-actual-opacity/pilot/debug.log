@@ -1,0 +1,41 @@
+
+ INPUT KEYWORD PARAMETERS:
+ -------------------------
+ ND=1                                                                            
+ IFMOL=0                                                                         
+ TMOLIM=10000.                                                                   
+                               *******************************************
+                               I                                         I
+                               I   S Y N T H E T I C   S P E C T R U M   I
+                               I                                         I
+                               I        FOR MODEL ATMOSPHERE WITH        I
+                               I                                         I
+                               I              TEFF  = 18828.             I
+                               I              LOG G =   4.00             I
+                               I                                         I
+                               *******************************************
+0
+
+ CHEMICAL ELEMENTS INCLUDED
+ --------------------------
+
+ NUMBER  ELEMENT           ABUNDANCE
+                 A=N(ELEM)/N(H)  A/A(SOLAR)
+
+At line 1716 of file synspec54.f
+Fortran runtime error: Index '9' of dimension 2 of array 'enev' above upper bound of 8
+
+Error termination. Backtrace:
+#0  0x7d757d223960 in ???
+#1  0x7d757d2244d9 in ???
+#2  0x7d757d224ad6 in ???
+#3  0x55557b2ecb5d in state0_
+	at /home/lpaiu/work/direct-eos-gr33/photon-actual-opacity/build/synspec54.f:1716
+#4  0x55557b2df0c2 in initia_
+	at /home/lpaiu/work/direct-eos-gr33/photon-actual-opacity/build/synspec54.f:387
+#5  0x55557b2dcee2 in start_
+	at /home/lpaiu/work/direct-eos-gr33/photon-actual-opacity/build/synspec54.f:273
+#6  0x55557b2f2f81 in synspec
+	at /home/lpaiu/work/direct-eos-gr33/photon-actual-opacity/build/synspec54.f:66
+#7  0x55557b2f395a in main
+	at /home/lpaiu/work/direct-eos-gr33/photon-actual-opacity/build/synspec54.f:174

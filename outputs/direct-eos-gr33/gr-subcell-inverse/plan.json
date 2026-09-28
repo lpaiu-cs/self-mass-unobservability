@@ -1,0 +1,62 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "6338252",
+  "bindings": {
+    "verification/gr_heat_primitive_inverse.py": "f4bda1760f688bddb10530b816c7c4042d97f381a8e0ebc0d261de9f8499e433",
+    "outputs/direct-eos-gr33/initial-state-17-4.npz": "5dcc8ffb8b32a9f15ccc4c8bb7111d19be8dcdc66611ad2942e3a4a0cf6cc6d6",
+    "outputs/direct-eos-gr33/gr-microphysics/auxiliaries.npz": "63744d1a041ebc39bd33dfa0f5e181d64378966c1ee22364c477009bee08d976",
+    "outputs/direct-eos-gr33/gr-heat-entropy-closure/initial-rates.npz": "c288fbf689b4fdccfef9901bf503363c1cd998fe014a5de023ce9f49d99aba4a",
+    "outputs/direct-eos-gr33/gr-heat-characteristics/coefficients.npz": "c3e942d127fc698ae0edd8c5ead2d3047d1180aa017024c2ec895ba756683eb8",
+    "outputs/direct-eos-gr33/gr-heat-entropy-closure/manifest.json": "d48ed74b8faa1d9bff3d881b78e980d792eb0b762c5ed7ca74120de77813787e",
+    "verification/gr_heat_primitive_newton.py": "825150c9123b3b316ada84e0cdcf584950439a25750135174ca9739ea39ab84b",
+    "outputs/direct-eos-gr33/gr-heat-primitive-inverse/manifest.json": "0efe1f162b57800c56dce7d2c24072c4449b73cd4d9bec23abf4bffcec7b8e93",
+    "outputs/direct-eos-gr33/gr-heat-primitive-scaling/manifest.json": "2e63025a5631ce15b1ef60f0906f53abda26aa88dc738589460399aca15ee32d",
+    "verification/gr_subcell_inverse.py": "855b8448c6c32a19918ceb1a8fd65cd4f49fc72678a8c46a01aae72dca5dc003",
+    "outputs/direct-eos-gr33/gr-subcell-reference/plan.json": "97d58bbe02da931663091c4580eff858ae454713fa5b3ce4c56d1f8a150f0575",
+    "outputs/direct-eos-gr33/gr-heat-primitive-newton/manifest.json": "fc0c599521372d76fe8c7896e057a6a64ccaa36f079b9b1cbccae80c42e4df2b"
+  },
+  "cells": [
+    0,
+    1,
+    2,
+    2972
+  ],
+  "probes": [
+    [
+      -0.0001,
+      0.0002,
+      -0.0001
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0001,
+      -0.0002,
+      0.0001
+    ]
+  ],
+  "probe_order": "log density shift, log temperature shift, v/c; Q retains the saved comoving heat value.",
+  "frozen_velocity_interval": [
+    -0.5,
+    0.5
+  ],
+  "root_logT_tolerance": 1e-09,
+  "root_velocity_tolerance": 1e-12,
+  "root_log_density_tolerance": 1e-10,
+  "scaled_residual_tolerance": 1e-10,
+  "root_guess": "lnT_true+0.003, v=0, density inferred from fixed normal baryon D=rho*W.",
+  "scope": "Three-parameter nonuniform reconstruction in four fixed-metric cells. Constructed moment targets vary baryon inventory in a fixed geometry for inverse testing; this is not a material time path. No uniform-cell substitution, full-star evolution, arbitrary subcell closure or continuous root/EOS error certificate.",
+  "max_iterations": 30,
+  "max_backtracks": 24,
+  "Newton_scaled_residual": 1e-12,
+  "logT_step_cap": 0.1,
+  "velocity_step_cap": 0.01,
+  "change": "Retain nonuniform rho0,T0 and positive coordinate/proper-volume weights. Apply constant cell log-density and log-temperature shifts and a common cell velocity; fixed Q equals the saved midpoint heat density on all nodes. Native EOS is evaluated on every node for each residual/Jacobian. Invert B, U-C*kappa*B, Pi under the same decreasing Newton and original error tolerances.",
+  "nodes": 16,
+  "tolerance_index": 1,
+  "scale": "Use the unperturbed node heat-capacity and enthalpy integrals for residual scales; no truth-derived solver scale.",
+  "startup_gate": "The full native node export must complete; all four 16-node fine-tolerance baryon, mass and internal-energy comparisons must pass their original gates."
+}

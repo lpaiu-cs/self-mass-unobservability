@@ -1,0 +1,60 @@
+{
+  "classification": "Counterexample candidate",
+  "cause": {
+    "classification": "Counterexample candidate",
+    "worst_index": [
+      1,
+      5602
+    ],
+    "seconds": 0.00010732597243527195,
+    "radius": 0.9909608712813655,
+    "early32": [
+      0.0,
+      -7.026201584691723e-05,
+      -5.709573120812484e-05,
+      -6.26633273205405e-05,
+      -6.417396473863219e-05,
+      -6.662565508912884e-05,
+      -6.884032047236239e-05,
+      -7.103611331378468e-05
+    ],
+    "early64": [
+      0.0,
+      -6.465419468779384e-05,
+      -5.6691041204724064e-05,
+      -5.891423337749506e-05,
+      -5.9877084736548815e-05,
+      -6.0941765569013225e-05,
+      -6.205378252461458e-05,
+      -6.317842821241266e-05,
+      -6.431907173178039e-05,
+      -6.54624004030318e-05,
+      -6.66021808374778e-05,
+      -6.773268456689164e-05,
+      -6.885010745470145e-05,
+      -6.995181378797083e-05,
+      -7.103612211242948e-05,
+      -7.210203634260875e-05
+    ],
+    "error_after_four_coarse_steps": 0.0013372834376355386,
+    "endpoint_difference": 1.1644116688831762e-09
+  },
+  "method": "Replace uniform t_j=T*j/n by nested t_j=T*(j/n)^2, recomputing the same SDIRK stage factorization per step. Keep16/32/64 and p2-64, the same endpoint, fields and original gates. This resolves the measured initial thermal layer without adding steps or increasing the interval.",
+  "old_failure_preserved": true,
+  "budget": {
+    "previous_seconds": 258.626291378,
+    "hard_additional_seconds": 120,
+    "forecast_additional_seconds_range": [
+      15,
+      60
+    ],
+    "registered_total_cap_seconds": 600,
+    "new_EOS_calls": 0,
+    "automatic_expansion": false
+  },
+  "bindings": {
+    "result.json": "22f5cb6e7a5f05cdb07562f6bba1d92c5e9bcde29c4a0c981b17e9737490cde3",
+    "uniform-source.py": "f67b01b3271f1e7774788757ab2a1bb85da49cec89cc94fc93e5399bd2645cc2",
+    "initial-layer-diagnosis.json": "a29db92bfd91474c105ec4eaa47c69477f8f5b58aa17ad28e30bf740b83f151e"
+  }
+}

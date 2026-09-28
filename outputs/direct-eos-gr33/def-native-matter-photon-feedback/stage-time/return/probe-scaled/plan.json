@@ -1,0 +1,21 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "Completed reference64 material return fails endpoint momentum directional comparison0.30497percent against unchanged0.2percent. Errors are concentrated in deep cells0-8 and increase as probes shrink:1.34percent at0.125/0.25,0.305percent at0.5/1,0.0341percent at4/8,0.0135percent at8/16.",
+  "repair": "The deep nearly balanced force subtraction reaches its arithmetic floor. Use8x finite probe within the same Richardson directional derivative, retaining actual donor branches and original physical amplitude. Check both4/8 and8/16 on the new evolved state; do not change the0.002 gate.",
+  "reuse": "Retain both accepted reference128 material paths and all accepted photons. Recompute only failed128/reference64 using identical SSP,CFL,geometry and physical fluxes. No new mesh, clocks,EOS banks or horizon.",
+  "budget": {
+    "pilot_seconds": 25,
+    "production_seconds": 250,
+    "CPU_threads": 1,
+    "memory_GB": 3
+  },
+  "forecast": "Use the measured79.88s failed full path, scaled by new/old prefix time per raw call, plus5s. Require2x forecast below250s.",
+  "stop": "Stop on prefix gate, forecast, completed directional gate or250s. Do not automatically search further probe scales or physical resolutions.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_material_return_precision.py": "61a1aeebf795713e868ed6ce3f68f5a8ac66a606801c37db109d1bc6915c8f0b",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_feedback_return.py": "34b14c01c25fea04b83e148dee60fa1c1adb24a552cb3ec7f75d3703f859efe8",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-matter-photon-feedback/stage-time/return/production.json": "d5373767e6c94500b52fb5f42e4c2f66c33c4b0465a44d9dca5cf0622a669e9f",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-matter-photon-feedback/stage-time/return/probe.json": "7b1cf542dc1286e5b1e1a8ca04ac88395f62629501847776fe7fa32c408ea3b9",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-matter-photon-feedback/stage-time/return/production-producer.py": "73a7f509a4ab3e89eaa5c918846601cda4a2bb6eb7c57c8ecba4988500a77808"
+  }
+}

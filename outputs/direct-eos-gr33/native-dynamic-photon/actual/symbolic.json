@@ -1,0 +1,8 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "fixed_radius": "h=delta_lnH-delta_nu-delta_lnL; dh/dr=-delta_nu_prime-mu*delta_lambda_t/(c*N*sqrt(b)); delta_t_prime=[-zeta-(1-mu^2)*h/mu^2]/(c*N*sqrt(b)*mu).",
+  "fixed_time": "delta_r=-c*N*sqrt(b)*mu*delta_t; delta_mu=(1-mu^2)/mu*[h+(1/r-nu0_prime)*delta_r]; delta_lnH=delta_nu+u_launch+h; delta_lnL=u_launch.",
+  "source": "For any smooth radial test psi, delta integral(4pi*r^2*rho_E*psi dr)=sum E0*sqrt(b)/N*[psi*(delta_lnH-delta_nu-delta_lambda)+delta_r*(psi_prime-(lambda0_prime+nu0_prime)*psi)]. Radial flux and pressure additionally vary mu and mu^2.",
+  "scope": "Linearized null kinematics, angular invariant and packet stress measure. No scalar/mass closure, boundary replay or final charge theorem."
+}

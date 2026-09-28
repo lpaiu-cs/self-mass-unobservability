@@ -1,0 +1,24 @@
+DIRECT EOS SOURCE AUXILIARY 0
+DIRECT EOS SOURCE AUXILIARY 500
+DIRECT EOS SOURCE AUXILIARY 1000
+DIRECT EOS SOURCE AUXILIARY 1500
+DIRECT EOS SOURCE AUXILIARY 2000
+DIRECT EOS SOURCE AUXILIARY 2500
+DIRECT EOS SOURCE AUXILIARY 3000
+DIRECT EOS SOURCE AUXILIARY 3500
+DIRECT EOS SOURCE AUXILIARY 4000
+DIRECT EOS SOURCE AUXILIARY 4500
+DIRECT EOS SOURCE AUXILIARY 5000
+DIRECT EOS SOURCE AUXILIARY 5500
+Traceback (most recent call last):
+  File "/mnt/e/lab/self-mass-unobservability/verification/direct_eos_gr.py", line 208, in <module>
+    if __name__=='__main__': globals()[sys.argv[1]]()
+  File "/mnt/e/lab/self-mass-unobservability/verification/direct_eos_gr.py", line 195, in reference_source
+    raw,corrected=s.evaluate('reference',data)
+  File "/mnt/e/lab/self-mass-unobservability/verification/conservative_star.py", line 78, in evaluate
+    v.shim.trace(label,aux)
+  File "/mnt/e/lab/self-mass-unobservability/verification/native_eos_bridge.py", line 126, in trace
+    ptrace(4,pid,entry,original);rewind(entry);ptrace(9,pid);wait()
+  File "/mnt/e/lab/self-mass-unobservability/verification/native_eos_bridge.py", line 65, in wait
+    raise TimeoutError(label)
+TimeoutError: reference

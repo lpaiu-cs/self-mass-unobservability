@@ -1,0 +1,48 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "b3552307",
+  "bindings": {
+    "verification/def_reactive_budgeted_run.py": "4e843600152596ecf313b150f701a972d563a6c5a2396561ff4386ac9ac55bb4",
+    "verification/def_reactive_direct_gate.py": "976dc0ffb0f73bf15987657db8ddb4d127a2f6ee590a166e23f54cea01a6a776",
+    "verification/def_reactive_paired_tangent.py": "47cf502fefd9ee5cddd61bbaeb08182ef5d108da51567a3a35bd99d06c8ceea7",
+    "verification/def_reactive_thermal_tangent.py": "da567fe58432dcd0c0b0773b5d347cfe7e85e36cca8192e45b02b7427f186be0",
+    "verification/conservative_star.py": "9bcfe7bd2c07504abb6da3a5e7deea07c9c9b08f27ed12b33dd9310497cd60b7",
+    "outputs/direct-eos-gr33/def-free-surface-thermal/coefficients.npz": "8fa9ddf79c966965a3a3fa26e6b4c738f82eec0b6ad257e521ae37c9403fb46c",
+    "outputs/direct-eos-gr33/def-free-surface-thermal/sources.npz": "87c71aebfa10fb222030a1f818ab350e14362e1d0c5eb9c8d14959a4809168fe",
+    "outputs/direct-eos-gr33/def-free-surface-thermal/reactive-tangent/paired-native/warm-budget/pilot.npz": "71386877c35d0c58d97db64dee39a7f3638e5321e07ee7a39a9f997218e23e27"
+  },
+  "purpose": "Supply the missing actual composition/internal-energy forcing to the same-inventory free-surface mass/scalar response. A rest-mass-only nuclear heating shortcut omits this term.",
+  "alternatives": "Reuse the full native background and source values; analytic coordinate transform already avoids new thermal derivative evaluations. Two actual reaction directions replace 26 separate composition columns. Old-model chemical derivatives cannot replace the current molecular EOS.",
+  "budget_reassessment": "Preserve the failed 200-second forecasts. The unavoidable paired native chemical calls remain the bottleneck after reusing saved inputs and measuring warm workers. Allocate one bounded run, with no grid, frequency, duration or acceptance expansion.",
+  "budget": {
+    "workers": 8,
+    "BLAS_threads": 1,
+    "GPU": false,
+    "expected_wall_seconds": [
+      340,
+      510
+    ],
+    "hard_timeout_seconds": 600,
+    "maximum_runs": 1,
+    "save_every_block": true
+  },
+  "measurement": {
+    "classification": "Counterexample candidate",
+    "seconds": 2.1558893549999993,
+    "warm_seconds": 1.8925688299999877,
+    "projection_seconds": 508.0927661123404,
+    "within_budget": false
+  },
+  "probe_coordinate_seconds": [
+    8.0,
+    4.0
+  ],
+  "gates": {
+    "energy_absolute_floor_erg_g": 2,
+    "energy_ulp": 32,
+    "energy_relative": 1e-08,
+    "weighted_forcing_refinement": 0.01
+  },
+  "scope": "Initial-source directional EOS probes, not a physical eight-second evolution or a complete nuclear Jacobian. Transport and full time-dependent exterior remain separate.",
+  "stop": "Native energy/input failure or 590-second internal deadline; preserve completed blocks. No automatic restart or extra probes."
+}

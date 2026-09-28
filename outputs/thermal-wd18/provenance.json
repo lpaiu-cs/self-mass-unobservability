@@ -1,0 +1,24 @@
+{
+  "before_task_checkpoint": "5f99017",
+  "interpreter": "/usr/bin/python3",
+  "dependency_path": "/home/lpaiu/work/nutimo_pilot/request13_deps",
+  "versions": {
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "mpmath": "1.2.1",
+    "sympy": "1.9"
+  },
+  "module_file_sha256": {
+    "/home/lpaiu/.local/lib/python3.10/site-packages/numpy/__init__.py": "6ae17b070c0f70a8e3cad89a510a256942e5a1f37ea5feb120cec167ed2a6236",
+    "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/__init__.py": "185913aa107512fafd5cf89dfd452a8719b45a6eba833e2dcee2cbfd18b4bbe5",
+    "/usr/lib/python3/dist-packages/mpmath/__init__.py": "46cd24a875e8dd00fb47c6a5cf28fd06878d4dfe7562446b8d23ca69ca65b413",
+    "/usr/lib/python3/dist-packages/sympy/__init__.py": "5b46c2e75f53e6f7e895a82c60c2856eb5e89010e5ad1e560a56f2d0e6cda151",
+    "/mnt/e/lab/self-mass-unobservability/verification/nonzero_drive.py": "973e7308b57916f33a8a0e2a5eedd184f448884d847f8ca3cec0d7346bd948be",
+    "/mnt/e/lab/self-mass-unobservability/verification/stellar_matching.py": "70bf5d1e0df55232903268e0234846d487d165a7687f5c9072f68b66cb2c5b7f",
+    "/mnt/e/lab/self-mass-unobservability/verification/remaining_audit.py": "b9a9fc46e0bcbcfedcb3d6ea7fa62bf3e4313e30022c2ccd539eae0cf194f9a3"
+  },
+  "input_sha256": {
+    "outputs/validated-variational/ivp.hex": "c31f10741db5fa63ebae1aaa20e8e2b19ad6067179fe7ad705f66ed8fb53726f"
+  },
+  "producer": "verification/thermal_wd.py select; profiles; calibration; response_nominal; response; check"
+}

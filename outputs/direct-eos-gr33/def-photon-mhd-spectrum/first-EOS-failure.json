@@ -1,0 +1,13 @@
+{
+  "classification": "Counterexample candidate",
+  "native_EOS_attempts": 2,
+  "accepted_snapshots_saved": 0,
+  "first_call": "base returned success",
+  "failed_call": "same T, rho multiplied by exp(-2e-4)",
+  "native_info": 104,
+  "meaning": "eos_calc calculated electron number fraction near underflow",
+  "source_cause": "PL arrays are allocated each free_eos_detailed call and prepared only for ifpl=1, but the excitation path subtracts plop even for ifpl=0. Initial zero-filled memory hid the missing initialization on the first call.",
+  "repair": "Initialize all PL contribution arrays to zero before the conditional pl_prepare, in their owner routine. Do not disable warm starts, raise iteration limits or change equations.",
+  "remaining_native_calls": 10,
+  "changed_check": "Keep both derivative step sizes and history replay, omit the optional pressure inverse and its second base call; output null for that unperformed check."
+}

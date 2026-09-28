@@ -1,0 +1,750 @@
+arXiv:1408.2008v1  [math-ph]  9 Aug 2014
+The Golden-Thompson inequality — historical aspects
+and random matrix applications
+Peter J. Forrester and Colin J. Thompson
+Department of Mathematics and Statistics, The University o f Melbourne, Victoria 3010, Australia
+email: p.forrester@ms.unimelb.edu.au
+Abstract
+The Golden-Thompson inequality, Tr (eA+B) ≤ Tr (eAeB) for A, B Hermitian ma-
+trices, appeared in independent works by Golden and Thompso n published in 1965.
+Both of these were motivated by considerations in statistic al mechanics. In recent
+years the Golden-Thompson inequality has found applicatio ns to random matrix the-
+ory. In this survey article we detail some historical aspect s relating to Thompson’s
+work, giving in particular an hitherto unpublished proof du e to Dyson, and corre-
+spondence with P´ olya. We show too how the 2× 2 case relates to hyperbolic geometry,
+and how the original inequality holds true with the trace ope ration replaced by any
+unitarily invariant norm. In relation to the random matrix a pplications, we review
+its use in the derivation of concentration type lemmas for su ms of random matrices
+due to Ahlswede-Winter, and Oliveira, generalizing variou s classical results.
+1 Introduction
+Let A and B be N × N Hermitian matrices. The Golden-Thompson inequality asserts that
+Tr (eA+B) ≤ Tr (eAeB). (1.1)
+This result has been known since 1964–1965, and has its origins in con siderations from
+statistical mechanics. Thus Golden, in the paper ‘Lower bounds for the Helmoltz function’
+[12] proved (1.1) for A and B Hermitian and non-negative deﬁnite. Independently Thomp-
+son, in ‘Inequality with applications to statistical mechanics’ [41], pro ved (1.1) without
+any requirement that the Hermitian matrices A and B be non-negative deﬁnite. In a fur-
+ther remarkable coincidence, also published in 1965 and motivated by statistical mechanics,
+Symanzik in the paper ‘Proof of reﬁnements of an inequality of Feynm an’ [37] derived (1.1)
+in the case of A = − d2
+dx2 , B = V (x) and thus particular Hermitian operators in Hilbert
+space.
+1
+This latter case is easy to illustrate. First, with H = − d2
+dx2 + V (x), (1.1) reduces to
+Tre− βH ≤ 1
+2π
+∫ ∞
+−∞
+dp e− βp 2
+∫ ∞
+−∞
+dx e− βV (x), (1.2)
+which in words says that the classical partition function is an upper b ound for the corre-
+sponding quantum partition function. If we take V (x) = x2, the integral over position on
+the RHS is, like the integral over momentum, a Gaussian, while the ene rgy levels of the
+quantum problem are En = 2 n + 1, n = 0 , 1, . . . , similarly allowing the LHS to be made
+explicit to give
+1
+sinh β ≤ 1
+β . (1.3)
+In recent years, renewed prominence has been given to the Golden -Thompson inequality,
+due to its applicability in random matrix theory. The latter is the main re search area of
+coauthor Forrester of the present paper. In 1979 Forrester w as a student in the second year
+linear algebra course of coauthor Thompson— the same Thompson a s in Golden-Thompson
+— at the University of Melbourne. The inequality (1.1), with the additio nal information
+imparted to the class that Golden was a person rather than an adje ctive, was presented
+as enrichment knowledge in one of the lectures. Upon learning of the renewed interest
+in (1.1) due to its application in random matrix theory, the suggestion was then made
+from Forrester to Thompson of a review article, with the initial inten tion of familiarising
+potential users in random matrix theory with the surrounding math ematics.
+Moreover, it is fair to say that the lineage in relation to Thompson’s pa per [41] is rather
+rich and of independent interest. Part of this, as recorded in the a cknowledgements of [41],
+relates to an until now unpublished proof of (1.1) by Dyson. In the e arly 1960’s Dyson wrote
+a series of seminal papers relating to random matrix theory and its a pplication to nuclear
+physics (these were numbered by Roman numerals I up to V, except the foundational
+paper ‘The three fold way’, logically number zero in the series and so lac king labelling by
+a Roman numeral [10]). It is thus a happy coincidence that (1.1) shou ld ﬁnd application
+in this ﬁeld, and pleasing too that the opportunity to write this article should have arisen
+during Freeman Dyson’s 90th birthday year.
+In Section 2 we detail the mathematics relating to the 2 × 2 case of (1.1) (in particular
+its relation to hyperbolic geometry), Dyson’s proof of (1.1), Thomp son’s simpliﬁcation
+and we comment too on Golden’s proof. Thompson’s proof makes use of results of Weyl
+and P´ olya, and some correspondence with the latter is quoted. Th e topic of Section 3 is
+inequalities of a similar type to (1.1). One such result is that (1.1) holds with the trace
+operation replaced by any unitarily invariant norm, and a further re lation to hyperbolic
+geometry of a generalization of this latter result in noted. The applic ation of (1.1) to
+deriving operator norm bounds on certain sums of random matrices is given in Section 4.
+2
+2 Proof and generalizations
+2.1 The 2 by 2 case
+Upon being lead to (1.1) by a diﬀerent consideration in statistical mec hanics than the one
+mentioned in [41] — speciﬁcally from mathematical structures appea ring in the variational
+Quasi-Chemical Equilibrium Theory of superconductivity as observe d during his PhD the-
+sis [40] — Thompson ﬁrst took up the challenge of proving the 2 × 2 case. This case can be
+further simpliﬁed by the observation that 2 × 2 matrices X can be written as the sum of a
+multiple of the identity, say cX I, and a traceless matrix ˜X. Since in general eA+B = eAeB
+when A and B commute, a simple corollary of the deﬁnition of eX in terms of a power
+series, we see that Tr eA+B = ecA+cBTre ˜A+ ˜B and similarly Tr ( eAeB) = ecA+cBTr (e ˜Ae ˜B).
+Thus in the 2 × 2 case it suﬃces to restrict attention to A and B traceless matrices in (1.1).
+The latter can each be parametrised by three real numbers a1, a 2, a 3 and b1, b 2, b 3 say,
+by writing
+A = a1σ1 + a2σ2 + a3σ3, B = b1σ1 + b2σ2 + b3σ3, (2.4)
+where σ1, σ 2, σ 3 are the 2 × 2 Pauli matrices
+σ1 =
+[0 1
+1 0
+]
+, σ 2 =
+[0 − i
+i 0
+]
+, σ 3 =
+[1 0
+0 − 1
+]
+.
+An elementary calculation shows A2 = ||⃗ a||2I, ||⃗ a||2 := ∑3
+i=1 a2
+i , and thus (see e.g. [42])
+exp A = cosh ||⃗ a||I + sinh ||⃗ a||
+||⃗ a|| A.
+From this, and the analogous equation for B, after substituting in (1.1) and making essen-
+tial use of A and B being traceless to simplify the RHS, we see that our task in establishin g
+(1.1) in the 2 × 2 case reduces to proving that
+cosh ||⃗ a+ ⃗b|| ≤ cosh ||⃗ a||cosh ||⃗b|| −cos θ sinh ||⃗ a||sinh ||⃗b||, cos θ := − ⃗ a·⃗b
+||⃗ a|| ||⃗b||
+, (2.5)
+where as usual ⃗ a·⃗b := ∑3
+i=1 aibi.
+At this stage a connection with hyperbolic geometry is revealed. One recognises the
+RHS of (2.5) as cosh ||⃗ c||, in a hyperbolic geometry of curvature − 1, as given by the law of
+cosines for a triangle of side lengths ||⃗ a||, ||⃗b||, ||⃗ c||, and angle between ||⃗ a||and ||⃗b||equal
+to θ (all measured in the hyperbolic geometry). So now, after ﬁrst tak ing the inverse
+hyperbolic cosine of both sides and then squaring, we have reduced (2.5) to the statement
+that for a triangle in a hyperbolic geometry
+||⃗ c||2 ≥ ||⃗ a||2 + ||⃗b||2 − 2||⃗ a|| ||⃗b||cos θ. (2.6)
+The latter is well known [15].
+3
+We remark that it is also possible to prove (2.5) directly. Thus ﬁrst int roduce the
+parameter ǫ by the scalings ⃗ a↦→ ǫ⃗ aand ⃗b ↦→ ǫ⃗b. Then check that the inequality holds
+term-by-term in like powers of ǫ (which are all even). The ǫ0 and ǫ2 terms are in fact
+equalities; from then on one simply needs Cauchy’s inequality.
+2.2 Dyson’s proof
+At the time of being led to (1.1), Thompson had just began a postdoc at UCSD and Dyson
+was visiting there on sabbatical. The result (1.1) was shown to Dyson in late 1964 as a
+conjecture for N ≥ 3, and soon after he produced a proof. Working from the original
+notes, we record this proof in the following working.
+Lemma 1. For any square matrices X, Y
+|Tr (XY )|2 ≤ Tr (X †X) Tr (Y †Y ).
+Proof. This is Cauchy’s inequality. □
+Lemma 2. Let P be any product of 2n factors which may be X or X † in any order. Then
+|TrP | ≤ Tr (XX †)n.
+Proof. Among all the products P choose one for which |TrP | is the greatest. If P =
+(XX †)n or ( X †X)n there is nothing to prove. Otherwise there appears somewhere in P a
+pair of consecutive factors X or X †. Permute the factors cyclically so that the two X or
+X † appear in positions n, n + 1. Now write P = QR, where Q is the product of the ﬁrst n
+factors, R the remainder.
+By Lemma 1,
+|TrP |2 ≤ Tr (Q†Q) Tr (R†R).
+But Q†Q := P ′, R†R := P ′′are both products of the same type as P , which means that
+|TrP ′| ≤ |TrP |, |TrP ′′| ≤ |TrP |.
+Therefore
+|TrP |= |TrP ′|= |TrP ′′|.
+Now the number of neighbour-pairs XX † in P, P ′, P ′′may be denoted by k, k ′, k ′′respec-
+tively. We count the last and the ﬁrst factors as neighbours in the t race. We have then
+k′ + k′′= 2k + 1, 2k + 2
+according as the ﬁrst and the last factors in P were diﬀerent or the same. In any case at
+least one of P ′ and P ′′has more neighbour-pairs XX † than P .
+Now apply this argument to the product P with maximum |TrP | and with the max-
+imum number of neighour-pairs XX †. We have a contradiction unless P = ( XX †)n or
+(X †X)n. This proves the lemma. □
+4
+Lemma 3. For any two Hermitian matrices A and B
+Tr (A2k
+B2k
+) ≥ Tr (AB)2k
+.
+Proof. Taking X = AB, X † = BA in Lemma 2, we have
+|Tr (AB)2n| ≤ Tr (ABBA)n = Tr (A2B2)n. (2.7)
+Next take X = A2B2, so that
+|Tr (AB)4n| ≤ Tr (A2B2B2A2)n = Tr (A4B4)n.
+Repeating this argument leads at once to Lemma 3. □
+Proof of (1.1). Write in Lemma 3 A′ = (1 + 2 − kA) for A, B′ = (1 + 2 − kB) for B and
+take the limit k → ∞ . □
+Before we proceed to give Thompson’s [41] simpliﬁcation of the above working, for
+the purpose of historical links, suppose that in Lemma 3 we write A′ = eA/ 2k
+for A
+and B′ = eB/ 2k
+for B. Then taking the limit k → ∞ on the RHS asks us to compute
+limk→∞ (eA/ 2k
+eB/ 2k
+)2k
+. For this one can use the Lie-Trotter formula [23, 45],
+lim
+n→∞
+(eA/n eB/n )n = eA+B, (2.8)
+which according to some sources [6] was found by Lie in 1875.
+2.3 Thompson’s proof
+We have just seen that the last step in Dyson’s proof makes use of a fundamental matrix
+identity. Thompson’s [41] simpliﬁcation similarly calls upon fundamental matrix relations,
+now between the eigenvalues |λ 1| ≥ · · · ≥ | λ N | of a matrix X and its singular values
+µ 1 ≥ · · · ≥ µ N (i.e. positive square roots of the eigenvalues of X †X), due to Weyl [47].
+Lemma 4. Let w(x) be an increasing function of positive argument x, with the further
+property that w(eξ) is a convex function of ξ. One has
+k∑
+i=1
+w(µ i) ≥
+k∑
+i=1
+w(|λ i|), k = 1, . . . , N. (2.9)
+Taking w(x) = x2s, ( s = 1, 2, . . . ), k = N, (2.9) reads
+N∑
+i=1
+µ 2s
+i ≥
+N∑
+i=1
+|λ i|2s ≥ |
+N∑
+i=1
+λ 2s
+i |, (2.10)
+where the ﬁnal relation is just the triangle inequality, or equivalently
+Tr (X †X)s ≥ | TrX 2s|, s = 1, 2, . . . . (2.11)
+The inequality (2.11) is given as Lemma 1 in [41]. Armed with (2.11), one no w has an
+alternative to Dyson’s Lemma 2 to deduce the result of Lemma 3 and t hus (1.1). The
+argument is precisely the same [41].
+5
+2.4 Golden’s proof
+As in the above workings, Golden (a physical chemist at Brandeis dur ing the years 1951–
+1981 [34]) in [12] ﬁrst establishes the inequality of Lemma 3, then conc ludes the argument
+through use of (2.8). And as in Dyson’s strategy, explicit use too is m ade of a Cauchy
+inequality, though not that in Lemma 1, but rather
+0 ≤ TrX 2 ≤ TrXX †
+(cf. (2.11) with s = 1) which is restricted to the case that X is non-negative deﬁnite.
+In fact in the case of non-negative deﬁnite matrices A, B the inequality (2.7) underlying
+the proof of Lemma 3 can be generalized to the Araki-Lieb-Thirring in equality [2, 25]
+0 ≤ Tr (A1/ 2BA1/ 2)rs ≤ Tr (Ar/ 2BrAr/ 2)s, r ≥ 1, s > 0
+(take r = 2, s = n [3]).
+2.5 The George P´ olya link
+Weyl’s result Lemma 4 is deduced in two steps. The ﬁrst is to establish t he inequalities∏k
+i=1 |λ i| ≤ ∏k
+i=1 µ i. The second is to apply the following lemma, with ai = log µ i, bi =
+log |λ i| and w(x) = ω (eξ).
+Lemma 5. Given two sequences of real numbers a1, . . . , a m and b1, . . . , b m such that b1 ≥
+b2 ≥ · · · ≥ bm and
+b1 + · · ·+ bq ≤ a1 + · · ·+ aq, q = 1, . . . , m (2.12)
+the inequality
+ω (b1) + · · ·+ ω (bm) ≤ ω (a1) + · · ·+ ω (am)
+holds for any convex increasing function ω (x).
+P´ olya [31] pointed out that this lemma can be deduced from an inequa lity of Hardy,
+Littlewood and P´ olya [14], and rediscovered a few years later by Ka ramata [20]. The
+latter diﬀers from Lemma 5 in that the last inequality in (2.12), namely t he case q = m,
+is required to be an equality, and that ω (x) is assumed to be convex but need not be
+increasing.
+After isolating (2.11) as a simpliﬁcation to Dyson’s Lemma 2 in the pathw ay to the
+proof of (1.1), and thus the role played by earlier results of Weyl an d P´ olya, Thompson
+wrote to George P´ olya (who was actually a Great Uncle by marriage) with this proof, and
+an enquiry about the possibility of it having already appeared in the lite rature. We quote
+from the subsequent reply:
+Zurich, Feb. 5 ’65
+6
+Dear Colin,
+I was much pleased to receive your letter. The theorem
+tr (eAeB) ≥ tr(eA+B))
+is new to me, and I find it very neat. It, is true, I did not look u p the
+literature --- I had, or rather I am still having, a bad spell o f sciatica
+which makes very difficult for me to sit in the library & I have very few
+books in my hotel room. I must even confess that I remember onl y vaguely
+the notes by Weyl and by myself you are quoting. . . . We should arrive in
+Stanford March 13. In Stanford, I can consult Loewner who kno ws much more
+about matrices than myself. With my sciatica, the trip may pr esent serious
+complications --- but we shall see. . . .
+Your Uncle George
+Please give my best regards to Prof. Dyson.
+A letter dated the Rockefeller Institute, Tuesday, March 2 (1965 ) from P´ olya to Thomp-
+son, contains some follow up on previous knowledge of (1.1): “I aske d several mathemati-
+cians about that nice result (1.1) e.g. Richard Brauer (Harvard) Ra damacher (Philadelphia)
+etc. but nobody knew it.” And then, again sent from the Rockefeller Institute, on March
+5 (1965): “I was just shown Physical Review vol. 137 No. 4B 22 Feb. 1965 p. B1127.” The
+latter is of course Golden’s article.
+Dyson suggested to Thompson that with the simpliﬁed proof and add itional results
+that he should submit anyhow (by himself), with an appropriate cove r letter to the Editor,
+and indeed the paper was accepted.
+3 Related inequalities and generalizations
+Let φ(X) be a continuous real valued function of the eigenvalues of X, and suppose
+φ((X †X)s) ≥ | φ(X 2s)|, s = 1, 2, . . . (3.13)
+We know from Lemma 2.10 that
+φ(X) :=
+k∑
+i=1
+|λ i| (3.14)
+is an explicit example. As noted by Thompson [42], the proof of (1.1) via Lemma 3 now
+yields
+φ(eA+B) ≤ φ(eAeB). (3.15)
+An equivalent viewpoint on (3.15) in the case that φ is given by (3.14) is that
+eA+B ≺ w eAeB, (3.16)
+7
+where for X, Y Hermitian X ≺ w Y (in words Y weakly majorizes X) means that ∑k
+i=1 λ i(X) ≤∑k
+i=1 λ i(Y ) ( k = 1 , . . . , N ). Choosing φ(X) = ∑N
+i=1 |λ i|p, p ≥ 1, one has in the case that
+X is Hermitian and non-negative deﬁnite φ(X) = (Tr ( XX †)p/ 2) = ( ||X||p)p (here || · ||p
+denotes the so-called Schatten p-norm) and we see that (3.15) gives
+||eA+B||p ≤ ||eAeB||p. (3.17)
+We remark that (3.17) can equivalently be written [16]
+TreA+B ≤ Tr (epB/ 2epAepB/ 2)1/p . (3.18)
+In the case p → ∞ (3.17) was ﬁrst established by Segal [35], while Leonard [22] and
+Thompson [42] showed that it holds for general unitary invariant no rms.
+A generalisation of (3.17) is [4]
+||A − B|| ≤ ||log(e− B/ 2eAe− B/ 2)|| (3.19)
+valid for A, B Hermitian and the norm || · ||unitarily invariant. In the case || · ||= || · ||2
+and with A and B positive deﬁnite (3.19) reads
+||A − B||2 ≤
+( N∑
+i=1
+(
+log λ i(eAe− B)
+) 2) 1/ 2
+=: δ2(eA, e B), (3.20)
+where {λ i(X)} denotes the eigenvalues of X. The signiﬁcance of δ2 is that it is the distance
+associated with the invariant Riemannian metric ds2 =
+(
+Tr (A− 1dA)
+) 2
+. Since ||A||2 =
+( ∑N
+i=1(log λ i(eA))2
+) 1/ 2
+, it follows from the deﬁnition in (3.20) that ||A||2 = δ2(eA, I). This
+in turn allows (3.20), after squaring both sides, to be interpreted a s a law of cosines for
+triangles in a hyperbolic geometry [28, 21, 4, 5], as already seen in (2.6 ).
+On another front, using essentially the same working as used by Tho mpson to obtain
+(3.15), Cohen et al. [7] generalized (3.15) to
+|φ(eA+B)| ≤ φ
+(
+e(A+A†)/ 2e(B+B†)/ 2
+)
+, (3.21)
+where it is no longer required that A, B are Hermitian. Note that the special case B = 0,
+φ given by (3.14) with k = 1 yields [7, Corollary 5]
+λ 1
+( 1
+2 (A + A†)
+)
+≥ Re λ 1(A). (3.22)
+We remark that in distinction to (3.17) with p = ∞ (3.21) for φ given by (3.14) with
+k = 1 is not a statement about matrix norms. Thus one has that λ 1(A)| = ||A||∞ for A
+Hermitian, but more generally |λ 1(A)| ≤ ||A||∞ . This latter property has been used in [8]
+to prove (3.17) with p = ∞ .
+8
+A basic question related to (1.1) is the condition for equality. It has a lready been re-
+marked that when A, B commute, eAeB = eA+B, and so the former is a suﬃcient condition
+for equality. It can be proved that this is also a necessary condition [36]. One way to
+see this is to expand (1.1) to increasing higher orders of the matrix p roducts [39, p. 253].
+To third order both sides agree, while the fourth order terms diﬀer by a term propor-
+tional to Tr [ A, B ]. Another basic question relates to extending (1.1) or the underlyin g
+inequality from Lemma 3, to involve three or more matrices. In the or iginal paper [41] a
+counter-example involving 3 × 3 real symmetric matrices to the obvious generalization of
+the latter, |Tr (ABC )2k
+| ≤ Tr (A2k
+B2k
+C 2k
+), is given. And a counter-example to the obvious
+generalization of (1.1) to three matrices
+Tr (eA+B+C) ≤ | Tr (eAeBeC)|, (3.23)
+involving the 2 × 2 Pauli matrices, is given in [42]. In relation to this latter setting, a re sult
+of Lieb [24] gives
+Tr (eA+B+C) ≤
+∫ ∞
+0
+Tr
+(
+eA(t + e− C)− 1eB(t + e− C)− 1
+)
+dt, (3.24)
+which one sees reduces to (1.1) when C = 0. Moreover, (3.24) shows that if [ B, C ] = 0,
+then (3.23) (without the need for the absolute value on the RHS) ho lds true. However,
+since in this circumstance eB+C = eBeC as noted in the ﬁrst paragraph of Section 2.1, then
+(3.23) is just (1.1) with B replaced by B + C.
+4 Applications to random matrix theory
+The ﬁrst application of the Golden-Thompson inequality to random ma trix theory was
+made by Ahlswede and Winter [1]. This contribution was later populariz ed by it featuring
+in a blog article of Tao [38], and this blog article in turn became a section in the book on
+random matrices of the latter [39].
+To motivate this line of research, let us recall [11, Preface] that r andom matrix theory
+has its historical origin in the work of Hurwitz [17], who computed the v olume form of a
+general unitary matrix parametrized in terms of Euler angles. This w ork was inﬂuential
+in the development of the concept of the Haar measure on classical groups, and more
+generally locally compact topological groups, in the work of Haar, vo n Neumann, Weyl,
+Weil, Seigel and others [26, pg. 143]. In the case of positive deﬁnite m atrices the Haar
+measure is induced by the invariant Riemann metric noted below (3.20) . One consequence
+of the work of Hurwitz is that the precise probability density functio n on the four non-
+zero, non-unit entries, of a set of N(N − 1)/ 2 unimodular matrices can be read oﬀ, such
+that when multiplied in an appropriate order, and further multiplied by the scalar eiα 0,
+− π ≤ α 0 < π chosen uniformly at random, the corresponding unitary matrix cor responds
+to sampling U(N) with Haar measure [48].
+There are alternative ways to sample U(N) with Haar measure [27]. One is to begin
+with an N × N complex standard Gaussian matrix (all entries independent with sta ndard
+9
+complex Gaussian entries) X, and to form the matrix V := ( X †X)− 1/ 2X. Another is to
+apply the Gram-Schmidt algorithm to the columns of X. Granted these facts, a natural
+question is to quantify properties of U ∈ U(N) in common with X. A celebrated result of
+Dyson [9] is that the local eigenvalue statistics of V and 1
+2(X + X †) (the latter in the so-
+called bulk; see e.g. [11, Ch. 5]) agree in the N → ∞ limit. At the level of the distribution
+of the entries, the top k × k block of U, Uk say, has distribution with probability density
+proportional to [49] (
+det(Ik − U †
+kUk)
+) N − 2k
+.
+Thus for N → ∞ , and with k ﬁxed, the probability density function of Gk :=
+√
+N Uk is
+proportional to e− G†
+kGk, and hence the entries of Gk are independent complex standard
+Gaussians in distribution. The analogue of this result for Haar distrib uted real orthogonal
+matrices, telling us that in the limit N → ∞ the top k × k block, when scaled by
+√
+N , is
+distributed as a real Gaussian matrix of independent standard Gau ssian entries, is known
+to hold for k = o(
+√
+N ) in the variation norm [18].
+Related to this interplay between Gaussian and unitary random matr ices is the question
+of quantifying the orthogonality between columns of a standard co mplex Gaussian matrix.
+This has application, for example, to the problem of bringing a convex body to near-
+isotropic position [32], and that of analyzing low rank approximations o f matrices [33, 13].
+Denote by XN,k the ﬁrst k columns of an N × N complex standard Gaussian matrix X,
+and form the empirical covariance matrix
+Σ := 1
+N X †
+N,k XN,k . (4.25)
+Since all entries are independent, with zero mean and unit standard derivation, we see
+immediately that E Σ = Ik. To measure the distance from the mean, introduce the operator
+norm ||X||op = sup ||⃗ x||=1 ||X⃗ x||. This is related to the Schatten p-norm by ||X||op = ||X||∞
+and so for X Hermitian we have
+||X||op = max {− λ min(X), λ max(X)}. (4.26)
+For ﬁxed k and large N it follows from the central limit theorem applied to the elements
+of Σ that ||Σ − Ik||op goes to zero at a rate proportional to 1 /
+√
+N. Of interest is a large
+deviation bound relating to ||Σ− Ik||op, which is valid for general N and k. We ﬁrst observe
+Σ = 1
+N
+[ N∑
+p=1
+¯xi,p xp,j
+]
+i,j =1,...,k
+= 1
+N
+[ N∑
+p=1
+¯xi,p xp,j
+]
+i,j =1,...,k
+= 1
+N
+N∑
+p=1
+( ⃗X (p))† ⃗X (p), (4.27)
+where ⃗X (p) is the row vector formed by the p-th row of XN,k . This exhibits Σ as the average
+of independent and identically distributed (rank one) random matric es. Thus the task at
+hand can be interpreted as a noncommutative analogue of classical questions relating to
+the distribution of the scalar average S := 1
+N
+∑N
+p=1 sp for {sp} identical and independently
+distributed. Speciﬁcally, if we take as our task that of bounding Pr( ||Σ − Ik||op > ǫ) then
+10
+we are seeking a non-commutative analogue of the Chernoﬀ inequalit y (large deviation
+formula) from classical probability theory
+Pr (s1 + · · ·+ sN ≥ ǫ) ≤ max (e− ǫ2/ 4, e − ǫσ/ 2), (4.28)
+where ǫ > 0, and the si are independent, identically distributed random variables taking
+values in [ − 1, 1] with mean zero and variance σ 2/N .
+For this task, we begin by making use of (4.26) to observe
+Pr(||Σ − Ik||op > ǫ) ≤ Pr(λ max(Σ − Ik) > ǫ) + Pr(− λ min(Σ − Ik) > ǫ). (4.29)
+We now consider the ﬁrst term on the RHS of (4.29). Bernstein’s tric k of eﬀectively
+exponentiating the statement ||Σ − Ik||op > ǫ without changing its probability tells us that
+for any c > 0
+Pr(λ max(Σ − Ik) > ǫ) = Pr( ecλ max(Σ− Ik) > e cǫ) = Pr( λ max(ec(Σ− Ik)) > e cǫ).
+But
+λ max(ec(Σ− Ik)) ≤ Trec(Σ− Ik) (4.30)
+and so
+Pr(λ max(Σ − Ik) > ǫ) ≤ Pr(Trecλ max(Σ− Ik) > e cǫ) ≤ e− cǫE (Trec(Σ− Ik)), (4.31)
+where the ﬁnal bound follows from Chebyshev’s inequality. The analo gous argument ap-
+plied to the second term on the RHS of (4.29) gives
+Pr(− λ min(Σ − Ik) > ǫ) ≤ e− cǫE (Tre− c(Σ− Ik)). (4.32)
+So far the working has mimicked that of one of the standard proofs of (4.28) (see
+e.g. [39]). To proceed further requires a new idea, and this was fort hcoming in the work of
+Ahlswede and Winter [1], by way of application of the Golden-Thompson inequality (1.1)
+to bound the average on the RHS of (4.31).
+Lemma 6. For any µ ∈ R,
+E(Treµ (Σ− Ik)) ≤ k
+N∏
+p=1
+||E(eµ (( ⃗X (p))† ⃗X (p)− Ik)/N )||op. (4.33)
+Proof. Write Σ − Ik =: Σ (N ) and Σ (N ) = ∑N
+p=1 S(p) so that S(p) := (( ⃗X (p))† ⃗X (p) − Ik)/N .
+Then, since Σ (N ) = Σ (N − 1) + S(N ) we have
+E(Treµ Σ(N)
+) = E(Treµ Σ(N−1)+µS (N)
+).
+Applying the Golden-Thompson inequality (1.1) to the RHS gives
+E(Treµ Σ(N)
+) ≤ E(Treµ Σ(N−1)
+eµS (N)
+). (4.34)
+11
+Each of the S(p) are independent, so taking the expectation with respect to S(N ), and
+furthermore making use of the fact that E are Tr commute (to be able to take advantage
+of this fact explains the use of (4.30)), we see that (4.34) can be re written to read
+E(Treµ Σ(N)
+) ≤ ES(1),...,S (N−1)Tr(eµ Σ(N−1)
+ES(N) eµS (N)
+)
+≤ ||ES(N) eµS (N)
+||opES(1),...,S (N−1)Tr(eµ Σ(N−1)
+), (4.35)
+where the ﬁnal inequality follows from the general fact that for A positive deﬁnite Tr AB ≤
+||B||opTrA. Applying (4.35) recursively, with base case N = 1 for which Tr eµ Σ(0)
+= Tr Ik =
+k, gives (4.33). □
+Substituting (4.33) in (4.31) and (4.32) and recalling (4.29) gives
+Pr (||Σ − Ik||op > ǫ) ≤ k e− ǫc
+( N∏
+l=1
+||E(ecS(l)
+)||op +
+N∏
+l=1
+||E(e− cS(l)
+)||op
+)
+.
+The remaining task is to bound ||E(ecS(l)
+)||op, and then to minimize the RHS with respect
+to c > 0. This is straightforward; the details can be found in e.g. [46]. The ﬁ nal result,
+under the simplifying assumption that ||S(l)|| ≤ 1 for each l = 1, . . . , N is [32]
+Pr(||Σ − Ik||op > ǫ) ≤ k max (e− ǫ2/ (4σ 2), e − ǫ/ 2), (4.36)
+where σ 2 := ∑N
+l=1 ||VarS(l)||op. This is a noncommutative matrix analogue of the Chernoﬀ
+inequality (4.28).
+There is a signiﬁcant reﬁnement of the Ahlswede-Winter argument d ue to Oliveira
+[29, 30]. One setting where it shows itself is in bounding the operator n orm of the random
+matrix sum Z (N ) := ∑N
+p=1 ǫpA(p) where the A(p) are ﬁxed d × d Hermitian matrices while
+{ǫp} are independent Rademacher (uniformly distributed on [ − 1, 1]) or standard Gaussian
+random variables. In accordance with the argument leading to (4.31 ), the key task is to
+bound E(TreµZ (N)
+).
+Lemma 7. In terms of the above notation, for all µ ∈ R,
+E(TreµZ (N)
+) ≤ Tr
+(
+eµ 2 ∑N
+p=1 ǫp(A(p))2
+)
+. (4.37)
+Proof. For j = 1, . . . , N deﬁne
+D(j) = D(0) +
+j∑
+p=1
+(
+µǫpA(p) − 1
+2 µ 2A(p)
+)
+, (4.38)
+with D(0) := 1
+2µ 2 ∑N
+p=1(A(p))2.
+From these deﬁnitions
+E(TreµD (N)
+) = E TreD(N−1)+µǫN A(N)− µ 2(A(N))2/ 2.
+12
+Making use of the Golden-Thompson inequality (1.1) on the RHS, then proceeding as in
+the derivation of (4.35) shows
+E(TreµD (N)
+) ≤ ||EǫN (eµǫN A(N)− µ 2(A(N))2/ 2)||opTr (eµD (N−1)
+)
+= ||e− µ 2(A(N))2/ 2EǫN (eµǫN A(N)
+)||opTr (eµD (N−1)
+), (4.39)
+where in obtaining the equality, use has been made of − µ 2(A(N ))2/ 2 and µǫN AN commut-
+ing.
+For ǫN a Rademacher or standard Gaussian random variable, explicit compu tation
+reveals
+||e− µ 2(A(N))2/ 2EǫN (eµǫN A(N)
+)||op = ||f (A(N ))||op (4.40)
+where 0 ≤ f (t) ≤ 1 for all t ∈ R and thus (4.40) is bounded by 1. This fact allows us to
+deduce from (4.39) the recurrence relation
+E(TreµD (N)
+) ≤ E(TreµD (N−1)
+). (4.41)
+Applying (4.41) recursively a total of N times and noting D(N ) = Z (N ) gives (4.37). □
+Note that a direct adaptation of the proof of Lemma 6 would give
+E(eµZ (N)
+) ≤ deµ 2 ∑N
+µ=1 ||(A(p))2||op.
+This is demonstrated in [30] to always be weaker than (4.37)
+The Chernoﬀ inequality (4.28) is one of a large number of probabilistic b ounds relating
+to sums of scalar random variables. We have seen that the Golden-T hompson inequality
+(1.1) allows for the derivation of a matrix generalization (4.36). It tu rns out that (4.37)
+is key to deriving a bound for ( E ||Z (N )||p)1/p , which is the matrix generalization of the
+classical Khintchine inequality [30]. Recently Tropp [43, 44] has shown that a result of
+Lieb [24] relating to convex trace functions oﬀers a powerful alter native to the Golden-
+Thompson inequality in the derivation of matrix generalization of furt her probabilistic
+bounds. On the other hand, as commented in [44], the approach of Oliveira [29] using the
+Golden-Thompson inequality to establish a matrix generalization of Fr eedman’s inequality
+(a martingale version of Bernstein’s inequality) has the advantage o f of extending to the
+fully noncommutative setting [19].
+We conclude by quantifying the values of the sides of (1.1) when aver aged over suitable
+matrix ensembles. We restrict attention to the case N = 2 with A and B traceless as in
+(2.4), and the real numbers a1, . . . , b 3 all standard Gaussians. We read oﬀ from the two
+sides of (2.5) that
+E Tr (eA+B) =
+( 1
+2π
+) 3 ∫
+R6
+e−||⃗ a||2/ 2−||⃗b||2/ 2 cosh ||⃗ a+ ⃗b||d⃗ a d⃗b
+E Tr (eAeB) =
+( 1
+2π
+) 3 ∫
+R6
+e−||⃗ a||2/ 2−||⃗b||2/ 2 cosh ||⃗ a||cosh ||⃗b||d⃗ a d⃗b
+13
+(the term involving cos θ on the RHS of (2.5) averages to zero). Making use of polar
+coordinates to evaluate the integrals shows
+E Tr (eAeB)
+E Tr (eA+B) = 4
+3 . (4.42)
+An obvious question is the behaviour of the ratio (4.42) as a function of the matrix
+size N for A, B from the Gaussian unitary ensemble, for example. The analogous qu estion
+for the inequality (3.22) can readily be answered in the case that A is a standard real
+or complex Gaussian matrix. Then well known results for the largest eigenvalues in the
+Gaussian orthogonal and unitary ensemble, and for the spectral radius of the real and
+complex Ginibre ensemble, (see e.g. [11]) tell us that
+lim
+N →∞
+E λ 1
+(
+1
+2(A + A†)
+)
+E Re λ 1(A) =
+√
+2.
+Acknowledgements
+The work of PJF was supported by the Australian Research Council. We would also like
+to thank Freeman Dyson for encouraging correspondence and fo r allowing us to reproduce
+the proof of his ingenious Lemma 2.
+References
+[1] R. Ahlswede and A. Winter, Strong converse for identiﬁcation via quantum channels ,
+IEEE Trans. Inform. Theory 48 (2002), 569–579.
+[2] H. Araki, On an inequality of Lieb and Thirring , Lett. Math. Phys. 19 (1990), 167–
+170.
+[3] N. Bebiano, J. da Providencia, and R. Lemos, Matrix inequalities in statistical me-
+chanics, Linear Algebra Appl. 376 (2004), 265–273.
+[4] R. Bhatia, On the exponential metric increasing property , Linear Algebra Appl. 375
+(2003), 211–220.
+[5] R. Bhatia and J. Holbrook, Noncommutative geometric means , Math. Intelligencier
+28 (2006), 32–39.
+[6] A.J. Chorin, T.J. Hughes, M.F. McCracken, and J.E. Marsden, Product formulas and
+numerical algorithms , Comm. Pure Appl. Math 31 (1978), 205–256.
+[7] J.E. Cohen, S. Friedland, T. Kato, and F.P. Kelly, Eigenvalues inequalities for products
+of matrix exponentials , Linear Algebra Appl. 45 (1982), 55–95.
+14
+[8] P.A. Deift, Application of a commutation formula , Duke Math. J. 45 (1978), 267–310.
+[9] F.J. Dyson, Statistical theory of energy levels of complex systems III , J. Math. Phys.
+3 (1962), 166–175.
+[10] , The three fold way. Algebraic structure of symmetry groups a nd ensembles in
+quantum mechanics , J. Math. Phys. 3 (1962), 1199–1215.
+[11] P.J. Forrester, Log-gases and random matrices, Princeton University Press, Princeton,
+NJ, 2010.
+[12] S. Golden, Lower bounds for Helmholtz function , Phys. Rev. 137 (1965), B1127–
+B1128.
+[13] N. Halko, P.G. Martinsson, and J.A. Tropp, Finding strucuture with randomness:
+probabilistic algorithms for constructing approximate ma trix decompositions , SIAM
+Review 53 (2011), 217–288.
+[14] G.H. Hardy, J.E. Littlewood, and G. P´ olya, Some simple inequalities satisﬁed by
+convex function, Messenger Math. 58 (1928/29), 145–152.
+[15] S. Helgason, Diﬀerential geometry and symmetric spaces , Academic, New York, 1962.
+[16] F. Hiai and D. Petz, The Golden-Thompson trace inequality is complemented , Linear
+Alg. Appl. 1993 (1993), 153–185.
+[17] A. Hurwitz, ¨Uber die Composition der quadratischen Formen von beliebig vielen Vari-
+abeln, Nachr. Ges. Wiss. G¨ ottingen (1898), 309–316.
+[18] T. Jiang, How many entries of a typical orthogonal matrix can be approx imated by
+independent normals? , Ann. Probab. 34 (2006), 1497–1529.
+[19] M. Junge and Q. Zheng, Noncommutative martingale deviation and Poincar´ e type
+inequalities with applications , arXiv:1211.3209, 2012.
+[20] J. Karamata, Sur une in´ egalit´ e relative aux fonctions convexes, Publ. Math. Univ. Bel-
+grade 1 (1932), 145–148.
+[21] B. Kostant, On convexity, the Weyl group and Iwasawa decomposition , Ann. Sci Ecole
+Norm. Sup 6 (1973), 413–460.
+[22] A. Lenard, Generalization of the Golden-Thompson inequality tr eA+B ≤ tr(eaeb),
+Indiana Univ. Math. J. 21 (1971), 457–467.
+[23] S. Lie and F. Engel, Theorie der transformationsgruppen , 3 vols. Teubner, Leipzig,
+1888.
+15
+[24] E.H. Lieb, Convex trace functions and the Wigner-Yanase-Dyson conjec ture, Adv.
+Math 11 (1973), 267–288.
+[25] E.H. Lieb and W. Thirring, Inequalities for the moments of the eigenvalues of the
+Schr¨ odinger Hamiltonian and their relation to Sobolev ine qualities, Studies in Math-
+ematical Physics: essays in honor of Valentine Bargmann (B Simon E.H . Lieb and
+A. Wightman, eds.), Princeton University Press, Princeton, NJ, 19 76.
+[26] A.M. Macbeath and C.A. Rogers, Siegel’s mean value theorem in the geometry of
+numbers, Math. Proc. Camb. Phil. Soc. 54 (1958), 139–151.
+[27] F. Mezzadri, How to generate random matrices from the classical groups , Notices
+AMS 54 (2007), 592–604.
+[28] G.D. Mostow, Some new decomposition theorems for semisimple groups , Memoirs
+Amer. Math. Soc. 14 (1955), 31–54.
+[29] R.I. Oliveira, Concentration of the adjacency matrix and of the Laplacian i n random
+graphs with independent edges , arXiv:0911.0600.
+[30] , Sums of random Hermitian matrices and an inequality by Rudel son, Elec.
+Commun. Prob. 15 (2010), 203–212.
+[31] G. P´ olya,Remarks on Weyl’s note “Inequalities between the two kinds o f eigenvalues
+of a linear transformation” , Proc. Natl. Acad. Sci. 36 (1950), 49–51.
+[32] M. Rudelson, Random vectors in the isotropic position , J. Funct. Anal. 164 (1999),
+60–72.
+[33] M. Rudelson and R. Vershynin, Sampling from large matrices: an approach through
+geometric functional analysis , Journal of the ACM 54 (2007), Article 21.
+[34] A.B. Sachar, Brandeis University: A host at last , University Press of New England,
+Hanover, NH, 1995.
+[35] I. Segal, Notes toward the construction of nonlinear relativistic qu antum ﬁelds III ,
+Bull. Amer. Math. Soc. 75 (1969), 1390–1395.
+[36] W. So, Equality cases in matrix exponential inequalties , SIAM J. Math. Anal. 1992
+(1992), 1154–1158.
+[37] K. Symanzik, Proof of reﬁnements of an inequality of Feynmann , J. Math. Phys. 6
+(1965), 1155–1156.
+[38] T. Tao, The Golden-Thompson inequality , terrytao.wordpress.com/2010/07/15/the-
+golden-thompson-inequality, 2010.
+16
+[39] , Topics in random matrix theory , Graduate Studies in Mathematics, Vol. 132,
+American Mathematical Society, Providence, RI, 2012.
+[40] C.J. Thompson, Investigations in the theory of superconductivity , Ph.D. thesis, Uni-
+versity of New South Wales, 1964.
+[41] , Inequality with applications in statistical mechanics , J. Math. Phys. 6 (1965),
+1812–813.
+[42] , Inequalities and partial orders on matrix spaces , Indiana Univ. Math. J 21
+(1971), 469–480.
+[43] J.A. Tropp, User-friendly tail bounds for sums of random matrices , Found. Comput.
+Math. 12 (2012), 389–434.
+[44] , User-friendly tools for random matrices: an introduction ,
+http://users.cms.caltech.edu/˜jtropp/notes/Tro12-User-Friendly-Tools-NIPS.pdf,
+2012.
+[45] H. Trotter, On the product of semi-groups of operators , Proc. Amer. Math. Soc. 10
+(1959), 545–551.
+[46] R. Vershynin, A note on sums of independent random matrices after Ahlswede -Winter,
+www-personal.umich.edu/˜romanv/teaching-group/ahlswede-winter.pdf, 2009.
+[47] H. Weyl, Inequalities between the two kinds of eigenvalues of a linea r transformation ,
+Proc. Natl. Acad. Sci. 35 (1949), 408–411.
+[48] K. Zyczkowski and M. Kus, Unitary random matrices , J. Phys. A 27 (1994), 4235–
+4245.
+[49] K. Zyczkowski and H. J Sommers, Truncations of random unitary matrices , J. Phys.
+A 33 (2000), 2045–2057.
+17

@@ -1,0 +1,153 @@
+{
+  "classification": "Counterexample candidate",
+  "compact": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "native_return_compact_endpoint": 8.26272933561328e-34,
+    "previous_same_cadence_endpoint": 1.0209754059927525e-27,
+    "applied_compact_endpoint": 1.0209762322656763e-27,
+    "time_relative": 0.0001390710415861425,
+    "quadrature_relative": 4.1404464924887275e-16,
+    "independent_direct_relative": 1.656181065885725e-15,
+    "inverse_radius_residual": 4.5634806156158447e-07,
+    "linear_application_relative": 4.92641114780746e-16,
+    "native_collision_applied": true,
+    "native_pressure_force_applied": true,
+    "free_material_evolved": true,
+    "represented_GR_applied": true,
+    "actual_material_motion_returned_to_photons": true,
+    "new_angular_emission_returned_to_infinity": false,
+    "native_acoustic_derivatives_certified": false,
+    "coupled_fixed_point_verified": false,
+    "final_charge_solved": false,
+    "full_goal_complete": false,
+    "motion_return_compact_endpoint": -1.6921954303936202e-40
+  },
+  "infinity": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "controls": {
+      "normalized": {
+        "angular": 1.3197361210617494e-05,
+        "radial": 1.4953835709903505e-11,
+        "time": 2.7876680396995685e-11
+      },
+      "native_return": {
+        "angular": 3.2239243866753505e-10,
+        "radial": 0.0,
+        "time": 0.0002703337373212568
+      },
+      "normalized_exterior_parts": {
+        "angular": 0.0003331311144246699,
+        "radial": 1.7944136651627878e-15,
+        "time": 0.0003682989056200587
+      },
+      "arrived_parts_erg": {
+        "angular": 0.0,
+        "radial": 0.0,
+        "time": 0.0003460593593680464
+      }
+    },
+    "rows": [
+      {
+        "steps": 128,
+        "angular": 8,
+        "radial": 8,
+        "response_port_relative": 1.9017923771325852e-16,
+        "seconds": 9.33222259299987,
+        "normalization_identity": 1.369699907479987e-16
+      },
+      {
+        "steps": 128,
+        "angular": 4,
+        "radial": 8,
+        "response_port_relative": 1.9017923771325852e-16,
+        "seconds": 4.202987742999994,
+        "normalization_identity": 1.3696818312941157e-16
+      },
+      {
+        "steps": 128,
+        "angular": 8,
+        "radial": 4,
+        "response_port_relative": 1.9017923771325852e-16,
+        "seconds": 0.1416643530001238,
+        "normalization_identity": 1.3696999075004691e-16
+      },
+      {
+        "steps": 64,
+        "angular": 8,
+        "radial": 8,
+        "response_port_relative": 7.16669863922485e-17,
+        "seconds": 2.4393372179999915,
+        "normalization_identity": 1.3696999075181697e-16
+      }
+    ],
+    "endpoint_normalized": 5.2381168299435755e-27,
+    "previous_normalized": 5.238116489329999e-27,
+    "native_return_normalized": 3.4061357603578763e-34,
+    "endpoint_compact": 1.0211270550481671e-27,
+    "endpoint_exterior": -5.399550861151992e-33,
+    "endpoint_mass_term": 4.216995174446269e-27,
+    "previous_same_emission_relative": 2.0545499948190624e-16,
+    "normalization_increment_symbolic": true,
+    "packet_fronts_integrated": true,
+    "nonradial_log_angle_coordinate": true,
+    "arrival_angular_integral_exact": true,
+    "delay_inverse_seconds": 4.466912950640278e-16,
+    "computed_packet_kernels": 829,
+    "seconds": 18.89394875300013,
+    "same_fine_background_for_both_response_clocks": true,
+    "original_full_cadence_compact_preserved": true,
+    "actual_new_angular_emission_at_null_infinity": true,
+    "actual_emission_mass_normalization": true,
+    "continuous_emission_error_enclosed": false,
+    "conditional_interval_reused": false,
+    "coupled_fixed_point_verified": false,
+    "final_charge_solved": false,
+    "full_goal_complete": false,
+    "actual_material_motion_returned_to_photons": true,
+    "previous_phase_endpoint": 5.238116829943246e-27,
+    "motion_return_endpoint": 3.293790203141393e-40,
+    "motion_return_controls": {
+      "angular": 5.53983910639093e-10,
+      "radial": 2.476366156295843e-16,
+      "time": 0.007691156072973347
+    },
+    "first_readout_failure_preserved": true,
+    "direct_motion_reader": "direct-motion/result.json"
+  },
+  "direct_increment": {
+    "classification": "Counterexample candidate",
+    "controls": {
+      "compact_time": 0.0067083415564994885,
+      "compact_quadrature": 2.0276726075835987e-14,
+      "independent": 7.390246465445237e-13
+    },
+    "pressure": [
+      {
+        "steps": 64,
+        "arithmetic_over_pressure_increment": 0.014421022032512726
+      },
+      {
+        "steps": 128,
+        "arithmetic_over_pressure_increment": 0.014439470896330386
+      }
+    ],
+    "compact_endpoint": -1.6921954303936202e-40,
+    "seconds": 13.922002691999978,
+    "motion_return_controls": {
+      "angular": 5.53983910639093e-10,
+      "radial": 2.476366156295843e-16,
+      "time": 0.007691156072973347
+    },
+    "endpoint_normalized": 5.2381168299435755e-27,
+    "motion_return_endpoint": 3.293790203141393e-40,
+    "original_failure_preserved": true,
+    "actual_material_and_photon_paths_replayed": false,
+    "final_charge_solved": false,
+    "full_goal_complete": false,
+    "passed": true
+  },
+  "original_readout_failed": true,
+  "full_goal_complete": false
+}

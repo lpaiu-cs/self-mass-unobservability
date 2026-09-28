@@ -1,0 +1,96 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "paths": [
+    {
+      "steps": 64,
+      "mechanical_once_relative": [
+        6.386034608211523e-13,
+        1.4398812606730366e-12
+      ],
+      "photon_moment_relative": 1.5246232143926178e-16,
+      "endpoint_peak_relative_state": {
+        "component": "neutral_H",
+        "cell": 236,
+        "relative": 0.00039988324475579096,
+        "physical_change": 9.808826766205613e+16,
+        "background": 2.4529226705149582e+20,
+        "deep": false
+      },
+      "full_material_balance": 1.1589917211322891e-15,
+      "energy_H_residual": [
+        5.19296020935622e-12,
+        8.727605646563631e-12
+      ],
+      "absolute_residual": [
+        169407536260649.38,
+        3.3746193224624976e+24
+      ],
+      "previous_absolute_residual": [
+        2.1608957457500316e+18,
+        4.1773248362121454e+27
+      ]
+    },
+    {
+      "steps": 128,
+      "mechanical_once_relative": [
+        1.3714705925517318e-13,
+        3.010350220603425e-13
+      ],
+      "photon_moment_relative": 1.694185112514942e-16,
+      "endpoint_peak_relative_state": {
+        "component": "neutral_H",
+        "cell": 236,
+        "relative": 0.00041535523918388603,
+        "physical_change": 1.018834282511317e+17,
+        "background": 2.4529226705149582e+20,
+        "deep": false
+      },
+      "full_material_balance": 1.7359799245622507e-15,
+      "energy_H_residual": [
+        4.753024666458e-12,
+        7.740943323100911e-12
+      ],
+      "absolute_residual": [
+        155012944905377.0,
+        2.991977028764752e+24
+      ],
+      "previous_absolute_residual": [
+        2.1602529251426985e+18,
+        4.1763032683229446e+27
+      ]
+    }
+  ],
+  "plan_bindings": 45,
+  "material_pilot_prefix_exact": [
+    true,
+    true
+  ],
+  "absolute_material_time_difference": [
+    9.128877995545316e+21,
+    6.715633428506233e+32
+  ],
+  "absolute_photon_time_difference": [
+    9.128878008666544e+21,
+    6.715633428420129e+32
+  ],
+  "residual_over_temporal_comparison": [
+    1.6980503492128464e-08,
+    4.455241729044555e-09
+  ],
+  "residual_change_ratio": [
+    7.17568499045719e-05,
+    0.0007164175675312545
+  ],
+  "residual_below_temporal_comparison_scale": true,
+  "actual_native_forcing_and_finite_motion_in_photons": true,
+  "new_transfers_in_finite_material_and_GR": true,
+  "full_nonlinear_radiation": false,
+  "uniform_EOS_derivative_bound": false,
+  "uniform_coupled_error_bound": false,
+  "exterior_floor_feedback_closed": false,
+  "coupled_fixed_point_verified": false,
+  "final_charge_solved": false,
+  "full_goal_complete": false,
+  "seconds": 13.11601670400006
+}

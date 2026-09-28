@@ -1,0 +1,27 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "rows": [
+    {
+      "implementation": "FluxStar",
+      "maximum_relative_baryon_rate_defect": 1.4504523079081432e-06,
+      "outer_energy_rate_defect_over_heat_capacity": -168.40391494661094,
+      "outer_composition_time_derivative_zero": true
+    },
+    {
+      "implementation": "BaryonStar",
+      "maximum_relative_baryon_rate_defect": 7.575331258241213e-21,
+      "outer_energy_rate_defect_over_heat_capacity": 9.256380168070814e-06,
+      "outer_composition_time_derivative_zero": true
+    }
+  ],
+  "scope": "One actual evolved state; baryon rates at all nodes and energy rate at its zero-composition-rate surface. No whole-path or continuous energy certificate.",
+  "bindings": {
+    "outputs/direct-eos-gr33/gr-baryon-flux-evolution/check-baryon-chain.py": "6271b308d152fd712ed6cb159b604997a6e8a73cf61fd612e46d3a889194ee7a",
+    "verification/gr_baryon_flux_evolution.py": "db34d7bee69a96a3c94e68e89b0f83fafce559e527cd3d17c481625fc5d9564b",
+    "verification/gr_flux_coupled_evolution.py": "67c236f6ad6f64eaffc5c97f584d69f9b8d6e4e7ffcf6dd618c59d1937d2ff9f",
+    "outputs/direct-eos-gr33/gr-flux-coupled-evolution/initial-manifest.json": "29402b3b0187363df9e6d0aa79e9d193623a39853413e25cf147f67fde7f0f54",
+    "outputs/direct-eos-gr33/gr-flux-coupled-evolution/path-8/manifest.json": "d8e3809a328e33d30a332b3d3571b60a06d9dddf79375199a5d3d264f099a064",
+    "outputs/direct-eos-gr33/gr-flux-coupled-evolution/budget-8-manifest.json": "9c73cbd45c57b89bd33fd20c55a63a1cc41a0626bf1b5cc14600849700673c4c"
+  }
+}

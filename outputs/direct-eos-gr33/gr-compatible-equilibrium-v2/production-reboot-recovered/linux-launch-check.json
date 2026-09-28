@@ -1,0 +1,40 @@
+{
+  "launch_identity_matches": true,
+  "command": [
+    "/usr/bin/python3",
+    "-u",
+    "verification/gr_reboot_recovery.py",
+    "chain",
+    "--workers",
+    "15",
+    ""
+  ],
+  "cpu_affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "children": [],
+  "rss": [
+    {
+      "pid": 311,
+      "rss_kib": 199504
+    }
+  ],
+  "memory_note": "RSS sums include shared pages and are not proportional-set memory or a peak bound.",
+  "plan_sha256": "c438da9a98b672727d841f75e8fa8a28a40fe9b0dc50a2821a60d90495430a9e",
+  "native_failure_present": false
+}

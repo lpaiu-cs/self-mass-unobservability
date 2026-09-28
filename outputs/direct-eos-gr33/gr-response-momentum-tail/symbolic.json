@@ -1,0 +1,8 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "moments": "I_n=exp(eta_upper-tc)*sum_{k=0}^n (n!/k!)*tc^k = integral_tc^infinity exp(eta_upper-t)*t^n dt.",
+  "envelope": "E_j=beta*(I_j+beta*I_(j+1))+L/(2Q)*sqrt(beta/(2tc))*(I_j+3beta*I_(j+1)+3beta^2*I_(j+2)+beta^3*I_(j+3)+Q^2*(I_j+beta*I_(j+1))).",
+  "partial_bounds": "[E0,E0,E0,E1,E1,E2+E1]/Sref",
+  "domain": "The logarithm bound applies only outside the cusp. Only the positive polynomial envelope is integrated over the enlarged full tail."
+}

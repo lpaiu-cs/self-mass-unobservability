@@ -1,0 +1,39 @@
+{
+  "classification": "Proven",
+  "rows": [
+    {
+      "subdivisions": 1,
+      "cells": 5836,
+      "operator_norm_upper_exact": "59639961983498674778540582272383720703481/356811923176489970264571492362373784095686656",
+      "operator_norm_upper": 0.00016714677427973434,
+      "derivative_lower_exact_m": "85451436149820225293641754497262724789423/340282366920938463463374607431768211456",
+      "derivative_upper_exact_m": "42866076374770633389299392562280017339721/170141183460469231731687303715884105728",
+      "derivative_lower_m": 251.11920115941268,
+      "derivative_upper_m": 251.944153102298,
+      "width_m": 0.824951942885314,
+      "independent_ODE_value_inside": true
+    },
+    {
+      "subdivisions": 4,
+      "cells": 23344,
+      "operator_norm_upper_exact": "59611908192293811022789908464935785633903/356811923176489970264571492362373784095686656",
+      "operator_norm_upper": 0.0001670681508106666,
+      "derivative_lower_exact_m": "2673015734217266833457920684747836004591/10633823966279326983230456482242756608",
+      "derivative_upper_exact_m": "85649426905773784078182482561136007738175/340282366920938463463374607431768211456",
+      "derivative_lower_m": 251.3691916185189,
+      "derivative_upper_m": 251.7010436972588,
+      "width_m": 0.33185207873989586,
+      "independent_ODE_value_inside": true
+    }
+  ],
+  "passed": true,
+  "coefficient_sha256": "defe9bffbace9dce89343f025b0eb421969627d057e75823d6423a18d2b54e66",
+  "interval_library": "mpmath.iv with 40 decimal digits; exact dyadic interval endpoints stored as rational numbers.",
+  "control_uniform_sphere_enclosed": true,
+  "control_lower_exact": "23749386382661542509564680092742103721905/44601490397061246283071436545296723011960832",
+  "control_upper_exact": "47651134408526283298398993061859920829073/89202980794122492566142873090593446023921664",
+  "target": "Derivative of the exact binary64-coefficient PCHIP mathematical model under v(epsilon)=v0*(1+epsilon*16x^2(1-x)^2). G=6.67428e-11 and c=299792458 are treated as the specified exact constants.",
+  "proof": "K has kernel G(r,s)*(-v(s)); its absolute integral is largest at r=0. ||K||<=k<1/2 gives |phi-1|<=k/(1-k). Interval polynomial evaluation, exact monomial integrals, and interval arithmetic enclose integral (-v1)*phi^2, including the analytic Schwarzschild exterior Green factor.",
+  "physical_EOS_TOV_uncertainty_included": false,
+  "full_stellar_or_observational_derivative_certified": false
+}

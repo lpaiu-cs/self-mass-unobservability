@@ -1,0 +1,1535 @@
+arXiv:quant-ph/9806016v1  5 Jun 1998
+Smearing Formula for Higher-Order Eﬀective Classical Pote ntials
+Hagen Kleinert, Werner K¨ urzinger and Axel Pelster
+Institut f¨ ur Theoretische Physik, Freie Universit¨ at Berlin,
+Arnimallee 14, D–14195 Berlin, Germany
+In the variational approach to quantum statistics, a smeari ng formula
+describes eﬃciently the consequences of quantum ﬂuctuatio ns upon an inter-
+action potential. The result is an eﬀective classical potent ial from which the
+partition function can be obtained by a simple integral. In t his work, the
+smearing formula is extended to higher orders in the variati onal perturbation
+theory. An application to the singular Coulomb potential ex hibits the same
+fast convergence with increasing orders that has been obser ved in previous
+variational perturbation expansions of the anharmonic osc illator with quartic
+potential.
+I. INTRODUCTION
+The variational approach to quantum statistics, initially based on th e Jensen-Peierls
+inequality for imaginary-time path integrals [1,2], yielded crude upper b ounds for the free
+energy of many quantum mechanical systems at all temperatures and coupling strengths.
+By abandoning the inequality, the approach has been extended [3] t o a systematic, fast con-
+vergent variational perturbation theory [4–6], within which the orig inal approach is just a
+ﬁrst-order approximation. Thermodynamic and some local quantit ies can now be evaluated
+to any desired accuracy, starting out from an ordinary perturba tion expansion of arbitrary
+order.
+A particularly attractive feature of the original variational appro ach was the existence
+of a smearing formula in the form of a Gaussian convolution integral w hich compactly
+accounts for the eﬀect of quantum ﬂuctuations upon the interac tion potential and other
+local quantities [2,6]. This formula was applicable to some classes of sing ular potentials
+such as the Coulomb potential [6,7]. There is a deﬁnite need for such a formula in higher
+orders of variational perturbation theory, which so far was base d on Feynman diagrams,
+thus being limited to polynomial interactions. The purpose of this pap er is to derive the
+desired higher-order smearing formula. This will be done in Section II I after a brief review
+of variational perturbation theory in Section II. An application to t he Coulomb potential
+is given in Section IV, where the eﬀective classical potential is calcula ted to second order
+in the variational perturbation theory. Its zero-temperature lim it yields in Section V a
+variational perturbation expansion for the ground state energy up to second order. Section
+VI reproduces this result by a direct variational treatment of the Rayleigh-Schr¨ odinger
+perturbation expansion, and carries it to third order to demonstr ate the fast convergence of
+the variational perturbation expansion.
+1
+II. REVIEW OF V ARIA TIONAL PER TURBA TION THEOR Y
+Consider a quantum mechanical point particle of mass M moving in a one-dimensional
+time-independent potential V (x). Its thermodynamic partition function is given by the
+imaginary-time path integral [6]
+Z =
+∮
+Dx(τ ) exp
+{
+− 1
+¯h A[x(τ )]
+}
+, (1)
+with the euclidean action
+A[x(τ )] =
+¯hβ∫
+0
+dτ
+[ M
+2 ˙x(τ )2 + V (x(τ ))
+]
+, (2)
+and the abbreviation β ≡ 1/kBT . The paths x(τ ) satisfy the periodic boundary condition
+x(0) = x(¯hβ). Following Feynman [1], we decompose the path integral for the par tition
+function (1) into an ordinary integral over the time-averaged pos ition
+x0 = x ≡ 1
+¯hβ
+¯hβ∫
+0
+dτ x(τ ) , (3)
+and a remaining path integral over the ﬂuctuations
+δx(τ ) = x(τ ) − x0 (4)
+around x0. Thus we rewrite (1) as an integral
+Z =
++∞∫
+−∞
+˜dx0 Z x0 (5)
+over a local partition function Z x0 which is deﬁned by the restricted path integral
+Z x0 ≡
+∮
+Dx(τ ) ˜δ(x − x0) exp
+{
+− 1
+¯h A[x(τ )]
+}
+, (6)
+with the notation
+˜dx0 ≡
+√
+M
+2π¯h2β dx0 , ˜δ(¯x − x0) ≡
+√
+2π¯h2β
+M δ(x − x0). (7)
+The free energy associated with the local partition function (6) is d eﬁned as the eﬀective
+classical potential [6]
+V eﬀ,cl(x0) = − 1
+β log Z x0 (8)
+which accounts for the eﬀects of all quantum ﬂuctuations.
+In order to calculate V eﬀ,cl(x0), we decompose the euclidean action (2) into a sum
+2
+A[x(τ )] = Ax0
+Ω [x(τ )] + Ax0
+int[x(τ )] , (9)
+where the ﬁrst term is the action of a harmonic oscillator centered a round x0 with an
+undetermined local trial frequency Ω(x0),
+Ax0
+Ω [x(τ )] =
+¯hβ∫
+0
+dτ
+{ M
+2 ˙x(τ )2 + M
+2 Ω2(x0) [x(τ ) − x0]2
+}
+, (10)
+and the second term is the remaining interaction
+Ax0
+int[x(τ )] =
+¯hβ∫
+0
+dτ V x0
+int (x(τ )) (11)
+of the potential diﬀerence
+V x0
+int (x) = V (x) − M
+2 Ω2(x0)(x − x0)2 . (12)
+With this decomposition, the local partition function (6) may be expa nded in powers of the
+interaction potential (12) around the local harmonic partition fun ction
+Z x0
+Ω =
+∮
+Dx(τ ) ˜δ(x − x0) exp
+{
+− 1
+¯hAx0
+Ω [x(τ )]
+}
+. (13)
+The expansion reads
+Z x0 = Z x0
+Ω
+
+
+
+
+
+1 − 1
+¯h
+¯hβ∫
+0
+dτ1⟨V x0
+int (x(τ1))⟩x0
+Ω + 1
+2¯h2
+¯hβ∫
+0
+dτ1
+¯hβ∫
+0
+dτ2⟨V x0
+int (x(τ1))V x0
+int (x(τ2))⟩x0
+Ω
+− 1
+6¯h3
+¯hβ∫
+0
+dτ1
+¯hβ∫
+0
+dτ2
+¯hβ∫
+0
+dτ3⟨V x0
+int (x(τ1))V x0
+int (x(τ2))V x0
+int (x(τ3))⟩x0
+Ω + . . .
+
+
+
+
+
+, (14)
+where the x0-dependent expectation values ⟨F1(x(τ1)) . . . Fn(x(τn))⟩x0
+Ω are correlation func-
+tions of the local harmonic trial system:
+⟨F1(x(τ1)) · · ·Fn(x(τn))⟩x0
+Ω = 1
+Z x0
+Ω
+×
+∮
+Dx(τ )F1(x(τ1)) · · ·Fn(x(τn))˜δ(x − x0) exp
+{
+− 1
+¯h Ax0
+Ω [x(τ )]
+}
+. (15)
+The correlation functions can be decomposed into connected ones via the standard cumulant
+expansion [6,8], yielding for the eﬀective classical potential V eﬀ,cl(x0) the following pertur-
+bation expansion [6]
+V eﬀ,cl(x0) = F x0
+Ω + 1
+¯hβ
+¯hβ∫
+0
+dτ1⟨V x0
+int (x(τ1))⟩x0
+Ω − 1
+2¯h2β
+¯hβ∫
+0
+dτ1
+¯hβ∫
+0
+dτ2⟨V x0
+int (x(τ1))V x0
+int (x(τ2))⟩x0
+Ω,c
++ 1
+6¯h3β
+¯hβ∫
+0
+dτ1
+¯hβ∫
+0
+dτ2
+¯hβ∫
+0
+dτ3⟨V x0
+int (x(τ1))V x0
+int (x(τ2))V x0
+int (x(τ3))⟩x0
+Ω,c + . . . . (16)
+3
+The ﬁrst term on the right-hand side is the free energy of the local harmonic partition
+function
+F x0
+Ω ≡ − 1
+β log Z x0
+Ω = 1
+β log sinh ¯hβΩ(x0)/2
+¯hβΩ(x0)/2 . (17)
+The second term contains the local harmonic expectation value of t he potential for which
+there exists the above mentioned smearing formula which we want to extend in this work.
+The cumulant in the third term is given by the following combination of ex pectation values:
+⟨V x0
+int (x(τ1))V x0
+int (x(τ2))⟩x0
+Ω,c = ⟨V x0
+int (x(τ1))V x0
+int (x(τ2))⟩x0
+Ω − ⟨ V x0
+int (x(τ1))⟩x0
+Ω ⟨V x0
+int (x(τ2))⟩x0
+Ω . (18)
+By construction, the eﬀective classical potential V eﬀ,cl(x0) in (16) does not depend on
+the choice of the frequency Ω( x0) in the trial action (10). However, when truncating the
+inﬁnite sum (16) after the Nth order, we obtain an approximation W Ω
+N (x0) for the eﬀec-
+tive classical potential V eﬀ,cl(x0) with an Ω( x0)-dependence, which decreases with increasing
+order N of the expansion. With the expectation that the optimal truncate d sum W Ω
+N (x0) de-
+pends minimally on the frequency Ω( x0), we therefore determine Ω( x0) from the extremality
+condition
+∂W Ω
+N (x0)
+∂Ω(x0) = 0 . (19)
+If this has no solution, we demand as the next-best condition of minim al dependence on
+Ω(x0) [3,5,6]
+∂2W Ω
+N (x0)
+∂Ω2(x0) = 0 . (20)
+The result is called the optimal frequency ΩN (x0) of order N. It yields the truncated sum
+WN (x0) ≡ W ΩN (x0)
+N (x0) which represents the desired Nth order approximation to the ef-
+fective classical potential V eﬀ,cl(x0). The ﬁrst-order approximation W1(x0) coincides with
+the original variational result of Feynman and Kleinert [2] which satiﬁ es the Jensen-Peierls
+inequality and guarantees the existence of an extremum (19).
+The accuracy of the approximate eﬀective classical potential WN (x0) can be assessed
+by the following considerations [6]. In the limit of high temperatures wh ere β → 0, the
+approximation WN (x0) becomes exact for any N:
+lim
+β→ 0
+WN (x0) = V (x0) . (21)
+At low temperatures, where β → ∞ , we obtain from (5) and (8) an approximation to the
+free energy in form of an integral over the time-averaged position x0
+FN = − 1
+β log
+
+
+
++∞∫
+−∞
+˜dx0 exp [− βWN (x0)]
+
+
+ , (22)
+whose integrand is centered sharply around the minimum xmin
+N of WN (x0). Performing this
+integral in the saddle point approximation yields an N-th order approximation E(0)
+N for the
+ground state energy E(0) of the quantum system.
+4
+E(0)
+N = minx0
+lim
+β→∞
+WN (x0) . (23)
+The same approximation to the ground state energy can also be obt ained by a variational
+resummation [6] of the Rayleigh-Schr¨ odinger perturbation seriesfor E(0). This will be shown
+in Section V for the ground state energy of the Coulomb potential u p to the order N = 2.
+III. EV ALUA TION OF P A TH INTEGRALS
+In order to calculate the diﬀerent terms in the variational perturb ation expansion (16),
+we must ﬁnd eﬃcient formulas for evaluating local correlation funct ions of the type (15).
+For this we observe that, by ﬁxing of the temporal average at ¯ x = x0 in the path integral
+in (16), the zero Matsubara frequency ω0 = 0 is removed from the Fourier decomposition of
+the periodic paths
+x(τ ) = x0 +
+∞∑
+m=1
+(
+xmeiωmτ + x∗
+me− iωmτ
+)
+, ω m = 2πm/¯hβ . (24)
+In fact, the restricted integration measure
+∮
+Dx(τ )˜δ(
+x − x0) in (15) may be decomposed
+into a product of ordinary integrals over real and imaginary parts xre
+m and xim
+m of the Fourier
+components xm according to [6]:
+∮
+Dx(τ )˜δ(
+x − x0) =
+∞∏
+m=1
+
+
++∞∫
+−∞
+dxre
+m
++∞∫
+−∞
+dxim
+m
+βM ω2
+m
+π
+
+ . (25)
+The zero-frequency component x0 remains unintegrated. With this decomposition, the basic
+local pair correlation function of the ﬂuctuations δx(τ ) in (4) can immediately be calculated
+from (15) as a Matsubara sum without the zero mode:
+Gx0
+Ω (τ, τ ′) ≡ ⟨ δx(τ )δx(τ ′)⟩x0
+Ω = 2
+M β
+∞∑
+m=1
+cos ωm(τ − τ ′)
+ω2
+m + Ω2(x0) . (26)
+Performing the sum yields the explicit result
+Gx0
+Ω (τ, τ ′) = ¯h
+2MΩ(x0)
+{
+cosh [Ω(x0)|τ − τ ′| − ¯hβΩ(x0)/2]
+sinh[¯hβΩ(x0)/2] − 2
+¯hβΩ(x0)
+}
+. (27)
+The ﬁrst term is the ordinary oscillator correlation function of freq uency Ω
+GΩ(τ, τ ′) ≡ ⟨ x(τ )x(τ ′)⟩Ω = 1
+M β
+∞∑
+m=−∞
+cos ωm(τ − τ ′)
+ω2
+m + Ω2(x0) , (28)
+while the last term subtracts the zero mode which is absent in (26). T his absence has the
+important consequence that
+¯hβ∫
+0
+dτ G x0
+Ω (τ, τ ′) = 0 . (29)
+5
+Using (27), the expectation values in (16) can easily be calculated fo r a polynomial
+potential using Wick’s contraction rules, by which the expectation v alues can be reduced
+to sums over products of pair correlation functions Gx0
+Ω (τ, τ ′). In order to abbreviate the
+notation and to emphasize the dimension (length) 2 of these quantities, we shall denotes the
+local Green functions in (27) from now on by a2
+τ τ′(x0). The harmonic expectation value of
+any odd power n in the ﬂuctuation variable δx(τ ) is zero. For even n, the Wick expansion
+reads
+⟨ n∏
+k=1
+δx(τk)
+⟩ x0
+Ω
+=
+∑
+P
+a2
+τP (1)τP (2)(x0) · · ·a2
+τP (n− 1)τP (n)(x0) , (30)
+where the sum runs over all ( n − 1)!! pair contractions. For an exponential, Wick’s rule
+implies
+⟨
+exp
+
+
+ i
+¯hβ∫
+0
+dτ j(τ )δx(τ )
+
+
+
+⟩ x0
+Ω
+= exp
+
+
+ − 1
+2
+¯hβ∫
+0
+dτ
+¯hβ∫
+0
+dτ ′j(τ )a2
+τ τ′(x0)j(τ ′)
+
+
+ . (31)
+In the special case j(τ ) = ∑n
+k=1 ukδ(τ − τk), we obtain the important formula for the ex-
+pecation value of a product of exponentials
+⟨ n∏
+k=1
+eiukδx(τk)
+⟩ x0
+Ω
+= exp
+[
+− 1
+2
+n∑
+k=1
+n∑
+k′=1
+uka2
+τkτk′(x0)uk′
+]
+. (32)
+After Fourier-decomposing the functions F1(x), . . . , Fn(x) in (15), formula (32) yields di-
+rectly the desired smearing formula [10]
+⟨F1(x(τ1)) · · ·Fn(x(τn))⟩x0
+Ω =
+
+
+n∏
+k=1
++∞∫
+−∞
+dxkFk(xk)
+
+
+× 1
+√
+(2π)nDet
+[
+a2
+τkτk′(x0)
+] exp
+[
+− 1
+2
+n∑
+k=1
+n∑
+k′=1
+δxk a− 2
+τkτk′(x0) δxk′
+]
+, (33)
+where a− 2
+τkτk′(x0) denotes the inverse of the symmetric n × n-matrix a2
+τkτk′(x0). This smearing
+formula determines the diﬀerent harmonic expectation values in the variational perturbation
+expansion (16) as convolutions with Gaussian functions.
+For n = 1, the smearing formula (33) reduces to the previous one [2,6]
+⟨F1(x(τ1))⟩x0
+Ω =
++∞∫
+−∞
+dx1F1(x1) 1
+√
+2πa2(x0)
+exp
+[
+− (x1 − x0)2
+2a2(x0)
+]
+, (34)
+where a2(x0) denotes the τ -independent diagonal matrix element a2
+τ τ(x0). For polynomials
+F1(x), the smearing formula (33) reproduces Wick’s rule: Odd powers in δx(τ ) have van-
+ishing local correlation functions, whereas even powers result in (3 0), which for coinciding
+times τk reduces to
+⟨[δx(τk)]n⟩x0
+Ω = (n − 1)!! an(x0) . (35)
+6
+For two functions F1(x) and F2(x), our smearing formula (33) reads, more explicitly,
+⟨F1(x(τ1))F2(x(τ2))⟩x0
+Ω =
++∞∫
+−∞
+dx1
++∞∫
+−∞
+dx2 F1(x1)F2(x2) 1√
+(2π)2[a4(x0) − a4
+τ1τ2(x0)]
+× exp
+{
+− a2(x0)(x1 − x0)2 − 2a2
+τ1τ2(x0)(x1 − x0)(x2 − x0) + a2(x0)(x2 − x0)2
+2[a4(x0) − a4
+τ1τ2(x0)]
+}
+. (36)
+Specializing F2(x) to the square of the function δx, we obtain the useful rule
+⣨
+F1(x(τ1)) [δx(τ2)]2⟩x0
+Ω
+= a2(x0)
+[
+1 − a4
+τ1τ2(x0)
+a4(x0)
+]
+⟨F1(x(τ1))⟩x0
+Ω
++ a4
+τ1τ2(x0)
+a4(x0)
+⣨
+F1(x(τ1)) [δx(τ1)]2⟩x0
+Ω
+, (37)
+which reduces the smearing procedure for diﬀerent times τ1 and τ2 to corresponding ones at
+equal times τ1 = τ2. With this we immediately yield, for instance,
+⣨
+[δx(τ1)]2 [δx(τ2)]2⟩x0
+Ω
+= a4(x0) + 2a4
+τ1τ2(x0) . (38)
+In three dimensions, the trial potential contains a 3 × 3-frequency matrix Ω ij depending
+on the time-averaged position x0 and reads
+M
+2
+3∑
+i,j=1
+Ω2
+ij(x0)(xi − x0i)(xj − x0j) , (39)
+while the interaction potential (12) becomes
+V x0
+int (x) = V (x) − M
+2
+3∑
+i,j=1
+Ω2
+ij(x0)(xi − x0i)(xj − x0j) . (40)
+Assuming the potential to depend only on r = |x|, i.e. V (x) = v(r), the frequency matrix
+possesses only two invariant matrix elements, a longitudinal one Ω L(r0) and a transversal
+one Ω T (r0) [6,7]. The interaction potential (40) can then be decomposed into a longitudinal
+and a transversal part according to
+Ω2
+ij(x0) = Ω 2
+L(r0) x0ix0j
+r2
+0
++ Ω2
+T (r0)
+(
+δij − x0ix0j
+r2
+0
+)
+, (41)
+so that (40) may be rewritten as
+V x0
+int (x) = v(r) − M
+2
+{
+Ω2
+L(r0) [δx]2
+L + Ω2
+T (r0) [δx]2
+T
+}
+, (42)
+with obvious deﬁnitions of the longitudinal and transverse project ions δxL and δxT of the
+ﬂuctuations δx.
+To ﬁrst order, the anisotropic generalization of the smearing form ula (34) reads [6,7]
+7
+⟨F1(x(τ1)⟩r0
+ΩT ,ΩL
+=
++∞∫
+−∞
+d3x1F1(x1) 1√
+(2π)3a4
+T a2
+L
+exp
+{
+− x2
+1T
+2a2
+T
+− (x1L − r0)2
+2a2
+L
+}
+. (43)
+For the squares of transverse and longitudinal ﬂuctuations, this generalizes (35) with n = 2
+to
+⣨
+[δx(τ1)]2
+T
+⟩r0
+ΩT ,ΩL
+= 2a2
+T ,
+⣨
+[δx(τ1)]2
+L
+⟩r0
+ΩT ,ΩL
+= a2
+L . (44)
+The second-order smearing formula (36) becomes in three dimensio ns
+⟨F1(x(τ1)F2(x(τ2)⟩r0
+ΩT ,ΩL
+=
++∞∫
+−∞
+d3x1
++∞∫
+−∞
+d3x2 F1(x1)F2(x2)
+× 1
+(2π)3(a4
+T − a4
+T τ1τ2)
+√
+a4
+L − a4
+Lτ1τ2
+exp
+{
+− a2
+T x2
+1T − 2a2
+T τ1τ2x1T x2T + a2
+T x2
+2T
+2(a4
+T − a4
+T τ1τ2)
+}
+× exp
+{
+− a2
+L(x1L − r0)2 − 2a2
+Lτ1τ2(x1L − r0)(x2L − r0) + a2
+L(x2L − r0)2
+2(a4
+L − a4
+Lτ1τ2)
+}
+, (45)
+so that the rule (37) for expectation values is generalized to
+⣨
+F1(x(τ1) [δx(τ2)]2
+T
+⟩r0
+ΩT ,ΩL
+= 2a2
+T
+[
+1 − a4
+T τ1τ2
+a4
+T
+]
+⟨F1(x(τ1))⟩r0
+ΩT ,ΩL
++ a4
+T τ1τ2
+a4
+T
+⣨
+F1(x(τ1)) [δx(τ1)]2
+T
+⟩r0
+ΩT ,ΩL
+, (46)
+⣨
+F1(x(τ1) [δx(τ2)]2
+L
+⟩r0
+ΩT ,ΩL
+= a2
+L
+[
+1 − a4
+Lτ1τ2
+a4
+L
+]
+⟨F1(x(τ1))⟩r0
+ΩT ,ΩL
++ a4
+Lτ1τ2
+a4
+L
+⣨
+F1(x(τ1)[δx(τ1)]2
+L
+⟩r0
+ΩT ,ΩL
+. (47)
+Specializing F1(x) to a quadratic function, we obtain the corresponding generalizat ions of
+(38)
+⣨
+[δx(τ1)]2
+T [δx(τ2)]2
+T
+⟩r0
+ΩT ,ΩL
+= 4a4
+T + 4a4
+T τ1τ2 , (48)
+⣨
+[δx(τ1)]2
+T [δx(τ2)]2
+L
+⟩r0
+ΩT ,ΩL
+= 2a2
+T a2
+L , (49)
+⣨
+[δx(τ1)]2
+L [δx(τ2)]2
+L
+⟩r0
+ΩT ,ΩL
+= a4
+L + 2a4
+Lτ1τ2 . (50)
+IV. APPLICA TION TO COULOMB POTENTIAL
+Let us demonstrate the use of the new smearing formulas by calcula ting the eﬀective
+classical potential of the three-dimensional Coulomb potential
+v(r) = − e2
+r (51)
+8
+up to the second order in the variational perturbation expansion, thus going beyond the
+known ﬁrst-order results in [6,7]. For harmonic and Coulomb potentia ls we express the
+Coulomb potential (51) as a “proper-time” integral
+1
+r = 4π
++∞∫
+−∞
+d3k
+(2π)3
++∞∫
+0
+dσe− σk2− ikx , (52)
+where σ has the dimension (length) 2, and ﬁnd the expectation value
+⟨
+1
+|x(τ1)|
+⟩ r0
+ΩT ,ΩL
+=
+√
+2a2
+L
+π
+1∫
+0
+dλ 1
+(a2
+T − a2
+L)λ2 + a2
+L
+exp
+{
+− r2
+0
+2a2
+L
+λ2
+}
+. (53)
+From a straight-forward three-dimensional extension of (16), t he ﬁrst-order variational ap-
+proximation to the eﬀective classical potential is then [6,7]
+W ΩT ,ΩL
+1 (r0) = 2
+β log sinh[¯hβΩT /2]
+¯hβΩT /2 + 1
+β log sinh[¯hβΩL/2]
+¯hβΩL/2 − M
+2
+{
+2Ω2
+T a2
+T + Ω2
+La2
+L
+}
+− e2
+√
+2a2
+L
+π
+1∫
+0
+dλ 1
+(a2
+T − a2
+L)λ2 + a2
+L
+exp
+{
+− r2
+0
+2a2
+L
+λ2
+}
+, (54)
+where we have ommitted the argument r0 from all functions on the right-hand side. A
+similar expression was derived in the isotropic approximation Ω L = Ω T with the help of
+Gaussian wave packets in the context of plasma physics for the pur pose of faster molecular
+dynamics simulations [11–13].
+By inserting the “proper-time” integral for the Coulomb potential (52) into the rules
+(46) and (47), we ﬁnd
+⟨
+1
+|x(τ1)|[δx(τ2)]2
+T
+⟩ r0
+ΩT ,ΩL
+=
+√
+2a2
+L
+π
+1∫
+0
+dλ exp
+{
+− r2
+0
+2a2
+L
+λ2
+}
+×
+{
+2a2
+T
+(a2
+T − a2
+L)λ2 + a2
+L
+− 2a4
+T τ1τ2λ2
+[(a2
+T − a2
+L)λ2 + a2
+L]2
+}
+, (55)
+⟨
+1
+|x(τ1)|[δx(τ2)]2
+L
+⟩ r0
+ΩT ,ΩL
+=
+√
+2a2
+L
+π
+1∫
+0
+dλ exp
+{
+− r2
+0
+2a2
+L
+λ2
+}
+a6
+L + a4
+Lτ1τ2[r2
+0λ4 − a2
+Lλ2]
+a4
+L[(a2
+T − a2
+L)λ2 + a2
+L] . (56)
+Note that these results are also special cases of the general exp ectation value
+⟨
+1
+|x(τ1)|F (x(τ2))
+⟩ r0
+ΩT ,ΩL
+= 1
+2π2
++∞∫
+0
+dσ
+exp
+{
+− a2
+Lr2
+0
+2[a4
+L − a4
+Lτ1τ2 + 2a2
+Lσ]
+}
+[a4
+T − a4
+T τ1τ2 + 2a2
+T σ]
+√
+a4
+L − a4
+Lτ1τ2 + 2a2
+Lσ
++∞∫
+−∞
+d3xF (x)
+× exp
+{
+− (a2
+T + 2σ)x2
+T
+2[a4
+T − a4
+T τ1τ2 + 2a2
+T σ] − (a2
+L + 2σ)(xL − r0)2 + 2a2
+Lτ1τ2r0(xL − r0)
+2[a4
+L − a4
+Lτ1τ2 + 2a2
+Lσ]
+}
+, (57)
+which gives us the additional local expectation value
+9
+⟨
+1
+|x(τ1)|
+1
+|x(τ2)|
+⟩ r0
+ΩT ,ΩL
+= 2
+π
++∞∫
+0
+dσ1
++∞∫
+0
+dσ2
+1
+[a2
+T + 2σ1][a2
+T + 2σ2] − a4
+T τ1τ2
+× 1
+√
+[a2
+L + 2σ1][a2
+L + 2σ2] − a4
+Lτ1τ2
+exp
+{
+− r2
+0[a2
+L + σ1 + σ2 − a2
+Lτ1τ2]
+[a2
+L + 2σ1][a2
+L + 2σ2] − a4
+Lτ1τ2
+}
+. (58)
+From these smearing results we calculate the connected correlatio n functions of the interac-
+tion potential (40) according to the cumulant law (18), and insert t hese into (16) to obtain
+the second-order eﬀective classical potential
+W ΩT ,ΩL
+2 (r0) = W ΩT ,ΩL
+1 (r0)
++ e2M
+2¯h
+√
+2a2
+L
+π
+1∫
+0
+dλ
+{
+2ΩT l4
+T λ2
+[(a2
+T − a2
+L)λ2 + a2
+L]2 − ΩLl4
+L[r2
+0λ4 − a2
+Lλ2]
+a4
+L[(a2
+T − a2
+L)λ2 + a2
+L]
+}
+exp
+{
+− r2
+0
+2a2
+L
+λ2
+}
+− M 2[2Ω3
+T l4
+T + Ω3
+Ll4
+L]
+4¯h − e4
+2¯h2β
+¯hβ∫
+0
+dτ1
+¯hβ∫
+0
+dτ2
+⟨
+1
+|x(τ1)|
+1
+|x(τ2)|
+⟩ r0
+ΩT ,ΩL,c
+(59)
+with the abbreviation
+l4
+T,L =
+¯h
+[
+4 + ¯h2β2Ω2
+T,L − 4 cosh ¯hβΩT,L + ¯hβΩT,L sinh ¯hβΩT,L
+]
+8βM 2Ω3
+T,L sinh2[¯hβΩT,L/2] , (60)
+which is a function of r0 of dimension (length) 4. After extremizing (54) and (59) with re-
+spect to the trial frequencies Ω T , ΩL according to (19), which has to be done numerically
+we obtain the ﬁrst- and second-order approximations for the eﬀe ctive classical potential of
+the Coulomb system. The isotropic approximations Ω T = Ω L in the ﬁrst and second order
+are plotted in Fig. 1 for various temperatures. The second-order curves lie all below the
+ﬁrst-order ones, and the diﬀerence between the two decreases with increasing temperature
+and increasing distance from the origin. Figure 2 shows exemplarily th at the anisotropic
+approximation slightly deviates from the isotropic one. The diﬀerenc e between both is only
+visible for intermediate distances from the origin.
+V. ZERO-TEMPERA TURE LIMIT
+In order to check our results we take (54) and (59) to the limit T → 0, where W Ω
+1 (r0)
+and W Ω
+2 (r0) reduce at r0 = 0, according to (23), to the ground state energy of the Coulomb
+system. At r0 = 0, the frequencies are isotropic Ω L = Ω T = Ω for symmetry reasons, thus
+simplifying the evaluation (54) and (59). Taking into account the low t emperature limit of
+the two-point correlations (27)
+lim
+β→∞
+a2
+τkτk′(x0) = ¯h
+2MΩ(x0)e− Ω(x0)|τk− τk′|, (61)
+we immediately deduce for the ﬁrst order approximation (54) at x0 = 0 with Ω = Ω( 0) the
+limit
+10
+-1
+-0.8
+-0.6
+-0.4
+-0.2
+0
+0 0.5 1 1.5 2 2.5 3 3.5 4
+W1(r0) W2(r0)
+❈
+❈
+❈
+❈ ❲
+❈
+❈
+❈
+❈ ❲
+V (r0)❳❳❳ ②
+r0
+FIG. 1. Isotropic approximations to the eﬀective classical p otential of the Coulomb system in
+the ﬁrst (lines) and second order (dots). The temperatures a re 0, 0.1, 0.01 and ∞ from the top
+to the bottom in atomic units. The high temperature limit is t he same for all approximations
+WN (r0).
+E(0)
+1 (Ω) = lim
+β→∞
+W Ω
+1 (0) = 3
+4 ¯hΩ − 2√ π
+√
+MΩ
+¯h e2 . (62)
+To second order, the limit is more involved. Performing the integrals o ver σ1 and σ2 in
+(58), we obtain with (18) the connected correlation function
+⟨
+1
+|x(τ1)|
+1
+|x(τ2)|
+⟩ 0
+Ω,c
+= 1
+a4
+τ1τ2(0) − 2
+πa4
+τ1τ2(0) arctan
+
+
+
+√
+a2
+τ1τ2(0)
+aτ1τ2(0) − 1 − 2
+πa2
+τ1τ2(0) . (63)
+Inserting here the zero-temperature limit (61), we can integrate these expressions over the
+imaginary times τ1, τ2 ∈ [0, ¯hβ], and ﬁnd for large β
+¯hβ∫
+0
+dτ1
+¯hβ∫
+0
+dτ2
+⟨
+1
+|x(τ1)|
+1
+|x(τ2)|
+⟩ 0
+Ω,c
+= 4M
+¯hΩ
+{
+e¯hβΩ − 1 − ¯hβΩ − ¯h2β2Ω2
+π − 2
+π
+×
+
+
+ e¯hβΩ arcsin
+√
+1 − e− 2¯hβΩ + 1
+2 log α(β) − 1
+8 [log α(β)]2 − 1
+2
+1∫
+α(β)
+du log u
+1 + u
+
+
+
+
+
+
+
+
+, (64)
+11
+-1.2
+-1
+-0.8
+-0.6
+-0.4
+-0.2
+0 1 2 3 4 5-1.2
+-1
+-0.8
+-0.6
+-0.4
+-0.2
+0 1 2 3 4 5
+W ΩT =ΩL
+1 (r0)
+W ΩT ̸=ΩL
+1 (r0)
+❆
+❆
+❆
+❆
+❆
+❆
+❆ ❯
+❆
+❆
+❆
+❆
+❆❆ ❯
+V (r0)❳❳❳❳❳❳❳ ②
+W ΩT ̸=ΩL
+2 (r0)
+W ΩT =ΩL
+2 (r0)
+❳❳❳❳❳❳❳ ② ❳❳❳❳❳❳❳❳ ②
+r0
+FIG. 2. Isotropic and anisotropic approximations to the eﬀec tive classical potential of the
+Coulomb system in the ﬁrst and second order at the temperatur e 0.1 in atomic units. The lowest
+line represents the high temperature limit in which all isot ropic and anisotropic approximations
+coincide.
+with the abbreviation
+α(β) = 1 −
+√
+1 − e− 2¯hβΩ
+1 +
+√
+1 − e− 2¯hβΩ . (65)
+Inserting this into (59) and going to the limit β → ∞ , we ﬁnd the ground state energy
+E(0)
+2 (Ω) = lim
+β→∞
+W Ω
+2 (0) = 9
+16¯hΩ − 3
+2√ π
+√
+MΩ
+¯h e2 − 4
+π
+(
+1 + log 2 − π
+2
+) M
+¯h2 e4. (66)
+Postponing for a moment the extremization of (62) and (66) with re spect to the trial
+frequency Ω, let us ﬁrst rederive this result from a variational tre atment of the ordinary
+Rayleigh-Schr¨ odinger perturbation expansion for the ground-state energy.
+VI. V ARIA TIONAL TREA TMENT OF RA YLEIGH-SCHR¨ODINGER
+PER TURBA TION EXP ANSION
+According to the rules layed out in [6], we must ﬁrst calculate the grou nd-state energy
+for the Coulomb potential in the presence of a harmonic potential o f frequency ω:
+12
+Vaux(x) = M
+2 ω2x2 − e2
+|x|. (67)
+After this, we make the trivial replacement ω →
+√
+Ω2 + ω2 − Ω2, and reexpand the energy
+in powers of the diﬀerence ω2 − Ω2, considering this quantity as being of the order e2 and
+truncating the reexpansion accordingly. At the end we set ω = 0, since the original Coulomb
+system contains no oscillator potential. Note that this limit is equivalen t to a strong-coupling
+limit of (67) with respect to e2. The result of this treatment will coincide precisely with the
+expansions (62) and (66), respectively.
+The Rayleigh-Schr¨ odinger perturbation expansion of the groundstate energy Eaux
+N (ω) for
+the potential (67) requires the knowledge of the matrix elements o f the Coulomb potential
+(51) with respect to the eigenfunctions ψn,l,m(r, ϑ, ϕ) of the harmonic oscillator with the
+frequency ω [6]:
+Vn,l,m;n′,l′,m′ =
+2π∫
+0
+dϕ
+π∫
+0
+dϑ sin ϑ
+∞∫
+0
+dr r2 ψ∗
+n,l,m(r, ϑ, ϕ) − e2
+r ψn′,l′,m′(r, ϑ, ϕ) , (68)
+ψn,l,m(r, ϑ, ϕ) =
+√
+2n!
+Γ(n + l + 3/2)
+4
+√
+M ω
+¯h
+(M ω
+¯h r2
+)(l+1)/2
+× Ll+1/2
+n
+(M ω
+¯h r2
+)
+exp
+{
+− M ω
+2¯h r2
+}
+Yl,m(ϑ, ϕ) . (69)
+Here n denotes the radial quantum number, Lα
+n(x) the Laguerre polynomials [14], and
+Yl,m(ϑ, ϕ) the spherical harmonics obeying the orthonormality relation
+2π∫
+0
+dϕ
+π∫
+0
+dϑ sin ϑ Y ∗
+l,m(ϑ, ϕ)Yl′,m′(ϑ, ϕ) = δl,l′δm,m′ . (70)
+Inserting (69) into (68), and evaluating the integrals with Eq. (2.19 .14.15) in Ref. [15], we
+ﬁnd
+Vn,l,m;n′,l′,m′ = − e2
+√
+M ω
+π¯h
+Γ(l + 1)Γ(n + 1/2)
+Γ(l + 3/2)
+
+
+
+√
+Γ(n′ + l + 3/2)
+n!n′!Γ(n + l + 3/2)
+× 3F2
+(
+− n′, l + 1, 1
+2 ; l + 3
+2, 1
+2 − n; 1
+)
+δl,l′ δm,m′ , (71)
+with the generalized hypergeometric series [14]
+3F2(α1, α2, α3; β1, β2; x) =
+∞∑
+k=0
+(α1)k(α2)k(α3)k
+(β1)k(β2)k
+xk
+k! , (72)
+and the Pochhammer symbol ( α)k = Γ(α + k)/Γ(α).
+These matrix elements are now inserted into the Rayleigh-Schr¨ odin ger perturbation ex-
+pansion for the ground state energy
+13
+Eaux(ω) = E0,0,0 + V0,0,0;0,0,0 +
+′∑
+n,l,m
+V0,0,0;n,l,mVn,l,m;0,0,0
+E0,0,0 − En,l,m
+−
+′∑
+n,l,m
+V0,0,0;0,0,0
+V0,0,0;n,l,mVn,l,m;0,0,0
+[E0,0,0 − En,l,m]2
++
+′∑
+n,l,m
+′∑
+n′,l′,m′
+V0,0,0;n,l,mVn,l,m;n′,l′,m′Vn′,l′,m′;0,0,0
+[E0,0,0 − En,l,m] [E0,0,0 − En′,l′,m′] + . . . , (73)
+the denominators containing the energy eigenvalues of the harmon ic oscillator
+En,l,m = ¯hω
+(
+2n + l + 3
+2
+)
+. (74)
+The primed summations in (73) run over all values of the quantum num bers n, l =
+−∞ , . . . ,+∞ and m = − l, . . . ,+l, excluding those for which the denominators vanish.
+For the ﬁrst three orders we obtain from (71)–(74)
+Eaux(ω) = 3
+2 ¯hω − 2√ π
+√
+M ω
+¯h e2 − 4
+π
+(
+1 + log 2 − π
+2
+) M
+¯h2 e4 − c
+√
+M 3
+¯h7ω e6 + . . . (75)
+with the constant
+c = 1
+π3/2
+{ ∞∑
+n=1
+1 ·3 ·. . . ·(2n − 1)
+2 ·4 ·. . . ·2n
+1
+n2 (n + 1/2) −
+∞∑
+n=1
+∞∑
+n′=1
+1 ·3 ·. . . ·(2n − 1)
+2 ·4 ·. . . ·2n
+× 1 ·3 ·. . . ·(2n′ − 1)
+2 ·4 ·. . . ·2n′
+3F2
+(
+− n′, l + 1, 1
+2; l + 3
+2, 1
+2 − n; 1
+)
+n n′(n + 1/2)
+
+
+ ≈ 0.0318 . (76)
+The variational reexpansion procedure described after Eq. (67) replaces ω in the ﬁrst term by
+Ω(1 − 1)1/2, to be expanded in the second 1 up to third order as 1 − 1/2 − 1/8 − 1/16 = 5 /16.
+Correspondingly the term 3 ω/2 becomes 15 /32ω. The factor ω1/2 goes over into Ω 1/2(1 −
+1)1/4, to be expanded to second order in the second 1, yielding Ω 1/4(1 − 1/4 − 3/32) = 21 /32.
+The next term in (75) happens to be independent of ω and needs no reexpansion, whereas
+the last term remains unchanged since it is of highest order. In this w ay we obtain from
+(75) the third-order variational expression
+E(0)
+3 (Ω) = 15
+32¯hΩ − 21
+16√ π
+√
+MΩ
+¯h e2 − 4
+π
+(
+1 + log 2 − π
+2
+) M
+¯h2 e4 − c
+√
+M 3
+¯h7Ωe6 . (77)
+We are now ready to optimize successively the expansions of ﬁrst, s econd, and third order
+(62), (66) and (77) with respect to the trial frequency Ω. From t he extrema we ﬁnd the
+frequencies
+Ω1 = Ω 2 = 16
+9π
+M e4
+¯h3 , Ω3 = c′2 M e4
+¯h3 (78)
+where c′ ≈ 0.7254 is the largest of the three solutions of the cubic equation 15 c′3 − 21c′2/π +
+16c. The corresponding approximations to the ground state energy ar e
+E(0)
+N (ΩN ) = − γN
+M e4
+¯h2 , (79)
+14
+with the constants
+γ1 = 4
+3π ≈ 0.424 , γ 2 = 5 + 4 log 2
+π − 2 ≈ 0.474 , γ 3 ≈ 0.490, (80)
+which quickly approaching the exact value γex = 0.5, as shown in Fig. 3.
+FIG. 3. Rapid approach of the variational approximations to the ground state energy E(0)
+N (ΩN )
+to the correct ground state energy − 0.5 (in natural energy units M e4/¯h2). The right-hand loga-
+rithmic plot shows a slope − 1.
+VII. SUMMAR Y AND OUTLOOK
+In this work we have extended the rules for calculating higher order s in variational
+perturbation theory from polynomial to nonpolynomial interaction s. The eﬀective classical
+potential of a quantum mechanical system is obtained from an exte nsion of the known
+ﬁrst-order smearing formula, and involves certain convolutions wit h Gaussian functions. As
+an example, we have applied the higher-order smearing formula to th e Coulomb system.
+We have illustrated the fast convergence of the variational pertu rbation expansion even
+for such a singular potential. The new smearing formula will help improv ing the existing
+ﬁrst-order variational results for partition function and density matrix, also in dissipative
+quantum systems [16,17]. It will also be of use in treating ﬁeld theories with nonpolynomial
+interactions such as Sine-Gordon and Liouville theories.
+VIII. ACKNOWLEDGEMENT
+The authors are grateful to M. Bachmann and I. Mustapi´ c for m any stimulating dis-
+cussions, and to the Deutsche Forschungsgemeinschaft for par tial support under the grant
+Kl-256/25-1.
+[1] R.P. Feynman, Statistical Mechanics, Benjamin, Reading, 1972.
+[2] R.P. Feynman and H. Kleinert, Phys. Rev. A 34 , 5080 (1986). For an independent equivalent
+development see R. Giachetti and V. Tognetti, Phys. Rev. Let t. 55, 912 (1985).
+[3] H. Kleinert, Phys. Lett. A 173 , 332 (1993).
+15
+[4] J. Jaenicke and H. Kleinert, Phys. Lett. A 176 , 409 (1993).
+[5] H. Kleinert and H. Meyer, Phys. Lett. A 184 , 319 (1994).
+[6] H. Kleinert, Path Integrals in Quantum Mechanics, Statistics and Polymer Physics, Second
+Edition, World Scientiﬁc, Singapore, 1995.
+[7] W. Janke and H. Kleinert, Phys. Lett. 118, 371 (1986).
+[8] H. Risken, The Fokker-Planck Equation , Second Edition, Springer, New York, 1988.
+[9] A. Cuccoli, R. Giachetti, V. Tognetti, R. Vaia, and P. Ver rucchi, J. Phys. Condens. Matter 7,
+7891 (1995).
+[10] For a detailed calculation see the MS thesis (in German) by one of us: W. K¨ urzinger, Varia-
+tionsst¨ orungstheorie an der quantenmechanischen Zustandssumme, FU-Berlin, 1998.
+[11] M. Bachmann, Dynamik von Quantensystemen mit eﬀektiven Pfaddarstellun gen, MS thesis (in
+German), HU-Berlin, 1997.
+[12] D. Klakow, C. Toepﬀer, and P.-G. Reinhard, J. Chem. Phys. 101, 10766 (1994).
+[13] G. Kelbg, Ann. Phys. 12, 354 (1964).
+[14] I.S. Gradshteyn and I.M. Ryzhik, Table of Integrals, Series and Products – Corrected and
+Enlarged Edition, Academic Press (1980).
+[15] A.P. Prudnikov, Y.A. Brychkov, and O.I. Marichev, Integrals and Series , Vol. 2, Gordon and
+Breach (1986).
+[16] U. Weiss, Quantum Dissipative Systems , World Scientiﬁc, Singapore, 1993.
+[17] A. Cuccoli, A. Rossi, V. Tognetti, and R. Vaia, Phys. Rev . E 55 , R4849 (1997).
+16

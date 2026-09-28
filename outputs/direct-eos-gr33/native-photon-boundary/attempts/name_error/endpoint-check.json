@@ -1,0 +1,44 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "scope": "Exact piecewise-linear knot-side counterexample and saved-polynomial metric reproduction only; not physical convergence.",
+  "rows": [
+    {
+      "clock": 64,
+      "order": 8,
+      "independent_left_metric_exact": true
+    },
+    {
+      "clock": 128,
+      "order": 4,
+      "independent_left_metric_exact": true
+    },
+    {
+      "clock": 128,
+      "order": 8,
+      "independent_left_metric_exact": true
+    }
+  ],
+  "metric_controls": {
+    "time": {
+      "delta_u": 1.6995267184146273e-05,
+      "delta_lambda": 1.351823544517644e-05,
+      "delta_log_lapse": 3.716040642017804e-06,
+      "delta_log_speed": 1.348112444968073e-05,
+      "delta_u_prime": 3.516175923430662e-05,
+      "delta_nu_prime": 1.355904416886623e-05,
+      "delta_u_t": 2.9164397653020278e-05,
+      "actual_delta_lambda_rate": 0.0004403399355991893
+    },
+    "quadrature": {
+      "delta_u": 0.0,
+      "delta_lambda": 2.8856231476980563e-16,
+      "delta_log_lapse": 2.9105747841018196e-14,
+      "delta_log_speed": 4.3164454047261916e-16,
+      "delta_u_prime": 0.0,
+      "delta_nu_prime": 2.29696009206483e-16,
+      "delta_u_t": 0.0,
+      "actual_delta_lambda_rate": 3.497066180805818e-16
+    }
+  }
+}

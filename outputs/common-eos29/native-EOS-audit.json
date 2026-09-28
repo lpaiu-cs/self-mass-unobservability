@@ -1,0 +1,40 @@
+{
+  "classification": "Counterexample candidate",
+  "pass_through_errors": {
+    "T": 0.0,
+    "rho": 0.0,
+    "X": 0.0,
+    "heat": 0.0,
+    "heat_rho": 0.0,
+    "heat_T": 0.0,
+    "heat_X": 0.0,
+    "dxdt": 0.0,
+    "dxdt_rho": 0.0,
+    "dxdt_T": 0.0,
+    "jacobian": 0.0,
+    "neutrino": 0.0
+  },
+  "native_data_unchanged": true,
+  "numerical_inputs_intentionally_changed": true,
+  "returned_results_overwritten": false,
+  "derivative_rows": [
+    {
+      "h": 0.0001,
+      "max_burning_vector_derivative_relative": 0.10724516507192963,
+      "max_burning_heat_derivative_relative": 0.006367655999180483,
+      "passed": false
+    },
+    {
+      "h": 5e-05,
+      "max_burning_vector_derivative_relative": 0.10701428527862997,
+      "max_burning_heat_derivative_relative": 0.0063629656775911975,
+      "passed": false
+    }
+  ],
+  "integrated_heat_change_Lsun": -8.528513356409645e-07,
+  "max_burning_heat_change_relative": 1.0106647145861775e-06,
+  "native_source_EOS_input_connection_tested": true,
+  "opacity_connection_tested": false,
+  "evolved_trajectories_recomputed_with_shim": false,
+  "note": "This closes and audits four explicit EOS inputs of native net_get on the initial state and four temperature perturbations. The earlier forced trajectories retain their original native inputs. No silently upgraded trajectory or complete derivative certificate."
+}

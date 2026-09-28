@@ -1,0 +1,66 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "53a1718d7ec4b7c7bf4ff01152e83dab882d8ec9",
+  "claim": "Enclose the direct emitted-photon mixed constraints, static-gradient cross term, changed ray scalar readout, and their additional homogeneous mass normalization. Apply the envelope to the Phase163 selected charge.",
+  "decision": "Can these omitted terms erase the selected endpoint? A selected exterior envelope below1percent avoids a new ray/fluid history for this sector.",
+  "family": "The original nonnegative64/128 accepted-port histories and every nonnegative emission satisfying their energy/luminosity caps, with the prescribed primary plus continuous finite-source first Born on the exact initial scalar vacuum. No initially exterior photons, fixed emission inventory and launch angles.",
+  "exclusions": [
+    "Later signed background emission corrections and generated background scalar, including its reciprocal constraints and metric action.",
+    "Returned material fields in the external input metric, additional inner/interface ports, exact initial ADM/momentum/flux conservation.",
+    "Full direct-field, EOS, uniform derivative, source interpolation, spatial, boundary, nonlinear and same-inventory static/observational errors."
+  ],
+  "method": "50-digit outward intervals on existing binary upper bounds. Integrate positive source envelopes over the entire observer strip. Separate packet measure, radial displacement, angular and arrival fronts; include the static-gradient cross term. Bound the infinity mass port instead of assuming it zero.",
+  "gates": {
+    "selected_envelope_fraction": 0.01,
+    "potential_contraction": 1.0,
+    "independent_relative": 1e-10
+  },
+  "budget": {
+    "actions": {
+      "prepare": 30,
+      "apply": 60,
+      "audit": 45
+    },
+    "total_seconds": 135,
+    "CPU_threads": 1,
+    "virtual_GiB": 3,
+    "new_fluid_steps": 0,
+    "new_EOS_roots": 0,
+    "new_rays": 0
+  },
+  "measured_basis": "Phase159 interval body4.96s, Phase163 all four action bodies6.63s. One existing-background load and scalar arithmetic;60s apply and135s total include a conservative margin. This is not a prediction for a new physical trajectory.",
+  "stop": "No automatic history, horizon, grid or iteration enlargement. Preserve the Phase159 point failure; an inconclusive bound remains inconclusive.",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/bound_native_exterior_mixed.py": "77574020f46ce4e2df80bd945befe71ff5095b6da8ef4de952361e7a1eff9bac",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/bound_native_exterior_incident.py": "6fa0b31363ef5faa41115b03aea826701ce9394b0d7fd2c2e1ab29ea99e67dcd",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/couple_native_exterior_incident.py": "22470c64ace061b6158b4e3acc8416fa5e6d32791c9f7985ae5e19262deaf6b3",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/read_native_matched_mass.py": "c9346a4e7e26b8342a984151c5690cd9e36c9086c5a4ec23d522a4e303f6099f",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/couple_native_mixed_gr.py": "88f9b1aef79604ca76c5c032f5224554be9501ce71886e2e08519ac57d5b0bd0",
+    "native-exterior-incident159-work/bound-plan.json": "76ddf4fcd08bac3d48dfe183d74a9f8eff2fee4feaed01835d4b27771efb6ac6",
+    "native-exterior-incident159-work/bound-result.json": "52288c2cd43d3f18186f4087e062126f2e40d11b99bb0223f2bde59f620fd003",
+    "native-exterior-incident159-work/audit.json": "e8332255608c5bd2e9741e4fea3187aef147cc86e2845119a822b93d3c242c57",
+    "native-exterior-incident159-work/result.json": "4bcc5cde359c81ad3bae27485347f3b344615ede8404d9d39f831a912064173f",
+    "native-matched-mass163-work/final-result.json": "4a55f8b58ee40530936ed82aef050dc98d7a61aa3fecc28a10ab6ca8cd13977c",
+    "native-matched-mass163-work/compensated-charge-parts.npz": "73ce8c497c757a976d45f6181799b8dffcbf9c5e8e39e1eea8a2e9891e6b7e21",
+    "native-matched-mass163-work/charge-parts.npz": "0fb16341f199d8a248a3d63a1d0da498873b27a92235823cf1237106267c6eb8",
+    "outputs/direct-eos-gr33/native-retained-completion/infinity/completed/retained-128-a8-r8.npz": "55ddaec7e139c588cb4b9dcaf47c3a3b01735e72df958f6f6b1f7c89fa263235",
+    "outputs/direct-eos-gr33/def-native-global-scalar-closure/bound.json": "39cbee9c32b2d16c239d8ae14f188be2177e53bca27fe0ec4d8df88a29a66f58",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/read_native_incident_infinity.py": "31fdcc3bec5a89504151337d85457a9ad1dc2d7b12f4b10e5f98eebc83817183",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_incident_drive.py": "3e01fc956f56354fc8be01be9ccdf864eb7c6435591fe83b3db10cc90bfbecb0",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_dynamic_lapse.py": "5a1ab9b42211a67a79c2f36bb66a25faed9d05ebb82cf3bdd357b62969757b89",
+    "native-incident-infinity158-work/final-result.json": "b11669101aeab05c8074efc01d697739c9861beb93c7e865cab2443c25ec9fab",
+    "native-incident-infinity158-work/charge-parts.npz": "b5f07843085aee64ffa3c9ee1932ed7e0f53a0fdac62ce8b2c360ebc146e1712",
+    "native-incident-drive155-work/fields/born-g8.npz": "4a4f1299caa9675a4a5a87c178b883ba242aeec296361a555182328dc429a058",
+    "/home/lpaiu/work/native-retained-tail-runtime/outputs/direct-eos-gr33/def-native-initial-constraints/finite-volume/balanced-20.npz": "72ae702c85db57f0c02c1e5ca15dfad7df50d901b4270531e5b49c8c3746d3cb",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/accepted-ports-64.npz": "e774379f5889562471ff1924ca01c8844ce3a99bff1221eaa7a7924663296f83",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/source-64.npz": "e355fd75305697b78611d53c19bf7d0d821142533cbea5f1b81d53b9a2a093b8",
+    "outputs/direct-eos-gr33/native-retained-completion/evolution/accepted-ports-128.npz": "e2d02607c5815cd1b23a6ea1ce822ecbb384f185ac7a83074247d0350abc8ecf",
+    "outputs/direct-eos-gr33/native-retained-completion/evolution/source-128.npz": "7d6501151595f2274b0651a6179e3bd24cf4ea8ef6256734d953c9d8d01b79eb",
+    "native-exterior-incident159-work/prepare-failed-producer.py": "b5c3dc155c401e2aec5f547a6c84b77093162317c22994b323feec2f9f8ac0e3",
+    "native-exterior-incident159-work/prepare-receipt.json": "fad91f5f0e896e42ca5c46220afe43b8718edde46bf10a6ac233f70fd59c50d1",
+    "native-exterior-incident159-work/plan.json": "af663c30c1d01bce6783721aa50f768d1a207dca6928b9c4cc8774c247f1f80b",
+    "native-exterior-incident159-work/production-receipt.json": "31370ecae8aa87a03ca72f4f08b3d3228e361d4b87a17055d4d7eed3f881b37a",
+    "outputs/direct-eos-gr33/def-native-global-scalar-closure/bound-plan.json": "9da513286ba292dc3ce3f0b4262e5445e4f4fb70f8841bd07e72921079018cc5",
+    "native-incident-infinity158-work/direct-g8.npz": "b210b430efaaf6c088d8531ad8d6d6496e44d5b075a8a294ef607fd02776a951"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "pid": 399,
+  "utc": "2026-09-14T10:48:48.566550+00:00",
+  "command": [
+    "/usr/bin/taskset",
+    "-c",
+    "0-15",
+    "/usr/bin/python3",
+    "-u",
+    "verification/gr_cached_refinement_extension.py",
+    "chain",
+    "--workers",
+    "15"
+  ],
+  "cpu_affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "checkpoint": "4ab523e7df8423da77631fdc6ac4bd12c34a686a",
+  "scope": "Only the missing 128-step trajectory, then strict original-history replay and unchanged 32/64/128 time gate. No longer physical interval or further refinement automatically."
+}

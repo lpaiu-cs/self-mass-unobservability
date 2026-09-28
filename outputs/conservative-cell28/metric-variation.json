@@ -1,0 +1,34 @@
+{
+  "classification": "Counterexample candidate",
+  "rows": [
+    {
+      "delta_p_shape": 1,
+      "delta_v_shape": 0,
+      "direct_variational_m": -0.06314892924634877,
+      "integral_variation_m": -0.06314892924634861,
+      "relative_error": 2.417391200576625e-15
+    },
+    {
+      "delta_p_shape": 1,
+      "delta_v_shape": 1,
+      "direct_variational_m": 251.52295924406246,
+      "integral_variation_m": 251.52295924406323,
+      "relative_error": 3.050958675610529e-15
+    },
+    {
+      "delta_p_shape": 0,
+      "delta_v_shape": 1,
+      "direct_variational_m": 251.58610804821154,
+      "integral_variation_m": 251.58610804821114,
+      "relative_error": 1.5815814915718887e-15
+    }
+  ],
+  "passed": true,
+  "formula": "delta chi = -integral [phi^2 delta v + (phi prime)^2 delta p] dr",
+  "definitions": "p=r^2 N sqrt(f), v=4pi G beta r^2 N (e-3P)/(c^4 sqrt(f)); phi(infinity)=1.",
+  "charge_convention": "phi_physical=phi_infinity + phi_infinity*chi/r+... = phi_infinity - alpha_A*M_geom/r+...; alpha_A=-phi_infinity*chi/M_geom.",
+  "normalized_variation": "At fixed phi_infinity: delta alpha_A=-phi_infinity*(delta chi/M-chi*delta M/M^2).",
+  "boundary": "Fixed areal radial coordinate with exterior included. Smooth perturbations, or distributional moving interfaces with their boundary terms retained. Asymptotic delta p=O(r), delta phi=O(1/r) makes the boundary correction vanish. The numerical shapes have compact support; no Einstein constraint satisfaction is asserted.",
+  "theorem_symbolically_checked": true,
+  "physical_metric_variation_derived": false
+}

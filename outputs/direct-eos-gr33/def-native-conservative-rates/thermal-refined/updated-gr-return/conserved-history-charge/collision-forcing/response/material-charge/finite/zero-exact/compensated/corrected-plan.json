@@ -1,0 +1,40 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "3ca3359c5",
+  "claim": "Remove the fixed deep pressure flux before finite subtraction, retain the same material equation, then finish the actual native collision return and GR charge.",
+  "algebra": "For fixed face vector B, use Fnew=F-B and Gnew=G-div(B), giving exactly -div(Fnew)+Gnew=-div(F)+G. Deep B is the original area*reference pressure; exterior faces have B=0, and its one shared-face contribution is included identically on both sides.",
+  "limits": "Finite actual-amplitude material return on the same17 stored backgrounds and accepted photon response. No new microscopic EOS inversions, full nonlinear radiation feedback, uniform EOS error bound, or final physical closure is claimed.",
+  "budgets": {
+    "check_seconds": 30,
+    "pilot_seconds": 60,
+    "production_seconds": 780,
+    "source_seconds": 90,
+    "GR_seconds": 90,
+    "CPU_threads": 1,
+    "virtual_GiB": 3,
+    "total_check_seconds": 60
+  },
+  "resource_reassessment": "One additional30s owner check for the shared arithmetic repair; original check charged30s, no physical time steps repeated. All pilot/production/source/GR caps unchanged.",
+  "forecast": "Reuse prior complete late-CFL raw-call counts and measured finite prefix cost. Require twice total forecast under780s and resume the new accepted prefixes.",
+  "gates": {
+    "owner": 1e-08,
+    "balance": 1e-08,
+    "finite_resolution": 0.002,
+    "time": 0.02,
+    "pressure_resolution": 0.002,
+    "quadrature": 0.002,
+    "independent_GR": 1e-09
+  },
+  "stop": "Stop on an original numerical gate or budget. No amplitude reduction, fine-clock expansion, or threshold change.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_compensated_finite_return.py": "51d8cfce82e652e86542ca501d82ea9580a07306f48ca805af93859bd3d272b9",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_finite_collision_return.py": "9de4818075dec864edd8f4e277230dadfc8aac261fa9c847886d9314d85eaccd",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/pilot-64.json": "c3601dd9c0eb51115a906543214ecc8dd14728824ae6d6825cec63911106a6db",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/result.json": "dd6b7e0eb676f2cac26849e9c86c9620421afb4dfe255f991a465a3e87af5604",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/pilot-64.npz": "c415f369c2e7416c124dd297e48f44858f04f38eaf544c9693be17d34fbb6bb8",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/first-producer.py": "bf4cce50715d0f7a68df106e4153c91dbe38d8c0f1b15843aa19dbab1cc61d0e",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/plan.json": "9c1451c076bd661f243b75ee2777baecefb0f4c977ee3ae26583a9640bf73726",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/first-check-failure.json": "ae6178911a78e63a185783b461c8cdf1abc4af67e50853b567c44e439e503ceb"
+  },
+  "shared_face_repair": "Check the original full face at1e-12, then use ONE existing deep-unit centered face value identically for both cells. Do not independently subtract the same pressure twice."
+}

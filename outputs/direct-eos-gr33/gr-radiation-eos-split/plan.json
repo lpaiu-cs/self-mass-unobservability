@@ -1,0 +1,33 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "d79466b",
+  "bindings": {
+    "verification/gr_radiation_eos_split.py": "b0f7e96d9bf5e3e3320ca727bfc97f77e8460139b1f52fe30133f0eb2ae1d78f",
+    "outputs/direct-eos-gr33/eos-molecular-spectral/manifest.json": "26a927b885902564d2f3fb47b43216e0c60c809cfe1d64b47a20bf9b22e6d98a",
+    "outputs/direct-eos-gr33/gr-molecular-reference-defined/manifest.json": "144c1a4691bf26823f70c17367a4aa3ccba7a70c208474cbc484086df425d282",
+    "outputs/direct-eos-gr33/gr-radiation-eos-split/gas-bridge.f90": "73277186445a954d92ea75c1e29620f4beb3ab0774a60d9d42a3472b4bacfe88",
+    "outputs/direct-eos-gr33/gr-radiation-eos-split/mod_free_eos.f90": "5c2a2b75d69d8c88da96f175e0e0c694a077e5a087a4b2aafff7ea0620e5769a",
+    "outputs/direct-eos-gr33/gr-radiation-eos-split/mod_free_eos_constants.f90": "b2343290a6c273e4e1e78079abbc8093c39efd6007a4523bde8063c581469af4",
+    "outputs/direct-eos-gr33/gr-transport/plan.json": "8b4f7050126290c3f401f130cbfbfdb9ec6334c1d54c64301288d5b084d64b8c"
+  },
+  "cells": [
+    0,
+    1175,
+    1176,
+    2972,
+    5734
+  ],
+  "temperature_offsets": [
+    -0.001,
+    0.0,
+    0.001
+  ],
+  "decomposition_relative_tolerance": 1e-10,
+  "inverse_log_density_tolerance": 1e-10,
+  "gamma_identity_relative_tolerance": 0.0001,
+  "intervention": "Call the same frozen two-spectrum library through its existing EOS1 ifmodified=11 option, which selects ifrad=0. The original EOS1 option is ifmodified=1. The library/source, molecular flag and physical constants are not rebuilt or changed. Read the compiled radiation constant instead of substituting another constants convention.",
+  "identities": "f_total=f_gas-a_rad*T^4/(3*rho_B); P_total=P_gas+a_rad*T^4/3; u_total=u_gas+a_rad*T^4/rho_B; s_total=s_gas+4*a_rad*T^3/(3*rho_B). Subtract their derivatives consistently.",
+  "controls": "At five real states and three temperature offsets compare native gas output with analytic photon subtraction, pressure inverse and alternating gas/total call history. Retain the existing 2 erg/g or 32 ulp energy/entropy gate. Retain the previous GR-transport 1e-4 native gamma-identity criterion separately.",
+  "full_reference": "Apply the algebraic decomposition to all 5735 saved new-EOS density/temperature evaluations; report gas pressure/capacity positivity. This full-grid algebraic pass is distinct from the 15 native gas comparisons.",
+  "boundary": "An LTE matter/photon split, not a physical opacity or radiation-transport solution. Do not assign the total effective conductive opacity to photon absorption/scattering, infer a Planck mean from a Rosseland mean, or count LTE photons twice. New GR geometry is still being reconstructed."
+}

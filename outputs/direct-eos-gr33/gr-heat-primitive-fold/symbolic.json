@@ -1,0 +1,9 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "free_energy": "-T/10 + rho/10 - 11*(T - 1)**2/2000 + (T - 1)*(33*rho/1000 - 33/1000) - 189*(rho - 1)**2/2000 + 9/10",
+  "singular_velocity": "-6 + sqrt(46)",
+  "residual_second_velocity_derivative": "-233133*sqrt(46)/4900 - 790463/2450",
+  "residual_momentum_derivative": "-247 + 36*sqrt(46)",
+  "reduction": "epsilon/rho=A(rho)+(11/2000)*T^2. The positive thermal solution is the explicit positive square root. Both the second velocity derivative and the fixed-(D,E,Q) momentum derivative of F are strictly negative at the original singular state. The actual two roots are established separately by interval signs, not by this local derivative test alone."
+}

@@ -1,0 +1,80 @@
+{
+  "classification": "Counterexample candidate",
+  "beta": -4,
+  "rows": [
+    {
+      "steps": 1,
+      "base_chi_m": 1166.8526934337135,
+      "end_chi_m": 1166.8526929040163,
+      "base_alpha_over_phi": -4.000356558658047,
+      "end_alpha_over_phi": -4.0003565568421795,
+      "quadrature": [
+        {
+          "quadrature_points": 6,
+          "delta_dimensionless_tail": 6.189010343814863e-10,
+          "delta_alpha_over_phi": -5.1426221272946396e-11,
+          "direct_tail_difference": 6.188931197021364e-10
+        },
+        {
+          "quadrature_points": 12,
+          "delta_dimensionless_tail": 6.189010343815029e-10,
+          "delta_alpha_over_phi": -5.1426225176074217e-11,
+          "direct_tail_difference": 6.188931197021364e-10
+        }
+      ],
+      "delta_alpha_quadrature_difference": 3.903127820947816e-18,
+      "force_fraction_coefficient_per_phi_infinity_squared": 2.0570490070429687e-10
+    },
+    {
+      "steps": 2,
+      "base_chi_m": 1166.8526934337135,
+      "end_chi_m": 1166.8526988295152,
+      "base_alpha_over_phi": -4.000356558658047,
+      "end_alpha_over_phi": -4.000356577156732,
+      "quadrature": [
+        {
+          "quadrature_points": 6,
+          "delta_dimensionless_tail": 6.188990665232941e-10,
+          "delta_alpha_over_phi": -4.9652459634076315e-11,
+          "direct_tail_difference": 6.189772642939298e-10
+        },
+        {
+          "quadrature_points": 12,
+          "delta_dimensionless_tail": 6.188990665232869e-10,
+          "delta_alpha_over_phi": -4.9652457926457894e-11,
+          "direct_tail_difference": 6.189772642939298e-10
+        }
+      ],
+      "delta_alpha_quadrature_difference": 1.7076184216646695e-18,
+      "force_fraction_coefficient_per_phi_infinity_squared": 1.9860983170583157e-10
+    },
+    {
+      "steps": 4,
+      "base_chi_m": 1166.8526934337135,
+      "end_chi_m": 1166.852693422826,
+      "base_alpha_over_phi": -4.000356558658047,
+      "end_alpha_over_phi": -4.000356558620809,
+      "quadrature": [
+        {
+          "quadrature_points": 6,
+          "delta_dimensionless_tail": 6.188980866397201e-10,
+          "delta_alpha_over_phi": -5.0218359662736536e-11,
+          "direct_tail_difference": 6.188977159502418e-10
+        },
+        {
+          "quadrature_points": 12,
+          "delta_dimensionless_tail": 6.188980866397364e-10,
+          "delta_alpha_over_phi": -5.021836351165425e-11,
+          "direct_tail_difference": 6.188977159502418e-10
+        }
+      ],
+      "delta_alpha_quadrature_difference": 3.848917712323541e-18,
+      "force_fraction_coefficient_per_phi_infinity_squared": 2.00873454046617e-10
+    }
+  ],
+  "method": "Finite Wronskian identity on common x=r/R including exact Schwarzschild vacuum tail integral. PCHIP material profiles define the numerical scalar problem; a finite-pressure surface and unsolved atmosphere remain.",
+  "interpretation": "Small nonzero scalar background: alpha_A=-phi_infinity*chi/Mgeom+O(phi_infinity^3). For a weak companion alpha_B=beta*phi_infinity, delta(a_scalar/g)=beta*phi_infinity^2*delta(alpha_A/phi_infinity). This is the quasistatic scalar readout of a prescribed-flux thermal trajectory, not a driven orbital response or observation fit.",
+  "certified_derivative": false,
+  "nonlinear_scalar_backreaction": false,
+  "observation_likelihood_run": false
+}

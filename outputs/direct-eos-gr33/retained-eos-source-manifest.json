@@ -1,0 +1,581 @@
+{
+  "classification": "Counterexample candidate",
+  "contribution": "Loophole progress: actual current native conserved pressure sources applied to compact and mass-normalized null-infinity charge.",
+  "actual_source_applied": true,
+  "numerical_gates_passed": true,
+  "full_goal_complete": false,
+  "final_charge_solved": false,
+  "source_readout": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "old_compact_endpoint": 1.0211271551555008e-27,
+    "new_compact_endpoint": 1.0211262287752335e-27,
+    "correction_endpoint": -9.263802671825376e-34,
+    "old_normalized_endpoint": 5.238117415710266e-27,
+    "new_normalized_endpoint": 5.238116489329999e-27,
+    "deep_correction_endpoint": -9.263802583958536e-34,
+    "atmosphere_correction_endpoint": -8.78668396393487e-42,
+    "maximum_correction_relative": 9.072134283231996e-07,
+    "cadence_relative_to_signal": 2.862798199748331e-09,
+    "quadrature_relative_to_signal": 6.700710703158272e-22,
+    "direct_application_relative": 1.1835278532677604e-15,
+    "independent_direct_relative": 2.585116122323593e-15,
+    "inverse_radius_residual": 4.76837158203125e-07,
+    "original_initial_offset_retained": true,
+    "symbolic_conserved_trace_checked": true,
+    "seconds": 102.14471754099941,
+    "actual_new_native_source_applied": true,
+    "photons_and_conserved_trajectory_held_fixed": true,
+    "native_correction_time_convergence_tested": false,
+    "uniform_EOS_derivative_bound": false,
+    "full_floor_feedback_enclosed": false,
+    "coupled_fixed_point_verified": false,
+    "nonlinear_GR": false,
+    "final_charge_solved": false,
+    "full_goal_complete": false
+  },
+  "native_production": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "states": 3514,
+    "exact_reused": {
+      "deep": 36,
+      "atmosphere": 129
+    },
+    "native_calls": 17926,
+    "worker_seconds": 771.775524222001,
+    "seconds": 331.357898115999,
+    "maximum_pressure_relative": 2.8699966991840853e-07,
+    "maximum_energy_relative": 9.892487038751472e-13,
+    "maximum_momentum_relative": 2.1833997100333056e-16,
+    "maximum_density_relative": 1.5987211554602254e-14,
+    "jobs": [
+      {
+        "label": "deep",
+        "kind": "deep",
+        "states": 284,
+        "setup_seconds": 1.1378972150014306,
+        "native_calls": 1801,
+        "reseed": [],
+        "seconds": 99.48348305299987
+      },
+      {
+        "label": "high-0",
+        "kind": "high",
+        "states": 989,
+        "setup_seconds": 1.1372257050006738,
+        "native_calls": 5191,
+        "reseed": [],
+        "seconds": 208.09411854600148
+      },
+      {
+        "label": "high-1",
+        "kind": "high",
+        "states": 988,
+        "setup_seconds": 1.1747582429998147,
+        "native_calls": 5167,
+        "reseed": [],
+        "seconds": 205.9659066389995
+      },
+      {
+        "label": "high-2",
+        "kind": "high",
+        "states": 988,
+        "setup_seconds": 10.466400796000016,
+        "native_calls": 5179,
+        "reseed": [],
+        "seconds": 228.92548366699884
+      },
+      {
+        "label": "low",
+        "kind": "low",
+        "states": 91,
+        "setup_seconds": 2.481319843000165,
+        "native_calls": 509,
+        "reseed": [],
+        "seconds": 29.306532317001256
+      }
+    ]
+  },
+  "pilot": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "eligible": true,
+    "regions": {
+      "deep": {
+        "label": "pilot-deep",
+        "kind": "deep",
+        "states": 3,
+        "setup_seconds": 2.3622186860011425,
+        "root_seconds": [
+          0.08440252500076895,
+          0.2261237370003073,
+          0.17102520799926424
+        ],
+        "native_calls": 24,
+        "reseed": [
+          {
+            "it": 16,
+            "cell": 18,
+            "relative": 1.2245759961615477e-13,
+            "offset_logT": 0.001
+          }
+        ],
+        "seconds": 3.4685349390001647
+      },
+      "high": {
+        "label": "pilot-high",
+        "kind": "high",
+        "states": 3,
+        "setup_seconds": 2.9008547159992304,
+        "root_seconds": [
+          0.12208324600032938,
+          0.19290397499935352,
+          0.13439453200044227
+        ],
+        "native_calls": 26,
+        "reseed": [
+          {
+            "it": 16,
+            "cell": 232,
+            "relative": 1.2956302697375577e-13,
+            "offset_logT": 0.001
+          }
+        ],
+        "seconds": 3.5568617789995187
+      },
+      "low": {
+        "label": "pilot-low",
+        "kind": "low",
+        "states": 3,
+        "setup_seconds": 0.2029867559995182,
+        "root_seconds": [
+          0.1550390909997077,
+          0.21556998400046723,
+          0.17679597799906333
+        ],
+        "native_calls": 29,
+        "reseed": [
+          {
+            "it": 16,
+            "cell": 241,
+            "relative": 1.1535217225855376e-13,
+            "offset_logT": 0.001
+          }
+        ],
+        "seconds": 1.019666274998599
+      }
+    },
+    "exact_reused": {
+      "deep": 36,
+      "atmosphere": 129
+    },
+    "remaining": {
+      "deep": 284,
+      "high": 2965,
+      "low": 91
+    },
+    "upper_wall_seconds": 614.7805863849801,
+    "upper_worker_seconds": 1311.592591450426,
+    "seconds": 37.70549816499988,
+    "native_calls": 79
+  },
+  "raw_audit": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "states": 3514,
+    "maximum_rebuilt_energy_relative": 9.892087149410145e-13,
+    "raw_native_source_reconstruction_relative": {
+      "pressure_volume_erg": 4.3712779242101473e-26,
+      "trace_erg": 5.82837056561353e-26,
+      "metric_stress_erg": 4.3712779242101473e-26
+    },
+    "initial_trace_correction_L1_erg": 2.740820158226602e+25,
+    "original_initial_offset_retained": true,
+    "seconds": 0.541594857999371,
+    "new_native_calls": 0,
+    "continuous_EOS_error_certified": false,
+    "final_charge_solved": false
+  },
+  "independent_verification": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "states": 3514,
+    "independent_time_mapping": true,
+    "independent_normalization_relative": 2.0545499948190624e-16,
+    "linear_application_relative": 1.1835278532677604e-15,
+    "symbolic_normalization_checked": true,
+    "prior_photon_emission_held_fixed": true,
+    "physical_time_paths_replayed": 0,
+    "full_goal_complete": false,
+    "seconds": 7.763802650000798,
+    "cap_seconds": 17.85528245900059,
+    "action_seconds_with_verification": 479.83146005100025,
+    "bindings": {
+      "/home/lpaiu/work/native-retained-tail-runtime/verification/verify_retained_eos_source.py": "edc2a1fbf723218cf046a9981391228558c55c4ca6106d37422b56dda6ae3fb4",
+      "outputs/direct-eos-gr33/retained-eos-source/plan.json": "c0759f0c1d4aac3b2c50f04bf51754a7c3f5f05f92a62c2efce70ceb24fc60cb",
+      "outputs/direct-eos-gr33/retained-eos-source/receipt.json": "539fcb5822dee0ab1ee7f636c00748033c34321796d31f5f7f02724713a1ea5f",
+      "outputs/direct-eos-gr33/retained-eos-source/result.json": "28486eeec5c298eedc2e3567e3cf648aa92b4b0c026a0270671c51fd222c4c1f",
+      "outputs/direct-eos-gr33/retained-eos-source/production.json": "8e0295132570378a8c1009475f46ac00c1a90ccc99749483dc62f098be0dd586",
+      "outputs/direct-eos-gr33/retained-eos-source/production-samples.json": "c8a1c3c0312e02bb9496cd4382d11397295b7d7b4d055c5340d0000d43e89215",
+      "outputs/direct-eos-gr33/retained-eos-source/normalized-charge.npz": "49750d66858a12ef1d3ad38d29ef470cdb89b8e92e94de417e26740d5cbc360e",
+      "outputs/direct-eos-gr33/retained-eos-source/applied-charge.npz": "8ee3a74309d7bd5b3e0d6573737697dbc0b8120be016bf6f33f6fea2da1bf17c"
+    }
+  },
+  "execution_receipt": {
+    "returncode": 0,
+    "seconds": 472.06765740099945,
+    "external_cap_seconds": 1140
+  },
+  "budget_passed": true,
+  "earlier_artifacts_preserved": 61,
+  "phase147_historical_input_gap_not_repaired": true,
+  "prior_master_sha256": "fc6b6a9317be604252d2693bf82340fb431a04fe0ce50c5d57f474c5d2d27457",
+  "preserved_document_prefixes": {
+    "docs/model-definition.md": {
+      "bytes": 235370,
+      "sha256": "cbad8ede92827910e39907a449baf17adc909e887d8cd93d7846f320f9875625"
+    },
+    "docs/observable-targets.md": {
+      "bytes": 228181,
+      "sha256": "dd9370f09ddbdb9b9cca95c18e848e33de6be224013456c8397e634cc35dbc96"
+    },
+    "docs/adiabatic-limit.md": {
+      "bytes": 223848,
+      "sha256": "9fda3d9445b377c743e7fac2c1d6384f1138e9383e3b355001b3b8438ed8c3c0"
+    },
+    "docs/nonadiabatic-regime.md": {
+      "bytes": 230251,
+      "sha256": "02c688501704fdcfe840eb2ae04873fc47bf488c253e24df6a7b53b92638c057"
+    },
+    "docs/failure-ledger-dynamic-chi.md": {
+      "bytes": 262420,
+      "sha256": "a3410d96efc8089d138507635f0835bdec37778e60b891635aa8ed42db7261a2"
+    },
+    "docs/dynamic-charge-completion.md": {
+      "bytes": 92248,
+      "sha256": "d6cbee54f78085328cf8720aed921efeda3343b2832bf4ede856cde5cbc8a884"
+    }
+  },
+  "verified_execution_bindings": [
+    {
+      "group": "bindings",
+      "declared_path": "verification/def_retained_eos_source.py",
+      "checked_path": "E:/lab/self-mass-unobservability/verification/def_retained_eos_source.py",
+      "sha256": "42cb786025137db2803ba6cb9abdea9d97a650f9fad1c12e7df40aa98aaf2029"
+    },
+    {
+      "group": "bindings",
+      "declared_path": "verification/evolve_native_retained_tail.py",
+      "checked_path": "E:/lab/self-mass-unobservability/verification/evolve_native_retained_tail.py",
+      "sha256": "75b29b80ef936c7a160b1474a6cb82b931340585c87e74155cdb9a860a00524f"
+    },
+    {
+      "group": "bindings",
+      "declared_path": "verification/def_native_conserved_history_charge.py",
+      "checked_path": "E:/lab/self-mass-unobservability/verification/def_native_conserved_history_charge.py",
+      "sha256": "07c45d71c3519fad41ca4d87bd914b94198f7e972f884d62c708d25bfd04eb9b"
+    },
+    {
+      "group": "bindings",
+      "declared_path": "verification/verify_native_conserved_history_charge.py",
+      "checked_path": "E:/lab/self-mass-unobservability/verification/verify_native_conserved_history_charge.py",
+      "sha256": "17995179fe88b556cebe31c525b4c153c39e1354fbc24343a08f08dd89bb9e20"
+    },
+    {
+      "group": "bindings",
+      "declared_path": "verification/def_native_atmosphere_inverse.py",
+      "checked_path": "E:/lab/self-mass-unobservability/verification/def_native_atmosphere_inverse.py",
+      "sha256": "831fab9d3772f1bce0f70fb7e802f7e1c69c289367a346df403c2d8321cb4538"
+    },
+    {
+      "group": "bindings",
+      "declared_path": "verification/def_native_conservative_eos_readout.py",
+      "checked_path": "E:/lab/self-mass-unobservability/verification/def_native_conservative_eos_readout.py",
+      "sha256": "b1112ccb5b32d8e8fd147b2faf24ec7c520caba8d4c01f83c2d6344f1a67ef7b"
+    },
+    {
+      "group": "bindings",
+      "declared_path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/production-samples.json",
+      "checked_path": "E:/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/production-samples.json",
+      "sha256": "579a9c5069a60b50f6ae7e9d3ce280a75de2739adec206aa8425316c9c62c1b0"
+    },
+    {
+      "group": "bindings",
+      "declared_path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/production.json",
+      "checked_path": "E:/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/production.json",
+      "sha256": "b696e43e87e174fd8bd2e92125ee93068c6947ea72f3b8424d4d3fe239a69a98"
+    },
+    {
+      "group": "bindings",
+      "declared_path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/audit.json",
+      "checked_path": "E:/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/audit.json",
+      "sha256": "f904f2ff3005f7c236b562a15359d25f2d8f8e77cb5adbb0c2c7f2834c28e1ae"
+    },
+    {
+      "group": "bindings",
+      "declared_path": "outputs/direct-eos-gr33/native-retained-completion/evolution/coupled-128.npz",
+      "checked_path": "E:/lab/self-mass-unobservability/outputs/direct-eos-gr33/native-retained-completion/evolution/coupled-128.npz",
+      "sha256": "08990bcd0980c8f45b1777e071734c3601a75f90096c8c6f5edc8d16d76ab2b0"
+    },
+    {
+      "group": "bindings",
+      "declared_path": "outputs/direct-eos-gr33/native-retained-completion/evolution/source-128.npz",
+      "checked_path": "E:/lab/self-mass-unobservability/outputs/direct-eos-gr33/native-retained-completion/evolution/source-128.npz",
+      "sha256": "7d6501151595f2274b0651a6179e3bd24cf4ea8ef6256734d953c9d8d01b79eb"
+    },
+    {
+      "group": "bindings",
+      "declared_path": "outputs/direct-eos-gr33/native-retained-completion/evolution/result.json",
+      "checked_path": "E:/lab/self-mass-unobservability/outputs/direct-eos-gr33/native-retained-completion/evolution/result.json",
+      "sha256": "7c722fe3acd168640a5359a04b61a73fc742031d809eb4edab87c1480e2ced0d"
+    },
+    {
+      "group": "bindings",
+      "declared_path": "outputs/direct-eos-gr33/native-retained-completion/gr/result.json",
+      "checked_path": "E:/lab/self-mass-unobservability/outputs/direct-eos-gr33/native-retained-completion/gr/result.json",
+      "sha256": "571e01bfd4c9efed6bb7942f1a7d144afee96eea1e29df2527f7f4e0da7fff89"
+    },
+    {
+      "group": "bindings",
+      "declared_path": "outputs/direct-eos-gr33/native-retained-completion/infinity/completed/result.json",
+      "checked_path": "E:/lab/self-mass-unobservability/outputs/direct-eos-gr33/native-retained-completion/infinity/completed/result.json",
+      "sha256": "5a69a8c12ce7d5573438436de198a9974666916458a4d6073a6e9f1d94e0aa5c"
+    },
+    {
+      "group": "bindings",
+      "declared_path": "outputs/direct-eos-gr33/native-retained-completion/infinity/completed/retained-128-a8-r8.npz",
+      "checked_path": "E:/lab/self-mass-unobservability/outputs/direct-eos-gr33/native-retained-completion/infinity/completed/retained-128-a8-r8.npz",
+      "sha256": "55ddaec7e139c588cb4b9dcaf47c3a3b01735e72df958f6f6b1f7c89fa263235"
+    },
+    {
+      "group": "bindings",
+      "declared_path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/background/coupled-128.npz",
+      "checked_path": "E:/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/background/coupled-128.npz",
+      "sha256": "af1a02e92d505da3e0d8c033ffc806ae0c4465e5b5f318b54d23c18f54672350"
+    },
+    {
+      "group": "bindings",
+      "declared_path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/bank.npz",
+      "checked_path": "E:/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/bank.npz",
+      "sha256": "1ef9b4bb62b7bd9320b891126dd5f9a81d6cb0b48d01c5861962a2a5bf26188f"
+    },
+    {
+      "group": "bindings",
+      "declared_path": "outputs/direct-eos-gr33/native-retained-completion/gr/wave-128-g8.npz",
+      "checked_path": "E:/lab/self-mass-unobservability/outputs/direct-eos-gr33/native-retained-completion/gr/wave-128-g8.npz",
+      "sha256": "8d3a9d2bee40b3d67dd321154da4f433971fb585a749a56e797cb1ed95efd504"
+    },
+    {
+      "group": "bindings",
+      "declared_path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/plan.json",
+      "checked_path": "E:/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/plan.json",
+      "sha256": "daeed75e9cb5bfbf1a6a8c72fcf6cdd3620cc185dded27bf9d6a5489feff790c"
+    },
+    {
+      "group": "bindings",
+      "declared_path": "verification/native_tail_supported_temperature.py",
+      "checked_path": "E:/lab/self-mass-unobservability/verification/native_tail_supported_temperature.py",
+      "sha256": "56a6e1ed2467ef842d73153f4e710f2699d01c1920738a23b7c7bd7826267d54"
+    },
+    {
+      "group": "bindings",
+      "declared_path": "verification/def_native_cold_coupling.py",
+      "checked_path": "E:/lab/self-mass-unobservability/verification/def_native_cold_coupling.py",
+      "sha256": "0eb2bc3108dd815e3a51288ad866d3f2abe8e10ea7bbdce0969745eb537aca6e"
+    },
+    {
+      "group": "bindings",
+      "declared_path": "outputs/direct-eos-gr33/def-native-cold-coupling/logarithmic-build.json",
+      "checked_path": "E:/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-cold-coupling/logarithmic-build.json",
+      "sha256": "1b8186fffa7b64d8685928581c129e1b1f84244ddf437877d184d3350ed04164"
+    },
+    {
+      "group": "bindings",
+      "declared_path": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/support/repaired-bank.npz",
+      "checked_path": "E:/lab/self-mass-unobservability/outputs/direct-eos-gr33/native-retained-tail/supported-temperature/support/repaired-bank.npz",
+      "sha256": "ae67c3c469df177fcd0aa0449ed65baf5fc0bd879f75cc504373693246ecdd61"
+    },
+    {
+      "group": "inherited_bindings",
+      "declared_path": "/mnt/e/lab/self-mass-unobservability/verification/def_native_conserved_history_charge.py",
+      "checked_path": "E:/lab/self-mass-unobservability/verification/def_native_conserved_history_charge.py",
+      "sha256": "07c45d71c3519fad41ca4d87bd914b94198f7e972f884d62c708d25bfd04eb9b"
+    },
+    {
+      "group": "inherited_bindings",
+      "declared_path": "/mnt/e/lab/self-mass-unobservability/verification/verify_native_updated_gr_return.py",
+      "checked_path": "E:/lab/self-mass-unobservability/verification/verify_native_updated_gr_return.py",
+      "sha256": "d2c456a74a41ee97b07f026effdadd08c72d583b059420e933b8d72094c719d9"
+    },
+    {
+      "group": "inherited_bindings",
+      "declared_path": "/mnt/e/lab/self-mass-unobservability/verification/def_native_conservative_eos_readout.py",
+      "checked_path": "E:/lab/self-mass-unobservability/verification/def_native_conservative_eos_readout.py",
+      "sha256": "b1112ccb5b32d8e8fd147b2faf24ec7c520caba8d4c01f83c2d6344f1a67ef7b"
+    },
+    {
+      "group": "inherited_bindings",
+      "declared_path": "/mnt/e/lab/self-mass-unobservability/verification/def_native_atmosphere_inverse.py",
+      "checked_path": "E:/lab/self-mass-unobservability/verification/def_native_atmosphere_inverse.py",
+      "sha256": "831fab9d3772f1bce0f70fb7e802f7e1c69c289367a346df403c2d8321cb4538"
+    },
+    {
+      "group": "inherited_bindings",
+      "declared_path": "/mnt/e/lab/self-mass-unobservability/verification/def_native_causal_nonlinear.py",
+      "checked_path": "E:/lab/self-mass-unobservability/verification/def_native_causal_nonlinear.py",
+      "sha256": "30a951fc7c2e22602c412cabc44e411d72574720dc7a6e001ea410466f57738a"
+    },
+    {
+      "group": "inherited_bindings",
+      "declared_path": "/mnt/e/lab/self-mass-unobservability/verification/def_native_hydrogen_exchange.py",
+      "checked_path": "E:/lab/self-mass-unobservability/verification/def_native_hydrogen_exchange.py",
+      "sha256": "cf590d01753ffd86a00b80ef7be109131b15b8f1619e2246fbea72cd324123d6"
+    },
+    {
+      "group": "inherited_bindings",
+      "declared_path": "/mnt/e/lab/self-mass-unobservability/verification/verify_native_stage_energy_charge.py",
+      "checked_path": "E:/lab/self-mass-unobservability/verification/verify_native_stage_energy_charge.py",
+      "sha256": "a7b4b93650663f17ab5cedbe6562cb3ed752fc0e125979b16bfd84d8e31c920d"
+    },
+    {
+      "group": "inherited_bindings",
+      "declared_path": "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/background/coupled-128.npz",
+      "checked_path": "E:/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/background/coupled-128.npz",
+      "sha256": "af1a02e92d505da3e0d8c033ffc806ae0c4465e5b5f318b54d23c18f54672350"
+    },
+    {
+      "group": "inherited_bindings",
+      "declared_path": "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/bank.npz",
+      "checked_path": "E:/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/bank.npz",
+      "sha256": "1ef9b4bb62b7bd9320b891126dd5f9a81d6cb0b48d01c5861962a2a5bf26188f"
+    },
+    {
+      "group": "inherited_bindings",
+      "declared_path": "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/evolution/source-128.npz",
+      "checked_path": "E:/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/evolution/source-128.npz",
+      "sha256": "ab75b15bd0b3e8de9b6803dff7afe288e5eecac56089bdf74055de1b1db7c0bf"
+    },
+    {
+      "group": "inherited_bindings",
+      "declared_path": "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/evolution/gr/result.json",
+      "checked_path": "E:/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/evolution/gr/result.json",
+      "sha256": "089b7fdcdebf5b61488fc9105100b10785bdae9c70b325587006b6a39460bf78"
+    },
+    {
+      "group": "inherited_bindings",
+      "declared_path": "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-eos-readout/production-samples.json",
+      "checked_path": "E:/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-eos-readout/production-samples.json",
+      "sha256": "2c409057123fca22a3240445bfee7d22b346c10b0e4e57e301701a17bb7b0cd0"
+    },
+    {
+      "group": "inherited_bindings",
+      "declared_path": "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-atmosphere-inverse/production-samples.json",
+      "checked_path": "E:/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-atmosphere-inverse/production-samples.json",
+      "sha256": "9bd1e839e0104a42561dc2c05e62a118572b710d69601647c3968dce43db0797"
+    },
+    {
+      "group": "inherited_bindings",
+      "declared_path": "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-atmosphere-inverse/source-128.npz",
+      "checked_path": "E:/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-atmosphere-inverse/source-128.npz",
+      "sha256": "c51457669154e53d163eae7965a633cb177f7557c564cf09bb0294c74c0d0bd6"
+    },
+    {
+      "group": "inherited_bindings",
+      "declared_path": "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-initial-constraints/finite-volume/balanced-20.npz",
+      "checked_path": "E:/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-initial-constraints/finite-volume/balanced-20.npz",
+      "sha256": "72ae702c85db57f0c02c1e5ca15dfad7df50d901b4270531e5b49c8c3746d3cb"
+    },
+    {
+      "group": "inherited_bindings",
+      "declared_path": "/home/lpaiu/work/direct-eos-gr33/native-cold-population/stable/gas.so",
+      "checked_path": "//wsl.localhost/Ubuntu-22.04/home/lpaiu/work/direct-eos-gr33/native-cold-population/stable/gas.so",
+      "sha256": "b2db87a38c316cac016a9c3bba333a52839db0c13c360c402dac310ee3e3b2c7"
+    },
+    {
+      "group": "inherited_bindings",
+      "declared_path": "/home/lpaiu/work/direct-eos-gr33/native-cold-population/libfree_eos_native_cold_stable.so",
+      "checked_path": "//wsl.localhost/Ubuntu-22.04/home/lpaiu/work/direct-eos-gr33/native-cold-population/libfree_eos_native_cold_stable.so",
+      "sha256": "6d6cd656c7fc93d61df3e69bd127ff2f5caa199d88f42c4ebb9e7e96a21608f4"
+    },
+    {
+      "group": "native_bindings",
+      "declared_path": "/home/lpaiu/work/direct-eos-gr33/native-cold-coupling/excitation_pi.f90",
+      "checked_path": "//wsl.localhost/Ubuntu-22.04/home/lpaiu/work/direct-eos-gr33/native-cold-coupling/excitation_pi.f90",
+      "sha256": "ac1c78ac1e16f3a02faa6b294218184765570a494d6c70b2818e7b7ca4a2291a"
+    },
+    {
+      "group": "native_bindings",
+      "declared_path": "/home/lpaiu/work/direct-eos-gr33/native-cold-coupling/excitation_sum.f90",
+      "checked_path": "//wsl.localhost/Ubuntu-22.04/home/lpaiu/work/direct-eos-gr33/native-cold-coupling/excitation_sum.f90",
+      "sha256": "b05204fa38891492998be7cb63a6e8f492eaab4c84caf513379b277c430a49c0"
+    },
+    {
+      "group": "native_bindings",
+      "declared_path": "/home/lpaiu/work/direct-eos-gr33/native-cold-coupling/logarithmic/gas.so",
+      "checked_path": "//wsl.localhost/Ubuntu-22.04/home/lpaiu/work/direct-eos-gr33/native-cold-coupling/logarithmic/gas.so",
+      "sha256": "5863fb5331ad020e9dcf6eb1e5bdd42a073daf2912cba33fe97d1eae7d3a9271"
+    },
+    {
+      "group": "native_bindings",
+      "declared_path": "/home/lpaiu/work/direct-eos-gr33/native-cold-coupling/libfree_eos_native_cold_coupling_logarithmic.so",
+      "checked_path": "//wsl.localhost/Ubuntu-22.04/home/lpaiu/work/direct-eos-gr33/native-cold-coupling/libfree_eos_native_cold_coupling_logarithmic.so",
+      "sha256": "d24a651ee74d720feca0e038ac0d40c577e2d9233257cb2002291f3db9f68805"
+    }
+  ],
+  "syntax_checked": [
+    "def_retained_eos_source",
+    "verify_retained_eos_source"
+  ],
+  "sha256": {
+    "docs/adiabatic-limit.md": "91b5ca8e2226b2740a287f002a4cdd939afa2128240123ea254dc8583fa88362",
+    "docs/dynamic-charge-completion.md": "06e0913605675cecdaf6fdbe8bf974dbb631e6004c28b3c1f74b2f3d262d6240",
+    "docs/failure-ledger-dynamic-chi.md": "983ca2b163cdb5067e0367fc179b768c9ca1bfb8df7d55f3986986d6e36202a1",
+    "docs/model-definition.md": "bb05275f3b506b3170c963724b42d22f8985b60db3f641932b57edfd358cabea",
+    "docs/nonadiabatic-regime.md": "a19470f1f5bacedf363937ca6f7cc0e994ef949f7857562fbe39b2000ada7562",
+    "docs/observable-targets.md": "095f408e88e240eea7811ab2496e924ba0dfb3cb1d842e772e2fad00a9931fb8",
+    "notes/REQUEST149_RETAINED_NATIVE_SOURCE_KO.md": "6ec2adca5ce1e6cbdbf3f493a2d91e2d8bb49dbde0ce87db7074ff6eab6ee654",
+    "outputs/direct-eos-gr33/retained-eos-source/applied-charge.npz": "8ee3a74309d7bd5b3e0d6573737697dbc0b8120be016bf6f33f6fea2da1bf17c",
+    "outputs/direct-eos-gr33/retained-eos-source/audit.json": "06430bbdb775c38613054608adc624a80a3fdc3694e7f88dfc2f12b7b0b4178a",
+    "outputs/direct-eos-gr33/retained-eos-source/deep-partial.json": "f98ee9f7463fc77f5e193de0f604881a451c18f813e3b5bd083daa3350f704c7",
+    "outputs/direct-eos-gr33/retained-eos-source/deep-samples.json": "e7f8849e58cd91d16bd5331c103f00db9649a831e8ed4f1e9fa5ff2adaba9cf8",
+    "outputs/direct-eos-gr33/retained-eos-source/deep.json": "694540cde484831e3f73a58be2674fc10d6ed8290a248c62026b96c7a21447c5",
+    "outputs/direct-eos-gr33/retained-eos-source/external.log": "439ad1e0e836a65b3ca0cebf6e8b732116b5b25864405e15f9ee53f5de903cd3",
+    "outputs/direct-eos-gr33/retained-eos-source/high-0-partial.json": "6f14e3679c206d9ef5d16f2a1993292719b3acafc9f5b1ee38b381169715ace5",
+    "outputs/direct-eos-gr33/retained-eos-source/high-0-samples.json": "8e58b9b9dc78ae8478d691a1c4bcbf6d2026470d55dd68c636af2c547c72f54b",
+    "outputs/direct-eos-gr33/retained-eos-source/high-0.json": "2383d8aa76da4fb042feff9c1cf2ee0e0aa904f7dbaed13ee5b30d026a17a6bf",
+    "outputs/direct-eos-gr33/retained-eos-source/high-1-partial.json": "3981773b725f4c3ae34d73c99fff841bfdfd113e13ca15ceaa582d3480c76f81",
+    "outputs/direct-eos-gr33/retained-eos-source/high-1-samples.json": "b05125f8970a2312d8486275c72619d1a4cdb8da17ff14a77d6b48a342134aa4",
+    "outputs/direct-eos-gr33/retained-eos-source/high-1.json": "db5046a16ed8d987c1baa75c225e8788d3cb50e5132b72eb721d60414ce1a3ba",
+    "outputs/direct-eos-gr33/retained-eos-source/high-2-partial.json": "35b5de0b357edea0d34d8ed37b39460c656795ce4ab6c26859cad62077bf7fde",
+    "outputs/direct-eos-gr33/retained-eos-source/high-2-samples.json": "ef4fb098e3ed35f6ad12db9c1e209afbfd03eec9b198520e204c9b66acec795f",
+    "outputs/direct-eos-gr33/retained-eos-source/high-2.json": "8649789906c7ea614f2db9542b47012ac62931408c22ee357cad480f1685e411",
+    "outputs/direct-eos-gr33/retained-eos-source/low-partial.json": "91196bf611d2c6e01ec818a491b5e92978e491719aedc9eae5c3e9cd94acda36",
+    "outputs/direct-eos-gr33/retained-eos-source/low-samples.json": "fe095049455e8e0295423bb7d86fb404e5f39de8080f4f4c5e9c7441eff0fdcd",
+    "outputs/direct-eos-gr33/retained-eos-source/low.json": "449dcda1aac3f3e859afbe5b9f0039288dd3e92a13d11ba4bd1f377d19449c9f",
+    "outputs/direct-eos-gr33/retained-eos-source/normalized-charge.npz": "49750d66858a12ef1d3ad38d29ef470cdb89b8e92e94de417e26740d5cbc360e",
+    "outputs/direct-eos-gr33/retained-eos-source/pilot-deep-samples.json": "d046a5cf89f5d177e29aaccc27762c757877a997b4c87dd875a7b2deb4516cce",
+    "outputs/direct-eos-gr33/retained-eos-source/pilot-deep.json": "1322634d37e194996d5bf62d027c101d9033854c3255f0cedf4f29a1cd1c0373",
+    "outputs/direct-eos-gr33/retained-eos-source/pilot-high-samples.json": "018c5d1a26170172146695d1298bc55dc9685f7c1eb9a3d218b0d3d66f22adb0",
+    "outputs/direct-eos-gr33/retained-eos-source/pilot-high.json": "67cf7f93b0eaaaa1849d59289a243b1e3bbae8f2cbc5d4c0462128ad9ab0905b",
+    "outputs/direct-eos-gr33/retained-eos-source/pilot-low-samples.json": "8f7d1ade0ad2a0045b9a80bf5f37bc67c93ddedf9ee55578f09b574bbb20c806",
+    "outputs/direct-eos-gr33/retained-eos-source/pilot-low.json": "93467bf89f93922d969ee025dff8e10e65f023ba679a4ffbd411ab4281ce9e9c",
+    "outputs/direct-eos-gr33/retained-eos-source/pilot.json": "6463d570ee5dfaea692a567be6df6b2628231cdd5bf85b424c17e91bb7623720",
+    "outputs/direct-eos-gr33/retained-eos-source/plan.json": "c0759f0c1d4aac3b2c50f04bf51754a7c3f5f05f92a62c2efce70ceb24fc60cb",
+    "outputs/direct-eos-gr33/retained-eos-source/production-samples.json": "c8a1c3c0312e02bb9496cd4382d11397295b7d7b4d055c5340d0000d43e89215",
+    "outputs/direct-eos-gr33/retained-eos-source/production.json": "8e0295132570378a8c1009475f46ac00c1a90ccc99749483dc62f098be0dd586",
+    "outputs/direct-eos-gr33/retained-eos-source/receipt.json": "539fcb5822dee0ab1ee7f636c00748033c34321796d31f5f7f02724713a1ea5f",
+    "outputs/direct-eos-gr33/retained-eos-source/result.json": "28486eeec5c298eedc2e3567e3cf648aa92b4b0c026a0270671c51fd222c4c1f",
+    "outputs/direct-eos-gr33/retained-eos-source/reuse.json": "c4b9ecd6b08b19adeec7fba547965cd2b0884049e860dc37af1f40e58b05d3ce",
+    "outputs/direct-eos-gr33/retained-eos-source/reused-samples.json": "6f34cba0a3d839093c391be7c3575c5b3afd944eb5927cd726cd9c86160376c9",
+    "outputs/direct-eos-gr33/retained-eos-source/source-knots.npz": "be1286078254119818249e620dbf87006eeae45487a9126a69c4617b650923ec",
+    "outputs/direct-eos-gr33/retained-eos-source/source.npz": "35ea47f303aa75200ef67be954bebf0e311249d45ecf0a5755eab1a779f99551",
+    "outputs/direct-eos-gr33/retained-eos-source/verification.json": "17362ba85e4f4a991cde6e5e6f6fc00dc250a2652974fc2810c0f80ab7738ddd",
+    "outputs/direct-eos-gr33/retained-eos-source/wave-deep.npz": "251d49586a69429e930932d3366ecb9a3f899f4a437052696ff23a638bac5b8a",
+    "outputs/direct-eos-gr33/retained-eos-source/wave-fine.npz": "4caa3ec9374ce0047b2a9ba470317b2df9100f1ec73d11631025d51f7cb94edc",
+    "outputs/direct-eos-gr33/retained-eos-source/wave-g4.npz": "719f67a7b5b46e325852bafd4a2f052d0a9f31944c5107f7cd0eb8750ea71aca",
+    "outputs/direct-eos-gr33/retained-eos-source/wave-nine.npz": "a95c85d83456d1e8a9233e0c798ddc1895e516d05c9e2a22af538a480cc1156a",
+    "verification/def_retained_eos_source.py": "42cb786025137db2803ba6cb9abdea9d97a650f9fad1c12e7df40aa98aaf2029",
+    "verification/verify_retained_eos_source.py": "edc2a1fbf723218cf046a9981391228558c55c4ca6106d37422b56dda6ae3fb4"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "seconds": 3.9972595669999995,
+  "source_bindings_verified": true,
+  "preflight_source_recovered_exactly": true,
+  "coefficient_premises_checked": true,
+  "numerical_absolute_potential_integral_per_cm": 6.201253978933634e-16,
+  "analytic_integral_enclosure_margin": 0.00017173726956243307,
+  "manufactured_positive_and_negative_potential": [
+    {
+      "point_potential_strength": -0.2,
+      "exact": 1.0701379080084916,
+      "first_Born": 1.0666666666666667,
+      "remainder": 0.0034712413418250296,
+      "bound": 0.05
+    },
+    {
+      "point_potential_strength": 0.2,
+      "exact": 0.9365376538990929,
+      "first_Born": 0.9333333333333333,
+      "remainder": 0.0032043205657596003,
+      "bound": 0.05
+    }
+  ],
+  "declared_1792_source_endpoint_potential_interval": [
+    -2.5925617091880377e-30,
+    -2.5869839772703592e-30
+  ],
+  "interval_scope": "All orders of the stated scalar potential, including the algebraic fixed-coordinate-baryon adiabatic volume response. The reference tail point implicit in the centered rest readout is included in the norm. This interval is not a continuum/EOS/whole-star/observational uncertainty interval.",
+  "archived_metadata_unit_correction": "Phase102 mass-source NPZ key scalar_source_coefficient_cm3 contains KJ with units cm^-2. Numerical use was correct; Phase103 uses coefficient_cm_minus2. Preserve the archived key and bytes.",
+  "compact_first_Born_not_evaluated": true,
+  "first_Born_quadrature_difference_is_not_a_rigorous_quadrature_error_bound": true,
+  "full_goal_complete": false
+}

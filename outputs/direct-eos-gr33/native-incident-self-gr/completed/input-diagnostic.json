@@ -1,0 +1,80 @@
+{
+  "classification": "Counterexample candidate",
+  "row": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "steps": 64,
+    "reference": 128,
+    "completed": 4,
+    "substeps": 16,
+    "balance_relative": [
+      1.3578403885038203e-18,
+      1.8153283824001757e-17,
+      2.925480135707882e-17,
+      1.7158863264750483e-16
+    ],
+    "directional": [
+      {
+        "time": 0.00010732597243527195,
+        "relative": [
+          8.718421982966004e-06,
+          5.640284672790134e-10,
+          2.835066992657073e-07,
+          4.574984045605895e-12
+        ]
+      }
+    ],
+    "directional_relative": 8.718421982966004e-06,
+    "forward_probe_indicator": 0.00163560200625504,
+    "maximum_true_relative_state": 7.949105134609249e-37,
+    "endpoint_sum": [
+      2.4180021591761747e-12,
+      7.349264149915278e+20,
+      910941464969901.1,
+      -8.111064462124517e+23
+    ],
+    "endpoint_L1": [
+      0.5209268356444309,
+      7.579874326524875e+20,
+      1.115560404839969e+16,
+      3.7563474966632553e+24
+    ],
+    "endpoint_sum_physical": [
+      2.418002159176175e-38,
+      7.349264149915277e-06,
+      9.109414649699012e-12,
+      -0.008111064462124517
+    ],
+    "endpoint_L1_physical": [
+      5.209268356444309e-27,
+      7.579874326524876e-06,
+      1.115560404839969e-10,
+      0.03756347496663255
+    ],
+    "discard_physical": [
+      -2.4180035170165635e-38,
+      -6.072982429150637e-21,
+      -1.1933252733581524e-24,
+      -3.8134070097364415e-18
+    ],
+    "raw_owner_calls": 149,
+    "seconds": 2.0631022849999994,
+    "full_GR_feedback": false,
+    "final_charge_solved": false
+  },
+  "first_interval_common_metric_time_difference": [
+    0.001720586692622263,
+    1.666967332543376e-07,
+    0.006992726456159245,
+    0.003299847058924543
+  ],
+  "original_metric_two_path_first_interval_difference": [
+    0.07579788928909155,
+    0.2729043696230876,
+    0.46008682247390575,
+    0.0032998064409323785
+  ],
+  "changed": "Only prescribe the SAME fine generated GR field to both clocks. Original SSP2 and separate64/128 photon collision transfers retained. Fine completed trajectory reused; one4-step coarse prefix.",
+  "passed": true,
+  "production_authorized": false
+}

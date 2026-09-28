@@ -1,0 +1,93 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "native_calls": 35,
+  "rows": [
+    {
+      "cell": 0,
+      "cvT": 7768834840509.457,
+      "cpT": 12364883637970.426,
+      "cp_over_cv": 1.5916007859371064,
+      "constant_density_native_heat_derivative": [
+        7768834852392.577,
+        7768834843066.405
+      ],
+      "finite_relative_error": 3.2912894631920153e-10,
+      "old_fixed_density_temperature_relative_bias": -0.37170174277639745
+    },
+    {
+      "cell": 132,
+      "cvT": 12534901973849.512,
+      "cpT": 19801427823161.19,
+      "cp_over_cv": 1.579703444388413,
+      "constant_density_native_heat_derivative": [
+        12534901990234.373,
+        12534901977539.06
+      ],
+      "finite_relative_error": 2.943421062440166e-10,
+      "old_fixed_density_temperature_relative_bias": -0.3669697919870315
+    },
+    {
+      "cell": 600,
+      "cvT": 44707068988648.32,
+      "cpT": 74589397878370.6,
+      "cp_over_cv": 1.6684027731120052,
+      "constant_density_native_heat_derivative": [
+        44707068989843.75,
+        44707068992968.75
+      ],
+      "finite_relative_error": 9.663869704468198e-11,
+      "old_fixed_density_temperature_relative_bias": -0.4006243479596119
+    },
+    {
+      "cell": 1175,
+      "cvT": 218512583613316.4,
+      "cpT": 364685057784869.94,
+      "cp_over_cv": 1.6689430501184446,
+      "constant_density_native_heat_derivative": [
+        218512583623437.47,
+        218512583609374.97
+      ],
+      "finite_relative_error": 1.8037571436479993e-11,
+      "old_fixed_density_temperature_relative_bias": -0.4008183802742519
+    },
+    {
+      "cell": 2300,
+      "cvT": 3102767363740089.5,
+      "cpT": 5124683011826964.0,
+      "cp_over_cv": 1.651649128360577,
+      "constant_density_native_heat_derivative": [
+        3102767363862499.5,
+        3102767363699999.5
+      ],
+      "finite_relative_error": 1.2920775560587572e-11,
+      "old_fixed_density_temperature_relative_bias": -0.3945445295680944
+    },
+    {
+      "cell": 4000,
+      "cvT": 1100041381816684.8,
+      "cpT": 1191771560837856.5,
+      "cp_over_cv": 1.0833879347972184,
+      "constant_density_native_heat_derivative": [
+        1100041380399999.9,
+        1100041379249999.9
+      ],
+      "finite_relative_error": 2.3332621390537156e-09,
+      "old_fixed_density_temperature_relative_bias": -0.07696959890256339
+    },
+    {
+      "cell": 5734,
+      "cvT": 845571917364403.9,
+      "cpT": 869012886853481.4,
+      "cp_over_cv": 1.0277220293244147,
+      "constant_density_native_heat_derivative": [
+        845571916499999.9,
+        845571921299999.9
+      ],
+      "finite_relative_error": 4.654359786471218e-09,
+      "old_fixed_density_temperature_relative_bias": -0.026974248418746072
+    }
+  ],
+  "model_error_confirmed": true,
+  "scope": "Native EOS finite-difference positive control at fixed rho,X; not continuum thermodynamic certification."
+}

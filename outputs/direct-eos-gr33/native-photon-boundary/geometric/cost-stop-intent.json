@@ -1,0 +1,883 @@
+{
+  "classification": "Counterexample candidate",
+  "boot_id": "3cc2700a-309c-4081-85ae-055fb2eb6c8e",
+  "controller_pid": 320,
+  "controller_ticks": "11858",
+  "workers": {
+    "work-0": {
+      "pid": 390,
+      "ticks": "19270"
+    },
+    "work-1": {
+      "pid": 391,
+      "ticks": "19270"
+    },
+    "work-2": {
+      "pid": 392,
+      "ticks": "19270"
+    },
+    "work-3": {
+      "pid": 393,
+      "ticks": "19270"
+    },
+    "work-4": {
+      "pid": 394,
+      "ticks": "19270"
+    },
+    "work-5": {
+      "pid": 395,
+      "ticks": "19270"
+    },
+    "work-6": {
+      "pid": 396,
+      "ticks": "19270"
+    },
+    "work-7": {
+      "pid": 397,
+      "ticks": "19271"
+    },
+    "work-8": {
+      "pid": 398,
+      "ticks": "19271"
+    },
+    "work-9": {
+      "pid": 399,
+      "ticks": "19271"
+    },
+    "work-10": {
+      "pid": 400,
+      "ticks": "19271"
+    },
+    "work-11": {
+      "pid": 401,
+      "ticks": "19271"
+    },
+    "work-12": {
+      "pid": 402,
+      "ticks": "19271"
+    },
+    "work-13": {
+      "pid": 403,
+      "ticks": "19271"
+    }
+  },
+  "stopped": [
+    "work-6",
+    "work-7",
+    "work-8",
+    "work-9"
+  ],
+  "original_status": {
+    "state": "running",
+    "action": "work",
+    "workers": {
+      "work-0": 390,
+      "work-1": 391,
+      "work-2": 392,
+      "work-3": 393,
+      "work-4": 394,
+      "work-5": 395,
+      "work-6": 396,
+      "work-7": 397,
+      "work-8": 398,
+      "work-9": 399,
+      "work-10": 400,
+      "work-11": 401,
+      "work-12": 402,
+      "work-13": 403
+    },
+    "completed": [
+      {
+        "action": "prepare",
+        "returncode": 0
+      },
+      {
+        "action": "pilot",
+        "returncode": 0
+      }
+    ],
+    "seconds": 73.841437029
+  },
+  "progress": {
+    "work-0": {
+      "completed": 8,
+      "total": 41,
+      "seconds": 1785.741010453,
+      "rows": [
+        {
+          "index": 535,
+          "time": 0.0032242510885762948,
+          "packets": 4096,
+          "seconds": 215.49742286599997,
+          "energy_identity_relative": 4.202727253954903e-11,
+          "angular_invariant_relative": 1.7107019482252664e-16
+        },
+        {
+          "index": 549,
+          "time": 0.0033002736523846123,
+          "packets": 4096,
+          "seconds": 253.71698596199997,
+          "energy_identity_relative": 3.457879196634032e-11,
+          "angular_invariant_relative": 1.7107019482267667e-16
+        },
+        {
+          "index": 563,
+          "time": 0.003371824300674794,
+          "packets": 4096,
+          "seconds": 259.408602769,
+          "energy_identity_relative": 4.712494707518329e-11,
+          "angular_invariant_relative": 1.7107019482256517e-16
+        },
+        {
+          "index": 499,
+          "time": 0.0030319587212964323,
+          "packets": 3840,
+          "seconds": 209.29320102299994,
+          "energy_identity_relative": 3.623532610401856e-11,
+          "angular_invariant_relative": 1.7107019481865722e-16
+        },
+        {
+          "index": 513,
+          "time": 0.003103509369586614,
+          "packets": 3840,
+          "seconds": 251.64659910599994,
+          "energy_identity_relative": 2.8503419700782472e-11,
+          "angular_invariant_relative": 1.7107019482266264e-16
+        },
+        {
+          "index": 527,
+          "time": 0.0031795319333949314,
+          "packets": 3840,
+          "seconds": 258.727952598,
+          "energy_identity_relative": 4.329131805979288e-11,
+          "angular_invariant_relative": 1.7107019482312223e-16
+        },
+        {
+          "index": 465,
+          "time": 0.002848610185052843,
+          "packets": 3584,
+          "seconds": 184.631389141,
+          "energy_identity_relative": 2.4984518738068537e-11,
+          "angular_invariant_relative": 1.7107019482245485e-16
+        },
+        {
+          "index": 479,
+          "time": 0.0029246327488611605,
+          "packets": 3584,
+          "seconds": 152.76812555900005,
+          "energy_identity_relative": 4.420745187590917e-11,
+          "angular_invariant_relative": 1.7107019482267857e-16
+        }
+      ]
+    },
+    "work-1": {
+      "completed": 7,
+      "total": 41,
+      "seconds": 1720.360697179,
+      "rows": [
+        {
+          "index": 536,
+          "time": 0.003228723004094431,
+          "packets": 4096,
+          "seconds": 217.484578855,
+          "energy_identity_relative": 4.8562622125543554e-11,
+          "angular_invariant_relative": 1.7107019482241114e-16
+        },
+        {
+          "index": 550,
+          "time": 0.0033047455679027487,
+          "packets": 4096,
+          "seconds": 264.67872362799994,
+          "energy_identity_relative": 3.108769322357902e-11,
+          "angular_invariant_relative": 1.7107019482267953e-16
+        },
+        {
+          "index": 564,
+          "time": 0.0033807681317110662,
+          "packets": 4096,
+          "seconds": 271.79289173000006,
+          "energy_identity_relative": 4.742151752925433e-11,
+          "angular_invariant_relative": 1.7107019482251216e-16
+        },
+        {
+          "index": 500,
+          "time": 0.003036430636814569,
+          "packets": 3840,
+          "seconds": 279.070295032,
+          "energy_identity_relative": 3.065813369748566e-11,
+          "angular_invariant_relative": 1.7107019481822436e-16
+        },
+        {
+          "index": 514,
+          "time": 0.003112453200622886,
+          "packets": 3840,
+          "seconds": 254.37022337099984,
+          "energy_identity_relative": 2.928889485937786e-11,
+          "angular_invariant_relative": 1.7107019482353633e-16
+        },
+        {
+          "index": 528,
+          "time": 0.003184003848913068,
+          "packets": 3840,
+          "seconds": 250.22285839699998,
+          "energy_identity_relative": 4.4659993533422236e-11,
+          "angular_invariant_relative": 1.7107019482302273e-16
+        },
+        {
+          "index": 466,
+          "time": 0.0028530821005709793,
+          "packets": 3584,
+          "seconds": 182.71522476000018,
+          "energy_identity_relative": 2.259453751902176e-11,
+          "angular_invariant_relative": 1.7107019482236827e-16
+        }
+      ]
+    },
+    "work-2": {
+      "completed": 8,
+      "total": 41,
+      "seconds": 1747.58372246,
+      "rows": [
+        {
+          "index": 537,
+          "time": 0.0032331949196125675,
+          "packets": 4096,
+          "seconds": 238.13005594400002,
+          "energy_identity_relative": 4.9888512828542936e-11,
+          "angular_invariant_relative": 1.7107019482237424e-16
+        },
+        {
+          "index": 551,
+          "time": 0.003309217483420885,
+          "packets": 4096,
+          "seconds": 233.87959270199997,
+          "energy_identity_relative": 3.672309860211142e-11,
+          "angular_invariant_relative": 1.7107019482268046e-16
+        },
+        {
+          "index": 565,
+          "time": 0.0033852400472292026,
+          "packets": 4096,
+          "seconds": 249.34988836800005,
+          "energy_identity_relative": 4.6916343518757584e-11,
+          "angular_invariant_relative": 1.7107019482248946e-16
+        },
+        {
+          "index": 501,
+          "time": 0.003040902552332705,
+          "packets": 3840,
+          "seconds": 188.30327689199999,
+          "energy_identity_relative": 3.056409285498804e-11,
+          "angular_invariant_relative": 1.710701948182263e-16
+        },
+        {
+          "index": 515,
+          "time": 0.003116925116141023,
+          "packets": 3840,
+          "seconds": 230.193481648,
+          "energy_identity_relative": 3.041114990425784e-11,
+          "angular_invariant_relative": 1.7107019482386075e-16
+        },
+        {
+          "index": 529,
+          "time": 0.00319294767994934,
+          "packets": 3840,
+          "seconds": 218.71807040800013,
+          "energy_identity_relative": 3.471308935189827e-11,
+          "angular_invariant_relative": 1.7107019482278543e-16
+        },
+        {
+          "index": 467,
+          "time": 0.0028575540160891157,
+          "packets": 3584,
+          "seconds": 152.4378868419999,
+          "energy_identity_relative": 2.467421742139719e-11,
+          "angular_invariant_relative": 1.7107019482229323e-16
+        },
+        {
+          "index": 481,
+          "time": 0.0029335765798974333,
+          "packets": 3584,
+          "seconds": 236.52589062800007,
+          "energy_identity_relative": 3.7195873627650296e-11,
+          "angular_invariant_relative": 1.7107019482268036e-16
+        }
+      ]
+    },
+    "work-3": {
+      "completed": 7,
+      "total": 41,
+      "seconds": 1711.681588124,
+      "rows": [
+        {
+          "index": 538,
+          "time": 0.003237666835130704,
+          "packets": 4096,
+          "seconds": 229.74190228299997,
+          "energy_identity_relative": 3.615486162777062e-11,
+          "angular_invariant_relative": 1.7107019482224025e-16
+        },
+        {
+          "index": 552,
+          "time": 0.0033136893989390214,
+          "packets": 4096,
+          "seconds": 251.60409991499995,
+          "energy_identity_relative": 4.2181537575088266e-11,
+          "angular_invariant_relative": 1.7107019482268027e-16
+        },
+        {
+          "index": 566,
+          "time": 0.003389711962747339,
+          "packets": 4096,
+          "seconds": 260.746501225,
+          "energy_identity_relative": 4.434391982559898e-11,
+          "angular_invariant_relative": 1.710701948224369e-16
+        },
+        {
+          "index": 502,
+          "time": 0.003045374467850842,
+          "packets": 3840,
+          "seconds": 256.0416476260001,
+          "energy_identity_relative": 2.758577217802014e-11,
+          "angular_invariant_relative": 1.7107019481819776e-16
+        },
+        {
+          "index": 516,
+          "time": 0.0031213970316591594,
+          "packets": 3840,
+          "seconds": 249.45481091199986,
+          "energy_identity_relative": 2.566322129583647e-11,
+          "angular_invariant_relative": 1.710701948239863e-16
+        },
+        {
+          "index": 530,
+          "time": 0.003197419595467477,
+          "packets": 3840,
+          "seconds": 238.91771615900007,
+          "energy_identity_relative": 3.9552676122686396e-11,
+          "angular_invariant_relative": 1.7107019482265258e-16
+        },
+        {
+          "index": 468,
+          "time": 0.002862025931607252,
+          "packets": 3584,
+          "seconds": 225.14495897400002,
+          "energy_identity_relative": 2.8926542656907514e-11,
+          "angular_invariant_relative": 1.7107019482223365e-16
+        }
+      ]
+    },
+    "work-4": {
+      "completed": 8,
+      "total": 41,
+      "seconds": 1780.0245249339998,
+      "rows": [
+        {
+          "index": 539,
+          "time": 0.003246610666166976,
+          "packets": 4096,
+          "seconds": 263.58339171800003,
+          "energy_identity_relative": 3.4571326092645824e-11,
+          "angular_invariant_relative": 1.710701948223028e-16
+        },
+        {
+          "index": 553,
+          "time": 0.003318161314457158,
+          "packets": 4096,
+          "seconds": 237.85171705899995,
+          "energy_identity_relative": 4.4656157385705546e-11,
+          "angular_invariant_relative": 1.7107019482267817e-16
+        },
+        {
+          "index": 567,
+          "time": 0.0033941838782654754,
+          "packets": 4096,
+          "seconds": 263.1284160419999,
+          "energy_identity_relative": 3.8757390399467673e-11,
+          "angular_invariant_relative": 1.7107019482238397e-16
+        },
+        {
+          "index": 503,
+          "time": 0.003049846383368978,
+          "packets": 3840,
+          "seconds": 191.84461734900003,
+          "energy_identity_relative": 2.7038272297634007e-11,
+          "angular_invariant_relative": 1.7107019481825648e-16
+        },
+        {
+          "index": 517,
+          "time": 0.0031258689471772958,
+          "packets": 3840,
+          "seconds": 243.74365574399985,
+          "energy_identity_relative": 3.781385309008571e-11,
+          "angular_invariant_relative": 1.7107019482398213e-16
+        },
+        {
+          "index": 531,
+          "time": 0.003201891510985613,
+          "packets": 3840,
+          "seconds": 220.33943189899992,
+          "energy_identity_relative": 4.6206392349352487e-11,
+          "angular_invariant_relative": 1.71070194822432e-16
+        },
+        {
+          "index": 469,
+          "time": 0.0028709697626435244,
+          "packets": 3584,
+          "seconds": 147.9979301469998,
+          "energy_identity_relative": 3.2933021214684713e-11,
+          "angular_invariant_relative": 1.7107019482218092e-16
+        },
+        {
+          "index": 483,
+          "time": 0.002942520410933706,
+          "packets": 3584,
+          "seconds": 211.50257647399985,
+          "energy_identity_relative": 3.618125944853695e-11,
+          "angular_invariant_relative": 1.7107019482267514e-16
+        }
+      ]
+    },
+    "work-5": {
+      "completed": 8,
+      "total": 41,
+      "seconds": 1820.17642988,
+      "rows": [
+        {
+          "index": 540,
+          "time": 0.0032510825816851126,
+          "packets": 4096,
+          "seconds": 254.453516467,
+          "energy_identity_relative": 3.550607143798354e-11,
+          "angular_invariant_relative": 1.7107019482234865e-16
+        },
+        {
+          "index": 554,
+          "time": 0.00332710514549343,
+          "packets": 4096,
+          "seconds": 252.71410846700007,
+          "energy_identity_relative": 3.718847025107668e-11,
+          "angular_invariant_relative": 1.7107019482264435e-16
+        },
+        {
+          "index": 568,
+          "time": 0.0033986557937836117,
+          "packets": 4096,
+          "seconds": 265.02700148400004,
+          "energy_identity_relative": 3.2219032669075103e-11,
+          "angular_invariant_relative": 1.7107019482232545e-16
+        },
+        {
+          "index": 504,
+          "time": 0.00305879021440525,
+          "packets": 3840,
+          "seconds": 192.49356785300006,
+          "energy_identity_relative": 2.7496844744271727e-11,
+          "angular_invariant_relative": 1.710701948181869e-16
+        },
+        {
+          "index": 518,
+          "time": 0.003130340862695432,
+          "packets": 3840,
+          "seconds": 245.4973897939999,
+          "energy_identity_relative": 4.277954507946625e-11,
+          "angular_invariant_relative": 1.710701948240733e-16
+        },
+        {
+          "index": 532,
+          "time": 0.0032063634265037497,
+          "packets": 3840,
+          "seconds": 232.41853811499982,
+          "energy_identity_relative": 4.9682926525249794e-11,
+          "angular_invariant_relative": 1.7107019482231534e-16
+        },
+        {
+          "index": 470,
+          "time": 0.002875441678161661,
+          "packets": 3584,
+          "seconds": 155.91240776799987,
+          "energy_identity_relative": 3.07859155144589e-11,
+          "angular_invariant_relative": 1.710701948221959e-16
+        },
+        {
+          "index": 484,
+          "time": 0.0029514642419699783,
+          "packets": 3584,
+          "seconds": 221.60951107900019,
+          "energy_identity_relative": 4.823761431815566e-11,
+          "angular_invariant_relative": 1.710701948225795e-16
+        }
+      ]
+    },
+    "work-6": {
+      "completed": 2,
+      "total": 41,
+      "seconds": 1510.78839113,
+      "rows": [
+        {
+          "index": 541,
+          "time": 0.003255554497203249,
+          "packets": 4096,
+          "seconds": 680.0120701129999,
+          "energy_identity_relative": 3.4457998952077955e-11,
+          "angular_invariant_relative": 1.710701948224119e-16
+        },
+        {
+          "index": 555,
+          "time": 0.003331577061011567,
+          "packets": 4096,
+          "seconds": 830.6008585330001,
+          "energy_identity_relative": 3.263948299096295e-11,
+          "angular_invariant_relative": 1.7107019482260002e-16
+        }
+      ]
+    },
+    "work-7": {
+      "completed": 2,
+      "total": 41,
+      "seconds": 1468.309376503,
+      "rows": [
+        {
+          "index": 542,
+          "time": 0.0032600264127213853,
+          "packets": 4096,
+          "seconds": 662.793274066,
+          "energy_identity_relative": 3.4034349281953605e-11,
+          "angular_invariant_relative": 1.7107019482248034e-16
+        },
+        {
+          "index": 556,
+          "time": 0.0033360489765297033,
+          "packets": 4096,
+          "seconds": 805.3597702310001,
+          "energy_identity_relative": 3.6536997269623135e-11,
+          "angular_invariant_relative": 1.7107019482252235e-16
+        }
+      ]
+    },
+    "work-8": {
+      "completed": 2,
+      "total": 41,
+      "seconds": 1488.971370287,
+      "rows": [
+        {
+          "index": 543,
+          "time": 0.0032644983282395217,
+          "packets": 4096,
+          "seconds": 671.687917577,
+          "energy_identity_relative": 3.9876308826296315e-11,
+          "angular_invariant_relative": 1.7107019482253226e-16
+        },
+        {
+          "index": 557,
+          "time": 0.0033405208920478397,
+          "packets": 4096,
+          "seconds": 816.874777052,
+          "energy_identity_relative": 3.4346329196958066e-11,
+          "angular_invariant_relative": 1.710701948224202e-16
+        }
+      ]
+    },
+    "work-9": {
+      "completed": 2,
+      "total": 41,
+      "seconds": 1654.076134946,
+      "rows": [
+        {
+          "index": 544,
+          "time": 0.003273442159275794,
+          "packets": 4096,
+          "seconds": 812.112314594,
+          "energy_identity_relative": 4.2234091825950713e-11,
+          "angular_invariant_relative": 1.7107019482261637e-16
+        },
+        {
+          "index": 558,
+          "time": 0.003344992807565976,
+          "packets": 4096,
+          "seconds": 841.9343100159999,
+          "energy_identity_relative": 3.819111821511794e-11,
+          "angular_invariant_relative": 1.710701948223294e-16
+        }
+      ]
+    },
+    "work-10": {
+      "completed": 8,
+      "total": 41,
+      "seconds": 1791.111646642,
+      "rows": [
+        {
+          "index": 545,
+          "time": 0.003277914074793931,
+          "packets": 4096,
+          "seconds": 263.236722859,
+          "energy_identity_relative": 3.783678191763151e-11,
+          "angular_invariant_relative": 1.7107019482264095e-16
+        },
+        {
+          "index": 559,
+          "time": 0.0033539366386022484,
+          "packets": 4096,
+          "seconds": 269.51593537499997,
+          "energy_identity_relative": 3.4866149231349097e-11,
+          "angular_invariant_relative": 1.7107019482201878e-16
+        },
+        {
+          "index": 573,
+          "time": 0.00342548728689243,
+          "packets": 4096,
+          "seconds": 261.80079003800006,
+          "energy_identity_relative": 3.4796665193202216e-11,
+          "angular_invariant_relative": 1.7107019482236692e-16
+        },
+        {
+          "index": 509,
+          "time": 0.0030856217075140684,
+          "packets": 3840,
+          "seconds": 200.96752131099993,
+          "energy_identity_relative": 2.9364443791396426e-11,
+          "angular_invariant_relative": 1.7107019481934126e-16
+        },
+        {
+          "index": 523,
+          "time": 0.00315717235580425,
+          "packets": 3840,
+          "seconds": 249.00030825800013,
+          "energy_identity_relative": 3.400577000081358e-11,
+          "angular_invariant_relative": 1.7107019482331633e-16
+        },
+        {
+          "index": 457,
+          "time": 0.0028038910298714796,
+          "packets": 3584,
+          "seconds": 153.8641078999999,
+          "energy_identity_relative": 3.0393611713419233e-11,
+          "angular_invariant_relative": 1.710701948241313e-16
+        },
+        {
+          "index": 461,
+          "time": 0.002826250607462161,
+          "packets": 3584,
+          "seconds": 158.6266735879999,
+          "energy_identity_relative": 2.460214440935519e-11,
+          "angular_invariant_relative": 1.7107019482343846e-16
+        },
+        {
+          "index": 475,
+          "time": 0.002902273171270479,
+          "packets": 3584,
+          "seconds": 234.03915796399997,
+          "energy_identity_relative": 5.2428865684815854e-11,
+          "angular_invariant_relative": 1.7107019482230783e-16
+        }
+      ]
+    },
+    "work-11": {
+      "completed": 8,
+      "total": 41,
+      "seconds": 1742.691654205,
+      "rows": [
+        {
+          "index": 546,
+          "time": 0.0032823859903120672,
+          "packets": 4096,
+          "seconds": 235.134639217,
+          "energy_identity_relative": 3.7898590352303706e-11,
+          "angular_invariant_relative": 1.7107019482265374e-16
+        },
+        {
+          "index": 560,
+          "time": 0.003358408554120385,
+          "packets": 4096,
+          "seconds": 257.32142750199995,
+          "energy_identity_relative": 3.878632421748051e-11,
+          "angular_invariant_relative": 1.7107019482276805e-16
+        },
+        {
+          "index": 574,
+          "time": 0.0034344311179287023,
+          "packets": 4096,
+          "seconds": 285.41032856799995,
+          "energy_identity_relative": 3.7614709094567344e-11,
+          "angular_invariant_relative": 1.7107019482245759e-16
+        },
+        {
+          "index": 510,
+          "time": 0.0030900936230322047,
+          "packets": 3840,
+          "seconds": 197.6517189399999,
+          "energy_identity_relative": 3.132881282966002e-11,
+          "angular_invariant_relative": 1.710701948210887e-16
+        },
+        {
+          "index": 524,
+          "time": 0.0031661161868405223,
+          "packets": 3840,
+          "seconds": 267.6376172739999,
+          "energy_identity_relative": 3.198411411797559e-11,
+          "angular_invariant_relative": 1.710701948232703e-16
+        },
+        {
+          "index": 458,
+          "time": 0.002808362945389616,
+          "packets": 3584,
+          "seconds": 149.28274851699985,
+          "energy_identity_relative": 2.84669965545993e-11,
+          "angular_invariant_relative": 1.7107019482393278e-16
+        },
+        {
+          "index": 462,
+          "time": 0.002830722522980298,
+          "packets": 3584,
+          "seconds": 190.043640417,
+          "energy_identity_relative": 2.7487934184568303e-11,
+          "angular_invariant_relative": 1.7107019482285983e-16
+        },
+        {
+          "index": 476,
+          "time": 0.0029067450867886154,
+          "packets": 3584,
+          "seconds": 160.16677795300006,
+          "energy_identity_relative": 4.051817931578823e-11,
+          "angular_invariant_relative": 1.7107019482240439e-16
+        }
+      ]
+    },
+    "work-12": {
+      "completed": 8,
+      "total": 41,
+      "seconds": 1799.711149502,
+      "rows": [
+        {
+          "index": 547,
+          "time": 0.0032868579058302036,
+          "packets": 4096,
+          "seconds": 220.330551774,
+          "energy_identity_relative": 3.820870821593219e-11,
+          "angular_invariant_relative": 1.7107019482266017e-16
+        },
+        {
+          "index": 561,
+          "time": 0.003362880469638521,
+          "packets": 4096,
+          "seconds": 267.85668212699994,
+          "energy_identity_relative": 3.0130806042539285e-11,
+          "angular_invariant_relative": 1.7107019482183458e-16
+        },
+        {
+          "index": 495,
+          "time": 0.003009599143705751,
+          "packets": 3840,
+          "seconds": 192.037233549,
+          "energy_identity_relative": 3.677412299451133e-11,
+          "angular_invariant_relative": 1.7107019482843274e-16
+        },
+        {
+          "index": 497,
+          "time": 0.0030185429747420236,
+          "packets": 3840,
+          "seconds": 204.1966649190001,
+          "energy_identity_relative": 3.139193897372858e-11,
+          "angular_invariant_relative": 1.7107019482212663e-16
+        },
+        {
+          "index": 511,
+          "time": 0.003094565538550341,
+          "packets": 3840,
+          "seconds": 268.30362752999986,
+          "energy_identity_relative": 3.1569630778301625e-11,
+          "angular_invariant_relative": 1.7107019481991415e-16
+        },
+        {
+          "index": 525,
+          "time": 0.0031705881023586587,
+          "packets": 3840,
+          "seconds": 234.94143962199996,
+          "energy_identity_relative": 2.995224465419531e-11,
+          "angular_invariant_relative": 1.7107019482324753e-16
+        },
+        {
+          "index": 463,
+          "time": 0.0028351944384984343,
+          "packets": 3584,
+          "seconds": 175.94727856300005,
+          "energy_identity_relative": 2.3128392754917572e-11,
+          "angular_invariant_relative": 1.710701948227311e-16
+        },
+        {
+          "index": 477,
+          "time": 0.002911217002306752,
+          "packets": 3584,
+          "seconds": 236.06949320400008,
+          "energy_identity_relative": 3.572645635683333e-11,
+          "angular_invariant_relative": 1.7107019482244588e-16
+        }
+      ]
+    },
+    "work-13": {
+      "completed": 7,
+      "total": 41,
+      "seconds": 1675.011074264,
+      "rows": [
+        {
+          "index": 548,
+          "time": 0.00329132982134834,
+          "packets": 4096,
+          "seconds": 264.686495497,
+          "energy_identity_relative": 3.808829539443866e-11,
+          "angular_invariant_relative": 1.710701948226655e-16
+        },
+        {
+          "index": 562,
+          "time": 0.0033673523851566575,
+          "packets": 4096,
+          "seconds": 274.371899632,
+          "energy_identity_relative": 4.441086912168236e-11,
+          "angular_invariant_relative": 1.7107019482264196e-16
+        },
+        {
+          "index": 496,
+          "time": 0.003014071059223887,
+          "packets": 3840,
+          "seconds": 191.66518515799999,
+          "energy_identity_relative": 3.1578760743998106e-11,
+          "angular_invariant_relative": 1.7107019482363535e-16
+        },
+        {
+          "index": 498,
+          "time": 0.00302301489026016,
+          "packets": 3840,
+          "seconds": 276.44365663300005,
+          "energy_identity_relative": 3.309908792448655e-11,
+          "angular_invariant_relative": 1.7107019481963336e-16
+        },
+        {
+          "index": 512,
+          "time": 0.0030990374540684775,
+          "packets": 3840,
+          "seconds": 247.54846630700013,
+          "energy_identity_relative": 2.981652337930784e-11,
+          "angular_invariant_relative": 1.710701948212106e-16
+        },
+        {
+          "index": 526,
+          "time": 0.003175060017876795,
+          "packets": 3840,
+          "seconds": 243.94553386500002,
+          "energy_identity_relative": 3.412160335897813e-11,
+          "angular_invariant_relative": 1.7107019482320264e-16
+        },
+        {
+          "index": 464,
+          "time": 0.002844138269534706,
+          "packets": 3584,
+          "seconds": 176.31585489299982,
+          "energy_identity_relative": 2.5157508634402173e-11,
+          "angular_invariant_relative": 1.7107019482255148e-16
+        }
+      ]
+    }
+  },
+  "reason": "Same module and inputs: workers6-9 measured about47s per launch cell, the other ten about15s. At that rate their remaining items take about4.3h, beyond the registered3h cap. Intentional cost stop between items, not a physical or numerical gate failure.",
+  "time_unix": 1790391205.6093159
+}

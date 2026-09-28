@@ -1,0 +1,45 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "84eeb6c",
+  "bindings": {
+    "verification/gr_microphysics.py": "b3b75b3e65698416114ee38ebd1b32780a967795d47542530b13276cc0215d14",
+    "verification/direct_eos_gr.py": "5709a4cbf5830de09001481813617d43ee2c935a0dff3cd813110d73a7066fdf",
+    "verification/source_retry.py": "6a0c2fdcd77150cbd1a692ee36f0a22f24dc325b46b9e5766249210d6b24bbff",
+    "verification/native_opacity.py": "8d55a1ee116606082d857d9531a6ab7d3456f4c847fe98fc9948a5754b2ca11f",
+    "verification/closure_precision.py": "fb8e438b497fc54b4f926a6e5eeb1d5f100b225a4e9c63ee59066fcde1bf6e15",
+    "verification/conservative_star.py": "9bcfe7bd2c07504abb6da3a5e7deea07c9c9b08f27ed12b33dd9310497cd60b7",
+    "outputs/direct-eos-gr33/source-retry/plan.json": "cf6e3ce7fe7efdad945edc6a859d0abb15eb8104745e7da100a080f72b678e4c",
+    "outputs/direct-eos-gr33/source-retry/materialized_native_eos_bridge_v2.py": "339dbd8fd62a7eb4f63bb002db5ceebcd526dc50a5a246ca71abeb9c12fd0175",
+    "outputs/structured-enthalpy32/direct-ions/full-integral-build.json": "09a117e64bd62d13740b28b2237e203e527d7b4b052ae5dbeedca7d9d824f45a"
+  },
+  "state": "outputs/direct-eos-gr33/initial-state-17-4.npz",
+  "state_existed_at_prepare": false,
+  "state_not_read_at_prepare": true,
+  "processes": 8,
+  "block_cells": 128,
+  "finite_log_steps": [
+    5e-05,
+    2.5e-05
+  ],
+  "finite_derivative_score_tolerance": 0.001,
+  "native_input_log_and_composition_tolerance": 1e-12,
+  "serial_control_cells": [
+    0,
+    2972,
+    5734
+  ],
+  "source_columns": [
+    "free_e_per_baryon",
+    "eta",
+    "deta_dlnT",
+    "deta_dlnrho"
+  ],
+  "opacity_columns": [
+    "lnfree_e_per_baryon",
+    "dlnfree_e_dlnrho",
+    "dlnfree_e_dlnT"
+  ],
+  "method": "Nine evaluations of the same declared EOS per GR cell supply both interfaces. Preserve binary64 state inputs; quantify native import rounding. Identity replay precedes each new source intervention. Finite derivative checks are not continuous enclosures.",
+  "physical_EOS_certified": false,
+  "full_GR_evolution": false
+}

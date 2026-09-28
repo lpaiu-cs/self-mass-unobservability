@@ -1,0 +1,19 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "Only reference64 stage-time path exceeded species conservation:2.803864e-8 vs1e-8. Global unweighted Krylov residual below1e-10 need not bound the differently weighted H invariant.",
+  "repair": "Require full stage linear residual below1e-12 and GMRES rtol1e-12. Reuse both accepted reference128 paths byte-for-byte. Recompute only the failed original128/reference64 path, with unchanged equations, clocks and physical gates.",
+  "budgets": {
+    "pilot_seconds": 30,
+    "production_seconds": 500,
+    "CPU_threads": 1,
+    "memory_GB": 3
+  },
+  "forecast": "Failed full path cost130.03s. Measure four tightened stages, scale its observed late stepping cost by new/old pilot stage cost, add all17 operator points and15s. Require2x total under500s; no automatic increase.",
+  "stop": "Stop on failed prefix, forecast cap, completed path gate, or500s. Preserve the failed full path; no finer clock or physical-gate relaxation.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_stage_feedback.py": "6852dd1943e9ecd581f6f081815c8252aed68329de5666dd441973b33c847297",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_matter_photon_feedback.py": "19acadd46d8f6059406fc3614c151de187323cec68f73faf9319e663f0466fb9",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-matter-photon-feedback/stage-time/result.json": "35db73983d6c75b0c62a45687dff4a4960366554b1866dfcf2f0de5e0842e350",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-matter-photon-feedback/stage-time/producer.py": "b9492449d960751356bcf051bd45c8ad13e2ee5cb577cf77f85ef459a0462e8c"
+  }
+}

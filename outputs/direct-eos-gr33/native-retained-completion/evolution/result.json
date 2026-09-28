@@ -1,0 +1,55 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "paths": [
+    {
+      "classification": "Counterexample candidate",
+      "steps": 64,
+      "completed": 64,
+      "seconds": 604.3286288210002,
+      "local_steps": 444,
+      "conserved_Killing_balance": 3.610010717909376e-13,
+      "prior_state_change": null,
+      "prior_source_change": null,
+      "exact_owner_port_relative": 1.84297946488683e-16,
+      "complete": true,
+      "passed": true,
+      "full_source_error_enclosed": false,
+      "final_charge_solved": false
+    },
+    {
+      "classification": "Counterexample candidate",
+      "steps": 128,
+      "completed": 128,
+      "seconds": 442.35037320000083,
+      "local_steps": 384,
+      "conserved_Killing_balance": 4.899000848137716e-13,
+      "prior_state_change": null,
+      "prior_source_change": null,
+      "exact_owner_port_relative": 5.528737451806708e-16,
+      "complete": true,
+      "passed": true,
+      "full_source_error_enclosed": false,
+      "final_charge_solved": false,
+      "cost": {
+        "setup": 4.482203002999995,
+        "physics": 458.36859377400015,
+        "state_write": 14.834402440999838,
+        "port_write": 18.423019034999015,
+        "state_count": 14,
+        "port_count": 112
+      }
+    }
+  ],
+  "fine_seconds": 568.1869692959999,
+  "coarse_reused": true,
+  "prefix_replay_passed": true,
+  "both_clocks_completed": true,
+  "source_paths": {
+    "64": "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/source-64.npz",
+    "128": "outputs/direct-eos-gr33/native-retained-completion/evolution/source-128.npz"
+  },
+  "new_GR_charge_available": false,
+  "final_charge_solved": false,
+  "full_goal_complete": false
+}

@@ -1,0 +1,12 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "The endpoint audit reached report serialization but a numpy.bool_ face-equality value was not JSON serializable. No audit result or native-call count was saved. The completed coupled paths and charge readout are unaffected.",
+  "correction": "Convert only the face-equality report value to builtin bool. Preserve the exact executed source as readout-producer.py. Repeat only the bounded endpoint audit; do not rerun trajectories or charge.",
+  "first_failed_command_wall_seconds": 9.1028508,
+  "original_audit_seconds": 25,
+  "remaining_audit_seconds": 15,
+  "native_first_attempt_call_cap": 160,
+  "native_retry_call_cap": 160,
+  "total_native_call_cap": 320,
+  "gates_changed": false
+}

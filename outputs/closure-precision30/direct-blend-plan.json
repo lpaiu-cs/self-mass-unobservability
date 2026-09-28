@@ -1,0 +1,16 @@
+{
+  "classification": "Counterexample candidate",
+  "reason": "The star_job endpoint controls left the initial native source unchanged; their interpretation as endpoints is unverified. Keep that failed test and observe the actual module inputs at net_get entry.",
+  "controls": {
+    "pure_low": [
+      2.0,
+      3.0
+    ],
+    "pure_table": [
+      1e-07,
+      2e-07
+    ]
+  },
+  "method": "In our disposable child only, record and replace the two SHA-bound rates_def_mic blend inputs at each net_get entry, then restore them after return. Never overwrite returned rates or derivatives. Compare actual endpoint differences and affine reconstruction before correcting any derivative.",
+  "previous_configuration_only_results_preserved": true
+}

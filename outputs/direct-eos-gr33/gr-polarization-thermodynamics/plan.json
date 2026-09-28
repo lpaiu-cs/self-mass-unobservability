@@ -1,0 +1,60 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "2565748",
+  "bindings": {
+    "verification/gr_polarization_thermodynamics.py": "9fa8573f636f7ee896bce66a6f85b22448dc6e54512fcec7a71cea23d367d1b0",
+    "outputs/direct-eos-gr33/gr-electron-density-certificate/plan.json": "e7042074347e10b352d4418b3e0e9a23dbff27b9882c5c39ef2d9fcd88e10b26",
+    "outputs/direct-eos-gr33/gr-electron-density-certificate/candidate-manifest.json": "a4083b1f1bf83995cba6f6056846d56a4e6cdc7641b1c89304788b86fbd2ba14",
+    "outputs/direct-eos-gr33/gr-electron-density-certificate/candidates.npz": "7de1b20138e44c3daba986b8591962a4586bc0cfe6dd5d1835b2792156b19254",
+    "outputs/direct-eos-gr33/gr-electron-density-certificate/controls.json": "861c5efd0daeb97cd96d90c162969356c031f6c6364f50a46dc512be33bcd494",
+    "outputs/direct-eos-gr33/gr-polarization-self-scaled/manifest.json": "be8b7885a3e176601c209a6ab4376d1e24824763bd110a0a895a3360f7bbc219",
+    "outputs/direct-eos-gr33/gr-ionic-hamiltonian-bound/inputs.npz": "d89135accb682ac37de76eb6be24214c6c84c448e713ec2d5c5bf9b4495f3167",
+    "outputs/direct-eos-gr33/gr-ionic-hamiltonian-bound/constants.json": "5aa17efb44f145bee7f5d218667083c0e43a4ef86d5558a8efa26a916d5e1cff"
+  },
+  "orders": [
+    512,
+    1024
+  ],
+  "block_size": 32,
+  "processes": 4,
+  "inner_tolerance": 2e-11,
+  "z_cut": 1048576,
+  "finite_refinement_gate": 2e-07,
+  "control_positions": [
+    0,
+    1603,
+    3205
+  ],
+  "control_steps": [
+    0.002,
+    0.001
+  ],
+  "finite_difference_gate": 2e-05,
+  "control_inner_tolerance": 2e-13,
+  "control_outer_tolerance": 2e-12,
+  "tail_field_gate": "1e-5",
+  "fields": [
+    "F",
+    "U",
+    "P",
+    "S",
+    "CV",
+    "PDT",
+    "PDR"
+  ],
+  "parameter_order": [
+    "value",
+    "eta",
+    "etaeta",
+    "tau",
+    "etatau",
+    "tautau"
+  ],
+  "target": "Differentiate the actual finite-T finite-k ideal-electron RPA polarization self term at fixed ion composition, including the neutral chemical-potential response. Compute F,U,P,S,CV,PDT,PDR per ion in the usual kBT/kB units.",
+  "convention": "Q=hbar*k/(2*m_e*c), B=alpha/pi, G=S/(Q^2/B+S), C_pol/N_i=-(2*alpha*<Z^2>*m_e*c^2/pi)*integral G dQ. The integration rescaling a and Sref are held fixed during differentiation at each reference state; physical alpha is fixed. Numerical B and prefactors are binary approximations, while tail bounds use outward arithmetic.",
+  "actual_density": "Use the separate neutral-root predictors for each fully ionized saved baryon/isotope inventory. Final verification requires all3206 interval root/Hessian certificates and binds them after completion. Numerical interior is evaluated at predictor centers, not declared exact roots.",
+  "method": "Differentiate the occupation analytically at fixed p,Q. Use the already checked positive momentum kernel and occupied-region rescaling. Integrate six parameter derivatives, then apply implicit neutral-density derivatives. Independent finite differences re-solve neutral eta at shifted ln(number),ln(T) and use separate adaptive outer value integration.",
+  "rigorous_tail": "Positive response and thermal moment Cauchy-Schwarz bound all first/second parameter-derivative tails. Propagate them with certified neutral-root derivative intervals; this does not certify the interior numerical quadrature or its predictor-to-root displacement.",
+  "physical_EOS_certified": false,
+  "native_EOS_replaced": false
+}

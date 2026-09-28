@@ -1,0 +1,1592 @@
+{
+ "construct_seconds": 13.110625731000255,
+ "after_construct": {
+  "retained-metric-return152-work/fields/source-128.npz": [
+   "B",
+   "K_cm",
+   "M_cm",
+   "RJ",
+   "a",
+   "baryon_g",
+   "cx",
+   "deep_cells",
+   "delay",
+   "edges",
+   "gas_nonrest_energy_erg",
+   "inner_cumulative_energy_erg",
+   "inner_material_face_cm",
+   "metric_stress_erg",
+   "nonrest_stress_erg",
+   "nonrest_trace_erg",
+   "outer_cumulative_energy_erg",
+   "photon_energy_erg",
+   "photon_radial_pressure_erg",
+   "pressure_volume_erg",
+   "radius",
+   "re",
+   "t",
+   "volume",
+   "weight"
+  ],
+  "native-incident-drive155-work/metric/corrected/metric-128-g8.npz": [
+   "delta_lambda",
+   "delta_lambda_interval_rate",
+   "delta_lambda_rate",
+   "delta_log_areal_radius",
+   "delta_log_lapse",
+   "delta_log_radial_length",
+   "delta_log_speed",
+   "delta_log_volume",
+   "delta_nu",
+   "delta_nu_interval_rate",
+   "delta_nu_prime",
+   "delta_phi",
+   "delta_u",
+   "delta_u_prime",
+   "delta_u_t",
+   "radius_E",
+   "t"
+  ],
+  "retained-native-return150-work/photons/bank-128/units.npz": [
+   "energy",
+   "neutral"
+  ],
+  "native-incident-drive155-work/metric/corrected/metric-64-g8.npz": [
+   "delta_lambda",
+   "delta_lambda_interval_rate",
+   "delta_lambda_rate",
+   "delta_log_areal_radius",
+   "delta_log_lapse",
+   "delta_log_radial_length",
+   "delta_log_speed",
+   "delta_log_volume",
+   "delta_nu",
+   "delta_nu_interval_rate",
+   "delta_nu_prime",
+   "delta_phi",
+   "delta_u",
+   "delta_u_prime",
+   "delta_u_t",
+   "radius_E",
+   "t"
+  ],
+  "outputs/direct-eos-gr33/native-retained-completion/evolution/source-128.npz": [
+   "t"
+  ],
+  "native-incident-drive155-work/fields/born-g8.npz": [
+   "U",
+   "Ut",
+   "Ux",
+   "t",
+   "x"
+  ],
+  "native-incident-drive155-work/photons-lift/steps-128-reference-128.npz": [
+   "moments",
+   "t"
+  ],
+  "native-incident-drive155-work/photons-lift/steps-64-reference-128.npz": [
+   "collision_transfer",
+   "moments",
+   "t"
+  ],
+  "scratch-audit267/sweep-0/photons/steps-64-reference-128.npz": [
+   "collision_transfer",
+   "moments",
+   "t"
+  ],
+  "scratch-audit267/sweep-0/material/steps-64-reference-128.npz": [
+   "history_scaled",
+   "t"
+  ],
+  "native-incident-self-gr157-work/metric/metric-128-g8.npz": [
+   "asymptotic_mass_residual_cm",
+   "delta_lambda",
+   "delta_lambda_interval_rate",
+   "delta_log_area_radius",
+   "delta_log_lapse",
+   "delta_log_radial_length",
+   "delta_log_speed",
+   "delta_nu",
+   "delta_nu_faces",
+   "delta_nu_interval_rate",
+   "delta_nu_prime",
+   "delta_phi",
+   "delta_u",
+   "delta_u_prime",
+   "delta_u_t",
+   "emitted_energy_erg",
+   "outer_ADM_residual_lapse",
+   "outer_photon_lapse",
+   "outer_scalar_lapse",
+   "radius_E",
+   "t"
+  ],
+  "native-stage-collisions178-work/sweep-1/photons/pilot-64.npz": [
+   "RK_A",
+   "RK_b",
+   "RK_c",
+   "accepted_angular_luminosity",
+   "accepted_angular_quadrature_weights",
+   "accepted_angular_times",
+   "actual_step_edges",
+   "collision_stage_rates_scaled",
+   "collision_transfer",
+   "delta_material",
+   "delta_packet_scaled_occupation",
+   "energy_offset_reference",
+   "energy_offset_t",
+   "escape",
+   "front_cells",
+   "front_times",
+   "gas_stage_scaled",
+   "ledger",
+   "material_energy_units",
+   "material_history",
+   "material_neutral_units",
+   "moments",
+   "native_neutral_stage_rates",
+   "native_neutral_stage_times",
+   "native_neutral_stage_weights",
+   "photon_history_scaled_occupation",
+   "radial_ports",
+   "radius_E",
+   "split_macro_steps",
+   "t",
+   "time_integrator"
+  ],
+  "native-stage-collisions178-work/material-64.npz": [
+   "delta_scaled",
+   "discard_scaled",
+   "ledger_scaled",
+   "lifted_history_scaled",
+   "norm_scaled",
+   "t"
+  ]
+ },
+ "run_seconds": 153.9458465179996,
+ "reads": {
+  "retained-metric-return152-work/fields/source-128.npz": {
+   "t": [
+    "def_native_compensated_transport.py:38 __init__",
+    "evolve_native_retained_tail.py:80 __init__",
+    "def_native_updated_gr_return.py:54 __init__",
+    "def_native_refined_thermochemistry.py:73 __init__",
+    "def_native_stage_energy_history.py:19 __init__"
+   ],
+   "radius": [
+    "def_native_compensated_transport.py:38 __init__",
+    "evolve_native_retained_tail.py:80 __init__",
+    "def_native_updated_gr_return.py:54 __init__",
+    "def_native_refined_thermochemistry.py:73 __init__",
+    "def_native_stage_energy_history.py:19 __init__"
+   ],
+   "edges": [
+    "def_native_compensated_transport.py:38 __init__",
+    "evolve_native_retained_tail.py:80 __init__",
+    "def_native_updated_gr_return.py:54 __init__",
+    "def_native_refined_thermochemistry.py:73 __init__",
+    "def_native_stage_energy_history.py:19 __init__"
+   ],
+   "volume": [
+    "def_native_compensated_transport.py:38 __init__",
+    "evolve_native_retained_tail.py:80 __init__",
+    "def_native_updated_gr_return.py:54 __init__",
+    "def_native_refined_thermochemistry.py:73 __init__",
+    "def_native_stage_energy_history.py:19 __init__"
+   ],
+   "weight": [
+    "def_native_compensated_transport.py:38 __init__",
+    "evolve_native_retained_tail.py:80 __init__",
+    "def_native_updated_gr_return.py:54 __init__",
+    "def_native_refined_thermochemistry.py:73 __init__",
+    "def_native_stage_energy_history.py:19 __init__"
+   ],
+   "delay": [
+    "def_native_compensated_transport.py:38 __init__",
+    "evolve_native_retained_tail.py:80 __init__",
+    "def_native_updated_gr_return.py:54 __init__",
+    "def_native_refined_thermochemistry.py:73 __init__",
+    "def_native_stage_energy_history.py:19 __init__"
+   ],
+   "a": [
+    "def_native_compensated_transport.py:38 __init__",
+    "evolve_native_retained_tail.py:80 __init__",
+    "def_native_updated_gr_return.py:54 __init__",
+    "def_native_refined_thermochemistry.py:73 __init__",
+    "def_native_stage_energy_history.py:19 __init__"
+   ],
+   "B": [
+    "def_native_compensated_transport.py:38 __init__",
+    "evolve_native_retained_tail.py:80 __init__",
+    "def_native_updated_gr_return.py:54 __init__",
+    "def_native_refined_thermochemistry.py:73 __init__",
+    "def_native_stage_energy_history.py:19 __init__"
+   ],
+   "re": [
+    "def_native_compensated_transport.py:38 __init__",
+    "evolve_native_retained_tail.py:80 __init__",
+    "def_native_updated_gr_return.py:54 __init__",
+    "def_native_refined_thermochemistry.py:73 __init__",
+    "def_native_stage_energy_history.py:19 __init__"
+   ],
+   "nonrest_trace_erg": [
+    "def_native_compensated_transport.py:38 __init__",
+    "evolve_native_retained_tail.py:80 __init__",
+    "def_native_updated_gr_return.py:54 __init__",
+    "def_native_refined_thermochemistry.py:73 __init__",
+    "def_native_stage_energy_history.py:19 __init__"
+   ],
+   "nonrest_stress_erg": [
+    "def_native_compensated_transport.py:38 __init__",
+    "evolve_native_retained_tail.py:80 __init__",
+    "def_native_updated_gr_return.py:54 __init__",
+    "def_native_refined_thermochemistry.py:73 __init__",
+    "def_native_stage_energy_history.py:19 __init__"
+   ],
+   "baryon_g": [
+    "def_native_compensated_transport.py:38 __init__",
+    "evolve_native_retained_tail.py:80 __init__",
+    "def_native_updated_gr_return.py:54 __init__",
+    "def_native_refined_thermochemistry.py:73 __init__",
+    "def_native_stage_energy_history.py:19 __init__"
+   ],
+   "gas_nonrest_energy_erg": [
+    "def_native_compensated_transport.py:38 __init__",
+    "evolve_native_retained_tail.py:80 __init__",
+    "def_native_updated_gr_return.py:54 __init__",
+    "def_native_refined_thermochemistry.py:73 __init__",
+    "def_native_stage_energy_history.py:19 __init__"
+   ],
+   "pressure_volume_erg": [
+    "def_native_compensated_transport.py:38 __init__",
+    "evolve_native_retained_tail.py:80 __init__",
+    "def_native_updated_gr_return.py:54 __init__",
+    "def_native_refined_thermochemistry.py:73 __init__",
+    "def_native_stage_energy_history.py:19 __init__"
+   ],
+   "photon_energy_erg": [
+    "def_native_compensated_transport.py:38 __init__",
+    "evolve_native_retained_tail.py:80 __init__",
+    "def_native_updated_gr_return.py:54 __init__",
+    "def_native_refined_thermochemistry.py:73 __init__",
+    "def_native_stage_energy_history.py:19 __init__"
+   ],
+   "photon_radial_pressure_erg": [
+    "def_native_compensated_transport.py:38 __init__",
+    "evolve_native_retained_tail.py:80 __init__",
+    "def_native_updated_gr_return.py:54 __init__",
+    "def_native_refined_thermochemistry.py:73 __init__",
+    "def_native_stage_energy_history.py:19 __init__"
+   ],
+   "deep_cells": [
+    "def_native_compensated_transport.py:38 __init__",
+    "evolve_native_retained_tail.py:80 __init__",
+    "def_native_updated_gr_return.py:54 __init__",
+    "def_native_refined_thermochemistry.py:73 __init__",
+    "def_native_stage_energy_history.py:19 __init__"
+   ],
+   "cx": [
+    "def_native_compensated_transport.py:38 __init__",
+    "evolve_native_retained_tail.py:80 __init__",
+    "def_native_updated_gr_return.py:54 __init__",
+    "def_native_refined_thermochemistry.py:73 __init__",
+    "def_native_stage_energy_history.py:19 __init__"
+   ],
+   "M_cm": [
+    "def_native_compensated_transport.py:38 __init__",
+    "evolve_native_retained_tail.py:80 __init__",
+    "def_native_updated_gr_return.py:54 __init__",
+    "def_native_refined_thermochemistry.py:73 __init__",
+    "def_native_stage_energy_history.py:19 __init__"
+   ],
+   "K_cm": [
+    "def_native_compensated_transport.py:38 __init__",
+    "evolve_native_retained_tail.py:80 __init__",
+    "def_native_updated_gr_return.py:54 __init__",
+    "def_native_refined_thermochemistry.py:73 __init__",
+    "def_native_stage_energy_history.py:19 __init__"
+   ],
+   "inner_material_face_cm": [
+    "def_native_compensated_transport.py:38 __init__",
+    "evolve_native_retained_tail.py:80 __init__",
+    "def_native_updated_gr_return.py:54 __init__",
+    "def_native_refined_thermochemistry.py:73 __init__",
+    "def_native_stage_energy_history.py:19 __init__"
+   ],
+   "RJ": [
+    "def_native_compensated_transport.py:38 __init__",
+    "evolve_native_retained_tail.py:80 __init__",
+    "def_native_updated_gr_return.py:54 __init__",
+    "def_native_refined_thermochemistry.py:73 __init__",
+    "def_native_stage_energy_history.py:19 __init__"
+   ],
+   "metric_stress_erg": [
+    "def_native_compensated_transport.py:38 __init__",
+    "evolve_native_retained_tail.py:80 __init__",
+    "def_native_updated_gr_return.py:54 __init__",
+    "def_native_refined_thermochemistry.py:73 __init__",
+    "def_native_stage_energy_history.py:19 __init__"
+   ],
+   "inner_cumulative_energy_erg": [
+    "def_native_compensated_transport.py:38 __init__",
+    "evolve_native_retained_tail.py:80 __init__",
+    "def_native_updated_gr_return.py:54 __init__",
+    "def_native_refined_thermochemistry.py:73 __init__",
+    "def_native_stage_energy_history.py:19 __init__"
+   ],
+   "outer_cumulative_energy_erg": [
+    "def_native_compensated_transport.py:38 __init__",
+    "evolve_native_retained_tail.py:80 __init__",
+    "def_native_updated_gr_return.py:54 __init__",
+    "def_native_refined_thermochemistry.py:73 __init__",
+    "def_native_stage_energy_history.py:19 __init__"
+   ]
+  },
+  "native-incident-drive155-work/metric/corrected/metric-128-g8.npz": {
+   "delta_phi": [
+    "apply_native_incident_drive.py:21 __init__",
+    "def_retained_metric_return.py:40 __init__",
+    "def_native_collision_response.py:179 __init__",
+    "def_native_collision_response.py:41 __init__",
+    "def_native_compensated_transport.py:43 __init__"
+   ],
+   "delta_u": [
+    "apply_native_incident_drive.py:21 __init__",
+    "def_retained_metric_return.py:40 __init__",
+    "def_native_collision_response.py:179 __init__",
+    "def_native_collision_response.py:41 __init__",
+    "def_native_compensated_transport.py:43 __init__"
+   ],
+   "delta_u_t": [
+    "apply_native_incident_drive.py:21 __init__",
+    "def_retained_metric_return.py:40 __init__",
+    "def_native_collision_response.py:179 __init__",
+    "def_native_collision_response.py:41 __init__",
+    "def_native_compensated_transport.py:43 __init__"
+   ],
+   "delta_u_prime": [
+    "apply_native_incident_drive.py:21 __init__",
+    "def_retained_metric_return.py:40 __init__",
+    "def_native_collision_response.py:179 __init__",
+    "def_native_collision_response.py:41 __init__",
+    "def_native_compensated_transport.py:43 __init__"
+   ],
+   "delta_lambda": [
+    "apply_native_incident_drive.py:21 __init__",
+    "def_retained_metric_return.py:40 __init__",
+    "def_native_collision_response.py:179 __init__",
+    "def_native_collision_response.py:41 __init__",
+    "def_native_compensated_transport.py:43 __init__"
+   ],
+   "delta_lambda_rate": [
+    "apply_native_incident_drive.py:21 __init__",
+    "def_retained_metric_return.py:40 __init__",
+    "def_native_collision_response.py:179 __init__",
+    "def_native_collision_response.py:41 __init__",
+    "def_native_compensated_transport.py:43 __init__"
+   ],
+   "delta_nu": [
+    "apply_native_incident_drive.py:21 __init__",
+    "def_retained_metric_return.py:40 __init__",
+    "def_native_collision_response.py:179 __init__",
+    "def_native_collision_response.py:41 __init__",
+    "def_native_compensated_transport.py:43 __init__"
+   ],
+   "delta_nu_prime": [
+    "apply_native_incident_drive.py:21 __init__",
+    "def_retained_metric_return.py:40 __init__",
+    "def_native_collision_response.py:179 __init__",
+    "def_native_collision_response.py:41 __init__",
+    "def_native_compensated_transport.py:43 __init__"
+   ],
+   "delta_log_lapse": [
+    "apply_native_incident_drive.py:21 __init__",
+    "def_retained_metric_return.py:40 __init__",
+    "def_native_collision_response.py:179 __init__",
+    "def_native_collision_response.py:41 __init__",
+    "def_native_compensated_transport.py:43 __init__"
+   ],
+   "delta_log_radial_length": [
+    "apply_native_incident_drive.py:21 __init__",
+    "def_retained_metric_return.py:40 __init__",
+    "def_native_collision_response.py:179 __init__",
+    "def_native_collision_response.py:41 __init__",
+    "def_native_compensated_transport.py:43 __init__"
+   ],
+   "delta_log_areal_radius": [
+    "apply_native_incident_drive.py:21 __init__",
+    "def_retained_metric_return.py:40 __init__",
+    "def_native_collision_response.py:179 __init__",
+    "def_native_collision_response.py:41 __init__",
+    "def_native_compensated_transport.py:43 __init__"
+   ],
+   "delta_log_volume": [
+    "apply_native_incident_drive.py:21 __init__",
+    "def_retained_metric_return.py:40 __init__",
+    "def_native_collision_response.py:179 __init__",
+    "def_native_collision_response.py:41 __init__",
+    "def_native_compensated_transport.py:43 __init__"
+   ],
+   "delta_log_speed": [
+    "apply_native_incident_drive.py:21 __init__",
+    "def_retained_metric_return.py:40 __init__",
+    "def_native_collision_response.py:179 __init__",
+    "def_native_collision_response.py:41 __init__",
+    "def_native_compensated_transport.py:43 __init__"
+   ],
+   "delta_lambda_interval_rate": [
+    "apply_native_incident_drive.py:21 __init__",
+    "def_retained_metric_return.py:40 __init__",
+    "def_native_collision_response.py:179 __init__",
+    "def_native_collision_response.py:41 __init__",
+    "def_native_compensated_transport.py:43 __init__"
+   ],
+   "delta_nu_interval_rate": [
+    "apply_native_incident_drive.py:21 __init__",
+    "def_retained_metric_return.py:40 __init__",
+    "def_native_collision_response.py:179 __init__",
+    "def_native_collision_response.py:41 __init__",
+    "def_native_compensated_transport.py:43 __init__"
+   ],
+   "t": [
+    "apply_native_incident_drive.py:21 __init__",
+    "def_retained_metric_return.py:40 __init__",
+    "def_native_collision_response.py:179 __init__",
+    "def_native_collision_response.py:41 __init__",
+    "def_native_compensated_transport.py:43 __init__"
+   ],
+   "radius_E": [
+    "apply_native_incident_drive.py:21 __init__",
+    "def_retained_metric_return.py:40 __init__",
+    "def_native_collision_response.py:179 __init__",
+    "def_native_collision_response.py:41 __init__",
+    "def_native_compensated_transport.py:43 __init__"
+   ]
+  },
+  "retained-native-return150-work/photons/bank-128/units.npz": {
+   "energy": [
+    "solve_native_incident_reciprocal.py:45 __init__",
+    "solve_native_incident_lift.py:19 __init__",
+    "apply_native_incident_drive.py:21 __init__",
+    "def_retained_metric_return.py:40 __init__",
+    "def_native_collision_response.py:180 __init__"
+   ],
+   "neutral": [
+    "solve_native_incident_reciprocal.py:45 __init__",
+    "solve_native_incident_lift.py:19 __init__",
+    "apply_native_incident_drive.py:21 __init__",
+    "def_retained_metric_return.py:40 __init__",
+    "def_native_collision_response.py:180 __init__"
+   ]
+  },
+  "native-incident-drive155-work/metric/corrected/metric-64-g8.npz": {
+   "delta_phi": [
+    "solve_native_incident_self_gr.py:427 __init__",
+    "solve_native_incident_reciprocal.py:45 __init__",
+    "solve_native_incident_lift.py:19 __init__",
+    "apply_native_incident_drive.py:21 __init__",
+    "def_retained_metric_return.py:41 __init__"
+   ],
+   "delta_u": [
+    "solve_native_incident_self_gr.py:427 __init__",
+    "solve_native_incident_reciprocal.py:45 __init__",
+    "solve_native_incident_lift.py:19 __init__",
+    "apply_native_incident_drive.py:21 __init__",
+    "def_retained_metric_return.py:41 __init__"
+   ],
+   "delta_u_t": [
+    "solve_native_incident_self_gr.py:427 __init__",
+    "solve_native_incident_reciprocal.py:45 __init__",
+    "solve_native_incident_lift.py:19 __init__",
+    "apply_native_incident_drive.py:21 __init__",
+    "def_retained_metric_return.py:41 __init__"
+   ],
+   "delta_u_prime": [
+    "solve_native_incident_self_gr.py:427 __init__",
+    "solve_native_incident_reciprocal.py:45 __init__",
+    "solve_native_incident_lift.py:19 __init__",
+    "apply_native_incident_drive.py:21 __init__",
+    "def_retained_metric_return.py:41 __init__"
+   ],
+   "delta_lambda": [
+    "solve_native_incident_self_gr.py:427 __init__",
+    "solve_native_incident_reciprocal.py:45 __init__",
+    "solve_native_incident_lift.py:19 __init__",
+    "apply_native_incident_drive.py:21 __init__",
+    "def_retained_metric_return.py:41 __init__"
+   ],
+   "delta_lambda_rate": [
+    "solve_native_incident_self_gr.py:427 __init__",
+    "solve_native_incident_reciprocal.py:45 __init__",
+    "solve_native_incident_lift.py:19 __init__",
+    "apply_native_incident_drive.py:21 __init__",
+    "def_retained_metric_return.py:41 __init__"
+   ],
+   "delta_nu": [
+    "solve_native_incident_self_gr.py:427 __init__",
+    "solve_native_incident_reciprocal.py:45 __init__",
+    "solve_native_incident_lift.py:19 __init__",
+    "apply_native_incident_drive.py:21 __init__",
+    "def_retained_metric_return.py:41 __init__"
+   ],
+   "delta_nu_prime": [
+    "solve_native_incident_self_gr.py:427 __init__",
+    "solve_native_incident_reciprocal.py:45 __init__",
+    "solve_native_incident_lift.py:19 __init__",
+    "apply_native_incident_drive.py:21 __init__",
+    "def_retained_metric_return.py:41 __init__"
+   ],
+   "delta_log_lapse": [
+    "solve_native_incident_self_gr.py:427 __init__",
+    "solve_native_incident_reciprocal.py:45 __init__",
+    "solve_native_incident_lift.py:19 __init__",
+    "apply_native_incident_drive.py:21 __init__",
+    "def_retained_metric_return.py:41 __init__"
+   ],
+   "delta_log_radial_length": [
+    "solve_native_incident_self_gr.py:427 __init__",
+    "solve_native_incident_reciprocal.py:45 __init__",
+    "solve_native_incident_lift.py:19 __init__",
+    "apply_native_incident_drive.py:21 __init__",
+    "def_retained_metric_return.py:41 __init__"
+   ],
+   "delta_log_areal_radius": [
+    "solve_native_incident_self_gr.py:427 __init__",
+    "solve_native_incident_reciprocal.py:45 __init__",
+    "solve_native_incident_lift.py:19 __init__",
+    "apply_native_incident_drive.py:21 __init__",
+    "def_retained_metric_return.py:41 __init__"
+   ],
+   "delta_log_volume": [
+    "solve_native_incident_self_gr.py:427 __init__",
+    "solve_native_incident_reciprocal.py:45 __init__",
+    "solve_native_incident_lift.py:19 __init__",
+    "apply_native_incident_drive.py:21 __init__",
+    "def_retained_metric_return.py:41 __init__"
+   ],
+   "delta_log_speed": [
+    "solve_native_incident_self_gr.py:427 __init__",
+    "solve_native_incident_reciprocal.py:45 __init__",
+    "solve_native_incident_lift.py:19 __init__",
+    "apply_native_incident_drive.py:21 __init__",
+    "def_retained_metric_return.py:41 __init__"
+   ],
+   "delta_lambda_interval_rate": [
+    "solve_native_incident_self_gr.py:427 __init__",
+    "solve_native_incident_reciprocal.py:45 __init__",
+    "solve_native_incident_lift.py:19 __init__",
+    "apply_native_incident_drive.py:21 __init__",
+    "def_retained_metric_return.py:41 __init__"
+   ],
+   "delta_nu_interval_rate": [
+    "solve_native_incident_self_gr.py:427 __init__",
+    "solve_native_incident_reciprocal.py:45 __init__",
+    "solve_native_incident_lift.py:19 __init__",
+    "apply_native_incident_drive.py:21 __init__",
+    "def_retained_metric_return.py:41 __init__"
+   ],
+   "t": [
+    "solve_native_incident_self_gr.py:427 __init__",
+    "solve_native_incident_reciprocal.py:45 __init__",
+    "solve_native_incident_lift.py:19 __init__",
+    "apply_native_incident_drive.py:21 __init__",
+    "def_retained_metric_return.py:41 __init__"
+   ],
+   "radius_E": [
+    "solve_native_incident_self_gr.py:427 __init__",
+    "solve_native_incident_reciprocal.py:45 __init__",
+    "solve_native_incident_lift.py:19 __init__",
+    "apply_native_incident_drive.py:21 __init__",
+    "def_retained_metric_return.py:41 __init__"
+   ]
+  },
+  "outputs/direct-eos-gr33/native-retained-completion/evolution/source-128.npz": {
+   "t": [
+    "solve_native_incident_self_gr.py:427 __init__",
+    "solve_native_incident_reciprocal.py:45 __init__",
+    "solve_native_incident_lift.py:19 __init__",
+    "apply_native_incident_drive.py:21 __init__",
+    "def_native_incident_drive.py:83 __init__"
+   ]
+  },
+  "native-incident-drive155-work/fields/born-g8.npz": {
+   "U": [
+    "solve_native_incident_reciprocal.py:45 __init__",
+    "solve_native_incident_lift.py:19 __init__",
+    "apply_native_incident_drive.py:21 __init__",
+    "def_native_incident_drive.py:98 __init__",
+    "def_native_incident_drive.py:98 <dictcomp>"
+   ],
+   "Ut": [
+    "solve_native_incident_reciprocal.py:45 __init__",
+    "solve_native_incident_lift.py:19 __init__",
+    "apply_native_incident_drive.py:21 __init__",
+    "def_native_incident_drive.py:98 __init__",
+    "def_native_incident_drive.py:98 <dictcomp>"
+   ],
+   "Ux": [
+    "solve_native_incident_reciprocal.py:45 __init__",
+    "solve_native_incident_lift.py:19 __init__",
+    "apply_native_incident_drive.py:21 __init__",
+    "def_native_incident_drive.py:98 __init__",
+    "def_native_incident_drive.py:98 <dictcomp>"
+   ],
+   "x": [
+    "solve_native_incident_self_gr.py:427 __init__",
+    "solve_native_incident_reciprocal.py:45 __init__",
+    "solve_native_incident_lift.py:19 __init__",
+    "apply_native_incident_drive.py:21 __init__",
+    "def_native_incident_drive.py:99 __init__"
+   ],
+   "t": [
+    "solve_native_incident_self_gr.py:427 __init__",
+    "solve_native_incident_reciprocal.py:45 __init__",
+    "solve_native_incident_lift.py:19 __init__",
+    "apply_native_incident_drive.py:21 __init__",
+    "def_native_incident_drive.py:99 __init__"
+   ]
+  },
+  "native-incident-drive155-work/photons-lift/steps-128-reference-128.npz": {
+   "t": [
+    "def_retained_metric_return.py:62 __init__",
+    "def_native_updated_material_return.py:24 __init__",
+    "def_native_material_branch_response.py:18 __init__",
+    "def_native_material_response.py:52 __init__",
+    "def_native_material_response.py:52 <listcomp>"
+   ],
+   "moments": [
+    "apply_native_incident_drive.py:36 __init__",
+    "def_retained_metric_return.py:62 __init__",
+    "def_native_updated_material_return.py:24 __init__",
+    "def_native_material_branch_response.py:18 __init__",
+    "def_native_material_response.py:52 __init__"
+   ]
+  },
+  "native-incident-drive155-work/photons-lift/steps-64-reference-128.npz": {
+   "t": [
+    "solve_native_incident_material.py:27 __init__",
+    "apply_native_incident_drive.py:36 __init__",
+    "def_retained_metric_return.py:62 __init__",
+    "def_native_updated_material_return.py:25 __init__",
+    "def_native_updated_material_return.py:25 <listcomp>"
+   ],
+   "collision_transfer": [
+    "solve_native_incident_reciprocal.py:45 __init__",
+    "solve_native_incident_material.py:27 __init__",
+    "apply_native_incident_drive.py:36 __init__",
+    "def_retained_metric_return.py:62 __init__",
+    "def_native_updated_material_return.py:27 __init__"
+   ],
+   "moments": [
+    "solve_native_incident_reciprocal.py:45 __init__",
+    "solve_native_incident_material.py:27 __init__",
+    "apply_native_incident_drive.py:36 __init__",
+    "def_retained_metric_return.py:62 __init__",
+    "def_native_updated_material_return.py:28 __init__"
+   ]
+  },
+  "scratch-audit267/sweep-0/photons/steps-64-reference-128.npz": {
+   "t": [
+    "apply_native_conservative_redshift.py:125 __init__",
+    "solve_native_incident_self_gr.py:427 __init__",
+    "solve_native_incident_reciprocal.py:46 __init__",
+    "solve_native_incident_reciprocal.py:32 transfers",
+    "solve_native_incident_reciprocal.py:32 <listcomp>"
+   ],
+   "collision_transfer": [
+    "couple_native_fluid_radau.py:102 __init__",
+    "apply_native_conservative_redshift.py:125 __init__",
+    "solve_native_incident_self_gr.py:427 __init__",
+    "solve_native_incident_reciprocal.py:46 __init__",
+    "solve_native_incident_reciprocal.py:34 transfers"
+   ],
+   "moments": [
+    "couple_native_fluid_radau.py:102 __init__",
+    "apply_native_conservative_redshift.py:125 __init__",
+    "solve_native_incident_self_gr.py:427 __init__",
+    "solve_native_incident_reciprocal.py:46 __init__",
+    "solve_native_incident_reciprocal.py:35 transfers"
+   ]
+  },
+  "scratch-audit267/sweep-0/material/steps-64-reference-128.npz": {
+   "t": [
+    "couple_native_fluid_radau.py:102 __init__",
+    "apply_native_conservative_redshift.py:125 __init__",
+    "solve_native_incident_self_gr.py:427 __init__",
+    "solve_native_incident_reciprocal.py:48 __init__",
+    "solve_native_incident_reciprocal.py:48 <listcomp>"
+   ],
+   "history_scaled": [
+    "couple_full_incident_fluid.py:78 __init__",
+    "couple_native_fluid_radau.py:102 __init__",
+    "apply_native_conservative_redshift.py:125 __init__",
+    "solve_native_incident_self_gr.py:427 __init__",
+    "solve_native_incident_reciprocal.py:50 __init__"
+   ]
+  },
+  "native-incident-self-gr157-work/metric/metric-128-g8.npz": {
+   "t": [
+    "couple_native_fluid_radau.py:102 __init__",
+    "apply_native_conservative_redshift.py:125 __init__",
+    "solve_native_incident_self_gr.py:427 __init__",
+    "apply_native_conservative_redshift.py:33 __init__",
+    "apply_native_conservative_redshift.py:33 <dictcomp>"
+   ],
+   "radius_E": [
+    "couple_native_fluid_radau.py:102 __init__",
+    "apply_native_conservative_redshift.py:125 __init__",
+    "solve_native_incident_self_gr.py:427 __init__",
+    "apply_native_conservative_redshift.py:33 __init__",
+    "apply_native_conservative_redshift.py:33 <dictcomp>"
+   ],
+   "delta_nu": [
+    "couple_native_fluid_radau.py:102 __init__",
+    "apply_native_conservative_redshift.py:125 __init__",
+    "solve_native_incident_self_gr.py:427 __init__",
+    "apply_native_conservative_redshift.py:33 __init__",
+    "apply_native_conservative_redshift.py:33 <dictcomp>"
+   ],
+   "delta_nu_faces": [
+    "couple_native_fluid_radau.py:102 __init__",
+    "apply_native_conservative_redshift.py:125 __init__",
+    "solve_native_incident_self_gr.py:427 __init__",
+    "apply_native_conservative_redshift.py:33 __init__",
+    "apply_native_conservative_redshift.py:33 <dictcomp>"
+   ],
+   "delta_lambda": [
+    "couple_native_fluid_radau.py:102 __init__",
+    "apply_native_conservative_redshift.py:125 __init__",
+    "solve_native_incident_self_gr.py:427 __init__",
+    "apply_native_conservative_redshift.py:33 __init__",
+    "apply_native_conservative_redshift.py:33 <dictcomp>"
+   ],
+   "delta_phi": [
+    "couple_native_fluid_radau.py:102 __init__",
+    "apply_native_conservative_redshift.py:125 __init__",
+    "solve_native_incident_self_gr.py:427 __init__",
+    "apply_native_conservative_redshift.py:33 __init__",
+    "apply_native_conservative_redshift.py:33 <dictcomp>"
+   ],
+   "delta_u": [
+    "couple_native_fluid_radau.py:102 __init__",
+    "apply_native_conservative_redshift.py:125 __init__",
+    "solve_native_incident_self_gr.py:427 __init__",
+    "apply_native_conservative_redshift.py:33 __init__",
+    "apply_native_conservative_redshift.py:33 <dictcomp>"
+   ],
+   "delta_u_t": [
+    "couple_native_fluid_radau.py:102 __init__",
+    "apply_native_conservative_redshift.py:125 __init__",
+    "solve_native_incident_self_gr.py:427 __init__",
+    "apply_native_conservative_redshift.py:33 __init__",
+    "apply_native_conservative_redshift.py:33 <dictcomp>"
+   ],
+   "delta_u_prime": [
+    "couple_native_fluid_radau.py:102 __init__",
+    "apply_native_conservative_redshift.py:125 __init__",
+    "solve_native_incident_self_gr.py:427 __init__",
+    "apply_native_conservative_redshift.py:33 __init__",
+    "apply_native_conservative_redshift.py:33 <dictcomp>"
+   ],
+   "delta_nu_prime": [
+    "couple_native_fluid_radau.py:102 __init__",
+    "apply_native_conservative_redshift.py:125 __init__",
+    "solve_native_incident_self_gr.py:427 __init__",
+    "apply_native_conservative_redshift.py:33 __init__",
+    "apply_native_conservative_redshift.py:33 <dictcomp>"
+   ],
+   "delta_lambda_interval_rate": [
+    "couple_native_fluid_radau.py:102 __init__",
+    "apply_native_conservative_redshift.py:125 __init__",
+    "solve_native_incident_self_gr.py:427 __init__",
+    "apply_native_conservative_redshift.py:33 __init__",
+    "apply_native_conservative_redshift.py:33 <dictcomp>"
+   ],
+   "delta_nu_interval_rate": [
+    "couple_native_fluid_radau.py:102 __init__",
+    "apply_native_conservative_redshift.py:125 __init__",
+    "solve_native_incident_self_gr.py:427 __init__",
+    "apply_native_conservative_redshift.py:33 __init__",
+    "apply_native_conservative_redshift.py:33 <dictcomp>"
+   ],
+   "delta_log_lapse": [
+    "couple_native_fluid_radau.py:102 __init__",
+    "apply_native_conservative_redshift.py:125 __init__",
+    "solve_native_incident_self_gr.py:427 __init__",
+    "apply_native_conservative_redshift.py:33 __init__",
+    "apply_native_conservative_redshift.py:33 <dictcomp>"
+   ],
+   "delta_log_radial_length": [
+    "couple_native_fluid_radau.py:102 __init__",
+    "apply_native_conservative_redshift.py:125 __init__",
+    "solve_native_incident_self_gr.py:427 __init__",
+    "apply_native_conservative_redshift.py:33 __init__",
+    "apply_native_conservative_redshift.py:33 <dictcomp>"
+   ],
+   "delta_log_area_radius": [
+    "couple_native_fluid_radau.py:102 __init__",
+    "apply_native_conservative_redshift.py:125 __init__",
+    "solve_native_incident_self_gr.py:427 __init__",
+    "apply_native_conservative_redshift.py:33 __init__",
+    "apply_native_conservative_redshift.py:33 <dictcomp>"
+   ],
+   "delta_log_speed": [
+    "couple_native_fluid_radau.py:102 __init__",
+    "apply_native_conservative_redshift.py:125 __init__",
+    "solve_native_incident_self_gr.py:427 __init__",
+    "apply_native_conservative_redshift.py:33 __init__",
+    "apply_native_conservative_redshift.py:33 <dictcomp>"
+   ],
+   "outer_photon_lapse": [
+    "couple_native_fluid_radau.py:102 __init__",
+    "apply_native_conservative_redshift.py:125 __init__",
+    "solve_native_incident_self_gr.py:427 __init__",
+    "apply_native_conservative_redshift.py:33 __init__",
+    "apply_native_conservative_redshift.py:33 <dictcomp>"
+   ],
+   "outer_scalar_lapse": [
+    "couple_native_fluid_radau.py:102 __init__",
+    "apply_native_conservative_redshift.py:125 __init__",
+    "solve_native_incident_self_gr.py:427 __init__",
+    "apply_native_conservative_redshift.py:33 __init__",
+    "apply_native_conservative_redshift.py:33 <dictcomp>"
+   ],
+   "outer_ADM_residual_lapse": [
+    "couple_native_fluid_radau.py:102 __init__",
+    "apply_native_conservative_redshift.py:125 __init__",
+    "solve_native_incident_self_gr.py:427 __init__",
+    "apply_native_conservative_redshift.py:33 __init__",
+    "apply_native_conservative_redshift.py:33 <dictcomp>"
+   ],
+   "asymptotic_mass_residual_cm": [
+    "couple_native_fluid_radau.py:102 __init__",
+    "apply_native_conservative_redshift.py:125 __init__",
+    "solve_native_incident_self_gr.py:427 __init__",
+    "apply_native_conservative_redshift.py:33 __init__",
+    "apply_native_conservative_redshift.py:33 <dictcomp>"
+   ],
+   "emitted_energy_erg": [
+    "couple_native_fluid_radau.py:102 __init__",
+    "apply_native_conservative_redshift.py:125 __init__",
+    "solve_native_incident_self_gr.py:427 __init__",
+    "apply_native_conservative_redshift.py:33 __init__",
+    "apply_native_conservative_redshift.py:33 <dictcomp>"
+   ]
+  },
+  "native-stage-collisions178-work/sweep-1/photons/pilot-64.npz": {
+   "t": [
+    "continue_true_momentum.py:88 construct",
+    "continue_thermal_native.py:41 construct",
+    "continue_native_flux_precision.py:101 construct",
+    "couple_full_incident_fluid.py:78 __init__",
+    "couple_native_fluid_radau.py:112 __init__"
+   ],
+   "moments": [
+    "continue_true_momentum.py:88 construct",
+    "continue_thermal_native.py:41 construct",
+    "continue_native_flux_precision.py:101 construct",
+    "couple_full_incident_fluid.py:78 __init__",
+    "couple_native_fluid_radau.py:112 __init__"
+   ],
+   "delta_packet_scaled_occupation": [
+    "continue_true_momentum.py:88 construct",
+    "continue_thermal_native.py:41 construct",
+    "continue_native_flux_precision.py:101 construct",
+    "couple_full_incident_fluid.py:78 __init__",
+    "couple_native_fluid_radau.py:112 __init__"
+   ],
+   "delta_material": [
+    "continue_true_momentum.py:88 construct",
+    "continue_thermal_native.py:41 construct",
+    "continue_native_flux_precision.py:101 construct",
+    "couple_full_incident_fluid.py:78 __init__",
+    "couple_native_fluid_radau.py:112 __init__"
+   ],
+   "material_energy_units": [
+    "continue_true_momentum.py:88 construct",
+    "continue_thermal_native.py:41 construct",
+    "continue_native_flux_precision.py:101 construct",
+    "couple_full_incident_fluid.py:78 __init__",
+    "couple_native_fluid_radau.py:112 __init__"
+   ],
+   "material_neutral_units": [
+    "continue_true_momentum.py:88 construct",
+    "continue_thermal_native.py:41 construct",
+    "continue_native_flux_precision.py:101 construct",
+    "couple_full_incident_fluid.py:78 __init__",
+    "couple_native_fluid_radau.py:112 __init__"
+   ],
+   "ledger": [
+    "continue_true_momentum.py:88 construct",
+    "continue_thermal_native.py:41 construct",
+    "continue_native_flux_precision.py:101 construct",
+    "couple_full_incident_fluid.py:78 __init__",
+    "couple_native_fluid_radau.py:112 __init__"
+   ],
+   "escape": [
+    "continue_true_momentum.py:88 construct",
+    "continue_thermal_native.py:41 construct",
+    "continue_native_flux_precision.py:101 construct",
+    "couple_full_incident_fluid.py:78 __init__",
+    "couple_native_fluid_radau.py:112 __init__"
+   ],
+   "radius_E": [
+    "continue_true_momentum.py:88 construct",
+    "continue_thermal_native.py:41 construct",
+    "continue_native_flux_precision.py:101 construct",
+    "couple_full_incident_fluid.py:78 __init__",
+    "couple_native_fluid_radau.py:112 __init__"
+   ],
+   "radial_ports": [
+    "continue_true_momentum.py:88 construct",
+    "continue_thermal_native.py:41 construct",
+    "continue_native_flux_precision.py:101 construct",
+    "couple_full_incident_fluid.py:78 __init__",
+    "couple_native_fluid_radau.py:112 __init__"
+   ],
+   "photon_history_scaled_occupation": [
+    "continue_true_momentum.py:88 construct",
+    "continue_thermal_native.py:41 construct",
+    "continue_native_flux_precision.py:101 construct",
+    "couple_full_incident_fluid.py:78 __init__",
+    "couple_native_fluid_radau.py:112 __init__"
+   ],
+   "material_history": [
+    "continue_true_momentum.py:88 construct",
+    "continue_thermal_native.py:41 construct",
+    "continue_native_flux_precision.py:101 construct",
+    "couple_full_incident_fluid.py:78 __init__",
+    "couple_native_fluid_radau.py:112 __init__"
+   ],
+   "collision_transfer": [
+    "continue_true_momentum.py:88 construct",
+    "continue_thermal_native.py:41 construct",
+    "continue_native_flux_precision.py:101 construct",
+    "couple_full_incident_fluid.py:78 __init__",
+    "couple_native_fluid_radau.py:112 __init__"
+   ],
+   "energy_offset_reference": [
+    "continue_true_momentum.py:88 construct",
+    "continue_thermal_native.py:41 construct",
+    "continue_native_flux_precision.py:101 construct",
+    "couple_full_incident_fluid.py:78 __init__",
+    "couple_native_fluid_radau.py:112 __init__"
+   ],
+   "energy_offset_t": [
+    "continue_true_momentum.py:88 construct",
+    "continue_thermal_native.py:41 construct",
+    "continue_native_flux_precision.py:101 construct",
+    "couple_full_incident_fluid.py:78 __init__",
+    "couple_native_fluid_radau.py:112 __init__"
+   ],
+   "accepted_angular_times": [
+    "continue_true_momentum.py:88 construct",
+    "continue_thermal_native.py:41 construct",
+    "continue_native_flux_precision.py:101 construct",
+    "couple_full_incident_fluid.py:78 __init__",
+    "couple_native_fluid_radau.py:112 __init__"
+   ],
+   "accepted_angular_luminosity": [
+    "continue_true_momentum.py:88 construct",
+    "continue_thermal_native.py:41 construct",
+    "continue_native_flux_precision.py:101 construct",
+    "couple_full_incident_fluid.py:78 __init__",
+    "couple_native_fluid_radau.py:112 __init__"
+   ],
+   "accepted_angular_quadrature_weights": [
+    "continue_true_momentum.py:88 construct",
+    "continue_thermal_native.py:41 construct",
+    "continue_native_flux_precision.py:101 construct",
+    "couple_full_incident_fluid.py:78 __init__",
+    "couple_native_fluid_radau.py:112 __init__"
+   ],
+   "actual_step_edges": [
+    "continue_true_momentum.py:88 construct",
+    "continue_thermal_native.py:41 construct",
+    "continue_native_flux_precision.py:101 construct",
+    "couple_full_incident_fluid.py:78 __init__",
+    "couple_native_fluid_radau.py:112 __init__"
+   ],
+   "split_macro_steps": [
+    "continue_true_momentum.py:88 construct",
+    "continue_thermal_native.py:41 construct",
+    "continue_native_flux_precision.py:101 construct",
+    "couple_full_incident_fluid.py:78 __init__",
+    "couple_native_fluid_radau.py:112 __init__"
+   ],
+   "front_cells": [
+    "continue_true_momentum.py:88 construct",
+    "continue_thermal_native.py:41 construct",
+    "continue_native_flux_precision.py:101 construct",
+    "couple_full_incident_fluid.py:78 __init__",
+    "couple_native_fluid_radau.py:112 __init__"
+   ],
+   "front_times": [
+    "continue_true_momentum.py:88 construct",
+    "continue_thermal_native.py:41 construct",
+    "continue_native_flux_precision.py:101 construct",
+    "couple_full_incident_fluid.py:78 __init__",
+    "couple_native_fluid_radau.py:112 __init__"
+   ],
+   "time_integrator": [
+    "continue_true_momentum.py:88 construct",
+    "continue_thermal_native.py:41 construct",
+    "continue_native_flux_precision.py:101 construct",
+    "couple_full_incident_fluid.py:78 __init__",
+    "couple_native_fluid_radau.py:112 __init__"
+   ],
+   "RK_A": [
+    "continue_true_momentum.py:88 construct",
+    "continue_thermal_native.py:41 construct",
+    "continue_native_flux_precision.py:101 construct",
+    "couple_full_incident_fluid.py:78 __init__",
+    "couple_native_fluid_radau.py:112 __init__"
+   ],
+   "RK_b": [
+    "continue_true_momentum.py:88 construct",
+    "continue_thermal_native.py:41 construct",
+    "continue_native_flux_precision.py:101 construct",
+    "couple_full_incident_fluid.py:78 __init__",
+    "couple_native_fluid_radau.py:112 __init__"
+   ],
+   "RK_c": [
+    "continue_true_momentum.py:88 construct",
+    "continue_thermal_native.py:41 construct",
+    "continue_native_flux_precision.py:101 construct",
+    "couple_full_incident_fluid.py:78 __init__",
+    "couple_native_fluid_radau.py:112 __init__"
+   ],
+   "native_neutral_stage_times": [
+    "continue_true_momentum.py:88 construct",
+    "continue_thermal_native.py:41 construct",
+    "continue_native_flux_precision.py:101 construct",
+    "couple_full_incident_fluid.py:78 __init__",
+    "couple_native_fluid_radau.py:112 __init__"
+   ],
+   "native_neutral_stage_weights": [
+    "continue_true_momentum.py:88 construct",
+    "continue_thermal_native.py:41 construct",
+    "continue_native_flux_precision.py:101 construct",
+    "couple_full_incident_fluid.py:78 __init__",
+    "couple_native_fluid_radau.py:112 __init__"
+   ],
+   "native_neutral_stage_rates": [
+    "continue_true_momentum.py:88 construct",
+    "continue_thermal_native.py:41 construct",
+    "continue_native_flux_precision.py:101 construct",
+    "couple_full_incident_fluid.py:78 __init__",
+    "couple_native_fluid_radau.py:112 __init__"
+   ],
+   "collision_stage_rates_scaled": [
+    "continue_true_momentum.py:88 construct",
+    "continue_thermal_native.py:41 construct",
+    "continue_native_flux_precision.py:101 construct",
+    "couple_full_incident_fluid.py:78 __init__",
+    "couple_native_fluid_radau.py:112 __init__"
+   ],
+   "gas_stage_scaled": [
+    "continue_true_momentum.py:88 construct",
+    "continue_thermal_native.py:41 construct",
+    "continue_native_flux_precision.py:101 construct",
+    "couple_full_incident_fluid.py:78 __init__",
+    "couple_native_fluid_radau.py:112 __init__"
+   ]
+  },
+  "native-stage-collisions178-work/material-64.npz": {
+   "t": [
+    "continue_true_momentum.py:88 construct",
+    "continue_thermal_native.py:41 construct",
+    "continue_native_flux_precision.py:101 construct",
+    "couple_full_incident_fluid.py:78 __init__",
+    "couple_native_fluid_radau.py:113 __init__"
+   ],
+   "lifted_history_scaled": [
+    "continue_true_momentum.py:88 construct",
+    "continue_thermal_native.py:41 construct",
+    "continue_native_flux_precision.py:101 construct",
+    "couple_full_incident_fluid.py:78 __init__",
+    "couple_native_fluid_radau.py:113 __init__"
+   ],
+   "delta_scaled": [
+    "continue_true_momentum.py:88 construct",
+    "continue_thermal_native.py:41 construct",
+    "continue_native_flux_precision.py:101 construct",
+    "couple_full_incident_fluid.py:78 __init__",
+    "couple_native_fluid_radau.py:113 __init__"
+   ],
+   "ledger_scaled": [
+    "continue_true_momentum.py:88 construct",
+    "continue_thermal_native.py:41 construct",
+    "continue_native_flux_precision.py:101 construct",
+    "couple_full_incident_fluid.py:78 __init__",
+    "couple_native_fluid_radau.py:113 __init__"
+   ],
+   "discard_scaled": [
+    "continue_true_momentum.py:88 construct",
+    "continue_thermal_native.py:41 construct",
+    "continue_native_flux_precision.py:101 construct",
+    "couple_full_incident_fluid.py:78 __init__",
+    "couple_native_fluid_radau.py:113 __init__"
+   ],
+   "norm_scaled": [
+    "continue_true_momentum.py:88 construct",
+    "continue_thermal_native.py:41 construct",
+    "continue_native_flux_precision.py:101 construct",
+    "couple_full_incident_fluid.py:78 __init__",
+    "couple_native_fluid_radau.py:113 __init__"
+   ]
+  },
+  "retained-native-return150-work/photons/bank-128/point-0.npz": {
+   "emit": [
+    ".phase251-reader-launch.py:14 <module>",
+    ".phase267-trace.py:51 <module>",
+    "balance_full_native_krylov.py:20 run",
+    "balance_full_native_krylov.py:10 record",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "loss": [
+    ".phase251-reader-launch.py:14 <module>",
+    ".phase267-trace.py:51 <module>",
+    "balance_full_native_krylov.py:20 run",
+    "balance_full_native_krylov.py:10 record",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "sc": [
+    ".phase251-reader-launch.py:14 <module>",
+    ".phase267-trace.py:51 <module>",
+    "balance_full_native_krylov.py:20 run",
+    "balance_full_native_krylov.py:10 record",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "energy": [
+    ".phase251-reader-launch.py:14 <module>",
+    ".phase267-trace.py:51 <module>",
+    "balance_full_native_krylov.py:20 run",
+    "balance_full_native_krylov.py:10 record",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "neutral": [
+    ".phase251-reader-launch.py:14 <module>",
+    ".phase267-trace.py:51 <module>",
+    "balance_full_native_krylov.py:20 run",
+    "balance_full_native_krylov.py:10 record",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "rho": [
+    ".phase251-reader-launch.py:14 <module>",
+    ".phase267-trace.py:51 <module>",
+    "balance_full_native_krylov.py:20 run",
+    "balance_full_native_krylov.py:10 record",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "beta": [
+    ".phase251-reader-launch.py:14 <module>",
+    ".phase267-trace.py:51 <module>",
+    "balance_full_native_krylov.py:20 run",
+    "balance_full_native_krylov.py:10 record",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "kap": [
+    ".phase251-reader-launch.py:14 <module>",
+    ".phase267-trace.py:51 <module>",
+    "balance_full_native_krylov.py:20 run",
+    "balance_full_native_krylov.py:10 record",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "u": [
+    ".phase251-reader-launch.py:14 <module>",
+    ".phase267-trace.py:51 <module>",
+    "balance_full_native_krylov.py:20 run",
+    "balance_full_native_krylov.py:10 record",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "p": [
+    ".phase251-reader-launch.py:14 <module>",
+    ".phase267-trace.py:51 <module>",
+    "balance_full_native_krylov.py:20 run",
+    "balance_full_native_krylov.py:10 record",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "adiabatic_logT": [
+    ".phase251-reader-launch.py:14 <module>",
+    ".phase267-trace.py:51 <module>",
+    "balance_full_native_krylov.py:20 run",
+    "balance_full_native_krylov.py:10 record",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dr_emit": [
+    ".phase251-reader-launch.py:14 <module>",
+    ".phase267-trace.py:51 <module>",
+    "balance_full_native_krylov.py:20 run",
+    "balance_full_native_krylov.py:10 record",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dr_loss": [
+    ".phase251-reader-launch.py:14 <module>",
+    ".phase267-trace.py:51 <module>",
+    "balance_full_native_krylov.py:20 run",
+    "balance_full_native_krylov.py:10 record",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dr_sc": [
+    ".phase251-reader-launch.py:14 <module>",
+    ".phase267-trace.py:51 <module>",
+    "balance_full_native_krylov.py:20 run",
+    "balance_full_native_krylov.py:10 record",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dr_energy": [
+    ".phase251-reader-launch.py:14 <module>",
+    ".phase267-trace.py:51 <module>",
+    "balance_full_native_krylov.py:20 run",
+    "balance_full_native_krylov.py:10 record",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dr_neutral": [
+    ".phase251-reader-launch.py:14 <module>",
+    ".phase267-trace.py:51 <module>",
+    "balance_full_native_krylov.py:20 run",
+    "balance_full_native_krylov.py:10 record",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dr_u": [
+    ".phase251-reader-launch.py:14 <module>",
+    ".phase267-trace.py:51 <module>",
+    "balance_full_native_krylov.py:20 run",
+    "balance_full_native_krylov.py:10 record",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dr_p": [
+    ".phase251-reader-launch.py:14 <module>",
+    ".phase267-trace.py:51 <module>",
+    "balance_full_native_krylov.py:20 run",
+    "balance_full_native_krylov.py:10 record",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dt_emit": [
+    ".phase251-reader-launch.py:14 <module>",
+    ".phase267-trace.py:51 <module>",
+    "balance_full_native_krylov.py:20 run",
+    "balance_full_native_krylov.py:10 record",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dt_loss": [
+    ".phase251-reader-launch.py:14 <module>",
+    ".phase267-trace.py:51 <module>",
+    "balance_full_native_krylov.py:20 run",
+    "balance_full_native_krylov.py:10 record",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dt_sc": [
+    ".phase251-reader-launch.py:14 <module>",
+    ".phase267-trace.py:51 <module>",
+    "balance_full_native_krylov.py:20 run",
+    "balance_full_native_krylov.py:10 record",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dt_energy": [
+    ".phase251-reader-launch.py:14 <module>",
+    ".phase267-trace.py:51 <module>",
+    "balance_full_native_krylov.py:20 run",
+    "balance_full_native_krylov.py:10 record",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dt_neutral": [
+    ".phase251-reader-launch.py:14 <module>",
+    ".phase267-trace.py:51 <module>",
+    "balance_full_native_krylov.py:20 run",
+    "balance_full_native_krylov.py:10 record",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dt_u": [
+    ".phase251-reader-launch.py:14 <module>",
+    ".phase267-trace.py:51 <module>",
+    "balance_full_native_krylov.py:20 run",
+    "balance_full_native_krylov.py:10 record",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dt_p": [
+    ".phase251-reader-launch.py:14 <module>",
+    ".phase267-trace.py:51 <module>",
+    "balance_full_native_krylov.py:20 run",
+    "balance_full_native_krylov.py:10 record",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dy_emit": [
+    ".phase251-reader-launch.py:14 <module>",
+    ".phase267-trace.py:51 <module>",
+    "balance_full_native_krylov.py:20 run",
+    "balance_full_native_krylov.py:10 record",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dy_loss": [
+    ".phase251-reader-launch.py:14 <module>",
+    ".phase267-trace.py:51 <module>",
+    "balance_full_native_krylov.py:20 run",
+    "balance_full_native_krylov.py:10 record",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dy_sc": [
+    ".phase251-reader-launch.py:14 <module>",
+    ".phase267-trace.py:51 <module>",
+    "balance_full_native_krylov.py:20 run",
+    "balance_full_native_krylov.py:10 record",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dy_energy": [
+    ".phase251-reader-launch.py:14 <module>",
+    ".phase267-trace.py:51 <module>",
+    "balance_full_native_krylov.py:20 run",
+    "balance_full_native_krylov.py:10 record",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dy_neutral": [
+    ".phase251-reader-launch.py:14 <module>",
+    ".phase267-trace.py:51 <module>",
+    "balance_full_native_krylov.py:20 run",
+    "balance_full_native_krylov.py:10 record",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dy_u": [
+    ".phase251-reader-launch.py:14 <module>",
+    ".phase267-trace.py:51 <module>",
+    "balance_full_native_krylov.py:20 run",
+    "balance_full_native_krylov.py:10 record",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dy_p": [
+    ".phase251-reader-launch.py:14 <module>",
+    ".phase267-trace.py:51 <module>",
+    "balance_full_native_krylov.py:20 run",
+    "balance_full_native_krylov.py:10 record",
+    "def_native_matter_photon_feedback.py:51 point"
+   ]
+  },
+  "retained-native-return150-work/photons/bank-128/point-1.npz": {
+   "emit": [
+    "couple_full_incident_fluid.py:88 local",
+    "couple_native_fluid_radau.py:124 local",
+    "solve_native_incident_reciprocal.py:62 local",
+    "def_native_matter_photon_feedback.py:110 local",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "loss": [
+    "couple_full_incident_fluid.py:88 local",
+    "couple_native_fluid_radau.py:124 local",
+    "solve_native_incident_reciprocal.py:62 local",
+    "def_native_matter_photon_feedback.py:110 local",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "sc": [
+    "couple_full_incident_fluid.py:88 local",
+    "couple_native_fluid_radau.py:124 local",
+    "solve_native_incident_reciprocal.py:62 local",
+    "def_native_matter_photon_feedback.py:110 local",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "energy": [
+    "couple_full_incident_fluid.py:88 local",
+    "couple_native_fluid_radau.py:124 local",
+    "solve_native_incident_reciprocal.py:62 local",
+    "def_native_matter_photon_feedback.py:110 local",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "neutral": [
+    "couple_full_incident_fluid.py:88 local",
+    "couple_native_fluid_radau.py:124 local",
+    "solve_native_incident_reciprocal.py:62 local",
+    "def_native_matter_photon_feedback.py:110 local",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "rho": [
+    "couple_full_incident_fluid.py:88 local",
+    "couple_native_fluid_radau.py:124 local",
+    "solve_native_incident_reciprocal.py:62 local",
+    "def_native_matter_photon_feedback.py:110 local",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "beta": [
+    "couple_full_incident_fluid.py:88 local",
+    "couple_native_fluid_radau.py:124 local",
+    "solve_native_incident_reciprocal.py:62 local",
+    "def_native_matter_photon_feedback.py:110 local",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "kap": [
+    "couple_full_incident_fluid.py:88 local",
+    "couple_native_fluid_radau.py:124 local",
+    "solve_native_incident_reciprocal.py:62 local",
+    "def_native_matter_photon_feedback.py:110 local",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "u": [
+    "couple_full_incident_fluid.py:88 local",
+    "couple_native_fluid_radau.py:124 local",
+    "solve_native_incident_reciprocal.py:62 local",
+    "def_native_matter_photon_feedback.py:110 local",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "p": [
+    "couple_full_incident_fluid.py:88 local",
+    "couple_native_fluid_radau.py:124 local",
+    "solve_native_incident_reciprocal.py:62 local",
+    "def_native_matter_photon_feedback.py:110 local",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "adiabatic_logT": [
+    "couple_full_incident_fluid.py:88 local",
+    "couple_native_fluid_radau.py:124 local",
+    "solve_native_incident_reciprocal.py:62 local",
+    "def_native_matter_photon_feedback.py:110 local",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dr_emit": [
+    "couple_full_incident_fluid.py:88 local",
+    "couple_native_fluid_radau.py:124 local",
+    "solve_native_incident_reciprocal.py:62 local",
+    "def_native_matter_photon_feedback.py:110 local",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dr_loss": [
+    "couple_full_incident_fluid.py:88 local",
+    "couple_native_fluid_radau.py:124 local",
+    "solve_native_incident_reciprocal.py:62 local",
+    "def_native_matter_photon_feedback.py:110 local",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dr_sc": [
+    "couple_full_incident_fluid.py:88 local",
+    "couple_native_fluid_radau.py:124 local",
+    "solve_native_incident_reciprocal.py:62 local",
+    "def_native_matter_photon_feedback.py:110 local",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dr_energy": [
+    "couple_full_incident_fluid.py:88 local",
+    "couple_native_fluid_radau.py:124 local",
+    "solve_native_incident_reciprocal.py:62 local",
+    "def_native_matter_photon_feedback.py:110 local",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dr_neutral": [
+    "couple_full_incident_fluid.py:88 local",
+    "couple_native_fluid_radau.py:124 local",
+    "solve_native_incident_reciprocal.py:62 local",
+    "def_native_matter_photon_feedback.py:110 local",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dr_u": [
+    "couple_full_incident_fluid.py:88 local",
+    "couple_native_fluid_radau.py:124 local",
+    "solve_native_incident_reciprocal.py:62 local",
+    "def_native_matter_photon_feedback.py:110 local",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dr_p": [
+    "couple_full_incident_fluid.py:88 local",
+    "couple_native_fluid_radau.py:124 local",
+    "solve_native_incident_reciprocal.py:62 local",
+    "def_native_matter_photon_feedback.py:110 local",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dt_emit": [
+    "couple_full_incident_fluid.py:88 local",
+    "couple_native_fluid_radau.py:124 local",
+    "solve_native_incident_reciprocal.py:62 local",
+    "def_native_matter_photon_feedback.py:110 local",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dt_loss": [
+    "couple_full_incident_fluid.py:88 local",
+    "couple_native_fluid_radau.py:124 local",
+    "solve_native_incident_reciprocal.py:62 local",
+    "def_native_matter_photon_feedback.py:110 local",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dt_sc": [
+    "couple_full_incident_fluid.py:88 local",
+    "couple_native_fluid_radau.py:124 local",
+    "solve_native_incident_reciprocal.py:62 local",
+    "def_native_matter_photon_feedback.py:110 local",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dt_energy": [
+    "couple_full_incident_fluid.py:88 local",
+    "couple_native_fluid_radau.py:124 local",
+    "solve_native_incident_reciprocal.py:62 local",
+    "def_native_matter_photon_feedback.py:110 local",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dt_neutral": [
+    "couple_full_incident_fluid.py:88 local",
+    "couple_native_fluid_radau.py:124 local",
+    "solve_native_incident_reciprocal.py:62 local",
+    "def_native_matter_photon_feedback.py:110 local",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dt_u": [
+    "couple_full_incident_fluid.py:88 local",
+    "couple_native_fluid_radau.py:124 local",
+    "solve_native_incident_reciprocal.py:62 local",
+    "def_native_matter_photon_feedback.py:110 local",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dt_p": [
+    "couple_full_incident_fluid.py:88 local",
+    "couple_native_fluid_radau.py:124 local",
+    "solve_native_incident_reciprocal.py:62 local",
+    "def_native_matter_photon_feedback.py:110 local",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dy_emit": [
+    "couple_full_incident_fluid.py:88 local",
+    "couple_native_fluid_radau.py:124 local",
+    "solve_native_incident_reciprocal.py:62 local",
+    "def_native_matter_photon_feedback.py:110 local",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dy_loss": [
+    "couple_full_incident_fluid.py:88 local",
+    "couple_native_fluid_radau.py:124 local",
+    "solve_native_incident_reciprocal.py:62 local",
+    "def_native_matter_photon_feedback.py:110 local",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dy_sc": [
+    "couple_full_incident_fluid.py:88 local",
+    "couple_native_fluid_radau.py:124 local",
+    "solve_native_incident_reciprocal.py:62 local",
+    "def_native_matter_photon_feedback.py:110 local",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dy_energy": [
+    "couple_full_incident_fluid.py:88 local",
+    "couple_native_fluid_radau.py:124 local",
+    "solve_native_incident_reciprocal.py:62 local",
+    "def_native_matter_photon_feedback.py:110 local",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dy_neutral": [
+    "couple_full_incident_fluid.py:88 local",
+    "couple_native_fluid_radau.py:124 local",
+    "solve_native_incident_reciprocal.py:62 local",
+    "def_native_matter_photon_feedback.py:110 local",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dy_u": [
+    "couple_full_incident_fluid.py:88 local",
+    "couple_native_fluid_radau.py:124 local",
+    "solve_native_incident_reciprocal.py:62 local",
+    "def_native_matter_photon_feedback.py:110 local",
+    "def_native_matter_photon_feedback.py:51 point"
+   ],
+   "dy_p": [
+    "couple_full_incident_fluid.py:88 local",
+    "couple_native_fluid_radau.py:124 local",
+    "solve_native_incident_reciprocal.py:62 local",
+    "def_native_matter_photon_feedback.py:110 local",
+    "def_native_matter_photon_feedback.py:51 point"
+   ]
+  }
+ }
+}

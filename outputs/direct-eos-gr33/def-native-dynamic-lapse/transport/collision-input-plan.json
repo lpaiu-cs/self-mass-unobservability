@@ -1,0 +1,19 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Convert the conserved packet increment to the occupation seen by actual collisions, and remove the canonical metric-volume photon moments already included in Phase122 before exporting additional GR forcing.",
+  "identity": "delta_F=delta_N/reference_phase_weight-(3*alpha*delta_phi+delta_lambda)*F0. Fixed-canonical integrated energy changes by -u*E0-lambda*Pr0; integrated radial pressure changes by -u*Pr0+lambda*(R4_0-2*Pr0).",
+  "limitations": "This prepares the actual collision and next GR inputs; it is not their evolution. Additional fluid density/velocity/temperature/H responses and their collision derivatives remain.",
+  "budget": {
+    "seconds": 15,
+    "new_native_calls": 0,
+    "new_fluid_steps": 0,
+    "new_transport_steps": 0
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_compensated_transport.py": "e8eda0b21d4a4c468bf5d1f0e7a0e6a766ea48a86866fc97bfa3b099b5002d0f",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_compensated_transport.py": "2b7f87e314be156a76fb0fa91776a989a6c5b489dbded819b4afcb13cc27527d",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-dynamic-lapse/transport/steps-128-reference-128.npz": "33425315fd1ebe7a0ca0da099212c690fa9f1367c0cd2c074f32414ba27f7f8f",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-dynamic-lapse/corrected/metric-128-g8.npz": "249b5cdea23307ec4d88ff262228d6286b72518085237b2a83c1d83758ebe026",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-projected-evolution/coupled-128.npz": "abbdb3f8e916aea2273158b5c4a81fa40493d3ac89d8b97739ac888e2eedb82f"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "variables": "Differences between two initial time derivatives at the same v=0 state, fixed rho,T,Q,geometry,composition,opacity and proper tau. b=rho*cv*T/w, j=Q/w, h=K*T/(w*c^2), k_T=2+dlnK/dlnT, drive=(Q_F-Q)/w. The heat-rate difference is delta(Q_dot)/w, not the time derivative of Q/w.",
+  "equations": "delta rho_log_dot=0; b*delta T_log_dot+2*j*delta v_dot=0; delta v_dot+delta Q_dot/w=0; delta Q_dot/w+(h/tau)*delta v_dot-j*k_T*delta T_log_dot/2=N*drive/tau.",
+  "solution": "z=1-h/tau-j^2*k_T/b; delta v_dot=-N*drive/(tau*z), delta Q_dot/w=-delta v_dot, delta T_log_dot=-2*j*delta v_dot/b. The full time-matrix determinant is b*z.",
+  "singular_boundary": "At z=0 and nonzero N*drive/tau the reduced equations are inconsistent. With zero drive they admit a nonzero homogeneous direction. z>0 is only a positive time-coefficient condition; it does not certify the entire characteristic cone or nonlinear well-posedness.",
+  "scope": "This difference formula cancels the common momentum and energy forcing. It needs no replacement of spatial pressure forces or assumption that the original absolute rate is zero. It is not a finite GR trajectory or a recalibration of the heat law."
+}

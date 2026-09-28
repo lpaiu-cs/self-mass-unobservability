@@ -1,0 +1,142 @@
+{
+  "classification": "Counterexample candidate",
+  "numerical_controls_passed": true,
+  "controls": {
+    "quadrature": 6.999657308568768e-16,
+    "independent_GR": 1.9899863060337912e-13
+  },
+  "time": {
+    "U": 0.0191789083506613,
+    "U_t": 0.006742837103530036,
+    "U_x": 0.003476075777877834
+  },
+  "repaired_source_time_representation_applied": true,
+  "change_from_straight_line": {},
+  "potential_relative": 1.4513426723338492e-13,
+  "source_time_passed": true,
+  "field_time_passed": true,
+  "rows": [
+    {
+      "classification": "Counterexample candidate",
+      "steps": 128,
+      "order": 8,
+      "seconds": 105.92899154199995,
+      "maximum_delta_phi": 1.242074941957504e-89,
+      "maximum_delta_mass_cm": 6.17301937732337e-73,
+      "maximum_delta_lambda": 8.94708507284827e-83,
+      "maximum_delta_log_proper_volume": 8.947085077455167e-83,
+      "maximum_mass_increment_over_background_ulp": 1.6968266459634022e-61,
+      "maximum_scalar_increment_over_background_ulp": 5.728059643664431e-71,
+      "compact_potential_contraction": 1.2835771179694094e-10,
+      "potential_iteration_relative": [
+        1.450678977200877e-13
+      ],
+      "endpoint_direct": -1.8965680088198726e-84,
+      "endpoint_compact_with_metric": -1.8965760197759317e-84,
+      "compact_potential_change": 1.394186779027292e-97,
+      "spatial_material_photon_feedback": false,
+      "full_GR_feedback": false,
+      "final_charge_solved": false
+    },
+    {
+      "classification": "Counterexample candidate",
+      "steps": 64,
+      "order": 8,
+      "seconds": 114.73714407299997,
+      "maximum_delta_phi": 1.2182533004810482e-89,
+      "maximum_delta_mass_cm": 6.166544082700136e-73,
+      "maximum_delta_lambda": 8.937699874402489e-83,
+      "maximum_delta_log_proper_volume": 8.937699878852804e-83,
+      "maximum_mass_increment_over_background_ulp": 1.6950467305305218e-61,
+      "maximum_scalar_increment_over_background_ulp": 5.6182017127314694e-71,
+      "compact_potential_contraction": 1.2835771179694094e-10,
+      "potential_iteration_relative": [
+        1.3934071168880062e-13
+      ],
+      "endpoint_direct": -1.878330084517485e-84,
+      "endpoint_compact_with_metric": -1.878338018419598e-84,
+      "compact_potential_change": 1.3475318384058393e-97,
+      "spatial_material_photon_feedback": false,
+      "full_GR_feedback": false,
+      "final_charge_solved": false
+    },
+    {
+      "classification": "Counterexample candidate",
+      "steps": 128,
+      "order": 4,
+      "seconds": 62.80977340300001,
+      "maximum_delta_phi": 1.2420749419575036e-89,
+      "maximum_delta_mass_cm": 6.172939960124024e-73,
+      "maximum_delta_lambda": 8.946969966707278e-83,
+      "maximum_delta_log_proper_volume": 8.946969971314174e-83,
+      "maximum_mass_increment_over_background_ulp": 1.6968048159298704e-61,
+      "maximum_scalar_increment_over_background_ulp": 5.7280596436644285e-71,
+      "compact_potential_contraction": 1.2835771179694092e-10,
+      "potential_iteration_relative": [
+        1.4506789772008778e-13
+      ],
+      "endpoint_direct": -1.8965680088198723e-84,
+      "endpoint_compact_with_metric": -1.8965760197759312e-84,
+      "compact_potential_change": 1.3941867790272858e-97,
+      "spatial_material_photon_feedback": false,
+      "full_GR_feedback": false,
+      "final_charge_solved": false
+    }
+  ],
+  "physical_steps": 0,
+  "GR_return_evolution_executed": false,
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false,
+  "GR_return_admitted": true,
+  "same_actual_returned_solution_read": true,
+  "shared_high_low_GR_output_clock": true,
+  "components": [
+    {
+      "clock": 64,
+      "values": {
+        "endpoint_direct": {
+          "high": "-1.1612845041106539370587858330629485827856015147016267514542292989832412112829823991205655118218531892953885445319762084376383079356746746039021934981949613074903027154505252838134765625E-57",
+          "low": "-1.878330084517484949254130117045826200830452329841784480550535511853988026002983311322734834791543295969474109828494885426462696846839631305270588125247501972998447596508029404193765722457725063708279102732585930102260363128152675926685333251953125E-84",
+          "componentwise_total": "-1.161284504110653937058785834941278667303086463955756868500055499813693541124766879671101023675841215E-57",
+          "low_over_high": 1.61745901014667e-27,
+          "nominal_sign_unchanged": true
+        },
+        "endpoint_compact_with_metric": {
+          "high": "-1.161289409055179278312681704484396822673326412808307289974090922320431178754626229437292983283019629702559868707223835284518932457154821052437709827387379846186377108097076416015625E-57",
+          "low": "-1.878338018419597941609934097931319696502245485664927127971607046969230283093243424511937028908245945525433484388493640043867822418741987522187100463449865727282187981067381415110539115371411458478808948098504050250312502612359821796417236328125E-84",
+          "componentwise_total": "-1.161289409055179278312681706362734841092924354418241387905410618822676664419553357408900030252249913E-57",
+          "low_over_high": 1.6174590104527058e-27,
+          "nominal_sign_unchanged": true
+        }
+      }
+    },
+    {
+      "clock": 128,
+      "values": {
+        "endpoint_direct": {
+          "high": "-1.16322927631431902450410074844729453757026594903142872696870360301890851694644040228289704116167828031766686292120596138121929725875078132370471321876959081009772489778697490692138671875E-57",
+          "low": "-1.8965680088198725560054389143372611513967277798750952513065285430157159860573928457652293653711309246636795910197292025531790225696642455500673853429913809879899207009238548984359168674634157739503214777816719749381491055828519165515899658203125E-84",
+          "componentwise_total": "-1.163229276314319024504100750343862546390138505036867641305964754415636296821535653589425584177394266E-57",
+          "low_over_high": 1.6304335245319225e-27,
+          "nominal_sign_unchanged": true
+        },
+        "endpoint_compact_with_metric": {
+          "high": "-1.1632341894765433049817889517187581627344890843162442812338509094785727927328573096355433304683061095073057718301368774660165362207425100008243400162566416611298336647450923919677734375E-57",
+          "low": "-1.8965760197759316691105170728533425368131854924200213925270579160315514609085891994154246052665986177830390897707660287005937712083572854013921115505715952270022959107839425509303341351198163418011368095404158007344364023083471693098545074462890625E-84",
+          "componentwise_total": "-1.163234189476543304981788953615334182510420753426761354087193446291758285152878702162601246499857570E-57",
+          "low_over_high": 1.6304335248514257e-27,
+          "nominal_sign_unchanged": true
+        }
+      }
+    }
+  ],
+  "charge_comparison_admitted": true,
+  "conditional_compact_sign_survives_one_return": true,
+  "uniform_temporal_error_certificate": false,
+  "self_GR_return_closed": false,
+  "physical_final_charge_solved": false,
+  "full_declared_period": false,
+  "actual_solution_directory": "native-stage-metric227-work",
+  "primary_source_directory": "native-complete-radau224-check-work",
+  "high_field_directory": "native-stage-metric227-work"
+}

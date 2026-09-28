@@ -1,0 +1,18 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "e9500e5",
+  "bindings": {
+    "verification/gr_dense_plasma_audit.py": "1ae008829e6a09f33779accf4e0a77872d942ca78cc1153091d93347b11bbd4f",
+    "outputs/direct-eos-gr33/gr-dense-plasma/plan.json": "39305e40fb83c20988b56e1d8317001da6f93f0195d399118a648fc8bfaa24ce",
+    "outputs/direct-eos-gr33/gr-dense-plasma/runtime.json": "597393ca50ca7075821a5f86300958fdf10dec07d92a3ee039f2adf8be298988",
+    "outputs/direct-eos-gr33/gr-dense-plasma/quantum-controls.json": "a3cb7ebb964a7c57900856311bbcc1c49de288868a2d15bbbde57a588f28265c",
+    "outputs/direct-eos-gr33/gr-dense-plasma/symbolic.json": "b1410351c42e332b8155d59d183143f71f76687dd824a698b2039b08a721b57e",
+    "outputs/direct-eos-gr33/gr-dense-plasma-audit/source-table.json": "1826c1a3c4d8e0558fd24123efd88b15bc78325d731fe9960ec8a922454e7cde"
+  },
+  "identity_score_tolerance": 1e-10,
+  "mp_classical_score_tolerance": 1e-11,
+  "calibration_displayed_thermal_relative_tolerance": 0.01,
+  "policy": "Freeze before evaluating the PIMC table. The 1% gate is a declared numerical fit-replay diagnostic relative to displayed thermal energy, not an author uncertainty interval or physical certification. Preserve any failure. No coefficients are fitted here.",
+  "purpose": "Audit original EOSFI22 excess/ideal groups and the missing quantum density derivative on all saved near-fully-ionized states; independently evaluate classical OCP energies at 60 decimal digits and compare the sourced quantum fit with its original nine PIMC calibration values.",
+  "scope": "A finite provider consistency and calibration replay. No universal error envelope, many-body proof, independent holdout, or EOS/GR replacement."
+}

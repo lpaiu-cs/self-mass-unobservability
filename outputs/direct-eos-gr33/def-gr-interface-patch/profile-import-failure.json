@@ -1,0 +1,6 @@
+{
+  "classification": "Counterexample candidate",
+  "error": "profile.py shadowed stdlib profile during cProfile import; no resolvent timing or trajectory completed",
+  "repair": "Import cProfile from repository cwd before runpy of the unchanged profiling script",
+  "budget_charge_seconds": 60
+}

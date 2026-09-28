@@ -1,0 +1,25 @@
+Traceback (most recent call last):
+  File "/mnt/e/lab/self-mass-unobservability/verification/def_native_cold_population.py", line 165, in <module>
+    if __name__=='__main__':globals()[sys.argv[1]]()
+  File "/mnt/e/lab/self-mass-unobservability/verification/def_native_cold_population.py", line 159, in recovered
+    a=gas(2,float(d['lrho']),float(d['logT']),d['X']);assert np.all(np.isfinite(a))
+  File "/mnt/e/lab/self-mass-unobservability/verification/direct_eos_gr.py", line 34, in __call__
+    def __call__(self,*args): return np.delete(super().__call__(*args),20)
+  File "/mnt/e/lab/self-mass-unobservability/verification/direct_ion_eos.py", line 270, in __call__
+    assert info.value==0 and np.all(np.isfinite(out)),(info.value,mode,value,t,x)
+AssertionError: (0, 2, -32.5914558922193, 6.667439139218272, array([8.88701480e-01, 0.00000000e+00, 4.97526918e-06, 1.07309731e-01,
+       0.00000000e+00, 0.00000000e+00, 0.00000000e+00, 2.18176632e-05,
+       5.32350123e-06, 0.00000000e+00, 1.41244099e-03, 5.32109172e-08,
+       0.00000000e+00, 0.00000000e+00, 1.18478283e-03, 3.56760394e-05,
+       6.57730857e-08, 0.00000000e+00, 0.00000000e+00, 4.40432029e-08,
+       0.00000000e+00, 0.00000000e+00, 4.07117235e-04, 2.96281333e-07,
+       9.08248427e-04, 7.94836780e-06]))
+configured fp_kind range, precision =   307,   15
+WARNING: h2 p.f.extrapolated below valid T range
+WARNING: h2+ p.f. extrapolated below valid T range
+ SCALED_PRODUCT         317   1.0407434312468390E+185  -41.273136436920232        4.9023757587005980E+022
+ SCALED_PRODUCT         318   1.6962531274641092E+243  -4.5501281107751468E+065   1.2244172427407522E+088
+ SCALED_PRODUCT         317   1.0407434312468390E+185  -41.273136436920232        4.9023757587005980E+022
+ SCALED_PRODUCT         318   1.6962531274641092E+243  -4.5501281107751468E+065   1.2244172427407522E+088
+ SCALED_PRODUCT         317   1.0407434312468390E+185  -41.273136436920232        4.9023757587005980E+022
+ SCALED_PRODUCT         318   1.6962531274641092E+243  -4.5501281107751468E+065   1.2244172427407522E+088

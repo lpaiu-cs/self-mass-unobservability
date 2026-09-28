@@ -1,0 +1,7 @@
+{
+  "classification": "Counterexample candidate",
+  "table_sha256": "61c4d76ab82fc1c89f52c4cb43cbd3ee4a775a11b75f6013ec6ff51126e5217c",
+  "observation": "The actual native weak_bicubic flag is zero. Therefore audit the mixed-precision bilinear branch, not the available but inactive bicubic branch.",
+  "method": "Reconstruct both actual blended endpoint contrasts from the captured table and compare free-electron versus fully-ionized electron density choices. First validate the mixed-precision expression against native source values; only then compare the same coefficient table evaluated in double precision. Retain the original blend-corrected failed FD verdict.",
+  "limits": "A double-precision evaluation changes the numerical function while retaining table data and physical prescription. It does not retroactively certify native derivatives or provide physical table error bounds."
+}

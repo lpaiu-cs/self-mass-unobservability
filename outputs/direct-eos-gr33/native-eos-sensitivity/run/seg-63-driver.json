@@ -1,0 +1,103 @@
+{
+ "label": "seg-63",
+ "limit": 63,
+ "restart": "seg-62",
+ "construct_seconds": 14.53629021300003,
+ "passed": true,
+ "fallbacks": 6,
+ "row": {
+  "classification": "Counterexample candidate",
+  "reference": 128,
+  "steps": 64,
+  "completed_steps": 63,
+  "new_steps": 1,
+  "seconds": 1741.8221919440002,
+  "operator_point_seconds": 6.2916370580005605,
+  "operator_points": 2,
+  "stepping_seconds": 1730.7500141660003,
+  "energy_balance_relative": 4.480861343023387e-16,
+  "species_balance_relative": 1.491062950460209e-11,
+  "linear_relative": 8.3816715776459e-15,
+  "max_Krylov_iterations": 279,
+  "frequency_moment_relative": 4.821623774410157e-16,
+  "endpoint_photon_reference_energy_erg": 10.580116885620262,
+  "endpoint_material_reference_energy_erg": 284.1951056507989,
+  "endpoint_material_energy_L1_erg": 343.44391300934643,
+  "additional_material_motion_evolved": true,
+  "full_GR_feedback": false,
+  "final_charge_solved": false,
+  "endpoint_material_nonrest_energy_erg": 184.9472910600499,
+  "velocity_jet_relative": 3.99317307771018e-09,
+  "primitive_mapping_relative": 4.235164736271502e-22,
+  "conserved_material_input_applied": true,
+  "maximum_extended_stage_residual": 7.650663041942349e-10,
+  "maximum_refinement_steps": 3,
+  "initial_GMRES_stagnations": 18,
+  "actual_completed_steps": 126,
+  "actual_new_steps": 2,
+  "split_completed_macro_steps": 63,
+  "base_steps": 64,
+  "passed": true
+ },
+ "nonlinear_exception": Infinity,
+ "nonlinear_exceptions": [
+  {
+   "time": 0.0033271051454934306,
+   "step": 2.6831493108817987e-05,
+   "newton": 2,
+   "vector_defect": 8.098922471200068e-11,
+   "physical_moment_max": 4.264063760966061e-17,
+   "material_component_max": 1.868270638951997e-14
+  },
+  {
+   "time": 0.0033539366386022484,
+   "step": 2.6831493108817987e-05,
+   "newton": 2,
+   "vector_defect": 1.0742992926761192e-09,
+   "physical_moment_max": 4.554573198729432e-17,
+   "material_component_max": 2.1155697291582725e-14
+  }
+ ],
+ "vector_gate_exception": Infinity,
+ "vector_gate_exceptions": [
+  {
+   "stage_count": 248,
+   "vector_relative": 2.7261851837889888e-11,
+   "physical_moment_max": 1.770989958416887e-19,
+   "material_component_max": 5.036117329619586e-17
+  },
+  {
+   "stage_count": 248,
+   "vector_relative": 2.7452369955449404e-11,
+   "physical_moment_max": 2.2814991907836693e-19,
+   "material_component_max": 7.923051797785837e-17
+  },
+  {
+   "stage_count": 248,
+   "vector_relative": 1.638430567646044e-11,
+   "physical_moment_max": 1.8850955308231139e-19,
+   "material_component_max": 5.415549129007456e-17
+  },
+  {
+   "stage_count": 250,
+   "vector_relative": 2.656829766848791e-10,
+   "physical_moment_max": 1.680729174572023e-19,
+   "material_component_max": 3.198431094820358e-17
+  },
+  {
+   "stage_count": 250,
+   "vector_relative": 7.650663041942349e-10,
+   "physical_moment_max": 2.4022047723836054e-19,
+   "material_component_max": 5.47967828853708e-17
+  },
+  {
+   "stage_count": 250,
+   "vector_relative": 7.550692001109522e-10,
+   "physical_moment_max": 2.37515245331092e-19,
+   "material_component_max": 5.1658102064024577e-17
+  }
+ ],
+ "vector_gate_exception_max": 7.650663041942349e-10,
+ "seconds": 1756.3701339939998,
+ "peak_RSS_bytes": 3519819776
+}

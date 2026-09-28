@@ -1,0 +1,7 @@
+{
+  "classification": "Counterexample candidate",
+  "attempt_passed": false,
+  "restored_original_source_sha256": "9631f1a84d0800b6127eb5ed90a924b629cb382ac563b27ee5a26948bd91d3fb",
+  "failed_attempt_source_sha256": "6232826537db049f88babf5b8783285dffac4a79dcaf583b08fab2af379889d7",
+  "reason": "The existing electron-variable fallback also returns125 at160K. Revert the unvalidated extra fallback; keep original shared EOS behavior. No table extension, floor clamp, new fluid path or relaxed gate."
+}

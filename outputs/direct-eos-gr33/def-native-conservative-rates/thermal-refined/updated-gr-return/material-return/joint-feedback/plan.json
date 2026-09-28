@@ -1,0 +1,36 @@
+{
+  "classification": "Counterexample candidate",
+  "before_checkpoint": "8dc7db609",
+  "claim": "Resolve the newly measured material/photon energy-H mismatch by applying actual updated baryon/momentum/inventory/noncollisional transport to simultaneous moving photon/energy/H stages; then return new paired transfers to material and GR.",
+  "trigger": "The first updated material sweep differs from the prior radiation-only material history by1.02237 in energy and0.439882 in H. Small compact GR correction alone does not close this coupling.",
+  "reuse": "Existing exact nonrest energy coordinate and conservative primitive maps, signed velocity/inventory jets, actual SDIRK stage times and1e-12 full residual. Same three original paths,531 cells,8 angles,152 frequencies,17 background knots and3.434ms.",
+  "angular": "Save both actual accepted SDIRK-stage outgoing angular luminosity increments and times, alongside full angular snapshots, thermal/H state, collision-only transfers and radial ports. Avoid another replay to reconstruct the next exterior lapse input.",
+  "limits": "Prescribed previous material baryon/momentum and mechanical transport are returned once. A subsequent free-material sweep and GR/lapse reapplication are required; this is not yet a fixed point.",
+  "budgets": {
+    "pilot_wall_seconds": 65,
+    "production_wall_seconds": 650,
+    "CPU_processes": 3,
+    "threads_each": 1,
+    "total_virtual_memory_GiB": 9,
+    "new_native_states": 0
+  },
+  "forecast": "Concurrent prefixes4/8/4 steps. Per path17 measured operator points plus remaining measured stepping cost and20s overhead;2x maximum must fit650s. New6-variable primitive jets require3GiB virtual memory per process, explicitly increased from the prior2GiB cap. Later Krylov cost remains extrapolated.",
+  "gates": {
+    "conservation": 1e-08,
+    "linear": 1e-12,
+    "velocity_jet": 0.0001,
+    "mapping": 1e-10,
+    "time": 0.02,
+    "background": 0.02,
+    "angular_port": 1e-12
+  },
+  "stop": "Stop all workers on any failed path or650s. Preserve prefixes; no automatic extra path, finer clock/grid, longer horizon, native support expansion or gate relaxation.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_updated_joint_feedback.py": "c6f7c026f12644146147c3a903f2bbfaa42e499033a7830e90a86ef3d0ee66e9",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_updated_material_return.py": "8fa54ab1fcfa07f0e852905dbb565fe1bf5029b0ba32086e26dbcac48722e8d0",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_matter_photon_feedback.py": "19acadd46d8f6059406fc3614c151de187323cec68f73faf9319e663f0466fb9",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_stage_feedback.py": "6852dd1943e9ecd581f6f081815c8252aed68329de5666dd441973b33c847297",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/audit.json": "51862de343dfe0f30d4552099beac17d44c0b0b40aa7f30b55f72b507fc0ea2c",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/audit.json": "5d05c684e3efb7e43bacedefffc769943921bf539c40d074381770903de8b763"
+  }
+}

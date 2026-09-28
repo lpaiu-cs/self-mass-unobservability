@@ -1,0 +1,13 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "AssertionError(('Extended stage residual', 2.097349037512297e-14, 5))",
+  "source_sha256": "60ef4f8d549769bf8d6d0df386e0fc882b8881680bb00909f95e1972e20a6753",
+  "repair": "The residual-only refinement still rounds each correction into a binary64 stage state. Retain the accumulated solution and SDIRK stage states in longdouble; cast only the Krylov residual equation and initial guess to binary64. Same operator, up to3 corrections and unchanged1e-14/1e-12/1e-8 gates.",
+  "budget": "Same120s prefixes,1100s production admission and4600s total including both failures. No physical/grid/EOS change.",
+  "bindings": {
+    "native-incident-self-gr157-work/linear-plan.json": "19a5627e6a59b79d72e20a2020026556b37b31959eb7bedb1cf973eff081e0f8",
+    "native-incident-self-gr157-work/residual-only-producer.py": "0e85fe5c4da3ef6ad5abf980854b791a599a1c116bed2d563bde5814e8a393d0",
+    "native-incident-self-gr157-work/rejected-residual-only-run.py": "f32c18289497acb8e6aba46409cb319bee7f8baf1e7c0f5735c9288e77e36fe2",
+    "native-incident-self-gr157-work/photon_repair-1-receipt.json": "7ffb0e5d9736b934428c20c98709273ac0fbcf9db071ccbdcc85a2cd4ea5c4e7"
+  }
+}

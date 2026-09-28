@@ -1,0 +1,13 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "Einstein_components": "For ds^2=-N(t,r)^2 dt^2+a(t,r)^2 dr^2+r^2 dOmega^2 and m=r*(1-a^-2)/2: G^t_t=-2*m_r/r^2, G^r_t=2*m_t/r^2, G^r_r=-2*m/r^3+2*N_r/(r*N*a^2). These were computed directly from the 4-metric Ricci tensor.",
+  "nonlinear_constraints": "T^t_t=-E, T^r_t=-N*J/a, T^r_r=S give m_r=4*pi*r^2*E, m_t=-4*pi*r^2*N*J/a, N_r/N=a^2*(m/r^2+4*pi*r*S). No static-metric or zero-velocity assumption.",
+  "moving_material_boundary": "With material speed v relative to slice normals, R_dot=N*v/a. For isotropic material pressure P and comoving radial heat density Q, v*E-J=-P*v-Q exactly, so d m(t,R(t))/dt=-4*pi*R^2*N/a*(P*v+Q).",
+  "closed_surface_null": "If the surface is material, P_surface=0, Q_surface=0, and there is no other stress/energy channel, the enclosed gravitational mass is exactly constant, including nonlinear internal motion, heating and redistribution consistent with the total stress-energy conservation law.",
+  "exterior": "In a connected spherical vacuum exterior, m_r=m_t=0. Integrating the radial lapse equation gives N=f(t)*sqrt(1-2*M/r); absorb f into time. Thus the exterior monopole is Schwarzschild with constant M on a regular polar-areal patch. An internal relaxation state alone gives no changing exterior mass in this closed GR sector.",
+  "Hamiltonian_propagation": "The full normal-energy projection with S, not just comoving P, and N_r/N+a_r/a=4*pi*r*a^2*(E+S) implies partial_r m_t=4*pi*r^2 E_t. This remains a continuum identity, not a discrete time/space error guarantee.",
+  "necessary_escape": "A varying exterior mass/readout requires boundary flux or work, external coupling, non-spherical/multipolar structure, or additional fields/stresses outside these assumptions. A nonzero scalar charge or free-fall anomaly is not generated merely by adding GR heat relaxation.",
+  "saved_star_boundary_not_certified": "The stored outermost EOS boundary has not been shown to be a free P=0 material surface joined to a vacuum atmosphere. Closing its numerical heat faces does not certify the physical surface assumptions of this theorem.",
+  "no_claims": "No universal SEP result for arbitrary external fields, no physical EOS/transport calibration, no complete nonlinear observational inference, and no finite-time stellar trajectory are supplied by this theorem."
+}

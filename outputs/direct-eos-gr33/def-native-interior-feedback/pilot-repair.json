@@ -1,0 +1,8 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "The first mechanical half step failed before any accepted coupled step: the new Newton inverse used target-minus-value and then subtracted it, doubling the error. A separately computed mass audit also subtracted two huge reference masses instead of using the existing conservative face flux.",
+  "repair": "Correct Newton derivative sign, keep its original2e-13 stop. Read density/mass perturbations directly as minus the face-flux difference. Preserve the first incomplete pilot and exact root state. No native bank or completed trajectory is repeated.",
+  "remaining_pilot_seconds": 29,
+  "thresholds_unchanged": true,
+  "source_sha256": "473e0437180348f72c0cf7418ae5884a487c2bf22c468ed66aa3d59bbd59bbae"
+}

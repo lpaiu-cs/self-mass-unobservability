@@ -1,0 +1,377 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": false,
+  "numerical_subproblem_passed": true,
+  "scientific_status": "Theorem progress: passive radiative tail bound under an explicit saved input envelope; actual discarded fluid and full coupled error are not closed.",
+  "production": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "paths": [
+      {
+        "steps": 64,
+        "discarded_baryon_g": 236640.53917997645,
+        "discarded_Killing_erg": 2.1417428832492882e+26,
+        "radiation_cap_erg_cm3": 221685.86961414426,
+        "background_cap_erg_cm3": 221685.86960798223,
+        "incident_background_energy_bound_erg": 3.444110797892098e+26,
+        "available_tail_energy_bound_erg": 5.5858536811413866e+26,
+        "photon_difference_L1_bound_erg": 9.029964479033484e+26,
+        "direct_scalar_bound": 9.573797129886517e-32,
+        "metric_stress_bound": 5.368102716327856e-37,
+        "exterior_bound": 3.424780463424659e-35,
+        "mass_constraint_bound": 1.0031880252074675e-38,
+        "fixed_mass_scalar_bound": 9.577276905155029e-32,
+        "normalized_charge_bound": 1.0328462159088449e-29,
+        "fixed_scalar_fraction": 9.37910676312049e-05,
+        "normalized_over_scalar": 0.010114748717017747,
+        "passive_normalized_interval": [
+          5.2277956079725394e-27,
+          5.248452532290718e-27
+        ]
+      },
+      {
+        "steps": 128,
+        "discarded_baryon_g": 232376.74110912264,
+        "discarded_Killing_erg": 2.1031528818428116e+26,
+        "radiation_cap_erg_cm3": 221677.36952818258,
+        "background_cap_erg_cm3": 221677.36952202357,
+        "incident_background_energy_bound_erg": 3.2775146291954346e+26,
+        "available_tail_energy_bound_erg": 5.380667511038246e+26,
+        "photon_difference_L1_bound_erg": 8.658182140233681e+26,
+        "direct_scalar_bound": 9.22212111426549e-32,
+        "metric_stress_bound": 5.156193524113298e-37,
+        "exterior_bound": 3.2837751589714367e-35,
+        "mass_constraint_bound": 9.618846965915492e-39,
+        "fixed_mass_scalar_bound": 9.225457712424845e-32,
+        "normalized_charge_bound": 9.903642952913187e-30,
+        "fixed_scalar_fraction": 9.034567307635481e-05,
+        "normalized_over_scalar": 0.009698719742477267,
+        "passive_normalized_interval": [
+          5.2282204271787145e-27,
+          5.2480277130845426e-27
+        ]
+      }
+    ],
+    "level_cross_section_bounds_cm2": [
+      1.0592186695463235e-17,
+      2.2857289959200272e-17,
+      3.5597536037345467e-17,
+      4.908334607255022e-17,
+      5.573647491478722e-17,
+      7.452403677423178e-17,
+      8.752411981678984e-17,
+      9.896269725792647e-17,
+      1.120537381951851e-16,
+      1.2802223351532663e-16
+    ],
+    "native_owner_polynomial_relative": 2.181906342582276e-16,
+    "opacity_bound_cm2_g": 68516089.7836202,
+    "bound_free_opacity_bound_cm2_g": 68516089.38018614,
+    "Thomson_opacity_bound_cm2_g": 0.40343405070860694,
+    "symbolic_checks": true,
+    "all_original_discard_steps_used": true,
+    "conserved_baryon_opacity_bound": true,
+    "no_subsequent_radiative_energy_growth_assumption_removed": true,
+    "scope": "Passive compact-atmosphere reservoir plus tagged photons under the declared17-knot positive background radiation envelope; freely outgoing exterior photons; same restricted10-level H and Thomson model and frozen first-variation geometry. Reservoir confinement is assumed, not verified for the deleted fluid. No density/temperature/y extrapolation. Photon change is counted in stress, exterior and mass normalization. Budget inequalities are analytic; applying the saved caps to an unsaved coupled history is not proved.",
+    "limitations": "Arbitrary mechanical work from retained gas and amplification of changed photons by that gas are not bounded. The saved cap is not a uniform source/EOS derivative or continuum error certificate. Other opacity channels, nonlinear gravity, static nonabsorbability and observation remain open.",
+    "full_floor_feedback_enclosed": false,
+    "full_source_error_enclosed": false,
+    "coupled_fixed_point_verified": false,
+    "nonlinear_GR": false,
+    "final_charge_solved": false,
+    "full_goal_complete": false,
+    "seconds": 111.666857171,
+    "peak_RSS_bytes": 537423872
+  },
+  "audit": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "paths": [
+      {
+        "steps": 64,
+        "exact_rational_dose_relative": 2.220446049250313e-16,
+        "native_discard_mass_absolute_g": 3.885305934104809e-07,
+        "native_discard_Killing_energy_absolute_erg": 351646386206763.6,
+        "native_discard_additional_dose_bound_erg": 1215237918215365.8,
+        "fixed_mass_scalar_bound": 9.577277526181397e-32,
+        "normalized_charge_bound": 1.032846216533024e-29,
+        "fixed_scalar_fraction": 9.379107371296767e-05,
+        "normalized_over_scalar": 0.010114748723130385,
+        "passive_normalized_interval": [
+          5.2277956079662975e-27,
+          5.2484525322969596e-27
+        ]
+      },
+      {
+        "steps": 128,
+        "exact_rational_dose_relative": 0.0,
+        "native_discard_mass_absolute_g": 3.34845405494511e-07,
+        "native_discard_Killing_energy_absolute_erg": 303057674080323.6,
+        "native_discard_additional_dose_bound_erg": 1047282345365388.4,
+        "fixed_mass_scalar_bound": 9.225458310634275e-32,
+        "normalized_charge_bound": 9.903642958922453e-30,
+        "fixed_scalar_fraction": 9.034567893466942e-05,
+        "normalized_over_scalar": 0.00969871974836219,
+        "passive_normalized_interval": [
+          5.228220427172706e-27,
+          5.2480277130905514e-27
+        ]
+      }
+    ],
+    "numerical_subproblem_passed": true,
+    "production_budget_passed": false,
+    "overall_phase_passed": false,
+    "deadline_repair_tested": true,
+    "production_repeated": false,
+    "conservative_boundary_lapse_used": true,
+    "signed_native_discard_envelope_included": true,
+    "interpretation": "This closes the passive radiative energy-growth subproblem of the declared compact reservoir. It does not verify confinement or the incident envelope in a full live coupled trajectory, or bound pressure-work and changed-photon amplification by retained matter. Preserve the resource failure.",
+    "full_floor_feedback_enclosed": false,
+    "full_source_error_enclosed": false,
+    "coupled_fixed_point_verified": false,
+    "nonlinear_GR": false,
+    "final_charge_solved": false,
+    "full_goal_complete": false,
+    "seconds": 0.28479223000000076
+  },
+  "production_budget_passed": false,
+  "overall_phase_passed": false,
+  "action_timer_seconds": 111.951649401,
+  "new_physical_trajectories": 0,
+  "new_EOS_table_states": 0,
+  "final_charge_solved": false,
+  "full_goal_complete": false,
+  "prior_master_sha256": "2c85498f2e47de0a266108138855fc02e827d621d39bd3a6f7376be4f14d8cfe",
+  "unchanged_earlier_hashes_inherited": true,
+  "preserved_document_prefixes": {
+    "docs/model-definition.md": {
+      "bytes": 233591,
+      "sha256": "1e81e7d1bf8fb478d08e0ba1d860e707715a701c4bdde781c14a82f9c8827863"
+    },
+    "docs/observable-targets.md": {
+      "bytes": 226524,
+      "sha256": "caf1f087e0b98051b1bf48d28abfb4a7920a819d76e4cb15580c255690f8f750"
+    },
+    "docs/adiabatic-limit.md": {
+      "bytes": 222228,
+      "sha256": "5a86fde2042e1efe243e22777aa0fdaf77e42a43a83f15cc077c3c26cd73dcd5"
+    },
+    "docs/nonadiabatic-regime.md": {
+      "bytes": 228713,
+      "sha256": "d0fded755723260afd17fb28824372e40e311693a3c847ed9ccfe91d72eefc44"
+    },
+    "docs/failure-ledger-dynamic-chi.md": {
+      "bytes": 260173,
+      "sha256": "cf2c3a5d5a8b486cd7dec41ebc85a1f8b7c7a69ea6aea067ba7f442cd7fb90e2"
+    },
+    "docs/dynamic-charge-completion.md": {
+      "bytes": 89822,
+      "sha256": "b1027e82d20b944cf279219b4209407cb50a01f7b967528c520c098e2ee805ed"
+    }
+  },
+  "verified_execution_bindings": [
+    {
+      "plan": "outputs/direct-eos-gr33/native-discarded-radiation/plan.json",
+      "declared_path": "verification/def_native_discarded_radiation.py",
+      "retained_path": "outputs/direct-eos-gr33/native-discarded-radiation/executed-producer.py",
+      "sha256": "427fdead3f245b0751c976f790a36b171f5841b98e8ceb3b2b2f53d1441df3aa"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-discarded-radiation/plan.json",
+      "declared_path": "verification/def_native_charge_null_infinity.py",
+      "retained_path": "verification/def_native_charge_null_infinity.py",
+      "sha256": "4291ee4e8d53156aeb0bf9876e61cdb9f7113b074e9f255d0044de9e04b0c8b0"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-discarded-radiation/plan.json",
+      "declared_path": "outputs/direct-eos-gr33/native-charge-null-infinity/production.json",
+      "retained_path": "outputs/direct-eos-gr33/native-charge-null-infinity/production.json",
+      "sha256": "e0b5f8d4dd98ffa23855cea9a824590d39eb1424a6db608ad567b1401825369d"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-discarded-radiation/plan.json",
+      "declared_path": "outputs/direct-eos-gr33/native-charge-null-infinity/audit.json",
+      "retained_path": "outputs/direct-eos-gr33/native-charge-null-infinity/audit.json",
+      "sha256": "82647e97f4e2fae9567cc9378199ba25166c0e489ace7539fd0a53b54b12623a"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-discarded-radiation/plan.json",
+      "declared_path": "outputs/direct-eos-gr33/def-native-global-scalar-closure/bound.json",
+      "retained_path": "outputs/direct-eos-gr33/def-native-global-scalar-closure/bound.json",
+      "sha256": "39cbee9c32b2d16c239d8ae14f188be2177e53bca27fe0ec4d8df88a29a66f58"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-discarded-radiation/plan.json",
+      "declared_path": "verification/def_native_material_join.py",
+      "retained_path": "verification/def_native_material_join.py",
+      "sha256": "be1bcb8ccabcf1e980210f95db4053627eccd31466659e3237479feed495b505"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-discarded-radiation/plan.json",
+      "declared_path": "verification/def_native_atmosphere_spectrum.py",
+      "retained_path": "verification/def_native_atmosphere_spectrum.py",
+      "sha256": "f69fd6e07670ee25667bb03645cc1360ae43733e8512d7b956a95a27ab96c94c"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-discarded-radiation/plan.json",
+      "declared_path": "verification/verify_native_updated_gr_return.py",
+      "retained_path": "verification/verify_native_updated_gr_return.py",
+      "sha256": "d2c456a74a41ee97b07f026effdadd08c72d583b059420e933b8d72094c719d9"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-discarded-radiation/plan.json",
+      "declared_path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/evolution/history-64.npz",
+      "retained_path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/evolution/history-64.npz",
+      "sha256": "2dea1709b042c98a7ed76f7994151cc82634efa23519a924b55cf20f75029575"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-discarded-radiation/plan.json",
+      "declared_path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/background/coupled-64.npz",
+      "retained_path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/background/coupled-64.npz",
+      "sha256": "500cf9d320a5955c37137eb052f5341341b1e7df883db5dac1c1f922bc577220"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-discarded-radiation/plan.json",
+      "declared_path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/finite-collision/extended/applied/total-photons/steps-64-reference-128.npz",
+      "retained_path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/finite-collision/extended/applied/total-photons/steps-64-reference-128.npz",
+      "sha256": "57c36259cec7e520ec804b15ddf004db217484e978d99e489c2d80b1dbf595c1"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-discarded-radiation/plan.json",
+      "declared_path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/evolution/history-128.npz",
+      "retained_path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/evolution/history-128.npz",
+      "sha256": "3237f7e06f62aa217962b19e5bda0f2bcb98d65e19e4681257e2937b5a3a2542"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-discarded-radiation/plan.json",
+      "declared_path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/background/coupled-128.npz",
+      "retained_path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/background/coupled-128.npz",
+      "sha256": "af1a02e92d505da3e0d8c033ffc806ae0c4465e5b5f318b54d23c18f54672350"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-discarded-radiation/plan.json",
+      "declared_path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/finite-collision/extended/applied/total-photons/steps-128-reference-128.npz",
+      "retained_path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/finite-collision/extended/applied/total-photons/steps-128-reference-128.npz",
+      "sha256": "98317c46660725678e33b1816a67b0f71772d5846aa0b8bf1e598870adc576ea"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-discarded-radiation/plan.json",
+      "declared_path": "outputs/direct-eos-gr33/native-discarded-radiation/atomic.f",
+      "retained_path": "outputs/direct-eos-gr33/native-discarded-radiation/atomic.f",
+      "sha256": "195882c5eee6fdba7d762178b9760f65931f8e173200f33d36297151ce026619"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-discarded-radiation/plan.json",
+      "declared_path": "outputs/direct-eos-gr33/native-discarded-radiation/bridge.f90",
+      "retained_path": "outputs/direct-eos-gr33/native-discarded-radiation/bridge.f90",
+      "sha256": "3b201eb6ccc2e6a864a327e66d419d20302a78d4ff5c93f38d266d1711730e8b"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-discarded-radiation/plan.json",
+      "declared_path": "outputs/direct-eos-gr33/native-discarded-radiation/PARAMS.FOR",
+      "retained_path": "outputs/direct-eos-gr33/native-discarded-radiation/PARAMS.FOR",
+      "sha256": "d51d12407b6211de0944d3b5422a03bb9c416d47826c016f59fa5dff641c0008"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-discarded-radiation/audit-plan.json",
+      "declared_path": "verification/verify_native_discarded_radiation.py",
+      "retained_path": "verification/verify_native_discarded_radiation.py",
+      "sha256": "a8690e21caa32594083833dedfdc4025b14640c54279be71030a2a02c0e38fb7"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-discarded-radiation/audit-plan.json",
+      "declared_path": "verification/def_native_discarded_radiation.py",
+      "retained_path": "verification/def_native_discarded_radiation.py",
+      "sha256": "e0391759809f6a2b91bbc43b332e679bc325e295fda38ec340a5a6303355822e"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-discarded-radiation/audit-plan.json",
+      "declared_path": "outputs/direct-eos-gr33/native-discarded-radiation/executed-producer.py",
+      "retained_path": "outputs/direct-eos-gr33/native-discarded-radiation/executed-producer.py",
+      "sha256": "427fdead3f245b0751c976f790a36b171f5841b98e8ceb3b2b2f53d1441df3aa"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-discarded-radiation/audit-plan.json",
+      "declared_path": "outputs/direct-eos-gr33/native-discarded-radiation/plan.json",
+      "retained_path": "outputs/direct-eos-gr33/native-discarded-radiation/plan.json",
+      "sha256": "dcebe4244476bc0b62469c690988cc4bd9c0a565965d63eeffd037672b275aa6"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-discarded-radiation/audit-plan.json",
+      "declared_path": "outputs/direct-eos-gr33/native-discarded-radiation/result.json",
+      "retained_path": "outputs/direct-eos-gr33/native-discarded-radiation/result.json",
+      "sha256": "749111c6ca6817aa91d0b67a6d1b826c2f1ccbf0405d2c0ba2f928ff6ceba040"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-discarded-radiation/audit-plan.json",
+      "declared_path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/finite-collision/extended/applied/return/gr/combined-source.npz",
+      "retained_path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/finite-collision/extended/applied/return/gr/combined-source.npz",
+      "sha256": "b56c14b975b8346ceb61316f592e37dc8c20bd2078dd52875767038b5e1b9e3e"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-discarded-radiation/audit-plan.json",
+      "declared_path": "outputs/direct-eos-gr33/native-charge-null-infinity/production.json",
+      "retained_path": "outputs/direct-eos-gr33/native-charge-null-infinity/production.json",
+      "sha256": "e0b5f8d4dd98ffa23855cea9a824590d39eb1424a6db608ad567b1401825369d"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-discarded-radiation/audit-plan.json",
+      "declared_path": "outputs/direct-eos-gr33/def-native-global-scalar-closure/bound.json",
+      "retained_path": "outputs/direct-eos-gr33/def-native-global-scalar-closure/bound.json",
+      "sha256": "39cbee9c32b2d16c239d8ae14f188be2177e53bca27fe0ec4d8df88a29a66f58"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-discarded-radiation/audit-plan.json",
+      "declared_path": "outputs/direct-eos-gr33/native-discarded-radiation/inputs-64.npz",
+      "retained_path": "outputs/direct-eos-gr33/native-discarded-radiation/inputs-64.npz",
+      "sha256": "a515ba716d9e385161166ce158f5a4557d8e58da288c189c31afee7f0465c6eb"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-discarded-radiation/audit-plan.json",
+      "declared_path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/finite-collision/extended/applied/return/steps-64-reference-128.npz",
+      "retained_path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/finite-collision/extended/applied/return/steps-64-reference-128.npz",
+      "sha256": "87a34b33bbf159e38501bdf779aba4b074276010fe825348bbc05d9ce3dd465b"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-discarded-radiation/audit-plan.json",
+      "declared_path": "outputs/direct-eos-gr33/native-discarded-radiation/inputs-128.npz",
+      "retained_path": "outputs/direct-eos-gr33/native-discarded-radiation/inputs-128.npz",
+      "sha256": "7c53ee3bb708a3a01d7713f3f8e665824b3fbf0ff04637e368a2aaa5c3184591"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-discarded-radiation/audit-plan.json",
+      "declared_path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/finite-collision/extended/applied/return/steps-128-reference-128.npz",
+      "retained_path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/finite-collision/extended/applied/return/steps-128-reference-128.npz",
+      "sha256": "e4bf3a7315f89306d515aa42ebb93a0b789012da3764a7c38c6a0ceee8afbd07"
+    }
+  ],
+  "original_execution_source_preserved": true,
+  "post_run_deadline_guard_logic_tested": true,
+  "production_repeated": false,
+  "syntax_checked": [
+    "def_native_discarded_radiation",
+    "verify_native_discarded_radiation"
+  ],
+  "sha256": {
+    "docs/adiabatic-limit.md": "8ab05f39f170b7a7019bc72b184aaffddffc9fed356e0683e1dbca5a8d22fb81",
+    "docs/dynamic-charge-completion.md": "a6156a204b958566f5256df66f4c419a021be365285447641d09e7d4cfca8f98",
+    "docs/failure-ledger-dynamic-chi.md": "9913368ee60a65bd1bc589ac05fb50ba94978c0b2e534cf5a15822c4ddf68319",
+    "docs/model-definition.md": "16ecd45d4e284873624015fd5326da533ba987a3d2905e315f94160ffd61d867",
+    "docs/nonadiabatic-regime.md": "6286faa3588991f1ba22c1d070b1e3256a14747e6d8ee98315fac7354041057e",
+    "docs/observable-targets.md": "068c76a0801b8d800389138737333c205537a21ab6b23658f7dbd7789bc348cf",
+    "notes/REQUEST146_DISCARDED_RADIATION_KO.md": "7f24fd04e0c2a2a700bae534b9fe9c4dacf39e8d826156931d0257b4b3a95156",
+    "outputs/direct-eos-gr33/native-discarded-radiation/atomic.f": "195882c5eee6fdba7d762178b9760f65931f8e173200f33d36297151ce026619",
+    "outputs/direct-eos-gr33/native-discarded-radiation/audit-plan.json": "f7ada231dc991e3b8401cfeeca1ca3bc118f9f1aa771b371bba218e472eb39a7",
+    "outputs/direct-eos-gr33/native-discarded-radiation/audit.json": "0ce2fa3ed17059ae4eeade1a784aeedc369967fe543e27cd23ef665db36096a9",
+    "outputs/direct-eos-gr33/native-discarded-radiation/bridge.f90": "3b201eb6ccc2e6a864a327e66d419d20302a78d4ff5c93f38d266d1711730e8b",
+    "outputs/direct-eos-gr33/native-discarded-radiation/executed-producer.py": "427fdead3f245b0751c976f790a36b171f5841b98e8ceb3b2b2f53d1441df3aa",
+    "outputs/direct-eos-gr33/native-discarded-radiation/inputs-128.npz": "7c53ee3bb708a3a01d7713f3f8e665824b3fbf0ff04637e368a2aaa5c3184591",
+    "outputs/direct-eos-gr33/native-discarded-radiation/inputs-64.npz": "a515ba716d9e385161166ce158f5a4557d8e58da288c189c31afee7f0465c6eb",
+    "outputs/direct-eos-gr33/native-discarded-radiation/launch-failure.json": "5cd6a3ea43e66c04c94085f659df8f5d7cd178d4a29a5b5817a9e3c25b5c889f",
+    "outputs/direct-eos-gr33/native-discarded-radiation/PARAMS.FOR": "d51d12407b6211de0944d3b5422a03bb9c416d47826c016f59fa5dff641c0008",
+    "outputs/direct-eos-gr33/native-discarded-radiation/plan.json": "dcebe4244476bc0b62469c690988cc4bd9c0a565965d63eeffd037672b275aa6",
+    "outputs/direct-eos-gr33/native-discarded-radiation/result.json": "749111c6ca6817aa91d0b67a6d1b826c2f1ccbf0405d2c0ba2f928ff6ceba040",
+    "verification/def_native_discarded_radiation.py": "e0391759809f6a2b91bbc43b332e679bc325e295fda38ec340a5a6303355822e",
+    "verification/verify_native_discarded_radiation.py": "a8690e21caa32594083833dedfdc4025b14640c54279be71030a2a02c0e38fb7"
+  }
+}

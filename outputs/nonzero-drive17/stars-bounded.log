@@ -1,0 +1,37 @@
+MASSES [1.43781441e+00 1.97536385e-01 4.10102707e-01 9.33289988e-09]
+Traceback (most recent call last):
+  File "/mnt/e/lab/self-mass-unobservability/verification/nonzero_drive.py", line 140, in <module>
+    if __name__=='__main__':{'stars':stars}[sys.argv[1]]()
+  File "/mnt/e/lab/self-mass-unobservability/verification/nonzero_drive.py", line 128, in stars
+    fitted=least_squares(residual,[0.,1/normalization],jac=jac,bounds=([-.01,.5/normalization],[.01,2/normalization]),
+  File "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/optimize/_lsq/least_squares.py", line 947, in least_squares
+    result = trf(fun_wrapped, jac_wrapped, x0, f0, J0, lb, ub, ftol, xtol,
+  File "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/optimize/_lsq/trf.py", line 123, in trf
+    return trf_bounds(
+  File "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/optimize/_lsq/trf.py", line 374, in trf_bounds
+    J = jac(x, f)
+  File "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/optimize/_lsq/least_squares.py", line 883, in jac_wrapped
+    return np.atleast_2d(jac(x, *args, **kwargs))
+  File "/mnt/e/lab/self-mass-unobservability/verification/nonzero_drive.py", line 127, in jac
+    return np.column_stack([(np.array(residual(z+np.eye(2)[i]*h))-residual(z-np.eye(2)[i]*h))/(2*h) for i in range(2)])
+  File "/mnt/e/lab/self-mass-unobservability/verification/nonzero_drive.py", line 127, in <listcomp>
+    return np.column_stack([(np.array(residual(z+np.eye(2)[i]*h))-residual(z-np.eye(2)[i]*h))/(2*h) for i in range(2)])
+  File "/mnt/e/lab/self-mass-unobservability/verification/nonzero_drive.py", line 123, in residual
+    obj=ScalarStar(eos,pc+z[0],field*z[1],rtol=rtol,r0_factor=r0)
+  File "/mnt/e/lab/self-mass-unobservability/verification/nonzero_drive.py", line 84, in __init__
+    self.full=solve_ivp(rhs,(r0,eos.rmax),[4*np.pi/3*r0**3*a4*ec,np.log(p0),0.,phic+scalar2*r0*r0/2,scalar2*r0,nb0],
+  File "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/integrate/_ivp/ivp.py", line 655, in solve_ivp
+    message = solver.step()
+  File "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/integrate/_ivp/base.py", line 197, in step
+    success, message = self._step_impl()
+  File "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/integrate/_ivp/rk.py", line 144, in _step_impl
+    y_new, f_new = rk_step(self.fun, t, y, self.f, h, self.A,
+  File "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/integrate/_ivp/rk.py", line 64, in rk_step
+    K[s] = fun(t + c * h, y + dy)
+  File "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/integrate/_ivp/base.py", line 154, in fun
+    return self.fun_single(t, y)
+  File "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/integrate/_ivp/base.py", line 23, in fun_wrapped
+    return np.asarray(fun(t, y), dtype=dtype)
+  File "/mnt/e/lab/self-mass-unobservability/verification/nonzero_drive.py", line 72, in rhs
+    assert np.isfinite(lp) and lp<np.log(eos.pmax), 'EOS domain exceeded'
+AssertionError: EOS domain exceeded

@@ -1,0 +1,31 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Replace the unmeasured radiation linearization remainder by the actual finite collision difference on the saved simultaneous state, preserving its prescribed baryon/momentum and solved energy/H; determine whether a nonlinear correction is needed before another charge claim.",
+  "scope": "Same declared native-interpolation EOS and moving packet owner. Fixed native-minus-table forcing cancels from this comparison; its derivative error relative to the underlying microscopic EOS is separate and still open.",
+  "exact_state": "For each saved time use the prescribed Phase141 B/S/inventory but the actual Phase142 simultaneous E/H and angular photons. Do not silently replace prescribed B/S by the later free-material output.",
+  "reuse": "All saved17 states,531 cells,8 angles,152 frequencies. No trajectory, native inverse, EOS table or coefficient bank replay.",
+  "budgets": {
+    "pilot_seconds": 65,
+    "production_seconds": 180,
+    "CPU_threads": 1,
+    "virtual_GiB": 3
+  },
+  "forecast": "Measure0/8/16 point costs, reuse them, and require2x maximum cost times14 remaining plus10s under180s. Do not run a response until the exported error is resolved and a measured response plan is registered.",
+  "method": "Compute coefficient differences before applying them to the background occupation, retain the new coefficient acting on the actual occupation increment, and subtract the stored linear tangent response. Evaluate half amplitude to distinguish a finite remainder from unresolved arithmetic.",
+  "gates": {
+    "base_owner": 1e-09,
+    "material_support": true,
+    "photon_negativity_energy": 1e-12,
+    "finite_difference_resolution": 0.002,
+    "number": 1e-10
+  },
+  "stop": "Stop on positivity, coefficient-owner disagreement or unresolved difference; repair that owner before propagation. No clipping, amplitude reduction as a replacement result, tolerance relaxation, grid expansion or automatic full-response replay.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_finite_collision_remainder.py": "ee25dc0ea47dd71c6c24c4706d6687f5e07bbcfee760fb87fad00ce0c3b0e3d0",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_finite_motion_feedback.py": "476c179fa4dd469dedb1fe82127c6c5d8d4ead8ee9c26e6d34e3a21a9258adda",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_matter_photon_feedback.py": "19acadd46d8f6059406fc3614c151de187323cec68f73faf9319e663f0466fb9",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/audit.json": "7d7210ec0208979ea28ec5c7608fe7e598b832eeabd5de4a90377eee09ee3bc5",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/steps-128-reference-128.npz": "37961e19559301b41fe6a4ffdf920eb3311498f985b0bd792972125bdfe96214",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/steps-128-reference-128.npz": "657db7cc4926f95ed125e9fa7bc15af9dc0c8104f77f27d980f57dd5e9e6f8a4"
+  }
+}

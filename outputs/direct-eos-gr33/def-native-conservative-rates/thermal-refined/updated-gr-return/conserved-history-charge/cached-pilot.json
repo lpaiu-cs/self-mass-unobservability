@@ -1,0 +1,172 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "eligible": true,
+  "totals": {
+    "deep": 323,
+    "atmosphere": 3017
+  },
+  "remaining": {
+    "deep": 302,
+    "atmosphere": 3008
+  },
+  "exact_cached_states": 19,
+  "native_calls": 187,
+  "root_seconds": {
+    "atmosphere": [
+      0.06019217599998683,
+      0.08066797799995129,
+      0.08715174100007061,
+      0.09063182699992467,
+      0.11254014700000425,
+      0.09046001800004433,
+      0.06472063999990496,
+      0.09499814000002971,
+      0.12729392899996128
+    ],
+    "deep": [
+      0.07914292499992825,
+      0.1885822660000258,
+      0.04744943800005785
+    ]
+  },
+  "forecast_upper_wall_seconds": 399.1704476186046,
+  "forecast_upper_worker_seconds": 879.7039655277827,
+  "reseed": [
+    {
+      "kind": "atmosphere",
+      "it": 0,
+      "cell": 127,
+      "reseed_relative": 1.34781075189494e-13
+    },
+    {
+      "kind": "atmosphere",
+      "it": 8,
+      "cell": 176,
+      "reseed_relative": 1.3600232051658168e-13
+    },
+    {
+      "kind": "atmosphere",
+      "it": 16,
+      "cell": 222,
+      "reseed_relative": 1.149080830487037e-13
+    },
+    {
+      "kind": "deep",
+      "it": 0,
+      "cell": 0,
+      "reseed_relative": 1.425526363618701e-13
+    },
+    {
+      "kind": "deep",
+      "it": 8,
+      "cell": 9,
+      "reseed_relative": 1.2856382625159313e-13
+    },
+    {
+      "kind": "deep",
+      "it": 16,
+      "cell": 18,
+      "reseed_relative": 1.191269305422793e-13
+    }
+  ],
+  "active_atmosphere_per_time": [
+    128,
+    139,
+    145,
+    150,
+    155,
+    161,
+    166,
+    172,
+    177,
+    183,
+    189,
+    194,
+    200,
+    206,
+    212,
+    217,
+    223
+  ],
+  "seconds": 13.079855616000032,
+  "source_sha256": "07c45d71c3519fad41ca4d87bd914b94198f7e972f884d62c708d25bfd04eb9b",
+  "cache_hits": 18,
+  "equivalence_checks": [
+    {
+      "kind": "atmosphere",
+      "it": 0,
+      "cell": 0,
+      "uncached_pressure_relative": 0.0
+    },
+    {
+      "kind": "atmosphere",
+      "it": 0,
+      "cell": 64,
+      "uncached_pressure_relative": 0.0
+    },
+    {
+      "kind": "atmosphere",
+      "it": 0,
+      "cell": 127,
+      "uncached_pressure_relative": 0.0
+    },
+    {
+      "kind": "atmosphere",
+      "it": 8,
+      "cell": 0,
+      "uncached_pressure_relative": 0.0
+    },
+    {
+      "kind": "atmosphere",
+      "it": 8,
+      "cell": 88,
+      "uncached_pressure_relative": 0.0
+    },
+    {
+      "kind": "atmosphere",
+      "it": 8,
+      "cell": 176,
+      "uncached_pressure_relative": 0.0
+    },
+    {
+      "kind": "atmosphere",
+      "it": 16,
+      "cell": 0,
+      "uncached_pressure_relative": 0.0
+    },
+    {
+      "kind": "atmosphere",
+      "it": 16,
+      "cell": 111,
+      "uncached_pressure_relative": 0.0
+    },
+    {
+      "kind": "atmosphere",
+      "it": 16,
+      "cell": 222,
+      "uncached_pressure_relative": 0.0
+    },
+    {
+      "kind": "deep",
+      "it": 0,
+      "cell": 0,
+      "uncached_pressure_relative": 0.0
+    },
+    {
+      "kind": "deep",
+      "it": 8,
+      "cell": 9,
+      "uncached_pressure_relative": 0.0
+    },
+    {
+      "kind": "deep",
+      "it": 16,
+      "cell": 18,
+      "uncached_pressure_relative": 0.0
+    }
+  ],
+  "cached_pilot_native_calls": 65,
+  "cached_pilot_seconds": 47.02633096500006,
+  "cache_source_sha256": "17995179fe88b556cebe31c525b4c153c39e1354fbc24343a08f08dd89bb9e20"
+}

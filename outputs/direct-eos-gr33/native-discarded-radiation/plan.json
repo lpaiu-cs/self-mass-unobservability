@@ -1,0 +1,44 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "971b1a114",
+  "claim": "Replace the old no-subsequent-radiative-energy-growth assumption by a conserved-baryon incident-energy bound, and propagate it into direct scalar, metric stress and photon mass normalization.",
+  "decision": "Does the passive radiative discarded-material uncertainty fit the original2percent comparison scale of the fixed-mass scalar signal? If not, do not enlarge a physical trajectory automatically.",
+  "representation": "Use all original-step discard ledgers and17-knot piecewise-linear saved photon fields, plus the absolute latest native photon increment. Bound every retained atomic level and arbitrary neutral fractions; do not extrapolate the cold EOS below its support.",
+  "source_scope": "Passive reservoir remains within the original compact atmosphere during the saved horizon; its photons are freely outgoing once they cross the original boundary. This is a defined sensitivity subproblem, not a verified trajectory of the deleted fluid. The sampled photon reconstruction is an input envelope, not a uniform bound on the live coupled solution. Pressure-work, changed-photon interactions with retained gas, continuum EOS, and nonlinear GR remain outside.",
+  "budget": {
+    "seconds": 90,
+    "CPU_threads": 1,
+    "virtual_GiB": 3,
+    "new_native_states": 0,
+    "new_trajectories": 0
+  },
+  "forecast": "Only two saved photon histories and one existing model construction. No physical integration;90s hard cap includes scientific imports, audit and saved-array reads, excludes initial SHA checks.",
+  "gates": {
+    "native_polynomial": 1e-12,
+    "ledger_monotone": 0.0,
+    "passive_scalar_fraction": 0.02
+  },
+  "stop": "One bounded readout; preserve failed gate. No additional mesh, clock, horizon, floor or acceptance changes.",
+  "bindings": {
+    "verification/def_native_discarded_radiation.py": "427fdead3f245b0751c976f790a36b171f5841b98e8ceb3b2b2f53d1441df3aa",
+    "verification/def_native_charge_null_infinity.py": "4291ee4e8d53156aeb0bf9876e61cdb9f7113b074e9f255d0044de9e04b0c8b0",
+    "outputs/direct-eos-gr33/native-charge-null-infinity/production.json": "e0b5f8d4dd98ffa23855cea9a824590d39eb1424a6db608ad567b1401825369d",
+    "outputs/direct-eos-gr33/native-charge-null-infinity/audit.json": "82647e97f4e2fae9567cc9378199ba25166c0e489ace7539fd0a53b54b12623a",
+    "outputs/direct-eos-gr33/def-native-global-scalar-closure/bound.json": "39cbee9c32b2d16c239d8ae14f188be2177e53bca27fe0ec4d8df88a29a66f58",
+    "verification/def_native_material_join.py": "be1bcb8ccabcf1e980210f95db4053627eccd31466659e3237479feed495b505",
+    "verification/def_native_atmosphere_spectrum.py": "f69fd6e07670ee25667bb03645cc1360ae43733e8512d7b956a95a27ab96c94c",
+    "verification/verify_native_updated_gr_return.py": "d2c456a74a41ee97b07f026effdadd08c72d583b059420e933b8d72094c719d9",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/evolution/history-64.npz": "2dea1709b042c98a7ed76f7994151cc82634efa23519a924b55cf20f75029575",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/background/coupled-64.npz": "500cf9d320a5955c37137eb052f5341341b1e7df883db5dac1c1f922bc577220",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/finite-collision/extended/applied/total-photons/steps-64-reference-128.npz": "57c36259cec7e520ec804b15ddf004db217484e978d99e489c2d80b1dbf595c1",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/evolution/history-128.npz": "3237f7e06f62aa217962b19e5bda0f2bcb98d65e19e4681257e2937b5a3a2542",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/background/coupled-128.npz": "af1a02e92d505da3e0d8c033ffc806ae0c4465e5b5f318b54d23c18f54672350",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/finite-collision/extended/applied/total-photons/steps-128-reference-128.npz": "98317c46660725678e33b1816a67b0f71772d5846aa0b8bf1e598870adc576ea",
+    "outputs/direct-eos-gr33/native-discarded-radiation/atomic.f": "195882c5eee6fdba7d762178b9760f65931f8e173200f33d36297151ce026619",
+    "outputs/direct-eos-gr33/native-discarded-radiation/bridge.f90": "3b201eb6ccc2e6a864a327e66d419d20302a78d4ff5c93f38d266d1711730e8b",
+    "outputs/direct-eos-gr33/native-discarded-radiation/PARAMS.FOR": "d51d12407b6211de0944d3b5422a03bb9c416d47826c016f59fa5dff641c0008"
+  },
+  "external_inputs": {
+    "/home/lpaiu/work/direct-eos-gr33/photon-hhe-coupled/atomic.so": "6979f733695aead43e4913e1e349b964ec2a410a8e70d681b12bdab36b47664e"
+  }
+}

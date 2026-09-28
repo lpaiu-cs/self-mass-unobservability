@@ -1,0 +1,63 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "controls": {
+    "high": {
+      "time": {
+        "normalized_standalone": 5.150012512796792e-05,
+        "homogeneous_mass_cm": 3.3003781251598125e-05,
+        "compact": 5.150292177745005e-05
+      },
+      "angular": {
+        "normalized_standalone": 2.4293717251798625e-16,
+        "homogeneous_mass_cm": 0.0,
+        "compact": 0.0
+      },
+      "radial": {
+        "normalized_standalone": 1.3054251662063118e-12,
+        "homogeneous_mass_cm": 3.943142395442866e-08,
+        "compact": 5.843830441145254e-16
+      }
+    },
+    "low": {
+      "time": {
+        "normalized_standalone": 0.003877670677595268,
+        "homogeneous_mass_cm": 0.01244910233059953,
+        "compact": 0.00011980263198408426
+      },
+      "angular": {
+        "normalized_standalone": 1.7069462941556012e-12,
+        "homogeneous_mass_cm": 0.0,
+        "compact": 0.0
+      },
+      "radial": {
+        "normalized_standalone": 7.212894686641843e-11,
+        "homogeneous_mass_cm": 2.2678817860880056e-10,
+        "compact": 2.456408327315444e-16
+      }
+    }
+  },
+  "exact_rational_total_relative": [
+    4.030861665646925e-21,
+    4.030521061731415e-21
+  ],
+  "exact_rational_low_increment_relative": [
+    3.9064461870581804e-17,
+    3.873373811600255e-17
+  ],
+  "pure_mass_and_arrival_sign_controls": true,
+  "conditional_compact_sign_survives_frozen_exterior": true,
+  "no_new_physical_steps": true,
+  "physical_energy_conversion_and_dynamic_exterior_complete": false,
+  "background_mass_remap_complete": false,
+  "physical_final_charge_solved": false,
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false,
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/verify_returned_exterior.py": "ef2d7dad3235adaa19362f2ff3a0eb49c331d160412821fed464e93ddebc23ab",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/read_returned_exterior.py": "150dd3de2d879346911a6d10fc6376737f2daca9b33cebd9908311542192b364",
+    "native-returned-exterior252-work/common/plan.json": "6f924f65c938d63c67ac292e61701b79912e84c755177ae49659ecfef89d7c14",
+    "native-returned-exterior252-work/common/result.json": "9c306c0c1e79edfe3155f317a9d173f09b25faca8316447004d187b8c61982ed",
+    "native-returned-exterior252-work/common-receipt.json": "2cc55999e929d8bb0bab4954994aea29724bf194b85091951fcc88e3acfd2773"
+  }
+}

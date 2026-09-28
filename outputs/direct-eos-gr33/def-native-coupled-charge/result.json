@@ -1,0 +1,75 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "controls": {
+    "wave_space": 4.869639878793329e-06,
+    "wave_time": 0.001996488888806495,
+    "wave_history": 0.0019256608508258304,
+    "wave_saved_cadence": 0.007103567963500087,
+    "wave_quadrature": 7.288938944989761e-06
+  },
+  "paths": {
+    "(448, 64)": {
+      "order": 8,
+      "history": "linear",
+      "stride": 1,
+      "endpoint": 2.241240219741392e-27,
+      "maximum_future_source_seconds": -2.0696900920533223e-10
+    },
+    "(448, 128)": {
+      "order": 8,
+      "history": "linear",
+      "stride": 1,
+      "endpoint": 2.2367745242569476e-27,
+      "maximum_future_source_seconds": -2.0696900920533223e-10
+    },
+    "(896, 128)": {
+      "order": 8,
+      "history": "linear",
+      "stride": 1,
+      "endpoint": 2.2367854165964126e-27,
+      "maximum_future_source_seconds": -1.0348450481950655e-10
+    },
+    "wave_history": {
+      "order": 8,
+      "history": "cubic",
+      "stride": 1,
+      "endpoint": 2.2324781264879747e-27,
+      "maximum_future_source_seconds": -1.0348450481950655e-10
+    },
+    "wave_saved_cadence": {
+      "order": 8,
+      "history": "linear",
+      "stride": 2,
+      "endpoint": 2.252674573822971e-27,
+      "maximum_future_source_seconds": -1.0348450481950655e-10
+    },
+    "wave_quadrature": {
+      "order": 4,
+      "history": "linear",
+      "stride": 1,
+      "endpoint": 2.23678548485851e-27,
+      "maximum_future_source_seconds": -3.618783033648709e-10
+    }
+  },
+  "endpoint_direct_normalized": 2.2367854165964126e-27,
+  "peak_direct_normalized": 2.2367854165964126e-27,
+  "endpoint_components": [
+    2.2393786674827463e-27,
+    -1.2473580541637975e-37,
+    -2.597879229353238e-30,
+    4.628467755829575e-33
+  ],
+  "source_seed_relative": 1.3668050591548478e-11,
+  "seconds": 4.908551183,
+  "new_fluid_steps": 0,
+  "actual_coupled_sources_applied": true,
+  "conditional_inner_baryon_debit": true,
+  "photon_metric_sources_exported": true,
+  "full_interior_mechanics": false,
+  "radial_frequency_certification": false,
+  "full_GR_scalar_feedback": false,
+  "physical_Bondi_mass_normalization": false,
+  "final_charge_solved": false,
+  "full_goal_complete": false
+}

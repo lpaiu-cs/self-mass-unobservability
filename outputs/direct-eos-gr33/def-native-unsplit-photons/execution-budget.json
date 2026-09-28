@@ -1,0 +1,15 @@
+{
+  "classification": "Counterexample candidate",
+  "eligible": true,
+  "previous_production_cap_seconds": 120,
+  "previous_forecast_eligible": false,
+  "forecast_seconds": 94.22822841599987,
+  "forecast_upper_seconds": 188.45645683199973,
+  "production_seconds": 200,
+  "CPU_threads": 1,
+  "memory_GB": 2,
+  "reason": "Both real8/16angle pilots pass. Their measured full-path estimate is94.2s, with188.4s at the declared2x margin. Set a200s hard cap for precisely the same three paths; no physical/grid/tolerance expansion.",
+  "stop": "Any failed path or200s cap terminates production. No extra time paths or automatic cap increase.",
+  "pilot_replay": "Replay only the two accepted startup steps per pilot to obtain a complete cumulative boundary-energy ledger; their combined measured cost is1.22s.",
+  "source_sha256": "b20eb399c9f656de60512a397b7c6f53256a1b8759678c2cb3bbca2822e6e637"
+}

@@ -1,0 +1,35 @@
+{
+ "classification": "Counterexample candidate",
+ "kind": "levels",
+ "variant": "ploff",
+ "directory": "/home/lpaiu/work/direct-eos-gr33/photon-eos-levels-ploff",
+ "patches": {
+  "bridge.F90": "qstar_calc PL flag off (MDH kept)"
+ },
+ "seconds": 0.7632639839999911,
+ "outputs": {
+  "/home/lpaiu/work/direct-eos-gr33/photon-eos-levels-ploff/levels.so": "4a8d94b6c22cc133be72ba6b83c5ef7c3441d251c183a35bdd53090815bba1a7"
+ },
+ "objects": {},
+ "log": [
+  {
+   "command": [
+    "gfortran",
+    "-cpp",
+    "-O2",
+    "-fPIC",
+    "-shared",
+    "-fcheck=all",
+    "-I/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src",
+    "bridge.F90",
+    "-L/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src",
+    "-Wl,-rpath,/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src",
+    "-lfree_eos_direct24_molecular_spectral",
+    "-o",
+    "levels.so"
+   ],
+   "returncode": 0,
+   "output": ""
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "covered_actual_states": 3206,
+  "relative_Q_radius": "1/256",
+  "phase_upper": "51107246483604285097553463585424587123/42535295865117307932921825928971026432",
+  "maximum_Q_angle_upper": "170807528192082922133520827560437841527/43556142965880123323311949751266331066368",
+  "positive_inner_factor_lower": "88789794250887251106673507258337679135/2722258935367507707706996859454145691648",
+  "uniform_W0_lower": "208204503052375983666913837668151674565/3064991081731777716716694054300618367237478244367204352",
+  "uniform_real_response_upper_coefficient": "170671674528398116638047712933354533993/85070591730234615865843651857942052864",
+  "uniform_tail_upper_coefficient": "336610811657877835282399363189751464733/3213876088517980551083924184682325205044405987565585670602752",
+  "positive_real_response_lower_coefficient": "54322284143473672143041614391502174167/24519928653854221733733552434404946937899825954937634816",
+  "display_only": {
+    "phase_upper": 1.201525590551181,
+    "positive_coefficient": 2.2154340214580883e-18,
+    "tail_coefficient": 1.0473671118201065e-22
+  },
+  "positive_kernel": "For 0<u<1, K_Q du=(Q/gamma)*[a(u)+Q^2*b(u)]du with a=u^2*h, b=u^2*j, h=atanh(u)/u>0 and j=1-(1-u^2)*h>0. For u>1, a=u*atanh(1/u)>0 and b=u^2+u*(u^2-1)*atanh(1/u)>0. Thus |K_Q|<=kappa^3*K_a and |K_Q|>=cos(2theta)/kappa*K_a. For Im Q>=0 its phase lies in [0,3theta]; conjugation handles Im Q<0.",
+  "positive_inner": "Set a=q0*sqrt(1-2r), t_a=(sqrt(1+a^2*u^2)-1)/beta. Until t_a=max(eta,0)+128 the occupation phase lies in [-Phi,0], Phi bounded by the saved phase_upper<pi/2. Hence Re(K_Q*q)>=L*K_a*f(t_a-eta), with L=cos(Phi)*cos(2theta)/kappa*exp(-(kappa^2-1)*(24+128)).",
+  "uniform_lower": "The positive kernel gives K_p>=p^2/(gamma*max(1,a^2)) on both p<a and p>=a. On p in [sqrt(beta_min),2sqrt(beta_min)], t<=2 and gamma<=sqrt(1+4beta_min), so S(a)>=W0_lower/max(1,a^2) uniformly over the full parameter box.",
+  "uniform_upper": "The earlier bound gives S(a)<=U0. For u<=1/2 use h<=1/(1-u^2), j<=(2/3)*u^2/(1-u^2) to obtain a^2*K_p<=(4/3)*p^2*gamma. Outside the cusp band use a^2*K_p<=(32/3)*p^2*gamma; inside it the log integral gives 48*sup(p^3*gamma*f). Thus a^2*S(a)<=U2=(32/3)*integral p^2*gamma*f dp+48*sup(p^3*gamma*f), and S(a)<=max(U0,U2)/max(1,a^2).",
+  "upper_moments": "For eta=0,b=2beta_max, use the same split at t=1. The half-power tail moments are bounded by sqrt(E[t^(2m)]*E[t^(2m+1)]); integer moments are incomplete exponential polynomials. Expand p^2*gamma dp <= b*sqrt(2b)*(t^1/2+2b*t^3/2+b^2*t^5/2)dt+b^2*(t+2b*t^2+b^2*t^3)dt. For the supremum expand p^3*gamma <= b*sqrt(2b)*(2t^3/2+3b*t^5/2+b^2*t^7/2)+b^2*(2t^2+3b*t^3+b^2*t^4), and use sup(t^s*f(t))<=s^s.",
+  "tail": "For t_a>=max(eta,0)+128, f(t_a-eta)<=2*exp(eta-(max(eta,0)+128)/2)*f(t_a/2)<=2exp(-52)*f(t_a/2). The real tail is <=Ttail/max(1,a^2), and the complex tail is <=(5/3)*kappa^3 times this. The same positive kernel bound now has no extra A term.",
+  "final_bound": "Re S(Q) >= [L*W0_lower-(L+(5/3)*kappa^3)*Ttail]/max(1,a^2) >0. Also Re(Q^2/B)>=q0^2*(1-2r)/B>0 for every B>0. Therefore Q^2/B+S(Q) never vanishes on these disks, for every real q0>0 and throughout the declared continuum parameter box.",
+  "normalized_denominator": "Divide the raw positive S coefficient by the exact positive Sref. The lower bound is q0^2*(1-2r)/(Bmax*Sref)+Cpositive/(Sref*max(1,q0^2*(1-2r))). Combine with the earlier six complex majorants and Cauchy/Gauss for the outer integrand.",
+  "actual_outer_integral_certified": false,
+  "physical_EOS_certified": false
+}

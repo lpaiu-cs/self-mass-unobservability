@@ -1,0 +1,49 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "bounds": {
+    "mixed_mass_source": 7.556377153686864e-58,
+    "mixed_constraint_and_static_gradient": 3.436359106413396e-77,
+    "metric_inner_boundary": 1.1280670301105818e-59,
+    "metric_cone_edge": 1.514150292448704e-57,
+    "metric_smooth": 1.3012986907617919e-61,
+    "finite_Born_source": 8.354965462740049e-69,
+    "emitted_radiation_source": 1.7941221872690894e-68,
+    "additional_potential": 4.888815386835461e-63,
+    "free_scalar_norm": 2.2811988080138687e-57,
+    "potential_contraction": 2.1430858601669983e-06,
+    "intermediate_mass_constraint_cm": 2.572091660109367e-45,
+    "required_inner_port_at_T_cm": 1.578036845041624e-53,
+    "emitted_scalar_mass_cm": 1.93706828613621e-54
+  },
+  "new_scalar_charge_envelope": 2.2812036968292556e-57,
+  "new_mass_and_scalar_flux_charge_envelope": 2.6565975540080177e-61,
+  "new_sector_charge_envelope": 2.2814693565846563e-57,
+  "combined_selected_exterior_envelope": 1.8119456624322232e-53,
+  "combined_envelope_over_selected": 0.007140421839501695,
+  "conditional_selected_interval": [
+    -2.555708555924193e-51,
+    -2.519469642675548e-51
+  ],
+  "selected_sign_survives": true,
+  "finite_T_selected_mass_port_interval_cm": [
+    -3.539414890019726e-50,
+    -1.5398290888839834e-50
+  ],
+  "finite_T_selected_mass_port_excludes_zero": true,
+  "mass_port_scope": "Existing stored paired port plus the Phase164 photon sector and this generated-scalar sector at the actual finite coordinate endpoint T. Other signed/input/homogeneous/initial-matching sectors remain open; this is not a full GR no-go theorem.",
+  "outgoing_scalar_energy_channel_included": true,
+  "generated_scalar_sector_enclosed": true,
+  "prescribed_continuation": "Only the outgoing observer strip t>=0,t-x/c<=T is bounded. Exterior scalar fields there use the saved compact source times and paired photons. Integrate the mixed constraint from larger radii toward the inner interface, so no unmeasured later inner history is substituted. The resulting particular solution has zero extra asymptotic mass and a required inner port, whose matching is still open.",
+  "exclusions": [
+    "Homogeneous background mass-port scalar forcing and a conserved physical future continuation.",
+    "Direct metric actions of later signed photons, exterior input from actual material returns and all mutual material feedback of the newly bounded waves.",
+    "Initial ADM/momentum/flux matching, full direct-field/EOS/derivative/spatial/boundary/nonlinear errors and static/observational comparison."
+  ],
+  "original_point_verdict": "FAILED and unchanged",
+  "additional_exterior_mixed_stress_closed": false,
+  "exact_ADM_conservation_verified": false,
+  "physical_final_charge_solved": false,
+  "full_goal_complete": false,
+  "scope": "Contribution envelope for the zero-extra-asymptotic-mass exterior scalar particular solution and outgoing scalar flux. Its required inner port is exposed, not assumed matched. The interval excludes that matching correction, body-response and full physical errors."
+}

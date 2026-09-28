@@ -1,0 +1,9 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "Independent primitive rho and neutral-fraction reconstruction produced negative neutral H in the first pilot, after the saved0.548163ms state. Preserve the original source and checkpoint.",
+  "repair": "Transport D*y with the exact same mass flux and an upwind cell neutral fraction. Limit the combined transport/reaction Euler decrement of each species to80percent and enforce the admissible second-stage step in SSP RK2. No abundance clipping or change to reaction rates, EOS, physical domain, horizon or gates.",
+  "approximation": "The added passive-species advection is first order. Judge the reactive output and abundance through the same448/896 comparison.",
+  "reserved_failed_seconds": 10,
+  "remaining_flow_seconds": 170,
+  "source_sha256": "b062737c84ac886556ab031a0c855fa709e21f664d58b4314f5615e33cdeeb47"
+}

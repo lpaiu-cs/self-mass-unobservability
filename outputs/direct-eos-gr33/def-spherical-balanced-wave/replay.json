@@ -1,0 +1,63 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "paths": [
+    {
+      "classification": "Counterexample candidate",
+      "path": "outputs/direct-eos-gr33/def-spherical-coupled/path-0/endpoint.npz",
+      "passed": true,
+      "native_residual_norm": 0.0004417437286060893,
+      "scalar_residual": 0.0,
+      "scalar_relative_balance": 0.0,
+      "maximum_array_relative_difference": {
+        "rho": 0.0,
+        "T": 0.0,
+        "P": 0.0,
+        "u": 0.0,
+        "rest": 0.0,
+        "m": 0.0,
+        "mf": 0.0,
+        "a": 0.0,
+        "N": 0.0,
+        "Q": 0.0,
+        "aux": 0.0,
+        "dU": 0.0,
+        "psi": 0.0,
+        "Pi": 0.0,
+        "Phi": 0.0,
+        "Ephi": 0.0
+      },
+      "native_arguments_exact_cache_hit": true,
+      "new_native_EOS_calls": 0
+    },
+    {
+      "classification": "Counterexample candidate",
+      "path": "outputs/direct-eos-gr33/def-spherical-balanced-wave/endpoint.npz",
+      "passed": true,
+      "native_residual_norm": 0.00036563317889059675,
+      "scalar_residual": 5.594360052286514e-25,
+      "scalar_relative_balance": 1.325350661916879e-19,
+      "maximum_array_relative_difference": {
+        "rho": 0.0,
+        "T": 0.0,
+        "P": 0.0,
+        "u": 0.0,
+        "rest": 0.0,
+        "m": 0.0,
+        "mf": 0.0,
+        "a": 0.0,
+        "N": 0.0,
+        "Q": 0.0,
+        "aux": 0.0,
+        "dU": 0.0,
+        "psi": 0.0,
+        "Pi": 0.0,
+        "Phi": 0.0,
+        "Ephi": 0.0
+      },
+      "native_arguments_exact_cache_hit": true,
+      "new_native_EOS_calls": 0
+    }
+  ],
+  "scope": "Independent reconstruction from the bound initial/native arrays and saved primitive/field state; recompute mass, lapse, frame maps, fields, fluxes and all native finite residuals. Exact native query keys are required. No new EOS evaluations, time-convergence or continuum proof."
+}

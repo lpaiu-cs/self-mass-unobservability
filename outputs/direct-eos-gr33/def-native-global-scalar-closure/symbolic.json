@@ -1,0 +1,9 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "shell": "A packet with Killing energy e has integral S_stress dx=-e*Phi*(1-mu^2). Its compensating body debit gives S_mass dx=-2*e*Phi/(r*b)dr behind that packet.",
+  "delay": "delta(r,mu0)=integral(r0,r)[1/mu-1]dr/(c*N*sqrt(b)) is the delay to null infinity relative to radial propagation. It stays finite; do not subtract two divergent flight times.",
+  "null_infinity": "U_mass(u)=-c*G/c^4*integral dmu dr Phi/(r*b)*H2(u-delta,mu); U_stress(u)=-G/(2*c^4)*integral dmu dr Phi*(1-mu^2)/(N*sqrt(b)*mu)*H1(u-delta,mu). H1/H2 are the first/second primitives of actual outgoing Killing luminosity.",
+  "cone": "For zero initial increments and no incoming wave, sources with optical x<x_outer-c*T cannot affect null-infinity retarded time corresponding to outer time T. For positive initial m and lapse<=1, inner travel time is at least (r_outer-r_inner)/c.",
+  "limits": "Declared first variation and paired conserved exterior photons. Source embedding and nonlinear/constitutive errors are not removed by this algebra."
+}

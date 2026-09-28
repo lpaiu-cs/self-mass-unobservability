@@ -1,0 +1,32 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Resolve whether the consistent-mass p4 response agrees with p6 for the identical conservative source, after the GLL/consistent-mass contrast failed.",
+  "rationale": "Paired GLL p2/p4 agreement was insufficient. Use the consistent positive variational mass as reference; preserve the failed GLL control. This is one explicit budget reassessment, not a sequence of local patches or retuned sources.",
+  "changed": "Degree6 and positive8-point mechanical quadrature. The p6 mass needs degree12 products, so the original6-point rule is not sufficient. Retain original6-point heat volumes and all source/profile/background/horizon data.",
+  "paths": [
+    "consistent-p6-8 pilot",
+    "consistent-p6-32",
+    "consistent-p6-64"
+  ],
+  "gates": {
+    "temperature": 0.02,
+    "velocity": 0.03,
+    "scalar": 0.03
+  },
+  "comparisons": "Time: consistent p6 32/64. Space: saved consistent p4-64 versus consistent p6-64. Source and mass-rule failures stay separate.",
+  "prior_accounted_seconds": 139.918208683,
+  "prior_audit_allowance_seconds": 5,
+  "total_budget_seconds": 240,
+  "stop": "Use measured pilot to decide within remaining budget. No p8, more cells, changed source slopes or longer horizon follows this test.",
+  "scientific_boundary": "Convergence of this fixed source approximation cannot certify the actual physical subcell heat profile or moving atmosphere.",
+  "bindings": {
+    "verification/def_native_source_order.py": "06f22f49f5ccf3f38360b763a128051343a672f5e7cd8f9d2bc6dfabdd412b97",
+    "verification/def_native_conservative_source.py": "d9a336e073116fb06df8ebd3c8a1744a40c48b1564bf7df84aeae968ed6083c2",
+    "outputs/direct-eos-gr33/def-native-conservative-source/control-result.json": "2924c84669c1e701abf65f61fa958eb294e9087a8e8a4b15f5bf173877daeeb2",
+    "outputs/direct-eos-gr33/def-native-conservative-source/consistent-p4-64.npz": "7507bb25fab9c10b9a945744017d85dd74a128541ce010c5fe30436be965dbe7"
+  },
+  "resource_failure_allowance_seconds": 10,
+  "repair": "Release the assembly-only V/D quadrature caches before evolution. The initial p6 run reached the5GB virtual-address cap during first-stage scaling before completing the pilot. No numerical gate, source, degree, horizon or memory budget is changed.",
+  "second_resource_failure_and_diagnosis_allowance_seconds": 10,
+  "linear_ordering_repair": "Use SuperLU COLAMD for the coupled block. Keep the separate GR solve unchanged. The cache-only repair still failed during the first LU factorization at5GB; measured post-assembly VmRSS was0.452GB and VmSize0.699GB. This targets LU fill, not physical memory-budget expansion. All equation residual checks remain."
+}

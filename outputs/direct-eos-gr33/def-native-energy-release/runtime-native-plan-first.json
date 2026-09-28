@@ -1,0 +1,24 @@
+{
+  "classification": "Counterexample candidate",
+  "prior_flow_stopped": true,
+  "prior_failed_cell": 34,
+  "prior_failed_density_ratio": 0.0011611891163375572,
+  "prior_temperature_boundary_residual": 0.0012215893141521556,
+  "reason": "The table ceiling, not the native EOS or conservation equations, truncated an actual newly occupied dilute state. Keep the originally registered native100K-1e7K domain, query only actual trajectory requests, and persist native column additions across the three paths.",
+  "additional_native_calls_across_all_paths": 3000,
+  "remaining_production_seconds": 233,
+  "native_midpoint_gate": 0.0005,
+  "independent_gate": 0.002,
+  "previous_failed_process_seconds": [
+    1.7606941,
+    4.7718843
+  ],
+  "reserved_failed_seconds": 7,
+  "unchanged": [
+    "density grid",
+    "fluid grid",
+    "horizon",
+    "conservation gates"
+  ],
+  "no_residual_heat": true
+}

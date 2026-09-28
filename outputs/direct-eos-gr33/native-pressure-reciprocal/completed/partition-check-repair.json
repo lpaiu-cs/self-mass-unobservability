@@ -1,0 +1,10 @@
+{
+  "classification": "Counterexample candidate",
+  "correction": "Saved material arrays are alreadyfloat128. The checker divided float64 collision arrays before promotion. That checker-only conversion reproduces7.13120989713972e-8exactly. Promote before division; restore the unchanged original Response constructor. No photon step was taken and no physical failure is inferred from the rejected check.",
+  "used_check_seconds": 25.983380814999997,
+  "remaining_check_cap": 30,
+  "original_check_cap": 60,
+  "source_sha256": "d371a800df73f359132b6704d740ba9bfc92cbeced46b63a54060b0031763f40",
+  "rejected_precision_producer": "6fd116ba477d3b0b556951405ce030e816439a22f39473b2369a786e027326e8",
+  "dtype_evidence_sha256": "bd1790a5736a4d9762b2ac975324e572a887a26fb2aaebb560b20ba352ce1302"
+}

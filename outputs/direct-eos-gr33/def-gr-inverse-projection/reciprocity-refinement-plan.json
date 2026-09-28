@@ -1,0 +1,21 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Determine whether storing the inverse-solve iterate in double precision, rather than extended precision, limits reciprocity despite tiny backward residuals.",
+  "methods": [
+    "original coefficients, extended iterates",
+    "symmetric coefficients, extended iterates"
+  ],
+  "fixed": "Same64 columns and input;8 refinement corrections maximum; no time evolution.",
+  "gates": {
+    "inverse_symmetry": 1e-12
+  },
+  "budget": {
+    "hard_seconds": 90,
+    "CPU_threads": 1,
+    "new_EOS_calls": 0
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-inverse-projection/reciprocity-refine.py": "8b904f17efa8fa61375efbb14d50f36794176feb789da50581a9eeae1c0876ef",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-inverse-projection/reciprocity.json": "dcfa48c254f05ec277fa080ec2645c07d6a1f72419619ab9877f88b9bb8895ac"
+  }
+}

@@ -1,0 +1,1538 @@
+{
+  "classification": "Counterexample candidate",
+  "completed": true,
+  "passed": true,
+  "comparisons": [
+    {
+      "readout": "temperature",
+      "odd_rms": [
+        2.125470116611257e-07,
+        1.4993096659620767e-07,
+        1.3135347138306915e-07
+      ],
+      "even_rms": [
+        8.012334969746952e-10,
+        4.2701803770322725e-10,
+        3.179674633947374e-10
+      ],
+      "time_differences": [
+        6.399001044657832e-08,
+        1.9364159392895837e-08
+      ],
+      "time_order": 1.7244578272569144,
+      "signal_over_last_difference": 6.783329382800837,
+      "passed": true
+    },
+    {
+      "readout": "velocity",
+      "odd_rms": [
+        6.951579112844153e-09,
+        6.251687406448423e-09,
+        6.136524065071582e-09
+      ],
+      "even_rms": [
+        4.656701848961459e-11,
+        4.0098750403447086e-11,
+        3.920702631342073e-11
+      ],
+      "time_differences": [
+        1.6982780114800888e-09,
+        4.469503428426472e-10
+      ],
+      "time_order": 1.9258861914038368,
+      "signal_over_last_difference": 13.72976699389623,
+      "passed": true
+    },
+    {
+      "readout": "scalar",
+      "odd_rms": [
+        1.9227544231294342e-06,
+        1.9227544239402667e-06,
+        1.922754424010481e-06
+      ],
+      "even_rms": [
+        9.792712297419907e-18,
+        5.6818006097528224e-18,
+        4.9416443510306444e-18
+      ],
+      "time_differences": [
+        2.1459957043720065e-14,
+        5.086846369353043e-15
+      ],
+      "time_order": 2.076803759918311,
+      "signal_over_last_difference": 377985550.2604891,
+      "passed": true
+    }
+  ],
+  "paths": [
+    {
+      "label": "minus",
+      "steps": 12,
+      "completed_steps": 6,
+      "history": [
+        {
+          "step": 1,
+          "native_norm": 0.008602693507353317,
+          "scalar": 1.1754355761047464e-33,
+          "mass_work_identity": 1.5151861558362074e-16,
+          "baryon": 8.41766186808475e-20,
+          "isotope": 7.702087708125789e-20,
+          "boundary_error": 1.0587911840678754e-22,
+          "clock_work_erg": 1.5638350737936113e+45,
+          "cone_speed": 0.18089176442603977
+        },
+        {
+          "step": 2,
+          "native_norm": 0.3233894810334951,
+          "scalar": 3.081487911019577e-33,
+          "mass_work_identity": 8.068324900081384e-16,
+          "baryon": 1.7482926172270142e-17,
+          "isotope": 1.7217107031204742e-17,
+          "boundary_error": 8.470329472543003e-22,
+          "clock_work_erg": 5.992630705611505e+48,
+          "cone_speed": 0.18055525341415876
+        },
+        {
+          "step": 3,
+          "native_norm": 0.5461389049332688,
+          "scalar": 1.5407439555097885e-33,
+          "mass_work_identity": 3.329530325761619e-16,
+          "baryon": 1.3824130370790627e-16,
+          "isotope": 1.3496339395024754e-16,
+          "boundary_error": 3.1763735522036263e-22,
+          "clock_work_erg": 2.5804025223197805e+49,
+          "cone_speed": 0.18000083884537418
+        },
+        {
+          "step": 4,
+          "native_norm": 0.0002014083344548112,
+          "scalar": 6.162975822039154e-33,
+          "mass_work_identity": 2.9919731141180947e-16,
+          "baryon": 1.3822788843704876e-16,
+          "isotope": 1.3495317326472566e-16,
+          "boundary_error": 1.5881867761018131e-21,
+          "clock_work_erg": 3.199323037951573e+49,
+          "cone_speed": 0.17924629051376822
+        },
+        {
+          "step": 5,
+          "native_norm": 0.00011625422846606169,
+          "scalar": 0.0,
+          "mass_work_identity": 8.838720899053235e-16,
+          "baryon": 1.3823792116663072e-16,
+          "isotope": 1.349487058191769e-16,
+          "boundary_error": 6.352747104407253e-22,
+          "clock_work_erg": 9.682209759248929e+48,
+          "cone_speed": 0.17829391204394074
+        },
+        {
+          "step": 6,
+          "native_norm": 0.00014930504749210982,
+          "scalar": 0.0,
+          "mass_work_identity": 1.0255094372055163e-15,
+          "baryon": 1.3823747253196094e-16,
+          "isotope": 1.3495634820425414e-16,
+          "boundary_error": 1.0587911840678754e-22,
+          "clock_work_erg": -1.5597055827503163e+45,
+          "cone_speed": 0.17712287055677023
+        }
+      ],
+      "seconds": 26.307074749999998,
+      "native_calls": 1199
+    },
+    {
+      "label": "undriven",
+      "steps": 12,
+      "completed_steps": 6,
+      "history": [
+        {
+          "step": 1,
+          "native_norm": 0.008602052618746234,
+          "scalar": 1.490232963254955e-33,
+          "mass_work_identity": 1.4608823861990552e-20,
+          "baryon": 9.68814943200034e-20,
+          "isotope": 7.698246113971536e-20,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.1808917644333827
+        },
+        {
+          "step": 2,
+          "native_norm": 0.3236705868420741,
+          "scalar": 3.081487911019577e-33,
+          "mass_work_identity": 1.3558980891611277e-19,
+          "baryon": 1.7482621497353388e-17,
+          "isotope": 1.7206488146913694e-17,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.18055714597374287
+        },
+        {
+          "step": 3,
+          "native_norm": 0.546156654623875,
+          "scalar": 1.2325951644078308e-32,
+          "mass_work_identity": 4.033974006551971e-20,
+          "baryon": 1.3822461258328615e-16,
+          "isotope": 1.3495292496270978e-16,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.18000472423731675
+        },
+        {
+          "step": 4,
+          "native_norm": 8.779177304136534e-05,
+          "scalar": 1.728522125087544e-32,
+          "mass_work_identity": 3.5941860167548535e-20,
+          "baryon": 1.3823855718834245e-16,
+          "isotope": 1.3494793288694617e-16,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.17923971770464092
+        },
+        {
+          "step": 5,
+          "native_norm": 7.697661952299484e-05,
+          "scalar": 2.4651903288156613e-32,
+          "mass_work_identity": 8.635202654017274e-20,
+          "baryon": 1.3823646583953117e-16,
+          "isotope": 1.349439729537338e-16,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.1782677441427266
+        },
+        {
+          "step": 6,
+          "native_norm": 0.00024306511664518024,
+          "scalar": 4.9303806576313227e-32,
+          "mass_work_identity": 2.672672635649621e-19,
+          "baryon": 1.3823657526262136e-16,
+          "isotope": 1.3493967812900173e-16,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.17709479782217227
+        }
+      ],
+      "seconds": 24.134255116999995,
+      "native_calls": 1158
+    },
+    {
+      "label": "plus",
+      "steps": 12,
+      "completed_steps": 6,
+      "history": [
+        {
+          "step": 1,
+          "native_norm": 0.00860272017413758,
+          "scalar": 1.1246542201492236e-33,
+          "mass_work_identity": 4.0340829116495136e-17,
+          "boundary_error": 1.0587911840678754e-22,
+          "clock_work_erg": 1.4535078013857917e+45,
+          "native_calls": 210,
+          "scalar_gradient_work": 1.7443846618885008e-27
+        },
+        {
+          "step": 2,
+          "native_norm": 0.32394432179441346,
+          "scalar": 4.622231866529366e-33,
+          "mass_work_identity": 7.964657019328616e-16,
+          "boundary_error": 8.470329472543003e-22,
+          "clock_work_erg": 5.983804523819314e+48,
+          "native_calls": 384,
+          "scalar_gradient_work": 2.832178282685792e-25
+        },
+        {
+          "step": 3,
+          "native_norm": 0.5460317684113924,
+          "scalar": 4.930380657631323e-32,
+          "mass_work_identity": 2.765146116589567e-16,
+          "baryon": 1.3825022168975688e-16,
+          "isotope": 1.3493813065725257e-16,
+          "boundary_error": 3.1763735522036263e-22,
+          "clock_work_erg": 2.578471795052927e+49,
+          "cone_speed": 0.18000794872276843
+        },
+        {
+          "step": 4,
+          "native_norm": 0.0001584535454235425,
+          "scalar": 1.2325951644078308e-32,
+          "mass_work_identity": 2.653325125178121e-16,
+          "baryon": 1.3823669973138646e-16,
+          "isotope": 1.3495824667693337e-16,
+          "boundary_error": 1.5881867761018131e-21,
+          "clock_work_erg": 3.2012537653411404e+49,
+          "cone_speed": 0.1792318295183042
+        },
+        {
+          "step": 5,
+          "native_norm": 0.00011021305396097246,
+          "scalar": 0.0,
+          "mass_work_identity": 9.75529986369961e-16,
+          "baryon": 1.3823418436810066e-16,
+          "isotope": 1.3494203447528508e-16,
+          "boundary_error": 6.352747104407253e-22,
+          "clock_work_erg": 9.691035952429896e+48,
+          "cone_speed": 0.17823890067343487
+        },
+        {
+          "step": 6,
+          "native_norm": 7.315328898194196e-05,
+          "scalar": 0.0,
+          "mass_work_identity": 1.005440445952132e-15,
+          "baryon": 1.3823775156084092e-16,
+          "isotope": 1.349808644584605e-16,
+          "boundary_error": 1.0587911840678754e-22,
+          "clock_work_erg": -1.449377577982205e+45,
+          "cone_speed": 0.17706380755677603
+        }
+      ],
+      "seconds": 26.803186201000003,
+      "native_calls": 1254
+    },
+    {
+      "label": "minus",
+      "steps": 24,
+      "completed_steps": 12,
+      "history": [
+        {
+          "step": 1,
+          "native_norm": 0.00012681184126761257,
+          "scalar": 1.4259334222649759e-34,
+          "mass_work_identity": 1.7212357835134495e-16,
+          "baryon": 1.5841129474988114e-20,
+          "isotope": 8.191455704697922e-21,
+          "boundary_error": 0.0,
+          "clock_work_erg": 3.3054477018801613e+41,
+          "cone_speed": 0.1809759274544239
+        },
+        {
+          "step": 2,
+          "native_norm": 0.06926086216395115,
+          "scalar": 1.1555579666323415e-33,
+          "mass_work_identity": 1.8911545745470736e-16,
+          "baryon": 1.2915087653828981e-20,
+          "isotope": 3.490955549528342e-20,
+          "boundary_error": 1.0587911840678754e-22,
+          "clock_work_erg": 1.563504529023587e+45,
+          "cone_speed": 0.18089175077350372
+        },
+        {
+          "step": 3,
+          "native_norm": 0.00012602766052971504,
+          "scalar": 1.5407439555097887e-33,
+          "mass_work_identity": 6.429809347505941e-16,
+          "baryon": 2.7454253329113533e-20,
+          "isotope": 4.102367332294444e-20,
+          "boundary_error": 1.0587911840678754e-22,
+          "clock_work_erg": 3.102033585458426e+47,
+          "cone_speed": 0.1807517295921658
+        },
+        {
+          "step": 4,
+          "native_norm": 0.17267879437599976,
+          "scalar": 3.081487911019577e-33,
+          "mass_work_identity": 8.142944406956077e-16,
+          "baryon": 1.484861075487529e-19,
+          "isotope": 1.5795556491676752e-19,
+          "boundary_error": 8.470329472543003e-22,
+          "clock_work_erg": 5.682427346931274e+48,
+          "cone_speed": 0.18055501127956414
+        },
+        {
+          "step": 5,
+          "native_norm": 0.2096736774778621,
+          "scalar": 4.2490829398043384e-33,
+          "mass_work_identity": 1.8095011184612174e-16,
+          "baryon": 5.8533720992052745e-18,
+          "isotope": 5.68252141201317e-18,
+          "boundary_error": 1.4823076576950256e-21,
+          "clock_work_erg": 1.807946250674522e+49,
+          "cone_speed": 0.1802995585579693
+        },
+        {
+          "step": 6,
+          "native_norm": 0.2435002963169575,
+          "scalar": 1.2325951644078308e-32,
+          "mass_work_identity": 5.544805779186293e-16,
+          "baryon": 1.2152455903900033e-17,
+          "isotope": 1.1810104754201937e-17,
+          "boundary_error": 3.1763735522036263e-22,
+          "clock_work_erg": 7.724562715918732e+48,
+          "cone_speed": 0.17998873385804923
+        },
+        {
+          "step": 7,
+          "native_norm": 0.27465019190406814,
+          "scalar": 2.4651903288156616e-32,
+          "mass_work_identity": 6.559424407383346e-16,
+          "baryon": 1.4986840841348662e-17,
+          "isotope": 1.4644409120902812e-17,
+          "boundary_error": 1.0587911840678754e-21,
+          "clock_work_erg": 8.269454513106666e+48,
+          "cone_speed": 0.17963427899536916
+        },
+        {
+          "step": 8,
+          "native_norm": 0.30512972249990467,
+          "scalar": 0.0,
+          "mass_work_identity": 1.2048149629090938e-16,
+          "baryon": 1.0842189627228168e-17,
+          "isotope": 1.0740327730388266e-17,
+          "boundary_error": 1.5881867761018131e-21,
+          "clock_work_erg": 2.3723775862971755e+49,
+          "cone_speed": 0.17924128829399444
+        },
+        {
+          "step": 9,
+          "native_norm": 0.3360159176987289,
+          "scalar": 0.0,
+          "mass_work_identity": 6.48495312974139e-16,
+          "baryon": 3.3495830407871384e-18,
+          "isotope": 2.854852001636337e-18,
+          "boundary_error": 8.470329472543003e-22,
+          "clock_work_erg": 9.113381516478022e+48,
+          "cone_speed": 0.1787986987367845
+        },
+        {
+          "step": 10,
+          "native_norm": 0.39793757178330225,
+          "scalar": 0.0,
+          "mass_work_identity": 4.112299989578364e-16,
+          "baryon": 3.0372766841667473e-17,
+          "isotope": 2.8721655952255667e-17,
+          "boundary_error": 6.352747104407253e-22,
+          "clock_work_erg": 5.68828249685334e+47,
+          "cone_speed": 0.17829564671281986
+        },
+        {
+          "step": 11,
+          "native_norm": 0.5666259683678732,
+          "scalar": 0.0,
+          "mass_work_identity": 4.3336225511773305e-16,
+          "baryon": 7.256471010691753e-17,
+          "isotope": 6.921523379046218e-17,
+          "boundary_error": 2.117582368135751e-22,
+          "clock_work_erg": -1.5431395534480403e+45,
+          "cone_speed": 0.17773472892111072
+        },
+        {
+          "step": 12,
+          "native_norm": 0.7554176728596929,
+          "scalar": 0.0,
+          "mass_work_identity": 7.635298663745099e-16,
+          "baryon": 1.3198890526464183e-16,
+          "isotope": 1.2631866827267653e-16,
+          "boundary_error": 1.0587911840678754e-22,
+          "clock_work_erg": -1.6566010498794393e+43,
+          "cone_speed": 0.17712266425652246
+        }
+      ],
+      "seconds": 43.17545888700002,
+      "native_calls": 2108
+    },
+    {
+      "label": "undriven",
+      "steps": 24,
+      "completed_steps": 12,
+      "history": [
+        {
+          "step": 1,
+          "native_norm": 0.0001309299890728255,
+          "scalar": 2.9573380751574815e-34,
+          "mass_work_identity": 3.2398397768536146e-20,
+          "baryon": 1.9572798797684107e-20,
+          "isotope": 8.192905807816905e-21,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.18097592744862187
+        },
+        {
+          "step": 2,
+          "native_norm": 0.06926094857458862,
+          "scalar": 7.703719777548943e-34,
+          "mass_work_identity": 1.1734094606842284e-20,
+          "baryon": 2.621264320259386e-20,
+          "isotope": 2.836222428236701e-20,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.1808917539906857
+        },
+        {
+          "step": 3,
+          "native_norm": 8.513849347746572e-05,
+          "scalar": 1.5407439555097887e-33,
+          "mass_work_identity": 9.547746660201658e-20,
+          "baryon": 3.353715130230505e-20,
+          "isotope": 1.3621915351040083e-20,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.18075192384592714
+        },
+        {
+          "step": 4,
+          "native_norm": 0.17287969133018427,
+          "scalar": 3.081487911019577e-33,
+          "mass_work_identity": 1.7428048010517498e-20,
+          "baryon": 1.6458361190458874e-19,
+          "isotope": 1.596018288354452e-19,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.18055702296917517
+        },
+        {
+          "step": 5,
+          "native_norm": 0.21052605989214687,
+          "scalar": 3.081487911019577e-33,
+          "mass_work_identity": 9.302697753973984e-20,
+          "baryon": 5.839019209243684e-18,
+          "isotope": 5.651401927763819e-18,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.18030766463088027
+        },
+        {
+          "step": 6,
+          "native_norm": 0.24597445015457142,
+          "scalar": 6.162975822039154e-33,
+          "mass_work_identity": 2.236930372586025e-19,
+          "baryon": 1.2148273206277452e-17,
+          "isotope": 1.177276041635095e-17,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.1800044885872375
+        },
+        {
+          "step": 7,
+          "native_norm": 0.27923353593019473,
+          "scalar": 6.162975822039154e-33,
+          "mass_work_identity": 1.7258208074769982e-19,
+          "baryon": 1.4986068040774184e-17,
+          "isotope": 1.4639512827263283e-17,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.17964816028740582
+        },
+        {
+          "step": 8,
+          "native_norm": 0.31033417377294675,
+          "scalar": 6.162975822039154e-33,
+          "mass_work_identity": 7.262842219893572e-20,
+          "baryon": 1.0854213857051615e-17,
+          "isotope": 1.0744848422855682e-17,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.17923937011877994
+        },
+        {
+          "step": 9,
+          "native_norm": 0.33933107157167913,
+          "scalar": 3.0092655381050557e-36,
+          "mass_work_identity": 5.1492068704989436e-20,
+          "baryon": 3.3453018623833857e-18,
+          "isotope": 2.8072910180880446e-18,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.17877883268456618
+        },
+        {
+          "step": 10,
+          "native_norm": 0.3979339635584722,
+          "scalar": 9.629649721936177e-35,
+          "mass_work_identity": 4.0269969852098113e-20,
+          "baryon": 3.0373863808146643e-17,
+          "isotope": 2.8709347908333297e-17,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.17826728610676998
+        },
+        {
+          "step": 11,
+          "native_norm": 0.566652336164708,
+          "scalar": 4.9303806576313227e-32,
+          "mass_work_identity": 2.3049434210189644e-19,
+          "baryon": 7.25668055590947e-17,
+          "isotope": 6.920551980298821e-17,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.1777054913520644
+        },
+        {
+          "step": 12,
+          "native_norm": 0.755729034906949,
+          "scalar": 1.9259299443872354e-34,
+          "mass_work_identity": 2.716832610954564e-19,
+          "baryon": 1.32031241058237e-16,
+          "isotope": 1.2633792742552695e-16,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.1770942315667425
+        }
+      ],
+      "seconds": 42.841659279,
+      "native_calls": 1989
+    },
+    {
+      "label": "plus",
+      "steps": 24,
+      "completed_steps": 12,
+      "history": [
+        {
+          "step": 1,
+          "native_norm": 0.00012641559243398276,
+          "scalar": 2.3685917295481388e-34,
+          "mass_work_identity": 2.6583183089572975e-16,
+          "baryon": 2.4306266431461924e-20,
+          "isotope": 8.190067540935999e-21,
+          "boundary_error": 0.0,
+          "clock_work_erg": -2.3816762219199228e+41,
+          "cone_speed": 0.1809759274428188
+        },
+        {
+          "step": 2,
+          "native_norm": 0.06926084367902116,
+          "scalar": 7.703719777548943e-34,
+          "mass_work_identity": 4.377984566150561e-17,
+          "baryon": 1.0838613543861839e-20,
+          "isotope": 1.6801990113623187e-20,
+          "boundary_error": 1.0587911840678754e-22,
+          "clock_work_erg": 1.4537459690076833e+45,
+          "cone_speed": 0.1808917572072163
+        },
+        {
+          "step": 3,
+          "native_norm": 0.00010723540111445828,
+          "scalar": 8.666684749742561e-34,
+          "mass_work_identity": 5.608075753414e-16,
+          "baryon": 3.831278529486184e-20,
+          "isotope": 1.847621267532546e-20,
+          "boundary_error": 1.0587911840678754e-22,
+          "clock_work_erg": 3.085484494597437e+47,
+          "cone_speed": 0.18075211740450522
+        },
+        {
+          "step": 4,
+          "native_norm": 0.1730764481882056,
+          "scalar": 3.081487911019577e-33,
+          "mass_work_identity": 8.344964675622206e-16,
+          "baryon": 1.633047295379725e-19,
+          "isotope": 1.8562183847958148e-19,
+          "boundary_error": 8.470329472543003e-22,
+          "clock_work_erg": 5.675256074225468e+48,
+          "cone_speed": 0.1805590076269481
+        },
+        {
+          "step": 5,
+          "native_norm": 0.21137401061446442,
+          "scalar": 2.6601907356848692e-33,
+          "mass_work_identity": 2.3057269261964133e-16,
+          "baryon": 5.83232114833532e-18,
+          "isotope": 5.707618065443915e-18,
+          "boundary_error": 1.4823076576950256e-21,
+          "clock_work_erg": 1.8066996093680395e+49,
+          "cone_speed": 0.1803156310069646
+        },
+        {
+          "step": 6,
+          "native_norm": 0.2484224747197036,
+          "scalar": 6.162975822039154e-33,
+          "mass_work_identity": 4.61968996192545e-16,
+          "baryon": 1.2156958664061424e-17,
+          "isotope": 1.1852064904313345e-17,
+          "boundary_error": 3.1763735522036263e-22,
+          "clock_work_erg": 7.717721856318069e+48,
+          "cone_speed": 0.18002008109932077
+        },
+        {
+          "step": 7,
+          "native_norm": 0.283731690173338,
+          "scalar": 6.162975822039154e-33,
+          "mass_work_identity": 6.345224908762247e-16,
+          "baryon": 1.4981641876775925e-17,
+          "isotope": 1.4699633305737612e-17,
+          "boundary_error": 1.0587911840678754e-21,
+          "clock_work_erg": 8.27629537272359e+48,
+          "cone_speed": 0.17966178435924723
+        },
+        {
+          "step": 8,
+          "native_norm": 0.3154106024346661,
+          "scalar": 2.4651903288156616e-32,
+          "mass_work_identity": 1.3317588725482504e-16,
+          "baryon": 1.0862514966231288e-17,
+          "isotope": 1.0835838555972118e-17,
+          "boundary_error": 1.5881867761018131e-21,
+          "clock_work_erg": 2.373624227639935e+49,
+          "cone_speed": 0.1792365351769716
+        },
+        {
+          "step": 9,
+          "native_norm": 0.34243985393737547,
+          "scalar": 6.162975822039154e-33,
+          "mass_work_identity": 6.847101283463973e-16,
+          "baryon": 3.368614451748741e-18,
+          "isotope": 2.755435988179202e-18,
+          "boundary_error": 8.470329472543003e-22,
+          "clock_work_erg": 9.120552791225069e+48,
+          "cone_speed": 0.17875755118228107
+        },
+        {
+          "step": 10,
+          "native_norm": 0.3979321872016328,
+          "scalar": 0.0,
+          "mass_work_identity": 4.013843026675319e-16,
+          "baryon": 3.035938986889153e-17,
+          "isotope": 2.863025698302272e-17,
+          "boundary_error": 6.352747104407253e-22,
+          "clock_work_erg": 5.704831613922063e+47,
+          "cone_speed": 0.17823741012288047
+        },
+        {
+          "step": 11,
+          "native_norm": 0.5666933033943167,
+          "scalar": 0.0,
+          "mass_work_identity": 4.367345740706827e-16,
+          "baryon": 7.256856727084679e-17,
+          "isotope": 6.912003726270043e-17,
+          "boundary_error": 2.117582368135751e-22,
+          "clock_work_erg": -1.4333804339195977e+45,
+          "cone_speed": 0.17767462751099744
+        },
+        {
+          "step": 12,
+          "native_norm": 0.756022355830055,
+          "scalar": 0.0,
+          "mass_work_identity": 7.765225509772666e-16,
+          "baryon": 1.3206338956213536e-16,
+          "isotope": 1.2631482616836825e-16,
+          "boundary_error": 1.0587911840678754e-22,
+          "clock_work_erg": -1.599729222344298e+43,
+          "cone_speed": 0.1770640333236731
+        }
+      ],
+      "seconds": 43.32790328499999,
+      "native_calls": 2111
+    },
+    {
+      "label": "minus",
+      "steps": 48,
+      "completed_steps": 24,
+      "history": [
+        {
+          "step": 1,
+          "native_norm": 0.10152156122242836,
+          "scalar": 1.7285056681666327e-34,
+          "mass_work_identity": 1.4116051335015342e-16,
+          "baryon": 1.1421001431771335e-17,
+          "isotope": 1.1094638661183357e-17,
+          "boundary_error": 1.0587911840678754e-22,
+          "clock_work_erg": 1.1906400845809271e+39,
+          "cone_speed": 0.1809970111566081
+        },
+        {
+          "step": 2,
+          "native_norm": 6.695143743436861e-05,
+          "scalar": 2.8888949165808538e-34,
+          "mass_work_identity": 1.0017308982570285e-16,
+          "baryon": 1.1419428229075309e-17,
+          "isotope": 1.1105189038732446e-17,
+          "boundary_error": 0.0,
+          "clock_work_erg": 3.293541300081719e+41,
+          "cone_speed": 0.18097596414548664
+        },
+        {
+          "step": 3,
+          "native_norm": 0.0016102080331150189,
+          "scalar": 1.5407439555097887e-33,
+          "mass_work_identity": 9.968833618740103e-17,
+          "baryon": 1.141471252132199e-17,
+          "isotope": 1.1111175439340094e-17,
+          "boundary_error": 0.0,
+          "clock_work_erg": 2.8853235463459593e+43,
+          "cone_speed": 0.1809408629528962
+        },
+        {
+          "step": 4,
+          "native_norm": 0.010889334721546434,
+          "scalar": 1.5407439555097887e-33,
+          "mass_work_identity": 2.520510690737934e-16,
+          "baryon": 1.1413303528062193e-17,
+          "isotope": 1.1115352090400944e-17,
+          "boundary_error": 1.0587911840678754e-22,
+          "clock_work_erg": 1.5346512935600833e+45,
+          "cone_speed": 0.18089177410402663
+        },
+        {
+          "step": 5,
+          "native_norm": 0.04309808387727468,
+          "scalar": 7.703719777548943e-34,
+          "mass_work_identity": 4.359267935110916e-16,
+          "baryon": 1.141796520816473e-17,
+          "isotope": 1.1130682172746088e-17,
+          "boundary_error": 1.0587911840678754e-22,
+          "clock_work_erg": 3.0532020525583337e+46,
+          "cone_speed": 0.18082874799043386
+        },
+        {
+          "step": 6,
+          "native_norm": 0.12648182730648566,
+          "scalar": 6.162975822039155e-33,
+          "mass_work_identity": 7.734183736252705e-16,
+          "baryon": 1.1413145975909675e-17,
+          "isotope": 1.1151828562509192e-17,
+          "boundary_error": 1.0587911840678754e-22,
+          "clock_work_erg": 2.7967133801933323e+47,
+          "cone_speed": 0.18075176510286173
+        },
+        {
+          "step": 7,
+          "native_norm": 0.3064945822826695,
+          "scalar": 1.232595164407831e-32,
+          "mass_work_identity": 9.3032535242883e-16,
+          "baryon": 1.1423728556519845e-17,
+          "isotope": 1.1158953567535696e-17,
+          "boundary_error": 4.235164736271502e-22,
+          "clock_work_erg": 1.4051227896719538e+48,
+          "cone_speed": 0.18066064189174635
+        },
+        {
+          "step": 8,
+          "native_norm": 0.6499818004348221,
+          "scalar": 1.2325951644078308e-32,
+          "mass_work_identity": 5.986209851819638e-16,
+          "baryon": 1.1415350509229881e-17,
+          "isotope": 1.1144971392549391e-17,
+          "boundary_error": 8.470329472543003e-22,
+          "clock_work_erg": 4.277304557049914e+48,
+          "cone_speed": 0.18055498025892205
+        },
+        {
+          "step": 9,
+          "native_norm": 0.00021099962055348698,
+          "scalar": 1.232595164407831e-32,
+          "mass_work_identity": 2.851642539185213e-16,
+          "baryon": 1.1425547373447127e-17,
+          "isotope": 1.1132898222426515e-17,
+          "boundary_error": 1.164670302474663e-21,
+          "clock_work_erg": 8.231232225923726e+48,
+          "cone_speed": 0.18043431887954742
+        },
+        {
+          "step": 10,
+          "native_norm": 0.00014854480492876299,
+          "scalar": 2.4651903288156616e-32,
+          "mass_work_identity": 3.2950968432953255e-17,
+          "baryon": 1.1416156136731419e-17,
+          "isotope": 1.1122552873682505e-17,
+          "boundary_error": 1.4823076576950256e-21,
+          "clock_work_erg": 9.848230279896502e+48,
+          "cone_speed": 0.18029855894546165
+        },
+        {
+          "step": 11,
+          "native_norm": 1.900855774866761e-05,
+          "scalar": 3.0814879110195774e-33,
+          "mass_work_identity": 1.787551934605607e-16,
+          "baryon": 1.1405494908275173e-17,
+          "isotope": 1.1135330825586533e-17,
+          "boundary_error": 1.0587911840678754e-21,
+          "clock_work_erg": 6.431255805825156e+48,
+          "cone_speed": 0.18014846120974087
+        },
+        {
+          "step": 12,
+          "native_norm": 5.567676311310498e-05,
+          "scalar": 2.4651903288156616e-32,
+          "mass_work_identity": 4.096842006072249e-16,
+          "baryon": 1.1420526221395951e-17,
+          "isotope": 1.1161608907213519e-17,
+          "boundary_error": 3.1763735522036263e-22,
+          "clock_work_erg": 1.2933069104700828e+48,
+          "cone_speed": 0.17998577584920772
+        },
+        {
+          "step": 13,
+          "native_norm": 0.1387266480595597,
+          "scalar": 4.930380657631324e-32,
+          "mass_work_identity": 4.997830253106351e-16,
+          "baryon": 1.1457906516794086e-17,
+          "isotope": 1.116122422523087e-17,
+          "boundary_error": 4.235164736271502e-22,
+          "clock_work_erg": 1.1979344521911062e+48,
+          "cone_speed": 0.1798127031682429
+        },
+        {
+          "step": 14,
+          "native_norm": 0.1481017535392019,
+          "scalar": 4.930380657631323e-32,
+          "mass_work_identity": 3.376929854745731e-16,
+          "baryon": 1.4264083549379906e-17,
+          "isotope": 1.3877924187021106e-17,
+          "boundary_error": 1.0587911840678754e-21,
+          "clock_work_erg": 7.071520059337791e+48,
+          "cone_speed": 0.1796308811972343
+        },
+        {
+          "step": 15,
+          "native_norm": 0.15768270701264847,
+          "scalar": 1.232595164407831e-32,
+          "mass_work_identity": 6.598126179455175e-17,
+          "baryon": 1.9519990530463248e-17,
+          "isotope": 1.8988531468286676e-17,
+          "boundary_error": 1.4823076576950256e-21,
+          "clock_work_erg": 1.2245915361954756e+49,
+          "cone_speed": 0.179440498409734
+        },
+        {
+          "step": 16,
+          "native_norm": 0.1675160347311964,
+          "scalar": 4.930380657631323e-32,
+          "mass_work_identity": 1.7926639352857267e-16,
+          "baryon": 2.6956821432256282e-17,
+          "isotope": 2.6227505452776506e-17,
+          "boundary_error": 1.5881867761018131e-21,
+          "clock_work_erg": 1.1477860501504749e+49,
+          "cone_speed": 0.1792400859616385
+        },
+        {
+          "step": 17,
+          "native_norm": 0.17751771604275815,
+          "scalar": 0.0,
+          "mass_work_identity": 3.2535934139851716e-16,
+          "baryon": 3.62671698641174e-17,
+          "isotope": 3.531354881283044e-17,
+          "boundary_error": 1.2705494208814505e-21,
+          "clock_work_erg": 6.675802980840626e+48,
+          "cone_speed": 0.1790271597247945
+        },
+        {
+          "step": 18,
+          "native_norm": 0.18750162565695977,
+          "scalar": 0.0,
+          "mass_work_identity": 3.74229506396318e-16,
+          "baryon": 4.7225306933290017e-17,
+          "isotope": 4.597233352258421e-17,
+          "boundary_error": 8.470329472543003e-22,
+          "clock_work_erg": 2.437578537535442e+48,
+          "cone_speed": 0.17879939510237933
+        },
+        {
+          "step": 19,
+          "native_norm": 0.19728657831361926,
+          "scalar": 9.860761315262648e-32,
+          "mass_work_identity": 3.117022582674967e-16,
+          "baryon": 5.955427459176702e-17,
+          "isotope": 5.7957518661069e-17,
+          "boundary_error": 7.411538288475128e-22,
+          "clock_work_erg": 5.193196513353465e+47,
+          "cone_speed": 0.17855564540820254
+        },
+        {
+          "step": 20,
+          "native_norm": 0.20673231473227072,
+          "scalar": 0.0,
+          "mass_work_identity": 1.0472107471595994e-16,
+          "baryon": 7.299315895214063e-17,
+          "isotope": 7.108461970066682e-17,
+          "boundary_error": 6.352747104407253e-22,
+          "clock_work_erg": 4.950859838973325e+46,
+          "cone_speed": 0.17829618775270564
+        },
+        {
+          "step": 21,
+          "native_norm": 0.21579874182317016,
+          "scalar": 0.0,
+          "mass_work_identity": 1.2723037721798233e-16,
+          "baryon": 8.733193880625132e-17,
+          "isotope": 8.511534872562716e-17,
+          "boundary_error": 3.1763735522036263e-22,
+          "clock_work_erg": -1.0780851153410221e+45,
+          "cone_speed": 0.17802216812862415
+        },
+        {
+          "step": 22,
+          "native_norm": 0.22452477721539962,
+          "scalar": 0.0,
+          "mass_work_identity": 3.5212229160249557e-16,
+          "baryon": 1.0231554893086207e-16,
+          "isotope": 9.977289539851932e-17,
+          "boundary_error": 2.117582368135751e-22,
+          "clock_work_erg": -4.6505443373951986e+44,
+          "cone_speed": 0.17773479384295335
+        },
+        {
+          "step": 23,
+          "native_norm": 0.23298531966447067,
+          "scalar": 0.0,
+          "mass_work_identity": 4.669200585821117e-16,
+          "baryon": 1.1774036663301228e-16,
+          "isotope": 1.148652440702234e-16,
+          "boundary_error": 1.0587911840678754e-22,
+          "clock_work_erg": -1.6521226695579335e+43,
+          "cone_speed": 0.17743484821186836
+        },
+        {
+          "step": 24,
+          "native_norm": 0.24124150284707788,
+          "scalar": 0.0,
+          "mass_work_identity": 3.889001255747091e-16,
+          "baryon": 1.333852916166605e-16,
+          "isotope": 1.3021090116637447e-16,
+          "boundary_error": 1.0587911840678754e-22,
+          "clock_work_erg": -4.478386782953444e+40,
+          "cone_speed": 0.17712267518657962
+        }
+      ],
+      "seconds": 79.907078297,
+      "native_calls": 4066
+    },
+    {
+      "label": "undriven",
+      "steps": 48,
+      "completed_steps": 24,
+      "history": [
+        {
+          "step": 1,
+          "native_norm": 0.10152156124573848,
+          "scalar": 1.7285056681666327e-34,
+          "mass_work_identity": 4.613991418817484e-19,
+          "baryon": 1.1421001335598697e-17,
+          "isotope": 1.1094638628795983e-17,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.18099701115660005
+        },
+        {
+          "step": 2,
+          "native_norm": 7.300497012474594e-05,
+          "scalar": 4.333342374871281e-34,
+          "mass_work_identity": 2.643681641382409e-19,
+          "baryon": 1.1418691226093813e-17,
+          "isotope": 1.1105180903301979e-17,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.1809759641443637
+        },
+        {
+          "step": 3,
+          "native_norm": 0.0016108014739604196,
+          "scalar": 7.703719777548943e-34,
+          "mass_work_identity": 2.7621079016990203e-19,
+          "baryon": 1.138987886551618e-17,
+          "isotope": 1.107970639164237e-17,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.18094086303641801
+        },
+        {
+          "step": 4,
+          "native_norm": 0.0108891599771861,
+          "scalar": 2.8888949165808538e-34,
+          "mass_work_identity": 3.581763659410569e-20,
+          "baryon": 1.1413454241271574e-17,
+          "isotope": 1.1072443065042922e-17,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.1808917766798531
+        },
+        {
+          "step": 5,
+          "native_norm": 0.04309819985680711,
+          "scalar": 3.0814879110195774e-33,
+          "mass_work_identity": 1.8136997215487007e-19,
+          "baryon": 1.1421890077631045e-17,
+          "isotope": 1.1069404988353756e-17,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.18082877569832112
+        },
+        {
+          "step": 6,
+          "native_norm": 0.12648210228438822,
+          "scalar": 2.311115933264683e-33,
+          "mass_work_identity": 2.1745882037748886e-19,
+          "baryon": 1.1422096100793047e-17,
+          "isotope": 1.1097610835217681e-17,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.18075193247840743
+        },
+        {
+          "step": 7,
+          "native_norm": 0.30649452953185413,
+          "scalar": 2.311115933264683e-33,
+          "mass_work_identity": 4.985566697680339e-20,
+          "baryon": 1.141793152636978e-17,
+          "isotope": 1.1105044676910626e-17,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.1806613211408573
+        },
+        {
+          "step": 8,
+          "native_norm": 0.6499817412970321,
+          "scalar": 2.311115933264683e-33,
+          "mass_work_identity": 9.97587104984621e-20,
+          "baryon": 1.141972435531314e-17,
+          "isotope": 1.108804823093952e-17,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.1805570175135513
+        },
+        {
+          "step": 9,
+          "native_norm": 5.1291436375944244e-05,
+          "scalar": 1.232595164407831e-32,
+          "mass_work_identity": 1.0152531225782687e-19,
+          "baryon": 1.1432783659180371e-17,
+          "isotope": 1.108340361012388e-17,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.18043909910599215
+        },
+        {
+          "step": 10,
+          "native_norm": 0.00010335092157087722,
+          "scalar": 3.081487911019577e-33,
+          "mass_work_identity": 1.0493684974951976e-19,
+          "baryon": 1.1414699441843241e-17,
+          "isotope": 1.1082132518653887e-17,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.18030764508111244
+        },
+        {
+          "step": 11,
+          "native_norm": 0.0001896664249267932,
+          "scalar": 3.0814879110195774e-33,
+          "mass_work_identity": 2.5636211547878966e-19,
+          "baryon": 1.1424931184670485e-17,
+          "isotope": 1.109175975472734e-17,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.18016273623326087
+        },
+        {
+          "step": 12,
+          "native_norm": 0.00018644114030408332,
+          "scalar": 6.162975822039154e-33,
+          "mass_work_identity": 3.2819253922699484e-19,
+          "baryon": 1.142437928195933e-17,
+          "isotope": 1.107744321179248e-17,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.18000445496199252
+        },
+        {
+          "step": 13,
+          "native_norm": 0.14119052409174165,
+          "scalar": 4.930380657631324e-32,
+          "mass_work_identity": 2.2970611373768753e-19,
+          "baryon": 1.1453644487431117e-17,
+          "isotope": 1.1113955466451128e-17,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.17983288524792249
+        },
+        {
+          "step": 14,
+          "native_norm": 0.15095695582997676,
+          "scalar": 1.2325951644078308e-32,
+          "mass_work_identity": 3.573118569628893e-19,
+          "baryon": 1.4265098448541433e-17,
+          "isotope": 1.3822954072211973e-17,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.17964811263049146
+        },
+        {
+          "step": 15,
+          "native_norm": 0.1605721930971152,
+          "scalar": 2.465190328815662e-32,
+          "mass_work_identity": 5.782147396109761e-19,
+          "baryon": 1.9515835188613218e-17,
+          "isotope": 1.8920060098899402e-17,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.1794502241847904
+        },
+        {
+          "step": 16,
+          "native_norm": 0.1700358853775192,
+          "scalar": 1.2325951644078308e-32,
+          "mass_work_identity": 3.4536369345857044e-19,
+          "baryon": 2.6962110670878425e-17,
+          "isotope": 2.616065442897106e-17,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.17923930849868677
+        },
+        {
+          "step": 17,
+          "native_norm": 0.17934961771075544,
+          "scalar": 1.232595164407831e-32,
+          "mass_work_identity": 1.5536873192281642e-19,
+          "baryon": 3.6279324033860454e-17,
+          "isotope": 3.522901966491019e-17,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.17901545565165936
+        },
+        {
+          "step": 18,
+          "native_norm": 0.18851536171610528,
+          "scalar": 1.5046327690525278e-36,
+          "mass_work_identity": 4.04960081639328e-20,
+          "baryon": 4.7231281434014486e-17,
+          "isotope": 4.590207914200804e-17,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.17877875719285105
+        },
+        {
+          "step": 19,
+          "native_norm": 0.19753150926999943,
+          "scalar": 3.009265538105056e-36,
+          "mass_work_identity": 1.2648175011312642e-19,
+          "baryon": 5.95487624035986e-17,
+          "isotope": 5.792046804740777e-17,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.17852930612005527
+        },
+        {
+          "step": 20,
+          "native_norm": 0.20639665730834938,
+          "scalar": 9.860761315262645e-32,
+          "mass_work_identity": 8.765303815828844e-20,
+          "baryon": 7.299960123657567e-17,
+          "isotope": 7.106206331727752e-17,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.17826719685933273
+        },
+        {
+          "step": 21,
+          "native_norm": 0.21512108139029967,
+          "scalar": 3.851859888774472e-34,
+          "mass_work_identity": 6.095788849287017e-19,
+          "baryon": 8.731488521764493e-17,
+          "isotope": 8.507681164657293e-17,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.1779925252418891
+        },
+        {
+          "step": 22,
+          "native_norm": 0.2236942693419372,
+          "scalar": 4.9303806576313227e-32,
+          "mass_work_identity": 7.5238470752658e-19,
+          "baryon": 1.0230256861678807e-16,
+          "isotope": 9.972643364355505e-17,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.17770538848681522
+        },
+        {
+          "step": 23,
+          "native_norm": 0.23212427268327326,
+          "scalar": 4.930380657631324e-32,
+          "mass_work_identity": 9.164279151905552e-20,
+          "baryon": 1.1774165235432203e-16,
+          "isotope": 1.1482005005038963e-16,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.17740588517851788
+        },
+        {
+          "step": 24,
+          "native_norm": 0.24041120496844304,
+          "scalar": 0.0,
+          "mass_work_identity": 1.3809391067051902e-19,
+          "baryon": 1.3340739508087923e-16,
+          "isotope": 1.3019160578644182e-16,
+          "boundary_error": 0.0,
+          "clock_work_erg": 0.0,
+          "cone_speed": 0.17709411524577595
+        }
+      ],
+      "seconds": 78.527303099,
+      "native_calls": 3798
+    },
+    {
+      "label": "plus",
+      "steps": 48,
+      "completed_steps": 24,
+      "history": [
+        {
+          "step": 1,
+          "native_norm": 0.10152156119911823,
+          "scalar": 1.7285056681666327e-34,
+          "mass_work_identity": 1.0491993252346806e-16,
+          "baryon": 1.1421001426428411e-17,
+          "isotope": 1.1094638638386872e-17,
+          "boundary_error": 1.0587911840678754e-22,
+          "clock_work_erg": -1.1889613047717824e+39,
+          "cone_speed": 0.1809970111565916
+        },
+        {
+          "step": 2,
+          "native_norm": 7.613630862920995e-05,
+          "scalar": 2.8888949165808538e-34,
+          "mass_work_identity": 1.6276135900985678e-16,
+          "baryon": 1.1406180341351077e-17,
+          "isotope": 1.1105178033784275e-17,
+          "boundary_error": 0.0,
+          "clock_work_erg": -2.369786607056956e+41,
+          "cone_speed": 0.18097596414326644
+        },
+        {
+          "step": 3,
+          "native_norm": 0.001610210737089647,
+          "scalar": 7.703719777548943e-34,
+          "mass_work_identity": 1.8459395389223641e-16,
+          "baryon": 1.1423052270530387e-17,
+          "isotope": 1.1122205830657398e-17,
+          "boundary_error": 0.0,
+          "clock_work_erg": 1.6431021184725448e+43,
+          "cone_speed": 0.18094086312114058
+        },
+        {
+          "step": 4,
+          "native_norm": 0.010889298788987044,
+          "scalar": 1.5407439555097887e-33,
+          "mass_work_identity": 2.2165712382010882e-17,
+          "baryon": 1.1426889259577392e-17,
+          "isotope": 1.1124635429395851e-17,
+          "boundary_error": 1.0587911840678754e-22,
+          "clock_work_erg": 1.4373149478234755e+45,
+          "cone_speed": 0.18089177925666486
+        },
+        {
+          "step": 5,
+          "native_norm": 0.04309835507893683,
+          "scalar": 3.0814879110195774e-33,
+          "mass_work_identity": 3.3576668215783936e-16,
+          "baryon": 1.1414590189726628e-17,
+          "isotope": 1.1125022264591661e-17,
+          "boundary_error": 1.0587911840678754e-22,
+          "clock_work_erg": 3.010962673396906e+46,
+          "cone_speed": 0.18082880338659538
+        },
+        {
+          "step": 6,
+          "native_norm": 0.12648196575697965,
+          "scalar": 7.703719777548943e-34,
+          "mass_work_identity": 7.721900953076021e-16,
+          "baryon": 1.142808222772085e-17,
+          "isotope": 1.1121345820901045e-17,
+          "boundary_error": 1.0587911840678754e-22,
+          "clock_work_erg": 2.7843882272485667e+47,
+          "cone_speed": 0.18075209943628803
+        },
+        {
+          "step": 7,
+          "native_norm": 0.3064943731558732,
+          "scalar": 1.232595164407831e-32,
+          "mass_work_identity": 8.795516655239306e-16,
+          "baryon": 1.1437439953615188e-17,
+          "isotope": 1.113725947238163e-17,
+          "boundary_error": 4.235164736271502e-22,
+          "clock_work_erg": 1.402455451123927e+48,
+          "cone_speed": 0.1806619967199546
+        },
+        {
+          "step": 8,
+          "native_norm": 0.6499818934189151,
+          "scalar": 1.516669831204948e-33,
+          "mass_work_identity": 6.808703544218111e-16,
+          "baryon": 1.142827542786447e-17,
+          "isotope": 1.1123496518557833e-17,
+          "boundary_error": 8.470329472543003e-22,
+          "clock_work_erg": 4.272800622892478e+48,
+          "cone_speed": 0.18055903706633003
+        },
+        {
+          "step": 9,
+          "native_norm": 5.358441555053384e-05,
+          "scalar": 2.465190328815662e-32,
+          "mass_work_identity": 3.365703133344035e-16,
+          "baryon": 1.140126570583926e-17,
+          "isotope": 1.1129215514936713e-17,
+          "boundary_error": 1.164670302474663e-21,
+          "clock_work_erg": 8.225177216870363e+48,
+          "cone_speed": 0.180443827958555
+        },
+        {
+          "step": 10,
+          "native_norm": 0.0001508034148944848,
+          "scalar": 1.2325951644078308e-32,
+          "mass_work_identity": 4.659271094127394e-17,
+          "baryon": 1.1415953704014564e-17,
+          "isotope": 1.1160297344045189e-17,
+          "boundary_error": 1.4823076576950256e-21,
+          "clock_work_erg": 9.841818875885689e+48,
+          "cone_speed": 0.18031664107014303
+        },
+        {
+          "step": 11,
+          "native_norm": 0.00013577897486904966,
+          "scalar": 6.162975822039155e-33,
+          "mass_work_identity": 1.7335852398212034e-16,
+          "baryon": 1.1402482353823331e-17,
+          "isotope": 1.1144982609265382e-17,
+          "boundary_error": 1.0587911840678754e-21,
+          "clock_work_erg": 6.426291080947794e+48,
+          "cone_speed": 0.180176929371193
+        },
+        {
+          "step": 12,
+          "native_norm": 7.53117186669261e-05,
+          "scalar": 6.162975822039154e-33,
+          "mass_work_identity": 3.469762011612777e-16,
+          "baryon": 1.142046467090772e-17,
+          "isotope": 1.115127510605607e-17,
+          "boundary_error": 3.1763735522036263e-22,
+          "clock_work_erg": 1.2914307757468398e+48,
+          "cone_speed": 0.18002313703800174
+        },
+        {
+          "step": 13,
+          "native_norm": 0.14361545955801377,
+          "scalar": 6.162975822039155e-33,
+          "mass_work_identity": 4.814219698638582e-16,
+          "baryon": 1.144999112400734e-17,
+          "isotope": 1.1195576698479281e-17,
+          "boundary_error": 4.235164736271502e-22,
+          "clock_work_erg": 1.1998105869149256e+48,
+          "cone_speed": 0.17985314459376223
+        },
+        {
+          "step": 14,
+          "native_norm": 0.153761893778927,
+          "scalar": 0.0,
+          "mass_work_identity": 2.9933027140374813e-16,
+          "baryon": 1.4250989708849834e-17,
+          "isotope": 1.3920400245240257e-17,
+          "boundary_error": 1.0587911840678754e-21,
+          "clock_work_erg": 7.076484784223394e+48,
+          "cone_speed": 0.17966532318622416
+        },
+        {
+          "step": 15,
+          "native_norm": 0.16340073740593788,
+          "scalar": 0.0,
+          "mass_work_identity": 5.922873039106458e-17,
+          "baryon": 1.9524695723341496e-17,
+          "isotope": 1.904816644499131e-17,
+          "boundary_error": 1.4823076576950256e-21,
+          "clock_work_erg": 1.2252326766005293e+49,
+          "cone_speed": 0.17945961421026896
+        },
+        {
+          "step": 16,
+          "native_norm": 0.17247913050642386,
+          "scalar": 0.0,
+          "mass_work_identity": 1.962410100389872e-16,
+          "baryon": 2.6957501223204097e-17,
+          "isotope": 2.6272306421853725e-17,
+          "boundary_error": 1.5881867761018131e-21,
+          "clock_work_erg": 1.1483915510709953e+49,
+          "cone_speed": 0.17923781794084256
+        },
+        {
+          "step": 17,
+          "native_norm": 0.18108245732251735,
+          "scalar": 2.465190328815662e-32,
+          "mass_work_identity": 3.3048033358494346e-16,
+          "baryon": 3.628074106287844e-17,
+          "isotope": 3.5336246141318204e-17,
+          "boundary_error": 1.2705494208814505e-21,
+          "clock_work_erg": 6.680306915425216e+48,
+          "cone_speed": 0.1790027829849676
+        },
+        {
+          "step": 18,
+          "native_norm": 0.18939064171484535,
+          "scalar": 0.0,
+          "mass_work_identity": 4.119868626776244e-16,
+          "baryon": 4.722253305795366e-17,
+          "isotope": 4.6007077526921385e-17,
+          "boundary_error": 8.470329472543003e-22,
+          "clock_work_erg": 2.440245876917543e+48,
+          "cone_speed": 0.17875705100428957
+        },
+        {
+          "step": 19,
+          "native_norm": 0.19761028496055205,
+          "scalar": 0.0,
+          "mass_work_identity": 3.183685451965615e-16,
+          "baryon": 5.954516511950854e-17,
+          "isotope": 5.802629894448274e-17,
+          "boundary_error": 7.411538288475128e-22,
+          "clock_work_erg": 5.2055216771426544e+47,
+          "cone_speed": 0.17850186911020802
+        },
+        {
+          "step": 20,
+          "native_norm": 0.20587748567812425,
+          "scalar": 0.0,
+          "mass_work_identity": 1.1352270841003258e-16,
+          "baryon": 7.300141765987285e-17,
+          "isotope": 7.11407327197176e-17,
+          "boundary_error": 6.352747104407253e-22,
+          "clock_work_erg": 4.993099306809804e+46,
+          "cone_speed": 0.17823707525630575
+        },
+        {
+          "step": 21,
+          "native_norm": 0.21424610130024868,
+          "scalar": 0.0,
+          "mass_work_identity": 1.184196935171738e-16,
+          "baryon": 8.731041528441059e-17,
+          "isotope": 8.516832643065496e-17,
+          "boundary_error": 3.1763735522036263e-22,
+          "clock_work_erg": -9.807483566906154e+44,
+          "cone_speed": 0.177961699223784
+        },
+        {
+          "step": 22,
+          "native_norm": 0.22266081469277393,
+          "scalar": 0.0,
+          "mass_work_identity": 3.4150165094787177e-16,
+          "baryon": 1.0231634224826596e-16,
+          "isotope": 9.983112554189845e-17,
+          "boundary_error": 2.117582368135751e-22,
+          "clock_work_erg": -4.526321291587671e+44,
+          "cone_speed": 0.17767473681885607
+        },
+        {
+          "step": 23,
+          "native_norm": 0.23105762863766607,
+          "scalar": 0.0,
+          "mass_work_identity": 4.561763709989537e-16,
+          "baryon": 1.177527232354722e-16,
+          "isotope": 1.1492487696870941e-16,
+          "boundary_error": 1.0587911840678754e-22,
+          "clock_work_erg": -1.5954887887351325e+43,
+          "cone_speed": 0.17737560786512835
+        },
+        {
+          "step": 24,
+          "native_norm": 0.23937223777763517,
+          "scalar": 0.0,
+          "mass_work_identity": 3.9987612137860504e-16,
+          "baryon": 1.3339262843485784e-16,
+          "isotope": 1.3025958933974526e-16,
+          "boundary_error": 1.0587911840678754e-22,
+          "clock_work_erg": -4.2404234643562623e+40,
+          "cone_speed": 0.17706416948182552
+        }
+      ],
+      "seconds": 79.24185666599999,
+      "native_calls": 4053
+    }
+  ],
+  "total_steps": 126,
+  "native_calls": 21736,
+  "full_dynamic_charge_solved": false,
+  "seconds": 436.323886271
+}

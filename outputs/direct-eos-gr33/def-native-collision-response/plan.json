@@ -1,0 +1,41 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "e71ed7eba",
+  "claim": "Evolve actual moving absorption/emission/Thomson, native thermal energy and neutral H response together with the GR-driven photon transport, using separately scaled increments on all531 cells.",
+  "decision": "Determine whether thermochemical feedback amplifies or screens the geometric photon response; save the paired material energy/species and momentum impulse for the remaining mechanical and GR closure.",
+  "reuse": "Reuse the corrected64/128 backgrounds,17 lapse/source times,531 cells,8 angles,152 frequencies and original3.434ms horizon. No new native bank or nonlinear trajectory.",
+  "boundary": "Same fixed deep incoming packet perturbation and external vacuum. Density, velocity and other advected inventories follow the saved background. The additional force is measured, not silently treated as a free fluid evolution.",
+  "method": "Strang composition of shared implicit transport and a coupled local linear radiation/heat/H solve. Actual moving scattering is retained. A static Thomson plus absorption/heat/H Schur inverse preconditions the local solve. Time comparison decides this partition.",
+  "metric": "Use delta_F=delta_N/measure-delta_log_volume*F0. Include the volume/time-rate change and canonical density/isentropic temperature response in collisions. Do not put frequency-box losses or gravitational work into gas heat.",
+  "derivatives": "Centered relative temperature/neutral/density coefficient probes in the existing native interpolation model; compare1e-5 and5e-6 at representative times. This is sampled derivative evidence, not a uniform EOS derivative bound.",
+  "gates": {
+    "derivative": 0.0001,
+    "owner": 1e-10,
+    "linear": 1e-10,
+    "energy": 1e-08,
+    "species": 1e-08,
+    "time": 0.02,
+    "background_time": 0.02
+  },
+  "budget": {
+    "inspect_seconds": 25,
+    "bank_seconds": 90,
+    "pilot_seconds": 45,
+    "production_seconds": 240,
+    "CPU_threads": 1,
+    "memory_GB": 3,
+    "new_native_bank_calls": 0
+  },
+  "production": "Only64/128 on background128 and128 on background64, after a measured pilot with2x projected cost fits240s. Halt on budget or gate failure, preserve outputs; no automatic extra mesh, paths, horizon or relaxed tolerance.",
+  "limitations": "Prescribed material motion and finite EOS/angle/frequency model; no full hydrodynamic/GR feedback or final physical charge.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_collision_response.py": "00f6313d1f9b9ddf0d0d5aa8d35034effaae894de0f0ebf6e701a6057462bc14",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_compensated_transport.py": "2b7f87e314be156a76fb0fa91776a989a6c5b489dbded819b4afcb13cc27527d",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_projected_evolution.py": "abb57285b6f1b1dc0fa3dcd9488e441dba381d4ad4282c64e2f7bf57f5355a6b",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-dynamic-lapse/transport/result.json": "e11be76d403bcdaa8bbe7d0df3a1ff87697ba8ef5c84b3de0cb628fd907b66c5",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-projected-evolution/coupled-128.npz": "abbdb3f8e916aea2273158b5c4a81fa40493d3ac89d8b97739ac888e2eedb82f",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-projected-evolution/coupled-64.npz": "64d78d69391edf426f4bfa59bc3b9f422d2300ae2f49f8e88dabdca92f50bf73",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-dynamic-lapse/corrected/metric-128-g8.npz": "249b5cdea23307ec4d88ff262228d6286b72518085237b2a83c1d83758ebe026",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-dynamic-lapse/corrected/metric-64-g8.npz": "490050faf7512c09ef976c3f013aed71a8f3c4862248ad7bdaf889784bee27eb"
+  }
+}

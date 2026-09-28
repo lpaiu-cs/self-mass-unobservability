@@ -1,0 +1,11 @@
+OP HEADERS 1 1739
+Traceback (most recent call last):
+  File "/mnt/e/lab/self-mass-unobservability/verification/op_planck_connection.py", line 202, in <module>
+    if __name__=='__main__':globals()[sys.argv[1]]()
+  File "/mnt/e/lab/self-mass-unobservability/verification/op_planck_connection.py", line 188, in run
+    native_control();values=headers();connect(values)
+  File "/mnt/e/lab/self-mass-unobservability/verification/op_planck_connection.py", line 124, in headers
+    for row in records(path):
+  File "/mnt/e/lab/self-mass-unobservability/verification/op_planck_connection.py", line 96, in records
+    assert ntot==10000 and ncoarse==1 and jstep==2
+AssertionError

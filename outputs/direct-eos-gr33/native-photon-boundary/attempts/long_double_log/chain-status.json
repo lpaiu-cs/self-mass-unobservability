@@ -1,0 +1,40 @@
+{
+  "state": "failed",
+  "completed": [
+    {
+      "step": "prepare",
+      "returncode": 0,
+      "seconds": 4.922001080000001
+    },
+    {
+      "step": "boundary",
+      "returncode": 0,
+      "seconds": 10.323112823000002
+    },
+    {
+      "step": "check64",
+      "returncode": 0,
+      "seconds": 267.077554522
+    },
+    {
+      "step": "check128",
+      "returncode": 0,
+      "seconds": 288.801996925
+    },
+    {
+      "step": "followthrough",
+      "returncode": 1,
+      "seconds": 2899.597656559
+    }
+  ],
+  "error": "AssertionError(('followthrough', 1))",
+  "seconds": 2899.598946703,
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/.phase265-ld-chain.py": "73763a582ae988efa45619693746dd6e880225adb119fad6ef9d495051d5e4fd",
+    "verification/apply_photon_geometric_boundary_ld.py": "43b5761fe8e0a7eee427cb3cb883833a211214bf818f90439c3503c683646281",
+    "verification/read_photon_boundary_exterior.py": "f9da88d67121bae4b94292bbbe97ed8c9c08e518bdc959481ec2005738c314c5",
+    "verification/solve_long_double_fgmres.py": "f93896b05f0b1806d79fb64ebc9975e5dc3252598ffb873fa4981bf3fa56abcd",
+    ".phase251-reader-launch.py": "83275ae7dcb1efbf286a21a4f3bc78d92defdf80c01159fd2cc360764c921086",
+    ".phase265-ld-followthrough.py": "bee4e8cc0c5a01e6e666df22a88b7d6fb9f6e26939ca9c64df1ce85865c337b1"
+  }
+}

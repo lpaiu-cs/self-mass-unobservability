@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-refined267-runtime/.phase267-audited.py", line 20, in <module>
+    sys.argv = sys.argv[2:]; runpy.run_path(sys.argv[0], run_name='__main__')
+  File "/usr/lib/python3.10/runpy.py", line 289, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/usr/lib/python3.10/runpy.py", line 96, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File ".phase251-reader-launch.py", line 14, in <module>
+    runpy.run_path(sys.argv[0],run_name='__main__')
+  File "/usr/lib/python3.10/runpy.py", line 289, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/usr/lib/python3.10/runpy.py", line 96, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File ".phase267-readout.py", line 52, in <module>
+    start = time.monotonic(); endpoints(); result['seconds'] = time.monotonic() - start
+  File "/home/lpaiu/work/native-refined267-runtime/verification/read_complete_radau_history.py", line 14, in endpoints
+    
+  File "/home/lpaiu/work/native-refined267-runtime/verification/read_complete_radau_history.py", line 18, in source
+    CAPS=dict(check=300,prepare=180,endpoints=2400,source=5400,fields=7200)
+  File "/home/lpaiu/work/native-refined267-runtime/verification/resume_coordinate_exact_photons.py", line 28, in restored_gas
+    assert attempt<8,('Coordinate inverse has no nearby exact preimage',component,np.flatnonzero(mask).tolist())
+AssertionError: ('Coordinate inverse has no nearby exact preimage', 2, [15, 20, 23, 51, 53, 54, 55, 69, 73, 76, 84, 86, 103, 104, 107, 117, 120, 122, 151, 168, 190, 195, 201, 213, 235, 238, 241, 247, 254, 256, 262])

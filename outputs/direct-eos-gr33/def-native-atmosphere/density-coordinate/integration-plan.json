@@ -1,0 +1,21 @@
+{
+  "classification": "Counterexample candidate",
+  "table_sha256": "1c61facf503d5b6d82013c8387630551d53dd815b3945d909a809155af92c457",
+  "source_sha256": "e4e1f5dc4a15dadb791896a4c8b99e249be6cc59c53e68687b341cbe025727b6",
+  "equations": "Full static DEF mass, scalar and lapse equations plus Jordan isentropic material pressure. Use rho as independent coordinate and integrate added baryon inventory separately. No fitted cold polytrope.",
+  "tolerances": [
+    1e-10,
+    1e-12
+  ],
+  "budget": {
+    "hard_timeout_seconds": 60,
+    "native_calls": 0,
+    "new_evolution_steps": 0
+  },
+  "gates": {
+    "radius_difference_relative": 1e-08,
+    "baryon_relative_difference": 1e-06,
+    "maximum_added_baryon_fraction": 1e-12
+  },
+  "scope": "Mechanical atmosphere to the last successful native state. A positive-pressure cold endpoint is not relabelled a vacuum surface."
+}

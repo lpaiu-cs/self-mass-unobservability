@@ -1,0 +1,110 @@
+{
+  "classification": "Counterexample candidate",
+  "numerical_response_passed": true,
+  "time_order": 2.01355707126448,
+  "time_differences_initial": [
+    4.801844178672105e-05,
+    1.189233094744316e-05
+  ],
+  "source_grid_difference_initial": 2.128295843796229e-05,
+  "quadrature_difference_initial": 6.241957555599133e-07,
+  "omitted_wing_response_bound": 9.976938816646766e-05,
+  "source_grid_plus_two_tails": 0.00022082173477089761,
+  "new_atomic_model_difference_initial": 0.03484837819701122,
+  "temperature_perturbation_K": 0.803945291335847,
+  "temperature_difference_K": 0.0013724137403041238,
+  "rows": [
+    {
+      "name": "fine-16",
+      "algebra": {
+        "energy_number_null_relative": [
+          3.0605476083714584e-16,
+          4.334723192541508e-16
+        ],
+        "initial_heating": 1.3389452984360776e-05,
+        "continuum_heating": 1.335984951737599e-05,
+        "heating_relative": 0.0022158533257641277
+      },
+      "balance": 2.0891134139930603e-12,
+      "energy_residual": 1.8749869728539887e-12,
+      "entropy_growth": 0.0,
+      "solver_residual": 1.3100801014280107e-13,
+      "iterations": 3
+    },
+    {
+      "name": "fine-32",
+      "algebra": {
+        "energy_number_null_relative": [
+          3.0605476083714584e-16,
+          4.334723192541508e-16
+        ],
+        "initial_heating": 1.3389452984360776e-05,
+        "continuum_heating": 1.335984951737599e-05,
+        "heating_relative": 0.0022158533257641277
+      },
+      "balance": 3.9726915010025364e-13,
+      "energy_residual": 2.157516867915543e-12,
+      "entropy_growth": 0.0,
+      "solver_residual": 1.3100801014280107e-13,
+      "iterations": 3
+    },
+    {
+      "name": "fine-64",
+      "algebra": {
+        "energy_number_null_relative": [
+          3.0605476083714584e-16,
+          4.334723192541508e-16
+        ],
+        "initial_heating": 1.3389452984360776e-05,
+        "continuum_heating": 1.335984951737599e-05,
+        "heating_relative": 0.0022158533257641277
+      },
+      "balance": 2.392279212240563e-12,
+      "energy_residual": 2.4317770558953767e-12,
+      "entropy_growth": 0.0,
+      "solver_residual": 6.626254751431177e-13,
+      "iterations": 3
+    },
+    {
+      "name": "coarse-64",
+      "algebra": {
+        "energy_number_null_relative": [
+          3.0605476083714584e-16,
+          4.334723192541508e-16
+        ],
+        "initial_heating": 1.3389452984360776e-05,
+        "continuum_heating": 1.335984951737599e-05,
+        "heating_relative": 0.0022158533257641277
+      },
+      "balance": 2.391286677247992e-12,
+      "energy_residual": 2.401011984417054e-12,
+      "entropy_growth": 0.0,
+      "solver_residual": 6.620194570258334e-13,
+      "iterations": 3
+    },
+    {
+      "name": "quadrature4-64",
+      "algebra": {
+        "energy_number_null_relative": [
+          3.0605476083714584e-16,
+          4.334723192541508e-16
+        ],
+        "initial_heating": 1.3389452984360776e-05,
+        "continuum_heating": 1.335984951737599e-05,
+        "heating_relative": 0.0022158533257641277
+      },
+      "balance": 2.3896434903031013e-12,
+      "energy_residual": 2.8204729470805315e-12,
+      "entropy_growth": 0.0,
+      "solver_residual": 6.626637054349912e-13,
+      "iterations": 3
+    }
+  ],
+  "seconds": 198.891874782,
+  "memory_GB": 1.579917312,
+  "physical_opacity_certified": false,
+  "populations_passed": false,
+  "native_emission_passed": false,
+  "full_dynamic_charge_solved": false,
+  "limit": "Numerical convergence of this fixed-bin LTE atomic model does not bound atomic data/populations, special-profile continuum error, subcell transport, TOPS interpolation, bound-electron redistribution, atmosphere or GR feedback."
+}

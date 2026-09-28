@@ -1,0 +1,20 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "radau_dense_stage_identity": true,
+  "diagonal_conserved_coordinate_identity": true,
+  "adapter_receipt_schema_checked": true,
+  "bindings": [
+    {
+      "path": "verification/read_material_return_charge.py",
+      "sha256": "1c1442a368f2cfb6fee0990310dcb775793232c0fd02446f7b7e8b07abbc512e",
+      "receipt": "native-full-charge251-work/regression-receipt.json"
+    },
+    {
+      "path": "verification/read_material_return_exterior.py",
+      "sha256": "222cf28134797c7bc66296543f7b02d99296372af6c579d4c0a3e4923c3b0305",
+      "receipt": "native-returned-exterior252-work/check-receipt.json"
+    }
+  ],
+  "scope": "Exact symbolic identities and receipt-key regression only; no numerical or physical error certificate."
+}

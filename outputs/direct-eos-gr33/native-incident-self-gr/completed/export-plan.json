@@ -1,0 +1,16 @@
+{
+  "classification": "Counterexample candidate",
+  "source_sha256": "555a22e78a324a7d31f6183c8ba9e3a348bbe9c723cb29b25e38643ab5230e6a",
+  "error": "TypeError('Object of type bool is not JSON serializable')",
+  "repair": "Both physical prefixes and their forecast were saved successfully. The subsequent console json.dumps rejected a NumPy bool/longdouble. Convert NumPy scalars only in console serialization, matching the existing saved-JSON writer. Reuse both accepted prefixes byte-for-byte; no physical run is repeated.",
+  "prefix_forecast_seconds": 1015.6225172246684,
+  "production_cap": 1100,
+  "bindings": {
+    "native-incident-self-gr157-work/extended-state-producer.py": "60ef4f8d549769bf8d6d0df386e0fc882b8881680bb00909f95e1972e20a6753",
+    "native-incident-self-gr157-work/state-precision-plan.json": "5db46143aa2acc0a9733d198398e52414fc5b52c41d9324b3df4d11fe4e26046",
+    "native-incident-self-gr157-work/photon_extended_pilot-1-receipt.json": "b1f505a8751d0016c412446a7c15636c757d085bf3b0e739988c1221479faaa0",
+    "native-incident-self-gr157-work/sweep-1/photons-precise/pilot.json": "acad8aaf9ac590dbb035a3704077dd39fc8461879913b89e5faf85a7e75edc27",
+    "native-incident-self-gr157-work/sweep-1/photons-precise/pilot-64.npz": "fa6ccb86157be99694a0665d1ba1bf7bbab5ea14f1dcf141a71148625496b669",
+    "native-incident-self-gr157-work/sweep-1/photons-precise/pilot-128.npz": "e7da8223cfb3ca61eadcc9829ed98c2c1355783d5bf33093063c87b1cd03cccb"
+  }
+}

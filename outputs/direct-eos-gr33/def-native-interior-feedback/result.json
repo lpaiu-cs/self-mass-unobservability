@@ -1,0 +1,50 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "controls": {
+    "time_direct": 0.009426316141781655,
+    "time_total": 0.0020676452105404626,
+    "time_deep_trace": 0.0009178737358019739,
+    "history_direct": 0.005636487254289181,
+    "cadence_direct": 0.013641500310785227,
+    "quadrature_direct": 4.785160751214465e-05,
+    "ray_quadrature": 1.344080716383664e-15
+  },
+  "sources": [
+    {
+      "steps": 64,
+      "primitive_seed_relative": 5.224951304213852e-13,
+      "saved_u_EOS_relative": 3.120945778847303e-16,
+      "maximum_primitive_residual": 1.9683752938754415e-14
+    },
+    {
+      "steps": 128,
+      "primitive_seed_relative": 5.223950397102363e-12,
+      "saved_u_EOS_relative": 3.677601614195631e-16,
+      "maximum_primitive_residual": 1.9983753024913865e-14
+    }
+  ],
+  "endpoint_direct": 1.143921118567128e-27,
+  "endpoint_direct_relative": 1.1439211189635612e-27,
+  "endpoint_components": [
+    2.239378653422387e-27,
+    -1.2532407506405869e-37,
+    -2.6100560264707642e-30,
+    -1.092847478703464e-27
+  ],
+  "endpoint_direct_plus_photon_mass": 5.296880244388895e-27,
+  "endpoint_excess_over_frozen_photon_mass": 4.669784070436432e-27,
+  "endpoint_arrived_energy_erg": 3.6648186618506776e+29,
+  "positive_subbin_mass_normalization_upper": 1.9713562183419875e-25,
+  "seconds": 9.504226244999984,
+  "new_fluid_steps": 0,
+  "actual_two_way_material_photon_feedback": true,
+  "conditional_point_debit": false,
+  "old_kernel_trajectories_recertified": false,
+  "first_order_interior_constitutive_closure": true,
+  "full_angular_error_certified": false,
+  "spatial_frequency_continuum_certified": false,
+  "full_GR_feedback": false,
+  "final_charge_solved": false,
+  "full_goal_complete": false
+}

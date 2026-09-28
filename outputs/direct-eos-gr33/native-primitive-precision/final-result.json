@@ -1,0 +1,39 @@
+{
+  "classification": "Counterexample candidate",
+  "controller": {
+    "state": "failed",
+    "action": "coarse",
+    "completed": [
+      {
+        "action": "prefix",
+        "returncode": 0
+      },
+      {
+        "action": "coarse",
+        "returncode": 1
+      }
+    ],
+    "elapsed_seconds": 1806.350448846817
+  },
+  "actual_coarse_accepted_steps": 114,
+  "full_horizon_completed": false,
+  "original_failures_preserved": true,
+  "native_precision_repair_applied_to_actual_evolution": true,
+  "actual_same_joint_solution_GR_computed": false,
+  "physical_final_charge_solved": false,
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false,
+  "actual_result": null,
+  "actual_failure": {
+    "classification": "Counterexample candidate",
+    "error": "TimeoutError('Registered native acoustic budget')",
+    "time": 0.0033002736523846123,
+    "step": 2.6831493108817987e-05,
+    "actual_accepted_steps": 114,
+    "macro_index": 61,
+    "sub_index": 1,
+    "last_accepted_inputs_saved": true,
+    "serialized_substep_restart_validated": false,
+    "final_charge_conclusion": "unadjudicated"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "classification": "Counterexample candidate",
+  "artifact_checks_passed": true,
+  "whole_response_passed": false,
+  "comparisons": {
+    "temperature": {
+      "time_relative": 0.005402554127752768,
+      "space_relative": 0.0013311266218412638,
+      "worst_time_s": 0.002445019809541039,
+      "native_array_index": 5602,
+      "radius_fraction": 0.9909608712813655,
+      "p2": -9.731465259420029e-05,
+      "p4": -9.717027154990644e-05,
+      "reference_maximum": 0.00010846529693331015,
+      "local_acoustic_crossing_estimate_s": 0.005846982279040578
+    },
+    "velocity": {
+      "time_relative": 0.023397889138411503,
+      "space_relative": 2.1148847615494293,
+      "worst_time_s": 0.0028206607130644907,
+      "native_array_index": 5602,
+      "radius_fraction": 0.9909608712813655,
+      "p2": -0.014770678092153365,
+      "p4": 0.012760130854896622,
+      "reference_maximum": 0.013017640226827335,
+      "local_acoustic_crossing_estimate_s": 0.005846982279040578
+    },
+    "scalar": {
+      "time_relative": 0.0003792879326435978,
+      "space_relative": 0.008293713460514485,
+      "worst_time_s": 0.0034344311179287023,
+      "native_array_index": 3143,
+      "radius_fraction": 0.25656423383312454,
+      "p2": 8.124551279184735e-31,
+      "p4": 7.5256506902551695e-31,
+      "reference_maximum": 7.221139140879045e-30,
+      "local_acoustic_crossing_estimate_s": 0.005339914534344237
+    }
+  },
+  "heat_balance": {
+    "pilot": 0.0,
+    "p4-32": 5.864062986030455e-20,
+    "p4-64": 7.476680307188155e-20,
+    "p2-64": 2.6388283437667424e-20
+  },
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "mass_jump": "J_out-J_in=-4*pi*r^3*A4*p*zeta for a moving material/vacuum reference interface.",
+    "energy": "With J=-G*E/(c^4*R*N*a) at the surface, E_out=E_heat+4*pi*R^3*A4*N*a*P*zeta.",
+    "pressure_split": "Only Prad work belongs to outgoing photons; Pgas work requires the specified external stress reservoir.",
+    "scope": "First-order identities at the reference surface. This calculation does not solve its motion, radiation geometry or the external gas reservoir."
+  },
+  "source_front_hypothesis": {
+    "classification": "Conjectural",
+    "statement": "Unresolved waves from discontinuous cellwise heat sources remain a candidate cause. A local sound-crossing estimate is not a rigorous domain-of-dependence certificate in the coupled GR/heat system.",
+    "confirmed": false
+  },
+  "surface": {
+    "displacement_fraction": -2.593110834312659e-21,
+    "gas_pressure_dyn_cm2": 1.0,
+    "radiation_pressure_dyn_cm2": 80.5572671068963,
+    "hemisphere_pressure_relative": 1.1102230246251565e-15,
+    "omitted_radiation_work_erg": -866038812912.3802,
+    "omitted_external_gas_work_erg": -10750598226.764334,
+    "work_over_emitted_heat": -1.1745845974178158e-19,
+    "isolated_matter_photon_stress_match": false,
+    "work_applied_to_evolution": false
+  },
+  "seconds": 1.8549415929999995,
+  "full_goal_complete": false
+}

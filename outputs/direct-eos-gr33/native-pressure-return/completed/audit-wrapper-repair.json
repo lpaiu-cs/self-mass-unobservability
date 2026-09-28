@@ -1,0 +1,7 @@
+{
+  "repair": "Accept either strings or Path objects and stream SHA256 with portable hashlib",
+  "preserved_source": "audit-producer-initial.py",
+  "error": "AttributeError: 'str' object has no attribute 'open'",
+  "classification": "Counterexample candidate",
+  "scope": "Read-only publication binding audit, before numerical checks; no evolution steps or states changed"
+}

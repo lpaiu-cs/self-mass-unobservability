@@ -1,0 +1,66 @@
+{
+  "classification": "Counterexample candidate",
+  "rows": [
+    {
+      "stage": 0,
+      "native_before_J_equals_after": true,
+      "different_entries": 0,
+      "relative_L1": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "differences": [],
+      "conserved_roundtrip": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "roundtrip_max_abs_by_component": [
+        "0.0",
+        "0.0",
+        "0.0",
+        "0.0"
+      ]
+    },
+    {
+      "stage": 1,
+      "native_before_J_equals_after": true,
+      "different_entries": 1,
+      "relative_L1": [
+        0.0,
+        0.0,
+        0.0,
+        1.4657909029678432e-28
+      ],
+      "differences": [
+        {
+          "cell": 14,
+          "component": 3,
+          "saved": "2.4090771527751676541e+21",
+          "replayed": "2.409077152775167653e+21",
+          "difference": "-1024.0",
+          "saved_ulp": "256.0"
+        }
+      ],
+      "conserved_roundtrip": [
+        0.0,
+        0.0,
+        1.753535573034705e-20,
+        0.0
+      ],
+      "roundtrip_max_abs_by_component": [
+        "0.0",
+        "0.0",
+        "0.5",
+        "0.0"
+      ]
+    }
+  ],
+  "seconds": 21.89837029599994,
+  "source_sha256": "7ecfd27d16652ea0161ff17096ffad381a5cebbf3025947b477ed323213ec82a",
+  "new_physical_steps": 0,
+  "new_photon_solves": 0
+}

@@ -1,0 +1,16 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "f305247",
+  "bindings": {
+    "verification/lanl_tops_outer_groups.py": "44471208ec5834b04355e7e80730e1f3db331bc3bca3c4aeeca59f5a47470241",
+    "outputs/direct-eos-gr33/lanl-tops-outer-audit/manifest.json": "2a9b970a07293c5f5d08c60a0d5c1594a25a0eb8dc62ffc6662c140c0dddd7ba",
+    "outputs/direct-eos-gr33/lanl-tops-cutoff-reader/manifest.json": "b660702105000a37d0fb1ba3ce5741772a4a5645cf9c5624abdf35a7449e0e4a",
+    "outputs/direct-eos-gr33/lanl-tops-outer-groups/requests.json": "93ea7b0a89856cd66b2871d543c70311b57fe498747c338fad5acc2a12d27357",
+    "outputs/direct-eos-gr33/lanl-tops-outer-groups/lanl-tops-form.html": "b5f1093f7912a1842803c411f375e86db6c21af3d6d9074a1c25a936211ef9d5"
+  },
+  "reason": "Both separately retrieved outer spectra pass all input and arithmetic checks but fail the frozen Planck quadrature gate. Preserve both failures. Retrieve native Planck/Rosseland group averages at the same exact outer mixture/density and both temperatures with cutoff OFF.",
+  "grid": "16 and 32 logarithmic groups with explicitly submitted six-digit boundaries from 1e-8 to 1 keV. These are provider group integrals, not reconstructions from the failed output spectra.",
+  "acceptance": "Check exact input printing intervals, every boundary and final upper edge, absence of warnings and strictly positive finite group means. Weight native Planck groups by their exact submitted Planck intervals and Rosseland groups by the corresponding derivative weights. Recombine all groups and compare each gray mean and the 16/32 recombinations at fixed relative 1e-3. Do not replace prior failed spectral gates.",
+  "relative_tolerance": 0.001,
+  "physical_LTE_atmosphere_certified": false
+}

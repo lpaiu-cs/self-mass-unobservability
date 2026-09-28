@@ -1,0 +1,24 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Separate spatial trial-space error from moving quadrature and heat-source debit in the failed every-other-node contrast.",
+  "method": "The same coarse node subset, Galerkin restriction Kc=P.T*Kf*P, Mc=P.T*Mf*P, Fc=P.T*Lf, and exact fine heat lift in physical readouts. No new nodes, no altered energy input, no renewed EOS. Restrict u=q+H rather than separately reinterpolating H.",
+  "gates": {
+    "spatial_relative": 0.02,
+    "projection_relative": 0.02,
+    "projection_order": 1.5
+  },
+  "budget": {
+    "models": 1,
+    "maximum_basis": 512,
+    "hard_seconds": 60,
+    "CPU_threads": 1,
+    "new_EOS_calls": 0
+  },
+  "forecast": "One native assembly4s plus one512-vector projection and three series:8-15s based on22.60s for four prior models. Hard60s.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-canonical/nested-space.py": "80b42b9275416520128a30329810394f7d41c21e459e1c55a1aebd4c13909d2b",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_energy_modes.py": "cc10e572c8a0b1f1f4846e348ab9c9ca68d82186111431ee1cc0d291937b436d",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_energy_fem.py": "b032fd679022359230a75537dcfc51102454043b665b1da64cda5b00c637b65b",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-canonical/modes/result.json": "230927714e528388cc788afc36717846a05c21dcf176cd567b3614b6833036f6"
+  }
+}

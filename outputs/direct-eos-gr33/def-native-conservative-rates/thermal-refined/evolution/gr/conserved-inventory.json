@@ -1,0 +1,18 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "rows": [
+    {
+      "steps": 64,
+      "baryon_relative_to_initial_atmosphere": 1.3094576183835515e-16,
+      "baryon_relative_to_actual_port": 4.211821744853831e-08
+    },
+    {
+      "steps": 128,
+      "baryon_relative_to_initial_atmosphere": 1.6549809465959318e-16,
+      "baryon_relative_to_actual_port": 1.3026860578454796e-08
+    }
+  ],
+  "nonlinear_stage_residual_upper_from_unchanged_owner": 2e-11,
+  "scope": "Each successful inherited implicit stage exits only below2e-11 or raises; its observed maximum was not separately stored. Whole photon/neutral port history was not captured and is not certified here."
+}

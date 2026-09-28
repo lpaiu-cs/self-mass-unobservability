@@ -1,0 +1,72 @@
+{
+  "classification": "Counterexample candidate",
+  "paths": [
+    {
+      "classification": "Counterexample candidate",
+      "steps": 64,
+      "completed": 12,
+      "seconds": 12.736644470999863,
+      "local_steps": 21,
+      "conserved_Killing_balance": 1.0494688751727514e-12,
+      "prior_state_change": null,
+      "prior_source_change": null,
+      "exact_owner_port_relative": 2.6781318954105243e-16,
+      "complete": false,
+      "passed": true,
+      "full_source_error_enclosed": false,
+      "final_charge_solved": false,
+      "cost": {
+        "setup": 4.92203088500014,
+        "physics": 11.74337987700028,
+        "state_write": 0.4390170340000168,
+        "port_write": 0.0841041580001729,
+        "state_count": 1,
+        "port_count": 4
+      },
+      "new_steps": 4
+    },
+    {
+      "classification": "Counterexample candidate",
+      "steps": 128,
+      "completed": 8,
+      "seconds": 6.954174283999919,
+      "local_steps": 8,
+      "conserved_Killing_balance": 2.9729207322511232e-12,
+      "prior_state_change": null,
+      "prior_source_change": null,
+      "exact_owner_port_relative": 0.0,
+      "complete": false,
+      "passed": true,
+      "full_source_error_enclosed": false,
+      "final_charge_solved": false,
+      "cost": {
+        "setup": 5.6802656459999525,
+        "physics": 6.23093222999978,
+        "state_write": 0.28455224699996506,
+        "port_write": 0.0400223299998288,
+        "state_count": 1,
+        "port_count": 4
+      },
+      "new_steps": 4
+    }
+  ],
+  "cost_parts": [
+    {
+      "setup": 4.92203088500014,
+      "steps": 153.75729245500588,
+      "states": 5.707221442000218,
+      "checkpoints": 2.35071700999697
+    },
+    {
+      "setup": 5.6802656459999525,
+      "steps": 188.12863679998827,
+      "states": 6.585255510000252,
+      "checkpoints": 3.588007293003102
+    }
+  ],
+  "export_allowance_seconds": 30,
+  "forecast_seconds": 400.7194270409948,
+  "upper_seconds": 621.0791405614922,
+  "eligible": true,
+  "seconds": 30.465389507999816
+}

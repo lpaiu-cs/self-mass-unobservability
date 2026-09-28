@@ -1,0 +1,29 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Check native core thermodynamics, independently integrate envelope baryons and luminosity, retain isotope inventory and construct the full finite-pressure background/lapse. Put one luminosity on the shared material face and retain the resulting core heat imbalance.",
+  "gates": {
+    "native_logrho": 1e-07,
+    "native_entropy_over_cv": 1e-07,
+    "envelope_mass_relative": 1e-05,
+    "luminosity_relative": 1e-05,
+    "isotope_inventory_relative": 1e-13
+  },
+  "budget": {
+    "hard_seconds": 45,
+    "native_calls": 430,
+    "new_roots": 0,
+    "new_evolution_paths": 0,
+    "forecast_seconds_range": [
+      15,
+      30
+    ],
+    "total_cap_seconds": 600
+  },
+  "bindings": {
+    "verification/verify_native_whole_star_match.py": "60c4f73afda93d2b6c132ed12a152c590634db18a49482ebc28b8c3d81931202",
+    "verification/def_native_whole_star_match.py": "ed2aa9ed37b9dfa187f543c3bd399860a8bb230bbc8956902ce4388857f2c185",
+    "outputs/direct-eos-gr33/def-native-whole-star-match/final-result.json": "505c68ef5cf1895eab23d05e4f13a1f8d59ad0214dd4d379eeaa070f70ed222f",
+    "outputs/direct-eos-gr33/def-native-whole-star-match/final-core.npz": "386c48ad8a2038332242075bcf45c93b9241b18763aba3004d12a799a1d61b14",
+    "outputs/direct-eos-gr33/def-native-whole-star-match/final-envelope.npz": "cdb53cf0830fa5442deb22fac2d78781935290ed86f8a580d5a1083ebb8c6a56"
+  }
+}

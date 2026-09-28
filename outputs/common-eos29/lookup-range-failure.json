@@ -1,0 +1,7 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": false,
+  "label": "initial base 9-point TOV attempt",
+  "error": "EOS table range at cell index 0, log-pressure offset 0.04182001595873963 exceeded 0.04",
+  "correction": "Evaluate the unchanged FreeEOS entropy adiabat directly outside the lookup band. Do not extrapolate or change physical entropy. This is a numerical range failure, not a failed physical model."
+}

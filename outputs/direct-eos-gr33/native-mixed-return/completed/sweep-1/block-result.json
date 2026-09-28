@@ -1,0 +1,64 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": false,
+  "rows": [
+    {
+      "steps": 64,
+      "lagged_inputs": {
+        "xi": 1.0,
+        "energy_offset": 1.0,
+        "B": 1.0,
+        "S": 1.0,
+        "M_Etilde": 1.0,
+        "dM_Etilde": 1.0,
+        "M_H": 1.0,
+        "dM_H": 1.0
+      },
+      "stage_forcing_defect": [
+        0.9881938615283545,
+        0.986333977525542,
+        0.9934997052071138,
+        0.9903182349483419
+      ],
+      "paired_E_H": [
+        0.9515073329080962,
+        0.1738163318768241
+      ],
+      "stage_count": 128,
+      "stage_operator_identical": true,
+      "forecast_seconds": 287.9084755560209
+    },
+    {
+      "steps": 128,
+      "lagged_inputs": {
+        "xi": 1.0,
+        "energy_offset": 1.0,
+        "B": 1.0,
+        "S": 1.0,
+        "M_Etilde": 1.0,
+        "dM_Etilde": 1.0,
+        "M_H": 1.0,
+        "dM_H": 1.0
+      },
+      "stage_forcing_defect": [
+        0.9881942943703127,
+        0.9863340612318859,
+        0.993500179973912,
+        0.9903185341187294
+      ],
+      "paired_E_H": [
+        0.9515226522769472,
+        0.17404725984541733
+      ],
+      "stage_count": 256,
+      "stage_operator_identical": true,
+      "forecast_seconds": 278.04441837997604
+    }
+  ],
+  "maximum_block_defect": 1.0,
+  "no_new_evolution_steps": true,
+  "scope": "Actual finite lagged input and stage-source consistency, preregistered in this phase; not a contraction or continuum error bound.",
+  "seconds": 138.618410327,
+  "criteria_preregistered": true,
+  "next_sweep_allowed": true
+}

@@ -1,0 +1,43 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "aab855f9",
+  "claim": "Evolve retained ion-stage populations, photons and material heat together on the original interval. Obtain the constrained native chemical susceptibility by conjugate external fields; remove its relaxational heat capacity from the thermal reservoir.",
+  "decision": "Compare the actual finite-population path against the saved instantaneous-LTE path. No claim of full non-LTE levels, collision completeness, original complete-opacity repair or stellar GR completion.",
+  "model": "18 retained ionization edges; higher-charge cumulative populations are conjugate to dimensionless species chemical fields. Other chemical coordinates and internal levels equilibrate conditionally. Native susceptibility and equilibrium temperature tangent define the local quadratic free energy. Bound-free events carry one ionization, one photon and reciprocal thermal/chemical energy. No invented relaxation time or rate multiplier.",
+  "budget": {
+    "build_seconds": 60,
+    "EOS_calls": 75,
+    "input_seconds": 90,
+    "coupled_paths": 5,
+    "coupled_seconds": 480,
+    "cpu_threads": 1,
+    "memory_GB": 4,
+    "new_stellar_steps": 0
+  },
+  "forecast": "Phase69 six paths218s,1.59GB; EOS call0.106s and build3.95s. New small reservoir Schur block is unmeasured; forecast180-420s, cap480s. Reuse saved LTE and zero-opacity controls; fixed24134 cells,8 angles,H/c duration,16/32/64 steps plus two input contrasts. No expansion after failure.",
+  "gates": {
+    "native_unbiased_bitwise": true,
+    "susceptibility_symmetry": 1e-05,
+    "susceptibility_step": 1e-05,
+    "positive_frozen_capacity": true,
+    "time_order": 1.8,
+    "time_error": 0.001,
+    "input_error": 0.001,
+    "energy_balance": 1e-09,
+    "solver": 1e-11,
+    "entropy_growth": 1e-10
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_photon_population_coupled.py": "9479156d3873d5de2ce11f69b9a5075b2e375af7dd4b64ab846fe2763ac00372",
+    "/home/lpaiu/work/direct-eos-gr33/photon-hhe-coupled/libfree_eos_hhe_metadata.so": "d9bb12cc7da3698b1240e8a990020571dde0e4a2d7ed85b1cba5679faaefedb1",
+    "/home/lpaiu/work/direct-eos-gr33/photon-hhe-coupled/gas.so": "26b24ec7f06a2ce918b9f3918855fdf36431210b58d153cc42e0a74d268b9200",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-hhe-coupled/bank.npz": "46d8a089a6776ff19f23a3aa8e6223c1f243643e1963acdf70734d77e0ee7d61",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-hhe-coupled/channels.npz": "41bca310839be11eb9c8b2c6fbfaa9fe8414c1a832fcc9ee3a93b8f5a807f07d",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-mhd-spectrum/eos-state.npz": "a6101eb4a0219523a632c68aed8b8397706bfe7b07a19273d3f02ca3e49687f3",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-mhd-spectrum/catalog.json": "95f0dc96f4b10f2e50bd570f583848b9202588686c882e4271d76859cfac98a4",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-mhd-spectrum/coupled/rates/cross-sections.npz": "4a9f1f6aed789e9449b961dbc6676bdf1a242678e3e525601e067df918bc135c",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-mhd-spectrum/coupled/rates/rates.npz": "333de214584f109719cde0b491070dbae75a910c33757846c44efa9e393e1619",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-hhe-coupled/fine-64.npz": "210707e7a170c118441315eb46eb176192c24bae22d2a075001fccc4a67b038c",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-hhe-coupled/response.json": "9937a6cd7bddf6dc897af39f1e85fb379cd7e4960af7850fd1e6d0a7c2d2b463"
+  }
+}

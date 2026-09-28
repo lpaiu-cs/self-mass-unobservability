@@ -1,0 +1,8 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "homogeneous_equations": "w*dV/dt+df/dt=0; tau*df/dt+f=-(K*T/c^2)*dV/dt. Here w=epsilon+P, K is thermal conductivity, and f is physical heat flux. The acceleration term is the local baryon-frame Fourier/Eckart term.",
+  "nonzero_pole": "s=-1/(tau-tau_min), tau_min=K*T/(w*c^2). Tau=0 produces a positive pole 1/tau_min. Tau=tau_min makes the evolution matrix singular; positive decay of this homogeneous mode requires tau>tau_min.",
+  "nonuniqueness": "Tau=2*tau_min and tau=3*tau_min have the same equilibrium EOS and stationary conductivity but different stable homogeneous poles. EOS plus stationary opacity/conductivity do not determine the missing transient coefficient.",
+  "limitations": "Only this specified homogeneous subsystem is analyzed. The inequality does not prove full spatial causality/stability, select a physical tau, or identify a stellar/macroscopic relaxation time with the local heat-flux time. Other constitutive frames/theories are not excluded."
+}

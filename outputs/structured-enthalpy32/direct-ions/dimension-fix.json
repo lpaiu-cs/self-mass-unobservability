@@ -1,0 +1,14 @@
+{
+  "classification": "Proven",
+  "changes": {
+    "src/free_eos_detailed.f90": {
+      "before": "d6e284721ca89cb664141d6bbd6eb5841a1e6f35ccdd696b431ebee0bd3a2827",
+      "after": "aac2313e0f48a846a0f78092b3315e339583f416802edcdb09dd4fb169281c9e"
+    },
+    "src/mod_free_eos.f90": {
+      "before": "1e3dc930088f81892b53285cb8a70e70aad51855d462fc77534f0cc1a0b6f4f5",
+      "after": "b486f026bfa2bce39abcb719b99475b47e71dc546c6b316feacd1077b19b20de"
+    }
+  },
+  "cause": "The first parameter replacement matched neps but missed neps_local, so the input-size guard rejected all 24-element queries. The revised preparation also covers suffixed neps parameters."
+}

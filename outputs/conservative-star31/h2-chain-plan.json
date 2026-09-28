@@ -1,0 +1,14 @@
+{
+  "classification": "Counterexample candidate",
+  "steps": [
+    1e-06,
+    5e-07
+  ],
+  "criterion": 0.001,
+  "source_partial_control_sha256": "e521648aec2fd3e35b9bafe6ba1fbc726ffad9870a260bd8804f19d2543e8a8c",
+  "failed_direct_extrapolation_sha256": "a90bb7d6c7ebde4cf6667dff8031f02edfeebe51cd2f25b5d7fd155131f23d7b",
+  "method": "Keep every nuclear abundance at its actual initial value while perturbing the seven independent auxiliary inputs along D_X a for H2-He4. Add the returned fixed-auxiliary H2-He4 partial. The direct weak-table correction is constant in this direction at fixed auxiliaries because neither H2 nor He4 is a corrected parent.",
+  "auxiliary_direction": "Analytic three composition moments plus the already measured two-step extrapolated seeded-EOS auxiliary direction.",
+  "comparison": "Compare total reconstructed vectors at two auxiliary directional step sizes over all 5735 cells. Separately compare against the registered direct derivative in burning cells. Preserve both failed direct all-zone controls.",
+  "physical_or_continuous_certificate": false
+}

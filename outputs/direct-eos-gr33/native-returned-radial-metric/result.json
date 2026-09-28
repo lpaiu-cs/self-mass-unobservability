@@ -1,0 +1,59 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "verdict": "RETURNED_RADIAL_METRIC_MATCHED_PHOTON_PROPAGATION_PENDING",
+  "actual_same_joint_solution_GR_computed": false,
+  "same_accepted_returned_boundary_reproduced": true,
+  "returned_metric_photon_propagation_complete": false,
+  "physical_GR_boundary_applied": false,
+  "physical_final_charge_solved": false,
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false,
+  "snapshot_KST": "2026-09-25T18:56:18.657644+09:00",
+  "controls": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "applied_boundary_relative": 3.9775615222794e-12,
+    "inverse_ray_age_fraction": 3.544120552589902e-11,
+    "kernel_controls": {
+      "packet": [
+        4.613297723035811e-14,
+        2.3105513895366514e-10
+      ],
+      "scalar": [
+        1.5984902133297456e-15,
+        7.713586134530668e-13
+      ]
+    },
+    "independent_metric_derivative_relative": {
+      "nt": 4.965770754110218e-10,
+      "lt": 5.163828049486952e-10,
+      "nup": 1.270619375229957e-08
+    },
+    "returned_metric_scale": 6.829406422338143e-59,
+    "source_knots": 575,
+    "same_applied_outgoing_continuation": true,
+    "complete_physical_boundary": false
+  },
+  "arithmetic": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "same_queries": 256,
+    "old_seconds": 0.14504317400002265,
+    "new_seconds": 0.032806515999993735,
+    "relative": {
+      "nu": 3.245639503578516e-17,
+      "lam": 3.215170278132171e-17,
+      "zeta": 1.0094790763475178e-18,
+      "lt": 3.412103894048264e-20,
+      "nt": 3.4226221649331163e-20,
+      "nup": 1.2699806309755604e-16,
+      "N": 0.0,
+      "b": 0.0,
+      "a": 0.0,
+      "nr": 0.0,
+      "lr": 0.0
+    },
+    "scope": "Finite metric and derivative comparisons; not a universal rounding-error certificate."
+  }
+}

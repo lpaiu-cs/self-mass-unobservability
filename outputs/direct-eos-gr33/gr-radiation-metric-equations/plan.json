@@ -1,0 +1,26 @@
+{
+  "classification": "Proven",
+  "checkpoint": "fb7d9e3",
+  "bindings": {
+    "verification/gr_radiation_metric_equations.py": "5e626919da18adf95e0c65d0c6fd3ce19785374e330bddd51d9539f8b033c103",
+    "outputs/direct-eos-gr33/gr-radiation-eos-split/manifest.json": "e367007b46cd01a029904ed6b5cf7582fff119e8de9d649054f7983783e6bae7",
+    "outputs/direct-eos-gr33/gr-radiative-boundary/manifest.json": "da7ddec8c9b446b77aa4d56241552baaa837071baa254c4491a0a09624e76a63",
+    "outputs/direct-eos-gr33/gr-radiation-metric-equations/weih2020.pdf": "a2b6eb2fa15491c4f64094a9784f5eef225c00f8f6f218f099ecae5b38b643fc"
+  },
+  "imported_source": {
+    "classification": "Imported from prior work",
+    "url": "https://arxiv.org/abs/2003.13580",
+    "doi": "10.1093/mnras/staa1297",
+    "equations": "15-26: radiation stress tensor, Eulerian moments and radiation four-force. Derive spherical specialization independently from the metric and tensor divergence."
+  },
+  "convention": "G=c=1, ds^2=-N(t,r)^2 dt^2+a(t,r)^2 dr^2+r^2 dOmega^2, N,a>0. E,J,S,Pperp are Eulerian energy density, radial energy flux, radial stress and tangential stress. Sources sE,sJ are orthonormal Eulerian four-force components. Opacity in the four-force has inverse proper-length units, not mass-specific opacity units.",
+  "checks": [
+    "Einstein tt/tr/rr from Christoffel/Ricci tensors",
+    "Time-dependent energy/momentum/baryon conservation from covariant divergences",
+    "Misner-Sharp mass constraint propagation and material-surface balance",
+    "Exact radial Lorentz transformation of radiation and its four-force",
+    "Moving LTE matter/photon recombination",
+    "Tolman equilibrium and outgoing null radiation in fixed Schwarzschild background"
+  ],
+  "physical_boundary": "No actual radiation moments, absorption, scattering, emissivity, angular closure, atmosphere or neutrino stress are inferred from an LTE EOS or Rosseland opacity. Fixed-background null radiation is a transport control, not a self-gravitating static spacetime. Actual stellar time evolution remains open."
+}

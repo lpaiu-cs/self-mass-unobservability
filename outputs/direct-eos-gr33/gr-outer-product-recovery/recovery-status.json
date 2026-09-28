@@ -1,0 +1,47 @@
+{
+  "recorded_at_utc": "2026-09-12T05:49:17.248842+00:00",
+  "scope": "Operational restart receipt; running status is true only at this snapshot.",
+  "old_paused_processes_no_longer_exist": true,
+  "caloric_accepted_endpoints_replayed": 54,
+  "outer_verified_reused_positions": 99,
+  "outer_remaining_positions": 3107,
+  "molecular_table_complete_projection_restarted": true,
+  "roots": [
+    {
+      "pid": 417,
+      "ppid": 408,
+      "state": "S",
+      "start": "2041",
+      "command": [
+        "python3",
+        "verification/gr_caloric_64.py",
+        "run"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    },
+    {
+      "pid": 439,
+      "ppid": 430,
+      "state": "R",
+      "start": "3060",
+      "command": [
+        "python3",
+        "verification/gr_molecular_structure_runner.py",
+        "project"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    },
+    {
+      "pid": 472,
+      "ppid": 462,
+      "state": "S",
+      "start": "14071",
+      "command": [
+        "python3",
+        "verification/gr_outer_product_recovery.py",
+        "run"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    }
+  ]
+}

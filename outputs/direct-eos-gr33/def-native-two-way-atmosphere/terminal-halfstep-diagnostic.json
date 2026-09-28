@@ -1,0 +1,26 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "ValueError('f(a) and f(b) must have different signs')",
+  "seconds": 3.2836159590000307,
+  "failures": [
+    {
+      "cell": 416,
+      "x_cm": 25078.125,
+      "U": [
+        1.7903898156588437e-08,
+        5.8121952309826455e-12,
+        1.1825060670173413e-15,
+        9.035762042344543e-17
+      ],
+      "floor": 1.522997974471263e-08,
+      "low_T": 240.00000002399997,
+      "high_T": 19999.999997999985,
+      "f_low": 0.0002680828974649235,
+      "f_high": 0.0762894039983326,
+      "time_step": 109
+    }
+  ],
+  "native_constructor_calls": 1,
+  "scope": "Diagnosis only. The failed terminal radiation may include partial local updates; this is not a resumed accepted trajectory.",
+  "prior_diagnostic_error": "The exact replay reproduced the109th macrostep failure, but diagnostic closure extraction assumed a nonexistent rho capture. This attempt saves U before reading other fields."
+}

@@ -1,0 +1,9 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "heat_momentum": "At first order around zero flux, radial momentum includes partial_tau Q_E plus A^4*w*a/N*xi_tautau. Q_E=G*Rstar^2*q_E/c^5. The pressure equation gains -a*partial_tau Q_E/(N*A^4*p).",
+  "lift": "H_zeta=N/(a*A^4*w*r)*integral Q_E d_tau; H_f=r*Phi*H_zeta; other components zero. y=u-H yields K*u-D*u_tt=F+K*H for the discrete source D*H_tt. Initial y,y_t are zero because all pole fluxes start at zero.",
+  "pole_integral": "Each frozen-gradient pole has L_j(t)=L_j0*(1-exp(-lambda_j*A*N*t)). Its exact time integral is used for material energy and J; there is no microsecond-scale numerical stepping or arbitrary relaxation floor.",
+  "mass": "The same internal face energy is debited from one cell and credited to its neighbor; N*a*J=-G*1e-7*E_face/(c^4*Rstar). Total enclosed core heat energy is zero at the exterior.",
+  "scope": "First order in the strength of a frozen-background core transport channel. The discrete momentum source uses the existing midpoint inertia matrix acting on the kinematic lift; its continuum limit is the local heat momentum term. Nonlinear feedback, envelope/photon currents and spatial convergence are not proved."
+}

@@ -1,0 +1,22 @@
+concurrent.futures.process._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/concurrent/futures/process.py", line 246, in _process_worker
+    r = call_item.fn(*call_item.args, **call_item.kwargs)
+  File "/mnt/e/lab/self-mass-unobservability/verification/gr_molecular_reference.py", line 39, in block
+    a=snap['eos'];assert a.shape==(22,)
+AssertionError
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/e/lab/self-mass-unobservability/verification/gr_molecular_reference.py", line 86, in <module>
+    if __name__=='__main__':globals()[sys.argv[1]]()
+  File "/mnt/e/lab/self-mass-unobservability/verification/gr_molecular_reference.py", line 56, in run
+    for done in as_completed([pool.submit(block,i) for i in starts]):done.result()
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+AssertionError

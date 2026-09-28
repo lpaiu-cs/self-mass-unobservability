@@ -1,0 +1,45 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "rows": [
+    {
+      "clock": 64,
+      "independent_interior_evaluations": 1821,
+      "relative": {
+        "baryon_g": 1.134187552952579e-16,
+        "gas_nonrest_energy_erg": 3.776975732162374e-15,
+        "nonrest_trace_erg": 2.874077838771905e-15,
+        "nonrest_stress_erg": 1.1406755867960872e-15,
+        "pressure_volume_erg": 1.5673161140505988e-14,
+        "photon_energy_erg": 2.523824015974149e-16,
+        "photon_radial_pressure_erg": 5.060266154819908e-16,
+        "metric_stress_erg": 1.6258176163990037e-16,
+        "inner_cumulative_energy_erg": 1.8615815036926982e-16,
+        "outer_cumulative_energy_erg": 2.724190360484617e-16
+      }
+    },
+    {
+      "clock": 128,
+      "independent_interior_evaluations": 1947,
+      "relative": {
+        "baryon_g": 1.139234168942775e-16,
+        "gas_nonrest_energy_erg": 2.821806566701004e-15,
+        "nonrest_trace_erg": 2.9618609090205304e-15,
+        "nonrest_stress_erg": 1.161549768136964e-15,
+        "pressure_volume_erg": 1.5545448602331368e-14,
+        "photon_energy_erg": 1.853944904780559e-16,
+        "photon_radial_pressure_erg": 4.858126216612859e-16,
+        "metric_stress_erg": 1.7008481863919136e-16,
+        "inner_cumulative_energy_erg": 1.854510087415542e-16,
+        "outer_cumulative_energy_erg": 2.711976553099732e-16
+      }
+    }
+  ],
+  "scope": "Algebra of the declared returned-metric Hermite source on all composed intervals; not a uniform temporal interpolation or physical error certificate.",
+  "bindings": {
+    ".phase247-polynomial-audit.py": "1c5aa0306c4641f572e6f349f457862c749d261c00dd56372dc8faa012941e85",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/read_dense_returned_source.py": "531ed7efda613d6ac954b261e9bf8b1c33499ddc06a7f9fbddcd5326f084cf7c",
+    "native-short-return-charge259-work/full/dense/gr/source-64.npz": "160fe212c7b365da60f292511f8d8b37a6c65a33691a45676bab457e55db03ea",
+    "native-short-return-charge259-work/full/dense/gr/source-128.npz": "514d6de84023ea24c5221748b6c2548e168835ca706884260ac6385e5a8d9390"
+  }
+}

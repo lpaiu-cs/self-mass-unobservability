@@ -1,0 +1,19 @@
+{
+  "classification": "Counterexample candidate",
+  "reason": "One two-call endpoint timing produced a1025s forecast. Before changing the650s production budget, spend only the remaining original pilot budget on fixed-length late blocks. Keep the failed single-call forecast and all accepted prefix states.",
+  "method": "Three concurrent paths,each midpoint and endpoint,exactly8 repeated RHS evaluations at the same saved state after point setup. Use the maximum block-mean wall cost across those two points and the original early rate; no minimum/fastest sample selection. Include the prior complete worker wall cost as a forecast floor.",
+  "budgets": {
+    "additional_pilot_seconds": 60,
+    "total_pilot_seconds": 120,
+    "production_seconds": 650,
+    "physical_prefix_replays": 0
+  },
+  "stop": "No production unless total pilot stays below120s and2x forecast fits the unchanged650s. No further calibration or automatic cap increase.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_corrected_motion_feedback.py": "aac29edfd2e534c24a5679f04391b78b30daefa38331e098c0abd880f4b831b3",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/first-producer.py": "8ab455d4cfeb36aa3b27b35bd1c9d872539552718023ebdae4c00c474cbba69d",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/pilot.json": "f1fe67bfb7dfeac21d56474fab4dc6302185972f0ce849085f0db25d781159db",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/plan.json": "6fe59a7221fb5391b25e1b92f2e2ac55926b96330010c95f486526521c2ad332",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/stage-aligned/production.json": "92a7f020d8348735ba903a58d40c43ed2a8445454244db74cde7a374b7295b5e"
+  }
+}

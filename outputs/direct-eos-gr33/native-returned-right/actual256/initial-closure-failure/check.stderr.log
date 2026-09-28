@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/.phase251-reader-launch.py", line 14, in <module>
+    runpy.run_path(sys.argv[0],run_name='__main__')
+  File "/usr/lib/python3.10/runpy.py", line 289, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/usr/lib/python3.10/runpy.py", line 96, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "verification/finish_returned_right_residual.py", line 156, in <module>
+    globals()[action]()
+  File "verification/finish_returned_right_residual.py", line 83, in check
+    answer=right_solve(m,captured['op'],captured['P'],saved['rhs'],saved['solution'])
+  File "verification/finish_returned_right_residual.py", line 53, in right_solve
+    inner=bind(template.__globals__['gmres'],joint=SimpleNamespace(gmres=scipy_gmres))
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/read_full_captured_history.py", line 23, in bind
+    return FunctionType(fn.__code__,dict(fn.__globals__,**values),argdefs=fn.__defaults__)
+TypeError: arg 5 (closure) must be tuple

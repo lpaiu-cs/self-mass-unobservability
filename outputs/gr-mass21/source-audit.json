@@ -1,0 +1,20 @@
+{
+  "classification": "Proven",
+  "exact_archive_member_sha256": {
+    "outputs/gr-mass21/sources/src/mod_free_eos.f90": "a687e129ceee0cfa6103f5f66cfaea5cf6aed4ffe579f910b5c72777b3182c9a",
+    "outputs/gr-mass21/sources/src/free_eos_detailed.f90": "5d6fc7d66cccb980e9fbc8f4b4d30a9ac431e7c6cc1f4930230f6d468f222e8b",
+    "outputs/gr-mass21/sources/src/ionize.f90": "c0bc4a49a928d3319e66ccd29a5ed67260fc097be0dc59149ecb6bfa34ab3e40",
+    "outputs/gr-mass21/sources/src/mod_free_eos_constants.f90": "b2343290a6c273e4e1e78079abbc8093c39efd6007a4523bde8063c581469af4",
+    "outputs/gr-mass21/sources/src/mod_ionization_data.f90": "e25556c06fe2017368e0d92d456e260e053765dc3dd361726dbd0de40f923de3",
+    "outputs/gr-mass21/sources/src/mod_isotopic_mass_data.f90": "9789368f6377df2fec1a5b343c2cc715950afde68df1b5a03a2d592ae8584e81",
+    "outputs/gr-mass21/sources/COPYING": "32b1062f7da84967e7019d01ab805935caa7ab7321a7ced0e30ebe75e5df1670",
+    "outputs/gr-mass21/sources/INSTALL": "e9331b8e45477c5a9f0e451550100a9ad108037593d0ad4cba0d05aa1fa76ecf",
+    "outputs/gr-mass21/sources/README.release": "d34c253f5b1cd995100c23fc232afdd23b98c9c3ab043ab95d02773c399905e1"
+  },
+  "energy_reference": "Non-H neutral electronic ground states; H2 ground state for hydrogen. Wrapper subtracts exactly 0.5*c2*cr*h2diss*eps_H to use neutral atoms for all species.",
+  "total_energy_cgs": "epsilon = rho_atomic * (c^2 + u_neutral)",
+  "proper_baryon_density_cgs": "rho_B = rho_atomic / C_X; C_X=sum X_baryon_i*W_i/A_i",
+  "no_additional_atomic_mass_factor_on_rho_atomic": true,
+  "electron_rest_mass_not_added_again": true,
+  "provenance": "EOS itself remains unmodified; only its documented API is wrapped."
+}

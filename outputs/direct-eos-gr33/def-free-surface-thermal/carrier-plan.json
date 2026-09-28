@@ -1,0 +1,11 @@
+{
+  "classification": "Counterexample candidate",
+  "bindings": {
+    "verification/def_thermal_native_carrier.py": "fcec60ccd3730a6bc2cb6bdcc3aa95bc306b033871d91578c8c04762403ea823",
+    "verification/def_free_surface_thermal.py": "fe248273b1b6da56fd210ed67c818093622cd217c53f0c78fda683b6d8aec092",
+    "outputs/direct-eos-gr33/gr-molecular-structure-defined/molecular-state-17-8.npz": "27bc78be6b5f9bb028e0323f0c225eefc5bd89244c9b14b5068fb9c7ba5df885"
+  },
+  "failure": "Zero-luminosity 32-cell carrier reached the native net evaluations but finish_load_model failed in set_vars before a complete independent profile was written; no source output accepted.",
+  "intervention": "Only the carrier luminosity is replaced by the stored positive reference luminosity. rho,T,X and the requested EOS auxiliaries stay fixed. It is not the physical new-state luminosity.",
+  "new_labels": "Append -positive-L; preserve the entire failed native directory and original plan."
+}

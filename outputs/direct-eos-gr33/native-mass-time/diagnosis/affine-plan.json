@@ -1,0 +1,21 @@
+{
+  "classification": "Conjectural",
+  "claim": "Separate affine forcing from state-dependent native thermal work on each actually accepted branch, without applying a foreign coarse direction to the fine high/low branch selector.",
+  "reason": "The cross-path projection failed the original high-anchor1e-12gate. Preserve that failure. Use the actual stored gas to select its own branch, verify its native rate against storage, then evaluate zero gas through that SAME selected affine branch. This is an exact branchwise decomposition, not a replacement physical law.",
+  "decision": "If forcing dominates, trace its actual geometry/energy owner; if state evolution dominates, retain the failure and assess the physical time solver. No diagnostic energy is added to final charge.",
+  "cap_seconds": 3600,
+  "virtual_GiB": 8,
+  "CPU_affinity": 2,
+  "physical_steps": 0,
+  "new_clock_paths": 0,
+  "forecast": "Measured full native call0.484..0.518seconds.700accepted stages with an extra branch replay assumed6..15minutes including setup; retain one-hour headroom. Stop on any1e-12saved-native mismatch, branch replay mismatch or resource cap.",
+  "original_mass_time_gate": 0.02,
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false,
+  "bindings": {
+    ".phase258-affine-owner.py": "8c0f9a56a38a7d59f49cb1987c586d542712c2afeb45ba0c3355f50a868cb155",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/resolve_returned_native_time.py": "9f355537521eaba217148c67bfc83beb8ff5db00ec15ebc30420b75295085db8",
+    "native-mass-time258-work/resume-receipt.json": "8d593723c2a99493514bc81116fa4d964b2d5039ba76b7ce56308df00225af74",
+    "native-material-accuracy257-work/result.json": "76eb53b74ee790ffd863ba7279196be2e6168861149c49794618cedbcd59e1fc"
+  }
+}

@@ -1,0 +1,14 @@
+patched ['def_native_cold_population.py', 'def_native_hydrogen_exchange.py']
+modules 861 identical except the two library constants: ['def_native_cold_population.py', 'def_native_hydrogen_exchange.py']
+copied grid-independent inputs 43
+2026-09-27 12:28:03 bank start
+cells 27
+geometry bitwise vs PL/MHD 2x: {'r': True, 'a': True, 'B': True, 'rho': True, 'T': True, 'phi': True, 'edges': True, 'face_a': True, 'face_B': True, 'face_T': True, 'face_L': True, 'Einf': True, 'num': True, 'cx': True}
+cells 0-7 bitwise: {'coeff': True, 'thermo': True, 'raw': True, 'y0': True, 'target': True}
+y0 cells 8-26 max relative change per cell [2.0219, 1.2265, 0.6625, 0.3083, 0.1198, 0.038, 0.0109, 0.0048, 0.0039, 0.0038, 0.0038, 0.0038, 0.0038, 0.0038, 0.0038, 0.0038, 0.0038, 0.0038, 0.0038]
+thermo cells 8-26 max relative change per cell [2.0219, 143.5294, 71.1686, 0.8475, 13.4766, 9.5677, 0.876, 3.8657, 3.2766, 4.6314, 3.5452, 2.1711, 1.3716, 1.7874, 1.346, 1.7828, 1.971, 2.1846, 2.1461]
+raw cells 8-26 max relative change per cell [0.077, 0.0573, 0.0298, 0.0102, 0.0031, 0.002, 0.0007, 0.0003, 0.0003, 0.0002, 0.0001, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+coeff cells 8-26 max relative change per cell [839.2977, 670.6183, 528.8518, 411.4697, 316.4291, 241.6599, 190.1224, 164.8435, 158.2772, 157.1268, 156.9326, 156.8963, 156.8884, 156.8864, 156.8858, 156.8856, 156.8855, 156.8855, 156.8855]
+native derivative errors (PL-off) [1.6e-09, 1.6e-09, 1.7e-09, 1.7e-09, 1.8e-09, 1.8e-09, 1.8e-09, 1.8e-09, 1.7e-09, 1.7e-09, 1.7e-09, 1.6e-09, 1.7e-09, 1.7e-09, 1.7e-09, 1.7e-09, 1.7e-09, 1.6e-09, 1.7e-09]
+2026-09-27 12:28:41 thermal start
+2026-09-27 12:28:42 FAILED: thermal (see .phase269-thermal.log)

@@ -1,0 +1,44 @@
+{
+  "classification": "Counterexample candidate",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_heat_coupling.py": "98f90012039f53aa3bf4b46b262bc6e80b18b7ca2817a25aad32ec5ee803fdc4",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_coupling.py": "94eff557caa0aa0779b834fb87e7651dbcca83a6d4378ce6e35734f4bb2b0ac4",
+    "/mnt/e/lab/self-mass-unobservability/verification/gr_two_carrier_evolution.py": "973f86e4fdb3cb008cb928288e7d87e8906a6e46ae317bc311ab03f9bc291f26",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-molecular-shell-initial/initial.npz": "6cd05a8951e09861c874bb6e685ccdfb17529be787f5e1e661a65eb2146700be",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-regular-scalar-milestone-manifest.json": "6d6fffb38b383f0522b6d8f374ade4288e918b5e2dfbd7c7eaa47cedee16dc91",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/libfree_eos_direct24_molecular_spectral.so.1.0.0": "195f3658eb0cc8fe3447c6b690f246b5a4fb770bd8ffa764d19248fec857ec50"
+  },
+  "cell": 2762,
+  "steps": [
+    8,
+    16,
+    32
+  ],
+  "duration_scaled": 6.283185307179586,
+  "initial": "Saved native shell rho,T,26-species composition. v=0, scalar p=0; phi=.01*sqrt(thermal derivative/enthalpy), each heat loading q_j=.01*sqrt(C_j*thermal derivative). Each channel therefore starts with the same small quadratic entropy deficit. Loading is a declared stress control, not the stellar heat flux.",
+  "metric": "a(t)=exp(.001*sin(t)); external homogeneous radial strain, not an Einstein solution. Unit time is initial radiation relaxation time.",
+  "method": "Conserve B=a*rho*W and J=a^2*S, solve finite aE energy work, both full midpoint heat laws and reciprocal scalar midpoint simultaneously. Scalar inertia=16*initial enthalpy. No inverse scalar momentum or inverse field increment.",
+  "gates": {
+    "stage_residual": 2e-08,
+    "work_defect_over_initial_thermal": 1e-08,
+    "refinement_order": 1.7,
+    "entropy_budget_relative": 0.15,
+    "entropy_increase_positive": true,
+    "maximum_native_calls": 6000
+  },
+  "budget": {
+    "cpu": 1,
+    "blas_threads": 1,
+    "pilot_steps": 8,
+    "pilot_timeout_seconds": 90,
+    "full_timeout_seconds": 240,
+    "launch_only_if_projected_seconds_below": 180,
+    "maximum_full_runs": 1,
+    "no_automatic_grid_or_duration_extension": true
+  },
+  "native_EOS": true,
+  "native_opacity": true,
+  "full_GR": false,
+  "physical_transport_calibrated": false,
+  "observational_closure": false
+}

@@ -1,0 +1,13 @@
+--- native/excitation_pi.f90
++++ stable/excitation_pi.f90
+@@ -976,7 +976,9 @@
+                        mu_aux(3,ion) = mu_aux(3,ion) + mu(ion)*(qstarx(2,nmin_s,izqstar)/qstar(nmin_s,izqstar))
+                        mu_aux(2,ion) = mu_aux(2,ion) + mu(ion)*(qstarx(3,nmin_s,izqstar)/qstar(nmin_s,izqstar))
+                        mu_aux(1,ion) = mu_aux(1,ion) + mu(ion)*(qstarx(4,nmin_s,izqstar)/qstar(nmin_s,izqstar))
+-                       mu_aux(4,ion) = -occ_const*mu(ion)*r_ion3(ion) + mu(ion)*qstarx(5,nmin_s,izqstar)/qstar(nmin_s,izqstar)
++                       if(verbosity.ge.2.and.tl.lt.log(1000._fp_kind)) &
++                            write(stderr,*) 'SCALED_PRODUCT',ion,mu(ion),qstarx(5,nmin_s,izqstar),qstar(nmin_s,izqstar)
++                       mu_aux(4,ion) = -occ_const*mu(ion)*r_ion3(ion) + mu(ion)*(qstarx(5,nmin_s,izqstar)/qstar(nmin_s,izqstar))
+                     endif ! if(ifnr0) then
+                  endif ! if(ifmhd_logical) then
+                  if(ifnr023) then

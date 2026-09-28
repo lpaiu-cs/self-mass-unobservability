@@ -1,0 +1,7 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "assumption": "At fixed positive T, the corrected grand-canonical pressure Pstar(psi)=Pideal(psi)-Fexchange_grand(psi) is C2 with Pstar_second>0, and the canonical density equation Pstar_prime=kT*n has an interior root.",
+  "conclusion": "The Legendre Helmholtz density F=n*kT*psi-Pstar(psi) has F_prime=kT*psi and F_second=(kT)^2/Pstar_second>0. Subtracting the ideal electron Legendre pair gives the canonical exchange correction; its own Hessian need not be positive.",
+  "scope": "Conditional exact transform. The native fit, numerical transform residual, continuous positivity and physical exchange model error require separate certification."
+}

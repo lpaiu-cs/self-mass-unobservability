@@ -1,0 +1,35 @@
+{
+  "classification": "Counterexample candidate",
+  "sources": {
+    "verification/def_electron_correlated_response.py": "d732fdc651824c6714880a5c3cdef7411e5892def31d3f9f2dcea41b4d37e5b7",
+    "verification/def_electron_collision_response.py": "9457f26158a3d1ec44aaefea64c4eddf8fe361be6c9f6da1945609eb0a70bad3",
+    "outputs/direct-eos-gr33/def-electron-collision-response/plan.json": "8e36f388fa6b1f276fbf7810fd5294582ea2d78e8391d4f97deb2b11983ef575",
+    "outputs/direct-eos-gr33/def-electron-collision-response/result.json": "427c1efbcc1453accad3821c7396ee48daf3ad90658d45e25b1cf75f861bbb9d",
+    "outputs/direct-eos-gr33/def-free-surface-thermal/coefficients.npz": "8fa9ddf79c966965a3a3fa26e6b4c738f82eec0b6ad257e521ae37c9403fb46c",
+    "outputs/direct-eos-gr33/def-electron-collision-response/correlated-ions/potekhin-et-al1999.html": "e466294f7877b763f44b14b41bb45aa0a40ea8b2c1cb4f9cd2feb2605773c9d1"
+  },
+  "source_url": "https://arxiv.org/html/astro-ph/9903127",
+  "equations": "25-31 and classical mixture sum for the correlated-ion potential; 32-33 for the DC-only ee rate.",
+  "decision": "Resolve the factor-2.6 static mismatch by the published physical terms, without fitting the saved conductivity; do not promote a DC ee rate into an energy-resolved dynamic operator.",
+  "inherited_failures": "Base numerical 1e-6 criterion failed by 1.57e-6; static compatibility failed. Both remain immutable.",
+  "quadrature_change": "Same 128/256 total nodes, four panels in sqrt(kinetic energy) to resolve the Fermi window. No automatic resolution increase.",
+  "model": "Published correlated screened effective potential with mixture sum; background potential parameters fixed off the Fermi surface and elastic G_sigma. G_kappa and ee rates enter only the separate degenerate DC comparison. No fitted prefactors.",
+  "gates": {
+    "angular_relative": 1e-06,
+    "energy_relative": 1e-06,
+    "static_compatibility_relative": 0.2
+  },
+  "budget": {
+    "pilot_cells": 16,
+    "orders": [
+      128,
+      256
+    ],
+    "hard_seconds": 60,
+    "CPU_workers": 1,
+    "native_calls": 0,
+    "stellar_time_steps": 0,
+    "automatic_expansion": false
+  },
+  "limits": "Finite-T extension, mixture prescription and source fits are approximations, not a certified physical error bound; no ee dynamic operator, outer envelope or photon solution."
+}

@@ -1,0 +1,11 @@
+{
+  "classification": "Proven",
+  "assumptions": "한 셀에서 r>=rmin>0, z=r-d.dot(n)>=zmin>0; |d|<=R, |dprime|<=V, |dsecond|<=A, |n|<=N, |nprime|<=N1, |nsecond|<=N2. 모두 같은 시간 단위의 미분. 고정 질량과 상수 사용.",
+  "einstein_potential_second_bound": "(GM/c^2)*(A/rmin^2 + 2*V^2/rmin^3)",
+  "kinetic_second_bound": "(Ap^2 + Vp*Jp)/c^2",
+  "Z1": "V*(1+N) + R*N1",
+  "Z2": "A*(1+N) + V^2/rmin + 2*V*N1 + R*N2",
+  "shapiro_second_bound": "2*Tsun*M/daysec*(Z2/zmin + Z1^2/zmin^2)",
+  "spline_residual_bound": "rho <= gsecond_bound + max(abs(stored_y2_left),abs(stored_y2_right))",
+  "actual_full_span_state_acceleration_jerk_LOS_bounds_available": false
+}

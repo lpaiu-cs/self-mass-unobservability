@@ -1,0 +1,13 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "energy_transform": "tc*amplitude*lambda/(s^2*(s+lambda))",
+  "GR_transform": "(K-s^2 D) u_hat = F_hat + K H_hat, u(0)=u_prime(0)=0; y=u-H",
+  "numerical_classification": "Counterexample candidate",
+  "oscillator_errors": [
+    1.1267121865110585e-05,
+    1.4806366287478667e-06,
+    1.8951815136669659e-07
+  ],
+  "scope": "The transform identity is exact. Finite Fourier cutoff and periodic aliasing are not proved small by this identity."
+}

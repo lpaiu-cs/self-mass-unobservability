@@ -1,0 +1,635 @@
+--- native/excitation_sum.f90
++++ stable/excitation_sum.f90
+@@ -669,31 +669,22 @@
+                     qratiot_dx(4) = qratiot*&
+                          (-occ_const*r_ion3(ion) +&
+                          qmhd_he1x(5)/qmhd_he1) +&
+-                         qratio*(qmhd_he1tx(5) -&
+-                         qmhd_he1x(5)*qmhd_he1t/&
+-                         qmhd_he1)/qmhd_he1
++                         qratio*(qmhd_he1tx(5)/qmhd_he1-(qmhd_he1x(5)/qmhd_he1)*(qmhd_he1t/qmhd_he1))
+                     qratio_dx2(4,4) = qratio_dx(4)*&
+                          (-occ_const*r_ion3(ion) +&
+                          qmhd_he1x(5)/qmhd_he1) +&
+-                         qratio*(qmhd_he1x2(5,5) - qmhd_he1x(5)*&
+-                         qmhd_he1x(5)/qmhd_he1)/&
+-                         qmhd_he1
++                         qratio*(qmhd_he1x2(5,5)/qmhd_he1-(qmhd_he1x(5)/qmhd_he1)*(qmhd_he1x(5)/qmhd_he1))
+                  else
+                     qratio_dx(4) = qratio*(-occ_const*r_ion3(ion) +&
+                          qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))
+                     qratiot_dx(4) = qratiot*&
+                          (-occ_const*r_ion3(ion) +&
+                          qstarx(5,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                         qratio*(qstartx(5,nmin_s,iz) -&
+-                         qstarx(5,nmin_s,iz)*qstart(nmin_s,iz)/&
+-                         qstar(nmin_s,iz))/qstar(nmin_s,iz)
++                         qratio*(qstartx(5,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))*(qstart(nmin_s,iz)/qstar(nmin_s,iz)))
+                     qratio_dx2(4,4) = qratio_dx(4)*&
+                          (-occ_const*r_ion3(ion) +&
+                          qstarx(5,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                         qratio*(qstarx2(5,5,nmin_s,iz) -&
+-                         qstarx(5,nmin_s,iz)*&
+-                         qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                         qstar(nmin_s,iz)
++                         qratio*(qstarx2(5,5,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(5,nmin_s,iz)/qstar(nmin_s,iz)))
+                  endif
+                  ! partial wrt ln V, tl, and extrasum(k) following special
+                  ! k convention.
+@@ -732,95 +723,62 @@
+                             (-occ_const*r_neutral(ielement)*&
+                             r_neutral(ielement)*r_neutral(ielement) +&
+                             qmhd_he1x(4)/qmhd_he1) +&
+-                            qratio*(qmhd_he1tx(4) -&
+-                            qmhd_he1x(4)*qmhd_he1t/&
+-                            qmhd_he1)/qmhd_he1
++                            qratio*(qmhd_he1tx(4)/qmhd_he1-(qmhd_he1x(4)/qmhd_he1)*(qmhd_he1t/qmhd_he1))
+                        qratiot_dx(2) = qratiot*&
+                             (-occ_const*r_neutral(ielement)*&
+                             r_neutral(ielement)*3._fp_kind +&
+                             qmhd_he1x(3)/qmhd_he1) +&
+-                            qratio*(qmhd_he1tx(3) -&
+-                            qmhd_he1x(3)*qmhd_he1t/&
+-                            qmhd_he1)/qmhd_he1
++                            qratio*(qmhd_he1tx(3)/qmhd_he1-(qmhd_he1x(3)/qmhd_he1)*(qmhd_he1t/qmhd_he1))
+                        qratiot_dx(3) = qratiot*&
+                             (-occ_const*r_neutral(ielement)*&
+                             3._fp_kind +&
+                             qmhd_he1x(2)/qmhd_he1) +&
+-                            qratio*(qmhd_he1tx(2) -&
+-                            qmhd_he1x(2)*qmhd_he1t/&
+-                            qmhd_he1)/qmhd_he1
++                            qratio*(qmhd_he1tx(2)/qmhd_he1-(qmhd_he1x(2)/qmhd_he1)*(qmhd_he1t/qmhd_he1))
+                        qratio_dx2(1,1) = qratio_dx(1)*&
+                             (-occ_const*r_neutral(ielement)*&
+                             r_neutral(ielement)*r_neutral(ielement) +&
+                             qmhd_he1x(4)/qmhd_he1) +&
+-                            qratio*(qmhd_he1x2(4,4) -&
+-                            qmhd_he1x(4)*&
+-                            qmhd_he1x(4)/qmhd_he1)/&
+-                            qmhd_he1
++                            qratio*(qmhd_he1x2(4,4)/qmhd_he1-(qmhd_he1x(4)/qmhd_he1)*(qmhd_he1x(4)/qmhd_he1))
+                        qratio_dx2(2,1) = qratio_dx(2)*&
+                             (-occ_const*r_neutral(ielement)*&
+                             r_neutral(ielement)*r_neutral(ielement) +&
+                             qmhd_he1x(4)/qmhd_he1) +&
+-                            qratio*(qmhd_he1x2(4,3) -&
+-                            qmhd_he1x(4)*&
+-                            qmhd_he1x(3)/qmhd_he1)/&
+-                            qmhd_he1
++                            qratio*(qmhd_he1x2(4,3)/qmhd_he1-(qmhd_he1x(4)/qmhd_he1)*(qmhd_he1x(3)/qmhd_he1))
+                        qratio_dx2(3,1) = qratio_dx(3)*&
+                             (-occ_const*r_neutral(ielement)*&
+                             r_neutral(ielement)*r_neutral(ielement) +&
+                             qmhd_he1x(4)/qmhd_he1) +&
+-                            qratio*(qmhd_he1x2(4,2) -&
+-                            qmhd_he1x(4)*&
+-                            qmhd_he1x(2)/qmhd_he1)/&
+-                            qmhd_he1
++                            qratio*(qmhd_he1x2(4,2)/qmhd_he1-(qmhd_he1x(4)/qmhd_he1)*(qmhd_he1x(2)/qmhd_he1))
+                        qratio_dx2(4,1) = qratio_dx(4)*&
+                             (-occ_const*r_neutral(ielement)*&
+                             r_neutral(ielement)*r_neutral(ielement) +&
+                             qmhd_he1x(4)/qmhd_he1) +&
+-                            qratio*(qmhd_he1x2(5,4) -&
+-                            qmhd_he1x(5)*&
+-                            qmhd_he1x(4)/qmhd_he1)/&
+-                            qmhd_he1
++                            qratio*(qmhd_he1x2(5,4)/qmhd_he1-(qmhd_he1x(5)/qmhd_he1)*(qmhd_he1x(4)/qmhd_he1))
+                        qratio_dx2(2,2) = qratio_dx(2)*&
+                             (-occ_const*r_neutral(ielement)*&
+                             r_neutral(ielement)*3._fp_kind +&
+                             qmhd_he1x(3)/qmhd_he1) +&
+-                            qratio*(qmhd_he1x2(3,3) -&
+-                            qmhd_he1x(3)*&
+-                            qmhd_he1x(3)/qmhd_he1)/&
+-                            qmhd_he1
++                            qratio*(qmhd_he1x2(3,3)/qmhd_he1-(qmhd_he1x(3)/qmhd_he1)*(qmhd_he1x(3)/qmhd_he1))
+                        qratio_dx2(3,2) = qratio_dx(3)*&
+                             (-occ_const*r_neutral(ielement)*&
+                             r_neutral(ielement)*3._fp_kind +&
+                             qmhd_he1x(3)/qmhd_he1) +&
+-                            qratio*(qmhd_he1x2(3,2) -&
+-                            qmhd_he1x(3)*&
+-                            qmhd_he1x(2)/qmhd_he1)/&
+-                            qmhd_he1
++                            qratio*(qmhd_he1x2(3,2)/qmhd_he1-(qmhd_he1x(3)/qmhd_he1)*(qmhd_he1x(2)/qmhd_he1))
+                        qratio_dx2(4,2) = qratio_dx(4)*&
+                             (-occ_const*r_neutral(ielement)*&
+                             r_neutral(ielement)*3._fp_kind +&
+                             qmhd_he1x(3)/qmhd_he1) +&
+-                            qratio*(qmhd_he1x2(5,3) -&
+-                            qmhd_he1x(5)*&
+-                            qmhd_he1x(3)/qmhd_he1)/&
+-                            qmhd_he1
++                            qratio*(qmhd_he1x2(5,3)/qmhd_he1-(qmhd_he1x(5)/qmhd_he1)*(qmhd_he1x(3)/qmhd_he1))
+                        qratio_dx2(3,3) = qratio_dx(3)*&
+                             (-occ_const*r_neutral(ielement)*&
+                             3._fp_kind +&
+                             qmhd_he1x(2)/qmhd_he1) +&
+-                            qratio*(qmhd_he1x2(2,2) -&
+-                            qmhd_he1x(2)*&
+-                            qmhd_he1x(2)/qmhd_he1)/&
+-                            qmhd_he1
++                            qratio*(qmhd_he1x2(2,2)/qmhd_he1-(qmhd_he1x(2)/qmhd_he1)*(qmhd_he1x(2)/qmhd_he1))
+                        qratio_dx2(4,3) = qratio_dx(4)*&
+                             (-occ_const*r_neutral(ielement)*&
+                             3._fp_kind +&
+                             qmhd_he1x(2)/qmhd_he1) +&
+-                            qratio*(qmhd_he1x2(5,2) -&
+-                            qmhd_he1x(5)*&
+-                            qmhd_he1x(2)/qmhd_he1)/&
+-                            qmhd_he1
++                            qratio*(qmhd_he1x2(5,2)/qmhd_he1-(qmhd_he1x(5)/qmhd_he1)*(qmhd_he1x(2)/qmhd_he1))
+                     else
+                        qratio_dx(1) = qratio*(&
+                             -occ_const*r_neutral(ielement)*&
+@@ -838,95 +796,62 @@
+                             (-occ_const*r_neutral(ielement)*&
+                             r_neutral(ielement)*r_neutral(ielement) +&
+                             qstarx(4,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                            qratio*(qstartx(4,nmin_s,iz) -&
+-                            qstarx(4,nmin_s,iz)*qstart(nmin_s,iz)/&
+-                            qstar(nmin_s,iz))/qstar(nmin_s,iz)
++                            qratio*(qstartx(4,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))*(qstart(nmin_s,iz)/qstar(nmin_s,iz)))
+                        qratiot_dx(2) = qratiot*&
+                             (-occ_const*r_neutral(ielement)*&
+                             r_neutral(ielement)*3._fp_kind +&
+                             qstarx(3,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                            qratio*(qstartx(3,nmin_s,iz) -&
+-                            qstarx(3,nmin_s,iz)*qstart(nmin_s,iz)/&
+-                            qstar(nmin_s,iz))/qstar(nmin_s,iz)
++                            qratio*(qstartx(3,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))*(qstart(nmin_s,iz)/qstar(nmin_s,iz)))
+                        qratiot_dx(3) = qratiot*&
+                             (-occ_const*r_neutral(ielement)*&
+                             3._fp_kind +&
+                             qstarx(2,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                            qratio*(qstartx(2,nmin_s,iz) -&
+-                            qstarx(2,nmin_s,iz)*qstart(nmin_s,iz)/&
+-                            qstar(nmin_s,iz))/qstar(nmin_s,iz)
++                            qratio*(qstartx(2,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))*(qstart(nmin_s,iz)/qstar(nmin_s,iz)))
+                        qratio_dx2(1,1) = qratio_dx(1)*&
+                             (-occ_const*r_neutral(ielement)*&
+                             r_neutral(ielement)*r_neutral(ielement) +&
+                             qstarx(4,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                            qratio*(qstarx2(4,4,nmin_s,iz) -&
+-                            qstarx(4,nmin_s,iz)*&
+-                            qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                            qstar(nmin_s,iz)
++                            qratio*(qstarx2(4,4,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(4,nmin_s,iz)/qstar(nmin_s,iz)))
+                        qratio_dx2(2,1) = qratio_dx(2)*&
+                             (-occ_const*r_neutral(ielement)*&
+                             r_neutral(ielement)*r_neutral(ielement) +&
+                             qstarx(4,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                            qratio*(qstarx2(4,3,nmin_s,iz) -&
+-                            qstarx(4,nmin_s,iz)*&
+-                            qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                            qstar(nmin_s,iz)
++                            qratio*(qstarx2(4,3,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(3,nmin_s,iz)/qstar(nmin_s,iz)))
+                        qratio_dx2(3,1) = qratio_dx(3)*&
+                             (-occ_const*r_neutral(ielement)*&
+                             r_neutral(ielement)*r_neutral(ielement) +&
+                             qstarx(4,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                            qratio*(qstarx2(4,2,nmin_s,iz) -&
+-                            qstarx(4,nmin_s,iz)*&
+-                            qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                            qstar(nmin_s,iz)
++                            qratio*(qstarx2(4,2,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(2,nmin_s,iz)/qstar(nmin_s,iz)))
+                        qratio_dx2(4,1) = qratio_dx(4)*&
+                             (-occ_const*r_neutral(ielement)*&
+                             r_neutral(ielement)*r_neutral(ielement) +&
+                             qstarx(4,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                            qratio*(qstarx2(5,4,nmin_s,iz) -&
+-                            qstarx(5,nmin_s,iz)*&
+-                            qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                            qstar(nmin_s,iz)
++                            qratio*(qstarx2(5,4,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(4,nmin_s,iz)/qstar(nmin_s,iz)))
+                        qratio_dx2(2,2) = qratio_dx(2)*&
+                             (-occ_const*r_neutral(ielement)*&
+                             r_neutral(ielement)*3._fp_kind +&
+                             qstarx(3,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                            qratio*(qstarx2(3,3,nmin_s,iz) -&
+-                            qstarx(3,nmin_s,iz)*&
+-                            qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                            qstar(nmin_s,iz)
++                            qratio*(qstarx2(3,3,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(3,nmin_s,iz)/qstar(nmin_s,iz)))
+                        qratio_dx2(3,2) = qratio_dx(3)*&
+                             (-occ_const*r_neutral(ielement)*&
+                             r_neutral(ielement)*3._fp_kind +&
+                             qstarx(3,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                            qratio*(qstarx2(3,2,nmin_s,iz) -&
+-                            qstarx(3,nmin_s,iz)*&
+-                            qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                            qstar(nmin_s,iz)
++                            qratio*(qstarx2(3,2,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(2,nmin_s,iz)/qstar(nmin_s,iz)))
+                        qratio_dx2(4,2) = qratio_dx(4)*&
+                             (-occ_const*r_neutral(ielement)*&
+                             r_neutral(ielement)*3._fp_kind +&
+                             qstarx(3,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                            qratio*(qstarx2(5,3,nmin_s,iz) -&
+-                            qstarx(5,nmin_s,iz)*&
+-                            qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                            qstar(nmin_s,iz)
++                            qratio*(qstarx2(5,3,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(3,nmin_s,iz)/qstar(nmin_s,iz)))
+                        qratio_dx2(3,3) = qratio_dx(3)*&
+                             (-occ_const*r_neutral(ielement)*&
+                             3._fp_kind +&
+                             qstarx(2,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                            qratio*(qstarx2(2,2,nmin_s,iz) -&
+-                            qstarx(2,nmin_s,iz)*&
+-                            qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                            qstar(nmin_s,iz)
++                            qratio*(qstarx2(2,2,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(2,nmin_s,iz)/qstar(nmin_s,iz)))
+                        qratio_dx2(4,3) = qratio_dx(4)*&
+                             (-occ_const*r_neutral(ielement)*&
+                             3._fp_kind +&
+                             qstarx(2,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                            qratio*(qstarx2(5,2,nmin_s,iz) -&
+-                            qstarx(5,nmin_s,iz)*&
+-                            qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                            qstar(nmin_s,iz)
++                            qratio*(qstarx2(5,2,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(2,nmin_s,iz)/qstar(nmin_s,iz)))
+                     endif !if(ifhe1_special.and.ion.eq.2) ...
+                     ! derivative of qratio wrt ln V
+                     qratiov = qratiov -&
+@@ -1237,16 +1162,11 @@
+               qratiot_dx(4) = qratiot*&
+                    (-occ_const*r_ion3(ion) +&
+                    qstarx(5,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                   qratio*(qstartx(5,nmin_s,iz) -&
+-                   qstarx(5,nmin_s,iz)*qstart(nmin_s,iz)/&
+-                   qstar(nmin_s,iz))/qstar(nmin_s,iz)
++                   qratio*(qstartx(5,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))*(qstart(nmin_s,iz)/qstar(nmin_s,iz)))
+               qratio_dx2(4,4) = qratio_dx(4)*&
+                    (-occ_const*r_ion3(ion) +&
+                    qstarx(5,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                   qratio*(qstarx2(5,5,nmin_s,iz) -&
+-                   qstarx(5,nmin_s,iz)*&
+-                   qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                   qstar(nmin_s,iz)
++                   qratio*(qstarx2(5,5,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(5,nmin_s,iz)/qstar(nmin_s,iz)))
+               ! derivative of qratio wrt ln V
+               qratiov = -qratio_dx(4)*extrasum(nextrasum-1)
+               qratiovt = -qratiot_dx(4)*extrasum(nextrasum-1)
+@@ -1281,95 +1201,62 @@
+                       (-occ_const*r_neutral(ielement)*&
+                       r_neutral(ielement)*r_neutral(ielement) +&
+                       qstarx(4,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                      qratio*(qstartx(4,nmin_s,iz) -&
+-                      qstarx(4,nmin_s,iz)*qstart(nmin_s,iz)/&
+-                      qstar(nmin_s,iz))/qstar(nmin_s,iz)
++                      qratio*(qstartx(4,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))*(qstart(nmin_s,iz)/qstar(nmin_s,iz)))
+                  qratiot_dx(2) = qratiot*&
+                       (-occ_const*r_neutral(ielement)*&
+                       r_neutral(ielement)*3._fp_kind +&
+                       qstarx(3,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                      qratio*(qstartx(3,nmin_s,iz) -&
+-                      qstarx(3,nmin_s,iz)*qstart(nmin_s,iz)/&
+-                      qstar(nmin_s,iz))/qstar(nmin_s,iz)
++                      qratio*(qstartx(3,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))*(qstart(nmin_s,iz)/qstar(nmin_s,iz)))
+                  qratiot_dx(3) = qratiot*&
+                       (-occ_const*r_neutral(ielement)*&
+                       3._fp_kind +&
+                       qstarx(2,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                      qratio*(qstartx(2,nmin_s,iz) -&
+-                      qstarx(2,nmin_s,iz)*qstart(nmin_s,iz)/&
+-                      qstar(nmin_s,iz))/qstar(nmin_s,iz)
++                      qratio*(qstartx(2,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))*(qstart(nmin_s,iz)/qstar(nmin_s,iz)))
+                  qratio_dx2(1,1) = qratio_dx(1)*&
+                       (-occ_const*r_neutral(ielement)*&
+                       r_neutral(ielement)*r_neutral(ielement) +&
+                       qstarx(4,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                      qratio*(qstarx2(4,4,nmin_s,iz) -&
+-                      qstarx(4,nmin_s,iz)*&
+-                      qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                      qstar(nmin_s,iz)
++                      qratio*(qstarx2(4,4,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(4,nmin_s,iz)/qstar(nmin_s,iz)))
+                  qratio_dx2(2,1) = qratio_dx(2)*&
+                       (-occ_const*r_neutral(ielement)*&
+                       r_neutral(ielement)*r_neutral(ielement) +&
+                       qstarx(4,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                      qratio*(qstarx2(4,3,nmin_s,iz) -&
+-                      qstarx(4,nmin_s,iz)*&
+-                      qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                      qstar(nmin_s,iz)
++                      qratio*(qstarx2(4,3,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(3,nmin_s,iz)/qstar(nmin_s,iz)))
+                  qratio_dx2(3,1) = qratio_dx(3)*&
+                       (-occ_const*r_neutral(ielement)*&
+                       r_neutral(ielement)*r_neutral(ielement) +&
+                       qstarx(4,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                      qratio*(qstarx2(4,2,nmin_s,iz) -&
+-                      qstarx(4,nmin_s,iz)*&
+-                      qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                      qstar(nmin_s,iz)
++                      qratio*(qstarx2(4,2,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(2,nmin_s,iz)/qstar(nmin_s,iz)))
+                  qratio_dx2(4,1) = qratio_dx(4)*&
+                       (-occ_const*r_neutral(ielement)*&
+                       r_neutral(ielement)*r_neutral(ielement) +&
+                       qstarx(4,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                      qratio*(qstarx2(5,4,nmin_s,iz) -&
+-                      qstarx(5,nmin_s,iz)*&
+-                      qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                      qstar(nmin_s,iz)
++                      qratio*(qstarx2(5,4,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(4,nmin_s,iz)/qstar(nmin_s,iz)))
+                  qratio_dx2(2,2) = qratio_dx(2)*&
+                       (-occ_const*r_neutral(ielement)*&
+                       r_neutral(ielement)*3._fp_kind +&
+                       qstarx(3,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                      qratio*(qstarx2(3,3,nmin_s,iz) -&
+-                      qstarx(3,nmin_s,iz)*&
+-                      qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                      qstar(nmin_s,iz)
++                      qratio*(qstarx2(3,3,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(3,nmin_s,iz)/qstar(nmin_s,iz)))
+                  qratio_dx2(3,2) = qratio_dx(3)*&
+                       (-occ_const*r_neutral(ielement)*&
+                       r_neutral(ielement)*3._fp_kind +&
+                       qstarx(3,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                      qratio*(qstarx2(3,2,nmin_s,iz) -&
+-                      qstarx(3,nmin_s,iz)*&
+-                      qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                      qstar(nmin_s,iz)
++                      qratio*(qstarx2(3,2,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(2,nmin_s,iz)/qstar(nmin_s,iz)))
+                  qratio_dx2(4,2) = qratio_dx(4)*&
+                       (-occ_const*r_neutral(ielement)*&
+                       r_neutral(ielement)*3._fp_kind +&
+                       qstarx(3,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                      qratio*(qstarx2(5,3,nmin_s,iz) -&
+-                      qstarx(5,nmin_s,iz)*&
+-                      qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                      qstar(nmin_s,iz)
++                      qratio*(qstarx2(5,3,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(3,nmin_s,iz)/qstar(nmin_s,iz)))
+                  qratio_dx2(3,3) = qratio_dx(3)*&
+                       (-occ_const*r_neutral(ielement)*&
+                       3._fp_kind +&
+                       qstarx(2,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                      qratio*(qstarx2(2,2,nmin_s,iz) -&
+-                      qstarx(2,nmin_s,iz)*&
+-                      qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                      qstar(nmin_s,iz)
++                      qratio*(qstarx2(2,2,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(2,nmin_s,iz)/qstar(nmin_s,iz)))
+                  qratio_dx2(4,3) = qratio_dx(4)*&
+                       (-occ_const*r_neutral(ielement)*&
+                       3._fp_kind +&
+                       qstarx(2,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                      qratio*(qstarx2(5,2,nmin_s,iz) -&
+-                      qstarx(5,nmin_s,iz)*&
+-                      qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                      qstar(nmin_s,iz)
++                      qratio*(qstarx2(5,2,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(2,nmin_s,iz)/qstar(nmin_s,iz)))
+                  ! derivative of qratio wrt ln V
+                  qratiov = qratiov -&
+                       qratio_dx(1)*extrasum(1) -&
+@@ -1677,16 +1564,11 @@
+               qratiot_dx(4) = qratiot*&
+                    (-occ_const*r_ion3(ion) +&
+                    qstarx(5,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                   qratio*(qstartx(5,nmin_s,iz) -&
+-                   qstarx(5,nmin_s,iz)*qstart(nmin_s,iz)/&
+-                   qstar(nmin_s,iz))/qstar(nmin_s,iz)
++                   qratio*(qstartx(5,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))*(qstart(nmin_s,iz)/qstar(nmin_s,iz)))
+               qratio_dx2(4,4) = qratio_dx(4)*&
+                    (-occ_const*r_ion3(ion) +&
+                    qstarx(5,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                   qratio*(qstarx2(5,5,nmin_s,iz) -&
+-                   qstarx(5,nmin_s,iz)*&
+-                   qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                   qstar(nmin_s,iz)
++                   qratio*(qstarx2(5,5,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(5,nmin_s,iz)/qstar(nmin_s,iz)))
+               ! derivative of qratio wrt ln V
+               qratiov = -qratio_dx(4)*extrasum(nextrasum-1)
+               qratiovt = -qratiot_dx(4)*extrasum(nextrasum-1)
+@@ -1721,95 +1603,62 @@
+                       (-occ_const*r_neutral(ielement)*&
+                       r_neutral(ielement)*r_neutral(ielement) +&
+                       qstarx(4,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                      qratio*(qstartx(4,nmin_s,iz) -&
+-                      qstarx(4,nmin_s,iz)*qstart(nmin_s,iz)/&
+-                      qstar(nmin_s,iz))/qstar(nmin_s,iz)
++                      qratio*(qstartx(4,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))*(qstart(nmin_s,iz)/qstar(nmin_s,iz)))
+                  qratiot_dx(2) = qratiot*&
+                       (-occ_const*r_neutral(ielement)*&
+                       r_neutral(ielement)*3._fp_kind +&
+                       qstarx(3,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                      qratio*(qstartx(3,nmin_s,iz) -&
+-                      qstarx(3,nmin_s,iz)*qstart(nmin_s,iz)/&
+-                      qstar(nmin_s,iz))/qstar(nmin_s,iz)
++                      qratio*(qstartx(3,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))*(qstart(nmin_s,iz)/qstar(nmin_s,iz)))
+                  qratiot_dx(3) = qratiot*&
+                       (-occ_const*r_neutral(ielement)*&
+                       3._fp_kind +&
+                       qstarx(2,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                      qratio*(qstartx(2,nmin_s,iz) -&
+-                      qstarx(2,nmin_s,iz)*qstart(nmin_s,iz)/&
+-                      qstar(nmin_s,iz))/qstar(nmin_s,iz)
++                      qratio*(qstartx(2,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))*(qstart(nmin_s,iz)/qstar(nmin_s,iz)))
+                  qratio_dx2(1,1) = qratio_dx(1)*&
+                       (-occ_const*r_neutral(ielement)*&
+                       r_neutral(ielement)*r_neutral(ielement) +&
+                       qstarx(4,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                      qratio*(qstarx2(4,4,nmin_s,iz) -&
+-                      qstarx(4,nmin_s,iz)*&
+-                      qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                      qstar(nmin_s,iz)
++                      qratio*(qstarx2(4,4,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(4,nmin_s,iz)/qstar(nmin_s,iz)))
+                  qratio_dx2(2,1) = qratio_dx(2)*&
+                       (-occ_const*r_neutral(ielement)*&
+                       r_neutral(ielement)*r_neutral(ielement) +&
+                       qstarx(4,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                      qratio*(qstarx2(4,3,nmin_s,iz) -&
+-                      qstarx(4,nmin_s,iz)*&
+-                      qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                      qstar(nmin_s,iz)
++                      qratio*(qstarx2(4,3,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(3,nmin_s,iz)/qstar(nmin_s,iz)))
+                  qratio_dx2(3,1) = qratio_dx(3)*&
+                       (-occ_const*r_neutral(ielement)*&
+                       r_neutral(ielement)*r_neutral(ielement) +&
+                       qstarx(4,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                      qratio*(qstarx2(4,2,nmin_s,iz) -&
+-                      qstarx(4,nmin_s,iz)*&
+-                      qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                      qstar(nmin_s,iz)
++                      qratio*(qstarx2(4,2,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(2,nmin_s,iz)/qstar(nmin_s,iz)))
+                  qratio_dx2(4,1) = qratio_dx(4)*&
+                       (-occ_const*r_neutral(ielement)*&
+                       r_neutral(ielement)*r_neutral(ielement) +&
+                       qstarx(4,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                      qratio*(qstarx2(5,4,nmin_s,iz) -&
+-                      qstarx(5,nmin_s,iz)*&
+-                      qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                      qstar(nmin_s,iz)
++                      qratio*(qstarx2(5,4,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(4,nmin_s,iz)/qstar(nmin_s,iz)))
+                  qratio_dx2(2,2) = qratio_dx(2)*&
+                       (-occ_const*r_neutral(ielement)*&
+                       r_neutral(ielement)*3._fp_kind +&
+                       qstarx(3,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                      qratio*(qstarx2(3,3,nmin_s,iz) -&
+-                      qstarx(3,nmin_s,iz)*&
+-                      qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                      qstar(nmin_s,iz)
++                      qratio*(qstarx2(3,3,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(3,nmin_s,iz)/qstar(nmin_s,iz)))
+                  qratio_dx2(3,2) = qratio_dx(3)*&
+                       (-occ_const*r_neutral(ielement)*&
+                       r_neutral(ielement)*3._fp_kind +&
+                       qstarx(3,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                      qratio*(qstarx2(3,2,nmin_s,iz) -&
+-                      qstarx(3,nmin_s,iz)*&
+-                      qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                      qstar(nmin_s,iz)
++                      qratio*(qstarx2(3,2,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(2,nmin_s,iz)/qstar(nmin_s,iz)))
+                  qratio_dx2(4,2) = qratio_dx(4)*&
+                       (-occ_const*r_neutral(ielement)*&
+                       r_neutral(ielement)*3._fp_kind +&
+                       qstarx(3,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                      qratio*(qstarx2(5,3,nmin_s,iz) -&
+-                      qstarx(5,nmin_s,iz)*&
+-                      qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                      qstar(nmin_s,iz)
++                      qratio*(qstarx2(5,3,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(3,nmin_s,iz)/qstar(nmin_s,iz)))
+                  qratio_dx2(3,3) = qratio_dx(3)*&
+                       (-occ_const*r_neutral(ielement)*&
+                       3._fp_kind +&
+                       qstarx(2,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                      qratio*(qstarx2(2,2,nmin_s,iz) -&
+-                      qstarx(2,nmin_s,iz)*&
+-                      qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                      qstar(nmin_s,iz)
++                      qratio*(qstarx2(2,2,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(2,nmin_s,iz)/qstar(nmin_s,iz)))
+                  qratio_dx2(4,3) = qratio_dx(4)*&
+                       (-occ_const*r_neutral(ielement)*&
+                       3._fp_kind +&
+                       qstarx(2,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                      qratio*(qstarx2(5,2,nmin_s,iz) -&
+-                      qstarx(5,nmin_s,iz)*&
+-                      qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                      qstar(nmin_s,iz)
++                      qratio*(qstarx2(5,2,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(2,nmin_s,iz)/qstar(nmin_s,iz)))
+                  ! derivative of qratio wrt ln V
+                  qratiov = qratiov -&
+                       qratio_dx(1)*extrasum(1) -&
+@@ -2125,16 +1974,11 @@
+               qratiot_dx(4) = qratiot*&
+                    (-occ_const*r_ion3(ion) +&
+                    qstarx(5,nmin_s,izqstar)/qstar(nmin_s,izqstar)) +&
+-                   qratio*(qstartx(5,nmin_s,izqstar) -&
+-                   qstarx(5,nmin_s,izqstar)*qstart(nmin_s,izqstar)/&
+-                   qstar(nmin_s,izqstar))/qstar(nmin_s,izqstar)
++                   qratio*(qstartx(5,nmin_s,izqstar)/qstar(nmin_s,izqstar)-(qstarx(5,nmin_s,izqstar)/qstar(nmin_s,izqstar))*(qstart(nmin_s,izqstar)/qstar(nmin_s,izqstar)))
+               qratio_dx2(4,4) = qratio_dx(4)*&
+                    (-occ_const*r_ion3(ion) +&
+                    qstarx(5,nmin_s,izqstar)/qstar(nmin_s,izqstar)) +&
+-                   qratio*(qstarx2(5,5,nmin_s,izqstar) -&
+-                   qstarx(5,nmin_s,izqstar)*&
+-                   qstarx(5,nmin_s,izqstar)/qstar(nmin_s,izqstar))/&
+-                   qstar(nmin_s,izqstar)
++                   qratio*(qstarx2(5,5,nmin_s,izqstar)/qstar(nmin_s,izqstar)-(qstarx(5,nmin_s,izqstar)/qstar(nmin_s,izqstar))*(qstarx(5,nmin_s,izqstar)/qstar(nmin_s,izqstar)))
+               ! derivative of qratio wrt ln V
+               qratiov = -qratio_dx(4)*extrasum(nextrasum-1)
+               qratiovt = -qratiot_dx(4)*extrasum(nextrasum-1)
+@@ -2169,95 +2013,62 @@
+                       (-occ_const*r_neutral(ielement)*&
+                       r_neutral(ielement)*r_neutral(ielement) +&
+                       qstarx(4,nmin_s,izqstar)/qstar(nmin_s,izqstar)) +&
+-                      qratio*(qstartx(4,nmin_s,izqstar) -&
+-                      qstarx(4,nmin_s,izqstar)*qstart(nmin_s,izqstar)/&
+-                      qstar(nmin_s,izqstar))/qstar(nmin_s,izqstar)
++                      qratio*(qstartx(4,nmin_s,izqstar)/qstar(nmin_s,izqstar)-(qstarx(4,nmin_s,izqstar)/qstar(nmin_s,izqstar))*(qstart(nmin_s,izqstar)/qstar(nmin_s,izqstar)))
+                  qratiot_dx(2) = qratiot*&
+                       (-occ_const*r_neutral(ielement)*&
+                       r_neutral(ielement)*3._fp_kind +&
+                       qstarx(3,nmin_s,izqstar)/qstar(nmin_s,izqstar)) +&
+-                      qratio*(qstartx(3,nmin_s,izqstar) -&
+-                      qstarx(3,nmin_s,izqstar)*qstart(nmin_s,izqstar)/&
+-                      qstar(nmin_s,izqstar))/qstar(nmin_s,izqstar)
++                      qratio*(qstartx(3,nmin_s,izqstar)/qstar(nmin_s,izqstar)-(qstarx(3,nmin_s,izqstar)/qstar(nmin_s,izqstar))*(qstart(nmin_s,izqstar)/qstar(nmin_s,izqstar)))
+                  qratiot_dx(3) = qratiot*&
+                       (-occ_const*r_neutral(ielement)*&
+                       3._fp_kind +&
+                       qstarx(2,nmin_s,izqstar)/qstar(nmin_s,izqstar)) +&
+-                      qratio*(qstartx(2,nmin_s,izqstar) -&
+-                      qstarx(2,nmin_s,izqstar)*qstart(nmin_s,izqstar)/&
+-                      qstar(nmin_s,izqstar))/qstar(nmin_s,izqstar)
++                      qratio*(qstartx(2,nmin_s,izqstar)/qstar(nmin_s,izqstar)-(qstarx(2,nmin_s,izqstar)/qstar(nmin_s,izqstar))*(qstart(nmin_s,izqstar)/qstar(nmin_s,izqstar)))
+                  qratio_dx2(1,1) = qratio_dx(1)*&
+                       (-occ_const*r_neutral(ielement)*&
+                       r_neutral(ielement)*r_neutral(ielement) +&
+                       qstarx(4,nmin_s,izqstar)/qstar(nmin_s,izqstar)) +&
+-                      qratio*(qstarx2(4,4,nmin_s,izqstar) -&
+-                      qstarx(4,nmin_s,izqstar)*&
+-                      qstarx(4,nmin_s,izqstar)/qstar(nmin_s,izqstar))/&
+-                      qstar(nmin_s,izqstar)
++                      qratio*(qstarx2(4,4,nmin_s,izqstar)/qstar(nmin_s,izqstar)-(qstarx(4,nmin_s,izqstar)/qstar(nmin_s,izqstar))*(qstarx(4,nmin_s,izqstar)/qstar(nmin_s,izqstar)))
+                  qratio_dx2(2,1) = qratio_dx(2)*&
+                       (-occ_const*r_neutral(ielement)*&
+                       r_neutral(ielement)*r_neutral(ielement) +&
+                       qstarx(4,nmin_s,izqstar)/qstar(nmin_s,izqstar)) +&
+-                      qratio*(qstarx2(4,3,nmin_s,izqstar) -&
+-                      qstarx(4,nmin_s,izqstar)*&
+-                      qstarx(3,nmin_s,izqstar)/qstar(nmin_s,izqstar))/&
+-                      qstar(nmin_s,izqstar)
++                      qratio*(qstarx2(4,3,nmin_s,izqstar)/qstar(nmin_s,izqstar)-(qstarx(4,nmin_s,izqstar)/qstar(nmin_s,izqstar))*(qstarx(3,nmin_s,izqstar)/qstar(nmin_s,izqstar)))
+                  qratio_dx2(3,1) = qratio_dx(3)*&
+                       (-occ_const*r_neutral(ielement)*&
+                       r_neutral(ielement)*r_neutral(ielement) +&
+                       qstarx(4,nmin_s,izqstar)/qstar(nmin_s,izqstar)) +&
+-                      qratio*(qstarx2(4,2,nmin_s,izqstar) -&
+-                      qstarx(4,nmin_s,izqstar)*&
+-                      qstarx(2,nmin_s,izqstar)/qstar(nmin_s,izqstar))/&
+-                      qstar(nmin_s,izqstar)
++                      qratio*(qstarx2(4,2,nmin_s,izqstar)/qstar(nmin_s,izqstar)-(qstarx(4,nmin_s,izqstar)/qstar(nmin_s,izqstar))*(qstarx(2,nmin_s,izqstar)/qstar(nmin_s,izqstar)))
+                  qratio_dx2(4,1) = qratio_dx(4)*&
+                       (-occ_const*r_neutral(ielement)*&
+                       r_neutral(ielement)*r_neutral(ielement) +&
+                       qstarx(4,nmin_s,izqstar)/qstar(nmin_s,izqstar)) +&
+-                      qratio*(qstarx2(5,4,nmin_s,izqstar) -&
+-                      qstarx(5,nmin_s,izqstar)*&
+-                      qstarx(4,nmin_s,izqstar)/qstar(nmin_s,izqstar))/&
+-                      qstar(nmin_s,izqstar)
++                      qratio*(qstarx2(5,4,nmin_s,izqstar)/qstar(nmin_s,izqstar)-(qstarx(5,nmin_s,izqstar)/qstar(nmin_s,izqstar))*(qstarx(4,nmin_s,izqstar)/qstar(nmin_s,izqstar)))
+                  qratio_dx2(2,2) = qratio_dx(2)*&
+                       (-occ_const*r_neutral(ielement)*&
+                       r_neutral(ielement)*3._fp_kind +&
+                       qstarx(3,nmin_s,izqstar)/qstar(nmin_s,izqstar)) +&
+-                      qratio*(qstarx2(3,3,nmin_s,izqstar) -&
+-                      qstarx(3,nmin_s,izqstar)*&
+-                      qstarx(3,nmin_s,izqstar)/qstar(nmin_s,izqstar))/&
+-                      qstar(nmin_s,izqstar)
++                      qratio*(qstarx2(3,3,nmin_s,izqstar)/qstar(nmin_s,izqstar)-(qstarx(3,nmin_s,izqstar)/qstar(nmin_s,izqstar))*(qstarx(3,nmin_s,izqstar)/qstar(nmin_s,izqstar)))
+                  qratio_dx2(3,2) = qratio_dx(3)*&
+                       (-occ_const*r_neutral(ielement)*&
+                       r_neutral(ielement)*3._fp_kind +&
+                       qstarx(3,nmin_s,izqstar)/qstar(nmin_s,izqstar)) +&
+-                      qratio*(qstarx2(3,2,nmin_s,izqstar) -&
+-                      qstarx(3,nmin_s,izqstar)*&
+-                      qstarx(2,nmin_s,izqstar)/qstar(nmin_s,izqstar))/&
+-                      qstar(nmin_s,izqstar)
++                      qratio*(qstarx2(3,2,nmin_s,izqstar)/qstar(nmin_s,izqstar)-(qstarx(3,nmin_s,izqstar)/qstar(nmin_s,izqstar))*(qstarx(2,nmin_s,izqstar)/qstar(nmin_s,izqstar)))
+                  qratio_dx2(4,2) = qratio_dx(4)*&
+                       (-occ_const*r_neutral(ielement)*&
+                       r_neutral(ielement)*3._fp_kind +&
+                       qstarx(3,nmin_s,izqstar)/qstar(nmin_s,izqstar)) +&
+-                      qratio*(qstarx2(5,3,nmin_s,izqstar) -&
+-                      qstarx(5,nmin_s,izqstar)*&
+-                      qstarx(3,nmin_s,izqstar)/qstar(nmin_s,izqstar))/&
+-                      qstar(nmin_s,izqstar)
++                      qratio*(qstarx2(5,3,nmin_s,izqstar)/qstar(nmin_s,izqstar)-(qstarx(5,nmin_s,izqstar)/qstar(nmin_s,izqstar))*(qstarx(3,nmin_s,izqstar)/qstar(nmin_s,izqstar)))
+                  qratio_dx2(3,3) = qratio_dx(3)*&
+                       (-occ_const*r_neutral(ielement)*&
+                       3._fp_kind +&
+                       qstarx(2,nmin_s,izqstar)/qstar(nmin_s,izqstar)) +&
+-                      qratio*(qstarx2(2,2,nmin_s,izqstar) -&
+-                      qstarx(2,nmin_s,izqstar)*&
+-                      qstarx(2,nmin_s,izqstar)/qstar(nmin_s,izqstar))/&
+-                      qstar(nmin_s,izqstar)
++                      qratio*(qstarx2(2,2,nmin_s,izqstar)/qstar(nmin_s,izqstar)-(qstarx(2,nmin_s,izqstar)/qstar(nmin_s,izqstar))*(qstarx(2,nmin_s,izqstar)/qstar(nmin_s,izqstar)))
+                  qratio_dx2(4,3) = qratio_dx(4)*&
+                       (-occ_const*r_neutral(ielement)*&
+                       3._fp_kind +&
+                       qstarx(2,nmin_s,izqstar)/qstar(nmin_s,izqstar)) +&
+-                      qratio*(qstarx2(5,2,nmin_s,izqstar) -&
+-                      qstarx(5,nmin_s,izqstar)*&
+-                      qstarx(2,nmin_s,izqstar)/qstar(nmin_s,izqstar))/&
+-                      qstar(nmin_s,izqstar)
++                      qratio*(qstarx2(5,2,nmin_s,izqstar)/qstar(nmin_s,izqstar)-(qstarx(5,nmin_s,izqstar)/qstar(nmin_s,izqstar))*(qstarx(2,nmin_s,izqstar)/qstar(nmin_s,izqstar)))
+                  !                derivative of qratio wrt ln V
+                  qratiov = qratiov -&
+                       qratio_dx(1)*extrasum(1) -&

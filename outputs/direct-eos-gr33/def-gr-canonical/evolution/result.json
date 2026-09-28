@@ -1,0 +1,48 @@
+{
+  "classification": "Counterexample candidate",
+  "actual_GR_fluid_scalar_evolved": true,
+  "time_passed": false,
+  "passed": false,
+  "comparisons": {
+    "velocity_mass_RMS_m_s": {
+      "time_previous": 0.003270889291154744,
+      "time_last": 0.0011312976086890248,
+      "order": 1.5317044229837686
+    },
+    "scalar_mass_RMS": {
+      "time_previous": 0.0021410619173404043,
+      "time_last": 0.0003447732740620295,
+      "order": 2.634606667742101
+    },
+    "old_interface_velocity_RMS_m_s": {
+      "time_previous": 0.00601721697779993,
+      "time_last": 0.006372671772512917,
+      "order": -0.08280197541111516
+    },
+    "new_interface_velocity_RMS_m_s": {
+      "time_previous": 9.343323177545367e-05,
+      "time_last": 1.158992781565908e-05,
+      "order": 3.0110641894053622
+    }
+  },
+  "endpoint": {
+    "tau": 1.0,
+    "velocity_mass_RMS_m_s": 3.547130625411726e-11,
+    "scalar_mass_RMS": 3.0362156574964e-29,
+    "old_interface_velocity_RMS_m_s": 5.656444300325874e-14,
+    "new_interface_velocity_RMS_m_s": 2.3196921483946652e-10
+  },
+  "paths": [
+    "16",
+    "32",
+    "64"
+  ],
+  "seconds": 5.067898315999997,
+  "memory_GB": 0.326742016,
+  "original_failure_resolved": false,
+  "physical_pressure_metric_reconstruction_checked": false,
+  "full_dynamic_charge_solved": false,
+  "photon_transport": false,
+  "nonlinear_feedback": false,
+  "limitation": "Even a numerical pass still requires full pressure/metric reconstruction and spatial consistency audit before declaring the earlier failure repaired. The coarse coefficient bank previously failed its own local tau gate."
+}

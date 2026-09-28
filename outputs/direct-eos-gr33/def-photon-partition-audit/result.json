@@ -1,0 +1,73 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": false,
+  "checks": [
+    {
+      "groups": 1,
+      "Rosseland_Planck": [
+        3.9086,
+        33496.0
+      ],
+      "gray": {
+        "1.5000E-03": [
+          1.9163e-09,
+          9.1378,
+          1127.3,
+          0.98847,
+          0.98856
+        ]
+      }
+    },
+    {
+      "groups": 3,
+      "Rosseland_Planck": [
+        3.9086381754523165,
+        33496.542484528865
+      ],
+      "gray": {
+        "1.5000E-03": [
+          1.9163e-09,
+          9.1378,
+          1127.3,
+          0.98847,
+          0.98856
+        ]
+      }
+    },
+    {
+      "groups": 999,
+      "Rosseland_Planck": [
+        3.9375348311850993,
+        33496.41776837128
+      ],
+      "gray": {
+        "1.5000E-03": [
+          1.9163e-09,
+          9.1378,
+          1127.3,
+          0.98847,
+          0.98856
+        ]
+      }
+    }
+  ],
+  "relative_to_one_group": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      9.76703994193251e-06,
+      1.6195501817195534e-05
+    ],
+    [
+      0.007402863220871803,
+      1.247218686639684e-05
+    ]
+  ],
+  "gray_headers_identical": true,
+  "conclusion": "Native group moments fail partition additivity at fixed physical inputs. These partitions cannot all be exact moments of one common opacity measure within the gate. The internal provider integration algorithm is not established by this test.",
+  "local_loss_response_accepted": false,
+  "whole_star_heat_closed": false,
+  "full_dynamic_charge_solved": false
+}

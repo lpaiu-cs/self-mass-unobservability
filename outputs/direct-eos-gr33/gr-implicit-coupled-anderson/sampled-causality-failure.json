@@ -1,0 +1,48 @@
+{
+  "classification": "Counterexample candidate",
+  "proper_tau_seconds": "0.0004113000088929766",
+  "rows": [
+    {
+      "refinement": 1,
+      "step": 4,
+      "time_seconds": 0.0015423750333486623,
+      "outer_temperature": 19455.567656913892,
+      "outer_Q_over_enthalpy": -4.677952132496946e-10,
+      "maximum_local_rest_characteristic_speed_over_c": 0.9490687020509107,
+      "maximum_characteristic_imaginary_part": 0.0,
+      "sampled_cone_inside_light_cone": true
+    },
+    {
+      "refinement": 2,
+      "step": 8,
+      "time_seconds": 0.0015423750333486623,
+      "outer_temperature": 19734.71110836001,
+      "outer_Q_over_enthalpy": -7.741877556938291e-10,
+      "maximum_local_rest_characteristic_speed_over_c": 1.0744534890854938,
+      "maximum_characteristic_imaginary_part": 0.0,
+      "sampled_cone_inside_light_cone": false
+    },
+    {
+      "refinement": 4,
+      "step": 16,
+      "time_seconds": 0.0015423750333486623,
+      "outer_temperature": 19964.01433455629,
+      "outer_Q_over_enthalpy": -8.808458743904193e-10,
+      "maximum_local_rest_characteristic_speed_over_c": 1.1350428170366178,
+      "maximum_characteristic_imaginary_part": 0.0,
+      "sampled_cone_inside_light_cone": false
+    }
+  ],
+  "scope": "Saved finite native trajectories and floating local rest-frame principal roots. No continuum acausality theorem or physical EOS error certificate.",
+  "failed_step": "Initial frozen cone admissibility does not suffice to accept the evolving path: both refinements two and four have an intermediate sampled state outside the light cone.",
+  "minimal_missing_condition": "A time-evolving solution remaining in the full characteristic causal domain, with justified constitutive and boundary data.",
+  "action": "Preserve these attempts and start the second historically declared constant proper time from identical t=0 data, at the unchanged coordinate nodes and native residual tolerances. Check all converged SDIRK internal stages as well as endpoints.",
+  "sha256": {
+    "outputs/direct-eos-gr33/gr-implicit-coupled-anderson/path-1/step-0004.npz": "ce16cd2fe90eb1b1619c3a292e4d9d468ef61c7fe0855f24cee37c6b931b445b",
+    "outputs/direct-eos-gr33/gr-implicit-coupled-anderson/path-2/step-0008.npz": "dd80a1442dde1ac1353b5222c6872530b52ee2c73c97f0eb137840efa9025db7",
+    "outputs/direct-eos-gr33/gr-implicit-coupled-anderson/path-4/step-0016.npz": "2b49cb8319c430e5632c2df8e70037adf99b78ddb70b6ea09fce2f3fd413acce",
+    "verification/gr_implicit_coupled_analysis.py": "b9ed73d46a73c7f0f9715054fbb5cae4473365c8b6ded72db7475e09df4a18fc",
+    "outputs/direct-eos-gr33/gr-implicit-coupled-anderson/plan.json": "97fc42feaac09aec9ee5276fa45d2d679cf2136c89a625758920f9199017b63b",
+    "outputs/direct-eos-gr33/gr-implicit-second-heat-time/plan.json": "420b0a026e67be102cdca228f39c1564d93c8959fa90effc7dcf73e3ae1dfd48"
+  }
+}

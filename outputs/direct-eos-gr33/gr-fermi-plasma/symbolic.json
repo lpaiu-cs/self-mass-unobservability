@@ -1,0 +1,9 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "cold_limit": "I_p=xF^3/(3*gammaF), I_1=xF^5/(3*gammaF^3), hence v_star=vF and w_p^2/w_Drude^2=1/gammaF at fixed density.",
+  "kernel": "G(r)=3*sum_{j>=0} r^(2j)/[(2j+1)(2j+3)], 0<=r<1. Positive coefficients imply G(0)=1, G increasing, G(1-)=3/2.",
+  "tail": "After terms j=0..N, 0<=G-G_N<=3*r^(2N+2)/[(2N+3)(2N+5)*(1-r^2)]. This exact-real series bound is not a floating-point roundoff bound.",
+  "root": "For q>=0 and 0<=v<1, F(u)=u^2-q^2-G(v*q/u) increases strictly on [sqrt(q^2+1),sqrt(q^2+G(v))]. Its endpoints bracket a unique transverse root. F_u=2u+G_prime(r)*r/u>0.",
+  "approximation_boundary": "This root theorem concerns the approximate Braaten-Segel kernel, not all physical plasma modes. Exact leading-order integral moments and approximate high-k moments are reported separately."
+}

@@ -1,0 +1,79 @@
+{
+ "classification": "Imported from prior work",
+ "passed": true,
+ "verdict": "REVISION_3_REREVIEWED__REVISION_4_DRAFTED__ERRATA_RECORDED__REREVIEW_PENDING",
+ "rereview_of_revision_3": {
+  "gpt-6-astra (Codex CLI, read-only)": "major revision; blocking item kept (Section 5 sensitivity conclusion)",
+  "opus5.5 (subagent)": "accept after minor revision; three sentence-level majors (instantaneous response, relaxation strength, sign sentence)",
+  "fable5.1 (subagent)": "accept after minor revision"
+ },
+ "revision_4": [
+  "sensitivity-exclusion conclusions removed; scale comparison only; timing response of the two non-common channels not computed",
+  "relaxation strength <= S_struct and single relaxation stated as uncomputed assumptions; A4 inference removed",
+  "instantaneous response beta_s*dphi_mod separated (no lag; Section 4.3 feedback-stiffness condition)",
+  "sign sentence corrected: no face-density change below 99.87% (max norm) reverses the sign",
+  "sources and norms: 3.5/4.0 ms and static window in the whole-star paragraph; Born comparison for orientation only; peak from the 0.2 ms grid",
+  "numbers: 2.13e-18, 7.53e-21, |S_struct|<=8.84e-9, non-gray 1.9-2.4 (1 sigma), -8.0e-41 at 0.23 s",
+  "notation, labels, blank lines before lists (Pandoc: 10 lists, 4 equations), companion edits incl. bib restore and PDF note"
+ ],
+ "errata": [
+  "REQUEST272 line 19 sign statement false",
+  "REQUEST278 history table values and time labels",
+  "REQUEST282 peak grid; core conclusion conditional",
+  "REQUEST273/274/276/280 orbital-timescale no-go and A4 statements unproven: conditional theorem progress only",
+  "REQUEST274 |kappa_struct|<=8.8e-9 rounded down (8.8366e-9)",
+  "REQUEST283 verifier table-row reason inaccurate"
+ ],
+ "repository_classification": "conditional theorem progress (no-go only under the two stated relaxation assumptions; A4 remains an assumption)",
+ "previous_draft_sha256": "cf5460324d19230beaee42f64863d43fc30a216e800df889f2425917fa0b5be4",
+ "full_goal_complete": false,
+ "snapshot_KST": "2026-09-27T23:06:13.409932+09:00",
+ "document_prefixes": {
+  "docs/model-definition.md": {
+   "bytes": 298760,
+   "sha256": "92b80d947796551c4cdfbb7697b653c356bb93294b8f8d59c209afd2192eef64"
+  },
+  "docs/observable-targets.md": {
+   "bytes": 289579,
+   "sha256": "896c1396d6183936df4548697a7f944ef4c1e35e9292c4aa8db4a8d7c56e3b4d"
+  },
+  "docs/adiabatic-limit.md": {
+   "bytes": 283918,
+   "sha256": "131e672232aa77d30c596587109e10623663c6b6b3c928a8d2108bba340c2afc"
+  },
+  "docs/nonadiabatic-regime.md": {
+   "bytes": 292410,
+   "sha256": "fe43079ef1e8f9398cc0ffead183ecb01a8be182c79111010cb2201ed3d1672b"
+  },
+  "docs/failure-ledger-dynamic-chi.md": {
+   "bytes": 330014,
+   "sha256": "a3bb691d1a5879967796fbe804a7825f1c5f6244912aa873f9166f3887c4bbd5"
+  },
+  "docs/dynamic-charge-completion.md": {
+   "bytes": 158178,
+   "sha256": "3fb67ec198384642fa2b44fb4a33b200fc050695514da568fed4956db388cb1f"
+  }
+ },
+ "sha256": {
+  "notes/REQUEST281_MANUSCRIPT_INTEGRATION_KO.md": "eca3f1591d1ec6a9a44770545c34549777d856d6d2b82a34484e3a87d54f761e",
+  "notes/REQUEST283_REVISION_RESPONSE_KO.md": "acf4c080c7524e83415b0a308105592d52e56cd80f77206b6a81521341f68a41",
+  "notes/REQUEST284_REVISION4_RESPONSE_KO.md": "c35a423e9d9ddaa7ff7418232271ca694afaff39e05c5d971a482574ee64bc64",
+  "docs/white-dwarf-free-fall-charge-section.md": "a5984ba254c7b82af29aa621a75c61f3efa27b47aa7d279b2dab4403be48a32e",
+  "docs/model-definition.md": "038efb6ea485d9d547ab89625ddd5fe4caee0a0c7361152f7fdbc658468ee05a",
+  "docs/observable-targets.md": "fbf702e12b7bee51153ef493ef48a78338e44fa0e469007d706020ae24e1ee91",
+  "docs/adiabatic-limit.md": "67ff1beaa5d2a94b11ade551c003c5723b9f0fb62ba36013b66bef21c6b0be43",
+  "docs/nonadiabatic-regime.md": "7ad72296f7e115bca443f9d706ad0d8930dd1a2bfe7766437ccd387c6acd59bd",
+  "docs/failure-ledger-dynamic-chi.md": "716f2d2dfc7d66e2904fa3289728b6f0f5bc94fa68f32fd6eef98f49ac587d7d",
+  "docs/dynamic-charge-completion.md": "e52ae98f637ae8cc172c28bfce6a21abf20ac0f62e27ec7d54f278459bf1f1ec",
+  "outputs/direct-eos-gr33/native-manuscript-rereview/publication.json": "d751101da3ec2cc226693596a9309e536c0834dab4bd4b264a1d6b7dc5ed7adf",
+  "outputs/direct-eos-gr33/native-manuscript-rereview/rereview-fable-5.1.md": "86dfe07e2f852a2e784650dbec897a8fdf901d2b2314f0edba22e4e897e6d795",
+  "outputs/direct-eos-gr33/native-manuscript-rereview/rereview-gpt-6-astra-cli.log": "01fb9073279650bcf65f929c379e7559749d9927aaa45ff75ef4c39a573aeecd",
+  "outputs/direct-eos-gr33/native-manuscript-rereview/rereview-gpt-6-astra-prompt.md": "01a9958190de45cef21c0f2810dd94d417d82510e4ec8275a6219ef2c927aad4",
+  "outputs/direct-eos-gr33/native-manuscript-rereview/rereview-gpt-6-astra.md": "997c9abbe4004f274b1f209c6120e7b69a8520d31b039a61c808ee050e935376",
+  "outputs/direct-eos-gr33/native-manuscript-rereview/rereview-opus-5.5.md": "69c328837c0a8e91b6bad6c0dbfc0cefdd83a6d0aa3fabcc2bd4c2c989502538",
+  "outputs/direct-eos-gr33/native-manuscript-rereview/rereview-prompt.md": "41bd7f757ee26f2c8f0353171d4a5955fea4c7a7088a536ec998c75378a8afbd",
+  "outputs/direct-eos-gr33/native-manuscript-rereview/result.json": "2cbe4dc06ee213ce54ca11059300f06361b4311553cccbc0a83b3956cbf37565",
+  "outputs/direct-eos-gr33/native-manuscript-rereview/scripts/check284-pandoc.py": "4001d2227ba53187d5a0e6b62199e8a3e6c968a1a0dd6870c9bf968a9153d61f",
+  "outputs/direct-eos-gr33/native-manuscript-rereview/scripts/phase284-publish.py": "63dd5de25ccc83a4c0aa4fa717e834aebb7ff71fc944c276ca4fc39d373e8e63"
+ }
+}

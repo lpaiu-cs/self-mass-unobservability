@@ -1,0 +1,37 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "9b1fce346",
+  "claim": "Construct collective electron/ion photon scattering from the SAME gas EOS populations and connect it to the previously accepted material/photon response. Preserve unresolved bound-electron/opacity/atmosphere/GR requirements.",
+  "first_decision": "Determine free/charged/neutral inventories and plasma scales; compare the independently derived RPA static scattering with the saved scalar opacity without fitting it.",
+  "method": "Read existing native ionization module immediately after the current molecular gas-only call. Reuse the prior inventory checker, not its older EOS library. Velocity quadrature defines a positive Hamiltonian Vlasov spectral measure; no arbitrary Lorentz broadening of unresolved collective poles.",
+  "sources": [
+    "https://docs.plasmapy.org/en/stable/_modules/plasmapy/diagnostics/thomson.html",
+    "https://arxiv.org/html/1601.01005"
+  ],
+  "budget": {
+    "native_EOS_calls": 4,
+    "new_opacity_queries": 0,
+    "inventory_seconds": 60,
+    "spectral_pilot_seconds": 120,
+    "CPU_workers": 1,
+    "GPU": false,
+    "new_stellar_steps": 0,
+    "production": "Assess measured cost and error of the spectral measure BEFORE evolving. No automatic grid/duration expansion."
+  },
+  "gates": {
+    "inventory": 1e-10,
+    "charge": 1e-10,
+    "reported_ions": 1e-12,
+    "saved_ne": 1e-12,
+    "algebra_static": 1e-09,
+    "algebra_second_moment": 1e-09
+  },
+  "limits": "Collisionless weak-coupling Maxwell/RPA reference. Atomic form factors, polarizability, nonideal corrections and material/GR recoil must not be silently declared complete.",
+  "bindings": {
+    "outputs/direct-eos-gr33/def-photon-collective/inventory-source.py": "20d458abc900c32b365257d69ac369a8a7c9dfd0118d27fe9574b56a1d4f5eb9",
+    "verification/eos_species_inventory.py": "56290581f614dd4d8e1ecf4fa493f1f546220f53fa838e3da7907c92eec7f5e9",
+    "/home/lpaiu/work/direct-eos-gr33/radiation-eos-split/gas.so": "6779b197aa500652e4db02363754f8b40c2c4eecd71b169714bfa02b188892df",
+    "outputs/direct-eos-gr33/def-photon-spatial-coupling/bank.npz": "adb6377b93e4a48a8530e2e1bcccf6f433e700dac69d80cf434ff47dcd25705b",
+    "outputs/direct-eos-gr33/def-photon-finite-jump/manifest.json": "a43ee8603a01b2a22f139e67b764d98d619d38f46dee6e004be72d3013718720"
+  }
+}

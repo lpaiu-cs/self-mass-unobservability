@@ -1,0 +1,25 @@
+{
+  "classification": "Counterexample candidate",
+  "saved_state_checks": [
+    {
+      "tolerance": 2e-11,
+      "thermal_trace_erg": 3.9016441620741216e+21,
+      "conservative_trace_erg": 3.9016441295594906e+21,
+      "measured_thermal_closure_contribution_erg": 32516994717843.367,
+      "identity_relative": 3.8372650210289355e-16,
+      "primitive_relative": 1.7760157055931868e-11
+    },
+    {
+      "tolerance": 2e-14,
+      "thermal_trace_erg": 3.901644194559572e+21,
+      "conservative_trace_erg": 3.901644194529269e+21,
+      "measured_thermal_closure_contribution_erg": 32641680645.74147,
+      "identity_relative": 3.8372650210289355e-16,
+      "primitive_relative": 1.8618288955386823e-14
+    }
+  ],
+  "source_identity": "delta trace = delta(tau-S*v-3p), relative to the same original material baseline",
+  "source_choice": "Use conserved energy instead of subtractively re-evaluating rho*u when exporting the subsequent scalar source. The current formal strict readout failures remain unchanged.",
+  "seconds": 1.6848355399999946,
+  "full_history_certified": false
+}

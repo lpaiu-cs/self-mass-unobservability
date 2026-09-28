@@ -1,0 +1,598 @@
+% Set configurable latex parameters for this paper.
+\input{configure_coulomb.tex}
+\shortauthors{Irwin}
+\shorttitle{The Coulomb Treatment}
+\begin{document}
+
+\title{The FreeEOS Code for Calculating the Equation of State for Stellar
+Interiors III: The Treatment of the Coulomb Correction}
+
+\author{Alan W. Irwin}
+\affil{Department of Physics and Astronomy, University of Victoria,\\
+P.O. Box 3055, Victoria, British Columbia, Canada, V8W 3P6\\
+Electronic mail: irwin@beluga.phys.uvic.ca}
+
+\begin{abstract}
+This paper describes how the Coulomb correction
+is implemented in FreeEOS (\url{http://freeeos.sourceforge.net/}), a
+software package for rapidly calculating the equation of state for physical
+conditions in stellar interiors.
+\end{abstract}
+\keywords{Coulomb interaction --- equation of state --- stellar interiors
+--- stellar evolution}
+
+\section{Introduction}
+
+FreeEOS (\url{http://freeeos.sourceforge.net/}) is a software package for
+rapidly calculating the equation of state (hereafter, EOS) for stellar
+conditions, and a series of papers is being prepared that describe its
+implementation. Paper~I (Irwin 2004a) describes the Fermi-Dirac integral
+approximations. Paper~II (Irwin 2004b) describes the efficient method of
+solution that delivers thermodynamically consistent results of high
+numerical quality that are in excellent agreement with OPAL (Rogers \&
+Nayfonov 2002) results for the solar case. Here in this third paper in the
+series, I present the implementation of the Coulomb correction. This
+non-ideal correction accounts for the tendency of oppositely charged,
+unbound particles to correlate with each other because of the attractive
+Coulomb forces between them. Because of this net attraction between the
+correlated particles, less pressure is generally required to confine the gas
+to a particular volume for a given temperature. An accurate treatment of the
+Coulomb correction is essential since this correction is one of the most
+important non-ideal corrections to the EOS calculation for stellar-interior
+conditions.
+
+The remainder of this paper is organized as follows:
+Section~\ref{coulomb_sect} presents our recommended model for the Coulomb
+free energy as well as various other models I have programmed as a basis
+for comparison, while Sections~\ref{results_sect}, ~\ref{discussion_sect},
+and ~\ref{conclusions_sect} give results, discussion, and conclusion.
+
+\section{The Coulomb Free Energy \lab{coulomb_sect}}
+
+The general expression adopted for the Coulomb free energy employs the
+following definitions for the Coulomb sums $\Sigma^{\mboxs{C}}_0$ and
+$\Sigma^{\mboxs{C}}_2$, the weak Coulomb interaction parameter $\Lambda$,
+and the strong Coulomb interaction parameter $\Gamma$: \be
+\Sigma^{\mboxs{C}}_0 \equiv \sum_\Pi n_\Pi, \lab{sig0_eq1} \ee \be
+\Sigma^{\mboxs{C}}_2 \equiv \sum_\Pi n_\Pi {Z_\Pi}^2, \lab{sig2_eq1} \ee \be
+\Lambda \equiv \frac{2 e^3 \pi^{1/2}(\Sigma^{\mboxs{C}}_2 + n_e
+\theta_e)^{3/2}} {(4 \pi \epsilon_0 kT)^{3/2}(\Sigma^{\mboxs{C}}_0 + n_e
+\theta_e)}, \lab{lambda_eq}\ee and \be \Gamma \equiv (\Lambda/3^{1/2})^{2/3}
+= \frac{e^2}{4 \pi \epsilon_0 kT} \frac{(4 \pi/3)^{1/3}\Sigma^{\mboxs{C}}_2
++ n_e \theta_e}{(\Sigma^{\mboxs{C}}_0 + n_e \theta_e)^{2/3}}.
+\lab{gamma_eq}\ee The number density of the positive ion identified by index
+$\Pi$ is given by $n_\Pi$, the charge on that positive ion is given by
+$Z_\Pi$, and \be \theta_e \equiv \partial \ln n_e(\eta,T)/\partial \eta,
+\lab{theta_eq}\ee where $n_e$ is the number density of free electrons and
+$\eta$ is a degeneracy parameter.  I describe the approximation used for
+$n_e(\eta,T)$ in Paper~I, and $\theta_e$ is calculated from the analytical
+derivative of that approximation. (Note all units in this paper are SI
+unless specified otherwise.  Furthermore, throughout this paper the symbol
+$\ln$ will stand for the natural logarithm and the symbol $\log$ will stand
+for the base 10 logarithm.) Using the above definitions, the adopted
+expression for the Coulomb free energy reduces to \be F_{\mboxs{C}} = -kTV
+(\Sigma^{\mboxs{C}}_0 + n_e \theta_e) g_{\mboxs{C}}(\Gamma), \lab{fc_eq} \ee
+where $g_{\mboxs{C}}(\Gamma)$ is the so-called Coulomb function.
+
+These expressions for $\Lambda$, $\Gamma$, and $F_{\mboxs{C}}$ are the same
+as those used by Pols et al. (1995, PTEH), except we have
+replaced $\Sigma^C_0$ in their formulation by $\Sigma^C_0 + n_e \theta_e$.
+In the limit of small degeneracy (which correlates with small $\Gamma$),
+$\theta_e$ approaches unity, and our formulation reduces to the DeWitt (1969)
+formulation.  In the limit of large degeneracy (which correlates with large
+$\Gamma$), $\theta_e$ approaches zero and our formulation reduces to the
+PTEH formulation.  The recommended Coulomb function,
+$g_{\mboxs{C}}(\Gamma)$, is discussed in the following sub-sections.
+
+\subsection{Constraints on the recommended Coulomb function and associated free
+energy \lab{constraint_sect}}
+
+For small $\Gamma$ the recommended Coulomb function should approach the
+Debye-H\"uckel (DH) result, \be g_{\mboxs{DH}}(\Gamma) \equiv
+\Gamma^{3/2}/3^{1/2}. \lab{gdh_eq} \ee This small-$\Gamma$ constraint on the
+Coulomb function insures the corresponding recommended Coulomb free-energy
+will approach \be F_{\mboxs{DH}} = -kTV (\Sigma^{\mboxs{C}}_0 + n_e
+\theta_e) \Lambda/3, \lab{fdh_eq}\ee which for small degeneracy gives the
+same result that can be derived from from first principles using an activity
+expansion of the grand canonical partition function (Rogers 1994).
+
+For large $\Gamma$ the recommended Coulomb function should approach the
+one-component-plasma (OCP) result which is well represented by \be
+g_{\mboxs{OCP}}(\Gamma) = a\Gamma + b\Gamma^s + c \ln \Gamma + d,
+\lab{gocp_eq}\ee where $a=0.899126$, $b=-0.60712/s$, $s=0.321308$,
+$c=0.27998$, and $d = 0.436484 - a - b$ (see DeWitt, Slattery, \& Chabrier
+1996, DSC). This large-$\Gamma$ constraint on the Coulomb function
+insures the corresponding Coulomb free-energy approximates liquid,
+multi-component-plasma (LMCP) results which are well represented by the
+linear mixing rule, \be F_{\mboxs{LMCP}} = -kTV \sum_\Pi n_\Pi
+g_{\mboxs{OCP}}(Z_\Pi^{5/3}\Gamma_0), \lab{linear_mixing_rule_eq}\ee where
+\be \Gamma_0 = \frac{e^2}{4 \pi \epsilon_0 kT}\left (\frac{4 \pi}{3}
+\Sigma^{\mboxs{C}}_1 \right ) ^{1/3}\ee and \be \Sigma^{\mboxs{C}}_1 \equiv
+\sum_\Pi n_\Pi Z_\Pi. \lab{sig1_eq1} \ee For large degeneracy, $\theta_e
+\approx 0$; and for large $\Gamma$, $g_{\mboxs{OCP}} \approx a \Gamma$.  Under
+these conditions, the relative difference between the Coulomb free energy
+corresponding to $g_{\mboxs{OCP}}$ and the LMCP result is \be
+\frac{\Sigma^{\mboxs{C}}_0 \Gamma}{\sum_\Pi n_\Pi Z_\Pi^{5/3}\Gamma_0} - 1 =
+\frac{(\Sigma^{\mboxs{C}}_0)^{1/3}\Sigma^{\mboxs{C}}_2}
+{(\Sigma^{\mboxs{C}}_1)^{1/3} \Sigma^{\mboxs{C}}_{5/3}} - 1,
+\lab{large_gamma_error_eq}\ee where \be \Sigma^{\mboxs{C}}_{5/3} \equiv
+\sum_\Pi n_\Pi {Z_\Pi}^{5/3}. \lab{sig5/3_eq1} \ee Note both
+equation~(\ref{gocp_eq}) and equation~(\ref{linear_mixing_rule_eq})are not
+exact representations of the definitive DSC Monte Carlo results, but I have
+ignored these representation errors in this development since, in general,
+they are small compared to the relative error given by
+equation~(\ref{large_gamma_error_eq}).
+
+\subsection{The Recommended Coulomb Function\lab{gc_sect}}
+
+In the FreeEOS implementation the recommended Coulomb function is
+represented by \be \log g_{\mboxs{C}} \equiv Y(X), \ee where $X \equiv \log
+\Gamma$ and $Y(X)$ is characterized by the two fitting parameters
+$X_{\mboxs{DH}}$ and $X_{\mboxs{OCP}}$.  For all $X$ values less than or
+equal to $X_{\mboxs{DH}}$, $Y$ is set equal to the DH result, $\log
+g_{\mboxs{DH}}$, which more than satisfies the small-$\Gamma$ constraint on
+$g_{\mboxs{C}}$ discussed in Section~\ref{constraint_sect}.  For all $X$
+values greater than or equal to $X_{\mboxs{OCP}} > X_{\mboxs{DH}}$, $Y$ is
+set equal to the modified OCP result, $\log (g_{\mboxs{OCP}} + \delta c \ln
+\Gamma + \delta d)$, which satisfies the large-$\Gamma$ constraint on
+$g_{\mboxs{C}}$ discussed in Section~\ref{constraint_sect}.
+$X_{\mboxs{DH}}=-0.4$ and $X_{\mboxs{OCP}}=0.$ give the best fit of FreeEOS
+results to OPAL results (see Sect.~\ref{results_sect}) and these values are
+adopted for the recommended Coulomb function.
+
+The parameters $\delta c$ and $\delta d$ are internally adjusted in the
+FreeEOS implementation to give a cubic polynomial in the transition region
+between $X_{\mboxs{DH}}$ and $X_{\mboxs{OCP}}$ that is continuous in $Y(X)$,
+$Y^{\prime}(X)$, and $Y^{\prime\prime}(X)$ with DH results at
+$X=X_{\mboxs{DH}}$ and with modified OCP results at $X=X_{\mboxs{OCP}}$. The
+basic equations that must be satisfied by that cubic are given in Sect.3.3
+of Press et al. (1986).  The cubic is determined by the 4 requirements of
+$Y(X)$ and $Y^{\prime\prime}(X)$ continuity at $X=X_{\mboxs{DH}}$ and
+$X=X_{\mboxs{OCP}}$. However, for the unmodified OCP result (i.e., $\delta
+c=0$ and $\delta d=0$), the first derivatives are non-continuous.  To make
+them continuous, a Newton-Raphson iteration procedure is used to solve the
+two $Y^{\prime}(X)$ continuity constraints in terms of the two unknowns
+$\delta c$ and $\delta d$.  This procedure is only done once for a
+particular set of $X_{\mboxs{DH}}$ and $X_{\mboxs{OCP}}$ values, and the
+resulting $\delta c$ and $\delta d$ values tend to be small so that modified
+OCP results from the recommended Coulomb function do not strongly differ
+from unmodified OCP results for large $\Gamma$ values (see
+Sect.~\ref{results_sect}).
+
+\subsection{Other Models for the Coulomb Free Energy}
+
+The recommended treatment of the Coulomb free energy (i.e.,
+eq.~[\ref{fc_eq}] with the Coulomb function, $g_{\mboxs{C}}(\Gamma)$,
+constructed as in Sect.~\ref{gc_sect}) has been designed to join the
+Debye-H\"uckel approximation smoothly with a good approximation to LMCP
+results using the Coulomb fitting parameters $X_{\mboxs{DH}} = -0.4$ and
+$X_{\mboxs{OCP}} = 0.$ This treatment is part of the EOS1 free-energy model
+option suite (described in Paper~I) that gives a good fit to OPAL solar
+results (see Paper~II). However, I have implemented additional Coulomb
+free-energy model options for FreeEOS. These options provide variations on
+the EOS1 option suite that reduce the required computer time to perform the
+EOS calculations.  Also these options (in combination with other FreeEOS
+options) provide almost exact emulation of the PTEH; Swenson, Irwin, \&
+Rogers, (unpublished, SIREFF); or Mihalas, D\"{a}ppen, \& Hummer (1988, MDH)
+equations of state.
+
+\subsubsection{Approximations for the Coulomb Sums \lab{csum_sect}}
+
+The form of the Coulomb free energy (eq.~[\ref{fc_eq}]) implies the
+associated correction to the equilibrium constants given by equation~(35) of
+Paper~II depends on the auxiliary variables $\Sigma^{\mboxs{C}}_0$ and
+$\Sigma^{\mboxs{C}}_2$ defined by equations~(\ref{sig0_eq1}) and
+(\ref{sig2_eq1}).  Normally, these auxiliary variables are determined to
+high numerical precision as part of the EOS solution by Newton-Raphson
+iteration as discussed in Paper~II, but the FreeEOS implementation also
+offers two options for approximating these auxiliary variables.  These
+approximations save computer time by reducing the number of auxiliary
+variables that need to be determined by iteration.
+
+The ``PTEH'' approximations for the Coulomb sums are taken from the PTEH
+reference, and are given as follows: \be \Sigma^{\mboxs{C}}_0 \approx n_e
+\Sigma^+_0/\Sigma^+_1 \lab{sig0_eq3} \ee and \be \Sigma^{\mboxs{C}}_2
+\approx n_e \Sigma^+_2/\Sigma^+_1 ;\lab{sig2_eq3} \ee where for $k = 0,1,2$
+\be \Sigma^+_k = \sum_j \epsilon_j Z_j^k. \ee The $j$ index runs over all
+elements, $Z_j$ is the nuclear charge (atomic number), and \be \epsilon_j =
+X_j/A_j. \ee $X_j$ is the abundance by weight, $A_j$ is the atomic weight,
+and $\sum_j X_j \equiv 1$.  The approximations given by
+equations~(\ref{sig0_eq3}) and (\ref{sig2_eq3}) are exact if all elements
+are un-ionized or completely ionized.  Furthermore, these approximations
+require evaluation of no auxiliary variables.
+
+The ``SIREFF'' approximations for the Coulomb sums are taken from the SIREFF
+EOS implementation and are given as follows: \be \Sigma^{\mboxs{C}}_0
+\approx n(H^+) + n(He^+) + n(He^{++}) +
+\frac{n(\mboxs{H}^+)}{\epsilon({\mboxs{H}})} \sum_{m}
+\epsilon_{m}\lab{sig0_eq2} \ee and \be \Sigma^{\mboxs{C}}_2 \approx n(H^+) +
+n(He^+) + 4 n(He^{++}) + \frac{n(\mboxs{H}^+)}{\epsilon({\mboxs{H}})}
+\sum_{m} \epsilon_{m} + \frac{n(\mboxs{He}^{++})} {\epsilon({\mboxs{He}})}
+\sum_{m} \epsilon_{m}(Z_{m}^2 - 1); \lab{sig2_eq2} \ee where the $m$ index
+runs over just the metals. Equations~(\ref{sig0_eq2}) and (\ref{sig2_eq2})
+are exact in the limits where all elements are un-ionized, singly ionized or
+completely ionized. These approximations normally require knowledge of no
+additional auxiliary variables when using the SIREFF free-energy model.  For
+that model, $n(\mboxs{H}_2^+)$ is ignored (which is why that species is not
+included in the above equations), and $n(\mboxs{H}^+)$, $n(\mboxs{He}^+)$,
+and $n(\mboxs{He}^{++})$ are already required auxiliary variables for the
+SIREFF form of pressure ionization.
+
+\subsubsection{Additional Options for the Coulomb Treatment
+\lab{coulomb_compare_sect}}
+
+Other Coulomb options available for FreeEOS users are as follows.
+\begin{description}
+\item[(1)] Ignore the Coulomb effect.
+\item[(2)] Replace $X_{\mboxs{DH}} = -0.4$ and $X_{\mboxs{OCP}} = 0.$ by
+$X_{\mboxs{DH}} = -1.$ and $X_{\mboxs{OCP}} = 0$.
+\item[(3)] Replace $\Sigma^{\mboxs{C}}_0 + n_e \theta_e$ wherever it
+appear in the recommended formulation by $\Sigma^{\mboxs{C}}_0$.
+\item[(4)] Replace the recommended Coulomb function by the PTEH version
+(see their eq.~[25]), \be g_{\mboxs{PTEH}}(\Gamma) = \frac{a_1
+\Gamma}{\{[\Gamma/(\Gamma+a_3)]^{1/a_2} +
+(a_1\sqrt{3/\Gamma})^{1/a_2}\}^{a_2}}, \lab{gpteh_eq}\ee where
+$a_1=0.89752$, $a_2=0.768$, and $a_3=0.208$.
+\item[(5)] Replace the recommended $\theta_e$ (see discussion following
+eq.~[\ref{theta_eq}]) by the PTEH version (which is based on their
+eq.~[29]).
+\item[(6)] Replace the recommended Coulomb function by the Debye-H\"uckel
+version $g_{\mboxs{DH}}$ (eq.~[\ref{gdh_eq}]).
+\item[(7)] Replace the recommended Coulomb function by a corrected
+Debye-H\"uckel version $\tau(x) g_{\mboxs{DH}}$; where \be \tau(x) =
+3x^{-3}[\ln(1+x)-x+x^2/2] \lab{tau_eq}\ee (eq.~[11] from MDH), \be x \equiv
+\left [ \frac{2 \pi^{1/2} e^3 n_e}{(4 \pi \epsilon_0 kT)^{3/2}} \right ]
+\frac{F_{1/2}(\eta,0)}{F_{3/2}(\eta,0)} \frac{(\Sigma^{\mboxs{C}}_2 +
+\theta_e n_e)^{1/2}}{\Sigma^{\mboxs{C}}_0}, \lab{x_eq}\ee and
+$F_{k}(\eta,0)$ is the non-relativistic limit of the Fermi-Dirac integral of
+order $k$ (see Paper~I).
+\end{description}
+
+Options~(1) and (2) above are useful for studies (e.g., Cassisi, Salaris, \&
+Irwin 2003) of the sensitivity of stellar-interior results to the overall
+Coulomb effect and variations in the approximation for the Coulomb effect at
+intermediate $\Gamma$; the combination of the PTEH approximations for the
+Coulomb sums and options~(3) through (5) above constitute the PTEH Coulomb
+model; the combination of the SIREFF approximations for the Coulomb sums and
+option~(6) above constitute the SIREFF Coulomb model; and precise iterative
+calculation of the Coulomb sums and option~(7) above constitute the MDH
+Coulomb model.
+
+\section{Results \lab{results_sect}}
+
+Figure~\ref{coulomb_adjust_fig} gives the recommended $\log g_{\mboxs{C}}$;
+its first two derivatives; and residuals of $\log g_{\mboxs{DH}}$, $\log
+g_{\mboxs{OCP}}$, and $\log g_{\mboxs{PTEH}}$ relative to $\log
+g_{\mboxs{C}}$.  By design, the recommended $g_{\mboxs{C}}$ and its first
+and second derivative are continuous and agree with $g_{\mboxs{DH}}$ for
+$\log \Gamma \le X_{\mboxs{DH}} = -0.4$.  Because of the continuity
+constraint discussed in Sect.~\ref{gc_sect}, $\delta c$ and $\delta d$ are
+non-zero so that $\log g_{\mboxs{C}}$ differs from $\log g_{\mboxs{OCP}}$ by
+0.095 at $X=0.$, but these differences decrease with increasing $X$.  The
+differences between $g_{\mboxs{C}}$ and $g_{\mboxs{PTEH}}$ are discussed in
+the next section.
+
+To give the following results and discussion some context,
+Figure~\ref{context_fig} compares EOS quantities and the loci of several
+stellar interior models on the density-temperature plane for solar
+metallicity. The high-density, low-temperature calculation limit indicated
+in the figure is defined by \be \log \rho_{\mboxs{lim}} = \log \rho_5 +
+(3/2) \log(T/10^5)\ee for $\log T < 6$ and continued by the $\log T = 6$
+isotherm. The limit parameter of $\log \rho_5 = 3.3$ is used for this figure
+to avoid regions where FreeEOS calculations currently do not converge. This
+calculation limit roughly corresponds to a 0.1-M$_\sun$ model and can also
+be viewed as the approximate limit of validity for FreeEOS calculations (see
+further discussion in Paper~II).  This same $\log \rho_5$ limit parameter is
+also used for all other $\rho,T$ figures in this paper except for
+Figure~\ref{dh_fig}.
+
+Figure~\ref{nocoulomb_fig} shows the overall change in pressure due to the
+Coulomb effect.  In general, the Coulomb effect increases with increasing
+density and decreasing temperature, but this overall trend is modified by
+other factors which affect the EOS. The Coulomb effect is reduced at high
+densities because the pressure from degenerate electrons grows faster than
+the Coulomb pressure, at high temperatures because the ideal pressure
+increases with temperature while the Coulomb pressure decreases, combined
+high temperatures and low densities because the radiation pressure dominates
+the pressure, at low densities because the mean distance between particles
+is low (and therefore interactions are reduced), and at low temperatures
+because of low ionization (fewer charged particles to interact). The net
+result of all these different effects is as illustrated; for fixed abundance
+the Coulomb effect is largest at combined intermediate densities and
+intermediate temperatures corresponding to the envelopes of extreme
+lower-main-sequence stars. In general, for fixed abundance and any given
+stellar model the Coulomb effect first increases inward as ionization is
+increased, reaches a maximum in the envelope, and then decreases inward as
+the temperature is increased still further.  Note in contrast to the fixed
+abundance case, the Coulomb effect may increase inward near the core of
+models in advanced stages of stellar evolution because the effect goes as
+the cube of the charge on the ions (see eqs.~[\ref{lambda_eq}] and
+[\ref{fdh_eq}]) which monotonically increases as a function of time due to
+nuclear processing.
+
+Figure~\ref{dh_fig} shows the pressure effect of changing the model for the
+Coulomb function from the recommended $g_{\mboxs{C}}$ to $g_{\mboxs{DH}}$.
+The two FreeEOS calculations being compared are identical by definition for
+$\log \Gamma \le X_{\mboxs{DH}} = -0.4$ (see Fig.~\ref{coulomb_adjust_fig}),
+but as the $\Gamma$ value is increased the two calculations rapidly diverge
+to the point where the FreeEOS calculation that uses $g_{\mboxs{DH}}$
+produces unphysical results (e.g., negative overall pressures) for physical
+conditions that are typical for envelopes of extreme LMS stars. This
+illustrates why a non-DH Coulomb approach is required for such conditions.
+
+Figures~\ref{pteh_fig} through \ref{0.1_model_pteh_fig} show the effect of
+changing the model for the Coulomb function from the recommended
+$g_{\mboxs{C}}$ to $g_{\mboxs{PTEH}}$.  Figure~\ref{pteh_fig} shows the
+overall change in pressure, while figures~\ref{1.0_model_pteh_fig} and
+\ref{0.1_model_pteh_fig} show more detailed results for the locus of points
+in a solar-mass model and a 0.1-$M_\sun$ model.  The model results will be
+discussed in detail in the next section.
+
+\section{Discussion \lab{discussion_sect}}
+
+The Coulomb functions $g_{\mboxs{C}}$ and $g_{\mboxs{PTEH}}$ are continuous
+in at least the function and its first and second derivatives.  This is a
+necessary condition for second-order thermodynamic quantities like
+$\Gamma_1$ (which depend on a second-order partial derivative of the
+free-energy) to be continuous.  Furthermore, $g_{\mboxs{C}}$ and
+$g_{\mboxs{PTEH}}$ satisfy the small- and large-$\Gamma$ constraints
+presented in Section~\ref{constraint_sect}. Thus, the EOS results
+corresponding to these Coulomb functions make a smooth transition from DH
+results at small $\Gamma$ to an approximation to LMCP results at large
+$\Gamma$.  However, Figure~\ref{coulomb_adjust_fig} shows that
+$g_{\mboxs{PTEH}}$ has significant differences with $g_{\mboxs{C}}$. For
+$\log \Gamma \le X_{\mboxs{DH}} = -0.4$, these differences are identical to the
+differences of $g_{\mboxs{PTEH}}$ relative to $g_{\mboxs{DH}}$ while for
+$\log \Gamma \ge X_{\mboxs{OCP}} = 0.$, these differences are essentially the
+negative of the differences between $g_{\mboxs{C}}$ and $g_{\mboxs{OCP}}$.
+
+Figure~\ref{1.0_model_pteh_fig} presents FreeEOS results as a function of
+the model depth variable $T(r)$ in a solar-mass model. The first panel of
+the figure shows how $\Gamma_1$ behaves with depth to indicate important EOS
+transitions such as the combined hydrogen and first helium ionization zone
+(the primary minimum in $\Gamma_1$) and the the second helium ionization
+zone (the secondary minimum in $\Gamma_1$).  The remaining panels of the
+figure show how the differences between $g_{\mboxs{PTEH}}$ and
+$g_{\mboxs{C}}$ (and essentially the differences between $g_{\mboxs{PTEH}}$
+and $g_{\mboxs{DH}}$ since the maximum solar $\log \Gamma$ value is only
+slightly larger than $X_{\mboxs{DH}} = -0.4$) propagate to various
+thermodynamic quantities for the locus of points in a solar-mass model.
+
+To help predict the effect of the illustrated residuals on derived solar
+properties it is important to remember that in the adiabatic part of the
+solar convection zone, $P$ becomes an implicit function of $\rho$ along an
+adiabat.  Once the adiabatic exponent, $\Gamma_1 = \partial \ln P(\rho,
+s)/\partial \ln \rho$ is known along the adiabat (defined by constant
+entropy per unit mass, $s$), the solution for the density-depth and
+pressure-depth relations, $\rho(r)$ and $P(r)$ follows from the boundary
+conditions on the adiabatic region and solution of Poisson's equation (see
+discussion in Cox and Giuli 1968, Sect.~19.1).  The temperature-depth
+relation, $T(r)$ is then determined from the EOS relation $T(\rho(r), P(r))$
+in the adiabatic region. The residuals in $\Gamma_1$ tend to be oscillatory
+as illustrated in the figure because $\Gamma_1$ is a second-order
+thermodynamic quantity.  These oscillatory residuals should have little
+effect on $\rho(r)$ and $P(r)$ outside the adiabatic region. In contrast,
+the EOS relation $P(\rho(r),T(r))$ is a first-order thermodynamic quantity
+(it depends on a first partial derivative of the free energy) so $\ln
+P(\rho(r),T(r))$ residuals tend to be systematic as illustrated in the
+figure.  The residuals in the $\ln T(\rho(r), P(r))$ relation should
+similarly be systematic (although opposite in sign). So long as these
+systematic residuals as illustrated in this figure do not propagate to the
+surface or to the deep part of the model where the luminosity is generated,
+and so long as the residuals in $\ln \rho(r)$ and $P(r)$ do not propagate
+outside the adiabatic zone, then the radius and luminosity of the model
+should largely be unaffected by EOS changes or uncertainties in the
+adiabatic part of the model.
+
+In contrast to the case of the predicted radius and luminosity of the sun,
+the predicted acoustic periods of the sun should be significantly affected
+(at least compared to the high level of accuracy with which the solar
+acoustic periods have been observationally determined) by the difference
+between $g_{\mboxs{PTEH}}$ and $g_{\mboxs{DH}}$.  The predicted acoustic
+periods are largely determined by the integral of the inverse sound speed
+over depth, and the change in adopted Coulomb function affects the sound
+speed at the $10^{-2}$ level right where the integrand is fairly near its
+maximum value. Furthermore, comparison of this plot with Figures~6 and 7 of
+Paper~II, shows use of $g_{\mboxs{PTEH}}$ completely destroys the good
+agreement we have with the OPAL EOS for the solar case. In fact, in all the
+attempts to adjust the EOS1 option suite to fit the OPAL results, I have
+never been able to improve on simply adopting the Debye-H\"uckel Coulomb
+function, $g_{\mboxs{DH}}$, for the solar case.  It is for this reason that
+I have designated $g_{\mboxs{C}}$ (which is essentially identical to
+$g_{\mboxs{DH}}$ in the solar case by design) as the recommended Coulomb
+function and use that function rather than $g_{\mboxs{PTEH}}$ in the EOS1
+option suite.
+
+Figure~\ref{0.1_model_pteh_fig} shows the same quantities as
+Figure~\ref{1.0_model_pteh_fig} except that all calculations have been done
+for a 0.1-$M_\sun$ model.  The envelope conditions of this model are near
+the limit of validity of the current EOS1 option suite of FreeEOS because of
+deficiencies in the adopted pressure ionization scheme.  In fact, the
+current pressure-ionization model for the metals is much less detailed than
+it is for hydrogen and helium, and this oversimplification causes
+near-discontinuous metal ionization and the accompanying sharp changes that
+occur for $\Gamma_1$ and other quantities (for example, near $\log T(r) =
+5.7$).
+
+The Coulomb effect is large ($\log \Gamma > 0$) through much of the
+0.1-$M_\sun$ model with the maximum $\log \Gamma$ value approaching 0.5 in
+the envelope.  Thus, through much of the model $g_{\mboxs{PTEH}}$ will give
+a better approximation to $g_{\mboxs{OCP}}$ than $g_{\mboxs{C}}$, and a
+FreeEOS calculation with $g_{\mboxs{PTEH}}$ will give a better approximation
+to LMCP results than the $g_{\mboxs{C}}$ calculation.  Nevertheless, except
+for the outermost layers the model is completely convective, and because of
+the high densities involved almost all but the outermost layers are
+adiabatic as well. Under these conditions (as discussed for the solar-mass
+model), the largely oscillatory nature of the $\Gamma_1$ residuals and lack
+of systematic $\ln P(\rho(r),T(r))$ residuals at the surface and at depth
+indicate that the predicted radius and luminosity of the 0.1-$M_\sun$ model
+should largely be unaffected by using $g_{\mboxs{C}}$ rather than
+$g_{\mboxs{PTEH}}$.  An even stronger argument can be made for the relative
+error of the current Coulomb formulation compared to the linear-mixing rule
+formulation for large $\Gamma$.  Indeed, for normal helium abundances the
+maximum $n(\mboxs{He}^{++})/n(\mboxs{H}^{+})$ value is approximately 0.10,
+and the maximum error estimated from equation~\ref{large_gamma_error_eq} is
+only 3~\% which is an order of magnitude smaller than the relative
+differences between $g_{\mboxs{PTEH}}$ and $g_{\mboxs{C}}$ shown in
+Figure~\ref{coulomb_adjust_fig}.
+
+\section{Conclusions \lab{conclusions_sect}}
+
+This paper has described how the Coulomb correction is implemented in the
+FreeEOS software library. The recommended set of Coulomb options that are
+used in the EOS1 option suite smoothly join Debye-H\"uckel results at weak
+Coulomb coupling to a good approximation to liquid, multi-component-plasma
+results for strong Coulomb coupling.  The match with the Debye-H\"uckel
+results is maintained to a sufficiently large value of the Coulomb coupling
+constant ($\log \Gamma = -0.4$) to secure an excellent fit to OPAL results
+for the solar case (see Figs.~6 and 7 of Paper~II). This Coulomb treatment
+should be suitable for most stellar-interior calculations with the notable
+exception of the cool white dwarfs where the phase transition to a
+crystalline state is encountered for large Coulomb coupling.
+
+The FreeEOS software library is licensed under the GPL and is freely
+downloadable from \url{http://freeeos.sourceforge.net/}. Older versions of
+FreeEOS used a spline fit to approximate the Coulomb implementation
+introduced at version 1.4.0 of FreeEOS and described in this paper.
+
+\acknowledgments I thank Forrest Rogers for many useful discussions; Santi
+Cassisi for providing some representative model calculations and for his
+friendly encouragement of my FreeEOS work; Ben Dorman, Fritz Swenson, and
+Don VandenBerg for helping to arouse my original interest in the EOS problem
+for stellar interiors; and Richard Stallman, Linus Torvalds, and many other
+programmers for the GNU/Linux computer operating system and accompanying
+tools that have made it practical to develop the FreeEOS code on personal
+computers. The figures of this paper have been generated with the
+yPlot~(\url{http://yplot.sourceforge.net}) and
+PLplot~(\url{http://www.plplot.org}) scientific plotting packages.
+
+\clearpage
+\begin {references}
+\reference{Cass2003}
+Cassisi, S., Salaris, M., \& Irwin, A.W. 2003, \apj, 588, 862
+\reference{Cass2005}
+Cassisi, S. 2005, private communication
+\reference{Cox1968}
+Cox, J. P., \& Giuli, R. T. 1968, Principles of Stellar Structure (New York:
+Gordon and Breach)
+\reference{DeWi1969}
+DeWitt, H. E. 1969, in Low Luminosity Stars, ed. S. Kumar (New York:
+Gordon and Breach), p. 211
+\reference{DeWi1996}
+DeWitt, H., Slattery, W., \& Chabrier, G. 1996, Physica B228, 21 (DSC)
+\reference{Irwi2004a}
+Irwin, A.W. 2004a, \url{http://freeeos.sourceforge.net/eff\_fit.pdf} (Paper~I)
+\reference{Irwi2004b}
+Irwin, A.W. 2004b, \url{http://freeeos.sourceforge.net/solution.pdf} (Paper~II)
+\reference{Miha1988}
+Mihalas, D., D\"{a}ppen, W., \& Hummer, W. G. 1988, \apj, 331, 815 (MDH)
+\reference{Piet2004}
+Pietrinferni, A., Cassisi, S., Salaris, M., \& Castelli, F. 2004, \apj,
+612, 168
+\reference{Pols1995}
+Pols, O. R., Tout, C. A., Eggleton, P. P., \& Han, Z. 1995,
+\mnras, 274, 964 (PTEH)
+\reference{Pres1986}
+Press, W.H., Flannery, B.P., Teukolsky, S.A., \& Vetterling, W. T. 1986,
+Numerical Recipes (Cambridge, Cambridge University Press)
+\reference{Roge1994}
+Rogers, F. J. 1994, in The Equation of State in Astrophysics IAU Coll. 147,
+ed. G. Chabrier, E. Schatzman (Cambridge: Cambridge University Press), p. 16
+\reference{Roge2002}
+Rogers, F.J. \& Nayfonov, A. 2002, \apj, 576, 1064 (OPAL)
+
+\end{references}
+
+\clearpage
+\begin{figure}
+\plotone{coulomb_adjust.\FigureSuffix}
+\figcaption{The recommended $Y(X) = \log g_{\mboxs{C}}$ and its first two
+derivatives as a function of $X = \log \Gamma$; and a comparison of $\log
+g_{\mboxs{DH}}$, $\log g_{\mboxs{OCP}}$, and $\log g_{\mboxs{PTEH}}$ with
+$Y$ as a function of $X$. $Y(X)$ smoothly joins DH results with modified OCP
+results using a cubic polynomial (see text). \lab{coulomb_adjust_fig}}
+\end{figure}
+
+\clearpage
+\begin{figure}
+\plotone{context.\FigureSuffix}
+\figcaption{A solar-metallicity comparison of EOS quantities and loci of
+model stellar interiors. The thin short-dashed line indicates where the
+radiative and gas pressures are equal and is the boundary between the
+radiation-dominated and matter-dominated EOS.  The thin solid lines indicate
+the middle of important ionization and dissociation zones. The ``He$^+$'',
+``He'', ``H'', and ``H$_2$'' labels respectively correspond to where half
+the helium is singly ionized or neutral and where half the hydrogen is in
+neutral monatomic form or in the diatomic molecular form. The medium
+thickness solid line indicates the current high-density, low-temperature
+calculation limit for FreeEOS (see text). The thick solid lines indicate
+$\rho,T$ loci of model stellar interiors provided by Cassisi (2005).  These
+models were calculated using the EOS1 option suite of FreeEOS and the
+stellar-evolution code that has been described in Pietrinferni, et al.
+(2004). The labels of ``0.1'', ``0.3'', ``1.0'', ``RGT'', and ``CG''
+respectively indicate main-sequence models of 0.1, 0.3, and 1.0 $M_{\sun}$
+and models of 1.0 $M_{\sun}$ evolved to the tip of the red-giant branch and
+to the initial clump-giant phase (zero-age horizontal branch of solar
+metallicity). \lab{context_fig}}
+\end{figure}
+
+\clearpage
+\begin{figure}
+\plotone{nocoulomb.\FigureSuffix}
+\figcaption{The log of the relative change in pressure caused by changing
+from the recommended free-energy model to one where the Coulomb free-energy
+component is dropped. Solar abundances were used for both EOS calculations
+employed in the comparison. The high-density, low-temperature calculation
+limit is the same as in Figure~\ref{context_fig}. \lab{nocoulomb_fig}}
+\end{figure}
+
+\clearpage
+\begin{figure}
+\plotone{dh.\FigureSuffix}
+\figcaption{The log of the relative change in pressure caused by changing
+from the recommended Coulomb free-energy model to one where $g_{\mboxs{C}}$
+is replaced by $g_{\mboxs{DH}}$ (eq.~[\ref{gdh_eq}]). Solar abundances were
+used for both EOS calculations employed in the comparison. To avoid negative
+pressures for the DH case, the high-density, low-temperature calculation
+limit was shifted to lower densities by 1.05 dex (i.e., $\log \rho_5$ was
+reduced from 3.3 to 2.25). \lab{dh_fig}}
+\end{figure}
+
+%\clearpage
+%\begin{figure}
+%\plotone{dhtau.\FigureSuffix}
+%\end{figure}
+
+\clearpage
+\begin{figure}
+\plotone{pteh.\FigureSuffix}
+\figcaption{The log of the relative change in pressure caused by changing
+from the recommended Coulomb free energy model to one where $g_{\mboxs{C}}$
+is replaced by $g_{\mboxs{PTEH}}$ (eq.~[\ref{gpteh_eq}]).  Solar abundances
+were used for both EOS calculations employed in the comparison. The
+high-density, low-temperature calculation limit is the same as in
+Figure~\ref{context_fig}. \lab{pteh_fig}}
+\end{figure}
+
+\clearpage
+\begin{figure}
+\plotone{{1.0_pteh}.\FigureSuffix}
+\figcaption{The adiabatic pressure gradient, $\Gamma_1$, for the recommended
+Coulomb free-energy model as well as the the change in $\Gamma_1$, relative
+change in $P$, and the log of the relative change in the square of the sound
+speed, ${v_s}^2 = \Gamma_1 P/\rho$, as a function of the temperature of each
+depth point for a solar-mass model.  The plotted changes are derived from
+two independent FreeEOS calculations; one with the recommended Coulomb
+treatment and one where $g_{\mboxs{C}}$ has been replaced by
+$g_{\mboxs{PTEH}}$ (eq.~[\ref{gpteh_eq}]). \lab{1.0_model_pteh_fig}}
+\end{figure}
+
+\clearpage
+\begin{figure}
+\plotone{{0.1_pteh}.\FigureSuffix}
+\clearpage
+\figcaption{The same as figure~\ref{1.0_model_pteh_fig} except all
+calculations were done for a 0.1-M$_\sun$ model. \lab{0.1_model_pteh_fig}}
+\end{figure}
+
+\end{document}

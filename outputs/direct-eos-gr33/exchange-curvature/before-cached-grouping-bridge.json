@@ -1,0 +1,18 @@
+{
+  "classification": "Counterexample candidate",
+  "command": [
+    "gfortran",
+    "-O2",
+    "-fPIC",
+    "-shared",
+    "-I/home/lpaiu/work/direct-ions32/full-integral-build/src",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/exchange-curvature/exchange_bridge.f90",
+    "-L/home/lpaiu/work/direct-ions32/full-integral-build/src",
+    "-Wl,-rpath,/home/lpaiu/work/direct-ions32/full-integral-build/src",
+    "-lfree_eos_direct24_integral_full",
+    "-o",
+    "/home/lpaiu/work/direct-eos-gr33/exchange-curvature/exchange.so"
+  ],
+  "source_sha256": "3655aeb3233556b29317f16c2c9a0b476baa103a30cbc22e967b0bc052fb57be",
+  "bridge_sha256": "aab6ad980f9f43a94ae3476cc7c200a60787ad065f61a8b9696b9d125a649c74"
+}

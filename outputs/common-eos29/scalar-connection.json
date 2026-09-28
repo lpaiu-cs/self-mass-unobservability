@@ -1,0 +1,34 @@
+{
+  "classification": "Counterexample candidate",
+  "beta": -4,
+  "rows": [
+    {
+      "steps": 1,
+      "base_chi_m": 1166.8526934337135,
+      "end_chi_m": 1166.8526934988024,
+      "base_alpha_over_phi": -4.000356558658047,
+      "end_alpha_over_phi": -4.000356558881303,
+      "quadrature": [
+        {
+          "quadrature_points": 6,
+          "delta_dimensionless_tail": 6.217832574315233e-10,
+          "delta_alpha_over_phi": -5.1457843032193945e-11,
+          "direct_tail_difference": 6.217839856138612e-10
+        },
+        {
+          "quadrature_points": 12,
+          "delta_dimensionless_tail": 6.217832574315211e-10,
+          "delta_alpha_over_phi": -5.145784251719791e-11,
+          "direct_tail_difference": 6.217839856138612e-10
+        }
+      ],
+      "delta_alpha_quadrature_difference": 5.149960319306146e-19,
+      "force_fraction_coefficient_per_phi_infinity_squared": 2.0583137006879165e-10
+    }
+  ],
+  "method": "Finite Wronskian identity on common x=r/R including exact Schwarzschild vacuum tail integral. PCHIP material profiles define the numerical scalar problem; a finite-pressure surface and unsolved atmosphere remain.",
+  "interpretation": "Small nonzero scalar background: alpha_A=-phi_infinity*chi/Mgeom+O(phi_infinity^3). For a weak companion alpha_B=beta*phi_infinity, delta(a_scalar/g)=beta*phi_infinity^2*delta(alpha_A/phi_infinity). This is the quasistatic scalar readout of a prescribed-flux thermal trajectory, not a driven orbital response or observation fit.",
+  "certified_derivative": false,
+  "nonlinear_scalar_backreaction": false,
+  "observation_likelihood_run": false
+}

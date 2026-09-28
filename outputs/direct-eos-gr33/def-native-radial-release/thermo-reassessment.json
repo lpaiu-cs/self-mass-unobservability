@@ -1,0 +1,15 @@
+{
+  "classification": "Counterexample candidate",
+  "previous_maximum_relative": 0.003176821362002036,
+  "decision": "Preserve the failed independent PCHIP gamma interpolation. Use dlnP/dlnrho=Gamma1, du/dlnrho=P/rho and dlnT/dlnrho=(P/rho-u_lnrho)/cvT from the SAME native isentropes in cubic Hermite interpolation. Gamma is now the derivative of the same pressure representation. No new grid, density/entropy domain or relaxed gate.",
+  "additional_native_call_cap": 50,
+  "additional_seconds": 20,
+  "total_call_cap_including_prior_failures": 1270,
+  "controls": "Repeat the original eight checks and add four unseen density/entropy controls near the chemical transition.",
+  "bindings": {
+    "verification/def_native_radial_thermo.py": "d7c79a7a3e2cb9763e4e54729bd09823dd31f47f69855d1f95dfb2443a09feaf",
+    "verification/def_native_radial_release.py": "3689a7b0c18fb0c96bd1b2e4503f9ce2cd3dd4f0edfa15c889c0c8bc3cc9fe05",
+    "outputs/direct-eos-gr33/def-native-radial-release/eos.npz": "e35e1a7b5dff20773244c20c14ddbe7ce3c74cc89b2036d6bf84cb27d4afbc69",
+    "outputs/direct-eos-gr33/def-native-radial-release/eos.json": "e26af94aa4a04ad9ee454b9a3353f940d11e46f4cb271361de4a7e67c7edc246"
+  }
+}

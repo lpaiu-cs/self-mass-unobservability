@@ -1,0 +1,9 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "angular_quadrature_max_relative": 7.294165271787278e-14,
+  "moment_operator": "L_j(s)=integral W(epsilon)*tau/(1+s*tau)*[(epsilon-mu)/(kT)]^j; K(s)=k_B^2*T*(L_2-L_1^2/L_0). Zero electric current uses the frequency-dependent Schur complement.",
+  "first_memory": "-K_prime(0)/K(0)=integral W*tau^2*(z-L1/L0)^2 / integral W*tau*(z-L1/L0)^2 > 0.",
+  "passivity": "The two-current moment matrix is a positive sum of rank-one matrices divided by 1+s*tau. Its Hermitian part is positive for Re(s)>=0; the zero-current Schur complement retains nonnegative real part.",
+  "scope": "Identities for this elastic diagonal collision model; no certification of its plasma approximation."
+}

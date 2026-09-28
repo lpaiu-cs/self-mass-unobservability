@@ -1,0 +1,20 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "d13ca7c",
+  "digits": 60,
+  "absolute_gate": "2e-11",
+  "bindings": {
+    "verification/gr_response_product_convolution.py": "359427b48a0fb9af93ad39166a73ca42d1bc5ed9ebc093000946c6f3757cc9ab",
+    "verification/gr_finite_wavenumber_response.py": "2dfed0e32d87a35988be8d36cec0d4aa3b62e29bec181a0322cda0527d13486e",
+    "outputs/direct-eos-gr33/gr-response-product-reference/plan.json": "18447305b34abde61932bd939d0f8c6df96e368467ee73cb67363aaed64bccc6",
+    "outputs/direct-eos-gr33/gr-response-product-reference/manifest.json": "e0737c25164ebcbb9add4c4374b12fbadb723dd070e655de2dc3ebd51c9ab087",
+    "outputs/direct-eos-gr33/gr-response-product-reference/result.json": "fb39627835b1ba0a04afc2fa4a3202760205bbf757977665609035619426fbb1",
+    "outputs/direct-eos-gr33/gr-response-product-defined/manifest.json": "6f7c5acf467257e5de1f82220157ba26bf52c840be82a40f4cd6e64565f9626c",
+    "outputs/direct-eos-gr33/gr-response-product-defined/result.json": "a3945fad83bb48e6cd535db68ffe7e2c4e6b9a197dd0538c1196de14ebfd2598",
+    "outputs/direct-eos-gr33/gr-polarization-thermodynamics/states.npz": "a91f70b8277d7984c7954d277b01956dd31dfd4c12b57989fed8b7a2fccceb69",
+    "outputs/direct-eos-gr33/gr-logarithmic-response/inputs.npz": "c9695e054b3ef6bf11b63a24909d7a4e549429d65a72bea4d9ad982b76afda53",
+    "verification/gr_polarization_thermodynamics.py": "9fa8573f636f7ee896bce66a6f85b22448dc6e54512fcec7a71cea23d367d1b0"
+  },
+  "target": "Independently integrate the source cold response times minus the t derivative of each fixed-p occupation jet. Replay the four failed scalar calls with quad_vec full_output to expose convergence status. Preserve every earlier result and threshold.",
+  "scope": "High-precision finite numerical controls of all 36 points and six components. These do not create a new rigorous quadrature certificate or repair the old thermodynamic table."
+}

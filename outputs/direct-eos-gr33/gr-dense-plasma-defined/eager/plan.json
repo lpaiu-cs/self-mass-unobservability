@@ -1,0 +1,21 @@
+{
+  "classification": "Counterexample candidate",
+  "bindings": {
+    "verification/gr_dense_plasma_eager.py": "f6268a29e6360047a673c8837f382eae82239b14be38841da9d02298ffef76d0",
+    "outputs/direct-eos-gr33/gr-dense-plasma-defined/plan.json": "ccb21bb6311d31d2e510e7132d3c6725fa77277de506439b1f1d07b2edea64be",
+    "outputs/direct-eos-gr33/gr-dense-plasma-defined/eager/return-run.py": "4111d81b8c886b4dd12254685bd073529360a37c5940c64080b1d9afa5fdf45b",
+    "outputs/direct-eos-gr33/gr-dense-plasma-defined/eager/screen-run.py": "7b101e8ed3f40cab6d863382034ac529072418f161edc3c0289315722814a86d"
+  },
+  "substitutions": {
+    "return-run.py": {
+      "old": "a=np.load(d.OUT/'stellar-comparison.npz')",
+      "new": "a=dict(np.load(d.OUT/'stellar-comparison.npz'))"
+    },
+    "screen-run.py": {
+      "old": "saved=np.load(d.OUT/'stellar-comparison.npz')",
+      "new": "saved=dict(np.load(d.OUT/'stellar-comparison.npz'))"
+    }
+  },
+  "interrupted": "Read-only return audit PID8298 terminated while repeatedly reopening stellar-comparison.npz; no return-audit result existed. The shell && chain stopped before starting full screening replay. Long-running caloric/GR jobs were untouched.",
+  "reason": "NpzFile indexing was decompressing entire members for every cell. Materialize identical stored members once. Cache only the source-derived constant dictionary in mixture(); no arithmetic, inputs, source fit, state order or acceptance threshold changes."
+}

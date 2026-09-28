@@ -1,0 +1,47 @@
+{
+  "classification": "Counterexample candidate",
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "background": "b=1-2m/r; F=N sqrt(b); m_prime=r^2 b Phi^2/2; (ln F)_prime=2m/(r^2 b).",
+    "metric_constraint": "For nonzero frequency dm=r^2 b Phi dphi and dlambda=r Phi dphi; the homogeneous time-independent mass perturbation is outside this radiative sector.",
+    "radial_equation": "dphi_rr+(2/r+2m/(r^2 b))*dphi_r+(omega^2/F^2+2 Phi^2/b)*dphi=0.",
+    "wave_potential": "u=r dphi; u_rstar_rstar+(omega^2-V)u=0; V=2 N^2(m/r^3-Phi^2).",
+    "scope": "Linear vacuum scalar plus metric perturbation around a static massless-scalar background; no cold-fluid assumption is imported."
+  },
+  "bindings": {
+    "verification/def_radiative_exterior.py": "6354268656ac9b46f656d628b7c64ea9c98f12e137c91a9a5b0c7aec173af315",
+    "verification/gr_scalar_nonlinear_exterior.py": "ae8af4f607fa60690742b08b60ee27b17225fb4fbd73ed854721cdd3a8873de1",
+    "outputs/direct-eos-gr33/def-normalized-charge/result.json": "06c01efacf876fed5f8228f43d4c8d9d8ba4d04e6a98e703bab5e05d055f7d1a",
+    "outputs/direct-eos-gr33/def-normalized-charge/finite.npz": "c67d930459ff9af39956adf9030faf2af2f924d4be4f95310474f3d02371c769",
+    "outputs/direct-eos-gr33/def-resolved-scalar-pulse/companion-benchmark.json": "810073ff038513cb97b36f6a1f58046c6f48952f152b32ddf8a9152157df631a"
+  },
+  "source": "https://arxiv.org/html/1802.07847v2 ; full metric/scalar radial perturbations, vacuum reduction derived independently here. Cold barotropic interior is not imported.",
+  "parameters": "Phase41 finite-background surface mu and scalar flux, plus manufactured mu=0.1, q=0.03 and flat-space controls.",
+  "frequency_set": "0 and first three declared orbital harmonics for the actual surface; 0,0.05,0.2 on manufactured strong vacuum; 0.001,0.2 flat.",
+  "boundary": "Outgoing exp(-i omega t + i omega r_star); r_star(R)=0. Eighth-order asymptotic h with u=exp(i omega r_star)h. Return R*dphi_prime/dphi and asymptotic u/(R*dphi_surface).",
+  "comparisons": [
+    {
+      "extent": 40,
+      "tol": 2e-12
+    },
+    {
+      "extent": 80,
+      "tol": 2e-13
+    }
+  ],
+  "gates": {
+    "absolute_impedance_and_transfer_difference": 2e-09,
+    "current_relative": 2e-08,
+    "static_exact": 2e-10,
+    "flat_exact": 2e-10
+  },
+  "budget": {
+    "hard_timeout_seconds": 90,
+    "maximum_frequency_solves": 18,
+    "native_calls": 0,
+    "new_fluid_steps": 0,
+    "automatic_expansion": false
+  },
+  "decision": "Install dynamic radiative boundary only if static Just, flat outgoing, conserved flux and outer/tolerance comparisons pass. No full dynamic-charge completion without coupled fluid, background and benchmark response."
+}

@@ -1,0 +1,1221 @@
+PAGE 1
+arXiv:1704.06502v1  [physics.plasm-ph]  21 Apr 2017
+Free-energy functional of the Debye-H¨ uckel model of two-c omponent plasmas
+T. Blenski 1∗ and R. Piron 2
+1Laboratoire “Interactions, Dynamiques et Lasers”,
+UMR 9222, CEA-CNRS-Universit´ e Paris-Saclay,
+Centre d’ ´Etudes de Saclay, F-91191 Gif-sur-Yvette Cedex, France. an d
+2CEA, DAM, DIF, F-91297 Arpajon, France.
+(Dated: August 17, 2018)
+We present a generalization of the Debye-H¨ uckel free-energy-density functional of simple ﬂuids to
+the case of two-component systems with arbitrary interacti on potentials. It allows one to obtain the
+two-component Debye-H¨ uckel integral equations through its minimization with respect to the pair
+correlation functions, leads to the correct form of the inte rnal energy density, and fulﬁlls the virial
+theorem. It is based on our previous idea, proposed for the on e-component Debye-H¨ uckel approach,
+and which was published recently [1]. We use the Debye-Kirkw ood charging method in the same
+way as in [1], in order to build an expression of the free-ener gy density functional. Main properties
+of the two-component Debye-H¨ uckel free energy are present ed and discussed, including the virial
+theorem in the case of long-range interaction potentials.
+PACS numbers: 05.20.Jj
+I. INTRODUCTION
+The Debye-H¨ uckel (DH) model was introduced in the
+theory of electrolytes [2]. It is the linearized version
+of the Non-Linear Debye-H¨ uckel (NLDH) or Poisson-
+Boltzmann model. Both the DH and NLDH models can
+be in principle extended to arbitrary interaction poten-
+tials, with many applications in the physics of classical
+ﬂuids, charged or not.
+An important feature of the one-component DH model
+is the mean-ﬁeld screening of the interaction potential,
+that results in the decay of the correlation function, even
+when the interaction potential has a Coulomb tail. This
+property is preserved in the two-component DH theory
+of plasma or charged mixtures. In general the DH model
+is valid in the low-coupling limit, i.e. when the interac-
+tion energy is small compared to the kinetic energy of
+particles. The DH theory is a relatively simple mean-
+ﬁeld approach to classical ﬂuids in comparison to the
+Hyper-Netted Chain (HNC) [3] or Percus-Yevick [4] mod-
+els, which account for part of the correlations. However,
+several more involved theoretical studies also proceed by
+introducing corrections, using the low-coupling DH limit
+as a starting point (see, for instance, [5, 6]). Recently it
+was also shown that, in the DH model, the energy and
+virial ”routes” are thermodynamically consistent, for any
+potential [7]. For these reasons, the two-component DH
+model can be of interest not only for the plasma physics
+community (see, for instance, [8, 9]) but also in the
+physics of electrolytes (see, for example [10, 11]). In the
+case of a long-range attractive potential, the linearization
+performed in the DH model allows one to circumvent the
+“classical catastrophe” of collapsing particles. To some
+∗Corresponding author
+Electronic address: thomas.blenski@cea.fr
+extent, this explains why this model is so commonly used
+in plasma physics as well as in the physics of electrolytes.
+Our interest in the DH models stems from our research
+on density eﬀects in the equation of state and in radiative
+properties of dense plasmas. We aim to describe these
+eﬀects using approximate but fully variational models of
+atoms in plasmas. The ion and free electron correlations
+and their impact on the atomic structure and dynam-
+ics should thus be taken into account while preserving
+the variational character of the approach. Up to now
+the most used models are still essentially based on the
+ion-in-cell picture [12–14]. Some progress towards a vari-
+ational formulation of quantum atom-in-plasma models
+was achieved [15–22]. However, it relies on a very sim-
+ple hypothesis on ion-ion correlations. Attempts to in-
+clude ion correlations into atom-in-plasma models were
+also proposed (see, for instance, [23–26]), but do not stem
+from a fully variational derivation.
+The DH model is a natural candidate tool in order
+to include plasma ions and electron eﬀects for relatively
+weakly coupled plasma. The results presented in this
+paper extend the variational free-energy density formula
+presented in [1] to the two-component case. The present
+DH theory can also be useful to construct variational
+approaches to models of two-component ﬂuids using ex-
+pressions of the free-energy density as a functional of the
+pair correlation functions. In the atom-in-plasma models
+such a variational expression can be used in a more gen-
+eral theory that also includes the ion electronic structure.
+A two-component free-energy density functional is
+available in the HNC theory [27, 28]. However, as it was
+the case in the well-known one-component DH theory,
+an expression of the free-energy density as a functional
+of the pair correlation functions has not been yet pro-
+posed. The purpose of this paper is to present a brief
+derivation of such an expression in the DH approxima-
+tion, which can be seen as the DH equivalent to the HNC
+free-energy density functional of Lado [27] (see also [28]).
+PAGE 2
+2
+II. DEBYE-H ¨UCKEL INTEGRAL EQUATIONS
+OF A TWO-COMPONENT FLUID
+Let us consider a two-component homogeneous ﬂuid
+at equilibrium, at a temperature T = 1 / (kBβ ). In the
+case of plasmas or charged liquids the ﬂuid neutrality
+results in the charge balance ∑
+j ̺j zj = 0 where ̺j is the
+average particle density and zj the charge of the j specie,
+respectively. The particles interact through potentials
+uij(r). Using the so called “Percus trick” (see [29], also
+[30]) we obtain the following identity :
+̺(1:j) {{ϕ n(r′) = uin(r′)}; r}
+̺j
+= gij(r) (1)
+where the gij(r) are the pair distribution functions of the
+homogeneous ﬂuid, for the species i and j, and ̺(1:j)(r)
+is the j-specie 1-body reduced density matrix for a non-
+homogeneous ﬂuid, with an external potential ϕ n(r′) act-
+ing on each specie n.
+The DH model is obtained from the static linear re-
+sponse of the density to the external potential:
+̺(1:j) {uin(r′′); r} ≈ ̺j
++
+∑
+n
+∫
+d3r′
+{
+δ̺(1:j) {{ϕ n(r′′)}; r}
+δϕ n(r′)
+⏐
+⏐
+⏐
+⏐
+{ϕn(r′)=0}
+uin(r′)
+}
+(2)
+The functional derivatives of the density are (Yvon equa-
+tions):
+1
+β
+δ̺(1:j)(r)
+δϕ j(r′) = − ̺(2:j) (r, r′) + ̺(1:j) (r) ̺(1:j) (r′)
+− ̺(1:j) (r′) δ3(r − r′) (3)
+1
+β
+δ̺(1:j)(r)
+δϕ n̸=j (r′) = − ̺(1:j,1:n) (r, r′) + ̺(1:j) (r) ̺(1:n) (r′)
+(4)
+From the above equations and the deﬁnition (see, for in-
+stance, [30]) of the correlation functions hij(r) + 1 =
+gij(r) one obtains the equations of the Debye-H¨ uckel
+model :
+hij(r) = −βu ij(r) − β
+∑
+n
+̺n
+∫
+d3r′ {uin(r′)hin(|r − r′|)}
+(5)
+For the purpose of future considerations it is useful to
+write the DH equations in the following symmetrical
+form:
+h11(r) = −βu 11(r) − β
+∫
+d3r′ {̺1u11(r′)h11(|r − r′|)
+−̺2u12(r′)h12(|r − r′|)} (6)
+h22(r) = −βu 22(r) − β
+∫
+d3r′ {̺2u22(r′)h22(|r − r′|)
+−̺1u12(r′)h12(|r − r′|)} (7)
+h12(r) = − βu 12(r)
+− β
+2
+∫
+d3r′ {u12(|r − r′|) (̺1h11(r′) + ̺2h22(r′))
++h12(|r − r′|) (̺1u11(r′) + ̺2u22(r′))} (8)
+We deﬁne the Fourier transform Fk of a function F (r)
+as Fk = ∫ d3r
+{
+F (r)eik.r}
+. The DH equations have a
+simple form in the Fourier space:
+h11;k + ̺1h11;k βu 11;k + ̺2h12;k βu 12;k = −βu 11;k (9)
+h22;k + ̺1h12;k βu 12;k + ̺2h22;k βu 22;k = −βu 22;k (10)
+h12;k + ̺1h11;k βu 12;k + ̺2h12;k βu 22;k = −βu 12;k (11)
+The solutions of these equations are:
+heq,11;k = − 1
+̺1
++ 1
+̺1β
+β + β 2̺2u22;k
+Dk
+(12)
+heq,22;k = − 1
+̺2
++ 1
+̺2β
+β + β 2̺1u11;k
+Dk
+(13)
+heq,12;k = − 1
+̺1̺2β
+β 2̺1̺2u12;k
+Dk
+(14)
+where we have deﬁned:
+Dk = 1 +β (̺1u11;k + ̺2u22;k)+ β 2̺1̺2(u11;ku22;k − u2
+12;k)
+(15)
+III. EXPRESSION FOR A FREE-ENERGY
+FUNCTIONAL OF A TWO-COMPONENT FLUID
+We are looking for a functional of trial correlations
+functions hij(r) which, when minimized with respect to
+these functions, gives the DH equations and, at the DH
+equilibrium, has the value of the free-energy excess due
+to the interactions. As in [1, 27, 31], we use the charging
+procedure due to Debye and Kirkwood [32]. The charging
+parameter ξ allows one to switch on the interaction po-
+tentials from zero to their actual values uξ
+ij(r) = ξ uij(r).
+For an exact interacting system one gets from the grand
+canonical statistical sum (see, for instance, [30]) the fol-
+lowing exact expression for the free-energy excess per unit
+volume:
+Aξ
+eq {{̺i}, β, {uij(r)}}}
+V
+=
+∫ ξ
+0
+dξ′
+ξ′
+∫
+d3r
+
+
+
+1
+2
+∑
+i,j
+̺i̺jhξ′
+eq,ij(r)uξ′
+ij (r)
+
+
+ (16)
+We require, as in [1, 27, 31], that in our approximate
+two-component DH theory, the searched free-energy den-
+sity functional gives, at the equilibrium, the value of
+Eq. (16), with DH equilibrium functions heq,ij(r) (or
+their equivalent forms in the Fourier space). Moreover,
+as in [1], we postulate that the searched functional, which
+depends on arbitrary trial functions hij;k, can be written
+as follows in the Fourier space:
+PAGE 3
+3
+A {{̺i}, β, {uij(r)}, {hij(r)}}
+V =
+∫ d3k
+(2π )3
+{
+fk
+2
+[
+̺2
+1
+(
+h2
+11;k
+2 + βu 11;kh11;k + ̺1βu 11;k
+h2
+11;k
+2 + ̺2βu 12;kh11;kh12;k
+)
++̺2
+2
+(
+h2
+22;k
+2 + βu 22;kh22;k + ̺2βu 22;k
+h2
+22;k
+2 + ̺1βu 12;kh22;kh12;k
+)
++2̺1̺2
+(
+h2
+12;k
+2 + βu 12;kh12;k +
+h2
+12;k
+2
+1
+2 (̺1βu 11;k + ̺2βu 22;k)
+)]}
+(17)
+where the function fk depends on all ̺i, {uij;k} and on β ,
+but not on the {hij;k}. It is easy to check that the func-
+tional derivatives of A {{̺i}, β, {uij(r)}, {hij(r)}} with
+respect to the {hij;k}, at ﬁxed ̺i and {uij;k}, lead to the
+DH Eqs. (9), (10) and (11).
+We postulate that such a function fk exists and that
+the functional of Eq. (17), taken at equilibrium, has the
+value given in Eq (16). A relatively simple way to ob-
+tain fk, proving also its existence, is to use the solution
+of the DH equations in the Fourier space: hξ
+eq,ij;k. Us-
+ing Eqs. (12),(13),(14) and (15), we can recast the free
+energy-density excess of Eq. (16) as follows:
+Aξ
+eq {{̺i}, β, {uij}}}
+V
+=
+∫ ξ
+0
+dξ′
+ξ′
+∫ d3k
+(2π )3
+
+
+
+1
+2
+∑
+i,j
+̺i ̺ihξ′
+eq,ij;kuξ′
+ij;k
+
+
+ (18)
+=
+∫ ξ
+0
+dξ′
+ξ′
+∫ d3k
+(2π )3
+
+
+
+1
+2β
+
+ −β
+(
+̺1uξ′
+11;k + ̺2uξ′
+22;k
+)
++
+β
+(
+̺1uξ′
+11;k + ̺2uξ′
+22;k
+)
++ 2β̺ 1̺2
+(
+uξ′
+11;kuξ′
+22;k − uξ′ 2
+22;k
+)
+Dξ′
+k
+
+
+
+
+
+(19)
+=
+∫ ξ
+0
+dξ′
+ξ′
+∫ d3k
+(2π )3
+{ 1
+2β
+[
+−ξ′ ∂
+∂ξ ′
+[
+β
+(
+̺1uξ′
+11;k + ̺2uξ′
+22;k
+)
+− ln
+(
+Dξ′
+k
+)]]}
+(20)
+Changing the order of the integrations we immediately
+get:
+Aξ
+eq {{̺i}, β, {uij}}}
+V
+=
+∫ d3k
+(2π )3
+{ 1
+2β
+[
+ln
+(
+Dξ
+k
+)
+−
+[
+β
+(
+̺1uξ
+11;k + ̺2uξ
+22;k
+)]]}
+(21)
+On the other hand, using the DH equations (9),(10) and
+(11) we can also calculate the value of the excess free-
+energy density at the equilibrium from Eq. (17). We
+obtain:
+Aξ
+eq {{̺i}, β, {uij}}}
+V
+=
+∫ d3k
+(2π )3
+{fk
+2
+[ ̺12
+2 hξ
+eq,11;kβu ξ
+11;k + ̺1̺2hξ
+eq,12;kβu ξ
+12;k
++ ̺22
+2 hξ
+eq,22;kβu ξ
+22;k
+]}
+(22)
+Substituting the values of the equilibrium correlation
+functions given in Eqs. (9), (10), (11) and (15), we get:
+Aξ
+eq {{̺i}, β, {uij}}}
+V =
+∫ d3k
+(2π )3
+{
+fk
+2
+[(
+1 − 1
+Dξ
+k
+)
+− β
+2
+(
+̺1uξ
+11;k + ̺2uξ
+22;k
+)(
+1 + 1
+Dξ
+k
+)]}
+(23)
+Comparing Eqs. (23) and (21) we get the searched ex-
+pression for the function fk:
+fk =
+ln
+(
+Dξ
+k
+)
+−
+[
+β
+(
+̺1uξ
+11;k + ̺2uξ
+22;k
+)]
+β
+[(
+1 − 1
+Dξ
+k
+)
+− β
+2
+(
+̺1uξ
+11;k + ̺2uξ
+22;k
+) (
+1 + 1
+Dξ
+k
+)]
+(24)
+The expression for the free-energy density functional
+Eq. (17) with the calculated expression for the function
+fk, Eq. (24), is the main result of the present paper.
+It is interesting to check whether we can recover from
+the obtained free-energy density functional Eq. (17) the
+expression for the free-energy density functional of the
+one-component DH system of [1]. Indeed, if we suppress
+the interaction between the two diﬀerent species: u12;k =
+0 (which also implies heq,12;k = 0), and use Eq. (17) with
+PAGE 4
+4
+Eq. (24), we get:
+Aξ {{̺i}, β, {uii}, {hii}}}
+V
+=
+∫ d3k
+(2π )3
+
+
+
+1
+β 2
+∑
+i
+(
+ln
+(
+1 + β̺ iuξ
+ii;k
+)
+− β̺ iuξ
+ii;k
+)
+∑
+i ̺2
+i heq,ii;kuii;k
+×
+[ ∑
+i
+̺2
+i
+(
+h2
+ii;k
+2 + hii;kβu ii;k + ̺i
+hii;k
+2 βu ii;k
+)] 
+
+
+(25)
+where
+heq,ii;k = −βu ii;k
+1 + ̺iβu ii;k
+(26)
+The obtained functional Eq. (25), when minimized
+with respect to the trial functions hii;k, gives the one-
+component DH equation for the system i. If we sub-
+stitute into Eq. (25) the equilibrium values of Eq. (26),
+then the functional takes the value of the sum of the free
+energies of the two non-interacting systems 1 and 2.
+The postulated formula Eq. (16) is equivalent to the
+following formulas for the functional derivatives of the
+excess free-energy density functional with respect to the
+interaction potentials:
+δ
+δu11(r)
+A {{̺i}, β, {uij(r)}, {hij(r)}}
+V
+⏐
+⏐
+⏐
+⏐
+eq
+= ̺2
+1
+2 heq,11(r)
+(27)
+δ
+δu22(r)
+A {{̺i}, β, {uij(r)}, {hij(r)}}
+V
+⏐
+⏐
+⏐
+⏐
+eq
+= ̺2
+2
+2 heq,22(r)
+(28)
+δ
+δu12(r)
+A {{̺i}, β, {uij(r)}, {hij(r)}}
+V
+⏐
+⏐
+⏐
+⏐
+eq
+= ̺1̺2heq,12(r)
+(29)
+where the |eq denote values taken for {hij(r) = heq,ij(r)}.
+Eqs. (27),(28),(29) are exact for an exact two-component
+system (see, for instance, [33]). In our approximate DH
+model they result from Eq. (16). In order to prove it, we
+rewrite Eq. (16) in a slightly diﬀerent way, obtaining:
+Aξ
+eq {{̺i}, β, {uij(r)}}
+V
+=
+∫ ξ
+0
+dξ′
+ξ′
+∫
+d3r
+
+
+
+1
+2
+∑
+i,j
+̺i̺jhξ′
+eq,ij(r)uξ′
+ij (r)
+
+
+
+=
+∫ ξ
+0
+dξ′
+∫
+d3r
+
+
+
+1
+2
+∑
+i,j
+̺i̺jhξ′
+eq,ij(r)
+∂u ξ′
+ij(r)
+∂ξ ′
+
+
+ (30)
+Let us consider the functional
+Aξ{{̺i}, β, {uξ
+ij(r)}, {hij(r)}}/V as given by Eq. (17),
+where we put uξ
+ij(r) instead of uij(r). As stems from
+Eq. (24), the function fk depends on ξ only via the
+potentials uξ
+ij(r). Moreover, the functional derivatives of
+Aξ{{̺i}, β, {uξ
+ij(r)}, {hij(r)}}/V with respect to hij(r)
+are equal to zero at the DH equilibrium. One can thus
+write formally:
+Aξ
+eq {{̺i}, β, {uij(r)}}
+V
+= A{{̺i}, β, {uξ
+ij(r)}, {hij(r)}}
+V
+⏐
+⏐
+⏐
+⏐
+⏐
+eq,ξ
+=
+∫ ξ
+0
+dξ′
+
+
+
+d
+dξ′
+A{{̺i}, β, {uξ′
+ij(r)}, {hij(r)}}
+V
+⏐
+⏐
+⏐
+⏐
+⏐
+eq,ξ′
+
+
+
+=
+∫ ξ
+0
+dξ′
+∫
+d3r
+
+
+
+∂
+∂u 11
+A{{̺i}, β, {uξ′
+ij(r)}, {hij(r)}}
+V
+⏐
+⏐
+⏐
+⏐
+⏐
+eq,ξ′
+∂u ξ′
+11(r)
+∂ξ ′
++ ∂
+∂u 12
+A{{̺i}, β, {uξ′
+ij(r)}, {hij(r)}}
+V
+⏐
+⏐
+⏐
+⏐
+⏐
+eq,ξ′
+∂u ξ′
+12(r)
+∂ξ ′
++ ∂
+∂u 22
+A{{̺i}, β, {uξ′
+ij(r)}, {hij(r)}}
+V
+⏐
+⏐
+⏐
+⏐
+⏐
+eq,ξ′
+∂u ξ′
+22(r)
+∂ξ ′
+
+
+
+(31)
+where the |eq,ξ denote values taken for {hij(r) =
+hξ
+eq,ij(r)}. Comparing Eqs. (30) and (31) and taking into
+account that they are valid for a large class of indepen-
+dent potentials uξ
+ij(r), we get Eqs. (27), (28), (29). These
+equations can be also veriﬁed directly using the explicit
+form of Eqs. (17) and Eq. (24) but the necessary algebra
+is tedious.
+IV. INTERNAL ENERGY AND VIRIAL
+THEOREM IN THE CASE OF
+TWO-COMPONENT DH THEOR Y
+The internal-energy density, as deﬁned in thermody-
+namics is:
+U ξ
+eq
+V = ∂
+∂β
+(
+βA ξ
+eq
+V
+)
+= ∂
+∂β
+(βA ξ
+V
+)⏐
+⏐
+⏐
+⏐
+eq
+(32)
+As stems from Eqs. (17) and (24), βA ξ/V is a functional
+of {hij(r)}, {̺i}, and of the functions {βξu ij(r)}. As a
+consequence, we can write:
+∂
+∂β
+(βA ξ
+V
+)
+= ξ ∂
+∂ξ
+(Aξ
+V
+)
+(33)
+PAGE 5
+5
+We then have, in virtue of Eq. (16):
+U ξ
+eq{{̺i}, β, {uij(r)}}
+V
+=
+∫
+d3r
+
+
+
+1
+2
+∑
+i,j
+̺i̺jhξ
+eq,ij (r)uξ
+ij(r)
+
+
+ (34)
+which corresponds to the exact expression of the internal-
+energy density, with hξ
+eq,ij(r) taken in the DH approxi-
+mation to the equilibrium correlation functions.
+The virial theorem for the exact two-component clas-
+sical ﬂuid at equilibrium can be derived from the statisti-
+cal sum in the grand canonical ensemble formalism. We
+consider this ensemble in a ﬁnite volume and the virial
+pressure is calculated from the exact thermodynamic for-
+mula, following the technique used in [34], Sec. 30. The
+obtained expression for the total thermodynamic pres-
+sure is P = P0 +Pv, where P0 = (̺1 + ̺2) /β corresponds
+to the ideal gas formula, while:
+Pv {{̺i}, β, {uij}}}
+= − 1
+6
+∫
+d3r
+
+
+
+∑
+i,j
+̺i̺jgeq,ij(r) r ∂
+∂r (uij(r))
+
+
+ (35)
+is the Clausius virial pressure. We recall that geq,ij(r) =
+1 + heq,ij(r). Since we have:
+∫
+d3r
+{
+r d
+dr uij(r)
+}
+= lim
+k→ 0
+(
+−3uij;k − k ∂u ij;k
+∂k
+)
+(36)
+we get in the case of interaction potentials having
+Coulomb tails:
+∫
+d3r
+
+
+
+∑
+i,j
+̺i̺j
+2 r ∂u ij(r)
+∂r
+
+
+
+= − lim
+k→ 0
+∑
+i,j
+4π̺ i̺jzizj
+2k2 = − lim
+k→ 0
+2π
+k2
+
+ ∑
+j
+̺jzj
+
+
+2
+= 0
+(37)
+due to the overall neutrality ∑
+j ̺j zj = 0. Thus in the
+case of potentials having Coulomb tails (plasmas or mix-
+tures of charged liquids), the virial pressure becomes:
+Pv {{̺i}, β, {uij}}}
+= − 1
+6
+∫
+d3r
+
+
+
+∑
+i,j
+̺i̺jheq,ij(r)r ∂u ij (r)
+∂r
+
+
+ (38)
+We substitute the solution to the DH Eqs. (9),(10) and
+(11) into Eq. (38), written in the the Fourier space, and
+make use of a relation similar to Eq. (37). We repeat the
+steps analogous to Eqs. (19), (20) and (20) and get:
+Pv{{̺i}, β, {uij}} =
+∫ d3k
+(2π )3
+
+
+
+∑
+i,j
+̺i̺j
+2 heq,ij;k βu ξ
+ij;k
+
+
+
++ 4π
+3
+∫ ∞
+0
+dk
+(2π )3
+{ k3
+2β
+∂
+∂k [ln (Dk)
+−β (̺1u11;k + ̺2u22;k)]
+}
+(39)
+The ﬁrst term in Eq. (39) can be identiﬁed from Eq. (34)
+as the internal-energy density Ueq{{̺i}, β, {uij(r)}}/V ,
+calculated in the Fourier space. The second term in
+Eq. (39) can be integrated by parts (one may check that
+the integrand has correct behaviors at k = 0 and at
+k − → ∞). We then get:
+Pv{{̺i}, β, {uij}}
+= Ueq{{̺i}, β, {uij(r)}}
+V
+− 1
+2β
+∫ d3k
+(2π )3 {ln (Dk) − β (̺1u11,k + ̺2u22,k)} (40)
+Finally, using Eq. (21) with ξ = 1, we obtain:
+Pv{{̺i}, β, {uij}}
+= Ueq{{̺i}, β, {uij(r)}}
+V − Aeq{{̺i}, β, {uij(r)}}
+V
+(41)
+In order to calculate the pressure from the thermody-
+namic deﬁnition, let us consider a volume in which there
+is one particle of the specie “1”: V1 = 1/̺ 1. Using the no-
+tion of this volume, we can calculate the thermodynamic
+pressure of the ﬂuid as:
+Pth{{̺i}, β, {uij}}
+= − d
+dV1
+[( Aeq{{̺i}, β, {uij(r)}}
+V
+)
+V1
+]
+= −V1
+d
+dV1
+[(
+− Aeq{{̺i}, β, {uij(r)}}
+V
+)]
+− Aeq{{̺i}, β, {uij(r)}}
+V (42)
+However, in the volume V1 = 1/̺ 1, there are also parti-
+cles of the specie “2”. Then, changing ̺1 by an inﬁnitesi-
+mal value d̺1, we also change ̺2. Since the change of the
+density ̺1 should not violate the overall neutrality of the
+plasma or charged liquids, we have to fulﬁll the relation
+z1̺1 + z2̺2 = 0, where the charges z1, z 2 are related to
+the asymptotic behavior of the interaction potentials at
+large distances r: u11(r) ∼
+= z2
+1/r , u12(r) ∼
+= z1z2/r and
+u22(r) ∼
+= z2
+2/r . For this reason, the changes in ̺1 and ̺2
+are not independent and we have:
+d̺2
+d̺1
+= ̺1
+̺2
+(43)
+PAGE 6
+6
+Then, the ﬁrst term of the RHS of Eq. (42) can be rewrit-
+ten as:
+−V1
+d
+dV1
+[(
+− Aeq{{̺i}, β, {uij(r)}}
+V
+)]
+= ̺1
+d
+d̺1
+[( Aeq{{̺i}, β, {uij(r)}}
+V
+)]
+(44)
+Denoting by P (1)
+th {{̺i}, β, {uij}} the ﬁrst term of the last
+line in Eq. (42) we thus have :
+P (1)
+th {{̺i}, β, {uij}} = ̺1
+∂
+∂̺ 1
+(Aeq{{̺i}, β, {uij(r)}}
+V
+)
++ ̺2
+∂
+∂̺ 2
+(Aeq{{̺i}, β, {uij(r)}}
+V
+)
+(45)
+However, as stems from Eq. (21), βA eq/V depends on
+the {̺i} only through the variables {β̺ i}, i.e. we have
+βA eq/V = βA eq{{β̺ i}, {uij(r)}}/V . For that reason we
+can write:
+P (1)
+th {{̺i}, β, {uij}}
+= ̺1
+∂
+∂ (β̺ 1)
+(βA eq
+V
+)
++ ̺2
+∂
+∂ (β̺ 2)
+(βA eq
+V
+)
+= ∂ (β̺ 1)
+β
+∂
+∂ (β̺ 1)
+(βA eq
+V
+)
++ ∂ (β̺ 2)
+β
+∂
+∂ (β̺ 2)
+(βA eq
+V
+)
+= ∂
+∂β
+(βA eq
+V
+)
+= Ueq{{̺i}, β, {uij}}
+V (46)
+Eqs. (42),(45) and (46) conﬁrm the equivalence between
+the thermodynamic deﬁnition of pressure and the virial
+pressure formula in the case of the two-component DH
+theory based on the free-energy density functional pro-
+posed in the present paper.
+V. CONCLUSION
+Our Eqs. (17) and (24) give an explicit expression of
+the free-energy density functional in the Debye-H¨ uckel
+(DH) approximation for two-component ﬂuids, extending
+our previous results of [1]. These expressions allows one
+to obtain the DH equations from a minimization proce-
+dure with respect to the pair correlation functions. In the
+two-component DH case, as in the corresponding HNC
+case of [27, 28], requiring that the exact charging rela-
+tion is respected in the approximate model allows one to
+deﬁne a free-energy density functional that yields the cor-
+rect expression for the internal-energy density and fulﬁlls
+the virial theorem in the case of long-range potentials.
+Acknowledgments
+One of the authors (TB) acknowledges funding from
+the EURATOM research and training program 2014–
+2018 in the framework of the ToIFE project of the EURO-
+fusion Consortium under grant agreement No. 633053.
+[1] R. Piron and T. Blenski. Free-energy functional of
+the debye-h¨ uckel model of simple ﬂuids. Phys. Rev. E ,
+94:062128, Dec 2016.
+[2] P. Debye and E. H¨ uckel. Zur Theorie des Elektrolyte.
+I. Gefrierpunktserniedrigung und verwandte Erscheinun-
+gen. Phys. Z. , 24:185–206, 1923.
+[3] T. Morita. Theory of Classical Fluids: Hyper-Netted
+Chain Approximation, I. Prog. Theor. Phys., 20:920–938,
+1958.
+[4] J. K. Percus and G. J. Yevick. Analysis of Classical Sta-
+tistical Mechanics by Means of Collective Coordinates.
+Phys. Rev. , 110:1–13, 1958.
+[5] R. Abe. Giant Cluster Expansion Theory and Its Appli-
+cation to High Temperature Plasma. Prog. Theor. Phys.,
+22:213–226, 1959.
+[6] H. E. DeWitt. Classical Theory of the Pair Distribution
+Function of Plasmas. Phys. Rev. , 140:A466–A470, 1965.
+[7] A. Santos, R. Fantoni, and A. Giacometti. Thermody-
+namic consistency of energy and virial routes: An ex-
+act proof within the linearized Debye-H¨ uckel theory. J.
+Chem. Phys. , 131:181105, 2009.
+[8] R. E. Kidder and H. E. DeWitt. Application of a modi-
+ﬁed Debye-H¨ uckel theory to fully ionized gases. J. Nucl.
+Energy, Part C: Plasma Physics , 2:218–223, 1961.
+[9] P. Vieillefosse. Improved Debye H¨ uckel theory for one-
+and multicomponent plasmas. J. Physique , 42:723–733,
+1981.
+[10] S. Nordholm. Simple Analysis of the thermodynamic
+properties of the one-component plasma. Chem. Phys.
+Lett., 105:302–306, 1984.
+[11] R. Penfold, S. Nordholm, B. J¨ onsson, and C. E. Wood-
+ward. A simple analysis of ion-ion correlation in polyelec-
+trolyte solutions. J. Chem. Phys. , 92:1915–1922, 1990.
+[12] R. P. Feynman, N. Metropolis, and E. Teller. Equation
+of State of Elements Based on the Generalized Fermi-
+Thomas Theory. Phys. Rev. , 75(10):1561–1573, 1949.
+[13] B. F. Rozsnyai. Relativistic Hartree-Fock-Slater Cal cu-
+lations for Arbitrary Temperature and Matter Density.
+Phys. Rev. A , 5(3):1137–1149, 1972.
+[14] D. A. Liberman. Self-consistent ﬁeld model for condens ed
+matter. Phys. Rev. B , 20(12):4981–4989, 1979.
+[15] T. Blenski and B. Cichocki. Variational theory of
+average-atom and superconﬁgurations in quantum plas-
+mas. Phys. Rev. E , 75:056402, 2007.
+[16] T. Blenski and B. Cichocki. Variational approach
+to the average-atom-in-jellium and superconﬁgurations-
+in-jellium models with all electrons treated quantum-
+mechanically. High Energy Density Physics , 3:34–47,
+2007.
+[17] R. Piron and T. Blenski. Variational-average-atom-in -
+PAGE 7
+7
+quantum-plasmas (V AAQP) code and virial theorem:
+Equation-of-state and shock-Hugoniot calculations for
+warm dense Al, Fe, Cu, and Pb. Phys. Rev. E , 83:026403,
+Feb 2011.
+[18] R. Piron and T. Blenski. Variational Average-Atom in
+Quantum Plasmas (V AAQP) – Recent progress, virial
+theorem and applications to the equation-of-state of
+warm dense Be. High Energy Density Physics , 7(4):346–
+352, 2011.
+[19] T. Blenski, R. Piron, C. Caizergues, and B. Cichocki.
+Models of atoms in plasmas based on common formal-
+ism for bound and free electrons. High Energy Density
+Physics, 9:687–695, 2013.
+[20] R. Piron and T. Blenski. Variational Average-Atom in
+Quantum Plasmas (V AAQP) – Application to radiative
+properties. High Energy Density Physics , 9:702 – 710,
+2013.
+[21] C. Caizergues, T. Blenski, and R. Piron. Linear respons e
+of a variational average atom in plasma: Semi-classical
+model. High Energy Density Physics , 12:12 – 20, 2014.
+[22] C. Caizergues, T. Blenski, and R. Piron. Dynamic linear
+response of atoms in plasmas and photo-absorption cross-
+section in the dipole approximation. High Energy Density
+Physics, 18:7 – 13, 2016.
+[23] Dror Ofer, E. Nardi, and Y. Rosenfeld. Interionic cor-
+relations in plasmas: Thomas-fermi hypernetted-chain
+density-functional theory. Phys. Rev. A , 38:5801–5809,
+1988.
+[24] C. E. Starrett and D. Saumon. Fully variational aver-
+age atom model with ion-ion correlations. Phys. Rev. E ,
+85:026403, Feb 2012.
+[25] C.E. Starrett and D. Saumon. A variational average atom
+approach to closing the quantum Ornstein–Zernike rela-
+tions. High Energy Density Physics , 8:101–104, 2012.
+[26] J. Chihara. Average Atom Model based on Quan-
+tum Hyper-Netted Chain Method. High Energy Density
+Physics, 19:38–47, 2016.
+[27] F. Lado. Perturbation Correction for the Free Energy
+and Structure of Simple Fluid Mixtures. J. Chem. Phys. ,
+59:4830–4835, 1973.
+[28] E. Enciso, F. Lado, M. Lombardero, J. L. F. Abascal, and
+S. Lago. Extension of the optimized RHNC equation to
+multicomponent liquids. J. Chem. Phys. , 87:2249–2255,
+1987.
+[29] J. K. Percus. The equilibrium theory of classical ﬂuids ,
+chapter The pair distribution function in classical statis -
+tical mechanics, pages II–33 – II–170. W. A. Benjamin,
+Inc., New York, 1964.
+[30] J. P. Hansen and I. R. MacDonald. Theory of simple
+liquids. Academic Press, 1976.
+[31] F. Lado. Perturbation Correction for the Free Energy
+and Structure of Simple Fluids. Phys. Rev. A , 8:2548–
+2552, 1973.
+[32] J. G. Kirkwood. Statistical mechanics of ﬂuid mixtures .
+J. Chem. Phys. , 3:300–313, 1935.
+[33] R. Evans. The nature of the liquid-vapour interface and
+other topics in the statistical mechanics of non-uniform,
+classical ﬂuids. Adv. Phys. , 28:143–200, 1979.
+[34] T.L. Hill. Statistical Mechanics: Principles and Selected
+Applications. Dover Books on Physics. McGraw-Hill,
+1956.

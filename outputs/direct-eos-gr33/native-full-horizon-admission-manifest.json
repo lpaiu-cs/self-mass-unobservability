@@ -1,0 +1,161 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "scope": "Frozen admission snapshot plus first actual continuation. Later state requires the live process and runtime results; full-horizon success is not claimed.",
+  "joint_prefix_accepted": true,
+  "full_horizon_admitted": true,
+  "full_horizon_completed": false,
+  "GR_return_closed": false,
+  "final_charge_conclusion": "unadjudicated",
+  "physical_final_charge_solved": false,
+  "full_goal_complete": false,
+  "forecast": {
+    "measured_seconds_per_step": {
+      "64": 26.70556555524999,
+      "128": 21.068659909624998
+    },
+    "measured_per_path_overhead_seconds": 22.51298065900005,
+    "nominal_remaining_seconds": 8169.469076972126,
+    "assumed_range_seconds": [
+      8169.469076972126,
+      16200
+    ],
+    "margin_factor": 1.75,
+    "upper_remaining_seconds": 14416.57088470122,
+    "caveat": "Later Newton, Krylov, assembly and I/O costs are unmeasured extrapolations. Recompute using the maximum observed continued cost for each clock after every completed pair. Starting-from-zero183costs are retained separately; current exact restart needs fewer iterations."
+  },
+  "budgets": {
+    "prepare": 30,
+    "check": 15,
+    "run": 16200
+  },
+  "actual_steps": {
+    "64": {
+      "full": 119,
+      "completed": 8,
+      "remaining": 111
+    },
+    "128": {
+      "full": 231,
+      "completed": 16,
+      "remaining": 215
+    }
+  },
+  "admission_check": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "rows": [
+      {
+        "clock": 64,
+        "angular_port_relative": 1.057481683623226e-17,
+        "local_material_balance": [
+          6.914006307586693e-16,
+          2.7792569995181037e-15,
+          4.872536919542157e-16,
+          2.621196348629166e-17
+        ],
+        "maximum_true_stage": 5.530494375636922e-14,
+        "maximum_true_physical_stage": 4.693600205884594e-15,
+        "maximum_newton_iterations": 3,
+        "actual_completed_steps": 8,
+        "accepted_prefix_preserved": true
+      },
+      {
+        "clock": 128,
+        "angular_port_relative": 2.8688623842841316e-17,
+        "local_material_balance": [
+          3.440653064661889e-15,
+          1.2253595093983728e-13,
+          3.775971858038206e-15,
+          3.315058184411499e-17
+        ],
+        "maximum_true_stage": 4.71935316535276e-14,
+        "maximum_true_physical_stage": 9.405872048556147e-14,
+        "maximum_newton_iterations": 2,
+        "actual_completed_steps": 16,
+        "accepted_prefix_preserved": true
+      }
+    ],
+    "new_physical_steps": 0,
+    "symbolic": {
+      "classification": "Proven",
+      "passed": true,
+      "scope": "Exact Radau moments0..2 only."
+    },
+    "final_charge_conclusion": "unadjudicated"
+  },
+  "sha256": {
+    "verification/complete_full_incident_horizon.py": "016723c5565d09536978be3008e3c63a52f9f6543088c92c4f26333112639e50",
+    "notes/REQUEST185_FULL_INCIDENT_HORIZON_KO.md": "3836c9b16d73371518c686996fc24ec0a4e6bf061bdc2d76dced1b791c32ee49",
+    "docs/model-definition.md": "c9f1aa7379725951381e28cd452b7f7b13910810591578f91598acf0783abbcc",
+    "docs/observable-targets.md": "675c326189d8def3edd133e357b8a6720ccc19965a628f22ed2fd83464d958a8",
+    "docs/adiabatic-limit.md": "1de5463eac4465390e571222fb88a2831fd081f5ec7e887124050fe97c64a222",
+    "docs/nonadiabatic-regime.md": "ff98cbb3159910c8d65e2fb402abaac6084a4093695ddd87f3b0804d84fa96e8",
+    "docs/failure-ledger-dynamic-chi.md": "486f188b7b94f36aadf06996304a1f1eeb2154030ffbaa96795b88e006e18465",
+    "docs/dynamic-charge-completion.md": "f4250bfe6f6e9bfae24730d355f8bcd49d6641bd3d801da9ecc2ef3a3cfd1d9d",
+    "outputs/direct-eos-gr33/native-full-horizon-admission/admission-result.json": "6f550218c7deb0550000a13cf5a93fb86fd27ac5a9fbf2980f77b901d6ebfe0c",
+    "outputs/direct-eos-gr33/native-full-horizon-admission/previous-publication-producer.py": "3aaeaeeaa6fa263a78ef22b30841ba21206ab2c732d75b0f2251b036d874d356",
+    "outputs/direct-eos-gr33/native-full-horizon-admission/publication-helper.py": "f5153c2b02c6b171dcb35b2d7028cf6666b3ac688f9cc6dc8b0e105c1dd881aa",
+    "outputs/direct-eos-gr33/native-full-horizon-admission/publication-producer.py": "b72b93a2aa40daa8d4c92146413a7d6128ff9933901fb1f71a2fd150f9a3d764",
+    "outputs/direct-eos-gr33/native-full-horizon-admission/publication.json": "cd8bad3ad4a6534c8f8e27f443d008e6cd61f4229da3b126e5d3908f390f6769",
+    "outputs/direct-eos-gr33/native-full-horizon-admission/prepared/admission-check.json": "3a180ac6bcce1e8e1c0fbb948635594e5a87cbc45889b97ab93468d4ece50439",
+    "outputs/direct-eos-gr33/native-full-horizon-admission/prepared/check-receipt.json": "413c50561565cfcde11e1cd1b0f1ba0034711a4cd8b1e998b27127971cf5dfeb",
+    "outputs/direct-eos-gr33/native-full-horizon-admission/prepared/plan.json": "06ba893aff3d7b88503abb49eadc17d4fb74c3c1882bb2f1d91cfb3d0561ddc4",
+    "outputs/direct-eos-gr33/native-full-horizon-admission/prepared/prepare-receipt.json": "2310b1bf63f5066b232edbcc36902128406e65bde6099ed929019da369f5e735",
+    "outputs/direct-eos-gr33/native-full-horizon-admission/prepared/reuse.json": "497cc92ecce7d8e9e76dbe61c54818962295d97e00b7911e52368a54afce9a9a",
+    "outputs/direct-eos-gr33/native-full-horizon-admission/prepared/status.json": "c9eea144e4083467b3cf54d6777c6da2e02fe4f6c61d28d6e8f6a60a54ec32a8",
+    "outputs/direct-eos-gr33/native-full-horizon-admission/continuation-publication-producer.py": "61eebdeaa10ae5915541c320bba7bc1027b7d348f5fed6a2fd187d378a85e9a2",
+    "outputs/direct-eos-gr33/native-full-horizon-admission/first-continuation/comparison-02.json": "d451a9bbc898b4a296054fb9741c2467f22882439b749e83232d2db72f5db1af",
+    "outputs/direct-eos-gr33/native-full-horizon-admission/first-continuation/cost-02.json": "254768a52cd098a9ab91ad8ff414fb5a9d34796875521f3defe1d085c819852e",
+    "outputs/direct-eos-gr33/native-full-horizon-admission/first-continuation/launch-producer.ps1": "ddf682ed881a094b4ba7f6e45546dc423333e52a764940546ebc5ed7161e4de1",
+    "outputs/direct-eos-gr33/native-full-horizon-admission/first-continuation/launch.json": "ff3e06b636943c7d7f991075309d9bdc657b75887334822f143a73ef78db0efd"
+  },
+  "document_prefixes": {
+    "docs/model-definition.md": {
+      "bytes": 254796,
+      "sha256": "0247fc8d098a778192361bce04037a9a3b652e902c3fb683f2b288daff4fb834"
+    },
+    "docs/observable-targets.md": {
+      "bytes": 245792,
+      "sha256": "676962678f38d11c2a6c7848f802b11987891248a25713c4867604e648fa92f5"
+    },
+    "docs/adiabatic-limit.md": {
+      "bytes": 240402,
+      "sha256": "e3820e0b19b78169cc29f46c3f14b42d020a3fd683912d16b10bc0819d0d4c51"
+    },
+    "docs/nonadiabatic-regime.md": {
+      "bytes": 248565,
+      "sha256": "759f7e32cac2395a30ca5bc044dd6b7a0bdad5eaec35168244ffb53af4091520"
+    },
+    "docs/failure-ledger-dynamic-chi.md": {
+      "bytes": 285188,
+      "sha256": "2d431eef5e88c9a4b5ee55998d7381cbed602e3af1c8b2b8e27259c51535b596"
+    },
+    "docs/dynamic-charge-completion.md": {
+      "bytes": 113336,
+      "sha256": "b3fc984c5453abc65d2e31a97c921d5a2189f15806587319ae5d150fee9a4e5d"
+    }
+  },
+  "first_continuation": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "same_horizon_seconds": 0.0004293038897410878,
+    "photon_time": [
+      6.124395498927671e-05,
+      0.0003667683728530343,
+      0.0024339055029645226,
+      0.0001168516387306888,
+      9.021033372861071e-05,
+      0.00040448296093090246
+    ],
+    "material_time": [
+      0.0004503573598106308,
+      0.00017271172601026109,
+      0.0003667683728530343,
+      0.0024339055029645226
+    ],
+    "first_pair_elapsed_seconds": 378.880500471,
+    "full_horizon_completed": false,
+    "final_charge_conclusion": "unadjudicated"
+  }
+}

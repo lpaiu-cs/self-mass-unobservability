@@ -1,0 +1,22 @@
+{
+  "classification": "Counterexample candidate",
+  "source_finding": "The archived eval_weak.f90 blends lambda=a lambda_table+(1-a) lambda_low but returns a times the table temperature derivative, omitting da/dlnT times (lambda_table-lambda_low).",
+  "registered_default": {
+    "T9_off": 0.01,
+    "T9_on": 0.02,
+    "high_Z_threshold": 26
+  },
+  "controls": {
+    "pure_low": [
+      2.0,
+      3.0
+    ],
+    "pure_table": [
+      1e-07,
+      2e-07
+    ]
+  },
+  "method": "Run both endpoints at the identical full-star rho,T,X and frozen EOS inputs using existing star_job settings. Verify affine reconstruction of the actual native full source before adding a_prime times endpoint difference to the reported derivative.",
+  "gates": "Use the original all-burning-cell 1e-3 vector and heat derivative criteria, against frozen-auxiliary and fresh-auxiliary FD controls. Retain every failure and identify any stencil crossing a blend boundary.",
+  "limits": "A mathematical correction of the specified blended rate model does not certify physical weak rates, a full composition Jacobian, or an arbitrary continuous derivative domain."
+}

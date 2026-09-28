@@ -1,0 +1,69 @@
+{
+  "classification": "Counterexample candidate",
+  "rows": [
+    {
+      "steps": 1,
+      "max_absolute_change": 2.3951774119623792e-08
+    },
+    {
+      "steps": 2,
+      "max_absolute_change": 2.3968413809249967e-08,
+      "max_absolute_refinement": 6.488067709795058e-11,
+      "relative_to_global_max_change": 0.00270692410496149,
+      "original_component_relative_max": 9.794643437560945,
+      "original_relative_gate_passed": false,
+      "additional_mixed_budget_score": 845.7432307657497,
+      "additional_mixed_gate_passed": false,
+      "mixed_worst_zone": 2530,
+      "mixed_worst_species": "o18"
+    },
+    {
+      "steps": 4,
+      "max_absolute_change": 2.3977527074947602e-08,
+      "max_absolute_refinement": 3.560142653172198e-11,
+      "relative_to_global_max_change": 0.0014847830812761069,
+      "original_component_relative_max": 2.1537593705341465,
+      "original_relative_gate_passed": false,
+      "additional_mixed_budget_score": 282.7267991019775,
+      "additional_mixed_gate_passed": false,
+      "mixed_worst_zone": 2530,
+      "mixed_worst_species": "o18"
+    },
+    {
+      "steps": 8,
+      "max_absolute_change": 2.3982308805514663e-08,
+      "max_absolute_refinement": 1.870133135957585e-11,
+      "relative_to_global_max_change": 0.0007797969541312691,
+      "original_component_relative_max": 0.2594913836673346,
+      "original_relative_gate_passed": false,
+      "additional_mixed_budget_score": 51.56377950138447,
+      "additional_mixed_gate_passed": false,
+      "mixed_worst_zone": 2497,
+      "mixed_worst_species": "c12"
+    },
+    {
+      "steps": 16,
+      "max_absolute_change": 2.3984760288975338e-08,
+      "max_absolute_refinement": 9.591276794018841e-12,
+      "relative_to_global_max_change": 0.0003998904587104628,
+      "original_component_relative_max": 0.06223018399526876,
+      "original_relative_gate_passed": false,
+      "additional_mixed_budget_score": 25.216695745634453,
+      "additional_mixed_gate_passed": false,
+      "mixed_worst_zone": 2497,
+      "mixed_worst_species": "c12"
+    }
+  ],
+  "original_strict_Newton_gate": false,
+  "original_arithmetic_only_Newton_gate": false,
+  "final_mixed_time_refinement_passed": false,
+  "final_native_EOS_fractional_changes": {
+    "energy": 1.8053121520592443e-08,
+    "pressure": 1.8091838304042664e-08,
+    "opacity": 1.3717897317580227e-07,
+    "cv": 1.7483362051289368e-08
+  },
+  "initial_redshift_weighted_heat_Lsun": 219.46481601507998,
+  "final_redshift_weighted_heat_Lsun": 228.50450166614576,
+  "meaning": "Fixed-rho,T 22-species reaction evolution, with all generated species passed through native EOS/rates/opacity. Source powers use fixed prior GR weights and are not emergent luminosities or a GR evolution solution."
+}

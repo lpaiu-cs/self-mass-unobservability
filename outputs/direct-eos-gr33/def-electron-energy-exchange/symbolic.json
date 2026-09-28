@@ -1,0 +1,9 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "detailed_balance": "For a_i=exp((E_i-mu)/T), E1+E2=E3+E4 implies a1*a2=a3*a4 and f1*f2*(1-f3)*(1-f4)=f3*f4*(1-f1)*(1-f2).",
+  "bracket": "C_ee[i,j]=(g^2/4) integral d3p1 d3p2/(2pi)^6 f1 f2 (1-f3)(1-f4) v_M d_sigma Delta_psi_i dot Delta_psi_j /3, g=2; d_sigma has identical-final factor 1/2 and spin average 1/4.",
+  "invariants": "Each event conserves 1,E,p exactly. Positive event weights make the linearized collision form symmetric positive semidefinite. Momentum column is an exact null vector, not a relaxation term.",
+  "constrained_response": "After G-whitening and zero-current projection, K(s)=KUNIT sum w_j/(lambda_j+s/RATE), w_j>=0, lambda_j>0 for the computed finite basis. This establishes finite-system passivity and a decaying homogeneous response.",
+  "limitation": "No continuum gap or physical error bound follows from a finite Galerkin gap."
+}

@@ -1,44 +1,29 @@
-# Theorem Package
+# Theorem package — unified revision, 2026-09-09
 
-- Status: Note. This is the authoritative front-door theorem document for the free-fall theorem repo.
-- Status: Note. It is paper-facing, non-historical, and limited to the currently closed theorem and counterexample statements already established in the repository.
-- Status: Note. The mathematical content of this repository is now frozen unless a direct contradiction is found during cleanup or later review.
-- Status: Note (2026-07-12). One such direct contradiction was found by external adversarial review and is now incorporated: the gradient block `grad E = partial^3 Phi` is an STF-3 octupole (Schwarz total symmetry + vacuum trace-free), so the electric normal-form basis is five-dimensional (`{E2, E3, E2^2, dotE2, gradE2}`; the former `divE2`/`mixedGradE2` entries were artifacts of a generic gradient model), and the audited family survivor table is `E,B,S,V,T,Q,U,Z = 5,16,30,15,17,23,17,21`. The theorem statements below are unchanged; only the computed dimensions moved. See [`../lemmas/07-gradient-sector-audit.md`](../lemmas/07-gradient-sector-audit.md) and [`reduction-rules.md`](reduction-rules.md).
-- Status: Note. Further work belongs to empirical branches, runtime branches, or paper writing rather than new theorem expansion inside this repo.
+The authoritative paper is [manuscript.md](../paper/manuscript.md). The prior separate Paper A/B drafts are historical. This revision corrects a mathematical overclaim in the earlier A5 boundary and does not rewrite stored experimental verdicts.
 
-## Theorem Domain
+Status: Proven. With positive integer weights, a fixed cutoff and finitely many admitted primitive species below that cutoff, the decorated local operator catalog is finite. Any linear quotient remains finite. This is a conditional counting result, not an observational unobservability theorem.
 
-- Status: Proven. The closed positive theorem domain is the free-fall sector only.
-- Status: Assumption. The domain assumptions are the active `A1`-`A9` ledger assumptions in [`assumptions-ledger.md`](assumptions-ledger.md): quasi-static regime, nearly spherical and nonspinning parity-even sector, local worldline EFT, no orbital-timescale internal state variable, analytic monopole response, self-bound equilibrium, fixed operator cutoff, local weight-spectrum finiteness below that cutoff, and a leading-Newtonian harmonic-scalar-potential tidal representation. (These are premises, not derived results; see the ledger.)
-- Status: Proven. Within that domain, the irreducible primitive-family envelope closes on the audited scalar, vector, rank-2 STF, and genuine rank-`L >= 3` STF classes. (The rank-4 survivor bookkeeping was corrected in two steps, `19 -> 25 -> 23`: first restoring the omitted higher-degree mixed survivors, then the 2026-07-12 gradient-kinematics correction; see [`family-class-table.md`](family-class-table.md) and `../symbolic/r4_survivor_rank_check.py`.)
+Status: Proven. For the explicit block set `{E, DtE, Dt2E, gradE, a}` and leading-Newtonian harmonic-potential premise A9, the parity-even delta-contraction action quotient through weight four has five representatives `{I2,I3,I2^2,It,Ig}`. These are linearly independent operators, not five algebraically independent coordinates. The manuscript includes a completeness and action-quotient independence argument.
 
-## Main Positive Theorem
+Status: Proven. A local `C^(D+1)` response admits a finite weighted Taylor expansion through weight D with remainder `O(epsilon^(D+1))`, for bounded scaled arguments. Analyticity is stronger than required. Algebraic relations among arguments must still be reduced; duplicate polynomial coefficients are not independent sensitivities.
 
-- Status: Proven. Inside the stated theorem domain at fixed order `Delta <= 4`, the admissible parity-even local free-fall scalar operator space is finite.
-- Status: Proven. After the explicit reduction rules already recorded in the repo are imposed, the reduced scalar operator space is finite-dimensional and admits a finite normal-form basis `Y^I`.
-- Status: Proven. Under locality `A3` and analyticity `A5`, the monopole response collapses to a finite Taylor jet in those finitely many scalar coordinates.
-- Status: Proven. The residual higher-multipole sector is then carried by finitely many Wilson coefficients that remain separate from the monopole sensitivity coefficients.
-- Status: Proven. Therefore the positive finite-family collapse theorem closes inside the current theorem domain.
+Status: Proven. The smooth-flat function defeats exact analytic-germ reconstruction while obeying every finite-order remainder bound. The square-root threshold fails the differentiability premise at activation. The earlier claim that smooth-flat response invalidates Lemma 55's finite-order jet is withdrawn.
 
-## Negative Uniqueness No-Go
+Status: Proven. Admission of a new independent primitive may add a low-order operator without invalidating catalog finiteness. This obstructs a claim of a unique physically selected minimal catalog without further input. It neither proves a new interaction exists nor relates a tidal coefficient to the Nordtvedt parameter.
 
-- Status: Proven. Minimal-sector uniqueness is not the positive theorem.
-- Status: Proven. Across the audited unsuppressed family classes, admission of a genuine new primitive family yields a low-order witness and therefore obstructs any theorem that tries to identify a unique physically justified minimal sector without further suppression assumptions.
-- Status: Proven. The negative branch is therefore a class-limited family-admission no-go for minimal-sector uniqueness, not a refutation of fixed-order collapse.
+Status: Proven. The unified dynamic theorem adds the sharp boundary `N>=2K-1` for exact interpolation of a nonzero single pole at K positive frequencies by a shared real degree-N derivative comparator. Detection additionally requires positive covariance-weighted information after the declared nuisance projection.
 
-## Sharp Boundary Escapes
+| Status | Boundary | Layer affected |
+| --- | --- | --- |
+| Proven | Smooth-flat response, A5 analyticity absent | Exact Taylor-series reconstruction only; finite-order expansion survives. |
+| Proven | Nondifferentiable threshold | The required finite-order response expansion can fail at the threshold. |
+| Proven | Genuine hereditary response, A3 relaxed | Instantaneous local readout; a nonrational transfer cannot be realized by a finite linear time-invariant state system exactly. |
+| Proven | Explicit internal state, A4 relaxed | External-variable-only readout; a finite state description still exists. |
+| Proven | Infinite independent low-weight species, A8 relaxed | Candidate catalog finiteness before reduction. |
 
-| Boundary | Status | Smallest explicit counterexample | Exact theorem layer broken | Replacement bookkeeping |
-| --- | --- | --- | --- | --- |
-| `A5` dropped | Proven | Smooth-flat local monopole model `m_A(Y)=m_0+\alpha e^{-1/Y^2}\Theta(Y)` | Analytic monopole Taylor-jet step | Non-Taylor monopole germ data |
-| `A3` dropped | Proven | One-coordinate causal power-law kernel | Reduction to a local monopole function of instantaneous normal-form coordinates | Kernel or spectral memory data |
-| `A4` dropped | Proven | One-state local analytic `chi` model | Y-only monopole reduction | Finite local state-space data `(Y^I, chi^a)` |
-| `A8` dropped | Proven | Infinite low-weight STF tower | Candidate operator-space finiteness before reduction | No finite pre-reduction catalog remains |
+Status: Counterexample candidate. The scalar-charge action now supplies a conditional reciprocal force realization with tau=Gamma/kappa and beta=Ustar*a_w^2/(kappa*m_p). It is not the unique possible escape; numerical EOS-to-body matching remains outside the result.
 
-## What Is Not Claimed
+Status: Proven. The new matching audit derives an inertial-error bound and common-charge/feedback conditions. Its leading physical-drive phase closure obstructs translation of the historical auxiliary beta bounds. Known-covariance Gaussian U coverage is also proven; estimated-covariance performance is separately tested, not inferred from that theorem.
 
-- Status: Proven. No theorem is claimed here for parity-odd, spinning, nonlocal, or orbital-timescale-state sectors.
-- Status: Proven. No uniqueness theorem is claimed for a physically privileged minimal sector.
-- Status: Proven. No all-orders closure theorem is claimed beyond the fixed cutoff.
-- Status: Proven. No theorem is claimed here for clock observables.
-- Status: Proven. Raw survivor counts, nullity counts, and rank-specific bookkeeping are not theorem statements unless explicitly promoted elsewhere.
+See [assumptions](assumptions-ledger.md), [boundary map](boundary-escape-map.md), [dynamic failure ledger](failure-ledger-dynamic-chi.md), and [revision resolution](unified-revision-2026-09-09.md).

@@ -1,0 +1,10 @@
+{
+  "classification": "Counterexample candidate",
+  "first_failure": "The four-step native entropy inverse used raw[10], an equilibrium heat derivative, for a constrained fixed-inventory entropy path. Cell1 remained at2.8728089121614133e-12 against the2e-12 gate. No audit result was accepted.",
+  "probe_failure": "A bounded diagnostic using the same derivative exhausted its20 native-call cap before ten outer iterations. The diagnostic did not save completed intermediate rows; no unobserved root behavior is claimed.",
+  "root_correction": "Use geometry.thermo[:,0], the existing native constrained du/dlnT measured along the actual frozen ionic inventories. Retain the four inverse iterations and2e-12 entropy/Cv gate. Save each completed native control immediately.",
+  "budget_reassessment": "Keep the initial-metric trajectories and source projection unchanged. Add at most100 native calls and35s for one corrected independent audit; earlier100-call audit cap and20-call probe cap remain counted. No new fluid path or weaker native gate.",
+  "maximum_native_calls_across_finite_audit_attempts": 220,
+  "new_metric_solves": 0,
+  "new_fluid_steps": 0
+}

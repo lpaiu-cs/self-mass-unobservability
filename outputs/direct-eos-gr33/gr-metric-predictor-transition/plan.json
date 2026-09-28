@@ -1,0 +1,15 @@
+{
+  "classification": "Counterexample candidate",
+  "bindings": {
+    "verification/gr_metric_predictor_transition.py": "cc536b0c29fda555c4753aa4ee99970a591d8065931b4e584987265314d2f599",
+    "verification/gr_outer_product_transition.py": "7d9157a2a4d12a7a7d7d25467656147155b630179093f0845715e5c17fe9a231",
+    "outputs/direct-eos-gr33/gr-metric-mechanical-predictor/preflight-manifest.json": "dab2a92a21d5dbf821b698cc4ffdb82713f097ec50413ffe6f64cc7181bbdcc1",
+    "outputs/direct-eos-gr33/gr-metric-mechanical-predictor/comparison-manifest.json": "69fbf12d853d7d343f1df8c42b8baf3f193b78377971b89980d87981cfb0b91d",
+    "outputs/direct-eos-gr33/gr-metric-mechanical-predictor/comparison.json": "0d915ee1041a714761e7006b322b7468c596a1beb259732db4711903941b6263"
+  },
+  "reason": "After the 72-case same-target predictor preflight, stop the exact original producer tree. Preserve every original byte, completed failure and partial block. The original full run is failed and incomplete. Prioritize executing coupled fluid/heat/metric evolution instead of launching another manufactured full5735-cell inventory. Do not reuse old successful rows as new-solver evidence.",
+  "original_script": "verification/gr_metric_coupled_subcell_newton.py",
+  "population": 5735,
+  "physical_EOS_certified": false,
+  "full_GR_evolution": false
+}

@@ -1,32 +1,33 @@
-# Paper Claims Versus Non-Claims
+# Claims in the unified manuscript
 
-- Status: Note. This note separates what the theorem repo proves from what it only classifies, what it does not claim, and what remains empirical.
+Latest update: [remaining-lever results](remaining-levers-2026-09-09.md). Dedicated live transient responses now supplement the earlier periodic-only record; its mathematical insufficiency remains valid for that record.
 
-## Proved In This Repo
+| Status | Supported statement | Boundary |
+| --- | --- | --- |
+| Proven | Two calibrated complex samples characterize one positive observable relaxation time by a moment-variance equality. | Positive reciprocal measure and exact response; hidden states and finite-noise close-pole alternatives remain. |
+| Proven | A joint six-coefficient confidence region can be inverted over continuous phase and lag. | The true mean must remain in that six-column span; full inverse image, not a few sampled sections. |
+| Imported from prior work | Independent joint-region inclusion is 95.17--95.43% across four registered covariance conditions. | 8192 validation draws per condition; no universal astrophysical guarantee or new relaxation detection. |
+| Imported from prior work | Live transient derivatives converge at three lags; tested beta standard-error increase is at most 0.523%. | Small-amplitude prescribed pair coupling; no seven-coefficient coverage validation. |
+| Imported from prior work | Half-step timing columns rotate weak nuisance directions strongly; proposed full pulse compensation requires e>1. | The proposed compensation exits the bound-orbit domain; another nonlinear solution has not been excluded. |
+| Proven | Equilibrium susceptibility alone does not determine a rate gap in the admitted EFT class. | A fixed microscopic theory may supply additional relations; actual EOS/mode matching remains incomplete. |
+| Proven | Explicit electric quotient has five operator representatives. | Declared harmonic-potential block set and reductions only; no algebraic independence of all five. |
+| Proven | Sufficient smoothness gives a finite weighted expansion. | C^(D+1), positive integer weights and an O(epsilon^(D+1)) remainder; not exact reconstruction. |
+| Proven | Smooth-flat response has every finite jet. | It defeats exact analytic-germ recovery only. |
+| Proven | Real degree N fits K positive single-pole samples iff N>=2K-1. | Nonzero real beta, positive lag, shared unrestricted real coefficients and known readout. |
+| Proven | Observability requires a nuisance-projected rank increment. | Finite dimension and response noninterpolation alone do not suffice. |
+| Counterexample candidate | One-state relaxation with a prescribed SEP pair coupling. | A physical realization requiring microphysical matching. |
+| Proven | Full nuisance removes the identified omitted-mean bias; known-Gaussian U has coverage at least 95%. | Fixed linear span and correctly known covariance; no automatic result for estimated covariance. |
+| Imported from prior work | Estimated-covariance follow-through has minimum U coverage 94.59%. | Prespecified Fourier covariance family, 8192 realizations per condition; descriptive minimum, not a universal guarantee. |
+| Counterexample candidate | Scalar-charge action gives reciprocal forces and a controlled one-pole reduction. | Stable branch, fixed equal companion charge/mass ratios, small inertial/nonlinear/feedback terms; EOS coefficients uncomputed. |
+| Proven | Physical phase closure differs from the archived auxiliary drive. | Leading coplanar potential model; old physical-beta interpretation withdrawn, no replacement physical bound computed. |
+| Imported from prior work | J0337 finite-grid detection flag is false and conditional intervals depend strongly on nuisance space. | Stored Gaussian simulations and K-width constructions; no new fit or calibrated universal exclusion. |
+| Conjectural | A physical calibrated constraint may follow from further matching and likelihood work. | Not completed by editorial revision. |
+| Proven | Reciprocal fast-relaxation spectra obey a two-frequency quadrature inequality. | Positive symmetric dynamics, conjugate drive/readout and an independently justified rate gap; not every dissipative model. |
+| Imported from prior work | Allowing fourth-order derivatives can leave only 2.88e-6 of the instantaneous-only information. | Tested fixed arrays/phases/covariances; fifth-order collapse is exact, not merely small. |
+| Proven | A singular-value/data-norm inequality bounds the continuous phase envelope. | Known-phase fit family with fixed covariance; numerical evaluation is not a tight or interval-arithmetic supremum. |
+| Proven | The stored periodic/static columns do not determine an exponential transient response. | Causal-linear-map insufficiency; a validated restricted forward model can supply it. |
+| Imported from prior work | All 565 gaps above one day received single-cycle linear tests; a 223-day gap is weak under the red-noise stress. | No actual slip asserted, and arbitrary multiple/nonlinear pulse assignments remain untested. |
 
-- Status: Proven. Inside the current parity-even, nonspinning, local MVP free-fall theorem domain at fixed order `Delta <= 4`, the positive finite-family collapse theorem closes.
-- Status: Proven. The irreducible primitive-family envelope closes on the audited scalar, vector, rank-2 STF, and genuine rank-`L >= 3` STF classes.
-- Status: Proven. The fixed-order candidate operator space is finite once the admitted primitive-family spectrum is locally finite below the cutoff.
-- Status: Proven. The reduced scalar operator quotient is finite-dimensional under the explicit reduction rules.
-- Status: Proven. Under locality `A3`, no-state `A4`, and analyticity `A5`, the monopole response collapses to a finite Taylor jet and the sensitivity data remain separate from Wilson coefficients.
-- Status: Proven. Minimal-sector uniqueness fails as a separate class-limited no-go across the audited unsuppressed family classes.
+Status: Proven. Tidal I2 coefficients are not Nordtvedt eta without matching; beta is not the peak of total Delta without drive normalization and joint instantaneous coefficients. Finite carrier data do not exclude every finite local derivative model.
 
-## Classified But Not Promoted To Stronger Theorems
-
-- Status: Proven. The higher-rank STF branch supports a universal self-witness threshold theorem `w_Y >= 3` for genuine parity-even STF primitive families with rank `L >= 3`.
-- Status: Proven. The stronger mixed-pattern theorem is not universal: rank `L = 4` is an explicit audited exception because `EEQ` survives.
-- Status: Proven. The sharp boundary escapes `A5`, `A3`, `A4`, and `A8` are classified by explicit smallest counterexamples and replacement bookkeeping.
-- Status: Proven. The finite state-augmented salvage theorem is a separate positive branch beyond the original no-state theorem, not part of the original Y-only theorem statement.
-
-## Not Claimed
-
-- Status: Proven. No theorem is claimed for parity-odd, spinning, clock, nonlocal, or out-of-domain sectors.
-- Status: Proven. No theorem is claimed for all higher-rank tensors regardless of symmetry class.
-- Status: Proven. No theorem is claimed for all-orders closure beyond the fixed cutoff.
-- Status: Proven. No unique physically preferred minimal primitive-family sector is identified.
-- Status: Proven. Raw survivor counts, rank/nullity ledgers, and audit tables are not theorem statements unless explicitly promoted.
-
-## Empirical Or External To This Repo
-
-- Status: Proven. Weak-field estimator quality, strong-field runtime viability, TOA performance, and astrophysical applicability are empirical questions outside this theorem package.
-- Status: Proven. Any extension beyond the current theorem-domain assumptions belongs to external empirical or runtime branches unless a direct contradiction to the present package is discovered.
+The current claims are defined by [the manuscript](../paper/manuscript.md); previous “only A4 escape”, “smooth-flat finite-jet failure”, and drive-independent `|delta Delta|<1.68e-9` headlines are withdrawn.

@@ -1,0 +1,1895 @@
+arXiv:cond-mat/0701773v1  [cond-mat.stat-mech]  31 Jan 2007
+Wigner-Kirkwood expansion for semi-inﬁnite
+quantum ﬂuids
+L. ˇSamaj†‡ and B. Jancovici †
+† Laboratoire de Physique Th´ eorique, Universit´ e Paris-Sud, 91405 Orsay, France
+(Unit´ e Mixte de Recherche no. 8627 - CNRS)
+‡ Institute of Physics, Slovak Academy of Sciences, D´ ubravsk´ a cesta 9, 845 11
+Bratislava, Slovakia
+E-mail: Ladislav.Samaj@savba.sk, Bernard.Jancovici@th.u-psud.fr
+Abstract. For inﬁnite (bulk) quantum ﬂuids of particles interacting via pairwise
+suﬃciently smooth interactions, the Wigner-Kirkwood formalism pro vides a
+semiclassical expansion of the Boltzmann density in conﬁguration sp ace in even powers
+of the thermal de Broglie wavelength λ. This result permits one to generate an
+analogous λ-expansion for the bulk free energy and many-body densities. The present
+paper brings a technically nontrivial generalization of the Wigner-Kir kwood technique
+to semi-inﬁnite quantum ﬂuids, constrained by a plane hard wall impen etrable to
+particles. In contrast to the bulk case, the resulting Boltzmann de nsity involves also
+position-dependent terms of type exp( − 2x2/λ2) ( x denotes the distance from the wall
+boundary) which are non-analytic functions of the de Broglie wavele ngth λ. Under
+some condition, the analyticity in λ is restored by integrating the Boltzmann density
+over conﬁguration space; however, in contrast to the bulk free e nergy, the semiclassical
+expansion of the surface part of the free energy (surface tens ion) contains odd powers
+of λ, too. Explicit expressions for the leading quantum corrections in th e presence of
+the boundary are given for the one-body and two-body densities. As model systems for
+explicit calculations, we use Coulomb ﬂuids, in particular the one-comp onent plasma
+deﬁned in the ν-dimensional (integer ν ≥ 2) space.
+PACS numbers: 05.30.-d, 03.65.Sq, 52.25.Kn, 05.70.Np
+Keywords: Charged ﬂuids (Theory)
+Wigner-Kirkwood expansion for semi-inﬁnite quantum ﬂuids 2
+1. Introduction
+In this paper, we consider a quantum system of N identical particles j = 1, 2,...,N
+of mass m which position vectors r1, r2,..., rN are conﬁned to a region Λ of the ν-
+dimensional space Rν. For the sake of brevity, we denote the νN -dimensional position
+vector in conﬁguration space by ⃗r = (r1, r2,..., rN ) and the corresponding gradient by
+⃗
+/D6 = ( /D6
+1, /D6
+2,..., /D6
+N ). The Hamiltonian of the particles (in the absence of a magnetic
+ﬁeld) is
+H = 1
+2m
+(
+− i¯h⃗
+/D6
+)2
++V (⃗r), (1.1)
+where ¯h is Planck’s constant and the scalar potential V (⃗r) includes pairwise particle
+interactions
+∑
+j<kv(|rj − rk|) plus perhaps one-particle interactions
+∑
+ju(rj) with some
+external potential u(r). The equilibrium statistical mechanics of the particle system is
+studied in the canonical ensemble at the temperature T (or, alternatively, the inverse
+temperature β = 1/k BT with kB being Boltzmann’s constant). In the classical regime,
+the Hamiltonian (1.1) is replaced by H =⃗p2/ (2m) +V (⃗r), where ⃗p = (p1, p2,..., pN ) is
+the vector in the classical momentum space. The integration of the Boltzmann density
+exp(−βH ) over the momentum variables results in a trivial constant, so that the classical
+Boltzmann density in conﬁguration⃗r-space ∝ exp[−βV (⃗r)]. Quantum eﬀects are related
+to the thermal de Broglie wavelengthλ = ¯h(β/m )1/ 2. A nearly classical regime of present
+interest is deﬁned as being such that the dimensionless parameter λ/l (l being a typical
+microscopic length of the classical particle system, proportional t o the mean interparticle
+distance) is suﬃciently small.
+For a nearly classical bulk system in an inﬁnite ν-dimensional space Λ = Rν, the
+Boltzmann density in conﬁguration space⃗r can be expanded in powers of λ 2 (odd powers
+of λ vanish) within the well-known Wigner-Kirkwood expansion [1, 2]. The co eﬃcients
+of the λ 2-expansion of the partition function, which is given by the integratio n of the
+Boltzmann density over conﬁguration space ⃗r, are expressible in terms of the classical
+averages of gradient operations applied to V (⃗r) and of their products.
+The applicability of the Wigner-Kirkwood expansion scheme depends o n the form
+of the interaction potential v(r). For certain potentials, the expansion in λ 2 is analytic in
+the sense of holomorphy. There are potentials for which the Wigner -Kirkwood expansion
+is a limited Taylor expansion in λ 2: divergence of an expansion coeﬃcient indicates a
+loss of analyticity of the corresponding and higher-order quantum corrections. Like for
+instance, for the 3D exponential, screened Coulomb and square ba rrier potentials, the
+leading expansion term was found to have the non-analytic form
+√
+λ 2 [3]. In the case of
+an inverse-power-law repulsive potential v(r) = v0(a/r )n with the exponent n from the
+range 1 <n< ∞ , the Wigner-Kirkwood expansion turns out to be analytic in λ 2 in the
+holomorphic sense [3]. In the hard-core limit n → ∞ , the Wigner-Kirkwood expansion
+fails and one has once more the nonanalyticity of type
+√
+λ 2, as was shown in numerous
+analytic studies (see, e.g., [4, 5, 6, 7]).
+Wigner-Kirkwood expansion for semi-inﬁnite quantum ﬂuids 3
+Much eﬀort has been devoted to the calculation of quantum correc tions for 3D
+Coulomb ﬂuids of ±e charges, in the high-temperature regime described adequately by
+the classical Debye-H¨ uckel theory. Quantum corrections of th e bulk equation of state
+were derived and analyzed in Ref. [8]. As concerns the two-body den sity, its leading
+quantum correction exhibits at large distances an inverse-power- law decay in contrast
+with the classical Debye-H¨ uckel exponential screening (see the review [9]).
+To our knowledge, there does not exist in the literature a boundary version of
+the Wigner-Kirkwood expansion applicable to ﬂuids in domains Λ surrou nded by hard
+walls impenetrable to particles (or, equivalently, there is an inﬁnite ex ternal potential
+outside the domain Λ). Surface properties of quantum particle sys tems have been
+investigated only in the presence of some smooth conﬁning externa l-potential barriers
+(see, e.g., [10, 11]). The sole exceptions are represented by semicla ssical studies of 3D
+quantum Coulomb ﬂuids in the high-temperature Debye-H¨ uckel limit for which one has
+the explicit results for the density proﬁle near a plain hard wall [12] an d for the large-
+distance tail of charge correlations along a plain hard wall or a condu cting wall [13]. In
+these explicit results, quantum corrections linear in λ together with non-analytic terms
+of type exp( − 2x2/λ 2) (x denotes the distance from the boundary) appear; the latter are
+linked to the propagator of a free particle [14].
+The present paper brings a technically nontrivial generalization of t he Wigner-
+Kirkwood technique to semi-inﬁnite quantum ﬂuids, constrained by a plane hard wall.
+In contrast to the bulk case, the resulting Boltzmann density also in volves position-
+dependent terms which are non-analytic functions of the de Broglie thermal wavelength
+λ. Under some condition about the classical density proﬁle, the analy ticity in λ is
+restored by integrating the Boltzmann density over conﬁguration space; however, in
+contrast to the bulk free energy, the semiclassical expansion of t he surface part of the
+free energy (surface tension) contains odd powers of λ, too. Explicit expressions for the
+leading quantum corrections in the presence of the boundary are g iven for one-body and
+two-body densities.
+As a model system for explicit calculations, we shall use a special kind of Coulomb
+ﬂuid, namely the one-component plasma (jellium) made of mobile pointlik e charges e
+neutralized by a uniform oppositely charged ﬁxed background, in th e ν-dimensional
+space (because of some physical nontrivialities in 1D, we shall restr ict ourselves to
+dimensionsν ≥ 2). In the inﬁnite space Λ = Rν, or when the hard walls surrounding the
+conﬁning domain Λ do not induce image charges (plain hard walls), the t ranslationally
+invariant Coulomb interaction potential of twoe-chargesv(r) withr = |rj − rk|is deﬁned
+as the solution of the Poisson equation /D6
+2v = −sνe2δ(r), where sν = 2π ν/ 2/ Γ(ν/ 2) (Γ
+stands for the Gamma function) is the surface area of the ν-dimensional unit sphere.
+The resulting Coulomb interaction potential is logarithmic in ν = 2 dimensions and of
+typee2r2− ν/ (ν− 2) inν ≥ 3 dimensions. The present deﬁnition of the Coulomb potential
+maintains many generic properties of “real” 3D Coulomb systems, like screening and the
+corresponding sum rules (see the review [15]). The total potential V (⃗r) then satisﬁes
+Wigner-Kirkwood expansion for semi-inﬁnite quantum ﬂuids 4
+for each of the particle coordinates the diﬀerential equation
+/D6
+2
+jV (⃗r) = −sνe2
+N∑
+k=1
+(k̸=j)
+δ(rj − rk) +sνe2n, j = 1, 2,...,N. (1.2)
+Here, the second term on the rhs comes from the particle-backgr ound interaction
+and n = N/ |Λ| is the mean number density of the mobile charges; the background-
+background interaction constant contributes to the partition fu nction.
+The paper is organized as follows. In section 2, the method of the bu lk Wigner-
+Kirkwood expansion is brieﬂy reviewed in a format which can be relative ly simply
+extended to the boundary case. The following sections are devote d to semi-inﬁnite
+quantum systems constrained by a plane hard wall. In section 3, we p ropose a method
+for constructing the expansion of the Boltzmann density in conﬁgu ration⃗r-space. This
+expansion is subsequently used in section 4 for the generation of th e expansion for
+statistical quantities, such as the partition function and the corr esponding surface part
+of the free energy, one-body and two-body densities. Explicit calc ulations for Coulomb
+models with known classical statistical quantities are presented in s ection 5. A few
+concluding remarks are given in section 6.
+2. Wigner-Kirkwood expansion in inﬁnite space
+Let the particle system be in the inﬁnite space Λ = Rν. In this so-called “bulk” regime,
+its equilibrium quantities in the nearly classical regime can be expanded in powers of ¯h2
+within the standard Wigner-Kirkwood expansion [1, 2] which neglects fermion or boson
+exchange eﬀects between quantum particles. In this section, we r eview shortly the
+derivation of this expansion by the Laplace transform method [4, 16 ] which is suitable
+for our next purposes.
+2.1. Boltzmann density
+The Boltzmann density Bβ in conﬁguration space ⃗r can be formally written in the basis
+of plane waves as a νN -dimensional integral deﬁned in an inﬁnite domain Rν:
+Bβ (⃗r) ≡ ⟨⃗r|e− βH |⃗r⟩ =
+∫ d⃗p
+(2π¯h)νN e− (i/ ¯h)⃗p·⃗re− βH e(i/ ¯h)⃗p·⃗r, (2.1)
+where ⃗p = ( p1, p2,..., pN ) is the νN -dimensional momentum vector. Instead of
+considering e − βH in the integration (2.1), we take the Laplace transform of this oper ator
+with respect to the inverse temperature β ,
+1
+H +z =
+∫ ∞
+0
+dβ e− βz e− βH, (2.2)
+and concentrate on the generation of an expansion in powers of ¯ h for
+e− (i/ ¯h)⃗p·⃗r 1
+H +z e(i/ ¯h)⃗p·⃗r. (2.3)
+Wigner-Kirkwood expansion for semi-inﬁnite quantum ﬂuids 5
+Let us ﬁrst rewrite H +z as
+H +z =D + O, (2.4)
+where D is a c-number
+D = 1
+2m⃗p2 +V (⃗r) +z (2.5)
+and O an operator
+O = 1
+2m
+(
+− i¯h⃗
+/D6
+)2
+− 1
+2m⃗p2, (2.6)
+and then expand
+1
+H +z = 1
+D − 1
+D O 1
+D + 1
+D O 1
+D O 1
+D − · · ·. (2.7)
+It can be veriﬁed that for any function f (⃗r) the operator O acts as follows
+O
+[
+f (⃗r)e(i/ ¯h)⃗p·⃗r
+]
+= − e(i/ ¯h)⃗p·⃗r
+[
+i¯h
+m⃗p ·⃗
+/D6 + ¯h2
+2m
+⃗
+/D6
+2
+]
+f (⃗r). (2.8)
+One thus ﬁnds that
+e− (i/ ¯h)⃗p·⃗r 1
+H +z e(i/ ¯h)⃗p·⃗r = 1
+D
+∞∑
+n=0
+{[
+i¯h
+m⃗p ·⃗
+/D6 + ¯h2
+2m
+⃗
+/D6
+2
+]
+1
+D
+}n
+. (2.9)
+The term of order n in (2.9)
+1
+D
+{[
+i¯h
+m⃗p ·⃗
+/D6 + ¯h2
+2m
+⃗
+/D6
+2
+]
+1
+D
+}n
+(2.10)
+is a polynomial in ¯h containing powers in the range from ¯hn up to ¯h2n. This means that
+the truncation of the series (2.9) at some given order n provides all ¯h-terms up to order
+¯hn (or, equivalently, all λ-terms up to order λ n). By carrying out all diﬀerentiations in
+(2.10), taking subsequently the inverse Laplace-transforms usin g the formula
+1
+Dj = (− 1)j− 1
+(j − 1)!
+∂j− 1
+∂z j− 1
+1
+z +⃗p2/ (2m) +V (⃗r)
+=
+∫ ∞
+0
+dβ e− βz 1
+(j − 1)!β j− 1e− β [⃗p2/ (2m)+V (⃗r)] (2.11)
+(j = 1, 2,... ), and ﬁnally integrating on the momentum variables ⃗p, the Boltzmann
+density in conﬁguration space (2.1) is obtained as the series
+⟨⃗r|e− βH |⃗r⟩ =
+∞∑
+n=0
+B(n)
+β (⃗r), (2.12)
+where B(n)
+β (⃗r) denotes the contribution implied by the nth term (2.10). In particular,
+B(0)
+β (⃗r) = 1
+(
+√
+2πλ )νN e− βV, (2.13a)
+B(1)
+β (⃗r) = 1
+(
+√
+2πλ )νN e− βV λ 2
+[
+− β
+4
+⃗
+/D6
+2
+V + β 2
+6
+(
+⃗
+/D6 V
+)2
+]
+, (2.13b)
+B(2)
+β (⃗r) = 1
+(
+√
+2πλ )νN e− βV
+{
+λ 2
+[
+β
+6
+⃗
+/D6
+2
+V − β 2
+8
+(
+⃗
+/D6 V
+)2
+]
++λ 4
+[
+− β
+24
+(
+⃗
+/D6
+2)2
+V
+Wigner-Kirkwood expansion for semi-inﬁnite quantum ﬂuids 6
++β 2
+16
+⃗
+/D6 V ·⃗
+/D6
+(
+⃗
+/D6
+2
+V
+)
++ β 2
+48
+⃗
+/D6
+2 (
+⃗
+/D6 V
+)2
++ β 2
+32
+(
+⃗
+/D6
+2
+V
+)2
+(2.13c)
+− β 3
+30
+⃗
+/D6 V ·⃗
+/D6
+(
+⃗
+/D6 V
+)2
+− β 3
+24
+(
+⃗
+/D6 V
+)2 ⃗
+/D6
+2
+V + β 4
+72
+(
+⃗
+/D6 V
+)4
+]}
+,
+etc. We conclude that the quantum Boltzmann density in conﬁgurat ion space is given,
+to order λ 2, by
+⟨⃗r|e− βH |⃗r⟩ = 1
+(
+√
+2πλ )νN e− βV
+{
+1 +λ 2
+[
+− β
+12
+⃗
+/D6
+2
+V + β 2
+24
+(
+⃗
+/D6 V
+)2
+]
++O(λ 4)
+}
+= 1
+(
+√
+2πλ )νN
+{
+e− βV
+[
+1 − λ 2β
+24
+⃗
+/D6
+2
+V
+]
++ λ 2
+24
+⃗
+/D6
+2
+e− βV +O(λ 4)
+}
+. (2.14)
+When integrated over the coordinates of particle j, the corresponding term in
+∑N
+j=1
+/D6
+2
+j exp(−βV ) gives no volume contribution. Notice that odd powers of λ do not
+appear in the Wigner-Kirkwood expansion, so that the bulk Boltzman n factor, when
+considered without the trivial prefactor (
+√
+2πλ )− νN , is invariant with respect to the
+transformation i¯h → − i¯h. This is due to the fact that the integration of terms with odd
+powers of momentum components over the whole corresponding ax is is 0.
+2.2. Statistical quantities
+According to the standard formalism of statistical quantum mecha nics, the partition
+function of theN-particle ﬂuid (with ignored exchange eﬀects) is given by the integra tion
+of the Boltzmann density over conﬁguration space:
+Zqu = 1
+N!
+∫
+Λ
+d⃗r
+⣨
+⃗r|e− βH |⃗r
+⟩
+. (2.15)
+For expressing macroscopic physical quantities, one deﬁnes the q uantum average of a
+function f (⃗r) as follows
+⟨f ⟩qu = 1
+Zqu
+1
+N!
+∫
+Λ
+d⃗r
+⣨
+⃗r|e− βH |⃗r
+⟩
+f (⃗r). (2.16)
+At the one-particle level, one introduces the particle density
+nqu(r) =
+⟨ N∑
+j=1
+δ(r − rj)
+⟩
+qu
+, (2.17)
+At the two-particle level, the two-body density is given by
+n(2)
+qu (r, r′) =
+⟨ N∑
+j,k=1
+(j̸=k)
+δ(r − rj)δ(r′ − rk)
+⟩
+qu
+. (2.18)
+It will be useful to consider also the truncated two-body density
+n(2)T
+qu (r, r′) = n(2)
+qu (r, r′) − nqu(r)nqu(r′) (2.19)
+vanishing at asymptotically large distances |r − r′| → ∞ , the pair distribution function
+gqu(r, r′) = n(2)
+qu (r, r′)/ [nqu(r)nqu(r′)] and the pair correlation function hqu(r, r′) =
+Wigner-Kirkwood expansion for semi-inﬁnite quantum ﬂuids 7
+gqu(r, r′) − 1. The classical partition function and the classical average of a fu nction
+f (⃗r) are deﬁned as follows
+Z = 1
+N!
+∫
+Λ
+d⃗r
+(
+√
+2πλ )νN e− βV (⃗r), (2.20)
+⟨f ⟩ = 1
+Z
+1
+N!
+∫
+Λ
+d⃗r
+(
+√
+2πλ )νN e− βV (⃗r)f (⃗r). (2.21)
+According to our convention, the classical values of statistical qu antities will be written
+without a subscript, like n(r), n(2)(r, r′), etc.
+Substituting the λ-expansion of the Boltzmann density (2.14) into formula (2.15),
+the quantum partition function takes the expansion form
+Zqu =Z
+[
+1 − λ 2 β
+24 ⟨⃗
+/D6
+2
+V ⟩ +O(λ 4)
+]
+. (2.22)
+It is important to note that the general applicability of the Wigner-K irkwood expansion
+scheme depends on the particular form of the interaction potentia l V ; a divergence of
+the classical average ⟨⃗
+/D6
+2
+V ⟩ indicates a non-analytic λ 2-expansion of the free energy.
+For the model system of the one-component plasma in ν dimensions, the summation
+over the particle index j of the set of Poisson equations (1.2) leads to
+⃗
+/D6
+2
+V (⃗r) = −sνe2
+N∑
+j,k=1
+(j̸=k)
+δ(rj − rk) +sνNe 2n. (2.23)
+The ﬁrst term on the rhs of (2.23) does not give any contribution to ⟨⃗
+/D6
+2
+V ⟩, because it
+is weighted by a classical Boltzmann factor which vanishes at zero int erparticle distance.
+The replacement of ⃗
+/D6
+2
+V in equation (2.22) by the particles-background term sνNe 2n
+leads to
+Zqu =Z
+[
+1 − λ 2Nβs νe2n
+24 +O(λ 4)
+]
+. (2.24)
+For the free energy Fqu deﬁned by the relation −βF qu = lnZqu, one gets from (2.24) the
+leading λ 2-correction term
+Fqu =F +λ 2Nsνe2n
+24 +O(λ 4), (2.25)
+which is, as one expects in the bulk regime, extensive in the number of particles N.
+Corrections to the free energy of higher order in λ are standardly obtained from the
+partition function with higher-order λ-terms by using the cumulant expansion (see, e.g.,
+Ref. [16]).
+The Wigner-Kirkwood formalism ignores the exchange eﬀects. Howe ver, for the
+one-component plasma, they are exponentially small [17].
+Theλ-expansion of the particle density (2.17) for the one-component p lasma reads
+nqu(r) =
+[
+1 + λ 2
+24
+/D6
+2 +O(λ 4)
+]
+n(r). (2.26)
+Wigner-Kirkwood expansion for semi-inﬁnite quantum ﬂuids 8
+In the bulk regime with the homogeneous classical density of particle s n(r) = n, one
+obtains the trivial result nqu(r) = n.
+The radial distribution function of the bulk one-component plasma h as a λ-
+expansion of the form [18]
+gqu(r) =
+[
+1 + λ 2
+12
+/D6
+2 +O(λ 4)
+]
+g(r). (2.27)
+In the short-distance r → 0 limit, g(r) is proportional to the Boltzmann factor of
+the bare Coulomb potential, which causes the breaking down of the W igner-Kirkwood
+expansion scheme for too small values of r [18].
+3. Half-space geometry: Boltzmann density
+Let the particles be constrained to the half-space Λ deﬁned by Car tesian coordinates
+r = ( x, r⊥ ), where x > 0 and r⊥ ∈ Rν− 1 denotes the set of ( ν − 1) unbounded
+spatial coordinates normal to x. The hard wall in half-space x <0 is considered to be
+impenetrable to particles. We group the components of the νN -dimensional vector in
+conﬁguration space ⃗r = ( r1, r2,..., rN ) into two another vectors ⃗ x= (x1,x 2,...,x N )
+and ⃗r⊥ = ( r⊥
+1, r⊥
+2,..., r⊥
+N ); the corresponding momentum vectors generated from
+⃗p = ( p1, p2,..., pN ) are ⃗ px = ( px
+1,p x
+2,...,p x
+N ) and ⃗p⊥ = ( p⊥
+1, p⊥
+2,..., p⊥
+N ). The
+Hamiltonian is still of the form (1.1), where the interaction potential V (⃗r) may include
+also additional eﬀective one-body and two-body terms induced by t he hard wall, e.g.,
+the Coulomb energy of images in the case of charged particles near a dielectric wall.
+Due to the presence of the impenetrable hard wall, the wave functio n of the particle
+system has to vanish as soon as one of the particles lies at the wall. Th e one-body
+Boltzmann density in conﬁguration space can be thus written in the b asis of stationary
+plane waves with zero Dirichlet boundary condition at x = 0:
+Bβ (⃗r) ≡ ⟨⃗r|e− βH |⃗r⟩ =
+∫ ∞
+0
+d⃗ px
+(π¯h)N
+∫ d⃗p⊥
+(2π¯h)(ν− 1)Nψ ∗
+⃗p(⃗r) e− βH ψ ⃗p(⃗r), (3.1)
+where
+ψ ⃗p(⃗r) = e (i/ ¯h)⃗p⊥ ·⃗r⊥
+N∏
+j=1
+[√ 2 sin
+(
+px
+jxj
+¯h
+)]
+. (3.2)
+To generate the ¯h-expansion of the matrix element (3.1), we introduces the Laplace
+transform of the operator e − βH and consider
+ψ ∗
+⃗p(⃗r) 1
+H +z ψ ⃗p(⃗r). (3.3)
+One can proceed formally as in the previous bulk case, up to the expa nsion (2.7).
+Afterwards, one needs the following generalization of the operato r equation (2.8):
+O
+[
+f (⃗r)e(i/ ¯h)⃗p′·⃗r
+]
+= − e(i/ ¯h)⃗p′·⃗r
+[
+i¯h
+m⃗p′ ·⃗
+/D6 + ¯h2
+2m
+⃗
+/D6
+2
+]
+f (⃗r), (3.4)
+Wigner-Kirkwood expansion for semi-inﬁnite quantum ﬂuids 9
+which is valid for any νN -dimensional momentum vector ⃗p′ such that |⃗p′|= |⃗p|. As a
+consequence, one ﬁnds from (2.7) that
+1
+H +z e(i/ ¯h)⃗p′·⃗r = e (i/ ¯h)⃗p′·⃗r 1
+D
+∞∑
+n=0
+{[
+i¯h
+m⃗p′ ·⃗
+/D6 + ¯h2
+2m
+⃗
+/D6
+2
+]
+1
+D
+}n
+. (3.5)
+To make use of this operator formula, we consider an exponential r epresentation of the
+function ψ ⃗p(⃗r) given by equation (3.2):
+ψ ⃗p(⃗r) = e (i/ ¯h)⃗p⊥ ·⃗r⊥ 1
+(
+√
+2i)N
+N∏
+j=1
+∑
+σ j =± 1
+σje(i/ ¯h)σ j px
+j xj
+= 1
+(
+√
+2i)N
+∑
+{⃗ σ}
+
+
+N∏
+j=1
+σj
+
+ e(i/ ¯h)⃗p(⃗ σ)·⃗r. (3.6)
+Here, each of the σ-components of the “state” vector ⃗ σ= (σ1,σ 2,...,σ N ) can take
+one of the values ± 1 (the sign determines the direction of the plane wave propagation)
+and the summation goes over all possible 2 N ⃗ σ-conﬁgurations. For a given state vector
+⃗ σ, we have redeﬁned the particle momenta pj(σj) = ( σjpx
+j, p⊥
+j ) (j = 1, 2,...,N ) and
+grouped them into the νN -dimensional vector ⃗p(⃗ σ) = ( p1(σ1), p2(σ2),..., pN (σN )),
+which couples via the scalar product to the ⃗r-vector in the exponential of equation
+(3.6). Since the momentum vector ⃗p(⃗ σ) satisﬁes the requirement |⃗p(⃗ σ)| = |⃗p| for an
+arbitrary state vector ⃗ σ, one can apply the key relation (3.5) to every summand in the
+exponential representation (3.6) of ψ ⃗p(⃗r) to obtain
+ψ ∗
+⃗p(⃗r) 1
+H +zψ ⃗p(⃗r) = ψ ∗
+⃗p(⃗r) 1
+(
+√
+2i)N
+∑
+{⃗ σ}
+
+
+N∏
+j=1
+σj
+
+ e(i/ ¯h)⃗p(⃗ σ)·⃗r
+× 1
+D
+∞∑
+n=0
+{[
+i¯h
+m⃗p(⃗ σ) ·⃗
+/D6 + ¯h2
+2m
+⃗
+/D6
+2
+]
+1
+D
+}n
+. (3.7)
+Let us consider the term of order n in the expansion (3.7)
+N∏
+j=1
+[
+sin
+(
+px
+jxj
+¯h
+)]
+1
+iN
+∑
+{⃗ σ}
+N∏
+j=1
+(
+σje(i/ ¯h)σ j px
+j xj
+) 1
+D
+{[
+i¯h
+m⃗p(⃗ σ) ·⃗
+/D6 + ¯h2
+2m
+⃗
+/D6
+2
+]
+1
+D
+}n
+. (3.8)
+One ﬁrst carries out all diﬀerentiations in (3.8). Since the scalar pro duct
+⃗p(⃗ σ) ·⃗
+/D6 =
+N∑
+k=1
+σkpx
+k
+∂
+∂xk
++
+N∑
+k=1
+p⊥
+k ·
+/D6
+r⊥
+k
+(3.9)
+contains components of the state vector ⃗ σ, each of the components can take either odd or
+even power multiplied by the corresponding exponential; the summat ion over σj = ± 1
+then gives rise to the original stationary wave ∝ sin(px
+jxj/ ¯h) for odd powers of σj and
+to the shifted wave ∝ cos(px
+jxj/ ¯h) for even powers of σj. As the next step, one performs
+the inverse Laplace transform of 1 /D j (j = 1, 2,... ) using the formula (2.11). In the
+consequent relatively simple integrations over momenta we have to k eep in mind that
+while the integration of odd powers of the p⊥ components give zero contributions, this
+is no longer true for odd powers of px since the integration goes only over the positive
+values of px. The ﬁnal result for the Boltzmann density in conﬁguration space ( 3.1) has
+Wigner-Kirkwood expansion for semi-inﬁnite quantum ﬂuids 10
+the form analogous to that of the bulk case (2.12), ⟨⃗r|e− βH |⃗r⟩ =
+∑∞
+n=0B(n)
+β (⃗r) where
+B(n)
+β (⃗r) denotes the contribution implied by the nth term (3.8).
+We have performed the outlined procedure for the ﬁrst terms B(0)
+β , B(1)
+β and B(2)
+β .
+We do not go into details of the calculations, but only write down the ﬁn al result and
+then discuss the origin of the terms obtained and their structure.
+The result for B(0)
+β (⃗r) reads
+B(0)
+β (⃗r) =
+∫ ∞
+0
+d⃗ px
+(π¯h)N
+∫ d⃗p⊥
+(2π¯h)(ν− 1)N
+N∏
+j=1
+[
+2 sin2
+(
+px
+jxj
+¯h
+)]
+e− β [⃗ p2/ (2m)+V (⃗ r)]
+= 1
+(
+√
+2πλ )νN e− βV
+N∏
+j=1
+(
+1 − e− 2x2
+j /λ 2 )
+. (3.10)
+In comparison with the corresponding bulk term (2.13 a), each particle gets an additional
+“boundary” factor 1 − exp(− 2x2/λ 2) which goes from 0 at the boundary x = 0 to 1
+in the bulk interior x → ∞ on the length scale ∼ λ. The product of boundary factors
+ensures that the quantum Boltzmann density vanishes as soon as o ne of the particles lies
+on the boundary. The dependence of the boundary factor on the de Broglie wavelength
+λ is non-analytic; this fact prevents one from a simple classiﬁcation of contributions
+to the Boltzmann density according to integer powers of λ like it was in the bulk case.
+However, as will be shown explicitly in the next section on the evaluatio n of the partition
+function, when the exponential part exp( − 2x2/λ 2) of the boundary factor (multiplied
+eventually by another λ-independent function of x) is integrated over the x-coordinate,
+the analyticity in the parameter λ is restored. At this stage we only notice that the
+integrated product of boundary factors should be expanded in th e following way
+N∏
+j=1
+(
+1 − e− 2x2
+j /λ 2 )
+= 1 −
+N∑
+j=1
+e− 2x2
+j /λ 2
++ 1
+2!
+N∑
+j,k=1
+(j̸=k)
+e− 2x2
+j /λ 2
+e− 2x2
+k/λ 2
++ · · ·, (3.11)
+where each exponential term exp( − 2x2/λ 2), when integrated over x, produces one λ-
+factor as the result of the evoqued substitution of variables x =λx ′.
+The result for B(1)
+β (⃗r) is found in the form
+B(1)
+β (⃗r) = 1
+(
+√
+2πλ )νN e− βV
+{
+−
+N∑
+k=1
+N∏
+j=1
+(j̸=k)
+(
+1 − e− 2x2
+j /λ 2 )
+xke− 2x2
+k/λ 2
+β∂V
+∂xk
++
+N∏
+j=1
+(
+1 − e− 2x2
+j /λ 2 )
+λ 2
+[
+− β
+4
+⃗
+/D6
+2
+V + β 2
+6
+(
+⃗
+/D6 V
+)2
+] }
+. (3.12)
+Here, the ﬁrst term corresponds to the source operator D− 1⃗p(⃗ σ) ·⃗
+/D6 D− 1 whose bulk
+counterpart does not contribute to the Boltzmann density (2.13 b). The dependence
+on λ appears, besides the product of the particle boundary factors 1 − exp(− 2x2/λ 2),
+also via the combination x exp(− 2x2/λ 2). This function has a maximum of order λ
+and the integration of this function over x gives a contribution of order λ 2. These
+properties make the function x exp(− 2x2/λ 2) of an order equal to or “weaker” than λ,
+and therefore this function is a legitimate expansion parameter. Th e second term on the
+Wigner-Kirkwood expansion for semi-inﬁnite quantum ﬂuids 11
+rhs of equation (3.12), having the origin in the source operator D− 1⃗
+/D6
+2
+D− 1, corresponds
+to the simple multiplication of its bulk counterpart (2.13 b) by the product of particle
+boundary factors 1 − exp(− 2x2/λ 2).
+The ﬁnal formula for B(2)
+β (⃗r) consists in four terms
+B(2)
+β (⃗r) = B(2, 1)
+β (⃗r) +B(2. 2)
+β (⃗r) +B(2, 3)
+β (⃗r) +B(2, 4)
+β (⃗r), (3.13)
+where
+B(2, 1)
+β (⃗r) = 1
+(
+√
+2πλ )νN e− βV
+{ N∏
+j=1
+(
+1 − e− 2x2
+j /λ 2 )
+λ 2
+[
+β
+6
+⃗
+/D6
+2
+V − β 2
+8
+(
+⃗
+/D6 V
+)2
+]
++
+N∑
+k=1
+N∏
+j=1
+(j̸=k)
+(
+1 − e− 2x2
+j /λ 2 )
+x2
+ke− 2x2
+k/λ 2
+
+ 2β
+3
+∂2V
+∂x2
+k
+− β 2
+2
+(
+∂V
+∂xk
+)2
+ (3.14a)
+−
+N∑
+k,l=1
+(k̸=l)
+N∏
+j=1
+(j̸=k,l)
+(
+1 − e− 2x2
+j /λ 2 )
+xke− 2x2
+k/λ 2
+xle− 2x2
+l /λ 2
+[
+2β
+3
+∂2V
+∂xk∂xl
+− β 2
+2
+∂V
+∂xk
+∂V
+∂xl
+] }
+corresponds to the source operator D− 1⃗p(⃗ σ) ·⃗
+/D6 [D− 1⃗p(⃗ σ) ·⃗
+/D6 D− 1],
+B(2, 2)
+β (⃗r) = 1
+(
+√
+2πλ )νN e− βV
+N∑
+k=1
+N∏
+j=1
+(j̸=k)
+(
+1 − e− 2x2
+j /λ 2 )
+xke− 2x2
+k/λ 2
+λ 2
+[
+− β
+6
+∂
+∂xk
+(
+⃗
+/D6
+2
+V
+)
++β 2
+8
+(
+⃗
+/D6
+2
+V
+)∂V
+∂xk
++β 2
+12
+∂
+∂xk
+(
+⃗
+/D6 V
+)2
+− β 3
+15
+(
+⃗
+/D6 V
+)2 ∂V
+∂xk
+]
+(3.14b)
+has its origin in the source operator D− 1⃗p(⃗ σ) ·⃗
+/D6 [D− 1⃗
+/D6
+2
+D− 1],
+B(2, 3)
+β (⃗r) = 1
+(
+√
+2πλ )νN e− βV
+N∑
+k=1
+N∏
+j=1
+(j̸=k)
+(
+1 − e− 2x2
+j /λ 2 )
+xke− 2x2
+k/λ 2
+λ 2
+[
+− β
+6
+∂
+∂xk
+(
+⃗
+/D6
+2
+V
+)
++β 2
+8
+(
+⃗
+/D6
+2
+V
+)∂V
+∂xk
++β 2
+8
+∂
+∂xk
+(
+⃗
+/D6 V
+)2
+− β 3
+10
+(
+⃗
+/D6 V
+)2 ∂V
+∂xk
+]
+(3.14c)
+comes from the source operator D− 1⃗
+/D6
+2
+[D− 1⃗p(⃗ σ) ·⃗
+/D6 D− 1], and
+B(2, 4)
+β (⃗r) = 1
+(
+√
+2πλ )νN e− βV
+N∏
+j=1
+(
+1 − e− 2x2
+j /λ 2 )
+λ 4
+[
+− β
+24
+(
+⃗
+/D6
+2)2
+V
++β 2
+16
+⃗
+/D6 V ·⃗
+/D6
+(
+⃗
+/D6
+2
+V
+)
++ β 2
+48
+⃗
+/D6
+2 (
+⃗
+/D6 V
+)2
++ β 2
+32
+(
+⃗
+/D6
+2
+V
+)2
+(3.14d)
+− β 3
+30
+⃗
+/D6 V ·⃗
+/D6
+(
+⃗
+/D6 V
+)2
+− β 3
+24
+(
+⃗
+/D6 V
+)2 ⃗
+/D6
+2
+V + β 4
+72
+(
+⃗
+/D6 V
+)4
+]
+results from the source operator D− 1⃗
+/D6
+2
+[D− 1⃗
+/D6
+2
+D− 1]. It is easy to check that the term
+B(2)
+β (⃗r) as a whole is of the leading order λ 2, like it was in the bulk regime (see equation
+(2.13c)).
+We would like to note that in the bulk interior far away from the boundary, i.e., when
+all x-coordinates of particles {xj → ∞} N
+j=1, the results for the boundary Boltzmann
+Wigner-Kirkwood expansion for semi-inﬁnite quantum ﬂuids 12
+density must reduce to the bulk ones (2.13 a)–(2.13c). It is easy to verify that the
+results obtained pass this test.
+To summarize, the λ-expansion of the Boltzmann density in the presence of
+a boundary is more complex than the analytic one in the bulk. The expa nsion
+involves not only powers of λ, but also non-analytic position-dependent terms of type
+1− exp(− 2x2/λ 2),x exp(− 2x2/λ 2), etc. The ﬁrst three Boltzmann terms B(0)
+β (⃗r),B(1)
+β (⃗r)
+and B(2)
+β (⃗r) exhibit properties similar to their bulk counterparts (2.13 a)–(2.13b): The
+maximum of B(n)
+β (⃗r) is of order λ n. We anticipate that this formal structure of the
+Boltzmann terms is also maintained on higher levels.
+4. Half-space geometry: statistical quantities
+4.1. Partition function and free energy
+Since the Boltzmann density is represented by the series ∑∞
+n=0B(n)
+β (⃗r), the partition
+function (2.15) is expressible as
+Zqu =
+∞∑
+n=0
+Z (n)
+qu , Z (n)
+qu = 1
+N!
+∫
+Λ
+d⃗rB(n)
+β (⃗r). (4.1)
+In the next paragraphs we evaluate consecutively the λ-expansion of the ﬁrst three terms
+Z (0)
+qu ,Z (1)
+qu andZ (2)
+qu , up to the order λ 2. According to the analysis in the previous section,
+higher-order Z (n)
+qu terms are expected to contribute only to λ 3 and higher powers of λ.
+Inserting the Boltzmann term B(0)
+β (3.10) into the deﬁnition (4.1) of Z (0)
+qu and
+performing the expansion (3.11) for the product of boundary fac tors, we obtain
+Z (0)
+qu
+Z = 1 −
+∫
+Λ
+dr e− 2x2/λ 2
+n(r) + 1
+2!
+∫
+Λ
+dr1
+∫
+Λ
+dr2 e− 2x2
+1/λ 2
+e− 2x2
+2/λ 2
+n(2)(r1, r2) + · · ·. (4.2)
+The system is translationally invariant in the r⊥ space, i.e. n(r) = n(x), n(2)(r1, r2) =
+n(2)(x1,x 2; |r⊥
+1 − r⊥
+2 |), etc. This property enables us to rewrite equation (4.2) in a more
+convenient form
+Z (0)
+qu
+Z = 1 − |∂Λ|
+∫ ∞
+0
+dx e− 2x2/λ 2
+n(x) + 1
+2! |∂Λ|2
+[∫ ∞
+0
+dx e− 2x2/λ 2
+n(x)
+]2
++ 1
+2!|∂Λ|
+∫
+dr⊥
+∫ ∞
+0
+dx1
+∫ ∞
+0
+dx2 e− 2x2
+1/λ 2
+e− 2x2
+2/λ 2
+n(2)T(x1,x 2; |r⊥ |) + · · ·, (4.3)
+where |∂Λ| denotes the surface of the half-space domain Λ at x = 0, and the third
+term has been added to the rhs and subsequently subtracted fro m the double integral
+(inducing in this way the truncation of the two-body density) in orde r to arrange the
+series for the application of the cumulant method. Assuming that th e classical density
+proﬁlen(x) is analytic at the boundary x = 0, i.e. n(x) = n(0)+n′(0)x+n′′(0)x2/ 2!+ · · ·
+(this condition is not always fulﬁlled, see subsection 5.1.), the integra l
+∫ ∞
+0
+dx e− 2x2/λ 2
+n(x) = λ
+∫ ∞
+0
+dx′e− 2x′2
+n(λx ′)
+=λ 1
+2
+√π
+2n(0) +λ 2 1
+4n′(0) +O(λ 3). (4.4)
+Wigner-Kirkwood expansion for semi-inﬁnite quantum ﬂuids 13
+Performing an analogous procedure in the double integral on the rh s of equation (4.3),
+we ﬁnally arrive at
+Z (0)
+qu
+Z = 1 − |∂Λ|λ 1
+2
+√π
+2n(0) + 1
+2!
+[
+|∂Λ|λ 1
+2
+√π
+2n(0)
+]2
+− |∂Λ|λ 2 1
+4n′(0)
++ |∂Λ|λ 2 π
+16
+∫
+dr⊥ n(2)T(0, 0; |r⊥ |) +O(λ 3). (4.5)
+We recall that the boundary values of the classical statistical qua ntitiesn(0), n′(0) and
+n(2)T(0, 0; |r⊥ |) are, in general, nonzero.
+The boundary factors 1 − exp(− 2x2/λ 2) do not play any role in the Boltzmann
+termB(1)
+β (3.12) when one is interested in the λ-expansion of the corresponding Z (1)
+qu up
+to the λ 2 order, so we can ignore them. After simple algebra, Z (1)
+qu is written as
+Z (1)
+qu
+Z =
+∫
+Λ
+dr e− 2x2/λ 2
+xn′(x) +λ 2
+[
+− β
+4
+⟨
+⃗
+/D6
+2
+V
+⟩
++ β 2
+6
+⣨
+(⃗
+/D6 V )2
+⟩]
++O(λ 3), (4.6)
+where the classical average is taken over the half-space Λ. The int egral on the rhs of
+(4.6) can be treated in the way outlined in the previous paragraph, w ith the result
+∫
+Λ
+dr e− 2x2/λ 2
+xn′(x) = |∂Λ|λ 2 1
+4n′(0) +O(λ 3), (4.7)
+the second term can be simpliﬁed by using the evident equality
+β 2
+⣨
+(⃗
+/D6 V )2
+⟩
+=β
+⟨
+⃗
+/D6
+2
+V
+⟩
++
+∫
+Λ
+dr /D6
+2n(r)
+=β
+⟨
+⃗
+/D6
+2
+V
+⟩
+− |∂Λ|n′(0), (4.8)
+provided that n′(0) is ﬁnite, see subsection 5.1.
+From the four contributions to the Boltzmann term B(2)
+β (⃗r) in (3.13), only the ﬁrst
+one implies the λ 2 term:
+Z (2)
+qu
+Z =λ 2
+[
+β
+6
+⟨
+⃗
+/D6
+2
+V
+⟩
+− β 2
+8
+⣨
+(⃗
+/D6 V )2
+⟩]
++O(λ 3). (4.9)
+Also here we can apply the relation (4.8) to eliminate the term β 2⟨(⃗
+/D6 V )2⟩ in favour of
+the Laplacian term.
+The results obtained in this subsection can be summarized by the exp ansion formula
+for the free energy, expanding in powers of λ the logarithm in βF qu = − lnZqu,
+βF qu =βF +λ 2 β
+24
+⟨
+⃗
+/D6
+2
+V
+⟩
++ |∂Λ|
+{
+λ 1
+2
+√π
+2n(0)
++λ 2 1
+24n′(0) − λ 2 π
+16
+∫
+dr⊥ n(2)T(0, 0; |r⊥ |)
+}
++O(λ 3). (4.10)
+The free energy of a quantum particle system constrained to a dom ain Λ of volume |Λ|
+and surface |∂Λ| possesses the following general form
+Fqu =f b
+qu|Λ|+γqu|∂Λ|, (4.11)
+where f b
+qu is the bulk free energy per unit volume and γqu is the surface tension. In
+the formula (4.10), the quantum contribution to the bulk part of th e free energy comes
+Wigner-Kirkwood expansion for semi-inﬁnite quantum ﬂuids 14
+only from the potential-dependent term ∝ ⟨ ⃗
+/D6
+2
+V ⟩. This term can, in principle, give also
+some surface contribution. But for our model system of the semi- inﬁnite one-component
+plasma constrained by the plain hard wall, the potential V fulﬁls the Poisson equation
+(2.23) and therefore the term ∝ ⟨ ⃗
+/D6
+2
+V ⟩ produces only the bulk quantum contribution to
+the classical free energy, as shown in equation (2.25). By comparin g (4.10) with (4.11),
+the surface tension is found to be
+βγ qu =βγ +λ 1
+2
+√π
+2n(0) +λ 2 1
+24n′(0) − λ 2 π
+16
+∫
+dr⊥ n(2)T(0, 0; |r⊥ |) +O(λ 3). (4.12)
+It is interesting that up to the λ 2 order the interaction potential V enters into the
+formula for the surface tension only implicitly via the classical one-bo dy and two-body
+averages. We note that, although for the one-component plasma the boundary truncated
+two-body density n(2)T(0, 0; |r⊥ |) in (4.12) exhibits a long-range decay of type 1 / |r⊥ |ν
+at asymptotically large |r⊥ | → ∞ [19, 20], this makes no divergence problem at large
+distances in the integration over the ( ν − 1)-dimensional r⊥ space.
+Without going into details, the result for the surface tension (4.12) can be
+straightforwardly generalized to many-component quantum ﬂuids composed of diﬀerent
+species α = 1 , 2,...,L with masses {mα }L
+α =1 and the corresponding de Broglie
+wavelengthsλ α = ¯h(β/m α )1/ 2:
+βγ qu =βγ + 1
+2
+√π
+2
+∑
+α
+λ αnα (0) + 1
+24
+∑
+α
+λ 2
+αn′
+α (0)
+− π
+16
+∫
+dr⊥ ∑
+α,β
+λ αλ βn(2)T
+αβ (0, 0; |r⊥ |) +O(λ αλ βλ γ ). (4.13)
+We note that in the special case of a multi-component Coulomb ﬂuid co ntaining at
+least two species with charges of opposite signs, a short-distance regularization of the
+Coulomb potential is needed in the evaluation of the classical averag es in (4.13) in order
+to prevent the thermodynamic collapse.
+4.2. Particle density proﬁle
+As concerns the quantum corrections to the classical density pro ﬁle and two-body
+density, since they involve a quantum Boltzmann factor which is not in tegrated on all
+variables, their expansion will contain, in addition to powers of λ, non-analytic terms
+exp(− 2x2/λ 2). Here, we shall restrict ourselves to the leading correction of or der λ,
+considering a factor x exp(− 2x2/λ 2) as being of order λ since its maximum is of order
+λ, as pointed out in section 3, using the expansion technique present ed in the previous
+subsection 4.1.
+The one-body density proﬁle (2.17) is obtained in the form
+nqu(x) =
+(
+1 − e− 2x2/λ 2 )[
+n(x) − λ 1
+2
+√π
+2
+∫
+dr⊥ n(2)T(x, 0; |r⊥ |)
+]
++xe− 2x2/λ 2
+n′(x) +O(λ 2), (4.14)
+where the ﬁrst (product) term has its origin in the Boltzmann term B(0)
+β (⃗r) (3.10) and
+the second term comes from B(1)
+β (⃗r) (3.12).
+Wigner-Kirkwood expansion for semi-inﬁnite quantum ﬂuids 15
+In the classical description of the one-component Coulomb plasma, the system is
+neutral as a whole,
+∫ ∞
+0
+dx [n(x) − n] = 0, (4.15)
+and a particle of charge e is surrounded by a screening cloud the average charge of which
+is exactly −e,
+n(x) = −
+∫
+dr⊥
+∫ ∞
+0
+dx′n(2)T(x,x ′; |r⊥ |). (4.16)
+The neutrality sum rule (4.15) is valid also in the quantum regime. For ou r purposes it
+can be reexpressed in the form
+∫ ∞
+0
+dx [nqu(x) − n(x)] = 0. (4.17)
+It is easy to check that for the density proﬁle (4.14) this relation is f ulﬁlled in the linear
+λ order.
+The formula (4.14) can be straightforwardly extended to a quantu m ﬂuid with many
+components α = 1, 2,...,L :
+n(α )
+qu (x) =
+(
+1 − e− 2x2/λ 2
+α
+)
+
+nα (x) − 1
+2
+√π
+2
+∫
+dr⊥ ∑
+β
+λ βn(2)T
+αβ (x, 0; |r⊥ |)
+
+
++xe− 2x2/λ 2
+αn′
+α (x) +O(λ 2). (4.18)
+4.3. Two-body density
+The leading quantum correction for the truncated two-body dens ity (2.19) is found to
+be
+n(2)T
+qu (r1, r2) =
+(
+1 − e− 2x2
+1/λ 2 ) (
+1 − e− 2x2
+2/λ 2 ){
+n(2)T(r1, r2)
+− λ 1
+2
+√π
+2
+∫
+dr⊥ n(3)T[r1, r2, (0, r⊥ )]
+}
++
+(
+1 − e− 2x2
+2/λ 2 )
+x1e− 2x2
+1/λ 2 ∂
+∂x1
+n(2)T(r1, r2) (4.19 a)
++
+(
+1 − e− 2x2
+1/λ 2 )
+x2e− 2x2
+2/λ 2 ∂
+∂x2
+n(2)T(r1, r2) +O(λ 2),
+where
+n(3)T (r1, r2, r3) = n(3) (r1, r2, r3) − n(2)T (r1, r2)n(r3) − n(2)T (r1, r3)n(r2)
+− n(2)T (r2, r3)n(r1) − n(r1)n(r2)n(r3). (4.19b)
+5. Coulomb models with known classical statistical quantit ies
+5.1. High-temperature Debye-H¨ uckel limit
+For the semi-inﬁnite one-component plasma, at least in two and thre e dimensions, the
+classical truncated two-body density and density proﬁle are know n in this limit (see,
+Wigner-Kirkwood expansion for semi-inﬁnite quantum ﬂuids 16
+e.g., equations (3.12) and (3.27) in [19]). The classical surface tensio n is also known (see
+equations (4.6) and (4.7) in [21]). The integrals which appear in (4.12) and (4.14) are
+easily computed:
+∫
+dr⊥n(2)T(x, 0; |r⊥ |) = −nκe− κx, (5.1)
+where κ = [2(ν − 1)πβe 2n]1/ 2 is the inverse Debye length. It should be noted that the
+density proﬁle
+n(x) = n + κν
+2π(ν − 1)
+×
+∫ ∞
+0
+e− κx − 2(1 +t2)1/ 2 exp[− 2(1 +t2)1/ 2κx]
+[(1 +t2)1/ 2 +t]2(3 + 4t2) tν− 2dt, (5.2)
+contrarily to the assumption in subsection 4.1., can be expanded in po wers of x only up
+to order x3− ν : the nth derivative of n(x) is inﬁnite for n ≥ 4 − ν.
+In two dimensions, n′(0) is ﬁnite and the quantum surface tension up to order λ 2
+(4.12) becomes
+βγ qu = κ
+2π
+(
+1 − π
+4
+)
++λ 1
+2
+√π
+2
+[
+n −
+(
+ln 3 − 1 + π
+√
+3
+9
+)
+κ2
+8π
+]
++λ 2
+(
+κ3
+72π + π
+16nκ
+)
++o(λ 2). (5.3)
+It is likely that n′′(0), which is inﬁnite, would appear if we attempted to compute the
+term of order λ 3. This is an indication that the Wigner-Kirkwood expansion of the
+surface tension is not in integer powers of λ in the present case; some singular term
+(logarithmic for instance) appears beyond the order λ 2.
+In three dimensions, n′(0) is inﬁnite. The integral (4.4) is nevertheless ﬁnite,
+although it cannot be expanded up to order λ 2 (instead, a term of order λ 2 lnλ appears).
+Also, using (4.8) in the contributions (4.6) and (4.9) to the partition f unction shows
+that these contributions, formally of order λ 2, are inﬁnite. This is an indication that
+some singular term, which we are unable to estimate, appears in the W igner-Kirkwood
+expansion of the surface tension beyond the order λ. At order λ, (4.12) gives
+βγ qu = 2 ln 2 − 1
+32π κ2 +λ 1
+2
+√π
+2
+[
+n −
+(
+1 − 3 ln 3 +π
+√
+3
+4
+κ3
+24π
+)]
++o(λ). (5.4)
+For the two-component plasma, the classical density proﬁles (see equation (4.9) in
+[19]), which contain the singular Bessel function K2(2κx), also cannot be expanded in
+powers of x to all orders.
+It is also interesting to compare the density proﬁles (4.18) for a man y-component
+semi-inﬁnite ﬂuid with the results of Aqua and Cornu [12], which have be en obtained by
+a very diﬀerent method, for a three-dimensional multi-component semi-inﬁnite quantum
+Coulomb ﬂuid. Let the charge of a particle of species α beeα . The inverse Debye length
+now is κ = (4πβ
+∑
+α nαe2
+α )1/ 2. An easy generalization of (5.1) shows that
+∫
+dr⊥n(2)T
+αβ (x, 0; |r⊥ |) = − 4πβn αeαnβeβ
+κ e− κx. (5.5)
+Wigner-Kirkwood expansion for semi-inﬁnite quantum ﬂuids 17
+Thus, (4.18) becomes
+n(α )
+qu (x) =
+(
+1 − e− 2x2/λ 2
+α
+)[
+nα (x) +
+√
+2π 3/ 2βn αeα
+κ
+(∑
+γ
+λ γnγeγ
+)
+e− κx
+]
++xe− 2x2/λ 2
+αn′
+α (x) +O(λ 2). (5.6)
+The ﬁrst line of (5.6) is identical to the result (1.14) in Aqua and Cornu [12]. However,
+they do not have the second line, since this second line is of higher ord er in κβe 2 and
+κλ than in the regime they have considered. More generally, terms of h igher order in λ
+are also of higher order in the classical dimensionless coupling parame ter κβe 2 and, in
+this weak coupling regime considered by Aqua and Cornu , there are no terms o(λ) in the
+density proﬁles.
+5.2. Exactly solvable two-dimensional one-component plas ma
+The classical two-dimensional one component plasma is an exactly so lvable model when
+βe 2 = 2. In particular, for the semi-inﬁnite geometry, the density proﬁ le and the two-
+body densities are exactly known [19]. Now, the density proﬁle
+n(x) = n 2
+√ π
+∫ ∞
+0
+exp[− (t − x
+√
+2)2]
+1 + Φ(t) dt, (5.7)
+where Φ is the error function, can be expanded in integer powers of x: all the derivatives
+of n(x) at x = 0 are ﬁnite (this might be a property of even integer values of βe 2 = 2).
+In particular,
+n(0) = n ln 2, (5.8)
+n′(0) = − √ π(2n)3/ 2
+∫ ∞
+0
+ln
+(
+1 + Φ(t)
+2
+)
+dt, (5.9)
+where the integral has the numerical value -0.3377. The integral w hich appears in (4.12)
+can be computed:
+∫
+dr⊥n(2)T(0, 0; |r⊥ |) = − 4
+√
+2
+πn3/ 2
+∫ ∞
+0
+e− 2t2
+[1 + Φ(t)]2 dt, (5.10)
+where the integral on t is related to the previous one: by integrations per partes, one
+ﬁnds
+∫ ∞
+0
+e− 2t2
+[1 + Φ(t)]2 dt =
+√ π
+2 + π
+2
+∫ ∞
+0
+ln
+(
+1 + Φ(t)
+2
+)
+dt = 0. 3558. (5.11)
+The classical surface tension is also known [21]:
+βγ = −
+√ n
+2π
+∫ ∞
+0
+ln
+(
+1 + Φ(t)
+2
+)
+dt. (5.12)
+Using (5.12), (5.8), (5.9), and (5.10) in (4.12) gives the surface ten sion.
+Wigner-Kirkwood expansion for semi-inﬁnite quantum ﬂuids 18
+6. Conclusion
+For nearly classical quantum ﬂuids (nearly classical means that the quantum eﬀects are
+weak), the Wigner-Kirkwood formalism can be generalized to semi-inﬁ nite ﬂuids, i.e.
+to ﬂuids conﬁned to a half-space x ≥ 0 by a hard plane wall at x = 0: the boundary
+condition for the wave functions is that they have to vanish at x = 0. Under the
+condition that the classical density proﬁle has all its derivatives with respect to x ﬁnite
+at x = 0, the surface tension can be expanded in powers, including odd po wers, of
+the thermal de Broglie wavelength λ; this is to be compared with the case of inﬁnite
+homogeneous ﬂuids with suﬃciently smooth interactions, which have a free energy
+the expansion of which contains only even powers of λ. The one-body and many-
+body densities are more complicated. Their expansions contain not o nly powers of λ,
+but also non-analytic position-dependent terms, localized near the wall, of the types
+exp(− 2x2/λ 2), x exp(− 2x2/λ 2), etc.
+The above assumption of the classical density proﬁle having all its de rivatives with
+respect to x ﬁnite at x = 0 is not always fulﬁlled; in particular, it fails for Coulomb
+ﬂuids in the high-temperature Debye-H¨ uckel regime. For such cases, the surface tension
+can be expanded in integer powers of λ only up to certain order, then singular terms
+appear, for instance of the type λ n lnλ.
+As a task for the future, one should consider the exchange eﬀect s for the half-space
+system geometry. We anticipate that, for the considered one-co mponent plasma, the
+exchange eﬀects are exponentially small and therefore negligible in t he nearly classical
+regime, like in the bulk case [17].
+The extension of the present formalism to more general boundary conditions is
+needed. For example, in the case of the Neumann boundary conditio n at x = 0 one has
+to write down the Boltzmann density in the basis of waves
+√
+2 cos(pxx/ ¯h) exp(ip⊥ ·r⊥/ ¯h)
+which derivation with respect to x vanishes at x = 0. Other geometries of the conﬁning
+domain (e.g., a strip of ﬁnite width) are also of interest.
+As concerns the model of the one-component plasma, we plan to ex tend the study to
+the hard walls made of conducting and dielectric materials; such walls im ply additional
+image forces acting on charged particles. In connection with Coulom b ﬂuids, one should
+also check explicitly all available quantum sum rules for the half-space geometry.
+Acknowledgments
+We gratefully acknowledge the support received from the Europea n Science Foundation
+(ESF “Methods of Integrable Systems, Geometry, Applied Mathem atics”). Partial
+supports from the CNRS-SAS agreement N o 18194 and from a VEGA grant of the
+Slovak Grant Agency are also acknowledged.
+References
+[1] Wigner E P, 1932 Phys. Rev. 40 749
+Wigner-Kirkwood expansion for semi-inﬁnite quantum ﬂuids 19
+[2] Kirkwood J G, 1933 Phys. Rev. 44 31
+Kirkwood J G, 1934 Phys. Rev. 45 116
+[3] DeWitt H E, 1962 J. Math. Phys. 3 1003
+[4] Hill R N, 1968 J. Math. Phys. 9 1534
+[5] Jancovici B, 1969 Phys. Rev. 178 295
+Jancovici B, 1969 Phys. Rev. 184 119
+[6] Pisani C and McKellar B H J, 1991 Phys. Rev. A 44 1061
+[7] Mason E A, Siregar J and Huang Y, 1991 Mol. Phys. 73 1171
+[8] DeWitt H E, 1962 J. Math. Phys. 3 1216
+[9] Brydges D C and Martin Ph A, 1999 J. Stat. Phys. 96 1163
+[10] Wang L and O’Connell R F, 1986 Phys. Rev. B 34 5160
+[11] Centelles M, Del Estal M and Vi˜ nas X, 1998 Nucl. Phys. A 635 193
+[12] Aqua J N and Cornu F, 2004 J. Stat. Phys. 115 997
+[13] Aqua J N and Cornu F, 2000 J. Phys. IV France 10 441
+[14] Kleinert H, 2006 Path Integrals in Quantum Mechanics, Statistics, Polymer P hysics, and Financial
+Markets 4th edn (Singapore: World Scientiﬁc)
+[15] Martin Ph A, 1988 Rev. Mod. Phys. 60 1075
+[16] Alastuey A and Jancovici B, 1979 Physica A 97 349
+[17] Jancovici B, 1978 Physica A 91 152
+[18] Jancovici B, 1976 Mol. Phys. 32 1177
+[19] Jancovici B, 1982 J. Stat. Phys. 28 43
+[20] Jancovici B, 1982 J. Stat. Phys. 29 263
+[21] Russier V, Badiali J P, and Rosinberg M L, 1985 J.Phys. C 18 707

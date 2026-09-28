@@ -1,0 +1,9 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "The actual initial source is not identically zero. The guarded derivative path stopped before propagation; do not erase or zero that initial source.",
+  "correction": "Add the exact initial fronts [S0(x-c*t)+S0(x+c*t)]/2 to Uxx. Keep the same background, pulse, clocks, grids and acceptance gates.",
+  "original_sha256": "56d9ec04da66c531081c93f59f62ae1aab66174d3a58766e41f035a82e3e6482",
+  "producer_sha256": "88f9b1aef79604ca76c5c032f5224554be9501ce71886e2e08519ac57d5b0bd0",
+  "audit_sha256": "52a983b1c813237630ad350275fe87983d5f1d7e73c6eb59c70ff21a63959e55",
+  "remaining_apply_seconds": 237.372516597
+}

@@ -1,0 +1,226 @@
+{
+  "classification": "Counterexample candidate",
+  "saved_replay_passed": true,
+  "histories": 16,
+  "source_bindings": 64,
+  "maximum_readout_relative": 4.129653933980458e-15,
+  "checks": {
+    "def-gr-response-basis/p4-128.json": {
+      "readout_relative": 3.886412741684391e-15,
+      "heat_balance": 3.551145923447293e-18
+    },
+    "def-gr-response-basis/p4-256.json": {
+      "readout_relative": 3.2376545484990746e-15,
+      "heat_balance": 3.551145923447293e-18
+    },
+    "def-gr-response-basis/p4-512.json": {
+      "readout_relative": 3.5168664811894478e-15,
+      "heat_balance": 3.551145923447293e-18
+    },
+    "def-gr-response-basis/pilot-64.json": {
+      "readout_relative": 4.129653933980458e-15,
+      "heat_balance": 3.551145923447293e-18
+    },
+    "def-gr-full-weeks/beta1024/p1-1024.json": {
+      "readout_relative": 9.064078202823457e-17,
+      "heat_balance": 3.551145923447293e-18
+    },
+    "def-gr-full-weeks/beta1024/p1-2048.json": {
+      "readout_relative": 8.3257856786327e-17,
+      "heat_balance": 3.551145923447293e-18
+    },
+    "def-gr-full-weeks/beta1024/p1-512.json": {
+      "readout_relative": 9.008737183358777e-17,
+      "heat_balance": 3.551145923447293e-18
+    },
+    "def-gr-full-weeks/beta1024/p2-1024.json": {
+      "readout_relative": 8.334879434996765e-17,
+      "heat_balance": 3.551145923447293e-18
+    },
+    "def-gr-full-weeks/beta1024/p2-2048.json": {
+      "readout_relative": 8.78527880246137e-17,
+      "heat_balance": 3.551145923447293e-18
+    },
+    "def-gr-full-weeks/beta1024/p2-512.json": {
+      "readout_relative": 1.0437023607822145e-16,
+      "heat_balance": 3.551145923447293e-18
+    },
+    "def-gr-full-weeks/beta1024/p4-1024.json": {
+      "readout_relative": 8.307737576555654e-17,
+      "heat_balance": 3.551145923447293e-18
+    },
+    "def-gr-full-weeks/beta1024/p4-2048.json": {
+      "readout_relative": 8.645510458406156e-17,
+      "heat_balance": 3.551145923447293e-18
+    },
+    "def-gr-full-weeks/beta1024/p4-512.json": {
+      "readout_relative": 8.107983681162756e-17,
+      "heat_balance": 3.551145923447293e-18
+    },
+    "def-gr-full-weeks/p4-1024.json": {
+      "readout_relative": 5.901472994863668e-17,
+      "heat_balance": 3.551145923447293e-18
+    },
+    "def-gr-full-weeks/p4-2048.json": {
+      "readout_relative": 8.112638953402772e-17,
+      "heat_balance": 3.551145923447293e-18
+    },
+    "def-gr-full-weeks/p4-512.json": {
+      "readout_relative": 8.463705949844138e-17,
+      "heat_balance": 3.551145923447293e-18
+    }
+  },
+  "decisions": {
+    "def-gr-response-basis/p4": {
+      "passed": false,
+      "comparisons": {
+        "velocity_mass_RMS_m_s": {
+          "previous": 0.010634261594208551,
+          "last": 0.00384007268645297,
+          "order": 1.4695143368633004,
+          "decreased": true
+        },
+        "scalar_mass_RMS": {
+          "previous": 0.022033498374001412,
+          "last": 0.0011109881016164627,
+          "order": 4.309783306430739,
+          "decreased": true
+        },
+        "old_interface_velocity_RMS_m_s": {
+          "previous": 0.20318539149757872,
+          "last": 0.2075865802860999,
+          "order": -0.03091650193866083,
+          "decreased": false
+        },
+        "new_interface_velocity_RMS_m_s": {
+          "previous": 0.14825572767974804,
+          "last": 0.009135892000733368,
+          "order": 4.020398436301544,
+          "decreased": true
+        }
+      }
+    },
+    "def-gr-full-weeks/p4": {
+      "passed": false,
+      "comparisons": {
+        "velocity_mass_RMS_m_s": {
+          "previous": 0.0009812947777494518,
+          "last": 0.00036105047217216266,
+          "order": 1.4424860531808543,
+          "decreased": true
+        },
+        "scalar_mass_RMS": {
+          "previous": 1.2077063928467771e-06,
+          "last": 1.7983276862365128e-10,
+          "order": 12.713326212616806,
+          "decreased": true
+        },
+        "old_interface_velocity_RMS_m_s": {
+          "previous": 0.0015719391649280997,
+          "last": 8.06922146617743e-05,
+          "order": 4.28397208895359,
+          "decreased": true
+        },
+        "new_interface_velocity_RMS_m_s": {
+          "previous": 2.116673574508146e-07,
+          "last": 6.789978450009392e-16,
+          "order": 28.215744657784633,
+          "decreased": true
+        }
+      }
+    },
+    "def-gr-full-weeks/beta1024/p1": {
+      "passed": true,
+      "comparisons": {
+        "velocity_mass_RMS_m_s": {
+          "previous": 0.6377796824193341,
+          "last": 1.875672219106656e-07,
+          "order": 21.69721897468326,
+          "decreased": true
+        },
+        "scalar_mass_RMS": {
+          "previous": 0.6434073616613121,
+          "last": 7.136004777873231e-07,
+          "order": 19.78218443105747,
+          "decreased": true
+        },
+        "old_interface_velocity_RMS_m_s": {
+          "previous": 0.6411655881408753,
+          "last": 3.6244170979183066e-07,
+          "order": 20.75451657603926,
+          "decreased": true
+        },
+        "new_interface_velocity_RMS_m_s": {
+          "previous": 0.6380498393046515,
+          "last": 1.1709439720103475e-07,
+          "order": 22.377565642808435,
+          "decreased": true
+        }
+      }
+    },
+    "def-gr-full-weeks/beta1024/p2": {
+      "passed": true,
+      "comparisons": {
+        "velocity_mass_RMS_m_s": {
+          "previous": 0.6370074626820352,
+          "last": 1.8798693532191508e-06,
+          "order": 18.3703183472479,
+          "decreased": true
+        },
+        "scalar_mass_RMS": {
+          "previous": 0.6434064414877037,
+          "last": 7.134092797282357e-07,
+          "order": 19.782568967084753,
+          "decreased": true
+        },
+        "old_interface_velocity_RMS_m_s": {
+          "previous": 0.641071147718866,
+          "last": 3.623264421276684e-07,
+          "order": 20.754762953345352,
+          "decreased": true
+        },
+        "new_interface_velocity_RMS_m_s": {
+          "previous": 0.638051718115705,
+          "last": 1.197248941304168e-07,
+          "order": 22.345518777748417,
+          "decreased": true
+        }
+      }
+    },
+    "def-gr-full-weeks/beta1024/p4": {
+      "passed": true,
+      "comparisons": {
+        "velocity_mass_RMS_m_s": {
+          "previous": 0.6387629115530276,
+          "last": 3.5183351014387944e-05,
+          "order": 14.14810002976354,
+          "decreased": true
+        },
+        "scalar_mass_RMS": {
+          "previous": 0.6434065409504095,
+          "last": 7.131006791502729e-07,
+          "order": 19.783193393994328,
+          "decreased": true
+        },
+        "old_interface_velocity_RMS_m_s": {
+          "previous": 0.6416670185519581,
+          "last": 1.9342198604408793e-05,
+          "order": 15.017785417143743,
+          "decreased": true
+        },
+        "new_interface_velocity_RMS_m_s": {
+          "previous": 0.6394650157384835,
+          "last": 1.2592589422447728e-07,
+          "order": 22.275859026813034,
+          "decreased": true
+        }
+      }
+    }
+  },
+  "spatial_comparison_reproduced": true,
+  "propagation_passed_all_three_spaces": true,
+  "spatial_passed": false,
+  "original_failure_resolved": false,
+  "new_evolutions": 0,
+  "seconds": 2.7353686249999996
+}

@@ -1,0 +1,48 @@
+{
+  "classification": "Conjectural",
+  "checkpoint": "fa2c644d0",
+  "claim": "Replace operator splitting by an actual simultaneous nonlinear material and angular-photon time solve; adjudicate the remaining4.889percent full-trace time mismatch.",
+  "decision": "Accept this fixed-background time response only if the existing2percent trace and surface-spectrum gates pass; then resolve radial/frequency error and connect the same photon port to the moving atmosphere.",
+  "reuse": "All existing16 radii,152 Killing frequencies,8/16 angular bins,64/128 time paths,3.434ms horizon,initial angular occupations,thermal native table and boundaries unchanged. No new EOS table or larger grid.",
+  "equations": "At fixed material trial, solve the banded photon equations exactly at each frequency; use their derivatives to form the32variable gas Schur system. Apply a conservative two-stage L-stable SDIRK method with gamma=1-1/sqrt(2). Both stages couple streaming,Thomson scattering,H absorption/emission,neutral inventory and total gas energy.",
+  "positivity": "Higher-order stiff time integration is not unconditionally positive. Check every accepted stage and endpoint without clipping. A negative photon or unsupported native state is a failure, not permission to refine automatically.",
+  "gates": {
+    "time_trace": 0.02,
+    "time_surface_spectrum": 0.02,
+    "angle_trace": 0.02,
+    "angle_surface_spectrum": 0.02,
+    "energy": 1e-08,
+    "nonlinear_residual": 1e-09,
+    "positive_photons": true,
+    "jacobian_directional": 1e-05
+  },
+  "budget": {
+    "pilot_steps_each": 2,
+    "pilot_paths": [
+      [
+        8,
+        64
+      ],
+      [
+        16,
+        128
+      ]
+    ],
+    "pilot_seconds": 30,
+    "production_seconds": 120,
+    "CPU_threads": 1,
+    "memory_GB": 2,
+    "native_audit_calls": 24,
+    "native_audit_seconds": 10
+  },
+  "forecast": "Measure both angular path costs. Production prediction uses measured seconds/step; upper bound assumes2x measured cost. Later nonlinear stiffness remains unmeasured.",
+  "stop": "Preserve failures. No automatic256step path,extra radius/frequency,EOS support expansion or weaker gate. A failed prediction or120s cap stops production for reassessment.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_unsplit_photons.py": "eb2bf8ce1a8e7acdb7c24f855bbae05f24301c51398488211c6720df2a79646c",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_angular_photons.py": "ee3da788b9519daa0b9b97793cc1ba2a7d2de4a53394e15d2830941426041aed",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_causal_nonlinear.py": "30a951fc7c2e22602c412cabc44e411d72574720dc7a6e001ea410466f57738a",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-angular-photons/thermal-support/bank.npz": "ece43dd8ed5818dd4dd9dcf24a5b530a072bbe2f7ffe4d2fed329f89fdb916b3",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-causal-photons/bank-16-8.npz": "a1a50db7f12f7111bd87a9e46a514e1db75227f5e74d234f64beafc6a67b6104",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-angular-photons/second-order-result.json": "b459a6af4864a441ed8d3c4cbd379c138ab85840f938f7399e9f475c5ea462ac"
+  }
+}

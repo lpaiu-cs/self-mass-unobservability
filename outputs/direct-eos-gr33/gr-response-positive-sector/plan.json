@@ -1,0 +1,24 @@
+{
+  "classification": "Proven",
+  "checkpoint": "84029ef",
+  "bits": 128,
+  "relative_Q_radius": "1/256",
+  "beta_box": [
+    "3e-6",
+    "0.006"
+  ],
+  "eta_box": [
+    -17,
+    24
+  ],
+  "thermal_cutoff_offset": 128,
+  "bindings": {
+    "verification/gr_response_positive_sector.py": "5a4e870e4a922ac086b1af51df498999c6c5c22c40d18c9b10898598eb8d7199",
+    "outputs/direct-eos-gr33/gr-response-complex-defined/manifest.json": "8b226e602527679f9757e9735bad51a0aeba4d1a95f3a62466600455c2c9b80b",
+    "outputs/direct-eos-gr33/gr-response-complex-defined/symbolic.json": "4ab737ebaf6c80b34baa7cf1d7838ada2a9011271159faf75f508eb6cb516bff",
+    "outputs/direct-eos-gr33/gr-logarithmic-response/inputs.npz": "c9695e054b3ef6bf11b63a24909d7a4e549429d65a72bea4d9ad982b76afda53"
+  },
+  "target": "Prove Re S(Q)>0 on |Q-q0|<=q0/256 for every q0>0 throughout the complete beta/eta box, and hence a zero-free dielectric denominator for every positive B. Avoid shrinking the radius by a Cauchy perturbation bound.",
+  "method": "Use the exact positive-coefficient kernel in u=p/Q to bound both its modulus and phase. Retain positivity up to t_a=max(eta,0)+128; compare its complement to a doubled-temperature eta=0 distribution. Uniform all-Q lower and upper response bounds both scale as 1/max(1,a^2).",
+  "boundary": "This is a conditional ideal-electron continuum theorem and an input-domain audit. It does not evaluate the outer integral or certify a complete interacting EOS/GR/observational model."
+}

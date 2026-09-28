@@ -1,0 +1,7 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": false,
+  "reason": "Each request specified 1000 range-generated edges, but each returned Photon grid has 998 lower edges and 998 group rows, not 999. The last printed lower edge matches requested index 997. The requested egphigh is only echoed, not proof of the actual last bin upper edge. Do not silently stretch a bin or invent the missing interval.",
+  "original_data_preserved": true,
+  "scientific_gate_evaluated": false
+}

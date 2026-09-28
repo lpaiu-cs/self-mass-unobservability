@@ -1,0 +1,45 @@
+{
+  "classification": "Counterexample candidate",
+  "controller": {
+    "state": "failed",
+    "action": "coarse",
+    "completed": [
+      {
+        "action": "prefix",
+        "returncode": 0
+      },
+      {
+        "action": "coarse",
+        "returncode": 1
+      }
+    ],
+    "elapsed_seconds": 4626.854142013
+  },
+  "accepted_actual_steps": {
+    "64": 115,
+    "128": 215
+  },
+  "full_horizon_completed": false,
+  "original_failures_preserved": true,
+  "high_precision_actual_native_flux": true,
+  "actual_same_joint_solution_GR_computed": false,
+  "gr_controller": null,
+  "gr_fields": null,
+  "physical_final_charge_solved": false,
+  "self_GR_return_closed": false,
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false,
+  "actual_result": null,
+  "actual_failure": {
+    "classification": "Counterexample candidate",
+    "error": "AssertionError(('Four-moment linear residual', 1.7944029943355525e-14, [np.longdouble('2.0310400592099698016e-19'), np.longdouble('2.5810319085546680777e-20'), np.longdouble('4.6655187390485645297e-21'), np.longdouble('2.6807706434439786844e-30')]))",
+    "time": 0.0033271051454934306,
+    "step": 2.6831493108817987e-05,
+    "actual_accepted_steps": 115,
+    "macro_index": 62,
+    "sub_index": 0,
+    "last_accepted_inputs_saved": true,
+    "serialized_substep_restart_validated": false,
+    "final_charge_conclusion": "unadjudicated"
+  }
+}

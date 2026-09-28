@@ -1,0 +1,24 @@
+{
+  "classification": "Proven",
+  "kappa": "17798080000000000/953322457445838711",
+  "kappa_decimal": 0.018669527672394274,
+  "B_m": "3559616000000000000000/4126937045220081",
+  "parameter_radius": "1/100",
+  "bounds_exact_m": {
+    "1": "783889692589894646700939456000000000000000/874872881718354637879378752626141521",
+    "2": "27903462919780704227110113026088960000000000000000000000000/818309197438424071808199623356726754130163420826219431",
+    "3": "1489884195969871668871331881342120191590400000000000000000000000000000000000/765402559166178144758521025363250875811820370627474357016776788320193441"
+  },
+  "bounds_decimal_m": {
+    "1": 896004.1041050922,
+    "2": 34098.92374071767,
+    "3": 1946.5367317205425
+  },
+  "central_difference_truncation_bound_m": {
+    "0.001": 0.00032442278862009045,
+    "0.0005": 8.110569715502261e-05
+  },
+  "assumptions": "Fixed static spherical metric globally N>=0.99, f>=0.99, N<=1; matter radius<=7e7m; 0<=trace<=2e8*c^2 SI, beta=-4, v(epsilon)=v0*(1+epsilon*s), |s|<=1, |epsilon|<=0.01. Schwarzschild exterior and regular center; derivative with respect to this potential parameter only.",
+  "proof": "The positive static Green operator K has sup norm <=kappa and the asymptotic-charge functional L norm <=B. phi=(I-K0-epsilon*K1)^(-1)1; ||K1||<=kappa, ||L1||<=B. Differentiate its convergent Neumann resolvent. |chi^(n)| <= n! B kappa^(n-1)/(1-(1+a)kappa)^(n+1) for n>=1 and |epsilon|<=a.",
+  "exclusions": "Bounds do not include ODE solver error or derivatives of EOS/TOV reconstruction, variable metric, or observations."
+}

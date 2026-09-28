@@ -1,0 +1,49 @@
+{
+  "classification": "Conjectural",
+  "kind": "Declared equal-mass weak-field binary benchmark; not a measured binary or an executed orbit.",
+  "parameters": {
+    "beta": -4.0,
+    "background_phi": 0.001,
+    "companion_mass_over_star": 1,
+    "semimajor_axis_over_star_radius": 10,
+    "eccentricity": 0.1
+  },
+  "inputs": {
+    "material_mass_geom_cm": 29168.71724623933,
+    "radius_cm": 6881933745.172056,
+    "initial_sha256": "da7d0ec50e6f0d75bcd7c673d78099dd8f759a3c0ffc5a8546f62e54488017a1"
+  },
+  "leading_drive": {
+    "alpha_companion": -0.004,
+    "period_seconds": 15665.751496628753,
+    "omega_R_over_c": 9.207005858815045e-05,
+    "maximum_scalar_excursion_from_inverse_semimajor_reference": 1.8837545974278792e-10,
+    "maximum_delta_u": 1.8837545974278793e-07,
+    "maximum_linear_delta_logA": 7.535018389711516e-13
+  },
+  "drive_definition": "phi_ext(t)=-alpha_B M_B/r_AB(t), r=a(1-e cos E), E-e sin E=Omega t. Include the DC field in the stationary background; actual source includes nonzero phi0. alpha_B=beta*phi0 is a leading weak-body approximation, not a matched charge certificate.",
+  "primary_readout": "delta(alpha_A/phi0) from a scalar exterior matched to infinity, after paired undriven background subtraction; report the direct field response and material-mediated response separately. Force readout is alpha_B delta(alpha_A). Temperature is an intermediate state only.",
+  "comparator": "Same-inventory quasistatic equilibrium response with exterior matching; optional free real derivatives through order four must be explicitly labeled as a restricted nuisance class. Three or more orbital harmonics, with withheld-frequency prediction. No novelty claim against arbitrary unbounded derivative order.",
+  "numerical_target": {
+    "charge_over_phi0_residual": 1e-09,
+    "combined_error_budget": 1e-10,
+    "target_is_not_observational_sensitivity": true,
+    "normalized_thermal_response_needed_for_target": 5308.54709719314
+  },
+  "execution_rule": "First solve normalized matter/charge sensitivities or bound them. Test background evolution over the intended orbital interval before a stationary transfer-function approximation. Do not run an orbit merely to subtract nearly equal native states. If the certified residual upper bound is below the declared 1e-9 computational target, close this benchmark without a long run; this is not a universal no-go.",
+  "fast_pulse_relation": {
+    "pulse_duration_seconds": 0.45911320058438937,
+    "pulse_amplitude": 0.0002,
+    "pulse_is_companion_matched": false,
+    "period_over_pulse_duration": 34121.762294546,
+    "pulse_amplitude_over_leading_orbital_excursion": 1061709.419438628
+  },
+  "unclosed": [
+    "Matched companion charge and nonzero-background stellar initial data",
+    "Normalized charge response and physical orbital interval background evolution",
+    "Physical heat-transport coefficients, EOS and atmosphere uncertainty",
+    "Static/derivative subtraction and observational likelihood"
+  ],
+  "source": "Khalil et al. 2022, arXiv:2206.13233v2, effective point-particle scalar charge and Newtonian binary Hamiltonian; parameters here are newly declared, not their neutron-star results.",
+  "source_sha256": "eb88778232feb97189a6fa2dcb8132b18ed26c4b80d5040e0fc31b3dc3cbaf7f"
+}

@@ -1,0 +1,12 @@
+{
+  "classification": "Counterexample candidate",
+  "evidence": "Scaled partition evaluation recovered240,200,170,160,120K. At80K the EOS constraint succeeds but the Python optical reader asserts because native excitation diagnostics omit a smaller-than-representable H excitation term.",
+  "repair": "Export the H excited/ground log partition ratio before native floating-point suppression. Reconstruct logarithmic finite-level fractions and combine absorption/emission exponents before exponentiation. Keep the actual constrained EOS and its physical free energy unchanged.",
+  "budget": {
+    "build_seconds": 60,
+    "remaining_control_native_calls": 68,
+    "control_seconds": 30
+  },
+  "acceptance": "Old retained states agree within1e-10; actual failed native energy root within2e-11; full constrained inventories1e-12 and relative H1e-8. A log optical representation is required before any cold table extension.",
+  "source_sha256": "99e7a21b4cf1dcf2d41258cf210c286d50394848942dda37ea677fd6e981c051"
+}

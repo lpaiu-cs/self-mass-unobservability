@@ -1,0 +1,14 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "fbcfefe",
+  "bindings": {
+    "verification/verify_plasma_interval_records.py": "408a4400bb8e0a3afce5ff685b9ea49451292393d53fd8fd8a1410394320a1f1",
+    "outputs/direct-eos-gr33/gr-plasma-interval/controls-manifest.json": "6e09ea2c566c36796ef7fd456d93721c9e9c3de7ab7d341513ce384b26fa4dfb",
+    "outputs/direct-eos-gr33/gr-plasma-interval/plan.json": "9509637a0a8d28cb41eb53df1da43b0f033c0c32921d471f3473fca8d42d0eb8"
+  },
+  "expected_cells": 5735,
+  "expected_tests_per_cell": 11,
+  "threshold": "1e-10",
+  "rule": "Wait for the original complete frozen manifest, verify runtime libraries and exact row coverage, then use max(original rational error, absolute outward exported residual endpoints) as the reported bound. Preserve any original endpoint-budget discrepancies and report additional padding. No tolerance or physical parameter changes.",
+  "physical_EOS_certified": false
+}

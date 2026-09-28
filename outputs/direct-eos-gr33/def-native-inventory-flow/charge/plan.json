@@ -1,0 +1,20 @@
+{
+  "classification": "Counterexample candidate",
+  "seconds": 45,
+  "EOS_calls": 30,
+  "new_fluid_steps": 0,
+  "claim": "Apply the completed frozen-inventory conservative histories to the exact same direct retarded Green and local acoustic readout used for LTE. Compare on448/896 grids and against the saved same-grid896 LTE wave.",
+  "gates": {
+    "wave_grid": 0.02,
+    "native_bulk_gamma": 0.002
+  },
+  "boundary": "Uniform initial chemical inventories and no finite reactions; prescribed nonlinear gas with local acoustic bulk. Full scalar/metric feedback, absorptive photons and a physical tail are not certified. A surviving direct component is not the final charge.",
+  "inputs": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_inventory_charge.py": "b4dbedf4cbc0242532d0d8c39de6cb9aaf101103cee37c4d737719f3de84d5cb",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_inventory_flow.py": "07cbe9917767a1df5e4dc33fec661a58b7b408c652ecbe80b13ff61a8140d435",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_release_charge.py": "436c719793fa72c33a8db5cc33a252f3ae06186baa382615adddbcf631c27486",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-inventory-flow/dilute-eos.npz": "dc2ca9cdbd3792ad9a59bfbf7327e81eb37b032e70f35c4515cc559b6558f995",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-inventory-flow/dilute/cells-448.npz": "c45101ae983fe5e69eba75dc74ee4f1d6dca7af6a3929c4862e01b810fbcac9d",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-inventory-flow/dilute/cells-896.npz": "b47c965dd5468e1e98118793932460ac507a0eec024b5d1cf88de1925ffe4fbe"
+  }
+}

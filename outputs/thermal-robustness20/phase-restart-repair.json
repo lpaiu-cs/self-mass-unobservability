@@ -1,0 +1,24 @@
+{
+  "classification": "Proven",
+  "original_plan_sha256": "66416e613ff18a2b74b1e149d0f9ba96220fee110a050d5b8fc6fee5503e9c40",
+  "reason": "Exact max_age termination saves dt_next=0; both direct continuations stopped without taking a step.",
+  "correction": "Use the last regular pre-termination photo, retain all physical controls, and compare shared replay history. Do not edit binary photo fields.",
+  "parents": {
+    "fast": {
+      "replay_model": 19200,
+      "photo": "x200",
+      "photo_sha256": "9baa5af9e03274667dc6c2f70470bb5dcc5ceb1dc883a721f6ec32d7cb836c67"
+    },
+    "time": {
+      "replay_model": 19800,
+      "photo": "x800",
+      "photo_sha256": "be1a1e4f62bf50a07eeb337f182356aa118d6cbdf08a8c181047594f5fadae44"
+    }
+  },
+  "age_window_yr": [
+    5732508779.985576,
+    5742508779.985576
+  ],
+  "Teff_stop_K": 15500,
+  "physical_selection_or_success_rule_changed": false
+}

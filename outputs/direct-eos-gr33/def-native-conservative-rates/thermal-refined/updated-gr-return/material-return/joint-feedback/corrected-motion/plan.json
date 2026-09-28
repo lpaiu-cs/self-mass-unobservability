@@ -1,0 +1,46 @@
+{
+  "classification": "Counterexample candidate",
+  "before_checkpoint": "245e3d611",
+  "claim": "Apply the corrected large material baryon/momentum/inventory and noncollisional energy/H transport to actual simultaneous photon/energy/H equations, then return their new paired transfers to material and GR.",
+  "decision": "Measure whether correcting the material input reduces the unresolved0.089750percent energy and0.143735percent H mismatch to the temporal-comparison scale. A small charge correction alone is not acceptance of coupling.",
+  "reuse": "Same corrected physical EOS/background/atmosphere,531 cells,8 angles,152 frequencies,17 knots,64/128 clocks,3.434431ms,conservative primitive map and stage-time SDIRK. Reuse all primary GR/lapse and native banks. Change the prescribed material history only.",
+  "numerical_scope": "One corrected waveform return; not uniform contraction, continuous-time residual control, full exterior/floor transport, nonlinear GR or final charge. Preserve the Phase135 tiny GR response separately; do not silently claim it is included in this large-motion sweep.",
+  "budgets": {
+    "pilot_wall_seconds": 120,
+    "production_wall_seconds": 650,
+    "CPU_processes": 3,
+    "threads_each": 1,
+    "total_virtual_GiB": 9,
+    "new_native_states": 0,
+    "production_attempts": 1
+  },
+  "forecast": "Measure concurrent4/8/4 prefixes using the already loaded owners with Linux fork. For each path use both17-point/remaining-step extrapolation and the completed Phase134 late operator/stepping costs scaled by its matching old/new prefix rates. Require2x the larger forecast within650s. Changed late Krylov cost and shared I/O remain unmeasured; hard caps apply.",
+  "gates": {
+    "conservation": 1e-08,
+    "linear": 1e-12,
+    "velocity_jet": 0.0001,
+    "mapping": 1e-10,
+    "time": 0.02,
+    "background": 0.02,
+    "angular_port": 1e-12
+  },
+  "stop": "Stop on a failed prefix, forecast, path, gate or cap; preserve prefixes. No automatic additional waveform iteration, refinement, longer horizon, new support, gate relaxation or physical replay.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_corrected_motion_feedback.py": "3b2f7c628af9f0a0392eeff9dfbacbb920a088826b5c824d21d5936f696de050",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_updated_joint_feedback.py": "d576b977693d273c0acd0cabd98bb87049e4fbff4019d40df21dddf4a27f57fe",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_matter_photon_feedback.py": "19acadd46d8f6059406fc3614c151de187323cec68f73faf9319e663f0466fb9",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_stage_feedback.py": "6852dd1943e9ecd581f6f081815c8252aed68329de5666dd441973b33c847297",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_corrected_joint_return.py": "f8991930808a653d659a4a1d97da558a00762137617932121c266b90b9bb855c",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_stage_aligned_material.py": "0bfdd1f79ccdbc2a41840d8f6e4ad53ef7c7c6249af7770b02cd6da63eeb5992",
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_corrected_joint_return.py": "60fdc8467692dae6f57eb032dbe35f54b1c6cb3bfc1e1e225e087e9b62a2b59f",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/stage-aligned/audit.json": "1eb0af6c4c221e32f8bb392c63be661880054c87084b9a54ac15fed0273659e1",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/result.json": "a39af4cc1180e7c9235ae3a3de24d510c6ba9b6a62708dc9b7a40a1cf1c397be",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-pilot.json": "1f14b0c37ca05a4dd187cf3e70251c630a4833434ff3203560bfe331bb532db5",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/stage-aligned/steps-64-reference-128.npz": "585641297e77fd2e6063585f1c78c6336078d7810059e0d53dc4af737ddc4f75",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/steps-64-reference-128.npz": "e2311288737c92cc3611f0ad81d0e4b307da9f7ccb89afdbca37cf0f9ff971ea",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/stage-aligned/steps-128-reference-128.npz": "2fe564a5ed67e7ca9f6a8ac4090adfbacc0e5f933541a18ea113907432130cad",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/steps-128-reference-128.npz": "c8ce34089456d20b64bf2a48754c4f696a2a7b30f252dae09bb3a87e9a228215",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/stage-aligned/steps-128-reference-64.npz": "6a2f698e13b3ba696b6d8024ed15df323ee30402a5d162170491f9a670b88ea1",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/steps-128-reference-64.npz": "edfc376b599ffecbd973a14754e5ed81dce2f2958e38af9801f14b6f2c0fd903"
+  }
+}

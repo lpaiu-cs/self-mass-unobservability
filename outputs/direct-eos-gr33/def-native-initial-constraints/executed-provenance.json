@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "rows": [
+    {
+      "plan": "plan.json",
+      "executed_producer_archive": "cauchy-producer.py",
+      "sha256": "d6a50920993d8a9480f94168a5dbc8b9111c9eedd001788ff79f2899e294781d"
+    },
+    {
+      "plan": "balanced-plan.json",
+      "executed_producer_archive": "balanced-producer.py",
+      "sha256": "6df77cb1717722b0df51c61aaa96f0c8823c88fea41cc6e719307b330964da7a"
+    },
+    {
+      "plan": "audit-plan.json",
+      "executed_producer_archive": "audit-producer.py",
+      "sha256": "825043c65327356eae0b603c1ce97f1d13ce30b6fe4bc2c7514ff3b51e9fd615"
+    },
+    {
+      "plan": "finite-volume/first-audit-plan.json",
+      "executed_producer_archive": "finite-volume/first-audit-producer.py",
+      "sha256": "09a0828a0ff384ff211dcd7a708dba698f39bfebc38f9226d367717ef6f28405"
+    }
+  ],
+  "explanation": "Earlier source-bound plans retain their executed hashes. Their code is preserved in these archives; the current implementation includes subsequent explicit repairs."
+}

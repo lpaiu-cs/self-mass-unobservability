@@ -1,0 +1,105 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "rows": [
+    {
+      "time": 0.0002146519448705439,
+      "checks": [
+        {
+          "amplification": 1.4757395258967641e+20,
+          "native": [
+            2.009432346645459e-09,
+            1.0407600428273122e-09,
+            8.851068880788029e-10,
+            7.356908213635363e-11
+          ],
+          "photon": 4.05629397645855e-11
+        },
+        {
+          "amplification": 2.9514790517935283e+20,
+          "native": [
+            1.4859776246965572e-09,
+            5.44788885497647e-10,
+            4.685641429004829e-10,
+            8.776293600761667e-12
+          ],
+          "photon": 2.0960317397768416e-11
+        }
+      ],
+      "actual_odd_frequency_owner_reused": true,
+      "photon_moment_error": 5.2111485710666925e-17,
+      "native_return_over_primary_rate": [
+        3.090166725057445e-25,
+        1.7882260159561135e-29,
+        4.2776966867674005e-29,
+        5.37568020841553e-27
+      ],
+      "actual_native_return_L1": [
+        1.3772994271944319,
+        55.278491130297155,
+        1.038264310248539e-17,
+        766247.4307156994
+      ],
+      "actual_photon_return_energy_L1": 3.6442269251360766e-24,
+      "actual_collision_return_L1": [
+        4.223944804276805,
+        2342477368.950817,
+        0.0,
+        33.32617718764092
+      ]
+    },
+    {
+      "time": 0.0004293038897410878,
+      "checks": [
+        {
+          "amplification": 9.223372036854776e+18,
+          "native": [
+            4.488009051059909e-09,
+            1.1005195936713635e-08,
+            8.672742633473283e-09,
+            2.2351963280334979e-10
+          ],
+          "photon": 1.262340897715761e-10
+        },
+        {
+          "amplification": 1.8446744073709552e+19,
+          "native": [
+            2.2626088943234763e-09,
+            4.9844944366642775e-09,
+            4.579737054664274e-09,
+            1.7617340274500302e-10
+          ],
+          "photon": 5.6846130015194524e-11
+        }
+      ],
+      "actual_odd_frequency_owner_reused": true,
+      "photon_moment_error": 5.3630470954062526e-17,
+      "native_return_over_primary_rate": [
+        2.979659969228715e-24,
+        5.279468825741016e-30,
+        6.689762279060438e-29,
+        3.232647278060111e-26
+      ],
+      "actual_native_return_L1": [
+        223.23112306368634,
+        1318.4087217778174,
+        2.1958297586639404e-16,
+        93935818.2919836
+      ],
+      "actual_photon_return_energy_L1": 1.8253814902502569e-22,
+      "actual_collision_return_L1": [
+        321.4889982660887,
+        178226336604.64175,
+        0.0,
+        2516.2432473833696
+      ]
+    }
+  ],
+  "actual_current_state_stage_return_applied": true,
+  "direct_addition_failure_preserved": true,
+  "geometry_components_kept_separate": true,
+  "new_physical_steps": 0,
+  "limitation": "Branch-conditioned stage forcing on two actual states, checked with two resolved probes. This is not a uniform branch-stability theorem, an evolved return, or permission to add independent nonlinear response solutions.",
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false
+}

@@ -1,0 +1,38 @@
+{
+  "classification": "Conjectural",
+  "claim": "Evaluate the accepted phase-261 incident-metric background-photon mass and particular outer lapse at every time of the applied returned metric, as the missing term of the complete one-return outer boundary.",
+  "method": "Unchanged vacuum propagation, fine packet quadrature (angular8, launch-time8, geometry8), background luminosity knots and .phase261-boundary.py projection. Output time changes from the17background knots to the575union stage clock; the last launch interval is cut at the output time with the same8-point Gauss rule. Times within1e-18s of a knot use that knot, as the stage driver aligns times.",
+  "decision": "Only exact reproduction of all16saved knot values and the original per-snapshot energy-identity and angular-invariant gates admit this input to the new applied metric. The launch-quadrature and angular/geometry controls of phase261 (max2.64e-9) are inherited, not re-run.",
+  "gates": {
+    "knot_reproduction": "bitwise",
+    "energy_identity": 0.002,
+    "angular_invariant": 1e-10
+  },
+  "budgets": {
+    "prepare": 300,
+    "pilot": 1800,
+    "work": 10800,
+    "collect": 900
+  },
+  "workers": 14,
+  "virtual_GiB_per_worker": 16,
+  "output_times": 575,
+  "forecast": "Phase261fine took484s for its16knots (0.0027..0.0163s per packet). The575times need1308928packet propagations: about5.0h CPU at the mean rate. The pilot measures a late partial time and sets the parallel forecast with a2x margin before any production.",
+  "stop": "Any knot mismatch, original propagation gate or cap. No new quadrature order, grid or clock beyond the applied metric clock.",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/propagate_geometric_boundary_clock.py": "f683f813d9899e63d8e1747d34112d46196abb0643163269b4a15f94afbc1ce2",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/propagate_exterior_vacuum.py": "4969c0e9050fb0f6f41b644370f0512062f22d4efbfd4e51b225b5272efe0b7e",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/propagate_physical_exterior.py": "600392bf42fb4d3086fd4107603b15c4c8e854b6ee6543f8c87aa245ac8bd857",
+    "native-dynamic-vacuum261-work/plan.json": "9938ad66761f2454ada56ba3f04a5df28da5c25fd77a6036aa5b033711a3a191",
+    "native-dynamic-vacuum261-work/result.json": "64d0cdecfa5749babf928407fd4f5e595333aa1bab665f6ace63de9e6a1dae86",
+    "native-dynamic-vacuum261-work/photon-boundary/result.json": "db31fff1d7efb887475ab80480f9c2c3f1d262da4a3c21537d3f768788bd0000",
+    "native-dynamic-vacuum261-work/photon-boundary/source.npz": "a802a3df0d719a8a9d21c5d68e3a8bd52085f2e8071e20eaeca4688bbc3e1ee9",
+    "native-dynamic-vacuum261-work/photon-boundary/plan.json": "da88ce44678f4a36c307a985dd916f36fefb98e3f3a22b15bbf7381f34953b4f",
+    "native-short-return259-work/result.json": "422371c7291edf6385ac11177959bf8e01afd6fc7da0fb2b62476cf6988095ca",
+    "native-short-return259-work/metric/metric-64-g8.npz": "6ae7e56745a9ec35fd235edaf7317151029e8d212f5874d96fc3ee5ab179eca8",
+    "native-short-return259-work/metric/metric-128-g4.npz": "855f953981600a062ad3e048687eb4b002ef1be628fd575e0e6808cee4b02009",
+    "native-short-return259-work/metric/metric-128-g8.npz": "338444c8a84aa0d4b97ec0ac55226498708c0577f29f78515c2793cb1e0606af"
+  },
+  "physical_final_charge_solved": false,
+  "full_goal_complete": false
+}

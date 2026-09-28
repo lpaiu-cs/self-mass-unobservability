@@ -1,0 +1,41 @@
+{
+  "classification": "Counterexample candidate",
+  "preserved_failures": [
+    "introspection-failure.json",
+    "export-failure.json",
+    "probe-failure.json",
+    "zero-target-failure.json"
+  ],
+  "corrections": "Use the defining expanded owner; include the original reference pressure-flux difference in the momentum source; preserve rest-subtracted energy at zero perturbation. Compare probes in separate physical RHS components including the actual forcing, rather than dividing an almost-zero flux response by itself.",
+  "method": "SSP2 over64/128 macro endpoints with original hydro CFL times64/steps; halve both macro clock and hydro cap. Interpolate saved17 background operators. Preserve the post-step numerical vacuum-floor projection in a signed discard. Independently compare Richardson RHS using half-sized probes at evolved states.",
+  "paths": [
+    [
+      64,
+      128
+    ],
+    [
+      128,
+      128
+    ],
+    [
+      128,
+      64
+    ]
+  ],
+  "check_seconds": 35,
+  "pilot_seconds": 35,
+  "production_seconds": 160,
+  "forecast_margin": 2,
+  "gates": {
+    "conservation": 1e-08,
+    "directional": 0.002,
+    "time": 0.02,
+    "background": 0.02,
+    "small": 1e-06
+  },
+  "binds": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_material_response.py": "e8c5476aff8efcce3a96cbc594fcfb29e39cd22de1adf858599f52043e685dd5",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-material-response/check.json": "55c43083eb22dd652acf8ae541a209ed4bf4b201dbfe56ef6e680fd27a95a76a",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_material_centered.py": "9e8b0fc38d98876e410cc4205a2de47a93b00f408972d399bac1feb3453e5278"
+  }
+}

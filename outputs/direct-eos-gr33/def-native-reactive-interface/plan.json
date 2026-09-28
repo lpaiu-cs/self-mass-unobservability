@@ -1,0 +1,44 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "b46d23f",
+  "claim": "Replace the frozen thermal/chemical boundary at-200m by an actual interface between reactive interior and atmosphere cells using one conservative face flux.",
+  "decision": "Test whether the original7.7739percent trace failure is removed by matching the physical equations across that interface. Retain the failed original model and gates.",
+  "domain_change": "Explicit physical-model reassessment: add only the200m interior buffer needed to place the old interface between evolved cells. Measured atmosphere remains[-200,1200]m with exactly the original224/448/896 cell widths. Total grids256/512/1024; no automatic further extension.",
+  "model": "Saved native rho,T and metric in the buffer, same finite H reactions and prescribed thin photon bath. Other species fixed. No artificial reaction heating correction, incoming temperature history or fitted boundary flux. Copy the far ghost perturbation; test the old frozen ghost once as a far-boundary control.",
+  "reuse": "The entire Phase107 constitutive/rate bank and original failed flow; no new EOS table or long whole-star evolution.",
+  "budget": {
+    "native_calls": 100,
+    "native_seconds": 30,
+    "flow_seconds": 200,
+    "CPU_threads": 1,
+    "memory_GB": 2,
+    "paths": [
+      "pilot224",
+      "448",
+      "896",
+      "448 saved-ghost control"
+    ]
+  },
+  "forecast": "Phase107448 took12.42s and896 took38.86s. Added14.3percent cells at unchanged dx predicts about14-20s and45-65s; new interior recovery and boundary behavior remain unmeasured. Measure448 before fine dispatch.",
+  "gates": {
+    "native": 0.002,
+    "baryon": 1e-10,
+    "energy": 1e-08,
+    "species": 1e-09,
+    "primitive": 1e-08,
+    "mass_grid": 0.02,
+    "trace_grid": 0.02,
+    "neutral_grid": 0.02,
+    "far_boundary_trace": 0.001,
+    "far_boundary_interface": 0.001
+  },
+  "stop": "Do not enlarge density/temperature/composition support, grids, buffer or horizon on failure. Stop on cost/gate/support failure; a local buffer does not complete the whole stellar interior, photon transport or final charge.",
+  "inputs": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_reactive_interface.py": "13301632f72a13f4093f4a1f21da23ce48349c438030e4b7632dc9405309900f",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_reactive_flow.py": "96f48022d7186063279de0bf4c8518690407353747d7fc4835cf0d025df9a8f3",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_hydrogen_exchange.py": "cf590d01753ffd86a00b80ef7be109131b15b8f1619e2246fbea72cd324123d6",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-hydrogen-exchange/repaired-bank.npz": "e5f2fd2cfea38b106d5c060b325bade66a8e7db1d86e5346a8c013d72a57f9ad",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-hydrogen-exchange/flow/result.json": "f8a7b84b196e6dd092622c2ff2d8f99280a6c27c86a4639548a22140bce6c163",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-hydrogen-exchange/trace-budget-decomposition.json": "e3abaad55b0ccb1467664db184349a3c13171577f9da82f312f811835bc47517"
+  }
+}

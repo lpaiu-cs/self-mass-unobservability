@@ -1,0 +1,29 @@
+{
+  "classification": "Counterexample candidate",
+  "labels": [
+    "T0.0001-minus",
+    "T0.0001-plus",
+    "T5e-05-minus",
+    "T5e-05-plus",
+    "T2.5e-05-minus",
+    "T2.5e-05-plus",
+    "rho0.0001-minus",
+    "rho0.0001-plus",
+    "rho5e-05-minus",
+    "rho5e-05-plus",
+    "rho2.5e-05-minus",
+    "rho2.5e-05-plus",
+    "noscreen",
+    "noscreen-T-minus",
+    "noscreen-T-plus",
+    "noscreen-rho-minus",
+    "noscreen-rho-plus"
+  ],
+  "frozen_primary_failure_sha256": "953833bfc69d1919623af5cb6d62e13f01362f3f3bffa0ef67c865a7f76640c7",
+  "goals": [
+    "Test local finite-difference convergence at smaller steps without changing original failures",
+    "Isolate screening contribution by comparing otherwise identical no-screening states"
+  ],
+  "local_FD_convergence_tolerance": 1e-05,
+  "screening_diagnostic": "Changing screening is a diagnostic model only, never a replacement physical fit."
+}

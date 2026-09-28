@@ -1,0 +1,29 @@
+{
+  "classification": "Counterexample candidate",
+  "zone": 2592,
+  "heat_native_erg_g_s": 684136.9038775199,
+  "reaction_neutrino_erg_g_s": 48379.73432549182,
+  "thermal_neutrino_erg_g_s": 4.740485145759394e-05,
+  "Q_rest_release_erg_g_s": 732516.6382030519,
+  "neutral_W_rest_release_erg_g_s": 732511.5627985413,
+  "energy_reference_shift_rate_erg_g_s": 5.075404510562594,
+  "Q_conservative_deposition_erg_g_s": 684136.90387756,
+  "native_minus_Q_conservative_erg_g_s": -4.016328603029251e-08,
+  "correction_is_independent_physical_weak_work_measurement": false,
+  "four_state_closed_rest_release_erg_g_s": -4.907168046932485e-13,
+  "bulk_plus_reservoir_rest_release_erg_g_s": 732516.6382030519,
+  "cvT_erg_g": 4690928205557686.0,
+  "temperature_derivative_checks": [
+    {
+      "h": 0.0001,
+      "energy_dlnT": 4674123908745000.0,
+      "relative_difference_from_native_cvT": -0.0035822967387939553
+    },
+    {
+      "h": 5e-05,
+      "energy_dlnT": 4636949528770000.0,
+      "relative_difference_from_native_cvT": -0.011507035371748686
+    }
+  ],
+  "conclusion": "The four-state intermediate steady subsystem is not a closed burning cell: bulk fuel supplies its nonzero heat. The native-minus-Q difference is measured, not assumed to be an independently certified electron-work correction. Native EOS energy derivatives are not promoted to exact derivatives."
+}

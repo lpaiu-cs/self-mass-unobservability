@@ -1,0 +1,22 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "equation": "xprime=lambda*x+t^3, step h=1, x(0)=0, lambda->-infinity",
+  "direct_Radau_scaled_limit": [
+    "-1/27",
+    "-1"
+  ],
+  "exact_primitive_scaled_limit": [
+    "-7/54",
+    "-11/18"
+  ],
+  "fitted_known_stream_unscaled_limit": [
+    "-1/45",
+    "17/135"
+  ],
+  "interpretation": "Direct Radau preserves lambda*x_j=-S_j at leading stiff order. Exact primitive stage forcing gives -A_inverse*H instead. Moment-fitting L*H creates a nonzero H-Heff limit, although the actual stiff solution tends to zero.",
+  "scope": "Exact scalar counterexample to a generic stiff-accuracy claim for these quadratures; it is not proof of the unique cause in the full time-dependent transport system.",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/native-known-forcing170-work/stiff-limit-producer.py": "b75c4e4938b09de68d665fa092c1a7eb7237e8fe89f06bdc062291a7da1216cf"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "status": "Proven",
+  "checks": [
+    "moment_R",
+    "moment_D",
+    "moment_Q",
+    "positive_two_atom_variance",
+    "two_positive_poles_approach_one",
+    "stable_carrier_invisible_1_1",
+    "stable_carrier_invisible_1_-1",
+    "stable_carrier_invisible_2_1",
+    "stable_carrier_invisible_2_-1",
+    "stable_carrier_invisible_3_1",
+    "stable_carrier_invisible_3_-1",
+    "same_static_response",
+    "arbitrary_relaxation_same_stiffness",
+    "monopole_damping_null_mode"
+  ],
+  "positive_spectrum_identity": "R*Q-D^2 = (integral dmu)^2 Var_mu(tau) >= 0; dmu=a*tau/[(1+lo^2*tau^2)(1+hi^2*tau^2)]",
+  "exact_uniqueness": "Two exact calibrated complex samples identify a single positive observable relaxation time iff R*Q=D^2 and R>0; arbitrary real instantaneous term allowed.",
+  "boundaries": [
+    "Known common conjugate response and positive finite relaxation measure required",
+    "Zero-time instantaneous response and unobservable internal states remain unidentified",
+    "Finite noise cannot uniformly separate two arbitrarily close positive poles from one",
+    "Equilibrium stiffness alone does not set damping, inertia, or a relaxation-rate gap",
+    "Specified microphysics may relate these coefficients; the free-Gamma counterexample is not a claim about every fixed gravity theory"
+  ]
+}

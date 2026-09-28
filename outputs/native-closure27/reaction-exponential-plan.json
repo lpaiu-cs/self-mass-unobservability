@@ -1,0 +1,13 @@
+{
+  "classification": "Counterexample candidate",
+  "steps": [
+    1,
+    2,
+    4
+  ],
+  "prior_BE_failure_sha256": "af25df3e92236286789cfa45403f32e50e56edc8c238b777af70b0dd719847c8",
+  "duration_proper_s": 140780.16,
+  "method": "Exponential Rosenbrock-Euler: delta=dt*phi1(dt*J)*f, calculated by the installed scipy.linalg.expm on an augmented matrix. Reevaluate the full native EOS/rates/J at every step. This treats the stiff linearized reaction transient exactly and leaves a nonlinear discretization error.",
+  "mixed_refinement_budget": "1e-16 + 1e-3*abs(total change) per isotope and zone",
+  "constraints": "Same fixed rho,T external heatbath and 22-species model. No EOS/GR physical closure claim. Mass correction and any tiny negative projection are recorded. Preserve both failed BE refinement gates."
+}

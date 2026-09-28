@@ -1,0 +1,8 @@
+{
+  "classification": "Counterexample candidate",
+  "registered_before_isobaric_execution": true,
+  "reason": "The outer cells cool by several percent during the registered interval. Fixed-volume heating followed by an adiabatic TOV readjustment splits a significant pressure-work contribution. Test a separate constant-pressure enthalpy source step, retaining all original fixed-volume results.",
+  "equation": "At fixed P, d(h_B + rest)/d proper time = -neutrino - prescribed luminosity divergence, with h_B = u_B + P/rho_B. Use cp*T, enthalpy composition derivatives and the EOS density pullback of the native reaction/heat Jacobian. Then solve the same entropy/composition baryon TOV constraints.",
+  "controls": "Keep the same 1/2/4 subdivisions, 1e-6 whole-star energy score, 1e-3 composition-change tolerance and 2e-6 absolute log-temperature difference. This is an alternative numerical splitting, not a changed physical forcing or relaxed acceptance criterion.",
+  "limitations": "Prescribed flux, partial trace-ion physics, native auxiliary mismatch and quasistatic approximation remain. No completed real-star or observational-inference claim follows from this control."
+}

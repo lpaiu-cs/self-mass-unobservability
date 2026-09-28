@@ -1,0 +1,51 @@
+{
+  "classification": "Proven",
+  "checkpoint": "2028df24",
+  "cells": 3206,
+  "block_size": 32,
+  "processes": 4,
+  "coefficient_bits": 128,
+  "analytic_response_budget": "1e-18",
+  "total_response_budget": "1e-17",
+  "H_control_digits": 80,
+  "H_control_x": [
+    "-1/2",
+    "0",
+    "1/2"
+  ],
+  "control_positions": [
+    0,
+    256,
+    1024,
+    1603,
+    2048,
+    3072,
+    3205
+  ],
+  "bindings": {
+    "verification/gr_response_H_table.py": "8170d71f5ef20bfb349db0210c83305cfbb7ed42448f1c517617e33adc9fd617",
+    "outputs/direct-eos-gr33/gr-response-product-128/manifest.json": "9e114e4b9388dd6d374fe96713bffb20b680902440caceb1adcfd1159b1e7399",
+    "outputs/direct-eos-gr33/gr-response-product-128/runtime.json": "ff6e56b0c13a7962445db095492460b9e1b71b3a89ef44126b09968e1c905cdd",
+    "outputs/direct-eos-gr33/gr-response-product-128/effective-source.cpp": "a5322ffb612bda6d9688d8ecd7ea53060a6809a32c4850d58a4d34d04e2992bd",
+    "outputs/direct-eos-gr33/gr-response-product-128/rule.tsv": "79d1188403341808cdf198c6fcf5bbe7fb31e7230b06eb24a7b936b6bd1af4e2",
+    "outputs/direct-eos-gr33/gr-response-H-table-defined/inputs.tsv": "ce83ae61125f12a92f0c98d9ec0ea93b61ca170db970eeb98f54ce59cd54c988",
+    "outputs/direct-eos-gr33/gr-highq-moments/inputs.npz": "c47cfa968a88fb2b9b101071e8551cc6ab61f867cb627563ad5147710779645e",
+    "outputs/direct-eos-gr33/gr-polarization-thermodynamics/states.npz": "a91f70b8277d7984c7954d277b01956dd31dfd4c12b57989fed8b7a2fccceb69",
+    "outputs/direct-eos-gr33/gr-response-product-128/h-0000.tsv": "c3304a3c2e77948f42a32bb57e60d93ca586fed5224872e892804a01b06f915e",
+    "outputs/direct-eos-gr33/gr-response-product-128/h-1603.tsv": "ff7321d256f3f6639f4fdd453eae8e4872be786e309e9223709b31c42b4bd151",
+    "outputs/direct-eos-gr33/gr-response-product-128/h-3205.tsv": "71b4790df20e76ad65f6847e6f60a7bfd397d37e3d132024dff6513c3611202a",
+    "verification/gr_response_H_table_runner.py": "205f9eb28ff633d5c8fe16567552941ca418e28a4aa3b3b85eb1970b66c39c46",
+    "outputs/direct-eos-gr33/gr-response-H-table-defined/candidate.py": "9a7e82d0bdeb50343854649ae1b74c7ae168bc1ac76c3e96d31ecaec0eb7b1a7",
+    "outputs/direct-eos-gr33/gr-response-H-table/plan.json": "b60f45c9267e36238143407de26071fe0a1fabaa94bcacabe5f04f03f3155bbd",
+    "outputs/gr-response-H-table33-preflight.log": "600104c635e6b8837f5a45e84d87b5ffffc509a29eeb4de743b0e32facb35edb"
+  },
+  "target": "Build actual piecewise H/Sref and five eta/tau jets at every stored reference center. Reuse the unchanged certified native build mode. Audit exact coverage, six analytic errors, coefficient endpoint ordering and uniform error of the exact coefficient-midpoint polynomial.",
+  "interval_error": "For every panel and component, |P_n(x)|<=1 on [-1,1] bounds coefficient-midpoint rounding by half the sum of coefficient widths. Add the certified interpolation/omission error. The positive kernel gives response error <=P*maximum_panel_error. Require analytic <=1e-18 and combined <=1e-17; this does not relax the separate final 1e-15 response gate.",
+  "preservation": "Compress each new complete native table losslessly. Record the SHA of its uncompressed bytes and compressed artifact. The original three reference tables must replay bitwise. Only the runner-created temporary uncompressed copy is removed after compression and hash replay.",
+  "boundary": "All stored eta centers, not a new true-root response or outer-integral certificate. No interacting/partially-ionized EOS, physical transport, GR or observation claim.",
+  "substitutions": {
+    "OUT=product.OUT.parent/'gr-response-H-table'": "OUT=product.OUT.parent/'gr-response-H-table-defined'",
+    "hashlib.file_digest(source,'sha256').hexdigest()": "hashlib.sha256(source.read()).hexdigest()"
+  },
+  "correction": "The WSL Python lacks hashlib.file_digest. The first native table and its lossless gzip were written, then the replay hash check raised AttributeError. Use the existing hashlib.sha256 on the decompressed bytes instead. Each table is only several MB. Native equations, all inputs, budgets, state order, coefficient checks and independent controls are unchanged."
+}

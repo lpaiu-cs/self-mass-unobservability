@@ -1,0 +1,21 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "Original17-time source representation differs from the accepted129-time outer history by0.332625percent, above0.2percent. Original result stays failed.",
+  "repair": "The already registered and computed33-time control differs by0.0427522percent. Reuse that full spatial field; compute only its missing coarse-background and4-point quadrature controls, then select its exact17 canonical output times for existing transport. No physical replay or higher-than-registered source cadence.",
+  "gates": {
+    "time": 0.02,
+    "quadrature": 0.002,
+    "full_history_outer": 0.002
+  },
+  "remaining_GR_seconds": 117.353456349,
+  "original_total_GR_seconds": 180,
+  "limits": "33-point forcing with17-point output interpolation; this comparison does not enclose continuous-time or full EOS error.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_updated_gr_return.py": "d2c456a74a41ee97b07f026effdadd08c72d583b059420e933b8d72094c719d9",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/gr/result.json": "b6fd84566fcdac320f76e3eb0c8b6fdc1da4a9766be5ef9cbe8454d1724b569c",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/pre-cadence-producer.py": "09533088d07c84dee26fc02bb2262e71280b00225a656011a25c3155cbcc47e0",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/gr/fields-128-cadence33-g8.npz": "2cc80204fcce5af6e5f8a544cd84f2413cb79d2fc8f00acd3d19ed3042d21ab4",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/evolution/source-64.npz": "f7e694bc9bbaabb3612916204fd97b2eefe12053137119ad629b33b096ad7b56",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/evolution/gr/wave-128-g8.npz": "3bc144dc484f3a6c3d521d8aa0910662b63b2e1cbbfd5a124d64ef063386c287"
+  }
+}

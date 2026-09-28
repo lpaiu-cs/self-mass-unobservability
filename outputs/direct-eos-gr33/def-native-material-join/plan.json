@@ -1,0 +1,44 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "b024c099c",
+  "claim": "Replace the copied material ghost and subsequent debit by a simultaneous shared mass, momentum, Killing energy and neutral-H flux between evolving interior and atmosphere. Determine whether the positive conditional direct charge survives.",
+  "model": "Retain16 native interior volumes,152 frequencies,8 angles,512 actual atmospheric cells and3.434ms. Evolve interior cell momentum conservatively with acoustic perturbation fluxes; retain the analytic initial gas/gravity imbalance in a background-balanced quadrature. At the-400m interface use actual interior fractional density, log-temperature, relative neutral fraction and velocity mapped onto the saved native face background, then the existing nonlinear HLL flux. Apply this identical flux with opposite signs in each SSP stage.",
+  "limits": "First-order density/inventory and acoustic interior mechanics; face thermochemical perturbations are constant over the last34km center-to-face gap. This is a declared spatial reconstruction, not spatial convergence or a native inventory continuum certificate. Fixed metric, finite H/Thomson microphysics and transient initial radiation remain.",
+  "reuse": "All Phase116 native thermodynamic/spectral banks and photon solver, same atmospheric native ColdEOS and primitive inverse. Old trajectories preserved as a model comparison; no unchanged trajectory repeated.",
+  "budget": {
+    "check_seconds": 25,
+    "pilot_seconds": 35,
+    "production_seconds": 450,
+    "readout_seconds": 60,
+    "CPU_threads": 1,
+    "memory_GB": 3,
+    "native_calls": 100,
+    "paths": [
+      64,
+      128
+    ]
+  },
+  "forecast": "Phase116 actual64/128 paths took134/176s. Joint SSP adds16-cell material stages, with unmeasured late primitive/source cost. Measure two coupled steps per path, continue their saved prefixes only if1.7x projected remainder plus10s fits450s.",
+  "gates": {
+    "energy": 1e-08,
+    "baryon": 1e-10,
+    "source": 1e-09,
+    "native": 0.002,
+    "time_direct": 0.02,
+    "time_trace": 0.02,
+    "history_direct": 0.02,
+    "cadence_direct": 0.02,
+    "quadrature_direct": 0.02,
+    "density": 0.001,
+    "speed": 1e-05
+  },
+  "stop": "Stop on positivity, support, conservation, measured budget or time-readout failure; no automatic extra paths, finer grid, longer horizon or weakened gate.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_material_join.py": "2d0894e32bc4a18ddacce41ada96c62d79beb0b242b95160c664e5d879b44dfa",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_interior_feedback.py": "4a06f0d969c4a63f83bb8fac96827d16dd4d6dc5415936bf648b01ae613a492b",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_two_way_atmosphere.py": "3f37fc1fbdece30a3a98d22015fd18bb75995f42a433bc8df9271d8df4ba3c8b",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-interior-feedback/bank.npz": "94727076401d4256d74e4fb42c009a6639f3f9a83567fd1387865c183effde96",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-interior-motion/native.npz": "11888b7221460d0b5c0af7fc1ec9f2077dacfe0585b858ecbdf657b3042a5605",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-interior-feedback/coupled-128.npz": "fb2ca0769aa0c35a5268e768ed542d634ee02ba6ca5dca846fc6fcd29b976746"
+  }
+}

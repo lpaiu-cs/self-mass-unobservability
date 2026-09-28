@@ -1,0 +1,17 @@
+{
+  "classification": "Counterexample candidate",
+  "budget_seconds": 60,
+  "claim": "Independently verify the analytic second derivative with nonzero initial source, mixed identities, frozen inputs and the actual applied source sum.",
+  "gates": {
+    "derivative": 1e-11,
+    "source_sum": 1e-12
+  },
+  "limits": "This audit does not certify physical source interpolation, exterior mixed terms, material return or nonlinear closure.",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/audit_native_mixed_gr.py": "52a983b1c813237630ad350275fe87983d5f1d7e73c6eb59c70ff21a63959e55",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/couple_native_mixed_gr.py": "88f9b1aef79604ca76c5c032f5224554be9501ce71886e2e08519ac57d5b0bd0",
+    "native-mixed-gr161-work/result.json": "62d866cb1a52c8c8262347f7812cb9bda3865903d5d6b6d556ef09557c5f35cd",
+    "native-mixed-gr161-work/repair-plan.json": "a3847315e1469a0e6218b51a47a368ec260acf10db5c9966ab14b54352e7cb7c",
+    "native-mixed-gr161-work/field-128-g8.npz": "59aa03dbbabc67b3ab7b4f6b3ac2bd0536f0062dc75b54261d01449327144467"
+  }
+}

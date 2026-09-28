@@ -1,0 +1,141 @@
+<!-- saved from url=(0079)https://xweb.lanl.gov/projects/data/atomic/tops/opacity/static/opacdocs/opac-help.html -->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Help</title>
+  <script id="_fed_an_ua_tag" async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOE"></script>
+</head>
+  <body>
+    <h1>Help file for the TOPS code</h1>
+    <hr />
+    <font size="4">
+      <p>
+        Your first choice as a user is the type of data file to use. There are
+        two types of data files: ATOMIC and LEDCOP. The ATOMIC files are the
+        latest data files produced by the LANL opacity team (groups T-1 and
+        XCP-5) and are the preferred files.
+      </p>
+      <p>
+        See
+        <a href="/static/opacdocs/avmat.html"
+          >file of currently available materials</a
+        >
+        for the current list of available materials. The material ID numbers are
+        prefixed by the letter n. The LEDCOP files are older cross section files
+        and are included for the sake of continuity.
+      </p>
+      <p>
+        The default is to use the most recent available data file for each
+        element.
+      </p>
+      <p></p>
+      <hr />
+      As a user you may choose to mix an arbitrary number of elements. You have
+      the option of specifying the mixture by number fraction or by mass. You
+      may also choose to specify particular isotopic weights in the mixture.
+      <p>
+        The default is to specify mixtures by number fraction and use the
+        naturally occurring isotopic weights.
+      </p>
+      <p></p>
+      <hr />
+      You have several options for temperatures. You may select individual
+      temperature, choose a subset of the tabulated temperatures, or thin the
+      tabulated temperatures. In any case, the selected set of temperatures must
+      be elements of the
+      <a href="/static/opacdocs/opactemps.html"> default temperature grid. </a>
+      <p>The default is to use temperatures in the range of 0.1 to 10 keV.</p>
+      <p></p>
+      <hr />
+      In a similar manner you can select the density grid. In contrast to the
+      temperature grid, there is no default density grid. You are free to select
+      specific densities, or choose a grid with either logarithmic or linear
+      spacing.
+      <p>
+        One should exercise some restraint in choosing the total number of
+        temperature and density points, especially for mixtures containing a
+        large number of elements. The run times can become quite long. The Web
+        Page will give you an time estimate on the <b>Output Selection</b> page
+        after you <b>submit</b> your calculation from the first input page. If
+        the time estimate is too long, the Web Page will refuse the calculation.
+      </p>
+      <p>
+        One point to be noted is that the range of densities for which cross
+        sections are tabulated varies with temperature. At low temperatures
+        there is a relatively low upper bound on density. This causes the TOPS
+        code to attempt to find opacities for which cross section data do not
+        exist. If this happens, the TOPS code prints a warning message on both
+        the columnar table output and on all graphs except the 3-D graphs. It
+        then uses the cross sections for the highest density point for that
+        temperature to calculate the gray opacities. If multigroup opacities are
+        requested, that gray opacity is put into each multigroup spot so that
+        there is no variation of opacity with photon energy. This should point
+        out that the displayed multigroup opacity does not represent a true
+        multigroup calculation for this point. The frequency dependent data is
+        handled the same way as the multigroups.
+      </p>
+      <p></p>
+      <hr />
+      If you wish to have multigroup opacities, you may select photon group
+      boundaries in keV in a manner similar to the selection of the density
+      grid. The default is to use a logarithmic spacing of 33 boundaries (32
+      groups) with energies between .001 and 300. keV.
+      <p>
+        Just as there is a pratical limit to the product of number of
+        temperatures times number of densities, there is a limit on the product
+        of number of temperatures times number of densities times number of
+        group boundaries. Currently this product is limited to 50000. Thus if
+        you choose the default temperature grid with 50 temperatures and a
+        density grid with 20 densities, you can still have 50 photon groups.
+      </p>
+      <p></p>
+      <hr />
+      If you choose to look at frequency dependent opacities, the TOPS code will
+      automatically output all of the available data for each temperature-
+      density point. At present, this is 3000 or 3900 frequency points for each
+      case. You may restrict the frequency range on the various graphics pages
+      if you do not want to download the entire table.
+      <p></p>
+      <hr />
+      The TOPS code calculates the plasma cutoff frequency, the frequency below
+      which photons may not propagate in a plasma. Any group which lies partly
+      or fully below this frequency has the opacity in that group set to
+      10<sup>10</sup>. Normally this cutoff frequency is very low relative to
+      the temperature and should not make any difference in a radiation
+      transport calculation.
+      <p></p>
+      <hr />
+      The default mode when you press the submit button is to calculate gray
+      Rosseland and Planck opacities along with the average number of free
+      electrons. You also have the option of requesting multigroup and/or
+      frequency dependent opacities. If you choose the frequency dependent
+      option, you are limited to 6 temperature-density points per calculation.
+      Resulting tables can be saved to your local machine with the FILE button
+      on your web browser.
+      <p></p>
+      <hr />
+      The normal columnar TOPS tables first list any warning messages. Then the
+      temperature, density and (if requested) multigroup photon energy grids.
+      boundaries. After this, the gray Rosseland and Planck opacities are shown.
+      If you requested multigroup opacities, these are listed next. Finally, the
+      frequency dependent opacities are listed if this calculation was
+      requested.
+      <p>
+        Special note to SESAME users. This Web Page is now setup to output the
+        special SESAME format ASCII files for opacities. Users must have already
+        obtained the SESAME codes from T-1 at LANL before they can use these
+        tables. See the
+        <a href="/static/opacdocs/sesame.html">SESAME writeup</a> for more
+        details about the tables produced by this Web Page.
+      </p>
+      <p></p>
+      <hr />
+      <address>Please mail questions or comments to:</address>
+      <address>
+        LANL T-1 Opacities &lt;<a href="mailto:opacity@lanl.gov"
+          >opacity@lanl.gov</a
+        >&gt;
+      </address>
+    </font>
+  </body>
+</html>

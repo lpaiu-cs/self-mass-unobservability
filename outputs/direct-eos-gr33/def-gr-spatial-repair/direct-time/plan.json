@@ -1,0 +1,34 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "95d99987",
+  "claim": "Remove mixed-field reduced eigendecomposition as a possible error source by directly evolving the entire same-space coupled matrix.",
+  "method": "Fixed512/1024/2048 Cayley steps, exact forcing moments, two extended residual corrections per step. Original degrees4,2,1, source, horizon and65 readouts. One sparse real factorization reused per path.",
+  "gates": {
+    "time_relative": 0.02,
+    "time_order": 1.5,
+    "spatial": 0.02,
+    "spatial_decrease": true,
+    "coefficient": 0.02,
+    "outer": 0.002,
+    "quadrature": 0.002,
+    "linear_residual": 1e-09,
+    "heat_balance": 2e-13
+  },
+  "decision": "Measure128 steps on degree4. Execute only if forecast fits300s. Degree4 first; stop on any time gate failure. Then degrees2,1. Run the three original contrasts only after spatial acceptance; no automatic extra steps, degree or cells.",
+  "budget": {
+    "hard_seconds": 300,
+    "pilot_steps": 128,
+    "maximum_steps": 2048,
+    "CPU_threads": 1,
+    "memory_GB": 3,
+    "new_EOS_calls": 0
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_direct_time.py": "852070fde0dbd03d2f44cbc1e2ffe3b16afb41c37e0b27d5a6ca33ce99bf0ca4",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_hierarchical.py": "7861123d4adfdfdaa21daee3fc7d79dcdffdd024ca48b3f453921b5cb745992b",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_spatial_repair.py": "d13044861c2b4761d5e6349d809c3368f46112974f374aa050aada516c80f8e5",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-spatial-repair/hierarchical/result.json": "4226ee3869f4bcc766265608d971cdacd5c0b36ed31d279e568dd40680b5392c",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/fine-bank.npz": "b4493a6e4cfb20d741725ecb61cec154ab9fc51a694001865748741060018d7e",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/coarse-bank.npz": "ea020f69b240c5c5cdd8810f963d88e5cc2d3269aff12c659422a7a6541ae0df"
+  }
+}

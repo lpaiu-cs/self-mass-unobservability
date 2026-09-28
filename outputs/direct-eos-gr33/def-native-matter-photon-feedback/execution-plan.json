@@ -1,0 +1,37 @@
+{
+  "classification": "Counterexample candidate",
+  "eligible": true,
+  "hard_cap_seconds": 900,
+  "forecast_seconds": 310.329114637,
+  "upper_seconds": 620.658229274,
+  "paths": [
+    [
+      64,
+      128,
+      "pilot-64"
+    ],
+    [
+      128,
+      128,
+      "pilot-128"
+    ],
+    [
+      128,
+      64,
+      null
+    ]
+  ],
+  "correction": "First map failed cancellation when a huge reference rest-mass transport offset was combined with tiny thermal energy. Use the exactly invertible nonrest energy coordinate and restore the offset in all physical readouts. Preserve the original check. Source pairing is checked before adding the independent mechanical source; port roundoff is normalized by the full frequency-work/source scale.",
+  "limits": "One return sweep at prescribed material baryon/momentum/noncollision transport and original metric. No final coupled fixed point or GR result yet.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_matter_photon_feedback.py": "19acadd46d8f6059406fc3614c151de187323cec68f73faf9319e663f0466fb9",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_monolithic_response.py": "76eab50e7cb8115bff4ce959641ed3cc9e7eabcf13bcae54b321b33f2ac5a695",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_collision_response.py": "f35bf0b4e25dbb4c53503181b24378a989aadc34313a52a4fc4876d52871dfb7",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_material_branch_response.py": "65c24a983afe7bdcfd9b47047622cd789f6cc41fb8b338f3046be9f7cb83cfb2",
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_material_response.py": "02862d794865e9d2785b631baeed092ebf3258538f91d4b64340230a270c10a2",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-matter-photon-feedback/pilot.json": "23ebfbd8a364739b11596aa495250376ec21cb957c737379cadac138dca0ac43",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-matter-photon-feedback/check.json": "0963b29ce60b82d32fe8087816c8a60d3e0f0f6aa9aca8c48ac6e5b8efd9427e",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-material-response/branch-aware/source-audit.json": "7e393e39a0489584219775eb069900247e42f0e792d21c68d569a521fcf43d01"
+  },
+  "history_receipt": "Save full photon and material histories at existing canonical17 times, plus the pilot endpoint. This is required to evaluate the next coupled-equation residual without replaying an accepted path. The pilot has exactly the initial and current endpoint; reconstruct those from its saved exact arrays. Stage equations, sources, Krylov gates and grids are unchanged. Added RAM below120MB per path; compressed artifacts retained for reuse."
+}

@@ -1,0 +1,14 @@
+{
+  "classification": "Proven",
+  "checkpoint": "2c76707",
+  "bindings": {
+    "verification/gr_scalar_global_regular.py": "467e3a2059f233bb0147e9e0a81295aa3b0a944c933f012ef101002acf9aa931",
+    "outputs/direct-eos-gr33/gr-scalar-pressure-readout/manifest.json": "7dea7e231552333108d88c5780a18c23dc2d2269742bf9bae7ff5b120e07a409",
+    "outputs/direct-eos-gr33/gr-scalar-pressure-readout/field-2e-12.npz": "77516afd35cf18cb0ea07bf3c5e914a142411cd2fc884f3e68f1b69b367138e8",
+    "outputs/direct-eos-gr33/gr-scalar-pressure-readout/result.json": "c768dd2adcd3c1daeecb2e839bbe084f51fe29d53b9eb07a287d3ceb29850ace"
+  },
+  "model": "Treat stored binary64 knots and polynomial coefficients as exact rationals defining bounded piecewise cubics on [0,1]. Interior flux and field are continuous weak solutions; tiny coefficient-rounding jumps of a,b are allowed. Use the same rounded mu=M/R for the exact declared Schwarzschild exterior and exact stored R/M for response normalization.",
+  "method": "Exact rational Bernstein bounds certify a>=amin>0 and b<=0 on every closed piece. Exact polynomial integrals give B1=int x*(-b) and B2=int x^2*(-b). kappa=(B1-B2)/amin bounds the Volterra operator norm. Require kappa<1 and 1-kappa-L*B2>0 with outward interval L=-log(1-2mu)/(2mu).",
+  "conclusions": "Conditional existence and uniqueness of the centre-regular unit-central static solution; global positivity including the exterior; unique normalization to prescribed phi_infinity; no nonzero centre-regular static solution with phi_infinity=0. This closes the node-free condition for the declared linear Riccati readout.",
+  "limits": "No error enclosure for EOS, GR geometry, scalar coefficient generation or floating IVP evaluation. No finite-amplitude nonlinear scalar, physical stability/spectral gap, dynamical drive, orbital response or observational inference claim. This is a proof prerequisite, not static coefficient novelty."
+}

@@ -1,0 +1,21 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Apply corrected-EOS actual conserved sources to the same initial first-variation GR operator; retain full spatial fields for actual transport return.",
+  "gates": {
+    "time": 0.02,
+    "quadrature": 0.002,
+    "cadence": 0.002,
+    "full_history_outer": 0.002
+  },
+  "budget_seconds": 180,
+  "controls": "Original64/128 backgrounds;4/8 radial rules;17/33 source knots; compare the outer free component against the previously accepted all129-stage readout. No extra physical time integration.",
+  "limits": "Initial GR coefficients retain the declared frozen representation; compact fields plus bounded-potential iteration, not nonlinear GR.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_updated_gr_return.py": "09533088d07c84dee26fc02bb2262e71280b00225a656011a25c3155cbcc47e0",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_characteristic_gr.py": "1630d3f008a1e59748d318f921eed7da8fbea4c49d33e5b86617f67009a27076",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_anisotropic_gr.py": "8c70ea3234a101e81db0c159c0fcf4edf02b16f0910b066f2781699d74efca85",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/capture-result.json": "0103f4132f0c61972757a32aad45058fb118c7a4c5d5ff577019a9e74c951c79",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/gr/source-128.npz": "fb9fb2938902150162c2228b74c262e8467472a9ea61a713a174548194cc6ba7",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/gr/source-64.npz": "4716484bcd40ea34c1d3fa68a278fd4331f1c63e610939f12a7ecfd41c8852e2"
+  }
+}

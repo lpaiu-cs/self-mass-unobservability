@@ -1,0 +1,135 @@
+{
+  "classification": "Counterexample candidate",
+  "cells": 3206,
+  "passed": true,
+  "adaptive_agreement": 1.0325074129014481e-13,
+  "independent_controls": [
+    {
+      "cell": 2529,
+      "momentum_reference": [
+        0.9999999999999495,
+        0.9574727990945795
+      ],
+      "energy_quadrature": [
+        0.9999999999999496,
+        0.9574727990945796
+      ],
+      "score": 1.1595347937560452e-16,
+      "passed": true
+    },
+    {
+      "cell": 3330,
+      "momentum_reference": [
+        0.9999999999999092,
+        0.2922431872365844
+      ],
+      "energy_quadrature": [
+        0.9999999999999098,
+        0.2922431872365843
+      ],
+      "score": 6.661338147751545e-16,
+      "passed": true
+    },
+    {
+      "cell": 4132,
+      "momentum_reference": [
+        0.999999999999921,
+        0.15021950651844931
+      ],
+      "energy_quadrature": [
+        0.9999999999999211,
+        0.15021950651844931
+      ],
+      "score": 1.1102230246252443e-16,
+      "passed": true
+    },
+    {
+      "cell": 4933,
+      "momentum_reference": [
+        0.9999999999999218,
+        0.09536046513841494
+      ],
+      "energy_quadrature": [
+        0.9999999999999224,
+        0.09536046513841498
+      ],
+      "score": 5.551115123126217e-16,
+      "passed": true
+    },
+    {
+      "cell": 5734,
+      "momentum_reference": [
+        0.9999999999999264,
+        0.06752830490755375
+      ],
+      "energy_quadrature": [
+        0.9999999999999266,
+        0.06752830490755374
+      ],
+      "score": 2.220446049250477e-16,
+      "passed": true
+    }
+  ],
+  "kernel_controls": [
+    {
+      "kappa_r": 0.1,
+      "transform": 0.32800356403804537,
+      "formula": 0.3280035640380353,
+      "difference": 1.0047518372857667e-14,
+      "quad_estimate": 5.342876387032957e-12,
+      "passed": true
+    },
+    {
+      "kappa_r": 1.0,
+      "transform": 0.09196986029286058,
+      "formula": 0.09196986029286058,
+      "difference": 0.0,
+      "quad_estimate": 6.30600235099623e-13,
+      "passed": true
+    },
+    {
+      "kappa_r": 3.0,
+      "transform": -2.1274550866717496e-16,
+      "formula": 0.0,
+      "difference": 2.1274550866717496e-16,
+      "quad_estimate": 5.5523766820189636e-14,
+      "passed": true
+    },
+    {
+      "kappa_r": 5.0,
+      "transform": -0.0016844867497714546,
+      "formula": -0.0016844867497713668,
+      "difference": 8.782037597132586e-17,
+      "quad_estimate": 5.953121872924069e-14,
+      "passed": true
+    },
+    {
+      "kappa_r": 10.0,
+      "transform": -3.972493854202582e-05,
+      "formula": -3.972493854217425e-05,
+      "difference": 1.4842727741326556e-16,
+      "quad_estimate": 4.618961854779404e-14,
+      "passed": true
+    }
+  ],
+  "ideal_chi_range": [
+    0.06752830490755869,
+    0.9574727990946279
+  ],
+  "kappa_range_cm_inverse": [
+    259596004.8249144,
+    1670435144.3079524
+  ],
+  "maximum_reconstructed_vs_full_ion_density": 9.85541936948664e-09,
+  "self_a0_range": [
+    -0.28457490786442,
+    -0.01478298524755954
+  ],
+  "same_kappa_self_difference_range": [
+    0.005543619467834828,
+    0.10671559044915752
+  ],
+  "whole_physical_EOS_certified": false,
+  "native_EOS_replaced": false,
+  "scope": "Same-kappa witness magnitude, not a measured uncertainty interval. Finite k=0 ideal response checks do not certify finite-k response or interacting electron compressibility. No correction added to the existing EOS."
+}

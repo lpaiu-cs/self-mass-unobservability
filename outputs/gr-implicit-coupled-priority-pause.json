@@ -1,0 +1,71 @@
+{
+  "reason": "Prioritize the actual full-grid implicit coupled trajectory; preserve the outer-EOS producer in memory and all files.",
+  "boot_id": "9b968b4f-ecbd-483b-ada9-c1c871b6ab20",
+  "root": 472,
+  "processes": [
+    {
+      "pid": 472,
+      "parent": 462,
+      "start": "14071",
+      "state": "S",
+      "command": "python3 verification/gr_outer_product_recovery.py run"
+    },
+    {
+      "pid": 577,
+      "parent": 475,
+      "start": "102105",
+      "state": "R",
+      "command": "/home/lpaiu/work/direct-eos-gr33/response-product-adaptive/product response /mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-response-H-table-defined/inputs.tsv /mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-response-product-128/rule.tsv /mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-outer-product-recovery/cell-0105/cell-0105-native.jsonl 105 /home/lpaiu/work/direct-eos-gr33/outer-product-recovery/cell-0105/H.tsv /mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-outer-product-recovery/cell-0105/cell-0105-q.tsv"
+    },
+    {
+      "pid": 578,
+      "parent": 474,
+      "start": "102276",
+      "state": "R",
+      "command": "/home/lpaiu/work/direct-eos-gr33/response-product-adaptive/product response /mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-response-H-table-defined/inputs.tsv /mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-response-product-128/rule.tsv /mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-outer-product-recovery/cell-0107/cell-0107-native.jsonl 107 /home/lpaiu/work/direct-eos-gr33/outer-product-recovery/cell-0107/H.tsv /mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-outer-product-recovery/cell-0107/cell-0107-q.tsv"
+    },
+    {
+      "pid": 579,
+      "parent": 473,
+      "start": "102352",
+      "state": "R",
+      "command": "/home/lpaiu/work/direct-eos-gr33/response-product-adaptive/product response /mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-response-H-table-defined/inputs.tsv /mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-response-product-128/rule.tsv /mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-outer-product-recovery/cell-0108/cell-0108-native.jsonl 108 /home/lpaiu/work/direct-eos-gr33/outer-product-recovery/cell-0108/H.tsv /mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-outer-product-recovery/cell-0108/cell-0108-q.tsv"
+    },
+    {
+      "pid": 473,
+      "parent": 472,
+      "start": "14486",
+      "state": "S",
+      "command": "python3 verification/gr_outer_product_recovery.py run"
+    },
+    {
+      "pid": 474,
+      "parent": 472,
+      "start": "14486",
+      "state": "S",
+      "command": "python3 verification/gr_outer_product_recovery.py run"
+    },
+    {
+      "pid": 475,
+      "parent": 472,
+      "start": "14487",
+      "state": "S",
+      "command": "python3 verification/gr_outer_product_recovery.py run"
+    },
+    {
+      "pid": 476,
+      "parent": 472,
+      "start": "14487",
+      "state": "S",
+      "command": "python3 verification/gr_outer_product_recovery.py run"
+    },
+    {
+      "pid": 573,
+      "parent": 476,
+      "start": "101943",
+      "state": "R",
+      "command": "/home/lpaiu/work/direct-eos-gr33/response-product-adaptive/product response /mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-response-H-table-defined/inputs.tsv /mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-response-product-128/rule.tsv /mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-outer-product-recovery/cell-0106/cell-0106-native.jsonl 106 /home/lpaiu/work/direct-eos-gr33/outer-product-recovery/cell-0106/H.tsv /mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-outer-product-recovery/cell-0106/cell-0106-q.tsv"
+    }
+  ],
+  "all_stopped": true
+}

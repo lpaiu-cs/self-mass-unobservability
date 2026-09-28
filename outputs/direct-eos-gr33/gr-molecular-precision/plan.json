@@ -1,0 +1,31 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "cf062eb",
+  "cells": [
+    0,
+    1175,
+    1176,
+    2972,
+    5734
+  ],
+  "log_temperature_offsets": [
+    -0.001,
+    0.0,
+    0.001
+  ],
+  "root_iterations": 15,
+  "known_root_log_temperature_tolerance": 1e-10,
+  "intervention": "Use exactly the new two-spectrum molecular source and chemical anchors with upstream 33-digit arithmetic, the already validated split-input bridge, and retain_molecules=True once per initialized library. Retain physical coefficients, Fermi tolerances and binary64 LAPACK. Do not use the original-model extended EOS in a new-model root.",
+  "gate": "At the same target entropy and pressure, require the original max(2 erg/g,32 ulp(abs(H))) energy-unit gate and known-root lnT error below 1e-10. Record arithmetic differences at identical binary64 inputs without turning them into physical error bounds.",
+  "boundary": "Extended arithmetic and finite known-root tests do not certify continuous native, mixed-precision switch, Fermi, plasma, occupation or physical EOS error.",
+  "bindings": {
+    "verification/gr_molecular_precision.py": "eba90034b86c347042b1418c201ff79317bb7ec53cd37cea240bfb92b3d31675",
+    "verification/gr_eos_extended_precision.py": "a45a23dc064fb656d0af9e3e6e4403b08ddbf9402df13bcdae65e31982fac5a4",
+    "outputs/direct-eos-gr33/eos-molecular-spectral/manifest.json": "26a927b885902564d2f3fb47b43216e0c60c809cfe1d64b47a20bf9b22e6d98a",
+    "outputs/direct-eos-gr33/gr-eos-extended-precision/manifest.json": "546b64604853e10c44453507e146c6a5f67ea19c80e334d848266ecde992a42a",
+    "outputs/direct-eos-gr33/gr-molecular-reference-defined/manifest.json": "144c1a4691bf26823f70c17367a4aa3ccba7a70c208474cbc484086df425d282",
+    "outputs/direct-eos-gr33/gr-molecular-precision/source-tree.json": "2e9a27c58de90a2ce8fe9173a3e1438b2ce0a43984098d81c4c13d8ea7a84a30",
+    "outputs/direct-eos-gr33/gr-molecular-precision/direct_ion_bridge.f90": "a295791c76ae638e2aa3cc2e3e5b48e3428b3e14c7463ad0b10426f198342af0",
+    "outputs/direct-eos-gr33/gr-molecular-precision/candidate-build.py": "40460ecbef59071dc9d1b358888c9e1ea7818bf70b9e5edbb1916bcff0124e1d"
+  }
+}

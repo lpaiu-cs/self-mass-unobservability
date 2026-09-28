@@ -1,0 +1,62 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": {
+    "classification": "Counterexample candidate",
+    "linear_material_admissible": false,
+    "completed_steps": 2,
+    "t": 0.00010732597243527195,
+    "component": "neutral_H",
+    "cell": 11,
+    "region": "deep",
+    "radius_E": 6878908742.240666,
+    "relative": 1.465821457105203e-06,
+    "gate": 1e-06,
+    "background": 1.0304826094891847e+41,
+    "actual_delta": 1.5105035201630087e+35,
+    "component_maxima": [
+      3.357579966673288e-13,
+      1.4481215678949582e-16,
+      3.084005747025091e-08,
+      1.465821457105203e-06
+    ],
+    "conserved_baryon_relative_max": 3.357579966673288e-13,
+    "neutral_inventory_positive": true,
+    "numerical_conservation_passed": true,
+    "directional_check_passed": true,
+    "donor_branch_passed": true,
+    "material_production_started": false,
+    "GR_readout": false,
+    "next": "A finite-amplitude material/constitutive response or an explicit nonlinear remainder bound is required before applying this correction to GR. Do not reduce forcing or relabel the failed linear small-state gate as passed.",
+    "frozen_plan": "348cba7484fa4281a0eccb3b5b0e42f4de4fadf8531df2e5d4e2c51d7b50a5a4",
+    "native_forcing_changed": false
+  },
+  "claim": "Replace the inadmissible infinitesimal material approximation by actual-amplitude nonlinear native-interpolation flux/recovery differences, and return their actual finite pressure/trace to GR.",
+  "equation": "delta_Qdot=F(Qbackground+delta_Q)-F(Qbackground)+saved_collision_drive; preserve actual donor, SSP left closing stage, CFL, finite primitives and shared-face conservation. No amplitude reduction. Background remains the saved17-knot trajectory and photons remain the accepted linear collision response.",
+  "distinction": "The original1e-6 linear small-state verdict stays failed. The new finite-amplitude equation does not assume that bound. A16eps cancellation diagnostic is a numerical resolution check, not a rigorous EOS or recovery remainder bound. Do not call this full nonlinear radiation hydrodynamics.",
+  "budgets": {
+    "pilot_seconds": 60,
+    "production_seconds": 780,
+    "source_seconds": 90,
+    "GR_seconds": 90,
+    "CPU_threads": 1,
+    "virtual_GiB": 3
+  },
+  "reallocation": "Charge the first finite pilot60s, then use another60s from the original900s unstarted material production allowance; retain780s for the same two paths. Exactly zero defect returns the exact zero material difference, with unchanged collision drive. No mesh, clock or time-horizon expansion.",
+  "gates": {
+    "balance": 1e-08,
+    "finite_flux_resolution": 0.002,
+    "time": 0.02,
+    "pressure_resolution": 0.002,
+    "quadrature": 0.002,
+    "independent_GR": 1e-09
+  },
+  "forecast": "Reuse previous complete late-CFL call counts and fresh two-step finite prefixes; require twice summed forecast below840s. New finite RHS needs one actual state per knot instead of two amplified probes. Resume only the new finite prefixes.",
+  "stop": "On nonlinear primitive, positivity, arithmetic resolution, time or budget failure preserve results and redesign; no automatic longer run or relaxed numerical gates.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_finite_collision_return.py": "9de4818075dec864edd8f4e277230dadfc8aac261fa9c847886d9314d85eaccd",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_collision_material_charge.py": "4e4db331f198bb4efe72699ebb21ee4f522e282f237b9f0c8ee6feb4cb44ea8c",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/gate-result.json": "19676c16f3dace3e26bf06179d639ab5ad08eab83964b12cd9c1d12755775b2e",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/result.json": "dd6b7e0eb676f2cac26849e9c86c9620421afb4dfe255f991a465a3e87af5604",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/production.json": "e0d9e98d4915d81952d7526d349d3afc10617c91ef2655f79536e2113b8fbb17"
+  }
+}

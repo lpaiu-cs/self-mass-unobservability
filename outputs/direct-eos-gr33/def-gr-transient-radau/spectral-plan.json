@@ -1,0 +1,20 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Locate actual descriptor-pencil modes in the frequency bands where same-grid Radau paths disagree; distinguish a resolved high-frequency response from arithmetic error before another solver or any refinement.",
+  "decision": "Use only mode residuals and source projections to choose the next propagator. Do not turn a mode sample into a complete error certificate or rerun time paths.",
+  "bands_dimensionless_omega": [
+    32,
+    128,
+    512
+  ],
+  "modes_per_band": 8,
+  "budget": {
+    "hard_seconds": 90,
+    "cpu_threads": 1,
+    "memory_GB": 3,
+    "new_EOS_calls": 0,
+    "new_time_paths": 0
+  },
+  "forecast": "The full24000-variable banded factorization is already measured in the6s64-step paths. New Arnoldi iterations are unmeasured; cap90s, no additional shifts after cap or failure.",
+  "limitations": "Sampled modal bands, nonsymmetric pencil; retain complex or growing eigenvalues and report residuals, never force a real/stable spectrum."
+}

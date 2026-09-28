@@ -1,0 +1,55 @@
+{
+  "classification": "Counterexample candidate",
+  "rows": [
+    {
+      "steps": 1,
+      "max_temperature_relative_change": 18.45291949599312,
+      "energy_balance_max_relative": 2.8028949453369742e-14,
+      "radiated_energy": 0.0,
+      "stored_energy_erg": 1.1869733311150491e+41
+    },
+    {
+      "steps": 2,
+      "max_temperature_relative_change": 19.266024792661437,
+      "energy_balance_max_relative": 3.6991694918110066e-14,
+      "radiated_energy": 0.0,
+      "stored_energy_erg": 1.186973331115043e+41
+    },
+    {
+      "steps": 4,
+      "max_temperature_relative_change": 19.667772437169276,
+      "energy_balance_max_relative": 1.2547843650636454e-14,
+      "radiated_energy": 0.0,
+      "stored_energy_erg": 1.1869733311150708e+41
+    },
+    {
+      "steps": 8,
+      "max_temperature_relative_change": 19.8653683906621,
+      "energy_balance_max_relative": 8.473868439390853e-15,
+      "radiated_energy": 0.0,
+      "stored_energy_erg": 1.186973331115075e+41
+    },
+    {
+      "steps": 16,
+      "max_temperature_relative_change": 19.963092359017526,
+      "energy_balance_max_relative": 1.711069588723153e-14,
+      "radiated_energy": 0.0,
+      "stored_energy_erg": 1.1869733311150661e+41
+    },
+    {
+      "steps": 32,
+      "max_temperature_relative_change": 20.011655885381238,
+      "energy_balance_max_relative": 7.0072373633424355e-15,
+      "radiated_energy": 0.0,
+      "stored_energy_erg": 1.1869733311150766e+41
+    }
+  ],
+  "last_two_max_relative_temperature_difference": 0.048563526363710016,
+  "duration_s": 140780.16,
+  "energy_gate_passed": true,
+  "closed_source_power_Lsun": 219.4647399129946,
+  "physical_evolution_solved": false,
+  "model": "Declared frozen-density, fixed-composition, fixed-conductivity GR finite-volume heat equation with prescribed source and closed boundaries. FreeEOS heat capacity and MESA opacity are a hybrid control.",
+  "theorem": "Positive capacities and symmetric positive face conductances give exact telescoping energy conservation and dissipative homogeneous diffusion. They do not prove stellar thermal stability once reaction/composition/metric feedback is included.",
+  "missing": "No changing species/rest mass, expansion, common EOS, convection or surface atmosphere closure. This is a solver/control result, not a stellar evolution prediction."
+}

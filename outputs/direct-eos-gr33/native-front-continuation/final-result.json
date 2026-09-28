@@ -1,0 +1,186 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "photon_time": [
+    0.0009269117045825861,
+    0.0007088398559368734,
+    0.0016976347992322803,
+    1.648990507849242e-05,
+    0.0010208605581132747,
+    0.0018193871730055845
+  ],
+  "material_time": [
+    0.0008866508456229308,
+    0.0011320227781604299,
+    0.0007088398559368734,
+    0.0016976347992322803
+  ],
+  "rows": [
+    {
+      "classification": "Counterexample candidate",
+      "reference": 128,
+      "steps": 64,
+      "completed_steps": 4,
+      "new_steps": 2,
+      "seconds": 111.97446128000001,
+      "operator_point_seconds": 4.395755856000051,
+      "operator_points": 3,
+      "stepping_seconds": 106.82226222099996,
+      "energy_balance_relative": 6.553619354568896e-16,
+      "species_balance_relative": 4.041360929359891e-17,
+      "linear_relative": 7.265098870950252e-17,
+      "max_Krylov_iterations": 81,
+      "frequency_moment_relative": 6.60820349428787e-17,
+      "endpoint_photon_reference_energy_erg": 1.5309922809258467e-05,
+      "endpoint_material_reference_energy_erg": 8.393462624169134e-07,
+      "endpoint_material_energy_L1_erg": 2.2362439524428378e-06,
+      "additional_material_motion_evolved": true,
+      "full_GR_feedback": false,
+      "final_charge_solved": false,
+      "endpoint_material_nonrest_energy_erg": 7.716122015349313e-07,
+      "velocity_jet_relative": 6.085966434433605e-09,
+      "primitive_mapping_relative": 1.3234889800848443e-23,
+      "conserved_material_input_applied": true,
+      "maximum_extended_stage_residual": 7.265098870950252e-17,
+      "maximum_refinement_steps": 1,
+      "initial_GMRES_stagnations": 6,
+      "actual_completed_steps": 8,
+      "actual_new_steps": 4,
+      "split_completed_macro_steps": 4,
+      "base_steps": 64,
+      "passed": true,
+      "same_solution_material_balance": [
+        2.1805744641323533e-17,
+        1.3424730149684838e-15,
+        2.444197489657556e-19,
+        5.236942118438088e-17
+      ],
+      "angular_port_relative": 1.057481683623226e-17,
+      "maximum_true_stage": 5.530494375636922e-14,
+      "maximum_true_physical_stage": 4.693600205884594e-15,
+      "maximum_newton_iterations": 3,
+      "full_incident_input_applied": true,
+      "self_GR_return_closed": false,
+      "time_comparison_completed": false,
+      "full_horizon_completed": false,
+      "final_charge_conclusion": "unadjudicated",
+      "physical_final_charge_solved": false,
+      "full_goal_complete": false
+    },
+    {
+      "classification": "Counterexample candidate",
+      "reference": 128,
+      "steps": 128,
+      "completed_steps": 8,
+      "new_steps": 4,
+      "seconds": 173.883275723,
+      "operator_point_seconds": 4.542949332000035,
+      "operator_points": 3,
+      "stepping_seconds": 168.54927927699998,
+      "energy_balance_relative": 7.034327347783856e-16,
+      "species_balance_relative": 1.4454691230733e-16,
+      "linear_relative": 2.8589543136369947e-15,
+      "max_Krylov_iterations": 78,
+      "frequency_moment_relative": 6.732112993353671e-17,
+      "endpoint_photon_reference_energy_erg": 1.5295700355983716e-05,
+      "endpoint_material_reference_energy_erg": 8.389563521508859e-07,
+      "endpoint_material_energy_L1_erg": 2.2376129113770558e-06,
+      "additional_material_motion_evolved": true,
+      "full_GR_feedback": false,
+      "final_charge_solved": false,
+      "endpoint_material_nonrest_energy_erg": 7.710310523914305e-07,
+      "velocity_jet_relative": 6.085966434433605e-09,
+      "primitive_mapping_relative": 1.3234889800848443e-23,
+      "conserved_material_input_applied": true,
+      "maximum_extended_stage_residual": 2.8589543136369947e-15,
+      "maximum_refinement_steps": 1,
+      "initial_GMRES_stagnations": 2,
+      "actual_completed_steps": 16,
+      "actual_new_steps": 8,
+      "split_completed_macro_steps": 8,
+      "base_steps": 128,
+      "passed": true,
+      "same_solution_material_balance": [
+        2.1832627121798977e-16,
+        3.5893882888512466e-15,
+        7.575215132614371e-17,
+        5.792732342117911e-17
+      ],
+      "angular_port_relative": 2.8688623842841316e-17,
+      "maximum_true_stage": 4.71935316535276e-14,
+      "maximum_true_physical_stage": 9.405872048556147e-14,
+      "maximum_newton_iterations": 2,
+      "full_incident_input_applied": true,
+      "self_GR_return_closed": false,
+      "time_comparison_completed": false,
+      "full_horizon_completed": false,
+      "final_charge_conclusion": "unadjudicated",
+      "physical_final_charge_solved": false,
+      "full_goal_complete": false
+    }
+  ],
+  "same_horizon_seconds": 0.0002146519448705439,
+  "coarse_bytes_reused": false,
+  "full_incident_input_applied": true,
+  "self_GR_return_closed": false,
+  "full_horizon_completed": false,
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false,
+  "joint_prefix_accepted": true,
+  "same_solution_audit": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "rows": [
+      {
+        "clock": 64,
+        "local_material_balance": [
+          6.914006307586693e-16,
+          2.7792569995181037e-15,
+          4.872536919542157e-16,
+          2.621196348629166e-17
+        ],
+        "angular_port": 1.057481683623226e-17,
+        "actual_stages": 16
+      },
+      {
+        "clock": 128,
+        "local_material_balance": [
+          3.440653064661889e-15,
+          1.2253595093983728e-13,
+          3.775971858038206e-15,
+          3.315058184411499e-17
+        ],
+        "angular_port": 2.8688623842841316e-17,
+        "actual_stages": 32
+      }
+    ],
+    "final_charge_conclusion": "unadjudicated",
+    "time_verdict": true
+  },
+  "prefix_audit": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "rows": [
+      {
+        "clock": 64,
+        "all_saved_prefixes_preserved": true,
+        "new_macro_steps": 2,
+        "new_actual_substeps": 4
+      },
+      {
+        "clock": 128,
+        "all_saved_prefixes_preserved": true,
+        "new_macro_steps": 4,
+        "new_actual_substeps": 8
+      }
+    ]
+  },
+  "original_physical_prefix_recomputed": false,
+  "all_prior_state_and_history_values_preserved": true,
+  "zero_step_serialization_copies_omitted": true,
+  "old_failures_preserved": true,
+  "full_horizon_authorized": false,
+  "physical_final_charge_solved": false,
+  "gross_recovery_derivative_control_accepted": false,
+  "accepted_prefix_bytes_reused": true
+}

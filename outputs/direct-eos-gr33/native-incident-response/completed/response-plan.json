@@ -1,0 +1,42 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Consume the declared incoming scalar/GR fields at actual photon and material stage times, save accepted angular packets and actual free-material response, and return their charge source.",
+  "null": "Zero drive gives exactly zero compensated source on the same evolving retained background. Positive scaling and sign reversal check the declared linear source; no new nonlinear unforced background run is needed.",
+  "spectral_change": "Odd conservative frequency forcing at the zero baseline frequency drift, explicitly replacing the old one-sided upwind artificial-diffusion direction. Keep number, energy, endpoint and metric-work ledgers. This is not a spectral continuum certificate.",
+  "material": "Use the established8x Richardson arithmetic probe for both clocks; verify its4/8 and8/16 directions on actual saved endpoint states. These probes do not change eta=1e-30 or the physical incoming packet.",
+  "budgets": {
+    "fields": 120,
+    "photon_pilot": 90,
+    "photon_production": 1000,
+    "material_pilot": 60,
+    "material_production": 500,
+    "readout": 180,
+    "audit": 60
+  },
+  "gates": {
+    "field_quadrature": 0.002,
+    "field_remainder_over_incident": 1e-06,
+    "null": 1e-12,
+    "frequency": 1e-12,
+    "linear": 1e-12,
+    "time": 0.02,
+    "conservation": 1e-08,
+    "material_directional": 0.002,
+    "physical_branch": 0.01,
+    "small_state": 1e-06,
+    "pressure": 0.002,
+    "independent_GR": 1e-09
+  },
+  "scope": "Fine retained background and existing native-anchored interpolation/Jacobian. No uniform native derivative certificate, full nonlinear driven star, stationary transfer function or companion-matched claim.",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/apply_native_incident_drive.py": "538e94f4f214e6afbf0a83f50c95f56c909840935154b972f5fa0b2d008720ef",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_incident_drive.py": "3e01fc956f56354fc8be01be9ccdf864eb7c6435591fe83b3db10cc90bfbecb0",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/def_retained_metric_return.py": "d250e299e2c9e7afc5981bca967c5387b26acaa034622c4ad4574aaffd9f0103",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_updated_material_return.py": "8fa54ab1fcfa07f0e852905dbb565fe1bf5029b0ba32086e26dbcac48722e8d0",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_stage_aligned_material.py": "0bfdd1f79ccdbc2a41840d8f6e4ad53ef7c7c6249af7770b02cd6da63eeb5992",
+    "native-incident-drive155-work/metric/result.json": "28f77711892a8cfd27014307fb887ebc1f41d7599bd21772d24c65fee8ce6819",
+    "native-incident-drive155-work/lapse-repair-plan.json": "87ae78a0f08baf3137f90296eec1cfd6c5cef1a1976a54a08599e373e49c3ba3",
+    "native-incident-drive155-work/fields/born-g4.npz": "f18d3a96206992b5878fcb927a43fab403a19b393f3413a0e3a8121019ca9083",
+    "native-incident-drive155-work/fields/born-g8.npz": "4a4f1299caa9675a4a5a87c178b883ba242aeec296361a555182328dc429a058"
+  }
+}

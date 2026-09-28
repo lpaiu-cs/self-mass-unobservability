@@ -1,0 +1,43 @@
+{
+  "classification": "Counterexample candidate",
+  "power_infinity_Lsun": {
+    "frozen_source22": {
+      "eps_nuc": 156.79276495678818,
+      "eps_nuc_neu_total": 12.4504567320223,
+      "non_nuc_neu": 6.205948559432276e-05,
+      "nuclear_minus_thermal_neutrino": 156.79270289730258
+    },
+    "fresh_source19": {
+      "eps_nuc": 156.68448168431388,
+      "eps_nuc_neu_total": 12.392218979343642,
+      "non_nuc_neu": 6.205948569957672e-05,
+      "nuclear_minus_thermal_neutrino": 156.6844196248282
+    },
+    "fresh_GR": {
+      "eps_nuc": 219.46481601508,
+      "eps_nuc_neu_total": 13.340858926085243,
+      "non_nuc_neu": 7.610208472412234e-05,
+      "nuclear_minus_thermal_neutrino": 219.46473991299527
+    }
+  },
+  "retained_photospheric_L_infinity_Lsun": 0.5522214509155252,
+  "fresh_source_to_retained_luminosity": 397.4216132842101,
+  "fresh_minus_retained_Lsun": 218.91251846207973,
+  "fresh_vs_frozen_nuclear_relative": 0.3997126466617522,
+  "fluorine_omission_at_source_nuclear_relative": -0.0006906139610723949,
+  "peak": {
+    "zone": 2592,
+    "rho_B_g_cm3": 273.1146910245473,
+    "T_K": 31501932.478087038,
+    "eps_nuc_erg_g_s": 684139.9583978172,
+    "reaction_neutrino_erg_g_s": 48376.55164157745
+  },
+  "opacity_fresh_to_original": {
+    "all_cells_min": 0.8246083451052936,
+    "all_cells_max": 0.9940814732958523,
+    "burning_cells_unweighted_median": 0.9755778693469108,
+    "burning_cell_count": 896
+  },
+  "interpretation": "Fresh MESA net heat and neutrino/opacity evaluation on the declared GR material states. Luminosity and gravothermal/composition derivatives are not solved; this is an instantaneous source diagnostic. Do not call the mismatch an energy violation of an evolving star. MESA EOS auxiliaries are not yet certified against FreeEOS.",
+  "source_weights": "All three comparisons use the same GR proper baryon cell masses and metric redshifts. Historical source powers keep their original verdict elsewhere."
+}

@@ -1,0 +1,25 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "constrained_oscillator_errors": [
+    7.863006753758925e-05,
+    9.849581291717621e-06,
+    1.2318298105445106e-06
+  ],
+  "orders": [
+    2.9969467919187536,
+    2.9992594492973135
+  ],
+  "position_errors": [
+    8.755346321942525e-06,
+    1.395919109858923e-06,
+    1.9321198063693146e-07
+  ],
+  "exact_RK_discrete_errors": [
+    6.151481097716957e-15,
+    9.605971374622001e-15,
+    1.954518906517097e-14
+  ],
+  "stability_function": "(1+z/3)/(1-2*z/3+z^2/6); tends to zero for large negative z. Newmark average acceleration has unit modulus on the imaginary axis.",
+  "limitation": "L-stability does not prove accuracy of unresolved physical modes; the original heat-component refinement criterion is still applied."
+}

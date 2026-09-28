@@ -1,0 +1,61 @@
+{
+  "classification": "Counterexample candidate",
+  "controls": {
+    "time": 0.00025100729998431753,
+    "quadrature": 9.077201064860482e-16,
+    "independent": 2.074797627095871e-15
+  },
+  "compact_return_endpoint": -8.938755896946132e-54,
+  "compact_return_maximum": 8.938755896946132e-54,
+  "incident_amplitude": 1e-30,
+  "endpoint_over_incident_amplitude": -8.938755896946132e-24,
+  "inverse_radius_residual": 4.5634806156158447e-07,
+  "actual_external_input_consumed": true,
+  "actual_free_material_response_evolved": true,
+  "passed": true,
+  "full_null_infinity_charge": false,
+  "complete_reciprocal_fixed_point": false,
+  "full_goal_complete": false,
+  "normalized_compact_endpoint": -8.938755896946132e-54,
+  "normalization_factor": 9.223372036854776e+18,
+  "physical_self_GR_correction_endpoint": -9.69141856278661e-73,
+  "baseline_compact_endpoint": -2.5364324225812962e-51,
+  "signed_correction_over_baseline": -3.820885775038222e-22,
+  "total_compact_endpoint": -2.5364324225812962e-51,
+  "original_whole_state_change": 1.2149427040930618,
+  "original_waveform_change_test_passed": false,
+  "finite_block_input_residual": 2.4296103804734253e-06,
+  "finite_block_input_residual_passed": true,
+  "actual_self_GR_returned": true,
+  "common_fine_GR_input": true,
+  "upstream_GR_uncertainty_closed": false,
+  "original_different_GR_prefix_verdict": "failed",
+  "metric_residual_rows": [
+    {
+      "steps": 64,
+      "returned_over_applied_metric": {
+        "delta_u": 4.623123001447038e-21,
+        "delta_lambda": 1.1774194199226928e-20,
+        "delta_log_lapse": 1.1459335854776152e-20,
+        "delta_log_speed": 1.1766076952123485e-20,
+        "delta_u_prime": 5.6238138268683216e-21,
+        "delta_nu_prime": 1.1738049859500815e-20
+      }
+    },
+    {
+      "steps": 128,
+      "returned_over_applied_metric": {
+        "delta_u": 4.623823263508635e-21,
+        "delta_lambda": 1.1775110685488566e-20,
+        "delta_log_lapse": 1.1460784186485498e-20,
+        "delta_log_speed": 1.176699201115316e-20,
+        "delta_u_prime": 5.624521606636099e-21,
+        "delta_nu_prime": 1.1738965405061812e-20
+      }
+    }
+  ],
+  "maximum_self_metric_residual": 1.1775110685488566e-20,
+  "finite_self_metric_residual_passed": true,
+  "full_nonlinear_fixed_point": false,
+  "scope": "Actual self-GR application with finite material/photon and metric residuals; not a contraction, continuum error bound or final null-infinity charge."
+}

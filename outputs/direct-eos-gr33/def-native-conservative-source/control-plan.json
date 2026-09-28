@@ -1,0 +1,26 @@
+{
+  "classification": "Counterexample candidate",
+  "decision": "After the fixed candidate passed, test mass-rule dependence and isolate source reconstruction from Gamma1 correction. No mesh, source slopes, horizon or acceptance thresholds are tuned.",
+  "paths": [
+    "consistent mass C1 p4-64",
+    "Gamma1-only piecewise-constant source p4-64",
+    "Gamma1-only piecewise-constant source p2-64"
+  ],
+  "mass_rule_gates": {
+    "temperature": 0.02,
+    "velocity": 0.03,
+    "scalar": 0.03
+  },
+  "ablation": "Report both Gamma1-only paths with unchanged max-norm spatial gates. They are a causal contrast, not another physical result accepted without time controls.",
+  "conservation_gate": 1e-09,
+  "total_budget_seconds": 240,
+  "forecast_total_seconds": 221.03428184500007,
+  "prior_accounted_seconds": 79.56858345399999,
+  "forecast_assumption": "Actual p4/p2 costs plus three assemblies and12seconds, with50percent margin; the consistent-mass solve cost is still estimated.",
+  "bindings": {
+    "verification/verify_native_conservative_source.py": "7bb253695915b9ee4caffc2ecf8692449288de4f20359b17be766a53aa6a7ade",
+    "verification/def_native_conservative_source.py": "d9a336e073116fb06df8ebd3c8a1744a40c48b1564bf7df84aeae968ed6083c2",
+    "outputs/direct-eos-gr33/def-native-conservative-source/result.json": "5ba9bd469bc6d7b4c0287daf62bf9e6d206b46d71908acee39445182d9ce6d86",
+    "outputs/direct-eos-gr33/def-native-conservative-source/corrected-plan.json": "0ceb72fc5ac3e20470d36bbb0c0c658e38c8d7dae6cab7d8c0c612d5b715c2a7"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "classification": "Counterexample candidate",
+  "bindings": {
+    "audit-plan.json": {
+      "sha256": "988c64c9f402c8ba712ce93a236efb86e1e5f3c879bae69d2e23a4eee29b780e",
+      "archive": "outputs/direct-eos-gr33/def-native-cold-coupling/audit-producer.py",
+      "inherited_prior_source": false
+    },
+    "audit.json": {
+      "sha256": "988c64c9f402c8ba712ce93a236efb86e1e5f3c879bae69d2e23a4eee29b780e",
+      "archive": "outputs/direct-eos-gr33/def-native-cold-coupling/audit-producer.py",
+      "inherited_prior_source": false
+    },
+    "diagnostic.json": {
+      "sha256": "69442e69a00e820f4b579aecd6deb8978a27444f733d6b33c9a585847cc268d9",
+      "archive": "outputs/direct-eos-gr33/def-native-cold-coupling/initial-producer.py",
+      "inherited_prior_source": false
+    },
+    "first-readout-correction-plan.json": {
+      "sha256": "fd717b7d7b912a707b95b3b565cb3d57d7f9515e50cb7ba7295e719c76f16680",
+      "archive": "outputs/direct-eos-gr33/def-native-cold-coupling/first-readout-verifier.py",
+      "inherited_prior_source": false
+    },
+    "first-readout-resumed-896-128.json": {
+      "sha256": "27276810bbbb4f5ac9fbed3decfb77d4b725942e39ad47ed3eaf9fa709daea52",
+      "archive": null,
+      "inherited_prior_source": true
+    },
+    "first-scaled-plan.json": {
+      "sha256": "cdc6159dfb55c87ba05f5762ce1a3e27c497dd3b495b07800406654cbf4e0202",
+      "archive": "outputs/direct-eos-gr33/def-native-cold-coupling/first-scaled-producer.py",
+      "inherited_prior_source": false
+    },
+    "logarithmic-population-plan.json": {
+      "sha256": "99e7a21b4cf1dcf2d41258cf210c286d50394848942dda37ea677fd6e981c051",
+      "archive": "outputs/direct-eos-gr33/def-native-cold-coupling/logarithmic-population-plan-producer.py",
+      "inherited_prior_source": false
+    },
+    "partition-build-plan.json": {
+      "sha256": "8520aed6e928a00dd9a2f928fb46c294280a9b66a405756e3c55986312ca578c",
+      "archive": "outputs/direct-eos-gr33/def-native-cold-coupling/partition-build-plan-producer.py",
+      "inherited_prior_source": false
+    },
+    "readout-correction-plan.json": {
+      "sha256": "988c64c9f402c8ba712ce93a236efb86e1e5f3c879bae69d2e23a4eee29b780e",
+      "archive": "outputs/direct-eos-gr33/def-native-cold-coupling/audit-producer.py",
+      "inherited_prior_source": false
+    },
+    "recovery-readout-plan.json": {
+      "sha256": "bae18ab778abb35a80b9a7871e389822997f21600eb474e4a35b30344b14291a",
+      "archive": null,
+      "inherited_prior_source": false
+    },
+    "resumed-896-128.json": {
+      "sha256": "27276810bbbb4f5ac9fbed3decfb77d4b725942e39ad47ed3eaf9fa709daea52",
+      "archive": null,
+      "inherited_prior_source": true
+    },
+    "scaled-first-success-plan.json": {
+      "sha256": "ba8b285f534508946f1ea5b626aefc07c17aa4785972e6297855b2016ed2de71",
+      "archive": "outputs/direct-eos-gr33/def-native-cold-coupling/scaled-producer.py",
+      "inherited_prior_source": false
+    },
+    "scaled-partition-plan.json": {
+      "sha256": "ba8b285f534508946f1ea5b626aefc07c17aa4785972e6297855b2016ed2de71",
+      "archive": "outputs/direct-eos-gr33/def-native-cold-coupling/scaled-producer.py",
+      "inherited_prior_source": false
+    },
+    "support-controls-plan.json": {
+      "sha256": "7aa029ef8a8e81534a43eb8a1c079a1e6175c97b464020eca51ae5646363205f",
+      "archive": "outputs/direct-eos-gr33/def-native-cold-coupling/controls-producer.py",
+      "inherited_prior_source": false
+    },
+    "support-plan.json": {
+      "sha256": "3371f47cdd0753c1c1fb384c4668efeadf56b306a8255cb7cd71aa2f29049a29",
+      "archive": "outputs/direct-eos-gr33/def-native-cold-coupling/support-producer.py",
+      "inherited_prior_source": false
+    }
+  },
+  "limitation": "Nested resumed result source_sha256 originally reported inherited Phase112 source; resume-plan and resume-producer bind the actual wrapper. Reporting correction retains original bytes and no dynamics were rerun."
+}

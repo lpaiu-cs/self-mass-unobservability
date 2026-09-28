@@ -1,0 +1,96 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "paths": [
+    {
+      "cells": 1792,
+      "rows": [
+        {
+          "quantile": 0.1,
+          "retained_RR_event_ceiling": 0.0002537960350062499,
+          "retained_RR_lower_H_ion": 0.9997365183035469,
+          "required_over_ceiling": 10.242451942970105
+        },
+        {
+          "quantile": 0.25,
+          "retained_RR_event_ceiling": 0.00023798225347519643,
+          "retained_RR_lower_H_ion": 0.9997523288000991,
+          "required_over_ceiling": 27.127920424228062
+        },
+        {
+          "quantile": 0.5,
+          "retained_RR_event_ceiling": 0.00020436585735337655,
+          "retained_RR_lower_H_ion": 0.9997859386945118,
+          "required_over_ceiling": 115.87225367831579
+        },
+        {
+          "quantile": 0.75,
+          "retained_RR_event_ceiling": 0.00014925021016627254,
+          "retained_RR_lower_H_ion": 0.9998410453190164,
+          "required_over_ceiling": 457.7145743849645
+        },
+        {
+          "quantile": 0.9,
+          "retained_RR_event_ceiling": 9.029017143472096e-05,
+          "retained_RR_lower_H_ion": 0.9998999984767036,
+          "required_over_ceiling": 1470.565664561723
+        },
+        {
+          "quantile": 0.99,
+          "retained_RR_event_ceiling": 1.7131729094552828e-05,
+          "retained_RR_lower_H_ion": 0.9999731526794868,
+          "required_over_ceiling": 13612.773153223428
+        }
+      ]
+    },
+    {
+      "cells": 896,
+      "rows": [
+        {
+          "quantile": 0.1,
+          "retained_RR_event_ceiling": 0.00025370140510087906,
+          "retained_RR_lower_H_ion": 0.9997366129112798,
+          "required_over_ceiling": 10.00574334330557
+        },
+        {
+          "quantile": 0.25,
+          "retained_RR_event_ceiling": 0.00023791207696509227,
+          "retained_RR_lower_H_ion": 0.9997523989615258,
+          "required_over_ceiling": 27.037068994033252
+        },
+        {
+          "quantile": 0.5,
+          "retained_RR_event_ceiling": 0.00020420759162222488,
+          "retained_RR_lower_H_ion": 0.9997860969278937,
+          "required_over_ceiling": 116.17098107354377
+        },
+        {
+          "quantile": 0.75,
+          "retained_RR_event_ceiling": 0.00014880359750530823,
+          "retained_RR_lower_H_ion": 0.9998414918615318,
+          "required_over_ceiling": 454.5636479416497
+        },
+        {
+          "quantile": 0.9,
+          "retained_RR_event_ceiling": 8.799150092172358e-05,
+          "retained_RR_lower_H_ion": 0.9999022969202755,
+          "required_over_ceiling": 1420.9849098954041
+        },
+        {
+          "quantile": 0.99,
+          "retained_RR_event_ceiling": 1.6706559095298066e-05,
+          "retained_RR_lower_H_ion": 0.9999735777370897,
+          "required_over_ceiling": 11220.61197238097
+        }
+      ]
+    }
+  ],
+  "source_model": "Piecewise log-linear saved material histories; original monotone total spontaneous RR fit and maximum fully ionized electron inventory. This excludes no omitted neutralization process.",
+  "fit_parameters": [
+    7.982e-11,
+    0.748,
+    3.148,
+    703600.0
+  ],
+  "independent_fit_relative": 7.01802338465285e-08
+}

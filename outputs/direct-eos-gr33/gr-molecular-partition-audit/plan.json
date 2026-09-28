@@ -1,0 +1,44 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "9de5955",
+  "discovery": "The preliminary direct partition call at 1e6 K returned q_lnT+q_lnT_lnT < 0 for both molecules. The following audit is confirmation of that discovered failure, not a blind preregistered discovery.",
+  "comparison_T_K": [
+    1000,
+    3000,
+    5000,
+    8999,
+    9000,
+    10000,
+    15000,
+    18000,
+    19000,
+    20000,
+    100000,
+    1000000
+  ],
+  "table_comparison": "Every integer temperature 1000--20000 K; no fit, normalization adjustment, rejection gate or extrapolated published table. Record native versus source differences and the source column identities.",
+  "native_replay_absolute_tolerance": 1e-10,
+  "uniform_T_K": [
+    999999,
+    1000001
+  ],
+  "interval_digits": 70,
+  "maximum_logT_derivative": 10,
+  "printed_level_halfwidth_cm_inverse": "0.0005",
+  "interval_scope": "Outward interval calculation of the explicitly declared finite spectral sum and rounded-coefficient Taylor model. The level halfwidth is a printing-bin scenario, not an experimental/theoretical uncertainty bound. The polynomial interval excludes native compiler/libm evaluation error. These are not bounds on the implicit chemical-equilibrium EOS derivatives.",
+  "runtime": {
+    "/home/lpaiu/work/direct-eos-gr33/molecular-switch/build/src/libfree_eos_direct24_molecular_switch.so.1.0.0": "1bf2d41f92c7550a7596404661502f791afe4ca19cc942ba0ed7e19f5d37030c",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-switch/excitation.so": "e6887d3d3b46cee306e6d2a8d17c026cef0f05858ee99209d2686bf6a9c29065"
+  },
+  "bindings": {
+    "verification/molecular_partition_data.py": "5e1da4a3da0fa643e9b278759bd9416728e6ffc27dd29bee8ab666548e546594",
+    "outputs/direct-eos-gr33/gr-molecular-partition-audit/sources.json": "b6fc8b3ae573ba9a0c989344d0ca74fd1a2f74ea524325f37b1a908e0e65f090",
+    "outputs/direct-eos-gr33/gr-molecular-partition-audit/mod_molecular_hydrogen.f90": "d6a1ddce02fc637f896d5eb98370bd33e53097866a5bef5d19a94172fbee3387",
+    "outputs/direct-eos-gr33/initial-state-17-4.npz": "5dcc8ffb8b32a9f15ccc4c8bb7111d19be8dcdc66611ad2942e3a4a0cf6cc6d6",
+    "outputs/direct-eos-gr33/gr-molecular-partition-source/h2-2016.html": "87a89fcd1c12f05e112d8249428cda2c085fa385674021e5acb95eecb55a6bfd",
+    "outputs/direct-eos-gr33/gr-molecular-partition-source/cds-ReadMe.txt": "814bb172229da94f11909f6bc855ab30e41d07ed7ae7e81b4a74efb9f4a4d4f5",
+    "outputs/direct-eos-gr33/gr-molecular-partition-source/cds-index.html": "524226484f615580038d7564b335d3fa39850fd89b371563738616d20293eeec",
+    "outputs/direct-eos-gr33/gr-molecular-partition-source/h2equil.dat.gz": "32288d1356ea904db21d5673b198f246ce9ce8b65d1f91b7a6e4c3167bd236d0",
+    "outputs/direct-eos-gr33/gr-molecular-partition-source/eleroyh2.dat": "b74b0bb5e523e54e7095584f5d73c8a4c249127bfa3979ba7bc2887cb2b8e2cc"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "classification": "Counterexample candidate",
+  "controls": {
+    "time": 1.67424690692529e-05,
+    "quadrature": 3.5096912822894206e-16,
+    "independent": 4.094657232655687e-15
+  },
+  "compact_return_endpoint": -2.5364324225812962e-51,
+  "compact_return_maximum": 2.5364324225812962e-51,
+  "incident_amplitude": 1e-30,
+  "endpoint_over_incident_amplitude": -2.536432422581296e-21,
+  "inverse_radius_residual": 4.5634806156158447e-07,
+  "actual_external_input_consumed": true,
+  "actual_free_material_response_evolved": true,
+  "passed": true,
+  "full_null_infinity_charge": false,
+  "complete_reciprocal_fixed_point": false,
+  "full_goal_complete": false,
+  "finite_reciprocal_waveform_residual_passed": true,
+  "sweeps": 2,
+  "residual": {
+    "classification": "Counterexample candidate",
+    "rows": [
+      {
+        "steps": 64,
+        "material_waveform_residual": [
+          6.709915892908455e-06,
+          4.083201503703672e-06,
+          3.245998960622716e-06,
+          1.545167329192095e-05
+        ],
+        "photon_material_energy_H_residual": [
+          2.8235507051108493e-06,
+          8.975694200974471e-07
+        ],
+        "material_balance": 2.360933513703454e-14,
+        "angular_port": 3.093355152497901e-17
+      },
+      {
+        "steps": 128,
+        "material_waveform_residual": [
+          1.4944032932730585e-06,
+          1.189647352974794e-06,
+          1.076290695259696e-06,
+          3.3557517792243297e-06
+        ],
+        "photon_material_energy_H_residual": [
+          9.018114959850963e-07,
+          1.2404305131418606e-07
+        ],
+        "material_balance": 1.7745036698409805e-14,
+        "angular_port": 1.5489221428243196e-16
+      }
+    ],
+    "time_comparison": [
+      4.208580238777511e-05,
+      4.9887944935145774e-05,
+      2.8129449918037384e-05,
+      0.00043613160463209074
+    ],
+    "maximum_residual": 1.545167329192095e-05,
+    "previous_residual": 0.5903708209811248,
+    "finite_reciprocal_residual_passed": true,
+    "passed": true,
+    "next_sweep_allowed": false,
+    "full_nonlinear_fixed_point": false,
+    "self_GR_returned": false,
+    "full_goal_complete": false
+  },
+  "mechanical_collision_partition_relative": [
+    [
+      2.4464770969586484e-16,
+      1.4265752669082903e-12
+    ],
+    [
+      3.8474190393784146e-16,
+      1.2298135233457329e-12
+    ]
+  ],
+  "accepted_prefixes_preserved": true,
+  "source_identity_relative": 9.139980835671044e-38,
+  "previous_one_way_endpoint": -2.536436922168223e-51,
+  "signed_endpoint_fraction_change": 1.7739794305044748e-06,
+  "self_GR_returned": false,
+  "scope": "Accepted finite material-photon waveform residual under prescribed external GR; not full Einstein-matter fixed point, continuum error certificate or final infinity charge."
+}

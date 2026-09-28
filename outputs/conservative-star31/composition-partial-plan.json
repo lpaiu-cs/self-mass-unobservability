@@ -1,0 +1,24 @@
+{
+  "classification": "Counterexample candidate",
+  "purpose": "Distinguish a fixed-auxiliary native partial derivative from the total derivative of the composed EOS/nuclear function.",
+  "directions": [
+    "h1",
+    "n14"
+  ],
+  "steps": [
+    1e-06,
+    5e-07
+  ],
+  "frozen_inputs": [
+    "abar",
+    "zbar",
+    "z2bar",
+    "free_electron_abundance",
+    "eta",
+    "deta_dlnT",
+    "deta_dlnrho"
+  ],
+  "control": "Baseline with all seven supplied initial values must reproduce original native outputs before reading perturbed results.",
+  "criterion": 0.001,
+  "interpretation": "If frozen-auxiliary partials pass, attribute the full-source discrepancy to missing auxiliary chain terms in the wrapper, not automatically a defect in a partial-derivative API. No binary, table or returned result is modified."
+}

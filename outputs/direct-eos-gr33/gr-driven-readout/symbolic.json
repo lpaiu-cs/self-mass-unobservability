@@ -1,0 +1,9 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "trace": "-E+R+2P=-epsilon+3P, including radial heat flux.",
+  "parity": "For A(phi)=exp(beta*phi^2/2), the matter source beta*phi*T*d_mu(phi) is quadratic about phi=0. Linear scalar perturbations do not excite the fluid/thermal block on the unscalarized branch.",
+  "mixed_response": "For a smooth nonzero-background expansion with bounded stationary resolvent: deltaU=phi0*(sI-L)^(-1)*f*delta_phi+..., deltaq=chi*delta_phi+phi0*h*deltaU+..., so the fluid-mediated term in deltaq/delta_phi starts at phi0^2. This is power counting, not a magnitude bound near a pole.",
+  "mass": "A shared-face conservative energy update with zero central/outer energy flux and constant starting mass preserves total mass by induction, up to the accepted residual.",
+  "limitations": "No claim of stability, small resolvent norm, physical EOS, stationary evolving background, nonzero scalar backreaction, or observational closure."
+}

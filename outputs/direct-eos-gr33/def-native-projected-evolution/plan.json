@@ -1,0 +1,47 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "f9987fc1a",
+  "claim": "Install the accepted inventory-matched initial GR/scalar projection in all actual material and photon owners, complete the same3.434ms64/128 trajectories and recompute their direct charge.",
+  "decision": "Determine whether the old positive direct response survives a consistent physical initial projection. No old numerical lower bound is inherited.",
+  "reuse": "All19+512 cells,152 frequencies,8 angles, original native tables and first-order density/frequency derivatives. Reuse Phase119 only as a comparison; do not repeat its trajectories.",
+  "model": "Frozen corrected initial metric, exact proper volumes, fixed Einstein mesh mapped to Jordan radius, conserved initial baryons and angular photon number/energy moments, native entropy anchors and conservative frequency remap. Deep theta is relative to new T0. Keep old native gas-gradient reconstruction plus its pressure correction; never reimpose equilibrium. Atmosphere uses the existing native cold EOS and actual pressure/gravity fluxes. Same shared material/photon face.",
+  "limitations": "Initial Krr and scalar balance are retained data but dynamic metric/scalar feedback is not evolved. Local Gamma continuation, first-order deep EOS derivatives, finite spectral endpoint projection, atmosphere Gamma temperature adjustment and inherited spatial gradient reconstruction remain approximations. No final physical charge or observable claim.",
+  "budget": {
+    "check_seconds": 35,
+    "pilot_seconds": 40,
+    "production_seconds": 500,
+    "readout_seconds": 60,
+    "CPU_threads": 1,
+    "memory_GB": 3,
+    "paths": [
+      64,
+      128
+    ],
+    "new_native_bank_calls": 0
+  },
+  "forecast": "Phase119 production took333s. Measure two full new steps per clock; resume their prefixes only if1.8x projected remainder plus10s fits500s. Late nonlinear cost unmeasured.",
+  "gates": {
+    "inventory": 1e-12,
+    "photon_moments": 1e-12,
+    "projected_density": 1e-12,
+    "native_initial": 0.002,
+    "energy": 1e-08,
+    "baryon": 1e-10,
+    "source": 1e-09,
+    "time_direct": 0.02,
+    "time_total": 0.02,
+    "history_direct": 0.02,
+    "cadence_direct": 0.02,
+    "quadrature_direct": 0.02
+  },
+  "stop": "Preserve every failure. No automatic third path, finer grid, longer time, table expansion or weaker gate.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_projected_evolution.py": "ded83e22881244c82a3e278c6bdfb8794f2236b64082978b676840fb0c5b8c0b",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_initial_constraints.py": "75ad4d44ef2d23c9dffc3aa747970edc3b3d38b0dafe2acef000f8ab2177b0b8",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_boundary_layer.py": "7a6b8329e9bd402d1bc7bf4b236e63094c6b2f53467cf7be49fd021ca7cb2951",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-initial-constraints/finite-volume/balanced-20.npz": "72ae702c85db57f0c02c1e5ca15dfad7df50d901b4270531e5b49c8c3746d3cb",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-initial-constraints/finite-volume/balanced-initial-state.npz": "8854f8209ad8f05904a5b8444e3dec52e12ceaac963073e55e3c04f86d5b1321",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-initial-constraints/finite-volume/audit.json": "b6a8c70e435289753f19b65dae40067cf74dc2d10e2cf288c54f3fedeb26978a",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-boundary-layer/coupled-128.npz": "a0b6b28116231883c38f58869141f4a20b7fa7513176ccec796e48414fa4d387"
+  }
+}

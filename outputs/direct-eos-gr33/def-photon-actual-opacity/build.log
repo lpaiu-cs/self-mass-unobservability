@@ -1,0 +1,121 @@
+synspec54.f:21820:26:
+
+21819 |                do j=2,ndens-1
+      |                                                                        2
+21820 |                   densg(i,j)=exp(at1+(j-1)*dr)
+      |                          1
+Warning: Array reference at (1) out of bounds (2 > 1) in loop beginning at (2)
+synspec54.f:13060:41:
+
+13050 |       DO ID=2,ND1
+      |                                                                        2
+......
+13060 |          VL0=A*ST0(ID-1)+B*ST0(ID)+C*ST0(ID+1)
+      |                                         1
+Warning: Array reference at (1) out of bounds (3 > 2) in loop beginning at (2)
+synspec54.f:13064:30:
+
+13050 |       DO ID=2,ND1
+      |                                                                        2
+......
+13064 |                CC(I,J)=-C*SS0(ID+1)*WTMU(J)
+      |                              1
+Warning: Array reference at (1) out of bounds (3 > 2) in loop beginning at (2)
+synspec54.f:13239:20:
+
+13230 |       DO ID=2,ND1
+      |                                                                        2
+......
+13239 |          CCC=GA*FKK(ID+1)-C*(UN+SS0(ID+1))
+      |                    1
+Warning: Array reference at (1) out of bounds (3 > 2) in loop beginning at (2)
+synspec54.f:13239:36:
+
+13230 |       DO ID=2,ND1
+      |                                                                        2
+......
+13239 |          CCC=GA*FKK(ID+1)-C*(UN+SS0(ID+1))
+      |                                    1
+Warning: Array reference at (1) out of bounds (3 > 2) in loop beginning at (2)
+synspec54.f:13241:31:
+
+13230 |       DO ID=2,ND1
+      |                                                                        2
+......
+13241 |          VLL=A*ST0(ID-1)+C*ST0(ID+1)+(UN-A-C)*ST0(ID)
+      |                               1
+Warning: Array reference at (1) out of bounds (3 > 2) in loop beginning at (2)
+synspec54.f:2898:41:
+
+ 2888 |       DO ID=2,ND1
+      |                                                                        2
+......
+ 2898 |          VL0=A*ST0(ID-1)+B*ST0(ID)+C*ST0(ID+1)
+      |                                         1
+Warning: Array reference at (1) out of bounds (3 > 2) in loop beginning at (2)
+synspec54.f:2902:30:
+
+ 2888 |       DO ID=2,ND1
+      |                                                                        2
+......
+ 2902 |                CC(I,J)=-C*SS0(ID+1)*WTMU(J)
+      |                              1
+Warning: Array reference at (1) out of bounds (3 > 2) in loop beginning at (2)
+synspec54.f:3126:20:
+
+ 3117 |       DO ID=2,ND1
+      |                                                                        2
+......
+ 3126 |          CCC=GA*FKK(ID+1)-C*(UN+SS0(ID+1))
+      |                    1
+Warning: Array reference at (1) out of bounds (3 > 2) in loop beginning at (2)
+synspec54.f:3126:36:
+
+ 3117 |       DO ID=2,ND1
+      |                                                                        2
+......
+ 3126 |          CCC=GA*FKK(ID+1)-C*(UN+SS0(ID+1))
+      |                                    1
+Warning: Array reference at (1) out of bounds (3 > 2) in loop beginning at (2)
+synspec54.f:3128:31:
+
+ 3117 |       DO ID=2,ND1
+      |                                                                        2
+......
+ 3128 |          VLL=A*ST0(ID-1)+C*ST0(ID+1)+(UN-A-C)*ST0(ID)
+      |                               1
+Warning: Array reference at (1) out of bounds (3 > 2) in loop beginning at (2)
+synspec54.f:3213:20:
+
+ 3201 |       DO ID=2,ND1
+      |                                                                        2
+......
+ 3213 |      *       C*(ST0(ID+1)-SS0(ID+1)*RDD(ID+1))+
+      |                    1
+Warning: Array reference at (1) out of bounds (3 > 2) in loop beginning at (2)
+synspec54.f:3213:30:
+
+ 3201 |       DO ID=2,ND1
+      |                                                                        2
+......
+ 3213 |      *       C*(ST0(ID+1)-SS0(ID+1)*RDD(ID+1))+
+      |                              1
+Warning: Array reference at (1) out of bounds (3 > 2) in loop beginning at (2)
+synspec54.f:3213:40:
+
+ 3201 |       DO ID=2,ND1
+      |                                                                        2
+......
+ 3213 |      *       C*(ST0(ID+1)-SS0(ID+1)*RDD(ID+1))+
+      |                                        1
+Warning: Array reference at (1) out of bounds (3 > 2) in loop beginning at (2)
+synspec54.f:5494:72:
+
+ 5494 |          IF(IL.LE.NLH) PJ(IL)=POPUL(N0HN+IL-1,ID)
+      |                                                                        ^
+Warning: iteration 40 invokes undefined behavior [-Waggressive-loop-optimizations]
+synspec54.f:5492:12:
+
+ 5492 |       DO IL=1,50
+      |            ^
+note: within this loop

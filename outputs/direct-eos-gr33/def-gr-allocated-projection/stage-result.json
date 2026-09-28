@@ -1,0 +1,52 @@
+{
+  "classification": "Counterexample candidate",
+  "actual_same_input_evolved": true,
+  "propagation_passed": false,
+  "comparisons": {
+    "velocity_mass_RMS_m_s": {
+      "previous": 0.003271242231076377,
+      "last": 0.0013826541459416857,
+      "order": 1.2423982639392055
+    },
+    "scalar_mass_RMS": {
+      "previous": 0.0038743075578705198,
+      "last": 0.00011620969099374135,
+      "order": 5.059136196796979
+    },
+    "old_interface_velocity_RMS_m_s": {
+      "previous": 0.0077531049443244175,
+      "last": 0.034195364485125106,
+      "order": -2.140954668825075
+    },
+    "new_interface_velocity_RMS_m_s": {
+      "previous": 0.0006731273894961463,
+      "last": 6.971376603571819e-05,
+      "order": 3.271364089749595
+    }
+  },
+  "seconds": 20.753770881999998,
+  "memory_GB": 2.044485632,
+  "original_failure_resolved": false,
+  "full_dynamic_charge_solved": false,
+  "fields": [
+    {
+      "field": 0,
+      "columns": 448,
+      "force_norm": 3.1227071922128893e-19,
+      "orthogonality": 9.992007221626409e-16,
+      "linear_residual": 1.0471387749579065e-16
+    },
+    {
+      "field": 1,
+      "columns": 64,
+      "force_norm": 1.4994025927879003e-28,
+      "orthogonality": 1.1102230246251565e-15,
+      "linear_residual": 5.270357601282628e-16
+    }
+  ],
+  "allocation": "7 fluid : 1 scalar",
+  "resolvent_symmetry": 0.0,
+  "full_mass_orthogonality": 1.1102230246251565e-15,
+  "linear_residual": 1.1779895487269642e-15,
+  "symmetric_assembly_relative_change": 7.662019608262997e-17
+}

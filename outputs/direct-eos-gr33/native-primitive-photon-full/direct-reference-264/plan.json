@@ -1,0 +1,38 @@
+{
+  "classification": "Conjectural",
+  "packets": [
+    0,
+    31
+  ],
+  "emission_cell": 0,
+  "claim": "Compare unchanged direct time-jet propagation with the primitive method on the same earliest cohort, at near-grazing and near-radial physical quadrature directions.",
+  "gate": 0.002,
+  "rtol": 2e-08,
+  "atol": 2e-11,
+  "maximum_seconds": 21600,
+  "scope": "Independent actual-trajectory control for the exact variable transformation. Two representative rays are not a uniform continuum certificate.",
+  "continuation": "Phase263 stopped at its registered 3600 s budget inside packet 31 after packet 0 had completed and been saved. Reuse that identical packet 0 under the unchanged registered bindings and compute only packet 31.",
+  "budget_reason": "Measured packet 0: 1820.997 s. Packet 31 ran about 1771 s without completing, so its total cost is unmeasured. Allow 6 hours for this ray alone; if it does not finish, stop and re-plan instead of extending.",
+  "original_receipt": {
+    "seconds": 3600.0001183019995,
+    "error": "TimeoutError('Registered native acoustic budget')",
+    "source_sha256": "a436d2a48505cd35559f82d4a986acbb8742a3c0e252b5a15748d302f14c20fc",
+    "peak_RSS_bytes": 957157376
+  },
+  "reused": {
+    "native-primitive-photon263-work/direct-reference/packet-0.npz": "6fa2679cce60f09b11e369e3547252d74b4292d347b2e5482be78517b8b836de",
+    "native-primitive-photon263-work/direct-reference/packet-0.json": "3da6d864cde21df1aa4ef6dbbf8cc45e188ea1f45b304d13dc72d73952fa46f5"
+  },
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/.phase264-direct-reference.py": "522d7f30ab666efae174733c6bfe46693798120a3e4fcf7b88072485c844575c",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/propagate_primitive_characteristics.py": "2230805b9ca574e0076cf9d796eb60f0c9060f374df3208b18332c8fcb698f77",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/propagate_returned_exterior.py": "ed80f53154f4f195f28eeebf3fee45d1fe2057883a93832643060f48c1df4634",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/propagate_physical_exterior.py": "600392bf42fb4d3086fd4107603b15c4c8e854b6ee6543f8c87aa245ac8bd857",
+    "native-primitive-photon263-work/plan.json": "38332bd5476cadf4f02731a5d44c6fb79fa34e6d1060b24194a81b09eda7db76",
+    "native-primitive-photon263-work/check.json": "f81870005756ff006703c032cde3d2ec1c64ca4a47fa7f4ab4217fbce1e7cb68",
+    "native-primitive-photon263-work/pilot-0.npz": "614c2d53ed7ab0d3c7cadd4ac12eed1a53894f90ba46a00836ab1bebb6d8523d",
+    "native-primitive-photon263-work/direct-reference/plan.json": "d2a6c6bf9cb02309fbd5ce3aad977df7e102b3235da4de91e02ff4cd1c557712",
+    "native-primitive-photon263-work/direct-reference/receipt.json": "f1bc951bf5f371f7d526910d24f1285e96b9497f56057f370dfc8149584090a3",
+    "native-primitive-photon263-work/direct-reference/progress.json": "b33855cff7079c2b83d4e5e51f96c490edb1904211da8141eb31c0432b047c8a"
+  }
+}

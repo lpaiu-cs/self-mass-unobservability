@@ -1,0 +1,41 @@
+{
+  "classification": "Proven",
+  "assumptions": "각 셀에서 g는 C2, S는 저장 계수를 정확한 실수로 읽은 cubic polynomial, |g-S|의 끝점 오차가 eps, |g_second-S_second|<=rho. native 평가·적분 산술 반올림과 parameter에 따른 이동 격자 미분은 별도.",
+  "value_error": "eps + rho*h^2/8",
+  "derivative_error": "2*eps/h + rho*h/2",
+  "integral_error": "eps*h + rho*h^3/12",
+  "nonuniform_cells": true,
+  "natural_boundary_C4_not_required": true,
+  "kernel_constants_proved": true,
+  "native_quartic_controls": [
+    {
+      "cell": 0,
+      "rho": "19255195128769230897/9223372036854775808",
+      "value_error_upper": "19255195128769230897/4722366482869645213696",
+      "derivative_error_upper": "19255195128769230897/147573952589676412928",
+      "integral_error_upper": "6418398376256410299/18889465931478580854784"
+    },
+    {
+      "cell": 1,
+      "rho": "6274283188180554427/1152921504606846976",
+      "value_error_upper": "56468548693624989843/590295810358705651712",
+      "derivative_error_upper": "18822849564541663281/18446744073709551616",
+      "integral_error_upper": "56468548693624989843/2361183241434822606848"
+    },
+    {
+      "cell": 2,
+      "rho": "28346315118030004823/576460752303423488",
+      "value_error_upper": "255116836062270043407/73786976294838206464",
+      "derivative_error_upper": "85038945354090014469/4611686018427387904",
+      "integral_error_upper": "255116836062270043407/147573952589676412928"
+    },
+    {
+      "cell": 3,
+      "rho": "45207792122905141847/576460752303423488",
+      "value_error_upper": "406870129106146276623/73786976294838206464",
+      "derivative_error_upper": "135623376368715425541/4611686018427387904",
+      "integral_error_upper": "406870129106146276623/147573952589676412928"
+    }
+  ],
+  "actual_full_span_rho_certified": false
+}

@@ -1,0 +1,26 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "derivative": {
+    "classification": "Proven",
+    "passed": true,
+    "maximum_absolute_errors": [
+      1.0547118733938987e-15,
+      2.3592239273284576e-15
+    ],
+    "scope": "Analytic Uxx for the stated polynomial source including nonzero initial fronts. No physical continuum error is inferred."
+  },
+  "mixed_symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "scope": "Mixed derivatives of the declared polar Einstein constraints and scalar trace factor, alpha_prime=beta=-4; the two known first variations are held independent. Not a closure of second-order material evolution.",
+    "canonical": "Recover physical dE,dP,dT by subtracting the initial canonical response ONCE from the saved forcing. Its actual noncanonical material response is already present.",
+    "mass": "Jx_prime+(nu0_prime+lambda0_prime)*Jx=r*b*q_lambda. Jx=sqrt(b)/N integral N*r*sqrt(b)*q_lambda dr, with zero additional inner port.",
+    "scalar": "Keff*Jx+r*a^2*Phi*(q_nu-q_lambda)+S_trace+S_static_gradient+S_incident_metric[U_background]. The previous background-metric action on the primary is not added again.",
+    "physical_mass": "delta_m_mixed=r*b*delta_lambda_mixed-2*r*b*lambda_background*lambda_incident. The auxiliary constraint Jx is not a new matter energy inventory."
+  },
+  "applied_source_sum_relative": 8.239430097273634e-20,
+  "original_inputs_preserved": true,
+  "reciprocal_compact_source_applied": true,
+  "full_goal_complete": false
+}

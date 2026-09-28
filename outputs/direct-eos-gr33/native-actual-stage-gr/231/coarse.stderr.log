@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_precise_conserved_native.py", line 79, in <module>
+    assert read(OUT/'restart-check.json')['passed'];evolve(64 if action=='coarse' else 128)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_precise_conserved_native.py", line 56, in evolve
+    def evolve(n):FunctionType(prior.evolve.__code__,dict(prior.evolve.__globals__,OUT=OUT,initialize=initialize,factory=factory))(n)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_integer_native.py", line 91, in evolve
+    def evolve(n):FunctionType(prior.prior.evolve.__code__,dict(prior.prior.evolve.__globals__,OUT=OUT,initialize=initialize,factory=factory))(n)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_precise_momentum.py", line 110, in evolve
+    ns=dict(old.evolve.__globals__,OUT=OUT,initialize=initialize,current_factory=factory);exec(compile(source,__file__,'exec'),ns);ns['evolve'](n)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_precise_momentum.py", line 14, in evolve
+    
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_postfloor_native.py", line 37, in evolve
+    claim='Continue the remaining actual coupled period from114accepted substeps with Newton proposals initialized from the accepted post-floor gas.',
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/balance_full_native_krylov.py", line 42, in run
+    import sympy as sp
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_postfloor_native.py", line 27, in saved_stage
+    assert np.array_equal(cells,[260,261]) and not np.any(q['g'][cells])
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_native_flux_precision.py", line 39, in stages
+    forecast='Independent high evaluation of two actual stages costs1.28s after setup.658saved stages imply about7minutes plus setup, with20minute prefix cap.200used1659s for8failed proposals of one step. Allow2/3hours for5coarse/16fine remaining substeps; later/fine costs remain uncertain, not an ETA. No accepted prefix reintegration.',
+AssertionError: ('True native joint Radau equation', [{'relative': 7.063767072349395e-07, 'moments': [1.2971069335560775e-17, 1.090007714807904e-18, 2.6436805205642847e-20, 1.847550925277559e-20]}, {'relative': 2.182404597966729e-06, 'moments': [1.2922108014191256e-17, 1.08983960850672e-18, 2.643531090773657e-20, 1.8475509253191547e-20]}, {'relative': 1.0461402575450954e-06, 'moments': [1.3088104842967798e-17, 1.0960252074417332e-18, 2.6435703576513316e-20, 1.8475509256216067e-20]}, {'relative': 9.210827190470271e-07, 'moments': [1.2980593367353212e-17, 1.0848356232410872e-18, 2.6500503625469807e-20, 1.847550925241186e-20]}, {'relative': 2.656430863998379e-06, 'moments': [1.2941571614745901e-17, 1.0787747620628028e-18, 2.6500326138002245e-20, 1.8475509251644074e-20]}, {'relative': 2.256985673221313e-06, 'moments': [1.2942146856114064e-17, 1.087386957179755e-18, 2.650006160395022e-20, 1.8475509251772585e-20]}, {'relative': 3.846219360992844e-06, 'moments': [1.2949053399200885e-17, 1.0937800488238855e-18, 2.6434872656979224e-20, 1.8475509251756428e-20]}, {'relative': 1.2189348257646343e-06, 'moments': [1.2970305466585745e-17, 1.0962996560107586e-18, 2.6499849643311356e-20, 1.847550925295564e-20]}])

@@ -1,0 +1,11 @@
+{
+  "classification": "Counterexample candidate",
+  "failed_before_first_fluid_step": true,
+  "error": "numpy.interp rejects the saved float128 boundary-velocity array",
+  "correction": "Convert only the imported boundary-velocity interpolation ordinate to binary64, the declared flow arithmetic; preserve all stored bulk fields and the unchanged EOS, fluid equations and gates.",
+  "failed_process_wall_seconds": 2.4481423,
+  "reserved_repair_seconds": 5,
+  "remaining_production_cap_seconds": 235,
+  "source_sha256": "09f458d4a43de7b729edec20ba70708ffd66ba886207b443e84d15e702cd26f1",
+  "prior_source_sha256": "d7c79a7a3e2cb9763e4e54729bd09823dd31f47f69855d1f95dfb2443a09feaf"
+}

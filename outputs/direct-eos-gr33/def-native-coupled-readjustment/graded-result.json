@@ -1,0 +1,45 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": false,
+  "actual_new_background_coupled_evolution": true,
+  "comparisons": {
+    "temperature": {
+      "time_relative": 0.005400392843355875,
+      "previous_relative": 0.024758585977347567,
+      "time_pass": true,
+      "space_pass": true,
+      "space_relative": 0.0010234210331664152
+    },
+    "velocity": {
+      "time_relative": 0.0030357221135685225,
+      "previous_relative": 0.0120847521419021,
+      "time_pass": true,
+      "space_pass": false,
+      "space_relative": 1.773875706335745
+    },
+    "scalar": {
+      "time_relative": 0.0003790546319465871,
+      "previous_relative": 0.001510260821169693,
+      "time_pass": true,
+      "space_pass": false,
+      "space_relative": 0.47330895075478513
+    }
+  },
+  "endpoint": {
+    "t": 0.0034344311179287023,
+    "maximum_delta_lnT": 0.0001085090463913876,
+    "base_cell_delta_lnT": -0.0001085090463913876,
+    "velocity_RMS_m_s": 2.0941625069325537e-08,
+    "scalar_RMS": 1.0082560473963321e-31,
+    "surface_scalar": 3.714690513388703e-37,
+    "outgoing_luminosity_relative": -5.302618695697536e-13,
+    "energy_balance": 3.3718362170054285e-20
+  },
+  "seconds": 13.847298556000002,
+  "total_compute_seconds": 272.473590444,
+  "memory_GB": 0.544247808,
+  "full_nonlinear_radiation_hydrodynamics": false,
+  "physical_zero_pressure_atmosphere": false,
+  "final_asymptotic_charge": false,
+  "full_goal_complete": false
+}

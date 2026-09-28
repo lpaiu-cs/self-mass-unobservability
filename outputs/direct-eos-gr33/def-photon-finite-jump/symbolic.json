@@ -1,0 +1,10 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "structure": "Whitened variables z=(sqrt(Cm)*dT, E_l/sqrt(Ci)); z_dot=-(L+i*k*c*V)z. Absorption and Kompaneets are sums of positive outer products; elastic dipole losses are nonnegative; V is real symmetric. Thus the energy norm cannot grow.",
+  "Kompaneets": "For adjacent source cells i,j use b=(-(u_j-u_i)/sqrt(Cm),-u_i/sqrt(Ci),u_j/sqrt(Cj)) and alpha=15*a*T^3/pi^4*rate_C*u_face^4*n0*(1+n0)/(u_j-u_i). The edge generator -alpha*b*b^T preserves material-plus-photon energy and photon number, has the LTE temperature and Bose chemical-potential null modes, and includes induced scattering.",
+  "origin": "Linearizing n_x+n+n^2 about n0=(exp(x)-1)^-1 gives n0(1+n0)*d[delta_n/(n0(1+n0))-x*delta_T/T]/dx. The positive edge bracket discretizes this expression. Exact bin capacities retain the prior radiation heat capacity; the point energy assigned to a cell defines the finite photon-number invariant.",
+  "spatial": "Angular multiplication by mu is symmetric in normalized Legendre modes. Its conservative energy moment is d(Cm*T+sum E0)/dt=-i*k*c*sum E1/sqrt(3). Photon momentum includes a collision force that must be deposited in a moving material solver; this component calculation records the force and does not evolve matter velocity.",
+  "limitations": "Conditional properties of the declared discrete candidate, not physical certification of an ATOMIC gain kernel or of Kompaneets truncation.",
+  "finite_jump_extension": "For each frequency pair, angular moments obey |alpha_l|<=alpha_0 by positive quadrature and |P_l|<=1. Each l>0 two-bin block is PSD. The l=0 recoil bracket is the same positive energy/number-orthogonal outer product for ANY frequency jump. Same-bin angular loss is nonnegative. The resulting whole collision operator is PSD and streaming is skew-Hermitian."
+}

@@ -2,27 +2,21 @@
 
 This ledger records the active assumptions behind the free-fall sensitivity-collapse target.
 
-**Status label for `A1`-`A9`: `Assumption`.** These are posited hypotheses that
-define the theorem domain -- they are neither `Proven` (they are not derived) nor
-`Conjectural` (they are not open questions); they are the premises the positive
-theorem is conditional on. The `If dropped` column records the counterexample or
-failure mode that follows when a premise is removed. (Earlier revisions tagged them
-`Conjectural`, which conflicted with `theorem-package.md` listing the same premises
-under `Proven`; both now read `Assumption` for these; the representation premise `A9` (added in the review-response revision) carries the same `Assumption` label.)
+The rows A1–A9 below are hypotheses of conditional statements, not scientific conclusions with a fifth status label. Each proved implication in the canonical manuscript names the premises it actually uses. In particular, A5 analyticity is stronger than needed for a finite-order expansion; the smooth-flat finite-jet failure claim is withdrawn. Positive integer weights and the explicit block-set restriction are stated in the manuscript.
 
 ## Active Theorem Assumptions
 
-| ID | Status | Assumption | Why it is present | If dropped |
+| ID | Role | Hypothesis | Why it is present | If dropped |
 | --- | --- | --- | --- | --- |
-| A1 | Assumption | The body is quasi-static on the orbital timescale. | Needed to eliminate fast internal readout variables from the free-fall EFT. | Time-dependent internal modes can appear as explicit state variables. |
-| A2 | Assumption | The minimal M4 sector is nearly spherical, nonspinning, and parity-even. | Keeps the operator search space inside the minimal free-fall sector requested for this theorem candidate. | Spin, parity-odd structures, or large asphericity add new operator families at the same order. |
-| A3 | Assumption | A local worldline EFT exists after integrating out short-distance structure. | Supplies the operator classification language used by Theorem A. | Nonlocal kernels can survive directly in the effective action. |
-| A4 | Assumption | There is no orbital-timescale internal state variable in the free-fall sector. | This is the sharp assumption that rules out `chi`-type hidden coordinates. | A `chi` state can carry body memory that is not reducible to instantaneous sensitivities. |
-| A5 | Assumption | Couplings to the relevant external invariants are analytic near the reference background. | Needed to define a finite Taylor jet of sensitivity coordinates at fixed order. | Threshold or cusp behavior can evade a polynomial sensitivity jet. |
-| A6 | Assumption | The object admits a self-bound equilibrium before external perturbations are applied. | Separates body formation from later passive coupling to external gravity. | Otherwise the theorem can mix equilibrium failure with observational coupling. |
-| A7 | Assumption | The theorem is stated at fixed order in the operator counting rule of [`power-counting.md`](power-counting.md). | This prevents the proof target from silently becoming an all-orders closure claim. | Without fixed-order truncation, finite-dimensionality needs an extra closure theorem. |
-| A8 | Assumption | The admitted primitive-family spectrum is locally finite below the fixed theorem cutoff: only finitely many primitive-family species have intrinsic weight `w \le \Delta_{\max}`. | This is the weakest hypothesis that replaces the older hidden finite-basis assumption at fixed order. | An infinite low-weight tower can generate infinitely many primitive directions before normal-form reduction starts. |
-| A9 | Assumption | The external tidal field enters through a leading-Newtonian harmonic scalar potential: `E_{ij} = \partial_i\partial_j \Phi_ext` with `\nabla^2\Phi_ext = 0` (purely electric, leading order). | Fixes the tidal representation. It -- not tracelessness of a generic electric-Weyl tidal tensor -- makes `\nabla_k E_{ij}` totally symmetric (Schwarz) and trace-free on every index pair, i.e. an STF-3 octupole, which licenses the gradient-sector reduction. | A generic electric-Weyl tidal tensor restores the divergence and curl gradient pieces fixed by the Bianchi / gravitoelectromagnetic constraint equations (Danehkar 2022); the pre-correction generic-gradient model returns three quadratic gradient invariants. |
+| A1 | Premise | The body is quasi-static on the orbital timescale. | Needed to eliminate fast internal readout variables from the free-fall EFT. | Time-dependent internal modes can appear as explicit state variables. |
+| A2 | Premise | The minimal M4 sector is nearly spherical, nonspinning, and parity-even. | Keeps the operator search space inside the minimal free-fall sector requested for this theorem candidate. | Spin, parity-odd structures, or large asphericity add new operator families at the same order. |
+| A3 | Premise | A local worldline EFT exists after integrating out short-distance structure. | Supplies the operator classification language used by Theorem A. | Nonlocal kernels can survive directly in the effective action. |
+| A4 | Premise | There is no orbital-timescale internal state variable in the free-fall sector. | This is the sharp assumption that rules out `chi`-type hidden coordinates. | A `chi` state can carry body memory that is not reducible to instantaneous sensitivities. |
+| A5 | Premise | Couplings to the relevant external invariants are analytic near the reference background. | Sufficient for a finite jet; C^(D+1) already suffices with a controlled remainder. Analyticity concerns exact Taylor-series reconstruction. | A smooth-flat function defeats exact reconstruction but retains every finite jet; a nondifferentiable threshold can fail finite-order approximation. |
+| A6 | Premise | The object admits a self-bound equilibrium before external perturbations are applied. | Separates body formation from later passive coupling to external gravity. | Otherwise the theorem can mix equilibrium failure with observational coupling. |
+| A7 | Premise | The theorem is stated at fixed order in the operator counting rule of [`power-counting.md`](power-counting.md). | This prevents the proof target from silently becoming an all-orders closure claim. | Without fixed-order truncation, finite-dimensionality needs an extra closure theorem. |
+| A8 | Premise | The admitted primitive-family spectrum is locally finite below the fixed theorem cutoff: only finitely many primitive-family species have intrinsic weight `w \le \Delta_{\max}`. | This is the weakest hypothesis that replaces the older hidden finite-basis assumption at fixed order. | An infinite low-weight tower can generate infinitely many primitive directions before normal-form reduction starts. |
+| A9 | Premise | The external tidal field enters through a leading-Newtonian harmonic scalar potential: `E_{ij} = \partial_i\partial_j \Phi_ext` with `\nabla^2\Phi_ext = 0` (purely electric, leading order). | Fixes the tidal representation. It -- not tracelessness of a generic electric-Weyl tidal tensor -- makes `\nabla_k E_{ij}` totally symmetric (Schwarz) and trace-free on every index pair, i.e. an STF-3 octupole, which licenses the gradient-sector reduction. | A generic electric-Weyl tidal tensor restores the divergence and curl gradient pieces fixed by the Bianchi / gravitoelectromagnetic constraint equations (Danehkar 2022); the pre-correction generic-gradient model returns three quadratic gradient invariants. |
 
 ## Imported Exclusions From Earlier Work
 

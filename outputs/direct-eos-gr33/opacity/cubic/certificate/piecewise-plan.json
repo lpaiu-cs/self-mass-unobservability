@@ -1,0 +1,9 @@
+{
+  "classification": "Proven",
+  "checkpoint": "55b5430",
+  "original_plan_sha256": "63dd2e03a320c65cc8d185ec46be5591c8b956fe5dea2a26ef3974e65707bb77",
+  "original_result_sha256": "f7253d828141284f98fabae3a08695b833e4064364114e9e9c55f312a2b92173",
+  "source_sha256": "636b74663a7b772be73914026793137ac007a23c41e4bf74a934388ef98cd685",
+  "method": "Split the two unresolved affine paths at every rational zero of a slope, parabola slope, pairwise equal-absolute-value candidate, or endpoint limiter. Verify selectors on each closed segment with endpoint zeros allowed; verify exact continuity at every junction.",
+  "boundary": "Piecewise directional derivatives and their jumps are certified for the saved affine ordinate paths. A nonzero jump prevents an ordinary derivative at that junction; it is not hidden by a finite tolerance."
+}

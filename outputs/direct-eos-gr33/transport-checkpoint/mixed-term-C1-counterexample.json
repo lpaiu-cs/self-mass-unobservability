@@ -1,0 +1,10 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "polynomial": "x^2*y^2 on x grids [0,1,2], y grids [0,1], evaluated at y=1/2",
+  "omitted_value_continuous_at_x1": true,
+  "left_derivative": "3/4",
+  "right_derivative": "1/4",
+  "restored_derivative": "1/2",
+  "conclusion": "Omitting the mixed spline term can destroy C1 continuity even when the full spline exactly represents a smooth polynomial."
+}

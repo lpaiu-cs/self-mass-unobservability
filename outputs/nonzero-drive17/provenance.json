@@ -1,0 +1,46 @@
+{
+  "before_task_checkpoint": "043982c",
+  "interpreter": "/usr/bin/python3",
+  "dependency_path": "/home/lpaiu/work/nutimo_pilot/request13_deps",
+  "versions": {
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "sympy": "1.9",
+    "mpmath": "1.2.1"
+  },
+  "distribution_versions": {
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "lalsuite": "7.26.15",
+    "sympy": "1.9",
+    "mpmath": "0.0.0"
+  },
+  "module_file_sha256": {
+    "/home/lpaiu/.local/lib/python3.10/site-packages/numpy/__init__.py": "6ae17b070c0f70a8e3cad89a510a256942e5a1f37ea5feb120cec167ed2a6236",
+    "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/__init__.py": "185913aa107512fafd5cf89dfd452a8719b45a6eba833e2dcee2cbfd18b4bbe5",
+    "/home/lpaiu/work/nutimo_pilot/request13_deps/lalsimulation/__init__.py": "9aec1b4dcd9f1c5f56aa9f1ee86f59f6ac442c5969e94fbc96f3fa15887282d1",
+    "/home/lpaiu/work/nutimo_pilot/request13_deps/lalsimulation/_lalsimulation.cpython-310-x86_64-linux-gnu.so": "51c93e0561f3f20b595a479558ea37a04128a56f4cd2eb33594ea01ee28602b4",
+    "/usr/lib/python3/dist-packages/sympy/__init__.py": "5b46c2e75f53e6f7e895a82c60c2856eb5e89010e5ad1e560a56f2d0e6cda151",
+    "/usr/lib/python3/dist-packages/mpmath/__init__.py": "46cd24a875e8dd00fb47c6a5cf28fd06878d4dfe7562446b8d23ca69ca65b413",
+    "/mnt/e/lab/self-mass-unobservability/verification/nonzero_drive.py": "973e7308b57916f33a8a0e2a5eedd184f448884d847f8ca3cec0d7346bd948be",
+    "/mnt/e/lab/self-mass-unobservability/verification/stellar_matching.py": "70bf5d1e0df55232903268e0234846d487d165a7687f5c9072f68b66cb2c5b7f",
+    "/mnt/e/lab/self-mass-unobservability/verification/remaining_audit.py": "b9a9fc46e0bcbcfedcb3d6ea7fa62bf3e4313e30022c2ccd539eae0cf194f9a3"
+  },
+  "input_sha256": {
+    "outputs/validated-variational/ivp.hex": "c31f10741db5fa63ebae1aaa20e8e2b19ad6067179fe7ad705f66ed8fb53726f",
+    "outputs/research-remediation/stellar-matching.json": "9c3ac8815b1fb720340a29aa0277d1350c56d6306223a3845d363f4e952c4dda",
+    "outputs/research-remediation/sources/LALSimNeutronStarEOS_SLY.dat": "eddb8321e8ad97b30eccebe5d6a5bf8147bfb6baf3c1783aa32fa4ce94d30052"
+  },
+  "lal_shared_libraries": {
+    "/home/lpaiu/work/nutimo_pilot/request13_deps/lalsuite.libs/liblal-4be44368.so.20.5.1": "3e2f5f3ed357788c3bb363fa1a90452b1d4e415e8a1861a66acd7c972acfbd2d",
+    "/home/lpaiu/work/nutimo_pilot/request13_deps/lalsuite.libs/liblalinspiral-1414cbec.so.18.0.3": "271bb20d8089aae190aaed5a24d76648dd797b6d1e798e54fd1c0b19e46ed88c",
+    "/home/lpaiu/work/nutimo_pilot/request13_deps/lalsuite.libs/liblalsupport-aa9b0b76.so.14.4.1": "932693e54d1533d61a7b8735a10da83d825f605b030076e2677d6148bf4d6a89",
+    "/home/lpaiu/work/nutimo_pilot/request13_deps/lalsuite.libs/liblalinference-04cb6b7a.so.23.1.8": "ef5adf878d55df2256fa9f822e50137425923c2280a8fd7971cd210dcca3ea54",
+    "/home/lpaiu/work/nutimo_pilot/request13_deps/lalsuite.libs/liblalmetaio-f21c778d.so.11.0.2": "7b3fc3dc4a7f018529a7338ffbee931556fc97112bd7e43757dcd64049506e1b",
+    "/home/lpaiu/work/nutimo_pilot/request13_deps/lalsuite.libs/liblalframe-f302bed0.so.14.0.4": "111b1f2163e08b074170b4db1a13fd7b117346702e44e38a8efddc84e7058c0d",
+    "/home/lpaiu/work/nutimo_pilot/request13_deps/lalsuite.libs/liblalpulsar-a7215515.so.30.1.2": "c764e0ba709e8eafd3131bd000f3ebebbee17d245bb6572bb2467042aab35b17",
+    "/home/lpaiu/work/nutimo_pilot/request13_deps/lalsuite.libs/liblalburst-87052fd7.so.8.0.1": "549a47b7c42f01ddbfe211703c0762a95920f052fecdad0d25f54b09e467b318",
+    "/home/lpaiu/work/nutimo_pilot/request13_deps/lalsuite.libs/liblalsimulation-2c808f1b.so.37.2.1": "00bbdef3c6844301c58f091c025e33397a5b79aa53c4d945487884a43e1af8d6"
+  },
+  "producer": "verification/nonzero_drive.py stars; verification/nonzero_drive.py coupled; verification/nonzero_drive_audit.py check"
+}

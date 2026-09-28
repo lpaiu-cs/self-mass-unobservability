@@ -1,0 +1,35 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "1260c415",
+  "claim": "Reduce full-matrix wave phase error from midpoint to fourth-order Gauss without adding steps or mixing separately accepted components.",
+  "method": "Same512/1024/2048 steps, degree4/2/1 spaces and original heat input. Exact first two microscopic forcing moments feed Gauss stage loads; all later linear ramp loads are exact. Full coupled sparse solve, no modal reduction or added damping.",
+  "gates": {
+    "time_relative": 0.02,
+    "time_order": 1.5,
+    "spatial": 0.02,
+    "spatial_decrease": true,
+    "coefficient": 0.02,
+    "outer": 0.002,
+    "quadrature": 0.002,
+    "linear_residual": 1e-09,
+    "heat_balance": 2e-13
+  },
+  "decision": "Measure128 steps, then degree4 only if first-case forecast fits180s. Stop on any time failure. Only if all four pass perform fixed degree2/1 paths and conditional coefficient/outer/quadrature contrasts under600s total cap. No step or degree expansion.",
+  "budget": {
+    "pilot_cap_seconds": 90,
+    "first_case_cap_seconds": 180,
+    "total_cap_seconds": 600,
+    "CPU_threads": 1,
+    "memory_GB": 3,
+    "new_EOS_calls": 0
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_gauss_time.py": "6919cef25372ef27f44ea8e4e27c97bfc3e5d56f47437d3ff07735211fc09bad",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_direct_time.py": "852070fde0dbd03d2f44cbc1e2ffe3b16afb41c37e0b27d5a6ca33ce99bf0ca4",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_hierarchical.py": "7861123d4adfdfdaa21daee3fc7d79dcdffdd024ca48b3f453921b5cb745992b",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_spatial_repair.py": "d13044861c2b4761d5e6349d809c3368f46112974f374aa050aada516c80f8e5",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-inverse-projection/fields/stage-result.json": "1a27d7f07ce761360f3ba787de06589037f326ede22699874c47e781e9b64411",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/fine-bank.npz": "b4493a6e4cfb20d741725ecb61cec154ab9fc51a694001865748741060018d7e",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/coarse-bank.npz": "ea020f69b240c5c5cdd8810f963d88e5cc2d3269aff12c659422a7a6541ae0df"
+  }
+}

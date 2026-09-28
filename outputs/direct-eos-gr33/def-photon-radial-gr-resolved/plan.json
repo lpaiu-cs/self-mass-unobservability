@@ -1,0 +1,46 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "f470378f3",
+  "claim": "Actually solve a conservative two-volume spectral photon/material patch and unreduced radial GR together, including photon pressure, stored ion energy, heat momentum and GR compression/velocity feedback.",
+  "scope": "A local P1 finite-volume candidate inside the actual outer native cell. All24134 photon frequencies and18 retained ionization edges are retained. Two reservoirs exchange through one physical interior face; omitted surrounding photon channels are not certified zero. Frozen transport geometry and coefficients; no whole-atmosphere or full nonlinear claim.",
+  "thermodynamics": "Use the Phase70 MHD chemical Hessian and radiation-free material heat capacity. Radiation energy/pressure are counted once. The small local MHD/background value mismatch is recorded: local free-energy constants anchor static pressure/energy to the saved background, while the new native tangent and its difference from the reference GR tangent enter the actual source ports. This is an explicit local matched-tangent candidate, not a new global native-EOS background.",
+  "domain": "Patch half-width0.001 of the measured proper temperature scale;64 fixed mechanical subintervals; coordinate duration0.008*H/c, eight local half-width light crossings. The local frozen AN factor is retained in collision rates. Native outer-cell coordinates and no new EOS states.",
+  "method": "One fixed causal patch:32 subintervals over plus/minus1.25 acoustic travel lengths at each of3 pressure interfaces, and256 over the encompassing light cone. Keep original64 patch subintervals, full GR matrix, time32/64/128 and spatialp2/p4, photon table, duration and all original2percent gates. Do not refine again after failure.",
+  "gates": {
+    "time_relative": 0.02,
+    "time_order": 1.5,
+    "spatial_relative": 0.02,
+    "linear_residual": 1e-09,
+    "energy_balance": 1e-08,
+    "photon_residual": 1e-09
+  },
+  "budget": {
+    "pilot_seconds": 120,
+    "production_seconds": 400,
+    "total_phase_seconds": 900,
+    "CPU_threads": 1,
+    "memory_GB": 6,
+    "new_EOS_calls": 0,
+    "automatic_expansion": false
+  },
+  "references": [
+    "https://academic.oup.com/mnras/article/367/4/1739/1747567",
+    "verification/def_photon_matter_split.py"
+  ],
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_photon_radial_gr_resolved.py": "26efc8cb3b6bb9cddc8e80fdde3321922ef2767d846af703716b9f06c508ae70",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_photon_radial_gr.py": "42e789fb963833a76eef1cd78cd726df04e6d7d3215e74802ad3fc10b3c71c27",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-radial-gr/plan.json": "b6888f693e7c6fe4837849aa9d942489a20c94cc9dbeb304ec0ceb2b630f036c",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-radial-gr/result.json": "f91bee0bdcf9d7b55a4fa77f24d9b5a73f2cb8ad7a8a68253bda093b9d622e1b",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-population-coupled/thermo.npz": "d35a68993740d3675399b8db966ab7ec1bc9180747eb33e2c6af0aa6e6b4ccab",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-population-coupled/moments.npz": "50d313b16537965c43db287a16c6543e95f9422a7aac7067c245ff377776ba98",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-hhe-coupled/bank.npz": "46d8a089a6776ff19f23a3aa8e6223c1f243643e1963acdf70734d77e0ee7d61",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-interface-patch/result.json": "d8f16158ddc560f2da863808cecfb1143f65cd796f07722163f5fdf05247f6ed"
+  },
+  "reassessment": "Uniform GR patch cells are about55 acoustic travel lengths wide on this short interval. The 65percent pressure-interface discrepancy is preserved. The old 12-point whole-volume compression readout also misses the acoustic layers; use every actual FEM quadrature row. Reconstruct the face momentum current by the same enclosed redshifted volume as the energy debit, instead of linear radius.",
+  "scales": {
+    "acoustic_travel_cm": 39.48435357901998,
+    "light_travel_cm": 555642.9534580972,
+    "original_patch_subinterval_cm": 2170.4938304327316
+  }
+}

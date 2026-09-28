@@ -1,0 +1,21 @@
+{
+  "classification": "Proven",
+  "before_task_checkpoint": "729aca0",
+  "previous_manifest_sha256": "0238d544b38e7f782d0453f6f6dd1298c00fbc463064b575aaca03cebae62ad4",
+  "interpreter": "/usr/bin/python3",
+  "versions": {
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "sympy": "1.9"
+  },
+  "runtime_provenance": "outputs/gr-mass21/provenance.json",
+  "source_profile": "outputs/thermal-closure22/selected.data.gz",
+  "producer": "verification/baryon_entropy.py",
+  "entropy_source": "outputs/gr-mass21/sources/src/mod_free_eos.f90: fixed-composition entropy and enthalpy derivatives",
+  "primary_reference": {
+    "title": "Althaus et al. (2022), Structure and evolution of ultra-massive white dwarfs in general relativity",
+    "url": "https://www.aanda.org/articles/aa/pdf/2022/12/aa44604-22.pdf",
+    "use": "Primary reference for distinguishing conserved rest-mass sequences and time-dependent gravitational mass; current equations also independently derived."
+  },
+  "record_note": "EOS_calls in solver records counts state-evaluation requests, including table lookups; a direct entropy inversion may require multiple low-level FreeEOS calls. Initial 17-point pilot predates optional record metadata. Timing fields are run records, not deterministic outputs."
+}

@@ -1,0 +1,85 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "3d70a3b",
+  "discovery": "The baseline has 294/302 finite passes; eight failed small-box levels and the upstream weak-state warnings motivate this separately declared refinement. The baseline failures and its original gate remain frozen.",
+  "keys": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      31
+    ],
+    [
+      7,
+      20
+    ],
+    [
+      12,
+      10
+    ],
+    [
+      13,
+      6
+    ],
+    [
+      13,
+      7
+    ],
+    [
+      14,
+      0
+    ],
+    [
+      14,
+      1
+    ],
+    [
+      14,
+      2
+    ],
+    [
+      14,
+      3
+    ],
+    [
+      14,
+      4
+    ]
+  ],
+  "grids": [
+    [
+      800,
+      40
+    ],
+    [
+      1600,
+      40
+    ],
+    [
+      1200,
+      60
+    ],
+    [
+      2400,
+      60
+    ]
+  ],
+  "finite_energy_difference_gate_cm_inverse": 0.0001,
+  "selection": "Retain baseline 400/20 for levels passing both baseline controls. For all failed keys and three positive controls, require both spacing comparisons (800/40 vs 1600/40;1200/60 vs 2400/60) and both range comparisons (800/40 vs1200/60;1600/40 vs2400/60) below the original 1e-4 cm^-1 gate, and positive dissociation energy on all four grids. Use 2400/60 only after all four tests pass.",
+  "uniform_T_K": [
+    999999,
+    1000001
+  ],
+  "interval_digits": 70,
+  "maximum_logT_derivative": 10,
+  "printed_level_halfwidth_cm_inverse": "0.000000000001",
+  "interval_scope": "Conditional enclosure of the declared computed 302-level fixed spectrum. Excitation E=D00-DvJ; +/-1e-12 cm^-1 encloses two half-final printed digits. This does not bound DVR error, potential error, QED truncation, constants, excited electronic levels, continuum or plasma occupation. Upstream estimated uncertainties are reported separately and are not hard bounds.",
+  "bindings": {
+    "verification/h2_spectre_refinement.py": "0799e50dcfa62aa6e773b50591dc2885d95ead70237b944cc55f292b2725088d",
+    "outputs/direct-eos-gr33/gr-h2-spectre-refinement/baseline-manifest.json": "c0959bd810497e741a0d38a0077eb2690924a0b832c4d11f94229e637a254a8e",
+    "outputs/direct-eos-gr33/gr-h2-spectre-refinement/build.json": "fce95d737423f18a96b81f3e28416094fd1d6d75ad88aec0caa95eeb1b95ca3f",
+    "outputs/direct-eos-gr33/gr-molecular-partition-audit/manifest.json": "20b1e0044322dd1b0842a236ffff4c3ae3548c4ed06b550ca2bc06103c0ac0b9"
+  }
+}

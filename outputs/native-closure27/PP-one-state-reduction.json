@@ -1,0 +1,38 @@
+{
+  "classification": "Counterexample candidate",
+  "zone": 2592,
+  "tau_proper_days": 5.248988400097469,
+  "tau_coordinate_days": 5.249074203149641,
+  "lapse": 0.9999836536789437,
+  "tau_fast_proper_s": [
+    0.05580593341972843,
+    0.6103883123477728,
+    1.1108751814845021
+  ],
+  "direct_plus_fast_heat_per_dlnT": 9040937.434463087,
+  "slow_heat_amplitude_per_dlnT": 118101.98313201393,
+  "all_static_modal_amplitudes": [
+    -41.44352334549811,
+    118101.98313201393,
+    290257.6034075006,
+    -34022.521154865826
+  ],
+  "rows": [
+    {
+      "period_days": 1.6294,
+      "absolute_reduction_error": 13.464141027128889,
+      "error_bound": 15.318084887228371,
+      "relative_error": 1.4891940232791915e-06
+    },
+    {
+      "period_days": 327.26,
+      "absolute_reduction_error": 0.06703682520674402,
+      "error_bound": 0.07626745558653644,
+      "relative_error": 7.320141208845314e-09
+    }
+  ],
+  "equation": "tau_coordinate*dz/dt_infinity + z = delta ln T; delta q_nuc = D_fast*delta ln T + a_slow*z",
+  "coefficient_origin": "Local native reaction Jacobian at the separately initialized chemostatted intermediate equilibrium.",
+  "mass_sensitivity_or_scalar_coupling_derived": false,
+  "conclusion": "A concrete one-state nuclear heat response emerges in this conditional reduction. It supplies an internal-time candidate, not the missing map from orbital/scalar drive to mass/force readout."
+}

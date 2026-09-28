@@ -1,0 +1,12 @@
+METRIC CELL PREFLIGHT 0 False True
+METRIC CELL PREFLIGHT 1 False True
+METRIC CELL PREFLIGHT 2 False True
+METRIC CELL PREFLIGHT 2688 True True
+METRIC CELL PREFLIGHT 2972 True True
+METRIC CELL PREFLIGHT 5734 True True
+Traceback (most recent call last):
+  File "/mnt/e/lab/self-mass-unobservability/verification/gr_metric_coupled_subcell.py", line 297, in <module>
+    if __name__=='__main__':globals()[sys.argv[1]]()
+  File "/mnt/e/lab/self-mass-unobservability/verification/gr_metric_coupled_subcell.py", line 256, in preflight
+    assert passed,'Original preflight failure retained; full-grid start is gated';verify_preflight()
+AssertionError: Original preflight failure retained; full-grid start is gated

@@ -1,0 +1,19 @@
+{
+  "classification": "Counterexample candidate",
+  "reason": "Measured native coefficient forecast is365.6s with50percent margin. The implementation-only240s subcap is too narrow; the registered total600s remains unchanged. Allocate400s maximum to coefficient generation, then require a measured coupled pilot before production. No path, horizon, accuracy gate or total budget expanded.",
+  "native_coefficient_cap_seconds": 400,
+  "registered_total_seconds": 600,
+  "pilot": {
+    "classification": "Counterexample candidate",
+    "seconds": 1.8907079600000003,
+    "pilot_calls": 32,
+    "pilot_call_seconds": 1.2991666299999993,
+    "coefficient_forecast_seconds": 365.57330999484356,
+    "cells": 6003,
+    "whole_baryon_g": 3.925101446571398e+32,
+    "envelope_baryon_g": 6.992245060240888e+20,
+    "measured_core_and_envelope": true,
+    "model_setup_and_stage_speed_unmeasured": true
+  },
+  "automatic_production": false
+}

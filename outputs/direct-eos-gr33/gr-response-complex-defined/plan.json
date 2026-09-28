@@ -1,0 +1,32 @@
+{
+  "classification": "Proven",
+  "checkpoint": "6292a62",
+  "bits": 128,
+  "bindings": {
+    "verification/gr_response_complex_domain.py": "786898216a59ac8806d7cd3fcca921025c07c52001d85446091bce7196c209d5",
+    "outputs/direct-eos-gr33/gr-logarithmic-response/manifest.json": "a343e591531f585d07e999fe18e927f6cc1cab5bef7aec381f34ae87bd85a3ca",
+    "outputs/direct-eos-gr33/gr-logarithmic-response/inputs.npz": "c9695e054b3ef6bf11b63a24909d7a4e549429d65a72bea4d9ad982b76afda53",
+    "outputs/direct-eos-gr33/gr-polarization-thermodynamics/states.npz": "a91f70b8277d7984c7954d277b01956dd31dfd4c12b57989fed8b7a2fccceb69",
+    "outputs/direct-eos-gr33/gr-response-momentum-tail/manifest.json": "b7bbd2b00f9cbaaac9f0b106aa0510d1e34691fa519552b69bd6dcc737c35b86",
+    "outputs/direct-eos-gr33/gr-ionic-hamiltonian-bound/constants.json": "5aa17efb44f145bee7f5d218667083c0e43a4ef86d5558a8efa26a916d5e1cff",
+    "verification/gr_response_complex_runner.py": "c3259adba6e92209e2f2c33a306845158d2d4a15ace0fd6d99c021679b481b98",
+    "outputs/direct-eos-gr33/gr-response-complex-domain/plan.json": "745613057689ba2705797c621d62261c48e7f0b4ac8b8e392dd8c756d465644a",
+    "outputs/direct-eos-gr33/gr-response-complex-defined/original-error.log": "983f2bbab4d5f7df7fa1f369fde245ad3c4d66ddffac4866d92fef8e3a683670",
+    "outputs/direct-eos-gr33/gr-response-complex-defined/B-binding.json": "124916989337d6c967bc54a8ab38b260152900839417913bf7f3102f826e2ba1",
+    "outputs/direct-eos-gr33/gr-response-complex-defined/effective-source.py": "c24611a5eaf386f8d5312607d861e5bf51a3df4590374f024a085354776e683a"
+  },
+  "relative_Q_radius": "1/128",
+  "eta_upper_limit": 24,
+  "parameter_order": [
+    "value",
+    "eta",
+    "etaeta",
+    "tau",
+    "etatau",
+    "tautau"
+  ],
+  "target": "A complex analytic response disk about every real Q>0, uniform over the declared beta>0 and eta<=24. Explicit conservative six-field majorants at all 3206 actual states; constructive zero-free dielectric neighborhoods at the 12 saved Q values.",
+  "no_finite_response_assumption": "Use only S(Q)>=0 on the real axis and X=Q^2/(B*Sref)>0. The zero-free radius is conservative and can later be enlarged by a certified positive S(Q) lower bound.",
+  "boundary": "Analytic derivative bounds and zero-free neighborhoods, not completed outer integration. Very small conservative radii can require impractical panel counts. Full physical EOS and actual GR/observational closure remain open.",
+  "execution_overlay": "The saved state NPZ omits B; the original run stopped before computing any state row. Read the declared alpha source and enclose both exact alpha/pi and the existing numerical binary B. Preserve all analytic formulas, state inputs, radius rules and thresholds."
+}

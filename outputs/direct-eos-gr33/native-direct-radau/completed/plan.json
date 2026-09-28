@@ -1,0 +1,43 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "d40b5c21fa57d904f0ada4194862f1842fc8f1fa",
+  "claim": "Apply the unchanged face-redshift correction source directly to the actual coupled Radau stages, removing the affine/source-fitting stiff-limit defect.",
+  "rationale": "170proved on the scalar stiff test that exact source primitives alter the leading stage balance, and full LH fitting can leave a spurious nonzero stiff limit. This does not identify every transport error. Test the simplest existing stage-consistent source path before any clock/order increase.",
+  "method": "Reuse168simultaneous two-stage Radau without167lift-plan/primitive-plan. Existing zero-lift owner supplies H=0. Use actual source S(tj), collision, gas, ghost/work and actual angular samples with original3/4,1/4 weights. No moment-fitted rate or separate angular correction.",
+  "decision": "Unchanged4/8-step pair must pass all six2percent time gates and physical checks before any full coupled production/charge readout. The final-charge conclusion remains unadjudicated until that same corrected coupled solution is completed.",
+  "inputs": "Same531cells8angles152frequencies,17background knots,64/128 clocks and0.214652ms horizon; zero initial correction, previous material motion and extra metric.",
+  "gates": {
+    "time": 0.02,
+    "energy_H": 1e-08,
+    "stage": 1e-12,
+    "physical_stage_moment": 1e-13,
+    "port": 1e-12,
+    "source": 1e-12
+  },
+  "budget": {
+    "actions": {
+      "prepare": 30,
+      "check": 60,
+      "pilot": 180,
+      "finish": 30
+    },
+    "total_action_seconds": 300,
+    "CPU_threads": 1,
+    "virtual_GiB": 3
+  },
+  "forecast": "168with exact H cost85.80s;170with moment fits142.44s. Removing all known-source moment integrations should cost60-110s subject to contention;180s hard cap. Krylov changes remain unmeasured. One short pair only.",
+  "stop": "Any original gate or cap: preserve failure and stop. No automatic refinement, new scheme, period or production.",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/apply_native_direct_radau.py": "3fe5db232d9a099a7b5769b16049ed34d89d05a33dc818da7ad5acf7d96b8438",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/solve_native_radau_transfer.py": "cade2ee551d8c9b443f283c8055e3bfb4641c1aa550d19c87b0f77c75abff44e",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/apply_native_conservative_redshift.py": "0ad6876eecf7c828bc26e473ab3bc5080cbee835809be97d0506a75884943ce1",
+    "native-known-forcing170-work/result.json": "454919bb5862d784142f063620d338d8b3e3dcf6de259e3b13f1b625b70bed54",
+    "native-known-forcing170-work/stiff-limit.json": "e978f12cf845dea628892fa4ecc1691822ec12933f0acc57a664e0fd7de63b1e",
+    "native-known-forcing170-work/sweep-0/photons/steps-128-reference-128.npz": "5d2b1936e44617760120a61ca6445a044ad0b91c0a4c6799b59f51832adc2678",
+    "native-known-forcing170-work/sweep-0/photons/steps-64-reference-128.npz": "5d2b1936e44617760120a61ca6445a044ad0b91c0a4c6799b59f51832adc2678",
+    "native-known-forcing170-work/sweep-0/material/steps-128-reference-128.npz": "dcb46e493c360e33ac6df6c6e7bb4e5d7cc80e218006a1fbcc08033d6926580f",
+    "native-known-forcing170-work/sweep-0/material/steps-64-reference-128.npz": "76e5a3c54e5f5e2ed88a9c3957903569db4397d4088898f4ce6f4729124359d4",
+    "native-known-forcing170-work/normalization.json": "820244d5d23554811c792b52a45a3e28317392019f5aac7d8733eeb3b4d28706",
+    "native-known-forcing170-work/photon-conservation-plan.json": "248525a3b9808f00f193c48d9739000a1c32eea1cf8197cf8c3ad8b939a0bb2d"
+  }
+}

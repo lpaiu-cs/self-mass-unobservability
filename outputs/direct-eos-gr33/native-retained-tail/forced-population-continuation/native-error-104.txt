@@ -1,0 +1,8 @@
+     ne = hne + h_ion + h2plus
+     if(ne.lt.underflow_limit) then
+        if(verbosity.ge.1) write(stderr,*)&
+             "eos_calc: (4) calculated electron number density (in nu form) is too close to underflowing"
+        info = info_offset_eos_calc + 4
+        return
+     endif
+

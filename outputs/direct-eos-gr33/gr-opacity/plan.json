@@ -1,0 +1,58 @@
+{
+  "classification": "Counterexample candidate",
+  "executable_sha256": "2ea64f04641b18285d2e0721495fd6269db5c08930d579d673ad9d008c6e7a3c",
+  "call": "__opacities_MOD_eval_kap_type1; actual Type1 path, 17 by-reference arguments.",
+  "controls": "First read-only baseline: actual rho,T,26-species X, species sums, and returned opacity against the collected profile. A later identity-input replay must reproduce outputs before changing EOS electron inputs.",
+  "argument_slots": {
+    "cell": 1,
+    "zbar": 2,
+    "XH": 3,
+    "Z": 4,
+    "q": 5,
+    "Pgas_div_P": 6,
+    "log10_rho": 7,
+    "log10_T": 8,
+    "composition": 9,
+    "lnfree_e": 10,
+    "free_e_rho": 11,
+    "free_e_T": 12,
+    "opacity": 13,
+    "opacity_rho": 14,
+    "opacity_T": 15,
+    "ierr": 16
+  },
+  "input_log_tolerance": 1e-12,
+  "composition_absolute_tolerance": 1e-12,
+  "profile_opacity_relative_tolerance": 1e-12,
+  "source_contract": "Total free electron plus positron number per nucleon, not merely nuclear net Ye. Original total opacity already includes conduction.",
+  "physical_opacity_certified": false,
+  "nonlinear_transport_completed": false,
+  "retained_failure": "Type2 breakpoint had zero hits before normal native exit; it was not the active opacity path.",
+  "before_plan_sha256": "04f8068b4b55d36ec40adaf8c6d26467538eb1f5902f1f94db5f8028d29a4c54",
+  "controls_source_sha256": "412ae05148d8b700dfc0e5a2322e6d4cf9ae51e6d3d2f700a83db507b3400149",
+  "new_GR_opacity_protocol": {
+    "classification": "Counterexample candidate",
+    "model_sha256": {
+      "verification/native_opacity.py": "8d55a1ee116606082d857d9531a6ab7d3456f4c847fe98fc9948a5754b2ca11f",
+      "verification/opacity_tables.py": "ba01a5ebe3062eb1b13b23ccb918f99158fba6fd0c72fcba191c1ba4a028c7b9",
+      "verification/opacity_cubic.py": "aab97872ac6718408634979277fceb2692bddd0b1e58ac0a0b9870b582e3d741",
+      "verification/gr_opacity_check.py": "daee5dc6ffecbab885e70cbbb0bd969345f7e5cbc6b4f1a55bb5d22e5e934dc6",
+      "outputs/direct-eos-gr33/opacity/tables-enriched-tables.npz": "d4e10e14edb5d27e11eeeccf7ff519326cf965c06996e258b66defb377d2a42c"
+    },
+    "state": "outputs/direct-eos-gr33/initial-state-17-4.npz",
+    "state_file_existed_at_protocol_creation": false,
+    "source_state_not_read_by_prepare": true,
+    "native_value_control": "Match the native Type1 values using the otherwise identical double evaluator with the documented zero conduction mixed field. This identifies implementation agreement; the buggy native derivative verdict remains failed.",
+    "repaired_tangent_control": "For the restored mixed-field polynomial, check both returned log derivatives at natural-log steps 5e-5 and 2.5e-5, and compare the two steps. Its intentional native-value shift is reported separately.",
+    "value_relative_tolerance": 0.0001,
+    "derivative_relative_tolerance": 0.001,
+    "derivative_floor": 1,
+    "finite_log_steps": [
+      5e-05,
+      2.5e-05
+    ],
+    "scope": "A separately frozen check at the new GR state, not a new observational population or rescue of any original failed gate.",
+    "physical_EOS_or_opacity_certified": false,
+    "full_GR_evolution": false
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Apply the identified spatial photon redshift discrepancy and bin-average angular work to the actual simultaneous photon/thermal/H and free material equations, then measure their GR charge.",
+  "reason": "The measured0.38538erg work discrepancy is larger than the existing0.30736erg mass residual. It cannot be bounded away by the earlier small exterior sectors.",
+  "equation": "Replace the point-gradient spatial frequency forcing by [Lrad,ell*D_E]I, represented by each incoming upwind donor and ell_donor-ell_receiver. Use the same odd conservative frequency owner and retain its exact spectral ghost and work ledgers. Replace mu_center^2 by its declared bin mean in the time-dependent lambda work.",
+  "reuse": "Separate zero-initial linear source response on the same frozen background. No original input replay: additional metric is zero, additive redshift drive is the same actual primary+finite Born. Sum the new response once with the saved response only after controls pass.",
+  "boundary": "The discrete photon state uses donor-center reference energy at its boundary. Conversion to physical outgoing energy and its donor-to-face reference shift remain distinct. No work correction is manually added to the mass or charge.",
+  "material": "Existing conservative free-material response receives only new actual collision transfers. Reciprocally return its B,S,xi and noncollisional E/H; maximum two sweeps, only while actual block defect decreases.",
+  "gates": {
+    "stage": 1e-12,
+    "stage_physical_moment": 1e-13,
+    "energy_species": 1e-08,
+    "source_identity": 1e-12,
+    "time": 0.02,
+    "material_directional": 0.002,
+    "block": 0.002,
+    "GR_quadrature": 0.002
+  },
+  "budget": {
+    "actions": {
+      "prepare": 30,
+      "check": 100,
+      "photon_pilot": 120,
+      "photon_production": 1250,
+      "material_pilot": 70,
+      "material_production": 450,
+      "block": 300,
+      "compact": 180,
+      "infinity": 30
+    },
+    "total_action_seconds": 3600,
+    "max_sweeps": 2,
+    "CPU_threads": 1,
+    "virtual_GiB": 3,
+    "new_background_steps": 0,
+    "new_roots": 0,
+    "new_rays": 0
+  },
+  "measured_basis": "Reuse completed Phase157 per-point, per-step and late material call costs. Measure4/8 photon and two-step material prefixes at the new actual source; admit each full pair only if twice measured remaining cost fits1250s/450s. Total3600s includes all failed actions; later Krylov cost remains an extrapolation.",
+  "stop": "Stop on gate, cost, nondecreasing block defect or two sweeps. No extra resolution, horizon, EOS bank, relaxed threshold, or residual subtraction.",
+  "limits": "Finite retained-table response and selected GR readout. Inner physical energy matching, remaining scalar/pressure work, continuum/native derivative errors, full nonlinear ADM, static comparison and observations remain separate.",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/apply_native_conservative_redshift.py": "9dc66f0b67b44e24e5e7f507d502bc5052d836806a7ace9c8ad1ae79014999e0",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/return_native_mixed_gr.py": "ba23ce0c8dcc4b3ddfe1d8e9b470ede3130ae37b5e5be2ef730219be328d038d",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/solve_native_incident_self_gr.py": "a39cbbb0ddbd0f21b9989da3d7b5e80290b121a59810d4e10fee24c5e168a745",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/solve_native_incident_reciprocal.py": "3cc4190f7ee1a7acfaf741e9e99d5b526da930c471705d428e440081e84bd73c",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/reconcile_native_mass_energy.py": "6d44226622af1a8da0f49362167141ec320b21ea436774cf544e9b66a0aa3502",
+    "native-mass-energy166-work/result.json": "80c69ede29de9b2ca20ab07c852ae00c3225cd2d9922bcd750cd590b050b507f",
+    "native-mass-energy166-work/commutator.json": "878022c8a57fb965a757628968cbc327f4749e1253cdb44458a7a16f8051b337",
+    "native-mass-energy166-work/physical-port-128.npz": "0b5c63330eb4a34d5aefda415b13874d3e799f0c0b5ea5503641e58ce9779c86",
+    "outputs/direct-eos-gr33/native-retained-completion/evolution/coupled-128.npz": "08990bcd0980c8f45b1777e071734c3601a75f90096c8c6f5edc8d16d76ab2b0",
+    "native-incident-self-gr157-work/sweep-2/photons-common-gr/steps-64-reference-128.npz": "fec1c6f16cf11740b4dc9fb865f50bf9240bb368a81065966bed2f451d737e47",
+    "native-incident-self-gr157-work/sweep-2/material-common-gr/steps-64-reference-128.npz": "2e9ae3608510638c8c05cac1a176ea661bb059adcca30c6f8d3c4489d9e25dc0",
+    "native-incident-self-gr157-work/sweep-2/photons-common-gr/steps-64-reference-128.json": "116ee7db2f1cdf4cf568756ab47a46a9d23c06b45697fef551322ec5a2b59e00",
+    "native-incident-self-gr157-work/sweep-2/material-common-gr/steps-64-reference-128.json": "cebdfadbf6dd2de83347071af460aa7e4391a4c4f1d1de756099de817d0116aa",
+    "native-incident-self-gr157-work/sweep-2/photons-common-gr/steps-128-reference-128.npz": "7020b476351611a8b959090ab3a656592fe9c42601dfe289fab08a27da345260",
+    "native-incident-self-gr157-work/sweep-2/material-common-gr/steps-128-reference-128.npz": "8bd32a41f8a39ca15f03d34bae7143f8001e15ef520f360bdb5f47ad5e875cc9",
+    "native-incident-self-gr157-work/sweep-2/photons-common-gr/steps-128-reference-128.json": "ea1b0caeb2f3d2b01ce9324de7535fca1a505ddbd227277aff643149e1306ecc",
+    "native-incident-self-gr157-work/sweep-2/material-common-gr/steps-128-reference-128.json": "beda913f45de00028222de10363cce6b9a6331b13d78909291c9b2231efa8f6c"
+  }
+}

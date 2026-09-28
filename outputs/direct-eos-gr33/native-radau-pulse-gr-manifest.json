@@ -1,0 +1,187 @@
+{
+  "classification": "Counterexample candidate",
+  "result": {
+    "classification": "Counterexample candidate",
+    "numerical_controls_passed": true,
+    "controls": {
+      "quadrature": 3.794571498513532e-14,
+      "independent_GR": 1.9833502176194197e-12
+    },
+    "time": {
+      "U": 0.4086319393452454,
+      "U_t": 0.15168191133287617,
+      "U_x": 0.10255296227192738
+    },
+    "repaired_source_time_representation_applied": true,
+    "change_from_straight_line": {
+      "U": 0.22840152021099,
+      "U_t": 0.12549065066538323,
+      "U_x": 0.10404875624793565
+    },
+    "potential_relative": 1.9023148443018055e-15,
+    "source_time_passed": false,
+    "field_time_passed": false,
+    "rows": [
+      {
+        "classification": "Counterexample candidate",
+        "steps": 128,
+        "order": 8,
+        "seconds": 21.233765109999922,
+        "maximum_delta_phi": 2.1585887187409374e-68,
+        "maximum_delta_mass_cm": 4.2064039548019326e-51,
+        "maximum_delta_lambda": 6.08760331170919e-61,
+        "maximum_delta_log_proper_volume": 6.0876033142586335e-61,
+        "maximum_mass_increment_over_background_ulp": 1.1562475148569192e-39,
+        "maximum_scalar_increment_over_background_ulp": 9.95473341375267e-50,
+        "compact_potential_contraction": 1.604471397461762e-11,
+        "potential_iteration_relative": [
+          1.897285749256766e-15
+        ],
+        "endpoint_direct": -2.9870728710202304e-63,
+        "endpoint_compact_with_metric": -2.987085481972676e-63,
+        "compact_potential_change": 8.202876933291729e-78,
+        "spatial_material_photon_feedback": false,
+        "full_GR_feedback": false,
+        "final_charge_solved": false
+      },
+      {
+        "classification": "Counterexample candidate",
+        "steps": 64,
+        "order": 8,
+        "seconds": 14.17980671600003,
+        "maximum_delta_phi": 1.3133135673389504e-68,
+        "maximum_delta_mass_cm": 3.9122011196824786e-51,
+        "maximum_delta_lambda": 5.661826288714794e-61,
+        "maximum_delta_log_proper_volume": 5.661826290254192e-61,
+        "maximum_mass_increment_over_background_ulp": 1.075377655322293e-39,
+        "maximum_scalar_increment_over_background_ulp": 6.056589816308033e-50,
+        "compact_potential_contraction": 1.604471397461762e-11,
+        "potential_iteration_relative": [
+          6.041933320855154e-15
+        ],
+        "endpoint_direct": -8.975318738075702e-64,
+        "endpoint_compact_with_metric": -8.975356623754982e-64,
+        "compact_potential_change": -6.944991999164045e-79,
+        "spatial_material_photon_feedback": false,
+        "full_GR_feedback": false,
+        "final_charge_solved": false
+      },
+      {
+        "classification": "Counterexample candidate",
+        "steps": 128,
+        "order": 4,
+        "seconds": 13.074498209000012,
+        "maximum_delta_phi": 2.1585887187409008e-68,
+        "maximum_delta_mass_cm": 4.206403954803868e-51,
+        "maximum_delta_lambda": 6.0876033117119905e-61,
+        "maximum_delta_log_proper_volume": 6.087603314261434e-61,
+        "maximum_mass_increment_over_background_ulp": 1.1562475148574512e-39,
+        "maximum_scalar_increment_over_background_ulp": 9.954733413752501e-50,
+        "compact_potential_contraction": 1.6044713974617615e-11,
+        "potential_iteration_relative": [
+          1.897285749256798e-15
+        ],
+        "endpoint_direct": -2.98707287102009e-63,
+        "endpoint_compact_with_metric": -2.9870854819725367e-63,
+        "compact_potential_change": 8.202876933290927e-78,
+        "spatial_material_photon_feedback": false,
+        "full_GR_feedback": false,
+        "final_charge_solved": false
+      }
+    ],
+    "physical_steps": 0,
+    "GR_return_evolution_executed": false,
+    "final_charge_conclusion": "unadjudicated",
+    "full_goal_complete": false,
+    "GR_return_admitted": false
+  },
+  "actual_same_joint_solution_GR_computed": true,
+  "GR_readout_accepted": false,
+  "GR_return_evolution_executed": false,
+  "original_failures_preserved": true,
+  "physical_final_charge_solved": false,
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false,
+  "sha256": {
+    "verification/apply_radau_history_gr.py": "fa53ff85cccf83e18f1e6751c4a5ad8378e9baf92a6e7ee6cb7b8cfe51a9bd0e",
+    "verification/apply_driver_aware_radau_gr.py": "4b2012da7dfb8bccf49bb395b6260d08ffef5afadc76e926eefff0db1779d725",
+    "notes/REQUEST211_212_RADAU_PULSE_GR_KO.md": "3233796e09ca0aed5cb3e5676b511d3ea3434e61c77bc2e4b1593755f1b51737",
+    "docs/model-definition.md": "413a4f08422a2fbfcd5d7c962460d65d891653f35cc70aaf6b5870fe5afbbf15",
+    "docs/observable-targets.md": "23ca4890873fefc0d6aa819315b931653e20eb40792b76da56a2df67b331d3c0",
+    "docs/adiabatic-limit.md": "c25f50a2a5ffeb08e13e4dc1d0bb11ff946d87c062b31610cb48624ff81e0bb9",
+    "docs/nonadiabatic-regime.md": "cd2afdea1163f0131be3d91cacc2d220ca3cde207523d7d00df6e4b1316a15fa",
+    "docs/failure-ledger-dynamic-chi.md": "d8eb66efc7ae72b3f4e7cdfa66bcb8e0e93e2f80a97c835857df212fe0a2686c",
+    "docs/dynamic-charge-completion.md": "0abc85b0ef34aa4b81cca033a01c3ca7bf55ba09405e511e5bf21b0fabaa58f0",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/amplitude-fix-producer.py": "eaba9a262b71dcaa47109d48ef651f55f3abea3ccefdf6052f16c0da422faece",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/driver-audit-producer.py": "624e4c2cede5bc16b084ffd1331060d4d9290e22e53e777812d3495f978d13d3",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/final-result.json": "eb932ec99f34f7eeb8e4177439910bcaa8a2df25119dc4f1a6b03f1dec929639",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/previous-publication-producer.py": "c83b58d55ad5dbf25094c2566a3455fc90359082387d7a45c96b1b977f41bba8",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/publication-helper.py": "f5153c2b02c6b171dcb35b2d7028cf6666b3ac688f9cc6dc8b0e105c1dd881aa",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/publication-producer.py": "553c62eb15f32a2be684d7cf58d602d9525e1743a2011f479a6eb42b10bd4748",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/publication.json": "249a7c2c59dce23104afd0d081fbb5f118300822ac266a7a8853642f4ae0b365",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/native-driver-radau212-work/amplitude-fix.json": "7ae928e0ebe8596f76b9c6498826aa32c4666a5b625f6b89b373471cfe2a6dab",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/native-driver-radau212-work/dispatch-amendment.json": "51708e9d807e69bf6c8ba52b2c6b6d707fa1637db6a43a3ca961ee9bcedeed49",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/native-driver-radau212-work/driver-polynomial-audit.json": "78a8f206ed6a3984ab1a594a3d0518c8a501fc7ac6de291fdd8d421de8faea3b",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/native-driver-radau212-work/driver-polynomial-fixed-audit.json": "b88095732a0ba05a68437a7b8ef90e1d9f601f727bf15f9c04413e869835a3a9",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/native-driver-radau212-work/expanded-fields.py": "10bd3bd8e22fee3ac2243e2e4aad24a6dd5780674f8f79916b18007b4a2faaa9",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/native-driver-radau212-work/expanded-source.py": "3aad80f8c0c5986de617da8c56ce9f7b2fa284a7633f7a3cb568e9eb29687333",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/native-driver-radau212-work/failed-driver-audit-producer.py": "cf1edf31e3ac71da453ff9890abe4d5259ed84d0316a99638af05345f4120a1b",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/native-driver-radau212-work/fields-receipt.json": "84f27002c3b2b933423998d04faa1bbf47a465a54afac9a1ec942cd7adcdc159",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/native-driver-radau212-work/fields-reuse.json": "888eec3feb29a6242b08807b1add6019ccad0224f1781264333b0cca9081edaf",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/native-driver-radau212-work/fields_finish-receipt.json": "c5296f2d36c12159c90c53a55c1bc935292550c333bdd42c0364020fc151f1c0",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/native-driver-radau212-work/gr-dispatch-producer.py": "b8e8a1a27fda11009dd7b1292a9791ae377dc9d7290db6978e3c04c8376b903d",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/native-driver-radau212-work/plan.json": "b60ba323c1baad18fafe85d834a128e0e0ae069e375473db5343c3c225b83ecf",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/native-driver-radau212-work/prepare-receipt.json": "efc155d27852e5e5518858748e23e542384255de4cf5d6413796720c41a38b0e",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/native-driver-radau212-work/prepared-producer.py": "b373479cd89c98d0b40c7e94cd64dd87a39f836b9dc7ce100b7aac3064f5600d",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/native-driver-radau212-work/result.json": "100c577819ebe114db207ea3964be3e701de3b7e18d24b5d703cb52893aa8359",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/native-driver-radau212-work/scalar-fix-producer.py": "712febc8f4d0fc9237ec5555e2c856649f12f4755203eae3e4fb7dce96bf1dd9",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/native-driver-radau212-work/source-128-check.json": "2f2cb0188bda289de1496c84c8951a9423078caea5210416c45426eed976feae",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/native-driver-radau212-work/source-64-check.json": "c2adbee1362b8c57fd3980fa70369dca43ff1a5b15d31fb2affe7df18838620f",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/native-driver-radau212-work/source-receipt.json": "4daf8f56873978b0140bf6687faa86dcef0d1223104cb68caaaca36a9cd89da5",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/native-driver-radau212-work/sources.json": "e610b62ba594bc4174d2b643f0d2eb8c2ece26cc25d100c70a4444296fdddd62",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/native-driver-radau212-work/source_retry-receipt.json": "88fd8e65be89b831a1f557c0ee7f9276d31a8bd1a56da1b5ff9a15854d65a8f4",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/native-driver-radau212-work/symbolic.json": "bd285fab45cb89ef64f364a2674b04601d401cd7f03ba783c88f89271c02fe6d",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/native-radau-gr211-work/plan.json": "22c09d9b6111e309845f58bfc6161ed65bdc9d33afa89233e7625149c108a24e",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/native-radau-gr211-work/prepare-receipt.json": "7f8909de725e67cb6ea464f6c7cd0ba8515e30cfa3329d3770f5a69656616981",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/native-radau-gr211-work/source-64-check.json": "22899f002f42f2fe429d7bf9de01ec7c203795b4cf1ad0cfd9ed5c7ae2ea5e7e",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/native-radau-gr211-work/source-receipt.json": "9ceab9012d328901051b496d1d630ee743a2d368094109e15e30d68a235da9af",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/native-radau-gr211-work/symbolic.json": "1094f9f8cdc5e001b06f88d7aa673a3a08a55f58a7ac391a6f2b0edbb2a2e4c6",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/native-driver-radau212-work/gr/fields-128-g4.json": "148cf68b24497632d9102b4e13ba0e4e6cfe0025d2eadc5b8b406b8adfe4ec0b",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/native-driver-radau212-work/gr/fields-128-g4.npz": "400f461cfa21e1f9333f7cd348610c46ca327977920fd32c318e6c160255a2f2",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/native-driver-radau212-work/gr/fields-128-g8.json": "2f3c4e9f0be11a052b39e4a7d1112566c4d4a2092bf7f0ee503a55c1ee6b18cf",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/native-driver-radau212-work/gr/fields-128-g8.npz": "c4c05cab3ddb3edc203a44d26e165ef5b9ede1908e330f152e119c960d30783c",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/native-driver-radau212-work/gr/fields-64-g8.json": "e20db6b40df3e2569ef78965556bafa28ac6fef0eb86d89399aacb55fac36b09",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/native-driver-radau212-work/gr/fields-64-g8.npz": "abcb9fc99329dfbdc00a79dd9e81e20c919077efbe2d061a32bfe26ca0780bcd",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/native-driver-radau212-work/gr/source-128-wrong-amplitude.npz": "fcdf69bad953af3cfd42117887b32e93e1106701a96fd7209a916bd6f54ecdc3",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/native-driver-radau212-work/gr/source-128.npz": "6ccb4978cc1c5ceeefe812fd9805020dd367bd0933ccee063a2ad173de34f144",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/native-driver-radau212-work/gr/source-64-wrong-amplitude.npz": "1f8ab558ce938e675651f24a6e634e571e27806fea13defdc47431077a57e602",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/native-driver-radau212-work/gr/source-64.npz": "cfbe46c552d661e9af82601a0a611c849f421037cb31f031cd3c9dde527b2fcf",
+    "outputs/direct-eos-gr33/native-radau-pulse-gr/native-radau-gr211-work/gr/source-64.npz": "87385e62637503579ece08c8f496a7cf42e851956560fd5b2507d4ca750154b6"
+  },
+  "document_prefixes": {
+    "docs/model-definition.md": {
+      "bytes": 259713,
+      "sha256": "a115e0748ef125b27b4af61527eb2787521094c0e5d3cac640c7b9de668b7854"
+    },
+    "docs/observable-targets.md": {
+      "bytes": 250527,
+      "sha256": "a1c6ff1b5c05b3a1c5f46ba44a118fcaa1845cdc71e91f197830735906c0150b"
+    },
+    "docs/adiabatic-limit.md": {
+      "bytes": 244906,
+      "sha256": "caf3dcce7cd65fdd7931a371ec861734cfcb851c6c1146a7c99f4e2dfecf66e9"
+    },
+    "docs/nonadiabatic-regime.md": {
+      "bytes": 253358,
+      "sha256": "73ba60d935bdbbf8d002b54b9ca488636f3c44ef7a63f5f1d7e8bf16a394a1d5"
+    },
+    "docs/failure-ledger-dynamic-chi.md": {
+      "bytes": 290843,
+      "sha256": "1eef05191fdfc889ce4732bdc538fbdb66f047d4d90aac62cfe9fb271353472d"
+    },
+    "docs/dynamic-charge-completion.md": {
+      "bytes": 118913,
+      "sha256": "8ea5d85d5be2077de4652d1ddaf30feee01b773be77fc1e2044480c032b1fac9"
+    }
+  }
+}

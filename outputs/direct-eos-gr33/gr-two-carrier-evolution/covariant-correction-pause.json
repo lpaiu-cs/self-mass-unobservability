@@ -1,0 +1,208 @@
+{
+  "classification": "Counterexample candidate",
+  "operator_paused": true,
+  "all_stopped": true,
+  "boot_id": "9b968b4f-ecbd-483b-ada9-c1c871b6ab20",
+  "reason": "Prioritize the corrected covariant momentum evolution. The parent RHS omits one a_t*S term; preserve its immutable partial trajectories as numerical controls, not completed physical GR evolutions. This is an operator pause, not a native nonlinear or causal failure.",
+  "roots": [
+    1765,
+    1890
+  ],
+  "processes": [
+    {
+      "pid": 1890,
+      "parent": 1881,
+      "start": "1305397",
+      "state": "R",
+      "command": "python3 verification/gr_two_carrier_evolution.py run --refinement 2 --workers 10"
+    },
+    {
+      "pid": 1765,
+      "parent": 1759,
+      "start": "1216640",
+      "state": "R",
+      "command": "python3 verification/gr_two_carrier_evolution.py run --refinement 1 --workers 5"
+    },
+    {
+      "pid": 1769,
+      "parent": 1765,
+      "start": "1218162",
+      "state": "S",
+      "command": "python3 verification/gr_two_carrier_evolution.py run --refinement 1 --workers 5"
+    },
+    {
+      "pid": 1770,
+      "parent": 1765,
+      "start": "1218162",
+      "state": "S",
+      "command": "python3 verification/gr_two_carrier_evolution.py run --refinement 1 --workers 5"
+    },
+    {
+      "pid": 1771,
+      "parent": 1765,
+      "start": "1218162",
+      "state": "S",
+      "command": "python3 verification/gr_two_carrier_evolution.py run --refinement 1 --workers 5"
+    },
+    {
+      "pid": 1772,
+      "parent": 1765,
+      "start": "1218162",
+      "state": "S",
+      "command": "python3 verification/gr_two_carrier_evolution.py run --refinement 1 --workers 5"
+    },
+    {
+      "pid": 1773,
+      "parent": 1765,
+      "start": "1218163",
+      "state": "S",
+      "command": "python3 verification/gr_two_carrier_evolution.py run --refinement 1 --workers 5"
+    },
+    {
+      "pid": 1909,
+      "parent": 1890,
+      "start": "1306880",
+      "state": "S",
+      "command": "python3 verification/gr_two_carrier_evolution.py run --refinement 2 --workers 10"
+    },
+    {
+      "pid": 1910,
+      "parent": 1890,
+      "start": "1306880",
+      "state": "S",
+      "command": "python3 verification/gr_two_carrier_evolution.py run --refinement 2 --workers 10"
+    },
+    {
+      "pid": 1911,
+      "parent": 1890,
+      "start": "1306880",
+      "state": "S",
+      "command": "python3 verification/gr_two_carrier_evolution.py run --refinement 2 --workers 10"
+    },
+    {
+      "pid": 1912,
+      "parent": 1890,
+      "start": "1306880",
+      "state": "S",
+      "command": "python3 verification/gr_two_carrier_evolution.py run --refinement 2 --workers 10"
+    },
+    {
+      "pid": 1913,
+      "parent": 1890,
+      "start": "1306880",
+      "state": "S",
+      "command": "python3 verification/gr_two_carrier_evolution.py run --refinement 2 --workers 10"
+    },
+    {
+      "pid": 1914,
+      "parent": 1890,
+      "start": "1306881",
+      "state": "S",
+      "command": "python3 verification/gr_two_carrier_evolution.py run --refinement 2 --workers 10"
+    },
+    {
+      "pid": 1915,
+      "parent": 1890,
+      "start": "1306881",
+      "state": "S",
+      "command": "python3 verification/gr_two_carrier_evolution.py run --refinement 2 --workers 10"
+    },
+    {
+      "pid": 1916,
+      "parent": 1890,
+      "start": "1306881",
+      "state": "S",
+      "command": "python3 verification/gr_two_carrier_evolution.py run --refinement 2 --workers 10"
+    },
+    {
+      "pid": 1917,
+      "parent": 1890,
+      "start": "1306881",
+      "state": "S",
+      "command": "python3 verification/gr_two_carrier_evolution.py run --refinement 2 --workers 10"
+    },
+    {
+      "pid": 1918,
+      "parent": 1890,
+      "start": "1306881",
+      "state": "S",
+      "command": "python3 verification/gr_two_carrier_evolution.py run --refinement 2 --workers 10"
+    }
+  ],
+  "paths": {
+    "1": {
+      "progress": {
+        "classification": "Counterexample candidate",
+        "step": 9,
+        "time_seconds": 0.03938197585150251,
+        "maximum_changes": [
+          7.2769412151018e-05,
+          0.24513686349555205,
+          1.7343478862163578e-07,
+          1.7977044440919057e-10
+        ],
+        "elapsed_seconds": 3452.406787666001,
+        "maximum_cell_energy_defect_over_initial_heat_capacity": 0.009603940396322492,
+        "total_energy_defect_over_initial_heat_capacity": 4.816865181586223e-08,
+        "maximum_local_rest_characteristic_speed_over_c": 0.39339420905016337,
+        "maximum_characteristic_imaginary_part": 0.0,
+        "sampled_cone_inside_light_cone": true
+      },
+      "sha256": {
+        "outputs/direct-eos-gr33/gr-two-carrier-evolution/path-1/progress.json": "5ecb50a51915f97b221ebc9e47f02e48106349a85ee9f33fdd68de2b8be390d3",
+        "outputs/direct-eos-gr33/gr-two-carrier-evolution/path-1/iterations.jsonl": "d3318479b29ae6885d67fc8bfd536828e3d88ef2e1f86a9f5b80ce0614666715",
+        "outputs/direct-eos-gr33/gr-two-carrier-evolution/path-1/stage-cones.jsonl": "4544efd2413d4ca6d28d4cf72fbb5dfd31c4853a0d153ee6ba6b5988d7ae1a81",
+        "outputs/direct-eos-gr33/gr-two-carrier-evolution/path-1/step-0000.npz": "86182e08f6e463471e354d41c5c61d6bbc791eb6c39ad306401f240aabd8941b",
+        "outputs/direct-eos-gr33/gr-two-carrier-evolution/path-1/step-0001.npz": "38f4e43873557025132efad10ec9ea7507d0752be890ff36511bf2929bdb56d7",
+        "outputs/direct-eos-gr33/gr-two-carrier-evolution/path-1/step-0002.npz": "40985a304ff6b682b7739e86b4bab7ebae938e75c3f848340c14fc2e273f3e86",
+        "outputs/direct-eos-gr33/gr-two-carrier-evolution/path-1/step-0003.npz": "efefcce815eb968c9ef8ddbcc13ccc03f512fd4e937486f5e3f0a044db86f124",
+        "outputs/direct-eos-gr33/gr-two-carrier-evolution/path-1/step-0004.npz": "59b9778ca82e02078deb306bd2476894f916b2e6973619fb38f5cc1e8bebd044",
+        "outputs/direct-eos-gr33/gr-two-carrier-evolution/path-1/step-0005.npz": "bde8b6cb6f7fab46b82988c83c8540232ac4b63e089cf4fa7407d0e2e74d5a57",
+        "outputs/direct-eos-gr33/gr-two-carrier-evolution/path-1/step-0006.npz": "abdb5b3769805d6088fffb343627e46242ed1e5459fc30e5a3855e51c6356a4a",
+        "outputs/direct-eos-gr33/gr-two-carrier-evolution/path-1/step-0007.npz": "16ada75ad814c2dbe89f670c8e7f8a3f198872cef189cb5b8291c6a7025f53ea",
+        "outputs/direct-eos-gr33/gr-two-carrier-evolution/path-1/step-0008.npz": "94c880bffaa6f6e1034d91d71f54401f96a77ee6505b108a34e1627f9adfed4d",
+        "outputs/direct-eos-gr33/gr-two-carrier-evolution/path-1/step-0009.npz": "24152dd1ef2c6367b6cde91b638802a424ce87ca7cb7a16858908eb87264b318"
+      }
+    },
+    "2": {
+      "progress": {
+        "classification": "Counterexample candidate",
+        "step": 14,
+        "time_seconds": 0.013058775282352006,
+        "maximum_changes": [
+          2.0526053438857966e-05,
+          0.12231633690293142,
+          7.181627236417829e-08,
+          1.7863246511760989e-10
+        ],
+        "elapsed_seconds": 2276.765445338,
+        "maximum_cell_energy_defect_over_initial_heat_capacity": 0.0026000145073005435,
+        "total_energy_defect_over_initial_heat_capacity": 6.984851528737293e-09,
+        "maximum_local_rest_characteristic_speed_over_c": 0.3446750240126778,
+        "maximum_characteristic_imaginary_part": 0.0,
+        "sampled_cone_inside_light_cone": true
+      },
+      "sha256": {
+        "outputs/direct-eos-gr33/gr-two-carrier-evolution/path-2/progress.json": "2e5c3bf08e788b1dfeaff82e8569e18b1fc0e4c60d71bb26b2c5a9dd47a5c943",
+        "outputs/direct-eos-gr33/gr-two-carrier-evolution/path-2/iterations.jsonl": "27744d99f28b9fa82803060256a7282968b63859ccf34e5f71ca00e888694e6a",
+        "outputs/direct-eos-gr33/gr-two-carrier-evolution/path-2/stage-cones.jsonl": "4018b63bcc29890b14e2e787f071e63896313fb9b773d5a4899132e2bd91ac3c",
+        "outputs/direct-eos-gr33/gr-two-carrier-evolution/path-2/step-0000.npz": "f497c0ec0a2d7de279c1b3c4a1888ec7eda2e5f9237adaff6723337be4c56632",
+        "outputs/direct-eos-gr33/gr-two-carrier-evolution/path-2/step-0001.npz": "1225cdd4f95e02fd6df4cb2178bc17d3c858481b993a33e5db3daee965e84795",
+        "outputs/direct-eos-gr33/gr-two-carrier-evolution/path-2/step-0002.npz": "ac4c187fbd39f3fee1251b043bb982b0c6ec9e12e8c85a8c84ab9f17c2d55bdf",
+        "outputs/direct-eos-gr33/gr-two-carrier-evolution/path-2/step-0003.npz": "873746f10941f33e193e9744eec5f880ad3e594adbb06e0a3bc80bfb95f6e3d5",
+        "outputs/direct-eos-gr33/gr-two-carrier-evolution/path-2/step-0004.npz": "4ba3052d3add266d1499d0de70a3d53d09b8def965492d841df1776cdef12196",
+        "outputs/direct-eos-gr33/gr-two-carrier-evolution/path-2/step-0005.npz": "249f777b505c2f020b210b7bc0bb27f395db61faa875cd21b90a44170c38596b",
+        "outputs/direct-eos-gr33/gr-two-carrier-evolution/path-2/step-0006.npz": "3116894b796edd452cbc9346fa9f31290cf6d3dfd3500c9ff6e14d7932a54c65",
+        "outputs/direct-eos-gr33/gr-two-carrier-evolution/path-2/step-0007.npz": "8c5cf9ad9125a13fd0427b37c598f14032319de571f03fddcc1690ff2c425145",
+        "outputs/direct-eos-gr33/gr-two-carrier-evolution/path-2/step-0008.npz": "b721690c599112c4ac4c05c691b57fe9936946de7e37f340bbfb380f0dfab6a3",
+        "outputs/direct-eos-gr33/gr-two-carrier-evolution/path-2/step-0009.npz": "c1cc77a2a3aee06e08311a700cf9104f24ee289f5d64efcbb82cccd62b699346",
+        "outputs/direct-eos-gr33/gr-two-carrier-evolution/path-2/step-0010.npz": "c3e35b64181ea10ce70474217fbbfece11d628f571371553fbadf4e5bbc5724f",
+        "outputs/direct-eos-gr33/gr-two-carrier-evolution/path-2/step-0011.npz": "fc85e7a9c24d734e7252cd58e45f9e3b7ff814409c8488b95c6661ff04276774",
+        "outputs/direct-eos-gr33/gr-two-carrier-evolution/path-2/step-0012.npz": "d71ac46989668ec1c62a3d54d1d2d07e486b54b1717ae382c4b1406056b36682",
+        "outputs/direct-eos-gr33/gr-two-carrier-evolution/path-2/step-0013.npz": "483793ffdaf8ce9fa54fbb91bab5589f57153b56afa1b9435b5ca9995cf8f429",
+        "outputs/direct-eos-gr33/gr-two-carrier-evolution/path-2/step-0014.npz": "9309bc7e1e4ab8b4cfde679bf2c0ab92ac1fcd1fdc73cb386fa1119fdb3d411c",
+        "outputs/direct-eos-gr33/gr-two-carrier-evolution/path-2/step-0015.npz": "5a9a0d391150dbbc26f8d5d4d8109a8898991fff48a79dc89281e11708b37a33"
+      }
+    }
+  }
+}

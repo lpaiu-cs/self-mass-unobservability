@@ -1,0 +1,55 @@
+{
+  "classification": "Counterexample candidate",
+  "commands": [
+    {
+      "command": [
+        "cmake",
+        "-S",
+        "/home/lpaiu/work/direct-eos-gr33/current-mask/source",
+        "-B",
+        "/home/lpaiu/work/direct-eos-gr33/current-mask/build",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DBUILD_SHARED_LIBS=ON",
+        "-DBUILD_TEST=ON",
+        "-DBUILD_DOC=OFF",
+        "-DBUILD_DOX_DOC=OFF"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "/home/lpaiu/work/direct-eos-gr33/current-mask/build",
+        "--target",
+        "free_eos",
+        "-j",
+        "2"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "gfortran",
+        "-O2",
+        "-fPIC",
+        "-shared",
+        "-I/home/lpaiu/work/direct-eos-gr33/current-mask/build/src",
+        "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/current-mask/direct_ion_bridge.f90",
+        "-L/home/lpaiu/work/direct-eos-gr33/current-mask/build/src",
+        "-Wl,-rpath,/home/lpaiu/work/direct-eos-gr33/current-mask/build/src",
+        "-lfree_eos_direct24_current_mask",
+        "-o",
+        "/home/lpaiu/work/direct-eos-gr33/current-mask/inventory.so"
+      ],
+      "returncode": 0
+    }
+  ],
+  "completed": true,
+  "sha256": {
+    "/home/lpaiu/work/direct-eos-gr33/current-mask/inventory.so": "37255378954fbd0cf78304038b9f915c3a0b873cf6366caef7780f00ccf69d89",
+    "/home/lpaiu/work/direct-eos-gr33/current-mask/build/src/libfree_eos_direct24_current_mask.so.1.0.0": "b89a7c03fa60562f6ae5dd407def6e832acc1769ec99017c093dfe675e47e0b4"
+  },
+  "original_runtime_modified": false,
+  "physical_EOS_certified": false
+}

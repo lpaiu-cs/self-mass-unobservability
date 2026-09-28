@@ -1,0 +1,7 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "Interpolating the reverse affinity exponential separately from the level population breaks their exact Boltzmann cancellation. The cold integrated reverse-rate error was6.199; warm errors also exceed the original0.002 gate.",
+  "repair": "Combine log(level_fraction)+log(y/(1-y))+affinity-binding_level/kT at each saved node first; interpolate this smooth full reverse prefactor. Retain exact exp(-(E-binding_level)/kT). Use cubic splines for the slow log prefactors; reuse all918 states with no new nodes or changed gate.",
+  "diagnostics": "Three native states independently isolated the error in reverse prefactors, while the ground prefactor was already accurate. That diagnostic did not serialize its call count; its constructor enforced a100call cap, recorded as an upper bound rather than an exact count.",
+  "source_sha256": "f69fd6e07670ee25667bb03645cc1360ae43733e8512d7b956a95a27ab96c94c"
+}

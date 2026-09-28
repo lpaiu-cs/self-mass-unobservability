@@ -1,0 +1,611 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "rows": [
+    {
+      "harmonic": 0,
+      "charge_gain": [
+        -6.228131064415672e-09,
+        0.0
+      ],
+      "drive_amplitude": 1.695379137685091e-09,
+      "delta_alpha_over_phi0": 1.055904347337877e-14,
+      "frozen_static_subtracted_over_phi0": 0.0,
+      "p2_relative": 1.1972085045347492e-11,
+      "outer_relative": 1.7769638483062427e-09,
+      "quadrature_relative": 3.925594251553531e-09
+    },
+    {
+      "harmonic": 1,
+      "charge_gain": [
+        -6.228215609788285e-09,
+        -5.764872110778245e-13
+      ],
+      "drive_amplitude": 1.693260796589015e-10,
+      "delta_alpha_over_phi0": 1.0545993369934436e-15,
+      "frozen_static_subtracted_over_phi0": 9.865847996164253e-20,
+      "p2_relative": 1.0816459748386038e-11,
+      "p2_static_subtracted_relative": 1.235120118876102e-08,
+      "outer_relative": 1.781824943730518e-09,
+      "outer_static_subtracted_relative": 5.2249758750110015e-08,
+      "quadrature_relative": 3.927324758757731e-09,
+      "quadrature_static_subtracted_relative": 1.9459612633306516e-08
+    },
+    {
+      "harmonic": 2,
+      "charge_gain": [
+        -6.2284692360435286e-09,
+        -1.1530348614851616e-12
+      ],
+      "drive_amplitude": 1.6897349332651235e-11,
+      "delta_alpha_over_phi0": 1.0524462229249917e-16,
+      "frozen_static_subtracted_over_phi0": 2.0303903344488558e-20,
+      "p2_relative": 1.2564814047853345e-11,
+      "p2_static_subtracted_relative": 3.0757844251900022e-09,
+      "outer_relative": 1.7901861249553192e-09,
+      "outer_static_subtracted_relative": 6.905870651484047e-08,
+      "quadrature_relative": 3.934561223366596e-09,
+      "quadrature_static_subtracted_relative": 4.773435193201692e-08
+    },
+    {
+      "harmonic": 3,
+      "charge_gain": [
+        -6.228892005192154e-09,
+        -1.7296815404387274e-12
+      ],
+      "drive_amplitude": 1.89659706792518e-12,
+      "delta_alpha_over_phi0": 1.1813698768947161e-17,
+      "frozen_static_subtracted_over_phi0": 3.583930731922168e-21,
+      "p2_relative": 1.0839188719519834e-11,
+      "p2_static_subtracted_relative": 3.7295543971487584e-09,
+      "outer_relative": 1.8056410910091242e-09,
+      "outer_static_subtracted_relative": 9.525859237144878e-08,
+      "quadrature_relative": 3.943650947133225e-09,
+      "quadrature_static_subtracted_relative": 6.120754481287153e-08
+    }
+  ],
+  "cases": {
+    "p4": [
+      {
+        "harmonic": 0,
+        "omega_R_over_c": 0.0,
+        "charge": [
+          -6.228131064415672e-09,
+          0.0
+        ],
+        "outgoing": [
+          2.62547793510801e-14,
+          0.0
+        ],
+        "Z_clamped": [
+          -8.43171459117786e-06,
+          0.0
+        ],
+        "Z_difference": [
+          -1.3127223642140561e-14,
+          0.0
+        ],
+        "boundary_amplitude": [
+          1.0000084317679268,
+          0.0
+        ],
+        "clamped_boundary_amplitude": [
+          1.0000084317679137,
+          0.0
+        ],
+        "derivative_reaction_relative": 0.0001353815278010599,
+        "linear_residual": 1.390763908753476e-16,
+        "radiative_current_error": 0,
+        "native_displacement_RMS": 0.02086955848597954,
+        "seconds": 0.17756830899999443
+      },
+      {
+        "harmonic": 1,
+        "omega_R_over_c": 9.257074623575951e-05,
+        "charge": [
+          -6.228215609788285e-09,
+          -5.764872110778245e-13
+        ],
+        "outgoing": [
+          2.6255135753358755e-14,
+          2.4301904325752738e-18
+        ],
+        "Z_clamped": [
+          -8.443140597973316e-06,
+          0.0
+        ],
+        "Z_difference": [
+          -1.312740201506975e-14,
+          0.0
+        ],
+        "boundary_amplitude": [
+          1.00000842728073,
+          -5.086353918265953e-09
+        ],
+        "clamped_boundary_amplitude": [
+          1.0000084272807168,
+          -5.086353920696357e-09
+        ],
+        "derivative_reaction_relative": 0.00013520112502788092,
+        "linear_residual": 5.910586261113563e-16,
+        "radiative_current_error": 1.6653345369377348e-15,
+        "native_displacement_RMS": 0.020869823950051613,
+        "seconds": 0.19263423700000004
+      },
+      {
+        "harmonic": 2,
+        "omega_R_over_c": 0.00018514149247151902,
+        "charge": [
+          -6.2284692360435286e-09,
+          -1.1530348614851616e-12
+        ],
+        "outgoing": [
+          2.6256204918618798e-14,
+          4.8606356480451376e-18
+        ],
+        "Z_clamped": [
+          -8.477418618694405e-06,
+          0.0
+        ],
+        "Z_difference": [
+          -1.3127937177480223e-14,
+          0.0
+        ],
+        "boundary_amplitude": [
+          1.000008411367211,
+          -9.09074194831568e-09
+        ],
+        "clamped_boundary_amplitude": [
+          1.0000084113671979,
+          -9.090741953176712e-09
+        ],
+        "derivative_reaction_relative": 0.00013496142592525043,
+        "linear_residual": 1.82009570374889e-16,
+        "radiative_current_error": 1.1102230246251565e-16,
+        "native_displacement_RMS": 0.020870620367167563,
+        "seconds": 0.20750848700000546
+      },
+      {
+        "harmonic": 3,
+        "omega_R_over_c": 0.0002777122387072785,
+        "charge": [
+          -6.228892005192154e-09,
+          -1.7296815404387274e-12
+        ],
+        "outgoing": [
+          2.6257987108267473e-14,
+          7.291498319827947e-18
+        ],
+        "Z_clamped": [
+          -8.53454865426069e-06,
+          0.0
+        ],
+        "Z_difference": [
+          -1.3128829260175136e-14,
+          0.0
+        ],
+        "boundary_amplitude": [
+          1.0000083840273717,
+          -1.2686748504440366e-08
+        ],
+        "clamped_boundary_amplitude": [
+          1.0000083840273586,
+          -1.2686748511732405e-08
+        ],
+        "derivative_reaction_relative": 0.0001343801102383659,
+        "linear_residual": 2.1135482053154396e-16,
+        "radiative_current_error": 5.551115123125783e-16,
+        "native_displacement_RMS": 0.020871947965468218,
+        "seconds": 0.19867744499999418
+      }
+    ],
+    "p2": [
+      {
+        "harmonic": 0,
+        "omega_R_over_c": 0.0,
+        "charge": [
+          -6.228131064341108e-09,
+          0.0
+        ],
+        "outgoing": [
+          2.6254779350765777e-14,
+          0.0
+        ],
+        "Z_clamped": [
+          -8.431714591179121e-06,
+          0.0
+        ],
+        "Z_difference": [
+          -1.3127223641983401e-14,
+          0.0
+        ],
+        "boundary_amplitude": [
+          1.0000084317679268,
+          0.0
+        ],
+        "clamped_boundary_amplitude": [
+          1.0000084317679137,
+          0.0
+        ],
+        "derivative_reaction_relative": 0.00012773299980886295,
+        "linear_residual": 1.5148605695269344e-19,
+        "radiative_current_error": 0,
+        "native_displacement_RMS": 0.020869558493339695,
+        "seconds": 0.06522064100000335
+      },
+      {
+        "harmonic": 1,
+        "omega_R_over_c": 9.257074623575951e-05,
+        "charge": [
+          -6.228215609720918e-09,
+          -5.764872110715889e-13
+        ],
+        "outgoing": [
+          2.6255135753074765e-14,
+          2.430190432548988e-18
+        ],
+        "Z_clamped": [
+          -8.44314059798285e-06,
+          0.0
+        ],
+        "Z_difference": [
+          -1.3127402014927756e-14,
+          0.0
+        ],
+        "boundary_amplitude": [
+          1.00000842728073,
+          -5.08635391826418e-09
+        ],
+        "clamped_boundary_amplitude": [
+          1.0000084272807168,
+          -5.0863539206945836e-09
+        ],
+        "derivative_reaction_relative": 0.00012767908895273847,
+        "linear_residual": 1.5459867399607906e-19,
+        "radiative_current_error": 1.6653345369377348e-15,
+        "native_displacement_RMS": 0.020869823957432452,
+        "seconds": 0.09594851100000312
+      },
+      {
+        "harmonic": 2,
+        "omega_R_over_c": 0.00018514149247151902,
+        "charge": [
+          -6.228469235965269e-09,
+          -1.1530348614706739e-12
+        ],
+        "outgoing": [
+          2.6256204918288893e-14,
+          4.860635647984065e-18
+        ],
+        "Z_clamped": [
+          -8.477418618693814e-06,
+          0.0
+        ],
+        "Z_difference": [
+          -1.3127937177315273e-14,
+          0.0
+        ],
+        "boundary_amplitude": [
+          1.000008411367211,
+          -9.090741948315891e-09
+        ],
+        "clamped_boundary_amplitude": [
+          1.0000084113671979,
+          -9.09074195317695e-09
+        ],
+        "derivative_reaction_relative": 0.00012732822148602905,
+        "linear_residual": 1.7348535481912066e-19,
+        "radiative_current_error": 1.1102230246251565e-16,
+        "native_displacement_RMS": 0.020870620374523512,
+        "seconds": 0.09205408699999396
+      },
+      {
+        "harmonic": 3,
+        "omega_R_over_c": 0.0002777122387072785,
+        "charge": [
+          -6.228892005124638e-09,
+          -1.7296815404199791e-12
+        ],
+        "outgoing": [
+          2.625798710798286e-14,
+          7.291498319748915e-18
+        ],
+        "Z_clamped": [
+          -8.534548654267965e-06,
+          0.0
+        ],
+        "Z_difference": [
+          -1.3128829260032829e-14,
+          0.0
+        ],
+        "boundary_amplitude": [
+          1.0000083840273717,
+          -1.268674850443629e-08
+        ],
+        "clamped_boundary_amplitude": [
+          1.0000083840273586,
+          -1.2686748511728328e-08
+        ],
+        "derivative_reaction_relative": 0.00012690682524055404,
+        "linear_residual": 1.7348535481912066e-19,
+        "radiative_current_error": 5.551115123125783e-16,
+        "native_displacement_RMS": 0.020871947972844012,
+        "seconds": 0.09068480100000187
+      }
+    ],
+    "outer": [
+      {
+        "harmonic": 0,
+        "omega_R_over_c": 0.0,
+        "charge": [
+          -6.228131075482836e-09,
+          0.0
+        ],
+        "outgoing": [
+          2.6254779397733896e-14,
+          0.0
+        ],
+        "Z_clamped": [
+          -5.621150965750556e-06,
+          0.0
+        ],
+        "Z_difference": [
+          -8.751519339713785e-15,
+          0.0
+        ],
+        "boundary_amplitude": [
+          1.0000056211746733,
+          0.0
+        ],
+        "clamped_boundary_amplitude": [
+          1.0000056211746644,
+          0.0
+        ],
+        "derivative_reaction_relative": 0.00018051335028187838,
+        "linear_residual": 5.594978851995698e-16,
+        "radiative_current_error": 0,
+        "native_displacement_RMS": 0.02086955850451818,
+        "seconds": 0.17021361199999774
+      },
+      {
+        "harmonic": 1,
+        "omega_R_over_c": 9.257074623575951e-05,
+        "charge": [
+          -6.228215620885875e-09,
+          -5.764872121050376e-13
+        ],
+        "outgoing": [
+          2.625513580014081e-14,
+          2.430190436905506e-18
+        ],
+        "Z_clamped": [
+          -5.646859319728405e-06,
+          0.0
+        ],
+        "Z_difference": [
+          -8.75163838053886e-15,
+          0.0
+        ],
+        "boundary_amplitude": [
+          1.0000056095462229,
+          -5.0863395852654465e-09
+        ],
+        "clamped_boundary_amplitude": [
+          1.0000056095462142,
+          -5.086339587695868e-09
+        ],
+        "derivative_reaction_relative": 0.0001799463877449744,
+        "linear_residual": 5.594978851995698e-16,
+        "radiative_current_error": 2.886579864025407e-15,
+        "native_displacement_RMS": 0.02086982396865036,
+        "seconds": 0.1931570169999972
+      },
+      {
+        "harmonic": 2,
+        "omega_R_over_c": 0.00018514149247151902,
+        "charge": [
+          -6.228469247193648e-09,
+          -1.1530348635493375e-12
+        ],
+        "outgoing": [
+          2.625620496562229e-14,
+          4.8606356567467025e-18
+        ],
+        "Z_clamped": [
+          -5.7239843832373915e-06,
+          0.0
+        ],
+        "Z_difference": [
+          -8.751995532062181e-15,
+          0.0
+        ],
+        "boundary_amplitude": [
+          1.0000055722089467,
+          -9.090716136045776e-09
+        ],
+        "clamped_boundary_amplitude": [
+          1.000005572208938,
+          -9.09071614090689e-09
+        ],
+        "derivative_reaction_relative": 0.00017810621874752617,
+        "linear_residual": 5.594978851995698e-16,
+        "radiative_current_error": 1.5543122344752192e-15,
+        "native_displacement_RMS": 0.02087062038585204,
+        "seconds": 0.19055135199999995
+      },
+      {
+        "harmonic": 3,
+        "omega_R_over_c": 0.0002777122387072785,
+        "charge": [
+          -6.2288920164392975e-09,
+          -1.729681543561958e-12
+        ],
+        "outgoing": [
+          2.6257987155679973e-14,
+          7.291498332993973e-18
+        ],
+        "Z_clamped": [
+          -5.852526161032138e-06,
+          0.0
+        ],
+        "Z_difference": [
+          -8.752590881578872e-15,
+          0.0
+        ],
+        "boundary_amplitude": [
+          1.0000055091628484,
+          -1.2686712028326251e-08
+        ],
+        "clamped_boundary_amplitude": [
+          1.0000055091628397,
+          -1.268671203561838e-08
+        ],
+        "derivative_reaction_relative": 0.0001750244038097466,
+        "linear_residual": 2.8185181366159613e-15,
+        "radiative_current_error": 4.440892098500626e-16,
+        "native_displacement_RMS": 0.020871947984299758,
+        "seconds": 0.19512017699999973
+      }
+    ],
+    "quadrature": [
+      {
+        "harmonic": 0,
+        "omega_R_over_c": 0.0,
+        "charge": [
+          -6.2281310399665564e-09,
+          0.0
+        ],
+        "outgoing": [
+          2.6254779248014492e-14,
+          0.0
+        ],
+        "Z_clamped": [
+          -8.431714574422494e-06,
+          0.0
+        ],
+        "Z_difference": [
+          -1.3127223590608849e-14,
+          0.0
+        ],
+        "boundary_amplitude": [
+          1.00000843176791,
+          0.0
+        ],
+        "clamped_boundary_amplitude": [
+          1.000008431767897,
+          0.0
+        ],
+        "derivative_reaction_relative": 0.0001002978657393047,
+        "linear_residual": 3.4908876521299564e-16,
+        "radiative_current_error": 0,
+        "native_displacement_RMS": 0.020869558445387692,
+        "seconds": 0.15770491099999617
+      },
+      {
+        "harmonic": 1,
+        "omega_R_over_c": 9.257074623575951e-05,
+        "charge": [
+          -6.22821558532806e-09,
+          -5.764872088137333e-13
+        ],
+        "outgoing": [
+          2.625513565024631e-14,
+          2.430190423030964e-18
+        ],
+        "Z_clamped": [
+          -8.44314058120326e-06,
+          0.0
+        ],
+        "Z_difference": [
+          -1.3127401963514619e-14,
+          0.0
+        ],
+        "boundary_amplitude": [
+          1.0000084272807133,
+          -5.086353921370753e-09
+        ],
+        "clamped_boundary_amplitude": [
+          1.0000084272807002,
+          -5.086353923801156e-09
+        ],
+        "derivative_reaction_relative": 0.00010024603543952102,
+        "linear_residual": 3.4908876521299564e-16,
+        "radiative_current_error": 1.6653345369377348e-15,
+        "native_displacement_RMS": 0.020869823909443558,
+        "seconds": 0.18525863500000384
+      },
+      {
+        "harmonic": 2,
+        "omega_R_over_c": 0.00018514149247151902,
+        "charge": [
+          -6.228469211537235e-09,
+          -1.1530348569483977e-12
+        ],
+        "outgoing": [
+          2.6256204815312148e-14,
+          4.860635628920342e-18
+        ],
+        "Z_clamped": [
+          -8.477418601865985e-06,
+          0.0
+        ],
+        "Z_difference": [
+          -1.3127937125827991e-14,
+          0.0
+        ],
+        "boundary_amplitude": [
+          1.000008411367194,
+          -9.090741954546949e-09
+        ],
+        "clamped_boundary_amplitude": [
+          1.000008411367181,
+          -9.090741959407981e-09
+        ],
+        "derivative_reaction_relative": 9.99918129850637e-05,
+        "linear_residual": 3.4908876521299564e-16,
+        "radiative_current_error": 1.1102230246251565e-16,
+        "native_displacement_RMS": 0.020870620326476685,
+        "seconds": 0.19963100500000053
+      },
+      {
+        "harmonic": 3,
+        "omega_R_over_c": 0.0002777122387072785,
+        "charge": [
+          -6.228891980627578e-09,
+          -1.7296815336173502e-12
+        ],
+        "outgoing": [
+          2.6257987004715138e-14,
+          7.29149829107233e-18
+        ],
+        "Z_clamped": [
+          -8.534548637346659e-06,
+          0.0
+        ],
+        "Z_difference": [
+          -1.3128829208400058e-14,
+          0.0
+        ],
+        "boundary_amplitude": [
+          1.0000083840273548,
+          -1.268674851383481e-08
+        ],
+        "clamped_boundary_amplitude": [
+          1.0000083840273417,
+          -1.2686748521126902e-08
+        ],
+        "derivative_reaction_relative": 9.959433678325293e-05,
+        "linear_residual": 3.4908876521299564e-16,
+        "radiative_current_error": 5.551115123125783e-16,
+        "native_displacement_RMS": 0.020871947924669624,
+        "seconds": 0.19481130999999863
+      }
+    ]
+  },
+  "seconds": 19.314093581,
+  "actual_declared_kepler_harmonics_applied": true,
+  "thermal_background_evolved": false,
+  "full_dynamic_charge_solved": false,
+  "same_inventory_static_comparator_solved": false,
+  "observational_nuisance_applied": false
+}

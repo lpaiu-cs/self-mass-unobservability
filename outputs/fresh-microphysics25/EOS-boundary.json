@@ -1,0 +1,11 @@
+{
+  "classification": "Counterexample candidate",
+  "MESA_to_FreeEOS_pressure": {
+    "all_cells_min": 0.9917225009569377,
+    "all_cells_max": 1.0240976904548453,
+    "burning_cells_min": 0.9954906422618918,
+    "burning_cells_max": 1.0136671735179585,
+    "burning_cells_unweighted_median": 0.9967396145648988
+  },
+  "interpretation": "MESA recomputes its EOS auxiliaries while FreeEOS defines the frozen TOV pressure. Equal rho_B,T,X does not prove equal EOS. Fresh rates/opacity are a declared hybrid state evaluation, not a fully common-EOS GR evolutionary solution."
+}

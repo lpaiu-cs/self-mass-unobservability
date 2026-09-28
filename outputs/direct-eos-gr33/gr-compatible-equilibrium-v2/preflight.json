@@ -1,0 +1,335 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "implementation_sha256": "eef028a87aba8ac96687994f42513853e80b8e270d6c499cc7bc56da4efe5a4c",
+  "preflight_source_sha256": "3a965dff0a579adde4eebdfebb806223ed970f12291f7ad989a6ba926f34228e",
+  "design_sha256": "019d282627c7002c9b861dcd0762008e1a4e7a426757e5fc17a80900ab09ff61",
+  "symbolic": {
+    "classification": "Proven",
+    "original_face_work": "A*(1-2*t)*(p_L-p_R)*(v_L-v_R)",
+    "dual_face_work": 0,
+    "scope": "Exact interior-face algebra for constant-medium linear acoustic energy with the stated cell-volume weights. This is not a theorem for the full GR model."
+  },
+  "negative_and_positive_controls": [
+    {
+      "cells": 64,
+      "old_growth": 10.231251952500292,
+      "dual_growth": 1.4210854715202004e-14,
+      "new_growth": -0.008188226684010225,
+      "adjoint_relative": 1.8264901189992024e-16
+    },
+    {
+      "cells": 128,
+      "old_growth": 10.231251952500298,
+      "dual_growth": 1.6920818045329522e-14,
+      "new_growth": -0.0032282566035282917,
+      "adjoint_relative": 1.9194456340635763e-16
+    },
+    {
+      "cells": 256,
+      "old_growth": 10.231251952500259,
+      "dual_growth": 4.953155940956577e-14,
+      "new_growth": -0.00114709439331532,
+      "adjoint_relative": 1.7608637370846367e-16
+    }
+  ],
+  "manufactured_tov": {
+    "classification": "Counterexample candidate",
+    "rows": [
+      {
+        "cells": 32,
+        "volume_l1": 0.0007266375284207851,
+        "interior_linf": 8.915250501602489e-05
+      },
+      {
+        "cells": 64,
+        "volume_l1": 0.00035292056447244427,
+        "interior_linf": 3.620617014803556e-05
+      },
+      {
+        "cells": 128,
+        "volume_l1": 0.0001735148160030081,
+        "interior_linf": 1.4704207399572893e-05
+      },
+      {
+        "cells": 256,
+        "volume_l1": 8.597563934176612e-05,
+        "interior_linf": 5.971759371565872e-06
+      }
+    ],
+    "orders": [
+      [
+        1.0418923805431426,
+        1.3000397573433826
+      ],
+      [
+        1.0242846413118765,
+        1.3000065572907473
+      ],
+      [
+        1.0130590120048462,
+        1.3000010815439083
+      ]
+    ],
+    "scope": "Analytic constant-density Schwarzschild interior, smooth nonuniform radial meshes. The reflecting cell-pressure outer closure is checked in volume L1; interior L-infinity excludes its last two cells. This is consistency, not a global truncation-error bound."
+  },
+  "native_checks": {
+    "classification": "Counterexample candidate",
+    "hydrostatic_zero_heat_null_maximum": 0.0,
+    "probes": [
+      {
+        "cell": 0,
+        "column": 1,
+        "native_other_rows_exact": true,
+        "maximum_momentum_residual": 3.735948091128509e-12
+      },
+      {
+        "cell": 3142,
+        "column": 2,
+        "native_other_rows_exact": true,
+        "maximum_momentum_residual": 1.0415234824824137e-08
+      },
+      {
+        "cell": 5704,
+        "column": 3,
+        "native_other_rows_exact": true,
+        "maximum_momentum_residual": 1.000042971256679e-13
+      }
+    ],
+    "actual_thermal_drive_not_removed": true,
+    "maximum_initial_heat_residual": 1.7654722869657342e-10
+  },
+  "derivative_checks": [
+    [
+      7.964218477964407e-11,
+      7.992173303754595e-07,
+      7.344877483333823e-12,
+      6.756505556329962e-17
+    ],
+    [
+      2.390236341536061e-16,
+      1.1780525661321306e-13,
+      6.895473839075241e-17,
+      6.759471424737209e-17
+    ]
+  ],
+  "pulse_time_selection": {
+    "classification": "Counterexample candidate",
+    "maximum_core_mode_real": 8.210589932285266e-14,
+    "refinements": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128
+    ],
+    "pulses": [
+      {
+        "pulse": 0,
+        "relative_time_errors": [
+          [
+            0.001029125621711312,
+            0.0010291686500552883,
+            0.001354090385322875
+          ],
+          [
+            0.0002632386281558921,
+            0.00026324977538693306,
+            0.0003650871886623369
+          ],
+          [
+            6.600011457046488e-05,
+            6.600287177340895e-05,
+            9.219533016588115e-05
+          ],
+          [
+            1.6493081635444694e-05,
+            1.6493766370823894e-05,
+            2.3073900655748943e-05
+          ],
+          [
+            4.120999386802401e-06,
+            4.1211690807565945e-06,
+            5.824120206617001e-06
+          ],
+          [
+            1.0298923789116943e-06,
+            1.0299326006980182e-06,
+            1.4625826712669311e-06
+          ],
+          [
+            2.57424580198782e-07,
+            2.574303940262142e-07,
+            3.664431518709449e-07
+          ],
+          [
+            6.435059524816807e-08,
+            6.434406479516413e-08,
+            9.171148125397561e-08
+          ]
+        ],
+        "pair_orders": [
+          [
+            1.9674715013168196,
+            1.9674712021176812,
+            1.885320493280766
+          ],
+          [
+            1.9942358925308776,
+            1.9942368668714117,
+            1.9800980908435297
+          ],
+          [
+            2.0005451585191243,
+            2.000545494306089,
+            2.001242995630706
+          ],
+          [
+            2.000892826130265,
+            2.000892456746592,
+            1.9860076513855742
+          ],
+          [
+            2.000576899418891,
+            2.0005730655769796,
+            1.992405365711673
+          ],
+          [
+            2.000321007015752,
+            2.0002930309407954,
+            1.9963363032062489
+          ]
+        ],
+        "reference_crosscheck": [
+          3.985887878435369e-12,
+          1.705429044187461e-10,
+          1.6522627694098222e-12
+        ]
+      },
+      {
+        "pulse": 1,
+        "relative_time_errors": [
+          [
+            0.000961756759117547,
+            0.0009618063285221295,
+            0.0017899286386491298
+          ],
+          [
+            0.00029630411668947124,
+            0.000296319339101161,
+            0.0005259672880015171
+          ],
+          [
+            8.133183023409583e-05,
+            8.133605950302147e-05,
+            0.00013948088772863486
+          ],
+          [
+            2.075682126263143e-05,
+            2.0757917815031507e-05,
+            3.637561333264219e-05
+          ],
+          [
+            5.203348186214131e-06,
+            5.203625470139092e-06,
+            9.215771974915144e-06
+          ],
+          [
+            1.300361093141304e-06,
+            1.3004306777190567e-06,
+            2.314997363506441e-06
+          ],
+          [
+            3.249033489901691e-07,
+            3.249207930657576e-07,
+            5.798815682178728e-07
+          ],
+          [
+            8.11950263496141e-08,
+            8.119944667607158e-08,
+            1.4509683754210898e-07
+          ]
+        ],
+        "pair_orders": [
+          [
+            1.7240020795837914,
+            1.7240010588288501,
+            1.6783204431906735
+          ],
+          [
+            1.8273560656784273,
+            1.8273552306441514,
+            1.9374418649253937
+          ],
+          [
+            1.9614859445247994,
+            1.9614845625077992,
+            1.9245711784467034
+          ],
+          [
+            1.9945861718245286,
+            1.994585391117994,
+            1.9766448342401461
+          ],
+          [
+            2.0004274086834046,
+            2.0004270669859685,
+            1.9917263671734315
+          ],
+          [
+            2.0009238581429583,
+            2.0009238760894306,
+            1.9966587662476236
+          ]
+        ],
+        "reference_crosscheck": [
+          4.216039522319947e-12,
+          1.9343168927187463e-10,
+          1.1218921201106612e-12
+        ]
+      }
+    ],
+    "passing_coarse_multipliers": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32
+    ],
+    "selected_time_multiplier": 1
+  },
+  "acoustic_dissipation": {
+    "classification": "Proven",
+    "face_energy_rate": "-A*Z*(v_R-v_L)^2/2 <= 0 for Z >= 0",
+    "scope": "Constant-medium linear acoustic energy only. The velocity-jump stress is O(cell width) for smooth fields; no nonlinear GR entropy theorem."
+  },
+  "continuum_acoustic_wave": {
+    "classification": "Counterexample candidate",
+    "cells": [
+      32,
+      64,
+      128,
+      256
+    ],
+    "maximum_field_errors": [
+      0.09239312149765146,
+      0.045935323726114134,
+      0.022907865180053243,
+      0.011439611845072252
+    ],
+    "orders": [
+      1.0081814535619886,
+      1.00376097812704,
+      1.00180491670749
+    ]
+  },
+  "native_species_image_relative_error": 8.598731733111876e-13,
+  "selected_time_multiplier": 1,
+  "full_native_pilot_passed": false,
+  "full_GR_time_convergence_fixed": false,
+  "physical_EOS_certified": false
+}

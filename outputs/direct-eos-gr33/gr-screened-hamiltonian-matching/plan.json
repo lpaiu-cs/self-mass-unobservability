@@ -1,0 +1,48 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "154c99d",
+  "bindings": {
+    "verification/gr_screened_hamiltonian_matching.py": "2d2e6d60b16965584218b8355d35b599c0d6fc26456290848229aa40f39e2b89",
+    "outputs/direct-eos-gr33/gr-ionic-hamiltonian-bound/manifest.json": "e0eb81e516c0ee085a6210e9a3b45de33edf6f7072e959e515e22798bb640181",
+    "outputs/direct-eos-gr33/gr-ionic-hamiltonian-bound/inputs.npz": "d89135accb682ac37de76eb6be24214c6c84c448e713ec2d5c5bf9b4495f3167",
+    "outputs/direct-eos-gr33/gr-quantum-mixture-certificate/inputs.npz": "ea7b2d8e260dba129808ca6ab87e94d66f8bee5c42ee923b82874a2e31fd6a15",
+    "outputs/direct-eos-gr33/gr-fermi-plasma/stellar-fermi-plasma.npz": "891acad6a29a5af7d1da053ddf2ceb3f4e28dc7f5c1b6926d829b0e07a8d775d",
+    "outputs/direct-eos-gr33/gr-fermi-plasma/manifest.json": "0d0021a38d69d6eb004670f80a9bde5eba56fdb7b277cae6e7ea53bcce7b0d0e",
+    "outputs/direct-eos-gr33/gr-screened-hamiltonian-matching/chabrier-potekhin1998.pdf": "aed1208eb28590e2c01311508256e36b88d563b42c9328864e0b5998ba70b5a6",
+    "outputs/direct-eos-gr33/gr-screened-hamiltonian-matching/chabrier-potekhin1998.txt": "a33dcfebcb0b62f35c296c0744df735ffd63fe2de19cc99eaccd11d6249b12c0",
+    "outputs/direct-eos-gr33/gr-screened-hamiltonian-matching/potekhin-chabrier-screening2013.pdf": "c977efbb98d338d5d250d173830c65591858b662191edaa0f9ec3945838dfb0b",
+    "outputs/direct-eos-gr33/gr-screened-hamiltonian-matching/potekhin-chabrier-screening2013.txt": "c8fb7ce3b35fa577766c90686fd39a6a9d33d7dd2bcf60262b527565de038069"
+  },
+  "sources": [
+    "https://www.ioffe.ru/astro/Stars/Paper/cp98e.pdf",
+    "https://arxiv.org/abs/1310.3162"
+  ],
+  "source_equations": "CP1998 equations 7-10; PC2013 section 4.1. Preserve the unscreened self subtraction and do not identify a long-wavelength kappa with the full epsilon(k).",
+  "target": "Derive pair/volume decomposition for all isotope charges, state-dependent Hamiltonian thermodynamics, and a positive static dielectric family with identical kappa but different polarization self energies and real-space sign.",
+  "dielectric_family": "1/epsilon_a(k)=x^2/(1+x^2)+a*x^4/(1+x^2)^3, x=k/kappa, 0<=a<=1. This is an analytic insufficiency witness, not a microscopic electron dielectric prediction.",
+  "electrons": "Use frozen native eta,beta and ideal relativistic electron-only occupation; this is the k=0 response, not finite-k Lindhard/QED, local-field corrections, electron correlations or a total stellar EOS.",
+  "quadrature_tolerances": [
+    1e-09,
+    2e-12
+  ],
+  "finite_agreement_gate": 1e-08,
+  "control_positions": [
+    0,
+    801,
+    1603,
+    2404,
+    3205
+  ],
+  "mp_decimal_digits": 50,
+  "kernel_controls": [
+    0.1,
+    1.0,
+    3.0,
+    5.0,
+    10.0
+  ],
+  "kernel_absolute_gate": 1e-10,
+  "self_energy_scope": "The two analytic dielectric witnesses are evaluated at the actual ideal-electron kappa. Their difference is a missing-information diagnostic, not a physical error bar or a new correction to add to native/PC EOS.",
+  "physical_EOS_certified": false,
+  "native_EOS_replaced": false
+}

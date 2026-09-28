@@ -1,0 +1,26 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "f161e59",
+  "bindings": {
+    "verification/gr_increment_structure.py": "c03b48d643e73d6bceaa12eff765769befc38ab6c0a6032b1947131eed81ff91",
+    "verification/common_eos.py": "01812cb068991dd6d72def58a78d158bef2bb3d00028312efc271c50dfdcb123",
+    "verification/baryon_entropy.py": "076f40c1c48fa1a687fd5c05eacf16a728713aaabeb16cec0f03ef0fb7d85f3f",
+    "verification/audit_structured_enthalpy.py": "294b4bdf416cbb7f546c79e350d07be727cbcd605f1be0f2de322817c20c73aa",
+    "outputs/direct-eos-gr33/initial-state-17-4.npz": "5dcc8ffb8b32a9f15ccc4c8bb7111d19be8dcdc66611ad2942e3a4a0cf6cc6d6",
+    "outputs/direct-eos-gr33/reference-state.npz": "17cbbb101628ca9bc111dca0cfe902210f13697c632b91c03913a1718cf7d2ef",
+    "outputs/direct-eos-gr33/initial-structure-17-4.json": "142630ac32b71b761e9a6ac04ed00cf37348b6920cbb6b30dc6792845ac90b3b",
+    "outputs/direct-eos-gr33/initial-adiabats-17.npz": "28e0ed028ad6d3b94ef3c5aa127b2c2e0bcb1b24be93fc7e1d44a19fc4d017b1",
+    "outputs/direct-eos-gr33/gr-mass-increment-replay/plan.json": "a6545af7320e800dbab5af258d006b03fd3e29803ca94dd82c97c191a0a04c4e"
+  },
+  "subdivisions": [
+    4,
+    8
+  ],
+  "startup_gate": "The completed independent three-cell mass-addition replay and shifted-mass comparison must pass before running. Their result SHA is bound separately at run time.",
+  "equations": "Same piecewise-constant nuclear abundances and entropy TOV, same native EOS/root and 17-point Pchip with direct fallback. RK4 evaluates the RHS in binary64 but retains cell shifts and passed face coordinates in longdouble. Every cell mass increment is saved independently of total-mass subtraction.",
+  "parameters": "Reuse the same saved centre pressure, surface radius and surface mass without refitting. Evaluate the complete centre/surface branch match at each subdivision; failure is retained, not relabelled as a new matched star.",
+  "interface_tolerance": 1e-08,
+  "finite_endpoint_refinement_tolerance": 1e-08,
+  "seed": "Retain the original one-centimetre central seed and analytic outer seed formulas. Add their explicitly computed mass terms to the corresponding integrated shell, and report endpoint conversion/seed mismatch.",
+  "limits": "A complete static constraint recalculation at fixed parameters, not physical evolution. No new full EOS, spatial continuum, primitive or radial error certificate; no replacement of the historical saved initial state or the running time paths."
+}

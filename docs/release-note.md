@@ -1,45 +1,23 @@
-# Release Note
+# Unified revision — 2026-09-09
 
-- Status: Note. This note is the short publication and handoff summary of the frozen free-fall theorem package.
-- Status: Proven. It restates only closed results already established elsewhere in the repository.
+Latest revision adds levers 6--10 and observable-state identifiability; see [the current completion boundary](remaining-levers-2026-09-09.md). Status: Imported from prior work. It includes separately recorded live transient/derivative and local nonlinear evaluations. The historical results below are retained; numerical EOS matching and complete nonlinear pulse/noise inference remain incomplete.
 
-## Theorem Domain
+Paper A and Paper B are superseded by [one manuscript](../paper/manuscript.md), with a single bibliography, explicit proofs, stored-results table and figure. The previous split-submission recommendation is superseded; no submission is performed by this revision.
 
-- Status: Proven. The closed theorem domain is the parity-even, nonspinning, local MVP free-fall sector at fixed order `Delta <= 4`.
-- Status: Proven. The active domain assumptions are the `A1`-`A9` ledger assumptions in [`assumptions-ledger.md`](assumptions-ledger.md): quasi-static regime, nearly spherical body, local worldline EFT, no orbital-timescale internal state variable, analytic monopole response, fixed-order truncation, local weight-spectrum finiteness below the cutoff, and a leading-Newtonian harmonic-scalar-potential tidal representation.
-- Status: Proven. Within that domain, the irreducible primitive-family envelope closes on the audited scalar, vector, rank-2 STF, and genuine rank-`L >= 3` STF classes.
+Status: Proven. The finite-order theorem now assumes sufficient differentiability and includes its remainder. Smooth-flat response is correctly classified at the exact-germ layer. The five static representatives are operator directions, and their coefficients are not automatically Nordtvedt parameters.
 
-## Main Positive Theorem
+Status: Proven. The dynamic comparison has an explicit necessary-and-sufficient interpolation theorem and nuisance-rank condition. A finite pole is not automatically identifiable from finitely many carriers.
 
-- Status: Proven. Once the irreducible scalar/vector/STF family envelope is fixed and the admitted primitive-family spectrum is locally finite below the cutoff, the candidate parity-even local scalar operator space at `Delta <= 4` is finite.
-- Status: Proven. After the explicit total-derivative, lower-order-EOM, algebraic, and linear-dependence reductions are imposed, the reduced scalar operator space is finite-dimensional and admits a finite normal-form basis `Y^I`.
-- Status: Proven. Under locality `A3`, no-state `A4`, and analyticity `A5`, the monopole response collapses to a finite Taylor jet in those finitely many scalar coordinates.
-- Status: Proven. The remaining higher-multipole sector is carried by finitely many Wilson coefficients that remain separate from the monopole sensitivity data.
-- Status: Proven. Therefore the positive finite-family collapse theorem closes inside the stated theorem domain.
+Status: Imported from prior work. The timing application retains both full and truncated nuisance constructions and defines its Gaussian beta interval and finite origin grid. Raw results are preserved, and no universal empirical exclusion or new timing fit is claimed.
 
-## Negative Uniqueness No-Go
+Status: Counterexample candidate. The prescribed pair interaction gives a transparent force-level benchmark. Identification with a field-dependent inertial mass still requires matching.
 
-- Status: Proven. The repo does not prove minimal-sector uniqueness.
-- Status: Proven. Across the audited unsuppressed primitive-family classes, admission of a genuinely new primitive family yields a low-order witness and therefore obstructs any theorem that tries to identify a unique physically justified minimal sector without further suppression assumptions.
-- Status: Proven. The negative uniqueness result is a class-limited family-admission no-go, not a refutation of the positive finite-family collapse theorem.
+Status: Imported from prior work. The subsequent ordered audit retains all 90 nuisance directions and validates approximately 95% coverage within a specified estimated-covariance linear model. The minimum across tested conditions is 94.59%.
 
-## Sharp Boundary Escapes
+Status: Counterexample candidate. Force-level scalar-charge matching is now explicit. Proven: its leading physical-drive phase closure rejects the archived auxiliary interpretation, which is withdrawn as a physical coupling bound.
 
-| Boundary | Status | Smallest explicit counterexample | Exact theorem layer broken | Replacement bookkeeping |
-| --- | --- | --- | --- | --- |
-| `A5` dropped | Proven | Smooth-flat local monopole model `m_A(Y)=m_0+\alpha e^{-1/Y^2}\Theta(Y)` | Finite analytic Taylor-jet step | Non-Taylor monopole germ data |
-| `A3` dropped | Proven | One-coordinate causal power-law hereditary kernel | Local reduction to an instantaneous monopole function | Memory kernel or spectral data |
-| `A4` dropped | Proven | One-state local analytic `chi` model | Y-only monopole reduction | Finite local state-space data `(Y^I, chi^a)` |
-| `A8` dropped | Proven | Infinite low-weight STF tower | Candidate operator-space finiteness before reduction | No finite pre-reduction primitive-family catalog remains |
+Status: Conjectural. Numerical EOS-to-body matching, corrected physical-drive inference and an astrophysical likelihood remain outside the conditional result. See [research completion](research-completion-2026-09-09.md).
 
-## Explicit Non-Claims
+See [the resolution record](unified-revision-2026-09-09.md), [build instructions](../paper/README.md), and [input manifest](../paper/revision-manifest.json).
 
-- Status: Proven. No theorem is claimed here for parity-odd, spinning, clock, nonlocal, or orbital-timescale-state sectors.
-- Status: Proven. No universal mixed-pattern theorem is claimed for all higher-rank tensor families.
-- Status: Proven. No all-orders closure theorem is claimed beyond the fixed cutoff.
-- Status: Proven. No empirical weak-field estimator, strong-field runtime, or TOA-performance claim is made in this theorem repo.
-
-## Freeze Status
-
-- Status: Proven. The mathematical content of this repository is now frozen unless a direct contradiction is found during cleanup or later review.
-- Status: Proven. Further work belongs to empirical branches, runtime branches, or paper writing, not to new theorem expansion inside this repo.
+The latest follow-through also completes the requested comparator and phase/state audits; see [levers 4–5](levers-4-5-completion-2026-09-09.md). The paper now includes a reciprocal fast-spectrum inequality, measured information loss, an analytic continuous-phase envelope, and explicit transient/long-gap limitations.

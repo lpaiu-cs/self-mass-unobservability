@@ -1,0 +1,23 @@
+{
+  "classification": "Counterexample candidate",
+  "cause": "Measured scalar-coordinate subtraction loss and unscaled absolute ODE tolerances survive relative-tolerance refinement. Preserve both failed results. Repair the increment-to-core coordinate and absolute tolerance floor, without changing equations or gates.",
+  "method": "One cached-Jacobian correction at sub8/tolerance2e-10, save that root and one independent sub16/tolerance2e-11 control. No repeated root search or extra paths after this finite repair.",
+  "budget": {
+    "prior_compute_seconds": 428.52956938200003,
+    "remaining_seconds": 171.47043061799997,
+    "forecast_additional_seconds_range": [
+      90,
+      165
+    ],
+    "total_cap_seconds": 600,
+    "automatic_expansion": false
+  },
+  "original_production_binding": "The original plan binds original-source.py, preserved byte-for-byte; current source has the two diagnosed numerical corrections.",
+  "bindings": {
+    "verification/def_native_whole_star_correct.py": "3a4c6e80aaf684011d2a86a0c32a437224f025f727ec4053da71f23fbbaf9e0d",
+    "verification/def_native_whole_star_match.py": "ed2aa9ed37b9dfa187f543c3bd399860a8bb230bbc8956902ce4388857f2c185",
+    "outputs/direct-eos-gr33/def-native-whole-star-match/original-source.py": "ad91b95ad3bb0f0fd7629e9d23677375b806ba2bf373fc6765c5627d132634c8",
+    "outputs/direct-eos-gr33/def-native-whole-star-match/corrected-result.json": "faac37682826c228e8cca87c0db2ed31de3ef13b04e21e54266797e65e0605d6",
+    "outputs/direct-eos-gr33/def-native-whole-star-match/scalar-coordinate-diagnosis.json": "982f7e49986070c5073d61fcce7ae026b82ff3ded03024a9aacee55efa99f2d0"
+  }
+}

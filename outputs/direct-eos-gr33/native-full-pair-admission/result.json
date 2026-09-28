@@ -1,0 +1,115 @@
+{
+  "classification": "Counterexample candidate",
+  "actual_same_joint_solution_GR_computed": true,
+  "full_primary_photon_material_pair_completed": true,
+  "primary_time_relative": [
+    1.2442205390854842e-05,
+    4.943146628517156e-06,
+    2.6709385793575696e-05,
+    9.954374830236458e-06,
+    1.2107372530284252e-05,
+    2.5381302397131237e-05,
+    1.3132709732966368e-05,
+    7.325009703870524e-06,
+    4.943146628517221e-06,
+    2.6709385793575696e-05
+  ],
+  "common_15of16_actual_GR_return_pair_completed": true,
+  "returned_time_relative": [
+    0.00017328606180235952,
+    0.00016367178851619507,
+    6.40519281645598e-05,
+    0.00010529658434715084,
+    0.0001645121524179351,
+    0.0001635888219654725,
+    8.523871784142429e-06,
+    4.484917812885309e-06,
+    0.00016367178851619507,
+    6.40519281645598e-05
+  ],
+  "full_period_GR_return_completed": false,
+  "immutable_runtime_physical_bindings": {
+    "native-common-arithmetic239-work\\sweep-1\\photons\\complete-64.npz": "78293a016d40373449f40c8f57fd36c6cb7cc5422e23cb6f21935cc96c5fc1bc",
+    "native-common-arithmetic239-work\\sweep-1\\photons\\complete-128.npz": "21f4bb184474f832e26b8d5bb309e7f1050bce7070b8ddd7325e262eacbf8645",
+    "native-complete-return236-work\\sweep-1\\photons\\return-64.npz": "ffc766715f13184b0934df9af0af9ce5ebd61e8e35ccb0049b8ccf84b7c2eb07",
+    "native-complete-return236-work\\sweep-1\\photons\\return-128.npz": "9f53a5b5d357cf4d914b01f8dab89f4607e0fe146e096b6fb4609b1ee9651106",
+    "native-complete-return236-work\\recovered-64.npz": "e1331c3afa799a046cbfc79d595d509aaa2bae6788f593b9308d401b38f80c2a",
+    "native-complete-return236-work\\recovered-128.npz": "a5e06571fe5006e21fb2614724350f41b88ffb304d6ce4ddfa0b5dcf3b4b818d"
+  },
+  "actual_history_directory": "\\\\wsl.localhost\\Ubuntu-22.04\\home\\lpaiu\\work\\native-retained-tail-runtime",
+  "live_snapshots": {
+    "native-full-captured244-work": {
+      "state": "running",
+      "action": "endpoints",
+      "child_pid": 214705,
+      "completed": [
+        {
+          "action": "prepare",
+          "returncode": 0
+        },
+        {
+          "action": "assemble",
+          "returncode": 0
+        }
+      ],
+      "elapsed_seconds": 4.320207724002103
+    },
+    "native-returned-source245-work": {
+      "state": "completed",
+      "completed": [
+        {
+          "action": "prepare",
+          "returncode": 0
+        },
+        {
+          "action": "source",
+          "returncode": 0
+        }
+      ],
+      "elapsed_seconds": 4448.775200883003,
+      "final_charge_conclusion": "unadjudicated",
+      "full_goal_complete": false
+    },
+    "native-dense-returned246-work": {
+      "state": "running",
+      "action": "source",
+      "child_pid": 214691,
+      "completed": [
+        {
+          "action": "prepare",
+          "returncode": 0
+        },
+        {
+          "action": "geometry",
+          "returncode": 0
+        }
+      ],
+      "elapsed_seconds": 2959.4624146550013
+    },
+    "native-compensated-charge247-work": {
+      "state": "waiting",
+      "action": "same246long_dense_source",
+      "dependency_pid": 181543,
+      "elapsed_seconds": 2524.083449018999
+    },
+    "native-retarded-extension248-work": {
+      "state": "waiting",
+      "action": "same244full_source",
+      "dependency_pid": 214700,
+      "elapsed_seconds": 120.32815837500311
+    },
+    "native-full-return249-work": {
+      "state": "waiting",
+      "action": "actual236return_and248full_field",
+      "dependencies": {
+        "native-complete-return236-work": "completed",
+        "native-retarded-extension248-work": "waiting"
+      },
+      "elapsed_seconds": 120.2374353060004
+    }
+  },
+  "snapshot_KST": "2026-09-25T05:41:09.450370+09:00",
+  "final_charge_conclusion": "unadjudicated",
+  "physical_final_charge_solved": false,
+  "full_goal_complete": false
+}

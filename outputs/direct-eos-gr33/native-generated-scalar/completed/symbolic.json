@@ -1,0 +1,10 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "mass": "For the two scalar legs with J_B=J_I=0, C_x=U_Bx*U_Ix+U_Bt*U_It/c^2+V*U_B*U_I-d_x(a*U_B*U_I/r). Use C_part=-integral_x^infinity E_cross dy-a*U_B*U_I/r, with zero extra asymptotic mass; its generally nonzero inner port must be matched.",
+  "work_flux": "E_cross_t=F_cross_x+U_Bt*S_I+U_It*S_B, F_cross=U_Bt*U_Ix+U_It*U_Bx. Thus source work and the inner flux are required; an algebraic identity is not a measured conservation pass.",
+  "infinity": "For outgoing waves, F_cross=-2*U_Bt*U_It/c. The signed emitted scalar mass length is 2/c integral U_Bt*U_It du; the incoming primary vanishes at fixed outgoing u and infinity.",
+  "operator": "O_zeta[U]=d_x(zeta*U_x)+d_t(zeta*U_t/c^2)-2*zeta*Vgeom*U-zeta*(U_tt/c^2-U_xx)-a*zeta_x*U/r. This avoids numerical second differentiation.",
+  "packet_derivative": "At a past-cone intersection the moving-shell factor (1-mu^2)/(1-mu)=1+mu<=2. A timelike outward ray crosses that past cone at most once.",
+  "scope": "Conditional first-variation identities on the initial static scalar vacuum. No physical continuation, EOS or exact ADM verdict follows from the algebra alone."
+}

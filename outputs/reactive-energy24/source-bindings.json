@@ -1,0 +1,36 @@
+{
+  "classification": "Imported from prior work",
+  "release": 7624,
+  "sha256": {
+    "chem/private/chem_isos_io.f90": "e1e5b2adff3bd6df8fe4e0b28ad26a6d5e6c86f3415b1ae821375ebd162545c2",
+    "chem/public/chem_def.f90": "c00648bd188ea1b234cb2d8cf4e4fb768f782c427404bbffc8fd85c613d3b21d",
+    "chem/public/chem_lib.f90": "16ed05a59cc000cff6711ee855438212cf379b38db67d2b197b82068bf4dcf67",
+    "cno_extras.net": "6b975bf090cd75f2bb2b2f5b4e30d179a27ec49f11bc492d1db17c719d18ce84",
+    "const/public/const_def.f90": "21ff65ed968a10373f205929ed51ead5a9b325b7151ea872417f97793e803cc9",
+    "data/chem_data/isotopes.data": "c59c509f93f8959e1a269dc108751ca846addabd50f6906d380ef96bf9ce26dd",
+    "data/net_data/nets/add_cno_extras": "7d80b28275a7976f98057a8e522e9f1907eef52124f31ea034500496f68b9bb8",
+    "data/net_data/nets/add_hot_cno": "8f7da2beeb885d2dcee8a5e31bc2550c4e7adaaaa24ca5f98635d7f123ef0f95",
+    "data/net_data/nets/basic.net": "387dae6730a0499d086cdb5ea77ca2b472d0aaaff10a4d9e63eb9587a5da395d",
+    "data/rates_data/reactions.list": "6d6d9b04b5de28f40bbdcc2db90d1c0ae89c7fb8c50ad90ac8a94180b95f63ca",
+    "data/rates_data/weak_info.list": "2e9d54a11100da23339750d8530e991315a74f4fceeaf157d857fd1f787d22e4",
+    "net/private/net_derivs.f90": "c9bc1ac9a146d10c7bffc8291d61f19b082f12a02b04e3e23456b33a2c824b84",
+    "net/private/net_derivs_support.f90": "967da4c5eebf2f7d3d38043a56b4b92471213a44f8dcbd47e9605a9828aedc1d",
+    "net/private/net_eval.f90": "a04242ccfd8321cb41a1cdbc17db00fad254e04f8103ad71beaa939592a45e15",
+    "rates/private/rates_initialize.f90": "cfec0df6795c0bb2343d91b8a6f820539880d6bb7c783c43a5908977e366ef28",
+    "rates/public/rates_def.f90": "7bc278590ed1bfaa85c8488e8ab5a5e9bfdbf57a1cdeee5d6def9c38a2d53e42",
+    "reaclib.gz": "45be4d16b6f40692e260f1229971d48c4b69346990ffdda7399f18584b460335",
+    "star/private/eps_grav.f90": "227178d755628609e6b2537d37a02e9cb1c19635922173011b17c91167027dd2"
+  },
+  "references": [
+    {
+      "title": "MESA r22.11.1: composition term in eps_grav",
+      "url": "https://docs.mesastar.org/en/22.11.1/reference/controls.html#include-composition-in-eps-grav",
+      "use": "Independent explanation of why composition derivatives matter; this later version is not evidence of r7624 runtime behavior."
+    },
+    {
+      "title": "MESA IV (2018)",
+      "url": "https://arxiv.org/abs/1710.08424",
+      "use": "Primary energy-conservation context; numerical claims here use the archived r7624 sources."
+    }
+  ]
+}

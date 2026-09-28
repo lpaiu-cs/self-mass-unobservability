@@ -1,0 +1,50 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "abf148503",
+  "claim": "Apply this completed175 photon collision/impulse history to the same174 analytic material operator, then compare the actual previous and returned lagged inputs and every saved Radau-stage forcing.",
+  "decision": "Only the original0.2percent finite block and paired-E/H criterion permits a GR readout. A failure stops the registered sweep; no automatic third sweep or final-charge sign inheritance.",
+  "material": "Same conservative/primitive map, directional minmod, analytic HLL, EOS partials1e-5 with half/double controls, SSP2, physical CFL and zero additional metric. Preserve accepted4/8macro prefixes. No photon or background recomputation.",
+  "stages": "Use saved actual_step_edges and accepted_angular_times/weights including local bisections. Hold the first-stage mechanical slope at the closing Radau stage exactly as the evolution does; compare both affine sources and unchanged matrices.",
+  "partition": "Compute new M from longdouble material and promoted collision transfer before subtracting or casting. No checker-first binary64 division.",
+  "forecast": "Material uses actual SSP substeps, the larger measured current/old seconds per substep, old full-period late CFL counts, setup and2x margin. Block uses the total SAVED stage count with warmed pair/assembly costs and2x margin; no Krylov solves.",
+  "budgets": {
+    "prepare": 10,
+    "material_pilot": 60,
+    "material_production": 450,
+    "residual": 30,
+    "block": 300
+  },
+  "total_original_seconds": 5950,
+  "CPU_threads": 1,
+  "virtual_GiB": 3,
+  "gates": {
+    "time": 0.02,
+    "directional": 0.002,
+    "paired": 0.002,
+    "block": 0.002,
+    "conservation": 1e-08,
+    "owner": 1e-08,
+    "branch": 0.01,
+    "angular_port": 1e-12
+  },
+  "scope": "Finite lagged-input and stage-equation consistency only; not a continuum contraction, uniform derivative bound or full nonlinear GR closure. Final charge remains unadjudicated.",
+  "final_charge_conclusion": "unadjudicated",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/complete_native_pressure_reciprocity.py": "2ca44884779d3f1618276ac682bf53162517b6c5375bb850159d6d41afa69f01",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/return_native_pressure_reciprocity.py": "d371a800df73f359132b6704d740ba9bfc92cbeced46b63a54060b0031763f40",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/return_native_pressure_matter.py": "87e964fe3eb006fc3a75a3d3461307bf0288ef37ad2240a7ba39571a18ad45fa",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/audit_native_incident_self_gr.py": "448fab44bac0be2893dd714e1d93f95cd2d181d72e202e18da9ca253b6da00e5",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/resolve_native_material_flux_tangent.py": "2fa05ed1f22270cd620c9615a7de5c68ef248b938254503ff3678739df356829",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/resolve_native_material_face_response.py": "36a861d334961397b55c25d9f8c3440e67929ce6f01e990dd1fc15c82b991dc8",
+    "native-pressure-reciprocal175-work/plan.json": "4dbf5b6629d4c0643bfd7c9b3d392672b57e43208a06026ddd6cadf5e57dee8e",
+    "native-pressure-reciprocal175-work/photon-result.json": "d1efe360dd2691e1c2d6fa398cc12fd1f185c453e374ea0fa2d0cb4dc87f439b",
+    "native-pressure-reciprocal175-work/run-receipt.json": "f41b17aad1c7086bda4c9963e39920760d27890cfd16eacef8259f1a7077dbbb",
+    "native-pressure-reciprocal175-work/partition-check-repair.json": "157a73d34b29c08c945faf48424e3e2cf2d157205a6544bec0f585053933eee4",
+    "native-pressure-reciprocal175-work/sweep-0/photons/steps-64-reference-128.npz": "a5acac6a5e00d711b71087619d86b2ee9e7cfa4b0b5dbb1cea5793b015a29cf2",
+    "native-pressure-reciprocal175-work/sweep-0/photons/steps-128-reference-128.npz": "38dab72a5391214b7e4819efcbb7a6a57a01e46a33696955c56346d2544a1bdd",
+    "native-pressure-reciprocal175-work/sweep-0/material/steps-64-reference-128.npz": "92afaa62541dc32e81f41a084eff41728609fa699293e6ab42e48a604b013f93",
+    "native-pressure-reciprocal175-work/sweep-0/material/steps-128-reference-128.npz": "b056152bc7ad3b3fac039069565525737c699addb50b46e420bb36155a052f9f",
+    "native-pressure-reciprocal175-work/sweep-1/photons/steps-64-reference-128.npz": "acd3d47dbf2c683f824a8b8ae2f82408cab916219ae24a8a8cfd73052170e865",
+    "native-pressure-reciprocal175-work/sweep-1/photons/steps-128-reference-128.npz": "b03d8792172728376a3a58a4676ef13c00d2e521b31f215228dabdf581f9c090"
+  }
+}

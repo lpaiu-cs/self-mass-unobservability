@@ -1,0 +1,463 @@
+{
+ "classification": "Counterexample candidate",
+ "passed": true,
+ "verdict": "CONDITIONAL_NEGATIVE_CHARGE_KEPT_2X_CONVERGED_AT_2PCT",
+ "rule": "2x converged at 2% if |2x->4x magnitude change| <= 0.02 at t61 and T",
+ "converged_2x_at_2pct": true,
+ "endpoint_negative_4x": true,
+ "rows": {
+  "61": {
+   "q1": -1.598823909568343e-51,
+   "q2": -1.5118781616754487e-51,
+   "q4": -1.4903360454241468e-51,
+   "same_time_as_2x": true,
+   "evaluation_time": 0.003273442159275794,
+   "change_2x_to_4x": -0.014248579546535054,
+   "change_1x_to_4x": -0.06785479219752616,
+   "monotone": true,
+   "observed_order": 2.012955489725299,
+   "richardson": -1.4832406783789707e-51,
+   "inexact_inverse_max": null
+  },
+  "62": {
+   "q1": -1.8592165231661346e-51,
+   "q2": -1.7644376536883866e-51,
+   "q4": -1.7408806672138882e-51,
+   "same_time_as_2x": true,
+   "evaluation_time": 0.00332710514549343,
+   "change_2x_to_4x": -0.01335098830228131,
+   "change_1x_to_4x": -0.06364823810339612,
+   "monotone": true,
+   "observed_order": 2.008410458277248,
+   "richardson": -1.7330890786127504e-51,
+   "inexact_inverse_max": null
+  },
+  "63": {
+   "q1": -2.1530067588975445e-51,
+   "q2": -2.0501963266859924e-51,
+   "q4": -2.0245376210118192e-51,
+   "same_time_as_2x": true,
+   "evaluation_time": 0.0033807681317110662,
+   "change_2x_to_4x": -0.012515243218511066,
+   "change_1x_to_4x": -0.05966963984428383,
+   "monotone": true,
+   "observed_order": 2.0024663605692594,
+   "richardson": -2.016004186875969e-51,
+   "inexact_inverse_max": null
+  },
+  "64": {
+   "q1": -2.4833128680653422e-51,
+   "q2": -2.372117616121833e-51,
+   "q4": -2.3442699996854763e-51,
+   "same_time_as_2x": true,
+   "evaluation_time": 0.003434431117928702,
+   "change_2x_to_4x": -0.011739559728022599,
+   "change_1x_to_4x": -0.05599087822074918,
+   "monotone": true,
+   "observed_order": 1.9974694328182998,
+   "richardson": -2.334965719648403e-51,
+   "inexact_inverse_max": null
+  }
+ },
+ "grid": {
+  "cells": 555,
+  "interior": 43,
+  "refined_cells": "8-15 split 4x (17.19/16.19 km), 2x edges contained bitwise"
+ },
+ "run": {
+  "segments": 18,
+  "actual_steps": 128,
+  "seconds": 7151.406276325,
+  "fallbacks": 18,
+  "linear_exceptions": {
+   "count": 14,
+   "max_vector": 8.531512993022108e-09,
+   "max_physical": 4.47817440422448e-16,
+   "max_material": 6.057152013499932e-14
+  },
+  "nonlinear_exceptions": {
+   "count": 4,
+   "max_defect": 5.468972470679169e-09
+  },
+  "last_segment_rule": "registered before the run (REQUEST268): physical moments and material components 1e-13, vectors recorded",
+  "seg64_attempt1": "stopped at stage 252 after 12 long-double corrections (physical 7.5e-15, material 1.1e-12 > 1e-13, falling about tenfold per correction); rerun with driver v6 (24 corrections, resource policy 2026-09-24), every gate unchanged"
+ },
+ "depth_T": {
+  "all": [
+   -2.4833128680653422e-51,
+   -2.372117616121833e-51,
+   -2.3442699996854763e-51
+  ],
+  "closure_4x": -1.265794861917808e-16,
+  "0-7": [
+   -7.907944756697134e-58,
+   -7.310055657958104e-58,
+   -7.02669454858462e-58
+  ],
+  "8": [
+   4.2656200570991566e-54,
+   2.3884498705785062e-54,
+   1.9163644516622668e-54
+  ],
+  "8 4x sub-cells": [
+   -7.03742492848723e-59,
+   1.0877032897577075e-59,
+   3.783079338731381e-56,
+   1.8785931554913404e-54
+  ],
+  "9": [
+   2.6725146658171304e-52,
+   2.362220446976486e-52,
+   2.2899674054500213e-52
+  ],
+  "9 4x sub-cells": [
+   1.3428779013406492e-53,
+   4.122344174134382e-53,
+   7.685345782825296e-53,
+   9.749106196199883e-53
+  ],
+  "10": [
+   -2.7495942003585274e-52,
+   -2.3410153779030727e-52,
+   -2.239200877138338e-52
+  ],
+  "10 4x sub-cells": [
+   7.948156822316901e-53,
+   1.1872085542956669e-53,
+   -9.627982425985967e-53,
+   -2.189939172200998e-52
+  ],
+  "11": [
+   -1.5378499171846076e-51,
+   -1.461194806232234e-51,
+   -1.4427911104746413e-51
+  ],
+  "11 4x sub-cells": [
+   -3.248902285642889e-52,
+   -3.878988530615717e-52,
+   -3.9045731987713326e-52,
+   -3.395447089716475e-52
+  ],
+  "12": [
+   -7.291658042132663e-52,
+   -7.065366048709118e-52,
+   -7.00622514599964e-52
+  ],
+  "12 4x sub-cells": [
+   -2.661365366167905e-52,
+   -1.9635430090499746e-52,
+   -1.4012084053115387e-52,
+   -9.80108365470222e-53
+  ],
+  "13": [
+   -1.704579234398466e-52,
+   -1.6706243059370577e-52,
+   -1.6616579077971064e-52
+  ],
+  "13 4x sub-cells": [
+   -6.763007343721576e-53,
+   -4.619152706779909e-53,
+   -3.129092474728269e-53,
+   -2.105326552741309e-53
+  ],
+  "14": [
+   -3.4453579383837595e-53,
+   -3.3948594300807806e-53,
+   -3.381365010887694e-53
+  ],
+  "14 4x sub-cells": [
+   -1.4085244246684606e-53,
+   -9.38043060814009e-54,
+   -6.225048274364067e-54,
+   -4.1229269796881775e-54
+  ],
+  "15": [
+   -6.419861567415307e-54,
+   -6.344575930382264e-54,
+   -6.322335239002725e-54
+  ],
+  "15 4x sub-cells": [
+   -2.5886046750019835e-54,
+   -1.7505941503563593e-54,
+   -1.1807749926930338e-54,
+   -8.023614209513488e-55
+  ],
+  "16": [
+   -4.719190331882696e-56,
+   -6.338941381216446e-56,
+   -7.147208343494109e-56
+  ],
+  "17": [
+   -3.7330424862660827e-56,
+   -3.7330140517621183e-56,
+   -3.7329427427938154e-56
+  ],
+  "18": [
+   -2.223843264410702e-56,
+   -2.2243777219791424e-56,
+   -2.2239285748252384e-56
+  ],
+  "atmosphere": [
+   -1.4158973240271886e-54,
+   -1.415866634596063e-54,
+   -1.4158723000453e-54
+  ],
+  "boundary": [
+   -1.2301964510526653e-71,
+   -1.3415189125147082e-71,
+   -1.4291629776803596e-71
+  ]
+ },
+ "readout_inexact_coordinate_inverse_max": 8.883296652316349e-19,
+ "reused_phase267_scripts_sha256": {
+  "phase267-template.py": "5b913bb903e2d3c85cb18935cab94b76705ecd6db187dc0257d79a8cef19d2c6",
+  "phase267-undriven.py": "58dfaecaf3d4851f2eb2fc169b2e98241c2d9b1643c2916d87bcad2128b92940",
+  "phase267-p150-setup.py": "5109291c920607a23d282f76a24da38b60c3201cc25f6eb5addb4aa95109bae8",
+  "phase267-p150.py": "d7d1adbbb61c12387cbd3d61ab2427b76095de091871f27d1dfe7dc7528bdb27",
+  "phase267-born.py": "0ea09bb195519666e16a8359c23654972532d05538f12eecf657ffab3ac2b0c5",
+  "phase267-placeholders.py": "f273c46215925e674aa33794b0300cd165b86c7a508f49bfab81d01035a98da7",
+  "phase267-driver.py": "c922c85079de84a8368fb8c24b9ad16bb6e0deb30e837ae269ac6d5e8ec3c338",
+  "phase267-readout.py": "7dfd3fba7bb1e615fa644cd243b7254f39609a2d0bdf04993b50cd239c5513d5",
+  "phase267-depth.py": "c6f1426196aa7ddf1036029e8653892804c190e44e0c128dc68d764d6f920f75",
+  "phase267-audited.py": "941f2135a6a79b8520ea6af8cd6bac0723f639a199194231de674e9b790b754e"
+ },
+ "not_recomputed": [
+  "128 clock",
+  "one GR return (low)",
+  "exterior photon boundary term"
+ ],
+ "large_arrays_sha256": {
+  "primary268-quad64-work/sweep-1/photons/seg-61.npz": "23dbbca594ee46c58163c8c0b00a563b234bae65db78346fa0d91da52f419bb0",
+  "primary268-quad64-work/sweep-1/photons/seg-62.npz": "905ef18ac77d1b0b0ce284de4f820af4037d1d4cfe514fddc11135dd98c0ec12",
+  "primary268-quad64-work/sweep-1/photons/seg-63.npz": "1c0bebfcb409afd17f8dd619ba1b2e5a608c95c407619c673c9a4fb211dea780",
+  "primary268-quad64-work/sweep-1/photons/seg-64.npz": "c0a7c94f73db3a46b2a159271e2fb8f2ae1d4b3d5f5dffd5738e1c700407bb11",
+  "readout268-quad64-work/gr/source-64.npz": "673285f4e8c1412f00e374070259aac8686ac7efd4291fde21ddd7f2497cea8c",
+  "readout268-quad64-work/gr/field-source-64.npz": "9023800be0cb3c3627a87c1ddbf35191aa6ec7b7f4468993be846e47929d69f2",
+  "readout268-quad64-work/recovered-64.npz": "e67883d25351b88c96d59d62a77a33f19d09d8168c90a70a3f2e2581d9a77f54",
+  "outputs/direct-eos-gr33/def-native-boundary-layer/bank.npz": "8173c194e34b3d5a475fa536eaef15426056d68f4ff7b9df4da9ffcddfce6373",
+  "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/bank.npz": "3543617fb870a42c27e878667c6980743e708ecd5e09f74247addb8634ee18cd",
+  "outputs/direct-eos-gr33/def-native-initial-constraints/finite-volume/balanced-initial-state.npz": "1b816ee7667439bd506a508a40a40959f6653a128ac7f9c814a09fb00401c031",
+  "outputs/direct-eos-gr33/native-retained-completion/evolution/coupled-128.npz": "eb831a1dab83cac6579f6102987508d783f903cb27035983953be7d57886afd0",
+  "outputs/direct-eos-gr33/native-retained-completion/evolution/source-128.npz": "ffc0c4fe3482781437367000300171127989e0a9f171b8fa217b90cc8427a430",
+  "native-incident-drive155-work/fields/born-g8.npz": "e9617d72758a7bff4b60ff47f35a9925d840a5bff94d1fb9829adef527363e5d",
+  "primary268-quad64-work/captures (256, sha256 of the ordered list of file hashes)": "5d6045102066c59c2b90b463c7e2202ce9725d1c2b11ed4ebf17a1d40990b5fc"
+ },
+ "final_charge_conclusion": "conditional negative charge kept at 4x (high, 64 clock); final physical charge unadjudicated",
+ "full_goal_complete": false,
+ "snapshot_KST": "2026-09-27T10:35:03.874723+09:00",
+ "document_prefixes": {
+  "docs/model-definition.md": {
+   "bytes": 286480,
+   "sha256": "a7b3f2e65c04afae4f1152129f099589b421cec4fb62939f0edb8496af56a0e3"
+  },
+  "docs/observable-targets.md": {
+   "bytes": 277299,
+   "sha256": "8c6df17b4939d6c595c99f7259db68e3b6364a37c99d1edcbe403f1d968efd3d"
+  },
+  "docs/adiabatic-limit.md": {
+   "bytes": 271638,
+   "sha256": "c1669647dc5952fc0ef771972908826fcb6d38d0b81e776fb918aa2107d12913"
+  },
+  "docs/nonadiabatic-regime.md": {
+   "bytes": 280130,
+   "sha256": "136e0084ff9120890b484d2115e2118c3c3a39502ce4d25c3de088d66cd0b3a8"
+  },
+  "docs/failure-ledger-dynamic-chi.md": {
+   "bytes": 317734,
+   "sha256": "0c167846e7bc83c81caff94ccc86c7edaa6b4797f7867b7decdd394921ccb9a7"
+  },
+  "docs/dynamic-charge-completion.md": {
+   "bytes": 145898,
+   "sha256": "88e2f1b0b7698602850b8f1d54a3c0753bde739c5f1d237182fe42a66e315cd1"
+  }
+ },
+ "sha256": {
+  "notes/REQUEST268_QUADRUPLE_REFINED_PRIMARY_KO.md": "762582aaefb32378db376624eb48d75e1bd124d50fdfe99eb938c8d0a66312a6",
+  "docs/model-definition.md": "453070b781c01db15fb53da02dcbfcdd3f829c4c1911068c3bb8613b19487442",
+  "docs/observable-targets.md": "3196ac345186806190a3b982f1f27fd981309eb5c36a9dfc267685dc53075577",
+  "docs/adiabatic-limit.md": "214e1909d40dda15345ba2489d8ba50165364f266e512548625980eb0916d41d",
+  "docs/nonadiabatic-regime.md": "293a1e4407da65984af28e4bde829cd3426837ba16e93c33247d3f625837f594",
+  "docs/failure-ledger-dynamic-chi.md": "43b1c768fbf6bbf8fd88ebde56a3d96a6253068a32dda5aefe97a5fb34e60960",
+  "docs/dynamic-charge-completion.md": "796e202a43cbbfe750e17ed5546fa4d163562a733e0506bcda52d3d07fc979dc",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/compare.json": "160a8924e25fc15d156d1815bdc14ea8b3e0365477e93b43bb3c39a03a2a43e9",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/publication.json": "1e7ae1b3d40556de5e5dd8c0c2b2d5770f053991080ca7588f038a945c5e9974",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readouts.log": "a63bacb32cdd02a76479d38052e69f8e7dbb72b8012e29910c6783a7736ad1ec",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/result.json": "2980fe90ee606ae84b48ad31357c20ee808e48173b631a5dd586259a6e239bb2",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/exists/exists-seg-04.json": "2f2ab8569d893e02d73e31849aa5243045c0a69132fb83f66193924821547e6c",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/exists/exists-seg-08.json": "0b1f52045df2b0ddb43be4f3ac5739a35dd4edac01244b9a0c4a692ef467bc3e",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/exists/exists-seg-12.json": "567822bf1b5acd9cdff59afd519f1c8b6607c7319be7de5c88a5024ff0d1f2a4",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/exists/exists-seg-16.json": "627dfed7bf820db6fd7027f8ab3f68b489b48ff013618f580ad722f815d2cfc6",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/exists/exists-seg-20.json": "e14109cfd58ca7742fba374749bb18739ae884f577cd9ff0ef6c0b57531cf96c",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/exists/exists-seg-24.json": "34c61d07f219b1596de25ff525b938a0b2948044f1219a503f915f66e0203bac",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/exists/exists-seg-28.json": "be29091b89c6cf14a026747d725b493962b38067724cfd8205fd44758aef9ec5",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/exists/exists-seg-32.json": "fea5b597a1c147fc4e2e556ba0c403686b524a925b096d95c2a7d6c70feb305e",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/exists/exists-seg-36.json": "ff005f5cdf347886613aff90257139cad5ba2a8265d61d845e088f6b1d676317",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/exists/exists-seg-40.json": "1eded732a05d95cc845c2f7d70b7586c232e1a61fc4c1ca201ad6ca90ea8efcb",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/exists/exists-seg-44.json": "7cd2bee7f52bfb6b3d783d3ba6bc1b474fc0b1fcaa894cdfdb58eb58204af299",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/exists/exists-seg-48.json": "e52756376d89d8bb3b2561836cb40f06f244eafe95e5b5dbd6c858171312866b",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/exists/exists-seg-52.json": "bb4742ed0f011ed514274b4396d0458c456aa1f6d29803cef810f1dd161ba78c",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/exists/exists-seg-56.json": "d6b8368e54acb2fd05ed45bfe746b13e11619d6cd0645db701844634d0b72cf4",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/exists/exists-seg-61.json": "04cf8a05a5106fcf2df859aad4e5f3b8f60da77a69a999fe5c85aa84fc1cee0b",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/exists/exists-seg-62.json": "f889307e82029b7e648753934457ca065b905df4b8d97b5d492c8d20481e5499",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/exists/exists-seg-63.json": "7fe378e01e4d4ebd982eeb725b5221b036ec6c9970381012f3e8b74b55ff3a53",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/exists/exists-seg-64.json": "27fa991b2a36c9e632d8e963150d24fc57eadb8e33732827598d824de89e4841",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/prepare/phase267-placeholders.json": "82c47718a1f2c6c4dda00351b0b5ca00717649568d491dabfe2ab194f912fb95",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/prepare/phase268-bank.log": "4cc66382249d134ea944a53a2d1e929490314159f942d5ad079cae30daff149f",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/prepare/phase268-born-attempt1.log": "a2f4888d2c359e8406e81092f00fd4ac4ae3d71510584877a4179334b262b09f",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/prepare/phase268-born.log": "e2d3faae1d5e23bd7351244ef952d994967c751828fb16534f6845c2e2573721",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/prepare/phase268-copied-inputs.json": "98dc0afce2b898be2ec3a4ee269f3461083f799b0e50d00ea583ccca56a90eb4",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/prepare/phase268-exists-smoke.json": "6ffa771adf7ed9c0dd5eef5a6845c6795040f4f417a217846efe9400de7a757e",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/prepare/phase268-initial-audit.log": "52719f103c0382dfc18d4122de2760397c480efc6dad8528c0932ee1ffd729ab",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/prepare/phase268-initial.log": "7136cda6ff44d3dcc57a6d79738c6ad8ffb56911d0aee82fa46a2b455afc3d2b",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/prepare/phase268-p150-audit.json": "7fad9e325688b6417f03097c3490a054e49c99a87d3e94313eb6cb61931af0ac",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/prepare/phase268-p150.log": "2436e8b9a9f6ec663a69c07ef230db8db75aa6af4b034bbf57d6ea3cd848a4c8",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/prepare/phase268-prepare.log": "05deee442dff7757cc21ae02bfd889aaa9b38bb24f4308247bc10ca163cf47f0",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/prepare/phase268-thermal-attempt1.log": "84519b6dad184ef0e186a9e8222bf770693cb7f5ba2c97ef3ec051fdc7fb6032",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/prepare/phase268-thermal.log": "690b28d81f05e0d9f335a8cc36f9f06860e98f33d1e342875396097359733aaf",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/prepare/smoke-01-driver.json": "84a765dabba5cb0d773fe37a3486a943abec5a705a975c7758c1f0b26f1ec5e6",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-61/check-result.json": "69d213635792f32d54a04dd107aa19178d7943261ca23305d6b720862c246106",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-61/driver-polynomial-audit.json": "9a742591cbb1d50b5ac49888e67c50a00a4eb168ec95159dd07cdf6f6ee53c55",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-61/endpoint-64-check.json": "aa811ea482d813770451ca324313e016514f118c491457e6144d9024f23bf32d",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-61/endpoint-sources.json": "9faa9994e3ae4f70cebd1920b1446ba3cc8af99e76eb3bfff66b7a44a3b299db",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-61/normalization.json": "820244d5d23554811c792b52a45a3e28317392019f5aac7d8733eeb3b4d28706",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-61/phase268-readout-quad61-endpoints-record.json": "870abd9fb6362a67cc05b3d6fb2e25c48e5b6f43832e633985bcddb472aed274",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-61/phase268-readout-quad61-endpoints.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-61/phase268-readout-quad61-endpoints.stdout.log": "5750df8027b17a30637f0b2dc2fe3592f71992a89222163d2210e80ccf98bfb3",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-61/phase268-readout-quad61-field-record.json": "a352684535f96633497cdfb25aac51daa32300623e4da2de08c5d83d01466998",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-61/phase268-readout-quad61-field.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-61/phase268-readout-quad61-field.stdout.log": "c30f31e0fb9d16615db6c67e79eb4606b3120a3114b0a7d2a14c1ac6f375db85",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-61/phase268-readout-quad61-source-record.json": "61f475f0f6925e8b310a74b69da76e0ad2c695f6d1a021c553909f08f761f656",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-61/phase268-readout-quad61-source.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-61/phase268-readout-quad61-source.stdout.log": "3a94d4d633f114afef41224c5f80eb315ad5c2b30350ca8f13dcd4c24ab2e40b",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-61/phase268-readout-quad61-time.txt": "276e2f3aca0bb49311f9c837893cf757f84ca3fdcf185e03a8373a58ef59c7e5",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-61/photon-conservation-plan.json": "248525a3b9808f00f193c48d9739000a1c32eea1cf8197cf8c3ad8b939a0bb2d",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-61/plan.json": "3f9f786a4dd663097553e72b04897ff0751ea603d5cecb17ec66662ad4b6b445",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-61/readout-endpoints.json": "e191e77c3c103de011b29c1a3f6d0572ba04ade2d5a31a744427b13ea54fd553",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-61/readout-field.json": "880e972d67ccd18002c5352bf843c2d8f1ec4946f3beb84611a740d4be0191fe",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-61/readout-source.json": "a60860a0a5ae9ae44e122a9a509a005289ffbe6f7beba101f05c6c61a90111bf",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-61/source-64-check.json": "07a4bfc56ca937ac49c241cf50a1d5689b9e681f8ae716361809f753e6b10e7e",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-61/sources.json": "4c28891ec1896de52da773db8050a57c48791a55500519f78587fccdf300ba53",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-62/check-result.json": "69d213635792f32d54a04dd107aa19178d7943261ca23305d6b720862c246106",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-62/driver-polynomial-audit.json": "d41b751a9ac3b4f81eda4469f0c551e7b6199e417d566dcddcec20afebe972d8",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-62/endpoint-64-check.json": "dcc83e71011aaec6279bff0e7000ad3c29de21cc76f9774bc3ac28563a52416a",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-62/endpoint-sources.json": "85f58f91ec231d1041b3e509ed891232d214d8fba8c0920e7ca29b8db14a5558",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-62/normalization.json": "820244d5d23554811c792b52a45a3e28317392019f5aac7d8733eeb3b4d28706",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-62/phase268-readout-quad62-endpoints-record.json": "de48f74e71894edea4e7b52ee5163cee0c8dbcb5e712722dd05e7244dd10efba",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-62/phase268-readout-quad62-endpoints.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-62/phase268-readout-quad62-endpoints.stdout.log": "674f6644789644e0f23e4ecd9b50b0a80d226773be0716df201655855054a957",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-62/phase268-readout-quad62-field-record.json": "d8f3edb8304fdb49f8235e2125f2d818f4783a2528628269fab80d2effc2a7b4",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-62/phase268-readout-quad62-field.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-62/phase268-readout-quad62-field.stdout.log": "d621e6b3cf63fe3d46edd2a3f4a0b8bf1978a30229758edd281d0d1cf58881d8",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-62/phase268-readout-quad62-source-record.json": "7e41de703ba1fe345deb0b1d5b8e8603bbec401e5eaa91ef242a45d315c66e45",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-62/phase268-readout-quad62-source.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-62/phase268-readout-quad62-source.stdout.log": "61d9090850d0531276ea8e17e95bb1e1f7284130c5ccbb00dc95a63a3b0adc88",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-62/phase268-readout-quad62-time.txt": "8007feba092e79b6732d7b951347238fc24176d84b33b5f4fd59a3abc0b38900",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-62/photon-conservation-plan.json": "248525a3b9808f00f193c48d9739000a1c32eea1cf8197cf8c3ad8b939a0bb2d",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-62/plan.json": "cc088e1e644956705cfb28ea312fa6ed7fd6733bf3b0a1a3cb69e7d994240619",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-62/readout-endpoints.json": "b2b48d2142809dfa377886dcf280c5490dc185bba22740489ebd2b40ccee0380",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-62/readout-field.json": "fb8cf1f913118019b8d0a36cc370de6463d1fb7c61607f86a14109831824b7d6",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-62/readout-source.json": "a6350105f998269bde900aa096357be0ed3c6471962af9cfece79041a5d5285c",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-62/source-64-check.json": "140f5456f4907306d2d130c47bfc54858b0c145e4249dfd77294da71099b0850",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-62/sources.json": "89f27136ad6448d317c83af28a660f1b507bd88eb531bbdc34f35f45b1a322a4",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-63/check-result.json": "69d213635792f32d54a04dd107aa19178d7943261ca23305d6b720862c246106",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-63/driver-polynomial-audit.json": "440cfb2cbabc460060d9d64f8797c77818b4fde7720252488e7e3bed818f494b",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-63/endpoint-64-check.json": "8049e633622dfd63996903f66133081365648cb43b468cc57da3d0516efaa9ba",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-63/endpoint-sources.json": "bbe8f1a4cce24cd192b7fb0513021cf5ebb26c4026a66bd1ad4993ee9822adea",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-63/normalization.json": "820244d5d23554811c792b52a45a3e28317392019f5aac7d8733eeb3b4d28706",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-63/phase268-readout-quad63-endpoints-record.json": "fa35c33445fac0564aacf5e46af77178feb3dc8677cdcdf910de1aa458e3d9a9",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-63/phase268-readout-quad63-endpoints.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-63/phase268-readout-quad63-endpoints.stdout.log": "e08add6f1d7a8e329c19f438baa4c583c19c5e87df03d592cc5dab24fd1a20cc",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-63/phase268-readout-quad63-field-record.json": "88295ae0256e46839b4c063da405989ee806a65239b3e6dd8c4ad67bfdade5c1",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-63/phase268-readout-quad63-field.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-63/phase268-readout-quad63-field.stdout.log": "5a4b7c7627098cd3fc2a01c7a76c05b398631d134085546b6fa8a54183185953",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-63/phase268-readout-quad63-source-record.json": "e66e6c6c109766e51a7887355c7135c3ff403cc7a2f4c7cab9b2d7e82adb3f00",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-63/phase268-readout-quad63-source.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-63/phase268-readout-quad63-source.stdout.log": "e9db5f871610275cf1bc29f6a6dd5da680696a51c25bc4eb06d6cce2bc7f6ed6",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-63/phase268-readout-quad63-time.txt": "0eebb6d8fe552d5c57c6e8d1fd0efb06f0ea4ca417adebf7f41275548873926d",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-63/photon-conservation-plan.json": "248525a3b9808f00f193c48d9739000a1c32eea1cf8197cf8c3ad8b939a0bb2d",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-63/plan.json": "3a32318e32ae84fd94ff7fc3f9157f7028414895ab82264805c08e4c09dcd120",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-63/readout-endpoints.json": "8fa1e2e618cff50ffa6431b2992b62a2915e42091d6c30e7ab3223a7435aae95",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-63/readout-field.json": "f87fe746ca715edd095ba2b2f42115418576898c06baef290b80cdfe01b11ed6",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-63/readout-source.json": "72ef4ac448b103eed45050bae66a65b9711dfc1ed6489ab7bc1a495731fe2623",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-63/source-64-check.json": "1c99871bd960229cc2419c6fe98383e4f93e2ad92ad2fb23ddc7fda00d584209",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-63/sources.json": "31c8382f0665203c6130394e48291fc59a2546ad52d4fb20ff2feaef2b85db46",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-64/check-result.json": "69d213635792f32d54a04dd107aa19178d7943261ca23305d6b720862c246106",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-64/depth-bands.json": "768e6174c11b636277736d95250f86b72618de0135bd9f22c0b89c1036a91f53",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-64/driver-polynomial-audit.json": "c74f13e64c7ff57df694f59f5cb4f9a524f4998e491a4e41195b8e6f98c9b58e",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-64/endpoint-64-check.json": "db27793dacb10eafd8ceb1a0234c8b6c8090b6e8daa2cdff7540ced936351b84",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-64/endpoint-sources.json": "df29b43091d63a577d10c1b2677b97c9c60a2f7b740653d892be7dad7f7334c0",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-64/normalization.json": "820244d5d23554811c792b52a45a3e28317392019f5aac7d8733eeb3b4d28706",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-64/phase268-readout-quad64-depth.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-64/phase268-readout-quad64-depth.stdout.log": "5d82eadc9e99c43606805f10cf1b72141949b6dfa0233dfab295ff86c8ad9df0",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-64/phase268-readout-quad64-endpoints-record.json": "3ab519d396b9e29c90e8c7d506c2b077786971ecd7fb52a1a80304a2e90c99de",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-64/phase268-readout-quad64-endpoints.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-64/phase268-readout-quad64-endpoints.stdout.log": "74b331357688684bd34c15e45ddb8a8ddd0b8f820cdda58e19550b71d4a1a013",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-64/phase268-readout-quad64-field-record.json": "3d71b3d3e885e36b60d493b31f875c460dbd258741a06ea326d8ab02c91cf054",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-64/phase268-readout-quad64-field.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-64/phase268-readout-quad64-field.stdout.log": "8159fcf9ddb03277e393cbc23401713c23541d7da6e0b5974b4be7552d72439c",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-64/phase268-readout-quad64-source-record.json": "c15220dafcae0dbece8bfd4949f11c2c80ce08f6c4b24c0c3f0d0142c846f18a",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-64/phase268-readout-quad64-source.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-64/phase268-readout-quad64-source.stdout.log": "b9d496e933aabd4da6adad6939e5ecbbbb96a8acf1f321b0f6a937e87fd9d323",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-64/phase268-readout-quad64-time.txt": "29aca2e91a9e2526d53e073698ef2e28ff1aa48980e548072baee572c8948cfc",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-64/photon-conservation-plan.json": "248525a3b9808f00f193c48d9739000a1c32eea1cf8197cf8c3ad8b939a0bb2d",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-64/plan.json": "edb442d43f5e1aeef58242a08fe1661a778347ef95d1a5f4b6f05b0715d923ae",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-64/readout-endpoints.json": "4120c5b398dba8fb8108ed8f6bacf96515793ab661ffc162eba3457fe09577c9",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-64/readout-field.json": "0e6f99d16ff65a23fe0e980f259bb4b96ccd52447f082a5aab1cb2962c3d50e7",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-64/readout-source.json": "c43af553741231b2e4317523f7ab0922b03ecfb07210f02aa8b04b6da830e57a",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-64/source-64-check.json": "7e14deff6c089d25e08a6045896cf10d486741f9a48647380d9d7f729dbb291b",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/readout-64/sources.json": "fc62ea99c516e0a41393a1aa5264b0db5f87f52cb0fec1a6739643c1130e11a9",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/run/seg-04-driver.json": "0fb787ee6a3929ce5e5994c245d866ecb8bf9e50cd8df75a7f1f523ca1b5096e",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/run/seg-08-driver.json": "a8e66a695c866c3172adfa5eeb01d5ad0ea8cd6d45ed7d88a9dfa87aa1954941",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/run/seg-12-driver.json": "246fed61d88d460865eeb2526bc515ba378eb28a20c5650a1b1784f1db82c316",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/run/seg-16-driver.json": "e085628cb5d96efd34a04a91f7c7008ec7db0451def9f7852134895e1384551c",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/run/seg-20-driver.json": "eefadc9399b44e0535a1bfa0c368d80fb343f61dfab4db52d8454dad00b1157f",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/run/seg-24-driver.json": "caee81b5a590643f3dc0ef6f2f9b42f5a5426cee6d9d1d147af18ec767d93fc8",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/run/seg-28-driver.json": "cdae0d6ae89c89b1f37bcca4f717fb251cb95117fc84d64db7c19d9fadc0d26b",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/run/seg-32-driver.json": "67eca5f26934aa1ce50535e4d9d334fd4ecd63b5d5b208f46a941a19045670ff",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/run/seg-36-driver.json": "184b2bd33343cc5cdda9bb9d8062047e3f5649bc6752f1cdf4fa0d8c589e6e92",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/run/seg-40-driver.json": "39369af7d871ff2d99ea08e4b501193f00283613ec0c77e65f6c2cc02302d4cf",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/run/seg-44-driver.json": "6cade8e55c3425a9fbc4f21c83ef22af1cf349289825e9fdaf4ce6309201b62d",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/run/seg-48-driver.json": "0ee0a7ad90c20e5e0b75e3e5114e2ec904f9319fa23bc2320aff39fecb46a83c",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/run/seg-52-driver.json": "93f3c41d6e6e663514b500ee71ad4a30a3d8aa2576dee0549c71035610550400",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/run/seg-56-driver.json": "4d55fd62d94bd1b899192cc76c56cdbcc191f3b15b33d0b870130a8f1439a799",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/run/seg-61-driver.json": "6efac7823608864d1dcab105a0ce99368eaa6e03626865df9f93e9d7d5ab3e3a",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/run/seg-61-fallbacks.json": "254093b5fd4e536966c2004e18e642867a49f6985236ad418c6ed7a51a212365",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/run/seg-62-driver.json": "5526308fc54306490f2517cc272c393328b0eda5685b297664487a147b23c44c",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/run/seg-62-fallbacks.json": "c061de4b867a31d3c43135bb0e211d9ab98195f7ea656115f8d39d7072f076e6",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/run/seg-63-driver.json": "9943b20a00527339204cee654d533d3857d6333592bafefafa9c9bac455d691a",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/run/seg-63-fallbacks.json": "d9155a0024a1a5bfc32d8be45a7214fdf6d7690df371860e4492265e42e81baf",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/run/seg-63-nonlinear-exceptions.json": "7c0719710c30b6db1b970c39b46103a750c2063141b0e91bf37f5a147efa635a",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/run/seg-64-driver.json": "9c84325927cb903ba780ba4bfa16df649b773174dcfe5d0bbd14326b39067347",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/run/seg-64-fallbacks.json": "d60091d15d6a1d599537199c517843a21378277034936757fa77794c9104ec8d",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/run/seg-64-nonlinear-exceptions.json": "bca6ac25ab2f18c95ff04a31f3d97e60dd3672c22824a531c4a13674df6feff3",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/run/status.txt": "2e0842d40fc30147e0b08282452e40cd95e850b9f88427000a818b5aa6e24607",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/scripts/compare268.py": "5a42377babaa098042656d464905201402f1aa4355b81d2b6e4f88639e7e84db",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/scripts/launch268.sh": "acef21e5ca020e365a501b25028478494daa0811916fb6d770c2e2117862b190",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/scripts/phase268-bank.py": "3472b8bdb13dc01a9eef72b92f1ba83aff0ccfde407daa7e542d15299f806da1",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/scripts/phase268-checks.py": "9f9ce6b5ad9177216d2b09a5a77c92ccc159ca859079c72fce1d4cfb4f84e389",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/scripts/phase268-driver.py": "de3c1a3cccbecb9348f7d38fee3144f5eca56d1c230edbf0be80b86628362359",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/scripts/phase268-initial-audit.py": "8e5adf8ffddb8efc5aa06b6a2fe1be6313aba0f2e18ed47c503f08febbf41668",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/scripts/phase268-initial.py": "ff34fd86b35a3219946006902e4e94ffdf563b32604266760253f74312cf80bc",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/scripts/phase268-publish.py": "0b4e6c6c6d06e48beb757805478b9b6deacac009f6ab59945b1a3d0563b668b9",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/scripts/phase268-thermal.py": "0c1d25339e95baa4b5c0313fc679c83c533dc60d040161f292cb22dad332a95e",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/scripts/run-finish-prep268.sh": "0206dcdefbf0f59db2c610522d0e09f704f02503f03ef22ea8498617bfe10b23",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/scripts/run-prepare268-resume.sh": "a437c57c9bc7a888aab5bc8899a7dc9c987d63fd4c62b3b8ae35aaeb37a3492e",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/scripts/run-prepare268-resume2.sh": "6078999bd662342ef589ae6e71c04ba4e902958f18c4c6d570c3be4800fd6e7c",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/scripts/run-prepare268.sh": "ccbd898dc718ff6b31d7e3a121fcf76a14e3b294b4d1fc9d6a34def0ebaa90fb",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/scripts/run-quad64-retry.sh": "76fe47f814a31a3a02fec3b524058a57d96ca7ee2ab9d7624b38c5e9933c09e9",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/scripts/run-quad64.sh": "3a9a574a660e41817f072f15eac58f9e7e4b8c63fcd81b694c49d48644aaaa33",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/scripts/run-readouts268.sh": "9c2ae76f58df51e46885251728fba6b98bb4a779598b3555877b0db207ed33f3",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/scripts/seg268.py": "c1e892c16d1e0ece47d0ade85722f82858dddde4bbc8757ebbf48d44e0100a34",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/scripts/sha-runtime268.sh": "737362a9ed68daa072de2770c581e09743fbc6d93da2072812ee950657565ed0",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/scripts/wait-run268.sh": "f4d1c196395e72d6359d3925143b60f5254400a0a6c06a364611127eec57f91a",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/scripts/wait268.sh": "0e73e0361df380bcbdffcc194cc49dd49415296a5c9e256c59105484d00902bf",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/run/attempt1-seg-64/attempt1-exists-seg-64.json": "27fa991b2a36c9e632d8e963150d24fc57eadb8e33732827598d824de89e4841",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/run/attempt1-seg-64/attempt1-seg-64.stderr.log": "e2dc5a2498186cf1c61ee45263ecb6df15af6830017bd476b9278026d5d4bf53",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/run/attempt1-seg-64/attempt1-seg-64.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/run/attempt1-seg-64/attempt1-stopped.txt": "86050cd3f0b2cdc2da3c42c1ee57493db9cd4208693a995328ef3f33eb754b89",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/run/attempt1-seg-64/integer-64.json": "136f15d506b88044d1d903c1248823cea40fe54d5950a0e006956cafce5bcb5b",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/run/attempt1-seg-64/polish.json": "eeb9f73d2a2957b84c1eccbfd6f3c7c7144bfc7a87dd4bc002e080a9f6c738aa",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/run/attempt1-seg-64/seg-64-driver.json": "42f3fccfca9e476ef9ff63708c8dd74d64789f2186a83864f59e8c3bf592440b",
+  "outputs/direct-eos-gr33/native-quad-refined-primary/run/attempt1-seg-64/seg-64-fallbacks.json": "da6714d71e2e8e9765b4a8199b81a9d411240bfde8d89fb86692bfbb98a5f580"
+ }
+}

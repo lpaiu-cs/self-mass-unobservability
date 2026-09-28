@@ -1,0 +1,20 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Construct the conservative nonlinear stress input for the actual stellar radius and its leading GR mass/lapse response; adjudicate the resolved integrated trace without rest-mass quadrature contamination.",
+  "gates": {
+    "exact_gamma_law_stress_moments": 0.002,
+    "native_momentum_relative": 0.002,
+    "conservative_trace_refinement": 0.01
+  },
+  "budget_seconds": 30,
+  "native_calls": 0,
+  "new_global_evolutions": 0,
+  "tail_premises": "In addition to the registered sound-speed envelope, assume0<=u<=u_cut and0<=p/rho<=p_cut/rho_cut below the last native state. This explicit premise supplies a stress bound, not a native cold-EOS certification.",
+  "bindings": {
+    "verification/verify_native_vacuum_release.py": "6c59fa177b47b3cb7a6e6be6a0ff5c613677464ac17bff41f0a7d5cea6711e25",
+    "verification/def_native_vacuum_release.py": "c6646433a61119649da36abfe3e8ef94cc575a663c6dea8e9289d64efe32adaa",
+    "outputs/direct-eos-gr33/def-native-vacuum-release/coarse.npz": "5556e9c821e84f43bae9b0616f489c9911836426e694ae2aacbdcd67df5e43e8",
+    "outputs/direct-eos-gr33/def-native-vacuum-release/fine.npz": "26566f1dc5777990de94ce297a7add429fd950c45e2eecd1a878dac326665b5f",
+    "outputs/direct-eos-gr33/def-native-vacuum-release/result.json": "bb0f528dd8c198f6a8e30ef76577a2b20d55ff5a88d3235fc3cd5d2a71d06923"
+  }
+}

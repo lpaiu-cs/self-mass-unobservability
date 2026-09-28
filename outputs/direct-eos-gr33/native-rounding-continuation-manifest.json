@@ -1,0 +1,122 @@
+{
+  "classification": "Counterexample candidate",
+  "actual_same_joint_solution_GR_computed": false,
+  "actual_stage117_accepted": true,
+  "linear_gate": {
+    "classification": "Counterexample candidate",
+    "linear_relative": 7.980254441819509e-15,
+    "physical": [
+      1.7646999548336903e-19,
+      1.9042306310998284e-20,
+      2.197487305735679e-21,
+      1.6596581674125982e-30
+    ],
+    "actual_stage_relative": 3.788254250163573e-07,
+    "linear_passed": true,
+    "actual_stage_passed": false,
+    "new_physical_steps": 0,
+    "new_Krylov_iterations": 0,
+    "final_charge_conclusion": "unadjudicated"
+  },
+  "actual117": {
+    "last_stage_time": 0.0033807681317110662,
+    "solved_actual_steps": 117,
+    "original_stage_relative": 5.27147543119873e-13,
+    "physical_stage_relative": [
+      1.7112511003543352e-17,
+      1.305760058099126e-18,
+      2.1484929402103086e-20,
+      3.056525394182504e-20
+    ]
+  },
+  "continuation_entry_only": true,
+  "full_remaining_pair_completed": false,
+  "photon_recovery_port_failure_preserved": true,
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false,
+  "document_prefixes": {
+    "docs/model-definition.md": {
+      "bytes": 261836,
+      "sha256": "32de06f221135598503d677e26a5f957d4937a713a61cd8e745abd781f3e427c"
+    },
+    "docs/observable-targets.md": {
+      "bytes": 252623,
+      "sha256": "04bc674b527c3e38989eb8d2b2c13244c86d3570c3149dfedbb3ad92caf3259e"
+    },
+    "docs/adiabatic-limit.md": {
+      "bytes": 246976,
+      "sha256": "186b8fb48f5c20ce70f946ba720a97af39bc7cadde2f7e037893f3dcbd1499ca"
+    },
+    "docs/nonadiabatic-regime.md": {
+      "bytes": 255504,
+      "sha256": "e997df0a572e6b14f07707f918f6ef5b55b8e2a84179313cc26a57be81aa9d1d"
+    },
+    "docs/failure-ledger-dynamic-chi.md": {
+      "bytes": 292977,
+      "sha256": "756a135dc453e60e0339fee2427e3b5caa0300f90e4a1749aad83753296a4524"
+    },
+    "docs/dynamic-charge-completion.md": {
+      "bytes": 121089,
+      "sha256": "1aec1fb69ac9c538a09fe75e564121d036dcd7ba01c57561e4ea63461e52e83d"
+    }
+  },
+  "sha256": {
+    "verification/repair_full_momentum_collision.py": "23b6f1dfda63655b8d1184ea73c9f3284bc92cb4d02c0b23d520638571a02c0e",
+    "verification/solve_native_rounding_neighbours.py": "5704806b5e166eeab0672898f3df8efcccaf7faef4566f70b7bfd2cb2489c3be",
+    "verification/continue_rounding_aware_native.py": "969b7c17494b71b7d8f8e1deb7d764931b46f654429f6af18021bd98e94c4d25",
+    "notes/REQUEST216_219_ACTUAL_ROUNDING_CONTINUATION_KO.md": "3aca26a4c746ce811012b5d380a08364c71afd7dfb342d8135606cb4c0a31418",
+    "docs/model-definition.md": "967c1ae7eb095e2d0df473f4bbc7864001ba0afbf62a5f7ef7baa9578493bb81",
+    "docs/observable-targets.md": "07281ef26f97781c14bafa2f85165d2b9edb5ddf5b407f32993a7c8d1b73c438",
+    "docs/adiabatic-limit.md": "c5ab6c300c7e78918df58493c15cddfe477c7efa882d9b5588e66f3efa8bca78",
+    "docs/nonadiabatic-regime.md": "131e32ea3d7a2b609d365f9a605f5225c0f6bafb25f63519056ced4f1fee6aec",
+    "docs/failure-ledger-dynamic-chi.md": "4ec6758fa79764cbc752839413b0a91b648017eed478f4365682242671275a2f",
+    "docs/dynamic-charge-completion.md": "ae6e9c3de7a768bdbe86aee89f66f2379e5e123b5ef1e556fea4cab1c071a5bb",
+    "outputs/direct-eos-gr33/native-rounding-continuation/phase218-followthrough.py": "adf227a73f0ac6c8d4531b195c8c7cecfc9430e42eb6b8f17fc8d96bfaf936f4",
+    "outputs/direct-eos-gr33/native-rounding-continuation/phase219-port-replay.py": "19827296725271464a7308800488e87360611a9fcd80dfdfd727e55f158a5d8a",
+    "outputs/direct-eos-gr33/native-rounding-continuation/publication-producer.py": "89e4bb97cebb5b0ffb94fa0e65b94f5313f81618e8598a76dbe024441e611236",
+    "outputs/direct-eos-gr33/native-rounding-continuation/publication.json": "80bc8b6f93331aecd1278da8f99f500dd74c4d8f158771c0e394b6cbe6d6e635",
+    "outputs/direct-eos-gr33/native-rounding-continuation/result.json": "0dd599862ab479a16cfdf0c9d87d505990853783b98aeadc7e701928aa46b2a5",
+    "outputs/direct-eos-gr33/native-rounding-continuation/first-actual-acceptance/last-accepted-64.npz": "28ba08a1ea29027e65a0e228b05808fe4b20ed6110c0839a6002c9160acb3732",
+    "outputs/direct-eos-gr33/native-rounding-continuation/first-actual-acceptance/linear-64.json": "107dcd10f65c8ab14870f19a31557500b817ce0eb9ebcfad4af9cc5ffcea9e9a",
+    "outputs/direct-eos-gr33/native-rounding-continuation/first-actual-acceptance/stage-progress-64.json": "fe38dc27cba11d5e04c6c804774414d0165af36ac48167bc772f066f33a82535",
+    "outputs/direct-eos-gr33/native-rounding-continuation/native-full-momentum216-work/check-receipt.json": "d61cbaaf18ed9bf5f093f74e2ae52d3bb7cf5eb25fde67bd23d357076a5213d7",
+    "outputs/direct-eos-gr33/native-rounding-continuation/native-full-momentum216-work/collision-producer.py": "408fbc07d0a291f8430b2bc22be06c3f8144fb3ed05a4d1c4aa0d830e22e128c",
+    "outputs/direct-eos-gr33/native-rounding-continuation/native-full-momentum216-work/comparison.npz": "cf55494315add0af9897fbd914b0683c96e86aa615c7a9ebd4b8bbb8993195ef",
+    "outputs/direct-eos-gr33/native-rounding-continuation/native-full-momentum216-work/plan.json": "ffbea02cc4e251522cf0bc96cf3f8d248eb0bb48fac9fc1f594c18ebc02abf84",
+    "outputs/direct-eos-gr33/native-rounding-continuation/native-full-momentum216-work/polish.json": "0380bb7df7f5c078cd36bd8d335faabd70550b8129c32df1b3ec863262c81085",
+    "outputs/direct-eos-gr33/native-rounding-continuation/native-full-momentum216-work/prepare-receipt.json": "d296714d01512fe17d9a93e04dc3918c1bf65652df87326fbe66f7bb1cc51e19",
+    "outputs/direct-eos-gr33/native-rounding-continuation/native-full-momentum216-work/repair-plan.json": "92e3849449e00508fe6837ddf1568df6e87f164090550803e965b880cbe9b95c",
+    "outputs/direct-eos-gr33/native-rounding-continuation/native-full-momentum216-work/repair-receipt.json": "d8ab265f72d6ea61cc5534fc299bf9928bfdd5421f0a2f7a713b6e1b407dd0db",
+    "outputs/direct-eos-gr33/native-rounding-continuation/native-full-momentum216-work/repair-result.json": "63445124803607c3a1299e50c598256e2cb250f4be58b4f8f4ae7690b2245793",
+    "outputs/direct-eos-gr33/native-rounding-continuation/native-full-momentum216-work/result.json": "f635b0b60b2ef9a6ffc48f8051d560a98ad41c576fbf8827cef7ddd4328b1dd8",
+    "outputs/direct-eos-gr33/native-rounding-continuation/native-full-momentum216-work/symbolic.json": "06efa323324bc1927eb543f49d333e9ac7031a29014b6599b07a793e8e2cb92c",
+    "outputs/direct-eos-gr33/native-rounding-continuation/native-port-order219-work/linear-128.json": "660c84a8a4f0f605d6cbf34831a96941b1517a237a1c63f6f95be301054a2bc7",
+    "outputs/direct-eos-gr33/native-rounding-continuation/native-port-order219-work/plan.json": "fa66485d28bfb603b397bc31ecbc04618cb84de968aa34aeee995f9fdb7be46b",
+    "outputs/direct-eos-gr33/native-rounding-continuation/native-port-order219-work/receipt.json": "9f1cd2dbd67c6c50464b50d66f105df6c3727d0301502e581aa58a824428d9a9",
+    "outputs/direct-eos-gr33/native-rounding-continuation/native-port-order219-work/result.json": "9e84437e8810a124102739b6bc827a108f945da1e03ab93984e39c62f60b2e70",
+    "outputs/direct-eos-gr33/native-rounding-continuation/native-port-order219-work/snapshot-input.npz": "b1cfccc68e9a207eb0a1e398f4297b97180df8b331221baf8d0729e5d5d2f08c",
+    "outputs/direct-eos-gr33/native-rounding-continuation/native-rounding-continuation218-work/check-receipt.json": "e877c21b2039e389bb39a5c0df05cde25ad0489b2da76c330ad2239c49717cdf",
+    "outputs/direct-eos-gr33/native-rounding-continuation/native-rounding-continuation218-work/controller-start.json": "4923574f217077e0ef5b8d95b8362ced30474afc381cd2db69b5e6eb61c8a116",
+    "outputs/direct-eos-gr33/native-rounding-continuation/native-rounding-continuation218-work/expanded-balanced-linear.py": "f487c4b99d5dddb7ca2bc4c5f6f96d775f896a24cb09c1df266f8e488b29b661",
+    "outputs/direct-eos-gr33/native-rounding-continuation/native-rounding-continuation218-work/expanded-postfloor-evolve.py": "d3481c112f53201040c579e3b954fcb18d9ff1bfdce4ee5657c264c9d5e3c1a6",
+    "outputs/direct-eos-gr33/native-rounding-continuation/native-rounding-continuation218-work/linear-seed-identity.json": "c827fa8220b6706f2f5e04ba8f5b633b70d38bc1a4b7a8366dc1f0d96a79139a",
+    "outputs/direct-eos-gr33/native-rounding-continuation/native-rounding-continuation218-work/plan.json": "55788c8596342152fd2932c1a09e3fe235de08024321be2cf4c3beb110f92893",
+    "outputs/direct-eos-gr33/native-rounding-continuation/native-rounding-continuation218-work/prepare-receipt.json": "d5d9d1a3086af848222c257ee96bab4f8fb28a91ae4af565037f5c2021571b37",
+    "outputs/direct-eos-gr33/native-rounding-continuation/native-rounding-continuation218-work/restart-check.json": "a525455daad23dac94f31e11f0be946cfd887da975083249469ce6d496544fa0",
+    "outputs/direct-eos-gr33/native-rounding-continuation/native-rounding-continuation218-work/symbolic.json": "fa7761466f78808999b13ab86e654590d23ef1205798eec1f9249d04e1a9194b",
+    "outputs/direct-eos-gr33/native-rounding-continuation/native-rounding217-work/check-receipt.json": "a25504cf39467114cc85ac42457b993e80bd0b43562d9df094cbda41a832c5c1",
+    "outputs/direct-eos-gr33/native-rounding-continuation/native-rounding217-work/pair-producer.py": "6f3e0ac91c0fb4187113db8cc85ebb998261ddb2fd92583e8ba17b30fec524bb",
+    "outputs/direct-eos-gr33/native-rounding-continuation/native-rounding217-work/plan.json": "2f07ac200302e990f145a0b04f62794c7bfc7b908cfec8a71ccdc6b4d31cc637",
+    "outputs/direct-eos-gr33/native-rounding-continuation/native-rounding217-work/prepare-receipt.json": "d1e0d6f4ac2555ce1dc85836495289435ead86a26459754d37e90cb6d811514e",
+    "outputs/direct-eos-gr33/native-rounding-continuation/native-rounding217-work/proposal.npz": "d8b1f6d8a77c312a751a1841573d973467ff6e221250fe2614db7d2220b3b9fa",
+    "outputs/direct-eos-gr33/native-rounding-continuation/native-rounding217-work/refine-receipt.json": "b72ccd2ece2b7ff113d33148fbecfe2173cb0c420f8464a821bc0b7718e72d03",
+    "outputs/direct-eos-gr33/native-rounding-continuation/native-rounding217-work/refined-proposal.npz": "797669d475a58d4ba8bea4551e3f9de8facab5da3d9457ea831308bb28e8b37c",
+    "outputs/direct-eos-gr33/native-rounding-continuation/native-rounding217-work/refined-result.json": "4e35f3039e02eea14fb3f095c59e80463937f15862d627550fd9ab08fc4938cc",
+    "outputs/direct-eos-gr33/native-rounding-continuation/native-rounding217-work/refined-search.json": "27b6947d8a434f95dd8af3f43f522a14491bd70cdbae957266d4b3c86da7e733",
+    "outputs/direct-eos-gr33/native-rounding-continuation/native-rounding217-work/refinement-plan.json": "725adfcde7e960ddc6b5e517e59625415d893bb5b0bef92e280e47de78cb6d23",
+    "outputs/direct-eos-gr33/native-rounding-continuation/native-rounding217-work/result.json": "aa8c97c3faae781fdd98d98565f2ef09a82f20d93d046dfb693f0752c5455088",
+    "outputs/direct-eos-gr33/native-rounding-continuation/native-rounding217-work/search.json": "bc33246adfde8f75fe3542aee06f5286842398607e955caa2d1c583e9686d8f5",
+    "outputs/direct-eos-gr33/native-rounding-continuation/native-port-order219-work/clock-128/original-equation-15.json": "f473318135514e1ff75f0c9361cbc2d5d564cf4e9052f1097f41998f1460989e",
+    "outputs/direct-eos-gr33/native-rounding-continuation/native-port-order219-work/clock-128/snapshot-02.json": "06c35bbc7300e7b2686ad0015eab9157613e5a4ad0f03d0e28b7470d7a8314ca"
+  }
+}

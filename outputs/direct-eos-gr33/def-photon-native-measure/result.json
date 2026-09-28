@@ -1,0 +1,164 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "checks": [
+    {
+      "name": "surf1000T0015",
+      "heldout": false,
+      "passed": true,
+      "T_keV": 0.0015,
+      "T_K": 17406.77718232512,
+      "grid_printing_score": 1.0,
+      "native_gray": [
+        1127.3,
+        9.1378
+      ],
+      "reconstructed": [
+        1127.3336442265966,
+        9.137753637405023
+      ],
+      "gray_relative": [
+        2.984496282842919e-05,
+        5.073715224401809e-06
+      ],
+      "rounded_grid_Planck_relative": 0.011504388397527099,
+      "repartition_relative": 7.771561172376096e-16,
+      "C_matter": 0.7744656227910458,
+      "C_radiation": 0.1596122158065734,
+      "harmonic_absorption_seconds": 0.0020526811535242105,
+      "duration_seconds": 0.016421449228193684,
+      "time_steps": [
+        16,
+        32,
+        64
+      ],
+      "time_order": 2.0167389878314106,
+      "finest_difference_relative_initial": 6.503527932496757e-06,
+      "energy_defect": 7.0243180078904906e-15,
+      "entropy_growth": 0.0,
+      "constant_opacity_exact_temperature_error": 9.883990004233567e-08,
+      "frequency_energy_residual": 2.2243689189884844e-16
+    },
+    {
+      "name": "surf1000T002",
+      "heldout": false,
+      "passed": true,
+      "T_keV": 0.002,
+      "T_K": 23209.036243100163,
+      "grid_printing_score": 1.0,
+      "native_gray": [
+        400.76,
+        3.553
+      ],
+      "reconstructed": [
+        400.7612824024832,
+        3.552981812482492
+      ],
+      "gray_relative": [
+        3.1999263478965645e-06,
+        5.118918521840321e-06
+      ],
+      "rounded_grid_Planck_relative": 0.09772037347292928,
+      "repartition_relative": 6.661338147750939e-16,
+      "C_matter": 0.4431208665586555,
+      "C_radiation": 0.3783400670970629,
+      "harmonic_absorption_seconds": 0.006083658589232488,
+      "duration_seconds": 0.0486692687138599,
+      "time_steps": [
+        16,
+        32,
+        64
+      ],
+      "time_order": 2.0169324127324146,
+      "finest_difference_relative_initial": 8.281895857192392e-06,
+      "energy_defect": 2.0168978765637722e-14,
+      "entropy_growth": 0.0,
+      "constant_opacity_exact_temperature_error": 5.4235839153093934e-09,
+      "frequency_energy_residual": 3.3306690738754696e-16
+    },
+    {
+      "name": "phGridcold",
+      "heldout": true,
+      "passed": true,
+      "T_keV": 0.001,
+      "T_K": 11604.518121550082,
+      "grid_printing_score": 1.0,
+      "native_gray": [
+        25727.0,
+        46.641
+      ],
+      "reconstructed": [
+        25727.3973345344,
+        46.6413947373087
+      ],
+      "gray_relative": [
+        1.5444262230213113e-05,
+        8.463311436335275e-06
+      ],
+      "rounded_grid_Planck_relative": 0.17375841284983584,
+      "repartition_relative": 1.4432899320127035e-15,
+      "C_matter": 4.410916703305871,
+      "C_radiation": 0.047292508387132864,
+      "harmonic_absorption_seconds": 0.0003772707017851186,
+      "duration_seconds": 0.0030181656142809488,
+      "time_steps": [
+        16,
+        32,
+        64
+      ],
+      "time_order": 2.0171320835096944,
+      "finest_difference_relative_initial": 1.7056265059817683e-06,
+      "energy_defect": 4.228542062407031e-15,
+      "entropy_growth": 0.0,
+      "constant_opacity_exact_temperature_error": 1.7219974224325085e-08,
+      "frequency_energy_residual": 1.1102797768811911e-16
+    },
+    {
+      "name": "phGridwarm",
+      "heldout": true,
+      "passed": true,
+      "T_keV": 0.003,
+      "T_K": 34813.55436465024,
+      "grid_printing_score": 1.0,
+      "native_gray": [
+        523.84,
+        2.0873
+      ],
+      "reconstructed": [
+        523.8423617498679,
+        2.087291333556123
+      ],
+      "gray_relative": [
+        4.508532887692596e-06,
+        4.151987676337399e-06
+      ],
+      "rounded_grid_Planck_relative": 0.019646589778485657,
+      "repartition_relative": 1.5543122344752192e-15,
+      "C_matter": 0.6624661477942072,
+      "C_radiation": 1.2768977264525871,
+      "harmonic_absorption_seconds": 0.013901775743795428,
+      "duration_seconds": 0.11121420595036342,
+      "time_steps": [
+        16,
+        32,
+        64
+      ],
+      "time_order": 2.0160635576624446,
+      "finest_difference_relative_initial": 8.276910020177256e-06,
+      "energy_defect": 3.3517879466651433e-15,
+      "entropy_growth": 0.0,
+      "constant_opacity_exact_temperature_error": 5.509037670492489e-12,
+      "frequency_energy_residual": 7.355635814171314e-16
+    }
+  ],
+  "seconds": 2.6530048440000016,
+  "source_grid_restored": true,
+  "finite_spectral_measure_constructed": true,
+  "absorptive_material_photon_tangent_evolved": true,
+  "scattering_redistribution_closed": false,
+  "continuum_opacity_error_certified": false,
+  "actual_temperature_interpolation_certified": false,
+  "physical_surface_flux_closed": false,
+  "whole_star_heat_closed": false,
+  "full_dynamic_charge_solved": false
+}

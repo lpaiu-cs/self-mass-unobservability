@@ -1,0 +1,58 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "cca3717e",
+  "bindings": {
+    "verification/def_conduction_core.py": "8668df0afa64a003fbb388757a10d2d8271781a80682ff5c35c24b0f7d4db5f3",
+    "verification/def_electron_screened_fermi.py": "14017818d37db1cffb42d522cd81be0243651ed8d54b6dca4ae57f9013606899",
+    "verification/def_electron_energy_exchange.py": "ea347d8ca74a0d28f491dd1d3118c459ef5e736f9a70698cbaac15534e65b7d4",
+    "verification/def_electron_dynamic_screening.py": "6a256ce455a75b064e4626480cc136b39f2cbfbc2a4a62ff42986d869f9fb89a",
+    "verification/def_electron_screened_leading.py": "1f5d2f0156a74b302e5a776d7f7a32c661798469d0d8b146a4011c89c1b49044",
+    "outputs/direct-eos-gr33/def-free-surface-thermal/coefficients.npz": "8fa9ddf79c966965a3a3fa26e6b4c738f82eec0b6ad257e521ae37c9403fb46c",
+    "outputs/direct-eos-gr33/def-electron-energy-exchange/fermi-screening/result.json": "1b602378284b0966d7414ac76bc40861a0205ada782af26a4170d3f9a063f6fa",
+    "outputs/direct-eos-gr33/def-electron-energy-exchange/fermi-screening/cell-4122.npz": "8d3c4d2adac72ebd126643c16e8dbe54e93e9b38d2babf3198081a569b940cdd",
+    "outputs/direct-eos-gr33/def-electron-energy-exchange/fermi-screening/cell-4928.npz": "0272589e0d1bc9eb0519f2d56b2c6d4de5cb5098a1e8df35a8365a8559667fa2",
+    "outputs/direct-eos-gr33/def-electron-energy-exchange/fermi-screening/cell-5734.npz": "45c95b6e9de9e9b8e7fb01daed04ca4c45bb97d4c606a493c7491742049f1783"
+  },
+  "claim": "Construct the state-dependent collision pole bank required by the actual core conduction contribution to the existing free-surface fluid/scalar/metric time response.",
+  "anchors": [
+    4122,
+    4323,
+    4525,
+    4726,
+    4928,
+    5129,
+    5331,
+    5532,
+    5734
+  ],
+  "withheld": [
+    4424,
+    4827,
+    5230,
+    5633
+  ],
+  "reuse": [
+    4122,
+    4928,
+    5734
+  ],
+  "interpolation": "Interpolate the computed/native DC ratio logarithmically and mix the adjacent positive normalized DC pole weights. Native conductivity only supplies the interpolation coordinate trend; there is no fitted normalization. Withheld states are not added to the bank.",
+  "domain": "Original degenerate, almost fully ionized cells 4122..5734 only. Faces joining two core cells define an isolated core transport contribution. Missing outer heat currents are not physically certified zero.",
+  "gates": {
+    "quadrature": 0.03,
+    "basis": 0.02,
+    "polarization": 1e-05,
+    "native_compatibility": 0.2,
+    "withheld_K": 0.01,
+    "withheld_tau": 0.01
+  },
+  "budget": {
+    "new_states": 10,
+    "events_per_state": 524288,
+    "hard_seconds": 120,
+    "workers": 1,
+    "BLAS_threads": 1,
+    "native_calls": 0,
+    "automatic_expansion": false
+  }
+}

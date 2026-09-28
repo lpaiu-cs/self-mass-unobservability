@@ -1,0 +1,20 @@
+{
+  "classification": "Counterexample candidate",
+  "reason": "Unrefined band LU disagreed with the scalar transform by2.1514e-6 and failed the1e-8 gate. Preserve that failure and use one mandatory extended residual correction; do not change any equation, input, cutoff or gate.",
+  "budget": {
+    "pilot_models": 3,
+    "pilot_solves_each": 16,
+    "hard_seconds": 90,
+    "new_EOS_calls": 0
+  },
+  "gates": {
+    "component_transform_relative": 1e-08,
+    "linear_residual": 1e-09
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-spatial-repair/refined-band-pilot.py": "4b315efe7df7cba2fadeaa02e6fe0d66e40d98073fd06719135c77b16fb624c2",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_spatial_banded_refined.py": "51b57bac6bd4ff45cb4d8945b08c15e814c7b369f48ea13f63c89619dadc4d7c",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_spatial_direct.py": "33cc61073723cd82ce082fb19c3fd001bf0525403519645799394c0bf8e97419",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-spatial-repair/direct/pilot-budget.json": "aa3669671c739539871fb511d88cbed1f6fd542b90d4f89042a7a05fe91e577c"
+  }
+}

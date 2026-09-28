@@ -1,0 +1,40 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "0f6b09ed",
+  "claim": "Supply source-resolved photon absorption groups and scattering spectra at the exact present surface mixture/density, resolving the previous sampled-spectrum Planck integral mismatch without mean calibration.",
+  "source": "https://aphysics2.lanl.gov/static/opacdocs/opac-help.html",
+  "actual_state": {
+    "cell": 0,
+    "T_K": 18827.94717983866,
+    "T_keV": 0.0016224669549073619,
+    "rho_neutral_g_cm3": 1.9162931443452428e-09,
+    "neutral_mass_per_baryon": 1.0070231612220188
+  },
+  "requests": "Four single-temperature queries, two bracketing native temperatures and 257/1000 logarithmic boundaries. Every submit/results pair has its own cookie session. No paired-temperature request and no hyphenated display name.",
+  "acceptance": "Exact printed input intervals and material identities; no warnings or flat density substitutes. Positive finite groups, reject the exact 1e10 sentinel. Recombine native Planck/Rosseland groups at relative 1e-3 and compare group counts. Preserve the independent sampled-spectrum discrepancy.",
+  "gates": {
+    "group_mean_relative": 0.001,
+    "input_printing_score": 1.0,
+    "spectrum_sum_printing_interval": true
+  },
+  "bindings": {
+    "verification/def_photon_native_groups.py": "e6be475b48a3187542fde9926451ea527d997bcb7ec5b2091e39278a3ea7cd1a",
+    "verification/lanl_tops_stellar_probe.py": "397d4a56602a1cf905cc05be8baa656a72185c7ef64c687afa147bf9e62ba38e",
+    "verification/lanl_tops_stellar_audit.py": "76e1065a1bb848d37e301a6d85713cf09cf09cd3eb9a668dca213079ab81e412",
+    "outputs/direct-eos-gr33/lanl-tops-cutoff-reader/corrected-header.py": "1bd6715b2067086b65f1f945eab585d3f2222c4735236b21d5206dd84fd39729",
+    "outputs/direct-eos-gr33/def-free-surface-thermal/coefficients.npz": "8fa9ddf79c966965a3a3fa26e6b4c738f82eec0b6ad257e521ae37c9403fb46c",
+    "outputs/direct-eos-gr33/def-photon-native-groups/lanl-tops-form.html": "b5f1093f7912a1842803c411f375e86db6c21af3d6d9074a1c25a936211ef9d5",
+    "outputs/direct-eos-gr33/def-photon-native-groups/requests.json": "4933715419a77c113354fbc9a75bff7e73dd2f95663e1ca0a8d23a7fbe233bd4"
+  },
+  "budget": {
+    "network_queries": 4,
+    "requests_per_query": 2,
+    "per_request_timeout_seconds": 90,
+    "query_process_hard_seconds": 190,
+    "CPU_workers": 1,
+    "new_native_EOS_calls": 0,
+    "new_stellar_steps": 0,
+    "automatic_retry": false
+  },
+  "limits": "Provider LTE populations, bracketing temperatures and scalar opacity data are not a complete angular/energy redistribution kernel or whole-star thermal closure. No opacity/EOS model-error certificate."
+}

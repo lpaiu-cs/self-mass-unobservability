@@ -1,0 +1,6 @@
+{
+  "classification": "Counterexample candidate",
+  "method": "Before each actual EOS query, evaluate kif=0 with ln f=-20 and T=1e6 K at pure C12 (or H1 if the requested C12 mass fraction is >=0.5). This sets a fixed degeneracy seed and changes zero/nonzero elemental abundances, triggering the source-defined cold-start path. The target EOS physics, flags and library remain unchanged.",
+  "gates": "Test output equality after different prior calls. For energy inversion keep the original absolute/32-ulp/local-change tolerance; search actual representable lnT neighbors rather than widening that tolerance.",
+  "limits": "Deterministic evaluation is neither physical EOS validation nor a rigorous continuum error enclosure."
+}

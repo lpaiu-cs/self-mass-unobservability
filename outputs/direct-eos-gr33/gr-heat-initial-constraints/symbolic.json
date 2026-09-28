@@ -1,0 +1,12 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "spatial_curvature": "R3=4*m_prime/r^2, m=r*(1-a^-2)/2.",
+  "general_spherical_momentum": "For K^i_j=diag(A,B,B), D_j(K^j_r-delta^j_r K)=2*(A-B)/r-2*B_prime.",
+  "Hamiltonian_extrinsic_term": "K^2-K^i_j*K^j_i=4*A*B+2*B^2; identically zero at B=0.",
+  "polar_initial_solution": "For the proper-frame geometrized heat current q and initial material velocity zero, j_r=a*q. Polar B=0 gives A=4*pi*r*a*q. K=0 is inconsistent with any nonzero j_r. Adding this A leaves the original Hamiltonian equation unchanged.",
+  "metric_and_mass_rates": "partial_(ct) ln a=-N*A; partial_(ct) m=-4*pi*r^2*N*q/a. The outer vacuum-normalized N*a=1 converts this to the usual luminosity-at-infinity mass-loss relation.",
+  "baryon_and_specific_energy": "At initial normal material velocity zero, partial_t ln rho_B=c*N*A; partial_t u=(P/rho_B)*partial_t ln rho_B -(1/N)*partial_mu L_infinity, where mu is outward-increasing baryon mass and physical time is in seconds.",
+  "initial_Hamiltonian_propagation": "partial_r(partial_(ct) m)=4*pi*r^2*partial_(ct) E follows from the matter energy equation and N_prime/N+a_prime/a=4*pi*r*a^2*(E+P). The latter uses Hamiltonian plus polar lapse. This is an exact initial continuum identity, not a discrete evolution certificate.",
+  "missing": "A transport evolution law, material acceleration, metric/lapse evolution after the initial slice, boundary atmosphere and the existing physical EOS uncertainties remain. These identities do not keep the material velocity zero for a finite interval."
+}

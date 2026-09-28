@@ -1,0 +1,1998 @@
+PAGE 1
+arXiv:hep-ph/9302213v1  3 Feb 1993
+NUHEP-TH-93-1
+January 1993
+Neutrino Energy Loss from the Plasma Process
+at all Temperatures and Densities
+Eric Braaten and Daniel Segel
+Department of Physics and Astronomy, Northwestern Univers ity, Evanston, IL 60208
+Abstract
+We present a uniﬁed approach which is accurate at all tempera tures and densities for
+calculating the energy loss from a stellar plasma due to the p lasma process, the decay
+of photons and plasmons into neutrino pairs. To allow eﬃcien t numerical calculations,
+an analytic approximation to the dispersion equations for p hotons and plasmons is
+developed. It is correct to order α in the classical, degenerate, and relativistic limits
+for all momenta k and is correct at small k for all temperatures and electron densities.
+Within the same approximations, concise expressions are de rived for the transverse,
+longitudinal, and axial vector components of the neutrino e missivity.
+PAGE 2
+The emission of neutrinos can be an important energy loss mec hanism for very hot or
+dense stars. The collective eﬀects of the stellar plasma can signiﬁcantly alter the production
+rate of neutrinos. The most dramatic example is the “plasma p rocess”, the decay of photons
+and plasmons into neutrino pairs, a process that owes its ver y existence to plasma eﬀects.
+It was pointed out by Adams, Ruderman, and Woo [1] in 1963 that the plasma process
+could be the dominant energy loss mechanism for very hot and d ense stars. It was recently
+shown that the formulae for the plasma process that have been used in all previous work
+are inaccurate at relativistic temperatures and electron d ensities [2], underestimating the
+emissivity by a factor as large as 3.185. The purpose of this p aper is to provide a uniﬁed
+treatment of the plasma process that is accurate at all tempe ratures and densities and also
+allows eﬃcient numerical calculations. We introduce a simp le analytic approximation to the
+dispersion equations for photons and plasmons which become s exact in the classical limit,
+the degenerate limit, and the relativistic limit, and inter polates smoothly between these
+limits. Within the same approximation, we obtain simple exp ressions for the transverse,
+longitudinal, and axial vector components of the neutrino e missivity from the plasma process.
+The derivation of the analytic dispersion equations for pho tons and plasmons is presented
+in Appendix A. The eﬀective neutrino-photon interaction th at is responsible for the plasma
+process is discussed in Appendix B and the decay rate of a phot on or plasmon into a neutrino
+pair is calculated in Appendix C.
+Because a plasma contains mobile charged particles, an elec tromagnetic wave propa-
+gating through the plasma consists of coherent vibrations o f both the electromagnetic ﬁeld
+and the density of charged particles. These coherent vibrat ions behave qualitatively diﬀer-
+ently from electromagnetic waves in the vacuum in that there are longitudinal waves as well
+as transverse waves, and they propagate at less than the spee d of light. The quantization of
+the electromagnetic waves in a plasma gives rise to a spin-1 p article with 1 longitudinal and
+2 transverse spin polarizations. It is common in the literat ure to refer to all 3 polarization
+states as “plasmons”, to emphasize that their dispersion re lations depend on the properties
+of the plasma. The longitudinal and transverse modes are the n awkwardly labelled “longi-
+tudinal plasmons” and “transverse plasmons”. While the lon gitudinal mode owes its very
+existence to the plasma, the transverse mode simply has its d ispersion relation at low fre-
+quencies modiﬁed by the plasma. For this reason and for the sa ke of concise terminology, the
+1
+PAGE 3
+label “plasmon” will be reserved in this paper for the longit udinal mode, and the transverse
+modes will be called “photons” whether they are propagating in a plasma or in the vacuum.
+The dispersion relations for photons and for plasmons depen d on the temperature
+T and the net density ne of electrons minus positrons. The general expression for th e net
+electron density as a function of T and the electron chemical potential µ is
+ne(T, µ ) = 1
+π 2
+∫ ∞
+0
+dp p 2
+(
+nF (E) − ¯nF (E)
+)
+. EB (1)
+Throughout this paper, we use units in which ¯h = c = kB = 1. The integral in (1) is over the
+momentum p of electrons or positrons, E =
+√
+p2 + m2
+e is their energy, and me is the electron
+mass. The Fermi distributions for electrons and positrons r espectively are
+nF (E) = 1
+e(E− µ )/T + 1 , (2)
+¯nF (E) = 1
+e(E+µ )/T + 1 . (3)
+Given the net electron density ne, the chemical potential is determined by inverting (1) to
+obtain µ (T, n e) as a function of T and ne.
+In the vacuum, photons cannot decay into neutrino pairs beca use they are massless.
+Their dispersion relation is ω 2 = k2, and the phase space available for the decay is propor-
+tional to ω 2 − k2 = 0. The qualitative behavior of the dispersion relations in a plasma is
+shown in Figure 1. The upper and lower solid curves are the dis persion relations ω t(k) for
+photons and ω ℓ (k) for plasmons at a temperature of T = 10 11 K = 8.6 MeV and an electron
+density corresponding to ρ/µ e = 10 12 g/ cm3. (The quantity ρ/µ e is the mass density of
+protons in the plasma and is related to the net electron densi ty ne by ρ/µ e = mpne, where
+mp is the proton mass.) As k → 0, the dispersion relations ω t(k) and ω ℓ (k) both approach
+the plasma frequency ω p, which is given by
+ω 2
+p = 4α
+π
+∫ ∞
+0
+dp p2
+E
+(
+1 − 1
+3 v2
+) (
+nF (E) + ¯ nF (E)
+)
+, (4)
+2
+PAGE 4
+where v = p/E is the velocity of the electrons or positrons. At large k, the behavior of the
+photon dispersion relation is ω t(k)2 → k2 + m2
+t , where mt is the transverse photon mass:
+m2
+t = 4α
+π
+∫ ∞
+0
+dp p2
+E
+(
+nF (E) + ¯ nF (E)
+)
+. (5)
+Comparison with (4) reveals that the transverse mass lies in the range ω p ≤ mt ≤
+√
+3/ 2 ω p.
+As k increases, the dispersion relation ω ℓ (k) for plasmons eventually crosses the light cone
+ω = k at a point kmax given by
+k2
+max = 4α
+π
+∫ ∞
+0
+dp p2
+E
+(1
+v log 1 + v
+1 − v − 1
+) (
+nF (E) + ¯ nF (E)
+)
+. (6)
+It satisﬁes ω p ≤ kmax < ∞ and represents the maximum momentum for which a plasmon can
+propagate. As discussed in Appendix A.2, the expressions (4 ), (5), and (6) for ω p, mt, and
+kmax are correct to ﬁrst order in the electromagnetic ﬁne structu re constant α ≃ 1/ 137. 036.
+Since the photon dispersion relation satisﬁes ω t(k) > k for all k and the plasmon dispersion
+relation satisﬁes ω ℓ (k) > k for k < k max, both photons and plasmons can decay into neutrino
+pairs.
+The production rate of neutrino pairs from the plasma proces s is sensitive to the
+precise form of the photon and plasmon dispersion relations . In 1961, Tsytovich [3] wrote
+down general integral equations for the dispersion relatio ns which include the eﬀects of
+electrons in the plasma to ﬁrst order in α . In their pioneering work on the plasma process
+in 1963, Adams, Ruderman, and Woo [1] repeated the general in tegral equations, but they
+used the following simple dispersion relations in their num erical work:
+ω t(k)2 = ω 2
+p + k2 , 0 ≤ k < ∞ , (7)
+ω ℓ(k)2 = ω 2
+p , 0 ≤ k < ω p . (8)
+At k = 0, these dispersion relations have the correct value ω p at all temperatures and
+electron densities. At nonzero k, they are accurate only at temperatures and densities where
+the electrons are nonrelativistic. In 1967, Baudet, Petros ian, and Salpeter [4] improved on
+3
+PAGE 5
+the dispersion relations (7) and (8) by including the ﬁrst re lativistic correction:
+ω 2
+t = ω 2
+p + k2 + ω 2
+1
+5
+k2
+ω 2
+t
+, 0 ≤ k < ∞ , (9)
+ω 2
+ℓ = ω 2
+p + 3ω 2
+1
+5
+k2
+ω 2
+ℓ
+, 0 ≤ k <
+√
+ω 2p + 3ω 2
+1/ 5 , (10)
+where ω 1 is given by the integral
+ω 2
+1 = 4α
+π
+∫ ∞
+0
+dp p2
+E
+(5
+3 v2 − v4
+) (
+nF (E) + ¯ nF (E)
+)
+. (11)
+It lies in the range 0 ≤ ω 1 ≤ ω p. At small k, the dispersion relations (9) and (10) have the
+correct behavior to order k2 at all temperatures and densities, but they are not accurate at
+large k if electrons are relativistic.
+In the subsequent 24 years, the dispersion relations (7) for photons and (10) for
+plasmons were used in all calculations of the plasma process [5, 6, 7]. It was pointed out
+by Braaten [2] in 1991 that they could lead to signiﬁcant erro rs at temperatures or densities
+where electrons become relativistic. In the relativistic l imit, the correct dispersion relations
+are the solutions to the following transcendental equation s:
+ω 2
+t = k2 + ω 2
+p
+3ω 2
+t
+2k2
+(
+1 − ω 2
+t − k2
+ω 2
+t
+ω t
+2k log ω t + k
+ω t − k
+)
+, 0 ≤ k < ∞ , (12)
+ω 2
+ℓ = ω 2
+p
+3ω 2
+ℓ
+k2
+(
+ω ℓ
+2k log ω ℓ + k
+ω ℓ − k − 1
+)
+, 0 ≤ k < ∞ . (13)
+These dispersion relations were ﬁrst derived by Silin in 196 0 using kinetic theory [8], and
+were rederived in 1982 by Klimov and by Weldon using thermal ﬁ eld theory methods [9].
+Expanding the right sides of (12) and (13) in powers of k and using the fact that ω 1 = ω p
+in the relativistic limit, one ﬁnds that they agree with (9) a nd (10) to order k2. They
+diﬀer signiﬁcantly at large k. For example, the transverse mass in the relativistic limit is
+mt =
+√
+3/ 2 ω p, while (9) gives the value
+√
+6/ 5 ω p. Also, the maximum plasmon momentum
+approaches inﬁnity in the relativistic limit, while (10) gi ves a value of
+√
+8/ 5 ω p for kmax.
+4
+PAGE 6
+In a subsequent paper by Itoh et al. [10], the energy loss from the plasma process was
+calculated for a relativistic plasma using the dispersion r elations for a degenerate plasma at
+zero temperature. The use of the zero-temperature dispersi on relations is valid only if T is
+negligible compared to the electron Fermi energy. Since thi s condition is not satisﬁed by the
+hottest stellar plasmas, the calculation of Ref. [10] can be improved by properly taking into
+account the eﬀects of temperature on the dispersion relatio ns. The general equations for the
+dispersion relations at zero temperature were obtained in c losed form by Jancovici in 1962
+[11] and used in the calculations of Ref. [10], but they are to o lengthy to reproduce here.
+Jancovici also gave simpliﬁed equations for the dispersion relations:
+ω 2
+t = k2 + ω 2
+p
+3ω 2
+t
+2v2
+F k2
+(
+1 − ω 2
+t − v2
+F k2
+ω 2
+t
+ω t
+2vF k log ω t + vF k
+ω t − vF k
+)
+, 0 ≤ k < ∞ , (14)
+ω 2
+ℓ = ω 2
+p
+3ω 2
+ℓ
+v2
+F k2
+(
+ω ℓ
+2vF k log ω ℓ + vF k
+ω ℓ − vF k − 1
+)
+, 0 ≤ k < k max , (15)
+where vF = pF /E F is the Fermi velocity, EF is the Fermi energy, and pF =
+√
+E2
+F − m2
+e is
+the Fermi momentum. The maximum plasmon momentum is
+kmax =
+[
+3
+v2
+F
+( 1
+2vF
+log 1 + vF
+1 − vF
+− 1
+)] 1/ 2
+ω p . (16)
+The dispersion equations (14) and (15) have been rederived u sing thermal ﬁeld theory meth-
+ods [12]. In Ref. [11], these simple dispersion equations we re only claimed to be valid for
+k << p F and ω << E F . However, as shown in Appendix A.2, they are in fact valid for all
+k. They take into account correctly all eﬀects of electrons in the plasma to ﬁrst order in α .
+Thus they could have been used in the calculations of Ref. [10 ] without any loss of accuracy.
+Expanding the right side of (14) and (15) for small k and using the fact that ω 1 = vF ω p in
+the degenerate limit, we see that they agree with (9) and (10) to order k2. In the relativistic
+limit where vF → 1, (14) and (15) reduce to the relativistic dispersion relat ions (12) and
+(13).
+Aside from the numerical complications of solving integral equations, the general
+dispersion relations for photons and plasmons given in Ref. [3] also suﬀer from a technical
+5
+PAGE 7
+diﬃculty in that ω t(k) and ω ℓ (k) become complex-valued if the temperature or the Fermi
+energy is suﬃciently high. The imaginary parts appear when ω p exceeds the threshold 2me for
+decay of a photon into an electron-positron pair in the vacuu m. This threshold is unphysical,
+because the rest mass of an electron in a relativistic plasma is signiﬁcantly greater than in the
+vacuum. The eﬀects of the plasma on the electron and photon di spersion relations are such
+that the decay of a photon or plasmon into an e+e− pair is always forbidden by energy and
+momentum conservation [13]. The problem of complex-valued dispersion relations persists
+in the degenerate limit, although the threshold is increase d to ω > E F + me, corresponding
+to the production of a positron at rest and an electron at the F ermi surface. The eﬀects of
+the unphysical process γ → e+e− may be numerically small, but it would be preferable to
+have dispersion relations from which they are absent altoge ther.
+In Appendix A.2, we derive dispersion relations for photons and plasmons which
+receive no contributions from the unphysical process γ → e+e− . This is achieved without any
+sacriﬁce in accuracy: all eﬀects from electrons and positro ns in the plasma are still included
+to ﬁrst order in α . The resulting expressions (4), (5), and (6) for the plasma f requency,
+the transverse photon mass, and the maximum plasmon momentu m are much simpler than,
+but just as accurate as, the corresponding expressions that follow directly from the general
+integral equations. The dispersion relations remain real- valued at all temperatures and
+electron densities. Their behavior at small k is consistent with (9) and (10), they reduce to
+(12) and (13) in the relativistic limit, and they reduce to (1 4) and (15) in the degenerate
+limit.
+The dispersion equations given in Appendix A.2 are integral equations involving 1-
+dimensional integrals over the momenta of electrons and pos itrons. Only in the classical
+limit, the degenerate limit, and the relativistic limit can the integrals be evaluated ana-
+lytically. At intermediate temperatures and electron dens ities, calculating the dispersion
+relation ω t(k) or ω ℓ(k) requires ﬁnding, for each value of k, the zero in ω of an ω -dependent
+integral. The numerical solution of such a complicated disp ersion equation is too ineﬃcient
+for many applications, such as calculating the energy loss f rom the plasma process. We
+have therefore developed an approximation to these dispers ion relations that is remarkably
+accurate at all temperatures and electron densities, but is simple enough to be used for prac-
+6
+PAGE 8
+tical calculations. The derivation of these dispersion rel ations is presented in Appendix A.4.
+They are correct to order α in the classical limit, the degenerate limit, and the relati vistic
+limit, and they provide a smooth interpolation to intermedi ate temperatures and electron
+densities. They are also correct to order k2 at small k for all temperatures and electron
+densities.
+Our approximate dispersion relations are as simple as the de generate dispersion rela-
+tions given in (14) and (15). Given the plasma frequency (4) a nd the freqency ω 1 given by
+(11), we deﬁne a parameter v∗:
+v∗ = ω 1
+ω p
+. (17)
+It lies in the range 0 ≤ v∗ ≤ 1, and has the intuitive interpretation of a typical velocit y of
+electrons in the plasma. Our approximate dispersion relati ons ω t(k) and ω ℓ (k) are obtained
+by solving the following equations which depend on v∗:
+ω 2
+t = k2 + ω 2
+p
+3ω 2
+t
+2v2∗k2
+(
+1 − ω 2
+t − v2
+∗k2
+ω 2
+t
+ω t
+2v∗k log ω t + v∗k
+ω t − v∗k
+)
+, 0 ≤ k < ∞ , (18)
+ω 2
+ℓ = ω 2
+p
+3ω 2
+ℓ
+v2∗k2
+(
+ω ℓ
+2v∗k log ω ℓ + v∗k
+ω ℓ − v∗k − 1
+)
+, 0 ≤ k < k max . (19)
+The maximum plasmon momentum is
+kmax =
+[
+3
+v2
+∗
+( 1
+2v∗
+log 1 + v∗
+1 − v∗
+− 1
+)] 1/ 2
+ω p . (20)
+The transverse photon mass is
+mt =
+[
+3
+2v2∗
+(
+1 − 1 − v2
+∗
+2v∗
+log 1 + v∗
+1 − v∗
+)] 1/ 2
+ω p . (21)
+These expressions satisfy 2 m2
+t + (1 − v2
+∗)k2
+max = 3ω 2
+p. The dispersion equations (18) and (19)
+are correct to order α for all k in three limiting cases that are studied in Appendix A.3. In
+the classical limit, (17) gives v∗ =
+√
+5T /m e. The dispersion equations (18) and (19), when
+expanded to ﬁrst order in v2
+∗, agree with (9) and (10). In the relativistic limit, v∗ = 1 and
+7
+PAGE 9
+(18) and (19) reduce to the relativistic dispersion equatio ns (12) and (13). In the degenerate
+limit, v∗ is equal to the Fermi velocity vF and the dispersion equations reduce to (14) and
+(15). Our approximate dispersion relations are also correc t to order k2 at all temperatures
+and electron densities. Expanding the right side of (19) and (18) in powers of k, we ﬁnd that
+to order k2 they reduce to (9) and (10). At large k, the dispersion equations (18) and (19) are
+correct to order α only in the classical, degenerate, and relativistic limits . For example, the
+expressions (20) and (21) for kmax and mt are not identically equal to the general expressions
+(6) and (5), but the diﬀerences are found empirically to be re markably small.
+To calculate the energy loss from the plasma process, we requ ire the photon and
+plasmon dispersion relations ω t(k) and ω ℓ (k), the corresponding residue factors Zt(k) and
+Zℓ (k), and the axial polarization function Π A(ω, k ) evaluated at the photon dispersion re-
+lation ω = ω t(k). General expressions for the residue factors and for Π A(ω, k ) are given
+in Appendices A and B. The use of these general expressions in calculations such as the
+energy loss is very cumbersome. Fortunately, the methods us ed to derive the approximate
+dispersion relations (18) and (19) can also be used to derive compact analytic expressions
+for Zt, Zl, and Π( ω t, k ) that are correct to order α in the classical limit, the degenerate limit,
+and the relativistic limit and are also correct for small k at all temperatures and electron
+densities. As shown in Apppendix A.4, the transverse and lon gitudinal residue factors can
+be approximated by
+Zt(k) = 2ω 2
+t (ω 2
+t − v2
+∗k2)
+3ω 2
+pω 2
+t + (ω 2
+t + k2)(ω 2
+t − v2
+∗k2) − 2ω 2
+t (ω 2
+t − k2) , (22)
+Zℓ (k) = 2(ω 2
+ℓ − v2
+∗k2)
+3ω 2p − (ω 2
+ℓ − v2∗k2) . (23)
+As shown in Appendix B, the axial polarization function Π( w, k ) evaluated at ω = ω t(k) can
+be approximated by
+ΠA(ω t, k ) = ω A k ω 2
+t − k2
+ω 2
+t − v2∗k2
+3ω 2
+p − 2(ω 2
+t − k2)
+ω 2p
+. (24)
+8
+PAGE 10
+Its behavior as k → 0 is Π A(ω t, k ) → ω Ak, where the coeﬃcient ω A is
+ω A = 2α
+π
+∫ ∞
+0
+dp p2
+E2
+(
+1 − 2
+3 v2
+) (
+nF (E) − ¯nF (E)
+)
+. (25)
+The emissivity Q of a plasma is the rate of energy loss per unit volume. To calcu late
+the emissivity from the plasma process, one must ﬁrst calcul ate the rates Γ t(k) and Γ ℓ (k)
+for the decay of a photon and a plasmon of momentum k into a ν ¯ν pair. These rates are
+calculated in Appendix C under the assumption that the numbe r density of neutrinos and
+antineutrinos remains negligible. The emissivity is then o btained by integrating over the
+phase space of the photon or plasmon, weighted by the number d ensity and by the energy.
+Summing over the 3 polarization states of photons and plasmo ns and over the neutrino types
+ν = ν e, ν µ , ν τ , the total emissivity is
+Q =
+∑
+ν
+∫ d3k
+(2π )3
+(
+2 nB(ω t(k)) ω t(k) Γ t(k) + nB(ω ℓ (k)) ω ℓ (k) Γ l(k)
+)
+. (26)
+The number densities of photons and plasmons are given by the Bose distribution:
+nB(ω ) = 1
+eω/T − 1 . (27)
+The total emissivity Q can be separated into the vector ( QT ) and axial vector ( QA) compo-
+nents of the photon contribution and the plasmon contributi on ( QL):
+QT = 2
+(∑
+ν
+C 2
+V
+)
+G2
+F
+96π 4α
+∫ ∞
+0
+dk k 2 Zt(k)
+(
+ω t(k)2 − k2
+)3
+nB(ω t(k)) , (28)
+QA = 2
+(∑
+ν
+C 2
+A
+)
+G2
+F
+96π 4α
+∫ ∞
+0
+dk k 2 Zt(k)
+(
+ω t(k)2 − k2
+)
+ΠA(ω t(k), k )2 nB(ω t(k)) , (29)
+QL =
+(∑
+ν
+C 2
+V
+)
+G2
+F
+96π 4α
+∫ kmax
+0
+dk k 2 Zℓ (k) ω ℓ (k)2
+(
+ω ℓ (k)2 − k2
+)2
+nB(ω ℓ (k)) . (30)
+The coeﬃcients CV and CA depend on the neutrino type and are given in Appendix B. The
+combinations that arise in the plasma process are
+∑
+ν
+C 2
+V = 3
+4 − 2 sin2 θ W + 12 sin 4 θ W ≈ 0. 911 , (31)
+9
+PAGE 11
+∑
+ν
+C 2
+A = 3
+4 . (32)
+The formulas for QT and QA were ﬁrst correctly given up to the factor of
+∑
+C 2
+V in Ref. [14].
+The correct values of CV were ﬁrst included in Ref. [5]. The formula (30) for QL diﬀers
+from that given in Refs. [2] and [10] because the deﬁnition of the longitudinal residue factor
+Zℓ (k) diﬀers by a factor of ( ω 2
+ℓ − k2)/ω 2
+ℓ . The formula (29) for QA supercedes that given in
+Ref. [15], in which the factor Zt(k) was omitted and the photon was assumed to satisfy the
+simple dispersion relation (7).
+The important momentum scales in the emissivity integrals a ppearing in (28), (29),
+and (30) are the plasma frequency ω p (which enters into the dispersion relations, the residue
+factors, and Π A(ω t, k )), and the temperature T (which occurs in the Bose distribution). The
+integrals can be simpliﬁed in the limiting cases T >> ω p and ω p << T . We ﬁrst consider
+the high temperature limit T >> ω p. The integral (28) for the transverse emissivity is
+dominated by momenta k of order T . Since T >> ω p, the photon dispersion relation can be
+approximated by ω 2
+t = k2 + m2
+t . We can therefore replace the factors of ω t(k)2 − k2 in (28)
+by m2
+t , and set ω t = k everywhere else in the integrand. The integral over k can then be
+evaluated analytically in terms of the Riemann zeta functio n: ζ 3 ≃ 1. 202057. The result is
+QT →
+(∑
+ν
+C 2
+V
+)
+G2
+F
+96π 4α 4ζ 3 m6
+t T 3 . (33)
+The integral (29) for the axial vector emissivity is also dom inated by momenta k of order T .
+Applying similar approximations as were used for the transv erse emissivity, it can also with
+some eﬀort be evaluated analytically:
+QA →
+(∑
+ν
+C 2
+A
+)
+G2
+F
+96π 4α 2
+[
+3
+v2∗
+( 1
+2v∗
+log 1 + v∗
+1 − v∗
+− 1
+)] 2
+m6
+t ω 2
+A T log 2T
+mt
+. (34)
+Up to logarithmic factors, the axial vector emissivity is su ppressed relative to QT by a factor
+of ω 2
+A/T 2. In the limit T >> ω p, the integral (30) for the longitudinal emissivity is domin ated
+by momenta k of order ω p. This is obvious in the nonrelativistic limit, because the u pper
+limit kmax is of order ω p. In the relativistic limit where kmax approaches inﬁnity, the factors
+10
+PAGE 12
+Zℓ (k) and ( ω ℓ(k)2 − k2)2 both approach zero very rapidly for k >> ω p, providing a cutoﬀ on
+the integral of order ω p. If k is of order ω p, then ω ℓ (k) is also of order ω p. Using ω ℓ (k) << T ,
+the Bose factor in (30) can be simpliﬁed to nB(ω ℓ ) → T /ω ℓ . The integral can still not be
+calculated analytically, but by dimensional analysis it mu st be proportional to ω 8
+p T . The
+longitudinal emissivity then has the form
+QL →
+(∑
+ν
+C 2
+V
+)
+G2
+F
+96π 4α A(v∗) ω 8
+p T . (35)
+The coeﬃcient A(v∗) varies slowly from 8 / 105 in the nonrelativistic limit ( v∗ → 0) to 0.349
+in the relativistic limit ( v∗ → 1) [2]. The longitudinal emissivity is suppressed relative to the
+transverse emissivity by a factor of ω 2
+p/T 2.
+We next consider the low temperature limit T << ω p. The integrals in (28) and (29)
+are dominated by momenta k << ω p. The Bose distribution can therefore be approximated
+by a Gaussian in k : nB(ω t(k)) → e− ω p/T exp(−ω ′′
+t (0)k2/ 2T ), where ω ′′
+t (0) = (1 + v2
+∗/ 5)/ω p.
+Everywhere else in the integrands, we can set ω t = ω p and ignore k relative to ω p. The
+integrals can then be evaluated analytically, with the resu lts
+QT →
+(∑
+ν
+C 2
+V
+)
+G2
+F
+96π 4α
+√
+2π
+(
+1 + 1
+5 v2
+∗
+)− 3/ 2
+ω 15/ 2
+p T 3/ 2 e− ω p/T , (36)
+QA →
+(∑
+ν
+C 2
+A
+)
+G2
+F
+96π 4α 3
+√
+2π
+(
+1 + 1
+5 v2
+∗
+)− 5/ 2
+ω 9/ 2
+p ω 2
+A T 5/ 2 e− ω p/T . (37)
+The axial vector emissivity is suppressed relative to QT by a factor of ω 2
+AT /ω 3
+p. A similar
+approximation can be applied to the longitudinal emissivit y provided that T << v 2
+∗ω p.
+The Bose distribution in (30) can then be approximated by a Ga ussian in k: nB(ω ℓ(k)) →
+e− ω p/T exp(−ω ′′
+ℓ (0)k2/ 2T ), where ω ′′
+ℓ (0) = (3 / 5)v2
+∗/ω p. The expression for the emissivity then
+reduces to
+QL →
+(∑
+ν
+C 2
+V
+)
+G2
+F
+96π 4α
+√π
+2
+(3
+5 v2
+∗
+)− 3/ 2
+ω 15/ 2
+p T 3/ 2 e− ω p/T . (38)
+At relativistic electron densities ( v∗ → 1), the longitudinal emissivity is smaller than the
+transverse emissivity only by a factor of
+√
+2.
+11
+PAGE 13
+In Figure 2, the components QT , QA, and QL of the emissivity are shown as a function
+of the proton mass density ρ/µ e = mpne at a temperature T = 10 11 K = 8.6 MeV. Also
+shown as dotted lines are the corresponding emissivities ca lculate using the 0-temperature
+dispersion relations as in Ref. [10]. While they give the sam e results at high densities,
+there are signiﬁcant discrepancies at the lowest densities considered in Figure 2. The shapes
+of the dispersion relations at T = 0 and T = 10 11K are very similar, since the electrons
+are relativistic over the entire range of densities shown. T he discrepancies in Figure 2
+therefore arise primarily from the diﬀerence in the value of the plasma frequency. At the
+highest densities shown, ω p is determined primarily by the Fermi energy, so the 0-temperature
+dispersion relations provide a good approximation. At the l owest densities shown, ω p is
+determined primarily by the temperature. The emissivities QT and QL therefore become
+almost independent of the density, as can be seen in Figure 2.
+The formulas for the dispersion relations and the neutrino e missivity that have been
+presented above were derived for a plasma of electrons and po sitrons in a uniform positively
+charged background that cancels the net charge of the electr ons and positrons. In a stellar
+plasma, the cancelling charge is actually provided by proto ns and heavier ions. These charged
+particles will also give contributions both to the electrom agnetic polarization functions and
+to the eﬀective photon-neutrino interaction that add to tho se of the electrons and positrons.
+The eﬀects of protons and heavier ions are negligible for ste llar plasmas as long as they are
+nonrelativistic. At the highest densities shown in Figure 2 , the protons are relativistic and
+their eﬀects are signiﬁcant. At T = 10 11 K and ρ/µ e = 10 14 g/ cm3, electrons and protons
+are degenerate with both having a Fermi momentum of 238 MeV. T heir contributions to
+ω 2
+p are proportional to their Fermi velocities, which is 1 for el ectrons and 0.246 for protons.
+Thus the protons increase the plasma frequency by about 12%. The resulting eﬀect on the
+emissivity will be much larger, since it scales like a large p ower of the plasma frequency.
+The modiﬁcations to the formulas for the emissivities that a re required in order to take into
+account the eﬀects of protons are given in Appendix C.
+We have developed a uniﬁed approach for calculating the neut rino energy loss from
+the plasma process at all temperatures and densities. We hav e introduced compact equations
+for the dispersion relations for photons and plasmons that a re correct to order α for all k in
+12
+PAGE 14
+the classical, degenerate, and relativistic limits and are also correct to order k2 at small k
+for all temperatures and electron densities. Compact expre ssions were also obtained for the
+other quantities that are required to calculate the transve rse, longitudinal, and axial vector
+components of the neutrino emissivity. Most previous numer ical studies of the energy loss
+from the plasma process have concentrated for simplicity on the case where the neutrino
+density remains negligible. In supernova explosions, neut rinos become trapped inside a
+neutrinosphere and the neutrino emissivity can be suppress ed by Pauli blocking eﬀects. Our
+approach should allow the eﬃcient numerical investigation of such eﬀects. It would also
+be useful to extend our approach to other neutrino emission p rocesses, to axion emission,
+and to other particle physics proceeses that can play an impo rtant role in astrophysics over
+enormous ranges of temperatures and densities. The investi gation of all of these processes
+would beneﬁt from a uniﬁed treatment that remains accurate e ven under extreme variations
+of temperature and density.
+This work was supported in part by the U.S. Department of Ener gy, Division of High
+Energy Physics, under Grant DE-FG02-91-ER40684.
+13
+PAGE 15
+A Photon and plasmon dispersion relations
+A.1 Dispersion relations to order α
+The eﬀects of a plasma on the propagation of photons and plasm ons is determined by the
+electromagnetic polarization tensor Π µν (K). If interactions with electrons and positrons
+are taken into account to leading order in the electromagnet ic coupling constant α , the
+polarization tensor is
+Πµν (K) = 16 πα
+∫ d3p
+(2π )3
+1
+2E
+(
+nF (E) + ¯ nF (E)
+)
+× P ·K(P µ K ν + K µ P ν ) − K 2P µ P ν − (P ·K)2gµν
+(P ·K)2 − (K 2)2/ 4 , (39)
+where K µ = (ω, ⃗k), P µ = (E, ⃗ p), K 2 = ω 2 − k2, and P ·K = Eω − ⃗ p·⃗k. The integral is over
+the momentum ⃗ pof electrons and positrons with energy E =
+√
+p2 + m2
+e. The polarization
+tensor satisﬁes Kµ Πµν (K) = 0, which is a consequence of gauge invariance. The transve rse
+and longitudinal polarization functions P it(ω, k ) and P iℓ (ω, k ) are
+P it(ω, k ) = 1
+2
+(
+δ ij − ˆkiˆkj
+)
+Πij(ω, ⃗k) , (40)
+P iℓ (ω, k ) = Π 00(ω, ⃗k) . (41)
+They are related to the standard transverse and longitudina l dielectric functions ǫt and ǫℓ
+by ǫt = 1 − P it/ω 2 and ǫℓ = 1 − P iℓ /k 2.
+In order to construct the eﬀective propagator Dµν (ω, ⃗k) for the electromagnetic ﬁeld,
+it is necessary to choose a gauge. The most convenient choice for treating plasma eﬀects is
+the Coulomb gauge deﬁned by ⃗∇ ·⃗A = 0. In Coulomb gauge, the nonzero components of
+the eﬀective propagator are
+D00(ω, ⃗k) = 1
+k2 − P iℓ (ω, k ) , (42)
+14
+PAGE 16
+Dij(ω, ⃗k) = 1
+ω 2 − k2 − P it(ω, k )
+(
+δ ij − ˆkiˆkj
+)
+. (43)
+The dispersion relations ω t(k) for photons and ω ℓ (k) for plasmons are the locations of the
+poles in the eﬀective propagator:
+D00(ω, ⃗k) → ω ℓ(k)2
+k2
+Zℓ (k)
+ω 2 − ω ℓ (k)2 as ω → ω ℓ(k) , (44)
+Dij(ω, ⃗k) → Zt(k)
+ω 2 − ω t(k)2
+(
+δ ij − ˆkiˆkj
+)
+as ω → ω t(k) . (45)
+The locations of the poles are independent of the choice of ga uge [16].
+The equations (44) and (45) also deﬁne the residue functions Zℓ (k) and Zt(k), which
+determine the strength with which a plasmon or photon of mome ntum k couples to an
+electromagnetic current:
+Zt(k) =
+[
+1 − ∂P i t
+∂ω 2 (ω t(k), k )
+] − 1
+, (46)
+Zℓ (k) = k2
+ω ℓ (k)2
+[
+− ∂P i ℓ
+∂ω 2 (ω ℓ(k), k )
+] − 1
+. (47)
+The longitudinal residue Zℓ(k) deﬁned by (47) diﬀers by a factor of ( ω 2
+ℓ − k2)/ω 2
+ℓ from
+that which was used in Refs. [2] and [10]. The residue of a pole in ω 2 of Dµν (ω, k ) can
+be identiﬁed as ǫµ (⃗k)ǫν (⃗k)∗, where ǫµ (⃗k) is the polarization 4-vector for the appropriate
+propagating mode. These modes are conveniently labelled by the helicity λ , which is the
+component of the angular momentum in the direction of ⃗k: λ = 0 for plasmons, λ = ±1 for
+photons. From (44) and (45), we identify the polarization 4- vectors to be
+ǫµ (⃗k, λ = 0) = ω ℓ (k)
+k
+√
+Zℓ (k) (1, 0)µ , (48)
+ǫµ (⃗k, λ = ±1) =
+√
+Zt(k)
+(
+0, ⃗ ǫ± (⃗k)
+)µ
+, (49)
+where ⃗ ǫ+(⃗k) and ⃗ ǫ− (⃗k) are orthogonal to ⃗k and normalized so that ⃗ ǫ± (⃗k) ·⃗ ǫ± (⃗k)∗ = 1. The
+polarization 4-vectors (48) and (49) satisfy the Coulomb ga uge constraint
+⃗k ·⃗ ǫ(⃗k, λ ) = 0 . (50)
+15
+PAGE 17
+They are used in Appendix C to calculate the decay rate of a pho ton or plasmon into neutrino
+pairs.
+The dispersion relations ω t(k) for photons and ω ℓ (k) for plasmons are the solutions
+to the equations
+ω t(k)2 = k2 + P it(ω t(k), k ) , (51)
+ω ℓ (k)2 = ω ℓ (k)2
+k2 P iℓ (ω ℓ(k), k ) . (52)
+If the complete order- α expression (39) for the polarization tensor is used to calcu late these
+dispersion relations, they become complex-valued when the temperature or electron density
+is large enough that the plasma frequency ω p exceeds 2 me. The imaginary part is propor-
+tional to the decay rate for a photon or plasmon into an electr on-positron pair: γ → e+e− .
+These imaginary parts are unphysical, because the plasma eﬀ ects that give the photon a
+nontrivial dispersion relation also change the energy-mom entum relation for the electron.
+These corrections are such that the decay γ → e+e− is always forbidden by energy and
+momentum conservation [13]. The unphysical eﬀects from thi s forbidden process also reveal
+themselves in the analytic behavior of the real parts of the d ispersion relations. Thus they
+can not be eliminated simply by deﬁning the dispersion relat ions ω t(k) and ω ℓ(k) to be the
+real parts of the poles in the eﬀective propagator.
+A.2 Removing eﬀects of electron pair production
+To eliminate the unphysical eﬀects of the forbidden decay γ → e+e− , we exploit the fact
+that there is a separation of momentum scales between the par ticles whose propagation is
+signiﬁcantly modiﬁed by the plasma and those that are respon sible for the plasma corrections.
+For example, in the relativistic limit, the dominant contri butions to the electromagnetic
+polarization tensor in (39) come from electrons and positro ns with momentum p of order the
+temperature T or the Fermi momentum pF , whichever is larger. However plasma corrections
+to the electron propagator are signiﬁcant only for momenta t hat are smaller by a factor of
+√
+α . In the nonrelativistic limit, plasma corrections to the el ectron propagator are always
+negligible. This justiﬁes the use of the vacuum energy-mome ntum relation E =
+√
+p2 + m2
+e
+16
+PAGE 18
+in calculating Π µν .
+The separation of momentum scales also allows us to simplify the expression (39)
+for the polarization tensor by dropping the term ( K 2)2/ 4 in the denominator. The physical
+interpretation is that this corresponds to calculating pla sma corrections using the forward
+scattering amplitudes for electrons and positrons in the va cuum [17]. The mathematical
+approximation that is required is
+|ω 2 − k2|<< 2E|ω − ⃗ v·⃗k|, (53)
+where ⃗ v= ⃗ p/E is the velocity of the electron or positron. We ﬁrst discuss t he case where k is
+of order ω p. Since the dispersion relations ω t and ω ℓ are then also of order ω p, the inequality
+(53) requires ω p << E . This is always satisﬁed in the nonrelativistic limit where E is of
+order me. In the relativistic limit, the inequality ω p << E fails to be satisﬁed only in a region
+of the electron or positron phase space whose contribution t o the integral in (39) is down
+by a factor of ω 2
+p/T 2 in the high temperature limit and a factor of ω 2
+p/E 2
+F in the degenerate
+limit. In either case, the contribution is suppressed by a fa ctor of α . We next discuss the
+case in which k is much greater than ω p. The solutions to the dispersion relations always
+have ω 2 − k2 of order ω 2
+p. Except in the relativistic limit, the inequality (53) then reduces
+to ω 2
+p/k << E , which is even more easily satisﬁed than the condition ω p << E discussed
+above. In the relativistic limit, the inequality (53) may fa il for electrons with velocity ⃗ v
+within an angle of order ω p/k of the momentum ⃗k, but this region of phase space gives a
+contribution to the integral in (39) that is suppressed by at least a factor of α . Thus the
+eﬀects of the ( K 2)2 term in the denominator of (39) are always at most comparable to the
+order α 2 corrections to the polarization tensor. It can therefore be dropped without any loss
+in accuracy.
+Dropping the ( K 2)2 term in the denominator of (39) eliminates the eﬀects of the
+unphysical process γ → e+e− , so that the dispersion relations for photons and plasmons
+remain real-valued at all temperatures and densities. It al so results in far simpler expressions
+for the transverse and longitudinal polarization function s deﬁned in (40) and (41). The
+17
+PAGE 19
+angular integrals can be evaluated analytically, and the po larization functions reduce to
+P it(ω, k ) = 4α
+π
+∫ ∞
+0
+dp p2
+E
+(
+ω 2
+k2 − ω 2 − k2
+k2
+ω
+2vk log ω + vk
+ω − vk
+) (
+nF (E) + ¯ nF (E)
+)
+, (54)
+P iℓ(ω, k ) = 4α
+π
+∫ ∞
+0
+dp p2
+E
+(
+ω
+vk log ω + vk
+ω − vk − 1 − ω 2 − k2
+ω 2 − v2k2
+) (
+nF (E) + ¯ nF (E)
+)
+. (55)
+Inserting (54) and (55) into (51) and (52) and solving these e quations numerically, one ﬁnds
+that the dispersion relation ω t(k) remains real-valued for all k and ω ℓ (k) remains real-valued
+for those values of k that satisfy ω ℓ (k) > k , corresponding to the timelike propagation of
+a plasmon. As k → 0, both dispersion relations approach the plasma frequency , which is
+given by (4). At large k, the behavior of the photon dispersion relation is governed by the
+transverse photon mass given by (5). The plasmon dispersion relation crosses the line ω = k
+at the point kmax given by (6).
+A.3 Limiting cases
+The polarization functions (54) and (55) can be evaluated an alytically in three limits: the
+classical limit, the degenerate limit, and the relativisti c limit. This allows the equations
+(51) and (52) for the dispersion relations to be written in cl osed form. We also obtain
+analytic expressions for the plasma frequency (4) and the re sidue functions (46) and (47).
+For completeness, we also give in each case the solution of (1 ) for the chemical potential µ
+as a function of the net electron density ne.
+Classical limit. In the classical limit, the plasma is nonrelativistic ( T << m e) and nonde-
+generate ( me − µ >> T ). The Fermi distribution for electrons can be approximated by the
+Boltzmann distribution e(µ − E)/T , and contributions from positrons can be ignored. The net
+electron density, including the ﬁrst correction proportio nal to T /m e, is
+ne(T, µ ) = e(µ − me)/T 1
+√
+2π 3 (meT )3/ 2
+(
+1 + 15
+8
+T
+me
+)
+. (56)
+This can be solved trivially for the chemical potential µ (T, n e) as a function of the temper-
+18
+PAGE 20
+ature and the net electron density. The plasma frequency ω p is
+ω 2
+p = e(µ − me)/T
+√
+8
+π α
+(
+meT 3
+)1/ 2 (
+1 − 5
+8
+T
+me
+)
+. (57)
+Using (56) to eliminate µ in favor of the net electron density, the expression (57) red uces to
+ω 2
+p = 4παn e
+me
+(
+1 − 5
+2
+T
+me
+)
+. (58)
+The polarization functions, including the ﬁrst correction proportional to T /m e, are
+Πt(ω, k ) = ω 2
+p
+(
+1 + k2
+ω 2
+T
+me
+)
+, (59)
+Πℓ (ω, k ) = ω 2
+p
+(
+k2
+ω 2 + 3 k4
+ω 4
+T
+me
+)
+. (60)
+The resulting dispersion equations are
+ω 2
+t = k2 + ω 2
+p
+(
+1 + k2
+ω 2
+t
+T
+me
+)
+, 0 ≤ k < ∞ , (61)
+ω 2
+ℓ = ω 2
+p
+(
+1 + 3 k2
+ω 2
+ℓ
+T
+me
+)
+, 0 ≤ k <
+√
+1 + 3T /m e ω p . (62)
+These are identical to the dispersion equations (9) and (10) with ω 1 =
+√
+5T /m e ω p. The
+transverse mass for the photon is mt =
+√
+1 + T /m e ω p. The residue factors are
+Zt(k) = 1 − ω 2
+pk2
+ω 4
+t
+T
+me
+, (63)
+Zℓ (k) = ω 2
+ℓ
+ω 2p
+(
+1 − 6 k2
+ω 2
+ℓ
+T
+me
+)
+. (64)
+Degenerate limit. The degenerate limit is the limit of low temperature T <<
+µ − me. In the limit T = 0, The Fermi distribution for electrons reduces to a step fu nction:
+nF (E) = 1 for E < µ and nF (E) = 0 for E > µ . The net electron density is
+ne(T = 0, µ ) = 1
+3π 2
+(
+µ 2 − m2
+e
+)3/ 2
+. (65)
+19
+PAGE 21
+The chemical potential at T = 0 is called the Fermi energy: µ = EF . The solution to (65)
+for the Fermi momentum pF ≡
+√
+E2
+F − m2
+e as a function of ne is
+pF =
+(
+3π 2ne
+)1/ 3
+. (66)
+The plasma frequency ω p reduces in the T = 0 limit to
+ω 2
+p = 4α
+3π p2
+F vF , (67)
+where the Fermi velocity is vF = pF /E F . The polarization functions are
+Πt(ω, k ) = ω 2
+p
+3ω 2
+2v2
+F k2
+(
+1 − ω 2 − v2
+F k2
+ω 2
+ω
+2vF k log ω + vF k
+ω − vF k
+)
+, (68)
+Πℓ (ω, k ) = ω 2
+p
+3
+v2
+F
+(
+ω
+2vF k log ω + vF k
+ω − vF k − 1
+)
+. (69)
+The dispersion equations reduce to (14) and (15). The transv erse photon mass is
+mt =
+[
+3
+2v2
+F
+(
+1 − 1 − v2
+F
+2vF
+log 1 + vF
+1 − vF
+)] 1/ 2
+ω p . (70)
+The inverses of the residue factors are
+Z − 1
+t = 1 − 3
+2
+ω 2
+p
+v2
+F k2
+(
+3
+2 − 3ω 2
+t − v2
+F k2
+2ω 2
+t
+ω t
+2vF k log ω t + vF k
+ω t − vF k
+)
+, (71)
+Z − 1
+ℓ = 3
+2
+ω 2
+p
+v2
+F k2
+(
+ω 2
+ℓ
+ω 2
+ℓ − v2
+F k2 − ω ℓ
+2vF k log ω ℓ + vF k
+ω ℓ − vF k
+)
+. (72)
+The dispersion equations (14) and (15) can be used to elimina te the logarithms from (71)
+and (72). The resulting algebraic expressions for Zt and Zl have the form (22) and (23),
+with v∗ = vF .
+Relativistic limit. The relativistic limit is the limit of either high temperatu re T >> m e
+or high density µ >> m e. In the limit me = 0, the net electron density is
+ne(T, µ ) = 1
+3π 2 µ
+(
+µ 2 + π 2T 2
+)
+. (73)
+20
+PAGE 22
+The solution for the chemical potential as a function of ne is
+µ (T, n e) =
+
+
+
+
+
+
+√
+(1
+2 p3
+F
+)2
++
+(
+π 2
+3 T 2
+)3
++ 1
+2p3
+F
+
+
+
+1/ 3
+−
+
+
+
+
+
+
+√
+(1
+2 p3
+F
+)2
++
+(
+π 2
+3 T 2
+)3
+− 1
+2 p3
+F
+
+
+
+1/ 3
+.
+(74)
+where pF = (3π 2ne)1/ 3. The plasma frequency is
+ω 2
+p = 4α
+3π
+(
+µ 2 + 1
+3π 2T 2
+)
+. (75)
+The polarization functions are
+Πt(ω, k ) = ω 2
+p
+3ω 2
+2k2
+(
+1 − ω 2 − k2
+ω 2
+ω
+2k log ω + k
+ω − k
+)
+, (76)
+Πℓ (ω, k ) = 3 ω 2
+p
+(
+ω
+2k log ω + k
+ω − k − 1
+)
+. (77)
+The dispersion equations reduce to (12) and (13). The maximu m plasmon momentum is
+inﬁnite and the transverse mass is mt =
+√
+3/ 2 ω p. The inverses of the residue factors are
+Z − 1
+t = 1 − 3
+2
+ω 2
+p
+k2
+(
+3
+2 − 3ω 2
+t − k2
+2ω 2
+t
+ω t
+2k log ω t + k
+ω t − k
+)
+, (78)
+Z − 1
+ℓ = 3
+2
+ω 2
+p
+k2
+(
+ω 2
+ℓ
+ω 2
+ℓ − k2 − ω ℓ
+2k log ω ℓ + k
+ω ℓ − k
+)
+. (79)
+The dispersion equations (12) and (13) can be used to elimina te the logarithms from (78)
+and (79). The resulting algebraic expressions for Zt and Zl have the form (22) and (23) with
+v∗ = 1.
+A.4 Analytic Approximation
+The dispersion relations (51) and (52) are integral equatio ns and solving them numerically
+can be computationally time-intensive. It is therefore des irable to have analytic approxima-
+tions to these equations. To derive such equations, we begin from the expressions (54) and
+21
+PAGE 23
+(55) for the polarization functions and integrate by parts:
+P it(ω, k ) = −4α
+π
+∫ ∞
+0
+dp p3
+E
+{
+1
+2v2
+(
+ω 2
+k2 − ω 2 − v2k2
+k2
+ω
+2vk log ω + vk
+ω − vk
+)}
+d
+dp
+(
+nF (E) + ¯ nF (E)
+)
+,
+(80)
+P iℓ (ω, k ) = −4α
+π
+∫ ∞
+0
+dp p3
+E
+{
+1
+v2
+(
+ω
+2vk log ω + vk
+ω − vk − 1
+)}
+d
+dp
+(
+nF (E) + ¯ nF (E)
+)
+. (81)
+If the integrals over the momentum p of the electrons and positrons were dominated by a
+single velocity v∗, then the factors in the curly brackets could be evaluated at v = v∗ and
+pulled outside the integral. This is in fact the case in the cl assical limit, the relativistic limit,
+and the degenerate limit. In the classical limit, all the ele ctrons have velocities v near 0. In
+the relativistic limit, electrons and positrons all have ve locities v∗ = 1. In the degenerate
+limit, the factor dnF /dp is sharply peaked at the Fermi velocity vF . After pulling the
+expressions in curly brackets out of the integrands in (80) a nd (81), the remaining integrals
+over p are proportional to the square of plasma frequency. This can seen by using integration
+by parts on (4):
+ω 2
+p = −4α
+3π
+∫ ∞
+0
+dp p3
+E
+d
+dp
+(
+nF (E) + ¯ nF (E)
+)
+. (82)
+The resulting analytic expressions for the polarization fu nctions are
+P it(ω, k ) = ω 2
+p
+3
+2v2∗
+(
+ω 2
+k2 − ω 2 − v2
+∗k2
+k2
+ω
+2v∗k log ω + v∗k
+ω − v∗k
+)
+, (83)
+P iℓ (ω, k ) = ω 2
+p
+3
+v2∗
+(
+ω
+2v∗k log ω + v∗k
+ω − v∗k − 1
+)
+. (84)
+Inserting these expressions into (51) and (52), we obtain th e dispersion equations (18) and
+(19).
+For suitable choices of the velocity v∗, the expressions (83) and (84) will be accurate
+in the classical, degenerate, and relativistic limits. The parameter v∗ can also be chosen so
+that they are correct at small k for all temperatures and electron densities. At small k, the
+22
+PAGE 24
+general expressions (54) and (55) for the polarization func tions reduce to
+P it(ω, k ) ≈ 4α
+π
+∫ ∞
+0
+dp p2
+E
+{(
+1 − v2
+3
+)
++
+(
+v2
+3 − v4
+5
+)
+k2
+ω 2
+} (
+nF (E) + ¯ nF (E)
+)
+, (85)
+P iℓ (ω, k ) ≈ 4α
+π
+∫ ∞
+0
+dp p2
+E
+{(
+1 − v2
+3
+)
+k2
+ω 2 +
+(
+v2 − 3v4
+5
+)
+k4
+ω 4
+} (
+nF (E) + ¯ nF (E)
+)
+. (86)
+Expanding out the analytic expression (83) for the transver se polarization function in powers
+of k, we ﬁnd that it agrees with (85) to order k2 provided that we take v∗ = ω 1/ω p, where ω 1 is
+given in (11). We ﬁnd also that the analytic expression (84) f or the longitudinal polarization
+function agrees with (86) to order k4 for the same value of v∗.
+We can also obtain compact analytic expressions for the resi due factors Zt and Zℓ .
+Inserting (83) and (84) into the formulas (46) and (47), we ob tain
+Z − 1
+t = 1 − 3
+2
+ω 2
+p
+v2∗k2
+(
+3
+2 − 3ω 2
+t − v2
+∗k2
+2ω 2
+t
+ω t
+2v∗k log ω t + v∗k
+ω t − v∗k
+)
+, (87)
+Z − 1
+ℓ = 3
+2
+ω 2
+p
+v2∗k2
+(
+ω 2
+ℓ
+ω 2
+ℓ − v2∗k2 − ω ℓ
+2v∗k log ω ℓ + v∗k
+ω ℓ − v∗k
+)
+. (88)
+The dispersion equations (18) and (19) can be used to elimina te the logarithms from (87)
+and (88), resulting in the simple algebraic expressions (22 ) and (23).
+B Eﬀective photon-neutrino interaction
+The decay of a photon or plasmon into neutrino pairs proceeds through an eﬀective photon-
+neutrino interaction. This eﬀective interaction arises fr om the electromagnetic coupling of a
+photon to electrons or positrons in the plasma, together wit h the weak interaction coupling
+of the electron or positron to a neutrino pair. It can be summa rized by an eﬀective vertex
+Γαµ for the interaction of the photon ﬁeld Aµ with the neutrino current ¯νγ α (1 − γ 5)ν :
+Γαµ (ω, ⃗k) = GF
+√
+2
+1√
+4πα
+(
+CV P iℓ(ω, k )
+(
+1, ω
+k
+ˆk
+)α (
+1, ω
+k
+ˆk
+)µ
++ gαi
+[
+CV P it(ω, k )
+(
+δ ij − ˆkiˆkj
+)
++ CA ΠA(ω, k )
+(
+iǫijm ˆkm
+)]
+gjµ
+)
+, (89)
+23
+PAGE 25
+where K µ = ( ω, ⃗k) is the 4-momentum of the photon. This eﬀective vertex satis ﬁes the
+identity Γαµ Kµ = 0, which guarantees the gauge invariance of the interactio n. The functions
+P it(ω, k ) and P iℓ(ω, k ) in (89) are the transverse and longitudinal electromagnet ic polariza-
+tion functions deﬁned in (40) and (41). The axial polarizati on function calculated to leading
+order in α is
+ΠA(ω, k ) = 8 πα K 2
+k
+∫ d3p
+(2π )3
+1
+2E
+(
+nF (E) − ¯nF (E)
+)
+P ·K ω − K 2E
+(P ·K)2 − (K 2)2/ 4 , (90)
+where K 2 = ω 2 − k2 and P ·K = Eω − ⃗ p·⃗k. The coeﬃcients CV and CA depend implicitly
+on the neutrino type. The vector coeﬃcients are
+CV = 2 sin 2 θ W + 1
+2 for ν e , (91)
+CV = 2 sin 2 θ W − 1
+2 for ν µ , ν τ , (92)
+where θ W is the weak mixing angle: sin 2 θ W ≃ 0. 226. The axial vector coeﬃcients are
+CA = 1
+2 for ν e , (93)
+CA = −1
+2 for ν µ , ν τ . (94)
+The axial polarization function (90) agrees with the expres sion used in Ref. [15], provided
+that the nonrelativistic dispersion relation (7) is used to set K 2 = ω 2
+p.
+For frequencies ω greater than 2 me, the expression (90) for the axial polarization
+function has an imaginary part that arises from the producti on of e+e− pairs. As discussed
+in Appendix A, this unphysical behavior can be eliminated wi thout any loss of accuracy
+by dropping the term ( K 2)2/ 4 in the denominator of (90). The resulting expression for
+ΠA(w, k ), when evaluated on the photon dispersion relation ω = ω t(k), is still correct to
+leading order in α . Having dropped the ( K 2)2/ 4 term in the denominator of (90), the axial
+polarization function reduces to
+ΠA(ω, k ) = 2α
+π
+ω 2 − k2
+k
+∫ ∞
+0
+dp p2
+E2
+(
+ω
+2vk log ω + vk
+ω − vk − ω 2 − k2
+ω 2 − v2k2
+) (
+nF (E) − ¯nF (E)
+)
+.
+(95)
+24
+PAGE 26
+Its behavior for small k is Π A(ω, k ) → ω Ak, where ω A is given in (25).
+The expression (95) for the axial polarization function can be evaluated analytically
+in the classical limit, the degenerate limit, and the relati vistic limit:
+Classical limit. At leading order in T /m e, the axial polarization function reduces to
+ΠA(ω, k ) = e(µ − me)/T
+√
+2
+π α
+(
+T 3
+me
+)1/ 2
+k(ω 2 − k2)
+ω 2 . (96)
+Eliminating the chemical potential and using the expressio n (57) for the plasma frequency
+in the classical limit, (96) simpliﬁes further to
+ΠA(ω, k ) = ω 2
+p
+2me
+k(ω 2 − k2)
+ω 2 . (97)
+Degenerate limit. At T = 0, the axial polarization function reduces to
+ΠA(ω, k ) = 2α
+π pF
+ω 2 − k2
+k
+(
+ω
+2vF k log ω + vF k
+ω − vF k − 1
+)
+. (98)
+After setting ω = ω t(k), the logarithm can be eliminated using the dispersion rela tion (14).
+The resulting expression for Π A(ω t, k ) is (24) with v∗ = vF and ω A = (2α/ 3π )pF v2
+F .
+Relativistic limit. For me = 0, the axial polarization function reduces to
+ΠA(ω, k ) = 2α
+π µ ω 2 − k2
+k
+(
+ω
+2k log ω + k
+ω − k − 1
+)
+. (99)
+After setting ω = ω t(k), the logarithm can be eliminated using the dispersion rela tion (12).
+The resulting expression for Π A(ω t, k ) is (24) with v∗ = 1 and ω A = (2α/ 3π )µ .
+We can derive an analytic approximation to the axial polariz ation function using the
+same methods that were applied to the transverse and longitu dinal polarization functions in
+Appendix A. Starting with the expression (95) and integrati ng by parts, we obtain
+ΠA(ω, k ) = −2α
+π
+ω 2 − k2
+k
+∫ ∞
+0
+dp p3
+E2
+{
+1
+v2
+(
+ω
+2vk log ω + vk
+ω − vk − 1
+)}
+d
+dp
+(
+nF (E) − ¯nF (E)
+)
+.
+(100)
+25
+PAGE 27
+In the classical, degenerate, and relativistic limits, the integral is dominated by a single
+momentum v∗. The factor in curly brackets can therefore be evaluated at v∗ and pulled
+outside the integral. The remaining integral over p is proportional to ω A, which after applying
+integration by parts to the expression in (25) can be written in the form
+ω A = −2α
+3π
+∫ ∞
+0
+dp p3
+E2
+d
+dp
+(
+nF (E) − ¯nF (E)
+)
+. (101)
+Our ﬁnal expression for the axial polarization function is
+ΠA(ω, k ) = ω A
+ω 2 − k2
+k
+3
+v2∗
+(
+ω
+2v∗k log ω + v∗k
+ω − v∗k − 1
+)
+. (102)
+This expression is not only correct for all k in the classical, degenerate, and relativistic
+limits, but it has the correct behavior for small k at all temperatures and electron densities.
+The axial polarization function Π A(ω t, k ) evaluated at the photon dispersion relation can be
+further simpliﬁed by using the dispersion relation (19) to e liminate the logarithm in (102),
+resulting in the analytic expression given in (24).
+C Decay rate of photon or plasmon
+In this Appendix, we calculate the rates Γ t(k) and Γ l(k) for a photon or plasmon of momen-
+tum k to decay into neutrino pairs. We begin by writing down the mat rix element M for
+the decay into a neutrino and antineutrino of momenta ⃗ p1 and ⃗ p2:
+M = GF
+√
+2
+(
+Γαµ ǫµ (⃗k, λ )
+)
+¯u(⃗ p1)γ α (1 − γ 5)v(⃗ p2) , (103)
+where ǫµ (⃗k, λ ) is the polarization 4-vector given in (49) for photons or (4 8) for plasmons,
+Γαµ is the eﬀective photon-neutrino vertex given in (89), and ¯ u(⃗ p1) and v(⃗ p2) are the spinors
+for the neutrino and antineutrino. The matrix element must b e squared and integrated over
+the phase space of the neutrino and antineutrino:
+Γλ (k) = 1
+2ω λ (k)
+∫ d3p1
+(2π )3
+1
+2p1
+∫ d3p2
+(2π )3
+1
+2p2
+(2π )4δ 4(P1 + P2 − K) |M|2 . (104)
+26
+PAGE 28
+The subscript λ on Γ and on ω is either t, corresponding to helicity λ = ±1, or ℓ, correspond-
+ing to helicity λ = 0. In the delta function, P1 = ( p1, ⃗ p1), P2 = (p2, ⃗ p2), and K = (ω λ (k), ⃗k)
+are the 4-momenta of the neutrino, antineutrino, and photon or plasmon, respectively. In the
+expression (104), we have assumed for simplicity that the nu mber density of neutrinos and
+antineutrinos is negligible. Otherwise the phase space int egrals in (104) must be weighted
+by appropriate Pauli blocking factors. The only dependence in the matrix element (103) on
+the momenta ⃗ p1 and ⃗ p2 is in the spinor factor. After multiplying the spinor factor by its
+complex conjugate, it can be expressed in the form of a Lorent z tensor:
+¯u(⃗ p1)γ α (1 − γ 5)v(⃗ p2)¯v(⃗ p2)γ β (1 − γ 5)u(⃗ p1)
+= 8
+(
+P α
+1 P β
+2 + P α
+2 P β
+1 − P1 ·P2gαβ − iǫαβµν P1µ P2ν
+)
+. (105)
+In the absence of Pauli blocking factors, the integral over t he phase space of the neutrino
+and antineutrino in (104) can be carried out analytically, w ith the result
+∫ d3p1
+(2π )3
+1
+2p1
+∫ d3p2
+(2π )3
+1
+2p2
+(2π )4δ 4(P1 + P2 − K) ¯ u(⃗ p1)γ α (1 − γ 5)v(⃗ p2) ¯v(⃗ p2)γ β (1 − γ 5)u(⃗ p1)
+= 1
+3π
+(
+K α K β − K 2gαβ
+)
+, (106)
+where K 2 = w2
+λ − k2. Since the eﬀective vertex Γ αµ satisﬁes the identity Kα Γαµ = 0, only
+the K 2gαβ term in (106) contributes to the decay rate (104). The decay r ate then reduces
+to
+Γλ (k) = − G2
+F
+12π
+ω λ (k)2 − k2
+ω λ (k)
+(
+Γαµ ǫµ (⃗k, λ )
+) (
+Γαρ ǫρ (⃗k, λ )
+)∗
+. (107)
+To complete the calculation of the decay rate, the eﬀective v ertex Γ αµ in (89) must
+be contracted with the appropriate polarization 4-vector ǫµ (⃗k, λ ) and the energy ω must be
+evaluated at the corresponding dispersion relation ω t(k) or ω ℓ (k). For the plasmon, only
+the ﬁrst term in (89) contributes. By the plasmon dispersion equation (52), Π l(ω, k ) can be
+replaced by k2 and the contraction of Γ αµ with the polarization vector (48) reduces to
+Γαµ (ω ℓ (k), ⃗k) ǫµ (⃗k, 0) = CV
+GF√
+8πα
+√
+Zℓ (k) k ω ℓ(k)
+(
+1, ω
+k
+ˆk
+)α
+. (108)
+27
+PAGE 29
+For the photon, it is the last term in the eﬀective vertex (89) that contributes. By the photon
+dispersion equation (51), Π t(ω, k ) can be replaced by ω t(k)2 − k2 and the contraction of Γ αµ
+with the polarization vector (49) reduces to
+Γαµ (ω t(k), ⃗k) ǫµ (⃗k, ±1) = GF√
+8πα
+√
+Zt(k)
+(
+CV (ω t(k)2 − k2)
+(
+0, ⃗ ǫ± (⃗k)
+)α
+− CA ΠA(ω t(k), k )
+(
+0, i ˆk × ⃗ ǫ± (⃗k)
+)α
+)
+. (109)
+Squaring the expression (109) and (108) and inserting into ( 107), the decay rates of the
+photon and plasmon into neutrino pairs reduce to
+Γt(k) = G2
+F
+48π 2α Zt(k) ω t(k)2 − k2
+ω t(k)
+(
+C 2
+V (ω t(k)2 − k2)2 + C 2
+A ΠA(ω t(k), k )2
+)
+. (110)
+Γℓ (k) = C 2
+V
+G2
+F
+48π 2α Zℓ (k) ω ℓ (k)
+(
+ω ℓ(k)2 − k2
+)2
+. (111)
+The expressions (111) and (110) for the decay rates of photon s and plasmons include
+only the eﬀects of electrons and positrons in the plasma. It i s straightforward to include also
+the eﬀects of protons provided that the plasma frequency rem ains small compared to 700
+MeV, so that form factor eﬀects can be neglected. The eﬀects o f protons on the dispersion
+relations and on the eﬀective neutrino-photon vertex must b oth be included. The expressions
+(110) and (111) for the decay rates are replaced by
+Γt(k) = G2
+F
+48π 2α Zt
+ω 2
+t − k2
+ω t
+( (
+CV P i(e)
+t (ω t, k ) − hV P i(p)
+t (ω t, k )
+)2
++
+(
+CA Π(e)
+A (ω t, k ) − hA Π(p)
+A (ω t, k )
+)2
+)
+′ (112)
+Γℓ (k) = G2
+F
+48π 2α Zℓ
+ω ℓ (ω 2
+ℓ − k2)2
+k4
+(
+CV P i(e)
+ℓ (ω ℓ , k ) − hV P i(p)
+ℓ (ω ℓ, k )
+)2
+, (113)
+where P i(e)
+t , P i(e)
+ℓ , and Π (e)
+A are the contributions to the transverse, longitudinal, and axial
+polarization functions from electrons, while P i(p)
+t , P i(p)
+ℓ , and Π (p)
+A are the corresponding
+28
+PAGE 30
+contributions from protons. The proton terms have the same f orm as the electron terms
+(83), (84), and (102), except that the parameters ω p, v∗ = ω 1/ω p, and ω A are calculated
+using the integrals (4), (11), and (25) with the electron mas s me replaced by the proton
+mass mp. The coeﬃcients hV and hA that describe the interactions of the proton with
+neutrinos are
+hV = −2 sin2 θ W + 1
+2 for ν e , ν µ , ν τ , (114)
+hV = 1
+2 gA for ν e , ν µ , ν τ , (115)
+where gA ≈ 1. 26. The dispersion equations (51) and (52) must also be modiﬁ ed to include
+the eﬀects of protons:
+ω 2
+t = k2 + P i(e)
+t (ω t, k ) + P i(p)
+t (ω t, k ) , (116)
+ω 2
+ℓ = ω 2
+ℓ
+k2
+(
+P i(e)
+ℓ (ω ℓ , k ) + P i(p)
+ℓ (ω ℓ , k )
+)
+. (117)
+The residue factors Zt in (112) and Zℓ in (113) are then given by the expressions (87) and
+(88), except that in addition to the electron term on the righ t side, there is also a proton
+term of the same form but with appropriate values for the para meters ω p and v∗.
+29
+PAGE 31
+References
+[1] J.B. Adams, M.A. Ruderman, and C.-H. Woo, Phys. Rev. 129, 1383 (1963); C.L. Inman
+and M.A. Ruderman, Phys. Rev. 140, 1025 (1965).
+[2] E. Braaten, Phys. Rev. Lett. 66, 1655 (1991).
+[3] V.N. Tsytovich, Sov. Phys. JETP 13, 1249 (1961).
+[4] G. Baudet, V. Petrosian, and E.E. Salpeter, Astrophys. J. 150, 979 (1967).
+[5] D.A. Dicus, Phys. Rev. D6, 941 (1972).
+[6] H. Munakata, Y. Kohyama, and N. Itoh, Astrophys. J. 296, 197 (1986); N. Itoh, T.
+Adachi, M. Nakagawa, Y. Kohyama, and H. Munakata, Astrophys. J. 339, 354 (1989);
+(erratum in Astrophys. J. 360, 741 (1990)).
+[7] P.J. Schinder, D.N. Schramm, P.J. Wiita, S.H. Margolis, and D.L. Tubbs, Astrophys.
+J. 313, 531 (1987).
+[8] V.P. Silin, Sov. Phys. JETP 11, 1136 (1960).
+[9] V.V. Klimov, Sov. Phys. JETP 55, 199 (1982); H.A. Weldon, Phys. Rev. D26, 1394
+(1982).
+[10] N. Itoh, H. Mutoh, A. Hikjita, and Y. Kohyama, Astrophys. J. 395, 622 (1992).
+[11] B. Jancovici, Nuovo Cim. 25, 428 (1962).
+[12] T. Altherr, E. Petitgirard, and T. del Rio Gaztellurrut ia, Annecy preprint ENSLAPP-
+A-412/92 (December 1992).
+[13] E. Braaten, Astrophys. J. 392, 70 (1992).
+[14] V.N. Tsytovich, Sov. Phys. JETP 18, 816 (1964); M.H. Zaidi, Nuovo Cim. 40, 502
+(1965).
+[15] Y. Kohyama, N. Itoh, and H. Munakata, Astrophys. J. 310, 815 (1986).
+30
+PAGE 32
+[16] R. Kobes, G. Kunstatter, and A. Rebhan, Phys. Rev. Lett. 64, 2992 (1990).
+[17] G. Barton, Ann. Phys. (N.Y.) 200, 271 (1990); E. Braaten, Northwestern preprint
+NUHEP-TH-92-22 (October 1992).
+31
+PAGE 33
+Figure Captions
+1. Dispersion relations ω (k) for photons (upper solid curve) and plasmons (lower solid
+curve) at temperature T = 10 11 K and proton mass density ρ/µ e = 10 12 g/ cm3.
+2. Transverse (T), longitudinal (L), and axial vector (A) co mponents of the neutrino
+emissivity (in units of erg / s/ cm3) as a function of the proton mass density ρ/µ e (in
+units of g / cm3) at the temperature T = 10 11 K (solid curves). Also shown are the cor-
+responding emissivities calculated with the 0-temperatur e dispersion relations (dashed
+curves).
+32

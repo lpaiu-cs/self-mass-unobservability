@@ -1,0 +1,48 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "98f78085",
+  "claim": "Interpolate the accepted cross-degeneracy collision response onto the actual radial cells while preserving the positive DC measure and its collision-independent high-frequency thermal susceptibility. Test new states withheld from interpolation.",
+  "interpolation": "Use the native conductivity only as a coordinate trend for the computed/native DC ratio, with no fitted normalization. Normalize every pole by Drude_weight/K; mix the two adjacent positive DC probabilities in original cell coordinate, then restore the exact susceptibility and interpolated K at each point.",
+  "boundary": "Cells 0..1721 and the external thermal surface remain unspecified. Export unknown faces explicitly. No zero-flux replacement, no new stellar path.",
+  "anchors": [
+    1722,
+    2000,
+    2500,
+    2800,
+    3000,
+    3500,
+    4000,
+    4122,
+    4928,
+    5734
+  ],
+  "withheld": [
+    1850,
+    2650,
+    3250,
+    4525
+  ],
+  "gates": {
+    "K_relative": 0.01,
+    "tau_relative": 0.01,
+    "Drude_relative": 1e-08
+  },
+  "bindings": {
+    "verification/def_conduction_envelope_bank.py": "95c7cead3efb0a525b157c3e9c63fd55b6b7d9eb4792b62f3f05a3b1730b1728",
+    "verification/def_ionic_structure_transport.py": "cdec1f55bf0c9104e94124423c1fdd750bf254104ef92976684e01e13c4454b2",
+    "verification/def_electron_warm_quadrature.py": "a77214cba57a36e1155ea85a3472f3afa4bebc3919ebb6bb79c5822552fea4e6",
+    "outputs/direct-eos-gr33/def-ionic-structure-transport/manifest.json": "538223311a1b1767806dc0a4b881a5021ff49a483f111292d0115c1a7cbadfc3",
+    "outputs/direct-eos-gr33/def-ionic-structure-transport/canonical-result.json": "a10e3788a9dcbbad97ca0c64bbcd063cbed8888fad1eefdb737eae19de42b6b0",
+    "outputs/direct-eos-gr33/def-free-surface-thermal/coefficients.npz": "8fa9ddf79c966965a3a3fa26e6b4c738f82eec0b6ad257e521ae37c9403fb46c"
+  },
+  "budget": {
+    "fresh_states": 4,
+    "events_per_state": 524288,
+    "hard_seconds": 90,
+    "CPU_workers": 1,
+    "BLAS_threads": 1,
+    "new_native_calls": 0,
+    "new_stellar_steps": 0,
+    "automatic_expansion": false
+  }
+}

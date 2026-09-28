@@ -1,0 +1,13 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "variables": "w=epsilon+P; b=rho_B*cv*T/w; r=(dP/dlnrho_B)_T/w; d=(dP/dlnT)_rho/w; e=(P-rho_B*(du/dlnrho_B)_T)/w; h=K*T/(w*c^2); lambda=tau/h; q=delta physical_heat_flux/(c*w). Coefficients are constant local equilibrium values. k=c*physical_wave_number.",
+  "equations": "x_dot+c*v_x=0; b*y_dot+c*e*v_x+c*q_x=0; v_dot+q_dot+c*r*x_x+c*d*y_x=0; h*v_dot+tau*q_dot+q+c*h*y_x=0.",
+  "dispersion": "(tau-h)*s^4+s^3+k^2*(tau*g+h*(1-e-d)/b)*s^2+g*k^2*s+h*r*k^4/b=0, g=r+d*e/b.",
+  "Routh_Hurwitz": "For b,h,r>0, tau>h, g>0, 1-e-d+b*g>0, and g*(1-e-d+b*g)-r>0, all roots have Re(s)<0 for every nonzero real k. The two nontrivial Hurwitz determinants are h*k^2*(1-e-d+b*g)/b and h*k^4*(g*(1-e-d+b*g)-r)/b. At k=0 conserved roots remain at zero.",
+  "Maxwell_specialization": "For an exact differentiable thermodynamic EOS, e=d. Then g*(1-2*d+b*g)-r=(b*r-d*(1-d))^2/b. Strict damping follows unless this square is zero. Equality is a degenerate case not covered by the strict Hurwitz claim.",
+  "characteristics": "Squared speed/c^2 is a root of A*z^2-C*z+r=0, A=b*(lambda-1), C=lambda*(b*r+d*e)+1-e-d. If A,C,r>0, discriminant>=0, C<=2*A, and A-C+r>=0, both roots lie in (0,1].",
+  "Maxwell_hyperbolicity": "For e=d,b*r>0,lambda>1, C=lambda*b*r+lambda*(d-1/lambda)^2+1-1/lambda>0, and discriminant=(lambda*b*r-lambda*d^2-1+2*d)^2+4*b*r*(lambda*d-1)^2>=0.",
+  "causal_trial_rule": "When 0<g<1 choose lambda_*=max(1,(b+1-e-d-r)/(b*(1-g)),(2*b+1-e-d)/(b*(2-g))). Test lambda=2*lambda_* and 3*lambda_* with exact discriminant and all Hurwitz conditions; these are declared candidate coefficients, not physical calibrations.",
+  "scope": "Linear constant-coefficient zero-flux local baryon-frame Cattaneo subsystem with isotropic stress and no viscosity, reactions or external fields. This is not a nonlinear GR, nonzero background heat-current, atmosphere, native-derivative-error or physical closure certificate. No identification with chi or a stellar relaxation time."
+}

@@ -1,0 +1,55 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "c71b31a34",
+  "claim": "Replace, rather than superpose upon, the gas in the outer200m by nonlinear baryon/momentum/entropy conservation through the vacuum boundary. Couple actual electron scattering momentum and its equal photon work debit.",
+  "initial": "Native gas EOS at the saved nonuniform envelope rho,T,X. Subtract LTE photons; the unchanged stellar photon field is independent of the gas temperature. Inner boundary reuses the saved coupled velocity history; it is outside the inward gas acoustic cone over the same3.434ms.",
+  "model": "Spherical Valencia gas on the saved Jordan metric, exact Lorentz stresses, HLL MUSCL SSPRK2, advected gas entropy. Electron elastic Thomson force uses native rmue=rho/mu_e. Current photon work updates the outward luminosity deviation through the layer. This optically thin instantaneous radiation correction is not absorption or full retarded scattering transport.",
+  "EOS": {
+    "log_density_ratio": [
+      -18,
+      0.02
+    ],
+    "entropy_planes": 3,
+    "reuse": "All145 surface isentrope states from Phase98",
+    "native_calls": 1200,
+    "seconds": 60
+  },
+  "paths": [
+    "224-cell radial pilot to full registered horizon",
+    "224-cell flat native-fan control",
+    "896 cells",
+    "1792 cells"
+  ],
+  "domain_m": [
+    -200,
+    1200
+  ],
+  "CFL": 0.35,
+  "gates": {
+    "baryon_ledger_relative": 1e-10,
+    "energy_response_relative": 0.02,
+    "outside_mass_refinement": 0.02,
+    "integrated_stress_refinement": 0.02,
+    "EOS_control_relative": 0.002,
+    "flat_native_fan_mass": 0.03
+  },
+  "budget": {
+    "production_seconds": 240,
+    "CPU_threads": 1,
+    "memory_GB": 2,
+    "new_whole_star_evolutions": 0
+  },
+  "stop": "No unregistered grid, horizon, native domain or threshold expansion. Stop on positivity, EOS domain, budget or conservation failure. Preserve every failed candidate.",
+  "boundaries": "This replaces only the gas layer. Bulk thermal/GR feedback and a final outgoing normalized scalar charge are not inferred from gas convergence.",
+  "references": [
+    "https://www.uv.es/astrorela/simulacionnumerica/node13.html",
+    "https://academic.oup.com/mnras/article/417/4/2899/1098574"
+  ],
+  "bindings": {
+    "verification/def_native_radial_release.py": "3689a7b0c18fb0c96bd1b2e4503f9ce2cd3dd4f0edfa15c889c0c8bc3cc9fe05",
+    "outputs/direct-eos-gr33/def-native-vacuum-release/fine.npz": "26566f1dc5777990de94ce297a7add429fd950c45e2eecd1a878dac326665b5f",
+    "outputs/direct-eos-gr33/def-native-whole-star-match/final-envelope.npz": "cdb53cf0830fa5442deb22fac2d78781935290ed86f8a580d5a1083ebb8c6a56",
+    "outputs/direct-eos-gr33/def-native-whole-star-match/final-core.npz": "386c48ad8a2038332242075bcf45c93b9241b18763aba3004d12a799a1d61b14",
+    "outputs/direct-eos-gr33/def-native-metric-transport/p4-64.npz": "cd61bb39f93995a6144faa45b8f699c9826ec41872d90120ad6bc119c0b8110b"
+  }
+}

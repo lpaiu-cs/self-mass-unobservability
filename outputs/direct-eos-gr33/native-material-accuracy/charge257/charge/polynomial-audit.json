@@ -1,0 +1,45 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "rows": [
+    {
+      "clock": 64,
+      "independent_interior_evaluations": 1821,
+      "relative": {
+        "baryon_g": 1.2586448787211424e-16,
+        "gas_nonrest_energy_erg": 3.568143490964436e-15,
+        "nonrest_trace_erg": 2.8264128923782093e-15,
+        "nonrest_stress_erg": 1.0912948770880436e-15,
+        "pressure_volume_erg": 1.3427770949029993e-14,
+        "photon_energy_erg": 2.279893272275889e-16,
+        "photon_radial_pressure_erg": 4.987340220656643e-16,
+        "metric_stress_erg": 2.0037057944383803e-16,
+        "inner_cumulative_energy_erg": 3.7231627825441163e-16,
+        "outer_cumulative_energy_erg": 1.3621601253605854e-16
+      }
+    },
+    {
+      "clock": 128,
+      "independent_interior_evaluations": 1947,
+      "relative": {
+        "baryon_g": 1.0395109754393028e-16,
+        "gas_nonrest_energy_erg": 3.6414344194605916e-15,
+        "nonrest_trace_erg": 2.7493899434204823e-15,
+        "nonrest_stress_erg": 1.0372962244020511e-15,
+        "pressure_volume_erg": 1.5282862493691146e-14,
+        "photon_energy_erg": 2.3154420206081924e-16,
+        "photon_radial_pressure_erg": 5.468151870583968e-16,
+        "metric_stress_erg": 1.6247097824642697e-16,
+        "inner_cumulative_energy_erg": 1.854557260867174e-16,
+        "outer_cumulative_energy_erg": 2.7121521939729614e-16
+      }
+    }
+  ],
+  "scope": "Algebra of the declared returned-metric Hermite source on all composed intervals; not a uniform temporal interpolation or physical error certificate.",
+  "bindings": {
+    ".phase247-polynomial-audit.py": "1c5aa0306c4641f572e6f349f457862c749d261c00dd56372dc8faa012941e85",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/read_dense_returned_source.py": "531ed7efda613d6ac954b261e9bf8b1c33499ddc06a7f9fbddcd5326f084cf7c",
+    "native-material-charge257-work/full/dense/gr/source-64.npz": "3d48a1fe2f4552f9ac3649d12569e556a8c510a39fb05bfcdc8355e125ae5ed6",
+    "native-material-charge257-work/full/dense/gr/source-128.npz": "03e255fc2405b6b68c6c0e9b243e8ac656910305e83eb67786c023daf3775ae8"
+  }
+}

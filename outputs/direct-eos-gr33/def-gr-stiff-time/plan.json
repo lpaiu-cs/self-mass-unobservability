@@ -1,0 +1,37 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "caf5c5b",
+  "claim": "Resolve unresolved wave remnants and state-update roundoff together using full-matrix L-stable second-order propagation, without changing the physical generator or input.",
+  "retained": "Same original input, zero initial state,512/1024/2048 steps,65 output times,degree4/2/1 spaces,readout definitions and unchanged gates. Exact two forcing moments for microscopic startup. No new EOS calls.",
+  "method": "SDIRK2 reused from repository tableau; one real factorization per path, original extended stage residuals and extended state storage. Numerical damping tends to zero with dt and must pass all four refinement tests and comparison with saved Gauss.",
+  "gates": {
+    "time_relative": 0.02,
+    "time_order": 1.5,
+    "spatial_relative": 0.02,
+    "spatial_decrease": true,
+    "coefficient": 0.02,
+    "outer": 0.002,
+    "quadrature": 0.002,
+    "linear_residual": 1e-09,
+    "heat_balance": 2e-13,
+    "saved_Gauss_difference": 0.02
+  },
+  "decision": "Measure128 steps, forecast first degree4 triple; only run within300s. Stop if any propagation gate fails. If passed, fixed degrees2/1 triples and conditional coefficient/outer/quadrature single paths under900s total. No step,degree,basis or period expansion.",
+  "budget": {
+    "pilot_seconds": 90,
+    "first_case_seconds": 300,
+    "total_seconds": 900,
+    "CPU_threads": 1,
+    "memory_GB": 4,
+    "new_EOS_calls": 0
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_stiff_time.py": "0c4181b0928d2a17560098270215e2bb71b197ffaf610656178a4fa5e351b839",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_direct_time.py": "852070fde0dbd03d2f44cbc1e2ffe3b16afb41c37e0b27d5a6ca33ce99bf0ca4",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_hierarchical.py": "7861123d4adfdfdaa21daee3fc7d79dcdffdd024ca48b3f453921b5cb745992b",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_spatial_repair.py": "d13044861c2b4761d5e6349d809c3368f46112974f374aa050aada516c80f8e5",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/fine-bank.npz": "b4493a6e4cfb20d741725ecb61cec154ab9fc51a694001865748741060018d7e",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/coarse-bank.npz": "ea020f69b240c5c5cdd8810f963d88e5cc2d3269aff12c659422a7a6541ae0df",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-inverse-projection/gauss/stage-result.json": "b4d4ca88c974354e565f0b6590226d4e73919bd33468bc4e692014b58df9473a"
+  }
+}

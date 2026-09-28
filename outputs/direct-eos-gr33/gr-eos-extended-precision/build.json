@@ -1,0 +1,55 @@
+{
+  "classification": "Counterexample candidate",
+  "commands": [
+    {
+      "command": [
+        "cmake",
+        "-S",
+        "/home/lpaiu/work/direct-eos-gr33/extended-precision/source",
+        "-B",
+        "/home/lpaiu/work/direct-eos-gr33/extended-precision/build",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DBUILD_SHARED_LIBS=ON",
+        "-DBUILD_TEST=ON",
+        "-DBUILD_DOC=OFF",
+        "-DBUILD_DOX_DOC=OFF"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "/home/lpaiu/work/direct-eos-gr33/extended-precision/build",
+        "--target",
+        "free_eos",
+        "-j",
+        "2"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "gfortran",
+        "-O2",
+        "-fPIC",
+        "-shared",
+        "-I/home/lpaiu/work/direct-eos-gr33/extended-precision/build/src",
+        "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-eos-extended-precision/direct_ion_bridge.f90",
+        "-L/home/lpaiu/work/direct-eos-gr33/extended-precision/build/src",
+        "-Wl,-rpath,/home/lpaiu/work/direct-eos-gr33/extended-precision/build/src",
+        "-lfree_eos_direct24_extended",
+        "-o",
+        "/home/lpaiu/work/direct-eos-gr33/extended-precision/split-input.so"
+      ],
+      "returncode": 0
+    }
+  ],
+  "completed": true,
+  "sha256": {
+    "/home/lpaiu/work/direct-eos-gr33/extended-precision/split-input.so": "ed5007e1dff77bc748081825e27f9fe7a02a833db06347f607b9d8b7cd607ac8",
+    "/home/lpaiu/work/direct-eos-gr33/extended-precision/build/src/libfree_eos_direct24_extended.so.1.0.0": "2d6b44e74ddc0427608e15c3604841ad3b2133ee615e48934443fa5cb6f4fb00"
+  },
+  "original_runtime_modified": false,
+  "physical_EOS_certified": false
+}

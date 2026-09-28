@@ -1,0 +1,109 @@
+{
+  "reason": "Prioritize the same fixed finer time path to resolve an observed intermediate light-cone excursion. Preserve both coarser coupled producers in memory; no physical coefficient change.",
+  "boot_id": "9b968b4f-ecbd-483b-ada9-c1c871b6ab20",
+  "roots": [
+    882,
+    936
+  ],
+  "processes": [
+    {
+      "pid": 936,
+      "parent": 930,
+      "start": "389905",
+      "state": "S",
+      "command": "python3 verification/gr_implicit_coupled_anderson.py run --refinement 2 --workers 8"
+    },
+    {
+      "pid": 882,
+      "parent": 876,
+      "start": "372967",
+      "state": "S",
+      "command": "python3 verification/gr_implicit_coupled_anderson.py run --refinement 1 --workers 4"
+    },
+    {
+      "pid": 937,
+      "parent": 936,
+      "start": "390068",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_coupled_anderson.py run --refinement 2 --workers 8"
+    },
+    {
+      "pid": 938,
+      "parent": 936,
+      "start": "390069",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_coupled_anderson.py run --refinement 2 --workers 8"
+    },
+    {
+      "pid": 939,
+      "parent": 936,
+      "start": "390069",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_coupled_anderson.py run --refinement 2 --workers 8"
+    },
+    {
+      "pid": 940,
+      "parent": 936,
+      "start": "390069",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_coupled_anderson.py run --refinement 2 --workers 8"
+    },
+    {
+      "pid": 941,
+      "parent": 936,
+      "start": "390069",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_coupled_anderson.py run --refinement 2 --workers 8"
+    },
+    {
+      "pid": 942,
+      "parent": 936,
+      "start": "390069",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_coupled_anderson.py run --refinement 2 --workers 8"
+    },
+    {
+      "pid": 943,
+      "parent": 936,
+      "start": "390069",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_coupled_anderson.py run --refinement 2 --workers 8"
+    },
+    {
+      "pid": 944,
+      "parent": 936,
+      "start": "390069",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_coupled_anderson.py run --refinement 2 --workers 8"
+    },
+    {
+      "pid": 883,
+      "parent": 882,
+      "start": "373119",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_coupled_anderson.py run --refinement 1 --workers 4"
+    },
+    {
+      "pid": 884,
+      "parent": 882,
+      "start": "373119",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_coupled_anderson.py run --refinement 1 --workers 4"
+    },
+    {
+      "pid": 885,
+      "parent": 882,
+      "start": "373119",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_coupled_anderson.py run --refinement 1 --workers 4"
+    },
+    {
+      "pid": 886,
+      "parent": 882,
+      "start": "373119",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_coupled_anderson.py run --refinement 1 --workers 4"
+    }
+  ],
+  "all_stopped": true
+}

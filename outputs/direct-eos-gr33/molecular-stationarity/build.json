@@ -1,0 +1,55 @@
+{
+  "classification": "Counterexample candidate",
+  "commands": [
+    {
+      "command": [
+        "cmake",
+        "-S",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-stationarity/source",
+        "-B",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-stationarity/build",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DBUILD_SHARED_LIBS=ON",
+        "-DBUILD_TEST=ON",
+        "-DBUILD_DOC=OFF",
+        "-DBUILD_DOX_DOC=OFF"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-stationarity/build",
+        "--target",
+        "free_eos",
+        "-j",
+        "2"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "gfortran",
+        "-O2",
+        "-fPIC",
+        "-shared",
+        "-I/home/lpaiu/work/direct-eos-gr33/molecular-stationarity/build/src",
+        "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/molecular-stationarity/direct_ion_bridge.f90",
+        "-L/home/lpaiu/work/direct-eos-gr33/molecular-stationarity/build/src",
+        "-Wl,-rpath,/home/lpaiu/work/direct-eos-gr33/molecular-stationarity/build/src",
+        "-lfree_eos_direct24_molecular_stationarity",
+        "-o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-stationarity/unused-inventory.so"
+      ],
+      "returncode": 0
+    }
+  ],
+  "completed": true,
+  "sha256": {
+    "/home/lpaiu/work/direct-eos-gr33/molecular-stationarity/unused-inventory.so": "325155ef70cb3a84bb000cdb7454b0724ac316801993f027e82ce47b123de239",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-stationarity/build/src/libfree_eos_direct24_molecular_stationarity.so.1.0.0": "bacc215fe5955cab7b1eb9796c6e3fd95230bcc98cc96b459fe8ada59314686e"
+  },
+  "original_runtime_modified": false,
+  "physical_EOS_certified": false
+}

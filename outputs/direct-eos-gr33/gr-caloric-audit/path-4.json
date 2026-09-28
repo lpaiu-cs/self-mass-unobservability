@@ -1,0 +1,58 @@
+{
+  "classification": "Proven",
+  "steps": 4,
+  "passed": true,
+  "rows": [
+    {
+      "step": 0,
+      "exact_frozen_global_energy_ratio_upper": "1.315626133826641879940088769743954508331E-16",
+      "exact_frozen_local_scaled_residual_upper": "2.137734677812614503311755931750726433002E-17",
+      "exact_frozen_two_four_point_difference_ratio_upper": "1.818785324186504536070968871487782125176E-11",
+      "exact_frozen_entropy_nonnegative": true,
+      "post_result_corruption_control_rejected": true
+    },
+    {
+      "step": 1,
+      "exact_frozen_global_energy_ratio_upper": "1.050153083713238765722491022513130804594E-16",
+      "exact_frozen_local_scaled_residual_upper": "1.053654678774997115825097309945187161529E-17",
+      "exact_frozen_two_four_point_difference_ratio_upper": "5.912091527279331518884638442611341447370E-12",
+      "exact_frozen_entropy_nonnegative": true,
+      "post_result_corruption_control_rejected": true
+    },
+    {
+      "step": 2,
+      "exact_frozen_global_energy_ratio_upper": "8.139132927592781958485332936467987250509E-17",
+      "exact_frozen_local_scaled_residual_upper": "1.408494693750368063052428545559253517525E-17",
+      "exact_frozen_two_four_point_difference_ratio_upper": "2.314694021264562244613016319481891595544E-12",
+      "exact_frozen_entropy_nonnegative": true,
+      "post_result_corruption_control_rejected": true
+    },
+    {
+      "step": 3,
+      "exact_frozen_global_energy_ratio_upper": "1.003913166986294079999170286520607382650E-16",
+      "exact_frozen_local_scaled_residual_upper": "2.177223645971754196058767904058767414316E-17",
+      "exact_frozen_two_four_point_difference_ratio_upper": "8.970511616515928050752690892452045490065E-13",
+      "exact_frozen_entropy_nonnegative": true,
+      "post_result_corruption_control_rejected": true
+    }
+  ],
+  "exact_frozen_path_global_energy_ratio_upper": "6.413669804637096615825948477415067985593E-17",
+  "final_stored_energy_and_temperature_increment_replayed": true,
+  "no_native_continuous_or_physical_certificate": true,
+  "bindings": {
+    "outputs/direct-eos-gr33/gr-caloric-increment/path-4.json": "8407f29946002ae40a0f1804260824f8627eea5b77034dec8b3cb384dc7a87de",
+    "outputs/direct-eos-gr33/gr-caloric-increment/path-4.npz": "11afe56ff3fc361b59ba98c060477ea2cb2706f983b87c1a4ae759c3075aa383",
+    "outputs/direct-eos-gr33/gr-nonlinear-thermal/duration.json": "f6dc1171e72525bfb375620a999f777f1b49911c7380836427188176e6fa6903",
+    "outputs/direct-eos-gr33/gr-caloric-increment/endpoint-4-0.npz": "4addb16c098886b8c0bc36c7e75bdb586d5919e7be56fba9dcd4d947f06a5e2b",
+    "outputs/direct-eos-gr33/gr-caloric-increment/endpoint-4-1.npz": "6a82572c45d59b2d7b5d1349b0bf406d0fc74260ab2137c1c3753e2bac2030b2",
+    "outputs/direct-eos-gr33/gr-caloric-increment/endpoint-4-2.npz": "917428b71024c1e18569ca5a4ddd6637bbf381c2c2922a77dabe176219e956a7",
+    "outputs/direct-eos-gr33/gr-caloric-increment/endpoint-4-3.npz": "86c5a9ace2a89765b039f34b8a0b1089480f1da3f05362fcc61d75f84062570a",
+    "outputs/direct-eos-gr33/gr-caloric-increment/path-2.npz": "223d2d07bdc08d805edf47b4b370256f875cedaf74be1a1607dc811751091ef5"
+  },
+  "finite_time_refinement": {
+    "classification": "Counterexample candidate",
+    "exact_saved_logT_difference_upper": "0.0006572175368516738804686161401491517608520",
+    "passed": false,
+    "rigorous_time_error_enclosure": false
+  }
+}

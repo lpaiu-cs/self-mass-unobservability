@@ -1,0 +1,11 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "chemical": "mu_j=Z_j^2*g+C_Z*Z_j*g_n. d(mu_j)/dT=Z_j^2*g_T+C_Z*Z_j*g_nT.",
+  "hessian": "H_jk=(Z_j^2*Z_k+Z_j*Z_k^2)*g_n+C_Z*Z_j*Z_k*g_nn; it is symmetric with rank at most two.",
+  "pressure": "sum(n_j*mu_j)-F/V=C_Z*n_e*g_n, equal to the fixed-composition pressure. The chemical caloric coefficient is mu_j-T*d(mu_j)/dT.",
+  "constrained": "At fixed n_e,T the self free-energy density is exactly linear in C_Z. Any finite composition change conserving both sum Z_j*n_j and sum Z_j^2*n_j leaves it unchanged. Charge-conserving reaction curvature is zero and its free-energy increment is g*Delta(C_Z).",
+  "indefiniteness": "For two distinct positive charges a,b, det(H_2x2)=-a^2*b^2*(a-b)^2*g_n^2<0 when g_n !=0. The isolated self term has an indefinite unconstrained composition Hessian. This is not instability of the complete EOS or of a fixed-charge constrained mixture.",
+  "sign": "The positive response kernel gives S_eta>0, and the neutral eta_lnn is positive. Therefore the negative self prefactor implies g_n<0 at finite positive density/temperature in this declared model.",
+  "scope": "An exact composition closure for one already identified Hamiltonian term, not a new correction to add on top of a screening-inclusive EOS."
+}

@@ -1,0 +1,492 @@
+{
+  "classification": "Counterexample candidate",
+  "completed": true,
+  "rows": [
+    {
+      "name": "outergrayon",
+      "input_passed": true,
+      "input_max_score": 0.9905629826394432,
+      "means": {
+        "1.5000E-03": [
+          1.9163e-09,
+          9.1376,
+          1127.3,
+          0.98847,
+          0.98856
+        ],
+        "2.0000E-03": [
+          1.9163e-09,
+          3.5529,
+          400.75,
+          0.99982,
+          1.0002
+        ]
+      }
+    },
+    {
+      "name": "coregroupson",
+      "input_passed": true,
+      "input_max_score": 0.9868158183868126,
+      "means": {
+        "1.7500E+00": [
+          138680.0,
+          5.3707,
+          8.543,
+          2.0305,
+          4.3236
+        ]
+      }
+    },
+    {
+      "name": "outergrayoff",
+      "input_passed": true,
+      "input_max_score": 0.9905629826394432,
+      "means": {
+        "1.5000E-03": [
+          1.9163e-09,
+          9.1376,
+          1127.3,
+          0.98847,
+          0.98856
+        ],
+        "2.0000E-03": [
+          1.9163e-09,
+          3.5529,
+          400.75,
+          0.99982,
+          1.0002
+        ]
+      }
+    },
+    {
+      "name": "coregroupsoff",
+      "input_passed": true,
+      "input_max_score": 0.9868158183868126,
+      "means": {
+        "1.7500E+00": [
+          138680.0,
+          8.9387,
+          89.194,
+          2.0305,
+          4.3236
+        ]
+      }
+    }
+  ],
+  "all_input_gates_passed": true,
+  "group_controls": [
+    {
+      "bounds_keV": [
+        0.01,
+        0.1
+      ],
+      "native_Planck_Rosseland": [
+        376.89,
+        220.8
+      ],
+      "integrated_Planck_Rosseland": [
+        [
+          376.6620856821323,
+          220.66457041861676
+        ],
+        [
+          376.8827503999815,
+          220.702048103681
+        ]
+      ],
+      "relative_error": [
+        [
+          0.0006047237068315114,
+          0.0006133586113371559
+        ],
+        [
+          1.9235320699695357e-05,
+          0.00044362271883613413
+        ]
+      ],
+      "mutual_difference": [
+        0.0005854996484052633,
+        0.00016981122461823261
+      ],
+      "passed": true
+    },
+    {
+      "bounds_keV": [
+        0.1,
+        1.0
+      ],
+      "native_Planck_Rosseland": [
+        2726.5,
+        2290.1
+      ],
+      "integrated_Planck_Rosseland": [
+        [
+          2726.473662478539,
+          2290.146595126388
+        ],
+        [
+          2726.469091921197,
+          2290.134085298034
+        ]
+      ],
+      "relative_error": [
+        [
+          9.65982815359645e-06,
+          2.0346328277520698e-05
+        ],
+        [
+          1.1336174143727895e-05,
+          1.4883759676065367e-05
+        ]
+      ],
+      "mutual_difference": [
+        1.676364993707935e-06,
+        5.462487299157104e-06
+      ],
+      "passed": true
+    },
+    {
+      "bounds_keV": [
+        1.0,
+        3.0
+      ],
+      "native_Planck_Rosseland": [
+        337.76,
+        225.54
+      ],
+      "integrated_Planck_Rosseland": [
+        [
+          337.7572497540254,
+          225.54280668753685
+        ],
+        [
+          337.75741427339057,
+          225.5427236130503
+        ]
+      ],
+      "relative_error": [
+        [
+          8.142604140837228e-06,
+          1.2444300509173445e-05
+        ],
+        [
+          7.655514594473445e-06,
+          1.2075964575197773e-05
+        ]
+      ],
+      "mutual_difference": [
+        4.870932752698565e-07,
+        3.6833148597814613e-07
+      ],
+      "passed": true
+    },
+    {
+      "bounds_keV": [
+        3.0,
+        5.0
+      ],
+      "native_Planck_Rosseland": [
+        71.794,
+        62.5
+      ],
+      "integrated_Planck_Rosseland": [
+        [
+          71.79403767025846,
+          62.499781916716195
+        ],
+        [
+          71.79402628223808,
+          62.4997590460591
+        ]
+      ],
+      "relative_error": [
+        [
+          5.246992571539266e-07,
+          3.4893325409068865e-06
+        ],
+        [
+          3.6607847575531594e-07,
+          3.855263054464153e-06
+        ]
+      ],
+      "mutual_difference": [
+        1.586207234449688e-07,
+        3.6593192431766397e-07
+      ],
+      "passed": true
+    },
+    {
+      "bounds_keV": [
+        5.0,
+        7.0
+      ],
+      "native_Planck_Rosseland": [
+        28.109,
+        26.278
+      ],
+      "integrated_Planck_Rosseland": [
+        [
+          28.10873283782256,
+          26.27818513915449
+        ],
+        [
+          28.108733242895433,
+          26.278181291444522
+        ]
+      ],
+      "relative_error": [
+        [
+          9.504506650603872e-06,
+          7.045405072458877e-06
+        ],
+        [
+          9.490095861486303e-06,
+          6.898981829817075e-06
+        ]
+      ],
+      "mutual_difference": [
+        1.4410925897045956e-08,
+        1.4642223233884977e-07
+      ],
+      "passed": true
+    },
+    {
+      "bounds_keV": [
+        7.0,
+        9.0
+      ],
+      "native_Planck_Rosseland": [
+        14.307,
+        13.759
+      ],
+      "integrated_Planck_Rosseland": [
+        [
+          14.306538535306169,
+          13.758994911228585
+        ],
+        [
+          14.30654293657808,
+          13.758988772709335
+        ]
+      ],
+      "relative_error": [
+        [
+          3.225446940879895e-05,
+          3.698503826532473e-07
+        ],
+        [
+          3.194683874474524e-05,
+          8.159961236708924e-07
+        ]
+      ],
+      "mutual_difference": [
+        3.076404921920073e-07,
+        4.461461049487525e-07
+      ],
+      "passed": true
+    },
+    {
+      "bounds_keV": [
+        9.0,
+        12.0
+      ],
+      "native_Planck_Rosseland": [
+        7.8293,
+        7.4425
+      ],
+      "integrated_Planck_Rosseland": [
+        [
+          7.8292869066089965,
+          7.442468967972974
+        ],
+        [
+          7.8292886454270265,
+          7.4424694440022785
+        ]
+      ],
+      "relative_error": [
+        [
+          1.6723578102340042e-06,
+          4.169570309242587e-06
+        ],
+        [
+          1.4502666870752634e-06,
+          4.1056093680325034e-06
+        ]
+      ],
+      "mutual_difference": [
+        2.2209144523444024e-07,
+        6.396120377782921e-08
+      ],
+      "passed": true
+    },
+    {
+      "bounds_keV": [
+        12.0,
+        20.0
+      ],
+      "native_Planck_Rosseland": [
+        3.7507,
+        3.3013
+      ],
+      "integrated_Planck_Rosseland": [
+        [
+          3.75074767069243,
+          3.3012966339393333
+        ],
+        [
+          3.7507484033357548,
+          3.3012970717741905
+        ]
+      ],
+      "relative_error": [
+        [
+          1.2709812149624966e-05,
+          1.0196167166132142e-06
+        ],
+        [
+          1.2905147240394044e-05,
+          8.869917333953481e-07
+        ]
+      ],
+      "mutual_difference": [
+        1.953325698966779e-07,
+        1.326251009015067e-07
+      ],
+      "passed": true
+    },
+    {
+      "bounds_keV": [
+        20.0,
+        40.0
+      ],
+      "native_Planck_Rosseland": [
+        1.2424,
+        1.158
+      ],
+      "integrated_Planck_Rosseland": [
+        [
+          1.2423838116155823,
+          1.1579534094031776
+        ],
+        [
+          1.2423847789407867,
+          1.1579539810956376
+        ]
+      ],
+      "relative_error": [
+        [
+          1.3029929505470328e-05,
+          4.023367601235783e-05
+        ],
+        [
+          1.2251335490431892e-05,
+          3.9739986495979096e-05
+        ]
+      ],
+      "mutual_difference": [
+        7.786035540746639e-07,
+        4.937091364620727e-07
+      ],
+      "passed": true
+    }
+  ],
+  "all_group_controls_passed": true,
+  "cutoff_sentinel_lower_edges_keV": [
+    0.01,
+    0.1,
+    1.0,
+    3.0,
+    5.0,
+    7.0
+  ],
+  "groups_above_cutoff_bitwise_equal": true,
+  "cutoff_exploratory_controls": [
+    {
+      "T_keV": 1.75,
+      "nonrelativistic_plasma_energy_keV": 7.58555046557594,
+      "electron_density_m3": 4.173107844761515e+34,
+      "native_ON_Planck_Rosseland": [
+        8.543,
+        5.3707
+      ],
+      "conditional_tail_Planck_Rosseland": [
+        [
+          8.54431587433199,
+          5.371219675730014
+        ],
+        [
+          8.544314716359299,
+          5.371220250122435
+        ]
+      ],
+      "relative_error_to_ON": [
+        [
+          0.00015402953669552133,
+          9.676126575941524e-05
+        ],
+        [
+          0.00015389399031962014,
+          9.686821502508103e-05
+        ]
+      ],
+      "vacuum_tail_Planck_Rosseland_weight": [
+        [
+          0.3443072627551754,
+          0.5248021873414109
+        ],
+        [
+          0.3443072727519127,
+          0.5248021968374453
+        ]
+      ],
+      "fitted_to_gray_means": false,
+      "physical_or_provider_formula_certified": false
+    },
+    {
+      "T_keV": 1.875,
+      "nonrelativistic_plasma_energy_keV": 7.58555046557594,
+      "electron_density_m3": 4.173107844761515e+34,
+      "native_ON_Planck_Rosseland": [
+        8.0981,
+        4.8243
+      ],
+      "conditional_tail_Planck_Rosseland": [
+        [
+          8.100216062436926,
+          4.824972946077859
+        ],
+        [
+          8.100217047749773,
+          4.8249733808331925
+        ]
+      ],
+      "relative_error_to_ON": [
+        [
+          0.0002613035695935295,
+          0.0001394909267373734
+        ],
+        [
+          0.0002614252416952567,
+          0.0001395810445437018
+        ]
+      ],
+      "vacuum_tail_Planck_Rosseland_weight": [
+        [
+          0.39463552121566337,
+          0.5783098797080899
+        ],
+        [
+          0.3946355309980061,
+          0.5783098879597521
+        ]
+      ],
+      "fitted_to_gray_means": false,
+      "physical_or_provider_formula_certified": false
+    }
+  ],
+  "outer_ON_OFF_gray_equal": true,
+  "outer_frequency_failure_erased": false,
+  "physical_LTE_atmosphere_certified": false,
+  "full_GR_evolution": false
+}

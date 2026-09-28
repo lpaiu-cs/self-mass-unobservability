@@ -1,0 +1,11 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "precision_decimal_digits": 60,
+  "eta": 1,
+  "function_jump": "[0.0000000070105556865889809453567693660610049401338715834246187628060004316, 0.0000000070105678017930584405946848520846712726213216499386280561100557865]",
+  "first_derivative_jump": "[-0.00000050040018930366005472097486204267219409633451951614772672877066841, -0.0000005004001732378413414826550263994107398975483312449065324715273704]",
+  "source_sha256": "6aa776a9245dfcb0aff4b465539722108f68be9b1a55610df436a66a7e906113",
+  "statement": "The two declared real rational CT branches, including one-ulp coefficient enclosures and eight-ulp root-pi constant enclosure, have unequal limits at eta=1. Therefore this piecewise approximation is not C0 and its returned first derivative also has a nonzero jump.",
+  "limits": "This is a coefficient-level mathematical statement. It does not enclose every floating point EOS operation, prove the exact global stellar jump, or bound physical EOS error."
+}

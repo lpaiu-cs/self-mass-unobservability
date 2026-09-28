@@ -1,0 +1,73 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Propagate the actual lower-floor emission to null infinity and pair exterior stress, body energy debit and arrived-photon mass normalization. Compare to the same thermal background without later native corrections.",
+  "budget_seconds": 120.0,
+  "prior_actions_seconds": 594.0680163779998,
+  "aggregate_cap_seconds": 1650,
+  "measured_upper_seconds": 99.07670742999943,
+  "allocation": "Only unused1650s Phase148 allocation. Prior exact kernel/readout17.334s plus a32.204s setup allowance, doubled. No new physical evolution or automatic extension.",
+  "settings": [
+    [
+      128,
+      8,
+      8
+    ],
+    [
+      128,
+      4,
+      8
+    ],
+    [
+      128,
+      8,
+      4
+    ],
+    [
+      64,
+      8,
+      8
+    ]
+  ],
+  "matched_reference_settings": [
+    [
+      128,
+      8,
+      8
+    ],
+    [
+      64,
+      8,
+      8
+    ]
+  ],
+  "gates": {
+    "port": 1e-12,
+    "quadrature": 0.002,
+    "time": 0.02,
+    "identity": 1e-12
+  },
+  "bounds": "Rebuild original conditional compact-source envelope on this source/history. Retain its larger exterior envelope even though exterior forcing is explicitly computed. Includes frozen potential, specified port and direct omitted positive-matter terms; does not bound later floor feedback, microscopic or nonlinear errors.",
+  "stop": "Stop on failed compact readout, budget or original quadrature/time controls; no new clock, EOS state, kernel order or physical horizon.",
+  "bindings": {
+    "verification/read_native_retained_infinity.py": "6d1b1c750ca476db4602812ee304b3499eaf1dc548acf143d44e3aacc8867278",
+    "verification/def_native_global_scalar_closure.py": "b8f8cbab5f052100dc57963d747c200d0fa871993db62df5fc295881201f9db2",
+    "verification/verify_native_stage_energy_charge.py": "a7b4b93650663f17ab5cedbe6562cb3ed752fc0e125979b16bfd84d8e31c920d",
+    "outputs/direct-eos-gr33/native-retained-completion/gr/result.json": "571e01bfd4c9efed6bb7942f1a7d144afee96eea1e29df2527f7f4e0da7fff89",
+    "outputs/direct-eos-gr33/def-native-global-scalar-closure/bound.json": "39cbee9c32b2d16c239d8ae14f188be2177e53bca27fe0ec4d8df88a29a66f58",
+    "outputs/direct-eos-gr33/def-native-global-scalar-closure/bound-plan.json": "9da513286ba292dc3ce3f0b4262e5445e4f4fb70f8841bd07e72921079018cc5",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/accepted-ports-64.npz": "e774379f5889562471ff1924ca01c8844ce3a99bff1221eaa7a7924663296f83",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/source-64.npz": "e355fd75305697b78611d53c19bf7d0d821142533cbea5f1b81d53b9a2a093b8",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/history-64.npz": "692ca2b8789861481f65d7ab02df15b0f8fa14eb72ca06e71cfa7b9d7513edc5",
+    "outputs/direct-eos-gr33/native-retained-completion/gr/wave-64-g8.npz": "794ab3ce72fe91c8b08d6f44862237b42292dd7a348e372d2c7d84ba7aca885b",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/background/accepted-ports-64.npz": "114f0cbc3ee6af4eb24753e766cea8292ee0761078d3d38b2aab68403f01681b",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/evolution/source-64.npz": "f7e694bc9bbaabb3612916204fd97b2eefe12053137119ad629b33b096ad7b56",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/evolution/gr/wave-64-g8.npz": "39e374749982cf4a79faa12b9c904fd2e2cb435c3cd089658ff558bc339979f9",
+    "outputs/direct-eos-gr33/native-retained-completion/evolution/accepted-ports-128.npz": "e2d02607c5815cd1b23a6ea1ce822ecbb384f185ac7a83074247d0350abc8ecf",
+    "outputs/direct-eos-gr33/native-retained-completion/evolution/source-128.npz": "7d6501151595f2274b0651a6179e3bd24cf4ea8ef6256734d953c9d8d01b79eb",
+    "outputs/direct-eos-gr33/native-retained-completion/evolution/history-128.npz": "e0a18a2f2241a16b2c3d96e43ab348aa8aa1c59dc17ace9b81020f5616e0cfd4",
+    "outputs/direct-eos-gr33/native-retained-completion/gr/wave-128-g8.npz": "8d3a9d2bee40b3d67dd321154da4f433971fb585a749a56e797cb1ed95efd504",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/background/accepted-ports-128.npz": "ccc7aad1a09bcf2f510b4b709c0d7bc1076667f09507bc52d7b906983cdb507c",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/evolution/source-128.npz": "ab75b15bd0b3e8de9b6803dff7afe288e5eecac56089bdf74055de1b1db7c0bf",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/evolution/gr/wave-128-g8.npz": "3bc144dc484f3a6c3d521d8aa0910662b63b2e1cbbfd5a124d64ef063386c287"
+  }
+}

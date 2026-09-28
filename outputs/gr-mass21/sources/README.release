@@ -1,0 +1,449 @@
+FreeEOS 3.0.0 release notes
+
+FreeEOS is a software library for calculating (by an extremely rapid
+free-energy minimization method) an equation of state for physical
+conditions in stellar interiors.  It uses a semi-empirical free-energy
+model that has been adjusted to fit results from the more detailed
+SCVH (Saumon, D., Chabrier, G., \& Van Horn, H. M. 1995ApJ...99.713)
+and OPAL (Rogers, F. J., \& Nayfonov, A.  2002ApJ...576.1064R) EOS
+calculations.  This is the latest release of this software and the
+only version I support.
+
+Note that most FreeEOS "bugs" are due to users not understanding the
+doxygen argument documentation of the two different (legacy and
+modern) versions of the free_eos generic Fortran subroutine that is
+called by user's programmes. (Browse either
+free_eos-3.0.0/document_FreeEOS/doxygen/doxygen/latex/FreeEOS_developer_documentation.pdf
+or free_eos-3.0.0/document_FreeEOS/doxygen/doxygen/html/index.xhtml
+for access to all doxygen-generated documentation of FreeEOS.)
+Therefore to reduce wasting time with bug triage (as opposed to
+spending time on actual development), I request if you encounter a
+problem with this release such as not understanding that
+documentation, use [the FreeEOS bug
+tracker](https://sourceforge.net/p/freeeos/bugs/) to report the
+problem *only if* the issue cannot be easily resolved by discussion on
+[the freeeos-general mailing
+list](https://sourceforge.net/projects/freeeos/lists/freeeos-general).
+
+This software is distributed under the GPL version 2.0 or later.  See
+the COPYING file for all licensing details.
+
+CONTENTS
+
+1. OFFICIAL NOTICES FOR USERS
+
+1.1 Motivation for this release
+1.2 Building applications and libraries that depend on FreeEOS
+1.3 Fortran compilers that are compatible with FreeEOS
+1.4 CMake minimum version bumped to 3.18.4
+
+2. DEVELOPMENT TOPICS FOR THIS RELEASE
+
+2.1 Converted from svn to git revision control
+2.2 Fixed *many* bugs
+2.3 Converted Fortran source code from fixed to free format
+2.4 Updated the FreeEOS code standard from (extended) Fortran 77 to Fortran 2008
+2.5 Implemented Fortran 2008 best practices
+2.6 Implemented configuration of the floating-point representation
+2.7 Updated the physical constants from CODATA 2002 to CODATA 2018
+2.8 Updated the ionization potentials to the latest NIST values
+2.9 Updated isotopic masses to AME 2020
+2.10 Implemented a verbosity argument (just for the modern free_eos API)
+2.11 Implemented the qe and qv arguments (just for the modern free_eos API)
+2.12 Implemented the info argument (just for the modern free_eos API)
+2.13 Changed how the "stop" and "error stop" statements are used
+2.14 Implemented source code documentation
+2.15 Implemented a new modern CMake-based build system
+2.16 Reduced counts of serious floating-point exceptions to zero for all test targets
+2.17 Rationalized the many different non-zero info return values
+
+____________________________________________________________________
+
+1. OFFICIAL NOTICES FOR USERS
+
+1.1 Motivation for this release
+
+Since the last release (2.2.1) of FreeEOS in 2008 (!)  many
+stellar-interior groups have chosen to adopt FreeEOS to provide the
+EOS data they need to calculate their models since if you adopt exact
+OPAL abundances, it replicates OPAL results well (especially the OPAL
+solar results) through much of the physical conditions covered by
+those results.  Furthermore, FreeEOS can be used to extrapolate
+smoothly from OPAL results for different abundances and a wider range
+of physical conditions than used in the OPAL calculations.  Note, however,
+all the normal extrapolation caveats.
+
+Therefore, because of this on-going interest in FreeEOS, the primary
+goal for this current release (and the development effort that lead up
+to it) is to substantially improve the reliability of FreeEOS
+*without* changing the free-energy semiempirical models that are the
+basis of the various EOS option suites that are available with
+FreeEOS.  So 3.0.0 should provide much more reliable convergence than
+2.2.1, but users should expect essentially the same results for 3.0.0
+and 2.2.1 if their prior use of 2.2.1 happened by chance to converge.
+
+To help support this improved reliability goal, I have completely
+converted the Fortran 77 (with extensions) code present in 2.2.1 to
+Fortran 2008 (which is much easier Fortran standard for me to use to
+debug and develop FreeEOS); implemented a comprehensive test system
+(which tests FreeEOS supported option suites over a large range of
+physical conditions); and greatly extended the CMake-based build
+system to support these improvements.  See "Development Topics" below
+for details of these and other changes.
+
+1.2 Building applications and libraries that depend on FreeEOS
+
+Because the Fortran 77 code used for 2.2.1 has been upgraded to
+Fortran 2008 for 3.0.0 and because the CMake-based build system for
+2.2.1 has been substantially upgraded for 3.0.0, the simple steps
+required to build an application or library against an installed
+version of FreeEOS-3.0.0 have been substantially changed.  Therefore,
+consult the INSTALL file for how to build and install FreeEOS-3.0.0
+and link your applications to the installed library.
+
+1.3 Fortran compilers that are compatible with FreeEOS
+
+FreeEOS is written to the Fortran 2008 standard so we feel confident
+that any Fortran compiler that supports that standard should work well
+with FreeEOS.  That said, FreeEOS has been primarily developed using
+the gfortran compiler, and for this release we have also made sure
+that all test targets pass for the ifort and nagfor compilers.  Note
+that nagfor is particularly well known for good error checking so the
+good results for that compiler alone as well as the good results for
+gfortran and ifort add to the above confidence.
+
+1.4 CMake minimum version bumped to 3.18.4
+
+    This value represents a compromise between which CMake version (or
+    greater) is currently supplied in binary form by the latest
+    versions of most free software distributions and the desire to
+    maximize the CMake version to reduce CMake bugs and provide
+    additional CMake functionality.  Note, if your free software
+    distribution does not provide this version (or greater) of CMake
+    in binary form, it is straightforward to build the latest version
+    of CMake following the directions at <https://cmake.org/install/>.
+
+2. DEVELOPMENT TOPICS FOR THIS RELEASE
+
+2.1 Converted from svn to git revision control
+
+  This conversion was implemented in a way that transformed all
+  commits in the svn repository to the equivalent git commits.  That
+  svn repository itself was created originally as a conversion of a
+  CVS repository that preserved all the CVS commits in that repository
+  as the equivalent svn commits.  As a result the git repository for
+  FreeEOS contains commits that track development of that software
+  from 2004-09-09 onwards.
+
+2.2 Fixed *many* bugs
+
+  FreeEOS-3.0.0 has been written strictly to the Fortran
+  2008 standard and using best practices for that standard (see
+  below).  This allows detection and fixing of many bugs that were
+  present in FreeEOS-2.2.1 (which was written to an extended version
+  of the Fortran 77 standard).
+
+  For example, the old version of the code used generic saves for
+  every variable of almost all procedures which covered up a whole
+  bunch of out-of-order calculations in each iteration of the EOS
+  which have now been fixed.  The new code only uses saves where they
+  are strictly necessary (e.g., saving state information that helps
+  start new EOS calculations for physical conditions that are not that
+  different from those from the previous call).  The result of this
+  kind of bug fix is the initial EOS iteration is much more reliable
+  now (since no uninitialized variables are used for that iteration),
+  and the rate of convergence should be improved as well since the
+  iteration calculation is no longer relying on out-of-date saved
+  variables from the previous iteration to work around out-of-order
+  calculation issues.
+
+  As part of this large bug-fixing effort we used NaN tainting of reals
+  and huge tainting of integers to detect (and fix) many uninitialized
+  variable issues.
+
+  For more complete details of all bugs fixed see the ChangeLog.release file.
+
+2.3 Converted Fortran source code from fixed to free format
+
+  The external change here is the Fortran source code filenames have
+  been changed from *.f to *.f90 form to help inform compilers that
+  the Fortran source is in free format.  The most obvious internal
+  changes are the continuation style (ampersand ending the line
+  preceding the continuation line) and taking advantage of the longer
+  line length possible with free format to reduce the number of
+  continuations.
+
+2.4 Updated the FreeEOS code standard from (extended) Fortran 77 to Fortran 2008
+
+  The compliance with the Fortran 2008 standard has been confirmed by no
+  warnings due to the gfortran -std=f2008, ifort -std08, and nagfor
+  -f2008 options.
+
+2.5 Implemented Fortran 2008 best practices
+
+  See README.best_practices for the details of these changes.
+  N.B. In the interest of making this release in a timely manner, the
+  current code is not 100 per cent compliant with those stated best
+  practices.  But it is pretty close to that goal.
+
+2.6 Implemented configuration of the floating-point representation
+
+  This change has been implemented for FreeEOS via the CMake variables
+  supported_fp_precision and supported_fp_exponent where the default
+  values of these variables (15 and 300) correspond to the usual IEEE
+  754 "binary64" precision (often known simply as "double precision")
+  which is likely what virtually every user prefers to use since for
+  most computer hardware this gives the fastest results with
+  reasonable numerical precision and dynamic range.
+
+  However, for special development purposes (e.g., checking the code
+  for derivative errors by comparing results with derivatives
+  determined by numerical differences as in free_eos_test (see
+  test_FreeEOS/README.free_eos_test for further discussion of that
+  application) or checking the code for any underflows that change
+  results in any significant way) it is useful to specify non-default
+  supported_fp_precision and supported_fp_exponent values of 18 and
+  4900 corresponding to the IEEE 754 "x87" extended precision
+  representation (often known simply as "extended precision") or 32
+  and 4900 corresponding to IEEE 754 "binary128" precision (often
+  known simply as "quadruple precision".  N.B. to take full advantage
+  of the improved precision and dynamic range of these additional
+  floating-point representations, it is necessary to build special
+  versions of lapack and blas with these same floating-point
+  representations as well, and link the free_eos library to whatever
+  special version of lapack and blas is appropriate.
+
+2.7 Updated the physical constants from CODATA 2002 to CODATA 2018
+
+  As previously, the physical constants used by FreeEOS are divided into 7
+  primary constants and the remaining secondary constants which are
+  calculated from the primary constants with the maximum precision
+  possible (typically 16 figures of precision for double precision)
+  with the adopted floating-point representation. This insures the
+  rounding that occurs in the CODATA 2018 values of the secondary
+  constants and the (small) losses in the thermodynamic consistency of
+  the FreeEOS results that would occur due to that rounding does not
+  cover up any other source of thermodynamic inconsistency in FreeEOS
+  results.
+
+  Five of the 7 primary constants are exact with only the Rydberg and
+  the proton mass still being experimentally determined.  However,
+  these two constants are currently specified in CODATA 2018 to
+  respectively 14 and 13 significant digits so I anticipate future
+  changes in the physical constants adopted for FreeEOS will be quite
+  small except for the future molar mass constant change discussed below.
+
+  Since the free-energy model has not changed between FreeEOS-2.2.1
+  and this release (3.0.0), and I have been careful to check for most
+  of the extensive bug fixes that no significant differences were
+  introduced in *.stdout free_eos_test results from building the
+  simple_test, valgrind_test, and comprehensive_test targets and *.png
+  figure results from building the FreeEOS_papers target, I ascribe
+  most differences in results between FreeEOS-2.2.1 and this release to
+  these changes in physical constants and ionization potentials.  It
+  turns out that for kif=2 and EOS1 (the most reliable variant of
+  FreeEOS-2.2.1), the maximum such relative change in P(rho, T) over
+  the log rho-log T plane is only of order 10^{-4.5}, see
+  <http://freeeos.sourceforge.net/3.0.0-2.2.1_EOS1.png>.  Those
+  changes are small relative to actual FreeEOS errors, and I assume
+  future changes in physical constants will have an even smaller effect.
+
+  N.B. In the interest of releasing FreeEOS-3.0.0 in a timely manner,
+  the physical constants in that software are derived and used
+  implicitly assuming the SI molar mass constant is 1.×10−3 kg⋅mol−1
+  while according to
+  <https://en.wikipedia.org/wiki/Molar_mass_constant> the 2018 CODATA
+  recommended value of this measured constant is actually
+  0.99999999965(30)×10−3 kg⋅mol−1.  After the 3.0.0 release I plan to
+  change the FreeEOS code so the molar mass constant is explicitly
+  used in a consistent manner, and I further plan to change from its
+  current implicit value to the correct 2018 CODATA value.  But
+  meanwhile the relative errors caused by this (implicit)
+  approximation should be of order 10^{-10}, i.e., negligible.
+
+2.8 Updated the ionization potentials to the latest NIST values
+
+  In this case "latest" refers to Kramida, A., Ralchenko, Yu., Reader,
+  J., and NIST ASD Team (2019). NIST Atomic Spectra Database
+  (ver. 5.7.1), [Online]. Available: https://physics.nist.gov/asd
+  [2020, March 11]. National Institute of Standards and Technology,
+  Gaithersburg, MD. DOI: https://doi.org/10.18434/T4W30F
+
+  The above figure does not show any obvious local residuals due to
+  ionization zones so it appears this change has introduced smaller
+  changes than those due to the above change in physical constants.
+
+2.9 Updated isotopic masses to AME 2020
+
+I got these data from electronic files made available by the Argonne
+National Laboratory site,
+<https://www.anl.gov/phy/reference/ame-2020-massmas20>.  That site
+recommends the following reference for this work:
+
+"The AME 2020 atomic mass evaluation has been published in Chinese
+ Phys. C 45, 030002 (2021) and Chinese Phys. C 45, 030003 (2021). Any
+ work that will use these files should make reference to the original
+ papers listed above, and not to the electronic files."
+
+2.10 Implemented a verbosity argument (just for the modern free_eos API)
+
+  This free_eos argument implements control of how much output to
+  stderr is allowed by the free_eos library.
+
+  + verbosity.eq.0 corresponds to no stderr output allowed for the
+    free_eos library other than some extra stderr output that sometimes
+    occurs just before error stop statements that are themselves
+    the result of a failed sanity check (i.e., an unexpected internal
+    logic inconsistency or an unexpected combination of argument values
+    for the free_eos call.
+
+  + verbosity.ge.1 corresponds to allowing minimal stderr output from the
+    free_eos library that is associated with errors, i.e., non-zero info
+    values.
+
+  + verbosity.ge.2 corresponds to allowing stderr output from the
+    free_eos library that is associated with warnings, i.e.,
+    problematic issues that are not sufficiently severe to cause a
+    non-zero info value.
+
+  + verbosity.ge.3 corresponds to allowing stderr output from the
+    free_eos library that is associated with more important
+    informational messages (e.g., debug output when the BFGS minimization
+    technique is used).
+
+  + verbosity.ge.4 was originally implemented to allow stderr output
+    from the free_eos library that is associated with the least
+    important informational (debug) messages that corresponded to all
+    previously disabled (i.e, commented out or specified with Boolean
+    logic that is never true) stderr output.  However, the results
+    required a punishing amount of disk space, and were often
+    crude/not useful (i.e., those output statements were disabled for
+    a reason).  Therefore, the code was further changed so that
+    verbosity.ge.4 had the same effect as verbosity.ge.3, i.e., all
+    verbosity.ge.4 logic was replaced by .false..and.verbosity.ge.4 to
+    mark output code that *might* be useful for debugging purposes in
+    the future but which is not used now.
+
+2.11 Implemented the qe and qv arguments (just for the modern free_eos API)
+
+  The returned values of these free_eos arguments allow routines that
+  call that subroutine to calculate in a convenient manner the
+  gravitational energy generation rate according to the fundamental
+  principles discussed in Strittmatter, P.A., Faulkner, J.. Robertson,
+  J.W., and Faulkner, D.J. 1970 Ap.J. 161, 369-373.
+
+2.12 Implemented the info argument (just for the modern free_eos API)
+
+  All routines that call the modern API form of free_eos should check
+  the returned value of info.  If that value is non-zero, that indicates
+  an abnormal termination of the free_eos call with most returned values
+  invalid or undefined.
+
+2.13 Implemented the sound2 (square of the sound speed) argument (just for the modern free_eos API)
+
+2.13 Changed how the "stop" and "error stop" statements are used
+  internally by the free_eos library
+
+  Internal logic errors are now terminated with the "error stop"
+  statement rather than the "stop" statement.  Such logic errors are
+  typically detected by sanity checks.  Note, this is now the only use
+  of the "error stop" statement within the free_eos library, and there
+  is now no use of the stop statement within that library (e.g., EOS error
+  conditions that have nothing to do with sanity checks no longer execute
+  "stop".  Instead, such error conditions are signalled with
+  non-zero info values.
+
+  As a result of these changes, applications that link to the free_eos
+  library (e.g., free_eos_test) can use the stop statement for normal
+  terminations (which by default for gfortran yields an extremely
+  useful floating-point exception report), and take any other measure
+  they like (e.g., executing the "error stop" statement or starting a
+  new series of EOS calculations for a different isochore, isobar, or
+  isotherm) when non-zero info values are returned.
+
+2.14 Implemented source code documentation
+
+  This project has been implemented with doxygen.  The current status
+  is all modules and module procedures have doxygen summary
+  documentation, but only a small subset of the procedures (which does
+  include the two API's for the important free_eos generic subroutine)
+  currently have doxygen argument documentation, and there is no
+  doxygen documentation of module variables.  So I have made a good
+  start with this project with results that can be browsed (e.g., for
+  the unpacked 3.0.0 tarball) at either
+  free_eos-3.0.0/document_FreeEOS/doxygen/doxygen/latex/FreeEOS_developer_documentation.pdf
+  or free_eos-3.0.0/document_FreeEOS/doxygen/doxygen/html/index.xhtml.
+  However, although that documentation is already quite extensive
+  there is still obviously a large effort required to complete this
+  project.
+
+2.15 Implemented a new modern CMake-based build system
+
+  CMake is used to configure the following tasks:
+
+  + build the free_eos library using the "free_eos" target;
+
+  + build the doxygen documentation (see above) using the
+    "build_doxygen" target;
+
+  + build (using modern pdflatex/aastex methods) the 5 documentation
+    papers including all their figures and the utilities required to
+    help create those figures using the "FreeEOS_papers" target; and
+
+  + build the "simple_test", "valgrind_test", and
+    "comprehensive_test" test targets.
+
+    Building the "simple_test" target runs the free_eos_test,
+    exchange_test, and fermi_dirac_test utilities in specific ways
+    (controlled by a configured file used for stdin) and the
+    rosenbrock_test, and solve_linear_test utilities as well.  In
+    these cases, all results are compared exactly with results already
+    generated by gfortran 8.3.0 on my platform so this test normally
+    succeeds on my platform and fails those comparisons on other
+    platforms where floating-point calculations have slightly
+    different results than mine because of, for example, a different
+    order of computation caused by a non-gfortran compiler or even
+    different version of gfortran.
+
+    Building the "valgrind_test" target tests for free_eos library
+    memory management issues by running free_eos_test under valgrind
+    for 15 combinations of option suites and kif values for single
+    (i.e., cold start) physical conditions which have sufficient
+    pressure ionization to make convergence difficult.
+
+    Building the "comprehensive_test" target tests for convergence and
+    derivative issues by running free_eos_test under an extremely wide
+    range of physical conditions for the most important combinations
+    of option suites and kif values.
+
+2.16 Reduced counts of serious floating-point exceptions to zero for all test targets
+
+  What motivated this overflow exception cleanup was the summary of
+  floating-point exceptions typically provided by gfortran by default
+  for the stop statement.  Originally those summaries provided reports
+  of substantial numbers of the the serious floating-point exceptions
+  (overflow, divide by zero, and invalid).  But by improving the
+  scaling methods, pinning values that would overflow to large values
+  that don't overflow and which do not disrupt convergence, erroring
+  out for some overflows, and by performing a substantial rewrite of
+  eos_calc that eliminated scaling inconsistencies in that routine, I
+  was able to reduce the counts of these serious floating-point
+  exceptions to zero for the "simple_test", "valgrind_test",
+  "comprehensive_test", and FreeEOS_papers (especially the convergence
+  paper which generates figures for physical conditions that are more
+  extreme than for any other test) test targets.
+
+  N.B. In the interest of releasing FreeEOS-3.0.0 in a timely manner,
+  I only made this cleanup for the default double precision case.
+  That is a good start, but there is some preliminary evidence that
+  there is more work to do to reduce the counts of serious
+  floating-point exceptions for the above test targets to zero for the
+  extended and quaduple precision cases.
+
+2.17 Rationalized the many different non-zero info return values
+
+     These non-zero values now signal many different error conditions
+     within the free_eos library.  To help organize all this error
+     condition information, I introduced a unique info offset for each
+     different free_eos library routine to help identify which routine
+     is reporting a non-zero info value.

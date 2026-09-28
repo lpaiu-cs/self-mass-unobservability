@@ -1,0 +1,29 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Replace unresolved triangular interpolation of ordinary LTE atomic lines with profile-area integration on the EXISTING photon bins. Keep special H/He profiles in the native background.",
+  "decision": "Only rerun the short coupled response if the fixed-bath source-grid and independent quadrature checks are below the original 1e-3 threshold. No global grid refinement or new stellar steps.",
+  "model": "Ordinary LTE lines use full Voigt wings over the inherited finite photon band. Native opacity-dependent wing truncation is removed for these lines, a declared change of line representation, not an accuracy claim for the atomic model.",
+  "budget": {
+    "native_runs": 3,
+    "native_seconds": 120,
+    "integration_seconds": 180,
+    "coupled_seconds": 480,
+    "CPU_workers": 1,
+    "memory_GB": 4,
+    "new_stellar_steps": 0
+  },
+  "forecast": "Prior same-size native spectra took 5.63/12.55/1.56s. Profile integration is unmeasured and capped at180s. Prior coupled response155.57s; capped480s. Stop on failed preflight; preserve original false verdict.",
+  "gates": {
+    "source_grid": 0.001,
+    "quadrature": 0.0001,
+    "time_order": 1.8,
+    "time_error": 0.001
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_photon_profile_integral.py": "773214ad2dc92cd327e41f27380c442f74be76a7c7f7bf76d832152058346152",
+    "/home/lpaiu/work/direct-eos-gr33/photon-actual-opacity/frequency-repair/build/synspec54.f": "4e181667afdb9dc35d331276535e2861fb1cd4e4cd620a876392292f29cd98cb",
+    "/home/lpaiu/work/direct-eos-gr33/photon-actual-opacity/frequency-repair/build/PARAMS.FOR": "d51d12407b6211de0944d3b5422a03bb9c416d47826c016f59fa5dff641c0008",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-actual-opacity/response.json": "e5fb369ae012d47efe840018fefaf7b28e2e6de632ca29fbd0ec366ef421b75e",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-actual-opacity/frequency-repair/bank.npz": "d75f9ccc513af919a647fcc81707eabae8fa1abaa6a0244074a10a428cd9571a"
+  }
+}

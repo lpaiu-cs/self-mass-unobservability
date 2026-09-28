@@ -1,0 +1,41 @@
+{
+  "checked_utc": "2026-09-14T23:15:12.586252+00:00",
+  "pid": 387,
+  "ppid": 311,
+  "parent_argv": [
+    "/init"
+  ],
+  "parent_name": "Relay(312)",
+  "process_group": 387,
+  "session": 387,
+  "tty_nr": 0,
+  "argv": [
+    "/usr/bin/python3",
+    "-u",
+    "verification/gr_donor_repaired_full_duration.py",
+    "chain",
+    "--workers",
+    "15"
+  ],
+  "cwd": "/mnt/e/lab/self-mass-unobservability",
+  "descriptors": {
+    "0": "/dev/null",
+    "1": "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-compatible-equilibrium-v2/production-donor-repaired/run.log",
+    "2": "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-compatible-equilibrium-v2/production-donor-repaired/run.log"
+  },
+  "boot_id": "40a778b1-ea33-4b64-b043-79f79f38c2f9",
+  "start_ticks": "9286",
+  "accepted_step": 53,
+  "time_seconds": 0.19896637930197744,
+  "current_iteration": {
+    "step": 54,
+    "iteration": 0,
+    "residual_norm": 48672638093869.25
+  },
+  "checkpoint_zip_and_hash_verified": {
+    "outputs/direct-eos-gr33/gr-compatible-equilibrium-v2/production-donor-repaired/path-1/step-0052.npz": "10dea3aabbf0229aa7ef5b1b9bfbf28edef9b86ec0ec996b35754cb7f699eb26",
+    "outputs/direct-eos-gr33/gr-compatible-equilibrium-v2/production-donor-repaired/path-1/step-0053.npz": "5baaffc06e1cb7a645b83ee19081ba374da6e38bf2a75fccd0c673509923fc8e"
+  },
+  "new_failure": false,
+  "restart_scope": "Harness/app process restart only; keep WSL and the computer running. Detached session, no controlling terminal, file-backed output. This is an inspection-based expectation, not an executed app-restart test."
+}

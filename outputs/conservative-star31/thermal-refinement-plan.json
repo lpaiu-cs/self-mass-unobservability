@@ -1,0 +1,13 @@
+{
+  "classification": "Counterexample candidate",
+  "observed_failure": "The original temperature pair has a 0.0098622 nuclear-neutrino derivative difference, worst cell 2274. Vector and heat directions pass. Preserve all three original verdicts.",
+  "diagnostic": "The larger h=1e-4 stencil crosses a weak blend boundary near cell 2274; Request30 verified that the smaller 5e-5 stencils stay on one branch at all burning cells.",
+  "direction": "lnT",
+  "steps": [
+    5e-05,
+    2.5e-05
+  ],
+  "criterion": 0.001,
+  "method": "Add a smaller central stencil and compare all three output derivatives with the existing 5e-5 stencil. Do not raise the threshold or claim a derivative through the kink.",
+  "continuous_domain_certified": false
+}

@@ -1,0 +1,63 @@
+--- phase64/synspec54.f
++++ phase67/synspec54.f
+@@ -64,6 +64,9 @@
+ C     INITIALIZATION - INPUT OF BASIC PARAMETERS AND MODEL ATMOSPHERE
+ C
+       CALL START
++C     Standalone atomic provider: no atmosphere or spectral evolution.
++      CALL ATOMIC_REQUESTS
++      STOP
+       if(ifeos.gt.0) imode=-3
+       if(ibfac.gt.1) then
+          LTE0=LTE
+@@ -1056,6 +1059,8 @@
+          READ(IUNIT,*) (XTOP(IFIT,II),IFIT=1,NFIT)
+          READ(IUNIT,*) (CTOP(IFIT,II),IFIT=1,NFIT)
+       END IF
++      WRITE(98,'(6i8,1pe26.17)') ION,II,JJ,
++     *   NNEXT(ION),MODE,IFANCY,OSC
+       IBF(II)=IFANCY
+       INDEXP(II)=IABS(MODE)
+       IF (NCOL.NE.0) THEN
+@@ -1077,6 +1082,9 @@
+    20 CONTINUE
+       READ(IUNIT,*,END=30,ERR=30) II,JJ,MODE,IFANCY,ICOLIS,
+      *                              IFRQ0,IFRQ1,OSC,CPARAM
++C     Export even unsupported records to preserve the coverage boundary.
++      WRITE(92,'(7i8,1p2e26.17)') ION,II,JJ,
++     *   NFIRST(ION)+II-1,NFIRST(ION)+JJ-1,MODE,IFANCY,OSC,CPARAM
+       IF(IABS(MODE).GT.100) READ(IUNIT,*) FR0INP
+       IF(JJ.GT.NLEVS(ION)) THEN
+          IF(IABS(MODE).EQ.2) THEN
+@@ -3577,7 +3585,7 @@
+ C
+ C     wavelength with an explicit correction to the air wavalength
+ C
+-      IF(WL0.GT.vaclim) THEN
++      IF(.FALSE.) THEN
+          ALM=1.E8/(WL0*WL0)
+          XN1=64.328+29498.1/(146.-ALM)+255.4/(41.-ALM)
+          WL0=WL0/(XN1*1.D-6+UN)
+@@ -23961,3 +23969,22 @@
+       END IF
+       J2=LFT-1
+       END
++
++      SUBROUTINE ATOMIC_REQUESTS
++      INCLUDE 'PARAMS.FOR'
++      INCLUDE 'MODELP.FOR'
++      COMMON/TOPCS/CTOP(MFIT,MCROSS),XTOP(MFIT,MCROSS)
++      INTEGER NREQ,IREQ,ILEV
++      DO ILEV=1,NLEVEL
++         WRITE(93,'(3i8,1p2e26.17)') ILEV,IBF(ILEV),
++     *      NQUANT(ILEV),ENION(ILEV),G(ILEV)
++      END DO
++      READ(90,*) NREQ
++      DO IREQ=1,NREQ
++         READ(90,*) ILEV,FR
++         IF(ILEV.LT.1.OR.ILEV.GT.NLEVEL.OR.FR.LE.0)
++     *      STOP 'INVALID ATOMIC REQUEST'
++         SIG=SIGK(FR,ILEV,0)
++         WRITE(91,'(2i8,1p2e26.17)') IREQ,ILEV,FR,SIG
++      END DO
++      END

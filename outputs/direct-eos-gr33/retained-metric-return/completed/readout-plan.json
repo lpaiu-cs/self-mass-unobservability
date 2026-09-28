@@ -1,0 +1,40 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Convert actual GR-driven material states and photons to the same canonical first-variation source, then apply this separate increment once to the accepted Phase151 charge.",
+  "source": "Reuse the conservative primitive-to-pressure map and independent cell probes; remove the initial gas/photon canonical geometry already in the GR operator. Retain all energy, baryon, trace, radial and tangential stress fields.",
+  "infinity": "Reuse exact causal packet fronts and the actual signed SDIRK angular packets. The previous compact/exterior/arrived-energy state is Phase151 direct-motion, including its accepted pressure-subtraction repair.",
+  "identity": "delta_q=[delta_compact+delta_exterior+(alpha+q_previous)*delta_epsilon]/[1-epsilon_previous-delta_epsilon]. Store this increment separately; its controls use its own norm.",
+  "gates": {
+    "time": 0.02,
+    "quadrature": 0.002,
+    "pressure": 0.002,
+    "independent_GR": 1e-09,
+    "normalization": 1e-12
+  },
+  "budgets": {
+    "readout": 180,
+    "audit": 60
+  },
+  "limits": "Preserves the initial-slice GR response operator and finite packet representation. No uniform native Jacobian, continuum, exterior-scattering, fixed-point or final physical error enclosure.",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/verify_retained_metric_return.py": "49fc1051059a425bf21f53591f9ceef9045e6fa48983422667ed2a5aba4da252",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/def_retained_metric_return.py": "d250e299e2c9e7afc5981bca967c5387b26acaa034622c4ad4574aaffd9f0103",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/repair_retained_metric_material.py": "4dc7423600d8db0acd731d470751accda378a0c688cff80499dcc0f6a27ee2f5",
+    "retained-metric-return152-work/material-repair-execution.json": "ba9a6d9e9dd9c3de554006da67987f4f6dff02bada1d4ca7b2d18de8e3d6c20a",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/verify_native_stage_energy_charge.py": "a7b4b93650663f17ab5cedbe6562cb3ed752fc0e125979b16bfd84d8e31c920d",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/verify_native_feedback_metric_return.py": "46e9df0869340994cad010b38c6f43be59a425969f720e6ccc03999901a9e57f",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/verify_native_material_response.py": "02862d794865e9d2785b631baeed092ebf3258538f91d4b64340230a270c10a2",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/def_retained_native_return.py": "a8552650499ff3d50dca537be45a7caee2108959399ed71137fdebef5458f4c3",
+    "retained-metric-return152-work/photons/result.json": "823c9c51df60d31f32240c3db347e459427ba3448cc37572cee6da6a4569ca69",
+    "retained-metric-return152-work/material-resolved/production.json": "a3d7415211834326dc96540b80db3ab62bef8eea620b88a57dac89106e0a2b2e",
+    "retained-metric-return152-work/response-execution-plan.json": "1e94108ba1a482abb0344988b0ad7151bdbe7a869f95721f0f1eb7feac2945e7",
+    "retained-metric-return152-work/photons/steps-64-reference-128.npz": "f13ba57e22e11593dc7612a9fbe97e743a66d321b70750a13664e866fb687907",
+    "retained-metric-return152-work/material-resolved/steps-64-reference-128.npz": "b3931569574976bc381acdb68ab0fa5e0504334edf23785c17af1753b2d6cf6b",
+    "retained-metric-return152-work/photons/steps-128-reference-128.npz": "81ef818acf92fcd6c4eca8c1578a9e7a086a7048ec2131dd0f0253a81bca566b",
+    "retained-metric-return152-work/material-resolved/steps-128-reference-128.npz": "0e1543e9ab54a0fbf7b285829b475b328ee01be3cdb17f490da33b4e51e9e044",
+    "retained-motion-return151-work/direct-motion/charge-128-a8-r8.npz": "b4bc34d3eec0c5abb5bcf6ecd1ef8844644bade48fbe359bf12eb10458a63888",
+    "retained-motion-return151-work/direct-motion/charge-128-a4-r8.npz": "c428aa652046014c4df1b923cb98e4a561c87509e58d81607bac66c322d688d1",
+    "retained-motion-return151-work/direct-motion/charge-64-a8-r8.npz": "5e47f33217232bf43fa4f84d91d32973127b22338e246ee10e6511909765012f",
+    "retained-motion-return151-work/direct-motion/charge-128-a8-r4.npz": "7d16f77f2240b33a30b8f9d12a6edeb0156db2563f9fc58a88aadbc6b4c15ef8"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "classification": "Proven",
+  "checkpoint": "4bfd9c95",
+  "bindings": {
+    "verification/gr_radiating_surface_connection.py": "a0b41297b36da2bd06eebc61a78e3fadd7961a439958f429d9891429e8c5aa5c",
+    "outputs/direct-eos-gr33/gr-heat-nonlinear-balance-defined/manifest.json": "c3812f2a7d5d299770749b0b1ac7a70bcd3ddbc4d92b04c6d970e4c17897432b",
+    "outputs/direct-eos-gr33/gr-heat-nonlinear-balance-defined/result.json": "149122dcef41aa3eab74972e554c29314a4031825eb1ecd6344a8c4f0359635b",
+    "outputs/direct-eos-gr33/gr-shared-heat-reference/manifest.json": "4cce342254824099edaacac28ba9f6170f419c9d0e25db167fd7bcc117c066b0",
+    "outputs/direct-eos-gr33/gr-shared-heat-reference/shared-faces.npz": "0caf78010b34a5a6d52860959594a167b233ef715a10e49ff0dcbcf244659480",
+    "outputs/direct-eos-gr33/gr-increment-structure/path-4.npz": "e5b479652627619df7e91452f2a2b04ef8ad2d46a24a96fabed2a85c94068c14",
+    "outputs/direct-eos-gr33/gr-radiating-surface-connection/maharaj-govender-govender2013.pdf": "3b16caa4eaa28b11c085282f783bc25b1fe114cf3fddcb97c4562fb345025b78"
+  },
+  "assumptions": [
+    "G=c=1; spherical, smooth timelike material surface outside trapped regions",
+    "Interior baryon-frame isotropic P and proper radial heat Q; exterior pure outgoing null dust, not a general material atmosphere",
+    "No surface layer: Darmois matching imposes continuous induced metric/extrinsic curvature and the corresponding normal stress/energy flux projections",
+    "For the luminosity relation, interior Misner-Sharp mass equals the asymptotically flat outgoing Vaidya mass M(u) on the matched surface"
+  ],
+  "source": {
+    "classification": "Imported from prior work",
+    "title": "Radiating stars with generalised Vaidya atmospheres",
+    "authors": [
+      "S. D. Maharaj",
+      "G. Govender",
+      "M. Govender"
+    ],
+    "url": "https://arxiv.org/pdf/1301.1417",
+    "arxiv": "1301.1417",
+    "inspected_pdf_pages_zero_based": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "equations": [
+      "1",
+      "2",
+      "6",
+      "12b",
+      "20",
+      "21"
+    ],
+    "scope": "Their shear-free coordinates give p=qB for the ordinary Vaidya limit. Here Q is the proper comoving heat flux, so qB=Q. The frame-projection necessity and moving-surface readout are rederived below; no shear-free assumption is added to the interior balance theorem."
+  },
+  "boundary": "A necessary junction condition and conditional bolometric readout, not a matched atmosphere, a finite GR trajectory, data inference, or a new dynamic-chi observable."
+}

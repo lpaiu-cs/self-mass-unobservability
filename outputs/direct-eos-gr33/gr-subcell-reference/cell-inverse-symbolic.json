@@ -1,0 +1,9 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "ansatz": "Within one fixed-metric cell retain positive nonuniform reference rho0(x),T0(x), fixed composition and Q(x). Set rho=exp(eta)*rho0, T=exp(theta)*T0, and a common cell velocity v. This is a specified reconstruction family, not an arbitrary unresolved fluid state.",
+  "conserved_moments": "B=integral[a*D dV_coordinate], U=integral[E dV_coordinate], Pi=integral[a*J dV_coordinate], dV_coordinate=4*pi*r^2 dr. Set kappa=integral[rho0 dV_coordinate]/integral[a*rho0 dV_coordinate]. Since D=exp(eta)*W*rho0, integral[D dV_coordinate]=kappa*B exactly in this family.",
+  "stable_energy": "At fixed geometry use Ubar=U-C*kappa*B=integral[(E-C*D) dV_coordinate], C=C_X*c^2. This preserves the gravitational versus proper-volume weights rather than subtracting C*B from U. When geometry changes, kappa changes and its energy contribution must be included.",
+  "local_inverse": "At eta=theta=v=0, the Jacobian of (B,Ubar,Pi) has rows [B0,0,0], [A,Cv_coordinate,2*integral Q dV_coordinate], [0,0,W_proper], where Cv_coordinate=integral rho0*cv*T0 dV_coordinate>0 and W_proper=integral a*(epsilon+P) dV_coordinate>0. Hence determinant=B0*Cv_coordinate*W_proper>0 for this fixed-metric reconstruction family and a differentiable EOS.",
+  "limits": "No single uniform EOS state replaces the reference. Local inverse theorem requires differentiability and does not certify native EOS, a finite parameter neighbourhood, positive quadrature error, full GR constraints, shocks, arbitrary subcell moments or nonlinear evolution."
+}

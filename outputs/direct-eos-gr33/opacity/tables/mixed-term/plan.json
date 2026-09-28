@@ -1,0 +1,14 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "3f28e87",
+  "inputs_sha256": {
+    "outputs/direct-eos-gr33/opacity/tables/result.json": "38afb654746b97aef328c7defd31e3cc81585d9507d423f68480519f018b17e1",
+    "outputs/direct-eos-gr33/opacity/tables/evaluation.npz": "4023fb0b8c7d034b1f3449712a6113b651df31c36d91b6741dfcf4f5fbce61e0",
+    "outputs/direct-eos-gr33/opacity/tables-enriched-tables.npz": "d4e10e14edb5d27e11eeeccf7ff519326cf965c06996e258b66defb377d2a42c",
+    "verification/opacity_tables.py": "ba01a5ebe3062eb1b13b23ccb918f99158fba6fd0c72fcba191c1ba4a028c7b9",
+    "verification/opacity_mixed_term.py": "e271c3ae8c061b86a06c1a58328900fe18be5a683de8d63887decd7070589a7e"
+  },
+  "native_defect": "The saved fvbicub declares z36th as INTEGER and assigns sixth*sixth. Its value is zero, so the mixed-curvature term is omitted from value and derivative outputs.",
+  "controls": "Use the same double-precision evaluator with only the conduction mixed field set to zero for native-implementation matching. Replay the restored result exactly. Keep the original 1e-4 value and 1e-3 finite-derivative gates. Preserve the failed native-value match of the restored model.",
+  "physical_opacity_certified": false
+}

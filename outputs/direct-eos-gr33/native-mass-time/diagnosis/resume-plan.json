@@ -1,0 +1,19 @@
+{
+  "classification": "Conjectural",
+  "reason": "Measured calls0.484..0.518s imply about4minutes for462calls. The conservative4x forecast1037.92s exceeded the initial15minute planning gate before projection started. Preserve that stop and continue the same finite462calls with30minutes; no accuracy or physical/grid expansion.",
+  "max_seconds": 1800,
+  "virtual_GiB": 8,
+  "new_physical_steps": 0,
+  "new_clock_paths": 0,
+  "bindings": {
+    ".phase258-native-projection.py": "8f1c77b28c04c67f92093a5f3f7ff005cd552bf53a32b28a6f2193e96fc10b5e",
+    "native-mass-time258-work/initial-budget-producer.py": "93326ba8f9e82b4eb69ec7b97e457bf03a3e9a66661c3396a06c538230a0bb90",
+    "native-mass-time258-work/plan.json": "9bfd988dac75731261300c92bb7bdc7dcaf49c5eea3b78b36b7074c960c2804f",
+    "native-mass-time258-work/receipt.json": "854a7b40487becbbca2754ac581be714028b6bc630bad040b5d975cc320e80ac",
+    "native-mass-time258-work/measured-forecast.json": "92688ee0b6db46cfd611fbe1bba9cbae0384a44ddb114bf82e87f64d1ffd7167"
+  },
+  "old_execution_source_alias": {
+    "source": ".phase258-native-projection.py",
+    "frozen": "native-mass-time258-work/initial-budget-producer.py"
+  }
+}

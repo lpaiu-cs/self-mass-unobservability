@@ -1,0 +1,71 @@
+{
+  "checked_utc": "2026-09-14T23:45:18.7206667Z",
+  "task_name": "SelfMassGR-Resume53-20260915",
+  "state": "Running",
+  "last_run_time": "2026-09-15T08:38:41.0000000+09:00",
+  "last_task_result": 267009,
+  "trigger_count": 0,
+  "execution_time_limit": "PT0S",
+  "action": [
+    {
+      "Execute": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "Arguments": "-NoLogo -NoProfile -NonInteractive -WindowStyle Hidden -ExecutionPolicy Bypass -File \"E:\\lab\\self-mass-unobservability\\verification\\run_gr_harness_recovery.ps1\"",
+      "WorkingDirectory": "E:\\lab\\self-mass-unobservability"
+    }
+  ],
+  "process_ancestry": [
+    {
+      "ProcessId": 65236,
+      "ParentProcessId": 2644,
+      "Name": "powershell.exe",
+      "CreationDate": "2026-09-15T08:38:41.964797+09:00",
+      "CommandLine": "\"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -NoLogo -NoProfile -NonInteractive -WindowStyle Hidden -ExecutionPolicy Bypass -File \"E:\\lab\\self-mass-unobservability\\verification\\run_gr_harness_recovery.ps1\""
+    },
+    {
+      "ProcessId": 2644,
+      "ParentProcessId": 1700,
+      "Name": "svchost.exe",
+      "CreationDate": "2026-09-06T09:45:17.697851+09:00",
+      "CommandLine": null
+    },
+    {
+      "ProcessId": 1700,
+      "ParentProcessId": 1620,
+      "Name": "services.exe",
+      "CreationDate": "2026-09-06T09:45:17.301453+09:00",
+      "CommandLine": null
+    },
+    {
+      "ProcessId": 1620,
+      "ParentProcessId": 1140,
+      "Name": "wininit.exe",
+      "CreationDate": "2026-09-06T09:45:17.177067+09:00",
+      "CommandLine": null
+    }
+  ],
+  "children": [
+    {
+      "ProcessId": 20416,
+      "ParentProcessId": 65236,
+      "Name": "conhost.exe",
+      "CreationDate": "2026-09-15T08:38:41.973352+09:00",
+      "CommandLine": "\\??\\C:\\WINDOWS\\system32\\conhost.exe 0x4"
+    },
+    {
+      "ProcessId": 52252,
+      "ParentProcessId": 65236,
+      "Name": "wsl.exe",
+      "CreationDate": "2026-09-15T08:38:42.442346+09:00",
+      "CommandLine": "\"C:\\WINDOWS\\System32\\wsl.exe\" -d Ubuntu-22.04 --cd /mnt/e/lab/self-mass-unobservability -- /bin/bash -c \"set -C; exec /usr/bin/env OPENBLAS_NUM_THREADS=1 PYTHONPATH=/home/lpaiu/work/nutimo_pilot/request13_deps:verification /usr/bin/taskset -c 0-15 /usr/bin/python3 -u verification/gr_harness_recovery.py chain --workers 15 > outputs/direct-eos-gr33/gr-compatible-equilibrium-v2/production-harness-recovered/run.log 2>&1\""
+    }
+  ],
+  "parent_services": [
+    {
+      "Name": "Schedule",
+      "State": "Running",
+      "ProcessId": 2644
+    }
+  ],
+  "actual_harness_restart_endurance_tested": false,
+  "scope": "Independent Windows Task Scheduler ownership and a live foreground WSL client are observed; explicit WSL shutdown, Windows reboot, logoff and power loss are not covered."
+}

@@ -1,0 +1,23 @@
+{
+  "classification": "Imported from prior work",
+  "mesa_release": 7624,
+  "sha256": {
+    "const/public/const_def.f90": "21ff65ed968a10373f205929ed51ead5a9b325b7151ea872417f97793e803cc9",
+    "star/defaults/profile_columns.list": "86db426f9d8e53845018d70ef675b0adbd5f3b560dce4f61cdfa8257c30681b6",
+    "star/private/profile_getval.f90": "a5439e46ab5a6a850fc0dbb319ad97fd41afe836c8af32b377743aa5b0e8c1ae",
+    "star/private/hydro_eqns.f90": "f978064ab4576d7c3bde7352fd563c745889be512c3a765b351b5a5598c78765",
+    "star/private/eps_grav.f90": "227178d755628609e6b2537d37a02e9cb1c19635922173011b17c91167027dd2",
+    "kap/private/kap_eval.f90": "fbc201fc45aa84f07cc36bea9581cedf9d6a59d06f30f5535ee3fd0231248292",
+    "kap/private/condint.f90": "77d9c0114d0aa1cfc3653df7b51582121364f737bcc49b38282dbf541e6a8d9f"
+  },
+  "Lsun_erg_s": 3.8418e+33,
+  "boltz_sigma_cgs": 5.6704e-05,
+  "energy": "eps_nuc already excludes reaction neutrinos. The discrete equation subtracts the mean of start/end non-nuclear neutrino loss, then adds eps_grav, extra and irradiation heating; viscosity is optional.",
+  "caution": "The output contains end-state non_nuc_neu, not its remeshed start-state value. A budget using only end-state profile values is an instantaneous diagnostic, not the exact discrete solver residual.",
+  "opacity": "Radiative and electron-conductive opacities combine harmonically. Convection is a separate channel.",
+  "reference": {
+    "title": "Lander and Andersson (2018), Heat conduction in rotating relativistic stars",
+    "url": "https://doi.org/10.1093/mnras/sty1725",
+    "use": "Primary reference for the quasi-steady Fourier limit and its causal/dynamical limitations. Request22 spherical formulas are also derived and symbolically checked here."
+  }
+}

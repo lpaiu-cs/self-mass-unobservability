@@ -1,0 +1,98 @@
+{
+  "forward": {
+    "horizon_internal": 0.07,
+    "mode": "rect2",
+    "build_record": "capd-build-rect2.json",
+    "source_snapshot": "sources/initial-rect2.cpp",
+    "source_sha256": "0488ed6b0cc38abe3ed4c1e78e1568daffa481d7a60cd17cd8648fd4c8c408fd",
+    "binary_sha256": "014584b7632696ee53989061f189311f812e6e4361d0a67d1eb9e4fe710a6a94"
+  },
+  "backward": {
+    "horizon_internal": -0.068488,
+    "mode": "rect2",
+    "build_record": "capd-build-rect2.json",
+    "source_snapshot": "sources/initial-rect2.cpp",
+    "source_sha256": "0488ed6b0cc38abe3ed4c1e78e1568daffa481d7a60cd17cd8648fd4c8c408fd",
+    "binary_sha256": "014584b7632696ee53989061f189311f812e6e4361d0a67d1eb9e4fe710a6a94"
+  },
+  "full-forward": {
+    "horizon_internal": 124.162279,
+    "mode": "rect2",
+    "build_record": "capd-build-rect2.json",
+    "source_snapshot": "sources/initial-rect2.cpp",
+    "source_sha256": "0488ed6b0cc38abe3ed4c1e78e1568daffa481d7a60cd17cd8648fd4c8c408fd",
+    "binary_sha256": "014584b7632696ee53989061f189311f812e6e4361d0a67d1eb9e4fe710a6a94"
+  },
+  "ho-forward": {
+    "horizon_internal": 124.162279,
+    "mode": "ho",
+    "build_record": "capd-build-ho.json",
+    "source_snapshot": "sources/rect2-ho.cpp",
+    "source_sha256": "bc69cd1a9e570a3a98aebb47a858a850f00d52ccad15a56a06b26160dcaf91e5",
+    "binary_sha256": "88c41de6f9951770211068736f6da6ab4005ff0fddbd9d673af09c929f91b185"
+  },
+  "scaled-forward": {
+    "horizon_internal": 124.162279,
+    "mode": "scaled",
+    "build_record": "capd-build-scaled.json",
+    "source_snapshot": "sources/scaled-client.cpp",
+    "source_sha256": "9b115a2cff9a87c003e5d37be45c3dfe3340a9735352d4855eab9b4b6eeb0bb7",
+    "binary_sha256": "fe198a302486b997f3610bf0ff21904ab7da619eeba82c6027759a2a3d2cbaa9"
+  },
+  "scaled-local": {
+    "horizon_internal": 0.07,
+    "mode": "scaled",
+    "build_record": "capd-build-scaled.json",
+    "source_snapshot": "sources/scaled-client.cpp",
+    "source_sha256": "9b115a2cff9a87c003e5d37be45c3dfe3340a9735352d4855eab9b4b6eeb0bb7",
+    "binary_sha256": "fe198a302486b997f3610bf0ff21904ab7da619eeba82c6027759a2a3d2cbaa9"
+  },
+  "scaled-backward": {
+    "horizon_internal": -0.068488,
+    "mode": "scaled",
+    "build_record": "capd-build-jacobi-adaptive.json",
+    "source_snapshot": "sources/jacobi-adaptive.cpp",
+    "source_sha256": "8c25b847a7d000a047cfe4fce4195fa0ea71acdd104485f1fcf7521279c82b4d",
+    "binary_sha256": "c0130c9746a5fe4169c10b884c92fb581ca6ec72676c23ae6aa4ee570edc42bf"
+  },
+  "jacobi-forward": {
+    "horizon_internal": 124.162279,
+    "mode": "jacobi",
+    "build_record": "capd-build-jacobi-adaptive.json",
+    "source_snapshot": "sources/jacobi-adaptive.cpp",
+    "source_sha256": "8c25b847a7d000a047cfe4fce4195fa0ea71acdd104485f1fcf7521279c82b4d",
+    "binary_sha256": "c0130c9746a5fe4169c10b884c92fb581ca6ec72676c23ae6aa4ee570edc42bf"
+  },
+  "jacobi-fixed-forward": {
+    "horizon_internal": 124.162279,
+    "mode": "jacobi",
+    "build_record": "capd-build-jacobi-fixed.json",
+    "source_snapshot": "sources/jacobi-fixed.cpp",
+    "source_sha256": "73f5104763f54304a8fc95e066833d32c45510ae2513c33ca940283570379e27",
+    "binary_sha256": "bd9584e6306062866e523817106d1a2925cc4f012468e07dbb7f813524dcd824"
+  },
+  "jacobi-translation-forward": {
+    "horizon_internal": 124.162279,
+    "mode": "jacobi",
+    "build_record": "capd-build-jacobi-translation.json",
+    "source_snapshot": "sources/jacobi-translation.cpp",
+    "source_sha256": "f176d078c77417daa330c7d369221422d34319bfad14087c11cf55b6cf8c03c0",
+    "binary_sha256": "5109197bb7af68970e285f7190a298a7e0d18f93dae0a00e12f85049c9160281"
+  },
+  "jacobi-local": {
+    "horizon_internal": 0.07,
+    "mode": "jacobi",
+    "build_record": "capd-build-jacobi-local.json",
+    "source_snapshot": "sources/jacobi-local.cpp",
+    "source_sha256": "ae2a1a639c1d468066476b97eae008f84b868e6e9f8b321d0fb662eb939bd248",
+    "binary_sha256": "40c481c98482bc0d50f7a03c25fce9c1552be6c6bda43669dddc628fb5cd48e4"
+  },
+  "mass-local": {
+    "horizon_internal": 0.07,
+    "mode": "mass",
+    "build_record": "capd-build.json",
+    "source_snapshot": "sources/final-client.cpp",
+    "source_sha256": "19c7bf13ea6f7ac224553b7d11ecf4e08ce917c2103fbd7c7f766f5123b73f60",
+    "binary_sha256": "05546cfbf44c1b3c43d3c8cf888f1958e9e18377f71925700d577970d1e25a47"
+  }
+}

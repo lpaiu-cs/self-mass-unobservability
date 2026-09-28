@@ -1,0 +1,8 @@
+{
+  "classification": "Proven",
+  "blend_product_rule": true,
+  "affine_full_source_chain_rule": true,
+  "third_log_temperature_derivative_identity": true,
+  "formula": "D_lnT F(T,a(T)) = partial_lnT F at fixed a + (da/dlnT) (F1-F0), when F is affine in a.",
+  "scope": "Interior of a declared smooth blend branch. No derivative is assigned at a kink, and this algebra does not enclose numerical evaluator error."
+}

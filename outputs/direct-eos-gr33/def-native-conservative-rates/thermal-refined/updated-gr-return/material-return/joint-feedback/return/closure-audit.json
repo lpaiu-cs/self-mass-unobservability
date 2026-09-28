@@ -1,0 +1,89 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "source_identity_relative": 1.322598598471188e-16,
+  "common_saved_time_waveform_residual": [
+    {
+      "steps": 64,
+      "reference": 128,
+      "common_saved_times": 17,
+      "material_endpoints": 65,
+      "energy_H_relative": [
+        0.0007084633666380975,
+        0.002106810007617937
+      ],
+      "maximum_at_time": [
+        0.0032197791730581584,
+        0.0032197791730581584
+      ]
+    },
+    {
+      "steps": 128,
+      "reference": 128,
+      "common_saved_times": 17,
+      "material_endpoints": 129,
+      "energy_H_relative": [
+        0.000334497839373634,
+        0.001606654554830289
+      ],
+      "maximum_at_time": [
+        0.0027904752833170705,
+        0.0034344311179287023
+      ]
+    },
+    {
+      "steps": 128,
+      "reference": 64,
+      "common_saved_times": 18,
+      "material_endpoints": 129,
+      "energy_H_relative": [
+        9.662141094627104e-05,
+        0.001440163785835584
+      ],
+      "maximum_at_time": [
+        0.00010732597243527195,
+        0.0034344311179287023
+      ]
+    }
+  ],
+  "material_comparisons": {
+    "time_at_all_65_common_endpoints": [
+      6.248610106989967e-06,
+      8.84634037397815e-06,
+      0.001054854892674384,
+      0.0009403844363166074
+    ],
+    "background_at_all_129_endpoints": [
+      0.0021901759477587247,
+      0.0010302746640997052,
+      0.0018825267134242088,
+      0.0021345835664308573
+    ]
+  },
+  "fine_17time_absolute_energy_erg_H_count_residual_before": [
+    3788851379.213893,
+    5190527259608651.0
+  ],
+  "fine_17time_absolute_energy_erg_H_count_residual_after": [
+    1255830.196348297,
+    13226367197042.848
+  ],
+  "absolute_residual_after_over_before": [
+    0.0003314540663267862,
+    0.0025481741132480002
+  ],
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "scope": "With fixed k, E=Etilde+k*B transfers the same baryon source exactly. Opposite collision transfers cancel under the same SDIRK weights. Neither identity bounds EOS derivatives or continuum integration error."
+  },
+  "residual_scope": "Only17 canonical photon/material times, plus saved pilot endpoint where present. All65/129 material endpoints are compared separately. No missing photon-time reconstruction, continuous-time supremum, contraction constant or full coupled-error bound.",
+  "coupled_fixed_point_verified": false,
+  "final_charge_solved": false,
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_updated_joint_closure.py": "e820606e064fe3d044cf519c16108a161b7c2b279768ab68bdf0de07fba8ac45",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/audit.json": "6d1e8d1c74df9bbba1c7f0cbeed06dd20e72f94dac531d2dfd64f68452407f91",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/sources.json": "bdc778d36e115b97c8814b207a7bb46b920c0008c8394532a60ac16fdd2b5b8d",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/audit.json": "b7455a943e136e689f092aba84cf2332f94c1fcb42acfbe9bca52cab5f574db2"
+  }
+}

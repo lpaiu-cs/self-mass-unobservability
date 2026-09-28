@@ -1,0 +1,89 @@
+{
+  "classification": "Counterexample candidate",
+  "bindings": {
+    "verification/def_resolved_scalar_pulse.py": "6e05b94e44fbc27c2b4e10fb686f52a74eb384695c4db3db91a40a4d399c4b1f",
+    "verification/def_spherical_regular.py": "9023b81412cb33aa1b90ba5b036a05dbdd57f5e2416639ad4ed873def6fd59f3",
+    "verification/def_spherical_coupled.py": "421ce377f7d150788681ca599f8f201bfdfb33beb053455803914f7e298e9f91",
+    "verification/gr_compatible_equilibrium_evolution.py": "eef028a87aba8ac96687994f42513853e80b8e270d6c499cc7bc56da4efe5a4c",
+    "verification/gr_conservative_two_carrier.py": "baa2ebf45375f7f1729344831748c1b3ddfa21bdbe95ec22265f4ed93f90909c",
+    "verification/gr_conservative_composition_tangent.py": "f86901a46537de3af713c23121d5f7dd922aee5e86e00a5ea1b2b56de8d8c080",
+    "verification/gr_two_carrier_evolution.py": "973f86e4fdb3cb008cb928288e7d87e8906a6e46ae317bc311ab03f9bc291f26",
+    "outputs/direct-eos-gr33/gr-molecular-shell-initial/initial.npz": "6cd05a8951e09861c874bb6e685ccdfb17529be787f5e1e661a65eb2146700be",
+    "outputs/direct-eos-gr33/gr-molecular-shell-initial/initial-manifest.json": "fc630f882ca17dbadeb2fdf39a8b29fe4698cf7b3209738dbcc17470a0980477",
+    "outputs/direct-eos-gr33/def-resolved-scalar-pulse/geometry.npz": "dfeb588aade539c407a3d0a6ebca06cc4b4bc7040d991da394e083b0ef3de2fd"
+  },
+  "cells": 24,
+  "pulse_duration_crossing_times": 2,
+  "total_duration_crossing_times": 4,
+  "amplitude": "0.0002",
+  "beta": -4,
+  "time_steps": [
+    48,
+    96,
+    192
+  ],
+  "paths": [
+    "driven",
+    "undriven",
+    "decoupled"
+  ],
+  "drive": "Prescribed scalar boundary sin(pi*t/T)^8 for 0<t<T, exactly zero after T; initial scalar zero. Finite-energy boundary-controlled scattering experiment, not a companion waveform or measured amplitude.",
+  "primary_readout": "Baryon-weighted RMS Jordan log-temperature difference. After cutoff compare driven-minus-undriven with beta=0 scalar-stress-only control. No scalar charge or free-fall inference from temperature alone.",
+  "comparator": "Same time-dependent undriven background plus any fixed polynomial in boundary drive and its first four time derivatives, with zero increment when the drive jet is zero. Tail readout tests this restricted class only; propagating scalar and acoustic memory are not automatically a thermal relaxation mode.",
+  "gates": {
+    "native": [
+      1e-13,
+      1e-09,
+      1e-14,
+      1e-17,
+      1e-17,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13
+    ],
+    "scalar": 2e-17,
+    "identity": 2e-15,
+    "minimum_time_order": 0.8,
+    "maximum_relative_time_difference": 0.1,
+    "minimum_control_separation_over_time_error": 10.0,
+    "minimum_Jordan_temperature_rms": 1e-07
+  },
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "scope": "General affine reciprocal source, positive coarse thermal energy under rest-energy metric matching, and vanishing finite drive jet through order seven at cutoff. No continuum or physical signal claim."
+  },
+  "budget": {
+    "initial_and_pilot_timeout_seconds": 120,
+    "workers": 4,
+    "blas_threads": 1,
+    "maximum_production_timeout_seconds": 900,
+    "production_requires_measured_pilot": true,
+    "maximum_path_attempts": 9,
+    "automatic_expansion": false
+  },
+  "scope": "New 24-cell conservative discretization of saved baryons, species and material energy. First-order finite-time response at fixed spatial grid, not spatial convergence, physical EOS certification, orbital matching or observational closure."
+}

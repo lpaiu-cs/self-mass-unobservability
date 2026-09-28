@@ -1,0 +1,199 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "cc6e137",
+  "bindings": {
+    "verification/fermi_uniform.py": "8d968e87c3faa6124040fd734f63726d462dbebbcd62f6c0264c06f42605bfc5",
+    "outputs/structured-enthalpy32/direct-ions/full-integral-build.json": "09a117e64bd62d13740b28b2237e203e527d7b4b052ae5dbeedca7d9d824f45a",
+    "outputs/structured-enthalpy32/direct-ions/fermi-interval/result.json": "b842d5a36a9ab097030beac7255b4557e980cf7754ac65784119be4bc606cbbe",
+    "outputs/direct-eos-gr33/opacity/electrons/result.json": "9444a85df621319c1e3a496e17d7f86b3a2506b87b9bc524c7b37275e702796f",
+    "outputs/direct-eos-gr33/fermi-uniform/fermi_dirac_direct.f90": "626649c387557e18727caf46d91cc56eb03a50ff9fff5788bd4117393f77250b",
+    "outputs/direct-eos-gr33/fermi-uniform/fermi_dirac.f90": "3c0b60223e5bd7300dbdb1cdf79646987b8035042d96da8344c1bfd3fe6014ab",
+    "outputs/direct-eos-gr33/fermi-uniform/fermi_dirac_ct.f90": "b6c24317d2ca8af8b9e2b921a7dfa83fa5853b97e33268686cbbfa641c1ac898"
+  },
+  "eta_interval": [
+    -17,
+    24
+  ],
+  "beta_interval": [
+    "0",
+    "0.006"
+  ],
+  "cases": [
+    {
+      "nu": "0.5",
+      "eta_order": 0,
+      "beta_order": 0
+    },
+    {
+      "nu": "0.5",
+      "eta_order": 1,
+      "beta_order": 0
+    },
+    {
+      "nu": "0.5",
+      "eta_order": 0,
+      "beta_order": 1
+    },
+    {
+      "nu": "0.5",
+      "eta_order": 2,
+      "beta_order": 0
+    },
+    {
+      "nu": "0.5",
+      "eta_order": 1,
+      "beta_order": 1
+    },
+    {
+      "nu": "0.5",
+      "eta_order": 0,
+      "beta_order": 2
+    },
+    {
+      "nu": "0.5",
+      "eta_order": 3,
+      "beta_order": 0
+    },
+    {
+      "nu": "0.5",
+      "eta_order": 2,
+      "beta_order": 1
+    },
+    {
+      "nu": "0.5",
+      "eta_order": 1,
+      "beta_order": 2
+    },
+    {
+      "nu": "1.5",
+      "eta_order": 0,
+      "beta_order": 0
+    },
+    {
+      "nu": "1.5",
+      "eta_order": 1,
+      "beta_order": 0
+    },
+    {
+      "nu": "1.5",
+      "eta_order": 0,
+      "beta_order": 1
+    },
+    {
+      "nu": "1.5",
+      "eta_order": 2,
+      "beta_order": 0
+    },
+    {
+      "nu": "1.5",
+      "eta_order": 1,
+      "beta_order": 1
+    },
+    {
+      "nu": "1.5",
+      "eta_order": 0,
+      "beta_order": 2
+    },
+    {
+      "nu": "1.5",
+      "eta_order": 3,
+      "beta_order": 0
+    },
+    {
+      "nu": "1.5",
+      "eta_order": 2,
+      "beta_order": 1
+    },
+    {
+      "nu": "1.5",
+      "eta_order": 1,
+      "beta_order": 2
+    },
+    {
+      "nu": "2.5",
+      "eta_order": 0,
+      "beta_order": 0
+    },
+    {
+      "nu": "2.5",
+      "eta_order": 1,
+      "beta_order": 0
+    },
+    {
+      "nu": "2.5",
+      "eta_order": 0,
+      "beta_order": 1
+    },
+    {
+      "nu": "2.5",
+      "eta_order": 2,
+      "beta_order": 0
+    },
+    {
+      "nu": "2.5",
+      "eta_order": 1,
+      "beta_order": 1
+    },
+    {
+      "nu": "2.5",
+      "eta_order": 0,
+      "beta_order": 2
+    },
+    {
+      "nu": "2.5",
+      "eta_order": 3,
+      "beta_order": 0
+    },
+    {
+      "nu": "2.5",
+      "eta_order": 2,
+      "beta_order": 1
+    },
+    {
+      "nu": "2.5",
+      "eta_order": 1,
+      "beta_order": 2
+    },
+    {
+      "nu": "-0.5",
+      "eta_order": 3,
+      "beta_order": 0
+    }
+  ],
+  "transformed_interval": [
+    0,
+    10
+  ],
+  "coarse_intervals": 256,
+  "fine_panels": [
+    256,
+    512,
+    1024,
+    2048,
+    4096,
+    8192,
+    16384,
+    32768,
+    65536
+  ],
+  "precision_decimal_digits": 60,
+  "maximum_uniform_quadrature_error": "1e-11",
+  "point_controls": [
+    [
+      -17,
+      "0"
+    ],
+    [
+      0,
+      "0"
+    ],
+    [
+      24,
+      "0.006"
+    ]
+  ],
+  "processes": 3,
+  "native_point_error_relative_with_floor_one": "1e-9",
+  "scope": "Uniform value and specified mixed eta/beta derivative errors of a newly declared exact composite four-point Gauss rule, plus interval-arithmetic evaluation at three controls. No uniform error claim for the old adaptive binary, implicit EOS root, physical plasma or GR evolution.",
+  "physical_EOS_certified": false
+}

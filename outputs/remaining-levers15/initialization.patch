@@ -1,0 +1,22 @@
+--- request13_stable/Parameters.cpp
++++ request15_initialization/Parameters.cpp
+@@ -1942,8 +1942,8 @@
+                     rit = rit - un/(deux * pow( clight, 2 ) * Mi) * ( Mp * rpt * nrpt2 + Mi * rit * nrit2 -
+                                                     GMsol * Gg[0][1] * Mi * Mp / rip * ( rit + rpt + dotprod3d<value_type>(rit + rpt, nip) * nip) ) ;
+                     // Go to the observer's frame
+-                    rpt = rpt + rBit - un/(deux* pow( clight, 2) ) * ( deux * dotprod3d<value_type>(rpt, rBit) - GMsol * Gg[0][1] * Mi / rip * dotprod3d<value_type>( rBit, nip ) * nip ) ;
+-                    rit = rit + rBit - un/(deux* pow( clight, 2) ) * ( deux * dotprod3d<value_type>(rit, rBit) - GMsol * Gg[0][1] * Mp / rip * dotprod3d<value_type>( rBit, nip ) * nip ) ;
++                    rpt = rpt + rBit; // Request 15: published osculating initialization convention (Voisin 2020, footnote 8).
++                    rit = rit + rBit; // Same velocity-addition convention; subsequent COM correction retained.
+ 
+                     ri = ri + rBi ;
+                     rp = rp + rBi ;
+@@ -1978,7 +1978,7 @@
+                                                             GMsol * Gg[1][2] * Mi * Mo / rio * dotprod3d<value_type>(rit + rot, nio) * nio ) ) ;
+ 
+                     // Part of the " Mass * center of mass " depending only on the inner binary
+-                    MXip = Mp * rp + Mi * ri + un / (deux * clight2) * (Mp * nrpt2 * rp + Mi * nrit2 * rit - GMsol * Gg[0][1] * Mi * Mp / rip * ( ri + rp ) ) ;
++                    MXip = Mp * rp + Mi * ri + un / (deux * clight2) * (Mp * nrpt2 * rp + Mi * nrit2 * ri - GMsol * Gg[0][1] * Mi * Mp / rip * ( ri + rp ) ) ;
+ 
+                     ro = - un / Mo * ( MXip + un/ (deux * clight2) * ( Mo * nrot2 * ro  - GMsol * Gg[0][2] * Mp * Mo / rpo * ( rp + ro ) - GMsol * Gg[1][2] * Mi * Mo / rio * ( ri + ro ) )) ;
+ 

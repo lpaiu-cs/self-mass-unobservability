@@ -1,0 +1,42 @@
+{
+  "classification": "Proven",
+  "checkpoint": "0442d55",
+  "bits": 256,
+  "interpolation_order": 32,
+  "analytic_radius_ratio": 4,
+  "far_log_series_terms": 96,
+  "control_degrees": [
+    0,
+    1,
+    2,
+    8,
+    16,
+    32
+  ],
+  "control_z": [
+    "0",
+    "1",
+    "-1",
+    "7/4",
+    "2",
+    "-2",
+    "10",
+    "-10",
+    "1000000"
+  ],
+  "control_digits": 320,
+  "control_allowance": "1e-280",
+  "thermal_tail_beta_ratio": 16,
+  "tail_response_budget": "1e-15",
+  "bindings": {
+    "verification/gr_response_product_rule.py": "bfd787d9911c486f480360a78534c1d791be5dd1bc8ebaaea098a86dd1dd97a4",
+    "outputs/direct-eos-gr33/gr-self-regular-domain/manifest.json": "d15c9f44c8123385f8af948dc5e5c162a7200e7ade79085f26a2e5de43bff880",
+    "outputs/direct-eos-gr33/gr-self-regular-domain/result.json": "64cb5eaedb81445d8e255abc69846af42149f9a8352c83b816a4164d2bf7bf85",
+    "outputs/direct-eos-gr33/gr-highq-moments/manifest.json": "d01fc625a3bd9e75e23eda0b9fdddf43eb0e0ecd467c90c4317b8a3d199345ba",
+    "outputs/direct-eos-gr33/gr-highq-moments/inputs.npz": "c47cfa968a88fb2b9b101071e8551cc6ab61f867cb627563ad5147710779645e",
+    "outputs/direct-eos-gr33/gr-polarization-thermodynamics/states.npz": "a91f70b8277d7984c7954d277b01956dd31dfd4c12b57989fed8b7a2fccceb69",
+    "outputs/direct-eos-gr33/gr-response-positive-sector/manifest.json": "7d5291f134ebac62b7f708d743f1280a907016826c10420a67427a2aa2db7035"
+  },
+  "target": "Factor the same response through H=f/gamma+2beta*log(1+exp(eta-t)). Certify a reusable degree-31 interpolation rule and the real logarithmic moments needed to integrate each polynomial at arbitrary Q. Also bound the entire omitted H tail, including its cusp, uniformly in Q.",
+  "scope": "Rule, moment evaluation and real-state tail bounds only. No actual stellar H interpolation table, complete response product integral or outer self integral is claimed."
+}

@@ -1,0 +1,117 @@
+{
+  "classification": "Counterexample candidate",
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "equations": [
+      "Delta ln rho=eta/Gamma1+rho_ref; Delta e=w*eta/Gamma1+e_ref",
+      "xi_prime=-eta/Gamma1-rho_ref-2*zeta-Delta lambda-3*alpha*f",
+      "Delta p_prime=-g*(Delta e+Delta p+w*xi_prime)-w*Delta g",
+      "f_prime=V+xi_prime*Phi; V_prime=Delta F+xi_prime*F",
+      "Delta m_prime=Delta M+xi_prime*M"
+    ],
+    "source_identity": "At fixed pressure, d(e/rho+p/rho)=-loss: e_ref=w*rho_ref-rho*loss. Nuclear rest-to-thermal conversion must not be counted as added total energy.",
+    "scope": "Lagrangian variation of static field equations at fixed baryon inventory. No assumption of a stationary thermal background or a dynamic transport solution."
+  },
+  "mass_identity": {
+    "classification": "Proven",
+    "passed": true,
+    "definition": "J=Delta m-[r^2*b*Phi*f-(4*pi*r^2*A^4*p+r^2*b*Phi^2/2)*xi]",
+    "equation": "J_prime=-(4*pi*r*A^4*(e+p)/b+r*Phi^2)*J-4*pi*r^2*A^4*loss",
+    "integrating_factor": "N*a; (N*a*J)_prime=-4*pi*r^2*A^4*N*a*loss",
+    "ADM_first_law": "At fixed phi_infinity: dot M_geom=-(G/c^4)*1e-7*sum(dm*A^2*N^2*epsilon_nu) for dm in grams and epsilon_nu in erg/g/s.",
+    "scope": "Linear quasi-static first law. Nuclear rest energy becomes internal energy; only specified escaped neutrino energy is removed at the initial zero-flux state."
+  },
+  "rows": [
+    {
+      "classification": "Counterexample candidate",
+      "refinement": 1,
+      "probe": 0,
+      "outer": "zero",
+      "drive": 0.0,
+      "linear_residual": 3.013340727142927e-16,
+      "surface_radial_fraction_rate": 2.6893965360505294e-12,
+      "surface_m_per_second": 0.0001860889877715812,
+      "ADM_geom_m_per_second": -4.253770035319983e-17,
+      "scalar_charge_geom_m_per_second": -2.72327348047465e-17,
+      "normalized_charge_rate": -9.277961294034147e-20,
+      "asymptotic_scalar_residual": -9.337833249344546e-37
+    },
+    {
+      "classification": "Counterexample candidate",
+      "refinement": 2,
+      "probe": 0,
+      "outer": "zero",
+      "drive": 0.0,
+      "linear_residual": 4.113606421344589e-16,
+      "surface_radial_fraction_rate": 2.6893194978357185e-12,
+      "surface_m_per_second": 0.00018608365722131768,
+      "ADM_geom_m_per_second": -4.253152597827902e-17,
+      "scalar_charge_geom_m_per_second": -3.514584457483373e-17,
+      "normalized_charge_rate": -1.1990850664753886e-19,
+      "asymptotic_scalar_residual": -2.7618607114554277e-36
+    },
+    {
+      "classification": "Counterexample candidate",
+      "refinement": 1,
+      "probe": 1,
+      "outer": "zero",
+      "drive": 0.0,
+      "linear_residual": 3.0551834502020577e-16,
+      "surface_radial_fraction_rate": 2.689259068569648e-12,
+      "surface_m_per_second": 0.00018607947590376035,
+      "ADM_geom_m_per_second": -4.2537700353199834e-17,
+      "scalar_charge_geom_m_per_second": -2.722809308281428e-17,
+      "normalized_charge_rate": -9.276369955211356e-20,
+      "asymptotic_scalar_residual": -1.0116598256764312e-36
+    },
+    {
+      "classification": "Counterexample candidate",
+      "refinement": 2,
+      "probe": 1,
+      "outer": "zero",
+      "drive": 0.0,
+      "linear_residual": 3.1663917936582555e-16,
+      "surface_radial_fraction_rate": 2.689179367208371e-12,
+      "surface_m_per_second": 0.00018607396108084553,
+      "ADM_geom_m_per_second": -4.253152597827902e-17,
+      "scalar_charge_geom_m_per_second": -3.5140796201515124e-17,
+      "normalized_charge_rate": -1.1989119912121315e-19,
+      "asymptotic_scalar_residual": 9.898121611404451e-36
+    }
+  ],
+  "adiabatic_control": {
+    "classification": "Counterexample candidate",
+    "refinement": 1,
+    "probe": 1,
+    "outer": "zero",
+    "drive": 1.0,
+    "linear_residual": 1.0,
+    "surface_radial_fraction_rate": -0.020577277000892066,
+    "surface_m_per_second": -1423815.5648905386,
+    "ADM_geom_m_per_second": -1.166850396848301,
+    "scalar_charge_geom_m_per_second": 1166.8449715306915,
+    "normalized_charge_rate": 4.000354089649335,
+    "asymptotic_scalar_residual": 2.220446049250313e-16
+  },
+  "adiabatic_displacement_relative_difference": 7.243425977793156e-14,
+  "spatial_relative_difference": {
+    "surface_radial_fraction_rate": 2.9637800382001626e-05,
+    "normalized_charge_rate": 0.22626764739981436
+  },
+  "probe_relative_difference": {
+    "surface_radial_fraction_rate": 5.210906682392432e-05,
+    "normalized_charge_rate": 0.0001443602737529801
+  },
+  "outer_source_control_relative_difference": {
+    "surface_radial_fraction_rate": 0.0,
+    "normalized_charge_rate": 0.0
+  },
+  "expected_neutrino_ADM_geom_m_per_second": -4.2537708434014495e-17,
+  "mass_first_law_relative_difference": 0.00014534059221993356,
+  "all_gates_passed": false,
+  "seconds": 3.646677458000001,
+  "physical_time_evolution": false,
+  "thermal_transport_evolved": false,
+  "full_dynamic_charge_solved": false
+}

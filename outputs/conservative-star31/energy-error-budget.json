@@ -1,0 +1,56 @@
+{
+  "classification": "Counterexample candidate",
+  "first_step_duration_controls": [
+    {
+      "dt": 140780.16,
+      "source_steps": 1,
+      "defect_erg": 6.315031851323919e+35,
+      "release_erg": 1.3338141971871873e+41,
+      "energy_score": 4.734566377117119e-06,
+      "entropy_inverse_signed_energy_estimate_erg": 7.300991593531295e+33,
+      "entropy_inverse_unsigned_energy_estimate_erg": 9.041297403732104e+33,
+      "leading_pressure_cross_estimate_erg": -7.959670587927065e+34,
+      "leading_lapse_cross_estimate_erg": 1.5777333758599306e+25
+    },
+    {
+      "dt": 70390.08,
+      "source_steps": 2,
+      "defect_erg": 1.6932555000740066e+35,
+      "release_erg": 6.668146326366666e+40,
+      "energy_score": 2.5393196507681114e-06,
+      "entropy_inverse_signed_energy_estimate_erg": 1.8014136607413492e+33,
+      "entropy_inverse_unsigned_energy_estimate_erg": 3.9169698572871195e+33,
+      "leading_pressure_cross_estimate_erg": -1.9896056922372058e+34,
+      "leading_lapse_cross_estimate_erg": 1.3514418523917188e+25
+    },
+    {
+      "dt": 35195.04,
+      "source_steps": 4,
+      "defect_erg": 1.927959005773077e+35,
+      "release_erg": 3.3329309606692137e+40,
+      "energy_score": 5.784575283809555e-06,
+      "entropy_inverse_signed_energy_estimate_erg": 4.0680145276099824e+32,
+      "entropy_inverse_unsigned_energy_estimate_erg": 2.711797350262927e+33,
+      "leading_pressure_cross_estimate_erg": -4.9717373440627923e+33,
+      "leading_lapse_cross_estimate_erg": 8.330568687815174e+24
+    }
+  ],
+  "full_to_half_step_defect_ratio": 3.729520944150431,
+  "cold_initial_enthalpy_signed_difference_erg": -2.429480502784086e+32,
+  "cold_initial_enthalpy_unsigned_difference_erg": 4.877123751425461e+33,
+  "EOS_interpolation_diagnostics": [
+    {
+      "state": "old",
+      "weighted_direct_minus_interpolated_internal_energy_erg": 1.3493622593049015e+34,
+      "maximum_adiabatic_first_law_relative_residual": 9.741480520640102e-07
+    },
+    {
+      "state": "new",
+      "weighted_direct_minus_interpolated_internal_energy_erg": -6.391010628342715e+34,
+      "maximum_adiabatic_first_law_relative_residual": 9.667019125205417e-07
+    }
+  ],
+  "conclusion": "The finite entropy-inverse, initial-EOS, local pressure/lapse and midpoint-quadrature checks do not individually explain the leading one-step defect. The first shorter-duration control tests time-order scaling; it is not a same-final-time convergence test or a rigorous global error bound.",
+  "original_failed_verdicts_preserved": true,
+  "physical_or_continuous_certificate": false
+}

@@ -1,0 +1,29 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "paths": [
+    {
+      "refinement": 1,
+      "prefix_steps": 70,
+      "native_score": 0.0027055789767438873,
+      "restored_flux_history_exact": true,
+      "altered_history_rejected": true
+    },
+    {
+      "refinement": 2,
+      "prefix_steps": 140,
+      "native_score": 0.8953899623502192,
+      "restored_flux_history_exact": true,
+      "altered_history_rejected": true
+    },
+    {
+      "refinement": 4,
+      "prefix_steps": 271,
+      "native_score": 0.0009005277001308578,
+      "restored_flux_history_exact": true,
+      "altered_history_rejected": true
+    }
+  ],
+  "symbolic_passed": true,
+  "scope": "Exact end-of-prefix BDF state and flux restoration; not full-duration convergence."
+}

@@ -1,0 +1,48 @@
+--- request13/Fittriple-compute.cpp
++++ request13_stable/Fittriple-compute.cpp
+@@ -47,6 +47,7 @@
+     value_type npulsdir = 0.;
+     value_type lnposterior = zero ;
+     value_type * delay ;
++    vector<value_type> emission_delay(ntoas, zero);
+     value_type * delay_geom ;
+     value_type ** delay_geom_details = NULL ;
+     value_type delay0;
+@@ -305,6 +306,9 @@
+ 
+ 
+             toes[i] = Te1 - delay_einstein_i( Te1, toa_in_interp[i] - marginmin, toa_in_interp[i] + marginsup ) ;
++            emission_delay[i] = delays_interpolation(ta-delay0, toa_in_interp[i]-marginmin, toa_in_interp[i]+marginsup)
++                + delay_geom_i(ta-delay0, ntisaround/2-marginmin, ntisaround/2+marginmin)
++                + delay_einstein_i(Te1, toa_in_interp[i]-marginmin, toa_in_interp[i]+marginsup);
+ 
+             if (abs(ta - toes[i] ) > maxdelay ) maxdelay = huit *abs(ta - Te1 ); // reevaluate interpolation margins if necessary.
+ 
+@@ -426,7 +430,26 @@
+         value_type weightsum = zero;
+         value_type phase0 = toes[0] - parameters.treference ;
+         phase0 = spinfreq /parameters.DopplerF * phase0 + undemi * spinfreq1/parameters.DopplerF*parameters.DopplerF * pow( phase0, 2 ) + parameters.dphase0;
+-        if (fractional == 0)
++        if (fractional == 0 && remove_mean
++            && strcmp(parameters.specialcase,"RN_PL") != 0
++            && strcmp(parameters.specialcase,"Circum-ternary_Kepler") != 0)
++        {
++            const value_type D=parameters.DopplerF;
++            const value_type T0=toas[0]*D-parameters.treference;
++            const value_type d0=emission_delay[0];
++            for (i=0; i<ntoas; ++i) {
++                const value_type Ti=toas[i]*D-parameters.treference;
++                const value_type di=emission_delay[i];
++                value_type r=fmal(spinfreq,toas[i]-toas[0],-static_cast<value_type>(turns[i]));
++                r += undemi*spinfreq1*(toas[i]-toas[0])*(toas[i]+toas[0]-deux*parameters.treference/D);
++                r -= (spinfreq/D+spinfreq1*Ti/(D*D))*di
++                    -(spinfreq/D+spinfreq1*T0/(D*D))*d0;
++                r += undemi*spinfreq1/(D*D)*(di*di-d0*d0);
++                residuals[i]=r*spinPeriodmicrosec;
++                mean+=residuals[i]*weights[i];
++            }
++        }
++        else if (fractional == 0)
+         {
+             for (i = 0; i < ntoas ; ++i ) {
+                 phase = toes[i] - parameters.treference ;

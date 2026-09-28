@@ -1,0 +1,7 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "The second SDIRK stage of the first actual joint photon/fluid step produced a negative atmospheric scaled occupation-4.1742e-9. The atmosphere light-crossing time is much shorter than the deep128step clock. Preserve this failure and all source code.",
+  "repair": "Use backward Euler for the simultaneous deep reaction and whole photon transport. Its frozen positive transfer generator has a nonnegative resolvent. This is a first-order temporal method; keep the same64/128 time acceptance gate rather than claiming inherited second-order accuracy.",
+  "unchanged": "Same actual deep/fluid domains,EOS,frequency grid,angular bins,initial occupations,paired Lorentz collision transfers and original positivity/error gates. No clipping or extra time paths.",
+  "source_sha256": "8b56ac7807000dd0e53d6b68ba3c1af1bf2d2d358af18b052442e1c9a5c35519"
+}

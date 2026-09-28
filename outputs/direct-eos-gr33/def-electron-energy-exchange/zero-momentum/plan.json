@@ -1,0 +1,33 @@
+{
+  "classification": "Counterexample candidate",
+  "bindings": {
+    "verification/def_electron_zero_momentum.py": "44166e4c6bb6cea19d0313dcde8b9c6500189a63766846fef0fc66e109f4198a",
+    "verification/def_electron_screened_fermi.py": "14017818d37db1cffb42d522cd81be0243651ed8d54b6dca4ae57f9013606899",
+    "outputs/direct-eos-gr33/def-electron-energy-exchange/collision-readout/plan.json": "869b6696b6c1d0b1be899249c01b40dee492a13d75d3861b9866cd9c4ff3d045",
+    "outputs/direct-eos-gr33/def-electron-energy-exchange/collision-readout/result.json": "6d476c7463a1df6f6f362717e15a436394b88047ef55f2b427eb6481b1f63c4b",
+    "outputs/direct-eos-gr33/def-electron-energy-exchange/fermi-screening/result.json": "1b602378284b0966d7414ac76bc40861a0205ada782af26a4170d3f9a063f6fa"
+  },
+  "preserved_failure": "The 5D near-Fermi importance readout failed the 3% gate at cell 5734 (3.138%). Its deep-hole loss rate under-samples partner energies above the Fermi surface. Preserve its raw rates as unaccepted, not an accurate p=0 result.",
+  "repair": "At p1=0, rotational invariance removes the two orientation integrals. Directly integrate the partner kinetic energy x2 in [0,eta+40] and the screened scattering-angle proposal, including the exact replacement Jacobian. Same kernel and energy domain; no physical relaxation floor.",
+  "cells": [
+    4122,
+    4928,
+    5734
+  ],
+  "orders": [
+    64,
+    128
+  ],
+  "gates": {
+    "relative_quadrature": 0.03,
+    "isotropy_relative": 2e-12
+  },
+  "budget": {
+    "hard_seconds": 60,
+    "event_evaluations": 122880,
+    "CPU_workers": 1,
+    "native_calls": 0,
+    "stellar_steps": 0,
+    "automatic_expansion": false
+  }
+}

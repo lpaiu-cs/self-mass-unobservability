@@ -6,12 +6,13 @@ A4 claim: integrating out a heavy local oscillator chi with EOM
 gives the effective local expansion
    dL_eff = g^2/(2 mu w^2) Y^2 + g^2/(2 mu w^4) Ydot^2 + O(w^-6),
 i.e. the state COLLAPSES back to instantaneous sensitivities in the adiabatic
-(heavy-chi) limit -- and does NOT collapse when w ~ Omega_orb.
+(heavy-chi) limit. Near resonance this low-frequency expansion fails;
+finite-sample interpolation and observational identifiability are separate.
 
 A3 claim: an exponential memory kernel is Markovianizable (single local state
 => rational transfer function), but a causal power-law kernel K_g(s) ~ s^{-g},
 0<g<1, has transfer function ~ p^{g-1} with a BRANCH POINT at p=0, so no
-finite local state space (which always yields a rational transfer function)
+finite linear time-invariant state space (which yields a rational transfer function)
 can reproduce it. That is exactly the A3 (genuine nonlocal) vs A4 (finite
 state) distinction.
 
@@ -48,7 +49,7 @@ def check_A4_adiabatic():
     ok = sp.simplify(c0 - g**2/(2*mu*w**2)) == 0 and sp.simplify(c2 - g**2/(2*mu*w**4)) == 0
     print(f"  adiabatic expansion matches their dL_eff: {ok}")
     print(f"  => heavy chi (eps=Omega/omega << 1) collapses to local Y^2, Ydot^2;")
-    print(f"     resonant chi (eps=O(1)) does NOT -- state is genuine. [A4 sharp]")
+    print(f"     near resonance the low-frequency expansion fails; finite-sample identifiability remains a separate test.")
     return ok
 
 
@@ -78,7 +79,7 @@ def check_A3_transfer():
     is_fractional = (L_g_half.has(sp.sqrt(p)) or L_g_half.has(p**sp.Rational(-1, 2)))
     print(f"    -> contains p^(gamma-1) = fractional power (branch point at p=0): "
           f"{is_fractional}")
-    print(f"  A finite local state space always gives a RATIONAL transfer function;")
+    print(f"  A finite linear time-invariant state space gives a RATIONAL transfer function;")
     print(f"  a fractional power is non-rational => no finite Markovian embedding.")
     print(f"  [A3 genuinely nonlocal, sharply distinct from A4 finite-state]")
     return is_fractional

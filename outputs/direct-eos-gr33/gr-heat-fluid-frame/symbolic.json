@@ -1,0 +1,12 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "stress_tensor": "In a local normal orthonormal frame with material speed v/c=v, E_n=(epsilon+P*v^2+2*v*Q)/(1-v^2), J_n=((epsilon+P)*v+Q*(1+v^2))/(1-v^2), S_rr=(P+epsilon*v^2+2*v*Q)/(1-v^2), Q=proper_heat_flux/c.",
+  "initial_derivatives": "At v=0: E_n_dot=epsilon_dot+2*Q*v_dot; J_n_dot=Q_dot+(epsilon+P)*v_dot; S_rr_dot=P_dot+2*Q*v_dot. Dots here may use the same chosen time coordinate throughout.",
+  "corrected_specific_energy": "With physical seconds, initial v=0, fixed nuclear composition and the same closed heat law: u_dot=(P/rho_B)*c*N*A -(1/N)*partial_mu L_infinity -(2*Q/rho_B)*v_dot. Consequently dlnT/dt=[heat+(P/rho_B-u_lnrho)*c*N*A-(2*Q/rho_B)*v_dot]/(cv*T).",
+  "initial_radial_momentum": "With initially hydrostatic pressure/lapse and isotropic material stress: Q_dot+(epsilon+P)*v_dot=2*c*N*A*Q. A closure for Q_dot must be solved together with the fluid acceleration. Prescribing Q but omitting its evolution is insufficient.",
+  "lapse_source": "Polar lapse responds to normal radial stress S_rr. Its time derivative also contains 2*Q*v_dot; replacing it by P_dot alone silently imposes an extra restriction.",
+  "original_formula_valid_only_if": "v_dot=0 in addition to v=0, or Q=0 for the omitted energy term. Neither extra assumption is certified for the actual evolving star.",
+  "physical_EOS_or_transport_closure_certified": false,
+  "full_GR_evolution": false
+}

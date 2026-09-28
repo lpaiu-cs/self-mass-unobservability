@@ -1,0 +1,80 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": false,
+  "cells": 3206,
+  "finite_outer_difference": 8.841853974472791e-05,
+  "independent_outer_controls": [
+    {
+      "cell": 2529,
+      "reference": 1.5066646120727456,
+      "quad_estimate": 1.2372607760393472e-11,
+      "gauss": 1.5066646120636253,
+      "difference": 9.120260102690736e-12,
+      "passed": true
+    },
+    {
+      "cell": 3330,
+      "reference": 1.438193265005355,
+      "quad_estimate": 6.009528172399442e-11,
+      "gauss": 1.4381932649977,
+      "difference": 7.654987754790454e-12,
+      "passed": true
+    },
+    {
+      "cell": 4132,
+      "reference": 1.457631036632391,
+      "quad_estimate": 9.579378227792813e-10,
+      "gauss": 1.457630970318337,
+      "difference": 6.63140540257956e-08,
+      "passed": true
+    },
+    {
+      "cell": 4933,
+      "reference": 1.4673002108998003,
+      "quad_estimate": 3.769028188287544e-10,
+      "gauss": 1.467298378668417,
+      "difference": 1.8322313832808135e-06,
+      "passed": false
+    },
+    {
+      "cell": 5734,
+      "reference": 1.4732561729862685,
+      "quad_estimate": 4.1229508224159403e-13,
+      "gauss": 1.4732596198810028,
+      "difference": 3.4468947343047063e-06,
+      "passed": false
+    }
+  ],
+  "TF_positive_controls": [
+    {
+      "order": 64,
+      "TF_integral": 1.5707953731205802,
+      "exact": 1.5707953731205802,
+      "difference": 0.0,
+      "passed": true
+    },
+    {
+      "order": 128,
+      "TF_integral": 1.5707953731205802,
+      "exact": 1.5707953731205802,
+      "difference": 0.0,
+      "passed": true
+    }
+  ],
+  "maximum_tail_upper": 2.7915496946017748e-11,
+  "I_range": [
+    1.4217372623052553,
+    1.5075437669396188
+  ],
+  "self_coefficient_range": [
+    -0.4798660848716331,
+    -0.45255302614764
+  ],
+  "magnitude_over_TF_range": [
+    0.90510605229528,
+    0.9597321697432663
+  ],
+  "physical_EOS_certified": false,
+  "native_EOS_replaced": false,
+  "scope": "Finite numerical interior with separately rigorous omitted-tail and global bounds for exact declared input parameters. No rigorous numerical interior enclosure, thermodynamic derivative, full EOS correction or observation inference."
+}

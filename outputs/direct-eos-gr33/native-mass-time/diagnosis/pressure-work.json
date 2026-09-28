@@ -1,0 +1,66 @@
+{
+  "classification": "Counterexample candidate",
+  "symbolic_identity_passed": true,
+  "rows": [
+    {
+      "clock": 64,
+      "thermal_erg": [
+        1.825722733279669e-15,
+        1.8255692598443778e-15,
+        -1.5347343529122532e-19,
+        4.474866769802087e-22
+      ],
+      "unweighted_u_rate_integral_error": 3.735779858778714e-06
+    },
+    {
+      "clock": 128,
+      "thermal_erg": [
+        1.8254920775141254e-15,
+        1.8255692610988875e-15,
+        7.718358476240938e-20,
+        7.718358481893553e-20
+      ],
+      "unweighted_u_rate_integral_error": 4.7359986429927896e-07
+    }
+  ],
+  "derivative_controls": [
+    {
+      "clock": 64,
+      "order": 8,
+      "right_reproduction": 1.2212393099039146e-14,
+      "derivative_change_relative": 0.0012135246090357072
+    },
+    {
+      "clock": 128,
+      "order": 4,
+      "right_reproduction": 1.84805469953662e-14,
+      "derivative_change_relative": 0.00030860613218138596
+    },
+    {
+      "clock": 128,
+      "order": 8,
+      "right_reproduction": 1.8377879696961752e-14,
+      "derivative_change_relative": 0.00030860613218149964
+    }
+  ],
+  "labels": [
+    "direct_pressure_work",
+    "by_parts_pressure_work",
+    "by_parts_minus_direct",
+    "left_minus_right"
+  ],
+  "coarse_minus_fine_erg": [
+    2.306557655438212e-19,
+    -1.2545098134941177e-24,
+    -2.306570200536347e-19,
+    -7.673609814195533e-20
+  ],
+  "native_difference_erg": 2.3066239671033527e-19,
+  "estimated_native_difference_after_pressure_primitive": 5.376656700562327e-24,
+  "estimated_native_difference_after_left_derivative": 1.5392629856837995e-19,
+  "endpoint_metric_jumps_separately_unadjudicated": true,
+  "physical_steps": 0,
+  "scope": "Known explicit pressure term only; retained value quadrature and jumps are not certified. Not an evolved energy correction.",
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false
+}

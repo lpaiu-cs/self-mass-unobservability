@@ -1,0 +1,25 @@
+{
+  "classification": "Counterexample candidate",
+  "progress_class": "loophole progress",
+  "same_background_native_reaction_values": true,
+  "chemical_energy_direction_connected": true,
+  "chemical_direction_cells": 5735,
+  "chemical_direction_gate_passed": true,
+  "quasi_static_free_surface_mass_and_displacement_gates_passed": true,
+  "linear_residual_max_after_exact_homogeneous_elimination": 4.113606421344589e-16,
+  "adiabatic_control": {
+    "original_roundoff_J_max": 3.194913004238937e-36,
+    "exact_J_zero_residual": 2.9005546254809365e-16,
+    "explanation": "J has zero forcing and zero central boundary. Eliminate its exact zero solution and recheck all original matrix rows with unchanged residual normalization; retain the original residual=1 failure."
+  },
+  "integrating_factor_symbolic_passed": true,
+  "verified_plan_bindings": 164,
+  "reactive_charge_grid_relative": 0.22626764739981436,
+  "reactive_charge_spatial_gate_passed": false,
+  "physical_time_evolution": false,
+  "thermal_transport_evolved": false,
+  "physical_radiative_atmosphere": false,
+  "full_dynamic_charge_solved": false,
+  "scope": "Actual same-background native reaction/chemical-energy and quasi-static free-surface structure connection. No finite physical trajectory or certified reactive charge.",
+  "remaining": "Evolve thermal/reactive matter with inertia, heat flux and physical surface closure on this same background. A well-balanced charge readout is needed before using the tiny reactive charge; do not automatically refine the mesh or start orbit-long integration."
+}

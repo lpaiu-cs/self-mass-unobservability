@@ -1,0 +1,88 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "causal_radius_min_cm": 6807004649.688173,
+  "represented_inner_radius_cm": 6799846084.115508,
+  "deep_direct_source_excluded": true,
+  "frozen_polynomial_bounds": {
+    "mass": {
+      "lower": 29168.754074539516,
+      "upper": 29168.754075202338,
+      "absolute": 29168.754075202338
+    },
+    "phi": {
+      "lower": 0.0010000168866109967,
+      "upper": 0.0010000171427503532,
+      "absolute": 0.0010000171427503532
+    },
+    "Phi": {
+      "lower": -2.5185142103704713e-18,
+      "upper": -2.44381543117586e-18,
+      "absolute": 2.5185142103704713e-18
+    },
+    "lapse": {
+      "lower": 0.9999957147037202,
+      "upper": 0.9999957787325832,
+      "absolute": 0.9999957787325832
+    },
+    "nu_prime": {
+      "lower": 6.108993827003546e-16,
+      "upper": 6.295724123884025e-16,
+      "absolute": 6.295724123884025e-16
+    },
+    "gas_energy": {
+      "lower": -5e-324,
+      "upper": 563078694396688.4,
+      "absolute": 563078694396688.4
+    },
+    "gas_pressure": {
+      "lower": -5e-324,
+      "upper": 7043373.245299938,
+      "absolute": 7043373.245299938
+    },
+    "photon_energy": {
+      "lower": 120.12423089433175,
+      "upper": 219868.0633019515,
+      "absolute": 219868.0633019515
+    },
+    "photon_radial_pressure": {
+      "lower": 40.263807014991706,
+      "upper": 73289.35443398374,
+      "absolute": 73289.35443398374
+    }
+  },
+  "potential_absolute_per_cm2": 1.8496081899215801e-25,
+  "mass_source_coefficient_absolute_per_cm2": 7.399835752673683e-28,
+  "global_potential_contraction": 3.242987557052969e-08,
+  "compact_absolute_free_source_norm_cm": 2.1279523324370164e-20,
+  "all_orders_potential_normalized_bound": 2.3658648667400375e-32,
+  "arbitrary_outward_exterior_stress_bound": 1.035438214842209e-30,
+  "arbitrary_outward_exterior_mass_bound": 9.822068972885441e-33,
+  "exact_mean_lapse_port_mismatch_erg": 1.2022849216426075e+30,
+  "port_over_inner_energy": 0.0015401990491354268,
+  "compact_mass_constant_port_effect_bound": 1.3358605601693512e-35,
+  "free_compact_endpoint": 1.0209847633365645e-27,
+  "arbitrary_outward_conditional_scalar_interval": [
+    1.0199158310454761e-27,
+    1.0220536956276527e-27
+  ],
+  "nominal_scalar_plus_arrived_photon_mass": 5.1670399677469896e-27,
+  "conditional_GR_only_interval": [
+    5.167016295739716e-27,
+    5.167063639754264e-27
+  ],
+  "nominal_exterior_to_compact": -5.191592535946442e-06,
+  "potential_coefficient_dense_check": true,
+  "arbitrary_angle_bound_contains_computed_exterior": true,
+  "initial_increment_exactly_zero": true,
+  "continuous_mass_port_extrema_checked": true,
+  "scope": "The declared saved linear source, finite spatial/time representation and exact vacuum idealization. Legendre envelopes use exact binary coefficients and outward40-digit interval arithmetic; this does not enclose their reconstruction from continuum physics or numerical vacuum/background errors.",
+  "port_limit": "Only the compact mass-integration-constant consequence of the measured source/port mismatch is bounded. No unpaired instantaneous exterior mass field is silently propagated; exterior packets are paired with equal body debit. Trace/stress and constitutive discretization errors remain open.",
+  "deep_limit": "Zero initial increments/no incoming wave and this3.434ms null-infinity retarded endpoint only. Does not exclude changes of initial data, inner mass constraints, or later-time deep response.",
+  "full_source_error_enclosed": false,
+  "coupled_fixed_point_verified": false,
+  "nonlinear_GR": false,
+  "final_charge_solved": false,
+  "full_goal_complete": false,
+  "seconds": 8.983490274
+}

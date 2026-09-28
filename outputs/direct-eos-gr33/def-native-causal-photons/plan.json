@@ -1,0 +1,55 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "23694eddf",
+  "claim": "Evolve spectral photon moments, native H inventory and material heat together throughout the scalar causal interior, including the retained core/envelope junction.",
+  "decision": "Measure whether the deeper volumetric thermal/chemical source can be omitted from the later charge. This calculation does not itself complete the moving atmosphere or GR feedback.",
+  "model": "Frozen physical density/metric; same-native finite H levels and thermodynamic reciprocal bound-free rates, elastic Thomson scattering, P1 angular moment closure. All non-H ionic inventories frozen separately at their local unbiased native populations. Tangent heat/H response is accepted only within its explicit small-change and native-defect gates.",
+  "radiation_initial": "Local Planck mean occupation at saved gas T, spectral flux proportional to that Planck shape and normalized to the saved grey luminosity (native core diffusion below the junction). E and F are specified independently. At the free surface F=cE/2. This replaces the earlier diluted hotter Planck bath as an explicitly different Cauchy premise; neither spectrum is inferred uniquely from bolometric luminosity.",
+  "transport": "Killing frequency a*h*nu; Jordan areal radius. J_t+(a*c/B)[H_r+2(1/r-a_r/a)H]=collision; H_t+(a*c/3B)J_r=-a*c*chi_transport*H. P1 is not full angle transport.",
+  "support": {
+    "depth_cm": 110000000.0,
+    "horizon_seconds": 0.0034344311179287023,
+    "radial_paths": [
+      64,
+      128
+    ],
+    "pilot_cells": 16,
+    "frequency_orders": [
+      8,
+      12
+    ],
+    "time_steps": [
+      64,
+      128
+    ]
+  },
+  "gates": {
+    "equilibrium": 1e-10,
+    "native_derivative": 0.002,
+    "frequency_integral": 0.002,
+    "energy_balance": 1e-08,
+    "space": 0.02,
+    "time": 0.02,
+    "temperature_change": 0.02,
+    "neutral_relative_change": 0.1,
+    "native_collision_defect": 0.02
+  },
+  "budget": {
+    "native_calls": 3500,
+    "native_seconds": 120,
+    "transport_seconds": 240,
+    "memory_GB": 3,
+    "CPU_threads": 1
+  },
+  "forecast": "Recent native constrained calls about0.01-0.04s each; actual deep states and sparse factors unmeasured. Measure16cells first; no production if the observed factor/run forecast exceeds240s.",
+  "stop": "Preserve any failed path, no automatic extra resolution/time/domain, no final charge from a failed tangent response, no Rosseland opacity used as a spectral absorption law.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_causal_photons.py": "bedc5a6e5c20b87009cc05f77cff87e9a2f3ff9c9512f2bae9fbc0153aa247be",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_hydrogen_exchange.py": "cf590d01753ffd86a00b80ef7be109131b15b8f1619e2246fbea72cd324123d6",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-whole-star-match/background.npz": "07cf1bdca40788799b7aea67273e73fafb5bda615103bdd73aac38bc020a5acf",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-whole-star-match/final-core.npz": "386c48ad8a2038332242075bcf45c93b9241b18763aba3004d12a799a1d61b14",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-whole-star-match/final-envelope.npz": "cdb53cf0830fa5442deb22fac2d78781935290ed86f8a580d5a1083ebb8c6a56",
+    "/home/lpaiu/work/direct-eos-gr33/photon-hhe-coupled/atomic.so": "6979f733695aead43e4913e1e349b964ec2a410a8e70d681b12bdab36b47664e",
+    "/home/lpaiu/work/direct-eos-gr33/photon-eos-levels-repaired/levels.so": "f5ebb8b31b67cfb8591cad491abd7930738d22e3eb9eebe90bed1519dd610b31"
+  }
+}

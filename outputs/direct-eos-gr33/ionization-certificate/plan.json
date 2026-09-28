@@ -1,0 +1,26 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "46f1a9c",
+  "bindings": {
+    "verification/ionization_certificate.py": "e10e3ec1f6177a06f47033408887a71191358e0e5212a4e9d90c96d80e8affc6",
+    "outputs/direct-eos-gr33/electron-thermo-certificate/result.json": "f2c510359812a83509683c5ef84d11d8c83bc1c3d42cc4d18b3f43717f25187f",
+    "outputs/direct-eos-gr33/electron-thermo-certificate/audit-manifest.json": "497e82f13d25f40895d1f4f5ff227f77aa6e196bd6bd4aab087504d5b91303bd",
+    "verification/interval_records.py": "5781af2bf247d9e5f707b89874c0486959293ebe9fefdcbf2b15d5fc841c7caa"
+  },
+  "eta_interval": [
+    -17,
+    24
+  ],
+  "beta_interval": [
+    "0",
+    "0.006"
+  ],
+  "precision_decimal_digits": 60,
+  "criterion": "Prove positive electron potential curvature and quantify dual value, gradient and relative curvature errors; prove ideal-ion constrained curvature and monotone charge balance. Do not infer nonideal curvature from convergence.",
+  "full_EOS_certified": false,
+  "full_GR_evolution": false,
+  "sources": [
+    "https://freeeos.sourceforge.net/convergence.pdf",
+    "https://freeeos.sourceforge.net/documentation.html"
+  ]
+}

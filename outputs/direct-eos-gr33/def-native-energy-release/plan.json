@@ -1,0 +1,49 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "0a71a62d1",
+  "claim": "Evolve conserved baryon, radial momentum and rest-subtracted Killing energy, with native EOS recovery. Close gas, escaped dilute inventory, inner transfer and opposite photon work before imposing GR mass constraints.",
+  "equations": "K=a*(E-cX*D)+(a-a_surface)*cX*D, F_K=(K+a*p)*v; divergence uses the same spherical lapse/area flux and proper volume as baryons. The only gas energy source is the paired elastic photon work. No measured residual is added as heat.",
+  "EOS": "Reuse the147 density states on all3 old entropy planes; add entropy planes[-0.02,0.03,0.1,0.3,0.7,1.5,3]. Native isentropes and entropy derivatives of pressure/u/T, no dilute extrapolation. Positive entropy range allows conservative numerical dissipation rather than forcing entropy advection.",
+  "native_budget": {
+    "calls": 5000,
+    "seconds": 180,
+    "temperature_K": [
+      100,
+      10000000.0
+    ]
+  },
+  "evolution_budget": {
+    "seconds": 240,
+    "CPU_threads": 1,
+    "memory_GB": 2
+  },
+  "paths": [
+    "224-cell full-horizon pilot",
+    "896-cell saved-horizon run",
+    "1792-cell saved-horizon run"
+  ],
+  "same_horizon_seconds": 0.0034344311179287023,
+  "domain_m": [
+    -200,
+    1200
+  ],
+  "CFL": 0.35,
+  "gates": {
+    "native_EOS_relative": 0.002,
+    "primitive_energy_relative": 1e-08,
+    "baryon_ledger_relative": 1e-10,
+    "energy_ledger_over_response": 1e-08,
+    "outside_mass_refinement": 0.02,
+    "trace_refinement": 0.02
+  },
+  "stop": "Stop on EOS/root/positivity, independent-control or budget failure. No automatic entropy/density extension, grid refinement, horizon enlargement or tolerance relaxation. Save failed states.",
+  "unchanged_scope": "Frozen metric, LTE gas chemistry and optically thin instantaneous elastic scattering remain assumptions; full GR and physical chemical/radiative closure remain required.",
+  "bindings": {
+    "verification/def_native_energy_release.py": "46ae1581f7d3dc4eab6d15a48b698186502318f22cd87de5d9fc67da4f431df8",
+    "verification/def_native_radial_thermo.py": "09f458d4a43de7b729edec20ba70708ffd66ba886207b443e84d15e702cd26f1",
+    "verification/def_native_radial_release.py": "3689a7b0c18fb0c96bd1b2e4503f9ce2cd3dd4f0edfa15c889c0c8bc3cc9fe05",
+    "outputs/direct-eos-gr33/def-native-radial-release/eos.npz": "e35e1a7b5dff20773244c20c14ddbe7ce3c74cc89b2036d6bf84cb27d4afbc69",
+    "outputs/direct-eos-gr33/def-native-radial-release/cells-1792.npz": "362b10d4f36bf4aa96ce84af3e834dad13fc00f9abdfd0f587f17e1d3ea602b0",
+    "outputs/direct-eos-gr33/def-native-radial-release/flow-audit.json": "82ba1855db92279cefa6b69604562c6f6dbbab3251766e5e4aa0fb0e332afb0e"
+  }
+}

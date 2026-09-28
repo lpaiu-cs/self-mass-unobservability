@@ -1,0 +1,22 @@
+{
+  "classification": "Proven",
+  "checkpoint": "5e4a0c7",
+  "bits": 128,
+  "cells": 3206,
+  "bindings": {
+    "verification/gr_polarization_neutral_error.py": "0ced111b5e55e55f82da17e408e8180346cf19efa2cfc5043a43cd2f476d63b2",
+    "verification/gr_polarization_thermodynamics.py": "9fa8573f636f7ee896bce66a6f85b22448dc6e54512fcec7a71cea23d367d1b0",
+    "outputs/direct-eos-gr33/gr-polarization-thermodynamics/plan.json": "2b383242221d72d942de05fd17a9252166fc7c7690a2a7a53ffd2d83ba9a60a8",
+    "outputs/direct-eos-gr33/gr-polarization-thermodynamics/numerical.json": "49d562ac3c9365da47c261db7ac5666c12dff752718f7aa1b5fd186f3bdb4cdd",
+    "outputs/direct-eos-gr33/gr-polarization-thermodynamics/states.npz": "a91f70b8277d7984c7954d277b01956dd31dfd4c12b57989fed8b7a2fccceb69",
+    "outputs/direct-eos-gr33/gr-electron-density-export/manifest.json": "0e46e2621ea155fefc6dfe48733b45ad61ac405969142af50702048cf3558b42",
+    "outputs/direct-eos-gr33/gr-electron-density-export/result.json": "82b2ed93277d1ce0ae7ad7ffb4d37bf87181c1ab6efae35c0388c93a1951af9c",
+    "outputs/direct-eos-gr33/gr-electron-density-certificate/candidates.npz": "7de1b20138e44c3daba986b8591962a4586bc0cfe6dd5d1835b2792156b19254",
+    "outputs/direct-eos-gr33/gr-ionic-hamiltonian-bound/inputs.npz": "d89135accb682ac37de76eb6be24214c6c84c448e713ec2d5c5bf9b4495f3167",
+    "outputs/direct-eos-gr33/gr-ionic-hamiltonian-bound/constants.json": "5aa17efb44f145bee7f5d218667083c0e43a4ef86d5558a8efa26a916d5e1cff"
+  },
+  "reference_budget": "2e-7",
+  "budget_origin": "Same absolute per-field budget as the fixed self-thermodynamic finite refinement. A failed budget is retained as a failure; mathematical bounds remain valid.",
+  "method": "Bound analytic center-to-root displacement and inverse-derivative coefficient errors using a positive response lower bound on 0<=Q<=a and all-Q thermal moments. No new quadrature or physical EOS approximation.",
+  "scope": "Exact declared ideal-electron RPA self term only. Does not certify the numerical interior, floating evaluations, full correlated EOS, GR evolution or observations."
+}

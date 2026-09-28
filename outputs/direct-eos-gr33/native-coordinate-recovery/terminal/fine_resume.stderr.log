@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/resume_coordinate_exact_photons.py", line 164, in <module>
+    assert read(OUT/'restart-check.json')['passed'];run(64 if action.startswith('coarse') else 128)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/resume_coordinate_exact_photons.py", line 134, in run
+    exec(compile(source,__file__,'exec'),ns);(OUT/f'expanded-recovery-{n}.py').write_text(source);(OUT/f'expanded-original-{n}.py').write_text(check_source);ns['run'](n)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/resume_coordinate_exact_photons.py", line 70, in run
+    start=max(v for v in interval_starts(z) if v<=step)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/recover_remaining_joint_photons.py", line 99, in snapshot
+    write(OUT/f'clock-{n}'/f'snapshot-{idx:02d}.json',row);assert row['passed'],row
+AssertionError: {'time': 0.0002146519448705439, 'snapshot_index': 2, 'steps': 16, 'endpoint_relative': 1.2913935118853939e-16, 'material_ledger': [3.4399337839220827e-15, 1.1700508732416095e-13, 3.775971858038206e-15, 3.315058183995406e-17], 'radial_port_relative': 4.740709462739588e-12, 'angular_relative': 1.7212545281411128e-16, 'passed': False}

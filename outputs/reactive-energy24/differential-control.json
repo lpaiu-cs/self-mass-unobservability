@@ -1,0 +1,30 @@
+{
+  "classification": "Counterexample candidate",
+  "results": [
+    {
+      "composition_difference_step": 1e-05,
+      "chemical_term_included": true,
+      "T_K": 35506279.21969764,
+      "temperature_vs_finite_energy_relative": -1.432187701766452e-14,
+      "energy_relative": -1.268984917146554e-13,
+      "calls": 134
+    },
+    {
+      "composition_difference_step": 5e-06,
+      "chemical_term_included": true,
+      "T_K": 35506279.219697766,
+      "temperature_vs_finite_energy_relative": -1.0658141036401503e-14,
+      "energy_relative": -9.71445146547012e-14,
+      "calls": 134
+    },
+    {
+      "composition_difference_step": 5e-06,
+      "chemical_term_included": false,
+      "T_K": 35525420.04785079,
+      "temperature_vs_finite_energy_relative": 0.0005390829051448165,
+      "energy_relative": 0.004811127663995718,
+      "calls": 134
+    }
+  ],
+  "interpretation": "Independent DOP853 integration over prescribed reaction extent, using EOS heat capacity and numerical composition partials. This is a constant-density reactor control, not time evolution or a certified derivative bound."
+}

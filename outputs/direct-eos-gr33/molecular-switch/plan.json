@@ -1,0 +1,41 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "8ab926a",
+  "original_cutoff_K": 1000000.0,
+  "controls": [
+    0,
+    1175,
+    1176,
+    2972,
+    5734
+  ],
+  "processes": 4,
+  "block_cells": 128,
+  "boundary_cells": [
+    1175,
+    1176
+  ],
+  "boundary_log_steps": [
+    0.001,
+    0.0001,
+    1e-05,
+    1e-06,
+    1e-07,
+    1e-08
+  ],
+  "inventory_tolerance": 1e-10,
+  "charge_tolerance": 1e-10,
+  "original_outputs_bitwise_required": true,
+  "bindings": {
+    "verification/eos_molecular_switch.py": "346288fe34764b4a3387c972de693e461c4f25d05945a45e801f025e8ef70fb1",
+    "outputs/direct-eos-gr33/molecular-stationarity/manifest.json": "260156eb3d03f0f19e02c2d76af247dc542c1f6a7e9eb0f292113212619c2c58",
+    "outputs/direct-eos-gr33/reference-state.npz": "17cbbb101628ca9bc111dca0cfe902210f13697c632b91c03913a1718cf7d2ef",
+    "outputs/direct-eos-gr33/initial-state-17-4.npz": "5dcc8ffb8b32a9f15ccc4c8bb7111d19be8dcdc66611ad2942e3a4a0cf6cc6d6"
+  },
+  "original_library_sha256": "6348e235763db0112687f391ab1c06c34b33aa530973ea4a414a5d0f21b1dfb4",
+  "intervention": "Only the final common ifh2/ifh2plus=0 temperature switch can be bypassed. All other options and partition-function Taylor continuation are unchanged. Default false must reproduce the original EOS.",
+  "policy": "Report every finite change and failure, with no after-result smallness gate. A forced molecular continuation is not a validated physical partition function. Samples and one-sided finite sequences are not uniform bounds.",
+  "physical_EOS_certified": false,
+  "continuous_EOS_certified": false,
+  "full_GR_evolution": false
+}

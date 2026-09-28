@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=US-ASCII">
+   <link rel="SHORTCUT ICON" href="../icons/eip.ico" type="image/ico">
+   <title>EIP EOS</title>
+   <STYLE type="text/css">
+      A {TEXT-DECORATION: none}
+      A:hover {COLOR: #bb0066; TEXT-DECORATION: underline}
+   </STYLE>
+</head>
+<body text="#300040" link="#0000CC" vlink="#333399" alink="#FF00FF" bgcolor="#EEEEFF">
+
+<a name="top"></a>
+<table align="center" width="70%">
+<tr align="center">
+<td valign="top"><a href="index.html" target="_top"><font size="+2">
+<b>Equation of state of fully ionized electron-ion plasmas</b></font></a>
+</table>
+
+<center>
+<font color="#333399" size="+2"><b><I>Fortran codes</I></B>
+</font>
+<p>
+<table border="4" cellpadding="6" width="60%">
+<tr><td align="center" bgcolor="#EEDDEE">
+<B>Last upgrade:</B> 
+<B>June 15, 2022</B>.
+<BR>
+All updates since the first distribution are listed as comments
+within the program files.
+</table>
+</center>
+
+The Fortran codes implement the formulae for the EOS of nonideal Coulomb plasmas, described by Potekhin and Chabrier (2010,2013) (see <a href="eipintr.html#biblio">References</a>). The subroutines are collected in two files (right-click on their names and <I>Save Link</I> to download):
+<ol><li><a href="eos22.f"><b>eos22.f</b></a> contains the complete set of subroutines for nonmagnetized plasmas;
+<li><a href="eosmag22.f"><b>eosmag22.f</b></a>
+is a supplement to <b>eos22.f</b>, which is needed when either a quantizing magnetic field or positrons are present. In those cases the two files must be linked together.
+</ol>
+The first file (<a href="eos22.f"><b>eos22.f</b></a>) contains the following subroutines:
+<ul>
+<li>MELANGE9 - for arbitrary ionic mixture, renders total (ion+electron)
+pressure, internal energy, entropy, heat capacity (all
+normalized to the ionic ideal-gas values), logarithmic
+derivatives of pressure over temperature and density.
+<li>EOSFI22 - nonideal (ion-ion + ion-electron + electron-electron)
+contributions to the free and internal energies, pressure,
+entropy, heat capacity, derivatives of pressure over
+logarithm of temperature and over logarithm of density (all
+normalized to the ionic ideal-gas values) for one ionic
+component in a mixture.
+<li>FITION9 - ion-ion interaction contributions to the free and internal
+energies, pressure, entropy, heat capacity, derivatives of
+pressure over logarithms of temperature and density.
+<li>LIQBC - quantum additions to classical OCP liquid.
+<li>FSCRliq8 - ion-electron (screening) contributions to the free and
+internal energies, pressure, entropy, heat capacity,
+derivatives of pressure over logarithms of temperature and
+density in the liquid phase for one ionic component in a
+mixture.
+<li>FSCRsol8 - ion-electron (screening) contributions to the free and
+internal energies, pressure, entropy, heat capacity,
+derivatives of pressure over logarithms of temperature and
+density for monoionic solid.
+<li>FHARM12 - harmonic (including static-lattice and zero-point)
+contributions to the free and internal energies, pressure,
+entropy, heat capacity, derivatives of pressure over
+logarithms of temperature and density for solid OCP.
+<li>HLfit12 - the same as FHARM12, but only for thermal contributions.
+<li>ANHBC - anharmonic corrections to the previous two.
+<li>CORMIX - correction to the linear mixing rule for the Coulomb
+contributions to the thermodynamic functions.
+<li>ELECT11 - for an ideal electron gas of arbitrary
+        degeneracy and relativity at given temperature and
+        electron chemical potential, renders number density
+        (in atomic units), free energy, pressure, internal
+        energy, entropy, heat capacity  (normalized to the
+        electron ideal-gas values), logarithmic derivatives
+        of pressure over temperature and density. This subroutine is actually split into ELECT11a, which realizes general fitting expressions via the Fermi-Dirac integrals, and ELECT11b, which employs the Sommerfeld expansions in the case of a very strong electron degeneracy.
+<li>SOMMERF provides the Sommerfeld expansion up to order <I>T</I><sup>2</sup> for the relativistic Fermi-Dirac integrals of orders 1/2, 3/2, 5/2, together with the corresponding approximations for their first, second, and some third derivatives.
+<li>SUBFERMJ - auxiliary to SOMMERF.
+<li>EXCOR7 - electron-electron (exchange-correlation) contributions to
+the free and internal energies, pressure, entropy, heat
+capacity, derivatives of pressure over logarithm of
+temperature and over logarithm of density (all normalized
+to the classical electron ideal-gas values).
+<li>FERINV7 - inverse non-relativistic Fermi integrals of orders -1/2,
+1/2, 3/2, 5/2, and their first and second derivatives.
+<li>BLIN9 - relativistic Fermi-Dirac integrals of orders 1/2, 3/2, 5/2, together with their first, second, and some third derivatives; uses BLIN9a, BLIN9b, and BLIN9c - three segments of the fit by Blinnikov et al. (1996).
+<li>CHEMFIT7 - electron chemical potential at given density and
+temperature, and its first derivatives over density and
+temperature and the second derivative over temperature.
+<li>CHEMFIT - redirection to CHEMFIT7 using another list of arguments (auxiliary).
+<li>FERMI10 - Fermi distribution function (auxiliary).
+</ul>
+
+The second file (<a href="eosmag22.f"><b>eosmag22.f</b></a>) contains the following subroutines:
+<ul><li> EOSM20 - EOS of a homogeneous plasma of electrons and one ion species. 
+<UL>
+<LI>Input: ion charge and mass numbers (<I>Z, A</I>), mass density &rho; in CGS, temperature <I>T</I> and magnetic field strength <I>B</I> in atomic units.
+<LI>
+Output:
+<OL>
+ <LI>electron number density <i>n</I><sub>e</sub> [a.u.];
+ <LI>positron number density [a.u.];
+ <LI>ion Coulomb coupling constant &Gamma;;
+ <LI>electron chemical potential divided by <I>k</I><sub>B</sub><I>T</I>;
+ <LI>ion quantum parameter: ion plasma temperature <I>T</I><sub>p</sub> divided by thermodynamic temperature <I>T</I>;
+ <LI>indicator of the phase state (liquid or solid);
+ <LI>pressure <I>P</i> divided by <i>n</I><sub>i</sub><I>k</I><sub>B</sub><I>T</I>, where <i>n</I><sub>i</sub>=<i>n</I><sub>e</sub>/<I>Z</I> is the ion number density;
+ <LI>internal energy per ion per <I>k</I><sub>B</sub><I>T</I>;
+ <LI>entropy per 1 ion (assuming spin=1/2) in units of k<SUB>B</SUB>;
+ <LI>specific heat <I>C<sub>V</sub></I>;
+ <LI>logarithmic derivatives
+        of <I>P</I> over &rho; and <I>T</I>.
+</OL>
+</UL>
+<li> CHEM20 - EOS of magnetized electron-positron ideal gas (input are magnetic field strength, temperature, and the excess of electron over positron number density (assuming overall charge neutrality) <I>n<SUB>e</SUB>* = n<SUB>e</SUB> - n<sub>pos</sub> = Zn<SUB>ion</SUB></I>.
+<li> CHEMAG8 - EOS of magnetized electron ideal gas (without positrons; input are density, temperature, and magnetic field strength).
+<li> ELECTMAG - EOS of magnetized electron ideal gas (input are density, temperature, and the chemical potential of the ideal electron gas).
+<li> MAGNION - EOS of nonrelativistic nondegenerate ion gas in magnetic field.
+<li> SPINION - contributions to the EOS of nonrelativistic
+          nondegenerate ion gas due to the spin degeneracy
+          and magnetic moments.
+<li> EOSFIM14 - non-ideal parts of thermodynamic functions.
+<li> EXCORM - exchange-correlation contribution for the electron gas in magnetic field.
+<li> HLMAG - thermal phonon contributions to the internal energy, heat capacity, entropy, pressure, logarithmic pressure derivatives, and several auxiliary quantities used in FHARMAG.
+<li> FHARMAG - harmonic (including static-lattice and
+         zero-point) contributions to the free and internal
+         energies, pressure, entropy, heat capacity,
+         derivatives of pressure over logarithms of
+         temperature and density for solid OCP, and the energy difference
+         for two characteristic orientations of the Coulomb crystal in a quantizing magnetic field.
+<li>QDMAG - quantum-diffraction correction to the EOS of the magnetized liquid EIP.
+<li> function darcth = inverse hyperbolic tangent (inverse dtanh)
+</ul>
+
+Detailed descriptions of all subroutines are given by comment lines in the corresponding codes.
+
+<p>
+
+The second file (magnetic EOS), unlike the first (nonmagnetic) one, is designed for an EIP containing only one kind of the ions, but not a mixture.
+
+<p>
+<center>
+<img SRC="../icons/colorbar2.gif" width="100%" height="3" alt="separation line"><p>
+[<a href="#top" target="_self">TOP</a>]
+[<a href="index.html" target="_top">MAIN</a>]
+</center>
+<hr>
+ <font size="-1">
+Page created on November 28, 2008,
+updated on <font color="#bb0033">June 15, 2022</font>
+by <a href="../DTA/palex/palex.html" target="_top"><i>Alexander Potekhin</i></a>.
+<BR>
+<B>Last revision of the programs: <font color="#bb0033">June 15, 2022</font></B>
+</font>
+
+</body>
+</html>

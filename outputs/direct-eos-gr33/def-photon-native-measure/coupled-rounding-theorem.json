@@ -1,0 +1,11 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "assumptions": "Fixed positive matter/photon heat capacities and independent relative errors <=eps<1 in positive absorptive rates. These are printed-rate errors, not physical/model, spectral-resolution or EOS errors.",
+  "generator": "In energy-norm coordinates z=(sqrt(C_m)*dT,E_i/sqrt(C_i)), the generator is -L=-sum_i gamma_i*b_i*b_i^T, b_i=(-sqrt(C_i/C_m),e_i). Its conservation nullspace is unchanged by rate perturbations.",
+  "proof": "The perturbed Lp obeys (1-eps)L<=Lp<=(1+eps)L and deltaL=L^(1/2) F L^(1/2), ||F||<=eps. The resolvent identity, L<=Lp/(1-eps), and sup_lambda sqrt(lambda)/|lambda+iw|=1/sqrt(2|w|) give ||iw[(Lp+iw)^(-1)-(L+iw)^(-1)]||<=eps/[2sqrt(1-eps)] for w!=0. The conserved nullspace cancels exactly.",
+  "eps": 5e-05,
+  "uniform_energy_norm_resolvent_bound": 2.500062502343848e-05,
+  "finite_dense_controls": 204,
+  "maximum_control_to_bound_ratio": 0.9345449350829667
+}

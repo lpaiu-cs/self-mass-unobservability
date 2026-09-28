@@ -1,0 +1,66 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": false,
+  "rows": [
+    {
+      "steps": 64,
+      "lagged_inputs": {
+        "xi": 5.46257691014664e-07,
+        "energy_offset": 7.911594786046776e-08,
+        "B": 0.0014983435053697567,
+        "S": 1.4224721460307727e-07,
+        "M_Etilde": 0.0011875384639105397,
+        "dM_Etilde": 0.0008661906500575167,
+        "M_H": 0.20711072405843872,
+        "dM_H": 0.4214200627691455
+      },
+      "stage_forcing_defect": [
+        3.3132524408839852e-15,
+        8.108706395767326e-15,
+        0.00032416716404135953,
+        0.000200732568319316
+      ],
+      "paired_E_H": [
+        4.528764218702363e-11,
+        2.724799424017064e-09
+      ],
+      "stage_count": 234,
+      "angular_port_relative": 1.631380756611763e-16,
+      "stage_operator_identical": true,
+      "forecast_seconds": 425.81300961400206
+    },
+    {
+      "steps": 128,
+      "lagged_inputs": {
+        "xi": 5.462728724594219e-07,
+        "energy_offset": 7.90961505113927e-08,
+        "B": 0.0014981552458937257,
+        "S": 1.422147469500463e-07,
+        "M_Etilde": 0.0011874105778777065,
+        "dM_Etilde": 0.0008661579473509031,
+        "M_H": 0.20710115989253908,
+        "dM_H": 0.42140153377329476
+      },
+      "stage_forcing_defect": [
+        3.314082177607569e-15,
+        8.108512853190028e-15,
+        0.00032413245631528404,
+        0.00020072171800279443
+      ],
+      "paired_E_H": [
+        4.5284719191800994e-11,
+        2.724613085048043e-09
+      ],
+      "stage_count": 454,
+      "angular_port_relative": 4.1321273332065325e-16,
+      "stage_operator_identical": true,
+      "forecast_seconds": 408.29852039799266
+    }
+  ],
+  "maximum_block_defect": 0.4214200627691455,
+  "actual_Radau_stage_clock_used": true,
+  "no_extra_sweep_authorized": true,
+  "no_new_evolution_steps": true,
+  "scope": "Finite lagged-input and stage-equation consistency only; not a continuum contraction, uniform derivative bound or full nonlinear GR closure. Final charge remains unadjudicated.",
+  "seconds": 216.265837195
+}

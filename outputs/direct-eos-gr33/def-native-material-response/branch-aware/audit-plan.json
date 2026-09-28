@@ -1,0 +1,20 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Compare the saved three material histories, independently recompute their four balances, and recover pressure/anisotropic stress including transported rest mass for the next GR source.",
+  "controls": "Same canonical17 times. Componentwise maximum-in-time spatial L1 differences, divided by the fine maximum-in-time L1. Also check endpoint differences. Recover primitive perturbations directly from conservative variations, with fixed-inventory native jets; compare pressure to independent per-cell primitive probes. Retain the failed pressure-subtraction audit.",
+  "source": "Convert integrated reference energy using delta(VE)=(deltaEref+a_surface*cx*c^2*deltaB)/a_ref. For fixed-radius density sources subtract the evolved background density times deltaV. Remove the Phase122 initial canonical gas response using its exact Eg,Pg,Kg coefficients; retain the difference between initial and evolved backgrounds explicitly.",
+  "limits": "One material sweep driven by fixed Phase123 metric and Phase124 photon transfers. New motion is not returned into photons or GR. Sampled directional derivatives are not a uniform certificate.",
+  "budget_seconds": 40,
+  "gates": {
+    "time": 0.02,
+    "background": 0.02,
+    "conservation": 1e-08,
+    "pressure_probe": 0.002
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_material_response.py": "17a7964f5bebd27628dc63ee980cf5549948df36ac263336bad93129e7cdee57",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_material_branch_response.py": "65c24a983afe7bdcfd9b47047622cd789f6cc41fb8b338f3046be9f7cb83cfb2",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_material_response.py": "56bb3c3814c5fad05d2a975d441ad824648825582d82a2cc8a15b50a4c9c4f38",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-material-response/branch-aware/production.json": "ad1f77307ad5dc3b1145ecc80b0093c02d30b5f8b2b9ca7d5df9b9f0c842a657"
+  }
+}

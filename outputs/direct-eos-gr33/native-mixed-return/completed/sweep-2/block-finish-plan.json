@@ -1,0 +1,28 @@
+{
+  "classification": "Counterexample candidate",
+  "sweep": 2,
+  "scope": "Unchanged original full lagged-input, identical-operator and all384-stage source audit. No optimized source-difference path, no new evolution or threshold change.",
+  "budget_reassessment": "Original300s block admission stopped at313.83s forecast. Two attempts to remove zero/duplicate local work also stopped on forecast. Preserve all failures and use the original exact evaluator with a400s read-only action cap; the original4200s total remains binding. This reallocates total budget, not a claim of meeting the original sub-budget.",
+  "budget_seconds": 400,
+  "original_block_budget_seconds": 300,
+  "total_action_seconds": 4200,
+  "recorded_prior_admission_seconds": 43.192863675,
+  "decision": "Accept the finite coupling only if every original input/source/E-H defect is below0.002; otherwise preserve its actual failure and original maximum-three/nondecrease rule.",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/audit_native_mixed_return.py": "b9d2b8809639660636072fbcd0bf4285624f678d80b7553a7e892e208eadadbe",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/return_native_mixed_gr.py": "ba23ce0c8dcc4b3ddfe1d8e9b470ede3130ae37b5e5be2ef730219be328d038d",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/audit_native_incident_self_gr.py": "448fab44bac0be2893dd714e1d93f95cd2d181d72e202e18da9ca253b6da00e5",
+    "native-mixed-return162-work/sweep-2/residual.json": "50b3957a33f48c9ec14721a9be6ac350cacbe4bf2ad8d2ab8faf098fd434fbf0",
+    "native-mixed-return162-work/block-2-receipt.json": "fccf6f2a1ceb0e10fbd4e0bac403b3bd87381f013764301a8745b00e11d56430",
+    "native-mixed-return162-work/audit-block_retry-2-receipt.json": "13a04822f9fa1293719ea69d72bce258c378ed99a74e5545aecbb1f359d19dd7",
+    "native-mixed-return162-work/audit-block_sources-2-receipt.json": "db3c26ff3d7711284bab0b15e0c920541421a8a0638ec4b13e1ff3d363e55138",
+    "native-mixed-return162-work/sweep-1/photons/steps-64-reference-128.npz": "79eb3622b54604cde0ff2f5cd8f6cb798f63a150744df205ebe8ebd160b58e7f",
+    "native-mixed-return162-work/sweep-1/photons/steps-128-reference-128.npz": "ad54a3654cb211c1ee9e21b7bb8db320d232ccba5186846f51f22d1bf29e05b7",
+    "native-mixed-return162-work/sweep-1/material/steps-64-reference-128.npz": "97d27210dcc161070f00b4ff50fa23d88dd4f69251a47f2484ba6e28baa576a6",
+    "native-mixed-return162-work/sweep-1/material/steps-128-reference-128.npz": "128040c96392c4a0e8ce9c99d8c5f506f82100a3ceceda38f74075839cb33172",
+    "native-mixed-return162-work/sweep-2/photons/steps-64-reference-128.npz": "9dba55e172e8a98f38d98e2e771d608f20169d0608074aba57222d25203a3cba",
+    "native-mixed-return162-work/sweep-2/photons/steps-128-reference-128.npz": "3491313dcf79b891ea71c06abddd2c5be1cebb26f183749c468dfeb4ec1cc180",
+    "native-mixed-return162-work/sweep-2/material/steps-64-reference-128.npz": "1d3fa37fcc63fdc704fffed3966a04aed155549288fbfd6347ee721a8362fd46",
+    "native-mixed-return162-work/sweep-2/material/steps-128-reference-128.npz": "a9d1d142082821e32e962c90e5f0f1dfbfc276978bd096136d223b2d89a0b690"
+  }
+}

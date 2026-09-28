@@ -1,0 +1,49 @@
+{
+  "stopped": true,
+  "reason": "Reassign the fixed finest path to 15 workers and the native-residual accelerator, to resolve the coarser path intermediate cone excursion. Operator stop, not a failed numerical verdict.",
+  "last_completed_step": 7,
+  "root": 803,
+  "processes": [
+    {
+      "pid": 803,
+      "parent": 797,
+      "start": "259044",
+      "state": "S",
+      "command": "python3 verification/gr_implicit_coupled_evolution.py run --refinement 4 --workers 3"
+    },
+    {
+      "pid": 808,
+      "parent": 803,
+      "start": "260220",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_coupled_evolution.py run --refinement 4 --workers 3"
+    },
+    {
+      "pid": 809,
+      "parent": 803,
+      "start": "260220",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_coupled_evolution.py run --refinement 4 --workers 3"
+    },
+    {
+      "pid": 807,
+      "parent": 803,
+      "start": "260219",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_coupled_evolution.py run --refinement 4 --workers 3"
+    }
+  ],
+  "boot_id": "9b968b4f-ecbd-483b-ada9-c1c871b6ab20",
+  "sha256": {
+    "iterations.jsonl": "938707a13718bcec57636e1db5d816ad59e06a3fc399038329dab8a8d73ab79e",
+    "progress.json": "00a0ce3215be4dd380b483e6e3c7ca1c127bade5668778f31596e56e6f3c7af1",
+    "step-0000.npz": "e11373daafe0d0c21aa87f09c0bc1d52618cb408b9c0b6a388235189d8f8865a",
+    "step-0001.npz": "6906ca7ed9dc51834aed07a6f5abc6bf791c4085bb74929247c5f63b075740e3",
+    "step-0002.npz": "170862b0fcb309cfdcd1f0b57e7d9ab5c72c326f04e8519630e562e60f22e6b9",
+    "step-0003.npz": "bd46126c9396e935695e36e7f4bb51ea9632ee5c3e7bbc8d8dd8bf62cf62d155",
+    "step-0004.npz": "86290b77b4175b3711ba034330d475b50305cb10f935e1ceca4df73b69d5ac21",
+    "step-0005.npz": "27324e29f995d00879fe2e06a7eb7d26d625b84a08a38200ff952096f7b39cfd",
+    "step-0006.npz": "610d1eef0c2b006f54f6961ca560f980de080d78b0c0a51e9b9bc0382590f030",
+    "step-0007.npz": "9eb17e96da86fca7b76bf9242e223279cf6d40467cdd722d47ec83d807599ee4"
+  }
+}

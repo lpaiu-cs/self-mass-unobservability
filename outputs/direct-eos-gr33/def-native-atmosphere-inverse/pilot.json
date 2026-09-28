@@ -1,0 +1,52 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "states": 6,
+  "maximum_pressure_relative": 4.0790855138084225e-09,
+  "maximum_energy_relative": 3.5824449391360917e-16,
+  "maximum_momentum_relative": 1.5676017654054334e-16,
+  "maximum_density_relative": 9.325873406851315e-15,
+  "maximum_logT_change": 8.994678779572496e-09,
+  "native_calls": 151,
+  "seconds": 10.19148560100001,
+  "forecast_upper_seconds": 420.52837977598983,
+  "eligible": false,
+  "reseed": [
+    {
+      "steps": 0,
+      "cell": 0,
+      "pressure_relative": 1.318944953254686e-13
+    },
+    {
+      "steps": 0,
+      "cell": 127,
+      "pressure_relative": 1.34781075189494e-13
+    },
+    {
+      "steps": 128,
+      "cell": 0,
+      "pressure_relative": 1.2745360322696797e-13
+    },
+    {
+      "steps": 128,
+      "cell": 128,
+      "pressure_relative": 1.1290968160437842e-13
+    },
+    {
+      "steps": 128,
+      "cell": 222,
+      "pressure_relative": 1.3156142841808105e-13
+    },
+    {
+      "steps": 64,
+      "cell": 222,
+      "pressure_relative": 8.770761894538737e-15
+    }
+  ],
+  "source": [],
+  "native_endpoint_inverse_complete": false,
+  "full_atmosphere_history_audited": false,
+  "uniform_EOS_error_bound": false,
+  "actual_atmosphere_EOS_re_evolution": false,
+  "final_charge_solved": false
+}

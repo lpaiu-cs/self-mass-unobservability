@@ -1,0 +1,47 @@
+{
+  "state": "completed",
+  "completed": [
+    {
+      "step": "prepare",
+      "returncode": 0,
+      "seconds": 6.4584581619999994
+    },
+    {
+      "step": "boundary",
+      "returncode": 0,
+      "seconds": 13.766218898000034
+    },
+    {
+      "step": "check64",
+      "returncode": 0,
+      "seconds": 326.595469584
+    },
+    {
+      "step": "check128",
+      "returncode": 0,
+      "seconds": 351.96683696400004
+    },
+    {
+      "step": "followthrough",
+      "returncode": 0,
+      "seconds": 6012.076597315
+    },
+    {
+      "step": "complete_readout",
+      "returncode": 0,
+      "seconds": 6024.875371450001
+    }
+  ],
+  "seconds": 6024.877308729,
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/.phase265-ld2-chain.py": "914d370a820ab1cc00d7dc74f4d6764c32b20189a2d6f651a23e7fdbedc1063d",
+    "verification/apply_photon_geometric_boundary_ld.py": "b23758fa9539ef71e4fb779178d96b01a4b5822692aae519329d036a0a4ad0ea",
+    "verification/read_photon_boundary_exterior.py": "511db4b6e28beffda5cc9237d099ce4dc5dcb2e2276052a6a1d84c51dc4a2a09",
+    "verification/solve_long_double_fgmres.py": "f93896b05f0b1806d79fb64ebc9975e5dc3252598ffb873fa4981bf3fa56abcd",
+    ".phase251-reader-launch.py": "83275ae7dcb1efbf286a21a4f3bc78d92defdf80c01159fd2cc360764c921086",
+    ".phase265-ld2-followthrough.py": "b3526cf969bb876bb181a83bb715e4b1a0365ac23f8237877f6c524f2226dde8"
+  },
+  "final_total_clock128": "-2.483473436965937971106388969478714728877903067841368758495951966378804198675633919412008640609886635E-51",
+  "final_sign_negative": true,
+  "readout_passed": true
+}

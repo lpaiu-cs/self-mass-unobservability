@@ -1,0 +1,36 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Remove the measured projection error by inverting the unreduced same-source GR resolvent in the existing Laguerre time basis.",
+  "method": "Reuse original Weeks4096 mapped-contour points,sigma12,beta512 and512/1024/2048 coefficient comparison. Same degree4 matrix,source,65 times and horizon. Symmetric diagonal LU preconditions extended original K*u+s^2*M*u residual; accepted resolvents,FFT and Laguerre recurrence retain extended precision. No modes are clipped or projected.",
+  "gates": {
+    "propagation_relative": 0.02,
+    "propagation_order": 1.5,
+    "contour": 0.0002,
+    "abscissa": 0.0002,
+    "spatial": 0.02,
+    "spatial_decrease": true,
+    "coefficient": 0.02,
+    "outer": 0.002,
+    "quadrature": 0.002,
+    "linear_residual": 1e-09,
+    "heat_balance": 2e-13
+  },
+  "decision": "Measure16 representative resolvents,cache and reuse them. Run one degree4 contour only if forecast fits450s. Stop on any of four propagation or contour failures. Fixed degree2/1 and original contrasts are conditional and require cost re-evaluation within1200s total; never expand contour,degree,period or coefficient count after failure.",
+  "budget": {
+    "pilot_seconds": 90,
+    "first_case_seconds": 450,
+    "total_seconds": 1200,
+    "CPU_threads": 1,
+    "memory_GB": 4,
+    "new_EOS_calls": 0
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_full_weeks.py": "c0be4c1870a4aa5416892ae7f50523a8df515fcbf1455fa067fee7486489bc36",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_weeks.py": "01824876adedd514aaed1b760c634ddf840ba1e98e6db0e8fa1dc22f7231eba6",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_hierarchical.py": "7861123d4adfdfdaa21daee3fc7d79dcdffdd024ca48b3f453921b5cb745992b",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_spatial_repair.py": "d13044861c2b4761d5e6349d809c3368f46112974f374aa050aada516c80f8e5",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-response-basis/stage-result.json": "89ba781b36a87bf88d4367660a73893f71fd174a46db6d431f90d0bcbcd82f7b",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/fine-bank.npz": "b4493a6e4cfb20d741725ecb61cec154ab9fc51a694001865748741060018d7e",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/coarse-bank.npz": "ea020f69b240c5c5cdd8810f963d88e5cc2d3269aff12c659422a7a6541ae0df"
+  }
+}

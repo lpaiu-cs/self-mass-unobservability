@@ -1,0 +1,48 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "98e19da",
+  "bindings": {
+    "verification/gr_plasma_dispersion.py": "3bb5af9ac09b464a3157178d8c300933e33729aef258343dd50d9c64ad73a74a",
+    "verification/gr_fermi_plasma.py": "4d9c7e2b97db5f287fbb84448d43e42af5f5a87f47a3c18a451581a2ad7dd96f",
+    "outputs/direct-eos-gr33/gr-fermi-plasma/manifest.json": "0d0021a38d69d6eb004670f80a9bde5eba56fdb7b277cae6e7ea53bcce7b0d0e"
+  },
+  "source": "https://arxiv.org/abs/hep-ph/9302213",
+  "equations": [
+    51,
+    52,
+    54,
+    55
+  ],
+  "model": "Full leading-order alpha polarization kernels of the declared ideal electron/positron distribution, with finite electron mass. Do not replace the distribution by a characteristic velocity.",
+  "orders": [
+    16,
+    24
+  ],
+  "transverse_q": [
+    0,
+    0.01,
+    0.1,
+    1,
+    10,
+    1000
+  ],
+  "longitudinal_fractions": [
+    0,
+    0.01,
+    0.5,
+    0.99,
+    0.999999
+  ],
+  "actual_controls": [
+    0,
+    1175,
+    2972,
+    3043,
+    4352,
+    5734
+  ],
+  "relative_absolute_tolerance": 1e-10,
+  "quadrature": "All 5735 states: two tolerances for positive velocity moments through order 25 and a longitudinal tail-bound moment. Compare order 16/24 roots. At six actual states, independently integrate original logarithmic kernels in momentum coordinate at 50 decimals at every registered nonzero wave number.",
+  "acceptance": "Finite normalized moment/refinement/residual checks use 1e-10. Series truncation bounds are exact-real theorems; their evaluated values are diagnostics until interval bounds on moments and roundoff are supplied.",
+  "scope": "Conditional full leading-order dispersion roots. Not collision damping, physical all-order plasma EOS, a complete longitudinal thermodynamic state count, non-LTE transport or actual GR evolution."
+}

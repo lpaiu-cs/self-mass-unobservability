@@ -1,0 +1,6 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "shared atomic requires frozen PL/MHD options",
+  "cause": "Native eos_cold_start deliberately calls excitation_pi with ifpi=1 and undefined environment moments. The common catalog must supply PL-only weights with zero environment in this initializer, then full PL/MHD in the actual root.",
+  "accepted": false
+}

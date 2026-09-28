@@ -1,0 +1,58 @@
+{
+  "classification": "Counterexample candidate",
+  "rows": [
+    {
+      "step": 0.02,
+      "errors": {
+        "chiT": 0.003102222260141896,
+        "chiRho": 0.017127544810692206,
+        "cv": 0.008648183806381961,
+        "entropy_T_cv": 0.0907029991927685,
+        "first_law_rho": 0.060069626426660507
+      },
+      "halving_drift": null,
+      "passed": false
+    },
+    {
+      "step": 0.01,
+      "errors": {
+        "chiT": 0.005563333193496223,
+        "chiRho": 0.017068249505158062,
+        "cv": 0.009183475346418422,
+        "entropy_T_cv": 0.15165775043411917,
+        "first_law_rho": 0.057826657119473636
+      },
+      "halving_drift": {
+        "lnT_pressure": 0.00294349019546002,
+        "lnT_energy": 0.0038650156405916204,
+        "lnT_entropy": 0.0762703901591418,
+        "lnd_pressure": 0.0014941467602153967,
+        "lnd_energy": 0.0020747738960836177,
+        "lnd_entropy": 0.07567646473022316
+      },
+      "passed": false
+    },
+    {
+      "step": 0.005,
+      "errors": {
+        "chiT": 0.006426701048200312,
+        "chiRho": 0.01713928856291813,
+        "cv": 0.009405991898111758,
+        "entropy_T_cv": 0.30244256423857047,
+        "first_law_rho": 0.0739940723725463
+      },
+      "halving_drift": {
+        "lnT_pressure": 0.0011802341503482847,
+        "lnT_energy": 0.0019442721169669293,
+        "lnT_entropy": 0.15165897257604297,
+        "lnd_pressure": 0.0015160429997357278,
+        "lnd_energy": 0.0017653815727545154,
+        "lnd_entropy": 0.15108210631028746
+      },
+      "passed": false
+    }
+  ],
+  "common_EOS_certified": false,
+  "original_failures_promoted": false,
+  "interpretation": "Bigger stencils reduce roundoff amplification but mix interpolation truncation, branch transitions and differences between tabulated values and reported derivatives. This diagnostic alone cannot turn the common native evaluator into a certified thermodynamic EOS."
+}

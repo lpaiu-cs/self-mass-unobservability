@@ -1,0 +1,492 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": false,
+  "rows": [
+    {
+      "classification": "Counterexample candidate",
+      "reference": 128,
+      "steps": 64,
+      "completed_steps": 4,
+      "new_steps": 4,
+      "seconds": 28.561877273,
+      "operator_point_seconds": 4.624998126999998,
+      "operator_points": 3,
+      "stepping_seconds": 23.61019935400001,
+      "energy_balance_relative": 6.65173425353961e-16,
+      "species_balance_relative": 1.5998902308765872e-16,
+      "linear_relative": 5.9351576115598845e-15,
+      "max_Krylov_iterations": 94,
+      "frequency_moment_relative": 6.732112993353671e-17,
+      "endpoint_photon_reference_energy_erg": 2.1959147398088244e-06,
+      "endpoint_material_reference_energy_erg": -2.2234079631572662e-12,
+      "endpoint_material_energy_L1_erg": 6.56654056087451e-12,
+      "additional_material_motion_evolved": false,
+      "full_GR_feedback": false,
+      "final_charge_solved": false,
+      "endpoint_material_nonrest_energy_erg": -2.2234079631572662e-12,
+      "velocity_jet_relative": 6.085966434433605e-09,
+      "primitive_mapping_relative": 0.0,
+      "conserved_material_input_applied": true,
+      "maximum_extended_stage_residual": 5.9351576115598845e-15,
+      "maximum_refinement_steps": 1,
+      "initial_GMRES_stagnations": 3,
+      "passed": true,
+      "actual_angular_quadrature_relative": 2.2939527695400423e-17,
+      "time_integrator": "RadauIIA2"
+    },
+    {
+      "classification": "Counterexample candidate",
+      "reference": 128,
+      "steps": 128,
+      "completed_steps": 8,
+      "new_steps": 8,
+      "seconds": 50.025269803,
+      "operator_point_seconds": 4.530737317999993,
+      "operator_points": 3,
+      "stepping_seconds": 45.10749320300002,
+      "energy_balance_relative": 7.921543629993927e-16,
+      "species_balance_relative": 7.221472607931645e-17,
+      "linear_relative": 7.430030193860017e-15,
+      "max_Krylov_iterations": 100,
+      "frequency_moment_relative": 6.60820349428787e-17,
+      "endpoint_photon_reference_energy_erg": 2.2404799861382176e-06,
+      "endpoint_material_reference_energy_erg": -2.32895395966846e-12,
+      "endpoint_material_energy_L1_erg": 6.648185692707255e-12,
+      "additional_material_motion_evolved": false,
+      "full_GR_feedback": false,
+      "final_charge_solved": false,
+      "endpoint_material_nonrest_energy_erg": -2.32895395966846e-12,
+      "velocity_jet_relative": 6.085966434433605e-09,
+      "primitive_mapping_relative": 0.0,
+      "conserved_material_input_applied": true,
+      "maximum_extended_stage_residual": 7.430030193860017e-15,
+      "maximum_refinement_steps": 1,
+      "initial_GMRES_stagnations": 8,
+      "passed": true,
+      "actual_angular_quadrature_relative": 2.6628362981466878e-17,
+      "time_integrator": "RadauIIA2"
+    }
+  ],
+  "time_comparison": [
+    0.00703141663665664,
+    0.01587872948840496,
+    0.010738369222997422,
+    0.019216517073000216,
+    0.007894532389751598,
+    0.11429828543586407
+  ],
+  "original_time_gate": 0.02,
+  "full_horizon_completed": false,
+  "physical_final_charge_solved": false,
+  "full_goal_complete": false,
+  "remaining": "A prefix alone is not a full-path result. Full-path angular/time consumers and a measured budget must be checked separately; the original physical gates remain unchanged.",
+  "final_charge_conclusion": "unadjudicated on the corrected coupled solution",
+  "source_representation": "Actual direct physical source at Radau stages; no affine primitive or moment-fitted source.",
+  "actual_coupled_Radau_prefix_completed": true,
+  "time_accuracy_accepted": false,
+  "error_localization": {
+    "classification": "Counterexample candidate",
+    "rows": [
+      {
+        "component": "photon_energy",
+        "time_difference": 0.00703141663665664,
+        "fine_method_difference": 0.0025135004590440806,
+        "top8_fraction": 0.9680310804700745,
+        "cells": [
+          {
+            "index": 15,
+            "radius_cm": 6906208796.840721,
+            "error_fraction": 0.9416535510010487,
+            "coarse": -2.51492685156447e-06,
+            "fine": -2.4674179452941843e-06
+          },
+          {
+            "index": 17,
+            "radius_cm": 6909696303.815728,
+            "error_fraction": 0.011207004935851202,
+            "coarse": 9.128660780303587e-07,
+            "fine": 9.123006550608366e-07
+          },
+          {
+            "index": 18,
+            "radius_cm": 6909776303.975728,
+            "error_fraction": 0.009376974354497436,
+            "coarse": 5.114827709247672e-07,
+            "fine": 5.11009677826745e-07
+          },
+          {
+            "index": 16,
+            "radius_cm": 6909546303.515727,
+            "error_fraction": 0.0055018926403819285,
+            "coarse": 2.029465749182708e-06,
+            "fine": 2.0291881641818514e-06
+          },
+          {
+            "index": 530,
+            "radius_cm": 6909966148.105416,
+            "error_fraction": 7.29461281387833e-05,
+            "coarse": 2.181649548047926e-09,
+            "fine": 2.17796922340959e-09
+          },
+          {
+            "index": 529,
+            "radius_cm": 6909965835.604791,
+            "error_fraction": 7.292502626182541e-05,
+            "coarse": 2.182601398816653e-09,
+            "fine": 2.1789221388236886e-09
+          },
+          {
+            "index": 528,
+            "radius_cm": 6909965523.104168,
+            "error_fraction": 7.290383359013544e-05,
+            "coarse": 2.183553873914356e-09,
+            "fine": 2.1798756831475967e-09
+          },
+          {
+            "index": 527,
+            "radius_cm": 6909965210.603542,
+            "error_fraction": 7.28825503043693e-05,
+            "coarse": 2.1845069872242598e-09,
+            "fine": 2.1808298702554245e-09
+          }
+        ]
+      },
+      {
+        "component": "material_energy",
+        "time_difference": 0.01587872948840496,
+        "fine_method_difference": 0.010119641739422586,
+        "top8_fraction": 0.9906363119044224,
+        "cells": [
+          {
+            "index": 15,
+            "radius_cm": 6906208796.840721,
+            "error_fraction": 0.8867060716932609,
+            "coarse": -4.394901924458825e-12,
+            "fine": -4.4885068223271206e-12
+          },
+          {
+            "index": 16,
+            "radius_cm": 6909546303.515727,
+            "error_fraction": 0.06130152749647912,
+            "coarse": 1.2289385835450944e-12,
+            "fine": 1.2224673035982674e-12
+          },
+          {
+            "index": 17,
+            "radius_cm": 6909696303.815728,
+            "error_fraction": 0.026855649117308363,
+            "coarse": 5.012685115261821e-13,
+            "fine": 4.984335018504144e-13
+          },
+          {
+            "index": 18,
+            "radius_cm": 6909776303.975728,
+            "error_fraction": 0.014710030990704072,
+            "coarse": 2.663037287941293e-13,
+            "fine": 2.647508681647948e-13
+          },
+          {
+            "index": 13,
+            "radius_cm": 6892658769.740694,
+            "error_fraction": 0.0006022414740586315,
+            "coarse": 1.8448180340457873e-16,
+            "fine": 1.2090633745151458e-16
+          },
+          {
+            "index": 14,
+            "radius_cm": 6899533783.490707,
+            "error_fraction": 0.000305632497917253,
+            "coarse": 1.3489725305777848e-16,
+            "fine": 1.026332372062289e-16
+          },
+          {
+            "index": 12,
+            "radius_cm": 6885783755.99068,
+            "error_fraction": 7.906514564141985e-05,
+            "coarse": -6.753659397884545e-17,
+            "fine": -5.919010226195188e-17
+          },
+          {
+            "index": 19,
+            "radius_cm": 6909806460.286041,
+            "error_fraction": 7.60934890525999e-05,
+            "coarse": 1.4293045575532834e-15,
+            "fine": 1.421271767998105e-15
+          }
+        ]
+      },
+      {
+        "component": "neutral_H",
+        "time_difference": 0.010738369222997422,
+        "fine_method_difference": 0.009712411121054013,
+        "top8_fraction": 0.9842032088513363,
+        "cells": [
+          {
+            "index": 15,
+            "radius_cm": 6906208796.840721,
+            "error_fraction": 0.811527746115394,
+            "coarse": 0.19446302472035012,
+            "fine": 0.1969851936677861
+          },
+          {
+            "index": 16,
+            "radius_cm": 6909546303.515727,
+            "error_fraction": 0.10059976817014181,
+            "coarse": -0.05261076303781307,
+            "fine": -0.05229810630782135
+          },
+          {
+            "index": 17,
+            "radius_cm": 6909696303.815728,
+            "error_fraction": 0.04473821751723809,
+            "coarse": -0.021479761204534004,
+            "fine": -0.021340718092914296
+          },
+          {
+            "index": 18,
+            "radius_cm": 6909776303.975728,
+            "error_fraction": 0.02475064614495988,
+            "coarse": -0.011417623406887288,
+            "fine": -0.011340700206867805
+          },
+          {
+            "index": 13,
+            "radius_cm": 6892658769.740694,
+            "error_fraction": 0.001419140436975225,
+            "coarse": -1.5130062727200549e-05,
+            "fine": -1.0719477926713996e-05
+          },
+          {
+            "index": 14,
+            "radius_cm": 6899533783.490707,
+            "error_fraction": 0.0008119490871917535,
+            "coarse": -1.097062799689772e-05,
+            "fine": -8.447149552178157e-06
+          },
+          {
+            "index": 12,
+            "radius_cm": 6885783755.99068,
+            "error_fraction": 0.0002277988430970494,
+            "coarse": -6.891126628173403e-07,
+            "fine": 1.8869499310147356e-08
+          },
+          {
+            "index": 19,
+            "radius_cm": 6909806460.286041,
+            "error_fraction": 0.00012794253633846556,
+            "coarse": -6.121526606358329e-05,
+            "fine": -6.08176300076952e-05
+          }
+        ]
+      },
+      {
+        "component": "impulse",
+        "time_difference": 0.019216517073000216,
+        "fine_method_difference": 0.010110054091897207,
+        "top8_fraction": 0.9915817358569908,
+        "cells": [
+          {
+            "index": 15,
+            "radius_cm": 6906208796.840721,
+            "error_fraction": 0.9071379100600455,
+            "coarse": -3.3554869443267314e-12,
+            "fine": -3.4471621654013506e-12
+          },
+          {
+            "index": 16,
+            "radius_cm": 6909546303.515727,
+            "error_fraction": 0.04789312817411637,
+            "coarse": 9.938417960703767e-13,
+            "fine": 9.890017237234645e-13
+          },
+          {
+            "index": 17,
+            "radius_cm": 6909696303.815728,
+            "error_fraction": 0.02255145847515703,
+            "coarse": 4.3223354097489476e-13,
+            "fine": 4.2995449396524187e-13
+          },
+          {
+            "index": 18,
+            "radius_cm": 6909776303.975728,
+            "error_fraction": 0.01298980975281794,
+            "coarse": 2.3769515908389025e-13,
+            "fine": 2.363824108593915e-13
+          },
+          {
+            "index": 13,
+            "radius_cm": 6892658769.740694,
+            "error_fraction": 0.000528099108928765,
+            "coarse": -1.4643458895327514e-16,
+            "fine": -9.30649722462086e-17
+          },
+          {
+            "index": 14,
+            "radius_cm": 6899533783.490707,
+            "error_fraction": 0.0002534739934702489,
+            "coarse": -9.278876467351984e-17,
+            "fine": -6.717272092719073e-17
+          },
+          {
+            "index": 12,
+            "radius_cm": 6885783755.99068,
+            "error_fraction": 0.00016074397090759703,
+            "coarse": 6.081969038242505e-17,
+            "fine": 4.457492880213709e-17
+          },
+          {
+            "index": 19,
+            "radius_cm": 6909806460.286041,
+            "error_fraction": 6.711232154743907e-05,
+            "coarse": 1.269571410772245e-15,
+            "fine": 1.262789049626865e-15
+          }
+        ]
+      },
+      {
+        "component": "photon_pressure",
+        "time_difference": 0.007894532389751598,
+        "fine_method_difference": 0.0029408032182198277,
+        "top8_fraction": 0.9955840592503487,
+        "cells": [
+          {
+            "index": 15,
+            "radius_cm": 6906208796.840721,
+            "error_fraction": 0.963197269215988,
+            "coarse": -1.2147710311245435e-06,
+            "fine": -1.1912457366915023e-06
+          },
+          {
+            "index": 16,
+            "radius_cm": 6909546303.515727,
+            "error_fraction": 0.021060995108227756,
+            "coarse": 7.690882368605245e-07,
+            "fine": 7.69602634198234e-07
+          },
+          {
+            "index": 17,
+            "radius_cm": 6909696303.815728,
+            "error_fraction": 0.007783437688535649,
+            "coarse": 3.687989424339419e-07,
+            "fine": 3.689890464439679e-07
+          },
+          {
+            "index": 18,
+            "radius_cm": 6909776303.975728,
+            "error_fraction": 0.0034703655312388225,
+            "coarse": 2.1423521809852161e-07,
+            "fine": 2.143199788983307e-07
+          },
+          {
+            "index": 19,
+            "radius_cm": 6909806460.286041,
+            "error_fraction": 1.8044194475092025e-05,
+            "coarse": 1.1486574450795853e-09,
+            "fine": 1.149098159563939e-09
+          },
+          {
+            "index": 20,
+            "radius_cm": 6909806772.786666,
+            "error_fraction": 1.8013374271185626e-05,
+            "coarse": 1.1483520756820397e-09,
+            "fine": 1.148792037408475e-09
+          },
+          {
+            "index": 21,
+            "radius_cm": 6909807085.287292,
+            "error_fraction": 1.7982516502089313e-05,
+            "coarse": 1.148046772855407e-09,
+            "fine": 1.1484859809064257e-09
+          },
+          {
+            "index": 22,
+            "radius_cm": 6909807397.787916,
+            "error_fraction": 1.795162110995165e-05,
+            "coarse": 1.1477415365881222e-09,
+            "fine": 1.1481799900448121e-09
+          }
+        ]
+      },
+      {
+        "component": "material_pressure",
+        "time_difference": 0.11429828543586407,
+        "fine_method_difference": 0.017598325862417864,
+        "top8_fraction": 0.9979268943995742,
+        "cells": [
+          {
+            "index": 15,
+            "radius_cm": 6906208796.840721,
+            "error_fraction": 0.9793388075665549,
+            "coarse": -1.0659386712443556e-13,
+            "fine": -1.32378334138943e-13
+          },
+          {
+            "index": 16,
+            "radius_cm": 6909546303.515727,
+            "error_fraction": 0.008552992528585893,
+            "coarse": 5.5451142168678886e-14,
+            "fine": 5.567632915404571e-14
+          },
+          {
+            "index": 17,
+            "radius_cm": 6909696303.815728,
+            "error_fraction": 0.004889043472319934,
+            "coarse": 2.2320193270558505e-14,
+            "fine": 2.244891417814488e-14
+          },
+          {
+            "index": 18,
+            "radius_cm": 6909776303.975728,
+            "error_fraction": 0.003098765416059938,
+            "coarse": 1.1766434622206483e-14,
+            "fine": 1.184802029413e-14
+          },
+          {
+            "index": 13,
+            "radius_cm": 6892658769.740694,
+            "error_fraction": 0.0008221059497133592,
+            "coarse": -9.665264254807282e-17,
+            "fine": -7.500787203654191e-17
+          },
+          {
+            "index": 12,
+            "radius_cm": 6885783755.99068,
+            "error_fraction": 0.000601462757621124,
+            "coarse": -5.500862424659824e-17,
+            "fine": -3.9173045676122147e-17
+          },
+          {
+            "index": 14,
+            "radius_cm": 6899533783.490707,
+            "error_fraction": 0.0005745422324619104,
+            "coarse": -6.934118761710784e-17,
+            "fine": -5.421438458745374e-17
+          },
+          {
+            "index": 11,
+            "radius_cm": 6878908742.240666,
+            "error_fraction": 4.917447625703237e-05,
+            "coarse": -1.8449142842089467e-18,
+            "fine": -5.502268367098723e-19
+          }
+        ]
+      }
+    ],
+    "scope": "Read-only localization of saved short-prefix differences. Neither a continuum error bound nor a demonstrated unique cause. No new stages.",
+    "inputs": {
+      "native-direct-radau171-work/sweep-1/photons/pilot-64.npz": "7c7a6e2333bd9f8e7cc5d5356681f1d9be649293aa46b94da1082f1590d25c15",
+      "native-direct-radau171-work/sweep-1/photons/pilot-128.npz": "673c7eb079e3b824636f1e2d854c98ab80fae70cfde82c59a9e3c6643b24703a",
+      "native-radau-transfer168-work/sweep-1/photons/pilot-128.npz": "b3de2ddb598ef42ee9452d8c29ddebab7db4db3beda40886ffe34e3c885f6186"
+    }
+  },
+  "failure_reason": "Original2percent material pressure time gate failed; other five time gates and physical stage conservation passed.",
+  "cost": {
+    "recorded_action_seconds": 123.80230729400002,
+    "CPU_seconds": 108.88602679800002,
+    "maximum_recorded_RSS_bytes": 2386042880,
+    "original_total_seconds": 300,
+    "CPU_threads": 1,
+    "virtual_GiB": 3,
+    "scope": "Action bodies including failed time comparison; CPU/RSS excludes the unmeasured read-only profile; imports, derivation, writing, publication and Git excluded. One4/8-step pair, no full-horizon or free-material production."
+  }
+}

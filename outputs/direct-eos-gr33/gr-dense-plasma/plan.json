@@ -1,0 +1,68 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "e9500e5",
+  "bindings": {
+    "verification/gr_dense_plasma.py": "3c54b69ac5f6a192b15b5a6711eec423d528a22e10695e857d54f63955fa1780",
+    "verification/eos_species_inventory.py": "56290581f614dd4d8e1ecf4fa493f1f546220f53fa838e3da7907c92eec7f5e9",
+    "outputs/direct-eos-gr33/gr-fermi-plasma/manifest.json": "0d0021a38d69d6eb004670f80a9bde5eba56fdb7b277cae6e7ea53bcce7b0d0e",
+    "outputs/direct-eos-gr33/gr-molecular-reference-defined/manifest.json": "144c1a4691bf26823f70c17367a4aa3ccba7a70c208474cbc484086df425d282",
+    "outputs/direct-eos-gr33/eos-molecular-spectral/manifest.json": "26a927b885902564d2f3fb47b43216e0c60c809cfe1d64b47a20bf9b22e6d98a",
+    "outputs/direct-eos-gr33/gr-dense-plasma/baiko-chugunov2022.pdf": "cd60afa7d6f9d3cee29d8853015ca41fd96a8fd15ac64cb542075fd265707cd8",
+    "outputs/direct-eos-gr33/gr-dense-plasma/baiko-chugunov2022.txt": "1a69089bdec3c9cc69ad6749a6853ec68143266a754a00cc41badbaa2a15ea6b",
+    "outputs/direct-eos-gr33/gr-dense-plasma/cached-free.f90": "4ca471524c049fd7c0aac878f28c4aefedea515579286f484f019750f77dda27",
+    "outputs/direct-eos-gr33/gr-dense-plasma/master_exchange.f90": "501785b232339b5039afddf13f56745746b33ceed6107f3aa95de0457efcd4ad",
+    "outputs/direct-eos-gr33/gr-dense-plasma/mod_coulomb.f90": "719d388e8e6e5af6e54d4329d2e898c866469b51bf291bf4d1ee7afc31d6640b",
+    "outputs/direct-eos-gr33/gr-dense-plasma/mod_exchange.f90": "cd50fe859b1a27e6cd211971f88a77c484fada0e28bc537d225d9f5949c023b1",
+    "outputs/direct-eos-gr33/gr-dense-plasma/potekhin-chabrier-eipsubr.html": "55c5cd59fdc22c17379736a941a60fab349a10d70bd649559ad8b8db9e9af60c",
+    "outputs/direct-eos-gr33/gr-dense-plasma/potekhin-chabrier-eos22.f": "f514e1781f4f476c8e23ad03848488445aa539dd7ccbdda049dd9ed91d7f8ae9",
+    "outputs/direct-eos-gr33/gr-dense-plasma/potekhin-chabrier2010.pdf": "83bb3a8a3d037145ad1e7657cf8f40b33b3d5c33967ba62ed56b210ccc4e4939",
+    "outputs/direct-eos-gr33/gr-dense-plasma/potekhin-chabrier2010.txt": "55f814f0cdad990ee215c83e8b4a93fc1bf4df43f88527bbd5b8bd6dcd05cb5b"
+  },
+  "native_library": {
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/libfree_eos_direct24_molecular_spectral.so.1.0.0": "195f3658eb0cc8fe3447c6b690f246b5a4fb770bd8ffa764d19248fec857ec50"
+  },
+  "sources": [
+    "https://www.ioffe.ru/astro/EIP/eos22.f",
+    "https://www.ioffe.ru/astro/EIP/eipsubr.html",
+    "https://arxiv.org/abs/1001.0690",
+    "https://arxiv.org/abs/2112.04822"
+  ],
+  "provider_revision": "09.06.22; nominal ionic mass A_i*m_u, internal AUM=1822.88848 retained.",
+  "target": "Call classical EOSFI22 excess outputs and CORMIX directly at fixed baryon/nuclear inventory. Add the quantum free energy of BC2022 eq34 once, differentiating that same free energy. Audit the distributed EOSFI22 and LIQUBC outputs independently before using them.",
+  "domain": "Use all positive isotope number fractions X_i/A_i, with no trace cutoff; neutrality fixes n_e=N_A*rho_B*sum(Z_i X_i/A_i). A_i is the stored baryon mass number, not a newly measured nuclear mass. Native constants convert physical density and temperature to r_s and Gamma_e. No MELANGE density inversion, ideal-electron addition, photons, spin or ideal-ion free energy.",
+  "coverage": "Audit native 5735 states first. For the comparison require abs(1-ne_native/ne_fully_ionized)<=1e-8. This is a charge-deficit selection, not a proof that every trace ion is fully stripped. Do not apply this fully ionized EOS to the excluded partially ionized states.",
+  "ionization_selection_tolerance": 1e-08,
+  "inventory_tolerance": 1e-10,
+  "cache_density_tolerance": 1e-10,
+  "controls": [
+    0,
+    1175,
+    2972,
+    3043,
+    4352,
+    5734
+  ],
+  "quantum_controls_R": [
+    90.0,
+    500.0,
+    1900.0,
+    120000.0
+  ],
+  "quantum_controls_theta": [
+    1e-05,
+    0.002,
+    0.1,
+    1.0,
+    10.0,
+    100.0
+  ],
+  "quantum_mp_score_tolerance": 1e-08,
+  "quantum_mp_score_floor": 1e-10,
+  "finite_log_steps": [
+    0.0002,
+    0.0001
+  ],
+  "finite_derivative_absolute_normalized_tolerance": 1e-05,
+  "original_provider_failures": "Retain raw first/second EOSFI22 output groups, LIQUBC and all failed finite derivative gates. Source inspection indicates first excess group omits quantum additions and liquid PDR2 uses PDTQL. No retrospective threshold change.",
+  "scope": "Finite implementation and source consistency. Fitted plasma correlations, mixture quantum physics, partial ionization, physical and continuous error, EOS/GR replacement, transport, scalar and observation closure are not certified."
+}

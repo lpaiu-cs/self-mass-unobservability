@@ -1,0 +1,30 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "c8b8dad",
+  "bindings": {
+    "verification/gr_direct_cell_integrals.py": "45b29865ad5df4f91bfb9b35605f4cc36c2f1989a95784afdf70988f98eca200",
+    "verification/audit_structured_enthalpy.py": "294b4bdf416cbb7f546c79e350d07be727cbcd605f1be0f2de322817c20c73aa",
+    "verification/direct_eos_gr.py": "5709a4cbf5830de09001481813617d43ee2c935a0dff3cd813110d73a7066fdf",
+    "outputs/direct-eos-gr33/gr-spatial-preflight/manifest.json": "40d7817418118cd465013dd900627ccc656a91f758ecc0ded923240b9ec515b8",
+    "outputs/direct-eos-gr33/initial-state-17-4.npz": "5dcc8ffb8b32a9f15ccc4c8bb7111d19be8dcdc66611ad2942e3a4a0cf6cc6d6",
+    "outputs/direct-eos-gr33/reference-state.npz": "17cbbb101628ca9bc111dca0cfe902210f13697c632b91c03913a1718cf7d2ef",
+    "outputs/direct-eos-gr33/gr-microphysics/auxiliaries.npz": "63744d1a041ebc39bd33dfa0f5e181d64378966c1ee22364c477009bee08d976"
+  },
+  "cells": [
+    0,
+    1,
+    2,
+    2972
+  ],
+  "selection": "Three failed time-gate surface cells, plus a fixed interior control. Selected after the spatial diagnostic, not a held-out physical validation sample.",
+  "integrator": "DOP853 in log pressure, direct native EOS entropy inversion at every RHS; evolve radius, geometric mass, baryon mass, proper volume, proper internal energy and pressure-volume integral.",
+  "relative_tolerances": [
+    2e-08,
+    5e-09
+  ],
+  "absolute_scaled_tolerance": 1e-11,
+  "boundary_enthalpy_gate": "abs(H(P,s)-H_target)<=max(2 erg/g,32 ulp(abs(H_target)))",
+  "limits": "Four local reference cells, not a full-star re-shoot or evolution. Saved lapse/face rounding, EOS first-law/primitive errors and continuous radial truncation are not enclosed. Averages retain different thermodynamic moments; no claim that one uniform EOS state preserves every moment.",
+  "physical_EOS_certified": false,
+  "full_GR_evolution": false
+}

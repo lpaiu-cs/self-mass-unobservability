@@ -1,0 +1,24 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Independently integrate redshifted photon energy, check local energy and radial momentum conservation, flat exact ray travel time, analytic steady hemispheric moments, and reconstruct the radial metric perturbations from the solved scalar field.",
+  "gates": {
+    "flat_delay_absolute": 1e-10,
+    "steady_moments_relative": 1e-07,
+    "energy_inventory_relative": 1e-05,
+    "local_conservation_relative": 1e-05,
+    "exact_debit_credit_absolute": 1e-10,
+    "physical_cutoff_relative": 0.01
+  },
+  "budget": {
+    "hard_seconds": 30,
+    "native_calls": 0,
+    "new_evolution_paths": 0
+  },
+  "bindings": {
+    "verification/verify_native_photon_exterior.py": "73fa295c20b2f226c2523f404122a8158e959aabe881be1a9384dd0863c14645",
+    "verification/def_native_photon_exterior.py": "9055933b6c65cccf8162b2927b7571a64b51545051465bb237f1887290c687dd",
+    "outputs/direct-eos-gr33/def-native-photon-exterior/result.json": "2d56a4b8f506f8fda707d1762add7b6a163adf004f88b4ecd3b7a22f499de27d",
+    "outputs/direct-eos-gr33/def-native-photon-exterior/angular.npz": "3e8504f4c56db8743f0091fb68eac3203fee192d3deb9e1bebe82e6305856ee5",
+    "outputs/direct-eos-gr33/def-native-photon-exterior/thin.npz": "364ef7be42b1d8ef3231b6275a637e823b003b460018d26129d0488ac859c7b6"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "classification": "Conjectural",
+  "before_task_checkpoint": "8b95a41",
+  "scope": "Post-primary follow-up: test existence at the next cooling crossing; preserve the failed fixed-window verdict.",
+  "registered_after": "fast and time primary runs completed with zero matching rows",
+  "parents": {
+    "fast": {
+      "model": 19239,
+      "photo": "x239",
+      "photo_sha256": "b9e6d1a288083581f35bf30afffafe9c7247c4788fafe4cd8920a16330f17bb1",
+      "history_raw_sha256": "bec4bf689f2abcdbeb42c0eda225f4c8664a0912a67d2be052dcad0bdc4ef650",
+      "primary_matching_rows": 0
+    },
+    "time": {
+      "model": 19850,
+      "photo": "x850",
+      "photo_sha256": "4aeb1215550659db9e42265aeaf76ec3944408382c2157617366760977cbd84f",
+      "history_raw_sha256": "76e0d8dad65fcb7f88babd37ab52caeb4966242c0180962ff378c65054ce31e9",
+      "primary_matching_rows": 0
+    }
+  },
+  "age_window_yr": [
+    5732508779.985576,
+    5742508779.985576
+  ],
+  "Teff_stop_K": 15500,
+  "matching_rules": {
+    "classification": "Counterexample candidate",
+    "age_window_yr": [
+      5717152444.855436,
+      5732508779.985576
+    ],
+    "cases": {
+      "control": [
+        -6,
+        0.8,
+        0.001,
+        "2d-5"
+      ],
+      "fast": [
+        -5,
+        0.8,
+        0.001,
+        "2d-5"
+      ],
+      "slow": [
+        -7,
+        0.8,
+        0.001,
+        "2d-5"
+      ],
+      "mesh": [
+        -6,
+        0.4,
+        0.0005,
+        "2d-5"
+      ],
+      "time": [
+        -6,
+        0.8,
+        0.001,
+        "1d-5"
+      ]
+    },
+    "mass_GM_sun": 0.197536385307,
+    "mass_relative_tolerance": 1e-08,
+    "Teff_center_K": 15800,
+    "Teff_halfwidth_K": 300,
+    "logg_center": 5.82,
+    "logg_halfwidth": 0.15,
+    "candidate_rule": "Preserve every actual evolved row in the fixed age window satisfying all cuts; choose minimum squared standardized distance among passing rows, otherwise among mass-passing rows. No interpolated structure.",
+    "comparison_rule": "Also compare each trajectory to baseline on 501 equally spaced common ages using linear history interpolation, and enumerate all Teff=15800 crossings. Interpolation is diagnostic only.",
+    "success_rule": "Each of four variants must terminate normally at the frozen end age and contain at least one passing row. This is finite sensitivity testing, not continuum convergence or independent formation histories.",
+    "control_rule": "First ten compact-output steps must reproduce the frozen baseline history and the shared profile columns exactly.",
+    "guards": {
+      "max_model_number": 40000,
+      "timeout_s": 7200
+    },
+    "assumptions": "One initial photo and reconstructed network; relax_mass resets age and is model construction, not an observed mass-loss history.",
+    "baseline_history_sha256": "dbb240956be9895cb20a6a39d408459eb059afe23854eb3e9eed67911abf9df3",
+    "previous_manifest_sha256": "41fe71dd0145af3279f36621e7240f3df40490a766feee9288fa0c0d5ec40765"
+  },
+  "success_rule": "Actual mass/Teff/logg-passing rows after the original end age in both continuations. This tests age-shift compatibility only, not continuum accuracy.",
+  "guards": {
+    "max_model_number": 40000,
+    "timeout_s": 7200
+  },
+  "original_verdict_may_be_changed": false
+}

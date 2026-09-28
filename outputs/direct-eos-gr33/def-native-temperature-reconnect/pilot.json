@@ -1,0 +1,67 @@
+{
+  "classification": "Counterexample candidate",
+  "row": {
+    "classification": "Counterexample candidate",
+    "harmonic": 1,
+    "degree": 4,
+    "seconds": 0.5181873870000011,
+    "scalar_boundary_value": [
+      1.00000842728073,
+      -5.0863539182656355e-09
+    ],
+    "adiabatic_boundary_value": [
+      1.00000842728073,
+      -5.0863539182656355e-09
+    ],
+    "adiabatic_impedance": [
+      -8.443140611102406e-06,
+      0.0
+    ],
+    "thermal_impedance_difference": [
+      1.051393533133228e-26,
+      -3.451355777394492e-25
+    ],
+    "outgoing_conduction_contribution": [
+      -2.1092029046362698e-26,
+      6.902779305148037e-25
+    ],
+    "radiative_charge_gain": [
+      5.003428882741876e-21,
+      -1.6374700257928272e-19
+    ],
+    "actual_drive_amplitude": 1.693260796589015e-10,
+    "delta_alpha_radiative_over_phi0": 2.773957860898702e-26,
+    "maximum_actual_Eulerian_delta_lnT": 1.0242968350917392e-09,
+    "maximum_actual_thermal_temperature_correction": 1.3718509868368287e-09,
+    "linear_residual": 1.272832450687711e-16,
+    "adiabatic_residual": 5.580584985920069e-18,
+    "physical_GR_residual": 1.272811228249346e-16,
+    "heat_law_residual": 6.383176864024009e-14,
+    "heat_balance": 1.7218746774725908e-19,
+    "positive_pole_dissipation": 8.789463533156478e+41,
+    "active_faces": 5734,
+    "dofs": 53751,
+    "matrix_nonzeros": 814183,
+    "factor_nonzeros": 1362659,
+    "memory_GB": 0.754839552,
+    "full_radial_photons": false,
+    "full_nonlinear_or_thermal_background": false,
+    "full_goal_complete": false
+  },
+  "closure": {
+    "minimum_cp_over_cv": 1.0277220293245501,
+    "maximum_cp_over_cv": 1.670943000735524,
+    "maximum_chain_error": 4.440892098500626e-16,
+    "corrected_maps": [
+      "TE",
+      "GE",
+      "GEraw when present",
+      "energy_scale when present"
+    ]
+  },
+  "seconds": 12.587463026000002,
+  "setup_seconds": 10.842799435,
+  "native_control_seconds": 1.2148510210000003,
+  "forecast_seconds": 164.0306650385,
+  "assumption": "Four remaining assemblies, five harmonic solves,25s for unchanged finite time paths and30s audit allowance,50percent margin. Time-path rate after repair not yet measured."
+}

@@ -1,0 +1,19 @@
+{
+  "classification": "Conjectural",
+  "claim": "Apply the existing restricted residual correction to the retained117th proposal, whose4.094e-10vector residual was outside the old1e-10correction trigger. Test actual improvement at the unchanged1e-14linear and1e-12nonlinear gates before any new evolution.",
+  "method": "Keep24columns,4passes and all full-vector/physical improvement requirements. Widen only the correction eligibility ceiling from1e-10to1e-8; it is not an acceptance gate. Reconstruct the exact210RHS and residual. No new GMRES or physical step.",
+  "cap_seconds": 600,
+  "virtual_GiB": 6,
+  "CPU_threads": 1,
+  "forecast": "Constructor and2Jacobians plus bounded24columns/4passes; earlier such reconstruction took20..30s. Allow10minutes. If it does not solve the actual saved defect, preserve that failure and do not rerun the long system merely by adding iterations.",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/.phase215-polish-probe.py": "7253c3aad64b43e14b0c0f0c2e26b9aa61df2f5f3aa89968432c424d948e5076",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_precise_momentum.py": "8acec5427039af180387227f006a95b66a84ff5277bd2d57a55bfbc9f3035a26",
+    "native-momentum-continuation210-work/failed-linear-64.npz": "0827c2b9fd500c2b0d66f9521675fa3ce9644aac3013291d4e969ba96622b0a4",
+    "native-momentum-continuation210-work/last-accepted-64.npz": "0fec990a3da0c177ad9d411584ddb306ca1c60db40ea67fe4ec4c4ff6ed904d4",
+    "native-momentum-continuation210-work/failure-64.json": "ba76442bf2868cc5f4d33b0cc67ee7b21acab7739ec10328af5787e116594c06",
+    "native-momentum-continuation210-work/coarse-receipt.json": "bb355920217117ee85d17aae8ad88e4e61659d8d594d01e86dc8c4ef4b2744ac"
+  },
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false
+}

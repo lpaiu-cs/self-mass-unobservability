@@ -1,0 +1,57 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "0f6b09ed",
+  "claim": "Supply a positive photon total-loss response surrogate with explicit opacity-distribution uncertainty, without treating mean opacities as a uniquely identified kernel.",
+  "reassessment": "Even 999 logarithmic group Planck coefficients used as constant absorptions shift the Rosseland flux coefficient by 14 to 19 percent. Moment bounds on the original broad log grid also remain wide. Retrieve native group moments only in the thermally relevant energy window and retain coarse tail data with distribution-independent tail bounds.",
+  "window_edges_keV": [
+    3.0442722120643058e-05,
+    4.894289896114532e-05,
+    7.86857150693686e-05,
+    0.00012650337203959038,
+    0.00020338003058469842,
+    0.0003269749744511768,
+    0.0005256791122018425,
+    0.0008451366330684721,
+    0.0013587299019027106,
+    0.0021844360711494285,
+    0.0035119275304507313,
+    0.005646141419303673,
+    0.009077326525210223,
+    0.014593657991557561,
+    0.023462288481422625,
+    0.03772042493416997,
+    0.060643293954080614
+  ],
+  "coarse_tail_split_indices": [
+    435,
+    847
+  ],
+  "groups_per_window": 999,
+  "method": "One harmonic-loss pole per group. Bound the unknown distribution via native arithmetic/harmonic moments, monotone Bprime/B across the bin, printed opacity intervals and the minimum of the tabulated log-PCHIP scattering curve over the whole queried window. No mean-fitted spectral amplitudes.",
+  "gates": {
+    "native_gray_recombination": 0.001,
+    "uniform_complex_resolvent_relative_to_DC": 0.01,
+    "uniform_energy_response_absolute": 0.01
+  },
+  "bindings": {
+    "verification/def_photon_loss_bounds.py": "591c6345aaa06f9b2c30f2f7e5ba9a926f4056b1c2cf3876a4b95200eee8403a",
+    "verification/def_photon_native_groups.py": "e6be475b48a3187542fde9926451ea527d997bcb7ec5b2091e39278a3ea7cd1a",
+    "outputs/direct-eos-gr33/def-photon-native-groups/plan.json": "a7fc7c591c2ced078629cdc7ad742ef8df8584bff109f8e71442c8100c2e9b17",
+    "outputs/direct-eos-gr33/def-photon-native-groups/result.json": "375a76fe253b87f66ab83521460241f775d665f1b8ba964f0cebcde2b49f4dfb",
+    "outputs/direct-eos-gr33/def-photon-loss-bounds/requests.json": "245eed378f528c07bcd5e1cb99f5bf7981114f833127576c57d8763c4900e94c",
+    "outputs/direct-eos-gr33/def-photon-loss-bounds/lanl-tops-form.html": "b5f1093f7912a1842803c411f375e86db6c21af3d6d9074a1c25a936211ef9d5",
+    "outputs/direct-eos-gr33/def-photon-native-groups/surf1000T0015.npz": "01c5f7e835e0f5cd7a3f733adaf4d7c1954f05e3e9dc31fa22f105b448b7cffe",
+    "outputs/direct-eos-gr33/def-photon-native-groups/surf1000T002.npz": "12c8153e890c9a4abf7e5ab669bfe2fbc9dd25995eb650a3bafc3b5446427334"
+  },
+  "budget": {
+    "queries": 32,
+    "forecast_network_seconds": 96.17306031999988,
+    "hard_network_seconds": 180,
+    "per_query_hard_seconds": 20,
+    "CPU_workers": 1,
+    "new_native_EOS_calls": 0,
+    "new_stellar_steps": 0,
+    "automatic_expansion": false
+  },
+  "limits": "Uniform frequency bounds concern a local total-loss resolvent under declared positive-opacity/scattering assumptions. No angular/Compton gain kernel, general opacity model certificate, actual-temperature interpolation or whole-star thermal closure."
+}

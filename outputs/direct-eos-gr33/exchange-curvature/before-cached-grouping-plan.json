@@ -1,0 +1,44 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "fe58f46",
+  "bindings": {
+    "verification/exchange_curvature.py": "b5b0b6c23b0f9d2c30dd305d5123e8f3474c400660310d9be4e2f25ec56a59f4",
+    "outputs/direct-eos-gr33/coulomb-curvature/manifest.json": "5fc0984b1ab227b8750a99ae02792744a75332fbc04113594a207049ce1f2fe7",
+    "outputs/direct-eos-gr33/reference-state.npz": "17cbbb101628ca9bc111dca0cfe902210f13697c632b91c03913a1718cf7d2ef",
+    "outputs/direct-eos-gr33/exchange-curvature/mod_exchange.f90": "cd50fe859b1a27e6cd211971f88a77c484fada0e28bc537d225d9f5949c023b1",
+    "outputs/direct-eos-gr33/exchange-curvature/master_exchange.f90": "501785b232339b5039afddf13f56745746b33ceed6107f3aa95de0457efcd4ad",
+    "outputs/direct-eos-gr33/exchange-curvature/exchange_gcpf.f90": "b721db310fabdd200fd0cf98db03342d9a754f7cdc617ea91981064cdc672faf"
+  },
+  "library_sha256": "6348e235763db0112687f391ab1c06c34b33aa530973ea4a414a5d0f21b1dfb4",
+  "cells": 5735,
+  "processes": 4,
+  "block_cells": 128,
+  "control_cells": [
+    0,
+    2972,
+    5734
+  ],
+  "settings": {
+    "morder": 21,
+    "ifexchange_in": 14,
+    "nonlinear_transform_iforder": 2
+  },
+  "old_output_bitwise_required": true,
+  "original_exchange_relative_tolerance": 1e-10,
+  "normalized_Legendre_tolerance": 1e-10,
+  "finite_log_steps": [
+    0.0001,
+    5e-05
+  ],
+  "finite_derivative_tolerance": 1e-06,
+  "method": "Read the cached original EOS exchange state before an independent call to the same nonlinear master_exchange and exchange_free routines. Verify the free value, chemical potential and derivative, ideal electron density, nonlinear Legendre identity and finite differences. Add the resulting scalar electron curvature to the previously frozen Coulomb and ideal-ion support.",
+  "omitted": [
+    "Pressure ionization",
+    "Density-dependent partition/excitation",
+    "Unresolved populations",
+    "Native continuous and physical EOS error"
+  ],
+  "full_EOS_Hessian_certified": false,
+  "physical_EOS_certified": false,
+  "full_GR_evolution": false
+}

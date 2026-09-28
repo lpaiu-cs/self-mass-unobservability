@@ -1,0 +1,12 @@
+{
+  "classification": "Counterexample candidate",
+  "observation": "He3 has a 0.04914 first-order step difference at 1e-6/5e-7 while the extrapolated derivative is close to the returned value. The original finite-step gate fails and is preserved.",
+  "steps": [
+    1e-08,
+    5e-09
+  ],
+  "criterion": 0.001,
+  "method": "Reevaluate failed directions at a hundredfold smaller pair of positive simplex steps. Require the same two-step relative criterion; save a separate derivative and bind it to the original derivative SHA. This is an explicit refinement, not a reinterpretation of the old pair.",
+  "automatic_selection": "Only a newly measured passing refined direction may replace its failed original direction in the numerical preconditioner.",
+  "continuum_certificate": false
+}

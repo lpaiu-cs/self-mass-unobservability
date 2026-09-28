@@ -1,0 +1,37 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "rows": [
+    {
+      "time": 0.0010646736465578976,
+      "derivative": 9.544681994339158e-10,
+      "moment": 1.0950687337939108e-17,
+      "collision": 0.0,
+      "moment_absolute_residual": [
+        6.871505320305005e-08,
+        0.0
+      ],
+      "number_energy_absolute_norm": [
+        6274953441.961941,
+        0.04760203787825489
+      ]
+    },
+    {
+      "time": 0.0021636916042950824,
+      "derivative": 2.0507193301103766e-10,
+      "moment": 4.1490948576506023e-17,
+      "collision": 0.0,
+      "moment_absolute_residual": [
+        2.725046215346083e-07,
+        2.7755575615628914e-17
+      ],
+      "number_energy_absolute_norm": [
+        85609121927.53555,
+        0.6689549544631362
+      ]
+    }
+  ],
+  "moment_normalization": "Separate photon number/energy residuals divided by their corresponding absolute packet moments, as in the existing frequency check. Do not divide both by a mixed-unit cancelled net moment.",
+  "preserved_rejected_check": "lift-check-receipt.json",
+  "producer_sha256": "4b358ddb22bd5ca5443c26f0ca74d0046fac9644928663d75c8e1df0522e663c"
+}

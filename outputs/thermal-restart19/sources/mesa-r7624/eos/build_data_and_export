@@ -1,0 +1,24 @@
+#!/bin/bash
+
+function check_okay {
+	if [ $? -ne 0 ]
+	then
+		exit 1
+	fi
+}
+
+# we are in mesa/eos at the start of this.
+
+./build_DTdata_and_export
+check_okay
+
+./build_PTdata_and_export
+check_okay
+
+./build_DEdata_and_export
+check_okay
+
+echo "done"
+
+cd ..
+

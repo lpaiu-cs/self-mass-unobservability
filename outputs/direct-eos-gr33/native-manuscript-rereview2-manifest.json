@@ -1,0 +1,78 @@
+{
+ "classification": "Imported from prior work",
+ "passed": true,
+ "verdict": "REVISION_4_REREVIEWED__REVISION_5_DRAFTED__ERRATA_EXTENDED__CONFIRMATION_REVIEW_PENDING",
+ "rereview_of_revision_4": {
+  "gpt-6-astra (Codex CLI, read-only)": "major revision; blocking item lifted; errata no-go and necessary condition wrong (algebraic counterexample)",
+  "opus5.5 (subagent)": "accept after minor revision; sentence-level majors: instantaneous-response attribution, strength assumption in summary and abstract, errata scope",
+  "fable5.1 (subagent)": "accept after minor revision; one sentence-level major: instantaneous-response attribution and scale"
+ },
+ "revision_5": [
+  "instantaneous response: zero-lag coefficient omitted by the fixed-companion reduction; up to about 1.24e-9 a_p^2, reaching Section 5 scales for |a_p| >~ 0.5; timing response and stiffness condition not evaluated",
+  "both relaxation assumptions in abstract and summary; lag bound limits size, does not remove the lag",
+  "Q_c = -Psi_out/m_wd vs Q = Q_c - a_i0 dm/m; window formula and whole-star history are Q_c",
+  "fixed-kernel condition on the 99.87% sign statement; Born wording; a_p = Q_p/m_p; modulation order; permanent zero only as t -> infinity",
+  "data availability: manifest file names, superseded verdict fields, reproduction map in REQUEST285"
+ ],
+ "errata": [
+  "REQUEST284 errata 4 and docs phase-284 sections: no-go under two assumptions wrong",
+  "REQUEST284 and docs: instantaneous response attributed to the Section 4.3 stiffness condition",
+  "REQUEST272 lines 8 and 19",
+  "REQUEST274 lines 48, 54, 58 (4.5e-18 with the outer term), 60",
+  "REQUEST276 lines 37, 39, 43, 47",
+  "REQUEST277 and REQUEST280 closure labels",
+  "REQUEST278 cause: preceding stored samples",
+  "manifest verdict fields superseded",
+  "REQUEST284 self-coupling sum 1.3e-7 may double count"
+ ],
+ "repository_classification": "conditional theorem progress on the lag amplitude within the chosen response family; no observational exclusion; A4 not established; deep thermal relaxation remains an uncomputed loophole candidate",
+ "previous_draft_sha256": "a5984ba254c7b82af29aa621a75c61f3efa27b47aa7d279b2dab4403be48a32e",
+ "full_goal_complete": false,
+ "snapshot_KST": "2026-09-27T23:40:50.763083+09:00",
+ "document_prefixes": {
+  "docs/model-definition.md": {
+   "bytes": 300319,
+   "sha256": "038efb6ea485d9d547ab89625ddd5fe4caee0a0c7361152f7fdbc658468ee05a"
+  },
+  "docs/observable-targets.md": {
+   "bytes": 291138,
+   "sha256": "fbf702e12b7bee51153ef493ef48a78338e44fa0e469007d706020ae24e1ee91"
+  },
+  "docs/adiabatic-limit.md": {
+   "bytes": 285477,
+   "sha256": "67ff1beaa5d2a94b11ade551c003c5723b9f0fb62ba36013b66bef21c6b0be43"
+  },
+  "docs/nonadiabatic-regime.md": {
+   "bytes": 293969,
+   "sha256": "7ad72296f7e115bca443f9d706ad0d8930dd1a2bfe7766437ccd387c6acd59bd"
+  },
+  "docs/failure-ledger-dynamic-chi.md": {
+   "bytes": 331573,
+   "sha256": "716f2d2dfc7d66e2904fa3289728b6f0f5bc94fa68f32fd6eef98f49ac587d7d"
+  },
+  "docs/dynamic-charge-completion.md": {
+   "bytes": 159737,
+   "sha256": "e52ae98f637ae8cc172c28bfce6a21abf20ac0f62e27ec7d54f278459bf1f1ec"
+  }
+ },
+ "sha256": {
+  "notes/REQUEST285_REVISION5_RESPONSE_KO.md": "2615c700ee2a07c38153dd6999faa700d4b64abe50ee54ad6ef981c93346942e",
+  "docs/white-dwarf-free-fall-charge-section.md": "7112a67910440a08aafd2a0c36db9dc73758e6ddf9c1fdaefbd605148dd2acea",
+  "docs/model-definition.md": "d64f3bf9d0cf8e1a967c4d32f8badd4f348e4255f16b4e69a5d7565192ad352a",
+  "docs/observable-targets.md": "8aa0e0fd71182ed6c838643e0eab08db44e48273722e659985bab7b263f0309b",
+  "docs/adiabatic-limit.md": "4cb17ca7380570ea43cd4fe4fd7fd4b7a556e37bed6332cab184e1b98fa2428c",
+  "docs/nonadiabatic-regime.md": "fa8f33a98f2b463888f5be374cfd8967985d063884364dbedf46564bf08b4257",
+  "docs/failure-ledger-dynamic-chi.md": "9eb70abaeca1740019c1f075b7acc63de4f6af533da49b03cbded4840ad6474b",
+  "docs/dynamic-charge-completion.md": "55a241bcfcb22ad8f1d1a5e8bb0629fdd133e888170dd63308bf1241c7c17c4c",
+  "outputs/direct-eos-gr33/native-manuscript-rereview2/publication.json": "0d5a4bae33dd78ca236304716a09e51e4e89294347ee84356ab2f5a97990bf00",
+  "outputs/direct-eos-gr33/native-manuscript-rereview2/rereview-fable-5.1.md": "7e0be774d68d3362f6f8e2addd40ff3885c02fbb2b20d5d245bcc3f16cd2e8e1",
+  "outputs/direct-eos-gr33/native-manuscript-rereview2/rereview-gpt-6-astra-cli.log": "057d39d1a27011c701367158ff4aca9b237db38ece171e11c9b0e85ea4f597b5",
+  "outputs/direct-eos-gr33/native-manuscript-rereview2/rereview-gpt-6-astra-prompt.md": "37600288d14901cdfab55ecbd5419417b3be7d9000e82ff5800ac6179239c6e7",
+  "outputs/direct-eos-gr33/native-manuscript-rereview2/rereview-gpt-6-astra.md": "e066698015f555864ac1ab3140247e0934cd7eecf574bbb50da9e0886d670efc",
+  "outputs/direct-eos-gr33/native-manuscript-rereview2/rereview-opus-5.5.md": "e1b3b366addf1e2d3c0dde2e78819c1964c8c7059976eeeca0e5427bf06ad722",
+  "outputs/direct-eos-gr33/native-manuscript-rereview2/rereview-prompt.md": "49b0b4b3d50cfce9fb87f51b89a04a86fe7426b3a61e39a85dd98fd7a43d6148",
+  "outputs/direct-eos-gr33/native-manuscript-rereview2/result.json": "3632d42c845547d95b600eea944e79f3ff57ebc0cadb8f13ed8687a321ff3f0f",
+  "outputs/direct-eos-gr33/native-manuscript-rereview2/scripts/phase285-publish.py": "1b88c519a5fa2c0a8cdfc0cdfe3bc8099bf6968b4e81f18d18ce7014fa6acda0",
+  "outputs/direct-eos-gr33/native-manuscript-rereview2/scripts/scan285-inputs.py": "6dab81398e0a59b9a6915931b0dce2ec03db59300fdf27690b140a8482794bbe"
+ }
+}

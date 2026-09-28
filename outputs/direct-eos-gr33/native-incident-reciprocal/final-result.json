@@ -1,0 +1,520 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "full_goal_complete": false,
+  "compact_GR": {
+    "classification": "Counterexample candidate",
+    "controls": {
+      "time": 1.67424690692529e-05,
+      "quadrature": 3.5096912822894206e-16,
+      "independent": 4.094657232655687e-15
+    },
+    "compact_return_endpoint": -2.5364324225812962e-51,
+    "compact_return_maximum": 2.5364324225812962e-51,
+    "incident_amplitude": 1e-30,
+    "endpoint_over_incident_amplitude": -2.536432422581296e-21,
+    "inverse_radius_residual": 4.5634806156158447e-07,
+    "actual_external_input_consumed": true,
+    "actual_free_material_response_evolved": true,
+    "passed": true,
+    "full_null_infinity_charge": false,
+    "complete_reciprocal_fixed_point": false,
+    "full_goal_complete": false,
+    "finite_reciprocal_waveform_residual_passed": true,
+    "sweeps": 2,
+    "residual": {
+      "classification": "Counterexample candidate",
+      "rows": [
+        {
+          "steps": 64,
+          "material_waveform_residual": [
+            6.709915892908455e-06,
+            4.083201503703672e-06,
+            3.245998960622716e-06,
+            1.545167329192095e-05
+          ],
+          "photon_material_energy_H_residual": [
+            2.8235507051108493e-06,
+            8.975694200974471e-07
+          ],
+          "material_balance": 2.360933513703454e-14,
+          "angular_port": 3.093355152497901e-17
+        },
+        {
+          "steps": 128,
+          "material_waveform_residual": [
+            1.4944032932730585e-06,
+            1.189647352974794e-06,
+            1.076290695259696e-06,
+            3.3557517792243297e-06
+          ],
+          "photon_material_energy_H_residual": [
+            9.018114959850963e-07,
+            1.2404305131418606e-07
+          ],
+          "material_balance": 1.7745036698409805e-14,
+          "angular_port": 1.5489221428243196e-16
+        }
+      ],
+      "time_comparison": [
+        4.208580238777511e-05,
+        4.9887944935145774e-05,
+        2.8129449918037384e-05,
+        0.00043613160463209074
+      ],
+      "maximum_residual": 1.545167329192095e-05,
+      "previous_residual": 0.5903708209811248,
+      "finite_reciprocal_residual_passed": true,
+      "passed": true,
+      "next_sweep_allowed": false,
+      "full_nonlinear_fixed_point": false,
+      "self_GR_returned": false,
+      "full_goal_complete": false
+    },
+    "mechanical_collision_partition_relative": [
+      [
+        2.4464770969586484e-16,
+        1.4265752669082903e-12
+      ],
+      [
+        3.8474190393784146e-16,
+        1.2298135233457329e-12
+      ]
+    ],
+    "accepted_prefixes_preserved": true,
+    "source_identity_relative": 9.139980835671044e-38,
+    "previous_one_way_endpoint": -2.536436922168223e-51,
+    "signed_endpoint_fraction_change": 1.7739794305044748e-06,
+    "self_GR_returned": false,
+    "scope": "Accepted finite material-photon waveform residual under prescribed external GR; not full Einstein-matter fixed point, continuum error certificate or final infinity charge."
+  },
+  "photon": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "rows": [
+      {
+        "classification": "Counterexample candidate",
+        "reference": 128,
+        "steps": 64,
+        "completed_steps": 64,
+        "new_steps": 60,
+        "seconds": 92.43716664499999,
+        "operator_point_seconds": 25.51236976400014,
+        "operator_points": 16,
+        "stepping_seconds": 65.46191065299985,
+        "energy_balance_relative": 4.041545913899428e-10,
+        "species_balance_relative": 7.591600687271416e-10,
+        "linear_relative": 9.70837799051136e-15,
+        "max_Krylov_iterations": 9,
+        "frequency_moment_relative": 2.7177221799118727e-16,
+        "endpoint_photon_reference_energy_erg": 8.674744076019493,
+        "endpoint_material_reference_energy_erg": 317.23340702382455,
+        "endpoint_material_energy_L1_erg": 379.73224522205084,
+        "additional_material_motion_evolved": false,
+        "full_GR_feedback": false,
+        "final_charge_solved": false,
+        "endpoint_material_nonrest_energy_erg": 207.0130964501105,
+        "velocity_jet_relative": 6.152641209909016e-09,
+        "primitive_mapping_relative": 1.432187701766452e-14,
+        "conserved_material_input_applied": true,
+        "passed": true
+      },
+      {
+        "classification": "Counterexample candidate",
+        "reference": 128,
+        "steps": 128,
+        "completed_steps": 128,
+        "new_steps": 120,
+        "seconds": 131.210493057,
+        "operator_point_seconds": 23.70220085899973,
+        "operator_points": 16,
+        "stepping_seconds": 105.95984706300032,
+        "energy_balance_relative": 7.656204463941721e-11,
+        "species_balance_relative": 6.056780449495329e-10,
+        "linear_relative": 9.96059647118754e-15,
+        "max_Krylov_iterations": 7,
+        "frequency_moment_relative": 2.937778979036844e-16,
+        "endpoint_photon_reference_energy_erg": 8.671678321474662,
+        "endpoint_material_reference_energy_erg": 317.23434041082805,
+        "endpoint_material_energy_L1_erg": 379.7290085687583,
+        "additional_material_motion_evolved": false,
+        "full_GR_feedback": false,
+        "final_charge_solved": false,
+        "endpoint_material_nonrest_energy_erg": 207.012668721122,
+        "velocity_jet_relative": 6.152641209909016e-09,
+        "primitive_mapping_relative": 1.0824674490095276e-14,
+        "conserved_material_input_applied": true,
+        "passed": true
+      }
+    ],
+    "time_comparison": [
+      0.0007000426701568208,
+      2.710194595976288e-05,
+      0.0004361376286649136,
+      0.0002372329192584341,
+      0.0007073149912120858,
+      0.00011792200040322719
+    ],
+    "seconds": 243.973906646
+  },
+  "material": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "rows": [
+      {
+        "classification": "Counterexample candidate",
+        "passed": true,
+        "steps": 64,
+        "reference": 128,
+        "completed": 64,
+        "substeps": 485,
+        "balance_relative": [
+          7.7823442284968055e-19,
+          7.805864201158306e-19,
+          5.492204500475784e-18,
+          4.936721316308284e-17
+        ],
+        "directional": [
+          {
+            "time": 0.0017172155589643512,
+            "relative": [
+              1.3869411800442513e-07,
+              1.1962343687320603e-11,
+              1.9620967821634228e-07,
+              2.0925903249483656e-11
+            ]
+          },
+          {
+            "time": 0.0034344311179287023,
+            "relative": [
+              7.311092368473186e-12,
+              1.830973174339746e-13,
+              3.551446415072413e-10,
+              2.02929722080642e-13
+            ]
+          }
+        ],
+        "directional_relative": 1.9620967821634228e-07,
+        "forward_probe_indicator": 0.05163884860031783,
+        "maximum_true_relative_state": 7.647770930436226e-23,
+        "endpoint_sum": [
+          -0.7549359239637852,
+          1.082689900048258e+36,
+          3.1723365399223025e+28,
+          -5.936255278187417e+35
+        ],
+        "endpoint_L1": [
+          1218744160217068.2,
+          1.083429497656742e+36,
+          3.797323116993627e+28,
+          6.280441197079789e+35
+        ],
+        "endpoint_sum_physical": [
+          -7.549359239637853e-27,
+          10826899000.482582,
+          317.23365399223024,
+          -5936255278.187417
+        ],
+        "endpoint_L1_physical": [
+          1.2187441602170682e-11,
+          10834294976.567421,
+          379.73231169936275,
+          6280441197.079789
+        ],
+        "discard_physical": [
+          7.535101174842524e-27,
+          1.2918630423324344e-08,
+          4.635801947186245e-12,
+          2.0404217685945457e-06
+        ],
+        "raw_owner_calls": 4820,
+        "seconds": 59.184915154,
+        "full_GR_feedback": false,
+        "final_charge_solved": false,
+        "worker_wall_seconds": 63.924750823,
+        "physical_branch_ratio": 4.4802332028964675e-13,
+        "maximum_owner_error": 1.8890685044047918e-13,
+        "endpoint_probe_half_nominal_double": [
+          [
+            7.311092368446876e-12,
+            1.8309731743396833e-13,
+            3.551446415092978e-10,
+            2.0292972208064202e-13
+          ],
+          [
+            1.0203008825435348e-11,
+            1.2524758545293947e-13,
+            2.5445285739499583e-10,
+            2.8223130448259503e-13
+          ]
+        ],
+        "nominal_arithmetic_probe": 512
+      },
+      {
+        "classification": "Counterexample candidate",
+        "passed": true,
+        "steps": 128,
+        "reference": 128,
+        "completed": 128,
+        "substeps": 962,
+        "balance_relative": [
+          4.765990924781111e-19,
+          3.122371598007463e-19,
+          4.538860380626088e-18,
+          6.216928389911181e-17
+        ],
+        "directional": [
+          {
+            "time": 0.0017172155589643512,
+            "relative": [
+              1.1460367177672204e-07,
+              8.667500618941201e-12,
+              1.671076975545631e-07,
+              1.7294490767309745e-11
+            ]
+          },
+          {
+            "time": 0.0034344311179287023,
+            "relative": [
+              8.859904886070476e-14,
+              1.8470080432600864e-13,
+              2.894307125849318e-10,
+              2.9091457784699364e-15
+            ]
+          }
+        ],
+        "directional_relative": 1.671076975545631e-07,
+        "forward_probe_indicator": 0.057853902934601034,
+        "maximum_true_relative_state": 7.947886400977078e-23,
+        "endpoint_sum": [
+          -0.21362571930512786,
+          1.0826867564516024e+36,
+          3.172344209565285e+28,
+          -5.934759105357026e+35
+        ],
+        "endpoint_L1": [
+          1218737105147861.2,
+          1.0834278754171264e+36,
+          3.7972903337261866e+28,
+          6.278884564456613e+35
+        ],
+        "endpoint_sum_physical": [
+          -2.1362571930512786e-27,
+          10826867564.516024,
+          317.23442095652854,
+          -5934759105.357026
+        ],
+        "endpoint_L1_physical": [
+          1.2187371051478611e-11,
+          10834278754.171265,
+          379.7290333726187,
+          6278884564.456613
+        ],
+        "discard_physical": [
+          2.127526145172357e-27,
+          1.1566874561464173e-08,
+          4.445073080700451e-12,
+          2.159513485691195e-06
+        ],
+        "raw_owner_calls": 9640,
+        "seconds": 118.11334482999999,
+        "full_GR_feedback": false,
+        "final_charge_solved": false,
+        "worker_wall_seconds": 122.62557668399998,
+        "physical_branch_ratio": 4.581658185672717e-13,
+        "maximum_owner_error": 1.8890685044047918e-13,
+        "endpoint_probe_half_nominal_double": [
+          [
+            8.85990488607053e-14,
+            1.8470080432600205e-13,
+            2.894307125703523e-10,
+            2.909145778469936e-15
+          ],
+          [
+            6.028247867948569e-14,
+            1.4463121405526864e-13,
+            2.5673807371859946e-10,
+            2.2293697432987897e-15
+          ]
+        ],
+        "nominal_arithmetic_probe": 512
+      }
+    ],
+    "seconds": 186.686245807
+  },
+  "sources": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "comparisons": {
+      "time": [
+        4.208580238777511e-05,
+        4.9887944935145774e-05,
+        2.8129449918037384e-05,
+        0.00043613160463209074
+      ],
+      "stress_time": [
+        4.2085803794101504e-05,
+        0.0001157962162966614,
+        4.208580106019244e-05,
+        0.00011546692166330288,
+        0.0009339960167946873,
+        0.0009328912158243136
+      ]
+    },
+    "paths": [
+      {
+        "steps": 64,
+        "reference": 128,
+        "conservation": 2.360933513703454e-14,
+        "pressure_probe": 1.096979775660212e-10,
+        "legacy_material_sweep_comparison": null,
+        "energy_H_waveform_residual": [
+          2.8235507051234637e-06,
+          8.975694200911848e-07
+        ]
+      },
+      {
+        "steps": 128,
+        "reference": 128,
+        "conservation": 1.7745036698409805e-14,
+        "pressure_probe": 1.0816900321873896e-10,
+        "legacy_material_sweep_comparison": null,
+        "energy_H_waveform_residual": [
+          9.018114959791781e-07,
+          1.240430512858732e-07
+        ]
+      }
+    ],
+    "seconds": 17.581786967000028,
+    "returned_photon_transfer_applied_to_material": true,
+    "coupled_fixed_point_verified": false,
+    "final_charge_solved": false
+  },
+  "cost": {
+    "recorded_action_seconds": 1128.7789290290002,
+    "CPU_seconds": 998.8126206359999,
+    "peak_RSS_bytes": 2755903488,
+    "CPU_threads": 1,
+    "virtual_GiB": 3,
+    "scope": "Includes recorded action bodies and rejected prefix; excludes imports, inspection, writing, publication/Git. Not exact total task time."
+  },
+  "deep_tangent_controls": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "rows": [
+      {
+        "time": 5.3662986217635974e-05,
+        "finite_probe_512_1024_2048": [
+          [
+            4.360781153419486e-15,
+            0.0008236763352458471,
+            3.08377974385127e-08,
+            4.867706696204488e-17
+          ],
+          [
+            0.0008002101916891508,
+            0.00029901009348078973,
+            0.00043412885273291,
+            1.3755131777820618e-06
+          ],
+          [
+            0.001199358302847883,
+            2.2377013242486483e-05,
+            0.0006466210404481883,
+            2.0616389979217453e-06
+          ]
+        ]
+      },
+      {
+        "time": 0.0017172155589643512,
+        "finite_probe_512_1024_2048": [
+          [
+            3.9182125423591963e-16,
+            1.1860255738182557e-07,
+            2.9806573671154723e-09,
+            8.065058267923807e-20
+          ],
+          [
+            4.82693799883992e-08,
+            6.827712677597804e-08,
+            7.479476106245212e-08,
+            7.28079185206345e-12
+          ],
+          [
+            7.913571947150292e-08,
+            7.372797256638921e-09,
+            1.0679049577861051e-07,
+            1.1936279481727285e-11
+          ]
+        ]
+      },
+      {
+        "time": 0.0034344311179287023,
+        "finite_probe_512_1024_2048": [
+          [
+            2.3309561110346976e-16,
+            8.869795134264729e-08,
+            4.205554527466007e-09,
+            1.8180501295734768e-16
+          ],
+          [
+            2.0645656731349487e-12,
+            1.0465551638678177e-07,
+            1.8529433901178687e-09,
+            5.713592258796692e-14
+          ],
+          [
+            3.093604735033864e-12,
+            1.6877663184880484e-08,
+            6.385190675364638e-10,
+            8.556880294789704e-14
+          ]
+        ]
+      }
+    ],
+    "symbolic": {
+      "classification": "Proven",
+      "passed": true,
+      "scope": "Exact derivative of the existing deep geometric support, including retained background residual. Constitutive jets differentiate the retained table; no full native EOS or continuum certificate."
+    },
+    "source_sha256": "6a50be8339e0d26958f18bb78b15d68e13fb71ea1de8380e71e6b15e84e46216"
+  },
+  "deep_flux_controls": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "rows": [
+      {
+        "k": 0,
+        "deep_flux_components": [
+          6.500155797838203e-16,
+          0.0003162305756996916,
+          6.484279886723266e-09,
+          5.637307196760748e-16
+        ],
+        "deep_gravity": 1.2220777199997318e-11
+      },
+      {
+        "k": 8,
+        "deep_flux_components": [
+          6.464338785955031e-16,
+          0.0003160594174226296,
+          5.950284153766552e-09,
+          5.868577170293663e-16
+        ],
+        "deep_gravity": 1.2220803642283495e-11
+      },
+      {
+        "k": 16,
+        "deep_flux_components": [
+          6.643554445793665e-16,
+          0.00031567255044109073,
+          5.892581331400218e-09,
+          6.196854060907221e-16
+        ],
+        "deep_gravity": 1.2220758607831739e-11
+      }
+    ],
+    "scope": "Independent positive Richardson probes of the actual deep flux and volume force, normalized separately without dilution by atmospheric forcing. Combined mass/momentum/thermal/H and geometry direction at three saved backgrounds; not uniform physical-EOS certification."
+  },
+  "contribution": "Loophole progress: actual incident-driven material motion is returned to photon/thermal/H and collision-only exchange returned to free matter; the finite waveform residual is accepted before compact charge readout."
+}

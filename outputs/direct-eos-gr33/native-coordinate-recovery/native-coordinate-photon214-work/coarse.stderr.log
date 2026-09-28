@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/resume_coordinate_exact_photons.py", line 151, in <module>
+    assert read(OUT/'restart-check.json')['passed'];run(64 if action=='coarse' else 128)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/resume_coordinate_exact_photons.py", line 126, in run
+    exec(compile(source,__file__,'exec'),ns);(OUT/f'expanded-recovery-{n}.py').write_text(source);(OUT/f'expanded-original-{n}.py').write_text(check_source);ns['run'](n)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/resume_coordinate_exact_photons.py", line 15, in run
+    
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()

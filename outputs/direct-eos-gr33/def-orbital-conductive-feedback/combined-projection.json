@@ -1,0 +1,105 @@
+{
+  "classification": "Counterexample candidate",
+  "combined_fits": [
+    {
+      "degree": 2,
+      "residual_norm": 1.1364970540570648e-19,
+      "coefficients": [
+        3.310879299964215e-12,
+        1.1643920284534255e-12,
+        1.120012684054335e-08
+      ],
+      "residual": [
+        2.0502019184207517e-22,
+        2.1675165509795874e-20,
+        -3.287167912752155e-21,
+        -1.0078014069727583e-19,
+        1.0982385006060968e-20,
+        -4.645799923992713e-20
+      ]
+    },
+    {
+      "degree": 3,
+      "residual_norm": 1.1465613565647368e-20,
+      "coefficients": [
+        3.310879299964215e-12,
+        -3.16346690306786e-16,
+        1.120012684054335e-08,
+        -1.036700790039501e-12
+      ],
+      "residual": [
+        2.0502019184207517e-22,
+        1.429574931853525e-25,
+        -3.287167912752155e-21,
+        -1.1460463485673499e-24,
+        1.0982385006060968e-20,
+        2.5526172415125553e-24
+      ]
+    },
+    {
+      "degree": 4,
+      "residual_norm": 2.8017340808130885e-24,
+      "coefficients": [
+        4.0084753600040165e-12,
+        -3.16346690306786e-16,
+        1.1200981009759594e-08,
+        -1.036700790039501e-12,
+        1.5778395723566668e-13
+      ],
+      "residual": [
+        0.0,
+        1.429574931853525e-25,
+        0.0,
+        -1.1460463485673499e-24,
+        0.0,
+        2.5526172415125553e-24
+      ]
+    },
+    {
+      "degree": 5,
+      "residual_norm": 0.0,
+      "coefficients": [
+        4.0084753600040165e-12,
+        -3.8282341887538205e-16,
+        1.1200981009759594e-08,
+        -1.0367799342511374e-12,
+        1.5778395723566668e-13,
+        -1.351175639813281e-17
+      ],
+      "residual": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "unprojected_thermal_charge_norm": 2.8730209736420765e-29,
+  "degree4_thermal_projection": {
+    "degree": 4,
+    "residual_norm": 9.763177740449214e-31,
+    "coefficients": [
+      1.6385445061629814e-26,
+      2.075066817089472e-22,
+      2.026379237228152e-28,
+      3.833870686641845e-23,
+      1.4201977335514908e-29
+    ],
+    "residual": [
+      0.0,
+      -4.981627003275783e-32,
+      0.0,
+      3.99361748014597e-31,
+      0.0,
+      -8.895082514394002e-31
+    ]
+  },
+  "previous_degree4_control_difference": 5.6289670339487376e-24,
+  "thermal_norm_over_previous_control_difference": 5.103993248343193e-06,
+  "whole_response_degree4_nonabsorption_resolved": false,
+  "full_objective_complete": false,
+  "identity": "Proven: an orthogonal least-squares nuisance projection is nonexpansive. This known conductive addition cannot increase its six-coefficient residual norm by more than the unprojected addition.",
+  "scope": "Same frozen three-harmonic charge coefficient norm and comparator; no timing likelihood, missing outer transport or thermal-background bound."
+}

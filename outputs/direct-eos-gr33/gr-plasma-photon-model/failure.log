@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/mnt/e/lab/self-mass-unobservability/verification/gr_plasma_photon_model.py", line 138, in <module>
+    if __name__=='__main__':globals()[sys.argv[1]]()
+  File "/mnt/e/lab/self-mass-unobservability/verification/gr_plasma_photon_model.py", line 88, in run
+    symbolic();state=dict(np.load(split.reference.OUT/'reference-state.npz'))
+  File "/mnt/e/lab/self-mass-unobservability/verification/gr_plasma_photon_model.py", line 46, in symbolic
+    assert sp.simplify(dT-sp.Subs(sp.Derivative(F(T,b),T),b,Bt)-sp.Subs(sp.Derivative(F(T,b),b),b,Bt)*sp.diff(Bt,T))==0
+AssertionError

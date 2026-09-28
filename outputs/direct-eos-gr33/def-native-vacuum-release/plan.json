@@ -1,0 +1,49 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "75ee1384d",
+  "claim": "Replace the assumption of a supported almost-stationary gas cut by its actual native gas-EOS nonlinear vacuum rarefaction, and quantify the resulting matter/stress input for the GR connection.",
+  "preserved": "Current native surface density, temperature, composition, chemical energy convention and same EOS with its compiled LTE radiation removed. No refit polytrope or frozen-ion substitute.",
+  "physical_conditions": "Local planar Riemann release into gas vacuum, gas entropy conserved, equilibrium native chemistry, independent photons. Curvature, gravity, heat/ionization kinetics and full stellar feedback are not asserted negligible without separate assessment.",
+  "table": {
+    "log_density_interval": [
+      0,
+      -18
+    ],
+    "coarse_step": 0.25,
+    "fine_step": 0.125,
+    "minimum_temperature_K": 250,
+    "native_call_cap": 1600
+  },
+  "tail": "No native extrapolation: assume cs(rho)<=cs_cut*(rho/rho_cut)^0.05 below the last native state. This yields an explicit residual rapidity/mass envelope; the premise remains conditional.",
+  "gates": {
+    "native_entropy": 1e-08,
+    "native_gamma_chain": 0.0001,
+    "characteristic_speed_refinement": 0.005,
+    "conserved_baryon_relative": 0.002,
+    "conserved_nonrest_energy_relative": 0.005
+  },
+  "budget": {
+    "total_seconds": 180,
+    "CPU_threads": 1,
+    "new_whole_star_integrations": 0
+  },
+  "decision": "One coarse and one fine native isentrope only, with measured pilot budget. Stop on EOS failure/nonconvex fan or budget; no density/temperature extension, extra grids or relaxed gates.",
+  "reference": "https://doi.org/10.12942/lrr-1999-3",
+  "reference_scope": "Native isentropic Riemann-invariant construction follows the relativistic simple-wave method; this source does not validate our EOS or stellar assumptions.",
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "native": "At fixed gas entropy, dlnT/dlnrho=(P/rho-u_lnrho)/cvT, cs^2=Gamma1*P/(e+P). The left rarefaction has rapidity Y=integral(cs*dlnrho) from the current density to the initial density and xi=(tanh(Y)-cs)/(1-tanh(Y)*cs).",
+    "trace": "E_lab-P_radial-2*P_tangential=e_gas-3*P_gas. LTE photons must be subtracted before using the gas entropy and sound speed.",
+    "boundary": "A stress-free gas-vacuum material interface requires Pgas=0. Releasing Pgas>0 produces a nonlinear fan, not a zero-amplitude perturbation of a supported surface.",
+    "tail": "If cs(rho)<=cs_cut*(rho/rho_cut)^(delta/2) for0<rho<=rho_cut, the remaining rapidity is<=2*cs_cut/delta. This is a declared tail premise, not a native EOS proof.",
+    "scope": "Relativistic isentropic simple-wave identities. Planar geometry, equilibrium gas chemistry and negligible external gas heating are separate applicability conditions."
+  },
+  "bindings": {
+    "verification/def_native_vacuum_release.py": "f2e2c49c109bebb0b70216cc22ab45f7345cd9258daaaa7f69e9a90c475b9432",
+    "verification/gr_radiation_eos_split.py": "b0f7e96d9bf5e3e3320ca727bfc97f77e8460139b1f52fe30133f0eb2ae1d78f",
+    "outputs/direct-eos-gr33/def-native-whole-star-match/final-envelope.npz": "cdb53cf0830fa5442deb22fac2d78781935290ed86f8a580d5a1083ebb8c6a56",
+    "outputs/direct-eos-gr33/def-native-whole-star-match/final-core.npz": "386c48ad8a2038332242075bcf45c93b9241b18763aba3004d12a799a1d61b14",
+    "outputs/direct-eos-gr33/def-native-metric-transport/p4-64.npz": "cd61bb39f93995a6144faa45b8f699c9826ec41872d90120ad6bc119c0b8110b"
+  }
+}

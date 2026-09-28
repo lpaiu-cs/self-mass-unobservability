@@ -1,0 +1,23 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "Original conservative pilot forecast1303.61s wall/3430.05 worker-seconds exceeds900/2400. Full production was not dispatched.",
+  "intervention": "Memoize only EXACT native state(x,logT,y) calls within one fixed anchor. Clear the cache whenever chem.setup changes its implicit inventories. Store at most16 returned states per instance. Native calls with changed coordinates are never approximated or merged.",
+  "decision": "Compare cached root against saved uncached roots at the same actual conserved states, keeping original inverse tolerances. Forecast remaining work at twice the slowest measured root in each region. No production unless original900s wall/2400s aggregate worker cap passes.",
+  "budget": {
+    "cached_pilot_seconds": 76,
+    "original_total_pilot_seconds": 90,
+    "production_wall_seconds": 900,
+    "production_worker_seconds": 2400,
+    "readout_seconds": 90,
+    "native_calls_per_production_job": 18000,
+    "workers": 3
+  },
+  "limits": "Exact-call reuse accelerates the same native inverse; it does not turn sampled EOS states into a uniform enclosure.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_conserved_history_charge.py": "17995179fe88b556cebe31c525b4c153c39e1354fbc24343a08f08dd89bb9e20",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_conserved_history_charge.py": "07c45d71c3519fad41ca4d87bd914b94198f7e972f884d62c708d25bfd04eb9b",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/plan.json": "daeed75e9cb5bfbf1a6a8c72fcf6cdd3620cc185dded27bf9d6a5489feff790c",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/pilot.json": "ae5ce77491759d256ea059f3df2635407a36236d308c0f0c8da07dd959a73224",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/pilot-samples.json": "7210aa36e5022b6f649461939291226b41f390a0275a48776a99828ad4b4a910"
+  }
+}

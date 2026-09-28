@@ -1,0 +1,30 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Produce a direct-T atomic spectrum with explicit H/He/metals and public atomic lines, retain EOS mismatch as a separate gate before coupling.",
+  "measured_pilot": {
+    "native_seconds": 0.41686411,
+    "samples": 24133,
+    "T_K": 18827.94717983866,
+    "native_continuum_Kirchhoff_max": 2.06320795e-08
+  },
+  "budget": {
+    "additional_download_bytes": 60000000,
+    "network_seconds": 120,
+    "pilot_and_production_native_seconds_each": 120,
+    "native_runs_max": 6,
+    "coupled_seconds": 480,
+    "CPU_workers": 1,
+    "GPU": false,
+    "new_stellar_steps": 0
+  },
+  "decision": "A successful direct spectrum can replace temperature interpolation only within its declared atomic model. Do not declare it EOS-certified if ion/level populations, emission balance, line resolution or omitted components fail.",
+  "gates": {
+    "same_EOS_ions_relative": 0.001,
+    "native_LTE_relative": 1e-06,
+    "response_grid_initial_norm": 0.001,
+    "response_time_initial_norm": 0.001,
+    "energy_balance": 1e-09
+  },
+  "coverage": "Request 100..1e7 Angstrom, use actual-state photon grid. Atomic line list completeness and F/Mg III/Ca III continuum must be disclosed; no fitted source scaling.",
+  "stop": "Native run >120s or acquisition >120s stops. No stellar solve or grid expansion beyond these runs."
+}

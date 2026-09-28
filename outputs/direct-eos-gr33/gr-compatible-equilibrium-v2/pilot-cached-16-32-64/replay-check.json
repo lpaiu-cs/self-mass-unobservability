@@ -1,0 +1,41 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "paths": [
+    {
+      "refinement": 1,
+      "steps": 16,
+      "exact_executed_grid": true,
+      "redivided_grid_mismatch_steps": [],
+      "maximum_redivided_time_difference_seconds": "0.0",
+      "maximum_redivided_ulp_difference": "0.0",
+      "maximum_relative_step_size_difference": "0.0"
+    },
+    {
+      "refinement": 2,
+      "steps": 32,
+      "exact_executed_grid": true,
+      "redivided_grid_mismatch_steps": [
+        23,
+        25,
+        31
+      ],
+      "maximum_redivided_time_difference_seconds": "1.05879118406787542384e-22",
+      "maximum_redivided_ulp_difference": "1.0",
+      "maximum_relative_step_size_difference": "2.0594041549722036943e-18"
+    },
+    {
+      "refinement": 4,
+      "steps": 64,
+      "exact_executed_grid": true,
+      "redivided_grid_mismatch_steps": [],
+      "maximum_redivided_time_difference_seconds": "0.0",
+      "maximum_redivided_ulp_difference": "0.0",
+      "maximum_relative_step_size_difference": "0.0"
+    }
+  ],
+  "original_timestamp_equality_preserved": true,
+  "original_native_gates_preserved": true,
+  "physical_model_changed": false,
+  "cause": "The imported 32-step history uses the original direct subdivision. Subdividing its already rounded 16-step intermediate grid differs by one longdouble ULP at three nodes."
+}

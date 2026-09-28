@@ -1,0 +1,65 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "rows": [
+    {
+      "clock": 64,
+      "order": 8,
+      "exact_shift": true,
+      "maximum_shift_over_outer_lapse": 0.002374422171928352
+    },
+    {
+      "clock": 128,
+      "order": 4,
+      "exact_shift": true,
+      "maximum_shift_over_outer_lapse": 0.00237420581496137
+    },
+    {
+      "clock": 128,
+      "order": 8,
+      "exact_shift": true,
+      "maximum_shift_over_outer_lapse": 0.0023742058708556037
+    }
+  ],
+  "metric_controls": {
+    "time": {
+      "delta_u": 1.6995267184146273e-05,
+      "delta_lambda": 1.351823544517644e-05,
+      "delta_log_lapse": 3.7160406400943905e-06,
+      "delta_log_speed": 1.3481124449647717e-05,
+      "delta_u_prime": 3.516175923430662e-05,
+      "delta_nu_prime": 1.355904416886623e-05,
+      "delta_u_t": 2.9164397653020278e-05,
+      "actual_delta_lambda_rate": 0.0004403399355991893
+    },
+    "quadrature": {
+      "delta_u": 0.0,
+      "delta_lambda": 2.8856231476980563e-16,
+      "delta_log_lapse": 2.910574782595313e-14,
+      "delta_log_speed": 4.316445404715622e-16,
+      "delta_u_prime": 0.0,
+      "delta_nu_prime": 2.29696009206483e-16,
+      "delta_u_t": 0.0,
+      "actual_delta_lambda_rate": 3.497066180805818e-16
+    }
+  },
+  "stage_driver_reads_new_metric": true,
+  "stage_driver_probe": [
+    {
+      "index": 1,
+      "time": 4.471915518136331e-06,
+      "log_lapse_shift": 8.272566448664044e-73
+    },
+    {
+      "index": 287,
+      "time": 0.001891620264171668,
+      "log_lapse_shift": 1.6207468018890984e-61
+    },
+    {
+      "index": 574,
+      "time": 0.003434431117928702,
+      "log_lapse_shift": 1.616071535428296e-61
+    }
+  ],
+  "scope": "Exact construction of the shifted applied metric, its original time/quadrature gates and the live stage-driver lookup; not physical convergence."
+}

@@ -1,0 +1,22 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "9d30f86",
+  "inputs_sha256": {
+    "outputs/direct-eos-gr33/opacity/baseline-type1-captured.npz": "c61392f904c083f1424c53b26cf7235c49cc72ae4ed0ccdf362521fad72d21cf",
+    "outputs/direct-eos-gr33/opacity/identity-control.json": "fe67023ddf154a5bbdd0ab2e15f4c498735ab0db966281a93e436985aa16ccbf",
+    "outputs/direct-eos-gr33/reference-state.npz": "17cbbb101628ca9bc111dca0cfe902210f13697c632b91c03913a1718cf7d2ef",
+    "verification/native_opacity.py": "0b08147bb41db0d17ea416da1d29a035524feec51b30a75351988e83fe2dac26",
+    "verification/opacity_derivatives.py": "233157d01d1985bbd98ab2239ad14aac7d0358a256025f2afcb4a0e036dc30fb"
+  },
+  "log_steps": [
+    0.001,
+    0.0005
+  ],
+  "relative_tolerance": 0.001,
+  "absolute_floor": 1,
+  "path": "At each original cell hold composition fixed, vary ln rho or ln T, and set lnfree_e to its baseline value plus the corresponding supplied baseline slope times the actual log displacement. The derivative of this path at zero is exactly the supplied electron derivative; no assumption about finite-step EOS curvature is needed.",
+  "comparison": "Centered differences of ln opacity versus the returned baseline logarithmic derivatives. Compare both steps and their mutual difference, recording every failed cell without relaxing the gate.",
+  "scope": "Finite perturbations of the unchanged native Type1 opacity model, including its input rounding and table interpolation. These are not continuous derivative enclosures or new-EOS finite curves.",
+  "physical_opacity_certified": false,
+  "full_GR_transport": false
+}

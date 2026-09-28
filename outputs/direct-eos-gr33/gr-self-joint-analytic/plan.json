@@ -1,0 +1,52 @@
+{
+  "classification": "Proven",
+  "checkpoint": "a226168",
+  "bits": 128,
+  "relative_Q_radius": "1/256",
+  "eta_radius": "1/100",
+  "log_temperature_radius": "1/1000",
+  "beta_reference_box": [
+    "3e-6",
+    "0.006"
+  ],
+  "eta_reference_box": [
+    -17,
+    24
+  ],
+  "thermal_cutoff_offset": 128,
+  "bindings": {
+    "verification/gr_self_joint_analytic.py": "88743854afa28dffbae6e55daefe790e10105191dac9e145b638f899d9da5c3f",
+    "outputs/direct-eos-gr33/gr-response-positive-sector/manifest.json": "7d5291f134ebac62b7f708d743f1280a907016826c10420a67427a2aa2db7035",
+    "outputs/direct-eos-gr33/gr-response-positive-sector/result.json": "57559587b8130d2f2269c38e78c6a096954379c43d522b9b37d2f01aa1f20e87",
+    "outputs/direct-eos-gr33/gr-logarithmic-response/inputs.npz": "c9695e054b3ef6bf11b63a24909d7a4e549429d65a72bea4d9ad982b76afda53"
+  },
+  "parameter_orders": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      0,
+      2
+    ]
+  ],
+  "target": "Prove joint analyticity and Re S>0 for |Q-q0|<=q0/256, |eta-eta0|<=0.01 and |tau|<=0.001, beta=beta0*exp(tau), throughout the real reference box. Bound G=S/(Q^2/B+S) by its phase geometry, then use eta/tau Cauchy bounds directly instead of dividing loose response majorants by a small denominator.",
+  "arithmetic_scope": "Reuse the previously certified common W0 lower bound and the eta=0 thermal-response upper coefficient. Increasing its thermal beta by lambda>=1 raises the bound by at most lambda^4, since all its monomials have positive coefficients and beta exponents at most four.",
+  "boundary": "Conditional analytic and derivative theorem for the same ideal-electron self integrand. Actual finite outer integration and full EOS/GR/observational closure remain open."
+}

@@ -1,0 +1,29 @@
+{
+  "classification": "Counterexample candidate",
+  "bindings": {
+    "verification/def_atmosphere_enthalpy.py": "a5d533e8ecf6ac9ca1129b9e4abaab58715668e0c77275928e3ed5e71dd54bb6",
+    "outputs/direct-eos-gr33/def-native-atmosphere/extended-cold/progress.json": "2214746f43be7fb2ec8d93cba02db9e199a3cbf92392ff9c87850cd4b1db9fd4",
+    "outputs/direct-eos-gr33/def-native-atmosphere/surface-enclosure/result.json": "802bf0ac9fbc27b3ce662dd4272529a29af42e887ecb1a19ed145c48f066b53d",
+    "outputs/direct-eos-gr33/def-hydrostatic-background/absolute-shoot/background-0.001.npz": "774e2bff821f5863291167f069a8673562bfee8b0ab648468c8dfc5a2a9b04d3",
+    "outputs/direct-eos-gr33/def-hydrostatic-background/absolute-shoot/lapse.npz": "9c08b16699d7bfaa696a93e68ad2eb42a9ea98f8373d036f3c7018d5dc374dba"
+  },
+  "cause": "Independent Pchip pressure/energy interpolation shifted the 946 K radius by 3.17 m despite tight ODE tolerance. Preserve it; impose dP=rho*dh along the interpolated adiabat.",
+  "method": "Cubic Hermite P(eta), eta=(u+ground_offset+P/rho)/Ebase, node dP/deta=rho*Ebase. Set rho=P_eta/Ebase and u=h-P/rho; use only the accepted native prefix. No cold EOS extrapolation.",
+  "prefix": "The extended native command ended with code 1 and no final result/failure record. Reuse only its 12 saved accepted roots, not a completed 100 K run.",
+  "gates": {
+    "node_pressure_relative": 1e-12,
+    "node_density_relative": 1e-12,
+    "positive_density": true,
+    "first_integral_absolute": 1e-16,
+    "Just_radius_difference_m": 0.001
+  },
+  "tolerances": [
+    1e-10,
+    1e-12
+  ],
+  "budget": {
+    "hard_timeout_seconds": 30,
+    "native_calls": 0,
+    "evolution_steps": 0
+  }
+}

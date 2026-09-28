@@ -1,0 +1,71 @@
+{
+  "reason": "Prioritize the actual full-grid implicit coupled trajectory; preserve the fixed-background caloric producer in memory and all files.",
+  "boot_id": "9b968b4f-ecbd-483b-ada9-c1c871b6ab20",
+  "root": 417,
+  "processes": [
+    {
+      "pid": 417,
+      "parent": 408,
+      "start": "2041",
+      "state": "S",
+      "command": "python3 verification/gr_caloric_64.py run"
+    },
+    {
+      "pid": 418,
+      "parent": 417,
+      "start": "2342",
+      "state": "R",
+      "command": "python3 verification/gr_caloric_64.py run"
+    },
+    {
+      "pid": 419,
+      "parent": 417,
+      "start": "2342",
+      "state": "R",
+      "command": "python3 verification/gr_caloric_64.py run"
+    },
+    {
+      "pid": 420,
+      "parent": 417,
+      "start": "2342",
+      "state": "R",
+      "command": "python3 verification/gr_caloric_64.py run"
+    },
+    {
+      "pid": 421,
+      "parent": 417,
+      "start": "2342",
+      "state": "R",
+      "command": "python3 verification/gr_caloric_64.py run"
+    },
+    {
+      "pid": 422,
+      "parent": 417,
+      "start": "2342",
+      "state": "R",
+      "command": "python3 verification/gr_caloric_64.py run"
+    },
+    {
+      "pid": 423,
+      "parent": 417,
+      "start": "2342",
+      "state": "R",
+      "command": "python3 verification/gr_caloric_64.py run"
+    },
+    {
+      "pid": 424,
+      "parent": 417,
+      "start": "2342",
+      "state": "R",
+      "command": "python3 verification/gr_caloric_64.py run"
+    },
+    {
+      "pid": 425,
+      "parent": 417,
+      "start": "2343",
+      "state": "R",
+      "command": "python3 verification/gr_caloric_64.py run"
+    }
+  ],
+  "all_stopped": true
+}

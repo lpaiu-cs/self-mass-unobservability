@@ -1,0 +1,25 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "f305247",
+  "bindings": {
+    "verification/lanl_tops_outer_groups.py": "44471208ec5834b04355e7e80730e1f3db331bc3bca3c4aeeca59f5a47470241",
+    "outputs/direct-eos-gr33/lanl-tops-outer-audit/manifest.json": "2a9b970a07293c5f5d08c60a0d5c1594a25a0eb8dc62ffc6662c140c0dddd7ba",
+    "outputs/direct-eos-gr33/lanl-tops-cutoff-reader/manifest.json": "b660702105000a37d0fb1ba3ce5741772a4a5645cf9c5624abdf35a7449e0e4a",
+    "outputs/direct-eos-gr33/lanl-tops-outer-groups/requests.json": "93ea7b0a89856cd66b2871d543c70311b57fe498747c338fad5acc2a12d27357",
+    "outputs/direct-eos-gr33/lanl-tops-outer-groups/lanl-tops-form.html": "b5f1093f7912a1842803c411f375e86db6c21af3d6d9074a1c25a936211ef9d5",
+    "verification/lanl_tops_outer_group_reader.py": "e7fa3d9d61efbeff079d7e8d354686cbbef542fa70b7375851b1070a74ab4802",
+    "outputs/direct-eos-gr33/lanl-tops-outer-groups/analysis-manifest.json": "83aaa86154a206ba921e1bea35001aec3fc3d9a27e431da290ff801e01ff32b9",
+    "outputs/direct-eos-gr33/lanl-tops-outer-group-reader/corrected-analyze.py": "af7d8e38eafbb65e4f92e402d67936fc752d68e8ff153b9bc8d8aa046ae5af9c",
+    "outputs/direct-eos-gr33/lanl-tops-outer-group-reader/outer16groups-results-request.json": "7583be414d41c6f0ad279823a2dc198fc74ba506015d1f0e3223f7be31f6d1b8",
+    "outputs/direct-eos-gr33/lanl-tops-outer-group-reader/outer16groups-table.txt": "64e010851af22b5f8f7d07f708e42924863e8d931a9c047e4c1557719d74a42a",
+    "outputs/direct-eos-gr33/lanl-tops-outer-group-reader/outer32groups-results-request.json": "1c9cacf32517577cf00455d282097bd8315681b9dfcee302a7f0c5faa83c67e7",
+    "outputs/direct-eos-gr33/lanl-tops-outer-group-reader/outer32groups-table.txt": "bf70d1fc4de42a1bde52d3b3b4cec785ef0609cd83c7353c2ac998192fbef0bc",
+    "outputs/direct-eos-gr33/lanl-tops-outer-group-reader/requests.json": "93ea7b0a89856cd66b2871d543c70311b57fe498747c338fad5acc2a12d27357"
+  },
+  "reason": "Both separately retrieved outer spectra pass all input and arithmetic checks but fail the frozen Planck quadrature gate. Preserve both failures. Retrieve native Planck/Rosseland group averages at the same exact outer mixture/density and both temperatures with cutoff OFF.",
+  "grid": "16 and 32 logarithmic groups with explicitly submitted six-digit boundaries from 1e-8 to 1 keV. These are provider group integrals, not reconstructions from the failed output spectra.",
+  "acceptance": "Check exact input printing intervals, every boundary and final upper edge, absence of warnings and strictly positive finite group means. Weight native Planck groups by their exact submitted Planck intervals and Rosseland groups by the corresponding derivative weights. Recombine all groups and compare each gray mean and the 16/32 recombinations at fixed relative 1e-3. Do not replace prior failed spectral gates.",
+  "relative_tolerance": 0.001,
+  "physical_LTE_atmosphere_certified": false,
+  "reader_correction": "The earlier implementation used opacity<1e10, an undocumented ceiling, and rejected finite values 2.8e10 to 2.5e11 even with cutoff OFF. Provider documentation specifies the exact sentinel 1e10, not a physical upper bound. A separately classified reader rejects equality to the sentinel while retaining all input, positivity, finite 1e-3 integration and refinement gates. Preserve the original failed analysis and distinguish this source-informed gate correction from passing its stricter old ceiling."
+}

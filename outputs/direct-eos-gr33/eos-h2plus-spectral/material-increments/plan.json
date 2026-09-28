@@ -1,0 +1,68 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "ddfe050",
+  "bindings": {
+    "verification/gr_material_thermo_increment.py": "18f16fe005acf7810098dc14b0049f70b61fff8305fbafa783f9f3474f2b4055",
+    "outputs/direct-eos-gr33/initial-state-17-4.npz": "5dcc8ffb8b32a9f15ccc4c8bb7111d19be8dcdc66611ad2942e3a4a0cf6cc6d6",
+    "outputs/direct-eos-gr33/gr-microphysics/auxiliaries.npz": "63744d1a041ebc39bd33dfa0f5e181d64378966c1ee22364c477009bee08d976",
+    "outputs/direct-eos-gr33/gr-material-rest-energy/manifest.json": "beac7aa6ac4b7798ee1471f658cad86b5598a12740d792368604c347411ac008",
+    "outputs/direct-eos-gr33/gr-caloric-increment/plan.json": "95a35c02ee620b30158e417a73af3e27fab7a6bc23f61f980cae9b311ad03607",
+    "verification/eos_h2plus_spectral.py": "c75db6524d007ea5f2c7c73ad82ac8828cf48570257f97f13f6a297c803651f4",
+    "outputs/direct-eos-gr33/eos-h2plus-spectral/plan.json": "c4e3e5dda7633a100eb0aa94f4fc4732ddbca045270b4cfb54ceb225f3dcf248",
+    "outputs/direct-eos-gr33/eos-h2plus-spectral/controls.json": "c472dd924c3126d425cdaa1af937a7ca7dfd3c7ebb6187a9016293212b4d03c9",
+    "outputs/direct-eos-gr33/eos-h2plus-spectral/material-increments/candidate-run.py": "7dd9172831d0f7dab433f227b18d0fef32d98df35cf5c4bf59735af02ea45654"
+  },
+  "cells": [
+    0,
+    1,
+    2,
+    64,
+    1024,
+    2048,
+    2972,
+    4096,
+    5734
+  ],
+  "probes": [
+    [
+      0.0001,
+      0.0002
+    ],
+    [
+      -0.0001,
+      -0.0002
+    ],
+    [
+      0.0001,
+      -0.0002
+    ],
+    [
+      1e-25,
+      2e-25
+    ],
+    [
+      -1e-25,
+      2e-25
+    ],
+    [
+      0.0,
+      0.0
+    ]
+  ],
+  "quadrature_counts": [
+    2,
+    4
+  ],
+  "relative_quadrature_tolerance": 1e-08,
+  "relative_endpoint_tolerance": 1e-08,
+  "endpoint_energy_roundoff": "Sum max(2 erg/g,32 ulp(abs(u))) at the two native endpoints. This finite acceptance budget is not a rigorous native evaluation error bound.",
+  "known_cut_probe": "Also evaluate a constructed log-temperature path from log(1e6)-1e-6 to log(1e6)+1e-6 at the profile density/composition nearest that temperature. A known native branch boundary is not silently excluded or certified smooth.",
+  "scope": "Extend the fixed-density caloric increment to density and temperature together. Direct native EOS values at line quadrature points supply du, dP and ds. Conditional line-integral identities require the EOS derivatives and first law along the path; native branch jumps require additional jump terms. Finite comparisons do not supply derivative, root, continuum or physical EOS certificates, and are not GR evolution.",
+  "substitutions": {
+    "assert not OUT.exists();OUT.mkdir()": "assert OUT.exists()",
+    "save('plan.json',dict(classification='Counterexample candidate',checkpoint='d8689de',\n        bindings={p.relative_to(g.ROOT).as_posix():g.c.sha(p) for p in paths},\n        cells=[0,1,2,64,1024,2048,2972,4096,5734],\n        probes=[[1e-4,2e-4],[-1e-4,-2e-4],[1e-4,-2e-4],[1e-25,2e-25],[-1e-25,2e-25],[0.,0.]],\n        quadrature_counts=[2,4],relative_quadrature_tolerance=1e-8,relative_endpoint_tolerance=1e-8,\n        endpoint_energy_roundoff='Sum max(2 erg/g,32 ulp(abs(u))) at the two native endpoints. This finite acceptance budget is not a rigorous native evaluation error bound.',\n        known_cut_probe='Also evaluate a constructed log-temperature path from log(1e6)-1e-6 to log(1e6)+1e-6 at the profile density/composition nearest that temperature. A known native branch boundary is not silently excluded or certified smooth.',\n        scope='Extend the fixed-density caloric increment to density and temperature together. Direct native EOS values at line quadrature points supply du, dP and ds. Conditional line-integral identities require the EOS derivatives and first law along the path; native branch jumps require additional jump terms. Finite comparisons do not supply derivative, root, continuum or physical EOS certificates, and are not GR evolution.'))": "plan=json.loads((OUT/'plan.json').read_text())",
+    "eos=g.EOS()": "eos=Continuation()"
+  },
+  "intervention": "The existing material increment experiment with the new sourced H2+ spectral EOS, retained molecules. All 55 paths, analytic controls, endpoint and quadrature gates are unchanged.",
+  "physical_scope": "A sourced ground-electronic-state partition substitution, not a complete physical EOS repair. H2 still uses the previously rejected high-T Taylor extension. Physical level uncertainties, plasma occupation and binding-energy consistency with the original chemical zero are not certified. Existing full GR/reference/time paths and native libraries are not replaced."
+}

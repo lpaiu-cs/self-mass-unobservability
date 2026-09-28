@@ -1,0 +1,9 @@
+{
+  "classification": "Counterexample candidate",
+  "root_failure": "The shared molecular constraint updated fields only when CURRENT abundance exceeded1e-18. The frozen H2 target3.773e-12 fell to3.406e-20 and was never restored, leaving H+ excess3.331e-12 and failing the unchanged1e-12 full-population gate.",
+  "repair": "Update a molecular field when either current OR target abundance exceeds the declared1e-18 trace threshold. Fix the shared Ions.constrain owner used by both fixed-inventory and reactive native paths. No population tolerance or iteration cap change.",
+  "resource": "The failed48state construction exited before saving its partial bank/counter; exact calls unavailable, bounded by its400call cap. Preserve this operational failure. New completion cap400calls/20s after fixing the shared root cause; save partial state and call counter on failure. Prior existing96state bank remains reused.",
+  "original_constraint_sha256": "a944fd0557f828f0acb722538e589f0b47d5701b88b2046fa239c41218211c60",
+  "fixed_constraint_sha256": "9631f1a84d0800b6127eb5ed90a924b629cb382ac563b27ee5a26948bd91d3fb",
+  "source_sha256": "34f4f126481d03301f614f745f3d2229287544c01739a9d376e580a4aa9b8ad0"
+}

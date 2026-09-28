@@ -1,0 +1,72 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "comparisons": {
+    "time": [
+      1.2292208617322085e-05,
+      2.0099595728073844e-05,
+      1.9694976683253995e-05,
+      0.0008921171037413898
+    ],
+    "background": [
+      0.002184038034135817,
+      0.0010242414258075782,
+      0.0018784555524743694,
+      0.0020868361089348693
+    ],
+    "stress_time": [
+      1.2292208645714004e-05,
+      2.591509423400181e-05,
+      1.229220855054516e-05,
+      2.6032574081454508e-05,
+      0.00019559204607046436,
+      0.0003286814566767953
+    ],
+    "stress_background": [
+      0.002184038037580975,
+      0.0023781095765299746,
+      0.002184038027243158,
+      0.002380760674408037,
+      0.0025274271504316104,
+      0.0010596769061796954
+    ]
+  },
+  "paths": [
+    {
+      "steps": 64,
+      "reference": 128,
+      "conservation": 8.046557017460982e-16,
+      "pressure_probe": 2.08921751023968e-11,
+      "legacy_material_sweep_comparison": null,
+      "energy_H_waveform_residual": [
+        1.3007575120444355e-05,
+        1.753636709643209e-05
+      ]
+    },
+    {
+      "steps": 128,
+      "reference": 128,
+      "conservation": 9.887467291989135e-16,
+      "pressure_probe": 3.926379027667614e-11,
+      "legacy_material_sweep_comparison": null,
+      "energy_H_waveform_residual": [
+        7.674188420149723e-06,
+        9.38752623942131e-06
+      ]
+    },
+    {
+      "steps": 128,
+      "reference": 64,
+      "conservation": 1.2283981848236891e-15,
+      "pressure_probe": 2.673235931663159e-11,
+      "legacy_material_sweep_comparison": null,
+      "energy_H_waveform_residual": [
+        9.584540010836349e-07,
+        1.6835267588850121e-06
+      ]
+    }
+  ],
+  "seconds": 17.56581665199974,
+  "sum_peak_RSS_bytes": 2086436864,
+  "final_charge_solved": false
+}

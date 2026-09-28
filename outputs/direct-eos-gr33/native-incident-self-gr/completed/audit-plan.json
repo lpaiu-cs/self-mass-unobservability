@@ -1,0 +1,29 @@
+{
+  "classification": "Counterexample candidate",
+  "sweep": 2,
+  "claim": "Independently check conserved GR source identities, collision/mechanical partition, actual angular ports, preserved prefixes, and sampled additivity/homogeneity of the material directional operator before adding the separated charge.",
+  "reason": "Positive amplitude normalization is homogeneous, but an HLL/donor directional derivative need not be globally additive at a branch corner. Test the actual saved response directions and report the finite sampled scope.",
+  "gates": {
+    "source": 1e-12,
+    "partition": 1e-08,
+    "port": 1e-12,
+    "conservation": 1e-08,
+    "material_linearity": 0.002
+  },
+  "seconds": 90,
+  "total_action_seconds": 4600,
+  "new_evolution_steps": 0,
+  "stop": "No new response path or relaxed gate if a sampled branch-additivity check fails. Full uniform EOS/branch certification remains open.",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/audit_native_incident_self_gr.py": "448fab44bac0be2893dd714e1d93f95cd2d181d72e202e18da9ca253b6da00e5",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/solve_native_incident_self_gr.py": "a39cbbb0ddbd0f21b9989da3d7b5e80290b121a59810d4e10fee24c5e168a745",
+    "native-incident-self-gr157-work/sweep-2/result.json": "dc535b77c4672148ca15282217232f68ecc10106484543f83f44c89cd11f208b",
+    "native-incident-self-gr157-work/normalization.json": "29be0c1f186e14bc76cb95f37013d58406e96d8fa7fe1396bc1ac695f35dd29c",
+    "native-incident-self-gr157-work/sweep-2/photons-common-gr/steps-64-reference-128.npz": "fec1c6f16cf11740b4dc9fb865f50bf9240bb368a81065966bed2f451d737e47",
+    "native-incident-self-gr157-work/sweep-2/photons-common-gr/steps-128-reference-128.npz": "7020b476351611a8b959090ab3a656592fe9c42601dfe289fab08a27da345260",
+    "native-incident-self-gr157-work/sweep-2/material-common-gr/steps-64-reference-128.npz": "2e9ae3608510638c8c05cac1a176ea661bb059adcca30c6f8d3c4489d9e25dc0",
+    "native-incident-self-gr157-work/sweep-2/material-common-gr/steps-128-reference-128.npz": "8bd32a41f8a39ca15f03d34bae7143f8001e15ef520f360bdb5f47ad5e875cc9",
+    "native-incident-reciprocal156-work/sweep-2/photons-precise/steps-128-reference-128.npz": "b312f6825a78511d75248c3dce652006215e26ab5be01cb550e853750f120a6b",
+    "native-incident-reciprocal156-work/sweep-2/material-analytic/steps-128-reference-128.npz": "38ee33ca8a182395a6c7c20dd233edee76a910aeb2c939a556b06a9c3a848378"
+  }
+}

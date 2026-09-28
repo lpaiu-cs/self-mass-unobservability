@@ -1,0 +1,39 @@
+{
+  "classification": "Counterexample candidate",
+  "artifact_checks_passed": true,
+  "source_control": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "enclosed_mass_volume_fraction_relative": 1.855321309725265e-16,
+    "central_regular": true
+  },
+  "cp_cv_chain_absolute": 1.4210854715202004e-14,
+  "whole_baryon_relative": 2.220446049250313e-16,
+  "paths": {
+    "32": {
+      "energy_balance": 8.79609447908166e-21,
+      "outer_tail_relative_to_native_scalar": 1.1562084850726873e-92,
+      "maximum_temperature": 0.00010861607752870509,
+      "maximum_luminosity_change": 5.302425165609748e-13,
+      "emitted_energy_erg": 7.464676559412251e+30,
+      "surface_displacement_fraction": -3.010059160784253e-21,
+      "omitted_surface_pressure_work_erg": -1017769068778.5687,
+      "pressure_work_over_emitted_heat": -1.3634469768087383e-19
+    },
+    "64": {
+      "energy_balance": 2.932031493027252e-20,
+      "outer_tail_relative_to_native_scalar": 1.3324214890069972e-170,
+      "maximum_temperature": 0.00010861452042460887,
+      "maximum_luminosity_change": 5.303535388634373e-13,
+      "emitted_energy_erg": 7.464676559412251e+30,
+      "surface_displacement_fraction": -3.0309191022667007e-21,
+      "omitted_surface_pressure_work_erg": -1024822286699.9847,
+      "pressure_work_over_emitted_heat": -1.3728957692182668e-19
+    }
+  },
+  "causal_heat_photon_inventory_identity": 0.0,
+  "all_registered_response_gates_passed": false,
+  "source": "Actual Phase92 finite-pressure matched background; no reused old evolution response.",
+  "pressure_work_scope": "The recorded finite-pressure work is not included by the frozen emitting geometry. Its small heat-energy ratio is not a scalar-charge error bound or a completed material-radiation stress junction.",
+  "full_goal_complete": false
+}

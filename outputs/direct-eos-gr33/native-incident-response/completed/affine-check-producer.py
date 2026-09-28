@@ -1,0 +1,88 @@
+"""Split the exactly affine lapse-gradient force before material differencing."""
+from pathlib import Path
+from types import FunctionType
+import json,resource,sys,time
+import numpy as np
+import solve_native_incident_lift as lift
+
+base=lift.base;OUT=lift.OUT;MATERIAL=OUT/'material-affine';read,write,sha=lift.read,lift.write,lift.sha
+LD=np.longdouble;old_initialize=lift.initialize
+
+
+def initialize():
+    old_initialize();Parent=base.Material
+    class Material(Parent):
+        split_ap=False
+        def __init__(self,reference=128,steps=128):
+            super().__init__(reference,steps);self.ap_maps={};self.ap_errors=[]
+        def fields(self,t):
+            j,f,field,rates=super().fields(t)
+            if self.split_ap:field=field.copy();field[4]=0.
+            return j,f,field,rates
+        def ap_map(self,k):
+            if k in self.ap_maps:return self.ap_maps[k]
+            row=self.point(k);delta=np.zeros_like(row['Q']);field=np.zeros((5,self.n))
+            field[4]=np.maximum(abs(self.ap),self.a/self.R);values=[]
+            for h in [1.,.5]:
+                a=self.raw(k,delta,field,h);b=self.raw(k,delta,field,-h)
+                assert np.array_equal(a[0],b[0]),'Acceleration entered a material flux'
+                values.append((a[1].astype(LD)-b[1].astype(LD))/(2*LD(h)*field[4]))
+            error=float(np.max(abs(values[1]-values[0]))/max(np.max(abs(values[1])),1e-290))
+            assert error<1e-12,error
+            self.ap_errors.append(error);self.ap_maps[k]=np.asarray(values[1],float)
+            return self.ap_maps[k]
+        def rhs(self,t,z,probe=1.):
+            j,f,field,_=super().fields(t)
+            force=field[4]*((1-f)*self.ap_map(j)+f*self.ap_map(j+1))
+            self.split_ap=True
+            try:r,l,dt=super().rhs(t,z,probe)
+            finally:self.split_ap=False
+            r[1]+=force;l[1]+=np.sum(force,dtype=LD)
+            return r,l,dt
+        run=FunctionType(Parent.run.__code__,dict(Parent.run.__globals__,OUT=MATERIAL),argdefs=Parent.run.__defaults__)
+    base.Material=Material;base.MATERIAL=MATERIAL;base.PHOTON=lift.PHOTON
+
+
+def prepare():
+    assert not read(OUT/'material/pilot-64.json')['passed'];assert not MATERIAL.exists();MATERIAL.mkdir()
+    write(OUT/'material-affine-plan.json',dict(classification='Counterexample candidate',
+        failure=read(OUT/'material/pilot-64.json')['directional_relative'],
+        repair='At fixed primitive/geometry state, the lapse-gradient acceleration ap enters only the momentum source affinely. Measure its diagonal coefficient once at each saved background knot, verify opposite directions and two probe sizes, and remove that channel before the existing native finite directional response. Restore its exact linear force in both rate and momentum ledger.',
+        reason='A rapidly varying incident wave can make ap large relative to the hydrostatic acceleration while all primitive and dimensionless geometry changes stay small. Its old joint probe cap then suppresses the recoverable thermodynamic increment. The physical amplitude is unchanged.',
+        controls='Keep8x Richardson for the remaining channels and original4/8/16 comparisons,0.2percent derivative gate,1e-8 conservation and owner gates,1percent actual donor gate and2percent time gate. No changed waveform,clock or physical state.',
+        scope='Exact affine separation in the current finite material equation, not a full native EOS Jacobian certificate. The ap coefficient itself must agree below1e-12.',
+        budgets=dict(check=45,pilot=60,production=400),total_production_allocation=1500,
+        bindings={str(p):sha(p) for p in [Path(__file__),Path(lift.__file__),Path(base.__file__),OUT/'material/pilot-64.json',lift.PHOTON/'result.json']}))
+
+
+def check():
+    initialize();m=base.Material(128,64);d=np.load(OUT/'material/pilot-64.npz');rows=[]
+    for i in [1,2]:
+        t=d['t'][i];z=d['history_scaled'][i];rates=[m.rhs(t,z,p)[0] for p in [.5,1.,2.]]
+        norm=np.maximum(np.sum(abs(rates[1]),axis=1),1.)
+        errors=[(np.sum(abs(r-rates[1]),axis=1)/norm).tolist() for r in [rates[0],rates[2]]]
+        rows.append(dict(time=float(t),probe_4_8_16=errors,passed=bool(np.max(errors)<.002)))
+    result=dict(classification='Counterexample candidate',passed=all(r['passed'] for r in rows),rows=rows,
+        affine_map_relative=max(m.ap_errors),physical_branch_ratio=m.physical_branch_ratio)
+    write(OUT/'material-affine-check.json',result);print(json.dumps(result),flush=True);assert result['passed'],result
+
+
+check_json=check
+
+
+if __name__=='__main__':
+    action=sys.argv[1];assert action in ['prepare','check','check_json','pilot','production']
+    resource.setrlimit(resource.RLIMIT_AS,(3*1024**3,3*1024**3));base.drive.native.deadline(dict(prepare=30,check=45,check_json=39,pilot=60,production=400)[action])
+    start=time.monotonic();cpu=time.process_time();error=None
+    try:
+        if action in ['pilot','production']:
+            assert read(OUT/'material-affine-check.json')['passed'];base.initialize=initialize;base.PHOTON=lift.PHOTON;base.MATERIAL=MATERIAL
+            if action=='production':assert read(MATERIAL/'pilot.json')['upper_remaining_seconds']<400
+            base.material(action=='pilot')
+            if action=='pilot':assert read(MATERIAL/'pilot.json')['upper_remaining_seconds']<400
+        else:globals()[action]()
+    except Exception as exc:error=repr(exc);raise
+    finally:
+        p=OUT/f'material-affine-{action}-receipt.json';assert not p.exists()
+        write(p,dict(seconds=time.monotonic()-start,CPU_seconds=time.process_time()-cpu,
+            peak_RSS_bytes=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss*1024,error=error,source_sha256=sha(__file__)))

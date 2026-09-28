@@ -1,0 +1,72 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "temperature_endpoint_reconstruction": 0.0,
+  "energy_balance": 0.0,
+  "crossings": {
+    "16": {
+      "below_seconds": 0.0003413374979721892,
+      "above_seconds": 0.0003723681796060246,
+      "below_delta_lnT": 0.00873984962328647,
+      "above_delta_lnT": 0.010094682097009668,
+      "interpolated_seconds": 0.0003701996089039533
+    },
+    "32": {
+      "below_seconds": 0.00035685283878910686,
+      "above_seconds": 0.0003723681796060246,
+      "below_delta_lnT": 0.009418582003337915,
+      "above_delta_lnT": 0.01010059274000889,
+      "interpolated_seconds": 0.00037007975427629484
+    },
+    "64": {
+      "below_seconds": 0.0003646105091975657,
+      "above_seconds": 0.0003723681796060246,
+      "below_delta_lnT": 0.009760074761465051,
+      "above_delta_lnT": 0.010102070535333754,
+      "interpolated_seconds": 0.00037005285985052894
+    }
+  },
+  "component_diagnostics": {
+    "velocity_mass_RMS_m_s": {
+      "previous": 0.013808352670846026,
+      "last": 0.011083042548403678,
+      "order": 0.31718722859692716,
+      "spatial": 0.3336625142215979
+    },
+    "scalar_mass_RMS": {
+      "previous": 0.000657110298102959,
+      "last": 0.00015947493413135793,
+      "order": 2.0428058692986926,
+      "spatial": 0.022618494613835555
+    },
+    "temperature_mass_RMS": {
+      "previous": 0.00034088994703438183,
+      "last": 8.504099316514339e-05,
+      "order": 2.003075703686039,
+      "spatial": 1.5343513322193825e-07
+    }
+  },
+  "boundary": {
+    "classification": "Counterexample candidate",
+    "internal_face_outward_luminosity_erg_s": -1.144559991199099e+34,
+    "direct_native_nuclear_thermal_power_erg_s": 8.97866093859911e-18,
+    "steady_required_outer_outward_luminosity_erg_s": -1.144559991199099e+34,
+    "outer_cell_baryon_mass_fraction": 1.0390922437458207e-14,
+    "outer_T_K": 18827.94717983866,
+    "neighbor_T_K": 18103.765821191,
+    "conditional_no_outgoing_only_steady_state": true,
+    "scope": "For this fixed, motionless outer shell, this LTE flux law and retained sources, Udot=Lin-Lout+Q. Since Lin+Q<0, no Lout>=0 preserves its energy. Thin-layer transport and the actual native-exterior connection are not certified; this is not a physical-star cooling bound."
+  },
+  "maximum_GR_residual": 2.663364304011132e-19,
+  "maximum_heat_residual": 4.152951016588209e-19,
+  "symbolic_boundary_identity": {
+    "classification": "Proven",
+    "passed": true,
+    "identity": "Udot=Lin-Lout+Q requires Lout=Lin+Q for a stationary motionless shell. Lin+Q<0 excludes every outgoing-only boundary in the declared model."
+  },
+  "seconds": 10.661884287000001,
+  "total_compute_seconds": 51.407735757000005,
+  "full_physical_background": false,
+  "full_four_component_convergence": false,
+  "full_goal_complete": false
+}

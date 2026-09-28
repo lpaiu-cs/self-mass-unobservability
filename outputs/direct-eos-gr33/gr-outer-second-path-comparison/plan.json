@@ -1,0 +1,30 @@
+{
+  "classification": "Proven",
+  "position": 1603,
+  "expected_nodes": 19024,
+  "bindings": {
+    "verification/gr_outer_second_path_comparison.py": "9bac711fab22f046f441267c48aecb31428703ccb6e37d7d84a5a674371a35c9",
+    "verification/gr_outer_node_comparison.py": "db1befcc8d5e74fa1fb7c523e1919a994e0fc4a691fe7ad2343695d05d4e801e",
+    "verification/gr_outer_path_comparison.py": "4f84326188ba863b00eeaa83722fb03b1ef36f19ff1ac845f6ece2f63ecdcb02",
+    "outputs/direct-eos-gr33/gr-outer-node-comparison/plan.json": "15015550207db5e603ccc7da2291ed1505813788cee552366c95a39a214eca27",
+    "outputs/direct-eos-gr33/gr-outer-node-comparison/manifest.json": "2e818e7bdba8a888105ef4f20f242fbc440900e45a36301969ebe08dbdcadf38",
+    "outputs/direct-eos-gr33/gr-outer-product-pilot/manifest.json": "b3e85a60d78a3702ada1ffef9a5cf65e82f5cdfa2ab2b7d56f1f404afcb2746f",
+    "outputs/direct-eos-gr33/gr-outer-self-refined/preflight-manifest.json": "e67d3dcd372274ad43fe4dbcbcdc0bba9b58081df69c64440db35593817367ec",
+    "outputs/direct-eos-gr33/gr-outer-self-refined/cell-1603-cusp.jsonl.gz": "214914048604899967efba8bce5d9941814348126af5edc5bf48ead4e4893f65",
+    "outputs/direct-eos-gr33/gr-outer-self-refined/cell-1603-finite.jsonl.gz": "fd015083a5fa25fbcfddd7ff2301c68aeffde59e41e7edd393dc6d9b423ac71c",
+    "outputs/direct-eos-gr33/gr-outer-self-refined/cell-1603-inputs.tsv": "a6f4315b0388bdf45c1a231ce15afff564fc91894b08bd08eb910deea5a7d318",
+    "outputs/direct-eos-gr33/gr-outer-self-refined/cell-1603-native.log": "385a1e454eb0b2f064efe0fe202fdfe75eacd0d00a0e9b422c8d621d612a4f09",
+    "outputs/direct-eos-gr33/gr-outer-self-refined/cell-1603-points.jsonl.gz": "751c8260981c39b139596e0656c14055de0f170c24c6a5478c12157a6e6654ef",
+    "outputs/direct-eos-gr33/gr-outer-self-refined/cell-1603-result.json": "0f07948ea3d485e48e9f8760d73bb95adc29dba77f9edc3fe194b15b9ee4902d",
+    "outputs/direct-eos-gr33/gr-outer-product-pilot/cell-1603-native.jsonl": "c7c2477e1e321027bc3c0fd82a47731f2af768a5b7905d841131054f0465a60b",
+    "outputs/direct-eos-gr33/gr-outer-product-pilot/cell-1603-native.log": "14ec0b712dba19c073b14b50540da5e323a3de0cf456d9b1bfac3cceafddb531",
+    "outputs/direct-eos-gr33/gr-outer-product-pilot/cell-1603-nodes.json": "d76ebec902313fe60fe23ec460b61e291f35ee89e9b41e8be94f42273fc396b2",
+    "outputs/direct-eos-gr33/gr-outer-product-pilot/cell-1603-points.jsonl.gz": "500ca7ee9c87553ae20ff99f98f0e61bfc68e2754269dcb5cfb673f7e0a262f9",
+    "outputs/direct-eos-gr33/gr-outer-product-pilot/cell-1603-q.tsv": "83ade59448e2f9318e3ac3daad426a65480c4d5586734f9cd941c4e3a1cfd4a2",
+    "outputs/direct-eos-gr33/gr-outer-product-pilot/cell-1603-result.json": "854f6960858df37b84b9ebb9704c4c051dd5c5a366686ce69ddb812c80e6fce5"
+  },
+  "field_gate": "All seven complete true-neutral physical-field intervals intersect, with each original absolute error below 2e-7.",
+  "node_gate": "All 19024 Q values agree exactly. At each node, the three eta responses intersect after the previously proved neutral-center shift. No fitted tolerance.",
+  "theorem_source": "outputs/direct-eos-gr33/gr-outer-node-comparison/plan.json",
+  "scope": "Two momentum representations share the outer Gauss rule, analytic domains, IR/high-Q bounds and field definitions. This finite compatibility check does not provide a full physical EOS or GR trajectory."
+}

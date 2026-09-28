@@ -1,0 +1,33 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "c39152f",
+  "previous_manifest_sha256": "682379ff2902d1a8386e86ab309484ff7bb533a455c796d1efb4b16fcdb65696",
+  "full_goal": "Resolve physical EOS certification, continuous errors, self-consistent GR thermal/fluid/metric/atmosphere evolution, nonzero scalar drive/charge and complete nonlinear observational inference. These finite time controls do not redefine completion.",
+  "duration_coordinate_seconds": 140780.16,
+  "step_counts": [
+    1,
+    2,
+    4
+  ],
+  "controls": {
+    "source_derivative_relative": 0.001,
+    "composition_absolute": 1e-16,
+    "composition_relative_to_total_change": 0.001,
+    "temperature_log_absolute": 2e-06,
+    "global_energy_relative_to_release": 1e-06
+  },
+  "coordinates": "26 mass fractions, enthalpy at a fixed initial baryon-shell reference pressure divided by C0, and accumulated neutrino energy at infinity divided by C0. C0 is the initial positive fixed-P dH/dlnT.",
+  "integration": "For a fixed initial block matrix W, d=h phi1(hW) F(y). Reconstruct the predictor reference EOS and solve its GR constraints directly, evaluate its complete chart source, then correct by h phi2(hW)[F(y+d)-F(y)-Wd]. Reconstruct and solve the corrected state independently.",
+  "predictor_policy": "No substitution of an older failed GR endpoint for the new predictor. Request31 covariance and scalar order controls remain supporting evidence only.",
+  "source": "Unchanged native executable, fresh seeded common-EOS auxiliaries, Request30 four-weak double-table correction, two-size finite chemical difference at fixed reference/actual P,T.",
+  "chemical_steps": [
+    1e-05,
+    5e-06
+  ],
+  "chemical_source_criterion": 0.001,
+  "EOS_inverse": "max(2 erg/g,32 ulp(target),1e-8 abs(target-current_reference_enthalpy))",
+  "fixed_flux": true,
+  "fixed_initial_preconditioner": true,
+  "energy_release_denominator": "Sum over accepted time steps and baryon cells of the absolute neutral-atom rest-excess change; no denominator from a predictor stage.",
+  "policy": "Preserve every earlier failure and every new failed gate. A finite energy/time pass is not a uniform error enclosure, physical EOS certificate or full GR/observational closure."
+}

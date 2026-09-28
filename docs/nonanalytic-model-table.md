@@ -1,14 +1,9 @@
-# Nonanalytic Model Table
+# Nonanalytic model table — corrected
 
-| Model class | Locality kept? | Analytic near reference? | Finite jet valid? | Generalized replacement data | Theorem layer broken |
-| --- | --- | --- | --- | --- | --- |
-| Analytic control `m_A(Y)=m_0+\alpha Y+\beta Y^2` | Yes | Yes | Yes | Ordinary finite Taylor coefficients | None |
-| Smooth flat one-coordinate activation `m_A(Y)=m_0+\alpha \phi_{\mathrm{flat}}(Y)` with `\phi_{\mathrm{flat}}(Y)=0` for `Y\le 0` and `e^{-1/Y^2}` for `Y>0` | Yes | No | No | Finite branch-profile data only if the model class is fixed explicitly; otherwise a non-Taylor function germ is needed | Analytic monopole jet collapse (`A5`, Lemma 55) |
-| Threshold square-root activation `m_A(Y)=m_0+\alpha \Theta(Y-Y_c)\sqrt{Y-Y_c}` | Yes | No | No | Threshold location `Y_c`, branch exponent `1/2`, amplitude `\alpha`, and branch label | Analytic monopole jet collapse (`A5`, Lemma 55) |
+| Status | Model | Local? | Finite-order jet at zero? | Exact reconstruction boundary |
+| --- | --- | --- | --- | --- |
+| Proven | Quadratic analytic control | Yes | Yes, exact for degree at least two. | None. |
+| Proven | exp(-1/Y^2) for Y>0, zero otherwise | Yes | Yes, zero jet with remainder smaller than every algebraic order. | The Taylor series does not recover the nonzero positive-side germ. |
+| Proven | sqrt(Y) for Y>0, zero otherwise | Yes | No sufficiently regular ordinary Taylor expansion at activation. | A threshold branch and domain must be specified. |
 
-## Readout
-
-- Status: Proven. All three models keep locality and finite family/operator closure separate from analyticity.
-- Status: Proven. Only the analytic control collapses to an ordinary finite sensitivity jet.
-- Status: Proven. The smooth flat model is the smallest sharp counterexample because it breaks analyticity without introducing nonlocality or a discontinuous activation rule.
-- Status: Proven. The threshold model is a stronger but less minimal nonanalytic escape route.
+Status: Proven. All three keep the specified polynomial catalog finite. The smooth-flat model does not break [Lemma 55](../lemmas/55-monopole-jet-collapse.md); the square-root threshold fails its regularity premise. Exact branch/profile data are a different goal from finite-order approximation.

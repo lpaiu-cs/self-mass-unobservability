@@ -1,0 +1,22 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "0f6b09ed",
+  "claim": "Determine the actual last range-generated bin by an overlapping two-bin explicit query and supply its missing last neighbor; reuse all other source data.",
+  "comparison": "First explicit interval [e997,e998] must match the last returned range row in exact printed intervals for both opacity means. Then [e998,e999] is appended as a separately retrieved bin. A mismatch rejects this repair.",
+  "queries": "Three explicitly supplied edges per request, same material and temperature/density. Full 1000-edge explicit pilot returned HTTP 403; no retry of that rejected payload.",
+  "bindings": {
+    "verification/def_photon_edge_repair.py": "c7290943238d962131c9050fd60b65972e415c4b8adfab6d9448f15932b3a8de",
+    "verification/def_photon_line_resolved.py": "627d4eb7838dddf378edaf29b11c11d65e1e2ced519a5914d73e1bdc0b13849c",
+    "outputs/direct-eos-gr33/def-photon-line-resolved/plan.json": "8d2182a73df1a872bb088e415483506d9f9cd74d501c2b58d5f7b564b9067df2",
+    "outputs/direct-eos-gr33/def-photon-line-resolved/reader-failure.json": "04587fc0b850ea14ea400aaa5bc3a7e02e667dacfe4d66950d91ffd06473bf40",
+    "outputs/direct-eos-gr33/def-photon-edge-repair/requests.json": "5b2338dfe6f8c19a4923cb7a5cd27031c9aee5fe6d3770c200e71f590ab1368e",
+    "outputs/direct-eos-gr33/def-photon-edge-repair/lanl-tops-form.html": "b5f1093f7912a1842803c411f375e86db6c21af3d6d9074a1c25a936211ef9d5"
+  },
+  "budget": {
+    "pilot_queries": 1,
+    "remaining_queries": 15,
+    "hard_network_seconds": 60,
+    "per_query_hard_seconds": 20,
+    "automatic_retry": false
+  }
+}

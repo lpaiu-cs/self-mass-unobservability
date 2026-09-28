@@ -1,0 +1,57 @@
+{
+ "classification": "Counterexample candidate (endpoint and history); Proven (permanent charge zero for positive damping); theorem progress (no-go)",
+ "passed": true,
+ "verdict": "OPEN_CONDITIONS_CLOSED__ENDPOINT_CHARGE_NEGATIVE_TRANSIENT__PERMANENT_ZERO__A4_HOLDS",
+ "final_charge": {
+  "endpoint_continuum_mass_normalized": -2.3350180598198245e-51,
+  "per_eta_phi_inf2": -2.3350180598198247e-15,
+  "observed_gray": -7.577422864805605e-51,
+  "observed_nongray_lte": -1.6053703677268236e-50,
+  "observed_one_sigma_gray": [
+   -3.794683236017773e-51,
+   -1.441287583075662e-50
+  ],
+  "observed_one_sigma_nongray": [
+   -9.153736109341902e-51,
+   -2.7265308252483827e-50
+  ],
+  "history": {
+   "transit_max_abs": 3.489397591962473e-36,
+   "relaxation_rms": 8.109571859943415e-45,
+   "permanent": "zero at first order in eta for positive mode damping"
+  }
+ },
+ "closed": {
+  "gr_fixed_point": 4.529005537907819e-18,
+  "adm": 6.754615886954982e-11,
+  "infinity": 4.221258511463531e-06,
+  "nonlinear": 1.0161793889859292e-27,
+  "phi_inf": "q/eta even in phi_inf (parity); state part proportional to phi_inf^2 (source weight alpha(phi0)/r); direct part (1e-8) exponent open",
+  "endpoint_and_long_time": "phase 278",
+  "atmosphere": {
+   "validation": 0.0024762710978898975,
+   "nongray_flux": 5.556664045758275e-05
+  }
+ },
+ "j0337_closure": {
+  "cassini_alpha0_max_2sigma": 0.003535556003226812,
+  "phi_inf_max": 0.000883889000806703,
+  "drive_modulation_per_unit_alpha_p": 3.0760784580697786e-10,
+  "paper_b_lag_limit": 1.7e-09,
+  "required_kappa_lag_times_alpha_p": 1563.1252991360914,
+  "freefall_delta_bound_cassini": 7.508179397451038e-21,
+  "freefall_kappa_at_cassini": 6.9036618627106425e-09,
+  "full_beta_relaxing_delta_bound": 4.3502590635301124e-12,
+  "freefall_delta_bound_phase274": 2.7182003308944474e-18
+ },
+ "remaining": [
+  "positive radial-mode damping assumed",
+  "interior Born scattering neglected",
+  "non-LTE and line/metal opacity in the non-gray correction",
+  "phi_inf exponent of the 1e-8 direct part",
+  "slow white-dwarf rotation",
+  "manuscript integration pending Pandoc (and TeX for the PDF)"
+ ],
+ "full_goal_complete": false,
+ "snapshot_KST": "2026-09-27T20:48:28.783050+09:00"
+}

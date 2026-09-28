@@ -1,5 +1,7 @@
 # Failure Ledger
 
+> Correction, 2026-09-09: the [unified theorem package](theorem-package.md) supersedes stronger historical wording below. Smooth-flat response retains every finite jet and only defeats exact analytic-germ reconstruction. Sufficient differentiability replaces analyticity for a finite-order remainder. Sensitivity labels do not establish coefficient independence from EFT Wilson data or observational absorption.
+
 - Status: Proven. Inside the stated theorem domain `A1`-`A9`, the positive finite-family collapse theorem is closed.
 - Status: Note. This file is no longer a to-do list. It is the sharp boundary-risk register for exact assumption-drop failures and scope escapes.
 - Status: Note. The older milestone-style ledger is preserved in [`archive/failure-ledger-history.md`](archive/failure-ledger-history.md).

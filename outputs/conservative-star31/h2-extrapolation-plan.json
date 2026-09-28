@@ -1,0 +1,14 @@
+{
+  "classification": "Counterexample candidate",
+  "original_all_zone_audit_sha256": "3d5c7edf29b4c20671568a4684147bec8be4fe4eea83d6ae93805161b1bd1474",
+  "steps": [
+    1e-09,
+    5e-10,
+    2.5e-10
+  ],
+  "criterion": 0.001,
+  "observation": "In cell 3184 the original H2 one-sided steps differ by about 2.05e-7 while their extrapolated derivative norm is 8.08e-15. The initial heat is 8.74e-15 erg/g/s, so the registered burning-zone mask excluded this cell.",
+  "method": "Compare two second-order extrapolated derivatives from three new positive simplex steps. This tests the actual extrapolated estimator; it is distinct from and does not repair the original first-order step-difference verdict. Require the same 1e-3 vector-relative criterion over all 5735 cells.",
+  "physical_or_continuous_certificate": false,
+  "original_all_zone_audit_snapshot": "h2-original-all-zone-audit.json"
+}

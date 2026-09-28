@@ -1,0 +1,23 @@
+{
+  "classification": "Counterexample candidate",
+  "bindings": {
+    "verification/def_hydrostatic_native_audit.py": "a57d7a4cd9210880db85c8c66fb6f70bc14d675c09c01b04ac9c08ea9cef742a",
+    "outputs/direct-eos-gr33/def-hydrostatic-background/absolute-shoot/background-0.001.npz": "774e2bff821f5863291167f069a8673562bfee8b0ab648468c8dfc5a2a9b04d3",
+    "outputs/direct-eos-gr33/def-hydrostatic-background/absolute-shoot/result.json": "3d222d0ddda639e3d0451c6b8ffbf4a31fd1cec12acbdbca3bcb7f065b1d9be8",
+    "outputs/direct-eos-gr33/def-hydrostatic-background/absolute-shoot/plan.json": "b128cc6517e0f3dc8654dabf17edad163a6a0f7b03e81666ea70136413b58b52"
+  },
+  "claim": "Evaluate the original native finite-temperature EOS independently at every reconstructed midpoint. Retain the same nuclear and entropy inventories; quantify interpolation disagreement.",
+  "gates": {
+    "interface": 1e-08,
+    "GR_reproduction_relative": 1e-08,
+    "native_logrho": 1e-07,
+    "native_entropy_over_cv": 1e-07
+  },
+  "budget": {
+    "workers": 4,
+    "hard_timeout_seconds": 180,
+    "maximum_native_calls": 5735,
+    "automatic_expansion": false
+  },
+  "scope": "All saved midpoints, not continuous EOS/space errors, thermal stationarity, atmosphere or dynamic response."
+}

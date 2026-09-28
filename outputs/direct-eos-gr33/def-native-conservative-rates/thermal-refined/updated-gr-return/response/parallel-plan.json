@@ -1,0 +1,22 @@
+{
+  "classification": "Counterexample candidate",
+  "reason": "Serial measured forecast937s exceeds650s. Profiling confirms actual Krylov/preconditioner arithmetic dominates; repeated table reads are no longer the main cost. These three prescribed response paths are independent.",
+  "decision": "Measure concurrent four-step continuations before dispatch. Keep650s production wall cap and all equations/gates; explicitly change resource allocation from one to three CPU processes, one thread each,2GiB virtual memory each. No GPU port, new path, finer grid or relaxed residual.",
+  "reuse": "Reuse all bank/GR/background data and saved physical response prefixes. The profile continuation is reused for the fine path. No completed response segment is repeated.",
+  "budget": {
+    "pilot_wall_seconds": 65,
+    "production_wall_seconds": 650,
+    "CPU_processes": 3,
+    "threads_each": 1,
+    "total_virtual_memory_GiB": 6
+  },
+  "forecast": "For each concurrently measured path separately:17 operator points, remaining step cost and15s setup/export;2x the maximum must fit650s. This tests actual contention rather than dividing serial time by3. Later iterations remain extrapolated.",
+  "stop": "No dispatch on failed concurrent pilot, memory limit, forecast or physics gate. Stop all workers if one fails or650s expires. No automatic increase.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_parallel_return.py": "7999d0f2f088491b66f2ef8629a84f4660f68e20d8fa6d2e9f1f5ba2cc0bc3f6",
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_updated_gr_return.py": "d2c456a74a41ee97b07f026effdadd08c72d583b059420e933b8d72094c719d9",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_updated_gr_return.py": "2ebdded1c3970bd2e0e038cfd29151b7ac32a84e8c50092584ebce5ed5cdbc77",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/response/pilot.json": "c1c416227b78255eed4f8757c989786ab9aaa5359853c6fdc71c367e42671957",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/response/profile.json": "b3ef58bce10fbcf8d1b7e4b2a02c98655000f41d15aed54192de53c2ccbf0e02"
+  }
+}

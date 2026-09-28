@@ -1,0 +1,20 @@
+{
+  "classification": "Counterexample candidate",
+  "budget_seconds": 60,
+  "claim": "Independently test the characteristic pulse integration and interior boundary sign, then bound the missing finite-Born and further fixed-potential terms for this current interior operator.",
+  "method": "Exact box/pulse antiderivative at4/8 source degrees; independent unreduced flat wave source versus volume plus boundary.50-digit outward intervals use exact saved binary nodal values and inverse-Legendre coefficients; all time slopes are bounded by2*sup/dtmin.",
+  "gate": "Original independent1e-10 checks. Separately require selected higher terms below1percent of the stored body; this does not certify body, interpolation, EOS or full mixed constraints.",
+  "reuse": "No new fluid/EOS states, physical mesh, source times or potential iterations. Reuse previous continuous finite-Born source and same initial-static global coefficient bound; rebuild norms for the actual current interior source.",
+  "stop": "Preserve a failed bound or audit; do not automatically increase quadrature, horizon, sampling or calculation budget.",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/audit_native_interior_incident.py": "a258af7853f991243636453ac7ea9ca8a55e68c210e7864fc1ec6bb3b4f75ca6",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/couple_native_interior_incident.py": "9f8cf452e6bd7b4ac26bc3d41ef7e57662ad8df76b51567200e6e60c5ba716f9",
+    "native-interior-incident160-work/plan.json": "96bcce09018bd5cbf9d47e875d0452d7edb548640ec3445fd4fdb4731d69bd2d",
+    "native-interior-incident160-work/result.json": "8665d90a1a70a87169ce75278fa5256546ca7c8b40de57a9166ece64c21dd576",
+    "native-interior-incident160-work/operator-128-g8.npz": "6b522cd3011b976982157109bb366cf47b8e633ef1bb461d011828203feb931a",
+    "native-interior-incident160-work/coefficients.json": "ddaec764aaa04e1eadc986ca6bf446425f519bc903aef6441327d1dc6ccce637",
+    "native-exterior-incident159-work/bound-result.json": "52288c2cd43d3f18186f4087e062126f2e40d11b99bb0223f2bde59f620fd003",
+    "outputs/direct-eos-gr33/native-retained-completion/infinity/completed/retained-128-a8-r8.npz": "55ddaec7e139c588cb4b9dcaf47c3a3b01735e72df958f6f6b1f7c89fa263235",
+    "outputs/direct-eos-gr33/def-native-global-scalar-closure/bound.json": "39cbee9c32b2d16c239d8ae14f188be2177e53bca27fe0ec4d8df88a29a66f58"
+  }
+}

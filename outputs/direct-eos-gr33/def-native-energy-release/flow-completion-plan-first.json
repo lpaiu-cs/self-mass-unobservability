@@ -1,0 +1,11 @@
+{
+  "classification": "Counterexample candidate",
+  "decision": "Reuse the completed224-cell pilot and native trajectory cache. The original cell-squared extrapolation included one-time EOS construction. Measure actual896/1792-cell RHS costs after adding only a missing-domain fast path, before any further evolution.",
+  "source_sha256": "8ee8de70e7ef3e3884c49798bb8211e04adfb9a25cad5de1d59e66635f5473fb",
+  "EOS_source_sha256": "a59f35e74be97543b7b0fa87a4d8836488fef42069e32be91b95dced363e2c53",
+  "remaining_total_seconds": 165,
+  "additional_native_calls": "Unchanged3000-call runtime cap minus already saved calls",
+  "benchmark": "Three actual RHS calls at initial and interpolated pilot endpoint states on each registered grid. Offset the inverse seed by0.03 in logT so recovery cost is included. No time steps are advanced by this benchmark.",
+  "forecast": "2 RHS per step, final/initial measured CFL with50percent step margin,15percent output overhead, plus0.022s for every remaining allowed native call.",
+  "stop": "Do not start remaining evolution if the measured forecast exceeds remaining time. No new grid, horizon, gate or native-call extension."
+}

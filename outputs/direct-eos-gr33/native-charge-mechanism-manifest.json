@@ -1,0 +1,144 @@
+{
+ "classification": "Counterexample candidate",
+ "passed": true,
+ "verdict": "ENDPOINT_CHARGE_IS_FREE_FALL_BARYON_MEMORY_REPRODUCED",
+ "composition_4x_T": {
+  "total": -2.3442699996854763e-51,
+  "state": -2.344269976254826e-51,
+  "geometry": -2.3430649873674368e-59,
+  "baryon_state": -2.3442600340630467e-51,
+  "metric_stress_state": -9.935218347079662e-57,
+  "nonrest_trace_state": -6.973463074927571e-60,
+  "state_share": 0.9999999900051401,
+  "geometry_share": 9.994859754558131e-09,
+  "closure": 1.265794861917808e-16
+ },
+ "freefall": {
+  "model": "d2xi/dt2 = -c^2 (a^2/B^2) d/dr[alpha(phi0) dphi], alpha=-4 phi, dphi = eta (R_d/r) f((t+x/c)/D), f=(4p(1-p))^4; Phi=4 pi r^2 B rho0 xi",
+  "charges": {
+   "1x": {
+    "chain_total": -2.4833128680653422e-51,
+    "chain_baryon_only": -2.483302310312335e-51,
+    "freefall": -2.3949663665963773e-51,
+    "relative": -0.03557196534192697
+   },
+   "2x": {
+    "chain_total": -2.372117616121833e-51,
+    "chain_baryon_only": -2.372107530835721e-51,
+    "freefall": -2.3497998434697216e-51,
+    "relative": -0.009404163629184281
+   },
+   "4x": {
+    "chain_total": -2.3442699996854763e-51,
+    "chain_baryon_only": -2.3442600340630467e-51,
+    "freefall": -2.338702582450042e-51,
+    "relative": -0.0023706634640578983
+   }
+  },
+  "richardson_freefall": {
+   "order": 2.0250502203869893,
+   "limit": -2.33508791061617e-51,
+   "monotone": true
+  },
+  "richardson_chain_total": {
+   "order": 1.9974694328182998,
+   "limit": -2.334965719648403e-51,
+   "monotone": true
+  },
+  "limits_relative": 5.233094719070408e-05,
+  "dM_T_relative_ranges": {
+   "1x": [
+    1.805027549547835e-06,
+    4.4685113721691714e-05
+   ],
+   "2x": [
+    1.6356937768207628e-06,
+    3.7088600730277705e-06
+   ],
+   "4x": [
+    2.3412144106564354e-07,
+    4.3394849691964885e-06
+   ]
+  },
+  "rejected": [
+   "pulse arrival from the delay array (constant +4.0e-6 s): larger deviations"
+  ]
+ },
+ "sources_sha256": {
+  "1x: readout267-identity2-work/gr/source-64.npz": "ca0579160f647b2dc480ba76de4c17ba04adaa028e6f336c81901d1e3cfd0d05",
+  "1x: readout267-identity2-work/gr/field-source-64.npz": "c850dbd06984bf37e313743a2770c1cc77e9f09c6d13630f60be7630fe81555c",
+  "2x: readout267-refined64-work/gr/source-64.npz": "cedf2ef16df11d730870dbffece2cae997e72fb034642fc8605288ae3f25df6c",
+  "2x: readout267-refined64-work/gr/field-source-64.npz": "9100c4b91f2e2ff16e26e5e46dbf92342ad8122ebf4788c59772cd77abc7cf88",
+  "4x: readout268-quad64-work/gr/source-64.npz": "673285f4e8c1412f00e374070259aac8686ac7efd4291fde21ddd7f2497cea8c",
+  "4x: readout268-quad64-work/gr/field-source-64.npz": "9023800be0cb3c3627a87c1ddbf35191aa6ec7b7f4468993be846e47929d69f2"
+ },
+ "not_modelled": [
+  "atmosphere cells (chain values kept; charge share 6e-4)"
+ ],
+ "final_charge_conclusion": "conditional negative charge; continuum limit about -2.335e-51 from two independent routes; final physical charge unadjudicated",
+ "full_goal_complete": false,
+ "snapshot_KST": "2026-09-27T16:58:59.395841+09:00",
+ "document_prefixes": {
+  "docs/model-definition.md": {
+   "bytes": 288369,
+   "sha256": "ae0f1dcc438ccd0f8fe7549588bee09b11c72be41ef8e966e95e489a3f9527a7"
+  },
+  "docs/observable-targets.md": {
+   "bytes": 279188,
+   "sha256": "eacce70baa82fb9e23cdb50824823beb2e2d341aa4a1285392ef773e96a6a377"
+  },
+  "docs/adiabatic-limit.md": {
+   "bytes": 273527,
+   "sha256": "6b109c219e5cfe7aeacf5be285efc7cd1e00f50ac0cf08ae6e5a9f395ee47e09"
+  },
+  "docs/nonadiabatic-regime.md": {
+   "bytes": 282019,
+   "sha256": "8a1617b10355748a04d1cff286b51c18d5d6f220f0d3e3c552d4b49c71d32e13"
+  },
+  "docs/failure-ledger-dynamic-chi.md": {
+   "bytes": 319623,
+   "sha256": "054942464e48b727ae2a7dcb928024fb63ace5c4b3ba09c976d3d331e845b748"
+  },
+  "docs/dynamic-charge-completion.md": {
+   "bytes": 147787,
+   "sha256": "6da6fd72dd9ee57c1ad51ae804e74c18f15e14082bf7b50bca56e765e17b19d8"
+  }
+ },
+ "sha256": {
+  "notes/REQUEST270_CHARGE_COMPOSITION_KO.md": "bbcd236c6807e99b443d6f93059fd97574f0a615718a6dcf5225095804585420",
+  "notes/REQUEST271_FREEFALL_REPRODUCTION_KO.md": "8446ca7c6871b09294e9b0dd53e5e642ce37b73d7dbb7bb848d6872005794eb1",
+  "docs/model-definition.md": "7940b9ffeef89dbc43ab7c5bf2079636c88f0082a6c91de21b21c2bf8130397c",
+  "docs/observable-targets.md": "a803b550139adce0eeadcebb4ca3cc7900c40918497dd655e999bdccc144b265",
+  "docs/adiabatic-limit.md": "c16df2818a05b964b0b76711a6d36df09fa151144fa9525a821ef44754b80200",
+  "docs/nonadiabatic-regime.md": "999eb88e5d12e22c9ddd1434e4286ae4de1b23d3eba18dddae096a1ddfa634aa",
+  "docs/failure-ledger-dynamic-chi.md": "9f5ab6263153405003f4a5d07067e72ceba292ab444fde38804c0040bb1b88be",
+  "docs/dynamic-charge-completion.md": "3b9c7276700ddadbbeb0dbe1af882bb03472bd19be841dfbbe3af54022af529b",
+  "outputs/direct-eos-gr33/native-charge-mechanism/publication.json": "8c5c2acc1464e6f1a340dc7b653ddad779ce54d8c73c1664f1d920f75b9d503d",
+  "outputs/direct-eos-gr33/native-charge-mechanism/result.json": "9c50b9d4873ece925abb4e931e5f12691e471d466437e0228d4d211bf5f4cdce",
+  "outputs/direct-eos-gr33/native-charge-mechanism/phase270/baryon-conservation.txt": "8f26789e7a7c5ae68d95357048186d1618ee5c154e61a1804abcb73bc7dc1dcd",
+  "outputs/direct-eos-gr33/native-charge-mechanism/phase270/components-T.json": "a2d895561cbb1a881cf5dac71d8dd6883ff0948185c78b11fa7f0c748cc66ca2",
+  "outputs/direct-eos-gr33/native-charge-mechanism/phase270/components.stdout.log": "9aaec4b8235ca8e91cbb46979e5d3f6fbb932f0b3c8670c48c89e7e0a1547f88",
+  "outputs/direct-eos-gr33/native-charge-mechanism/phase270/frozen-memory.txt": "e573f51b49ee6c8b798c8488b0f5c3e433cef57139d332ab59d240b9deaf7ead",
+  "outputs/direct-eos-gr33/native-charge-mechanism/phase271/1x-charge.json": "e4e11624890833e40c319677b59214c933b7f25057fb5c659c5696aea4abd527",
+  "outputs/direct-eos-gr33/native-charge-mechanism/phase271/1x-compare.json": "17c45093c95a5b57f56c19b01e94b8444641a8f16f08844f9a4ef321df0ac68a",
+  "outputs/direct-eos-gr33/native-charge-mechanism/phase271/2x-charge.json": "fad2fb10d90c57fe5f57d59f2c5868a757eb7b6182b4b9fea3732e386012c90d",
+  "outputs/direct-eos-gr33/native-charge-mechanism/phase271/2x-compare.json": "836fdbc7a1a24cc8d50196393e7cf7d3e7ff29e1d77d0d801ef94bde1739782f",
+  "outputs/direct-eos-gr33/native-charge-mechanism/phase271/4x-charge.json": "5dd078a2d6d50745faad947da95b32d7841e0a8a0bc01c19689e19e72fb693fc",
+  "outputs/direct-eos-gr33/native-charge-mechanism/phase271/4x-compare.json": "21de58d4b42473142317c25165748b0f891b14022b4e8a4c728fed17b00e2eda",
+  "outputs/direct-eos-gr33/native-charge-mechanism/phase271/4x-delay-arrival-compare.json": "9ede7b29a16fb1ca7a59700b35825a426432197cc6865b7bcef4f97e0920a251",
+  "outputs/direct-eos-gr33/native-charge-mechanism/scripts/find-setup.sh": "1dbea7ad5e6fde8c49c00d2ed1dc1e1b1d0c12d796ec9ef06d7a817dfce3db5c",
+  "outputs/direct-eos-gr33/native-charge-mechanism/scripts/find-setup2.sh": "faae54b2312b3145f71acde8ee34c11283e98226dbdc42d5f067994a21d188c6",
+  "outputs/direct-eos-gr33/native-charge-mechanism/scripts/find-setup3.sh": "2aefde5902914e5baa174cca9212bcc7630c44126464e1e23adc754be3ae21e2",
+  "outputs/direct-eos-gr33/native-charge-mechanism/scripts/inspect-ff.sh": "a21bdbb7da3010fea32fc0ac18c8101e16a80cfb1cc05d1be976ed5c265319b9",
+  "outputs/direct-eos-gr33/native-charge-mechanism/scripts/phase270-baryon.py": "6ab061f57d6463c1340225adeff71322271a5d599ddf6ecd6bf2d7c54b028319",
+  "outputs/direct-eos-gr33/native-charge-mechanism/scripts/phase270-components.py": "33b421da075c2504474b13d1f0176211bad211108da8ae1398daf8afeeca3aac",
+  "outputs/direct-eos-gr33/native-charge-mechanism/scripts/phase270-memory.py": "dd26e98db41290d8f8bfdc62bc92596704aec157108a8c1b2488e49f6cddba9f",
+  "outputs/direct-eos-gr33/native-charge-mechanism/scripts/phase271-freefall.py": "dba100154dba82f4512541d0acc65f729dc3b65bf9af5af5890a41ea7479b0ae",
+  "outputs/direct-eos-gr33/native-charge-mechanism/scripts/phase271-publish.py": "ab9a4c5cea64e36f64653cd76945974eb5839c8b54ba25bb3ad36a7872919272",
+  "outputs/direct-eos-gr33/native-charge-mechanism/scripts/run-components270.sh": "94a5a150b2f7ccc89a1dd77daa2814e327accc09d2834b9fb1485b7801508456",
+  "outputs/direct-eos-gr33/native-charge-mechanism/scripts/run-diag270.sh": "05945dfae19411f6e4baabccc0ab728fcea2841f29687b191a948f2c975e5937",
+  "outputs/direct-eos-gr33/native-charge-mechanism/scripts/run-freefall271-all.sh": "6fa96d060f956ed575f2724b5e3988b34f7a9ca83f72d95d4a236b0cb3c42f89",
+  "outputs/direct-eos-gr33/native-charge-mechanism/scripts/run-freefall271-grids.sh": "a023b260a85bb776df4d3d45f444662fa238a777b077fb620fa16d5ee6c058b2",
+  "outputs/direct-eos-gr33/native-charge-mechanism/scripts/run-freefall271.sh": "2f131f1abb488511d36de305d662d65c235799b78a008f27e74dfbcf19b06daa"
+ }
+}

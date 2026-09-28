@@ -1,0 +1,25 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "initial_profile_sha256": "ec5b33931274536ac9fe0e29afe9522463c01e12214ef7c55a3f972358600985",
+  "source_sha256": {
+    "star/private/opacities.f90": "a05469a0ceb8ae54246f7386d75f1068b08b1e7d75d38ab75d9a861c66379fed",
+    "kap/public/kap_lib.f90": "ddd2608dbc8fa2392d5a596a2a406503e9753cf49e70f98909cf00d75026d90b",
+    "kap/private/kap_eval.f90": "fbc201fc45aa84f07cc36bea9581cedf9d6a59d06f30f5535ee3fd0231248292",
+    "star/defaults/controls.defaults": "412ae05148d8b700dfc0e5a2322e6d4cf9ae51e6d3d2f700a83db507b3400149"
+  },
+  "frozen_interior_diffusion": true,
+  "conservation_relative_residual": 1.8328657173676854e-18,
+  "dissipation_identity_relative_residual": 0.0,
+  "face_reconstruction_score": 0.007394058920824724,
+  "constant_redshifted_temperature_zero_flux": true,
+  "forward_Euler_positivity_step_seconds": 4.642161814254237e-05,
+  "limiting_cell": 111,
+  "fastest_frozen_eigenvalue_per_second": -39197.749122945264,
+  "linear_Euler_stability_step_seconds": 5.102333794032209e-05,
+  "registered_step_to_positivity_step": 3032642239.392,
+  "initial_maximum_log10_temperature": 7.509067106982461,
+  "opacity_interpretation": "The source default includes electron conduction and combines inverse radiative and conductive opacities. Source inspection is not a new compiled-runtime proof. Do not add a second conductive flux to this total-opacity control.",
+  "boundary": "Both boundary perturbation fluxes are fixed to zero for this interior operator. No convection, radiating atmosphere, opacity/metric derivative or physical opacity certificate.",
+  "full_transport_or_GR_closed": false
+}

@@ -1,0 +1,18 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": {
+    "seconds": 14.079571204000004,
+    "CPU_seconds": 9.182264554,
+    "peak_RSS_bytes": 1292603392,
+    "error": "AssertionError(('delta_packet_scaled_occupation', 5.437336305184719e-17))",
+    "source_sha256": "616c122efd93955220579edd4242d135c69ece676e1983758ffd5d6dff0c862f"
+  },
+  "repair": "Legacy output multiplied x*scale*amplitude successively but restored by dividing through scale*amplitude, whose float64 product rounds differently. Reuse original unscaled internal checkpoints and verify their endpoint and saved histories against the accepted output. No tolerance is relaxed; all physical values and the second zero-step serialization must match value bits exactly. No physical step has run.",
+  "source_sha256": "4fedbf7b0a16b3e747e414d6959ed5123ce9ca0147ff5fc2be6b7090ce3abb79",
+  "check_spent_seconds": 14.303016455000003,
+  "remaining_check_seconds": 40,
+  "bindings": {
+    "native-full-time182-work/sweep-1/photons/pilot-128-checkpoint.npz": "2267531615e4cc3744ed05fdb7189471239845dfb3375fa84c44f1a3b461dd1c",
+    "native-material-front183-work/sweep-1/photons/pilot-128-checkpoint.npz": "d3e33b6c74e644cee21efcf2fbc2b48213e380524cfd26df5d2f1f82fe5774ef"
+  }
+}

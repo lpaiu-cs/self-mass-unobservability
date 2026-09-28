@@ -1,0 +1,35 @@
+{
+  "pid": 400,
+  "utc": "2026-09-14T09:12:57.583950+00:00",
+  "command": [
+    "/usr/bin/taskset",
+    "-c",
+    "0-15",
+    "/usr/bin/python3",
+    "-u",
+    "verification/gr_cached_material_evolution.py",
+    "chain",
+    "--workers",
+    "15"
+  ],
+  "cpu_affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "checkpoint": "41bc1b858ffd6fe83f7caba8fc7e5af4e5b1f1ed",
+  "scope": "Compute only the new 64-step path, then compare against the revalidated complete 16/32 paths. Keep the original 8/16/32 failure. No full-duration production launch."
+}

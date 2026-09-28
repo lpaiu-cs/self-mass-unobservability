@@ -1,0 +1,9 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "equations": "dE_i/dt=gamma_i*(C_i*dT-E_i); C_m*d(dT)/dt=-sum_i dE_i/dt. C_i is the derivative of the fixed-physical-frequency-bin Planck energy.",
+  "invariants": "C_m*dT+sum E_i is conserved. The derivative of (C_m*dT^2+sum E_i^2/C_i)/2 is -sum gamma_i*(C_i*dT-E_i)^2/C_i. Bins with C_i=0 are unexcited in this model.",
+  "opacity_derivative": "At LTE, variation of gamma multiplies B_i-E_i=0, so opacity derivatives are not needed for this absorption/emission Jacobian. This does not justify freezing opacity in a nonlinear evolution.",
+  "rounded_rates": "For relative rate error <=eps<1, the loss-resolvent error divided by its DC value is <=eps/(1-eps), uniformly on the imaginary axis. The energy-response error is <=eps/(2-eps). These bounds concern printed-rate uncertainty in the fixed finite measure only.",
+  "omitted": "Spatial transport, Compton/angular redistribution, atomic model/continuum error and the physical surface are separate."
+}

@@ -1,0 +1,45 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "250385ee1",
+  "claim": "Connect material temperature, resolved absorption, angular scattering, photon frequency redistribution and spatial transport in one unsplit linear operator at the actual saved surface state.",
+  "previous_turn": "Progress: native photon grid, conservative local absorptive tangent and failed-window replay accepted in Phase60.",
+  "sources": [
+    "https://arxiv.org/html/2209.06240",
+    "https://arxiv.org/html/1601.01005"
+  ],
+  "actual_temperature_keV": 0.0016224669549073619,
+  "actual_temperature_K": 18827.94717983866,
+  "model": "Vacuum photons; fixed local state and Fourier spatial modes. Native absorption and scalar scattering rates. Elastic unpolarized dipole phase eigenvalues 1,0,1/10,0,...; this is an explicit leading-order candidate, not a recovered ATOMIC differential kernel. Angle-averaged Kompaneets energy redistribution uses the same material EOS free-electron density and exchanges energy with that material. Stimulated scattering and photon-number conservation retained. No fitted timescale or opacity normalization.",
+  "frequency": "Retain native source cells through u=60 and their exact Planck derivative capacities; report excluded capacity. Adjacent frequency exchange uses a positive detailed-balance bracket. Tail and frequency-discretization checks remain distinct from physical cross-section uncertainty.",
+  "spatial": "Legendre angular projection of exact local Fourier streaming. Wavenumbers 0,1/H_T,10/H_T with H_T measured between the two actual outer cells in proper distance. These are local component modes, not the inhomogeneous atmosphere or a derived orbital drive.",
+  "gates": {
+    "native_means_relative": 0.001,
+    "energy_number_algebra": 1e-10,
+    "linear_residual": 1e-09,
+    "time_order": 1.8,
+    "time_difference_initial": 0.001,
+    "angular_difference_initial": 0.001,
+    "tail_capacity_fraction": 1e-17
+  },
+  "budget": {
+    "new_physical_queries": 1,
+    "network_seconds": 45,
+    "native_EOS_calls": 1,
+    "pilot_seconds": 30,
+    "production_seconds": 180,
+    "CPU_workers": 1,
+    "GPU": false,
+    "new_stellar_steps": 0,
+    "automatic_expansion": false
+  },
+  "limits": "This candidate does not close native angular/energy redistribution, polarization, bound-electron recoil, collective corrections to Compton redistribution, nonlinear opacity updates, the atmosphere, GR feedback or full dynamic charge.",
+  "bindings": {
+    "verification/def_photon_spatial_coupling.py": "778011f93a9ed56a99b668cd95c1d3ef519e58a1881534c1f80297575a425661",
+    "verification/def_photon_native_measure.py": "b2fcd1b59febb12c5900358f68167b2830975b44308950c97a09ac1d8243d925",
+    "outputs/direct-eos-gr33/def-photon-native-measure/manifest.json": "2f322527bd68bd0297a79395983a903d11bd6e9321fc95362e8c623923458a48",
+    "/home/lpaiu/work/direct-eos-gr33/radiation-eos-split/gas.so": "6779b197aa500652e4db02363754f8b40c2c4eecd71b169714bfa02b188892df",
+    "outputs/direct-eos-gr33/def-free-surface-thermal/coefficients.npz": "8fa9ddf79c966965a3a3fa26e6b4c738f82eec0b6ad257e521ae37c9403fb46c",
+    "outputs/direct-eos-gr33/def-photon-spatial-coupling/requests.json": "cdd85a21919da9e9be74f48538c92cc93050682cf37f5c3e82f2443269d12c86",
+    "outputs/direct-eos-gr33/def-photon-spatial-coupling/lanl-tops-form.html": "b5f1093f7912a1842803c411f375e86db6c21af3d6d9074a1c25a936211ef9d5"
+  }
+}

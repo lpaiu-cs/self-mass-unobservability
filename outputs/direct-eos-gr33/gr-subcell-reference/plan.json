@@ -1,0 +1,46 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "6338252",
+  "bindings": {
+    "verification/gr_direct_cell_integrals.py": "45b29865ad5df4f91bfb9b35605f4cc36c2f1989a95784afdf70988f98eca200",
+    "verification/audit_structured_enthalpy.py": "294b4bdf416cbb7f546c79e350d07be727cbcd605f1be0f2de322817c20c73aa",
+    "verification/direct_eos_gr.py": "5709a4cbf5830de09001481813617d43ee2c935a0dff3cd813110d73a7066fdf",
+    "outputs/direct-eos-gr33/gr-spatial-preflight/manifest.json": "40d7817418118cd465013dd900627ccc656a91f758ecc0ded923240b9ec515b8",
+    "outputs/direct-eos-gr33/initial-state-17-4.npz": "5dcc8ffb8b32a9f15ccc4c8bb7111d19be8dcdc66611ad2942e3a4a0cf6cc6d6",
+    "outputs/direct-eos-gr33/reference-state.npz": "17cbbb101628ca9bc111dca0cfe902210f13697c632b91c03913a1718cf7d2ef",
+    "outputs/direct-eos-gr33/gr-microphysics/auxiliaries.npz": "63744d1a041ebc39bd33dfa0f5e181d64378966c1ee22364c477009bee08d976",
+    "verification/gr_subcell_reference.py": "fcb329d16c84d25999569d9c1047b4724f875adad39a08a97a51cb73999297e2",
+    "outputs/direct-eos-gr33/gr-direct-cell-integrals/manifest.json": "6a13a1e1bd79eb5bebf5f802f7f5426c0bae82ff86ef69be008198d4c903051e",
+    "outputs/direct-eos-gr33/gr-subcell-reference/node-run.py": "e2fa74ec16bdc084948d09af1187ac92f6bc85e2a21fc46e3970fb8cd138ab8b"
+  },
+  "cells": [
+    0,
+    1,
+    2,
+    2972
+  ],
+  "selection": "Three failed time-gate surface cells, plus a fixed interior control. Selected after the spatial diagnostic, not a held-out physical validation sample.",
+  "integrator": "DOP853 in log pressure, direct native EOS entropy inversion at every RHS; evolve radius, geometric mass, baryon mass, proper volume, proper internal energy and pressure-volume integral.",
+  "relative_tolerances": [
+    2e-08,
+    5e-09
+  ],
+  "absolute_scaled_tolerance": 1e-11,
+  "boundary_enthalpy_gate": "abs(H(P,s)-H_target)<=max(2 erg/g,32 ulp(abs(H_target)))",
+  "limits": "Four local reference cells, not a full-star re-shoot or evolution. Saved lapse/face rounding, EOS first-law/primitive errors and continuous radial truncation are not enclosed. Averages retain different thermodynamic moments; no claim that one uniform EOS state preserves every moment.",
+  "physical_EOS_certified": false,
+  "full_GR_evolution": false,
+  "node_counts": [
+    8,
+    16
+  ],
+  "baryon_mass_relative_tolerance": 1e-07,
+  "geometric_mass_relative_tolerance": 1e-07,
+  "internal_energy_relative_tolerance": 1e-06,
+  "change": "Retain the exact direct EOS TOV RHS and boundary equations. Request dense DOP853 output and export positive Gauss quadrature nodes with fresh native EOS at each node. Two exact source substitutions are stored and reversible.",
+  "scope": "Four reconstructed nonuniform reference cells and two finite quadratures. No geometry or baryon normalization is applied to force a pass. Dense-output, native and continuum errors are not enclosed. Subcell-node export is not a full-star evolution.",
+  "substitutions": {
+    "atol=plan['absolute_scaled_tolerance'],max_step=(right-left)/4)": "atol=plan['absolute_scaled_tolerance'],max_step=(right-left)/4,dense_output=True)",
+    "paths.append(row);print('DIRECT CELL INTEGRAL',row,flush=True)": "retain(i,j,result,left,right,at,rout,width,mout,mass_scale,CX,dm,volume_scale,u_scale,Pmid);paths.append(row);print('DIRECT CELL INTEGRAL',row,flush=True)"
+  }
+}

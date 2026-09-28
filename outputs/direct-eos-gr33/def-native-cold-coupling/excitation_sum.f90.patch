@@ -1,0 +1,109 @@
+--- prior/excitation_sum.f90
++++ scaled/excitation_sum.f90
+@@ -457,7 +457,7 @@
+              qstar(:nmin_max_max,iz), qstart(:nmin_max_max,iz),&
+              qstarx(:,:nmin_max_max,iz),&
+              qstart2(:nmin_max_max,iz), qstartx(:,:nmin_max_max,iz),&
+-             qstarx2(:,:,:nmin_max_max,iz))
++             qstarx2(:,:,:nmin_max_max,iz),qstar_logscale(:nmin_max_max,iz))
+         ! ! zero results (including derivatives below) to provide
+         ! ! consistent small value zeroing rather than inconsistent
+         ! ! underflow zeroing.
+@@ -475,7 +475,7 @@
+                 qstar(:nmin_max_max,izhi+1), qstart(:nmin_max_max,izhi+1),&
+                 qstarx(:,:nmin_max_max,izhi+1),&
+                 qstart2(:nmin_max_max,izhi+1), qstartx(:,:nmin_max_max,izhi+1),&
+-                qstarx2(:,:,:nmin_max_max,izhi+1))
++                qstarx2(:,:,:nmin_max_max,izhi+1),qstar_logscale(:nmin_max_max,izhi+1))
+            ! ! zero results (including derivatives below) to provide
+            ! ! consistent small value zeroing rather than inconsistent
+            ! ! underflow zeroing.
+@@ -572,7 +572,7 @@
+               endif
+            endif
+            ! if(exparg.gt.exparg_lim) then
+-           exparg = exp(exparg)
++           ! Keep the Boltzmann factor logarithmic until the partition product.
+            ! else
+            !   exparg = 0.d0
+            ! endif
+@@ -617,17 +617,17 @@
+                  ! ! consistent small value zeroing rather than inconsistent
+                  ! ! underflow zeroing.
+                  ! if(qmhd_he1.lt.exp_lim) qmhd_he1 = 0.d0
+-                 qratio = exparg*qmhd_he1/real((iqneutral(ielement)),fp_kind)
++                 qratio = partition_product(exparg,qmhd_he1,0._fp_kind)/real((iqneutral(ielement)),fp_kind)
+                  ! else
+                  !   qratio = 0.d0
+                  !  endif
+               else
+                  ! Not special case for helium
+-                 qratio = exparg*qstar(nmin_s,iz)*real((iqion(ion)),fp_kind)/real((iqneutral(ielement)),fp_kind)
++                 qratio = partition_product(exparg,qstar(nmin_s,iz),qstar_logscale(nmin_s,iz))*real((iqion(ion)),fp_kind)/real((iqneutral(ielement)),fp_kind)
+               endif
+            else
+               ! ionized atomic case
+-              qratio = exparg*qstar(nmin_s,iz)*real((iqion(ion)),fp_kind)/real((iqion(ion-1)),fp_kind)
++              qratio = partition_product(exparg,qstar(nmin_s,iz),qstar_logscale(nmin_s,iz))*real((iqion(ion)),fp_kind)/real((iqion(ion-1)),fp_kind)
+            endif
+            if(qratio.gt.exp_lim) then
+               qratio_us = qratio/qratio_scale
+@@ -1115,7 +1115,7 @@
+            endif
+         endif
+         ! if(exparg.gt.exparg_lim) then
+-        exparg = exp(exparg)
++        ! Keep the Boltzmann factor logarithmic until the partition product.
+         ! else
+         !   exparg = 0.d0
+         ! endif
+@@ -1129,11 +1129,11 @@
+         ! derivative caused by x being a function of fl, tl, dv.
+         if(iz.eq.1) then
+            ! neutral monatomic H as part of H2 calculation
+-           qratio = exparg*qstar(nmin_s,iz)*&
++           qratio = partition_product(exparg,qstar(nmin_s,iz),qstar_logscale(nmin_s,iz))*&
+                 real((iqion(ion)),fp_kind)/real((iqneutral(ielement)),fp_kind)
+         else
+            ! unused since iz set to 1 above.
+-           qratio = exparg*qstar(nmin_s,iz)*&
++           qratio = partition_product(exparg,qstar(nmin_s,iz),qstar_logscale(nmin_s,iz))*&
+                 real((iqion(ion)),fp_kind)/real((iqion(ion-1)),fp_kind)
+         endif
+         if(qratio.gt.exp_lim) then
+@@ -1520,7 +1520,7 @@
+            endif
+         endif
+         ! if(exparg.gt.exparg_lim) then
+-        exparg = exp(exparg)
++        ! Keep the Boltzmann factor logarithmic until the partition product.
+         ! else
+         !   exparg = 0.d0
+         ! endif
+@@ -1534,7 +1534,7 @@
+         ! derivative caused by x being a function of fl, tl, dv.
+         ! ratio of excited to ground state partition functions
+         ! h2
+-        qratio = exparg*qstar(nmin_s,iz)
++        qratio = partition_product(exparg,qstar(nmin_s,iz),qstar_logscale(nmin_s,iz))
+         if(qratio.gt.exp_lim) then
+            qratio_us = qratio/qratio_scale
+            onepq = 1._fp_kind + qratio_us
+@@ -1930,7 +1930,7 @@
+            endif
+         endif
+         ! if(exparg.gt.exparg_lim) then
+-        exparg = exp(exparg)
++        ! Keep the Boltzmann factor logarithmic until the partition product.
+         ! else
+         !   exparg = 0.d0
+         ! endif
+@@ -1944,7 +1944,7 @@
+         ! derivative caused by x being a function of fl, tl, dv.
+         ! ratio of excited to ground state partition functions
+         ! h2+
+-        qratio = exparg*qstar(nmin_s,izqstar)
++        qratio = partition_product(exparg,qstar(nmin_s,izqstar),qstar_logscale(nmin_s,izqstar))
+         if(qratio.gt.exp_lim) then
+            qratio_us = qratio/qratio_scale
+            onepq = 1._fp_kind + qratio_us

@@ -1,0 +1,87 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "scope": "Admission and saved-prefix verification only; no185physical steps yet.",
+  "joint_prefix_accepted": true,
+  "full_horizon_admitted": true,
+  "full_horizon_completed": false,
+  "GR_return_closed": false,
+  "final_charge_conclusion": "unadjudicated",
+  "physical_final_charge_solved": false,
+  "full_goal_complete": false,
+  "forecast": {
+    "measured_seconds_per_step": {
+      "64": 26.70556555524999,
+      "128": 21.068659909624998
+    },
+    "measured_per_path_overhead_seconds": 22.51298065900005,
+    "nominal_remaining_seconds": 8169.469076972126,
+    "assumed_range_seconds": [
+      8169.469076972126,
+      16200
+    ],
+    "margin_factor": 1.75,
+    "upper_remaining_seconds": 14416.57088470122,
+    "caveat": "Later Newton, Krylov, assembly and I/O costs are unmeasured extrapolations. Recompute using the maximum observed continued cost for each clock after every completed pair. Starting-from-zero183costs are retained separately; current exact restart needs fewer iterations."
+  },
+  "budgets": {
+    "prepare": 30,
+    "check": 15,
+    "run": 16200
+  },
+  "actual_steps": {
+    "64": {
+      "full": 119,
+      "completed": 8,
+      "remaining": 111
+    },
+    "128": {
+      "full": 231,
+      "completed": 16,
+      "remaining": 215
+    }
+  },
+  "admission_check": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "rows": [
+      {
+        "clock": 64,
+        "angular_port_relative": 1.057481683623226e-17,
+        "local_material_balance": [
+          6.914006307586693e-16,
+          2.7792569995181037e-15,
+          4.872536919542157e-16,
+          2.621196348629166e-17
+        ],
+        "maximum_true_stage": 5.530494375636922e-14,
+        "maximum_true_physical_stage": 4.693600205884594e-15,
+        "maximum_newton_iterations": 3,
+        "actual_completed_steps": 8,
+        "accepted_prefix_preserved": true
+      },
+      {
+        "clock": 128,
+        "angular_port_relative": 2.8688623842841316e-17,
+        "local_material_balance": [
+          3.440653064661889e-15,
+          1.2253595093983728e-13,
+          3.775971858038206e-15,
+          3.315058184411499e-17
+        ],
+        "maximum_true_stage": 4.71935316535276e-14,
+        "maximum_true_physical_stage": 9.405872048556147e-14,
+        "maximum_newton_iterations": 2,
+        "actual_completed_steps": 16,
+        "accepted_prefix_preserved": true
+      }
+    ],
+    "new_physical_steps": 0,
+    "symbolic": {
+      "classification": "Proven",
+      "passed": true,
+      "scope": "Exact Radau moments0..2 only."
+    },
+    "final_charge_conclusion": "unadjudicated"
+  }
+}

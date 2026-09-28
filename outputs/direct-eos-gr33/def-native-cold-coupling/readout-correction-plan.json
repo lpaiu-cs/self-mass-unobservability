@@ -1,0 +1,7 @@
+{
+  "classification": "Counterexample candidate",
+  "discovery": "Source inspection during the continuation found two reporting-only references inherited from run(): p0 used restarted theta/eta instead of zeros, and the initial atmosphere reference evaluated initial T at restarted U[0]. Neither reference enters evolution or conservation numerators.",
+  "correction": "Subtract the known constant reference offset from history indices104 onward. Recompute response normalizations and all unchanged overlap/space gates. Preserve original output and producer. No trajectory replay or gate change.",
+  "acceptance": "Independently recompute the final physical trace directly from final U,theta,eta and original initial fields; compare the104-108 overlap and original full-interval2percent spatial gates.",
+  "source_sha256": "988c64c9f402c8ba712ce93a236efb86e1e5f3c879bae69d2e23a4eee29b780e"
+}

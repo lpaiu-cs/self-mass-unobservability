@@ -1,0 +1,60 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": false,
+  "endpoint_maximum_differences": [
+    [
+      2.5122662400412893e-05,
+      1.6540954517535735e-05,
+      8.526852385604436e-08,
+      3.394584737491349e-16,
+      3.394584732221263e-16
+    ],
+    [
+      3.838861334889712e-05,
+      2.304921438072256e-05,
+      1.389159964526958e-07,
+      8.170290722861804e-17,
+      8.170290710170728e-17
+    ]
+  ],
+  "observed_orders": [
+    -0.6116890854903817,
+    -0.47867508853182983,
+    -0.7041275516512753,
+    2.0547757794127213,
+    2.0547757794139074
+  ],
+  "paths": [
+    {
+      "refinement": 1,
+      "steps": 39,
+      "duration_seconds": 0.42117120910640804,
+      "maximum_path_speed_over_c": 0.4729098506888042,
+      "maximum_path_local_energy_defect": 1.773807253003489e-09,
+      "maximum_path_local_baryon_defect": 7.156581281676302e-15,
+      "maximum_path_isotope_inventory_defect": 1.9183853682157106e-20
+    },
+    {
+      "refinement": 2,
+      "steps": 78,
+      "duration_seconds": 0.42117120910640804,
+      "maximum_path_speed_over_c": 0.4729094171980754,
+      "maximum_path_local_energy_defect": 3.6735008055104246e-09,
+      "maximum_path_local_baryon_defect": 1.48240115288651e-14,
+      "maximum_path_isotope_inventory_defect": 4.747387138840957e-20
+    },
+    {
+      "refinement": 4,
+      "steps": 156,
+      "duration_seconds": 0.42117120910640804,
+      "maximum_path_speed_over_c": 0.47290966610981655,
+      "maximum_path_local_energy_defect": 4.612905113733781e-09,
+      "maximum_path_local_baryon_defect": 1.8610550772598242e-14,
+      "maximum_path_isotope_inventory_defect": 3.954552025661545e-20
+    }
+  ],
+  "rigorous_time_error_bound": false,
+  "physical_EOS_certified": false,
+  "physical_exterior_match": false,
+  "observational_closure": false
+}

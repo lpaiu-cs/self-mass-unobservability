@@ -1,0 +1,33 @@
+{
+  "classification": "Counterexample candidate",
+  "results": {
+    "chiT": {
+      "max_normalized_error": 0.10732860826044877,
+      "worst_zone": 2551
+    },
+    "chiRho": {
+      "max_normalized_error": 0.06485612787168578,
+      "worst_zone": 2337
+    },
+    "cv": {
+      "max_normalized_error": 0.12822628535221556,
+      "worst_zone": 36
+    },
+    "entropy_T_vs_cv": {
+      "max_normalized_error": 0.6650309830614323,
+      "worst_zone": 336
+    },
+    "entropy_rho_Maxwell": {
+      "max_normalized_error": 0.8281688089604605,
+      "worst_zone": 228
+    },
+    "energy_rho_Maxwell": {
+      "max_normalized_error": 25134.79832373542,
+      "worst_zone": 2033
+    }
+  },
+  "all_passed": false,
+  "same_state_only": true,
+  "common_EOS_GR_structure": false,
+  "interpretation": "Native derivative versus finite differences and thermodynamic integrability are separate tests. A consistent numerical derivative is not sufficient to prove the first law for a blended EOS."
+}

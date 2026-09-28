@@ -1,0 +1,24 @@
+{
+  "classification": "Proven",
+  "checkpoint": "e43523b",
+  "order": 4,
+  "bits": 128,
+  "root_isolation_bits": 160,
+  "bindings": {
+    "verification/gr_logarithmic_gauss_rule.py": "20c1527f25bff58a282c4dde1b462fd0bea8e00dbe18912514958b04be6963ca",
+    "verification/interval_records.py": "5781af2bf247d9e5f707b89874c0486959293ebe9fefdcbf2b15d5fc841c7caa"
+  },
+  "weights": [
+    "1",
+    "-log(x)"
+  ],
+  "domain": [
+    0,
+    1
+  ],
+  "objective": "Certify the ordinary and logarithmic Gauss rules needed to integrate the explicit log|1-u| term of the positive finite-wavenumber response kernel.",
+  "method": "Exact rational moments, monic orthogonal polynomials, rational root isolation, positive Christoffel weights, and exact companion-matrix traces prove degree-seven exactness. Hermite interpolation and Rolle give the degree-eight derivative remainder.",
+  "physical_application": "On 1-h<=u<=1+h, -B(u)*log|1-u| becomes h*[(-log(v))-log(h)]*B(1 +/- h*v), 0<=v<=1. The ordinary and logarithmic rules integrate the two terms separately.",
+  "actual_integrand_derivative_bounds_certified": false,
+  "whole_EOS_certified": false
+}

@@ -1,0 +1,9 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "DC": "sum p=1 gives sum K*p=K.",
+  "Drude": "If both endpoint measures obey sum p*r=1, their convex mixture also does; lambda=r*A/K gives sum K*p*lambda=A.",
+  "passivity": "For K_j>=0 and lambda_j>0, Re(sum K_j/(1+s/lambda_j))>=0 for Re(s)>=0. Finite first moment is sum K_j/lambda_j / sum K_j.",
+  "permutation": "Sums over whole measures are unchanged by independently permuting endpoint eigenmodes. No mode tracking is required.",
+  "limitation": "These identities do not bound interpolation error or identify the physical continuous collision operator."
+}

@@ -1,0 +1,84 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "7e0c32c",
+  "integral": "F_nu^(k)(eta)=integral_0^infinity x^nu P_k(1/(1+exp(x-eta))) dx",
+  "cases": [
+    {
+      "eta": 1,
+      "nu": "1.5",
+      "k": 0
+    },
+    {
+      "eta": 1,
+      "nu": "0.5",
+      "k": 0
+    },
+    {
+      "eta": 1,
+      "nu": "0.5",
+      "k": 1
+    },
+    {
+      "eta": 1,
+      "nu": "0.5",
+      "k": 2
+    },
+    {
+      "eta": 1,
+      "nu": "0.5",
+      "k": 3
+    },
+    {
+      "eta": 1,
+      "nu": "-0.5",
+      "k": 3
+    },
+    {
+      "eta": 4,
+      "nu": "1.5",
+      "k": 0
+    },
+    {
+      "eta": 4,
+      "nu": "0.5",
+      "k": 0
+    },
+    {
+      "eta": 4,
+      "nu": "0.5",
+      "k": 1
+    },
+    {
+      "eta": 4,
+      "nu": "0.5",
+      "k": 2
+    },
+    {
+      "eta": 4,
+      "nu": "0.5",
+      "k": 3
+    },
+    {
+      "eta": 4,
+      "nu": "-0.5",
+      "k": 3
+    }
+  ],
+  "transform": "x=t^2 removes the origin singularity: 2 t^(2 nu+1) P_k(q).",
+  "finite_interval_t": [
+    0,
+    8
+  ],
+  "panels": [
+    64,
+    128,
+    256,
+    512,
+    1024
+  ],
+  "precision_decimal_digits": 60,
+  "rule": "Four-point Gauss-Legendre; exact algebraic nodes and weights enclosed with interval arithmetic. Bound the eighth t derivative on each panel and add the proved upper-tail bound at x=64.",
+  "maximum_enclosure_radius": "1e-11",
+  "maximum_native_absolute_error": "1e-9",
+  "scope": "Registered nonrelativistic Fermi primitive values and eta derivatives at specified points; not all EOS states, beta derivatives, plasma model error or stellar propagation."
+}

@@ -1,0 +1,8 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "face_Jacobian": "dL/dlnT_outer=-4K theta_outer^4/kap-L*d(kap)/dlnT_outer/kap; inner sign is positive for the fourth-power term.",
+  "energy": "Equal and opposite face terms and their unscaled Jacobian columns sum to zero.",
+  "entropy": "Conditional: positive T and cv imply convex u(s) at fixed density/composition. The backward-Euler energy exchange therefore has S_new-S_old >= sum_i DeltaE_infinity_i/theta_new_i >= 0 for an exact implicit root and a positive conductance. An EOS that is not smooth/first-law-consistent does not inherit this finite-step theorem.",
+  "scope": "Algebraic/conditional operator statements; actual numerical and physical errors remain separate."
+}

@@ -1,0 +1,26 @@
+{
+  "checked_at": "2026-09-17T06:26:15.1627915+09:00",
+  "task_name": "SelfMassGR-Consoleless-20260917",
+  "task_state": "Running",
+  "trigger_count": 0,
+  "execution_time_limit": "PT0S",
+  "schedule_service_pid": 3356,
+  "launcher": {
+    "Name": "pythonw.exe",
+    "ProcessId": 52888,
+    "ParentProcessId": 3356,
+    "CreationDate": "2026-09-17T06:25:43.143995+09:00",
+    "CommandLine": "\"C:\\Users\\lpaiu\\AppData\\Local\\Programs\\Python\\Python312\\pythonw.exe\" \"E:\\lab\\self-mass-unobservability\\verification\\run_gr_consoleless.pyw\""
+  },
+  "foreground_wsl": {
+    "Name": "wsl.exe",
+    "ProcessId": 47680,
+    "ParentProcessId": 52888,
+    "CreationDate": "2026-09-17T06:25:43.412551+09:00",
+    "CommandLine": "C:\\WINDOWS\\System32\\wsl.exe -d Ubuntu-22.04 --cd /mnt/e/lab/self-mass-unobservability -- /usr/bin/env OPENBLAS_NUM_THREADS=1 PYTHONPATH=/home/lpaiu/work/nutimo_pilot/request13_deps:verification /usr/bin/taskset -c 0-15 /usr/bin/python3 -u verification/gr_resume271_consoleless.py chain --workers 15"
+  },
+  "launcher_console_hwnd": 0,
+  "child_creationflags": 134217728,
+  "outside_harness_process_tree": true,
+  "wsl_shutdown_protection": false
+}

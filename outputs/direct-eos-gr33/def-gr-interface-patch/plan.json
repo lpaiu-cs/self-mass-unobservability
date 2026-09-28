@@ -1,0 +1,53 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Repair the remaining support-interface spatial wave resolution while retaining the jointly accepted full coupled time propagator.",
+  "evidence": "Frozen p1/p2/p4 differences at the new boundary decrease12.0093% to6.09016%;99.999% of saved weighted squared difference lies near the last active source face. Saved acoustic crossing is1-3 original cells over the horizon. Direct lift subtraction is7e-13 of field difference. Existing source faces already match trial-cell boundaries.",
+  "reassessment": "This is a separately planned local geometry candidate after the original fixed-grid branch stopped. Four subdivisions are chosen once: with the observed roughly first-order spatial reduction,6.09%/4 predicts1.52% below2% (a forecast, not a bound). Do not refine globally or iterate the split count after failure.",
+  "method": "Split only cells containing the entire original new-interface readout mask plus one neighbour each side into4. Same source/background knots,heat poles,initial state,horizon,65 native readouts,degree1/2/4,quadrature6,beta1024,sigma12,contour4096 andcoefficients512/1024/2048. New mechanical trial nodes do not request EOS states or new heat cells.",
+  "patch": {
+    "first_cell": 4000,
+    "last_cell": 4024,
+    "original_cells": 25,
+    "new_cells": 100,
+    "radius_interval_R": [
+      0.5148645572482455,
+      0.5318819767524219
+    ],
+    "subdivisions": 4
+  },
+  "gates": {
+    "propagation_relative": 0.02,
+    "propagation_order": 1.5,
+    "contour": 0.0002,
+    "spatial_relative": 0.02,
+    "spatial_decrease": true,
+    "coefficient": 0.02,
+    "outer": 0.002,
+    "quadrature": 0.002,
+    "abscissa": 0.0002,
+    "linear_residual": 1e-09,
+    "heat_balance": 2e-13
+  },
+  "decision": "Pilot16 p4 resolvents. First p4 must forecast<450s and pass all four time gates. Fixed p2/p1 only after measured budget review. Stop on spatial failure without another patch. Four original coefficient/outer/quadrature/sigma contrasts remain conditional, with a measured total budget review before launch.",
+  "budget": {
+    "pilot_seconds": 90,
+    "first_case_seconds": 450,
+    "spatial_seconds": 300,
+    "total_compute_seconds": 1800,
+    "CPU_threads": 1,
+    "memory_GB": 4,
+    "new_EOS_calls": 0
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_interface_patch.py": "880442c647572d55272819dcde5ae735337ddbb62fc3d3e600ca1ea680faf888",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_full_weeks.py": "c0be4c1870a4aa5416892ae7f50523a8df515fcbf1455fa067fee7486489bc36",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_hierarchical.py": "7861123d4adfdfdaa21daee3fc7d79dcdffdd024ca48b3f453921b5cb745992b",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-full-weeks/result.json": "c70f90929994bf1e913b042e15a214d31b3c791785dbdd99b38f8bf504756f61",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-full-weeks/spatial-location.json": "5e8760f3eca855968d91e173c9a515b81aaa34603bb36bff6ef2db59a3f16d3f",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-full-weeks/lift-check.json": "e5cd9aac272d3bb2f1c65015cee33576cc3542c9c557001960d673d53c0b5014",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-full-weeks/beta1024/p4-2048.npz": "0e77e3d5732df938e57facd169481edb87f347529ca6d20156a469bee38bcbdc",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-spatial-repair/inspection.json": "badfdeb6427a5eeb1d27011569d9d96b4c722a8d8b6b5f084aeb9b5bfbabdb57",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/fine-bank.npz": "b4493a6e4cfb20d741725ecb61cec154ab9fc51a694001865748741060018d7e",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/coarse-bank.npz": "ea020f69b240c5c5cdd8810f963d88e5cc2d3269aff12c659422a7a6541ae0df"
+  }
+}

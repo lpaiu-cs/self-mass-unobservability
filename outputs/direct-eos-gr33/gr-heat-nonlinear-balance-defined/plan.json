@@ -1,0 +1,34 @@
+{
+  "classification": "Proven",
+  "checkpoint": "1609b7e7",
+  "bindings": {
+    "verification/gr_heat_nonlinear_balance.py": "539db03b619205d879c3bfc4eb31203e1b7627d3d2b8e91c552ad7de5e2f6ffa",
+    "outputs/direct-eos-gr33/gr-heat-entropy-closure/manifest.json": "d48ed74b8faa1d9bff3d881b78e980d792eb0b762c5ed7ca74120de77813787e",
+    "outputs/direct-eos-gr33/gr-heat-entropy-closure/symbolic.json": "8b2e7fc9f1804b5152772565c00b772af3be831df730fb65926801946bc03e83",
+    "outputs/direct-eos-gr33/gr-heat-initial-constraints/symbolic.json": "9b1058a912b8fa896e08399758179c6f01751daf7db1bafcc6f2e34b44cb6267",
+    "outputs/direct-eos-gr33/gr-heat-initial-constraints/gourgoulhon-0703035.pdf": "0f4f991888ebc1f1e42c1d6952e1dd33eddc0b39ba75998a8f9068acc22d619d",
+    "outputs/direct-eos-gr33/gr-heat-primitive-inverse/symbolic.json": "026d6578b36968903d38be8d728f20bd484efa43e46d3fe0abde9992eaf1b5cc",
+    "verification/gr_heat_nonlinear_balance_runner.py": "fd34ab82d64b8e9bc175c089069f3d1d7eb7c4c08ee72a08f674f03f47beffe5",
+    "outputs/direct-eos-gr33/gr-heat-nonlinear-balance-defined/candidate.py": "761795e84bed9377a2edf874376bce42aea6e978fd09451e7eda6db676a754e3",
+    "outputs/direct-eos-gr33/gr-heat-nonlinear-balance/plan.json": "c7bcc92761e79c77405b17c6685a0f31c41a7ec30d79b01909eea0d0583174d5",
+    "outputs/gr-heat-nonlinear-balance33-run.log": "de673d40db606b65e33ab2d81f1e3562c53fc38697164720de9e29f0c7d894ad"
+  },
+  "assumptions": [
+    "G=c=1, signature -+++; N>0,a>0, r>0; polar areal coordinates and zero shift",
+    "Smooth matter, metric and heat fields; no distributional shock/interface assertion",
+    "Baryon-frame isotropic pressure with one radial comoving heat Q; fixed composition",
+    "The earlier quadratic heat-only entropy ansatz and positive K,T,tau; no newly calibrated transport coefficient"
+  ],
+  "source": {
+    "classification": "Imported from prior work",
+    "url": "https://arxiv.org/abs/gr-qc/0703035",
+    "scope": "General 3+1 equations and conventions; the explicit spherical identities below are independently differentiated from the metric and tensor."
+  },
+  "target": "Replace the initial-v=0 restriction by exact nonlinear matter/metric identities and identify the finite evolution equations still to be solved.",
+  "boundary": "No numerical time trajectory, weak solution, well-posedness theorem, spatial error bound, physical EOS/transport calibration or exterior radiation matching.",
+  "substitutions": {
+    "OUT=g.OUT/'gr-heat-nonlinear-balance'": "OUT=g.OUT/'gr-heat-nonlinear-balance-defined'",
+    "divergence_covariant(tensor,0)+N*BE/a": "divergence_covariant(tensor,0)+BE/a"
+  },
+  "correction": "The coordinate covector divergence is nabla_mu T^mu_t=-BE/a. The first check inserted an extra lapse N after the metric determinant had already canceled it. Correct the normalization of that equality only; the proposed energy balance BE=0, stress tensor, metric, other equations and all symbolic gates are unchanged. The original failure is preserved."
+}

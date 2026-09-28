@@ -1,0 +1,29 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": false,
+  "rows": [
+    {
+      "steps": 64,
+      "reference": 128,
+      "captured": 0.5339931402480173,
+      "actual": 1.9400813738598,
+      "relative": 0.7247573491282814
+    },
+    {
+      "steps": 128,
+      "reference": 128,
+      "captured": 0.5333830631758212,
+      "actual": 1.9399219715033285,
+      "relative": 0.7250492179525758
+    },
+    {
+      "steps": 128,
+      "reference": 64,
+      "captured": 0.10673077660685036,
+      "actual": 0.48271817537063816,
+      "relative": 0.3759873987637878
+    }
+  ],
+  "cause": "New angular-output writer indexed the last frequency of the frequency-dependent scale rather than applying the full scale. Actual collision/transport and shared radial port computations used the correct full array.",
+  "repair": "Correct only the writer; replay bounded short pilot prefixes, verify dynamical arrays unchanged and angular energy equals the actual port before production."
+}

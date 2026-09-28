@@ -1,0 +1,26 @@
+concurrent.futures.process._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/concurrent/futures/process.py", line 246, in _process_worker
+    r = call_item.fn(*call_item.args, **call_item.kwargs)
+  File "/mnt/e/lab/self-mass-unobservability/verification/excitation_curvature.py", line 213, in block
+    base,trace,G,H,Hnon,row=eos.full_excitation(state['lnd'][i],state['lnT'][i],state['X'][i],electron['values'][i-start])
+  File "/mnt/e/lab/self-mass-unobservability/verification/eos_atomic_stationarity.py", line 66, in full_excitation
+    assert all(np.all(np.isfinite(v)) for v in raw.values()) and tc2>0
+AssertionError
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/e/lab/self-mass-unobservability/verification/eos_atomic_stationarity.py", line 145, in <module>
+    if __name__=='__main__': globals()[sys.argv[1]]()
+  File "/mnt/e/lab/self-mass-unobservability/verification/eos_atomic_stationarity.py", line 132, in run
+    e.run(); rows=[]
+  File "/mnt/e/lab/self-mass-unobservability/verification/excitation_curvature.py", line 230, in run
+    rows+=done.result()['rows'];print('EXCITATION',len(rows),'/',plan['cells'],flush=True)
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+AssertionError

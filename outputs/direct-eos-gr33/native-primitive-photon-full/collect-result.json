@@ -1,0 +1,121 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "controls": {
+    "angular": [
+      [
+        1.3505752630877882e-10,
+        1.5951644420291927e-10,
+        1.409851316013823e-10
+      ],
+      [
+        1.0942651547924066e-10,
+        9.157494734886442e-11,
+        8.746996672753884e-11
+      ],
+      [
+        1.827315568208636e-10,
+        9.737569427015427e-11,
+        7.375502375790239e-11
+      ]
+    ],
+    "temporal": [
+      [
+        6.569190765296808e-06,
+        8.002972330921301e-06,
+        8.815259743854754e-06
+      ],
+      [
+        6.601932665310277e-06,
+        8.043621370203591e-06,
+        8.860574856036276e-06
+      ],
+      [
+        6.634783530744074e-06,
+        8.084407221394225e-06,
+        8.90604402391053e-06
+      ]
+    ],
+    "geometry": [
+      [
+        7.97789292280889e-08,
+        8.730748407685963e-08,
+        9.16522225646802e-08
+      ],
+      [
+        8.001955901343021e-08,
+        8.755158105866705e-08,
+        9.189705579893141e-08
+      ],
+      [
+        8.026003144401016e-08,
+        8.77955018795986e-08,
+        9.214170530829365e-08
+      ]
+    ]
+  },
+  "boundary_controls": {
+    "angular": [
+      1.3505753808341009e-10,
+      6.899980635388971e-11
+    ],
+    "temporal": [
+      6.569190765234656e-06,
+      7.6017705506452645e-06
+    ],
+    "geometry": [
+      7.977892931308035e-08,
+      8.527739586689725e-08
+    ]
+  },
+  "terminal": {
+    "classification": "Counterexample candidate",
+    "seconds": 488.78469318000043,
+    "packets": 4096,
+    "rhs_evaluations": 4058,
+    "time": 0.0034344311179287023,
+    "energy_identity_relative": 2.674260093312014e-16,
+    "angular_invariant_relative": 2.2177636995149942e-16,
+    "physical_launch_energy_increment_erg": -7.579777690934906e-28,
+    "instantaneous_packet_energy_increment_erg": -2.4785963083899833e-27,
+    "propagated_work_erg": -1.7206185392964926e-27,
+    "maximum_radius_shift_cm": 2.5547246876591696e-51,
+    "maximum_direction_change": 2.56602944148934e-59,
+    "stress_weak_moments_erg": [
+      [
+        -2.4927577864400033e-27,
+        -2.2185075961638667e-27,
+        -1.9799804319730245e-27
+      ],
+      [
+        -2.4787844727802723e-27,
+        -2.2060792357023392e-27,
+        -1.968837555115322e-27
+      ],
+      [
+        -2.4649141176431987e-27,
+        -2.1937430873025622e-27,
+        -1.9577779535567033e-27
+      ]
+    ],
+    "work_identity_independent": false,
+    "reference_port": {
+      "component": "low",
+      "clock": 128,
+      "port_relative": 2.792393259379645e-16,
+      "reference_energy_erg": 2.219241559935706e-20
+    },
+    "component": "returned_metric_geometry",
+    "photon_J_source_cm": -2.0596953733512445e-76,
+    "photon_lapse_particular": 5.318369422839996e-86,
+    "physical_final_charge_solved": false
+  },
+  "returned_metric_geometric_photon_response_computed": true,
+  "same_applied_outgoing_continuation": true,
+  "returned_source_time_error": "Existing applied metric time gate retained; new exterior geometry has no separate64/128trajectory control in this execution.",
+  "reciprocal_scalar_source_complete": false,
+  "physical_GR_boundary_applied": false,
+  "physical_final_charge_solved": false,
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false
+}

@@ -1,0 +1,53 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "2282eb421",
+  "claim": "Apply conserved-volume mass/scalar feedback, compute outgoing and incoming prescribed waves from the saved conservative release, and apply the curved-space scalar potential with an all-orders contraction bound.",
+  "closure": "Linear adiabatic metric-volume response at fixed coordinate baryon inventory. No claim that independently prescribed fluid displacement or scattered photons are solved.",
+  "seconds": 120,
+  "CPU_threads": 1,
+  "memory_GB": 2,
+  "native_calls": 0,
+  "new_fluid_steps": 0,
+  "measured_basis": "Phase102 four direct component readouts plus two source integrations took24.07seconds. Eight directional readouts, two conserved source integrations and potential quadratures are budgeted at120seconds; the first complete grid supplies a stop-before-second-grid forecast.",
+  "settings": {
+    "saved_gas_grids": [
+      1792,
+      896
+    ],
+    "potential_inner_cells": [
+      64,
+      128
+    ],
+    "vacuum_quadrature": [
+      32,
+      64
+    ],
+    "Born_terms_computed": 1
+  },
+  "gates": {
+    "grid_wave": 0.02,
+    "first_Born_quadrature": 0.001,
+    "all_orders_potential_bound_over_free_wave": 0.02,
+    "manufactured_bound": true
+  },
+  "stop": "No new EOS, gas evolution, duration, spatial grids or extra Born terms on failure. Retain failed results and reassess before changing the plan.",
+  "bindings": {
+    "verification/def_native_conserved_wave.py": "2b60e52ef8f933a150abddd865e4deab63049e696ee9bc483ddca70e8165b05f",
+    "verification/def_native_metric_charge.py": "f6853cd0f25e3d639af27f0f58bf26102394b57572cec457239633e4c2ef0dd0",
+    "verification/def_native_release_charge.py": "436c719793fa72c33a8db5cc33a252f3ae06186baa382615adddbcf631c27486",
+    "outputs/direct-eos-gr33/def-native-energy-release/runtime-columns.npz": "a1d7249202abde8c778f176a09c284f1423b6f76335d6c7c67513c1ad32c03c5",
+    "outputs/direct-eos-gr33/def-native-whole-star-match/background.npz": "07cf1bdca40788799b7aea67273e73fafb5bda615103bdd73aac38bc020a5acf",
+    "outputs/direct-eos-gr33/def-native-metric-release/cells-896.npz": "a898b3077496eab9189163b98918786ceec46145b0d58006dde8284c46fafb12",
+    "outputs/direct-eos-gr33/def-native-metric-release/cells-1792.npz": "3b2f26b0ffb6246fc46cfc533c4a0a6f561a0d3f9bc57b28c56d92c884cdebaf"
+  },
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "premise": "First-order metric perturbations around the declared static isotropic background. Coordinate baryon inventory, entropy and composition are fixed for this algebraic response; additional material displacement and heating are source terms.",
+    "volume": "dlnV=(3*alpha+r*Phi)*f+J/(r*b); dE=eF-(E+P)*dlnV; dP=pF-Gamma1*P*dlnV.",
+    "mass": "J_prime+(nu_prime+lambda_prime)*J=4*pi*r^2*A^4*eF. Thus J=sqrt(b)/N times the cumulative prescribed Killing-energy perturbation in geometric units. The f-dependent source cancels only after the conserved-volume matter response is included.",
+    "wave": "U_tt/c^2-U_xx+Veff*U=S_forced; Veff=Vfixed-Dv*(3*alpha+r*Phi)/r; KJ_eff=KJ+Dv/(r*b).",
+    "Dv": "4*pi*N^2*A^4*r*[alpha*(E+P-3*Gamma1*P)+r*Phi*(E+P-Gamma1*P)].",
+    "resolvent": "For eta=(c*Delta_u/2)*integral|Veff|dx<1, the retarded Green operator is a contraction. ||U-U0||<=eta*M0/(1-eta); ||U-U0-KU0||<=eta^2*M0/(1-eta), if ||U0||<=M0. This is a bound for the stated potential operator, not for missing physical source equations."
+  }
+}

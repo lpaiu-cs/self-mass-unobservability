@@ -1,0 +1,13 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "Three polarization tables completed; the Ward-control scale called numpy.linalg.norm with three axes and raised ValueError: Improper number of dimensions to norm. No dynamic-screening production ran.",
+  "change": "Use sqrt(sum(abs(J)^2)) for that diagnostic Frobenius norm. Preserve the original source, polarization arrays, physics, grids, event seeds and gates. No table rerun.",
+  "bindings": {
+    "verification/def_electron_screening_resume.py": "d95bd93c582fc97b2698c7681276b8887f42e41753ac96bfa2b7c7981209b1fd",
+    "verification/def_electron_dynamic_screening.py": "6a256ce455a75b064e4626480cc136b39f2cbfbc2a4a62ff42986d869f9fb89a",
+    "outputs/direct-eos-gr33/def-electron-energy-exchange/dynamic-screening/plan.json": "717fe67a75c786a4f3478efbec785d307533734b75d06c4cb33dc8461857e833",
+    "outputs/direct-eos-gr33/def-electron-energy-exchange/dynamic-screening/polarization-4122.npz": "8dd02b1c5c351de8577b29d07b5387bbd348070aae309668233506898125a938",
+    "outputs/direct-eos-gr33/def-electron-energy-exchange/dynamic-screening/polarization-4928.npz": "7737a34aa92a6a8b31d4dad3c4b8bbd383cb754d672f52b5e4385e833230ae6e",
+    "outputs/direct-eos-gr33/def-electron-energy-exchange/dynamic-screening/polarization-5734.npz": "4e7595f0cbcb2b1455313e15edb41c3dace400b974dd63ef3d7b3804884070a9"
+  }
+}

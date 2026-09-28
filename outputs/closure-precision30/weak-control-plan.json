@@ -1,0 +1,7 @@
+{
+  "classification": "Counterexample candidate",
+  "reason": "The F18 named rate-factor intervention has no O18 effect; the archived network uses a separate weaklib path and global weak_rate_factor. Do not interpret the ineffective factor as zero physical F18 flux.",
+  "method": "Set controls weak_rate_factor=0.5 for the full network at T and T exp(plus/minus 5e-5), retaining the same four frozen EOS inputs. Compare twice the full-minus-half difference of f, f_T, heat and heat_T with their temperature differences.",
+  "h": 5e-05,
+  "original_failed_named_factor_preserved": true
+}

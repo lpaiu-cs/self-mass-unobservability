@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/mnt/e/lab/self-mass-unobservability/verification/conservative_star.py", line 587, in <module>
+    if __name__=='__main__': globals()[sys.argv[1]]()
+  File "/mnt/e/lab/self-mass-unobservability/verification/conservative_star.py", line 519, in transport_boundary_audit
+    assert native_score.max()<1e-7,('native radiative face getter',native_score.max(),np.argmax(native_score))
+AssertionError: ('native radiative face getter', np.float64(0.3333333046494426), np.int64(5734))

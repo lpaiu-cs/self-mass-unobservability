@@ -1,0 +1,27 @@
+{
+  "classification": "Proven",
+  "bindings": {
+    "verification/gr_driven_readout_bound.py": "0262d456550b514d251f38c8dc3573e01649c5aa84e5c0e143ab8cd3289b076c",
+    "verification/gr_scalar_global_regular.py": "467e3a2059f233bb0147e9e0a81295aa3b0a944c933f012ef101002acf9aa931",
+    "outputs/direct-eos-gr33/gr-driven-readout/plan.json": "35d6388aedd216fffcc8f7e9c16b2ea9a00e63709ce649c97e41bc4c7639407b",
+    "outputs/direct-eos-gr33/gr-driven-readout/manifest.json": "ac8c493b37f9450ffecd2f5b5bbc24756257e0489661ea08b989ea567d833ed5",
+    "outputs/direct-eos-gr33/gr-driven-readout/result.json": "f6001e1c92b8960a2ebb60cd9f04046088b90e45c2984520d62dc92dbda56672",
+    "outputs/direct-eos-gr33/gr-driven-readout-bound/coefficients.npz": "645ca9874716a5343491cdb29dcbb0312e76e380e0caf919d924f712a1621e92"
+  },
+  "target": "Upper bound on |delta(alpha/phi_infinity)| for exact binary64 PCHIP coefficients and fixed R/M and Schwarzschild mu.",
+  "method": "Exact rational Bernstein enclosures and moments; outward 60-digit interval normalization. Identical a, R and M verified across snapshots. No subtraction of separately integrated charges.",
+  "decision_floor": 1e-09,
+  "decision": "If every bound is below the preregistered 1e-9 readout floor, the saved 0.421-second thermal transient cannot meet that target in this coefficient model. This is not an observational exclusion or a bound on other drives.",
+  "resource_budget": {
+    "cpu_workers": 1,
+    "gpu": false,
+    "native_EOS_calls": 0,
+    "maximum_wall_seconds": 300,
+    "repeats": 1,
+    "estimate": "Earlier readout used 8.78 seconds and 187 MiB. Exact-rational bound runtime is unmeasured; hard 300-second timeout, no grid or duration increase."
+  },
+  "physical_EOS_certified": false,
+  "coefficient_generation_error_certified": false,
+  "causal_scalar_evolution": false,
+  "observational_closure": false
+}

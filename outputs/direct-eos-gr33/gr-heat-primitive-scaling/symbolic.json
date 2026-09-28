@@ -1,0 +1,9 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "primitive_relations": "At fixed comoving Q and composition, rho=D/W, J-Q=v*(E+P), epsilon=E-v*(J+Q). A complete heat evolution must also supply Q; these three conserved values alone do not determine an extra unconstrained heat variable.",
+  "Jacobian": "For (ln rho,ln T,v) -> (D,E,J), fixed Q, let w=epsilon+P, b=rho*cv*T/w, r=P_lnrho/w, d=P_lnT/w, e=(P-rho*u_lnrho)/w, j=Q/w. The determinant is rho*w^2*W^5*[b-v^2*(b*r+d*e)+2*j*v*(b-d)]. At v=0 it is rho^2*cv*T*w>0 under positive rho,cv,T,w.",
+  "conditional_local_inverse": "A differentiable EOS and nonzero determinant imply a local pointwise inverse by the inverse function theorem. For frozen g=r+d*e/b>=0 and |v|<=V<1, a sufficient bound is b*(1-g*V^2)-2*abs(j)*V*abs(b-d)>0. This is not a proof of global uniqueness or native-neighbourhood invertibility.",
+  "stable_energy": "Use E-D*C = D*C*(W-1)+rho*u*W^2+P*v^2*W^2+2*v*Q*W^2, C=C_X*c^2. Evaluate W-1=v^2*W^2/(W+1) directly. This avoids subtracting two rest-energy-sized numbers; it does not create information absent from rounded conserved input.",
+  "cell_caution": "A pointwise inverse does not identify an unresolved nonuniform cell with a uniform EOS state while preserving every subcell moment or original entropy. This test supplies a necessary nonlinear local component, not that reconstruction."
+}

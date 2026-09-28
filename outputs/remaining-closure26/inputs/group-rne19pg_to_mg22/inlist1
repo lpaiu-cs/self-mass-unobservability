@@ -1,0 +1,155 @@
+&star_job
+ num_special_rate_factors=1
+ reaction_for_special_factor(1)='rne19pg_to_mg22'
+ special_rate_factor(1)=0.5
+
+ load_saved_model = .true.
+ saved_model_name = 'input.mod'
+ profile_starting_model = .true.
+ show_log_description_at_start = .false.
+ pgstar_flag = .false.
+ save_model_when_terminate = .true.
+ save_model_filename = 'final.mod'
+ write_profile_when_terminate = .true.
+ filename_for_profile_when_terminate = 'final_profile.data'
+/
+&controls
+      which_atm_option = 'WD_tau_25_tables'
+
+
+      history_interval = 1
+      extra_terminal_output_file = 'log1'
+      photo_directory = 'photos1'
+      log_directory = 'LOGS1'
+      redo_limit = -1 
+      max_model_number = 1
+      max_num_profile_models = 100000  
+      initial_z = 0.02
+      max_allowed_nz = 10000
+      photostep = 50
+      profile_interval = 1
+      history_interval =1 
+      terminal_cnt = 1
+      write_header_frequency = 10
+
+      max_age = 5.73250877998557568e+09
+      delta_HR_limit = 0.02d0
+      delta_HR_hard_limit = 0.5d0
+      delta_lgL_H_limit =0.01   
+      delta_lgL_H_hard_limit =0.02
+      lgL_H_burn_min = -1.0 
+      xa_function_species(1) = 'he4'
+      xa_function_weight(1) = 100
+      xa_function_param(1) = 1d-3
+      mesh_delta_coeff = 0.4
+      max_dq = 0.0005
+      smooth_convective_bdy =.false.
+      newton_iterations_limit = 7
+      newton_itermin =2 
+      min_dq_for_xa = 1d-6
+      limit_mixing_length_by_dist_to_bdy = 1 
+      step_overshoot_f_above_burn_h_core = 0.15
+      overshoot_f0_above_burn_h_core = 0.05
+      
+      delta_lg_XH_cntr_limit = 0.02d0
+      delta_lg_XH_cntr_max = 0.0d0
+      delta_lg_XH_cntr_min = -5.0d0
+      delta_lg_XH_cntr_hard_limit = 0.03d0
+
+      
+     !  MLT_option = 'Henyey'   
+
+ 
+      step_overshoot_D0_coeff = 1.0
+      conv_bdy_mix_softening_f  = 0.001
+      conv_bdy_mix_softening_f0 = 0.003
+      conv_bdy_mix_softening_min_D_mix = 1d-3
+      xtra_coef_czb_full_on = 1.0d0
+      xtra_coef_czb_full_off = 1.0d0
+      xtra_coef_a_l_nb_czb = 0.05d0 
+      xtra_coef_b_l_nb_czb = 0.05d0 
+      xtra_dist_a_l_nb_czb = 2d0 
+      xtra_dist_b_l_nb_czb = 2d0 
+      
+
+      num_trace_history_values = 6
+      trace_history_value_name(1) = 'surface ca40'
+      trace_history_value_name(2) = 'total_mass_h1' 
+      trace_history_value_name(3) = 'surf_v_rot'
+      trace_history_value_name(4) = 'surface h1'
+      trace_history_value_name(5) = 'surf_omega_div_omega_crit'
+      trace_history_value_name(6) = 'log_total_angular_momentum' 
+      mixing_length_alpha = 2.0
+      use_Ledoux_criterion = .false.
+      alpha_semiconvection = 1d-3
+
+
+      report_why_dt_limits = .true. 
+      
+
+      diffusion_dt_limit =  3.15d7
+      do_element_diffusion = .true. ! determines whether or not we do diffusion
+      diffusion_calculates_ionization = .true.
+      diffusion_tol_correction_max = 1d-3
+      diffusion_tol_correction_norm = 1d-5
+  
+     diffusion_num_classes = 10 ! number of classes of species for diffusion calculations
+     diffusion_class_representative(1) = 'h1'
+     diffusion_class_representative(2) = 'he3'
+     diffusion_class_representative(3) = 'he4'
+     diffusion_class_representative(4) = 'c12'
+     diffusion_class_representative(5) = 'c13'
+     diffusion_class_representative(6) = 'n14'
+     diffusion_class_representative(7) = 'o16'
+     diffusion_class_representative(8) = 'ne20'
+     diffusion_class_representative(9) = 'mg24'
+     diffusion_class_representative(10) = 'ca40'
+      ! in ascending order.  species goes into 1st class with A_max >= species A
+     diffusion_class_A_max(1) = 2
+     diffusion_class_A_max(2) = 3
+     diffusion_class_A_max(3) = 4
+     diffusion_class_A_max(4) = 12
+     diffusion_class_A_max(5) = 13
+     diffusion_class_A_max(6) = 14
+     diffusion_class_A_max(7) = 16
+     diffusion_class_A_max(8) = 20
+     diffusion_class_A_max(9) =24
+     diffusion_class_A_max(10) =10000
+
+
+ 
+      diffusion_use_isolve = .true.
+     diffusion_rtol_for_isolve = 1d-4
+     diffusion_atol_for_isolve = 1d-5
+     diffusion_maxsteps_for_isolve = 50000
+     diffusion_isolve_solver = 'ros2_solver'
+ 
+ 
+       !----------------------------------------  ROTATION
+     am_nu_ST_factor = 1.0
+     D_visc_factor = 0.0
+     am_nu_SH_factor = 0.0
+     D_ST_factor = 0.0
+     D_SH_factor = 0.0
+     D_GSF_factor = 1.0
+     D_ES_factor = 1.0
+     D_SSI_factor = 1.0
+     D_DSI_factor = 1.0
+ 
+ 
+    am_D_mix_factor = 0.0333
+    am_nu_factor = 1.0
+    am_gradmu_factor = 0.05
+ 
+
+
+
+
+/ ! end of controls namelist
+
+
+&pgstar
+         
+    HR_win_flag = .true.
+    !Kipp_win_flag = .true.
+/ ! end of pgstar namelist

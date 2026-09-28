@@ -1,0 +1,44 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Apply the corrected actual surface motion to the moving-ray photon energy and pressure, and evolve its additive coupled matter/scalar/metric/thermal response.",
+  "scope": "First kinematic correction on the fixed curved background, driven by the saved baseline surface. This is NOT the full moving-surface solution: radiation stress junction, area/lapse feedback and dynamic ray metric remain to be closed.",
+  "source": "Phase96 p4-64 physical displacement and direct velocity; normalized reference hemispheric luminosity. No prescribed synthetic motion in production.",
+  "paths": [
+    "motion-p4-8 pilot",
+    "motion-p4-32",
+    "motion-p4-64"
+  ],
+  "gates": {
+    "temperature": 0.02,
+    "velocity": 0.03,
+    "scalar": 0.03,
+    "source_history_relative": 0.02
+  },
+  "prior_seconds": 54.859300184000006,
+  "controls_seconds": 0.15999344499999957,
+  "total_phase_budget_seconds": 180,
+  "decision": "Keep the same degree, grid, horizon and gates. Stop on budget or failed controls. A small isolated contribution is not a bound on omitted physical mechanisms.",
+  "controls": {
+    "classification": "Proven",
+    "symbolic_passed": true,
+    "identity": "First-order impact change is delta ln B = (1-nu_s_prime)*zeta-mu0*zeta_dot/Cs. Retarded cumulative emission includes the angular pressure-work term f0*mu0*zeta/Cs.",
+    "numerical_classification": "Counterexample candidate",
+    "flat_moment_relative": [
+      1.5463584156306716e-10,
+      1.1715401968653349e-09,
+      1.2400496067769106e-10
+    ],
+    "curved_delay_relative": [
+      1.0027357661437279e-08,
+      1.7831506250480165e-08
+    ],
+    "scope": "Fixed vacuum metric, constant reference comoving emitted power. No evolving metric, area/lapse luminosity feedback, full stress junction or final charge certificate."
+  },
+  "bindings": {
+    "verification/def_native_moving_rays.py": "81f789dda581dfaa3d6240446060c5341395764e8023343bfa95b7287deaef66",
+    "verification/def_native_balanced_flux.py": "30ac81312f6e5457abf04676a967cbe19f0b0ebf8a4bdf57b60f142b152ccdf2",
+    "outputs/direct-eos-gr33/def-native-balanced-flux/p4-32.npz": "78edb910c40ec1d3fe76a2928fe2aee2219058a2bbaa54580c73f06bd8d85bf1",
+    "outputs/direct-eos-gr33/def-native-balanced-flux/p4-64.npz": "6ef384c85ecd741802508878cd5e21d040c0129ff04b34bee4e2c1ba3e29bda3",
+    "outputs/direct-eos-gr33/def-native-balanced-flux/result.json": "240376b6c90bd81e98a637e4e484d197795b95490bfb6f011b59af07ab11dcb1"
+  }
+}

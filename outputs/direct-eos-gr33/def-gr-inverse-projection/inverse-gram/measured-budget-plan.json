@@ -1,0 +1,16 @@
+{
+  "classification": "Counterexample candidate",
+  "reason": "The naive quadratic pilot forecast131.89s charges fixed setup64 times. Reuse the measured full512 multishift path21.67s, charge the entire new setup again, and scale only the new Gram overhead quadratically, plus response and40 percent margin. No increase of120s first-case or300s total cap.",
+  "first_case_forecast_seconds": 87.23540463679998,
+  "first_case_cap_seconds": 120,
+  "total_cap_seconds": 300,
+  "decision": "Exactly degree4 at128/256/512; same propagation gates and stop on failure. Check signed-face pole amplitudes before using the absolute remainder aggregation.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-inverse-projection/gram-stage.py": "2fc278d1785df9026d6097cccfd2471c56ee6ac9f8163b629ae17d322e9de80f",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_inverse_gram.py": "c73926433f2236c03febd1af9cf5ca0741f274621a1ffd1d6a0ed2d43818f1b8",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-inverse-projection/inverse-gram/plan.json": "248cb658e34bdca0522cef3d05a9bfadf509d6cd858f71b17413a7cf2eee667b",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-inverse-projection/inverse-gram/pilot-budget.json": "85499113779223ddb2def8a3d5dd216818c5861a8fb74491867654cf661d7e20",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-inverse-projection/multishift/stage-result.json": "83f7adf1c09cc6cf79c5a31364a07742765fa31065eebb81c780baccdd90507e",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-inverse-projection/multishift/pilot-budget.json": "6f5edf11585f813d4907b4335b6cd6248fb5afab7ef742c7ee5d5cf058e969b3"
+  }
+}

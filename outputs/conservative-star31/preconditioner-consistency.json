@@ -1,0 +1,19 @@
+{
+  "classification": "Proven",
+  "identity_first_derivative": true,
+  "linear_control_errors": [
+    0.007106827954611483,
+    0.003502060977072563,
+    0.0017385043326689775,
+    0.0008661584039466319
+  ],
+  "successive_error_ratios": [
+    2.0293273021625713,
+    2.0144102670691346,
+    2.0071436411025054
+  ],
+  "passed": true,
+  "mathematical_statement": "For a fixed finite matrix W, h*phi_1(hW)*F(y)=h*F(y)+O(h^2); choosing W distinct from the exact Jacobian does not by itself destroy consistency.",
+  "limits": "This gives neither a uniform stiff error bound nor stability/positivity for arbitrary W or step size. It does not repair any failed derivative certificate. The nonlinear GR trajectories retain independent energy, composition and temperature gates.",
+  "failure_policy": "The failed small-step all-zone H2 estimator is not adopted. The pilot preserves the original numerical operator in its own snapshot; the final source-tangent record identifies the separately gated H2 chain replacement. Neither is a continuous-domain derivative certificate."
+}

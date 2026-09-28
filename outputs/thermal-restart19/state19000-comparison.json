@@ -1,0 +1,35 @@
+{
+  "classification": "Proven",
+  "restoration": [
+    {
+      "file": "profile1.data",
+      "model": 19000,
+      "relative_errors": {
+        "star_mass": 0.0,
+        "photosphere_r": 0.0,
+        "Teff": 0.0,
+        "center_logT": 0.0,
+        "center_logRho": 0.0
+      },
+      "same_mesh": true,
+      "passed": true,
+      "max_shell_logT_relative_error": 0.0
+    }
+  ],
+  "one_step": [
+    {
+      "model": 19001,
+      "relative_errors": {
+        "star_mass": 0.0,
+        "log_R": 0.0,
+        "log_Teff": 0.0,
+        "log_center_T": 0.0,
+        "log_center_Rho": 0.0
+      },
+      "dt_relative_error": 0.0,
+      "passed": true
+    }
+  ],
+  "restoration_passed": true,
+  "one_step_passed": true
+}

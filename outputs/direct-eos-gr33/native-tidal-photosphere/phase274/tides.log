@@ -1,0 +1,174 @@
+/home/lpaiu/work/native-refined268-runtime/.phase274-tides.py:34: RuntimeWarning: divide by zero encountered in divide
+  rhobar = 3*mg*C*C/(G*4*np.pi*np.maximum(r, 1.)**3); ratio = np.where(r > 0, rho/rhobar, 1.)
+/home/lpaiu/work/native-refined268-runtime/.phase274-tides.py:54: RuntimeWarning: divide by zero encountered in divide
+  dT = np.abs(np.gradient(T, r)); cp = 2.5*Pg/(rho*T); K = L/(4*np.pi*r**2*np.maximum(dT, 1e-300)*rho*cp)
+/home/lpaiu/work/native-refined268-runtime/.phase274-tides.py:62: RuntimeWarning: invalid value encountered in multiply
+  tau = float(trapezoid(np.where(m, K*kr**3/w, 0.), r)); Pw = 2*np.pi/w
+{
+ "points": 6005,
+ "R": 6909832483.970195,
+ "M_g": 3.927825127063951e+32,
+ "M_sun": 0.19753597734189382,
+ "L": 2.1734826826038517e+33,
+ "junction_radius": 6847387313.946845,
+ "junction_depth_km": 624.4517002334976,
+ "love": {
+  "n1_polytrope_check": 0.25990887731779927,
+  "eta_R": 2.996712982571194,
+  "k2_apsidal": 0.00032891797470372135,
+  "love_number": 0.0006578359494074427,
+  "central_to_mean_density": 487.6412676799947
+ },
+ "buoyancy": {
+  "int_N_over_r": 0.16631067675782105,
+  "DeltaPi_l1_s": 83.92563046089205,
+  "DeltaPi_l2_s": 48.45448533850509,
+  "N_max": 1.3522932299108499,
+  "r_N_max_depth_km": 51445.84232902512,
+  "convective_fraction_of_radius": 0.11344543707160804,
+  "convective_depth_ranges_km": [
+   [
+    51288.40621050701
+   ],
+   [
+    49862.521308358555
+   ],
+   [
+    49850.46712017167
+   ],
+   [
+    49569.60391352209
+   ],
+   [
+    49549.705811246655
+   ],
+   [
+    49406.71931105404
+   ],
+   [
+    49393.30065782167
+   ],
+   [
+    49095.20905644493
+   ],
+   [
+    49085.44163818373
+   ],
+   [
+    48869.34780029423
+   ],
+   [
+    48858.168731367245
+   ],
+   [
+    48811.479357763965
+   ]
+  ]
+ },
+ "drives": {
+  "2 n_in (non-rotating tide)": {
+   "omega": 8.92624234090217e-05,
+   "period_s": 70390.037232,
+   "gmode_order_l2": 1452.7042592703692,
+   "relative_spacing": 0.0006883713554349024,
+   "tau_wave_thick_envelope": 8871071.934301691,
+   "depth_tau_th_equals_1_over_omega_km": null
+  },
+  "n_in (eccentric)": {
+   "omega": 4.463121170451085e-05,
+   "period_s": 140780.074464,
+   "gmode_order_l2": 2905.4085185407384,
+   "relative_spacing": 0.0003441856777174512,
+   "tau_wave_thick_envelope": 141937150.94882706,
+   "depth_tau_th_equals_1_over_omega_km": null
+  },
+  "n_out": {
+   "omega": 2.2221822107546036e-07,
+   "period_s": 28274842.975392,
+   "gmode_order_l2": 583534.0686803863,
+   "relative_spacing": 1.713696001094532e-06,
+   "tau_wave_thick_envelope": 2.3095753101824973e+17,
+   "depth_tau_th_equals_1_over_omega_km": null
+  },
+  "1 h": {
+   "omega": 0.0017453292519943296,
+   "period_s": 3600.0,
+   "gmode_order_l2": 74.29652744942491,
+   "relative_spacing": 0.013459579260695858,
+   "tau_wave_thick_envelope": 60.69338005154242,
+   "depth_tau_th_equals_1_over_omega_km": null
+  },
+  "10 min": {
+   "omega": 0.010471975511965976,
+   "period_s": 600.0,
+   "gmode_order_l2": 12.382754574904151,
+   "relative_spacing": 0.08075747556417515,
+   "tau_wave_thick_envelope": 0.04683131176816546,
+   "depth_tau_th_equals_1_over_omega_km": null
+  }
+ },
+ "thermal": {
+  "tau_th_charge_layers_s": [
+   0.0018145048763107156,
+   0.4136670300009122
+  ],
+  "tau_th_base_s": 3.979930726779951,
+  "Teff": 15898.270664772752,
+  "thick_depth_km": [
+   360.79839993927004,
+   624.4517002334976
+  ],
+  "K_thick": [
+   74210198496120.12,
+   2134623062990090.2
+  ],
+  "N_thick": [
+   0.010843350372018806,
+   0.11242935249781004
+  ],
+  "Prad_over_P_charge_layers": [
+   0.009255775968491808,
+   0.09967978206896044
+  ]
+ },
+ "structural": {
+  "uniform_gamma_check_mass_weighted": 0.0007640115359544001,
+  "uniform_gamma_check_max_below_1km": 0.00326543007298441,
+  "zeta_center": -1.0498345572657224,
+  "zeta_surface": -1.0143072567295586,
+  "zeta_charge_layers": [
+   -1.01364908425232,
+   -1.0122536991297766
+  ],
+  "dq_per_eps": -1.840953484516629e-07,
+  "eps_per_dphi_max": 0.048,
+  "kappa_struct_max": 8.83657672567982e-09,
+  "over_direct_beta": 2.209144181419955e-09,
+  "scaling": "dq/eps ~ phi_inf, eps/dphi ~ phi_inf: kappa ~ phi_inf^2 (declared phi_inf = 1e-3)"
+ },
+ "j0337": {
+  "dphi_static_per_unit_charge": {
+   "pulsar": 4.445200083915865e-07,
+   "outer": 3.431222508698162e-09
+  },
+  "dphi_modulation_per_unit_charge": {
+   "pulsar, inner eccentricity": 3.0760784580697786e-10,
+   "outer, outer eccentricity": 1.2146527680791494e-10,
+   "outer, inner-orbit motion": 8.164104431461704e-11
+  },
+  "tides": {
+   "tidal_parameter_pulsar": 2.20400757092828e-05,
+   "tidal_parameter_outer": 1.2459659616280327e-10,
+   "fractional_tidal_force": 9.10381677623388e-12,
+   "apsidal_tide_over_n": 2.2759541940584704e-11,
+   "apsidal_gr_over_n": 1.5167739850028168e-06,
+   "apsidal_tide_over_gr": 1.5005229629213635e-05
+  },
+  "lagged_monopole_delta_bound": 2.7182003308944474e-18,
+  "paper_b_lag_limit": 1.7e-09,
+  "margin": 625413800.6968015,
+  "second_order_monopole_periodic": 3.7130117550961757e-19,
+  "nonstatic_inphase_tide": 0.00010027254450013203
+ }
+}
+exit 0

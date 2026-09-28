@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/.phase248-followthrough.py", line 28, in <module>
+    state=read(dependency/'controller-status.json');assert state['state']!='failed',state
+AssertionError: {'state': 'failed', 'error': "AssertionError({'state': 'failed', 'action': 'audit', 'completed': [{'action': 'fine', 'returncode': 0}, {'action': 'audit', 'returncode': 1}], 'elapsed_seconds': 9730.847812298})", 'completed': [], 'elapsed_seconds': 4986.288351181, 'final_charge_conclusion': 'unadjudicated', 'full_goal_complete': False}

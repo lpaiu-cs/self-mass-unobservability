@@ -1,0 +1,15 @@
+{
+  "classification": "Proven",
+  "checkpoint": "427ebf8",
+  "bindings": {
+    "verification/gr_scalar_residual_certificate.py": "171f3f025305c7972003687ac3a7d4e73bf5fa679b5082f62f93d09bbc62702f",
+    "outputs/direct-eos-gr33/gr-scalar-global-regular/manifest.json": "1aec3bc7c56238587e8bc4ea735604938a93fbf6053327c99204876fc68b4cb9",
+    "outputs/direct-eos-gr33/gr-scalar-pressure-readout/field-2e-12.npz": "77516afd35cf18cb0ea07bf3c5e914a142411cd2fc884f3e68f1b69b367138e8",
+    "outputs/direct-eos-gr33/gr-scalar-pressure-readout/result.json": "c768dd2adcd3c1daeecb2e839bbe084f51fe29d53b9eb07a287d3ceb29850ace"
+  },
+  "interpolant": "Exact rational C1 cubic Hermite polynomial from the saved field values and derivatives. Scale by field(x1)/(1+b(0)*x1^2/(6*a(0))), set p(0)=1,p_prime(0)=0. This central estimate is only an approximation; its error is included by the global residual, never assumed exact.",
+  "residual": "J(x)=int_0^x t^2*b(t)*p(t)dt is integrated as an exact polynomial. E_prime=p_prime-J/(x^2*a). Bernstein bounds of x^2*a*p_prime-J divided by a positive denominator bound give a rigorous L1 bound epsilon on E, with x^2 cancelled analytically in the centre piece.",
+  "propagation": "The proven Volterra contraction gives ||phi-p|| <= epsilon/(1-kappa). Then |W(1)-J(1)| <= B2*epsilon/(1-kappa). Propagate both through the exact declared Schwarzschild normalization and R/M with outward intervals.",
+  "controls": "An exact constant-potential sixth-order Taylor polynomial is compared with the analytic trigonometric response. Check arbitrary-degree Bernstein conversion and integral algebra symbolically. Report whether the old floating IVP coefficient is enclosed; do not change gates or interpolate away a disagreement.",
+  "boundary": "Certificate for the exact stored coefficient model only, including its centre interval and infinite exterior. No physical EOS/GR coefficient-generation error, finite scalar backreaction, dynamical stability or observation certificate."
+}

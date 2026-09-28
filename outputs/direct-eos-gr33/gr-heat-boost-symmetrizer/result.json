@@ -1,0 +1,19 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "frozen_models": 11470,
+  "certified_characteristic_roots": 45880,
+  "minimum_causal_margin": "558383147035111/2251799813685248",
+  "minimum_adjacent_root_separation": "17636744857240249/604462909807314587353088",
+  "minimum_residue_lower": "39526425065264834138863256353825396396851121231770161968320555805966125850077632860838725162721311211038350298098248719689601328175224048151661339530906671513600/398814676076181800132971158919620165436718617115935528642769785461680293951033818155535138263493351596206156150442547525484895008024310462914880168662696297364594932095465208289",
+  "coordinate_equation": "gamma*[(I-V*A)*y_tprime+(A-V*I)*y_xprime]+B*y=0. H=diag(v_i/u_i)>0, H*B=v*v^T>=0.",
+  "energy": "K0=gamma*H*(I-V*A)>0 and K1=gamma*H*(A-V*I) are symmetric. The quadratic current satisfies Eprime=gamma*(E-V*F), Fprime=gamma*(F-V*E). Since |F|<=max_i|c_i|*E<E for nonzero amplitudes, every subluminal boost has positive time energy.",
+  "strict_damping": "For a Fourier eigenpair, Re(s)*(z^*K0*z)=-|v^T*z|^2. Equality at nonzero real k would imply support only on one of the distinct transformed velocities (c_i-V)/(1-V*c_i). All v_i are nonzero, so this is impossible. Hence Re(s)<0 for every finite k!=0 and every |V|<1. At k=0 there are three conserved zero modes and one damped mode. No positive decay gap uniform in k or boosts is asserted.",
+  "causal": "1-cprime_i^2=(1-V^2)*(1-c_i^2)/(1-V*c_i)^2>0, and the transformed root difference is (1-V^2)*(c_j-c_i)/[(1-V*c_i)*(1-V*c_j)]>0. The exact saved margins certify the premises for all11470 frozen models.",
+  "varying_coefficients": "For K0*y_t+K1*y_x+D*y=0 with symmetric K0,K1, d_t(y^T*K0*y/2)+d_x(y^T*K1*y/2)=-y^T*sym(D)*y+y^T*(d_t K0+d_x K1)*y/2. The last term and boundary flux have no sign from the frozen residues. They cannot be dropped when judging the inhomogeneous GR star.",
+  "negative_control": "c=2,V=3/4 gives1-V*c=-1/2. Positive rest-frame time energy alone therefore cannot justify the all-boost conclusion without the causal premise.",
+  "full_GR_stability_certified": false,
+  "physical_transport_calibrated": false,
+  "finite_nonlinear_trajectory_certified": false,
+  "observational_inference_complete": false
+}

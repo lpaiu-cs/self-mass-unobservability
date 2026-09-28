@@ -1,0 +1,176 @@
+{
+  "status": "Imported from prior work",
+  "derivative_diagnostics": [
+    {
+      "label": "control",
+      "column": 21,
+      "h_vs_half_relative": 0.0010398879828043032,
+      "half_vs_control_relative": 0.0
+    },
+    {
+      "label": "control",
+      "column": 22,
+      "h_vs_half_relative": 0.0008136194710964656,
+      "half_vs_control_relative": 0.0
+    },
+    {
+      "label": "control",
+      "column": 27,
+      "h_vs_half_relative": 0.006651768980985528,
+      "half_vs_control_relative": 0.0
+    },
+    {
+      "label": "integration",
+      "column": 21,
+      "h_vs_half_relative": 0.0011528523245341899,
+      "half_vs_control_relative": 0.0007002988383331075
+    },
+    {
+      "label": "integration",
+      "column": 22,
+      "h_vs_half_relative": 0.001123825356348682,
+      "half_vs_control_relative": 0.0009335955742321158
+    },
+    {
+      "label": "integration",
+      "column": 27,
+      "h_vs_half_relative": 0.006620897544767903,
+      "half_vs_control_relative": 0.00047068001709991324
+    },
+    {
+      "label": "mesh",
+      "column": 21,
+      "h_vs_half_relative": 0.0014712897108239205,
+      "half_vs_control_relative": 0.0008579776218134145
+    },
+    {
+      "label": "mesh",
+      "column": 22,
+      "h_vs_half_relative": 0.0006994217700890945,
+      "half_vs_control_relative": 0.0008072882349460281
+    },
+    {
+      "label": "mesh",
+      "column": 27,
+      "h_vs_half_relative": 0.006635060309572712,
+      "half_vs_control_relative": 0.00020345689111977064
+    },
+    {
+      "label": "inversion",
+      "column": 21,
+      "h_vs_half_relative": 0.0010398879828043032,
+      "half_vs_control_relative": 0.0
+    },
+    {
+      "label": "inversion",
+      "column": 22,
+      "h_vs_half_relative": 0.0008136194710964656,
+      "half_vs_control_relative": 0.0
+    },
+    {
+      "label": "inversion",
+      "column": 27,
+      "h_vs_half_relative": 0.006651768980985528,
+      "half_vs_control_relative": 0.0
+    },
+    {
+      "label": "stable",
+      "column": 21,
+      "h_vs_half_relative": 0.001038823997175967,
+      "half_vs_control_relative": 0.0004959201534533109
+    },
+    {
+      "label": "stable",
+      "column": 22,
+      "h_vs_half_relative": 0.0006618217751164345,
+      "half_vs_control_relative": 0.0004534256525067042
+    },
+    {
+      "label": "stable",
+      "column": 27,
+      "h_vs_half_relative": 0.006648304781584839,
+      "half_vs_control_relative": 0.00013272647504270326
+    }
+  ],
+  "stellar_numerical_checks_pass": true,
+  "scalar_pole_contour_relative_change": 1.509998733972296e-08,
+  "nonlinear_fits": [
+    {
+      "label": "minus",
+      "iterations": 16,
+      "deviance": 15979.110144078746,
+      "eccentricity_extra": 0.37021575403298146,
+      "stationarity_certified": false,
+      "termination": "iteration budget"
+    },
+    {
+      "label": "plus",
+      "iterations": 14,
+      "deviance": 16270.589789170652,
+      "eccentricity_extra": 0.3881324212237424,
+      "stationarity_certified": false,
+      "termination": "three failed local line searches"
+    },
+    {
+      "label": "zero",
+      "iterations": 16,
+      "deviance": 15191.794411425391,
+      "eccentricity_extra": 0.292773143988673,
+      "stationarity_certified": false,
+      "termination": "iteration budget"
+    },
+    {
+      "label": "zero_displaced",
+      "iterations": 16,
+      "deviance": 15191.906820826436,
+      "eccentricity_extra": 0.29034186415044366,
+      "stationarity_certified": false,
+      "termination": "iteration budget"
+    },
+    {
+      "label": "zero_refined",
+      "iterations": 18,
+      "deviance": 15191.568257276085,
+      "eccentricity_extra": 0.29463273651439914,
+      "stationarity_certified": false,
+      "termination": "three failed local line searches"
+    }
+  ],
+  "fresh_gradient_columns": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27
+  ],
+  "rigorous_derivative_certificate": {
+    "pass_gate": false,
+    "function_error_upper_bound": null,
+    "third_derivative_upper_bound": null,
+    "reason": "No continuum ODE/interpolation/roundoff enclosure is supplied. Measured differences cannot fill these fields."
+  },
+  "full_physical_inference_pass": false
+}

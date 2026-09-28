@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_independent_fine_native.py", line 70, in <module>
+    globals()[action]()
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_independent_fine_native.py", line 59, in fine
+    exec(compile(source,__file__,'exec'),ns);ns['evolve'](128)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_independent_fine_native.py", line 14, in evolve
+    
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_postfloor_native.py", line 36, in evolve
+    write(OUT/'plan.json',dict(classification='Conjectural',checkpoint='bdfb6a4c7',
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/balance_full_native_krylov.py", line 42, in run
+    import sympy as sp
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_postfloor_native.py", line 26, in saved_stage
+    cells=np.flatnonzero(np.any(q['g']!=q['restart_guide'],axis=1))
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_native_flux_precision.py", line 39, in stages
+    forecast='Independent high evaluation of two actual stages costs1.28s after setup.658saved stages imply about7minutes plus setup, with20minute prefix cap.200used1659s for8failed proposals of one step. Allow2/3hours for5coarse/16fine remaining substeps; later/fine costs remain uncertain, not an ETA. No accepted prefix reintegration.',
+AssertionError: ('True native joint Radau equation', [{'relative': 2.0520666353639954e-10, 'moments': [1.2512400299072781e-17, 1.081670636059267e-17, 1.1794512052906714e-18, 2.0656568017379787e-18]}, {'relative': 1.861498118704209e-10, 'moments': [1.2512400299072781e-17, 1.0816706360639817e-17, 1.1794512052906714e-18, 2.0656568017379787e-18]}, {'relative': 1.8673446877526332e-10, 'moments': [1.2512400299072781e-17, 1.0816706360497188e-17, 1.1794512052906714e-18, 2.0656568017379787e-18]}, {'relative': 1.867345789841242e-10, 'moments': [1.2512400299072781e-17, 1.0816706360716276e-17, 1.1794512052906714e-18, 2.0656568017379787e-18]}, {'relative': 7.785809961234352e-10, 'moments': [1.2512400299072781e-17, 1.0816706360935083e-17, 1.1794512052906714e-18, 2.0656568017379787e-18]}, {'relative': 1.867345496814972e-10, 'moments': [1.2512400299072781e-17, 1.0816706361126457e-17, 1.1794512052906714e-18, 2.0656568017379787e-18]}, {'relative': 1.8673449415233116e-10, 'moments': [1.2512400299072781e-17, 1.0816706361372758e-17, 1.1794512052906714e-18, 2.0656568017379787e-18]}, {'relative': 1.8673446316723564e-10, 'moments': [1.2512400299072781e-17, 1.0816706361591379e-17, 1.1794512052906714e-18, 2.0656568017379787e-18]}])

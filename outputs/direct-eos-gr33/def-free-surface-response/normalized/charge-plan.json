@@ -1,0 +1,25 @@
+{
+  "classification": "Counterexample candidate",
+  "bindings": {
+    "verification/def_free_surface_charge.py": "e13ad641ba2a60833dc6db21a3247f72d580fb345bb28e603cd8dbfbdb97dc0a",
+    "verification/def_free_surface_response_normalized.py": "1969a06c3eac29abab56e8a51ea6a019ba64d3f1c98cf382bda6a3614d17cb94",
+    "verification/def_free_surface_response.py": "340f50f60e44246ea6680d934bc9a36f6778567c2018bb430bd411698f207965",
+    "outputs/direct-eos-gr33/def-free-surface-response/normalized/background.npz": "c42374d2a79ab37cc716bad52e6b72a4940dc82f0923f71856601f213f0c4a2c",
+    "outputs/direct-eos-gr33/def-free-surface-response/normalized/result.json": "7bfd11991580299f024144a4f2ab22f36eee77f01ccd5ceeb0f2c2b777d06646",
+    "outputs/direct-eos-gr33/def-hydrostatic-background/absolute-shoot/lapse.npz": "9c08b16699d7bfaa696a93e68ad2eb42a9ea98f8373d036f3c7018d5dc374dba",
+    "outputs/direct-eos-gr33/def-hydrostatic-background/absolute-shoot/background-0.001.npz": "774e2bff821f5863291167f069a8673562bfee8b0ab648468c8dfc5a2a9b04d3"
+  },
+  "claim": "Extract same-incoming outgoing full-minus-clamped material motion contribution from the coupled solutions; separately test necessary thermal equilibrium, without claiming a complete orbital charge.",
+  "paired_subtraction": "Delta outgoing=(Delta phi_surface-xi*Phi_surface contrast)/h. Static mass-denominator terms cancel in this same-background, same-asymptotic-field mechanical contrast.",
+  "clamped_control": "xi=0, delta ln rho=-(r*Phi+3*alpha)*delta phi; same adiabatic native Gamma1 and scalar/metric constraints. Momentum is held by a prescribed support; this is an explicit decomposition.",
+  "thermal_test": "At zero velocity and zero initial heat flux, positive steady conductive/radiative transport requires d ln(T_J*A*N)/dr=0. Test this necessary condition on the saved fine background; no cooling-time bound inferred.",
+  "gates": {
+    "linear_residual": 1e-09,
+    "mechanical_charge_grid_relative": 0.02
+  },
+  "budget": {
+    "hard_timeout_seconds": 30,
+    "native_calls": 0,
+    "time_steps": 0
+  }
+}

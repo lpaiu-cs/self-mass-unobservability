@@ -1,0 +1,35 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "1260c415",
+  "claim": "Preserve the weak scalar component with exactly field-separated mass-orthogonal trial bases and input-norm-balanced arithmetic, then evolve the unchanged coupled system.",
+  "method": "Total128/256/512 columns, equally split fluid/scalar; independent shifted Krylov bases. Retain full cross-field weak stiffness and source. Similarity scales from original mass-whitened force norms, no fit to response. General eigensolve and analytic original heat poles.",
+  "gates": {
+    "propagation_relative": 0.02,
+    "propagation_order": 1.5,
+    "spatial": 0.02,
+    "spatial_decrease": true,
+    "coefficient": 0.02,
+    "outer": 0.002,
+    "quadrature": 0.002,
+    "linear_residual": 1e-09,
+    "heat_balance": 2e-13
+  },
+  "decision": "Same original degrees4,2,1 and dimensions; degree4 first. Stop on any component failure. Only after propagation and spatial gates run coefficient, outer and quadrature contrasts. No larger space or fitted source.",
+  "budget": {
+    "pilot_cap_seconds": 90,
+    "first_case_cap_seconds": 120,
+    "total_cap_seconds": 300,
+    "CPU_threads": 1,
+    "memory_GB": 4,
+    "new_EOS_calls": 0
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_field_projection.py": "eebc275e2f253bb9d66701e548b67c48e463037e3d5af14219eda0fbea46a548",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_inverse_projection.py": "f4b69982980e13b535ff5d57f1aec0dc169534b773aef43a045dda151704e376",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_hierarchical.py": "7861123d4adfdfdaa21daee3fc7d79dcdffdd024ca48b3f453921b5cb745992b",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_spatial_repair.py": "d13044861c2b4761d5e6349d809c3368f46112974f374aa050aada516c80f8e5",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-inverse-projection/stage-result.json": "a8ea34538bb6f37bfcc5ae6475b563facb4e10192cdeaf63857c2995ae117a3d",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/fine-bank.npz": "b4493a6e4cfb20d741725ecb61cec154ab9fc51a694001865748741060018d7e",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/coarse-bank.npz": "ea020f69b240c5c5cdd8810f963d88e5cc2d3269aff12c659422a7a6541ae0df"
+  }
+}

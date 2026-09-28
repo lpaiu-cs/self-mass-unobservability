@@ -1,0 +1,11 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "AssertionError(7.131209897139719e-08)",
+  "repair": "Compute Etilde and subtract actual collision transfer in longdouble before casting the small M to binary64. Apply in the common active Response constructor for both clocks and later block checks; same physical arrays and equation.",
+  "original_check_cap": 60,
+  "remaining_check_cap": 40,
+  "no_evolution_repeated": true,
+  "dispatch_correction": "The50s remainder was rejected before initialization because the first check cost12.96s. Retain that rejection; allocate40s so all checks stay within60s.",
+  "source_sha256": "6fd116ba477d3b0b556951405ce030e816439a22f39473b2369a786e027326e8",
+  "original_source_sha256": "3e8dfb36007f6cf051a7f94c928fefb5a576e251dc366a35df7a5ca7ab3df894"
+}

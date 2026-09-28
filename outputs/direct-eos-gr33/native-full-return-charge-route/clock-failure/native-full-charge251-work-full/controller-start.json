@@ -1,0 +1,133 @@
+{
+  "pid": 737,
+  "process_start_ticks": "65541",
+  "boot_id": "668d9702-2b45-40f7-b597-a59d21cbb64c",
+  "started_unix": 1790284530.1497076,
+  "controller_sha256": "c681ad94686e39c01a29e9f66de18f5e786abcf06e3210c529bc45628aa0c554",
+  "bindings": {
+    "verification/read_full_return_charge.py": "69cca194ef8def5a79fd56b4aff0e0629dfe83ec91e0fc3e70e74765d28a68c1",
+    ".phase251-reader-launch.py": "83275ae7dcb1efbf286a21a4f3bc78d92defdf80c01159fd2cc360764c921086",
+    ".phase247-polynomial-audit.py": "1c5aa0306c4641f572e6f349f457862c749d261c00dd56372dc8faa012941e85",
+    "native-full-charge251-work/regression.json": "a607393ab441003e04c59501b102b641aa8d4d01690e21eeb278b53fba662334",
+    "native-full-return249-work/controller-start.json": "19507473d3107491924689c37d34c715299f5e1b3d5c776c48ecfcfaf3c7eb28"
+  },
+  "dependency": {
+    "pid": 427,
+    "process_start_ticks": "27088",
+    "boot_id": "668d9702-2b45-40f7-b597-a59d21cbb64c",
+    "started_unix": 1790284163.7919502,
+    "controller_sha256": "2f6797dd4359de30d095524a0e08d3d01e5b96ce9af4ceba937377b190358940",
+    "producer_sha256": "7830269a0ee20eeb0b7e989038e8e59d36573913cb4c86b34ad5ef48634685b1",
+    "dependencies": {
+      "native-complete-return236-work": {
+        "pid": 156055,
+        "process_start_ticks": "1284093",
+        "boot_id": "8261121e-12db-4df6-81ef-d017b65fa802",
+        "started_unix": 1790271433.0793488,
+        "producer_sha256": "624f92fb21cdec45ef79360920511fff3d18d25f1a87ed4aca3bf4f5e528b1fc",
+        "controller_sha256": "68b50650c45967d7e6ef12fa1bcdaff40d66403f2e7fdae18eae07a53999a602",
+        "parallel_fields": {
+          "field1288": 4,
+          "field648": 6,
+          "field1284": 8
+        },
+        "sequential_actions": [
+          "collect",
+          "metric",
+          "coarse",
+          "fine",
+          "audit"
+        ]
+      },
+      "native-retarded-extension248-work": {
+        "pid": 336,
+        "process_start_ticks": "22324",
+        "boot_id": "668d9702-2b45-40f7-b597-a59d21cbb64c",
+        "started_unix": 1790284117.4268475,
+        "controller_sha256": "535078a913e17ddeaaf0beb7324aa21edd0cc48d6c896dfb9544ed5d436457bf",
+        "bindings": {
+          "verification/extend_unchanged_source_prefix.py": "cdc7d3fb1e71edc8b5bfa326dd6d7c9c671c973dd9258ccac95a21f829d4e077",
+          ".phase251-reader-launch.py": "83275ae7dcb1efbf286a21a4f3bc78d92defdf80c01159fd2cc360764c921086"
+        },
+        "producer_sha256": "cdc7d3fb1e71edc8b5bfa326dd6d7c9c671c973dd9258ccac95a21f829d4e077",
+        "resumption_after_boot_change": true,
+        "interrupted_start": {
+          "pid": 228453,
+          "process_start_ticks": "2563627",
+          "boot_id": "8261121e-12db-4df6-81ef-d017b65fa802",
+          "started_unix": 1790283439.3508315,
+          "controller_sha256": "da9bfbcce43066ebef321798c11ca170c0efe1521d16cf94c990f72d4276a833",
+          "producer_sha256": "cdc7d3fb1e71edc8b5bfa326dd6d7c9c671c973dd9258ccac95a21f829d4e077",
+          "dependency": {
+            "pid": 214700,
+            "process_start_ticks": "2443604",
+            "boot_id": "8261121e-12db-4df6-81ef-d017b65fa802",
+            "started_unix": 1790282316.219934,
+            "producer_sha256": "65181e02ca85c998a9612abfc79cc3f5b130d6dd7d2432f9c9c2701f1c6e0d5e",
+            "controller_sha256": "92ed7faf4b3e092b316afe5e903905ff64661415f99e847b3c5c8c610a8b5a77",
+            "dependency": {
+              "pid": 167049,
+              "process_start_ticks": "1440923",
+              "boot_id": "8261121e-12db-4df6-81ef-d017b65fa802",
+              "started_unix": 1790272907.7851486,
+              "producer_sha256": "9173213c15b4fe69d4e7c814f907a7e3c87164caa3fa0a94a06842128b0239cb",
+              "controller_sha256": "fa9d79299090d1b2e6bf6fd4eae37a8dab1a1b53dfb18f97b2d7125cf260f10d",
+              "actions": [
+                "fine",
+                "audit"
+              ],
+              "CPU_affinity": 10
+            },
+            "CPU_affinity": 2,
+            "actions": [
+              "prepare",
+              "assemble",
+              "endpoints",
+              "source"
+            ],
+            "max_dependency_wait_seconds": 21600,
+            "final_charge_conclusion": "unadjudicated",
+            "full_goal_complete": false
+          },
+          "max_dependency_wait_seconds": 43200,
+          "parallel_fields": {
+            "field1288": 1,
+            "field648": 5,
+            "field1284": 9
+          },
+          "field_cap_seconds": 7200,
+          "virtual_GiB_per_worker": 16,
+          "final_charge_conclusion": "unadjudicated",
+          "full_goal_complete": false
+        },
+        "archive": "native-full-charge251-work/interruption-0605/248",
+        "policy": "Keep completed receipts and scientific gates. Resume only missing actions, preserve unfinished files/logs. Serialize shared generated-code initialization only.",
+        "final_charge_conclusion": "unadjudicated",
+        "full_goal_complete": false
+      }
+    },
+    "max_dependency_wait_seconds": 43200,
+    "CPU_affinity": 3,
+    "virtual_GiB": 16,
+    "actions": [
+      "prepare",
+      "metric",
+      "coarse",
+      "fine",
+      "audit"
+    ],
+    "final_charge_conclusion": "unadjudicated",
+    "full_goal_complete": false
+  },
+  "max_dependency_wait_seconds": 43200,
+  "field_cap_seconds": 10800,
+  "virtual_GiB_per_process": 16,
+  "parallel_field_CPUs": [
+    4,
+    10,
+    14
+  ],
+  "physical_steps": 0,
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false
+}

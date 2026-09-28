@@ -1,0 +1,60 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "versions": [
+    {
+      "plan": "plan.json",
+      "registered_path": "verification/def_native_conservative_source.py",
+      "executed_copy": "outputs/direct-eos-gr33/def-native-conservative-source/registered-source.py",
+      "sha256": "1b0ca14410070e0fd8b70620329e1398e8dc0de47ea284ae4e21eac979f0cebe"
+    },
+    {
+      "plan": "corrected-plan.json",
+      "registered_path": "verification/def_native_conservative_source.py",
+      "executed_copy": "verification/def_native_conservative_source.py",
+      "sha256": "d9a336e073116fb06df8ebd3c8a1744a40c48b1564bf7df84aeae968ed6083c2"
+    },
+    {
+      "plan": "control-plan.json",
+      "registered_path": "verification/verify_native_conservative_source.py",
+      "executed_copy": "verification/verify_native_conservative_source.py",
+      "sha256": "7bb253695915b9ee4caffc2ecf8692449288de4f20359b17be766a53aa6a7ade"
+    },
+    {
+      "plan": "order-plan.json",
+      "registered_path": "verification/def_native_source_order.py",
+      "executed_copy": "outputs/direct-eos-gr33/def-native-conservative-source/order-registered-source.py",
+      "sha256": "044aa8fca3c7231048fe067fdb42e1c9ffd7fe3403447cbe71defd9af80f17e3"
+    },
+    {
+      "plan": "order-corrected-plan.json",
+      "registered_path": "verification/def_native_source_order.py",
+      "executed_copy": "outputs/direct-eos-gr33/def-native-conservative-source/order-cache-source.py",
+      "sha256": "f7ccd70490c0fff8de4c198d92375d3336e60f316361a35f362820d58da7dcc6"
+    },
+    {
+      "plan": "order-permuted-plan.json",
+      "registered_path": "verification/def_native_source_order.py",
+      "executed_copy": "outputs/direct-eos-gr33/def-native-conservative-source/order-colamd-source.py",
+      "sha256": "06f22f49f5ccf3f38360b763a128051343a672f5e7cd8f9d2bc6dfabdd412b97"
+    },
+    {
+      "plan": "order-banded-plan.json",
+      "registered_path": "verification/def_native_source_order.py",
+      "executed_copy": "outputs/direct-eos-gr33/def-native-conservative-source/order-banded-source.py",
+      "sha256": "2c92686e445260168c0946cfd583c324b29c98a8f8e321f074478c4f29b9fb5d"
+    },
+    {
+      "plan": "order-condensed-plan.json",
+      "registered_path": "verification/def_native_source_order.py",
+      "executed_copy": "outputs/direct-eos-gr33/def-native-conservative-source/order-condensed-source.py",
+      "sha256": "3cc227ff703daeb4b34f640c40d8951b4b7d974dff1c0bbb61fdd11c90ffd990"
+    },
+    {
+      "plan": "order-budget-review.json",
+      "registered_path": "verification/def_native_source_order.py",
+      "executed_copy": "verification/def_native_source_order.py",
+      "sha256": "4c05949b9eb755a7d142fabc94f8c9dff81f06cdd5d999dea374631661769b09"
+    }
+  ]
+}

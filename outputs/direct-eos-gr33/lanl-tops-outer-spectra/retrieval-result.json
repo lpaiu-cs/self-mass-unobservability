@@ -1,0 +1,34 @@
+{
+  "classification": "Counterexample candidate",
+  "completed": true,
+  "rows": [
+    {
+      "name": "outer1500on",
+      "cell": 0,
+      "retrieved": true,
+      "warnings_present": false,
+      "physical_acceptance_not_yet_evaluated": true
+    },
+    {
+      "name": "outer2000on",
+      "cell": 0,
+      "retrieved": true,
+      "warnings_present": false,
+      "physical_acceptance_not_yet_evaluated": true
+    },
+    {
+      "name": "outerpairoff",
+      "cell": 0,
+      "retrieved": false,
+      "traceback": "Traceback (most recent call last):\n  File \"/mnt/e/lab/self-mass-unobservability/verification/lanl_tops_stellar_probe.py\", line 110, in run\n    try:result=fetch(row)\n  File \"/mnt/e/lab/self-mass-unobservability/verification/lanl_tops_stellar_probe.py\", line 97, in fetch\n    with opener.open(url,urllib.parse.urlencode(second).encode(),timeout=90) as response:raw=response.read()\n  File \"/usr/lib/python3.10/urllib/request.py\", line 525, in open\n    response = meth(req, response)\n  File \"/usr/lib/python3.10/urllib/request.py\", line 634, in http_response\n    response = self.parent.error(\n  File \"/usr/lib/python3.10/urllib/request.py\", line 563, in error\n    return self._call_chain(*args)\n  File \"/usr/lib/python3.10/urllib/request.py\", line 496, in _call_chain\n    result = func(*args)\n  File \"/usr/lib/python3.10/urllib/request.py\", line 643, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: INTERNAL SERVER ERROR\n"
+    },
+    {
+      "name": "outerpairboth",
+      "cell": 0,
+      "retrieved": false,
+      "traceback": "Traceback (most recent call last):\n  File \"/mnt/e/lab/self-mass-unobservability/verification/lanl_tops_stellar_probe.py\", line 110, in run\n    try:result=fetch(row)\n  File \"/mnt/e/lab/self-mass-unobservability/verification/lanl_tops_stellar_probe.py\", line 97, in fetch\n    with opener.open(url,urllib.parse.urlencode(second).encode(),timeout=90) as response:raw=response.read()\n  File \"/usr/lib/python3.10/urllib/request.py\", line 525, in open\n    response = meth(req, response)\n  File \"/usr/lib/python3.10/urllib/request.py\", line 634, in http_response\n    response = self.parent.error(\n  File \"/usr/lib/python3.10/urllib/request.py\", line 563, in error\n    return self._call_chain(*args)\n  File \"/usr/lib/python3.10/urllib/request.py\", line 496, in _call_chain\n    result = func(*args)\n  File \"/usr/lib/python3.10/urllib/request.py\", line 643, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: INTERNAL SERVER ERROR\n"
+    }
+  ],
+  "physical_acceptance_not_yet_evaluated": true,
+  "full_GR_evolution": false
+}

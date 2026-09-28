@@ -1,0 +1,38 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "95d99987",
+  "claim": "Resolve the measured short acoustic response by polynomial displacement within the original source-aligned cells, then apply the same input to actual GR evolution.",
+  "fixed": "Same cell faces, source poles, physical GR equations, zero initial data,0.230804955685s horizon and65 readout times. Composite6-point integration keeps all existing input/background knots. No new EOS or input fitting.",
+  "method": "Compare polynomial degrees1,2,4; each actual path has nested128/256/512 mass-orthogonal propagation spaces. Polynomial evaluation at the original native radii, no smoothing or changed readout definition.",
+  "gates": {
+    "propagation_relative": 0.02,
+    "propagation_order": 1.5,
+    "spatial_relative": 0.02,
+    "spatial_decrease": true,
+    "coefficient": 0.02,
+    "outer": 0.002,
+    "quadrature": 0.002,
+    "linear_residual": 1e-09,
+    "heat_balance": 2e-13
+  },
+  "decision": "First measure degree2/64 pilot. Run only the fixed degrees1,2,4. If any final projection or spatial gate fails, stop; otherwise run exactly three degree4 contrasts: coefficient, outer3R, quadrature8. Never add degree, cells or projection vectors automatically.",
+  "budget": {
+    "main_models": 3,
+    "conditional_models": 3,
+    "maximum_degree": 4,
+    "maximum_projection": 512,
+    "hard_seconds": 300,
+    "CPU_threads": 1,
+    "memory_GB": 4,
+    "new_EOS_calls": 0
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_spatial_repair.py": "d13044861c2b4761d5e6349d809c3368f46112974f374aa050aada516c80f8e5",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_canonical_regular.py": "6946494ca87e1a5aeadbdb283bd3b5feedf4c19f32df003df51d0a71f7915d54",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_energy_modes.py": "cc10e572c8a0b1f1f4846e348ab9c9ca68d82186111431ee1cc0d291937b436d",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_energy_fem.py": "b032fd679022359230a75537dcfc51102454043b665b1da64cda5b00c637b65b",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-spatial-repair/inspection.json": "badfdeb6427a5eeb1d27011569d9d96b4c722a8d8b6b5f084aeb9b5bfbabdb57",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/fine-bank.npz": "b4493a6e4cfb20d741725ecb61cec154ab9fc51a694001865748741060018d7e",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/coarse-bank.npz": "ea020f69b240c5c5cdd8810f963d88e5cc2d3269aff12c659422a7a6541ae0df"
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "classification": "Counterexample candidate",
+  "actual_same_joint_solution_GR_computed": false,
+  "exact_original_photon_input_replayed": true,
+  "conditional_blocks_recomputed": 8,
+  "original_port_failure_preserved": true,
+  "original_equation_after_extra_corrections_passed": true,
+  "last_refinement_did_not_resolve_port": true,
+  "numerical_result": {
+    "classification": "Counterexample candidate",
+    "original_equation": {
+      "step": 15,
+      "relative": 9.551948476563002e-17,
+      "physical": [
+        3.060244550027905e-18,
+        5.183634312113859e-17,
+        4.922595413216929e-16,
+        1.3044962272448915e-19
+      ],
+      "native_identity_absolute": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    "snapshot": {
+      "time": 0.0002146519448705439,
+      "snapshot_index": 2,
+      "steps": 16,
+      "endpoint_relative": 1.2904550045825546e-16,
+      "material_ledger": [
+        3.4399609197252183e-15,
+        1.166852431658639e-13,
+        3.775971858038206e-15,
+        3.3150581839943015e-17
+      ],
+      "radial_port_relative": 4.545628262429946e-12,
+      "angular_relative": 1.7064248836545407e-16,
+      "passed": false
+    },
+    "old_radial_port_relative": 4.547206622702928e-12,
+    "outer_number_port_change": 3.8191672047105385e-14,
+    "extra_linear_correction_solution_relative": 5.073184918503846e-19,
+    "conditional_tighter_gate_failed": true,
+    "original_port_gate_passed": false,
+    "new_physical_steps": 0,
+    "new_Krylov_iterations": 0,
+    "final_charge_conclusion": "unadjudicated"
+  },
+  "new_physical_steps": 0,
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false,
+  "document_prefixes": {
+    "docs/model-definition.md": {
+      "bytes": 262643,
+      "sha256": "967c1ae7eb095e2d0df473f4bbc7864001ba0afbf62a5f7ef7baa9578493bb81"
+    },
+    "docs/observable-targets.md": {
+      "bytes": 253430,
+      "sha256": "07281ef26f97781c14bafa2f85165d2b9edb5ddf5b407f32993a7c8d1b73c438"
+    },
+    "docs/adiabatic-limit.md": {
+      "bytes": 247783,
+      "sha256": "c5ab6c300c7e78918df58493c15cddfe477c7efa882d9b5588e66f3efa8bca78"
+    },
+    "docs/nonadiabatic-regime.md": {
+      "bytes": 256311,
+      "sha256": "131e32ea3d7a2b609d365f9a605f5225c0f6bafb25f63519056ced4f1fee6aec"
+    },
+    "docs/failure-ledger-dynamic-chi.md": {
+      "bytes": 293784,
+      "sha256": "4ec6758fa79764cbc752839413b0a91b648017eed478f4365682242671275a2f"
+    },
+    "docs/dynamic-charge-completion.md": {
+      "bytes": 121896,
+      "sha256": "ae6e9c3de7a768bdbe86aee89f66f2379e5e123b5ef1e556fea4cab1c071a5bb"
+    }
+  },
+  "sha256": {
+    "verification/restart_photon_recovery_from_archive.py": "6250ff626fc1f84867a9c677ae17cca1b6be5b15eef55b8e84e09a87672ef09b",
+    "notes/REQUEST220_PHOTON_INPUT_AND_REFINEMENT_KO.md": "29ff2d0eeb5723308ee83f51c6fe093f57c4e3e60a99c57192370d99e8c801b9",
+    "docs/model-definition.md": "68fc93d3b2554d5d081634e5befc18c1f41a026a047c5b741e2175956288f63e",
+    "docs/observable-targets.md": "184c2bbd12cd414de69bd37634ff69e555f719f5efdda4d49666eec53fffb0c3",
+    "docs/adiabatic-limit.md": "2002b44033edfdb8a703370e425d80a68fe8f9a3a7fe6c372e736973ca458c36",
+    "docs/nonadiabatic-regime.md": "368b674fd065379f87bf0383f8006c65429e4a9cb13ba8b57eddad1bd7f6a88b",
+    "docs/failure-ledger-dynamic-chi.md": "3c3a902516bd8fafceb02a36977906f6b8bf01382cff88ee55b335015fc3833c",
+    "docs/dynamic-charge-completion.md": "6b058ff4bedccb95555bca1e91ef73a1be2f5755487d7fa99f3eba981e0bd90b",
+    "outputs/direct-eos-gr33/native-photon-input-repair/original-input-128.npz": "5c3187c707cd708b9dfac66f9d794147e3b948630ab0313fc4f3309236598b6e",
+    "outputs/direct-eos-gr33/native-photon-input-repair/publication-producer.py": "54103493f5bdd3a5e21fe222d8e05707535738bbb67e7d90feb0d1783e936aad",
+    "outputs/direct-eos-gr33/native-photon-input-repair/publication.json": "de1c1b272f53e9aeb35e3d8872ec2711cfbe26db29563687b57b02d8d47bbb02",
+    "outputs/direct-eos-gr33/native-photon-input-repair/refinement-audit-producer.py": "1742aad5e91f0194e996391f893ef6253da5567a97d69f1611fffb092503d574",
+    "outputs/direct-eos-gr33/native-photon-input-repair/result.json": "ed4bdac5d4c43432d10352efa5f2aff5ce495c1eb00009e885a6f32fb5a53f53",
+    "outputs/direct-eos-gr33/native-photon-input-repair/reused-prefix-128.npz": "deba0c43afb902e8ca48b97993253eda6765d4ea647e89b46105d2838ee89efb",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/accepted-128.npz": "73d35c9e5c85a2d33479599d6dcd020ccedee0f73db9887679861f504efc2b03",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/check-result.json": "69d213635792f32d54a04dd107aa19178d7943261ca23305d6b720862c246106",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/checked-producer.py": "2ec5d8be1d97380b6e15184682dde09c9a5c10dd411c97c9bdfe9f8dee45a2d7",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/current-pair.npz": "2fba7169435a2a16f3813303af358a699aa90f5ad7e3409b66fdef27f9235909",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/expanded-affine-jacobian.py": "3e16001f78614321b344c1a125caddfbe24f8b53cdae2d0d7c9d69b4c80443a3",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/expanded-continuation-run.py": "9a94a85c8ae95c8eced712fbf8848226f3a1ea6e3f23fba1dc4559d491f5c8d7",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/expanded-full-stages.py": "5b47a101f75464316867872639fcf3d4018fbabaef13060a3b1ca5f09f0b4ab2",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/expanded-geometric-tangent.py": "9f544dcaa6ddd71096377d4556e9c6e17f0a790969a6b1d628df26b416b0c97d",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/expanded-joint-run.py": "6b0d85a25686b8576d71d88f00fa187f213160d85d17ef2b85c01a856e06d7d6",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/expanded-original-128.py": "00de9b7672e416dd1033a94782623cdd5006279b4877e2a0e8781f2195ad2260",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/expanded-recovery-128.py": "90cc38b18e4472415fb4a883a6c87f1a3b5720bdcac109914d1065495d6ef59d",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/fine-receipt.json": "e7d703799fea7bb227868c18c766e6ee1c11b801e9384627aebf757dc59e8506",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/linear-128.json": "3a494293ed9f316e28b1425249afbdc44f62f64778b8d7e27f0e692fbff5f3f3",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/normalization.json": "820244d5d23554811c792b52a45a3e28317392019f5aac7d8733eeb3b4d28706",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/photon-conservation-plan.json": "248525a3b9808f00f193c48d9739000a1c32eea1cf8197cf8c3ad8b939a0bb2d",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/plan.json": "854a5d2e0d84b46b7521589ef0ff33eeb302484f06e47a04957d19b30e4015f6",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/prepare-receipt.json": "f8038d7fa7b06da3155cf814743ff1421a7201c7864c7c054b8c222baadd16f1",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/progress-128.json": "7ab47cdef1184f0d8d0ae8aa035c1bbaf606dcade3307dbc24c4af785296fbf1",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/refine-receipt.json": "db2d18268de048ccdc7ee2062af0bd1f379c27339fe25af0ea40d8d5a990a448",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/seed-128.npz": "511650235697edb900d6417137c8f0bc8f31c5db181fd6ac5f00327d7e43ca67",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/seed-identity.json": "2e9e7926a64b43949b57b91ec663815662cfe5a7c9d9c513c409a2ce74dd71c5",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/symbolic.json": "50c3391d5d051f680b2b7b41788f77345917cda8ee5dd2c0111374f9fc654c46",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/clock-128/original-equation-10.json": "0724b6b4f913ede0d8716ab994acd0ed42aa253724646f643d02be76a705e642",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/clock-128/original-equation-11.json": "b92d0faa968b8853a02db846da1c5ffcdc184e6ef0f72b8d4a5498f0f6b4fa90",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/clock-128/original-equation-12.json": "de9467600bdd73dcd218e1af313c39f1f9dd5db7c4be56f3a6535d6353a2a9d5",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/clock-128/original-equation-13.json": "03c698a29b03944e50c642ec11fea6e928043d1e85b5565d8ffbc5e77e8a56be",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/clock-128/original-equation-14.json": "ac44f483795144e89d0a5b0d79d3bca9ba8cc72d244f7d04e31309c7b8abbeea",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/clock-128/original-equation-15.json": "0a6a0b2d81b0b5adbee563ec195e21a70c16859b71e2152350bc2fed623f897e",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/clock-128/original-equation-8.json": "399c952226b8601a0e20fa78800f39d3993ff24c553be63db02babc606abb1bf",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/clock-128/original-equation-9.json": "0a2fe339d554617feedce18e910e62ed368459342168dcf15d541aa2e4982591",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/clock-128/snapshot-02.json": "bb608800ada0255dbb6be5aec2e52fa3705e759906b7530a29d4f80c881da83c",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/refinement/accepted-128.npz": "73d35c9e5c85a2d33479599d6dcd020ccedee0f73db9887679861f504efc2b03",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/refinement/check-result.json": "69d213635792f32d54a04dd107aa19178d7943261ca23305d6b720862c246106",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/refinement/expanded-affine-jacobian.py": "3e16001f78614321b344c1a125caddfbe24f8b53cdae2d0d7c9d69b4c80443a3",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/refinement/expanded-continuation-run.py": "9a94a85c8ae95c8eced712fbf8848226f3a1ea6e3f23fba1dc4559d491f5c8d7",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/refinement/expanded-full-stages.py": "5b47a101f75464316867872639fcf3d4018fbabaef13060a3b1ca5f09f0b4ab2",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/refinement/expanded-geometric-tangent.py": "9f544dcaa6ddd71096377d4556e9c6e17f0a790969a6b1d628df26b416b0c97d",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/refinement/expanded-joint-run.py": "6b0d85a25686b8576d71d88f00fa187f213160d85d17ef2b85c01a856e06d7d6",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/refinement/expanded-original-128.py": "00de9b7672e416dd1033a94782623cdd5006279b4877e2a0e8781f2195ad2260",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/refinement/expanded-recovery-128.py": "38af66ee6837728e8c09a4b173e488c5b2a8bdb7faef16c854ba5fa6d232ff7f",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/refinement/linear-128.json": "d8b7ffc71c484ededd458434563aa9e4af668d9431d1e43815abc8f12652e5e0",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/refinement/linear-input-identity.json": "29166a308a4e6f5be02cc15841ad3b70501058fc317b5545ea41d40d3410af2a",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/refinement/normalization.json": "820244d5d23554811c792b52a45a3e28317392019f5aac7d8733eeb3b4d28706",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/refinement/photon-conservation-plan.json": "248525a3b9808f00f193c48d9739000a1c32eea1cf8197cf8c3ad8b939a0bb2d",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/refinement/plan.json": "5ad35b9852718fde96f2b3e5ed9909fd99c9a322354e7e0438228d12c62bc107",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/refinement/rejected-linear-128.npz": "72aba473f59990b65c051b9a35521ed38081ac9b70efcc244f13788be2f6d914",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/refinement-audit/check-result.json": "69d213635792f32d54a04dd107aa19178d7943261ca23305d6b720862c246106",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/refinement-audit/expanded-affine-jacobian.py": "3e16001f78614321b344c1a125caddfbe24f8b53cdae2d0d7c9d69b4c80443a3",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/refinement-audit/expanded-continuation-run.py": "9a94a85c8ae95c8eced712fbf8848226f3a1ea6e3f23fba1dc4559d491f5c8d7",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/refinement-audit/expanded-full-stages.py": "5b47a101f75464316867872639fcf3d4018fbabaef13060a3b1ca5f09f0b4ab2",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/refinement-audit/expanded-geometric-tangent.py": "9f544dcaa6ddd71096377d4556e9c6e17f0a790969a6b1d628df26b416b0c97d",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/refinement-audit/expanded-joint-run.py": "6b0d85a25686b8576d71d88f00fa187f213160d85d17ef2b85c01a856e06d7d6",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/refinement-audit/normalization.json": "820244d5d23554811c792b52a45a3e28317392019f5aac7d8733eeb3b4d28706",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/refinement-audit/photon-conservation-plan.json": "248525a3b9808f00f193c48d9739000a1c32eea1cf8197cf8c3ad8b939a0bb2d",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/refinement-audit/plan.json": "2631b916d3f3a603dcb53effd77988be377055965f806bf77c633e34626ad989",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/refinement-audit/receipt.json": "1e8fcb57764e7e99cec654188291de5b7c7e4f570c77f79ac13c4a40cd3a2d58",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/refinement-audit/result.json": "2fce6752564801a83df4507838029780368119a3cb65b270be82bae35a46f845",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/refinement-audit/clock-128/original-equation-15.json": "aa1baa8b7e4a73dccd17e33a7b7024c84b39c37e6c9d774558bd2ab009ed1557",
+    "outputs/direct-eos-gr33/native-photon-input-repair/completed/refinement-audit/clock-128/snapshot-02.json": "4616a9a8d6546ffe0b1d4ce45e545e7e263b17c4ff550f64b2fe1e4aa5d899e1"
+  }
+}

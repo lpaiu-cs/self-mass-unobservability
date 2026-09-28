@@ -1,0 +1,11 @@
+{
+  "classification": "Counterexample candidate",
+  "bindings": {
+    "verification/gr_finite_wavenumber_runner.py": "01d618afa9941361c50ab0b098e3c498a29b1242176cb968384c5a02060fef08",
+    "outputs/direct-eos-gr33/gr-finite-wavenumber-response/plan.json": "8251b122ebd6519472e7aadff32e05f2b8a6637e6bd2ba9f46f427cd10c6c25a",
+    "outputs/direct-eos-gr33/gr-finite-wavenumber-defined/effective-source.py": "00ab3f69fbf0a4c12785bb9dd0c3b90b66048ebbd9424b24477d8d9efae3e7e0",
+    "outputs/direct-eos-gr33/gr-finite-wavenumber-defined/original-error.log": "077caf91c7973717f0978eaea6e50f97444165493374aa42ce2f362551b2bfa6"
+  },
+  "original_failure": "SymPy returned 2*x^2/sqrt(1+x^2)+1/sqrt(1+x^2), which is not structurally equal to (2*x^2+1)/sqrt(1+x^2). Their simplified difference is exactly zero. Failure occurred before numerical controls or stellar quadrature.",
+  "change": "Change only structural == to simplify(lhs-rhs)==0 in the symbolic k=0 limit assertion. All physics, formulae, controls and numerical gates are identical."
+}

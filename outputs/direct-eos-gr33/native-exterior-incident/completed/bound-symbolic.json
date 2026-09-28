@@ -1,0 +1,10 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "pulse": "The input pulse has total variation2; Bernstein coefficient bounds give |pprime|<=2048/70 and |psecond|<=2048/5.",
+  "vacuum": "a_prime/a=2m/(r^2*b), hence I(r,rp)=1/(r*a)-1/(rp*a_p) and zeta_unit=2*I+(1-mu_p^2)/(rp*a_p). Positive static scalar energy gives m<=M,N>=N0.",
+  "rays": "For kappa>=r*nu_prime, mu^2>=(1-kappa)*(1-(r0/r)^2). With h=delta_lnE-delta_nu-delta_lnL, h(r0)=0 and h_prime=-delta_nu_prime-mu*delta_lambda_t/(c*a). This gives |h|<=Hmax*(1-r0/r).",
+  "delay": "delta_tprime=[-zeta-(1-mu^2)*h/mu^2]/(c*a*mu). The two dimensionless integrals are pi/2 and int_0^1(1-z)/(1-z^2)^(3/2)dz=1; the grazing limit stays finite.",
+  "mass": "Instantaneous Hamiltonian/reference-energy conversion at launch is delta_lnE=u+delta_nu; propagation adds integral(delta_nu_t-mu^2*delta_lambda_t)dt. Positive cumulative arrival changes by at most E_total*energy_fraction+Lmax*delay.",
+  "scope": "Algebraic inequalities under the named vacuum, continuous finite-source and nonnegative emission hypotheses. They do not certify microscopic or evolving-background closure."
+}

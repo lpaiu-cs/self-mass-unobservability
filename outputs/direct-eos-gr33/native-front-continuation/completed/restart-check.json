@@ -1,0 +1,28 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "rows": [
+    {
+      "clock": 64,
+      "unchanged_physical_prefix": true,
+      "zero_physical_steps": true,
+      "second_serialization_exact": true,
+      "saved_check_reused": true,
+      "new_actual_substeps": 4
+    },
+    {
+      "clock": 128,
+      "unchanged_physical_prefix": true,
+      "zero_physical_steps": true,
+      "second_serialization_exact": true,
+      "original_internal_checkpoint": "native-material-front183-work/sweep-1/photons/pilot-128-checkpoint.npz",
+      "new_actual_substeps": 8
+    }
+  ],
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "scope": "Exact rational Radau moments0..2; restart does not change the stage rule."
+  },
+  "final_charge_conclusion": "unadjudicated"
+}

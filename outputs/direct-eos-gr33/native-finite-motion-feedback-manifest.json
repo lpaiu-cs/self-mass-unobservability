@@ -1,0 +1,204 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "paths": [
+    {
+      "steps": 64,
+      "mechanical_once_relative": [
+        6.386034608211523e-13,
+        1.4398812606730366e-12
+      ],
+      "photon_moment_relative": 1.5246232143926178e-16,
+      "endpoint_peak_relative_state": {
+        "component": "neutral_H",
+        "cell": 236,
+        "relative": 0.00039988324475579096,
+        "physical_change": 9.808826766205613e+16,
+        "background": 2.4529226705149582e+20,
+        "deep": false
+      },
+      "full_material_balance": 1.1589917211322891e-15,
+      "energy_H_residual": [
+        5.19296020935622e-12,
+        8.727605646563631e-12
+      ],
+      "absolute_residual": [
+        169407536260649.38,
+        3.3746193224624976e+24
+      ],
+      "previous_absolute_residual": [
+        2.1608957457500316e+18,
+        4.1773248362121454e+27
+      ]
+    },
+    {
+      "steps": 128,
+      "mechanical_once_relative": [
+        1.3714705925517318e-13,
+        3.010350220603425e-13
+      ],
+      "photon_moment_relative": 1.694185112514942e-16,
+      "endpoint_peak_relative_state": {
+        "component": "neutral_H",
+        "cell": 236,
+        "relative": 0.00041535523918388603,
+        "physical_change": 1.018834282511317e+17,
+        "background": 2.4529226705149582e+20,
+        "deep": false
+      },
+      "full_material_balance": 1.7359799245622507e-15,
+      "energy_H_residual": [
+        4.753024666458e-12,
+        7.740943323100911e-12
+      ],
+      "absolute_residual": [
+        155012944905377.0,
+        2.991977028764752e+24
+      ],
+      "previous_absolute_residual": [
+        2.1602529251426985e+18,
+        4.1763032683229446e+27
+      ]
+    }
+  ],
+  "plan_bindings": 45,
+  "material_pilot_prefix_exact": [
+    true,
+    true
+  ],
+  "absolute_material_time_difference": [
+    9.128877995545316e+21,
+    6.715633428506233e+32
+  ],
+  "absolute_photon_time_difference": [
+    9.128878008666544e+21,
+    6.715633428420129e+32
+  ],
+  "residual_over_temporal_comparison": [
+    1.6980503492128464e-08,
+    4.455241729044555e-09
+  ],
+  "residual_change_ratio": [
+    7.17568499045719e-05,
+    0.0007164175675312545
+  ],
+  "residual_below_temporal_comparison_scale": true,
+  "actual_native_forcing_and_finite_motion_in_photons": true,
+  "new_transfers_in_finite_material_and_GR": true,
+  "full_nonlinear_radiation": false,
+  "uniform_EOS_derivative_bound": false,
+  "uniform_coupled_error_bound": false,
+  "exterior_floor_feedback_closed": false,
+  "coupled_fixed_point_verified": false,
+  "final_charge_solved": false,
+  "full_goal_complete": false,
+  "seconds": 13.11601670400006,
+  "GR": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "endpoint_collision_charge": 1.380775373034631e-34,
+    "previous_native_pressure_endpoint": 1.0211341543456682e-27,
+    "combined_native_pressure_collision_endpoint": 1.021134292423207e-27,
+    "maximum_collision_over_previous_signal": 2.106590834879336e-07,
+    "time_relative": 0.0005357494729605144,
+    "quadrature_relative": 5.168815926622598e-15,
+    "independent_direct_relative": 3.774758283725532e-14,
+    "retarded_coordinate_residual": 4.5634806156158447e-07,
+    "source_identity_relative": 6.906411654040786e-17,
+    "independent_material_balances": [
+      1.1589917211322891e-15,
+      1.7359799245622507e-15
+    ],
+    "combined_direct_application_relative": 1.5349895219266378e-15,
+    "combined_endpoint_positive": true,
+    "native_collision_propagated_through_finite_material_and_GR": true,
+    "pressure_check_kind": "16eps arithmetic resolution diagnostic on actual finite primitive pressure; not a rigorous EOS enclosure",
+    "compact_potential_included": false,
+    "material_motion_returned_to_photons": true,
+    "uniform_EOS_derivative_bound": false,
+    "full_floor_exterior_feedback_enclosed": false,
+    "coupled_fixed_point_verified": false,
+    "nonlinear_GR": false,
+    "final_charge_solved": false,
+    "full_goal_complete": false,
+    "seconds": 10.230182675000037,
+    "new_photon_transfer_returned_to_finite_material": true,
+    "previous_collision_endpoint": 1.3807756067822079e-34,
+    "endpoint_feedback_change": -2.337475768237215e-41
+  },
+  "preserved_document_prefixes": {
+    "docs/model-definition.md": {
+      "bytes": 227606,
+      "sha256": "53e4260bfe6dccc1615572a8b59d3d9b80a64d5db033eb411ab61ab33a0c6db0"
+    },
+    "docs/observable-targets.md": {
+      "bytes": 220539,
+      "sha256": "c3e9c344494d8ce4ee685a0cc68581f506986dc8e4afc47b5b628a3c37ef3b4e"
+    },
+    "docs/adiabatic-limit.md": {
+      "bytes": 216243,
+      "sha256": "ddb3bf29597e09adfa5c0c6b8fc92677466feb0cc5eb08aef64f20df0e756304"
+    },
+    "docs/nonadiabatic-regime.md": {
+      "bytes": 222728,
+      "sha256": "172c69dda075eca3f5b1f2ce2dc3713619cf84bf4286eb71f5bcb9b94d96b773"
+    },
+    "docs/failure-ledger-dynamic-chi.md": {
+      "bytes": 254188,
+      "sha256": "53cb357ca1537da1f680e0c524367442a06a51b64ec4c470ae57f0de85617e8d"
+    },
+    "docs/dynamic-charge-completion.md": {
+      "bytes": 83837,
+      "sha256": "47c74a081260cb3e175acaac33c31762d38c806f7c480fe794b4e69b0bff213f"
+    }
+  },
+  "sha256": {
+    "docs/adiabatic-limit.md": "40488ede4ea1621f8d4949bab14f24fddd6066aeefd1867b285cba92d0f52946",
+    "docs/dynamic-charge-completion.md": "404630f21d3b0fa3bf985844cd17f0b48d357dd75ae4df92bfa0210d8860a4d7",
+    "docs/failure-ledger-dynamic-chi.md": "f6cf4e1ae671797a5df205c456112f52f89d15d9127d9d6dc54b44c1d4650cef",
+    "docs/model-definition.md": "1d862ea078dc0a6d0f3fd93d2caf4a643aa108a54ed88c8a4972650a4ad89ba0",
+    "docs/nonadiabatic-regime.md": "0e3b1932934b92c8caa42e4d1906da33b02c78812355603be74ed660fa59cbb2",
+    "docs/observable-targets.md": "394c34060981478dbcc8880def5f1d1124490662dcc364229b1d3755fe3655fc",
+    "notes/REQUEST142_NATIVE_FINITE_MOTION_FEEDBACK_KO.md": "f470624b2231a61f3de947b93b4ffb0604d0557ddff16a00987db6800c2e20ee",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/audit-plan.json": "6443b822934cebdd36991ea29895035c032c02a8aa64fb6b90bcbb834f839178",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/audit.json": "7d7210ec0208979ea28ec5c7608fe7e598b832eeabd5de4a90377eee09ee3bc5",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/check.json": "44eb5142f92a0508622a439dc38c27790c0954c75d087af342d7f1d4e34e3115",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/expanded-run.py": "9384fa813965706c2802946334155f1f14d72312efc87e8912917e4c233460ef",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/pilot-128.json": "d7fe673770f7e54ccc37ba3ab6dddf0a581ac14565cb4b717d779e805657a315",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/pilot-128.npz": "e1a887e8d8e1c21d3dae1e6ee4f3d0912ec5f875804a106335f5e3a61f2b5c35",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/pilot-64.json": "106411b06294e9a9afd7ccfc652876e6eb3d7bfdf845c98126d01e5802c51f56",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/pilot-64.npz": "ae3f3205fa75b7a1a4d54050167b28b32826271faaf6e930b74a6ca4d508d4b6",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/pilot.json": "ddbca6bd401674ea38775d43c7d39c6a937f656dce55a9fadeb32b4ceee81a42",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/plan.json": "309d5521a015d73354dbc603a605c290746c0e293d03ae87f2b08dc09e90243b",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/result.json": "ea5bceaea55a217e385143f4da00d6d5918d9eac0a505430e2e52afdcd1c3fd8",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/return/expanded-source.py": "e8dce50aa1ea9b561578079ba45c016af85a6545ea2aff9354d2e01b36e3197f",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/return/gr/combined-charge.npz": "e96884bdbbdf7f775cb1ae22a32057d71b4040e3d88108348b86e24c7f08babc",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/return/gr/combined-source.npz": "bac570e3ace1371b1b605e3dbf234265a8c277933d5a3088df766529a8d45682",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/return/gr/result.json": "0b2be49723ed39e40ec598f27fb4d0da29ad13efaed5e34b94d15af8959ca50d",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/return/gr/source-128-reference-128.npz": "a34443253b4d084e26995e868229f9eb6630a35a673ce2d4b863dcb0844a4549",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/return/gr/source-64-reference-128.npz": "282a95bd563969abe86cc35b5ebd3a35b9a323615cffb1af04da67ace71d81a5",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/return/gr/wave-128-g4.npz": "e0d19fc67e075648260a46383691e69440cd6c5044547721eca69c0ebdf6c47f",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/return/gr/wave-128-g8.npz": "3bbec80bcaa3b8105e2c5fd2a56bd058c5f88c0448a35ba991403c5540118426",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/return/gr/wave-64-g8.npz": "e600b2e742050028ace8cd7ee24b6bbe5c51fde9f94969573d9ae735162c4242",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/return/pilot-128.json": "0ef85bb984555f5a13efb56601ac8a941984e93e630280290345fe7853a484b1",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/return/pilot-128.npz": "ee1f116be61f90aafabf4c3b7d470942e105c33e811d5df28668b707dced9ad1",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/return/pilot-64.json": "21c7340f12b3d86200cd6ef13e8510023d8eb0d0b687580918b3d7aba019923d",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/return/pilot-64.npz": "38b00f4a101ea0980af560cd3ec0d81095256e14af7b687383822e6ec4a36025",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/return/pilot.json": "48c6c64bb9fe870d3c19244e5c927d4ac210ca0475bb5260f8ab460c40890c68",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/return/production.json": "e7cbe9273cb525677080a44d49eba56648e55078ef164faf30a73eda5e1458ae",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/return/sources.json": "c4386f46a8e4544dcf3e5c63cebb5d48896357e09b5511b8ee73ac34a7f4f343",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/return/steps-128-reference-128.json": "ecc11a810247bb16c638ce8dec365e1dcde1460641fad64b030c2ac99e6c196a",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/return/steps-128-reference-128.npz": "b3cd55452a752cee433218aadc5d0547ab525a2ee589fd32f1a76c1c73df140a",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/return/steps-64-reference-128.json": "068e95a5609d981fff294dfe5d37285205c1914e76ee88cb72c93812a04a32ce",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/return/steps-64-reference-128.npz": "05e5dd5e1358d6bdc49451a085eb37990d681ed355035233cdbbf42153b11c98",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/return/stress-128-reference-128.npz": "4f83f7745242450fa08632ed5aed0ee4272497a26cf3e8a3d141f77c56ee2780",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/return/stress-64-reference-128.npz": "49568ab84d29e9caf9a983dc179ed7803cd1ad7040acb1e236174bf8c18fb37a",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/steps-128-reference-128.json": "1b98705bd5df437179faf6926fa6ad5483c808457adec04bbda1ca74b12354c5",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/steps-128-reference-128.npz": "37961e19559301b41fe6a4ffdf920eb3311498f985b0bd792972125bdfe96214",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/steps-64-reference-128.json": "ab10998f143cf2f1c90ffcd5f09482ef4e54aaf6af269ed1bdd31d5032cc3e25",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/steps-64-reference-128.npz": "ab5c43db93fc034bcf3c868b52d7429461cda0027ce5cd4cfa319c325da2648b",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/symbolic.json": "fd05269cd52aaeca2878872e0b23c1f035684e2b4e86df1c0a235f4c898aa390",
+    "verification/def_native_finite_motion_feedback.py": "476c179fa4dd469dedb1fe82127c6c5d8d4ead8ee9c26e6d34e3a21a9258adda",
+    "verification/verify_native_finite_motion_feedback.py": "64bfe386a61c1081b26cbd97d8391ecfe8e875117a31cb6ef6c9e73eca8cf129"
+  }
+}

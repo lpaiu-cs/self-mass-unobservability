@@ -1,0 +1,25 @@
+{
+  "classification": "Proven",
+  "checkpoint": "36f75f07",
+  "bindings": {
+    "verification/gr_heat_nonlinear_balance.py": "539db03b619205d879c3bfc4eb31203e1b7627d3d2b8e91c552ad7de5e2f6ffa",
+    "outputs/direct-eos-gr33/gr-heat-entropy-closure/manifest.json": "d48ed74b8faa1d9bff3d881b78e980d792eb0b762c5ed7ca74120de77813787e",
+    "outputs/direct-eos-gr33/gr-heat-entropy-closure/symbolic.json": "8b2e7fc9f1804b5152772565c00b772af3be831df730fb65926801946bc03e83",
+    "outputs/direct-eos-gr33/gr-heat-initial-constraints/symbolic.json": "9b1058a912b8fa896e08399758179c6f01751daf7db1bafcc6f2e34b44cb6267",
+    "outputs/direct-eos-gr33/gr-heat-initial-constraints/gourgoulhon-0703035.pdf": "0f4f991888ebc1f1e42c1d6952e1dd33eddc0b39ba75998a8f9068acc22d619d",
+    "outputs/direct-eos-gr33/gr-heat-primitive-inverse/symbolic.json": "026d6578b36968903d38be8d728f20bd484efa43e46d3fe0abde9992eaf1b5cc"
+  },
+  "assumptions": [
+    "G=c=1, signature -+++; N>0,a>0, r>0; polar areal coordinates and zero shift",
+    "Smooth matter, metric and heat fields; no distributional shock/interface assertion",
+    "Baryon-frame isotropic pressure with one radial comoving heat Q; fixed composition",
+    "The earlier quadratic heat-only entropy ansatz and positive K,T,tau; no newly calibrated transport coefficient"
+  ],
+  "source": {
+    "classification": "Imported from prior work",
+    "url": "https://arxiv.org/abs/gr-qc/0703035",
+    "scope": "General 3+1 equations and conventions; the explicit spherical identities below are independently differentiated from the metric and tensor."
+  },
+  "target": "Replace the initial-v=0 restriction by exact nonlinear matter/metric identities and identify the finite evolution equations still to be solved.",
+  "boundary": "No numerical time trajectory, weak solution, well-posedness theorem, spatial error bound, physical EOS/transport calibration or exterior radiation matching."
+}

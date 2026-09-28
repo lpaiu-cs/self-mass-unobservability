@@ -1,0 +1,92 @@
+{
+  "classification": "Proven",
+  "scope": "지정 EOS 수치해의 수렴·대칭성·독립 진공 접합 검사; 항성 해의 구간 인증은 아님",
+  "refinement": [
+    {
+      "body": 0,
+      "radius_relative_refinement": -1.6878225483907272e-09,
+      "chi_relative_refinement": -2.7477283559562693e-08,
+      "q_over_phi_relative_to_zero_chi": [
+        -6.01079452100528e-07,
+        -6.01079452100528e-07,
+        -2.2385577408412516e-06,
+        -2.1000370934887158e-05
+      ],
+      "max_baryon_relative_error": 1.3152817723849353e-09
+    },
+    {
+      "body": 1,
+      "radius_relative_refinement": 3.941154069764252e-10,
+      "chi_relative_refinement": -7.762035458824812e-10,
+      "q_over_phi_relative_to_zero_chi": [
+        -2.1418999907041325e-10,
+        -2.1418999907041325e-10,
+        -1.815481098788041e-09,
+        -2.002374877019264e-08
+      ],
+      "max_baryon_relative_error": 1.2037482122195797e-11
+    },
+    {
+      "body": 2,
+      "radius_relative_refinement": -2.6514923590070794e-10,
+      "chi_relative_refinement": 8.813785257189011e-10,
+      "q_over_phi_relative_to_zero_chi": [
+        -4.381179863344187e-10,
+        -4.381179863344187e-10,
+        -2.037205182325863e-09,
+        -2.023970102627004e-08
+      ],
+      "max_baryon_relative_error": 1.479638633838931e-11
+    }
+  ],
+  "request13_native_comparison": {
+    "radius_relative_change": 4.98208074795059e-09,
+    "chi_relative_change": 2.8002456997633374e-07
+  },
+  "analytic_exterior": [
+    {
+      "body": 0,
+      "phi_absolute_error": 2.7899571216662145e-17,
+      "mass_relative_error": 2.220446049250313e-16,
+      "charge_relative_error": 1.1102230246251565e-16
+    },
+    {
+      "body": 1,
+      "phi_absolute_error": 0.0,
+      "mass_relative_error": 2.220446049250313e-16,
+      "charge_relative_error": 1.1102230246251565e-16
+    },
+    {
+      "body": 2,
+      "phi_absolute_error": 0.0,
+      "mass_relative_error": 2.220446049250313e-16,
+      "charge_relative_error": 2.220446049250313e-16
+    }
+  ],
+  "electron_pressure_integral": [
+    {
+      "x": 0.0001,
+      "pressure_relative_integral_error": 0.0
+    },
+    {
+      "x": 0.01,
+      "pressure_relative_integral_error": 0.0
+    },
+    {
+      "x": 0.049,
+      "pressure_relative_integral_error": -3.3306690738754696e-16
+    },
+    {
+      "x": 0.051,
+      "pressure_relative_integral_error": 8.361666914424859e-11
+    },
+    {
+      "x": 1.0,
+      "pressure_relative_integral_error": -1.1102230246251565e-16
+    },
+    {
+      "x": 3.0,
+      "pressure_relative_integral_error": -3.3306690738754696e-16
+    }
+  ]
+}

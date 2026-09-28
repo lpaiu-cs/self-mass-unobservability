@@ -1,5 +1,7 @@
 # Dynamic sensitivity as the residual free-fall observable: a first upper limit on lag-responding equivalence-principle violation from the pulsar triple PSR J0337+1715
 
+> HISTORICAL DRAFT — superseded on 2026-09-09 by [the unified manuscript](manuscript.md). Scientific corrections and the current submission scope are recorded in [the revision record](../docs/unified-revision-2026-09-09.md). This draft is preserved as history, not a current submission manuscript.
+
 **Status:** draft manuscript (Paper B of the two-paper split; dynamic free-fall sector)
 **Repository:** `lpaiu-cs/self-mass-unobservability`, branch `lpaiu/minimal-nonlinear-sideband`
 **Author:** Juneyoung, Kim

@@ -1,0 +1,24 @@
+{
+  "classification": "Counterexample candidate",
+  "reason": "Preserve the original 1051.843s forecast rejection. Reallocate 100s of the completed field reserve: fields cap240->140, photons1000->1100. Total registered2050s, 2x forecast margin, same two accepted-prefix paths and scientific gates stay unchanged. No extra physics or replay.",
+  "eligible": true,
+  "stage_caps": {
+    "fields": 140,
+    "lapse": 90,
+    "photon_pilot": 80,
+    "photon_production": 1100,
+    "material_pilot": 50,
+    "material_production": 350,
+    "readout": 180,
+    "audit": 60
+  },
+  "total_seconds": 2050,
+  "source_sha256": "d250e299e2c9e7afc5981bca967c5387b26acaa034622c4ad4574aaffd9f0103",
+  "bindings": {
+    "retained-metric-return152-work/fields-receipt.json": "43fd04a4a517d953a9cf790dca39a671a6ee3bd5ebce4f61629886bc95b2e452",
+    "retained-metric-return152-work/photons/pilot.json": "4a4d4969e218e01cad2a91d542164823faf30628ae0bb90732b1ce2a3e14408f",
+    "retained-metric-return152-work/photon_pilot-receipt.json": "06c0fd5ac0470a4b0841acc2a28d98da334027760be9d5e508dea90d875d5fe3",
+    "retained-metric-return152-work/registered-response-producer.py": "a91c5177d54205368e713f035bc91c9890cfdf872a2aeaab6e36dc4dd513cdc5",
+    "retained-metric-return152-work/response-plan.json": "ae7f97b020fd7810409b168af2b6abb80f60599e6bf7f38c9ff76676ddeece37"
+  }
+}

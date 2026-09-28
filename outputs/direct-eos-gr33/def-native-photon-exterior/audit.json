@@ -1,0 +1,78 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "flat_exact_ray_delay": 7.698008896994679e-14,
+  "steady_hemisphere_relative": 5.506706202140776e-13,
+  "radial_energy_integrals": [
+    {
+      "time": 0.5,
+      "emitted": 0.028345056908104658,
+      "stored": 0.028345054807904696,
+      "escaped": 0.0,
+      "relative_error": 7.409404640344894e-08
+    },
+    {
+      "time": 1.5,
+      "emitted": 0.7216549430918954,
+      "stored": 0.721654941106671,
+      "escaped": 0.0,
+      "relative_error": 2.7509328901188034e-09
+    },
+    {
+      "time": 3.0,
+      "emitted": 0.75,
+      "stored": 0.7499999999999952,
+      "escaped": 0.0,
+      "relative_error": 6.3652786745175644e-15
+    },
+    {
+      "time": 6.0,
+      "emitted": 0.75,
+      "stored": 0.7500000000000557,
+      "escaped": 0.0,
+      "relative_error": 7.431092778157715e-14
+    }
+  ],
+  "local_conservation": [
+    {
+      "time": 0.5,
+      "radial_momentum": 1.009116389822246e-07,
+      "radial_energy": 1.0314309800608568e-07,
+      "time_energy": 3.711286676659884e-10
+    },
+    {
+      "time": 1.5,
+      "radial_momentum": 3.128823056020202e-08,
+      "radial_energy": 1.876004216585662e-08,
+      "time_energy": 1.34719865484394e-10
+    },
+    {
+      "time": 3.0,
+      "radial_momentum": 2.90689544608832e-09,
+      "radial_energy": 7.114102675126131e-10,
+      "time_energy": 6.698067256746431e-10
+    },
+    {
+      "time": 6.0,
+      "radial_momentum": 5.618700211341039e-10,
+      "radial_energy": 1.0735973649585001e-10,
+      "time_energy": 1.0883404741844633e-10
+    }
+  ],
+  "physical_cutoff_comparison_relative": [
+    0.0008866686858120577,
+    0.0011793057043811325,
+    0.0016193825338915366
+  ],
+  "metric_maximum_delta_m_over_R": 4.492601396455688e-27,
+  "metric_maximum_delta_logN": 2.926775298800304e-27,
+  "geometric_mass_at_r9": 0.0,
+  "energy_bookkeeping": "At t=6 all pulse photons remain inside r=9. Body debit plus redshifted photon inventory is zero. This enclosed ADM-type balance is not the retarded Bondi mass loss; no eternal steady radiation bath is introduced.",
+  "boundary_force_use": "The saved R*dphi_prime(surface) is the additive exterior forcing for Dirichlet data zero. The full response requires the homogeneous exterior boundary operator acting on the interior-evolved surface value.",
+  "remaining_gas_pressure_fraction": 0.01241414843283683,
+  "full_physical_boundary_matched": false,
+  "final_stellar_charge_solved": false,
+  "full_goal_complete": false,
+  "seconds": 3.3112189329999993,
+  "total_compute_seconds": 39.789327748999995
+}

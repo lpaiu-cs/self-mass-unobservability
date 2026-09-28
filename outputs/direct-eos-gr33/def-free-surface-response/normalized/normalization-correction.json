@@ -1,0 +1,17 @@
+{
+  "classification": "Counterexample candidate",
+  "rest_CX": 1.0070231612220188,
+  "EOS_CX": 1.007022322061226,
+  "old_source_sha256": "340f50f60e44246ea6680d934bc9a36f6778567c2018bb430bd411698f207965",
+  "corrected_source_sha256": "1969a06c3eac29abab56e8a51ea6a019ba64d3f1c98cf382bda6a3614d17cb94",
+  "old_build_rejected": true,
+  "old_surface_radius_input_withdrawn": true,
+  "cause": "Phase48 multiplied the native H2 binding output (per EOS neutral-element gram) by isotope-rest CX instead of the EOS normalization computed by direct_ion_eos.EOS.__call__. The warm enthalpy differences remain invariant; the inferred zero-temperature endpoint shifts.",
+  "substitution": {
+    "old": "u0=-cx0*a[-1,11]",
+    "new": "u0=-eos_cx(X)*a[-1,11]"
+  },
+  "surface_radius_m": 69193584.98351426,
+  "physical_EOS_certified": false,
+  "full_dynamic_charge_solved": false
+}

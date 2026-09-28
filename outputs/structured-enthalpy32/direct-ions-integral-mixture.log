@@ -1,0 +1,15 @@
+DIRECT MIXTURE 0
+DIRECT MIXTURE 1000
+DIRECT MIXTURE 2000
+DIRECT MIXTURE 3000
+DIRECT MIXTURE 4000
+DIRECT MIXTURE 5000
+MIXTURE CONTROL False {'P_T': np.float64(0.00010063718310759917), 'P_rho': np.float64(7.771417722901575e-06), 'u_T': np.float64(0.001230654352311067), 'entropy_T': np.float64(0.0012309066564250015), 'Maxwell': np.float64(0.0011920516127534664), 'entropy_rho': np.float64(0.00019772891920789674)}
+Traceback (most recent call last):
+  File "/mnt/e/lab/self-mass-unobservability/verification/direct_ion_eos.py", line 419, in <module>
+    base=dict(np.load(e.OUT/'initial-state.npz'));old=np.load(OUT/'mixture-control.npz')['values'];eos=EOS(evaluator)
+  File "/mnt/e/lab/self-mass-unobservability/verification/direct_ion_eos.py", line 284, in integral_mixture_control
+    old=dict(np.load(OUT/'old-full-reference.npz'))
+  File "/mnt/e/lab/self-mass-unobservability/verification/direct_ion_eos.py", line 281, in mixture_control
+    errors.append(cell)
+AssertionError

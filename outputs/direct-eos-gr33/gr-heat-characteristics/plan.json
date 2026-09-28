@@ -1,0 +1,20 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "e6aa3f1",
+  "bindings": {
+    "verification/gr_heat_characteristics.py": "65d075267ca93408266bc5779ed50566375ab719e2dba37bed3b95a8ac8b7bad",
+    "outputs/direct-eos-gr33/gr-heat-relaxation-boundary/manifest.json": "bb0d195beabc71403800e0f0205ba35af1b0cce13e77e3b4bf473292ea9250ac",
+    "outputs/direct-eos-gr33/gr-heat-relaxation-boundary/thresholds.npz": "029e7ec7c2d1cd1f30734626a55ef142bcc696abb1923df84f225581215dd4c3",
+    "outputs/direct-eos-gr33/initial-state-17-4.npz": "5dcc8ffb8b32a9f15ccc4c8bb7111d19be8dcdc66611ad2942e3a4a0cf6cc6d6",
+    "outputs/direct-eos-gr33/gr-microphysics/auxiliaries.npz": "63744d1a041ebc39bd33dfa0f5e181d64378966c1ee22364c477009bee08d976"
+  },
+  "Maxwell_finite_relative_tolerance": 1e-08,
+  "trial_multipliers": [
+    2,
+    3
+  ],
+  "coefficient_contract": "First compute b,r,d,e,h as binary64 from the bound arrays, retaining e from actual u_lnrho instead of silently imposing e=d. Thereafter all inequalities and trial lambda/tau values use exact rational arithmetic on those frozen coefficients.",
+  "physical_heat_time_calibrated": false,
+  "physical_EOS_certified": false,
+  "full_GR_evolution": false
+}

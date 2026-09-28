@@ -1,0 +1,20 @@
+{
+  "classification": "Counterexample candidate",
+  "results": [
+    {
+      "step": 5e-05,
+      "max_residual": 1.0906359211741673e-07,
+      "worst_zone": 2197,
+      "passed": true
+    },
+    {
+      "step": 2.5e-05,
+      "max_residual": 2.7398658310332715e-08,
+      "worst_zone": 2197,
+      "passed": true
+    }
+  ],
+  "original_native_failure_promoted": false,
+  "compiled_runtime_modified": false,
+  "interpretation": "The correction is evaluated with actual branch-rate diagnostics on the checked state. It does not patch the compiled runtime or certify global derivatives."
+}

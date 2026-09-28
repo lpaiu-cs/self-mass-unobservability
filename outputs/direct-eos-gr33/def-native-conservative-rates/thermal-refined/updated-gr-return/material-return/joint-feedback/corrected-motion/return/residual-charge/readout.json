@@ -1,0 +1,45 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "paths": [
+    {
+      "steps": 128,
+      "reference": 128,
+      "order": 8,
+      "endpoint_free": -8.609986156530116e-58,
+      "endpoint_direct": -8.609998590503037e-58,
+      "independent_relative": 4.272787721279307e-15,
+      "inverse_radius_error": 4.5634806156158447e-07
+    },
+    {
+      "steps": 128,
+      "reference": 128,
+      "order": 4,
+      "endpoint_free": -8.609986156530109e-58,
+      "endpoint_direct": -8.60999859050303e-58,
+      "independent_relative": 0.0,
+      "inverse_radius_error": 4.5634806156158447e-07
+    },
+    {
+      "steps": 64,
+      "reference": 128,
+      "order": 8,
+      "endpoint_free": 1.853222938330309e-56,
+      "endpoint_direct": 1.8532256103116165e-56,
+      "independent_relative": 5.375085975114718e-15,
+      "inverse_radius_error": 4.5634806156158447e-07
+    },
+    {
+      "steps": 128,
+      "reference": 64,
+      "order": 8,
+      "endpoint_free": -6.21172511080423e-58,
+      "endpoint_direct": -6.211734090087406e-58,
+      "independent_relative": 8.314211297107678e-15,
+      "inverse_radius_error": 4.5634806156158447e-07
+    }
+  ],
+  "quadrature_relative": 8.216911330301769e-16,
+  "seconds": 39.40643228900001,
+  "interpretation": "Actual signed residual source applied to retarded compact free response. Other paths measure changed residuals; they are not a time-convergence certificate of a fixed residual forcing."
+}

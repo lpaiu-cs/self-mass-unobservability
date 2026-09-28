@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_precise_momentum.py", line 127, in <module>
+    assert read(OUT/'restart-check.json')['passed'];evolve(64 if action=='coarse' else 128)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_precise_momentum.py", line 110, in evolve
+    ns=dict(old.evolve.__globals__,OUT=OUT,initialize=initialize,current_factory=factory);exec(compile(source,__file__,'exec'),ns);ns['evolve'](n)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_precise_momentum.py", line 14, in evolve
+    
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_postfloor_native.py", line 37, in evolve
+    claim='Continue the remaining actual coupled period from114accepted substeps with Newton proposals initialized from the accepted post-floor gas.',
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/balance_full_native_krylov.py", line 42, in run
+    import sympy as sp
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_postfloor_native.py", line 27, in saved_stage
+    assert np.array_equal(cells,[260,261]) and not np.any(q['g'][cells])
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_native_flux_precision.py", line 27, in stages
+    for p in files:dst=OUT/p.relative_to(OLD);os.link(p,dst);reused[str(dst)]=sha(p)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_postfloor_native.py", line 7, in solve
+    from pathlib import Path
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_precise_momentum.py", line 79, in seeded
+    return solve(m,op,P,rhs,guess)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/polish_full_native_roundoff.py", line 37, in solve
+    files += [prior.OLD/'last-accepted-64.npz',prior.EARLIER/'last-accepted-64.npz']
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/balance_full_native_krylov.py", line 13, in solve
+    before,stable,owner,joint=prior.before,prior.stable,prior.owner,prior.joint
+AssertionError: ('Four-moment linear residual', 4.093584128790893e-10, [np.longdouble('1.7646999548336902611e-19'), np.longdouble('1.9042304994342949706e-20'), np.longdouble('2.1974873057356453155e-21'), np.longdouble('1.6596581393926925056e-30')])

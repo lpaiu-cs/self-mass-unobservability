@@ -1,0 +1,20 @@
+{
+  "classification": "Counterexample candidate",
+  "sound_speed_cm_s": 116000000.0,
+  "cells": [
+    64,
+    128,
+    256
+  ],
+  "assumptions": "Constant medium, same actual radial cells, zero perturbations outside each window. Symmetric acoustic fluxes and the original cell-pressure geometric source. Compare only original face pressure weights with their dual weights; no EOS or gravity, no full-GR rerun.",
+  "sha256": {
+    "verification/gr_acoustic_adjoint_cause.py": "9ae84e3bf09c2089492f61716660b80caba194be89f2fdd2567c12eb8c62ee71",
+    "verification/gr_time_convergence_cause.py": "8213f7ba7d97e748606037d1f66cf83219b1a0bf0e0568b58e9e450f76d62070",
+    "verification/gr_coupled_evolution.py": "0cc4d50a54023b03cf85bd4a3f7826f2134d740c85c97cc9024ee2a81bd02cf7",
+    "verification/gr_conservative_two_carrier.py": "baa2ebf45375f7f1729344831748c1b3ddfa21bdbe95ec22265f4ed93f90909c",
+    "outputs/direct-eos-gr33/gr-conservative-composition-recovery-20260914/time-refinement.json": "95fae9c541a44e0d25ebc60b6f974e3dc08617fec35627ed6ded475f211f5c72",
+    "outputs/direct-eos-gr33/gr-time-cause-central-128/manifest.json": "cf6614f6e5f87a61303e751d8fc6640ca04b4aed0bb5d9341685ccaacf3a6a16",
+    "outputs/direct-eos-gr33/gr-time-cause-central-128/exact-time/manifest.json": "07153dcaae62821d9a549c910ceb07be7de55a7be04b6d4d63042a44354d646a",
+    "outputs/direct-eos-gr33/gr-time-cause-central-256/manifest.json": "d65f242735cd626c7427ccfff2e2ffa8dfa8f600a9d3284057305113f6f579f6"
+  }
+}

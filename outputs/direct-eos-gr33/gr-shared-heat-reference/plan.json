@@ -1,0 +1,17 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "b84cb63",
+  "bindings": {
+    "verification/gr_shared_heat_reference.py": "86b7844c633ed47fed887209766d84b489b171aa3a70b80c92b1b01dfc543ef5",
+    "outputs/direct-eos-gr33/gr-full-subcell-reference/pilot-manifest.json": "2fea8a4c11a7f9971e3e169567b40555f2fe3a3aca86899e93f3c41bc91c22af",
+    "outputs/direct-eos-gr33/gr-full-subcell-reference/plan.json": "3e4aaf93005db70e82a57eb0f7ec9364d361077e64ab27365e582ad3e5ec3f1f",
+    "outputs/direct-eos-gr33/gr-increment-structure/path-4.npz": "e5b479652627619df7e91452f2a2b04ef8ad2d46a24a96fabed2a85c94068c14",
+    "outputs/direct-eos-gr33/initial-state-17-4.npz": "5dcc8ffb8b32a9f15ccc4c8bb7111d19be8dcdc66611ad2942e3a4a0cf6cc6d6",
+    "outputs/direct-eos-gr33/gr-transport/diagnostics.npz": "296f6bcdd1623223957e0b1c391f89ea6613141337c6dc308e155650fb98b669",
+    "outputs/direct-eos-gr33/gr-microphysics/auxiliaries.npz": "63744d1a041ebc39bd33dfa0f5e181d64378966c1ee22364c477009bee08d976"
+  },
+  "arithmetic_relative_tolerance": 1e-12,
+  "reconstruction": "One shared saved initial L_infinity on each material face, zero heat at centre and outer photosphere. Interpolate L_infinity linearly in enclosed baryon mass inside each cell, retaining the same face values. Q=L_infinity/(4*pi*r^2*N^2*c). No constant nonzero heat density is extended to r=0.",
+  "lapse": "Use the historical saved face lapse with the increment-corrected face radius/mass. At the six pilot cells, reconstruct the node lapse by the isentropic enthalpy ratio relative to the saved midpoint. Finite inconsistencies between these separately computed geometries/lapses are not enclosed.",
+  "scope": "Full shared-face initial flux inventory plus six native subcell initial heat profiles. Prescribed initial data, not a solved transport law, physical atmosphere or GR time trajectory."
+}

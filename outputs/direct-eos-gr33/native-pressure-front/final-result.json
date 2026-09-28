@@ -1,0 +1,703 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "rows": [
+    {
+      "classification": "Counterexample candidate",
+      "reference": 128,
+      "steps": 64,
+      "completed_steps": 4,
+      "new_steps": 4,
+      "seconds": 38.14687447100002,
+      "operator_point_seconds": 4.067692047999998,
+      "operator_points": 3,
+      "stepping_seconds": 33.77105232400001,
+      "energy_balance_relative": 6.695366687475745e-16,
+      "species_balance_relative": 1.5998902308765872e-16,
+      "linear_relative": 5.9351576115598845e-15,
+      "max_Krylov_iterations": 101,
+      "frequency_moment_relative": 6.60820349428787e-17,
+      "endpoint_photon_reference_energy_erg": 2.2410072711630916e-06,
+      "endpoint_material_reference_energy_erg": -2.3256011954093374e-12,
+      "endpoint_material_energy_L1_erg": 6.651536349188129e-12,
+      "additional_material_motion_evolved": false,
+      "full_GR_feedback": false,
+      "final_charge_solved": false,
+      "endpoint_material_nonrest_energy_erg": -2.3256011954093374e-12,
+      "velocity_jet_relative": 6.085966434433605e-09,
+      "primitive_mapping_relative": 0.0,
+      "conserved_material_input_applied": true,
+      "maximum_extended_stage_residual": 5.9351576115598845e-15,
+      "maximum_refinement_steps": 1,
+      "initial_GMRES_stagnations": 5,
+      "actual_completed_steps": 6,
+      "actual_new_steps": 6,
+      "split_completed_macro_steps": 2,
+      "base_steps": 64,
+      "passed": true,
+      "actual_angular_quadrature_relative": 1.1585522929731408e-16,
+      "time_integrator": "RadauIIA2 with one prescribed local bisection"
+    },
+    {
+      "classification": "Counterexample candidate",
+      "reference": 128,
+      "steps": 128,
+      "completed_steps": 8,
+      "new_steps": 8,
+      "seconds": 70.50626664400002,
+      "operator_point_seconds": 4.159580360000035,
+      "operator_points": 3,
+      "stepping_seconds": 65.98114099599997,
+      "energy_balance_relative": 7.921543629993927e-16,
+      "species_balance_relative": 7.221472607931645e-17,
+      "linear_relative": 7.430030193860017e-15,
+      "max_Krylov_iterations": 95,
+      "frequency_moment_relative": 6.732112993353671e-17,
+      "endpoint_photon_reference_energy_erg": 2.2446299489162723e-06,
+      "endpoint_material_reference_energy_erg": -2.355368606489209e-12,
+      "endpoint_material_energy_L1_erg": 6.672228658098292e-12,
+      "additional_material_motion_evolved": false,
+      "full_GR_feedback": false,
+      "final_charge_solved": false,
+      "endpoint_material_nonrest_energy_erg": -2.355368606489209e-12,
+      "velocity_jet_relative": 6.085966434433605e-09,
+      "primitive_mapping_relative": 0.0,
+      "conserved_material_input_applied": true,
+      "maximum_extended_stage_residual": 7.430030193860017e-15,
+      "maximum_refinement_steps": 1,
+      "initial_GMRES_stagnations": 14,
+      "actual_completed_steps": 12,
+      "actual_new_steps": 12,
+      "split_completed_macro_steps": 4,
+      "base_steps": 128,
+      "passed": true,
+      "actual_angular_quadrature_relative": 2.6797485190030656e-17,
+      "time_integrator": "RadauIIA2 with one prescribed local bisection"
+    }
+  ],
+  "time_comparison": [
+    0.0007616362203433154,
+    0.004461389530429524,
+    0.0038054336910915,
+    0.004826498048580865,
+    0.0007736623837726351,
+    0.016283685201318794
+  ],
+  "original_time_gate": 0.02,
+  "full_horizon_completed": false,
+  "physical_final_charge_solved": false,
+  "full_goal_complete": false,
+  "remaining": "A prefix alone is not a full-path result. Full-path angular/time consumers and a measured budget must be checked separately; the original physical gates remain unchanged.",
+  "final_charge_conclusion": "unadjudicated on the corrected coupled solution",
+  "actual_time_grid": [
+    {
+      "base_steps": 64,
+      "full_planned_actual_steps": 117,
+      "prefix_actual_steps": 6,
+      "slow_deep_cells": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "split_macro_steps": [
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        15,
+        16,
+        17,
+        19,
+        20,
+        21,
+        23,
+        24,
+        25,
+        27,
+        28,
+        29,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63
+      ]
+    },
+    {
+      "base_steps": 128,
+      "full_planned_actual_steps": 227,
+      "prefix_actual_steps": 12,
+      "slow_deep_cells": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "split_macro_steps": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        12,
+        13,
+        14,
+        15,
+        16,
+        21,
+        22,
+        23,
+        24,
+        25,
+        30,
+        31,
+        32,
+        33,
+        34,
+        38,
+        39,
+        40,
+        41,
+        42,
+        47,
+        48,
+        49,
+        50,
+        51,
+        55,
+        56,
+        57,
+        58,
+        59,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127
+      ]
+    }
+  ],
+  "actual_coupled_Radau_prefix_completed": true,
+  "time_accuracy_accepted": true,
+  "acceptance_scope": "0.214651945ms prefix only; no full coupled solution or charge",
+  "pressure_mode_inspection": {
+    "classification": "Counterexample candidate",
+    "rows": [
+      {
+        "t": 0.0,
+        "cell": 15,
+        "gas_matrix_times_h": [
+          [
+            3.977511151288371e-05,
+            2.9137294803435494e-05
+          ],
+          [
+            -1.1260836199914512,
+            -0.32046909593135287
+          ]
+        ],
+        "gas_eigenvalues_times_h": [
+          [
+            -6.262928360523793e-05,
+            0.0
+          ],
+          [
+            -0.32036669153623465,
+            0.0
+          ]
+        ],
+        "pressure_coordinate_matrix_times_h": [
+          [
+            -9.188413672888569e-05,
+            -8.320512158605175e-06
+          ],
+          [
+            -1.1260836199914512,
+            -0.32033743668311104
+          ]
+        ],
+        "pressure_map": [
+          2.689113788629681,
+          0.0003144053368347974
+        ],
+        "pressure_map_relative_interval_change": [
+          -1.7027814962571257e-09,
+          -1.7660177682436446e-09
+        ]
+      },
+      {
+        "t": 0.0,
+        "cell": 16,
+        "gas_matrix_times_h": [
+          [
+            1.6050593827295815e-05,
+            1.1748081131535126e-05
+          ],
+          [
+            -1.1268165679227664,
+            -0.32036900431031673
+          ]
+        ],
+        "gas_eigenvalues_times_h": [
+          [
+            -2.5273556419560465e-05,
+            0.0
+          ],
+          [
+            -0.3203276801600698,
+            0.0
+          ]
+        ],
+        "pressure_coordinate_matrix_times_h": [
+          [
+            -3.7076531422226966e-05,
+            -3.3549222616035877e-06
+          ],
+          [
+            -1.1268165679227664,
+            -0.3203158771850672
+          ]
+        ],
+        "pressure_map": [
+          1.0849637815636846,
+          5.1153850906353146e-05
+        ],
+        "pressure_map_relative_interval_change": [
+          -5.940368310574838e-10,
+          -6.130137411154409e-10
+        ]
+      },
+      {
+        "t": 0.0001253380179005018,
+        "cell": 15,
+        "gas_matrix_times_h": [
+          [
+            3.9872705794724606e-05,
+            2.8774809282823656e-05
+          ],
+          [
+            -1.1291537080241796,
+            -0.31761216473717996
+          ]
+        ],
+        "gas_eigenvalues_times_h": [
+          [
+            -6.244570499906035e-05,
+            0.0
+          ],
+          [
+            -0.3175098463263861,
+            0.0
+          ]
+        ],
+        "pressure_coordinate_matrix_times_h": [
+          [
+            -9.214549045921711e-05,
+            -8.3489409379553e-06
+          ],
+          [
+            -1.1291537080241796,
+            -0.317480146540926
+          ]
+        ],
+        "pressure_map": [
+          2.6891137859559597,
+          0.00031440533651058244
+        ],
+        "pressure_map_relative_interval_change": [
+          -1.7027814962571257e-09,
+          -1.7660177682436446e-09
+        ]
+      },
+      {
+        "t": 0.0001253380179005018,
+        "cell": 16,
+        "gas_matrix_times_h": [
+          [
+            1.6085611347500658e-05,
+            1.1614523652837818e-05
+          ],
+          [
+            -1.1295460096064176,
+            -0.31776416857589657
+          ]
+        ],
+        "gas_eigenvalues_times_h": [
+          [
+            -2.520343496047656e-05,
+            0.0
+          ],
+          [
+            -0.3177228795295886,
+            0.0
+          ]
+        ],
+        "pressure_coordinate_matrix_times_h": [
+          [
+            -3.717020156392876e-05,
+            -3.3656625801090754e-06
+          ],
+          [
+            -1.1295460096064176,
+            -0.31771091276298513
+          ]
+        ],
+        "pressure_map": [
+          1.0849637811873478,
+          5.11538508880428e-05
+        ],
+        "pressure_map_relative_interval_change": [
+          -5.940368310574838e-10,
+          -6.130137411154409e-10
+        ]
+      },
+      {
+        "t": 0.0002146519448705439,
+        "cell": 15,
+        "gas_matrix_times_h": [
+          [
+            3.994224996581523e-05,
+            2.851650772470165e-05
+          ],
+          [
+            -1.1313414051247064,
+            -0.31557635989273647
+          ]
+        ],
+        "gas_eigenvalues_times_h": [
+          [
+            -6.230963356207717e-05,
+            0.0
+          ],
+          [
+            -0.3154741080092086,
+            0.0
+          ]
+        ],
+        "pressure_coordinate_matrix_times_h": [
+          [
+            -9.233172707260183e-05,
+            -8.369198845070356e-06
+          ],
+          [
+            -1.1313414051247064,
+            -0.31544408591569806
+          ]
+        ],
+        "pressure_map": [
+          2.689113784050708,
+          0.00031440533627955197
+        ],
+        "pressure_map_relative_interval_change": [
+          -1.7027814962571257e-09,
+          -1.7660177682436446e-09
+        ]
+      },
+      {
+        "t": 0.0002146519448705439,
+        "cell": 16,
+        "gas_matrix_times_h": [
+          [
+            1.6110564289111162e-05,
+            1.1519352665626709e-05
+          ],
+          [
+            -1.1314909674036289,
+            -0.31590800304487915
+          ]
+        ],
+        "gas_eigenvalues_times_h": [
+          [
+            -2.5151705682936504e-05,
+            0.0
+          ],
+          [
+            -0.3158667407749071,
+            0.0
+          ]
+        ],
+        "pressure_coordinate_matrix_times_h": [
+          [
+            -3.72369494536365e-05,
+            -3.37331596444458e-06
+          ],
+          [
+            -1.1314909674036289,
+            -0.3158546555311364
+          ]
+        ],
+        "pressure_map": [
+          1.0849637809191761,
+          5.115385087499513e-05
+        ],
+        "pressure_map_relative_interval_change": [
+          -5.940368310574838e-10,
+          -6.130137411154409e-10
+        ]
+      }
+    ],
+    "rates": [
+      {
+        "steps": 64,
+        "cells": [
+          {
+            "cell": 15,
+            "photon_rate": -4.085978603120658e-09,
+            "gas_rate": -3.765865259261155e-09,
+            "map_rate": 1.384035663259431e-20,
+            "pressure": -1.0659386712443556e-13,
+            "gas_pressure_terms": [
+              -2.9298976319781656e-12,
+              2.82330376485373e-12
+            ]
+          },
+          {
+            "cell": 16,
+            "photon_rate": 5.316490510116664e-10,
+            "gas_rate": 1.018363086503569e-09,
+            "map_rate": -8.592877639327412e-20,
+            "pressure": 5.5451142168678886e-14,
+            "gas_pressure_terms": [
+              8.192868644774754e-13,
+              -7.638357223087965e-13
+            ]
+          }
+        ]
+      },
+      {
+        "steps": 128,
+        "cells": [
+          {
+            "cell": 15,
+            "photon_rate": -4.007702577006959e-09,
+            "gas_rate": -3.814666226834949e-09,
+            "map_rate": 2.0759460815890135e-19,
+            "pressure": -1.32378334138943e-13,
+            "gas_pressure_terms": [
+              -2.9923001095123256e-12,
+              2.8599217753733828e-12
+            ]
+          },
+          {
+            "cell": 16,
+            "photon_rate": 5.316720291024365e-10,
+            "gas_rate": 1.0123107446371433e-09,
+            "map_rate": -8.695328188417389e-20,
+            "pressure": 5.567632915404571e-14,
+            "gas_pressure_terms": [
+              8.149727069371548e-13,
+              -7.592963777831091e-13
+            ]
+          }
+        ]
+      }
+    ],
+    "deep_cell_arrivals": [
+      {
+        "cell": 0,
+        "seconds": 0.0035585825534233443
+      },
+      {
+        "cell": 1,
+        "seconds": 0.003329254813852984
+      },
+      {
+        "cell": 2,
+        "seconds": 0.0030999270762657976
+      },
+      {
+        "cell": 3,
+        "seconds": 0.002870599340657754
+      },
+      {
+        "cell": 4,
+        "seconds": 0.002641271607025026
+      },
+      {
+        "cell": 5,
+        "seconds": 0.0024119438753635114
+      },
+      {
+        "cell": 6,
+        "seconds": 0.002182616145669282
+      },
+      {
+        "cell": 7,
+        "seconds": 0.0019532884179384183
+      },
+      {
+        "cell": 8,
+        "seconds": 0.0017239606921668868
+      },
+      {
+        "cell": 9,
+        "seconds": 0.0014946329683508568
+      },
+      {
+        "cell": 10,
+        "seconds": 0.0012653052464864452
+      },
+      {
+        "cell": 11,
+        "seconds": 0.0010359775265695898
+      },
+      {
+        "cell": 12,
+        "seconds": 0.0008066498085965272
+      },
+      {
+        "cell": 13,
+        "seconds": 0.0005773220925633457
+      },
+      {
+        "cell": 14,
+        "seconds": 0.00034799437846617736
+      },
+      {
+        "cell": 15,
+        "seconds": 0.0001253380179005018
+      },
+      {
+        "cell": 16,
+        "seconds": 1.4009838299627451e-05
+      },
+      {
+        "cell": 17,
+        "seconds": 9.006324620363727e-06
+      },
+      {
+        "cell": 18,
+        "seconds": 6.337783991798052e-06
+      }
+    ],
+    "prefix_end_seconds": 0.0002146519448705439,
+    "deep_cells": 19,
+    "scope": "Actual local gas block and saved endpoint response only. No full coupled spectral bound or unique-error-cause proof."
+  },
+  "pressure_prefix_bottleneck_resolved": true,
+  "cost": {
+    "recorded_action_seconds": 172.84838079000002,
+    "CPU_seconds": 147.27451479200002,
+    "maximum_recorded_RSS_bytes": 2403663872,
+    "original_total_seconds": 420,
+    "CPU_threads": 1,
+    "virtual_GiB": 3,
+    "scope": "Action bodies including preserved grid-sum check failure; imports, derivation, writing, publication and Git excluded. One6/12-step pair, no full-horizon or free-material production."
+  }
+}

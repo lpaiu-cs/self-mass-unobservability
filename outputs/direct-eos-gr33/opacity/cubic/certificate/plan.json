@@ -1,0 +1,9 @@
+{
+  "classification": "Proven",
+  "source_sha256": "7dc59ad5393e99cc2f5ac05e0eba01e660969feed5c9973a17506ee4927fed43",
+  "input_sha256": "36c8a26532d287cd5cfb7888711b28d6872d7993c6695a0a2d70b6e8a651eaa7",
+  "affine_parameter_radius": "0.00001",
+  "interpretation": "The saved binary64 x, at, value and derivative ordinates are exact rational inputs. At fixed composition coordinate, use y(t)=y0+t*v for each saved density and temperature direction and |t|<=1e-5. Verify every sign/minimum/endpoint limiter over the whole interval by exact endpoint inequalities of affine expressions.",
+  "claim": "For each accepted path the interpolation value is an exact affine function a+b*t throughout the interval, with exact derivative b on its interior. Compare b with the saved native interpolation of derivative ordinates.",
+  "exclusions": "This certificate does not establish that physical or tabulated opacity ordinates follow these affine paths. It does not certify table data, native floating-point evaluation, full opacity derivatives, EOS, GR evolution or observations."
+}

@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/.phase251-reader-launch.py", line 14, in <module>
+    runpy.run_path(sys.argv[0],run_name='__main__')
+  File "/usr/lib/python3.10/runpy.py", line 289, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/usr/lib/python3.10/runpy.py", line 96, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File ".phase258-native-projection.py", line 70, in <module>
+    values.append(m.native(float(t),previous.dense(m,a,float(t)))*m.units)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/evolve_dense_same_history_return.py", line 33, in native
+    model='Reuse188compensated same-stage equations and actual high/low branch choices. Restore exact conserved gas coordinates. High component is the actual saved joint solution; low component is its same-equation increment, never an independent zero-state solution added to a charge. Reject nonzero high-branch crossings. No converged self-GR or fully nonlinear EOS claim.',
+AssertionError: ('Saved-stage anchor precision', [3.949198574132103e-12, 9.180969038197277e-13, 2.514734275254314e-12, 2.2313914697639573e-15])

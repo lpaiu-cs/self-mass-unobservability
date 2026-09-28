@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/mnt/e/lab/self-mass-unobservability/verification/gr_scalar_residual_certificate.py", line 135, in <module>
+    if __name__=='__main__':globals()[sys.argv[1]]()
+  File "/mnt/e/lab/self-mass-unobservability/verification/gr_scalar_residual_certificate.py", line 115, in run
+    residual_bound=str(error),field_error_bound=str(delta)),
+  File "/usr/lib/python3.10/fractions.py", line 274, in __str__
+    return '%s/%s' % (self._numerator, self._denominator)
+ValueError: Exceeds the limit (4300) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit

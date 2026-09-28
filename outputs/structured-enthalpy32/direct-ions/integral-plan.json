@@ -1,0 +1,7 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "6dd7317",
+  "change": "Replace only the default electron Fermi evaluation morder=13 (CT plus fitted relativistic correction) by existing morder=21 direct numerical integrals. Preserve EOS1 radiation, exchange, Coulomb, ionization and all compositions.",
+  "controls": "Original finite mixture derivative tolerance 1e-5 and steps 1e-4,5e-5. First check the observed boundary and representatives, then all initial cells.",
+  "scope": "A changed electron numerical evaluator, not a new physical plasma validation or rigorous quadrature error certificate."
+}

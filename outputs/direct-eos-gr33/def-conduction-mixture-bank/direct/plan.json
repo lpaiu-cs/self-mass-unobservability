@@ -1,0 +1,82 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "2ad1201f",
+  "bindings": {
+    "verification/def_ionic_structure_transport.py": "cdec1f55bf0c9104e94124423c1fdd750bf254104ef92976684e01e13c4454b2",
+    "verification/def_electron_energy_exchange.py": "ea347d8ca74a0d28f491dd1d3118c459ef5e736f9a70698cbaac15534e65b7d4",
+    "verification/def_electron_collision_response.py": "9457f26158a3d1ec44aaefea64c4eddf8fe361be6c9f6da1945609eb0a70bad3",
+    "outputs/direct-eos-gr33/def-free-surface-thermal/coefficients.npz": "8fa9ddf79c966965a3a3fa26e6b4c738f82eec0b6ad257e521ae37c9403fb46c",
+    "outputs/direct-eos-gr33/def-conduction-core/manifest.json": "dee55a9bf3c8df437033deca72d62dc14f82640693d2fd6a650b597ebeac58ac",
+    "outputs/direct-eos-gr33/def-ionic-structure-transport/shaffer-starrett2020.html": "e1d16b4dd04f7f8af2f423cc2344a3112f351f97d24c8e2dd048cbdd818ff8be",
+    "outputs/direct-eos-gr33/def-ionic-structure-transport/blouin2020.html": "6e3fe793f3173099c2c44bf4f8b63422a83e46e9d124be5f072a2b6df053f29e",
+    "outputs/direct-eos-gr33/def-ionic-structure-transport/ionic-correlations2017.html": "50b0323fc83f586d27b3e2f2e02bfb43b1e9a0accc7cd3c860d74dcbbb03e984",
+    "verification/def_conduction_core.py": "0ecb419bb8cc8720e6e3962ffb59704ae5a908573a6948fcdc51021e19144f59",
+    "verification/def_electron_screened_fermi.py": "14017818d37db1cffb42d522cd81be0243651ed8d54b6dca4ae57f9013606899",
+    "verification/def_electron_dynamic_screening.py": "6a256ce455a75b064e4626480cc136b39f2cbfbc2a4a62ff42986d869f9fb89a",
+    "verification/def_electron_screened_leading.py": "1f5d2f0156a74b302e5a776d7f7a32c661798469d0d8b146a4011c89c1b49044",
+    "verification/def_electron_correlated_response.py": "d732fdc651824c6714880a5c3cdef7411e5892def31d3f9f2dcea41b4d37e5b7",
+    "verification/def_electron_response_regular.py": "90b87849d8171e50b0941effb88125525cc43446a9e9c06585ae08a163dbb542",
+    "outputs/direct-eos-gr33/def-conduction-core/cell-4122.npz": "8d3c4d2adac72ebd126643c16e8dbe54e93e9b38d2babf3198081a569b940cdd",
+    "outputs/direct-eos-gr33/def-conduction-core/cell-4928.npz": "0272589e0d1bc9eb0519f2d56b2c6d4de5cb5098a1e8df35a8365a8559667fa2",
+    "outputs/direct-eos-gr33/def-conduction-core/cell-5734.npz": "45c95b6e9de9e9b8e7fb01daed04ca4c45bb97d4c606a493c7491742049f1783",
+    "verification/def_conduction_envelope_bank.py": "95c7cead3efb0a525b157c3e9c63fd55b6b7d9eb4792b62f3f05a3b1730b1728",
+    "outputs/direct-eos-gr33/def-conduction-envelope-bank/plan.json": "80c5c0fc3ac9893d46e637a9110f8c49e30ffbb5a1d6bd72250320e606a80ef9",
+    "verification/def_conduction_shape_bank.py": "439f57ec249380f0baed361dc894db48ecd7bcf2a361dfee2b7c59fb147889ff",
+    "outputs/direct-eos-gr33/def-conduction-shape-bank/plan.json": "7c9dc66c9fa09f524caefa94e4bea724f0f78a83de13d8cd235772f0e72147f2",
+    "verification/def_conduction_state_bank.py": "5e16c5499f98a175f648bde7bb19dc7a0aa94c49344c6d733d90a5b209ae4318",
+    "outputs/direct-eos-gr33/def-conduction-state-bank/plan.json": "96d71ddbb27fbaec4e048abc6296c412356e136371d2a81ec4e684169cf0f990",
+    "verification/def_conduction_mixture_bank.py": "c2840c4a2450090eed8add5256ce9923def6d37fd6fcb7ab5aa183939a8432de",
+    "outputs/direct-eos-gr33/def-conduction-mixture-bank/plan.json": "a588f72d4d95462d9924e66d309a3da5f915a6663b2e4e4004500fe4104450aa"
+  },
+  "sources": {
+    "shaffer-starrett2020.html": "https://arxiv.org/html/2002.00928",
+    "blouin2020.html": "https://arxiv.org/html/2006.16390",
+    "ionic-correlations2017.html": "https://arxiv.org/html/1707.01509"
+  },
+  "cells": [
+    2588,
+    2625,
+    4050
+  ],
+  "claim": "Remove the strong-degeneracy cutoff from the ion structure used by the microscopic conduction operator, using the actual multi-charge mixture and finite-T electron compressibility. Construct the paired ee+ei response in the partially degenerate and classical fully ionized layers.",
+  "model": "Classical multi-species Yukawa HNC with no bridge function, ideal-electron compressibility screening, static ion structure and elastic Born/Mott electron-ion scattering. Every present nuclear charge group is retained. Same Pauli-blocked dynamically screened leading ee collision bracket as Phase55. This is a declared microscopic candidate, not the full average-atom mean-force model of the references.",
+  "limits": "No neutral/partially ionized opacity, ion dynamics, full finite-q electron screening, non-Born phase shifts, coherent ee-channel interference or continuum physical error certificate. Do not graft a new hard zero-flux edge onto a stellar path.",
+  "grids": [
+    [
+      512,
+      32
+    ],
+    [
+      1024,
+      32
+    ]
+  ],
+  "box_controls": {
+    "cells": [],
+    "grid": [
+      1536,
+      48
+    ]
+  },
+  "gates": {
+    "HNC_residual": 1e-08,
+    "positive_structure": true,
+    "EI_grid_relative": 0.005,
+    "EI_box_relative": 0.005,
+    "energy_angular_relative": 0.0001,
+    "ee_quadrature": 0.03,
+    "basis": 0.02
+  },
+  "budget": {
+    "pilot_states": 1,
+    "HNC_iteration_limit": 600,
+    "production_hard_seconds": 180,
+    "workers": 1,
+    "BLAS_threads": 1,
+    "native_calls": 0,
+    "new_stellar_steps": 0,
+    "automatic_expansion": false
+  },
+  "preflight_repair": "The first preflight failed before the physical solve because NumPy 2 treats a batched two-dimensional RHS as matrices. Explicit trailing vector axes repair the shared solve. The failed source and plan are preserved. All physical equations, state counts, grids, gates and budgets remain unchanged.",
+  "proposal_override": "Use Phase57 exact defensive energy reweighting on every withheld state; the four unchanged seeds and event/basis gates are retained."
+}

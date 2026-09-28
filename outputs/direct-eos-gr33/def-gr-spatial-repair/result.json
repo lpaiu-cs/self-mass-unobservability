@@ -1,0 +1,25 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": false,
+  "original_failure_resolved": false,
+  "progress_class": "loophole progress; rejected actual repair candidates",
+  "actual_same_input_evolved": true,
+  "scalar_direct_time_passed": true,
+  "all_four_time_gates_passed": false,
+  "new_space_comparison_completed": false,
+  "full_dynamic_charge_solved": false,
+  "decision": "SPATIAL_REPAIR_NOT_ACCEPTED_DIRECT_SCALAR_IMPROVED_VELOCITY_ORDER_FAILED",
+  "attempts": {
+    "nodal": "budget-stop.json",
+    "square_root": "factor/result.json",
+    "two_source": "balanced/result.json",
+    "hierarchical": "hierarchical/result.json",
+    "direct_transform": "direct/budget-stop.json",
+    "banded": "direct/banded/failure.json",
+    "banded_refined": "direct/banded-refined/failure.json",
+    "direct_time": "direct-time/result.json"
+  },
+  "saved_histories": 16,
+  "new_EOS_calls": 0,
+  "limitations": "The direct scalar component passes its time gates but is not spliced with modal velocity into an accepted solution. Higher-order spatial comparison remains unadjudicated."
+}

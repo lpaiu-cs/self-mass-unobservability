@@ -1,0 +1,42 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": false,
+  "actual_new_background_coupled_evolution": true,
+  "comparisons": {
+    "temperature": {
+      "time_relative": 0.00539516080413727,
+      "time_pass": true,
+      "space_pass": true,
+      "space_relative": 0.00034741432497495406
+    },
+    "velocity": {
+      "time_relative": 0.00010572565581614328,
+      "time_pass": true,
+      "space_pass": false,
+      "space_relative": 1.9249252724792125
+    },
+    "scalar": {
+      "time_relative": 0.00030982542687556767,
+      "time_pass": true,
+      "space_pass": false,
+      "space_relative": 0.15618002664429612
+    }
+  },
+  "endpoint": {
+    "t": 0.0034344311179287023,
+    "maximum_delta_lnT": 0.00010861452042460887,
+    "base_cell_delta_lnT": -0.00010861452042460887,
+    "velocity_RMS_m_s": 2.1865202628599802e-08,
+    "scalar_RMS": 1.0297470377389962e-31,
+    "surface_scalar": 3.725182080402719e-37,
+    "outgoing_luminosity_relative": -5.303331558625946e-13,
+    "energy_balance": 2.932031493027252e-20
+  },
+  "seconds": 73.83937715799999,
+  "total_compute_seconds": 354.312968881,
+  "memory_GB": 0.872361984,
+  "full_nonlinear_radiation_hydrodynamics": false,
+  "physical_zero_pressure_atmosphere": false,
+  "final_asymptotic_charge": false,
+  "full_goal_complete": false
+}

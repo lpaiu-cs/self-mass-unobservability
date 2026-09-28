@@ -1,0 +1,74 @@
+{
+  "classification": "Counterexample candidate",
+  "actual_coupled_evolution": true,
+  "numerical_response_passed": true,
+  "time_order": 2.0099836630322736,
+  "time_differences_initial": [
+    3.9932815121606514e-05,
+    9.914357023516545e-06
+  ],
+  "input_differences_initial": {
+    "coarse": 2.469082490291328e-05,
+    "quadrature4": 5.807691802739394e-07
+  },
+  "source_plus_two_tails": 0.00042461616804853847,
+  "temperature_perturbation_K": 0.8359321735350341,
+  "LTE_temperature_perturbation_K": 0.8136857590920158,
+  "finite_vs_LTE_difference": 0.046847676418086834,
+  "population_disequilibrium_norm": 0.004716119627980163,
+  "duration_seconds": 0.0023168013831055567,
+  "rows": [
+    {
+      "balance": 6.083875078251139e-13,
+      "entropy_growth": 0.0,
+      "solver_residual": 1.2324165890628512e-13,
+      "max_solver_iterations": 3,
+      "norm": 0.45870309565074346,
+      "steps": 16,
+      "name": "fine-16"
+    },
+    {
+      "balance": 1.2297064555346161e-13,
+      "entropy_growth": 0.0,
+      "solver_residual": 3.153650255527924e-14,
+      "max_solver_iterations": 3,
+      "norm": 0.45870680122964047,
+      "steps": 32,
+      "name": "fine-32"
+    },
+    {
+      "balance": 1.5182081585177625e-12,
+      "entropy_growth": 0.0,
+      "solver_residual": 6.894399453300017e-13,
+      "max_solver_iterations": 3,
+      "norm": 0.4587077217428983,
+      "steps": 64,
+      "name": "fine-64"
+    },
+    {
+      "balance": 1.452778999433986e-12,
+      "entropy_growth": 0.0,
+      "solver_residual": 6.894799024214582e-13,
+      "max_solver_iterations": 3,
+      "norm": 0.45870396483843284,
+      "steps": 64,
+      "name": "coarse-64"
+    },
+    {
+      "balance": 1.4639620027432537e-12,
+      "entropy_growth": 0.0,
+      "solver_residual": 6.895479013461187e-13,
+      "max_solver_iterations": 3,
+      "norm": 0.45870772640746027,
+      "steps": 64,
+      "name": "quadrature4-64"
+    }
+  ],
+  "seconds": 186.736475934,
+  "memory_GB": 1.601929216,
+  "physical_opacity_certified": false,
+  "original_complete_input_failure_resolved": false,
+  "full_GR_photon_feedback_evolved": false,
+  "full_dynamic_charge_solved": false,
+  "boundary": "Finite retained ion-stage radiative kinetics only. Internal levels, unretained chemistry and thermal velocities remain conditionally equilibrated. No electron-impact rates, complete redistribution, missing opacity, atmosphere or moving stellar GR."
+}

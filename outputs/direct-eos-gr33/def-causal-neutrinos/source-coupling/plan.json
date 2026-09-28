@@ -1,0 +1,32 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "08c631fe",
+  "bindings": {
+    "verification/def_neutrino_source_coupling.py": "e5db7f6bf68a111aba02ce6cfb4354108896270bf86e1a7a52b81c435dde758b",
+    "verification/def_causal_neutrinos.py": "a447028ee3ea1da0ada65ed3c4802abb620e63e61c16eae45aeecd8657aa2290",
+    "outputs/direct-eos-gr33/def-causal-neutrinos/fine.npz": "c88e9f002fb71875d5007b2947fbe75f515eb1c870e86c9d1a7c70175014a025",
+    "outputs/direct-eos-gr33/def-causal-neutrinos/fine.json": "a0809170cc1cabe0e3f83fa75137275a4bd2815a836a5e148d7fc829e0370070",
+    "outputs/direct-eos-gr33/def-causal-neutrinos/result.json": "4fc7118799f1dd5f0cf5888d36f5ff42d802d623f8b57bb7340d9486e79ed3cc"
+  },
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "four_force": "Isotropic comoving emission q has Eulerian source (W*q,W*v*q); matter has its exact negative. Momentum cannot be omitted for a moving emitter.",
+    "flat_control": "Uniform sphere, isotropic directions: flight-distance pdf=3/4*(1-x^2/4), 0<x<2; mean flight=3/4 crossing time.",
+    "source_history": "Piecewise constant emitter powers integrate exactly; the shared material debit and ray credit use the identical history integral.",
+    "limitation": "A source/transport coupling API and frozen-metric radiation stress; the material EOS and Einstein evolution are not advanced here."
+  },
+  "claim": "Provide the finite-time radiation stress and identical matter/radiation source histories needed by a conservative coupled solver; include moving-emitter four-force identity.",
+  "controls": "Replay the saved constant-native source; then a manufactured independently time-modulated power in every emitter. Compare shell budgets and direct surface/external ray crossings without building new rays.",
+  "gates": {
+    "replay_relative": 1e-12,
+    "source_and_face_balance_relative": 2e-13
+  },
+  "budget": {
+    "hard_timeout_seconds": 30,
+    "new_transport_builds": 0,
+    "native_calls": 0,
+    "GPU": false
+  },
+  "scope": "No material state or Einstein time advance. History modulation is a software/control input, not a new native nuclear trajectory."
+}

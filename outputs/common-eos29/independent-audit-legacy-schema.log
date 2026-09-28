@@ -1,0 +1,13 @@
+INDEPENDENT ENERGY {'label': 'P-evolve-1-0', 'max_local_score': 243.15940347888935, 'local_gate_passed': False, 'redshifted_absolute_residual_over_release': 3.088394196170442e-08}
+INDEPENDENT ENERGY {'label': 'P-evolve-2-0', 'max_local_score': 243.1678724401241, 'local_gate_passed': False, 'redshifted_absolute_residual_over_release': 5.9449132582454796e-08}
+INDEPENDENT ENERGY {'label': 'P-evolve-2-1', 'max_local_score': 243.16808959271225, 'local_gate_passed': False, 'redshifted_absolute_residual_over_release': 6.055215806183236e-08}
+INDEPENDENT ENERGY {'label': 'P-evolve-4-0', 'max_local_score': 243.1688496279589, 'local_gate_passed': False, 'redshifted_absolute_residual_over_release': 1.2190645646576546e-07}
+INDEPENDENT ENERGY {'label': 'P-evolve-4-1', 'max_local_score': 243.1688496279589, 'local_gate_passed': False, 'redshifted_absolute_residual_over_release': 1.1459920744820068e-07}
+INDEPENDENT ENERGY {'label': 'P-evolve-4-2', 'max_local_score': 243.16776386369804, 'local_gate_passed': False, 'redshifted_absolute_residual_over_release': 1.2115945527812495e-07}
+INDEPENDENT ENERGY {'label': 'P-evolve-4-3', 'max_local_score': 243.1684153217265, 'local_gate_passed': False, 'redshifted_absolute_residual_over_release': 1.1454478411063543e-07}
+Traceback (most recent call last):
+  File "/mnt/e/lab/self-mass-unobservability/verification/verify_common_eos.py", line 292, in <module>
+    if __name__=='__main__': globals()[sys.argv[1]]()
+  File "/mnt/e/lab/self-mass-unobservability/verification/verify_common_eos.py", line 34, in audit
+    parts=label.split('-');step=int(parts[-1]);count=int(parts[-2]);iso=bool(report['isobaric'])
+KeyError: 'isobaric'

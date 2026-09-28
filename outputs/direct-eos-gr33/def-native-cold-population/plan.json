@@ -1,0 +1,35 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "14e7524ef",
+  "claim": "Repair the precise786K fixed-inventory native-EOS failure, then complete the original49node expansion without changing its free energy, populations, domain or scientific gates.",
+  "decision": "Only a successful same-state recovery with native inventory/thermodynamic checks can replace the blocked EOS input. Retain the original LTE charge as conditional until actual chemistry and fluid are evolved together.",
+  "reuse": "Original libraries, saved34node prefix, exact failed next state, original density nodes and entropy root. No new stellar/fluid integration while its EOS is not evaluable.",
+  "budget": {
+    "native_build_seconds": 60,
+    "diagnostic_calls": 2,
+    "diagnostic_seconds": 20,
+    "repair_EOS_evaluations": 1000,
+    "repair_seconds": 90,
+    "CPU_threads": 1,
+    "memory_GB": 1
+  },
+  "forecast": "Previous native build3.35s,499 constrained state evaluations15.15s including failed inversions. Frozen-population strong fields may need a different initializer or evaluation route; its cost is unmeasured and bounded by the caps.",
+  "gates": {
+    "unbiased_bitwise": true,
+    "old_supported_state_relative": 1e-10,
+    "inventory": 1e-10,
+    "constrained_population": 1e-12,
+    "entropy_root": 2e-10,
+    "first_law": 0.0001,
+    "coarse_fine_speed": 0.002
+  },
+  "stop": "No relaxation rate, EOS/temperature extension, hidden bound population change, relaxed gate or long fluid job. Diagnose the exact native equations and preserve each executed version.",
+  "inputs": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_cold_population.py": "d6f9fae866ab436d52526d7f0c5147b10e493512c1d036b541ee9d8f3e9a1e68",
+    "/home/lpaiu/work/direct-eos-gr33/native-ion-closure/libfree_eos_native_ions.so": "7aa59271ada8e101ba82794f9b00acb58288e7475eb2c987b0080658c3315d87",
+    "/home/lpaiu/work/direct-eos-gr33/native-ion-closure/gas.so": "a5513942c51e8e997391a6326379ba0b29e9d7b9bae89efd562483f9b4f6fa63",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-ion-closure/accepted-adiabat-prefix.npz": "7c22e10450ec05fbc868fe321f4a17c5622e3fbbdad9177430f36e5a219a461b",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-ion-closure/adiabat-failure.json": "6544d232ea3ec5642e3066b6ea5eae16e2c0f18367e31be8dba44cf642661673",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-ion-closure/final-adiabat-source.py": "894472ccc27d6425db7969852ba536d2f04acc1926bdda7b3ad26b9bbe8c1c6d"
+  }
+}

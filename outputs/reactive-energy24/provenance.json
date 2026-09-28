@@ -1,0 +1,19 @@
+{
+  "classification": "Proven",
+  "before_task_checkpoint": "9ab3723",
+  "previous_manifest_sha256": "ff024516afe264d37818afd867198824840bf8de5cb9bcb4108e75b0ff28df52",
+  "interpreter": "/usr/bin/python3",
+  "versions": {
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "sympy": "1.9"
+  },
+  "runtime": "Unchanged FreeEOS bridge/runtime bound in outputs/gr-mass21/provenance.json; no MESA rebuild.",
+  "source_Q": "Standard Q from mass_excess and A<=1 binding override, not the Reaclib fit Q field. Eleven auto-defined reactions have their stoichiometry checked against actual Reaclib records; weak_info.list supplies declared mean neutrino energy.",
+  "pilot_corrections": [
+    "Initial reactions.list-only parser could not resolve 11 auto-defined reactions; archived Reaclib and weak_info.list and checked them before source verdict.",
+    "Initial negative-control temperature bracket +/-0.2 in lnT did not enclose double-heating roots. Expanded to +/-0.7 without changing reaction extents or acceptance thresholds. No failed physical verdict was replaced.",
+    "Combined EOS recheck changed energy residuals by about 2e-15, so exact JSON float equality failed. Frozen results are retained; numeric reproduction uses 1e-12 times max(1,abs(reference)), with all original scientific acceptance gates rerun unchanged."
+  ],
+  "sample_boundary": "Four material midpoints from frozen scaled Request23; three with sufficient H/He support centred composition differences. Central hydrogen-depleted sample is not burned. Same 5735-cell template; not continuum convergence."
+}

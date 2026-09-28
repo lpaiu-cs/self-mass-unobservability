@@ -1,0 +1,44 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "bf060cff9",
+  "claim": "Replace the last34km center-to-material-face reconstruction by actual native radiative/reactive moving cells, then decide its influence on the conditional final charge.",
+  "grid": "Keep the original first15 native cells exactly. Replace only the last cell by four physical cells with additional faces at-4000,-2000,-1000m and the same shared face at-400m. Their native centers are-36375,-3000,-1500,-700m. The nearest center-face gap becomes300m. Atmosphere remains512 cells; same152 frequencies,8 angles and3.434ms.",
+  "reuse": "Existing15-cell geometry, frozen local inventories, nonlinear thermal/rate tables and density/frequency derivatives. Existing completed16-cell64/128 trajectories are the comparator; never repeat them. All common photon, central material and shared HLL source methods are reused.",
+  "native": "Only four new local native inventory anchors, nonlinear H/temperature support identical to the old bank, same density/frequency derivatives and independent withheld native checks. Endpoint derivative reference states use interpolated original frozen references, not new freely adjusted EOS parameters.",
+  "decision": "Apply the new bank to actual19-cell64/128 coupled paths. Compare direct charge, direct-plus-photon mass, shared material flux and surface spectrum against saved16-cell paths. A failed2percent local radial comparison stops automatic refinement; it does not become a new accepted physical sign.",
+  "gates": {
+    "native": 0.002,
+    "energy": 1e-08,
+    "baryon": 1e-10,
+    "source": 1e-09,
+    "time_direct": 0.02,
+    "time_total": 0.02,
+    "space_direct": 0.02,
+    "space_total": 0.02,
+    "space_surface_spectrum": 0.02,
+    "positive_photons": true
+  },
+  "budget": {
+    "native_calls": 1800,
+    "native_seconds": 75,
+    "pilot_steps_each": 2,
+    "pilot_seconds": 35,
+    "production_seconds": 500,
+    "saved_readout_seconds": 60,
+    "CPU_threads": 1,
+    "memory_GB": 3
+  },
+  "forecast": "The corrected16-cell two-path dispatch took323.75s. Increasing only bulk16 to19 cells is expected to add cost to the gas Schur solve; actual later stiffness and new short cells are unmeasured. Measure two steps of both clocks, require1.8x remaining forecast plus10s within500s, then continue saved prefixes only.",
+  "stop": "Stop on native support, positivity, conservation, forecast or hard cap. No extra radial/time/frequency/angle path or relaxed gate. This local refinement does not settle the remaining fifteen-cell radial or initial Einstein-constraint error.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_boundary_layer.py": "7a6b8329e9bd402d1bc7bf4b236e63094c6b2f53467cf7be49fd021ca7cb2951",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_material_centered.py": "9e8b0fc38d98876e410cc4205a2de47a93b00f408972d399bac1feb3453e5278",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_material_join.py": "be1bcb8ccabcf1e980210f95db4053627eccd31466659e3237479feed495b505",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_interior_feedback.py": "4a06f0d969c4a63f83bb8fac96827d16dd4d6dc5415936bf648b01ae613a492b",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_two_way_atmosphere.py": "3f37fc1fbdece30a3a98d22015fd18bb75995f42a433bc8df9271d8df4ba3c8b",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_angular_photons.py": "ee3da788b9519daa0b9b97793cc1ba2a7d2de4a53394e15d2830941426041aed",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-material-join/centered/coupled-64.npz": "49d66a1fe81e87f382f730a7bf34d359eb878674d057e802245a747e2d51103d",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-material-join/centered/coupled-128.npz": "feeeb2ead73aa3cc7d76b880a1900e26b0e15ddc40352dad3e2bb4f45aea0a88",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-material-join/centered/result.json": "81be246012b4284f701087661054c728e128e4c0dada17a8337d5ef9a450c677"
+  }
+}

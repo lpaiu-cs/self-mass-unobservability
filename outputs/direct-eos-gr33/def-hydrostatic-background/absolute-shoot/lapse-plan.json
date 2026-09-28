@@ -1,0 +1,20 @@
+{
+  "classification": "Counterexample candidate",
+  "bindings": {
+    "verification/def_hydrostatic_lapse.py": "260cf35ff5f5c59754aeec905b1f69cb29a07e0923cf6248d8c3b59708e5f9a1",
+    "outputs/direct-eos-gr33/def-hydrostatic-background/absolute-shoot/background-0.001.npz": "774e2bff821f5863291167f069a8673562bfee8b0ab648468c8dfc5a2a9b04d3",
+    "outputs/direct-eos-gr33/def-hydrostatic-background/absolute-shoot/native-audit.json": "f8630fe061e144bfc76897b77f2d168e490f14847fa536f588ae3c885a89bbcf",
+    "outputs/direct-eos-gr33/def-hydrostatic-background/absolute-shoot/result.json": "3d222d0ddda639e3d0451c6b8ffbf4a31fd1cec12acbdbca3bcb7f065b1d9be8"
+  },
+  "claim": "Integrate log-lapse on the accepted five-variable background and check the cellwise isentropic first integral log(h_J A N).",
+  "budget": {
+    "hard_timeout_seconds": 30,
+    "new_native_calls": 0,
+    "new_background_fits": 0
+  },
+  "gates": {
+    "replayed_state": 1e-08,
+    "first_integral_absolute": 1e-12
+  },
+  "scope": "Finite-pressure optical boundary; formal Just normalization, no physical vacuum junction or thermal stationarity."
+}

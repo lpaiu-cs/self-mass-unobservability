@@ -1,0 +1,40 @@
+MASSES [1.43781441e+00 1.97536385e-01 4.10102707e-01 9.33289988e-09]
+FIELD base 0 {'target_phi': 1e-05, 'gravitational_mass_solar': 1.4378144070539, 'radius_m': 11699.228430944626, 'central_pressure_geom': np.float64(1.212805026049554e-10), 'phi_infinity': 1.0000000005317003e-05, 'charge_m': 0.4156599523456298, 'baryon_normalization_m': 2352.220094864609, 'baryon_relative_error': 3.876383436463016e-09, 'q_over_phi_m': 41565.99521246233, 'shooting_error': 3.876383428949842e-09, 'solver_success': True}
+FIELD base 0 {'target_phi': -1e-05, 'gravitational_mass_solar': 1.4378144070539, 'radius_m': 11699.228430944626, 'central_pressure_geom': np.float64(1.212805026049554e-10), 'phi_infinity': -1.0000000005317003e-05, 'charge_m': -0.4156599523456298, 'baryon_normalization_m': 2352.220094864609, 'baryon_relative_error': 3.876383436463016e-09, 'q_over_phi_m': 41565.99521246233, 'shooting_error': 3.876383428949842e-09, 'solver_success': True}
+FIELD base 0 {'target_phi': 3e-05, 'gravitational_mass_solar': 1.437814394890564, 'radius_m': 11699.229096695763, 'central_pressure_geom': np.float64(1.2128054773498488e-10), 'phi_infinity': 2.9999999979855565e-05, 'charge_m': 1.2469777939400848, 'baryon_normalization_m': 2352.2200819400805, 'baryon_relative_error': -1.6182252204899328e-09, 'q_over_phi_m': 41565.92649258023, 'shooting_error': 1.6182252217992592e-09, 'solver_success': True}
+/mnt/e/lab/self-mass-unobservability/verification/nonzero_drive.py:71: RuntimeWarning: overflow encountered in exp
+  m,lp,nu,phi,psi,nb=y;p=np.exp(max(lp,np.log(eos.pmin)));e=self.energy(p)
+GSL function failed: interpolation error (errnum=1)
+XLAL Error - <GSL function> (interp.c:150): Generic failure
+Traceback (most recent call last):
+  File "/mnt/e/lab/self-mass-unobservability/verification/nonzero_drive.py", line 134, in <module>
+    if __name__=='__main__':{'stars':stars}[sys.argv[1]]()
+  File "/mnt/e/lab/self-mass-unobservability/verification/nonzero_drive.py", line 123, in stars
+    fitted=root(residual,[0.,1/normalization],tol=1e-8)
+  File "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/optimize/_root.py", line 253, in root
+    sol = _root_hybr(_wrapped_fun, x0, args=args, jac=jac, **options)
+  File "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/optimize/_minpack_py.py", line 249, in _root_hybr
+    retval = _minpack._hybrd(func, x0, args, 1, xtol, maxfev,
+  File "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/optimize/_root.py", line 215, in _wrapped_fun
+    return fun(*fargs)
+  File "/mnt/e/lab/self-mass-unobservability/verification/nonzero_drive.py", line 121, in residual
+    obj=ScalarStar(eos,pc+z[0],field*z[1],rtol=rtol,r0_factor=r0)
+  File "/mnt/e/lab/self-mass-unobservability/verification/nonzero_drive.py", line 82, in __init__
+    self.full=solve_ivp(rhs,(r0,eos.rmax),[4*np.pi/3*r0**3*a4*ec,np.log(p0),0.,phic+scalar2*r0*r0/2,scalar2*r0,nb0],
+  File "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/integrate/_ivp/ivp.py", line 655, in solve_ivp
+    message = solver.step()
+  File "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/integrate/_ivp/base.py", line 197, in step
+    success, message = self._step_impl()
+  File "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/integrate/_ivp/rk.py", line 144, in _step_impl
+    y_new, f_new = rk_step(self.fun, t, y, self.f, h, self.A,
+  File "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/integrate/_ivp/rk.py", line 64, in rk_step
+    K[s] = fun(t + c * h, y + dy)
+  File "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/integrate/_ivp/base.py", line 154, in fun
+    return self.fun_single(t, y)
+  File "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/integrate/_ivp/base.py", line 23, in fun_wrapped
+    return np.asarray(fun(t, y), dtype=dtype)
+  File "/mnt/e/lab/self-mass-unobservability/verification/nonzero_drive.py", line 71, in rhs
+    m,lp,nu,phi,psi,nb=y;p=np.exp(max(lp,np.log(eos.pmin)));e=self.energy(p)
+  File "/mnt/e/lab/self-mass-unobservability/verification/nonzero_drive.py", line 43, in <lambda>
+    self.energy=lambda p:ls.SimNeutronStarEOSEnergyDensityOfPressureGeometerized(p,self.native)
+RuntimeError: Generic failure

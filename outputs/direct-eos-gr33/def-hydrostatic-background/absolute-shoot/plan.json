@@ -1,0 +1,51 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "972195f",
+  "bindings": {
+    "verification/def_hydrostatic_background.py": "d89d4714153409fbe2edadc4918dd269c27183db342b6643ecf7eb0806d06346",
+    "outputs/direct-eos-gr33/gr-molecular-structure-defined/molecular-state-17-8.npz": "27bc78be6b5f9bb028e0323f0c225eefc5bd89244c9b14b5068fb9c7ba5df885",
+    "outputs/direct-eos-gr33/gr-molecular-structure-defined/molecular-adiabats-17.npz": "b383b972f16f27d52a68ef461fa3f01d10f378e7dff5f20b50bda3a1422d5b7f",
+    "outputs/direct-eos-gr33/gr-molecular-structure-defined/GR-8.json": "4a0039a3b5bcad90193a4e0358ab0e7e8a82222ab793793adc4af6137d2c4325",
+    "outputs/direct-eos-gr33/gr-molecular-structure-defined/candidate.py": "d190064a31c8f0183e0d8ddd425e84809b3b7175aa378612e29d7f6c9950cfa7",
+    "verification/gr_molecular_conservative_initial.py": "f9d53644927b05541289013995182b55e627d64389ff5804e5acefac5b7b0a07",
+    "verification/baryon_entropy.py": "076f40c1c48fa1a687fd5c05eacf16a728713aaabeb16cec0f03ef0fb7d85f3f",
+    "verification/gr_scalar_nonlinear_exterior.py": "ae8af4f607fa60690742b08b60ee27b17225fb4fbd73ed854721cdd3a8873de1",
+    "verification/def_hydrostatic_absolute_shoot.py": "343cd820b40e410bbcaea7c80719dc729b56fd9c05124c669426af38ac0c19d4",
+    "outputs/direct-eos-gr33/def-hydrostatic-background/result-0.json": "15eed2282c95d36393d54ba421dd3719850f85dc83e5b1bd99e4e1fe0bae254d",
+    "outputs/direct-eos-gr33/def-hydrostatic-background/extended-table.npz": "12b4877cd975997e24a5afc6b36354afb48290d86fa95fbede468511e391961b",
+    "outputs/direct-eos-gr33/def-hydrostatic-background/shoot-failure.json": "4168a0bdf063e3f17ed4fe996e45ab77778e736d960e967cb017373140f1e6a4"
+  },
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "scope": "DEF equations (3.6a-f), log lapse is half the source nu; fixed Jordan baryon mass coordinate. No thermal stationarity assertion."
+  },
+  "source": "https://arxiv.org/pdf/gr-qc/9602056 (3.6a-f); finite-temperature fixed shell entropy/composition EOS here, not the source cold barotrope.",
+  "beta": -4,
+  "phi_infinity": [
+    0.001
+  ],
+  "subdivision": 4,
+  "cells": 5735,
+  "material": "Every saved shell baryon mass, 26-isotope fraction and EOS entropy is retained. Radius, mass, pressure and scalar profile are solved together; no subtracted hydrostatic reference force.",
+  "boundary": "Prescribed original finite Jordan photospheric pressure. Just map normalizes the truncated metric/scalar only; no solved physical atmosphere or vacuum material junction.",
+  "table_extension_cells": 203,
+  "table_extension_roots": 1902,
+  "gates": {
+    "interface": 1e-08,
+    "GR_reproduction_relative": 1e-08,
+    "native_logrho": 1e-07,
+    "native_entropy_over_cv": 1e-07
+  },
+  "budget": {
+    "pilot_seconds": 90,
+    "table_seconds": 180,
+    "shoot_seconds": 600,
+    "native_audit_seconds": 180,
+    "workers": 4,
+    "maximum_objective_calls_per_background": 45,
+    "automatic_expansion": false
+  },
+  "decision": "Close the nonzero mechanical-background gap if matching and native controls pass; retain finite-pressure/heat limitations. Do not infer stationarity over an orbit or execute an orbit.",
+  "numerical_correction": "Explicit absolute central shooting differences [2e-6,2e-6,2e-6,.001,.0001]; no physical or acceptance change."
+}

@@ -1,0 +1,28 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "0a4c0736c",
+  "claim": "Resolve the failed same-input material derivative and then apply it to the actual4/8step prefix and full horizon.",
+  "change": "Reuse the conservative-to-primitive map and deep tangent. Differentiate minmod analytically, including exact corners. Evaluate the same native HLL/EOS along locally normalized face directions with forward Richardson; direct fixed-geometry gravity variation and actual donor derivative. One shared face appears once.",
+  "scope": "Current zero-additional-geometry material sweep only. This is a directional response of the retained operator, not full nonlinear evolution or a uniform native EOS certificate.",
+  "controls": "Half/nominal/double local primitive probes5e-6/1e-5/2e-5 at the failed state, original0.2percent RHS threshold, reconstruction equality, primitive mapping control,1e-8 owner/conservation,1percent physical donor,2percent paired-time comparison. No global probe or precision ladder.",
+  "budgets": {
+    "check": 45,
+    "pilot": 70,
+    "production": 450,
+    "residual": 40
+  },
+  "total_original_seconds": 640,
+  "CPU_threads": 1,
+  "virtual_GiB": 3,
+  "reuse": "Byte-identical full173photon histories. Keep all failed174results. Resume new accepted material prefixes only.",
+  "stop": "Any failed control stops this route; no automatic clock,grid,period,source or probe expansion.",
+  "final_charge_conclusion": "unadjudicated",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/resolve_native_material_face_response.py": "c05269c483e6024a29353af957fd32892714bdbb15ab829d25324c4f3c01e93f",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/return_native_pressure_matter.py": "87e964fe3eb006fc3a75a3d3461307bf0288ef37ad2240a7ba39571a18ad45fa",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_matter_photon_feedback.py": "19acadd46d8f6059406fc3614c151de187323cec68f73faf9319e663f0466fb9",
+    "native-pressure-matter174-work/sweep-1/material/pilot-64.npz": "355a5dd280e3dbb85110a3b0d7bca2045901f677f2fe115e040480e15edd50d4",
+    "native-pressure-matter174-work/primitive-precision-check.json": "471b135ad4e4caad460c80fa83fa954edd8008f838ed2dcd7ae1e9da36f5450f",
+    "native-pressure-matter174-work/plan.json": "fde895f0dad60c500e83f969ff94bdbf1ec0539b0fbf7661fa7e3a92723ccaae"
+  }
+}

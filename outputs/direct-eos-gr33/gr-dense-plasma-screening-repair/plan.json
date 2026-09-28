@@ -1,0 +1,36 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "e9500e5",
+  "bindings": {
+    "verification/gr_dense_plasma_screening_repair.py": "5e9781533ee2b95e4aa05f975d13002bec6cb7cef0faa9e427607f9eefff672d",
+    "outputs/direct-eos-gr33/gr-dense-plasma-derivative-probe/manifest.json": "9fe5ef75db66413b7b6b8afed8930e5088afd544bbaa38c087e514b77eefc0d6",
+    "outputs/direct-eos-gr33/gr-dense-plasma/manifest.json": "8fcca2ef6e037e47c1da4793e24fef86c530e5eafaf6d083b8986e4391a4b6ef",
+    "outputs/direct-eos-gr33/gr-dense-plasma-screening-repair/eos22-screening.f": "eee1a5daed86747ee89ca2ae3c8d13c74aeeaf5eb50d51f2918160466e92c8b5"
+  },
+  "substitution": {
+    "old": "COR0DXX=(U0DXX-(2.*U0DX*D0DX+U0*D0DXX)/D0+2.*(D0DX/D0)**2)/D0",
+    "new": "COR0DXX=(U0DXX-(2.*U0DX*D0DX+U0*D0DXX)/D0+\n     +  2.*U0*(D0DX/D0)**2)/D0"
+  },
+  "problem": "FSCRliq8 second x derivative of 1+U0/D0 omits U0 in the final quotient-rule term. This feeds FDXX and PDRSCR, while free energy, U, P, CV and PDT are unchanged.",
+  "controls": [
+    2972,
+    3043,
+    4352,
+    5734
+  ],
+  "charges": [
+    1,
+    2,
+    6,
+    20
+  ],
+  "mp_controls": "60-decimal free energy and its independent log n/log T derivatives; preserve binary32 rounding of unsuffixed Fortran decimal literals before their promotion to double precision.",
+  "independent_score_tolerance": 1e-10,
+  "all_unaffected_outputs_bitwise": true,
+  "finite_log_steps": [
+    0.0002,
+    0.0001
+  ],
+  "finite_derivative_tolerance": 1e-05,
+  "policy": "Retain the original failed 1e-5 mixture derivative gate. Repeat that same gate after one quotient-rule correction in a separate library. No refitting, physical input change, native EOS change or GR restart."
+}

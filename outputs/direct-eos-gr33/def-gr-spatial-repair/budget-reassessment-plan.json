@@ -1,0 +1,18 @@
+{
+  "classification": "Counterexample candidate",
+  "reason": "The64-vector pilot extrapolated every cost quadratically and forecast992.86s, exceeding300s; the original production launch was not executed.",
+  "decision": "Measure the single most expensive already planned degree4 case under60s, reuse its results, then permit the remaining unchanged comparisons only if six times measured cost with25 percent allowance is below300s. No increased total cap, degree, time horizon, precision gate or source.",
+  "budget": {
+    "first_case_hard_seconds": 60,
+    "total_hard_seconds": 300,
+    "CPU_threads": 1,
+    "memory_GB": 4,
+    "new_EOS_calls": 0
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-spatial-repair/bounded-run.py": "76460e1069bcac70c45fca792e4202c6e960af9ce2153ea666fa2269e5c53bf3",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_spatial_repair.py": "d13044861c2b4761d5e6349d809c3368f46112974f374aa050aada516c80f8e5",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-spatial-repair/plan.json": "de746c5711ac529f3d8ccb8c4435429654f189e758a8e706afacac8d25bf0612",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-spatial-repair/pilot-budget.json": "2034aa89a4dc59ab9f909322cb3da3f013c9e610e94264c7ef2e9caf23f08c4d"
+  }
+}

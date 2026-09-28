@@ -1,0 +1,303 @@
+# Nonadiabatic regime — exact scope
+
+Status: Imported from prior work. Request 11.2 validates approximately 95% interval coverage within a prespecified full-nuisance, estimated-Fourier-covariance linear model (minimum 94.59% over tested cells). A diagonal covariance can under-cover severely even when the pole survives projection. See [the result and limits](../notes/REQUEST11_2_COVERAGE_RESULT.md).
+
+Status: Proven. A passive first-order pole has no resonance peak. Its tau=Gamma/kappa need not be an inverse particle mass. Close to a scalar-charge instability, increasing susceptibility alone does not ensure negligible inertia, companion feedback or nonlinear response. The explicit physical validity inequalities are in [Request 11.3](../notes/REQUEST11_3_MATCHING_RESULT.md).
+
+Status: Proven. For nonzero real beta and positive tau_chi, the settled response `c_Y+beta/(1+i omega tau_chi)` has a nonzero pole residue. No finite polynomial equals it on an open frequency interval.
+
+Status: Proven. Finite sampling is different. A real degree-N polynomial with unrestricted shared coefficients matches K distinct positive carriers exactly if and only if `N>=2K-1`. Necessity follows from the 2K conjugate roots of `(1+tau z)(P-c_Y)-beta`; sufficiency follows from the explicit polynomial division in Theorem 3 of [the manuscript](../paper/manuscript.md).
+
+Status: Proven. Three distinct positive carriers exclude real degree at most four; degree five suffices to match them. For unrestricted complex coefficients on positive-frequency samples alone, degree `K-1` suffices. Repeated or zero-amplitude carriers do not add independent information.
+
+Status: Proven. Exact noninterpolation does not give a positive lower bound on the measurable residual. Nearby frequencies, small lag, and nuisance projection can make that residual small or zero. For whitened data, the required rank increment is `T_tilde^T (I-P_J) T_tilde>0`.
+
+Status: Proven. An arbitrary independent complex projection at each carrier absorbs the response pointwise. A finite shared projection can also absorb it if its tangent directions span the signal. Rank five instead of six for a particular projection ansatz is not sufficient by itself to identify beta or tau_chi.
+
+Status: Proven. Linear two-frequency forcing and linear readout produce only the input frequencies. Quadratic drive/readout terms can generate sum and difference sidebands, but local nonlinear static responses also generate sidebands. A sideband argument must specify and exclude that comparator.
+
+Status: Counterexample candidate. The observable target is a shared pole relation against a bounded comparator with a justified drive and projection. The three-carrier timing benchmark is a conditional application, not a detection or a claim excluding every finite-order EFT.
+
+Status: Imported from prior work. The stored J0337 finite-grid statistics report no detection; nuisance choices materially change conditional beta intervals. This revision reuses those artifacts without new runtime work.
+
+Status: Proven. For known phases, the coefficient-space residual against a shared derivative comparator is invariant under block phase rotations. Multiplying it by the squared smallest singular value of the full-nuisance whitened carrier map gives a continuous all-phase information lower bound. Allowing the comparator to fit arbitrary independent quadratures is different and restores exact absorption.
+
+Status: Imported from prior work. The item-4 map condition numbers are 98.19–124.82 under the specified covariance scenarios. Nonzero rank can coexist with a roughly 589-fold standard-error increase when fourth-order derivatives are allowed. The mathematical distinction alone therefore does not establish useful empirical precision.
+
+
+## Request 12 follow-through
+
+Status: Imported from prior work. Dedicated transient response columns pass registered amplitude-convergence gates and add at most 0.523 percent to beta standard errors in the nine tested cases. Status: Proven. Two arbitrarily close positive poles approach one pole quadratically, preventing uniform finite-precision state-count separation without additional separation/weight assumptions.
+
+Details: [remaining-lever report](remaining-levers-2026-09-09.md).
+
+## Request 13 remediation
+
+Status: Counterexample candidate. Request 13 solves the outgoing scalar frequency response and one complex pole for a specified SLy star; changing the exterior contour and radius changes that pole by about 1.5e-8 relative. The low-frequency elastic scattering normalization and a constant-coefficient oscillator fitted to the pole are different reductions. No exact one-pole model over all frequencies or internal state count is inferred from this computation.
+
+## Request 14 validated flow
+
+Status: Proven. Direct interval variational integration removes finite-difference truncation from the frozen GR initial-state Jacobian calculation on its certified time domain. This does not certify dynamic-SEP response columns, physical state count or a complete nonadiabatic observable. The entire timing map still needs its own error propagation. See [certificate boundary](../notes/REQUEST14_VALIDATED_VARIATIONAL.md).
+
+
+## Request 15 후속 검증
+
+분류: Proven. 다중 정밀도 전파, 초기화 수정·재매핑, 질량·Kepler·대수 관측식의 미분 검증을 수행했다. 이번 계산은 동적 SEP가 없는 GR 기준선에 조건부이며, 전체 기간 타이밍 인증과 비단열 검출 주장을 완성하지 않는다.
+
+세부 근거: [한글 실행·검증 보고서](../notes/REQUEST15_REMAINING_LEVERS_KO.md).
+
+
+## Request 16 다체 관측식과 영 구동 경계
+
+분류: Proven. 지정된 DEF 영 가지의 물질·궤도 변화는 선형 scalar 방정식의 독립 외력을 만들지 않는다. 시간 의존 계수도 영 초기자료의 영 해를 보존한다. 안정성이나 다른 scalarized 가지의 부재를 증명한 것은 아니다. 이번 결과는 추가 GR 지연 수정 및 연속 보간 오차·영 구동 경계의 정리 진전이며 새로운 비단열 관측량의 확립은 아니다.
+
+세부 근거: [한글 실행·검증 보고서](../notes/REQUEST16_NBODY_READOUT_KO.md).
+
+
+## Request 17 비영 구동과 동반성 응답
+
+분류: Proven. 비영 배경으로 궤도에 따라 변하는 전하는 생기지만, 이번 정적 해는 V_eff=−phi²*1^T L^-1 1/2로 정확히 제거된다. 관성을 생략한 선도 복사 모형의 빠른 집단 완화도 일 단위 상태를 확립하지 않는다. 분류: Conjectural. 비영 가지의 결합 모드·관성·고차 복사와 실제 구동·광자 전파를 일관되게 연결해야 비단열 관측 후보로 승격할 수 있다.
+
+세부 근거: [한글 도출·검증 보고서](../notes/REQUEST17_NONZERO_DRIVE_KO.md).
+
+
+## Request 18 열 백색왜성 구조와 응답 경계
+
+분류: Proven. 고정 밀도의 약한 중력 열 WD scalar 모형에서 궤도 주파수 응답은 정적 값의 2.1e−10 이내이므로 큰 비단열 응답을 공급하지 않는다. 상반평면의 독립 scalar 성장 해도 축약 조건으로 배제된다. 하반평면의 모든 pole이나 유체·회전·중성자별 모드를 배제하는 정리는 아니다. 분류: Conjectural. 비영 배경의 유체·metric 결합과 실제 상호 구동은 추가 matching이 필요하다.
+
+세부 근거: [한글 도출·검증 보고서](../notes/REQUEST18_THERMAL_WD_KO.md).
+
+
+## Request 19 열 진화 재현과 질량 보정 대조
+
+분류: Proven. 광학 후보 구조를 보간 없이 복원해도 영 배경·고정 밀도·평탄 시공간의 독립 scalar 모형은 궤도 주파수에서 정적 응답과 극히 가깝다. 실제 진화와 내부 구조의 수치 재현을 확인했지만 유체·metric 결합이나 중성자별 모드의 비단열 응답을 배제하지 않았다.
+
+세부 근거: [한글 보고서](../notes/REQUEST19_THERMAL_RESTART_KO.md).
+
+
+## Request 20 열 구조 민감도와 질량 정의
+
+분류: Proven. 네 변형 실행의 선택 구조에 기존 영 배경·고정 밀도·평탄 시공간 scalar 응답과 궤도 주파수 상계를 다시 적용했다. 별의 열 진화 시점 민감도와 독립 scalar 모형의 정적 근사는 다른 결과다. 유체·회전·metric 결합의 궤도 시간척도 상태를 배제하지 않는다.
+
+세부 근거: [한글 보고서](../notes/REQUEST20_THERMAL_ROBUSTNESS_KO.md).
+
+
+## Request 21 열 EOS와 GR 질량 매칭
+
+분류: Conjectural. 이번 계산은 열 EOS를 가진 GR 평형의 질량·부피 경계를 진전시켰다. 이 구조의 유체·metric·scalar 결합 동역학과 궤도 주파수의 관측 전달함수는 아직 계산하지 않았다. 정적 GR 질량 일치를 새로운 위상 지연이나 동적 관측량의 증명으로 세지 않는다.
+
+세부 근거: [한글 보고서](../notes/REQUEST21_GR_MASS_MATCHING_KO.md).
+
+
+## Request 22 GR 후보의 열수송과 물질 보존
+
+분류: Counterexample candidate. 원래 스냅숏의 순 핵반응 열원은 표면 광도의 약 284배이고 큰 음의 중력열 항을 가진다. 끝 상태 출력만의 에너지 잔차도 보존했다. 주변 모델에서 추정한 반지름 변화 시간 약 11617년은 진화 기울기이며 동적 응답의 pole이 아니다.
+
+분류: Conjectural. 다음 경계는 바리온 좌표의 물질·조성 보존, 새 상태의 실제 반응·수송 계수, GR 열·조성 진화와 안정성·유체·metric·scalar 전달함수를 순서대로 연결하는 것이다.
+
+세부 근거: [한글 보고서](../notes/REQUEST22_THERMAL_CLOSURE_KO.md).
+
+
+## Request 23 바리온 좌표와 엔트로피 보존 GR 재구성
+
+분류: Counterexample candidate. 직접 FreeEOS 엔트로피 역산과 독립 DOP853 적분은 두 모형의 연결 잔차를 1e-8 이내로 재확인했다. 이 검사는 반응·열수송을 끈 지정 물질의 정수압 재구성이다.
+
+분류: Conjectural. 다음 경계는 조성이 변할 때의 정지질량·핵반응·내부에너지 기준을 중복 없이 연결하고, 새 상태의 반응·손실·전도·복사·대류와 GR 열·조성 진화를 계산하는 것이다. 안정성 및 유체·metric·scalar 응답은 그 다음이며 정적 재구성을 궤도 완화나 관측 추론으로 확대하지 않는다.
+
+세부 근거: [한글 보고서](../notes/REQUEST23_BARYON_ENTROPY_KO.md).
+
+
+## Request 24 조성 변화의 반응 에너지 기준
+
+분류: Proven. Request22의 준정적 GR 광도 식을 반응하는 물질로 확장할 때 dL∞/dB=e^(2ν)[q_nuc−q_thermalν−T ds_B/dτ−Σ μ_i^th dY_i/dτ]로 화학 항을 명시해야 한다. q_nuc는 같은 에너지 기준에서 반응 중성미자를 이미 뺀 가열률이다. 바리온과 함께 움직이는 물질, 종별 확산 유속 없음, 투명한 중성미자 가정이며 확산 시 화학 에너지 유속도 필요하다.
+
+분류: Conjectural. 다음 단계는 새 상태에서의 실제 반응률·중성미자·복사/전도/대류와 GR 열·조성 진화이다. 현재 시험은 반응량을 지정했으며 속도나 시간을 계산하지 않았다.
+
+세부 근거: [한글 보고서](../notes/REQUEST24_REACTIVE_ENERGY_KO.md).
+
+
+## Request 25 새 GR 상태의 미세물리 평가
+
+분류: Counterexample candidate. 기존 핵 가열 미분의 직접 차분 대조는 사전 문턱을 실패했다. 작은 간격의 실제 평가 함수 차분으로 896개 구역의 국소 미분 자료를 별도 구성했다. 이 영역은 절대 핵 가열의 약 99.999808%를 포함하며 특정 상태 SHA에 결속되어 다른 상태로 사용할 수 없다. 유한 차분 수렴은 전역 미분 오차 보장이나 미래 GR 동역학의 검증이 아니다.
+
+세부 근거: [한글 보고서](../notes/REQUEST25_FRESH_MICROPHYSICS_KO.md).
+
+
+## Request 26 남은 폐쇄 조건의 실행 검산
+
+분류: Counterexample candidate. PP 분기비 미분 누락을 실제 채널 출력으로 검산하여 지정 상태의 기존 온도 미분 오차를 설명했다. 보정 후 차분 잔차는 최대 약 2.74e-8이다. 비선형 복사 경계를 가진 GR 동결 계수 열수송 대조는 에너지 수지를 통과했지만 국소 온도 변화가 약 14.86%여서 물리적 시간 진화 인증으로 세지 않는다.
+
+분류: Proven. 열 변수를 제거한 scalar 응답에는 교차 결합의 곱이 들어간다. 긴 열 시간만으로 관측 가능한 느린 scalar pole을 주장할 수 없다.
+
+세부 근거: [한글 보고서](../notes/REQUEST26_REMAINING_CLOSURE_KO.md).
+
+
+## Request 27 직접 반응 벡터와 명시적 PP 상태
+
+분류: Counterexample candidate. 26종 망의 명시적 중간 핵종에서 일 단위의 핵 가열 응답을 계산했다. 지정 두 주파수에서 4상태→1상태 축약의 상대 오차는 약 1.49e-6과 7.32e-9이며 빠른 모드 오차식 안에 든다. 전 주파수의 동등성이나 유한 carrier에서 자유로운 정적 고차 계수로 흡수되지 않는다는 주장은 하지 않는다.
+
+세부 근거: [한글 보고서](../notes/REQUEST27_NATIVE_CLOSURE_KO.md).
+
+
+## Request 28 반응 에너지 보존과 scalar 미분 구간
+
+분류: Counterexample candidate. 외부 열욕을 제거한 별도 HELM 고정 부피 계산에서 26종 반응과 온도를 함께 진행했다. 2→4분할 조성 오차/허용량은 0.02855, 온도 ln 차이는 2.35e-11, 중성미자 손실 상대 차이는 1.25e-5다. 이는 지정 국소 근사의 시간 대조이며 실제 항성의 열·유체 모드나 scalar 힘의 비선형 전달함수는 아니다.
+
+세부 근거: [한글 보고서](../notes/REQUEST28_CONSERVATIVE_CELL_KO.md).
+
+
+## Request 29 공통 EOS와 GR 열 경로의 관측 연결
+
+분류: Counterexample candidate. 5,735개 물질 구역에서 1.6294일의 26종 반응·열·동일 바리온 TOV 경로를 계산했다. 고정 압력 4분할은 에너지와 온도 대조를 통과했으나 조성 시간 오차/허용량 3.37977로 실패했다. 별도 외삽은 Be7 오차를 줄였지만 H1·He4의 수 ulp 차이로 엄격 조성 기준을 실패했다.
+
+분류: Conjectural. 고정 광도·준정적 계량 경로는 자체 수송·유체·계량 진화가 아니다. 조건부 scalar 읽기와 실제 주파수 구동의 phase lag 또는 pole 식별은 구별한다.
+
+세부 근거: [한글 보고서](../notes/REQUEST29_COMMON_EOS_GR_KO.md).
+
+
+## Request 30 EOS 역산과 약반응 미분 수정
+
+분류: Counterexample candidate. 같은 배정밀도 약반응 함수와 EOS 보조 입력 대조에서 896개 핵 가열 구역의 벡터·열 미분 기준 1e-3을 모두 통과했다.
+
+분류: Proven. 지정된 네 약반응의 고정 밀도·자유전자·조성 모형에 한해 h=5e-5의 미분 계산 및 차분 절단 오차를 구간 보증했다. 정규화 상계 최대는 4.59802e-11 미만이다. 전체 EOS·반응·관측의 연속 미분 보증은 포함하지 않는다.
+
+근거: [한글 보고서](../notes/REQUEST30_CLOSURE_PRECISION_KO.md).
+
+
+## Request 31 조성 미분과 보존형 GR 재적분
+
+분류: Counterexample candidate. 누적 조성 증분, 정지질량 변화, EOS 엔탈피, 직접 적분한 총 중성미자 손실과 광도 발산을 연결한 별도 원천 적분을 실행했다. 최대 Be7 시간 차이는 구조 재조정의 반응 피드백으로 약 99.995% 재현됐다. 기준 압력 엔탈피 좌표와 전체 함수의 잔차를 사용한 별도 보정도 실행했다. 새 1·2·4단계 고정 광도 GR 경로의 에너지 기준 일괄 판정은 실패다. 가장 미세한 4단계의 에너지 기준은 통과, 마지막 조성·온도 시간 대조는 실패다. 거친 경로의 실패는 미세 경로의 판정과 구분하여 보존한다. 별도 구조 피드백 잔차 보정 1단계의 에너지 점수는 9.7476097e-07로 통과했으며, 그 보정 방법의 시간 수렴은 아직 검증하지 않았다. 물리적 수송과 외부 구동의 응답 pole을 이 결과에서 추정하지 않는다.
+
+근거: [한글 보고서](../notes/REQUEST31_CONSERVATIVE_STAR_KO.md).
+
+
+## Request 32 직접 원소 EOS 중간 검증
+
+분류: Counterexample candidate. Li·Be·B·F를 직접 포함한 24원소 EOS 후보를 별도로 만들었다. 5,735개 기존 원소 호환성 대조는 비트 단위로 일치하고 6개 핵종의 희박 고온 전자수 대조도 통과했다. 실제 전체 조성의 미분 검사는 한 구역에서 실패했으며, 기존 EOS에서도 같은 실패를 재현했다. 실제 전자 교환 인자의 Cody–Thacher η=1 근사 경계 통과를 확인했다. 작은 차분의 국소 통과를 연속 오차 보증으로 취급하지 않는다.
+
+분류: Conjectural. 직접 Fermi 적분 대조, 동위원소 및 물리 EOS 오차, 자체 GR 수송·유체·계량 진화와 실제 구동·관측 연결은 계속 수행해야 한다.
+
+근거: [단계 32 보고서](../notes/REQUEST32_STRUCTURED_ENTHALPY_KO.md).
+
+
+## Request 32 구조 피드백 엔탈피 시간 대조
+
+분류: Counterexample candidate. 구조 피드백을 명시적으로 다시 평가한 엔탈피 보정법으로 1·2·4단계를 적분했다. 1단계 에너지 9.9518558e-07 (통과); 2단계 에너지 5.0487311e-07 (통과); 4단계 에너지 4.2294414e-07 (통과). 마지막 조성 시간 점수 0.019911438, 로그 온도 차이 6.1622707e-10로 시간 대조는 통과다. 별도 에너지 단위 엔트로피 역산 GR 재투영의 점수는 8.2800499e-07로 통과다. 이 별도 재투영은 강화한 역산법의 전체 시간 재적분이 아니다. 고정된 광도 면 입력과 초기 행렬을 사용했으며, 이 결과는 물리 수송이나 관측 완화 pole의 검출이 아니다.
+
+분류: Counterexample candidate. 직접 원소 후보의 CT 미분 대조는 실패다. 직접 Fermi 적분의 원래 정밀도 및 강화 정밀도 전구역 대조는 각각 실패, 통과다. 이 유한 대조는 물리·연속 EOS 오차 보증이 아니다. 교환 항의 CT 호출까지 직접 적분으로 바꾼 후보의 전구역 대조는 통과다.
+
+분류: Proven. 보관 CT 근사식의 η=1 함수 및 일차 미분 점프가 0을 배제함을 계수 구간으로 보였다. 또한 서로 다른 동위원소 질량의 부분 이온화 평형은 조성만의 엔트로피 이동으로 원소 단위 EOS에서 정확히 복원되지 않는다. 새 공통 Fermi 평가의 η=1·4 지정 원시 값·미분 12개는 구간 구적으로 반폭 1e-11 이하에 감쌌고, 해당 정규화 출력의 절대오차 상계는 모두 1e-9 이하다. 이는 지정 원시 함수의 점별 보증이며 전체 EOS나 GR 오차 보증이 아니다.
+
+근거: [한글 보고서](../notes/REQUEST32_STRUCTURED_ENTHALPY_KO.md).
+
+
+## Request 33 수정 EOS와 GR 연결 진행
+
+분류: Counterexample candidate. 수정 EOS의 GR 진입 대조에서 미정 Coulomb 회절 출력 gamma_e를 발견했다. 비활성 회절 경로가 이 슬롯을 정의하지 않으므로 이를 반환 계약에서 제외하고, 나머지 21개 출력의 같은 역산·호출 이력 기준을 유지해 84개 지정 상태에서 통과했다. 원래 22출력 대조 실패는 보존한다. 이전 열역학 미분 검사는 이 미정 슬롯을 사용하지 않았다. 새 EOS의 GR 표와 고정 상태 반응 입력을 계산 중이며, 그 구조나 전체 시간 경로의 완료를 주장하지 않는다.
+
+분류: Proven. 다른 항과 허용 집합을 고정한 동위원소 병진 질량 변경에 대해 모든 이온화 분율에 적용되는 조건부 최소 자유에너지 차이 상계를 얻었다. 압력·미분 또는 전체 물리 EOS 오차의 보증은 아니다.
+
+분류: Conjectural. 물리 EOS·연속 전구간 오차, 자체 수송·유체·계량·대기, 비영 scalar 구동·전하와 완전한 관측 추론은 계속 진행한다.
+
+근거: [단계 33 보고서](../notes/REQUEST33_DIRECT_EOS_GR_KO.md).
+
+
+## Request 33 실제 불투명도 입력 검증
+
+분류: Counterexample candidate. 실제 호출 경로는 Type1이었다. Type2를 계측한 첫 시도의 무호출 실패를 보존한 뒤, 수정 경로에서 5,735구역의 밀도·온도·26핵종 조성과 반환 불투명도를 저장 프로파일에 대조했다. 반환 불투명도 차이는 0이었다. 동일 전자 입력을 다시 전달한 대조에서도 입력·조성·반환값이 모두 비트 단위로 같았다. 새 EOS 전자수·미분 입력의 실제 개입과 불투명도 유한 미분 대조는 별도로 실행 중이다.
+
+분류: Proven. 동일한 양의 상태밀도를 갖는 이상 전자·양전자 기체에서 eta>=-50, 0<kBT/(m_e c^2)<=0.005이면 총 자유입자수와 순 자유입자수의 상대 차이는 1.03e-130보다 작다. 이는 선언한 이상기체 값의 조건부 상계이며 상호작용 플라스마, 미분 또는 항성 궤적의 인증이 아니다. 실제 EOS의 표본이 이 영역에 드는지는 따로 검사한다.
+
+분류: Conjectural. 입력 계약 일치는 물리적 불투명도·자체 수송·전체 GR 시간 진화의 완료를 뜻하지 않는다. 근거: [단계 33 보고서](../notes/REQUEST33_DIRECT_EOS_GR_KO.md).
+
+
+## Request 33 원천 연결과 불투명도 미분 검증
+
+분류: Counterexample candidate. 새 EOS의 5,735구역 반응 입력을 실제 native 함수에 연결했다. 첫 계측은 180초 제한으로 실패했다. 불변 압축 입력을 한 번만 읽도록 바꾸고, 작성 중인 프로파일의 불완전 헤더를 기다리도록 수정한 별도 계측 코드에서 같은 제한을 유지했다. 이전 원천의 비트 일치를 확인한 뒤 새 입력 계측을 약 15.3초에 마쳤다. 새 전자 입력의 불투명도 개입은 반환값 변화 0이었다. 실제 온도 범위에서 이 입력을 사용하는 Compton 경로가 비활성이었다.
+
+분류: Counterexample candidate. 원래 불투명도 미분은 사전 0.1% 기준을 실패했다. 실제 단조 3차 보간 19,242회를 읽어, 값에 적용된 선택 분기의 미분과 미분값을 별도로 보간한 결과의 불일치를 확인했다. 선택된 식을 직접 미분해 복사·전도 결합에 전달했다. 이어 원본 계수를 읽은 이중정밀도 계산에서 전도 혼합항 누락을 확인했다. 정수 z36th에 1/36을 대입하는 보관 코드가 그 원인이었다.
+
+분류: Proven. 저장된 네 보간값의 선형 변화 경로 12,828개를 정확한 유리수 연산으로 판정했다. 12,826개는 단일 식으로 보증했고 나머지 두 경로는 분할했으며 두 비영 미분 점프를 보존했다. 누락된 전도 혼합항은 전체 29,400개 저장 격자 구간에서 값·두 미분의 조건부 상계를 얻었다. 실제 표 값의 물리 오차나 전체 EOS 미분의 보증으로 확대하지 않는다.
+
+분류: Counterexample candidate. 혼합항을 복구한 계산의 유한 미분 최대 점수는 5.404e-4로 통과했지만, 원래 native 값과의 최대 차이 6.323e-4는 원래 값 대조 기준 1e-4를 실패했다. 혼합항을 0으로 둔 별도 재현은 native 값 차이 6.251e-6으로 값 대조를 통과했으나 미분 최대 점수 1.0624e-3으로 전체 판정은 실패했다. 이 원래 판정들을 유지한다. 아직 생성되지 않은 새 GR 상태에 적용할 별도 검증 기준과 모델 해시를 고정했다.
+
+분류: Conjectural. 물리 EOS·표 데이터 오차·전체 연속 미분, 자체 수송·유체·계량·대기의 시간 진화, 실제 비영 scalar 구동·전하 및 완전한 관측 추론은 남는다. 동적 chi 후보의 계산 기반을 보완했으며 신규 관측량 판정과 최종 투고본 갱신은 보류한다. 근거: [단계 33 보고서](../notes/REQUEST33_DIRECT_EOS_GR_KO.md).
+
+
+## Request 33 새 GR 상태의 수송·부력 검증 준비
+
+분류: Counterexample candidate. 새 EOS의 5,735구역, 구역당 17점 GR 표를 완성했고 별도 직렬 재계산 아홉 점을 비트 단위로 재현했다. 같은 바리온·핵종 재고를 유지하는 GR 구조 계산을 진행한다. 아직 생성되지 않은 상태를 대상으로 반응·불투명도 보조 입력의 공통 EOS 평가와 수송·부력 검증 기준을 고정했다. 공통 입력 계산기의 제조 해 대조는 입력 순서와 밀도·온도 미분 방향을 검증했다. 이 준비를 새 GR 해나 시간 진화의 완료로 세지 않는다.
+
+분류: Proven. 고정 GR 배경의 구역 경계에서 양의 계수 B와 양의 적색편이 온도 theta를 사용하는 L=B(theta_inner^4-theta_outer^4) 교환은 경계 밖 유속이 0일 때 총 적색편이 에너지를 보존한다. 구역쌍의 엔트로피 생성은 B(x-y)^2(x+y)(x^2+y^2)/(xy)>=0이다. B가 상태에 의존해도 이 순간 항등식은 유지된다. 일정 계수 선형 대조에서 비선형 양의 수송 법칙까지 확장한 조건부 정리이며, 유체·계량 진화와 복사 대기를 포함한 정리는 아니다.
+
+분류: Proven. 매끄럽고 제1법칙을 만족하는 EOS, 순간 압력 평형, 보존된 유체 요소의 엔트로피·조성, 무시한 열교환·계량 섭동 아래 부력 가속도는 g*A*xi이다. A=(d epsilon/dell)/(epsilon+P)-(dP/dell)/(Gamma1*P), 따라서 고유시간의 국소 부력 주파수 제곱은 -g*A다. epsilon에는 실제 핵 정지 에너지를 포함한다. 저장 격자의 유한 차분으로 A를 계산하는 절차의 오차 보증은 별도다.
+
+분류: Imported from prior work. 국소 고유 기준계의 혼합 길이 변수와 균일 조성 대류 식은 [Thorne의 원문](https://ntrs.nasa.gov/api/citations/19760017020/downloads/19760017020.pdf), 인쇄 쪽 6-7의 식 (8)-(10)과 대조했다. 새 EOS·조성에서의 난류 수송 해를 이 인용만으로 얻은 것으로 간주하지 않는다.
+
+분류: Conjectural. 새 GR 상태의 실제 반응·수송 대조, 조성 혼합과 대류, 복사 대기, 유체·계량의 시간 진화, 전체 물리 EOS·연속 오차, 비영 scalar 구동 및 완전한 관측 추론은 계속 수행한다. 수송 모듈의 유효 불투명도에는 전도가 포함되므로 이를 광자 평균 자유행로나 복사 광학 깊이로 사용하지 않는다. 근거: [단계 33 보고서](../notes/REQUEST33_DIRECT_EOS_GR_KO.md).
+
+
+## Request 33 EOS 오차 전달 정리
+
+분류: Proven. 내부 평형이 동일하고 강한 볼록성을 유지해도 작은 자유에너지 값 오차가 임의로 큰 매개변수 미분 오차와 공존하는 반례를 검산했다. 별도로 제약을 제거한 내부 좌표의 강한 볼록성, 잔차, 모델 일차·이차 미분 및 블록 Lipschitz 상계가 주어지면 평형 위치·감소 자유에너지의 기울기·Hessian 오차를 제한하는 식을 얻었다. 압력·엔트로피·열용량으로의 오차 전달도 기호 검산했다.
+
+분류: Conjectural. 실제 EOS의 전체 평형 분율, 투영 Hessian 하한과 물리적 미분 오차는 아직 인증해야 한다. 값 상계나 두 간격 차분으로 이를 대체하지 않는다. 정리의 가정·증명·정확한 대조와 남은 측정 항목은 [EOS 오차 전달 노트](../notes/REQUEST33_EOS_ERROR_TRANSFER_KO.md)에 보존한다. 전체 물리 EOS·GR 진화·비영 scalar 및 관측 추론 목표는 계속 열려 있다.
+
+
+## Request 33 Fermi 연속 영역 인증
+
+분류: Proven. eta∈[-17,24], beta∈[0,0.006]의 새 합성 Gauss 적분법에서 Fermi 값·혼합 미분 28성분의 절단·구적 오차를 1e-11 이하로 제한했다. 세 지정점 84성분의 기존 네이티브 비교도 원래 문턱을 통과했다. 소수 끝점 저장과 오차 필드의 불일치 실패를 보존한 뒤, 저장 끝점까지 포함하는 정확한 유리수 상계를 별도로 내보내고 감사했다. 최대 추가 저장 오차는 약 4.033e-55다.
+
+분류: Conjectural. 이 결과는 기존 적응형 함수의 연속 오차나 암시적 평형·물리 EOS·GR 궤적 인증을 대신하지 않는다. 전자 밀도 역산과 열역학 오차 전달로 연결하며 전체 진화·scalar·관측 목표를 유지한다. 가정·증명·실패 및 재현 근거는 [Fermi 인증 노트](../notes/REQUEST33_FERMI_UNIFORM_KO.md)에 있다.
+
+
+## Request 33 이상 전자 열역학·역산 인증
+
+분류: Proven. Fermi 인증을 전자 밀도·압력·에너지의 27개 연속 값·미분 오차로 전달했다. 양의 밀도 기울기 하한으로 선언한 공통 구적법의 역산 오차를 약 3.50e-10으로 제한했다. 원시 구간에서 유리수로 독립 재계산한 30개 열역학 구간과 세 유일 역산 근의 bracket도 통과했다. 저밀도 네이티브 대조의 약 5.49e-5 반지름을 보존하며 작은 구적 오차 상계와 구별한다.
+
+분류: Conjectural. 이 인증은 이상 전자 성분에 한정된다. beta=0 대조는 감소 함수의 우측 극한이고, 이온화·비이상 플라스마·전체 GR 진화·비영 scalar·관측 추론은 계속 열려 있다. 식·정량 상계·독립 감사와 재현 근거는 [Fermi 및 전자 인증 노트](../notes/REQUEST33_FERMI_UNIFORM_KO.md)에 있다.
+
+
+## Request 33 일관된 전자 퍼텐셜·이온화 경계
+
+분류: Proven. 동일 압력 구적 퍼텐셜을 미분해 밀도를 정의하고 Legendre 쌍의 자유에너지 값·기울기·곡률 오차를 제한했다. 밀도 목표가 같은 서로 다른 두 근의 역함수 도함수 상대 오차도 직접 밀도 구적에서 약 1.014e-9, 퍼텐셜 구적에서 약 3.575e-8로 제한했다. 지정 구간 내부의 정확한 구적 근이라는 조건을 유지한다. 이상 이온의 가중 Hessian 양의 하한과 단조 전하 중성 방정식의 유일성을 검산했다.
+
+분류: Conjectural. 비이상 항·분자·압력 이온화의 곡률과 물리적 오차는 추가 인증 대상이다. 이상 모형의 전역 유일성이나 원래 EOS의 수렴으로 이를 대신하지 않는다. 전체 GR 진화·scalar·관측 목표도 남는다. 가정·증명·대조와 FreeEOS 원문 경계는 [전자 및 이온화 인증 노트](../notes/REQUEST33_FERMI_UNIFORM_KO.md)에 있다.
+
+
+## Request 33 실제 EOS 이온화 재고 전수 추출
+
+분류: Counterexample candidate. 고정 기준 상태 5,735구역의 실제 중성 원자·이온·H2·H2+ 재고를 추출했다. 기존 21출력은 독립 저장 EOS 표와 전 구역에서 비트 단위로 같았고, 직렬·호출 이력·병렬 대조도 통과했다. 독립 원소 재고·전하 잔차는 각각 약 4.85e-15, 9.06e-15 이하이다. 실제 전체 분율에 접근할 수 없다는 이전 한계는 해소했다.
+
+분류: Proven. 원본 이온화 루틴은 작은 성분의 명시적 절단과 이전 0 마스크의 재사용을 포함한다. 수치 0을 참 물리적 0이나 모든 호출에 공통인 누락 상계로 해석하지 않는다.
+
+분류: Conjectural. 5,302구역에서 저장된 단계 분율 중 0이 발견되어 양의 내부 Hessian 공식을 적용하려면 로그 분율·절단 경계 처리가 필요하다. 비이상 항의 곡률·물리 EOS·자체 GR 진화·scalar·관측 폐쇄는 남는다. 근거와 재현은 [EOS 인증 노트](../notes/REQUEST33_FERMI_UNIFORM_KO.md)에 있다.
+
+
+## Request 33 절단 조건과 실제 Coulomb 곡률
+
+분류: Proven. 새 마스크의 원자 누락 확률 상계와 재사용 마스크의 실패 반례를 검산했다. 현재 로그 가중치 비율의 인증이 필요하다는 조건은 유지한다. 원소·분자 핵 수를 보존한 Fisher 계량의 저차원 곡률 투영식을 검산했다.
+
+분류: Counterexample candidate. 5,735구역의 실제 Coulomb 값·미분·성분 곡률을 계산하고 독립 저장 EOS 21출력, 직렬 대조, 별도 Gram·고윳값 계산으로 감사했다. 이상 이온·전자+Coulomb의 최소 곡률 여유는 약 0.999892였다.
+
+분류: Proven. 정확한 유리수로 해석한 저장 계수·재구성 양의 종에 한정한 성분 행렬 하한은 모든 구역에서 0.999624425469816267853739080232 이상이다. 네이티브 연속 오차나 전체 물리 EOS 하한을 뜻하지 않는다.
+
+분류: Conjectural. 현재 0 마스크·교환·압력 이온화·분배/들뜸 항과 전체 물리 오차, 자체 GR 진화·scalar·관측 연결은 계속 수행한다. 결과와 경계는 [EOS 인증 노트](../notes/REQUEST33_FERMI_UNIFORM_KO.md)에 보존한다.
+
+
+## Request 33 실제 현재 이온화 마스크 인증
+
+분류: Counterexample candidate. 별도 계측본에서 5,735구역의 최종 로그 가중치·마스크를 추출했고, 기존 21출력·원자·이온·분자 분율을 모두 비트 단위로 재현했다. 최종 호출은 모두 마스크 재사용이며, 수치 0인 307,605개 단계가 현재 마스크와 정확히 일치했다.
+
+분류: Proven. 현재 저장 로그 가중치로 정의한 원자 분포의 누락 확률은 전 구역에서 약 1.673e-124 이하이다. 현재 최대 로그 차이를 정확한 유리수로 비교해 이전 마스크의 발생 이력과 무관하게 인증했다. 고정 마스크에서의 조건부 기울기·Hessian 전달식도 검산했다. 하드 절단 경계에서는 양의 작은 점프가 발생할 수 있어 원래 계산기의 전 구간 C2 성질을 주장할 수 없다.
+
+분류: Conjectural. 현재 마스크 접근의 한계는 해소했으나, 로그 가중치 자체의 평가 오차와 결합 평형·비이상 항·물리 EOS의 인증은 남는다. 자체 GR 진화·scalar·관측 목표도 유지한다. 상세 결과와 정확한 적용 범위는 [EOS 인증 노트](../notes/REQUEST33_FERMI_UNIFORM_KO.md)에 있다.
+
+
+## Request 33 비선형 교환 성분 곡률
+
+분류: Counterexample candidate. 마지막 내부 교환 입력과 EOS 반환 인수의 차이를 계측했다. 원래 반환 인수 대조와 괄호 순서만 바꾼 대조의 실패를 보존했고, 실제 내부 인수의 독립 재호출은 5,735구역에서 네 교환 출력을 비트 단위로 재현했다. 반환 인수에서의 Coulomb·전자·교환 결합 성분 곡률 여유는 최소 약 0.999892175였다.
+
+분류: Proven. 엄격히 볼록한 grand-canonical 압력의 내부 Legendre 변환은 양의 전자 압축률을 갖는다. 별도로 저장된 이상 전자+교환 계수의 양의 부호를 정확한 유리수로 확인하여, 같은 고정 종과 Coulomb 행렬의 이전 하한 약 0.9996244254를 유지했다. 선언한 유한 계수 문제에 대한 결과다.
+
+분류: Conjectural. 압력 이온화·분배/들뜸·결합 근과 전체 물리/연속 EOS, 자체 GR 진화·scalar·관측 및 투고본은 남는다. 가정·실패·입력 차이·독립 감사는 [EOS 인증 노트](../notes/REQUEST33_FERMI_UNIFORM_KO.md)에 있다.

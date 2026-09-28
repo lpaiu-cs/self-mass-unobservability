@@ -1,0 +1,30 @@
+{
+  "classification": "Proven",
+  "bits": 128,
+  "strip_in_sqrt_beta": "1/16",
+  "eta_radius": "1/100",
+  "tau_radius": "1/1000",
+  "thermal_split": 176,
+  "checkpoint": "3d54106",
+  "bindings": {
+    "verification/gr_self_regular_domain.py": "0a2638e34998d7dc8d1c742c80a25c62b14b09577cf89ffdad47edaaf335ead6",
+    "outputs/direct-eos-gr33/gr-response-regular-defined/manifest.json": "a47edfc08caf7e9684672a5874b3f153c93ae827040c4a22cfa6a1e5020cfd32",
+    "outputs/direct-eos-gr33/gr-response-regular-defined/result.json": "a063f19a2fd03069c2cfa7572972eddc9005cca1057f4b1f6b0332fbbe72583a",
+    "outputs/direct-eos-gr33/gr-highq-self/manifest.json": "bda62eb426c7b9c4ece7ccdbde607f8baeec7cb1acaa248a23853e9cd0e0edbb",
+    "outputs/direct-eos-gr33/gr-electron-density-refined-export/result.json": "6589248e1b37f0ddf8f14054ea50403aedfe276f87a2715b9dea355e48234bcd",
+    "outputs/direct-eos-gr33/gr-polarization-thermodynamics/states.npz": "a91f70b8277d7984c7954d277b01956dd31dfd4c12b57989fed8b7a2fccceb69",
+    "outputs/direct-eos-gr33/gr-highq-moments/inputs.npz": "c47cfa968a88fb2b9b101071e8551cc6ab61f867cb627563ad5147710779645e",
+    "outputs/direct-eos-gr33/gr-response-positive-sector/result.json": "57559587b8130d2f2269c38e78c6a096954379c43d522b9b37d2f01aa1f20e87",
+    "outputs/direct-eos-gr33/gr-ionic-hamiltonian-bound/inputs.npz": "d89135accb682ac37de76eb6be24214c6c84c448e713ec2d5c5bf9b4495f3167",
+    "outputs/direct-eos-gr33/gr-ionic-hamiltonian-bound/constants.json": "5aa17efb44f145bee7f5d218667083c0e43a4ef86d5558a8efa26a916d5e1cff",
+    "outputs/direct-eos-gr33/gr-smooth-response-defined/rule.json": "872a5c43fb3d0eaa33110311bfb6a3958677440d4b71ad7a17b51bef6c26feeb"
+  },
+  "cells": 3206,
+  "control_positions": [
+    0,
+    1603,
+    3205
+  ],
+  "outer_quadrature_field_budget": "2e-8",
+  "scope": "Prove the joint domain and create three exact dyadic Gauss panel schedules only. No actual outer-node response evaluation, point-error budget or full finite self integral is certified here."
+}

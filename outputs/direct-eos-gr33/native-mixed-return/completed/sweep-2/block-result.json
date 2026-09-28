@@ -1,0 +1,65 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "rows": [
+    {
+      "steps": 64,
+      "lagged_inputs": {
+        "xi": 8.48274758737434e-06,
+        "energy_offset": 6.637905369506194e-05,
+        "B": 5.134431390040122e-05,
+        "S": 5.165342318398167e-10,
+        "M_Etilde": 4.939541948975224e-05,
+        "dM_Etilde": 9.147879169024508e-05,
+        "M_H": 3.4164845704526496e-05,
+        "dM_H": 8.127872600840825e-05
+      },
+      "stage_forcing_defect": [
+        7.835432402386015e-05,
+        7.24238138427246e-05,
+        0.00010126672111317861,
+        8.316639682988239e-05
+      ],
+      "paired_E_H": [
+        5.118358958335355e-05,
+        1.796629674751511e-06
+      ],
+      "stage_count": 128,
+      "stage_operator_identical": true,
+      "forecast_seconds": 294.00966778800097
+    },
+    {
+      "steps": 128,
+      "lagged_inputs": {
+        "xi": 1.3625851031790938e-06,
+        "energy_offset": 1.4010430258054353e-05,
+        "B": 1.0513140371220262e-05,
+        "S": 5.167682934468648e-10,
+        "M_Etilde": 1.03995494853257e-05,
+        "dM_Etilde": 2.1238203132721654e-05,
+        "M_H": 6.642088423395937e-06,
+        "dM_H": 1.8902112544029065e-05
+      },
+      "stage_forcing_defect": [
+        1.720734995901616e-05,
+        1.5732493682235047e-05,
+        2.2183361622439727e-05,
+        1.8084233697902482e-05
+      ],
+      "paired_E_H": [
+        1.0889279790278021e-05,
+        3.490733278719944e-07
+      ],
+      "stage_count": 256,
+      "stage_operator_identical": true,
+      "forecast_seconds": 271.5928408500017
+    }
+  ],
+  "maximum_block_defect": 0.00010126672111317861,
+  "no_new_evolution_steps": true,
+  "scope": "Unchanged original full lagged-input, identical-operator and all384-stage source audit. No optimized source-difference path, no new evolution or threshold change.",
+  "seconds": 139.56880455499999,
+  "criteria_preregistered": true,
+  "budget_reassessed": true,
+  "next_sweep_allowed": false
+}

@@ -1,5 +1,7 @@
 # Independent Verification
 
+The unified paper additionally uses `python verification/verify_unified_paper.py` for corrected smooth-flat/threshold boundaries, interpolation and obstruction, ODE/remainder, tidal scaling and stored table arithmetic. It does not run the timing engine.
+
 > **CORRECTION (2026-07-12, gradient-sector kinematics).** An external
 > adversarial review found that every method below modeled `grad E` as a
 > generic `(STF-2) x vector` object (15 comps), dropping the Schwarz total
@@ -122,7 +124,7 @@ exact character integral (23, matches). The new-sector rank remains 18
   smallest mixed witness is `EXX` at weight 3 — no new lower witness ever
   appears, so the tower closes with one theorem. `L=2` is the sole special case
   (`E:X` at weight 2 = the `R2` mixed witness).
-- **Composition closure**: the `E/B/S` = 33 match above is a genuine 3-family
+- **Composition closure**: the corrected `E/B/S` = 30 match above is a genuine 3-family
   admission-level composition with no unexpected cross-family survivor; the
   repo's `composition_attack_delta4.py` (all combos "sufficient / none") was
   cross-run and is consistent.
@@ -132,15 +134,12 @@ exact character integral (23, matches). The new-sector rank remains 18
 Verified independently: the electric-sector `Delta<=4` basis (corrected,
 five survivors), the three algebraic identities, the STF-3 gradient
 kinematic identities (`divE2 = 0`, `mixedGradE2 = gradE2`), five-survivor
-independence, all four boundary escapes (A5/A4/A3 exact, A8), the magnetic
+independence, the boundary checks (A5 exact-germ failure only, A4, linear-time-invariant A3, A8), the magnetic
 no-go witness, **catalog completeness for every audited family of rank 0-3
 (exact survivor-dimension agreement) and the rank 4-6 relation structure
 (exact Molien nullities)**, and the family-envelope closure (irrep census +
 uniform tower). Cross-checked against the repo's own `symbolic/` scripts
 throughout.
 
-**Not independently re-derived here:** a fully exact (non-numeric) survivor
-dimension for ranks 4-6 — the numeric quotient is precision-limited there, so
-those ranks rest on exact per-signature Molien dims + the repo's exact symbolic
-`survivor_rank_check`. The full 71-lemma composition-closure chain
+**Exact survivor dimensions are available:** `tier1_survivor_exact.py` independently checks all eight audited sectors, including ranks 4-6, with exact characters. Numeric quotient limitations do not invalidate that exact calculation. The full 71-lemma composition-closure chain
 (lemmas ~22-71) is corroborated but not re-derived line by line.

@@ -1,0 +1,47 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "13e7c84a",
+  "claim": "Add the missing H/HeII amplitudes and all charged-ion free-free absorption from the same saved EOS to the actual coupled solver. Recover the skipped native H ground metadata without changing EOS equations.",
+  "decision": "Accept this channel connection only after bitwise same-EOS replay, independent native partition/chemical checks, actual same-interval coupled evolution and unchanged numerical gates. Never call remaining missing atomic/pressure/dissolved channels or full GR complete.",
+  "model": "Native n<=10 MHD hydrogenic EOS levels; native STARK0 oscillator strengths, GAUNT hydrogenic photoionization and GFREE thermal charged-ion absorption. Translate each bound-free threshold at fixed electron energy. No merged-level opacity or modified free-free tail outside the EOS. Thermal Doppler plus retained natural widths, same declared LTE reciprocal closure as Phase68.",
+  "budget": {
+    "build_attempts": 2,
+    "build_seconds": 120,
+    "new_EOS_calls": 1,
+    "input_seconds": 120,
+    "coupled_seconds": 480,
+    "coupled_paths": 6,
+    "cpu_threads": 1,
+    "memory_GB": 4,
+    "new_stellar_steps": 0
+  },
+  "forecast": "Prior two native builds totaled8.4s; one same-state EOS call0.110s; input26.84s and six coupled paths196.20s. New channel quadrature is unmeasured and capped120s. Reuse the exact inventory/RPA table and existing metal rates. Coupled forecast150-350s, hard480s; no automatic density/grid/duration expansion.",
+  "setup_revision": "Initial text anchor matched more than the H branch and preparation stopped. An erroneous dependent build then reached absent atomic files. No EOS calls or evolution occurred. Restrict the patch to the H molecular branch and permit one completed build under the same120s aggregate cap; preserve the setup failure.",
+  "gates": {
+    "same_EOS_bitwise": true,
+    "partition_relative": 1e-12,
+    "chemical_log_ratio": 1e-09,
+    "balance_relative": 1e-09,
+    "time_order": 1.8,
+    "time_error": 0.001,
+    "source_plus_two_tails": 0.001,
+    "line_quadrature": 0.0001,
+    "energy_balance": 1e-09,
+    "solver": 1e-11
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_photon_hhe_coupled.py": "9eb1fe2e735d10758a9e2ca150fe985a93b87c5b5d1c0143adf53e40331ee68c",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_photon_common_coupled.py": "3f328984689cc1a2891a08a25f9a53146b44cfa7648417b3a2fed93146e227bf",
+    "/home/lpaiu/work/direct-eos-gr33/photon-mhd-spectrum/libfree_eos_mhd_spectrum.so": "64a999ef4900393e7817234137a42eab918949cf24a9d74f757eee94ee87b439",
+    "/home/lpaiu/work/direct-eos-gr33/photon-mhd-spectrum/gas.so": "6b6853ae68450147e8ddabac4be2fca48aa5430433ce3101be7aa564e11f2e78",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-mhd-spectrum/eos-state.npz": "a6101eb4a0219523a632c68aed8b8397706bfe7b07a19273d3f02ca3e49687f3",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-mhd-spectrum/catalog.json": "95f0dc96f4b10f2e50bd570f583848b9202588686c882e4271d76859cfac98a4",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-mhd-spectrum/coupled/bank.npz": "7fc69e27c5523afd5c1e47a86206b94a7828456456b639de04ecbd4b244c4185",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-mhd-spectrum/coupled/inventory.npz": "91bc978217bc67b7bc13d2ce88b72436940bb528e300ece73a78f155a19c7669",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-mhd-spectrum/coupled/spectrum-256-257.npz": "e4355408a19d70a9510610c5cbfbbc1d3cc5345d2533c5d11be7d4ab335d38e6",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-mhd-spectrum/coupled/input.json": "8259133b559ebbe80b60d2cb0848e0993c86b02a2e084805c70235c689e03eda",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-mhd-spectrum/coupled/rates/station.npz": "5b022c4a51661671015e63e48ab7a739be929bc9b0ad9634a76bd2c1d15ba51e",
+    "/home/lpaiu/work/direct-eos-gr33/photon-atomic-rates/synspec54.f": "0ad5b348257f0ba53a6cdc1356f238f78f9a468ed7aa391df58b074e40f35f09",
+    "/home/lpaiu/work/direct-eos-gr33/photon-atomic-rates/PARAMS.FOR": "d51d12407b6211de0944d3b5422a03bb9c416d47826c016f59fa5dff641c0008"
+  }
+}

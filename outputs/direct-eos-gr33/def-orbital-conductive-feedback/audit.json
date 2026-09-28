@@ -1,0 +1,33 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "rows": [
+    {
+      "harmonic": 1,
+      "direct_quadrature_GR_residual": 2.6030644282347122e-11,
+      "independent_heat_map_residual": 3.348716964717014e-14,
+      "adjoint_reaction_relative": 5.503727947655306e-09,
+      "reaction_cancellation_ratio": 1.0000000000000009
+    },
+    {
+      "harmonic": 2,
+      "direct_quadrature_GR_residual": 1.7931857409137828e-11,
+      "independent_heat_map_residual": 4.36448271101532e-14,
+      "adjoint_reaction_relative": 5.506798088881144e-09,
+      "reaction_cancellation_ratio": 1.0000000000000002
+    },
+    {
+      "harmonic": 3,
+      "direct_quadrature_GR_residual": 1.7517474373004693e-11,
+      "independent_heat_map_residual": 3.40686783512371e-14,
+      "adjoint_reaction_relative": 5.519004092973467e-09,
+      "reaction_cancellation_ratio": 1.0
+    }
+  ],
+  "symbolic_identities_passed": true,
+  "sum_three_harmonic_charge_contributions": 3.023197507231118e-29,
+  "seconds": 10.825213369,
+  "total_accounted_compute_seconds": 39.14996323,
+  "full_objective_complete": false,
+  "scope": "Direct original heat quadrature and reciprocity audit of the stored coupled solutions; not an EOS/continuum certificate or full thermal-background solution."
+}

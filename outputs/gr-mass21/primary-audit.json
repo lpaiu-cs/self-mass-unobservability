@@ -1,0 +1,52 @@
+{
+  "classification": "Proven",
+  "scope": "Numerical cross-checks of the declared closure, not a continuum certificate.",
+  "mass_residual_refined": 8.214073865531191e-11,
+  "pressure_coordinate_record": {
+    "classification": "Counterexample candidate",
+    "GR": true,
+    "central_pressure_cgs": 1.1863166835868972e+21,
+    "mass_GM_solar": 0.1975363853232258,
+    "mass_relative_residual": 8.214073865531191e-11,
+    "proper_baryon_mass_GM_solar": 0.19740032012286252,
+    "photospheric_radius_m": 62878393.41337393,
+    "photospheric_radius_source_Rsun": 0.09034511539609462,
+    "vacuum_radius_m": 62978638.84575989,
+    "atmosphere_mass_fraction": 7.405364789408804e-15,
+    "atmosphere_thickness_m": 100245.43238595873,
+    "conditional_Teff_K": 16565.567494204744,
+    "surface_logg_cgs": 5.821557877827561,
+    "optical_cut_passed": false,
+    "rtol": 1e-12,
+    "r0_m": 5.0,
+    "nfev": 80731,
+    "closure": "Prescribed T(P), X(P); independently evaluated FreeEOS; finite polytropic atmosphere; no GR evolution or transport."
+  },
+  "independent_radial": {
+    "radius_m": 62878396.66463786,
+    "mass_geom_m": 291.6871729210892,
+    "baryon_geom_m": 291.4862556388007,
+    "nfev": 44825,
+    "relative_difference_radius": 5.1707172543657975e-08,
+    "relative_difference_mass": 1.463550614033693e-09,
+    "relative_difference_baryon": 1.462415966102526e-09,
+    "direct_EOS": false
+  },
+  "independent_radial_direct_EOS": {
+    "radius_m": 62878397.81678902,
+    "mass_geom_m": 291.68717293581597,
+    "baryon_geom_m": 291.4862556538028,
+    "nfev": 45677,
+    "relative_difference_radius": 7.003065527477759e-08,
+    "relative_difference_mass": 1.5140388942569416e-09,
+    "relative_difference_baryon": 1.513883685078099e-09,
+    "direct_EOS": true
+  },
+  "uniform_sphere": {
+    "classification": "Proven",
+    "uniform_density_TOV_relative_pressure_error": 1.2802621001603857e-15
+  },
+  "maximum_sampled_table_density_difference": 8.355248879354793e-05,
+  "numerical_mass_tolerance_passed": true,
+  "direct_EOS_mass_tolerance_passed": true
+}

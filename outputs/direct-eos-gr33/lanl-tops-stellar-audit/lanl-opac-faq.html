@@ -1,0 +1,213 @@
+<!-- saved from url=(0078)https://xweb.lanl.gov/projects/data/atomic/tops/opacity/static/opacdocs/opac-faq.html -->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>FAQ</title>
+  <script id="_fed_an_ua_tag" async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOE"></script>
+</head>
+  <body>
+    <h1>Frequently asked questions for the TOPS Web Page</h1>
+    <hr />
+    <font size="4">
+      <p>
+        Q1: I noticed that some of the multigroup opacities were all 10<sup
+          >10 </sup
+        >. Why did this happen?
+      </p>
+      <p>
+        A: The TOPS code calculates the plasma cutoff frequency for each
+        temperature-density point. Any group that lies either partly or fully
+        below that frequency has the opacity set to 10<sup>10</sup>
+        to indicate that photons at those frequencies cannot propagate in the
+        plasma.
+      </p>
+      <p></p>
+      <hr />
+      Q2: I want a table of opacities at 21.8 eV. When I enter this number, the
+      Web Page gives me an error message. Why can I not get the 21.8 eV
+      temperature?
+      <p>
+        A: The TOPS code can only use tabulated temperature points for cross
+        section data. It will not interpolate on temperature. If you choose a
+        temperature that is not on the tabulated grid, the Web Page will compare
+        it to the master list and reject it if it does not agree with one of the
+        table values to within 1 percent. The set of tabulated temperatures is
+        listed under
+        <a href="/static/opacdocs/opactemps.html">tabulated temperatures</a
+        >.<br />
+        <b>NOTE:</b> The TOPS code will interpolate in density.
+      </p>
+      <p></p>
+      <hr />
+      Q3: I entered a temperature of .0005 keV (which is on the allowed
+      temperature list) for carbon and did not get any results back. Why can't I
+      get any data for this temperature?
+      <p>
+        A: The materials in this data base were calculated over several years
+        and the temperature-density limits were changed during the course of the
+        calculations. Most elements go down to .0005 keV, but the elements from
+        lithium to magnesium only go down to .001 keV. These should be replaced
+        in the next few months and the limitations shown in the
+        <a href="/static/opacdocs/opactemps.html">tabulated temperatures</a>
+        list will be removed.
+      </p>
+      <p></p>
+      <hr />
+      Q4: I asked for multigroup opacities for a density of 100 gm/cc for
+      aluminum at a temperature of .001 keV. Every multigroup had the same
+      opacity in it. Why doesn't it vary with photon energy?
+      <p>
+        A: When you ask for a temperature-density point, TOPS attempts to find
+        cross section data for that point. At low temperatures there is no data
+        available for high densities. Thus the TOPS code uses the cross sections
+        for the highest density available, prints a warning message that this
+        has occurred and uses the gray opacity from those cross sections for all
+        the multigroup and frequency dependent opacities.
+      </p>
+      <p></p>
+      <hr />
+      Q5: When I specify multigroup opacity, it returns tables containing
+      Rosseland Mean and Planck Mean opacity. But I want to obtain opacity as
+      function of energy (not the averaged opacity). Is there a way I can do
+      this?
+      <p>
+        A: When you ask for multigroup opacities, you get the Rosseland and
+        Planck mean as well as the multigroup opacities. When you are looking at
+        the the tabular output, the gray opacities appear in the output first.
+        You may need to scroll down in the window to get to the section of the
+        table that contains the multigroup opacities. Of course, you must have
+        checked the button requesting multigroup opacities on the initial input
+        page, as well as set up the group boundary energies. It is also possible
+        to obtain the frequency dependent opacities for a limited number of
+        temperature-density points. The frequency dependent data is tabulated on
+        a grid of either 3000 or 3900 points depending on whether the old or new
+        version of the data is used. The default is to use the new version where
+        available. Because of the large number of points, we limit the requests
+        to only six temperature-density points ie. you could choose two
+        temperature and three density points for a total of six points, or one
+        temperature with six densities etc. In the output file, the frequency
+        dependent data is listed after the gray opacities, or after the
+        multigroup opacities (if requested).
+      </p>
+      <p></p>
+      <hr />
+      Q6: What is meant by "No. Free" in your tables ?
+      <p>
+        A: For a single element, the free electron number is the average number
+        of free electrons per ion. It is obtained by multiplying the relative
+        population of each ion stage by the number of free electrons for that
+        stage, zero for the neutral, one for single ionized etc. For a mixture,
+        it is a weighted average using the number fractions of each constituent
+        of the mixture.
+      </p>
+      <p></p>
+      <hr />
+      Q7: What is your meant by "Av Sq Free" in the output?
+      <p>
+        A: This is the average of the square of the number of free electrons
+        over the ion stages of an element. It is obtained by summing the product
+        of the relative abundance of each ion stage times the square of the
+        number of free electrons for that ion stage, zero for neutral etc. For a
+        mixture, it is a weigthed average over all constituents of the mixture.
+      </p>
+      <p></p>
+      <hr />
+      Q8: I can't seem to find opacities for densities lower than 10<sup
+        >-12
+      </sup>
+      gm/cc.
+      <p>
+        A: All of the opacity data is generated assuming Local Thermodynamic
+        Equilibrium (LTE) and this becomes very questionable below 10<sup
+          >-6</sup
+        >
+        to 10<sup>-7</sup> gm/cc. At lower densities, one should use a nonLTE
+        coronal model. Since the data on this web site assumes LTE, they do not
+        go to such low densities.
+      </p>
+      <p></p>
+      <hr />
+      Q9: When I display a GIF plot or a data table for the second time, all
+      that I get is the first plot or table over and over again.
+      <p>
+        A: The Web Page displays a file when showing plots or tables and uses
+        the same file name for each new data set. Many browsers store the file
+        name and data in their cache memeory and if you request a second plot or
+        table, the browser retrieves it from the cache memeory instead of
+        displaying the new data. You must change your browser's cache preference
+        settings from "once a session" to "every time" to force the browser to
+        choose the new data file for each new plot or table. Clicking the
+        <b>Reload</b> button on your browser will also give you the latest plot
+        or table, but you will have to do that every time if you do not reset
+        the brower preference.
+      </p>
+      <p></p>
+      <hr />
+      Q10: When I plot the Rosseland gray opacities, all of the high density
+      curves seem to run together into one curve. Why is this?
+      <p>
+        A: The opacity code is unable to calculate the opacities for the low
+        temperature-high density grid points, but needs to have a non-zero value
+        for these grid points. The TOPS code takes the value for the highest
+        calculated density for each temperature and used that value for all of
+        the higher densities. This makes the curves run together.
+      </p>
+      <p></p>
+      <hr />
+      Q11: I calculated a SESAME table for the same material that I had in the
+      SESAME library that I received from you and the numbers are not quite the
+      same. Why is that?
+      <p>
+        A: The normal SESAME library is calculated on the CRAY computers, using
+        a slightly different interpolation scheme than on the Sun that runs this
+        Web Page. This can cause small numerical differences. In addition, the
+        boundary region (between calculated points and extrapolated points) is
+        handled quite differently for the two SESAME files. The normal library
+        file is done iteratively (with some points being removed) while the Web
+        Page has to use an automatic fail proof method. Finally the extrapolated
+        points are completely different (see the
+        <a href="/static/opacdocs/sesame.html">SESAME Format</a>
+        writeup), but these points should never be used in calculations.
+      </p>
+      <p></p>
+      <hr />
+      Q12: When I display a postscript plot with <b>Ghostview</b>, I have
+      trouble reading the <b>Legends</b> on the plot or I can not get the
+      landscape mode to display horizontally. What should I do?
+      <p>
+        A: We have tried <b>Ghostview</b> on different platforms and have found
+        that it operates quite differently on the different platforms. The
+        <b>Macintosh</b> version seems the most limited. All that we can suggest
+        is that you play with the settings and/or preferences until you have the
+        best possible display. The other option is to switch to the GIF format.
+      </p>
+      <p></p>
+      <hr />
+      Q13: I plan to use some of your opacities in a publication. What is the
+      best reference to cite?
+      <p>
+        A: You can click on the Opacities methods and references for a list of
+        refernces. The latest reference is
+      </p>
+      <p>
+        N. H. Magee, Jr., J. Abdallah, Jr., R. E. H. Clark, et al., "Atomic
+        Structure Calculations and New Los Alamos Astrophysical Opacities",
+        Astronomical Society of the Pacific Conference Series (Astrophysical
+        Applications of Powerful New Databases, S. J. Adelman and W. L. Wiese
+        eds.) 78, 51 (1995).
+      </p>
+      <p>You may also refer to the web page:</p>
+      <p>
+        <a href="/apps/"> TOPS Opacities</a>
+      </p>
+      <p></p>
+      <hr />
+      <address>Please mail questions or comments to:</address>
+      <address>
+        LANL T-1 Opacities &lt;<a href="mailto:opacity@lanl.gov"
+          >opacity@lanl.gov</a
+        >&gt;
+      </address>
+    </font>
+  </body>
+</html>

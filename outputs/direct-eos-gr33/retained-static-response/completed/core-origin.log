@@ -1,0 +1,33 @@
+class Background:
+    def __init__(self):
+        d=self.d=dict(np.load(star.OUT/'background.npz'));self.env=np.load(star.OUT/'final-envelope.npz')
+        self.core=np.load(star.OUT/'final-core.npz')
+        self.re=d['radius_cm'];self.A=np.exp(-2*d['phi']**2);self.r=self.A*self.re
+        self.R=self.r[-1];self.depth=self.R-self.r
+        core_r=self.core['states'][:,0]*float(self.core['R_scale_m'])*100
+        relevant=core_r>self.re[-1]-DEPTH*1.01
+        assert np.max(abs(self.core['X'][relevant]-self.core['X'][0]))==0,'Causal core composition changes need explicit cells'
+        self.X=self.core['X'][0]
+        self.junction=float(self.env['r'][0]*self.env['A'][0])
+        self.opacity=star.envelope.prior.two.radiative.tables.Opacity()
+        self.theta=PchipInterpolator(self.r,self.A*d['lapse']*d['temperature_K'])
+
+    def sample(self,r):
+        assert min(r)>=self.R-DEPTH-1e-5 and max(r)<=self.R+1e-5
+        d=self.d
+        def get(key,log=False):
+            v=d[key];return np.exp(np.interp(r,self.r,np.log(v))) if log else np.interp(r,self.r,v)
+        re=np.interp(r,self.r,self.re);phi=get('phi');a=np.exp(-2*phi**2)*get('lapse')
+        b=1-2*get('mass_geom_cm')/re;den=1-4*phi*re*get('phi_prime_cm')
+        return dict(r=r,a=a,B=1/(np.sqrt(b)*den),rho=get('density_cgs',True),T=get('temperature_K',True),phi=phi)
+
+    def luminosity(self,z):
+        r,a,B,rho,T=[z[k] for k in ['r','a','B','rho','T']]
+        L=np.full(len(r),float(self.env['Linfinity']));core=r<self.junction
+        for j in np.flatnonzero(core):
+            kap=star.envelope.prior.two.opacity_parts(self.opacity,(np.log(rho[j]),np.log(T[j]),self.X))[0]
+            arad=float(self.env['Prad'][0]*3/self.env['T'][0]**4)
+            F=-4*arad*C*T[j]**3/(3*rho[j]*kap*a[j]*B[j])*self.theta(r[j],1)
+            L[j]=4*np.pi*r[j]**2*a[j]**2*F
+        return L
+

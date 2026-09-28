@@ -1,0 +1,4 @@
+import numpy as np,json
+from pathlib import Path
+p=Path('retained-native-acoustic153-work/response-centered/collision-diagnostic/point-8.npz');z=np.load(p);idx=np.argsort(z['cell_rounding'])[-10:][::-1]
+print(json.dumps(dict(top=[dict(cell=int(i),rounding=float(z['cell_rounding'][i]),source=float(z['cell_source'][i]),nonzero=bool(z['nonzero'][i]),state_delta=z['delta'][:,i].astype(float).tolist(),coefficient_change=z['coefficient_change'][:,i].astype(float).tolist()) for i in idx],nonzero_deep=z['nonzero'][:19].tolist(),ratio_on_nonzero=float(np.sum(z['cell_rounding'][z['nonzero']])/np.sum(z['cell_source'])))))

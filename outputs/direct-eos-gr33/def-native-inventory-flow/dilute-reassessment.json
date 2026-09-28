@@ -1,0 +1,24 @@
+{
+  "classification": "Counterexample candidate",
+  "prior_verdict": "Resolved-only trace refinement failed12.337percent. The restricted density table deleted about3percent of the expelled baryon inventory; its exact energy/chemical trace identity accounts for the dominant discrepancy. Preserve that verdict.",
+  "decision": "Replace the artificial ln(rho/rho0)=-6 deletion threshold by the existing LTE producers-18 threshold, using the same constrained native EOS on240-20000K. Retain the81 native states. This is an explicit re-evaluation of the cutoff design, not extra spatial refinement or a postprocessed-tail success claim.",
+  "unchanged": [
+    "physical radial domain",
+    "224/448/896 cells",
+    "time horizon",
+    "temperature domain",
+    "conservation and2percent spatial gates"
+  ],
+  "new_native_density_nodes": 8,
+  "additional_native_calls": 1400,
+  "additional_native_seconds": 40,
+  "remaining_flow_seconds": 96,
+  "aggregate": "Prior41+429 native evaluations and5 actual state controls remain below the original2000 allowance. Prior20.0s evolution plus96s reserved restart remains below120s. No additional larger grid.",
+  "stop": "Stop if the same native EOS or temperature support fails, if representative cost exceeds remaining budget, or if the same gates fail. Do not invent a tail EOS.",
+  "source_sha256": "07cbe9917767a1df5e4dc33fec661a58b7b408c652ecbe80b13ff61a8140d435",
+  "inputs": {
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-inventory-flow/result.json": "b3efdc6025962ad807520141606077550dd6173c09669223a091d411639e8d0f",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-inventory-flow/trace-tail-diagnosis.json": "0d1993a50903831e3c15ba12c10808b852ed1b51b15ca037e41ab0744974d1ba",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-inventory-flow/eos.npz": "c49934c6a7120ce8e3d2e9cd2d302bf461dfe8d5e1173ca760046c5514b96139"
+  }
+}

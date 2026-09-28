@@ -1,0 +1,51 @@
+{
+  "classification": "Counterexample candidate",
+  "results": [
+    {
+      "variable": "T",
+      "step": 0.001,
+      "domain_cells": 896,
+      "covered_absolute_nuclear_power_fraction": 0.9999980789174985,
+      "max_normalized_discrepancy": 0.007765517568054373,
+      "worst_zone": 2415,
+      "analytic": 13.146126916637643,
+      "finite_difference": 13.04404043711462,
+      "passed": false
+    },
+    {
+      "variable": "T",
+      "step": 0.0005,
+      "domain_cells": 896,
+      "covered_absolute_nuclear_power_fraction": 0.9999980789174985,
+      "max_normalized_discrepancy": 0.007793722566053629,
+      "worst_zone": 2415,
+      "analytic": 13.146126916637643,
+      "finite_difference": 13.043669650631239,
+      "passed": false
+    },
+    {
+      "variable": "rho",
+      "step": 0.001,
+      "domain_cells": 896,
+      "covered_absolute_nuclear_power_fraction": 0.9999980789174985,
+      "max_normalized_discrepancy": 0.003350814753020093,
+      "worst_zone": 2776,
+      "analytic": 1.08640287553636,
+      "finite_difference": 1.0827625407532893,
+      "passed": false
+    },
+    {
+      "variable": "rho",
+      "step": 0.0005,
+      "domain_cells": 896,
+      "covered_absolute_nuclear_power_fraction": 0.9999980789174985,
+      "max_normalized_discrepancy": 0.0013555353150046907,
+      "worst_zone": 2776,
+      "analytic": 1.08640287553636,
+      "finite_difference": 1.0849302180722478,
+      "passed": false
+    }
+  ],
+  "all_passed": false,
+  "boundary": "Sampled native MESA net derivatives including its EOS auxiliary response; not a global interval certificate or full joint GR-fluid derivative."
+}

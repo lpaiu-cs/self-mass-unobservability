@@ -1,0 +1,32 @@
+{
+  "classification": "Counterexample candidate",
+  "decision": "The actual corrected material evolution is complete, but its new pressure/trace must reach GR to judge the charge change. Stop and preserve the75s serial failure; change only readout scheduling and checkpoint each completed path.",
+  "reuse": "Use all completed material/photon/background arrays and the exact original source/pressure arithmetic. No trajectory, EOS bank, grid, clock or physical production rerun. Preserve the first coarse export and require exact array equality on its independently completed readout.",
+  "reassessment": "One coarse export used almost the entire original75s, so another unchanged serial75s run is ineligible. Three source paths are independent. One parallel readout has a180s dispatcher cap and unchanged75s computation alarm per path,3 CPU processes with2GiB virtual memory each. This is an explicit readout-budget revision after failure, not a successful original75s verdict.",
+  "forecast": "Observed coarse source export near75s includes GR setup. Up to75s concurrent path compute plus measured import/setup overhead suggests about90s; allow180s dispatcher including setup. This is an extrapolation under shared file I/O, not a guaranteed runtime. No further automatic extension.",
+  "budgets": {
+    "original_failed_source_seconds": 75,
+    "parallel_dispatch_seconds": 180,
+    "worker_source_seconds": 120,
+    "CPU_processes": 3,
+    "threads_each": 1,
+    "total_virtual_GiB": 6,
+    "readout_attempts": 1,
+    "GR_seconds": 120
+  },
+  "stop": "One forked dispatch only;120s per source computation and180s total. Preserve any completed per-path checks on failure. No automatic subsequent extension or physical trajectory replay.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_corrected_joint_return.py": "b32ee882171da780d8d4f2548f61d7f45c4a7b0c2c2964f72910a55de65de180",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_corrected_joint_return.py": "f8991930808a653d659a4a1d97da558a00762137617932121c266b90b9bb855c",
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_updated_material_return.py": "edf36b27bd05330c7677811291f78226a9dbb2444c68f0cac98c0bf2a2363e01",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/stage-aligned/plan.json": "48448ad00c7dc1a19eccb7a90018f1621b87ff814c1322bffc85d12fef7064ea",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/stage-aligned/production.json": "92a7f020d8348735ba903a58d40c43ed2a8445454244db74cde7a374b7295b5e",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/stage-aligned/source-recovery/original-failure.json": "d634cc6b5230eb1240c2318e215497720f4d84fdb1c2e7a069549fd1aabef830",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/stage-aligned/source-recovery/source-64-reference-128.npz": "5e208e1b5f361ac7ca38d0c3f7d20d4080ada1e863fb141939ce94817110969d",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/stage-aligned/source-recovery/stress-64-reference-128.npz": "8a1ce5a4ab8a186749b3df143d20f2c468512ad99c4e182458e99033a417c655",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/stage-aligned/source-recovery/pre-dispatch-plan.json": "982e300e35511a068428986fdfa256ba775b0512a3ca3a96b135bdf321d510bd",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/stage-aligned/source-recovery/pre-dispatch-producer.py": "411b49b17462c3dfbc41cb43066b3c90af26bc055ed094ca6517bf4e727da4dd"
+  },
+  "pre_dispatch_resource_observation": "Before readout dispatch, the import-only preparer took over120s wall but about4.5s CPU. Live process inspection found a separate VLLM engine using about457percent CPU and another active workload. Those unrelated jobs are not modified. The early quiet-host timing forecast is not reliable under this contention.",
+  "dispatch_repair": "Use Linux fork after owner imports, preserving each independent process model and120s source computation alarm;180s dispatcher includes child setup and all computation. This removes three redundant full interpreter/import paths. No source worker has run under the pre-dispatch plan."
+}

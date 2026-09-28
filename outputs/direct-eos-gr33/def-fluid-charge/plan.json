@@ -1,0 +1,56 @@
+{
+  "classification": "Counterexample candidate",
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "scope": "B=a rho W V; Lorentz/heat trace identity; first velocity stress and moving-radius metric differential. No stationary background or orbital signal proof."
+  },
+  "bindings": {
+    "verification/def_fluid_charge.py": "81344d7c656dbc0ec45ddff7e807ed209193b8f5996a5915129c8fd5d32262c7",
+    "verification/def_normalized_charge.py": "a3cec87ebc79804995bfff514b002aaa62770e6b1971de162aef222177233c43",
+    "verification/def_resolved_scalar_pulse.py": "6e05b94e44fbc27c2b4e10fb686f52a74eb384695c4db3db91a40a4d399c4b1f",
+    "verification/def_spherical_coupled.py": "421ce377f7d150788681ca599f8f201bfdfb33beb053455803914f7e298e9f91",
+    "verification/gr_compatible_equilibrium_evolution.py": "eef028a87aba8ac96687994f42513853e80b8e270d6c499cc7bc56da4efe5a4c",
+    "outputs/direct-eos-gr33/def-resolved-scalar-pulse/initial.npz": "da7d0ec50e6f0d75bcd7c673d78099dd8f759a3c0ffc5a8546f62e54488017a1",
+    "outputs/direct-eos-gr33/def-normalized-charge/zero.npz": "006aaa00bdb8a5b06a1c94634fb03829b2a26bdece8999decd77d96c9828c67f",
+    "outputs/direct-eos-gr33/def-normalized-charge/gradient.npz": "ddf820be4e8a055777e733718ff2f7ce469257277b3ee626616f29057b80bec6",
+    "outputs/direct-eos-gr33/def-resolved-scalar-pulse/production/manifest.json": "5d83bfbed0891dd0178ba4b609db2859404adf21eed2f8f0492b6260d8698f8d",
+    "outputs/direct-eos-gr33/gr-normalized-charge-milestone-manifest.json": "3e5610054f78373be34140a7641aa3597a7b909655b11aba87ea658953a15140"
+  },
+  "claim": "Connect shell baryon redistribution, moving radii, radial velocity/heat stress and temperature to a scalar exterior readout. Apply a same-inventory quasistatic projection to all nine saved pulse endpoints, without rerunning their evolution.",
+  "model": "Leading phi_infinity->0 scalar readout; instantaneous radial constraints, fixed stored composition in differential controls; full evolving composition in native endpoint projections. No radiative finite-frequency exterior or stationary orbit.",
+  "control_steps": [
+    0.001,
+    0.0003
+  ],
+  "control_directions": [
+    "interior_radius",
+    "homology_radius",
+    "baryon_redistribution",
+    "velocity"
+  ],
+  "gates": {
+    "native": 2e-13,
+    "derivative_relative": 0.005,
+    "derivative_absolute": 2e-12,
+    "minimum_time_order": 0.8,
+    "maximum_relative_time_difference": 0.1,
+    "minimum_signal_over_twice_time_difference": 10,
+    "minimum_charge_response": 1e-12
+  },
+  "decision": "Report charge response convergence or its failure without enlarging trajectories. Keep necessary amplification separate from a dynamical gain bound. A frozen snapshot charge is not the radiative charge of the fast pulse.",
+  "budget": {
+    "hard_timeout_seconds": 180,
+    "workers": 4,
+    "blas_threads": 1,
+    "maximum_native_snapshots": 27,
+    "maximum_snapshot_iterations": 24,
+    "new_evolution_steps": 0,
+    "automatic_expansion": false,
+    "estimate_seconds": [
+      20,
+      100
+    ],
+    "basis": "Phase41 15 native snapshots took 19.08s; new geometry and moving-matter iteration rate is unmeasured."
+  }
+}

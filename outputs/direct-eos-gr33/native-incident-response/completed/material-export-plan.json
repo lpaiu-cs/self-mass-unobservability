@@ -1,0 +1,11 @@
+{
+  "classification": "Counterexample candidate",
+  "error": "TypeError('Object of type longdouble is not JSON serializable')",
+  "repair": "Convert NumPy scalar metadata to JSON scalar values only at the write boundary. Preserve the completed but unreported two-step prefix and its producer. Repeat the two short prefixes in a separate folder; no full path had started.",
+  "equations_unchanged": true,
+  "source_sha256": "7eb174b5534f4b677ccd6b711bc47fbd612a97bda5f8300133e0b3f7d8fcb3dc",
+  "bindings": {
+    "native-incident-drive155-work/material-affine/pilot-64.npz": "9601a6c20347cced581d0fab28f2c3ab9986285f35ecd099c107748a0d24035c",
+    "native-incident-drive155-work/extended-pilot-producer.py": "49acd36b7343ba37b42958f8278410597873672d7fe6fef0ac886e40f35cd038"
+  }
+}

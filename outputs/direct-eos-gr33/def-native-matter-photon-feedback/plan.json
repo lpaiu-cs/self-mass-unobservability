@@ -1,0 +1,38 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "d6ccddff9",
+  "claim": "Return actual conserved baryon/momentum/inventory response to moving native collisions and simultaneously evolve photon packets with total material energy/H; save paired transfers and both radial energy ports for the next material/GR sweep.",
+  "decision": "Measure how strongly the previously missing material response changes photons and the paired material force/energy. Then apply these transfers to material and GR, without calling one waveform sweep closed.",
+  "method": "Reuse exact direct primitive variation. Local baryon/momentum and noncollisional material transport are interpolated from the accepted material history; energy/H are simultaneous unknowns with streaming and moving collisions in each SDIRK step. Account for volume once, without adding the old canonical-adiabatic thermal map twice.",
+  "velocity": "Forward signed Richardson beta probes2e-7/1e-7 remain on the nonzero velocity remap branch. At exactly beta=0 the energy/H-to-velocity map vanishes; the initial prescribed velocity variation is also zero. Independently check derivative size sensitivity.",
+  "inventory": "Keep native first-order advected inventory derivatives, including direct opacity/electron effects; do not treat composition work as pure heat.",
+  "reuse": "Same531 cells,8 angles,152 frequencies,3.434ms,existing EOS/spectral banks and saved material/GR paths. No nonlinear background replay.",
+  "budgets": {
+    "check_seconds": 40,
+    "pilot_seconds": 65,
+    "production_seconds": 900,
+    "CPU_threads": 1,
+    "memory_GB": 3,
+    "new_native_bank_calls": 0
+  },
+  "forecast": "Prior monolithic three paths cost241.93s. This adds local conservative maps and signed velocity/inventory source jets at17 points. Measure point and per-step costs separately before dispatch;2x margin must fit900s. Late Krylov cost remains extrapolated.",
+  "gates": {
+    "owner": 1e-10,
+    "mapping": 1e-10,
+    "velocity_derivative": 0.0001,
+    "conservation": 1e-08,
+    "linear": 1e-10,
+    "time": 0.02,
+    "background": 0.02
+  },
+  "stop": "Only64/128 on reference128 and128 on reference64. Stop on gate or time cap; preserve source and failures. No automatic extra clock, horizon, physical grid, or full-closure claim.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_matter_photon_feedback.py": "761422931f8ca323f7e9e03e3d58a130994377896e8dbabbf334aa24076000da",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_monolithic_response.py": "76eab50e7cb8115bff4ce959641ed3cc9e7eabcf13bcae54b321b33f2ac5a695",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_collision_response.py": "f35bf0b4e25dbb4c53503181b24378a989aadc34313a52a4fc4876d52871dfb7",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_material_branch_response.py": "65c24a983afe7bdcfd9b47047622cd789f6cc41fb8b338f3046be9f7cb83cfb2",
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_material_response.py": "02862d794865e9d2785b631baeed092ebf3258538f91d4b64340230a270c10a2",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-material-response/branch-aware/source-audit.json": "7e393e39a0489584219775eb069900247e42f0e792d21c68d569a521fcf43d01",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-collision-response/monolithic/result.json": "974ce60f642b0343fc9273f5380d167edd7636b9b6fbf90a4bc6feb214a4fc2e"
+  }
+}

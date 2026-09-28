@@ -1,0 +1,26 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Apply recovered exact stage ports and original-step source moments to retarded scalar charge; rebuild all source-dependent GR bounds and explicitly carry discarded-matter trace/stress uncertainty.",
+  "decision": "Does the remaining scalar charge survive removing the artificial sparse port mismatch and the newly bounded direct floor terms?",
+  "reuse": "Same531 cells and original64/128 clocks. One outer observer instead of unnecessary full field output. Reuse only verified same-background coefficient envelopes, not old source norms or a lower bound.",
+  "gates": {
+    "time": 0.02,
+    "quadrature": 0.002,
+    "independent": 1e-09,
+    "energy": 1e-08
+  },
+  "budget_seconds": 90,
+  "CPU_threads": 1,
+  "memory_GB": 3,
+  "stop": "No automatic resolution or horizon increase. Keep empirical time comparisons separate from the conditional uniform GR/source-loss bound.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_stage_energy_charge.py": "a7b4b93650663f17ab5cedbe6562cb3ed752fc0e125979b16bfd84d8e31c920d",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_stage_energy_history.py": "cd108ef9e06a528089799c3324c2e17a3caaa3a12194572e7cbcd17047c88d63",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_characteristic_gr.py": "1630d3f008a1e59748d318f921eed7da8fbea4c49d33e5b86617f67009a27076",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-energy-source-reconciliation/stage-history/result.json": "09b785d6461bcb741820abac4201a50b6ecbfad8aa94435e8a8929e70e887ed0",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-energy-source-reconciliation/stage-history/source-64.npz": "d51452043f0f452c6ad0f76928e4a6dddf61e8161b6697968b3e0495b7519dfc",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-energy-source-reconciliation/stage-history/source-128.npz": "d7d0f08f7f1b811db3d2c8e1e45eb0d7d30fc65754faf05923aad47c718d2b18",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-global-scalar-closure/bound.json": "39cbee9c32b2d16c239d8ae14f188be2177e53bca27fe0ec4d8df88a29a66f58",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-initial-constraints/finite-volume/balanced-20.npz": "72ae702c85db57f0c02c1e5ca15dfad7df50d901b4270531e5b49c8c3746d3cb"
+  }
+}

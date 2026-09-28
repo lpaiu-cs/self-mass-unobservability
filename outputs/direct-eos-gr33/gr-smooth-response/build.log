@@ -1,0 +1,291 @@
+/mnt/e/lab/self-mass-unobservability/verification/gr_smooth_response_certificate.cpp: In function ‘int main(int, char**)’:
+/mnt/e/lab/self-mass-unobservability/verification/gr_smooth_response_certificate.cpp:47:19: error: no matching function for call to ‘abs(capd::intervals::Interval<capd::multiPrec::MpReal, capd::multiPrec::MpReal>)’
+   47 |    MI distance=abs(c-Q);if(R.rightBound()>=distance.leftBound()||R.rightBound()>=(c+Q).leftBound()){split();continue;}
+      |                ~~~^~~~~
+In file included from /usr/include/c++/11/bits/std_abs.h:38,
+                 from /usr/include/c++/11/cmath:47,
+                 from /home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/basicalg/doubleFun.h:17,
+                 from /home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/intervals/Interval.hpp:20,
+                 from /home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/intervals/MpInterval.h:19,
+                 from /mnt/e/lab/self-mass-unobservability/verification/gr_smooth_response_certificate.cpp:2:
+/usr/include/stdlib.h:848:12: note: candidate: ‘int abs(int)’
+  848 | extern int abs (int __x) __THROW __attribute__ ((__const__)) __wur;
+      |            ^~~
+/usr/include/stdlib.h:848:21: note:   no known conversion for argument 1 from ‘capd::intervals::Interval<capd::multiPrec::MpReal, capd::multiPrec::MpReal>’ to ‘int’
+  848 | extern int abs (int __x) __THROW __attribute__ ((__const__)) __wur;
+      |                 ~~~~^~~
+In file included from /usr/include/c++/11/cmath:47,
+                 from /home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/basicalg/doubleFun.h:17,
+                 from /home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/intervals/Interval.hpp:20,
+                 from /home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/intervals/MpInterval.h:19,
+                 from /mnt/e/lab/self-mass-unobservability/verification/gr_smooth_response_certificate.cpp:2:
+/usr/include/c++/11/bits/std_abs.h:79:3: note: candidate: ‘constexpr long double std::abs(long double)’
+   79 |   abs(long double __x)
+      |   ^~~
+/usr/include/c++/11/bits/std_abs.h:79:19: note:   no known conversion for argument 1 from ‘capd::intervals::Interval<capd::multiPrec::MpReal, capd::multiPrec::MpReal>’ to ‘long double’
+   79 |   abs(long double __x)
+      |       ~~~~~~~~~~~~^~~
+/usr/include/c++/11/bits/std_abs.h:75:3: note: candidate: ‘constexpr float std::abs(float)’
+   75 |   abs(float __x)
+      |   ^~~
+/usr/include/c++/11/bits/std_abs.h:75:13: note:   no known conversion for argument 1 from ‘capd::intervals::Interval<capd::multiPrec::MpReal, capd::multiPrec::MpReal>’ to ‘float’
+   75 |   abs(float __x)
+      |       ~~~~~~^~~
+/usr/include/c++/11/bits/std_abs.h:71:3: note: candidate: ‘constexpr double std::abs(double)’
+   71 |   abs(double __x)
+      |   ^~~
+/usr/include/c++/11/bits/std_abs.h:71:14: note:   no known conversion for argument 1 from ‘capd::intervals::Interval<capd::multiPrec::MpReal, capd::multiPrec::MpReal>’ to ‘double’
+   71 |   abs(double __x)
+      |       ~~~~~~~^~~
+/usr/include/c++/11/bits/std_abs.h:61:3: note: candidate: ‘long long int std::abs(long long int)’
+   61 |   abs(long long __x) { return __builtin_llabs (__x); }
+      |   ^~~
+/usr/include/c++/11/bits/std_abs.h:61:17: note:   no known conversion for argument 1 from ‘capd::intervals::Interval<capd::multiPrec::MpReal, capd::multiPrec::MpReal>’ to ‘long long int’
+   61 |   abs(long long __x) { return __builtin_llabs (__x); }
+      |       ~~~~~~~~~~^~~
+/usr/include/c++/11/bits/std_abs.h:56:3: note: candidate: ‘long int std::abs(long int)’
+   56 |   abs(long __i) { return __builtin_labs(__i); }
+      |   ^~~
+/usr/include/c++/11/bits/std_abs.h:56:12: note:   no known conversion for argument 1 from ‘capd::intervals::Interval<capd::multiPrec::MpReal, capd::multiPrec::MpReal>’ to ‘long int’
+   56 |   abs(long __i) { return __builtin_labs(__i); }
+      |       ~~~~~^~~
+In file included from /home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/intervals/MpInterval.h:21,
+                 from /mnt/e/lab/self-mass-unobservability/verification/gr_smooth_response_certificate.cpp:2:
+/home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/multiPrec/MpReal.h:304:15: note: candidate: ‘capd::multiPrec::MpReal capd::multiPrec::abs(const capd::multiPrec::MpReal&, capd::multiPrec::MpReal::RoundingMode)’
+  304 | inline MpReal abs(const MpReal& r, MpReal::RoundingMode rnd= MpReal::getDefaultRndMode()) {
+      |               ^~~
+/home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/multiPrec/MpReal.h:304:33: note:   no known conversion for argument 1 from ‘capd::intervals::Interval<capd::multiPrec::MpReal, capd::multiPrec::MpReal>’ to ‘const capd::multiPrec::MpReal&’
+  304 | inline MpReal abs(const MpReal& r, MpReal::RoundingMode rnd= MpReal::getDefaultRndMode()) {
+      |                   ~~~~~~~~~~~~~~^
+/mnt/e/lab/self-mass-unobservability/verification/gr_smooth_response_certificate.cpp:53:15: error: no matching function for call to ‘abs(capd::intervals::MpInterval)’
+   53 |    MI logs=abs(log(c+Q))-log(1-R/(c+Q))+abs(log(distance))-log(1-R/distance);
+      |            ~~~^~~~~~~~~~
+In file included from /usr/include/c++/11/bits/std_abs.h:38,
+                 from /usr/include/c++/11/cmath:47,
+                 from /home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/basicalg/doubleFun.h:17,
+                 from /home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/intervals/Interval.hpp:20,
+                 from /home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/intervals/MpInterval.h:19,
+                 from /mnt/e/lab/self-mass-unobservability/verification/gr_smooth_response_certificate.cpp:2:
+/usr/include/stdlib.h:848:12: note: candidate: ‘int abs(int)’
+  848 | extern int abs (int __x) __THROW __attribute__ ((__const__)) __wur;
+      |            ^~~
+/usr/include/stdlib.h:848:21: note:   no known conversion for argument 1 from ‘capd::intervals::MpInterval’ {aka ‘capd::intervals::Interval<capd::multiPrec::MpReal, capd::multiPrec::MpReal>’} to ‘int’
+  848 | extern int abs (int __x) __THROW __attribute__ ((__const__)) __wur;
+      |                 ~~~~^~~
+In file included from /usr/include/c++/11/cmath:47,
+                 from /home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/basicalg/doubleFun.h:17,
+                 from /home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/intervals/Interval.hpp:20,
+                 from /home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/intervals/MpInterval.h:19,
+                 from /mnt/e/lab/self-mass-unobservability/verification/gr_smooth_response_certificate.cpp:2:
+/usr/include/c++/11/bits/std_abs.h:79:3: note: candidate: ‘constexpr long double std::abs(long double)’
+   79 |   abs(long double __x)
+      |   ^~~
+/usr/include/c++/11/bits/std_abs.h:79:19: note:   no known conversion for argument 1 from ‘capd::intervals::MpInterval’ {aka ‘capd::intervals::Interval<capd::multiPrec::MpReal, capd::multiPrec::MpReal>’} to ‘long double’
+   79 |   abs(long double __x)
+      |       ~~~~~~~~~~~~^~~
+/usr/include/c++/11/bits/std_abs.h:75:3: note: candidate: ‘constexpr float std::abs(float)’
+   75 |   abs(float __x)
+      |   ^~~
+/usr/include/c++/11/bits/std_abs.h:75:13: note:   no known conversion for argument 1 from ‘capd::intervals::MpInterval’ {aka ‘capd::intervals::Interval<capd::multiPrec::MpReal, capd::multiPrec::MpReal>’} to ‘float’
+   75 |   abs(float __x)
+      |       ~~~~~~^~~
+/usr/include/c++/11/bits/std_abs.h:71:3: note: candidate: ‘constexpr double std::abs(double)’
+   71 |   abs(double __x)
+      |   ^~~
+/usr/include/c++/11/bits/std_abs.h:71:14: note:   no known conversion for argument 1 from ‘capd::intervals::MpInterval’ {aka ‘capd::intervals::Interval<capd::multiPrec::MpReal, capd::multiPrec::MpReal>’} to ‘double’
+   71 |   abs(double __x)
+      |       ~~~~~~~^~~
+/usr/include/c++/11/bits/std_abs.h:61:3: note: candidate: ‘long long int std::abs(long long int)’
+   61 |   abs(long long __x) { return __builtin_llabs (__x); }
+      |   ^~~
+/usr/include/c++/11/bits/std_abs.h:61:17: note:   no known conversion for argument 1 from ‘capd::intervals::MpInterval’ {aka ‘capd::intervals::Interval<capd::multiPrec::MpReal, capd::multiPrec::MpReal>’} to ‘long long int’
+   61 |   abs(long long __x) { return __builtin_llabs (__x); }
+      |       ~~~~~~~~~~^~~
+/usr/include/c++/11/bits/std_abs.h:56:3: note: candidate: ‘long int std::abs(long int)’
+   56 |   abs(long __i) { return __builtin_labs(__i); }
+      |   ^~~
+/usr/include/c++/11/bits/std_abs.h:56:12: note:   no known conversion for argument 1 from ‘capd::intervals::MpInterval’ {aka ‘capd::intervals::Interval<capd::multiPrec::MpReal, capd::multiPrec::MpReal>’} to ‘long int’
+   56 |   abs(long __i) { return __builtin_labs(__i); }
+      |       ~~~~~^~~
+In file included from /home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/intervals/MpInterval.h:21,
+                 from /mnt/e/lab/self-mass-unobservability/verification/gr_smooth_response_certificate.cpp:2:
+/home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/multiPrec/MpReal.h:304:15: note: candidate: ‘capd::multiPrec::MpReal capd::multiPrec::abs(const capd::multiPrec::MpReal&, capd::multiPrec::MpReal::RoundingMode)’
+  304 | inline MpReal abs(const MpReal& r, MpReal::RoundingMode rnd= MpReal::getDefaultRndMode()) {
+      |               ^~~
+/home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/multiPrec/MpReal.h:304:33: note:   no known conversion for argument 1 from ‘capd::intervals::MpInterval’ {aka ‘capd::intervals::Interval<capd::multiPrec::MpReal, capd::multiPrec::MpReal>’} to ‘const capd::multiPrec::MpReal&’
+  304 | inline MpReal abs(const MpReal& r, MpReal::RoundingMode rnd= MpReal::getDefaultRndMode()) {
+      |                   ~~~~~~~~~~~~~~^
+/mnt/e/lab/self-mass-unobservability/verification/gr_smooth_response_certificate.cpp:53:44: error: no matching function for call to ‘abs(capd::intervals::MpInterval)’
+   53 |    MI logs=abs(log(c+Q))-log(1-R/(c+Q))+abs(log(distance))-log(1-R/distance);
+      |                                         ~~~^~~~~~~~~~~~~~~
+In file included from /usr/include/c++/11/bits/std_abs.h:38,
+                 from /usr/include/c++/11/cmath:47,
+                 from /home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/basicalg/doubleFun.h:17,
+                 from /home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/intervals/Interval.hpp:20,
+                 from /home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/intervals/MpInterval.h:19,
+                 from /mnt/e/lab/self-mass-unobservability/verification/gr_smooth_response_certificate.cpp:2:
+/usr/include/stdlib.h:848:12: note: candidate: ‘int abs(int)’
+  848 | extern int abs (int __x) __THROW __attribute__ ((__const__)) __wur;
+      |            ^~~
+/usr/include/stdlib.h:848:21: note:   no known conversion for argument 1 from ‘capd::intervals::MpInterval’ {aka ‘capd::intervals::Interval<capd::multiPrec::MpReal, capd::multiPrec::MpReal>’} to ‘int’
+  848 | extern int abs (int __x) __THROW __attribute__ ((__const__)) __wur;
+      |                 ~~~~^~~
+In file included from /usr/include/c++/11/cmath:47,
+                 from /home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/basicalg/doubleFun.h:17,
+                 from /home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/intervals/Interval.hpp:20,
+                 from /home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/intervals/MpInterval.h:19,
+                 from /mnt/e/lab/self-mass-unobservability/verification/gr_smooth_response_certificate.cpp:2:
+/usr/include/c++/11/bits/std_abs.h:79:3: note: candidate: ‘constexpr long double std::abs(long double)’
+   79 |   abs(long double __x)
+      |   ^~~
+/usr/include/c++/11/bits/std_abs.h:79:19: note:   no known conversion for argument 1 from ‘capd::intervals::MpInterval’ {aka ‘capd::intervals::Interval<capd::multiPrec::MpReal, capd::multiPrec::MpReal>’} to ‘long double’
+   79 |   abs(long double __x)
+      |       ~~~~~~~~~~~~^~~
+/usr/include/c++/11/bits/std_abs.h:75:3: note: candidate: ‘constexpr float std::abs(float)’
+   75 |   abs(float __x)
+      |   ^~~
+/usr/include/c++/11/bits/std_abs.h:75:13: note:   no known conversion for argument 1 from ‘capd::intervals::MpInterval’ {aka ‘capd::intervals::Interval<capd::multiPrec::MpReal, capd::multiPrec::MpReal>’} to ‘float’
+   75 |   abs(float __x)
+      |       ~~~~~~^~~
+/usr/include/c++/11/bits/std_abs.h:71:3: note: candidate: ‘constexpr double std::abs(double)’
+   71 |   abs(double __x)
+      |   ^~~
+/usr/include/c++/11/bits/std_abs.h:71:14: note:   no known conversion for argument 1 from ‘capd::intervals::MpInterval’ {aka ‘capd::intervals::Interval<capd::multiPrec::MpReal, capd::multiPrec::MpReal>’} to ‘double’
+   71 |   abs(double __x)
+      |       ~~~~~~~^~~
+/usr/include/c++/11/bits/std_abs.h:61:3: note: candidate: ‘long long int std::abs(long long int)’
+   61 |   abs(long long __x) { return __builtin_llabs (__x); }
+      |   ^~~
+/usr/include/c++/11/bits/std_abs.h:61:17: note:   no known conversion for argument 1 from ‘capd::intervals::MpInterval’ {aka ‘capd::intervals::Interval<capd::multiPrec::MpReal, capd::multiPrec::MpReal>’} to ‘long long int’
+   61 |   abs(long long __x) { return __builtin_llabs (__x); }
+      |       ~~~~~~~~~~^~~
+/usr/include/c++/11/bits/std_abs.h:56:3: note: candidate: ‘long int std::abs(long int)’
+   56 |   abs(long __i) { return __builtin_labs(__i); }
+      |   ^~~
+/usr/include/c++/11/bits/std_abs.h:56:12: note:   no known conversion for argument 1 from ‘capd::intervals::MpInterval’ {aka ‘capd::intervals::Interval<capd::multiPrec::MpReal, capd::multiPrec::MpReal>’} to ‘long int’
+   56 |   abs(long __i) { return __builtin_labs(__i); }
+      |       ~~~~~^~~
+In file included from /home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/intervals/MpInterval.h:21,
+                 from /mnt/e/lab/self-mass-unobservability/verification/gr_smooth_response_certificate.cpp:2:
+/home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/multiPrec/MpReal.h:304:15: note: candidate: ‘capd::multiPrec::MpReal capd::multiPrec::abs(const capd::multiPrec::MpReal&, capd::multiPrec::MpReal::RoundingMode)’
+  304 | inline MpReal abs(const MpReal& r, MpReal::RoundingMode rnd= MpReal::getDefaultRndMode()) {
+      |               ^~~
+/home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/multiPrec/MpReal.h:304:33: note:   no known conversion for argument 1 from ‘capd::intervals::MpInterval’ {aka ‘capd::intervals::Interval<capd::multiPrec::MpReal, capd::multiPrec::MpReal>’} to ‘const capd::multiPrec::MpReal&’
+  304 | inline MpReal abs(const MpReal& r, MpReal::RoundingMode rnd= MpReal::getDefaultRndMode()) {
+      |                   ~~~~~~~~~~~~~~^
+/mnt/e/lab/self-mass-unobservability/verification/gr_smooth_response_certificate.cpp:54:39: error: no matching function for call to ‘abs(capd::intervals::Interval<capd::multiPrec::MpReal, capd::multiPrec::MpReal>)’
+   54 |    MI A=pmax*pmax/(g*Sref),B=pmax*(abs(1+c*c-Q*Q)+R*(2*c+R))/(2*Q*g*Sref);
+      |                                    ~~~^~~~~~~~~~~
+In file included from /usr/include/c++/11/bits/std_abs.h:38,
+                 from /usr/include/c++/11/cmath:47,
+                 from /home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/basicalg/doubleFun.h:17,
+                 from /home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/intervals/Interval.hpp:20,
+                 from /home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/intervals/MpInterval.h:19,
+                 from /mnt/e/lab/self-mass-unobservability/verification/gr_smooth_response_certificate.cpp:2:
+/usr/include/stdlib.h:848:12: note: candidate: ‘int abs(int)’
+  848 | extern int abs (int __x) __THROW __attribute__ ((__const__)) __wur;
+      |            ^~~
+/usr/include/stdlib.h:848:21: note:   no known conversion for argument 1 from ‘capd::intervals::Interval<capd::multiPrec::MpReal, capd::multiPrec::MpReal>’ to ‘int’
+  848 | extern int abs (int __x) __THROW __attribute__ ((__const__)) __wur;
+      |                 ~~~~^~~
+In file included from /usr/include/c++/11/cmath:47,
+                 from /home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/basicalg/doubleFun.h:17,
+                 from /home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/intervals/Interval.hpp:20,
+                 from /home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/intervals/MpInterval.h:19,
+                 from /mnt/e/lab/self-mass-unobservability/verification/gr_smooth_response_certificate.cpp:2:
+/usr/include/c++/11/bits/std_abs.h:79:3: note: candidate: ‘constexpr long double std::abs(long double)’
+   79 |   abs(long double __x)
+      |   ^~~
+/usr/include/c++/11/bits/std_abs.h:79:19: note:   no known conversion for argument 1 from ‘capd::intervals::Interval<capd::multiPrec::MpReal, capd::multiPrec::MpReal>’ to ‘long double’
+   79 |   abs(long double __x)
+      |       ~~~~~~~~~~~~^~~
+/usr/include/c++/11/bits/std_abs.h:75:3: note: candidate: ‘constexpr float std::abs(float)’
+   75 |   abs(float __x)
+      |   ^~~
+/usr/include/c++/11/bits/std_abs.h:75:13: note:   no known conversion for argument 1 from ‘capd::intervals::Interval<capd::multiPrec::MpReal, capd::multiPrec::MpReal>’ to ‘float’
+   75 |   abs(float __x)
+      |       ~~~~~~^~~
+/usr/include/c++/11/bits/std_abs.h:71:3: note: candidate: ‘constexpr double std::abs(double)’
+   71 |   abs(double __x)
+      |   ^~~
+/usr/include/c++/11/bits/std_abs.h:71:14: note:   no known conversion for argument 1 from ‘capd::intervals::Interval<capd::multiPrec::MpReal, capd::multiPrec::MpReal>’ to ‘double’
+   71 |   abs(double __x)
+      |       ~~~~~~~^~~
+/usr/include/c++/11/bits/std_abs.h:61:3: note: candidate: ‘long long int std::abs(long long int)’
+   61 |   abs(long long __x) { return __builtin_llabs (__x); }
+      |   ^~~
+/usr/include/c++/11/bits/std_abs.h:61:17: note:   no known conversion for argument 1 from ‘capd::intervals::Interval<capd::multiPrec::MpReal, capd::multiPrec::MpReal>’ to ‘long long int’
+   61 |   abs(long long __x) { return __builtin_llabs (__x); }
+      |       ~~~~~~~~~~^~~
+/usr/include/c++/11/bits/std_abs.h:56:3: note: candidate: ‘long int std::abs(long int)’
+   56 |   abs(long __i) { return __builtin_labs(__i); }
+      |   ^~~
+/usr/include/c++/11/bits/std_abs.h:56:12: note:   no known conversion for argument 1 from ‘capd::intervals::Interval<capd::multiPrec::MpReal, capd::multiPrec::MpReal>’ to ‘long int’
+   56 |   abs(long __i) { return __builtin_labs(__i); }
+      |       ~~~~~^~~
+In file included from /home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/intervals/MpInterval.h:21,
+                 from /mnt/e/lab/self-mass-unobservability/verification/gr_smooth_response_certificate.cpp:2:
+/home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/multiPrec/MpReal.h:304:15: note: candidate: ‘capd::multiPrec::MpReal capd::multiPrec::abs(const capd::multiPrec::MpReal&, capd::multiPrec::MpReal::RoundingMode)’
+  304 | inline MpReal abs(const MpReal& r, MpReal::RoundingMode rnd= MpReal::getDefaultRndMode()) {
+      |               ^~~
+/home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/multiPrec/MpReal.h:304:33: note:   no known conversion for argument 1 from ‘capd::intervals::Interval<capd::multiPrec::MpReal, capd::multiPrec::MpReal>’ to ‘const capd::multiPrec::MpReal&’
+  304 | inline MpReal abs(const MpReal& r, MpReal::RoundingMode rnd= MpReal::getDefaultRndMode()) {
+      |                   ~~~~~~~~~~~~~~^
+/mnt/e/lab/self-mass-unobservability/verification/gr_smooth_response_certificate.cpp:66:70: error: no matching function for call to ‘abs(capd::intervals::Interval<capd::multiPrec::MpReal, capd::multiPrec::MpReal>)’
+   66 |      MI kernel=(p*p/gamma+p*(1+p*p-Q*Q)/(2*Q*gamma)*(log(p+Q)-log(abs(p-Q))))/Sref;
+      |                                                                   ~~~^~~~~
+In file included from /usr/include/c++/11/bits/std_abs.h:38,
+                 from /usr/include/c++/11/cmath:47,
+                 from /home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/basicalg/doubleFun.h:17,
+                 from /home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/intervals/Interval.hpp:20,
+                 from /home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/intervals/MpInterval.h:19,
+                 from /mnt/e/lab/self-mass-unobservability/verification/gr_smooth_response_certificate.cpp:2:
+/usr/include/stdlib.h:848:12: note: candidate: ‘int abs(int)’
+  848 | extern int abs (int __x) __THROW __attribute__ ((__const__)) __wur;
+      |            ^~~
+/usr/include/stdlib.h:848:21: note:   no known conversion for argument 1 from ‘capd::intervals::Interval<capd::multiPrec::MpReal, capd::multiPrec::MpReal>’ to ‘int’
+  848 | extern int abs (int __x) __THROW __attribute__ ((__const__)) __wur;
+      |                 ~~~~^~~
+In file included from /usr/include/c++/11/cmath:47,
+                 from /home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/basicalg/doubleFun.h:17,
+                 from /home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/intervals/Interval.hpp:20,
+                 from /home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/intervals/MpInterval.h:19,
+                 from /mnt/e/lab/self-mass-unobservability/verification/gr_smooth_response_certificate.cpp:2:
+/usr/include/c++/11/bits/std_abs.h:79:3: note: candidate: ‘constexpr long double std::abs(long double)’
+   79 |   abs(long double __x)
+      |   ^~~
+/usr/include/c++/11/bits/std_abs.h:79:19: note:   no known conversion for argument 1 from ‘capd::intervals::Interval<capd::multiPrec::MpReal, capd::multiPrec::MpReal>’ to ‘long double’
+   79 |   abs(long double __x)
+      |       ~~~~~~~~~~~~^~~
+/usr/include/c++/11/bits/std_abs.h:75:3: note: candidate: ‘constexpr float std::abs(float)’
+   75 |   abs(float __x)
+      |   ^~~
+/usr/include/c++/11/bits/std_abs.h:75:13: note:   no known conversion for argument 1 from ‘capd::intervals::Interval<capd::multiPrec::MpReal, capd::multiPrec::MpReal>’ to ‘float’
+   75 |   abs(float __x)
+      |       ~~~~~~^~~
+/usr/include/c++/11/bits/std_abs.h:71:3: note: candidate: ‘constexpr double std::abs(double)’
+   71 |   abs(double __x)
+      |   ^~~
+/usr/include/c++/11/bits/std_abs.h:71:14: note:   no known conversion for argument 1 from ‘capd::intervals::Interval<capd::multiPrec::MpReal, capd::multiPrec::MpReal>’ to ‘double’
+   71 |   abs(double __x)
+      |       ~~~~~~~^~~
+/usr/include/c++/11/bits/std_abs.h:61:3: note: candidate: ‘long long int std::abs(long long int)’
+   61 |   abs(long long __x) { return __builtin_llabs (__x); }
+      |   ^~~
+/usr/include/c++/11/bits/std_abs.h:61:17: note:   no known conversion for argument 1 from ‘capd::intervals::Interval<capd::multiPrec::MpReal, capd::multiPrec::MpReal>’ to ‘long long int’
+   61 |   abs(long long __x) { return __builtin_llabs (__x); }
+      |       ~~~~~~~~~~^~~
+/usr/include/c++/11/bits/std_abs.h:56:3: note: candidate: ‘long int std::abs(long int)’
+   56 |   abs(long __i) { return __builtin_labs(__i); }
+      |   ^~~
+/usr/include/c++/11/bits/std_abs.h:56:12: note:   no known conversion for argument 1 from ‘capd::intervals::Interval<capd::multiPrec::MpReal, capd::multiPrec::MpReal>’ to ‘long int’
+   56 |   abs(long __i) { return __builtin_labs(__i); }
+      |       ~~~~~^~~
+In file included from /home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/intervals/MpInterval.h:21,
+                 from /mnt/e/lab/self-mass-unobservability/verification/gr_smooth_response_certificate.cpp:2:
+/home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/multiPrec/MpReal.h:304:15: note: candidate: ‘capd::multiPrec::MpReal capd::multiPrec::abs(const capd::multiPrec::MpReal&, capd::multiPrec::MpReal::RoundingMode)’
+  304 | inline MpReal abs(const MpReal& r, MpReal::RoundingMode rnd= MpReal::getDefaultRndMode()) {
+      |               ^~~
+/home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include/capd/multiPrec/MpReal.h:304:33: note:   no known conversion for argument 1 from ‘capd::intervals::Interval<capd::multiPrec::MpReal, capd::multiPrec::MpReal>’ to ‘const capd::multiPrec::MpReal&’
+  304 | inline MpReal abs(const MpReal& r, MpReal::RoundingMode rnd= MpReal::getDefaultRndMode()) {
+      |                   ~~~~~~~~~~~~~~^

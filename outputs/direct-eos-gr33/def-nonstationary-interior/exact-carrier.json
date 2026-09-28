@@ -1,0 +1,36 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "rows": [
+    {
+      "steps": 12,
+      "midpoint_rms": 4.8300818056785485e-06,
+      "midpoint_relative_time_error": 2.2243786147993787,
+      "native_minus_fixed_matter_relative": 7.044426723427426e-09
+    },
+    {
+      "steps": 24,
+      "midpoint_rms": 2.847993419237673e-06,
+      "midpoint_relative_time_error": 1.0077193259364765,
+      "native_minus_fixed_matter_relative": 1.0734364187401372e-08
+    },
+    {
+      "steps": 48,
+      "midpoint_rms": 2.060684031189072e-06,
+      "midpoint_relative_time_error": 0.3099621930032185,
+      "native_minus_fixed_matter_relative": 1.2337244989076192e-08
+    }
+  ],
+  "exact_carrier_rms": 1.9227544426834897e-06,
+  "expm_modal_relative_difference": 1.4113210874620343e-14,
+  "highest_drive_phase_per_step": [
+    4.1887902047863905,
+    2.0943951023931953,
+    1.0471975511965976
+  ],
+  "seconds": 0.10856061600000011,
+  "new_native_calls": 0,
+  "new_fluid_steps": 0,
+  "source_sha256": "30d59b58553a4fed6ef8bcdec83f7f16625b7e23ecc279316d1499ae4847e61d",
+  "scope": "Exponential and independent modal integration of the fixed initial finite-grid scalar operator. Isolates direct-wave temporal error, and provides a reusable exact carrier. No modification or acceptance of failed coupled histories; time-dependent metric, native matter work and physical exterior remain to be coupled."
+}

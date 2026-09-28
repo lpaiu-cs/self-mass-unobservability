@@ -1,0 +1,22 @@
+{
+  "classification": "Proven",
+  "checkpoint": "396c94e",
+  "bits": 256,
+  "maximum_degree": 32,
+  "far_threshold": "5/4",
+  "padding": 160,
+  "comparison_allowance": "1e-280",
+  "benchmark_z": [
+    "2",
+    "10",
+    "1000000"
+  ],
+  "benchmark_repetitions": 5,
+  "bindings": {
+    "verification/gr_legendre_log_moments.py": "02951f5f92330d3b3e6126c602e3568a048b36ce89fa8c55844b15ae0be81a68",
+    "outputs/direct-eos-gr33/gr-response-product-rule/manifest.json": "a67c3be58e50365df96cb87f22dc15633101525cb44c06711ab5d1b85dca2e85",
+    "outputs/direct-eos-gr33/gr-response-product-rule/rule.json": "4d03ecc7fb3407c4b229c2209c4db461008af852c3e75d0cae8f149bcd6d31a4",
+    "outputs/direct-eos-gr33/gr-response-product-rule/controls.json": "23f73622cd802e3a5e05cf9fdedf37c9af6cf42e76ca21fa3272d1863395d282"
+  },
+  "scope": "Same real logarithmic product moments. This certifies and measures their batch evaluator; actual stellar H interpolation coefficients and outer product integration remain separate."
+}

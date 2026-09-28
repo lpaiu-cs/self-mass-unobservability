@@ -1,0 +1,39 @@
+{
+  "classification": "Conjectural",
+  "claim": "Read the same phase-265 coupled solution through the unchanged frozen exterior and rational mass normalization, adding the background photons' physical launch-energy increment as an emission of that same operator for its high and low components.",
+  "method": "High: L0(t,bin)*(delta_nu+u)(r0,t) of the incident metric, tabulated on16384/8192uniform intervals (a scratch run measured2.9e-7/1.2e-6against the phase261launch energies with4096/2048). Low: the same product with the applied returned metric of this solution (its outer face delta_nu including the new geometric lapse, and alpha*U/r0 of its fields), piecewise-linear on the metric clock plus background knots with16/8sub-intervals; clocks64/128as the time control. Emission primitives, kernel, arrival and kappa/epsilon/scalar readout are the frozen reader's own formulas.",
+  "gates": {
+    "time": 0.02,
+    "angular": 0.002,
+    "radial": 0.002,
+    "representation": 0.002,
+    "launch_quadrature": 1e-06
+  },
+  "cross_checks": "Launch energy against the phase261full propagation at16knots and the575-time output; model-versus-full photon mass (J) difference and phase264low launch energy are reported, not gated.",
+  "budget": {
+    "seconds": 1800,
+    "virtual_GiB": 16,
+    "CPU_threads": 1,
+    "new_physical_steps": 0
+  },
+  "limits": "Deflection, measure and propagation-work parts of the geometric response and the variation of the exterior scalar operator by the metric perturbation are not included. One GR return; no self-GR, EOS/spatial/uniform or observational closure.",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/read_photon_boundary_exterior.py": "511db4b6e28beffda5cc9237d099ce4dc5dcb2e2276052a6a1d84c51dc4a2a09",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/propagate_exterior_vacuum.py": "4969c0e9050fb0f6f41b644370f0512062f22d4efbfd4e51b225b5272efe0b7e",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/propagate_physical_exterior.py": "600392bf42fb4d3086fd4107603b15c4c8e854b6ee6543f8c87aa245ac8bd857",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/read_returned_exterior.py": "150dd3de2d879346911a6d10fc6376737f2daca9b33cebd9908311542192b364",
+    "native-photon-boundary-ld2-exterior265-work/full/result.json": "34f8d9c5d0deaeb68dbc94d8a1dac7e1771bc80ba67b75143f4e982bd3cbed36",
+    "native-photon-boundary-ld2-exterior265-work/full/audit.json": "61f91ebef45f610b8f3bf598e1c9f5494ad67d3a3ddd1bf46b7e844b7e24e719",
+    "native-photon-boundary-ld2-265-work/result.json": "eb91e1715c3cf23b6d06368148092a8a3320e36b62e5abb9761c6d03065c5ad6",
+    "native-geometric-clock265-work/result.json": "f092cb5e78013888bd249864fa04a9a6dcd2a6c9b0e2c67dcb5d84abca63065a",
+    "native-geometric-clock265-work/boundary-575.npz": "723375f1c3ad01037ccccb39abdf610c0f25e9ba33b543902d1c7f69c028d814",
+    "native-dynamic-vacuum261-work/fine/result.json": "0858ff9082952953f94a5131af79b37711ddc2d9b1fdcedc7a607f8affcc117f",
+    "native-dynamic-vacuum261-work/photon-boundary/source.npz": "a802a3df0d719a8a9d21c5d68e3a8bd52085f2e8071e20eaeca4688bbc3e1ee9",
+    "native-primitive-photon263-work/fine/result.json": "7621e1264daff199e48b8b7925a0660ab8be5da03b82edc28d84a5b1754ae9ca",
+    "native-photon-boundary-ld2-265-work/metric/metric-64-g8.npz": "0e7171ea0c988712db0b9a84335c217603aefd62f4f346fcb2868ac9e63f8ffe",
+    "native-photon-boundary-ld2-265-work/gr/fields-64-g8.npz": "56dbfbcc6d25d09cadb94fb9d57292a1fb0d2de0a4b139e27bb7a6884f13cc58",
+    "native-photon-boundary-ld2-265-work/metric/metric-128-g8.npz": "733d8a6fb45912872b2a90b610e76afe244ff4ff2396a0e0389e7e5b363d6e43",
+    "native-photon-boundary-ld2-265-work/gr/fields-128-g8.npz": "6315597ed437d4d5cd667e44c30dd5faa28ba1ab663a6332ff03df508b9b6ea5"
+  },
+  "full_goal_complete": false
+}

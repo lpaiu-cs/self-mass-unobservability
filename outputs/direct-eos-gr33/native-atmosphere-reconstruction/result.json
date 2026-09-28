@@ -1,0 +1,109 @@
+{
+ "classification": "Counterexample candidate",
+ "passed": true,
+ "verdict": "OBSERVED_PHOTOSPHERE_RECONSTRUCTED__GRAY_TABLE_OPACITY_x3.2__NONGRAY_LTE_x6.9__SIGN_KEPT",
+ "gray": {
+  "model": "spherical gray Eddington envelope, declared EOS and Rosseland tables, gravitating density cx rho, fixed mass, depth origin at P_gas = 1 dyn/cm^2",
+  "validation_max_charge_layers": 0.0037631040665635496,
+  "validation_kernel_weighted": 0.0024762710978898975,
+  "failed_attempts": [
+   "pp, origin tau=0: 87%",
+   "pp, origin P_gas=1: 8.6%",
+   "pp with cx: 3.6%",
+   "spherical with depth measured from tau=1e-9: 5.0%"
+  ],
+  "cases": {
+   "declared": {
+    "ratio": 1.0,
+    "tau_at_363km": 1.0619043130036914,
+    "depth_tau1_km": 360.72182070968853
+   },
+   "Kaplan central": {
+    "ratio": 3.245123879423141,
+    "tau_at_363km": 4.865290661258448,
+    "depth_tau1_km": 299.962047886124
+   },
+   "log g -1 sigma": {
+    "ratio": 1.6251194375389884,
+    "tau_at_363km": 2.052628070747303,
+    "depth_tau1_km": 334.6804800189614
+   },
+   "log g +1 sigma": {
+    "ratio": 6.172490088521522,
+    "tau_at_363km": 11.010396335541232,
+    "depth_tau1_km": 268.83231173684896
+   },
+   "log g -2 sigma": {
+    "ratio": 0.7760149391381566,
+    "tau_at_363km": 0.7560177510419436,
+    "depth_tau1_km": 373.4055214818334
+   },
+   "log g +2 sigma": {
+    "ratio": 11.19981435528131,
+    "tau_at_363km": 24.480474313592328,
+    "depth_tau1_km": 240.92443310176995
+   },
+   "Teff -1 sigma": {
+    "ratio": 3.363045725662254,
+    "tau_at_363km": 5.15626978454698,
+    "depth_tau1_km": 297.3863202837386
+   },
+   "Teff +1 sigma": {
+    "ratio": 3.1312486182205483,
+    "tau_at_363km": 4.589735579286835,
+    "depth_tau1_km": 302.5365352247726
+   }
+  }
+ },
+ "nongray": {
+  "model": "plane-parallel LTE H+He continuum, Eddington closure, damped Unsold-Lucy; ratio to the gray model with the same opacity",
+  "flux_error_tau_le_100": 5.556664045758275e-05,
+  "factors": {
+   "declared": 2.6759024978680164,
+   "Kaplan central": 2.1186231735636527,
+   "log g -1 sigma": 2.412253023508766,
+   "log g +1 sigma": 1.8917326821272213,
+   "log g -2 sigma": 2.7972446029184614,
+   "log g +2 sigma": 1.7160085904687008,
+   "Teff -1 sigma": 2.0942659741330467,
+   "Teff +1 sigma": 2.144175761620326
+  },
+  "T0_over_Teff": 0.6436824458641249,
+  "simple_over_table_rosseland_charge_layers": [
+   0.5450313922977292,
+   0.7359854529326697
+  ],
+  "failed_attempt": "undamped Lucy with 5% clip oscillated (400 iterations, flux 5e-3)"
+ },
+ "kaplan_central": {
+  "gray": 3.245123879423141,
+  "nongray": 6.875194652030647
+ },
+ "one_sigma": {
+  "gray": [
+   1.6251194375389884,
+   6.172490088521522
+  ],
+  "nongray": [
+   3.92019927676629,
+   11.676701230562509
+  ]
+ },
+ "two_sigma": {
+  "gray": [
+   0.7760149391381566,
+   11.19981435528131
+  ],
+  "nongray": [
+   2.1707036002883067,
+   19.218977645317402
+  ]
+ },
+ "sign_kept_everywhere": true,
+ "remaining": [
+  "non-LTE (upper-layer heating) and line/metal opacity in the non-gray correction (opposite directions, size not determined)",
+  "plane-parallel geometry of the non-gray ratio"
+ ],
+ "full_goal_complete": false,
+ "snapshot_KST": "2026-09-27T20:44:49.363378+09:00"
+}

@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/mnt/e/lab/self-mass-unobservability/verification/direct_ion_eos.py", line 165, in <module>
+    if __name__=='__main__': globals()[sys.argv[1]]()
+  File "/mnt/e/lab/self-mass-unobservability/verification/direct_ion_eos.py", line 32, in prepare
+    source=CACHE/'source';shutil.copytree(e.c.gr.SOURCE,source)
+  File "/usr/lib/python3.10/shutil.py", line 559, in copytree
+    return _copytree(entries=entries, src=src, dst=dst, symlinks=symlinks,
+  File "/usr/lib/python3.10/shutil.py", line 513, in _copytree
+    raise Error(errors)
+shutil.Error: [('/home/lpaiu/work/gr-mass21/free_eos-3.0.0/www/eff_fit_fig3.png', '/home/lpaiu/work/direct-ions32/source/www/eff_fit_fig3.png', "[Errno 2] No such file or directory: '/home/lpaiu/work/gr-mass21/free_eos-3.0.0/www/eff_fit_fig3.png'"), ('/home/lpaiu/work/gr-mass21/free_eos-3.0.0/www/2.2.0-2.1.0.png', '/home/lpaiu/work/direct-ions32/source/www/2.2.0-2.1.0.png', "[Errno 2] No such file or directory: '/home/lpaiu/work/gr-mass21/free_eos-3.0.0/www/2.2.0-2.1.0.png'"), ('/home/lpaiu/work/gr-mass21/free_eos-3.0.0/www/2.2.1-2.1.0.png', '/home/lpaiu/work/direct-ions32/source/www/2.2.1-2.1.0.png', "[Errno 2] No such file or directory: '/home/lpaiu/work/gr-mass21/free_eos-3.0.0/www/2.2.1-2.1.0.png'")]

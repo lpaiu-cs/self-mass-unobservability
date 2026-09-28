@@ -1,0 +1,88 @@
+{
+  "classification": "Counterexample candidate",
+  "source_sha256": "939f04aed5c2228fdeda9980113c8c0f0ca41c5fb63aed6b58903d7ac3392053",
+  "predecessor_milestone_sha256": "063087fc86a7f2c1dd432d3fb66c96d0104ebd324554b7cff39ecc12e7e54109",
+  "decision": "Replace the inverse-momentum energy projection with a smooth polarized mass-constraint discrete gradient; verify zero/turning states, exact conservation, nonlinear GR evolution and time/space consistency before native stellar reuse.",
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "scope": "Exact polarized radial mass-constraint chain rule. Radial adjoint telescoping and shared-face summation by parts yield the discrete gradient; symmetric smooth coefficients give second-order time consistency on the positive regular branch. No physical matter/heat closure or global PDE error bound."
+  },
+  "operator_check": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "secant_relative_defect": 3.2635418554090846e-20,
+    "time_reversal_relative_defect": 0.0,
+    "zero_state_exact": true,
+    "all_momenta_zero_start_passed": true,
+    "flat_eigen_identity_max_defect": 8.101436459618389e-14,
+    "predecessor_flat_eigen_defect": 0.5153734383016492,
+    "scope": "Polarized mass identity and zero-momentum regularity retained; the complete flat radial operator including both boundaries has the exact cell-centered sine eigenmode."
+  },
+  "controls": {
+    "pilot": [
+      32,
+      32,
+      0.4
+    ],
+    "flat_space_cells": [
+      32,
+      64,
+      128
+    ],
+    "flat_steps_per_cell": 4,
+    "nonlinear_time_cells": 64,
+    "nonlinear_time_steps": [
+      128,
+      256,
+      512
+    ],
+    "nonlinear_space_cells": [
+      32,
+      64,
+      128
+    ],
+    "nonlinear_steps_per_cell": 4,
+    "amplitude": 0.05,
+    "duration": 1.7,
+    "initial": "phi=A*sin(pi*r)/(pi*r), Pi=0",
+    "boundary": "regular center, fixed outer phi=0"
+  },
+  "gates": {
+    "equation_residual": 2e-15,
+    "stable_step_relative_mass_increment": 5e-14,
+    "final_relative_mass_drift": 2e-12,
+    "time_order_minimum": 1.8,
+    "flat_exact_L2_order_minimum": 1.7,
+    "nonlinear_space_L2_order_minimum": 1.6,
+    "turning_crossings_positive": true,
+    "minimum_nontrivial_compactness": 1e-05
+  },
+  "budget": {
+    "cpu": 1,
+    "blas_threads": 1,
+    "gpu": false,
+    "full_timeout_seconds": 30,
+    "maximum_runs": 1,
+    "expected_wall_seconds": [
+      3,
+      15
+    ],
+    "basis": "The same eight frozen-size paths with the predecessor operator took 2.82s. No new grids, durations or native EOS calls."
+  },
+  "native_stellar_matter_included": false,
+  "physical_EOS_certified": false,
+  "observational_closure": false,
+  "bindings": {
+    "verification/def_scalar_regular_radius.py": "939f04aed5c2228fdeda9980113c8c0f0ca41c5fb63aed6b58903d7ac3392053",
+    "verification/def_scalar_hamiltonian.py": "27c0b4b6ece938593537af6126e49d95e470b33ac92ba2d9450026749123a165",
+    "outputs/direct-eos-gr33/def-scalar-hamiltonian/plan.json": "bf28e4e7e0c5ba6409718b0760117d23251e487fe8e138313da418d191bf440e",
+    "outputs/direct-eos-gr33/def-scalar-hamiltonian/result.json": "6fd09199952648f7ecab97a8ff07d082b118402b7b06c529799b4b753bebf2f5",
+    "outputs/direct-eos-gr33/def-scalar-hamiltonian/manifest.json": "b6d8f7689d16a27829c55f65b37b21740839ebbc928e29a71762201de6fdac59",
+    "verification/def_scalar_regular_radius_run.py": "68a5e506a0c5797f71810f9b89efeeead232e1fff75aad6bef3bd689a5d654e8",
+    "outputs/direct-eos-gr33/def-scalar-regular-radius/plan.json": "92bc463c406d0046a7eed63a02f27917e1f2cb8c1a4d700790af46377d7cb802",
+    "outputs/direct-eos-gr33/def-scalar-regular-radius/failure.json": "a791468690f76f8c150dad91b7e664bedbc5ccd7e08fa71110ae7fe0fd7c1e25"
+  },
+  "correction": "Replace geometric scalar cell weights by midpoint r^2*dr and dual gradient weights by r_left*r_right*distance; the scalar field u=r*phi then has the exact flat cell-centered Laplacian, including the half boundary cells. Use midpoint mass interpolation. This is an explicit new spatial quadrature, not a threshold change.",
+  "execution_repair": "Restore the existing duration default on the copied function. No scientific equations, initial data, grids, duration, thresholds or budget change."
+}

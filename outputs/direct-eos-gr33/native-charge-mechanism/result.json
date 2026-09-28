@@ -1,0 +1,81 @@
+{
+ "classification": "Counterexample candidate",
+ "passed": true,
+ "verdict": "ENDPOINT_CHARGE_IS_FREE_FALL_BARYON_MEMORY_REPRODUCED",
+ "composition_4x_T": {
+  "total": -2.3442699996854763e-51,
+  "state": -2.344269976254826e-51,
+  "geometry": -2.3430649873674368e-59,
+  "baryon_state": -2.3442600340630467e-51,
+  "metric_stress_state": -9.935218347079662e-57,
+  "nonrest_trace_state": -6.973463074927571e-60,
+  "state_share": 0.9999999900051401,
+  "geometry_share": 9.994859754558131e-09,
+  "closure": 1.265794861917808e-16
+ },
+ "freefall": {
+  "model": "d2xi/dt2 = -c^2 (a^2/B^2) d/dr[alpha(phi0) dphi], alpha=-4 phi, dphi = eta (R_d/r) f((t+x/c)/D), f=(4p(1-p))^4; Phi=4 pi r^2 B rho0 xi",
+  "charges": {
+   "1x": {
+    "chain_total": -2.4833128680653422e-51,
+    "chain_baryon_only": -2.483302310312335e-51,
+    "freefall": -2.3949663665963773e-51,
+    "relative": -0.03557196534192697
+   },
+   "2x": {
+    "chain_total": -2.372117616121833e-51,
+    "chain_baryon_only": -2.372107530835721e-51,
+    "freefall": -2.3497998434697216e-51,
+    "relative": -0.009404163629184281
+   },
+   "4x": {
+    "chain_total": -2.3442699996854763e-51,
+    "chain_baryon_only": -2.3442600340630467e-51,
+    "freefall": -2.338702582450042e-51,
+    "relative": -0.0023706634640578983
+   }
+  },
+  "richardson_freefall": {
+   "order": 2.0250502203869893,
+   "limit": -2.33508791061617e-51,
+   "monotone": true
+  },
+  "richardson_chain_total": {
+   "order": 1.9974694328182998,
+   "limit": -2.334965719648403e-51,
+   "monotone": true
+  },
+  "limits_relative": 5.233094719070408e-05,
+  "dM_T_relative_ranges": {
+   "1x": [
+    1.805027549547835e-06,
+    4.4685113721691714e-05
+   ],
+   "2x": [
+    1.6356937768207628e-06,
+    3.7088600730277705e-06
+   ],
+   "4x": [
+    2.3412144106564354e-07,
+    4.3394849691964885e-06
+   ]
+  },
+  "rejected": [
+   "pulse arrival from the delay array (constant +4.0e-6 s): larger deviations"
+  ]
+ },
+ "sources_sha256": {
+  "1x: readout267-identity2-work/gr/source-64.npz": "ca0579160f647b2dc480ba76de4c17ba04adaa028e6f336c81901d1e3cfd0d05",
+  "1x: readout267-identity2-work/gr/field-source-64.npz": "c850dbd06984bf37e313743a2770c1cc77e9f09c6d13630f60be7630fe81555c",
+  "2x: readout267-refined64-work/gr/source-64.npz": "cedf2ef16df11d730870dbffece2cae997e72fb034642fc8605288ae3f25df6c",
+  "2x: readout267-refined64-work/gr/field-source-64.npz": "9100c4b91f2e2ff16e26e5e46dbf92342ad8122ebf4788c59772cd77abc7cf88",
+  "4x: readout268-quad64-work/gr/source-64.npz": "673285f4e8c1412f00e374070259aac8686ac7efd4291fde21ddd7f2497cea8c",
+  "4x: readout268-quad64-work/gr/field-source-64.npz": "9023800be0cb3c3627a87c1ddbf35191aa6ec7b7f4468993be846e47929d69f2"
+ },
+ "not_modelled": [
+  "atmosphere cells (chain values kept; charge share 6e-4)"
+ ],
+ "final_charge_conclusion": "conditional negative charge; continuum limit about -2.335e-51 from two independent routes; final physical charge unadjudicated",
+ "full_goal_complete": false,
+ "snapshot_KST": "2026-09-27T16:58:59.395841+09:00"
+}

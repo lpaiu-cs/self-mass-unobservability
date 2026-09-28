@@ -1,0 +1,13 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "baryon": "B_i=4*pi*integral[a*r^2*rho_B*W dr] between material faces is constant. Composition changes still require nuclear species equations and their energy reference.",
+  "shell_mass": "M_i=m(R_out)-m(R_in)=4*pi*integral[r^2*E dr]. Its rate is F_M(in)-F_M(out), F_M=4*pi*r^2*N/a*(P*v+Q). Pressure work remains even when the heat face is closed.",
+  "momentum": "Pi_i=4*pi*integral[a*r^2*J dr]. Its rate is F_Pi(in)-F_Pi(out)+4*pi*integral[-r^2*E*N_r+2*N*r*P-r^2*J*a_t] dr, where F_Pi=4*pi*N*r^2*(P+v*Q). The heat contribution to momentum flux must be retained.",
+  "entropy": "Sigma_i=4*pi*integral[a*r^2*W*(rho_B*s-tau*Q^2/(2*K*T^2)+v*Q/T) dr]. With the full quadratic entropy closure, dSigma_i/dt=F_S(in)-F_S(out)+4*pi*integral[N*a*r^2*Q^2/(K*T^2) dr], F_S=4*pi*N*r^2*Q/(W*T). This is conditional on the declared continuum closure, not a finite-update entropy guarantee.",
+  "discrete_conservation": "If each material interface has a single shared value for its speed and flux, cell baryon inventories remain fixed and shell mass fluxes telescope exactly. A numerical update must retain mass increments and pressure work; closing heat alone does not make the moving photospheric total mass constant.",
+  "remaining": "Reconstruct subcell EOS/stress/entropy moments, solve heat-fluid primitive variables together, update metric constraints and material face trajectories, and certify the reference, quadrature and time errors. The symbolic identities do not perform these steps.",
+  "full_GR_evolution": false,
+  "physical_EOS_certified": false,
+  "nonlinear_discrete_entropy_certified": false
+}

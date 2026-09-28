@@ -1,0 +1,42 @@
+{
+  "classification": "Counterexample candidate",
+  "rows": [
+    {
+      "output": "dxdt",
+      "h": 0.0001,
+      "score": 0.00016230035624062968,
+      "worst_cell": 2274,
+      "passed": true
+    },
+    {
+      "output": "dxdt",
+      "h": 5e-05,
+      "score": 1.463547328707052e-07,
+      "worst_cell": 1986,
+      "passed": true
+    },
+    {
+      "output": "heat",
+      "h": 0.0001,
+      "score": 7.867158996677121e-06,
+      "worst_cell": 2274,
+      "passed": true
+    },
+    {
+      "output": "heat",
+      "h": 5e-05,
+      "score": 1.0822911989607924e-07,
+      "worst_cell": 2933,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "cells": 5735,
+  "burning_cells": 896,
+  "new_function_used_in_all_auxiliary_controls": true,
+  "finite_chain_derivatives": true,
+  "full_composition_Jacobian_certified": false,
+  "continuous_domain_certified": false,
+  "physical_rates_and_EOS_certified": false,
+  "GR_trajectory_recomputed": false
+}

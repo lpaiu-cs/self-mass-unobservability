@@ -1,0 +1,21 @@
+{
+  "classification": "Counterexample candidate",
+  "sha256": {
+    "verification/gr_two_carrier_analysis.py": "0887f516205ce28543e4840bbb524a9562f4213b731aa781f812ddba5d463b87",
+    "outputs/direct-eos-gr33/gr-two-carrier-evolution/plan.json": "ed515db768aa181d1b122a03165ac213d15cf2573549071b0dd0ad712d13e05d"
+  },
+  "refinements": [
+    1,
+    2,
+    4
+  ],
+  "fields": [
+    "lnrho_B",
+    "lnT",
+    "v/c",
+    "Qtotal/w0",
+    "Qrad/w0"
+  ],
+  "gate": "Every endpoint difference decreases; lnT,Qtotal,Qrad observed orders at least 1.5. All saved states and all logged internal stages must remain inside the declared cone. Require the full original duration; an early prefix is insufficient.",
+  "physical_or_rigorous_time_error_certificate": false
+}

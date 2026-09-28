@@ -1,0 +1,62 @@
+gfortran -c -O2 -freal-4-real-8 -std=legacy -o  pppack/banfac.o pppack/banfac.f
+gfortran -c -O2 -freal-4-real-8 -std=legacy -o  pppack/banslv.o pppack/banslv.f
+gfortran -c -O2 -freal-4-real-8 -std=legacy -o  pppack/bsplvb.o pppack/bsplvb.f
+gfortran -c -O2 -freal-4-real-8 -std=legacy -o  pppack/bvalue.o pppack/bvalue.f
+gfortran -c -O2 -freal-4-real-8 -std=legacy -o  pppack/interv.o pppack/interv.f
+gfortran -c -O2 -freal-4-real-8 -std=legacy -o  pppack/splint.o pppack/splint.f
+gfortran -c -O2 -freal-4-real-8 -std=legacy -o  pppack/splopt.o pppack/splopt.f
+ar rc extpppack.a pppack/banfac.o pppack/banslv.o pppack/bsplvb.o pppack/bvalue.o pppack/interv.o pppack/splint.o pppack/splopt.o
+gfortran -c -O2 -o  lapack/daxpy.o lapack/daxpy.f
+gfortran -c -O2 -o  lapack/dcopy.o lapack/dcopy.f
+gfortran -c -O2 -o  lapack/ddot.o lapack/ddot.f
+gfortran -c -O2 -o  lapack/dgemv.o lapack/dgemv.f
+gfortran -c -O2 -o  lapack/dger.o lapack/dger.f
+gfortran -c -O2 -o  lapack/disnan.o lapack/disnan.f
+gfortran -c -O2 -o  lapack/dlae2.o lapack/dlae2.f
+gfortran -c -O2 -o  lapack/dlaebz.o lapack/dlaebz.f
+gfortran -c -O2 -o  lapack/dlaev2.o lapack/dlaev2.f
+gfortran -c -O2 -o  lapack/dlagtf.o lapack/dlagtf.f
+gfortran -c -O2 -o  lapack/dlagts.o lapack/dlagts.f
+gfortran -c -O2 -o  lapack/dlaisnan.o lapack/dlaisnan.f
+gfortran -c -O2 -o  lapack/dlamch.o lapack/dlamch.f
+gfortran -c -O2 -o  lapack/dlansp.o lapack/dlansp.f
+gfortran -c -O2 -o  lapack/dlanst.o lapack/dlanst.f
+gfortran -c -O2 -o  lapack/dlapy2.o lapack/dlapy2.f
+gfortran -c -O2 -o  lapack/dlarf.o lapack/dlarf.f
+gfortran -c -O2 -o  lapack/dlarfg.o lapack/dlarfg.f
+gfortran -c -O2 -o  lapack/dlarnv.o lapack/dlarnv.f
+gfortran -c -O2 -o  lapack/dlartg.o lapack/dlartg.f
+gfortran -c -O2 -o  lapack/dlaruv.o lapack/dlaruv.f
+gfortran -c -O2 -o  lapack/dlascl.o lapack/dlascl.f
+gfortran -c -O2 -o  lapack/dlaset.o lapack/dlaset.f
+gfortran -c -O2 -o  lapack/dlasr.o lapack/dlasr.f
+gfortran -c -O2 -o  lapack/dlasrt.o lapack/dlasrt.f
+gfortran -c -O2 -o  lapack/dlassq.o lapack/dlassq.f
+gfortran -c -O2 -o  lapack/dnrm2.o lapack/dnrm2.f
+gfortran -c -O2 -o  lapack/dopgtr.o lapack/dopgtr.f
+gfortran -c -O2 -o  lapack/dopmtr.o lapack/dopmtr.f
+gfortran -c -O2 -o  lapack/dorg2l.o lapack/dorg2l.f
+gfortran -c -O2 -o  lapack/dorg2r.o lapack/dorg2r.f
+gfortran -c -O2 -o  lapack/dscal.o lapack/dscal.f
+gfortran -c -O2 -o  lapack/dspevx.o lapack/dspevx.f
+gfortran -c -O2 -o  lapack/dspmv.o lapack/dspmv.f
+gfortran -c -O2 -o  lapack/dspr2.o lapack/dspr2.f
+gfortran -c -O2 -o  lapack/dsptrd.o lapack/dsptrd.f
+gfortran -c -O2 -o  lapack/dstebz.o lapack/dstebz.f
+gfortran -c -O2 -o  lapack/dstein.o lapack/dstein.f
+gfortran -c -O2 -o  lapack/dsteqr.o lapack/dsteqr.f
+gfortran -c -O2 -o  lapack/dsterf.o lapack/dsterf.f
+gfortran -c -O2 -o  lapack/dswap.o lapack/dswap.f
+gfortran -c -O2 -o  lapack/idamax.o lapack/idamax.f
+gfortran -c -O2 -o  lapack/ieeeck.o lapack/ieeeck.f
+gfortran -c -O2 -o  lapack/iladlc.o lapack/iladlc.f
+gfortran -c -O2 -o  lapack/iladlr.o lapack/iladlr.f
+gfortran -c -O2 -o  lapack/ilaenv.o lapack/ilaenv.f
+gfortran -c -O2 -o  lapack/iparmq.o lapack/iparmq.f
+gfortran -c -O2 -o  lapack/lsame.o lapack/lsame.f
+gfortran -c -O2 -o  lapack/xerbla.o lapack/xerbla.f
+ar rc extlapack.a lapack/daxpy.o lapack/dcopy.o lapack/ddot.o lapack/dgemv.o lapack/dger.o lapack/disnan.o lapack/dlae2.o lapack/dlaebz.o lapack/dlaev2.o lapack/dlagtf.o lapack/dlagts.o lapack/dlaisnan.o lapack/dlamch.o lapack/dlansp.o lapack/dlanst.o lapack/dlapy2.o lapack/dlarf.o lapack/dlarfg.o lapack/dlarnv.o lapack/dlartg.o lapack/dlaruv.o lapack/dlascl.o lapack/dlaset.o lapack/dlasr.o lapack/dlasrt.o lapack/dlassq.o lapack/dnrm2.o lapack/dopgtr.o lapack/dopmtr.o lapack/dorg2l.o lapack/dorg2r.o lapack/dscal.o lapack/dspevx.o lapack/dspmv.o lapack/dspr2.o lapack/dsptrd.o lapack/dstebz.o lapack/dstein.o lapack/dsteqr.o lapack/dsterf.o lapack/dswap.o lapack/idamax.o lapack/ieeeck.o lapack/iladlc.o lapack/iladlr.o lapack/ilaenv.o lapack/iparmq.o lapack/lsame.o lapack/xerbla.o
+gfortran -ffree-line-length-none -O2 -c h2spectr_types.f90
+gfortran -ffree-line-length-none -O2 -c data/h2spectr_pot.f90 
+gfortran -ffree-line-length-none -O2 -c h2spectr_level.f90 
+gfortran -ffree-line-length-none -O2 -o H2spectre.exe h2spectre.f90 h2spectr_types.o h2spectr_level.o h2spectr_pot.o extpppack.a extlapack.a

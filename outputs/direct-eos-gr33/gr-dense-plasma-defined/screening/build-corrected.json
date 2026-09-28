@@ -1,0 +1,29 @@
+{
+  "classification": "Counterexample candidate",
+  "command": [
+    "gfortran",
+    "-ffixed-line-length-none",
+    "-O2",
+    "-fPIC",
+    "-shared",
+    "-std=legacy",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-dense-plasma-defined/screening/eos22-screening.f",
+    "-o",
+    "/home/lpaiu/work/direct-eos-gr33/dense-plasma-defined/pc.so"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "",
+  "only_extended_executable_line": [
+    [
+      738,
+      "     +  H1*((2.d0/5.d0)/H1U-((2.d0/5.d0)*X/H1U)**2-2.*Q2/H1D+((Q1+2.*Q2*X)/H1D)**2)"
+    ]
+  ],
+  "bindings": {
+    "verification/gr_dense_plasma_build.py": "f853b9e82592d25f1cd7397795ddf0dd61b76aaf838046af5c8477f409679373",
+    "outputs/direct-eos-gr33/gr-dense-plasma-defined/screening/eos22-screening.f": "ff8bd1a54ab8c409e790722f06a6da8731e031e60d9fa75badf91c8dff79b653",
+    "outputs/direct-eos-gr33/gr-dense-plasma-defined/screening/build.json": "bea58394d6295617c93ea0752f01910f292b8c7d389f9fa134512be09d504885",
+    "outputs/direct-eos-gr33/gr-dense-plasma-defined/plan.json": "ccb21bb6311d31d2e510e7132d3c6725fa77277de506439b1f1d07b2edea64be"
+  }
+}

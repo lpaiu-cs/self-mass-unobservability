@@ -1,0 +1,40 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Apply actual new paired photon transfers to the corrected source-knot material integrator and apply its real pressure/trace to GR; measure the remaining waveform residual and its scale relative to temporal comparisons.",
+  "reuse": "Same corrected physical background/EOS,531 cells,64/128 paths,SSP2,CFL and3.434431ms. Reuse the completed photons. Retain all source fields and the2*T deep radial stress. No physical background replay.",
+  "budgets": {
+    "pilot_seconds": 120,
+    "production_seconds": 650,
+    "CPU_processes": 3,
+    "threads_each": 1,
+    "total_material_virtual_GiB": 6,
+    "source_dispatch_seconds": 180,
+    "source_per_worker_seconds": 120,
+    "GR_seconds": 240,
+    "production_attempts": 1
+  },
+  "resource_basis": "Phase136 material used293.08s under contention;650s allows a2x margin only if fresh prefixes and warm late native-RHS samples support it. Its source/GR setup hit serial caps; use independent forked source readouts and one240s four-path GR readout from the start. These are new declared budgets, not retroactive passes of earlier caps.",
+  "forecast": "Use completed Phase136 raw-call counts times the maximum of fresh early cost and warm midpoint/endpoint raw cost, plus measured model setup and15s. Require2x max below650s. Later state/host changes remain unmeasured.",
+  "gates": {
+    "owner": 1e-08,
+    "conservation": 1e-08,
+    "directional": 0.002,
+    "branch": 0.01,
+    "small_state": 1e-06,
+    "time": 0.02,
+    "background": 0.02,
+    "pressure": 0.002,
+    "GR_quadrature": 0.002,
+    "GR_independent": 1e-09
+  },
+  "interpretation": "Compare absolute energy/H mismatch to the larger absolute photon/material time difference on the same17 times. This diagnoses numerical scale; it is not an error enclosure, uniform contraction or full fixed-point certificate.",
+  "stop": "One production only; stop on any numerical gate or declared cap. No automatic budget expansion, additional waveform loop, finer mesh/clock/horizon or physical replay.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_corrected_motion_feedback.py": "8ab455d4cfeb36aa3b27b35bd1c9d872539552718023ebdae4c00c474cbba69d",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_corrected_motion_feedback.py": "669ecac5d3d9e7a626a7423db2acd319f1915409d543c66a15adbb60e091a371",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_corrected_joint_return.py": "f8991930808a653d659a4a1d97da558a00762137617932121c266b90b9bb855c",
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_corrected_joint_return.py": "60fdc8467692dae6f57eb032dbe35f54b1c6cb3bfc1e1e225e087e9b62a2b59f",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/audit.json": "82d8d2ab9222750c9429e909707aff205931c8181e5ee81ac2459a4e8c514766",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/stage-aligned/audit.json": "1eb0af6c4c221e32f8bb392c63be661880054c87084b9a54ac15fed0273659e1"
+  }
+}

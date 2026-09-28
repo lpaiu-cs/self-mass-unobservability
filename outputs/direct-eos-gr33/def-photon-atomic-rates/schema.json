@@ -1,0 +1,39 @@
+{
+  "classification": "Counterexample candidate",
+  "lines": [
+    "catalog_stage_index",
+    "lower_retained_level_index",
+    "upper_retained_level_index",
+    "frequency_Hz",
+    "oscillator_strength_f",
+    "integrated_absorption_cm_inverse_Hz",
+    "integrated_stimulated_cm_inverse_Hz",
+    "integrated_spontaneous_cgs_per_sr",
+    "integrated_net_absorption_cm_inverse_Hz",
+    "conditional_up",
+    "conditional_down"
+  ],
+  "continuum_coefficients": [
+    "native_global_level",
+    "catalog_stage_index",
+    "retained_level_index",
+    "inverse_factor_bound_over_parent_ground",
+    "threshold_erg",
+    "threshold_shift_erg",
+    "parent_ground_fraction"
+  ],
+  "cross_section_metadata": [
+    "catalog_stage_index",
+    "retained_level_index",
+    "actual_photon_energy_over_kT",
+    "actual_outgoing_electron_energy_over_kT"
+  ],
+  "sigma_unit": "cm^2",
+  "bf_forward_unit": "cm^-1",
+  "bf_reverse_prefactor_unit": "cm^-1 before exp(-u)",
+  "bf_stimulated_unit": "cm^-1",
+  "bf_spontaneous_unit": "erg s^-1 cm^-3 Hz^-1 sr^-1",
+  "bf_net_unit": "cm^-1",
+  "line_profile": "Frequency-integrated amplitudes only; no finite-profile redistribution has been assigned.",
+  "native_frequency_conversion": "Energy in native SIGK coordinates = frequency * float32(6.6256e-27); physical photon energy adds the stored threshold shift."
+}

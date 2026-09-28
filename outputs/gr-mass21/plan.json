@@ -1,0 +1,31 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "b5e9028",
+  "target_GM_solar": 0.197536385307,
+  "mass_relative_tolerance": 1e-08,
+  "source_profile": "outputs/thermal-robustness20/runs/mesh/selected.data.gz",
+  "profile_sha256": "806064813621dde3212bb0f09863c8eb05e1e42041ae2547de7de75ce2f2fc9f",
+  "eos": "Unmodified FreeEOS 3.0.0 EOS1 (3,1,-2); all supported ionization stages.",
+  "thermal_closure": "Prescribed log T(log P) and isotope number abundances(log P), interpolated from the mesh-refined evolved profile. Above the last central sample hold T and composition fixed. Re-evaluate rho(P,T,X) and u(P,T,X) with the EOS; solve the full TOV equations and proper baryon integral.",
+  "surface": "Original first-zone pressure; retain original photospheric luminosity only for a conditional Teff diagnostic. No luminosity transport or GR evolution is solved.",
+  "composition": "FreeEOS supports 20 elements but excludes fluorine. Primary model omits f17,f18,f19 and renormalizes the remaining baryon fractions; record exact removed abundance. Trace substitution controls are separate model sensitivity tests, not certified error bounds.",
+  "optical": {
+    "Teff_K": [
+      15500,
+      16100
+    ],
+    "logg_cgs": [
+      5.67,
+      5.97
+    ]
+  },
+  "controls": [
+    "neutral dilute gas energy zero",
+    "isothermal first law",
+    "EOS density-pressure inversion",
+    "Newtonian same-EOS structure",
+    "GR pressure-coordinate versus radius-coordinate integration",
+    "table resolution and solver tolerance refinement"
+  ],
+  "claim_boundary": "Numerical GR mass match for the declared EOS and thermal/composition closure only. This does not complete the original 22-isotope evolving rotating observed star or observational inference."
+}

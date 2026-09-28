@@ -1,0 +1,785 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "rows": [
+    {
+      "classification": "Counterexample candidate",
+      "reference": 128,
+      "steps": 64,
+      "completed_steps": 4,
+      "new_steps": 4,
+      "seconds": 38.14687447100002,
+      "operator_point_seconds": 4.067692047999998,
+      "operator_points": 3,
+      "stepping_seconds": 33.77105232400001,
+      "energy_balance_relative": 6.695366687475745e-16,
+      "species_balance_relative": 1.5998902308765872e-16,
+      "linear_relative": 5.9351576115598845e-15,
+      "max_Krylov_iterations": 101,
+      "frequency_moment_relative": 6.60820349428787e-17,
+      "endpoint_photon_reference_energy_erg": 2.2410072711630916e-06,
+      "endpoint_material_reference_energy_erg": -2.3256011954093374e-12,
+      "endpoint_material_energy_L1_erg": 6.651536349188129e-12,
+      "additional_material_motion_evolved": false,
+      "full_GR_feedback": false,
+      "final_charge_solved": false,
+      "endpoint_material_nonrest_energy_erg": -2.3256011954093374e-12,
+      "velocity_jet_relative": 6.085966434433605e-09,
+      "primitive_mapping_relative": 0.0,
+      "conserved_material_input_applied": true,
+      "maximum_extended_stage_residual": 5.9351576115598845e-15,
+      "maximum_refinement_steps": 1,
+      "initial_GMRES_stagnations": 5,
+      "actual_completed_steps": 6,
+      "actual_new_steps": 6,
+      "split_completed_macro_steps": 2,
+      "base_steps": 64,
+      "passed": true,
+      "actual_angular_quadrature_relative": 1.1585522929731408e-16,
+      "time_integrator": "RadauIIA2 with one prescribed local bisection"
+    },
+    {
+      "classification": "Counterexample candidate",
+      "reference": 128,
+      "steps": 128,
+      "completed_steps": 8,
+      "new_steps": 8,
+      "seconds": 70.50626664400002,
+      "operator_point_seconds": 4.159580360000035,
+      "operator_points": 3,
+      "stepping_seconds": 65.98114099599997,
+      "energy_balance_relative": 7.921543629993927e-16,
+      "species_balance_relative": 7.221472607931645e-17,
+      "linear_relative": 7.430030193860017e-15,
+      "max_Krylov_iterations": 95,
+      "frequency_moment_relative": 6.732112993353671e-17,
+      "endpoint_photon_reference_energy_erg": 2.2446299489162723e-06,
+      "endpoint_material_reference_energy_erg": -2.355368606489209e-12,
+      "endpoint_material_energy_L1_erg": 6.672228658098292e-12,
+      "additional_material_motion_evolved": false,
+      "full_GR_feedback": false,
+      "final_charge_solved": false,
+      "endpoint_material_nonrest_energy_erg": -2.355368606489209e-12,
+      "velocity_jet_relative": 6.085966434433605e-09,
+      "primitive_mapping_relative": 0.0,
+      "conserved_material_input_applied": true,
+      "maximum_extended_stage_residual": 7.430030193860017e-15,
+      "maximum_refinement_steps": 1,
+      "initial_GMRES_stagnations": 14,
+      "actual_completed_steps": 12,
+      "actual_new_steps": 12,
+      "split_completed_macro_steps": 4,
+      "base_steps": 128,
+      "passed": true,
+      "actual_angular_quadrature_relative": 2.6797485190030656e-17,
+      "time_integrator": "RadauIIA2 with one prescribed local bisection"
+    }
+  ],
+  "time_comparison": [
+    0.0007616362203433154,
+    0.004461389530429524,
+    0.0038054336910915,
+    0.004826498048580865,
+    0.0007736623837726351,
+    0.016283685201318794
+  ],
+  "original_time_gate": 0.02,
+  "full_horizon_completed": false,
+  "physical_final_charge_solved": false,
+  "full_goal_complete": false,
+  "remaining": "A prefix alone is not a full-path result. Full-path angular/time consumers and a measured budget must be checked separately; the original physical gates remain unchanged.",
+  "final_charge_conclusion": "unadjudicated on the corrected coupled solution",
+  "actual_time_grid": [
+    {
+      "base_steps": 64,
+      "full_planned_actual_steps": 117,
+      "prefix_actual_steps": 6,
+      "slow_deep_cells": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "split_macro_steps": [
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        15,
+        16,
+        17,
+        19,
+        20,
+        21,
+        23,
+        24,
+        25,
+        27,
+        28,
+        29,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63
+      ]
+    },
+    {
+      "base_steps": 128,
+      "full_planned_actual_steps": 227,
+      "prefix_actual_steps": 12,
+      "slow_deep_cells": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "split_macro_steps": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        12,
+        13,
+        14,
+        15,
+        16,
+        21,
+        22,
+        23,
+        24,
+        25,
+        30,
+        31,
+        32,
+        33,
+        34,
+        38,
+        39,
+        40,
+        41,
+        42,
+        47,
+        48,
+        49,
+        50,
+        51,
+        55,
+        56,
+        57,
+        58,
+        59,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127
+      ]
+    }
+  ],
+  "actual_coupled_Radau_prefix_completed": true,
+  "time_accuracy_accepted": true,
+  "acceptance_scope": "0.214651945ms prefix only; no full coupled solution or charge",
+  "pressure_mode_inspection": {
+    "classification": "Counterexample candidate",
+    "rows": [
+      {
+        "t": 0.0,
+        "cell": 15,
+        "gas_matrix_times_h": [
+          [
+            3.977511151288371e-05,
+            2.9137294803435494e-05
+          ],
+          [
+            -1.1260836199914512,
+            -0.32046909593135287
+          ]
+        ],
+        "gas_eigenvalues_times_h": [
+          [
+            -6.262928360523793e-05,
+            0.0
+          ],
+          [
+            -0.32036669153623465,
+            0.0
+          ]
+        ],
+        "pressure_coordinate_matrix_times_h": [
+          [
+            -9.188413672888569e-05,
+            -8.320512158605175e-06
+          ],
+          [
+            -1.1260836199914512,
+            -0.32033743668311104
+          ]
+        ],
+        "pressure_map": [
+          2.689113788629681,
+          0.0003144053368347974
+        ],
+        "pressure_map_relative_interval_change": [
+          -1.7027814962571257e-09,
+          -1.7660177682436446e-09
+        ]
+      },
+      {
+        "t": 0.0,
+        "cell": 16,
+        "gas_matrix_times_h": [
+          [
+            1.6050593827295815e-05,
+            1.1748081131535126e-05
+          ],
+          [
+            -1.1268165679227664,
+            -0.32036900431031673
+          ]
+        ],
+        "gas_eigenvalues_times_h": [
+          [
+            -2.5273556419560465e-05,
+            0.0
+          ],
+          [
+            -0.3203276801600698,
+            0.0
+          ]
+        ],
+        "pressure_coordinate_matrix_times_h": [
+          [
+            -3.7076531422226966e-05,
+            -3.3549222616035877e-06
+          ],
+          [
+            -1.1268165679227664,
+            -0.3203158771850672
+          ]
+        ],
+        "pressure_map": [
+          1.0849637815636846,
+          5.1153850906353146e-05
+        ],
+        "pressure_map_relative_interval_change": [
+          -5.940368310574838e-10,
+          -6.130137411154409e-10
+        ]
+      },
+      {
+        "t": 0.0001253380179005018,
+        "cell": 15,
+        "gas_matrix_times_h": [
+          [
+            3.9872705794724606e-05,
+            2.8774809282823656e-05
+          ],
+          [
+            -1.1291537080241796,
+            -0.31761216473717996
+          ]
+        ],
+        "gas_eigenvalues_times_h": [
+          [
+            -6.244570499906035e-05,
+            0.0
+          ],
+          [
+            -0.3175098463263861,
+            0.0
+          ]
+        ],
+        "pressure_coordinate_matrix_times_h": [
+          [
+            -9.214549045921711e-05,
+            -8.3489409379553e-06
+          ],
+          [
+            -1.1291537080241796,
+            -0.317480146540926
+          ]
+        ],
+        "pressure_map": [
+          2.6891137859559597,
+          0.00031440533651058244
+        ],
+        "pressure_map_relative_interval_change": [
+          -1.7027814962571257e-09,
+          -1.7660177682436446e-09
+        ]
+      },
+      {
+        "t": 0.0001253380179005018,
+        "cell": 16,
+        "gas_matrix_times_h": [
+          [
+            1.6085611347500658e-05,
+            1.1614523652837818e-05
+          ],
+          [
+            -1.1295460096064176,
+            -0.31776416857589657
+          ]
+        ],
+        "gas_eigenvalues_times_h": [
+          [
+            -2.520343496047656e-05,
+            0.0
+          ],
+          [
+            -0.3177228795295886,
+            0.0
+          ]
+        ],
+        "pressure_coordinate_matrix_times_h": [
+          [
+            -3.717020156392876e-05,
+            -3.3656625801090754e-06
+          ],
+          [
+            -1.1295460096064176,
+            -0.31771091276298513
+          ]
+        ],
+        "pressure_map": [
+          1.0849637811873478,
+          5.11538508880428e-05
+        ],
+        "pressure_map_relative_interval_change": [
+          -5.940368310574838e-10,
+          -6.130137411154409e-10
+        ]
+      },
+      {
+        "t": 0.0002146519448705439,
+        "cell": 15,
+        "gas_matrix_times_h": [
+          [
+            3.994224996581523e-05,
+            2.851650772470165e-05
+          ],
+          [
+            -1.1313414051247064,
+            -0.31557635989273647
+          ]
+        ],
+        "gas_eigenvalues_times_h": [
+          [
+            -6.230963356207717e-05,
+            0.0
+          ],
+          [
+            -0.3154741080092086,
+            0.0
+          ]
+        ],
+        "pressure_coordinate_matrix_times_h": [
+          [
+            -9.233172707260183e-05,
+            -8.369198845070356e-06
+          ],
+          [
+            -1.1313414051247064,
+            -0.31544408591569806
+          ]
+        ],
+        "pressure_map": [
+          2.689113784050708,
+          0.00031440533627955197
+        ],
+        "pressure_map_relative_interval_change": [
+          -1.7027814962571257e-09,
+          -1.7660177682436446e-09
+        ]
+      },
+      {
+        "t": 0.0002146519448705439,
+        "cell": 16,
+        "gas_matrix_times_h": [
+          [
+            1.6110564289111162e-05,
+            1.1519352665626709e-05
+          ],
+          [
+            -1.1314909674036289,
+            -0.31590800304487915
+          ]
+        ],
+        "gas_eigenvalues_times_h": [
+          [
+            -2.5151705682936504e-05,
+            0.0
+          ],
+          [
+            -0.3158667407749071,
+            0.0
+          ]
+        ],
+        "pressure_coordinate_matrix_times_h": [
+          [
+            -3.72369494536365e-05,
+            -3.37331596444458e-06
+          ],
+          [
+            -1.1314909674036289,
+            -0.3158546555311364
+          ]
+        ],
+        "pressure_map": [
+          1.0849637809191761,
+          5.115385087499513e-05
+        ],
+        "pressure_map_relative_interval_change": [
+          -5.940368310574838e-10,
+          -6.130137411154409e-10
+        ]
+      }
+    ],
+    "rates": [
+      {
+        "steps": 64,
+        "cells": [
+          {
+            "cell": 15,
+            "photon_rate": -4.085978603120658e-09,
+            "gas_rate": -3.765865259261155e-09,
+            "map_rate": 1.384035663259431e-20,
+            "pressure": -1.0659386712443556e-13,
+            "gas_pressure_terms": [
+              -2.9298976319781656e-12,
+              2.82330376485373e-12
+            ]
+          },
+          {
+            "cell": 16,
+            "photon_rate": 5.316490510116664e-10,
+            "gas_rate": 1.018363086503569e-09,
+            "map_rate": -8.592877639327412e-20,
+            "pressure": 5.5451142168678886e-14,
+            "gas_pressure_terms": [
+              8.192868644774754e-13,
+              -7.638357223087965e-13
+            ]
+          }
+        ]
+      },
+      {
+        "steps": 128,
+        "cells": [
+          {
+            "cell": 15,
+            "photon_rate": -4.007702577006959e-09,
+            "gas_rate": -3.814666226834949e-09,
+            "map_rate": 2.0759460815890135e-19,
+            "pressure": -1.32378334138943e-13,
+            "gas_pressure_terms": [
+              -2.9923001095123256e-12,
+              2.8599217753733828e-12
+            ]
+          },
+          {
+            "cell": 16,
+            "photon_rate": 5.316720291024365e-10,
+            "gas_rate": 1.0123107446371433e-09,
+            "map_rate": -8.695328188417389e-20,
+            "pressure": 5.567632915404571e-14,
+            "gas_pressure_terms": [
+              8.149727069371548e-13,
+              -7.592963777831091e-13
+            ]
+          }
+        ]
+      }
+    ],
+    "deep_cell_arrivals": [
+      {
+        "cell": 0,
+        "seconds": 0.0035585825534233443
+      },
+      {
+        "cell": 1,
+        "seconds": 0.003329254813852984
+      },
+      {
+        "cell": 2,
+        "seconds": 0.0030999270762657976
+      },
+      {
+        "cell": 3,
+        "seconds": 0.002870599340657754
+      },
+      {
+        "cell": 4,
+        "seconds": 0.002641271607025026
+      },
+      {
+        "cell": 5,
+        "seconds": 0.0024119438753635114
+      },
+      {
+        "cell": 6,
+        "seconds": 0.002182616145669282
+      },
+      {
+        "cell": 7,
+        "seconds": 0.0019532884179384183
+      },
+      {
+        "cell": 8,
+        "seconds": 0.0017239606921668868
+      },
+      {
+        "cell": 9,
+        "seconds": 0.0014946329683508568
+      },
+      {
+        "cell": 10,
+        "seconds": 0.0012653052464864452
+      },
+      {
+        "cell": 11,
+        "seconds": 0.0010359775265695898
+      },
+      {
+        "cell": 12,
+        "seconds": 0.0008066498085965272
+      },
+      {
+        "cell": 13,
+        "seconds": 0.0005773220925633457
+      },
+      {
+        "cell": 14,
+        "seconds": 0.00034799437846617736
+      },
+      {
+        "cell": 15,
+        "seconds": 0.0001253380179005018
+      },
+      {
+        "cell": 16,
+        "seconds": 1.4009838299627451e-05
+      },
+      {
+        "cell": 17,
+        "seconds": 9.006324620363727e-06
+      },
+      {
+        "cell": 18,
+        "seconds": 6.337783991798052e-06
+      }
+    ],
+    "prefix_end_seconds": 0.0002146519448705439,
+    "deep_cells": 19,
+    "scope": "Actual local gas block and saved endpoint response only. No full coupled spectral bound or unique-error-cause proof."
+  },
+  "pressure_prefix_bottleneck_resolved": true,
+  "cost": {
+    "recorded_action_seconds": 172.84838079000002,
+    "CPU_seconds": 147.27451479200002,
+    "maximum_recorded_RSS_bytes": 2403663872,
+    "original_total_seconds": 420,
+    "CPU_threads": 1,
+    "virtual_GiB": 3,
+    "scope": "Action bodies including preserved grid-sum check failure; imports, derivation, writing, publication and Git excluded. One6/12-step pair, no full-horizon or free-material production."
+  },
+  "previous_master_commit": "4f469fdfe71e6eeb2fee53dd02cd716664284963",
+  "previous_master_sha256": "d6e4cf49eeeac00d3b47dabf3b0bef639daddd85ca49110ef9c107ef4b17b9e0",
+  "preserved_phase171_nondoc_files": 37,
+  "preserved_document_prefixes": {
+    "docs/dynamic-charge-completion.md": {
+      "sha256": "9bc15a1a0ace9135244cc8b5c2ff515184fba67423a2e3868b38a7b1e93f6507",
+      "bytes": 107160
+    },
+    "docs/nonadiabatic-regime.md": {
+      "sha256": "da0f8ba17ed2b70b91184a93769ff706948aa0df97267e2c0ed2c2d625de6a32",
+      "bytes": 243066
+    },
+    "docs/adiabatic-limit.md": {
+      "sha256": "935bea4f47eb21ce3c53921053a50efc37f3ebedf25fa54c415c5af687291074",
+      "bytes": 235030
+    },
+    "docs/model-definition.md": {
+      "sha256": "c4c63ffe202f434f7b8a9bbdc2717916972e1d6523b1fa7eb893654269def590",
+      "bytes": 249083
+    },
+    "docs/observable-targets.md": {
+      "sha256": "385bd75f2575840cad36c4c1e2ab11e401180c5025fd9ec1cdeab066b4e87d8a",
+      "bytes": 240622
+    },
+    "docs/failure-ledger-dynamic-chi.md": {
+      "sha256": "7313c84f0cadc990f49bd459c3d0381654d29dbb0e6bb8d4274a7c3abf6ea9da",
+      "bytes": 278310
+    }
+  },
+  "raw_files": 38,
+  "sha256": {
+    "verification/resolve_native_pressure_front.py": "57b11d9cdc5fa54509d6097bd68b5f6b96eaeeb0b349011276e1fa3f21ff0b23",
+    "notes/REQUEST172_PRESSURE_ONSET_RESOLUTION_KO.md": "26c9b79ec5750575846849e147478da4b2e3f4c9c8858664afc54a913b5cb620",
+    "docs/dynamic-charge-completion.md": "839f2fe936c092137db5dd7e89e6304376b71997fbc847de281237b4638a656f",
+    "docs/nonadiabatic-regime.md": "7aa301c0453635722b9b27c0c8b1b882590069057fc703e39a446846f110cf8c",
+    "docs/adiabatic-limit.md": "33c33a13ec1e80bb44ab242bf1652963fbf633029180d9b0963372782e30d541",
+    "docs/model-definition.md": "e9219fdebddef8ad3b1f022413c21b86fbc93b5afffd369bf9275a3ca170fdd9",
+    "docs/observable-targets.md": "092e9ad16eb4799d5ab3f3658d14b88a0dd15e9786d3e5fac9e699e22b2b6d33",
+    "docs/failure-ledger-dynamic-chi.md": "ebabab3f4cd1e0b443d2ec6aa37e956dcedb8976475515d9818fe3fc86fe828f",
+    "outputs/direct-eos-gr33/native-pressure-front/final-result.json": "102eb18ae315494995c8b73491a3a43480eb32ef6c286e2f68cffb404e66bc09",
+    "outputs/direct-eos-gr33/native-pressure-front/preservation.json": "9f945402e660a7ac6a011e618a8397b3100953c392f92726b014eeaab6b67cf9",
+    "outputs/direct-eos-gr33/native-pressure-front/publication-producer.py": "dd4ddd35b12c95a8a84219fd30f49510e3683d82a165d28811e28beb706d3e44",
+    "outputs/direct-eos-gr33/native-pressure-front/publication.json": "ff6359230df150825090dd104c51a19516598f63c5945d6dd38c18f43e85375c",
+    "outputs/direct-eos-gr33/native-pressure-front/completed/check-receipt.json": "670220c324e7aee90c446f33f7ef5ac82c47a0e47bd6f6c0c6b622d37d17a5e2",
+    "outputs/direct-eos-gr33/native-pressure-front/completed/check-sum-receipt.json": "ed75fb04ade7d7a46cd2ca1da1adfa4505f5ca5fa54244faa53d370373bac30b",
+    "outputs/direct-eos-gr33/native-pressure-front/completed/final-producer.py": "57b11d9cdc5fa54509d6097bd68b5f6b96eaeeb0b349011276e1fa3f21ff0b23",
+    "outputs/direct-eos-gr33/native-pressure-front/completed/finish-receipt.json": "9ffb49c1dcd4b4e3d50032f832d7db146fec77d18004ebe508d4304b91c3cda3",
+    "outputs/direct-eos-gr33/native-pressure-front/completed/grid-check.json": "0b17311c9e9d2823ac5b419715f80146607fba4a5b6aedc5f4c8414be115e954",
+    "outputs/direct-eos-gr33/native-pressure-front/completed/grid-sum-producer.py": "d090bd241007d0390dac4e9564eae3fea99d3c81b9bb2efda53a01b6672d5c49",
+    "outputs/direct-eos-gr33/native-pressure-front/completed/grid-sum-repair.json": "ca7d60645683df4a37f45159cf79965a874e266ca07c22214d14844d60b05a38",
+    "outputs/direct-eos-gr33/native-pressure-front/completed/inspection-plan.json": "ebb862f6484a66a41b17e4c82c801ffd93672472ba076bd22125a6567df67c6f",
+    "outputs/direct-eos-gr33/native-pressure-front/completed/inspection-producer.py": "bc829a17d19371c0e8436536b4ec8f40599793f0d727a7fcf79140e33b898540",
+    "outputs/direct-eos-gr33/native-pressure-front/completed/inspection-receipt.json": "59e1b162d630add84f63fb003463eb4bc6d3dfb0105e17c7fcacc4c6068076b2",
+    "outputs/direct-eos-gr33/native-pressure-front/completed/inspection.json": "788e76beec8ac785f4f009bd15799d3e804eb834d3c283fa90791113ad71c48d",
+    "outputs/direct-eos-gr33/native-pressure-front/completed/normalization.json": "820244d5d23554811c792b52a45a3e28317392019f5aac7d8733eeb3b4d28706",
+    "outputs/direct-eos-gr33/native-pressure-front/completed/onset-toy.json": "7018a054771b918e4cc023f0fa7163fc347749aae9d4c65d3bd1b1fc9c91a58c",
+    "outputs/direct-eos-gr33/native-pressure-front/completed/photon-conservation-plan.json": "248525a3b9808f00f193c48d9739000a1c32eea1cf8197cf8c3ad8b939a0bb2d",
+    "outputs/direct-eos-gr33/native-pressure-front/completed/pilot-receipt.json": "1fb275436ad8ea5e98bd869e1b180ee7a4799b737752fdbed2a139ba0d352476",
+    "outputs/direct-eos-gr33/native-pressure-front/completed/plan.json": "9e0d94c8204ad0b179270a7089befc03ec25449d5627859b533ec1e06551443b",
+    "outputs/direct-eos-gr33/native-pressure-front/completed/prepare-receipt.json": "fcfe036c159f02c62adbdf6859deac0d8e31c50b8fd0be29f2618d2ea643cf0b",
+    "outputs/direct-eos-gr33/native-pressure-front/completed/registered-producer.py": "fbc5731303122d9885ca375e5066f04e623b01be5fcaf2c4f185242cd413016b",
+    "outputs/direct-eos-gr33/native-pressure-front/completed/result.json": "e1e7f301b7b74b94790757236e50af96d1b7a31f5c4f4ec7fcb370c7c39ca885",
+    "outputs/direct-eos-gr33/native-pressure-front/completed/symbolic.json": "a28adb111f99e06b3aa35b7d90cf3ceffbe5b8c289aa7b0c083b1dd268d8db32",
+    "outputs/direct-eos-gr33/native-pressure-front/completed/sweep-0/material/steps-128-reference-128.npz": "dcb46e493c360e33ac6df6c6e7bb4e5d7cc80e218006a1fbcc08033d6926580f",
+    "outputs/direct-eos-gr33/native-pressure-front/completed/sweep-0/material/steps-64-reference-128.npz": "76e5a3c54e5f5e2ed88a9c3957903569db4397d4088898f4ce6f4729124359d4",
+    "outputs/direct-eos-gr33/native-pressure-front/completed/sweep-0/photons/steps-128-reference-128.npz": "5d2b1936e44617760120a61ca6445a044ad0b91c0a4c6799b59f51832adc2678",
+    "outputs/direct-eos-gr33/native-pressure-front/completed/sweep-0/photons/steps-64-reference-128.npz": "5d2b1936e44617760120a61ca6445a044ad0b91c0a4c6799b59f51832adc2678",
+    "outputs/direct-eos-gr33/native-pressure-front/completed/sweep-1/expanded-front-run.py": "634b2771a4572d645daa0901b81078d1c66450bcbc8f38dc5d75b95bb4b9b520",
+    "outputs/direct-eos-gr33/native-pressure-front/completed/sweep-1/expanded-moment-run.py": "8345268535344a95b049d80966821d6d23db738a0870085bba97ea27ba404327",
+    "outputs/direct-eos-gr33/native-pressure-front/completed/sweep-1/expanded-radau-run.py": "1f1b251019f8fb5193efff7c682704ebbda2258dfe9833fb343278ac4da565ab",
+    "outputs/direct-eos-gr33/native-pressure-front/completed/sweep-1/expanded-refined-run.py": "f32c18289497acb8e6aba46409cb319bee7f8baf1e7c0f5735c9288e77e36fe2",
+    "outputs/direct-eos-gr33/native-pressure-front/completed/sweep-1/expanded-run.py": "391495a5832815036d143c0b955c138440204aef1c38abb46a7510ed39086a3d",
+    "outputs/direct-eos-gr33/native-pressure-front/completed/sweep-1/photons/pilot-128-checkpoint.npz": "b4bef0c084ae6085f84c09e61dc8ada7162ed30286daaaf6dcf7e25b60a60c9c",
+    "outputs/direct-eos-gr33/native-pressure-front/completed/sweep-1/photons/pilot-128-progress.json": "1ad04479ba4f1d3616ad1707c81953cb640ba634b4b4a60d25c033dbd317a624",
+    "outputs/direct-eos-gr33/native-pressure-front/completed/sweep-1/photons/pilot-128.json": "6a48010aaface14ca31b23990a6ab217170265248fa5cf2beb58da409c59263c",
+    "outputs/direct-eos-gr33/native-pressure-front/completed/sweep-1/photons/pilot-128.npz": "ee824dc73fd60ded01c705d8d8ce1902c15a17a76e760936ce30cd3cc5776954",
+    "outputs/direct-eos-gr33/native-pressure-front/completed/sweep-1/photons/pilot-64-checkpoint.npz": "36c54494e9be4685c563a67c4682c41214027fd97e3e7d6f6fcc1cfe1ce0a86d",
+    "outputs/direct-eos-gr33/native-pressure-front/completed/sweep-1/photons/pilot-64-progress.json": "872e5cca1a84ec1b2fb997969f7a5c05b2f769efe02703b914d8bf65e5708c5b",
+    "outputs/direct-eos-gr33/native-pressure-front/completed/sweep-1/photons/pilot-64.json": "8eb54dbda4f1ab9d8b58dff13dab73dd3d9a039bbb7aa174271229dd63c090ac",
+    "outputs/direct-eos-gr33/native-pressure-front/completed/sweep-1/photons/pilot-64.npz": "24748817b3583dccddfb101e9accf6b4121aefba70449aab90fb488834197a3d",
+    "outputs/direct-eos-gr33/native-pressure-front/completed/sweep-1/photons/pilot.json": "4949cda75ec8408e162d34aa025e067de777066eba4cb2868ac4b28b2c20237e"
+  }
+}

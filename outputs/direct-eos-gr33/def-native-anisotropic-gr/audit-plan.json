@@ -1,0 +1,28 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Check the corrected characteristic readout with a separately evaluated Jordan-radius integral and reconstruct J directly at each center instead of interpolating its sparse quadrature samples.",
+  "original_verdicts": "Both fields.json files remain failed. The first fails field quadrature; the characteristic version fails compatibility with the old unsplit direct quadrature. No prior verdict or threshold is replaced.",
+  "independent_decision": "A separate accuracy audit passes only if an independent Jordan-radius characteristic-split integral matches the corrected optical-coordinate answer at the original1e-9 equivalence tolerance, and the original0.02 time/0.002 radial gates pass. This does not make old compatibility or full physical closure pass.",
+  "budget": {
+    "seconds": 30,
+    "new_fluid_steps": 0,
+    "new_native_calls": 0,
+    "CPU_threads": 1
+  },
+  "measured_basis": "Characteristic three-path evaluation18.88s; this audit is one model load and two one-dimensional endpoint integrals, then531 center algebraic constraints.",
+  "gates": {
+    "independent_equivalence": 1e-09,
+    "time": 0.02,
+    "quadrature": 0.002,
+    "exact_box": 3e-15
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_anisotropic_gr.py": "d166d508cebd63d005bb0a6b5abcc7461b2fde6d4700622df201beb60a6fbc10",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_characteristic_gr.py": "1630d3f008a1e59748d318f921eed7da8fbea4c49d33e5b86617f67009a27076",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_anisotropic_gr.py": "8c70ea3234a101e81db0c159c0fcf4edf02b16f0910b066f2781699d74efca85",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-anisotropic-gr/fields.json": "3b6697c0e8260ca5dc46ca9193e9b608863c731252cbb169148ee1b9982e376b",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-anisotropic-gr/characteristic/fields.json": "c63bd6aabaa7234e9d793eaad4a7d0b095cb6d40ba4923a1d89dfe52372f8ae3",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-anisotropic-gr/characteristic/fields-128-g8.npz": "9609e1883c35a34419328f932285507e563481e7387059f5d2b9373d75376534",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-anisotropic-gr/source-128.npz": "9990c6eac97d9b3fe94a37ae7901a99bdbeefcc9a93c923ccba80fb136531d30"
+  }
+}

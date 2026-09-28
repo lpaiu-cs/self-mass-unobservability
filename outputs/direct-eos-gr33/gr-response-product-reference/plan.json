@@ -1,0 +1,20 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "7bb5d3b",
+  "bits": 256,
+  "scalar_reference_tolerance": 2e-13,
+  "scalar_absolute_gate": 2e-11,
+  "bindings": {
+    "verification/gr_response_product_reference.py": "941ee7448994d371421e71dbf60b8138f7455a40ef57466c389cbb5c1a5b440d",
+    "outputs/direct-eos-gr33/gr-response-product-defined/manifest.json": "6f7c5acf467257e5de1f82220157ba26bf52c840be82a40f4cd6e64565f9626c",
+    "outputs/direct-eos-gr33/gr-response-product-defined/result.json": "a3945fad83bb48e6cd535db68ffe7e2c4e6b9a197dd0538c1196de14ebfd2598",
+    "outputs/direct-eos-gr33/gr-polarization-thermodynamics/states.npz": "a91f70b8277d7984c7954d277b01956dd31dfd4c12b57989fed8b7a2fccceb69",
+    "outputs/direct-eos-gr33/gr-logarithmic-response/inputs.npz": "c9695e054b3ef6bf11b63a24909d7a4e549429d65a72bea4d9ad982b76afda53",
+    "outputs/direct-eos-gr33/gr-electron-density-refined-export/result.json": "6589248e1b37f0ddf8f14054ea50403aedfe276f87a2715b9dea355e48234bcd",
+    "outputs/direct-eos-gr33/gr-smooth-response-defined/manifest.json": "503fbe815c41464f5196498ed50a9dc2d9ed21e8d3a934a8e654565267f43711",
+    "outputs/direct-eos-gr33/gr-smooth-response-defined/complete-response.jsonl.gz": "a553c3dd4df754fe1facd7d37f102d7619b9aa4dd3dfd6e444857da8df5cb439",
+    "verification/gr_polarization_thermodynamics.py": "9fa8573f636f7ee896bce66a6f85b22448dc6e54512fcec7a71cea23d367d1b0"
+  },
+  "target": "The twelve-Q vector reference was close to its finite gate at one state. Re-evaluate each Q separately so occupied-region rescaling is selected for that Q. Also check necessary overlap of the first three certified response components after an analytic reference-center shift.",
+  "scope": "New independent audit. Preserve the original vector control and gate, the product intervals, and all earlier numerical thermodynamic verdicts. A necessary interval-overlap check is not a substitute for either certificate."
+}

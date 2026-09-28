@@ -1,0 +1,10 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "kernel_integral": "For fixed p>0, integral_0^infinity dQ dK(p,Q)/dp = (pi^2/4)*p*sqrt(1+p^2). Use y=Q/p, integral log|(1+y)/(1-y)|/(2y)dy=pi^2/4, and integral [1-y*log|(1+y)/(1-y)|/2]dy=0. The logarithmic cusp is integrable.",
+  "susceptibility_moment": "Tonelli applies to the positive kernel. J=integral S(Q)dQ=(pi^2/4)*integral f(p)*p*gamma(p)dp=(pi^2*beta/4)*integral (1+beta*t)^2*f(t)dt. It is finite for every finite eta and beta>0.",
+  "upper_moment": "Let b=max(eta,0). J <= (pi^2*beta/4)*[b+beta*b^2+beta^2*b^3/3+exp(eta-b)*((1+beta*b)^2+2*beta*(1+beta*b)+2*beta^2)]. The bound uses f<=1 on [0,b] and f<=exp(eta-t) on [b,infinity).",
+  "ultraviolet": "With a=Q/z, R(z)=S(a*z)/S0, A=J/(a*S0), I_tail(Z)=integral_Z^infinity R/(z^2+R)dz <= A/Z^2. The inequality controls the actual infinite tail of this declared medium model, without assuming a fitted q^-4 coefficient.",
+  "global_bound": "For any L>0: R/(z^2+R)<=R/L^2+(1-z/L)_+^2. Integrate to get I<=A/L^2+L/3, optimize L=(6*A)^(1/3): 0<I<=(6*A)^(1/3)/2. Consequently -(6*A)^(1/3)/(2*pi)<=C_pol/(N_i*<Z^2>*e^2*kappa_0)<0.",
+  "scope": "A real all-wavenumber bound for the declared ideal-medium self term. Its numerical interior integral, thermodynamic derivatives, interacting EOS and actual GR evolution are separate obligations."
+}

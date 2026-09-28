@@ -1,0 +1,35 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "ad93f3b77",
+  "claim": "Actually return the reconstructed Eulerian temperature perturbation to all4012 existing conductive face poles and solve the resulting GR/heat response together.",
+  "model": "Same native EOS thermal tangent and conservative heat debit; same GR mass constraint and momentum lift. delta(theta)=A0*N0*T0*delta_lnT_Eulerian, delta_lnT_Eulerian=Delta_lnT-xi*dlnT0/dr. Conductivity, proper rates, face geometry, lapse and conformal factors in the transport law remain frozen. No photon table is extended radially.",
+  "decision": "If the solved temperature-only feedback is below1e-4 of every original native response, do not extend the time interval for this lever; prioritize missing exterior/photon channels. A larger or unresolved feedback requires a new physical error plan, not an automatic larger run.",
+  "numerical_scope": "One p4 path only; reuse accepted baseline readouts. Measure correction directly instead of subtracting nearly equal total paths. Same4096 contour,512/1024/2048 coefficients,65 readings and0.23080495568542375s. Finite contour samples do not prove uniform contraction or continuum error.",
+  "gates": {
+    "original_linear_residual": 1e-09,
+    "feedback_residual": 1e-10,
+    "correction_time_absolute_to_baseline": 1e-06,
+    "correction_contour_absolute_to_baseline": 1e-06,
+    "baseline_endpoint_replay": 1e-10,
+    "heat_balance": 2e-13
+  },
+  "budget": {
+    "pilot_seconds": 90,
+    "production_seconds": 600,
+    "total_seconds": 720,
+    "CPU_threads": 1,
+    "memory_GB": 4,
+    "new_EOS_calls": 0,
+    "maximum_corrections": 6,
+    "automatic_expansion": false
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_temperature_feedback.py": "f2bebf74f9e7460b164320d36639e408ce5c949c54bb0465546b6415c11fd2ee",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_interface_patch.py": "880442c647572d55272819dcde5ae735337ddbb62fc3d3e600ca1ea680faf888",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_cached_resolvent.py": "c2255c2366c02e031ee2ecb275e5352ff3caaabbf8551492f1c55934bfd28be0",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_full_weeks.py": "c0be4c1870a4aa5416892ae7f50523a8df515fcbf1455fa067fee7486489bc36",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-interface-patch/result.json": "d8f16158ddc560f2da863808cecfb1143f65cd796f07722163f5fdf05247f6ed",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-interface-patch/p4-2048.npz": "b8307ecf3bd373ef8850d891754b509c895e1a1a1599e7d45b4e2f9cf590ce53",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/fine-bank.npz": "b4493a6e4cfb20d741725ecb61cec154ab9fc51a694001865748741060018d7e"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "determinant": "p4(z)=det(z*M-N), q3(z)=cofactor44(z*M-N)=z*(b*z^2+2*j*(d-b)*z-b*r-d*e). det(z*M-N+epsilon*E44)=p4(z)+epsilon*q3(z). Verified symbolically.",
+  "residue": "A=M^-1*N, B=M^-1*E44=u*v^T. In a real eigenbasis of A with distinct eigenvalues c_i, the diagonal entries of B are d_i=q3(c_i)/p4_prime(c_i). This follows by comparing tr((zI-A)^-1 B) with the determinant lemma q3(z)/p4(z). Time is scaled by the same positive tau; the physical damping rate is d_i/tau.",
+  "stable_proof": "If all d_i=ubar_i*vbar_i>0, every ubar_i and vbar_i is nonzero and H=diag(vbar_i/ubar_i)>0. H*diag(c_i) is symmetric and H*Bbar=vbar*vbar^T>=0. For an eigenpair of -ik*diag(c_i)-Bbar, Re(s)*(z^*H z)=-|vbar^T z|^2<=0. Equality at k!=0 would make z a single characteristic eigenvector orthogonal to vbar, impossible because all vbar_i are nonzero. Thus every mode strictly decays for every finite nonzero k.",
+  "unstable_proof": "Simple real eigenvalues of A continue analytically under epsilon*B. Their first corrections are epsilon*d_i. Therefore the eigenvalue branch of -ik*A-B has s_i(k)=-ik*c_i-d_i+O(1/k). If d_i<0 its real part is positive for all sufficiently large |k|. This is an asymptotic existence statement, not a chosen physical wavenumber.",
+  "interlacing": "Positive residues imply the three zeros of q3 strictly interlace the four real zeros of p4. This follows from alternating q3(c_i) signs and its degree. The direct residue/symmetrizer proof above establishes the damping criterion without assuming a physical entropy Hessian.",
+  "controls": "A=diag(-1,1), B=ones(2)/2 gives s^2+s+k^2 and strict decay for k!=0. The rank-one B=[[-1,2],[-1,2]] has a negative first residue and the exact growing eigenvalue s=1/2+3*i*sqrt(3/5)/2 at k=sqrt(3/5). Hence real causal characteristics alone do not imply damping.",
+  "boundary": "No claim about omitted background lower-order terms, finite nonlinear time evolution, physical transport calibration or native EOS errors."
+}

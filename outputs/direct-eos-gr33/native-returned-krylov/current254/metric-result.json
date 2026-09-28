@@ -1,0 +1,200 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "controls": {
+    "time": {
+      "delta_u": 1.6995267184146273e-05,
+      "delta_lambda": 1.351823544517644e-05,
+      "delta_log_lapse": 3.716040642017804e-06,
+      "delta_log_speed": 1.348112444968073e-05,
+      "delta_u_prime": 3.516175923430662e-05,
+      "delta_nu_prime": 1.355904416886623e-05,
+      "delta_u_t": 2.9164397653020278e-05,
+      "actual_delta_lambda_rate": 0.0010561331237619895
+    },
+    "quadrature": {
+      "delta_u": 0.0,
+      "delta_lambda": 2.8856231476980563e-16,
+      "delta_log_lapse": 2.9105747841018196e-14,
+      "delta_log_speed": 4.3164454047261916e-16,
+      "delta_u_prime": 0.0,
+      "delta_nu_prime": 2.29696009206483e-16,
+      "delta_u_t": 0.0,
+      "actual_delta_lambda_rate": 3.497066180805818e-16
+    },
+    "field_quadrature": {
+      "U": 8.107722479311218e-16,
+      "U_t": 7.321233309116333e-16,
+      "U_x": 8.101298524121036e-16
+    }
+  },
+  "rows": [
+    {
+      "ray_invariant": 5.482281295599023e-13,
+      "emitted_energy_relative": 4.253603032480561e-16,
+      "unit_ADM_lapse_kernel_per_cm": 1.447197277876651e-10,
+      "same_Radau_dense_emission": true,
+      "classification": "Counterexample candidate",
+      "steps": 128,
+      "order": 8,
+      "seconds": 487.592336101,
+      "maximum_delta_nu": 3.1222544463950743e-52,
+      "endpoint_outer_photon_lapse": 2.9231239274658032e-61,
+      "endpoint_outer_scalar_lapse": -1.7652388049443058e-64,
+      "maximum_asymptotic_mass_residual_cm": 4.740714193100042e-49,
+      "maximum_ADM_residual_lapse": 6.860748675445584e-59,
+      "maximum_delta_log_transport_speed": 6.599574549486608e-50,
+      "maximum_delta_lambda_rate": 1.6622148322021935e-46,
+      "actual_exterior_photons_applied": true,
+      "full_spatial_feedback": false,
+      "final_charge_solved": false
+    },
+    {
+      "ray_invariant": 5.482281295599023e-13,
+      "emitted_energy_relative": 5.316942820618328e-16,
+      "unit_ADM_lapse_kernel_per_cm": 1.447197277876651e-10,
+      "same_Radau_dense_emission": true,
+      "classification": "Counterexample candidate",
+      "steps": 64,
+      "order": 8,
+      "seconds": 455.67342667699995,
+      "maximum_delta_nu": 3.1222466538971705e-52,
+      "endpoint_outer_photon_lapse": 2.923201260792425e-61,
+      "endpoint_outer_scalar_lapse": -1.7651642134518392e-64,
+      "maximum_asymptotic_mass_residual_cm": 4.7402848010046156e-49,
+      "maximum_ADM_residual_lapse": 6.860127260373942e-59,
+      "maximum_delta_log_transport_speed": 6.599588211070449e-50,
+      "maximum_delta_lambda_rate": 1.6619386430941477e-46,
+      "actual_exterior_photons_applied": true,
+      "full_spatial_feedback": false,
+      "final_charge_solved": false
+    },
+    {
+      "ray_invariant": 5.415667914121514e-13,
+      "emitted_energy_relative": 3.721901748181418e-16,
+      "unit_ADM_lapse_kernel_per_cm": 1.4471972778766513e-10,
+      "same_Radau_dense_emission": true,
+      "classification": "Counterexample candidate",
+      "steps": 128,
+      "order": 4,
+      "seconds": 306.9759707950002,
+      "maximum_delta_nu": 3.1222544463950413e-52,
+      "endpoint_outer_photon_lapse": 2.9231239274657977e-61,
+      "endpoint_outer_scalar_lapse": -1.7652388049443058e-64,
+      "maximum_asymptotic_mass_residual_cm": 4.740714304197432e-49,
+      "maximum_ADM_residual_lapse": 6.860748836225427e-59,
+      "maximum_delta_log_transport_speed": 6.599574549486608e-50,
+      "maximum_delta_lambda_rate": 1.6622148322022147e-46,
+      "actual_exterior_photons_applied": true,
+      "full_spatial_feedback": false,
+      "final_charge_solved": false
+    }
+  ],
+  "actual_stage_fields": true,
+  "final_charge_conclusion": "unadjudicated",
+  "causal_splice": [
+    {
+      "clock": 128,
+      "order": 8,
+      "reused_metric_points": 495,
+      "relative": {
+        "t": 0.0,
+        "delta_nu": 1.2490758788775359e-20,
+        "delta_nu_faces": 1.1704467686362511e-20,
+        "delta_lambda": 0.0,
+        "delta_phi": 0.0,
+        "delta_u": 0.0,
+        "delta_u_t": 0.0,
+        "delta_u_prime": 0.0,
+        "delta_nu_prime": 0.0,
+        "delta_log_lapse": 1.2490679513843811e-20,
+        "delta_log_radial_length": 0.0,
+        "delta_log_area_radius": 0.0,
+        "delta_log_speed": 4.892565388431269e-23,
+        "outer_photon_lapse": 1.5424271846139758e-14,
+        "outer_scalar_lapse": 0.0,
+        "outer_ADM_residual_lapse": 0.0,
+        "asymptotic_mass_residual_cm": 0.0,
+        "emitted_energy_erg": 0.0,
+        "actual_delta_lambda_rate": 0.0
+      }
+    },
+    {
+      "clock": 64,
+      "order": 8,
+      "reused_metric_points": 495,
+      "relative": {
+        "t": 0.0,
+        "delta_nu": 3.137791082896823e-21,
+        "delta_nu_faces": 2.9443368245092192e-21,
+        "delta_lambda": 0.0,
+        "delta_phi": 0.0,
+        "delta_u": 0.0,
+        "delta_u_t": 0.0,
+        "delta_u_prime": 0.0,
+        "delta_nu_prime": 0.0,
+        "delta_log_lapse": 3.1377711688806638e-21,
+        "delta_log_radial_length": 0.0,
+        "delta_log_area_radius": 0.0,
+        "delta_log_speed": 2.9410178312504985e-22,
+        "outer_photon_lapse": 1.5424052504894776e-14,
+        "outer_scalar_lapse": 0.0,
+        "outer_ADM_residual_lapse": 0.0,
+        "asymptotic_mass_residual_cm": 0.0,
+        "emitted_energy_erg": 0.0,
+        "actual_delta_lambda_rate": 0.0
+      }
+    },
+    {
+      "clock": 128,
+      "order": 4,
+      "reused_metric_points": 495,
+      "relative": {
+        "t": 0.0,
+        "delta_nu": 2.9962039383741417e-21,
+        "delta_nu_faces": 2.80955046608631e-21,
+        "delta_lambda": 0.0,
+        "delta_phi": 0.0,
+        "delta_u": 0.0,
+        "delta_u_t": 0.0,
+        "delta_u_prime": 0.0,
+        "delta_nu_prime": 0.0,
+        "delta_log_lapse": 3.04260142004521e-21,
+        "delta_log_radial_length": 0.0,
+        "delta_log_area_radius": 0.0,
+        "delta_log_speed": 2.940150027665673e-22,
+        "outer_photon_lapse": 1.542427184613976e-14,
+        "outer_scalar_lapse": 0.0,
+        "outer_ADM_residual_lapse": 0.0,
+        "asymptotic_mass_residual_cm": 0.0,
+        "emitted_energy_erg": 0.0,
+        "actual_delta_lambda_rate": 0.0
+      }
+    }
+  ],
+  "after_splice_controls": {
+    "time": {
+      "delta_u": 1.6995267184146273e-05,
+      "delta_lambda": 1.351823544517644e-05,
+      "delta_log_lapse": 3.716040642017804e-06,
+      "delta_log_speed": 1.348112444968073e-05,
+      "delta_u_prime": 3.516175923430662e-05,
+      "delta_nu_prime": 1.355904416886623e-05,
+      "delta_u_t": 2.9164397653020278e-05,
+      "actual_delta_lambda_rate": 0.0010561331237619895
+    },
+    "quadrature": {
+      "delta_u": 0.0,
+      "delta_lambda": 2.8856231476980563e-16,
+      "delta_log_lapse": 2.9105747841018196e-14,
+      "delta_log_speed": 4.3164454047261916e-16,
+      "delta_u_prime": 0.0,
+      "delta_nu_prime": 2.29696009206483e-16,
+      "delta_u_t": 0.0,
+      "actual_delta_lambda_rate": 3.497066180805818e-16
+    }
+  },
+  "restart_time_seconds": 0.0030051272281876144,
+  "formerly_terminal_derivative_recomputed": true,
+  "actual_full_period_return_executed": false
+}

@@ -1,0 +1,878 @@
+Equation of state of fully ionized electron-ion plasmas
+Gilles Chabrier
+Centre de Recherche Astronomique de Lyon, Centre National de la Recherche Scienti®que UMR No. 5574,
+Ecole Normale SupeÂrieure de Lyon, 69364 Lyon Cedex 07, France
+Alexander Y. Potekhin
+Ioffe Physical-Technical Institute, 194021 St. Petersburg, Russia
+~Received 14 April 1998!
+Thermodynamic quantities of Coulomb plasmas consisting of pointlike ions immersed in a compressible,
+polarizable electron background are calculated for ion charges Z51 –26 and for a wide domain of plasma
+parameters ranging from the Debye-Hu¨ckel limit to the crystallization point and from the region of nondegen-
+erate to fully degenerate nonrelativistic or relativistic electrons. The calculations are based on the linear-
+response theory for the electron-ion interaction, including the local-ﬁeld corrections in the electronic dielectric
+function. The thermodynamic quantities are calculated in the framework of the N-body hypernetted-chain
+equations and ﬁtted by analytic expressions. We present also accurate analytic approximations for the free
+energy of the ideal electron gas at arbitrary degeneracy and relativity and for the excess free energy of the
+one-component plasma of ions derived from Monte Carlo simulations. The extension to multi-ionic mixtures is
+discussed within the framework of the linear mixing rule. These formulas provide a completely analytic,
+accurate description of the thermodynamic quantities of fully ionized electron-ion Coulomb plasmas, a useful
+tool for various applications from liquid state theory to dense stellar matter. @S1063-651X~98!03410-2#
+PACS number~s!: 52.25.Kn, 05.70.Ce
+I. INTRODUCTION
+Electron-ion plasmas ~EIPs! consisting of different spe-
+cies of pointlike ions ~charge Zie, mass mi5Ai amu) and
+electrons (2e,me) are encountered in numerous physical
+and astrophysical situations, e.g., inertially conﬁned labora-
+tory plasmas, liquid metals, stellar and planetary interiors,
+and supernova explosions @1#. Full ionization is reached ei-
+ther at high temperatures T and low densities r ~thermal
+ionization! or at high enough densities r ~pressure ioniza-
+tion!. Even when these conditions are not satisﬁed, the ap-
+proximation of full ionization is useful for calculations in the
+mean ion approximation, in which the mean ion charge cor-
+responds to its partial ionization stage. On the other hand, the
+free energy of fully ionized EIP provides the reference sys-
+tem for models aimed at describing the thermodynamic prop-
+erties of partially ionized plasmas @2#. In this paper we
+present a completely analytic model for the free energy of
+EIP, based on detailed numerical calculations for different
+ionic species Z over a wide range of density and temperature.
+We ﬁrst focus on the two-component plasma ~TCP!, consist-
+ing of electrons and a single species of ions. An extension to
+ionic mixtures is considered in Sec. VI.
+The Coulomb plasmas can be characterized by the elec-
+tron coupling parameter Ge and the density parameter rs ,
+Ge5be2/ae , rs5ae /aB , ~1!
+where b5(kBT)21 is the inverse thermodynamic tempera-
+ture, kB is the Boltzmann constant, ae5( 4
+3 pne)21/3 mea-
+sures the mean interelectron distance, ne is the electron num-
+ber density, and aB5\2/mee2 is the Bohr radius. These
+parameters can be evaluated as Ge'(2.6933105 K/T)n24
+1/3
+5(23.2 eV/kBT)n24
+1/3 and rs'1.172n24
+21/3 , where n24
+[ne/1024 cm23'(r/1.6605 g cm23)^Z&/^A&. Here and
+hereinafter, ^X&5(iniXi /(ini denotes the average over all
+ions and ni the number density of ions of ith species.
+The ion coupling parameter of the TCP is
+Gi5b~Ze !2/ai5GeZ5/3, ~2!
+where ai is the mean interionic distance (ai5aeZ1/3 due to
+the electroneutrality condition ne5niZ). In multicomponent
+plasmas, it may be useful to deﬁne Gi5Ge^Z5/3&.
+The degeneracy parameter u and the relativity parameter
+x are deﬁned respectively as
+u5T/TF , x5pF /mec, ~3!
+where TF5(mec2/kB)@A11x221#'(5.933109
+K! @A11x221# is the Fermi temperature, c is the speed of
+light, and pF5\(3 p2ne)1/3 is the zero-temperature Fermi
+momentum of electrons. To estimate u and x, it is useful to
+note that
+x5S
+9p
+4 D
+1/3 a
+rs
+'
+0.014
+rs
+'S
+^Z&
+^A&
+r
+106 gc m23D
+1/3
+, ~4!
+u5
+a2~Gers!21
+A11x221
+, u'0.543
+rs
+Ge
+at x!1, ~5!
+where a51/137.036 is the ﬁne-structure constant.
+Various asymptotic expansions, interpolation formulas,
+and large tables have been derived in the past for the ther-
+modynamic functions of free fermions ~see Refs. @3,4# and
+references therein!. In this paper, ﬁrst, we present analytic
+expressions for the thermodynamic quantities of free fermi-
+ons for arbitrary degeneracy and relativity, u and x. Second,
+PHYSICAL REVIEW E OCTOBER 1998VOLUME 58, NUMBER 4
+PRE 581063-651X/98/58~4!/4941~9!/$15.00 4941 © 1998 The American Physical Society
+we propose simple and accurate analytic approximations for
+the nonideal internal and free energies of the classical one-
+component plasma ~OCP!, which take into account the most
+recent hypernetted-chain ~HNC! and Monte Carlo ~MC! cal-
+culations by DeWitt, Slattery, and Chabrier @5#~ DWSC! in
+the strong-coupling regime. Third, we consider the electron
+screening effects on the thermodynamic properties of the
+TCP. We employ a computational HNC scheme based on the
+linear screening theory with local-®eld corrections, taking
+into account the electron ®nite-temperature ~®nite-u) effects.
+The numerical calculations have been performed over a wide
+range of Z, Gi , and rs and interpolated by a simple analytic
+formula, which recovers the Debye-HuÈckel ~DH! limit for
+the TCP at Gi!1 and the Thomas-Fermi limit at large Gi and
+Z.
+II. SUMMARY OF THE MODEL
+Consider the Helmholtz free energy F, internal energy U,
+and pressure P of a TCP of Ni ions and Ne electrons in the
+volume V. The total free energy Ftot can be written as the
+sum of three terms
+Ftot5Fid
+~i!1Fid
+~e!1Fex , ~6!
+where Fid
+(i,e) denote the ideal free energy of ions and elec-
+trons, respectively, and Fex is the excess free energy arising
+from interactions.
+In this paper we restrict ourselves to conditions where the
+ions behave classically, which is the case in most astrophysi-
+cal situations. Quantum corrections for ions that can be im-
+portant in the ultradense matter of white dwarf interiors, neu-
+tron stars, and supernova cores have been considered, e.g., in
+Refs. @6,7#. Thus Fid
+(i) is given by the Maxwell-Boltzmann
+expression. For Fid
+(e) we use the well-known expressions of
+the thermodynamic functions of the perfect gas of fermions
+~which may be degenerate and relativistic! through the gen-
+eralized Fermi-Dirac integrals.
+To calculate Fex , we follow the model developed by
+Chabrier @8# for fully ionized EIPs. As long as the ion-
+electron interaction is weak compared to the kinetic energy
+of the electrons, Ze 2/ae!kBTF , this interaction can be
+treated within the linear screening theory. Under these con-
+ditions, the exact Hamiltonian of the TCP can be separated
+out exactly into a Hamiltonian for the electron-screened
+ionic ¯uid and a Hamiltonian for a rigid electron back-
+ground, the so-called jellium Hamiltonian He @9,10#:
+H5Heff1He , ~7!
+with
+Heff5Ki1
+1
+2V(
+kÞ0
+4p~Ze !2
+k2 F
+rkrk*
+e~k! 2NiG , ~8!
+where Ki is the ionic kinetic ~translational! term, rk is the
+Fourier component of the ionic microscopic density, and
+e(k) is the static screening function of the electron ¯uid to
+be discussed below. The Hamiltonian Heff characterizes the
+electron-screened ion ¯uid with the interparticle potential
+whose Fourier transform is
+Veff~k!5
+4p~Ze !2
+k2e~k!
+, ~9!
+which is the sum of the bare ionic potential and the induced
+polarization potential.
+The ion-ion (ii ) and the ion-electron (ie ) Coulomb inter-
+actions can thus be separated from the exchange-correlation
+contribution in the electron ¯uid (ee ). The excess part of the
+free energy ~6! can then be written as Fex5Fee1Fii1Fie ;
+the quantities labeled ie will be referred to as electron-
+screening quantities. It is convenient to consider dimension-
+less quantities f ee[bFee /Ne and f ii ,ie[bFii ,ie /Ni . Then
+f ex5xef ee1xi~ f ii1 f ie!, ~10!
+where xi,e[Ni,e /N denote the number fraction of ions and
+electrons, respectively, and N5Ni1Ne is the total number
+of particles. In the same way we de®ne uee[bUee /Ne and
+uii ,ie[bUii ,ie /Ni . The excess free energy can be obtained
+from the internal energy by integration:
+f ex~G,rs!5E
+0
+G uex~G8,rs!
+G8 dG8. ~11!
+For f ee , we have adopted the interpolation formula of Ichi-
+maru, Iyetomi, and Tanaka @11#~ IIT!, consistent with nu-
+merical results obtained by different authors. For f ii , which
+corresponds to the well-known OCP model, that implies the
+rigid electron background (e(k)51), we present an analytic
+interpolation between the MC results @5# at Gi>1 and the
+DH limit and Abe correction at Gi&0.1.
+The ion-electron interactions are calculated numerically
+as in Ref. @8#. In this approach, the bare Coulomb potential
+in the expression for the electrostatic energy is replaced by
+the potential statistically screened by the electrons ~9! and
+the HNC approximation is used to calculate the thermody-
+namic functions of the system. This model, originally ap-
+plied to nonrelativistic hydrogen plasmas, is now extended to
+the case of arbitrary Z and x. In the nonrelativistic case (x
+!1), the dielectric function e(k) is the ®nite-temperature
+Lindhard function modi®ed with the local-®eld correction
+arising from electron correlation effects.
+At very high density, x*1, the electrons become relativ-
+istic. At such densities, the electron correlation effects are
+completely negligible. The ®nite-temperature effects (u
+Þ0) may give an appreciable contribution to the screening
+part of the free energy f ie only at extremely high tempera-
+tures, where the nonideality of the gas has no signi®cance.
+Thus we use the Jancovici @12# zero-temperature dielectric
+function in the relativistic regime.
+The correlation functions and thermodynamic quantities
+for the electron-screened ionic ¯uid are obtained within the
+framework of the HNC equations. The validity of the HNC
+theory for the Coulomb systems has been assessed by several
+authors by comparison with lengthy MC simulations. The
+HNC approximation consists of neglecting the contribution
+of the so-called bridge diagrams, which involves an in®nite
+series of multiple integrals, in the N-body general diagram-
+matic resummations @13#. The long-range part of the direct
+correlation function c(r) calculated within the HNC approxi-
+mation is exactly canceled by 2V(r)/ kT , so that the pair
+4942 PRE 58GILLES CHABRIER AND ALEXANDER Y. POTEKHIN
+correlation function g(r) is of much shorter range than the
+Coulomb potential V(r) @13#. This is a required condition for
+Coulomb systems because of the perfect screening condition.
+This property of the HNC theory makes it particularly suit-
+able for such long-range systems. The differences of the free
+energy, the internal energy, and the pressure are at most of
+the order of 1% ~see, e.g., Refs. @5,8#!. The difference is due
+to the lack of bridge functions in the HNC theory.
+III. IDEAL PART OF THE FREE ENERGY
+The ideal free energy of nonrelativistic classical ions, ne-
+glecting their spin statistics, reads @14#
+Fid
+~i!5NikBT@ln~nili
+3!21#, ~12!
+where li5(2 pb\2/mi)1/2 is the thermal wavelength of ions.
+For electrons, we use the identity @14#
+Fid
+~e!5Nemid
+~e!2Pid
+~e!V. ~13!
+Here mid
+(e) is the chemical potential ~in which we do not
+include the rest energy mec2) and Pid
+(e) is the pressure of the
+ideal Fermi gas. The pressure and number density, in turn,
+are functions of m and T:
+Pid
+~e!5
+~2me!3/2
+3p2\3b5/2S I3/2~x,t!1
+t
+2 I5/2~x,t!D , ~14!
+ne5
+A2 ~me /b!3/2
+p2\3 I1/2~x,t!1tI3/2~x,t!, ~15!
+where t5(bmec2)215T/5.933109 K, x5bm id
+(e) , and
+In~x,t![E
+0
+` xn A11tx/2
+exp~x2x!11 dx ~16!
+is the generalized Fermi-Dirac integral.
+In the limit t!0, the Fermi-Dirac integrals reduce to the
+usual nonrelativistic Fermi integrals In(x), which can be cal-
+culated using the highly accurate PadeÂ approximations pre-
+sented by Antia @15#. The chemical potential is obtained
+from the relationship
+x5X1/2~2u23/2/3!, ~17!
+where Xn is the inverse Fermi integral, also ®tted with high
+accuracy by Antia @15#.
+The accuracy of the nonrelativistic formulas decreases
+rapidly at T.107 K. Blinnikov et al. @3# have presented a
+number of approximations and asymptotic expansions of the
+relativistic thermodynamic functions of the ideal electron
+gas. We have selected those of their ®tting formulas that are
+most accurate at low and moderate x and supplemented them
+with asymptotic expansions at high x to obtain an approxi-
+mation that is accurate at any ne for each of the Fermi inte-
+grals In(x,t) with n5 1
+2 , 3
+2 , and 5
+2 :
+Ik11/2~x,t!5(
+i51
+5
+ci
+~k! A11xi
+~k!t/2
+exp~2xi
+~k!!1exp~2x!
+~x<0.6!
+~18!
+5(
+i51
+5
+F hixi
+k xk13/2A11xxit/2
+11exp~xxi2x!
+1vi~ji1x!k11/2A11~ji1x!t/2G
+~0.6,x,14! ~19!
+5Fk~x,t!1
+p2
+6 xk k11/21~k11!xt/2
+R
+~x>14!, ~20!
+where R[Ax(1 1xt/2),
+F0~x,t!5~x1t21!R/22~2t!23/2ln~11tx1A2t R!,
+~21!
+F1~x,t!5@2R3/32F0~x,t!#/t, ~22!
+F2~x,t!5@2xR325F1~x,t!#/4t. ~23!
+If xt!1, the functions Fk(x,t) should be replaced by their
+nonrelativistic limits xk13/2/( k13/2). The constants ci
+(k) ,
+xi
+(k) , xi , ji , hi , and vi are adopted from Ref. @3# and are
+listed in Table I. The relative error of the approximation
+~18!±~20! does not exceed 0.2% at t<102 ~any x), being
+typically a few parts in 104.
+TABLE I. Parameters of Eqs. ~18! and ~19!. The powers of 10 are given in square brackets.
+i 12 3 4 5
+ci
+(0) 0.37045057 0.41258437 9.777982 @22# 5.3734153 @23# 3.8746281 @25#
+ci
+(1) 0.39603109 0.69468795 0.22322760 1.5262934 @22# 1.3081939 @24#
+ci
+(2) 0.76934619 1.7891437 0.70754974 5.6755672 @22# 5.5571480 @24#
+xi
+(0) 0.43139881 1.7597537 4.1044654 7.7467038 13.457678
+xi
+(1) 0.81763176 2.4723339 5.1160061 9.0441465 15.049882
+xi
+(2) 1.2558461 3.2070406 6.1239082 10.316126 16.597079
+xi 7.265351 @22# 0.2694608 0.533122 0.7868801 0.9569313
+ji 0.26356032 1.4134031 3.5964258 7.0858100 12.640801
+hi 3.818735 @22# 0.1256732 0.1986308 0.1976334 0.1065420
+vi 0.29505869 0.32064856 7.3915570 @22# 3.6087389 @23# 2.3369894 @25#
+PRE 58 4943EQUATION OF STATE OF FULLY IONIZED...
+The chemical potential mid
+(e) can be obtained numerically
+from Eq. ~15!, using Eqs. ~18!±~20!. We have constructed
+also an analytic ®t to x:
+x5xnonrel2
+3
+2 lnF 11S
+t
+11t/2uD
+11q1At1q2q3t
+11q2t G .
+~24!
+Here xnonrel is given by the nonrelativistic formula ~17! and
+the coef®cients qi are functions of u:
+q15 3
+2 ~eu21!21,
+q251218u23/2,
+q35
+2
+p1/3 2
+e2u11.612eu
+6.192u0.0944e2u15.535u0.698eu .
+The relative error dx/x becomes in®nite at x50. However,
+since thermodynamic quantities are expressed through x by
+virtue of thermal averaging of type of Eq. ~16!, a natural
+measure of the error is dx/max(uxu,1)5dm/max(umu,kBT).
+The error thus lies within 0.4% for t.1 and is smaller than
+0.2% if t,1 ~any u). Another measure of the accuracy is the
+relative difference between the densities ne calculated with
+the exact and ®tted values of m. This difference lies within
+0.4% for t>1 and within 0.1% for t,1.
+This accuracy may not be suf®cient for calculation of
+temperature derivatives of the electron-gas equation of state
+~EOS!~ heat capacity, temperature exponent, etc.! in the re-
+gime of strong degeneracy (x@1). In this case, however,
+Sommerfeld asymptotic expansions for these quantities may
+be used ~see, e.g., Ref. @16#!. In this paper we do not consider
+the positrons, which are ef®ciently created at t*1 ~see Ref.
+@3# for a description of the equilibrium electron-positron
+plasma!.
+IV. OCP LIQUID OF CLASSICAL IONS
+Liquid and solid phases of the OCP have been studied
+extensively by various numerical methods, MC simulations,
+or N-body semianalytic theories such as the HNC theory ~see
+Refs. @17,11# for detailed reviews!. All the thermodynamic
+functions of the OCP of classical ions in a uniform ~rigid!
+electron background can be expressed as functions of the
+only parameter Gi . The melting point of the OCP corre-
+sponds to Gi'172, above which it forms a Coulomb crystal
+@18#. The most accurate MC and HNC results for the internal
+and free energies of the liquid OCP for 1<G i<160 have
+been obtained recently by DWSC @5#~ see references therein
+for earlier results!. The high precision of the calculations
+allowed the authors to investigate the tiny effects of nonad-
+ditivity of the excess energy of binary ionic mixtures, as will
+be discussed in Sec. VI.
+DWSC have also derived a highly accurate analytic ®t to
+the MC simulations of the internal energy of the OCP in the
+aforementioned G range:
+uii5aGi1bGi
+s1c, ~25!
+with a52 0.899 126, b50.607 12, c52 0.279 98, and s
+50.321 308. The maximum relative difference between cal-
+culated and ®tted values reaches 17 parts in 105 at Gi
+53.1748.
+Equation ~25!, however, does not apply to the weak-
+coupling region Gi,1. At very small Gi , the internal energy
+of the OCP must recover the well-known DH expression
+uii52 (A3/2)Gi
+3/2 , whereas at moderately small Gi this limit
+must include the Abe correction @19#
+uii52
+A3
+2 Gi
+3/223Gi
+3
+F
+3
+8 ln~3Gi!1
+g
+2 2
+1
+3G , ~26!
+where g50.577 21... is Euler's constant.
+We represent the internal energy of the ionic ¯uid (Gi
+&170) by a simpli®ed version of the ®tting formula pro-
+posed by Hansen @20,21#,
+uii5Gi
+3/2
+F
+A1
+AA21Gi
+1
+A3
+11Gi
+G , ~27!
+where A1 and A2 are ®tting parameters and A352 A3/2
+2A1 /AA2. We have found that the minimum relative differ-
+ence between Eq. ~27! and the MC results of DWSC @5#,
+smaller than 6 parts in 104, is obtained with A152 0.9052
+and A250.6322. This accuracy is suf®cient for our present
+study since it is much better than the available numerical
+accuracy of the complementary contribution to the internal
+energy uie . As mentioned in Sec. II, the HNC calculations of
+the sum uii1uie ensure an accuracy of the order of 1%.
+Figure 1 presents a comparison of our interpolation for-
+FIG. 1. Comparison of the ®t ~solid line! given by Eq. ~27! for
+the OCP internal energy with the DH and Abe asymptotic expan-
+sions at small Gi ~dot-dashed lines! and with the DWSC results @5#
+at 1<G i<160 ~dots and circles!. The dashed curve represents the
+interpolation of SB @22#.
+4944 PRE 58GILLES CHABRIER AND ALEXANDER Y. POTEKHIN
+mula ~27! with the DH-Abe formulas, the MC results and the
+®t ~25! of DWSC @5#, and the interpolation proposed by
+Stolzmann and BloÈcker @22#~ SB! following Ebeling @23#.
+Unlike SB, our Eq. ~27! accurately reproduces Eq. ~26! in the
+range Gi;0.0120.1 and provides a smoother transition be-
+tween the strong- (Gi.1) and weak- (Gi!1) coupling re-
+gimes.
+Using Eqs. ~27! and ~11!, we obtain the Helmholtz free
+energy ~cf. Ref. @20#!
+f ii~Gi!5A1@AGi~A21Gi!2A2ln~AGi /A21A11Gi /A2!#
+12A3@AGi2arctan~AGi!#. ~28!
+At Gi>1, this formula gives f ii , which differs from the
+HNC calculations and the ®t of DWSC @5# by no more than
+0.8%. This difference approximately coincides with that be-
+tween the MC and HNC results for uii ; therefore, it should
+be attributed to the lack of the bridge functions in the HNC
+approximation ~see Sec. II!. On the other hand, Eq. ~28! re-
+covers the DH-Abe free energy with an error smaller than
+0.6% at Gi,0.1.
+V. ELECTRON FLUID
+The exchange and correlation effects in electron ¯uid
+were studied by many authors. For instance, Tanaka et al.
+@24# calculated the interaction energy of the electron ¯uid at
+®nite temperature in the Singwi-Tosi-Land-SjoÈlander @25#
+approximation and presented a ®tting formula that repro-
+duces their results as well as various exact limits with digres-
+sions less than 1% ~in particular, their formula incorporates
+the parametrization of the exchange energy by Perrot and
+Dharma-wardana @26#!. We adopt a modi®cation of this for-
+mula given by IIT @11#.
+The exchange-correlation free energy f ee is obtained by
+integration from Eq. ~11!. It is important to note that Tanaka
+et al. @24# givea® tt ot he interaction energy of the electron
+¯uid but not to the thermodynamic internal energy ~the
+quantities differ at ®nite u). This enabled Tanaka et al. to
+obtain f ee by integration of their ®tting formula over Ge at
+constant u ~the integration of the internal energy would have
+to be performed at constant rs). Note also that the results of
+IIT are nonrelativistic.
+More recently, SB @22# proposed other parametrizations
+of the exchange and correlation free energies. At moderate
+rs , a comparison of the formulas given by SB and IIT re-
+veals only small differences, which do not exceed the uncer-
+tainty in the various numerical results found in the literature
+@26,27#. Unlike IIT, SB evaluated the exchange energy at u
+,1 in the relativistic case. On the other hand, the SB ®t
+reaches the classical OCP limit at large rs and moderate Ge
+with digressions up to 4.4%, while the parametrization of IIT
+is several times more accurate in this limit. We shall use the
+IIT's formula hereafter.
+VI. ELECTRON SCREENING
+A. Numerical calculations
+In order to calculate the screening contribution, we have
+employed the model of Ref. @8#, outlined in Sec. II. The
+HNC equations were solved numerically for the effective
+screened interionic potential ~9! to obtain f ii1 f ie , uii1uie
+and Pii1Pie and for the bare Coulomb potential to obtain
+f ii , uii , and Pii . The difference represents the screening
+(ie ) contribution to the thermodynamic quantities.
+The previous numerical results @8# have been obtained for
+the hydrogen plasma (Z51). We extend the calculations to
+different values of Z and a larger set of rs . Figure 2 shows
+the effective potentials Veff for Z56 and Z526 at several
+values of rs , compared with the bare Coulomb potential and
+with Veff in the zero-temperature (u50) random-phase ap-
+proximation ~RPA!~ no local-®eld correction!. One can see
+that the latter approximation works well at the small value of
+rs50.0256 ~lower panels!, while it breaks down completely
+at rs51 ~upper panels!.
+The bulk of the calculations has been performed in the
+nonrelativistic approximation, for 13 ion charges from Z
+51t o Z526 listed in the ®rst column of Table II, at ten
+values of the density parameter rs ranging from rs50.0256
+to rs'2, and, at each Z and rs , for several tens of values of
+the coupling parameter Gi that range from the DH limit at
+Gi50.001 to Gi;200. As an example, calculated values of
+the normalized screening part of the free energy f ie at Z
+56 are shown by ®lled circles in Fig. 3. Note that it is the
+account of the ®nite electron temperature in the dielectric
+function that allows us to reach the correct TCP DH limit at
+low values of Gi ~see Ref. @8#!.
+In order to supplement the aforementioned nonrelativistic
+data at higher densities, we have also performed calculations
+using the Jancovici @12# zero-temperature dielectric function.
+The results are shown in Fig. 3 for Gi>1 and rs
+50.0625 (x50.224), 0.0256 (x50.545), and 0.008 (x
+FIG. 2. Effective ion-ion potentials Veff at various approxima-
+tions for Z56 ~left panels! and Z526 ~right panels!, for two den-
+sities, rs51 ~upper panels! and 0.0256 ~lower panels! and three
+values of Gi51, 10, and 40. Solid lines represent the ®nite tempera-
+ture Veff including the local-®eld correction and dashed lines show
+the zero-temperature RPA ~the dashed and solid lines practically
+coincide on the lower left panel!. The bare Coulomb potential is
+drawn by dots for comparison.
+PRE 58 4945EQUATION OF STATE OF FULLY IONIZED...
+51.75). A comparison for the case of rs50.0625 con®rms
+that the zero-temperature approximation works well at small
+rs and large G@ where u!1 due to the relation ~5!#; this
+conclusion is corroborated by inspection of Fig. 2.
+Thus the numerical results cover all values of rs and G
+~i.e., r and T! that are relevant for liquid EIPs. At rs*1 and
+Gi*1, the formation of bound states sets in. At rs&1022
+and Gi&1, the temperature reaches the values
+T*33107Z5/3 K, where the electron screening effects are
+completely unimportant. Finally, at Gi*170, solidi®cation
+takes place.
+B. Analytic formulas
+The calculated values of the screening free energy are
+®tted by the following function of rs , Ge , and Z:
+f ie52 Ge
+cDHAGe1cTFaGe
+ng1~rs!h1~x!
+11@bAGe1ag 2~rs!Ge
+n/rs#h2~x!
+. ~29!
+The parameter
+cDH5
+Z
+A3
+@~ 11Z!3/2212Z3/2# ~30!
+ensures transition to the DH value of the excess free energy
+of the EIP, f ex
+DH52 Z @(1 1Z)/3#1/2Ge
+3/2 at small Ge . The
+parameter
+cTF5c`Z7/3~12Z21/310.2Z21/2! ~31!
+determines the screening in the limit of large Ge and small
+rs . The parameter c`5(18/175)(12/p)2/350.2513 is consis-
+tent with the Thomas-Fermi approximation @28#, which be-
+comes exact at small rs and very large Z ~cf. Ref. @16#!. The
+parameters
+a51.11Z0.475,
+b50.210.078~ln Z!2,
+n51.1610.08 ln Z
+provide a low-order approximation to f ie ~with a maximum
+error up to 30% at large Z and rs*1), while the functions
+g1~rs!511
+0.78
+211Ge~Z/rs!3S
+Ge
+ZD
+1/2
+, ~32!
+g2~rs!511
+Z21
+9 S 11
+1
+0.001Z212Ge
+D
+rs
+3
+116rs
+2 ~33!
+improve the ®t at relatively large rs and reduce the maximum
+fractional error in f ie to 4.3% and the root-mean-square
+~rms! error to ;1.5%. The factors h1(x)5@1
+1(vF /c)6Z21/3#21 ~where vF5cx /A11x2 is the electron
+Fermi velocity! and h2(x)5(1 1x2)21/2 are relativistic cor-
+rections and may be omitted at x!1.
+Note that f ie constitutes only a part of the ion excess free
+energy f ii1 f ie . The ®t to this latter quantity is given by the
+sum of Eqs. ~28! and ~29!. The second and third columns of
+Table II present the rms and maximum relative differences
+between the calculated and ®tted values of f ii1 f ie at each
+value of Z. The comparison has been done for the set of
+®nite-temperature numerical results at 0.1<G i<170 and
+0.0625<rs<2.074. The remaining four columns of the table
+present the rms and maximum relative differences for the
+(ii 1ie ) internal energy and pressure, derived from the ®ts
+by the use of the thermodynamic relations
+TABLE II. Root mean square and maximum relative differences
+between the ®t and the HNC calculations for f ii1 f ie , uii1uie , and
+Pii1Pie ; the bottom line corresponds to the OCP model.
+Z (d f / f ) ~%! (du/u) ~%! (dP/P) ~%!
+rms max rms max rms max
+1 0.6 1.9 0.9 1.8 1.2 4.5
+2 0.4 1.1 0.7 1.8 0.7 3.0
+3 0.4 0.8 0.9 2.3 0.7 1.8
+4 0.5 1.2 1.3 3.1 0.9 1.9
+5 0.6 1.5 1.6 3.9 1.2 2.4
+6 0.7 1.8 1.8 4.3 1.5 2.8
+7 0.6 1.7 1.9 4.6 1.7 3.5
+8 0.7 1.5 1.9 4.6 1.9 4.1
+10 0.6 1.2 1.8 3.9 2.0 4.1
+12 0.5 1.2 1.6 3.2 1.9 4.5
+14 0.5 1.2 1.9 4.5 1.6 3.2
+20 0.5 1.1 1.2 2.8 1.8 4.5
+26 0.6 1.7 1.2 2.6 1.3 3.8
+OCP 0.6 0.7 0.6 0.8 0.6 0.8
+FIG. 3. Nonrelativistic ®nite-temperature ~®lled circles! and
+relativistic zero-temperature ~open triangles! calculated values of
+the screening part f ie of the free energy of the TCP for Z56,
+compared with the ®t ~29!~ solid lines!. The ®t is also compared
+with the approximation of YS @16#~ dashed line!, which is valid at
+small rs and large Gi . TF denotes the Thomas-Fermi approxima-
+tion.
+4946 PRE 58GILLES CHABRIER AND ALEXANDER Y. POTEKHIN
+u5S
+] f
+] ln GD
+rs
+, bP/n5
+1
+3F u2S
+] f
+] ln rs
+D
+G
+G . ~34!
+The bottom row of the table is given for reference and
+presents the difference between the ®t ~28! and numerical
+HNC data in the OCP model ~i.e., without the ie contribu-
+tion!.
+The calculated and ®tted values of f ie are shown in Fig. 3
+for Z56 and in Fig. 4 for Z51,2, and 10. For comparison,
+we have plotted the ®t of Yakovlev and Shalybkov @16#~ YS!
+to their relativistic calculations, carried out in the zero-
+temperature approximation ~justi®ed at small rs and large
+Ge). In Fig. 4 we have also plotted f ie given by an analytic
+expression of Ebeling et al. @29# reproduced by SB @22#. For
+the hydrogen plasma (Z51) it reproduces the PadeÂ approxi-
+mations of Ref. @30#. One can see that the ®t of YS, in the
+range of its validity, agrees with our results. On the contrary,
+the approximation of Refs. @29,22# is clearly invalid in most
+cases. It exhibits unphysical behavior around Gi;0.1, pre-
+dicting an enhancement of screening with decreasing rs ~e.g.,
+for Z51 and Gi50.1 it gives larger f ie at rs50.41 than at
+rs51.464). Moreover, the extrapolation to Z.1, proposed in
+Ref. @29#, severely underestimates the screening effects.
+Figure 5 exhibits an analogous comparison for the excess
+free energy ~10! for Z51. We have also plotted the PadeÂ
+approximation of IIT @11#. Although the digressions between
+the ®t and numerical data of Ref. @11# lie within 0.4%, there
+are signi®cant deviations between IIT's ®t and our present
+results. This discrepancy originates from the relatively small
+number of numerical calculations used by IIT ~32 computed
+values at 0.1<G i<10 and 0.1<u<10). Our ®t, based on a
+much larger set of numerical data, reproduces not only these
+data but also the numerical results of IIT @11#.
+The excess ionic pressure Pii1Pie is shown in Fig. 6.
+Calculated data are compared with the pressure obtained by
+differentiation ~34! of our ®t and of SB's ®t. The DH ap-
+proximation, shown for reference, is calculated as the differ-
+ence between the DH pressures of the electron-ion TCP and
+the electron OCP. The importance of the screening effects is
+veri®ed by a comparison of our calculated and ®tted pressure
+with the pressure of the OCP in the rigid background Pii ,
+also shown in the ®gure.
+Figure 7 demonstrates the validity of the EOS derived
+from our analytic formulas. The EOS of the perfect ion-
+electron gas is compared with the EOS that includes the non-
+ideality of the electron and ion ¯uids but neglects the ie
+interactions; solid lines show the complete EOS. The gaps in
+some isotherms indicate the regions where the formation of
+bound states could not be neglected. The signi®cant devia-
+tions of the broken lines from the full lines in certain ranges
+of r and T demonstrate the importance of the ion-electron
+screening effects.
+VII. MULTI-IONIC MIXTURES
+The multi-ionic mixture is a straightforward generaliza-
+tion of the previous single-ion model. In that case the effec-
+tive Hamiltonian ~8! reads
+FIG. 4. Calculated ~®lled circles! and ®tted ~solid line! f ie for
+Z51, 2, and 10, for several indicated values of rs , compared with
+the approximations of DH ~dot-dashed lines!,Y S ~long-dashed
+lines!, and SB ~short-dashed lines!.
+FIG. 5. Calculated ~®lled circles! and ®tted ~solid lines! excess
+free energy f ex5xi( f ii1 f ie)1xef ee for Z51 for different values of
+the density parameter rs . The dot-dashed line is the DH formula,
+while the dashed and dotted lines represent the approximations of
+SB @22# and IIT @11#, respectively.
+PRE 58 4947EQUATION OF STATE OF FULLY IONIZED...
+Heff5Ki1
+1
+2V(
+kÞ0
+4pe2
+k2 F
+rZkrZk*
+e~k! 2Ni^Z2&G , ~35!
+where rZk5(iZirik are the Fourier components of the ion
+charge number ¯uctuations.
+For the binary ionic mixture in a rigid electron back-
+ground @e(k)51 ;k#, the excess ~nonideal! free energy of
+the mixture, as well as the related thermodynamic quantities,
+can be expressed with high accuracy by the so-called linear
+mixing rule ~LMR! in terms of the free energy of the pure
+phases
+f ex~Z1 ,Z2 ,Ge ,x1!'x1f ex~G1 ,x151!
+1~12x1!f ex~G2 ,x150!, ~36!
+where Gi5GeZi
+5/3 and x15N1 /( N11N2). The very high
+level of accuracy of the LMR ~36! was demonstrated by
+Hansen et al. @21# and con®rmed later on by several authors,
+using very accurate MC calculations ~see, e.g., @5,31#!.
+The validity of the LMR in the case of an ionic mixture
+immersed in a responsive ®nite-temperature electron back-
+ground, as described by the Hamiltonian ~35!, has been ex-
+amined by Hansen et al. @21# in the ®rst-order thermody-
+namic perturbation approximation and more recently by
+Chabrier and Ashcroft @32#, who have solved the HNC equa-
+tions with the effective screened potentials for arbitrary
+charge ratios ranging from a symmetric case (Z2 /Z1;1) to
+a highly asymmetric case (Z2 /Z1@1). These authors found
+that the LMR remains valid to a high degree of accuracy
+when the electron response is taken into account in the inte-
+rionic potential, except possibly for highly asymmetric mix-
+tures in the region of weak degeneracy of the electron gas
+~where the departure from linearity can reach a few percent!.
+VIII. CONCLUSIONS
+We have developed a completely analytic model for the
+free energy of fully ionized electron-ion Coulomb plasmas.
+The ideal part of the free energy of electrons and ions is
+described by Eqs. ~12!±~15! and is accurately represented by
+the analytic ®ts given by Eqs. ~18!±~24!. Note that these
+formulas provide the thermodynamic quantities of a free
+electron gas for any degeneracy and relativity. For the excess
+free energy of the electron ¯uid at ®nite temperature, we
+adopt the analytic approximation from Ref. @11#. For the
+excess free energy of the classical ionic OCP, we provide a
+simple interpolation ~28! that accurately reproduces the
+Monte Carlo results at Gi>1 and the Debye-HuÈckel±Abe
+limit for Gi!1. Finally, we have taken into account the ion-
+electron interactions by solving the hypernetted-chain equa-
+tions for a large set of the parameters Gi , rs , and Z and
+constructed an analytic ®t given by Eq. ~29!. Our analytic
+formulas reproduce f ii1 f ie with accuracy ;1 ±2 % and the
+derivatives of this function with respect to rs and Gi give an
+excess internal energy and pressure with relative errors not
+larger than a few percent. This analytic approximation is
+signi®cantly more accurate than previous approximations of
+the free energy of the electron-ion plasmas.
+FIG. 6. Calculated ~®lled circles! and ®tted ~solid lines! excess
+pressure of ions in the compressible electron background, Pi5Pii
+1Pie , in units of P0Gi , where P05nikBT. For comparison, SB's
+approximation is shown by dashed lines and the DH and OCP ap-
+proximations are shown by dot-dashed lines.
+FIG. 7. Equations of state ~EOSs! of fully ionized plasmas of
+four elements (Z54, 8, 13, and 26! given by the present analytic
+approximations. Solid lines show the pressure P vs density r taking
+into account the nonideality effects; dots represent the EOS of the
+perfect gas of ions and electrons; dashes display an EOS in which
+the electron-ion screening effects are neglected. The gaps in some
+isotherms indicate the regions where the formation of bound elec-
+tron states can be expected.
+4948 PRE 58GILLES CHABRIER AND ALEXANDER Y. POTEKHIN
+As mentioned in the Introduction, our calculations imply
+full ionization, i.e., pointlike ions from which their bound
+electrons are stripped completely. This model is realistic in
+various conditions at high temperatures or densities encoun-
+tered in modern laser experiments and in various astrophysi-
+cal situations, for example, stellar, brown dwarf, and giant
+planet interiors or the envelopes of neutron stars. In these
+situations, complete ionization can be safely assumed. Fur-
+thermore, the present model can be used as the basis of more
+elaborate equations of state aimed at describing the thermo-
+dynamic properties of partially ionized plasmas and ioniza-
+tion equilibrium. Work in this direction is in progress.
+ACKNOWLEDGMENTS
+We thank D. G. Yakovlev for useful remarks on the
+manuscript. A.Y.P. gratefully acknowledges the generous
+hospitality and ®nancial support of the theoretical astrophys-
+ics group at the Ecole Normale SupeÂrieure de Lyon, and
+partial ®nancial support from Grant Nos. RFBR 96-02-
+16870a, DFG-RFBR 96-02-00177G, and INTAS 96-0542.
+@1# Reviews are given, for example, in The Equation of State in
+Astrophysics, edited by G. Chabrier and E. Schatzman ~Cam-
+bridge University Press, Cambridge, 1994!.
+@2# See, e.g., D. Saumon and G. Chabrier, Phys. Rev. A 46, 2084
+~1992!; D. Saumon, G. Chabrier, and H. M. Van Horn, Astro-
+phys. J., Suppl. Ser. 99, 713 ~1995!, and references therein.
+@3# S. I. Blinnikov, N. V. Dunina-Barkovskaya, and D. K. Nady-
+ozhin, Astrophys. J., Suppl. Ser. 106, 171 ~1996!.
+@4# J. A. Miralles and K. A. Van Riper, Astrophys. J., Suppl. Ser.
+105, 407 ~1996!.
+@5# H. DeWitt, W. Slattery, and G. Chabrier, Physica B 228, 158
+~1996!.
+@6# G. Chabrier, Astrophys. J. 414, 695 ~1993!.
+@7# M. D. Jones and D. M. Ceperley, Phys. Rev. Lett. 76, 4572
+~1996!.
+@8# G. Chabrier, J. Phys. ~Paris! 51, 1607 ~1990!.
+@9# S. Galam and J. P. Hansen, Phys. Rev. A 14, 816 ~1976!.
+@10# N. W. Ashcroft and D. Stroud, Solid State Phys. 33,1 ~1978!.
+@11# S. Ichimaru, H. Iyetomi, and S. Tanaka, Phys. Rep. 149,9 1
+~1987!.
+@12# B. Jancovici, Nuovo Cimento 25, 428 ~1962!.
+@13# J. P. Hansen and I. R. McDonald, Theory of Simple Liquids
+~Academic, New York, 1976!.
+@14# L. D. Landau and E. M. Lifshitz, Statistical Physics, Part I
+~Pergamon, Oxford, 1986!.
+@15# H. M. Antia, Astrophys. J., Suppl. Ser. 84, 101 ~1993!.
+@16# D. G. Yakovlev and D. A. Shalybkov, Sov. Sci. Rev. Sect. E 7,
+311 ~1989!.
+@17# M. Baus and J. P. Hansen, Phys. Rep. 59,1 ~1980!.
+@18# H. Nagara, Y. Nagata, and T. Nakamura, Phys. Rev. A 36,
+1859 ~1987!.
+@19# R. Abe, Prog. Theor. Phys. 21, 475 ~1959!.
+@20# J. P. Hansen, Phys. Rev. A 8, 3097 ~1973!.
+@21# J. P. Hansen, G. M. Torrie, and P. Vieillefosse, Phys. Rev. A
+16, 2153 ~1977!.
+@22# W. Stolzmann and T. BloÈcker, Phys. Lett. A 221,9 9 ~1996!;
+Astron. Astrophys. 314, 1024 ~1996!.
+@23# W. Ebeling, Contrib. Plasma Phys. 30, 553 ~1990!.
+@24# S. Tanaka, S. Mitake, and S. Ichimaru, Phys. Rev. A 32, 1896
+~1985!.
+@25# W. L. Singwi, M. P. Tosi, R. H. Land, and A. SjoÈlander, Phys.
+Rev. 176, 589 ~1968!.
+@26# F. Perrot and C. Dharma-wardana, Phys. Rev. A 30, 2619
+~1984!.
+@27# M. A. Pokrant, Phys. Rev. A 16, 413 ~1977!; R. D. Dandrea,
+N. W. Ashcroft, and A. E. Carlsson, Phys. Rev. B 34, 2097
+~1986!.
+@28# E. E. Salpeter, Astrophys. J. 134, 669 ~1961!.
+@29# W. Ebeling, A. FoÈrster, V. E. Fortov, V. K. Gryaznov, and A.
+Ya. Polishchuk, Thermophysical Properties of Hot Dense
+Plasmas ~Teubner, Stuttgart, 1991!.
+@30# W. Ebeling and W. Richert, Phys. Status Solidi B 128, 467
+~1985!.
+@31# Y. Rosenfeld, Phys. Rev. E 52, 3292 ~1995!; 54, 2827 ~1996!.
+@32# G. Chabrier and N. W. Ashcroft, Phys. Rev. A 42, 2284
+~1990!.
+PRE 58 4949EQUATION OF STATE OF FULLY IONIZED...

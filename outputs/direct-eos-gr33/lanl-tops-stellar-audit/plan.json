@@ -1,0 +1,18 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "faefcb8",
+  "bindings": {
+    "verification/lanl_tops_stellar_audit.py": "76e1065a1bb848d37e301a6d85713cf09cf09cd3eb9a668dca213079ab81e412",
+    "outputs/direct-eos-gr33/lanl-tops-stellar-names/manifest.json": "2f4171d1f0cfe4c811d29a34ce820e2087aab65757f02f3071752dc235ff229b",
+    "outputs/direct-eos-gr33/lanl-tops-stellar-probe/manifest.json": "8312b382a097872754c2e2b530995a915853290e75255b756eaa7e7616460aec",
+    "outputs/direct-eos-gr33/lanl-tops-stellar-audit/lanl-opac-faq.html": "7127635c165963d58f41fbb0ca47df00d0ffba06191e97fd9e8c5dd4d31bcaa9",
+    "outputs/direct-eos-gr33/lanl-tops-stellar-audit/lanl-opac-physics.html": "e3cd00866eba227d6648b174a97687a7f02c77b704facb88d20e2ad124cfbe20"
+  },
+  "input_echo": "Check exact decimal printing intervals for every submitted number fraction, mass fraction, density and table temperature. No composition refit or tolerance based on a small missing species. Report all returned material identities.",
+  "material_ids": "The returned integer material ID equals the reversal of the last four digits of the documented n1xxxxx filename convention in the observed Al-new/Al-old/He-new controls. Check this inferred interface mapping for every element; it is not a native source or physical opacity certificate.",
+  "spectra": "Require positive strictly increasing photon energies, finite nonnegative total/absorption/scattering, nonconstant absorption, both requested temperatures and density. Check total=absorption+scattering with exact decimal output intervals. Reject all actual WARNING messages and any flat boundary spectrum.",
+  "finite_mean_control": "For the explicitly cutoff-OFF central control only, integrate the returned absorption/total spectra against vacuum Planck/Rosseland weights with Simpson and trapezoid quadrature. Compare both to the printed gray means and to each other at relative tolerance 1e-3. These are finite spectral consistency tests; unsampled spectra and tails have no physical error bound.",
+  "mean_relative_tolerance": 0.001,
+  "cutoff_control": "Compare the central cutoff-ON/OFF tables at identical inputs. Keep gray-mean changes separate from changes in the frequency-resolved arrays; do not silently insert cutoff-adjusted means into an unchanged vacuum-photon EOS.",
+  "acceptance": "Input echo, material-ID mapping, warning absence and spectrum arithmetic are separate from mean consistency, physical plasma/EOS error, temperature interpolation and actual evolution. The outer-cell server failure stays failed."
+}

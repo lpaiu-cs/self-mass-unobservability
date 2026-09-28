@@ -1,0 +1,49 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "Original material/sources.json pressure probe exceeds4e5 and is rejected. Its old tangent pressure is not the actual finite-state pressure.",
+  "repair": "Reuse actual saved material/photon histories. Recover finite pressure directly as in Phase151. Use70/90digit deep conserved roots and the same cubic EOS for deep gas and radial kinetic stress; extended spline owner in atmosphere. Same actual amplitude,0.002 pressure and original GR gates.",
+  "pilot": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "rows": [
+      {
+        "k": 0,
+        "steps": 128,
+        "owner": 2.7713461521374634e-16,
+        "precision": 0.0,
+        "root": 7.176566497351535e-91,
+        "seconds": 0.14644780600065133,
+        "arithmetic_over_increment": 0.0
+      },
+      {
+        "k": 8,
+        "steps": 128,
+        "owner": 2.768949946081594e-16,
+        "precision": 0.0,
+        "root": 7.808715678781367e-91,
+        "seconds": 0.18501977900086786,
+        "arithmetic_over_increment": 7.139267468115779e-08
+      },
+      {
+        "k": 16,
+        "steps": 128,
+        "owner": 2.763902095214185e-16,
+        "precision": 0.0,
+        "root": 7.584546171443112e-91,
+        "seconds": 0.20023112099988793,
+        "arithmetic_over_increment": 5.988621774316135e-08
+      }
+    ],
+    "upper_seconds": 38.61571622799238,
+    "eligible": true,
+    "seconds": 7.971877632999167
+  },
+  "cap_seconds": 60,
+  "new_evolution_steps": 0,
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/apply_retained_native_acoustic.py": "0b6a9aa63a31edeb6c8af1c1cdf2475842c947ca97ca1aaf62265f8f1a38ad36",
+    "verification/retained_deep_collision_precision.py": "204c840ccbe02a5c58893bbd4ffff76a3bad6cc83d25d795d3039fc59e1049ab",
+    "retained-native-acoustic153-work/response-centered/material/sources.json": "5a1f70ce54a693cc0599051a7b07aef0a2d76579e101d6f73425a200d8c244f6",
+    "retained-native-acoustic153-work/response-centered/registered-first-readout-producer.py": "5b8e4b95991692aefc1270feafc10ded55d734b9e8932a9c3c8f754c3a965aea"
+  }
+}

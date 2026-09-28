@@ -1,0 +1,24 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "c8b8dad",
+  "bindings": {
+    "verification/gr_spatial_preflight.py": "fdc1b98b4c6ba2d5646956e5bf2183c4911f934be028a6e31b2707c33ef49a92",
+    "outputs/direct-eos-gr33/gr-heat-entropy-closure/manifest.json": "d48ed74b8faa1d9bff3d881b78e980d792eb0b762c5ed7ca74120de77813787e",
+    "outputs/direct-eos-gr33/gr-heat-entropy-closure/root-brackets.json": "9caaa09ef9af7abed20452a4a022609c4829ebcd792aab75e00fbd844f65626e",
+    "outputs/direct-eos-gr33/gr-heat-entropy-closure/initial-rates.npz": "c288fbf689b4fdccfef9901bf503363c1cd998fe014a5de023ce9f49d99aba4a",
+    "outputs/direct-eos-gr33/initial-state-17-4.npz": "5dcc8ffb8b32a9f15ccc4c8bb7111d19be8dcdc66611ad2942e3a4a0cf6cc6d6",
+    "outputs/direct-eos-gr33/initial-structure-17-4.json": "142630ac32b71b761e9a6ac04ed00cf37348b6920cbb6b30dc6792845ac90b3b",
+    "outputs/direct-eos-gr33/gr-microphysics/auxiliaries.npz": "63744d1a041ebc39bd33dfa0f5e181d64378966c1ee22364c477009bee08d976",
+    "outputs/direct-eos-gr33/gr-heat-initial-constraints/initial-data.npz": "9c67262c1df8beab8d7ce8e7e2ce50693c60101fdf83961322b148ec4a0a2c99",
+    "outputs/direct-eos-gr33/gr-heat-relaxation-boundary/thresholds.npz": "029e7ec7c2d1cd1f30734626a55ef142bcc696abb1923df84f225581215dd4c3",
+    "outputs/direct-eos-gr33/gr-radiative-boundary/diagnostics.npz": "9e61036be4e55a08638467fc59541520b5ee7c9ab81dff912a478bdf4a0562d4",
+    "outputs/direct-eos-gr33/gr-caloric-increment/path-1.npz": "f4d48fbc50b66f85306fd240533978f280d71a6e6bbe441d983e8aa4511553d6",
+    "outputs/direct-eos-gr33/gr-caloric-increment/path-2.npz": "223d2d07bdc08d805edf47b4b370256f875cedaf74be1a1607dc811751091ef5",
+    "outputs/direct-eos-gr33/gr-caloric-increment/path-2.json": "8c5c1fc9b3c1440de886b80bd176a631037783749b8b9fb60b7e5e7974ba428f",
+    "outputs/direct-eos-gr33/gr-nonlinear-thermal/duration.json": "f6dc1171e72525bfb375620a999f777f1b49911c7380836427188176e6fa6903"
+  },
+  "diagnostic_defined_after_time_failure": true,
+  "scope": "Compare independently differenced point pressure to the TOV force, point values to shell integrals, and the existing failed maximum temperature gate to spatial/optical diagnostics. No new pass tolerance, claimed grid convergence, interval derivative bound or physical surface completion.",
+  "full_GR_evolution": false,
+  "physical_EOS_certified": false
+}

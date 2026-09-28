@@ -1,0 +1,7 @@
+{
+  "classification": "Counterexample candidate",
+  "reason": "The four-step isobaric midpoint mass estimate passes energy while time composition fails. Check spatial integration separately before reading a tiny mass-normalized scalar residue.",
+  "method": "Reconstruct the same initial and final TOV branches from their saved inputs and fitted parameters. Integrate the stable difference of (rest mass plus thermal energy) times sqrt(1-2m/r) at two and four Gauss nodes per identical baryon cell. Use the same EOS entropy inversion and fixed-cell inventories.",
+  "threshold": "Keep the original 1e-6 energy-release criterion. Record the midpoint verdict and both new quadrature results, including any disagreement.",
+  "limits": "A spatial estimator check does not repair time integration, EOS physics, radiative transport, or a dynamic Einstein solution."
+}

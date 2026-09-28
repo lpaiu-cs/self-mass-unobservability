@@ -1,0 +1,38 @@
+{
+  "classification": "Proven",
+  "checkpoint": "a87e0c5",
+  "bits": 128,
+  "strip_in_sqrt_beta": "1/16",
+  "thermal_split": 176,
+  "beta_box": [
+    "3e-6",
+    "0.006"
+  ],
+  "eta_box": [
+    -17,
+    24
+  ],
+  "bindings": {
+    "verification/gr_response_regular_identity.py": "be8d468967c492c898fe1af254abfb89039d88692f99eb872066e50b0f639423",
+    "outputs/direct-eos-gr33/gr-response-positive-sector/manifest.json": "7d5291f134ebac62b7f708d743f1280a907016826c10420a67427a2aa2db7035",
+    "outputs/direct-eos-gr33/gr-response-positive-sector/result.json": "57559587b8130d2f2269c38e78c6a096954379c43d522b9b37d2f01aa1f20e87",
+    "outputs/direct-eos-gr33/gr-logarithmic-response/inputs.npz": "c9695e054b3ef6bf11b63a24909d7a4e549429d65a72bea4d9ad982b76afda53",
+    "outputs/direct-eos-gr33/gr-smooth-response-defined/manifest.json": "503fbe815c41464f5196498ed50a9dc2d9ed21e8d3a934a8e654565267f43711",
+    "outputs/direct-eos-gr33/gr-smooth-response-defined/complete-response.jsonl.gz": "a553c3dd4df754fe1facd7d37f102d7619b9aa4dd3dfd6e444857da8df5cb439",
+    "verification/gr_polarization_thermodynamics.py": "9fa8573f636f7ee896bce66a6f85b22448dc6e54512fcec7a71cea23d367d1b0"
+  },
+  "control_positions": [
+    0,
+    1603,
+    3205
+  ],
+  "control_z_indices": [
+    0,
+    5,
+    8,
+    11
+  ],
+  "control_digits": 64,
+  "target": "Prove an exactly equivalent positive divided-difference integral with a removable diagonal, then prove analytic Re S>0 for all real Re Q and |Im Q|<=sqrt(beta)/16. Compare its six real response jets against the already certified complete momentum integrals.",
+  "boundary": "The additive strip applies to S at real beta and eta. It does not by itself exclude zeros of Q^2/B+S near the imaginary screening poles, certify joint eta/tau bounds, or evaluate the remaining outer self integral."
+}

@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/resume_full_native_newton.py", line 119, in <module>
+    evolve=FunctionType(before.evolve.__code__,dict(before.evolve.__globals__,OUT=OUT));evolve(64 if action=='coarse' else 128)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/complete_stable_full_interval.py", line 76, in evolve
+    m=owner.Model(n);row=m.run(n,f'complete-{n}',n,restart=f'interval-15-{n}')
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/resume_full_native_newton.py", line 41, in run
+    
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/complete_stable_full_interval.py", line 62, in saved_stage
+    result=actual(m,t,h,x,g,lus)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/resume_full_native_newton.py", line 27, in stages
+    files=inputs+[OLD/n for n in ['last-accepted-64.npz','rejected-joint-stage.npz','rejected-joint-stage.json','failure-64.json','coarse-receipt.json','linear-64.json']]
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/complete_stable_full_interval.py", line 47, in solve
+    try:return solver(m,correct,P,rhs,guess)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/couple_native_fluid_radau.py", line 244, in solve
+    assert k<3,('Four-moment linear residual',relative,moments.tolist())
+AssertionError: ('Four-moment linear residual', 1.56758030175638e-09, [np.longdouble('0.11624478370229979225'), np.longdouble('0.015024947557610944724'), np.longdouble('5.1781512242779680045e-12'), np.longdouble('1.4771008002422130332e-10')])

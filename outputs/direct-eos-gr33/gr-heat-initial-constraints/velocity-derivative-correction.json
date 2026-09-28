@@ -1,0 +1,9 @@
+{
+  "classification": "Proven",
+  "original_artifact": "symbolic.json",
+  "invalid_unqualified_field": "baryon_and_specific_energy: the material energy rate was stated using only initial velocity zero.",
+  "still_valid": "Initial constraints, metric/mass rates and normal-frame Hamiltonian propagation. The material density rate is unchanged at zero initial velocity.",
+  "correction": "Add -(2*Q/rho_B)*v_dot to the material specific-energy rate; solve Q_dot+(epsilon+P)*v_dot=2*c*N*A*Q under initial hydrostatic balance.",
+  "corrected_derivation": "outputs/direct-eos-gr33/gr-heat-fluid-frame/symbolic.json",
+  "original_sources_and_arrays_preserved": true
+}

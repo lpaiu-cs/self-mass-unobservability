@@ -1,0 +1,55 @@
+{
+  "classification": "Counterexample candidate",
+  "commands": [
+    {
+      "command": [
+        "cmake",
+        "-S",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-precision/source",
+        "-B",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-precision/build",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DBUILD_SHARED_LIBS=ON",
+        "-DBUILD_TEST=ON",
+        "-DBUILD_DOC=OFF",
+        "-DBUILD_DOX_DOC=OFF"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-precision/build",
+        "--target",
+        "free_eos",
+        "-j",
+        "2"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "gfortran",
+        "-O2",
+        "-fPIC",
+        "-shared",
+        "-I/home/lpaiu/work/direct-eos-gr33/molecular-precision/build/src",
+        "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-molecular-precision/direct_ion_bridge.f90",
+        "-L/home/lpaiu/work/direct-eos-gr33/molecular-precision/build/src",
+        "-Wl,-rpath,/home/lpaiu/work/direct-eos-gr33/molecular-precision/build/src",
+        "-lfree_eos_direct24_molecular_extended",
+        "-o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-precision/split-input.so"
+      ],
+      "returncode": 0
+    }
+  ],
+  "completed": true,
+  "sha256": {
+    "/home/lpaiu/work/direct-eos-gr33/molecular-precision/split-input.so": "1454c747c7c0a8d85e06714aabf20b89b1e1fa16f946fc4ded317738273c2449",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-precision/build/src/libfree_eos_direct24_molecular_extended.so.1.0.0": "265a7fad534be580d5599250291d23ef00ecca6132c1e9632ec8d20437814dc3"
+  },
+  "original_runtime_modified": false,
+  "physical_EOS_certified": false
+}

@@ -1,0 +1,7 @@
+synspec54.f:21869:26:
+
+21868 |                do j=2,ndens-1
+      |                                                                        2
+21869 |                   densg(i,j)=exp(at1+(j-1)*dr)
+      |                          1
+Warning: Array reference at (1) out of bounds (2 > 1) in loop beginning at (2)

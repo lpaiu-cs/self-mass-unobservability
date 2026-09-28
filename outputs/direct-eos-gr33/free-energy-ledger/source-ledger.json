@@ -1,0 +1,75 @@
+{
+  "classification": "Imported from prior work",
+  "sources": {
+    "free_eos_detailed.f90": {
+      "source": "/home/lpaiu/work/direct-ions32/full-integral-source/src/free_eos_detailed.f90",
+      "sha256": "aac2313e0f48a846a0f78092b3315e339583f416802edcdb09dd4fb169281c9e",
+      "excerpts": [
+        {
+          "first": 3167,
+          "last": 3229,
+          "text": "  ! there is the possibility of pressure ionization and\n  ! Planck-Larkin terms.\n  ! n.b. For kif = 1, some of the pressure-related stuff (but not all of\n  ! it in the ifnoaux_iteration case) is calculated previously.  But just\n  ! repeat those calculations here rather than worrying about special logic.\n  if(ifpi_local.eq.0) then\n     ! there are no p, s, u terms from pressure ionization.\n     ppi = 0._fp_kind\n     ppif = 0._fp_kind\n     ppit = 0._fp_kind\n     spi = 0._fp_kind\n     spif = 0._fp_kind\n     spit = 0._fp_kind\n     upi = 0._fp_kind\n  elseif(ifpi_local.eq.1) then\n     ! According to debug printouts, ifnr can be uninitialized for kif = 0\n     ! Fixme, review the kif = 0 logic to verify this debug result.\n     ! Must calculate f and t derivatives.\n     ifnr = 0\n     ifnr03 = .true.\n     call pteh_pi_end(&\n          ifnr, full_sum1, rho, rf, rt, t, ne, nef, net,&\n          ppi, ppif, ppit, spi, spif, spit, upi)\n  elseif(ifpi_local.eq.2) then\n     ! n.b. call to eos_tqft produces nu = n/(rho*avogadro)\n     ! form of h_ion, he_ion, and he_ion2.  Also use nu form\n     ! of nx, ny, nz, ne, etc.\n     call fjs_pi_end(&\n          t, rho, rf, rt,&\n          nux, 0._fp_kind, 0._fp_kind, nuy, 0._fp_kind, 0._fp_kind, nuz, 0._fp_kind, 0._fp_kind,&\n          h_ion, h_ionf, h_iont, he_ion, he_ionf, he_iont, he_ion2, he_ion2f, he_ion2t, ne, nef, net,&\n          ppi, ppif, ppit, spi, spif, spit, upi)\n  elseif(ifpi_local.eq.3.or.ifpi_local.eq.4) then\n     ! n.b. call to eos_tqft produces nu = n/(rho*avogadro)\n     ! form of extrasum.\n     call mdh_pi_end(&\n          t, rho, rf, rt,&\n          nion,&\n          extrasum(:nextrasum), extrasumf(:nextrasum), extrasumt(:nextrasum),&\n          ppi, ppif, ppit, spi, spif, spit, upi)\n  endif\n  if(ifexcited.gt.0) then\n     call excitation_pi_end(t, rho, rf, rt,&\n          pexcited, pexcitedf, pexcitedt,&\n          sexcited, sexcitedf, sexcitedt, uexcited)\n  else\n     pexcited = 0._fp_kind\n     pexcitedf = 0._fp_kind\n     pexcitedt = 0._fp_kind\n     sexcited = 0._fp_kind\n     sexcitedf = 0._fp_kind\n     sexcitedt = 0._fp_kind\n     uexcited = 0._fp_kind\n  endif\n  if(ifpl.eq.1) then\n     ! no pressure terms for Planck-Larkin occupation probability\n     ! but there are entropy and energy terms.\n     spi = spi + cr*sumpl1\n     upi = upi + cr*t*sumpl2\n     if(ifnr03) then\n        spif = spif + cr*sumpl1f\n        spit = spit + cr*sumpl1t\n     endif"
+        },
+        {
+          "first": 3496,
+          "last": 3513,
+          "text": "  free_rad = -cr*t*sr/4._fp_kind\n  free_e = cr*t*(ue*ne-ne*se)\n  free_coulomb = (ducoulomb -t*dscoulomb)/rho\n  free_ex = (uex -t*sex)/rho\n  if(ifpl.eq.1) then\n     free_pl = cr*t*(sumpl2 - sumpl1)\n  else\n     free_pl = 0._fp_kind\n  endif\n  free_pi = upi -t*spi - free_pl\n  free_excited = uexcited -t*sexcited\n  free_ion = cr*t*(1.5_fp_kind*ni - full_sum0*&\n       (2.5_fp_kind + 1.5_fp_kind*tl - rl) - sion) + (c2*cr)*uion +&\n       0.5_fp_kind*(c2*cr)*h2diss*eps(1)\n  free =&\n       free_rad + free_e + free_coulomb + free_ex +&\n       free_pi +&\n       free_excited + free_pl + free_ion"
+        }
+      ]
+    },
+    "eos_calc.f90": {
+      "source": "/home/lpaiu/work/direct-ions32/full-integral-source/src/eos_calc.f90",
+      "sha256": "44b6a45a01c238a36ec49bc495e2b5eb81b76c40a314d7559593ce45d59beddd",
+      "excerpts": [
+        {
+          "first": 390,
+          "last": 403,
+          "text": "!> \\param[out] sumpl0_dv\n!>  sumpl0_dv(nions_inp2) is an array of the calculated partial derivatives of sumpl0 wrt the elements of dv.<br>\n!> \\param[out] sumpl1\n!>   sumpl1 (returned only if ifpl = 1) is the calculated weighted sum over non-H\n!>     nu(i) = n(i)/(rho*NA) with weight of w + d ln w/d ln T, where w\n!>     is the Planck-Larkin occupation probability.<br>\n!> \\param[out] sumpl1f\n!>  sumpl1f is the calculated partial derivative of sumpl1 wrt fl.<br>\n!> \\param[out] sumpl1t\n!>  sumpl1t is the calculated partial derivative of sumpl1 wrt ln t.<br>\n!> \\param[out] sumpl2\n!>   sumpl2 (returned only if ifpl = 1) is the calculated weighted sum over non-H\n!>     nu(i) = n(i)/(rho*NA) with weight of d ln w/d ln T, where w is\n!>     the Planck-Larkin occupation probability.<br>"
+        },
+        {
+          "first": 2434,
+          "last": 2444,
+          "text": "     if(ifpl.eq.1) then\n        ! correct sumpl0, sumpl1 and sumpl2 for hydrogen nu values.\n        sumpl0 = sumpl0 +&\n             h_neutral*plop(1) +&\n             h2*plop(nions+1) +&\n             h2plus*plop(nions+2)\n        sumpl1 = sumpl1 + h_neutral*(plop(1) + plopt(1)) +&\n             h2*(plop(nions+1) + plopt(nions+1)) +&\n             h2plus*(plop(nions+2) + plopt(nions+2))\n        sumpl2 = sumpl2 + h_neutral*plopt(1) +&\n             h2*plopt(nions+1) + h2plus*plopt(nions+2)"
+        }
+      ]
+    }
+  },
+  "terms": [
+    {
+      "term": "radiation",
+      "fixed_T_species_Hessian": "zero",
+      "condition": "Radiation depends on T; the species redistribution holds T and volume fixed."
+    },
+    {
+      "term": "ideal atoms, ions and molecules",
+      "fixed_T_species_Hessian": "kT*diag(1/n)",
+      "condition": "Positive species support; fixed-T translational masses, statistical weights and internal binding/rotation/vibration terms are linear in species populations. Count molecular nuclear inventory with multiplicity two."
+    },
+    {
+      "term": "Planck-Larkin ground-state correction",
+      "fixed_T_species_Hessian": "zero",
+      "condition": "The temperature-only ln occupation weights are multiplied linearly by each population. The source adds PL to spi/upi and then subtracts it from the pressure-ionization bookkeeping column, leaving one PL term in the total."
+    },
+    {
+      "term": "electron plus nonlinear exchange",
+      "fixed_T_species_Hessian": "charge pullback of the Legendre-compressibility coefficient",
+      "condition": "Consistent interior branch and positive grand-canonical compressibility. Previously traced returned-input coefficients are frozen; their continuous evaluation is not certified."
+    },
+    {
+      "term": "Coulomb",
+      "fixed_T_species_Hessian": "three-moment Hessian pullback",
+      "condition": "Declared DH/OCP model, fixed T, frozen coefficients."
+    },
+    {
+      "term": "MDH pressure ionization",
+      "fixed_T_species_Hessian": "nine-moment polynomial Hessian pullback",
+      "condition": "Declared radii and quad=10. Ground-state MDH trace precedes PL additions."
+    },
+    {
+      "term": "density-dependent excitation",
+      "fixed_T_species_Hessian": "-(D.T*C+C.T*D+C.T*W*C)",
+      "condition": "Differentiable fixed branch and linear moments; actual scaled component derivatives are separately captured."
+    }
+  ],
+  "scope": "A source-bound algebraic ledger. It is not a measured total-free-energy or equilibrium-residual replay and is not a continuous/physical derivative certificate."
+}

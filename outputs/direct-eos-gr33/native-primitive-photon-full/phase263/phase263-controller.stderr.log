@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/.phase263-controller.py", line 51, in <module>
+    receipt=read(reference/'receipt.json');assert receipt['error'] is None,receipt
+AssertionError: {'seconds': 3600.0001183019995, 'error': "TimeoutError('Registered native acoustic budget')", 'source_sha256': 'a436d2a48505cd35559f82d4a986acbb8742a3c0e252b5a15748d302f14c20fc', 'peak_RSS_bytes': 957157376}

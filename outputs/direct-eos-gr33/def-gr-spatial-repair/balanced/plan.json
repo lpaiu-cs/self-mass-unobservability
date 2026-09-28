@@ -1,0 +1,24 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "95d99987",
+  "claim": "Separate the physical fluid and weak scalar source directions in the rational trial space, then apply the unchanged input and complete the fixed spatial comparison.",
+  "unchanged": "Same polynomial cells, composite quadrature, heat input,128/256/512 spaces, readouts and acceptance gates. No modal clipping, degree or grid expansion.",
+  "formula": "f=f_fluid+f_scalar; use two separately normalized shifted source responses and a two-column block rational space. Evolve the original full forcing with the original mass/energy; no rescaled physical source.",
+  "decision": "First run degree4 with75s cap. Only if all four projection comparisons pass relative2% and order1.5, continue degrees2,1. Only if degree2/4 spatial differences all decrease and are below2%, execute the three original coefficient/outer/quadrature contrasts. Total cap300s; stop on failure without expansion.",
+  "forecast": "The original degree4 case48.65s and factor case54.10s are retained; arithmetic replacement did not resolve the failure. Block basis uses the same512 columns and two-pass orthogonalization. First-case bound75s, entire fixed workflow300s.",
+  "budget": {
+    "first_case_seconds": 75,
+    "total_seconds": 300,
+    "CPU_threads": 1,
+    "memory_GB": 4,
+    "new_EOS_calls": 0
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-spatial-repair/balanced-run.py": "7e25ee412e65a3fbbe670c0c46fe7bb2f379c58defb8c287a9bc24cf9f24f5f9",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_balanced_modes.py": "f50cb633886b8811248b993972850ef8c0da8b4bb94a4f4bd8488a26168223c1",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_spatial_repair.py": "d13044861c2b4761d5e6349d809c3368f46112974f374aa050aada516c80f8e5",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-spatial-repair/plan.json": "de746c5711ac529f3d8ccb8c4435429654f189e758a8e706afacac8d25bf0612",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-spatial-repair/measured-budget.json": "eb98617661fb2af3cf164c0aa90d2a713c3c6a650ad6c50d374d849789847e15",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-spatial-repair/factor/result.json": "84d4b15257bd78cf8cbc14606c6ee536e71823a2ae33ecff722deaabc151beef"
+  }
+}

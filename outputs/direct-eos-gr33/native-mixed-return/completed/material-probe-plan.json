@@ -1,0 +1,28 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "Actual first material prefix fails the unchanged0.2percent half/nominal directional comparison.",
+  "question": "Does the failure shrink on reducing the artificial finite-difference probe, or on increasing it? Inspect the same saved state; do not change physical amplitude, EOS, grid, clock or donor rule.",
+  "factors": [
+    0.015625,
+    0.03125,
+    0.0625,
+    0.125,
+    0.25,
+    0.5,
+    1,
+    2
+  ],
+  "base_arithmetic_probe": 512,
+  "selection": "Choose the smallest central factor whose half/nominal/double pairwise L1 directional discrepancies are below0.2percent. This only admits rerunning the failed two-step prefix; all future trajectory checks remain required.",
+  "budget_seconds": 30,
+  "total_action_seconds": 4200,
+  "new_evolution_steps": 0,
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/repair_native_mixed_material.py": "4745863ac8ff66ddea96b09432d035f9d40f28f734a915d8c247d506108d7e18",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/return_native_mixed_gr.py": "9b549a650ad7848b15acaabdac5f694a4ac20d784f307fbbff582676699bcc28",
+    "native-mixed-return162-work/material_pilot-1-receipt.json": "0ac5a7b23d5be62f4b70c0f9bc3ea97b21ef704214b648627eb6d3703baeeee5",
+    "native-mixed-return162-work/sweep-1/material/pilot-64.npz": "45efb673015c8a48fee1b35bf242f1c65185a2d9969cd6e08d064db306249d76",
+    "native-mixed-return162-work/sweep-1/material/pilot-64.json": "cc7164a2cfed97f1204709b8662fb5b0594f549349035725b58265a0144002cc",
+    "native-mixed-return162-work/sweep-1/photons/result.json": "7e1a8ec2d16286a872612d675c3c7d1d9140c304e6a25ce8e4ab0c1e230a7267"
+  }
+}

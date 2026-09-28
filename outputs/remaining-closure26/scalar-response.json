@@ -1,0 +1,63 @@
+{
+  "classification": "Counterexample candidate",
+  "R_m": 68939751.18572256,
+  "M_geom_m": 291.687172470236,
+  "static_susceptibility_m": [
+    1166.8526913469886,
+    1166.8526936478227
+  ],
+  "static_relative_change": 1.9718289223646934e-09,
+  "response": [
+    {
+      "tol": 1e-10,
+      "outer_phase": 20,
+      "period_days": 1.6294,
+      "kR": 1.0263309427776199e-05,
+      "real_m": 1166.8526930720377,
+      "imag_m": 2.026981461819903e-07,
+      "static_m": 1166.8526913469886,
+      "phase_rad": 1.737135693181079e-10,
+      "phase_delay_s": 3.892201628182114e-06
+    },
+    {
+      "tol": 1e-10,
+      "outer_phase": 20,
+      "period_days": 327.26,
+      "kR": 5.1100153949821355e-08,
+      "real_m": 1166.8527051346464,
+      "imag_m": 1.0092170329940277e-09,
+      "static_m": 1166.8526913469886,
+      "phase_rad": 8.649052520108537e-13,
+      "phase_delay_s": 3.892201668419523e-06
+    },
+    {
+      "tol": 2e-12,
+      "outer_phase": 40,
+      "period_days": 1.6294,
+      "kR": 1.0263309427776199e-05,
+      "real_m": 1166.852694556395,
+      "imag_m": 2.0269814668575206e-07,
+      "static_m": 1166.8526936478227,
+      "phase_rad": 1.7371356952885325e-10,
+      "phase_delay_s": 3.892201632904045e-06
+    },
+    {
+      "tol": 2e-12,
+      "outer_phase": 40,
+      "period_days": 327.26,
+      "kR": 5.1100153949821355e-08,
+      "real_m": 1166.8526939910018,
+      "imag_m": 1.0092170136579495e-09,
+      "static_m": 1166.8526936478227,
+      "phase_rad": 8.649052436997091e-13,
+      "phase_delay_s": 3.892201631018142e-06
+    }
+  ],
+  "real_response_refinement_relative": [
+    1.272103311578121e-09,
+    9.55017243065015e-09
+  ],
+  "passed": true,
+  "convention": "l=0 scattering response R*(S_beta/S_0-1)/(2 i kR) on the declared GR-background interpolant, e^(-i omega t). S_0 removes the beta=0 curvature scattering. Not a binary force/TOA transfer function.",
+  "limits": "Finite-profile and exterior-asymptotic numerical controls only. No full fluid/thermal stability or finite-background nonlinear inference."
+}

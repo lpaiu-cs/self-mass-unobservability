@@ -1,0 +1,25 @@
+{
+  "classification": "Counterexample candidate",
+  "event": "Stopping the original WSL-launched controller (to stop workers6-9 for cost) also ended all fourteen workers of its session at about11:53:25KST. None wrote a receipt. This is a scheduling failure, not a physical or numerical gate failure.",
+  "intent": "native-geometric-clock265-work/cost-stop-intent.json",
+  "kept_items": {
+    "work-0": 8,
+    "work-1": 7,
+    "work-2": 8,
+    "work-3": 7,
+    "work-4": 8,
+    "work-5": 8,
+    "work-6": 2,
+    "work-7": 2,
+    "work-8": 2,
+    "work-9": 2,
+    "work-10": 8,
+    "work-11": 8,
+    "work-12": 8,
+    "work-13": 7
+  },
+  "remaining_items": 489,
+  "remaining_cells": 3817,
+  "lesson": "In this WSL setup, ending a launched controller ends its child workers. Stop individual workers only through a controller that stays alive.",
+  "time_unix": 1790391373.5885625
+}

@@ -1,0 +1,248 @@
+--- upstream/PARAMS.FOR
++++ build/PARAMS.FOR
+@@ -33,8 +33,8 @@
+      *           MHE  = 20,
+      *           MHWL  = 55)
+       PARAMETER (MFGRID  =  100000,
+-     *           MTTAB   =     100,
+-     *           MRTAB   =     100,
++     *           MTTAB   =       3,
++     *           MRTAB   =       1,
+      *           MSFTAB  = 6000000)
+       parameter (mfhtab=1000,
+      *           mtabth=10,
+--- upstream/synspec54.f
++++ build/synspec54.f
+@@ -1713,7 +1713,9 @@
+ C
+          DO J=1,9
+             IF(J.LE.8) ENEV(I,J)=xi(J,I)
+-            if(enev(i,j).ge.enhe2) then
++            if(j.eq.9) then
++               inpot(i,j)=3
++             else if(enev(i,j).ge.enhe2) then
+                inpot(i,j)=3
+              else if(enev(i,j).ge.enhe1) then
+                inpot(i,j)=2
+@@ -1773,7 +1775,7 @@
+       DO ID=1,ND
+          WMM(ID)=WMY(ID)*HMASS/YTOT(ID)
+       END DO
+-      DO JJ=1,NATOMS
++      DO JJ=1,MATEX
+          DO ID=1,ND
+             RELAB(JJ,ID)=1.
+          END DO
+@@ -3470,7 +3472,7 @@
+ C
+       IJ0=2
+       IF(NFREQ.EQ.1) IJ0=1
+-      IF(IMODE.EQ.2) IJ0=NFREQ
++      IF(IMODE.EQ.2.OR.IMODE0.EQ.-3) IJ0=NFREQ
+       DO IJ=1,IJ0
+          DO IT=1,MCROSS
+             CROSS(IT,IJ)=0.
+@@ -4575,7 +4577,7 @@
+       sce=ane*sige
+       IJ0=2
+       IF(NFREQ.EQ.1) IJ0=1
+-      IF(IMODE.EQ.2) IJ0=NFREQ
++      IF(IMODE.EQ.2.OR.IMODE0.EQ.-3) IJ0=NFREQ
+       M=3
+       IF(ICONTL.EQ.1) M=1
+ C
+@@ -4658,6 +4660,10 @@
+          ABSO(IJ)=ABF+ANE*(X1*AFF-X*EBF)+ABAD
+          EMIS(IJ)=BNE*(AFF+EBF)+EMAD+EMLY
+          SCAT(IJ)=SCAD+SCLY+sce
++C     Direct audit before spectral interpolation; cgs volume absorption.
++      if(imode0.le.-3) write(29,'(1p8e26.17)')
++     *   FR,ABSO(IJ),EMIS(IJ)*X1/(BNU*X),
++     *   ABF,ANE*X*EBF,ANE*X1*AFF,ABAD,SCAD
+          IF(IJ.EQ.1) THEN
+          ABLY1=ABLY
+          EMLY1=EMLY
+@@ -4671,11 +4677,13 @@
+ C     interpolated continuum opacity, emissivity, and scattering
+ C     for all frequencies
+ C
++      IF(IMODE0.NE.-3) THEN
+       DO IJ=3,NFREQ
+          ABSO(IJ)=FRX1(IJ)*ABSO(2)+FRX2(IJ)*ABSO(1)
+          EMIS(IJ)=FRX1(IJ)*EMIS(2)+FRX2(IJ)*EMIS(1)
+          SCAT(IJ)=FRX1(IJ)*SCAT(2)+FRX2(IJ)*SCAT(1)
+       END DO
++      END IF
+ C
+ C    hydrogen lines -- for IHYL = 0
+ C     *** calculated only for the first and the last frequency
+@@ -4754,6 +4762,13 @@
+       ABSO(2)=ABSO(2)-ABLY
+       EMIS(2)=EMIS(2)-EMLY
+       SCAT(2)=SCAT(2)-SCLY
++      if(imode0.le.-3) then
++         do ij=3,nfreq-1
++            fr=freq(ij)
++            bplan=BN*(fr*1.d-15)**3/(exp(HK*fr/T)-1.d0)
++            write(88,'(1p3e26.17)') fr,abso(ij),emis(ij)/bplan
++         end do
++      end if
+       RETURN
+       END
+ C
+@@ -5431,7 +5446,7 @@
+       common/quasun/nunalp,nunbet,nungam,nunbal
+       common/hhebrd/sthe,nunhhe
+       common/gompar/hglim,ihgom
+-      DIMENSION PJ(40),PRF0(54),OSCH(4,22),
++      DIMENSION PJ(NLMX),PRF0(54),OSCH(4,22),
+      *          ABSO(MFREQ),EMIS(MFREQ),ABSOH(MFREQ),EMISH(MFREQ)
+       dimension wlir(15),irlow(15),irupp(15)
+       DATA FRH    /3.289017E15/
+@@ -5804,7 +5819,7 @@
+       PARAMETER (CID1=0.01497)
+       common/lasers/lasdel
+       common/quasun/nunalp,nunbet,nungam,nunbal
+-      DIMENSION PJ(40),PRF0(54),OSCH(4,22),
++      DIMENSION PJ(NLMX),PRF0(54),OSCH(4,22),
+      *          ABSO(MFREQ),EMIS(MFREQ),ABSOH(MFREQ),EMISH(MFREQ)
+       DATA FRH    /3.289017E15/
+       DATA INIT /0/
+@@ -7747,7 +7762,7 @@
+       INCLUDE 'PARAMS.FOR'
+       INCLUDE 'MODELP.FOR'
+       INCLUDE 'SYNTHP.FOR'
+-      DIMENSION ABLIN(1),EMLIN(1),OSCHE2(19),PRF0(40),WLL(40)
++      DIMENSION ABLIN(*),EMLIN(*),OSCHE2(19),PRF0(40),WLL(40)
+       COMMON/HE2PRF/PRFHE2(19,MDEPTH,36),WLHE2(19,36),NWLHE2(19),
+      *              ILHE2(19),IUHE2(19)
+       common/lasers/lasdel
+@@ -8132,7 +8147,7 @@
+          IL0=INDLIP(IPRSET)
+          IF(FREQ0(IL0).LT.FRMIN) THEN
+             IREADP=0
+-            IL0=INDLIP(IPRSET-1)+1
++            IF(IPRSET.GT.1) IL0=INDLIP(IPRSET-1)+1
+          END IF
+        ELSE
+          IL0=IL0+1
+@@ -8392,7 +8407,8 @@
+          INDLIP(IL)=INDLIN(IL)
+   260 CONTINUE
+       if(ifwin.le.0) then
+-      ILLAST=INDLIN(NLIN)
++      ILLAST=0
++      IF(NLIN.GT.0) ILLAST=INDLIN(NLIN)
+       else
+       ILLAST=0
+       IF(NLIN.GT.0) ILLAST=INDLIN(NLIN)
+@@ -9383,11 +9399,12 @@
+       IF(ION.GT.IONIZ(IAT)) GO TO 10
+       end if
+ C
+-      if(fr0.lt.freqc(ijcon)) then
++      do while(ijcon.lt.nfreqc)
++         if(fr0.ge.freqc(ijcon)) exit
+          ijcon=ijcon+1
+-         absta=0.5*(absoc(ijcon)+scatc(ijcon)+
+-     *             absoc(ijcon-1)+scatc(ijcon-1))
+-      end if
++      end do
++      absta=0.5*(absoc(ijcon)+scatc(ijcon)+
++     *          absoc(ijcon-1)+scatc(ijcon-1))
+       abstd(id)=absta
+ c
+       dop=1.e7/alam*dstdid
+@@ -10549,7 +10566,15 @@
+   100 CONTINUE
+ C
+       DO IJ=3,NFREQ
+-         EMLIN(IJ)=EMLIN(IJ)+ABLIN(IJ)*PLAN(ID)
++         if(imode0.eq.-3) then
++            fr=freq(ij)
++            xx=exp(-HK*fr/TEMP(ID))
++            ablin(ij)=ablin(ij)*(1.d0-xx)/stim(id)
++            bplan=BN*(fr*1.d-15)**3*xx/(1.d0-xx)
++            emlin(ij)=emlin(ij)+ablin(ij)*bplan
++          else
++            EMLIN(IJ)=EMLIN(IJ)+ABLIN(IJ)*PLAN(ID)
++         end if
+          ABLIN(IJ)=ABLIN(IJ)+ABLINN(IJ)
+       END DO
+ C
+@@ -14922,7 +14947,7 @@
+ C      YY   - interpolated functional values YY=y(XX)
+ C
+       INCLUDE 'PARAMS.FOR'
+-      DIMENSION X(1),Y(1),XX(1),YY(1)
++      DIMENSION X(NX),Y(NX),XX(NXX),YY(NXX)
+       EXP10(X0)=EXP(X0*2.30258509299405D0)
+       IF(NPOL.LE.0.OR.NX.LE.0) THEN
+          N=NX
+@@ -14997,7 +15022,7 @@
+ c     a more efficient interpolation routine - using bisection
+ c
+       INCLUDE 'PARAMS.FOR'
+-      dimension wltab(1),absop(1),wlgrid(1),abgrd(1)
++      dimension wltab(nfr),absop(nfr),wlgrid(nfgrid),abgrd(nfgrid)
+       dimension yint(mfgrid),jint(mfgrid)
+ c
+ c      set up interpolation coefficients for an interpolation
+@@ -21784,7 +21809,7 @@
+             at2=log(dens2)
+             dr=0.
+             ndens=nden(1)
+-            if(ndens.gt.0) dr=(at2-at1)/(ndens-1)
++            if(ndens.gt.1) dr=(at2-at1)/(ndens-1)
+             do i=1,ntemp
+                do j=1,ndens
+                   densg(i,j)=exp(at1+(j-1)*dr)
+@@ -21811,7 +21836,7 @@
+                at1=log(densg(i,1))
+                at2=log(densg(i,ndens))
+                dr=0.
+-               if(ndens.gt.0) dr=(at2-at1)/(ndens-1)
++               if(ndens.gt.1) dr=(at2-at1)/(ndens-1)
+                do j=2,ndens-1
+                   densg(i,j)=exp(at1+(j-1)*dr)
+                end do
+@@ -22069,7 +22094,7 @@
+             wltab(ipfreq)=2.997925e18/freq(ij)
+          end do
+       end if
+-  637 format(i10,f14.5,0pf12.5)    
++  637 format(i10,1p2e26.17)    
+ c
+       return
+       end
+@@ -22326,6 +22351,30 @@
+       DO J=1,NLEVEL
+          POPUL(J,ID)=POPLTE(J)
+       END DO
++      write(28,'(a,1p3e26.17)') 'STATE',temp(id),dens(id),elec(id)
++      do i=1,natoms
++         do j=1,mion0
++            write(28,'(a,2i5,1p3e26.17)') 'ION',i,j-1,
++     *          rrr(id,j,i),pfstd(j,i),rrr(id,j,i)*pfstd(j,i)
++         end do
++      end do
++      do j=1,nlevel
++         write(28,'(a,3i5,1p4e26.17)') 'LEVEL',j,iatm(j),iel(j),
++     *        popul(j,id),g(j),enion(j),wop(j,id)
++      end do
++      do i=1,nion
++         sn=0.d0
++         do j=nfirst(i),nlast(i)
++            sn=sn+popul(j,id)
++         end do
++         write(28,'(a,2i5,1pe26.17)') 'STAGE',
++     *        numat(iatm(nfirst(i))),iz(i)-1,sn
++      end do
++      do i=1,natom
++         j=nka(i)
++         write(28,'(a,2i5,1pe26.17)') 'STAGE',
++     *        numat(i),iz(iel(j)),popul(j,id)
++      end do
+ c      
+       return
+       end

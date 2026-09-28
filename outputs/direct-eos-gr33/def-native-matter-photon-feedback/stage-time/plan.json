@@ -1,0 +1,23 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "d6ccddff9",
+  "failure": "Full midpoint-frozen return passed invariants but neutral H64/128 difference was6.6447percent, above the unchanged2percent gate.",
+  "repair": "Evaluate the actual nonautonomous collision operator and affine drive at each SDIRK stage time. The old midpoint freeze has an O(h) displaced equilibrium in the stiff limit. Mechanical interval derivatives retain their left value at aligned endpoint knots; paired transfers and ledgers use the same stages.",
+  "reuse": "Same531 cells,8 angles,152 frequencies,17 input knots,64/128 clocks and3.434ms. Reuse accepted background/EOS/material histories. Preserve all failed midpoint paths. No finer clocks or native EOS replay.",
+  "decision": "Accept only if the same three full paths pass2percent time/background and existing conservation/linear gates, then return collision histories to matter and GR.",
+  "budget": {
+    "pilot_seconds": 60,
+    "production_seconds": 900,
+    "CPU_threads": 1,
+    "memory_GB": 3
+  },
+  "forecast": "Measure equal-horizon4/8-step prefixes and17-point preparation. Retain2x forecast within900s; full failed run cost343.37s provides a late-cost comparison.",
+  "stop": "Stop on failed pilot or path, cap, or unchanged2percent comparison. No automatic finer clock, longer horizon or gate relaxation.",
+  "limits": "A single waveform return on stored GR and prescribed baryon/momentum; not a coupled fixed point or final charge.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_stage_feedback.py": "b9492449d960751356bcf051bd45c8ad13e2ee5cb577cf77f85ef459a0462e8c",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_matter_photon_feedback.py": "19acadd46d8f6059406fc3614c151de187323cec68f73faf9319e663f0466fb9",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-matter-photon-feedback/result.json": "b1feae3a3a92431d13fc051c03f5d6ef1dc54d0c9a83160eead00e05e371195e",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-matter-photon-feedback/execution-plan.json": "339304a59be76af2c7ac45ff2ce1b510f3e9404599c4768f7b7b216d1c60d0da"
+  }
+}

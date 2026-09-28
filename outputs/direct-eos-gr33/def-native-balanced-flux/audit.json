@@ -1,0 +1,56 @@
+{
+  "classification": "Counterexample candidate",
+  "checks_passed": true,
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "identity": "E=f0*t+e, f=f0+d, v=w-H*f. The transformed stage is exactly the original semidiscrete stage in exact arithmetic. Nonzero initial physical currents remain.",
+    "boundary": "This is a numerical-coordinate identity, not physical convergence or a moving-atmosphere theorem."
+  },
+  "source_map_relative": [
+    1.3130028696196725e-17,
+    7.212005398727067e-18,
+    6.866297510933426e-17
+  ],
+  "uniform_current_local_debit": 0,
+  "amplitude_rescale_relative": {
+    "temperature": 6.064955977536743e-14,
+    "velocity": 5.002505663427096e-16,
+    "scalar": 2.5106826833485773e-16,
+    "surface": 7.327598063625535e-16,
+    "q": 3.7791041680065137e-16,
+    "v": 9.202445527780507e-16,
+    "e": 6.96036216999265e-14,
+    "d": 2.5340925145026865e-13
+  },
+  "amplitude": 3.307034743057358e-33,
+  "physical_surface_time_relative": [
+    0.00035537235131659773,
+    0.0034918355068214867,
+    8.305478046661305e-06,
+    0.028770455484923574
+  ],
+  "old_surface_endpoint": [
+    -1.7468162390555984e-22,
+    4.698033830809245e-37,
+    -1.9606636209950273e-20,
+    1.60925198797312e-34
+  ],
+  "repaired_surface_endpoint": [
+    3.307034743057358e-33,
+    4.698033830809803e-37,
+    6.6548214150269514e-31,
+    1.6092519879733547e-34
+  ],
+  "saved_p6_velocity_space_relative": 0.06912057829264824,
+  "original_space_failure_resolved": false,
+  "max_linear_residual": 2.3323153597301106e-15,
+  "max_local_deviation_heat_identity": 4.8164103375456493e-11,
+  "memory_GB": 0.746627072,
+  "seconds": 33.819231497000004,
+  "accounted_total_seconds": 140.186546546,
+  "scope": "Unit-driver outputs are a linear arithmetic control, not a unit-displacement physical star. Restore the saved amplitude before physical interpretation. The kinematic L0*zeta contribution is one mixed-order term; other terms of that order remain open.",
+  "moving_surface_fully_solved": false,
+  "final_charge_solved": false,
+  "full_goal_complete": false
+}

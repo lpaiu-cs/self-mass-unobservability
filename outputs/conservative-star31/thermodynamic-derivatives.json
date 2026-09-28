@@ -1,0 +1,49 @@
+{
+  "classification": "Counterexample candidate",
+  "rows": [
+    {
+      "direction": "lnT",
+      "output": "dxdt",
+      "step_difference_score": 0.0001623003816025737,
+      "passed": true,
+      "worst_active_cell": 2274
+    },
+    {
+      "direction": "lnT",
+      "output": "heat",
+      "step_difference_score": 7.767576696125316e-06,
+      "passed": true,
+      "worst_active_cell": 2274
+    },
+    {
+      "direction": "lnT",
+      "output": "neutrino",
+      "step_difference_score": 0.009862187937415001,
+      "passed": false,
+      "worst_active_cell": 2274
+    },
+    {
+      "direction": "lnd",
+      "output": "dxdt",
+      "step_difference_score": 2.168172306272194e-09,
+      "passed": true,
+      "worst_active_cell": 2774
+    },
+    {
+      "direction": "lnd",
+      "output": "heat",
+      "step_difference_score": 2.117838033010398e-09,
+      "passed": true,
+      "worst_active_cell": 2774
+    },
+    {
+      "direction": "lnd",
+      "output": "neutrino",
+      "step_difference_score": 3.637978807091713e-08,
+      "passed": true,
+      "worst_active_cell": 2616
+    }
+  ],
+  "complete": true,
+  "physical_or_continuous_error_certified": false
+}

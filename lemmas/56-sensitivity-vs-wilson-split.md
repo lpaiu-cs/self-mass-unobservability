@@ -1,5 +1,7 @@
 # Lemma 56: Sensitivity Versus Wilson Split
 
+> Correction, 2026-09-09: the [unified theorem package](../docs/theorem-package.md) supersedes stronger historical wording below. Smooth-flat response retains every finite jet and only defeats exact analytic-germ reconstruction. Sufficient differentiability replaces analyticity for a finite-order remainder. Sensitivity labels do not establish coefficient independence from EFT Wilson data or observational absorption.
+
 ## Statement
 
 - Status: Proven. Work with a local worldline action of the form

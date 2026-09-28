@@ -1,0 +1,25 @@
+{
+  "pid": 47680,
+  "parent_pid": 52888,
+  "creationflags": 134217728,
+  "command": [
+    "C:\\WINDOWS\\System32\\wsl.exe",
+    "-d",
+    "Ubuntu-22.04",
+    "--cd",
+    "/mnt/e/lab/self-mass-unobservability",
+    "--",
+    "/usr/bin/env",
+    "OPENBLAS_NUM_THREADS=1",
+    "PYTHONPATH=/home/lpaiu/work/nutimo_pilot/request13_deps:verification",
+    "/usr/bin/taskset",
+    "-c",
+    "0-15",
+    "/usr/bin/python3",
+    "-u",
+    "verification/gr_resume271_consoleless.py",
+    "chain",
+    "--workers",
+    "15"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "controls": {
+    "quadrature": 1.0086659918300565e-06,
+    "time": 0.006880107745395195,
+    "cadence": 0.010042695288116873
+  },
+  "rows": [
+    {
+      "path": "fine",
+      "incident_endpoint_cm": 3.7405773773357075e-49,
+      "mixed_endpoint_cm": -3.9945395762808945e-49,
+      "paired_endpoint_cm": -2.539621989451855e-50,
+      "charge_endpoint": 3.4829714644393073e-57
+    },
+    {
+      "path": "quadrature",
+      "incident_endpoint_cm": 3.740577655131607e-49,
+      "mixed_endpoint_cm": -3.9945395762817825e-49,
+      "paired_endpoint_cm": -2.5396192115017394e-50,
+      "charge_endpoint": 3.4829676546120885e-57
+    },
+    {
+      "path": "time",
+      "incident_endpoint_cm": 3.7424722162874024e-49,
+      "mixed_endpoint_cm": -3.9945395762808945e-49,
+      "paired_endpoint_cm": -2.5206735999349055e-50,
+      "charge_endpoint": 3.456984644251607e-57
+    },
+    {
+      "path": "cadence",
+      "incident_endpoint_cm": 3.7405773773357075e-49,
+      "mixed_endpoint_cm": -3.995611331197994e-49,
+      "paired_endpoint_cm": -2.5503395386228505e-50,
+      "charge_endpoint": 3.497670076313967e-57
+    }
+  ],
+  "old_selected_endpoint": -2.5375925822713353e-51,
+  "matched_selected_endpoint": -2.5375890992998707e-51,
+  "matched_mass_charge_endpoint": 3.4829714644393073e-57,
+  "mass_effect_over_selected": -1.372549513571555e-06,
+  "background_mass_parameter_maximum": 1.3989654586192578e-30,
+  "same_background_denominator": true,
+  "actual_stored_mass_ports_applied": true,
+  "auxiliary_mass_not_reclassified_as_photon_energy": true,
+  "homogeneous_component_readout": true,
+  "additional_exterior_mixed_stress_closed": false,
+  "exact_ADM_conservation_verified": false,
+  "physical_final_charge_solved": false,
+  "full_goal_complete": false,
+  "scope": "Actual stored conserved-source ports and their declared homogeneous vacuum continuation. Additional exterior mixed scalar/photon stress, changed photon paths and exact ADM/momentum-constraint closure are not assumed zero or solved."
+}

@@ -1,0 +1,18 @@
+{
+  "classification": "Counterexample candidate",
+  "correction": "The scalar lapse boundary is +Phi0*U0. The derivative identity was correct but the minus sign of the integral from r0 to infinity was applied incorrectly. Preserve the old producer, all raw results and symbolic text; do not relabel their numerical gate as validation of this sign.",
+  "action": "Add2*Phi0*U0 uniformly to lapse values and the same correction to lapse time derivatives. Radial lapse derivatives, all actual packet rays, mass constraints and scalar fields are unchanged and reused.",
+  "original_symbolic_angular_failure": "Earlier Hamiltonian verification also caught the opposite sign of the time-dependent angular drift; that failure occurred before ray runs and was already repaired.",
+  "budget": {
+    "seconds": 10,
+    "new_ray_integrations": 0,
+    "new_fluid_steps": 0,
+    "new_native_calls": 0
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_dynamic_lapse.py": "e6312a7fd9acc3960a95dc1f0144703aea2a70d3524e38c04401017a2a14e2dc",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_dynamic_lapse.py": "5a1ab9b42211a67a79c2f36bb66a25faed9d05ebb82cf3bdd357b62969757b89",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-dynamic-lapse/lapse-producer-before-boundary-sign.py": "840a3a9dfa7685c527621d3e425ef2ebbc10ac54f2b448f024880909c69ae770",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-dynamic-lapse/result.json": "370dd4202d70a95a44e769d8d56c73ad6b827f07c1513dea3ef131daadba1720"
+  }
+}

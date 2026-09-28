@@ -1,0 +1,40 @@
+{
+  "classification": "Counterexample candidate",
+  "source_sha256": "27276810bbbb4f5ac9fbed3decfb77d4b725942e39ad47ed3eaf9fa709daea52",
+  "spectrum_sha256": "f69fd6e07670ee25667bb03645cc1360ae43733e8512d7b956a95a27ab96c94c",
+  "collision": "Bound-free occupations and energies are evaluated in the gas rest frame using D=W*(1-v*mu), Eprime=D*Einfinity/a and collision rate a*c*rho*nH*D. Elastic Thomson packets use the same rest-frame angular kernel and Eout=Ein*(1-v*muin)/(1-v*muout). Photon number is redistributed positively between frequency nodes. Off-box photons are explicitly recorded as spectral escapes, not deposited as gas heat.",
+  "roundoff": "Store atmosphere photons as an exactly additive transported component and a material-generated signed correction. Both are transported by the same linear operator; only their sum is physical. This retains the tiny local gas/photon exchange without subtracting two huge radiation backgrounds. Judge the local atmosphere energy ledger on its own response, not on the much larger deep response.",
+  "transfer": "The inward atmosphere solution is the actual outer incoming condition of the deep nonlinear solve; the resulting deep outgoing field drives the atmosphere solve at the identical face. Direction-order elimination is exact for this upwind focusing operator.",
+  "initial": "No overlap: shorten only the last deep cell volume to the existing-400m fluid face while retaining its original physical native quadrature point. The same metric face area appears with opposite signs. The atmospheric initial field uses the saved interior T/flux and the declared surface outgoing continuation in the exterior.",
+  "limits": "Deep density/metric remain fixed; the fluid far-side material ghost remains the existing copy condition. This closes the shared photon coupling, not the mechanical response of the entire interior or the final GR/scalar charge. Frequency-box escapes and radial/frequency errors remain explicit.",
+  "paths": [
+    [
+      448,
+      64
+    ],
+    [
+      448,
+      128
+    ],
+    [
+      896,
+      128
+    ]
+  ],
+  "forecast_seconds": 362.4774840959981,
+  "forecast_upper_seconds": 543.7162261439971,
+  "production_cap_seconds": 600,
+  "gates": {
+    "time_bulk_trace": 0.02,
+    "time_atmosphere_trace": 0.02,
+    "time_surface_spectrum": 0.02,
+    "space_atmosphere_trace": 0.02,
+    "space_outside_mass": 0.02,
+    "total_energy": 1e-08,
+    "gas_energy": 1e-08,
+    "atmosphere_photon_energy": 1e-08,
+    "baryon": 1e-10,
+    "species": 1e-09
+  },
+  "stop": "Stop on an individual path failure or failed time comparison before the fine dispatch. No256step path or further fluid refinement. Replay the single0.81s pilot step only to construct a complete conservative trajectory ledger."
+}

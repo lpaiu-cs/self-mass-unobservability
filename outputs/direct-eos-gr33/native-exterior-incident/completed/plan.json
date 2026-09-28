@@ -1,0 +1,83 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "242b5e4fc",
+  "previous_goal_turn": "Progress: Phase158 applied actual coupled emission at fixed-operator null infinity and preserved the physical closure gaps.",
+  "claim": "Apply the actual already-emitted background radiation metric to the declared incoming scalar primary and read its outgoing correction, including the moving shell and exterior-domain boundary. Assess the smaller photon-energy/arrival and Born/potential terms against the resulting charge scale.",
+  "decision": "Does the omitted physical exterior interaction change the sign or size of the Phase158 matter-mediated charge? A changed sign or a failed control requires reconsidering that conditional conclusion, not more fluid replay.",
+  "reuse": "Use the actual saved constant-stage64/128 angular luminosities, fixed four outgoing angular bins, initial exact vacuum, original input eta/duration and17 readout times. No fluid or EOS calls. Quadrature nodes integrate existing emission intervals; they are not new evolution steps.",
+  "method": "Reuse the existing curved outward null rays. Split emission-time quadrature at its existing owner intervals. Split interaction time at the incoming front and the outgoing readout cone; integrate the distributional shell term explicitly. Eliminate derivative cancellation analytically before quadrature.",
+  "scope": "The directly emitted radiation metric acting on the incoming primary is one missing mixed term. It does not include all scalar-metric reciprocal mixed constraints or the evolving interior operator. Do not call the complete physical exterior or final goal solved.",
+  "settings": [
+    [
+      128,
+      8,
+      8,
+      8
+    ],
+    [
+      128,
+      4,
+      8,
+      8
+    ],
+    [
+      128,
+      8,
+      4,
+      8
+    ],
+    [
+      128,
+      8,
+      8,
+      4
+    ],
+    [
+      64,
+      8,
+      8,
+      8
+    ]
+  ],
+  "gates": {
+    "quadrature": 0.002,
+    "background_history": 0.02,
+    "port": 1e-12,
+    "ray": 1e-10,
+    "root_fraction": 2e-12,
+    "optical_fraction": 1e-10
+  },
+  "budgets": {
+    "prepare": 30,
+    "check": 45,
+    "pilot": 60,
+    "production": 240,
+    "bounds": 90,
+    "audit": 30
+  },
+  "total_seconds": 495,
+  "CPU_threads": 1,
+  "virtual_GiB": 3,
+  "new_EOS_calls": 0,
+  "new_fluid_steps": 0,
+  "pilot": "Measure endpoint cohorts in existing emission cells0,31,63 at full8-order settings. Forecast all nine nonzero/cut readouts and five settings with twice the worst per-cell cost plus20s; require the remaining240s cap. Reuse saved endpoint cohort values if the corresponding production path needs them.",
+  "stop": "Keep pulse, intervals, background histories, orders and gates fixed. Stop on a failed forecast or physics/numerical gate. No automatic extra Born order, new clock, longer interval or fluid replay.",
+  "input_path_repair": "The retained64-step history remains in native-retained-tail/supported-temperature/evolution, as its existing infinity owner specifies. Only128 resides in native-retained-completion/evolution. Initial registration stopped before any physical calculation; preserve its receipt/source and bind the actual existing64-step owner.",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/couple_native_exterior_incident.py": "22470c64ace061b6158b4e3acc8416fa5e6d32791c9f7985ae5e19262deaf6b3",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/read_native_incident_infinity.py": "31fdcc3bec5a89504151337d85457a9ad1dc2d7b12f4b10e5f98eebc83817183",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_incident_drive.py": "3e01fc956f56354fc8be01be9ccdf864eb7c6435591fe83b3db10cc90bfbecb0",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_dynamic_lapse.py": "5a1ab9b42211a67a79c2f36bb66a25faed9d05ebb82cf3bdd357b62969757b89",
+    "native-incident-infinity158-work/final-result.json": "b11669101aeab05c8074efc01d697739c9861beb93c7e865cab2443c25ec9fab",
+    "native-incident-infinity158-work/charge-parts.npz": "b5f07843085aee64ffa3c9ee1932ed7e0f53a0fdac62ce8b2c360ebc146e1712",
+    "outputs/direct-eos-gr33/native-retained-completion/infinity/completed/retained-128-a8-r8.npz": "55ddaec7e139c588cb4b9dcaf47c3a3b01735e72df958f6f6b1f7c89fa263235",
+    "native-incident-drive155-work/fields/born-g8.npz": "4a4f1299caa9675a4a5a87c178b883ba242aeec296361a555182328dc429a058",
+    "/home/lpaiu/work/native-retained-tail-runtime/outputs/direct-eos-gr33/def-native-initial-constraints/finite-volume/balanced-20.npz": "72ae702c85db57f0c02c1e5ca15dfad7df50d901b4270531e5b49c8c3746d3cb",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/accepted-ports-64.npz": "e774379f5889562471ff1924ca01c8844ce3a99bff1221eaa7a7924663296f83",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/source-64.npz": "e355fd75305697b78611d53c19bf7d0d821142533cbea5f1b81d53b9a2a093b8",
+    "outputs/direct-eos-gr33/native-retained-completion/evolution/accepted-ports-128.npz": "e2d02607c5815cd1b23a6ea1ce822ecbb384f185ac7a83074247d0350abc8ecf",
+    "outputs/direct-eos-gr33/native-retained-completion/evolution/source-128.npz": "7d6501151595f2274b0651a6179e3bd24cf4ea8ef6256734d953c9d8d01b79eb",
+    "native-exterior-incident159-work/prepare-failed-producer.py": "b5c3dc155c401e2aec5f547a6c84b77093162317c22994b323feec2f9f8ac0e3",
+    "native-exterior-incident159-work/prepare-receipt.json": "fad91f5f0e896e42ca5c46220afe43b8718edde46bf10a6ac233f70fd59c50d1"
+  }
+}

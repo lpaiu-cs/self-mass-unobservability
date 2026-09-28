@@ -1,0 +1,64 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_rounding_aware_native.py", line 109, in <module>
+    assert read(OUT/'restart-check.json')['passed'];evolve(64 if action=='coarse' else 128)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_rounding_aware_native.py", line 94, in evolve
+    FunctionType(prior.evolve.__code__,dict(prior.evolve.__globals__,OUT=OUT,initialize=initialize,factory=factory))(n)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_precise_momentum.py", line 110, in evolve
+    ns=dict(old.evolve.__globals__,OUT=OUT,initialize=initialize,current_factory=factory);exec(compile(source,__file__,'exec'),ns);ns['evolve'](n)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_precise_momentum.py", line 14, in evolve
+    
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_postfloor_native.py", line 37, in evolve
+    claim='Continue the remaining actual coupled period from114accepted substeps with Newton proposals initialized from the accepted post-floor gas.',
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/balance_full_native_krylov.py", line 42, in run
+    import sympy as sp
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_postfloor_native.py", line 27, in saved_stage
+    assert np.array_equal(cells,[260,261]) and not np.any(q['g'][cells])
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_native_flux_precision.py", line 27, in stages
+    for p in files:dst=OUT/p.relative_to(OLD);os.link(p,dst);reused[str(dst)]=sha(p)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_postfloor_native.py", line 7, in solve
+    from pathlib import Path
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_rounding_aware_native.py", line 89, in seeded
+    return solve(m,op,P,rhs,guess)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/polish_full_native_roundoff.py", line 37, in solve
+    files += [prior.OLD/'last-accepted-64.npz',prior.EARLIER/'last-accepted-64.npz']
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/balance_full_native_krylov.py", line 8, in solve
+    import inspect,json,os,resource,sys,time
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_rounding_aware_native.py", line 76, in polish
+    sol=rounding.neighbours(m,op,rhs,sol,records,triplets=triplets)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/solve_native_rounding_neighbours.py", line 79, in neighbours
+    actual=rhs-op.matvec(candidate);newnorm=np.linalg.norm(actual);moments=joint.physical_norm(m,actual)/joint.scales(m,rhs,candidate)
+  File "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/sparse/linalg/_interface.py", line 258, in matvec
+    y = self._matvec(x)
+  File "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/sparse/linalg/_interface.py", line 617, in _matvec
+    return self.__matvec_impl(x)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_precise_momentum.py", line 53, in apply
+    return momentum.matvec(value)
+  File "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/sparse/linalg/_interface.py", line 258, in matvec
+    y = self._matvec(x)
+  File "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/sparse/linalg/_interface.py", line 617, in _matvec
+    return self.__matvec_impl(x)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/repair_native_momentum_residual.py", line 54, in apply
+    result=np.asarray(op.matvec(value),LD).copy();pairs=[m.unpack(row) for row in value.reshape(2,-1)]
+  File "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/sparse/linalg/_interface.py", line 258, in matvec
+    y = self._matvec(x)
+  File "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/sparse/linalg/_interface.py", line 617, in _matvec
+    return self.__matvec_impl(x)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/stabilize_full_interval_residual.py", line 63, in apply
+    result=op.matvec(value)
+  File "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/sparse/linalg/_interface.py", line 258, in matvec
+    y = self._matvec(x)
+  File "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/sparse/linalg/_interface.py", line 617, in _matvec
+    return self.__matvec_impl(x)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_native_flux_precision.py", line 19, in mat
+    assert read(OLD/'failure-64.json')['actual_accepted_steps']==114
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_native_flux_precision.py", line 19, in <listcomp>
+    assert read(OLD/'failure-64.json')['actual_accepted_steps']==114
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_native_flux_precision.py", line 15, in L
+    def prepare():
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/couple_native_fluid_radau.py", line 143, in collision
+    b+=np.einsum('nqfj,nj->nqf',c['DBSb'],g[:,2:])+c['DBSbxi']*xi[:,None,None]
+  File "/home/lpaiu/.local/lib/python3.10/site-packages/numpy/_core/einsumfunc.py", line 1423, in einsum
+    return c_einsum(*operands, **kwargs)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/def_retained_native_acoustic.py", line 21, in stop
+    def stop(*_):raise TimeoutError('Registered native acoustic budget')
+TimeoutError: Registered native acoustic budget

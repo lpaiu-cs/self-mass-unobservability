@@ -1,0 +1,30 @@
+{
+  "checked_utc": "2026-09-17T06:27:55.923854+09:00",
+  "launcher_pid": 52888,
+  "launcher_has_no_console": true,
+  "wsl_pid": 47680,
+  "wsl_console_hwnd": null,
+  "wsl_console_processes": [
+    164,
+    47680
+  ],
+  "wsl_console_is_windowless": true,
+  "console_object_absent_for_wsl": false,
+  "measurement": "AttachConsole(launcher) returned ERROR_INVALID_HANDLE=6. AttachConsole(wsl) succeeded, but GetConsoleWindow returned NULL; console process membership excludes the inspection process.",
+  "correction": "CREATE_NO_WINDOW does not imply that no attachable console object exists. The verified condition is no visible/user terminal window plus dedicated WSL console membership.",
+  "scope": "Does not test Windows reboot, logoff, explicit process kill or WSL shutdown.",
+  "verified_console_members": [
+    {
+      "Name": "wsl.exe",
+      "ProcessId": 164,
+      "ParentProcessId": 47680,
+      "CommandLine": "C:\\WINDOWS\\System32\\wsl.exe -d Ubuntu-22.04 --cd /mnt/e/lab/self-mass-unobservability -- /usr/bin/env OPENBLAS_NUM_THREADS=1 PYTHONPATH=/home/lpaiu/work/nutimo_pilot/request13_deps:verification /usr/bin/taskset -c 0-15 /usr/bin/python3 -u verification/gr_resume271_consoleless.py chain --workers 15"
+    },
+    {
+      "Name": "wsl.exe",
+      "ProcessId": 47680,
+      "ParentProcessId": 52888,
+      "CommandLine": "C:\\WINDOWS\\System32\\wsl.exe -d Ubuntu-22.04 --cd /mnt/e/lab/self-mass-unobservability -- /usr/bin/env OPENBLAS_NUM_THREADS=1 PYTHONPATH=/home/lpaiu/work/nutimo_pilot/request13_deps:verification /usr/bin/taskset -c 0-15 /usr/bin/python3 -u verification/gr_resume271_consoleless.py chain --workers 15"
+    }
+  ]
+}

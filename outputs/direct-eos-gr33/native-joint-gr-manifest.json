@@ -1,0 +1,155 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "joint_prefix_accepted": true,
+  "actual_same_joint_solution_GR_computed": true,
+  "physical_horizon_seconds": 0.0004293038897410878,
+  "source_controls": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "source_time": [
+      5.447470068270018e-08,
+      0.0006879891800044441,
+      0.0004105161981597313,
+      0.000374034064153991,
+      0.0003684480422682474
+    ],
+    "rows": [
+      {
+        "clock": 64,
+        "pressure_probe": 5.0473580712013283e-11,
+        "pressure_mapping": 4.157931923471581e-16,
+        "conserved_mapping": 4.937678586154838e-20,
+        "same_solution_audit": {
+          "angular_port_relative": 1.2097261678583561e-16,
+          "local_material_balance": [
+            4.1930323955797056e-16,
+            1.1520644453665432e-16,
+            3.3956618022307656e-16,
+            2.9473942620570635e-17
+          ],
+          "maximum_true_stage": 5.530494375636922e-14,
+          "maximum_true_physical_stage": 4.693600205884594e-15,
+          "maximum_newton_iterations": 3,
+          "actual_completed_steps": 15,
+          "accepted_prefix_preserved": true
+        },
+        "seconds": 13.987115356999993
+      },
+      {
+        "clock": 128,
+        "pressure_probe": 4.3065749876855324e-11,
+        "pressure_mapping": 4.994153382869432e-16,
+        "conserved_mapping": 6.538577945924195e-20,
+        "same_solution_audit": {
+          "angular_port_relative": 4.504276413458735e-17,
+          "local_material_balance": [
+            4.0867076624153045e-16,
+            2.9971991652697865e-15,
+            3.7990086583298955e-16,
+            3.0511001341467485e-17
+          ],
+          "maximum_true_stage": 4.71935316535276e-14,
+          "maximum_true_physical_stage": 9.405872048556147e-14,
+          "maximum_newton_iterations": 2,
+          "actual_completed_steps": 29,
+          "accepted_prefix_preserved": true
+        },
+        "seconds": 13.850436773999945
+      }
+    ],
+    "same_solution_energy_and_ports": true,
+    "current_nonzero_geometry": true,
+    "final_charge_conclusion": "unadjudicated",
+    "full_goal_complete": false
+  },
+  "field_controls": {
+    "time": 0.00036640723024222255,
+    "quadrature": 7.826554796703463e-16,
+    "independent_GR": 2.370348952903389e-14
+  },
+  "same_solution_energy_and_ports": true,
+  "full_horizon_completed": false,
+  "GR_return_to_matter_applied": false,
+  "final_charge_conclusion": "unadjudicated",
+  "physical_final_charge_solved": false,
+  "full_goal_complete": false,
+  "sha256": {
+    "verification/read_full_incident_joint_gr.py": "0918c2e572fe4b13468141209bfd3892d61913e440632a44846e4d066d2124e8",
+    "notes/REQUEST186_SAME_JOINT_SOLUTION_GR_KO.md": "d3a1c634932f67af006eddf3d30b378c38bfedaf01d74628d0929a8c63ee597d",
+    "docs/model-definition.md": "ab4414fe3333fcf4b7de834b7bd64013861609c703baae1ae39d02ac040b7e42",
+    "docs/observable-targets.md": "1a2604cec1d015f0da166abe0165f552ae41a03f21311a2277a58e4c25dadb29",
+    "docs/adiabatic-limit.md": "58d1634a1ca870306999f733989d153568a60e4747aad84adf7982d3965aea50",
+    "docs/nonadiabatic-regime.md": "138d54fd48c60bcc88a1889bcaf8a6022bfe2ba2b605f350000f4c3fc41e2853",
+    "docs/failure-ledger-dynamic-chi.md": "0b1c4a866857f129f80e7b87fe1d25ebe52f93d7a951f0e6622c624dc907aa9e",
+    "docs/dynamic-charge-completion.md": "398c3edb84801463c883c753b2be09535f04d589199dbd13313f65e2570b40b6",
+    "outputs/direct-eos-gr33/native-joint-gr/final-result.json": "eba6ec50825cc266408f5a0539d62dffb5e9975b84d7e58ab3033f3eaeaac47e",
+    "outputs/direct-eos-gr33/native-joint-gr/publication-helper.py": "f5153c2b02c6b171dcb35b2d7028cf6666b3ac688f9cc6dc8b0e105c1dd881aa",
+    "outputs/direct-eos-gr33/native-joint-gr/publication-producer.py": "c83b58d55ad5dbf25094c2566a3455fc90359082387d7a45c96b1b977f41bba8",
+    "outputs/direct-eos-gr33/native-joint-gr/publication.json": "0484fced8d77038237b87af1ecdb89b3732aae619cb960f8160b0a88d6d208d8",
+    "outputs/direct-eos-gr33/native-joint-gr/completed/binding-error-plan.json": "834197fb8d28f05a7e2d7f11310f41a682c8d7dc8aadd64384ec07cb534883d5",
+    "outputs/direct-eos-gr33/native-joint-gr/completed/binding-error-receipt.json": "92d562a8d735809965bbe5734b9a9675943e1156fd658256d1c271ee092caacd",
+    "outputs/direct-eos-gr33/native-joint-gr/completed/expanded-affine-jacobian.py": "3e16001f78614321b344c1a125caddfbe24f8b53cdae2d0d7c9d69b4c80443a3",
+    "outputs/direct-eos-gr33/native-joint-gr/completed/expanded-continuation-run.py": "9a94a85c8ae95c8eced712fbf8848226f3a1ea6e3f23fba1dc4559d491f5c8d7",
+    "outputs/direct-eos-gr33/native-joint-gr/completed/expanded-full-stages.py": "5b47a101f75464316867872639fcf3d4018fbabaef13060a3b1ca5f09f0b4ab2",
+    "outputs/direct-eos-gr33/native-joint-gr/completed/expanded-geometric-tangent.py": "9f544dcaa6ddd71096377d4556e9c6e17f0a790969a6b1d628df26b416b0c97d",
+    "outputs/direct-eos-gr33/native-joint-gr/completed/expanded-joint-run.py": "6b0d85a25686b8576d71d88f00fa187f213160d85d17ef2b85c01a856e06d7d6",
+    "outputs/direct-eos-gr33/native-joint-gr/completed/expanded-pressure.py": "892ce7d6e011446efe71f5683d34ca5c8a756936ead722f1a1937e3c9a029910",
+    "outputs/direct-eos-gr33/native-joint-gr/completed/fields-receipt.json": "a03a8b5bb66df6fc3e4be6ec2b3c37024c25ee5953f4882c1d0140ce5ae6dc13",
+    "outputs/direct-eos-gr33/native-joint-gr/completed/fields.json": "8b50f97d0b16238b57d92e175d5a48c87d9ec6a401f681332cd4a3850735b243",
+    "outputs/direct-eos-gr33/native-joint-gr/completed/first-plan.json": "59d4910456bca6a565e945faa3e5ac67822a85470a7bdd9df9ce2590da79509e",
+    "outputs/direct-eos-gr33/native-joint-gr/completed/first-producer.py": "b8e26394a861bddabced5ae1771ce2ef35d31c48421affe08d0896a23d55ac33",
+    "outputs/direct-eos-gr33/native-joint-gr/completed/namespace-repair-plan.json": "04da26367d49a7d657cc57d9f42f49644b072441a006f1c78149df059c2341fd",
+    "outputs/direct-eos-gr33/native-joint-gr/completed/namespace-repair-producer.py": "26bc123b904634d8f41647b4836e266b3d436075e7057507cae3091456dd848f",
+    "outputs/direct-eos-gr33/native-joint-gr/completed/plan.json": "a757b3284a5cfeab70dc4cbd9d960da855fc083a54a4921f01130ab6ce058e4c",
+    "outputs/direct-eos-gr33/native-joint-gr/completed/prepare-receipt.json": "c8ebb3f2dbd3b18f4181f735fbad7cd59536f1476e7ac04c24a6461ab4dee1c4",
+    "outputs/direct-eos-gr33/native-joint-gr/completed/source-128-check.json": "9ce50babd374b0a51692d2a15800aa42aeb02088412e646f22b3a38ba9b41fb7",
+    "outputs/direct-eos-gr33/native-joint-gr/completed/source-64-check.json": "7ffbcf4199e5ee0aca762b621b30394c05a74948dbbf6a3d7577d77c31010649",
+    "outputs/direct-eos-gr33/native-joint-gr/completed/source-receipt.json": "b1bb0a9ec26ac3b4db16f846ff6ff0cea659fc3e27ef0b099f37afd7d3bc6b9f",
+    "outputs/direct-eos-gr33/native-joint-gr/completed/sources.json": "bc3bd57d96dfb65a759414ea925e885c100935df2981b53ffddf956e38cd05b2",
+    "outputs/direct-eos-gr33/native-joint-gr/completed/source_finish-receipt.json": "9b145fdcfea13b7efd0119d06360361f9fb00920a813744ffcda24433722daec",
+    "outputs/direct-eos-gr33/native-joint-gr/completed/source_retry-receipt.json": "57752ecb78c63026b1860fdf354976dc6141e85b576d11032603bb62f33ac75d",
+    "outputs/direct-eos-gr33/native-joint-gr/completed/symbolic.json": "5a108091256e534d30a16c5bf6f8886d320849c7cf8c5f911c131634ed89154c",
+    "outputs/direct-eos-gr33/native-joint-gr/input/comparison-02.json": "d451a9bbc898b4a296054fb9741c2467f22882439b749e83232d2db72f5db1af",
+    "outputs/direct-eos-gr33/native-joint-gr/input/interval-02-128.npz": "52e470a387d49203a10041522cf6d3907019db8692b841de58d972833e9e9ccb",
+    "outputs/direct-eos-gr33/native-joint-gr/input/interval-02-64.npz": "a915f42e5174d45e4fb22c3f7d574a01fffc7fd808102bdb69dbea2191dc0cde",
+    "outputs/direct-eos-gr33/native-joint-gr/completed/gr/fields-128-g4.json": "4367e73a63cbef30e5ad24e6f2c5cac7d2207f895615e624698a1b71becf3cfc",
+    "outputs/direct-eos-gr33/native-joint-gr/completed/gr/fields-128-g4.npz": "39c247f6d43ca86dda45f85e0b866c636c3acda6254c691a126a48cea26aac8c",
+    "outputs/direct-eos-gr33/native-joint-gr/completed/gr/fields-128-g8.json": "9f25e131bdd894c4bca23559424f831a4d983171ada2febd56828662cfc9106a",
+    "outputs/direct-eos-gr33/native-joint-gr/completed/gr/fields-128-g8.npz": "16c5810c5b895e71c57960f96afe18b8289cf36ebc55e8f0b563f4508c18f414",
+    "outputs/direct-eos-gr33/native-joint-gr/completed/gr/fields-64-g8.json": "b8c1dd64dc789ad2711d528e0c205ad76dfa83637f61b5b7b14a7df65c822bde",
+    "outputs/direct-eos-gr33/native-joint-gr/completed/gr/fields-64-g8.npz": "061c92ca000461031862289ffeade6560ff1b008e6ced929abc888b4cd8aed12",
+    "outputs/direct-eos-gr33/native-joint-gr/completed/gr/source-128.npz": "f0955037fb5190a8662d150fae053dd172fd9a7e4d88d6d4d450a463d7ed58b1",
+    "outputs/direct-eos-gr33/native-joint-gr/completed/gr/source-64.npz": "9fe1115672ee1d37c612510b7107b8eab37448171f78e86633758a1366af4da6",
+    "outputs/direct-eos-gr33/native-joint-gr/completed/sweep-1/expanded-corrected-run.py": "634b2771a4572d645daa0901b81078d1c66450bcbc8f38dc5d75b95bb4b9b520",
+    "outputs/direct-eos-gr33/native-joint-gr/completed/sweep-1/expanded-moment-run.py": "8345268535344a95b049d80966821d6d23db738a0870085bba97ea27ba404327",
+    "outputs/direct-eos-gr33/native-joint-gr/completed/sweep-1/expanded-refined-run.py": "f32c18289497acb8e6aba46409cb319bee7f8baf1e7c0f5735c9288e77e36fe2",
+    "outputs/direct-eos-gr33/native-joint-gr/completed/sweep-1/expanded-run.py": "391495a5832815036d143c0b955c138440204aef1c38abb46a7510ed39086a3d"
+  },
+  "document_prefixes": {
+    "docs/model-definition.md": {
+      "bytes": 255197,
+      "sha256": "c9f1aa7379725951381e28cd452b7f7b13910810591578f91598acf0783abbcc"
+    },
+    "docs/observable-targets.md": {
+      "bytes": 246183,
+      "sha256": "675c326189d8def3edd133e357b8a6720ccc19965a628f22ed2fd83464d958a8"
+    },
+    "docs/adiabatic-limit.md": {
+      "bytes": 240781,
+      "sha256": "1de5463eac4465390e571222fb88a2831fd081f5ec7e887124050fe97c64a222"
+    },
+    "docs/nonadiabatic-regime.md": {
+      "bytes": 248948,
+      "sha256": "ff98cbb3159910c8d65e2fb402abaac6084a4093695ddd87f3b0804d84fa96e8"
+    },
+    "docs/failure-ledger-dynamic-chi.md": {
+      "bytes": 285649,
+      "sha256": "486f188b7b94f36aadf06996304a1f1eeb2154030ffbaa96795b88e006e18465"
+    },
+    "docs/dynamic-charge-completion.md": {
+      "bytes": 113785,
+      "sha256": "f4250bfe6f6e9bfae24730d355f8bcd49d6641bd3d801da9ecc2ef3a3cfd1d9d"
+    }
+  }
+}

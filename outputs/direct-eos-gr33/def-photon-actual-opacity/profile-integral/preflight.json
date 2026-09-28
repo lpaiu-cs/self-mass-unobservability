@@ -1,0 +1,30 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "source_grid_fixed_bath_initial": 1.873616133636926e-05,
+  "quadrature_fixed_bath_initial": 7.749856093547042e-07,
+  "integration": [
+    {
+      "seconds": 7.194169398,
+      "segments": 42638451,
+      "order": 4,
+      "omitted_wing_response_bound": 9.976938816646766e-05,
+      "tail_budget": 0.0001,
+      "profiles": 60140,
+      "bound_scope": "Exact Voigt model and exact positive bin integration; floating-point quadrature is checked separately. Streaming is skew and the common collision operator is dissipative."
+    },
+    {
+      "seconds": 10.381802450999999,
+      "segments": 42638451,
+      "order": 8,
+      "omitted_wing_response_bound": 9.976938816646766e-05,
+      "tail_budget": 0.0001,
+      "profiles": 60140,
+      "bound_scope": "Exact Voigt model and exact positive bin integration; floating-point quadrature is checked separately. Streaming is skew and the common collision operator is dissipative."
+    }
+  ],
+  "line_inventory_same": true,
+  "coupled_response_evolved": false,
+  "physical_opacity_certified": false,
+  "scope": "Fixed-temperature material reservoir preflight only. These differences are not the coupled-response error or a certification of atomic populations, background special profiles, or subcell transport."
+}

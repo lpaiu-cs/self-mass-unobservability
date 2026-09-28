@@ -1,0 +1,24 @@
+{
+  "classification": "Counterexample candidate",
+  "decision": "Complete only the two missing registered GR controls and independent direct comparison. The fine8/fine4 fields and all physical histories are reused byte-for-byte. No extra path or resolution.",
+  "reassessment": "Completed fine rules took17.87s and14.88s, while the original120s timer also included a slow model initialization. Two remaining propagations plus direct comparison are estimated40-60s after setup; allow one additional120s readout cap including setup. This is an explicit budget revision under measured host contention; the original120s verdict remains failed.",
+  "budgets": {
+    "original_failed_seconds": 120,
+    "remaining_readout_seconds": 120,
+    "CPU_processes": 1,
+    "threads": 1,
+    "new_physical_trajectory_steps": 0
+  },
+  "stop": "One resume only. Stop on120s or any original scientific comparison gate; retain all completed fields. No further automatic readout or refinement.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_corrected_joint_return.py": "60fdc8467692dae6f57eb032dbe35f54b1c6cb3bfc1e1e225e087e9b62a2b59f",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_corrected_joint_return.py": "f8991930808a653d659a4a1d97da558a00762137617932121c266b90b9bb855c",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/stage-aligned/gr/plan.json": "b91109ddef0f9cd0f169a10ea37262cfeaa73ab4dc73e15a0654b40eeb83c727",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/stage-aligned/gr/original-failure.json": "e76fe23c12c4e01f412e737b16daf3a6f1cd7f83a28d1cd59843d55613d51660",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/stage-aligned/sources.json": "66867da401c77af78a9a903f732341d400b627530db69e684257b8a8a031a840",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/stage-aligned/gr/fields-128-reference-128-g8.json": "97b204182bc32271a2a613be6726e15fd9af1f5bb5916cb38a09a8a9cc38d107",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/stage-aligned/gr/fields-128-reference-128-g8.npz": "afe64b71000703c2f02999cb02f381d60b26cc0719464fb4a1a4d921f59934ba",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/stage-aligned/gr/fields-128-reference-128-g4.json": "60e1dff076caadb944ebab76d3b3594e0eb24c7e81646b30e9608bda926c561f",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/stage-aligned/gr/fields-128-reference-128-g4.npz": "ca4b9b40d7b87fce90bad48d032ddf27da65b99145838b4761ae310a4eb8c22f"
+  }
+}

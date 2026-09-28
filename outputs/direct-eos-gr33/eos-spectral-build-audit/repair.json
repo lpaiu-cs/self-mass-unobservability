@@ -1,0 +1,16 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "15cb34b",
+  "cause": "The previous FunctionType build overlay redirected OUT but retained the parent save callable. Only bridge.json was misdirected; both libraries and their bridge binaries retain their frozen SHA values.",
+  "restored_file": "outputs/direct-eos-gr33/molecular-switch/bridge.json",
+  "restored_sha256": "c78f2fff0984b7ea7c9d9fd1928c766bdb6393a2000a1254a559f879199234ab",
+  "correction": "Preserve the misdirected record here, restore parent bytes from its frozen commit and manifest, and redirect save explicitly in future candidate builds. Do not rerun the frozen faulty build wrapper.",
+  "original_runtime": {
+    "/home/lpaiu/work/direct-eos-gr33/molecular-switch/build/src/libfree_eos_direct24_molecular_switch.so.1.0.0": "1bf2d41f92c7550a7596404661502f791afe4ca19cc942ba0ed7e19f5d37030c",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-switch/excitation.so": "e6887d3d3b46cee306e6d2a8d17c026cef0f05858ee99209d2686bf6a9c29065"
+  },
+  "candidate_runtime": {
+    "/home/lpaiu/work/direct-eos-gr33/h2plus-spectral/build/src/libfree_eos_direct24_h2plus_spectral.so.1.0.0": "5d44c2c564f13fa9d45f319d613640f850bc96ad492065c5e846670faaffa876",
+    "/home/lpaiu/work/direct-eos-gr33/h2plus-spectral/excitation.so": "50253271ae63a447cb71f70c997647f58c2b097438b061ca78dfa5af3489a30f"
+  }
+}

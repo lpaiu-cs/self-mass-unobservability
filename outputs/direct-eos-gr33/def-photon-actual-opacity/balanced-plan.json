@@ -1,0 +1,18 @@
+{
+  "classification": "Counterexample candidate",
+  "root_cause": "LINOP uses batch-constant STIM and PLAN for LTE lines even after the continuum is evaluated directly. Replace them with frequency-local values in table mode; do not force non-LTE populations.",
+  "measured_direct_coarse_seconds": 5.950577942,
+  "budget": {
+    "replacement_native_runs": 3,
+    "native_seconds_total": 120,
+    "each_timeout": 120,
+    "CPU_workers": 1,
+    "new_stellar_steps": 0
+  },
+  "runs": [
+    "balanced-coarse:100..20000A step2",
+    "balanced-fine:100..20000A step0.5",
+    "infrared:20000..1e7A step20000"
+  ],
+  "retained_gates": "No changes to frozen LTE/EOS/response acceptance gates. Earlier failed spectra remain failed. This adds one replacement coarse run after identifying the exact source term defect; it does not refine the declared step0.5 ceiling."
+}

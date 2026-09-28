@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/.phase265-newtonb-followthrough.py", line 48, in <module>
+    group(producer,[('coarse',4),('fine',6)],out)
+  File "/home/lpaiu/work/native-retained-tail-runtime/.phase265-newtonb-followthrough.py", line 45, in group
+    done.append(dict(module=str(module),action=action,returncode=code));del pending[action];assert code==0,(module,action,code)
+AssertionError: (PosixPath('verification/apply_photon_geometric_boundary_newton.py'), 'coarse', 1)

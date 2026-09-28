@@ -1,0 +1,235 @@
+{
+  "classification": "Counterexample candidate",
+  "GR_error_transfer": {
+    "classification": "Counterexample candidate",
+    "diagnostic_controls_passed": true,
+    "controls": {
+      "quadrature": 2.6947709003377414e-14,
+      "independent_GR": 1.739488016251822e-12
+    },
+    "common_time_decomposition": {
+      "U": {
+        "total_relative": 0.2587186265540085,
+        "state_relative": 0.11905040233793503,
+        "representation_relative": 0.35259876610452556,
+        "decomposition_relative": 5.896646540073888e-18
+      },
+      "U_t": {
+        "total_relative": 0.3094306560027682,
+        "state_relative": 0.07202533106197252,
+        "representation_relative": 0.3086883733071099,
+        "decomposition_relative": 1.1205828473382916e-16
+      },
+      "U_x": {
+        "total_relative": 0.09180462901836245,
+        "state_relative": 0.06932432325750103,
+        "representation_relative": 0.10535259847167143,
+        "decomposition_relative": 2.4476015400009624e-17
+      }
+    },
+    "endpoint_compact_values": [
+      -4.068961503122793e-63,
+      -5.675710781654543e-63,
+      -6.258745132525931e-63
+    ],
+    "rows": [
+      {
+        "classification": "Counterexample candidate",
+        "steps": 128,
+        "order": 8,
+        "seconds": 2.011156755000229,
+        "maximum_delta_phi": 2.621620945310799e-68,
+        "maximum_delta_mass_cm": 4.206403954801933e-51,
+        "maximum_delta_lambda": 6.087603311709191e-61,
+        "maximum_delta_log_proper_volume": 6.0876033148120744e-61,
+        "maximum_mass_increment_over_background_ulp": 1.1562475148569194e-39,
+        "maximum_scalar_increment_over_background_ulp": 1.2090092659106203e-49,
+        "compact_potential_contraction": 1.604471397461762e-11,
+        "potential_iteration_relative": [
+          2.343279043771949e-15
+        ],
+        "endpoint_direct": -4.068944324591213e-63,
+        "endpoint_compact_with_metric": -4.068961503122793e-63,
+        "compact_potential_change": 1.2161760404552448e-77,
+        "spatial_material_photon_feedback": false,
+        "full_GR_feedback": false,
+        "final_charge_solved": false
+      },
+      {
+        "classification": "Counterexample candidate",
+        "steps": 64,
+        "order": 8,
+        "seconds": 1.495211262000339,
+        "maximum_delta_phi": 3.0394156295710165e-68,
+        "maximum_delta_mass_cm": 3.9122011196824804e-51,
+        "maximum_delta_lambda": 5.6618262887147964e-61,
+        "maximum_delta_log_proper_volume": 5.6618262923182806e-61,
+        "maximum_mass_increment_over_background_ulp": 1.0753776553222934e-39,
+        "maximum_scalar_increment_over_background_ulp": 1.4016830563082334e-49,
+        "compact_potential_contraction": 1.604471397461762e-11,
+        "potential_iteration_relative": [
+          4.379211456921676e-15
+        ],
+        "endpoint_direct": -5.675686819305976e-63,
+        "endpoint_compact_with_metric": -5.675710781654543e-63,
+        "compact_potential_change": 2.9236017616615134e-77,
+        "spatial_material_photon_feedback": false,
+        "full_GR_feedback": false,
+        "final_charge_solved": false
+      },
+      {
+        "classification": "Counterexample candidate",
+        "steps": 0,
+        "order": 8,
+        "seconds": 1.421725619999961,
+        "maximum_delta_phi": 3.3515206578878247e-68,
+        "maximum_delta_mass_cm": 4.2064039548019343e-51,
+        "maximum_delta_lambda": 6.0876033117091924e-61,
+        "maximum_delta_log_proper_volume": 6.0876033156843724e-61,
+        "maximum_mass_increment_over_background_ulp": 1.1562475148569197e-39,
+        "maximum_scalar_increment_over_background_ulp": 1.5456160958451842e-49,
+        "compact_potential_contraction": 1.604471397461762e-11,
+        "potential_iteration_relative": [
+          4.582389644087653e-15
+        ],
+        "endpoint_direct": -6.258718708617254e-63,
+        "endpoint_compact_with_metric": -6.258745132525931e-63,
+        "compact_potential_change": 3.2809475186138914e-77,
+        "spatial_material_photon_feedback": false,
+        "full_GR_feedback": false,
+        "final_charge_solved": false
+      },
+      {
+        "classification": "Counterexample candidate",
+        "steps": 128,
+        "order": 4,
+        "seconds": 1.185469063999335,
+        "maximum_delta_phi": 2.6216209453108047e-68,
+        "maximum_delta_mass_cm": 4.2064039548038685e-51,
+        "maximum_delta_lambda": 6.087603311711992e-61,
+        "maximum_delta_log_proper_volume": 6.087603314814875e-61,
+        "maximum_mass_increment_over_background_ulp": 1.1562475148574513e-39,
+        "maximum_scalar_increment_over_background_ulp": 1.209009265910623e-49,
+        "compact_potential_contraction": 1.6044713974617615e-11,
+        "potential_iteration_relative": [
+          2.343279043771944e-15
+        ],
+        "endpoint_direct": -4.068944324591052e-63,
+        "endpoint_compact_with_metric": -4.0689615031226316e-63,
+        "compact_potential_change": 1.2161760404551922e-77,
+        "spatial_material_photon_feedback": false,
+        "full_GR_feedback": false,
+        "final_charge_solved": false
+      }
+    ],
+    "source_admission_passed": false,
+    "GR_return_evolution_admitted": false,
+    "new_physical_steps": 0,
+    "physical_horizon_seconds": 5.3662986217635974e-05,
+    "final_charge_conclusion": "unadjudicated",
+    "full_goal_complete": false
+  },
+  "photon_recovery": {
+    "classification": "Counterexample candidate",
+    "original_endpoint_and_ledger_passed": true,
+    "material_ledger": [
+      6.571695926952046e-16,
+      9.879955770029378e-15,
+      7.248954618443611e-16,
+      1.9423916346961705e-17
+    ],
+    "radial_port_relative": 7.375514558220221e-13,
+    "packet_relative": 1.8515035594646348e-16,
+    "reconstructed_steps": 8,
+    "reused_strict_steps": 5,
+    "original_equation_audited_steps": [
+      5,
+      6,
+      7
+    ],
+    "endpoint_relative": 3.1703371543914597e-17,
+    "strict_archival_rate_identity_passed": false,
+    "original205failure_preserved": true,
+    "full_period_recovery": false,
+    "GR_source_time_admission_passed": false,
+    "final_charge_conclusion": "unadjudicated",
+    "full_goal_complete": false
+  },
+  "original_failures_preserved": true,
+  "actual_same_joint_solution_GR_computed": false,
+  "diagnostic_compact_GR_computed": true,
+  "GR_return_evolution_executed": false,
+  "physical_final_charge_solved": false,
+  "self_GR_return_closed": false,
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false,
+  "sha256": {
+    "verification/measure_early_gr_time_error.py": "b14efe3e02b15bfadbf3861574c87cedc6150cd682d9b088d9ee4548fb49356d",
+    "verification/complete_joint_photon_recovery.py": "e413b6e073818b40bb2fc8cdf9c7cfa032d7218694a3200b286a019584ffbfe2",
+    "notes/REQUEST207_208_GR_TIME_ERROR_AND_PHOTON_HISTORY_KO.md": "29fdd253e5fa55ae45471dd29a1fdb7e48a718bc2229a6a79939cc02974ee818",
+    "docs/model-definition.md": "aa0196343c79192b6a076bd005ba8068772b7e65a26032340d168dfcfc105942",
+    "docs/observable-targets.md": "4675e161e75fcf65b6cc22c2c58acebd33cca805783f010a36ea58c304111c96",
+    "docs/adiabatic-limit.md": "99c0a22f34581c6e8750d53a769ac76554eb455cbc7fc0213865bac34ede4b2f",
+    "docs/nonadiabatic-regime.md": "2c69c3c922a17d243e250528bf3254ef3a688b11b46246f9d65bbc70773e3b12",
+    "docs/failure-ledger-dynamic-chi.md": "70f626ae1c3ba3409ec5bd99bb4686ed113baeb64ffa862fafa6dae0865ea07f",
+    "docs/dynamic-charge-completion.md": "df1fdd7141dece50b530441a57434e3fc7a4e9208fd846dfda1b98b9a8046648",
+    "outputs/direct-eos-gr33/native-early-gr-recovery/final-result.json": "097956cb43d893f3016f934d7882e2a37ed9eca8d44f10d3f8ed429dc9011a14",
+    "outputs/direct-eos-gr33/native-early-gr-recovery/previous-publication-producer.py": "c83b58d55ad5dbf25094c2566a3455fc90359082387d7a45c96b1b977f41bba8",
+    "outputs/direct-eos-gr33/native-early-gr-recovery/publication-helper.py": "f5153c2b02c6b171dcb35b2d7028cf6666b3ac688f9cc6dc8b0e105c1dd881aa",
+    "outputs/direct-eos-gr33/native-early-gr-recovery/publication-producer.py": "9b72743468ab1c0114ab34a895ec362ed3b0579db24716aa6d564fa87365b855",
+    "outputs/direct-eos-gr33/native-early-gr-recovery/publication.json": "34a3fc326c16a4d7e349b9b9d0d92e4a42d8ae5f86be5480ccda297da02bb8de",
+    "outputs/direct-eos-gr33/native-early-gr-recovery/native-early-gr207-work/measure-receipt.json": "1194dbdb4492a0efcc0b21ab3d7e58fbfa3e7a8b81738d630c56cadeef589498",
+    "outputs/direct-eos-gr33/native-early-gr-recovery/native-early-gr207-work/plan.json": "7e453d6f4ec1ca8bb1cf52b16d4f2e6b5de1de18146c83b2ee809e1c2cfde368",
+    "outputs/direct-eos-gr33/native-early-gr-recovery/native-early-gr207-work/prepare-receipt.json": "f61ad2b1f3bd01a8bceefd96e800d531decb7952a001ee06f64506c3a3790e44",
+    "outputs/direct-eos-gr33/native-early-gr-recovery/native-early-gr207-work/result.json": "2d5424354dbef82b6113fca8fc79b72da31ff5d5345480e6407dc1ded08844e0",
+    "outputs/direct-eos-gr33/native-early-gr-recovery/native-equation-recovery208-work/accepted-128.npz": "862ae7e495206c6739fd4c0fd3f79e2815ecff3d2c8dd8bb2e8eccbb8559bc76",
+    "outputs/direct-eos-gr33/native-early-gr-recovery/native-equation-recovery208-work/audit-receipt.json": "9d84ae2113d080aa2ea107f5560f4601e286c784432caa16871c684696d6b8cc",
+    "outputs/direct-eos-gr33/native-early-gr-recovery/native-equation-recovery208-work/expanded-recovery.py": "f3d3166701fc02a78ad8a52446c35f17de690a120e9b993d47702fd10fb3c851",
+    "outputs/direct-eos-gr33/native-early-gr-recovery/native-equation-recovery208-work/fine-receipt.json": "131200060505e8b318c713a3cdd9868062064a5e3ad969dd54cc686e6356ded1",
+    "outputs/direct-eos-gr33/native-early-gr-recovery/native-equation-recovery208-work/linear-128.json": "a630325c92376635f1aa1e9108827437a1559b9b5aebc356e831cf1a6c48b279",
+    "outputs/direct-eos-gr33/native-early-gr-recovery/native-equation-recovery208-work/original-equation-5.json": "541c3fe2a24017557081101b227df4905375bfb03a0ad8ee7a1cd8522df88236",
+    "outputs/direct-eos-gr33/native-early-gr-recovery/native-equation-recovery208-work/original-equation-6.json": "50dd688fb834d3e2fff32631d53ed7d22ed1ca920c3a7c5c34d733ded9a8763d",
+    "outputs/direct-eos-gr33/native-early-gr-recovery/native-equation-recovery208-work/original-equation-7.json": "533cb08ee622095889c45d86921a1a971253b16a9f134d36bb5d4e079fda9e61",
+    "outputs/direct-eos-gr33/native-early-gr-recovery/native-equation-recovery208-work/plan.json": "d0f6d6c85284541fac422be1bab3f4939141f872c611fde120a4101d7e79556c",
+    "outputs/direct-eos-gr33/native-early-gr-recovery/native-equation-recovery208-work/prepare-receipt.json": "5f9cf957e1d6e36ae3f45b946a1f43e1d1d3835f822e5363f9cd6bd916d3f609",
+    "outputs/direct-eos-gr33/native-early-gr-recovery/native-equation-recovery208-work/progress-128.json": "edb4002cd1fe3581b41667dce137b7f70f50f6bf9fad49a8ca745e65e1e2d750",
+    "outputs/direct-eos-gr33/native-early-gr-recovery/native-equation-recovery208-work/recovered-128.json": "e954e63ace35ad664d9eed5e362ac52ef0bd77423a9350684b7ffcede028a002",
+    "outputs/direct-eos-gr33/native-early-gr-recovery/native-equation-recovery208-work/recovered-128.npz": "deba0c43afb902e8ca48b97993253eda6765d4ea647e89b46105d2838ee89efb",
+    "outputs/direct-eos-gr33/native-early-gr-recovery/native-equation-recovery208-work/result.json": "61c2eb6393e196d6a740975e17dbf284a8c5c9a3ca7c8d3bad611ee1cf24c760",
+    "outputs/direct-eos-gr33/native-early-gr-recovery/native-early-gr207-work/gr/fields-0-g8.json": "6df360614bcae5b27b66c1e9fe4928ede2631acbe1770406be93ea3a4b0b3b7f",
+    "outputs/direct-eos-gr33/native-early-gr-recovery/native-early-gr207-work/gr/fields-0-g8.npz": "b310d1069936468b02cba73b98bf87e8ac03f6f36d2e8442e5784e0f643e119f",
+    "outputs/direct-eos-gr33/native-early-gr-recovery/native-early-gr207-work/gr/fields-128-g4.json": "e77d63e3751fa52ce4e6f939db37c46661d5cfab253dc854c3355104a5777560",
+    "outputs/direct-eos-gr33/native-early-gr-recovery/native-early-gr207-work/gr/fields-128-g4.npz": "d699b1e659ffe9141f848df5ee5671aead5348d18fd717800251bff0c7811207",
+    "outputs/direct-eos-gr33/native-early-gr-recovery/native-early-gr207-work/gr/fields-128-g8.json": "b6e2c7ddf11d28f03022062d117b868a576791ad8e7d6ef8ae945437693bef73",
+    "outputs/direct-eos-gr33/native-early-gr-recovery/native-early-gr207-work/gr/fields-128-g8.npz": "dcf196a4a9450ae23b1578089dfb888ccfd8ae1302de586cfc89ac72deb79ede",
+    "outputs/direct-eos-gr33/native-early-gr-recovery/native-early-gr207-work/gr/fields-64-g8.json": "a1a2cb19e4370954ca8e6071fa1f43b643e95fc3f0c397b29ed36af6d54608cc",
+    "outputs/direct-eos-gr33/native-early-gr-recovery/native-early-gr207-work/gr/fields-64-g8.npz": "431523b8126246fe3e78fc7a7ab47dcbd2a3b865d0d86d0f22f6c57b5d66bb0f",
+    "outputs/direct-eos-gr33/native-early-gr-recovery/native-early-gr207-work/gr/source-0.npz": "090c3dc21b83d90c584cd747de6a81a702f327e4de70a193d8426a39d45924a3"
+  },
+  "document_prefixes": {
+    "docs/model-definition.md": {
+      "bytes": 258545,
+      "sha256": "5ccddb1b9dcfcd994c3a8e9a9e83cebf3350711a997fd4e313b4d0152f7119f5"
+    },
+    "docs/observable-targets.md": {
+      "bytes": 249242,
+      "sha256": "53c5764932e23910a6038f0fbc0604ccde05e8da6bf712a00fdfe79b1ba2338b"
+    },
+    "docs/adiabatic-limit.md": {
+      "bytes": 243826,
+      "sha256": "b04cb04b52c16b8dfb4fb2fc8e7cdb3ea355fe045e9a340a30db84adb0b7508f"
+    },
+    "docs/nonadiabatic-regime.md": {
+      "bytes": 252147,
+      "sha256": "77dc78b9c4bd33aa0701cd16f2c42474664b420e4f51d975d2e4dd075c8f0c04"
+    },
+    "docs/failure-ledger-dynamic-chi.md": {
+      "bytes": 289426,
+      "sha256": "ae61119f8d4a71b5012edc35417cd1d547e050501629bf91411b9d015294a0c0"
+    },
+    "docs/dynamic-charge-completion.md": {
+      "bytes": 117450,
+      "sha256": "7f3857df70593525c381f76bcbe019a075595b93361581b96f3aad5b4ff679cc"
+    }
+  }
+}

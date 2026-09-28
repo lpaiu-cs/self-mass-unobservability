@@ -1,0 +1,43 @@
+{
+  "classification": "Counterexample candidate",
+  "rows": {
+    "temperature": {
+      "index": [
+        64,
+        5368
+      ],
+      "original_native_cell": 366,
+      "radius": 0.9830696431633575,
+      "p2": 4.499109403727994e-06,
+      "p4": 4.536843644023787e-06,
+      "normalization": 0.00010861452042460887,
+      "seconds": 0.0034344311179287023
+    },
+    "velocity": {
+      "index": [
+        64,
+        5553
+      ],
+      "original_native_cell": 181,
+      "radius": 0.9898024486849547,
+      "p2": 0.011069699443262901,
+      "p4": -0.011968209511230204,
+      "normalization": 0.011968209511230204,
+      "seconds": 0.0034344311179287023
+    },
+    "scalar": {
+      "index": [
+        64,
+        3143
+      ],
+      "original_native_cell": 2591,
+      "radius": 0.25656423383312454,
+      "p2": 1.776578675279575e-30,
+      "p4": 6.486862566686569e-31,
+      "normalization": 7.221745589656743e-30,
+      "seconds": 0.0034344311179287023
+    }
+  },
+  "decision": "Do not launch a second patch. Temperature is accepted separately. Native velocity/scalar pointwise convergence and physical charge remain unaccepted. The original scalar/velocity gates are not replaced by temperature, RMS, or boundary-only comparisons.",
+  "seconds": 0.6490717129999979
+}

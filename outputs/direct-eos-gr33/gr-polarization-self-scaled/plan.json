@@ -1,0 +1,17 @@
+{
+  "classification": "Counterexample candidate",
+  "bindings": {
+    "verification/gr_polarization_self_scaled.py": "06cb09e6650babd8d607c345a500017a9bc3d3775ea575e38920a4157312d939",
+    "outputs/direct-eos-gr33/gr-polarization-self-refinement/plan.json": "c94187b6bc037a0a966920013fd312e9fb94bc5e66f839a0152544cb1a000f7c",
+    "outputs/direct-eos-gr33/gr-polarization-self-refinement/order-256.npz": "abcaa44830677a292441c86538706cb5c7c025e30a7ceaaf8d7cfe1687922d1b",
+    "outputs/direct-eos-gr33/gr-polarization-self-refinement/symbolic.json": "bab7abec60dd19f8786b34bad055924809d305a5883420562871d44a2873fc88",
+    "outputs/direct-eos-gr33/gr-polarization-self-refinement/tail-bounds.json": "15719709d627455161634cb8f33f0dde5ca8eab6cc6decf3a44fcd425f118117",
+    "outputs/direct-eos-gr33/gr-polarization-self-scaled/original-error.log": "030d12b9f830fd4d101fd3e0018b9e23973636bbef666363750d6e7d67cbf7d8"
+  },
+  "original_failure": "The 512-point run reached its highest-wavenumber nodes, where the old u=p/Q quadrature returned zero for a localized occupied momentum distribution. The strict positive-response assertion stopped it before publishing an order512 or final result.",
+  "change": "When s=max_i(sqrt(beta_i*t_i*(2+beta_i*t_i))/Q_i)<1/16, t_i=max(eta_i,0)+1, map the low-u interval by u=s*w. Integrate w on [0,16], then u on [16*s,1] and [1,infinity], assigning one third of the original tolerance to each. No discarded interval or positive floor. Otherwise reuse the original response unchanged. Recompute 256/512 points with unchanged science gates.",
+  "response_grid_absolute_gate": 1e-08,
+  "high_Q_control_relative_gate": 1e-07,
+  "controls": "Replay all41678 old response grid points. At the highest order512 wavenumber, preserve old zero responses and compare new positive responses to 60-digit cold-function Fermi convolution at the five registered control positions.",
+  "physical_EOS_certified": false
+}

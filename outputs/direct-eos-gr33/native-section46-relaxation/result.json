@@ -1,0 +1,22 @@
+{
+ "classification": "Imported from prior work",
+ "passed": true,
+ "verdict": "SECTION_4_6_LAYER_BY_LAYER_RELAXATION_ESTIMATE_ADDED__SINGLE_SELF_REVIEW",
+ "review": "single self-review by user decision (three reviewers judged excessive for a sentence-level change)",
+ "edits": [
+  "Deeper layers bullet: layer-by-layer estimate (depths ~2,600 and 6,600 km, mass fractions ~2e-9 and 1.4e-7, Debye-weighted lag 4.0e-9 and 3.3e-7 of |S_struct|); Imported, with Conjectural model limits",
+  "summary: bounded under the two assumptions and estimated layer by layer; no non-adiabatic calculation",
+  "assumptions list: for the lag, either the two assumptions or the layer-by-layer estimate",
+  "data availability: notes through REQUEST288; native-thermal-relaxation manifest listed"
+ ],
+ "unchanged": "abstract, Section 6 paragraph, Lag bound and Structural bullets, Cassini paragraph (still true)",
+ "checks": [
+  "numbers asserted against relax.json by the apply script",
+  "Pandoc: 10 lists, 4 equations, all labels referenced, no missing citation keys",
+  "manuscript CRLF kept (single original LF line kept)",
+  "main.tex regenerated with Pandoc 3.11"
+ ],
+ "pdf_and_submission_archive": "predate Section 4.6 (no TeX on this host)",
+ "full_goal_complete": false,
+ "snapshot_KST": "2026-09-28T08:37:49.391335+09:00"
+}

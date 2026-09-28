@@ -1,0 +1,60 @@
+{
+ "classification": "Counterexample candidate (history); Proven (long-time limit of a stable linear system)",
+ "passed": true,
+ "verdict": "GR_NONLINEAR_CLOSED__ENDPOINT_CHARGE_IS_EARLY_RETARDED_SCATTERING__PERMANENT_CHARGE_ZERO",
+ "closure": {
+  "fixed_point_residual": 4.529005537907819e-18,
+  "adm_cross": 6.754615886954982e-11,
+  "infinity_tail_bound": 4.221258511463531e-06,
+  "infinity_measured": 4.4134540217784925e-15,
+  "nonlinear": 1.0161793889859292e-27,
+  "mass_normalization": {
+   "phase252_common_period": 3.30957e-05,
+   "phase260_full_period_1x": 2.241582006152479e-05
+  },
+  "continuum_mass_normalized": -2.3350180598198245e-51,
+  "phi_inf": "q/eta even in phi_inf (parity); state part proportional to phi_inf^2 (source weight alpha(phi0)/r); direct part (1e-8) exponent open"
+ },
+ "history": {
+  "validation": {
+   "freefall_displacement_rel_Linf_charge_layers": 1.178148368938184e-06,
+   "q_T": -2.316201687093965e-51,
+   "chain_continuum_mass_normalized": -2.3350180598198245e-51,
+   "relative": -0.008058341410563385,
+   "static_window_T": 3.622463951143273e-54
+  },
+  "center_arrival_s": 0.2304972921545272,
+  "exit_s": 0.46271179986801875,
+  "transit_max_abs": 3.489397591962473e-36,
+  "transit_t_max": 0.46259999999999735,
+  "transit_sign_changes": 1108,
+  "relaxation_rms": 8.109571859943415e-45,
+  "relaxation_max": 1.986656267412671e-44,
+  "relaxation_mean_2s_1e4s": 3.6330851738572816e-48,
+  "dominant_periods_s": [
+   50.66492677545201,
+   47.88752779231195,
+   54.126409481464876,
+   44.61940055436106
+  ],
+  "lowest_periods_s": [
+   177.80323874165077,
+   140.22053023544785,
+   115.69527149283309
+  ],
+  "relaxation_check": {
+   "static_window_newmark": -1.7575321305552501e-44,
+   "static_window_modal": -1.757532146377838e-44,
+   "zeta_rel_L2": 0.007584719000625164
+  }
+ },
+ "final_charge_conclusion": "endpoint (T=2D) charge negative, and negative for every endpoint up to 0.35 s; it is the earliest photospheric part of the matter-mediated monopole scattering of the pulse, which oscillates in sign on the outgoing pass (max 3.5e-36, 1.5e-11 of the incident amplitude) and then rings in radial p modes with zero mean; the permanent charge is zero at first order in eta for positive mode damping",
+ "remaining": [
+  "radial-mode damping rates not computed (stability assumed)",
+  "interior Born scattering neglected (core compactness ~1e-4)",
+  "direct-part phi_inf exponent",
+  "atmosphere: gray, two opacity limits (phase 279)"
+ ],
+ "full_goal_complete": false,
+ "snapshot_KST": "2026-09-27T19:03:20.996598+09:00"
+}

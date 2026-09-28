@@ -1,0 +1,22 @@
+{
+  "windows_pid": 65696,
+  "started_utc": "2026-09-24T05:51:04.9680206Z",
+  "arguments": [
+    "-d",
+    "Ubuntu-22.04",
+    "--cd",
+    "/home/lpaiu/work/native-retained-tail-runtime",
+    "--exec",
+    "env",
+    "OPENBLAS_NUM_THREADS=1",
+    "OMP_NUM_THREADS=1",
+    "PYTHONPATH=/home/lpaiu/work/nutimo_pilot/request13_deps:verification",
+    "/usr/bin/python3",
+    "verification/complete_full_incident_horizon.py",
+    "run"
+  ],
+  "stdout": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-full-horizon-live\\controller.stdout.log",
+  "stderr": "E:\\lab\\self-mass-unobservability\\outputs\\direct-eos-gr33\\native-full-horizon-live\\controller.stderr.log",
+  "source_sha256": "016723c5565d09536978be3008e3c63a52f9f6543088c92c4f26333112639e50",
+  "plan_sha256": "06ba893aff3d7b88503abb49eadc17d4fb74c3c1882bb2f1d91cfb3d0561ddc4"
+}

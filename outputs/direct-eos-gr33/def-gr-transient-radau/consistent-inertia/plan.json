@@ -1,0 +1,34 @@
+{
+  "classification": "Counterexample candidate",
+  "reassessment": "Extended stage arithmetic leaves the failed response unchanged; fifth-order stepping still fails. The actual sampled modes show midpoint kinetic cancellation down to0.0312. Address the spatial principal inertia before another time refinement.",
+  "claim": "Add the O(dx^2) constitutive acceleration correction whose constant-coefficient elimination yields the exact positive linear-element mass. Reapply this candidate to the actual GR response with unchanged input, static K,source,time counts and accuracy gates.",
+  "decision": "A passing time response is only candidate discretization progress. Before physical adoption, require variable-coefficient energy/constraint and corrected material-pressure reconstruction. Do not call full GR/physical closure or silently use the modified auxiliary pressure as the old thermodynamic pressure.",
+  "correction": "D_q,left += dx^2*(A*B)_q/12; D_q,right -= same, q rows0,2 only. Constant medium gives lambda=-12*sin(theta/2)^2/(dx^2*(2+cos(theta))) instead of -4*tan(theta/2)^2/dx^2.",
+  "budget": {
+    "paths": 5,
+    "steps": 240,
+    "hard_seconds": 120,
+    "cpu_threads": 1,
+    "memory_GB": 3,
+    "new_EOS_calls": 0,
+    "new_collision_states": 0
+  },
+  "forecast": "Measured five three-stage paths50.7s. Same-size sparse correction forecast45-90s, hard120s. No additional mesh/time refinement or another candidate after failure.",
+  "gates": {
+    "time_relative": 0.02,
+    "time_order": 1.5,
+    "coefficient_relative": 0.02,
+    "outer_relative": 0.002,
+    "linear_residual": 1e-09,
+    "heat_balance": 2e-13
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_consistent_inertia.py": "2c3d0d62f6739566fd6b3560a2e911444a149b770827b6ba4e78f8248205d9e1",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_transient_radau.py": "0070eec85a84b0eb6bc9332a3b1f9b2c48cc99ca757ca33c779f25ed3dcb3fb9",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-transient-radau/result.json": "9ab68fe8deb85ac91bc82f755911f8b6b210a9d62fec507632e2759c1ffb3ca5",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-transient-radau/midpoint-mode-diagnostic.json": "0e40099d2c252bfd3feac674f87cab7b8e4644fd166308ff5639cf5921b9c650",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/fine-bank.npz": "b4493a6e4cfb20d741725ecb61cec154ab9fc51a694001865748741060018d7e",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/coarse-bank.npz": "ea020f69b240c5c5cdd8810f963d88e5cc2d3269aff12c659422a7a6541ae0df",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/solver-source.py": "b4c4b9784211e117a669c4bac66f5b418e1e1a7753ef70621bf8e9e131d781e9"
+  }
+}

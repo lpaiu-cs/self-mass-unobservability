@@ -1,0 +1,12 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "series": "Set v=(QH/Q)^2, QH=4P. R_N=sum_{m=1}^16 s_m v^m, s_m=16^-m[mu_m/(2m-1)+2P^2 mu_(m+1)/((2m-1)(2m+1))]. All true value coefficients are positive. mu_18<=mu_17 implies value remainder <= mu_17*[1/33+2P^2/(33*35)]*v^17/(15*16^16). Its six jets are bounded by multiplying [1,1,1,Tcap,Tcap,Tcap^2+Tcap], where Tcap is the upper t(P).",
+  "tail_inner": "For P<=p<=Q/2, the positive kernel series gives Kp<=4p^2 gamma/(3Q^2). At t>=tc=64+max(eta_upper,0), p<=[sqrt(2beta/tc)+beta]t and gamma=1+beta*t. Integrate exp(eta_upper-t)*t^j with exact incomplete-gamma polynomials to obtain D_j/Q^2.",
+  "tail_outer": "For p>=Q/2>=2P let T2 be the lower t(2P), verified >=4. For j<=2, t^j exp(-t/2) decreases for t>=T2. Hence f(t-eta)*t^j<=2exp(eta_upper-T2/2)*T2^j*f(t/2). The existing eta=0,beta<=0.012 upper-response coefficient C yields K_j/max(1,Q^2)<=K_j/Q^2, including the logarithmic cusp.",
+  "response_error": "Combine the positive-series remainder, using v^17<=v, and both p-tail regions. Each raw response-jet error is <=delta_i*v. Then Y=R/X, X=Q^2/(B*Sref), and |Y_i-Y_N,i|<=d_i*v^2 with d_i=B*Sref*delta_i/QH^2. If A_i sums absolute upper polynomial coefficients, |Y_N,i|<=A_i*v^2.",
+  "quotient_error": "For true Y,Y_N>=0, g=y/(1+y) has |g_prime|<=1, |g_second|<=2, |g_third|<=6. The value difference is d0*v^2; first partial a is <=da*v^2+2*A_a*d0*v^4; second ab is <=dab*v^2+2*A_ab*d0*v^4+2*(da*A_b+db*A_a+da*db)*v^4+6*A_a*A_b*d0*v^6. Integration gives divisors 3,7,11.",
+  "neumann": "For L=4 use sum_{l=1}^L(-1)^(l+1)*Y_N^l and signed remainder Y_N^(L+1)/(1+Y_N). For positive y its value, first and second derivatives are bounded by y^(L+1),(L+1)y^L,L(L+1)y^(L-1). Chain-rule errors all have v^(2L+2), with integral divisor 4L+3. No assumption Y_N<1 is needed.",
+  "exact_integration": "Each polynomial v^k integrates over QH..infinity to QH/(2k-1). Six jets are multiplied using normalized bivariate Taylor coefficients; second diagonal components are divided by two before multiplication and restored afterward. The product rule and remainder derivatives have exact symbolic controls.",
+  "physical": "Apply the existing seven-by-six neutral matrix at the certified true eta root and multiply by -2B<Z^2>scale/beta. Cutoffs and coordinate normalizations are fixed in this decomposition. Directed interval arithmetic includes input intervals, moment enclosures, composition and constants."
+}

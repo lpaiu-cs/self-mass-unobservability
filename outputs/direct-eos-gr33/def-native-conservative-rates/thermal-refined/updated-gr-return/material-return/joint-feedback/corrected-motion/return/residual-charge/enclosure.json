@@ -1,0 +1,63 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "paths": [
+    {
+      "free_norm_cm": 7.111812864731708e-48,
+      "compact_potential_contraction": 1.993015410707871e-08,
+      "normalized_box_bound": 2.438161392802557e-52,
+      "normalized_potential_remainder": 4.859293229648464e-60,
+      "actual_source_coefficient_fraction": 0.3376717857828234,
+      "steps": 64,
+      "reference": 128,
+      "actual_signed_free_endpoint": 1.853222938330309e-56,
+      "signed_with_compact_potential_interval": [
+        1.852737009007344e-56,
+        1.853708867653274e-56
+      ]
+    },
+    {
+      "free_norm_cm": 4.2195957681180863e-48,
+      "compact_potential_contraction": 1.993015410707871e-08,
+      "normalized_box_bound": 1.446615046084552e-52,
+      "normalized_potential_remainder": 2.88312608020839e-60,
+      "actual_source_coefficient_fraction": 0.33721382803949823,
+      "steps": 128,
+      "reference": 128,
+      "actual_signed_free_endpoint": -8.609986156530116e-58,
+      "signed_with_compact_potential_interval": [
+        -8.638817417332201e-58,
+        -8.58115489572803e-58
+      ]
+    },
+    {
+      "free_norm_cm": 5.285859298475524e-49,
+      "compact_potential_contraction": 1.993015410707871e-08,
+      "normalized_box_bound": 1.8121649591261593e-53,
+      "normalized_potential_remainder": 3.611672690283236e-61,
+      "actual_source_coefficient_fraction": 0.3398593502244069,
+      "steps": 128,
+      "reference": 64,
+      "actual_signed_free_endpoint": -6.21172511080423e-58,
+      "signed_with_compact_potential_interval": [
+        -6.215336783494514e-58,
+        -6.2081134381139456e-58
+      ]
+    }
+  ],
+  "seconds": 65.31855016500003,
+  "primary_conditional_lower": 1.0200190389241228e-27,
+  "residual_box_over_primary_lower": 1.4182235731701502e-25,
+  "maximum_E_H_box_amplification_before_primary_lower_can_be_erased": 7.051074449176608e+24,
+  "actual_residual_applied_to_native_stress_and_GR": true,
+  "declared_source_box_and_compact_potential_enclosed": true,
+  "theorem_scope": "Frozen binary conservative-pressure and GR coefficient maps. Arbitrary signed E/H inputs within each saved cell box at each knot, and the declared linear time/spatial source reconstruction. Outward binary64 arithmetic encloses nonnegative sums/products/divisions; the compact Volterra norm is below1, giving B/(1-eta). This excludes coefficient-generation and physical interpolation errors.",
+  "amplification_scope": "If the eventual E/H-induced source error is contained in A times this exact box, its charge effect is at most A times this bound. The threshold compares to the old primary conditional lower only. No measured iteration ratio is assigned to A; no assertion that all other coupled channels share this box.",
+  "EOS_derivative_error_enclosed": false,
+  "coupled_fixed_point_verified": false,
+  "continuous_residual_enclosed": false,
+  "exterior_floor_feedback_enclosed": false,
+  "nonlinear_GR": false,
+  "final_charge_solved": false,
+  "full_goal_complete": false
+}

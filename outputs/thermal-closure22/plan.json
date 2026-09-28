@@ -1,0 +1,17 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "cdab2c5",
+  "source_model": 19041,
+  "restart_model": 19000,
+  "stop_model": 19042,
+  "replay": "Same mesh trajectory and binary, output-only additional columns. Require exact equality of all shared profile values at model 19041 before using new columns.",
+  "tests": [
+    "Original discrete luminosity and nuclear/neutrino/gravothermal budget",
+    "GR heat flux and redshifted luminosity balance with explicit positive-conductivity assumptions",
+    "Proper baryon and isotope inventory after pressure-attached remapping",
+    "Frozen original opacity and heat-source controls, never relabelled as re-evaluated microphysics"
+  ],
+  "invariant": "Frozen Request21 mass match and primary optical failure remain unchanged.",
+  "boundaries": "No new stellar evolution code, network or opacity re-evaluation at the GR state, observational inference, or transport error certificate. A failed steady-state closure does not rule out a time-dependent star.",
+  "previous_manifest_sha256": "6b9cedb46122c64258223a814531f3074a29da9c310bad5b9a5f643e2a49f5cf"
+}

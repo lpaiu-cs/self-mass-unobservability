@@ -1,0 +1,9 @@
+{
+  "classification": "Counterexample candidate",
+  "prior_thermal_contrast_sha256": "3e83dd2423c2d8e8dc4cdde84f4b95022690c5d35eccdfc676fddf67ced2e529",
+  "additional_source_finding": "net_derivs_support passes Q and Qneu as scalar factors multiplying the rate derivative vector. Their temperature derivatives are omitted even though eval_weak computed them. Check this with actual endpoint derivative contrasts.",
+  "model": "On the active weak-table branch T9>0.01, replace the same four heat/neutrino contributions with double-precision table rates, neutrino energies and electron chemical term. Add the derivatives of blend weights, Q and Qnu. Preserve other native contributions and the original low-T branch.",
+  "derivative_gate": 0.001,
+  "derivative_contrast_reconstruction_gate": 1e-10,
+  "limits": "Finite initial-state verification only. Physical atomic/nuclear data error, composition derivatives, EOS total-energy convention and a new GR trajectory remain independent obligations."
+}

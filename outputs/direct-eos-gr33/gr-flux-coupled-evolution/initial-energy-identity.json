@@ -1,0 +1,25 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "rows": [
+    {
+      "implementation": "Star",
+      "maximum_initial_energy_rate_defect_over_heat_capacity": 261.345594934684,
+      "relative_rate_score": 222.89105001987434,
+      "worst_original_cell": 0
+    },
+    {
+      "implementation": "FluxStar",
+      "maximum_initial_energy_rate_defect_over_heat_capacity": 9.139682030784093e-15,
+      "relative_rate_score": 9.146816386230041e-17,
+      "worst_original_cell": 2
+    }
+  ],
+  "initial_v_zero_only": true,
+  "bindings": {
+    "outputs/direct-eos-gr33/gr-conservative-evolution/initial-manifest.json": "a5bf8d5dbb6b0a992fc5753338b1c85cd746d18360baee03fcaae457e89a8996",
+    "outputs/direct-eos-gr33/gr-flux-coupled-evolution/initial-manifest.json": "29402b3b0187363df9e6d0aa79e9d193623a39853413e25cf147f67fde7f0f54",
+    "verification/gr_flux_coupled_evolution.py": "67c236f6ad6f64eaffc5c97f584d69f9b8d6e4e7ffcf6dd618c59d1937d2ff9f",
+    "verification/gr_coupled_evolution.py": "0cc4d50a54023b03cf85bd4a3f7826f2134d740c85c97cc9024ee2a81bd02cf7"
+  }
+}

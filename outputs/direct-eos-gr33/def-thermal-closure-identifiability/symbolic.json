@@ -1,0 +1,41 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "static_double_mean": {
+    "first": [
+      "1",
+      "1",
+      "1/2",
+      "2"
+    ],
+    "second": [
+      "3/2",
+      "2/3",
+      "sqrt(13)/6 + 7/6",
+      "7/6 - sqrt(13)/6"
+    ],
+    "Planck_equal_weight_mean": "9/8",
+    "Rosseland_equal_weight_mean": "8/9",
+    "first_dynamic_transfer": "(8*s**2 + 19*s + 9)/(4*(s + 1)*(s + 2)*(2*s + 1))",
+    "second_dynamic_transfer": "(72*s**3 + 243*s**2 + 254*s + 81)/(4*(2*s + 3)*(3*s + 2)*(3*s**2 + 7*s + 3))",
+    "difference": "s*(s - 1)*(4*s**2 + 9*s + 4)/(4*(s + 1)*(s + 2)*(2*s + 1)*(2*s + 3)*(3*s + 2)*(3*s**2 + 7*s + 3))",
+    "real_frequency_one_difference": "9/1820",
+    "domain": "Positive four-group relaxation model with explicitly equal normalized Planck and Rosseland weights. Not a fit to this star or an assertion of its physical group weights."
+  },
+  "conductive_family": {
+    "equations": "C*T_t+q_x=0; tau*q_t+q=-K*T_x",
+    "quadratic_energy": "(C*T^2+tau*q^2/K)/2",
+    "dissipation": "-q^2/K, apart from boundary flux",
+    "mode_polynomial": "(C*tau*z**2 + C*z + K*k**2)/(C*tau)",
+    "characteristic_speed": "sqrt(K/(C*tau))",
+    "causal_requirement": "tau>=K/(C*c^2); every larger tau obeys this requirement and has the same static EOS and conductivity.",
+    "driven_transfer": "T/source=(1+s*tau)/(C*s*(1+s*tau)+K*k^2)",
+    "limitation": "A mathematical constitutive family, not a statement that arbitrary tau is realized by this stellar electron plasma."
+  },
+  "consequence": "Even exact equilibrium EOS, positive DC conductivity, Planck and Rosseland means, passivity and a speed ceiling do not in general select a unique dynamic heat closure. Actual frequency/angle collision information or an explicitly declared, independently justified constitutive model is needed.",
+  "not_proved": [
+    "No physical stellar dynamic-charge no-go",
+    "No numerical lower bound on the opacity uncertainty of this star",
+    "No failure of the accepted Phase52 source-frozen partial response"
+  ]
+}

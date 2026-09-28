@@ -1,0 +1,16 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Separate the local gas pressure reaction rate, coefficient variation and pulse arrival before selecting a repair of the actual171pressure mismatch.",
+  "decision": "Use saved states and the same local operator. No physical integration, parameter scan or production. Do not infer full-system eigenvalues from a two-variable gas block.",
+  "budget": {
+    "seconds": 60,
+    "CPU_threads": 1,
+    "virtual_GiB": 3
+  },
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/pressure-mode172-inspection.py": "bc829a17d19371c0e8436536b4ec8f40599793f0d727a7fcf79140e33b898540",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/apply_native_direct_radau.py": "3fe5db232d9a099a7b5769b16049ed34d89d05a33dc818da7ad5acf7d96b8438",
+    "native-direct-radau171-work/result.json": "e1d758f57dc287d9226d9989a38d87f919a14e865bd8c59cd61f0b89f2b8f1ce",
+    "native-direct-radau171-work/source-check.json": "5a05f6bdc0bb7f72d4d313a512857f98c7558f15c419da0f70affd719960919b"
+  }
+}

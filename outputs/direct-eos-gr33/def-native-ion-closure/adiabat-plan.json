@@ -1,0 +1,25 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Solve the same-native nonlinear adiabatic expansion at fixed initially populated ion-stage inventories. This is the finite-reaction limiting constitutive branch required by a population-conserving fluid solver.",
+  "decision": "Supply a physically explicit alternative to LTE and quantify its temperature, pressure and characteristic-speed change; do not relabel a fixed-density replay as a new self-consistent GR evolution.",
+  "state": "Original surface density, temperature, isotope mixture, gas entropy, ion and molecular inventories; all initially significant ion stages constrained, H2/H2+ fixed at initial negligible inventories; smaller stages and internal levels conditionally equilibrated.",
+  "domain": "ln(rho/rho0) from0 to-6; native T>=100K. No extrapolated cold EOS or fitted relaxation time.",
+  "budget": {
+    "seconds": 60,
+    "EOS_calls": 1200,
+    "cpu_threads": 1,
+    "new_whole_star_steps": 0
+  },
+  "forecast": "Current probe60 calls1.43s.49 new density nodes with up to6 entropy iterations and16 population iterations have an explicit1200call cap. Expected5-30s; stop60s.",
+  "gates": {
+    "entropy_scaled": 1e-08,
+    "population": 1e-08,
+    "positive_compressibility": true,
+    "coarse_fine_speed": 0.002
+  },
+  "stop": "No density/domain extension, gate relaxation or inherited whole-flow/charge acceptance.",
+  "repair": "Preserve entropy-root noise and the cold Newton-electron NaN at density-4.25. Retain the stricter1e-12 inventory solve; reuse34 accepted nodes. Predict native cumulative ion affinities with the exact native ionization energies before each colder call, so the internal electron solve starts near the constrained rather than neutral gas. Original equations and gates remain unchanged; debit both attempts.",
+  "prior_calls": 496,
+  "prior_seconds": 11.972510437999997,
+  "source_sha256": "894472ccc27d6425db7969852ba536d2f04acc1926bdda7b3ad26b9bbe8c1c6d"
+}

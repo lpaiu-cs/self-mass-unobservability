@@ -1,0 +1,30 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Complete the original1/2/4 polynomial-space comparison using the now jointly accepted full-matrix time inversion.",
+  "retained": "Same native readouts,heat poles,zero initial state,horizon,beta1024,sigma12 and4096 contour nodes. No finer degree or grid. Both degree2 and1 require their own unchanged four-field propagation and contour gates.",
+  "gates": {
+    "propagation_relative": 0.02,
+    "propagation_order": 1.5,
+    "contour": 0.0002,
+    "spatial_relative": 0.02,
+    "spatial_decrease": true
+  },
+  "budget": {
+    "pilot_seconds": 60,
+    "spatial_seconds": 300,
+    "parent_total_seconds": 1200,
+    "parent_reserved_for_prior_work_seconds": 650,
+    "CPU_threads": 1,
+    "memory_GB": 4,
+    "new_EOS_calls": 0
+  },
+  "decision": "Measure4 representative resolvents on each space. Run only if combined forecast fits300s; stop a failed propagation. Compare degree1,2,4 only if both additional spaces pass. Do not refine space on failure.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-full-weeks/spatial.py": "7c96e87935d4448975025a90871d9b385a771676b5a18732d4dfdee79f024652",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_full_weeks.py": "c0be4c1870a4aa5416892ae7f50523a8df515fcbf1455fa067fee7486489bc36",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-full-weeks/beta1024/plan.json": "11eb369e02f0808f49d6b7e49fc6c6ae41d9d29ea6c7d8303c29799907357599",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-full-weeks/beta1024/p4-result.json": "d7a7bd4a0d7445f5e45620f19ada2644833df32611d8a307ad564d8b23085a8e",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-full-weeks/beta1024/scale-contrast.json": "58461a05a8367ad1d9f73df03f5571ccccc086f42287a6d48998d973a17cbbd0",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/fine-bank.npz": "b4493a6e4cfb20d741725ecb61cec154ab9fc51a694001865748741060018d7e"
+  }
+}

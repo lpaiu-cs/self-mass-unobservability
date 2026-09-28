@@ -1,0 +1,33 @@
+{
+  "classification": "Imported from prior work",
+  "retrieved_date": "2026-09-11",
+  "files": {
+    "h2-2016.html": {
+      "url": "https://arxiv.org/html/1607.04479v1",
+      "sha256": "87a89fcd1c12f05e112d8249428cda2c085fa385674021e5acb95eecb55a6bfd"
+    },
+    "cds-ReadMe.txt": {
+      "url": "https://cdsarc.cds.unistra.fr/ftp/J/A+A/595/A130/ReadMe",
+      "sha256": "814bb172229da94f11909f6bc855ab30e41d07ed7ae7e81b4a74efb9f4a4d4f5"
+    },
+    "cds-index.html": {
+      "url": "https://cdsarc.cds.unistra.fr/ftp/J/A+A/595/A130/",
+      "sha256": "524226484f615580038d7564b335d3fa39850fd89b371563738616d20293eeec"
+    },
+    "h2equil.dat.gz": {
+      "url": "https://cdsarc.cds.unistra.fr/ftp/J/A+A/595/A130/h2equil.dat.gz",
+      "sha256": "32288d1356ea904db21d5673b198f246ce9ce8b65d1f91b7a6e4c3167bd236d0"
+    },
+    "eleroyh2.dat": {
+      "url": "http://kurucz.harvard.edu/molecules/h2/eleroyh2.dat",
+      "sha256": "b74b0bb5e523e54e7095584f5d73c8a4c249127bfa3979ba7bc2887cb2b8e2cc"
+    }
+  },
+  "gzip_uncompressed_bytes": 3560000,
+  "gzip_crc_verified": true,
+  "cds": "Popovas and Jorgensen 2016, A&A 595 A130, DOI 10.1051/0004-6361/201527209. Equilibrium H2, 1 K steps, 1--20000 K. Units/columns from the archived CDS ReadMe; the Eint/RT column is dimensionless by article equation 40 despite the catalogue unit label J.",
+  "levels": "The 348 (v,J,term value) rows at the Kurucz URL cited by article footnote 4/Figure 1. Ground-electronic-state level list includes high levels; do not certify it as a complete bound spectrum. Term values are in cm^-1 relative to its (0,0) row. Use every listed row, with normalized equilibrium nuclear-spin weights (2J+1)/4 for even J and 3(2J+1)/4 for odd J, as in article equation 37 for the ground state.",
+  "transport": "CDS HTTPS gzip completed with HTTP 200 then a successful 206 byte-range resume; gzip CRC checked. Kurucz data retrieved from the article original HTTP URL; HTTPS certificate mismatch was not bypassed. HTTP transport does not authenticate provenance; the archived SHA pins these received bytes only.",
+  "unavailable": "UGA H2+ level URL linked from its mainh2p page timed out via HTTPS and HTTP. No H2+ spectral level data were obtained or substituted with HD+.",
+  "boundary": "Published computed tables and spectral lists are numerical source data, not rigorous physical uncertainty enclosures, plasma occupation probabilities or a high-temperature complete EOS."
+}

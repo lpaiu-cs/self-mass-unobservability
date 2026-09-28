@@ -1,0 +1,57 @@
+{
+  "status": "Proven",
+  "scope": "Conditional Newtonian scalar-charge model and leading coplanar drive; no EOS or complete timing matching",
+  "checks": [
+    "reciprocal_pair_force",
+    "common_pair_acceleration_factor",
+    "orbital_plus_state_energy_loss",
+    "stable_branch_stiffness",
+    "relative_inertial_error",
+    "one_pole_matching",
+    "normalized_drive_beta",
+    "unequal_companion_obstruction",
+    "companion_feedback_stiffness",
+    "no_relaxation_resonance",
+    "eccentric_inverse_radius",
+    "hierarchical_inverse_radius",
+    "pericenter_potential_phase",
+    "phase_closure_invariance_and_historical_mismatch"
+  ],
+  "input_sha256": "44d0403ca91540c7c59ea8f5422b67e827ca243dd6965f7c3a018c4476fae059",
+  "phase_convention_source": "https://arxiv.org/html/2411.10066v2 (footnote 3 and Table 4)",
+  "pericenter_radians": {
+    "in": -0.1232682097453528,
+    "out": -0.10004791741852397
+  },
+  "leading_physical_phase_radians": {
+    "in": -0.029458374595941222,
+    "out": -1.1508722029085414,
+    "dif": -2.0433991176038204
+  },
+  "archived_auxiliary_phase_radians": {
+    "in": -1.7235229111362227,
+    "out": -2.8217164471219625,
+    "dif": 1.0981935359860975
+  },
+  "physical_minus_archived_radians": {
+    "in": 1.6940645365402816,
+    "out": 1.6708442442134208,
+    "dif": 3.1415926535896688
+  },
+  "physical_closure_radians": 3.118372361263166,
+  "archived_closure_radians": 3.5793590313915047e-13,
+  "common_origin_cannot_fix_closure": true,
+  "matching": {
+    "tau": "Gamma/kappa",
+    "B": "a_w^2/(kappa*m_p)",
+    "beta_for_F_equals_deltaU_over_Ustar": "B*Ustar"
+  },
+  "omitted_terms": [
+    "inertia",
+    "nonlinear charge response",
+    "companion-charge feedback",
+    "noncoplanar and higher orbital harmonics",
+    "higher PN and radiation terms",
+    "transients"
+  ]
+}

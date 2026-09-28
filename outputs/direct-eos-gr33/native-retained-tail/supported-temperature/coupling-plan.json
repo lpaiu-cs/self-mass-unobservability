@@ -1,0 +1,63 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Apply the retained native tail to the unchanged actual paired photon/material SSP evolution; record nonzero retained pressure/motion, remaining deletion, and complete source histories.",
+  "clocks": [
+    64,
+    128
+  ],
+  "horizon_seconds": 0.0034344311179287023,
+  "controls_seconds": 60,
+  "controls_native_calls": 220,
+  "pilot_seconds": 70,
+  "production_seconds": 650,
+  "GR_seconds": 10,
+  "controls": "Withheld native constitutive and integrated spectral values, two sampled native derivative comparisons, old-support bitwise reuse and the seam. No uniform EOS or derivative certificate is inferred.",
+  "controls_states": [
+    [
+      -23.7,
+      90.0,
+      2e-14
+    ],
+    [
+      -22.7,
+      310.0,
+      1e-10
+    ],
+    [
+      -21.0,
+      1900.0,
+      1e-08
+    ],
+    [
+      -19.2,
+      11200.0,
+      0.0003
+    ],
+    [
+      -18.2,
+      18200.0,
+      0.0007
+    ]
+  ],
+  "gates": {
+    "native_population": 1e-12,
+    "relative_H": 1e-08,
+    "constitutive": 0.002,
+    "spectrum": 0.002,
+    "primitive": 2e-14,
+    "energy": 1e-08,
+    "port": 1e-10,
+    "time": 0.02,
+    "quadrature": 0.002
+  },
+  "stop": "Stop on unsupported actual conserved state; retain its U and root failure. No cold clamp or further floor reduction. Preserve old trajectory and all failed precursor probes.",
+  "bindings": {
+    "verification/evolve_native_retained_tail.py": "bc6286238590936c731c30dd198a9da935001822242846966408aa6056028438",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/support/repaired-bank.npz": "ae67c3c469df177fcd0aa0449ed65baf5fc0bd879f75cc504373693246ecdd61",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/support/spectrum-bank.npz": "98db1a866080df533bba6f825b7505f52d08bd29cfbf83b6b2667b5e4b88536a",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/reallocated-bank-plan.json": "9452dc3e8212a96a94e732a6f8592335ecfa9176b548858e59288e121916bb85",
+    "verification/def_native_updated_gr_return.py": "2ebdded1c3970bd2e0e038cfd29151b7ac32a84e8c50092584ebce5ed5cdbc77",
+    "verification/def_native_refined_thermochemistry.py": "d58a3a9511fff956ca2e14dd15419d052cfd62db159539a3ce69199047f91ebb",
+    "verification/def_native_cold_coupling.py": "0eb2bc3108dd815e3a51288ad866d3f2abe8e10ea7bbdce0969745eb537aca6e"
+  }
+}

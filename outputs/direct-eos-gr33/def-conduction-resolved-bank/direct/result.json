@@ -1,0 +1,153 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "checks": [
+    {
+      "index": 2612,
+      "passed": true,
+      "T_over_TF": 3.0643262147758885,
+      "charge_deficit": 1.4013286087077859e-09,
+      "HNC_iterations": [
+        100,
+        100
+      ],
+      "comparisons": {
+        "structure_grid": {
+          "K": 1.2860453313390252e-07,
+          "tau": 1.387829109411598e-07
+        },
+        "energy": {
+          "K": 6.717925105093059e-09,
+          "tau": 2.980160673793364e-09
+        },
+        "angle": {
+          "K": 4.701388667260886e-08,
+          "tau": 1.5932902186488462e-07
+        }
+      },
+      "errors": {
+        "K": {
+          "quadrature": 0.0043294763676611225,
+          "basis": 0.0027381491638289734
+        },
+        "tau": {
+          "quadrature": 0.0151396445121601,
+          "basis": 0.00186776444083403
+        }
+      },
+      "K": 312279292.45502096,
+      "tau": 2.0890159992814642e-16,
+      "native_ratio": 0.8632485318892626,
+      "EI_only_K": 831260481.548529,
+      "direct_EI_relative": 2.8842992003785817e-05,
+      "table_error": 7.894343177205496e-08,
+      "diagnostic": {
+        "coulomb_min": 2.4780219760877168e-09,
+        "direct_EI_K": 831284458.279512,
+        "tail_structure_last": 0.9999999998738491,
+        "G_relative": 3.3178056721226385e-17,
+        "B_relative": 1.5099717680789575e-16
+      },
+      "reused_EE": false,
+      "event_checks": [
+        {
+          "energy": 6.661338147750939e-16,
+          "momentum": 2.7755575615628914e-16,
+          "detailed_balance_log": 6.89650661126839e-14
+        },
+        {
+          "energy": 6.661338147750939e-16,
+          "momentum": 2.5133742693021536e-16,
+          "detailed_balance_log": 6.522117455223303e-14
+        },
+        {
+          "energy": 6.661338147750939e-16,
+          "momentum": 2.482534153247273e-16,
+          "detailed_balance_log": 6.736711708081586e-14
+        },
+        {
+          "energy": 6.661338147750939e-16,
+          "momentum": 2.482534153247273e-16,
+          "detailed_balance_log": 7.105388783191188e-14
+        }
+      ]
+    },
+    {
+      "index": 2637,
+      "passed": true,
+      "T_over_TF": 2.801383258478321,
+      "charge_deficit": 2.857298841973943e-10,
+      "HNC_iterations": [
+        102,
+        102
+      ],
+      "comparisons": {
+        "structure_grid": {
+          "K": 4.093808159133516e-07,
+          "tau": 4.1176195941794447e-07
+        },
+        "energy": {
+          "K": 4.100438877330248e-09,
+          "tau": 8.509190019267976e-10
+        },
+        "angle": {
+          "K": 6.717122102983808e-08,
+          "tau": 1.5759334959231097e-07
+        }
+      },
+      "errors": {
+        "K": {
+          "quadrature": 0.004640547070787759,
+          "basis": 0.0024121455256004287
+        },
+        "tau": {
+          "quadrature": 0.015378862941093585,
+          "basis": 0.002332816133519211
+        }
+      },
+      "K": 323726327.7802845,
+      "tau": 1.8252604353258922e-16,
+      "native_ratio": 0.8802832512090802,
+      "EI_only_K": 827421895.9336258,
+      "direct_EI_relative": 2.669763068430253e-05,
+      "table_error": 7.289864903637732e-08,
+      "diagnostic": {
+        "coulomb_min": 1.8476970848694327e-09,
+        "direct_EI_K": 827443986.7275954,
+        "tail_structure_last": 1.000000000428699,
+        "G_relative": 4.935279594216647e-18,
+        "B_relative": 3.4931006765898526e-17
+      },
+      "reused_EE": false,
+      "event_checks": [
+        {
+          "energy": 6.661338147750939e-16,
+          "momentum": 2.482534153247273e-16,
+          "detailed_balance_log": 7.35258101767441e-14
+        },
+        {
+          "energy": 6.661338147750939e-16,
+          "momentum": 2.5589376332604516e-16,
+          "detailed_balance_log": 6.511631511774141e-14
+        },
+        {
+          "energy": 6.661338147750939e-16,
+          "momentum": 2.482534153247273e-16,
+          "detailed_balance_log": 6.776523786555799e-14
+        },
+        {
+          "energy": 6.661338147750939e-16,
+          "momentum": 2.482534153247273e-16,
+          "detailed_balance_log": 6.98630088742113e-14
+        }
+      ]
+    }
+  ],
+  "seconds": 8.631951615,
+  "peak_RSS_KiB": 160364,
+  "fully_ionized_sample_operator_constructed": true,
+  "physical_error_certified": false,
+  "whole_star_heat_closed": false,
+  "full_dynamic_charge_solved": false,
+  "new_stellar_steps": 0
+}

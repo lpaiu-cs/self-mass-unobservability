@@ -1,0 +1,229 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "four_force": "Isotropic comoving emission q has Eulerian source (W*q,W*v*q); matter has its exact negative. Momentum cannot be omitted for a moving emitter.",
+    "flat_control": "Uniform sphere, isotropic directions: flight-distance pdf=3/4*(1-x^2/4), 0<x<2; mean flight=3/4 crossing time.",
+    "source_history": "Piecewise constant emitter powers integrate exactly; the shared material debit and ray credit use the identical history integral.",
+    "limitation": "A source/transport coupling API and frozen-metric radiation stress; the material EOS and Einstein evolution are not advanced here."
+  },
+  "constant_native_replay": [
+    {
+      "time_seconds": 0.0,
+      "replay_relative": 0.0,
+      "balance": 0.0
+    },
+    {
+      "time_seconds": 0.05770123892135594,
+      "replay_relative": 1.7546905014763343e-15,
+      "balance": 6.558369638557408e-17
+    },
+    {
+      "time_seconds": 0.11540247784271188,
+      "replay_relative": 1.8127919960983295e-15,
+      "balance": 5.868262559783035e-16
+    },
+    {
+      "time_seconds": 0.23080495568542375,
+      "replay_relative": 4.053808738556903e-15,
+      "balance": 1.479694210148396e-15
+    },
+    {
+      "time_seconds": 0.4039086724494916,
+      "replay_relative": 4.6329242726364595e-15,
+      "balance": 2.4871971409074618e-15
+    },
+    {
+      "time_seconds": 0.5770123892135594,
+      "replay_relative": 5.919847681702142e-15,
+      "balance": 1.4748427537216801e-15
+    },
+    {
+      "time_seconds": 0.8078173448989832,
+      "replay_relative": 7.078078749861257e-15,
+      "balance": 2.2732538685183793e-15
+    }
+  ],
+  "independent_history_controls": [
+    {
+      "time_seconds": 0.0,
+      "local_energy_balance": 0.0,
+      "crossing_balance": 0.0
+    },
+    {
+      "time_seconds": 0.05770123892135594,
+      "local_energy_balance": 6.064320533395065e-18,
+      "crossing_balance": 1.4214016513598249e-16
+    },
+    {
+      "time_seconds": 0.11540247784271188,
+      "local_energy_balance": 2.2741202000231496e-17,
+      "crossing_balance": 1.0069864529332018e-15
+    },
+    {
+      "time_seconds": 0.17310371676406783,
+      "local_energy_balance": 4.851456426716052e-17,
+      "crossing_balance": 7.694531913692996e-16
+    },
+    {
+      "time_seconds": 0.23080495568542375,
+      "local_energy_balance": 4.699848413381176e-17,
+      "crossing_balance": 1.4309724154429916e-15
+    },
+    {
+      "time_seconds": 0.2885061946067797,
+      "local_energy_balance": 9.248088813427475e-17,
+      "crossing_balance": 1.0417355851410677e-15
+    },
+    {
+      "time_seconds": 0.34620743352813566,
+      "local_energy_balance": 9.702912853432105e-17,
+      "crossing_balance": 2.0461842711768105e-15
+    },
+    {
+      "time_seconds": 0.4039086724494916,
+      "local_energy_balance": 9.702912853432105e-17,
+      "crossing_balance": 1.5545950553061594e-15
+    },
+    {
+      "time_seconds": 0.4616099113708475,
+      "local_energy_balance": 1.849617762685495e-16,
+      "crossing_balance": 2.1985327794405502e-15
+    },
+    {
+      "time_seconds": 0.5193111502922034,
+      "local_energy_balance": 1.940582570686421e-16,
+      "crossing_balance": 1.6392281691871811e-15
+    },
+    {
+      "time_seconds": 0.5770123892135594,
+      "local_energy_balance": 1.9254217693529333e-16,
+      "crossing_balance": 1.4497972088360335e-15
+    },
+    {
+      "time_seconds": 0.6347136281349153,
+      "local_energy_balance": 1.940582570686421e-16,
+      "crossing_balance": 7.129567160998425e-16
+    },
+    {
+      "time_seconds": 0.6924148670562713,
+      "local_energy_balance": 1.940582570686421e-16,
+      "crossing_balance": 1.4287091034164916e-15
+    },
+    {
+      "time_seconds": 0.7501161059776272,
+      "local_energy_balance": 1.940582570686421e-16,
+      "crossing_balance": 2.613123400648407e-15
+    },
+    {
+      "time_seconds": 0.8078173448989832,
+      "local_energy_balance": 1.940582570686421e-16,
+      "crossing_balance": 1.805878673632629e-15
+    }
+  ],
+  "actual_native_initial_power_erg_s": 5.148165259478284e+34,
+  "crossing_time_seconds": 0.23080495568542375,
+  "finite_horizon_seconds": 0.8078173448989832,
+  "physical_neutrino_transport_rows": [
+    {
+      "time_crossings": 0.25,
+      "time_seconds": 0.05770123892135594,
+      "emitted_redshifted_erg": 2.970555136437809e+33,
+      "matter_source_debit_erg": -2.970555136437809e+33,
+      "radiation_inventory_redshifted_erg": 2.9705551364378076e+33,
+      "outer_escaped_erg": 0.0,
+      "surface_escaped_erg": 358332408390105.06,
+      "surface_luminosity_erg_s": 1.591609328749716e+17,
+      "outer_luminosity_erg_s": 0.0,
+      "energy_balance_relative": 8.957921484623703e-17,
+      "trace_relative": 0.0,
+      "cone_excess": 0.0
+    },
+    {
+      "time_crossings": 0.5,
+      "time_seconds": 0.11540247784271188,
+      "emitted_redshifted_erg": 5.941110272875617e+33,
+      "matter_source_debit_erg": -5.941110272875617e+33,
+      "radiation_inventory_redshifted_erg": 5.941110272875613e+33,
+      "outer_escaped_erg": 0.0,
+      "surface_escaped_erg": 1.0700932701074257e+22,
+      "surface_luminosity_erg_s": 2.631128583391809e+24,
+      "outer_luminosity_erg_s": 0.0,
+      "energy_balance_relative": 3.583168593849481e-16,
+      "trace_relative": 0.0,
+      "cone_excess": 0.0
+    },
+    {
+      "time_crossings": 1.0,
+      "time_seconds": 0.23080495568542375,
+      "emitted_redshifted_erg": 1.1882220545751235e+34,
+      "matter_source_debit_erg": -1.1882220545751235e+34,
+      "radiation_inventory_redshifted_erg": 1.188222054575122e+34,
+      "outer_escaped_erg": 0.0,
+      "surface_escaped_erg": 9.202196513209028e+32,
+      "surface_luminosity_erg_s": 2.906705565605437e+34,
+      "outer_luminosity_erg_s": 0.0,
+      "energy_balance_relative": 1.0749505781548444e-15,
+      "trace_relative": 0.0,
+      "cone_excess": -2.0696758415417686e-59
+    },
+    {
+      "time_crossings": 1.75,
+      "time_seconds": 0.4039086724494916,
+      "emitted_redshifted_erg": 2.079388595506466e+34,
+      "matter_source_debit_erg": -2.079388595506466e+34,
+      "radiation_inventory_redshifted_erg": 2.0791483368922727e+34,
+      "outer_escaped_erg": 2.4025861418978767e+30,
+      "surface_escaped_erg": 9.182492277456363e+33,
+      "surface_luminosity_erg_s": 5.148165259478282e+34,
+      "outer_luminosity_erg_s": 1.0519380323279268e+33,
+      "energy_balance_relative": 1.6380199286169055e-15,
+      "trace_relative": 0.0,
+      "cone_excess": -2.676428664084261e-10
+    },
+    {
+      "time_crossings": 2.5,
+      "time_seconds": 0.5770123892135594,
+      "emitted_redshifted_erg": 2.9705551364378085e+34,
+      "matter_source_debit_erg": -2.9705551364378085e+34,
+      "radiation_inventory_redshifted_erg": 2.3630645668819926e+34,
+      "outer_escaped_erg": 6.074905695558116e+33,
+      "surface_escaped_erg": 1.8094157686769785e+34,
+      "surface_luminosity_erg_s": 5.148165259478282e+34,
+      "outer_luminosity_erg_s": 5.14816525937796e+34,
+      "energy_balance_relative": 1.2899406937858132e-15,
+      "trace_relative": 0.0,
+      "cone_excess": -2.6764286640842545e-10
+    },
+    {
+      "time_crossings": 3.5,
+      "time_seconds": 0.8078173448989832,
+      "emitted_redshifted_erg": 4.158777191012932e+34,
+      "matter_source_debit_erg": -4.158777191012932e+34,
+      "radiation_inventory_redshifted_erg": 2.363064566882394e+34,
+      "outer_escaped_erg": 1.795712624130534e+34,
+      "surface_escaped_erg": 2.9976378232521024e+34,
+      "surface_luminosity_erg_s": 5.148165259478282e+34,
+      "outer_luminosity_erg_s": 5.148165259478282e+34,
+      "energy_balance_relative": 1.0237624553855659e-15,
+      "trace_relative": 0.0,
+      "cone_excess": -2.6764286640842545e-10
+    }
+  ],
+  "runtime_measurement": {
+    "production_seconds": 7.643865892,
+    "process_wall_seconds": 10.18,
+    "peak_RSS_KiB": 334328,
+    "peak_RSS_estimate_MB": 256,
+    "memory_estimate_exceeded": true
+  },
+  "radiation_source_credit_and_matter_debit_connected": true,
+  "radiation_stress_for_metric_available": true,
+  "source_history_manufactured_controls_are_physical": false,
+  "matter_EOS_time_evolved": false,
+  "Einstein_metric_time_evolved": false,
+  "scalar_charge_time_evolved": false,
+  "full_dynamic_charge_solved": false
+}

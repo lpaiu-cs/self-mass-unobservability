@@ -1,0 +1,43 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "faefcb8",
+  "bindings": {
+    "verification/lanl_tops_stellar_probe.py": "397d4a56602a1cf905cc05be8baa656a72185c7ef64c687afa147bf9e62ba38e",
+    "outputs/direct-eos-gr33/gr-molecular-reference-defined/manifest.json": "144c1a4691bf26823f70c17367a4aa3ccba7a70c208474cbc484086df425d282",
+    "outputs/direct-eos-gr33/op-planck-reader/manifest.json": "7371f8654e8706d30b9d99fdacadfe431b5ebd2a30c65389c24346a5432a4be2",
+    "outputs/direct-eos-gr33/lanl-tops-stellar-probe/before-zero-abundance-prepare.py": "83d71da154dcd5f23dd0541613b3ceaaa6413f3a9c66857498dae006c69a5d6a",
+    "outputs/direct-eos-gr33/lanl-tops-stellar-probe/lanl-avmat.html": "9a0bd3a05684c0e6b42e75c26987143a38f0df81eab064badb2e17f793bad61c",
+    "outputs/direct-eos-gr33/lanl-tops-stellar-probe/lanl-opac-help.html": "70b9605cf101ff828c077baacec3cef6a99e1656a8762a1b8ebe38d638e260d7",
+    "outputs/direct-eos-gr33/lanl-tops-stellar-probe/lanl-opactemps.html": "400ab786bad29ecc7d6e6a3303b6cf3d7f4e2687768253b58e9a3a5592821d19",
+    "outputs/direct-eos-gr33/lanl-tops-stellar-probe/lanl-tops-al1keV-request.json": "b04bbc80d8f94a789ed37dc64b060af369319a01e612c115b65f108c1eeee574",
+    "outputs/direct-eos-gr33/lanl-tops-stellar-probe/lanl-tops-al1keV-response.html": "20c7a7423ffa95e764bdca634db068dd13f708fdd38d26e3c6be24f3f5b025ad",
+    "outputs/direct-eos-gr33/lanl-tops-stellar-probe/lanl-tops-al1keV-table-request.json": "40e2428acc52192e0a1ce91f44f89eb55352378e664cab9ecdd1fd6d90afc0d8",
+    "outputs/direct-eos-gr33/lanl-tops-stellar-probe/lanl-tops-al1keV-table.html": "ca7c51aa3de43d551422680c97a7c5b7ccecac7d603ff26ff5a48e40ec2bb8e6",
+    "outputs/direct-eos-gr33/lanl-tops-stellar-probe/lanl-tops-AlOldFlow.request.json": "56f1039df7297aa0c3f428b2e4adc2907f7fff350d11f1da84b668e9744b3cba",
+    "outputs/direct-eos-gr33/lanl-tops-stellar-probe/lanl-tops-AlOldFlow.summary.html": "6b1c3520ac051291ca25c7e5d440766870b1f936bc23a23394242e5a7752cd30",
+    "outputs/direct-eos-gr33/lanl-tops-stellar-probe/lanl-tops-AlOldFlow.table-request.json": "2d99ebddca674aa5d567d6d035bfcc3153388550a32c5c830869442656804a7e",
+    "outputs/direct-eos-gr33/lanl-tops-stellar-probe/lanl-tops-AlOldFlow.table.html": "d5bf8897898043a591c7719083c8f8ac7eb2720a15a81eaa9467248cbd9298f3",
+    "outputs/direct-eos-gr33/lanl-tops-stellar-probe/lanl-tops-form.html": "b5f1093f7912a1842803c411f375e86db6c21af3d6d9074a1c25a936211ef9d5",
+    "outputs/direct-eos-gr33/lanl-tops-stellar-probe/lanl-tops-HeFlow.request.json": "5cf62c97f4b1b54f7d0bd2870933b0b709c3c921b75293b0315cb8b96efd84ef",
+    "outputs/direct-eos-gr33/lanl-tops-stellar-probe/lanl-tops-HeFlow.summary.html": "ad0fdea11401a5b0ab6f7f69001f16d4a76ad850c845146e155aff760da7e8c7",
+    "outputs/direct-eos-gr33/lanl-tops-stellar-probe/lanl-tops-HeFlow.table-request.json": "9ed99cb9946e8d11bd26ab786e3115c0123dcc8dd81ff19397b62ce0a84bef84",
+    "outputs/direct-eos-gr33/lanl-tops-stellar-probe/lanl-tops-HeFlow.table.html": "b46dc734821633e9e6059614bfde103f8c8235a557583bfdbbe09e3d3ffb911c",
+    "outputs/direct-eos-gr33/lanl-tops-stellar-probe/prepare-zero-abundance-failure.json": "2cb95e5b39299ddcdc195850da305f26e940552120b3fc96731091bfaaa11e04",
+    "outputs/direct-eos-gr33/lanl-tops-stellar-probe/requests.json": "4cbb1c95ba1b4803d9981e94e73f3836c1f3101affe2fff108c3a2d8fcf615f5",
+    "outputs/direct-eos-gr33/lanl-tops-stellar-probe/selected-inputs.json": "0cf5fac861911fec3e268ab10c48d13fbac2121d267c3819f36cd2c372a47f19",
+    "outputs/direct-eos-gr33/lanl-tops-stellar-probe/stellar-inputs.npz": "cc3f21745826e6da2a13e6b7bbfc820afe825c688c24e96a009f0bd697a7b348"
+  },
+  "source_urls": [
+    "https://aphysics2.lanl.gov/apps/",
+    "https://aphysics2.lanl.gov/static/opacdocs/avmat.html",
+    "https://aphysics2.lanl.gov/static/opacdocs/opac-help.html",
+    "https://aphysics2.lanl.gov/static/opacdocs/opactemps.html"
+  ],
+  "purpose": "Query the new/ATOMIC option with Li,Be,B,F and actual high-density stellar mixtures absent from OP. Six selected cells, two tabulated temperatures bracketing each actual T, one exact requested neutral-mass density. The centre has an additional explicit plasma-cutoff-off diagnostic. Each request stays below the service six-state frequency-output limit.",
+  "normalization": "Keep isotope number abundances Y_i=X_i/A_i. Group number Y_z=sum Y_i and mean neutral mass W_z=sum(Y_i W_i)/Y_z; send atomic fractions Y_z and isotopic weight W_z, rho_neutral=rho_B*sum(Y_i W_i). This preserves each element number density in the declared mass convention. A returned opacity per neutral gram converts to per baryon gram by multiplying sum(Y_i W_i). Grouping masses does not supply isotope-resolved line physics.",
+  "query_rounding": "12 significant digits in atom-number fractions and density, 10 in mean neutral isotope masses; preserve these actual submitted strings and compare returned compositions to them before acceptance.",
+  "workflow": "A fresh /submit calculation and its returned numerical-results form for EVERY query, in one cookie session. Changing only /results parameters is not a fresh physical calculation. Capture both requests and responses. Never count HTTP 200 alone as a passed scientific query.",
+  "acceptance": "Follow-up analysis must validate all returned temperatures, densities, composition, material identities and WARNINGS. Reject density-boundary substitutions and the documented flat surrogate frequency spectra. Distinguish the provider plasma cutoff convention from a physical in-medium photon EOS or exact scattering kernel.",
+  "physical_EOS_or_opacity_certified": false,
+  "stellar_evolution_completed": false
+}

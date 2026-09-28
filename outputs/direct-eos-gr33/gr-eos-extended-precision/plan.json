@@ -1,0 +1,27 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "1252b97",
+  "intervention": "Use the original full-integral GR EOS source, not the newer molecular model. Select the upstream 33-digit/4000-exponent real kind. Keep coefficients, physical options, solver and Fermi tolerances unchanged. Split binary64 high/low inputs and outputs carry extended values across the C ABI; composition normalization follows the old binary64 map and its exact lifted values.",
+  "root_iterations": 15,
+  "energy_gate": "Unchanged max(2 erg/g,32 ulp(float(abs(u+P/rho)))); require score <=1, aim <0.25.",
+  "known_target_cells": [
+    0,
+    1175,
+    2972,
+    5734
+  ],
+  "known_root_logT_tolerance": 1e-10,
+  "comparison": "Solve the preserved failed entropy target with this new evaluator. Record its difference from the old evaluator at the same high input, and the residual when its refined root input is rounded back to one binary64. Never relabel the original evaluator failure as passed.",
+  "boundary": "Upstream LAPACK remains binary64. Higher floating precision does not raise source-constant accuracy, eliminate physical-model error, or certify Fermi quadrature/native/continuous-root error. No original GR library, state or running path is replaced.",
+  "runtime_original": {
+    "/home/lpaiu/work/direct-ions32/direct_ion_integral_full_bridge.so": "54d8cd3aa8af1be5c433cee9eed253ffc814ab23e1d212e547697d918a9fed32",
+    "/home/lpaiu/work/direct-ions32/full-integral-build/src/libfree_eos_direct24_integral_full.so.1.0.0": "6348e235763db0112687f391ab1c06c34b33aa530973ea4a414a5d0f21b1dfb4"
+  },
+  "bindings": {
+    "verification/gr_eos_extended_precision.py": "a45a23dc064fb656d0af9e3e6e4403b08ddbf9402df13bcdae65e31982fac5a4",
+    "outputs/direct-eos-gr33/gr-subcell-root-audit/manifest.json": "a374c2af7fec793f008781358b22da8bc5e84214f78a5793c4c5c6bf488d6f0f",
+    "outputs/direct-eos-gr33/gr-eos-extended-precision/source-tree.json": "ea1bc2187faa473e121cc4428dd48c35b096851e8f947dde79a55dbcc3389af9",
+    "outputs/direct-eos-gr33/gr-eos-extended-precision/direct_ion_bridge.f90": "a295791c76ae638e2aa3cc2e3e5b48e3428b3e14c7463ad0b10426f198342af0",
+    "outputs/direct-eos-gr33/initial-state-17-4.npz": "5dcc8ffb8b32a9f15ccc4c8bb7111d19be8dcdc66611ad2942e3a4a0cf6cc6d6"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "ring": "f_ring=(T/2)*integral d^3k/(2*pi)^3 [log(1+kappa^2/k^2)-kappa^2/k^2]=-T*kappa^3/(12*pi), with T in energy units. Differentiate the convergent integral in kappa and fix f(0)=0. The unsubtracted first-order term has a linear ultraviolet divergence.",
+  "native_match": "kappa^2=4*pi*e^2*S2/T; lambda=2*e^3*sqrt(pi)*S2^(3/2)/(T^(3/2)*S0). Then -T*S0*lambda/3 is exactly the same ring free-energy density. S0,S2 are the declared effective Coulomb sums; the joint classical weak-coupling physical limit uses the full charged-species sums.",
+  "duplicate": "If f_native=f_ideal+f_DH+o(f_DH) and a separately added correlation correction has f_new=f_DH+o(f_DH), then f_native+f_new=f_ideal+2*f_DH+o(f_DH). A residual matched correction must subtract the common DH term at free-energy level, including its state/composition derivatives.",
+  "thermodynamics": "At fixed classical composition kappa^2 proportional to n/T: f_DH=-A*n^(3/2)*T^(-1/2), U_DH=3*f_DH/2, P_DH=f_DH/2, S_DH=f_DH/(2*T), C_V_DH=-3*f_DH/(4*T).",
+  "finite_branch": "For f_L=C*T*integral_0^K k^2 log(1-exp(-epsilon(k)/T))dk, integration by parts gives f_L=C*T*K^3*log(1-exp(-epsilon(K)/T))/3-P_kin,L. Thus f_L=-P_kin,L is false at a finite thermally populated endpoint.",
+  "moving_boundary": "For state x, d_x integral_0^K(x) a(k,x)dk = integral_0^K partial_x a dk+a(K,x)*K_x. At the timelike longitudinal endpoint epsilon(K)=K>0 and T>0, the Bose logarithm is nonzero. The endpoint cannot silently be dropped from thermodynamic derivatives.",
+  "limits": "The time-like branch cutoff from a neutrino-decay calculation does not specify the entire equilibrium spectral determinant or damped/spacelike response. These identities do not supply the missing physical continuum or a full consistent plasma free energy."
+}

@@ -1,0 +1,7 @@
+PASS QUADRATIC ENTROPY HEAT CLOSURE SHA
+Traceback (most recent call last):
+  File "/mnt/e/lab/self-mass-unobservability/verification/gr_heat_nonlinear_balance.py", line 116, in <module>
+    if __name__=='__main__':globals()[sys.argv[1]]()
+  File "/mnt/e/lab/self-mass-unobservability/verification/gr_heat_nonlinear_balance.py", line 49, in run
+    assert sp.simplify(divergence_covariant(tensor,0)+N*BE/a)==0
+AssertionError

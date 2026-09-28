@@ -1,0 +1,15 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Locate the first failed conservative primitive using only saved complete step104 plus at most5 original macrosteps.",
+  "decision": "Distinguish an EOS support exit from an inadmissible trial time step or inverse solver bug before any further production.",
+  "wall_seconds": 45,
+  "expected_seconds": [
+    18,
+    35
+  ],
+  "forecast": "Measured896 production361.89s for108 completed steps; five replay steps plus setup is expected18-35s, late stiffness remains uncertain.",
+  "maximum_macrosteps": 5,
+  "extra_native_states": 0,
+  "unchanged": "Same grids, horizon, equations, gates and original frozen producer. No full path replay. No final charge inference.",
+  "source_sha256": "27276810bbbb4f5ac9fbed3decfb77d4b725942e39ad47ed3eaf9fa709daea52"
+}

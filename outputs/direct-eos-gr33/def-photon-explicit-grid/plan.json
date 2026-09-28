@@ -1,0 +1,56 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "0f6b09ed",
+  "claim": "Resolve the remaining line-dominated uncertainty using focused native groups while reusing every other spectral interval.",
+  "reassessment": "The broad moment enclosure failed: maximum uniform loss/energy bounds 1.769/2.556 percent and gray Rosseland recombination 0.1043 percent. Over 87 percent of each uncertainty sum is in its largest 100 bins, concentrated at 7.8 to 13 eV. Replace only 7.7 to 13.5 eV with eight finer windows; no gray normalization or acceptance change.",
+  "replace_indices": [
+    12076,
+    13259
+  ],
+  "window_edges_keV": [
+    0.007697200142496323,
+    0.00825764189723585,
+    0.008858890043213847,
+    0.009503915739434486,
+    0.01019590647831344,
+    0.01093828183715566,
+    0.011734710376515795,
+    0.012589127768947238,
+    0.013505756247725586
+  ],
+  "groups_per_window": 999,
+  "gates": {
+    "native_gray_recombination": 0.001,
+    "uniform_complex_resolvent_relative_to_DC": 0.01,
+    "uniform_energy_response_absolute": 0.01
+  },
+  "bindings": {
+    "verification/def_photon_line_resolved.py": "627d4eb7838dddf378edaf29b11c11d65e1e2ced519a5914d73e1bdc0b13849c",
+    "verification/def_photon_loss_bounds.py": "591c6345aaa06f9b2c30f2f7e5ba9a926f4056b1c2cf3876a4b95200eee8403a",
+    "outputs/direct-eos-gr33/def-photon-loss-bounds/plan.json": "3f17c96f623d133b9acf6259923f077eac0206b0beb0289397b4c3ce04083603",
+    "outputs/direct-eos-gr33/def-photon-loss-bounds/result.json": "016c7ada888b9d60c25b690fc834a96d70177a5b11f57b5ddc055306bae9b300",
+    "outputs/direct-eos-gr33/def-photon-loss-bounds/loss-0.npz": "02d3d6dfd4d03ddbac9c79dca09b3582bb50b2021d6b9d5d1735097c38494050",
+    "outputs/direct-eos-gr33/def-photon-loss-bounds/loss-1.npz": "5386a78ede90940fc63ff8520f5c58b8ba09524821a66734a2da73bfe22b651d",
+    "outputs/direct-eos-gr33/def-photon-line-resolved/requests.json": "5fa430e08f3eb3e2e84e0ec0f60a21ddf0676bdf940ae5ae7211d8671ce91e08",
+    "outputs/direct-eos-gr33/def-photon-line-resolved/lanl-tops-form.html": "b5f1093f7912a1842803c411f375e86db6c21af3d6d9074a1c25a936211ef9d5",
+    "verification/def_photon_explicit_grid.py": "ca390c3c94ac6c49e30b39e7aa704e0d4d361f1f23e744d1f0c4d763f6d96849",
+    "outputs/direct-eos-gr33/def-photon-line-resolved/plan.json": "8d2182a73df1a872bb088e415483506d9f9cd74d501c2b58d5f7b564b9067df2",
+    "outputs/direct-eos-gr33/def-photon-line-resolved/reader-failure.json": "04587fc0b850ea14ea400aaa5bc3a7e02e667dacfe4d66950d91ffd06473bf40",
+    "outputs/direct-eos-gr33/def-photon-explicit-grid/requests.json": "8f7c0999e1132fd95786c094536b30e624beed445636d51c8a8387b489ba49f2",
+    "outputs/direct-eos-gr33/def-photon-explicit-grid/lanl-tops-form.html": "b5f1093f7912a1842803c411f375e86db6c21af3d6d9074a1c25a936211ef9d5"
+  },
+  "budget": {
+    "queries": 16,
+    "pilot_queries": 1,
+    "remaining_queries": 15,
+    "forecast_network_seconds": 36,
+    "hard_network_seconds": 60,
+    "per_query_hard_seconds": 20,
+    "CPU_workers": 1,
+    "new_native_EOS_calls": 0,
+    "new_stellar_steps": 0,
+    "automatic_retry": false
+  },
+  "limits": "Same declared positive-opacity moment assumptions; local loss propagator only, not a full scattering/emission operator or whole-star photon evolution.",
+  "reader_repair": "Submit the same 1000 boundaries explicitly instead of invoking the provider logarithmic range generator. The native group count and every printed lower edge must match. Preserve the failed range records. No opacity, physical state, source gate or target interval changes."
+}

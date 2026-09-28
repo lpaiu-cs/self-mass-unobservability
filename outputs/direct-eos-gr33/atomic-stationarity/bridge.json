@@ -1,0 +1,18 @@
+{
+  "classification": "Counterexample candidate",
+  "command": [
+    "gfortran",
+    "-O2",
+    "-fPIC",
+    "-shared",
+    "-I/home/lpaiu/work/direct-eos-gr33/atomic-stationarity/build/src",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/coulomb-curvature/coulomb_bridge.f90",
+    "-L/home/lpaiu/work/direct-eos-gr33/atomic-stationarity/build/src",
+    "-Wl,-rpath,/home/lpaiu/work/direct-eos-gr33/atomic-stationarity/build/src",
+    "-lfree_eos_direct24_atomic_stationarity",
+    "-o",
+    "/home/lpaiu/work/direct-eos-gr33/atomic-stationarity/excitation.so"
+  ],
+  "bridge_sha256": "29c41b0ee8aa1b4de933581be6f9ab0f160e10a0ad04a302582c8a53843249f3",
+  "library_sha256": "ead41d5b505457f4f6a53e78142b0a4b9f2a77c611bd2e6145053040f8bcb41a"
+}

@@ -1,0 +1,24 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "f161e59",
+  "reason": "Authoritative process listing found all prior scientific PIDs absent; /proc/uptime showed a newly restarted WSL instance. Four accepted path-8 endpoints were retained. No endpoint-8-4 was accepted.",
+  "bindings": {
+    "verification/gr_caloric_resume.py": "ea40f76fa785a2852f2c9dca793c91727fa2401a3bed5c953b28ab27e1ca8be7",
+    "verification/gr_caloric_increment.py": "68a2a5e2a7543a11a7f70cafe8018c3cd649a8287459e4bcebc2e2c6a714fe87",
+    "verification/gr_caloric_refinement.py": "6dd36f53e9fe504efb3ef895e96d2cf73dfb977d8420c219554aa88a9d6c0e1e",
+    "outputs/direct-eos-gr33/gr-caloric-refinement/plan.json": "ff7eea5d9398551c53edee3f9ee3c569809a3fe58a09eb41c47df03fde457cde",
+    "outputs/direct-eos-gr33/gr-caloric-refinement/path-8-progress.json": "50fc149c1a478ba5cebd13ab76a9874ce291aafa5e81dea35001714e6b4d766c",
+    "outputs/direct-eos-gr33/gr-caloric-refinement/endpoint-8-0.npz": "77d47247c7e099c0fa116d1b405d3f6389ba7f0ec1ede2fea0fd50c9d3af1fc4",
+    "outputs/direct-eos-gr33/gr-caloric-refinement/endpoint-8-1.npz": "671242221d22bf622eadec5237d1893f41f944b0cdf4918beb001117de3c0a12",
+    "outputs/direct-eos-gr33/gr-caloric-refinement/endpoint-8-2.npz": "39db5ce3db43e3b4b103ccb3fa47c71c89d07cf30deb27dc862adbcbc65d7fdf",
+    "outputs/direct-eos-gr33/gr-caloric-refinement/endpoint-8-3.npz": "7f25fa9d2617fa102d8dd703c4ac043b784d47966c788ae754f7bac6af2d0cdc"
+  },
+  "changes": {
+    "shift=np.zeros(n,dtype=ld);old_a=base.copy();total_energy=np.zeros(n,dtype=ld);exchanged=ld(0);history=[];dt=duration/steps": "shift,old_a,total_energy,exchanged,history,dt,start_step=initialize_path(steps,n,duration,mass,base)",
+    "for step in range(steps):": "for step in range(start_step,steps):",
+    "np.savez_compressed(OUT/f'path-{steps}.npz',": "save_path(OUT/f'path-{steps}.npz',"
+  },
+  "algorithm": "Restore shift, endpoint EOS, accumulated energy and exchange with the exact original ordering. Skip only accepted steps. Original Newton, EOS, opacity, Gauss, energy and time tolerances remain byte-for-byte unchanged after reversing the three explicit source overlays.",
+  "physical_EOS_certified": false,
+  "full_GR_evolution": false
+}

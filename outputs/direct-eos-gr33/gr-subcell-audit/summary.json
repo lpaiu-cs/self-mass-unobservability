@@ -1,0 +1,26 @@
+{
+  "classification": "Counterexample candidate",
+  "subcell_cases": 12,
+  "all_passed": true,
+  "maximum_errors_eta_theta_v_B_residual": [
+    8.131516293641283e-20,
+    6.540325193319513e-13,
+    0.0,
+    5.421010862427522e-20,
+    6.130271962098148e-13
+  ],
+  "maximum_quadrature_errors": {
+    "baryon_relative_direct_difference": 2.4699806002587144e-14,
+    "baryon_relative_inventory_difference": 1.0449092829054388e-09,
+    "mass_relative_direct_difference": 2.4351722895110672e-14,
+    "internal_energy_relative_direct_difference": 5.793158379223395e-13
+  },
+  "reference_EOS_statistics": {
+    "calls": 1113,
+    "evaluations": 4423,
+    "maximum_score": 0.508166032933787,
+    "label": "direct-cell-entropy"
+  },
+  "inverse_EOS_evaluations": 2000,
+  "interpretation": "All four nonuniform reference cells, both node counts and DOP tolerances passed the registered finite integral comparisons without normalization. All twelve native moment inverses passed. Fixed geometry, composition and Q/profile family; no full-star trajectory or continuum/physical certification."
+}

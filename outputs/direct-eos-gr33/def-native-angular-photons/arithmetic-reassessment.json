@@ -1,0 +1,6 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "The64step path stopped at an exchange residual2.0038e-11 just above the2e-11 internal Newton threshold. Temperature step was roundoff-sized. Subtracting J_new-J_star loses the tiny neutral-photon balance.",
+  "repair": "Evaluate the algebraically identical deltaJ=z*(emission-net_absorption*J_star)/(1+z*net_absorption) directly. Preserve the failed5step prefix and source; rerun this0.21s incomplete path to retain an exact cumulative boundary ledger. No tolerance,physical support or grid change.",
+  "source_sha256": "9dd745e0bcf10ba65343707dbcb5321b58436abefac9a8ff03f823af0ec6be74"
+}

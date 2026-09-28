@@ -1,0 +1,20 @@
+{
+  "classification": "Counterexample candidate",
+  "duration_proper_s": 140780.16,
+  "step_counts": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "method": "Backward Euler with native dxdt and native approximate Jacobian, reevaluating the complete native EOS/network/opacity at every Newton iterate. Keep each zone rho,T fixed. Initial trace result provides the first guess; use fresh result for acceptance.",
+  "residual_tolerance": 1e-07,
+  "abundance_floor_for_residual": 1e-24,
+  "refinement_tolerance": 0.001,
+  "gates": "Nonnegative 22-species fractions; baryon sum error <1e-12; residual per species normalized to max(current change, dt*initial source, 1e-24) <1e-7. Compare successive end states relative to max(total change,1e-20).",
+  "interpretation": "Externally thermostated, fixed-density reaction control. All 22 species including generated F enter the same native EOS and reaction evaluator. This is not GR thermal evolution or proof of common EOS thermodynamic consistency.",
+  "original_plan_sha256": "f2b74ebfe0ef74efe1be9596e6e227e62ebd15099198863b116b832a5b0da4f3",
+  "residual_budget": "1e-7*max(abs(X-X0),dt*abs(f0),1e-24) + 64*eps*max(abs(X),abs(X0))",
+  "refinement_denominator": "max(abs(total change),128*eps*abs(X),1e-20)",
+  "scope": "Separate arithmetic-aware solve; preserve the strict relative-residual failure. The rounding term covers storage/subtraction scale only, not EOS or physical-model error."
+}

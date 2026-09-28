@@ -1,0 +1,31 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Read actual projected-background material/photon trajectories and recompute direct charge and the separately conditional outgoing-photon normalization.",
+  "method": "Same radial retarded integral and continuous vacuum rays as Phase114. Retain17 common saved times, stable conserved rest/nonrest sources, and all actual emitted photons. Compare direct charge and direct-plus-photon mass separately.",
+  "gates": {
+    "time_direct": 0.02,
+    "time_total": 0.02,
+    "time_deep_trace": 0.02,
+    "history_direct": 0.02,
+    "cadence_direct": 0.02,
+    "quadrature_direct": 0.02,
+    "ray_quadrature": 0.002,
+    "native_anchor": 0.002
+  },
+  "budget": {
+    "saved_readout_seconds": 60,
+    "native_endpoint_seconds": 25,
+    "native_calls": 160,
+    "new_fluid_steps": 0
+  },
+  "stop": "Keep any failed gate; no automatic time/radial/frequency refinement. A cancelled direct residual does not justify normalizing its error by the much larger photon term.",
+  "limits": "Frozen corrected initial metric, first-order density/inventory EOS, finite microphysics and resolution. Initial moment matching is not evolved metric/scalar closure. No old GR lower bound is transferred; direct-plus-photon is not the final physical charge.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_projected_evolution.py": "6a5b71e63c6450fa0ae5e4a0607a39a91ba9ec347afd06f257b69b954a668ab4",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_projected_evolution.py": "abb57285b6f1b1dc0fa3dcd9488e441dba381d4ad4282c64e2f7bf57f5355a6b",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-initial-constraints/finite-volume/balanced-20.npz": "72ae702c85db57f0c02c1e5ca15dfad7df50d901b4270531e5b49c8c3746d3cb",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-boundary-layer/source-128.npz": "393fa7dec43f55f28f99e552e496239d44976803c8f8c31660c6aa0f00b77b42",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-boundary-layer/wave-128.npz": "6a74378c5e72b066588e23d47dc674f5a86c2cb9af5fabe6b44551242e1242fa"
+  },
+  "geometry": "Use corrected mass,lapse,phi,Phi throughout the represented source and the exact vacuum beginning at the outer photon face. Within a cell, distribute its integrated source by normalized Jordan proper volume, not uniform coordinate radius. Apply the same proper-volume readout to the saved Phase119 sources as an independent old-background comparator."
+}

@@ -1,0 +1,35 @@
+{
+  "classification": "Counterexample candidate",
+  "rationale": "Unaccelerated Fourier cutoff and finite-precision Q-D fail the local wave; projected full/finite Krylov matrices introduce fast growing modes. Use a linear Laguerre representation of the unchanged resolvent, validated on known frequencies through800 before production.",
+  "method": "sigma12,beta512;4096 uniform mapped-contour nodes (2048 finite solves plus conjugacy and G(1)=0). Coefficient counts512/1024/2048; same65 physical times. This is a time-basis truncation, not an assertion of passing old16/32/64 RK steps.",
+  "retained": "Same K,D, exact microscopic heat poles, face-energy debit, momentum lift, initial condition, radial grid, duration and all four outputs. No eigenvalue clipping, modal filter or window.",
+  "decision": "Run only one fine-bank contour after measured pilot. If any component or nested contour comparison fails, stop. Only if it passes, execute the three fixed coefficient/outer/sigma14 contrasts, within the remaining measured budget. No automatic degree/contour/grid expansion.",
+  "gates": {
+    "relative": 0.02,
+    "order": 1.5,
+    "coefficient": 0.02,
+    "outer": 0.002,
+    "contour": 0.0002,
+    "abscissa": 0.0002,
+    "linear_residual": 1e-09,
+    "heat_balance": 2e-13
+  },
+  "budget": {
+    "pilot_resolvents": 16,
+    "maximum_total_resolvents": 8192,
+    "main_hard_seconds": 180,
+    "total_hard_seconds": 600,
+    "CPU_threads": 1,
+    "memory_GB": 3,
+    "new_EOS_calls": 0
+  },
+  "cost_boundary": "A fixed replacement propagator, not additional physical trajectories. Reuse pilot points and nested coarse contour. Main forecast must fit180s; all four contours must fit600s before production.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_weeks.py": "01824876adedd514aaed1b760c634ddf840ba1e98e6db0e8fa1dc22f7231eba6",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_matrix_propagation.py": "da346396f512d7722bd4e71296ad3d6fb3590ba95da488f64d4dd2976307244f",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_laplace.py": "ce5f7f7a0b52b7597c8cd5eff02e55f2f837aa35d3c1c64dfbec36c88ca4c806",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/fine-bank.npz": "b4493a6e4cfb20d741725ecb61cec154ab9fc51a694001865748741060018d7e",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/coarse-bank.npz": "ea020f69b240c5c5cdd8810f963d88e5cc2d3269aff12c659422a7a6541ae0df",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-laplace/result.json": "e986fa377dfeb5dcf628b3f910a7a6e36687cc6a91ea40310d79b62512ad8d62"
+  }
+}

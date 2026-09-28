@@ -1,0 +1,74 @@
+{
+  "classification": "Counterexample candidate",
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "mass": "dm=r^2*b*Phi*dphi+J; J_prime+r*Phi^2*J=4*pi*r^2*E. E,P are Einstein-frame geometric photon stresses.",
+    "wave": "(r^2/C)*dphi_tt-(r^2*C*dphi_r)_r-2*r^2*C*Phi^2*dphi/b = 2*C*Phi*J/b^2-4*pi*r^3*C*Phi*(E-P)/b; C=N*sqrt(b).",
+    "conservation": "J=-q*sum(w*H(t-delay))/(N*a); w=2*mu_surface*dmu_surface; q=G*L_infinity/c^5. Body debit=-q*H(t), photon energy inside r=q*(H(t)-sum(w*H(t-delay))).",
+    "trace": "-E+Pr+2*Pt=0 does not remove metric-mediated scalar forcing.",
+    "boundary": "For a steady outgoing isotropic hemisphere E=2F/[c(1+mu_min)] and Pr=2F*(1+mu_min+mu_min^2)/[3c(1+mu_min)]; mu_min^2=1-N(r)^2/(N_surface^2*r^2)."
+  },
+  "claim": "Compute causal angular photon E,Pr and mass debit J from the native grey envelope and solve their coupled exterior scalar/metric response. Save the additive surface derivative needed by an interior boundary match.",
+  "input": "Phase90 fine/thin native envelope endpoints. Compact diagnostic L(t)=L0*sin(pi*t/2)^4 for 0<t<2 in units R/c; not an astrophysically established drive.",
+  "boundary": "Zero initial perturbations; dphi(1,t)=0 defines the additive exterior forcing. Outer r=9 is outside causal reach for t<=6. Homogeneous interior-dependent surface response remains to be matched.",
+  "approximation": "First order in G*L/c^5 about exact vacuum scalar metric; outgoing isotropic hemisphere, collisionless exterior, fixed emitting radius. Finite gas pressure truncation retained as a physical limitation.",
+  "settings": [
+    {
+      "name": "coarse",
+      "envelope": "fine",
+      "cells": 320,
+      "angles": 32,
+      "dt_fraction": 0.4
+    },
+    {
+      "name": "fine",
+      "envelope": "fine",
+      "cells": 640,
+      "angles": 64,
+      "dt_fraction": 0.2
+    },
+    {
+      "name": "angular",
+      "envelope": "fine",
+      "cells": 640,
+      "angles": 128,
+      "dt_fraction": 0.2
+    },
+    {
+      "name": "thin",
+      "envelope": "thin",
+      "cells": 640,
+      "angles": 128,
+      "dt_fraction": 0.2
+    }
+  ],
+  "gates": {
+    "trace_refinement_relative": 0.01,
+    "angular_relative": 0.002,
+    "envelope_cutoff_relative": 0.01,
+    "energy_work_relative": 1e-08,
+    "outer_field_relative": 1e-06,
+    "conservation_relative": 1e-10
+  },
+  "budget": {
+    "total_seconds": 240,
+    "pilot_cells": 80,
+    "pilot_angles": 16,
+    "pilot_end": 1,
+    "production_paths": 4,
+    "native_EOS_calls": 0,
+    "BLAS_threads": 1,
+    "automatic_expansion": false
+  },
+  "decision": "If gates pass, use this exterior inhomogeneous response for the next whole-star boundary match. Never relabel the clamped-surface result as the final stellar charge or nonabsorption.",
+  "bindings": {
+    "verification/def_native_photon_exterior.py": "9055933b6c65cccf8162b2927b7571a64b51545051465bb237f1887290c687dd",
+    "verification/def_radiative_exterior.py": "6354268656ac9b46f656d628b7c64ea9c98f12e137c91a9a5b0c7aec173af315",
+    "verification/gr_scalar_nonlinear_exterior.py": "ae8af4f607fa60690742b08b60ee27b17225fb4fbd73ed854721cdd3a8873de1",
+    "outputs/direct-eos-gr33/def-native-radiative-envelope/fine.npz": "1f551d5a1635ad3af71d7f6ba760d442f2f3e618dba3861ebd215c53cf3e2616",
+    "outputs/direct-eos-gr33/def-native-radiative-envelope/thin.npz": "3e018528eefd3a2b09d5fd7fbf654d030c01281fe61edd1454bb8163354423a2",
+    "outputs/direct-eos-gr33/def-native-radiative-envelope/result.json": "a8202083b7e727efd8f3cbcbd508d5d39151665ceec14e25374627c324e66958",
+    "outputs/direct-eos-gr33/def-native-radiative-envelope/audit.json": "e1e19c274d9603965204c1f612ce9425c345c58418b7cc302951e987bd16613c"
+  }
+}

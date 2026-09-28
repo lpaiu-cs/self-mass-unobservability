@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/mnt/e/lab/self-mass-unobservability/verification/verify_fermi_uniform.py", line 80, in <module>
+    if __name__=='__main__': globals()[sys.argv[1]]()
+  File "/mnt/e/lab/self-mass-unobservability/verification/verify_fermi_uniform.py", line 47, in audit
+    exact=max(abs(native-lower),abs(native-upper));assert exact<=bound
+AssertionError

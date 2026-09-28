@@ -1,0 +1,27 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Propagate native acoustic force through finite free-material evolution, its actual collision response, simultaneous photons/thermal/H, corrected free material and null-infinity charge.",
+  "sequence": "Mechanical-only force response supplies the known finite matter source. At each source knot, the current native deep bulk modulus enters BOTH the background flux and the actual finite displaced-state flux. The source-only response is preserved separately. Photon thermal/H correction is returned once to the same forced free material.",
+  "budgets": {
+    "material_total_seconds": 500,
+    "source_seconds": 600,
+    "photon_seconds": 1200,
+    "readout_seconds": 180
+  },
+  "total_budget": "All native and response receipts stay within the original3100s wall cap. Dispatch only after completed native cost and response prefix forecasts establish capacity.",
+  "gates": {
+    "time": 0.02,
+    "quadrature": 0.002,
+    "conservation": 1e-08,
+    "flux_resolution": 0.002,
+    "independent_GR": 1e-09
+  },
+  "limitations": "Known native constitutive force and active deep acoustic coefficients on saved background; other EOS/radiation response derivatives remain the declared table owner. No uniform derivatives, nonlinear Einstein solution, coupling contraction, continuum space/floor or static-nuisance certification.",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/apply_retained_native_acoustic.py": "b6427a26ef7e1aaefd3f647896cf8d30252b5fd340b9496179dc69dd21ac577a",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/def_retained_native_acoustic.py": "f0f34cb0effdaf5beeb20cbfd73efda6635bf753b470724b0619bec9cd3163a4",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/def_retained_native_return.py": "a8552650499ff3d50dca537be45a7caee2108959399ed71137fdebef5458f4c3",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/def_retained_motion_return.py": "9928b133756c244b430baaeb631131e5f0211f991db09b8e8b0cee4f550d2f96",
+    "outputs/direct-eos-gr33/native-retained-completion/evolution/coupled-128.npz": "08990bcd0980c8f45b1777e071734c3601a75f90096c8c6f5edc8d16d76ab2b0"
+  }
+}

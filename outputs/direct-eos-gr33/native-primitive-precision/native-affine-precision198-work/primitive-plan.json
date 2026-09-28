@@ -1,0 +1,17 @@
+{
+  "classification": "Conjectural",
+  "rejected_hypothesis": "Consistent affine RHS changes the stage by1.468e-13; it does not explain the5.184e-11true native mismatch. Preserve that result and do not deploy the unhelpful affine-only repair.",
+  "repair": "The actual native primitive variation allocates five binary64 output arrays and explicitly casts five results back to binary64, despite long-double state/flux arithmetic. Promote only these intermediate/output conversions to long double in the actual and branch-selected native owner. Preserve stored EOS coefficients, photon maps, equations, branch rules and gates.",
+  "check": "Re-evaluate the saved last failed pair, its selected Jacobian, and original half/nominal/double constitutive probes. Separate native arithmetic changes from true branch variation. No new Krylov or physical step. Success admits actual continuation; past accepted-history consistency must also be checked.",
+  "budget_seconds": 180,
+  "virtual_GiB": 6,
+  "CPU_threads": 1,
+  "forecast": "Same reconstruction just took20.79s; promotion changes only small native arrays. Allow180s including independent branch/constitutive comparisons.",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/repair_native_affine_precision.py": "7132e3fac2a5be783d6b7c005bd5474580d8ca8ee4649dd5af1e386f2ae59b50",
+    "native-affine-precision198-work/affine-producer.py": "52e2b3e751718b18aed6caca9b7a1a54c6ac50f3227e8bc6530d275d0191d1b8",
+    "native-affine-precision198-work/check-result-new.json": "99a26a259ec67e645551bc992ee45db12b9b6de099f3481e0c669680f76e6cce",
+    "native-roundoff-polish197-work/rejected-joint-stage.npz": "9927a02addb57d1cbe894587db2abc5bad095c3e15c3793b3d66592415791e17"
+  },
+  "final_charge_conclusion": "unadjudicated"
+}

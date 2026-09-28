@@ -1,0 +1,47 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "4f469fdfe71e6eeb2fee53dd02cd716664284963",
+  "claim": "Resolve the localized pressure-rise time error in the SAME direct-source coupled photon/gas equations using one input-defined local step bisection.",
+  "evidence": "171pressure mismatch is97.93percent concentrated in cell15. Its gas-block eigenvalue*h is about0.32, radial diagonal*h below0.22, and pressure-map change below2e-9. It receives the primary front after58.39percent of the prefix. Slow-photon-to-gas response requires two time integrations of a leading cubic source. The saved toy predicts9.32percent versus1.41percent paired pressure differences before/after local bisection; no guarantee for the full model.",
+  "rule": "For all existing native deep cells with max radial loss diagonal*(T/64)<1, use their fixed primary onset and trailing-front times. Bisect once every base interval overlapping [front,front+2*T/64]. Same physical rule and window on both base64/128 clocks. No fitted cell list, new equation, method, pulse or background. Record actual step counts honestly.",
+  "decision": "Only all six unchanged2percent time gates plus original physical checks permit considering full coupled continuation and final-charge readout. Final-charge stability remains unadjudicated until the same corrected photon/free-material/GR solution and boundary history are completed.",
+  "gates": {
+    "time": 0.02,
+    "energy_H": 1e-08,
+    "stage": 1e-12,
+    "physical_stage_moment": 1e-13,
+    "port": 1e-12
+  },
+  "budget": {
+    "actions": {
+      "prepare": 30,
+      "check": 60,
+      "pilot": 220,
+      "finish": 30
+    },
+    "inspection_cap_seconds": 60,
+    "total_action_seconds": 420,
+    "CPU_threads": 1,
+    "virtual_GiB": 3
+  },
+  "forecast": "171actual action103.33s, with68.72s of stepping for12steps. Expected18steps here gives about130-165s with setup/IO;220s hard pilot cap. Full-path late costs and counts are not admitted by this forecast. One pair only.",
+  "representation": "Canonical17state outputs remain unchanged. Integrate collisions, gas, impulse, spectral ghosts/work and actual boundary packets at each actual substep. Save explicit angular weights and step edges; consumers must use them, not a uniform-clock formula.",
+  "stop": "Stop on any gate or cap. No second bisection, extra pair, full path or automatic grid/horizon/method expansion.",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/resolve_native_pressure_front.py": "fbc5731303122d9885ca375e5066f04e623b01be5fcaf2c4f185242cd413016b",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/apply_native_direct_radau.py": "3fe5db232d9a099a7b5769b16049ed34d89d05a33dc818da7ad5acf7d96b8438",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/solve_native_radau_transfer.py": "cade2ee551d8c9b443f283c8055e3bfb4641c1aa550d19c87b0f77c75abff44e",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/apply_native_conservative_redshift.py": "0ad6876eecf7c828bc26e473ab3bc5080cbee835809be97d0506a75884943ce1",
+    "native-direct-radau171-work/result.json": "e1d758f57dc287d9226d9989a38d87f919a14e865bd8c59cd61f0b89f2b8f1ce",
+    "native-pressure-front172-work/inspection-plan.json": "ebb862f6484a66a41b17e4c82c801ffd93672472ba076bd22125a6567df67c6f",
+    "native-pressure-front172-work/inspection.json": "788e76beec8ac785f4f009bd15799d3e804eb834d3c283fa90791113ad71c48d",
+    "native-pressure-front172-work/inspection-receipt.json": "59e1b162d630add84f63fb003463eb4bc6d3dfb0105e17c7fcacc4c6068076b2",
+    "native-direct-radau171-work/sweep-0/photons/steps-128-reference-128.npz": "5d2b1936e44617760120a61ca6445a044ad0b91c0a4c6799b59f51832adc2678",
+    "native-direct-radau171-work/sweep-0/photons/steps-64-reference-128.npz": "5d2b1936e44617760120a61ca6445a044ad0b91c0a4c6799b59f51832adc2678",
+    "native-direct-radau171-work/sweep-0/material/steps-128-reference-128.npz": "dcb46e493c360e33ac6df6c6e7bb4e5d7cc80e218006a1fbcc08033d6926580f",
+    "native-direct-radau171-work/sweep-0/material/steps-64-reference-128.npz": "76e5a3c54e5f5e2ed88a9c3957903569db4397d4088898f4ce6f4729124359d4",
+    "native-direct-radau171-work/normalization.json": "820244d5d23554811c792b52a45a3e28317392019f5aac7d8733eeb3b4d28706",
+    "native-direct-radau171-work/photon-conservation-plan.json": "248525a3b9808f00f193c48d9739000a1c32eea1cf8197cf8c3ad8b939a0bb2d",
+    "native-pressure-front172-work/inspection-producer.py": "bc829a17d19371c0e8436536b4ec8f40599793f0d727a7fcf79140e33b898540"
+  }
+}

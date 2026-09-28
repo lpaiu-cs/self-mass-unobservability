@@ -1,0 +1,10 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "comoving": "Jrad=W^2*(Erad-2*v*Frad+v^2*Prad); Hrad=W^2*((1+v^2)*Frad-v*(Erad+Prad))",
+  "source": "A=eta-ka*Jrad; B=-(ka+ks)*Hrad; sE=W*(A+v*B); sJ=W*(B+v*A). Matter receives the exact negative four-force.",
+  "moving_scattering": "Even purely elastic comoving scattering (A=0) transfers Eulerian energy W*v*B when the fluid moves. Dropping this term breaks four-force covariance.",
+  "LTE": "Boosting diag(a_rad*T^4,a_rad*T^4/3) and adding the gas-only fluid tensor reproduces the original total LTE perfect-fluid tensor for every |v|<1, with both transverse pressures included.",
+  "material_mass": "Along dr/dt=N*v/a, dm/dt=-4*pi*N*r^2*(J-v*E)/a. For a fluid with comoving heat flux q this is -4*pi*N*r^2*(q+v*p)/a; for separate matter/radiation use their summed E,J, not just a comoving photon luminosity.",
+  "physical_boundary": "The algebra does not supply ka,ks,eta, an angular distribution or scalar/neutral-particle radiation."
+}

@@ -1,0 +1,25 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "bf2f600",
+  "previous_manifest_sha256": "6ca061bd19be05e64ecc916d7fe66d9e2a04471688e965c71eb83bb646d991bd",
+  "zone": 2592,
+  "duration_proper_days": 1.6294,
+  "step_counts": [
+    1,
+    2,
+    4
+  ],
+  "energy": "Define E=u_native + sum(qex_i Qconv X_i/A_i), up to the conserved baryon constant. This explicitly chooses the native internal energy as u_Q. In neutral-W notation u_W=u_Q-g(X). The physical composition-dependent EOS energy zero is not certified by this definition.",
+  "reaction": "All 26 species evolve at fixed density; no intermediate/bulk reservoir. Exponential Rosenbrock Euler freezes T per reaction step. Temperature is inverted from total energy with trapezoidal native reaction plus thermal neutrino loss. No heat source is added twice.",
+  "controls": {
+    "strict_energy_relative_to_released": 1e-06,
+    "temperature_log_absolute": 2e-06,
+    "energy_resolution_relative_to_total_released": 0.05,
+    "composition_absolute": 1e-16,
+    "composition_relative_to_total_change": 0.001,
+    "maximum_temperature_iterations": 5
+  },
+  "policy": "Both strict and resolution-limited diagnostic gates are registered before continuation. Keep every failed gate. A finite EOS residual is an energy defect, never exact conservation. If resolution-limited gate fails, stop that continuation and analyze the actual attainable gap.",
+  "scalar": "Derive fixed-metric static susceptibility first variation and weak-field Q/M cancellation; validate the former on the frozen GR interpolant with finite perturbations and a uniform sphere.",
+  "exclusions": "No runtime rebuild/install, full stellar dynamics, scalar drive assignment, or new observations."
+}

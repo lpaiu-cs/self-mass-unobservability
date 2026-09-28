@@ -1,0 +1,84 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "9b1fce346",
+  "claim": "Evolve the same material/absorption/Fourier mode using its actual EOS electron and multi-ion collective density spectrum. Integrate resonances over cells, preserve number/energy, and compare the collective correction against the SAME independent-electron discretization.",
+  "primary": {
+    "velocity_quadrature": 8,
+    "q_grid": 129,
+    "angles": 24,
+    "modes": 8,
+    "steps": [
+      16,
+      32,
+      64
+    ],
+    "kH": 1
+  },
+  "comparisons": [
+    {
+      "name": "velocity",
+      "velocity_quadrature": 16,
+      "q_grid": 129,
+      "angles": 24,
+      "modes": 8
+    },
+    {
+      "name": "q-grid",
+      "velocity_quadrature": 16,
+      "q_grid": 257,
+      "angles": 24,
+      "modes": 8
+    },
+    {
+      "name": "angular",
+      "velocity_quadrature": 16,
+      "q_grid": 257,
+      "angles": 48,
+      "modes": 12
+    }
+  ],
+  "control": "Analytic independent Maxwell Gaussian cell convolution at 32/64 steps; compare with Phase62 free-electron finite jumps and pair RPA-minus-free differences at both time steps.",
+  "quadrature": "Six fixed positive-velocity intervals [0,.025,.1,.5,2,5,9], 8/16 Gauss-Legendre nodes EACH, 48/96 nodes per species. Ten actual ionic mass groups plus electrons. SVD of Gibbs-whitened Vlasov matrix. Nested q grids reuse common spectral states without recomputation. No rate/opacity normalization.",
+  "pilot": "Old 4-mode, 16-step Hermite-velocity pilot: 16.005 s total, 10.996 s build. Composite velocity quadrature resolves the low phase-velocity dielectric control; independent controls took 3.813 s.",
+  "forecast_seconds": [
+    300,
+    650
+  ],
+  "hard_seconds": 900,
+  "memory_cap_GB": 4,
+  "CPU_workers": 1,
+  "GPU": false,
+  "new_EOS_calls": 0,
+  "new_opacity_queries": 0,
+  "new_stellar_steps": 0,
+  "automatic_expansion": false,
+  "gates": {
+    "time_order": 1.8,
+    "time_difference_initial": 0.001,
+    "paired_time_difference_initial": 1e-06,
+    "velocity_difference_initial": 1e-06,
+    "q_grid_difference_initial": 1e-06,
+    "angular_difference_initial": 1e-06,
+    "free_model_difference_initial": 1e-05,
+    "energy_balance": 1e-09,
+    "energy_residual": 1e-09,
+    "null_modes": 1e-10,
+    "solver_residual": 1e-11,
+    "entropy_growth": 1e-10
+  },
+  "limitations": "Collisionless weak-coupling Maxwell/RPA, FDT and vacuum-photon kinematics. Native scalar opacity is NOT assumed a total differential cross section. Bound-electron dynamics, nonideal/collisional corrections, sub-plasma-frequency propagation, actual-temperature absorption and full GR remain separate requirements.",
+  "bindings": {
+    "verification/def_photon_collective_validate.py": "542cf8abfdf8ce728f2ac2afe5c263e2450223364b8dde61db568e6df293e6b8",
+    "verification/def_photon_collective.py": "212d40aeca126e3b79ecd76d04b4be88dc90a73428953ba68d29a7dcae0359c0",
+    "verification/def_photon_finite_jump.py": "3d1b43833d77f080a82d6467b39d81f041ac16d2885b3ae7d788c2bd924bbbb0",
+    "verification/def_photon_finite_jump_validate.py": "65816601ed2bd350a34e161905e460d7ebca0b9de049e1c3fab505720449e369",
+    "outputs/direct-eos-gr33/def-photon-collective/inventory.npz": "977692961cb6e6e5cc0165db9a88db0323f1d8099040fe4c0b7876a08b848047",
+    "outputs/direct-eos-gr33/def-photon-collective/inventory.json": "efb63b4f636779bdb06dd27da9dcdfd5c9d2d8e21002adff6f21129cb6877dff",
+    "outputs/direct-eos-gr33/def-photon-collective/pilot.json": "f3e52eef8893600ce6f34098914fb3674bd1b4e3aa0e157b116c76a803c18901",
+    "outputs/direct-eos-gr33/def-photon-collective/pilot-source.py": "f335dc8ae58abe637f95ffa3434bfb90e1e5f486da91a7532b5e05586043eef1",
+    "outputs/direct-eos-gr33/def-photon-collective/controls.json": "280c0791e050d65744ca4b2a12c13cfc2f3ef905cddf96861f7f9623b4e62c03",
+    "outputs/direct-eos-gr33/def-photon-collective/symbolic.json": "808c279df88ac1f4d4043b6441df8e2398dfa7eef488a05c402eeaf51ba1946e",
+    "outputs/direct-eos-gr33/def-photon-spatial-coupling/bank.npz": "adb6377b93e4a48a8530e2e1bcccf6f433e700dac69d80cf434ff47dcd25705b",
+    "outputs/direct-eos-gr33/def-photon-finite-jump/manifest.json": "a43ee8603a01b2a22f139e67b764d98d619d38f46dee6e004be72d3013718720"
+  }
+}

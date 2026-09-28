@@ -1,0 +1,41 @@
+{
+  "classification": "Counterexample candidate",
+  "rows": [
+    {
+      "tol": 1e-10,
+      "h": 0.001,
+      "chi_m": 1166.852691382328,
+      "variational_derivative_m": 251.58610632860004,
+      "finite_difference_m": 251.5800938335815,
+      "relative_error": 2.3898358722185264e-05
+    },
+    {
+      "tol": 1e-10,
+      "h": 0.0005,
+      "chi_m": 1166.852691382328,
+      "variational_derivative_m": 251.58610632860004,
+      "finite_difference_m": 251.5875205217526,
+      "relative_error": 5.6211098982128505e-06
+    },
+    {
+      "tol": 2e-12,
+      "h": 0.001,
+      "chi_m": 1166.8526946272618,
+      "variational_derivative_m": 251.58610814146752,
+      "finite_difference_m": 251.58594031609027,
+      "relative_error": 6.670693325494526e-07
+    },
+    {
+      "tol": 2e-12,
+      "h": 0.0005,
+      "chi_m": 1166.8526946272618,
+      "variational_derivative_m": 251.58610814146752,
+      "finite_difference_m": 251.58567415451216,
+      "relative_error": 1.7250036520310985e-06
+    }
+  ],
+  "uniform_sphere_relative_error": 3.26405569239796e-14,
+  "passed": true,
+  "full_mass_normalized_stellar_derivative": false,
+  "meaning": "Actual fixed-GR-interpolant potential derivative verified independently. It cannot be multiplied by the PP heat pole without deriving scalar drive, energy/pressure perturbations and metric response."
+}

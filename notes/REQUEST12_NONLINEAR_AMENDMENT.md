@@ -1,0 +1,5 @@
+# Retain the failed full-displacement gate; inspect a local admissible segment
+
+The two-gap lattice gives its weakest nonzero a=1 assignment at the known 223-day gap. Its unconstrained linear nuisance compensation requires delta(eta_extra1)=26.0400 and delta(oman_extra1)=-81.3705 radians. The originally proposed fractions .25, .5, 1 therefore leave the bound-orbit e<1 parameter domain. The runtime source clamps e>=1 rather than implementing the requested parameter value. The first .25 computation was terminated before a residual artifact was produced; this is a domain failure, not a completed nonlinear refit.
+
+Before further evaluations, register fractions .001, .003, .01 of the same unaltered direction. All have e<1. These test local curvature only and cannot rescue the full cycle-reconnection candidate. Keep the original rejected fractions and compute their eccentricities. Threshold remains 5% weighted residual discrepancy. An earlier selection bug chose the all-zero lattice point for the nonlinear fixture; that fixture was rejected and excluded from scientific results. Selection now requires a nonzero assignment, and cuts are defined on sorted TOA times.

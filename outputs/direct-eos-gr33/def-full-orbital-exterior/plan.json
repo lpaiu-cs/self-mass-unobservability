@@ -1,0 +1,33 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Compute the full unclamped outgoing response against the same stars static surface impedance, and exact static ADM charge/mass differential.",
+  "comparator": "Freeze full interior Z(0) at physical surface r/R=1; retain exact frequency-dependent vacuum propagation and identical incoming amplitudes. This is the same adiabatic inventory/entropy/composition mechanical reference, not a thermal equilibrium star or a whole static EFT.",
+  "method": "Reuse all16 Phase83 impedances. Back-propagate exact vacuum scalar+metric ODE to surface, compare tolerances, then use direct rational impedance difference. No new EOS, FEM solve or time evolution.",
+  "gates": {
+    "surface_transport_relative": 1e-06,
+    "static_incident_calibration": 1e-08,
+    "current": 2e-08,
+    "spatial": 0.02,
+    "outer": 0.002,
+    "quadrature": 0.002,
+    "unitarity": 1e-12
+  },
+  "budget": {
+    "total_seconds": 120,
+    "new_EOS_calls": 0,
+    "new_FEM_solves": 0,
+    "new_time_steps": 0,
+    "CPU_threads": 1
+  },
+  "decision": "Stop if radius/tolerance controls fail; do not extend the frequency set or orbital horizon. Report full radiative response and finite-radius mass separately from an EOS-matched binary sensitivity.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_full_orbital_exterior.py": "4b8c8c0d32d13c46eae6603bdfc16b9dcc39aebf44cd1504a6f64948fc334be1",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_radiative_exterior.py": "6354268656ac9b46f656d628b7c64ea9c98f12e137c91a9a5b0c7aec173af315",
+    "/mnt/e/lab/self-mass-unobservability/verification/gr_scalar_nonlinear_exterior.py": "ae8af4f607fa60690742b08b60ee27b17225fb4fbd73ed854721cdd3a8873de1",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-orbital-charge-fem/result.json": "29e00a6ab0dbe3d22b801c076d9401334656878753b0f3fd72d136e735fa7f30",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-orbital-charge-fem/audit.json": "a8fa4c3cd45f15254080f2f5d8a7bfdad52cf1ef0796d0c9e7cd4c5975d98a32",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-orbital-charge-fem/pilot.json": "7706a9fcd783d815e6a50493ff509ddd39dbd7f78c0fe266984533fec06f1cb9",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-resolved-scalar-pulse/companion-benchmark.json": "810073ff038513cb97b36f6a1f58046c6f48952f152b32ddf8a9152157df631a",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-free-surface-response/normalized/background.npz": "c42374d2a79ab37cc716bad52e6b72a4940dc82f0923f71856601f213f0c4a2c"
+  }
+}

@@ -1,0 +1,65 @@
+{
+ "classification": "Imported from prior work",
+ "passed": true,
+ "verdict": "SECTION_4_6_LAYER_BY_LAYER_RELAXATION_ESTIMATE_ADDED__SINGLE_SELF_REVIEW",
+ "review": "single self-review by user decision (three reviewers judged excessive for a sentence-level change)",
+ "edits": [
+  "Deeper layers bullet: layer-by-layer estimate (depths ~2,600 and 6,600 km, mass fractions ~2e-9 and 1.4e-7, Debye-weighted lag 4.0e-9 and 3.3e-7 of |S_struct|); Imported, with Conjectural model limits",
+  "summary: bounded under the two assumptions and estimated layer by layer; no non-adiabatic calculation",
+  "assumptions list: for the lag, either the two assumptions or the layer-by-layer estimate",
+  "data availability: notes through REQUEST288; native-thermal-relaxation manifest listed"
+ ],
+ "unchanged": "abstract, Section 6 paragraph, Lag bound and Structural bullets, Cassini paragraph (still true)",
+ "checks": [
+  "numbers asserted against relax.json by the apply script",
+  "Pandoc: 10 lists, 4 equations, all labels referenced, no missing citation keys",
+  "manuscript CRLF kept (single original LF line kept)",
+  "main.tex regenerated with Pandoc 3.11"
+ ],
+ "pdf_and_submission_archive": "predate Section 4.6 (no TeX on this host)",
+ "full_goal_complete": false,
+ "snapshot_KST": "2026-09-28T08:37:49.391335+09:00",
+ "document_prefixes": {
+  "docs/model-definition.md": {
+   "bytes": 304433,
+   "sha256": "9b18815ad4c43c2e90feb14979de8834176a9df916491e72a5ef0f561bb5dc55"
+  },
+  "docs/observable-targets.md": {
+   "bytes": 295252,
+   "sha256": "1be296f65c77e24b850f5db86171c250f9cf1e789751476fb9c2724526dfbced"
+  },
+  "docs/adiabatic-limit.md": {
+   "bytes": 289591,
+   "sha256": "83e007146211b3854fdd74a737216c7af5f3731b6f3c79d0dbd3a8dc1e25c7f1"
+  },
+  "docs/nonadiabatic-regime.md": {
+   "bytes": 298083,
+   "sha256": "4b235a6a42d7cc9e1acc1fa984231ba742ee97e34d8e6b52f256834d6fc61fe7"
+  },
+  "docs/failure-ledger-dynamic-chi.md": {
+   "bytes": 335687,
+   "sha256": "5a346466d86eed21b0ea7d919f5a2c9ebe4166d53b9c6080cb50d4445618ca9d"
+  },
+  "docs/dynamic-charge-completion.md": {
+   "bytes": 163851,
+   "sha256": "d4b3098af466de4ce417a03f0c7e4c6a59c08a0be62c2141cc6921778e45c9ec"
+  }
+ },
+ "sha256": {
+  "notes/REQUEST288_RELAXATION_ESTIMATE_SECTION46_KO.md": "3809fab3d082ac1fe5e0734c32154b09bc2fa3cfa5944458eef5ba6a6fc93eda",
+  "paper/manuscript.md": "af89ba3c43709fd73284a535f956e7e14b65768549f598d47e915a0fd600fedd",
+  "paper/main.tex": "a60af1ded07ee176db3ea335eba9190cd87e877a6094dbc00772e1928e4b5832",
+  "docs/white-dwarf-free-fall-charge-section.md": "41ae0cc68744d12d87ddcd5ceedd25848c240050983b4e84eeaa8c05470224b3",
+  "docs/model-definition.md": "3400c1bfaad6a4d7c9c56c3e4c7685ea3337a24b66858c08e65d1951a157bd2b",
+  "docs/observable-targets.md": "50317d27c3597a152aaab39d11c5631781de124bf317a129a5e25a7c7e260b8c",
+  "docs/adiabatic-limit.md": "ab09d8a139262759aba235dbc52d37a6962221d86701aaf75daeffdfab26407d",
+  "docs/nonadiabatic-regime.md": "0d0f24a72fd4762b27b3a95a0afb05e7a43166b571f2493e8f598459f0eec791",
+  "docs/failure-ledger-dynamic-chi.md": "ab6abdd4d075c9dcaf89b13394bdd2cdc5ffdfbb51d76a5f63a80b984ed822c5",
+  "docs/dynamic-charge-completion.md": "cbc22c742088de24e6138c362ae9beadb4784c48e1df35ad86ed7ba0b52aaf45",
+  "outputs/direct-eos-gr33/native-section46-relaxation/publication.json": "9e16de1a96e0d6546bae4f467536ff9550f6028592f82dca4e2ad4236689e6a6",
+  "outputs/direct-eos-gr33/native-section46-relaxation/result.json": "4782c7775aa6b16a37205fae9e9d5261f5db575caaaea0be32ca94a67815e5c9",
+  "outputs/direct-eos-gr33/native-section46-relaxation/scripts/phase288-apply.py": "26595336c7209fcbdf30e5318144538388177b537ba10f6a5d54d29a3eb3d375",
+  "outputs/direct-eos-gr33/native-section46-relaxation/scripts/phase288-publish.py": "f42575d44460f73857a23e47d584a6c925d436840b190663e922abb70e2ffb29",
+  "outputs/direct-eos-gr33/native-section46-relaxation/scripts/phase288-refine.py": "445b15fc8ef820f8facb9bac5576e31e25c5bcee1c4b9dbe1c3390f022cc3546"
+ }
+}

@@ -1,0 +1,18 @@
+{
+  "command": [
+    "gfortran",
+    "-O2",
+    "-fPIC",
+    "-shared",
+    "-I/home/lpaiu/work/gr-mass21/build/src",
+    "/mnt/e/lab/self-mass-unobservability/verification/gr_eos_bridge.f90",
+    "-L/home/lpaiu/work/gr-mass21/build/src",
+    "-Wl,-rpath,/home/lpaiu/work/gr-mass21/build/src",
+    "-lfree_eos",
+    "-o",
+    "/home/lpaiu/work/gr-mass21/gr_eos_bridge.so"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": ""
+}

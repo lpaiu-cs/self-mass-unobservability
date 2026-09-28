@@ -1,0 +1,55 @@
+{
+  "classification": "Counterexample candidate",
+  "commands": [
+    {
+      "command": [
+        "cmake",
+        "-S",
+        "/home/lpaiu/work/direct-eos-gr33/pressure-ionization/source",
+        "-B",
+        "/home/lpaiu/work/direct-eos-gr33/pressure-ionization/build",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DBUILD_SHARED_LIBS=ON",
+        "-DBUILD_TEST=ON",
+        "-DBUILD_DOC=OFF",
+        "-DBUILD_DOX_DOC=OFF"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "/home/lpaiu/work/direct-eos-gr33/pressure-ionization/build",
+        "--target",
+        "free_eos",
+        "-j",
+        "2"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "gfortran",
+        "-O2",
+        "-fPIC",
+        "-shared",
+        "-I/home/lpaiu/work/direct-eos-gr33/pressure-ionization/build/src",
+        "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/pressure-ionization/direct_ion_bridge.f90",
+        "-L/home/lpaiu/work/direct-eos-gr33/pressure-ionization/build/src",
+        "-Wl,-rpath,/home/lpaiu/work/direct-eos-gr33/pressure-ionization/build/src",
+        "-lfree_eos_direct24_pi_trace",
+        "-o",
+        "/home/lpaiu/work/direct-eos-gr33/pressure-ionization/unused-inventory.so"
+      ],
+      "returncode": 0
+    }
+  ],
+  "completed": true,
+  "sha256": {
+    "/home/lpaiu/work/direct-eos-gr33/pressure-ionization/unused-inventory.so": "c55ed862ec2edbc0b936250706b2966e6ed463db80a1dfa764064f94a2f52b41",
+    "/home/lpaiu/work/direct-eos-gr33/pressure-ionization/build/src/libfree_eos_direct24_pi_trace.so.1.0.0": "8f2a9ec0af6514e1df34ac817fac60d4abd9f997e9301d952918807600d3656d"
+  },
+  "original_runtime_modified": false,
+  "physical_EOS_certified": false
+}

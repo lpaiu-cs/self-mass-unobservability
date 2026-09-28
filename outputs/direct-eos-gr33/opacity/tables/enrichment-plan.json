@@ -1,0 +1,13 @@
+{
+  "classification": "Counterexample candidate",
+  "inputs_sha256": {
+    "outputs/direct-eos-gr33/opacity/tables/plan.json": "f8ff287ccdc469b5ad66b9b1757173870e5782f82310ed6415eb258f56180f1a",
+    "outputs/direct-eos-gr33/opacity/tables/table-loading-inputs.npy": "881c58f91b8355116eaaa41971ca3350a6352026acd56fb844e9b7aad576ec91",
+    "verification/native_opacity.py": "8d55a1ee116606082d857d9531a6ab7d3456f4c847fe98fc9948a5754b2ca11f",
+    "verification/opacity_tables.py": "922a51cb5a87bdad2b1a462ab1aca41f69ef58422d28bb29e634598ce471bf71"
+  },
+  "purpose": "Synthetic calls at every native radiative X/Z grid point load the original tables into the disposable child. These calls deliberately override only opacity-library composition arguments; they are not a new stellar composition or evolution.",
+  "preserved_failure": "The original stellar calls left some tables unloaded. Removing composition-coordinate rounding can require one of those neighboring tables, so missing coverage was rejected.",
+  "controls": "All previously captured arrays must remain bitwise identical after cache enrichment; inspect the actual composition arguments used and preserve original binary/profile-return checks.",
+  "physical_calibration": false
+}

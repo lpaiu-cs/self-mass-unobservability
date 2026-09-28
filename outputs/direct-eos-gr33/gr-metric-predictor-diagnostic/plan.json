@@ -1,0 +1,36 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "b33f93cb3179b1219f94c42a48aeb7557b2fc7c9",
+  "bindings": {
+    "verification/gr_metric_predictor_diagnostic.py": "8f11ff6988ab583a8b18b84b02036a00ff8f704aa354aaf3ff6ab0c8bc03d950",
+    "outputs/direct-eos-gr33/gr-metric-coupled-subcell-newton/plan.json": "6668135db1e46452f4c4060c1e1af5b261c763e96a66c4e0b1ad55400f39c8bc",
+    "outputs/direct-eos-gr33/gr-metric-coupled-subcell-newton/candidate.py": "6bb9227f664dd3e46818efe2171d983eb03ccd34c1c7cebcdd4310e621f0c40e",
+    "outputs/direct-eos-gr33/gr-metric-coupled-subcell-newton/preflight.json": "4ea678d762ed2706efe88e7f171aca08a57b2f0b466956e6288b71a00a5d59f3",
+    "outputs/direct-eos-gr33/gr-metric-coupled-subcell-newton/block-0064/result.json": "d80b32b87ac1b7c61d0cdbf1e8ef0c66966aba5b0733d6884a5ced4c79c8036f",
+    "outputs/direct-eos-gr33/gr-metric-coupled-subcell-newton/block-0080/result.json": "26a289acc03374d04779bc277639d3dabd1be70c3b230f96b7bc8396307cac01",
+    "outputs/direct-eos-gr33/gr-metric-predictor-diagnostic/original-newton.py": "8859638928eb39c2e95dd473dc24a2b8c0d94f98a0cdd0b99aa632040eb9a585",
+    "outputs/direct-eos-gr33/gr-metric-predictor-diagnostic/predicted-newton.py": "8058c665a52e7e86942197286f005bca69d24f437d270540e30999464e5a4c43"
+  },
+  "cases": [
+    {
+      "cell": 76,
+      "nodes": 8,
+      "case": 0
+    },
+    {
+      "cell": 83,
+      "nodes": 8,
+      "case": 2
+    },
+    {
+      "cell": 0,
+      "nodes": 8,
+      "case": 1
+    }
+  ],
+  "predictor_iterations": 8,
+  "predictor_mechanical_gate": 1e-12,
+  "change": "Begin at the same [0,.003,0]. At fixed initial temperature shift, first solve only the original baryon and momentum rows for density and velocity, with the full metric chain. Then run the original 30-iteration full Newton solve unchanged. The predictor receives only the target and inner mass shift, not the manufactured true primitive. Its full residual need not decrease; only its two mechanical rows decrease. The original full-phase monotonic residual rule and all root/physical acceptance gates remain unchanged.",
+  "controls": "For both failures, check the analytic Jacobian at the initial and last archived iterate using both original finite-difference steps and the original 1e-4 row-relative gate. Include the original zero-target cell as a positive control. Compare exact target moment dyadics with the archived original in every case.",
+  "boundary": "Post-failure numerical diagnosis on three explicitly selected cases; no frozen population rescue, all-cell convergence, global uniqueness, native/continuous error or finite GR evolution claim."
+}

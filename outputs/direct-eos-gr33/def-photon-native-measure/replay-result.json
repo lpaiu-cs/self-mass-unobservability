@@ -1,0 +1,35 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "checks": [
+    {
+      "groups": 1,
+      "Rosseland_Planck": [
+        3.90864144002401,
+        33496.288870457574
+      ]
+    },
+    {
+      "groups": 3,
+      "Rosseland_Planck": [
+        3.908641440024009,
+        33496.288870457574
+      ]
+    },
+    {
+      "groups": 999,
+      "Rosseland_Planck": [
+        3.90864144002401,
+        33496.28887045757
+      ]
+    }
+  ],
+  "partition_relative": 2.220446049250313e-16,
+  "native_one_group_relative": [
+    1.0602267822346079e-05,
+    8.624028468240397e-06
+  ],
+  "original_native_fine_partition_failure_preserved": true,
+  "interpretation": "One fixed source-node field predicts the old one-group mean and retains additivity under all three requested partitions. The original provider fine-group output remains rejected; this does not establish its internal integration algorithm or a continuum line-error bound.",
+  "seconds": 0.1118261349999976
+}

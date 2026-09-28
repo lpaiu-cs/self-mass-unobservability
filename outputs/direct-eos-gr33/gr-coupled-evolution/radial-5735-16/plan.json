@@ -1,0 +1,31 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "971e2e5842786c467beef875c9250bebf6b71f94",
+  "bindings": {
+    "outputs/direct-eos-gr33/gr-coupled-evolution/radial-5735-16/candidate.py": "fb18add541a51f1347a2932fc73ff0aaed6782101749e9ba940d072ec92c5374",
+    "outputs/direct-eos-gr33/initial-state-17-4.npz": "5dcc8ffb8b32a9f15ccc4c8bb7111d19be8dcdc66611ad2942e3a4a0cf6cc6d6",
+    "outputs/direct-eos-gr33/gr-microphysics/auxiliaries.npz": "63744d1a041ebc39bd33dfa0f5e181d64378966c1ee22364c477009bee08d976",
+    "outputs/direct-eos-gr33/gr-transport/diagnostics.npz": "296f6bcdd1623223957e0b1c391f89ea6613141337c6dc308e155650fb98b669",
+    "verification/direct_eos_gr.py": "5709a4cbf5830de09001481813617d43ee2c935a0dff3cd813110d73a7066fdf",
+    "verification/direct_ion_eos.py": "58d24ef14b89fcde3fca118b95ca629d121b433f2d29bfdce77fc32c520a1589",
+    "verification/opacity_tables.py": "ba01a5ebe3062eb1b13b23ccb918f99158fba6fd0c72fcba191c1ba4a028c7b9",
+    "verification/opacity_cubic.py": "aab97872ac6718408634979277fceb2692bddd0b1e58ac0a0b9870b582e3d741",
+    "outputs/direct-eos-gr33/opacity/tables-enriched-tables.npz": "d4e10e14edb5d27e11eeeccf7ff519326cf965c06996e258b66defb377d2a42c"
+  },
+  "requested_cells": 5735,
+  "steps": 16,
+  "proper_tau_seconds": 0.0004113000088929766,
+  "duration_seconds": 0.0004113000088929766,
+  "method": "SSPRK2 on primitive increments; solve the full material baryon/internal-energy/momentum/causal-heat time matrix at each stage. The energy projection is symbolically equivalent before space discretization. Fresh native EOS, composition advection, common baryon/momentum face fluxes, radial energy-mass constraint and polar lapse at every stage. Total-energy budget is measured independently; it is not exactly conserved by this primitive MOL scheme.",
+  "boundary": "Regular centre; zero-gradient computational outer ghost. Finite photospheric pressure retained. No insulating Q=0 enforcement after t=0 and no physical atmosphere/exterior match.",
+  "limitations": [
+    "Space discretization and primitive chain-rule defects are measured, not certified.",
+    "Coarse grids change initial quadrature masses; never renormalize or claim the original mass match.",
+    "No reactions on this short heat/fluid path; nuclear evolution, physical EOS, calibrated heat time and observations remain open."
+  ],
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "scope": "Conditional algebra for the declared smooth EOS and constant proper tau; no continuum error bound."
+  }
+}

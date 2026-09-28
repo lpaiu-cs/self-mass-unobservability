@@ -1,0 +1,24 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "The leading t*S/4 lift reduces the worst early clock discrepancy from23percent to5.23percent but still fails2percent. Preserve it; no production admitted.",
+  "repair": "Use H(t)=integral_0^t S(tau)d tau for the SAME source. Integrate the exact compact polynomial and the existing piecewise-linear Born fields analytically, including the product with the existing17-knot linear photon history. Hprime is the actual source. Reuse the existing affine stage, collision, ghost and packet owner.",
+  "scope": "No new evolution clock, background knot, quadrature approximation, EOS evaluation or physical source. Only the known source primitive changes; both prior prefix failures remain failed.",
+  "gates": {
+    "original_time": 0.02,
+    "source_derivative": 1e-05,
+    "moments": 1e-12,
+    "energy_H": 1e-08
+  },
+  "budget_seconds": {
+    "check": 100,
+    "pilot": 120
+  },
+  "original_total_seconds": 3600,
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/apply_native_conservative_redshift.py": "854fb3f4e6bba3a38f113030edbb01ecc144d1057c506dc411045b54df0cf5a5",
+    "native-conservative-redshift167-work/affine-producer.py": "2910599e412e98c09a3633877cf563c73541905df6496395cfc3fe3de7283482",
+    "native-conservative-redshift167-work/lift-plan.json": "6daf610a5bbe5c19923d650f7da9fdb763edf0bedd4fd5ea0c3a301b1805913e",
+    "native-conservative-redshift167-work/sweep-1/photons/pilot.json": "4baf7dbb6e1e5a0f85c3501e8b5ed30cfa6e3f09aee8474e0dabb31a93099a1a",
+    "native-conservative-redshift167-work/photon_retry-1-receipt.json": "7fbded28fbda14349f97d3d157fd67f8d63517bcb4f099d0be3f003a25499de8"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "classification": "Proven",
+  "checkpoint": "c85063d",
+  "bits": 128,
+  "bindings": {
+    "verification/gr_response_momentum_tail.py": "1d1a403f2e73a3f22e302068a927fa3349714e55e244e2c09e76583c661959ad",
+    "outputs/direct-eos-gr33/gr-logarithmic-response/manifest.json": "a343e591531f585d07e999fe18e927f6cc1cab5bef7aec381f34ae87bd85a3ca",
+    "outputs/direct-eos-gr33/gr-logarithmic-response/inputs.npz": "c9695e054b3ef6bf11b63a24909d7a4e549429d65a72bea4d9ad982b76afda53"
+  },
+  "cells": 3206,
+  "points_per_cell": 12,
+  "parameter_order": [
+    "value",
+    "eta",
+    "etaeta",
+    "tau",
+    "etatau",
+    "tautau"
+  ],
+  "cutoff_offset": 64,
+  "per_component_absolute_error_budget": "1e-11",
+  "control_positions": [
+    0,
+    1603,
+    3205
+  ],
+  "control_z_indices": [
+    0,
+    5,
+    8,
+    11
+  ],
+  "control_digits": 70,
+  "target": "Integral over p >= the saved upward-rounded cutoff, excluding the complete cusp window. All six normalized response partials at the certified neutral eta interval.",
+  "cutoff": "tc=64+max(eta_upper,0), p_theory=sqrt(beta*tc*(2+beta*tc)). Save binary64 pcut >= the certified upper endpoint of p_theory. The finite integrator must use exactly that saved binary cutoff.",
+  "proof": "Outside |p/Q-1|<h, the logarithm is at most L=log((2+h)/h). The absolute kernel is at most p+(1+p^2+Q^2)*L/(2*Q). Substitute p^2=beta*t*(2+beta*t), dp=beta*(1+beta*t)/p dt and beta/p<=sqrt(beta/(2*tc)). Bound occupations by exp(eta_upper-t)*[1,1,1,t,t,t^2+t]. Integrate the resulting positive polynomial over all t>=tc, which enlarges the excluded-window domain.",
+  "derivative_scope": "Differentiate the original fixed-p,Q integrand first, then split the resulting integrals. No derivative of this computational cutoff is a physical term.",
+  "boundary": "Conditional ideal-electron RPA momentum tails only. Finite smooth momentum intervals, continuous outer-Q integration and the complete physical EOS remain open."
+}

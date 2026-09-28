@@ -1,0 +1,36 @@
+{
+  "classification": "Conjectural",
+  "checkpoint": "da36800b2",
+  "previous_turn": "progress: actual stage collisions reduced the failed H transport below its original gate; baryon time and material-input closure remained rejected.",
+  "claim": "Put B,S,Etilde,H and photons in one Radau equation, including actual native transport and photon momentum recoil, so B/S and mechanical energy/H are no longer lagged17-knot material inputs.",
+  "method": "Keep the existing photon transport/collision, affine physical drive, native primitive/minmod/HLL/deep-gravity owners and Radau clocks. Four gas columns are Etilde/eu,H/nu,B/bu,S/su. Eref=Etilde+kappa*B. Native thermal rate is Eref_rate-kappa*B_rate. Inventory xi follows the same current B. No post-solve state overwrite.",
+  "proposal": "A local finite Jacobian of the already-small native directional rate is a Newton proposal only. Individual deep/join columns include inventory nonlocality; five atmospheric colors resolve a five-cell rate stencil. Rebuild at solved directions if necessary, at most3 Newton solves. Original nonlinear native equation decides acceptance; no global linearity certificate.",
+  "residual": "Require original1e-12 full equation and1e-13 physical E/H moment residuals. Also require1e-13 B/S physical residuals relative to RHS or stage-state size, with1e-290 floor; zero explicit B RHS must not erase the B equation. Keep original1e-8 balance,0.2percent constitutive/proposal tests and2percent time tests.",
+  "floor": "Assert the active material support is fixed throughout the prefix. Inactive material RHS is projected to zero and its discarded native rate is recorded. A changing support stops this trial rather than silently deleting a stage state.",
+  "scope": "Retained response with zero additional geometry. Original background, EOS and source failure records remain frozen. This is not full nonlinear GR or a final charge result.",
+  "reuse": "Use178saved stage gas and free material as Newton initial directions only; no accepted unknown is fixed to them. Reuse old background and input arrays only to construct existing owners. Zero all lagged material sources before stages.",
+  "forecast": "178pair measured147.924s; additional sparse native Jacobians and two material columns increase work. Check representative Jacobian timing first. One4/8macro pair,480s hard cap; assumed range150..480s, not guaranteed. No full period authorized.",
+  "budget": {
+    "prepare": 15,
+    "check": 80,
+    "pilot": 480
+  },
+  "CPU_threads": 1,
+  "virtual_GiB": 4,
+  "stop": "Any control, original gate, Newton/GMRES limit, support change or cap. No automatic finer clock, method ladder, longer period or extra waveform sweep.",
+  "final_charge_conclusion": "unadjudicated",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/couple_native_fluid_radau.py": "07bd4f22244695c58a8e904c2eb5236d7441d40db2638819c013c0491209de1b",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/return_native_stage_collisions.py": "b0c25cca96ced69baab325dc74f40e88865435a2325abf6ecae1623b538dec03",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/couple_native_neutral_transport.py": "aad46b7ed3206c23209546d0f553ef762934804a7acea70de914d8ecf7b25a90",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/resolve_native_material_flux_tangent.py": "2fa05ed1f22270cd620c9615a7de5c68ef248b938254503ff3678739df356829",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/resolve_native_material_face_response.py": "36a861d334961397b55c25d9f8c3440e67929ce6f01e990dd1fc15c82b991dc8",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/solve_native_radau_transfer.py": "cade2ee551d8c9b443f283c8055e3bfb4641c1aa550d19c87b0f77c75abff44e",
+    "native-stage-collisions178-work/material-result.json": "b8c1167ecb4f3523c223b7d3827ef62e1508b964fa63c1cb2ec27e816ad41d83",
+    "native-stage-collisions178-work/saved-state-check.json": "04aec0561a2f5cef1ee0d4ad02e97b82eea7ae290e1427a4d9b8964b23210348",
+    "native-stage-collisions178-work/material-64.npz": "df956c242f2eb06be871320fee3879bb21c79d2188bfc1b67f8e6151fe15e95a",
+    "native-stage-collisions178-work/sweep-1/photons/pilot-64.npz": "48a72e4d9077094925c064ad108c1c8900208fb252cdc200b31731d8ff655986",
+    "native-stage-collisions178-work/material-128.npz": "5555f52383eae7cd7b9451de16f4a48ab53da0331f2950f657d059fa60e45e45",
+    "native-stage-collisions178-work/sweep-1/photons/pilot-128.npz": "72e08d7f9adae05623182c152c1ee766fee90b7cc1ab88732943a7ed71dcc458"
+  }
+}

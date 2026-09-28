@@ -22,6 +22,7 @@ def _threshold_sqrt_activation(y: float, y_c: float = 0.0) -> float:
 
 @dataclass(frozen=True)
 class NonanalyticJetCase:
+    # A valid finite jet includes an asymptotic remainder, not exact reconstruction.
     case_id: str
     model_class: str
     formula: str
@@ -79,12 +80,12 @@ def nonanalytic_jet_cases() -> tuple[NonanalyticJetCase, ...]:
             formula="m_A(Y) = m0 + alpha*exp(-1/Y^2)*Theta(Y)",
             locality_kept=True,
             finite_family_operator_closure_kept=True,
-            finite_taylor_jet_valid=False,
+            finite_taylor_jet_valid=True,
             first_exact_failure_mode=(
-                "all Taylor coefficients about Y=0 vanish, but the response is nonzero for Y>0"
+                "all Taylor coefficients of the activation about Y=0 vanish, but its exact value is nonzero for Y>0"
             ),
             generalized_replacement_data="non-Taylor monopole germ data (m0, alpha, flat-profile label)",
-            theorem_layer_broken="analytic monopole jet collapse (Lemma 55 / A5)",
+            theorem_layer_broken="exact analytic-germ reconstruction (A5); finite-order expansion survives",
             canonical_counterexample=True,
             sample_point=flat_sample,
             model_value_at_sample=flat_value,
@@ -101,7 +102,7 @@ def nonanalytic_jet_cases() -> tuple[NonanalyticJetCase, ...]:
                 "branch point at Y=Yc prevents a valid analytic Taylor jet at the activation point"
             ),
             generalized_replacement_data="threshold parameters (m0, alpha, Yc, branch exponent, branch label)",
-            theorem_layer_broken="analytic monopole jet collapse (Lemma 55 / A5)",
+            theorem_layer_broken="finite-order differentiability at the threshold",
             canonical_counterexample=False,
             sample_point=threshold_sample,
             model_value_at_sample=threshold_value,
@@ -121,7 +122,7 @@ def nonanalytic_jet_summary(delta_max: int = DELTA_MAX) -> NonanalyticJetSummary
             case.finite_family_operator_closure_kept for case in cases
         ),
         smallest_local_nonanalytic_counterexample="smooth_flat_single_coordinate",
-        broken_layer="analytic monopole jet collapse (Lemma 55 / A5)",
+        broken_layer="exact analytic-germ reconstruction (A5); finite-order expansion survives",
         cases=cases,
     )
 

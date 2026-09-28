@@ -1,0 +1,1745 @@
+PAGE 1
+Radiation in equilibrium with plasma and plasma eﬀects on cosmic microwave
+background
+Vadim R. Munirov∗ and Nathaniel J. Fisch
+Princeton Plasma Physics Laboratory, Princeton University, Princeton, New Jersey 08543, USA and
+Department of Astrophysical Sciences, Princeton University, Princeton, New Jersey 08540, USA
+(Dated: v1 March 13, 2019; v2 June 14, 2019)
+The spectrum of the radiation of a body in equilibrium is given by Planck’s law. In plasma,
+however, waves below the plasma frequency cannot propagate; consequently, the equilibrium ra-
+diation inside plasma is necessarily diﬀerent from the Planck spectrum. We derive, using three
+diﬀerent approaches, the spectrum for the equilibrium radiation inside plasma. We show that, while
+plasma eﬀects cannot be realistically detected with technology available in the near future, there
+are a number of quantiﬁable ways in which plasma aﬀects cosmic microwave background (CMB)
+radiation.
+I. INTRODUCTION
+A system in thermodynamic equilibrium is often said
+tohaveablackbodyradiationspectrumgivenbyPlanck’s
+law. However, the Planck spectrum should be modiﬁed
+within a medium. Indeed, in plasma, for example, radi-
+ation below the plasma frequencyωp cannot propagate.
+Thus, the equilibrium radiation inside plasma is neces-
+sarily diﬀerent from the Planck spectrum. This paper is
+dedicated to the investigation of the equilibrium radia-
+tion inside plasma and to the study of the plasma eﬀects
+and the possibility of their detection with respect to one
+of the most known examples of equilibrium radiation in
+nature – the cosmic microwave background (CMB).
+In Sec. II we derive the equilibrium spectral energy
+density of radiation inside plasma using three diﬀerent
+approaches: from the point of view of photons in plasma
+treating them as quasiparticles obeying Bose-Einstein
+statistics, from the point of view of plasma that generates
+electromagnetic ﬂuctuations, and from the point of view
+of equilibrium between plasma and external blackbody
+radiation.
+In Sec. III we consider several questions related to ex-
+perimental measurements for stationary and moving ob-
+servers inside a plasma universe. We distinguish quanti-
+ties expressed in terms of frequency from quantities ex-
+pressed in terms of wavelength. In a medium with un-
+known dispersion we also distinguish energy density from
+radiation intensity. We also calculate the Lorentz trans-
+formation for a moving observer inside plasma.
+In Sec. IV we study plasma eﬀects on CMB radiation.
+We consider the possibility of experimental detection of
+static and dynamical plasma eﬀects on CMB but con-
+clude that these eﬀects cannot be detected in the next-
+generation experiments. We show that the static equilib-
+rium distribution should have been signiﬁcantly modiﬁed
+duringtheepochofrecombinationandthatthiscanman-
+ifest itself as an extremely small frequency-dependent
+chemical potential. We demonstrate that plasma changes
+∗ vmunirov@pppl.gov
+the cosmological redshift and calculate how it distorts the
+equilibrium spectrum as the universe expands.
+In Sec. V we consider how plasma modiﬁes the Kom-
+paneets equation both because of the change in the dis-
+persion relation and because of coherent scattering in
+plasma.
+In Sec. VI we consider plasma eﬀects on CMB during
+and after the epoch of reionization. We calculate plasma
+corrections to Comptony-distortion due to the thermal
+Sunyaev–Zel’dovich eﬀect. We identify a novel mecha-
+nism of magnetic ﬁeld generation at the epoch of reion-
+ization resulting from conversion of some of the energy
+of CMB into the magnetic ﬁeld.
+We estimate the corrections that plasma eﬀects can
+bring to other expected CMB distortions for Planck’s
+telescope[1]andSKA-LOW[2]andconcludethatplasma
+eﬀects are extremely small, on the order of magnitude of
+O
+(
+ω2
+p/ω2)
+in most cases, and thus cannot be realistically
+detected in the near future.
+II. RADIATION IN THERMODYNAMIC
+EQUILIBRIUM WITH PLASMA
+Planck’s radiation spectrum is characterized only by
+one parameter – temperature, and it is nonzero for all
+frequencies. In equilibrium plasma, however, radiation
+with frequencies below the plasma frequencyωp cannot
+propagate. Thus, the spectral energy density of radia-
+tion inside plasma is necessarily diﬀerent from radiation
+in free space. Let us derive this spectrum using three
+diﬀerent approaches.
+A. Photons as quasiparticles
+Photons are bosons and so they follow Bose-Einstein
+statistics that says that the average number of particles
+with given energyε is proportional to
+[
+e(ε−µ)/T− 1
+]−1
+.
+Thus, we can write the photon numbernγ and energy
+densities uγ as
+PAGE 2
+2
+nγ = 1
+V
+∑
+k
+gγ
+e
+ℏω(k)−µ
+T − 1
+, (1)
+uγ = 1
+V
+∑
+k
+gγℏω (k)
+e
+ℏω(k)−µ
+T − 1
+. (2)
+Planck’s law follows from these equations if the follow-
+ing assumptions are employed: gγ = 2, corresponding
+to two polarizations of electromagnetic waves; µ = 0,
+corresponding to zero chemical potential of photons that
+can be freely absorbed and emitted; non-dispersive light
+in vacuum with ω = kc; and substitution of summa-
+tion with integration (1/V ) ∑
+k→
+∫
+d3k/ (2π)3. Then
+Eq. (2) yields:
+uPlanck = ℏ
+π2c3
+∫ ∞
+0
+ω3
+e
+ℏω
+T − 1
+dω. (3)
+Throughout the paper we will useuω =du/dω for en-
+ergy density perdω, which for blackbody Planck’s radia-
+tion we will denote asubb. We will also useIω for inten-
+sity perdω deﬁned asIω =vgruω, wherevgr =∂ω/∂k is
+the group velocity, andIbb for intensity perdω for black-
+body radiation.
+Equation (2) shows that the radiation in thermody-
+namic equilibrium with plasma or any other matter can
+be diﬀerent from Planck’s law for three reasons. First,
+because of dispersion of waves in matter, only certain
+waves with certain frequencies ω = ω (k) and, as a
+consequence, energy ε (k) = ℏω (k) can propagate in
+the medium for a given k. Second, there is nonzero
+chemical potential µ̸= 0. Though it is often approxi-
+mated that light has zero chemical potential (for exam-
+ple, Refs. [3, 4]), it is not the case in general [5, 6]. Chem-
+ical potential is related to constraints on the number of
+particles and such situations can be realized, for example,
+in semiconductors [5–8], where the number of photons is
+related to the number of electrons and holes; in plas-
+mas when scattering dominates over absorption and thus
+the number of photons conserved [9]; in dye ﬁlled mi-
+crocavities [10, 11]; and in other systems [12–14]. Third,
+there are geometrical and ﬁniteness eﬀects restricting the
+number of availablek modes. The sum overk in ∑
+k in
+general should be performed only over certaink’s. For
+example, in cavities depending on the size and geometry
+only certain waves with givenk’s can exist [15–17].
+Now let us consider the case of inﬁnite plasma. The
+typical nonrelativistic plasma has the following disper-
+sion relation for electromagnetic waves:
+ω2 =ω2
+p +k2c2, (4)
+where the plasma frequency is deﬁned through the sum
+over the species of charged particles in plasma: ω2
+p =
+∑
+s 4πnse2
+s/ms. Since photon energy isε = ℏω, we can
+rewrite Eq. (4) as
+ε2 =m2
+γc4 +p2
+γc2, (5)
+i.e., in plasma, a photon behaves as a relativistic mas-
+sive particle with mass mγ = ℏωp/c2 and momentum
+pγ = ℏk. It is interesting to calculate the density
+of electrons for which the eﬀective photon mass equals
+the electron rest mass. It happens for electron density
+ne≈ (reλ2
+C)−3≈ 1031 cm-3 (corresponding plasma fre-
+quency is about1020 s−1), wherere is the classical elec-
+tronradiusand λC istheComptonwavelength. Thus, for
+extremely high density plasmas, photons can be expected
+to behave similarly to massive elementary particles like
+electrons.
+Going from summation to integration and introduc-
+ing dimensionless parametersa = ℏωp/T and µ′ =µ/T,
+we can write the photon number and energy densities in
+terms of the normalized wave vectory = ℏkc/T as:
+nγ = T 3
+π2ℏ3c3
+∫ ∞
+0
+y2
+e
+√
+y2+a2−µ′
+− 1
+dy, (6)
+uγ = T 4
+π2ℏ3c3
+∫ ∞
+0
+√
+y2 +a2y2
+e
+√
+y2+a2−µ′
+− 1
+dy, (7)
+and in terms of the normalized frequencyx = ℏω/T as:
+nγ = T 3
+π2ℏ3c3
+∫ ∞
+a
+x2
+ex−µ′
+− 1dx, (8)
+uγ = T 4
+π2ℏ3c3
+∫ ∞
+a
+x2√
+x2−a2
+ex−µ′
+− 1 dx. (9)
+Thus, the radiation distribution inside plasma is de-
+scribed by three parameters: temperature T, chemical
+potential µ, and parametera = ℏωp/T. The parameter
+a is a measure of the density.
+Using the expansion
+1
+e
+√
+y2+a2−µ′
+− 1
+=
+∞∑
+l=1
+e
+−l
+(√
+y2+a2−µ′
+)
+, (10)
+substitutingy =a sinhθ, and employing the integral rep-
+resentation for the modiﬁed Bessel functions of the sec-
+ond kind, we can get the total number and energy den-
+sities:
+nγ = T 3
+π2ℏ3c3
+∞∑
+l=1
+elµ′
+l3 (la)2K2 (la), (11)
+PAGE 3
+3
+0 2 4 6 8 10
+x
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+1.2
+1.4
+duγ/dx
+P lanck (a = µ′ = 0)
+a = 0.3, µ ′ = 0
+a = 1, µ ′ = 0
+a = 2, µ ′ = 0
+a = 3, µ ′ = 0
+FIG. 1. Photon energy density in the units ofT 4/π2ℏ3c3 ver-
+sus normalized frequency x = ℏω/T for diﬀerent values of
+parameter a and µ′ = 0 . Blackbody Planck density corre-
+sponding toa =µ′ = 0 is also shown for comparison.
+uγ = T 4
+π2ℏ3c3
+∞∑
+l=1
+elµ′
+l4
+[
+(la)3K1 (la) + 3 (la)2K2 (la)
+]
+.
+(12)
+Similar expressions were obtained in Refs. [18–23].
+Figure 1 shows spectral energy densityduγ/dx in the
+units ofT 4/π2ℏ3c3 as a function of normalized frequency
+x = ℏω/T for several values of parametera = ℏωp/T
+and zero chemical potential. We see the truncation of the
+spectrum for frequencies below the plasma frequency as
+well as an overall decrease of the radiation density with
+growth of a. We also see that fora ≳ 1 the radiation
+density starts to signiﬁcantly deviate from the Planck
+distribution, which corresponds toa =µ′ = 0.
+Figure 2 shows spectral energy densityduγ/dx in the
+units ofT 4/π2ℏ3c3 as a function of normalized frequency
+x = ℏω/T for ﬁxed parametera = 1, but diﬀerent chem-
+ical potentials. Despite the occasional claim that bosons
+can have only zero or negative chemical potential (for ex-
+ample, Refs. [4, 24]), in fact they can have positive chemi-
+cal potential too; the only restriction is that the smallest
+energy level is larger than zero and the corresponding
+integrals converge. We see that the chemical potential
+can aﬀect the distribution signiﬁcantly. However, we do
+not address the question of whether a particular chemi-
+cal potential can be realistically achieved in any physical
+system. Note also that Fig. 2 does not correspond to
+one system with givena and diﬀerent chemical poten-
+tials, but to several independent systems with diﬀerent
+number of photons. For a given system with a ﬁxed num-
+ber of photons, one cannot vary the chemical potential
+independent ofT and a; see Ref. [23] for details.
+Figure 2 also suggests that the radiation energy can
+exceed Planck’s radiation density. However, it does not
+contradict the often-made statement that thermal black-
+0 2 4 6 8 10
+x
+0
+1
+2
+3
+4duγ/dx
+P lanck (a = µ′ = 0)
+a = 1, µ ′ = 0
+a = 1, µ ′ = 0.2
+a = 1, µ ′ = 0.5
+a = 1, µ ′ = 0.9
+a = 1, µ ′ = 0.97
+a = 1, µ ′ = −0.5
+FIG. 2. Photon energy density in the units of T 4/π2ℏ3c3
+versus normalized frequencyx = ℏω/T for diﬀerent values of
+chemical potentialµ′ and a = 1. Blackbody Planck density
+corresponding toa =µ′ = 0 is also shown for comparison.
+body radiation establishes the upper limit on the maxi-
+mum energy emitted for any body at the same temper-
+ature (for example, Refs. [25, 26]), because Fig. 2 shows
+the energy density inside the plasma and not the inten-
+sitythatwillbeemittedbyplasma. Moreover, objectsfor
+which the absorption cross section exceeds the geometri-
+cal cross section can actually emit more than blackbody,
+but this does not contradict standard physics and ﬁts the
+generalized form of Kirchhoﬀ’s law [27].
+B. Fluctuation-dissipation theorem
+So far we have derived properties of equilibrium radi-
+ation from the point of view of photons obeying Bose-
+Einstein statistics. Since the radiation is in equilibrium
+with the matter, the same results should be obtained by
+considering oscillating electrons in plasma and calculat-
+ing the density of the electromagnetic ﬁeld generated by
+them using the ﬂuctuation-dissipation theorem [20, 28].
+Following Ref. [28], the spectral energy density perdω
+in a transparent medium with dielectric functionε (ω) is
+given by
+uγ =
+∫ ∞
+0
+1
+8π
+[
+2
+(
+E2)
+ω
+∂ (ωε)
+∂ω + 2
+(
+H 2)
+ω
+] dω
+2π, (13)
+where the ﬂuctuations
+(
+E2)
+ω and
+(
+H 2)
+ω of the electric
+and magnetic ﬁelds are deﬁned through
+⟨
+E2⟩
+=
+∫ ∞
+−∞
+(
+E2)
+ω
+dω
+2π =
+∫ ∞
+0
+2
+(
+E2)
+ω
+dω
+2π, (14)
+⟨
+H2⟩
+=
+∫ ∞
+−∞
+(
+H 2)
+ω
+dω
+2π =
+∫ ∞
+0
+2
+(
+H 2)
+ω
+dω
+2π. (15)
+PAGE 4
+4
+blackbody
+plasma
+FIG. 3. Equilibrium between blackbody radiation and
+plasma, showing detailed balance among emission, absorp-
+tion, and reﬂection.
+According to Ref. [28], the electromagnetic ﬁeld ﬂuc-
+tuations can be expressed as
+(
+E2)
+ω = 1
+ε
+(
+H 2)
+ω = 2ω2ℏε
+1
+2
+c3 coth ℏω
+2T
+= 4ω2ℏε
+1
+2
+c3
+(1
+2 + 1
+e
+ℏω
+T − 1
+)
+, (16)
+so we have
+duγ = ℏω2ε
+1
+2
+2π2c3
+[∂ (ωε)
+∂ω +ε
+] (1
+2 + 1
+e
+ℏω
+T − 1
+)
+dω. (17)
+Usingε (ω) = 1−ω2
+p/ω2 for plasma and ignoring zero-
+ﬁeld ﬂuctuations (1/2 term), we get the same result for
+the spectral energy density of radiation in plasma as pre-
+viously obtained: Eq. (9) withµ = 0 .
+C. Equilibrium with blackbody walls
+Consider a lossless medium (plasma) surrounded by
+blackbody walls at temperatureT and being in equilib-
+rium with them (see Fig. 3). Let us look at a ray of
+frequency ω0 and energy ubb (ω0)dω0, which is emitted
+by the blackbody walls, and then propagates through
+vacuum and impinges on the medium at angle θ0 to
+its normal. The wave will experience refraction, such
+that its frequency remains the same (ω = ω0), while its
+wave vector changes. A change in the wave vector im-
+plies a change in aperture. Speciﬁcally, using Snell’s law
+n =c/vph = sinθ0/ sinθ, the solid angledΩ = 2π sinθdθ
+in plasma can be expressed through the original solid an-
+gle as:
+dΩ =
+(vph
+c
+)2 cosθ0
+cosθ dΩ0, (18)
+which is the well-known étendue conservation condition
+[8].
+In addition, the group velocity, which determines the
+energy transport, changes in the medium. Since in loss-
+less medium the energy must be conserved, the pulse
+must be shortened or stretched depending, correspond-
+ingly, on whether the group velocity in the medium is
+smaller or larger than in vacuum.
+Finally, only part of the energy of the wave will be
+transmitted into the medium, because part of the wave
+will be reﬂected. The reﬂection coeﬃcient for unpolar-
+ized light isR = (Rs +Rp)/2, whereRs and Rp are the
+reﬂectances of s-polarized and p-polarized electromag-
+netic waves given by the Fresnel equations. The trans-
+mission coeﬃcient is given by1−R.
+Taking into account both the change in the aperture
+and the group velocity, we can write the energy conser-
+vation law:
+(1−R)ubbc cosθ0dω0dΩ0 +Ruωvgr cosθdωdΩ
+=uωvgr cosθdωdΩ. (19)
+Here the ﬁrst term on the left-hand side is the trans-
+mitted energy, while the second term is the energy of the
+wave incident on the medium-vacuum interface at angleθ
+from within the medium and reﬂected back. Notice that
+the reﬂection coeﬃcients coincide because the reﬂectance
+of the light incident from medium 1 on medium 2 at the
+angle θi and refracted into the angleθt is the same as
+the reﬂectance of the light incident from medium 2 on
+medium 1 at the angleθt. Thus, using Eqs. (18) and (19),
+we get that the energy density inside the medium is in-
+dependent of the reﬂection coeﬃcientR and is given by
+uω = c3
+vgrv2
+ph
+ubb. (20)
+For plasmavgr =∂ω/∂k =c
+√
+1−ω2p/ω2 , vph =ω/k =
+c/
+√
+1−ω2p/ω2, and using the Planck energy density, we
+again get the same result for the electromagnetic radia-
+tion energy density inside plasma as before.
+The above result can also be considered through the
+radiation transfer equation in the medium [29, 30]:
+n2
+r
+d
+dl
+(Iω
+n2r
+)
+= 1
+vgr
+∂Iω
+∂t +n2
+r
+∂
+∂l
+(Iω
+n2r
+)
+=αω−µωIω,(21)
+whereIω is the ray intensity perdω and is related to the
+energy density through group velocity asuω =du/dω =
+Iω/vgr, nr is the ray refractive index, which is the usual
+PAGE 5
+5
+refractive index for isotropic medium (see Ref. [29]),αω is
+emissivity, andµω is the absorption coeﬃcient (including
+scattering).
+The condition of transparency of the medium, which
+corresponds to αω = µω = 0 and makes the right-
+hand side of the radiation transfer equation zero, re-
+sults in Iω/n2 = const along the ray. The condition
+Iω/n2 = const gives Iω = n2Ibb =
+(
+1−ω2
+p/ω2)
+Ibb, i.e.,
+the same radiation energy density inside plasma as be-
+fore. The condition Iω/n2 = const also means thatIω
+is constant inside plasma as expected for transparent
+medium. However, another way to make the right-hand
+side zero is to haveαω/µω = Iω. In this caseIω is con-
+stant inside the medium as well; not because the medium
+does not absorb and emit radiation at all, but because
+it does so in a very particular way. This is what ac-
+tually happens in plasma, where equilibrium is reached
+through balance between emission and absorption (and
+scattering).
+We emphasize thatuω is the energy density inside the
+bulk of the plasma and does not determine the radia-
+tion emitted from the plasma. The radiation leaving the
+plasma experiences refraction and lengthening in accor-
+dance with the above formulas such that emission from
+equilibrium plasma above the plasma frequency is just
+that of a blackbody given by the Stefan-Boltzmann law,
+as expected in equilibrium. Below the plasma frequency,
+plasma is a perfect reﬂector. There must also be plasma
+waves along the surface of the boundary. However, the
+boundary eﬀects at the plasma-vacuum interface are a
+separate and intricate topic beyond the scope of the con-
+siderations here.
+III. MEASURING PLASMA SPECTRUM BY
+STATIONARY AND MOVING OBSERVERS
+Let us consider the experimental detection of radia-
+tion inside plasma (or, in general, any kind of dispersive
+medium). Imagine we have two observers: one is in a
+plasma-ﬁlled universe in thermodynamic equilibrium at
+temperature T and the other is immersed in blackbody
+radiation of the same temperatureT in vacuum. Imagine
+both have identical devices manufactured and calibrated
+in vacuum that allow them measure electromagnetic ra-
+diation spectrum. What would the observers actually
+measure and how should these results be interpreted?
+Will they be able to see the diﬀerence?
+First, we should say that it is intensity and not energy
+density that is being measured. In vacuum they are re-
+lated through the speed of light, but in the medium they
+are related through the group velocity, which depends
+on unknown properties of the medium. Second, in vac-
+uum the wavelength and frequency are related through
+the speed of light (ω = 2πc/λ), so any physical quantity
+expressed in terms of frequency can be immediately ex-
+pressed in terms of wavelength; for example, if we know
+intensity per frequency Iω, then we immediately know
+intensity per wavelengthIλ. In the medium frequency
+and wavelength are related throughω = 2πc/λn (ω), i.e.,
+the conversion depends on unknown properties of the
+medium. Thus, we should be speciﬁc whether the ob-
+server in plasma measures at the same wavelength or at
+the same frequency as in vacuum.
+We can imagine that the observer with a measuring in-
+strument is in a small vacuum bubble inside the plasma
+or the measuring instrument is in direct contact with
+plasma. In any case, since the light ray traveling through
+two diﬀerent mediums keeps its frequency but changes
+its wavelength, all the observable quantities should be
+expressed in terms of frequency, i.e., the observer will
+measure intensity per frequencyIω. If the bubble is in
+equilibrium with plasma, then, from the analysis of the
+previous section, it is apparent that the radiation inside
+the bubble would be that of blackbody and the device
+in equilibrium with plasma universe would register just
+blackbody radiation spectrum. Thus, the bubble should
+not be in equilibrium and, ideally, the measuring instru-
+ments should not radiate. This can be achieved by keep-
+ing the temperature of the measuring instruments close
+to absolute zero as is done, for example, on Planck’s
+telescope where the active refrigeration system keeps the
+HFI detector temperature at 0.1 K [1]. Another eﬀect
+that should be taken into account when interpreting the
+experimental results is that the telescope has inevitable
+reﬂections. They can be accounted for in vacuum, but,
+in the plasma universe, the reﬂection coeﬃcient will be
+diﬀerent and generally speaking unknown. Thus, the ob-
+server will measure [1−R (ω)]Iω, where the reﬂection
+coeﬃcient R (ω) is not known.
+Finally, we address how the spectrum changes for a
+moving observer. Since the Doppler shift depends on
+properties of the medium, the transformation of the spec-
+trum in the moving reference frame would be diﬀerent
+than that in vacuum. As shown in Ref. [31] for the emit-
+ted and observed intensities, the following relationship
+holds true:
+Iω
+ω3n2 =const. (22)
+In vacuum, the frequency experiences Doppler shift
+ω = γ (ω′ + k′v) = γω′ (1 +β cosθ′) and the blackbody
+radiation for a moving observer becomes
+I′
+ω′ = ω′3
+ω3Iω = ω′3
+ω3Ibb = ℏ
+π2c2
+ω′3
+e
+ℏω′
+T′ − 1
+, (23)
+i.e., for the moving observer the radiation spectrum ap-
+pears as blackbody but with new eﬀective directional
+temperature T′ =T/γ (1 +β cosθ′).
+For a moving observer in the plasma universe:
+I′
+ω′ = ω′3n′2
+ω3n2 Iω = ω′3
+ω3n′2Ibb = ℏ
+π2c
+ω′3n′2
+e
+ℏω
+T − 1
+. (24)
+PAGE 6
+6
+Using the Lorentz transformation we can expressn′
+and ω in terms of ω′ and θ′ to get the expression for
+I′
+ω′ in the moving frame. We cannot ﬁnd the analytical
+expression for a general medium, but, luckily, for plasma,
+the dispersion relation is Lorentz invariant:
+ω′2−k′2c2 =ω2−k2c2 =ω2
+p, (25)
+so that the refractive index for a moving observer has
+the same functional dependance as for the stationary ob-
+server: n′ = ck′/ω′ = 1−ω2
+p/ω′2. Thus, the intensity
+measured by the moving observer in plasma is
+I′
+ω′ = ℏ
+π2c
+ω′ (
+ω′2−ω2
+p
+)
+e
+ℏω′
+T′ − 1
+, (26)
+i.e., for the moving observer the radiation spectrum ap-
+pears as that of equilibrium radiation in plasma but with
+new frequency-dependent eﬀective directional tempera-
+ture T′ =T/γ
+(
+1 +β
+√
+1−ω2p/ω′2 cosθ′
+)
+.
+In reality most of the plasmas are not in thermal equi-
+librium. Ifweareinterestedinradiationfromtheplasma,
+we should know speciﬁc emission mechanism in plasma
+and its optical depth. The most prominent example of
+the equilibrium radiation in nature is CMB. We are going
+to study plasma eﬀects on it in the next section.
+IV. EARLY UNIVERSE AND PLASMA
+EFFECTS ON CMB
+Accordingtoacceptedcosmologymodels, theradiation
+in the early universe and ionized matter (plasma) were
+tightly coupled and thermalized due to Thomson scatter-
+ing, until, at cosmological redshiftz≈ 1100, because of
+the recombination, the radiation became decoupled from
+now essentially neutral matter. This radiation from the
+early universe is known as CMB.
+Experimental data show that CMB spectrum is con-
+sistent with Planck’s law to very high accuracy [32]. In
+principle, however, since before the recombination the
+universe was in the plasma state for which waves with
+frequencies below the plasma frequencyωp cannot prop-
+agate, the radiation inside it should have been diﬀerent
+from the Planck spectrum. For this reason, in this sec-
+tion we discuss the inﬂuence of plasma eﬀects on CMB
+andthepossibilityoftheexperimentalobservationofnew
+eﬀects.
+A. Direct detection of plasma spectrum
+A comparison of the equilibrium radiation in plasma
+given by Eq. (9) with experimental data on CMB radi-
+ation was investigated in Ref. [33]. Three methods of
+the detection of plasma dispersion eﬀects were proposed.
+One is the direct observation of the plasma eﬀects, specif-
+ically, the cutoﬀ at plasma frequency, by comparing ex-
+perimental data on CMB with the distribution given by
+Eq. (9). The second is the modiﬁcation of the Sunyaev-
+Zel’dovich eﬀect as the plasma modiﬁed CMB radiation
+travels through the electron gas of galaxy clusters. The
+third is the modiﬁcation of the cosmological 21-cm back-
+ground radiation. The conclusion reached in Ref. [33] can
+be summarized as that, even though the currently avail-
+able experimental data cannot show any plasma eﬀects,
+they might be detectable with the new generation of low-
+frequencyexperimentssuchasSKA-LOW.Wearguethat
+the conclusion reached in Ref. [33] is too optimistic for
+two reasons.
+First, the values of parametera = (3.63, 6.10, 7.36)×
+10−3 usedinRef.[33]wereestimatedthroughanumerical
+ﬁttoCOBE-FIRASdata, tosomeotherdataintherange
+∼1.3–50GHz (see Ref. [33]), and to three low-frequency
+data points from Refs. [34–36]. This procedure of ob-
+taininga is likely to signiﬁcantly overestimate it, because
+the value ofa is mostly determined by the above men-
+tioned three low-frequency data points, which, besides
+having high uncertainty, can give only the upper limit on
+a. Simply put, in this case the parametera is essentially
+approximated by the lowest experimental value available,
+but the absence of low-frequency data should not deter-
+mine the plasma frequency, which actually can be much
+lower than the lowest experimental value. Indeed, the
+value of parametera estimated through the electron den-
+sity (ne ≈ 300 cm−3 [20]) and the CMB temperature
+(T/kB≈ 3000K) just before the recombination gives or-
+ders of magnitude lower valuea≈ 2× 10−9. Plasma
+dispersion brings corrections on the order ofO
+(
+a2/x2)
+or O
+(
+ω2
+p/ω2)
+, which is a small number. Indeed, the
+value of electron density just before the recombination
+is ne ≈ 300 cm−3 [20], with corresponding plasma fre-
+quencyωp≈ 106s−1. The smallest frequency measurable
+by Planck’s spacecraft isνmin = 30 GHz [1], which cor-
+responds toω = 2πν (1 +z)≈ 2× 1014 s−1 at z≈ 1100,
+giving ω2
+p/ω2≈ 2× 10−17. For the proposed SKA-LOW
+experiment, the minimum frequency isνmin = 50 MHz
+[2], which corresponds toω = 2πν (1 +z)≈ 3× 1011 s−1
+at z≈ 1100, givingω2
+p/ω2≈ 8× 10−12.
+Second, even if, before the recombination, the CMB
+spectrum were given by Eq. (9), it would have been mod-
+iﬁed signiﬁcantly during the recombination. The after-
+recombination spectrum of CMB depends on how fast
+the recombination happened. If it were so slow that full
+thermal equilibrium was maintained at every step (this
+requires destruction and creation of photons), then, after
+the recombination, we would get the radiation spectrum
+(9) with the parametera equal to zero (for simplicity,
+we consider complete recombination into neutral state,
+in reality the electron density decreases by about a fac-
+tor of 103− 104 [37]), which is just the Planck distribu-
+tion (maybe with nonzeroµ) and no plasma dispersion
+eﬀects would be present. If, on the other hand, the re-
+combination were so sudden that the number of photons
+PAGE 7
+7
+is conserved, then the wave vector (and wavelength) of
+each radiation mode would remain constant, while the
+frequency would change:k = k0, ω = kc =
+√
+ω2
+0−ω2p.
+The number of photonsdnγ would not change, the total
+energy density of photons would decrease (part of the ini-
+tial energy would be converted into heat), and the energy
+spectrum would become
+uγ = T 4
+π2ℏ3c3
+∫ ∞
+0
+x3
+e
+√
+x2+a2−µ′
+− 1
+dx. (27)
+This is consistent with the adiabatic formula from
+Ref. [38] that says that the energy density per frequency
+[duγ (x)/x] remains constant as the density of plasma
+changes. Adiabatic here means slow in comparison with
+period of the waved lnωp/dt≪ω making the number of
+waves an adiabatic invariant, but not so slow that the full
+equilibrium is established. The amount of energy taken
+from CMB and converted to heat can be approximated
+for small values of a as△uγ/uγ = 5a2/2π2. Notice,
+though, that part of this energy would be radiated back
+into CMB because excited recombined atoms would radi-
+ate photons as they fall back into the ground state. The
+detailed physics of this process is complicated; the thor-
+ough numerical calculations can be found in Ref. [39].
+According to standard cosmology, the active cosmologi-
+cal hydrogen recombination happened betweenz≈ 1600
+and z≈ 800 and the electron density decreased from1
+to about 10−4− 10−3 [37]. Thus, the adiabatic scenario
+should have been realized.
+Let us compare the spectral energy density given by
+Eq. (27) with the original spectral energy density in
+plasma given by Eq. (9). Figure 4 shows the spectral en-
+ergy density versus the normalized frequency fora = 1.0
+before and after sudden recombination, as well as the
+blackbody spectrum for the same temperature. We see
+that the distribution after the sudden recombination re-
+sembles the blackbody spectrum with diﬀerent temper-
+ature. Most importantly, it does not have cutoﬀ at low
+frequencies. For smalla, the diﬀerence between the spec-
+tral radiation after the sudden recombination and that of
+blackbody is especially hard to notice as demonstrated in
+Fig. 5 fora = 0.1. We remind the reader that the esti-
+mate for parameter a just before the recombination is
+a ≈ 2× 10−9 ≪ 1. Since Eq. (27) with µ′ = 0 has
+e
+√
+x2+a2
+−1≈ex+a2/2x−1 in the denominator in contrast
+to ex− 1 for the blackbody spectrum, then, forx≫ a,
+plasma eﬀects can appear as frequency-dependent chem-
+ical potential µCMB = a2/2x (see deﬁnition of µCMB
+in the next subsection). However, this chemical poten-
+tial is extremely small. Indeed, forx = 2.8, which cor-
+responds to the maximum of the blackbody spectrum,
+µCMB has a negligible value of about 7× 10−19, for
+xmin = 5×10−1 corresponding to the smallest frequency
+measured by Planck’s spacecraft µCMB ≈ 4× 10−18,
+and for the SKA-LOW experimentxmin = 9× 10−4 and
+µCMB≈ 2× 10−15. For reference,µ-distortion expected
+0 2 4 6 8 10
+x
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+1.2
+1.4
+duγ/dx
+a = 0
+a = 1.0
+a = 1.0, sudden
+FIG. 4. Photon spectral energy density in the units of
+T 4/π2ℏ3c3 versus normalized frequencyx = ℏω/T for a = 1,
+µ = 0 before and after sudden recombination, and for a black-
+body of the same temperature witha = 0, µ= 0.
+0.00 0.05 0.10 0.15 0.20 0.25 0.30 0.35 0.40
+x
+0.00
+0.02
+0.04
+0.06
+0.08
+0.10
+0.12
+duγ/dx
+a = 0
+a = 0.1
+a = 0.1, sudden
+FIG. 5. Photon spectral energy density in the units of
+T 4/π2ℏ3c3 versusnormalized frequencyx = ℏω/T fora = 0.1,
+µ = 0 before and after sudden recombination, and for a black-
+body of the same temperature witha = 0, µ= 0.
+from diﬀerent processes in ΛCDM cosmology is about
+10−9− 10−8 [40]. This is itself a very small quantity
+and has not been experimentally detected yet, but still,
+it is about 6 to 10 orders of magnitude higher than the
+chemical potential from plasma eﬀect described above.
+The recombination was not complete but the electron
+density decreased in 104 times, which gives parameter
+a≈ 2× 10−11 just after the recombination. It is obvious,
+though, that detection of the eﬀects related to this, even
+smaller parametera, is harder.
+Thus, the detection of plasma dispersion eﬀects on
+CMB, such as the existence of the lower-frequency cut-
+oﬀ, is much harder than suggested in Ref. [33]. Even
+if the spectrum of CMB were indeed given by Eq. (9)
+PAGE 8
+8
+before the recombination, after the recombination, the
+plasma dispersion eﬀects could have been erased almost
+completely.
+B. Plasma modiﬁcation of redshift
+Another apparent plasma eﬀect is change in redshift.
+The usual cosmological redshift is described by
+˙ω
+ω =− ˙asc
+asc
+, (28)
+where asc (t) = 1/(1 +z) is the cosmic scale factor and
+is not related to parametera = ℏωp/T. In a dispersive
+medium Eq. (28) takes diﬀerent form [31]:
+˙ω
+ω =−
+(
+1 +ω
+n
+∂n
+∂ω
+)−1 ( ˙asc
+asc
++ ˙n
+n
+)
+, (29)
+where the time derivative in˙n is not applied toω in n.
+For plasma it gives a frequency-dependent redshift
+˙ω
+ω =−
+(
+1 + 1
+2
+ω2
+p
+ω2
+)
+˙asc
+asc
+, (30)
+which is consistent with the expression obtained in
+Ref. [41].
+According to Eq. (28), frequency scales as 1 + z,
+and since temperature also scales as 1 + z, their ratio
+x = ℏω/T is scale invariant, so that the blackbody ra-
+diation spectrum remains blackbody-shaped as the uni-
+verse expands. In contrast, according to Eq. (30), the
+frequency does not scale simply as1 +z anymore, sug-
+gestingthatinplasmatheshapeofthespectrumdoesnot
+remainthesameastheuniverseexpands. Intuitively, itis
+because light, which is inherently relativistic, in plasma
+acquires some properties of the matter, which is non-
+relativistic. For ultrarelativistic plasma the plasma fre-
+quency isω2
+p = 4πne2c2/3T. In this case the frequency
+would grow in the same way as temperature.
+It is believed that the universe was in full equilibrium
+at z0 = 2 × 106, which deﬁnes the blackbody surface
+[42]. In the absence of plasma and purely under the in-
+ﬂuenceofcosmologicalredshift(nodistortions)theblack-
+body spectrum atz0 would be transformed into another
+blackbody spectrum atz = 1100 with the new tempera-
+ture T = T0 (1 +z)/ (1 +z0). Now, with plasma, the
+full equilibrium spectrum at z0 was given by Eq. (9)
+with zero chemical potential. From Eq. (30) we obtain(
+ω2−ω2
+p
+)
+/
+(
+ω2
+0−ω2
+p0
+)
+= (1 + z)2/ (1 +z0)2 [31] and,
+using ω2
+p ∝ ne ∝ (1 +z)3, we can calculate what the
+full equilibrium spectrum atz0 = 2× 106 would look like
+atz = 1100 under plasma modiﬁed cosmological redshift
+(ignoring all other processes causing distortion):
+duγ = T 4
+π2ℏ3c3
+x
+√
+x2−a2
+√
+x2 + z0−z
+1+z a2
+e
+√
+x2+z0−z
+1+z a2
+− 1
+dx. (31)
+We see that while plasma redshift does not change the
+cutoﬀ frequency it brings additional corrections on the
+order of a2 (z0−z)/ (1 +z) ≈ a2 (z0/z) ≈ 4× 10−15,
+i.e., these corrections are determined by parametera0 =
+a (1 +z0)1/2/ (1 +z)1/2 ≈ a (z0/z)1/2 at z0 = 2× 106
+rather than parametera at z = 1100. In particular it
+can manifest itself as a frequency-dependent chemical po-
+tential µCMB ≈ (z0/z)a2/2x. This chemical potential
+is about (z0/z) ≈ 103 times larger than the one con-
+sidered in the previous subsection but it is still beyond
+the values that can be experimentally detected. In addi-
+tion, we note that for SKA-LOW at its lowest frequency
+νmin = 50 MHz, CMB foregrounds are going to further
+complicate measurements. Thus, the plasma correction
+to the redshift is extremely small and can hardly be de-
+tected by any past and near future CMB experiments.
+Similar plasma redshift corrections would take place
+after the recombination for lower redshifts before (since
+therecombinationisnotcomplete)andafterthereioniza-
+tion, but these corrections are smaller, since parametera
+at z0 = 2× 106 is higher.
+V. MODIFICATION OF THE KOMPANEETS
+EQUATION
+The standard way to describe the thermalization of the
+radiation and electrons through Thomson scattering and
+to quantify distortions of CMB from blackbody is to use
+the Kompaneets equation [43] (xe = ℏω/Te):
+∂nγ
+∂t = neσTTe
+mec
+1
+x2e
+∂
+∂xe
+[
+x4
+e
+(∂nγ
+∂xe
++nγ +n2
+γ
+)]
+, (32)
+where σT is the Thomson cross section.
+The equilibrium solution (∂nγ/∂t = 0) of this equa-
+tion is given by the Bose-Einstein distribution with, in
+general, nonzero chemical potentialµ (we note that it is
+customary to use a diﬀerent sign convention for chemical
+potential in CMB science in comparison with the sta-
+tistical mechanics literature: µCMB = −µ′ = −µ/T).
+The chemical potential appears because Eq. (32) ac-
+counts only for scattering and, consequently, conserves
+the number of photons. This deviation from the Planck
+distribution is known as µ-distortion. If it exists, µ-
+distortion is very small: according to the COBE-FIRAS
+data the constraint on µ is |µ|/T < 9× 10−5 [44],
+while recent Planck data put even stronger constraint:
+|µ|/T < 6.1× 10−6 [45]. In the limit of small op-
+tical depth for electron Compton scattering, Eq. (32)
+describes another type of distortion called Comptony-
+distortion, where dy = neσTcdt (Te−Tγ)/mec2 (this y
+PAGE 9
+9
+is not related to the normalized wave vector used be-
+fore). The constraint ony-distortion is also very strong:
+|y| < 1.5× 10−5 according to COBE-FIRAS [44]. The
+intermediate regime between the two extremes is called
+i-distortion [46].
+We want the modiﬁed version of Eq. (32) that includes
+the inﬂuence of plasma dispersion and has the equilib-
+rium solution corresponding to the energy density given
+by Eq. (9). This generalization of Eq. (32) to plasma en-
+vironment was derived in Ref. [47], where the possibility
+of Bose-Einstein condensation in scattering dominated
+plasma was investigated:
+∂nγ
+∂t = neσTTe
+mec
+1
+y2e
+∂
+∂ye
+[
+y4
+e
+( √
+y2e +a2e
+ye
+∂nγ
+∂ye
++nγ +n2
+γ
+)]
+,
+(33)
+where ye = ℏkc/Te =
+√
+x2e−a2e and ae = ℏωp/Te.
+An interesting feature of Eqs. (33) and (32) is that if
+the temperature of the photons is initially higher than
+the electron temperature (Tγ > Te), then the Thom-
+son scattering leads to the formation of a peak near
+k = 0 or ω = ωp [ω = 0 for Eq. (32)]. This pile-up
+of photons near low frequencies is reminiscent of Bose-
+Einstein condensation [9, 23, 47, 48]. In the absence
+of energy injection, the situation with Tγ > Te is re-
+alized for CMB: as the universe expands the tempera-
+ture of the radiation scales inversely with the scale fac-
+tor: Tγ∝ (1 +z), while the temperature of the matter
+scales asTe∝ (1 +z)2. It is then usually argued that the
+Bose-Einstein condensation does not actually take place
+in reality, because at low frequencies absorption mech-
+anisms, such as Bremsstrahlung and double Compton
+scattering, become important. Thus, Thomson scatter-
+ing redistributes the excess energy among photons cre-
+ating large number of low energy photons, which are
+then absorbed at low frequency. This leads to a nega-
+tive (ifµ is deﬁned in terms of CMB community conven-
+tion) adiabatic coolingµ-distortion [40, 49], which partly
+cancels positiveµ-distortion due to energy injection. In
+plasma, Bremsstrahlung and double Compton scatter-
+ing are reduced around plasma frequency, so some other
+photon absorption mechanisms should take place. Since
+Thomson scattering creates an excess of photons at low
+frequencies, the electromagnetic wave energy can signif-
+icantly exceed the thermal level, making unique plasma
+mechanisms of radiation absorption eﬀective at getting
+rid of the excess photons at low frequency. For exam-
+ple, diﬀerent types of parametric instabilities, such as
+the two-plasmon decay, when the electromagnetic wave
+with frequency around2ωp decays into two plasmons. In
+addition, collisionless absorption due to Landau damping
+might be important.
+Equation (33) allows one to study the evolution of the
+CMB spectrum and its deviation from blackbody radi-
+ation taking into account both Thomson scattering and
+change in the dispersion relation of photons in plasma.
+The resulting distortions, however, would be signiﬁcantly
+diﬀerent from the ones obtained through Eq. (32) only
+for low frequencies aroundω≈ωp.
+A further step in generalizing Eq. (32) can be made
+by including the inﬂuence of the collective plasma ef-
+fects on Thomson scattering. It is known that for wave-
+lengths larger than the Debye lengthλD =vth/ωp, where
+the electron thermal speed isvth = Te/me, the electro-
+magnetic waves see not the collection of individual in-
+dependent electrons but rather correlated dressed par-
+ticles, which leads to coherent rather than incoherent
+scattering and can reduce the eﬀective scattering cross
+section [50]. Conditionλ =λD corresponds to frequency
+ω = ωp
+√
+c2/v2
+th− 1≈ ωp (c/vth), which means frequen-
+cies c/vth times larger than the ones in Eq. (33) would
+be aﬀected by this.
+The generalization of Eq. (32) that takes into account
+thecollectiveeﬀectsinThomsonscatteringwassuggested
+in Ref. [50]. According to Ref. [50], the Kompaneets
+equation with the collective eﬀects taken into account
+(wave time dispersion is ignored here) can be written as
+∂nγ
+∂y = 1
+x2e
+∂
+∂xe
+[
+Ie (δe)x4
+e
+(∂nγ
+∂xe
++nγ +n2
+γ
+)]
+. (34)
+Here the collective parameterδe is introduced:
+δe = ω2
+p
+ω2−ω2p
+c2
+2v2
+th
+, (35)
+and function of the collective parameterIe (δe) is deﬁned
+through the following integral:
+Ie (δe) = 3
+4
+∫ 1
+−1
+dζ
+(
+1 +ζ 2)
+(1−ζ)3
+× 1√π
+∫ ∞
+−∞
+ξ2e−ξ2
+dξ
+|1−ζ +δeW (ξ)|2, (36)
+W (ξ) = 1−2ξe−ξ2
+∫ ξ
+0
+et2
+dt+i√πe−ξ2
+= 1+Z (ξ), (37)
+where Z (ξ) is plasma dispersion function for real argu-
+ments.
+Figure 6 shows functionIe (δe) and negative of its log-
+arithmic derivativedIe (δe)/d lnδe as a function of the
+collective parameter δe. We can see that the function
+Ie (δe) quickly decreases betweenδe = 10−2 and δe = 10
+dropping from Ie≈ 0.98 at δe = 10−2 to Ie≈ 0.04 at
+δe = 10. This means that forδe≫ 1 the collective ef-
+fects would reduce the scattering by orders of magnitude.
+One should keep in mind, however, that for very largeδe
+the ion contribution to scattering should be taken into
+account by adding the appropriate functionIi (δe), see
+Ref. [50]. Note also that the graph for functionIe (δe)
+and asymptotic formulas in Ref. [50] appear to be erro-
+neous.
+PAGE 10
+10
+10□4 10□3 10□2 10□1 100 101 102 103 104
+δe
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0 Ie (δe)
+−dIe (δe) /d ln δe
+FIG. 6. FunctionIe (δe) deﬁned by Eq. (36) and negative of
+its logarithmic derivativedIe (δe)/d lnδe versus the collective
+parameter δe.
+VI. PLASMA EFFECTS DURING AND AFTER
+THE EPOCH OF REIONIZATION
+A. Plasma corrections to y-distortion
+After the epoch of recombination, the universe became
+ionizedagainduringtheepochofreionization. Theepoch
+of reionization took place approximately for the redshifts
+z ∼ 6− 15 [51]. As CMB light passes through newly
+ionized intergalactic medium (IGM) during the epoch
+of reionization and, later, postreionization, as it trav-
+els through electron plasma of IGM and through plasma
+of intracluster medium (ICM) of clusters of galaxies, the
+CMB spectrum experiences scattering on hot electrons
+(Te≫Tγ), which results in Comptony-distortion. Mod-
+ern estimates suggest that sky-averaged nonrelativistic
+contributions toy-distortion from ICM, IGM, and reion-
+ization are given, respectively, by⟨y⟩ICM = 1.58× 10−6,
+⟨y⟩IGM = 8.9×10−8,⟨y⟩reion = 9.8×10−8 [52], making it
+the largest expected CMB distortion within theΛCDM
+cosmology [40]. Let us derive and estimate corrections
+from plasma dispersion described by Eq. (33) and from
+the collective eﬀects described by Eq. (34) toy-type dis-
+tortion. Note that our analysis below is diﬀerent from
+the one in Ref. [33] where it was assumed that plasma
+modiﬁed spectrum given by Eq. (9) enters galaxy clus-
+ter, and here we assume that blackbody spectrum enters
+galaxy cluster and experiences change in dispersion rela-
+tion or change in scattering due to the collective eﬀects
+while inside it, which leads to the modiﬁcation of Comp-
+ton y-distortion.
+We rewrite Eq. (33) in terms of the normalized fre-
+quency x = ℏω/Tγ = (Te/Tγ)xe and using smallness of
+Tγ/Te≪ 1 and y≈neσTtc
+(
+Te/mec2)
+≪ 1 we keep only
+∂nγ/∂x term in the brackets:
+∂nγ
+∂y = 1
+x
+√
+x2−a2
+× ∂
+∂x
+{(
+x2−a2)2
+[∂nγ
+∂x + Tγ
+Te
+(
+nγ +n2
+γ
+)]}
+≈ 1
+x
+√
+x2−a2
+∂
+∂x
+[(
+x2−a2)2 ∂nγ
+∂x
+]
+. (38)
+Substituting the equilibrium blackbody solution into
+theright-handside, weobtaintheestimateforthechange
+in photon distribution:
+∆nγ
+y =
+√
+x2−a2ex
+(ex− 1)2
+(x2−a2
+x
+ex + 1
+ex− 1− 4
+)
+. (39)
+Fora = 0, the above equation gives the usualy-type
+distortion with the corresponding change in intensity
+∆Iω (x) = x3∆nγ (x)I0, whereI0 = (ℏ/2π2c2)
+(
+T 3/ℏ3)
+.
+Fora≪x, it gives:
+∆nγ
+y = xex
+(ex− 1)2
+(
+xex + 1
+ex− 1− 4
+)
+− a2
+x2
+xex
+(ex− 1)2
+(3
+2xex + 1
+ex− 1− 2
+)
+, (40)
+where the ﬁrst term is the usual nonrelativistic y-
+distortion and the second term isO
+(
+a2/x2)
+order plasma
+correction to it. For completeness we note that, in addi-
+tion, the same orderO
+(
+ω2
+p/ω2)
+corrections would also be
+present due to reﬂection at the cluster boundary. Equa-
+tions (39) and (40) together with∆Iω (x) =x3∆nγ (x)I0
+give the shape and value of the plasma modiﬁed y-
+distortion.
+Similarly, from Eq. (34) we obtain:
+∆nγ
+y = xex
+(ex− 1)2
+[
+Ie (δe)
+(
+xex + 1
+ex− 1− 4
+)
++2 x2
+x2−a2
+dIe (δe)
+d lnδe
+]
+. (41)
+Based on Fig. 6 we can see that the eﬀect of Eq. (41)
+is the overall reduction of the eﬀective value of param-
+eter y for such x that δe ≫ 1. This reduction and
+the eﬀects from plasma dispersion are negligible for rel-
+evant parameters, however. Indeed, the ICM of clus-
+ters of galaxies have electron plasma with temperature
+about Te≈ 107 K and densityne≈ 10−4− 10−2 cm−3
+[53]. We would take ne ≈ 10−2 cm−2 for estimates,
+which givesωp≈ 6× 103 s−1. For Planck’s spacecraft
+νmin = 30 GHz and ω2
+p/ω2 ≈ 10−15, for SKA-LOW
+νmin = 50 MHz and ω2
+p/ω2 ≈ 4× 10−10. As for the
+collective plasma correction toy-distortion, for Planck’s
+PAGE 11
+11
+spacecraft we haveδe = 8× 10−16 and the correction es-
+timated as|1−Ie (δe)| + 0.5|dIe (δe)/d lnδe| is approx-
+imately 2× 10−15, for SKA-LOWδe = 3× 10−10 and
+the correction is about9× 10−10. The collective plasma
+corrections toy-distortion in IGM should be somewhat
+higher because of the lower temperature, but lower tem-
+perature in turn makes the total distortion smaller (pa-
+rameter y), making it harder to detect.
+Thus, plasma eﬀects would cause extremely small
+change, at the order of less than10−10, to the already
+quite small and not yet detectedy-distortion (y≈ 10−6),
+which makes us conclude that plasma eﬀects ony-type
+distortion during and after the epoch of reionization can
+hardly be detected in the near future.
+A smaller Comptony-distortion withy≈ 10−10−10−8
+also took place for redshift betweenz = 10 5 and z =
+103 [42] and the same procedure can be applied to those
+conditions. It is obvious, though, that one would get
+similarly minuscule corrections.
+B. Heating and magnetic ﬁeld generation
+Unlike cosmological recombination, which is mostly
+a volumetric uniform process, cosmological reionization
+is a patchy nonuniform process. The universe became
+reionized because of ultraviolet (UV) light coming from
+ﬁrst stars and galaxies (and maybe x-rays coming from
+quasars) [54]. This UV light ﬁrst ionized overdense re-
+gions and then ionization fronts were moving ionizing the
+rest of IGM [55].
+In Refs. [56–58] it was shown that, when a plane elec-
+tromagnetic wave of frequency ω0 experiences sudden
+ionization, it is transformed into three modes: forward
+and backward propagating frequency upshifted ( ω =√
+ω2p +ω2
+0) waves, and a static magnetic ﬁeld mode. It
+is easy to see that, in case of unpolarized light, there
+will be no static magnetic ﬁeld mode since the magnetic
+ﬁelds generated for each equally possible conﬁgurations
+will cancel each other, resulting in heat.
+Due to Thomson scattering CMB radiation is linearly
+polarized at the level of 10% [59, 60]. The linear polariza-
+tion was ﬁrst detected by the Degree Angular Scale Inter-
+ferometer (DASI) in 2002 [61]. The polarization could be
+formed at the epoch of recombination [59, 62], i.e., way
+before the epoch of reionization, so that CMB was likely
+already polarized just before the ionization. Thus, part
+of the energy of this linearly polarized component could
+have been transformed into the energy of static magnetic
+ﬁeld. Let us estimate the magnitude of this ﬁeld.
+According to Refs. [57, 58], the amount of the initial
+wave energy converted into the magnetic ﬁeld due to in-
+stantaneous ionization is given by
+1
+2
+ω2
+p
+ω2p +ω2
+0
+= 1
+2
+a2
+a2 +x2≈ 1
+2
+a2
+x2, (42)
+so that the amount of CMB energy density converted into
+the magnetic ﬁeld energy density can be estimated as
+B2
+8π ≈ 0.1 T 4
+π2ℏ3c3
+∫ ∞
+0
+a2
+2x2
+x3
+ex− 1dx = a2
+8π2
+4
+cσSB
+(T
+kB
+)4
+.
+(43)
+The CMB temperature forz ∼ 6− 15 was approxi-
+mately T/kB ∼ 19− 44 K. Taking T/kB ≈ 20 K and
+the parameter a≈ 2× 10−10 for this temperature and
+ne≈ 10−4 cm−3 [63], we get that, even though a very
+small fractiona2/8π2≈ 5× 10−22 of the original CMB
+energy density goes into the magnetic ﬁeld energy, we
+stillgetcosmologicallyverylargeestimates: themagnetic
+ﬁeld energy density is at the order of10−30erg·cm−3 and
+the corresponding magnetic ﬁeld is aboutB≈ 10−15 G.
+For comparison, in Ref. [64] the magnetic ﬁeld produced
+during reionization by the Biermann battery eﬀect was
+estimated to beB≈ 10−19 G. Thus, it seems that the
+presented mechanism could have been a reason for the
+origin of the still unexplained initial magnetic ﬁeld seed
+[65, 66]. However, when we take into account the ﬁ-
+nite time of ionizationτion, we ﬁnd that the ionization
+happens in the adiabatic regime (ω≫ τ−1
+ion), so most of
+this energy is converted into heat instead of magnetic
+ﬁeld. The physical picture is that, in case of sudden ion-
+ization, electrons start oscillating approximately at the
+same phase resulting in the directed motion, electric cur-
+rent, and magnetic ﬁeld, while for adiabatic ionization
+electrons have random phases resulting in random mo-
+tion and heat. The decrease of the magnetic energy with
+the growth of the ionization time and its conversion into
+the heat is conﬁrmed by numerical simulations [57].
+The ionization time depends on the thickness of the
+ionization front and can be estimated asτion =d/vfront,
+where d is the ionization front thickness andvfront is
+the ionization front speed. According to Ref. [67], the
+front speed is aboutvfront ∼ (0.05− 0.1)c. The width
+of the ionization front can be estimated to be several
+mean free paths of UV photons [68, 69]. The mean free
+pathis aroundλmfp∼ 1physical kpc. Theamountofen-
+ergy going into the magnetic ﬁeld exponentially decreases
+with the growth of the ionization timeτion as∝e−τionω.
+Then, even for low frequencies around plasma frequency
+ωp≈ 5× 102 s−1, τionωp≫ 1 and the attenuation fac-
+tor is practically zeroe−τionωp≈ 0, the magnetic ﬁeld is
+practically zero, too, with all the energy going into heat.
+The total amount going into heat is higher by about one
+order of magnitude if we account for the unpolarized part
+of CMB light and is roughlya2/π2≈ 10−21, which gives
+a tiny temperature increase of about△T/kB≈ 10−20K.
+The possibility of the generation of seed magnetic ﬁeld
+should not be completely ruled out, however. For exam-
+ple, regions with higher than average density and, con-
+sequently, higher parametera can be present or sharper
+ionization fronts can be potentially produced.
+PAGE 12
+12
+VII. SUMMARY AND CONCLUSIONS
+We derived, using three diﬀerent approaches, the equi-
+librium radiation spectrum inside plasma. We demon-
+strated that, because of dispersion, it is diﬀerent from the
+blackbody Planck spectrum. We considered what sta-
+tionary and moving observers sent into the plasma-ﬁlled
+universe would measure and how these results should be
+interpreted.
+We then considered how plasma can aﬀect the spec-
+trum of CMB radiation. Namely, we pointed out the
+change in the cosmological redshift that can appear as
+an eﬀective frequency-dependent chemical potential; we
+discussed the possibility of the direct detection of plasma
+equilibrium spectrum from CMB data, emphasized its
+sensitivity to how fast the cosmological recombination
+happened and reached more pessimistic conclusion about
+its experimental detection than before [33]; we gave ex-
+pressions for the modiﬁed Kompaneets equation due to
+plasma dispersion and collective eﬀects; we calculated
+how Comptony-distortion during and after the epoch of
+reionization is changed because of plasma; and we pro-
+posed, estimated, and deemed likely unrealistic a novel
+mechanism of magnetic ﬁeld generation during the epoch
+of reionization due to conversion of some of the energy of
+CMB into magnetic ﬁeld energy.
+We concluded that plasma eﬀects are extremely small,
+on the order ofO
+(
+ω2
+p/ω2)
+in most cases and hence can-
+not be realistically detected in the near future. However,
+if some of the assumptions employed here were violated,
+then there would be possibilities for larger eﬀects. Thus,
+it is important to know how plasma aﬀects the CMB
+spectrum in order to fully understand the cosmological
+evolution of our universe; for example, restrictions im-
+posed by plasma eﬀects might, in principle, be used to
+test alternative models of cosmology as they put bound-
+ariesonthebaryondensityatdiﬀerentepochs. Moreover,
+the analysis conducted in the paper could be relevant to
+other astrophysical and laboratory situations where ra-
+diation interacts with plasma.
+ACKNOWLEDGEMENTS
+This work is supported by research Grant No. DOE
+NNSA DE-NA0003871.
+[1] J. A. Tauber, N. Mandolesi, J.-L. Puget, T. Banos,
+M. Bersanelli, F. R. Bouchet, R. C. Butler, J. Charra,
+G. Crone, J. Dodsworth,et al., A&A520, A1 (2010).
+[2] P. Dewdney, W. Turner, R. Millenaar, R. McCool,
+J. Lazio, and T. Cornwell, Document number SKA-TEL-
+SKO-DD-001 Revision1 (2013).
+[3] K. Huang, Statistical Mechanics, 2nd Edition (Wiley,
+New York, 1987).
+[4] W. Greiner, L. Neise, and H. Stöcker, Thermodynam-
+ics and statistical mechanics,Classicaltheoreticalphysics
+(Springer-Verlag, New York, 1995).
+[5] P. Wurfel, Journal of Physics C: Solid State Physics15,
+3967 (1982).
+[6] F. Herrmann and P. Würfel, American Journal of Physics
+73, 717 (2005).
+[7] H. Ries and A. McEvoy, Journal of Photochemistry and
+Photobiology A: Chemistry59, 11 (1991).
+[8] T. Markvart, Journal of Optics A: Pure and Applied Op-
+tics 10, 015008 (2008).
+[9] Y. B. Zel’dovich and E. Levich, Sov. Phys. JETP28,
+1287 (1969).
+[10] J. Klaers, F. Vewinger, and M. Weitz, Nature Physics6,
+512 EP (2010).
+[11] J. Klaers, Journal of Physics B: Atomic, Molecular and
+Optical Physics47, 243001 (2014).
+[12] M. Hafezi, P. Adhikari, and J. M. Taylor, Phys. Rev. B
+92, 174305 (2015).
+[13] C.-H. Wang, M. J. Gullans, J. V. Porto, W. D. Phillips,
+and J. M. Taylor, Phys. Rev. A98, 013834 (2018).
+[14] T. J. J. Meyer and T. Markvart, Journal of Applied
+Physics 105, 063110 (2009).
+[15] A. Reiser and L. Schächter, Phys. Rev. A87, 033801
+(2013).
+[16] A. A. Sokolsky and M. A. Gorlach, Phys. Rev. A89,
+013847 (2014).
+[17] W. McGregor, Journal of Quantitative Spectroscopy and
+Radiative Transfer19, 659 (1978).
+[18] V. M. Bannur, Phys. Rev. E73, 067401 (2006).
+[19] S. Trigger, Physics Letters A370, 365 (2007).
+[20] S. A. Triger and A. L. Khomkin, Plasma Physics Reports
+36, 1095 (2010).
+[21] M. V. Medvedev, Phys. Rev. E59, R4766 (1999).
+[22] L. N. Tsintsadze, D. K. Callebaut, and N. L. Tsintsadze,
+Journal of Plasma Physics55, 407 (1996).
+[23] P. Mati, arXiv e-prints , arXiv:1902.07998 (2019),
+arXiv:1902.07998 [cond-mat.stat-mech].
+[24] J. Chen and B. Lin, Journal of Physics A: Mathematical
+and General36, 11385 (2003).
+[25] C. F. Bohren and D. R. Huﬀman,Absorption and scat-
+tering of light by small particles(Wiley, New York, 1983).
+[26] M. Massoud, Engineering thermoﬂuids , Vol. 2005
+(Springer, Berlin, Heidelberg, 2005).
+[27] J.-J. Greﬀet, P. Bouchon, G. Brucoli, and F. Marquier,
+Phys. Rev. X8, 021008 (2018).
+[28] E. Lifshitz and L. Pitaevskii, Course of Theoretical
+Physics: Statistical Physics, Part 2 (Pergamon Press,
+1980).
+[29] G. Bekeﬁ,Radiation Processes in Plasmas(Wiley, 1966).
+[30] V. V. Zheleznyakov,Radiation in Astrophysical Plasmas
+(Kluwer Academic, 1996).
+[31] J. Bičák and P. Hadrava, Astronomy and Astrophysics
+44, 389 (1975).
+[32] D. J. Fixsen, The Astrophysical Journal707, 916 (2009).
+[33] S. Colafrancesco, M. S. Emritte, and P. Marchegiani,
+Journal of Cosmology and Astroparticle Physics 2015
+(05), 006.
+PAGE 13
+13
+[34] T. F. Howell and J. R. Shakeshaft, Nature216, 753 EP
+(1967).
+[35] G. Sironi, M. Limon, G. Marcellino, G. Bonelli,
+M. Bersanelli, G. Conti, and K. Reif, Astrophys. J.357,
+301 (1990).
+[36] G. Sironi, G. Bonelli, and M. Limon, Astrophys. J.378,
+550 (1991).
+[37] R. Sunyaev and J. Chluba, Reviews in Modern Astron-
+omy 21, 1 (2009).
+[38] I. Y. Dodin and N. J. Fisch, Physics of Plasmas 17,
+112113 (2010).
+[39] J. Chluba and Y. Ali-Haïmoud, Monthly Notices of the
+Royal Astronomical Society456, 3494 (2016).
+[40] J. Chluba, Monthly Notices of the Royal Astronomical
+Society 460, 227 (2016).
+[41] I. Y. Dodin and N. J. Fisch, Phys. Rev. D82, 044044
+(2010).
+[42] R. Khatri and R. A. Sunyaev, Journal of Cosmology and
+Astroparticle Physics2012 (06), 038.
+[43] A. Kompaneets, Sov. Phys. JETP4, 730 (1957).
+[44] D. J. Fixsen, E. S. Cheng, J. M. Gales, J. C. Mather,
+R. A. ShaFer, and E. L. Wright, The Astrophysical Jour-
+nal 473, 576 (1996).
+[45] R. Khatri and R. Sunyaev, Journal of Cosmology and
+Astroparticle Physics2015 (09), 026.
+[46] H. Tashiro, Progress of Theoretical and Experimental
+Physics 2014, 06B107 (2014).
+[47] J. T. Mendonça and H. Terças, Phys. Rev. A95, 063611
+(2017).
+[48] Y. B. Zel’dovich, Phys. Usp.18, 79 (1975).
+[49] R. Khatri, R. A. Sunyaev, and J. Chluba, Astronomy and
+Astrophysics 540, A124 (2012).
+[50] R. Bingham, V. N. Tsytovich, U. de Angelis, A. Forlani,
+and J. T. Mendonça, Physics of Plasmas10, 3297 (2003).
+[51] S.Zaroubi,Theepochofreionization,in The First Galax-
+ies: Theoretical Predictions and Observational Clues ,
+edited by T. Wiklind, B. Mobasher, and V. Bromm
+(Springer Berlin Heidelberg, Berlin, Heidelberg, 2013)
+pp. 45–101.
+[52] J. C. Hill, N. Battaglia, J. Chluba, S. Ferraro, E. Schaan,
+and D. N. Spergel, Phys. Rev. Lett.115, 261301 (2015).
+[53] C. L. Sarazin, The intracluster medium, in Clusters
+and Superclusters of Galaxies, edited by A. C. Fabian
+(Springer Netherlands, Dordrecht, 1992) pp. 131–150.
+[54] M. McQuinn, Annual Review of Astronomy and Astro-
+physics 54, 313 (2016).
+[55] A. Loeb, The reionization of cosmic hydrogen by the ﬁrst
+galaxies, inAdventures in Cosmology(WORLD SCIEN-
+TIFIC, 2011) pp. 41–88.
+[56] C.-L. Jiang,Electromagnetic wave propagation and radi-
+ation in a suddenly created plasma, Ph.D. thesis, Califor-
+nia Institute of Technology (1973).
+[57] S. C. Wilks, J. M. Dawson, and W. B. Mori, Phys. Rev.
+Lett. 61, 337 (1988).
+[58] K. Qu, Q. Jia, M. R. Edwards, and N. J. Fisch, Phys.
+Rev. E98, 023202 (2018).
+[59] A. Buzzelli, P. Cabella, G. de Gasperis, and N. Vitto-
+rio, Journal of Physics: Conference Series689, 012003
+(2016).
+[60] W. Hu and M. White, New Astronomy2, 323 (1997).
+[61] J. M. Kovac, E. M. Leitch, C. Pryke, J. E. Carlstrom,
+N. W. Halverson, and W. L. Holzapfel, Nature420, 772
+EP (2002).
+[62] N. Kaiser, Monthly Notices of the Royal Astronomical
+Society 202, 1169 (1983).
+[63] S. Inoue, Monthly Notices of the Royal Astronomical So-
+ciety 348, 999 (2004).
+[64] N. Y. Gnedin, A. Ferrara, and E. G. Zweibel, The Astro-
+physical Journal539, 505 (2000).
+[65] L. M. Widrow, Rev. Mod. Phys.74, 775 (2002).
+[66] V. R. Munirov and N. J. Fisch, Phys. Rev. E95, 013205
+(2017).
+[67] N. Deparis, D. Aubert, P. Ocvirk, J. Chardin, and
+J. Lewis, A&A622, A142 (2019).
+[68] S. Cantalupo and C. Porciani, Monthly Notices of the
+Royal Astronomical Society411, 1678 (2011).
+[69] K.-Y. Lee, G. Mellema, and P. Lundqvist, Monthly No-
+tices of the Royal Astronomical Society455, 4406 (2016).

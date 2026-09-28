@@ -1,0 +1,87 @@
+{
+  "classification": "Counterexample candidate",
+  "results": [
+    {
+      "zone": 1,
+      "rhoB": 1.8299874183576313e-09,
+      "T_K": 18494.189290049293,
+      "step": 1e-05,
+      "fixed_rhoB_T_derivatives_per_H_fraction": [
+        [
+          -11645888645996.094,
+          -51830019427248.3,
+          40184130781252.2
+        ],
+        [
+          -11645888642968.75,
+          -51830019426807.36,
+          40184130783838.61
+        ],
+        [
+          -11645888639453.125,
+          -51830019417106.77,
+          40184130777653.65
+        ]
+      ],
+      "last_refinement_relative": 3.0187692058895464e-10,
+      "fixed_X_firstlaw_relative": -5.3420446954888234e-09,
+      "heat_capacity_FD_relative": 3.44419064379764e-08,
+      "thermal_chemical_term_over_Tds": -0.7753061108132764
+    },
+    {
+      "zone": 2592,
+      "rhoB": 273.1146779717666,
+      "T_K": 31501931.496283703,
+      "step": 1e-05,
+      "fixed_rhoB_T_derivatives_per_H_fraction": [
+        [
+          -4975806815900000.0,
+          -3.1963328092527696e+16,
+          2.6987521276627696e+16
+        ],
+        [
+          -4975806815900000.0,
+          -3.196332809233993e+16,
+          2.698752127643993e+16
+        ],
+        [
+          -4975806816400000.0,
+          -3.1963328094217588e+16,
+          2.6987521277817588e+16
+        ]
+      ],
+      "last_refinement_relative": 1.004862162960238e-10,
+      "fixed_X_firstlaw_relative": 1.922030534728947e-09,
+      "heat_capacity_FD_relative": 2.275047927824403e-09,
+      "thermal_chemical_term_over_Tds": -0.8443276369177538
+    },
+    {
+      "zone": 2868,
+      "rhoB": 1365.173416007709,
+      "T_K": 22205463.037748676,
+      "step": 5.9441354382832796e-06,
+      "fixed_rhoB_T_derivatives_per_H_fraction": [
+        [
+          -3786913291821976.5,
+          -2.986538897986174e+16,
+          2.6078475688039764e+16
+        ],
+        [
+          -3786913292095355.0,
+          -2.9865365900672524e+16,
+          2.607845260857717e+16
+        ],
+        [
+          -3786913291548597.5,
+          -2.986536013187721e+16,
+          2.6078446840328612e+16
+        ]
+      ],
+      "last_refinement_relative": 2.2118834727073473e-07,
+      "fixed_X_firstlaw_relative": 1.8772425836033335e-09,
+      "heat_capacity_FD_relative": 1.78651715643241e-09,
+      "thermal_chemical_term_over_Tds": -0.8732004812656995
+    }
+  ],
+  "interpretation": "du_B - T ds_B at fixed rho_B,T is the chemical composition term. No reaction rate, physical continuum bound or actual MESA absolute-entropy match is inferred."
+}

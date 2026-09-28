@@ -1,0 +1,22 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Separate matrix assembly reciprocity from shifted linear solution reciprocity after the field-inverse pilot failed symmetry. Fixed64 trial columns, no actual new evolution or EOS calls.",
+  "methods": [
+    "original LU",
+    "explicit symmetric assembly LU",
+    "explicit symmetric band Cholesky"
+  ],
+  "gates": {
+    "inverse_symmetry": 1e-12,
+    "linear_residual": 1e-09
+  },
+  "budget": {
+    "hard_seconds": 60,
+    "CPU_threads": 1
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-inverse-projection/reciprocity.py": "224ee2abbbddc6b324e42c17795b83ae1289bf97ea92a046fcdf8503a0ecd24c",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_multishift.py": "6aef0bcae8d7a8abc19e44a5d080d21e1c6499c6aa3e14c3ab63466a736e25a9",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-inverse-projection/field-inverse/plan.json": "54edda507bc06b0003485683ebfac30efd1a7d32b1fe72587c8b4aa134572a8c"
+  }
+}

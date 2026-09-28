@@ -1,0 +1,52 @@
+{
+  "classification": "Counterexample candidate",
+  "actual_same_input_evolved": true,
+  "passed": false,
+  "propagation_passed": false,
+  "spatial_passed": false,
+  "propagation": {
+    "4": {
+      "velocity_mass_RMS_m_s": {
+        "previous": 0.0014769579149784427,
+        "last": 0.00037536203512557304,
+        "order": 1.976274072397106
+      },
+      "scalar_mass_RMS": {
+        "previous": 0.2070055777685695,
+        "last": 0.2030018336830724,
+        "order": 0.028176882586341486
+      },
+      "old_interface_velocity_RMS_m_s": {
+        "previous": 0.0019756454571913445,
+        "last": 0.002825449184168859,
+        "order": -0.5161561736231184
+      },
+      "new_interface_velocity_RMS_m_s": {
+        "previous": 0.00012332939097322708,
+        "last": 1.718043131874384e-05,
+        "order": 2.8436784921782965
+      }
+    }
+  },
+  "comparisons": {},
+  "checks": [
+    {
+      "degree": 4,
+      "seconds": 54.100818655,
+      "setup_seconds": 10.446104727999998,
+      "basis_seconds": 13.848791349999999,
+      "factor_seconds": 26.358727708000004,
+      "orthogonality": 9.992007221626409e-16,
+      "linear_residual": 1.0455373683589786e-16,
+      "local_scaled_potential_minimum": -0.024783042647794285,
+      "energy_shift": 1.0247830426477942
+    }
+  ],
+  "paths": [
+    "4"
+  ],
+  "seconds": 54.103892886,
+  "memory_GB": 2.686779392,
+  "original_failure_resolved": false,
+  "full_dynamic_charge_solved": false
+}

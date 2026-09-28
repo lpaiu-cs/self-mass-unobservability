@@ -1,0 +1,15 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "0f6b09ed",
+  "claim": "Distinguish generation loss from output-window filtering using one fresh physical query and two output requests in the same cookie session.",
+  "intervention": "Keep the submit request fixed. Reuse its returned form unchanged once, then change only numerical-output egplow/egphigh outward by 1e-4 relative. Compare row count, overlapping opacity values and gray means; do not infer a physical recalculation from a display change.",
+  "bindings": {
+    "verification/def_photon_display_control.py": "50cdff4b4b449a2c053ceabda195297a63c1692d2c67fd6796e33752c288d2fd",
+    "outputs/direct-eos-gr33/def-photon-display-control/input.json": "4f7d434c403cfb18e99d94e44ef71d9ea0f570b0ff37904698185a733daa8fd1"
+  },
+  "budget": {
+    "submit": 1,
+    "results": 2,
+    "hard_seconds": 20
+  }
+}

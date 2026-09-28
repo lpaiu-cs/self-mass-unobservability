@@ -1,0 +1,34 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Export the actual externally driven photon/thermal/H and free-material increments, remove the initial canonical geometry already in the scalar operator, and compute their compact retarded scalar return.",
+  "distinction": "The primary incident scalar and its first potential return are stored separately. Here free_scalar means the material source response of the existing compact Green operator, not the complete outgoing waveform of the initially exterior scalar packet.",
+  "controls": "Original17 canonical output times;64/128 evolution clocks;4/8 spatial quadrature; independent direct-trace readout; pressure probe and conserved source/port identities.",
+  "gates": {
+    "time": 0.02,
+    "quadrature": 0.002,
+    "pressure": 0.002,
+    "independent_GR": 1e-09,
+    "conservation": 1e-08,
+    "identities": 1e-12
+  },
+  "scope": "One physical incident-input sweep on the retained time-dependent background. Mechanical response has not yet returned into photons. No complete native Jacobian, nonlinear GR, stationary transfer function, orbital signal, static EFT nonabsorption or complete null-infinity charge.",
+  "budget_seconds": 180,
+  "audit_seconds": 60,
+  "new_background_steps": 0,
+  "new_native_calls": 0,
+  "stop": "Keep original failures, waveform, physical amplitude, gates, grid and horizon. No automatic cadence/grid or runtime expansion.",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/read_native_incident_response.py": "cec61b50ae8f7fdaecdfaa9f6d6861d63328b1710b0200b5ff085e5a0619b257",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/solve_native_incident_material.py": "0ea37733bf992680eda7c0dc1951163be8ea2c492875ed95d89259eed17e25bb",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/solve_native_incident_lift.py": "3a94382fe1ad283cbad81b76e56c4348c2f9c844b5ba709aef675af120d27c75",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/apply_native_incident_drive.py": "7a80bc9db3a179d80bdc11168d68fb093fb7dc04c3e06219f2aeed702381f60b",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_incident_drive.py": "3e01fc956f56354fc8be01be9ccdf864eb7c6435591fe83b3db10cc90bfbecb0",
+    "native-incident-drive155-work/budget-reassessment.json": "b2f6b4413df8978f0fd3bb39959e7ad1e2dc7b10ab94fc19f86188b7901de880",
+    "native-incident-drive155-work/photons-lift/result.json": "dba2360cd2dee997e0dcac2647c71b45d0778f0da6996c5d1fc80357337dab67",
+    "native-incident-drive155-work/material-extended/production.json": "d8e755a8d90297d9946bfa3dd790c85cd0cfa45661df4bd9d95cf40b94e7521d",
+    "native-incident-drive155-work/photons-lift/steps-64-reference-128.npz": "1804efc80dceb5577645419569cbdcf8a4dce080650eae05615d177cc2e89217",
+    "native-incident-drive155-work/photons-lift/steps-128-reference-128.npz": "4b7a3b3085944ba9af2c964f6f73008b4b7f29d4b861725220cc60d7812f83ef",
+    "native-incident-drive155-work/material-extended/steps-64-reference-128.npz": "5f16111fffcfc7963f768556c54d393f5f508c45ace10b8b2859600c01965f52",
+    "native-incident-drive155-work/material-extended/steps-128-reference-128.npz": "ffdfcd802133f254b6af360531ebb723a222cc5fb170af1bd851b43c6e976696"
+  }
+}

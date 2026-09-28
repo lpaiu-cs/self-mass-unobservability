@@ -1,0 +1,40 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "b46d23f",
+  "prior_numeric_verdict": true,
+  "prior_physical_temperature_profile_passed": false,
+  "maximum_inherited_temperature_relative": 0.0031389176981642774,
+  "root_cause": "The inherited initial-entropy samples end at the old-200m boundary. Interpolating them farther inward clamps entropy, then the isentropic EOS raises T with rho. That is not the saved almost-isothermal envelope temperature.",
+  "correction": "Initialize gas logT directly from the saved physical envelope at every occupied cell and every gas face, including the deeper ghost. Retain actual rho, geometry, EOS, rates and conservative evolution. Preserve the first numerical interface pass as a different initial-value problem.",
+  "scope": "Actual reactive interior patch, not whole-star physical closure. All remaining radiation and chemistry premises remain explicit.",
+  "paths": [
+    "448 physical",
+    "896 physical",
+    "448 physical saved-ghost control"
+  ],
+  "remaining_flow_seconds": 110,
+  "prior_flow_seconds": 79.837840523,
+  "original_flow_budget": 200,
+  "remaining_native_calls": 70,
+  "remaining_native_seconds": 20,
+  "unchanged_gates": {
+    "native": 0.002,
+    "baryon": 1e-10,
+    "energy": 1e-08,
+    "species": 1e-09,
+    "primitive": 1e-08,
+    "mass_grid": 0.02,
+    "trace_grid": 0.02,
+    "neutral_grid": 0.02,
+    "far_boundary_trace": 0.001,
+    "far_boundary_interface": 0.001
+  },
+  "stop": "No more background, grid, duration, support or gate change on failure; assess the actual saved profile.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_reactive_interface.py": "a5ed10192701b2af655884b1f14e72b1c66bc42b5972df4d70ec19c2f19679a7",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-reactive-interface/inherited-temperature-source.py": "13301632f72a13f4093f4a1f21da23ce48349c438030e4b7632dc9405309900f",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-reactive-interface/result.json": "ecec94a791d84504c8622d5986c27aa99d5470574ac7b52833c8bba8636f1b15",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-whole-star-match/final-envelope.npz": "cdb53cf0830fa5442deb22fac2d78781935290ed86f8a580d5a1083ebb8c6a56",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-hydrogen-exchange/repaired-bank.npz": "e5f2fd2cfea38b106d5c060b325bade66a8e7db1d86e5346a8c013d72a57f9ad"
+  }
+}

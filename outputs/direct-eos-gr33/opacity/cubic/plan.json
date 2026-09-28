@@ -1,0 +1,20 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "27a404e",
+  "inputs_sha256": {
+    "outputs/direct-eos-gr33/opacity/baseline-type1-captured.npz": "c61392f904c083f1424c53b26cf7235c49cc72ae4ed0ccdf362521fad72d21cf",
+    "outputs/direct-eos-gr33/opacity/internal/result.json": "09f62f78de653157077dd7dc60609845704ef4a7ec6bab7259b7ca77cce5bbe4",
+    "verification/native_opacity.py": "2f6115610f3797373f4277e9c047f4b8e2d0ca581acb1ed5caa6db0d003ec779",
+    "verification/opacity_cubic.py": "aab97872ac6718408634979277fceb2692bddd0b1e58ac0a0b9870b582e3d741"
+  },
+  "value_relative_tolerance": 2e-13,
+  "finite_log_steps": [
+    1e-05,
+    5e-06
+  ],
+  "finite_derivative_relative_tolerance": 1e-07,
+  "source": "The actual native interpolate_vector calls with n_old=4 and interp_pm in the Type1 opacity call. Read both inputs and outputs; preserve every result.",
+  "formula": "Within an open selector region, I(y)=w(y) dot y and D I(y)[v]=w(y) dot v. I(v) generally selects a different monotone interpolant and is not that derivative.",
+  "boundary": "Selector ties are explicitly marked; a continuous full opacity/EOS/trajectory certificate is not inferred.",
+  "physical_or_continuous_certificate": false
+}

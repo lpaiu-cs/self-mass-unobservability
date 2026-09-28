@@ -1,0 +1,336 @@
+{
+  "classification": "Counterexample candidate",
+  "operator_paused": true,
+  "all_stopped": true,
+  "boot_id": "9b968b4f-ecbd-483b-ada9-c1c871b6ab20",
+  "reason": "Prioritize the native conservative baryon, energy and isotope trajectory. The corrected primitive trajectory has growing local energy budget defects (coarse above 0.09 of initial heat capacity); retain both partial trajectories and the unstarted ref4 chain as controls. This is an operator pause, not a native nonlinear or causal failure.",
+  "roots": [
+    2162,
+    2174
+  ],
+  "processes": [
+    {
+      "pid": 2162,
+      "parent": 2153,
+      "start": "1565097",
+      "state": "R",
+      "command": "python3 -c import gr_covariant_two_carrier as job\nfor refinement in [1,4]:\n job.run(refinement,15)\n print('COVARIANT FULL PATH REPLAY',refinement,job.comparison['completed'](refinement)[1],flush=True)"
+    },
+    {
+      "pid": 2174,
+      "parent": 2165,
+      "start": "1566129",
+      "state": "S",
+      "command": "python3 verification/gr_covariant_two_carrier.py run --refinement 2 --workers 15"
+    },
+    {
+      "pid": 2176,
+      "parent": 2162,
+      "start": "1566488",
+      "state": "S",
+      "command": "python3 -c import gr_covariant_two_carrier as job\nfor refinement in [1,4]:\n job.run(refinement,15)\n print('COVARIANT FULL PATH REPLAY',refinement,job.comparison['completed'](refinement)[1],flush=True)"
+    },
+    {
+      "pid": 2177,
+      "parent": 2162,
+      "start": "1566489",
+      "state": "S",
+      "command": "python3 -c import gr_covariant_two_carrier as job\nfor refinement in [1,4]:\n job.run(refinement,15)\n print('COVARIANT FULL PATH REPLAY',refinement,job.comparison['completed'](refinement)[1],flush=True)"
+    },
+    {
+      "pid": 2178,
+      "parent": 2162,
+      "start": "1566489",
+      "state": "S",
+      "command": "python3 -c import gr_covariant_two_carrier as job\nfor refinement in [1,4]:\n job.run(refinement,15)\n print('COVARIANT FULL PATH REPLAY',refinement,job.comparison['completed'](refinement)[1],flush=True)"
+    },
+    {
+      "pid": 2179,
+      "parent": 2162,
+      "start": "1566489",
+      "state": "S",
+      "command": "python3 -c import gr_covariant_two_carrier as job\nfor refinement in [1,4]:\n job.run(refinement,15)\n print('COVARIANT FULL PATH REPLAY',refinement,job.comparison['completed'](refinement)[1],flush=True)"
+    },
+    {
+      "pid": 2180,
+      "parent": 2162,
+      "start": "1566489",
+      "state": "S",
+      "command": "python3 -c import gr_covariant_two_carrier as job\nfor refinement in [1,4]:\n job.run(refinement,15)\n print('COVARIANT FULL PATH REPLAY',refinement,job.comparison['completed'](refinement)[1],flush=True)"
+    },
+    {
+      "pid": 2181,
+      "parent": 2162,
+      "start": "1566490",
+      "state": "S",
+      "command": "python3 -c import gr_covariant_two_carrier as job\nfor refinement in [1,4]:\n job.run(refinement,15)\n print('COVARIANT FULL PATH REPLAY',refinement,job.comparison['completed'](refinement)[1],flush=True)"
+    },
+    {
+      "pid": 2182,
+      "parent": 2162,
+      "start": "1566490",
+      "state": "S",
+      "command": "python3 -c import gr_covariant_two_carrier as job\nfor refinement in [1,4]:\n job.run(refinement,15)\n print('COVARIANT FULL PATH REPLAY',refinement,job.comparison['completed'](refinement)[1],flush=True)"
+    },
+    {
+      "pid": 2183,
+      "parent": 2162,
+      "start": "1566490",
+      "state": "S",
+      "command": "python3 -c import gr_covariant_two_carrier as job\nfor refinement in [1,4]:\n job.run(refinement,15)\n print('COVARIANT FULL PATH REPLAY',refinement,job.comparison['completed'](refinement)[1],flush=True)"
+    },
+    {
+      "pid": 2184,
+      "parent": 2162,
+      "start": "1566490",
+      "state": "S",
+      "command": "python3 -c import gr_covariant_two_carrier as job\nfor refinement in [1,4]:\n job.run(refinement,15)\n print('COVARIANT FULL PATH REPLAY',refinement,job.comparison['completed'](refinement)[1],flush=True)"
+    },
+    {
+      "pid": 2185,
+      "parent": 2162,
+      "start": "1566491",
+      "state": "S",
+      "command": "python3 -c import gr_covariant_two_carrier as job\nfor refinement in [1,4]:\n job.run(refinement,15)\n print('COVARIANT FULL PATH REPLAY',refinement,job.comparison['completed'](refinement)[1],flush=True)"
+    },
+    {
+      "pid": 2186,
+      "parent": 2162,
+      "start": "1566491",
+      "state": "S",
+      "command": "python3 -c import gr_covariant_two_carrier as job\nfor refinement in [1,4]:\n job.run(refinement,15)\n print('COVARIANT FULL PATH REPLAY',refinement,job.comparison['completed'](refinement)[1],flush=True)"
+    },
+    {
+      "pid": 2187,
+      "parent": 2162,
+      "start": "1566491",
+      "state": "S",
+      "command": "python3 -c import gr_covariant_two_carrier as job\nfor refinement in [1,4]:\n job.run(refinement,15)\n print('COVARIANT FULL PATH REPLAY',refinement,job.comparison['completed'](refinement)[1],flush=True)"
+    },
+    {
+      "pid": 2188,
+      "parent": 2162,
+      "start": "1566491",
+      "state": "S",
+      "command": "python3 -c import gr_covariant_two_carrier as job\nfor refinement in [1,4]:\n job.run(refinement,15)\n print('COVARIANT FULL PATH REPLAY',refinement,job.comparison['completed'](refinement)[1],flush=True)"
+    },
+    {
+      "pid": 2189,
+      "parent": 2162,
+      "start": "1566492",
+      "state": "S",
+      "command": "python3 -c import gr_covariant_two_carrier as job\nfor refinement in [1,4]:\n job.run(refinement,15)\n print('COVARIANT FULL PATH REPLAY',refinement,job.comparison['completed'](refinement)[1],flush=True)"
+    },
+    {
+      "pid": 2192,
+      "parent": 2174,
+      "start": "1568364",
+      "state": "R",
+      "command": "python3 verification/gr_covariant_two_carrier.py run --refinement 2 --workers 15"
+    },
+    {
+      "pid": 2193,
+      "parent": 2174,
+      "start": "1568366",
+      "state": "R",
+      "command": "python3 verification/gr_covariant_two_carrier.py run --refinement 2 --workers 15"
+    },
+    {
+      "pid": 2194,
+      "parent": 2174,
+      "start": "1568367",
+      "state": "R",
+      "command": "python3 verification/gr_covariant_two_carrier.py run --refinement 2 --workers 15"
+    },
+    {
+      "pid": 2195,
+      "parent": 2174,
+      "start": "1568367",
+      "state": "R",
+      "command": "python3 verification/gr_covariant_two_carrier.py run --refinement 2 --workers 15"
+    },
+    {
+      "pid": 2196,
+      "parent": 2174,
+      "start": "1568367",
+      "state": "R",
+      "command": "python3 verification/gr_covariant_two_carrier.py run --refinement 2 --workers 15"
+    },
+    {
+      "pid": 2197,
+      "parent": 2174,
+      "start": "1568367",
+      "state": "R",
+      "command": "python3 verification/gr_covariant_two_carrier.py run --refinement 2 --workers 15"
+    },
+    {
+      "pid": 2198,
+      "parent": 2174,
+      "start": "1568368",
+      "state": "R",
+      "command": "python3 verification/gr_covariant_two_carrier.py run --refinement 2 --workers 15"
+    },
+    {
+      "pid": 2199,
+      "parent": 2174,
+      "start": "1568368",
+      "state": "R",
+      "command": "python3 verification/gr_covariant_two_carrier.py run --refinement 2 --workers 15"
+    },
+    {
+      "pid": 2200,
+      "parent": 2174,
+      "start": "1568369",
+      "state": "R",
+      "command": "python3 verification/gr_covariant_two_carrier.py run --refinement 2 --workers 15"
+    },
+    {
+      "pid": 2201,
+      "parent": 2174,
+      "start": "1568369",
+      "state": "R",
+      "command": "python3 verification/gr_covariant_two_carrier.py run --refinement 2 --workers 15"
+    },
+    {
+      "pid": 2202,
+      "parent": 2174,
+      "start": "1568369",
+      "state": "R",
+      "command": "python3 verification/gr_covariant_two_carrier.py run --refinement 2 --workers 15"
+    },
+    {
+      "pid": 2203,
+      "parent": 2174,
+      "start": "1568370",
+      "state": "R",
+      "command": "python3 verification/gr_covariant_two_carrier.py run --refinement 2 --workers 15"
+    },
+    {
+      "pid": 2204,
+      "parent": 2174,
+      "start": "1568370",
+      "state": "R",
+      "command": "python3 verification/gr_covariant_two_carrier.py run --refinement 2 --workers 15"
+    },
+    {
+      "pid": 2205,
+      "parent": 2174,
+      "start": "1568371",
+      "state": "R",
+      "command": "python3 verification/gr_covariant_two_carrier.py run --refinement 2 --workers 15"
+    },
+    {
+      "pid": 2206,
+      "parent": 2174,
+      "start": "1568371",
+      "state": "R",
+      "command": "python3 verification/gr_covariant_two_carrier.py run --refinement 2 --workers 15"
+    },
+    {
+      "pid": 2175,
+      "parent": 2162,
+      "start": "1566488",
+      "state": "S",
+      "command": "python3 -c import gr_covariant_two_carrier as job\nfor refinement in [1,4]:\n job.run(refinement,15)\n print('COVARIANT FULL PATH REPLAY',refinement,job.comparison['completed'](refinement)[1],flush=True)"
+    }
+  ],
+  "paths": {
+    "1": {
+      "progress": {
+        "classification": "Counterexample candidate",
+        "step": 21,
+        "time_seconds": 0.19732117926640552,
+        "maximum_changes": [
+          0.0010998011368014969,
+          0.5054578073861264,
+          1.5922242124160068e-06,
+          1.7895721029626596e-10
+        ],
+        "elapsed_seconds": 7224.062911596999,
+        "maximum_cell_energy_defect_over_initial_heat_capacity": 0.11112948352013596,
+        "total_energy_defect_over_initial_heat_capacity": 3.562225991265162e-08,
+        "maximum_local_rest_characteristic_speed_over_c": 0.46480646098497125,
+        "maximum_characteristic_imaginary_part": 0.0,
+        "sampled_cone_inside_light_cone": true
+      },
+      "sha256": {
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-1/progress.json": "195353c9e8573d82c78e27cd8e0391869f7c370f45946495af7ea7dd4d825ca9",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-1/iterations.jsonl": "fd2a78cb7db35d0a7d335db229c28b7a4bedfbf588a05c18b4b0718f13c97a7e",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-1/stage-cones.jsonl": "6ddf0d51d8aa5db4e48b1db06413c2f66547fbf7b47d27fea354241cbc8c973e",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-1/step-0000.npz": "646127eaa29034d1b3754e41c58c34f70aaa7a2bc27a3d5a68f6ad57a031be2c",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-1/step-0001.npz": "f8928b10f37f284a48ece0c509c3d88f2af78cee38e8a717fea3cdb996fc5bf6",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-1/step-0002.npz": "4f9ed4b0426a90e82c35e12751d66756057b8062eadccc7e394970dc6002aa2e",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-1/step-0003.npz": "406d68c145dcb4dd190dd84887ff1b1051acf2a6b91ec366de29c835d78f57a8",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-1/step-0004.npz": "8fcbc228d84ebb87a7ebe351c96c5c845b140a55a52dc88481bf704641d14613",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-1/step-0005.npz": "ef9103469cfff60ce5352162442eefcf93490c58844cf4371d23bee674a44b24",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-1/step-0006.npz": "dcc39467bb117d5e23b531f4d16fde08c0de0b20b70081d18c31bf87f6367445",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-1/step-0007.npz": "11f61064533a4a946f6325015948a890cbc7124ca667937dc7bae21acc49f16c",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-1/step-0008.npz": "d0edf0f0a69a8d3e3356a64222c0291b7abfdd85a3c7b08429766789068e6770",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-1/step-0009.npz": "be52a306e47b9e690b7b4de0bd1d2aed4472779863949df957c16f8b3385aa81",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-1/step-0010.npz": "3e348549a2530d7eb5de35cd1bfd5ec5cdb9106d0a8e9b1ed4bd2f598817252c",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-1/step-0011.npz": "f492093eedcd18badf2511db7ff2dc66d779248cb49608d9ec4b407f808652d6",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-1/step-0012.npz": "746100e5b882d2939b72868db0d7b5d112c682ee35b0a897cc736fd108125190",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-1/step-0013.npz": "f5c479e0da6e89fe8bc25a364efc6c8d7fa6665b8c31799e6e7742ca916c5d1a",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-1/step-0014.npz": "a55cc5d59fb37affadfbeb4a715227452c3bc99e0525313b961cb6268274d798",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-1/step-0015.npz": "65cc41e7e1b422aa17d7812b3dd5e0f61674a8e6d64f3b225853459edbf5d771",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-1/step-0016.npz": "0277440ee8137812f21ddf4b21b697ebc997d42314811b2cc54a78fc380fd9bc",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-1/step-0017.npz": "57bd2a44ac3713aa53323da38244d3f506d9868bb4eba4e60bfed37e20d87c51",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-1/step-0018.npz": "98d08e2799522ef3049e4b3c362b754e01a50b754d6d4cb772316e963d7115b2",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-1/step-0019.npz": "7b7c75c309d5de249d1029b4b8fd3e441c8a318c698491f5a5acc6ce2f52029e",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-1/step-0020.npz": "e7bf1ac3a3050136fef2065c3bba0e0cc0cdfb0edf048f59cd8e4294d90753cb",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-1/step-0021.npz": "901eb52b078dc6a4c43b9ef1b77f0585d2f5659685b51378f247dd1f669ba1e7"
+      }
+    },
+    "2": {
+      "progress": {
+        "classification": "Counterexample candidate",
+        "step": 26,
+        "time_seconds": 0.09202837698980351,
+        "maximum_changes": [
+          0.0001745894353709567,
+          0.3734883266091971,
+          4.880790122506247e-07,
+          1.7929496236955898e-10
+        ],
+        "elapsed_seconds": 6856.659187182,
+        "maximum_cell_energy_defect_over_initial_heat_capacity": 0.025653052494535648,
+        "total_energy_defect_over_initial_heat_capacity": 4.017184300597279e-07,
+        "maximum_local_rest_characteristic_speed_over_c": 0.43324246244271875,
+        "maximum_characteristic_imaginary_part": 0.0,
+        "sampled_cone_inside_light_cone": true
+      },
+      "sha256": {
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-2/progress.json": "ce7a6131c2d642ac090d8aef84a7b6e99a70da04fff8c9eb40750afbc6102f36",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-2/iterations.jsonl": "2142d226e04ee4c98acea959d7202e9941b23ec5cca78354862a9b27150490eb",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-2/stage-cones.jsonl": "5a4288e6a95e63f59186e0b8ee23fda9996a5e749747518be3e2d4206c5f0409",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-2/step-0000.npz": "13601d0930ad4e524734f793d4179b5e73ac1eb3310fc9fc356876149c2d5697",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-2/step-0001.npz": "d8d4344b51ace8fa5588c1f6871d5993602d32a2df623e0b6ecd228b58628b8b",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-2/step-0002.npz": "db784e8c17d3eebb3a6c0f29c4e1b69820df583df2c610a105eea2318c01fe3f",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-2/step-0003.npz": "2b364454c6bebedc5cd3f37000eacbadab3ea48d3a42086163af6d981ecf6d58",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-2/step-0004.npz": "521ed07870acbf386ba3ddee0941200d9cd8118f45ac59815504c175bf2410c0",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-2/step-0005.npz": "49a2aa0b63259f1b6141e7c9149517b1f97b1bc2961d0293715d93268a0d156e",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-2/step-0006.npz": "8102bb45890fa8a31696f7339da75247691d1b6c7fa08d41488dd20ab900c32a",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-2/step-0007.npz": "c4c4d6ce2b138f1df1e15d65c020d3786254951b8a8f385cb4ab3867849e5139",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-2/step-0008.npz": "647cca6c6aea8b668d07451fa5e9a5c3d44972978629753059c136f2836aa1ce",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-2/step-0009.npz": "b2f5aff9e997cc4fb6cb423ec00d30503c99291da5fdddfca8579090db0f2cff",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-2/step-0010.npz": "632f6a4152da1226c37a5081e5cf7d98286e9a87abc68f945d5d7deae8b2a941",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-2/step-0011.npz": "b39188f70cb7cffb376f838e11ddd1ae95fcb2fe09966ba9941d85651ba8a2dc",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-2/step-0012.npz": "49de5f8c027fe7bba82d01fd432f237dd58d79afd698a17f70552461a4c7bf3b",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-2/step-0013.npz": "23d00c1328a8f152b3daeba44cb6a547b7c11c5e00d6fb75ab3b8c705fc40ec2",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-2/step-0014.npz": "932fbfb5d742b328f01174f79266cec163e2ca2a8a2f7e9b2b9bccecd9dbb7a2",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-2/step-0015.npz": "b2242b26464dc65ea1c3b9024051f4af56a91710802269c501f20e9354f216ec",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-2/step-0016.npz": "a8ea52489f44831394b5b7f267aa238ea3c721348ec84ffb36832929a11e701e",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-2/step-0017.npz": "4b18bd7f1833da501e85a72e9e207b363a5155eb2398e49d0eb517ea3c86aa92",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-2/step-0018.npz": "9260f4ea1fdff5dd003687ba278745265586003fbdbc258723fc5ae3b891d1ff",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-2/step-0019.npz": "a44813dea63eed1fb60a9673b4e985d08caa3029e0e3a332a5d7e49869172994",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-2/step-0020.npz": "5ea90b31bcba0de1aa580aba7538c66e4b50a6a938ecc29b66a8b1bdfd524022",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-2/step-0021.npz": "839b13c740cd35938b78240bc793153904c6707d70abdaca68a9fb2086f73810",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-2/step-0022.npz": "2ec78a40481037965eaa10f90647dc0996f971c1839c9c1aafe5c002f40f0a41",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-2/step-0023.npz": "cc543db7a7e722fc18ec85d24982688a7f5571874ea5bfdeaa9f37105460e323",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-2/step-0024.npz": "50489a27d2c36e87220957f2e07dbef1f3432351a26d4424c83ee76723749652",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-2/step-0025.npz": "779edc9d7b799f6c180492e21bae32818056d8e35d25b03723ddb997dfa8a123",
+        "outputs/direct-eos-gr33/gr-covariant-two-carrier/path-2/step-0026.npz": "9d915e83bd3ab24eb0ebc6c77abfbb9b2bbe40ed244d8b9c19f9b8b1330fbf0a"
+      }
+    }
+  }
+}

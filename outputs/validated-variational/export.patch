@@ -1,0 +1,42 @@
+--- request13_stable/AllTheories3Bodies.cpp
++++ request14_export/AllTheories3Bodies.cpp
+@@ -285,6 +285,20 @@
+   }
+ 
+ 
++// Request 14: read-only IVP export before either integration direction.
++    if (const char* path14 = getenv("TIMING14_EXPORT")) {
++        FILE* f14 = fopen(path14, "w");
++        if (!f14) throw runtime_error("Cannot open Request 14 IVP export");
++        fprintf(f14, "%d\n", nbody_plus_extra);
++        // Hexadecimal long doubles serialize the binary values exactly.
++        fprintf(f14, "%La %La %La %La %La %La %La\n", t0, ts.front(), ts.back(), length, timescale, clightAd, clightAd2);
++        for (auto v : x0) fprintf(f14, "%La\n", v);
++        for (int i=0;i<nbody_plus_extra;++i) fprintf(f14, "%La\n", Ms[i]);
++        for (int i=0;i<nbody_plus_extra;++i) for (int j=0;j<nbody_plus_extra;++j) fprintf(f14, "%La %La\n", Gg[i][j], gammabar[i][j]);
++        for (int i=0;i<nbody_plus_extra;++i) for (int j=0;j<nbody_plus_extra;++j) for (int k=0;k<nbody_plus_extra;++k) fprintf(f14, "%La\n", betabar[i][j][k]);
++        fprintf(f14, "%La %La %La %La\n", SEPdyn_A, SEPdyn_w, SEPdyn_ph, SEPdyn_tau);
++        fclose(f14);
++    }
+ // Do the backward integration
+     Retro_Integre();
+ 
+@@ -698,6 +712,18 @@
+     {
+         dxdtvect[n1] = dxdt[n1];
+     }
++    static int samples14 = 0;
++    if (const char* path14 = getenv("TIMING14_RHS")) {
++        if (samples14 < 64) {
++            FILE* f14 = fopen(path14, samples14 == 0 ? "w" : "a");
++            if (!f14) throw runtime_error("Cannot open Request 14 RHS export");
++            fprintf(f14, "%La", t);
++            for (auto v : xvect) fprintf(f14, " %La", v);
++            for (auto v : dxdtvect) fprintf(f14, " %La", v);
++            fprintf(f14, "\n"); fclose(f14); ++samples14;
++        }
++    }
++
+ 
+  };
+ 

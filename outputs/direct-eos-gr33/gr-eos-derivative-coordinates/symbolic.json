@@ -1,0 +1,7 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "coordinates": "For rho_P=(partial ln rho/partial ln P)_T>0 and rho_T=(partial ln rho/partial ln T)_P, chi_rho=1/rho_P, chi_T=-rho_T/rho_P, u_lnrho=u_P/rho_P and cv*T=u_T-u_P*rho_T/rho_P. The transformation is a chain rule, not a physical EOS calibration.",
+  "entropy_slope": "Under the differentiable Gibbs premise, nabla_ad=[(P/rho)*rho_P-u_P]/[u_T-(P/rho)*rho_T], equal to the density-coordinate expression. A pressure-mode u_T is generally neither cv*T nor cp*T.",
+  "applicability": "The stored full/subcell reference nodes were obtained in pressure-inversion mode1. The metric-coupled inverse recalls mode2 and already uses density-mode derivatives. Archived fixed-metric inverse equations/Jacobians also recall mode2; only its fixed initial residual scale and the subsequent frozen-factor interpretation used the pressure-mode slot as cv*T."
+}

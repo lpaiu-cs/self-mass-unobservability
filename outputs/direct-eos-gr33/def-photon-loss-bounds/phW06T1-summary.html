@@ -1,0 +1,364 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>TOPS Opacities - Summary</title>
+
+  <link href="/static/css/global.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+<header class="shadow-50">
+  <div class="container header-inner">
+    <div class="row align-items-center">
+      <div class="col text-center text-lg-left">
+        <div><a href="http://www.lanl.gov" class="lanl-logo"><span class="text-accent">Los Alamos</span>&nbsp;National Laboratory</a></div>
+        <div class="lanl-logo-tag-line">Delivering science and technology to protect our nation and promote world stability</div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- END_HEADER -->
+
+
+  <main class="">
+
+    <!-- PAGE BANNER WITH TITLE AND LOGO -->
+    <div class="container-fluid">
+  <div class="row">
+    <div class="col p-0">
+      <div class="d-flex flex-column justify-content-center align-items-center text-center banner banner-sm" style="background-image: url(/static/images/banner.png);">
+        <span class="h1">T-1</span>
+        <span class="h3">Physics and Chemistry of Materials</span>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+    <!-- INTRODUCTION TO SERVICE -->
+<div class="container">
+  <div class="row">
+    <div class="col-12 text-center p-5">
+      <h2>TOPS Opacities</h2>
+      <div class="h4">Summary of Selections</div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="container mb-3">
+      <div class="row">
+        <div class="col">
+          <p>
+            Users should check the inputed quantities displayed before submitting long runs and
+            also examine the displayed WARNING messages (if any). If you wish to continue, please choose the
+            type of output you would like.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="card mb-3 shadow-25 border-0">
+  <div class="card-header">Mixture Summary</div>
+  <div class="card-body">
+    <div class="card-text">
+      <ul class="list-unstyled">
+        <li>Name: <strong>phW06T1</strong></li><li>Source: <strong>new</strong></li><li>Mix Specification:</li><ul><li>Fraction by: <strong>atomic</strong></li><li>Input format: <strong>isotope</strong></li><li>Mixture: <strong>0.888701479526 1 1.007825 0.026829091133 2 4.002542316 2.22763869472e-06 6 12.18444368 0.000100892189721 7 14.00310906 7.61511715079e-05 8 16.02268521 2.31806331149e-09 9 18.9984032 2.03558617457e-05 10 19.9924402 3.785715181e-05 12 23.98433539 1.98709195045e-07 20 39.962591</strong></li></ul><li>Output type: <strong>groups</strong></li><li>Temperatures in keV: <strong>0.002</strong></li><li>Densities in g/cm<sup>3</sup>: <strong>1.91629314435e-09</strong></li><li>Plasma cutoff frequency: <strong>off</strong></li><li>Photon energy group bounds in keV: <strong>0.0005256791122018425</strong> to <strong>0.0008451366330684721</strong></li><li>Number of energies: <strong>1000</strong></li><li>Energy spacing: <strong>log</strong></li>
+      </ul>
+    </div>
+  </div>
+  <div class="card-footer">
+    <div class="card-text">
+      <p>NOTICE</p>
+      <p>
+        It is possible that some of the requested temperature-density points may lie beyond the
+        calculated table boundaries. If WARNING messages are displayed near the beginnings of the
+        graphics pages, users should return to this location for a detailed list of any points
+        beyond the table boundaries.
+      </p>
+    </div>
+  </div>
+</div>
+
+        </div>
+        <div class="col-lg-6">
+          
+<div class="card mb-3 shadow-25 border-0">
+  <div class="card-header text-center">Table Outputs</div>
+  <div class="card-body px-3 pt-3 pb-0">
+    <div class="card-text">
+      <div class="row">
+        <div class="col">
+          <form method="post" action="./results">
+            <div class="d-none">
+              <input type="hidden" name="datype" value="groups" /><br/><input type="hidden" name="dens" value="1.91629314435e-09" /><br/><input type="hidden" name="egphigh" value="0.0008451366330684721" /><br/><input type="hidden" name="egplow" value="0.0005256791122018425" /><br/><input type="hidden" name="idnumber" value="19000" /><br/><input type="hidden" name="isotope" value="isotope" /><br/><input type="hidden" name="mixname" value="phW06T1" /><br/><input type="hidden" name="mixture" value="0.888701479526 1 1.007825 0.026829091133 2 4.002542316 2.22763869472e-06 6 12.18444368 0.000100892189721 7 14.00310906 7.61511715079e-05 8 16.02268521 2.31806331149e-09 9 18.9984032 2.03558617457e-05 10 19.9924402 3.785715181e-05 12 23.98433539 1.98709195045e-07 20 39.962591" /><br/><input type="hidden" name="nthin" value="10" /><br/><input type="hidden" name="rgrid" value="specific" /><br/><input type="hidden" name="rlow" value="1.91629314435e-09" /><br/><input type="hidden" name="rup" value="1.91629314435e-09" /><br/><input type="hidden" name="temps" value=".002" /><br/><input type="hidden" name="tgrid" value="specific" /><br/><input type="hidden" name="tlow" value="0.002" /><br/><input type="hidden" name="tup" value="0.002" /><br/><input type="hidden" name="userid" value="ajj" />
+            </div>
+            <input type="hidden" name="output" value="tabcol">
+            <button class="btn btn-secondary w-100 mb-3" type="submit">
+              Numerical by Columns<br>
+              <small>(full data set of all requested opacities)</small>
+            </button>
+          </form>
+        </div>
+        <div class="col">
+          <form method="post" action="./results">
+            <div class="d-none">
+              <input type="hidden" name="datype" value="groups" /><br/><input type="hidden" name="dens" value="1.91629314435e-09" /><br/><input type="hidden" name="egphigh" value="0.0008451366330684721" /><br/><input type="hidden" name="egplow" value="0.0005256791122018425" /><br/><input type="hidden" name="idnumber" value="19000" /><br/><input type="hidden" name="isotope" value="isotope" /><br/><input type="hidden" name="mixname" value="phW06T1" /><br/><input type="hidden" name="mixture" value="0.888701479526 1 1.007825 0.026829091133 2 4.002542316 2.22763869472e-06 6 12.18444368 0.000100892189721 7 14.00310906 7.61511715079e-05 8 16.02268521 2.31806331149e-09 9 18.9984032 2.03558617457e-05 10 19.9924402 3.785715181e-05 12 23.98433539 1.98709195045e-07 20 39.962591" /><br/><input type="hidden" name="nthin" value="10" /><br/><input type="hidden" name="rgrid" value="specific" /><br/><input type="hidden" name="rlow" value="1.91629314435e-09" /><br/><input type="hidden" name="rup" value="1.91629314435e-09" /><br/><input type="hidden" name="temps" value=".002" /><br/><input type="hidden" name="tgrid" value="specific" /><br/><input type="hidden" name="tlow" value="0.002" /><br/><input type="hidden" name="tup" value="0.002" /><br/><input type="hidden" name="userid" value="ajj" />
+            </div>
+            <input type="hidden" name="output" value="tabses">
+            <button class="btn btn-secondary w-100 mb-3" type="submit">
+              SESAME Format<br>
+              <small>(full data set of gray opacities only)</small>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <div class="card-text">
+      <a href="/static/opacdocs/sesame.html">More information about SESAME format</a>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-3 shadow-25 border-0">
+  <div class="card-header text-center">2D-Plot Opacities Outputs</div>
+  <div class="card-body px-3 pt-3 pb-0">
+    <div class="card-text">
+      <div class="row">
+        <div class="col-12 ">
+          <form method="post" action="./plotOptions">
+            <div class="d-none"><input type="hidden" name="datype" value="groups" />
+<input type="hidden" name="dens" value="1.91629314435e-09" />
+<input type="hidden" name="egphigh" value="0.0008451366330684721" />
+<input type="hidden" name="egplow" value="0.0005256791122018425" />
+<input type="hidden" name="egrid" value="range" />
+<input type="hidden" name="energies" value=".1 1. 10." />
+<input type="hidden" name="espace" value="log" />
+<input type="hidden" name="fractype" value="atomic" />
+<input type="hidden" name="idnumber" value="19000" />
+<input type="hidden" name="isotope" value="isotope" />
+<input type="hidden" name="lib" value="new" />
+<input type="hidden" name="mixname" value="phW06T1" />
+<input type="hidden" name="mixture" value="0.888701479526 1 1.007825 0.026829091133 2 4.002542316 2.22763869472e-06 6 12.18444368 0.000100892189721 7 14.00310906 7.61511715079e-05 8 16.02268521 2.31806331149e-09 9 18.9984032 2.03558617457e-05 10 19.9924402 3.785715181e-05 12 23.98433539 1.98709195045e-07 20 39.962591" />
+<input type="hidden" name="ngpengs" value="1000" />
+<input type="hidden" name="nr" value="3" />
+<input type="hidden" name="nthin" value="10" />
+<input type="hidden" name="plasnu" value="off" />
+<input type="hidden" name="rgrid" value="specific" />
+<input type="hidden" name="rlow" value="1.91629314435e-09" />
+<input type="hidden" name="rspace" value="log" />
+<input type="hidden" name="rup" value="1.91629314435e-09" />
+<input type="hidden" name="temps" value=".002" />
+<input type="hidden" name="tgrid" value="specific" />
+<input type="hidden" name="tlow" value="0.002" />
+<input type="hidden" name="tup" value="0.002" />
+<input type="hidden" name="userid" value="ajj" />
+</div>
+            <input type="hidden" name="output" value="pltgray2d">
+            <button class="btn btn-secondary w-100 mb-3" type="submit">Gray mean</button>
+          </form>
+        </div>
+        <div class="col-12 ">
+          <form method="post" action="./plotOptions">
+            <div class="d-none"><input type="hidden" name="datype" value="groups" />
+<input type="hidden" name="dens" value="1.91629314435e-09" />
+<input type="hidden" name="egphigh" value="0.0008451366330684721" />
+<input type="hidden" name="egplow" value="0.0005256791122018425" />
+<input type="hidden" name="egrid" value="range" />
+<input type="hidden" name="energies" value=".1 1. 10." />
+<input type="hidden" name="espace" value="log" />
+<input type="hidden" name="fractype" value="atomic" />
+<input type="hidden" name="idnumber" value="19000" />
+<input type="hidden" name="isotope" value="isotope" />
+<input type="hidden" name="lib" value="new" />
+<input type="hidden" name="mixname" value="phW06T1" />
+<input type="hidden" name="mixture" value="0.888701479526 1 1.007825 0.026829091133 2 4.002542316 2.22763869472e-06 6 12.18444368 0.000100892189721 7 14.00310906 7.61511715079e-05 8 16.02268521 2.31806331149e-09 9 18.9984032 2.03558617457e-05 10 19.9924402 3.785715181e-05 12 23.98433539 1.98709195045e-07 20 39.962591" />
+<input type="hidden" name="ngpengs" value="1000" />
+<input type="hidden" name="nr" value="3" />
+<input type="hidden" name="nthin" value="10" />
+<input type="hidden" name="plasnu" value="off" />
+<input type="hidden" name="rgrid" value="specific" />
+<input type="hidden" name="rlow" value="1.91629314435e-09" />
+<input type="hidden" name="rspace" value="log" />
+<input type="hidden" name="rup" value="1.91629314435e-09" />
+<input type="hidden" name="temps" value=".002" />
+<input type="hidden" name="tgrid" value="specific" />
+<input type="hidden" name="tlow" value="0.002" />
+<input type="hidden" name="tup" value="0.002" />
+<input type="hidden" name="userid" value="ajj" />
+</div>
+            <input type="hidden" name="output" value="pltgrup2d">
+            <button class="btn btn-secondary w-100 mb-3" type="submit">Multigroup</button>
+          </form>
+        </div>
+        <div class="col-12 d-none">
+          <form method="post" action="./plotOptions">
+            <div class="d-none"><input type="hidden" name="datype" value="groups" />
+<input type="hidden" name="dens" value="1.91629314435e-09" />
+<input type="hidden" name="egphigh" value="0.0008451366330684721" />
+<input type="hidden" name="egplow" value="0.0005256791122018425" />
+<input type="hidden" name="egrid" value="range" />
+<input type="hidden" name="energies" value=".1 1. 10." />
+<input type="hidden" name="espace" value="log" />
+<input type="hidden" name="fractype" value="atomic" />
+<input type="hidden" name="idnumber" value="19000" />
+<input type="hidden" name="isotope" value="isotope" />
+<input type="hidden" name="lib" value="new" />
+<input type="hidden" name="mixname" value="phW06T1" />
+<input type="hidden" name="mixture" value="0.888701479526 1 1.007825 0.026829091133 2 4.002542316 2.22763869472e-06 6 12.18444368 0.000100892189721 7 14.00310906 7.61511715079e-05 8 16.02268521 2.31806331149e-09 9 18.9984032 2.03558617457e-05 10 19.9924402 3.785715181e-05 12 23.98433539 1.98709195045e-07 20 39.962591" />
+<input type="hidden" name="ngpengs" value="1000" />
+<input type="hidden" name="nr" value="3" />
+<input type="hidden" name="nthin" value="10" />
+<input type="hidden" name="plasnu" value="off" />
+<input type="hidden" name="rgrid" value="specific" />
+<input type="hidden" name="rlow" value="1.91629314435e-09" />
+<input type="hidden" name="rspace" value="log" />
+<input type="hidden" name="rup" value="1.91629314435e-09" />
+<input type="hidden" name="temps" value=".002" />
+<input type="hidden" name="tgrid" value="specific" />
+<input type="hidden" name="tlow" value="0.002" />
+<input type="hidden" name="tup" value="0.002" />
+<input type="hidden" name="userid" value="ajj" />
+</div>
+            <input type="hidden" name="output" value="pltcont2d">
+            <button class="btn btn-secondary w-100 mb-3" type="submit">Frequency dependent</button>
+          </form>
+        </div>
+        <div class="col-12 d-none">
+          <form method="post" action="./plotOptions">
+            <div class="d-none"><input type="hidden" name="datype" value="groups" />
+<input type="hidden" name="dens" value="1.91629314435e-09" />
+<input type="hidden" name="egphigh" value="0.0008451366330684721" />
+<input type="hidden" name="egplow" value="0.0005256791122018425" />
+<input type="hidden" name="egrid" value="range" />
+<input type="hidden" name="energies" value=".1 1. 10." />
+<input type="hidden" name="espace" value="log" />
+<input type="hidden" name="fractype" value="atomic" />
+<input type="hidden" name="idnumber" value="19000" />
+<input type="hidden" name="isotope" value="isotope" />
+<input type="hidden" name="lib" value="new" />
+<input type="hidden" name="mixname" value="phW06T1" />
+<input type="hidden" name="mixture" value="0.888701479526 1 1.007825 0.026829091133 2 4.002542316 2.22763869472e-06 6 12.18444368 0.000100892189721 7 14.00310906 7.61511715079e-05 8 16.02268521 2.31806331149e-09 9 18.9984032 2.03558617457e-05 10 19.9924402 3.785715181e-05 12 23.98433539 1.98709195045e-07 20 39.962591" />
+<input type="hidden" name="ngpengs" value="1000" />
+<input type="hidden" name="nr" value="3" />
+<input type="hidden" name="nthin" value="10" />
+<input type="hidden" name="plasnu" value="off" />
+<input type="hidden" name="rgrid" value="specific" />
+<input type="hidden" name="rlow" value="1.91629314435e-09" />
+<input type="hidden" name="rspace" value="log" />
+<input type="hidden" name="rup" value="1.91629314435e-09" />
+<input type="hidden" name="temps" value=".002" />
+<input type="hidden" name="tgrid" value="specific" />
+<input type="hidden" name="tlow" value="0.002" />
+<input type="hidden" name="tup" value="0.002" />
+<input type="hidden" name="userid" value="ajj" />
+</div>
+            <input type="hidden" name="output" value="pltboth2d">
+            <button class="btn btn-secondary w-100 mb-3" type="submit">Multigroup and<br>frequency dependent</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+  <div class="row mb-3">
+    <div class="col-12 col-lg-4 mb-3">
+      <div class="card shadow-25 border-0">
+        <div class="card-header">Useful Links</div>
+        <div class="card-body">
+          <div class="card-text">
+            <p><a href="https://www.lanl.gov/engage/organizations/aldsct/theoretical">Group T-1 Home Page</a></p>
+            <p><a href="https://www.lanl.gov/engage/organizations/xcp">Group XCP-5 Home Page</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-4 mb-3">
+      <div class="card shadow-25 border-0">
+        <div class="card-header">Please mail questions or comments to:</div>
+        <div class="card-body">
+          <div class="card-text">
+            <p>LANL T-1 Opacities</p>
+            <a href="mailto:opacity@lanl.gov">opacity@lanl.gov</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-4 mb-3">
+      <div class="card shadow-25 border-0">
+        <div class="card-header">Los Alamos Report No.</div>
+        <div class="card-body">
+          <div class="card-text">
+            <p>LA-UR-01-1257</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  </main>
+
+  <footer>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-sm-3">
+          <img src="/static/images/lanl-logo-solid.png" alt="" class="img-fluid mb-1 mx-auto">
+        </div>
+        <div class="col-sm-6">
+          <ul class="list-inline text-center mb-1">
+            <li class="list-inline-item"><a href="https://www.lanl.gov/resources/contacts.php"><small>Contacts</small></a></li>
+            <li class="list-inline-item"><a href="https://www.lanl.gov/newsroom/media-contacts/index.php"><small>Media</small></a></li>
+            <li class="list-inline-item"><a href="http://www.lanl.gov/calendar/index.php"><small>Calendar</small></a></li>
+          </ul>
+          <ul class="list-inline text-center mb-1">
+            <li class="list-inline-item"><a href="http://int.lanl.gov/"><small>Inside</small></a></li>
+            <li class="list-inline-item"><a href="https://www.lanl.gov/resources/web-policies/copyright-legal.php"><small>Terms of Use, Privacy</small></a></li>
+            <li class="list-inline-item"><a href="http://www.lanl.gov/www-team/forms/wwwgen.php"><small>Site Feedback</small></a></li>
+          </ul>
+          <p class="text-center txt-sm mb-1"><small>Operated by Los Alamos National Security, LLC for the U.S Dept. of Energy's NNSA</small></p>
+          <p class="text-center mb-0"><small>&copy; Copyright 2018 LANS, LLC</small></p>
+        </div>
+        <div class="col-sm-3">
+          <div class="row align-items-center">
+            <div class="col-md-5">
+              <img src="/static/images/DOE_Seal_White.png" alt="" class="img-fluid mx-auto align-middle">
+            </div>
+            <div class="col-md-7">
+              <img src="/static/images/NNSA_Logo.png" alt="" class="img-fluid mx-auto align-middle">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,388 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "scientific_status": "Loophole progress: current emission actually propagated to null infinity and mass-normalized; physical error and observability closure remain open.",
+  "production": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "controls": {
+      "angular": 0.00043148665277054516,
+      "radial": 1.450529942692843e-05,
+      "time": 0.012889745828616453
+    },
+    "arrival_controls": {
+      "angular": 1.639193810344557e-05,
+      "radial": 0.0,
+      "time": 0.012785658121997936
+    },
+    "paths": [
+      {
+        "steps": 128,
+        "background_port_relative": 3.031816432765837e-16,
+        "response_port_relative": 2.1599002469674726e-16,
+        "emitted_energy_erg": 2.785210801409269e+31,
+        "absolute_emission_energy_erg": 2.7852117761601746e+31,
+        "signed_increment_energy_erg": -4.699790310910174e+24,
+        "angular": 8,
+        "radial": 8,
+        "seconds": 1.036282454000002,
+        "kernel_seconds": 0.825558786000002,
+        "delay_inverse_seconds": 4.0766001685454967e-16,
+        "endpoint_exterior": -5.399550864281936e-33,
+        "endpoint_arrived_energy_erg": 3.7213400316816606e+29,
+        "endpoint_increment_exterior": 5.19610449500358e-40
+      },
+      {
+        "steps": 128,
+        "background_port_relative": 3.031816432765837e-16,
+        "response_port_relative": 2.1599002469674726e-16,
+        "emitted_energy_erg": 2.785210801409269e+31,
+        "absolute_emission_energy_erg": 2.7852117761601746e+31,
+        "signed_increment_energy_erg": -4.699790310910174e+24,
+        "angular": 4,
+        "radial": 8,
+        "seconds": 0.1918307510000119,
+        "kernel_seconds": 0.117035357000006,
+        "delay_inverse_seconds": 3.93348548177741e-16,
+        "endpoint_exterior": -5.401880698410829e-33,
+        "endpoint_arrived_energy_erg": 3.721401031657122e+29,
+        "endpoint_increment_exterior": 5.198150250578445e-40
+      },
+      {
+        "steps": 128,
+        "background_port_relative": 3.031816432765837e-16,
+        "response_port_relative": 2.1599002469674726e-16,
+        "emitted_energy_erg": 2.785210801409269e+31,
+        "absolute_emission_energy_erg": 2.7852117761601746e+31,
+        "signed_increment_energy_erg": -4.699790310910174e+24,
+        "angular": 8,
+        "radial": 4,
+        "seconds": 0.1755020730000041,
+        "kernel_seconds": 0.14761745299999518,
+        "delay_inverse_seconds": 4.0766001685454967e-16,
+        "endpoint_exterior": -5.399629186383993e-33,
+        "endpoint_arrived_energy_erg": 3.7213400316816606e+29,
+        "endpoint_increment_exterior": 5.273852811699987e-40
+      },
+      {
+        "steps": 64,
+        "background_port_relative": 2.3385167491381353e-16,
+        "response_port_relative": 1.2406698178143628e-16,
+        "emitted_energy_erg": 2.8013009449068626e+31,
+        "absolute_emission_energy_erg": 2.8013019197463633e+31,
+        "signed_increment_energy_erg": -4.700621562742022e+24,
+        "angular": 8,
+        "radial": 8,
+        "seconds": 0.07692481000000839,
+        "kernel_seconds": 0.825558786000002,
+        "delay_inverse_seconds": 4.0766001685454967e-16,
+        "endpoint_exterior": -5.469149702511216e-33,
+        "endpoint_arrived_energy_erg": 3.768919813082447e+29,
+        "endpoint_increment_exterior": 5.256029119587701e-40
+      }
+    ],
+    "endpoint_compact": 1.0211342924230259e-27,
+    "endpoint_exterior": -5.399550864281936e-33,
+    "endpoint_scalar": 1.0211288928721616e-27,
+    "endpoint_mass_normalization_term": 4.216995177259467e-27,
+    "endpoint_normalized": 5.2381240701316285e-27,
+    "epsilon": 1.054154793268755e-24,
+    "alpha0": 0.0040003566878288165,
+    "frozen_source_potential_bound": 2.3658647831584008e-32,
+    "conditional_frozen_source_GR_interval": [
+      5.238100411483796e-27,
+      5.238147728779461e-27
+    ],
+    "same_initial_gamma_and_photon_fourth_moment": true,
+    "actual_current_emission_at_null_infinity": true,
+    "actual_emission_mass_normalization": true,
+    "signed_increment_kept_separate": true,
+    "potential_scope": "Same frozen initial coefficients; recomputed current source polynomial norm and absolute signed-emission energy. No old scalar interval or old source norm reused.",
+    "limitations": "The interval encloses potential repetitions of the declared source only. Quadrature/time comparison, source construction, microscopic EOS, continuous coupling, discarded matter transport/trace and nonlinear corrections are not enclosed.",
+    "full_floor_feedback_enclosed": false,
+    "uniform_EOS_derivative_bound": false,
+    "coupled_fixed_point_verified": false,
+    "nonlinear_GR": false,
+    "final_charge_solved": false,
+    "full_goal_complete": false,
+    "seconds": 17.334046733000008,
+    "peak_RSS_bytes": 440139776
+  },
+  "independent_audit": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "primitive_checks": [
+      {
+        "steps": 64,
+        "relative": [
+          1.1019472745700879e-16,
+          1.661154523153592e-16,
+          0.0,
+          6.204944123261584e-19
+        ],
+        "queries": 385
+      },
+      {
+        "steps": 128,
+        "relative": [
+          1.213060938236673e-16,
+          1.7752373356453569e-16,
+          0.0,
+          7.758873190153037e-19
+        ],
+        "queries": 769
+      }
+    ],
+    "normalization_identity_relative": 6.707314906226387e-17,
+    "exact_rational_pairing_knots": 417,
+    "exact_discrete_maximum_port_mismatch_erg": 5.391500206802361e+22,
+    "absolute_emission_energy_upper_erg": 2.785211776160175e+31,
+    "source_pairing_mass_effect_bound": 5.99050387870808e-43,
+    "all_orders_potential_bound": 3.752706922895146e-32,
+    "conditional_stored_source_interval": [
+      5.2380865430623986e-27,
+      5.2381615972008584e-27
+    ],
+    "conditional_bound": 3.752706922955051e-32,
+    "mass_normalization_fraction": 0.8050582843780366,
+    "native_increment_arrived_energy_erg": -4.2609407637672054e+22,
+    "native_increment_mass_normalization": -4.828466761548457e-34,
+    "source_pairing_scope": "Every endpoint and both sides of each signed packet in the exact rational step/packet/linear-port representation; only its mass-constraint consequence is bounded.",
+    "interval_scope": "Same frozen first-variation source and coefficient model, absolute signed emission and all potential repetitions. Not a complete physical error interval. All source cells retained conservatively.",
+    "missing": "EOS/derivative reconstruction, continuous coupling, emission/charge quadrature and time error, missing/discarded matter feedback, nonlinear GR and static comparator/observability.",
+    "static_mass_redefinition_is_not_dynamic_novelty": true,
+    "uniform_EOS_derivative_bound": false,
+    "full_source_error_enclosed": false,
+    "coupled_fixed_point_verified": false,
+    "nonlinear_GR": false,
+    "final_charge_solved": false,
+    "full_goal_complete": false,
+    "seconds": 0.609313094
+  },
+  "interpretation": {
+    "classification": "Counterexample candidate",
+    "same_compact_with_coarse_exterior": 5.2920410591713444e-27,
+    "exterior_time_change_over_fine_total": 0.010293186705362167,
+    "scope": "Only the exterior history is changed to its coarse path while compact charge is held fixed. This is a finite sensitivity comparison, not the full time error or a rigorous enclosure.",
+    "native_collision_material_endpoint": 1.3807735947167448e-34,
+    "native_collision_material_plus_exterior_and_mass": -3.4476879707272174e-34,
+    "interpretation": "The known mass normalization must be separated before static-comparator or dynamic-novelty claims. Small signed components do not establish a detected physical effect."
+  },
+  "pilot": {
+    "classification": "Counterexample candidate",
+    "row": {
+      "steps": 128,
+      "background_port_relative": 3.031816432765837e-16,
+      "response_port_relative": 2.1599002469674726e-16,
+      "emitted_energy_erg": 2.785210801409269e+31,
+      "absolute_emission_energy_erg": 2.7852117761601746e+31,
+      "signed_increment_energy_erg": -4.699790310910174e+24,
+      "angular": 4,
+      "radial": 4,
+      "seconds": 0.9440442630000021,
+      "kernel_seconds": 0.7850522499999997,
+      "delay_inverse_seconds": 3.93348548177741e-16,
+      "endpoint_exterior": -5.401959123589738e-33,
+      "endpoint_arrived_energy_erg": 3.721401031657122e+29,
+      "endpoint_increment_exterior": 5.275974765788182e-40
+    },
+    "upper_seconds": 53.21661968200003,
+    "eligible": true,
+    "same_initial_gamma_and_photon_fourth_moment": true,
+    "seconds": 27.025526211
+  },
+  "action_timer_seconds": 44.96888603800001,
+  "new_physical_trajectories": 0,
+  "phase144_to_current_emission_applied": true,
+  "final_charge_solved": false,
+  "full_goal_complete": false,
+  "prior_master_sha256": "fd12f59ea746d353cda2c4575dcd6fd7902ca030486d1b63042ed413e26bad57",
+  "unchanged_earlier_hashes_inherited": true,
+  "preserved_document_prefixes": {
+    "docs/model-definition.md": {
+      "bytes": 231991,
+      "sha256": "cc199c752775b6f798998104d18cd355e06f70e29f9580a5e7d39bdf5fcda32a"
+    },
+    "docs/observable-targets.md": {
+      "bytes": 224924,
+      "sha256": "4aedc7ce44d989fc2c75fd83e60e5e588f1a636738f18dc842e7a4f5ac384637"
+    },
+    "docs/adiabatic-limit.md": {
+      "bytes": 220628,
+      "sha256": "a31217f4761c27d645fa9a640afd3a34e8aa36afda14f8ecdb51a19f9dc31327"
+    },
+    "docs/nonadiabatic-regime.md": {
+      "bytes": 227113,
+      "sha256": "be582155b70c294c9d5c5c158d4c869e30b35039f84a990a40112669baa125a8"
+    },
+    "docs/failure-ledger-dynamic-chi.md": {
+      "bytes": 258573,
+      "sha256": "690d03e1f48c673f6b8e45826e9d42ab98b4712df000caa06a4a8de5d6180203"
+    },
+    "docs/dynamic-charge-completion.md": {
+      "bytes": 88222,
+      "sha256": "a3bbc851ed543d0ead3087c6d922512beb0faaac38a3d2b4d0bd5de51a9b330e"
+    }
+  },
+  "verified_execution_bindings": [
+    {
+      "plan": "outputs/direct-eos-gr33/native-charge-null-infinity/plan.json",
+      "path": "verification/def_native_charge_null_infinity.py",
+      "sha256": "4291ee4e8d53156aeb0bf9876e61cdb9f7113b074e9f255d0044de9e04b0c8b0"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-charge-null-infinity/plan.json",
+      "path": "verification/def_native_global_scalar_closure.py",
+      "sha256": "b8f8cbab5f052100dc57963d747c200d0fa871993db62df5fc295881201f9db2"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-charge-null-infinity/plan.json",
+      "path": "verification/verify_native_global_scalar_closure.py",
+      "sha256": "0660ecae7910dab9e9cc61ff3b649dc2cc2938f62fffa680c756d0d12dcbaeb1"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-charge-null-infinity/plan.json",
+      "path": "verification/verify_native_updated_gr_return.py",
+      "sha256": "d2c456a74a41ee97b07f026effdadd08c72d583b059420e933b8d72094c719d9"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-charge-null-infinity/plan.json",
+      "path": "verification/def_native_characteristic_gr.py",
+      "sha256": "1630d3f008a1e59748d318f921eed7da8fbea4c49d33e5b86617f67009a27076"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-charge-null-infinity/plan.json",
+      "path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/finite-collision/extended/applied/completed-return/audit.json",
+      "sha256": "8bdf6ee4fbc3188c298bd5aec7292b7fe0ea658669f574393cba1ca3fdd9d3f6"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-charge-null-infinity/plan.json",
+      "path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/finite-collision/extended/applied/return/gr/combined-source.npz",
+      "sha256": "b56c14b975b8346ceb61316f592e37dc8c20bd2078dd52875767038b5e1b9e3e"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-charge-null-infinity/plan.json",
+      "path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/finite-collision/extended/applied/return/gr/combined-charge.npz",
+      "sha256": "f7b9b7514f2d93bf8544cc2bf2ea7cea09fe2643fd7a15d7315e0229f3b0ee6e"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-charge-null-infinity/plan.json",
+      "path": "outputs/direct-eos-gr33/def-native-global-scalar-closure/bound.json",
+      "sha256": "39cbee9c32b2d16c239d8ae14f188be2177e53bca27fe0ec4d8df88a29a66f58"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-charge-null-infinity/plan.json",
+      "path": "outputs/direct-eos-gr33/def-native-global-scalar-closure/bound-plan.json",
+      "sha256": "9da513286ba292dc3ce3f0b4262e5445e4f4fb70f8841bd07e72921079018cc5"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-charge-null-infinity/plan.json",
+      "path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/background/accepted-ports-64.npz",
+      "sha256": "114f0cbc3ee6af4eb24753e766cea8292ee0761078d3d38b2aab68403f01681b"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-charge-null-infinity/plan.json",
+      "path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/evolution/source-64.npz",
+      "sha256": "f7e694bc9bbaabb3612916204fd97b2eefe12053137119ad629b33b096ad7b56"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-charge-null-infinity/plan.json",
+      "path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/finite-collision/extended/applied/total-photons/steps-64-reference-128.npz",
+      "sha256": "57c36259cec7e520ec804b15ddf004db217484e978d99e489c2d80b1dbf595c1"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-charge-null-infinity/plan.json",
+      "path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/background/accepted-ports-128.npz",
+      "sha256": "ccc7aad1a09bcf2f510b4b709c0d7bc1076667f09507bc52d7b906983cdb507c"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-charge-null-infinity/plan.json",
+      "path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/evolution/source-128.npz",
+      "sha256": "ab75b15bd0b3e8de9b6803dff7afe288e5eecac56089bdf74055de1b1db7c0bf"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-charge-null-infinity/plan.json",
+      "path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/finite-collision/extended/applied/total-photons/steps-128-reference-128.npz",
+      "sha256": "98317c46660725678e33b1816a67b0f71772d5846aa0b8bf1e598870adc576ea"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-charge-null-infinity/audit-plan.json",
+      "path": "verification/verify_native_charge_null_infinity.py",
+      "sha256": "47a5d95ea8bbb45f061cafcddaa2051b7668da5fe80e9bb03b8c7aff6fcb65f7"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-charge-null-infinity/audit-plan.json",
+      "path": "verification/def_native_charge_null_infinity.py",
+      "sha256": "4291ee4e8d53156aeb0bf9876e61cdb9f7113b074e9f255d0044de9e04b0c8b0"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-charge-null-infinity/audit-plan.json",
+      "path": "outputs/direct-eos-gr33/native-charge-null-infinity/plan.json",
+      "sha256": "f85725813564309dda95a192b32038f64486193de670e674d51478e660df2b0f"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-charge-null-infinity/audit-plan.json",
+      "path": "outputs/direct-eos-gr33/native-charge-null-infinity/production.json",
+      "sha256": "e0b5f8d4dd98ffa23855cea9a824590d39eb1424a6db608ad567b1401825369d"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-charge-null-infinity/audit-plan.json",
+      "path": "outputs/direct-eos-gr33/native-charge-null-infinity/charge.npz",
+      "sha256": "5ab175cefbb083367f3f9fbcc844fa7863d4fdab24696b4ce6532312afcb94ae"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-charge-null-infinity/audit-plan.json",
+      "path": "outputs/direct-eos-gr33/native-charge-null-infinity/exterior-128-a8-r8.npz",
+      "sha256": "4e7431fed505d1c1405597a33dd52674529114fafc877b8b70a753ca42027b40"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-charge-null-infinity/audit-plan.json",
+      "path": "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/finite-collision/extended/applied/return/gr/combined-source.npz",
+      "sha256": "b56c14b975b8346ceb61316f592e37dc8c20bd2078dd52875767038b5e1b9e3e"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-charge-null-infinity/audit-plan.json",
+      "path": "outputs/direct-eos-gr33/def-native-global-scalar-closure/bound.json",
+      "sha256": "39cbee9c32b2d16c239d8ae14f188be2177e53bca27fe0ec4d8df88a29a66f58"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/native-charge-null-infinity/audit-plan.json",
+      "path": "outputs/direct-eos-gr33/def-native-global-scalar-closure/check.json",
+      "sha256": "13e0c7603d3f41da4e7794801ad537fed8f8224a16133266c42e39d5985bdf71"
+    }
+  ],
+  "syntax_checked": [
+    "def_native_charge_null_infinity",
+    "verify_native_charge_null_infinity"
+  ],
+  "new_file_hashes_checked": 27,
+  "sha256": {
+    "docs/adiabatic-limit.md": "5a86fde2042e1efe243e22777aa0fdaf77e42a43a83f15cc077c3c26cd73dcd5",
+    "docs/dynamic-charge-completion.md": "b1027e82d20b944cf279219b4209407cb50a01f7b967528c520c098e2ee805ed",
+    "docs/failure-ledger-dynamic-chi.md": "cf2c3a5d5a8b486cd7dec41ebc85a1f8b7c7a69ea6aea067ba7f442cd7fb90e2",
+    "docs/model-definition.md": "1e81e7d1bf8fb478d08e0ba1d860e707715a701c4bdde781c14a82f9c8827863",
+    "docs/nonadiabatic-regime.md": "d0fded755723260afd17fb28824372e40e311693a3c847ed9ccfe91d72eefc44",
+    "docs/observable-targets.md": "caf1f087e0b98051b1bf48d28abfb4a7920a819d76e4cb15580c255690f8f750",
+    "notes/REQUEST145_NATIVE_CHARGE_NULL_INFINITY_KO.md": "38c7166b355fc290bb63efb70898dff26bcc80cf9cc78e1ac1b520100a94086b",
+    "outputs/direct-eos-gr33/native-charge-null-infinity/audit-plan.json": "5a40b3ca5f0643a55a96b4a66612b28e61e234c67251d3970b110fe621ba7764",
+    "outputs/direct-eos-gr33/native-charge-null-infinity/audit.json": "82647e97f4e2fae9567cc9378199ba25166c0e489ace7539fd0a53b54b12623a",
+    "outputs/direct-eos-gr33/native-charge-null-infinity/charge.npz": "5ab175cefbb083367f3f9fbcc844fa7863d4fdab24696b4ce6532312afcb94ae",
+    "outputs/direct-eos-gr33/native-charge-null-infinity/exterior-128-a4-r4.json": "716dc856387557e5f867855688eade28f1e0257380aa68ab1b4d3f60f9fe6fbf",
+    "outputs/direct-eos-gr33/native-charge-null-infinity/exterior-128-a4-r4.npz": "98301864830dd5c07fefad7344cbe6860022090a55755f9e2548a68891ae0214",
+    "outputs/direct-eos-gr33/native-charge-null-infinity/exterior-128-a4-r8.json": "52addad61e4b5d40cea1fa78e079db43611379b35d6a4503a5913fc14b80996a",
+    "outputs/direct-eos-gr33/native-charge-null-infinity/exterior-128-a4-r8.npz": "ec617bc4762af7368a12e5538701ba5e20ef7f82051cf35d4ff1be8f6ee277e3",
+    "outputs/direct-eos-gr33/native-charge-null-infinity/exterior-128-a8-r4.json": "d557553eb5c81f7677b6d44c7c7cdb5a9fe6c537417476166e69c97eaf5786ae",
+    "outputs/direct-eos-gr33/native-charge-null-infinity/exterior-128-a8-r4.npz": "46139b969715fcf49b87d07cb663ddbc74785aa7cd7949bdb624c94a51409845",
+    "outputs/direct-eos-gr33/native-charge-null-infinity/exterior-128-a8-r8.json": "ba245cdd5b5256da8faf42c43f11ce69079d42eb429a992472448c14d579034b",
+    "outputs/direct-eos-gr33/native-charge-null-infinity/exterior-128-a8-r8.npz": "4e7431fed505d1c1405597a33dd52674529114fafc877b8b70a753ca42027b40",
+    "outputs/direct-eos-gr33/native-charge-null-infinity/exterior-64-a8-r8.json": "2845e55c6135f4a24ba438c247acee068066f8f10e2ab6cfb2dda6305270967a",
+    "outputs/direct-eos-gr33/native-charge-null-infinity/exterior-64-a8-r8.npz": "1fd17610250b4e97a32b1364836b486ef25f0004e0d2d6e1cbcb14c1610a5509",
+    "outputs/direct-eos-gr33/native-charge-null-infinity/interpretation.json": "ffdf871b80abe8e398ae7aaaf7f3d593d55dd7502e5e6824936b5fc595fa7972",
+    "outputs/direct-eos-gr33/native-charge-null-infinity/pilot.json": "888a35e5e00c227312b56e40255d35016fbffbe798501f2dba018b243696eccb",
+    "outputs/direct-eos-gr33/native-charge-null-infinity/plan.json": "f85725813564309dda95a192b32038f64486193de670e674d51478e660df2b0f",
+    "outputs/direct-eos-gr33/native-charge-null-infinity/production.json": "e0b5f8d4dd98ffa23855cea9a824590d39eb1424a6db608ad567b1401825369d",
+    "outputs/direct-eos-gr33/native-charge-null-infinity/symbolic.json": "ee3d162d334ded51aa32a94e2f4298c8408336bb09ce2c6fce43683551604c8d",
+    "verification/def_native_charge_null_infinity.py": "4291ee4e8d53156aeb0bf9876e61cdb9f7113b074e9f255d0044de9e04b0c8b0",
+    "verification/verify_native_charge_null_infinity.py": "47a5d95ea8bbb45f061cafcddaa2051b7668da5fe80e9bb03b8c7aff6fcb65f7"
+  }
+}

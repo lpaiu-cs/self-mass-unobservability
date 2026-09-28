@@ -1,0 +1,82 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": false,
+  "controls": {
+    "normalized": {
+      "angular": 1.3197361210755267e-05,
+      "radial": 1.4953835709904417e-11,
+      "time": 2.7878871916849352e-11
+    },
+    "native_return": {
+      "angular": 2.144512023954175e-09,
+      "radial": 0.0,
+      "time": 0.00027035408170712446
+    },
+    "normalized_exterior_parts": {
+      "angular": 0.002215455880749407,
+      "radial": 2.0280197619089947e-15,
+      "time": 0.0003682651234700383
+    },
+    "arrived_parts_erg": {
+      "angular": 0.0,
+      "radial": 0.0,
+      "time": 0.0003460600251968911
+    }
+  },
+  "rows": [
+    {
+      "steps": 128,
+      "angular": 8,
+      "radial": 8,
+      "response_port_relative": 2.1048486708021835e-16,
+      "seconds": 10.42411256899959,
+      "normalization_identity": 1.3696999074800704e-16
+    },
+    {
+      "steps": 128,
+      "angular": 4,
+      "radial": 8,
+      "response_port_relative": 2.1048486708021835e-16,
+      "seconds": 4.96243509299984,
+      "normalization_identity": 1.3696818312941988e-16
+    },
+    {
+      "steps": 128,
+      "angular": 8,
+      "radial": 4,
+      "response_port_relative": 2.1048486708021835e-16,
+      "seconds": 0.2110083739999027,
+      "normalization_identity": 1.3696999075005527e-16
+    },
+    {
+      "steps": 64,
+      "angular": 8,
+      "radial": 8,
+      "response_port_relative": 5.032263160384308e-17,
+      "seconds": 2.484850460999951,
+      "normalization_identity": 6.84849953759128e-17
+    }
+  ],
+  "endpoint_normalized": 5.238116829943246e-27,
+  "previous_normalized": 5.238116489329999e-27,
+  "native_return_normalized": 3.4061324677166164e-34,
+  "endpoint_compact": 1.0211270550483363e-27,
+  "endpoint_exterior": -5.3995508610365524e-33,
+  "endpoint_mass_term": 4.21699517444577e-27,
+  "previous_same_emission_relative": 2.0545499948190624e-16,
+  "normalization_increment_symbolic": true,
+  "packet_fronts_integrated": true,
+  "arrival_angular_integral_exact": true,
+  "delay_inverse_seconds": 4.49293380277993e-16,
+  "computed_packet_kernels": 829,
+  "seconds": 20.946738762999303,
+  "same_fine_background_for_both_response_clocks": true,
+  "original_full_cadence_compact_preserved": true,
+  "actual_new_angular_emission_at_null_infinity": true,
+  "actual_emission_mass_normalization": true,
+  "continuous_emission_error_enclosed": false,
+  "conditional_interval_reused": false,
+  "coupled_fixed_point_verified": false,
+  "final_charge_solved": false,
+  "full_goal_complete": false
+}

@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/apply_actual_stage_gr.py", line 184, in <module>
+    if action.startswith('field'):field(64 if action=='field648' else 128,4 if action=='field1284' else 8)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/apply_actual_stage_gr.py", line 83, in field
+    FunctionType(bridge.prior.initialize.__code__,dict(bridge.prior.initialize.__globals__,OUT=OUT))()
+AttributeError: module 'apply_driver_aware_radau_gr' has no attribute 'initialize'

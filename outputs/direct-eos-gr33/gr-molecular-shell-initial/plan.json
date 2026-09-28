@@ -1,0 +1,47 @@
+{
+  "classification": "Counterexample candidate",
+  "bindings": {
+    "verification/gr_molecular_shell_initial.py": "60177855e9f43b70eb12be68017bac42e73b333ed995c732fad19c9260f4a820",
+    "verification/gr_molecular_conservative_initial.py": "f9d53644927b05541289013995182b55e627d64389ff5804e5acefac5b7b0a07",
+    "outputs/direct-eos-gr33/gr-molecular-conservative-initial/plan.json": "13419af9df5eaab0fc1345d7329425fc286986c47b1a497a24cd30d90ce807fb",
+    "outputs/direct-eos-gr33/gr-molecular-conservative-initial/branches.json": "21bedf750eda917d123ed7a84c4ee0deb75928a611434423237cabc08598e3c7",
+    "outputs/direct-eos-gr33/gr-molecular-conservative-initial/path-4.npz": "171b3c577ab625ea38e804f20c89ea9bc76a11b5a2b639a9ca76020cd5b9dd07",
+    "outputs/direct-eos-gr33/gr-molecular-structure-defined/molecular-state-17-4.npz": "21ab88b4a5d404a06f09ace369ce65ccb43eeec4949211b6827618673d94b3ca",
+    "outputs/direct-eos-gr33/gr-molecular-structure-defined/result.json": "c50b593a19268ba915102872f4853cc8772a56e13ba52d5cb279bb2465135f22",
+    "outputs/direct-eos-gr33/gr-molecular-structure-defined/manifest.json": "cb60e8abcd5908cb5a6f2995de9a5a3ffbd9bf0001801d5713ba907b13101a96",
+    "outputs/direct-eos-gr33/gr-molecular-shell-initial/moments.npz": "a3bdba0b9866fac2afdd6afac1b0ba9368495522724257e2dc76746b6bc96c51"
+  },
+  "cells": 5735,
+  "pilot_cells": [
+    0,
+    1175,
+    1176,
+    1792,
+    1920,
+    2972,
+    5734
+  ],
+  "restriction_gates": {
+    "maximum_cell_baryon_relative_defect": 1e-14,
+    "maximum_cell_energy_relative_defect": 1e-13,
+    "maximum_native_thermal_residual": 1e-08,
+    "maximum_original_baryon_relative_defect": 1e-11,
+    "maximum_original_mass_relative_defect": 2e-12
+  },
+  "method": "Use each original baryon inventory and each independently retained RK4 shell mass increment as the finite-volume moments. Reuse the original conservative primitive inverse, mass/lapse reconstruction and fresh native molecular EOS/opacity diffusion initialization unchanged. No global mass fit, requested target substitution, shell rescaling or entropy fitting.",
+  "distinction": "This is a separately frozen finite-volume initial-data definition. It does not finish or pass the original 8/16-node quadrature. Subcell entropy and intermediate spatial error are not certified. Existing quadrature blocks and failures remain intact.",
+  "pilot": "Seven actual shell targets, including both sides of the molecular join and the interrupted region. Reuse their primitive solutions in the full-grid assembly. Stop on any original restriction failure.",
+  "budget": {
+    "workers": 4,
+    "blas_threads": 1,
+    "gpu": false,
+    "pilot_timeout_seconds": 90,
+    "full_timeout_seconds": 600,
+    "maximum_full_runs": 1,
+    "authorization_gate": "Extrapolated pilot CPU cost divided by four must be below 360 seconds; retain a 600-second hard cap. Failure or time cap stops this method without automatic refinement or relaxed gates."
+  },
+  "physical_EOS_certified": false,
+  "full_GR_evolution": false,
+  "native_subcell_quadrature_completed": false,
+  "continuous_errors_certified": false
+}

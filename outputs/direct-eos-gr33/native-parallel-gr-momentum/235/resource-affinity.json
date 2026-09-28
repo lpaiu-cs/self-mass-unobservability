@@ -1,0 +1,59 @@
+{
+  "pid": 146514,
+  "process_start_ticks": "1155821",
+  "boot_id": "8261121e-12db-4df6-81ef-d017b65fa802",
+  "unix": 1790270331.2282317,
+  "before": {
+    "146514": [
+      0
+    ],
+    "146568": [
+      0
+    ],
+    "146569": [
+      0
+    ],
+    "146570": [
+      0
+    ],
+    "146571": [
+      0
+    ],
+    "146572": [
+      0
+    ],
+    "146573": [
+      0
+    ],
+    "146574": [
+      0
+    ]
+  },
+  "after": {
+    "146514": [
+      2
+    ],
+    "146568": [
+      2
+    ],
+    "146569": [
+      2
+    ],
+    "146570": [
+      2
+    ],
+    "146571": [
+      2
+    ],
+    "146572": [
+      2
+    ],
+    "146573": [
+      2
+    ],
+    "146574": [
+      2
+    ]
+  },
+  "reason": "232and235both pinned CPU0. Move235to CPU2 so the two independent one-CPU experiments can progress concurrently. Same one-CPU cap, no source, plan, arithmetic or acceptance change."
+}

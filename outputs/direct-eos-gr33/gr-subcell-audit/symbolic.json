@@ -1,0 +1,7 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "construction": "Directly differentiate the full Lorentz map with rho=rho0*exp(eta) and arbitrary first-order EOS jet u=u0+u_lnrho*eta+cvT*theta, P=P0+P_lnrho*eta+P_lnT*theta, fixed Q. The initial node Jacobian has rows [rho0,0,0], [rho0*(C+u0+u_lnrho),rho0*cvT,2Q], [0,0,rho0*(C+u0)+P0].",
+  "integration": "Sum row 1 with positive proper-volume weights, row 2 with positive coordinate-volume weights, row 3 with proper-volume weights. Subtract C*kappa times row 1 from row 2. Linearity gives determinant B0*Cv_coordinate*enthalpy_proper>0 for any finite positive quadrature with positive rho,cvT,enthalpy. The continuum version additionally requires differentiation under the integral.",
+  "qualification": "Local inverse theorem still requires a differentiable EOS. This exact frozen-coefficient result does not enclose native evaluation, branch or global inverse errors."
+}

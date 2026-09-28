@@ -1,0 +1,19 @@
+{
+  "classification": "Proven",
+  "checkpoint": "1f4892ed",
+  "cells": 5735,
+  "bindings": {
+    "verification/gr_heat_primitive_global.py": "c5b4e8d6ba14410f3e5a83014c807e66a6907cf8a5dd86c264501cfbdb79a4ce",
+    "outputs/direct-eos-gr33/gr-heat-primitive-newton/manifest.json": "fc0c599521372d76fe8c7896e057a6a64ccaa36f079b9b1cbccae80c42e4df2b",
+    "outputs/direct-eos-gr33/gr-heat-primitive-newton/result.json": "2ae6a6e3224469a7a0ef7e5a7ac829e5b6169d62e64a30535e20591242fc25bb",
+    "outputs/direct-eos-gr33/gr-heat-primitive-inverse/symbolic.json": "026d6578b36968903d38be8d728f20bd484efa43e46d3fe0abde9992eaf1b5cc",
+    "outputs/direct-eos-gr33/gr-heat-characteristics/coefficients.npz": "c3e942d127fc698ae0edd8c5ead2d3047d1180aa017024c2ec895ba756683eb8",
+    "outputs/direct-eos-gr33/gr-heat-entropy-closure/initial-rates.npz": "c288fbf689b4fdccfef9901bf503363c1cd998fe014a5de023ce9f49d99aba4a",
+    "outputs/direct-eos-gr33/gr-heat-entropy-closure/manifest.json": "d48ed74b8faa1d9bff3d881b78e980d792eb0b762c5ed7ca74120de77813787e"
+  },
+  "target": "Prove uniqueness of the fixed-(D,E,J,Q,X) point primitive on a connected admissible thermal branch. Determine the exact minimum of the frozen normalized inverse determinant on the entire closed velocity interval[-1,1], extending the earlier |v|<=1/2 diagnostic without asserting frozen coefficients equal a physical EOS neighbourhood.",
+  "assumptions": "Natural units c=1. Fixed composition X and specified comoving heat Q. Positive D, rho,T,w and b=T*epsilon_T/w. At each density the specified temperature domain is an interval on which a C1 EOS has epsilon_T>0 throughout; the energy equation then defines at most one T(v) in that domain. The admissible velocities with T(v)>0 form the explicitly required connected interval I subset(-1,1). The pointwise determinant condition must hold at every possible root on that branch.",
+  "quantities": "b=T*epsilon_T/w; r=rho*P_rho/w; d=T*P_T/w; e=1-rho*epsilon_rho/w; j=Q/w; g=r+d*e/b. No substitution e=d is made for the stored native derivatives.",
+  "gates": "Record positive,zero,negative margins; never discard failed cells or replace native derivatives by a Maxwell identity. The old native27-case recovery result and all failures preceding its Newton repair remain frozen.",
+  "boundary": "A theorem with explicit branch-wide EOS premises plus an exact audit of frozen jets. Neither certifies actual native EOS neighbourhoods, root existence without a bracket, unresolved cell averages, the heat closure, atmosphere or a finite GR trajectory."
+}

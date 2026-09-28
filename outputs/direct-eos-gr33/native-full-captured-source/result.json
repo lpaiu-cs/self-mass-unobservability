@@ -1,0 +1,67 @@
+{
+  "classification": "Counterexample candidate",
+  "actual_same_joint_solution_GR_computed": false,
+  "checked_existing_history_assembly": true,
+  "full_period_source_started": false,
+  "live_snapshots": {
+    "236/controller-status.json": {
+      "state": "running",
+      "action": "coarse",
+      "child_pid": 172276,
+      "completed": [
+        {
+          "action": "field1288",
+          "returncode": 0
+        },
+        {
+          "action": "field648",
+          "returncode": 0
+        },
+        {
+          "action": "field1284",
+          "returncode": 0
+        },
+        {
+          "action": "collect",
+          "returncode": 0
+        },
+        {
+          "action": "metric",
+          "returncode": 0
+        }
+      ],
+      "elapsed_seconds": 4960.03279829
+    },
+    "236/capture-64.json": {
+      "actual_steps": 75,
+      "time": 0.0022538454211407104
+    },
+    "239/controller-status.json": {
+      "state": "running",
+      "action": "fine",
+      "completed": [],
+      "elapsed_seconds": 0.00038284800029941835
+    },
+    "239/stage-progress-128.json": {
+      "last_stage_time": 0.0033271051454934306,
+      "solved_actual_steps": 223,
+      "original_stage_relative": 9.080453025104184e-16,
+      "physical_stage_relative": [
+        6.748076356552308e-18,
+        3.60299475766184e-19,
+        4.151452108301298e-20,
+        1.841926827074953e-20
+      ]
+    },
+    "244/controller-status.json": {
+      "state": "waiting",
+      "action": "actual239paired_acceptance",
+      "dependency_pid": 167049,
+      "elapsed_seconds": 120.38404439499936,
+      "completed": []
+    }
+  },
+  "snapshot_KST": "2026-09-25T04:18:48.991853+09:00",
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false
+}

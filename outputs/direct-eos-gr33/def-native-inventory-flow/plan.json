@@ -1,0 +1,60 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "d4c274345",
+  "claim": "Apply the repaired same-native fixed-inventory constitutive law to the actual conservative spherical gas release with paired photon scattering work.",
+  "decision": "Compare actual mass/trace histories against the retained LTE producer, before assigning the old LTE wave a physical interpretation. This frozen-reaction control does not complete finite chemistry or absorptive photon closure.",
+  "model": "Uniform initial surface ionic inventories, all populated24-element stages frozen; internal levels and trace stages remain conditionally equilibrated. Use the saved physical rho,T profile and metric. Quantify the initialization change caused by imposing the surface inventory across the local layer.",
+  "native_grid": {
+    "log_density": [
+      -6,
+      0.02
+    ],
+    "log_density_nodes": 9,
+    "temperature_K": [
+      240,
+      20000
+    ],
+    "temperature_nodes": 9
+  },
+  "evolution": {
+    "paths": [
+      224,
+      448,
+      896
+    ],
+    "horizon_seconds": 0.0034344311179287023,
+    "domain_m": [
+      -200,
+      1200
+    ],
+    "CFL": 0.35
+  },
+  "budget": {
+    "native_calls": 2000,
+    "native_seconds": 60,
+    "flow_seconds": 120,
+    "CPU_threads": 1,
+    "memory_GB": 2
+  },
+  "forecast": "Phase105149 constrained evaluations2.40s.81 grid nodes plus12 controls expected10-35s; new off-adiabat states and conservative inversions are unmeasured. Measure224-cell pilot before either production path.",
+  "gates": {
+    "native_constitutive": 0.002,
+    "first_law": 0.0001,
+    "initial_pressure": 0.002,
+    "primitive_energy": 1e-08,
+    "baryon": 1e-10,
+    "energy": 1e-08,
+    "mass_refinement": 0.02,
+    "trace_refinement": 0.02
+  },
+  "stop": "No domain/grid/horizon enlargement, no rate borrowing from the different Phase66 EOS, no equilibrium thermal derivative reused at fixed chemical inventory, no final physical charge claim.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_inventory_flow.py": "c36195650c0cbdca69266c88275e2733fc84ff2a52d22db5e0dad6901d630e48",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-cold-population/adiabat.npz": "9122284ad508364bcf5f8b1fb271abf2ed6bb86b8339f601f932cdba900c4413",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-cold-population/audit.json": "e292b93ad58142c9e254a69a443383125467b60d7f53ed8aa8aa8cfc6454e155",
+    "/home/lpaiu/work/direct-eos-gr33/native-cold-population/stable/gas.so": "b2db87a38c316cac016a9c3bba333a52839db0c13c360c402dac310ee3e3b2c7",
+    "/home/lpaiu/work/direct-eos-gr33/native-cold-population/libfree_eos_native_cold_stable.so": "6d6cd656c7fc93d61df3e69bd127ff2f5caa199d88f42c4ebb9e7e96a21608f4",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-metric-release/cells-896.npz": "a898b3077496eab9189163b98918786ceec46145b0d58006dde8284c46fafb12",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-metric-release/cells-1792.npz": "3b2f26b0ffb6246fc46cfc533c4a0a6f561a0d3f9bc57b28c56d92c884cdebaf"
+  }
+}

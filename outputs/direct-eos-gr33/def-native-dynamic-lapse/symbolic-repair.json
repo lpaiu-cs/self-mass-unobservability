@@ -1,0 +1,9 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "The null-Hamiltonian check rejected the guessed time-dependent angular drift before any physical ray or transport run.",
+  "correction": "dmu/dt has mu*(R_t/R-h_t/h), hence minus mu*delta_lambda_t in the first variation. Expanding radial proper length at fixed canonical momentum decreases the radial direction cosine.",
+  "preserved": ["first-plan.json", "first-symbolic-producer.py"],
+  "physical_trajectories_before_repair": 0,
+  "thresholds_changed": false,
+  "scope_changed": false
+}

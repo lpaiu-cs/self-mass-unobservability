@@ -1,0 +1,47 @@
+{
+  "classification": "Conjectural",
+  "correction": "Compare the array photon normalization with array_equal at original model transitions. The failed scalar truth test changed no equations. Commit accepted endpoints immediately as well as before steps, so a subsequent reconstruction error cannot discard the last accepted photon solve.",
+  "same_inverse_and_model_functions": true,
+  "all652precheck_reused": true,
+  "rows": [
+    {
+      "clock": 64,
+      "checkpoint_steps": 7,
+      "checkpoint_value_identity": true
+    },
+    {
+      "clock": 128,
+      "checkpoint_steps": 11,
+      "checkpoint_value_identity": true
+    }
+  ],
+  "reuse": "Restore frozen7coarse/11fine photon checkpoints. The eighth accepted coarse photon endpoint was not checkpointed before the failed array guard; repeat only that one conditional photon block. All native-fluid steps remain reused. Reuse no failed state as accepted.",
+  "gates": {
+    "conditional": 1e-14,
+    "conditional_physical": 1e-13,
+    "original_stage": 1e-12,
+    "original_physical": 1e-13,
+    "native_archival_identity": 0,
+    "endpoint": 1e-12,
+    "angular": 1e-12,
+    "radial_port": 1e-12,
+    "material_ledger": 1e-08
+  },
+  "coarse_cap_seconds": 7200,
+  "fine_cap_seconds": 10800,
+  "CPU_threads_per_path": 1,
+  "virtual_GiB_per_path": 6,
+  "original_failure_preserved": true,
+  "producer_sha256": "e996fa346b762d428b82d9a7fbb30e37d818e8ac744b624a992405b3ead15891",
+  "inputs": {
+    "native-coordinate-photon214-work/resume-input-64.npz": "025d7dd4cc8547ad0ea24098c32942997dbc58d8cacd929f26f5831865ef7afb",
+    "native-coordinate-photon214-work/resume-input-128.npz": "894c84eda1c5d473192648e712fd497594e5cddb9bf9ac0fc4e82de2e1582e23",
+    "native-coordinate-photon214-work/array-guard-failed-producer.py": "b93f36a9e7e35c436a71517bda41a2643070ff159a3b2d5367086d964efedd48",
+    "native-coordinate-photon214-work/check_interval-receipt.json": "8778517c5e6452db9c8bec579b0d1d3c7235e6061c0046a178ebfd831bc37260",
+    "native-coordinate-photon214-work/restart-check.json": "c18aabb0f0750a4a23f3ca1299fd50d938030ea5a2cc58ede8dc561816a7e58b",
+    "native-coordinate-photon214-work/coarse-receipt.json": "5fb9b65fd26d9fd258028649f06dd4c3d3a320f6a41c0005397d4f1246bf26ff"
+  },
+  "source_sha256": "2b702954bc3261f596f3967dbd25173111c4613a612add6803c35f1c1a21e3e5",
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false
+}

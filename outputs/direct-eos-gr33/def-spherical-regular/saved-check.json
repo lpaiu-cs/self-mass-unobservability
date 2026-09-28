@@ -1,0 +1,55 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "rows": [
+    {
+      "cells": 16,
+      "path": 0,
+      "radial_row_scaled_error": 2.3056622521226384e-20,
+      "absolute_radial_constraint_error_cm": 8.552847072295026e-50,
+      "metric_secant_relative_error": 3.0096488374095435e-16,
+      "weighted_direct_trace_work_erg": 0.0,
+      "maximum_direct_term_over_native_energy_tolerance": 0.0,
+      "native_norm_with_only_material_trace_term_removed": 1.4175230412363091e-11,
+      "wave_travel_over_outer_cell_width": 0.006115571349662377
+    },
+    {
+      "cells": 16,
+      "path": 1,
+      "radial_row_scaled_error": 3.5493600182285055e-20,
+      "absolute_radial_constraint_error_cm": 2.6469779601696886e-23,
+      "metric_secant_relative_error": 1.2383540417887027e-16,
+      "weighted_direct_trace_work_erg": 1.4866126565350877e+29,
+      "maximum_direct_term_over_native_energy_tolerance": 1.093351737227683e-06,
+      "native_norm_with_only_material_trace_term_removed": 0.00045128376787829895,
+      "wave_travel_over_outer_cell_width": 0.006115571349662377
+    },
+    {
+      "cells": 5735,
+      "path": 0,
+      "radial_row_scaled_error": 3.808819924382518e-20,
+      "absolute_radial_constraint_error_cm": 7.52316384526264e-37,
+      "metric_secant_relative_error": 1.3157392752666359e-15,
+      "weighted_direct_trace_work_erg": 0.0,
+      "maximum_direct_term_over_native_energy_tolerance": 0.0,
+      "native_norm_with_only_material_trace_term_removed": 0.0004417437433235452,
+      "wave_travel_over_outer_cell_width": 0.026099324665005436
+    },
+    {
+      "cells": 5735,
+      "path": 1,
+      "radial_row_scaled_error": 4.685932221901672e-20,
+      "absolute_radial_constraint_error_cm": 8.673617379884035e-19,
+      "metric_secant_relative_error": 1.3695193349282097e-15,
+      "weighted_direct_trace_work_erg": 6.899378977432362e+20,
+      "maximum_direct_term_over_native_energy_tolerance": 0.02192787445191806,
+      "native_norm_with_only_material_trace_term_removed": 0.05772091492168849,
+      "wave_travel_over_outer_cell_width": 0.026099324665005436
+    }
+  ],
+  "scope": "Frozen file bindings and radial constraints of four saved endpoints. No fresh native EOS calls.",
+  "trace_feedback_numerically_isolated": false,
+  "limitation": "Deleting the material trace term at the saved state still passes the native tolerance. The full first step checks assembly and finite mass budget, not resolved reciprocal matter response.",
+  "no_added_evolution": true,
+  "source_sha256": "ee98c14c7d3c42c3da5217e2277fa60bc8724cc072bd03f472d1bfd1b6e392c1"
+}

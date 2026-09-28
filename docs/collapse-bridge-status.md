@@ -1,5 +1,7 @@
 # Collapse Bridge Status
 
+> Correction, 2026-09-09: the [unified theorem package](theorem-package.md) supersedes stronger historical wording below. Smooth-flat response retains every finite jet and only defeats exact analytic-germ reconstruction. Sufficient differentiability replaces analyticity for a finite-order remainder. Sensitivity labels do not establish coefficient independence from EFT Wilson data or observational absorption.
+
 - Status: Note. This note is frozen as a closed bridge document.
 - Status: Proven. The bridge from irreducible family-envelope closure to the positive finite-family collapse theorem is closed inside the current theorem domain.
 

@@ -1,0 +1,7 @@
+{
+  "classification": "Counterexample candidate",
+  "registered_before_probe": true,
+  "hypothesis": "The live binary consumes derivative slots 15 and 16 in a different semantic order from the archived net_lib source signature.",
+  "control": "Hold rho,T,X,Ye,eta and every other input fixed. Increase exactly one derivative slot by +1. Require heat, neutrino and dxdt unchanged. Classify the slot by whether only temperature or density output derivatives change. Do not guess from source parameter names.",
+  "failure_policy": "If the slot affects both output derivative types, neither, or changes rates themselves, stop and do not assign an order. Preserve the earlier failed injection and its incorrect semantic assumption explicitly."
+}

@@ -1,0 +1,12 @@
+{
+  "classification": "Counterexample candidate",
+  "bindings": {
+    "verification/gr_finite_wavenumber_regular.py": "f7a7773f768175070abf83abcc8fa908130f472a481c6422c6bb08c7bdc1dfa9",
+    "outputs/direct-eos-gr33/gr-finite-wavenumber-defined/plan.json": "b8127d92da8fb624d853786203b3b89d637c6cbdc55f06a103a05ca63ad272e6",
+    "outputs/direct-eos-gr33/gr-finite-wavenumber-defined/symbolic.json": "497a0cd011edb3cf3b2b8f1a18170d06ac43daddd15d1dcebe7c44f6b9bebb8a",
+    "outputs/direct-eos-gr33/gr-finite-wavenumber-regular/effective-source.py": "50ad45ca6208ecd726eef5ac1ffa3b1316b42b7429ec6e21e24b88bb1d1a8ce9",
+    "outputs/direct-eos-gr33/gr-finite-wavenumber-regular/original-error.log": "71ab177c8fa7f0a455bc946dee7fc3bc16dacfb5957264935834b091fbb83db6"
+  },
+  "original_failure": "High-precision tanh-sinh control nodes rounded onto p=Q, producing a ZeroDivisionError at an integrable logarithmic cusp, before stellar calculation.",
+  "change": "For the independent cold reference only, subtract -b(Q)*log|p-Q| analytically, b(Q)=1/(2*sqrt(1+Q^2)). Integrate its primitive (p-Q)*(log|p-Q|-1) exactly. The remaining (b(p)-b(Q))*log|p-Q| has the continuous value zero at p=Q. No changed kernel or tolerance."
+}

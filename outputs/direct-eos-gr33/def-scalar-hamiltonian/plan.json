@@ -1,0 +1,71 @@
+{
+  "classification": "Counterexample candidate",
+  "source_sha256": "27c0b4b6ece938593537af6126e49d95e470b33ac92ba2d9450026749123a165",
+  "predecessor_milestone_sha256": "063087fc86a7f2c1dd432d3fb66c96d0104ebd324554b7cff39ecc12e7e54109",
+  "decision": "Replace the inverse-momentum energy projection with a smooth polarized mass-constraint discrete gradient; verify zero/turning states, exact conservation, nonlinear GR evolution and time/space consistency before native stellar reuse.",
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "scope": "Exact polarized radial mass-constraint chain rule. Radial adjoint telescoping and shared-face summation by parts yield the discrete gradient; symmetric smooth coefficients give second-order time consistency on the positive regular branch. No physical matter/heat closure or global PDE error bound."
+  },
+  "operator_check": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "secant_relative_defect": 3.2391878563344165e-20,
+    "time_reversal_relative_defect": 0.0,
+    "zero_state_exact": true,
+    "all_momenta_zero_start_passed": true
+  },
+  "controls": {
+    "pilot": [
+      32,
+      32,
+      0.4
+    ],
+    "flat_space_cells": [
+      32,
+      64,
+      128
+    ],
+    "flat_steps_per_cell": 4,
+    "nonlinear_time_cells": 64,
+    "nonlinear_time_steps": [
+      128,
+      256,
+      512
+    ],
+    "nonlinear_space_cells": [
+      32,
+      64,
+      128
+    ],
+    "nonlinear_steps_per_cell": 4,
+    "amplitude": 0.05,
+    "duration": 1.7,
+    "initial": "phi=A*sin(pi*r)/(pi*r), Pi=0",
+    "boundary": "regular center, fixed outer phi=0"
+  },
+  "gates": {
+    "equation_residual": 2e-15,
+    "stable_step_relative_mass_increment": 5e-14,
+    "final_relative_mass_drift": 2e-12,
+    "time_order_minimum": 1.8,
+    "flat_exact_L2_order_minimum": 1.7,
+    "nonlinear_space_L2_order_minimum": 1.6,
+    "turning_crossings_positive": true,
+    "minimum_nontrivial_compactness": 1e-05
+  },
+  "budget": {
+    "cpu": 1,
+    "blas_threads": 1,
+    "gpu": false,
+    "pilot_timeout_seconds": 30,
+    "full_timeout_seconds": 180,
+    "maximum_runs": 1,
+    "launch_only_if_pilot_scaled_seconds_below": 120,
+    "estimate": "Measure the 32-cell 32-step nonlinear pilot; extrapolate by total cell-steps with a factor two safety margin. Reuse identical n=64,steps=256 path. No new native EOS calls, automatic grids, amplitudes or duration changes."
+  },
+  "native_stellar_matter_included": false,
+  "physical_EOS_certified": false,
+  "observational_closure": false
+}

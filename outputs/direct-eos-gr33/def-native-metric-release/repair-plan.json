@@ -1,0 +1,36 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "a0db40a17",
+  "claim": "Before applying conserved matter to Einstein constraints, test and repair the inner-face background reconstruction without removing physical gravity or radiation forces. The pressure release at the old surface remains a real gas/vacuum jump.",
+  "repair": "Apply the common saved background only to the two faces influenced by the inner ghost. Preserve the Phase101 reconstruction at all other faces, including the already validated dilute release.",
+  "paths": [
+    896,
+    1792
+  ],
+  "horizon_seconds": 0.0034344311179287023,
+  "domain_m": [
+    -200,
+    1200
+  ],
+  "native_calls": 0,
+  "seconds": 100,
+  "CPU_threads": 1,
+  "memory_GB": 2,
+  "gates": {
+    "energy_ledger": 1e-08,
+    "baryon_ledger": 1e-10,
+    "outside_mass_refinement": 0.02,
+    "trace_refinement": 0.02
+  },
+  "stop": "Use only the frozen final native EOS support; stop on a domain, conservation, refinement or budget failure. No new native bank, resolution or time extension.",
+  "bindings": {
+    "verification/def_native_metric_release.py": "4fa269ff004ba8564ea42f4fdbeee7a0521d141ac43e6b25efeb31edbbe806a9",
+    "verification/def_native_energy_flow.py": "82c52211a35fd642bd6bd94a9761cdf8f36ec3e6377a07cf2a55c337cd08f6b6",
+    "outputs/direct-eos-gr33/def-native-energy-release/runtime-columns.npz": "a1d7249202abde8c778f176a09c284f1423b6f76335d6c7c67513c1ad32c03c5",
+    "outputs/direct-eos-gr33/def-native-energy-release/cells-1792.npz": "fdd4cd137dac09f1534a953300d21e3417ee798705e7f35dcc05cfa1ef3110ca"
+  },
+  "failed_attempt": "All-face perturbation reconstruction exceeded the frozen EOS temperature overlap in the dilute release. Preserve its source and last accepted state. Do not extend EOS support.",
+  "failed_last_accepted_time_seconds": 3.0561706690989616e-05,
+  "reserved_failed_seconds": 15,
+  "remaining_production_seconds": 85
+}

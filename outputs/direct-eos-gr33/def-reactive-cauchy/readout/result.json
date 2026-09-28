@@ -1,0 +1,43 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "adiabatic_operator_replay_relative": 2.0993466055849347e-16,
+  "direct_ray_mass_checks": [
+    {
+      "radius_over_R": 1.0,
+      "escaped_erg": 9.202194404513769e+32,
+      "mass_defect_geom_m": -7.603490618558546e-19,
+      "independent_expected_geom_m": -7.603490618558639e-19,
+      "energy_norm_relative": 9.581626442764206e-16
+    },
+    {
+      "radius_over_R": 2.0,
+      "escaped_erg": 0.0,
+      "mass_defect_geom_m": 6.597674920824823e-33,
+      "independent_expected_geom_m": -0.0,
+      "energy_norm_relative": 6.72003745526458e-16
+    }
+  ],
+  "endpoint_seconds": 0.23080495568542375,
+  "native_max_abs_log_rho": 3.680663749702138e-12,
+  "native_max_abs_log_T": 3.202681708255605e-11,
+  "native_mass_RMS_log_T": 1.5154458564220772e-12,
+  "native_max_abs_Delta_X": 5.1103164660044983e-14,
+  "native_velocity_mass_RMS_m_s": 6.841605975183822e-08,
+  "native_scalar_mass_RMS": 5.986096467003211e-26,
+  "max_abs_Euler_delta_nu": 2.152423632095584e-22,
+  "max_abs_Delta_lambda": 1.6853499806438722e-19,
+  "perturbation_smallness_is_nonlinear_error_bound": false,
+  "mechanical_spatial_convergence": false,
+  "lapse_is_postprocessed_constraint": true,
+  "full_dynamic_charge_solved": false,
+  "runtime": {
+    "production_seconds": 16.809798546,
+    "process_wall_seconds": 20.09,
+    "peak_RSS_KiB": 402348,
+    "CPU_workers": 1,
+    "BLAS_threads": 1,
+    "native_calls": 0,
+    "production_time_steps": 240
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "classification": "Counterexample candidate",
+  "commands": [
+    {
+      "command": [
+        "cmake",
+        "-S",
+        "/home/lpaiu/work/direct-ions32/tight-integral-source",
+        "-B",
+        "/home/lpaiu/work/direct-ions32/tight-integral-build",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DBUILD_SHARED_LIBS=ON",
+        "-DBUILD_TEST=ON",
+        "-DBUILD_DOC=OFF",
+        "-DBUILD_DOX_DOC=OFF"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "/home/lpaiu/work/direct-ions32/tight-integral-build",
+        "--target",
+        "free_eos",
+        "-j",
+        "2"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "gfortran",
+        "-O2",
+        "-fPIC",
+        "-shared",
+        "-I/home/lpaiu/work/direct-ions32/tight-integral-build/src",
+        "/mnt/e/lab/self-mass-unobservability/outputs/structured-enthalpy32/direct-ions/direct_ion_bridge.f90",
+        "-L/home/lpaiu/work/direct-ions32/tight-integral-build/src",
+        "-Wl,-rpath,/home/lpaiu/work/direct-ions32/tight-integral-build/src",
+        "-lfree_eos_direct24_integral_tight",
+        "-o",
+        "/home/lpaiu/work/direct-ions32/direct_ion_integral_tight_bridge.so"
+      ],
+      "returncode": 0
+    }
+  ],
+  "completed": true,
+  "sha256": {
+    "/home/lpaiu/work/direct-ions32/direct_ion_integral_tight_bridge.so": "02744bf90bf883fcb7f77275b547ab2bfc3e2c3c2bad16ec45840bbbde793a23",
+    "/home/lpaiu/work/direct-ions32/tight-integral-build/src/libfree_eos_direct24_integral_tight.so.1.0.0": "3abecbe78b78f3979ecbd18af292e15f801329c4fd6030c03166f3c3a6131186"
+  },
+  "original_runtime_modified": false,
+  "physical_EOS_certified": false
+}

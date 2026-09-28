@@ -1,0 +1,41 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Propagate the actual finite radiation collision remainder through the accepted simultaneous photon/E/H operator, add that increment to the saved response, then apply the new TOTAL photon transfers to finite material and actual GR.",
+  "decision": "Quantify the effect of the previously omitted finite collision term on the positive conditional charge. Preserve its sampled/arithmetic limits; this is a deferred correction, not full nonlinear or uniform microscopic certification.",
+  "resource_reassessment": "The original245s readout allowance was insufficient: after81.523589098s the measured conservative projection312.241693236s exceeds163.476410902s remaining. Preserve that ineligibility. Authorize one330s remaining-state readout cap, adding166.523589098s to the earlier cap; unchanged17 states, all accepted points reused. Longdouble is necessary because the binary64 remainder was unresolved, not because a physical acceptance gate was relaxed.",
+  "cheaper_alternatives": "No background or native roots are replayed. Reuse zero/midpoint/endpoint and all old photons. Linear superposition solves only the new photon defect; full saved photons are not re-integrated. The subsequent finite material equation must consume the new total force and is not interchangeable with an old path.",
+  "budgets": {
+    "sample_seconds": 330,
+    "photon_pilot_seconds": 90,
+    "photon_production_seconds": 900,
+    "material_pilot_seconds": 60,
+    "material_production_seconds": 780,
+    "source_seconds": 90,
+    "GR_seconds": 90,
+    "CPU_threads": 1,
+    "virtual_GiB": 3
+  },
+  "forecast": "Remainder14 remaining knots at twice the measured slowest point plus10s. Photon4/8 prefixes use the completed Phase142 step costs as late-cost floors; require2x summed forecast below900s. Material2-step prefixes use completed full raw-call counts; require2x summed forecast below780s.",
+  "gates": {
+    "number": 1e-10,
+    "linear": 1e-12,
+    "balance": 1e-08,
+    "time": 0.02,
+    "finite_resolution": 0.002,
+    "pressure": 0.002,
+    "quadrature": 0.002,
+    "independent_GR": 1e-09,
+    "angular": 1e-12
+  },
+  "limitations": "Actual radiation primitive/rate remainder on17 saved states of the interpolation model. Native cross sections remain binary64. The16eps arithmetic floor, half-amplitude comparison and finite waveform changes are not rigorous error bounds. Native derivative, further coupling, floor/exterior, nonlinear GR and observation remain open.",
+  "stop": "One source readout and one two-path correction/return only. Stop on a gate or cap; no automatic further waveform loop, time/grid/horizon increase or relaxed thresholds.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/propagate_native_finite_collision_remainder.py": "1b0ec4406aba20bc184cd9a6422044966481dd37669cfba660dfad407b4725ad",
+    "/mnt/e/lab/self-mass-unobservability/verification/repair_native_finite_collision_remainder.py": "f4c98dbf24c1c6aa23db86eef50a8a39af0adab5c29be53379ca73d09ab4b5c9",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_finite_collision_remainder.py": "cfcb0bf8d1d76d99e52e8d11f5819b131b0f8e812fe1e0c9c577a9313146d810",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_finite_motion_feedback.py": "476c179fa4dd469dedb1fe82127c6c5d8d4ead8ee9c26e6d34e3a21a9258adda",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/finite-collision/extended/completed-pilot.json": "ee81dc98e5099ed148e9ca4e4320b4d0ba656fa5a4f8a960bef00bed3d6dc4b4",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/audit.json": "7d7210ec0208979ea28ec5c7608fe7e598b832eeabd5de4a90377eee09ee3bc5",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/return/gr/result.json": "0b2be49723ed39e40ec598f27fb4d0da29ad13efaed5e34b94d15af8959ca50d"
+  }
+}

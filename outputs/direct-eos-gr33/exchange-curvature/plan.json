@@ -1,0 +1,78 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "fe58f46",
+  "bindings": {
+    "verification/exchange_curvature.py": "4f6749d35c1835cbc5e646f1d8a295501915f9ca2ed38a82f036fc7db263865b",
+    "outputs/direct-eos-gr33/coulomb-curvature/manifest.json": "5fc0984b1ab227b8750a99ae02792744a75332fbc04113594a207049ce1f2fe7",
+    "outputs/direct-eos-gr33/reference-state.npz": "17cbbb101628ca9bc111dca0cfe902210f13697c632b91c03913a1718cf7d2ef",
+    "outputs/direct-eos-gr33/exchange-curvature/mod_exchange.f90": "cd50fe859b1a27e6cd211971f88a77c484fada0e28bc537d225d9f5949c023b1",
+    "outputs/direct-eos-gr33/exchange-curvature/master_exchange.f90": "501785b232339b5039afddf13f56745746b33ceed6107f3aa95de0457efcd4ad",
+    "outputs/direct-eos-gr33/exchange-curvature/exchange_gcpf.f90": "b721db310fabdd200fd0cf98db03342d9a754f7cdc617ea91981064cdc672faf"
+  },
+  "library_sha256": "6348e235763db0112687f391ab1c06c34b33aa530973ea4a414a5d0f21b1dfb4",
+  "cells": 5735,
+  "processes": 4,
+  "block_cells": 128,
+  "control_cells": [
+    0,
+    2972,
+    5734
+  ],
+  "settings": {
+    "morder": 21,
+    "ifexchange_in": 14,
+    "nonlinear_transform_iforder": 2
+  },
+  "old_output_bitwise_required": true,
+  "original_exchange_relative_tolerance": 1e-10,
+  "normalized_Legendre_tolerance": 1e-10,
+  "finite_log_steps": [
+    0.0001,
+    5e-05
+  ],
+  "finite_derivative_tolerance": 1e-06,
+  "method": "Read the cached original EOS exchange state before an independent call to the same nonlinear master_exchange and exchange_free routines. Verify the free value, chemical potential and derivative, ideal electron density, nonlinear Legendre identity and finite differences. Add the resulting scalar electron curvature to the previously frozen Coulomb and ideal-ion support.",
+  "omitted": [
+    "Pressure ionization",
+    "Density-dependent partition/excitation",
+    "Unresolved populations",
+    "Native continuous and physical EOS error"
+  ],
+  "full_EOS_Hessian_certified": false,
+  "physical_EOS_certified": false,
+  "full_GR_evolution": false,
+  "trace_revision": {
+    "source_changes": {
+      "mod_exchange.f90": {
+        "before": "cd50fe859b1a27e6cd211971f88a77c484fada0e28bc537d225d9f5949c023b1",
+        "after": "ca7fa57d803a3fb652a175884090b0259e92fec700aee7a96033430c75b0553b"
+      },
+      "master_exchange.f90": {
+        "before": "501785b232339b5039afddf13f56745746b33ceed6107f3aa95de0457efcd4ad",
+        "after": "0f70a83057c280400d8a5304c19aafa41ca5dcaed9ff2569a97b567125356ad3"
+      },
+      "CMakeLists.txt": {
+        "before": "d1e32f22c0db0934f34342e547c88433c0489b848ced0be26213b4a662ed6d9a",
+        "after": "9a784a15363daa66a8bb1611861da52335e0c6e10d69ab0d74b2fd769a9d67fe"
+      }
+    },
+    "library_sha256": "44181551e1043875bfa8ca8483cba37ca236d62940dc1c519c4a6e6fd065d548",
+    "preserved": {
+      "after-cached-grouping-control-0.npz": "435c5660daea44dda9b497009840290aebdfd8ec0476f2a43128ebd90660ac25",
+      "after-cached-grouping-control.json": "9558a15fc96e8d623298ee9ae827078d61f0729b07a39f215aac16a86a2869cc",
+      "after-cached-grouping-control.log": "e44a245dddd54a4d922e32cc7aa29dbc29817a5efd084e2fad5cc22c91c6edc7",
+      "after-cached-grouping-exchange_bridge.f90": "4f53a6ac1b216c35ae9efc25ce63b5680390ba8e47d1f5ba76e2e0ce8dddb9c8",
+      "after-cached-grouping-exchange_curvature.py": "eb65e570e4f0995098acbd9b4baf3e09249ce8b9c448fee352cfbbfc80d89d1a",
+      "before-cached-grouping-bridge.json": "c404ec09865b63eb6ed2a9ac3abedf8a3121eea0314070daca175ce2555349d5",
+      "before-cached-grouping-control-0.npz": "435c5660daea44dda9b497009840290aebdfd8ec0476f2a43128ebd90660ac25",
+      "before-cached-grouping-control.json": "986254ba163f573384d3818039666b442693dc00438132855c632f5f0225c9f3",
+      "before-cached-grouping-control.log": "b0aca3085c709273110430277626101d334c64d883e72a03a3058ab31ad793cb",
+      "before-cached-grouping-exchange_bridge.f90": "3655aeb3233556b29317f16c2c9a0b476baa103a30cbc22e967b0bc052fb57be",
+      "before-cached-grouping-exchange_curvature.py": "b5b0b6c23b0f9d2c30dd305d5123e8f3474c400660310d9be4e2f25ec56a59f4",
+      "before-cached-grouping-plan.json": "33bc559abf0c63664969f182e1320b83310c6cf0c9aaed32246160cbcdd46a11"
+    },
+    "reason": "Same returned fl is not guaranteed to equal the last input used by the cached EOS exchange state. Record actual internal inputs, compare the independent exchange call at those inputs with the unchanged original thresholds, and separately retain the original returned-input mismatch. The grouping-only change did not fix the original control failure.",
+    "original_failed_control_preserved": true,
+    "original_tolerances_unchanged": true
+  }
+}

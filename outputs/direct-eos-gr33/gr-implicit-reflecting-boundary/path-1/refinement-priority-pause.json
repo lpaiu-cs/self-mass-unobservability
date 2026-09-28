@@ -1,0 +1,85 @@
+{
+  "reason": "Coarse reflecting-boundary control passed the critical coordinate time. Preserve its state in memory and prioritize refinement two, matching the original failed resolution.",
+  "boot_id": "9b968b4f-ecbd-483b-ada9-c1c871b6ab20",
+  "root": 1381,
+  "processes": [
+    {
+      "pid": 1381,
+      "parent": 1375,
+      "start": "735255",
+      "state": "S",
+      "command": "python3 verification/gr_implicit_reflecting_boundary.py run --refinement 1 --workers 10"
+    },
+    {
+      "pid": 1385,
+      "parent": 1381,
+      "start": "736071",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_reflecting_boundary.py run --refinement 1 --workers 10"
+    },
+    {
+      "pid": 1386,
+      "parent": 1381,
+      "start": "736071",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_reflecting_boundary.py run --refinement 1 --workers 10"
+    },
+    {
+      "pid": 1387,
+      "parent": 1381,
+      "start": "736071",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_reflecting_boundary.py run --refinement 1 --workers 10"
+    },
+    {
+      "pid": 1388,
+      "parent": 1381,
+      "start": "736071",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_reflecting_boundary.py run --refinement 1 --workers 10"
+    },
+    {
+      "pid": 1389,
+      "parent": 1381,
+      "start": "736071",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_reflecting_boundary.py run --refinement 1 --workers 10"
+    },
+    {
+      "pid": 1390,
+      "parent": 1381,
+      "start": "736072",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_reflecting_boundary.py run --refinement 1 --workers 10"
+    },
+    {
+      "pid": 1391,
+      "parent": 1381,
+      "start": "736072",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_reflecting_boundary.py run --refinement 1 --workers 10"
+    },
+    {
+      "pid": 1392,
+      "parent": 1381,
+      "start": "736072",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_reflecting_boundary.py run --refinement 1 --workers 10"
+    },
+    {
+      "pid": 1393,
+      "parent": 1381,
+      "start": "736072",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_reflecting_boundary.py run --refinement 1 --workers 10"
+    },
+    {
+      "pid": 1394,
+      "parent": 1381,
+      "start": "736072",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_reflecting_boundary.py run --refinement 1 --workers 10"
+    }
+  ],
+  "all_stopped": true
+}

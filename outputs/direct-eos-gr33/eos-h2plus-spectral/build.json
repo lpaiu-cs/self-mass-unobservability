@@ -1,0 +1,55 @@
+{
+  "classification": "Counterexample candidate",
+  "commands": [
+    {
+      "command": [
+        "cmake",
+        "-S",
+        "/home/lpaiu/work/direct-eos-gr33/h2plus-spectral/source",
+        "-B",
+        "/home/lpaiu/work/direct-eos-gr33/h2plus-spectral/build",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DBUILD_SHARED_LIBS=ON",
+        "-DBUILD_TEST=ON",
+        "-DBUILD_DOC=OFF",
+        "-DBUILD_DOX_DOC=OFF"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "/home/lpaiu/work/direct-eos-gr33/h2plus-spectral/build",
+        "--target",
+        "free_eos",
+        "-j",
+        "2"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "gfortran",
+        "-O2",
+        "-fPIC",
+        "-shared",
+        "-I/home/lpaiu/work/direct-eos-gr33/h2plus-spectral/build/src",
+        "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/eos-h2plus-spectral/direct_ion_bridge.f90",
+        "-L/home/lpaiu/work/direct-eos-gr33/h2plus-spectral/build/src",
+        "-Wl,-rpath,/home/lpaiu/work/direct-eos-gr33/h2plus-spectral/build/src",
+        "-lfree_eos_direct24_h2plus_spectral",
+        "-o",
+        "/home/lpaiu/work/direct-eos-gr33/h2plus-spectral/unused-inventory.so"
+      ],
+      "returncode": 0
+    }
+  ],
+  "completed": true,
+  "sha256": {
+    "/home/lpaiu/work/direct-eos-gr33/h2plus-spectral/unused-inventory.so": "15f4d7424e254eeef08c4b9ff89cce6f02c91187460e8eb00bdbc4138442afc5",
+    "/home/lpaiu/work/direct-eos-gr33/h2plus-spectral/build/src/libfree_eos_direct24_h2plus_spectral.so.1.0.0": "5d44c2c564f13fa9d45f319d613640f850bc96ad492065c5e846670faaffa876"
+  },
+  "original_runtime_modified": false,
+  "physical_EOS_certified": false
+}

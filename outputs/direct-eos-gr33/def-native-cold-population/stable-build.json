@@ -1,0 +1,390 @@
+{
+  "classification": "Counterexample candidate",
+  "seconds": 3.591402275,
+  "receipts": [
+    {
+      "command": [
+        "gfortran",
+        "-ffree-line-length-none",
+        "-cpp",
+        "-DUSINGDLL",
+        "-Dfree_eos_EXPORTS",
+        "-O3",
+        "-DNDEBUG",
+        "-O3",
+        "-fPIC",
+        "-I/home/lpaiu/work/direct-eos-gr33/native-cold-population",
+        "-I/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src",
+        "-I/home/lpaiu/work/direct-eos-gr33/molecular-spectral/source/src",
+        "-c",
+        "mod_excitation.f90",
+        "-o",
+        "mod_excitation-stable.o"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "gfortran",
+        "-shared",
+        "-Wl,-soname,libfree_eos_native_cold_stable.so",
+        "/home/lpaiu/work/direct-eos-gr33/native-ion-closure/mod_eos_calc.o",
+        "mod_excitation-stable.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_fermi_dirac_integrator.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_bfgs.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_molecular_hydrogen.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_pi_fit.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_ionization_data.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_poly_sum.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_nuvar.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_free_eos.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_statistical_weight_data.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_free_eos_types.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_free_eos_detailed.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_coulomb.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_pi.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_eos_bfgs.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_fermi_dirac.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_free_eos_constants.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_helium1_data.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_exchange.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_aux_scale.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_free_eos_debug.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_lapack.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_pl.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_excitation_block.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_isotopic_mass_data.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_flow_data.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_info_data.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_eos_jacobian.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_diagnostics.f90.o",
+        "-llapack",
+        "-lblas",
+        "-o",
+        "/home/lpaiu/work/direct-eos-gr33/native-cold-population/libfree_eos_native_cold_stable.so"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "gfortran",
+        "-O2",
+        "-fPIC",
+        "-shared",
+        "-I/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src",
+        "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-radiation-eos-split/gas-bridge.f90",
+        "-L/home/lpaiu/work/direct-eos-gr33/native-cold-population",
+        "-Wl,-rpath,/home/lpaiu/work/direct-eos-gr33/native-cold-population",
+        "-lfree_eos_native_cold_stable",
+        "-o",
+        "/home/lpaiu/work/direct-eos-gr33/native-cold-population/stable/gas.so"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "gfortran",
+        "-O2",
+        "-fPIC",
+        "-shared",
+        "-I/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src",
+        "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-cold-population/diagnostic-bridge.f90",
+        "-L/home/lpaiu/work/direct-eos-gr33/native-cold-population",
+        "-Wl,-rpath,/home/lpaiu/work/direct-eos-gr33/native-cold-population",
+        "-lfree_eos_native_cold_stable",
+        "-o",
+        "/home/lpaiu/work/direct-eos-gr33/native-cold-population/gas-stable-verbose.so"
+      ],
+      "returncode": 0
+    }
+  ],
+  "algebraically_reordered_mixed_derivatives": 70,
+  "changes": [
+    {
+      "before": "qratio*(qstarx2(5,2,nmin_s,izqstar) -&\n                      qstarx(5,nmin_s,izqstar)*&\n                      qstarx(2,nmin_s,izqstar)/qstar(nmin_s,izqstar))/&\n                      qstar(nmin_s,izqstar)",
+      "after": "qratio*(qstarx2(5,2,nmin_s,izqstar)/qstar(nmin_s,izqstar)-(qstarx(5,nmin_s,izqstar)/qstar(nmin_s,izqstar))*(qstarx(2,nmin_s,izqstar)/qstar(nmin_s,izqstar)))"
+    },
+    {
+      "before": "qratio*(qstarx2(2,2,nmin_s,izqstar) -&\n                      qstarx(2,nmin_s,izqstar)*&\n                      qstarx(2,nmin_s,izqstar)/qstar(nmin_s,izqstar))/&\n                      qstar(nmin_s,izqstar)",
+      "after": "qratio*(qstarx2(2,2,nmin_s,izqstar)/qstar(nmin_s,izqstar)-(qstarx(2,nmin_s,izqstar)/qstar(nmin_s,izqstar))*(qstarx(2,nmin_s,izqstar)/qstar(nmin_s,izqstar)))"
+    },
+    {
+      "before": "qratio*(qstarx2(5,3,nmin_s,izqstar) -&\n                      qstarx(5,nmin_s,izqstar)*&\n                      qstarx(3,nmin_s,izqstar)/qstar(nmin_s,izqstar))/&\n                      qstar(nmin_s,izqstar)",
+      "after": "qratio*(qstarx2(5,3,nmin_s,izqstar)/qstar(nmin_s,izqstar)-(qstarx(5,nmin_s,izqstar)/qstar(nmin_s,izqstar))*(qstarx(3,nmin_s,izqstar)/qstar(nmin_s,izqstar)))"
+    },
+    {
+      "before": "qratio*(qstarx2(3,2,nmin_s,izqstar) -&\n                      qstarx(3,nmin_s,izqstar)*&\n                      qstarx(2,nmin_s,izqstar)/qstar(nmin_s,izqstar))/&\n                      qstar(nmin_s,izqstar)",
+      "after": "qratio*(qstarx2(3,2,nmin_s,izqstar)/qstar(nmin_s,izqstar)-(qstarx(3,nmin_s,izqstar)/qstar(nmin_s,izqstar))*(qstarx(2,nmin_s,izqstar)/qstar(nmin_s,izqstar)))"
+    },
+    {
+      "before": "qratio*(qstarx2(3,3,nmin_s,izqstar) -&\n                      qstarx(3,nmin_s,izqstar)*&\n                      qstarx(3,nmin_s,izqstar)/qstar(nmin_s,izqstar))/&\n                      qstar(nmin_s,izqstar)",
+      "after": "qratio*(qstarx2(3,3,nmin_s,izqstar)/qstar(nmin_s,izqstar)-(qstarx(3,nmin_s,izqstar)/qstar(nmin_s,izqstar))*(qstarx(3,nmin_s,izqstar)/qstar(nmin_s,izqstar)))"
+    },
+    {
+      "before": "qratio*(qstarx2(5,4,nmin_s,izqstar) -&\n                      qstarx(5,nmin_s,izqstar)*&\n                      qstarx(4,nmin_s,izqstar)/qstar(nmin_s,izqstar))/&\n                      qstar(nmin_s,izqstar)",
+      "after": "qratio*(qstarx2(5,4,nmin_s,izqstar)/qstar(nmin_s,izqstar)-(qstarx(5,nmin_s,izqstar)/qstar(nmin_s,izqstar))*(qstarx(4,nmin_s,izqstar)/qstar(nmin_s,izqstar)))"
+    },
+    {
+      "before": "qratio*(qstarx2(4,2,nmin_s,izqstar) -&\n                      qstarx(4,nmin_s,izqstar)*&\n                      qstarx(2,nmin_s,izqstar)/qstar(nmin_s,izqstar))/&\n                      qstar(nmin_s,izqstar)",
+      "after": "qratio*(qstarx2(4,2,nmin_s,izqstar)/qstar(nmin_s,izqstar)-(qstarx(4,nmin_s,izqstar)/qstar(nmin_s,izqstar))*(qstarx(2,nmin_s,izqstar)/qstar(nmin_s,izqstar)))"
+    },
+    {
+      "before": "qratio*(qstarx2(4,3,nmin_s,izqstar) -&\n                      qstarx(4,nmin_s,izqstar)*&\n                      qstarx(3,nmin_s,izqstar)/qstar(nmin_s,izqstar))/&\n                      qstar(nmin_s,izqstar)",
+      "after": "qratio*(qstarx2(4,3,nmin_s,izqstar)/qstar(nmin_s,izqstar)-(qstarx(4,nmin_s,izqstar)/qstar(nmin_s,izqstar))*(qstarx(3,nmin_s,izqstar)/qstar(nmin_s,izqstar)))"
+    },
+    {
+      "before": "qratio*(qstarx2(4,4,nmin_s,izqstar) -&\n                      qstarx(4,nmin_s,izqstar)*&\n                      qstarx(4,nmin_s,izqstar)/qstar(nmin_s,izqstar))/&\n                      qstar(nmin_s,izqstar)",
+      "after": "qratio*(qstarx2(4,4,nmin_s,izqstar)/qstar(nmin_s,izqstar)-(qstarx(4,nmin_s,izqstar)/qstar(nmin_s,izqstar))*(qstarx(4,nmin_s,izqstar)/qstar(nmin_s,izqstar)))"
+    },
+    {
+      "before": "qratio*(qstartx(2,nmin_s,izqstar) -&\n                      qstarx(2,nmin_s,izqstar)*qstart(nmin_s,izqstar)/&\n                      qstar(nmin_s,izqstar))/qstar(nmin_s,izqstar)",
+      "after": "qratio*(qstartx(2,nmin_s,izqstar)/qstar(nmin_s,izqstar)-(qstarx(2,nmin_s,izqstar)/qstar(nmin_s,izqstar))*(qstart(nmin_s,izqstar)/qstar(nmin_s,izqstar)))"
+    },
+    {
+      "before": "qratio*(qstartx(3,nmin_s,izqstar) -&\n                      qstarx(3,nmin_s,izqstar)*qstart(nmin_s,izqstar)/&\n                      qstar(nmin_s,izqstar))/qstar(nmin_s,izqstar)",
+      "after": "qratio*(qstartx(3,nmin_s,izqstar)/qstar(nmin_s,izqstar)-(qstarx(3,nmin_s,izqstar)/qstar(nmin_s,izqstar))*(qstart(nmin_s,izqstar)/qstar(nmin_s,izqstar)))"
+    },
+    {
+      "before": "qratio*(qstartx(4,nmin_s,izqstar) -&\n                      qstarx(4,nmin_s,izqstar)*qstart(nmin_s,izqstar)/&\n                      qstar(nmin_s,izqstar))/qstar(nmin_s,izqstar)",
+      "after": "qratio*(qstartx(4,nmin_s,izqstar)/qstar(nmin_s,izqstar)-(qstarx(4,nmin_s,izqstar)/qstar(nmin_s,izqstar))*(qstart(nmin_s,izqstar)/qstar(nmin_s,izqstar)))"
+    },
+    {
+      "before": "qratio*(qstarx2(5,5,nmin_s,izqstar) -&\n                   qstarx(5,nmin_s,izqstar)*&\n                   qstarx(5,nmin_s,izqstar)/qstar(nmin_s,izqstar))/&\n                   qstar(nmin_s,izqstar)",
+      "after": "qratio*(qstarx2(5,5,nmin_s,izqstar)/qstar(nmin_s,izqstar)-(qstarx(5,nmin_s,izqstar)/qstar(nmin_s,izqstar))*(qstarx(5,nmin_s,izqstar)/qstar(nmin_s,izqstar)))"
+    },
+    {
+      "before": "qratio*(qstartx(5,nmin_s,izqstar) -&\n                   qstarx(5,nmin_s,izqstar)*qstart(nmin_s,izqstar)/&\n                   qstar(nmin_s,izqstar))/qstar(nmin_s,izqstar)",
+      "after": "qratio*(qstartx(5,nmin_s,izqstar)/qstar(nmin_s,izqstar)-(qstarx(5,nmin_s,izqstar)/qstar(nmin_s,izqstar))*(qstart(nmin_s,izqstar)/qstar(nmin_s,izqstar)))"
+    },
+    {
+      "before": "qratio*(qstarx2(5,2,nmin_s,iz) -&\n                      qstarx(5,nmin_s,iz)*&\n                      qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))/&\n                      qstar(nmin_s,iz)",
+      "after": "qratio*(qstarx2(5,2,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(2,nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstarx2(2,2,nmin_s,iz) -&\n                      qstarx(2,nmin_s,iz)*&\n                      qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))/&\n                      qstar(nmin_s,iz)",
+      "after": "qratio*(qstarx2(2,2,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(2,nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstarx2(5,3,nmin_s,iz) -&\n                      qstarx(5,nmin_s,iz)*&\n                      qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))/&\n                      qstar(nmin_s,iz)",
+      "after": "qratio*(qstarx2(5,3,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(3,nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstarx2(3,2,nmin_s,iz) -&\n                      qstarx(3,nmin_s,iz)*&\n                      qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))/&\n                      qstar(nmin_s,iz)",
+      "after": "qratio*(qstarx2(3,2,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(2,nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstarx2(3,3,nmin_s,iz) -&\n                      qstarx(3,nmin_s,iz)*&\n                      qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))/&\n                      qstar(nmin_s,iz)",
+      "after": "qratio*(qstarx2(3,3,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(3,nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstarx2(5,4,nmin_s,iz) -&\n                      qstarx(5,nmin_s,iz)*&\n                      qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))/&\n                      qstar(nmin_s,iz)",
+      "after": "qratio*(qstarx2(5,4,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(4,nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstarx2(4,2,nmin_s,iz) -&\n                      qstarx(4,nmin_s,iz)*&\n                      qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))/&\n                      qstar(nmin_s,iz)",
+      "after": "qratio*(qstarx2(4,2,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(2,nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstarx2(4,3,nmin_s,iz) -&\n                      qstarx(4,nmin_s,iz)*&\n                      qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))/&\n                      qstar(nmin_s,iz)",
+      "after": "qratio*(qstarx2(4,3,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(3,nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstarx2(4,4,nmin_s,iz) -&\n                      qstarx(4,nmin_s,iz)*&\n                      qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))/&\n                      qstar(nmin_s,iz)",
+      "after": "qratio*(qstarx2(4,4,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(4,nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstartx(2,nmin_s,iz) -&\n                      qstarx(2,nmin_s,iz)*qstart(nmin_s,iz)/&\n                      qstar(nmin_s,iz))/qstar(nmin_s,iz)",
+      "after": "qratio*(qstartx(2,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))*(qstart(nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstartx(3,nmin_s,iz) -&\n                      qstarx(3,nmin_s,iz)*qstart(nmin_s,iz)/&\n                      qstar(nmin_s,iz))/qstar(nmin_s,iz)",
+      "after": "qratio*(qstartx(3,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))*(qstart(nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstartx(4,nmin_s,iz) -&\n                      qstarx(4,nmin_s,iz)*qstart(nmin_s,iz)/&\n                      qstar(nmin_s,iz))/qstar(nmin_s,iz)",
+      "after": "qratio*(qstartx(4,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))*(qstart(nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstarx2(5,5,nmin_s,iz) -&\n                   qstarx(5,nmin_s,iz)*&\n                   qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))/&\n                   qstar(nmin_s,iz)",
+      "after": "qratio*(qstarx2(5,5,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(5,nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstartx(5,nmin_s,iz) -&\n                   qstarx(5,nmin_s,iz)*qstart(nmin_s,iz)/&\n                   qstar(nmin_s,iz))/qstar(nmin_s,iz)",
+      "after": "qratio*(qstartx(5,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))*(qstart(nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstarx2(5,2,nmin_s,iz) -&\n                      qstarx(5,nmin_s,iz)*&\n                      qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))/&\n                      qstar(nmin_s,iz)",
+      "after": "qratio*(qstarx2(5,2,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(2,nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstarx2(2,2,nmin_s,iz) -&\n                      qstarx(2,nmin_s,iz)*&\n                      qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))/&\n                      qstar(nmin_s,iz)",
+      "after": "qratio*(qstarx2(2,2,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(2,nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstarx2(5,3,nmin_s,iz) -&\n                      qstarx(5,nmin_s,iz)*&\n                      qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))/&\n                      qstar(nmin_s,iz)",
+      "after": "qratio*(qstarx2(5,3,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(3,nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstarx2(3,2,nmin_s,iz) -&\n                      qstarx(3,nmin_s,iz)*&\n                      qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))/&\n                      qstar(nmin_s,iz)",
+      "after": "qratio*(qstarx2(3,2,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(2,nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstarx2(3,3,nmin_s,iz) -&\n                      qstarx(3,nmin_s,iz)*&\n                      qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))/&\n                      qstar(nmin_s,iz)",
+      "after": "qratio*(qstarx2(3,3,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(3,nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstarx2(5,4,nmin_s,iz) -&\n                      qstarx(5,nmin_s,iz)*&\n                      qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))/&\n                      qstar(nmin_s,iz)",
+      "after": "qratio*(qstarx2(5,4,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(4,nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstarx2(4,2,nmin_s,iz) -&\n                      qstarx(4,nmin_s,iz)*&\n                      qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))/&\n                      qstar(nmin_s,iz)",
+      "after": "qratio*(qstarx2(4,2,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(2,nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstarx2(4,3,nmin_s,iz) -&\n                      qstarx(4,nmin_s,iz)*&\n                      qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))/&\n                      qstar(nmin_s,iz)",
+      "after": "qratio*(qstarx2(4,3,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(3,nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstarx2(4,4,nmin_s,iz) -&\n                      qstarx(4,nmin_s,iz)*&\n                      qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))/&\n                      qstar(nmin_s,iz)",
+      "after": "qratio*(qstarx2(4,4,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(4,nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstartx(2,nmin_s,iz) -&\n                      qstarx(2,nmin_s,iz)*qstart(nmin_s,iz)/&\n                      qstar(nmin_s,iz))/qstar(nmin_s,iz)",
+      "after": "qratio*(qstartx(2,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))*(qstart(nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstartx(3,nmin_s,iz) -&\n                      qstarx(3,nmin_s,iz)*qstart(nmin_s,iz)/&\n                      qstar(nmin_s,iz))/qstar(nmin_s,iz)",
+      "after": "qratio*(qstartx(3,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))*(qstart(nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstartx(4,nmin_s,iz) -&\n                      qstarx(4,nmin_s,iz)*qstart(nmin_s,iz)/&\n                      qstar(nmin_s,iz))/qstar(nmin_s,iz)",
+      "after": "qratio*(qstartx(4,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))*(qstart(nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstarx2(5,5,nmin_s,iz) -&\n                   qstarx(5,nmin_s,iz)*&\n                   qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))/&\n                   qstar(nmin_s,iz)",
+      "after": "qratio*(qstarx2(5,5,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(5,nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstartx(5,nmin_s,iz) -&\n                   qstarx(5,nmin_s,iz)*qstart(nmin_s,iz)/&\n                   qstar(nmin_s,iz))/qstar(nmin_s,iz)",
+      "after": "qratio*(qstartx(5,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))*(qstart(nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstarx2(5,2,nmin_s,iz) -&\n                            qstarx(5,nmin_s,iz)*&\n                            qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))/&\n                            qstar(nmin_s,iz)",
+      "after": "qratio*(qstarx2(5,2,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(2,nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstarx2(2,2,nmin_s,iz) -&\n                            qstarx(2,nmin_s,iz)*&\n                            qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))/&\n                            qstar(nmin_s,iz)",
+      "after": "qratio*(qstarx2(2,2,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(2,nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstarx2(5,3,nmin_s,iz) -&\n                            qstarx(5,nmin_s,iz)*&\n                            qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))/&\n                            qstar(nmin_s,iz)",
+      "after": "qratio*(qstarx2(5,3,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(3,nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstarx2(3,2,nmin_s,iz) -&\n                            qstarx(3,nmin_s,iz)*&\n                            qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))/&\n                            qstar(nmin_s,iz)",
+      "after": "qratio*(qstarx2(3,2,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(2,nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstarx2(3,3,nmin_s,iz) -&\n                            qstarx(3,nmin_s,iz)*&\n                            qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))/&\n                            qstar(nmin_s,iz)",
+      "after": "qratio*(qstarx2(3,3,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(3,nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstarx2(5,4,nmin_s,iz) -&\n                            qstarx(5,nmin_s,iz)*&\n                            qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))/&\n                            qstar(nmin_s,iz)",
+      "after": "qratio*(qstarx2(5,4,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(4,nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstarx2(4,2,nmin_s,iz) -&\n                            qstarx(4,nmin_s,iz)*&\n                            qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))/&\n                            qstar(nmin_s,iz)",
+      "after": "qratio*(qstarx2(4,2,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(2,nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstarx2(4,3,nmin_s,iz) -&\n                            qstarx(4,nmin_s,iz)*&\n                            qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))/&\n                            qstar(nmin_s,iz)",
+      "after": "qratio*(qstarx2(4,3,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(3,nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstarx2(4,4,nmin_s,iz) -&\n                            qstarx(4,nmin_s,iz)*&\n                            qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))/&\n                            qstar(nmin_s,iz)",
+      "after": "qratio*(qstarx2(4,4,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(4,nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstartx(2,nmin_s,iz) -&\n                            qstarx(2,nmin_s,iz)*qstart(nmin_s,iz)/&\n                            qstar(nmin_s,iz))/qstar(nmin_s,iz)",
+      "after": "qratio*(qstartx(2,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))*(qstart(nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstartx(3,nmin_s,iz) -&\n                            qstarx(3,nmin_s,iz)*qstart(nmin_s,iz)/&\n                            qstar(nmin_s,iz))/qstar(nmin_s,iz)",
+      "after": "qratio*(qstartx(3,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))*(qstart(nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstartx(4,nmin_s,iz) -&\n                            qstarx(4,nmin_s,iz)*qstart(nmin_s,iz)/&\n                            qstar(nmin_s,iz))/qstar(nmin_s,iz)",
+      "after": "qratio*(qstartx(4,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))*(qstart(nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qmhd_he1x2(5,2) -&\n                            qmhd_he1x(5)*&\n                            qmhd_he1x(2)/qmhd_he1)/&\n                            qmhd_he1",
+      "after": "qratio*(qmhd_he1x2(5,2)/qmhd_he1-(qmhd_he1x(5)/qmhd_he1)*(qmhd_he1x(2)/qmhd_he1))"
+    },
+    {
+      "before": "qratio*(qmhd_he1x2(2,2) -&\n                            qmhd_he1x(2)*&\n                            qmhd_he1x(2)/qmhd_he1)/&\n                            qmhd_he1",
+      "after": "qratio*(qmhd_he1x2(2,2)/qmhd_he1-(qmhd_he1x(2)/qmhd_he1)*(qmhd_he1x(2)/qmhd_he1))"
+    },
+    {
+      "before": "qratio*(qmhd_he1x2(5,3) -&\n                            qmhd_he1x(5)*&\n                            qmhd_he1x(3)/qmhd_he1)/&\n                            qmhd_he1",
+      "after": "qratio*(qmhd_he1x2(5,3)/qmhd_he1-(qmhd_he1x(5)/qmhd_he1)*(qmhd_he1x(3)/qmhd_he1))"
+    },
+    {
+      "before": "qratio*(qmhd_he1x2(3,2) -&\n                            qmhd_he1x(3)*&\n                            qmhd_he1x(2)/qmhd_he1)/&\n                            qmhd_he1",
+      "after": "qratio*(qmhd_he1x2(3,2)/qmhd_he1-(qmhd_he1x(3)/qmhd_he1)*(qmhd_he1x(2)/qmhd_he1))"
+    },
+    {
+      "before": "qratio*(qmhd_he1x2(3,3) -&\n                            qmhd_he1x(3)*&\n                            qmhd_he1x(3)/qmhd_he1)/&\n                            qmhd_he1",
+      "after": "qratio*(qmhd_he1x2(3,3)/qmhd_he1-(qmhd_he1x(3)/qmhd_he1)*(qmhd_he1x(3)/qmhd_he1))"
+    },
+    {
+      "before": "qratio*(qmhd_he1x2(5,4) -&\n                            qmhd_he1x(5)*&\n                            qmhd_he1x(4)/qmhd_he1)/&\n                            qmhd_he1",
+      "after": "qratio*(qmhd_he1x2(5,4)/qmhd_he1-(qmhd_he1x(5)/qmhd_he1)*(qmhd_he1x(4)/qmhd_he1))"
+    },
+    {
+      "before": "qratio*(qmhd_he1x2(4,2) -&\n                            qmhd_he1x(4)*&\n                            qmhd_he1x(2)/qmhd_he1)/&\n                            qmhd_he1",
+      "after": "qratio*(qmhd_he1x2(4,2)/qmhd_he1-(qmhd_he1x(4)/qmhd_he1)*(qmhd_he1x(2)/qmhd_he1))"
+    },
+    {
+      "before": "qratio*(qmhd_he1x2(4,3) -&\n                            qmhd_he1x(4)*&\n                            qmhd_he1x(3)/qmhd_he1)/&\n                            qmhd_he1",
+      "after": "qratio*(qmhd_he1x2(4,3)/qmhd_he1-(qmhd_he1x(4)/qmhd_he1)*(qmhd_he1x(3)/qmhd_he1))"
+    },
+    {
+      "before": "qratio*(qmhd_he1x2(4,4) -&\n                            qmhd_he1x(4)*&\n                            qmhd_he1x(4)/qmhd_he1)/&\n                            qmhd_he1",
+      "after": "qratio*(qmhd_he1x2(4,4)/qmhd_he1-(qmhd_he1x(4)/qmhd_he1)*(qmhd_he1x(4)/qmhd_he1))"
+    },
+    {
+      "before": "qratio*(qmhd_he1tx(2) -&\n                            qmhd_he1x(2)*qmhd_he1t/&\n                            qmhd_he1)/qmhd_he1",
+      "after": "qratio*(qmhd_he1tx(2)/qmhd_he1-(qmhd_he1x(2)/qmhd_he1)*(qmhd_he1t/qmhd_he1))"
+    },
+    {
+      "before": "qratio*(qmhd_he1tx(3) -&\n                            qmhd_he1x(3)*qmhd_he1t/&\n                            qmhd_he1)/qmhd_he1",
+      "after": "qratio*(qmhd_he1tx(3)/qmhd_he1-(qmhd_he1x(3)/qmhd_he1)*(qmhd_he1t/qmhd_he1))"
+    },
+    {
+      "before": "qratio*(qmhd_he1tx(4) -&\n                            qmhd_he1x(4)*qmhd_he1t/&\n                            qmhd_he1)/qmhd_he1",
+      "after": "qratio*(qmhd_he1tx(4)/qmhd_he1-(qmhd_he1x(4)/qmhd_he1)*(qmhd_he1t/qmhd_he1))"
+    },
+    {
+      "before": "qratio*(qstarx2(5,5,nmin_s,iz) -&\n                         qstarx(5,nmin_s,iz)*&\n                         qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))/&\n                         qstar(nmin_s,iz)",
+      "after": "qratio*(qstarx2(5,5,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))*(qstarx(5,nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qstartx(5,nmin_s,iz) -&\n                         qstarx(5,nmin_s,iz)*qstart(nmin_s,iz)/&\n                         qstar(nmin_s,iz))/qstar(nmin_s,iz)",
+      "after": "qratio*(qstartx(5,nmin_s,iz)/qstar(nmin_s,iz)-(qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))*(qstart(nmin_s,iz)/qstar(nmin_s,iz)))"
+    },
+    {
+      "before": "qratio*(qmhd_he1x2(5,5) - qmhd_he1x(5)*&\n                         qmhd_he1x(5)/qmhd_he1)/&\n                         qmhd_he1",
+      "after": "qratio*(qmhd_he1x2(5,5)/qmhd_he1-(qmhd_he1x(5)/qmhd_he1)*(qmhd_he1x(5)/qmhd_he1))"
+    },
+    {
+      "before": "qratio*(qmhd_he1tx(5) -&\n                         qmhd_he1x(5)*qmhd_he1t/&\n                         qmhd_he1)/qmhd_he1",
+      "after": "qratio*(qmhd_he1tx(5)/qmhd_he1-(qmhd_he1x(5)/qmhd_he1)*(qmhd_he1t/qmhd_he1))"
+    }
+  ],
+  "bindings": {
+    "/home/lpaiu/work/direct-eos-gr33/native-cold-population/excitation_pi.f90": "a5428350d1b599ff34fa4351631a1f8f2073b58d487053faf5416043290fe6c6",
+    "/home/lpaiu/work/direct-eos-gr33/native-cold-population/excitation_sum.f90": "0a299199a0b52185866e9c11b5a8e8b549517259b9e28c6232660073767b06f5",
+    "/home/lpaiu/work/direct-eos-gr33/native-cold-population/stable/gas.so": "b2db87a38c316cac016a9c3bba333a52839db0c13c360c402dac310ee3e3b2c7",
+    "/home/lpaiu/work/direct-eos-gr33/native-cold-population/libfree_eos_native_cold_stable.so": "6d6cd656c7fc93d61df3e69bd127ff2f5caa199d88f42c4ebb9e7e96a21608f4"
+  }
+}

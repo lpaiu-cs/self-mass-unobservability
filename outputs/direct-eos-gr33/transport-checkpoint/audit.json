@@ -1,0 +1,238 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "verified_input_bindings": [
+    {
+      "plan": "outputs/direct-eos-gr33/opacity/cubic/plan.json",
+      "input": "outputs/direct-eos-gr33/opacity/baseline-type1-captured.npz",
+      "verified_source": "outputs/direct-eos-gr33/opacity/baseline-type1-captured.npz",
+      "sha256": "c61392f904c083f1424c53b26cf7235c49cc72ae4ed0ccdf362521fad72d21cf"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/opacity/cubic/plan.json",
+      "input": "outputs/direct-eos-gr33/opacity/internal/result.json",
+      "verified_source": "outputs/direct-eos-gr33/opacity/internal/result.json",
+      "sha256": "09f62f78de653157077dd7dc60609845704ef4a7ec6bab7259b7ca77cce5bbe4"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/opacity/cubic/plan.json",
+      "input": "verification/native_opacity.py",
+      "verified_source": "outputs/direct-eos-gr33/opacity/cubic/before-context-native_opacity.py",
+      "sha256": "2f6115610f3797373f4277e9c047f4b8e2d0ca581acb1ed5caa6db0d003ec779"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/opacity/cubic/plan.json",
+      "input": "verification/opacity_cubic.py",
+      "verified_source": "verification/opacity_cubic.py",
+      "sha256": "aab97872ac6718408634979277fceb2692bddd0b1e58ac0a0b9870b582e3d741"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/opacity/cubic/propagation/plan.json",
+      "input": "outputs/direct-eos-gr33/opacity/cubic/result.json",
+      "verified_source": "outputs/direct-eos-gr33/opacity/cubic/result.json",
+      "sha256": "dd1aa4d04dcedaf001625514b618bfd77f8eba3a47136f39a622d516f0b36d7a"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/opacity/cubic/propagation/plan.json",
+      "input": "outputs/direct-eos-gr33/opacity/cubic-baseline-cubic.npz",
+      "verified_source": "outputs/direct-eos-gr33/opacity/cubic-baseline-cubic.npz",
+      "sha256": "36c8a26532d287cd5cfb7888711b28d6872d7993c6695a0a2d70b6e8a651eaa7"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/opacity/cubic/propagation/plan.json",
+      "input": "outputs/direct-eos-gr33/opacity/internal-baseline-captured.npz",
+      "verified_source": "outputs/direct-eos-gr33/opacity/internal-baseline-captured.npz",
+      "sha256": "cd4fda2db80b99629e7ec122e2a54e29c319a3698899e1bc848939179d1cc199"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/opacity/cubic/propagation/plan.json",
+      "input": "outputs/direct-eos-gr33/opacity/derivatives/finite-slopes.npz",
+      "verified_source": "outputs/direct-eos-gr33/opacity/derivatives/finite-slopes.npz",
+      "sha256": "9c2466f2a5ef20cac7c605c9f6e2f19304ad3e8ba875389512811563cc0eaa4a"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/opacity/cubic/propagation/plan.json",
+      "input": "verification/native_opacity.py",
+      "verified_source": "outputs/direct-eos-gr33/opacity/before-tables-native_opacity.py",
+      "sha256": "cca46b35000b078d1ff967e9abe3ff458892a12220e140d0b05018222505eb55"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/opacity/cubic/propagation/plan.json",
+      "input": "verification/opacity_cubic_propagation.py",
+      "verified_source": "verification/opacity_cubic_propagation.py",
+      "sha256": "65913a61c206ebaf7e1aaa273b25b73d70e53d4ca1324cfa3ea066bf8182d26e"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/opacity/derivatives/plan.json",
+      "input": "outputs/direct-eos-gr33/opacity/baseline-type1-captured.npz",
+      "verified_source": "outputs/direct-eos-gr33/opacity/baseline-type1-captured.npz",
+      "sha256": "c61392f904c083f1424c53b26cf7235c49cc72ae4ed0ccdf362521fad72d21cf"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/opacity/derivatives/plan.json",
+      "input": "outputs/direct-eos-gr33/opacity/identity-control.json",
+      "verified_source": "outputs/direct-eos-gr33/opacity/identity-control.json",
+      "sha256": "fe67023ddf154a5bbdd0ab2e15f4c498735ab0db966281a93e436985aa16ccbf"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/opacity/derivatives/plan.json",
+      "input": "outputs/direct-eos-gr33/reference-state.npz",
+      "verified_source": "outputs/direct-eos-gr33/reference-state.npz",
+      "sha256": "17cbbb101628ca9bc111dca0cfe902210f13697c632b91c03913a1718cf7d2ef"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/opacity/derivatives/plan.json",
+      "input": "verification/native_opacity.py",
+      "verified_source": "outputs/direct-eos-gr33/opacity/before-internal-native_opacity.py",
+      "sha256": "0b08147bb41db0d17ea416da1d29a035524feec51b30a75351988e83fe2dac26"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/opacity/derivatives/plan.json",
+      "input": "verification/opacity_derivatives.py",
+      "verified_source": "verification/opacity_derivatives.py",
+      "sha256": "233157d01d1985bbd98ab2239ad14aac7d0358a256025f2afcb4a0e036dc30fb"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/opacity/electrons/plan.json",
+      "input": "outputs/direct-eos-gr33/opacity/baseline-type1-captured.npz",
+      "verified_source": "outputs/direct-eos-gr33/opacity/baseline-type1-captured.npz",
+      "sha256": "c61392f904c083f1424c53b26cf7235c49cc72ae4ed0ccdf362521fad72d21cf"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/opacity/electrons/plan.json",
+      "input": "outputs/direct-eos-gr33/opacity/identity-control.json",
+      "verified_source": "outputs/direct-eos-gr33/opacity/identity-control.json",
+      "sha256": "fe67023ddf154a5bbdd0ab2e15f4c498735ab0db966281a93e436985aa16ccbf"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/opacity/electrons/plan.json",
+      "input": "outputs/structured-enthalpy32/direct-ions/full-integral-build.json",
+      "verified_source": "outputs/structured-enthalpy32/direct-ions/full-integral-build.json",
+      "sha256": "09a117e64bd62d13740b28b2237e203e527d7b4b052ae5dbeedca7d9d824f45a"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/opacity/electrons/plan.json",
+      "input": "verification/direct_eos_gr.py",
+      "verified_source": "verification/direct_eos_gr.py",
+      "sha256": "5709a4cbf5830de09001481813617d43ee2c935a0dff3cd813110d73a7066fdf"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/opacity/internal/plan.json",
+      "input": "outputs/direct-eos-gr33/opacity/baseline-type1-captured.npz",
+      "verified_source": "outputs/direct-eos-gr33/opacity/baseline-type1-captured.npz",
+      "sha256": "c61392f904c083f1424c53b26cf7235c49cc72ae4ed0ccdf362521fad72d21cf"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/opacity/internal/plan.json",
+      "input": "outputs/direct-eos-gr33/opacity/derivatives/result.json",
+      "verified_source": "outputs/direct-eos-gr33/opacity/derivatives/result.json",
+      "sha256": "b26401fe4dfa42778f59fcfd0c0bae7f1aa923e8479284b5c7933e02700f7d5c"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/opacity/internal/plan.json",
+      "input": "verification/native_opacity.py",
+      "verified_source": "outputs/direct-eos-gr33/opacity/before-cubic-native_opacity.py",
+      "sha256": "4c9850f868ae02b4323d1a40f483b279563dce07b3e945161c5e7ac87c21e82b"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/opacity/internal/plan.json",
+      "input": "verification/opacity_internal.py",
+      "verified_source": "verification/opacity_internal.py",
+      "sha256": "ef10af6dc96f2d84a84389cac63619ef93c57d043ec9bf14ccb1a170ecfedc87"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/opacity/tables/before-scalar-compat-plan.json",
+      "input": "outputs/direct-eos-gr33/opacity/baseline-type1-captured.npz",
+      "verified_source": "outputs/direct-eos-gr33/opacity/baseline-type1-captured.npz",
+      "sha256": "c61392f904c083f1424c53b26cf7235c49cc72ae4ed0ccdf362521fad72d21cf"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/opacity/tables/before-scalar-compat-plan.json",
+      "input": "verification/native_opacity.py",
+      "verified_source": "outputs/direct-eos-gr33/opacity/tables/before-enrichment-native_opacity.py",
+      "sha256": "1022d950fb9f6a1f811816833576a1e11c75866030761835eb96eeb29f3a9f35"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/opacity/tables/before-scalar-compat-plan.json",
+      "input": "verification/opacity_tables.py",
+      "verified_source": "outputs/direct-eos-gr33/opacity/tables/before-scalar-compat-opacity_tables.py",
+      "sha256": "5b3d6758565839e5704d7547963819bc3209b921f1f214acad737d3ae5aa88e3"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/opacity/tables/enrichment-plan.json",
+      "input": "outputs/direct-eos-gr33/opacity/tables/plan.json",
+      "verified_source": "outputs/direct-eos-gr33/opacity/tables/plan.json",
+      "sha256": "f8ff287ccdc469b5ad66b9b1757173870e5782f82310ed6415eb258f56180f1a"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/opacity/tables/enrichment-plan.json",
+      "input": "outputs/direct-eos-gr33/opacity/tables/table-loading-inputs.npy",
+      "verified_source": "outputs/direct-eos-gr33/opacity/tables/table-loading-inputs.npy",
+      "sha256": "881c58f91b8355116eaaa41971ca3350a6352026acd56fb844e9b7aad576ec91"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/opacity/tables/enrichment-plan.json",
+      "input": "verification/native_opacity.py",
+      "verified_source": "verification/native_opacity.py",
+      "sha256": "8d55a1ee116606082d857d9531a6ab7d3456f4c847fe98fc9948a5754b2ca11f"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/opacity/tables/enrichment-plan.json",
+      "input": "verification/opacity_tables.py",
+      "verified_source": "outputs/direct-eos-gr33/opacity/tables/before-mixed-term-opacity_tables.py",
+      "sha256": "922a51cb5a87bdad2b1a462ab1aca41f69ef58422d28bb29e634598ce471bf71"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/opacity/tables/plan.json",
+      "input": "outputs/direct-eos-gr33/opacity/baseline-type1-captured.npz",
+      "verified_source": "outputs/direct-eos-gr33/opacity/baseline-type1-captured.npz",
+      "sha256": "c61392f904c083f1424c53b26cf7235c49cc72ae4ed0ccdf362521fad72d21cf"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/opacity/tables/plan.json",
+      "input": "verification/native_opacity.py",
+      "verified_source": "outputs/direct-eos-gr33/opacity/tables/before-enrichment-native_opacity.py",
+      "sha256": "1022d950fb9f6a1f811816833576a1e11c75866030761835eb96eeb29f3a9f35"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/opacity/tables/plan.json",
+      "input": "verification/opacity_tables.py",
+      "verified_source": "outputs/direct-eos-gr33/opacity/tables/before-enrichment-opacity_tables.py",
+      "sha256": "4e1c5e6b10fd58fd645e4e7994bf187399c238cf9fad111245c6c56f9dce1475"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/opacity/tables/mixed-term/plan.json",
+      "input": "outputs/direct-eos-gr33/opacity/tables/result.json",
+      "verified_source": "outputs/direct-eos-gr33/opacity/tables/result.json",
+      "sha256": "38afb654746b97aef328c7defd31e3cc81585d9507d423f68480519f018b17e1"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/opacity/tables/mixed-term/plan.json",
+      "input": "outputs/direct-eos-gr33/opacity/tables/evaluation.npz",
+      "verified_source": "outputs/direct-eos-gr33/opacity/tables/evaluation.npz",
+      "sha256": "4023fb0b8c7d034b1f3449712a6113b651df31c36d91b6741dfcf4f5fbce61e0"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/opacity/tables/mixed-term/plan.json",
+      "input": "outputs/direct-eos-gr33/opacity/tables-enriched-tables.npz",
+      "verified_source": "outputs/direct-eos-gr33/opacity/tables-enriched-tables.npz",
+      "sha256": "d4e10e14edb5d27e11eeeccf7ff519326cf965c06996e258b66defb377d2a42c"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/opacity/tables/mixed-term/plan.json",
+      "input": "verification/opacity_tables.py",
+      "verified_source": "verification/opacity_tables.py",
+      "sha256": "ba01a5ebe3062eb1b13b23ccb918f99158fba6fd0c72fcba191c1ba4a028c7b9"
+    },
+    {
+      "plan": "outputs/direct-eos-gr33/opacity/tables/mixed-term/plan.json",
+      "input": "verification/opacity_mixed_term.py",
+      "verified_source": "verification/opacity_mixed_term.py",
+      "sha256": "e271c3ae8c061b86a06c1a58328900fe18be5a683de8d63887decd7070589a7e"
+    }
+  ],
+  "source_arrays_and_corrections_verified": true,
+  "prior_failed_gates_preserved": true,
+  "physical_EOS_or_opacity_certified": false,
+  "full_GR_evolution": false
+}

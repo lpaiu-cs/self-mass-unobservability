@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/repair_retained_native_acoustic_force.py", line 97, in <module>
+    if __name__=='__main__':main()
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/repair_retained_native_acoustic_force.py", line 92, in main
+    exec(compile(source,__file__,'exec'),ns);ns['force']()
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/repair_retained_native_acoustic_force.py", line 39, in force
+    full=new-old;full[3]=new[0]*donor1-old[0]*donor0
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/def_retained_native_acoustic.py", line 58, in hydro_sources
+    
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_updated_material_return.py", line 31, in point
+    cached=k in self.cache;row=super().point(k)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_material_response.py", line 89, in point
+    flux,gravity,dt,_=self.raw(k,np.zeros_like(Q),np.zeros((5,self.n)),0.,row)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_compensated_finite_return.py", line 9, in raw
+    OUT=old.OUT/'compensated';GR=OUT/'gr';C=old.C;AMP=old.AMP
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/def_retained_native_return.py", line 3, in rhs
+    One constitutive-defect sweep on the saved retained-material background.
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/repair_retained_native_acoustic_force.py", line 15, in conserved
+    p,u=thermo[:2];g=np.asarray(self.eos.parent.evaluate(rho,lt)[2],LD)
+AttributeError: 'EOS' object has no attribute 'parent'

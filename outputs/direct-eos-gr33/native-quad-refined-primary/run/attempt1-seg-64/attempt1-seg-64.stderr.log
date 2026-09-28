@@ -1,0 +1,45 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-refined268-runtime/.phase267-driver.py", line 115, in solve
+    try: return plain(m, op, P, rhs, guess)
+  File "/home/lpaiu/work/native-refined268-runtime/verification/couple_native_fluid_radau.py", line 244, in solve
+    assert k<3,('Four-moment linear residual',relative,moments.tolist())
+AssertionError: ('Four-moment linear residual', 1561.5727574390985, [np.longdouble('176207.69542243493171'), np.longdouble('20456.56711211315928'), np.longdouble('6.837263863713932472e-06'), np.longdouble('7.25165321811327733e-05')])
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-refined268-runtime/.phase267-driver.py", line 174, in <module>
+    row = m.run(64, label, limit, restart)
+  File "/home/lpaiu/work/native-refined268-runtime/verification/balance_full_native_krylov.py", line 42, in run
+    import sympy as sp
+  File "/home/lpaiu/work/native-refined268-runtime/.phase267-driver.py", line 160, in guided
+    m.guide_g = g.copy(); return actual(m, t, h, x, g, lus)
+  File "/home/lpaiu/work/native-refined268-runtime/verification/continue_native_flux_precision.py", line 27, in stages
+    for p in files:dst=OUT/p.relative_to(OLD);os.link(p,dst);reused[str(dst)]=sha(p)
+  File "/home/lpaiu/work/native-refined268-runtime/.phase267-driver.py", line 137, in solve
+    if not kept: raise AssertionError(('Four-moment linear residual', 'no long-double solution within the approved vector bound'))
+AssertionError: ('Four-moment linear residual', 'no long-double solution within the approved vector bound')
+Command exited with non-zero status 1
+	Command being timed: "taskset -c 5 python3 .phase267-driver.py primary268-quad64-work seg-64 64 seg-63 - 10800"
+	User time (seconds): 173.29
+	System time (seconds): 7.83
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:02.06
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3976364
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 763383
+	Voluntary context switches: 34
+	Involuntary context switches: 351
+	Swaps: 0
+	File system inputs: 888
+	File system outputs: 75144
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

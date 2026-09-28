@@ -1,0 +1,58 @@
+{
+  "classification": "Counterexample candidate",
+  "linear_system_repair_passed": true,
+  "accepted_full_horizon_fraction": "15/16",
+  "accepted_horizon_seconds": 0.0032197791730581584,
+  "full_horizon_completed": false,
+  "actual_same_joint_solution_GR_computed": false,
+  "GR_return_time_error_resolved": false,
+  "physical_final_charge_solved": false,
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false,
+  "returned_branch_diagnosis": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "frozen_branch_quadrature_over_original_difference": 0.0027874179156129487,
+    "original_quadrature_over_original_difference": 1.169051578454746,
+    "branch_events_per_stage": [
+      7113,
+      2461,
+      6130,
+      1020,
+      1373,
+      353,
+      345,
+      0
+    ],
+    "scope": "Read-only counterfactual source evaluation; no frozen-branch evolution is accepted.",
+    "final_charge_conclusion": "unadjudicated",
+    "full_goal_complete": false
+  },
+  "arithmetic_diagnosis": {
+    "classification": "Counterexample candidate",
+    "original_baryon_relative": 5.002190124003081e-14,
+    "exact_binary_baryon_relative": 2.206541696485999e-14,
+    "preassembled_baryon_relative": 5.041749576966194e-14,
+    "original_evaluation_error": 2.930888358116114e-14,
+    "preassembled_evaluation_error": 3.023055713946859e-14,
+    "gate": 1e-14,
+    "physical_solution_accepted": false,
+    "final_charge_conclusion": "unadjudicated"
+  },
+  "consistent_arithmetic_check": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "vector_relative": 2.604692611630481e-15,
+    "physical_relative": [
+      6.6697707884323424e-18,
+      7.632769615324608e-19,
+      1.1542279486775792e-20,
+      2.163967239359422e-27
+    ],
+    "original_arithmetic_vector_relative": 3.213389211788481e-14,
+    "selective_decimal_seconds": 1.2301091630000087,
+    "exact_system_reconstructed": true,
+    "new_physical_steps": 0,
+    "final_charge_conclusion": "unadjudicated"
+  }
+}

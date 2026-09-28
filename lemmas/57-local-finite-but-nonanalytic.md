@@ -1,5 +1,7 @@
 # Lemma 57: Local And Finite Without Analyticity
 
+> Correction, 2026-09-09: the [unified theorem package](../docs/theorem-package.md) supersedes stronger historical wording below. Smooth-flat response retains every finite jet and only defeats exact analytic-germ reconstruction. Sufficient differentiability replaces analyticity for a finite-order remainder. Sensitivity labels do not establish coefficient independence from EFT Wilson data or observational absorption.
+
 ## Statement
 
 - Status: Proven. Keep `A2`, `A3`, `A4`, `A6`, `A7`, and `A8`, and keep the irreducible family-envelope closure already proved in [`../docs/irreducible-envelope-theorem.md`](../docs/irreducible-envelope-theorem.md).

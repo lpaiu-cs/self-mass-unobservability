@@ -1,0 +1,21 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "9ab3723",
+  "previous_manifest_sha256": "ff024516afe264d37818afd867198824840bf8de5cb9bcb4108e75b0ff28df52",
+  "primary": "Keep Request23 neutral-atom rest mass and EOS energy unchanged. Audit the exact distributed network and mass conventions, then connect the nuclear-Q reference by an explicit composition-dependent internal-energy offset.",
+  "tests": [
+    "Decimal reaction stoichiometry and source Q reconstruction",
+    "CNO cycle versus net 4H to He closure and electron counting",
+    "Direct FreeEOS fixed-baryon-density composition derivatives",
+    "Finite prescribed CNO burns in both energy references",
+    "Negative controls omitting the offset and double-counting nuclear energy",
+    "Symbolic first law, chemical term and GR luminosity identity"
+  ],
+  "tolerances": {
+    "reference_energy_relative": 1e-10,
+    "finite_burn_energy_relative": 1e-09,
+    "temperature_reference_relative": 1e-10,
+    "derivative_refinement_relative": 0.0001
+  },
+  "boundary": "Prescribed reaction extents have no time or rate. Source standard Q values are not runtime weak-rate Q evaluations. No complete network, transport, neutrino evolution, new TOV fit or observational inference is claimed."
+}

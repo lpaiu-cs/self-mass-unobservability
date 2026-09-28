@@ -1,0 +1,8 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "NumPy bool in the new conservation-only passed field was not JSON serializable. The two accepted64-path steps, exact ports and state/source checkpoint were saved before report serialization failed.",
+  "repair": "Convert the same predicate to builtin bool. Continue64 from its saved step2 to step4 for two measured new pilot steps;128 begins with its original two pilot steps. No physical replay or gate change.",
+  "completed_steps_reused": 2,
+  "preserved_producer_sha256": "2615e7821cae969d2ab1704d2bd445632925e6afa855cba7472d649f55af5f2e",
+  "source_sha256": "d58a3a9511fff956ca2e14dd15419d052cfd62db159539a3ce69199047f91ebb"
+}

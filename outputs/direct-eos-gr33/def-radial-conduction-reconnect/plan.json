@@ -1,0 +1,47 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "af9b712d",
+  "claim": "Apply the already accepted Phase58 radial transport input to the actual Phase56 GR fluid/scalar/metric evolution and retest its velocity failure. The original artificial core cut is crossed using calculated coefficients.",
+  "decision": "Report original global gates and local velocity time convergence at the old and new support boundaries separately. A larger new source must not hide the failed core component. Do not claim a full physical outer boundary, complete photon input or nonlinear feedback.",
+  "model": "Unchanged frozen-source first-order GR equations, native background, microscopic pole startup, energy debit, heat momentum lift, spatial mesh and0.23080495568542375s horizon. Replace only1612 core faces by the saved4012 supported faces. Other source components remain unknown, not certified zero.",
+  "paths": [
+    "heat-16",
+    "heat-32",
+    "heat-64",
+    "coefficient-64",
+    "outer-64"
+  ],
+  "coefficient_contrast": "Phase58 prior28-anchor eta-mixture bank on identical faces; this previously failed its own local tau gate and is only a sensitivity contrast, not an independent error certificate.",
+  "gates": {
+    "time_relative": 0.02,
+    "time_order": 1.5,
+    "coefficient_relative": 0.02,
+    "outer_relative": 0.002,
+    "linear_residual": 1e-09,
+    "heat_balance": 2e-13
+  },
+  "budget": {
+    "paths": 5,
+    "steps": 240,
+    "hard_seconds": 180,
+    "cpu_threads": 1,
+    "memory_GB": 3,
+    "new_native_EOS_calls": 0,
+    "new_collision_states": 0,
+    "automatic_expansion": false
+  },
+  "forecast": "Prior six same-grid Radau paths107.68s. Five paths forecast80-160s; larger12-pole radial source evaluation is unmeasured. Hard180s. Reuse all input and no new pilot/long stellar run.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_radial_conduction_reconnect.py": "a58d2b43da6eace2a9661370be4bce241648a282ff548a40bb42bbd26a1ec95f",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_conduction_radau.py": "86daa01d85c964bafb8e4ab2ca2113a1bd0f9540b2f7a69c3bcc5f84c101b230",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_conductive_cauchy.py": "16c558db20b7355e60d1008d9ee297d4ffd525dbbbbae0a53c53d43be7e84fc5",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_reactive_cauchy.py": "7ddb7e14f1edee6b0656b924076dcabe39145bd5e1eeffbecf4fa3bbd4d95cda",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-conduction-resolved-bank/partial-bank.npz": "087a3e9bffa906ba60df50e0512e018ba3413aa73568c6cb6af7669861c6c8be",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-conduction-resolved-bank/result.json": "30f92f1ddbbfed814ab627b7f40066f38493fa641e7a215bdcd2834cb2695b14",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-conduction-state-bank/partial-bank.npz": "292e4dc1f4014fa1940b7722778ae96a9e4003bf61b0efbccd22f6ef424b4ce2",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-conduction-core/coupled/radau/result.json": "63d946cf47793239906649fa59d43d1abfaea900095ee7a9f50a65d7867d6e84",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-free-surface-response/normalized/background.npz": "c42374d2a79ab37cc716bad52e6b72a4940dc82f0923f71856601f213f0c4a2c",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-free-surface-thermal/coefficients.npz": "8fa9ddf79c966965a3a3fa26e6b4c738f82eec0b6ad257e521ae37c9403fb46c",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/solver-source.py": "b4c4b9784211e117a669c4bac66f5b418e1e1a7753ef70621bf8e9e131d781e9"
+  }
+}

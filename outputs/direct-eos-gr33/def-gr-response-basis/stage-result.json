@@ -1,0 +1,629 @@
+{
+  "classification": "Counterexample candidate",
+  "actual_same_input_evolved": true,
+  "propagation_passed": false,
+  "comparisons": {
+    "velocity_mass_RMS_m_s": {
+      "previous": 0.010634261594208551,
+      "last": 0.00384007268645297,
+      "order": 1.4695143368633004
+    },
+    "scalar_mass_RMS": {
+      "previous": 0.022033498374001412,
+      "last": 0.0011109881016164627,
+      "order": 4.309783306430739
+    },
+    "old_interface_velocity_RMS_m_s": {
+      "previous": 0.20318539149757872,
+      "last": 0.2075865802860999,
+      "order": -0.03091650193866083
+    },
+    "new_interface_velocity_RMS_m_s": {
+      "previous": 0.14825572767974804,
+      "last": 0.009135892000733368,
+      "order": 4.020398436301544
+    }
+  },
+  "holdouts": [
+    {
+      "frequency": 0.0,
+      "relative": {
+        "velocity_mass_RMS_m_s": 5.658050536783667e-13,
+        "scalar_mass_RMS": 4.308285740991587e-10,
+        "old_interface_velocity_RMS_m_s": 2.1815002226580627e-12,
+        "new_interface_velocity_RMS_m_s": 6.305489495111509e-13
+      }
+    },
+    {
+      "frequency": 7.0,
+      "relative": {
+        "velocity_mass_RMS_m_s": 1.769099571974661e-06,
+        "scalar_mass_RMS": 1.5017205859113378e-05,
+        "old_interface_velocity_RMS_m_s": 2.0988693987104043e-05,
+        "new_interface_velocity_RMS_m_s": 9.260153446310518e-06
+      }
+    },
+    {
+      "frequency": 23.0,
+      "relative": {
+        "velocity_mass_RMS_m_s": 0.0012205720353050912,
+        "scalar_mass_RMS": 0.009248889610633911,
+        "old_interface_velocity_RMS_m_s": 0.007607131748034765,
+        "new_interface_velocity_RMS_m_s": 0.0027927741371588607
+      }
+    },
+    {
+      "frequency": 73.0,
+      "relative": {
+        "velocity_mass_RMS_m_s": 0.0034187675657878567,
+        "scalar_mass_RMS": 0.04574686692612231,
+        "old_interface_velocity_RMS_m_s": 0.022897974920911415,
+        "new_interface_velocity_RMS_m_s": 0.038144066629833225
+      }
+    },
+    {
+      "frequency": 233.0,
+      "relative": {
+        "velocity_mass_RMS_m_s": 0.07509748416800544,
+        "scalar_mass_RMS": 1.1694977955481332,
+        "old_interface_velocity_RMS_m_s": 0.5923378489467889,
+        "new_interface_velocity_RMS_m_s": 0.690973999560816
+      }
+    },
+    {
+      "frequency": 733.0,
+      "relative": {
+        "velocity_mass_RMS_m_s": 0.043259551389485264,
+        "scalar_mass_RMS": 0.46187344047331047,
+        "old_interface_velocity_RMS_m_s": 2.4451104584874113,
+        "new_interface_velocity_RMS_m_s": 0.10060159186282665
+      }
+    },
+    {
+      "frequency": 1001.0,
+      "relative": {
+        "velocity_mass_RMS_m_s": 4.154978802937068e-06,
+        "scalar_mass_RMS": 0.0005928991127640121,
+        "old_interface_velocity_RMS_m_s": 0.0015014484208062833,
+        "new_interface_velocity_RMS_m_s": 4.658755803718571e-06
+      }
+    }
+  ],
+  "seconds": 32.666772644,
+  "memory_GB": 2.044469248,
+  "original_failure_resolved": false,
+  "full_dynamic_charge_solved": false,
+  "fields": [
+    {
+      "field": 0,
+      "orthogonality": 1.2205419497969884e-15,
+      "columns": 256,
+      "force_norm": 3.1227071922128893e-19
+    },
+    {
+      "field": 1,
+      "orthogonality": 1.7763568394002505e-15,
+      "columns": 256,
+      "force_norm": 1.4994025927879003e-28
+    }
+  ],
+  "response_frequencies": [
+    {
+      "frequency": 511.9999999999999,
+      "linear_residual": 6.628258765020448e-19
+    },
+    {
+      "frequency": 149.96132803248767,
+      "linear_residual": 2.031700895008644e-18
+    },
+    {
+      "frequency": 874.0386719675123,
+      "linear_residual": 2.5010134944510854e-19
+    },
+    {
+      "frequency": 38.973679354221176,
+      "linear_residual": 5.726846058138369e-17
+    },
+    {
+      "frequency": 707.933917370926,
+      "linear_residual": 4.370606831794189e-19
+    },
+    {
+      "frequency": 316.066082629074,
+      "linear_residual": 6.006985967624914e-18
+    },
+    {
+      "frequency": 985.0263206457788,
+      "linear_residual": 2.4357633487296382e-19
+    },
+    {
+      "frequency": 9.83793643354601,
+      "linear_residual": 5.2493918525356475e-17
+    },
+    {
+      "frequency": 611.8862448722577,
+      "linear_residual": 6.557558721393604e-19
+    },
+    {
+      "frequency": 227.54804069396366,
+      "linear_residual": 1.5128769175653384e-18
+    },
+    {
+      "frequency": 937.7124414989033,
+      "linear_residual": 7.482011127530843e-19
+    },
+    {
+      "frequency": 86.28755850109681,
+      "linear_residual": 5.3898177687199195e-18
+    },
+    {
+      "frequency": 796.4519593060362,
+      "linear_residual": 1.2941756472259694e-18
+    },
+    {
+      "frequency": 412.1137551277423,
+      "linear_residual": 2.3399943857736685e-19
+    },
+    {
+      "frequency": 1014.1620635664539,
+      "linear_residual": 5.04388147802573e-19
+    },
+    {
+      "frequency": 2.4654199438351942,
+      "linear_residual": 1.817554276698628e-16
+    },
+    {
+      "frequency": 562.1847758487351,
+      "linear_residual": 3.0084060940560797e-18
+    },
+    {
+      "frequency": 187.1906385082135,
+      "linear_residual": 6.0358123061069265e-18
+    },
+    {
+      "frequency": 907.7813521217214,
+      "linear_residual": 5.703130531563506e-19
+    },
+    {
+      "frequency": 60.456312653642215,
+      "linear_residual": 5.693050975821672e-18
+    },
+    {
+      "frequency": 753.3551292549109,
+      "linear_residual": 2.2619083084830245e-18
+    },
+    {
+      "frequency": 363.37424524571526,
+      "linear_residual": 7.123779452177524e-19
+    },
+    {
+      "frequency": 1001.953451894891,
+      "linear_residual": 5.688089834815176e-19
+    },
+    {
+      "frequency": 22.04654810510906,
+      "linear_residual": 1.8018578599747286e-17
+    },
+    {
+      "frequency": 660.6257547542846,
+      "linear_residual": 5.296400057754235e-19
+    },
+    {
+      "frequency": 270.6448707450891,
+      "linear_residual": 5.3230588758747794e-18
+    },
+    {
+      "frequency": 963.5436873463577,
+      "linear_residual": 2.563670653118969e-19
+    },
+    {
+      "frequency": 116.21864787827867,
+      "linear_residual": 8.751146341917035e-18
+    },
+    {
+      "frequency": 836.8093614917865,
+      "linear_residual": 1.3990746277212857e-18
+    },
+    {
+      "frequency": 461.8152241512649,
+      "linear_residual": 3.719446624260193e-18
+    },
+    {
+      "frequency": 1021.5345800561648,
+      "linear_residual": 2.3667596341196973e-19
+    },
+    {
+      "frequency": 0.616726422951735,
+      "linear_residual": 2.1088497272011147e-16
+    },
+    {
+      "frequency": 537.122649255638,
+      "linear_residual": 2.2660839515302094e-19
+    },
+    {
+      "frequency": 168.16181511832656,
+      "linear_residual": 5.752347098057702e-18
+    },
+    {
+      "frequency": 891.366976181739,
+      "linear_residual": 2.531678657530212e-19
+    },
+    {
+      "frequency": 49.15748192079701,
+      "linear_residual": 8.613714800465633e-18
+    },
+    {
+      "frequency": 730.9082078363043,
+      "linear_residual": 6.109113642107902e-19
+    },
+    {
+      "frequency": 339.51239506318336,
+      "linear_residual": 7.445689844458299e-19
+    },
+    {
+      "frequency": 994.0705613737066,
+      "linear_residual": 1.3580452224225177e-18
+    },
+    {
+      "frequency": 15.343998364393475,
+      "linear_residual": 1.4985362126966063e-17
+    },
+    {
+      "frequency": 636.4058521104711,
+      "linear_residual": 1.9232992906989865e-18
+    },
+    {
+      "frequency": 248.77939497307048,
+      "linear_residual": 7.955035051140929e-19
+    },
+    {
+      "frequency": 951.1570483201392,
+      "linear_residual": 4.928972183478173e-19
+    },
+    {
+      "frequency": 100.75774388190983,
+      "linear_residual": 4.3725178332084935e-18
+    },
+    {
+      "frequency": 816.9980439001259,
+      "linear_residual": 1.3614181761780037e-18
+    },
+    {
+      "frequency": 436.87399707885476,
+      "linear_residual": 1.4204435135315062e-17
+    },
+    {
+      "frequency": 1018.4583731019678,
+      "linear_residual": 2.033852598783664e-18
+    },
+    {
+      "frequency": 5.541626898032142,
+      "linear_residual": 4.344998920175432e-16
+    },
+    {
+      "frequency": 587.1260029211451,
+      "linear_residual": 1.2474932512326877e-18
+    },
+    {
+      "frequency": 207.00195609987406,
+      "linear_residual": 3.300843728570205e-18
+    },
+    {
+      "frequency": 923.2422561180902,
+      "linear_residual": 2.0945635155420903e-18
+    },
+    {
+      "frequency": 72.84295167986069,
+      "linear_residual": 6.987601240843719e-18
+    },
+    {
+      "frequency": 775.2206050269294,
+      "linear_residual": 2.3762266836930248e-18
+    },
+    {
+      "frequency": 387.59414788952887,
+      "linear_residual": 7.344735510378623e-18
+    },
+    {
+      "frequency": 1008.6560016356065,
+      "linear_residual": 8.5159279066797285e-19
+    },
+    {
+      "frequency": 29.929438626293358,
+      "linear_residual": 2.56495553350405e-17
+    },
+    {
+      "frequency": 684.4876049368166,
+      "linear_residual": 2.4045589004679673e-18
+    },
+    {
+      "frequency": 293.0917921636955,
+      "linear_residual": 4.786879729878814e-19
+    },
+    {
+      "frequency": 974.842518079203,
+      "linear_residual": 1.056962235825749e-18
+    },
+    {
+      "frequency": 132.6330238182609,
+      "linear_residual": 6.432966958593447e-18
+    },
+    {
+      "frequency": 855.8381848816734,
+      "linear_residual": 1.360209612782456e-18
+    },
+    {
+      "frequency": 486.8773507443618,
+      "linear_residual": 4.28915664983635e-19
+    },
+    {
+      "frequency": 1023.3832735770483,
+      "linear_residual": 7.857097435381372e-19
+    },
+    {
+      "frequency": 0.15420482754343928,
+      "linear_residual": 2.1056848301159973e-16
+    },
+    {
+      "frequency": 524.565109003731,
+      "linear_residual": 2.0598890102175877e-18
+    },
+    {
+      "frequency": 158.95524109462173,
+      "linear_residual": 4.149954544462904e-18
+    },
+    {
+      "frequency": 882.8145064711509,
+      "linear_residual": 7.792063213715226e-19
+    },
+    {
+      "frequency": 43.92460507979231,
+      "linear_residual": 4.5607164890341625e-17
+    },
+    {
+      "frequency": 719.4835527705546,
+      "linear_residual": 1.4523082352833081e-18
+    },
+    {
+      "frequency": 327.733741294086,
+      "linear_residual": 5.289359933359617e-18
+    },
+    {
+      "frequency": 989.6923130033862,
+      "linear_residual": 6.552488505957126e-19
+    },
+    {
+      "frequency": 12.440509420273385,
+      "linear_residual": 5.1012443357130395e-17
+    },
+    {
+      "frequency": 624.1798349603172,
+      "linear_residual": 1.2524020592984456e-18
+    },
+    {
+      "frequency": 238.0812186178062,
+      "linear_residual": 4.707534993806e-18
+    },
+    {
+      "frequency": 944.5650254078499,
+      "linear_residual": 7.193742674815088e-19
+    },
+    {
+      "frequency": 93.39657566638915,
+      "linear_residual": 1.1245560830842358e-17
+    },
+    {
+      "frequency": 806.8137940059368,
+      "linear_residual": 4.6447297320685175e-19
+    },
+    {
+      "frequency": 424.4675129547257,
+      "linear_residual": 2.408091266885206e-19
+    },
+    {
+      "frequency": 1016.4621529031378,
+      "linear_residual": 5.303336624591733e-19
+    },
+    {
+      "frequency": 3.850478285460481,
+      "linear_residual": 1.259671048454761e-16
+    },
+    {
+      "frequency": 574.6742657019986,
+      "linear_residual": 2.8957865182897814e-18
+    },
+    {
+      "frequency": 197.00142562271907,
+      "linear_residual": 3.454406429060925e-18
+    },
+    {
+      "frequency": 915.6333709448223,
+      "linear_residual": 3.9368807700327546e-19
+    },
+    {
+      "frequency": 66.51546055233976,
+      "linear_residual": 6.205083368811986e-18
+    },
+    {
+      "frequency": 764.3638744216494,
+      "linear_residual": 5.82508241260268e-19
+    },
+    {
+      "frequency": 375.44306817285207,
+      "linear_residual": 2.6977106007938728e-18
+    },
+    {
+      "frequency": 1005.4533456872651,
+      "linear_residual": 1.3855966001483014e-18
+    },
+    {
+      "frequency": 25.841571536365226,
+      "linear_residual": 2.0395708160462307e-17
+    },
+    {
+      "frequency": 672.6050510842324,
+      "linear_residual": 9.133613157586016e-19
+    },
+    {
+      "frequency": 281.7989992168415,
+      "linear_residual": 2.035247454895164e-18
+    },
+    {
+      "frequency": 969.3308422121037,
+      "linear_residual": 2.366816239443184e-19
+    },
+    {
+      "frequency": 124.30907058867992,
+      "linear_residual": 1.190335090908312e-18
+    },
+    {
+      "frequency": 846.4244955923335,
+      "linear_residual": 3.1083990181185356e-19
+    },
+    {
+      "frequency": 474.33494343697026,
+      "linear_residual": 9.045803882169573e-18
+    },
+    {
+      "frequency": 1022.6127138194895,
+      "linear_residual": 2.3517577333143637e-19
+    },
+    {
+      "frequency": 1.3872861805106094,
+      "linear_residual": 1.705391021035984e-16
+    },
+    {
+      "frequency": 549.6650565630297,
+      "linear_residual": 2.4588336343560223e-19
+    },
+    {
+      "frequency": 177.57550440766627,
+      "linear_residual": 1.3407870522985914e-18
+    },
+    {
+      "frequency": 899.6909294113202,
+      "linear_residual": 4.616786929745043e-19
+    },
+    {
+      "frequency": 54.669157787896154,
+      "linear_residual": 1.341069979740768e-17
+    },
+    {
+      "frequency": 742.2010007831586,
+      "linear_residual": 7.417742325565694e-19
+    },
+    {
+      "frequency": 351.39494891576754,
+      "linear_residual": 2.145886925773582e-18
+    },
+    {
+      "frequency": 998.1584284636349,
+      "linear_residual": 5.103734653029251e-19
+    },
+    {
+      "frequency": 18.546654312734784,
+      "linear_residual": 5.248066368653541e-17
+    },
+    {
+      "frequency": 648.5569318271479,
+      "linear_residual": 2.349449541861164e-18
+    },
+    {
+      "frequency": 259.6361255783506,
+      "linear_residual": 3.233402862102151e-18
+    },
+    {
+      "frequency": 957.4845394476602,
+      "linear_residual": 9.564451597127707e-19
+    },
+    {
+      "frequency": 108.36662905517758,
+      "linear_residual": 1.0004009650349993e-17
+    },
+    {
+      "frequency": 826.9985743772809,
+      "linear_residual": 7.917829005280521e-19
+    },
+    {
+      "frequency": 449.32573429800135,
+      "linear_residual": 6.4704654364682e-19
+    },
+    {
+      "frequency": 1020.1495217145394,
+      "linear_residual": 2.8199198126295452e-19
+    },
+    {
+      "frequency": 7.537847096862083,
+      "linear_residual": 1.1626013357082103e-16
+    },
+    {
+      "frequency": 599.5324870452743,
+      "linear_residual": 7.692950894031593e-18
+    },
+    {
+      "frequency": 217.1862059940632,
+      "linear_residual": 9.345014534378132e-19
+    },
+    {
+      "frequency": 930.6034243336106,
+      "linear_residual": 7.769847730968809e-19
+    },
+    {
+      "frequency": 79.43497459214996,
+      "linear_residual": 3.940512210939113e-18
+    },
+    {
+      "frequency": 785.9187813821937,
+      "linear_residual": 3.412180698564891e-19
+    },
+    {
+      "frequency": 399.8201650396826,
+      "linear_residual": 1.8628548263007684e-18
+    },
+    {
+      "frequency": 1011.5594905797267,
+      "linear_residual": 2.308096936596574e-19
+    },
+    {
+      "frequency": 34.30768699661369,
+      "linear_residual": 2.7382476561569858e-17
+    },
+    {
+      "frequency": 696.266258705914,
+      "linear_residual": 2.556218692059151e-19
+    },
+    {
+      "frequency": 304.51644722944525,
+      "linear_residual": 3.1093594577302958e-18
+    },
+    {
+      "frequency": 980.0753949202077,
+      "linear_residual": 1.022204175017621e-18
+    },
+    {
+      "frequency": 141.18549352884892,
+      "linear_residual": 6.558328819485278e-18
+    },
+    {
+      "frequency": 865.0447589053783,
+      "linear_residual": 4.468914863558578e-19
+    },
+    {
+      "frequency": 499.434890996269,
+      "linear_residual": 4.321081415592746e-18
+    },
+    {
+      "frequency": 1023.8457951724565,
+      "linear_residual": 4.992702230266391e-19
+    },
+    {
+      "frequency": 0.03855265835799505,
+      "linear_residual": 3.6351953193691145e-16
+    }
+  ],
+  "smallest_new_direction": 4.222713064104295e-12,
+  "resolvent_symmetry": 0.0,
+  "full_mass_orthogonality": 1.887379141862766e-15,
+  "linear_residual": 1.4315470370782794e-15,
+  "symmetric_assembly_relative_change": 7.662019608262997e-17
+}

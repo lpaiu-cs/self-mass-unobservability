@@ -1,0 +1,25 @@
+{
+  "classification": "Counterexample candidate",
+  "duration_coordinate_seconds": 140780.16,
+  "steps": [
+    1,
+    2,
+    4
+  ],
+  "boundary_logP": 8.254534518911289,
+  "flux": "Prescribe the initial L_infinity on every baryon face for the duration. This is a forced quasistatic GR evolution control, not self-consistent stellar transport.",
+  "state": "All 26 nuclear inventories and fixed cell baryon masses. Evolve composition at native fixed rho,T by a stiff exponential local linearization. Integrate reaction neutrino loss in the same exponential. Invert the neutral-reference total energy at fixed density, then solve the same-entropy/composition baryon TOV constraints, without a mass target fit.",
+  "energy": "u_B + sum_i(W_i/A_i-1) X_i c^2; baryon constant omitted. Nuclear heat is not added twice.",
+  "controls": {
+    "moment_absolute": 1e-14,
+    "EOS_derivative_relative": 1e-05,
+    "embedding_pressure_relative": 1e-05,
+    "embedding_energy_relative_to_cvT": 1e-05,
+    "time_composition_relative": 0.001,
+    "time_temperature_log_absolute": 2e-06,
+    "GR_interface_absolute": 1e-08,
+    "energy_relative_to_released": 1e-06
+  },
+  "zero_step": "Fixed face pressure must remain fixed when midpoint states are reinserted. An EOS lookup midpoint is not a photospheric boundary.",
+  "physical_gate": "Report frozen-flux transport defect, native/FreeEOS auxiliary mismatch, time refinement and GR energy defect before any physical-evolution verdict."
+}

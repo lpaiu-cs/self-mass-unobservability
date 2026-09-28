@@ -1,0 +1,38 @@
+{
+  "prior_scientific_processes_absent": true,
+  "detached_session": true,
+  "records": [
+    {
+      "action": "run_gr",
+      "pid": 392,
+      "start_ticks": 23159,
+      "boot_id": "91d63545-571f-4008-800f-b9ea3df05f7b",
+      "command": [
+        "taskset",
+        "-c",
+        "1-15",
+        "/usr/bin/python3",
+        "verification/gr_interrupted_recovery.py",
+        "run_gr"
+      ],
+      "intended_cpus": "1-15",
+      "log": "outputs/gr-composition-recovery-20260914.log"
+    },
+    {
+      "action": "run_initial",
+      "pid": 393,
+      "start_ticks": 23159,
+      "boot_id": "91d63545-571f-4008-800f-b9ea3df05f7b",
+      "command": [
+        "taskset",
+        "-c",
+        "0",
+        "/usr/bin/python3",
+        "verification/gr_interrupted_recovery.py",
+        "run_initial"
+      ],
+      "intended_cpus": "0",
+      "log": "outputs/gr-molecular-initial-recovery-20260914.log"
+    }
+  ]
+}

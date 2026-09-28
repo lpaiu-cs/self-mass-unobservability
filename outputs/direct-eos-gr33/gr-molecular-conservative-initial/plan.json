@@ -1,0 +1,90 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "08a076c2dde49ee9032fef1fb06ab2145cec5381",
+  "bindings": {
+    "verification/gr_molecular_conservative_initial.py": "f9d53644927b05541289013995182b55e627d64389ff5804e5acefac5b7b0a07",
+    "verification/gr_coupled_evolution.py": "0cc4d50a54023b03cf85bd4a3f7826f2134d740c85c97cc9024ee2a81bd02cf7",
+    "verification/gr_conservative_evolution.py": "8febb6819c4121d79ac597e698e34e3cf51c315de473863b47a5556ebddc9d31",
+    "verification/gr_conservative_two_carrier.py": "baa2ebf45375f7f1729344831748c1b3ddfa21bdbe95ec22265f4ed93f90909c",
+    "verification/gr_full_subcell_reference.py": "006e637f9dc31ba7b709dfdf037b174f93349f06e951efb34876a6c78a888dc5",
+    "verification/gr_increment_structure.py": "c03b48d643e73d6bceaa12eff765769befc38ab6c0a6032b1947131eed81ff91",
+    "verification/gr_two_carrier_evolution.py": "973f86e4fdb3cb008cb928288e7d87e8906a6e46ae317bc311ab03f9bc291f26",
+    "verification/opacity_tables.py": "ba01a5ebe3062eb1b13b23ccb918f99158fba6fd0c72fcba191c1ba4a028c7b9",
+    "verification/conservative_star.py": "9bcfe7bd2c07504abb6da3a5e7deea07c9c9b08f27ed12b33dd9310497cd60b7",
+    "verification/gr_subcell_precision_fallback.py": "c8d86547d3a8301c9d4c413b40b12fbafd09568f6cb3a9b888b2648d265377ee",
+    "outputs/direct-eos-gr33/gr-molecular-structure-defined/plan.json": "f400431735c0a8496be235fda322cf221b663e12697bbafdf56dbc39f62ee130",
+    "outputs/direct-eos-gr33/gr-molecular-structure-defined/candidate.py": "d190064a31c8f0183e0d8ddd425e84809b3b7175aa378612e29d7f6c9950cfa7",
+    "outputs/direct-eos-gr33/gr-molecular-structure-defined/table-result.json": "fb0d8cb16831745d31b378d16ac94931fdf37335ecc037a763f77672e1e3eb67",
+    "outputs/direct-eos-gr33/gr-molecular-structure-defined/molecular-adiabats-17.npz": "b383b972f16f27d52a68ef461fa3f01d10f378e7dff5f20b50bda3a1422d5b7f",
+    "outputs/direct-eos-gr33/gr-molecular-structure-defined/molecular-state-17-4.npz": "21ab88b4a5d404a06f09ace369ce65ccb43eeec4949211b6827618673d94b3ca",
+    "outputs/direct-eos-gr33/gr-molecular-structure-defined/GR-4.json": "2b6c52b9f3bd19385dac1bf851699e0f1635fdbb67f9c52eeb0ce1b1c4eff7dd",
+    "outputs/direct-eos-gr33/gr-molecular-reference-defined/reference-state.npz": "cc3f21745826e6da2a13e6b7bbfc820afe825c688c24e96a009f0bd697a7b348",
+    "outputs/direct-eos-gr33/gr-molecular-conservative-initial/reference-state.npz": "cc3f21745826e6da2a13e6b7bbfc820afe825c688c24e96a009f0bd697a7b348",
+    "outputs/direct-eos-gr33/eos-molecular-spectral/manifest.json": "26a927b885902564d2f3fb47b43216e0c60c809cfe1d64b47a20bf9b22e6d98a",
+    "outputs/direct-eos-gr33/gr-molecular-precision/manifest.json": "6be95b283a7bfe242a9fb3e55a02fc79c037b116d3d33a059c186ffcc06cb8fd"
+  },
+  "runtime_sha256": {
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/libfree_eos_direct24_molecular_spectral.so.1.0.0": "195f3658eb0cc8fe3447c6b690f246b5a4fb770bd8ffa764d19248fec857ec50",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-precision/split-input.so": "1454c747c7c0a8d85e06714aabf20b89b1e1fa16f946fc4ded317738273c2449"
+  },
+  "cells": 5735,
+  "subdivision": 4,
+  "nodes": [
+    8,
+    16
+  ],
+  "workers": 1,
+  "block_size": 128,
+  "rtol": 2e-10,
+  "atol": 1e-12,
+  "endpoint_tolerance": 1e-08,
+  "volume_relative_tolerance": 1e-05,
+  "shell_mass_relative_tolerance": 1e-05,
+  "inventory_relative_tolerance": 1e-10,
+  "finite_quadrature_relative_tolerance": 1e-05,
+  "interface_tolerance": 1e-08,
+  "saved_face_relative_tolerance": 1e-08,
+  "restriction_gates": {
+    "maximum_cell_baryon_relative_defect": 1e-14,
+    "maximum_cell_energy_relative_defect": 1e-13,
+    "maximum_native_thermal_residual": 1e-08,
+    "maximum_original_baryon_relative_defect": 1e-11,
+    "maximum_original_mass_relative_defect": 2e-12
+  },
+  "native_inverse_controls": [
+    {
+      "cell": 0,
+      "lnT_error": 3.7095476690396367e-10,
+      "thermal_residual": -3.709576832981406e-10,
+      "native_calls": 3
+    },
+    {
+      "cell": 1175,
+      "lnT_error": 1.459403096634726e-09,
+      "thermal_residual": 1.4594027000176828e-09,
+      "native_calls": 3
+    },
+    {
+      "cell": 1176,
+      "lnT_error": 1.4588318695413216e-09,
+      "thermal_residual": 1.4588308468144279e-09,
+      "native_calls": 3
+    },
+    {
+      "cell": 2972,
+      "lnT_error": 1.6751942506776363e-09,
+      "thermal_residual": 1.6751942982677388e-09,
+      "native_calls": 3
+    },
+    {
+      "cell": 5734,
+      "lnT_error": 1.7158588109383865e-09,
+      "thermal_residual": 1.7158127533386905e-09,
+      "native_calls": 3
+    }
+  ],
+  "geometry": "Reuse the matched molecular GR-4 shooting parameters without fitting or tuning baryons. Reuse the retained-increment RK4 and the original one-metre central and surface analytic seeds. Save local shell mass changes independently of cumulative face subtraction.",
+  "moments": "Reuse positive 8/16-node material-coordinate DOP853 quadratures with molecular tables, native molecular roots and matching extended-arithmetic fallback. Baryon weights are the given coordinate measure. Compare native energy and volume against independently retained shell increments and face geometry.",
+  "initialization": "Use the new 16-node baryon and coordinate-energy moments. Reconstruct the constant-energy mass constraint, set rho=B/(a V), and solve native molecular u at that rho. Recompute the existing baryon-face diffusion law and its two-carrier split at the restricted state with fresh molecular EOS/opacity. No old-model cell moments, auxiliaries or luminosity are imported.",
+  "limits": "Finite initial data for the same conditional LTE two-carrier model and reflecting wall, not an isentropic remap, physical EOS/atmosphere certificate, continuum bound or completed evolution. The pending molecular GR-8 comparison must pass before a new evolution may start."
+}

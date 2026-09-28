@@ -1,0 +1,13 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "free_energy": "F(T,b)=C*T*integral_0^infinity p^2*log(1-exp(-sqrt(p^2+b^2)/T)) dp; C=1/(pi^2*hbar^3*c^3), p here has energy units and T means k_B*T.",
+  "fixed_b": "F_b=C*b*integral p^2/E*n_B dp; F=-P_kin; U=3*P_kin+D, D=b*F_b>0 for b>0; T*C_V=C*integral p^2*E^2/T*n_B*(1+n_B) dp.",
+  "composed_b": "For b(rho,T), U_thermo=U-T*b_T*F_b, P_thermo=P_kin+rho*b_rho*F_b. These are the derivatives of the composed quasiparticle Helmholtz density, not a full physical plasma free energy.",
+  "density_of_states": "p^2 dp = E*sqrt(E^2-b^2) dE. At mu=0, U_dispersion < U_vacuum_hard_cut < U_vacuum for b>0. Nonnegative integrands and sqrt(E^2-b^2)<E prove the bounds.",
+  "ray_H": "H=N*sqrt(B^2+p_r^2/a^2+L^2/r^2)",
+  "ray_velocity": "pr*N(t, r)/(sqrt(L**2/r**2 + pr**2/a(t, r)**2 + B(t, r)**2)*a(t, r)**2)",
+  "ray_force": "(L**2/r**3 + pr**2*Derivative(a(t, r), r)/a(t, r)**3 - B(t, r)*Derivative(B(t, r), r))*N(t, r)/sqrt(L**2/r**2 + pr**2/a(t, r)**2 + B(t, r)**2) - sqrt(L**2/r**2 + pr**2/a(t, r)**2 + B(t, r)**2)*Derivative(N(t, r), r)",
+  "ray_energy_change": "(-pr**2*Derivative(a(t, r), t)/a(t, r)**3 + B(t, r)*Derivative(B(t, r), t))*N(t, r)/sqrt(L**2/r**2 + pr**2/a(t, r)**2 + B(t, r)**2) + sqrt(L**2/r**2 + pr**2/a(t, r)**2 + B(t, r)**2)*Derivative(N(t, r), t)",
+  "boundary": "Quasiparticle/matter polarization energy and stress require consistent matching. Changing only grey opacity cannot supply the dispersion, refractive force, state-dependent thermodynamics or actual observation map."
+}

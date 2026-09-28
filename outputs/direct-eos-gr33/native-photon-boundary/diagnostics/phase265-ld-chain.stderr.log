@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/.phase265-ld-chain.py", line 29, in <module>
+    steps([('followthrough',[str(follow)],2)])
+  File "/home/lpaiu/work/native-retained-tail-runtime/.phase265-ld-chain.py", line 24, in steps
+    for name,child in children:assert child.returncode==0,(name,child.returncode)
+AssertionError: ('followthrough', 1)

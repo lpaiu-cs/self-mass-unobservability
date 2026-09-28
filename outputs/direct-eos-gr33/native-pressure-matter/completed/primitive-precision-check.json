@@ -1,0 +1,39 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": false,
+  "half_nominal_double": [
+    [
+      0.013955059349802165,
+      0.002120302694661468,
+      4.338127538696655e-08,
+      1.4997251785893212e-14
+    ],
+    [
+      0.005656071566458141,
+      0.001168317987779581,
+      1.958630204816917e-08,
+      6.075655057720867e-15
+    ]
+  ],
+  "rows": [
+    {
+      "factor": 0.5,
+      "epsilon": 25.812130640950187,
+      "cfl": 1.5048731555551599e-05
+    },
+    {
+      "factor": 1.0,
+      "epsilon": 51.624261281900374,
+      "cfl": 1.5048731551354196e-05
+    },
+    {
+      "factor": 2.0,
+      "epsilon": 103.24852256380075,
+      "cfl": 1.504873154295941e-05
+    }
+  ],
+  "probe_unchanged": 16.0,
+  "inverse_tolerance": 1e-14,
+  "actual_trajectory_accepted": false,
+  "final_charge_conclusion": "unadjudicated"
+}

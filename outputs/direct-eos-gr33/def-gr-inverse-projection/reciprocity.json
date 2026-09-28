@@ -1,0 +1,27 @@
+{
+  "classification": "Counterexample candidate",
+  "results": {
+    "original": {
+      "absolute_matrix_skew": 0.0009765625,
+      "scaled_matrix_skew": 3.3306690738754696e-16,
+      "linear_residual": 1.082347533046817e-16,
+      "inverse_symmetry": 9.436064489858843e-12
+    },
+    "symmetric-LU": {
+      "absolute_matrix_skew": 0.0,
+      "scaled_matrix_skew": 2.220446049250313e-16,
+      "linear_residual": 1.0926881868862122e-16,
+      "inverse_symmetry": 8.233693462578667e-12
+    },
+    "symmetric-Cholesky": {
+      "absolute_matrix_skew": 0.0,
+      "scaled_matrix_skew": 2.220446049250313e-16,
+      "linear_residual": 1.086119947275263e-16,
+      "inverse_symmetry": 2.1480074106727506e-11
+    }
+  },
+  "seconds": 14.56839111,
+  "original_failure_resolved": false,
+  "new_time_paths": 0,
+  "new_EOS_calls": 0
+}

@@ -1,0 +1,19 @@
+{
+  "classification": "Counterexample candidate",
+  "command": [
+    "gfortran",
+    "-O2",
+    "-fPIC",
+    "-shared",
+    "-I/home/lpaiu/work/direct-ions32/full-integral-build/src",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/coulomb-curvature/coulomb_bridge.f90",
+    "-L/home/lpaiu/work/direct-ions32/full-integral-build/src",
+    "-Wl,-rpath,/home/lpaiu/work/direct-ions32/full-integral-build/src",
+    "-lfree_eos_direct24_integral_full",
+    "-o",
+    "/home/lpaiu/work/direct-eos-gr33/coulomb-curvature/coulomb.so"
+  ],
+  "source_sha256": "1425e58620ba4cde8ccaff85566220b5b7ffa3f4621738a12847ee7711c78b86",
+  "bridge_sha256": "d87326cfb1e5e25fc711fa47fc272bfb0f7f9ffe7ab8f134eeab928f18a067ce",
+  "original_library_unchanged": true
+}

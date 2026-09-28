@@ -1,0 +1,93 @@
+{
+  "pid": 313,
+  "process_start_ticks": "22321",
+  "boot_id": "668d9702-2b45-40f7-b597-a59d21cbb64c",
+  "started_unix": 1790284117.4271982,
+  "controller_sha256": "535078a913e17ddeaaf0beb7324aa21edd0cc48d6c896dfb9544ed5d436457bf",
+  "bindings": {
+    "verification/read_compensated_return_charge.py": "38ba83fdce9247dec8b67fef9ae1091b78af806a6b1814e75d00bb7cce6702dc",
+    ".phase251-reader-launch.py": "83275ae7dcb1efbf286a21a4f3bc78d92defdf80c01159fd2cc360764c921086"
+  },
+  "producer_sha256": "38ba83fdce9247dec8b67fef9ae1091b78af806a6b1814e75d00bb7cce6702dc",
+  "resumption_after_boot_change": true,
+  "interrupted_start": {
+    "pid": 181777,
+    "process_start_ticks": "2204809",
+    "boot_id": "8261121e-12db-4df6-81ef-d017b65fa802",
+    "started_unix": 1790280078.5252514,
+    "controller_sha256": "ee22c0eb637b169d555bd83daa5c06a10aac0480d3d8362345398b3231716ff6",
+    "bindings": {
+      "verification/read_compensated_return_charge.py": "38ba83fdce9247dec8b67fef9ae1091b78af806a6b1814e75d00bb7cce6702dc",
+      ".phase247-polynomial-audit.py": "1c5aa0306c4641f572e6f349f457862c749d261c00dd56372dc8faa012941e85",
+      "native-dense-returned246-work/controller-start.json": "89e70c718b83c9d6368c7a5d2ba422e81938e467332b8f8935c30cdec21e0c69",
+      "native-compensated-charge247-work/check/result.json": "970e63727a9cb761a0aaa91e050ce7c7a8d32f9bed508938bfc986f3c8e7598c",
+      "native-compensated-charge247-work/check/polynomial-audit.json": "ae15adfee9c64da9060af751aa135f28c1736568e1092d31f01308eff4272ff0"
+    },
+    "dependency": {
+      "pid": 181543,
+      "process_start_ticks": "2146201",
+      "boot_id": "8261121e-12db-4df6-81ef-d017b65fa802",
+      "started_unix": 1790279529.0132315,
+      "producer_sha256": "531ed7efda613d6ac954b261e9bf8b1c33499ddc06a7f9fbddcd5326f084cf7c",
+      "controller_sha256": "def7cd5990d48e8d502edec0a08643ed54179752c8779d3960a4d50ecaf416c8",
+      "dependency": {
+        "pid": 180636,
+        "process_start_ticks": "1991183",
+        "boot_id": "8261121e-12db-4df6-81ef-d017b65fa802",
+        "started_unix": 1790278075.3258107,
+        "producer_sha256": "1c59330d8e226c66f6966c366a3640921f0f96f891586701601dcd66724ae24e",
+        "controller_sha256": "c9f8feca90ca73e92d43d085f15149832300a4ba733ca22aadf44de7720e081e",
+        "dependency": {
+          "pid": 156055,
+          "process_start_ticks": "1284093",
+          "boot_id": "8261121e-12db-4df6-81ef-d017b65fa802",
+          "started_unix": 1790271433.0793488,
+          "producer_sha256": "624f92fb21cdec45ef79360920511fff3d18d25f1a87ed4aca3bf4f5e528b1fc",
+          "controller_sha256": "68b50650c45967d7e6ef12fa1bcdaff40d66403f2e7fdae18eae07a53999a602",
+          "parallel_fields": {
+            "field1288": 4,
+            "field648": 6,
+            "field1284": 8
+          },
+          "sequential_actions": [
+            "collect",
+            "metric",
+            "coarse",
+            "fine",
+            "audit"
+          ]
+        },
+        "CPU_affinity": 6,
+        "actions": [
+          "prepare",
+          "source"
+        ],
+        "max_dependency_wait_seconds": 32400,
+        "final_charge_conclusion": "unadjudicated",
+        "full_goal_complete": false
+      },
+      "CPU_affinity": 8,
+      "actions": [
+        "prepare",
+        "geometry",
+        "source"
+      ],
+      "max_dependency_wait_seconds": 32400
+    },
+    "parallel_fields": {
+      "field1288": 0,
+      "field648": 8,
+      "field1284": 12
+    },
+    "max_dependency_wait_seconds": 43200,
+    "field_cap_seconds": 7200,
+    "virtual_GiB_per_worker": 16,
+    "decision": "Continue the same long returned solution once actual source and independent polynomial checks pass. No new material steps or physical refinement. Forecast must fit the existing generous field caps; otherwise preserve evidence and reassess.",
+    "final_charge_conclusion": "unadjudicated",
+    "full_goal_complete": false
+  },
+  "archive": "native-full-charge251-work/interruption-0605/247",
+  "policy": "Keep completed receipts and scientific gates. Resume only missing actions, preserve unfinished files/logs. Serialize shared generated-code initialization only.",
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false
+}

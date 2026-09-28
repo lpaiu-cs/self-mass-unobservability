@@ -1,0 +1,98 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "rows": [
+    {
+      "cells": 448,
+      "baryon_relative": 7.128543979218929e-17,
+      "energy_residual": -2.736043017039202e-20,
+      "discarded_to_outside_baryon": 2.6084339489455555e-07
+    },
+    {
+      "cells": 896,
+      "baryon_relative": 2.7632601882224932e-17,
+      "energy_residual": 2.443263166240268e-20,
+      "discarded_to_outside_baryon": 2.9698859601424075e-07
+    }
+  ],
+  "actual_native_checks": [
+    {
+      "cell": 0,
+      "rho": 4.940990976066671e-13,
+      "T": 13368.842493800325,
+      "relative": [
+        1.675869398809482e-07,
+        1.754564893374777e-08
+      ]
+    },
+    {
+      "cell": 63,
+      "rho": 4.927789451337335e-13,
+      "T": 13368.846442387645,
+      "relative": [
+        1.6752486542426226e-07,
+        1.748372935317377e-08
+      ]
+    },
+    {
+      "cell": 127,
+      "rho": 2.1124926253630544e-13,
+      "T": 7613.110640485295,
+      "relative": [
+        3.036725026994702e-08,
+        4.626227734227939e-09
+      ]
+    },
+    {
+      "cell": 191,
+      "rho": 2.055000521411629e-14,
+      "T": 1945.5298384789346,
+      "relative": [
+        1.389277646257625e-07,
+        2.71928701778279e-10
+      ]
+    },
+    {
+      "cell": 255,
+      "rho": 2.2076801960247351e-16,
+      "T": 1277.8618720603936,
+      "relative": [
+        2.0528401201147517e-10,
+        9.242107079643347e-11
+      ]
+    },
+    {
+      "cell": 319,
+      "rho": 2.7974157724077865e-20,
+      "T": 6012.709774427797,
+      "relative": [
+        2.5198176878404865e-11,
+        2.059992176839387e-09
+      ]
+    }
+  ],
+  "comparison_same_896_grid": {
+    "gas_outside_original_radius_g": {
+      "frozen": 587269277296.599,
+      "LTE": 571150202843.3285,
+      "ratio": 1.0282221285627244
+    },
+    "integrated_trace_energy_erg": {
+      "frozen": 1.9642883943013915e+21,
+      "LTE": -1.8574777902663e+24,
+      "ratio": -0.0010575030315812166
+    },
+    "scattering_work_into_gas_erg": {
+      "frozen": 1.5560640999672384e+17,
+      "LTE": 1.4642894315094227e+17,
+      "ratio": 1.0626752242302344
+    }
+  },
+  "EOS_calls": 17,
+  "seconds": 8.718171904000002,
+  "earlier_failed_cutoff_verdict_preserved": true,
+  "physical_chemistry_closed": false,
+  "final_charge_solved": false,
+  "full_goal_complete": false,
+  "source_sha256": "96f10f45a2275b4e9a8b9c013e3d5d66fa247dbfc25ca9ae05ba32f2dd22fbe9"
+}

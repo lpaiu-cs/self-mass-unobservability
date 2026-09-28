@@ -1,25 +1,29 @@
 # self-mass-unobservability
 
-Status: Note. This repository carries two closed tracks: the frozen static theorem-and-counterexample package (Paper A), and the dynamic-chi measurement program that instruments the theorem's `A4` escape (Paper B).
-Status: Note. The static mathematical content is frozen unless a direct contradiction is found during cleanup or later review.
+The current result is a single revised paper: **Static response and dynamical identifiability in free-fall tests: finite-order boundaries and a pulsar-triple application**. The separate Paper A/B drafts are historical and are superseded for submission.
 
-## Authoritative Entry Points
+## Current entry points
 
-- Start with [`docs/theorem-package.md`](docs/theorem-package.md) for the closed theorem domain, the main positive theorem, the negative uniqueness no-go, and the sharp boundary escapes.
-- Use [`docs/boundary-escape-map.md`](docs/boundary-escape-map.md) for the exact assumption-drop counterexamples and their replacement bookkeeping.
-- Use [`docs/paper-outline.md`](docs/paper-outline.md) for the paper-facing structure of the theorem track, and [`paper/paper-A-collapse-theorem.md`](paper/paper-A-collapse-theorem.md) for the current Paper A draft.
-- Use [`docs/release-note.md`](docs/release-note.md) for the compact publication and handoff summary.
-- Use [`docs/reproducibility-note.md`](docs/reproducibility-note.md) for the recommended smoke tests, and [`verification/`](verification/README.md) for the independent re-derivation of the family survivor counts (twice-corrected: the rank-4 undercount fix and the 2026-07-12 gradient-kinematics correction; corrected table `E,B,S,V,T,Q,U,Z = 5,16,30,15,17,23,17,21`).
+- [Unified manuscript](paper/manuscript.md) and [rendered PDF](output/pdf/free-fall-identifiability.pdf).
+- [Latest remaining-lever results](docs/remaining-levers-2026-09-09.md): corrected drive, joint inference, live transient/derivative checks and observable-pole uniqueness; empirical-promotion limits retained.
+- [Ordered research completion](docs/research-completion-2026-09-09.md): full nuisance audit, conditional coverage validation and force/drive matching.
+- [Levers 4–5 completion](docs/levers-4-5-completion-2026-09-09.md): physical comparators, expanded phases, transient-response and observing-gap boundaries.
+- [Review-resolution record](docs/unified-revision-2026-09-09.md), [claims and limits](docs/paper-claims-vs-nonclaims.md), and [theorem package](docs/theorem-package.md).
+- [Build and bounded verification](paper/README.md), [input manifest](paper/revision-manifest.json), and [dynamic failure ledger](docs/failure-ledger-dynamic-chi.md).
 
-## Dynamic-Chi Program (Requests 10.x, Paper B)
+Status: Proven. The analytic results separate fixed-order representation from exact reconstruction, finite-carrier interpolation and nuisance-projected identifiability. Smooth-flat response has every finite jet. Three distinct positive carriers can be matched by a freely fitted real degree-five derivative comparator.
 
-The dynamic track instruments the theorem's `F-A4+` state-augmented salvage — the finite state pair `(beta, tau_chi)` of an orbital-timescale internal state — on the pulsar triple PSR J0337+1715, and quotes the program's first real-data upper limits.
+Status: Imported from prior work. Stored J0337 results report no detection under their registered finite-grid rule. At a two-day lag and assumed K=10 width inflation, the normalized beta interval is 3.53e-9 with the full stored nuisance space and 1.68e-9 with truncation. These are conditional Gaussian constructions, not drive-independent SEP exclusions or validated coverage statements. Request 12 adds separately recorded live transient/derivative and local nonlinear evaluations; it does not replace the historical verdicts.
 
-- Entry point: [`paper/paper-B-dynamic-sep-limit.md`](paper/paper-B-dynamic-sep-limit.md) (draft manuscript; LaTeX via `paper/build_paper_b.py`).
-- Headline: `|delta Delta| < 1.68e-9` (95% interval at the `K_dyn = 10` inflated Fisher width, `u95(beta_hat, K sigma_F)`; `tau_chi = 2 d`, worst drive phase) over `tau_chi in [2, 500] d`, per `request10_external/sep_dynamic/sep_phase_marg_10_8e.json`; Fisher-only floor `2.79e-10` and the full anchor bracket quoted alongside; clock-sector companion limits from the same data in the 10.7 chain.
-- Request chain and pre-registrations: `notes/REQUEST10_*.md` (10.1 counting theorems through the 10.8f review response; every stage pre-registered and committed before its data look).
-- Return artifacts, gate record, and deterministic reproduction scripts: [`request10_external/`](request10_external/README.md).
-- The dynamic track's early working ledger is preserved at [`docs/failure-ledger-dynamic-chi.md`](docs/failure-ledger-dynamic-chi.md); the theorem track's boundary-risk register remains [`docs/failure-ledger.md`](docs/failure-ledger.md).
+Status: Imported from prior work. The follow-through retains all 90 nuisance directions and tests an explicitly estimated covariance. Minimum interval coverage is 94.59% within the registered linear-model family; diagonal covariance can under-cover severely. These are new conditional simulations, not a new timing integration.
+
+Status: Counterexample candidate. A reciprocal scalar-charge action now supplies conditional force-level matching. Actual EOS-to-body parameters remain uncomputed. Internal modes already exist in dynamical EFT.
+
+Status: Proven. The leading physical potential drive has a phase closure incompatible with the historical auxiliary analysis. Its physical-beta interpretation is withdrawn; a common time shift or coefficient rescaling cannot repair it.
+
+## Historical program
+
+The dated notes, old drafts and request artifacts below preserve the development record. Their previous submission strategy and stronger numerical/theorem headlines are superseded by the unified manuscript and correction record. The request index is provenance, not a request to reopen LLR, clock or Nutimo runtime work.
 
 ## Empirical Program (Requests 1-7)
 
@@ -70,7 +74,7 @@ make request3
 make request5-phaseA
 make request6
 make request7
-make paper-tex
+make -C paper tex
 ```
 
 Equivalent direct commands:

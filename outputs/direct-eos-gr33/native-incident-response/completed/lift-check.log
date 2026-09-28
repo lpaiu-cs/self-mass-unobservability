@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/solve_native_incident_lift.py", line 119, in <module>
+    else:globals()[action]()
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/solve_native_incident_lift.py", line 107, in check
+    assert derivative<1e-6 and moment<1e-12 and collision<1e-12,rows[-1]
+AssertionError: {'time': np.float64(0.0010646736465578976), 'derivative': 9.544681994339158e-10, 'moment': 1.004132369064314e-11, 'collision': 0.0}

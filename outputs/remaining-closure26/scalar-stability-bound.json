@@ -1,0 +1,17 @@
+{
+  "classification": "Proven",
+  "conditional_envelope": {
+    "R_upper_m": 70000000.0,
+    "energy_over_c2_upper_kg_m3": 200000000.0,
+    "N_lower": 0.99,
+    "N_upper": 1.0,
+    "f_lower": 0.99,
+    "beta_abs_upper": 4.0,
+    "kappa_upper": 0.018669527672394274,
+    "kappa_exact": "17798080000000000/953322457445838711"
+  },
+  "theorem": "For regular asymptotically vanishing perturbations, integral V phi^2 <= kappa integral p (phi prime)^2. kappa<1 excludes a negative omega^2 scalar bound state; angular gradients are nonnegative.",
+  "geometric_conditions": "Static spherical metric N in [0.99,1], f>=0.99, compact support radius<=7e7 m, 0<=e-3P<=e<=2e8*c^2 SI, |beta|<=4. Schwarzschild exterior included.",
+  "membership": "The declared shape-preserving finite-profile interpolation satisfies these value envelopes; no interval enclosure of the original EOS/TOV continuum is claimed.",
+  "exclusions": "Not fluid, convection or thermal stability. No theorem that every stable response has a single relaxation pole."
+}

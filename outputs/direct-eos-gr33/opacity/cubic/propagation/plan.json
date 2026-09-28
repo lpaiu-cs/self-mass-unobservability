@@ -1,0 +1,15 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "55b5430",
+  "inputs_sha256": {
+    "outputs/direct-eos-gr33/opacity/cubic/result.json": "dd1aa4d04dcedaf001625514b618bfd77f8eba3a47136f39a622d516f0b36d7a",
+    "outputs/direct-eos-gr33/opacity/cubic-baseline-cubic.npz": "36c8a26532d287cd5cfb7888711b28d6872d7993c6695a0a2d70b6e8a651eaa7",
+    "outputs/direct-eos-gr33/opacity/internal-baseline-captured.npz": "cd4fda2db80b99629e7ec122e2a54e29c319a3698899e1bc848939179d1cc199",
+    "outputs/direct-eos-gr33/opacity/derivatives/finite-slopes.npz": "9c2466f2a5ef20cac7c605c9f6e2f19304ad3e8ba875389512811563cc0eaa4a",
+    "verification/native_opacity.py": "cca46b35000b078d1ff967e9abe3ff458892a12220e140d0b05018222505eb55",
+    "verification/opacity_cubic_propagation.py": "65913a61c206ebaf7e1aaa273b25b73d70e53d4ca1324cfa3ea066bf8182d26e"
+  },
+  "procedure": "Read the actual Z grid and choices, verify original outputs bitwise, propagate the two captured X-table tangents through the original linear Z weights and harmonic radiative/conductive opacity. Preserve the original finite-derivative gate.",
+  "opacity_model_value_unchanged": true,
+  "continuous_native_or_physical_certificate": false
+}

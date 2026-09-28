@@ -1,0 +1,657 @@
+{
+  "classification": "Counterexample candidate",
+  "completed": true,
+  "finite_gates_passed": true,
+  "cells": 5735,
+  "quadrature_difference": 3.987538156404231e-14,
+  "quadrature_error_estimates": [
+    7.201353629897214e-09,
+    2.214427088662535e-11
+  ],
+  "rows": [
+    {
+      "kind": "T",
+      "q_or_fraction": 0,
+      "order_difference": 0.0,
+      "polynomial_residual": 0.0,
+      "evaluated_tail_upper": 0.0,
+      "group_velocity_range": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "kind": "T",
+      "q_or_fraction": 0.01,
+      "order_difference": 0.0,
+      "polynomial_residual": 2.220446049250313e-16,
+      "evaluated_tail_upper": 1.0812938782497449e-123,
+      "group_velocity_range": [
+        0.009999530557164491,
+        0.010294219832242
+      ]
+    },
+    {
+      "kind": "T",
+      "q_or_fraction": 0.1,
+      "order_difference": 0.0,
+      "polynomial_residual": 2.220446049250313e-16,
+      "evaluated_tail_upper": 8.392449137075016e-74,
+      "group_velocity_range": [
+        0.09950401531971888,
+        0.10236652053921724
+      ]
+    },
+    {
+      "kind": "T",
+      "q_or_fraction": 1,
+      "order_difference": 0.0,
+      "polynomial_residual": 4.440892098500626e-16,
+      "evaluated_tail_upper": 2.6766399218140045e-31,
+      "group_velocity_range": [
+        0.7071070510292327,
+        0.7099482184810592
+      ]
+    },
+    {
+      "kind": "T",
+      "q_or_fraction": 10,
+      "order_difference": 4.317541043141665e-16,
+      "polynomial_residual": 4.440892098500626e-16,
+      "evaluated_tail_upper": 8.388338072480546e-24,
+      "group_velocity_range": [
+        0.9948870278958044,
+        0.9950371756182673
+      ]
+    },
+    {
+      "kind": "T",
+      "q_or_fraction": 1000,
+      "order_difference": 4.334013517066102e-16,
+      "polynomial_residual": 2.220446049250313e-16,
+      "evaluated_tail_upper": 1.0840522830971396e-23,
+      "group_velocity_range": [
+        0.9999994842389323,
+        0.9999994999988486
+      ]
+    },
+    {
+      "kind": "L",
+      "q_or_fraction": 0,
+      "order_difference": 0.0,
+      "polynomial_residual": 0.0,
+      "evaluated_tail_upper": 0.0,
+      "group_velocity_range": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "kind": "L",
+      "q_or_fraction": 0.01,
+      "order_difference": 0.0,
+      "polynomial_residual": 2.220446049250313e-16,
+      "evaluated_tail_upper": 5.903102167765683e-121,
+      "group_velocity_range": [
+        9.1586893013292e-08,
+        0.000927178642679243
+      ]
+    },
+    {
+      "kind": "L",
+      "q_or_fraction": 0.5,
+      "order_difference": 0.0,
+      "polynomial_residual": 4.440892098500626e-16,
+      "evaluated_tail_upper": 2.8693324735583764e-36,
+      "group_velocity_range": [
+        4.579353384603673e-06,
+        0.04623794922455074
+      ]
+    },
+    {
+      "kind": "L",
+      "q_or_fraction": 0.99,
+      "order_difference": 8.127475138237187e-16,
+      "polynomial_residual": 4.440892098500626e-16,
+      "evaluated_tail_upper": 3.52788813381663e-22,
+      "group_velocity_range": [
+        9.067170225894998e-06,
+        0.09085863784992215
+      ]
+    },
+    {
+      "kind": "L",
+      "q_or_fraction": 0.999999,
+      "order_difference": 1.2143140028903896e-15,
+      "polynomial_residual": 4.440892098500626e-16,
+      "evaluated_tail_upper": 5.570561727157812e-22,
+      "group_velocity_range": [
+        9.158750036088834e-06,
+        0.09175740682555426
+      ]
+    }
+  ],
+  "controls": [
+    {
+      "cell": 0,
+      "kind": "T",
+      "q": 0.01,
+      "h": 1.0000000003174696,
+      "logarithmic_integral_50decimal": "1.0000000003174695887109535412527328678547965316102",
+      "residual": 1.1289046458747266e-17,
+      "passed": true
+    },
+    {
+      "cell": 1175,
+      "kind": "T",
+      "q": 0.01,
+      "h": 1.000000016829171,
+      "logarithmic_integral_50decimal": "1.0000000168291712195207974239080662126990234236858",
+      "residual": -2.1952079742390807e-16,
+      "passed": true
+    },
+    {
+      "cell": 2972,
+      "kind": "T",
+      "q": 0.01,
+      "h": 1.0000004118397103,
+      "logarithmic_integral_50decimal": "1.0000004118397102529797054161725731879466426006143",
+      "residual": 4.7020294583827426e-17,
+      "passed": true
+    },
+    {
+      "cell": 3043,
+      "kind": "T",
+      "q": 0.01,
+      "h": 1.0000004403258007,
+      "logarithmic_integral_50decimal": "1.0000004403258006543727755076578557799735002896987",
+      "residual": 4.5627224492342143e-17,
+      "passed": true
+    },
+    {
+      "cell": 4352,
+      "kind": "T",
+      "q": 0.01,
+      "h": 1.0000015821365156,
+      "logarithmic_integral_50decimal": "1.0000015821365157400643404977877359588329715744837",
+      "residual": -1.4006434049778773e-16,
+      "passed": true
+    },
+    {
+      "cell": 5734,
+      "kind": "T",
+      "q": 0.01,
+      "h": 1.0000029477817498,
+      "logarithmic_integral_50decimal": "1.0000029477817500966855211456682257464537749525943",
+      "residual": -2.9668552114566823e-16,
+      "passed": true
+    },
+    {
+      "cell": 0,
+      "kind": "T",
+      "q": 0.1,
+      "h": 1.0000000314357775,
+      "logarithmic_integral_50decimal": "1.0000000314357777751052461636796617600112612072435",
+      "residual": -2.7510524616367965e-16,
+      "passed": true
+    },
+    {
+      "cell": 1175,
+      "kind": "T",
+      "q": 0.1,
+      "h": 1.000001666426722,
+      "logarithmic_integral_50decimal": "1.0000016664267222719027690645233756437742002491429",
+      "residual": -2.7190276906452336e-16,
+      "passed": true
+    },
+    {
+      "cell": 2972,
+      "kind": "T",
+      "q": 0.1,
+      "h": 1.0000407830646223,
+      "logarithmic_integral_50decimal": "1.0000407830646222349732270355475628357587103841583",
+      "residual": 6.502677296445244e-17,
+      "passed": true
+    },
+    {
+      "cell": 3043,
+      "kind": "T",
+      "q": 0.1,
+      "h": 1.000043603966533,
+      "logarithmic_integral_50decimal": "1.0000436039665331909323674681669277529230793300066",
+      "residual": -1.9093236746816692e-16,
+      "passed": true
+    },
+    {
+      "cell": 4352,
+      "kind": "T",
+      "q": 0.1,
+      "h": 1.000156691916981,
+      "logarithmic_integral_50decimal": "1.0001566919169813743520218718066038656177684782989",
+      "residual": -3.743520218718066e-16,
+      "passed": true
+    },
+    {
+      "cell": 5734,
+      "kind": "T",
+      "q": 0.1,
+      "h": 1.0002919868950553,
+      "logarithmic_integral_50decimal": "1.0002919868950554752286944919882329060089454540018",
+      "residual": -1.7522869449198822e-16,
+      "passed": true
+    },
+    {
+      "cell": 0,
+      "kind": "T",
+      "q": 1.0,
+      "h": 1.0000015875129775,
+      "logarithmic_integral_50decimal": "1.0000015875129777566824641995329608331336809961376",
+      "residual": -2.5668246419953294e-16,
+      "passed": true
+    },
+    {
+      "cell": 1175,
+      "kind": "T",
+      "q": 1.0,
+      "h": 1.0000841719670528,
+      "logarithmic_integral_50decimal": "1.0000841719670527676200117581960555385120188606278",
+      "residual": 3.2379988241803945e-17,
+      "passed": true
+    },
+    {
+      "cell": 2972,
+      "kind": "T",
+      "q": 1.0,
+      "h": 1.0020687046918417,
+      "logarithmic_integral_50decimal": "1.0020687046918416973801994014988543260088387472426",
+      "residual": 2.6198005985011457e-18,
+      "passed": true
+    },
+    {
+      "cell": 3043,
+      "kind": "T",
+      "q": 1.0,
+      "h": 1.002212005444366,
+      "logarithmic_integral_50decimal": "1.0022120054443662753863808335413226950827720733451",
+      "residual": -2.7538638083354133e-16,
+      "passed": true
+    },
+    {
+      "cell": 4352,
+      "kind": "T",
+      "q": 1.0,
+      "h": 1.0080187966770624,
+      "logarithmic_integral_50decimal": "1.0080187966770623522802535743702208568877366578793",
+      "residual": 4.771974642562978e-17,
+      "passed": true
+    },
+    {
+      "cell": 5734,
+      "kind": "T",
+      "q": 1.0,
+      "h": 1.0151104679999787,
+      "logarithmic_integral_50decimal": "1.0151104679999790062797808752075530293579823413169",
+      "residual": -3.0627978087520756e-16,
+      "passed": true
+    },
+    {
+      "cell": 0,
+      "kind": "T",
+      "q": 10.0,
+      "h": 1.0000031436071275,
+      "logarithmic_integral_50decimal": "1.0000031436071274715237497627824807528719746775234",
+      "residual": 2.847625023721752e-17,
+      "passed": true
+    },
+    {
+      "cell": 1175,
+      "kind": "T",
+      "q": 10.0,
+      "h": 1.0001667251695316,
+      "logarithmic_integral_50decimal": "1.0001667251695317771940960881284496561227451244974",
+      "residual": -1.7719409608812846e-16,
+      "passed": true
+    },
+    {
+      "cell": 2972,
+      "kind": "T",
+      "q": 10.0,
+      "h": 1.0041231537537194,
+      "logarithmic_integral_50decimal": "1.0041231537537195988474652633052832301538736061031",
+      "residual": -1.9884746526330528e-16,
+      "passed": true
+    },
+    {
+      "cell": 3043,
+      "kind": "T",
+      "q": 10.0,
+      "h": 1.0044098071979048,
+      "logarithmic_integral_50decimal": "1.004409807197904983625841754037280874762589787805",
+      "residual": -1.8362584175403727e-16,
+      "passed": true
+    },
+    {
+      "cell": 4352,
+      "kind": "T",
+      "q": 10.0,
+      "h": 1.0162258109870024,
+      "logarithmic_integral_50decimal": "1.0162258109870026430733125728548734457539457067116",
+      "residual": -2.4307331257285487e-16,
+      "passed": true
+    },
+    {
+      "cell": 5734,
+      "kind": "T",
+      "q": 10.0,
+      "h": 1.0311787712977334,
+      "logarithmic_integral_50decimal": "1.0311787712977332909723254431619885575697165679177",
+      "residual": 1.0902767455683802e-16,
+      "passed": true
+    },
+    {
+      "cell": 0,
+      "kind": "T",
+      "q": 1000.0,
+      "h": 1.0000031750404217,
+      "logarithmic_integral_50decimal": "1.0000031750404219227124617582049603357178790719222",
+      "residual": -2.22712461758205e-16,
+      "passed": true
+    },
+    {
+      "cell": 1175,
+      "kind": "T",
+      "q": 1000.0,
+      "h": 1.000168393373177,
+      "logarithmic_integral_50decimal": "1.0001683933731770269232376016117863250379183674291",
+      "residual": -2.6923237601611788e-17,
+      "passed": true
+    },
+    {
+      "cell": 2972,
+      "kind": "T",
+      "q": 1000.0,
+      "h": 1.0041650185561775,
+      "logarithmic_integral_50decimal": "1.0041650185561774743409407351546725303166086738249",
+      "residual": 2.5659059264845328e-17,
+      "passed": true
+    },
+    {
+      "cell": 3043,
+      "kind": "T",
+      "q": 1000.0,
+      "h": 1.0044546104530725,
+      "logarithmic_integral_50decimal": "1.0044546104530725991767358266956622273435239256021",
+      "residual": -9.917673582669566e-17,
+      "passed": true
+    },
+    {
+      "cell": 4352,
+      "kind": "T",
+      "q": 1000.0,
+      "h": 1.0163967357036343,
+      "logarithmic_integral_50decimal": "1.0163967357036344258011001163669423203981082438563",
+      "residual": -1.2580110011636694e-16,
+      "passed": true
+    },
+    {
+      "cell": 5734,
+      "kind": "T",
+      "q": 1000.0,
+      "h": 1.0315230032829867,
+      "logarithmic_integral_50decimal": "1.0315230032829867465688454284217108483825265143282",
+      "residual": -4.6568845428421713e-17,
+      "passed": true
+    },
+    {
+      "cell": 0,
+      "kind": "L",
+      "q": 0.010000047625842967,
+      "h": 1.0000000009525132,
+      "logarithmic_integral_50decimal": "1.0000000009525130797923615926400735331542734390775",
+      "residual": 1.2020763840735993e-16,
+      "passed": true
+    },
+    {
+      "cell": 1175,
+      "kind": "L",
+      "q": 0.010002526434757053,
+      "h": 1.0000000505180786,
+      "logarithmic_integral_50decimal": "1.0000000505180788656998626124008583562062085565629",
+      "residual": -2.656998626124009e-16,
+      "passed": true
+    },
+    {
+      "cell": 2972,
+      "kind": "L",
+      "q": 0.010062748800087196,
+      "h": 1.0000012511982526,
+      "logarithmic_integral_50decimal": "1.0000012511982528070487623620001934971443202050581",
+      "residual": -2.0704876236200018e-16,
+      "passed": true
+    },
+    {
+      "cell": 3043,
+      "kind": "L",
+      "q": 0.01006711224989195,
+      "h": 1.0000013389013747,
+      "logarithmic_integral_50decimal": "1.0000013389013747277438819891501596726574286532808",
+      "residual": -2.774388198915016e-17,
+      "passed": true
+    },
+    {
+      "cell": 4352,
+      "kind": "L",
+      "q": 0.010248872403368312,
+      "h": 1.00000498609396,
+      "logarithmic_integral_50decimal": "1.00000498609396019446961850471780961584334517926",
+      "residual": -1.944696185047178e-16,
+      "passed": true
+    },
+    {
+      "cell": 5734,
+      "kind": "L",
+      "q": 0.010483476895998062,
+      "h": 1.000009720084587,
+      "logarithmic_integral_50decimal": "1.0000097200845873194533429751565834676388205022006",
+      "residual": -3.194533429751566e-16,
+      "passed": true
+    },
+    {
+      "cell": 0,
+      "kind": "L",
+      "q": 0.5000023812921484,
+      "h": 1.0000023812864782,
+      "logarithmic_integral_50decimal": "1.0000023812864782289113393773294877503940054416475",
+      "residual": -2.8911339377329485e-17,
+      "passed": true
+    },
+    {
+      "cell": 1175,
+      "kind": "L",
+      "q": 0.5001263217378527,
+      "h": 1.000126305813088,
+      "logarithmic_integral_50decimal": "1.0001263058130881495001097416231175245064368374692",
+      "residual": -1.4950010974162312e-16,
+      "passed": true
+    },
+    {
+      "cell": 2972,
+      "kind": "L",
+      "q": 0.5031374400043598,
+      "h": 1.0031327757408168,
+      "logarithmic_integral_50decimal": "1.0031327757408171318662804389392189669538673706524",
+      "residual": -3.318662804389392e-16,
+      "passed": true
+    },
+    {
+      "cell": 3043,
+      "kind": "L",
+      "q": 0.5033556124945975,
+      "h": 1.0033521200475874,
+      "logarithmic_integral_50decimal": "1.0033521200475874943880089918450866023194611304892",
+      "residual": -9.438800899184509e-17,
+      "passed": true
+    },
+    {
+      "cell": 4352,
+      "kind": "L",
+      "q": 0.5124436201684156,
+      "h": 1.012498561284081,
+      "logarithmic_integral_50decimal": "1.0124985612840808613676461135350348697239888944153",
+      "residual": 1.3863235388646497e-16,
+      "passed": true
+    },
+    {
+      "cell": 5734,
+      "kind": "L",
+      "q": 0.5241738447999031,
+      "h": 1.0244156559443747,
+      "logarithmic_integral_50decimal": "1.0244156559443746276077167011824086777194979716578",
+      "residual": 7.239228329881759e-17,
+      "passed": true
+    },
+    {
+      "cell": 0,
+      "kind": "L",
+      "q": 0.9900047149584538,
+      "h": 1.0000093356387905,
+      "logarithmic_integral_50decimal": "1.0000093356387905000168323457555266017534457465779",
+      "residual": -1.68323457555266e-20,
+      "passed": true
+    },
+    {
+      "cell": 1175,
+      "kind": "L",
+      "q": 0.9902501170409482,
+      "h": 1.0004952909815814,
+      "logarithmic_integral_50decimal": "1.0004952909815815200413428153220572761251409518578",
+      "residual": -1.2004134281532206e-16,
+      "passed": true
+    },
+    {
+      "cell": 2972,
+      "kind": "L",
+      "q": 0.9962121312086324,
+      "h": 1.012337088670742,
+      "logarithmic_integral_50decimal": "1.0123370886707420866116359729772274664895331907479",
+      "residual": -8.661163597297722e-17,
+      "passed": true
+    },
+    {
+      "cell": 3043,
+      "kind": "L",
+      "q": 0.996644112739303,
+      "h": 1.013197941459779,
+      "logarithmic_integral_50decimal": "1.0131979414597791471315163271399415264726805954807",
+      "residual": -1.4713151632713993e-16,
+      "passed": true
+    },
+    {
+      "cell": 4352,
+      "kind": "L",
+      "q": 1.014638367933463,
+      "h": 1.0493806333844602,
+      "logarithmic_integral_50decimal": "1.0493806333844603683432694598259734224497416628613",
+      "residual": -1.6834326945982598e-16,
+      "passed": true
+    },
+    {
+      "cell": 5734,
+      "kind": "L",
+      "q": 1.0378642127038082,
+      "h": 1.0970267821893507,
+      "logarithmic_integral_50decimal": "1.0970267821893507344865203590461435505788620770783",
+      "residual": -3.4486520359046145e-17,
+      "passed": true
+    },
+    {
+      "cell": 0,
+      "kind": "L",
+      "q": 1.0000037625795342,
+      "h": 1.000009525172226,
+      "logarithmic_integral_50decimal": "1.000009525172226119023831537530672412102498803912",
+      "residual": -1.1902383153753066e-16,
+      "passed": true
+    },
+    {
+      "cell": 1175,
+      "kind": "L",
+      "q": 1.0002516432230617,
+      "h": 1.0005053497690954,
+      "logarithmic_integral_50decimal": "1.0005053497690954872376810215183913762083878699802",
+      "residual": -8.72376810215184e-17,
+      "passed": true
+    },
+    {
+      "cell": 2972,
+      "kind": "L",
+      "q": 1.0062738737338395,
+      "h": 1.0125891088022323,
+      "logarithmic_integral_50decimal": "1.0125891088022326167707990036288225270041135707993",
+      "residual": -3.167707990036288e-16,
+      "passed": true
+    },
+    {
+      "cell": 3043,
+      "kind": "L",
+      "q": 1.00671021827797,
+      "h": 1.0134674634257146,
+      "logarithmic_integral_50decimal": "1.013467463425714518876144921122432982030579004509",
+      "residual": 8.112385507887757e-17,
+      "passed": true
+    },
+    {
+      "cell": 4352,
+      "kind": "L",
+      "q": 1.0248862154495908,
+      "h": 1.0503937535527679,
+      "logarithmic_integral_50decimal": "1.0503937535527681599342327871070298985892691168652",
+      "residual": -2.5993423278710705e-16,
+      "passed": true
+    },
+    {
+      "cell": 5734,
+      "kind": "L",
+      "q": 1.0483466412521167,
+      "h": 1.099032676600348,
+      "logarithmic_integral_50decimal": "1.0990326766003482234593844374330583156381970902887",
+      "residual": -2.2345938443743306e-16,
+      "passed": true
+    }
+  ],
+  "maximum_independent_residual": 3.743520218718066e-16,
+  "maximum_transverse_series_tail_diagnostic": 1.0840802390648529e-23,
+  "maximum_longitudinal_series_tail_diagnostic": 5.570814704098814e-22,
+  "transverse_endpoint_identity_residual": 1.3322676287317143e-15,
+  "longitudinal_endpoint_difference": 1.9984014443252818e-15,
+  "characteristic_velocity_comparison": [
+    {
+      "q": 0,
+      "max_characteristic_velocity_h_difference": 0.0
+    },
+    {
+      "q": 0.01,
+      "max_characteristic_velocity_h_difference": 2.278177646530821e-13
+    },
+    {
+      "q": 0.1,
+      "max_characteristic_velocity_h_difference": 2.235166274289213e-09
+    },
+    {
+      "q": 1,
+      "max_characteristic_velocity_h_difference": 5.836186720120651e-06
+    },
+    {
+      "q": 10,
+      "max_characteristic_velocity_h_difference": 2.363206039968091e-05
+    },
+    {
+      "q": 1000,
+      "max_characteristic_velocity_h_difference": 2.412488954028902e-05
+    }
+  ],
+  "moment_and_roundoff_intervals_certified": false,
+  "physical_all_order_plasma_EOS_certified": false,
+  "native_EOS_replaced": false,
+  "full_GR_evolution": false
+}

@@ -1,0 +1,33 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": {
+    "time": 0.03456270649527452,
+    "angular": 5.353007911365361e-10,
+    "radial": 0.0
+  },
+  "claim": "Resolve the pressure subtraction at the actual two material states before rejecting the physical return for its3.46percent charge time difference.",
+  "method": "Keep Phase150 charge/source as the accepted baseline. Recover both saved finite material states with the existing extended spline/primitive owner, subtract their pressures before GR integration, and use the separately saved photon increment. No trajectory, native state, bank or clock replay.",
+  "scope": "This repairs the represented source difference; it does not improve the absolute old baseline or certify primitive/EOS errors.",
+  "pilot_knots": [
+    0,
+    8,
+    16
+  ],
+  "gates": {
+    "time": 0.02,
+    "quadrature": 0.002,
+    "independent": 1e-09
+  },
+  "cap_seconds": 130,
+  "original_readout_cap_seconds": 180,
+  "charged_first_readout_seconds": 35.36829463699996,
+  "forecast": "Measure the three representative source knots, reuse them, and require twice worst knot cost for14 remaining plus35s for saved GR/infinity reads inside the remaining130s repair allowance.",
+  "stop": "Retain the original failed result. Stop without another evolution or clock on time/support/precision/budget failure.",
+  "source_sha256": "8c8b0f2de7b782656a6074aa582c39374989e572a484e3734f6cf2832e621d06",
+  "bindings": {
+    "retained-motion-return151-work/execution-plan.json": "6b4fb97f6f9ddd2a1eae27fb158ffcfaf61180d8d8c174bd76045b01235b80bf",
+    "retained-motion-return151-work/infinity/result.json": "2410385bb206868062f4c236766369b8f44246e356e139553c700c2d8f498969",
+    "retained-motion-return151-work/result.json": "0bd548811835e41d57dc98ecbefea126967a8786ccd25a729bfd17f196e2f2c4",
+    "retained-motion-return151-work/material/sources.json": "fc43d7d146552666666309e92c7e144112784213ee6adae6a10404a562d2eaee"
+  }
+}

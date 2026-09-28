@@ -1,0 +1,13 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "finite_bracket": "-k_B*T*sum_a log W_a <= F_Q-F_cl <= C_N, W_a=sum_{nu in Z^3}exp[-m_a L^2 |nu|^2/(2 beta hbar^2)], C_N=beta*hbar^2*4*pi/(24 V)*sum_a q_a*(sum_b q_b-q_a)/m_a.",
+  "bulk_bracket": "If the bulk free-energy densities exist at fixed positive T and composition: 0 <= f_Q-f_cl <= hbar^2*4*pi*e^2*n_e*sum_j(n_j Z_j/m_j)/(24*k_B*T). No small-theta or WK-convergence assumption is used.",
+  "covariance": "Free zero-winding loops with their centroid removed have one-coordinate variance v_a=beta*hbar^2/(12*m_a); Brownian bridge subtraction and Fourier sums agree.",
+  "smearing": "For t_ab=(v_a+v_b)/2, exp(t_ab Laplacian)G_L-G_L=4*pi*t_ab/V-4*pi*integral_0^t_ab K_L(s,r)ds <=4*pi*t_ab/V. K_L is the positive periodic heat kernel.",
+  "Jensen": "At fixed centroids, E exp[-beta integral U] >= exp[-beta E integral U] >= exp[-beta(U+C_N)]. Integrating centroids and retaining only the positive zero-winding sector gives Z_Q>=Z_cl exp(-beta C_N).",
+  "trace": "Golden-Thompson gives Z_Q<=Z_cl product W_a using the periodic free kinetic diagonal. For positive Coulomb singularities the finite-box self-adjoint form/Feynman-Kac trace is used; bounded-potential regularization followed by its semigroup limit justifies the trace inequality.",
+  "winding": "Writing a=m L^2/(2 beta hbar^2)>0, log W<=6 exp(-a)/(1-exp(-a)), since n^2>=n and log(1+x)<=x. Hence sum log W/V vanishes in the fixed-density bulk limit.",
+  "derivative_boundary": "A bracket on free energy cannot be differentiated as an inequality. Functions B*(1+sin(k*x))/2 remain between 0 and B while their derivative at zero is B*k/2. A physical derivative certificate requires additional control.",
+  "scope": "A nonperturbative theorem for the declared positive-ion rigid-background Hamiltonian. The total stellar EOS and its derivatives remain open."
+}

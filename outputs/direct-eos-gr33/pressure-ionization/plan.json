@@ -1,0 +1,52 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "0a5ffca",
+  "cells": 5735,
+  "processes": 4,
+  "block_cells": 128,
+  "control_cells": [
+    0,
+    2972,
+    5734
+  ],
+  "source_changes": {
+    "mod_pi.f90": {
+      "before": "6b007a0b6e5c97c1ed39acd78a14f05bc8226d4322c4c50a99b248a3069878a2",
+      "after": "d0c80de7a12db341bba87e2f152aabe002f3459d5bb07861580d6ab0b4ce6423"
+    },
+    "mdh_pi.f90": {
+      "before": "dd4a254039dd63115085ebfafbaccedb841f62b5490bf276b1f601a5cc55cc42",
+      "after": "b2789071b27329d91cd426999660ae59babe5586af96273e3f8f6a2a7283a65c"
+    },
+    "mod_pi_fit.f90": {
+      "before": "47923dfba5046149ccc1bc32702e1bb81d635919102a52093ab13be73f1aaa98",
+      "after": "bde405721fcdcb9e95e174c87b94a0aced43b5c9650ef39c8fe2897b08202f88"
+    },
+    "effective_radius.f90": {
+      "before": "03620d8fae8ddade9f31368d33fbf10fbbcef7c997a51451d7d843970fd023bf",
+      "after": "b7c4460d4167067bf5ac9185edbfd7055fe5fb4a4e43263c213f8b05952b2aeb"
+    },
+    "CMakeLists.txt": {
+      "before": "d1e32f22c0db0934f34342e547c88433c0489b848ced0be26213b4a662ed6d9a",
+      "after": "e9bf78617e949a3b0561eb252a497121eb7bc6426db609d0f3f7dad8c3b239dd"
+    }
+  },
+  "bindings": {
+    "verification/pressure_ionization_curvature.py": "cff0c1074334f336b54f0a2ad4de915609b59242416a36d2926d063dd06c6030",
+    "outputs/direct-eos-gr33/coulomb-curvature/manifest.json": "5fc0984b1ab227b8750a99ae02792744a75332fbc04113594a207049ce1f2fe7",
+    "outputs/direct-eos-gr33/exchange-curvature/manifest.json": "617af7a497b975d2c1b057f2f0f177efe096b0d91d510434750a654f6a40df67",
+    "outputs/direct-eos-gr33/reference-state.npz": "17cbbb101628ca9bc111dca0cfe902210f13697c632b91c03913a1718cf7d2ef",
+    "outputs/direct-eos-gr33/pressure-ionization/direct_ion_bridge.f90": "ee9375deb6941add7ec549dd7b07aa0835f3b9fbfbb37b84139400a5f38a7927"
+  },
+  "original_library_sha256": "6348e235763db0112687f391ab1c06c34b33aa530973ea4a414a5d0f21b1dfb4",
+  "original_EOS_Coulomb_bitwise_required": true,
+  "moment_relative_tolerance": 1e-10,
+  "thermodynamic_normalized_tolerance": 1e-09,
+  "projected_Coulomb_Gram_tolerance": 1e-12,
+  "dimensions": "Three electron/Coulomb coordinates followed by seven neutral-radius moments alpha0..alpha6, ionic charge^(3/2) beta and non-bare radius-cube gamma. H2+ contributes to the hard-sphere neutral moments as in the actual MDH convention.",
+  "moment_units": "Capture native extrasum in nu=n/(rho_native*N_A) form and actual radii. Scale radii by L=1e-8 cm for matrix conditioning only. Nuclear inventory constraints count two H nuclei per molecule.",
+  "method": "An isolated read-only trace captures final mdh_pi_end inputs/outputs and effective radii. Reconstruct moments from saved species, replay pressure and entropy including their supplied chain-rule derivatives, then differentiate the same explicit quadratic/cubic free-energy polynomial.",
+  "boundary": "Positive saved support and declared finite matrices only. Excitation/partition terms, omitted populations, coupled global roots, native continuous evaluation and physical EOS errors are not certified.",
+  "physical_EOS_certified": false,
+  "full_GR_evolution": false
+}

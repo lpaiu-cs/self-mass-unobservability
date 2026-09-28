@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-eos269-runtime/.phase268-thermal.py", line 31, in <module>
+    ns['bank']()
+  File "/home/lpaiu/work/native-eos269-runtime/verification/def_native_refined_thermochemistry.py#phase267", line 9, in bank
+  File "/home/lpaiu/work/native-eos269-runtime/verification/def_native_causal_nonlinear.py", line 40, in setup
+    assert abs(native.y0/d['y0'][j]-1)<1e-10
+AssertionError
+Command exited with non-zero status 1
+0.84 s 183120 KB

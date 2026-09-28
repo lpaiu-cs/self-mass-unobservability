@@ -1,0 +1,17 @@
+{
+  "classification": "Counterexample candidate",
+  "evidence": "Saved early-state probes do not share a converged original binary64 arithmetic range. The largest momentum discrepancy is in deep cells0..5; changing only the affine acceleration did not solve it. Preserve both failures.",
+  "repair": "Carry Q,h,temperature seed,field,probe and deep shared-face state in longdouble through the existing recovery and Horner EOS evaluation, reusing the existing extended flux algebra. Do not change EOS coefficients, physical amplitude, state or tolerance.",
+  "gates": "Original4/8/16 Richardson comparisons below0.2percent, owner and conservation1e-8, branch1percent; affine map1e-12. Actual prefixes must pass again before any production.",
+  "caps": {
+    "check": 35,
+    "pilot": 60,
+    "production": 400
+  },
+  "source_sha256": "c57cb45245e380200e4885886aa5ec7e521dc6a7a6d21561c3bbacda179b6219",
+  "bindings": {
+    "native-incident-drive155-work/material-affine-check.json": "e253fc461f3295afaa9a5896094324ee4636bd954acab1f7bce108de737cdb45",
+    "native-incident-drive155-work/material-affine-diagnostic.json": "860dba699fb3bc54fc8e943e057108860391a0bb80c2d112c7338434eab25751",
+    "native-incident-drive155-work/diagnostic-material-affine-producer.py": "995953aab1938b5c90bdbd4add040f53566b79270d805dbe14e838385298bbd9"
+  }
+}

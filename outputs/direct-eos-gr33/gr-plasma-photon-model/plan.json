@@ -1,0 +1,28 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "f305247",
+  "bindings": {
+    "verification/gr_plasma_photon_model.py": "f5faf0cf5834f17c96fd05efa697af1f469b705fb43c69d046bd0dc5da8e5f32",
+    "outputs/direct-eos-gr33/gr-radiation-eos-split/manifest.json": "e367007b46cd01a029904ed6b5cf7582fff119e8de9d649054f7983783e6bae7",
+    "outputs/direct-eos-gr33/gr-molecular-reference-defined/manifest.json": "144c1a4691bf26823f70c17367a4aa3ccba7a70c208474cbc484086df425d282",
+    "outputs/direct-eos-gr33/lanl-tops-cutoff-reader/manifest.json": "b660702105000a37d0fb1ba3ce5741772a4a5645cf9c5624abdf35a7449e0e4a",
+    "outputs/direct-eos-gr33/gr-plasma-photon-model/constants.json": "ea73fa984dfaeddc701c5d0a75bff526bd5ae1b94b4af8ee67075b72fee78acb",
+    "outputs/direct-eos-gr33/gr-plasma-photon-model/plasma-radiation2019.pdf": "9c286194d0145d49a544adb8cf473df34ad493ab99b7f3fd6fea2bc897cd7336",
+    "outputs/direct-eos-gr33/gr-plasma-photon-model/plasma-radiation2019.txt": "e88319ce04230d0a2b92c468e968acaffd677d7592056935204a1120756e9d4c"
+  },
+  "source_url": "https://arxiv.org/abs/1903.05616",
+  "source_DOI": "10.1103/PhysRevE.100.023202",
+  "model": "Two transverse Bose quasiparticle modes, zero chemical potential, E(p)=sqrt(c^2*p^2+b^2). No longitudinal modes, zero-point terms, nonlocal damping or physical model-error bound. Use the nonrelativistic electron plasma formula b=hbar*sqrt(n_e*e^2/(epsilon0*m_e)) only as a declared diagnostic. Actual n_e comes from the frozen new molecular FreeEOS outputs. Do not substitute the result into the running native EOS or GR structure.",
+  "thermodynamics": "Derive all quantities from the quasiparticle free-energy density. At fixed b, F=-P_kin, U=3P_kin+D. For b(rho,T), the composed Helmholtz function gives U_thermo=U-T*b_T*F_b and P_thermo=P_kin+rho*b_rho*F_b. A cutoff-only opacity substitution does not provide these derivatives or a common matter/radiation free energy.",
+  "quadrature": "Evaluate U,P_kin,D and T*C_V at fixed b at every one of 5735 actual states using momentum-space quadrature at two tolerances. Compare at relative/absolute normalized 1e-8. Independently use 50-decimal energy-space quadrature at a=0,0.1,1,4.3,10 and the minimum/maximum actual plasma-to-temperature ratio.",
+  "relative_absolute_tolerance": 1e-08,
+  "controls": [
+    0.0,
+    0.1,
+    1.0,
+    4.3,
+    10.0
+  ],
+  "dynamics": "Differentiate the canonical Hamiltonian H=N*sqrt(b^2+p_r^2/a^2+L^2/r^2). Keep time-dependent lapse, radial metric and plasma energy. Refractive force and time-dependent quasiparticle energy exchange must be balanced by matter; they cannot be represented by just changing an absorption coefficient.",
+  "scope": "Theorem progress for the declared model plus finite stellar diagnostics. Not physical EOS certification, dense-plasma opacity certification, a refit or actual GR/scalar evolution."
+}

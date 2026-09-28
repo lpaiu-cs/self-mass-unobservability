@@ -1,0 +1,16 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "manufactured_maximum_relative": 1.8079931130968802e-14,
+  "independent_acoustic_integral_relative": 0.0,
+  "seconds": 0.18110037099999943,
+  "identities": [
+    "Jordan proper-volume source conversion",
+    "rest plus nonrest trace decomposition",
+    "incoming acoustic port convolution"
+  ],
+  "direct_equation": "U_tt-c^2 U_rstar_rstar=-4*pi*G/c^2*N^2*alpha*A^4*r*delta(e-3p); U=r*delta_phi. The scalar/metric potential and metric-mediated matter sources are omitted, not bounded by this identity.",
+  "kernel": "Q_direct(u)=-G/(2*c^3)*integral w(r)*integral_0^(u+d(r)) delta(trace*dV) dt; w=alpha*A*N/r.",
+  "normalization": "delta_alpha_direct=-Q_direct/M_geom. Time-dependent Bondi mass and indirect sources are separate terms.",
+  "whole_physical_model_certified": false
+}

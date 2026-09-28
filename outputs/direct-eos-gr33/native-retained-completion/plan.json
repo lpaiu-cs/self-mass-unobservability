@@ -1,0 +1,63 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "6014b35e4",
+  "previous_goal_turn": "progress",
+  "claim": "Complete the unchanged native retained-material128-step trajectory and apply both actual source histories to the same compact characteristic GR charge operator.",
+  "decision": "Does the original two-clock source comparison pass and does the retained-material change matter at the charge accuracy scale?",
+  "reuse": "Preserve all Phase147 files. Reuse completed64-step results and native banks. Start from the complete16-step fine checkpoint. Recomputing17..32 is necessary because the interrupted32-step checkpoint lacks eight continuation ledgers; compare the preserved32-step physical record before proceeding.",
+  "change": "Only buffered atomic storage and correctly aligned restart histories from Phase147. No equation, input amplitude, grid, native support, horizon or acceptance relaxation.",
+  "clocks": [
+    64,
+    128
+  ],
+  "coarse_rerun": false,
+  "new_native_states": 0,
+  "CPU_threads": 1,
+  "memory_GiB": 3,
+  "budget": {
+    "fine_seconds": 1500,
+    "required_prefix_seconds": 240,
+    "GR_seconds": 150,
+    "total_scientific_seconds": 1650
+  },
+  "forecast": {
+    "late_coarse_equivalent_fine_step_seconds": 6.927440649687497,
+    "setup_and_export_seconds": 75.20430698199971,
+    "point_seconds": 851.0776597469994,
+    "upper_seconds": 1296.6164896204991,
+    "assumption": "Same physical-time late substep cost at the fine clock; finer-clock overhead and later support changes remain unmeasured. Use max of this rate and the required16..32 replay rate before the remainder. No completion guarantee."
+  },
+  "gates": {
+    "restart_response": 1e-12,
+    "energy": 1e-08,
+    "port": 1e-10,
+    "baryon": 1e-10,
+    "time": 0.02,
+    "quadrature": 0.002,
+    "independent": 1e-09
+  },
+  "stop": "One fine continuation only. Stop on prefix disagreement, support, conservation, measured remainder forecast or external deadline. No automatic second run, further floor reduction, finer clock or horizon. Preserve any failure.",
+  "limits": "The compact same-initial-operator first variation does not supply updated native collision corrections, null-infinity emission, uniform EOS/derivative, full floor/coupled/nonlinear/static or observation closure.",
+  "bindings": {
+    "verification/continue_native_retained_tail.py": "c2b4375c42b6bd1bda45ed4af399dba0a7a66c1c2e14d203531f7190180b77ee",
+    "verification/evolve_native_retained_tail.py": "75b29b80ef936c7a160b1474a6cb82b931340585c87e74155cdb9a860a00524f",
+    "verification/def_native_updated_gr_return.py": "2ebdded1c3970bd2e0e038cfd29151b7ac32a84e8c50092584ebce5ed5cdbc77",
+    "verification/def_native_refined_thermochemistry.py": "d58a3a9511fff956ca2e14dd15419d052cfd62db159539a3ce69199047f91ebb",
+    "verification/def_native_stage_energy_history.py": "cd108ef9e06a528089799c3324c2e17a3caaa3a12194572e7cbcd17047c88d63",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/support/repaired-bank.npz": "ae67c3c469df177fcd0aa0449ed65baf5fc0bd879f75cc504373693246ecdd61",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/support/spectrum-bank.npz": "98db1a866080df533bba6f825b7505f52d08bd29cfbf83b6b2667b5e4b88536a",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/checkpoint-control.json": "fbd99a269433b690d630643bcf15ee41b03aabdf0e1d75b38df55e585fcc1bf5",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/production-external.log": "d070da4a66929b114b3b31fd4f139cc0255c6ef8aee0515e0bbefbe4d7b28ba8",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/result-64.json": "00c6c2ed968a8a94e0c51bbb6c03044637b2bd3edc721928cb1f42771f692955",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/source-64.npz": "e355fd75305697b78611d53c19bf7d0d821142533cbea5f1b81d53b9a2a093b8",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/checkpoint-128.npz": "33bd347827eeb383e44c8e05615569f1cad20e02db6ff029c2d0e9a1b8b8850c",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/history-128.npz": "b707286571753fc2e05cb1fb6edad49e58503effb0c124a17a0fc5db7a2bf0b1",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/accepted-ports-128.npz": "351b66fe8bed5355c8a312e2e2bcda898b28f7ab89b5bd25ec57698a98551abb",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/tail-128.json": "3b924c361ffaff12b2a7c38588f461588d08afcaf9bb26fa5edf93947e847dd3",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/state-128-0.npz": "630de274049848d825871e96ac6f388a0d10a16699bf04168b49243884d35c22",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/state-128-8.npz": "97f4d4faed3493847b0ff32ad643f1c295615cd7b1aec762d551fcfe3d00a776",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/state-128-16.npz": "7b42739b36c1f49f6690362160831c7525e6d9b924bfe9b41a74a3d47b8ffe93",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/state-128-24.npz": "ad89d78dab1f1852a66fb1e47e001e655ae716f230ec3c149ed7d2ba7f41d82a",
+    "outputs/direct-eos-gr33/native-retained-tail/supported-temperature/evolution/state-128-32.npz": "fd21d8e2139c2209df0efd7ecd852bd185739fea5f215b92817c8edda2a939ee"
+  }
+}

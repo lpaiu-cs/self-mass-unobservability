@@ -1,0 +1,65 @@
+{
+  "classification": "Counterexample candidate",
+  "command": [
+    "/home/lpaiu/work/direct-eos-gr33/h2-spectre/source/H2spectre.exe",
+    "-N",
+    "200",
+    "-R",
+    "10",
+    "-V",
+    "1",
+    "-P",
+    "12"
+  ],
+  "elapsed_seconds": 0.42187317600109964,
+  "returncode": 0,
+  "input_sha256": "2eb38cf6ea035b6ac546e0846c830efefa42a3c7705c76311bc80218ad1e6d40",
+  "raw_sha256": "8485a983b1cb3b1e5129af22bed5278bffc7b533324a4ca2d59e6f386623454e",
+  "rows": [
+    {
+      "v": 14,
+      "J": 0,
+      "dissociation_cm_inverse": "144.769341380799",
+      "upstream_estimated_uncertainty_cm_inverse": "1.7E-03",
+      "E2_method": "NAPT",
+      "positive": true,
+      "weak_warning": false
+    },
+    {
+      "v": 14,
+      "J": 1,
+      "dissociation_cm_inverse": "127.593389337844",
+      "upstream_estimated_uncertainty_cm_inverse": "1.7E-03",
+      "E2_method": "NAPT",
+      "positive": true,
+      "weak_warning": false
+    },
+    {
+      "v": 14,
+      "J": 2,
+      "dissociation_cm_inverse": "94.843757817950",
+      "upstream_estimated_uncertainty_cm_inverse": "1.5E-03",
+      "E2_method": "NAPT",
+      "positive": true,
+      "weak_warning": false
+    },
+    {
+      "v": 14,
+      "J": 3,
+      "dissociation_cm_inverse": "49.871393995269",
+      "upstream_estimated_uncertainty_cm_inverse": "1.3E-03",
+      "E2_method": "NAPT",
+      "positive": true,
+      "weak_warning": false
+    },
+    {
+      "v": 14,
+      "J": 4,
+      "dissociation_cm_inverse": "-2.001770386780",
+      "upstream_estimated_uncertainty_cm_inverse": "1.0E-03",
+      "E2_method": "NAPT",
+      "positive": false,
+      "weak_warning": true
+    }
+  ]
+}

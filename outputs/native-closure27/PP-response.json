@@ -1,0 +1,48 @@
+{
+  "classification": "Counterexample candidate",
+  "checks": [
+    {
+      "step": 0.0001,
+      "source_derivative_error": 4.924835305693549e-07,
+      "heat_derivative_error": 4.325831744371709e-07,
+      "source_step_halving": null
+    },
+    {
+      "step": 5e-05,
+      "source_derivative_error": 1.2314820585003077e-07,
+      "heat_derivative_error": 1.0820727924181106e-07,
+      "source_step_halving": 3.693353247193242e-07
+    }
+  ],
+  "results": [
+    {
+      "period_days": 1.6294,
+      "peak_heat_response_real": 9041224.993939318,
+      "peak_heat_response_imag": -5834.008346618742,
+      "peak_static_response": 9159039.417597653,
+      "domain_weighted_response_real_Lsun": 2902.828975801125,
+      "domain_weighted_response_imag_Lsun": -0.8149259082597724,
+      "domain_weighted_static_response_Lsun": 2934.276056298336
+    },
+    {
+      "period_days": 327.26,
+      "peak_heat_response_real": 9157851.98796029,
+      "peak_heat_response_imag": -11782.588238151242,
+      "peak_static_response": 9159039.417597653,
+      "domain_weighted_response_real_Lsun": 2930.8581824501725,
+      "domain_weighted_response_imag_Lsun": -7.4053740148926686,
+      "domain_weighted_static_response_Lsun": 2934.276056298336
+    }
+  ],
+  "peak_intermediate_times_s": [
+    0.05580593341972843,
+    0.6103883123477728,
+    1.1108751814845021,
+    453512.5977684213
+  ],
+  "native_derivative_check_passed": true,
+  "input": "Externally imposed delta ln T harmonic in asymptotic coordinate time; omega_proper=omega_infinity/N. Fixed density, bulk reservoir and metric weights.",
+  "output": "Local nuclear heat. The weighted sum is a source diagnostic, not emergent surface luminosity.",
+  "actual_scalar_charge_or_force_transfer": false,
+  "physical_stellar_initialization_certified": false
+}

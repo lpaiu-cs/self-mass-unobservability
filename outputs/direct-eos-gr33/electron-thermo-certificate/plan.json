@@ -1,0 +1,30 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "b729d93",
+  "bindings": {
+    "verification/electron_thermo_certificate.py": "f52a88f5fede0c9ff376ec10f48db276695cc34c529d5f4135d1b85da87730c1",
+    "outputs/direct-eos-gr33/fermi-uniform-exact/manifest.json": "085c11e8616b6c97f48824a2d5cf2c8bef5d87ba4088b574b5a27c612c37d74c",
+    "outputs/direct-eos-gr33/fermi-uniform-exact/uniform-certificate.json": "8925b0d42d663287c6645c1f33c80f9ed1e2f19eba2dc147d318cc7200b96553",
+    "verification/interval_records.py": "5781af2bf247d9e5f707b89874c0486959293ebe9fefdcbf2b15d5fc841c7caa",
+    "outputs/direct-eos-gr33/fermi-uniform/fermi_dirac.f90": "3c0b60223e5bd7300dbdb1cdf79646987b8035042d96da8344c1bfd3fe6014ab",
+    "outputs/direct-eos-gr33/fermi-uniform-exact/point-0.json": "68fd3ec11c352e751a0bab539a326e9d951c75a79960f849ad0bd079e0a9869c",
+    "outputs/direct-eos-gr33/fermi-uniform-exact/point-1.json": "52570134b76458e07af2ad830097af6af4e5766c0bda99a015b89005212d6168",
+    "outputs/direct-eos-gr33/fermi-uniform-exact/point-2.json": "75db684b9ecbbd0a996ef62ca5100d67d50bdc04b35f9fb8c0ba551006ba7449"
+  },
+  "precision_decimal_digits": 60,
+  "common_panels": 8192,
+  "eta_interval": [
+    -17,
+    24
+  ],
+  "beta_interval": [
+    "0",
+    "0.006"
+  ],
+  "inverse_control_half_width": 1,
+  "inverse_targets": "Exact rational linear combinations of the previously stored native Fermi binary64 outputs, using the declared decimal beta. These are diagnostic density targets, not new observed densities.",
+  "criterion": "Prove positive density slope, quadrature density slope, exact symbolic thermodynamic identities, and inverse existence/uniqueness inside each preregistered local bracket. Report the certified widths without a post-hoc accuracy threshold.",
+  "electron_model": "Ideal relativistic electrons with two spin states and kinetic chemical potential eta; no positron or interaction contribution. Physical scaling requires beta>0. At beta=0 only reduced functions and their right limits are used.",
+  "full_EOS_certified": false,
+  "full_GR_evolution": false
+}

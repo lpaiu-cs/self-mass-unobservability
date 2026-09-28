@@ -1,0 +1,90 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "knot_values_exact": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "pilot_repeat_exact": true,
+  "output_times": 575,
+  "new_times": 558,
+  "maximum_energy_identity_relative": 5.2428865684815854e-11,
+  "maximum_angular_invariant_relative": 3.9392383310217825e-16,
+  "maximum_geometric_lapse_over_applied_outer_lapse": 0.0023742058708556037,
+  "maximum_lapse_energy_radius_angle_parts": [
+    1.621439477020721e-61,
+    2.367565026819376e-69,
+    2.2086663061454656e-67
+  ],
+  "terminal_photon_geometric_mass_cm": -7.185122672672642e-52,
+  "terminal_photon_geometric_lapse": 1.616071535428296e-61,
+  "inherited_phase261_quadrature_controls": {
+    "angular": [
+      3.9564855530089205e-13,
+      5.562120850477651e-13
+    ],
+    "temporal": [
+      2.3822481091616663e-09,
+      2.636675066076659e-09
+    ],
+    "geometry": [
+      9.365819537216004e-16,
+      1.5045013108114176e-15
+    ]
+  },
+  "scheduling": {
+    "items_by_process": {
+      "q3": 47,
+      "q5": 47,
+      "q2": 42,
+      "q9": 13,
+      "q13": 39,
+      "q14": 43,
+      "q6": 47,
+      "q11": 42,
+      "q12": 40,
+      "q10": 15,
+      "q4": 44,
+      "q1": 43,
+      "q8": 14,
+      "q7": 13,
+      "work-10": 8,
+      "work-11": 8,
+      "work-12": 8,
+      "work-13": 7,
+      "work-0": 8,
+      "work-1": 7,
+      "work-2": 8,
+      "work-3": 7,
+      "work-4": 8,
+      "work-5": 8,
+      "work-6": 2,
+      "work-7": 2,
+      "work-8": 2,
+      "work-9": 2
+    },
+    "termination": "native-geometric-clock265-work/termination.json",
+    "queue": "native-geometric-clock265-work/queue.json",
+    "collector": "/home/lpaiu/work/native-retained-tail-runtime/.phase265-geometric-queue.py",
+    "collector_sha256": "11c67ebfd019838cd244036c268339a2a5937237b22668fe07a646e1ba4680f3",
+    "module_collect_not_run": "The original fourteen workers have no receipt; the module collect requires them."
+  },
+  "boundary_applied_to_matter": false,
+  "physical_final_charge_solved": false,
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false
+}

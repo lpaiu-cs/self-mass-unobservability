@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/.phase257-exterior-followthrough.py", line 21, in <module>
+    state=read(dep/'controller-status.json');assert state['state']!='failed',state
+AssertionError: {'state': 'failed', 'completed': [{'action': 'endpoint_prepare', 'returncode': 1}], 'error': "AssertionError(('endpoint_prepare', 1))", 'elapsed_seconds': 4023.713515386, 'final_charge_conclusion': 'unadjudicated', 'full_goal_complete': False}

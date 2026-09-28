@@ -1,0 +1,21 @@
+{
+  "classification": "Counterexample candidate",
+  "eligible": true,
+  "decision": "The affine repair passes the unchanged time/physical gates. Its conservative late-cost floor gives1068.37s, so original1000s admission remains false. Reassign100 unused seconds from the material production allocation; do not expand the1500s combined production cap.",
+  "production_caps": {
+    "photon_production": 1100,
+    "material_production": 400
+  },
+  "combined_production_cap": 1500,
+  "photon_remaining_forecast": 1068.3656216640004,
+  "historical_material_double_wall": 351.52571305400124,
+  "material_dispatch": "Must separately pass its new actual prefix forecast below400s; historical cost is only reallocation evidence, not dispatch authorization.",
+  "assumptions": "Prior full-path late step cost is retained. A2x margin covers the measured photon estimate; new-pulse late Krylov cost remains unmeasured.",
+  "stop": "Same physical problem and clocks. Stop at either cap or any original gate; no further automatic budget/grid/horizon change.",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/solve_native_incident_lift.py": "f5a46f2b97cee74ef3990213bb77679ed9b3c1c38d34f710a0f07b2ff924b964",
+    "native-incident-drive155-work/pilot-lift-producer.py": "4b358ddb22bd5ca5443c26f0ca74d0046fac9644928663d75c8e1df0522e663c",
+    "native-incident-drive155-work/lift-check.json": "270463a4fd525d87eb207c7251e2560154ef266d49df8d72beb4c5c62a6e4941",
+    "native-incident-drive155-work/photons-lift/pilot.json": "d4ad6f9dfda3ad90bce6b5693f177e7edb8cbf11eaee452911fcbd258045531c"
+  }
+}

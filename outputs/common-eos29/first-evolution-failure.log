@@ -1,0 +1,12 @@
+evolution-initial PASS import {'logrho': 7.105427357601002e-15, 'logT': 5.329070518200751e-15, 'X_absolute': 3.3306690738754696e-16, 'dm_relative': 5.995204332975845e-15}
+TRACE evolution-initial 5735 native calls
+SOURCE evolve-1-0 0 dlnT -0.041916027943393885
+SOURCE evolve-1-0 1000 dlnT -1.8270790391738956e-07
+Traceback (most recent call last):
+  File "/mnt/e/lab/self-mass-unobservability/verification/common_eos.py", line 569, in <module>
+    if __name__=='__main__': globals()[sys.argv[1]]()
+  File "/mnt/e/lab/self-mass-unobservability/verification/common_eos.py", line 457, in evolution
+    nxt,loss=source_step(state,d,p,dtall/steps,Linf,label)
+  File "/mnt/e/lab/self-mass-unobservability/verification/common_eos.py", line 421, in source_step
+    else: raise ValueError(('energy inverse',i,defect))
+ValueError: ('energy inverse', 1875, np.float64(-2.0))

@@ -1,0 +1,39 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "1260c415",
+  "claim": "Preserve inverse reciprocity through a Cholesky Gram and source transform, while retaining field separation, input-norm balance and the fixed broadband basis.",
+  "method": "Same degree4 and total128/256/512 columns; symmetric roundoff-level weak assembly. Cholesky Gram of the full coupled shifted matrix. Original heat poles use a two-term geometric expansion with an explicit absolute remainder below1e-12 of each readout, not a fitted input.",
+  "gates": {
+    "propagation_relative": 0.02,
+    "propagation_order": 1.5,
+    "spatial": 0.02,
+    "spatial_decrease": true,
+    "coefficient": 0.02,
+    "outer": 0.002,
+    "quadrature": 0.002,
+    "linear_residual": 1e-09,
+    "inverse_symmetry": 1e-12,
+    "heat_balance": 2e-13,
+    "pole_tail_relative": 1e-12
+  },
+  "decision": "First fixed64 pilot, then degree4 only if symmetry, source-tail and budget gates pass. Stop on any actual component failure. Only if accepted run fixed degrees2,1 and original conditional contrasts; no basis or resolution expansion.",
+  "budget": {
+    "pilot_cap_seconds": 90,
+    "first_case_cap_seconds": 120,
+    "total_cap_seconds": 300,
+    "CPU_threads": 1,
+    "memory_GB": 4,
+    "new_EOS_calls": 0
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_inverse_gram.py": "c73926433f2236c03febd1af9cf5ca0741f274621a1ffd1d6a0ed2d43818f1b8",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_multishift.py": "6aef0bcae8d7a8abc19e44a5d080d21e1c6499c6aa3e14c3ab63466a736e25a9",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_field_projection.py": "eebc275e2f253bb9d66701e548b67c48e463037e3d5af14219eda0fbea46a548",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_inverse_projection.py": "f4b69982980e13b535ff5d57f1aec0dc169534b773aef43a045dda151704e376",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_hierarchical.py": "7861123d4adfdfdaa21daee3fc7d79dcdffdd024ca48b3f453921b5cb745992b",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_spatial_repair.py": "d13044861c2b4761d5e6349d809c3368f46112974f374aa050aada516c80f8e5",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-inverse-projection/reciprocity-refinement.json": "3d8959b901ff239b1099a21e7d2d8577decd5e61e2833fe8ab034b4896b454b9",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/fine-bank.npz": "b4493a6e4cfb20d741725ecb61cec154ab9fc51a694001865748741060018d7e",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/coarse-bank.npz": "ea020f69b240c5c5cdd8810f963d88e5cc2d3269aff12c659422a7a6541ae0df"
+  }
+}

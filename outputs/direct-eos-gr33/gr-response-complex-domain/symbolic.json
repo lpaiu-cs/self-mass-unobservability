@@ -1,0 +1,16 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "uniform_phase_upper": "138190423474628957436780428254204642813/340282366920938463463374607431768211456",
+  "middle_integral_upper": "249602008933423593722706998193524632705/21267647932558653966460912964485513216",
+  "analytic_disk": "For |Q-q0|<=r*q0, a=q0*sqrt(1-2r), kappa=(1+r)/sqrt(1-2r). With p=Q*u and g=sqrt(1+a^2*u^2), Re gamma>=g, Re t>=t_a=(g-1)/beta and |t|<=kappa^2*t_a. For t_a<=max(eta,0)+log4 the phase is <=2*(24+log4)*(1+r)*r/(1-2r)<1. Outside it, |exp(t-eta)|>=4. There are no Fermi poles or square-root branch points in the disk.",
+  "complex_occupation": "On the disk: |q|<=(5/3)*f(t_a-eta), |1-q|<=4/3, |1-2q|<=5/3. In the inner region use |1+E|>=cos(1/2)*(1+|E|); in the outer region use |E|-1 and |E|>=4.",
+  "complex_kernel": "For A=Q^3*u^2/gamma, B=Q*u*(1+Q^2*(u^2-1))/(2*gamma), L=log((1+u)/abs(1-u)), the absolute kernel is <=kappa^3*(K_a+2*A_a). For u>=1 it is <=kappa^3*K_a; for u<1, the extra term is a^3*u*(1-u^2)*L/gamma_a<=2*A_a, since atanh(u)<=u/(1-u^2). K_a du is the positive real response kernel at a.",
+  "thermal_majorant": "For d0=max(eta,0), f(t-eta)*t^j <= Cj*f(t/2-eta), C0=1, Cj=[2*(d0+log2+j)]^j. The ratio is <=min(1,2*exp(d0-t/2)); split at t=2*(d0+log2+j). Thus only a value-response bound at doubled beta is needed.",
+  "uniform_real_kernel": "At any real a>0, |K_p|<=gamma*H(p/a), H(u)=1+(u+1/u)*atanh(min(u,1/u)). Outside [1/2,2], H<=8/3. Inside, integral H(u)/u du <=27/4+(15/4)log3+(5/4)log2<12. Therefore S(a)<=8Jgamma/3+12*sup(p*gamma*f). This deliberately overcounts the middle region in Jgamma.",
+  "thermal_integrals": "Put b=2*beta, d=d0+1, w=min(1,exp(eta)), e=exp(-1). Bounds on integral t^s*f(t-eta)dt for s=-1/2,1/2,1,3/2 are w*[2sqrt(d)+e/sqrt(d)], w*[(2/3)d^(3/2)+e*sqrt(d+1)], w*[d^2/2+e*(d+1)], w*[(2/5)d^(5/2)+e*sqrt((d+1)*(d^2+2d+2))]. Tail square-root bounds use Jensen and Cauchy-Schwarz for d+Exp(1).",
+  "explicit_moments": "Jgamma<=sqrt(b/2)*(J_-1/2+2b*J_1/2+b^2*J_3/2); W0<=b*sqrt(2b)*J_1/2+b^2*J_1. sup(p*gamma*f)<=w*[sqrt(2b)*((d0+1/2)^(1/2)+b*(d0+3/2)^(3/2))+b*((d0+1)+b*(d0+2)^2)]. Each power bound follows by splitting t^s*f at d0+s.",
+  "six_majorants": "Let U=(8Jgamma/3+12Pmax+2W0)/Sref and Hj=(5/3)*kappa^(3+2j)*Cj*U. Then [H0,(4/3)H0,(20/9)H0,(4/3)H1,(20/9)H1,(20/9)H2+(4/3)H1] bounds the six normalized response fields throughout the complex disk.",
+  "zero_free": "D0_lower=X+S_lower, X=q0^2/(B*Sref), with S_lower=0 allowed. Choose dyadic sigma<=min(1/4,D0_lower/(8H0)). Cauchy gives |S(Q)-S(q0)|<=H0*sigma/(1-sigma). The X variation is <=X*(2*sigma*r+(sigma*r)^2). Their sum is <D0_lower/2. Thus the denominator has modulus >=D0_lower/2 throughout |Q-q0|<=sigma*r*q0.",
+  "outer_gauss": "On that inner disk bound G=S/(X+S) and its six eta/tau fields by the quotient identities and the denominator lower bound. Cauchy and the certified n-point Gauss norm give a panel remainder <=2h*norm_n*(2h/(Rinner-h))^(2n)*M_G. Actual outer quadrature and endpoint tails must still be evaluated and joined."
+}

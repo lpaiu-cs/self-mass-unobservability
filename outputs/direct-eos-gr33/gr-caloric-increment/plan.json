@@ -1,0 +1,46 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "9cf504d",
+  "bindings": {
+    "verification/gr_nonlinear_thermal.py": "bc8d34d693acbeccc87d18018217452127c218301e7900a14d9f7c0272963e61",
+    "verification/opacity_tables.py": "ba01a5ebe3062eb1b13b23ccb918f99158fba6fd0c72fcba191c1ba4a028c7b9",
+    "verification/conservative_star.py": "9bcfe7bd2c07504abb6da3a5e7deea07c9c9b08f27ed12b33dd9310497cd60b7",
+    "verification/direct_eos_gr.py": "5709a4cbf5830de09001481813617d43ee2c935a0dff3cd813110d73a7066fdf",
+    "outputs/direct-eos-gr33/initial-state-17-4.npz": "5dcc8ffb8b32a9f15ccc4c8bb7111d19be8dcdc66611ad2942e3a4a0cf6cc6d6",
+    "outputs/direct-eos-gr33/initial-GR.json": "b6e5840a94c820af9f729b17c45acc2c8cc03d3b220d09880a487f93640eb3f8",
+    "outputs/direct-eos-gr33/gr-microphysics/auxiliaries.npz": "63744d1a041ebc39bd33dfa0f5e181d64378966c1ee22364c477009bee08d976",
+    "outputs/direct-eos-gr33/gr-opacity/new-GR-captured.npz": "32975fa6317f066f122dfdca8cf88d84fcaa79b182416df5b01b3593d44b6ef3",
+    "outputs/direct-eos-gr33/gr-opacity/evaluation.npz": "4d1274167b4b26a23308e9e978841f774d9d41d350ae79c4aad125108c4a2b2c",
+    "outputs/direct-eos-gr33/gr-transport/diagnostics.npz": "296f6bcdd1623223957e0b1c391f89ea6613141337c6dc308e155650fb98b669"
+  },
+  "processes": 8,
+  "step_counts": [
+    1,
+    2,
+    4
+  ],
+  "duration_rule": "min(1 coordinate second, 0.02/max(abs(initial closed dlnT/dt)))",
+  "max_Newton_iterations": 12,
+  "max_backtracks": 10,
+  "temperature_step_cap": 0.1,
+  "local_energy_residual_scaled_tolerance": 2e-12,
+  "global_energy_relative_to_exchange_tolerance": 1e-08,
+  "finite_time_refinement_logT_tolerance": 0.0001,
+  "boundary": "Both external faces closed, no nuclear or neutrino sources in this operator. Fixed baryon density, fixed GR geometry and fixed nuclear composition.",
+  "equation": "dm_i*N_i*(u_i(T_new)-u_i(T_old))=dt*(Linf_inner-Linf_outer). Face flux and EOS are fully reevaluated at the new temperature. Newton Jacobian includes opacity temperature derivatives.",
+  "limitations": "A nonlinear operator closure control, not a fluid/metric/atmosphere, convection or physical EOS certificate. Finite time refinement is not a rigorous time-error enclosure.",
+  "physical_EOS_certified": false,
+  "full_GR_evolution": false,
+  "caloric_coordinate": "U(delta)-U(0)=integral_0^delta [cv*T](lnT_old+z) dz. Store delta separately from the absolute binary64 log temperature. Four-point Gauss integration multiplies delta after summing capacities. No large absolute energy subtraction enters the residual.",
+  "Newton_method": "Use endpoint cv*T as the caloric quasi-Newton diagonal and the original analytic face/opacity derivatives. Require both original local residual and original global energy criteria before accepting a step.",
+  "quadrature_nodes": 4,
+  "independent_quadrature_nodes": 2,
+  "finite_quadrature_difference_tolerance": 1e-08,
+  "native_link": "Report the original absolute-energy endpoint difference against the caloric increment with an explicit endpoint ulp budget. It is not used to silently certify the new coordinate or its continuous error.",
+  "limits": "Fixed density/metric/composition closed operator. The integral chart equals the native energy only under first-law differentiability along the path. Native branch jumps, quadrature remainder, EOS primitive errors and physical calibration remain separate.",
+  "diagnostic_binding": {
+    "verification/gr_caloric_increment.py": "68a2a5e2a7543a11a7f70cafe8018c3cd649a8287459e4bcebc2e2c6a714fe87",
+    "outputs/direct-eos-gr33/gr-thermal-endpoint-replay/manifest.json": "06402fc4b3117d6099e146c5e70f37794cdda935190557dcb46b35822960da3f",
+    "outputs/direct-eos-gr33/gr-nonlinear-thermal/failure-manifest.json": "98a196472db0bd935508c3691115f4adc0764b40aadeaf8a3f519a3690db49e3"
+  }
+}

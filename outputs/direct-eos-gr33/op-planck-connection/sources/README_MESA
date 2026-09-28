@@ -1,0 +1,18 @@
+1) unpack OP4STARS_1.3.tar.gz in your mesa work directory.
+in its default mode, MESA users do not need to compile or run the codes in this directory.
+
+
+2) set 2 environment variables similar to the following:
+
+setenv MESA_OP_MONO_DATA_PATH /Users/bpaxton/OP4STARS_1.3/mono
+setenv MESA_OP_MONO_DATA_CACHE_FILENAME /Users/bpaxton/OP4STARS_1.3/mono/op_mono_cache.bin
+
+
+3) see the $MESA_DIR/star/test_suite/radiative_levitation test case
+for an example of how to use the OP_MONO opacities.
+
+you will know the OP_MONO opacities are nominally working when you see this output from MESA:
+
+loading OP mono data...
+done loading OP mono data
+write /Users/fxt/mesa_work/OP4STARS_1.3/mono/op_mono_cache.bin

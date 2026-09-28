@@ -1,0 +1,18 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Independently integrate the same Einstein lapse variation with8-point volume and96-angle exterior quadrature; verify moving energy/momentum support at the actual final surface.",
+  "gates": {
+    "lapse_relative": 0.02,
+    "moving_mass_jump_relative": 1e-07,
+    "closure": 1e-08
+  },
+  "budget_seconds": 40,
+  "new_evolution_paths": 0,
+  "boundary": "An energy/momentum ledger with prescribed pressure does not specify the gravitating exterior support.",
+  "bindings": {
+    "verification/verify_native_metric_transport.py": "bf441a293284d1ee72c2314bf5ac5745ad69a34a89790917e3314899601f6de0",
+    "verification/def_native_metric_transport.py": "ed34e7e65a14fe12ecc61fd57e73edf33cd9f02b9cf63173fc30b4770755e7b4",
+    "outputs/direct-eos-gr33/def-native-metric-transport/result.json": "2efed27a84f7826d63aab4c3895feeb3a2f6787f6df3b8bbafc39480f5edbdcd",
+    "outputs/direct-eos-gr33/def-native-metric-transport/p4-64.npz": "cd61bb39f93995a6144faa45b8f699c9826ec41872d90120ad6bc119c0b8110b"
+  }
+}

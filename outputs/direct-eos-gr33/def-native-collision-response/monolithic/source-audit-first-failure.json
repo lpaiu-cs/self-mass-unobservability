@@ -1,0 +1,7 @@
+{
+  "stage": "audit summary after stress export",
+  "failure": "TypeError: bad operand type for abs(): list",
+  "evolution_repeated": false,
+  "repair": "Use NumPy absolute value for history lists; no trajectory, source equation or acceptance change",
+  "classification": "Counterexample candidate"
+}

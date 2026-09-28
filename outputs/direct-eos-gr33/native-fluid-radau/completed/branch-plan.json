@@ -1,0 +1,21 @@
+{
+  "classification": "Conjectural",
+  "failure": "The first joint stage stopped after three solves: S equation6.22e-10 exceeds1e-13 although the vector residual was2.31e-16. No stage was accepted.",
+  "root": "The Jacobian subtracts nearly equal directional rates through a primitive map with float64 outputs; that can corrupt small momentum columns. Replace that subtraction by direct column actions with the native minmod, density, wave-speed and donor branches selected at the current guide. Do not alter the original physical RHS or its accepted precision.",
+  "controls": "Selected action at the guide must exactly reproduce native RHS; J times guide must match all four native rate channels below1e-12. Compare a separate local direction below0.2percent. True native Radau equations still decide acceptance with original1e-12/1e-13 gates and max3Newton solves.",
+  "budget": {
+    "original_check": 80,
+    "check_spent": 41.734139993999975,
+    "branch_check": 35,
+    "original_pilot": 480,
+    "pilot_spent": 54.09712990999992,
+    "branch_pilot": 420
+  },
+  "forecast": "Original147.924s photon pair plus72measured Jacobians plus30s reserve;72 assumes two Newton solves per each of18physical steps, not a guaranteed bound. Hard wall cap420s remains. No new clock or full period.",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/couple_native_fluid_radau.py": "950a7aaebeb1d277d0fdccb3b725508badcf2eab91d9bfcdd4ea10361c3b1458",
+    "native-fluid-radau179-work/finite-jacobian-producer.py": "c517425ef314673e1a4653bb3cd31c29364df3b67e26b997ff7c33e27a56f151",
+    "native-fluid-radau179-work/pilot-receipt.json": "b6550a788cc4356cab8a8619231c86f6ea5b4ef878004dc32ebab1f692b5c5ad",
+    "native-fluid-radau179-work/floor-repair-plan.json": "4625bc58b2f46a716b0cd667845a9b2b43d2805e7ad7a37a78ca53b5637941d1"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "classification": "Counterexample candidate",
+  "original_error": "AssertionError(('Four-moment linear residual', 5.0021901693765556e-14, [np.longdouble('2.0297731757492324271e-19'), np.longdouble('2.7212978458602344543e-20'), np.longdouble('1.3545495188143346983e-21'), np.longdouble('3.8095578616827178015e-30')]))",
+  "blocks": [
+    {
+      "name": "rhs",
+      "norm": 420827353.47286105,
+      "photon_norm": 0.03548172825096557,
+      "gas_norm": [
+        25.017920245156684,
+        0.3066971350680832,
+        420827334.4975227,
+        126375.16324411411
+      ],
+      "largest_index": 1294498,
+      "largest_value": 90773164.87339915
+    },
+    {
+      "name": "solution",
+      "norm": 132977262111927.11,
+      "photon_norm": 0.03593111993852888,
+      "gas_norm": [
+        14239701.980891917,
+        836609595.6515983,
+        132977246873913.34,
+        63654680529.15101
+      ],
+      "largest_index": 1294562,
+      "largest_value": 114497280794840.25
+    },
+    {
+      "name": "residual",
+      "norm": 2.1050584505466983e-05,
+      "photon_norm": 9.17151140032247e-19,
+      "gas_norm": [
+        1.2470116936068244e-12,
+        7.049668911717069e-11,
+        2.1050584314522996e-05,
+        2.8344300742267186e-09
+      ],
+      "largest_index": 1294562,
+      "largest_value": 2.0871125731126157e-05
+    },
+    {
+      "name": "split_residual",
+      "norm": 1.2860934554668362e-05,
+      "photon_norm": 9.359131988552184e-19,
+      "gas_norm": [
+        8.723710469250086e-13,
+        6.450783668620803e-11,
+        1.2860934247714032e-05,
+        2.809141679599277e-09
+      ],
+      "largest_index": 1294562,
+      "largest_value": 1.2850635154107796e-05
+    }
+  ],
+  "split_vector_relative": 3.0561070825206606e-14,
+  "direct_vector_relative": 5.0021901693765556e-14,
+  "operator_split_disagreement": 2.0570768887591462e-14,
+  "same_system_replayed": true,
+  "new_physical_steps": 0,
+  "physical_solution_accepted": false,
+  "final_charge_conclusion": "unadjudicated"
+}

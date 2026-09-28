@@ -1,0 +1,18 @@
+{
+  "classification": "Conjectural",
+  "claim": "Test whether a right-sided derivative at closing Radau endpoints causes the native pressure-work clock difference.",
+  "method": "Reproduce the applied mass-constraint derivative from the SAME original source polynomials, then evaluate their left derivative at knots. All source values and scalar fields remain identical. Compare its pressure work with direct work and integration by parts on the SAME stage/end values; jumps remain separate.",
+  "decision": "Only a dominant, independently checked derivative-quadrature defect warrants a primitive-based repair of actual coupled stages. No diagnostic correction enters final charge.",
+  "budget_seconds": 900,
+  "virtual_GiB": 8,
+  "physical_steps": 0,
+  "new_clock_paths": 0,
+  "forecast": "One original constructor measured about16seconds;17background pressure rows and700small array evaluations assumedunder2minutes,15minutes allowed.",
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false,
+  "bindings": {
+    ".phase258-pressure-work.py": "8ac2296149c03425d157e85fa9fbaf82827c77747f3a0e095d1b1415a464006f",
+    "native-mass-time258-work/canonical-affine-result.json": "47ce236400335039cf0d55c4ed3d2d076e6caff3cda96174ff6a970311686a79",
+    "native-material-accuracy257-work/metric/metric-128-g8.npz": "925bb2065144ac3ffb57df89a5853e6792fdcf8de68a6c80d04d589c03bd8aca"
+  }
+}

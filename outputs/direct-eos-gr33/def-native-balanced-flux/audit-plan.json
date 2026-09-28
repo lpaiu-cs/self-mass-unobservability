@@ -1,0 +1,21 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Verify source-coordinate equivalence, current-nullspace restoration and the tiny additive response under exact linear amplitude rescaling.",
+  "path": "One same p4-64 path with unit maximum surface displacement, restoring physical amplitude only during comparison.",
+  "rationale": "Absolute 1e-100 residual denominators may mask tiny equations. A dimensionless unit driver tests the numerical result without using that floor as accuracy evidence.",
+  "prior_seconds": 106.36731452699999,
+  "forecast_total_seconds": 161.12571274049998,
+  "total_budget_seconds": 180,
+  "gates": {
+    "source_maps_relative": 2e-12,
+    "amplitude_relative": 1e-07
+  },
+  "bindings": {
+    "verification/verify_native_balanced_flux.py": "06ce34ee13fe1fab64a19d65d3e52d1b9aa9c46d38a3721daeaab2f39c2fbf52",
+    "verification/def_native_moving_rays.py": "81f789dda581dfaa3d6240446060c5341395764e8023343bfa95b7287deaef66",
+    "verification/def_native_balanced_flux.py": "30ac81312f6e5457abf04676a967cbe19f0b0ebf8a4bdf57b60f142b152ccdf2",
+    "outputs/direct-eos-gr33/def-native-balanced-flux/motion-result.json": "f5204bbbf724fa284f424a3aca4ce135ab08d8c9a3b5586dd590f9563e1c9c49",
+    "outputs/direct-eos-gr33/def-native-balanced-flux/motion-p4-64.npz": "9605109173070bc785adca54b69bbeba9826e0845e96401d4445bde0d5ecc308",
+    "outputs/direct-eos-gr33/def-native-balanced-flux/p4-64.npz": "6ef384c85ecd741802508878cd5e21d040c0129ff04b34bee4e2c1ba3e29bda3"
+  }
+}

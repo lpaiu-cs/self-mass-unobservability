@@ -1,0 +1,166 @@
+{
+  "classification": "Counterexample candidate",
+  "GR_error_transfer": {
+    "classification": "Counterexample candidate",
+    "diagnostic_controls_passed": true,
+    "controls": {
+      "quadrature": 2.6947709003377414e-14,
+      "independent_GR": 1.739488016251822e-12
+    },
+    "common_time_decomposition": {
+      "U": {
+        "total_relative": 0.2587186265540085,
+        "state_relative": 0.11905040233793503,
+        "representation_relative": 0.35259876610452556,
+        "decomposition_relative": 5.896646540073888e-18
+      },
+      "U_t": {
+        "total_relative": 0.3094306560027682,
+        "state_relative": 0.07202533106197252,
+        "representation_relative": 0.3086883733071099,
+        "decomposition_relative": 1.1205828473382916e-16
+      },
+      "U_x": {
+        "total_relative": 0.09180462901836245,
+        "state_relative": 0.06932432325750103,
+        "representation_relative": 0.10535259847167143,
+        "decomposition_relative": 2.4476015400009624e-17
+      }
+    },
+    "endpoint_compact_values": [
+      -4.068961503122793e-63,
+      -5.675710781654543e-63,
+      -6.258745132525931e-63
+    ],
+    "rows": [
+      {
+        "classification": "Counterexample candidate",
+        "steps": 128,
+        "order": 8,
+        "seconds": 2.011156755000229,
+        "maximum_delta_phi": 2.621620945310799e-68,
+        "maximum_delta_mass_cm": 4.206403954801933e-51,
+        "maximum_delta_lambda": 6.087603311709191e-61,
+        "maximum_delta_log_proper_volume": 6.0876033148120744e-61,
+        "maximum_mass_increment_over_background_ulp": 1.1562475148569194e-39,
+        "maximum_scalar_increment_over_background_ulp": 1.2090092659106203e-49,
+        "compact_potential_contraction": 1.604471397461762e-11,
+        "potential_iteration_relative": [
+          2.343279043771949e-15
+        ],
+        "endpoint_direct": -4.068944324591213e-63,
+        "endpoint_compact_with_metric": -4.068961503122793e-63,
+        "compact_potential_change": 1.2161760404552448e-77,
+        "spatial_material_photon_feedback": false,
+        "full_GR_feedback": false,
+        "final_charge_solved": false
+      },
+      {
+        "classification": "Counterexample candidate",
+        "steps": 64,
+        "order": 8,
+        "seconds": 1.495211262000339,
+        "maximum_delta_phi": 3.0394156295710165e-68,
+        "maximum_delta_mass_cm": 3.9122011196824804e-51,
+        "maximum_delta_lambda": 5.6618262887147964e-61,
+        "maximum_delta_log_proper_volume": 5.6618262923182806e-61,
+        "maximum_mass_increment_over_background_ulp": 1.0753776553222934e-39,
+        "maximum_scalar_increment_over_background_ulp": 1.4016830563082334e-49,
+        "compact_potential_contraction": 1.604471397461762e-11,
+        "potential_iteration_relative": [
+          4.379211456921676e-15
+        ],
+        "endpoint_direct": -5.675686819305976e-63,
+        "endpoint_compact_with_metric": -5.675710781654543e-63,
+        "compact_potential_change": 2.9236017616615134e-77,
+        "spatial_material_photon_feedback": false,
+        "full_GR_feedback": false,
+        "final_charge_solved": false
+      },
+      {
+        "classification": "Counterexample candidate",
+        "steps": 0,
+        "order": 8,
+        "seconds": 1.421725619999961,
+        "maximum_delta_phi": 3.3515206578878247e-68,
+        "maximum_delta_mass_cm": 4.2064039548019343e-51,
+        "maximum_delta_lambda": 6.0876033117091924e-61,
+        "maximum_delta_log_proper_volume": 6.0876033156843724e-61,
+        "maximum_mass_increment_over_background_ulp": 1.1562475148569197e-39,
+        "maximum_scalar_increment_over_background_ulp": 1.5456160958451842e-49,
+        "compact_potential_contraction": 1.604471397461762e-11,
+        "potential_iteration_relative": [
+          4.582389644087653e-15
+        ],
+        "endpoint_direct": -6.258718708617254e-63,
+        "endpoint_compact_with_metric": -6.258745132525931e-63,
+        "compact_potential_change": 3.2809475186138914e-77,
+        "spatial_material_photon_feedback": false,
+        "full_GR_feedback": false,
+        "final_charge_solved": false
+      },
+      {
+        "classification": "Counterexample candidate",
+        "steps": 128,
+        "order": 4,
+        "seconds": 1.185469063999335,
+        "maximum_delta_phi": 2.6216209453108047e-68,
+        "maximum_delta_mass_cm": 4.2064039548038685e-51,
+        "maximum_delta_lambda": 6.087603311711992e-61,
+        "maximum_delta_log_proper_volume": 6.087603314814875e-61,
+        "maximum_mass_increment_over_background_ulp": 1.1562475148574513e-39,
+        "maximum_scalar_increment_over_background_ulp": 1.209009265910623e-49,
+        "compact_potential_contraction": 1.6044713974617615e-11,
+        "potential_iteration_relative": [
+          2.343279043771944e-15
+        ],
+        "endpoint_direct": -4.068944324591052e-63,
+        "endpoint_compact_with_metric": -4.0689615031226316e-63,
+        "compact_potential_change": 1.2161760404551922e-77,
+        "spatial_material_photon_feedback": false,
+        "full_GR_feedback": false,
+        "final_charge_solved": false
+      }
+    ],
+    "source_admission_passed": false,
+    "GR_return_evolution_admitted": false,
+    "new_physical_steps": 0,
+    "physical_horizon_seconds": 5.3662986217635974e-05,
+    "final_charge_conclusion": "unadjudicated",
+    "full_goal_complete": false
+  },
+  "photon_recovery": {
+    "classification": "Counterexample candidate",
+    "original_endpoint_and_ledger_passed": true,
+    "material_ledger": [
+      6.571695926952046e-16,
+      9.879955770029378e-15,
+      7.248954618443611e-16,
+      1.9423916346961705e-17
+    ],
+    "radial_port_relative": 7.375514558220221e-13,
+    "packet_relative": 1.8515035594646348e-16,
+    "reconstructed_steps": 8,
+    "reused_strict_steps": 5,
+    "original_equation_audited_steps": [
+      5,
+      6,
+      7
+    ],
+    "endpoint_relative": 3.1703371543914597e-17,
+    "strict_archival_rate_identity_passed": false,
+    "original205failure_preserved": true,
+    "full_period_recovery": false,
+    "GR_source_time_admission_passed": false,
+    "final_charge_conclusion": "unadjudicated",
+    "full_goal_complete": false
+  },
+  "original_failures_preserved": true,
+  "actual_same_joint_solution_GR_computed": false,
+  "diagnostic_compact_GR_computed": true,
+  "GR_return_evolution_executed": false,
+  "physical_final_charge_solved": false,
+  "self_GR_return_closed": false,
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false
+}

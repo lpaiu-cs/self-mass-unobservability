@@ -1,0 +1,33 @@
+{
+  "classification": "Proven",
+  "identity_checked": true,
+  "numerical_classification": "Counterexample candidate",
+  "oscillator_relative_velocity_errors": {
+    "3": [
+      2.0890683342273048e-09,
+      2.1004346618824274e-09,
+      2.10079693627405e-09
+    ],
+    "50": [
+      3.7973917815893855e-07,
+      5.611378556578099e-07,
+      5.889839575250307e-07
+    ],
+    "300": [
+      0.001333080036434936,
+      1.7331677364364394e-05,
+      2.0062823322320953e-05
+    ],
+    "800": [
+      0.32563704509721997,
+      0.0023440262472578565,
+      0.00011672428287081258
+    ],
+    "2000": [
+      0.7914201106219074,
+      0.5854332003691609,
+      0.002828712771454035
+    ]
+  },
+  "formula": "Subtract M^-1*F_hat/s^2 from the resolvent and add its exact zero-initial-data time integral. This is an inverse-transform identity, not a physical filter."
+}

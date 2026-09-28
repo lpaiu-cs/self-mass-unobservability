@@ -1,0 +1,37 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "caf5c5b",
+  "claim": "Isolate rounding outside the transformed complex solve before attributing Gauss failure to unresolved physical waves.",
+  "evidence": "Saved Gauss weak scalar and new-boundary differences are about1e-9 and nonmonotone; SDIRK extended original stages recover2nd order for those fields but not global/old velocity. Refine original full Gauss stages and retain extended accepted states.",
+  "method": "Identical Gauss tableau, same512/1024/2048 steps and original source moments. Complex LU only preconditions the extended real original-stage residual; three corrections, no physical changes, clipping or damping.",
+  "gates": {
+    "time_relative": 0.02,
+    "time_order": 1.5,
+    "linear_residual": 1e-09,
+    "heat_balance": 2e-13,
+    "spatial": 0.02,
+    "spatial_decrease": true,
+    "coefficient": 0.02,
+    "outer": 0.002,
+    "quadrature": 0.002
+  },
+  "decision": "Pilot64 steps. Only if first triple forecast fits360s run degree4 triple; stop any failed component. Fixed degree2/1 and original contrasts remain conditional under900s total. No step,degree,period or source expansion.",
+  "budget": {
+    "pilot_seconds": 90,
+    "first_case_seconds": 360,
+    "total_seconds": 900,
+    "CPU_threads": 1,
+    "memory_GB": 4,
+    "new_EOS_calls": 0
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_gauss_refined.py": "222d0466624741f976486d075c1743a37b12ff49a3864bef0bfa54f132d470ad",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_gauss_time.py": "6919cef25372ef27f44ea8e4e27c97bfc3e5d56f47437d3ff07735211fc09bad",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_direct_time.py": "852070fde0dbd03d2f44cbc1e2ffe3b16afb41c37e0b27d5a6ca33ce99bf0ca4",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_hierarchical.py": "7861123d4adfdfdaa21daee3fc7d79dcdffdd024ca48b3f453921b5cb745992b",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_spatial_repair.py": "d13044861c2b4761d5e6349d809c3368f46112974f374aa050aada516c80f8e5",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-stiff-time/stage-result.json": "7bd8f5ce98fd0e7cf376cc7e5eb4908c6806ff7d708a3ebd76c776d8698be45b",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/fine-bank.npz": "b4493a6e4cfb20d741725ecb61cec154ab9fc51a694001865748741060018d7e",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/coarse-bank.npz": "ea020f69b240c5c5cdd8810f963d88e5cc2d3269aff12c659422a7a6541ae0df"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "1260c415",
+  "claim": "Test whether bounded shift-invert projection removes scalar loss while preserving already resolved rapid velocity in the same degree4 coupled GR space.",
+  "method": "Same mass-orthogonal rational basis and128/256/512 dimensions, but project R inertia and sigma*(I-R) stiffness together with the complete R-transformed heat source. Same exact pole propagation, horizon, spatial basis and readouts.",
+  "gates": {
+    "propagation_relative": 0.02,
+    "propagation_order": 1.5,
+    "spatial": 0.02,
+    "spatial_decrease": true,
+    "coefficient": 0.02,
+    "outer": 0.002,
+    "quadrature": 0.002,
+    "linear_residual": 1e-09,
+    "heat_balance": 2e-13
+  },
+  "decision": "Pilot64, then degree4 first. Stop on any four-field propagation failure. If accepted, fixed degree2 and1 paths; only after spatial acceptance run coefficient/outer/quadrature contrasts. No larger basis, degree, time interval or input.",
+  "budget": {
+    "pilot_cap_seconds": 90,
+    "first_case_cap_seconds": 120,
+    "total_cap_seconds": 300,
+    "CPU_threads": 1,
+    "memory_GB": 4,
+    "new_EOS_calls": 0
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_inverse_projection.py": "f4b69982980e13b535ff5d57f1aec0dc169534b773aef43a045dda151704e376",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_hierarchical.py": "7861123d4adfdfdaa21daee3fc7d79dcdffdd024ca48b3f453921b5cb745992b",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_spatial_repair.py": "d13044861c2b4761d5e6349d809c3368f46112974f374aa050aada516c80f8e5",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_energy_modes.py": "cc10e572c8a0b1f1f4846e348ab9c9ca68d82186111431ee1cc0d291937b436d",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-spatial-repair/result.json": "26914a10d75fe3ab9161a6f2808ae6b1e12508bd2289b8be7f76fced1d9f9616",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/fine-bank.npz": "b4493a6e4cfb20d741725ecb61cec154ab9fc51a694001865748741060018d7e",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/coarse-bank.npz": "ea020f69b240c5c5cdd8810f963d88e5cc2d3269aff12c659422a7a6541ae0df"
+  }
+}

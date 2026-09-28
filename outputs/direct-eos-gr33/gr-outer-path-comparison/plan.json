@@ -1,0 +1,27 @@
+{
+  "classification": "Proven",
+  "positions": [
+    0
+  ],
+  "bindings": {
+    "verification/gr_outer_path_comparison.py": "4f84326188ba863b00eeaa83722fb03b1ef36f19ff1ac845f6ece2f63ecdcb02",
+    "verification/gr_outer_product_pilot.py": "24d99b05d34cfb36b8c6780a627c3ecef360eeab9de07d2bd10abbd6ff521143",
+    "verification/gr_outer_self_refined.py": "03d2d7ef458a284420253b5495061110b4271aae344d143031b560e8b752ba3c",
+    "outputs/direct-eos-gr33/gr-outer-product-pilot/preflight-manifest.json": "e963080109753f061595e03defbc427c4cad23fb3fa5dad67efa3618e5652d34",
+    "outputs/direct-eos-gr33/gr-outer-self-refined/preflight-manifest.json": "e67d3dcd372274ad43fe4dbcbcdc0bba9b58081df69c64440db35593817367ec",
+    "outputs/direct-eos-gr33/gr-outer-product-pilot/cell-0000-native.jsonl": "f31e5da27953af1a2c4f5645c00895f7e0124f0c93a6e3e479d8c5662d69367b",
+    "outputs/direct-eos-gr33/gr-outer-product-pilot/cell-0000-native.log": "089a3cb51d738bffc72c186c44efda78653cbc21a89ba9a3fd9ba421d2e283d2",
+    "outputs/direct-eos-gr33/gr-outer-product-pilot/cell-0000-nodes.json": "9c74562682d39998866f4aed495e38799cfe02c0d580b5c9ceabab8486f1c762",
+    "outputs/direct-eos-gr33/gr-outer-product-pilot/cell-0000-points.jsonl.gz": "cb93760921235525dce14d9bced4acc50fd2a844fe018c840ce33ea449b127e1",
+    "outputs/direct-eos-gr33/gr-outer-product-pilot/cell-0000-q.tsv": "d3fa71dc3c3aa3c62863501106844860aa5237c7a6021b8d4cab28f14af54d3e",
+    "outputs/direct-eos-gr33/gr-outer-product-pilot/cell-0000-result.json": "588713a9d8b92c14b21a82e0235b67871e60f76134d895b8e8b64ab49b9510c7",
+    "outputs/direct-eos-gr33/gr-outer-self-refined/cell-0000-cusp.jsonl.gz": "d2154221e45a111ef8921ee273f5bd897cfa3266664b55877417a300bae4382c",
+    "outputs/direct-eos-gr33/gr-outer-self-refined/cell-0000-finite.jsonl.gz": "46697c97b1b9cefa271ed82840d49e413fe9fe10a2591ce48a869cfa3f195e48",
+    "outputs/direct-eos-gr33/gr-outer-self-refined/cell-0000-inputs.tsv": "3a9311a31eef7988e89039c1736f9e1dfc7d2f2960cb2176a22b72833d3ab0c6",
+    "outputs/direct-eos-gr33/gr-outer-self-refined/cell-0000-native.log": "6823e4ab3f86601ef335a114432907d84c6624bb0e026bb17b5862b4dd954a07",
+    "outputs/direct-eos-gr33/gr-outer-self-refined/cell-0000-points.jsonl.gz": "657dcabf8f575bcfe31b0b861ecc5927bccd2e66bd1b3f62f479260b277c353e",
+    "outputs/direct-eos-gr33/gr-outer-self-refined/cell-0000-result.json": "fceaaf2c6f68c08abed53218622a95c86ed45ab4b1481b802a0e77b44282e2f3"
+  },
+  "gate": "All seven true-neutral full-Q field intervals must intersect. Each path independently retains its original 2e-7 field gate.",
+  "scope": "Two different momentum representations, not an independent end-to-end proof: they share the outer Gauss rule, analytic domains, IR/high-Q certificates, physical field definitions and some interval infrastructure. Raw middle jets use different eta centers and must not be required to intersect."
+}

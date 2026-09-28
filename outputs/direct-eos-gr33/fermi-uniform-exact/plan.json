@@ -1,0 +1,212 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "f896be7",
+  "bindings": {
+    "verification/fermi_uniform.py": "8d968e87c3faa6124040fd734f63726d462dbebbcd62f6c0264c06f42605bfc5",
+    "outputs/structured-enthalpy32/direct-ions/full-integral-build.json": "09a117e64bd62d13740b28b2237e203e527d7b4b052ae5dbeedca7d9d824f45a",
+    "outputs/structured-enthalpy32/direct-ions/fermi-interval/result.json": "b842d5a36a9ab097030beac7255b4557e980cf7754ac65784119be4bc606cbbe",
+    "outputs/direct-eos-gr33/opacity/electrons/result.json": "9444a85df621319c1e3a496e17d7f86b3a2506b87b9bc524c7b37275e702796f",
+    "outputs/direct-eos-gr33/fermi-uniform-exact/fermi_dirac_direct.f90": "626649c387557e18727caf46d91cc56eb03a50ff9fff5788bd4117393f77250b",
+    "outputs/direct-eos-gr33/fermi-uniform-exact/fermi_dirac.f90": "3c0b60223e5bd7300dbdb1cdf79646987b8035042d96da8344c1bfd3fe6014ab",
+    "outputs/direct-eos-gr33/fermi-uniform-exact/fermi_dirac_ct.f90": "b6c24317d2ca8af8b9e2b921a7dfa83fa5853b97e33268686cbbfa641c1ac898",
+    "verification/fermi_uniform_exact.py": "cc4d88fbd367b67fb0082a469a709994899382b2aad049d88b2974f5b4b1153c",
+    "verification/interval_records.py": "5781af2bf247d9e5f707b89874c0486959293ebe9fefdcbf2b15d5fc841c7caa"
+  },
+  "eta_interval": [
+    -17,
+    24
+  ],
+  "beta_interval": [
+    "0",
+    "0.006"
+  ],
+  "cases": [
+    {
+      "nu": "0.5",
+      "eta_order": 0,
+      "beta_order": 0
+    },
+    {
+      "nu": "0.5",
+      "eta_order": 1,
+      "beta_order": 0
+    },
+    {
+      "nu": "0.5",
+      "eta_order": 0,
+      "beta_order": 1
+    },
+    {
+      "nu": "0.5",
+      "eta_order": 2,
+      "beta_order": 0
+    },
+    {
+      "nu": "0.5",
+      "eta_order": 1,
+      "beta_order": 1
+    },
+    {
+      "nu": "0.5",
+      "eta_order": 0,
+      "beta_order": 2
+    },
+    {
+      "nu": "0.5",
+      "eta_order": 3,
+      "beta_order": 0
+    },
+    {
+      "nu": "0.5",
+      "eta_order": 2,
+      "beta_order": 1
+    },
+    {
+      "nu": "0.5",
+      "eta_order": 1,
+      "beta_order": 2
+    },
+    {
+      "nu": "1.5",
+      "eta_order": 0,
+      "beta_order": 0
+    },
+    {
+      "nu": "1.5",
+      "eta_order": 1,
+      "beta_order": 0
+    },
+    {
+      "nu": "1.5",
+      "eta_order": 0,
+      "beta_order": 1
+    },
+    {
+      "nu": "1.5",
+      "eta_order": 2,
+      "beta_order": 0
+    },
+    {
+      "nu": "1.5",
+      "eta_order": 1,
+      "beta_order": 1
+    },
+    {
+      "nu": "1.5",
+      "eta_order": 0,
+      "beta_order": 2
+    },
+    {
+      "nu": "1.5",
+      "eta_order": 3,
+      "beta_order": 0
+    },
+    {
+      "nu": "1.5",
+      "eta_order": 2,
+      "beta_order": 1
+    },
+    {
+      "nu": "1.5",
+      "eta_order": 1,
+      "beta_order": 2
+    },
+    {
+      "nu": "2.5",
+      "eta_order": 0,
+      "beta_order": 0
+    },
+    {
+      "nu": "2.5",
+      "eta_order": 1,
+      "beta_order": 0
+    },
+    {
+      "nu": "2.5",
+      "eta_order": 0,
+      "beta_order": 1
+    },
+    {
+      "nu": "2.5",
+      "eta_order": 2,
+      "beta_order": 0
+    },
+    {
+      "nu": "2.5",
+      "eta_order": 1,
+      "beta_order": 1
+    },
+    {
+      "nu": "2.5",
+      "eta_order": 0,
+      "beta_order": 2
+    },
+    {
+      "nu": "2.5",
+      "eta_order": 3,
+      "beta_order": 0
+    },
+    {
+      "nu": "2.5",
+      "eta_order": 2,
+      "beta_order": 1
+    },
+    {
+      "nu": "2.5",
+      "eta_order": 1,
+      "beta_order": 2
+    },
+    {
+      "nu": "-0.5",
+      "eta_order": 3,
+      "beta_order": 0
+    }
+  ],
+  "transformed_interval": [
+    0,
+    10
+  ],
+  "coarse_intervals": 256,
+  "fine_panels": [
+    256,
+    512,
+    1024,
+    2048,
+    4096,
+    8192,
+    16384,
+    32768,
+    65536
+  ],
+  "precision_decimal_digits": 60,
+  "maximum_uniform_quadrature_error": "1e-11",
+  "point_controls": [
+    [
+      -17,
+      "0"
+    ],
+    [
+      0,
+      "0"
+    ],
+    [
+      24,
+      "0.006"
+    ]
+  ],
+  "processes": 3,
+  "native_point_error_relative_with_floor_one": "1e-9",
+  "scope": "Uniform value and specified mixed eta/beta derivative errors of a newly declared exact composite four-point Gauss rule, plus interval-arithmetic evaluation at three controls. No uniform error claim for the old adaptive binary, implicit EOS root, physical plasma or GR evolution.",
+  "physical_EOS_certified": false,
+  "serialization": "Exact binary endpoint -> rational -> directed Decimal division. Interval decimal literals enclose the live interval, including when read at a higher precision.",
+  "preserved_original": {
+    "plan_sha256": "c327793cb14736483625a06baf557d82d23802a21c936924c0182f6125979dd6",
+    "certificate_sha256": "2fa2adfd9b4cee12c9b5a4761b8909f03310b1797281e8ae6d6a0dbb93f94429",
+    "point_sha256": {
+      "point-0.json": "955034ab175ef1bcd545d09dcb221e27ce7d6428d208f0864799b903e78f6156",
+      "point-1.json": "0b6e20cba864b3fc2ea5aac972c6cabe4518990f1882fa061cad0b1ced2739d4",
+      "point-2.json": "5c486b4f2eb44296ee82aa0307aa1d550059fd0a28a73fc66c9b44e00bb903b5"
+    }
+  },
+  "native_point_argument_convention": "Reference eta/beta are the exact declared decimal values. The native call receives their binary64 conversions; the reported discrepancy includes that representation effect. No native uniform-in-argument error is inferred."
+}

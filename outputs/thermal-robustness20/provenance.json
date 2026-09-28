@@ -1,0 +1,26 @@
+{
+  "before_task_checkpoint": "389eaef",
+  "before_perturbation_theorem_checkpoint": "9b006eb",
+  "before_post_primary_phase_followup_checkpoint": "8b95a41",
+  "byte_preservation_repair_checkpoint": "b3a8944",
+  "interpreter": "/usr/bin/python3",
+  "versions": {
+    "numpy": "2.2.6",
+    "mpmath": "1.2.1",
+    "sympy": "1.9"
+  },
+  "module_file_sha256": {
+    "/home/lpaiu/.local/lib/python3.10/site-packages/numpy/__init__.py": "6ae17b070c0f70a8e3cad89a510a256942e5a1f37ea5feb120cec167ed2a6236",
+    "/usr/lib/python3/dist-packages/mpmath/__init__.py": "46cd24a875e8dd00fb47c6a5cf28fd06878d4dfe7562446b8d23ca69ca65b413",
+    "/usr/lib/python3/dist-packages/sympy/__init__.py": "5b46c2e75f53e6f7e895a82c60c2856eb5e89010e5ad1e560a56f2d0e6cda151",
+    "/mnt/e/lab/self-mass-unobservability/verification/thermal_wd.py": "66810b4b32aec6400afba61d4f04259989b19b8031b946532feb873e069d1f58",
+    "/mnt/e/lab/self-mass-unobservability/verification/thermal_restart.py": "352e6bfd091e4e8bbd0fe72cd815557b4a916a18fb79c784e0c185093991a5e8",
+    "/mnt/e/lab/self-mass-unobservability/verification/stellar_matching.py": "70bf5d1e0df55232903268e0234846d487d165a7687f5c9072f68b66cb2c5b7f",
+    "/mnt/e/lab/self-mass-unobservability/verification/nonzero_drive.py": "973e7308b57916f33a8a0e2a5eedd184f448884d847f8ca3cec0d7346bd948be"
+  },
+  "prior_runtime_environment_sha256": "bcd0fbdc7fd2f7b753cba489d9b60a325eaf0d9d8566d71dcef7776710af5a80",
+  "input_sha256": {
+    "outputs/validated-variational/ivp.hex": "c31f10741db5fa63ebae1aaa20e8e2b19ad6067179fe7ad705f66ed8fb53726f"
+  },
+  "producer": "verification/thermal_robustness.py"
+}

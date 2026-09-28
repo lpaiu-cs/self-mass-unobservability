@@ -1,0 +1,18 @@
+{
+  "classification": "Counterexample candidate",
+  "command": [
+    "gfortran",
+    "-O2",
+    "-fPIC",
+    "-shared",
+    "-I/home/lpaiu/work/direct-eos-gr33/molecular-stationarity/build/src",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/coulomb-curvature/coulomb_bridge.f90",
+    "-L/home/lpaiu/work/direct-eos-gr33/molecular-stationarity/build/src",
+    "-Wl,-rpath,/home/lpaiu/work/direct-eos-gr33/molecular-stationarity/build/src",
+    "-lfree_eos_direct24_molecular_stationarity",
+    "-o",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-stationarity/excitation.so"
+  ],
+  "bridge_sha256": "e9d48ff44b53cdd284ee17056cb871d3ca09ea1d0d6ba6602de28c374af15c67",
+  "library_sha256": "bacc215fe5955cab7b1eb9796c6e3fd95230bcc98cc96b459fe8ada59314686e"
+}

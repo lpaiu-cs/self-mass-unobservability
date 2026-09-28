@@ -1,0 +1,27 @@
+{
+  "classification": "Counterexample candidate",
+  "reassessment": "The full frozen-Robin contrast is dominated by a term of order omega^2/3, also present in a flat empty ball. It must not be labeled a microscopic relaxation signal.",
+  "comparator": "At physical stellar surface use Z_static_star+Z_test_wave(omega). Test wave solves (r^2 F psi_prime)_prime+omega^2*r^2/F*psi=0 on the same frozen metric with regular centre. Z_test_wave(0)=0. Exterior scalar+metric propagation remains identical. This is one explicitly specified static-material comparator, not all static EFTs.",
+  "controls": "Flat exact omega*cot(omega)-1; original p2/p4/outer/quadrature data and two geometric IVP tolerances. Test material susceptibility stays frequency independent; metric is fixed.",
+  "gates": {
+    "flat_relative": 1e-09,
+    "geometry_relative_on_retained_signal": 0.002,
+    "spatial": 0.02,
+    "outer": 0.002,
+    "quadrature": 0.002
+  },
+  "budget": {
+    "seconds": 120,
+    "new_EOS_calls": 0,
+    "new_FEM_solves": 0,
+    "new_time_steps": 0
+  },
+  "decision": "Stop on a failed contrast gate; no extra harmonics or longer integration. Keep the frozen-Robin result as the diagnostic that motivated this separate declared comparator.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_full_orbital_comparator.py": "966d0e5e85d50f45cd2d0df48a07cbb79510679129a0d5f4b58e420c8ea7ee96",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-full-orbital-exterior/result.json": "ef60ca31e16ffbc0bfe03f52f6336308c367bffde67deb7639e7ed991f7319b8",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-full-orbital-exterior/plan.json": "c49759242f6ce4ad554c4f6aec923a75707086793d2a7a5b37948aa5636a33a1",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-resolved-scalar-pulse/companion-benchmark.json": "810073ff038513cb97b36f6a1f58046c6f48952f152b32ddf8a9152157df631a",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-free-surface-response/normalized/background.npz": "c42374d2a79ab37cc716bad52e6b72a4940dc82f0923f71856601f213f0c4a2c"
+  }
+}

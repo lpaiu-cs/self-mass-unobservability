@@ -1,0 +1,61 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "8e41192",
+  "bindings": {
+    "verification/gr_fermi_plasma.py": "4d9c7e2b97db5f287fbb84448d43e42af5f5a87f47a3c18a451581a2ad7dd96f",
+    "outputs/direct-eos-gr33/gr-radiation-eos-split/mod_free_eos_constants.f90": "b2343290a6c273e4e1e78079abbc8093c39efd6007a4523bde8063c581469af4",
+    "outputs/direct-eos-gr33/gr-radiation-eos-split/mod_free_eos.f90": "5c2a2b75d69d8c88da96f175e0e0c694a077e5a087a4b2aafff7ea0620e5769a",
+    "outputs/direct-eos-gr33/gr-molecular-reference-defined/manifest.json": "144c1a4691bf26823f70c17367a4aa3ccba7a70c208474cbc484086df425d282",
+    "outputs/direct-eos-gr33/gr-plasma-photon-defined/manifest.json": "64ec84aa7209db329e687c8490775f2a42456b5ee35b21a04c93f9668ee976c4",
+    "outputs/direct-eos-gr33/gr-fermi-plasma/braaten-segel1993.pdf": "4302a522aa08a7dab7280ab04791363e35a073e9317275c71cd99c8593108f71",
+    "outputs/direct-eos-gr33/gr-fermi-plasma/braaten-segel1993.txt": "388f69fa6fe05c67c63a1a6789c888489b08f4b261ff652b361e014c74de7544",
+    "outputs/direct-eos-gr33/gr-fermi-plasma/constants.json": "6f27ee9b6fc8a957362c50290c357e1653b1eec145f93fe7ba88200c44b59fd1"
+  },
+  "source": "https://arxiv.org/abs/hep-ph/9302213",
+  "doi": "10.1103/PhysRevD.48.1478",
+  "equations": [
+    1,
+    4,
+    5,
+    6,
+    11,
+    17,
+    18,
+    19,
+    20,
+    21
+  ],
+  "model": "Ideal relativistic electron/positron distributions and leading-order alpha plasma moments. Use the actual saved native kinetic eta and n_e=N_A*rmue; test their agreement before any density inversion or EOS substitution.",
+  "quadrature": "All 5735 states, kinetic-energy coordinate t=(E-mc2)/(kT); two adaptive vector quadratures. Six actual states and three synthetic controls independently integrated in momentum coordinate at 50 decimal digits.",
+  "actual_controls": [
+    0,
+    1175,
+    2972,
+    3043,
+    4352,
+    5734
+  ],
+  "synthetic_controls": [
+    [
+      -20,
+      1e-05
+    ],
+    [
+      0,
+      0.1
+    ],
+    [
+      3,
+      3
+    ]
+  ],
+  "quadrature_relative_tolerance": 1e-08,
+  "native_density_relative_tolerance": 1e-08,
+  "moment_bounds": "w_p^2<=m_t^2<=1.5*w_p^2; 0<=w_1^2<=w_p^2; k_max^2>=w_p^2. Approximate Braaten-Segel high-k moments are compared to direct integral moments with errors reported, not fitted or retrospectively thresholded.",
+  "cold_controls": [
+    0.01,
+    0.4,
+    3.0
+  ],
+  "scope": "Finite state consistency and moment diagnostics; symbolic conditional identities. Not physical plasma EOS certification, a full dispersion/transport solution or a change to the running native GR calculation."
+}

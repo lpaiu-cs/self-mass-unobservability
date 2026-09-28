@@ -1,0 +1,2 @@
+$taskRun = Start-Process -FilePath wsl.exe -ArgumentList '-d','Ubuntu-22.04','--cd','/home/lpaiu/work/native-retained-tail-runtime','--exec','env','OPENBLAS_NUM_THREADS=1','OMP_NUM_THREADS=1','PYTHONPATH=/home/lpaiu/work/nutimo_pilot/request13_deps:verification','/usr/bin/python3','.phase245-followthrough.py' -WindowStyle Hidden -PassThru -RedirectStandardOutput 'E:\lab\self-mass-unobservability\.phase245-launch.stdout.log' -RedirectStandardError 'E:\lab\self-mass-unobservability\.phase245-launch.stderr.log'
+$taskRun.Id

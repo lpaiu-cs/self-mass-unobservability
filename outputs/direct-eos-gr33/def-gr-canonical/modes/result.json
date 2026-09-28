@@ -1,0 +1,83 @@
+{
+  "classification": "Counterexample candidate",
+  "actual_GR_fluid_scalar_evolved": true,
+  "time_passed": true,
+  "passed": false,
+  "comparisons": {
+    "velocity_mass_RMS_m_s": {
+      "previous": 1.9220883086125346e-07,
+      "last": 4.984525492702709e-08,
+      "order": 1.9471465435984907,
+      "coefficient": 0.0044263353666364825,
+      "outer": 8.218765754818598e-08,
+      "spatial": 0.05783305710905932
+    },
+    "scalar_mass_RMS": {
+      "previous": 20.8198377899975,
+      "last": 0.0016059960184911337,
+      "order": 13.662202891811328,
+      "coefficient": 0.004074271850840833,
+      "outer": 1.4025965893476657e-06,
+      "spatial": 3.673867082140382
+    },
+    "old_interface_velocity_RMS_m_s": {
+      "previous": 0.016083743884172896,
+      "last": 7.311354639363287e-07,
+      "order": 14.42510501072999,
+      "coefficient": 1.7350828570350968e-08,
+      "outer": 1.693286748008188e-08,
+      "spatial": 0.06937939990026999
+    },
+    "new_interface_velocity_RMS_m_s": {
+      "previous": 1.426928697305972e-05,
+      "last": 7.144731833869127e-08,
+      "order": 7.641817667672446,
+      "coefficient": 6.429938196345992e-08,
+      "outer": 8.370147327519387e-08,
+      "spatial": 0.2945963228680777
+    }
+  },
+  "checks": [
+    {
+      "orthogonality": 1.9984014443252818e-15,
+      "stiffness_skew": 7.031757268816508e-17,
+      "linear_residual": 1.0739807631701428e-16
+    },
+    {
+      "orthogonality": 1.5543122344752192e-15,
+      "stiffness_skew": 1.4300770898426607e-16,
+      "linear_residual": 1.0814563043774369e-16
+    },
+    {
+      "orthogonality": 1.9984014443252818e-15,
+      "stiffness_skew": 1.0547635903224748e-16,
+      "linear_residual": 1.083656191070295e-16
+    },
+    {
+      "orthogonality": 1.6653345369377348e-15,
+      "stiffness_skew": 9.407926776128101e-17,
+      "linear_residual": 1.0853130510832988e-16
+    }
+  ],
+  "endpoint": {
+    "tau": 1.0,
+    "velocity_mass_RMS_m_s": 3.547476073438017e-11,
+    "scalar_mass_RMS": 3.036169217698754e-29,
+    "old_interface_velocity_RMS_m_s": 5.663228914721868e-14,
+    "new_interface_velocity_RMS_m_s": 2.3196960600809036e-10
+  },
+  "paths": [
+    "128",
+    "256",
+    "512",
+    "coefficient",
+    "outer",
+    "spatial"
+  ],
+  "seconds": 22.601685090000004,
+  "memory_GB": 1.511657472,
+  "original_failure_resolved": false,
+  "physical_pressure_metric_reconstruction_checked": false,
+  "full_dynamic_charge_solved": false,
+  "limitation": "Acceptance of this different complete spatial scheme additionally requires physical pressure/metric and boundary consistency checks. Coarse-bank sensitivity is not an independent EOS error certificate."
+}

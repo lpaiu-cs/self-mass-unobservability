@@ -1,0 +1,18 @@
+DOUBLE OPACITY 0
+DOUBLE OPACITY 1000
+DOUBLE OPACITY 2000
+DOUBLE OPACITY 3000
+Traceback (most recent call last):
+  File "/mnt/e/lab/self-mass-unobservability/verification/opacity_tables.py", line 166, in <module>
+    if __name__=='__main__': globals()[sys.argv[1]]()
+  File "/mnt/e/lab/self-mass-unobservability/verification/opacity_tables.py", line 129, in run
+    a=model(p);values.append(a);directions=[]
+  File "/mnt/e/lab/self-mass-unobservability/verification/opacity_tables.py", line 113, in __call__
+    rad=(1-u)*self.hydrogen(j,X,r,t)+u*self.hydrogen(j+1,X,r,t)
+  File "/mnt/e/lab/self-mass-unobservability/verification/opacity_tables.py", line 101, in hydrogen
+    values=np.array([self.table(zi,k,r,t) for k in indices]);w,_=c.weights(grid[start:start+4],values[:,0],X)
+  File "/mnt/e/lab/self-mass-unobservability/verification/opacity_tables.py", line 101, in <listcomp>
+    values=np.array([self.table(zi,k,r,t) for k in indices]);w,_=c.weights(grid[start:start+4],values[:,0],X)
+  File "/mnt/e/lab/self-mass-unobservability/verification/opacity_tables.py", line 88, in table
+    assert stem+'-coeff' in self.data,('Unloaded opacity table',zi,xi)
+AssertionError: ('Unloaded opacity table', 8, 1)

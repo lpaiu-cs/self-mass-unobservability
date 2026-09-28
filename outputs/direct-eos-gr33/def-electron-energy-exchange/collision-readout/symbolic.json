@@ -1,0 +1,7 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "finite_basis": "For K(s)=sum_j w_j/(lambda_j+s), w_j>=0 and lambda_j>0, tau_eff=sum(w_j/lambda_j^2)/sum(w_j/lambda_j). The zero-current unit step rises as 1-sum[(w_j/lambda_j)exp(-lambda_j*t)]/sum(w_j/lambda_j).",
+  "harmonic_bound": "abs(K(i*omega)/K(0)-1) <= abs(omega)*tau_eff; follows termwise from abs[1/(lambda+i*omega)-1/lambda] <= abs(omega)/lambda^2.",
+  "limitation": "A statement about the fixed Galerkin operator only. It does not bound spatial heat diffusion, global stellar response, omitted collision physics, or the continuum inverse moment."
+}

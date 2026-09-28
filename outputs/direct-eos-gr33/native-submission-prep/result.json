@@ -1,0 +1,37 @@
+{
+ "classification": "Imported from prior work",
+ "passed": true,
+ "verdict": "PRD_SUBMISSION_PREPARED__AUTHOR_ACTIONS_AND_REPOSITORY_PUSH_PENDING",
+ "venue": {
+  "primary": "Physical Review D, Regular Article",
+  "alternative": "Classical and Quantum Gravity, Research Paper",
+  "reasons": [
+   "scope: gravitation, compact objects, scalar-tensor theories",
+   "APS AI policy (June 2026) allows substantive AI use with in-paper disclosure",
+   "PDF suffices for initial review; REVTeX recommended, not required; no length limit; no mandatory charges"
+  ]
+ },
+ "tex": "Tectonic 0.17.0 (official GitHub release, windows-msvc zip, SHA-256 digest matched), user-level install",
+ "fixes": [
+  "(K\\(\\approx\\)934) -> (\\(K\\approx934\\)): Pandoc does not read math whose closing $ is followed by a digit",
+  "Status metadata line removed (title block read \"Unified revised manuscript\")",
+  "Use of AI tools section added before Data and code availability"
+ ],
+ "pdf": {
+  "pages": 30,
+  "warnings": "one underfull hbox; no undefined citations or references",
+  "visual_check": "title page, Section 4.6 pages 9-15, AI section page 25 (pypdfium2 render)"
+ },
+ "source_archive": "main.tex, main.bbl, references.bib, four figures, README.txt; compiles on its own to a PDF of identical size",
+ "author_actions": [
+  "confirm the AI-use section and add earlier model versions",
+  "affiliation, e-mail, ORCID",
+  "push the repository (local main 1137 commits ahead of origin, last push 2026-07-12) or deposit a DOI snapshot",
+  "confirm no prior submission and no competing interests",
+  "optional suggested referees",
+  "submit at authors.aps.org"
+ ],
+ "package_revision_hazard": "paper/package_revision.py rewrites revision-manifest.json from its 9 September list; not used, README warns",
+ "full_goal_complete": false,
+ "snapshot_KST": "2026-09-28T08:56:51.331082+09:00"
+}

@@ -1,0 +1,45 @@
+{
+  "classification": "Counterexample candidate",
+  "diagnostic_completed": true,
+  "endpoint_direct": -3.5252349816555445e-24,
+  "pressure_jump_components": [
+    {
+      "kind": "linear",
+      "endpoint_diffusive_rest_charge": -3.530417594910468e-24,
+      "endpoint_diffusive_mass_norm_g": 1.03667161426427e+16
+    },
+    {
+      "kind": "cubic",
+      "endpoint_diffusive_rest_charge": -3.527724185701154e-24,
+      "endpoint_diffusive_mass_norm_g": 1.036698630768328e+16
+    }
+  ],
+  "diffusive_rest_over_direct": 1.0014701468928717,
+  "arithmetic": [
+    {
+      "quantity": "mass",
+      "original_residual": -131.6019802093506,
+      "roundoff_bound": 36841.47294004269,
+      "within_roundoff": true,
+      "longdouble_port_relative": 5.613319986678444e-13
+    },
+    {
+      "quantity": "energy",
+      "original_residual": 2101286979764224.0,
+      "roundoff_bound": 4.191414960941975e+17,
+      "within_roundoff": true,
+      "longdouble_port_relative": 6.140386487297119e-14
+    },
+    {
+      "quantity": "neutral",
+      "original_residual": 1.137093509598258e+22,
+      "roundoff_bound": 4.325134360594415e+24,
+      "within_roundoff": true,
+      "longdouble_port_relative": 2.3214171774151993e-11
+    }
+  ],
+  "seconds": 4.6566268850000005,
+  "original_join_audit_passed": false,
+  "physical_sign_established": false,
+  "new_fluid_steps": 0
+}

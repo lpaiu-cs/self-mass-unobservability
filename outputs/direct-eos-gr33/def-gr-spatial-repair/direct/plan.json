@@ -1,0 +1,32 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "95d99987",
+  "claim": "Evaluate the same polynomial GR model without a reduced eigenbasis, preserving the weak scalar component in direct coupled linear solves.",
+  "method": "Bromwich Fourier line sigma6, period4, nested cutoffs512/1024/2048, with exact inertial-source subtraction. Reuse the first16 resolvents. Same degrees1/2/4, source, horizon and readouts.",
+  "gates": {
+    "time_relative": 0.02,
+    "time_order": 1.5,
+    "spatial": 0.02,
+    "spatial_decrease": true,
+    "coefficient": 0.02,
+    "outer": 0.002,
+    "quadrature": 0.002,
+    "alias": 0.0002,
+    "linear_residual": 1e-09
+  },
+  "decision": "Measure each degree on16 solves. Run degree4 first; stop on any time gate failure. Only then complete degrees2,1. Only if spatial gates pass, run coefficient, outer3R, quadrature8 and sigma8 contrasts. No cutoff or degree expansion.",
+  "budget": {
+    "hard_seconds": 300,
+    "maximum_models": 7,
+    "CPU_threads": 1,
+    "memory_GB": 3,
+    "new_EOS_calls": 0
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_spatial_direct.py": "33cc61073723cd82ce082fb19c3fd001bf0525403519645799394c0bf8e97419",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_spatial_repair.py": "d13044861c2b4761d5e6349d809c3368f46112974f374aa050aada516c80f8e5",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-spatial-repair/balanced/result.json": "e9bbf98aac78732f249081ee6a30d8e85ac18862cab490e86e56db15e8c272eb",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/fine-bank.npz": "b4493a6e4cfb20d741725ecb61cec154ab9fc51a694001865748741060018d7e",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/coarse-bank.npz": "ea020f69b240c5c5cdd8810f963d88e5cc2d3269aff12c659422a7a6541ae0df"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "classification": "Counterexample candidate",
+  "evidence": "At200K the molecular equilibrium and internal H2plus field become infinite while its external constrained field remains finite. The failure is upstream of density recovery.",
+  "decision": "Read the exponential and partition operands at their owner; correct only their demonstrated arithmetic cause and test old supported states before using new support.",
+  "budget": {
+    "build_seconds": 60,
+    "diagnostic_native_calls": 8,
+    "diagnostic_seconds": 20
+  },
+  "forecast": "The same excitation module previously compiled in3.59s. Reuse all unchanged native objects and build a separate diagnostic library; no old library is overwritten.",
+  "source_sha256": "8520aed6e928a00dd9a2f928fb46c294280a9b66a405756e3c55986312ca578c"
+}

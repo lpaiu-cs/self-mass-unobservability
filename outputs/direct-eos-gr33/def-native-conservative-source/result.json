@@ -1,0 +1,42 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "comparisons": {
+    "temperature": {
+      "time_relative": 0.00772573358029344,
+      "time_pass": true,
+      "space_pass": true,
+      "space_relative": 0.000566025008302983
+    },
+    "velocity": {
+      "time_relative": 8.461472054678883e-05,
+      "time_pass": true,
+      "space_pass": true,
+      "space_relative": 0.02780775630261505
+    },
+    "scalar": {
+      "time_relative": 0.00031237631828311504,
+      "time_pass": true,
+      "space_pass": true,
+      "space_relative": 0.002530728714259449
+    }
+  },
+  "actual_coupled_evolution": true,
+  "endpoint": {
+    "t": 0.0034344311179287023,
+    "maximum_delta_lnT": 0.00010747446926079629,
+    "base_cell_delta_lnT": -0.00010747446926079629,
+    "velocity_RMS_m_s": 2.2421581474146438e-08,
+    "scalar_RMS": 1.0601144429906058e-31,
+    "surface_scalar": 4.698065441539318e-37,
+    "outgoing_luminosity_relative": -5.532141585107286e-16,
+    "energy_balance": 1.1581524399250146e-19
+  },
+  "seconds": 69.56858261400001,
+  "accounted_seconds": 79.56858345399999,
+  "memory_GB": 0.743243776,
+  "physical_source_profile_certified": false,
+  "moving_surface_solved": false,
+  "final_dynamic_charge_solved": false,
+  "full_goal_complete": false
+}

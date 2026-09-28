@@ -1,0 +1,50 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "873a09ad13d0dd9df748d8ab6ea871e119f21068",
+  "claim": "Test whether consistent integration of all known H forcing resolves the pressure mismatch in the same actual coupled photon/gas prefix.",
+  "cause_evidence": "169pressure is the difference of large E/H contributions. Collision-only fitting leaves streamH and its boundary contribution point-sampled; the combined forcing quadrature is inconsistent in accuracy. This is a targeted candidate, not a demonstrated unique cause.",
+  "method": "Reuse169analytic moments. Fit streamH and both boundary port moments to integralH together with C(t)H. Keep unknown coupled Radau stages and actual angular samples; save the separate known-source angular quadrature correction. No correction is added to a mass or final charge.",
+  "decision": "Only a pair satisfying all unchanged gates permits considering full coupled continuation and final-charge readout. User criterion remains final-charge stability on the SAME corrected coupled solution; intermediate gates do not satisfy it.",
+  "gates": {
+    "time": 0.02,
+    "energy_H": 1e-08,
+    "stage": 1e-12,
+    "physical_stage_moment": 1e-13,
+    "port": 1e-12,
+    "source": 1e-10,
+    "integral": 1e-12
+  },
+  "restrictions": "Same zero previous motion/extra metric increment,531cells8angles152frequencies,64/128 clocks,4/8steps,0.214652ms. Future nonzero mechanical sweeps must generalize this asserted specialization.",
+  "consumers": "Physical angular samples alone no longer integrate radial_ports. Consume saved weights times (actual sample plus known-source quadrature correction), and use the same representation in retarded kernels with its original time control.",
+  "budget": {
+    "actions": {
+      "prepare": 30,
+      "check": 90,
+      "pilot": 240,
+      "finish": 30
+    },
+    "total_action_seconds": 390,
+    "CPU_threads": 1,
+    "virtual_GiB": 3
+  },
+  "forecast": "169actual pair128.03s; reuse the same analytic moments with a few added sparse stream/port operations. Estimated100-170s subject to contention;240s hard cap. No production or extra pair admitted.",
+  "stop": "Any gate or cap ends this trial. Preserve169failure; no automatic finer clock, longer interval, method ladder, relaxed pressure gate or full production.",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/integrate_native_known_forcing.py": "013b20a99da4240cc1d3b03325cb243dbf4e8e0a65fd258406867e08301c1335",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/integrate_native_collision_source.py": "50cae0c9ce2a10458b9970a647139424fe57705cd1744064ba9d83ebcf840b35",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/solve_native_radau_transfer.py": "cade2ee551d8c9b443f283c8055e3bfb4641c1aa550d19c87b0f77c75abff44e",
+    "native-collision-source169-work/result.json": "58768e8efc83890398f7d97360ed1ef560ab1dd88322cbe2eb009059a08ba135",
+    "native-collision-source169-work/pressure-profile.json": "b4d34102139d8b637a323d62a2f91da390678315a39d5a985b86ae3ad266b1e5",
+    "native-collision-source169-work/source-check.json": "1848fb0b6ae9b60ff11fbf6425367d1b464e5d6b90ff805f222b69ec4fcbf8be",
+    "native-collision-source169-work/sweep-0/photons/steps-128-reference-128.npz": "5d2b1936e44617760120a61ca6445a044ad0b91c0a4c6799b59f51832adc2678",
+    "native-collision-source169-work/sweep-0/photons/steps-64-reference-128.npz": "5d2b1936e44617760120a61ca6445a044ad0b91c0a4c6799b59f51832adc2678",
+    "native-collision-source169-work/sweep-0/material/steps-128-reference-128.npz": "dcb46e493c360e33ac6df6c6e7bb4e5d7cc80e218006a1fbcc08033d6926580f",
+    "native-collision-source169-work/sweep-0/material/steps-64-reference-128.npz": "76e5a3c54e5f5e2ed88a9c3957903569db4397d4088898f4ce6f4729124359d4",
+    "native-collision-source169-work/normalization.json": "820244d5d23554811c792b52a45a3e28317392019f5aac7d8733eeb3b4d28706",
+    "native-collision-source169-work/photon-conservation-plan.json": "248525a3b9808f00f193c48d9739000a1c32eea1cf8197cf8c3ad8b939a0bb2d",
+    "native-collision-source169-work/lift-plan.json": "6daf610a5bbe5c19923d650f7da9fdb763edf0bedd4fd5ea0c3a301b1805913e",
+    "native-collision-source169-work/primitive-plan.json": "b6a2230645d90f6ef1f15b83689e5697e6640f6943c88347cfdaae04983c2c36",
+    "native-known-forcing170-work/failed-symbolic-prepare-receipt.json": "86a0a2c7a07bda791f58c133399da8f83ebb00f94819c8c7fb81f468d4bf67d0",
+    "native-known-forcing170-work/failed-symbolic-prepare-producer.py": "bc1fed84e968858dc161d3c43ffc35f4f6709a5b8b5fa8caacf73221bd319509"
+  }
+}

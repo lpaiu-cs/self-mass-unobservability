@@ -1,0 +1,92 @@
+{
+  "classification": "Counterexample candidate",
+  "scope": "Exploratory replay of three source-grid records, not a preregistered acceptance test or a stellar mixture calculation.",
+  "variants": [
+    "sigma",
+    "sigma*(1-exp(-u))",
+    "sigma-scattering/(1-exp(-u))",
+    "sigma*(1-exp(-u))-scattering"
+  ],
+  "checks": [
+    {
+      "z": 1,
+      "it": 170,
+      "jn": 58,
+      "header_planck": 3.050399936910253e-05,
+      "header_ross": 1.76309995936208e-07,
+      "planck_variants": [
+        9.610543884439658e-06,
+        9.20948824287061e-06,
+        9.58418095628272e-06,
+        9.18574293466464e-06
+      ],
+      "reconstructed_native_ross": 1.7636044450872137e-07,
+      "ross_relative": 0.0002861356342587218,
+      "planck_relative": [
+        0.6849415131389569,
+        0.698089154427439,
+        0.6858057581134581,
+        0.6988675870492946
+      ],
+      "minimum_stimulated_absorption": 3.134811216056098e-08,
+      "packing_tolerance": 0.0010000000474974513
+    },
+    {
+      "z": 2,
+      "it": 170,
+      "jn": 58,
+      "header_planck": 4.127099964534864e-05,
+      "header_ross": 2.1482000533978862e-07,
+      "planck_variants": [
+        4.580362376627657e-06,
+        3.2924402463754424e-06,
+        4.556989559265479e-06,
+        3.2713881557805447e-06
+      ],
+      "reconstructed_native_ross": 2.148364854471821e-07,
+      "ross_relative": 7.671588764468495e-05,
+      "planck_relative": [
+        0.8890174113545157,
+        0.9202238793664279,
+        0.8895837368024822,
+        0.9207339733979707
+      ],
+      "minimum_stimulated_absorption": 3.6676927196109625e-08,
+      "packing_tolerance": 0.0010000000474974513
+    },
+    {
+      "z": 6,
+      "it": 170,
+      "jn": 58,
+      "header_planck": 0.04655199870467186,
+      "header_ross": 1.8657000282473746e-06,
+      "planck_variants": [
+        0.04878282725053518,
+        0.04869823871306373,
+        0.04878278928401527,
+        0.04869820451630412
+      ],
+      "reconstructed_native_ross": 1.8657230262160875e-06,
+      "ross_relative": 1.2326723677347218e-05,
+      "planck_relative": [
+        0.047921219452161434,
+        0.04610414306822186,
+        0.047920403879877504,
+        0.04610340847549632
+      ],
+      "minimum_stimulated_absorption": 4.4921587860991997e-07,
+      "packing_tolerance": 0.0010000000474974513
+    }
+  ],
+  "source_sha256": {
+    "/home/lpaiu/work/direct-eos-gr33/opacity-project/source/mono/m01.mesh": "fea006cd72dc9a9fc0c7bc173f3b5bb0d1cfa9d1029303176edb1e3e006ba1f2",
+    "/home/lpaiu/work/direct-eos-gr33/opacity-project/source/mono/m01.170": "1724ca58a45d571f4dbc53b73ae0ab6286c390cb9037dc51bc5fb8359c8410c9",
+    "/home/lpaiu/work/direct-eos-gr33/opacity-project/source/mono/m02.mesh": "fea006cd72dc9a9fc0c7bc173f3b5bb0d1cfa9d1029303176edb1e3e006ba1f2",
+    "/home/lpaiu/work/direct-eos-gr33/opacity-project/source/mono/m02.170": "0fe32c21d9533605f850ac16091e6c65c94d1ad38786b71837e85972db5f5b70",
+    "/home/lpaiu/work/direct-eos-gr33/opacity-project/source/mono/m06.mesh": "fea006cd72dc9a9fc0c7bc173f3b5bb0d1cfa9d1029303176edb1e3e006ba1f2",
+    "/home/lpaiu/work/direct-eos-gr33/opacity-project/source/mono/m06.170": "4cb9ea978aba43ceae7e09c67eaa8505b4f340a9deab65122ac63e472cc53810",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_photon_collision_response.py": "f76e6bfcae490c9fbdab075fa69b051268b90ab918cbbcbafb1de2f4bf2793fb"
+  },
+  "photon_collision_model_constructed": false,
+  "conclusion": "Tested reconstructions fail to recover all native Planck headers. No renormalization, mean-fitted kernel or physical surface closure is authorized by this probe. Frequency resolution, tails and conventions are not separately established as the unique cause."
+}

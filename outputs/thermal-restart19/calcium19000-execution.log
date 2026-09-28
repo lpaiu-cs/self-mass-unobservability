@@ -1,0 +1,58 @@
+
+
+ read inlist_project
+                                         version_number        7623
+ read photos1/19000
+ change to cno_extras.net
+ number of species =          22
+ new_rotation_flag = T
+ net name cno_extras.net
+ extra_terminal_output_file: log1
+ rotation_flag = T
+                                               tau_base    2.5118800000000000D+01
+ kappa_file_prefix gn93
+ kappa_lowT_prefix lowT_fa05_gs98
+   eos_file_prefix mesa
+                                        OMP_NUM_THREADS           1
+
+
+__________________________________________________________________________________________________________________________________________________
+
+       step    lg_Tcntr    Teff       lg_LH     lg_Lnuc     Mass       H_rich     H_cntr     N_cntr     Y_surf     X_avg     eta_cntr  zones retry
+   lg_dt_yr    lg_Dcntr    lg_R       lg_L3a    lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf     Y_avg     gam_cntr  iters bckup
+     age_yr    lg_Pcntr    lg_L       lg_LZ     lg_Psurf    lg_Dsurf   C_core     C_cntr     Ne_cntr    Z_cntr     Z_avg     v_div_cs     dt_limit
+__________________________________________________________________________________________________________________________________________________
+
+ central hydrogen    1.0000003002053667E-099
+save profile for model number        19000
+save LOGS1/profile1.data for model 19000
+
+
+                star               model                 age                mass             lg_mdot           (r-rl)/rl          last photo
+                   1               19001     5.744503813E+09     1.979610631E-01    -9.900000000E+01    -9.459182177E-01        photos1/19000
+
+stop because model_number >= max_model_number
+    19001    19001
+      19001   7.318059  1.457E+04   2.411373   2.411374   0.197961   0.006332   0.000000   0.011795   0.114631   0.009671  22.906227   3107     52
+   0.700252   5.125509  -1.034467 -26.846754   1.350035 -99.000000   0.191629   0.980012   0.001635   0.004411   0.970220   1.444427      5      0
+ 5.7445E+09  21.037473  -0.461799  -3.148581   5.435528  -7.225294   0.000000   0.000103   0.002146  1.999E-02  2.011E-02 -0.376E-07    varcontrol
+                            surface ca40    9.3548803516459376D-06
+                              surface h1        0.8809582616490552
+              log_total_angular_momentum       46.6718905490672427
+
+reduce dt because of max decrease   19001
+save LOGS1/profile2.data for model 19001
+save photos1/x001 for model 19001
+save final_profile.data for model 19001
+ saved to final.mod
+termination code: max_model_number
+
+     >>>>>>> EXCESSIVE runtime       1170.429750          1.000000   <<<<<<<<<  ERROR
+
+      19001   7.318059  1.457E+04   2.411373   2.411374   0.197961   0.006332   0.000000   0.011795   0.114631   0.009671  22.906227   3107     52
+   0.700252   5.125509  -1.034467 -26.846754   1.350035 -99.000000   0.191629   0.980012   0.001635   0.004411   0.970220   1.444427      5      0
+ 5.7445E+09  21.037473  -0.461799  -3.148581   5.435528  -7.225294   0.000000   0.000103   0.002146  1.999E-02  2.011E-02 -0.376E-07  max decrease
+                            surface ca40    9.3548803516459376D-06
+                              surface h1        0.8809582616490552
+              log_total_angular_momentum       46.6718905490672427
+

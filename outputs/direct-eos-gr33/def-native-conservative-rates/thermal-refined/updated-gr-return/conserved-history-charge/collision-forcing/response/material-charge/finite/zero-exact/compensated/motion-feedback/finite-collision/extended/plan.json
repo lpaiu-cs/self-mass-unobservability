@@ -1,0 +1,26 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "The finite collision remainder was below the binary64 gross-rate arithmetic diagnostic and its scattering number cancellation failed. Preserve that pilot; it is not a measured physical remainder.",
+  "repair": "Reuse the same spline knots/coefficients with longdouble de Boor evaluation, carry conserved recovery and collision coefficients in extended precision, and restore the exact known scattering-number invariant at zero energy/momentum with a bounded two-frequency projection. Evaluate only the one needed operator at a canonical knot.",
+  "native_ABI": "Native photoionization cross sections still use their existing binary64 ABI; no microscopic EOS or uniform cross-section derivative certificate is claimed.",
+  "budgets": {
+    "repair_pilot_seconds": 60,
+    "production_seconds": 150,
+    "prior_pilot_charged_seconds": 33.94526306200001,
+    "original_total_seconds": 245
+  },
+  "reallocation": "Original pilot+production allowance65+180=245s. Charge the failed pilot and use60s repair pilot plus150s production; do not enlarge the aggregate allowance.",
+  "gates": {
+    "base_owner": 1e-09,
+    "number": 1e-10,
+    "projection_over_linear": 1e-08,
+    "rounding_over_linear": 0.002
+  },
+  "stop": "One bounded repair pilot before dispatch; no repeated trajectory, new native states or threshold change.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/repair_native_finite_collision_remainder.py": "e95452a14a305a0dd8657aa74bb4ec7089d7143f3e8a940a760bc72c14570407",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_finite_collision_remainder.py": "cfcb0bf8d1d76d99e52e8d11f5819b131b0f8e812fe1e0c9c577a9313146d810",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/finite-collision/pilot.json": "a388bfac6a5e9c464bddeb96d2d1c71549cdd6a4a84eed823c7fea7fb5650a1a",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/conserved-history-charge/collision-forcing/response/material-charge/finite/zero-exact/compensated/motion-feedback/finite-collision/point-8.npz": "85f697806e065f25ae82e2acdece47d5a9ef7a92bb9beaf81ccfa495cd2fe070"
+  }
+}

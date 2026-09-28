@@ -1,0 +1,93 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "checks": [
+    {
+      "name": "surf257T0015",
+      "passed": true,
+      "groups": 256,
+      "T_keV": 0.0015,
+      "input_max_score": 0.9905629826394432,
+      "mean_relative": [
+        4.710245627759235e-05,
+        8.770541124025755e-06
+      ],
+      "native_Planck_Rosseland": [
+        1127.3,
+        9.1378
+      ],
+      "reconstructed": [
+        1127.3530985989617,
+        9.137719856549317
+      ],
+      "spectrum_sum_failures": []
+    },
+    {
+      "name": "surf257T002",
+      "passed": true,
+      "groups": 256,
+      "T_keV": 0.002,
+      "input_max_score": 0.9905629826394432,
+      "mean_relative": [
+        8.149099434140439e-06,
+        3.938195941577405e-06
+      ],
+      "native_Planck_Rosseland": [
+        400.76,
+        3.553
+      ],
+      "reconstructed": [
+        400.76326583308924,
+        3.5529860075898196
+      ],
+      "spectrum_sum_failures": []
+    },
+    {
+      "name": "surf1000T0015",
+      "passed": true,
+      "groups": 999,
+      "T_keV": 0.0015,
+      "input_max_score": 0.9993450202162995,
+      "mean_relative": [
+        3.566059968629354e-05,
+        3.87472667400246e-05
+      ],
+      "native_Planck_Rosseland": [
+        1127.3,
+        9.1378
+      ],
+      "reconstructed": [
+        1127.3402001940262,
+        9.138154064774017
+      ],
+      "spectrum_sum_failures": []
+    },
+    {
+      "name": "surf1000T002",
+      "passed": true,
+      "groups": 999,
+      "T_keV": 0.002,
+      "input_max_score": 0.9993450202162995,
+      "mean_relative": [
+        1.3751167375231077e-05,
+        6.911063537007323e-07
+      ],
+      "native_Planck_Rosseland": [
+        400.76,
+        3.553
+      ],
+      "reconstructed": [
+        400.7655109178373,
+        3.553002455500875
+      ],
+      "spectrum_sum_failures": []
+    }
+  ],
+  "group_count_recombination_difference": [
+    4.7515966750233396e-05,
+    5.601990907044829e-06
+  ],
+  "photon_collision_kernel_identified": false,
+  "whole_star_heat_closed": false,
+  "full_dynamic_charge_solved": false
+}

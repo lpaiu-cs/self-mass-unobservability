@@ -1,0 +1,327 @@
+{
+  "classification": "Counterexample candidate",
+  "reason": "Initial energy-identity check locates a shared-flux versus Q-gradient mismatch. Preserve these partial paths and prioritize the separately bound corrected actual integrator.",
+  "stopped": true,
+  "paths": [
+    {
+      "steps": 8,
+      "last_complete_step": 6,
+      "completed": false
+    },
+    {
+      "steps": 16,
+      "last_complete_step": 8,
+      "completed": false
+    }
+  ],
+  "processes": [
+    {
+      "pid": 18425,
+      "ppid": 18419,
+      "state": "S",
+      "start": "9080740",
+      "command": [
+        "python3",
+        "verification/gr_conservative_evolution.py",
+        "run",
+        "--steps",
+        "8",
+        "--workers",
+        "8"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    },
+    {
+      "pid": 18391,
+      "ppid": 18382,
+      "state": "S",
+      "start": "9076010",
+      "command": [
+        "python3",
+        "verification/gr_conservative_evolution.py",
+        "run",
+        "--steps",
+        "16",
+        "--workers",
+        "8"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    },
+    {
+      "pid": 18432,
+      "ppid": 18425,
+      "state": "R",
+      "start": "9081239",
+      "command": [
+        "python3",
+        "verification/gr_conservative_evolution.py",
+        "run",
+        "--steps",
+        "8",
+        "--workers",
+        "8"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    },
+    {
+      "pid": 18433,
+      "ppid": 18425,
+      "state": "R",
+      "start": "9081240",
+      "command": [
+        "python3",
+        "verification/gr_conservative_evolution.py",
+        "run",
+        "--steps",
+        "8",
+        "--workers",
+        "8"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    },
+    {
+      "pid": 18434,
+      "ppid": 18425,
+      "state": "R",
+      "start": "9081241",
+      "command": [
+        "python3",
+        "verification/gr_conservative_evolution.py",
+        "run",
+        "--steps",
+        "8",
+        "--workers",
+        "8"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    },
+    {
+      "pid": 18427,
+      "ppid": 18425,
+      "state": "R",
+      "start": "9081237",
+      "command": [
+        "python3",
+        "verification/gr_conservative_evolution.py",
+        "run",
+        "--steps",
+        "8",
+        "--workers",
+        "8"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    },
+    {
+      "pid": 18428,
+      "ppid": 18425,
+      "state": "R",
+      "start": "9081238",
+      "command": [
+        "python3",
+        "verification/gr_conservative_evolution.py",
+        "run",
+        "--steps",
+        "8",
+        "--workers",
+        "8"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    },
+    {
+      "pid": 18429,
+      "ppid": 18425,
+      "state": "R",
+      "start": "9081238",
+      "command": [
+        "python3",
+        "verification/gr_conservative_evolution.py",
+        "run",
+        "--steps",
+        "8",
+        "--workers",
+        "8"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    },
+    {
+      "pid": 18431,
+      "ppid": 18425,
+      "state": "R",
+      "start": "9081239",
+      "command": [
+        "python3",
+        "verification/gr_conservative_evolution.py",
+        "run",
+        "--steps",
+        "8",
+        "--workers",
+        "8"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    },
+    {
+      "pid": 18430,
+      "ppid": 18425,
+      "state": "R",
+      "start": "9081239",
+      "command": [
+        "python3",
+        "verification/gr_conservative_evolution.py",
+        "run",
+        "--steps",
+        "8",
+        "--workers",
+        "8"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    },
+    {
+      "pid": 18392,
+      "ppid": 18391,
+      "state": "R",
+      "start": "9076250",
+      "command": [
+        "python3",
+        "verification/gr_conservative_evolution.py",
+        "run",
+        "--steps",
+        "16",
+        "--workers",
+        "8"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    },
+    {
+      "pid": 18393,
+      "ppid": 18391,
+      "state": "R",
+      "start": "9076250",
+      "command": [
+        "python3",
+        "verification/gr_conservative_evolution.py",
+        "run",
+        "--steps",
+        "16",
+        "--workers",
+        "8"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    },
+    {
+      "pid": 18394,
+      "ppid": 18391,
+      "state": "R",
+      "start": "9076250",
+      "command": [
+        "python3",
+        "verification/gr_conservative_evolution.py",
+        "run",
+        "--steps",
+        "16",
+        "--workers",
+        "8"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    },
+    {
+      "pid": 18395,
+      "ppid": 18391,
+      "state": "R",
+      "start": "9076251",
+      "command": [
+        "python3",
+        "verification/gr_conservative_evolution.py",
+        "run",
+        "--steps",
+        "16",
+        "--workers",
+        "8"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    },
+    {
+      "pid": 18396,
+      "ppid": 18391,
+      "state": "R",
+      "start": "9076251",
+      "command": [
+        "python3",
+        "verification/gr_conservative_evolution.py",
+        "run",
+        "--steps",
+        "16",
+        "--workers",
+        "8"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    },
+    {
+      "pid": 18397,
+      "ppid": 18391,
+      "state": "R",
+      "start": "9076251",
+      "command": [
+        "python3",
+        "verification/gr_conservative_evolution.py",
+        "run",
+        "--steps",
+        "16",
+        "--workers",
+        "8"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    },
+    {
+      "pid": 18398,
+      "ppid": 18391,
+      "state": "R",
+      "start": "9076251",
+      "command": [
+        "python3",
+        "verification/gr_conservative_evolution.py",
+        "run",
+        "--steps",
+        "16",
+        "--workers",
+        "8"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    },
+    {
+      "pid": 18399,
+      "ppid": 18391,
+      "state": "R",
+      "start": "9076252",
+      "command": [
+        "python3",
+        "verification/gr_conservative_evolution.py",
+        "run",
+        "--steps",
+        "16",
+        "--workers",
+        "8"
+      ],
+      "cwd": "/mnt/e/lab/self-mass-unobservability"
+    }
+  ],
+  "sha256": {
+    "path-8/progress.json": "28f0b12c57e5cefd0d5ed9dcbeec62ba968faeb1bbd8a8b0509f0d4248aece64",
+    "path-8/step-0000.npz": "99cee223fa6f6059e4e6f5a905bcccb9526784eafcf26afdd1964a84f3159d71",
+    "path-8/step-0001.npz": "26f4d1df15b6c6dfb79d4c90cfd3266194738e65a53c42f0f38ca1b2bb0a285e",
+    "path-8/step-0002.npz": "c0b2c795e784008f19ec2c9e5c8509d82d3448d353433d9f8d6573bc001ced68",
+    "path-8/step-0003.npz": "c3df32e188e9e18df7b2302e4c7c135e67aa4e0010259e38cf4ebced565f4287",
+    "path-8/step-0004.npz": "e6abf44f2b0bbf6df1d3fa34b47854235c3a0604d4e9ed6ca8f7638fffa3e3f1",
+    "path-8/step-0005.npz": "7a996481692d34e46df37f406832aac529d06ac187bb39b198e11345bed3de6a",
+    "path-8/step-0006.npz": "28804292b2dd214cc8d3ec1e7c8de5714a9f0b08e939233708d74ee65548d424",
+    "path-16/progress.json": "2c981316d5f314880809917f402f97362a2d3929e7f236260a9bfc9389a6ae84",
+    "path-16/step-0000.npz": "323286f498cd4ee8ee9e65bc5ae101cbb52d841d003dec68a545dfa93a2820cd",
+    "path-16/step-0001.npz": "d104a9896dbe2e87d952fe4dc42d67ee12a6c15ad75959e1bead713fc06865ee",
+    "path-16/step-0002.npz": "66aa66f2b3d30a619bb62a437981c0c14a37988f6974dbff41364c67f661b6ee",
+    "path-16/step-0003.npz": "4949596b2ae28bd72fe08d73d5ccfc62ffabf7b8177bb390a09b4943fb0232b2",
+    "path-16/step-0004.npz": "9e63dffcbd1941c86fb89b1519193a07c1a03e19bd86e48522eaae649b558ee8",
+    "path-16/step-0005.npz": "29126457ad966bbc8ee84220650bcb9a219f3522dafe7957532a679c7f927c85",
+    "path-16/step-0006.npz": "03f7ce624f565956986af8d31e874572b1d16ca7c0ebcb3b707dd4551204eebf",
+    "path-16/step-0007.npz": "99dd99dcbbd535b74b6e06cf9d0bca234a4db017b0b906d3f70b3feeaec739ee",
+    "path-16/step-0008.npz": "cff547ba18388b319bf40f9df265c6b66a85c0bd6f41104e8b17691e74f26a7d"
+  }
+}

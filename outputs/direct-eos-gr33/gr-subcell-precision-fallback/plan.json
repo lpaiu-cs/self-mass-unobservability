@@ -1,0 +1,55 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "226f237",
+  "bindings": {
+    "verification/gr_full_subcell_reference.py": "006e637f9dc31ba7b709dfdf037b174f93349f06e951efb34876a6c78a888dc5",
+    "verification/gr_increment_structure.py": "c03b48d643e73d6bceaa12eff765769befc38ab6c0a6032b1947131eed81ff91",
+    "verification/common_eos.py": "01812cb068991dd6d72def58a78d158bef2bb3d00028312efc271c50dfdcb123",
+    "verification/baryon_entropy.py": "076f40c1c48fa1a687fd5c05eacf16a728713aaabeb16cec0f03ef0fb7d85f3f",
+    "verification/audit_structured_enthalpy.py": "294b4bdf416cbb7f546c79e350d07be727cbcd605f1be0f2de322817c20c73aa",
+    "outputs/direct-eos-gr33/initial-adiabats-17.npz": "28e0ed028ad6d3b94ef3c5aa127b2c2e0bcb1b24be93fc7e1d44a19fc4d017b1",
+    "outputs/direct-eos-gr33/reference-state.npz": "17cbbb101628ca9bc111dca0cfe902210f13697c632b91c03913a1718cf7d2ef",
+    "outputs/direct-eos-gr33/gr-increment-structure/path-4.npz": "e5b479652627619df7e91452f2a2b04ef8ad2d46a24a96fabed2a85c94068c14",
+    "outputs/direct-eos-gr33/gr-increment-structure/path-4.json": "735cb1fcaa265ff6532ad9ee4df40e2eb968229428ec5a1a8275986dd772b990",
+    "outputs/direct-eos-gr33/gr-increment-structure/plan.json": "919de063e9337975282e1743b78f4604294db037f6951f8ab203eca4f21e0dfc",
+    "outputs/direct-eos-gr33/gr-increment-structure/seed-unit-correction.json": "ab0347511750e6581a68871fa96a94f3459fec9bcfe68617ad0b73338eeeb658",
+    "verification/gr_subcell_precision_fallback.py": "c8d86547d3a8301c9d4c413b40b12fbafd09568f6cb3a9b888b2648d265377ee",
+    "outputs/direct-eos-gr33/gr-subcell-precision-fallback/candidate-block.py": "2fc6378f9f297af512951c3ef250f09c9d77b2be4d449f23068076af1cc2b906",
+    "outputs/direct-eos-gr33/gr-eos-extended-precision/manifest.json": "546b64604853e10c44453507e146c6a5f67ea19c80e334d848266ecde992a42a"
+  },
+  "nodes": [
+    8,
+    16
+  ],
+  "cells": 5735,
+  "workers": 4,
+  "block_size": 128,
+  "pilot_cells": [
+    0,
+    1,
+    2,
+    2971,
+    2972,
+    5734
+  ],
+  "rtol": 2e-10,
+  "atol": 1e-12,
+  "endpoint_tolerance": 1e-08,
+  "volume_relative_tolerance": 1e-05,
+  "shell_mass_relative_tolerance": 1e-05,
+  "inventory_relative_tolerance": 1e-10,
+  "finite_quadrature_relative_tolerance": 1e-05,
+  "geometry": "Reintegrate each saved cell branch with DOP853 on local scaled coordinate increments, using the unchanged 17-point entropy table with strict direct EOS fallback. No full-star refit. Evaluate the native entropy inverse independently at every exported node.",
+  "quadrature": "Use enclosed baryon fraction to the one-third power on the inner branch, and exterior baryon fraction on the outer branch. The full material interval includes the central and surface seeds. Nodes below a seed use that original analytic seed expansion; all others use dense DOP853 output.",
+  "weights": "dB is the original coordinate measure, not a fitted normalization. Positive proper weights are dB/rho_native and coordinate weights dB/(a*rho_native). Baryon recovery is therefore an algebraic coordinate identity, not independent validation. Compare their coordinate volume against the separate radius-face volume and their native energy against independently retained shell mass.",
+  "seed": "Original 1 metre centre seed and original surface first-order seed. Their approximation error is not enclosed. No central cell is omitted.",
+  "scope": "Full-grid finite quadrature/reference test. Native-at-nodes does not make the intervening tabulated geometry a direct-EOS curve. No continuum, physical EOS, complete primitive-root, transport, metric-time or observational certificate.",
+  "recomputed_block": [
+    2688,
+    2816
+  ],
+  "intervention": "The original block algorithm, geometry, baryon coordinate, all nodes and all gates. Retain the original binary64 evaluator for roots that pass. Only a recorded energy-unit root failure invokes the separately validated extended-arithmetic version of the same original source model. Return a single binary64 lnT and rounded EOS vector only after reevaluating that rounded input with the extended evaluator and passing the unchanged point gate.",
+  "fallback": "15 extended Newton evaluations, then test the rounded root; only if needed test up to three binary64 neighbors on each side. No averaging, pressure adjustment, entropy change, tolerance increase or old failure overwrite.",
+  "interpretation": "A mixed-precision numerical approximation to the same declared original EOS formulas, with explicit evaluator-difference records. No error enclosure across precision switches or certification of the underlying continuous/physical EOS. The new molecular spectrum candidate is not used here.",
+  "failed_original_sha256": "0b245e679e9fc798e1ec0cb7d8e0592452331c262e504c0c298e64b32374a3cf"
+}

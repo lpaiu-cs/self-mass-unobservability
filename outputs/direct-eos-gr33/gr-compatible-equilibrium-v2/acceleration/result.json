@@ -1,0 +1,100 @@
+{
+  "classification": "Counterexample candidate",
+  "refinement": 2,
+  "step": 8,
+  "workers": 15,
+  "affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "same_time_history": true,
+  "model_sha256": "eef028a87aba8ac96687994f42513853e80b8e270d6c499cc7bc56da4efe5a4c",
+  "source_sha256": "79f58b0c6fc4c0aacca0c70ab497e9ea2c12ecbd613c2e5477a0ad8715ea7862",
+  "pilot_plan_sha256": "492c3ef7aaa6afc1d6770d032ac44995c19ccd8dfaa40e796ddd663a3620e95f",
+  "production_changed": false,
+  "results": [
+    {
+      "arm": "previous_state",
+      "elapsed_seconds": 102.584066683,
+      "timings": {
+        "residual": 24.439451214000016,
+        "composition_response": 48.180420218,
+        "jacobian": 29.79022163799999,
+        "splu": 0.057241090999980315
+      },
+      "native_material_seconds": 72.07861329300002,
+      "native_material_evaluations": 15739,
+      "iteration_count": 3,
+      "initial_score": 304514116.1715186,
+      "final_score": 0.012105072321343903,
+      "maximum_difference_from_saved": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "notes": "One fixed saved stage; timings are not a full-run speedup or an independent time-convergence result."
+    },
+    {
+      "arm": "coarse_saved_guess",
+      "elapsed_seconds": 112.50246285900002,
+      "timings": {
+        "residual": 28.57210261800003,
+        "composition_response": 51.68616924899999,
+        "jacobian": 32.091174067000026,
+        "splu": 0.059788146000016695
+      },
+      "native_material_seconds": 79.68863013199999,
+      "native_material_evaluations": 15793,
+      "iteration_count": 3,
+      "initial_score": 129601476.20375155,
+      "final_score": 0.003304105196825059,
+      "maximum_difference_from_saved": [
+        6.96789272274491e-19,
+        6.549734673960456e-12,
+        5.471826959535355e-20,
+        6.315221937778975e-20,
+        6.315221947876395e-20
+      ],
+      "notes": "One fixed saved stage; timings are not a full-run speedup or an independent time-convergence result."
+    },
+    {
+      "arm": "history_extrapolation",
+      "elapsed_seconds": 125.91948993900002,
+      "timings": {
+        "residual": 38.96064060000009,
+        "composition_response": 54.953245072000016,
+        "jacobian": 31.843114972000023,
+        "splu": 0.058267582999974366
+      },
+      "native_material_seconds": 93.31472422700006,
+      "native_material_evaluations": 17732,
+      "iteration_count": 3,
+      "initial_score": 66840583.677019395,
+      "final_score": 0.0032733168971376065,
+      "maximum_difference_from_saved": [
+        4.060418446108131e-19,
+        7.096672580912244e-12,
+        5.468902161172673e-20,
+        6.380468181487698e-20,
+        6.380468194109473e-20
+      ],
+      "notes": "One fixed saved stage; timings are not a full-run speedup or an independent time-convergence result."
+    }
+  ]
+}

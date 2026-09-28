@@ -1,0 +1,103 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": false,
+  "runs": [
+    {
+      "file": "burn-1-0-0-native.npz",
+      "relative_residual": 1.9974410899278905,
+      "worst_zone": 1819,
+      "worst_species": "c12",
+      "absolute_residual_at_worst": 1.0828149845558163e-19,
+      "abundance_at_worst": 8.009675698955185e-05
+    },
+    {
+      "file": "burn-1-0-1-native.npz",
+      "relative_residual": 1.9974410899278905,
+      "worst_zone": 1819,
+      "worst_species": "c12",
+      "absolute_residual_at_worst": 1.0828149845558163e-19,
+      "abundance_at_worst": 8.009675698955185e-05
+    },
+    {
+      "file": "burn-1-0-10-native.npz",
+      "relative_residual": 1.9974410899278905,
+      "worst_zone": 1819,
+      "worst_species": "c12",
+      "absolute_residual_at_worst": 1.0828149845558163e-19,
+      "abundance_at_worst": 8.009675698955185e-05
+    },
+    {
+      "file": "burn-1-0-11-native.npz",
+      "relative_residual": 1.9974410899278905,
+      "worst_zone": 1819,
+      "worst_species": "c12",
+      "absolute_residual_at_worst": 1.0828149845558163e-19,
+      "abundance_at_worst": 8.009675698955185e-05
+    },
+    {
+      "file": "burn-1-0-2-native.npz",
+      "relative_residual": 1.9974410899278905,
+      "worst_zone": 1819,
+      "worst_species": "c12",
+      "absolute_residual_at_worst": 1.0828149845558163e-19,
+      "abundance_at_worst": 8.009675698955185e-05
+    },
+    {
+      "file": "burn-1-0-3-native.npz",
+      "relative_residual": 1.9974410899278905,
+      "worst_zone": 1819,
+      "worst_species": "c12",
+      "absolute_residual_at_worst": 1.0828149845558163e-19,
+      "abundance_at_worst": 8.009675698955185e-05
+    },
+    {
+      "file": "burn-1-0-4-native.npz",
+      "relative_residual": 1.9974410899278905,
+      "worst_zone": 1819,
+      "worst_species": "c12",
+      "absolute_residual_at_worst": 1.0828149845558163e-19,
+      "abundance_at_worst": 8.009675698955185e-05
+    },
+    {
+      "file": "burn-1-0-5-native.npz",
+      "relative_residual": 1.9974410899278905,
+      "worst_zone": 1819,
+      "worst_species": "c12",
+      "absolute_residual_at_worst": 1.0828149845558163e-19,
+      "abundance_at_worst": 8.009675698955185e-05
+    },
+    {
+      "file": "burn-1-0-6-native.npz",
+      "relative_residual": 1.9974410899278905,
+      "worst_zone": 1819,
+      "worst_species": "c12",
+      "absolute_residual_at_worst": 1.0828149845558163e-19,
+      "abundance_at_worst": 8.009675698955185e-05
+    },
+    {
+      "file": "burn-1-0-7-native.npz",
+      "relative_residual": 1.9974410899278905,
+      "worst_zone": 1819,
+      "worst_species": "c12",
+      "absolute_residual_at_worst": 1.0828149845558163e-19,
+      "abundance_at_worst": 8.009675698955185e-05
+    },
+    {
+      "file": "burn-1-0-8-native.npz",
+      "relative_residual": 1.9974410899278905,
+      "worst_zone": 1819,
+      "worst_species": "c12",
+      "absolute_residual_at_worst": 1.0828149845558163e-19,
+      "abundance_at_worst": 8.009675698955185e-05
+    },
+    {
+      "file": "burn-1-0-9-native.npz",
+      "relative_residual": 1.9974410899278905,
+      "worst_zone": 1819,
+      "worst_species": "c12",
+      "absolute_residual_at_worst": 1.0828149845558163e-19,
+      "abundance_at_worst": 8.009675698955185e-05
+    }
+  ],
+  "cause": "A relative change residual can demand absolute accuracy far below the spacing of a stored nonzero abundance. The later arithmetic-aware acceptance is a separately defined gate; this original gate remains failed."
+}

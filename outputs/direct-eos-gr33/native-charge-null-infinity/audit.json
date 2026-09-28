@@ -1,0 +1,51 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "primitive_checks": [
+    {
+      "steps": 64,
+      "relative": [
+        1.1019472745700879e-16,
+        1.661154523153592e-16,
+        0.0,
+        6.204944123261584e-19
+      ],
+      "queries": 385
+    },
+    {
+      "steps": 128,
+      "relative": [
+        1.213060938236673e-16,
+        1.7752373356453569e-16,
+        0.0,
+        7.758873190153037e-19
+      ],
+      "queries": 769
+    }
+  ],
+  "normalization_identity_relative": 6.707314906226387e-17,
+  "exact_rational_pairing_knots": 417,
+  "exact_discrete_maximum_port_mismatch_erg": 5.391500206802361e+22,
+  "absolute_emission_energy_upper_erg": 2.785211776160175e+31,
+  "source_pairing_mass_effect_bound": 5.99050387870808e-43,
+  "all_orders_potential_bound": 3.752706922895146e-32,
+  "conditional_stored_source_interval": [
+    5.2380865430623986e-27,
+    5.2381615972008584e-27
+  ],
+  "conditional_bound": 3.752706922955051e-32,
+  "mass_normalization_fraction": 0.8050582843780366,
+  "native_increment_arrived_energy_erg": -4.2609407637672054e+22,
+  "native_increment_mass_normalization": -4.828466761548457e-34,
+  "source_pairing_scope": "Every endpoint and both sides of each signed packet in the exact rational step/packet/linear-port representation; only its mass-constraint consequence is bounded.",
+  "interval_scope": "Same frozen first-variation source and coefficient model, absolute signed emission and all potential repetitions. Not a complete physical error interval. All source cells retained conservatively.",
+  "missing": "EOS/derivative reconstruction, continuous coupling, emission/charge quadrature and time error, missing/discarded matter feedback, nonlinear GR and static comparator/observability.",
+  "static_mass_redefinition_is_not_dynamic_novelty": true,
+  "uniform_EOS_derivative_bound": false,
+  "full_source_error_enclosed": false,
+  "coupled_fixed_point_verified": false,
+  "nonlinear_GR": false,
+  "final_charge_solved": false,
+  "full_goal_complete": false,
+  "seconds": 0.609313094
+}

@@ -1,0 +1,9 @@
+{
+  "classification": "Counterexample candidate",
+  "initial_attempt_passed": false,
+  "cell_index": 1875,
+  "initial_error": "Energy inversion stopped at an attained residual of exactly -2 erg/g after 15 iterations; the code used a strict residual <2 erg/g condition.",
+  "local_stopping_rule": "Residual <= max(2 erg/g, 32 binary64 ulps of the target energy, 1e-8 times the local energy change). Record the actual defect. This is an attainable-resolution stopping rule, not exact conservation.",
+  "unchanged_acceptance_gate": "The whole-star GR energy defect must still be below 1e-6 of the integrated absolute nuclear rest release. All local inverse errors remain part of that defect.",
+  "evidence": "first-evolution-failure.log and the saved input/native state reproduce the failing call. The producer snapshot predates this stopping-rule correction."
+}

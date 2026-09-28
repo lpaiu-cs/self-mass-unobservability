@@ -1,0 +1,35 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "a4fb34c",
+  "bindings": {
+    "verification/gr_heat_initial_constraints.py": "616880991ba6d148d431128f154a92959b2519506f7b120af2b1ad72960b576a",
+    "outputs/direct-eos-gr33/initial-state-17-4.npz": "5dcc8ffb8b32a9f15ccc4c8bb7111d19be8dcdc66611ad2942e3a4a0cf6cc6d6",
+    "outputs/direct-eos-gr33/gr-microphysics/auxiliaries.npz": "63744d1a041ebc39bd33dfa0f5e181d64378966c1ee22364c477009bee08d976",
+    "outputs/direct-eos-gr33/gr-transport/diagnostics.npz": "296f6bcdd1623223957e0b1c391f89ea6613141337c6dc308e155650fb98b669",
+    "outputs/direct-eos-gr33/gr-heat-initial-constraints/gourgoulhon-0703035.pdf": "0f4f991888ebc1f1e42c1d6952e1dd33eddc0b39ba75998a8f9068acc22d619d"
+  },
+  "source": {
+    "classification": "Imported from prior work",
+    "url": "https://arxiv.org/pdf/gr-qc/0703035",
+    "title": "3+1 Formalism and Bases of Numerical Relativity",
+    "author": "Eric Gourgoulhon",
+    "date": "2007-03-06",
+    "equations": [
+      "4.93",
+      "4.94",
+      "5.12",
+      "5.50"
+    ],
+    "inspected_pdf_pages_zero_based": [
+      64,
+      72,
+      78
+    ]
+  },
+  "convention": "Signature -+++, K_ij=-(1/(2N))*partial_(ct) gamma_ij, shift zero. Polar areal 3-metric diag(a^2,r^2,r^2 sin^2 theta), K^i_j=diag(A,0,0). Initial material 4-velocity equals slice normal, but a radial heat current is nonzero.",
+  "material": "Retain the new EOS rho_B,T,X and the supplied isotropic pressure; total energy includes nuclear rest energy. The initial interior heat current is the same actual EOS/opacity diffusion diagnostic, with both boundary heat currents zero.",
+  "scope": "Conditional continuum identities plus a finite initial-data candidate. Hamiltonian discretization, atmosphere, diffusion validity, causal transport closure and subsequent fluid/metric evolution are not certified.",
+  "algebraic_relative_tolerance": 1e-12,
+  "physical_EOS_certified": false,
+  "full_GR_evolution": false
+}

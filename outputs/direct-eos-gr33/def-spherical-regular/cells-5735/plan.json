@@ -1,0 +1,98 @@
+{
+  "classification": "Counterexample candidate",
+  "cells": 5735,
+  "h_seconds": "3.2132813194763796874e-06",
+  "amplitudes": [
+    "0",
+    "0.000001"
+  ],
+  "bindings": {
+    "verification/def_spherical_regular.py": "9023b81412cb33aa1b90ba5b036a05dbdd57f5e2416639ad4ed873def6fd59f3",
+    "verification/def_spherical_coupled.py": "421ce377f7d150788681ca599f8f201bfdfb33beb053455803914f7e298e9f91",
+    "verification/def_heat_metric_secant.py": "00000e2aea0f3a0a5ccc217c9259487f3637b2ee6c665e3fd0154f7c2edc7c0f",
+    "verification/gr_molecular_compatible_step.py": "4ef5430eafccde5569fe1e20d1db1001d94f0136b84243e38120e9deb24b9df9",
+    "verification/gr_compatible_equilibrium_evolution.py": "eef028a87aba8ac96687994f42513853e80b8e270d6c499cc7bc56da4efe5a4c",
+    "verification/gr_conservative_two_carrier.py": "baa2ebf45375f7f1729344831748c1b3ddfa21bdbe95ec22265f4ed93f90909c",
+    "verification/gr_conservative_composition_tangent.py": "f86901a46537de3af713c23121d5f7dd922aee5e86e00a5ea1b2b56de8d8c080",
+    "verification/gr_two_carrier_evolution.py": "973f86e4fdb3cb008cb928288e7d87e8906a6e46ae317bc311ab03f9bc291f26",
+    "outputs/direct-eos-gr33/gr-molecular-shell-initial/initial-manifest.json": "fc630f882ca17dbadeb2fdf39a8b29fe4698cf7b3209738dbcc17470a0980477",
+    "outputs/direct-eos-gr33/gr-molecular-shell-initial/initial.npz": "6cd05a8951e09861c874bb6e685ccdfb17529be787f5e1e661a65eb2146700be",
+    "outputs/direct-eos-gr33/def-spherical-regular/cells-16/result.json": "701c76f25bc76084a53c5efcd00c7b981a3fe9a2ae3e091dbd19c4d07a10394c",
+    "outputs/direct-eos-gr33/def-spherical-coupled/path-0/endpoint.npz": "9e8e08dcd270f265694eea98f911c58b69549d3d0c4159d191b6b40ee49ff001",
+    "outputs/direct-eos-gr33/def-spherical-balanced-wave/endpoint.npz": "93625be347192c23cafb3bfc95045af11dc65eab78702f266d8e6ec54e246b58"
+  },
+  "budget": {
+    "workers": 8,
+    "blas_threads": 1,
+    "hard_timeout_seconds": 900,
+    "maximum_paired_runs": 1,
+    "maximum_iterations_per_path": 24,
+    "automatic_expansion": false,
+    "pilot_seconds": 2.5064119510000005,
+    "pilot_native_calls": 62,
+    "estimated_wall_seconds": [
+      150,
+      850
+    ],
+    "estimate_basis": "Measured 16-cell assembly plus prior 5735-cell native first steps 142-330 seconds per path. New full-grid scans and new lapse convergence unmeasured; 900-second hard cap. Old endpoints only initial guesses; exact raw cache reuse."
+  },
+  "claim": "One native matter, two heat currents, 26-species transport and regular scalar spherical first step with radial metric constraint and a shared mass adjoint.",
+  "decision": "Accept this finite assembly only if native residual, scalar equation, weighted mass-boundary identity, baryons, species and local rest cone all pass; otherwise retain failure and stop before larger runs.",
+  "tolerances": {
+    "native": [
+      1e-13,
+      1e-09,
+      1e-14,
+      1e-17,
+      1e-17,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13,
+      1e-13
+    ],
+    "scalar_equation": 2e-17,
+    "mass_boundary_identity": 2e-15,
+    "energy_allowance": "sum(H V heat0)*1e-9 + 2e-15*(scalar_energy+abs(boundary_scalar_work))",
+    "baryons": 1e-09,
+    "species": 1e-09
+  },
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "metric_secant": "Delta(a)/abar = chi*Delta(m_cell)/r, chi=4/(sqrt(b0)+sqrt(b1))^2",
+    "matter_work": "Delta(aE)=-Rstar*Delta(a)-abar*gstar*Delta(phi)+abar*F; Rstar=mean(aR)*L(a0,a1), gstar=mean(a*alpha*trace)/abar, L=log(a1/a0)/(a1-a0) with its smooth diagonal value 1/a0. This is the same logarithmic metric work used by the native local paths.",
+    "radial_coefficients": "Dstar=Dbar+Ggeom*V*(Ebar+Rstar)*chi*f/r; Cstar=Cbar-Ggeom*V*(Ebar+Rstar)*chi*(1-f)/r",
+    "scalar_source": "The same radial adjoint H yields scalar Pi source H*Ggeom*V*gstar/w_scalar. No inverse Pi.",
+    "transport": "F_i=-Delta_face(I_m)/(H_i*V_i), where I_m=dt*Hface*area*k*S_m_mid. Its H-weighted volume sum is exactly the time-integrated boundary flux.",
+    "scope": "Algebraic coupling construction only. Requires the stated finite matter-work equation, a shared discrete adjoint, positive metric branch and compatible transport flux. It has not been implemented or run in the full native spherical solver."
+  },
+  "domain": "Full original star",
+  "limitations": [
+    "First step only, no time convergence.",
+    "Radial mass constraint and discrete total energy only, no full Einstein constraint convergence.",
+    "Scalar boundary ramp is a numerical control, not a companion or physical perturbation calibration.",
+    "No physical EOS certification or observational inference."
+  ]
+}

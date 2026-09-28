@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_dense_gr_return.py", line 89, in <module>
+    else:globals()[action]()
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_dense_gr_return.py", line 71, in audit
+    try:FunctionType(prior.original.audit.__code__,dict(prior.original.audit.__globals__,OUT=OUT))()
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/evolve_same_solution_gr_return.py", line 205, in audit
+    write(OUT/'result.json',result);print(json.dumps(result),flush=True);assert result['passed'],errors
+AssertionError: [0.046160702040977344, 0.035608170751199555, 0.049792854816776005, 0.00018714906187009144, 0.05034840367026982, 0.035532670326901265, 0.0023020940461542143, 1.2123409646501533e-07, 0.035608170751199555, 0.049792854816776005]

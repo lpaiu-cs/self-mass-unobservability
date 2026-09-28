@@ -1,0 +1,23 @@
+{
+  "checked_at": "2026-09-16T08:05:10.9209414+09:00",
+  "task_name": "SelfMassGR-Resume134-20260916",
+  "task_state": "Running",
+  "last_task_result": 267009,
+  "trigger_count": 0,
+  "execution_time_limit": "PT0S",
+  "schedule_service_pid": 3356,
+  "launcher": {
+    "ProcessId": 6224,
+    "ParentProcessId": 3356,
+    "CreationDate": "2026-09-16T08:04:23.078165+09:00",
+    "CommandLine": "\"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -NoLogo -NoProfile -NonInteractive -WindowStyle Hidden -ExecutionPolicy Bypass -File \"E:\\lab\\self-mass-unobservability\\verification\\run_gr_reboot_recovery.ps1\""
+  },
+  "foreground_wsl": {
+    "ProcessId": 13232,
+    "ParentProcessId": 6224,
+    "CreationDate": "2026-09-16T08:04:24.045055+09:00",
+    "CommandLine": "\"C:\\WINDOWS\\System32\\wsl.exe\" -d Ubuntu-22.04 --cd /mnt/e/lab/self-mass-unobservability -- /bin/bash -c \"set -C; exec /usr/bin/env OPENBLAS_NUM_THREADS=1 PYTHONPATH=/home/lpaiu/work/nutimo_pilot/request13_deps:verification /usr/bin/taskset -c 0-15 /usr/bin/python3 -u verification/gr_reboot_recovery.py chain --workers 15 > outputs/direct-eos-gr33/gr-compatible-equilibrium-v2/production-reboot-recovered/run.log 2>&1\""
+  },
+  "outside_harness_process_tree": true,
+  "windows_reboot_protection": false
+}

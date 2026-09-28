@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/mnt/e/lab/self-mass-unobservability/verification/gr_polarization_composition.py", line 113, in <module>
+    if __name__=='__main__':globals()[sys.argv[1]]()
+  File "/mnt/e/lab/self-mass-unobservability/verification/gr_polarization_composition.py", line 65, in run
+    p=bindings();symbolic();states=dict(np.load(thermo.OUT/'states.npz'));ions=dict(np.load(thermo.density.ionic.OUT/'inputs.npz'))
+  File "/mnt/e/lab/self-mass-unobservability/verification/gr_polarization_composition.py", line 43, in symbolic
+    assert sp.simplify(sp.diff(mu[j],T)-z[j]**2*D(0,1)-C*z[j]*D(1,1))==0
+AssertionError

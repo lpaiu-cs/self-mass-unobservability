@@ -1,0 +1,36 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "1260c415",
+  "claim": "Use the same total basis budget across a declared broad frequency range to retain both rapid fluid response and weak scalar response in one coupled solve.",
+  "method": "Same separated fluid/scalar bases and force-norm similarity. Cycle fixed positive frequencies4,16,64,256,1024 instead of repeating128. Same total128/256/512 columns, physical stiffness, source, polynomial cells and exact heat-pole propagation. Frequencies are not fit to output amplitudes.",
+  "gates": {
+    "propagation_relative": 0.02,
+    "propagation_order": 1.5,
+    "spatial": 0.02,
+    "spatial_decrease": true,
+    "coefficient": 0.02,
+    "outer": 0.002,
+    "quadrature": 0.002,
+    "linear_residual": 1e-09,
+    "heat_balance": 2e-13
+  },
+  "decision": "Degree4 first, stop on any propagation failure. Only on simultaneous four-field acceptance run already fixed degree2/1, then conditional coefficient/outer/quadrature contrasts. No greater degree, dimensions or horizon.",
+  "budget": {
+    "pilot_cap_seconds": 90,
+    "first_case_cap_seconds": 120,
+    "total_cap_seconds": 300,
+    "CPU_threads": 1,
+    "memory_GB": 4,
+    "new_EOS_calls": 0
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_multishift.py": "6aef0bcae8d7a8abc19e44a5d080d21e1c6499c6aa3e14c3ab63466a736e25a9",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_field_projection.py": "eebc275e2f253bb9d66701e548b67c48e463037e3d5af14219eda0fbea46a548",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_inverse_projection.py": "f4b69982980e13b535ff5d57f1aec0dc169534b773aef43a045dda151704e376",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_hierarchical.py": "7861123d4adfdfdaa21daee3fc7d79dcdffdd024ca48b3f453921b5cb745992b",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_spatial_repair.py": "d13044861c2b4761d5e6349d809c3368f46112974f374aa050aada516c80f8e5",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-inverse-projection/gauss/stage-result.json": "b4d4ca88c974354e565f0b6590226d4e73919bd33468bc4e692014b58df9473a",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/fine-bank.npz": "b4493a6e4cfb20d741725ecb61cec154ab9fc51a694001865748741060018d7e",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/coarse-bank.npz": "ea020f69b240c5c5cdd8810f963d88e5cc2d3269aff12c659422a7a6541ae0df"
+  }
+}

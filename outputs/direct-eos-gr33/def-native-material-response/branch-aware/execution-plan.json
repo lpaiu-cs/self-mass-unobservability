@@ -1,0 +1,30 @@
+{
+  "classification": "Counterexample candidate",
+  "eligible": true,
+  "production_seconds": 470,
+  "forecast_seconds": 225.84949486325453,
+  "upper_seconds": 461.69898972650907,
+  "paths": [
+    [
+      64,
+      128
+    ],
+    [
+      128,
+      128
+    ],
+    [
+      128,
+      64
+    ]
+  ],
+  "reassessment": "The early prefixes underrepresent late CFL subcycles. Use the completed failed64 path4155 raw calls, times5 for64+128+128, corrected measured seconds/raw-call, plus9s setup; preserve2x margin and10s. Half-clock cost and late corrected throughput remain extrapolations. This is a one-time470s corrected dispatch, not extra paths or looser scientific gates. Original250s rejection remains intact.",
+  "binds": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_material_branch_response.py": "65c24a983afe7bdcfd9b47047622cd789f6cc41fb8b338f3046be9f7cb83cfb2",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_material_response.py": "56bb3c3814c5fad05d2a975d441ad824648825582d82a2cc8a15b50a4c9c4f38",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-material-response/branch-aware/pilot.json": "a13cd49897900f06f549f8cf644b9514eead6e5b4ff465eee0f19161fbc25a30",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-material-response/branch-aware/check.json": "5505c0481ccf238bbba17ecd97c944adb7d0425d0f39da968ab38a8890f6a2b8",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-material-response/branch-aware/plan.json": "54890bd4e647aa80551e5aa0be2f85ccdc959ebcd990bdc38c9d7e6aa843fa31",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-material-response/production.json": "d72cc94e93bcf25ce0c6b2369679f5f2f970344e8ae1bd72e41b9973a958ec2d"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "classification": "Counterexample candidate",
+  "conditional_mechanical_surface_passed": true,
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "first_integral": true,
+    "Just_quadratic": true,
+    "vacuum_jacobian": "Matrix([\n[                                                                                                                    0,                 q*q0**2*exp(-2*mu*n)/(N0**2*mu*x**2), 0,                 -q**2*q0**2*exp(-2*mu*n)/(N0**2*x**2)],\n[                                                                                                                    0,                                                    0, 0,                                                     0],\n[                                                              mu*q*q0*exp(-mu*n)/(N0*ph0*x**3*(-2*a*mu/x + 1)**(3/2)),      q0*exp(-mu*n)/(N0*ph0*x**2*sqrt(-2*a*mu/x + 1)), 0, -mu*q*q0*exp(-mu*n)/(N0*ph0*x**2*sqrt(-2*a*mu/x + 1))],\n[2*a*mu/(x**3*(-2*a*mu/x + 1)**2) + 1/(x**2*(-2*a*mu/x + 1)) + q**2*q0**2*exp(-2*mu*n)/(N0**2*x**4*(-2*a*mu/x + 1)**2), q*q0**2*exp(-2*mu*n)/(N0**2*mu*x**3*(-2*a*mu/x + 1)), 0, -q**2*q0**2*exp(-2*mu*n)/(N0**2*x**3*(-2*a*mu/x + 1))]])",
+    "scope": "Algebraic identities; numerical input and global gas-branch premises remain separate."
+  },
+  "native_calls": 0,
+  "seconds": 0.4544943730000002,
+  "photosphere_radius_m": 68818637.74976726,
+  "conditional_surface_radius_m": 69193585.01252827,
+  "thickness_m": 374947.2627610142,
+  "conditional_radius_interval_m": [
+    69193585.0125253,
+    69193585.01253124
+  ],
+  "material_source_radius_halfwidth_m": 2.9537982697202634e-06,
+  "total_added_baryon_fraction_upper": 1.0688724053838031e-14,
+  "material_mass_fraction_upper": 1.075625042419912e-14,
+  "scalar_flux_fraction_change_upper": 1.0863033520097918e-14,
+  "weighted_Gronwall_error": 2.1737399777716597e-14,
+  "vacuum_Lipschitz_bound": 1.0000171237575588,
+  "bootstrap_excursions": [
+    1.9925107013400072e-13,
+    1.0863033520097918e-14,
+    9.330432931874913e-08,
+    0.005503004738779032
+  ],
+  "molecular_ground_enthalpy": 1.007023159085843,
+  "base_enthalpy": 1.0070231822152675,
+  "log_enthalpy_drop": 2.296811564136792e-08,
+  "vacuum_reference_surface": {
+    "phi": 0.0010000168636343319,
+    "mass_geom_m": 291.6865890267742,
+    "log_lapse": -4.215532676907474e-06,
+    "scalar_flux_Q_geom_m": -1.1668503968483013
+  },
+  "independent_vacuum_ODE_radius_difference_m": 0.0,
+  "warm_native_segment_first_integral_radius_discrepancy_m": 3.167142381958307,
+  "warm_segment_endpoint_first_integral_defect": 1.931670531288543e-13,
+  "no_surface_layer_junction": "P=rho=T=0 and continuous m,phi,Q,N in the assumed gas limit. Lagrangian material condition Delta P=0; scalar matching uses the saved moving-surface adapter.",
+  "thermal_Cauchy_condition": "Zero initial material heat flux at the vacuum endpoint. No radiative equilibrium or orbit-long stationarity inferred.",
+  "certified_scope": "Analytic conditional material-source bound plus interval evaluation at frozen input data. Not an EOS existence/domain proof, physical EOS certification, or dynamic fluid resolvent bound.",
+  "native_cold_branch_globally_certified": false,
+  "physical_radiative_atmosphere": false,
+  "thermal_stationarity": false,
+  "dynamic_exterior_coupled": false,
+  "full_dynamic_charge_solved": false
+}

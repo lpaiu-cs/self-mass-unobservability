@@ -1,0 +1,38 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "verdict": "CORRECTED_SAME_SOLUTION_PASSES_MASS_TIME_AND_RETAINS_CONDITIONAL_NEGATIVE_CHARGE",
+  "actual_same_joint_solution_GR_computed": true,
+  "actual_steps": [
+    119,
+    231
+  ],
+  "full_declared_period": true,
+  "same_horizon_seconds": 0.0034344311179287023,
+  "original_mass_time_relative": 0.020057408861172854,
+  "corrected_mass_time_relative": 0.013295408839735501,
+  "mass_time_gate": 0.02,
+  "corrected_charge_time_relative": 0.0018424982491423603,
+  "compact_sign_survives": true,
+  "frozen_exterior_sign_survives": true,
+  "conditional_fine_compact": {
+    "high": "-2.483417865012942922033639247315851560613734499851666620941263936588045559145622661099375029951799744907864330991781476277993818448097673723395928391255438327789306640625E-51",
+    "low": "-8.021867208541876470447592285026413022224136517799676511894196164777765222989868614287108388129783180854177379804788096902415896002327293692110403214290698963745511749861545090843455152462837531857076101005077362060546875E-73",
+    "componentwise_total": "-2.483417865012942922034441434036705748260779259080169262243486350239825526796812080715852806474098732E-51",
+    "low_over_high": 3.2301721436235496e-22,
+    "nominal_sign_unchanged": true
+  },
+  "conditional_fine_exterior": {
+    "clock": 128,
+    "high": "-2.483473532861055464786683041566937076148872415397553455713456989285745610903843913183050503069922640E-51",
+    "same_solution_low_increment": "-9.348570855618095944158602677888422472960126951692744498754503733345087997455965293335452732699235568E-73",
+    "total": "-2.483473532861055464787617898652498885743288275665342297960753001980914885353719363556385011869668237E-51",
+    "nominal_compact_sign_unchanged": true
+  },
+  "original_failures_preserved": true,
+  "scientific_gates_changed": false,
+  "physical_final_charge_solved": false,
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false,
+  "snapshot_KST": "2026-09-25T17:55:34.680863+09:00"
+}

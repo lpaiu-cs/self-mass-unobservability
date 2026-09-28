@@ -1,0 +1,35 @@
+{
+  "classification": "Imported from prior work",
+  "compiler": "GNU Fortran (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0\nCopyright (C) 2021 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+  "sha256": {
+    "/home/lpaiu/work/direct-eos-gr33/dense-plasma/pc.so": "d04a59c653342dd671ae1c2097c40640f904092cd99a65635340335e62a349b2",
+    "/home/lpaiu/work/direct-eos-gr33/dense-plasma/cached.so": "415c6127d1ac7f278f42271bcc1026ad1696d6d35b4f889260f22e0015fa74ea",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/libfree_eos_direct24_molecular_spectral.so.1.0.0": "195f3658eb0cc8fe3447c6b690f246b5a4fb770bd8ffa764d19248fec857ec50",
+    "/lib/x86_64-linux-gnu/libgfortran.so.5": "f7379c9331de9d66c03b439a070e8056b7419fc4213320d647952b998d026b30",
+    "/lib/x86_64-linux-gnu/libm.so.6": "3dd5511ae94785c9f921429b0f2b2f7aabb461b6f0e6de6dfdbef15f24bdfee6",
+    "/lib/x86_64-linux-gnu/libgcc_s.so.1": "fc9d43b2f6c20e53b009238f767c5b949d202389e20de9e202ea684b4ba3729a",
+    "/lib/x86_64-linux-gnu/libquadmath.so.0": "a962d0383ce4c2a39a81017ffd9e5b51f32fd314e411c09ddd6da21593079a8c",
+    "/lib/x86_64-linux-gnu/libc.so.6": "b2cf6c33b74d2f22543b7a469a75b538911e690f769d0b238843a49465b83793",
+    "/lib64/ld-linux-x86-64.so.2": "41daf7836f7fce21a40ca63a00c5caf21b05a35a76ccc075d86f1716212cdf01",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/libfree_eos_direct24_molecular_spectral.so.1": "195f3658eb0cc8fe3447c6b690f246b5a4fb770bd8ffa764d19248fec857ec50",
+    "/lib/x86_64-linux-gnu/liblapack.so.3": "6b12cb8dba6ff9668ebdcfcc75634a142075d217c157594936e3f01a333f778e",
+    "/lib/x86_64-linux-gnu/libf77blas.so.3": "86da5a34cc483ced4fa909bb6952fe61d637c4f6f1365d6aee293319e0489a52",
+    "/lib/x86_64-linux-gnu/libmvec.so.1": "44e31b0cd6dcb6f8147ffc820f51e7140c429a6e0e7724dd00ad0ea4d18f4f51",
+    "/lib/x86_64-linux-gnu/libblas.so.3": "f16432bd34d8b3a1ad8c5371baa61b388915225f7db9c5911b9cc4f6198bc6ad",
+    "/lib/x86_64-linux-gnu/libatlas.so.3": "21469ba9235277e6d4c683f3f60c49d0a4892ae64de0194e916675f18ca05ad5"
+  },
+  "ldd": [
+    {
+      "path": "/home/lpaiu/work/direct-eos-gr33/dense-plasma/pc.so",
+      "output": "\tlinux-vdso.so.1 (0x00007ffc552f9000)\n\tlibgfortran.so.5 => /lib/x86_64-linux-gnu/libgfortran.so.5 (0x00007b75a8a00000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007b75a8919000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007b75a88f9000)\n\tlibquadmath.so.0 => /lib/x86_64-linux-gnu/libquadmath.so.0 (0x00007b75a88b1000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007b75a8600000)\n\t/lib64/ld-linux-x86-64.so.2 (0x00007b75a8d06000)\n"
+    },
+    {
+      "path": "/home/lpaiu/work/direct-eos-gr33/dense-plasma/cached.so",
+      "output": "\tlinux-vdso.so.1 (0x00007ffc46dab000)\n\tlibfree_eos_direct24_molecular_spectral.so.1 => /home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/libfree_eos_direct24_molecular_spectral.so.1 (0x00007def1b200000)\n\tliblapack.so.3 => /lib/x86_64-linux-gnu/liblapack.so.3 (0x00007def1aa00000)\n\tlibf77blas.so.3 => /lib/x86_64-linux-gnu/libf77blas.so.3 (0x00007def1ba1c000)\n\tlibgfortran.so.5 => /lib/x86_64-linux-gnu/libgfortran.so.5 (0x00007def1a600000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007def1b119000)\n\tlibmvec.so.1 => /lib/x86_64-linux-gnu/libmvec.so.1 (0x00007def1a903000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007def1b9fa000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007def1a200000)\n\tlibblas.so.3 => /lib/x86_64-linux-gnu/libblas.so.3 (0x00007def1b9b7000)\n\tlibatlas.so.3 => /lib/x86_64-linux-gnu/libatlas.so.3 (0x00007def19e00000)\n\tlibquadmath.so.0 => /lib/x86_64-linux-gnu/libquadmath.so.0 (0x00007def1b96d000)\n\t/lib64/ld-linux-x86-64.so.2 (0x00007def1ba52000)\n"
+    },
+    {
+      "path": "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/libfree_eos_direct24_molecular_spectral.so.1.0.0",
+      "output": "\tlinux-vdso.so.1 (0x00007ffccf8c4000)\n\tliblapack.so.3 => /lib/x86_64-linux-gnu/liblapack.so.3 (0x00007ab2a2800000)\n\tlibf77blas.so.3 => /lib/x86_64-linux-gnu/libf77blas.so.3 (0x00007ab2a3818000)\n\tlibgfortran.so.5 => /lib/x86_64-linux-gnu/libgfortran.so.5 (0x00007ab2a2400000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007ab2a2f19000)\n\tlibmvec.so.1 => /lib/x86_64-linux-gnu/libmvec.so.1 (0x00007ab2a2703000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007ab2a37f6000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007ab2a2000000)\n\tlibblas.so.3 => /lib/x86_64-linux-gnu/libblas.so.3 (0x00007ab2a37b3000)\n\tlibatlas.so.3 => /lib/x86_64-linux-gnu/libatlas.so.3 (0x00007ab2a1c00000)\n\tlibquadmath.so.0 => /lib/x86_64-linux-gnu/libquadmath.so.0 (0x00007ab2a376b000)\n\t/lib64/ld-linux-x86-64.so.2 (0x00007ab2a3849000)\n"
+    }
+  ]
+}

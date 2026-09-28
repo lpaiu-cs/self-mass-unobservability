@@ -1,0 +1,61 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "errors": {
+    "time": 0.001065267470062551,
+    "quadrature": 1.3043222076562346e-15,
+    "full_history_outer": 0.00042752239926027654
+  },
+  "paths": [
+    {
+      "classification": "Counterexample candidate",
+      "steps": "64-cadence33",
+      "order": 8,
+      "seconds": 25.022823170000038,
+      "maximum_delta_phi": 1.9041182644138648e-31,
+      "maximum_delta_mass_cm": 1.9429786140348932e-16,
+      "maximum_delta_lambda": 2.853083710652205e-26,
+      "maximum_delta_log_proper_volume": 2.853083847160672e-26,
+      "maximum_mass_increment_over_background_ulp": 5.3408189466286546e-05,
+      "maximum_scalar_increment_over_background_ulp": 8.781195577429644e-13,
+      "compact_potential_contraction": 1.0268616943755278e-09,
+      "potential_iteration_relative": [
+        6.085153121112491e-11
+      ],
+      "endpoint_direct": 1.009167088577946e-27,
+      "endpoint_compact_with_metric": 1.00915173255762e-27,
+      "compact_potential_change": -1.2883677997094458e-37,
+      "spatial_material_photon_feedback": false,
+      "full_GR_feedback": false,
+      "final_charge_solved": false
+    },
+    {
+      "classification": "Counterexample candidate",
+      "steps": "128-cadence33",
+      "order": 4,
+      "seconds": 19.10205757799997,
+      "maximum_delta_phi": 1.903718428275464e-31,
+      "maximum_delta_mass_cm": 1.9424612858740227e-16,
+      "maximum_delta_lambda": 2.8523240622761603e-26,
+      "maximum_delta_log_proper_volume": 2.852324198824853e-26,
+      "maximum_mass_increment_over_background_ulp": 5.339396925808022e-05,
+      "maximum_scalar_increment_over_background_ulp": 8.77935165870052e-13,
+      "compact_potential_contraction": 1.0268616943755273e-09,
+      "potential_iteration_relative": [
+        6.080474775182865e-11
+      ],
+      "endpoint_direct": 1.0215869335721477e-27,
+      "endpoint_compact_with_metric": 1.0215716387142185e-27,
+      "compact_potential_change": -1.2983584355441895e-37,
+      "spatial_material_photon_feedback": false,
+      "full_GR_feedback": false,
+      "final_charge_solved": false
+    }
+  ],
+  "seconds": 54.03463402099999,
+  "original17_source_gate": false,
+  "source_times": 33,
+  "transport_output_times": 17,
+  "final_charge_solved": false,
+  "total_GR_seconds": 116.68117767199999
+}

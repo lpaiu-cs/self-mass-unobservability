@@ -1,0 +1,11 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "measure": "dM=(p^2/E)*(f_e+f_p)dp; w=(p/E)^2; I_p=integral(1-w/3)dM>0. Define c_j=integral[w^j/(2j+1)-w^(j+1)/(2j+3)]dM/I_p, hence c_0=1 and c_j>=0.",
+  "exact_kernels": "T(z)=sum c_j*z^j=Pi_t/w_p^2; L(z)=sum(2j+1)*c_j*z^j=Pi_l/(z*w_p^2), z=k^2/w^2 in [0,1]. T(1)=I_m/I_p and L(1)=I_k/I_p.",
+  "transverse_tail": "0<=T-T_N<=z^(N+1)*integral w^(N+1)dM/[(2N+3)*I_p]. At z=1 this is an equality by telescoping. No geometric 1/(1-w) loss is needed.",
+  "longitudinal_tail": "0<=L-L_N<=z^(N+1)*integral w^(N+1)*[1+2*w/((2N+5)*(1-w))]dM/I_p. This follows by telescoping to w^(N+1)+2*sum_{j>=N+2}w^j/(2j+1) and bounding its remaining denominators below by 2N+5.",
+  "roots": "Write h=u^2-q^2 for transverse modes: h=T(q^2/(q^2+h)), 1<=h<=T(1). For longitudinal modes write h=u^2: h=L(q^2/h), max(1,q^2)<=h<=L(1), 0<=q<sqrt(L(1)). Each residual is strictly increasing with derivative >=1; endpoints bracket exactly one root. At q=0 both have u=1. At q=sqrt(L(1)) the longitudinal timelike branch reaches u=q.",
+  "residual_error": "A bound on the absolute residual, including kernel truncation, integral evaluation and floating-point error, bounds the error in h by the same amount. Then |delta u|<=|delta h|/(2*min(u_true,u_hat)). The stored finite diagnostics omit an interval roundoff certificate.",
+  "scope": "The theorems hold for these real leading-order kernels and nonnegative measures with finite stated moments. The longitudinal boundary is that of the timelike branch used in the source; it does not certify all damped/spacelike plasma excitations."
+}

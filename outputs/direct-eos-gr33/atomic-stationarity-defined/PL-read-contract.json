@@ -1,0 +1,9 @@
+{
+  "classification": "Proven",
+  "source": "/home/lpaiu/work/direct-eos-gr33/atomic-stationarity-defined/source/src/mod_pl.f90",
+  "source_sha256": "e67156cfab054779a0bd87be5969fe6e353372fd2297bc108341cf0dc3cd4957",
+  "first": 95,
+  "last": 117,
+  "text": "    !  to calculate change in equilibrium constants and also later to\n    !  calculate planck-larkin sums in ionize.\n    !  n.b. ion index here refers to neutral + all non-bare ions including\n    !  h molecules\n    do index = 1, max_index\n       ion = partial_ions(index)\n       arg_pl = tc2*bi(ion)\n       if(arg_pl.gt.50._fp_kind) then\n          plop(ion) = 0._fp_kind\n          plopt(ion) = 0._fp_kind\n          plopt2(ion) = 0._fp_kind\n       else\n          expmarg = exp(-arg_pl)\n          plop(ion) = 1._fp_kind - expmarg*(1._fp_kind + arg_pl)\n          plopt(ion) = -expmarg*arg_pl*arg_pl\n          plopt2(ion) = expmarg*arg_pl*arg_pl*(2._fp_kind-arg_pl)\n          plopt2(ion) = (plopt2(ion) - plopt(ion)*&\n               plopt(ion)/plop(ion))/plop(ion)\n          plopt(ion) = plopt(ion)/plop(ion)\n          plop(ion) = log(plop(ion))\n       endif\n    enddo\n    !  calculate change in equilibrium constant = mu/kt(ref) - mu/kt(ion)",
+  "scope": "pl_prepare assigns plop only at partial_ions(1:max_index). Unvisited slots are outside this output contract. The stationarity trace reads only active atomic slices; inactive and molecular padding has no scientific value."
+}

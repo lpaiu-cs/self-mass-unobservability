@@ -1,0 +1,11 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "rest_coordinate_weight": "B*kappa=integral[D dVcoord]=integral[(1/a) dB], with dB=a*D*dVcoord. This identity applies to arbitrary smooth material profiles, including nonzero W; an extra 1/W would be incorrect.",
+  "metric_weight_rate": "B*kappa_dot=integral N*[v*(m/r^2+4*pi*r*P)+4*pi*r*Q] dB. Both R_dot=N*v/a and material m_dot=-4*pi*r^2*N/a*(P*v+Q) are used.",
+  "stable_shell_energy": "For fixed B and C in one cell, Ubar=U-C*B*kappa, dUbar/dt=F_M(in)-F_M(out)-C*B*kappa_dot. At finite changes, Delta Ubar=Delta U-C*integral Delta(1/a) dB. Preserve increments instead of subtracting two large total rest energies.",
+  "stable_metric_increment": "delta_f=2*(m*delta_r-r*delta_m)/(r*(r+delta_r)); delta(1/a)=delta_f/(sqrt(f+delta_f)+sqrt(f)). This avoids both total-mass subtraction and subtraction of two near-unity square roots.",
+  "time_zero_velocity": "At instantaneous v=0, kappa_dot still has integral 4*pi*r*N*Q dB/B. Setting kappa constant suppresses an actual metric-energy contribution when Q is nonzero.",
+  "species_limit": "If C changes due to composition, include the full change of C/a under the material integral; fixed-C formula is not a nuclear burning energy law.",
+  "limitation": "Shared fluxes telescope in U=Ubar+C*B*kappa. These identities alone do not certify a numerical metric constraint, primitive closure, atmosphere or time path."
+}

@@ -1,0 +1,37 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "d6ccddff9",
+  "claim": "Apply newly returned photon collision energy/H/momentum to the actual shared material response, then apply its rest-mass,pressure,trace and updated photons to the characteristic GR/scalar solver.",
+  "decision": "Measure the finite feedback correction to the represented scalar charge and the unresolved material/photon waveform residual. Preserve incomplete closure if those residuals are not controlled.",
+  "reuse": "Same original531 cells,3.434ms,EOS banks,64/128 clocks and saved GR fields. Reuse exact accepted material SSP and primitive readout owners; only paired photon transfer histories change.",
+  "budgets": {
+    "pilot_seconds": 40,
+    "material_production_seconds": 500,
+    "source_seconds": 45,
+    "GR_seconds": 90,
+    "CPU_threads": 1,
+    "memory_GB": 3,
+    "new_native_bank_calls": 0
+  },
+  "forecast": "Use the prior complete material paths to capture late CFL work, plus new prefix seconds/raw-call. Require2x forecast plus setup within500s; do not dispatch from an early-step extrapolation alone.",
+  "gates": {
+    "conservation": 1e-08,
+    "directional": 0.002,
+    "time": 0.02,
+    "background": 0.02,
+    "pressure": 0.002,
+    "GR_quadrature": 0.002,
+    "GR_independent": 1e-09
+  },
+  "stop": "Stop if the photon paths fail, a new material path fails, or a cap is exceeded. No automatic extra mesh, clocks, horizon or unbounded waveform iteration.",
+  "limits": "This applies the return sweep to represented compact GR sources. New GR fields still need transport feedback; external generated/scattered scalar and deep response remain explicit. No final-charge flag.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_feedback_return.py": "f19660bedb9f2730896fea60d8e639fc09174f36361a821beb1b330c8bae17b7",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_stage_feedback.py": "b9492449d960751356bcf051bd45c8ad13e2ee5cb577cf77f85ef459a0462e8c",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_material_branch_response.py": "65c24a983afe7bdcfd9b47047622cd789f6cc41fb8b338f3046be9f7cb83cfb2",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_material_response.py": "56bb3c3814c5fad05d2a975d441ad824648825582d82a2cc8a15b50a4c9c4f38",
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_material_response.py": "02862d794865e9d2785b631baeed092ebf3258538f91d4b64340230a270c10a2",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_characteristic_gr.py": "1630d3f008a1e59748d318f921eed7da8fbea4c49d33e5b86617f67009a27076",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-material-response/branch-aware/production.json": "ad1f77307ad5dc3b1145ecc80b0093c02d30b5f8b2b9ca7d5df9b9f0c842a657"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "classification": "Counterexample candidate",
+  "model": 19041,
+  "integrated_Lsun": {
+    "eps_nuc": 156.90745848395315,
+    "eps_nuc_neu_total": 12.459561824053015,
+    "non_nuc_neu": 6.210714563663973e-05,
+    "eps_grav": -156.38156836159382,
+    "extra_heat": 0.0
+  },
+  "surface_Lsun": 0.5522261320576795,
+  "photospheric_header_Lsun": 0.5522261320576795,
+  "net_nuclear_minus_thermal_neutrino_Lsun": 156.90739637680753,
+  "steady_state_missing_sink_Lsun": 156.35517024474984,
+  "steady_state_source_to_surface_ratio": 284.13613059589636,
+  "gravothermal_to_surface_ratio": -283.1839336883462,
+  "instantaneous_budget_residual_Lsun": -0.026398116844117414,
+  "instantaneous_budget_absolute_cell_residual_Lsun": 0.027421552171078382,
+  "discrete_solver_residual_measured": false,
+  "hydrogen_burning_peak": {
+    "zone": 2592,
+    "T_K": 30779973.858401142,
+    "rho_cgs": 264.3276671994561,
+    "enclosed_source_Msun": 0.19228569652658067,
+    "eps_nuc_erg_g_s": 489011.02713025885
+  },
+  "logarithmic_history_slopes_per_year": {
+    "log_Teff": -9.94668152633791e-05,
+    "log_R": 3.7383960936321737e-05,
+    "log_L": -0.00032309933918085515
+  },
+  "adjacent_history_span_year": 24.92198657989502,
+  "radius_e_folding_year": 11617.133953328559,
+  "orbit_days": 1.6294,
+  "radius_fractional_linear_change_per_orbit": 3.840064245170262e-07,
+  "time_scale_note": "Adjacent-model secular slope, not a relaxation pole, formation probability or periodic response.",
+  "convective_flux_gt_1percent_zone_count": 1006,
+  "convective_flux_gt_1percent_mass_fraction": 0.05633149737678192,
+  "source_interpretation": "Nonzero gravothermal storage/release is essential for this evolving MESA snapshot. These values are not re-evaluated rates of the GR candidate."
+}

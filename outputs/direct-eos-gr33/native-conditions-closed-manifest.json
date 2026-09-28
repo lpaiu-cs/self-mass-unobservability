@@ -1,0 +1,96 @@
+{
+ "classification": "Counterexample candidate (endpoint and history); Proven (permanent charge zero for positive damping); theorem progress (no-go)",
+ "passed": true,
+ "verdict": "OPEN_CONDITIONS_CLOSED__ENDPOINT_CHARGE_NEGATIVE_TRANSIENT__PERMANENT_ZERO__A4_HOLDS",
+ "final_charge": {
+  "endpoint_continuum_mass_normalized": -2.3350180598198245e-51,
+  "per_eta_phi_inf2": -2.3350180598198247e-15,
+  "observed_gray": -7.577422864805605e-51,
+  "observed_nongray_lte": -1.6053703677268236e-50,
+  "observed_one_sigma_gray": [
+   -3.794683236017773e-51,
+   -1.441287583075662e-50
+  ],
+  "observed_one_sigma_nongray": [
+   -9.153736109341902e-51,
+   -2.7265308252483827e-50
+  ],
+  "history": {
+   "transit_max_abs": 3.489397591962473e-36,
+   "relaxation_rms": 8.109571859943415e-45,
+   "permanent": "zero at first order in eta for positive mode damping"
+  }
+ },
+ "closed": {
+  "gr_fixed_point": 4.529005537907819e-18,
+  "adm": 6.754615886954982e-11,
+  "infinity": 4.221258511463531e-06,
+  "nonlinear": 1.0161793889859292e-27,
+  "phi_inf": "q/eta even in phi_inf (parity); state part proportional to phi_inf^2 (source weight alpha(phi0)/r); direct part (1e-8) exponent open",
+  "endpoint_and_long_time": "phase 278",
+  "atmosphere": {
+   "validation": 0.0024762710978898975,
+   "nongray_flux": 5.556664045758275e-05
+  }
+ },
+ "j0337_closure": {
+  "cassini_alpha0_max_2sigma": 0.003535556003226812,
+  "phi_inf_max": 0.000883889000806703,
+  "drive_modulation_per_unit_alpha_p": 3.0760784580697786e-10,
+  "paper_b_lag_limit": 1.7e-09,
+  "required_kappa_lag_times_alpha_p": 1563.1252991360914,
+  "freefall_delta_bound_cassini": 7.508179397451038e-21,
+  "freefall_kappa_at_cassini": 6.9036618627106425e-09,
+  "full_beta_relaxing_delta_bound": 4.3502590635301124e-12,
+  "freefall_delta_bound_phase274": 2.7182003308944474e-18
+ },
+ "remaining": [
+  "positive radial-mode damping assumed",
+  "interior Born scattering neglected",
+  "non-LTE and line/metal opacity in the non-gray correction",
+  "phi_inf exponent of the 1e-8 direct part",
+  "slow white-dwarf rotation",
+  "manuscript integration pending Pandoc (and TeX for the PDF)"
+ ],
+ "full_goal_complete": false,
+ "snapshot_KST": "2026-09-27T20:48:28.783050+09:00",
+ "document_prefixes": {
+  "docs/model-definition.md": {
+   "bytes": 296693,
+   "sha256": "4ce72136738648c94162288d16da5dee6503d961ff14cecb7fc29448a555e2dd"
+  },
+  "docs/observable-targets.md": {
+   "bytes": 287512,
+   "sha256": "fa607b3f9b80b729c79956700d0b4a5914fbccc4fbc316c804e09a986b1b89d0"
+  },
+  "docs/adiabatic-limit.md": {
+   "bytes": 281851,
+   "sha256": "483d1240ad60d33ea4d364c21992e7ea71cfd9d9726a43c07667d3a79168261a"
+  },
+  "docs/nonadiabatic-regime.md": {
+   "bytes": 290343,
+   "sha256": "bc20cd6d0425137a40885308fc20a43f8791e0609c46e2cd9e62cba95d2e4516"
+  },
+  "docs/failure-ledger-dynamic-chi.md": {
+   "bytes": 327947,
+   "sha256": "3e18659b986fd52fe4317c29438fd2f82e0f28e631c748fa80b4b2f32aac7909"
+  },
+  "docs/dynamic-charge-completion.md": {
+   "bytes": 156111,
+   "sha256": "b93bf3bef31c295d5b2d4ab50b13e92254201194de7e4430c92f6e669ccc4b4a"
+  }
+ },
+ "sha256": {
+  "notes/REQUEST280_OPEN_CONDITIONS_CLOSED_KO.md": "2ded4d1d026aacbdee78d8fb8920000f70b296f8cbf3e9c34f43612fdac720be",
+  "docs/white-dwarf-free-fall-charge-section.md": "727799acefe45356f8459f3b86c3f8ea622b85e4b6800d05d137ebc7ee38ac38",
+  "docs/model-definition.md": "1752bfe72dca95adf89f2896db4dfb62d29eefb8dfb8157b9cd2b3f026a85dff",
+  "docs/observable-targets.md": "78a060b14b97f93859573a45cc15c2a3e167059f40a0bf8ce4a5829d21c87ea1",
+  "docs/adiabatic-limit.md": "dab5bab88d254c5a445a5643780724502bb664ad3fce8435698a6b999b193062",
+  "docs/nonadiabatic-regime.md": "ed1df0ed200b609e164abf8bbb71f2b6eff8ebaee89d172942654188a4ebec64",
+  "docs/failure-ledger-dynamic-chi.md": "6597b74ff13d2c85e85b979b39106ffc20c7cf2b5f5da076a437cbff583dc71d",
+  "docs/dynamic-charge-completion.md": "2ccf22de15bb606f02ab5a81148f9d0498bc61a084bedd39273aad2e1f796cbc",
+  "outputs/direct-eos-gr33/native-conditions-closed/publication.json": "55636c7de5408baf8a89a794f81ce351e2883d6edea1866b2c6a4593a92f9c18",
+  "outputs/direct-eos-gr33/native-conditions-closed/result.json": "e109b13f44cfecc432c29cf7b5f578d2680ccf882cefc5dcd39d92cb73edc5d3",
+  "outputs/direct-eos-gr33/native-conditions-closed/scripts/phase280-publish.py": "6e45c6f8934153dcd75ac733a450e67a3d107df24ba1f764ebfb554cc6d920f9"
+ }
+}

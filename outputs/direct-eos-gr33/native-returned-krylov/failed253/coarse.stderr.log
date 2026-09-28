@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/.phase251-reader-launch.py", line 14, in <module>
+    runpy.run_path(sys.argv[0],run_name='__main__')
+  File "/usr/lib/python3.10/runpy.py", line 289, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/usr/lib/python3.10/runpy.py", line 96, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "verification/continue_returned_linear_refinement.py", line 115, in <module>
+    evolve(64 if action=='coarse' else 128) if action in ['coarse','fine'] else globals()[action]()
+  File "verification/continue_returned_linear_refinement.py", line 98, in evolve
+    exec(compile(source,__file__,'exec'),ns);ns['evolve'](n)
+  File "verification/continue_returned_linear_refinement.py", line 21, in evolve
+    assert read(prior.ROOT/'controller-status.json')['state']=='failed'
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_full_material_front.py", line 39, in run
+    
+  File "verification/continue_returned_linear_refinement.py", line 10, in observed
+    
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/couple_full_incident_fluid.py", line 21, in stages
+    CAPS['check_chain']=30
+  File "verification/continue_returned_linear_refinement.py", line 72, in solve
+    value=ns['solve'](m,op,P,rhs,guess)
+  File "verification/continue_returned_linear_refinement.py", line 11, in solve
+    ROOT=Path('native-returned-refinement253-work');OUT=ROOT
+AssertionError: ('Four-moment linear residual', 1.2674027253405408e-05, [np.longdouble('2.6830228116436410478e-07'), np.longdouble('1.870603168796191007e-08'), np.longdouble('6.7047851570680142346e-15'), np.longdouble('4.9226544625401040333e-14')])

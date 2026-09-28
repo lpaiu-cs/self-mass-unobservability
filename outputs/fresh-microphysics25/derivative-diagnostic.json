@@ -1,0 +1,25 @@
+{
+  "classification": "Counterexample candidate",
+  "results": {
+    "T": {
+      "local_convergence_max": 8.163439865636585e-08,
+      "local_convergence_passed": true,
+      "native_derivative_discrepancy_max": 0.007803118049473273,
+      "native_worst_zone": 2415,
+      "noscreen_derivative_discrepancy_max": 0.008141050946789248,
+      "noscreen_worst_zone": 2420
+    },
+    "rho": {
+      "local_convergence_max": 5.287005143424124e-10,
+      "local_convergence_passed": true,
+      "native_derivative_discrepancy_max": 0.0004969540398264138,
+      "native_worst_zone": 2412,
+      "noscreen_derivative_discrepancy_max": 4.1203229717012846e-10,
+      "noscreen_worst_zone": 2055
+    }
+  },
+  "original_native_derivative_gate_promoted": false,
+  "reference_state_sha256": "280b62ec141aee5b4230480a1aa25039d2e050a9ec8b32ca38e17eca7a225ef4",
+  "derivative_units": "T and rho arrays are d eps_nuc / d ln(variable) divided by max(1,abs(eps_nuc)); d_eps_* arrays are erg/g/s per logarithmic variable.",
+  "interpretation": "The local derivative arrays differentiate the actual screened evaluator at specified states. They are not a global error certificate; original native-derivative failures remain frozen."
+}

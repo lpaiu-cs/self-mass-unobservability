@@ -1,0 +1,10 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "Legendre_antiderivatives": 16,
+  "geometry": "At fixed radius nodes and a prescribed coordinate-volume Jacobian V(s), project f(s)=E(s)V(s) on the Gauss interpolation polynomial. m_j=m_inner+(G/c^4)*sum_k A_jk E_k V_k; a_j=(1-2m_j/r_j)^(-1/2). A_jk is the integrated cardinal polynomial from the inner face to node j.",
+  "chain_rule": "For each primitive parameter x, m_x=(G/c^4)*A*(V*E_x), a_x=a^3*m_x/r. Therefore B_x=sum wV*(a*D_x+D*a_x), M_x=sum wV*E_x, Pi_x=sum wV*(a*S_x+S*a_x). No metric derivative is discarded.",
+  "increments": "Store the baseline and changes separately. Delta a=a0*z/[sqrt(1-z)*(1+sqrt(1-z))], z=2*a0^2*Delta m/r. Delta E=[Delta epsilon+(P+epsilon0)*v^2+2Qv]/(1-v^2). Delta S=[(epsilon+P)*v+2Qv^2]/(1-v^2).",
+  "centre": "In the central cell use v(r)=v_amplitude*r/r_outer and a luminosity profile linear in enclosed baryon fraction, so regular finite-density data have v=O(r),Q=O(r). Other cells use a common velocity amplitude.",
+  "boundary": "These are exact identities for a declared differentiable EOS and the chosen collocation representation. Its native EOS, interpolation, centre seed, continuum Hamiltonian error and physical transport are not certified. Q is prescribed; its own evolution is still required."
+}

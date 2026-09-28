@@ -1,0 +1,17 @@
+{
+  "classification": "Proven",
+  "checkpoint": "2f8cbd15",
+  "bits": 256,
+  "initial_offset_halfwidth": "1e-4",
+  "momentum_shift": "-1e-12",
+  "root_offset_width_gate": "1e-25",
+  "maximum_bisections": 96,
+  "bindings": {
+    "verification/gr_heat_primitive_fold.py": "732133717c590025e659738bf562447bc303d30eb81ca9e82e8fef3b29fb3cd8",
+    "outputs/direct-eos-gr33/gr-heat-primitive-global/manifest.json": "5b341e5a749f132a258b15e2598cc12b7a38562d4f51058ad216baec1018d71e",
+    "outputs/direct-eos-gr33/gr-heat-primitive-global/symbolic.json": "b059157de318dd5c080a3eb1ca6d0bd806bc1e9bb2cb0395295c7713bfbc1d95"
+  },
+  "target": "Use the exact polynomial Helmholtz EOS from the previous local-jet control. Hold D,E,Q fixed at its singular state and perturb only J by the declared negative rational amount. Prove two distinct admissible roots by outward interval signs, continuity and bisection; do not infer nonuniqueness from a singular Jacobian alone.",
+  "source_conventions": "Dimensionless natural units. The EOS is a constructed local thermodynamic counterexample, not the stellar EOS. The interval calculations use mpmath.iv at256 bits, not the native CAPD/MPFR runtime.",
+  "boundary": "Equilibrium EOS causality and algebraic dominant energy only. No causal nonequilibrium transport model, microscopic realization, actual stellar ambiguity or GR trajectory is asserted."
+}

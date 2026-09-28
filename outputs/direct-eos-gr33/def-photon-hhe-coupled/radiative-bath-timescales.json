@@ -1,0 +1,121 @@
+{
+  "classification": "Counterexample candidate",
+  "new_EOS_calls": 0,
+  "new_cross_section_calls": 0,
+  "rows": [
+    {
+      "Z": 2,
+      "charge": 0,
+      "photoionization_s_inverse": 2201.2761338967866,
+      "radiative_two_stage_relaxation_seconds": 0.00039193886761987567,
+      "lambda_times_duration": 5.911129450301216
+    },
+    {
+      "Z": 6,
+      "charge": 0,
+      "photoionization_s_inverse": 2243836.5015248805,
+      "radiative_two_stage_relaxation_seconds": 4.455723540269478e-07,
+      "lambda_times_duration": 5199.6075657904
+    },
+    {
+      "Z": 6,
+      "charge": 1,
+      "photoionization_s_inverse": 1664.7626601769186,
+      "radiative_two_stage_relaxation_seconds": 0.00023523675778099837,
+      "lambda_times_duration": 9.848806814717543
+    },
+    {
+      "Z": 6,
+      "charge": 2,
+      "photoionization_s_inverse": 0.022204377298065747,
+      "radiative_two_stage_relaxation_seconds": 0.00014205482013800297,
+      "lambda_times_duration": 16.309206409573697
+    },
+    {
+      "Z": 7,
+      "charge": 0,
+      "photoionization_s_inverse": 686419.4113492066,
+      "radiative_two_stage_relaxation_seconds": 1.4561974682928185e-06,
+      "lambda_times_duration": 1590.9939644529613
+    },
+    {
+      "Z": 7,
+      "charge": 1,
+      "photoionization_s_inverse": 181.03064459104428,
+      "radiative_two_stage_relaxation_seconds": 0.00041456231252873205,
+      "lambda_times_duration": 5.588548001321239
+    },
+    {
+      "Z": 7,
+      "charge": 2,
+      "photoionization_s_inverse": 0.004460494399147057,
+      "radiative_two_stage_relaxation_seconds": 8.87030219546232e-05,
+      "lambda_times_duration": 26.11862969325596
+    },
+    {
+      "Z": 8,
+      "charge": 0,
+      "photoionization_s_inverse": 215017.83052916834,
+      "radiative_two_stage_relaxation_seconds": 4.647412706681308e-06,
+      "lambda_times_duration": 498.5142334733538
+    },
+    {
+      "Z": 8,
+      "charge": 1,
+      "photoionization_s_inverse": 14.099306065041311,
+      "radiative_two_stage_relaxation_seconds": 0.000615272443773674,
+      "lambda_times_duration": 3.7654886165481916
+    },
+    {
+      "Z": 8,
+      "charge": 2,
+      "photoionization_s_inverse": 0.00011908294432940121,
+      "radiative_two_stage_relaxation_seconds": 0.00011827329540502836,
+      "lambda_times_duration": 19.58854173439272
+    },
+    {
+      "Z": 10,
+      "charge": 0,
+      "photoionization_s_inverse": 8417.781034026986,
+      "radiative_two_stage_relaxation_seconds": 0.00011782216566332756,
+      "lambda_times_duration": 19.66354437691911
+    },
+    {
+      "Z": 10,
+      "charge": 1,
+      "photoionization_s_inverse": 0.1321569090738192,
+      "radiative_two_stage_relaxation_seconds": 0.0016020678005324474,
+      "lambda_times_duration": 1.4461319192206268
+    },
+    {
+      "Z": 10,
+      "charge": 2,
+      "photoionization_s_inverse": 2.3222779671918747e-07,
+      "radiative_two_stage_relaxation_seconds": 0.00022603389789050652,
+      "lambda_times_duration": 10.249796179809467
+    },
+    {
+      "Z": 12,
+      "charge": 1,
+      "photoionization_s_inverse": 150301.48009480356,
+      "radiative_two_stage_relaxation_seconds": 6.6381195499200985e-06,
+      "lambda_times_duration": 349.0147120254024
+    },
+    {
+      "Z": 20,
+      "charge": 0,
+      "photoionization_s_inverse": 50486009.28530445,
+      "radiative_two_stage_relaxation_seconds": 1.9806961536676003e-08,
+      "lambda_times_duration": 116969.04539424684
+    },
+    {
+      "Z": 20,
+      "charge": 1,
+      "photoionization_s_inverse": 7911591.676849678,
+      "radiative_two_stage_relaxation_seconds": 1.2627536743201168e-07,
+      "lambda_times_duration": 18347.215535547366
+    }
+  ],
+  "model": "Diagnostic only: Planck photon bath, fixed electron activity, LTE level fractions within each stage; two isolated adjacent stages with reciprocal radiative rates. Saved point samples are trapezoid integrated, not a full kinetic eigenvalue certificate.",
+  "decision": "Use to prioritize finite atomic populations versus further LTE line coverage; collisions, multistage/level kinetics and radiation feedback can change these scales. Do not accept LTE merely from equilibrium detailed balance."
+}

@@ -1,0 +1,35 @@
+{
+  "pid": 387,
+  "utc": "2026-09-14T13:09:59.679732+00:00",
+  "command": [
+    "/usr/bin/taskset",
+    "-c",
+    "0-15",
+    "/usr/bin/python3",
+    "-u",
+    "verification/gr_compatible_full_duration.py",
+    "chain",
+    "--workers",
+    "15"
+  ],
+  "cpu_affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "checkpoint": "3b33ed68159903516e6950b3357ac015d2bfb8a8",
+  "scope": "Full original duration; authenticated 32/64/128 prefixes replayed, then 38/76/152 new steps, followed by strict native replay and unchanged endpoint gate."
+}

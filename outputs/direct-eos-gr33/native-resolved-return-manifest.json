@@ -1,0 +1,248 @@
+{
+  "classification": "Counterexample candidate",
+  "strict_coarse_recovery_passed": true,
+  "strict_fine_recovery_passed": false,
+  "original_joint_proposal_audit": {
+    "classification": "Counterexample candidate",
+    "original_joint_stage_passed": true,
+    "relative": 1.1136804720824852e-15,
+    "physical_relative": [
+      4.887334907255265e-18,
+      1.004153529091565e-16,
+      3.834119407679808e-15,
+      6.63438726770003e-17
+    ],
+    "original_gates": {
+      "stage": 1e-12,
+      "physical": 1e-13
+    },
+    "collision_rate_identity": [
+      [
+        4.109113781416892e-15,
+        4.0084710491015966e-13,
+        0.0,
+        3.3532183128949596e-16
+      ],
+      [
+        1.7693878246752435e-14,
+        1.6103448796992415e-12,
+        0.0,
+        2.472397686903297e-16
+      ]
+    ],
+    "native_rate_identity": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "step": 5,
+    "exact_archival_rate_identity_passed": false,
+    "old_failure_preserved": true,
+    "new_physical_steps": 0,
+    "final_charge_conclusion": "unadjudicated"
+  },
+  "source": {
+    "classification": "Counterexample candidate",
+    "passed": false,
+    "source_time": {
+      "baryon_g": 0.061869618281270224,
+      "gas_nonrest_energy_erg": 2.061462712014308e-06,
+      "nonrest_trace_erg": 1.7524714916818763e-06,
+      "pressure_volume_erg": 0.007710438888028226,
+      "photon_energy_erg": 0.06088903632761679,
+      "photon_radial_pressure_erg": 0.057663827784723225,
+      "metric_stress_erg": 0.06184162221978385
+    },
+    "rows": [
+      {
+        "clock": 64,
+        "accepted_recovery_steps": 2,
+        "pressure_probe": 2.405620491288092e-11,
+        "pressure_mapping": 1.5069574753307979e-16,
+        "local_material_ledger": [
+          [
+            3.8455307865622194e-16,
+            1.6134856753696562e-14,
+            1.2707727401765132e-14,
+            3.8733509902399247e-19
+          ],
+          [
+            3.9606440081312934e-16,
+            1.1292360751016328e-14,
+            5.92332430499395e-16,
+            1.5981298809849453e-17
+          ]
+        ]
+      },
+      {
+        "clock": 128,
+        "accepted_recovery_steps": 4,
+        "pressure_probe": 1.329309198361389e-10,
+        "pressure_mapping": 1.5327575586705336e-16,
+        "local_material_ledger": [
+          [
+            1.6132139357291127e-16,
+            7.892314745893766e-15,
+            1.0750509029354389e-13,
+            4.0441014667281202e-19
+          ],
+          [
+            1.9630321915594205e-16,
+            7.432696043768449e-15,
+            1.3898555224020912e-15,
+            1.2097065376696438e-17
+          ],
+          [
+            4.2467410029193376e-16,
+            8.30115431364616e-15,
+            1.1696956175949328e-15,
+            2.078706089987874e-17
+          ],
+          [
+            3.8988955206812384e-16,
+            5.162596928010462e-15,
+            6.667749099479558e-16,
+            2.4392906473010785e-17
+          ]
+        ]
+      }
+    ],
+    "strict_prefix_only": true,
+    "old_longer_recovery_failure_preserved": true,
+    "final_charge_conclusion": "unadjudicated"
+  },
+  "original_source_norm": {
+    "classification": "Counterexample candidate",
+    "passed": false,
+    "source_time_spatial_L1": {
+      "baryon_g": 0.06983764768228262,
+      "gas_nonrest_energy_erg": 3.4818267744176967e-06,
+      "nonrest_trace_erg": 2.027445498948821e-06,
+      "pressure_volume_erg": 0.010676513075383838,
+      "photon_energy_erg": 0.07498528249195918,
+      "photon_radial_pressure_erg": 0.07627174812060077,
+      "metric_stress_erg": 0.06983760566415718
+    },
+    "original_gate": 0.02,
+    "correction": "206source used a maximum-cell norm. The original186source norm sums absolute errors over cells and takes the maximum over times. Recompute that unchanged original norm from the same saved source arrays; both norms fail. No integration or input change.",
+    "source_knots": [
+      3,
+      5
+    ],
+    "horizon_seconds": 5.3662986217635974e-05,
+    "old_failure_preserved": true,
+    "GR_input_applied": false,
+    "final_charge_conclusion": "unadjudicated",
+    "source_sha256": "3c5da3983d3673d645229cb4abcd389fcec50b2f922860ecd6dc07bbd966743d",
+    "bindings": {
+      "native-resolved-return206-work/gr/source-64.npz": "9fcdee88b81f2347184ecdf8deb278152aa3020e5249cb416eef88e0c01122db",
+      "native-resolved-return206-work/gr/source-128.npz": "e9bdbf8d9ef54e8b48a68d9c586a1f3370f34cb004668e2bb84f8c719c91a0ff"
+    }
+  },
+  "GR_return_evolution_executed": false,
+  "original_failures_preserved": true,
+  "physical_final_charge_solved": false,
+  "self_GR_return_closed": false,
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false,
+  "sha256": {
+    "verification/recover_joint_photon_stages.py": "ce991fca23f651477323e2c76db1275476c567b0a66939f0380ecb39307fcbb2",
+    "verification/recover_exact_joint_stages.py": "c337102ab902d177b7cb552d5ad1ec6bb20ce07a22f99875c61f241ec7643cf6",
+    "verification/return_resolved_joint_history.py": "8aedbd60fa6ca566498508f38a3e0ff3e6d21ee3a45746352c9881e89d0cfcd0",
+    "notes/REQUEST204_206_STAGE_HISTORY_GR_SOURCE_KO.md": "f6b508cfffe917c7510958c609d4b39bb64e5fddbb9782e14e0d8397abf6bb1c",
+    "docs/model-definition.md": "5ccddb1b9dcfcd994c3a8e9a9e83cebf3350711a997fd4e313b4d0152f7119f5",
+    "docs/observable-targets.md": "53c5764932e23910a6038f0fbc0604ccde05e8da6bf712a00fdfe79b1ba2338b",
+    "docs/adiabatic-limit.md": "b04cb04b52c16b8dfb4fb2fc8e7cdb3ea355fe045e9a340a30db84adb0b7508f",
+    "docs/nonadiabatic-regime.md": "77dc78b9c4bd33aa0701cd16f2c42474664b420e4f51d975d2e4dd075c8f0c04",
+    "docs/failure-ledger-dynamic-chi.md": "ae61119f8d4a71b5012edc35417cd1d547e050501629bf91411b9d015294a0c0",
+    "docs/dynamic-charge-completion.md": "7f3857df70593525c381f76bcbe019a075595b93361581b96f3aad5b4ff679cc",
+    "outputs/direct-eos-gr33/native-resolved-return/final-result.json": "e26a60b6147835db2bb5ceab85037bb746bd7709121f271b28462237458dba05",
+    "outputs/direct-eos-gr33/native-resolved-return/original-source-norm-producer.py": "3c5da3983d3673d645229cb4abcd389fcec50b2f922860ecd6dc07bbd966743d",
+    "outputs/direct-eos-gr33/native-resolved-return/previous-publication-producer.py": "c83b58d55ad5dbf25094c2566a3455fc90359082387d7a45c96b1b977f41bba8",
+    "outputs/direct-eos-gr33/native-resolved-return/proposal-audit-producer.py": "4b1b11ecba92605e406e3002e451069e555bf321ad43043892bffa42d167d20b",
+    "outputs/direct-eos-gr33/native-resolved-return/publication-helper.py": "f5153c2b02c6b171dcb35b2d7028cf6666b3ac688f9cc6dc8b0e105c1dd881aa",
+    "outputs/direct-eos-gr33/native-resolved-return/publication-producer.py": "2556f43ff66d2459299e3fadaa49ba8debdf6362d97f1110b66887561e4e5732",
+    "outputs/direct-eos-gr33/native-resolved-return/publication.json": "5424fefac13348e0458939b4c570d31c18a8ea5b58c1175680170b17f36771b1",
+    "outputs/direct-eos-gr33/native-resolved-return/native-exact-stage205-work/accepted-128.npz": "2ef88fb737aa329040064b8426a93c8dae2d80bf660ee7d4fba4f59fb58cf3f2",
+    "outputs/direct-eos-gr33/native-resolved-return/native-exact-stage205-work/accepted-64.npz": "b5353429a4253c25f8bffff4732fc5871f9fb20f825d4b07d9f7efa3b5797226",
+    "outputs/direct-eos-gr33/native-resolved-return/native-exact-stage205-work/coarse-receipt.json": "26c497cce786d7e178bd9f697f8787f269710b7e781212814f877aba032cfe9f",
+    "outputs/direct-eos-gr33/native-resolved-return/native-exact-stage205-work/expanded-recovery.py": "05272697379004dc8493abf42f54bc2ea144fcfc2d00507f04d77b8752a48924",
+    "outputs/direct-eos-gr33/native-resolved-return/native-exact-stage205-work/failed-proposal-audit-producer.py": "512508c3f46d72970cc92edc93ff49ae7602e3fae757015e521c7882ab922dc8",
+    "outputs/direct-eos-gr33/native-resolved-return/native-exact-stage205-work/fine-receipt.json": "f5a28b8390eade2fc8401240573d68c46b2812346a90ddb7fec60f1ae5a8d34b",
+    "outputs/direct-eos-gr33/native-resolved-return/native-exact-stage205-work/linear-128.json": "efffc9c9a9f5d420ab892052a8a9d45dd20a773390fc61ffbf0b3f4c9f74b497",
+    "outputs/direct-eos-gr33/native-resolved-return/native-exact-stage205-work/linear-64.json": "ad6420187ba4ebde204a69cc9d2d8717808abfae32b36260fdab58fdc324ddbd",
+    "outputs/direct-eos-gr33/native-resolved-return/native-exact-stage205-work/plan.json": "3f5c6708b664b03b9aed387476338a84bf1555b5e4c1f86cbfb231a651ac1f33",
+    "outputs/direct-eos-gr33/native-resolved-return/native-exact-stage205-work/prepare-receipt.json": "62851ec100211ec01e3907144ab340aab9bb1adad1b85e5be7dd92a0692e14e2",
+    "outputs/direct-eos-gr33/native-resolved-return/native-exact-stage205-work/progress-128.json": "1d735d42d53d82d5950c9d3e51134e2906b033f3f3c35c4d5086b272951be94b",
+    "outputs/direct-eos-gr33/native-resolved-return/native-exact-stage205-work/progress-64.json": "cfe07831e20584cc9058b043ab821090972ebc7c9741adcdb212e167b6e93d26",
+    "outputs/direct-eos-gr33/native-resolved-return/native-exact-stage205-work/proposal-audit-receipt.json": "5918cbe86c8a58e2cf30fe5e391043f68bfef965a0a918fca76a84743d4435c0",
+    "outputs/direct-eos-gr33/native-resolved-return/native-exact-stage205-work/proposal-audit-retry-receipt.json": "06aab72a9803e7b8d8eb06676912ff9b205ac77b40de18067dcdbb8bc9ac9783",
+    "outputs/direct-eos-gr33/native-resolved-return/native-exact-stage205-work/proposal-audit.json": "0b33e6306b99bdf573a1772232d3f87490e76f18109550c4bcc77260bafcf7a1",
+    "outputs/direct-eos-gr33/native-resolved-return/native-exact-stage205-work/recovered-64.json": "c33d9698aca58ebd5597731579c1e88f6eea5116f7940d52125d6fe4d051a84c",
+    "outputs/direct-eos-gr33/native-resolved-return/native-exact-stage205-work/recovered-64.npz": "5a7312c72e12620f2bfac574d37904aefd5a0c0c4c13b7b2e692afc7db54468d",
+    "outputs/direct-eos-gr33/native-resolved-return/native-exact-stage205-work/rejected-128.npz": "131234ce7c4a6c89ba76b822bebf137dd33072e133371b86f790fb1131725024",
+    "outputs/direct-eos-gr33/native-resolved-return/native-resolved-return206-work/expanded-pressure.py": "833126cf46c271b4839cba11f1305a810e7513270a9ca0640c7bc7edeba58b81",
+    "outputs/direct-eos-gr33/native-resolved-return/native-resolved-return206-work/original-source-norm.json": "abc2955f0a81fe8069760d6fd50528db9fc464bba4cdce5a32f4d9e9b04c01f6",
+    "outputs/direct-eos-gr33/native-resolved-return/native-resolved-return206-work/plan.json": "377d20459e4cff9f11dcef128994681c813021539ed1282891d4129fa70bd044",
+    "outputs/direct-eos-gr33/native-resolved-return/native-resolved-return206-work/prepare-receipt.json": "23d62c6814993eb1ef0015220f686fcad464ead884d3c6c3c5723f43f2b21910",
+    "outputs/direct-eos-gr33/native-resolved-return/native-resolved-return206-work/source-128-check.json": "a7f01d61bb6e221bb899e8bea4a4348d0ee402c45a3f5379631660a4c7039d6f",
+    "outputs/direct-eos-gr33/native-resolved-return/native-resolved-return206-work/source-64-check.json": "86a2dfb91b07545b51039f7c18895bdfccf1f77fb98cef740c814e89a2c15807",
+    "outputs/direct-eos-gr33/native-resolved-return/native-resolved-return206-work/source-receipt.json": "8ac4bf9614d29f26708f2c06ef2eb2bce1721947bac5e115c69b57f6ace0bf9e",
+    "outputs/direct-eos-gr33/native-resolved-return/native-resolved-return206-work/sources.json": "64e52759872c80d44de544c8793a6769e6c651dec7a31be6643737e51d11ac5b",
+    "outputs/direct-eos-gr33/native-resolved-return/native-resolved-return206-work/symbolic.json": "a90d5277fe5e8730934263fb60ccd3f57609dd1f8a466cfe0eb6d1cf33fb3c12",
+    "outputs/direct-eos-gr33/native-resolved-return/native-stage-recovery204-work/coarse-receipt.json": "cc4122dfbb2541d47e693704b0345fa8e1fc9a7ba81f1edd920b19c265649744",
+    "outputs/direct-eos-gr33/native-resolved-return/native-stage-recovery204-work/coarse_retry-receipt.json": "48bd302126facc73e9ea0bfcf2b9e135bce59d78738fcbf3caf6cc4f55ae2cf8",
+    "outputs/direct-eos-gr33/native-resolved-return/native-stage-recovery204-work/dispatch-amendment.json": "73d648465d3f53349a201be3b5a1ca42ee43371852aba524c689f45f3008a388",
+    "outputs/direct-eos-gr33/native-resolved-return/native-stage-recovery204-work/fine-receipt.json": "ddbdb0b7100e1d244dcf3049ab7cee2aa6626fe8100db8ffb0ca926cc59511dd",
+    "outputs/direct-eos-gr33/native-resolved-return/native-stage-recovery204-work/linear-128.json": "7d6cab65bbce69e54f4a743c23fdbc5c649b01abd33d103bbfdba6752c9ff0c5",
+    "outputs/direct-eos-gr33/native-resolved-return/native-stage-recovery204-work/linear-64.json": "6cbce8c6a4cabae07f24a2dcf83924a6a54cb69a7e0fcbe9b472b1298e667ac3",
+    "outputs/direct-eos-gr33/native-resolved-return/native-stage-recovery204-work/plan.json": "bd1ad304532548a7acc78742fa0669a6ed54106d398ea6519cace11c13d368f9",
+    "outputs/direct-eos-gr33/native-resolved-return/native-stage-recovery204-work/prepare-receipt.json": "2265e372c62df8084cd50fa5b124e87061b222f571a5c70ac15dc6e42b712129",
+    "outputs/direct-eos-gr33/native-resolved-return/native-stage-recovery204-work/prepared-producer.py": "a653f96aaf90e2bd09308ca896296e24e0f3682f25bad0a436eff550eb0a60fa",
+    "outputs/direct-eos-gr33/native-resolved-return/native-stage-recovery204-work/progress-128.json": "f4ca57fa69c7ef6443c4582d7b674cc56b59c198663acff6a930afe18d3ad6d5",
+    "outputs/direct-eos-gr33/native-resolved-return/native-stage-recovery204-work/progress-64.json": "ca0eda8233563044c22c3ef8746edade191caaba54e2bf4ada03243f9aad9e8d",
+    "outputs/direct-eos-gr33/native-resolved-return/native-stage-recovery204-work/recovered-64.json": "916ddc96bd5821576b79346929b987a19757238433460818a8dca4a327d5fece",
+    "outputs/direct-eos-gr33/native-resolved-return/native-stage-recovery204-work/recovered-64.npz": "22790ee19d13fc3ff020754da56224d15ea07ab2f29a1bd172f7b5ae9370ebb8",
+    "outputs/direct-eos-gr33/native-resolved-return/native-stage-recovery204-work/symbolic.json": "27bbc61a08ab9556218d67f98c67867f4bdf6f7582fd164c4810733a4ded85a1",
+    "outputs/direct-eos-gr33/native-resolved-return/native-resolved-return206-work/gr/source-128.npz": "e9bdbf8d9ef54e8b48a68d9c586a1f3370f34cb004668e2bb84f8c719c91a0ff",
+    "outputs/direct-eos-gr33/native-resolved-return/native-resolved-return206-work/gr/source-64.npz": "9fcdee88b81f2347184ecdf8deb278152aa3020e5249cb416eef88e0c01122db",
+    "outputs/direct-eos-gr33/native-resolved-return/failed-publication-producer.py": "612b82936e6e95e760978f3ab8850a2e2319f1cfd1fd52090fe860df24c728c0",
+    "outputs/direct-eos-gr33/native-resolved-return/publication-fix.json": "d4dc146fa791c004d48a10237b0c81c496aa78f278e069926c89c8c1805d5edf"
+  },
+  "document_prefixes": {
+    "docs/model-definition.md": {
+      "bytes": 258144,
+      "sha256": "8624d58210c41372fd085829d30c966327202010aef2c8e9c500e08fd03ec59b"
+    },
+    "docs/observable-targets.md": {
+      "bytes": 248903,
+      "sha256": "12a36b36c3e090c331859c6549b75b47d4e65417abd31e9b33b1edd492fe57f9"
+    },
+    "docs/adiabatic-limit.md": {
+      "bytes": 243428,
+      "sha256": "753d635109bf3d3552fd1e6c48198f74b5de2bf5babc225a285acdfc6a6ea255"
+    },
+    "docs/nonadiabatic-regime.md": {
+      "bytes": 251766,
+      "sha256": "bafb5df933f7a7f82908bf5186906577a497651425912c5cc2ea57e0648d1220"
+    },
+    "docs/failure-ledger-dynamic-chi.md": {
+      "bytes": 288962,
+      "sha256": "0478c7479df59f657629ef8fdac67300114563871df65db25094500dbf8d5015"
+    },
+    "docs/dynamic-charge-completion.md": {
+      "bytes": 117001,
+      "sha256": "4e7b6a2a862441943162e7157846be7193bf52ebc6eda189098ece3ba339932e"
+    }
+  },
+  "actual_same_joint_solution_GR_computed": false
+}

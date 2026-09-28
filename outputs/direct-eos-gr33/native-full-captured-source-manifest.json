@@ -1,0 +1,118 @@
+{
+  "classification": "Counterexample candidate",
+  "actual_same_joint_solution_GR_computed": false,
+  "checked_existing_history_assembly": true,
+  "full_period_source_started": false,
+  "live_snapshots": {
+    "236/controller-status.json": {
+      "state": "running",
+      "action": "coarse",
+      "child_pid": 172276,
+      "completed": [
+        {
+          "action": "field1288",
+          "returncode": 0
+        },
+        {
+          "action": "field648",
+          "returncode": 0
+        },
+        {
+          "action": "field1284",
+          "returncode": 0
+        },
+        {
+          "action": "collect",
+          "returncode": 0
+        },
+        {
+          "action": "metric",
+          "returncode": 0
+        }
+      ],
+      "elapsed_seconds": 4960.03279829
+    },
+    "236/capture-64.json": {
+      "actual_steps": 75,
+      "time": 0.0022538454211407104
+    },
+    "239/controller-status.json": {
+      "state": "running",
+      "action": "fine",
+      "completed": [],
+      "elapsed_seconds": 0.00038284800029941835
+    },
+    "239/stage-progress-128.json": {
+      "last_stage_time": 0.0033271051454934306,
+      "solved_actual_steps": 223,
+      "original_stage_relative": 9.080453025104184e-16,
+      "physical_stage_relative": [
+        6.748076356552308e-18,
+        3.60299475766184e-19,
+        4.151452108301298e-20,
+        1.841926827074953e-20
+      ]
+    },
+    "244/controller-status.json": {
+      "state": "waiting",
+      "action": "actual239paired_acceptance",
+      "dependency_pid": 167049,
+      "elapsed_seconds": 120.38404439499936,
+      "completed": []
+    }
+  },
+  "snapshot_KST": "2026-09-25T04:18:48.991853+09:00",
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false,
+  "document_prefixes": {
+    "docs/model-definition.md": {
+      "bytes": 269177,
+      "sha256": "9101b59285e144915e12120ecc53671a8d519760f2cd4276b0604f29dd99b574"
+    },
+    "docs/observable-targets.md": {
+      "bytes": 259964,
+      "sha256": "daa92e8266dd1e29220d67e8b9004e4bff5a7d9abaac270a5de76a1bed2fde18"
+    },
+    "docs/adiabatic-limit.md": {
+      "bytes": 254317,
+      "sha256": "b6a5e7874a4eed8cf3cf0ddd84e93ab285f8d32d7493ea4c07ed861763c363f6"
+    },
+    "docs/nonadiabatic-regime.md": {
+      "bytes": 262845,
+      "sha256": "6deb821fdab541a5b656ca12927c2d4cbe47ef74cb48b4d38b42c5b54c9f83e7"
+    },
+    "docs/failure-ledger-dynamic-chi.md": {
+      "bytes": 300318,
+      "sha256": "feb83742e59dcb04d16c20c132db875d3e0d1f10fce8a27dada82d6544dbcfdc"
+    },
+    "docs/dynamic-charge-completion.md": {
+      "bytes": 128430,
+      "sha256": "5c519554c3ff7d3432ede6a193e534133b0e0e0480e0631f7737e85a7fff9b0f"
+    }
+  },
+  "sha256": {
+    "verification/read_full_captured_history.py": "65181e02ca85c998a9612abfc79cc3f5b130d6dd7d2432f9c9c2701f1c6e0d5e",
+    "notes/REQUEST244_FULL_CAPTURED_SOURCE_KO.md": "fc66f6bf1324c75d8435b8e602905f6636e35da47ed6e771e6443245d639c824",
+    "docs/model-definition.md": "d0be85658bdbfc2e3e08a64e320a12fff7a99e89e66b796a693e8b0b8ceb5e23",
+    "docs/observable-targets.md": "0c52ee3e0c6f5ce73cc91921a47ae9a2b6fa57b46f5e8866f67719d7a05667ef",
+    "docs/adiabatic-limit.md": "0821cb5933d4b274ab830b83f6d1b204c6cb53bdfb1f0e6ff843e88202e56dfb",
+    "docs/nonadiabatic-regime.md": "40f199fccf2719774666438e8f22c565fef01125ac1e258bbbe61ae3715d0f7e",
+    "docs/failure-ledger-dynamic-chi.md": "829d34ec2758420e9ab62b3f9bb1ae24fd8960f6b5d3f7f15299c177c056a904",
+    "docs/dynamic-charge-completion.md": "7f23ce1566775c422e42cb8e71d28bd90ab358a448db69445bb27311719e0f29",
+    "outputs/direct-eos-gr33/native-full-captured-source/check-receipt.json": "4429f8e9286e1ad8a42508294939fcaa310add11fc3834baadd03084f86cbb4c",
+    "outputs/direct-eos-gr33/native-full-captured-source/controller-start.json": "e1d2a20760016c3933b01fe227af8343c41c4089f10553ee6fe49fc063b19106",
+    "outputs/direct-eos-gr33/native-full-captured-source/initial-check-producer.py": "a38081e0d804c8c7a7a93fffa3c7f580c6fcc1d5f947f36ec3fc3a3b881a1829",
+    "outputs/direct-eos-gr33/native-full-captured-source/initial-check-receipt.json": "d088f11122df08cbcf39c6e2824f58abb27d6e2173c99229b904b1d8ea9180e9",
+    "outputs/direct-eos-gr33/native-full-captured-source/phase244-followthrough.py": "92ed7faf4b3e092b316afe5e903905ff64661415f99e847b3c5c8c610a8b5a77",
+    "outputs/direct-eos-gr33/native-full-captured-source/phase244-launch.ps1": "3ec32db496923c8f289d01f7c167844ef8cbebcdf83b24923d041ae4e96ba70a",
+    "outputs/direct-eos-gr33/native-full-captured-source/publication-producer.py": "f33048d5b83db3628cd8526707ecb5f5d44217d062a0cc9579362458c827407a",
+    "outputs/direct-eos-gr33/native-full-captured-source/publication.json": "0349e10c548697b44280ec91b507a4aaadf91038cd7fb3351169172c3bcd338b",
+    "outputs/direct-eos-gr33/native-full-captured-source/regression.json": "26fce7cfa1a6446fb6075080b6e94206345967db6dadf489a06a42f51dfd2c95",
+    "outputs/direct-eos-gr33/native-full-captured-source/result.json": "f48903f085797afcd653020b6975a3f28d264c370e2958de3ea7dbcfabf4deb7",
+    "outputs/direct-eos-gr33/native-full-captured-source/236/snapshot-capture-64.json": "c7de104d6d08705ecb83d9b6e92702ed284181af69d3fa79eeb07fa76fa1c317",
+    "outputs/direct-eos-gr33/native-full-captured-source/236/snapshot-controller-status.json": "83d2a21eff55c3d080322ab4a739eb29583a63beef3ffca25ddcfc80bca3cecc",
+    "outputs/direct-eos-gr33/native-full-captured-source/239/snapshot-controller-status.json": "9f28715b6fc190f0a6655e715b9fa175db08627e8301e7dff59db3bec725b7cc",
+    "outputs/direct-eos-gr33/native-full-captured-source/239/snapshot-stage-progress-128.json": "047558689ea01417e0119a2ecb9e3df5f1220267a5605641daa8b02716e88a2c",
+    "outputs/direct-eos-gr33/native-full-captured-source/244/snapshot-controller-status.json": "7a22f8a47a20c68f03b4def045cdff04b1992e52f25107de9e4a718b47cdf8f5"
+  }
+}

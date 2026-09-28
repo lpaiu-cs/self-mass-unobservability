@@ -1,0 +1,53 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "870e0c8",
+  "source": {
+    "classification": "Imported from prior work",
+    "author": "James F. Babb",
+    "year": 2015,
+    "doi": "10.1088/0067-0049/216/1/21",
+    "cds": "J/ApJS/216/21",
+    "retrieved_date": "2026-09-11",
+    "urls": {
+      "ReadMe.txt": "https://cdsarc.cds.unistra.fr/ftp/J/ApJS/216/21/ReadMe",
+      "index.html": "https://cdsarc.cds.unistra.fr/ftp/J/ApJS/216/21/",
+      "table1.dat.gz": "https://cdsarc.cds.unistra.fr/ftp/J/ApJS/216/21/table1.dat.gz",
+      "paper.html": "https://arxiv.org/html/1412.2606v1",
+      "errata.html": "https://lweb.cfa.harvard.edu/~babb/errata.html"
+    },
+    "erratum": "ApJS 237,20 (2018), author errata: the prefactor in Eq.9 is 7.80e-26. The original 1.475e-20 is not used to compute a radiative-association rate.",
+    "parent_claimed_bound_levels": 423,
+    "table_selection": "Only dipole-matrix-element squared values greater than 1e-6 are listed. A transition-selected table need not contain every bound level. The level count must be measured.",
+    "energies": "The E(v,N) column is the positive magnitude of binding to the H(1s)+H+ dissociation limit in cm^-1, not the excitation energy above (0,0). Excitation term value is D00-DvN.",
+    "approximation": "Born-Oppenheimer potential; adiabatic, nonadiabatic, relativistic and radiative corrections omitted. The reported count is the parent claim, not an independently certified complete spectrum."
+  },
+  "expected_table_rows": 284168,
+  "temperature_K": [
+    1000,
+    5000,
+    20000,
+    100000,
+    999999,
+    1000000,
+    1000001,
+    32000000
+  ],
+  "uniform_T_K": [
+    999999,
+    1000001
+  ],
+  "interval_digits": 70,
+  "maximum_logT_derivative": 10,
+  "printed_level_halfwidth_cm_inverse": "0.01",
+  "interval_scope": "The positive fixed subset sum per electron-spin state, with normalized even/odd nuclear weights 1/4 and 3/4. Each excitation energy is a difference of two printed binding energies, so +/-0.01 cm^-1 covers a scenario of +/-0.005 for each printed entry. This is not a physical energy-uncertainty bound. A constant electron-spin degeneracy 2 adds ln(2) to log Q; derivatives of orders >=1 are unchanged. Missing levels, plasma occupation and the complete EOS are excluded.",
+  "source_gzip_crc_verified": true,
+  "bindings": {
+    "verification/h2plus_spectral_data.py": "ed934cad6738696587151920dbc33a0c01a0f94d9806745eca86b2a713cecb53",
+    "outputs/direct-eos-gr33/gr-molecular-partition-audit/manifest.json": "20b1e0044322dd1b0842a236ffff4c3ae3548c4ed06b550ca2bc06103c0ac0b9",
+    "outputs/direct-eos-gr33/gr-h2plus-spectral-source/ReadMe.txt": "dcae89b99b38ac4f3cfb1913b69930b5a17ee8e9d5344c611f251bfa8c70181e",
+    "outputs/direct-eos-gr33/gr-h2plus-spectral-source/index.html": "1ce7272905525a498870622bc2a5732245d4e5a684678ef11cfd77c7755d421a",
+    "outputs/direct-eos-gr33/gr-h2plus-spectral-source/table1.dat.gz": "d0dfca4d258a2a6bd0cae057d9dd9276b3acb62b034709dd9005635353cdf3f8",
+    "outputs/direct-eos-gr33/gr-h2plus-spectral-source/paper.html": "6355232bcbbe1143f1158ce0c63e8bfe88324b2cb40b7cd495628bd8c323cd48",
+    "outputs/direct-eos-gr33/gr-h2plus-spectral-source/errata.html": "889d16bbb1acffe047d1671d2c75c85b50ae74af19a3616ffae18334fc26f539"
+  }
+}

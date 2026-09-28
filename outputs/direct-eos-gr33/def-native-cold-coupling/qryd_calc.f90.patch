@@ -1,0 +1,44 @@
+--- prior/qryd_calc.f90
++++ scaled/qryd_calc.f90
+@@ -128,12 +128,19 @@
+   ! is proper thing to do.
+   n = nmin
+   do while(n.le.nmax.and.&
+-       (n.eq.nmin.or.(summand.gt.eps/eps_factor.or.&
++       (n.eq.nmin.or.((summand.gt.0._fp_kind.and.log(max(summand,tiny(summand)))+qryd_logscale.gt.log(eps)-log(eps_factor)).or.&
+        (ifmhd.and.lnoccupation.ge.-1._fp_kind))))
+      ! avoid integer overflow by calculating this value using real(n,fp_kind)
+      rn2 = real(n,fp_kind)*real(n,fp_kind)
+      arg = a/rn2
+-     if(ifpl) then
++     if(qryd_logscale.gt.0._fp_kind) then
++        if(ifpl) then
++           call scaled_summand(rn2,arg,0._fp_kind,summand,summanda,summanda2)
++        else
++           summand=2._fp_kind*rn2*exp(arg-qryd_logscale)
++           summanda=summand/rn2;summanda2=summanda/rn2
++        endif
++     elseif(ifpl) then
+         call plsummand_normalized(rn2, arg, summand, summanda, summanda2)
+      else
+         summand = 2._fp_kind*rn2*exp(arg)
+@@ -165,10 +172,19 @@
+            dlnoccupation(3) = dlnoccupation(2)*gprime
+            dlnoccupation(4) = dlnoccupation(3)*gprime
+         endif
++        if(qryd_logscale.gt.0._fp_kind) then
++           if(ifpl) then
++              call scaled_summand(rn2,arg,lnoccupation,summand,summanda,summanda2)
++           else
++              summand=2._fp_kind*rn2*exp(arg+lnoccupation-qryd_logscale)
++              summanda=summand/rn2;summanda2=summanda/rn2
++           endif
++        else
+         occupation = exp(lnoccupation)
+         summand = summand*occupation
+         summanda = summanda*occupation
+         summanda2 = summanda2*occupation
++        endif
+         dsummand(5) = summand*dlnoccupation(5)
+         dsummanda(5) = summanda*dlnoccupation(5)
+         dsummand2(5,5) = summand*dlnoccupation(5)*dlnoccupation(5)

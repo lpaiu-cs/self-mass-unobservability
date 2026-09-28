@@ -1,0 +1,499 @@
+Table of Contents:
+
+1. Introduction
+2. CMake Installation Prerequisite
+3. lapack and blas Installation Prerequisites
+4. git optional prerequisite to help access the la5. doxygen optional prerequisite to help provide a nice form of documentation for the free_eos legacy and modern API
+6. Obtain access to the FreeEOS source code.
+7. Configure the FreeEOS build
+8. Build FreeEOS
+9. Install FreeEOS
+10. (Optional) test FreeEOS
+11. Link your own executables with the installed version of FreeEOS
+
+1. Introduction
+
+   This file contains instructions for gaining access to the required
+   cmake executable and the lapack and blas libraries and the optional
+   git and doxygen executables and accessing, building,
+   installing, and testing FreeEOS using those prerequisites.
+
+   In all cases the prerequisites are popular executables and
+   libraries so with any luck at all they are already installed on
+   your platform.  For rpm-based Linux distributions try the "rpm -qi
+   <packagename>" command and for Debian-based Linux systems try the
+   "dpkg --list |grep <packagename>" commands to find whether any
+   given <packagename> (such as "cmake") is already installed on your
+   system.  For Unix systems consult with your system administrator
+   and/or use the "find" command to look for cmake, etc., on your
+   system.
+
+   If you do not have these packages installed on Debian-based
+   systems, then simply issue "apt-get install cmake liblapack-dev
+   libblas-dev git doxygen" to install.  (Installing these development
+   versions of liblapack and libblas will automatically also install
+   other required packages.) On rpm-based Linux systems search the web
+   for appropriate rpm's for your particular version of Linux. For
+   example, enter cmake, liblapack.so, libblas.so, git, or doxygen in the
+   search box at <http://rpm.pbone.net/> to find rpms for those
+   software components for a wide variety of Linux distribution
+   versions.  Make sure you download and install _only_ the rpms that
+   are appropriate for your Linux distribution version.
+
+2. CMake Installation Prerequisite
+
+   FreeEOS uses a CMake-based build system which requires that you use
+   CMake version 3.18.4 or greater.  Most software platforms make this
+   popular build-system tool available as an optional install, see
+   comments above. But if that version or greater of CMake is not
+   available on your platform, then you should build the latest
+   version of CMake (3.23.1 at this time of writing) following the
+   directions in <https://cmake.org/install/>.
+
+3. lapack and blas Installation Prerequisites
+
+   FreeEOS solves systems of linear equations with the aid of the
+   lapack and blas libraries.  Therefore, the FreeEOS build requires
+   that you have the lapack and blas libraries installed somewhere on
+   your system.  Most software platforms make these popular libraries
+   available as an optional install, see comments above.  For those
+   rare systems which do not have official packages for the lapack and
+   blas libraries that you can install, then you must build lapack and
+   blas following the latest instructions at
+   <https://github.com/Reference-LAPACK/lapack/>.  I have done such a
+   build recently using the CMake-based build instructions that I
+   found were really easy to follow so that is the method I would
+   recommend for this case.
+
+4. git optional prerequisite to help access the latest version of the FreeEOS source code
+
+   [git](https://en.wikipedia.org/wiki/Git) is the most widely used
+   and widely available version control system.  Therefore, most
+   software platforms make this popular tool available as an optional
+   install, see comments above.  For those rare systems which do not
+   have an official package for git, there is always the option of
+   building git for yourself, but I haven't ever needed to do that
+   myself so I cannot comment on how easy that is.  In any case, git
+   is an optional prerequisite.  That is, those who do not have access
+   to it will not be able to access the git versions of FreeEOS
+   (typically useful for testing the last few commits before a release
+   as well as all commits corresponding to an official release) and
+   will have to use the traditional method instead (unpacking a
+   release tarball) to gain access to just the official releases of
+   FreeEOS.
+
+5. doxygen optional prerequisite to help provide a nice form of
+   documentation for FreeEOS
+
+   [doxygen](https://en.wikipedia.org/wiki/Doxygen) is a widely used
+   documentation generator which relies on a specially formatted code
+   commentary to generate a nice form of documentation of Fortran (and other) source code.
+   I have used doxygen to provide summary documentation of
+   all FreeEOS modules and procedures and parameter documentation
+   of a subset of the procedures representing a work in progress
+   to document the parameters of all FreeEOS procedures.
+   Instructions are given below
+   for generating (with doxygen) and accessing the resulting
+   documentation for those routines.
+
+6. Obtain access to the FreeEOS source code.
+
+   * Traditional method
+
+     Download an official FreeEOS release tarball from
+     <https://sourceforge.net/projects/freeeos/files/freeeos/> and
+     unpack it.
+
+   * git method (only available if you have installed git, see above).
+
+     Here is the git command you should use to install a local git
+     repository for FreeEOS that tracks every FreeEOS commit since
+     version 1.2.0 (which was released in 2005).  Before running this
+     command you should execute "ls free_eos.git" to confirm that
+     directory does not exist before it is generated by the following
+     command *which should only be executed once*.
+
+git clone https://git.code.sf.net/p/freeeos/freeeos free_eos.git
+
+     Once that command succeeds, here are some some typical basic git
+     commands I run which you might want to try as well.
+
+# Move to the free_eos.git subdirectory containing your local git
+# repository for FreeEOS for all further git commands
+cd free_eos.git
+
+# Get help with the git tag command (which gives you access to prior versions of FreeEOS if you like)
+git help tag
+
+# List all prior tags
+git tag --list
+
+# Get help with the git checkout command
+git help checkout
+
+# checkout version 2.2.1 of the source code, look around there,
+# then checkout the 3.0.0 release and look around there to
+# see all the changes between the two
+git checkout v2_2_1
+ls src |less
+git checkout free_eos-3.0.0
+ls src |less
+
+# Do the same for any git changes since 3.0.0
+git checkout master
+ls src |less
+
+# Suppose the master version has been updated (by some development push
+# by me) since you cloned it.  Here is how you gain access to that latest
+# push which will reside at the tip of the master branch of FreeEOS.
+
+git checkout master
+git pull
+
+# Look at the commit messages for the most recent changes on git master branch
+# including, presumably my latest push.
+git log --name-status
+
+   The above commands are probably more than you need to know about
+   git in order to access any version of FreeEOS from my latest
+   development push back through more than 15 years.
+
+   N.B. In general I do extensive testing of each of my git pushes and
+   that is especially true of official releases.  However, such
+   testing may still miss some issues so if you find such an issue,
+   please get in immediate contact with me on the [freeeos-general
+   mailing
+   list](https://sourceforge.net/projects/freeeos/lists/freeeos-general)
+   since I would prefer such issues to be solved sooner rather than later.
+
+7. Configure the FreeEOS build
+
+   * Set an environment variable to help cmake find libraries that implement
+     the BLAS and LAPACK API's.  For example, suppose you had libblas.a and
+     liblapack.a installed in /home/myusername/mylibs. Then set
+
+export CMAKE_LIBRARY_PATH=/home/myusername/mylibs
+
+     to help CMake find those versions.  Note, the above command is
+     optional if the directory is a standard install location (e.g.,
+     /usr/lib where cmake should need no help to find it).
+
+   * Set the FC environment variable to help choose the compiler. FreeEOS
+     has been thoroughly tested with gfortran, ifort, and nagfor.  So to
+     choose one of those put the desired compiler on the PATH and
+     specify one of
+
+FC=gfortran
+FC=ifort
+FC=nagfor
+
+   * Set the FFLAGS environment variable to choose the appropriate flags for
+     the chosen compiler and desired type of build, test, and install.
+     ________________________________________
+
+     NOTES CONCERNING COMPILER FLAGS
+
+     + gfortran (simple build and install)
+
+FFLAGS='-O3'
+
+       This high degree of optimization has proved to work well with
+       gfortran and FreeEOS.
+
+     + gfortran (build, test, and install)
+
+FFLAGS='-O3 -std=f2008 -Wall -Wunused-parameter -Wimplicit-interface -Wuse-without-only -Wconversion-extra -Wno-unused-dummy-argument -Wno-maybe-uninitialized -finit-real=snan -finit-integer=2147483647'
+
+       These gfortran options mean the following:
+
+       * use high optimization (-O3);
+
+       * check there are no violations of the Fortran 2008 standard
+         (-std=f2008);
+
+       * check for all standard gfortran warnings that should be easy
+         to avoid (-Wall);
+
+       * check there are no unused Fortran parameters specified by the
+         code (-Wunused-parameter);
+
+       * warn if a procedure is called without an explicit interface
+         (-Wimplicit-interface);
+
+       * warn if a 'USE' statement has no 'ONLY' qualifier
+         (-Wuse-without-only);
+
+       * warn about implicit conversions between different types and
+         kinds (-Wconversion-extra);
+
+       * do not warn about unused dummy arguments since those will be
+         dealt with after this release (-Wno-unused-dummy-argument);
+
+       * do not warn about possible uninitialized code discovered
+         through static code analysis because this gfortran option is
+         simplistically implemented so it generates way too many false
+         positives and dynamic run-time searches for uninitialized
+         variables via tainting is much more reliable
+         (-Wno-maybe-uninitialized);
+
+       * taint reals with signalling NaN's (-finit-real=snan); and
+
+       * taint integers with the huge value for the default 4-byte
+         integers used by gfortran (-finit-integer=2147483647).
+
+       N.B. for gfortran -finit-real and -finit-integer are
+       implemented only in a partial way so that, for example,
+       allocated arrays and equivalenced arrays are specifically not
+       tainted by these options.  Therefore, I have added workaround
+       code to make up for this gfortran deficiency.  That code is
+       configured with the CMake options
+       -Dif_taint_allocated_real=.true. -Dif_taint_allocated_integer=.true.
+       (which should only be used with gfortran) to taint allocated
+       and equivalanced real and integer arrays with a signalling NaN
+       for the real case and the huge value (2147483647) for the
+       default integer case consistent with but supplementing the
+       above -finit-real and -finit-integer options.
+
+     + ifort (simple build and install)
+
+FFLAGS='-O3'
+
+       This high degree of optimization has proved to work well with
+       ifort and FreeEOS.
+
+     + ifort (build, test, and install)
+
+FFLAGS='-O3 -std08 -warn all -init=snan,huge'
+
+       These ifort options mean the following:
+
+       * use high optimization (-O3);
+
+       * check there are no violations of the Fortran 2008 standard
+         (-std08);
+
+       * check for all standard ifort warnings that should be easy to
+         avoid (-warn all);
+
+       * taint all reals with signalling NaN's and all integers with
+         huge (for the default kind of integer used by FreeEOS).
+
+         N.B. ifort discussion and documentation implies these
+         tainting methods to help find uninitialized issues are not
+         nearly as limited as in the gfortran case so this option
+         should required no additional help (i.e., cmake should be
+         configured with -Dif_taint_allocated_real=.false.
+         -Dif_taint_allocated_integer=.false.).
+
+     + nagfor (simple build and install)
+
+FFLAGS='-O3'
+
+       This high degree of optimization has proved to work well with
+       nagfor and FreeEOS.
+
+     + nagfor (build, standard test, and install)
+
+FFLAGS='-O3 -f2008 -w=uda'
+
+       These nagfor options mean the following:
+
+       * use high optimization (-O3);
+
+       * check there are no violations of the Fortran 2008 standard
+         (-f2008); and
+
+       * by default nagfor warns about everything so it is necessary
+         to suppress warning messages about unused dummy arguments for
+         the same reason as in the gfortran case (-wuda).
+
+     N.B. By default nagfor generates many more code warnings then in
+     the gfortran -Wall or ifort -warn all cases.  For this release
+     the Fortran code has been updated to eliminate all "Warning:" and
+     "Extension(NAG):" type of warnings made by the nagfor compiler,
+     but some ~50 "Questionable:" type of warnings remain and the plan
+     is to address most of those after the present release.
+
+     + nagfor (build, non-standard -C=all test, and install)
+
+FFLAGS="-C=all -f2008 -w=uda -gline"
+
+       These nagfor options mean the following:
+
+       * Perform all ~10 run-time tests possible with nagfor except
+         (see below) checking for uninitialized variables (-C=all).
+
+       * Compile code to produce a traceback when a runtime error
+         message is generated (-gline).
+
+       * check there are no violations of the Fortran 2008 standard
+         (-f2008); and
+
+       * suppress warning messages about unused dummy arguments for
+        same reason as in the gfortran case (-wuda).
+
+       N.B. I consistently found with this test no runtime issues at
+       all for the usual simple_test, valgrind_test,
+       comprehensive_test and FreeEOS_papers test targets.
+       Furthermore, despite the lack of optimization the results for
+       this test were bit-identical with the results from the same
+       test targets for the standard nagfor test.
+
+     + nagfor (build, non-standard -C=undefined test)
+
+FFLAGS="-C=undefined -f2008 -w=uda -gline"
+
+       These nagfor options mean the following:
+
+       * Perform a run-time test for uninitialized variables
+         (-C=undefined).
+
+       * Compile code to produce a traceback when a runtime error
+         message is generated (-gline).
+
+       * check there are no violations of the Fortran 2008 standard
+         (-f2008); and
+
+       * suppress warning messages about unused dummy arguments for
+         same reason as in the gfortran case (-wuda).
+
+       N.B. according to the nagfor man page there are some
+       constraints on the Fortran code which can be analyzed with
+       -C=undefined.  As far as I know the only one of those
+       constraints that is possibly relevant is
+
+       "Certain intrinsic functions require the entirety of their
+       arguments to be defined, even if some portions are not actually
+       required for the value of the function.  For example, the PAD
+       argument to RESHAPE when no padding is actually required, and
+       elements of the ARRAY argument to PACK that correspond to false
+       elements of the MASK."
+
+       And even in this case, I believe RESHAPE is only used to help
+       define parameter arrays which is all done at compile time
+       rather than run time.  In any case (and as expected from the
+       documentation of these constraints) there don't seem to be any
+       build warnings about such constraints being violated.
+
+       However, the actual nagfor implementation of -C=undefined
+       appears to have problems.  For example, any attempt at
+       optimization with -O2 or -O3 combined with -C=undefined
+       generates peculiar build errors concerning character functions
+       that don't seem to exist (!).  And with no -O option (as above)
+       most test executables do not complete normally and instead
+       produce segfaults (!)
+
+       Nevertheless, despite these issues the build of the test
+       targets below did generate Runtime Errors for the following two
+       types of innocuous uninitialized issues before the segfault
+       occurred:
+
+       1. A.and.B where A is false so A.and.B must be false regardless
+          of uninitialized values in the B calculation when A is
+          false.  I am pretty sure (since gfortran tainting did not
+          find any of these) that gfortran simply evaluates logical
+          expressions from left to right until the true or false
+          nature of the result is determined.  ifort found some of
+          these (in particular one case where the uninitialized
+          calculation in B had a bad side effect), but since nagfor
+          found so many more of them I think nagfor -C=undefined goes
+          out of its way to evaluate all parts of logical expressions.
+
+        2. Copy of undefined quantity that won't subsequently be used.
+           gfortran and ifort experience indicates tainting alone does
+           not generate an invalid floating-point exception for this
+           copying case.  But since nagfor -C-undefined found such
+           issues, I assume that implementation does something extra
+           such as adding 0._fp_kind to the result of the copy (which
+           will generate an invalid floating-point exception).
+
+        N.B. my best guess from the above results (and their
+        completeness relative to what tainting reveals in the gfortran
+        and ifort cases for the same tests) is the segfault occurs
+        late in the execution.  For example, it may be associated with
+        all the library stuff that happens when the standard stop
+        statement is executed.  But I have not had time to pursue this
+        issue with the nagfor developers to find out what is really
+        going on.
+
+     END OF NOTES CONCERNING COMPILER FLAGS
+     ________________________________________
+
+   * Create an empty build directory.
+
+mkdir build_dir
+
+   * Configure a FreeEOS build in that empty build tree.
+
+cd build_dir
+# Make sure that directory is empty before you use it for your build
+ls
+
+# Set your installation prefix in the following shell (bash) variable.
+# Typically this should be a location where your user account has
+# write access.
+
+# This is just an example installation prefix I use, and you will
+# presumably want to use something different.
+FreeEOS_INSTALL_PREFIX=/home/irwin/cdburn1/interior_eos/install/git
+
+# Set the location of the top-level directory of the source tree in
+# the following shell (bash) variable.  In this case I have assumed
+# you created the empty build_dir as a subdirectory of that top-level
+# directory, but if not, you must set SOURCE_TREE to the absolute path
+# of that top-level directory.
+SOURCE_TREE=..
+
+# Configure the build of FreeEOS and make sure that configuration worked.
+cmake -DCMAKE_INSTALL_PREFIX=$FreeEOS_INSTALL_PREFIX -DBUILD_TEST=ON $SOURCE_TREE >& cmake.out
+less cmake.out
+
+   See the CMakeCache.txt file generated by the above command for
+   documentation of all FreeEOS build-system options.  For example if
+   you have doxygen installed (see optional prerequisite above) and
+   you also specify the -DBUILD_DOX_DOC=ON cmake option then the
+   doxygen form of html AND PDF documentation is automatically built
+   and installed.
+
+   On Linux the above cmake command prepares the Makefiles in
+   build_dir so that subsequent make steps are able to build, install
+   and optionally test FreeEOS.  But other non-make options for the
+   CMake back end system are available as well.
+
+8. Build FreeEOS
+
+make VERBOSE=1 >& make.out
+less make.out
+
+9. Install FreeEOS
+
+   Note this installation will use the installation prefix you set
+   above using the shell (bash) variable $FreeEOS_INSTALL_PREFIX.  For
+   example, if doxygen is installed and you set -DBUILD_DOX_DOC=ON
+   (see configuration step above), then as a result of building the
+   install target below, the doxygen html and PDF documentation generated in
+   the above build step is installed in the html and latex subdirectories of
+   $FreeEOS_INSTALL_PREFIX/share/doc/free_eos/doxygen, and you
+   should be able to use your browser to look at those results.  And
+   similarly for other parts of FreeEOS such as libraries (installed
+   in $FreeEOS_INSTALL_PREFIX/lib by building the install target) and
+   executables (installed in $FreeEOS_INSTALL_PREFIX/bin by building
+   the install target) that were built in the above build step.
+
+make VERBOSE=1 install >& make_install.out
+less make_install.out
+
+10. (Optional) test FreeEOS
+    Use the methods discussed in README.testing.
+
+11. Link your own executables with the installed version of FreeEOS
+
+    Once you are satisfied with your build and install of FreeEOS you
+    will want to use this library yourself by linking your own
+    applications to it.  The best guide in this case is the
+    self-contained tutorial example located at
+    cmake/test_FreeEOS_install which illustrates both a CMake-based
+    build example and a "raw" (i.e., non-CMake-based) build example of
+    how to build and link an application to the installed FreeEOS.
+    See cmake/test_FreeEOS_install/README for details concerning this
+    tutorial example.

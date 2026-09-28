@@ -1,0 +1,133 @@
+--- phase69/eos_calc.f90
++++ phase70/eos_calc.f90
+@@ -549,6 +549,8 @@
+   real(fp_kind), parameter :: logqtl_const_hplus_unreduced =&
+        log(real((iqion(1)),fp_kind)) + 1.5_fp_kind*logmass_hplus_unreduced - logalpha
+ 
++  real(fp_kind) :: population_dv(size(dv))
++
+   ! Local variables
+   logical ifabh, ifabg, ifaah2plus, ifaah2
+   logical ifnr03, ifnr13
+@@ -623,6 +625,7 @@
+   ! Assume success by default unless an error condition is discovered below.
+   info = 0
+ 
++  population_dv=dv+population_field(:size(dv))
+   nionsp2 = size(nion)
+   nions = nionsp2 - 2
+   mol_eq=0._fp_kind;mol_dv=0._fp_kind;mol_pl=0._fp_kind
+@@ -648,7 +651,7 @@
+        nionsp2.ne.size(plop).or.&
+        nionsp2.ne.size(plopt).or.&
+        nionsp2.ne.size(plopt2).or.&
+-       nionsp2.ne.size(dv).or.&
++       nionsp2.ne.size(population_dv).or.&
+        nionsp2.ne.size(dvf).or.&
+        nionsp2.ne.size(dvt).or.&
+        nionsp2.ne.size(r_ion3).or.&
+@@ -793,7 +796,7 @@
+        eps, tc2, bi, plop, plopt, plopt2,&
+        r_ion3, r_neutral,&
+        ifelement, dvzero,&
+-       dv, dvf, dvt,&
++       population_dv, dvf, dvt,&
+        nion,&
+        hne, hnef, hnet, hne_dv,&
+        sion, sionf, siont,&
+@@ -844,7 +847,7 @@
+   if(ifionized.eq.2) then
+      ! Start of logic block for case of everything fully ionized.
+ 
+-     ! ignore ifnr (i.e. forget dv derivatives) since no NR iteration
++     ! ignore ifnr (i.e. forget population_dv derivatives) since no NR iteration
+      ! required with full ionization.
+      ! n.b. for full ionization, ionize includes hydrogen effects
+      ! in hne, sion, uion, and fion.
+@@ -1128,11 +1131,11 @@
+         h_ion_equil_dv = 1._fp_kind
+      endif
+      ! n.b. keep h2equil in ln form for under/over flow reasons.
+-     h2equil = logalpha - log(4._fp_kind) + qh2 - 1.5_fp_kind*tl + h2diss*tc2 + h2_log + dv(nions+1)
+-     mol_flags(4)=1;mol_eq(1)=h2equil;mol_dv(1)=dv(nions+1)
++     h2equil = logalpha - log(4._fp_kind) + qh2 - 1.5_fp_kind*tl + h2diss*tc2 + h2_log + population_dv(nions+1)
++     mol_flags(4)=1;mol_eq(1)=h2equil;mol_dv(1)=population_dv(nions+1)
+      mol_linear(1)=logalpha-log(4._fp_kind)+qh2-1.5_fp_kind*tl+h2diss*tc2+h2_log
+      if(ifpl.eq.1) mol_pl(1)=plop(nions+1)
+-     ! d h2equil/ d ln T (excluding dv effects)
++     ! d h2equil/ d ln T (excluding population_dv effects)
+      h2equilt0 = qh2t - 1.5_fp_kind - h2diss*tc2
+ 
+      ! These variables are defined in the logical code blocks below
+@@ -1176,8 +1179,8 @@
+ 
+      if(ifh2plus.gt.0) then
+         ! n(H2+)*avogadro/(n(H)*n(H)) = exp(h2plusequil)
+-        h2plusequil = h2equil + qh2plus - qh2 - bi(nions+1)*tc2 + dv(nions+2)
+-        mol_eq(2)=h2plusequil;mol_dv(2)=dv(nions+2)
++        h2plusequil = h2equil + qh2plus - qh2 - bi(nions+1)*tc2 + population_dv(nions+2)
++        mol_eq(2)=h2plusequil;mol_dv(2)=population_dv(nions+2)
+         mol_linear(2)=mol_linear(1)+qh2plus-qh2-bi(nions+1)*tc2
+         if(ifpl.eq.1) mol_pl(2)=plop(nions+2)
+         if(ifnr03) then
+@@ -2333,13 +2336,13 @@
+      ! equivalents when ifnuform is true.  It follows that
+      ! alpha nu(H+)/(A(H+)^3/2 Q(H+)) =
+      !   alpha nu(H)/(A(H)^3/2 Q(H)) *
+-     !   exp(-tc2*Hion + dv(1))
++     !   exp(-tc2*Hion + population_dv(1))
+      ! alpha nu(H2)/(A(H2)^3/2 Q(H2)) =
+      !   rho T^{-3/2} [alpha nu(H)/(A(H)^3/2 Q(H))]^2 *
+-     !   exp(tc2*hdiss + dv(nions+1))
++     !   exp(tc2*hdiss + population_dv(nions+1))
+      ! alpha nu(H2+)/(A(H2+)^3/2 Q(H2+)) =
+      !   alpha nu(H2)/(A(H2)^3/2 Q(H2)) *
+-     !   exp(-tc2*H2ion + dv(nions+2))
++     !   exp(-tc2*H2ion + population_dv(nions+2))
+      !   where alpha = avogadro*(2 pi k/(avogadro*h^2)^{-3/2}
+      !   (see commentary in the constants module), and
+      !   Q(i) exp(-tc2*E(i)) A(i)^{3/2}/alpha is the
+@@ -2353,32 +2356,32 @@
+      !   full_sum0 in free_eos.f for the 5/2 term.  The equivalent ln T
+      !   and ln rho terms are taken care of by the above equilibrium
+      !   constant relations.
+-     sharg = bi(1)*tc2 - dv(1)
++     sharg = bi(1)*tc2 - population_dv(1)
+      if(ifh2plus.eq.0) then
+         ! For this case, qh2plus and derivatives, and the nions+2
+-        ! indices of dv and derivatives are uninitialized so to avoid
++        ! indices of population_dv and derivatives are uninitialized so to avoid
+         ! valgrind uninitialized tainting of the following results
+         ! (even though h2plus, etc.  are zero) must drop the h2plus
+         ! components of these expressions.
+-        sion = sion + constant_sh  - eps(1)*log_h_neutral + h_ion*sharg + h2*(h2equilt0-dv(nions+1)-1._fp_kind)
++        sion = sion + constant_sh  - eps(1)*log_h_neutral + h_ion*sharg + h2*(h2equilt0-population_dv(nions+1)-1._fp_kind)
+         ! correct ideal internal energy cm^-1 per unit mass
+         ! per avogadro for hydrogen nu values.
+         uion = uion + h_ion*bi(1) + h2*(-h2diss + qh2t/tc2)
+         if(ifnr03) then
+-           sionf = sionf + h_ionf*sharg + h2f*(h2equilt0 - dv(nions+1))
+-           siont = siont + h_iont*sharg + h2t*(h2equilt0 - dv(nions+1)) + h2*(qh2t + qh2tt)
++           sionf = sionf + h_ionf*sharg + h2f*(h2equilt0 - population_dv(nions+1))
++           siont = siont + h_iont*sharg + h2t*(h2equilt0 - population_dv(nions+1)) + h2*(qh2t + qh2tt)
+         endif
+      else
+-        sion = sion + constant_sh  - eps(1)*log_h_neutral + h_ion*sharg + h2*(h2equilt0-dv(nions+1)-1._fp_kind) +&
+-             h2plus*(h2equilt0 - 1._fp_kind + qh2plust - qh2t + bi(nions+1)*tc2 - dv(nions+1) - dv(nions+2))
++        sion = sion + constant_sh  - eps(1)*log_h_neutral + h_ion*sharg + h2*(h2equilt0-population_dv(nions+1)-1._fp_kind) +&
++             h2plus*(h2equilt0 - 1._fp_kind + qh2plust - qh2t + bi(nions+1)*tc2 - population_dv(nions+1) - population_dv(nions+2))
+         ! correct ideal internal energy cm^-1 per unit mass
+         ! per avogadro for hydrogen nu values.
+         uion = uion + h_ion*bi(1) + h2*(-h2diss + qh2t/tc2) + h2plus*(bi(nions+1) - h2diss + qh2plust/tc2)
+         if(ifnr03) then
+-           sionf = sionf + h_ionf*sharg + h2f*(h2equilt0 - dv(nions+1)) +&
+-                h2plusf*(h2equilt0 + qh2plust - qh2t + bi(nions+1)*tc2 - dv(nions+1) - dv(nions+2))
+-           siont = siont + h_iont*sharg + h2t*(h2equilt0 - dv(nions+1)) + h2*(qh2t + qh2tt) +&
+-                h2plust*(h2equilt0 + qh2plust - qh2t + bi(nions+1)*tc2 - dv(nions+1) - dv(nions+2)) +&
++           sionf = sionf + h_ionf*sharg + h2f*(h2equilt0 - population_dv(nions+1)) +&
++                h2plusf*(h2equilt0 + qh2plust - qh2t + bi(nions+1)*tc2 - population_dv(nions+1) - population_dv(nions+2))
++           siont = siont + h_iont*sharg + h2t*(h2equilt0 - population_dv(nions+1)) + h2*(qh2t + qh2tt) +&
++                h2plust*(h2equilt0 + qh2plust - qh2t + bi(nions+1)*tc2 - population_dv(nions+1) - population_dv(nions+2)) +&
+                 h2plus*(qh2plust+qh2plustt)
+         endif
+      endif

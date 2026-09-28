@@ -1,0 +1,66 @@
+{
+  "pid": 336,
+  "process_start_ticks": "22324",
+  "boot_id": "668d9702-2b45-40f7-b597-a59d21cbb64c",
+  "started_unix": 1790284117.4268475,
+  "controller_sha256": "535078a913e17ddeaaf0beb7324aa21edd0cc48d6c896dfb9544ed5d436457bf",
+  "bindings": {
+    "verification/extend_unchanged_source_prefix.py": "cdc7d3fb1e71edc8b5bfa326dd6d7c9c671c973dd9258ccac95a21f829d4e077",
+    ".phase251-reader-launch.py": "83275ae7dcb1efbf286a21a4f3bc78d92defdf80c01159fd2cc360764c921086"
+  },
+  "producer_sha256": "cdc7d3fb1e71edc8b5bfa326dd6d7c9c671c973dd9258ccac95a21f829d4e077",
+  "resumption_after_boot_change": true,
+  "interrupted_start": {
+    "pid": 228453,
+    "process_start_ticks": "2563627",
+    "boot_id": "8261121e-12db-4df6-81ef-d017b65fa802",
+    "started_unix": 1790283439.3508315,
+    "controller_sha256": "da9bfbcce43066ebef321798c11ca170c0efe1521d16cf94c990f72d4276a833",
+    "producer_sha256": "cdc7d3fb1e71edc8b5bfa326dd6d7c9c671c973dd9258ccac95a21f829d4e077",
+    "dependency": {
+      "pid": 214700,
+      "process_start_ticks": "2443604",
+      "boot_id": "8261121e-12db-4df6-81ef-d017b65fa802",
+      "started_unix": 1790282316.219934,
+      "producer_sha256": "65181e02ca85c998a9612abfc79cc3f5b130d6dd7d2432f9c9c2701f1c6e0d5e",
+      "controller_sha256": "92ed7faf4b3e092b316afe5e903905ff64661415f99e847b3c5c8c610a8b5a77",
+      "dependency": {
+        "pid": 167049,
+        "process_start_ticks": "1440923",
+        "boot_id": "8261121e-12db-4df6-81ef-d017b65fa802",
+        "started_unix": 1790272907.7851486,
+        "producer_sha256": "9173213c15b4fe69d4e7c814f907a7e3c87164caa3fa0a94a06842128b0239cb",
+        "controller_sha256": "fa9d79299090d1b2e6bf6fd4eae37a8dab1a1b53dfb18f97b2d7125cf260f10d",
+        "actions": [
+          "fine",
+          "audit"
+        ],
+        "CPU_affinity": 10
+      },
+      "CPU_affinity": 2,
+      "actions": [
+        "prepare",
+        "assemble",
+        "endpoints",
+        "source"
+      ],
+      "max_dependency_wait_seconds": 21600,
+      "final_charge_conclusion": "unadjudicated",
+      "full_goal_complete": false
+    },
+    "max_dependency_wait_seconds": 43200,
+    "parallel_fields": {
+      "field1288": 1,
+      "field648": 5,
+      "field1284": 9
+    },
+    "field_cap_seconds": 7200,
+    "virtual_GiB_per_worker": 16,
+    "final_charge_conclusion": "unadjudicated",
+    "full_goal_complete": false
+  },
+  "archive": "native-full-charge251-work/interruption-0605/248",
+  "policy": "Keep completed receipts and scientific gates. Resume only missing actions, preserve unfinished files/logs. Serialize shared generated-code initialization only.",
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false
+}

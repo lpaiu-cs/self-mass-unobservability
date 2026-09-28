@@ -1,0 +1,20 @@
+{
+  "classification": "Counterexample candidate",
+  "eligible": true,
+  "initial_cap_seconds": 360,
+  "original_pilot_eligible": false,
+  "measured_forecast_seconds": 195.95673235800072,
+  "measured_upper_seconds": 391.91346471600144,
+  "production_seconds": 420,
+  "reassessment": "Both actual2step coupled pilots pass. The measured same-path remainder is195.96s; the preregistered2x margin is391.91s, above the preliminary360s cap. Assign420s once to exactly the same64/128 paths, including setup. This tests actual feedback after fixing the common discontinuous scattering edge, not extra resolution or a repeated unchanged history.",
+  "reuse": "Continue each saved2step pilot with its exact cumulative ledgers and mechanical state. Do not repeat those steps.",
+  "stop": "Any failed path stops dispatch. Hard420s total cap; no automatic further extension, extra grid or horizon. The later EOS/source-iteration cost remains unmeasured.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_interior_feedback.py": "84406ab022fbd56fd734631a2c3dfbfb8426b95ec35aea3ee396c4dd201a5bed",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_two_way_atmosphere.py": "3f37fc1fbdece30a3a98d22015fd18bb75995f42a433bc8df9271d8df4ba3c8b",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-interior-feedback/pilot-64.npz": "e8f9433f3fa711464dab5fa9af5be5c24dfe27456f746a76b27cc528c0d150bd",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-interior-feedback/pilot-128.npz": "701070fdad761df816dc9ce927e89cb6987c9db24afc27c9f257d1d064413c47",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-interior-feedback/bank.npz": "94727076401d4256d74e4fb42c009a6639f3f9a83567fd1387865c183effde96",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-interior-feedback/scattering-audit.json": "21d6823848cc9135c3a552f283c6a877bf4f387b01c1ccfee63318427dd1e459"
+  }
+}

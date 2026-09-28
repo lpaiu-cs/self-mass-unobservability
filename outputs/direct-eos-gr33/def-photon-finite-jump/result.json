@@ -1,0 +1,159 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "rows": [
+    {
+      "name": "base-8-24-1",
+      "coefficients": {
+        "seconds": 18.172617042000002,
+        "pairs": 3966801,
+        "frequency_cells": 24134,
+        "nangle": 24,
+        "nfreq": 1,
+        "balance_relative_max": 1.0,
+        "balance_relative_weighted": 1.328578473516871e-13,
+        "interpretation": "Geometric equilibrium-flux symmetrization; measured change, not exact relativistic certification."
+      },
+      "time_order": 2.0136676414612293,
+      "time_differences_initial": [
+        4.8305169150228986e-05,
+        1.1962425493394917e-05
+      ],
+      "algebra": {
+        "energy_number_null_relative": [
+          3.0743445898784653e-16,
+          4.3413404201471814e-16
+        ],
+        "initial_heating": 1.3358152342795517e-05,
+        "continuum_heating": 1.335984951737599e-05,
+        "heating_relative": 0.0001270354563699394
+      },
+      "balance": 2.483662897840909e-12,
+      "energy_residual": 2.8490424459183443e-12,
+      "entropy_growth": 0.0,
+      "solver_residual": 6.943522732005692e-13,
+      "iterations": 3
+    },
+    {
+      "name": "angular",
+      "coefficients": {
+        "seconds": 19.465351522999995,
+        "pairs": 3966801,
+        "frequency_cells": 24134,
+        "nangle": 24,
+        "nfreq": 1,
+        "balance_relative_max": 1.0,
+        "balance_relative_weighted": 1.328578473516871e-13,
+        "interpretation": "Geometric equilibrium-flux symmetrization; measured change, not exact relativistic certification."
+      },
+      "difference_initial": 2.0016065090940007e-09,
+      "algebra": {
+        "energy_number_null_relative": [
+          3.0743445898784643e-16,
+          4.341340420147178e-16
+        ],
+        "initial_heating": 1.3358152342795517e-05,
+        "continuum_heating": 1.335984951737599e-05,
+        "heating_relative": 0.0001270354563699394
+      },
+      "balance": 2.6706846938023355e-12,
+      "energy_residual": 1.5864087902986347e-12,
+      "entropy_growth": 0.0,
+      "solver_residual": 6.943738184695081e-13,
+      "iterations": 3
+    },
+    {
+      "name": "scattering-quadrature",
+      "coefficients": {
+        "seconds": 38.667351929999995,
+        "pairs": 3966801,
+        "frequency_cells": 24134,
+        "nangle": 48,
+        "nfreq": 1,
+        "balance_relative_max": 1.0,
+        "balance_relative_weighted": 1.3285857797343747e-13,
+        "interpretation": "Geometric equilibrium-flux symmetrization; measured change, not exact relativistic certification."
+      },
+      "difference_initial": 4.083524849294744e-09,
+      "algebra": {
+        "energy_number_null_relative": [
+          3.10017482498638e-16,
+          4.331065396472271e-16
+        ],
+        "initial_heating": 1.3358152343589112e-05,
+        "continuum_heating": 1.335984951737599e-05,
+        "heating_relative": 0.00012703539696845567
+      },
+      "balance": 2.4971194425393497e-12,
+      "energy_residual": 2.323024369434125e-12,
+      "entropy_growth": 0.0,
+      "solver_residual": 6.942861962786636e-13,
+      "iterations": 3
+    },
+    {
+      "name": "frequency-quadrature",
+      "coefficients": {
+        "seconds": 75.43020546599996,
+        "pairs": 3966801,
+        "frequency_cells": 24134,
+        "nangle": 24,
+        "nfreq": 2,
+        "balance_relative_max": 1.0,
+        "balance_relative_weighted": 1.9643214502702805e-13,
+        "interpretation": "Geometric equilibrium-flux symmetrization; measured change, not exact relativistic certification."
+      },
+      "difference_initial": 2.1483448733732234e-07,
+      "algebra": {
+        "energy_number_null_relative": [
+          3.067389073380448e-16,
+          4.333414851851636e-16
+        ],
+        "initial_heating": 1.3393355635719889e-05,
+        "continuum_heating": 1.335984951737599e-05,
+        "heating_relative": 0.002507971238771889
+      },
+      "balance": 1.8018146264292445e-12,
+      "energy_residual": 3.730090313646862e-12,
+      "entropy_growth": 0.0,
+      "solver_residual": 6.716056501175487e-13,
+      "iterations": 3
+    }
+  ],
+  "comparisons": {
+    "angular": 2.0016065090940007e-09,
+    "scattering-quadrature": 4.083524849294744e-09,
+    "frequency-quadrature": 2.1483448733732234e-07
+  },
+  "controls": [
+    {
+      "name": "free-electron-Kompaneets",
+      "difference_from_finite_jump_initial": 0.015163782516665144,
+      "temperature_K": 0.8019641758747877,
+      "temperature_difference_K": -0.0006089072348155781
+    },
+    {
+      "name": "free-electron-elastic",
+      "difference_from_finite_jump_initial": 0.0003341568734219724,
+      "temperature_K": 0.8025960904072594,
+      "temperature_difference_K": 2.3007297656152237e-05
+    },
+    {
+      "name": "native-elastic",
+      "difference_from_finite_jump_initial": 0.0003341825915511945,
+      "temperature_K": 0.8025957480916157,
+      "temperature_difference_K": 2.266498201242647e-05
+    }
+  ],
+  "final_temperature_K": 0.8025730831096033,
+  "original_phase61_difference_initial": 0.015163920369988712,
+  "maximum_moment_normalization_error": 4.5736814335839426e-10,
+  "maximum_cutoff_probability": 1.4992707855149496e-10,
+  "seconds": 387.865680901,
+  "peak_memory_GB": 2.108264448,
+  "free_electron_finite_jump_coupled": true,
+  "native_medium_scattering_certified": false,
+  "actual_temperature_opacity_certified": false,
+  "physical_atmosphere_closed": false,
+  "full_GR_photon_feedback_evolved": false,
+  "full_dynamic_charge_solved": false
+}

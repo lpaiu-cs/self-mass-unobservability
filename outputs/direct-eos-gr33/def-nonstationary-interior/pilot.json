@@ -1,0 +1,34 @@
+{
+  "classification": "Counterexample candidate",
+  "completed_steps": 2,
+  "steps": 12,
+  "seconds": 8.911898799,
+  "native_calls": 436,
+  "history": [
+    {
+      "step": 1,
+      "t": 0.03825943338203245,
+      "boundary": 0.0010000560178131447,
+      "native_norm": 0.018614107632493583,
+      "scalar": 1.2705494208814505e-18,
+      "identity": 3.7167399641062895e-19,
+      "baryon": 9.41951574557956e-20,
+      "isotope": 7.822690681856699e-20,
+      "cone_inside": true
+    },
+    {
+      "step": 2,
+      "t": 0.0765188667640649,
+      "boundary": 0.0010031810178131447,
+      "native_norm": 0.6472119816519158,
+      "scalar": 1.6940658945086007e-18,
+      "identity": 1.8120425436590606e-17,
+      "baryon": 1.4825650849807508e-16,
+      "isotope": 1.4536323823945126e-16,
+      "cone_inside": true
+    }
+  ],
+  "projected_seconds": 1122.8992486739999,
+  "projected_cutoff_seconds": 561.4496243369999,
+  "metadata_failure": "Two physical steps succeeded; pilot summary writer failed on a duplicated classification keyword. Recovered from the saved result without rerunning either step."
+}

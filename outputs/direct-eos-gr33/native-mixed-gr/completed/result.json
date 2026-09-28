@@ -1,0 +1,77 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "controls": {
+    "quadrature": 7.810348280373491e-07,
+    "cadence": 0.007775804654262696
+  },
+  "endpoint_reciprocal_compact_return": -8.784791844740518e-55,
+  "endpoint_previous_selected": -2.5367136555761872e-51,
+  "endpoint_combined_selected": -2.5375921347606613e-51,
+  "return_over_original_body": 0.00034634440650463405,
+  "rows": [
+    {
+      "source": 128,
+      "order": 8,
+      "seconds": 16.105702613000002,
+      "endpoint": -8.784791844740518e-55,
+      "components": {
+        "trace": -8.784791845762423e-55,
+        "static_gradient": -2.6497164452906114e-72,
+        "reciprocal": 2.8921286163928214e-67,
+        "constraint": 7.385765511938497e-65,
+        "potential": 2.8043675418155925e-65
+      },
+      "maximum_phi": 3.5445000777723366e-59,
+      "observer_relative": 2.2266056106925845e-15,
+      "compact_potential_contraction": 1.0268616943755278e-09,
+      "potential_iteration": [
+        1.2452740265206604e-11
+      ]
+    },
+    {
+      "source": 128,
+      "order": 4,
+      "seconds": 12.240827640000003,
+      "endpoint": -8.78478498351213e-55,
+      "components": {
+        "trace": -8.784784984534034e-55,
+        "static_gradient": -2.649715116761546e-72,
+        "reciprocal": 2.8885051230793122e-67,
+        "constraint": 7.385779514669714e-65,
+        "potential": 2.8043656685906147e-65
+      },
+      "maximum_phi": 3.5445034759017335e-59,
+      "observer_relative": 2.2266073497504732e-15,
+      "compact_potential_contraction": 1.0268616943755273e-09,
+      "potential_iteration": [
+        1.2452689186639541e-11
+      ]
+    },
+    {
+      "source": "128-17",
+      "order": 8,
+      "seconds": 10.877193275000003,
+      "endpoint": -8.82275993589701e-55,
+      "components": {
+        "trace": -8.822759936936711e-55,
+        "static_gradient": -2.64205141651369e-72,
+        "reciprocal": 2.929650413696162e-67,
+        "constraint": 7.436350617781122e-65,
+        "potential": 2.9313664540973085e-65
+      },
+      "maximum_phi": 3.493592519449951e-59,
+      "observer_relative": 3.120255407565309e-15,
+      "compact_potential_contraction": 1.0268616943755278e-09,
+      "potential_iteration": [
+        1.2579397352877344e-11
+      ]
+    }
+  ],
+  "reciprocal_compact_source_applied": true,
+  "new_wave_applied_to_material_photons": false,
+  "exterior_mixed_source_closed": false,
+  "mixed_ADM_normalization_closed": false,
+  "full_goal_complete": false,
+  "seconds": 39.231595985
+}

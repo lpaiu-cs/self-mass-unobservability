@@ -1,0 +1,32 @@
+{
+  "classification": "Counterexample candidate",
+  "bindings": {
+    "verification/def_material_surface_enclosure.py": "46b9a52c84f3a2e5756f6b1645f7fa2b326da419977c28696e5aa4081b24d93b",
+    "outputs/direct-eos-gr33/def-native-atmosphere/density-coordinate/table.json": "1c61facf503d5b6d82013c8387630551d53dd815b3945d909a809155af92c457",
+    "outputs/direct-eos-gr33/def-native-atmosphere/density-coordinate/result.json": "34c40214c0870899ce84eb1047095dbd06748c6c67b73de82ac5b1cab78f83a6",
+    "outputs/direct-eos-gr33/def-hydrostatic-background/absolute-shoot/background-0.001.npz": "774e2bff821f5863291167f069a8673562bfee8b0ab648468c8dfc5a2a9b04d3",
+    "outputs/direct-eos-gr33/def-hydrostatic-background/absolute-shoot/lapse.npz": "9c08b16699d7bfaa696a93e68ad2eb42a9ea98f8373d036f3c7018d5dc374dba",
+    "outputs/direct-eos-gr33/gr-molecular-structure-defined/molecular-state-17-8.npz": "27bc78be6b5f9bb028e0323f0c225eefc5bd89244c9b14b5068fb9c7ba5df885",
+    "outputs/direct-eos-gr33/eos-molecular-spectral/direct_ion_bridge.f90": "ee9375deb6941add7ec549dd7b07aa0835f3b9fbfbb37b84139400a5f38a7927",
+    "verification/gr_scalar_nonlinear_exterior.py": "ae8af4f607fa60690742b08b60ee27b17225fb4fbd73ed854721cdd3a8873de1"
+  },
+  "claim": "Close the mechanical material-vacuum radius/junction for an explicitly assumed dilute gas completion using h*A*N and a uniform tail self-gravity bound. Do not extend native NaN states or fit a polytrope.",
+  "premises": [
+    "Same fixed entropy and composition extend smoothly to P=rho=T=0; no phase transition or external radiation bath.",
+    "e+P=rho*h, h>=h0>0, 0<=3P<=e, and P decreases outward.",
+    "Dilute ground state is H2 plus neutral atoms of the declared FreeEOS species; nonideal terms vanish. The saved bridge subtracts the H2 ground energy per neutral gram, which must be multiplied by CX for baryon-gram h0.",
+    "Static DEF beta=-4 equations, no heat flux, no surface layer. This is mechanical Cauchy data, not a stationary thermal star."
+  ],
+  "gates": {
+    "conditional_surface_relative_halfwidth": 1e-08,
+    "added_baryon_fraction_upper": 1e-12,
+    "vacuum_ODE_radius_difference_m": 0.001
+  },
+  "budget": {
+    "hard_timeout_seconds": 30,
+    "native_calls": 0,
+    "evolution_steps": 0,
+    "automatic_expansion": false
+  },
+  "method": "Uniform weighted-state Gronwall bound around an exact Just vacuum test-atmosphere; bound all omitted material sources by the base pressure. No native curve interpolation enters this surface location."
+}

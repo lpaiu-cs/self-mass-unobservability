@@ -1,0 +1,53 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Apply the newly implemented common finite EOS/rates to the existing photon/material/spatial time equation. Test the original numerical gates without changing the initial perturbation, duration, cells or time paths.",
+  "decision": "Report separately actual coupled execution, numerical acceptance, same-state closure for retained channels, and whether the ORIGINAL complete-opacity failure is resolved. Missing H/He II channels prohibit the last claim even if this finite model passes.",
+  "model": "Replace legacy absorption completely with the listed 566 levels and 3674 lines. No inconsistent old H/He background is carried over. Maxwell/RPA inventory, electron density and material heat capacity use the new EOS. Thermal Doppler plus natural widths from retained Einstein coefficients only; pressure widths and missing transitions are not certified. Frequency-dependent thermal reverse profile implements the declared fixed-bath LTE closure.",
+  "controls": "Initial material perturbation1 K, zero photons, duration H/c, kH1, existing24134 cells and8 angular modes; fine16/32/64, half source knots64, Gauss4 profiles64 and zero-atomic-input64. No grid or duration expansion.",
+  "budget": {
+    "additional_native_EOS_calls": 1,
+    "native_extractions": 0,
+    "input_seconds": 180,
+    "coupled_seconds": 480,
+    "coupled_paths": 6,
+    "cpu_threads": 1,
+    "memory_GB": 4,
+    "new_stellar_steps": 0
+  },
+  "budget_reason": "The initial12 EOS attempts are exhausted and preserved. One additional identical-state call captures chemical coefficients and mass normalization; it adds no state or derivative sweep. Prior10 calls took0.365s. Reuse all cross sections. Prior coupled runs took about156s; new RPA table/opacity cost is unmeasured, forecast180-400s, hard480s.",
+  "gates": {
+    "time_order": 1.8,
+    "time_error": 0.001,
+    "source_grid_plus_two_tails": 0.001,
+    "line_quadrature": 0.0001,
+    "energy_balance": 1e-09,
+    "solver_residual": 1e-11,
+    "entropy_growth": 1e-10,
+    "energy_number_null": 1e-10,
+    "chemical_ratio": 1e-09
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_photon_common_coupled.py": "5f685d33332c883e63548afb1e0f779b8b84af23ba1a4dc734971a4468096cb4",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_photon_mhd_spectrum.py": "b58ad0ff38bedb647c0a5f33cdccdaee165a128b74053ad47f45e7b56011fdd4",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_photon_atomic_rates.py": "cb816984510ad32b92f80769f42579d98bba247c7c3e92affdf567a6fe8d7fb7",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_photon_profile_integral.py": "fdf6817fd392f87363ad89cff076b3facae77ff0edddece3a5c771a84448f155",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_photon_actual_opacity_validate.py": "b6aa8aca9a9d54eafce38fba6c0bcbfbd1bda180497b31794a4ffcf46ad529be",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_photon_collective_continuum.py": "998e8ddd1f1f194736518fd1c12b16e69792fa84095991aa18539c4c14dbeb87",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_photon_collective.py": "212d40aeca126e3b79ecd76d04b4be88dc90a73428953ba68d29a7dcae0359c0",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_photon_finite_jump.py": "3d1b43833d77f080a82d6467b39d81f041ac16d2885b3ae7d788c2bd924bbbb0",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_photon_spatial_coupling.py": "6caf384627f200decf1ce729f021e27042e7951d45c131c2bcbe4a752fd44fc0",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-mhd-spectrum/eos-state.npz": "a6101eb4a0219523a632c68aed8b8397706bfe7b07a19273d3f02ca3e49687f3",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-mhd-spectrum/optical-levels.npz": "ec1c42072e0c441cb6fdd09f48878c824aa3d896f20a8003f6f7133e59c84f81",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-mhd-spectrum/result.json": "a36a10018fd2393806f210f786fa1df16bb471422e3b0e34e8203241dd7a5ea8",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-mhd-spectrum/catalog.json": "95f0dc96f4b10f2e50bd570f583848b9202588686c882e4271d76859cfac98a4",
+    "/home/lpaiu/work/direct-eos-gr33/photon-mhd-spectrum/libfree_eos_mhd_spectrum.so": "64a999ef4900393e7817234137a42eab918949cf24a9d74f757eee94ee87b439",
+    "/home/lpaiu/work/direct-eos-gr33/photon-mhd-spectrum/gas.so": "6b6853ae68450147e8ddabac4be2fca48aa5430433ce3101be7aa564e11f2e78",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-atomic-rates/cross-sections.npz": "4a9f1f6aed789e9449b961dbc6676bdf1a242678e3e525601e067df918bc135c",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-atomic-rates/fort.92": "22e8b29583dfeae820ceac6cd9246502af0af55e6c4c0dd3650bba2e6a63f1a6",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-atomic-rates/fort.93": "b2b48a82a138afa78d7d97c61e2d3e8500f2ffa2f5f2ca312db213fd72239a52",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-atomic-rates/fort.98": "d6c9d7204df7edfff408df64fc4d01829e028fa7a287fa8058b36659a3c2e981",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-spatial-coupling/bank.npz": "adb6377b93e4a48a8530e2e1bcccf6f433e700dac69d80cf434ff47dcd25705b",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-mhd-spectrum/coupled/plan-initial.json": "e141fb4b87b195b2ca59511bea5c0ebdb3a8f9dffd306549bbd539be95c975a6"
+  },
+  "amendment": "Preserved initial guard failure. Compare isotope rho*cx to native opacity rho; resume saved station/rates without repeating EOS. Same gates, paths and hard caps."
+}

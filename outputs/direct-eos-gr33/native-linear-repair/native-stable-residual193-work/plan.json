@@ -1,0 +1,39 @@
+{
+  "classification": "Conjectural",
+  "claim": "Remove demonstrated cancellation in the actual baryon linear residual, then test the same saved failing system at the unchanged1e-14/1e-13 gates.",
+  "evidence": "The stored rejected solution has an80digit exact-coefficient baryon residual2.20654e-14, while the existing evaluation reports5.00219e-14. Its evaluation error2.93089e-14 alone exceeds the gate. Preassembly in long double does not repair it.",
+  "method": "Keep float64 Krylov proposals and original4refinements. For extended-precision residual calls evaluate each baryon row as one80decimal-digit sum with the exact original binary h,A,J coefficients and actual stored solution, then round the small result once. Other rows use the original operator. No collision source enters the B row.",
+  "decision": "Only a matching original system and all original linear gates admit a separately budgeted remaining-interval continuation. Report the old arithmetic residual too; do not replace physical-stage acceptance with this check.",
+  "forecast": "Original reconstruction24.59s and right-Krylov21.24s; allow90s including selective decimal arithmetic. One system check only.",
+  "budgets": {
+    "prepare": 20,
+    "check": 90
+  },
+  "CPU_threads": 1,
+  "virtual_GiB": 4,
+  "new_physical_steps": 0,
+  "stop": "Any original gate,4refinement limit,source mismatch or90s cap. No automatic iteration,grid,tolerance or horizon increase.",
+  "bindings": {
+    "native-right-precondition191-work/sweep-0/photons/steps-128-reference-128.npz": "b03d8792172728376a3a58a4676ef13c00d2e521b31f215228dabdf581f9c090",
+    "native-right-precondition191-work/sweep-0/photons/steps-64-reference-128.npz": "acd3d47dbf2c683f824a8b8ae2f82408cab916219ae24a8a8cfd73052170e865",
+    "native-right-precondition191-work/sweep-0/material/steps-128-reference-128.npz": "8f74c74de70b7150d6219e1f4de359d4bba1033709984110081fab8a060ebd11",
+    "native-right-precondition191-work/sweep-0/material/steps-64-reference-128.npz": "ff1fc64a6650a0e978f30f1bf49abd556f056e8d6d6255db9efa3c6a79193239",
+    "native-right-precondition191-work/normalization.json": "820244d5d23554811c792b52a45a3e28317392019f5aac7d8733eeb3b4d28706",
+    "native-right-precondition191-work/photon-conservation-plan.json": "248525a3b9808f00f193c48d9739000a1c32eea1cf8197cf8c3ad8b939a0bb2d",
+    "native-right-precondition191-work/check-result.json": "69d213635792f32d54a04dd107aa19178d7943261ca23305d6b720862c246106",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/stabilize_full_interval_residual.py": "18be51b1a2ffa44f6fb89eb7fab1f05636337e23585e2ec9498b408e1101426d",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/right_precondition_full_interval.py": "a2e70205712eac5c8686a4bee171db769faebd03dc6a8a6d68219adecdf07779",
+    "native-linear-floor192-work/arithmetic.json": "dbd93097d40370dea2de47fe1ad66ecec95896ac300e684f95ab831fe3129f7c",
+    "native-linear-floor192-work/rejected-system.npz": "6aa78dd0deef0e59e81394f9e1ecdac348411693c9fba47a0cdae4c2867b68a7"
+  },
+  "reused": {
+    "native-stable-residual193-work/sweep-0/photons/steps-128-reference-128.npz": "b03d8792172728376a3a58a4676ef13c00d2e521b31f215228dabdf581f9c090",
+    "native-stable-residual193-work/sweep-0/photons/steps-64-reference-128.npz": "acd3d47dbf2c683f824a8b8ae2f82408cab916219ae24a8a8cfd73052170e865",
+    "native-stable-residual193-work/sweep-0/material/steps-128-reference-128.npz": "8f74c74de70b7150d6219e1f4de359d4bba1033709984110081fab8a060ebd11",
+    "native-stable-residual193-work/sweep-0/material/steps-64-reference-128.npz": "ff1fc64a6650a0e978f30f1bf49abd556f056e8d6d6255db9efa3c6a79193239",
+    "native-stable-residual193-work/normalization.json": "820244d5d23554811c792b52a45a3e28317392019f5aac7d8733eeb3b4d28706",
+    "native-stable-residual193-work/photon-conservation-plan.json": "248525a3b9808f00f193c48d9739000a1c32eea1cf8197cf8c3ad8b939a0bb2d",
+    "native-stable-residual193-work/check-result.json": "69d213635792f32d54a04dd107aa19178d7943261ca23305d6b720862c246106"
+  },
+  "final_charge_conclusion": "unadjudicated"
+}

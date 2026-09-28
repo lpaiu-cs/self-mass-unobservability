@@ -1,0 +1,13 @@
+{
+  "classification": "Counterexample candidate",
+  "reason": "The actual centered deep flux is K-independent; the previous impedance correction and dependent response are rejected. Native K affects its CFL limit only. Atmospheric native gamma changes the actual HLL flux.",
+  "intervention": "Use current native K for the actual deep CFL limit, with zero deep constitutive force. Apply the independently derived atmospheric HLL difference and its one shared face. Preserve the physical owner and original gates.",
+  "reuse": "All6715 native derivatives and exact force arrays; source-only response preserved as a comparison. Same two paths, grid, amplitude, gates and3100s total cap.",
+  "remaining_boundary": "Atmospheric native gamma enters the saved force; its smaller displaced-state derivative and full native thermochemical Jacobian are not certified.",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/apply_retained_native_acoustic.py": "b6427a26ef7e1aaefd3f647896cf8d30252b5fd340b9496179dc69dd21ac577a",
+    "retained-native-acoustic153-work/native.json": "e6d66ecce2ceae12ce858ec43ddffb0b5f2dc4a15f2d67cfa312fe56db6e0bc3",
+    "retained-native-acoustic153-work/force-centered-result.json": "41a9cd92f1e128a89a9788fbdddaa0cc793fac88502c32c9aaf7a1243a9a1a3e",
+    "retained-native-acoustic153-work/deep-force-rejection.json": "dbe931d344b13f3cf9521cbf51552cc02191e4a488d2a3bebd4a67f67ed2c1c2"
+  }
+}

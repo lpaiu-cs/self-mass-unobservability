@@ -1,0 +1,18 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "cells": 5735,
+  "masked_element_groups": 42335,
+  "omitted_stage_entries": 307605,
+  "maximum_current_log_gap": "-10133165440791805/35184372088832",
+  "gap_witness": {
+    "cell": 1532,
+    "element": 7
+  },
+  "maximum_omitted_stages": 20,
+  "omitted_retained_ratio_upper": "[1.67263468080720671750464133015457019398407929702732560252157E-124, 1.67263468080720671750464133015457019398407929702732560252158E-124]",
+  "omitted_probability_upper": "[1.67263468080720671750464133015457019398407929702732560252157E-124, 1.67263468080720671750464133015457019398407929702732560252158E-124]",
+  "L1_error_upper": "[3.34526936161441343500928266030914038796815859405465120504315E-124, 3.34526936161441343500928266030914038796815859405465120504316E-124]",
+  "proof": "For every nonempty retained set, its weight sum is at least exp(max_retained_logweight). The omitted weight sum is at most omitted_count*exp(max_omitted_logweight). Every gap is computed as an exact rational difference of saved binary64 log weights. The maxima of the count and gap yield a conservative common bound, evaluated outward with interval arithmetic. No prior fresh-mask decision is assumed.",
+  "scope": "Mathematical atomic softmax formed from the final saved binary64 log weights. This encloses the current reused-mask truncation only, not native log-weight evaluation, native exponentiation/normalization, molecular equilibrium, self-consistent EOS root or physical model error."
+}

@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/mnt/e/lab/self-mass-unobservability/verification/source_retry.py", line 85, in <module>
+    if __name__=='__main__': globals()[sys.argv[1]]()
+  File "/mnt/e/lab/self-mass-unobservability/verification/source_retry.py", line 62, in identity
+    raw,_=g.s.evaluate('cached-identity',data);previous=dict(np.load(g.OLD/'initial-native.npz'))
+  File "/mnt/e/lab/self-mass-unobservability/verification/conservative_star.py", line 78, in evaluate
+    v.shim.trace(label,aux)
+  File "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/source-retry/materialized_native_eos_bridge.py", line 157, in trace
+    h,d=mesa(path)
+  File "/mnt/e/lab/self-mass-unobservability/verification/thermal_wd.py", line 179, in mesa
+    lines = [next(f) for _ in range(6)]
+  File "/mnt/e/lab/self-mass-unobservability/verification/thermal_wd.py", line 179, in <listcomp>
+    lines = [next(f) for _ in range(6)]
+StopIteration

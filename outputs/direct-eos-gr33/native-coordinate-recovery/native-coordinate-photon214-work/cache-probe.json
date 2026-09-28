@@ -1,0 +1,74 @@
+{
+  "classification": "Counterexample candidate",
+  "rows": [
+    {
+      "stage": 0,
+      "label": "first_interval",
+      "exact": true,
+      "relative_L1": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "stage": 16,
+      "label": "continuous_model",
+      "exact": false,
+      "relative_L1": [
+        3.874713103794278e-12,
+        8.419406911193212e-13,
+        2.5471547209676e-12,
+        2.1456483751649153e-15
+      ]
+    },
+    {
+      "stage": 16,
+      "label": "clear_thermo_jets_only",
+      "exact": false,
+      "relative_L1": [
+        3.874713103794278e-12,
+        8.419406911193212e-13,
+        2.5471547209676e-12,
+        2.1456483751649153e-15
+      ]
+    },
+    {
+      "stage": 17,
+      "label": "same_new_cache",
+      "exact": false,
+      "relative_L1": [
+        3.4826348969872257e-12,
+        6.058377180533938e-13,
+        2.648579216386224e-12,
+        1.8698644236324492e-15
+      ]
+    },
+    {
+      "stage": 18,
+      "label": "same_new_cache",
+      "exact": false,
+      "relative_L1": [
+        3.282747791474517e-12,
+        5.261374519910717e-13,
+        2.6688527157288436e-12,
+        1.7585069629840837e-15
+      ]
+    }
+  ],
+  "material_dicts": {
+    "d": 9,
+    "metric": 17,
+    "f0": 19,
+    "cache": 3,
+    "ap_maps": 0,
+    "face_banks": 3,
+    "thermo_jets": 4,
+    "deep_tangent_cache": 3
+  },
+  "new_physical_steps": 0,
+  "new_photon_solves": 0,
+  "seconds": 14.873837457000263,
+  "source_sha256": "9712d621431dc2b01ed7ce3eb72d11a96efdbae0c51175267445ec48ba7fb583"
+}

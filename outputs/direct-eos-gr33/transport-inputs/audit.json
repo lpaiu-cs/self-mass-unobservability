@@ -1,0 +1,20 @@
+{
+  "classification": "Imported from prior work",
+  "source_contract_checked": true,
+  "source_sha256": {
+    "kap/public/kap_lib.f90": "ddd2608dbc8fa2392d5a596a2a406503e9753cf49e70f98909cf00d75026d90b",
+    "kap/private/kap_eval.f90": "fbc201fc45aa84f07cc36bea9581cedf9d6a59d06f30f5535ee3fd0231248292",
+    "star/private/opacities.f90": "a05469a0ceb8ae54246f7386d75f1068b08b1e7d75d38ab75d9a861c66379fed",
+    "neu/public/neu_lib.f90": "9e07ba1f30df668b378c39c89e7d25f5e43f49ff1edbeabafb56ff50e5ff6ac7",
+    "star/private/neu.f90": "f6cc770d2c689826b7732733de6bb4737a3eb8114ec536c7ad904aeba45d777b"
+  },
+  "state_sha256": "149c037371ca90bb0f1599243f57c313a843d99a91714747b13469609ea85b58",
+  "opacity": "The source Type1/Type2 blend requires total free electron PLUS positron number per nucleon and its log derivatives; zbar also enters electron conduction. Nuclear net Ye or eta alone is not this input contract.",
+  "neutrino": "The source neu_get takes T,rho,abar,zbar,z2bar, a temperature cutoff and type flags. It has no external eta/free-electron input. Its documented low-temperature zero is a cutoff of the declared fit, not a physical zero-loss theorem.",
+  "cells_below_documented_neutrino_fit_temperature": 1924,
+  "baryon_fraction_below_documented_neutrino_fit_temperature": 0.005442256614478239,
+  "total_opacity_includes_conduction": true,
+  "actual_new_EOS_opacity_inputs_intervened": false,
+  "physical_opacity_or_neutrino_errors_certified": false,
+  "next_boundary": "Bind the actual opacity call and its new EOS electron/positron inputs before a nonlinear transport claim. Keep the thermal-neutrino fit assumptions and missing low-temperature physical error separate. Do not double-count conduction."
+}

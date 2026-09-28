@@ -1,0 +1,33 @@
+{
+  "command": [
+    "g++",
+    "/mnt/e/lab/self-mass-unobservability/verification/remaining_variational.cpp",
+    "-I/home/lpaiu/work/nutimo_pilot/request15_deps/usr/include",
+    "-I/home/lpaiu/work/nutimo_pilot/request15_deps/usr/include/x86_64-linux-gnu",
+    "-L/home/lpaiu/work/nutimo_pilot/request15_deps/usr/lib/x86_64-linux-gnu",
+    "-std=c++17",
+    "-O2",
+    "-frounding-math",
+    "-D__USE_FILIB__",
+    "-D__HAVE_MPFR__",
+    "-O2",
+    "-frounding-math",
+    "-DFILIB_EXTENDED",
+    "-DFILIB_HAVE_SSE",
+    "-I/home/lpaiu/work/nutimo_pilot/request14_capd/capdDynSys/include",
+    "-I/home/lpaiu/work/nutimo_pilot/request14_capd/capdAlg/include",
+    "-I/home/lpaiu/work/nutimo_pilot/request14_capd/capdAux/include",
+    "-I/home/lpaiu/work/nutimo_pilot/request14_capd/capdExt/include",
+    "-I/home/lpaiu/work/nutimo_pilot/request14_capd/capdExt/filibsrc",
+    "-L/home/lpaiu/work/nutimo_pilot/request14_capd/build-request15-mp",
+    "-L/home/lpaiu/work/nutimo_pilot/request14_capd/build-request15-mp/capdExt/filibsrc",
+    "-lcapd",
+    "-lfilib",
+    "-lmpfr",
+    "-lgmp",
+    "-o",
+    "/home/lpaiu/work/nutimo_pilot/request15_variational_v2"
+  ],
+  "binary_sha256": "02a6b6acfc09f5b75dca287bfaadb818d42877000c1c1ead9f1ce489a8cea313",
+  "source_sha256": "b33c1ae48af0c016eedc3b6faa8fe4ff145a802431497f4e74fb5ea0670f5aa0"
+}

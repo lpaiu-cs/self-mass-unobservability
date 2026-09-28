@@ -1,0 +1,27 @@
+{
+  "classification": "Counterexample candidate",
+  "bindings": {
+    "verification/def_native_atmosphere_extended.py": "450e05643255f577ea334c330f3978959f4f9a315622630a4a6481fc3f23e9a9",
+    "verification/def_native_atmosphere_density.py": "e4e1f5dc4a15dadb791896a4c8b99e249be6cc59c53e68687b341cbe025727b6",
+    "outputs/direct-eos-gr33/def-native-atmosphere/density-coordinate/table.json": "1c61facf503d5b6d82013c8387630551d53dd815b3945d909a809155af92c457",
+    "outputs/direct-eos-gr33/def-native-atmosphere/density-coordinate/result.json": "34c40214c0870899ce84eb1047095dbd06748c6c67b73de82ac5b1cab78f83a6",
+    "outputs/direct-eos-gr33/gr-molecular-precision/manifest.json": "6be95b283a7bfe242a9fb3e55a02fc79c037b116d3d33a059c186ffcc06cb8fd",
+    "outputs/direct-eos-gr33/def-native-atmosphere/cold-continuation/precision-probe.json": "f8856b6d1719323ac1fd2a890bf2f1de026f091753d2a82ecea29f256423393e"
+  },
+  "correction": "Reuse the saved matching 33-digit native EOS. Only arithmetic changes; no coefficients, energy gate, molecular or plasma model changes.",
+  "gates": {
+    "entropy_energy_score": 1,
+    "overlap_logrho": 1e-12,
+    "overlap_logP": 1e-10,
+    "overlap_entropy_relative": 1e-10
+  },
+  "budget": {
+    "hard_timeout_seconds": 90,
+    "maximum_new_roots": 24,
+    "new_evolution_steps": 0,
+    "automatic_expansion": false
+  },
+  "target_temperature_K": 100,
+  "density_step": 0.5,
+  "stop": "First native failure, entropy gate failure, 80 seconds, 24 new roots or T <= 100 K. Preserve accepted rows and all original binary64 failures."
+}

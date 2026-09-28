@@ -1,0 +1,308 @@
+"""Apply the native acoustic force to material, photons and GR charge.
+
+Counterexample candidate: one finite constitutive response, not a fixed point.
+"""
+from pathlib import Path
+from types import FunctionType,SimpleNamespace
+import inspect,json,signal,sys,time,textwrap,resource,shutil
+import numpy as np
+import def_retained_native_acoustic as native
+import def_retained_motion_return as motion
+
+prior=native.prior;OUT=native.OUT/'response-centered';SOURCE=OUT/'collision-precision';PHOTON=OUT/'photons'
+DIRECT=OUT/'direct-material';MATERIAL=OUT/'material';GR=OUT/'gr-precision';BEFORE=OUT/'mechanical-input'
+READOUT=OUT/'material-readout'
+FORCE=native.OUT/'force-centered'
+write,read,sha=native.write,native.read,native.sha
+
+
+def prepare():
+    assert not OUT.exists()
+    for p in [OUT,SOURCE,PHOTON,DIRECT,MATERIAL,GR,BEFORE/'photons']:p.mkdir(parents=True,exist_ok=True)
+    before=prior.OUT
+    for name,target in [('material',DIRECT),('hydro',FORCE),('collision',before/'collision'),
+                        ('metric',before/'metric'),('immutable-coupled-128.npz',before/'immutable-coupled-128.npz')]:
+        (BEFORE/name).symlink_to(target.resolve(),target_is_directory=target.is_dir())
+    (BEFORE/'photons/bank-128').symlink_to((before/'photons/bank-128').resolve(),target_is_directory=True)
+    write(OUT/'plan.json',dict(classification='Counterexample candidate',
+        claim='Propagate native acoustic force through finite free-material evolution, its actual collision response, simultaneous photons/thermal/H, corrected free material and null-infinity charge.',
+        sequence='Mechanical-only force response supplies the known finite matter source. At each source knot, the current native deep bulk modulus enters BOTH the background flux and the actual finite displaced-state flux. The source-only response is preserved separately. Photon thermal/H correction is returned once to the same forced free material.',
+        budgets=dict(material_total_seconds=500,source_seconds=600,photon_seconds=1200,readout_seconds=180),
+        total_budget='All native and response receipts stay within the original3100s wall cap. Dispatch only after completed native cost and response prefix forecasts establish capacity.',
+        gates=dict(time=.02,quadrature=.002,conservation=1e-8,flux_resolution=.002,independent_GR=1e-9),
+        limitations='Known native constitutive force and active deep acoustic coefficients on saved background; other EOS/radiation response derivatives remain the declared table owner. No uniform derivatives, nonlinear Einstein solution, coupling contraction, continuum space/floor or static-nuisance certification.',
+        bindings={str(p):sha(p) for p in [Path(__file__),Path(native.__file__),Path(prior.__file__),Path(motion.__file__),prior.EV/'coupled-128.npz']}))
+    for n in [64,128]:
+        p=np.load(before/f'photons/steps-{n}-reference-128.npz')
+        np.savez_compressed(BEFORE/f'photons/steps-{n}-reference-128.npz',t=p['t'],
+            photon_history_scaled_occupation=np.zeros_like(p['photon_history_scaled_occupation']),
+            material_history=np.zeros_like(p['material_history']))
+    write(OUT/'operator-plan.json',dict(classification='Counterexample candidate',
+        reason='The actual centered deep flux is K-independent; the previous impedance correction and dependent response are rejected. Native K affects its CFL limit only. Atmospheric native gamma changes the actual HLL flux.',
+        intervention='Use current native K for the actual deep CFL limit, with zero deep constitutive force. Apply the independently derived atmospheric HLL difference and its one shared face. Preserve the physical owner and original gates.',
+        reuse='All6715 native derivatives and exact force arrays; source-only response preserved as a comparison. Same two paths, grid, amplitude, gates and3100s total cap.',
+        remaining_boundary='Atmospheric native gamma enters the saved force; its smaller displaced-state derivative and full native thermochemical Jacobian are not certified.',
+        bindings={str(p):sha(p) for p in [Path(__file__),native.OUT/'native.json',native.OUT/'force-centered-result.json',native.OUT/'deep-force-rejection.json']}))
+
+
+def initialize_material(direct):
+    global Material
+    prior.initialize();prior.HYDRO=FORCE;folder=DIRECT if direct else MATERIAL
+    class AcousticMaterial(prior.Material):
+        def __init__(self,reference=128,steps=128):
+            super().__init__(reference,steps,driven=False)
+            roots=read(prior.EOS/'production-samples.json');moduli={}
+            for j in range(self.nb):
+                d=np.load(native.OUT/f'hydro/deep-{j}.npz')
+                moduli[j]={tuple(c):K for c,K in zip(d['coordinates'],d['K'])}
+            self.native_K=[]
+            for k in range(17):
+                rr=sorted([r for r in roots if r['kind']=='deep' and r['it']==k],key=lambda r:r['cell'])
+                self.native_K.append(np.interp(self.model.edge,self.model.bulk.d['r'],[moduli[r['cell']][r['x'],r['lt'],r['y']] for r in rr]))
+            self.native_K=np.array(self.native_K);self.building_original_point=False
+            if not direct:
+                p=np.load(PHOTON/f'steps-{steps}-reference-128.npz');ids=[np.argmin(abs(p['t']-t)) for t in self.t]
+                assert np.max(abs(p['t'][ids]-self.t))<1e-18;c=p['collision_transfer'][ids]
+                self.transfer=np.stack([np.zeros_like(c[:,:,0]),p['moments'][ids,3]/self.a,c[:,:,0],c[:,:,1]],axis=1)/prior.AMP
+        def point(self,k):
+            if k in self.cache and self.cache[k].get('active_acoustic_owner'):return self.cache[k]
+            self.building_original_point=True
+            try:p=super().point(k)
+            finally:self.building_original_point=False
+            if not hasattr(self,'native_K'):return p
+            value=self.raw(k,np.zeros_like(p['Q']),np.zeros((5,self.n)),0.,p)
+            assert np.array_equal(value[1],p['gravity'])
+            p['flux']=value[0];p['gravity']=value[1];p['dt']=min(p['dt'],value[2]);p['active_acoustic_owner']=True
+            return p
+        def raw(self,k,delta,field,eps,row=None):
+            if getattr(self,'building_original_point',False) or not hasattr(self,'native_K'):
+                return super().raw(k,delta,field,eps,row)
+            row=self.point(k) if row is None else row;old=self.model.face_K
+            self.model.face_K=self.native_K[k]
+            try:return super().raw(k,delta,field,eps,row)
+            finally:self.model.face_K=old
+        run=FunctionType(prior.Material.run.__code__,dict(prior.Material.run.__globals__,OUT=folder),argdefs=prior.Material.run.__defaults__)
+    Material=AcousticMaterial
+
+
+def material(direct,pilot):
+    assert read(native.OUT/'force-centered-result.json')['passed'];initialize_material(direct)
+    folder=DIRECT if direct else MATERIAL;start=time.monotonic();native.deadline(500);rows=[]
+    if not pilot:assert read(folder/'execution-plan.json')['eligible']
+    for n in [64,128]:
+        tick=time.monotonic();m=Material(128,n);label=f'pilot-{n}' if pilot else f'steps-{n}-reference-128'
+        row=m.run(n,label,2 if pilot else None,None if pilot else f'pilot-{n}')
+        row.update(worker_seconds=time.monotonic()-tick,finite_calls=m.finite_calls,
+                   finite_resolution=m.finite_resolution,maximum_owner=max(p['owner_error'] for p in m.cache.values()))
+        row['passed']=bool(row['passed'] and row['maximum_owner']<1e-8)
+        write(folder/f'{label}.json',row);rows.append(row);assert row['passed']
+    result=dict(classification='Counterexample candidate',passed=True,rows=rows,seconds=time.monotonic()-start)
+    if pilot:
+        old=[read(prior.MATERIAL/f'steps-{n}-reference-128.json') for n in [64,128]]
+        result['upper_remaining_seconds']=2*sum(p['finite_owner_calls']*r['worker_seconds']/max(r['finite_calls'],1)+10 for p,r in zip(old,rows))
+        result['eligible']=result['upper_remaining_seconds']<500
+    write(folder/('pilot.json' if pilot else 'production.json'),result)
+    print(json.dumps(result),flush=True);signal.setitimer(signal.ITIMER_REAL,0.)
+
+
+def admit(direct):
+    folder=DIRECT if direct else MATERIAL;p=read(folder/'pilot.json');assert p['passed']
+    old=[read(prior.MATERIAL/f'steps-{n}-reference-128.json') for n in [64,128]]
+    upper=2*sum(v['finite_owner_calls']*r['seconds']/max(r['finite_calls'],1)+(r['worker_seconds']-r['seconds'])+10 for v,r in zip(old,p['rows']))
+    write(folder/'execution-plan.json',dict(classification='Counterexample candidate',eligible=upper<500,
+        upper_seconds=upper,cap_seconds=500,original_pilot_eligibility=p['eligible'],
+        repair='Separate measured stepping cost from one-time owner setup. Original forecast incorrectly charged the entire setup again for every future owner call. Reuse both accepted prefixes, preserve original rejected forecast and all gates.',
+        bindings={str(v):sha(v) for v in [Path(__file__),folder/'pilot.json',native.OUT/'response/registered-prefix-producer.py']}))
+    print(upper);assert upper<500
+
+
+def initialize_photon():
+    motion.BEFORE=BEFORE;motion.OUT=OUT;motion.SOURCE=SOURCE;motion.PHOTON=PHOTON;motion.TOTAL=PHOTON
+    motion.MATERIAL=MATERIAL;motion.GR=GR;motion.initialize()
+    # No preexisting photon/thermal response exists in this isolated mechanical
+    # source. Resolve the finite source itself, not a division by zero linear drive.
+    source=textwrap.dedent(inspect.getsource(motion.State.point))
+    source=prior.replace(source,'norm=max(np.sum(abs(factor*linear)*weight),1.)',
+                         'norm=max(np.sum(abs(residual)*weight),1.)')
+    source=prior.replace(source,'z=m.motion[k];self.precision(True);',
+        "z=m.motion[k];changed=np.any(z!=0,axis=0);changed[:m.nb]|=(m.model.mech.xi@np.r_[0.,-np.cumsum(z[0,:m.nb])])!=0\n    assert not np.any(p['photon_history_scaled_occupation'][k]) and not np.any(p['material_history'][k])\n    self.precision(True);")
+    line=next(v for v in source.splitlines() if v.strip().startswith('rounding='))
+    source=prior.replace(source,line,line.replace('*weight)','*weight*changed[:,None,None])')+
+        "\n        assert np.all(residual[~changed]==0) and np.all(br[~changed]==0) and np.all(er[:,~changed]==0)")
+    source=source.replace('base_owner_relative=owner,rows=rows,','base_owner_relative=owner,unchanged_cells=int(np.sum(~changed)),exact_zero_cell_identity=True,rows=rows,')
+    source=source.replace('residual_over_linear','residual_over_full_source').replace('rounding_over_linear','rounding_over_full_source').replace('projection_over_linear','projection_over_full_source')
+    source=prior.replace(source,'        if not np.any(z) and not np.any(delta):rounding=0.', '''        precision_comparison=0.;precision_owner=0.;precision_root=0.;used_precision=False
+        if rounding/norm>=.002:
+            from retained_deep_collision_precision import difference
+            coarse,center,_,_=difference(self,k,z,factor,40)
+            fine,center,mp_round,precision_root=difference(self,k,z,factor,60)
+            precision_owner=max(float(np.max(abs(center[j]-a[key][:m.nb]))/np.max(abs(a[key][:m.nb]))) for j,key in enumerate(['emit','loss']))
+            change=fine[0]-fine[1]*I[:m.nb];other=coarse[0]-coarse[1]*I[:m.nb]
+            precision_comparison=float(np.sum(abs(change-other)*weight[:m.nb])/max(np.sum(abs(change)*weight[:m.nb]),1.))
+            assert precision_owner<1e-9 and precision_comparison<1e-10 and precision_root<1e-40
+            db[:m.nb]=change;residual=db+scatter-factor*linear;br=db-factor*bound;norm=max(np.sum(abs(residual)*weight),1.)
+            rounding=16*np.finfo(LD).eps*np.sum((abs(a['emit'][m.nb:])+abs(b['emit'][m.nb:])+(abs(a['loss'][m.nb:])+abs(b['loss'][m.nb:]))*abs(I[m.nb:]))*weight[m.nb:]*changed[m.nb:,None,None])
+            rounding+=np.sum((mp_round[0]+mp_round[1]*abs(I[:m.nb]))*weight[:m.nb]);used_precision=True
+            np.savez_compressed(self.folder/f'precision-{k}-{factor}.npz',coarse=coarse,fine=fine,center=center,arithmetic=mp_round)
+        if not np.any(z) and not np.any(delta):rounding=0.''')
+    source=source.replace('rounding_over_full_source=float(rounding/norm),',
+        'rounding_over_full_source=float(rounding/norm),used_high_precision=used_precision,precision_comparison=precision_comparison,precision_owner=precision_owner,precision_root=precision_root,')
+    ns=dict(motion.State.point.__globals__);exec(compile(source,__file__,'exec'),ns);motion.State.point=ns['point']
+    nonzero=motion.State.point
+    def point(self,k,half=False):
+        if np.any(self.m.motion[k]):return nonzero(self,k,half)
+        photon=np.zeros_like(self.m.I[k]);escape=np.zeros((3,self.m.n))
+        np.savez_compressed(self.folder/f'point-{k}.npz',t=self.m.t[k],photon=photon,bound=photon,escape=escape)
+        row=dict(classification='Proven',premise='Identical constitutive inputs give exactly zero difference.',
+                 k=k,steps=self.n,passed=True,exact_zero=True,seconds=0.)
+        write(self.folder/f'point-{k}.json',row);return row
+    motion.State.point=point
+    (OUT/'expanded-collision-source.py').write_text(source)
+
+
+def source(pilot):
+    assert read(DIRECT/'production.json')['passed'];initialize_photon();native.deadline(600)
+    motion.CAPS['source_production']=600
+    # Include the actual failed early knot; reuse every passed direct point.
+    if pilot:
+        code=inspect.getsource(motion.source).replace('[0,8,16]','[0,2,8,16]').replace("max(r['seconds'] for r in rows)*28+15","max(r['seconds']/max(len(r.get('rows',[])),1) for r in rows)*26+15")
+        ns=dict(vars(motion));exec(compile(code,__file__,'exec'),ns);ns['source'](True)
+    else:motion.source(False)
+    signal.setitimer(signal.ITIMER_REAL,0.)
+
+
+def source_repair():
+    assert not SOURCE.exists();SOURCE.mkdir()
+    write(OUT/'exact-collision-plan.json',dict(classification='Counterexample candidate',
+        failure='Original k8 coarse source rounding ratio3936079 includes unmodified deep cells with exactly zero conserved change and exactly zero collision difference. Original failed result remains in collision/.',
+        repair='Cellwise exact-zero identity, with support from all four conserved variables plus the advected-inventory displacement xi. Require zero incoming photon/thermal increment and assert all excluded photon/bound/escape changes are exactly zero. Count gross rounding on changed cells; original0.2percent gate retained.',
+        physical_amplitude_unchanged=True,new_native_calls=0,
+        bindings={str(p):sha(p) for p in [Path(__file__),OUT/'registered-gross-collision-producer.py',OUT/'collision/64/point-8.json']}))
+
+
+def source_resolve():
+    assert not SOURCE.exists();SOURCE.mkdir();before=OUT/'collision-exact';reused=[]
+    for n in [64,128]:
+        folder=SOURCE/str(n);folder.mkdir()
+        for p in (before/str(n)).glob('point-*.json'):
+            if read(p)['passed']:
+                for file in [p,p.with_suffix('.npz')]:shutil.copyfile(file,folder/file.name)
+                reused.append(str(p))
+    write(OUT/'resolved-collision-plan.json',dict(classification='Counterexample candidate',
+        failure='The direct early k2 full-amplitude subtraction has rounding indicator0.00263017 and fails the unchanged0.002 gate. Preserve collision-exact/.',
+        repair='Evaluate the same finite collision owner at numerical probes4,8,16; quadratic interpolation through0,s,2s reconstructs the ORIGINAL amplitude at1. Compare4/8 versus8/16 and both propagated arithmetic estimates against0.002. Reuse all accepted direct samples. Same zero incoming photons/thermal response and active mask.',
+        limitation='Sampled interpolation and arithmetic controls only; no uniform cubic remainder or native Jacobian enclosure. The direct-source failure is not reclassified as a pass.',
+        physical_amplitude_unchanged=True,gates_unchanged=True,total_budget_seconds=3100,
+        pilot_knots=[0,2,8,16],source_cap_seconds=600,reused=reused,
+        bindings={str(p):sha(p) for p in [Path(__file__),OUT/'registered-exact-collision-producer.py',before/'64/point-2.json']}))
+
+
+def source_precision():
+    assert not SOURCE.exists();SOURCE.mkdir();reused=[]
+    for n in [64,128]:
+        folder=SOURCE/str(n);folder.mkdir()
+        for p in (OUT/'collision-exact'/str(n)).glob('point-*.json'):
+            if read(p)['passed']:
+                for file in [p,p.with_suffix('.npz')]:shutil.copyfile(file,folder/file.name)
+                reused.append(str(p))
+    write(OUT/'precision-collision-plan.json',dict(classification='Counterexample candidate',
+        prior_failures=['collision/ gross unchanged cells','collision-exact/ early full-amplitude arithmetic','collision-resolved/ quadratic probe arithmetic'],
+        method='Keep direct finite collision evaluation. Only where its arithmetic indicator fails, evaluate the same deep conserved thermal root, cubic EOS/rates, inventory shifts and moving emissivity in40/60 decimal digits; subtract before rounding to longdouble. No numerical or physical amplitude replacement. Atmosphere and scattering keep their original owner.',
+        control='Require40/60 difference<1e-10, base owner<1e-9,60digit thermal step<1e-40; the original arithmetic0.002, number1e-10, projection1e-8 gates remain. Preserve rejected quadratic probe, never use it as a source.',
+        pilot_knots=[0,2,8,16],source_cap_seconds=600,total_cap_seconds=3100,
+        forecast='Pilot has two amplitude diagnostics; production uses one. Twice the slowest measured seconds per factor for26 remaining points plus15s setup must fit600s.',
+        reused=reused,new_native_states=0,uniform_derivative_enclosure=False,
+        bindings={str(p):sha(p) for p in [Path(__file__),Path('verification/retained_deep_collision_precision.py'),OUT/'registered-probe-collision-producer.py',OUT/'source-pilot-resolved-receipt.json']}))
+
+
+def photon(pilot):
+    initialize_photon();native.deadline(1200)
+    # Existing full-path step costs supply the forecast, while the actual
+    # zero photon input remains unchanged in the mechanical-input directory.
+    result=read(Path('retained-native-return150-work/photons/result.json'))
+    write(BEFORE/'photons/result.json',result)
+    motion.CAPS['photon_production']=1200;motion.photon(pilot);signal.setitimer(signal.ITIMER_REAL,0.)
+
+
+def compact():
+    from retained_deep_collision_precision import Pressure
+    assert read(OUT/'pressure-pilot.json')['eligible'];retry=READOUT.exists()
+    if retry:
+        assert not (READOUT/'sources.json').exists() and 'not JSON serializable' in read(OUT/'compact-precision-receipt.json')['error']
+        saved=OUT/'readout-serialization-attempt';assert not saved.exists();saved.mkdir()
+        for folder in [READOUT,GR]:
+            for p in folder.glob('*.npz'):
+                if not p.is_symlink():shutil.copyfile(p,saved/p.name)
+    else:
+        READOUT.mkdir();GR.mkdir()
+        for name in ['production.json','steps-64-reference-128.npz','steps-128-reference-128.npz']:
+            (READOUT/name).symlink_to((MATERIAL/name).resolve())
+    initialize_photon();pressure=Pressure(motion.State());initialize_material(False);native.deadline(60)
+    write(OUT/('pressure-readout-serialization-plan.json' if retry else 'pressure-readout-plan.json'),dict(classification='Counterexample candidate',
+        failure='Original material/sources.json pressure probe exceeds4e5 and is rejected. Its old tangent pressure is not the actual finite-state pressure.',
+        repair='Reuse actual saved material/photon histories. Recover finite pressure directly as in Phase151. Use70/90digit deep conserved roots and the same cubic EOS for deep gas and radial kinetic stress; extended spline owner in atmosphere. Same actual amplitude,0.002 pressure and original GR gates.',
+        pilot=read(OUT/'pressure-pilot.json'),cap_seconds=60,new_evolution_steps=0,
+        bindings={str(p):sha(p) for p in [Path(__file__),Path('verification/retained_deep_collision_precision.py'),MATERIAL/'sources.json',OUT/'registered-first-readout-producer.py']}))
+    paths=[Path(__file__),Path('verification/retained_deep_collision_precision.py')]
+    paths += [folder/f'steps-{n}-reference-128.npz' for folder in [PHOTON,MATERIAL] for n in [64,128]]
+    paths += [Path('retained-metric-return152-work/infinity')/f'charge-{n}-a{a}-r{r}.npz' for n,a,r in [(128,8,8),(64,8,8),(128,4,8),(128,8,4)]]
+    write(OUT/('readout-serialization-bindings.json' if retry else 'readout-bindings.json'),dict(classification='Counterexample candidate',bindings={str(p):sha(p) for p in paths}))
+    code=inspect.getsource(prior.readout)
+    code=prior.replace(code,'stress=SimpleNamespace(pressure=matter.old.pressure)','stress=SimpleNamespace(pressure=pressure)')
+    code=prior.replace(code,"    ns=dict(matter.old.old.previous.source_scope", "    s=s.replace('.tolist()', '.astype(float).tolist()')\n    ns=dict(matter.old.old.previous.source_scope")
+    ns=dict(vars(prior),PHOTON=PHOTON,MATERIAL=READOUT,GR=GR,OUT=OUT,Material=Material,pressure=pressure)
+    exec(compile(code,__file__,'exec'),ns);(OUT/'expanded-precision-readout.py').write_text(code);ns['readout']()
+    write(READOUT/'pressure-precision.json',dict(classification='Counterexample candidate',passed=True,rows=pressure.rows))
+    if retry:
+        for p in saved.glob('*.npz'):
+            current=READOUT/p.name if p.name.startswith('stress-') else GR/p.name
+            a=np.load(p);b=np.load(current);assert a.files==b.files and all(np.array_equal(a[key],b[key]) for key in a.files)
+        write(OUT/'readout-serialization-check.json',dict(classification='Proven',passed=True,scope='Saved pressure/stress/GR-source arrays are identical; diagnostic JSON cast only.'))
+    result=read(OUT/'result.json');result.update(native_pressure_force_applied=False,native_collision_applied=False,
+        native_acoustic_force_applied=True,actual_material_motion_returned_to_photons=True,
+        scope='The free compact increment is current. The helper applied-source/application fields use its historical Phase149 background only as a linearity control; canonical totals use the Phase152 baseline in infinity/.')
+    write(OUT/'result.json',result)
+    signal.setitimer(signal.ITIMER_REAL,0.)
+
+
+def infinity():
+    start=time.monotonic();native.deadline(180);prior.initialize();before=Path('retained-metric-return152-work')
+    s=inspect.getsource(prior.infinity)
+    left=s.index("    original=dict(np.load(EOS/'applied-charge.npz'))")
+    right=s.index('    for n,a,r in [(128,8,8)',left)
+    s=s[:left]+"    prior=dict(np.load(BEFORE/'infinity/charge-128-a8-r8.npz'));alpha=-m.K/m.M;paths=[];rows=[]\n"+s[right:]
+    s=prior.replace(s,"background=np.load(CURRENT/f'infinity/completed/retained-128-a{a}-r{r}.npz')",
+        "background=np.load(BEFORE/f'infinity/charge-{n}-a{a}-r{r}.npz')")
+    s=s.replace("background['exterior']","background['normalized_exterior']").replace("background['arrived']","background['arrived_energy_erg']")
+    s=prior.replace(s,"previous=(baseline+d['normalized_exterior_parts'][:,0]+alpha*eps0)/(1-eps0)","previous=background['normalized']")
+    s=prior.replace(s,"compact=baseline+wave['free_scalar']","compact=background['compact'].astype(LD)+wave['free_scalar']")
+    s=s.replace('native_return','acoustic_return')
+    ns=dict(vars(prior),OUT=OUT,GR=GR,PHOTON=PHOTON,BEFORE=before,CAPS=dict(infinity=180))
+    exec(compile(s,__file__,'exec'),ns);(OUT/'expanded-infinity.py').write_text(s);ns['infinity']()
+    result=read(OUT/'infinity/result.json');result.update(native_acoustic_force_applied=True,
+        fixed_inventory_native_acoustic_samples=True,uniform_native_derivative_enclosure=False,
+        acoustic_change_applied_to_photons_and_free_material=True,previous_geometry_charge_preserved=True,
+        native_deep_CFL_updated=True,deep_flux_change_from_native_K=False,atmospheric_HLL_wave_speeds_updated=True,
+        response_full_native_Jacobian_updated=False,same_inventory_static_comparison=False,
+        observational_signal_detected=False,seconds=time.monotonic()-start)
+    write(OUT/'infinity/result.json',result);print(json.dumps(result),flush=True);signal.setitimer(signal.ITIMER_REAL,0.)
+
+
+if __name__=='__main__':
+    action=sys.argv[1];start=time.monotonic();cpu=time.process_time();error=None
+    assert not (OUT/f'{action}-receipt.json').exists(),'Preserve completed receipts'
+    resource.setrlimit(resource.RLIMIT_AS,(3*1024**3,3*1024**3))
+    try:
+        if action in ['direct-pilot','direct','material-pilot','material']:material(action.startswith('direct'),action.endswith('pilot'))
+        elif action in ['direct-admit','material-admit']:admit(action.startswith('direct'))
+        elif action in ['source-pilot','source','source-pilot-exact','source-exact','source-pilot-resolved','source-resolved','source-pilot-precision','source-precision']:source('pilot' in action)
+        elif action in ['photon-pilot','photon']:photon(action.endswith('pilot'))
+        elif action in ['compact-precision','compact-resume']:compact()
+        elif action=='infinity-resume':infinity()
+        else:globals()[action]()
+    except Exception as exc:error=repr(exc);raise
+    finally:
+        if OUT.exists():
+            receipt=OUT/f'{action}-receipt.json';assert not receipt.exists()
+            write(receipt,dict(action=action,seconds=time.monotonic()-start,CPU_seconds=time.process_time()-cpu,
+                peak_RSS_bytes=1024*resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,error=error,source_sha256=sha(__file__)))

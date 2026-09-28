@@ -1,0 +1,31 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Quantify the response of the directly evaluated atomic LTE candidate on the inherited photon cells. This conditional sensitivity calculation does not require or assert that its native population/emission certification passed.",
+  "decision": "Determine whether switching to the direct-T independent atomic spectrum changes the response materially and whether its source-grid/time error is below1e-3. Do not interpret model difference as TOPS interpolation error or replace the canonical same-EOS verdict.",
+  "method": "Reuse collective Maxwell/RPA kernel and saved TOPS response. Build scattering matrix once, change only absorption diagonals and material exchange. LTE source is chi*B by declared model, NOT the native emission column.",
+  "forecast_seconds": [
+    160,
+    350
+  ],
+  "hard_seconds": 480,
+  "memory_GB": 4,
+  "CPU_workers": 1,
+  "GPU": false,
+  "new_stellar_steps": 0,
+  "gates": {
+    "time_order": 1.8,
+    "time_difference": 0.001,
+    "source_grid_difference": 0.001,
+    "balance": 1e-09,
+    "solver": 1e-11
+  },
+  "bindings": {
+    "verification/def_photon_actual_opacity_validate.py": "b6aa8aca9a9d54eafce38fba6c0bcbfbd1bda180497b31794a4ffcf46ad529be",
+    "verification/def_photon_actual_opacity.py": "7ba60e1b5443f6ade20d69a67e524c68080ee8b6b737f9fcaafd239cfd59abfa",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-actual-opacity/bank.npz": "8ef0705617be986c255773121ab7f696a1fdbc032f49007188351f0071ffad7d",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-actual-opacity/spectral-audit.json": "c7ed9958b527790479d38d0ee8a75e507db1611590addf90542a20a040de60e5",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-actual-opacity/populations.json": "2cd663ea55c92db659131ce39cbe6bf096c873571eece8d90bbffe79f99bdd0c",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-collective/continuum/result.json": "20ba2a33ec8b12161e593a4cc12bc5d45ea903160e56bb3a3a4a8b3e19bf57b1",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-collective/continuum/q-grid.npz": "a421289fd7658833d21c00d105dd0bf0853317b49cc87b20e34c8a2a790bda2d"
+  }
+}

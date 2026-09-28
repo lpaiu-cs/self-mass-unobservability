@@ -1,0 +1,562 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "verdict": "NEGATIVE_CHARGE_RETAINED_WITH_ONE_RETURN_PHOTON_BOUNDARY",
+  "actual_same_joint_solution_GR_computed": true,
+  "actual_steps": [
+    119,
+    231
+  ],
+  "full_declared_period": true,
+  "same_horizon_seconds": 0.0034344311179287023,
+  "photon_geometric_boundary_applied": true,
+  "geometric_boundary_times": 575,
+  "geometric_boundary_knots_bitwise": true,
+  "maximum_geometric_lapse_over_applied_outer_lapse": 0.0023742058708556037,
+  "internal_material_gate": {
+    "Etilde": 1e-13,
+    "H": 2e-13,
+    "B": 1e-13,
+    "S": 1e-13
+  },
+  "internal_acceptance_changed_for_H": true,
+  "H_gate_user_approval": "2026-09-26: the user chose option1 of the report (H internal gate2e-13).",
+  "H_gate_rows": {
+    "64": {
+      "steps": 119,
+      "proposals_used": {
+        "1": 119
+      },
+      "maximum_H": 1.0039365233255706e-13,
+      "steps_with_H_above_1e_13": 1,
+      "maximum_other_material": 8.399071211845745e-16
+    },
+    "128": {
+      "steps": 231,
+      "proposals_used": {
+        "1": 231
+      },
+      "maximum_H": 5.926852847826677e-14,
+      "steps_with_H_above_1e_13": 0,
+      "maximum_other_material": 4.884821350412917e-16
+    }
+  },
+  "attempt_H_material_relative": {
+    "first": [
+      1.0039365233255706e-13,
+      1.0030008581462171e-13,
+      1.0023163493148854e-13
+    ],
+    "newton12": [
+      1.0039365233255706e-13,
+      1.0030008581462171e-13,
+      1.0023163493148854e-13,
+      1.0028213175774518e-13,
+      1.0027393184787444e-13,
+      1.002821811882515e-13,
+      1.0027393186556226e-13,
+      1.002821811847746e-13,
+      1.002739318595095e-13,
+      1.0028218119761704e-13,
+      1.0027393184877628e-13,
+      1.0028218119435277e-13
+    ]
+  },
+  "attempts": {
+    "first": "native-photon-boundary265-work",
+    "name_error": "native-photon-boundary-newton265-work",
+    "newton12": "native-photon-boundary-newton265b-work",
+    "hgate": "native-photon-boundary-hgate265-work",
+    "long_double_log": "native-photon-boundary-ld265-work"
+  },
+  "attempt_npz_sha256": {
+    "native-photon-boundary265-work/last-pair-128.npz": "58c42d3a1e9df7bc123732c7dcd4ed5ac02f3edb04881e43cfaf7e1ecbebf99e",
+    "native-photon-boundary265-work/last-pair-64.npz": "d205fe84f6c14044c9f53f96f9c2ec3cb41ab6467ec46114df7e98b657b17e98",
+    "native-photon-boundary265-work/metric/metric-128-g4.npz": "8f14118256c706b899bf221659c97d1a34f2a91b5bfcafaf41339a2486ba2f7d",
+    "native-photon-boundary265-work/metric/metric-128-g8.npz": "733d8a6fb45912872b2a90b610e76afe244ff4ff2396a0e0389e7e5b363d6e43",
+    "native-photon-boundary265-work/metric/metric-64-g8.npz": "0e7171ea0c988712db0b9a84335c217603aefd62f4f346fcb2868ac9e63f8ffe",
+    "native-photon-boundary265-work/rejected-joint-stage.npz": "a9e4db56a9ba41f62db97320b7c26aa69a469153005a5e312fcd1fac62e9244a",
+    "native-photon-boundary-newton265-work/metric/metric-128-g4.npz": "8f14118256c706b899bf221659c97d1a34f2a91b5bfcafaf41339a2486ba2f7d",
+    "native-photon-boundary-newton265-work/metric/metric-128-g8.npz": "733d8a6fb45912872b2a90b610e76afe244ff4ff2396a0e0389e7e5b363d6e43",
+    "native-photon-boundary-newton265-work/metric/metric-64-g8.npz": "0e7171ea0c988712db0b9a84335c217603aefd62f4f346fcb2868ac9e63f8ffe",
+    "native-photon-boundary-newton265b-work/last-pair-128.npz": "953823846338850a7526206bc7f4ba41bd3b71edfca5c9a33e15540ba1669838",
+    "native-photon-boundary-newton265b-work/last-pair-64.npz": "ea32b69f863fcda2f60e60f49c088dd9bc3e7c2df344847578ce380443e69cab",
+    "native-photon-boundary-newton265b-work/metric/metric-128-g4.npz": "8f14118256c706b899bf221659c97d1a34f2a91b5bfcafaf41339a2486ba2f7d",
+    "native-photon-boundary-newton265b-work/metric/metric-128-g8.npz": "733d8a6fb45912872b2a90b610e76afe244ff4ff2396a0e0389e7e5b363d6e43",
+    "native-photon-boundary-newton265b-work/metric/metric-64-g8.npz": "0e7171ea0c988712db0b9a84335c217603aefd62f4f346fcb2868ac9e63f8ffe",
+    "native-photon-boundary-newton265b-work/rejected-joint-stage.npz": "b1035581e8dcf7a6782469b0879a3880d768830b6ed691d3a1b90c80b62be369",
+    "native-photon-boundary-hgate265-work/last-pair-128.npz": "4f4a7115be1571d880b2cfaf8d4a2eb0a6160233021d39d47e188646635a3b4d",
+    "native-photon-boundary-hgate265-work/last-pair-64.npz": "de96fc8bb1b9cf91165eebc47a216d86ec2bde6151805dc3469d65cc904136a2",
+    "native-photon-boundary-hgate265-work/metric/metric-128-g4.npz": "8f14118256c706b899bf221659c97d1a34f2a91b5bfcafaf41339a2486ba2f7d",
+    "native-photon-boundary-hgate265-work/metric/metric-128-g8.npz": "733d8a6fb45912872b2a90b610e76afe244ff4ff2396a0e0389e7e5b363d6e43",
+    "native-photon-boundary-hgate265-work/metric/metric-64-g8.npz": "0e7171ea0c988712db0b9a84335c217603aefd62f4f346fcb2868ac9e63f8ffe",
+    "native-photon-boundary-hgate265-work/recovered-128.npz": "a4fe44535ca92e7a7b60b2fe0239fa1aa55818df68900dcc80fadfc1f8aada01",
+    "native-photon-boundary-hgate265-work/recovered-64.npz": "1370148bec0f35276d2008946c2296f9582a642f8c21c74044734b7068e545e6",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-1-128-checkpoint.npz": "966686a0a2c07e9e279f0716fd5cf65424c0f042a5358a64cc97b7ad4638da33",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-1-128.npz": "e4f1cc088db6e7d37674f0101309ee89171cf5dea701e5a04074afe0cc66fd50",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-1-64-checkpoint.npz": "dcaca003c179b91b09a9613d1c578a2273624484431b5b2870e1d7e2b06426da",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-1-64.npz": "ab2dde35bcf873ebb40e91858ada15c8cfdadde0986a33ab1499f5c73a1c8ddb",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-10-128-checkpoint.npz": "960a75ec772cb8d261beb336acf4a2be5fc5dc37dd3fae459308bcf8a0f91921",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-10-128.npz": "134dcba4c44def008263fab88577cc3f7f4d070c3843e1fa9fecc21065f74a16",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-10-64-checkpoint.npz": "e5b2b7defbeadb1221a86ed665dbfdd7e6c36f8b8fd9177d60cda84a8c482f7f",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-10-64.npz": "b6b6ebf549c60ae90ab027a0d205ddb1d355192d6598614338a190d3472f0fc0",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-11-128-checkpoint.npz": "db23df661f4813792ec11beeaf9c9e3379a33f62d48d6cb038bbae20ed271813",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-11-128.npz": "8e88432d608d3c8e2e3acfb9d888bb0fff4ef1e01833edd1e1138ddda58246d9",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-11-64-checkpoint.npz": "4e8c6797a157c5d22dfb233e354237d5ca7e851c3bb034e84473ac010eaf6017",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-11-64.npz": "6d1bcdb4f914362de06b718c3fc017652a06b9a36f4656b5527735f406e27ff9",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-12-128-checkpoint.npz": "61e302ddf79baba5c3509f8f48c10cffe9b8035a9e92e2e993af8af140b660a4",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-12-128.npz": "ee9bf36fd5ed4f7d527638ea347ece481097ccdb3bb339fd448b17bc215d1094",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-12-64-checkpoint.npz": "dac447d00ede9cf35e22cd5a1609ed2ffecde0f41a79224e75353d4bc3b96542",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-12-64.npz": "0e4ef362e001436dc48b99ea17bb11ee92e6cf48d16a8e18a9793aa831f6793f",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-13-128-checkpoint.npz": "574e3f96c9ae433d63dc423f1ff07d3548fdd9afc4dad1f374b48cf5068750c6",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-13-128.npz": "37eeeca8bf9ed9b64b532f5c2217e86c49399a6cefbe8207d909af25bde574d4",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-13-64-checkpoint.npz": "75b7b082c89be04b812b47b97f80967f1e4add898a293471b483e8ee9f413a5c",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-13-64.npz": "c9f5935d045024d688abb3b36c9466f1a60b87a40c43b973a0f0d7f7728ffb47",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-14-128-checkpoint.npz": "c7bf86633124b18d58324fa429b663508a332f7e035c61970b9090d1c15063bb",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-14-128.npz": "6d7e7cdb0d48688c44ce82fe8debd479de8829232a702c79acc48b6b9660fc50",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-14-64-checkpoint.npz": "af3f28a88529741084a7f59831c50b15267d7b3bf9954acaa3d1ab638fd285d5",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-14-64.npz": "3133f07e43e0390217523ff7ee98fc8e3babdb598bfdef77f870c03dccce9c1f",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-15-128-checkpoint.npz": "7923f0f2ba5741f1995d7ef0396a065dcd96f227335fcf613a2609f3806f4fa1",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-15-128.npz": "cad95f549c0fed46d294b369c69bb585ec3c63147bd566f7ec69157f23b7e6dd",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-15-64-checkpoint.npz": "6f8f4ce2b45e0d8183d64ba1704869a11ed89be9f8b1a3d1b47aff18f0b1cfec",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-15-64.npz": "e8996110d2a9162d764a6fd72f1b923e622190ac07b76dff7399882af585f3b4",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-2-128-checkpoint.npz": "62e84f5670b0be097169bf1e32f6a5ac9e18c324e8aa4d4c9e3d7d8e76d57a90",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-2-128.npz": "0bb627ea7e2f642aaa3fe2eed1e21e5aee7ed2266f44411ca7817490e723f675",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-2-64-checkpoint.npz": "27b0b7adc8bf161c6bd83ec67d57ee1c35e376703f774c02a30768ceb741500f",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-2-64.npz": "36a068bc73dfe47d2cbdf6af0dd7b654ce86417b4e0a4f1cac88307932b3989a",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-3-128-checkpoint.npz": "51434e08bedc7875bc4f771e11e10dedf252b1b0e790ba4c80983adb96096cc8",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-3-128.npz": "11a6f55cdf523baa8b0fa9f27fa87d6cceb35968c325e0e574e4aa40054c487f",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-3-64-checkpoint.npz": "7c98f443b949d534e170512dcc4af23f08cac91fe365317b473f3c0e9eb3e770",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-3-64.npz": "1acfcd244a6ec5126e05d429ed378325e2333f3837589ba49244439d01b8cf60",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-4-128-checkpoint.npz": "961450d95d8181430c450227de1a1316c54c2e85491fd7fdbb24bdfdcfe9df67",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-4-128.npz": "f13e6e5fb2f3368f7e82c0ece0040900de72580f6ddb8b733423b40eef4128ac",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-4-64-checkpoint.npz": "671e84f13e2b3beeb153bbe0cc022eb8f5f6b2a9d8e82ab7c5d243e5cc92df85",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-4-64.npz": "f8d7e73f4d3af262fb0cf8b7ce72672779eda6d5599b93421c1fcdb82ace38c3",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-5-128-checkpoint.npz": "94b2ec445c28d1a7ae292b023a9046f6c58f13e2b3b2c83a0f813ab0a5b87742",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-5-128.npz": "4aedebfe71db5d8aa9e2a7db85b37f08aa05dde0ad453bb74e3f6eebcbbd285e",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-5-64-checkpoint.npz": "49efaa33f9aa1271fdb60c5e8496df89180f3b856958f15286e5701e5c3bf423",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-5-64.npz": "916f17da75b56b59e3d1b2be49545b7d6f96e15fce7ce5f4ba3be360ac2dfb88",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-6-128-checkpoint.npz": "6b8d4d9a17c6047d002ba49bfab3fa43ce10756326a13523efe26c2a9bb9c3a2",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-6-128.npz": "7c9bddfa8a65cb3ccbbc034790d28ee244667cc9d4a8eab627a613950e7ffd59",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-6-64-checkpoint.npz": "f402a9ce089f25ec9db46f5682b7b3170821671d8cdfc18920d8abf09ffc7eb9",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-6-64.npz": "42f99efeda0368dffc394b1514eaa45064854179beb1b9cd1a7e46f18c8aa9cf",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-7-128-checkpoint.npz": "1fda20e72d04b23cdff2c25fb3624bf2e2770c929a4a94b517667194d58e2311",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-7-128.npz": "d336d709cbde0efc01c3ebf16f6fda227a528b00374c879dcf2e6ee15562a457",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-7-64-checkpoint.npz": "3e4bef89de7fb5d0d2656e0a70db164d806df6bafc6a04ac1bc7aa4ee91ce3b0",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-7-64.npz": "e7f4b3abefd7a8952c1cf84b08bceb27bd209417b6b985b85cff00693b3149d4",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-8-128-checkpoint.npz": "68b857b2bb3eec4052feb09d5171a630a82af4d1f72e449f50b8bc6876df5262",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-8-128.npz": "0863c77faad5a2b14b26a644e071f716aa6abf999ef3af756b1c23c7133b8978",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-8-64-checkpoint.npz": "b0236dc9ef522fdd2c0f61e53131d2e478e457bae67f9a19b8231494c8583d24",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-8-64.npz": "d7c72aa2ee37fa0cc4bb51d060ecb40fb11e90a3f1c6d096301b3f9b51a219a4",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-9-128-checkpoint.npz": "38d52e95bfcc9dc78f37ea755ca2f5db2650b23647dc507e92db5b4e9c4e3fda",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-9-128.npz": "48bdb5cd12b62a3a062cb40b16482d678486f49c46a7cdf9b34932e77e5a8fae",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-9-64-checkpoint.npz": "a461a1d139db9938fc42ed45dcf7b8cc205126f11baaf6b73503d0e9678a8d2c",
+    "native-photon-boundary-hgate265-work/sweep-1/photons/interval-9-64.npz": "d6bd4554819bd935c1432c3909d9f730fa4c31c5dec67fe3a9007471e5a4bddc",
+    "native-photon-boundary-ld265-work/last-pair-128.npz": "30bdd39e20ae3f34596152a781d539fcf82b35c58878b332870430112a7a1d3c",
+    "native-photon-boundary-ld265-work/last-pair-64.npz": "240cf3f2aa068afd828498c4d770cfcb70e53a2947c05a0f7ab6e15b8dc95ca4",
+    "native-photon-boundary-ld265-work/metric/metric-128-g4.npz": "8f14118256c706b899bf221659c97d1a34f2a91b5bfcafaf41339a2486ba2f7d",
+    "native-photon-boundary-ld265-work/metric/metric-128-g8.npz": "733d8a6fb45912872b2a90b610e76afe244ff4ff2396a0e0389e7e5b363d6e43",
+    "native-photon-boundary-ld265-work/metric/metric-64-g8.npz": "0e7171ea0c988712db0b9a84335c217603aefd62f4f346fcb2868ac9e63f8ffe",
+    "native-photon-boundary-ld265-work/prefix-recovered-128.npz": "a4fe44535ca92e7a7b60b2fe0239fa1aa55818df68900dcc80fadfc1f8aada01",
+    "native-photon-boundary-ld265-work/prefix-recovered-64.npz": "1370148bec0f35276d2008946c2296f9582a642f8c21c74044734b7068e545e6",
+    "native-photon-boundary-ld265-work/sweep-1/photons/identity-128.npz": "fbddd59a3a5c76fa29976d886a57a64a0dca442015adde9e323579ec765cc7a5",
+    "native-photon-boundary-ld265-work/sweep-1/photons/identity-64.npz": "51289180ca4ad434fce6f40c9746a5ec0c9c83344a442baee6f3d1a8f430efc4",
+    "native-photon-boundary-ld265-work/sweep-1/photons/interval-1-128.npz": "e4f1cc088db6e7d37674f0101309ee89171cf5dea701e5a04074afe0cc66fd50",
+    "native-photon-boundary-ld265-work/sweep-1/photons/interval-1-64.npz": "ab2dde35bcf873ebb40e91858ada15c8cfdadde0986a33ab1499f5c73a1c8ddb",
+    "native-photon-boundary-ld265-work/sweep-1/photons/interval-10-128.npz": "134dcba4c44def008263fab88577cc3f7f4d070c3843e1fa9fecc21065f74a16",
+    "native-photon-boundary-ld265-work/sweep-1/photons/interval-10-64.npz": "b6b6ebf549c60ae90ab027a0d205ddb1d355192d6598614338a190d3472f0fc0",
+    "native-photon-boundary-ld265-work/sweep-1/photons/interval-11-128.npz": "8e88432d608d3c8e2e3acfb9d888bb0fff4ef1e01833edd1e1138ddda58246d9",
+    "native-photon-boundary-ld265-work/sweep-1/photons/interval-11-64.npz": "6d1bcdb4f914362de06b718c3fc017652a06b9a36f4656b5527735f406e27ff9",
+    "native-photon-boundary-ld265-work/sweep-1/photons/interval-12-128.npz": "ee9bf36fd5ed4f7d527638ea347ece481097ccdb3bb339fd448b17bc215d1094",
+    "native-photon-boundary-ld265-work/sweep-1/photons/interval-12-64.npz": "0e4ef362e001436dc48b99ea17bb11ee92e6cf48d16a8e18a9793aa831f6793f",
+    "native-photon-boundary-ld265-work/sweep-1/photons/interval-13-128.npz": "37eeeca8bf9ed9b64b532f5c2217e86c49399a6cefbe8207d909af25bde574d4",
+    "native-photon-boundary-ld265-work/sweep-1/photons/interval-13-64.npz": "c9f5935d045024d688abb3b36c9466f1a60b87a40c43b973a0f0d7f7728ffb47",
+    "native-photon-boundary-ld265-work/sweep-1/photons/interval-14-128.npz": "6d7e7cdb0d48688c44ce82fe8debd479de8829232a702c79acc48b6b9660fc50",
+    "native-photon-boundary-ld265-work/sweep-1/photons/interval-14-64.npz": "3133f07e43e0390217523ff7ee98fc8e3babdb598bfdef77f870c03dccce9c1f",
+    "native-photon-boundary-ld265-work/sweep-1/photons/interval-15-128.npz": "cad95f549c0fed46d294b369c69bb585ec3c63147bd566f7ec69157f23b7e6dd",
+    "native-photon-boundary-ld265-work/sweep-1/photons/interval-15-64.npz": "e8996110d2a9162d764a6fd72f1b923e622190ac07b76dff7399882af585f3b4",
+    "native-photon-boundary-ld265-work/sweep-1/photons/interval-2-128.npz": "0bb627ea7e2f642aaa3fe2eed1e21e5aee7ed2266f44411ca7817490e723f675",
+    "native-photon-boundary-ld265-work/sweep-1/photons/interval-2-64.npz": "36a068bc73dfe47d2cbdf6af0dd7b654ce86417b4e0a4f1cac88307932b3989a",
+    "native-photon-boundary-ld265-work/sweep-1/photons/interval-3-128.npz": "11a6f55cdf523baa8b0fa9f27fa87d6cceb35968c325e0e574e4aa40054c487f",
+    "native-photon-boundary-ld265-work/sweep-1/photons/interval-3-64.npz": "1acfcd244a6ec5126e05d429ed378325e2333f3837589ba49244439d01b8cf60",
+    "native-photon-boundary-ld265-work/sweep-1/photons/interval-4-128.npz": "f13e6e5fb2f3368f7e82c0ece0040900de72580f6ddb8b733423b40eef4128ac",
+    "native-photon-boundary-ld265-work/sweep-1/photons/interval-4-64.npz": "f8d7e73f4d3af262fb0cf8b7ce72672779eda6d5599b93421c1fcdb82ace38c3",
+    "native-photon-boundary-ld265-work/sweep-1/photons/interval-5-128.npz": "4aedebfe71db5d8aa9e2a7db85b37f08aa05dde0ad453bb74e3f6eebcbbd285e",
+    "native-photon-boundary-ld265-work/sweep-1/photons/interval-5-64.npz": "916f17da75b56b59e3d1b2be49545b7d6f96e15fce7ce5f4ba3be360ac2dfb88",
+    "native-photon-boundary-ld265-work/sweep-1/photons/interval-6-128.npz": "7c9bddfa8a65cb3ccbbc034790d28ee244667cc9d4a8eab627a613950e7ffd59",
+    "native-photon-boundary-ld265-work/sweep-1/photons/interval-6-64.npz": "42f99efeda0368dffc394b1514eaa45064854179beb1b9cd1a7e46f18c8aa9cf",
+    "native-photon-boundary-ld265-work/sweep-1/photons/interval-7-128.npz": "d336d709cbde0efc01c3ebf16f6fda227a528b00374c879dcf2e6ee15562a457",
+    "native-photon-boundary-ld265-work/sweep-1/photons/interval-7-64.npz": "e7f4b3abefd7a8952c1cf84b08bceb27bd209417b6b985b85cff00693b3149d4",
+    "native-photon-boundary-ld265-work/sweep-1/photons/interval-8-128.npz": "0863c77faad5a2b14b26a644e071f716aa6abf999ef3af756b1c23c7133b8978",
+    "native-photon-boundary-ld265-work/sweep-1/photons/interval-8-64.npz": "d7c72aa2ee37fa0cc4bb51d060ecb40fb11e90a3f1c6d096301b3f9b51a219a4",
+    "native-photon-boundary-ld265-work/sweep-1/photons/interval-9-128.npz": "48bdb5cd12b62a3a062cb40b16482d678486f49c46a7cdf9b34932e77e5a8fae",
+    "native-photon-boundary-ld265-work/sweep-1/photons/interval-9-64.npz": "d6bd4554819bd935c1432c3909d9f730fa4c31c5dec67fe3a9007471e5a4bddc"
+  },
+  "scientific_gates_changed": false,
+  "hgate_attempt": {
+    "directory": "native-photon-boundary-hgate265-work",
+    "error": "AssertionError(('Four-moment linear residual', 1.2530147313933198e-12, [np.longdouble('5.6475004603113942324e-09'), np.longdouble('4.917325293662642833e-10'), np.longdouble('1.2443124362216265468e-16'), np.longdouble('5.269052490594295137e-16')]))",
+    "coarse_accepted_steps": 118,
+    "fine_accepted_steps": 219,
+    "double_refinement_ratio_range": [
+      0.0117,
+      450.67
+    ]
+  },
+  "first_long_double_attempt": {
+    "directory": "native-photon-boundary-ld265-work",
+    "error": "TypeError('Object of type bool is not JSON serializable')",
+    "coarse_accepted_steps": 118,
+    "fine_accepted_steps": 230,
+    "cause": "Implementation error in the fallback log (numpy.bool_ passed to json) at the first fallback, fine step231. The bool came from a correction row whose vector residual was below 1e-14 while a physical moment was not, so at least one long-double correction had run; the write raised before the refine returned or raised, so the outcome of that fallback was not recorded. Its restart checks passed. Fixed with bool(); the production refine was then run on the rebuilt coarse step119 system in a scratch directory, including its log write (the first such test stopped on a KeyError in its own last bookkeeping line after the refine had returned; preserved, harness line fixed and rerun). A scratch replay of the full fine step231 stage runs as a separate diagnostic."
+  },
+  "long_double_fallback": {
+    "method": "Flexible GMRES(80) in long double with the existing double-precision preconditioner and iterative refinement on the long-double true residual; at most 12 corrections of 2 cycles, inner relative target 1e-10.",
+    "order": "short right-preconditioned proposals, then the original double solver, then this fallback; systems accepted earlier are unchanged.",
+    "probe": {
+      "system": "coarse step119 of the H-gate run, rebuilt from its saved last pair; first GMRES call reproduced bitwise",
+      "corrections": 7,
+      "final": {
+        "correction": 7,
+        "relative": 1.0462902671615087e-15,
+        "moments": [
+          2.9450333879996733e-16,
+          2.207118273297987e-17,
+          1.1579954839795066e-20,
+          1.1787117574936113e-20
+        ],
+        "gas": [
+          1.958092808207207e-18,
+          6.1791759804130605e-15,
+          2.261950990173602e-20,
+          1.0553175546167647e-20,
+          5.6091262174493784e-18,
+          1.7094642844011402e-14,
+          1.2716574734757321e-21,
+          1.2946346686115097e-20
+        ],
+        "passed": true
+      },
+      "stage_passed": true,
+      "stage_seconds": 143.68268119099997
+    }
+  },
+  "long_double_fallback_events": {
+    "coarse": [
+      {
+        "actual_step": 119,
+        "accepted": true,
+        "corrections": 2,
+        "seconds": 20.78681090000009,
+        "final": {
+          "correction": 2,
+          "relative": 1.0693313689664866e-15,
+          "moments": [
+            1.7813152468072056e-17,
+            1.3862864746096171e-18,
+            1.4566361446691257e-21,
+            1.6347413747326148e-23
+          ],
+          "material_relative": [
+            6.309491077221275e-20,
+            3.6517021316098557e-17,
+            1.6547369718720335e-21,
+            6.850941200595772e-25,
+            6.038562357763297e-20,
+            1.5219766761235984e-16,
+            1.2716574726244956e-21,
+            3.106140819307454e-23
+          ],
+          "passed": true
+        }
+      }
+    ],
+    "fine": [
+      {
+        "actual_step": 231,
+        "accepted": true,
+        "corrections": 2,
+        "seconds": 32.523474161000195,
+        "final": {
+          "correction": 2,
+          "relative": 6.760064731223136e-16,
+          "moments": [
+            2.6949206996072507e-19,
+            2.3575966022400904e-20,
+            6.280945598677439e-22,
+            3.313278781197336e-22
+          ],
+          "material_relative": [
+            3.1752064630873476e-21,
+            1.279229807065863e-17,
+            1.2428076357239446e-21,
+            3.515911788787456e-22,
+            1.9633439413295608e-20,
+            1.9387623407737873e-17,
+            3.398850302637732e-23,
+            3.1168649389647236e-22
+          ],
+          "passed": true
+        }
+      }
+    ]
+  },
+  "long_double_tests": {
+    "refine_first": {
+      "started": "16:53:02",
+      "passed": false,
+      "json_written": false,
+      "error": "KeyError('linear')",
+      "finished": "16:55:53"
+    },
+    "refine": {
+      "started": "17:14:18",
+      "passed": true,
+      "json_written": true,
+      "corrections": 7,
+      "seconds": 155.46853286099997,
+      "final": {
+        "correction": 7,
+        "relative": 1.0462902671615087e-15,
+        "moments": [
+          2.9450333879996733e-16,
+          2.207118273297987e-17,
+          1.1579954839795066e-20,
+          1.1787117574936113e-20
+        ],
+        "material_relative": [
+          1.958092808207207e-18,
+          6.1791759804130605e-15,
+          2.261950990173602e-20,
+          1.0553175546167647e-20,
+          5.6091262174493784e-18,
+          1.7094642844011402e-14,
+          1.2716574734757321e-21,
+          1.2946346686115097e-20
+        ],
+        "passed": true
+      },
+      "solution_dtype": "float128",
+      "linear_entries": 1,
+      "finished": "17:17:20"
+    },
+    "fine231_replay": {
+      "classification": "Counterexample candidate",
+      "started": "17:14:37",
+      "stage_passed": true,
+      "init_seconds": 16.547321738,
+      "clock_steps": 231,
+      "t": 0.0034210153713742936,
+      "h": 1.3415746554408993e-05,
+      "last_end": 0.0034210153713742936,
+      "stage_seconds": 761.030606724,
+      "scratch_calls": 24,
+      "first_call_matches_recorded": [
+        108
+      ],
+      "recorded_solves": [
+        {
+          "begin": 85,
+          "end": 93,
+          "seconds": 97.82322654500013,
+          "original_fallback": false
+        },
+        {
+          "begin": 93,
+          "end": 108,
+          "seconds": 196.67009434900024,
+          "original_fallback": true
+        },
+        {
+          "begin": 108,
+          "end": 132,
+          "seconds": 691.6525952689999,
+          "original_fallback": true
+        }
+      ],
+      "bitwise_calls_from_match": 24,
+      "compared_calls": 24,
+      "long_double_events": [
+        {
+          "classification": "Counterexample candidate",
+          "actual_step": 1,
+          "accepted": true,
+          "corrections": 2,
+          "seconds": 36.02277188599999,
+          "rows": [
+            {
+              "correction": 0,
+              "relative": 1.4786443777561076e-13,
+              "moments": [
+                4.637257256304105e-09,
+                3.2479769808716034e-10,
+                3.534464207247403e-17,
+                3.2107885321300936e-16
+              ],
+              "material_relative": [
+                1.7562263940415987e-11,
+                5.746092730762415e-09,
+                7.532974020017831e-18,
+                1.821918277115249e-16,
+                2.5953611805675912e-11,
+                3.595458234300447e-08,
+                6.222397991283419e-17,
+                4.557031958946035e-16
+              ],
+              "passed": false,
+              "fgmres_iterations": 33,
+              "fgmres_seconds": 10.998860516000036
+            },
+            {
+              "correction": 1,
+              "relative": 9.907695728772173e-16,
+              "moments": [
+                2.933486953939097e-12,
+                2.0295667539410532e-13,
+                3.46848272510942e-20,
+                3.394738846571221e-19
+              ],
+              "material_relative": [
+                6.444447516358112e-15,
+                2.6093858604369082e-12,
+                2.4041107521382757e-20,
+                8.949300835361282e-20,
+                2.4605605971914603e-14,
+                2.1487827949827575e-11,
+                4.4971737692906193e-20,
+                5.817824153647465e-19
+              ],
+              "passed": false,
+              "fgmres_iterations": 23,
+              "fgmres_seconds": 3.582792495000035
+            },
+            {
+              "correction": 2,
+              "relative": 6.760064731223136e-16,
+              "moments": [
+                2.6949206996072507e-19,
+                2.3575966022400904e-20,
+                6.280945598677439e-22,
+                3.313278781197336e-22
+              ],
+              "material_relative": [
+                3.1752064630873476e-21,
+                1.279229807065863e-17,
+                1.2428076357239446e-21,
+                3.515911788787456e-22,
+                1.9633439413295608e-20,
+                1.9387623407737873e-17,
+                3.398850302637732e-23,
+                3.1168649389647236e-22
+              ],
+              "passed": true
+            }
+          ]
+        }
+      ],
+      "finished": "17:27:07"
+    }
+  },
+  "reused_prefix_intervals": 15,
+  "evolved_interval": 16,
+  "reused_actual_steps": {
+    "64": 111,
+    "128": 215
+  },
+  "actual_npz_sha256": {
+    "last-pair-128.npz": "96487b15a9163dd3c7fcb2387de8068d3a545c1b97d1e62b408579400f229692",
+    "last-pair-64.npz": "536a5a6e080cbdabba6e947cbf9ff0aa93488c37c765ab3f084a777f4b7c0e3b",
+    "prefix-recovered-128.npz": "a4fe44535ca92e7a7b60b2fe0239fa1aa55818df68900dcc80fadfc1f8aada01",
+    "prefix-recovered-64.npz": "1370148bec0f35276d2008946c2296f9582a642f8c21c74044734b7068e545e6"
+  },
+  "paired_time_relative": 9.664674151549863e-05,
+  "dense_stage_max": {
+    "64": 1.0019791468773449e-13,
+    "128": 5.926862999516333e-14
+  },
+  "compact_high": "-2.483417865012942922033639247315851560613734499851666620941263936588045559145622661099375029951799744907864330991781476277993818448097673723395928391255438327789306640625E-51",
+  "compact_low": "-8.02186720854188275408722786611640098481223890023249952017005216407320856577273861378183443192607944977946894758968701169738749937113179054704622455793089455736448660933476397481844966108610606170259416103363037109375E-73",
+  "compact_high_unchanged_from_phase260": true,
+  "compact_low_relative_change_from_phase260": 7.833138435513018e-16,
+  "frozen_exterior_total": "-2.483473532861055464787617898652595212071435118638098363602401288706306910693528804184040740397876847E-51",
+  "complete_total": "-2.483473436965937971106388969478714728877903067841368758495951966378804198675633919412008640609886635E-51",
+  "complete_total_relative_change_from_phase260": -3.8613303594665824e-08,
+  "final_sign_negative": true,
+  "cross_checks": {
+    "high_launch_energy_vs_phase261_knots": 1.8268528702826638e-08,
+    "high_launch_energy_vs_575_time_propagation": 1.829697883428861e-08,
+    "full_photon_mass_minus_launch_energy_relative": 4.6012054372617775e-06,
+    "low_launch_energy_vs_phase264_old_metric": 0.0054115648225861665,
+    "phase264_low_photon_mass_over_launch_energy": 3.2886951149256474
+  },
+  "metric_sha256": {
+    "metric-64-g8.npz": "0e7171ea0c988712db0b9a84335c217603aefd62f4f346fcb2868ac9e63f8ffe",
+    "metric-128-g4.npz": "8f14118256c706b899bf221659c97d1a34f2a91b5bfcafaf41339a2486ba2f7d",
+    "metric-128-g8.npz": "733d8a6fb45912872b2a90b610e76afe244ff4ff2396a0e0389e7e5b363d6e43"
+  },
+  "coarse_seconds": 3201.089845466,
+  "fine_seconds": 3175.038259485,
+  "scheduling": {
+    "items_by_process": {
+      "q3": 47,
+      "q5": 47,
+      "q2": 42,
+      "q9": 13,
+      "q13": 39,
+      "q14": 43,
+      "q6": 47,
+      "q11": 42,
+      "q12": 40,
+      "q10": 15,
+      "q4": 44,
+      "q1": 43,
+      "q8": 14,
+      "q7": 13,
+      "work-10": 8,
+      "work-11": 8,
+      "work-12": 8,
+      "work-13": 7,
+      "work-0": 8,
+      "work-1": 7,
+      "work-2": 8,
+      "work-3": 7,
+      "work-4": 8,
+      "work-5": 8,
+      "work-6": 2,
+      "work-7": 2,
+      "work-8": 2,
+      "work-9": 2
+    },
+    "termination": {
+      "classification": "Counterexample candidate",
+      "event": "Stopping the original WSL-launched controller (to stop workers6-9 for cost) also ended all fourteen workers of its session at about11:53:25KST. None wrote a receipt. This is a scheduling failure, not a physical or numerical gate failure.",
+      "intent": "native-geometric-clock265-work/cost-stop-intent.json",
+      "kept_items": {
+        "work-0": 8,
+        "work-1": 7,
+        "work-2": 8,
+        "work-3": 7,
+        "work-4": 8,
+        "work-5": 8,
+        "work-6": 2,
+        "work-7": 2,
+        "work-8": 2,
+        "work-9": 2,
+        "work-10": 8,
+        "work-11": 8,
+        "work-12": 8,
+        "work-13": 7
+      },
+      "remaining_items": 489,
+      "remaining_cells": 3817,
+      "lesson": "In this WSL setup, ending a launched controller ends its child workers. Stop individual workers only through a controller that stays alive.",
+      "time_unix": 1790391373.5885625
+    }
+  },
+  "exterior_scalar_operator_variation_complete": false,
+  "self_GR_return_closed": false,
+  "physical_final_charge_solved": false,
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false,
+  "snapshot_KST": "2026-09-26T19:00:21.423429+09:00"
+}

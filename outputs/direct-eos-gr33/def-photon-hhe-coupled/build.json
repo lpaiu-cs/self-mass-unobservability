@@ -1,0 +1,124 @@
+{
+  "classification": "Counterexample candidate",
+  "seconds": 3.9431318199999907,
+  "receipts": [
+    {
+      "command": [
+        "gfortran",
+        "-cpp",
+        "-O2",
+        "-fPIC",
+        "-fcheck=all",
+        "-ffree-line-length-none",
+        "-I/home/lpaiu/work/direct-eos-gr33/photon-hhe-coupled",
+        "-I/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src",
+        "-I/home/lpaiu/work/direct-eos-gr33/molecular-spectral/source/src",
+        "-c",
+        "mod_excitation.f90",
+        "-o",
+        "mod_excitation.o"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "gfortran",
+        "-shared",
+        "-Wl,-soname,libfree_eos_hhe_metadata.so",
+        "mod_excitation.o",
+        "/home/lpaiu/work/direct-eos-gr33/photon-mhd-spectrum/mod_free_eos_detailed.o",
+        "/home/lpaiu/work/direct-eos-gr33/photon-mhd-spectrum/mod_free_eos.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_aux_scale.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_bfgs.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_coulomb.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_diagnostics.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_eos_bfgs.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_eos_jacobian.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_exchange.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_excitation_block.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_fermi_dirac.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_fermi_dirac_integrator.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_flow_data.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_free_eos_constants.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_free_eos_debug.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_free_eos_types.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_helium1_data.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_info_data.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_ionization_data.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_isotopic_mass_data.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_lapack.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_molecular_hydrogen.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_nuvar.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_pi.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_pi_fit.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_pl.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/CMakeFiles/free_eos.dir/mod_poly_sum.f90.o",
+        "/home/lpaiu/work/direct-eos-gr33/photon-shared-atomic/mod_statistical_weight_data.o",
+        "/home/lpaiu/work/direct-eos-gr33/photon-shared-atomic/mod_eos_calc.o",
+        "-llapack",
+        "-lblas",
+        "-o",
+        "/home/lpaiu/work/direct-eos-gr33/photon-hhe-coupled/libfree_eos_hhe_metadata.so"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "gfortran",
+        "-O2",
+        "-fPIC",
+        "-shared",
+        "-I/home/lpaiu/work/direct-eos-gr33/photon-hhe-coupled",
+        "-I/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src",
+        "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-radiation-eos-split/gas-bridge.f90",
+        "-L/home/lpaiu/work/direct-eos-gr33/photon-hhe-coupled",
+        "-Wl,-rpath,/home/lpaiu/work/direct-eos-gr33/photon-hhe-coupled",
+        "-lfree_eos_hhe_metadata",
+        "-o",
+        "gas.so"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "gfortran",
+        "-std=legacy",
+        "-O2",
+        "-fPIC",
+        "-shared",
+        "-fcheck=all",
+        "-ffree-line-length-none",
+        "atomic.f",
+        "bridge.f90",
+        "-o",
+        "atomic.so"
+      ],
+      "returncode": 0
+    }
+  ],
+  "runtime": {
+    "/home/lpaiu/work/direct-eos-gr33/photon-hhe-coupled/libfree_eos_hhe_metadata.so": "d9bb12cc7da3698b1240e8a990020571dde0e4a2d7ed85b1cba5679faaefedb1",
+    "/home/lpaiu/work/direct-eos-gr33/photon-hhe-coupled/gas.so": "26b24ec7f06a2ce918b9f3918855fdf36431210b58d153cc42e0a74d268b9200",
+    "/home/lpaiu/work/direct-eos-gr33/photon-hhe-coupled/atomic.so": "6979f733695aead43e4913e1e349b964ec2a410a8e70d681b12bdab36b47664e"
+  },
+  "source": {
+    "/home/lpaiu/work/direct-eos-gr33/photon-hhe-coupled/mod_statistical_weight_data.f90": "bffb4ae12443a020fcc960d2af1535308a5986141d91ad42a7a209a640e1feaf",
+    "/home/lpaiu/work/direct-eos-gr33/photon-hhe-coupled/qryd_calc.f90": "29409920c159c8d55b924e52accac7261c1fa4ba0c04d45862f9920a684995bb",
+    "/home/lpaiu/work/direct-eos-gr33/photon-hhe-coupled/mod_excitation.f90": "ac390472b029263fdda9ab2ea599b84add6de970c3ef2790cc5d98109e567282",
+    "/home/lpaiu/work/direct-eos-gr33/photon-hhe-coupled/plsum.f90": "1446c466e6297272fb71826fab352c46f2624dda8cc98ff375883b88baa943e9",
+    "/home/lpaiu/work/direct-eos-gr33/photon-hhe-coupled/free_eos_detailed.f90": "006ded9d668ddf76a6e8a17cf0ecc8ac22f1debf03280b6950293651a6c8db09",
+    "/home/lpaiu/work/direct-eos-gr33/photon-hhe-coupled/excitation_pi.f90": "9341f35d2d043ccfdf7021c94aff4b0c43e0a78ce34322ecb0019e8bad1662e6",
+    "/home/lpaiu/work/direct-eos-gr33/photon-hhe-coupled/excitation_pi_end.f90": "1013ca39a9c7ac818e1fbb0d1516f52ecc310954a561b18fe94611e662e51ad9",
+    "/home/lpaiu/work/direct-eos-gr33/photon-hhe-coupled/plsum_approx.f90": "7ce1908ec30961fef19461ae5ce5c8850e073dba7cca62a01a57c6e185b44041",
+    "/home/lpaiu/work/direct-eos-gr33/photon-hhe-coupled/qryd_approx.f90": "ae4d3e34dc6e56acc4cde6a9e9989688d3498084e4df8d5fd79c58a38a3529e2",
+    "/home/lpaiu/work/direct-eos-gr33/photon-hhe-coupled/mod_free_eos_detailed.f90": "08c02af6e3c13b1931f9ad10de72e6cf56222fca0eef09765098ccccddc50a6f",
+    "/home/lpaiu/work/direct-eos-gr33/photon-hhe-coupled/qstar_calc.f90": "6c94e62090749c5942a3907b96accb78696cd81df8f366d5b3555059026d94bd",
+    "/home/lpaiu/work/direct-eos-gr33/photon-hhe-coupled/atomic.f": "195882c5eee6fdba7d762178b9760f65931f8e173200f33d36297151ce026619",
+    "/home/lpaiu/work/direct-eos-gr33/photon-hhe-coupled/constants.f90": "35381b042c6a76b45fa555fe4a3ca9a3a853fae93c288cf6384efd2bb8feda07",
+    "/home/lpaiu/work/direct-eos-gr33/photon-hhe-coupled/qmhd_calc.f90": "295d7d0e8d132e461b008c0badf33333d74663dab7c6117ae34f50e6767bb4a7",
+    "/home/lpaiu/work/direct-eos-gr33/photon-hhe-coupled/excitation_sum.f90": "5d6fa295f87a90beefaf00d52cfa8cd7cd303cdf62788bc14a714375b97dba90",
+    "/home/lpaiu/work/direct-eos-gr33/photon-hhe-coupled/bridge.f90": "3b201eb6ccc2e6a864a327e66d419d20302a78d4ff5c93f38d266d1711730e8b",
+    "/home/lpaiu/work/direct-eos-gr33/photon-hhe-coupled/mod_free_eos.f90": "38edda3ccefd8eb81b58bc45cb0804085a9c5e7e1cf0f068de5ee0f9b9191334",
+    "/home/lpaiu/work/direct-eos-gr33/photon-hhe-coupled/mod_eos_calc.f90": "dcd741d7029d4b289ed4cd9a45c39345513f2a02f292d970b7cf241d03ed41c6"
+  }
+}

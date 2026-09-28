@@ -1,0 +1,14 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "Short-pilot angular readout does not reproduce the shared physical port because the new writer used the final frequency scale for every frequency. The physical equation and port are unaffected.",
+  "repair": "Apply the full frequency scale. Replay only4/8/4 pilot steps with observational capture; require every non-angular result array bitwise identical and angular energy equal to the actual port below1e-12. Preserve rejected angular files.",
+  "remaining_original_pilot_wall_seconds": 41.005644659000005,
+  "total_pilot_wall_seconds": 65,
+  "production_wall_seconds": 650,
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_updated_joint_feedback.py": "d576b977693d273c0acd0cabd98bb87049e4fbff4019d40df21dddf4a27f57fe",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/first-producer.py": "c6f7c026f12644146147c3a903f2bbfaa42e499033a7830e90a86ef3d0ee66e9",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/pilot.json": "26d9dc0e3722c71aed469c99b3a715d8abb427344a8cc2ea198dcee360e0dc44",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/angular-prefix-failure.json": "1b9b760d635f4bddb39b320d30a0672434b5a3f3128d278828da4c0407d6e96c"
+  }
+}

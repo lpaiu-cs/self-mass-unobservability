@@ -1,0 +1,46 @@
+{
+  "classification": "Counterexample candidate",
+  "before_checkpoint": "310e6e67f",
+  "claim": "Propagate the actual saved photon-minus-free-material E/H mismatch through the same conservative native pressure map and retarded GR. Bound every signed source in a cellwise E/H box, including mass/stress and all compact potential repeats of the declared linear reconstruction.",
+  "decision": "Determine the measured charge shift, a sign-independent conditional source bound, and the amplification required for this residual scale to threaten the existing primary charge. Do not confuse this input-box bound with an actual fixed-point error or an EOS derivative certificate.",
+  "source_box": "Baryon,momentum,metric,photon state and ports held fixed; each material reference-E/H deviation is bounded by its per-cell maximum stored mismatch over17 common times. Native conservative pressure coefficients are held at each saved background knot; derived GR sources are interpolated linearly in time and with the existing spatial polynomial. This explicitly declares a stored-coefficient uncertainty model.",
+  "reuse": "Completed Phase137 actual paths; same531 cells,17 knots,three64/128 cases and4/8 GR quadrature. Reuse the shared native pressure owner and one-outer-observer characteristic evaluator. No new EOS bank,fluid/photon steps,grid,horizon or waveform iteration.",
+  "budgets": {
+    "pilot_seconds": 45,
+    "sources_seconds": 120,
+    "readout_seconds": 45,
+    "enclosure_seconds": 90,
+    "CPU_threads": 1,
+    "virtual_GiB": 3
+  },
+  "forecast": "Phase137 three independent full source readouts took17.57s; this uses two shared background models and two pressure basis calls per knot, plus one direct combined check. Pilot one midpoint to require2x extrapolated remaining source work within120s. Readout uses one observer, not532 field locations.",
+  "gates": {
+    "pressure_probe": 0.002,
+    "linear_identity": 1e-10,
+    "independent": 1e-09,
+    "quadrature": 0.002,
+    "box_contains_actual": true,
+    "potential": 1.0,
+    "inactive_fraction": 1e-12
+  },
+  "limits": "No coupling gain,uniform physical EOS/derivative error,continuous-time residual,nonlinear GR,exterior/floor feedback or final charge is certified. An arbitrary-sign stored source box need not itself solve the material equations; it is an overinclusive readout uncertainty set.",
+  "stop": "Stop on a failed mapping,forecast,gate or cap. Preserve completed maps. No automatic new trajectory,larger budget or finer resolution.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_residual_charge_envelope.py": "d5227935065d8e4d2fa72f20dae9d9f769a7325d6d287494810b46091641acfe",
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_corrected_motion_feedback.py": "aac29edfd2e534c24a5679f04391b78b30daefa38331e098c0abd880f4b831b3",
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_material_response.py": "02862d794865e9d2785b631baeed092ebf3258538f91d4b64340230a270c10a2",
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_stage_energy_charge.py": "a7b4b93650663f17ab5cedbe6562cb3ed752fc0e125979b16bfd84d8e31c920d",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_characteristic_gr.py": "1630d3f008a1e59748d318f921eed7da8fbea4c49d33e5b86617f67009a27076",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_anisotropic_gr.py": "8c70ea3234a101e81db0c159c0fcf4edf02b16f0910b066f2781699d74efca85",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/audit.json": "491e5b2b6760214e5d58af6eab925092707400ad7c97929e8b60d23a057155aa",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/steps-64-reference-128.npz": "f583333f0b898a1c4cf0f7ab09ee0310486250d00bffdec76358e05255b46860",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/steps-64-reference-128.npz": "1a2d19b94a2c389c314bb1b8cbf769fc9078ea82aba4cd3cdcdd4d0f721d8af1",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/gr/source-64-reference-128.npz": "c5706cd9fa58a89c2ba69ca9e0128ad1a76cd96b6d80faa99976268360334c11",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/steps-128-reference-128.npz": "58a9a947a3b7c81716f930b3fe79bb8e450934943e8ad82a895682d1b329e2e2",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/steps-128-reference-128.npz": "ddf52786c3f11111c2af3b7738f789b638cb7f0ff57cb4b6c7d33d86b12c4b3d",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/gr/source-128-reference-128.npz": "a351ea496f3cd44aa0a27e097176d1b1d7a812cce0804478f7f01caf92f3d7a2",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/steps-128-reference-64.npz": "d59b3300aad911792eb6a9a4240c12fd31bdfa89d0065fad68d692dc964da479",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/steps-128-reference-64.npz": "12b7f0e29635420b40537448600fae05007fdb6d27387bd39d94d9f20394732b",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/corrected-motion/return/gr/source-128-reference-64.npz": "60724182c7245e733ea3b889e15dccb495d549b909c552a0617ea1b35e4df671"
+  }
+}

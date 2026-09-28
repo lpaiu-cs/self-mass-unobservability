@@ -1,0 +1,67 @@
+[
+  {
+    "searches": [
+      {
+        "status": 4,
+        "message": "The HiGHS status code was not recognized. (HiGHS Status 16: Solution limit reached)",
+        "seconds": 0.3456928280002103,
+        "variables": 7,
+        "objective": 7.493722296203487e-05,
+        "node_count": 5000
+      }
+    ],
+    "full_operator_checks": [
+      {
+        "pass_index": 0,
+        "before": 1.2250927759816483e-14,
+        "after": 4.271641691119799e-16,
+        "fine_columns": 7,
+        "hard_columns": 7,
+        "searched_hard_columns": 7,
+        "projected_hard_norms": [
+          6.888134326529132e-06,
+          2.347556582192936e-14,
+          1.0515428485713552e-05,
+          7.237877344853617e-06,
+          2.9344307086536256e-15,
+          7.010288894627076e-06,
+          4.825251563235184e-06
+        ],
+        "tested": [
+          {
+            "indices": [
+              656498,
+              656499,
+              656502,
+              656503,
+              1314079,
+              1314082,
+              1314083
+            ],
+            "ULPs": [
+              598,
+              1023,
+              790,
+              740,
+              -1024,
+              871,
+              1024
+            ],
+            "relative": 4.271641691119799e-16,
+            "physical": [
+              6.031386745070208e-16,
+              1.2013609443298628e-16,
+              3.5981678975840265e-17,
+              3.355010752859781e-17
+            ],
+            "improved": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "searches": [],
+    "full_operator_checks": []
+  }
+]

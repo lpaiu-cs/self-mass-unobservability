@@ -1,0 +1,28 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": false,
+  "source_time_spatial_L1": {
+    "baryon_g": 0.06983764768228262,
+    "gas_nonrest_energy_erg": 3.4818267744176967e-06,
+    "nonrest_trace_erg": 2.027445498948821e-06,
+    "pressure_volume_erg": 0.010676513075383838,
+    "photon_energy_erg": 0.07498528249195918,
+    "photon_radial_pressure_erg": 0.07627174812060077,
+    "metric_stress_erg": 0.06983760566415718
+  },
+  "original_gate": 0.02,
+  "correction": "206source used a maximum-cell norm. The original186source norm sums absolute errors over cells and takes the maximum over times. Recompute that unchanged original norm from the same saved source arrays; both norms fail. No integration or input change.",
+  "source_knots": [
+    3,
+    5
+  ],
+  "horizon_seconds": 5.3662986217635974e-05,
+  "old_failure_preserved": true,
+  "GR_input_applied": false,
+  "final_charge_conclusion": "unadjudicated",
+  "source_sha256": "3c5da3983d3673d645229cb4abcd389fcec50b2f922860ecd6dc07bbd966743d",
+  "bindings": {
+    "native-resolved-return206-work/gr/source-64.npz": "9fcdee88b81f2347184ecdf8deb278152aa3020e5249cb416eef88e0c01122db",
+    "native-resolved-return206-work/gr/source-128.npz": "e9bdbf8d9ef54e8b48a68d9c586a1f3370f34cb004668e2bb84f8c719c91a0ff"
+  }
+}

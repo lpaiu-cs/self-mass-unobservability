@@ -1,0 +1,224 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "joint_prefix_accepted": true,
+  "actual_same_joint_solution_GR_computed": true,
+  "exact_center_and_actual_packet_lapse": true,
+  "actual_current_state_stage_return_applied": true,
+  "metric_controls": {
+    "time": {
+      "delta_u": 0.00036642314756765097,
+      "delta_lambda": 0.00032487402700126375,
+      "delta_log_lapse": 0.0006044562786004045,
+      "delta_log_speed": 0.00032534613602487215,
+      "delta_u_prime": 0.00019942635369585765,
+      "delta_nu_prime": 0.0003253873182113549
+    },
+    "quadrature": {
+      "delta_u": 0.0,
+      "delta_lambda": 3.5992107044988377e-16,
+      "delta_log_lapse": 1.1510838355122106e-13,
+      "delta_log_speed": 5.398816985771218e-16,
+      "delta_u_prime": 0.0,
+      "delta_nu_prime": 4.3430817784904224e-16
+    }
+  },
+  "compensated_application": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "rows": [
+      {
+        "time": 0.0002146519448705439,
+        "checks": [
+          {
+            "amplification": 1.4757395258967641e+20,
+            "native": [
+              2.009432346645459e-09,
+              1.0407600428273122e-09,
+              8.851068880788029e-10,
+              7.356908213635363e-11
+            ],
+            "photon": 4.05629397645855e-11
+          },
+          {
+            "amplification": 2.9514790517935283e+20,
+            "native": [
+              1.4859776246965572e-09,
+              5.44788885497647e-10,
+              4.685641429004829e-10,
+              8.776293600761667e-12
+            ],
+            "photon": 2.0960317397768416e-11
+          }
+        ],
+        "actual_odd_frequency_owner_reused": true,
+        "photon_moment_error": 5.2111485710666925e-17,
+        "native_return_over_primary_rate": [
+          3.090166725057445e-25,
+          1.7882260159561135e-29,
+          4.2776966867674005e-29,
+          5.37568020841553e-27
+        ],
+        "actual_native_return_L1": [
+          1.3772994271944319,
+          55.278491130297155,
+          1.038264310248539e-17,
+          766247.4307156994
+        ],
+        "actual_photon_return_energy_L1": 3.6442269251360766e-24,
+        "actual_collision_return_L1": [
+          4.223944804276805,
+          2342477368.950817,
+          0.0,
+          33.32617718764092
+        ]
+      },
+      {
+        "time": 0.0004293038897410878,
+        "checks": [
+          {
+            "amplification": 9.223372036854776e+18,
+            "native": [
+              4.488009051059909e-09,
+              1.1005195936713635e-08,
+              8.672742633473283e-09,
+              2.2351963280334979e-10
+            ],
+            "photon": 1.262340897715761e-10
+          },
+          {
+            "amplification": 1.8446744073709552e+19,
+            "native": [
+              2.2626088943234763e-09,
+              4.9844944366642775e-09,
+              4.579737054664274e-09,
+              1.7617340274500302e-10
+            ],
+            "photon": 5.6846130015194524e-11
+          }
+        ],
+        "actual_odd_frequency_owner_reused": true,
+        "photon_moment_error": 5.3630470954062526e-17,
+        "native_return_over_primary_rate": [
+          2.979659969228715e-24,
+          5.279468825741016e-30,
+          6.689762279060438e-29,
+          3.232647278060111e-26
+        ],
+        "actual_native_return_L1": [
+          223.23112306368634,
+          1318.4087217778174,
+          2.1958297586639404e-16,
+          93935818.2919836
+        ],
+        "actual_photon_return_energy_L1": 1.8253814902502569e-22,
+        "actual_collision_return_L1": [
+          321.4889982660887,
+          178226336604.64175,
+          0.0,
+          2516.2432473833696
+        ]
+      }
+    ],
+    "actual_current_state_stage_return_applied": true,
+    "direct_addition_failure_preserved": true,
+    "geometry_components_kept_separate": true,
+    "new_physical_steps": 0,
+    "limitation": "Branch-conditioned stage forcing on two actual states, checked with two resolved probes. This is not a uniform branch-stability theorem, an evolved return, or permission to add independent nonlinear response solutions.",
+    "final_charge_conclusion": "unadjudicated",
+    "full_goal_complete": false
+  },
+  "compensated_total_seconds": 69.76283381599978,
+  "direct_addition_rejected": true,
+  "wrong_frequency_owner_rejected": true,
+  "full_horizon_completed": false,
+  "GR_return_time_evolved": false,
+  "final_charge_conclusion": "unadjudicated",
+  "physical_final_charge_solved": false,
+  "full_goal_complete": false,
+  "sha256": {
+    "verification/return_joint_gr_geometry.py": "223a86dbe69b7f0c6bc77e796117fcdc2005fcc8c0bc52cd29258f535befdaad",
+    "notes/REQUEST187_SAME_SOLUTION_GR_RETURN_KO.md": "60cf1f00bc321d61d2517f2677c844e7d4a28727583e4eadddb49e4761fcbcd5",
+    "docs/model-definition.md": "9a06f2e73b1902ff98267c628cbe49398276d10c236b31c87b869df192e2863d",
+    "docs/observable-targets.md": "bd76d21aa75c552ba8564bdb020896d84d35ac2fee15e3c6b513bc38045b76f5",
+    "docs/adiabatic-limit.md": "42ed6115943663031c8d02ca12c03b37b6a89e356fb7579e6f2c504d2e68007c",
+    "docs/nonadiabatic-regime.md": "53ba251081c99a451d5e57707ca2a5fce3e9cb90a510fbf5c8287ac34f136a92",
+    "docs/failure-ledger-dynamic-chi.md": "76817d682b01798cdc39497828abefb40dd3ad180cf3bbb9086caffbb81b8d4b",
+    "docs/dynamic-charge-completion.md": "e903e83759ff3f1b9b7895c3eaeabf57fa95a3493d699f73ba8941aa654abf10",
+    "outputs/direct-eos-gr33/native-joint-return/final-result.json": "5857a79dc2a04beaca3219e467016272ee51a87e9900bcb161e1a361387b2907",
+    "outputs/direct-eos-gr33/native-joint-return/previous-publication-producer.py": "c83b58d55ad5dbf25094c2566a3455fc90359082387d7a45c96b1b977f41bba8",
+    "outputs/direct-eos-gr33/native-joint-return/publication-helper.py": "f5153c2b02c6b171dcb35b2d7028cf6666b3ac688f9cc6dc8b0e105c1dd881aa",
+    "outputs/direct-eos-gr33/native-joint-return/publication-producer.py": "eb9ebde1def854d8c8cd25037679b057f5ebdcdeab477fcdc64352fb2d2f1745",
+    "outputs/direct-eos-gr33/native-joint-return/publication.json": "24d2507aded7b56940bc8957919df921b6f9e57fe1fda720b7d183cdabcf2fc4",
+    "outputs/direct-eos-gr33/native-joint-return/completed/application-admission.json": "412956a9546f0b1239cdefa1694eeb09e06dbf9f814f7953fa1137889a2e1e1e",
+    "outputs/direct-eos-gr33/native-joint-return/completed/applied-return-1.npz": "cf9b9091d64bc3c8db0c913a290c3a4f337cc6d33b89508d6c168df82e72579d",
+    "outputs/direct-eos-gr33/native-joint-return/completed/applied-return-2.npz": "e1a52262262e180de4e00f98586fddf724e366904adaf637ff8700bdef20a590",
+    "outputs/direct-eos-gr33/native-joint-return/completed/apply-receipt.json": "6c1be2a5afc8e0db575e4e389c150f485b033fa01249cc704a51664e24944be0",
+    "outputs/direct-eos-gr33/native-joint-return/completed/before-finite-identity-plan.json": "a8f002251ff1f87a2f50902a8e94cffd57421ad7039c2d478aba264f3494dca0",
+    "outputs/direct-eos-gr33/native-joint-return/completed/before-finite-identity-producer.py": "f4e2514ec4590ed3ba4b614f0eb046f8757444a2efce702997f18ed31c9fae72",
+    "outputs/direct-eos-gr33/native-joint-return/completed/compensated-1.json": "aae20f969b91cd76d08d4468ca412d79808437787d3e78c06de61f62585a453a",
+    "outputs/direct-eos-gr33/native-joint-return/completed/compensated-2.json": "3d85db282a0e8ba7355df6e4a680185c6e406009e7b3362b25f4645ac7ddbd52",
+    "outputs/direct-eos-gr33/native-joint-return/completed/compensated-plan-before-interpolation.json": "9426babef6f551d33db0dd49446ba3b61ee6d434960e5684934524ec90d6e8c5",
+    "outputs/direct-eos-gr33/native-joint-return/completed/compensated-producer-before-interpolation.py": "c2f915d96c876d6b5cbe6256bc15632b97cea4f5450ff92e6292ac09bb90741a",
+    "outputs/direct-eos-gr33/native-joint-return/completed/compensated-receipt.json": "53096446865f38431e41dd32337828a271ada0fad3ce69d8ab18926b327f6e16",
+    "outputs/direct-eos-gr33/native-joint-return/completed/compensated-result.json": "91f87efa68cd69c32814dd1e2a66de1312efba12c7a99a3408c2b837f1a691d7",
+    "outputs/direct-eos-gr33/native-joint-return/completed/compensated_current-receipt.json": "38d8116ed71a978d9f3abf013d96c72313d97783dfef0d15c3ce5fba9657f9c2",
+    "outputs/direct-eos-gr33/native-joint-return/completed/compensated_finish-receipt.json": "9203a71c9d0e7e7e5a35257ac909f9af9817de72c4c7e81a51722f1126371393",
+    "outputs/direct-eos-gr33/native-joint-return/completed/compensated_identity-receipt.json": "9b342f6dcff8a9df0b1ee4f47b01b19e1cb413e0e2d08b1535617cd0de49f4a1",
+    "outputs/direct-eos-gr33/native-joint-return/completed/direct-add-plan.json": "06d82c645f802e3eeb193a75f9d246a1c7897444cd07bd60433c10b36724b3be",
+    "outputs/direct-eos-gr33/native-joint-return/completed/direct-add-producer.py": "3cf3c02bc162057cd96e7cf4aa61dfc070bf003a998efdf85be93975c1400ffe",
+    "outputs/direct-eos-gr33/native-joint-return/completed/expanded-affine-jacobian.py": "3e16001f78614321b344c1a125caddfbe24f8b53cdae2d0d7c9d69b4c80443a3",
+    "outputs/direct-eos-gr33/native-joint-return/completed/expanded-continuation-run.py": "9a94a85c8ae95c8eced712fbf8848226f3a1ea6e3f23fba1dc4559d491f5c8d7",
+    "outputs/direct-eos-gr33/native-joint-return/completed/expanded-full-stages.py": "5b47a101f75464316867872639fcf3d4018fbabaef13060a3b1ca5f09f0b4ab2",
+    "outputs/direct-eos-gr33/native-joint-return/completed/expanded-geometric-tangent.py": "9f544dcaa6ddd71096377d4556e9c6e17f0a790969a6b1d628df26b416b0c97d",
+    "outputs/direct-eos-gr33/native-joint-return/completed/expanded-joint-run.py": "6b0d85a25686b8576d71d88f00fa187f213160d85d17ef2b85c01a856e06d7d6",
+    "outputs/direct-eos-gr33/native-joint-return/completed/homogeneity-rejected-1.json": "4793b12c3467de16c8c2a4a026e3f8aba3e5bc158287aa88e0926a665f3519ef",
+    "outputs/direct-eos-gr33/native-joint-return/completed/homogeneity-rejected-1.npz": "6b77efeade147717e45e2b4a82e283aa7727442fa1ba9a0a08748b21c8d198cd",
+    "outputs/direct-eos-gr33/native-joint-return/completed/metric-receipt.json": "5ba4c06720b8266115705225437fe08ac4f1f4c4d16428333209d90288ffd445",
+    "outputs/direct-eos-gr33/native-joint-return/completed/metric-result.json": "273fe62386cc4467dd736307f3551ac4578d0dcc1ae5b9d6d83d8a3482b7640c",
+    "outputs/direct-eos-gr33/native-joint-return/completed/odd-source-symbolic.json": "8429bf32eb5bb03390aa11634e9e22b5bd5813d11a9a2093c45f511d63e9b70c",
+    "outputs/direct-eos-gr33/native-joint-return/completed/plan.json": "70695603f96942ffbc071645d2fa6dcda69f57c0475492db061024412d7aa3c0",
+    "outputs/direct-eos-gr33/native-joint-return/completed/prepare-receipt.json": "adbc52cf4b572e13dbb9979e9e87909def77ca7ba0f56978a79403cc04fcf7a3",
+    "outputs/direct-eos-gr33/native-joint-return/completed/symbolic.json": "742e1accf3696d92fdc7e2f73629ab2dd69b842e394980afc53ebb3640ab3346",
+    "outputs/direct-eos-gr33/native-joint-return/completed/wrong-frequency-1.json": "4937aeaf17c8fbef10a95ef377e8091329755b1a206dceeb76481c630951ee27",
+    "outputs/direct-eos-gr33/native-joint-return/completed/wrong-frequency-1.npz": "7dd4fc4ed529e3eeda4460671591c796731933d77c3156fbcf80f9818bedfd82",
+    "outputs/direct-eos-gr33/native-joint-return/completed/wrong-frequency-plan.json": "7459268c5ca17746d0ea90336026f84d03d8389d3dd53f67ec26ae4ce693613f",
+    "outputs/direct-eos-gr33/native-joint-return/completed/wrong-frequency-producer.py": "09d41ba1cf44fa67087afd962cad10f19d751f925ceeb20c0ea98043bb5ecd3b",
+    "outputs/direct-eos-gr33/native-joint-return/completed/metric/metric-128-g4.json": "a719df59d0a8d9f5b2804566063f84720a8b3d2510f4ef5bbdf054223667b8c1",
+    "outputs/direct-eos-gr33/native-joint-return/completed/metric/metric-128-g4.npz": "9ad6bed36dbdb69df9fcec6e4a48df8f3895e229218817575e9d69401637b88b",
+    "outputs/direct-eos-gr33/native-joint-return/completed/metric/metric-128-g8.json": "561f6a86df5e4c55c2d255acb708cbb98e7d55e7fff866ba32abaea1cdb98907",
+    "outputs/direct-eos-gr33/native-joint-return/completed/metric/metric-128-g8.npz": "b33da39df4893972695e15cf7d491dfdd8f3f86d6ac8d3dd476561a70cc50783",
+    "outputs/direct-eos-gr33/native-joint-return/completed/metric/metric-64-g8.json": "baeb0473788223d0639cfbf15883cbfba2dd78db41fed17770dc07ec6998f29e",
+    "outputs/direct-eos-gr33/native-joint-return/completed/metric/metric-64-g8.npz": "c091afc49ab1fd59570146673ea81db3f61885f04d38411876c270aa867f1757",
+    "outputs/direct-eos-gr33/native-joint-return/completed/sweep-1/expanded-corrected-run.py": "634b2771a4572d645daa0901b81078d1c66450bcbc8f38dc5d75b95bb4b9b520",
+    "outputs/direct-eos-gr33/native-joint-return/completed/sweep-1/expanded-moment-run.py": "8345268535344a95b049d80966821d6d23db738a0870085bba97ea27ba404327",
+    "outputs/direct-eos-gr33/native-joint-return/completed/sweep-1/expanded-refined-run.py": "f32c18289497acb8e6aba46409cb319bee7f8baf1e7c0f5735c9288e77e36fe2",
+    "outputs/direct-eos-gr33/native-joint-return/completed/sweep-1/expanded-run.py": "391495a5832815036d143c0b955c138440204aef1c38abb46a7510ed39086a3d"
+  },
+  "document_prefixes": {
+    "docs/model-definition.md": {
+      "bytes": 255635,
+      "sha256": "ab4414fe3333fcf4b7de834b7bd64013861609c703baae1ae39d02ac040b7e42"
+    },
+    "docs/observable-targets.md": {
+      "bytes": 246545,
+      "sha256": "1a2604cec1d015f0da166abe0165f552ae41a03f21311a2277a58e4c25dadb29"
+    },
+    "docs/adiabatic-limit.md": {
+      "bytes": 241176,
+      "sha256": "58d1634a1ca870306999f733989d153568a60e4747aad84adf7982d3965aea50"
+    },
+    "docs/nonadiabatic-regime.md": {
+      "bytes": 249335,
+      "sha256": "138d54fd48c60bcc88a1889bcaf8a6022bfe2ba2b605f350000f4c3fc41e2853"
+    },
+    "docs/failure-ledger-dynamic-chi.md": {
+      "bytes": 286149,
+      "sha256": "0b1c4a866857f129f80e7b87fe1d25ebe52f93d7a951f0e6622c624dc907aa9e"
+    },
+    "docs/dynamic-charge-completion.md": {
+      "bytes": 114257,
+      "sha256": "398c3edb84801463c883c753b2be09535f04d589199dbd13313f65e2570b40b6"
+    }
+  }
+}

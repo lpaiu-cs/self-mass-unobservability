@@ -1,0 +1,121 @@
+{
+  "classification": "Counterexample candidate",
+  "controller": {
+    "state": "failed",
+    "action": "coarse",
+    "completed": [
+      {
+        "action": "coarse",
+        "returncode": 1
+      }
+    ],
+    "elapsed_seconds": 794.5369765758514
+  },
+  "actual_coarse_accepted_steps": 113,
+  "full_horizon_completed": false,
+  "original_failures_preserved": true,
+  "actual_same_joint_solution_GR_computed": false,
+  "physical_final_charge_solved": false,
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false,
+  "actual_result": null,
+  "actual_failure": {
+    "classification": "Counterexample candidate",
+    "error": "AssertionError(('True native joint Radau equation', [{'relative': 5.751574422210834e-10, 'moments': [1.973734141084139e-17, 7.571560931888516e-19, 7.369396282307176e-20, 2.5373298034059765e-20]}, {'relative': 1.148729897627246e-10, 'moments': [1.982191435550393e-17, 6.84928994082236e-19, 2.904307902603801e-20, 2.625691011698125e-20]}, {'relative': 9.183289679189464e-11, 'moments': [1.979150491961135e-17, 6.854076864326748e-19, 2.7478963710361924e-20, 2.6256909584717152e-20]}, {'relative': 8.869654267976658e-11, 'moments': [1.975636538599141e-17, 6.7531795393154085e-19, 2.903873313085603e-20, 2.6256909644358294e-20]}, {'relative': 2.481669487845647e-10, 'moments': [1.9735364382172854e-17, 6.780159493390647e-19, 2.903836915206227e-20, 2.6256909627012575e-20]}, {'relative': 4.0109728025731895e-10, 'moments': [1.9755091255294544e-17, 6.745047330011041e-19, 2.903817612517816e-20, 2.62569095985727e-20]}, {'relative': 5.445679140612723e-10, 'moments': [1.9803580506404194e-17, 6.860467036802024e-19, 2.747871341646186e-20, 2.6256909637611094e-20]}, {'relative': 5.186855125728925e-11, 'moments': [1.977477160975276e-17, 6.753326902421629e-19, 2.9038237926779923e-20, 2.625690957113982e-20]}]))",
+    "time": 0.0032734421592757945,
+    "step": 2.6831493108817987e-05,
+    "actual_accepted_steps": 113,
+    "macro_index": 61,
+    "sub_index": 0,
+    "last_accepted_inputs_saved": true,
+    "serialized_substep_restart_validated": false,
+    "final_charge_conclusion": "unadjudicated"
+  },
+  "sha256": {
+    "verification/balance_full_native_krylov.py": "27940735a7e9f7fcfc9b97baf5280006f0f5d94f01fd77995363f2bac933652e",
+    "verification/polish_full_native_roundoff.py": "bfd2e03178db7adab91b5afffb83e5288667c4cc8df0c98e2ee8b4cc12eb09c8",
+    "notes/REQUEST195_197_ACTUAL_NATIVE_CONTINUATION_KO.md": "7112f33fec5c4f83a823d10a7bf673d72f108ef44f824c5f6cb5849cedca7653",
+    "docs/model-definition.md": "28675c651cd0f9ba2c1adfba25dd77f03f1e6f95101b357aece03a0042fcd579",
+    "docs/observable-targets.md": "182a90372948239eaf244620697eaa15c1b6970ad1d1115004c832a5c44ee893",
+    "docs/adiabatic-limit.md": "402efae4fe3b8f02255e81ac96cc76d4f2b649fe378741c87d74162b63f0f220",
+    "docs/nonadiabatic-regime.md": "e30586f14798034c1b9da714d665cfe6d8fb3addef56b2ec61d439e86d6d709f",
+    "docs/failure-ledger-dynamic-chi.md": "ffb99c9cc9b359d8871dda9b608c24ada3742ed3fcb33eaac67fd19bf70c614f",
+    "docs/dynamic-charge-completion.md": "9840426ff3360d47d678cd3eb233544f12410b555c773c569f0dab521789566d",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/final-result.json": "2b1233a364ea68872fe50a36abd5fdc95d9b14d5f9ca4c1546dbe6449ebac078",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/followthrough-producer.py": "d18e62a718a5759def5395946d1b0b363c3dbf46f71b2c23bbd5b7a1cae55a11",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/previous-publication-producer.py": "c83b58d55ad5dbf25094c2566a3455fc90359082387d7a45c96b1b977f41bba8",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/publication-helper.py": "f5153c2b02c6b171dcb35b2d7028cf6666b3ac688f9cc6dc8b0e105c1dd881aa",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/publication-producer.py": "ac093b62645389db1b7cb5ba8ad205ab717d51d2ceee9925d4b57c54e940bc48",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/publication.json": "4e0b20a4465b6b72c4a5baa5e45e1ccc86e036970b6f8024d7dfed2f49adf8e6",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/saved-array-inspection.py": "ea79bf7e9a4cd964de3f1e9bc65a1d976abe78bfa1767ceada49a1e20b6b3659",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-balanced-krylov196-work/check-receipt.json": "a039c755a191a599c01259495bd2c6302ffeb888c379402a47a33790e656fe0b",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-balanced-krylov196-work/checked-producer.py": "b8c7e4a02b6c7c3c097d8900fd9073e4ab81288259ed111edf71885acf455c9d",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-balanced-krylov196-work/coarse-receipt.json": "cc0102388a6966c0d6ef195e7c0e4582f1880cc73e5178066c12d9556f61ce82",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-balanced-krylov196-work/controller-start.json": "ba69c3733d90f1365a4ec279f20b40a67c2ee5af20c08a0d0267207a8b6777a0",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-balanced-krylov196-work/controller-status.json": "1b4fa2b7512c22ea98a2409bc2cfe46ba923699a8088f4926b9ccaa0c8b34a6d",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-balanced-krylov196-work/controller.stderr.log": "0d047d4d68507d1158c1ac8d3ce2fd162c1de4aac3190ac3f96783b03ec52a47",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-balanced-krylov196-work/expanded-balanced-linear.py": "c615f0addeed945545ce83c598c53c188cfa9d10b8148ded534519f02bef33e0",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-balanced-krylov196-work/expanded-resumed-run.py": "1f5d76c6a2b933470ba60d4437fc18bb20e406dcd2b4137799ddb73a62b3126a",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-balanced-krylov196-work/failed-linear-64.npz": "f17b03c7dfdf4019341b16f64b9b01bfc5c87dfb2c8ab0bee0330c61559bbb71",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-balanced-krylov196-work/failure-64.json": "29f18333b91160d75300d6d322ab6eda1070f9d12fa5e80b99cdeb150c0d2b67",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-balanced-krylov196-work/linear-64.json": "a47a48da4bcab44fba295e57145b1d25cf011cfd51722434a3e7870a748c264e",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-balanced-krylov196-work/linear-seed-identity.json": "6c976d8a20145b139c0dfc2e36189bd926d15b0155def9bad122e8b102ca4754",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-balanced-krylov196-work/plan.json": "c5122a57a66fcd3a84e9ea4a91e520da146ddd757f68d9f7019c49ba5ff6738b",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-balanced-krylov196-work/predispatch-amendment.json": "1ec75bf98b2ddbc7fe0ede822fc171ef9f39842be1a117d07b658ea8ba258e1d",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-balanced-krylov196-work/prepare-receipt.json": "5c41c8619c00f87dc092783eab67a8dd13e14b317958c55b7884dab59d95dc39",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-balanced-krylov196-work/restart-check.json": "32eb2a7f8f9f787d6408b09ddf33742eb1df12cf1cac53fd0a04d1e7d1b6def3",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-balanced-krylov196-work/restored-solver-counts.json": "7e1eaefe0e6f6f74a4a5e24da2322a0913c625b3b1cb628f2f476e623f7b79aa",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-balanced-krylov196-work/symbolic.json": "83dc903e8ed686dcb091ee843910c21cdb771d4117dd569720c43f0a73014ee1",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-resumed-newton195-work/coarse-receipt.json": "bcc7c9a81ee18c707d82a63072f54a1f50c4a5b1190f2e900ae25357d3b5e005",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-resumed-newton195-work/controller-status.json": "8ae6af8cf07fb4bc5a9372ff2b19fd8df0ac45ce10e552f6a9609ef4e1f2b7e5",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-resumed-newton195-work/controller.stderr.log": "bb52a77234fb1a39eac43536dc17d36c49ac34cfd759ea963ae7be85ad0c7fc0",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-resumed-newton195-work/controller.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-resumed-newton195-work/failed-linear-64.npz": "5c1fd9b31413bee1e9072b4aab3de85aa6649da043fc22fe183f0680088bef85",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-resumed-newton195-work/failure-64.json": "3c87485072d7e4978bf766348e042c917b962cf1296a6eb66afce21cb6b6b4a1",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-resumed-newton195-work/last-accepted-64.npz": "f450cdf2208eb90e20be7e49403377266304559761c6d3f92e7a4d97b67236a7",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-resumed-newton195-work/linear-64.json": "b299e848c752a8da763984d477d1c82327a916b38190154bc8b2381b1fe25cff",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-resumed-newton195-work/stage-progress-64.json": "18e625273a8780490eb520d49a6f4467aec292f9c651aaa000e0bebc17eb2ad4",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-roundoff-polish197-work/coarse-receipt.json": "a830fdb9526d34e9d346df9c4fb40662ac759e963cab4acf91ad9624f8af7044",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-roundoff-polish197-work/controller-start.json": "0baf040528d4ea2a050aa05a02c1b14234882d2e73f8ba89fceb552e9fabc2d0",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-roundoff-polish197-work/controller-status.json": "37960a84b737efef3eb7d186da447c88480ed281278c47bd269b49e269c9999a",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-roundoff-polish197-work/controller.stderr.log": "a367496d86fc3439dcdeadec54c3c5fc7a457a691d26f2151c66132a78cb0245",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-roundoff-polish197-work/expanded-balanced-linear.py": "086e8657bbfd2fa4e851b2d1fe770ecfdd4c3b00fb1892b81dc5490298713086",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-roundoff-polish197-work/failure-64.json": "275385f2be4774cb3074028f61cc6354028135520505e81b34133c0c841d5786",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-roundoff-polish197-work/linear-64.json": "f76a65b2008fb56a77777bd91888548fc483eb091a4116a0524888a04f0dae1c",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-roundoff-polish197-work/plan.json": "9342e7dc29c64296457bee9216b48d111452a022e76899e5a378636ba85f363d",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-roundoff-polish197-work/polish.json": "8464c9710e922cc3289ca6ad4d6d62674e88ff486bbc5277f3d07982ace3c6ed",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-roundoff-polish197-work/prepare-receipt.json": "124d79b6f8dc53afce57ce5264000533fb2057a294e1b6bbba9344998ff74a28",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-roundoff-polish197-work/rejected-joint-stage.json": "16add1bfdbdac675195c92ced4a60aa4216645c19140cebb6c6a75e0121bac85",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-roundoff-polish197-work/rejected-joint-stage.npz": "9927a02addb57d1cbe894587db2abc5bad095c3e15c3793b3d66592415791e17",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-roundoff-polish197-work/restart-check.json": "92a6ea7187d823c394f49d8fcf5c2465131eed7c7fc441f9d67a0c423f59321f",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-roundoff-polish197-work/symbolic.json": "3f89091b26faafa7bb43659145f7cb81f428f5cef476f0292384b764748ae688",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-balanced-krylov196-work/sweep-1/photons/resume-check-64.json": "27926ffde4d461768a0a8e8e5de510463e6388e0f0852a0e13413375cc1a0d0b",
+    "outputs/direct-eos-gr33/native-roundoff-continuation/native-balanced-krylov196-work/sweep-1/photons/resume-check-64.npz": "b5375c8a70977ea55c7b04b49b77c1c07a02601294d4de33ba6be2a2544e8a25"
+  },
+  "document_prefixes": {
+    "docs/model-definition.md": {
+      "bytes": 257389,
+      "sha256": "67d3b7cce0df8ef0ff5a5b86c522f936eaa5efc2f4042ea76ced8e32ee0bd902"
+    },
+    "docs/observable-targets.md": {
+      "bytes": 248033,
+      "sha256": "d6b4a5e4a508c7ec398dbcff1f15c440f82425da06092c1a80f8bd66c8b23350"
+    },
+    "docs/adiabatic-limit.md": {
+      "bytes": 242731,
+      "sha256": "fc66859bbbeb406a835cec9f98dc2d30c31fae55dc1b01097c3a4d80a0acd2c1"
+    },
+    "docs/nonadiabatic-regime.md": {
+      "bytes": 250901,
+      "sha256": "b3e454669a30d53f46efe45bde3f1a989f1759426e6ea5c825ea4c3a6017691f"
+    },
+    "docs/failure-ledger-dynamic-chi.md": {
+      "bytes": 288159,
+      "sha256": "a7dfd744a03a20b81de69b68d8d9715765df497d2620750e3e0bc2fc60d13dde"
+    },
+    "docs/dynamic-charge-completion.md": {
+      "bytes": 116065,
+      "sha256": "7a0650a0bff92314c1b3158cb68fc81b4d549d2406a36200ddc18116f1e63a20"
+    }
+  }
+}

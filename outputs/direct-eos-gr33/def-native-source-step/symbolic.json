@@ -1,0 +1,9 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "scalar_energy": "E_phi=R_phi=(Pi^2+Phi^2)/(8 pi Ggeom a^2); S_phi=-Pi Phi/(4 pi Ggeom a^2); tangential pressure=(Pi^2-Phi^2)/(8 pi Ggeom a^2).",
+  "exchange": "Scalar energy receives +alpha*T*phi_t, matter receives its negative. Mixed geometric energy terms also cancel; omitting them is wrong when scalar and matter flux ratios differ.",
+  "metric": "Use total E_m+E_phi in the mass constraint and total R_m+R_phi in polar slicing. This module supplies the terms; a globally constrained coupled solve is not yet implemented.",
+  "transport": "Under the declared conformal map, tau_E=tau_J/A, K_E=A^2*K_J, q_E=A^4*q_J. The 4*q*DlnA terms cancel only with the full quadratic-entropy heat law.",
+  "limitations": "Conditional local identities and native provider. No full stellar evolution, physical atmosphere, scalar exterior matching or observation claim."
+}

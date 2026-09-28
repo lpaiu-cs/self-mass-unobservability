@@ -1,0 +1,63 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "bdbbfe161",
+  "claim": "Evolve the retained H bound-free reaction, its native chemical energy and its opposite photon energy/momentum transfer in the actual conservative spherical outflow.",
+  "decision": "Compare reactive and frozen-inventory histories and their direct retarded charge; stop if source consistency, native support or runtime fails.",
+  "model": "Original native EOS and finite H levels; all other elemental ionic inventories frozen to the surface. Translated SYNspec H cross sections; reciprocal reverse rates use current native ionic affinity. Specified outgoing diluted Planck bath matched to saved bolometric luminosity, initially present. This is a thermodynamic inverse-rate model, not a microscopic Milne derivation or full photon transport.",
+  "budget": {
+    "native_calls": 4000,
+    "native_seconds": 120,
+    "flow_seconds": 180,
+    "readout_seconds": 45,
+    "CPU_threads": 1,
+    "memory_GB": 2,
+    "pilot_cells": 224,
+    "production_cells": [
+      448,
+      896
+    ]
+  },
+  "support": {
+    "log_density": [
+      -18,
+      0.02
+    ],
+    "temperature_K": [
+      240,
+      20000
+    ],
+    "neutral_fraction": [
+      1e-09,
+      0.001
+    ],
+    "horizon_seconds": 0.0034344311179287023,
+    "domain_m": [
+      -200,
+      1200
+    ]
+  },
+  "gates": {
+    "native_constitutive": 0.002,
+    "rate_interpolation": 0.002,
+    "quadrature": 1e-05,
+    "equilibrium_balance": 1e-09,
+    "primitive_energy": 1e-08,
+    "baryon": 1e-10,
+    "energy": 1e-08,
+    "species": 1e-09,
+    "mass_refinement": 0.02,
+    "trace_refinement": 0.02,
+    "wave_refinement": 0.02,
+    "optically_thin_absorption": 0.001
+  },
+  "stop": "No automatic support, grid or horizon increase. Preserve failures. Reassess missing physics rather than declaring a final charge. Do not substitute a fitted relaxation time or count rate-only diagnostics as coupled evolution.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_hydrogen_exchange.py": "4e4af77883dc6a719797557c9bda1ddd83c6627a1b31673264f3c6cb0cd0a0e0",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_inventory_flow.py": "07cbe9917767a1df5e4dc33fec661a58b7b408c652ecbe80b13ff61a8140d435",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-inventory-flow/dilute-eos.npz": "dc2ca9cdbd3792ad9a59bfbf7327e81eb37b032e70f35c4515cc559b6558f995",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-inventory-flow/dilute/cells-896.npz": "b47c965dd5468e1e98118793932460ac507a0eec024b5d1cf88de1925ffe4fbe",
+    "/home/lpaiu/work/direct-eos-gr33/photon-hhe-coupled/atomic.so": "6979f733695aead43e4913e1e349b964ec2a410a8e70d681b12bdab36b47664e",
+    "/home/lpaiu/work/direct-eos-gr33/photon-eos-levels-repaired/levels.so": "f5ebb8b31b67cfb8591cad491abd7930738d22e3eb9eebe90bed1519dd610b31",
+    "/home/lpaiu/work/direct-eos-gr33/native-cold-population/libfree_eos_native_cold_stable.so": "6d6cd656c7fc93d61df3e69bd127ff2f5caa199d88f42c4ebb9e7e96a21608f4"
+  }
+}

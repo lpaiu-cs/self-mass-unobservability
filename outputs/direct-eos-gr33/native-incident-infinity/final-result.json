@@ -1,0 +1,255 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "controls": {
+    "body": {
+      "compact": {
+        "angular": 0.0,
+        "radial": 0.0,
+        "time": 1.67424690692529e-05
+      },
+      "exterior": {
+        "angular": 0.00026491773367443,
+        "radial": 1.5918928971317756e-14,
+        "time": 0.0005408104122684249
+      },
+      "arrived_energy_erg": {
+        "angular": 0.0,
+        "radial": 0.0,
+        "time": 0.0004702908981759343
+      },
+      "linear_charge_increment": {
+        "angular": 6.5692463597666165e-19,
+        "radial": 0.0,
+        "time": 1.6742470326941933e-05
+      }
+    },
+    "self": {
+      "compact": {
+        "angular": 0.0,
+        "radial": 0.0,
+        "time": 0.00025100729998431753
+      },
+      "exterior": {
+        "angular": 0.0009061228761061906,
+        "radial": 6.727041983022017e-16,
+        "time": 0.0019910141958727643
+      },
+      "arrived_energy_erg": {
+        "angular": 0.0,
+        "radial": 0.0,
+        "time": 0.0017854043433247785
+      },
+      "linear_charge_increment": {
+        "angular": 1.1925240233344245e-15,
+        "radial": 0.0,
+        "time": 0.0002510101484068996
+      }
+    }
+  },
+  "rows": [
+    {
+      "component": "body",
+      "steps": 128,
+      "angular": 8,
+      "radial": 8,
+      "port_relative": 2.3791925844412477e-16,
+      "seconds": 7.153848468999996
+    },
+    {
+      "component": "body",
+      "steps": 128,
+      "angular": 4,
+      "radial": 8,
+      "port_relative": 2.3791925844412477e-16,
+      "seconds": 3.399384258000005
+    },
+    {
+      "component": "body",
+      "steps": 128,
+      "angular": 8,
+      "radial": 4,
+      "port_relative": 2.3791925844412477e-16,
+      "seconds": 0.1094194470000005
+    },
+    {
+      "component": "body",
+      "steps": 64,
+      "angular": 8,
+      "radial": 8,
+      "port_relative": 9.523195118307267e-17,
+      "seconds": 1.8298869000000053
+    },
+    {
+      "component": "self",
+      "steps": 128,
+      "angular": 8,
+      "radial": 8,
+      "port_relative": 1.6746414618947457e-17,
+      "seconds": 0.004826521000005357
+    },
+    {
+      "component": "self",
+      "steps": 128,
+      "angular": 4,
+      "radial": 8,
+      "port_relative": 1.6746414618947457e-17,
+      "seconds": 0.00480907500000427
+    },
+    {
+      "component": "self",
+      "steps": 128,
+      "angular": 8,
+      "radial": 4,
+      "port_relative": 1.6746414618947457e-17,
+      "seconds": 0.0045724490000012
+    },
+    {
+      "component": "self",
+      "steps": 64,
+      "angular": 8,
+      "radial": 8,
+      "port_relative": 1.3066501992553855e-16,
+      "seconds": 0.0028110820000009085
+    }
+  ],
+  "endpoint": {
+    "direct": 2.8269078927903613e-35,
+    "body": -2.53643242961482e-51,
+    "self_GR": -9.691405006971612e-73,
+    "body_compact": -2.5364324225812962e-51,
+    "body_exterior": 6.291760408113953e-66,
+    "body_mass_numerator": -7.03353002732488e-60,
+    "body_arrived_energy_erg": -0.0006206826366761246,
+    "self_arrived_energy_erg": 1.1962509407067144e-22,
+    "body_over_compact": 1.0000000027729987,
+    "self_over_body": 3.8208804200013085e-22
+  },
+  "computed_packet_kernels": 829,
+  "delay_inverse_seconds": 4.466912950640278e-16,
+  "seconds": 14.750324088999996,
+  "same_background_mass_normalization": true,
+  "actual_signed_angular_packets_used": true,
+  "actual_response_at_fixed_operator_null_infinity": true,
+  "background_photon_metric_response_included": false,
+  "scalar_evolving_exterior_interaction_included": false,
+  "upstream_GR_uncertainty_closed": false,
+  "original_waveform_change_test_passed": false,
+  "static_EFT_compared": false,
+  "physical_final_charge_solved": false,
+  "full_goal_complete": false,
+  "audit": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "hundred_digit_normalization_max_relative": 9.59223006459759e-17,
+    "hundred_digit_exact_difference": [
+      "5.5873164841051056e-36",
+      "6.990111516438884999999949167659413236527979409629122796960472146876168590183028170827101794351599202e-36",
+      "8.394863445164485999998042162084897856359403880758898680595212849098381157352447121905394620799265305e-36",
+      "9.801579512503319999983489627522258974213735753490508157226623358258203176668211469360394113295051696e-36",
+      "1.121026040014624999992326314479850858709298068079192104277717416862789927015144244142838100005200783e-35",
+      "1.262091015289577699974319640188948339914141425107690525200936721848302114095656101476104793318259556e-35",
+      "1.403353139715473399926942791022853903539593638229745712078631248249637094108666121164783922839021765e-35",
+      "1.544813154464978999810924121019190659824224018823686281562235361456749399952691774585180578311625797e-35",
+      "1.686471115984930999525141420393777917724251093066371960808406416332559856741819748777509034474909303e-35",
+      "1.828327438898662298836157773796811057612976587763985211426597368250239920576774522858170009532350658e-35",
+      "1.970382524893022597144906109844347296635457496702999848099030477892029399229363598942230060354922562e-35",
+      "2.112636747389278193174342979589235942133154884790508259470087342427504170490330270078456016735014109e-35",
+      "2.25509046926766238413076375434000884539199118998034613721302924398932497340274850017995803017651598e-35",
+      "2.397744073213227264878127651668090945145099018069204387390752802678214904738731950825974107988918835e-35",
+      "2.540597927891726927219869987244196533332555930389135232241283156381068090643295613927447302413966136e-35",
+      "2.68365240539859045940606936640208640287044047578932905526088948609135157320992188965462685095191112e-35",
+      "2.826907892790361046356760018516851791997425385022190423469000864331061262649388508558367714462313375e-35"
+    ],
+    "maximum_rational_cross_term_fraction": 1.7582257224023466e-57,
+    "conditional_input_remainder_scale_over_body": 743104959.4343424,
+    "direct_readout_quadrature_difference_over_body": 54840195460.15495,
+    "scope": "Independent high-precision rational readout and exact arrival integral. Neither the finite Born estimate nor4vs8 difference is a complete error bound."
+  },
+  "contribution": "Conditional loophole progress: the actual incident-driven body response is connected to fixed-operator outgoing null infinity, with direct input, signed exterior photons, arrived-mass normalization and separated self-GR return. The physical/observational conclusion remains open.",
+  "normalization_detail": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "geometry": {
+      "classification": "Counterexample candidate",
+      "passed": true,
+      "source_outer_Jordan_radius_cm": 6909952483.970193,
+      "ray_outer_Einstein_radius_cm": 6909966304.355728,
+      "mapped_source_outer_radius_cm": 6909966304.355728,
+      "mass_cm": 29168.754076187426,
+      "scalar_K_cm": -116.68542044431042,
+      "horizon_seconds": 0.0034344311179287023
+    },
+    "per_component_normalization_max_relative": [
+      1.0541549139696623e-24,
+      6.523938723876985e-20,
+      6.534133680227892e-20
+    ],
+    "inherited_compact_quadrature_relative": [
+      3.5096912822894206e-16,
+      9.077201064860482e-16
+    ],
+    "exact_binary_inputs": true,
+    "arithmetic_digits": 100,
+    "original_first_Born_input_was_applied_to_evolution": true,
+    "new_or_higher_Born_input_applied": false,
+    "raw_flag_clarification": "direct-result.first_return_refed_to_fluid=false means this readout did not change or refeed the existing input; it does not retract the Phase155 applied first-Born input.",
+    "scope": "Separated fixed-input readout arithmetic only; extra printed digits are not a physical uncertainty estimate.",
+    "seconds": 4.512002669999999,
+    "CPU_seconds": 2.564517808,
+    "peak_RSS_bytes": 405749760,
+    "full_goal_complete": false
+  },
+  "direct": {
+    "classification": "Counterexample candidate",
+    "passed": true,
+    "rows": [
+      {
+        "order": 4,
+        "independent_observer_relative": 5.947976192732749e-15,
+        "endpoint": 2.8269074471976435e-35,
+        "potential_norm_estimate": 2.8207052220018326e-09
+      },
+      {
+        "order": 8,
+        "independent_observer_relative": 5.947975255180138e-15,
+        "endpoint": 2.8269078927903613e-35,
+        "potential_norm_estimate": 2.820705222001833e-09
+      }
+    ],
+    "quadrature_relative": 4.920515824597747e-06,
+    "box_source_absolute_errors": [
+      2.220446049250313e-16,
+      1.6653345369377348e-16
+    ],
+    "incoming_primary_at_outgoing_null_infinity_zero": true,
+    "initial_exterior_data_preserved": true,
+    "direct_is_existing_first_potential_return": true,
+    "first_return_refed_to_fluid": false,
+    "higher_return_finite_estimate_normalized": 1.8848355177168713e-42,
+    "estimate_scope": "Historical finite coefficient operator estimate; not a null-infinity physical error enclosure.",
+    "seconds": 4.888985701999999,
+    "full_goal_complete": false
+  },
+  "cost": {
+    "recorded_action_seconds": 27.76532483999999,
+    "CPU_seconds": 21.131366397999997,
+    "peak_RSS_bytes": 430485504,
+    "CPU_threads": 1,
+    "virtual_GiB": 3,
+    "registered_total_seconds": 450,
+    "scope": "Action bodies including the component audit; excludes imports, inspection, writing, publication and Git. Not total task time."
+  },
+  "accepted_scope": "Actual saved incident-driven response at outgoing null infinity of the initial frozen scalar and photon-ray operators, with common retained mass normalization and separately preserved direct/body/self-GR components.",
+  "no_new_evolution_steps": true,
+  "original_first_Born_input_was_applied_to_evolution": true,
+  "new_or_higher_Born_input_applied": false,
+  "scientific_classification": "Conditional loophole progress",
+  "remaining": [
+    "Response of already-emitted background photons and background scalar to the incident metric; boundary conversion and evolving exterior coefficients.",
+    "Absolute direct-field uncertainty and its correlation with the chosen comparator.",
+    "Upstream GR forcing uncertainty and original failed whole-state-change criterion.",
+    "Same-inventory static comparison, derivative nuisance absorption and actual orbital/observational connection.",
+    "Full physical EOS, uniform derivatives, spatial/interpolation/boundary and nonlinear error budget."
+  ]
+}

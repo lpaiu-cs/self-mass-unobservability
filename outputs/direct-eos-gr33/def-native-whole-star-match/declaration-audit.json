@@ -1,0 +1,17 @@
+{
+  "classification": "Counterexample candidate",
+  "equation_junction_and_native_audit_passed": true,
+  "original_parameter_change_gates": {
+    "logL": "unadjudicated by fixed-parameter replay",
+    "logR": "unadjudicated by fixed-parameter replay",
+    "alpha": "unadjudicated by fixed-parameter replay"
+  },
+  "explanation": "The production plan used fixed-parameter refinement; repeated outer parameters trivially reproduce L,R,alpha. Their numerical change gates are not counted as passed. Original max junction/temperature residual and independent EOS/inventory/energy gates are tested. A direct paired dynamic charge remains required.",
+  "source_bindings_verified": {
+    "plan.json": 9,
+    "correction-plan.json": 5,
+    "final-repair-plan.json": 5,
+    "audit-plan.json": 5
+  },
+  "full_goal_complete": false
+}

@@ -1,0 +1,522 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "comparisons": [
+    {
+      "harmonic": 1,
+      "spatial": 4.1608609818971096e-05,
+      "opaque_to_all_relative_difference": 0.0010302813645815191
+    },
+    {
+      "harmonic": 2,
+      "spatial": 5.5852406178387094e-05,
+      "opaque_to_all_relative_difference": 0.0020886933799095643
+    },
+    {
+      "harmonic": 3,
+      "spatial": 7.374882414283694e-05,
+      "opaque_to_all_relative_difference": 0.0031520650207130835
+    }
+  ],
+  "cases": {
+    "all-p4": [
+      {
+        "classification": "Counterexample candidate",
+        "harmonic": 1,
+        "degree": 4,
+        "seconds": 0.5583749049999938,
+        "scalar_boundary_value": [
+          1.00000842728073,
+          -5.0863539182656355e-09
+        ],
+        "adiabatic_boundary_value": [
+          1.00000842728073,
+          -5.0863539182656355e-09
+        ],
+        "adiabatic_impedance": [
+          -8.443140611102406e-06,
+          0.0
+        ],
+        "thermal_impedance_difference": [
+          3.492346462590531e-27,
+          -3.407930901719011e-25
+        ],
+        "outgoing_conduction_contribution": [
+          -7.047869980220895e-27,
+          6.8159414550812105e-25
+        ],
+        "radiative_charge_gain": [
+          1.6718882826935896e-21,
+          -1.6168704425955672e-19
+        ],
+        "actual_drive_amplitude": 1.693260796589015e-10,
+        "delta_alpha_radiative_over_phi0": 2.7379296933190244e-26,
+        "maximum_actual_Eulerian_delta_lnT": 1.0492668860653264e-09,
+        "maximum_actual_thermal_temperature_correction": 1.3970358740995633e-09,
+        "linear_residual": 2.3620445890319e-16,
+        "adiabatic_residual": 5.580584985920069e-18,
+        "physical_GR_residual": 2.3620233669194586e-16,
+        "heat_law_residual": 4.3266600163523755e-14,
+        "heat_balance": 1.8499985295112957e-19,
+        "positive_pole_dissipation": 8.90424789967453e+41,
+        "active_faces": 5734,
+        "dofs": 53751,
+        "matrix_nonzeros": 816452,
+        "factor_nonzeros": 1367252,
+        "memory_GB": 0.754905088,
+        "full_radial_photons": false,
+        "full_nonlinear_or_thermal_background": false,
+        "full_goal_complete": false,
+        "transport_bank": "all",
+        "full_native_internal_radiative_transport": true,
+        "grey_LTE_diffusion_candidate": true,
+        "full_radial_spectral_photons": false,
+        "physical_atmosphere": false,
+        "adjoint_readout_relative": 2.297689484757342e-12
+      },
+      {
+        "classification": "Counterexample candidate",
+        "harmonic": 2,
+        "degree": 4,
+        "seconds": 0.5422639089999848,
+        "scalar_boundary_value": [
+          1.000008411367211,
+          -9.090741948314303e-09
+        ],
+        "adiabatic_boundary_value": [
+          1.000008411367211,
+          -9.090741948314303e-09
+        ],
+        "adiabatic_impedance": [
+          -8.477418631826038e-06,
+          0.0
+        ],
+        "thermal_impedance_difference": [
+          2.842694263055406e-28,
+          -1.6969275260061596e-25
+        ],
+        "outgoing_conduction_contribution": [
+          -6.313749707684837e-28,
+          3.3938967284206592e-25
+        ],
+        "radiative_charge_gain": [
+          1.497741045984437e-22,
+          -8.050966020716469e-20
+        ],
+        "actual_drive_amplitude": 1.6897349332651235e-11,
+        "delta_alpha_radiative_over_phi0": 1.3604022072126623e-27,
+        "maximum_actual_Eulerian_delta_lnT": 1.0621683117169803e-10,
+        "maximum_actual_thermal_temperature_correction": 1.4098311447042942e-10,
+        "linear_residual": 1.6014411372872242e-17,
+        "adiabatic_residual": 7.06800842458701e-16,
+        "physical_GR_residual": 1.6005923024575006e-17,
+        "heat_law_residual": 4.6907924888674296e-14,
+        "heat_balance": 9.683950780133564e-20,
+        "positive_pole_dissipation": 8.924818105673458e+41,
+        "active_faces": 5734,
+        "dofs": 53751,
+        "matrix_nonzeros": 816452,
+        "factor_nonzeros": 1367104,
+        "memory_GB": 0.747282432,
+        "full_radial_photons": false,
+        "full_nonlinear_or_thermal_background": false,
+        "full_goal_complete": false,
+        "transport_bank": "all",
+        "full_native_internal_radiative_transport": true,
+        "grey_LTE_diffusion_candidate": true,
+        "full_radial_spectral_photons": false,
+        "physical_atmosphere": false,
+        "adjoint_readout_relative": 4.090165128845773e-12
+      },
+      {
+        "classification": "Counterexample candidate",
+        "harmonic": 3,
+        "degree": 4,
+        "seconds": 0.4953067080000153,
+        "scalar_boundary_value": [
+          1.0000083840273717,
+          -1.268674850443936e-08
+        ],
+        "adiabatic_boundary_value": [
+          1.0000083840273717,
+          -1.268674850443936e-08
+        ],
+        "adiabatic_impedance": [
+          -8.534548667391224e-06,
+          0.0
+        ],
+        "thermal_impedance_difference": [
+          -3.3186583845206693e-28,
+          -1.1254495836383752e-25
+        ],
+        "outgoing_conduction_contribution": [
+          6.012346856301875e-28,
+          2.2509291781116254e-25
+        ],
+        "radiative_charge_gain": [
+          -1.4262425794957263e-22,
+          -5.339630453767236e-20
+        ],
+        "actual_drive_amplitude": 1.89659706792518e-12,
+        "delta_alpha_radiative_over_phi0": 1.0127163588420717e-28,
+        "maximum_actual_Eulerian_delta_lnT": 1.1959355808086147e-11,
+        "maximum_actual_thermal_temperature_correction": 1.587097086710447e-11,
+        "linear_residual": 4.336489385086658e-16,
+        "adiabatic_residual": 6.458506530863576e-16,
+        "physical_GR_residual": 4.336680386265034e-16,
+        "heat_law_residual": 5.0378425021523396e-14,
+        "heat_balance": 5.250733436596119e-19,
+        "positive_pole_dissipation": 8.93094992793992e+41,
+        "active_faces": 5734,
+        "dofs": 53751,
+        "matrix_nonzeros": 816452,
+        "factor_nonzeros": 1367050,
+        "memory_GB": 0.747282432,
+        "full_radial_photons": false,
+        "full_nonlinear_or_thermal_background": false,
+        "full_goal_complete": false,
+        "transport_bank": "all",
+        "full_native_internal_radiative_transport": true,
+        "grey_LTE_diffusion_candidate": true,
+        "full_radial_spectral_photons": false,
+        "physical_atmosphere": false,
+        "adjoint_readout_relative": 1.0844700368501286e-12
+      }
+    ],
+    "all-p2": [
+      {
+        "classification": "Counterexample candidate",
+        "harmonic": 1,
+        "degree": 2,
+        "seconds": 0.26194950300001096,
+        "scalar_boundary_value": [
+          1.00000842728073,
+          -5.086353918263994e-09
+        ],
+        "adiabatic_boundary_value": [
+          1.00000842728073,
+          -5.086353918263994e-09
+        ],
+        "adiabatic_impedance": [
+          -8.443140611111337e-06,
+          0.0
+        ],
+        "thermal_impedance_difference": [
+          3.4846015129119736e-27,
+          -3.4080496902671487e-25
+        ],
+        "outgoing_conduction_contribution": [
+          -7.0323820842076e-27,
+          6.816179049516937e-25
+        ],
+        "radiative_charge_gain": [
+          1.668214260337775e-21,
+          -1.6169268044969985e-19
+        ],
+        "actual_drive_amplitude": 1.693260796589015e-10,
+        "delta_alpha_radiative_over_phi0": 2.7380244811026767e-26,
+        "maximum_actual_Eulerian_delta_lnT": 1.0492733733996436e-09,
+        "maximum_actual_thermal_temperature_correction": 1.396984328708653e-09,
+        "linear_residual": 2.211624939079316e-19,
+        "adiabatic_residual": 1.7423546060184646e-19,
+        "physical_GR_residual": 1.45493280397844e-19,
+        "heat_law_residual": 5.695320978550196e-14,
+        "heat_balance": 2.8695657697854834e-19,
+        "positive_pole_dissipation": 8.904134811368916e+41,
+        "active_faces": 5734,
+        "dofs": 29743,
+        "matrix_nonzeros": 333936,
+        "factor_nonzeros": 511515,
+        "memory_GB": 0.747282432,
+        "full_radial_photons": false,
+        "full_nonlinear_or_thermal_background": false,
+        "full_goal_complete": false,
+        "transport_bank": "all",
+        "full_native_internal_radiative_transport": true,
+        "grey_LTE_diffusion_candidate": true,
+        "full_radial_spectral_photons": false,
+        "physical_atmosphere": false,
+        "adjoint_readout_relative": 4.975867873285361e-12
+      },
+      {
+        "classification": "Counterexample candidate",
+        "harmonic": 2,
+        "degree": 2,
+        "seconds": 0.23548818700001561,
+        "scalar_boundary_value": [
+          1.000008411367211,
+          -9.090741948312768e-09
+        ],
+        "adiabatic_boundary_value": [
+          1.000008411367211,
+          -9.090741948312768e-09
+        ],
+        "adiabatic_impedance": [
+          -8.477418631830145e-06,
+          0.0
+        ],
+        "thermal_impedance_difference": [
+          2.7703479481648252e-28,
+          -1.6969887535136706e-25
+        ],
+        "outgoing_conduction_contribution": [
+          -6.169077925774854e-28,
+          3.394019211763716e-25
+        ],
+        "radiative_charge_gain": [
+          1.4634221584779278e-22,
+          -8.051256574410928e-20
+        ],
+        "actual_drive_amplitude": 1.6897349332651235e-11,
+        "delta_alpha_radiative_over_phi0": 1.360451196360561e-27,
+        "maximum_actual_Eulerian_delta_lnT": 1.0621790080871762e-10,
+        "maximum_actual_thermal_temperature_correction": 1.4097838276899063e-10,
+        "linear_residual": 1.602996035018367e-19,
+        "adiabatic_residual": 1.9066126369730262e-19,
+        "physical_GR_residual": 1.589831115691812e-19,
+        "heat_law_residual": 3.4663508031140543e-14,
+        "heat_balance": 2.7991248532131405e-20,
+        "positive_pole_dissipation": 8.924704541373484e+41,
+        "active_faces": 5734,
+        "dofs": 29743,
+        "matrix_nonzeros": 333936,
+        "factor_nonzeros": 511428,
+        "memory_GB": 0.747282432,
+        "full_radial_photons": false,
+        "full_nonlinear_or_thermal_background": false,
+        "full_goal_complete": false,
+        "transport_bank": "all",
+        "full_native_internal_radiative_transport": true,
+        "grey_LTE_diffusion_candidate": true,
+        "full_radial_spectral_photons": false,
+        "physical_atmosphere": false,
+        "adjoint_readout_relative": 3.238756490663475e-12
+      },
+      {
+        "classification": "Counterexample candidate",
+        "harmonic": 3,
+        "degree": 2,
+        "seconds": 0.24213175700000988,
+        "scalar_boundary_value": [
+          1.0000083840273717,
+          -1.2686748504438195e-08
+        ],
+        "adiabatic_boundary_value": [
+          1.0000083840273717,
+          -1.2686748504438195e-08
+        ],
+        "adiabatic_impedance": [
+          -8.534548667393421e-06,
+          0.0
+        ],
+        "thermal_impedance_difference": [
+          -3.3899960518201693e-28,
+          -1.1254920111527306e-25
+        ],
+        "outgoing_conduction_contribution": [
+          6.155000412915311e-28,
+          2.251014073821774e-25
+        ],
+        "radiative_charge_gain": [
+          -1.46008270572619e-22,
+          -5.3398318424753806e-20
+        ],
+        "actual_drive_amplitude": 1.89659706792518e-12,
+        "delta_alpha_radiative_over_phi0": 1.012754727486694e-28,
+        "maximum_actual_Eulerian_delta_lnT": 1.1959518116066091e-11,
+        "maximum_actual_thermal_temperature_correction": 1.587048054044633e-11,
+        "linear_residual": 4.0708528503585803e-19,
+        "adiabatic_residual": 1.6436069424104701e-19,
+        "physical_GR_residual": 1.2818038404217993e-19,
+        "heat_law_residual": 3.160704132617307e-14,
+        "heat_balance": 2.303678223724974e-19,
+        "positive_pole_dissipation": 8.93083623543476e+41,
+        "active_faces": 5734,
+        "dofs": 29743,
+        "matrix_nonzeros": 333936,
+        "factor_nonzeros": 511419,
+        "memory_GB": 0.747282432,
+        "full_radial_photons": false,
+        "full_nonlinear_or_thermal_background": false,
+        "full_goal_complete": false,
+        "transport_bank": "all",
+        "full_native_internal_radiative_transport": true,
+        "grey_LTE_diffusion_candidate": true,
+        "full_radial_spectral_photons": false,
+        "physical_atmosphere": false,
+        "adjoint_readout_relative": 4.671199063498892e-12
+      }
+    ],
+    "opaque-p4": [
+      {
+        "classification": "Counterexample candidate",
+        "harmonic": 1,
+        "degree": 4,
+        "seconds": 0.5506740459999833,
+        "scalar_boundary_value": [
+          1.00000842728073,
+          -5.0863539182656355e-09
+        ],
+        "adiabatic_boundary_value": [
+          1.00000842728073,
+          -5.0863539182656355e-09
+        ],
+        "adiabatic_impedance": [
+          -8.443140611102406e-06,
+          0.0
+        ],
+        "thermal_impedance_difference": [
+          3.1412508261050717e-27,
+          -3.407880924118682e-25
+        ],
+        "outgoing_conduction_contribution": [
+          -6.345668910027085e-27,
+          6.815842148578126e-25
+        ],
+        "radiative_charge_gain": [
+          1.5053128854960473e-21,
+          -1.6168468852116529e-19
+        ],
+        "actual_drive_amplitude": 1.693260796589015e-10,
+        "delta_alpha_radiative_over_phi0": 2.7378620951898373e-26,
+        "maximum_actual_Eulerian_delta_lnT": 7.006804578894601e-10,
+        "maximum_actual_thermal_temperature_correction": 1.956133260908503e-10,
+        "linear_residual": 3.652954260783742e-16,
+        "adiabatic_residual": 5.580584985920069e-18,
+        "physical_GR_residual": 3.652933039655858e-16,
+        "heat_law_residual": 6.270480841459407e-14,
+        "heat_balance": 2.364376469940978e-19,
+        "positive_pole_dissipation": 8.904248081988303e+41,
+        "active_faces": 5662,
+        "dofs": 53679,
+        "matrix_nonzeros": 813427,
+        "factor_nonzeros": 1362689,
+        "memory_GB": 0.772550656,
+        "full_radial_photons": false,
+        "full_nonlinear_or_thermal_background": false,
+        "full_goal_complete": false,
+        "transport_bank": "opaque",
+        "full_native_internal_radiative_transport": false,
+        "grey_LTE_diffusion_candidate": true,
+        "full_radial_spectral_photons": false,
+        "physical_atmosphere": false,
+        "adjoint_readout_relative": 6.006868868152487e-13
+      },
+      {
+        "classification": "Counterexample candidate",
+        "harmonic": 2,
+        "degree": 4,
+        "seconds": 0.5196449130000076,
+        "scalar_boundary_value": [
+          1.000008411367211,
+          -9.090741948314303e-09
+        ],
+        "adiabatic_boundary_value": [
+          1.000008411367211,
+          -9.090741948314303e-09
+        ],
+        "adiabatic_impedance": [
+          -8.477418631826038e-06,
+          0.0
+        ],
+        "thermal_impedance_difference": [
+          -7.013137007601399e-29,
+          -1.6969779220261695e-25
+        ],
+        "outgoing_conduction_contribution": [
+          7.743367994695301e-29,
+          3.393998833903172e-25
+        ],
+        "radiative_charge_gain": [
+          -1.8368735880836827e-23,
+          -8.051208234265089e-20
+        ],
+        "actual_drive_amplitude": 1.6897349332651235e-11,
+        "delta_alpha_radiative_over_phi0": 1.360440816249703e-27,
+        "maximum_actual_Eulerian_delta_lnT": 7.093576768208755e-11,
+        "maximum_actual_thermal_temperature_correction": 1.9337581848795088e-11,
+        "linear_residual": 3.8332914406231744e-16,
+        "adiabatic_residual": 7.06800842458701e-16,
+        "physical_GR_residual": 3.833206550870671e-16,
+        "heat_law_residual": 7.643631126324853e-14,
+        "heat_balance": 3.1889018160962825e-20,
+        "positive_pole_dissipation": 8.924818200074539e+41,
+        "active_faces": 5662,
+        "dofs": 53679,
+        "matrix_nonzeros": 813427,
+        "factor_nonzeros": 1362502,
+        "memory_GB": 0.772550656,
+        "full_radial_photons": false,
+        "full_nonlinear_or_thermal_background": false,
+        "full_goal_complete": false,
+        "transport_bank": "opaque",
+        "full_native_internal_radiative_transport": false,
+        "grey_LTE_diffusion_candidate": true,
+        "full_radial_spectral_photons": false,
+        "physical_atmosphere": false,
+        "adjoint_readout_relative": 2.001075549704449e-12
+      },
+      {
+        "classification": "Counterexample candidate",
+        "harmonic": 3,
+        "degree": 4,
+        "seconds": 0.5513512519999892,
+        "scalar_boundary_value": [
+          1.0000083840273717,
+          -1.268674850443936e-08
+        ],
+        "adiabatic_boundary_value": [
+          1.0000083840273717,
+          -1.268674850443936e-08
+        ],
+        "adiabatic_impedance": [
+          -8.534548667391224e-06,
+          0.0
+        ],
+        "thermal_impedance_difference": [
+          -6.864119787737971e-28,
+          -1.1255699997686795e-25
+        ],
+        "outgoing_conduction_contribution": [
+          1.3103291521636595e-27,
+          2.2511719824668233e-25
+        ],
+        "radiative_charge_gain": [
+          -3.1083489935573214e-22,
+          -5.3402064316975635e-20
+        ],
+        "actual_drive_amplitude": 1.89659706792518e-12,
+        "delta_alpha_radiative_over_phi0": 1.0128391431085737e-28,
+        "maximum_actual_Eulerian_delta_lnT": 7.989920608073127e-12,
+        "maximum_actual_thermal_temperature_correction": 2.1729788502621573e-12,
+        "linear_residual": 2.721946186912004e-16,
+        "adiabatic_residual": 6.458506530863576e-16,
+        "physical_GR_residual": 2.721755192763692e-16,
+        "heat_law_residual": 2.7630004301828975e-14,
+        "heat_balance": 2.7241882177104975e-19,
+        "positive_pole_dissipation": 8.930949840367023e+41,
+        "active_faces": 5662,
+        "dofs": 53679,
+        "matrix_nonzeros": 813427,
+        "factor_nonzeros": 1362474,
+        "memory_GB": 0.772550656,
+        "full_radial_photons": false,
+        "full_nonlinear_or_thermal_background": false,
+        "full_goal_complete": false,
+        "transport_bank": "opaque",
+        "full_native_internal_radiative_transport": false,
+        "grey_LTE_diffusion_candidate": true,
+        "full_radial_spectral_photons": false,
+        "physical_atmosphere": false,
+        "adjoint_readout_relative": 4.9223923288284864e-12
+      }
+    ]
+  },
+  "seconds": 18.886346172000003,
+  "total_compute_seconds": 480.2443772849999,
+  "full_native_internal_grey_radiation_coupled": true,
+  "full_spectral_radial_photons": false,
+  "stationary_background_certified": false,
+  "physical_atmosphere": false,
+  "full_goal_complete": false
+}

@@ -1,0 +1,49 @@
+{
+  "classification": "Counterexample candidate",
+  "artifact_checks_passed": true,
+  "consistent_mass_order_passed": false,
+  "worst": {
+    "temperature": {
+      "native_index": 5602,
+      "radius_fraction": 0.9909608712813655,
+      "p4": -9.839192519925162e-05,
+      "p6": -9.834679468020182e-05,
+      "reference_maximum": 0.00010750429071684298
+    },
+    "velocity": {
+      "native_index": 5602,
+      "radius_fraction": 0.9909608712813655,
+      "p4": 0.05598777564435222,
+      "p6": 0.05013522185366069,
+      "reference_maximum": 0.08467165546434957
+    },
+    "scalar": {
+      "native_index": 3170,
+      "radius_fraction": 0.25799725539588714,
+      "p4": -5.636524659509962e-32,
+      "p6": -5.466069863644012e-32,
+      "reference_maximum": 7.665159665293928e-30
+    }
+  },
+  "condensation": {
+    "classification": "Proven",
+    "passed": true,
+    "identity": "Eliminate B*y+C*x=rb, solve (A-D*B^-1*C)*x=rk-D*B^-1*rb, and reconstruct y. No basis coefficient is omitted.",
+    "numerical_classification": "Counterexample candidate",
+    "dense_control_relative": 1.6878990605237187e-16,
+    "residual": 1.3964939958491068e-16
+  },
+  "full_banded_pilot_relative": {
+    "temperature": 2.287196905380884e-12,
+    "velocity": 1.882271992326765e-11,
+    "scalar": 7.968981015155845e-17
+  },
+  "maximum_original_equation_residual": 3.207966246516578e-19,
+  "maximum_original_heat_identity": 9.161684355886271e-17,
+  "memory_GB": 1.355821056,
+  "seconds": 1.9523905900000216,
+  "physical_source_profile_certified": false,
+  "moving_surface_solved": false,
+  "final_dynamic_charge_solved": false,
+  "full_goal_complete": false
+}

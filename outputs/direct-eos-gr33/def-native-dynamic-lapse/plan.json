@@ -1,0 +1,54 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "2fc1fb85f",
+  "claim": "Supply the missing asymptotically normalized lapse from the actually emitted angular photon packets, then form all radial, angular and frequency transport increments for the new GR field.",
+  "decision": "Can the existing separate scalar/mass response provide a finite, reproducible dynamic transport input, without adding sub-ulp increments to full background arrays or clamping the lapse at the numerical surface?",
+  "model": "Use the same corrected exact scalar vacuum beyond the actual photon edge; no initially exterior photons. Keep actual4 outward angular bins with constant occupation within each. Propagate every quadrature packet on its outgoing null ray and integrate pressure and mass debit together. Include the measured global numerical energy-port residual as a separate asymptotic mass error, not a fitted conservation correction.",
+  "scalar_boundary": "Continue the computed compact outgoing U along vacuum radial characteristics for the leading scalar lapse term. Missing exterior-generated/scattered scalar waves remain explicit; this is not full scalar boundary closure.",
+  "interior": "Integrate the linear polar lapse constraint with actual pressure/energy forcing and canonical volume response. Interpolate the saved scalar field within existing cells; its contribution is separately measured. No new EOS state, fluid trajectory or physical domain enlargement.",
+  "controls": {
+    "packet_order": [
+      4,
+      8
+    ],
+    "constraint_order": [
+      4,
+      8
+    ],
+    "time_paths": [
+      64,
+      128
+    ],
+    "relative_quadrature": 0.002,
+    "relative_time": 0.02,
+    "energy_port": 1e-11,
+    "ray_invariant": 1e-10,
+    "analytic_flat_shell": 1e-10
+  },
+  "budget": {
+    "seconds": 45,
+    "CPU_threads": 1,
+    "memory_GB": 3,
+    "new_fluid_steps": 0,
+    "new_native_calls": 0
+  },
+  "measured_basis": "Phase122 saved-source export4.98s and independent constraint audit5.32s. This adds short vacuum ODEs for16/32 directions and existing17 times. Stop45s; no automatic higher orders or new fluid runs.",
+  "limits": "The resulting metric input is for a compensated coupled transport solve. Merely computing the characteristics is not that solve. Physical angular/spectral reconstruction, external scalar forcing and nonlinear backreaction remain.",
+  "references": [
+    "https://arxiv.org/abs/gr-qc/0201064"
+  ],
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_dynamic_lapse.py": "840a3a9dfa7685c527621d3e425ef2ebbc10ac54f2b448f024880909c69ae770",
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_anisotropic_gr.py": "d166d508cebd63d005bb0a6b5abcc7461b2fde6d4700622df201beb60a6fbc10",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_characteristic_gr.py": "1630d3f008a1e59748d318f921eed7da8fbea4c49d33e5b86617f67009a27076",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_anisotropic_gr.py": "8c70ea3234a101e81db0c159c0fcf4edf02b16f0910b066f2781699d74efca85",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-anisotropic-gr/audit.json": "ae11915b0e535eccc392f629de0a4eacc27ce2e33faa3069734656f560e38916",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-initial-constraints/finite-volume/balanced-20.npz": "72ae702c85db57f0c02c1e5ca15dfad7df50d901b4270531e5b49c8c3746d3cb",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-projected-evolution/coupled-64.npz": "64d78d69391edf426f4bfa59bc3b9f422d2300ae2f49f8e88dabdca92f50bf73",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-projected-evolution/coupled-128.npz": "abbdb3f8e916aea2273158b5c4a81fa40493d3ac89d8b97739ac888e2eedb82f",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-anisotropic-gr/source-64.npz": "a82f5b9e0e93962ce274b3e5e91337cb7869ae7b1b411193d6b574be9deec1f3",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-anisotropic-gr/source-128.npz": "9990c6eac97d9b3fe94a37ae7901a99bdbeefcc9a93c923ccba80fb136531d30",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-anisotropic-gr/characteristic/fields-64-g8.npz": "a4986442cc0bfff405d50ccc072e027a0aa802c195a7246877a7fa58e217fbf8",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-anisotropic-gr/characteristic/fields-128-g8.npz": "9609e1883c35a34419328f932285507e563481e7387059f5d2b9373d75376534"
+  }
+}

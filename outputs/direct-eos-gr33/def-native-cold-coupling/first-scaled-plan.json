@@ -1,0 +1,19 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "The200K diagnostic measured the H2plus Rydberg partition as infinity while its multiplying Boltzmann factor was2.60517e-150. Evaluating exp(a/n^2) before multiplying the compensating factor overflows even though the physical product is finite.",
+  "repair": "Represent each cold partition tail and every first/second partial derivative by the same positive exponential scale. Combine its log scale with the caller Boltzmann factor before exponentiating. Leave ordinary supported evaluations bitwise unchanged where no scale is required. Retain the same native Rydberg levels, occupation law and constraints.",
+  "derivative": "The returned jets are exp(-s) times the derivatives of the original partition at the evaluation point, not derivatives of the scaled representation; derivative ratios and physical products therefore recover the original jets exactly in real arithmetic.",
+  "summation": "Use the existing direct quantum-number sum for tails whose leading exponent exceeds680. Each requested lower level has its own scale; never zero a sibling tail merely because another tail is larger. Use the original termination test in log units and the same occupation cutoff.",
+  "budget": {
+    "build_seconds": 60,
+    "controls_native_calls": 100,
+    "controls_seconds": 30
+  },
+  "gates": {
+    "warm_constitutive": 1e-10,
+    "cold_population": 1e-12,
+    "cold_relative_H": 1e-08
+  },
+  "stop": "No physical EOS parameter, quantum level, temperature floor or acceptance tolerance changes. Stop before support extension if the exact cold states or old controls fail.",
+  "source_sha256": "cdc6159dfb55c87ba05f5762ce1a3e27c497dd3b495b07800406654cbf4e0202"
+}

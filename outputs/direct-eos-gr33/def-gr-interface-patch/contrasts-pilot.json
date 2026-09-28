@@ -1,0 +1,34 @@
+{
+  "classification": "Counterexample candidate",
+  "cases": {
+    "coefficient": {
+      "setup_seconds": 10.769523792999962,
+      "solve4_seconds": 0.4338642440000058,
+      "forecast_seconds": 342.0187903029221,
+      "dofs": 48017
+    },
+    "outer": {
+      "setup_seconds": 2.044496320999997,
+      "solve4_seconds": 0.4121907609999198,
+      "forecast_seconds": 318.2325693812693,
+      "dofs": 48529
+    },
+    "quadrature": {
+      "setup_seconds": 2.4476285599999983,
+      "solve4_seconds": 0.7209440629999335,
+      "forecast_seconds": 508.4143568168778,
+      "dofs": 48017
+    },
+    "abscissa": {
+      "setup_seconds": 3.7764298760000656,
+      "solve4_seconds": 0.4234925829999838,
+      "forecast_seconds": 327.2547290841087,
+      "dofs": 48017
+    }
+  },
+  "seconds": 21.05998200700003,
+  "forecast_seconds": 1495.920445585178,
+  "remaining_compute_seconds": 1285.3816245130001,
+  "budget_passed": false,
+  "assumption": "Measured case-specific4 solves scaled to2048 plus prior measured native inversion,20s output and20 percent margin. Four sampled frequencies do not bound worst-case runtime; remaining-budget alarm is authoritative."
+}

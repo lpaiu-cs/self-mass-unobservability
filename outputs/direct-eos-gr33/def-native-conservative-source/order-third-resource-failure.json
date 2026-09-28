@@ -1,0 +1,7 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": false,
+  "failure": "COLAMD first-stage sparse LU allocation failed under unchanged5GB cap.",
+  "evolution_completed": false,
+  "action": "COLAMD also exhausted the same5GB cap at the first factorization. The measured151612-row matrix has lower/upper bandwidth50/52; use existing LAPACK dgbtrf/dgbtrs with bounded band fill. Equations, row/column scales and all extended-precision residual checks remain identical."
+}

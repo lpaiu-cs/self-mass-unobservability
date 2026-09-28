@@ -1,0 +1,40 @@
+{
+  "classification": "Counterexample candidate",
+  "artifact_checks_passed": true,
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "identity": "Cubic Hermite enclosed energy matches every thermal face and its common dE/dV slope. Its derivative integrates to the unchanged cell heat debit.",
+    "thermodynamic": "Gamma*P*rho_ref=-ad*heat_density, from the same native cp/cv identities.",
+    "numerical_classification": "Counterexample candidate",
+    "flat_cell_inventory_absolute": 2.4858587410747646e-15,
+    "scope": "Conservation and local thermodynamic algebra; not a physical subcell-profile certificate, whole response convergence or charge bound."
+  },
+  "worst": {
+    "temperature": {
+      "native_array_index": 5603,
+      "radius_fraction": 0.9909911056154308,
+      "p4": -7.982742179124685e-05,
+      "p2": -7.976658855389114e-05
+    },
+    "velocity": {
+      "native_array_index": 5602,
+      "radius_fraction": 0.9909608712813655,
+      "p4": 0.0557189086830211,
+      "p2": 0.053285302699434454
+    },
+    "scalar": {
+      "native_array_index": 3115,
+      "radius_fraction": 0.2553998749708481,
+      "p4": 4.433944837366842e-30,
+      "p2": 4.414546520909404e-30
+    }
+  },
+  "registered_response_passed": true,
+  "mass_rule_passed": false,
+  "original_piecewise_constant_failure_preserved": true,
+  "physical_interpolation_independence": false,
+  "moving_surface_solved": false,
+  "final_charge_solved": false,
+  "full_goal_complete": false
+}

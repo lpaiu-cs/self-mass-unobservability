@@ -1,0 +1,97 @@
+{
+  "classification": "Counterexample candidate",
+  "checked_utc": "2026-09-15T23:07:00.025234+00:00",
+  "plan_sha256": "c438da9a98b672727d841f75e8fa8a28a40fe9b0dc50a2821a60d90495430a9e",
+  "linux_identity_matches": true,
+  "completed_path_replayed_without_new_integration": true,
+  "exact_hardlinked_states": {
+    "1": 71,
+    "2": 135
+  },
+  "last_new_stage_log": "CONSERVATIVE NATIVE STAGE 2 135 3 20.18300358470032",
+  "replay_elapsed_seconds": {
+    "1": 30.394343613999993,
+    "2": 53.351700631000014
+  },
+  "remaining_new_steps": {
+    "2": 6,
+    "4": 152
+  },
+  "rss": [
+    {
+      "pid": 311,
+      "rss_kib": 226808
+    },
+    {
+      "pid": 401,
+      "rss_kib": 219432
+    },
+    {
+      "pid": 402,
+      "rss_kib": 219304
+    },
+    {
+      "pid": 403,
+      "rss_kib": 219176
+    },
+    {
+      "pid": 404,
+      "rss_kib": 219304
+    },
+    {
+      "pid": 405,
+      "rss_kib": 219560
+    },
+    {
+      "pid": 406,
+      "rss_kib": 219048
+    },
+    {
+      "pid": 407,
+      "rss_kib": 219432
+    },
+    {
+      "pid": 408,
+      "rss_kib": 219308
+    },
+    {
+      "pid": 409,
+      "rss_kib": 219180
+    },
+    {
+      "pid": 410,
+      "rss_kib": 219308
+    },
+    {
+      "pid": 411,
+      "rss_kib": 219308
+    },
+    {
+      "pid": 412,
+      "rss_kib": 219436
+    },
+    {
+      "pid": 413,
+      "rss_kib": 219308
+    },
+    {
+      "pid": 414,
+      "rss_kib": 219180
+    },
+    {
+      "pid": 415,
+      "rss_kib": 219308
+    }
+  ],
+  "linux_children": 15,
+  "rss_sum_mib": 3433.984375,
+  "memory_scope": "RSS includes shared pages; startup snapshot, not peak memory or unique physical memory.",
+  "eta_integrating_end_kst": [
+    "2026-09-17T23:50:12.025234+09:00",
+    "2026-09-18T16:47:12.025234+09:00"
+  ],
+  "eta_scope": "Scenario estimate for remaining integration, not a statistical confidence bound. Final replay/comparison and further interruptions excluded.",
+  "windows_launcher_check_sha256": "b4acfabbe837fac40f8116ca221591e9f7f555bcbf06016fbd780112a2099c31",
+  "restart_check_sha256": "6111c2ce5a3698dde8fe871fc356b92bf4f07346722c3f8579fc2b8190a03a3d",
+  "new_stage_observed_utc": "2026-09-15T23:09:50.650723+00:00"
+}

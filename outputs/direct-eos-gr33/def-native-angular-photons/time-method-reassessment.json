@@ -1,0 +1,8 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "All positive angular paths complete, but first-order transport/reaction splitting fails the unchanged2percent time gate: trace11.218percent and surface spectrum8.464percent.8/16angle comparisons pass. Preserve those results.",
+  "repair": "Same64/128 global paths. Symmetric exact-stream half steps and a conservative exponential-midpoint material/photon exchange. Keep actual angular positivity checks; allow at most16 local source substeps only to obtain an admissible nonlinear midpoint. No abundance/temperature clipping or new grid.",
+  "positivity": "Streaming exponential is a positive Poisson series. At frozen midpoint coefficients, bound-free emission and the exact Thomson angular semigroup are nonnegative. Nonlinear material end states and every numerical angular density are also checked.",
+  "pilot": "A new32step pilot measures nonlinear midpoint cost before the same three production paths. Total new run cap90s within the original120s transport allocation after observed previous costs below12s.",
+  "source_sha256": "93137ee2acc8f18a9c1ba16dcf62b94f6420176cf9224338c9078769383aacd0"
+}

@@ -1,0 +1,47 @@
+{
+  "classification": "Counterexample candidate",
+  "bindings": {
+    "verification/def_electron_exchange_readout.py": "44218078728db85c5c27a623d3401a339368db86489463abf4866542a19dc4cc",
+    "verification/def_electron_screened_fermi.py": "14017818d37db1cffb42d522cd81be0243651ed8d54b6dca4ae57f9013606899",
+    "outputs/direct-eos-gr33/def-electron-energy-exchange/fermi-screening/plan.json": "d5392ca804e318d2db9a9f8e37edbdaea7e02e77814d38afc74032c18f7e963d",
+    "outputs/direct-eos-gr33/def-electron-energy-exchange/fermi-screening/result.json": "1b602378284b0966d7414ac76bc40861a0205ada782af26a4170d3f9a063f6fa",
+    "outputs/direct-eos-gr33/def-resolved-scalar-pulse/companion-benchmark.json": "810073ff038513cb97b36f6a1f58046c6f48952f152b32ddf8a9152157df631a",
+    "outputs/direct-eos-gr33/def-electron-energy-exchange/fermi-screening/cell-4122.npz": "8d3c4d2adac72ebd126643c16e8dbe54e93e9b38d2babf3198081a569b940cdd",
+    "outputs/direct-eos-gr33/def-electron-energy-exchange/fermi-screening/cell-4928.npz": "0272589e0d1bc9eb0519f2d56b2c6d4de5cb5098a1e8df35a8365a8559667fa2",
+    "outputs/direct-eos-gr33/def-electron-energy-exchange/fermi-screening/cell-5734.npz": "45c95b6e9de9e9b8e7fb01daed04ca4c45bb97d4c606a493c7491742049f1783",
+    "outputs/direct-eos-gr33/def-electron-energy-exchange/fermi-screening/polarization-4122.npz": "f9629affe4747fa259a1c7701b0acb6d8b3ed0e2428c360a271fcad99b6c15d8",
+    "outputs/direct-eos-gr33/def-electron-energy-exchange/fermi-screening/polarization-4928.npz": "3ade27a9e9b5cdde01e661c71d10b167382cf0ef98159c292aeb7d59b44613c8",
+    "outputs/direct-eos-gr33/def-electron-energy-exchange/fermi-screening/polarization-5734.npz": "47cff4d22f7be7baefa19bb83001eeccd78807f9e0c6dffee70f49bf10f82e08"
+  },
+  "cells": [
+    4122,
+    4928,
+    5734
+  ],
+  "purpose": "Check the actual linearized ee out-scattering rate at zero and small momentum, then read the constrained finite-basis transfer. Do not infer a continuum inverse-moment bound from a few positive loss rates.",
+  "momenta_over_pF": [
+    0.0,
+    0.0001,
+    0.01
+  ],
+  "seeds": [
+    5511,
+    5512
+  ],
+  "powers": [
+    13,
+    15
+  ],
+  "gates": {
+    "loss_quadrature_relative": 0.03,
+    "zero_momentum_limit_relative": 0.001
+  },
+  "budget": {
+    "hard_seconds": 60,
+    "CPU_workers": 1,
+    "events": 589824,
+    "native_calls": 0,
+    "stellar_steps": 0,
+    "automatic_expansion": false
+  }
+}

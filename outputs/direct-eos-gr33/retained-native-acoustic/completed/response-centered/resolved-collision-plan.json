@@ -1,0 +1,30 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": "The direct early k2 full-amplitude subtraction has rounding indicator0.00263017 and fails the unchanged0.002 gate. Preserve collision-exact/.",
+  "repair": "Evaluate the same finite collision owner at numerical probes4,8,16; quadratic interpolation through0,s,2s reconstructs the ORIGINAL amplitude at1. Compare4/8 versus8/16 and both propagated arithmetic estimates against0.002. Reuse all accepted direct samples. Same zero incoming photons/thermal response and active mask.",
+  "limitation": "Sampled interpolation and arithmetic controls only; no uniform cubic remainder or native Jacobian enclosure. The direct-source failure is not reclassified as a pass.",
+  "physical_amplitude_unchanged": true,
+  "gates_unchanged": true,
+  "total_budget_seconds": 3100,
+  "pilot_knots": [
+    0,
+    2,
+    8,
+    16
+  ],
+  "source_cap_seconds": 600,
+  "reused": [
+    "retained-native-acoustic153-work/response-centered/collision-exact/64/point-1.json",
+    "retained-native-acoustic153-work/response-centered/collision-exact/64/point-0.json",
+    "retained-native-acoustic153-work/response-centered/collision-exact/64/point-16.json",
+    "retained-native-acoustic153-work/response-centered/collision-exact/64/point-8.json",
+    "retained-native-acoustic153-work/response-centered/collision-exact/128/point-0.json",
+    "retained-native-acoustic153-work/response-centered/collision-exact/128/point-16.json",
+    "retained-native-acoustic153-work/response-centered/collision-exact/128/point-8.json"
+  ],
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/apply_retained_native_acoustic.py": "b59c32b032a438b5be6348a3e0fa9c1af28773a6fd03b71418966e711fe718b0",
+    "retained-native-acoustic153-work/response-centered/registered-exact-collision-producer.py": "986b134124654f686b6d2c5cd14b0d19492dfa4fa0a6d4e77bfcf1a54749e1a3",
+    "retained-native-acoustic153-work/response-centered/collision-exact/64/point-2.json": "1139bc883412e9c1c61ed6c010f0adcf6889685a865cfcb38093d200ac7d4b85"
+  }
+}

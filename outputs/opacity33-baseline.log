@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/mnt/e/lab/self-mass-unobservability/verification/native_opacity.py", line 155, in <module>
+    if __name__=='__main__': globals()[sys.argv[1]]()
+  File "/mnt/e/lab/self-mass-unobservability/verification/native_opacity.py", line 143, in baseline
+    def baseline(): setup('baseline');trace('baseline')
+  File "/mnt/e/lab/self-mass-unobservability/verification/native_opacity.py", line 85, in trace
+    wait();getregs();assert reg.rip==entry+1,hex(reg.rip)
+  File "/mnt/e/lab/self-mass-unobservability/verification/native_opacity.py", line 67, in wait
+    assert os.WIFSTOPPED(status),(label,status,len(records))
+AssertionError: ('baseline', 0, 0)

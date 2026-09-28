@@ -1,0 +1,35 @@
+{
+  "classification": "Counterexample candidate",
+  "reason": "The smooth-anchor projection preserves its own continuous inventory, but changes actual evolved cell masses by up to15.83percent. Preserve and reject it as a production initial state.",
+  "change": "Solve the mass constraint, polar lapse and instantaneous static scalar equation together, retaining regular center, phi_infinity=.001, the same coordinate baryon inventory, native-anchored Gamma constitutive continuation and actual Cauchy photon moments. Permit nonzero Krr from the actual photon flux. This is momentarily scalar-balanced initial data, not a stationary radiating star.",
+  "scalar_equation": "Q_prime=4*pi*G/c^4*N*r^2*A^4*alpha*(E-Pr-2Pt)/sqrt(b); Phi=Q/(N*sqrt(b)*r^2); Q(0)=0. Use the existing exact Just vacuum map at the outer compact Cauchy edge. Photon trace is zero for the actual angular distribution.",
+  "premise_change": "The old fixed scalar Cauchy solution is preserved, including its large initial acceleration. The new condition is stated before any new dynamical charge is computed; no initial pulse amplitude or charge sign is fitted.",
+  "budget": {
+    "seconds": 35,
+    "orders": [
+      12,
+      20
+    ],
+    "max_iterations": 8,
+    "CPU_threads": 1,
+    "new_fluid_steps": 0,
+    "native_audit_calls": 100
+  },
+  "resource_reassessment": "The previous two-order global constraint solve took4.83s. Reuse its source constructor and vectorized quadrature. Add at most35s for the coupled momentary scalar balance, with no automatic mesh/order/iteration expansion.",
+  "gates": {
+    "metric_comparison": 1e-11,
+    "charge_comparison": 1e-11,
+    "inventory": 1e-14,
+    "fixed_point": 1e-16
+  },
+  "limitations": "An initial-data solve does not yet apply the changed gravity, EOS anchors or lapse to the actual evolving photon/material trajectories. Deep-core radiation momentum and full native constitutive continuation remain unverified.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_initial_constraints.py": "75ad4d44ef2d23c9dffc3aa747970edc3b3d38b0dafe2acef000f8ab2177b0b8",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-initial-constraints/audit.json": "2f08137600ee065fe100b80bc183654ac500e34387a78c861990162bf9e5871d",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-initial-constraints/balanced-producer.py": "6df77cb1717722b0df51c61aaa96f0c8823c88fea41cc6e719307b330964da7a",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-boundary-layer/coupled-128.npz": "a0b6b28116231883c38f58869141f4a20b7fa7513176ccec796e48414fa4d387"
+  },
+  "repair": "Use the actual stored proper baryon mass, gas state, photon energy/radial-pressure moments of each19+512 cell. Normalize the positive piecewise cell-average source by the independently integrated old proper cell volume. The required density adjustment is a geometric midpoint-volume correction, not the15percent smooth stratification mismatch. Retain the same anchored isentrope and exact coordinate baryon conservation during the metric/scalar solve.",
+  "photons": "Keep the initial per-cell photon number/energy/radial-pressure contents under proper-volume correction. Photon energies in the local initial frame are fixed Cauchy data; Killing-frequency remapping into a revised transport bank is subsequent work.",
+  "limits": "This is the actual finite-volume state source and its declared piecewise reconstruction. Smooth interpolation and this reconstruction are different radial approximations; neither certifies the continuum. Full native EOS and dynamic metric/photon/material re-evolution are not complete."
+}

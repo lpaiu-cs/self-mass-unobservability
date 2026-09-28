@@ -1,0 +1,483 @@
+--- original/excitation_pi.f90
++++ candidate/excitation_pi.f90
+@@ -197,6 +197,8 @@
+   ! in order to get more dynamic range.
+   real(fp_kind), parameter :: qratio_scale = exp(exparg_shift)
+ 
++  real(fp_kind) :: qa,qat,qatt,qax(5),qatx(5),qaxx(5,5)
++
+   ! Local variables
+   logical ifmhd_logical, ifpl_logical, ifapprox, ifneutral
+   logical ifnr13, ifnr0, ifnr023
+@@ -501,13 +503,30 @@
+         ! else
+         !   exparg = 0.d0
+         ! endif
+-        if(ielement.le.2.or.mod(ifexcited,10).eq.3) then
++        if(ielement.le.2.or.mod(ifexcited,10).eq.3.or.shared_has(ion)) then
+            nmin_s = nmin_species(ion)
++           if(.not.shared_has(ion)) then
+            if(nmin_s.lt.nmin(iz).or.nmin_s.gt.nmin_max(iz)) error stop 'excitation_pi: (1) invalid nmin or nmin_max'
++           endif
++
++           if(shared_has(ion)) then
++              if(.not.ifpl_logical.or.ifpi_fit.ne.1.or.nmax.ne.10) &
++                   error stop 'shared atomic requires frozen PL/MHD options'
++              if(ifmhd_logical) then
++                 call shared_atomic(ion,tl,x,qa,qat,qax,qatt,qatx,qaxx)
++              else
++                 ! Native cold start uses PL alone and leaves x undefined.
++                 call shared_atomic(ion,tl,spread(0._fp_kind,1,5),qa,qat,qax,qatt,qatx,qaxx)
++              endif
++           else
++              qa=qstar(nmin_s,iz);qat=qstart(nmin_s,iz);qatt=qstart2(nmin_s,iz)
++              qax=qstarx(:,nmin_s,iz);qatx=qstartx(:,nmin_s,iz);qaxx=qstarx2(:,:,nmin_s,iz)
++           endif
++
+            if(iz.eq.1) then
+               ! deal with neutral monatomic species of element
+               ! ratio of excited to ground state partition functions
+-              if(ifhe1_special.and.ion.eq.2.and.ifmhd_logical) then
++              if(ifhe1_special.and.ion.eq.2.and..not.shared_has(ion).and.ifmhd_logical) then
+                  ! special for neutral helium
+                  ! eps_factor determines the limit on the excited-state
+                  ! partition function sum.  (Include summands beyond nmin where
+@@ -541,13 +560,13 @@
+                  ! else
+                  !   mu(ion) = 0.d0
+                  ! endif
+-              else ! if(ifhe1_special.and.ion.eq.2.and.ifmhd_logical) then
++              else ! if(ifhe1_special.and.ion.eq.2.and..not.shared_has(ion).and.ifmhd_logical) then
+                  ! Not special case for helium
+-                 mu(ion) = exparg*qstar(nmin_s,iz)*real((iqion(ion)),fp_kind)/real((iqneutral(ielement)),fp_kind)
+-              endif ! if(ifhe1_special.and.ion.eq.2.and.ifmhd_logical) then
++                 mu(ion) = exparg*qa*real((iqion(ion)),fp_kind)/real((iqneutral(ielement)),fp_kind)
++              endif ! if(ifhe1_special.and.ion.eq.2.and..not.shared_has(ion).and.ifmhd_logical) then
+            else ! if(iz.eq.1) then
+               ! ionized atomic case
+-              mu(ion) = exparg*qstar(nmin_s,iz)*real((iqion(ion)),fp_kind)/real((iqion(ion-1)),fp_kind)
++              mu(ion) = exparg*qa*real((iqion(ion)),fp_kind)/real((iqion(ion-1)),fp_kind)
+            endif ! if(iz.eq.1) then
+ 
+            if(mu(ion).gt.exp_lim) then
+@@ -556,11 +575,11 @@
+               if(ifnr023) then
+                  ! calculate fl, tl derivatives with extrasum fixed
+                  muf(ion) = 0._fp_kind
+-                 if(ifhe1_special.and.ion.eq.2.and.ifmhd_logical) then
++                 if(ifhe1_special.and.ion.eq.2.and..not.shared_has(ion).and.ifmhd_logical) then
+                     ! special for neutral helium
+                     mut(ion) = mu(ion)*(c2t*bion(ion) - plopt(ion) + qmhd_he1t/qmhd_he1)
+                  else
+-                    mut(ion) = mu(ion)*(c2t*bion(ion) - plopt(ion) + qstart(nmin_s,iz)/qstar(nmin_s,iz))
++                    mut(ion) = mu(ion)*(c2t*bion(ion) - plopt(ion) + qat/qa)
+                  endif
+               endif
+               if(ifmhd_logical) then
+@@ -576,7 +595,7 @@
+                             3._fp_kind*extrasumt(3) + r_neutral(ielement)*(&
+                             3._fp_kind*extrasumt(2) + r_neutral(ielement)*(&
+                             extrasumt(1))))
+-                       if(ifhe1_special.and.ion.eq.2) then
++                       if(ifhe1_special.and.ion.eq.2.and..not.shared_has(ion)) then
+                           ! special for neutral helium
+                           muf(ion) = muf(ion) +&
+                                mu(ion)/qmhd_he1*(&
+@@ -590,50 +609,50 @@
+                                qmhd_he1x(2)*extrasumt(3))
+                        else
+                           muf(ion) = muf(ion) +&
+-                               mu(ion)/qstar(nmin_s,iz)*(&
+-                               qstarx(4,nmin_s,iz)*extrasumf(1) +&
+-                               qstarx(3,nmin_s,iz)*extrasumf(2) +&
+-                               qstarx(2,nmin_s,iz)*extrasumf(3))
++                               mu(ion)/qa*(&
++                               qax(4)*extrasumf(1) +&
++                               qax(3)*extrasumf(2) +&
++                               qax(2)*extrasumf(3))
+                           mut(ion) = mut(ion) +&
+-                               mu(ion)/qstar(nmin_s,iz)*(&
+-                               qstarx(4,nmin_s,iz)*extrasumt(1) +&
+-                               qstarx(3,nmin_s,iz)*extrasumt(2) +&
+-                               qstarx(2,nmin_s,iz)*extrasumt(3))
+-                       endif ! if(ifhe1_special.and.ion.eq.2) then
++                               mu(ion)/qa*(&
++                               qax(4)*extrasumt(1) +&
++                               qax(3)*extrasumt(2) +&
++                               qax(2)*extrasumt(3))
++                       endif ! if(ifhe1_special.and.ion.eq.2.and..not.shared_has(ion)) then
+                     elseif(ifnr13) then ! if(ifnr0) then
+                        mu_aux(3,ion) = -occ_const*mu(ion)*r_neutral(ielement)*3._fp_kind
+                        mu_aux(2,ion) = mu_aux(3,ion)*r_neutral(ielement)
+                        mu_aux(1,ion) = mu_aux(2,ion)*r_neutral(ielement)/3._fp_kind
+-                       if(ifhe1_special.and.ion.eq.2) then
++                       if(ifhe1_special.and.ion.eq.2.and..not.shared_has(ion)) then
+                           ! special for neutral helium
+                           mu_aux(3,ion) = mu_aux(3,ion) + mu(ion)*(qmhd_he1x(2)/qmhd_he1)
+                           mu_aux(2,ion) = mu_aux(2,ion) + mu(ion)*(qmhd_he1x(3)/qmhd_he1)
+                           mu_aux(1,ion) = mu_aux(1,ion) + mu(ion)*(qmhd_he1x(4)/qmhd_he1)
+                        else
+-                          mu_aux(3,ion) = mu_aux(3,ion) + mu(ion)*(qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))
+-                          mu_aux(2,ion) = mu_aux(2,ion) + mu(ion)*(qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))
+-                          mu_aux(1,ion) = mu_aux(1,ion) + mu(ion)*(qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))
++                          mu_aux(3,ion) = mu_aux(3,ion) + mu(ion)*(qax(2)/qa)
++                          mu_aux(2,ion) = mu_aux(2,ion) + mu(ion)*(qax(3)/qa)
++                          mu_aux(1,ion) = mu_aux(1,ion) + mu(ion)*(qax(4)/qa)
+                        endif
+                     endif ! if(ifnr0) then
+                  endif ! if(iz.eq.1) then
+                  if(ifnr0) then
+                     muf(ion) = muf(ion) -occ_const*mu(ion)*r_ion3(ion)*extrasumf(nextrasum-1)
+                     mut(ion) = mut(ion) - occ_const*mu(ion)*r_ion3(ion)*extrasumt(nextrasum-1)
+-                    if(ifhe1_special.and.ion.eq.2) then
++                    if(ifhe1_special.and.ion.eq.2.and..not.shared_has(ion)) then
+                        ! special for neutral helium
+                        muf(ion) = muf(ion) + mu(ion)/qmhd_he1*(qmhd_he1x(5)*extrasumf(nextrasum-1))
+                        mut(ion) = mut(ion) + mu(ion)/qmhd_he1*(qmhd_he1x(5)*extrasumt(nextrasum-1))
+                     else
+-                       muf(ion) = muf(ion) + mu(ion)/qstar(nmin_s,iz)*(qstarx(5,nmin_s,iz)*extrasumf(nextrasum-1))
+-                       mut(ion) = mut(ion) + mu(ion)/qstar(nmin_s,iz)*(qstarx(5,nmin_s,iz)*extrasumt(nextrasum-1))
++                       muf(ion) = muf(ion) + mu(ion)/qa*(qax(5)*extrasumf(nextrasum-1))
++                       mut(ion) = mut(ion) + mu(ion)/qa*(qax(5)*extrasumt(nextrasum-1))
+                     endif
+                  elseif(ifnr13) then ! if(ifnr0) then
+                     mu_aux(4,ion) = -occ_const*mu(ion)*r_ion3(ion)
+-                    if(ifhe1_special.and.ion.eq.2) then
++                    if(ifhe1_special.and.ion.eq.2.and..not.shared_has(ion)) then
+                        ! special for neutral helium
+                        mu_aux(4,ion) = mu_aux(4,ion) + mu(ion)*(qmhd_he1x(5)/qmhd_he1)
+                     else
+-                       mu_aux(4,ion) = mu_aux(4,ion) + mu(ion)*(qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))
++                       mu_aux(4,ion) = mu_aux(4,ion) + mu(ion)*(qax(5)/qa)
+                     endif
+                  endif ! if(ifnr0) then
+               endif ! if(ifmhd_logical) then
+--- original/excitation_sum.f90
++++ candidate/excitation_sum.f90
+@@ -206,6 +206,8 @@
+   ! in order to get more dynamic range.
+   real(fp_kind), parameter :: qratio_scale = exp(exparg_shift)
+ 
++  real(fp_kind) :: qa,qat,qatt,qax(5),qatx(5),qaxx(5,5)
++
+   ! Local variables
+   logical ifpl_logical, ifmhd_logical, ifneutral, ifapprox
+ 
+@@ -535,7 +537,7 @@
+   do index = 1, n_partial_elements
+      ielement = partial_elements(index)
+      if((ielement.gt.1.or.ifh2.eq.0).and.&
+-          (ielement.le.2.or.mod(ifexcited,10).eq.3)) then
++          (ielement.le.2.or.mod(ifexcited,10).eq.3.or.any(shared_start>0))) then
+         if(ielement.gt.1) then
+            ion_start = ion_end(ielement-1) + 1
+         else
+@@ -546,9 +548,27 @@
+         ! electronic state partition function
+         ! n.b. index goes from neutral to next to bare ion
+         do ion = ion_start, ion_end(ielement)
++           if(ielement.gt.2.and.mod(ifexcited,10).ne.3.and..not.shared_has(ion)) cycle
+            iz = nion(ion)
+            nmin_s = nmin_species(ion)
++           if(.not.shared_has(ion)) then
+            if(nmin_s.lt.nmin(iz).or.nmin_s.gt.nmin_max(iz)) error stop 'excitation_sum: invalid nmin or nmin_max'
++           endif
++
++           if(shared_has(ion)) then
++              if(.not.ifpl_logical.or.ifpi_fit.ne.1.or.nmax.ne.10) &
++                   error stop 'shared atomic requires frozen PL/MHD options'
++              if(ifmhd_logical) then
++                 call shared_atomic(ion,tl,x,qa,qat,qax,qatt,qatx,qaxx)
++              else
++                 ! Native cold start uses PL alone and leaves x undefined.
++                 call shared_atomic(ion,tl,spread(0._fp_kind,1,5),qa,qat,qax,qatt,qatx,qaxx)
++              endif
++           else
++              qa=qstar(nmin_s,iz);qat=qstart(nmin_s,iz);qatt=qstart2(nmin_s,iz)
++              qax=qstarx(:,nmin_s,iz);qatx=qstartx(:,nmin_s,iz);qaxx=qstarx2(:,:,nmin_s,iz)
++           endif
++
+            exparg = exparg_shift - c2t*bion(ion) - plop(ion)
+            ! correct for MHD ground state occupation probability.
+            if(ifmhd_logical) then
+@@ -573,6 +593,10 @@
+            endif
+            ! if(exparg.gt.exparg_lim) then
+            exparg = exp(exparg)
++           if(shared_has(ion)) then
++              shared_ground_logw(ion)=plop(ion)
++              if(ifmhd_logical) shared_ground_logw(ion)=plop(ion)+ln_ground_occ
++           endif
+            ! else
+            !   exparg = 0.d0
+            ! endif
+@@ -587,7 +611,7 @@
+            if(iz.eq.1) then
+               ! deal with neutral monatomic species of element
+               ! ratio of excited to ground state partition functions
+-              if(ifhe1_special.and.ion.eq.2.and.ifmhd_logical) then
++              if(ifhe1_special.and.ion.eq.2.and..not.shared_has(ion).and.ifmhd_logical) then
+                  ! special for neutral helium
+                  ! eps_factor determines the limit on the excited-state
+                  ! partition function sum.  (Include summands beyond nmin where
+@@ -623,18 +647,18 @@
+                  !  endif
+               else
+                  ! Not special case for helium
+-                 qratio = exparg*qstar(nmin_s,iz)*real((iqion(ion)),fp_kind)/real((iqneutral(ielement)),fp_kind)
++                 qratio = exparg*qa*real((iqion(ion)),fp_kind)/real((iqneutral(ielement)),fp_kind)
+               endif
+            else
+               ! ionized atomic case
+-              qratio = exparg*qstar(nmin_s,iz)*real((iqion(ion)),fp_kind)/real((iqion(ion-1)),fp_kind)
++              qratio = exparg*qa*real((iqion(ion)),fp_kind)/real((iqion(ion-1)),fp_kind)
+            endif
+            if(qratio.gt.exp_lim) then
+               qratio_us = qratio/qratio_scale
+               onepq = 1._fp_kind + qratio_us
+               onepqs = onepq*qratio_scale
+               ! qratiot and qratiot2 are the first and second partial wrt tl
+-              if(ifhe1_special.and.ion.eq.2.and.ifmhd_logical) then
++              if(ifhe1_special.and.ion.eq.2.and..not.shared_has(ion).and.ifmhd_logical) then
+                  ! special for neutral helium
+                  qratiot = qratio*(c2t*bion(ion) - plopt(ion) +&
+                       qmhd_he1t/qmhd_he1)
+@@ -646,13 +670,13 @@
+                       (qmhd_he1t/qmhd_he1))
+               else
+                  qratiot = qratio*(c2t*bion(ion) - plopt(ion) +&
+-                      qstart(nmin_s,iz)/qstar(nmin_s,iz))
++                      qat/qa)
+                  qratiot2 = qratiot*(c2t*bion(ion) - plopt(ion) +&
+-                      qstart(nmin_s,iz)/qstar(nmin_s,iz)) +&
++                      qat/qa) +&
+                       qratio*(-c2t*bion(ion) - plopt2(ion) +&
+-                      qstart2(nmin_s,iz)/qstar(nmin_s,iz) -&
+-                      (qstart(nmin_s,iz)/qstar(nmin_s,iz))*&
+-                      (qstart(nmin_s,iz)/qstar(nmin_s,iz)))
++                      qatt/qa -&
++                      (qat/qa)*&
++                      (qat/qa))
+               endif
+               ! transform second order quantities to derivative of
+               ! ln(1 + qratio)
+@@ -662,7 +686,7 @@
+                  ! qratio_dx(k), qratiot_dx(k), qratio_dx2(k,l) are
+                  ! partials wrt tl, extrasum(k) and extrasum(l) following
+                  ! special convention for k or l = 4.
+-                 if(ifhe1_special.and.ion.eq.2) then
++                 if(ifhe1_special.and.ion.eq.2.and..not.shared_has(ion)) then
+                     ! special for neutral helium
+                     qratio_dx(4) = qratio*(-occ_const*r_ion3(ion) +&
+                          qmhd_he1x(5)/qmhd_he1)
+@@ -680,20 +704,20 @@
+                          qmhd_he1
+                  else
+                     qratio_dx(4) = qratio*(-occ_const*r_ion3(ion) +&
+-                         qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))
++                         qax(5)/qa)
+                     qratiot_dx(4) = qratiot*&
+                          (-occ_const*r_ion3(ion) +&
+-                         qstarx(5,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                         qratio*(qstartx(5,nmin_s,iz) -&
+-                         qstarx(5,nmin_s,iz)*qstart(nmin_s,iz)/&
+-                         qstar(nmin_s,iz))/qstar(nmin_s,iz)
++                         qax(5)/qa) +&
++                         qratio*(qatx(5) -&
++                         qax(5)*qat/&
++                         qa)/qa
+                     qratio_dx2(4,4) = qratio_dx(4)*&
+                          (-occ_const*r_ion3(ion) +&
+-                         qstarx(5,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                         qratio*(qstarx2(5,5,nmin_s,iz) -&
+-                         qstarx(5,nmin_s,iz)*&
+-                         qstarx(5,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                         qstar(nmin_s,iz)
++                         qax(5)/qa) +&
++                         qratio*(qaxx(5,5) -&
++                         qax(5)*&
++                         qax(5)/qa)/&
++                         qa
+                  endif
+                  ! partial wrt ln V, tl, and extrasum(k) following special
+                  ! k convention.
+@@ -714,7 +738,7 @@
+                     ! qratio_dx(k) refers to derivative wrt extrasum(k) for
+                     ! k = 1, 2, 3, and qratio_dx(4) refers to the derivative
+                     ! wrt extrasum(nextrasum-1).
+-                    if(ifhe1_special.and.ion.eq.2) then
++                    if(ifhe1_special.and.ion.eq.2.and..not.shared_has(ion)) then
+                        ! special for neutral helium
+                        qratio_dx(1) = qratio*(&
+                             -occ_const*r_neutral(ielement)*&
+@@ -825,109 +849,109 @@
+                        qratio_dx(1) = qratio*(&
+                             -occ_const*r_neutral(ielement)*&
+                             r_neutral(ielement)*r_neutral(ielement) +&
+-                            qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))
++                            qax(4)/qa)
+                        qratio_dx(2) = qratio*(&
+                             -occ_const*r_neutral(ielement)*&
+                             r_neutral(ielement)*3._fp_kind +&
+-                            qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))
++                            qax(3)/qa)
+                        qratio_dx(3) = qratio*(&
+                             -occ_const*r_neutral(ielement)*&
+                             3._fp_kind +&
+-                            qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))
++                            qax(2)/qa)
+                        qratiot_dx(1) = qratiot*&
+                             (-occ_const*r_neutral(ielement)*&
+                             r_neutral(ielement)*r_neutral(ielement) +&
+-                            qstarx(4,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                            qratio*(qstartx(4,nmin_s,iz) -&
+-                            qstarx(4,nmin_s,iz)*qstart(nmin_s,iz)/&
+-                            qstar(nmin_s,iz))/qstar(nmin_s,iz)
++                            qax(4)/qa) +&
++                            qratio*(qatx(4) -&
++                            qax(4)*qat/&
++                            qa)/qa
+                        qratiot_dx(2) = qratiot*&
+                             (-occ_const*r_neutral(ielement)*&
+                             r_neutral(ielement)*3._fp_kind +&
+-                            qstarx(3,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                            qratio*(qstartx(3,nmin_s,iz) -&
+-                            qstarx(3,nmin_s,iz)*qstart(nmin_s,iz)/&
+-                            qstar(nmin_s,iz))/qstar(nmin_s,iz)
++                            qax(3)/qa) +&
++                            qratio*(qatx(3) -&
++                            qax(3)*qat/&
++                            qa)/qa
+                        qratiot_dx(3) = qratiot*&
+                             (-occ_const*r_neutral(ielement)*&
+                             3._fp_kind +&
+-                            qstarx(2,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                            qratio*(qstartx(2,nmin_s,iz) -&
+-                            qstarx(2,nmin_s,iz)*qstart(nmin_s,iz)/&
+-                            qstar(nmin_s,iz))/qstar(nmin_s,iz)
++                            qax(2)/qa) +&
++                            qratio*(qatx(2) -&
++                            qax(2)*qat/&
++                            qa)/qa
+                        qratio_dx2(1,1) = qratio_dx(1)*&
+                             (-occ_const*r_neutral(ielement)*&
+                             r_neutral(ielement)*r_neutral(ielement) +&
+-                            qstarx(4,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                            qratio*(qstarx2(4,4,nmin_s,iz) -&
+-                            qstarx(4,nmin_s,iz)*&
+-                            qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                            qstar(nmin_s,iz)
++                            qax(4)/qa) +&
++                            qratio*(qaxx(4,4) -&
++                            qax(4)*&
++                            qax(4)/qa)/&
++                            qa
+                        qratio_dx2(2,1) = qratio_dx(2)*&
+                             (-occ_const*r_neutral(ielement)*&
+                             r_neutral(ielement)*r_neutral(ielement) +&
+-                            qstarx(4,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                            qratio*(qstarx2(4,3,nmin_s,iz) -&
+-                            qstarx(4,nmin_s,iz)*&
+-                            qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                            qstar(nmin_s,iz)
++                            qax(4)/qa) +&
++                            qratio*(qaxx(4,3) -&
++                            qax(4)*&
++                            qax(3)/qa)/&
++                            qa
+                        qratio_dx2(3,1) = qratio_dx(3)*&
+                             (-occ_const*r_neutral(ielement)*&
+                             r_neutral(ielement)*r_neutral(ielement) +&
+-                            qstarx(4,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                            qratio*(qstarx2(4,2,nmin_s,iz) -&
+-                            qstarx(4,nmin_s,iz)*&
+-                            qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                            qstar(nmin_s,iz)
++                            qax(4)/qa) +&
++                            qratio*(qaxx(4,2) -&
++                            qax(4)*&
++                            qax(2)/qa)/&
++                            qa
+                        qratio_dx2(4,1) = qratio_dx(4)*&
+                             (-occ_const*r_neutral(ielement)*&
+                             r_neutral(ielement)*r_neutral(ielement) +&
+-                            qstarx(4,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                            qratio*(qstarx2(5,4,nmin_s,iz) -&
+-                            qstarx(5,nmin_s,iz)*&
+-                            qstarx(4,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                            qstar(nmin_s,iz)
++                            qax(4)/qa) +&
++                            qratio*(qaxx(5,4) -&
++                            qax(5)*&
++                            qax(4)/qa)/&
++                            qa
+                        qratio_dx2(2,2) = qratio_dx(2)*&
+                             (-occ_const*r_neutral(ielement)*&
+                             r_neutral(ielement)*3._fp_kind +&
+-                            qstarx(3,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                            qratio*(qstarx2(3,3,nmin_s,iz) -&
+-                            qstarx(3,nmin_s,iz)*&
+-                            qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                            qstar(nmin_s,iz)
++                            qax(3)/qa) +&
++                            qratio*(qaxx(3,3) -&
++                            qax(3)*&
++                            qax(3)/qa)/&
++                            qa
+                        qratio_dx2(3,2) = qratio_dx(3)*&
+                             (-occ_const*r_neutral(ielement)*&
+                             r_neutral(ielement)*3._fp_kind +&
+-                            qstarx(3,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                            qratio*(qstarx2(3,2,nmin_s,iz) -&
+-                            qstarx(3,nmin_s,iz)*&
+-                            qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                            qstar(nmin_s,iz)
++                            qax(3)/qa) +&
++                            qratio*(qaxx(3,2) -&
++                            qax(3)*&
++                            qax(2)/qa)/&
++                            qa
+                        qratio_dx2(4,2) = qratio_dx(4)*&
+                             (-occ_const*r_neutral(ielement)*&
+                             r_neutral(ielement)*3._fp_kind +&
+-                            qstarx(3,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                            qratio*(qstarx2(5,3,nmin_s,iz) -&
+-                            qstarx(5,nmin_s,iz)*&
+-                            qstarx(3,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                            qstar(nmin_s,iz)
++                            qax(3)/qa) +&
++                            qratio*(qaxx(5,3) -&
++                            qax(5)*&
++                            qax(3)/qa)/&
++                            qa
+                        qratio_dx2(3,3) = qratio_dx(3)*&
+                             (-occ_const*r_neutral(ielement)*&
+                             3._fp_kind +&
+-                            qstarx(2,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                            qratio*(qstarx2(2,2,nmin_s,iz) -&
+-                            qstarx(2,nmin_s,iz)*&
+-                            qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                            qstar(nmin_s,iz)
++                            qax(2)/qa) +&
++                            qratio*(qaxx(2,2) -&
++                            qax(2)*&
++                            qax(2)/qa)/&
++                            qa
+                        qratio_dx2(4,3) = qratio_dx(4)*&
+                             (-occ_const*r_neutral(ielement)*&
+                             3._fp_kind +&
+-                            qstarx(2,nmin_s,iz)/qstar(nmin_s,iz)) +&
+-                            qratio*(qstarx2(5,2,nmin_s,iz) -&
+-                            qstarx(5,nmin_s,iz)*&
+-                            qstarx(2,nmin_s,iz)/qstar(nmin_s,iz))/&
+-                            qstar(nmin_s,iz)
+-                    endif !if(ifhe1_special.and.ion.eq.2) ...
++                            qax(2)/qa) +&
++                            qratio*(qaxx(5,2) -&
++                            qax(5)*&
++                            qax(2)/qa)/&
++                            qa
++                    endif !if(ifhe1_special.and.ion.eq.2.and..not.shared_has(ion)) ...
+                     ! derivative of qratio wrt ln V
+                     qratiov = qratiov -&
+                          qratio_dx(1)*extrasum(1) -&

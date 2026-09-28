@@ -1,0 +1,10 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "assumptions": "Positive opacity k>=f>0 under a normalized spectral measure, harmonic moment H=E(1/k), arithmetic moment M=E(k).",
+  "reweight": "dnu=dmu/(k H); a=1/H, Var_nu=M/H-a^2, c=(M-f)/(1-f H). The Radau nodes f,c match the first two nu moments.",
+  "real_gap": "For r>0, 0 <= 1/(a+r)-E[1/(k+r)] <= r*(M-a)/((f+r)*(a+r)*(c+r)).",
+  "complex_gap": "For s=i*w, the absolute error is bounded by 2*sqrt(2) times the real-axis gap at r=abs(w). This follows from abs(k+i*w)>=(k+abs(w))/sqrt(2) and (a+r)^2/(a^2+r^2)<=2.",
+  "uniform": "Maximize r^p/((f+r)*(a+r)*(c+r)), p=1 or 2, at its unique positive derivative root. p=1 bounds the loss resolvent; p=2 bounds 1-s*resolvent. The probability-weighted sum of per-group bounds is uniform in real temporal frequency.",
+  "scope": "Exact conditional moment inequalities; tabulated inputs, rounded arithmetic, scattering interpolation and continuum physical-model error remain separate."
+}

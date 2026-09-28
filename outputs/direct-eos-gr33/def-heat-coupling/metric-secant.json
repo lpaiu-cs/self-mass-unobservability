@@ -1,0 +1,11 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "metric_secant": "Delta(a)/abar = chi*Delta(m_cell)/r, chi=4/(sqrt(b0)+sqrt(b1))^2",
+  "matter_work": "Delta(aE)=-Rstar*Delta(a)-abar*gstar*Delta(phi)+abar*F; Rstar=mean(aR)*L(a0,a1), gstar=mean(a*alpha*trace)/abar, L=log(a1/a0)/(a1-a0) with its smooth diagonal value 1/a0. This is the same logarithmic metric work used by the native local paths.",
+  "radial_coefficients": "Dstar=Dbar+Ggeom*V*(Ebar+Rstar)*chi*f/r; Cstar=Cbar-Ggeom*V*(Ebar+Rstar)*chi*(1-f)/r",
+  "scalar_source": "The same radial adjoint H yields scalar Pi source H*Ggeom*V*gstar/w_scalar. No inverse Pi.",
+  "transport": "F_i=-Delta_face(I_m)/(H_i*V_i), where I_m=dt*Hface*area*k*S_m_mid. Its H-weighted volume sum is exactly the time-integrated boundary flux.",
+  "scope": "Algebraic coupling construction only. Requires the stated finite matter-work equation, a shared discrete adjoint, positive metric branch and compatible transport flux. It has not been implemented or run in the full native spherical solver.",
+  "source_sha256": "00000e2aea0f3a0a5ccc217c9259487f3637b2ee6c665e3fd0154f7c2edc7c0f"
+}

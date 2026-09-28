@@ -1,0 +1,19 @@
+{
+  "classification": "Counterexample candidate",
+  "reason": "The actual896-cell path completed and closed energy. The final-path conservative forecast is83.55seconds, with about5.53seconds measured setup, versus80.15seconds left. A single additional10seconds of production budget finishes the originally registered convergence decision; no new grid or physical tolerance is introduced.",
+  "original_production_budget_seconds": 240,
+  "reassessed_total_production_budget_seconds": 250,
+  "final_path_cap_seconds": 90,
+  "forecast_evolution_and_native_seconds": 83.54722984999518,
+  "measured_previous_setup_seconds": 5.529739700999997,
+  "unchanged_native_cap": 3000,
+  "remaining_native_calls": 290,
+  "unchanged": [
+    "1792cells",
+    "original3.434ms horizon",
+    "all conservation/EOS/refinement gates"
+  ],
+  "stop": "No further budget increase in this phase. On timeout or a native/domain failure retain accepted progress for a later scientific and resource reassessment.",
+  "producer_sha256": "82c52211a35fd642bd6bd94a9761cdf8f36ec3e6377a07cf2a55c337cd08f6b6",
+  "EOS_sha256": "a59f35e74be97543b7b0fa87a4d8836488fef42069e32be91b95dced363e2c53"
+}

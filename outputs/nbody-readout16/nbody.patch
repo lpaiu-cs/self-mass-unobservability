@@ -1,0 +1,279 @@
+--- request15/Delay_brut.h
++++ request16/Delay_brut.h
+@@ -13,6 +13,7 @@
+ # define Delays_Brut_h
+ 
+ #include "Constants.h"
++#include <vector>
+ 
+ 
+ // void Delays_Brut(value_type toas[], value_type tis[], const value_type& t0,
+@@ -51,7 +52,7 @@
+                  const value_type& Mp, const value_type& Mi, const value_type& Mo, const value_type& freq,
+                  bool einstein, bool shapiro, bool aberration,
+                  value_type * delay , const int truefreq, value_type & moydeindt, bool & nanflag, 
+-                 value_type * spinaxis = NULL
++                 value_type * spinaxis, const std::vector<std::vector<value_type>>* full_states, const value_type* extra_masses, int nextra, value_type state_length
+                 ) ;
+ 
+ #endif
+--- request15/Delay_brut.cpp
++++ request16/Delay_brut.cpp
+@@ -1,3 +1,6 @@
++#include <vector>
++#include <fstream>
++#include <stdexcept>
+ // SPDX-FileCopyrightText: 2024 Guillaume VOISIN (researcher at LUTH, Observatoire de Paris, PSL, CNRS) <guillaume.voisin@obspm.fr> <astro.guillaume.voisin@gmail.com>
+ //
+ // SPDX-License-Identifier: GPL-3.0-or-later
+@@ -514,9 +517,9 @@
+                  value_type ** sp, value_type **  si, value_type ** so, value_type * SSB_to_PSB,
+                  const value_type& Mp, const value_type& Mi, const value_type& Mo, const value_type& freq,
+                  bool einstein, bool shapiro, bool aberration,
+-                 value_type * delay,  const int truefreq, value_type & moydeindt, bool & nanflag,
+-                 value_type * spinaxis = NULL
+-                )
++                 value_type * delay , const int truefreq, value_type & moydeindt, bool & nanflag, 
++                 value_type * spinaxis, const std::vector<std::vector<value_type>>* full_states, const value_type* extra_masses, int nextra, value_type state_length
++                ) 
+ {
+     /* t0 = time of reference from which the einstein delay is counted. ( this is a ssb time, for what it matters.. )
+      * SSB_to_PSB = unit vector between the solar system barycenter (SSB) and the pulsar system barycenter (PSB)
+@@ -542,6 +545,32 @@
+     value_type dist = zero;
+ 
+     nanflag = false; // set to true only if a delay is nan in the tests below
++    // Request 16: common Einstein/Shapiro summation for all additional bodies.
++    // No class fields are added, preserving the existing Python extension ABI.
++    std::vector<value_type> extra_u(ntis,0),extra_s(ntis,0);
++    const char* scale_env=getenv("TIMING16_EXTRA_SCALE");
++    char* scale_end=NULL;
++    const value_type scale=scale_env?strtold(scale_env,&scale_end):1.L;
++    if(!std::isfinite(scale)||scale<0||(scale_env&&(*scale_end||scale_end==scale_env))) {nanflag=true;return;}
++    if(nextra<0 || (nextra && (!full_states||!extra_masses||full_states->size()!=static_cast<size_t>(ntis)))) {nanflag=true;return;}
++    if(nextra && (einstein||shapiro)) {
++        for(long int ti=0;ti<ntis;++ti) {
++            if((*full_states)[ti].size()!=static_cast<size_t>(6*(3+nextra))) {nanflag=true;return;}
++            for(int b=0;b<nextra;++b) {
++                const value_type mass=extra_masses[b]*scale;
++                if(!std::isfinite(mass)||mass<0) {nanflag=true;return;}
++                if(mass==0)continue;
++                value_type d[3];
++                for(int k=0;k<3;++k)d[k]=sp[ti][k]-(*full_states)[ti][9+3*b+k]*state_length;
++                const value_type r=sqrt(d[0]*d[0]+d[1]*d[1]+d[2]*d[2]);
++                const value_type arg=(r-dotprod3d<value_type>(d,SSB_to_PSB))/clight;
++                if(!(r>0)||!std::isfinite(r)||(shapiro&&(!(arg>0)||!std::isfinite(arg)))) {nanflag=true;return;}
++                if(einstein)extra_u[ti]+=mass/r*GMsol/clight2;
++                if(shapiro)extra_s[ti]+=-2.L*4.92521372097374e-6L/daysec*mass*log(arg);
++            }
++        }
++    }
++
+ 
+     // Compute Einstein delay
+    if ( einstein == true ) {
+@@ -557,6 +586,7 @@
+             deindt[i] += Mo / nrpo ;
+             deindt[i] *= Msol * Ggrav / pow( clight, 2 ) ;
+             deindt[i] += undemi * nvp2 / pow( clight, 2 ) ;
++            deindt[i] += extra_u[i];
+         };
+ 
+         Spline splineein( tis, deindt, ntis ) ;
+@@ -592,6 +622,7 @@
+                 deindt[i] += Mo / nrpo ;
+                 deindt[i] *= Msol * Ggrav / pow( clight, 2 ) ;
+                 deindt[i] += undemi * nvp2 / pow( clight, 2 ) ;
++            deindt[i] += extra_u[i];
+                 printf( " --> Rapport isnan ein : %.19Le %.19Le %.19Le %.19Le %.19Le %.19Le %.19Le   \n", nrpi, nrpo, nvp2, deindt[i],
+                         splineein.Integrate( tis[ i - 1 ] , tis[ i ],
+                                         i - 1, i,
+@@ -639,7 +670,7 @@
+             Shap = Mi * log(  ( - pi_dot_nss + nrpi ) / clight ) ; // clight brings in a scaling factor of one light second
+             Shap += Mo * log( (nrpo - po_dot_nss) / clight ) ;
+             Shap *=  cst ;
+-            delay[i] += Shap ;
++            delay[i] += Shap + extra_s[i];
+             if ( isnan(delay[i]) )
+             {
+                 printf(" --> Rapport isnan shap: %.19Le %.19Le %.19Le %.19Le %.19Le %.19Le %.19Le  %.19Le  \n", pi_dot_nss, po_dot_nss, nrpo, nrpi,
+@@ -705,6 +736,18 @@
+         }
+     }
+ 
++
++    if(const char* prefix=getenv("TIMING16_EXPORT")) if(nextra==1 && (einstein||shapiro)) {
++        std::string filename=std::string(prefix)+(einstein?"-ein.hex":"-shap.hex");
++        FILE* fp=fopen(filename.c_str(),"w");if(!fp)throw std::runtime_error("Request16 export failed");
++        fprintf(fp,"%ld %La %La %La %La %La %La\n",ntis,t0,scale,extra_masses[0],GMsol,clight,daysec);
++        for(long int ti=0;ti<ntis;ti+=std::max(1L,ntis/64)) {
++            fprintf(fp,"%ld %La",ti,tis[ti]);
++            for(int k=0;k<3;++k)fprintf(fp," %La %La %La",sp[ti][k],(*full_states)[ti][9+k]*state_length,SSB_to_PSB[k]);
++            fprintf(fp," %La %La\n",extra_u[ti],extra_s[ti]);
++        }
++        fclose(fp);
++    }
+         return ;
+ }
+ 
+--- request15/Fittriple.h
++++ request16/Fittriple.h
+@@ -70,6 +70,15 @@
+ 
+     void Initialize() ;
+ 
++    void Nbody_nogeometric_delays(value_type * tis, const value_type& t0,
++                 const long int& ntis, const long  int& nt0,
++                 value_type ** sp, value_type **  si, value_type ** so, value_type * SSB_to_PSB,
++                 const value_type& Mp, const value_type& Mi, const value_type& Mo, const value_type& freq,
++                 bool einstein, bool shapiro, bool aberration,
++                 value_type * delay , const int truefreq, value_type & moydeindt, bool & nanflag, 
++                 value_type * spinaxis = NULL
++                ) ;
++
+     bool first_interpolation_allocation; // True if the tinterp was never defined and allocated yet. See Fittriple-init.cpp
+ 
+ 
+--- request15/Fittriple-compute.cpp
++++ request16/Fittriple-compute.cpp
+@@ -147,6 +147,12 @@
+     {
+             for (i = 0; i < ninterp ; ++i) {            // In RA or DEC changed, rotate back and forth the vectors without need for recomputation.
+                 // This could be otpimezed with only one rotation !
++                for(int body=0;body<3+parameters.nextra;++body) {
++                    Rotate_SSB_to_PSB(&states[i][3*body],pRA,pDEC);
++                    Rotate_PSB_to_SSB(&states[i][3*body],parameters.RA,parameters.DEC);
++                    Rotate_SSB_to_PSB(&states[i][3*(3+parameters.nextra)+3*body],pRA,pDEC);
++                    Rotate_PSB_to_SSB(&states[i][3*(3+parameters.nextra)+3*body],parameters.RA,parameters.DEC);
++                }
+                 Rotate_SSB_to_PSB(sp[i], pRA, pDEC);
+                 Rotate_PSB_to_SSB(sp[i], parameters.RA, parameters.DEC);
+                 Rotate_SSB_to_PSB(sp[i]+3, pRA, pDEC);
+@@ -167,7 +173,7 @@
+ 
+ 
+     // Compute Shapiro and aberration delays interpolation
+-        Delays_Brut_nogeometric(tinterp, parameters.treference,
++        Nbody_nogeometric_delays(tinterp, parameters.treference,
+                  ninterp, treference_in_interp,
+                  sp, si, so, pospsr,
+                  int_M0, int_M1, int_M2, parameters.f,
+@@ -194,7 +200,7 @@
+ 
+ 
+    // Compute Einstein delay interpolation
+-         Delays_Brut_nogeometric(tinterp, parameters.treference,
++         Nbody_nogeometric_delays(tinterp, parameters.treference,
+                  ninterp, treference_in_interp,
+                  sp, si, so, pospsr,
+                  int_M0, int_M1, int_M2, parameters.f,
+@@ -512,3 +518,17 @@
+ 
+         return double(lnposterior);
+ }
++
++void Fittriple::Nbody_nogeometric_delays(value_type * tis, const value_type& t0,
++                 const long int& ntis, const long  int& nt0,
++                 value_type ** sp, value_type **  si, value_type ** so, value_type * SSB_to_PSB,
++                 const value_type& Mp, const value_type& Mi, const value_type& Mo, const value_type& freq,
++                 bool einstein, bool shapiro, bool aberration,
++                 value_type * delay , const int truefreq, value_type & moydeindt, bool & nanflag, 
++                 value_type * spinaxis
++                ) 
++{
++    ::Delays_Brut_nogeometric(tis,t0,ntis,nt0,sp,si,so,SSB_to_PSB,Mp,Mi,Mo,freq,
++        einstein,shapiro,aberration,delay,truefreq,moydeindt,nanflag,spinaxis,
++        &states,parameters.nextra?&int_M_extra[0]:NULL,parameters.nextra,length);
++}
+--- request15/Fittriple-init.cpp
++++ request16/Fittriple-init.cpp
+@@ -1043,7 +1043,7 @@
+       //  for(i=0; i< ntoas ; i++) fake_BATs[i] = toes[i];
+ 
+  // Compute Einstein delay interpolation
+-         Delays_Brut_nogeometric(tinterp, parameters.treference,
++         Nbody_nogeometric_delays(tinterp, parameters.treference,
+                  ninterp, treference_in_interp,
+                  sp, si, so, pospsr,
+                  int_M0, int_M1, int_M2, parameters.f,
+@@ -1069,7 +1069,7 @@
+  //   Spline delays_interpolation( tinterp, delay, ninterp );
+ 
+ // Compute Shapiro and aberration delays interpolation
+-    Delays_Brut_nogeometric(tinterp, parameters.treference,
++    Nbody_nogeometric_delays(tinterp, parameters.treference,
+                  ninterp, treference_in_interp,
+                  sp, si, so, pospsr,
+                  int_M0, int_M1, int_M2, parameters.f,
+@@ -1326,7 +1326,7 @@
+      }
+ 
+ // this one to compute the BATs
+-    Delays_Brut_nogeometric(tinterp, parameters.treference,
++    Nbody_nogeometric_delays(tinterp, parameters.treference,
+                  ninterp, treference_in_interp,
+                  sp, si, so, pulsardirection_BAT[static_cast<long int>(floor(0.5*ntoas))],
+                  int_M0, int_M1, int_M2, parameters.f,
+@@ -1335,7 +1335,7 @@
+                 ) ;
+ 
+ // These three to keep track of the delays individually
+-    Delays_Brut_nogeometric(tinterp, parameters.treference,
++    Nbody_nogeometric_delays(tinterp, parameters.treference,
+                  ninterp, treference_in_interp,
+                  sp, si, so, pulsardirection_BAT[static_cast<long int>(floor(0.5*ntoas))],
+                  int_M0, int_M1, int_M2, parameters.f,
+@@ -1343,7 +1343,7 @@
+                  delay_ein,  parameters.truefreq, fshift, nanflag, NULL
+                 ) ;
+ 
+-    Delays_Brut_nogeometric(tinterp, parameters.treference,
++    Nbody_nogeometric_delays(tinterp, parameters.treference,
+                  ninterp, treference_in_interp,
+                  sp, si, so, pulsardirection_BAT[static_cast<long int>(floor(0.5*ntoas))],
+                  int_M0, int_M1, int_M2, parameters.f,
+@@ -1351,7 +1351,7 @@
+                  delay_shap,  parameters.truefreq, fshift, nanflag, NULL
+                 ) ;
+ 
+-    Delays_Brut_nogeometric(tinterp, parameters.treference,
++    Nbody_nogeometric_delays(tinterp, parameters.treference,
+                  ninterp, treference_in_interp,
+                  sp, si, so, pulsardirection_BAT[static_cast<long int>(floor(0.5*ntoas))],
+                  int_M0, int_M1, int_M2, parameters.f,
+@@ -1570,7 +1570,7 @@
+ // //printf("\n\n");
+ //
+ // // this one to compute the BATs
+-//     Delays_Brut_nogeometric(tinterp, parameters.treference,
++//     Nbody_nogeometric_delays(tinterp, parameters.treference,
+ //                  ninterp, treference_in_interp,
+ //                  sp, si, so, pulsardirection_BAT[static_cast<long int>(floor(0.5*ntoas))],
+ //                  int_M1, int_M2, parameters.f,
+@@ -1579,7 +1579,7 @@
+ //                 ) ;
+ //
+ // // These three to keep track of the delays individually
+-//     Delays_Brut_nogeometric(tinterp, parameters.treference,
++//     Nbody_nogeometric_delays(tinterp, parameters.treference,
+ //                  ninterp, treference_in_interp,
+ //                  sp, si, so, pulsardirection_BAT[static_cast<long int>(floor(0.5*ntoas))],
+ //                  int_M1, int_M2, parameters.f,
+@@ -1587,7 +1587,7 @@
+ //                  delay_ein,  parameters.truefreq, fshift, NULL
+ //                 ) ;
+ //
+-//     Delays_Brut_nogeometric(tinterp, parameters.treference,
++//     Nbody_nogeometric_delays(tinterp, parameters.treference,
+ //                  ninterp, treference_in_interp,
+ //                  sp, si, so, pulsardirection_BAT[static_cast<long int>(floor(0.5*ntoas))],
+ //                  int_M1, int_M2, parameters.f,
+@@ -1595,7 +1595,7 @@
+ //                  delay_shap,  parameters.truefreq, fshift, NULL
+ //                 ) ;
+ //
+-//     Delays_Brut_nogeometric(tinterp, parameters.treference,
++//     Nbody_nogeometric_delays(tinterp, parameters.treference,
+ //                  ninterp, treference_in_interp,
+ //                  sp, si, so, pulsardirection_BAT[static_cast<long int>(floor(0.5*ntoas))],
+ //                  int_M1, int_M2, parameters.f,

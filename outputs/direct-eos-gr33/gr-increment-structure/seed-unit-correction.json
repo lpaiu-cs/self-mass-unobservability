@@ -1,0 +1,9 @@
+{
+  "classification": "Proven",
+  "field": "plan.json: seed",
+  "incorrect_text": "one-centimetre central seed",
+  "correction": "The unchanged baryon TOV integrator uses r0=1 in metres, so the central seed radius is one metre, not one centimetre.",
+  "evidence": "verification/baryon_entropy.py Solver.branches sets r0=1; verification/common_eos.py Structure sets m.R=68819648.58910435 in metres and uses SI G,c with density/pressure converted to SI geometric units. The recorded radius is y[0]*m.R.",
+  "algorithm_or_running_plan_modified": false,
+  "scope": "Correction of the descriptive unit in the prepared plan. The original source, numerical seed, gate and running calculation are preserved."
+}

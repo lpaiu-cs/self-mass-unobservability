@@ -1,0 +1,33 @@
+{
+  "classification": "Counterexample candidate",
+  "eligible": true,
+  "hard_cap_seconds": 650,
+  "CPU_processes": 3,
+  "total_virtual_memory_GiB": 6,
+  "paths": [
+    [
+      64,
+      128,
+      "parallel-pilot-64-128"
+    ],
+    [
+      128,
+      128,
+      "parallel-pilot-128-128"
+    ],
+    [
+      128,
+      64,
+      "parallel-pilot-128-64"
+    ]
+  ],
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_parallel_return.py": "7999d0f2f088491b66f2ef8629a84f4660f68e20d8fa6d2e9f1f5ba2cc0bc3f6",
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_updated_gr_return.py": "d2c456a74a41ee97b07f026effdadd08c72d583b059420e933b8d72094c719d9",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_updated_gr_return.py": "2ebdded1c3970bd2e0e038cfd29151b7ac32a84e8c50092584ebce5ed5cdbc77",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/response/parallel-plan.json": "85aa9614c75b9c270be430057f31ed418e6216fb69473c2f4b17179d504de0ef",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/response/parallel-pilot.json": "bc141c617aadbf0fda0eca36540a0e4038d9ce6afd95a57c4bb2453cf8d511e6",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/lapse/result.json": "1105dde11dd591b41d08f1fa0a5775806c54af9110f5ed45c58c927f952871e5",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/collision/bank-result.json": "fb2429019b5501c2f4c50e067ca3a9de295d674df478768ef2223b9e85a38382"
+  }
+}

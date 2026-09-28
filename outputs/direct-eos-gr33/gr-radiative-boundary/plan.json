@@ -1,0 +1,24 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "9cf504d",
+  "bindings": {
+    "verification/gr_radiative_boundary.py": "35d8c7b76ceb064706f43e75800be1daf11d64be64cf9494a084657b6f49f2c5",
+    "verification/opacity_tables.py": "ba01a5ebe3062eb1b13b23ccb918f99158fba6fd0c72fcba191c1ba4a028c7b9",
+    "outputs/direct-eos-gr33/initial-state-17-4.npz": "5dcc8ffb8b32a9f15ccc4c8bb7111d19be8dcdc66611ad2942e3a4a0cf6cc6d6",
+    "outputs/direct-eos-gr33/gr-opacity/new-GR-captured.npz": "32975fa6317f066f122dfdca8cf88d84fcaa79b182416df5b01b3593d44b6ef3",
+    "outputs/direct-eos-gr33/gr-opacity/evaluation.npz": "4d1274167b4b26a23308e9e978841f774d9d41d350ae79c4aad125108c4a2b2c",
+    "outputs/direct-eos-gr33/opacity/internal/plan.json": "4a8ea57359c4535549a067d886836114c8d2f92b924850ef93b931264ceb88ff"
+  },
+  "imported_definition": {
+    "classification": "Imported from prior work",
+    "url": "https://docs.mesastar.org/en/latest/kap/overview.html",
+    "statement": "Radiative opacity is Rosseland mean; the effective opacity is the harmonic combination of radiation and conduction. Current documentation is used for this definition only, not for the version-specific numerical formula."
+  },
+  "native_radiative_value_relative_tolerance": 0.0001,
+  "opacity_units": "Declared table model evaluated at rho_B and its opacity per baryon gram, as used by the existing diffusion operator. A physical composition/mass normalization error is not certified.",
+  "exterior_optical_depth": "Unknown; cumulative integrals start at the finite saved outer boundary, not at infinity.",
+  "criterion": "Report Rosseland transport length / redshifted-temperature scale and energy-flux / (c*a*T^4) without claiming a physical diffusion or atmosphere certificate.",
+  "physical_opacity_certified": false,
+  "atmosphere_solved": false,
+  "full_GR_evolution": false
+}

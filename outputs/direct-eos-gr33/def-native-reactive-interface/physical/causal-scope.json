@@ -1,0 +1,22 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "coordinate_interval_seconds": 0.0034344311179287023,
+  "scalar_light_cone_depth_cm": 102960572.9370572,
+  "scalar_light_cone_depth_km": 1029.605729370572,
+  "hydro_buffer_width_cm": 20000.0,
+  "old_interface_depth_cm": 20000.0,
+  "actual_inner_domain_depth_cm": 40000.0,
+  "scalar_travel_to_inner_edge_seconds": 1.3342703140993546e-06,
+  "root_relative": 4.440892098500626e-16,
+  "seconds": 0.1850332950000002,
+  "inference": "The matched reactive200m buffer isolates the hydrodynamic old interface over this interval. It does not enclose the scalar past light cone. Inner thermochemical/radiative source changes cannot be replaced by a mass-port-only acoustic profile without further evidence.",
+  "next_decisive_requirement": "Use the actual reactive patch stress in the scalar source, and determine or bound the deeper source through the same physical radiation/background. Do not expand a fluid buffer repeatedly as a substitute for that source calculation.",
+  "full_stellar_interior": false,
+  "full_goal_complete": false,
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_interface_causal_scope.py": "5aa535d0e4f1a07dd1563f787ea107142c5c7d3b2492a86616accc1a08e161e4",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_reactive_interface.py": "a5ed10192701b2af655884b1f14e72b1c66bc42b5972df4d70ec19c2f19679a7",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-reactive-interface/physical/result.json": "98043411e12259a1f5358e4da23f6405ef24525890b7b3c1710703542c407b58"
+  }
+}

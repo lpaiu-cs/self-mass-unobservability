@@ -1,0 +1,45 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "inverse_derivative_transfers": [
+    {
+      "map": "density_quadrature",
+      "positive_quadrature_curvature_lower_rational": "560279637103516428895777292364078447192092156908403745321369616296491/100000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "eta_error_upper_rational": "19601138191089470361057418869100854622678584763009137938083/56027963747546122266900470276588178828160073748757688713198400000000",
+      "relative_reciprocal_slope_error_upper": "[1.01370126291681423692615366723082841910630776297044967096587E-9, 1.01370126291681423692615366723082841910630776297044967096588E-9]",
+      "reciprocal_slope_ratio_interval": [
+        "[0.999999998986298738551480314390775054994937284574874841850478, 0.999999998986298738551480314390775054994937284574874841850479]",
+        "[1.00000000101370126291681423692615366723082841910630776297044, 1.00000000101370126291681423692615366723082841910630776297045]"
+      ],
+      "display_only": {
+        "eta_error": 3.4984562850453315e-10,
+        "relative_inverse_derivative_error": 1.0137012629168142e-09
+      }
+    },
+    {
+      "map": "potential_quadrature",
+      "positive_quadrature_curvature_lower_rational": "1400699056699558352880232032472088434587194141396621835323483117303/250000000000000000000000000000000000000000000000000000000000000000000000000",
+      "eta_error_upper_rational": "523028693127420439811670754373687120082979896036256277427359/56027963747546122266900470276588178828160073748757688713198400000000",
+      "relative_reciprocal_slope_error_upper": "[3.57427327829979397933232373718570032164896777120054744925006E-8, 3.57427327829979397933232373718570032164896777120054744925007E-8]",
+      "reciprocal_slope_ratio_interval": [
+        "[0.999999964257269191906022195038431363403492138503252963734302, 0.999999964257269191906022195038431363403492138503252963734303]",
+        "[1.00000003574273278299793979332323737185700321648967771200547, 1.00000003574273278299793979332323737185700321648967771200548]"
+      ],
+      "display_only": {
+        "eta_error": 9.335136566520815e-09,
+        "relative_inverse_derivative_error": 3.5742732782997936e-08
+      }
+    }
+  ],
+  "restricted_Legendre_value_error_upper_rational": "278772186226182700553390705792577601407709944026970661208121/10000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "finite_pressure_density_identity_defect_upper_rational": "271314915659254955086364086621393987352829240399632707682721/5000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "potential_construction": "At fixed beta use the SAME quadrature scalar Q_K(eta,beta). Define its density as dQ_K/deta, not an independently discretized D. The certified second eta derivative is positive. Define the reduced Helmholtz potential as sup_(eta in [-17,24]) [eta*y-Q_K]. The true restricted dual uses K in the same supremum.",
+  "value_proof": "Suprema over the same compact interval differ by at most sup|K-Q_K| for every density target. This value bound includes endpoint maximizers. The gradient and inverse-curvature comparisons require both true and quadrature stationary roots to lie in the interval interior.",
+  "inverse_derivative_proof": "The two roots differ by delta<=E_first/m. Positive true slopes obey exp(-delta)<=true_slope(eta_true)/true_slope(eta_quad)<=exp(delta). The quadrature slope differs at eta_quad by relative at most epsilon=E_second/m. Therefore exp(-delta)/(1+epsilon)<=quad_inverse_slope/true_inverse_slope<=exp(delta)/(1-epsilon). This compares derivatives at DIFFERENT roots for the SAME density target.",
+  "assumptions": "Exact declared quadrature and interior matched density targets on the certified eta/beta domain; numerical root residual and evaluation roundoff are additional unless explicitly enclosed. beta=0 refers to reduced functions only.",
+  "ideal_ionization_certified_conditionally": true,
+  "nonideal_curvature_measured": false,
+  "native_EOS_replaced": false,
+  "physical_EOS_certified": false,
+  "full_GR_evolution": false
+}

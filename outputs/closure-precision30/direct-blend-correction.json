@@ -1,0 +1,52 @@
+{
+  "classification": "Counterexample candidate",
+  "rows": [
+    {
+      "output": "dxdt",
+      "endpoint_contrast_score": 0.07278661735419029,
+      "affine_reconstruction_score": 3.0124263281012337e-16,
+      "original_score": 0.10701428527862997,
+      "corrected_frozen_score": 0.002137872076318837,
+      "fresh_EOS": [
+        {
+          "h": 0.0001,
+          "score": 0.0011726958866575712,
+          "passed": false
+        },
+        {
+          "h": 5e-05,
+          "score": 0.002137872076318837,
+          "passed": false
+        }
+      ]
+    },
+    {
+      "output": "heat",
+      "endpoint_contrast_score": 0.004948091796517693,
+      "affine_reconstruction_score": 4.981498644120425e-17,
+      "original_score": 0.00627192472488698,
+      "corrected_frozen_score": 0.00014673193413532743,
+      "fresh_EOS": [
+        {
+          "h": 0.0001,
+          "score": 0.0001323160890859527,
+          "passed": true
+        },
+        {
+          "h": 5e-05,
+          "score": 0.00014673193542675894,
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "actual_default_blend_limits": [
+    [
+      0.01,
+      0.02
+    ]
+  ],
+  "endpoint_outputs_overwritten": false,
+  "original_failures_preserved": true,
+  "physical_weak_rates_certified": false
+}

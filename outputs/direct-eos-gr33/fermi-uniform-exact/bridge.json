@@ -1,0 +1,21 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "command": [
+    "gfortran",
+    "-O2",
+    "-fPIC",
+    "-shared",
+    "-I/home/lpaiu/work/direct-ions32/full-integral-build/src",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/fermi-uniform-exact/primitive_bridge.f90",
+    "-L/home/lpaiu/work/direct-ions32/full-integral-build/src",
+    "-Wl,-rpath,/home/lpaiu/work/direct-ions32/full-integral-build/src",
+    "-lfree_eos_direct24_integral_full",
+    "-o",
+    "/home/lpaiu/work/direct-eos-gr33/fermi-uniform-exact/primitive.so"
+  ],
+  "source_sha256": "570584730fff8aabbb4994c1b7eebc50da489ee0fdab0baf5be3cb2bc839c55f",
+  "library_sha256": "6348e235763db0112687f391ab1c06c34b33aa530973ea4a414a5d0f21b1dfb4",
+  "bridge_sha256": "3caa5b3ad132f8be4cf722ed254c6f6dd57f3a1423589c59861f895eb496abc7",
+  "original_library_unchanged": true
+}

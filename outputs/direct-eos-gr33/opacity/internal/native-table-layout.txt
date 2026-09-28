@@ -1,0 +1,22 @@
+
+/home/lpaiu/work/thermal-closure22/replay/binary:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+00000000007e6cb0 <__kap_eval_MOD_get_logt_compton_blend_hi>:
+  7e6cb0:	48 8b 05 c1 90 f2 01 	mov    0x1f290c1(%rip),%rax        # 270fd78 <__kap_def_MOD_kap_z_tables+0x18>
+  7e6cb7:	48 03 05 aa 90 f2 01 	add    0x1f290aa(%rip),%rax        # 270fd68 <__kap_def_MOD_kap_z_tables+0x8>
+  7e6cbe:	66 0f ef c0          	pxor   %xmm0,%xmm0
+  7e6cc2:	48 c1 e0 06          	shl    $0x6,%rax
+  7e6cc6:	48 03 05 93 90 f2 01 	add    0x1f29093(%rip),%rax        # 270fd60 <__kap_def_MOD_kap_z_tables>
+  7e6ccd:	48 8b 50 28          	mov    0x28(%rax),%rdx
+  7e6cd1:	48 03 50 18          	add    0x18(%rax),%rdx
+  7e6cd5:	48 8d 14 52          	lea    (%rdx,%rdx,2),%rdx
+  7e6cd9:	48 c1 e2 06          	shl    $0x6,%rdx
+  7e6cdd:	48 03 50 10          	add    0x10(%rax),%rdx
+  7e6ce1:	48 89 d0             	mov    %rdx,%rax
+  7e6ce4:	f3 0f 5a 40 54       	cvtss2sd 0x54(%rax),%xmm0
+  7e6ce9:	f2 0f 5c 05 67 90 1d 	subsd  0x1d9067(%rip),%xmm0        # 9bfd58 <options.0.2324+0x16d8>
+  7e6cf0:	00 
+  7e6cf1:	c3                   	ret    

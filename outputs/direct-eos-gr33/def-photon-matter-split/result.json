@@ -1,0 +1,91 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "checks": [
+    {
+      "index": 0,
+      "passed": true,
+      "relative_errors": {
+        "P_gas": 0.0,
+        "chi_rho_gas": 1.1102230246251565e-16,
+        "chi_T_gas": 2.1486191322538275e-16,
+        "du_dlnrho_gas": 1.5170136859437107e-14,
+        "cvT_gas": 4.0617105915224465e-15
+      },
+      "energy_score": 0.001953125,
+      "entropy_score": 0.004488932414016404
+    },
+    {
+      "index": 500,
+      "passed": true,
+      "relative_errors": {
+        "P_gas": 1.5772450326754806e-16,
+        "chi_rho_gas": 1.1102230246251565e-16,
+        "chi_T_gas": 4.424779625804772e-16,
+        "du_dlnrho_gas": 1.4764271359164338e-13,
+        "cvT_gas": 1.8971053617989044e-15
+      },
+      "energy_score": 0.00390625,
+      "entropy_score": 0.03158227512854413
+    },
+    {
+      "index": 1722,
+      "passed": true,
+      "relative_errors": {
+        "P_gas": 0.0,
+        "chi_rho_gas": 0.0,
+        "chi_T_gas": 4.3978200806321937e-16,
+        "du_dlnrho_gas": 1.66221871963138e-14,
+        "cvT_gas": 1.265206026459824e-16
+      },
+      "energy_score": 0.0,
+      "entropy_score": 0.0
+    },
+    {
+      "index": 2600,
+      "passed": true,
+      "relative_errors": {
+        "P_gas": 0.0,
+        "chi_rho_gas": 2.1973012819508647e-16,
+        "chi_T_gas": 1.1102230246251565e-16,
+        "du_dlnrho_gas": 2.220355539257967e-14,
+        "cvT_gas": 4.168255485409749e-16
+      },
+      "energy_score": 0.0,
+      "entropy_score": 0.0
+    },
+    {
+      "index": 4122,
+      "passed": true,
+      "relative_errors": {
+        "P_gas": 3.177716884713497e-14,
+        "chi_rho_gas": 1.005908179056288e-15,
+        "chi_T_gas": 2.6367796834847468e-15,
+        "du_dlnrho_gas": 3.4900337518562945e-14,
+        "cvT_gas": 7.633786407914016e-15
+      },
+      "energy_score": 0.96875,
+      "entropy_score": 0.1771617694178741
+    },
+    {
+      "index": 5734,
+      "passed": true,
+      "relative_errors": {
+        "P_gas": 2.0643186036486655e-14,
+        "chi_rho_gas": 6.954878265201706e-16,
+        "chi_T_gas": 1.7069679003611782e-15,
+        "du_dlnrho_gas": 2.2624685482602864e-14,
+        "cvT_gas": 1.3201813884977505e-13
+      },
+      "energy_score": 0.8125,
+      "entropy_score": 0.004937703405228475
+    }
+  ],
+  "full_grid_algebraic_cells": 5735,
+  "native_control_cells": 6,
+  "seconds": 0.3710084420000044,
+  "matter_pressure_capacity_positive": true,
+  "independent_photon_evolution_completed": false,
+  "whole_star_heat_closed": false,
+  "full_dynamic_charge_solved": false
+}

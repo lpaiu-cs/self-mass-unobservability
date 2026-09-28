@@ -1,0 +1,279 @@
+{
+  "classification": "Counterexample candidate",
+  "saved_replay_passed": true,
+  "scientific_acceptance": false,
+  "histories": 16,
+  "source_bindings": 51,
+  "max_native_RMS_replay_relative": 7.499426655412134e-15,
+  "cases": {
+    "balanced/p4-128.json": {
+      "replay_relative": [
+        1.459210055170797e-15,
+        1.873825396211338e-15,
+        2.2229844707909046e-16,
+        1.1316189936249774e-16
+      ],
+      "heat_telescoping": 3.551145923447293e-18
+    },
+    "balanced/p4-256.json": {
+      "replay_relative": [
+        1.455798495922671e-15,
+        7.499426655412134e-15,
+        3.3407413842235547e-16,
+        1.1317012740644258e-16
+      ],
+      "heat_telescoping": 3.551145923447293e-18
+    },
+    "balanced/p4-512.json": {
+      "replay_relative": [
+        2.001723504040562e-15,
+        3.066556811534733e-15,
+        3.3443804937857297e-16,
+        1.1316627414368814e-16
+      ],
+      "heat_telescoping": 3.551145923447293e-18
+    },
+    "direct-time/p4-1024.json": {
+      "replay_relative": [
+        1.6391411933508674e-15,
+        5.908647200333064e-15,
+        2.230802516221868e-16,
+        1.1316693020586724e-16
+      ],
+      "heat_telescoping": 3.551145923447293e-18
+    },
+    "direct-time/p4-2048.json": {
+      "replay_relative": [
+        1.2742582138027727e-15,
+        5.767965028223016e-15,
+        4.459209189996259e-16,
+        1.1316646335024687e-16
+      ],
+      "heat_telescoping": 3.551145923447293e-18
+    },
+    "direct-time/p4-512.json": {
+      "replay_relative": [
+        1.458365192053332e-15,
+        4.642508796661658e-15,
+        3.3429768439389125e-16,
+        1.1316878722084332e-16
+      ],
+      "heat_telescoping": 3.551145923447293e-18
+    },
+    "factor/p4-128.json": {
+      "replay_relative": [
+        1.2749818732019357e-15,
+        4.642511718856186e-15,
+        3.3434095500409315e-16,
+        1.1315354653560468e-16
+      ],
+      "heat_telescoping": 3.551145923447293e-18
+    },
+    "factor/p4-256.json": {
+      "replay_relative": [
+        1.4557919810557375e-15,
+        4.395557195456882e-15,
+        4.459468221105192e-16,
+        1.1316750183944757e-16
+      ],
+      "heat_telescoping": 3.551145923447293e-18
+    },
+    "factor/p4-512.json": {
+      "replay_relative": [
+        1.2738476015183206e-15,
+        5.572770292294911e-15,
+        4.458590389661755e-16,
+        1.1316631900165809e-16
+      ],
+      "heat_telescoping": 3.551145923447293e-18
+    },
+    "hierarchical/p4-128.json": {
+      "replay_relative": [
+        1.4571221408167046e-15,
+        4.220465198489976e-15,
+        3.3434095500115613e-16,
+        1.1315354653740042e-16
+      ],
+      "heat_telescoping": 3.551145923447293e-18
+    },
+    "hierarchical/p4-256.json": {
+      "replay_relative": [
+        1.0918439853009884e-15,
+        3.7087506857721655e-15,
+        3.344601124580815e-16,
+        1.1316750199192065e-16
+      ],
+      "heat_telescoping": 3.551145923447293e-18
+    },
+    "hierarchical/p4-512.json": {
+      "replay_relative": [
+        1.4558258187476113e-15,
+        4.876174706942736e-15,
+        2.229295299695281e-16,
+        1.1316631797527738e-16
+      ],
+      "heat_telescoping": 3.551145923447293e-18
+    },
+    "p4-128.json": {
+      "replay_relative": [
+        1.2749818731424096e-15,
+        4.0797830254869974e-15,
+        3.34340954988058e-16,
+        1.1315354652944316e-16
+      ],
+      "heat_telescoping": 3.551145923447293e-18
+    },
+    "p4-256.json": {
+      "replay_relative": [
+        1.4557919821175527e-15,
+        4.120834960639402e-15,
+        2.229734127861535e-16,
+        1.1316750173377445e-16
+      ],
+      "heat_telescoping": 3.551145923447293e-18
+    },
+    "p4-512.json": {
+      "replay_relative": [
+        1.091869335640101e-15,
+        3.622301927878222e-15,
+        3.343942491457928e-16,
+        1.1316631557801182e-16
+      ],
+      "heat_telescoping": 3.551145923447293e-18
+    },
+    "pilot-p2-64.json": {
+      "replay_relative": [
+        1.6370804554413141e-15,
+        5.269163493542179e-15,
+        3.3181643221913385e-16,
+        2.1843951354049424e-16
+      ],
+      "heat_telescoping": 3.551145923447293e-18
+    }
+  },
+  "decisions": {
+    "factor": {
+      "passed": false,
+      "comparisons": {
+        "velocity_mass_RMS_m_s": {
+          "previous": 0.0014769579149784427,
+          "last": 0.00037536203512557304,
+          "order": 1.976274072397106
+        },
+        "scalar_mass_RMS": {
+          "previous": 0.2070055777685695,
+          "last": 0.2030018336830724,
+          "order": 0.028176882586341486
+        },
+        "old_interface_velocity_RMS_m_s": {
+          "previous": 0.0019756454571913445,
+          "last": 0.002825449184168859,
+          "order": -0.5161561736231184
+        },
+        "new_interface_velocity_RMS_m_s": {
+          "previous": 0.00012332939097322708,
+          "last": 1.718043131874384e-05,
+          "order": 2.8436784921782965
+        }
+      }
+    },
+    "balanced": {
+      "passed": false,
+      "comparisons": {
+        "velocity_mass_RMS_m_s": {
+          "previous": 0.004544566072143633,
+          "last": 0.0009148542250901725,
+          "order": 2.3125287638638534
+        },
+        "scalar_mass_RMS": {
+          "previous": 0.27288497070198453,
+          "last": 0.7614717912551824,
+          "order": -1.4804976534884011
+        },
+        "old_interface_velocity_RMS_m_s": {
+          "previous": 0.009440167353452274,
+          "last": 0.0029928786241791997,
+          "order": 1.657278663926915
+        },
+        "new_interface_velocity_RMS_m_s": {
+          "previous": 0.007942430165579483,
+          "last": 0.0001520448230890989,
+          "order": 5.707011899394217
+        }
+      }
+    },
+    "hierarchical": {
+      "passed": false,
+      "comparisons": {
+        "velocity_mass_RMS_m_s": {
+          "previous": 0.001476957665091615,
+          "last": 0.0003753653783400621,
+          "order": 1.97626097879917
+        },
+        "scalar_mass_RMS": {
+          "previous": 0.2070056002653993,
+          "last": 0.20300176175509982,
+          "order": 0.02817755055306767
+        },
+        "old_interface_velocity_RMS_m_s": {
+          "previous": 0.0019756418297596076,
+          "last": 0.0028254958743111737,
+          "order": -0.5161826626523013
+        },
+        "new_interface_velocity_RMS_m_s": {
+          "previous": 0.0001233307212910306,
+          "last": 1.717183178376923e-05,
+          "order": 2.8444163649021736
+        }
+      }
+    },
+    "direct-time": {
+      "passed": false,
+      "comparisons": {
+        "velocity_mass_RMS_m_s": {
+          "previous": 0.0016077045985511344,
+          "last": 0.000813387962481166,
+          "order": 0.9829868031706522
+        },
+        "scalar_mass_RMS": {
+          "previous": 4.646759354157575e-07,
+          "last": 1.1802896031370396e-07,
+          "order": 1.9770840410809107
+        },
+        "old_interface_velocity_RMS_m_s": {
+          "previous": 0.0031031258313175525,
+          "last": 0.0015116789541163725,
+          "order": 1.0375704223295956
+        },
+        "new_interface_velocity_RMS_m_s": {
+          "previous": 1.7087272546285512e-05,
+          "last": 4.280866752987426e-06,
+          "order": 1.9969472980544347
+        }
+      }
+    }
+  },
+  "reduced_vs_direct_unaccepted_reference": {
+    "128": {
+      "velocity_mass_RMS_m_s": 0.001532063772555914,
+      "scalar_mass_RMS": 6.477843429422635e-06,
+      "old_interface_velocity_RMS_m_s": 0.0031028337216388304,
+      "new_interface_velocity_RMS_m_s": 0.00011501028138547378
+    },
+    "256": {
+      "velocity_mass_RMS_m_s": 0.0005594584591984516,
+      "scalar_mass_RMS": 0.2090312152948229,
+      "old_interface_velocity_RMS_m_s": 0.0022590022325717734,
+      "new_interface_velocity_RMS_m_s": 1.7193639111847547e-05
+    },
+    "512": {
+      "velocity_mass_RMS_m_s": 0.00040373034236706654,
+      "scalar_mass_RMS": 0.10694187756687601,
+      "old_interface_velocity_RMS_m_s": 0.0009520571549284008,
+      "new_interface_velocity_RMS_m_s": 2.2931026364178608e-06
+    }
+  },
+  "original_failure_resolved": false,
+  "new_evolutions": 0,
+  "new_EOS_calls": 0
+}

@@ -1,0 +1,53 @@
+{
+  "classification": "Counterexample candidate",
+  "steps": 1,
+  "completed": true,
+  "records": [
+    {
+      "step": 0,
+      "predictor": {
+        "classification": "Counterexample candidate",
+        "parameters": [
+          48.493288268493686,
+          -3.6561530221195486e-05,
+          -2.916906892065628e-11
+        ],
+        "interface_max": 5.194455976464951e-14,
+        "radius_m": 68817132.48343927,
+        "mass_geom_m": 291.68717246172474,
+        "baryon_g": 3.925101446571372e+32,
+        "EOS_calls": 2991202,
+        "direct_calls": 78626,
+        "physical_EOS_certified": false,
+        "boundary": "Nonzero photospheric pressure; exterior is a boundary normalization, not a solved radiating atmosphere."
+      },
+      "corrector": {
+        "classification": "Counterexample candidate",
+        "parameters": [
+          48.493288268497075,
+          -3.6561301963228223e-05,
+          -2.916162097328525e-11
+        ],
+        "interface_max": 5.684341886080802e-14,
+        "radius_m": 68817132.49914733,
+        "mass_geom_m": 291.6871724617269,
+        "baryon_g": 3.925101446571372e+32,
+        "EOS_calls": 1594870,
+        "direct_calls": 41862,
+        "physical_EOS_certified": false,
+        "boundary": "Nonzero photospheric pressure; exterior is a boundary normalization, not a solved radiating atmosphere."
+      }
+    }
+  ],
+  "mass_change_energy_erg": -1.0088218581808841e+40,
+  "expected_energy_erg": -1.0088085843890613e+40,
+  "release_erg": 1.3338006524941766e+41,
+  "neutrino_infinity_erg": 9.789417304195166e+39,
+  "pressure_work_erg": -5.748161369270383e+29,
+  "energy_score": 9.951855847420947e-07,
+  "energy_passed": true,
+  "fixed_flux": true,
+  "fixed_initial_preconditioner": true,
+  "physical_EOS_certified": false,
+  "full_GR_evolution": false
+}

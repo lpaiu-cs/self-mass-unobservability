@@ -1,0 +1,63 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "rows": [
+    {
+      "cells": 448,
+      "terms_erg": {
+        "photon": -3.532926902160819e+21,
+        "inner_boundary": 7.169341148703815e+20,
+        "discarded_Killing_energy": 1.2230097339932944e+19,
+        "lapse_conversion": 1.9548812494971077e+21,
+        "reference_chemical_energy_times_mass": -9.117048569825315e+20,
+        "reacted_H_inventory": 8.763551761194494e+20,
+        "nonideal_relativistic_remainder": 2.0758960294128153e+19,
+        "primitive_recovery_residual": -170661025353361.9
+      },
+      "reconstructed_trace_erg": -8.63472331683376e+20,
+      "reported_trace_erg": -8.634723316659769e+20,
+      "relative": 2.0150214432963022e-11
+    },
+    {
+      "cells": 896,
+      "terms_erg": {
+        "photon": -3.53838078232016e+21,
+        "inner_boundary": 7.780977385390873e+20,
+        "discarded_Killing_energy": 1.3588134723720567e+19,
+        "lapse_conversion": 1.9467208293737143e+21,
+        "reference_chemical_energy_times_mass": -1.0324580965772042e+21,
+        "reacted_H_inventory": 8.761140884027163e+20,
+        "nonideal_relativistic_remainder": 2.006202234700875e+19,
+        "primitive_recovery_residual": -41902988646582.07
+      },
+      "reconstructed_trace_erg": -9.362561074141058e+20,
+      "reported_trace_erg": -9.36256107403664e+20,
+      "relative": 1.1152631983310612e-11
+    }
+  ],
+  "fine_minus_coarse_erg": {
+    "photon": -5.453880159340855e+18,
+    "inner_boundary": 6.116362366870579e+19,
+    "discarded_Killing_energy": 1.3580373837876224e+18,
+    "lapse_conversion": -8.160420123393393e+18,
+    "reference_chemical_energy_times_mass": -1.2075323959467272e+20,
+    "reacted_H_inventory": -2.4108771673309184e+17,
+    "nonideal_relativistic_remainder": -6.96937947119403e+17,
+    "primitive_recovery_residual": 128758036706779.84
+  },
+  "total_difference_erg": -7.278377573768718e+19,
+  "signed_fraction_of_grid_difference": {
+    "photon": 0.07493263579779987,
+    "inner_boundary": -0.8403469461262846,
+    "discarded_Killing_energy": -0.018658517918636028,
+    "lapse_conversion": 0.11211866986405812,
+    "reference_chemical_energy_times_mass": 1.6590680872323462,
+    "reacted_H_inventory": 0.0033123826606903752,
+    "nonideal_relativistic_remainder": 0.009575457443031923,
+    "primitive_recovery_residual": -1.7690486018590732e-06
+  },
+  "interpretation": "An exact saved-budget decomposition, not a corrected trace or a new accepted verdict. The largest differing term identifies the next interface/energy target; it does not prove a particular boundary prescription is physically correct.",
+  "registered_failed_flow_verdict_preserved": true,
+  "registered_flow_passed": false,
+  "final_charge_solved": false
+}

@@ -1,0 +1,69 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "3065706d",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_source_step.py": "037233433d5d32d1649981374a125ece65a9a93d409cae4fb875635bfd1f54b2",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_coupling.py": "94eff557caa0aa0779b834fb87e7651dbcca83a6d4378ce6e35734f4bb2b0ac4",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-molecular-structure-defined/molecular-state-17-4.npz": "21ab88b4a5d404a06f09ace369ce65ccb43eeec4949211b6827618673d94b3ca",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-molecular-structure-defined/manifest.json": "cb60e8abcd5908cb5a6f2995de9a5a3ffbd9bf0001801d5713ba907b13101a96",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src/libfree_eos_direct24_molecular_spectral.so.1.0.0": "195f3658eb0cc8fe3447c6b690f246b5a4fb770bd8ffa764d19248fec857ec50"
+  },
+  "cells": [
+    0,
+    1175,
+    1176,
+    2972,
+    5734
+  ],
+  "steps": [
+    16,
+    32,
+    64
+  ],
+  "duration_scaled": 6.283185307179586,
+  "beta": -4,
+  "background_phi": 0.001,
+  "drive_amplitude": 0.0002,
+  "scalar_stiffness_over_rest_energy": 16,
+  "pilot": {
+    "cell": 2972,
+    "steps": 16
+  },
+  "source_problem": "Fixed Einstein volume, baryon density and nuclear composition. Native molecular entropy is constant during this isolated reversible source substep. A scalar degree of freedom has kinetic energy K*p^2/2, spring K*(phi-phi0)^2/2 and an external constant counterforce balancing the native matter derivative at phi0. An applied sinusoidal force supplies separately measured work. The scalar and actual native matter energy exchange through an exact specific-energy divided difference.",
+  "method": "Implicit midpoint for scalar velocity plus native matter discrete energy gradient. Solve entropy for temperature at each iterate. Paired unforced path and sign-reversed background/drive controls. No post-step energy rescaling.",
+  "purpose": "Validate the reusable native EOS frame map and reciprocal source update before adding it to the spherical constrained evolution. Artificial scalar stiffness and scaled time are controls, not fitted stellar-mode parameters.",
+  "gates": {
+    "native_entropy_temperature_residual": 2e-12,
+    "stage_absolute_residual": 2e-18,
+    "normalized_total_work_defect": 1e-09,
+    "field_time_refinement_order": 1.8,
+    "native_derivative_relative_difference": 1e-05,
+    "maximum_stage_iterations": 8,
+    "zero_drive_drift": 0.0,
+    "parity_difference": 1e-13
+  },
+  "budget": {
+    "workers": 1,
+    "gpu": false,
+    "measured_native_seconds": [
+      0.02377,
+      0.02503,
+      0.02172,
+      0.04713,
+      0.05241
+    ],
+    "estimated_native_calls_maximum": 6000,
+    "estimated_wall_seconds": [
+      180,
+      600
+    ],
+    "hard_timeout_seconds": 600,
+    "maximum_run_repeats": 1,
+    "stop": "Stop and preserve any native/conservation/refinement failure or time cap; no automatic larger grid, more steps, stronger amplitude or relaxed acceptance."
+  },
+  "full_GR_evolution": false,
+  "physical_stellar_drive": false,
+  "physical_EOS_certified": false,
+  "transport_included": false,
+  "observational_closure": false
+}

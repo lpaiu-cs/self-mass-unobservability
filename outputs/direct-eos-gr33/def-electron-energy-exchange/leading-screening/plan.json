@@ -1,0 +1,63 @@
+{
+  "classification": "Counterexample candidate",
+  "bindings": {
+    "verification/def_electron_dynamic_screening.py": "6a256ce455a75b064e4626480cc136b39f2cbfbc2a4a62ff42986d869f9fb89a",
+    "verification/def_electron_energy_exchange.py": "ea347d8ca74a0d28f491dd1d3118c459ef5e736f9a70698cbaac15534e65b7d4",
+    "outputs/direct-eos-gr33/def-electron-energy-exchange/plan.json": "f70f1b15e8247b1ca7d24744f63cbc24c72b30d52de3bac6603d74226323de7d",
+    "outputs/direct-eos-gr33/def-electron-energy-exchange/result.json": "6aa8be0f1d7f1672e45d19cbd0a908ad0090c817fad0da1eb06db2ff203b9fef",
+    "verification/def_electron_screened_leading.py": "1f5d2f0156a74b302e5a776d7f7a32c661798469d0d8b146a4011c89c1b49044",
+    "verification/def_electron_screening_resume.py": "d95bd93c582fc97b2698c7681276b8887f42e41753ac96bfa2b7c7981209b1fd",
+    "outputs/direct-eos-gr33/def-electron-energy-exchange/dynamic-screening/plan.json": "717fe67a75c786a4f3478efbec785d307533734b75d06c4cb33dc8461857e833",
+    "outputs/direct-eos-gr33/def-electron-energy-exchange/dynamic-screening/resume-plan.json": "4f191eae8a0158d08b5dcbec27b8978df9953aa8e3b223e22397a670dac0c232",
+    "outputs/direct-eos-gr33/def-electron-energy-exchange/dynamic-screening/polarization-4122.npz": "8dd02b1c5c351de8577b29d07b5387bbd348070aae309668233506898125a938",
+    "outputs/direct-eos-gr33/def-electron-energy-exchange/dynamic-screening/polarization-4928.npz": "7737a34aa92a6a8b31d4dad3c4b8bbd383cb754d672f52b5e4385e833230ae6e",
+    "outputs/direct-eos-gr33/def-electron-energy-exchange/dynamic-screening/polarization-5734.npz": "4e7595f0cbcb2b1455313e15edb41c3dace400b974dd63ef3d7b3804884070a9"
+  },
+  "cells": [
+    4122,
+    4928,
+    5734
+  ],
+  "seeds": [
+    5501,
+    5502,
+    5503,
+    5504
+  ],
+  "powers": [
+    15,
+    17
+  ],
+  "basis_sizes": [
+    3,
+    5,
+    7
+  ],
+  "source": "Shternin-Yakovlev 2006 equations 5-9. Finite-temperature semiclassical extension explicitly averages the same angular functions over the ideal Fermi energy derivative; does not supply finite-q quantum recoil.",
+  "claim": "Replace the static density-only ee interaction by longitudinal and transverse dynamically screened Dirac currents in the same conserving event integral, with paired samples and unchanged physical states.",
+  "gates": {
+    "event_energy": 2e-13,
+    "event_momentum": 2e-13,
+    "detailed_balance_log": 2e-10,
+    "quadrature_relative": 0.03,
+    "basis_relative": 0.02,
+    "native_K_compatibility": 0.2,
+    "equilibrium_quadrature": 1e-06,
+    "polarization_interpolation_relative": 1e-05,
+    "polarization_table_bracket_relative": 0.002,
+    "Ward_identity_relative": 2e-12,
+    "EI_direct_SI_comparison": 0.02
+  },
+  "budget": {
+    "table_nodes": 257,
+    "withheld_points": 16,
+    "pilot_power": 12,
+    "production_hard_seconds": 120,
+    "CPU_workers": 1,
+    "native_calls": 0,
+    "stellar_steps": 0,
+    "automatic_expansion": false
+  },
+  "preserved_failure": "The coherent dynamically screened extension failed inverse-event probability equality: max relative 0.846846290632167 on the fixed control. Ward and static spin-trace controls passed. No production ran. Its retarded-channel exchange interference prescription was not validated and is rejected.",
+  "declared_change": "Use the source small-transfer approximation: sum direct and exchange probabilities and omit their mutual interference, retaining longitudinal/transverse interference within each channel. This changes the approximation explicitly; it is not a correction proving the rejected full coherent model. Missing finite-q recoil and exchange-interference errors remain."
+}

@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/finish_stored_time_photons.py", line 95, in <module>
+    globals()[action]()
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/finish_stored_time_photons.py", line 67, in check
+    row=original_equation(m,z,115,p['time'][()],p['step_size'][()],p['x_initial'],gas,photons,times,[m.local(v) for v in times],[m.source(v) for v in times])
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/finish_stored_time_photons.py", line 59, in original_equation
+    return bind(prior.old.original_equation,OUT=OUT,flux=fixed)(m,z,step,t,h,x,gas,photons,times,cs,ss)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/complete_coarse_photon_history.py", line 109, in original_equation
+    assert row['passed'],row
+AssertionError: {'step': 115, 'relative': 3.7915199684679376e-11, 'physical': [6.6309339393777445e-18, 2.08866265583477e-19, 3.895900624349658e-20, 3.182110362943077e-20], 'native_identity_absolute': [0.0, 0.0], 'original202_B_arithmetic': True, 'passed': False}

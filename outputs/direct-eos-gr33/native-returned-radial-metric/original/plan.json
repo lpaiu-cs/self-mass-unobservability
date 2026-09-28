@@ -1,0 +1,40 @@
+{
+  "classification": "Conjectural",
+  "claim": "Continue the actually applied returned metric from its boundary to every exterior radius, then propagate the same background photons through it.",
+  "decision": "Supply the missing returned-metric photon stress on the accepted high/low history for the complete exterior boundary assembly.",
+  "representation": "Same outgoing boundary U interpolation, actual signed Radau emission and homogeneous mass residual. Exact exterior linear constraints; polynomial approximations only to smooth static vacuum ray kernels, with independent value and derivative checks. No source smoothing, new physical grid or EOS/fluid replay.",
+  "gates": {
+    "boundary": 0.002,
+    "kernel_value": 1e-10,
+    "kernel_derivative": 1e-07,
+    "inverse": 1e-09,
+    "energy_identity": 0.002,
+    "angular_invariant": 1e-10,
+    "quadrature": 0.002,
+    "time": 0.02
+  },
+  "budget": {
+    "check_seconds": 600,
+    "pilot_seconds": 1800,
+    "each_path_seconds": 14400,
+    "threads_per_process": 1,
+    "virtual_GiB": 16
+  },
+  "production": "Start only after boundary and independent kernel checks and measured pilot. Reuse completed cohorts. Four original angular/emission/geometry controls; no tolerance or horizon enlargement.",
+  "remaining": "Outgoing continuation matches the applied representation; exterior-generated/scattered scalar, reciprocal scalar/background-operator terms, matching inner work and new coupled boundary application remain required.",
+  "physical_final_charge_solved": false,
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/propagate_returned_exterior.py": "ed80f53154f4f195f28eeebf3fee45d1fe2057883a93832643060f48c1df4634",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/propagate_exterior_vacuum.py": "4969c0e9050fb0f6f41b644370f0512062f22d4efbfd4e51b225b5272efe0b7e",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/propagate_physical_exterior.py": "600392bf42fb4d3086fd4107603b15c4c8e854b6ee6543f8c87aa245ac8bd857",
+    "native-short-return259-work/result.json": "422371c7291edf6385ac11177959bf8e01afd6fc7da0fb2b62476cf6988095ca",
+    "native-short-return259-work/gr/fields-128-g8.npz": "6315597ed437d4d5cd667e44c30dd5faa28ba1ab663a6332ff03df508b9b6ea5",
+    "native-short-return259-work/metric/metric-128-g8.npz": "338444c8a84aa0d4b97ec0ac55226498708c0577f29f78515c2793cb1e0606af",
+    "native-common-arithmetic239-work/sweep-1/photons/complete-128.npz": "21f4bb184474f832e26b8d5bb309e7f1050bce7070b8ddd7325e262eacbf8645",
+    "native-short-return259-work/gr/fields-128-g4.npz": "de01ffb00dfce6313367b1123b94ae46dc28c2c10b295b738abfeced52b081d4",
+    "native-short-return259-work/metric/metric-128-g4.npz": "855f953981600a062ad3e048687eb4b002ef1be628fd575e0e6808cee4b02009",
+    "native-short-return259-work/gr/fields-64-g8.npz": "56dbfbcc6d25d09cadb94fb9d57292a1fb0d2de0a4b139e27bb7a6884f13cc58",
+    "native-short-return259-work/metric/metric-64-g8.npz": "6ae7e56745a9ec35fd235edaf7317151029e8d212f5874d96fc3ee5ab179eca8",
+    "native-common-arithmetic239-work/sweep-1/photons/complete-64.npz": "78293a016d40373449f40c8f57fd36c6cb7cc5422e23cb6f21935cc96c5fc1bc"
+  }
+}

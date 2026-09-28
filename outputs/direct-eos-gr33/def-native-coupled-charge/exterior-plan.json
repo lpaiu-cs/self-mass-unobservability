@@ -1,0 +1,18 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Propagate the actual outgoing angular photon occupation from the outer fluid face through the saved vacuum null geodesics to null infinity; compute the mass-normalization contribution instead of using bolometric face energy at the wrong retarded time.",
+  "reconstruction": "The evolved angular finite volumes have constant occupation inside each angular bin. Integrate that declared reconstruction continuously in angle; discrete central rays alone miss the earliest near-radial arrivals. No opacity or interaction is added outside the fluid domain.",
+  "Cauchy_boundary": "Count photons crossing the represented outer face at t>=0. No separately supplied pre-existing radiation outside that face is assumed. Report the same calculation for frozen initial outgoing occupation, so ordinary initial luminosity and excess response are distinguishable.",
+  "geometry": "Exact saved static vacuum metric, conformally invariant null rays. Additional arrival delay relative to a radial ray is integral[1/sqrt(1-bimpact^2*N^2/rE^2)-1] drE/(c*N*sqrt(1-2m/rE)). Compactify infinity with z=rE0/rE.",
+  "accuracy": "Compare16/32 vacuum quadrature,4/8 angular quadrature split at every history time crossing,linear/cubic history, and actual coarse/fine outgoing fields; each must be below0.002 except history and fluid-grid0.02.",
+  "budget": {
+    "seconds": 30,
+    "native_constructor_calls": 1,
+    "new_fluid_steps": 0,
+    "memory_GB": 2,
+    "CPU_threads": 1
+  },
+  "forecast": "The actual saved retarded material readout took4.91s. This uses only one boundary angular spectrum per snapshot plus smooth32-node vacuum quadratures;30s includes two compressed snapshot reads.",
+  "limits": "This supplies the radiative mass-loss term of the declared external continuation. It does not supply scalar/metric feedback, missing inner mechanics or certified sub-bin angular shape. Preserve the direct-charge and old strict-readout boundaries.",
+  "source_sha256": "b41775f3c1d1e8d4d290728ba664b2ae604b0cb048a32764b82677f9a70fb653"
+}

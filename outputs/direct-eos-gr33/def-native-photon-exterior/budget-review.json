@@ -1,0 +1,16 @@
+{
+  "classification": "Counterexample candidate",
+  "pilot_seconds": 0.040285157999999655,
+  "pilot_evolution_seconds": 0.005594481999999346,
+  "forecast_seconds_range": [
+    50,
+    190
+  ],
+  "forecast_assumptions": "Scale measured evolution by steps*cells*angles and geometry by cells*angles. Cache/memory and longer history are unmeasured; upper end approximately twice this scaling. Four predeclared paths only.",
+  "hard_production_timeout_seconds": 210,
+  "total_compute_cap_seconds": 240,
+  "BLAS_threads": 1,
+  "native_calls": 0,
+  "proceed": true,
+  "pilot_energy_note": "Pilot ended at t=1; its emitted-energy and debit fields describe the full registered t=2 pulse, not energy already emitted at pilot termination. Production ends at t=6."
+}

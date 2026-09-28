@@ -1,0 +1,77 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": false,
+  "actual_source_applied_to_coupled_prefix": true,
+  "source_primitive_verified": true,
+  "simultaneous_photon_thermal_H_prefix_completed": true,
+  "free_material_production_completed": false,
+  "time_accuracy_accepted": false,
+  "full_horizon_coupled_response_completed": false,
+  "GR_charge_correction": null,
+  "actual_mass_flux_balance_verified": false,
+  "exact_ADM_conservation_verified": false,
+  "physical_final_charge_solved": false,
+  "full_goal_complete": false,
+  "original_time_gate": 0.02,
+  "completed_steps": [
+    4,
+    8
+  ],
+  "planned_steps": [
+    64,
+    128
+  ],
+  "interval_seconds": 0.0002146519448705439,
+  "rows": [
+    {
+      "method": "unlifted",
+      "time_comparison": [
+        0.018193359056562004,
+        0.13227596431590716,
+        0.12660289249065837,
+        0.13249307066188443,
+        0.019020452135410256,
+        0.2305645884064614
+      ],
+      "maximum_energy_error": 6.505158747750135e-16,
+      "maximum_H_error": 5.571910221407205e-16,
+      "maximum_stage_residual": 9.309928663332341e-15,
+      "cost_forecast_seconds": 1074.3154731046666,
+      "accepted": false
+    },
+    {
+      "method": "leading_lift",
+      "time_comparison": [
+        0.01855672629556791,
+        0.050360949894808146,
+        0.05232909932630283,
+        0.04818282899417213,
+        0.022651738285357412,
+        0.02167100948769653
+      ],
+      "maximum_energy_error": 2.2568738552816565e-12,
+      "maximum_H_error": 1.6642648192439045e-12,
+      "maximum_stage_residual": 4.9864036790282276e-15,
+      "cost_forecast_seconds": 1069.1759842579995,
+      "accepted": false
+    },
+    {
+      "method": "exact_source_primitive",
+      "time_comparison": [
+        0.012650611249618414,
+        0.04670496517563988,
+        0.04406463053531844,
+        0.04811581025638585,
+        0.016210739774494217,
+        0.10215464286642444
+      ],
+      "maximum_energy_error": 1.1540786511146195e-12,
+      "maximum_H_error": 8.35821208804162e-13,
+      "maximum_stage_residual": 4.699297056740361e-15,
+      "cost_forecast_seconds": 1141.1739723053324,
+      "accepted": false
+    }
+  ],
+  "decision": "Reject all three early-time pairs. The exact photon source primitive passes its identity checks and photon energy/pressure clock controls, but the material energy/H/impulse/pressure transfer still fails the unchanged2percent gate. No full-horizon production or new GR charge is accepted.",
+  "next": "Repair the time integration of the simultaneous photon-to-material transfer at the same physical input and existing clocks. A higher-order coupled stage method must preserve actual stage times, weights, collisions, work and angular ports. Validate a bounded prefix before forecasting production; do not refine the physical grid or reinterpret a failed gate as success."
+}

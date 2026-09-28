@@ -1,0 +1,33 @@
+--- frequency-repair/synspec54.f
++++ profile-integral/synspec54.f
+@@ -10471,9 +10471,14 @@
+          ISP=ISPRF(IL)
+          IF(ISP.GT.1.AND.ISP.LE.5) LPR=.FALSE.
+          IF (ISP.GE.6) GO TO 100
++         FR0=FREQ0(IL)
++C        The line width belongs to the line frequency, not a batch center.
++         DSAVE=DOPA1(IAT,ID)
++         DOP1=1.D0/(FR0*3.33564D-11*
++     *      SQRT(1.651D8*TEMP(ID)/AMAS(IAT)+VTURB(ID)))
++         DOPA1(IAT,ID)=DOP1
+          CALL PROFIL(IL,IAT,ID,AGAM)
+-         DOP1=DOPA1(IAT,ID)
+-         FR0=FREQ0(IL)
++         DOPA1(IAT,ID)=DSAVE
+          IF(INNLT.EQ.0) THEN
+             AB0=EXP(GF0(IL)-EXCL0(IL)*TEM1)*RRR(ID,ION,IAT)*
+      *          DOP1*STIM(ID)
+@@ -10509,6 +10514,13 @@
+             if(pi.gt.0.) AB0=PI*(UN-UN/X)*EXP(GF0(IL))*DOP1
+          END IF
+          if(ab0.le.0.and.lasdel) go to 100
++C        Export ordinary LTE profiles; retain special profiles natively.
++         IF(IMODE0.EQ.-3.AND.INNLT.EQ.0.AND.LPR) THEN
++            WRITE(89,'(i8,1p9e26.17)') INDAT(IL),FR0,
++     *         GF0(IL),EXCL0(IL),AB0/STIM(ID),DOP1,AGAM,
++     *         FREQ(1),FREQ(2),TEMP(ID)
++            GO TO 100
++         END IF
+ C
+ C        set up limiting frequencies where the line I is supposed to
+ C        contribute to the opacity 

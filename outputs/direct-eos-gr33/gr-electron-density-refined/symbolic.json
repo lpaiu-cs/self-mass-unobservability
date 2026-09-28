@@ -1,0 +1,9 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "density": "N/n_pref=sqrt(2)*beta^(3/2)*D. D=F_(1/2)+beta*F_(3/2). Exact beta derivatives include the product-rule terms.",
+  "thermal": "After dividing each derivative by the same fixed sqrt(2)*beta^(3/2), N_tau=(3/2)D+beta*D_beta, N_etatau=(3/2)D_eta+beta*D_etabeta, N_tautau=(9/4)D+4*beta*D_beta+beta^2*D_betabeta, tau=ln(T).",
+  "implicit": "eta_n=N/N_eta, eta_tau=-N_tau/N_eta; eta_nn=(N-N_etaeta*eta_n^2)/N_eta; eta_ntau=-eta_n*(N_etaeta*eta_tau+N_etatau)/N_eta; eta_tautau=-(N_tautau+2*N_etatau*eta_tau+N_etaeta*eta_tau^2)/N_eta; n denotes ln(number density).",
+  "root_proof": "A positive lower bound m on D_eta throughout [c-delta,c+delta], and |D(c)-target|<m*delta, imply a unique root inside this bracket by the mean value theorem. c+(target-D(c))/D_eta(box) encloses that root. All derivatives are enclosed over the original bracket, so they enclose their values at the neutral root.",
+  "limitations": "The exact input inventory is fully ionized by assumption. No nonideal chemical potential, full EOS or GR closure is inferred."
+}

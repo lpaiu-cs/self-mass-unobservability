@@ -1,0 +1,74 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "2ad1201f",
+  "bindings": {
+    "verification/def_ionic_structure_transport.py": "30770c6d143bf80cffc17f5a0523d446a47924a8cd6e5c46e611b41c1d580f85",
+    "verification/def_electron_energy_exchange.py": "ea347d8ca74a0d28f491dd1d3118c459ef5e736f9a70698cbaac15534e65b7d4",
+    "verification/def_electron_collision_response.py": "9457f26158a3d1ec44aaefea64c4eddf8fe361be6c9f6da1945609eb0a70bad3",
+    "outputs/direct-eos-gr33/def-free-surface-thermal/coefficients.npz": "8fa9ddf79c966965a3a3fa26e6b4c738f82eec0b6ad257e521ae37c9403fb46c",
+    "outputs/direct-eos-gr33/def-conduction-core/manifest.json": "dee55a9bf3c8df437033deca72d62dc14f82640693d2fd6a650b597ebeac58ac",
+    "outputs/direct-eos-gr33/def-ionic-structure-transport/shaffer-starrett2020.html": "e1d16b4dd04f7f8af2f423cc2344a3112f351f97d24c8e2dd048cbdd818ff8be",
+    "outputs/direct-eos-gr33/def-ionic-structure-transport/blouin2020.html": "6e3fe793f3173099c2c44bf4f8b63422a83e46e9d124be5f072a2b6df053f29e",
+    "outputs/direct-eos-gr33/def-ionic-structure-transport/ionic-correlations2017.html": "50b0323fc83f586d27b3e2f2e02bfb43b1e9a0accc7cd3c860d74dcbbb03e984"
+  },
+  "sources": {
+    "shaffer-starrett2020.html": "https://arxiv.org/html/2002.00928",
+    "blouin2020.html": "https://arxiv.org/html/2006.16390",
+    "ionic-correlations2017.html": "https://arxiv.org/html/1707.01509"
+  },
+  "cells": [
+    1722,
+    2000,
+    2500,
+    2800,
+    3000,
+    3500,
+    4000,
+    4122,
+    4928,
+    5734
+  ],
+  "claim": "Remove the strong-degeneracy cutoff from the ion structure used by the microscopic conduction operator, using the actual multi-charge mixture and finite-T electron compressibility. Construct the paired ee+ei response in the partially degenerate and classical fully ionized layers.",
+  "model": "Classical multi-species Yukawa HNC with no bridge function, ideal-electron compressibility screening, static ion structure and elastic Born/Mott electron-ion scattering. Every present nuclear charge group is retained. Same Pauli-blocked dynamically screened leading ee collision bracket as Phase55. This is a declared microscopic candidate, not the full average-atom mean-force model of the references.",
+  "limits": "No neutral/partially ionized opacity, ion dynamics, full finite-q electron screening, non-Born phase shifts, coherent ee-channel interference or continuum physical error certificate. Do not graft a new hard zero-flux edge onto a stellar path.",
+  "grids": [
+    [
+      512,
+      32
+    ],
+    [
+      1024,
+      32
+    ]
+  ],
+  "box_controls": {
+    "cells": [
+      1722,
+      3000,
+      5734
+    ],
+    "grid": [
+      1536,
+      48
+    ]
+  },
+  "gates": {
+    "HNC_residual": 1e-08,
+    "positive_structure": true,
+    "EI_grid_relative": 0.005,
+    "EI_box_relative": 0.005,
+    "energy_angular_relative": 0.0001,
+    "ee_quadrature": 0.03,
+    "basis": 0.02
+  },
+  "budget": {
+    "pilot_states": 1,
+    "HNC_iteration_limit": 600,
+    "production_hard_seconds": 180,
+    "workers": 1,
+    "BLAS_threads": 1,
+    "native_calls": 0,
+    "new_stellar_steps": 0,
+    "automatic_expansion": false
+  }
+}

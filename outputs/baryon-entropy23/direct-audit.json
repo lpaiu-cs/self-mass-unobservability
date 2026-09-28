@@ -1,0 +1,28 @@
+{
+  "classification": "Proven",
+  "method": "DOP853 with direct FreeEOS entropy inversion; independent of tabulated EOS and fixed-step RK4",
+  "results": {
+    "fixed": {
+      "interface_residual": [
+        -1.4309138596235726e-10,
+        -8.852918398360998e-13,
+        2.1552750695263967e-09
+      ],
+      "entropy_residual": 1.999733711954832e-12,
+      "EOS_calls": 96216,
+      "elapsed_s": 23.268933751999995,
+      "passed": true
+    },
+    "scaled": {
+      "interface_residual": [
+        3.0201632861270866e-11,
+        -1.1959322421262186e-12,
+        -8.303096876716154e-09
+      ],
+      "entropy_residual": 1.9979573551154317e-12,
+      "EOS_calls": 96216,
+      "elapsed_s": 23.589885374000005,
+      "passed": true
+    }
+  }
+}

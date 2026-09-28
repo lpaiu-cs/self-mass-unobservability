@@ -1,0 +1,87 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "matched_selected_endpoint": -2.5375890992998707e-51,
+  "matched_mass_charge_endpoint": 3.4829714644393073e-57,
+  "mass_effect_over_selected": -1.372549513571555e-06,
+  "actual_stored_mass_ports_applied": true,
+  "same_background_denominator": true,
+  "homogeneous_component_readout": true,
+  "additional_exterior_mixed_stress_closed": false,
+  "exact_ADM_conservation_verified": false,
+  "physical_final_charge_solved": false,
+  "full_goal_complete": false,
+  "accepted_scope": "Actual stored conserved-source ports and their declared homogeneous vacuum continuation. Additional exterior mixed scalar/photon stress, changed photon paths and exact ADM/momentum-constraint closure are not assumed zero or solved.",
+  "cost": {
+    "recorded_action_seconds": 6.629243686999998,
+    "CPU_seconds": 4.7161924289999995,
+    "maximum_recorded_RSS_bytes": 426299392,
+    "registered_total_seconds": 180,
+    "CPU_threads": 1,
+    "virtual_GiB": 3,
+    "scope": "Recorded action bodies only; excludes imports, preflight, inspection, derivation, writing, publication and Git."
+  },
+  "previous_master_commit": "b1e26c922e93f7068fa704ff49f57fe22efaa614",
+  "previous_master_sha256": "b77b3a4d2771e08aab78e842acd03d92061b36f8a088c9ecf932ff721246da40",
+  "next_decisive_lever": "Propagate the exterior packet measure/energy/path variation together with scalar mixed constraints, then compare with initial ADM and outgoing flux. Preserve full physical/static/observational obligations.",
+  "preserved_phase162_nondoc_files": 181,
+  "preserved_document_prefixes": {
+    "docs/model-definition.md": {
+      "bytes": 245065,
+      "sha256": "d6191590156463e556a539f1b267e4c01a172de6e46e16ce7eef89fedd2bde80"
+    },
+    "docs/observable-targets.md": {
+      "bytes": 236871,
+      "sha256": "833600dcca8be9710d50c8a528f695af9202dbd1b1c4c698d6dffb887d1e3ae6"
+    },
+    "docs/adiabatic-limit.md": {
+      "bytes": 231583,
+      "sha256": "84e80e162d5d5e89914b04a6b7f01402681f5980a78000aea23442f584da61e6"
+    },
+    "docs/nonadiabatic-regime.md": {
+      "bytes": 239138,
+      "sha256": "07bed5af040f6c4526ac1fb7ba804bc567746bf42d9973dbec9f8bb51145391c"
+    },
+    "docs/failure-ledger-dynamic-chi.md": {
+      "bytes": 273838,
+      "sha256": "00ddcbeeec785b7f40d0b77fc75790688d6fb8cef11fa07b534ca64c0ee1d215"
+    },
+    "docs/dynamic-charge-completion.md": {
+      "bytes": 102590,
+      "sha256": "3bd2295ad3bb0935ec30989ae307cf4f2da6155fcc9b2031e868492b16037808"
+    }
+  },
+  "raw_files": 17,
+  "sha256": {
+    "verification/read_native_matched_mass.py": "c9346a4e7e26b8342a984151c5690cd9e36c9086c5a4ec23d522a4e303f6099f",
+    "notes/REQUEST163_MATCHED_MASS_READOUT_KO.md": "64700b10b8de4be9951aa92967dc497b24477411a1fe874c97f321425aaa73f7",
+    "docs/model-definition.md": "ce4805772f587fefc75e6440a94fa7ce0b4e7371a422c7ce04c19f46ef3050fb",
+    "docs/observable-targets.md": "ca24a5f7a9cc9b3745d96c586e95ba763c2b507c051c4137b7a7890095e97147",
+    "docs/adiabatic-limit.md": "35364671d7ef70e59b83b58036c28a54a7b5b0e1789a1b5c358da3e88ec96bc1",
+    "docs/nonadiabatic-regime.md": "c3e9726f6aa90bfc2b4415272366b4f1c7367b77241e215721de0e7ebd94273c",
+    "docs/failure-ledger-dynamic-chi.md": "a2570651b39b121a5b701bb4bac992d4f6cc7cffef1ed73ce70d4b65268e6de4",
+    "docs/dynamic-charge-completion.md": "9011ff7fc9fce680fb02a54db0828cccdd4d6484434034999ab0aba47a21ef6b",
+    "outputs/direct-eos-gr33/native-matched-mass/final-result.json": "3d061779f2e2dbad5794ea736976d1fb5a5974b96fb74b217cfbadbbbbd9e834",
+    "outputs/direct-eos-gr33/native-matched-mass/osk-receipt.json": "f73698ad94f17868b873e4b112cafb62d92008e0ed4d284d7265b3b62079e3c5",
+    "outputs/direct-eos-gr33/native-matched-mass/preservation.json": "d8f2da7b4f88a8d2909c5ef1898ed2c0cb9ea93e5d7965bc03b41c18a3b2278d",
+    "outputs/direct-eos-gr33/native-matched-mass/publication-producer.py": "99e4716eeed3ae10fc32e4e528d4902e9f3524c1a762377527d0a717c409a89d",
+    "outputs/direct-eos-gr33/native-matched-mass/publication.json": "3f0bc8a58a00ea2684b9dfd8486c7110512a69dd9e198df48cd0ea4b638733f8",
+    "outputs/direct-eos-gr33/native-matched-mass/completed/apply-receipt.json": "9f71d5cd7c9e8b6ac83c707e47673dc7b2d4ff89e945173e04284487e176396f",
+    "outputs/direct-eos-gr33/native-matched-mass/completed/audit-receipt.json": "46230c843f8e142a50ec1d9eaefb45be7f75554a9aaed324dc4ecc443b46ab67",
+    "outputs/direct-eos-gr33/native-matched-mass/completed/audit.json": "00ae736150c8657e310a3d6079891a397081842a864862d480e4d4343bc970ed",
+    "outputs/direct-eos-gr33/native-matched-mass/completed/charge-parts.npz": "0fb16341f199d8a248a3d63a1d0da498873b27a92235823cf1237106267c6eb8",
+    "outputs/direct-eos-gr33/native-matched-mass/completed/compensate-receipt.json": "e8c2467b71430eb99d29116814275ca84e670f0d04e012787d8877a45bf80465",
+    "outputs/direct-eos-gr33/native-matched-mass/completed/compensated-charge-parts.npz": "73ce8c497c757a976d45f6181799b8dffcbf9c5e8e39e1eea8a2e9891e6b7e21",
+    "outputs/direct-eos-gr33/native-matched-mass/completed/compensation-plan.json": "03f5e0ace606c53a1a7588a43ecb5821709d2bc85d1e1009e9bb0eac0a2c679b",
+    "outputs/direct-eos-gr33/native-matched-mass/completed/final-result.json": "4a55f8b58ee40530936ed82aef050dc98d7a61aa3fecc28a10ab6ca8cd13977c",
+    "outputs/direct-eos-gr33/native-matched-mass/completed/mass-cadence.npz": "6187960f34b403abb9c4ded68782d1c1293ada28bbcd57a964f829512bbbf2dc",
+    "outputs/direct-eos-gr33/native-matched-mass/completed/mass-fine.npz": "ac735c7ec40d5e25916c7f23322b1bca0c6f2684101cea6cbabdcc146b9cbafc",
+    "outputs/direct-eos-gr33/native-matched-mass/completed/mass-quadrature.npz": "db760a1522e3a6e1e5a385941daa93f86f1555b83279762a19b7a4d4ae047f0e",
+    "outputs/direct-eos-gr33/native-matched-mass/completed/mass-time.npz": "1c6a2929ac6c211c89d1aaec430d62b260348762273b9481201b68214bcfc204",
+    "outputs/direct-eos-gr33/native-matched-mass/completed/plan.json": "b95a55075b2c4c7fb2b1e48e005e76b57842112d89c839ffc9d781605b5f2482",
+    "outputs/direct-eos-gr33/native-matched-mass/completed/prepare-receipt.json": "4dc2f83c4f7ea93446fcd06e6359b707513034e8e7e55df9603ba7a536d387ca",
+    "outputs/direct-eos-gr33/native-matched-mass/completed/registered-producer.py": "2928231ba9fb4a8fd9a502a499586e9e79922aa39ccb64a622c62264d6aadd2a",
+    "outputs/direct-eos-gr33/native-matched-mass/completed/result.json": "505a5e09db0fe5b207790db3bf6ab10f15847f9b3fe323f056666d625185231d",
+    "outputs/direct-eos-gr33/native-matched-mass/completed/symbolic.json": "2c70e3252ec33e09a16f68e7442c55af0a89675b4e3bccb5babeef3aaba26e99"
+  }
+}

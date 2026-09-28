@@ -1,0 +1,11 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "occupation": "At fixed p, tau=ln(beta), t=(gamma-1)/beta: f_eta=f(1-f); f_etaeta=f(1-f)(1-2f); f_tau=t*f(1-f); f_etatau=t*f(1-f)(1-2f); f_tautau=[t^2*(1-2f)-t]*f(1-f). The kernel has no eta/beta dependence at fixed p,Q.",
+  "nonlinear": "For G=S/(X+S), X=Q^2/B: G_a=X*S_a/(X+S)^2; G_ab=X*S_ab/(X+S)^2-2*X*S_a*S_b/(X+S)^3. All six derivatives are of the same self free-energy function.",
+  "thermodynamics": "For per-ion dimensional free energy f(n_e,T) at fixed full-ion composition, let nu=ln(n_e), tau=ln(T): U=f-f_tau, P/n_i=f_nu, S/n_i=-f_tau/T, Cv/n_i=(f_tau-f_tautau)/T, P_T/n_i=f_nutau/T, (n_e/n_i)*P_ne=f_nu+f_nunu. Rescaled integration coordinates are held fixed in these derivatives.",
+  "positive_control": "For the classical TF self term f proportional to -n_e^(1/2)*T^(-1/2), the seven relative multipliers are [1,3/2,1/2,1/2,-3/4,-1/4,3/4]. Holding eta fixed would give a different temperature derivative and fails this thermodynamic construction.",
+  "tail": "Define M_j(Q)=integral K_p*f*t^j dp and A_j=(integral M_j dQ)/(a*Sref), c=a^2/(B*Sref). Beyond z=Z the absolute tails of [G,G_eta,G_etaeta,G_tau,G_etatau,G_tautau] are bounded by [A0,A0,3*A0,A1,3*A1,A1+3*A2]/(c*Z^2). Use |S_eta|,|S_etaeta|<=S; |S_tau|,|S_etatau|<=M1; |S_tautau|<=M1+M2; and M1^2<=S*M2.",
+  "moment": "integral M_j(Q)dQ=(pi^2*beta/4)*integral t^j*(1+beta*t)^2*f(t)dt. Polynomial incomplete exponential moments bound this at any compact eta,beta box; together with the finite-Q positive smooth response they justify first/second differentiation under the self integral.",
+  "scope": "Conditional exact derivative identities and tail bounds. Numerical interior, predictor displacement, full correlated/partially-ionized EOS and actual GR/observational closure remain separate."
+}

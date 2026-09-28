@@ -1,0 +1,83 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "errors": {
+    "response_time": {
+      "delta_u": 2.226861423924117e-11,
+      "delta_lambda": 2.1154996385642156e-11,
+      "delta_log_lapse": 1.6603813919322643e-11,
+      "delta_log_speed": 1.764239584205742e-11
+    },
+    "quadrature": {
+      "delta_u": 0.0,
+      "delta_lambda": 2.012216047350068e-16,
+      "delta_log_lapse": 1.503825887148007e-15,
+      "delta_log_speed": 3.099059533659695e-16
+    }
+  },
+  "rows": [
+    {
+      "ray_invariant": 5.482281295599023e-13,
+      "emitted_energy_relative": 2.488616408493316e-16,
+      "unit_ADM_lapse_kernel_per_cm": 1.447197277876651e-10,
+      "actual_background_intervals_and_SDIRK_packets": true,
+      "classification": "Counterexample candidate",
+      "steps": 128,
+      "order": 8,
+      "seconds": 5.832263744000102,
+      "maximum_delta_nu": 6.202209539509596e-27,
+      "endpoint_outer_photon_lapse": -2.041613338211086e-28,
+      "endpoint_outer_scalar_lapse": 7.253838311420475e-41,
+      "maximum_asymptotic_mass_residual_cm": 4.080607942354589e-26,
+      "maximum_ADM_residual_lapse": 5.905444706257404e-36,
+      "maximum_delta_log_transport_speed": 3.472657459182698e-26,
+      "maximum_delta_lambda_rate": 2.60590000015311e-23,
+      "actual_exterior_photons_applied": true,
+      "full_spatial_feedback": false,
+      "final_charge_solved": false
+    },
+    {
+      "ray_invariant": 5.482281295599023e-13,
+      "emitted_energy_relative": 1.6998702816135845e-16,
+      "unit_ADM_lapse_kernel_per_cm": 1.447197277876651e-10,
+      "actual_background_intervals_and_SDIRK_packets": true,
+      "classification": "Counterexample candidate",
+      "steps": 64,
+      "order": 8,
+      "seconds": 5.619806098000026,
+      "maximum_delta_nu": 6.20220953953972e-27,
+      "endpoint_outer_photon_lapse": -2.0416133381474517e-28,
+      "endpoint_outer_scalar_lapse": 7.253838311567002e-41,
+      "maximum_asymptotic_mass_residual_cm": 4.0806081349475835e-26,
+      "maximum_ADM_residual_lapse": 5.905444984977461e-36,
+      "maximum_delta_log_transport_speed": 3.472657459185481e-26,
+      "maximum_delta_lambda_rate": 2.6059000001528212e-23,
+      "actual_exterior_photons_applied": true,
+      "full_spatial_feedback": false,
+      "final_charge_solved": false
+    },
+    {
+      "ray_invariant": 5.415667914121514e-13,
+      "emitted_energy_relative": 2.0914799702090078e-16,
+      "unit_ADM_lapse_kernel_per_cm": 1.4471972778766513e-10,
+      "actual_background_intervals_and_SDIRK_packets": true,
+      "classification": "Counterexample candidate",
+      "steps": 128,
+      "order": 4,
+      "seconds": 3.6910173219998796,
+      "maximum_delta_nu": 6.202209539509602e-27,
+      "endpoint_outer_photon_lapse": -2.041613338211085e-28,
+      "endpoint_outer_scalar_lapse": 7.253838311420474e-41,
+      "maximum_asymptotic_mass_residual_cm": 4.0806064016106336e-26,
+      "maximum_ADM_residual_lapse": 5.905442476496946e-36,
+      "maximum_delta_log_transport_speed": 3.472657459182699e-26,
+      "maximum_delta_lambda_rate": 2.6059000001531127e-23,
+      "actual_exterior_photons_applied": true,
+      "full_spatial_feedback": false,
+      "final_charge_solved": false
+    }
+  ],
+  "full_current_metric_ready": true,
+  "metric_applied_to_evolution": false,
+  "full_goal_complete": false
+}

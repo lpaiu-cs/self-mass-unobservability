@@ -1,0 +1,18 @@
+EXCITATION AUDIT 128 / 5735
+EXCITATION AUDIT 256 / 5735
+EXCITATION AUDIT 384 / 5735
+EXCITATION AUDIT 512 / 5735
+EXCITATION AUDIT 640 / 5735
+EXCITATION AUDIT 768 / 5735
+EXCITATION AUDIT 896 / 5735
+EXCITATION AUDIT 1024 / 5735
+EXCITATION AUDIT 1152 / 5735
+EXCITATION AUDIT 1280 / 5735
+EXCITATION AUDIT 1408 / 5735
+EXCITATION AUDIT 1536 / 5735
+Traceback (most recent call last):
+  File "/mnt/e/lab/self-mass-unobservability/verification/verify_excitation_curvature.py", line 145, in <module>
+    if __name__=='__main__': globals()[sys.argv[1]]()
+  File "/mnt/e/lab/self-mass-unobservability/verification/verify_excitation_curvature.py", line 115, in run
+    assert all(vv>0 for vv in scale.values())
+AssertionError

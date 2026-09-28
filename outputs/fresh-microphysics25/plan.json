@@ -1,0 +1,21 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "367bc1e",
+  "previous_manifest_sha256": "b4657f912b18d93329f0fa0d825ad9be8af91be6d0b8b5c2878b2b5af081914b",
+  "method": "Reuse the unchanged MESA binary and its saved-model loader. finish_load_model calls set_vars with net/neu/kap enabled; profile_starting_model exports the pre-evolution state. Require the exported rho,T,X to match the supplied state before using powers or opacity.",
+  "stages": [
+    "Original source-state import control",
+    "Fresh evaluation at the scaled Request23 GR material state",
+    "Finite temperature/density perturbations versus reported nuclear derivatives",
+    "Redshifted power and frozen-rate comparison on the same material template"
+  ],
+  "tolerances": {
+    "import_logrho": 1e-10,
+    "import_logT": 1e-10,
+    "import_X_absolute": 1e-12,
+    "source_power_relative": 1e-06,
+    "nuclear_derivative_relative": 0.001
+  },
+  "gates": "Record any failed source or state control without replacing it with a later fit. Imported models are a carrier for state evaluation, not Newtonian or GR evolution solutions.",
+  "limitations": "MESA supplies its own EOS electron/ion auxiliary quantities at the requested baryon rho,T,X. This does not certify equality to the FreeEOS auxiliaries, expose every runtime reaction flow, close the composition derivative, or solve transport and GR time evolution."
+}

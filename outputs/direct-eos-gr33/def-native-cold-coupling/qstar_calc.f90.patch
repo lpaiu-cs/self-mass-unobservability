@@ -1,0 +1,56 @@
+--- prior/qstar_calc.f90
++++ scaled/qstar_calc.f90
+@@ -88,7 +88,7 @@
+ subroutine qstar_calc(ifpi_fit,&
+      ifpl, ifmhd, ifneutral, ifapprox,&
+      eps_factor, nmin, nmax, iz, tl, x,&
+-     qstar, qstart, qstarx, qstart2, qstartx, qstarx2)
++     qstar, qstart, qstarx, qstart2, qstartx, qstarx2, logscale)
+ 
+   use mod_pi_fit, only: &
+        pi_fitx_neutral_original, pi_fitx_neutral, pi_fitx_neutral_saumon,&
+@@ -104,17 +104,19 @@
+        qstar(:), qstart(:),  qstart2(:),&
+        qstarx(:,:), qstartx(:,:), qstarx2(:,:,:)
+ 
++  real(fp_kind), intent(out), optional :: logscale(:)
++
+   ! Internal variables
+   integer, parameter :: nb = 5
+ 
+   real(fp_kind), parameter :: rionconst = sqrt(3._fp_kind/16._fp_kind)*echarge*echarge/ergspercmm1/rydberg
+   real(fp_kind), parameter :: const = 4._fp_kind*pi/3._fp_kind
+ 
+-  integer nmax_reached, n, ib, nx, nmin_max
++  integer nmax_reached, n, ib, nx, nmin_max, ntarget
+ 
+   real(fp_kind) a, rnuconst, neutral_factor, ionized_factor
+ 
+-  real(fp_kind), allocatable :: b(:), bconst(:)
++  real(fp_kind), allocatable :: b(:), bconst(:), sq(:), st(:), sx(:,:), stt(:), stx(:,:), sxx(:,:,:)
+ 
+   nx = size(x)
+   nmin_max = size(qstar)
+@@ -194,7 +196,21 @@
+         b(nb) = bconst(nb)*x(nb)
+      endif
+   endif
+-  if(ifapprox) then
++  if(present(logscale)) logscale=0._fp_kind
++  qryd_logscale=0._fp_kind
++  if(present(logscale).and.a/real(nmin*nmin,fp_kind).gt.680._fp_kind) then
++     allocate(sq(nmin_max),st(nmin_max),sx(nb,nmin_max),stt(nmin_max),stx(nb,nmin_max),sxx(nb,nb,nmin_max))
++     qstar=0._fp_kind;qstart=0._fp_kind;qstarx=0._fp_kind
++     qstart2=0._fp_kind;qstartx=0._fp_kind;qstarx2=0._fp_kind
++     do ntarget=nmin,nmin_max
++        logscale(ntarget)=max(0._fp_kind,a/real(ntarget*ntarget,fp_kind)-400._fp_kind)
++        qryd_logscale=logscale(ntarget)
++        call qryd_calc(ifpl,ifmhd,ifneutral,eps_factor,ntarget,nmax,a,b,sq,st,sx,stt,stx,sxx,nmax_reached)
++        qstar(ntarget)=sq(ntarget);qstart(ntarget)=st(ntarget);qstarx(:,ntarget)=sx(:,ntarget)
++        qstart2(ntarget)=stt(ntarget);qstartx(:,ntarget)=stx(:,ntarget);qstarx2(:,:,ntarget)=sxx(:,:,ntarget)
++     enddo
++     qryd_logscale=0._fp_kind
++  elseif(ifapprox) then
+      call qryd_approx(ifpl, ifmhd, ifneutral, eps_factor, nmin, nmax, a, b,&
+           qstar, qstart, qstarx, qstart2, qstartx, qstarx2, nmax_reached)
+   else

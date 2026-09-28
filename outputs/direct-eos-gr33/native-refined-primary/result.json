@@ -1,0 +1,126 @@
+{
+ "classification": "Counterexample candidate",
+ "passed": true,
+ "verdict": "CONDITIONAL_NEGATIVE_CHARGE_KEPT_RESOLUTION_NOT_CONVERGED",
+ "refined_endpoint_compact_charge": -2.372117616121833e-51,
+ "original_endpoint_compact_charge": -2.4833128680653422e-51,
+ "endpoint_relative_change": 0.044776980530100194,
+ "endpoint_magnitude_change": -0.044776980530100194,
+ "magnitude_change": {
+  "61": -0.05438106558987377,
+  "62": -0.050977854540763944,
+  "63": -0.04775202483070542,
+  "64": -0.044776980530100194
+ },
+ "charges_original": {
+  "61": -1.598823909568343e-51,
+  "62": -1.8592165231661346e-51,
+  "63": -2.1530067588975445e-51,
+  "64": -2.4833128680653422e-51
+ },
+ "charges_refined": {
+  "61": -1.5118781616754487e-51,
+  "62": -1.7644376536883866e-51,
+  "63": -2.0501963266859924e-51,
+  "64": -2.372117616121833e-51
+ },
+ "relative_change": {
+  "61": 0.05438106558987377,
+  "62": 0.050977854540763944,
+  "63": 0.04775202483070542,
+  "64": 0.044776980530100194
+ },
+ "t61_all_original_gates": true,
+ "convergence_criterion": 0.02,
+ "convergence_met": false,
+ "grid": {
+  "cells": 539,
+  "interior": 27,
+  "refined_cells": "8-15 split 2x (34.375/32.375 km)"
+ },
+ "run": {
+  "segments": 18,
+  "actual_steps": 128,
+  "seconds": 6342.816415471995,
+  "fallbacks": 19
+ },
+ "approved_exceptions": {
+  "scope": "macro 61-64 of the refined 64-clock run",
+  "user_decisions": [
+   "vector linear <=1e-10",
+   "nonlinear vector defect <=1e-10",
+   "physical/material gates only, vectors recorded"
+  ],
+  "linear": {
+   "count": 15,
+   "max_vector": 9.532152758499197e-09,
+   "max_physical": 8.231018022385233e-16,
+   "max_material": 6.633895057882518e-14
+  },
+  "nonlinear": {
+   "count": 5,
+   "max_defect": 2.5959589546062523e-09,
+   "max_physical": 8.003007295732404e-17,
+   "max_material": 9.129444620743983e-15
+  }
+ },
+ "readout_inexact_coordinate_inverse_max": 3.353265958515292e-19,
+ "depth_cells_original_refined": {
+  "8": [
+   4.2656200570991566e-54,
+   2.3884498705785062e-54
+  ],
+  "9": [
+   2.6725146658171304e-52,
+   2.362220446976486e-52
+  ],
+  "10": [
+   -2.7495942003585274e-52,
+   -2.3410153779030727e-52
+  ],
+  "11": [
+   -1.5378499171846076e-51,
+   -1.461194806232234e-51
+  ],
+  "12": [
+   -7.291658042132663e-52,
+   -7.065366048709118e-52
+  ],
+  "13": [
+   -1.704579234398466e-52,
+   -1.6706243059370577e-52
+  ],
+  "14": [
+   -3.4453579383837595e-53,
+   -3.3948594300807806e-53
+  ],
+  "15": [
+   -6.419861567415307e-54,
+   -6.344575930382264e-54
+  ]
+ },
+ "not_recomputed": [
+  "128 clock",
+  "one GR return (low, 3.2e-22 of high)",
+  "exterior photon boundary term (3.9e-8)"
+ ],
+ "large_arrays_sha256": {
+  "primary267-refined64-work/sweep-1/photons/seg-61.npz": "55e5030ee7403610783bd0be3f6abce77feec2c8ce558e07f6fa59697bfe8368",
+  "primary267-refined64-work/sweep-1/photons/seg-62.npz": "08f8b96ae792724ca90564bc23775fce4d17b3e59e3b8abf41829fc10fcd25c1",
+  "primary267-refined64-work/sweep-1/photons/seg-63.npz": "ae8f99d5a713ab09172765aee7acae37655ea4e28d3a8e82c37edc8e09b3734f",
+  "primary267-refined64-work/sweep-1/photons/seg-64.npz": "94c27f4a20ecf56afe4f422bbdff5403d5645581a98417b4da744e01411b9972",
+  "readout267-refined64-work/gr/source-64.npz": "cedf2ef16df11d730870dbffece2cae997e72fb034642fc8605288ae3f25df6c",
+  "readout267-refined64-work/gr/field-source-64.npz": "9100c4b91f2e2ff16e26e5e46dbf92342ad8122ebf4788c59772cd77abc7cf88",
+  "readout267-refined64-work/recovered-64.npz": "f3cb0d7271d5d1fc52cbf0acd94fdd7e3a58d28619b53b65238e60829a84b9bd",
+  "outputs/direct-eos-gr33/def-native-boundary-layer/bank.npz": "55b173644916230158526089961e48397a77e072041ffab9d24b812b08d924d6",
+  "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/bank.npz": "3a0e413f569163731c87c976fef17dd9fed8a7b9938d6cfb149d0be1562ec6b8",
+  "outputs/direct-eos-gr33/def-native-initial-constraints/finite-volume/balanced-initial-state.npz": "c43636395634edcc8de6b5ae0badb01e3a27a59e552382b15e25711cf704c473",
+  "outputs/direct-eos-gr33/native-retained-completion/evolution/coupled-128.npz": "db1c4115cdb26e0d9f83393f1af1d74c9f3d2afa3bf59a578395b849facbc653",
+  "outputs/direct-eos-gr33/native-retained-completion/evolution/source-128.npz": "a0fae25e1b062ac7469c134c057762cbedb0ea0dc88a8a984409fbbd9dde7a13",
+  "native-incident-drive155-work/fields/born-g8.npz": "a5a4f0de888b23a9cfe727a288a6a8613b7083b117e7b72e09dabe1be04aad5f",
+  "primary267-refined64-work/captures (256, sha256 of the ordered list of file hashes)": "51fdd48391d96d12ee382dae4910a6b35e83916bdeeb31bb55646bea2d562815"
+ },
+ "final_charge_conclusion": "conditional negative charge kept (high, 64 clock); final physical charge unadjudicated",
+ "full_goal_complete": false,
+ "snapshot_KST": "2026-09-27T07:41:09.688530+09:00"
+}

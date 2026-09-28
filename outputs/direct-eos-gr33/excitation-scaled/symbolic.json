@@ -1,0 +1,7 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "free_energy": "F_exc/(kT)=-sum_j n_j L_j(M), M=C*n.",
+  "Hessian": "H_exc=-(D^T C+C^T D+C^T W C), D_aj=dL_j/dM_a, W_ab=sum_j n_j d2L_j/dM_a dM_b.",
+  "scope": "Fixed T, linear physical moments and differentiable declared branch. A two-species nonlinear manufactured example was differentiated independently. Hard cutoffs, sum tails and numerical derivative correctness are separate."
+}

@@ -1,0 +1,26 @@
+{
+  "classification": "Counterexample candidate",
+  "bindings": {
+    "verification/def_native_atmosphere_density.py": "e4e1f5dc4a15dadb791896a4c8b99e249be6cc59c53e68687b341cbe025727b6",
+    "outputs/direct-eos-gr33/def-native-atmosphere/plan.json": "4c7a7f3c9bc13d16223f93420ce114da2d42b9c1c5d63339c52454a713de028c",
+    "outputs/direct-eos-gr33/def-native-atmosphere/pilot-progress.json": "415c5bb1dbc6db159e7c9290c646ddc8767f7eae1698c7ebad9905bab6683624",
+    "outputs/direct-eos-gr33/def-hydrostatic-background/absolute-shoot/background-0.001.npz": "774e2bff821f5863291167f069a8673562bfee8b0ab648468c8dfc5a2a9b04d3",
+    "outputs/direct-eos-gr33/def-hydrostatic-background/absolute-shoot/lapse.npz": "9c08b16699d7bfaa696a93e68ad2eb42a9ea98f8373d036f3c7018d5dc374dba"
+  },
+  "correction": "The pressure-coordinate predictor entered a state with radiation pressure above total prescribed pressure. Native info 125 is eos_calc offset 100 plus density-underflow branch 25. Keep that failure; solve the same entropy in rho,T coordinates, where pressure is an output.",
+  "entropy": "Same native s and same max(2 erg/g,32 ulp(abs(h_thermal))) energy-unit gate. A recorded pressure-coordinate extended-precision fallback is allowed only at an already physical near-root state and must retain the density within 1e-11.",
+  "rho_drop_step": 0.25,
+  "maximum_log_density_drop": 28,
+  "stop_temperature_K": 1000,
+  "budget": {
+    "hard_timeout_seconds": 120,
+    "maximum_new_entropy_roots": 113,
+    "new_evolution_steps": 0,
+    "automatic_expansion": false
+  },
+  "gate": {
+    "entropy_energy_score": 1,
+    "gamma_consistency": 1e-08
+  },
+  "scope": "Native isentropic atmosphere segment. The unresolved cold tail, radiative/thermal closure and dynamic matching remain separate requirements."
+}

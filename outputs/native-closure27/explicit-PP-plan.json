@@ -1,0 +1,39 @@
+{
+  "classification": "Counterexample candidate",
+  "species": [
+    "h1",
+    "h2",
+    "he3",
+    "he4",
+    "li7",
+    "be7",
+    "b8",
+    "c12",
+    "c13",
+    "n13",
+    "n14",
+    "n15",
+    "o14",
+    "o15",
+    "o16",
+    "o17",
+    "o18",
+    "f17",
+    "f18",
+    "f19",
+    "ne18",
+    "ne19",
+    "ne20",
+    "mg22",
+    "mg24",
+    "ca40"
+  ],
+  "extras": [
+    "h2",
+    "li7",
+    "be7",
+    "b8"
+  ],
+  "method": "Use the existing native add_pp_extras network definition: resolve H2, Li7, Be7 and B8, remove their effective PP replacement reactions. Initialize the added inventories to zero explicitly. Compare the H=0 boundary and extract the conditional intermediate-state Jacobian.",
+  "gates": "All input rho,T,X retained exactly. Test H boundary inwardness, baryon source/Jacobian sums. Any relaxation spectrum is local at frozen bulk composition, density, temperature and EOS auxiliaries; it is not an observable scalar pole or an independently initialized stellar model."
+}

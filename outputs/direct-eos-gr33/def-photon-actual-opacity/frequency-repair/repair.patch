@@ -1,0 +1,77 @@
+--- balanced/PARAMS.FOR
++++ repaired/PARAMS.FOR
+@@ -50,7 +50,7 @@
+      *           BN    = 1.4743D-2,     
+      *           SIGE  = 6.6516D-25,   
+      *           PI4H  = 1.8966D27,   
+-     *           HMASS = 1.67333D-24)
++     *           HMASS = 1.66053906717384660D-24)
+ C
+ C     Unit number
+ C
+--- balanced/synspec54.f
++++ repaired/synspec54.f
+@@ -1699,6 +1699,15 @@
+             MA=0
+          END IF
+          AMAS(I)=D(1,I)
++         IF(I.EQ.1) AMAS(I)=1.00782503189799999D+00
++         IF(I.EQ.2) AMAS(I)=4.00260325413000029D+00
++         IF(I.EQ.6) AMAS(I)=1.20000000000000000D+01
++         IF(I.EQ.7) AMAS(I)=1.40030740042499993D+01
++         IF(I.EQ.8) AMAS(I)=1.59949146192599994D+01
++         IF(I.EQ.10) AMAS(I)=1.99924401752499996D+01
++         IF(I.EQ.12) AMAS(I)=2.39850416889999991D+01
++         IF(I.EQ.20) AMAS(I)=3.99625908499999980D+01
++         IF(I.EQ.9) AMAS(I)=1.89984031620700016D+01
+          ABND(I)=D(2,I)
+          if(iref.gt.0) abnd(i)=d(2,i)*abnd(iref)/d(2,iref)
+          IONIZ(I)=int(D(3,I))
+@@ -10511,9 +10520,8 @@
+          XIJEXT=DFRCON*EXT+1.5
+ c        IJ1=MAX(IJCNTR(I)-IJEXT,3)
+ c        IJ2=MIN(IJCNTR(I)+IJEXT,NFREQS)
+-         IJ1=int(MAX(float(IJCNTR(I))-XIJEXT,3.))
+-         IJ2=int(MIN(float(IJCNTR(I))+XIJEXT,float(NFREQS)))
+-         IF(IJ1.GE.NFREQ.OR.IJ2.LE.2) GO TO 100
++         CALL LINE_BOUNDS(FR0-EXT,FR0+EXT,IJ1,IJ2)
++         IF(IJ1.GT.IJ2) GO TO 100
+ C
+          IF(INNLT.EQ.0) THEN
+ C
+@@ -23909,3 +23917,35 @@
+ C
+ C =========================================================================
+ 
++
++      SUBROUTINE LINE_BOUNDS(LOW,HIGH,J1,J2)
++      INCLUDE 'PARAMS.FOR'
++      INCLUDE 'SYNTHP.FOR'
++      REAL*8 LOW,HIGH
++      INTEGER LFT,RGT,MID
++C     FREQ(3:NFREQ) is descending, with no uniform-grid assumption.
++      LFT=3
++      RGT=NFREQ+1
++   10 IF(LFT.LT.RGT) THEN
++         MID=(LFT+RGT)/2
++         IF(FREQ(MID).GT.HIGH) THEN
++            LFT=MID+1
++          ELSE
++            RGT=MID
++         END IF
++         GO TO 10
++      END IF
++      J1=LFT
++      LFT=3
++      RGT=NFREQ+1
++   20 IF(LFT.LT.RGT) THEN
++         MID=(LFT+RGT)/2
++         IF(FREQ(MID).GE.LOW) THEN
++            LFT=MID+1
++          ELSE
++            RGT=MID
++         END IF
++         GO TO 20
++      END IF
++      J2=LFT-1
++      END

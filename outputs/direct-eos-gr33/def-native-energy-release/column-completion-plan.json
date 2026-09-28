@@ -1,0 +1,23 @@
+{
+  "classification": "Counterexample candidate",
+  "reason": "The bounded refinement completed125 of147 columns and saved7249 states; only22 specified dense columns remain. Reuse every finished column instead of restarting or increasing resolution.",
+  "additional_native_calls": 3000,
+  "additional_seconds": 60,
+  "total_column_native_cap": 9000,
+  "forecast": "Up to101 states per saved column suggests about2000-2500 further native calls; dense-column curvature is an assumption, capped at3000 calls and60seconds.",
+  "unchanged": [
+    "density grid",
+    "source temperature span",
+    "midpoint threshold",
+    "depth limit",
+    "independent controls",
+    "fluid grid",
+    "horizon"
+  ],
+  "stop": "If this completion budget is insufficient, retain the incomplete bank and reassess. No automatic further expansion.",
+  "bindings": {
+    "verification/complete_native_energy_columns.py": "9a7d61a8628d891eb5f4b2efc6e4b76e9b8f98c56e0427e83878d308f266fe0f",
+    "verification/def_native_energy_columns.py": "94a94a7eae38ad2c6b5a63887d842ae1d38eab28ed5a47b6b9702d430ea302a0",
+    "outputs/direct-eos-gr33/def-native-energy-release/temperature-columns-progress.npz": "d02f6ea292c0337fb1f8955bd26294c5e0ddaf8efb0a5379b5696d62d6c839db"
+  }
+}

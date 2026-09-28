@@ -1,0 +1,486 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "rows": [
+    {
+      "case": "stellar",
+      "mu": 4.238439366415643e-06,
+      "scalar_flux": -1.6955385009282206e-08,
+      "omega_R_over_c": 0,
+      "refinement_difference": 2.220446049250313e-16,
+      "static_exact_error": 1.1102230246251565e-16,
+      "flat_error": 0.0,
+      "passed": true,
+      "static_control": {
+        "impedance": -1.000004238469307,
+        "amplitude_transfer": 0.9999957615546454,
+        "fixed_ADM_mass_verified": true
+      },
+      "solves": [
+        {
+          "impedance": [
+            -1.000004238469307,
+            0.0
+          ],
+          "amplitude_transfer": [
+            0.9999957615546455,
+            0.0
+          ],
+          "h": [
+            1.000004238463319,
+            0.0
+          ],
+          "current": 0.0,
+          "current_relative_error": 0,
+          "rhs_calls": 50,
+          "background_rhs_calls": 47,
+          "cutoff_x": 1e-05
+        },
+        {
+          "impedance": [
+            -1.000004238469307,
+            0.0
+          ],
+          "amplitude_transfer": [
+            0.9999957615546453,
+            0.0
+          ],
+          "h": [
+            1.0000042384633192,
+            0.0
+          ],
+          "current": 0.0,
+          "current_relative_error": 0,
+          "rhs_calls": 158,
+          "background_rhs_calls": 47,
+          "cutoff_x": 1e-05
+        }
+      ]
+    },
+    {
+      "case": "stellar",
+      "mu": 4.238439366415643e-06,
+      "scalar_flux": -1.6955385009282206e-08,
+      "omega_R_over_c": 9.207005858815045e-05,
+      "refinement_difference": 1.332267651156858e-15,
+      "static_exact_error": 0.0,
+      "flat_error": 0.0,
+      "passed": true,
+      "static_control": null,
+      "solves": [
+        {
+          "impedance": [
+            -1.000004238468154,
+            9.207005881420994e-05
+          ],
+          "amplitude_transfer": [
+            0.9999957627792972,
+            -6.26157584763163e-09
+          ],
+          "h": [
+            1.0000042372386568,
+            6.2616289113265205e-09
+          ],
+          "current": 9.20700585881501e-05,
+          "current_relative_error": 3.774758283725532e-15,
+          "rhs_calls": 2150,
+          "background_rhs_calls": 47,
+          "cutoff_x": 2.3017514647037614e-06
+        },
+        {
+          "impedance": [
+            -1.000004238468154,
+            9.20700588142103e-05
+          ],
+          "amplitude_transfer": [
+            0.9999957627792986,
+            -6.261575847871571e-09
+          ],
+          "h": [
+            1.0000042372386555,
+            6.261628911566447e-09
+          ],
+          "current": 9.207005858815023e-05,
+          "current_relative_error": 2.3314683517128287e-15,
+          "rhs_calls": 3650,
+          "background_rhs_calls": 47,
+          "cutoff_x": 1.1508757323518807e-06
+        }
+      ]
+    },
+    {
+      "case": "stellar",
+      "mu": 4.238439366415643e-06,
+      "scalar_flux": -1.6955385009282206e-08,
+      "omega_R_over_c": 0.0001841401171763009,
+      "refinement_difference": 1.332267648824219e-15,
+      "static_exact_error": 0.0,
+      "flat_error": 0.0,
+      "passed": true,
+      "static_control": null,
+      "solves": [
+        {
+          "impedance": [
+            -1.0000042384650933,
+            0.0001841401180786291
+          ],
+          "amplitude_transfer": [
+            0.9999957640017548,
+            -1.1441650483585691e-08
+          ],
+          "h": [
+            1.0000042360161887,
+            1.1441747417824349e-08
+          ],
+          "current": 0.00018414011717630055,
+          "current_relative_error": 1.887379141862766e-15,
+          "rhs_calls": 2102,
+          "background_rhs_calls": 47,
+          "cutoff_x": 4.603502929407523e-06
+        },
+        {
+          "impedance": [
+            -1.0000042384650933,
+            0.00018414011807862948
+          ],
+          "amplitude_transfer": [
+            0.9999957640017562,
+            -1.144165048381231e-08
+          ],
+          "h": [
+            1.0000042360161874,
+            1.1441747418050939e-08
+          ],
+          "current": 0.00018414011717630044,
+          "current_relative_error": 2.55351295663786e-15,
+          "rhs_calls": 3590,
+          "background_rhs_calls": 47,
+          "cutoff_x": 2.3017514647037614e-06
+        }
+      ]
+    },
+    {
+      "case": "stellar",
+      "mu": 4.238439366415643e-06,
+      "scalar_flux": -1.6955385009282206e-08,
+      "omega_R_over_c": 0.0002762101757644513,
+      "refinement_difference": 8.881784564999713e-16,
+      "static_exact_error": 0.0,
+      "flat_error": 0.0,
+      "passed": true,
+      "static_control": null,
+      "solves": [
+        {
+          "impedance": [
+            -1.0000042384603502,
+            0.00027621017779216905
+          ],
+          "amplitude_transfer": [
+            0.9999957652222435,
+            -1.6213799319265575e-08
+          ],
+          "h": [
+            1.0000042347956897,
+            1.621393664381129e-08
+          ],
+          "current": 0.00027621017576445045,
+          "current_relative_error": 3.1086244689504383e-15,
+          "rhs_calls": 2078,
+          "background_rhs_calls": 47,
+          "cutoff_x": 6.905254394111283e-06
+        },
+        {
+          "impedance": [
+            -1.0000042384603502,
+            0.0002762101777921694
+          ],
+          "amplitude_transfer": [
+            0.9999957652222444,
+            -1.621379931952125e-08
+          ],
+          "h": [
+            1.0000042347956888,
+            1.6213936644066937e-08
+          ],
+          "current": 0.0002762101757644504,
+          "current_relative_error": 3.3306690738754696e-15,
+          "rhs_calls": 3566,
+          "background_rhs_calls": 47,
+          "cutoff_x": 3.4526271970556417e-06
+        }
+      ]
+    },
+    {
+      "case": "strong",
+      "mu": 0.1,
+      "scalar_flux": 0.03,
+      "omega_R_over_c": 0,
+      "refinement_difference": 2.6423307986078726e-14,
+      "static_exact_error": 4.884981308350689e-15,
+      "flat_error": 0.0,
+      "passed": true,
+      "static_control": {
+        "impedance": -1.1198711497121958,
+        "amplitude_transfer": 0.8962971247115306,
+        "fixed_ADM_mass_verified": true
+      },
+      "solves": [
+        {
+          "impedance": [
+            -1.1198711497122271,
+            0.0
+          ],
+          "amplitude_transfer": [
+            0.89629712471152,
+            0.0
+          ],
+          "h": [
+            1.1157014481351344,
+            0.0
+          ],
+          "current": 0.0,
+          "current_relative_error": 0,
+          "rhs_calls": 602,
+          "background_rhs_calls": 47,
+          "cutoff_x": 1e-05
+        },
+        {
+          "impedance": [
+            -1.1198711497122007,
+            0.0
+          ],
+          "amplitude_transfer": [
+            0.8962971247115277,
+            0.0
+          ],
+          "h": [
+            1.1157014481351248,
+            0.0
+          ],
+          "current": 0.0,
+          "current_relative_error": 0,
+          "rhs_calls": 782,
+          "background_rhs_calls": 62,
+          "cutoff_x": 1e-05
+        }
+      ]
+    },
+    {
+      "case": "strong",
+      "mu": 0.1,
+      "scalar_flux": 0.03,
+      "omega_R_over_c": 0.05,
+      "refinement_difference": 2.398745915821782e-14,
+      "static_exact_error": 0.0,
+      "flat_error": 0.0,
+      "passed": true,
+      "static_control": null,
+      "solves": [
+        {
+          "impedance": [
+            -1.117706823711843,
+            0.051596923722887066
+          ],
+          "amplitude_transfer": [
+            0.9082339954595985,
+            -0.018510146621990888
+          ],
+          "h": [
+            1.1005807070526201,
+            0.02243024414272171
+          ],
+          "current": 0.049999999999997664,
+          "current_relative_error": 4.674038933671909e-14,
+          "rhs_calls": 3518,
+          "background_rhs_calls": 47,
+          "cutoff_x": 0.00125
+        },
+        {
+          "impedance": [
+            -1.1177068237118195,
+            0.051596923722891694
+          ],
+          "amplitude_transfer": [
+            0.9082339954596083,
+            -0.01851014662198989
+          ],
+          "h": [
+            1.1005807070526086,
+            0.022430244142720025
+          ],
+          "current": 0.04999999999999975,
+          "current_relative_error": 4.9960036108132044e-15,
+          "rhs_calls": 7358,
+          "background_rhs_calls": 62,
+          "cutoff_x": 0.000625
+        }
+      ]
+    },
+    {
+      "case": "strong",
+      "mu": 0.1,
+      "scalar_flux": 0.03,
+      "omega_R_over_c": 0.2,
+      "refinement_difference": 2.4836650003084126e-14,
+      "static_exact_error": 0.0,
+      "flat_error": 0.0,
+      "passed": true,
+      "static_control": null,
+      "solves": [
+        {
+          "impedance": [
+            -1.1037989586950627,
+            0.21785736799806296
+          ],
+          "amplitude_transfer": [
+            0.9327060739429901,
+            -0.03394040481100041
+          ],
+          "h": [
+            1.0707312913845972,
+            0.038963028641775255
+          ],
+          "current": 0.19999999999999996,
+          "current_relative_error": 2.220446049250313e-16,
+          "rhs_calls": 3326,
+          "background_rhs_calls": 47,
+          "cutoff_x": 0.005
+        },
+        {
+          "impedance": [
+            -1.1037989586950419,
+            0.21785736799807642
+          ],
+          "amplitude_transfer": [
+            0.9327060739430072,
+            -0.03394040481099754
+          ],
+          "h": [
+            1.0707312913845781,
+            0.03896302864177054
+          ],
+          "current": 0.19999999999999973,
+          "current_relative_error": 1.3322676295501878e-15,
+          "rhs_calls": 7118,
+          "background_rhs_calls": 62,
+          "cutoff_x": 0.0025
+        }
+      ]
+    },
+    {
+      "case": "flat",
+      "mu": 0,
+      "scalar_flux": 0,
+      "omega_R_over_c": 0.001,
+      "refinement_difference": 0.0,
+      "static_exact_error": 0.0,
+      "flat_error": 0.0,
+      "passed": true,
+      "static_control": null,
+      "solves": [
+        {
+          "impedance": [
+            -1.0,
+            0.001
+          ],
+          "amplitude_transfer": [
+            1.0,
+            0.0
+          ],
+          "h": [
+            1.0,
+            0.0
+          ],
+          "current": 0.001,
+          "current_relative_error": 0.0,
+          "rhs_calls": 86,
+          "background_rhs_calls": 0,
+          "cutoff_x": 2.5e-05
+        },
+        {
+          "impedance": [
+            -1.0,
+            0.001
+          ],
+          "amplitude_transfer": [
+            1.0,
+            0.0
+          ],
+          "h": [
+            1.0,
+            0.0
+          ],
+          "current": 0.001,
+          "current_relative_error": 0.0,
+          "rhs_calls": 86,
+          "background_rhs_calls": 0,
+          "cutoff_x": 1.25e-05
+        }
+      ]
+    },
+    {
+      "case": "flat",
+      "mu": 0,
+      "scalar_flux": 0,
+      "omega_R_over_c": 0.2,
+      "refinement_difference": 0.0,
+      "static_exact_error": 0.0,
+      "flat_error": 0.0,
+      "passed": true,
+      "static_control": null,
+      "solves": [
+        {
+          "impedance": [
+            -1.0,
+            0.2
+          ],
+          "amplitude_transfer": [
+            1.0,
+            0.0
+          ],
+          "h": [
+            1.0,
+            0.0
+          ],
+          "current": 0.2,
+          "current_relative_error": 0.0,
+          "rhs_calls": 86,
+          "background_rhs_calls": 0,
+          "cutoff_x": 0.005
+        },
+        {
+          "impedance": [
+            -1.0,
+            0.2
+          ],
+          "amplitude_transfer": [
+            1.0,
+            0.0
+          ],
+          "h": [
+            1.0,
+            0.0
+          ],
+          "current": 0.2,
+          "current_relative_error": 0.0,
+          "rhs_calls": 86,
+          "background_rhs_calls": 0,
+          "cutoff_x": 0.0025
+        }
+      ]
+    }
+  ],
+  "seconds": 0.6377811490000056,
+  "coupled_interior_solved": false,
+  "physical_surface_solved": false,
+  "full_dynamic_charge_solved": false,
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "background": "b=1-2m/r; F=N sqrt(b); m_prime=r^2 b Phi^2/2; (ln F)_prime=2m/(r^2 b).",
+    "metric_constraint": "For nonzero frequency dm=r^2 b Phi dphi and dlambda=r Phi dphi; the homogeneous time-independent mass perturbation is outside this radiative sector.",
+    "radial_equation": "dphi_rr+(2/r+2m/(r^2 b))*dphi_r+(omega^2/F^2+2 Phi^2/b)*dphi=0.",
+    "wave_potential": "u=r dphi; u_rstar_rstar+(omega^2-V)u=0; V=2 N^2(m/r^3-Phi^2).",
+    "scope": "Linear vacuum scalar plus metric perturbation around a static massless-scalar background; no cold-fluid assumption is imported."
+  }
+}

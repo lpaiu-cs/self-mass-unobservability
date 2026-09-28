@@ -1,0 +1,66 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "comparisons": [
+    {
+      "steps": 64,
+      "endpoint": 1.0090130640658166e-27,
+      "prior_endpoint": 1.0090213239090805e-27,
+      "change": -8.259843263898501e-33,
+      "relative_change": -8.185994753707273e-06,
+      "discarded_Killing_energy_erg": 5.3708128956001306e+23,
+      "prior_discarded_Killing_energy_erg": 2.1417428832492882e+26,
+      "remaining_discard_ratio": 0.0025076833160533,
+      "retained_tail_endpoint_g": 3502.096016526371
+    },
+    {
+      "steps": 128,
+      "endpoint": 1.0211271551555008e-27,
+      "prior_endpoint": 1.0211350807243735e-27,
+      "change": -7.925568872722946e-33,
+      "relative_change": -7.761528344614996e-06,
+      "discarded_Killing_energy_erg": 4.939341265106903e+23,
+      "prior_discarded_Killing_energy_erg": 2.1031528818428116e+26,
+      "remaining_discard_ratio": 0.002348541234329567,
+      "retained_tail_endpoint_g": 4019.253846356066
+    }
+  ],
+  "time_relative": 0.01186345013794032,
+  "quadrature_relative": 2.9861368811668273e-15,
+  "independent_direct_relative": 2.5646151868841116e-14,
+  "inverse_residual_cm": 4.76837158203125e-07,
+  "baryon_relative_to_initial": [
+    3.121720322915606e-16,
+    1.0724144425689377e-16
+  ],
+  "tail_change_time_relative": 0.0421767063719566,
+  "tail_change_quadrature_relative": 4.4131103055484234e-10,
+  "tail_change_resolved_on_original_gates": false,
+  "current_actual_sources_applied_to_compact_GR": true,
+  "symbolic_linearity_check": true,
+  "timings": [
+    {
+      "steps": 128,
+      "order": 8,
+      "seconds": 2.4045500189995437
+    },
+    {
+      "steps": 64,
+      "order": 8,
+      "seconds": 2.0321575459993255
+    },
+    {
+      "steps": 128,
+      "order": 4,
+      "seconds": 1.6804079430003185
+    }
+  ],
+  "seconds": 24.46590812999966,
+  "new_emission_at_null_infinity": false,
+  "uniform_EOS_derivative_bound": false,
+  "full_floor_feedback_enclosed": false,
+  "coupled_fixed_point_verified": false,
+  "nonlinear_GR": false,
+  "final_charge_solved": false,
+  "full_goal_complete": false
+}

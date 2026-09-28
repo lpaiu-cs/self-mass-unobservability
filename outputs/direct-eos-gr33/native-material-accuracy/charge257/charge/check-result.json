@@ -1,0 +1,31 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "jacobian_seconds": 4.408397426999983,
+  "jacobian_nnz": 11965,
+  "rejected_gross_recovery_relative": [
+    [
+      0.10417559297916312,
+      8.285818400885382e-05,
+      1.952354669109241e-08,
+      0.10417559322665489
+    ],
+    [
+      0.29043348746866937,
+      0.001103682442442916,
+      4.092773519133155e-08,
+      0.2904334831682935
+    ]
+  ],
+  "resolved_face_relative": [
+    8.670556320086733e-12,
+    3.2366832184244823e-10,
+    1.8071179941608994e-09
+  ],
+  "geometric_validation": "Symbolic gravity and geometric conserved/face chain rule, plus independent resolved direct-primitive face perturbation; gross recovery control remains rejected.",
+  "exact_zero_source": true,
+  "actual_stage_metric_relative": 0.0,
+  "full_incident_source_nonzero": true,
+  "self_GR_return_closed": false,
+  "final_charge_conclusion": "unadjudicated"
+}

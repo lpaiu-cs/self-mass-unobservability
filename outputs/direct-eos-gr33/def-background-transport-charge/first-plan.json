@@ -1,0 +1,44 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "93b43539f",
+  "claim": "Carry the actually evolved temperature/density drift into radius-dependent Rosseland transport, solve the same orbital heat/GR system, and measure its external scalar-charge change.",
+  "decision": "Resolve the CHANGE of outgoing charge against its own time/space contrasts, not merely convergence of the larger baseline. A small change excludes dominance only of this transport-input update; unresolved or large change does not trigger automatic refinement.",
+  "changed": "At saved endpoints, evaluate the same opacity table at rho*exp(delta_lnrho),T*exp(delta_lnT), retained composition. Update Krad, radiative pole rate and redshifted-temperature factors in all internal-face heat maps. Hold native EOS tangent, GR geometry/operator, electron conduction and exterior wave propagation fixed.",
+  "scope": "Finite transport sensitivity along the saved linear background trajectory. Not full background re-equilibration, updated EOS/geometry, instantaneous coefficient derivative feedback, atmosphere, or an orbit-long physical transfer function. The short-time boundary scalar itself is never used as radiation.",
+  "cases": [
+    "p4-64 harmonics1,2,3",
+    "p4-32 harmonics1,2,3",
+    "p2-64 harmonics1,2,3"
+  ],
+  "gates": {
+    "opacity_baseline_replay": 1e-10,
+    "linear": 1e-09,
+    "heat": 1e-09,
+    "balance": 2e-13,
+    "adjoint": 1e-05,
+    "change_time": 0.01,
+    "change_space": 0.02
+  },
+  "budget": {
+    "pilot_seconds": 120,
+    "total_seconds": 600,
+    "CPU_threads": 1,
+    "memory_GB": 4,
+    "new_EOS_calls": 0,
+    "new_time_steps": 0,
+    "automatic_expansion": false
+  },
+  "forecast": "Prior full GR assembly11s, harmonic solve below1s. Measure32 baseline/updated opacity evaluations before all three native updates, and one joint solve before production.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_background_transport_charge.py": "4b19866df1501f0088a8438ab6e435043fb27edd0a444a8235f462021048992d",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_orbital_radiative_transport.py": "7de831e6f59c65fa74a5c6486838b245c901da412ce97175336d55b7f49004fb",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_thermal_background_drift.py": "230305d0669efbc43a6d90477bd7fde9fb2b76ea915f298da16dc6e6f54849f1",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-orbital-radiative-transport/result.json": "ebc6b074528239c93820d6ad055a2321ba77e0ed7667b63fff0bc7bccbf17830",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-orbital-radiative-transport/all/fine-bank.npz": "18cc74ac367cd0f6525ca0344d528f505e570c8a29fae397625d17bb051b0ac6",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-free-surface-thermal/coefficients.npz": "8fa9ddf79c966965a3a3fa26e6b4c738f82eec0b6ad257e521ae37c9403fb46c",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-thermal-background-drift/audit.json": "9d18c30db2077d30f0eafe2cd5bb3d0ef72263d9c4e556b7356f32ab9f15a9b7",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-thermal-background-drift/p4-32.npz": "c1b9b41252688ac295f92e6d6f02734df5fd52f05dc580d7ea590d01aa9d3eba",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-thermal-background-drift/p4-64.npz": "3100c1ec1d885780bc2bfac9625daca4621eca50ef0ee0cf1327a305af2582ee",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-thermal-background-drift/p2-64.npz": "4e19ce596725de2f2b6887833a99a1ac6225f3c0b3eaf2994fc3c7981d315852"
+  }
+}

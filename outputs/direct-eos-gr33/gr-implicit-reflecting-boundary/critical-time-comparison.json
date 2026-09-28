@@ -1,0 +1,86 @@
+{
+  "classification": "Counterexample candidate",
+  "progress": "loophole progress",
+  "proper_tau_seconds": "0.0004113000088929766",
+  "critical_time_seconds": 0.0015423750333486623,
+  "original_refinement_two_endpoint_cone": {
+    "maximum_local_rest_characteristic_speed_over_c": 1.0744534890854938,
+    "maximum_characteristic_imaginary_part": 0.0,
+    "sampled_cone_inside_light_cone": false
+  },
+  "reflecting_paths": [
+    {
+      "refinement": 1,
+      "steps": 4,
+      "time_seconds": 0.0015423750333486623,
+      "maximum_logged_accepted_stage_norm": 0.90031149561468,
+      "maximum_internal_stage_characteristic_speed_over_c": 0.7688385423851883,
+      "maximum_saved_characteristic_speed_over_c": 0.7734746699827793,
+      "maximum_saved_cell_energy_defect_over_initial_heat_capacity": 5.448495378521428e-05,
+      "maximum_changes": [
+        3.877556029343128e-07,
+        0.0294770089398486,
+        9.871134500033166e-09,
+        1.3285720613354306e-10
+      ],
+      "zero_boundary_exchange": true,
+      "endpoint_cone": {
+        "maximum_local_rest_characteristic_speed_over_c": 0.6962231146704905,
+        "maximum_characteristic_imaginary_part": 0.0,
+        "sampled_cone_inside_light_cone": true
+      },
+      "endpoint_budget": {
+        "maximum_cell_energy_defect_over_initial_heat_capacity": 5.015616140510174e-05,
+        "total_energy_defect_over_initial_heat_capacity": 1.0434142908358368e-10
+      }
+    },
+    {
+      "refinement": 2,
+      "steps": 8,
+      "time_seconds": 0.0015423750333486623,
+      "maximum_logged_accepted_stage_norm": 0.9387972258220734,
+      "maximum_internal_stage_characteristic_speed_over_c": 0.7732602004712023,
+      "maximum_saved_characteristic_speed_over_c": 0.7734746699827793,
+      "maximum_saved_cell_energy_defect_over_initial_heat_capacity": 5.030874416434844e-05,
+      "maximum_changes": [
+        3.8949867614737103e-07,
+        0.0266942642103069,
+        9.87199970044164e-09,
+        2.736632945248481e-10
+      ],
+      "zero_boundary_exchange": true,
+      "endpoint_cone": {
+        "maximum_local_rest_characteristic_speed_over_c": 0.7152434143351522,
+        "maximum_characteristic_imaginary_part": 0.0,
+        "sampled_cone_inside_light_cone": true
+      },
+      "endpoint_budget": {
+        "maximum_cell_energy_defect_over_initial_heat_capacity": 5.030874416434844e-05,
+        "total_energy_defect_over_initial_heat_capacity": 1.0454081201735338e-10
+      }
+    }
+  ],
+  "reflecting_coarse_fine_endpoint_maximum_differences": [
+    1.743073213058185e-09,
+    0.004278654123511586,
+    1.2889524160647432e-10,
+    1.6697418865533493e-10
+  ],
+  "initial_boundary_comparison": [
+    {
+      "model": "original_exchange",
+      "outer_luminosity_erg_s": -5.462327353186947e+33,
+      "outer_logT_rate_per_s": 0.17252600339508128
+    },
+    {
+      "model": "reflecting_wall",
+      "outer_luminosity_erg_s": 0.0,
+      "outer_logT_rate_per_s": -171.55791164065207
+    }
+  ],
+  "full_time_refinement_completed": false,
+  "continuous_error_certified": false,
+  "physical_exterior_match": false,
+  "physical_EOS_certified": false,
+  "scope": "Same original proper heat time, native EOS, initial star and coordinate time nodes. Change only to the declared reflecting shared-vector-flux boundary. Replay saved finite prefixes and native-residual/cone logs; not a stellar atmosphere or proof of continuum stability."
+}

@@ -1,0 +1,39 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "095fd9cf6",
+  "failure": "Positive native rates differ by less than9e-8, but net neutral exchange differs6.875percent on the actual conserved trajectory. Large-channel agreement does not control their cancellation.",
+  "evidence": "Eight withheld native evaluations separate chemical-plane interpolation at four dominant cells: at most3.34e-10 relative. Temperature interpolation is the actionable larger approximation.",
+  "repair": "Reuse all190 native nodes; add the four original-interval midpoints at both existing H planes,152states. Rebuild the SAME thermal EOS and Boltzmann-factored spectral cubic. Retain physical T/rho/y support, density/inventory/moving spectral approximations, geometry and all gates.",
+  "decision": "Require original0.2percent positive-rate and2percent net-exchange controls on all323 withheld conserved states, then install the new constitutive bank in actual material/photon64/128 paths and read the resulting GR charge.",
+  "initial": "Preserve original baryon,energy,H,photon and metric data. Recover initial temperature with the new thermal EOS; retain initial pressure mismatch against the old mechanical/scalar-balanced baseline. No equilibrium subtraction.",
+  "arithmetic": "Evaluate collision differences through the linear collision owner on signed coefficient differences. Subtracting two large collision arrays failed the original1e-10 relative-defect check; preserve it and use a difference-first identity with the same threshold.",
+  "budget": {
+    "bank_seconds": 60,
+    "bank_native_calls": 1000,
+    "controls_seconds": 40,
+    "pilot_seconds": 40,
+    "production_seconds": 650,
+    "charge_seconds": 60,
+    "CPU_threads": 1,
+    "memory_GB": 3
+  },
+  "forecast": "Native dimension test45calls4.05s including setup;152 new bank states expected10-45s. Full old identical-step capture cost401s. Use new/old pilot cost ratio and1.5x the measured full old cost plus20s; require below650s before dispatch. State-dependent late cost remains unmeasured.",
+  "gates": {
+    "positive_rates": 0.002,
+    "net_exchange": 0.02,
+    "owner": 1e-10,
+    "energy": 1e-08,
+    "time_charge": 0.02,
+    "quadrature": 0.002
+  },
+  "stop": "No extra physical cells, clocks, horizon, support or repeated table expansion. Stop on failed native controls, budget or coupled gate; no time-only fitted source.",
+  "limits": "Updated thermal/rate representation of the same restricted H/Thomson model. No complete opacity, exact advected other inventories, atmospheric native inversion, nonlinear GR or final-charge certificate.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_refined_thermochemistry.py": "2615e7821cae969d2ab1704d2bd445632925e6afa855cba7472d649f55af5f2e",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_conservative_rates.py": "aefb32818dd93f53ce69380ca1c2d0e89e3720f63f21e4c46f59a9b515c1619b",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_stage_energy_history.py": "cd108ef9e06a528089799c3324c2e17a3caaa3a12194572e7cbcd17047c88d63",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-boundary-layer/thermal-support/bank.npz": "d70b779b86810d9844351d3c5a257f4649b3b95bd208312137296eaa03b4a508",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/dimension-result.json": "657da6e1089b8a42907a2195d1f8d2c31a2c7a757c962cc976b3d79f920826a4",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/result.json": "fc0cb1eeccae34187437088722cc259bd28b95ee1080346004e09b6621565027"
+  }
+}

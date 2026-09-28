@@ -1,0 +1,52 @@
+&binary_job
+
+   inlist_names(1) = 'inlist1' 
+   inlist_names(2) = 'inlist2'
+
+   evolve_both_stars = .false.
+
+/ ! end of binary_job namelist
+
+&binary_controls
+         
+    m1 = 1.4d0
+    m2 = 1.2d0
+   ! terminal_interval = 100000
+
+    append_to_star_history = .true.
+    log_directory = '.'
+    history_name = 'binary_history.data' 
+    initial_period_in_days =3.4
+
+ !   alina's options
+    fr = 0.01
+    fr_limit = 1d-2
+    do_jdot_mb = .true.
+    keep_mb_on = .false.
+    magnetic_braking_gamma = 4d0
+ 
+   mass_transfer_alpha = 0.0d0
+   mass_transfer_beta = 0.3d0
+   mass_transfer_delta = 0.0d0
+   mass_transfer_gamma = 0.0d0 
+
+   varcontrol_case_a =2d-5
+   varcontrol_case_b = 2d-5
+   varcontrol_ms = 2d-5
+   varcontrol_post_ms = 2d-5
+   
+
+   do_tidal_sync = .true.
+   do_initial_orbit_sync_1 = .true.
+   sync_mode_1 = "Uniform"
+   sync_type_1 = "Hut_rad"
+   do_jdot_ls = .false. 
+   Ftid_1 = 1    
+   mdot_scheme = 'Kolb'
+   limit_retention_by_mdot_edd = .true.
+   max_change_factor = 1.25d0
+   min_change_factor = 1.01d0 
+   max_tries_to_achieve = 100
+   implicit_scheme_tolerance = 0.01
+         
+/ ! end of binary_controls namelist

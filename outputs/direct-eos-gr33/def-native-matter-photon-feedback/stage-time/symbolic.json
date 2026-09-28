@@ -1,0 +1,7 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "scope": "Scalar stiff control y_prime=L*(t-y), L to infinity. Frozen midpoint SDIRK tends to t+h/2 while actual stage-time SDIRK tends to t+h. This identifies an algorithmic defect, not by itself the entire observed full-system error.",
+  "midpoint": "h/2 + t",
+  "stage_time": "h + t"
+}

@@ -1,0 +1,12 @@
+{
+  "classification": "Counterexample candidate",
+  "bindings": {
+    "verification/gr_screened_hamiltonian_runner.py": "b941118ee4582d3813437dbca88462aaca7d7eeb98d7e00aea4f6d0618513b75",
+    "outputs/direct-eos-gr33/gr-screened-hamiltonian-matching/plan.json": "0d28b2e9643c5f919f87e95afddc606bf6c25f50c2093b7f8e77f272e3afeb3f",
+    "outputs/direct-eos-gr33/gr-screened-hamiltonian-matching/symbolic.json": "beb8c9d07329fbaad64e866c664045c8c0ef3e36e3da19bcee5cb0caf915f310",
+    "outputs/direct-eos-gr33/gr-screened-hamiltonian-matching/states.npz": "a7729d5cfb7aad79861a2dac39cb4f4db4cfbc7ce503edab40b09ae6a677a1ab",
+    "outputs/direct-eos-gr33/gr-screened-hamiltonian-defined/original-error.log": "3b4422766b680b37c6779147aaff1f61a61082f9f6fa7cd20abb832411225d7e"
+  },
+  "change": "Use np.generic.item() only at the JSON serialization boundary. Original equations, controls, input order and gates are unchanged. Preserve original symbolic/state outputs and require bitwise-equal state replay.",
+  "original_failure": "First run computed states.npz but failed to serialize a numpy.bool_ in the kernel control record. No result.json or manifest.json was produced."
+}

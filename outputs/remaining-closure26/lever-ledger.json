@@ -1,0 +1,82 @@
+{
+  "classification": "Proven",
+  "scope": "Every currently named lever has a concrete evaluation, theorem boundary, or unresolved dependency. Exhausting accessible tests is not proving every scientific objective.",
+  "levers": [
+    {
+      "name": "native_temperature_derivative",
+      "status": "conditional_pass",
+      "evidence": "PP branching derivative omission matches the frozen-state error; correction residual <3e-8. The original binary and failure are preserved.",
+      "missing": []
+    },
+    {
+      "name": "reaction_channels",
+      "status": "conditional_pass",
+      "evidence": "63 whole-network grouped interventions reproduce heat/nu/native derivatives; isolated-channel and individual-PP failures retained.",
+      "missing": []
+    },
+    {
+      "name": "composition_and_energy",
+      "status": "partial",
+      "evidence": "22-component vector reconstructed from channel outputs/source Q. Direct native vector and independent time-step comparison absent; F-free manifold not invariant.",
+      "missing": [
+        "native_species_export",
+        "EOS_including_generated_F"
+      ]
+    },
+    {
+      "name": "common_EOS_and_global_derivatives",
+      "status": "blocked",
+      "evidence": "Default small-step EOS differences do not converge; HELM full-domain control also fails. Local numerical agreement cannot certify global errors.",
+      "missing": [
+        "verified_common_EOS_evaluator",
+        "controlled_numerical_error_and_regularity_bounds"
+      ]
+    },
+    {
+      "name": "GR_heat_and_composition_evolution",
+      "status": "blocked",
+      "evidence": "Conservative frozen-coefficient controls pass energy tests. Closed boundary exits the local regime; radiative boundary still changes local T by about 15%. No species/metric/density/opacity updates.",
+      "missing": [
+        "common_EOS_and_global_derivatives",
+        "composition_and_energy",
+        "moving_structure_convection_atmosphere"
+      ]
+    },
+    {
+      "name": "GR_scalar_stability_response",
+      "status": "conditional_pass",
+      "evidence": "Curved-background monopole scattering and an explicit conditional scalar stability bound; no full stellar mode or binary transfer claim.",
+      "missing": []
+    },
+    {
+      "name": "fluid_thermal_scalar_coupling",
+      "status": "blocked",
+      "evidence": "Buoyancy diagnostic has agreeing negative regions. At phi0=0 thermal modes decouple linearly; finite-background Schur residue needs the missing cross derivatives.",
+      "missing": [
+        "GR_heat_and_composition_evolution",
+        "fluid_mode_boundary_conditions",
+        "nonzero_background_couplings"
+      ]
+    },
+    {
+      "name": "complete_nonlinear_observation",
+      "status": "blocked",
+      "evidence": "No certified time-dependent three-body force and photon/noise/pulse forward model follows from a static mass or a monopole scattering coefficient. Existing raw observational failures remain frozen.",
+      "missing": [
+        "fluid_thermal_scalar_coupling",
+        "full_initialization_flow_readout_error_bounds"
+      ]
+    },
+    {
+      "name": "final_submission",
+      "status": "pending_integration",
+      "evidence": "Request12 PDF/ZIP are historical. A conditional methodology paper needs manuscript integration and claim-scoped review; full observational closure is required only for the stronger physical claims.",
+      "missing": [
+        "manuscript_integration",
+        "claim_scoped_submission_review"
+      ]
+    }
+  ],
+  "permission_needed_for_completed_work": false,
+  "repo_boundary": "AGENTS.md excludes runtime/build-environment and additional pulsar/LLR empirical work. No such work was reopened. A mathematical missing specification is not solved by requesting the same approval again."
+}

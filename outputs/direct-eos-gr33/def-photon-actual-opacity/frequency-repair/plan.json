@@ -1,0 +1,31 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Fix the physical-frequency selection of atomic line profiles and use the actual EOS nuclear mass convention. Reassess the existing coarse/fine spectra; no finer grid or longer evolution.",
+  "failure": "Original response source-grid difference 0.0190532432 >0.001; raw verdict remains false.",
+  "budget": {
+    "native_runs": 3,
+    "native_seconds_total": 120,
+    "coupled_seconds": 480,
+    "CPU_workers": 1,
+    "memory_GB": 4,
+    "new_stellar_steps": 0
+  },
+  "forecast": "Previous direct coarse/fine/IR 5.69/12.59/1.61s; new bisection has unmeasured small cost. Prior coupled execution155.57s. Stop on bound or failed physics/algebra; do not expand the frequency step0.5 ceiling.",
+  "gates": {
+    "source_grid_initial": 0.001,
+    "time_initial": 0.001,
+    "time_order": 1.8,
+    "EOS_stages": 0.001,
+    "native_LTE": 1e-06
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_photon_atomic_repair.py": "f0deb0e82e592f2510ad7dc7d2edb8413416063f84611fbdbc577dde1f97091c",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_photon_actual_opacity.py": "7ba60e1b5443f6ade20d69a67e524c68080ee8b6b737f9fcaafd239cfd59abfa",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_photon_actual_opacity_validate.py": "b6aa8aca9a9d54eafce38fba6c0bcbfbd1bda180497b31794a4ffcf46ad529be",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-actual-opacity/response.json": "e5fb369ae012d47efe840018fefaf7b28e2e6de632ca29fbd0ec366ef421b75e",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-actual-opacity/line-selection-counterexample.json": "ddda04528c4fa4c3bb7972b1cb65c67c180a8e964e1a71312ee20bd96451a24e",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-photon-collective/inventory.npz": "977692961cb6e6e5cc0165db9a88db0323f1d8099040fe4c0b7876a08b848047",
+    "/home/lpaiu/work/direct-eos-gr33/photon-actual-opacity/build-balanced/synspec54.f": "8c0a4706eeafb0fec418f3105bbaa50e76df286d5ff4f838c2c8242b2c6c7cc5",
+    "/home/lpaiu/work/direct-eos-gr33/photon-actual-opacity/build-balanced/PARAMS.FOR": "4e73b8a24a9ec09bc5b6c1c09f07692ffa0753ceded8230f33cbec8a63eb6741"
+  }
+}

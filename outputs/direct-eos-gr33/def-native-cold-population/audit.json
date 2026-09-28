@@ -1,0 +1,64 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "checks": [
+    {
+      "log_density_ratio": -4.5,
+      "T": 665.6694828510163,
+      "first_law": [
+        [
+          -5.2721171282798054e-08,
+          1.7030777858817982e-07
+        ],
+        [
+          -4.7592259227519965e-08,
+          1.7417329906278609e-07
+        ]
+      ],
+      "step_relative": 5.139352721172941e-09,
+      "cvT": 152013308818.35938,
+      "fixed_gamma": 1.6666970416317408,
+      "passed": true
+    },
+    {
+      "log_density_ratio": -5.0,
+      "T": 476.9894968825352,
+      "first_law": [
+        [
+          -9.76006620166226e-08,
+          2.4085614827540297e-07
+        ],
+        [
+          -9.246978574733065e-08,
+          2.4089668224969666e-07
+        ]
+      ],
+      "step_relative": 5.109997092134222e-09,
+      "cvT": 108931691425.78125,
+      "fixed_gamma": 1.66670571135649,
+      "passed": true
+    },
+    {
+      "log_density_ratio": -6.0,
+      "T": 244.91935256655353,
+      "first_law": [
+        [
+          -3.5890986723725363e-07,
+          4.773719185681325e-07
+        ],
+        [
+          -3.5201064122052014e-07,
+          4.88326880349713e-07
+        ]
+      ],
+      "step_relative": 6.982734834792836e-09,
+      "cvT": 55941548837.890625,
+      "fixed_gamma": 1.666731047493351,
+      "passed": true
+    }
+  ],
+  "EOS_calls": 88,
+  "seconds": 1.8833447579999998,
+  "source_sha256": "1572c2a3e64f376991d596e2da3f3bd59a4b99cb91fba6270a3b7df0aac3628a",
+  "boundary": "The fixed-inventory branch is evaluated, not established as the actual finite-reaction gas. Sampled derivative checks are not a whole-domain interval certificate."
+}

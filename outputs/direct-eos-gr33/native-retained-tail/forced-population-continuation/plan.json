@@ -1,0 +1,86 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "7178d21af",
+  "previous_goal_turn": "Progress: passive radiative floor uncertainty quantified; actual material exchange remained missing and production budget failure was preserved.",
+  "claim": "Retain the formerly deleted atmosphere with the same native EOS, actual pressure/momentum/species and paired photon transfers, then compare its same-solution GR charge with the accepted trajectory.",
+  "decision": "Does applying native low-density support to actual coupled64/128 evolution change the scalar residue or expose a physical support/energy failure? Passive-tail bounds alone do not answer this.",
+  "support": {
+    "log_density": [
+      -24.0,
+      -22.0,
+      -20.0,
+      -18.0
+    ],
+    "added_temperature_K": [
+      1.0,
+      3.0,
+      10.0,
+      30.0
+    ],
+    "old_minimum_log_density": -18.0,
+    "old_minimum_temperature_K": 80.0,
+    "neutral_planes": [
+      1e-16,
+      0.001
+    ]
+  },
+  "reuse": "Reuse62 old boundary EOS/optical states and all old constitutive owners above the old density floor. Preserve original531 cells,8 angles,152 frequencies,3.434431ms and64/128 clocks; resume measured new prefixes, never replay an accepted new prefix.",
+  "changes": "Lower the numerical projection threshold only within the registered native support. This is an explicit physical-input test, not permission to extrapolate. Record retained sub-old-floor material, actual remaining discard, accepted angular ports, all-step GR moments and17 full states in this run.",
+  "budgets": {
+    "probe_seconds": 29.061349691000032,
+    "probe_native_calls": 146,
+    "bank_seconds": 180,
+    "bank_native_calls": 2000,
+    "controls_seconds": 60,
+    "controls_native_calls": 220,
+    "pilot_seconds": 70,
+    "production_seconds": 650,
+    "GR_seconds": 90,
+    "CPU_threads": 1,
+    "virtual_GiB": 3
+  },
+  "enforcement": "Use an external timeout process around scientific actions in addition to an absolute monotonic deadline. SHA checks and WSL startup are reported separately; constructor and output costs count in action timers.",
+  "forecast": "Probe the eight native cold/hot density corners first. Require2x measured native per-state forecast plus20s within180s. For evolution compare measured prefix physics/I-O costs with the prior353s full run and require1.5x the larger estimate plus20s below650s. Late CFL and low-density root costs are unmeasured.",
+  "gates": {
+    "native_population": 1e-12,
+    "relative_H": 1e-08,
+    "constitutive": 0.002,
+    "spectrum": 0.002,
+    "primitive": 2e-14,
+    "energy": 1e-08,
+    "port": 1e-10,
+    "time": 0.02,
+    "quadrature": 0.002
+  },
+  "stop": "One support change only. Stop on unsupported T/rho/y, failed native or coupled gate, external timeout or forecast. No automatic further support, floor, grid, clock or horizon change; do not weaken criteria or rename partial success as full closure.",
+  "limitations": "A successful lower-floor comparison is not a uniform continuum EOS derivative, complete floor-limit or nonlinear-GR certificate. Static comparison and observational completion requirements remain intact.",
+  "bindings": {
+    "verification/def_native_retained_tail.py": "da673cde796125afc04b039f51dc5b3abb0a757d3a1ef3d5f140234876002509",
+    "verification/def_native_cold_coupling.py": "0eb2bc3108dd815e3a51288ad866d3f2abe8e10ea7bbdce0969745eb537aca6e",
+    "verification/def_native_hydrogen_exchange.py": "cf590d01753ffd86a00b80ef7be109131b15b8f1619e2246fbea72cd324123d6",
+    "verification/def_native_material_join.py": "be1bcb8ccabcf1e980210f95db4053627eccd31466659e3237479feed495b505",
+    "verification/def_native_refined_thermochemistry.py": "d58a3a9511fff956ca2e14dd15419d052cfd62db159539a3ce69199047f91ebb",
+    "verification/def_native_updated_gr_return.py": "2ebdded1c3970bd2e0e038cfd29151b7ac32a84e8c50092584ebce5ed5cdbc77",
+    "outputs/direct-eos-gr33/def-native-cold-coupling/repaired-bank.npz": "64c6458272c0b145e28b6b0f1cbea8ea6a4e43dcc10615ec09010f9071cb71ba",
+    "outputs/direct-eos-gr33/def-native-cold-coupling/spectrum-bank.npz": "b0ec6f2649091a947ed8fc6c6449d88deaf7870f53854fd14f1872a3ca429836",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/bank.npz": "1ef9b4bb62b7bd9320b891126dd5f9a81d6cb0b48d01c5861962a2a5bf26188f",
+    "outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/evolution/result.json": "b383055f487aa3da68d2b9f8b07ea0d21924d7d8f4d54c2c2c4fe766f809a3d2",
+    "outputs/direct-eos-gr33/native-discarded-radiation/audit.json": "0ce2fa3ed17059ae4eeade1a784aeedc369967fe543e27cd23ef665db36096a9",
+    "outputs/direct-eos-gr33/native-retained-tail/probe-failure.json": "36b9b6f3d29963a70c46856ccf64414957b610c1649f65dbd98a993e193a93bb",
+    "outputs/direct-eos-gr33/native-retained-tail/density-inverse/probe-failure.json": "35a365cea58a120b515ef56dd1e0bc9bf7b9ba7df993b176058cbcd550e56888",
+    "outputs/direct-eos-gr33/native-retained-tail/population-continuation/probe-failure.json": "9eeb9059290b87215a956f2f45722155f53c5efb1ab22443acdc20e84e821799",
+    "verification/repair_native_tail_seed.py": "59406e4d8bdadacd3a544ab8a702570b812129f3a43c2768c0189850eae80259"
+  },
+  "repair": {
+    "classification": "Conjectural",
+    "correction": "104 is the native electron-inventory underflow guard (100+4), not density Newton error4. Both direct density and electron-variable initial evaluations failed.",
+    "seed_owner_fix": "Appending a converged seed did not force the original nearest-temperature selector to use it: its old prefix still supplied a closer temperature. Pass the selected converged seed as the sole in-memory prefix for each continuation step.",
+    "method": "For a requested cold state, start with the same constrained native state at80K and follow converged affinity seeds downward. Each next temperature is at least0.7 times the previous and its inverse-temperature increment is at most0.1 per kelvin. These are solver seeds, not new physical states or a temperature clamp.",
+    "invariants": "Preserve original population1e-12 and relativeH1e-8 gates, chemistry, partitions, density target and final requested temperature. Cache successful affinity seeds in process memory only. The original prefix and libraries are immutable.",
+    "stop": "No extra probe budget: retain both failures and use only remaining45s/160calls. Stop on another failure, insufficient call/time budget or failed warm controls.",
+    "source_hashes": {
+      "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/source/src/eos_calc.f90": "45da91d2e8b4bc6afbd5a5dd3a0697b7bb72ea455e0f3bd7d2d5e4ed99d57eff",
+      "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/source/src/mod_info_data.f90": "5a3e914aa6582acbcdbd98a1628018f27a4618731eddf1ff84cfcc7f04899bfa"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "mixture": "rho_Z(k)=sum_a Z_a exp(i k.r_a); Q2=sum_a Z_a^2. H_eff=K+(1/2V)sum_{k!=0}v_c(k)(|rho_Z|^2/epsilon-Q2). Pair part uses v_c/epsilon times (|rho_Z|^2-Q2); the remaining volume term is Q2/(2V) sum(v_c/epsilon-v_c).",
+  "self": "C_pol/N_i=<Z^2>*e^2/pi*integral_0^infinity [1/epsilon(k)-1] dk. The Yukawa value is -<Z^2>*e^2*kappa/2. State-dependent volume terms cancel only in a fixed-state quantum-minus-classical comparison; they do not disappear from the EOS.",
+  "family": "For 0<=a<=1 the declared inverse dielectric lies between zero and one, has the same leading k^2/kappa^2 at k=0, and tends to one at infinity. Its self energy is <Z^2>*e^2*kappa*(-1/2+3a/16). Changing a from zero to one changes its magnitude by 37.5% at the same kappa.",
+  "real_space": "v_a(r)=e^2 exp(-kappa*r)[1/r+a*kappa*(3-kappa*r)/8]. At a=1,kappa*r=5 it is -e^2*kappa*exp(-5)/20. A positive Fourier dielectric and a known kappa do not prove a positive real-space pair potential or the previous Coulomb Poisson bound.",
+  "thermodynamics": "For a classical canonical effective Hamiltonian H(T,V), U=<H-T H_T>, P=-<H_V>, C_V=-T<H_TT>+Var(H-T H_T)/(k_B T^2). Configuration and momentum coordinates, measure and external parameters must be specified when taking H_V. For quantum noncommuting operators the variance is replaced by the Kubo covariance.",
+  "self_derivatives": "With fixed composition and f_self=n*C*kappa*A(a), A=-1/2+3a/16: P_self=n^2*C*(A*kappa_n+3*kappa*a_n/16), U_self=n*C*(A*(kappa-T*kappa_T)-3*kappa*T*a_T/16). Knowledge of kappa alone does not fix these derivatives.",
+  "compressibility": "For ideal electrons without positrons and a T-independent dispersion, chi=(kBT/n_e)*dn_e/dmu=integral f(1-f)/integral f, hence 0<chi<=1; kappa_0^2=4*pi*e^2*n_e*chi/(kBT). This is only a k=0 result.",
+  "scope": "Exact conditional algebra and a static-response insufficiency witness. No microscopic dielectric or full physical EOS certificate."
+}

@@ -1,0 +1,51 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "b9ae9ab14",
+  "claim": "Reconcile the same-interface mass constraint with actual saved photon/material reference-energy histories, canonical geometry subtraction, cell lapse weighting, photon frequency work and the physical boundary energy conversion.",
+  "decision": "Identify whether a source/port conversion or a stored work/discretization mismatch accounts for the paired mass residual. Apply only a derived correction, never a fitted residual subtraction. If additional evolution is needed, first specify its missing equation.",
+  "controls": {
+    "algebra": 1e-12,
+    "time": 0.02,
+    "quadrature": 0.002,
+    "mass_closure_fraction": 0.002
+  },
+  "budget": {
+    "actions": {
+      "prepare": 30,
+      "ledger": 90,
+      "work": 120,
+      "audit": 30
+    },
+    "total_seconds": 270,
+    "CPU_threads": 1,
+    "virtual_GiB": 3,
+    "new_fluid_steps": 0,
+    "new_EOS_roots": 0,
+    "new_rays": 0
+  },
+  "measured_basis": "Previous generated-scalar input/setup and all actions6.68s; saved archive inspection1.9s. Two saved paths,17 background states and explicit quadratures capped at240s plus prepare/audit60s. No long integration forecast.",
+  "stop": "No automatic clock/mesh/horizon enlargement or weakened gate. Preserve all historical verdicts and every inspected component. A bookkeeping identity is not physical closure.",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/reconcile_native_mass_energy.py": "c898330f4311456710a63fa5e677db249b5687987a8263a6382840e4523a4975",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/solve_native_incident_reciprocal.py": "3cc4190f7ee1a7acfaf741e9e99d5b526da930c471705d428e440081e84bd73c",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_incident_drive.py": "3e01fc956f56354fc8be01be9ccdf864eb7c6435591fe83b3db10cc90bfbecb0",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/couple_native_interior_incident.py": "9f8cf452e6bd7b4ac26bc3d41ef7e57662ad8df76b51567200e6e60c5ba716f9",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/verify_native_anisotropic_gr.py": "d166d508cebd63d005bb0a6b5abcc7461b2fde6d4700622df201beb60a6fbc10",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_material_response.py": "56bb3c3814c5fad05d2a975d441ad824648825582d82a2cc8a15b50a4c9c4f38",
+    "native-generated-scalar165-work/result.json": "6e567495854bdd794e77821a52f46483e7b0a39124b8af71499f2460b0c00562",
+    "native-generated-scalar165-work/audit.json": "3ee1f05e63e38ceba5cbc03d303f724b73cbc7723312658fa15d4b1ddb7b5a5e",
+    "native-matched-mass163-work/mass-fine.npz": "ac735c7ec40d5e25916c7f23322b1bca0c6f2684101cea6cbabdcc146b9cbafc",
+    "outputs/direct-eos-gr33/native-retained-completion/evolution/coupled-128.npz": "08990bcd0980c8f45b1777e071734c3601a75f90096c8c6f5edc8d16d76ab2b0",
+    "outputs/direct-eos-gr33/native-retained-completion/evolution/accepted-ports-128.npz": "e2d02607c5815cd1b23a6ea1ce822ecbb384f185ac7a83074247d0350abc8ecf",
+    "native-incident-reciprocal156-work/sweep-2/gr/source-64-reference-128.npz": "9ecfd323243bd1ec9e40aa52b2bbf02abe1b86d17b3ee575dc13b1e687168b7f",
+    "native-incident-reciprocal156-work/sweep-2/photons-precise/steps-64-reference-128.npz": "43ffbb540805abd573b6b034b44da42030e9218a554263774564c0a763a12c04",
+    "native-incident-reciprocal156-work/sweep-2/material-analytic/steps-64-reference-128.npz": "d5362fa2e4b563ab3088c9213976fc2548ff73db99237b10bbed3a3da8b05b42",
+    "native-incident-self-gr157-work/metric/metric-64-g8.npz": "dd0e8ec6570c41bff47c0ed7c1efe3ccfa05eec249ef3ae70a3e312c7c4d0933",
+    "native-incident-reciprocal156-work/sweep-2/gr/source-128-reference-128.npz": "885db820542d0eabb75bda4306d717938595aac7796f94d8f81844e0bc6010e6",
+    "native-incident-reciprocal156-work/sweep-2/photons-precise/steps-128-reference-128.npz": "b312f6825a78511d75248c3dce652006215e26ab5be01cb550e853750f120a6b",
+    "native-incident-reciprocal156-work/sweep-2/material-analytic/steps-128-reference-128.npz": "38ee33ca8a182395a6c7c20dd233edee76a910aeb2c939a556b06a9c3a848378",
+    "native-incident-self-gr157-work/metric/metric-128-g8.npz": "f4e1c733e30c76c5e1ceb5f9186dab10b3996fd24c7fba104d879042582ed8a2",
+    "native-incident-drive155-work/fields/born-g4.npz": "f18d3a96206992b5878fcb927a43fab403a19b393f3413a0e3a8121019ca9083",
+    "native-incident-drive155-work/fields/born-g8.npz": "4a4f1299caa9675a4a5a87c178b883ba242aeec296361a555182328dc429a058"
+  }
+}

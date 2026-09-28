@@ -1,0 +1,21 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Apply the repaired conservative trajectories to the direct trace, boost-invariant metric stress E-Pr, and the actual lab-energy forcing of the GR mass constraint. Measure the separate outgoing source components on both saved grids.",
+  "equations": "S_stress=-4*pi*G/c^4*N^2*A^4*r^2*Phi*d(E-Pr); J_prime+r*Phi^2*J=4*pi*G/c^4*r^2*A^4*dE for f=0. The full symbolic constraint is saved by the parent phase.",
+  "seconds": 45,
+  "CPU_threads": 1,
+  "memory_GB": 2,
+  "native_calls": 0,
+  "new_fluid_steps": 0,
+  "grid_gate": 0.02,
+  "measured_basis": "The prior two direct readouts cost8.72seconds. Four equivalent readouts plus two source integrations and setup are budgeted at45seconds; stop instead of expanding if this is insufficient.",
+  "stop": "No EOS extension, new gas path, new horizon or automatic wave iteration. Do not classify the sum of these components as the full charge.",
+  "bindings": {
+    "verification/def_native_metric_charge.py": "f6853cd0f25e3d639af27f0f58bf26102394b57572cec457239633e4c2ef0dd0",
+    "verification/def_native_metric_release.py": "4fa269ff004ba8564ea42f4fdbeee7a0521d141ac43e6b25efeb31edbbe806a9",
+    "verification/def_native_release_charge.py": "436c719793fa72c33a8db5cc33a252f3ae06186baa382615adddbcf631c27486",
+    "outputs/direct-eos-gr33/def-native-energy-release/runtime-columns.npz": "a1d7249202abde8c778f176a09c284f1423b6f76335d6c7c67513c1ad32c03c5",
+    "outputs/direct-eos-gr33/def-native-metric-release/cells-896.npz": "a898b3077496eab9189163b98918786ceec46145b0d58006dde8284c46fafb12",
+    "outputs/direct-eos-gr33/def-native-metric-release/cells-1792.npz": "3b2f26b0ffb6246fc46cfc533c4a0a6f561a0d3f9bc57b28c56d92c884cdebaf"
+  }
+}

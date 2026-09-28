@@ -1,0 +1,27 @@
+{
+  "classification": "Conjectural",
+  "claim": "Apply three-coordinate representable corrections to the same failed117th linear system; passing only admits a Newton proposal, not a physical stage.",
+  "reason": "The paired search reduced3.301e-13 to1.668e-14 in68.66s; it cannot compensate three coarse lattice directions together. This is now close to the unchanged1e-14gate.",
+  "method": "At most8hard columns, triples within16ULPs of the least-squares centre bounded1024ULPs; deduplicate shared proposals; full original operator checks the24best, at most4improving passes. Reuse pair proposal; no prefix replay.",
+  "caps": {
+    "prepare": 180,
+    "check": 900,
+    "refine": 900
+  },
+  "virtual_GiB": 6,
+  "CPU_threads": 1,
+  "forecast": "Measured pair search68.66s. Allow900s for small projected triple enumeration; at most96full checks, no new physical steps or Krylov iterations.",
+  "gates": {
+    "linear": 1e-14,
+    "physical_linear": 1e-13,
+    "actual_stage": 1e-12,
+    "physical_stage": 1e-13
+  },
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/solve_native_rounding_neighbours.py": "5704806b5e166eeab0672898f3df8efcccaf7faef4566f70b7bfd2cb2489c3be",
+    "native-rounding217-work/pair-producer.py": "6f3e0ac91c0fb4187113db8cc85ebb998261ddb2fd92583e8ba17b30fec524bb",
+    "native-rounding217-work/proposal.npz": "d8b1f6d8a77c312a751a1841573d973467ff6e221250fe2614db7d2220b3b9fa",
+    "native-rounding217-work/result.json": "aa8c97c3faae781fdd98d98565f2ef09a82f20d93d046dfb693f0752c5455088"
+  },
+  "final_charge_conclusion": "unadjudicated"
+}

@@ -1,0 +1,8 @@
+{
+  "classification": "Counterexample candidate",
+  "bindings": {
+    "verification/gr_iteration_budget_recovery.py": "26abf515588d0039dcad89c74c4f6d95679304c6300ee3459cb893d33331e3a4",
+    "outputs/direct-eos-gr33/gr-compatible-equilibrium-v2/production-harness-recovered/failure-manifest.json": "4040191ccb938d4464a3d2eea2cdba7b4682c2c4078ad7a115640e4b11b50342"
+  },
+  "rule": "Test the already validated donor correction on the exhausted native iterate. This cannot accept the failed step or add iterations to its old budget. A new execution must replay accepted step 53 and reserve its last permitted correction."
+}

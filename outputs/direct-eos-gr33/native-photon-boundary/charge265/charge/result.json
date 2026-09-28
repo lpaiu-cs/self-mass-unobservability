@@ -1,0 +1,142 @@
+{
+  "classification": "Counterexample candidate",
+  "numerical_controls_passed": true,
+  "controls": {
+    "quadrature": 1.008351454573112e-15,
+    "independent_GR": 6.423200795093918e-15
+  },
+  "time": {
+    "U": 3.0971314589160744e-05,
+    "U_t": 2.8260742633684813e-05,
+    "U_x": 3.3314532732277664e-05
+  },
+  "repaired_source_time_representation_applied": true,
+  "change_from_straight_line": {},
+  "potential_relative": 5.6558862534018294e-12,
+  "source_time_passed": true,
+  "field_time_passed": true,
+  "rows": [
+    {
+      "classification": "Counterexample candidate",
+      "steps": 128,
+      "order": 8,
+      "seconds": 1292.7954270659993,
+      "maximum_delta_phi": 8.409583943882674e-76,
+      "maximum_delta_mass_cm": 5.145618728412728e-60,
+      "maximum_delta_lambda": 7.517915509697912e-70,
+      "maximum_delta_log_proper_volume": 7.517915459751576e-70,
+      "maximum_mass_increment_over_background_ulp": 1.4144169059979375e-48,
+      "maximum_scalar_increment_over_background_ulp": 3.8782360694795177e-57,
+      "compact_potential_contraction": 1.0268616943755276e-09,
+      "potential_iteration_relative": [
+        5.655934977014636e-12
+      ],
+      "endpoint_direct": -8.021833141370947e-73,
+      "endpoint_compact_with_metric": -8.021867208541883e-73,
+      "compact_potential_change": 1.2704577475377705e-83,
+      "spatial_material_photon_feedback": false,
+      "full_GR_feedback": false,
+      "final_charge_solved": false
+    },
+    {
+      "classification": "Counterexample candidate",
+      "steps": 64,
+      "order": 8,
+      "seconds": 1236.5053123469997,
+      "maximum_delta_phi": 8.4096943611393e-76,
+      "maximum_delta_mass_cm": 5.145613196134069e-60,
+      "maximum_delta_lambda": 7.517907426859728e-70,
+      "maximum_delta_log_proper_volume": 7.517907376911284e-70,
+      "maximum_mass_increment_over_background_ulp": 1.414415385296759e-48,
+      "maximum_scalar_increment_over_background_ulp": 3.878286990451375e-57,
+      "compact_potential_contraction": 1.0268616943755276e-09,
+      "potential_iteration_relative": [
+        5.655677381732951e-12
+      ],
+      "endpoint_direct": -8.021418629038171e-73,
+      "endpoint_compact_with_metric": -8.021452694444937e-73,
+      "compact_potential_change": 1.2703018420379267e-83,
+      "spatial_material_photon_feedback": false,
+      "full_GR_feedback": false,
+      "final_charge_solved": false
+    },
+    {
+      "classification": "Counterexample candidate",
+      "steps": 128,
+      "order": 4,
+      "seconds": 849.7399281810003,
+      "maximum_delta_phi": 8.409583943882672e-76,
+      "maximum_delta_mass_cm": 5.145615175215721e-60,
+      "maximum_delta_lambda": 7.517910318362079e-70,
+      "maximum_delta_log_proper_volume": 7.517910268415743e-70,
+      "maximum_mass_increment_over_background_ulp": 1.414415929302581e-48,
+      "maximum_scalar_increment_over_background_ulp": 3.878236069479517e-57,
+      "compact_potential_contraction": 1.0268616943755273e-09,
+      "potential_iteration_relative": [
+        5.655934977014638e-12
+      ],
+      "endpoint_direct": -8.021833141370948e-73,
+      "endpoint_compact_with_metric": -8.021867208541881e-73,
+      "compact_potential_change": 1.2704577475377695e-83,
+      "spatial_material_photon_feedback": false,
+      "full_GR_feedback": false,
+      "final_charge_solved": false
+    }
+  ],
+  "physical_steps": 0,
+  "GR_return_evolution_executed": false,
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false,
+  "GR_return_admitted": true,
+  "same_actual_returned_solution_read": true,
+  "shared_high_low_GR_output_clock": true,
+  "components": [
+    {
+      "clock": 64,
+      "values": {
+        "endpoint_direct": {
+          "high": "-2.48330231386239603384685898971322011185460541798766909412909680164918206748211678827407282284104099900973958650749022630734125726380268073256729621789418160915374755859375E-51",
+          "low": "-8.021418629038170799813218938789633197968701507178352831056092980482143292681122040294717583289484586967078023300164286728632213719348348283157060154536808730918250233374775954859996207613193064389633946120738983154296875E-73",
+          "componentwise_total": "-2.483302313862396033847661131576123928934586739881548057448893671799899902765222397572121037170309111E-51",
+          "low_over_high": 3.2301418092596563e-22,
+          "nominal_sign_unchanged": true
+        },
+        "endpoint_compact_with_metric": {
+          "high": "-2.4833128680021483463667639766847780769838783204806089398068322649874898636929047264497935004074424535376887546942786410650197241600789510584945674054324626922607421875E-51",
+          "low": "-8.021452694444936834069755646402606088929860153182014818880867530378305561875639481250689286829369341459381082342518221205187789963949557548303738352803541063018057468696295564196917238231065994114032946527004241943359375E-73",
+          "componentwise_total": "-2.483312868002148346367566121954222570667285296045249200415725251002808065174792813202831330963630017E-51",
+          "low_over_high": 3.2301417988053517e-22,
+          "nominal_sign_unchanged": true
+        }
+      }
+    },
+    {
+      "clock": 128,
+      "values": {
+        "endpoint_direct": {
+          "high": "-2.483407310426255897484740547841620755190107712324303980053345609186402844514617384182229249605165926563997828185889463054850274936757870136716519482433795928955078125E-51",
+          "low": "-8.021833141370947190303486657843003708578597944572326036118339422685899949128643031520710655430916306127760871467610900173356511051211576920442391312910080136359033110972255081923265596088867823709733784198760986328125E-73",
+          "componentwise_total": "-2.483407310426255897485542731155757849909138060990088280424203468980860077118229218124497839600078791E-51",
+          "low_over_high": 3.230172154077322e-22,
+          "nominal_sign_unchanged": true
+        },
+        "endpoint_compact_with_metric": {
+          "high": "-2.483417865012942922033639247315851560613734499851666620941263936588045559145622661099375029951799744907864330991781476277993818448097673723395928391255438327789306640625E-51",
+          "low": "-8.02186720854188275408722786611640098481223890023249952017005216407320856577273861378183443192607944977946894758968701169738749937113179054704622455793089455736448660933476397481844966108610606170259416103363037109375E-73",
+          "componentwise_total": "-2.483417865012942922034441434036705748889143222638278261039745160478068809097639666315782350808377019E-51",
+          "low_over_high": 3.230172143623552e-22,
+          "nominal_sign_unchanged": true
+        }
+      }
+    }
+  ],
+  "charge_comparison_admitted": true,
+  "conditional_compact_sign_survives_one_return": true,
+  "uniform_temporal_error_certificate": false,
+  "self_GR_return_closed": false,
+  "physical_final_charge_solved": false,
+  "full_declared_period": true,
+  "actual_solution_directory": "native-photon-boundary-ld2-265-work",
+  "primary_source_directory": "native-full-captured244-work",
+  "high_field_directory": "native-retarded-extension248-work"
+}

@@ -1,0 +1,21 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "df49775",
+  "previous_manifest_sha256": "cfcd8224f9eb33c98e0f3f07ed590af107c62a84aa69f52232750d7c81bfe5e4",
+  "full_goal": "Resolve the remaining physical EOS, GR evolution, scalar driving and full observational inference requirements; numerical prerequisite checks do not redefine completion.",
+  "steps": [
+    "Determine cause of independent EOS inverse reproducibility failure",
+    "Attribute native O18 and heat temperature derivative discrepancy to individual reactions",
+    "Correct a demonstrated root cause and rerun independent unchanged controls",
+    "Advance conservative composition precision and transport closure using corrected prerequisites"
+  ],
+  "unchanged_controls": {
+    "native_vector_derivative_relative": 0.001,
+    "native_heat_derivative_relative": 0.001,
+    "composition_absolute": 1e-16,
+    "composition_relative_to_total_change": 0.001,
+    "temperature_log_absolute": 2e-06,
+    "global_energy_relative_to_release": 1e-06
+  },
+  "policy": "Do not reinterpret earlier failures as passes, silently change an EOS or reaction model, or treat source signatures as proof of the preserved binary. Keep physical error, deterministic numerical evaluation, finite refinement and rigorous interval certification distinct."
+}

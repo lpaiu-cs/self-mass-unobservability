@@ -1,0 +1,57 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "7178d21af",
+  "rejected": "The originally proposed1K support has not passed. Native error104 is the electron-inventory underflow guard; direct/electron-variable and two continuation attempts failed. Those are not accepted support.",
+  "decision": "The actual trajectory has not yet requested1K. Test the same complete lower-density64/128 coupled trajectories using independently checked native support at the original80K lower temperature. If a conservative state requests colder temperature, stop and solve that actual state; never clamp it or count this branch as a full1K table.",
+  "support": {
+    "x": [
+      -24.0,
+      -22.0,
+      -20.0,
+      -18.0
+    ],
+    "temperature_K": [
+      80.0,
+      20000.0
+    ],
+    "new_states": 186,
+    "reused_boundary_states": 62
+  },
+  "budgets": {
+    "warm_probe_seconds": 26.46694333100004,
+    "warm_probe_native_calls": 139,
+    "bank_seconds": 180,
+    "bank_native_calls": 2000,
+    "controls_seconds": 60,
+    "controls_native_calls": 220,
+    "pilot_seconds": 70,
+    "production_seconds": 650,
+    "GR_seconds": 90,
+    "CPU_threads": 1,
+    "virtual_GiB": 3
+  },
+  "gates": {
+    "native_population": 1e-12,
+    "relative_H": 1e-08,
+    "constitutive": 0.002,
+    "spectrum": 0.002,
+    "primitive": 2e-14,
+    "energy": 1e-08,
+    "port": 1e-10,
+    "time": 0.02,
+    "quadrature": 0.002
+  },
+  "budget_scope": "Remaining original probe allocation, original unstarted table/control/evolution allocations; no larger total allocation. External timeout includes imports and SHA checks. No second resolution, horizon or further floor reduction.",
+  "stop": "Stop at unsupported conserved state, native/control failure, clock gate or budget. Original cold-support failure remains false even if the actual warmer trajectory succeeds.",
+  "bindings": {
+    "verification/native_tail_supported_temperature.py": "ec0f1ffc4b9210483fd1dca8f8dac738c03f5a35e30ec7ec336bb375fb7dac24",
+    "verification/def_native_retained_tail.py": "da673cde796125afc04b039f51dc5b3abb0a757d3a1ef3d5f140234876002509",
+    "outputs/direct-eos-gr33/native-retained-tail/plan.json": "bc54b53eec7e6cf26489e841904c2cad9baff9a43d44b9a7fa7f40b7fc12ac5a",
+    "outputs/direct-eos-gr33/native-retained-tail/probe-failure.json": "36b9b6f3d29963a70c46856ccf64414957b610c1649f65dbd98a993e193a93bb",
+    "outputs/direct-eos-gr33/native-retained-tail/density-inverse/probe-failure.json": "35a365cea58a120b515ef56dd1e0bc9bf7b9ba7df993b176058cbcd550e56888",
+    "outputs/direct-eos-gr33/native-retained-tail/population-continuation/probe-failure.json": "9eeb9059290b87215a956f2f45722155f53c5efb1ab22443acdc20e84e821799",
+    "outputs/direct-eos-gr33/native-retained-tail/forced-population-continuation/probe-failure.json": "202c64617fbc726dc9cee54e499f11272faf9c7f7c018e9d4fd19b65b7018a08",
+    "outputs/direct-eos-gr33/def-native-cold-coupling/repaired-bank.npz": "64c6458272c0b145e28b6b0f1cbea8ea6a4e43dcc10615ec09010f9071cb71ba",
+    "outputs/direct-eos-gr33/def-native-cold-coupling/spectrum-bank.npz": "b0ec6f2649091a947ed8fc6c6449d88deaf7870f53854fd14f1872a3ca429836"
+  }
+}

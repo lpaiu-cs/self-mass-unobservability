@@ -1,0 +1,10 @@
+{
+  "classification": "Counterexample candidate",
+  "stopped": "The completed224-cell reactive pilot took8.09s and562 steps. Naive cell-squared scaling forecasts226s and correctly stopped the production dispatch.",
+  "decision": "The coarse pilot was limited by the measured reaction time step, not only the hydrodynamic CFL. Reuse it without rerunning. Measure only the already registered448 path under40s, then permit896 only if its measured cell-squared forecast fits the original remaining155s. No additional path or increased aggregate budget.",
+  "reserved_previous_flow_seconds": 25,
+  "remaining_seconds": 155,
+  "coarse_seconds": 40,
+  "fine_forecast": "5.6 times measured448 time plus3s setup",
+  "source_sha256": "96f48022d7186063279de0bf4c8518690407353747d7fc4835cf0d025df9a8f3"
+}

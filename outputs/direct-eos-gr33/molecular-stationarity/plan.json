@@ -1,0 +1,85 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "092a341",
+  "cells": 5735,
+  "processes": 4,
+  "block_cells": 128,
+  "control_cells": [
+    0,
+    1175,
+    2972,
+    5734
+  ],
+  "source_changes": {
+    "mod_nuvar.f90": {
+      "before": "053ee2a7124f48982140577c53425c3492d13a93a6abd495d54df5401a94f564",
+      "after": "dcffefe02a71ed1df3e46e7be88988530b8abfc388cad7d0db68dde0748f240c"
+    },
+    "eos_calc.f90": {
+      "before": "44b6a45a01c238a36ec49bc495e2b5eb81b76c40a314d7559593ce45d59beddd",
+      "after": "45da91d2e8b4bc6afbd5a5dd3a0697b7bb72ea455e0f3bd7d2d5e4ed99d57eff"
+    },
+    "CMakeLists.txt": {
+      "before": "ce60f9ed8c434e83e55fa70dc0b7a0fd0753b063f35c23d753b548bd273b95e3",
+      "after": "71c1fccc24e146e470b8954499c97372c166dc64f6f7e47f8b6c19ac2caacc95"
+    }
+  },
+  "bindings": {
+    "verification/eos_molecular_stationarity.py": "a5b7ca018c03d49d0c18e3dc7835a1621cf55a99eb3d8bf28ffd64a77caa7c2d",
+    "verification/eos_atomic_stationarity.py": "f8730687824eaca7a930a19990d41f18672fb7c635efa570307a5d7371b1c72e",
+    "verification/eos_atomic_stationarity_defined.py": "556c4e58cfa1d77a01fb185f98a06675c194fd2ddb00a025ebdc672caa097602",
+    "verification/excitation_scaled.py": "ff1ad8866837f49ae384a8478221931b5c124ab2143a94bc950f991f5392f5df",
+    "verification/excitation_curvature.py": "146f3c44204e19f99324eb1454f3a7efefca0d09b773e1a802da642dab438531",
+    "outputs/direct-eos-gr33/atomic-stationarity-defined/manifest.json": "264214619423a6d559c837741dc79e864766f74776594d5f484c01eb21360597",
+    "outputs/direct-eos-gr33/reference-state.npz": "17cbbb101628ca9bc111dca0cfe902210f13697c632b91c03913a1718cf7d2ef"
+  },
+  "original_library_sha256": "6348e235763db0112687f391ab1c06c34b33aa530973ea4a414a5d0f21b1dfb4",
+  "expected_excitation_modes": [
+    2,
+    12
+  ],
+  "allowed_component_tags": [
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      25,
+      0
+    ],
+    [
+      26,
+      1
+    ]
+  ],
+  "original_EOS_and_MDH_bitwise_required": true,
+  "moment_relative_tolerance": 1e-10,
+  "component_population_relative_tolerance": 1e-10,
+  "aggregate_normalized_tolerance": 1e-10,
+  "moment_Hessian_direction_tolerance": 1e-10,
+  "method": "At the actual final eos_calc call record H2 and H2+ constants, their explicit temperature/partition linear pieces, both native nonideal dv values, source-defined molecular PL terms and pre-underflow log(n/N_A). Compare with independent molecular free-energy gradients and positive saved populations. Native dv for H2+ is relative to H2, so the formation constant relative to 2H uses dv(H2)+dv(H2+).",
+  "coordinates": "Four physical moments alpha0,alpha1,alpha2,beta; at fixed native density scale S and radius unit L, use S*diag(1,L,L^2,1) to transform derivatives to existing nu-moment coordinates.",
+  "scope": "Frozen molecular reactions and existing atomic support only. Continuous primitive/partition/branch/root errors and physical EOS remain separate.",
+  "full_EOS_Hessian_certified": false,
+  "physical_EOS_certified": false,
+  "full_GR_evolution": false,
+  "atomic_gradient_absolute_tolerance": 1e-08,
+  "atomic_log_population_tolerance": 1e-08,
+  "read_contract_revision": {
+    "reason": "The original diagnostic encountered a nonfinite PL slot 261 after states 0,1,2. It belongs to an inactive element. A fresh later repeat had no nonfinite slot, consistent with undefined storage rather than a stable physical value. Only the source-defined active atomic PL slices are read; all other trace entries are padding and excluded from comparisons.",
+    "excluded_molecular_PL_slots": true,
+    "original_failure_preserved": true,
+    "physics_and_tolerances_unchanged": true
+  },
+  "molecular_gradient_absolute_tolerance": 1e-08,
+  "molecular_log_population_tolerance": 1e-08,
+  "molecular_linear_replay_tolerance": 1e-08
+}

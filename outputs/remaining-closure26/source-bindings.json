@@ -1,0 +1,31 @@
+{
+  "classification": "Imported from prior work",
+  "sha256": {
+    "const/public/const_def.f90": "21ff65ed968a10373f205929ed51ead5a9b325b7151ea872417f97793e803cc9",
+    "data/rates_data/weakreactions.tables": "da002c2830b8a2eea7d36d1e7168cd05615473316952b07bc774e6d3f58cd336",
+    "eos/private/eosdt_eval.f90": "9b0622c25db0906ccd9cd5833933a28b0c90590117dd7ad9178743b3908b91f1",
+    "net/private/net_derivs.f90": "c9bc1ac9a146d10c7bffc8291d61f19b082f12a02b04e3e23456b33a2c824b84",
+    "net/private/net_derivs_support.f90": "967da4c5eebf2f7d3d38043a56b4b92471213a44f8dcbd47e9605a9828aedc1d",
+    "net/private/net_eval.f90": "a04242ccfd8321cb41a1cdbc17db00fad254e04f8103ad71beaa939592a45e15",
+    "net/private/net_initialize.f90": "0eabfc5538a0b813a93fea45c66773bdbe059bb2e2f8bdb4572d3e12acfedb1b",
+    "net/private/net_screen.f90": "a799d2a5dfb0e14ec04b940e859d7802504d1e642962de94cfc0a73034e41da8",
+    "rates/private/eval_weak.f90": "fe7d70a4a85eaa92f75f6f0fd0bd0f34c27c0d39a5df13c48c19f28bad92c3b1",
+    "star/defaults/star_job.defaults": "97302f073650d8caff72d96ac18460271e19d89d5ca4d41ad1e841800fe056b1",
+    "star/private/micro.f90": "003210372984f4cc7705dad4f51118fa62dfb7359d4909a62b975be625a5371a",
+    "star/private/net.f90": "33d3fa5ea068a11f56b745ef55bfcd1d248356c2d4cbece69fca521aff03b48a",
+    "star/private/profile_getval.f90": "a5439e46ab5a6a850fc0dbb319ad97fd41afe836c8af32b377743aa5b0e8c1ae",
+    "star/private/report.f90": "fc4a7d4f332e3bc7b7b2affd0ff270c6edcefe5974f5d7c2614950b767b52269",
+    "star/private/star_job_controls_params.inc": "ef26a43a827e6a964eeb86b56dfd0411f707204e8b8bb3c29642f53b047629da"
+  },
+  "literature": [
+    {
+      "title": "Damour and Esposito-Farese (1996), tensor-scalar field equations",
+      "url": "https://arxiv.org/abs/gr-qc/9602056"
+    },
+    {
+      "title": "Potekhin et al. (2020), redshifted thermal evolution",
+      "url": "https://doi.org/10.1093/mnras/staa1871"
+    }
+  ],
+  "note": "External papers supply framework context; all new numerical claims are derived from this repository. Sources and old runtime build identity remain distinct."
+}

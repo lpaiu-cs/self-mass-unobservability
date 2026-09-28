@@ -1,0 +1,17 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "binary64_initial": [
+    1.152921504606847e+18,
+    4.0
+  ],
+  "exact_increment": [
+    1.0,
+    -1.0
+  ],
+  "endpoint_reconstructed_increment": [
+    0.0,
+    -1.0
+  ],
+  "statement": "Two exact opposite increments conserve their sum, but storing large-offset binary64 endpoints and subtracting their initial values loses the first increment. A small local relative residual cannot certify a small global energy defect relative to the transported increment. This manufactured arithmetic control is separate from attribution of the actual failed run."
+}

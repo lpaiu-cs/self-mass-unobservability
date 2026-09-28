@@ -1,0 +1,34 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "mass": "For the two scalar legs with J_B=J_I=0, C_x=U_Bx*U_Ix+U_Bt*U_It/c^2+V*U_B*U_I-d_x(a*U_B*U_I/r). Use C_part=-integral_x^infinity E_cross dy-a*U_B*U_I/r, with zero extra asymptotic mass; its generally nonzero inner port must be matched.",
+    "work_flux": "E_cross_t=F_cross_x+U_Bt*S_I+U_It*S_B, F_cross=U_Bt*U_Ix+U_It*U_Bx. Thus source work and the inner flux are required; an algebraic identity is not a measured conservation pass.",
+    "infinity": "For outgoing waves, F_cross=-2*U_Bt*U_It/c. The signed emitted scalar mass length is 2/c integral U_Bt*U_It du; the incoming primary vanishes at fixed outgoing u and infinity.",
+    "operator": "O_zeta[U]=d_x(zeta*U_x)+d_t(zeta*U_t/c^2)-2*zeta*Vgeom*U-zeta*(U_tt/c^2-U_xx)-a*zeta_x*U/r. This avoids numerical second differentiation.",
+    "packet_derivative": "At a past-cone intersection the moving-shell factor (1-mu^2)/(1-mu)=1+mu<=2. A timelike outward ray crosses that past cone at most once.",
+    "scope": "Conditional first-variation identities on the initial static scalar vacuum. No physical continuation, EOS or exact ADM verdict follows from the algebra alone."
+  },
+  "scalar_arithmetic_relative": {
+    "mixed_mass_source": 5.4144027822931526e-17,
+    "mixed_constraint_and_static_gradient": 5.562068055094224e-17,
+    "metric_inner_boundary": 1.122949083253984e-16,
+    "metric_cone_edge": 4.2173756379277765e-17,
+    "metric_smooth": 1.8841504045056004e-17,
+    "finite_Born_source": 4.351648197441438e-17,
+    "emitted_radiation_source": 6.829704970959386e-17,
+    "additional_potential": 1.785337245710814e-16,
+    "free_scalar_norm": 8.570321234184e-17,
+    "potential_contraction": 9.979827145257213e-17,
+    "intermediate_mass_constraint_cm": 3.148253575214321e-17,
+    "required_inner_port_at_T_cm": 3.795394093244497e-17,
+    "emitted_scalar_mass_cm": 6.835449079580772e-17
+  },
+  "zero_leg_control": true,
+  "nonzero_outgoing_flux_control": "4/105",
+  "actual_mass_flux_balance_verified": false,
+  "limit": "The same explicit inequalities are recalculated at100 digits; this is not an independent physical solution. Full ADM conservation requires the measured inner port and source work, not just the proven identity.",
+  "full_goal_complete": false
+}

@@ -1,0 +1,44 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "b3552307",
+  "bindings": {
+    "verification/def_free_surface_thermal.py": "fe248273b1b6da56fd210ed67c818093622cd217c53f0c78fda683b6d8aec092",
+    "outputs/direct-eos-gr33/def-hydrostatic-background/absolute-shoot/background-0.001.npz": "774e2bff821f5863291167f069a8673562bfee8b0ab648468c8dfc5a2a9b04d3",
+    "outputs/direct-eos-gr33/def-hydrostatic-background/absolute-shoot/native-audit.npz": "bd07b549d75cd5606927b0d0374d457bf09db7a7b99957d461ca335d28f26bc3",
+    "outputs/direct-eos-gr33/def-hydrostatic-background/absolute-shoot/lapse.npz": "9c08b16699d7bfaa696a93e68ad2eb42a9ea98f8373d036f3c7018d5dc374dba",
+    "outputs/direct-eos-gr33/def-free-surface-response/normalized/background.npz": "c42374d2a79ab37cc716bad52e6b72a4940dc82f0923f71856601f213f0c4a2c",
+    "verification/gr_two_carrier_evolution.py": "973f86e4fdb3cb008cb928288e7d87e8906a6e46ae317bc311ab03f9bc291f26",
+    "verification/opacity_tables.py": "ba01a5ebe3062eb1b13b23ccb918f99158fba6fd0c72fcba191c1ba4a028c7b9",
+    "outputs/direct-eos-gr33/source-retry/plan.json": "cf6e3ce7fe7efdad945edc6a859d0abb15eb8104745e7da100a080f72b678e4c",
+    "verification/closure_precision.py": "fb8e438b497fc54b4f926a6e5eeb1d5f100b225a4e9c63ee59066fcde1bf6e15",
+    "/home/lpaiu/work/thermal-closure22/replay/binary": "2ea64f04641b18285d2e0721495fd6269db5c08930d579d673ad9d008c6e7a3c"
+  },
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "EOS": "chi_rho=1/rho_P; chi_T=-rho_T/rho_P; u_lnrho=u_lnP/rho_P; cv*T=u_lnT_at_P-u_lnP*rho_T/rho_P.",
+    "transport": "L_infinity=-4*pi*r_E^2*N*A^2*K_J/a_E * d(A*N*T_J)/dr_E. This is the declared LTE diffusion law, not a thin-atmosphere closure.",
+    "source": "Native eta derivative arguments are not used as physical response derivatives; value independence is checked by replaying all source states with changed derivative arguments."
+  },
+  "claim": "Connect finite-temperature thermal coefficients and all 26-species native rates on the same nonzero mechanical background; use them for conservative thermal/reactive increments and free-surface mass/charge response.",
+  "actual_sources": "Current saved native rho,T,X,free-electron abundance,eta. Value-only native evaluation; returned derivative matrices are discarded. Replay with eta derivative arguments changed from zero to (+1,-1) must leave rate/heat/loss outputs bitwise unchanged.",
+  "thermal_boundary": "Photospheric outgoing luminosity remains an explicit parameter; diffusion is used only as an interior constitutive candidate. No Rosseland-to-Planck identification and no cold opacity extrapolation.",
+  "gates": {
+    "EOS_chain_relative": 1e-07,
+    "Gamma_identity_relative": 1e-07,
+    "source_derivative_argument_values_bitwise": true,
+    "baryon_relative": 1e-10
+  },
+  "budget": {
+    "native_EOS_controls": 6,
+    "source_pilot_cells": 32,
+    "full_source_batches": 2,
+    "source_timeout_seconds": 120,
+    "coefficient_timeout_seconds": 60,
+    "CPU_threads": 1,
+    "GPU": false,
+    "automatic_expansion": false
+  },
+  "cost_basis": "Earlier identical 5735-cell native source trace took 8.50 s; changed-state cost remains to be measured with the 32-cell pilot. Reuse all saved native thermodynamics.",
+  "full_dynamic_charge_solved": false
+}

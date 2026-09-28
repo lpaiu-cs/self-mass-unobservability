@@ -1,0 +1,33 @@
+{
+  "classification": "Counterexample candidate",
+  "decision": "Finish the originally registered fine1024-fluid-cell trajectory using the repaired native cold EOS and logarithmic optical support, then adjudicate original2percent spatial gates against retained coarse results.",
+  "restart": "Only complete snapshot104 is used. Raw failed terminal state is not a checkpoint. Histories0-104 are reused;104-128 is one new segment with its own conservative baseline and ledgers. Earlier accepted prefix certificate is retained separately.",
+  "budget": {
+    "seconds": 190,
+    "CPU_threads": 1,
+    "memory_GB": 3,
+    "macroscopic_steps": 24,
+    "native_evolution_calls": 4
+  },
+  "forecast": "The saved104-108 replay took21.78s, about5.45s per step.24 steps predict131s, with15s serialization and1.3x execution margin below190s. First5 steps are retained and measured; stop if their forecast exceeds cap.",
+  "overlap": "Compare recomputed105-108 bulk/atmosphere/mass with old saved histories before interpreting the new suffix. Gate1e-8 of each old peak response; old interpolators remain exact for warm states.",
+  "gates": {
+    "time_bulk_trace": 0.02,
+    "time_atmosphere_trace": 0.02,
+    "time_surface_spectrum": 0.02,
+    "space_atmosphere_trace": 0.02,
+    "space_outside_mass": 0.02,
+    "total_energy": 1e-08,
+    "gas_energy": 1e-08,
+    "atmosphere_photon_energy": 1e-08,
+    "baryon": 1e-10,
+    "species": 1e-09
+  },
+  "stop": "No rerun of successful coarse paths, new grid, extended horizon or post-result gate relaxation. Stop on positivity, primitive, support, conservation, overlap or budget failure.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_cold_coupling.py": "e93d6b78b8d19bc3d061afba3f874256a12783f1955a9dc679529bb08962a4a2",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-cold-coupling/repaired-bank.npz": "64c6458272c0b145e28b6b0f1cbea8ea6a4e43dcc10615ec09010f9071cb71ba",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-cold-coupling/spectrum-bank.npz": "b0ec6f2649091a947ed8fc6c6449d88deaf7870f53854fd14f1872a3ca429836",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-two-way-atmosphere/cells-896-steps-128.npz": "fdcc012fbf41b353412a40a54ef9febb7d2a5c372c4d6d2fd8b95c2c04989a50"
+  }
+}

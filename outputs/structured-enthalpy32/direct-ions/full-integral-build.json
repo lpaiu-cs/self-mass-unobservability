@@ -1,0 +1,55 @@
+{
+  "classification": "Counterexample candidate",
+  "commands": [
+    {
+      "command": [
+        "cmake",
+        "-S",
+        "/home/lpaiu/work/direct-ions32/full-integral-source",
+        "-B",
+        "/home/lpaiu/work/direct-ions32/full-integral-build",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DBUILD_SHARED_LIBS=ON",
+        "-DBUILD_TEST=ON",
+        "-DBUILD_DOC=OFF",
+        "-DBUILD_DOX_DOC=OFF"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "/home/lpaiu/work/direct-ions32/full-integral-build",
+        "--target",
+        "free_eos",
+        "-j",
+        "2"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "gfortran",
+        "-O2",
+        "-fPIC",
+        "-shared",
+        "-I/home/lpaiu/work/direct-ions32/full-integral-build/src",
+        "/mnt/e/lab/self-mass-unobservability/outputs/structured-enthalpy32/direct-ions/direct_ion_bridge.f90",
+        "-L/home/lpaiu/work/direct-ions32/full-integral-build/src",
+        "-Wl,-rpath,/home/lpaiu/work/direct-ions32/full-integral-build/src",
+        "-lfree_eos_direct24_integral_full",
+        "-o",
+        "/home/lpaiu/work/direct-ions32/direct_ion_integral_full_bridge.so"
+      ],
+      "returncode": 0
+    }
+  ],
+  "completed": true,
+  "sha256": {
+    "/home/lpaiu/work/direct-ions32/direct_ion_integral_full_bridge.so": "54d8cd3aa8af1be5c433cee9eed253ffc814ab23e1d212e547697d918a9fed32",
+    "/home/lpaiu/work/direct-ions32/full-integral-build/src/libfree_eos_direct24_integral_full.so.1.0.0": "6348e235763db0112687f391ab1c06c34b33aa530973ea4a414a5d0f21b1dfb4"
+  },
+  "original_runtime_modified": false,
+  "physical_EOS_certified": false
+}

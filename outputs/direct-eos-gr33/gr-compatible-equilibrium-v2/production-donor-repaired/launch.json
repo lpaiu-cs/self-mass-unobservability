@@ -1,0 +1,40 @@
+{
+  "pid": 387,
+  "started_utc": "2026-09-14T20:21:01.389280+00:00",
+  "cwd": "/mnt/e/lab/self-mass-unobservability",
+  "command": [
+    "/usr/bin/taskset",
+    "-c",
+    "0-15",
+    "/usr/bin/python3",
+    "-u",
+    "verification/gr_donor_repaired_full_duration.py",
+    "chain",
+    "--workers",
+    "15"
+  ],
+  "boot_id": "40a778b1-ea33-4b64-b043-79f79f38c2f9",
+  "start_ticks": "9286",
+  "source_checkpoint": "95d46b7f",
+  "frozen_plan_sha256": "e482578d2f8b14fd35058419b4c39f33ca88243fde4fa282910ad72a40dafd23",
+  "workers": 15,
+  "cpu_affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "openblas_num_threads": 1
+}

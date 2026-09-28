@@ -1,0 +1,309 @@
+{
+  "classification": "Counterexample candidate",
+  "result": {
+    "classification": "Counterexample candidate",
+    "reference": 128,
+    "steps": 128,
+    "completed_steps": 12,
+    "new_steps": 4,
+    "seconds": 11.692589568000017,
+    "operator_point_seconds": 2.595515126999885,
+    "operator_points": 2,
+    "stepping_seconds": 8.558144239000171,
+    "energy_balance_relative": 5.121552148409537e-14,
+    "species_balance_relative": 8.634995510591459e-14,
+    "linear_relative": 9.934557800733678e-13,
+    "max_Krylov_iterations": 8,
+    "frequency_moment_relative": 2.0370154042581785e-17,
+    "endpoint_photon_reference_energy_erg": 2351244.507166654,
+    "endpoint_material_reference_energy_erg": -1559926.6210274347,
+    "endpoint_material_energy_L1_erg": 1561168.9585478778,
+    "additional_material_motion_evolved": false,
+    "full_GR_feedback": false,
+    "final_charge_solved": false,
+    "passed": true
+  },
+  "hotspots": [
+    {
+      "file": "/mnt/e/lab/self-mass-unobservability/verification/verify_native_updated_gr_return.py",
+      "line": 1,
+      "name": "run",
+      "calls": 1,
+      "self_seconds": 0.061377596000000006,
+      "total_seconds": 11.703859779
+    },
+    {
+      "file": "/mnt/e/lab/self-mass-unobservability/verification/verify_native_updated_gr_return.py",
+      "line": 32,
+      "name": "solve",
+      "calls": 8,
+      "self_seconds": 0.007886149,
+      "total_seconds": 5.252260907
+    },
+    {
+      "file": "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/sparse/linalg/_isolve/iterative.py",
+      "line": 582,
+      "name": "gmres",
+      "calls": 8,
+      "self_seconds": 0.386530556,
+      "total_seconds": 5.079122574
+    },
+    {
+      "file": "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/sparse/linalg/_interface.py",
+      "line": 227,
+      "name": "matvec",
+      "calls": 136,
+      "self_seconds": 0.002844174,
+      "total_seconds": 4.642115328
+    },
+    {
+      "file": "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/sparse/linalg/_interface.py",
+      "line": 616,
+      "name": "_matvec",
+      "calls": 136,
+      "self_seconds": 0.0008915980000000001,
+      "total_seconds": 4.638318929
+    },
+    {
+      "file": "/mnt/e/lab/self-mass-unobservability/verification/def_native_collision_response.py",
+      "line": 215,
+      "name": "local",
+      "calls": 8,
+      "self_seconds": 0.055969325,
+      "total_seconds": 3.166597668
+    },
+    {
+      "file": "/mnt/e/lab/self-mass-unobservability/verification/verify_native_updated_gr_return.py",
+      "line": 28,
+      "name": "pre",
+      "calls": 68,
+      "self_seconds": 0.002422397,
+      "total_seconds": 3.043939614
+    },
+    {
+      "file": "/mnt/e/lab/self-mass-unobservability/verification/def_native_collision_response.py",
+      "line": 183,
+      "name": "point",
+      "calls": 19,
+      "self_seconds": 0.11844641300000001,
+      "total_seconds": 2.595582669
+    },
+    {
+      "file": "/mnt/e/lab/self-mass-unobservability/verification/def_native_collision_response.py",
+      "line": 97,
+      "name": "scattering_matrix",
+      "calls": 2,
+      "self_seconds": 1.2049692010000002,
+      "total_seconds": 2.092249405
+    },
+    {
+      "file": "/mnt/e/lab/self-mass-unobservability/verification/def_native_collision_response.py",
+      "line": 245,
+      "name": "photon",
+      "calls": 76,
+      "self_seconds": 0.182369054,
+      "total_seconds": 2.061634261
+    },
+    {
+      "file": "/home/lpaiu/.local/lib/python3.10/site-packages/numpy/_core/einsumfunc.py",
+      "line": 1057,
+      "name": "einsum",
+      "calls": 567,
+      "self_seconds": 0.00326171,
+      "total_seconds": 2.0091301230000003
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "name": "<built-in method numpy._core._multiarray_umath.c_einsum>",
+      "calls": 567,
+      "self_seconds": 2.005868413,
+      "total_seconds": 2.005868413
+    },
+    {
+      "file": "/mnt/e/lab/self-mass-unobservability/verification/def_native_collision_response.py",
+      "line": 254,
+      "name": "apply",
+      "calls": 68,
+      "self_seconds": 0.044508535,
+      "total_seconds": 1.9436658960000002
+    },
+    {
+      "file": "/mnt/e/lab/self-mass-unobservability/verification/verify_native_updated_gr_return.py",
+      "line": 27,
+      "name": "mat",
+      "calls": 76,
+      "self_seconds": 0.09138786600000001,
+      "total_seconds": 1.7566739070000001
+    },
+    {
+      "file": "/mnt/e/lab/self-mass-unobservability/verification/verify_native_updated_gr_return.py",
+      "line": 25,
+      "name": "L",
+      "calls": 76,
+      "self_seconds": 0.057337905,
+      "total_seconds": 1.665286041
+    },
+    {
+      "file": "/mnt/e/lab/self-mass-unobservability/verification/def_native_collision_response.py",
+      "line": 232,
+      "name": "collision",
+      "calls": 84,
+      "self_seconds": 0.27287614400000004,
+      "total_seconds": 1.6173148540000002
+    },
+    {
+      "file": "/home/lpaiu/.local/lib/python3.10/site-packages/numpy/lib/_npyio_impl.py",
+      "line": 691,
+      "name": "savez_compressed",
+      "calls": 2,
+      "self_seconds": 4.0486000000000005e-05,
+      "total_seconds": 1.3901477690000001
+    },
+    {
+      "file": "/home/lpaiu/.local/lib/python3.10/site-packages/numpy/lib/_npyio_impl.py",
+      "line": 766,
+      "name": "_savez",
+      "calls": 2,
+      "self_seconds": 0.00055327,
+      "total_seconds": 1.390103979
+    },
+    {
+      "file": "/home/lpaiu/.local/lib/python3.10/site-packages/numpy/lib/format.py",
+      "line": 684,
+      "name": "write_array",
+      "calls": 26,
+      "self_seconds": 0.000774888,
+      "total_seconds": 1.339814714
+    },
+    {
+      "file": "/usr/lib/python3.10/zipfile.py",
+      "line": 1144,
+      "name": "write",
+      "calls": 52,
+      "self_seconds": 0.000352935,
+      "total_seconds": 1.333963912
+    },
+    {
+      "file": "/mnt/e/lab/self-mass-unobservability/verification/def_native_collision_response.py",
+      "line": 239,
+      "name": "inverse",
+      "calls": 8,
+      "self_seconds": 0.084660733,
+      "total_seconds": 1.089166917
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "name": "<method 'solve' of 'SuperLU' objects>",
+      "calls": 68,
+      "self_seconds": 1.0083454200000002,
+      "total_seconds": 1.0083454200000002
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "name": "<method 'compress' of 'zlib.Compress' objects>",
+      "calls": 52,
+      "self_seconds": 0.944689815,
+      "total_seconds": 0.944689815
+    },
+    {
+      "file": "/home/lpaiu/.local/lib/python3.10/site-packages/numpy/linalg/_linalg.py",
+      "line": 320,
+      "name": "solve",
+      "calls": 144,
+      "self_seconds": 0.915757086,
+      "total_seconds": 0.942228547
+    },
+    {
+      "file": "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/sparse/_base.py",
+      "line": 728,
+      "name": "__matmul__",
+      "calls": 166,
+      "self_seconds": 0.001138997,
+      "total_seconds": 0.5220855320000001
+    },
+    {
+      "file": "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/sparse/_base.py",
+      "line": 597,
+      "name": "_matmul_dispatch",
+      "calls": 166,
+      "self_seconds": 0.00186632,
+      "total_seconds": 0.51284946
+    },
+    {
+      "file": "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/sparse/_coo.py",
+      "line": 347,
+      "name": "tocsr",
+      "calls": 2,
+      "self_seconds": 0.00014054400000000002,
+      "total_seconds": 0.510900231
+    },
+    {
+      "file": "/home/lpaiu/.local/lib/python3.10/site-packages/numpy/lib/_npyio_impl.py",
+      "line": 233,
+      "name": "__getitem__",
+      "calls": 76,
+      "self_seconds": 0.0008385,
+      "total_seconds": 0.46806570900000005
+    },
+    {
+      "file": "/mnt/e/lab/self-mass-unobservability/verification/def_native_collision_response.py",
+      "line": 249,
+      "name": "G",
+      "calls": 76,
+      "self_seconds": 0.27779348400000003,
+      "total_seconds": 0.45921929800000005
+    },
+    {
+      "file": "/home/lpaiu/.local/lib/python3.10/site-packages/numpy/lib/format.py",
+      "line": 762,
+      "name": "read_array",
+      "calls": 76,
+      "self_seconds": 0.041679641,
+      "total_seconds": 0.437924637
+    },
+    {
+      "file": "/usr/lib/python3.10/zipfile.py",
+      "line": 921,
+      "name": "read",
+      "calls": 742,
+      "self_seconds": 0.001991745,
+      "total_seconds": 0.39833591500000004
+    },
+    {
+      "file": "/usr/lib/python3.10/zipfile.py",
+      "line": 1003,
+      "name": "_read1",
+      "calls": 585,
+      "self_seconds": 0.0051286940000000005,
+      "total_seconds": 0.39618685400000003
+    },
+    {
+      "file": "/home/lpaiu/work/nutimo_pilot/request13_deps/scipy/sparse/_compressed.py",
+      "line": 518,
+      "name": "_matmul_vector",
+      "calls": 86,
+      "self_seconds": 0.0026026820000000003,
+      "total_seconds": 0.38827509600000004
+    },
+    {
+      "file": "/home/lpaiu/.local/lib/python3.10/site-packages/numpy/lib/format.py",
+      "line": 971,
+      "name": "_read_bytes",
+      "calls": 666,
+      "self_seconds": 0.0010306500000000001,
+      "total_seconds": 0.38628995000000005
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "name": "<method 'reduce' of 'numpy.ufunc' objects>",
+      "calls": 934,
+      "self_seconds": 0.382813295,
+      "total_seconds": 0.382813295
+    }
+  ],
+  "seconds": 11.706896643999926
+}

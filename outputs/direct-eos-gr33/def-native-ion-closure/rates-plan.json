@@ -1,0 +1,23 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Test whether the saved LTE outflow can supply its required hydrogen neutralization with imported spontaneous radiative recombination. Use material inventory labels, not fixed Eulerian cells.",
+  "model": "Verner-Ferland1996 dilute-atom total radiative recombination. Electron density bounded by complete ionization of the actual24-element mixture. Omitted nonnegative ionization only increases the hydrogen ion fraction. Stimulated/three-body recombination, charge exchange and molecular channels are NOT included in this conditional bound.",
+  "decision": "If required LTE recombination greatly exceeds the retained event budget, the existing LTE charge cannot serve as the final physical charge. The next actual evolution must transport populations and heat together.",
+  "material_labels": "Six fixed baryon labels corresponding to10,25,50,75,90,99percent of final gas outside the original surface. At each time use cumulative resolved baryon minus cumulative inner inflow. Discarded tail uncertainty is recorded separately.",
+  "budget": {
+    "download_seconds": 30,
+    "build_seconds": 30,
+    "analysis_seconds": 60,
+    "EOS_calls": 30,
+    "new_fluid_steps": 0,
+    "CPU_threads": 1,
+    "memory_GB": 1
+  },
+  "stop": "No rate multiplier, resolution increase or omitted-channel completion claim. Stop on material-label escape, failed inventory replay or negative rate.",
+  "source_url": "https://www.pa.uky.edu/~verner/dima/rec/rrfit.f",
+  "source_sha256": "ef865f13d086e441857a84e80c18b473fc7962a03f8c53e524b199cb0f07b859",
+  "inputs": {
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-metric-release/cells-896.npz": "a898b3077496eab9189163b98918786ceec46145b0d58006dde8284c46fafb12",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-metric-release/cells-1792.npz": "3b2f26b0ffb6246fc46cfc533c4a0a6f561a0d3f9bc57b28c56d92c884cdebaf"
+  }
+}

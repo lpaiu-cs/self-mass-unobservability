@@ -1,0 +1,57 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "efe578325ca021051c1ad1f68856b2337e4e5c29",
+  "claim": "Apply genuinely nonzero incoming scalar Cauchy data, its consistent first-order polar metric, and reciprocal conformal work to the CURRENT retained material/photon response; return the resulting material source to scalar charge.",
+  "drive": {
+    "amplitude": 1e-30,
+    "shape": "256*s^4*(1-s)^4 on0<s<1",
+    "duration": "half the existing3.4344311179287023ms interval",
+    "initial_support": "Outside the actual initial photon edge, in0<x<cD; no initial interior scalar or fluid increments. Exterior scalar lapse can be nonzero initially.",
+    "companion_matched": false,
+    "reason": "Connection test for the missing external-input operator. Do not rescale it into the declared wide-binary response or count it as the complete objective."
+  },
+  "field": "Exact incoming free optical characteristic plus one retarded V return on the actual initial anisotropic GR coefficients. Use the existing characteristic-cut Green quadrature at4/8 radial orders and33 source times; vacuum optical panels extend to2*c*T only for the scalar/lapse calculation, not new fluid cells. Initial exterior data are retained.",
+  "lapse": "delta_m=r^2*b*Phi*f (J=0 for the direct incident component), delta_lambda=r*Phi*f. Integrate the actual canonical gas/photon polar lapse constraint inward from the compact exterior scalar lapse integral, with lapse fixed at infinity. No arbitrary zero lapse at the numerical edge.",
+  "stages": "Evaluate the primary incoming waveform and derivatives at actual SDIRK/SSP stage times. Interpolate only the small first potential return; do not approximate the main pulse with17 saved driving samples.",
+  "frequency": "The unperturbed stationary Eref drift is zero. Use the odd conservative frequency-source derivative,0.5*(F(omega)-F(-omega)), removing the non-differentiable upwind numerical-diffusion term proportional to abs(omega). This is an explicitly declared linear finite-frequency representation, not the derivative of the old upwind scheme. Preserve its exact number/energy/work ledgers.",
+  "matter": "Reuse the existing fine retained trajectory, corrected-EOS collision banks, actual stage-aligned free material equations and compensated increment representation. Fixed deep incoming photon perturbation remains a controlled boundary, not a solved full-core response. Native state Jacobian and nonlinear Einstein closure remain open.",
+  "budget": {
+    "fields": 120,
+    "photon_pilot": 90,
+    "photon_production": 1000,
+    "material_pilot": 60,
+    "material_production": 500,
+    "readout": 180,
+    "audit": 60
+  },
+  "CPU_threads": 1,
+  "virtual_GiB": 3,
+  "new_native_calls": 0,
+  "new_background_steps": 0,
+  "gates": {
+    "field_quadrature": 0.002,
+    "field_remainder_over_incident": 1e-06,
+    "null": 1e-12,
+    "frequency": 1e-12,
+    "linear": 1e-12,
+    "time": 0.02,
+    "conservation": 1e-08,
+    "material_directional": 0.002,
+    "physical_branch": 0.01,
+    "small_state": 1e-06,
+    "pressure": 0.002,
+    "independent_GR": 1e-09
+  },
+  "dispatch": "First measure fields and equal-horizon4/8 photon prefixes. Dispatch only if2x measured remaining step cost including the recorded late-step floor fits1000s. Then measure2-step free-material prefixes with prior full raw-call counts before500s. Reuse all accepted prefixes.",
+  "stop": "Keep amplitude, field family, clocks, physical interval and gates fixed. Stop on a failed gate or forecast; do not automatically refine, add periods, weaken criteria or reinterpret the pulse as an orbit.",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_incident_drive.py": "4ed377f56e0b95fabe05ca5e531cdd4e11625263671cf6e46c6b8221ab9dabeb",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_characteristic_gr.py": "1630d3f008a1e59748d318f921eed7da8fbea4c49d33e5b86617f67009a27076",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_anisotropic_gr.py": "8c70ea3234a101e81db0c159c0fcf4edf02b16f0910b066f2781699d74efca85",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_dynamic_lapse.py": "5a1ab9b42211a67a79c2f36bb66a25faed9d05ebb82cf3bdd357b62969757b89",
+    "/home/lpaiu/work/native-retained-tail-runtime/outputs/direct-eos-gr33/def-native-initial-constraints/finite-volume/balanced-20.npz": "72ae702c85db57f0c02c1e5ca15dfad7df50d901b4270531e5b49c8c3746d3cb",
+    "outputs/direct-eos-gr33/native-retained-completion/evolution/source-128.npz": "7d6501151595f2274b0651a6179e3bd24cf4ea8ef6256734d953c9d8d01b79eb",
+    "retained-static-response154-work/result.json": "be062ee310a0d2c753a1d87a1e345d1412687b8a5d643320214bca1013a8902b",
+    "retained-static-response154-work/independent.json": "dd1dd7732f7581daa736ec8c7953282f3f13361fe75f70f613a5645c70b18707"
+  }
+}

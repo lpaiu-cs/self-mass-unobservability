@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/balance_full_native_krylov.py", line 151, in <module>
+    evolve=FunctionType(before.evolve.__code__,dict(before.evolve.__globals__,OUT=OUT,old=old));evolve(n)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/complete_stable_full_interval.py", line 76, in evolve
+    m=owner.Model(n);row=m.run(n,f'complete-{n}',n,restart=f'interval-15-{n}')
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/balance_full_native_krylov.py", line 42, in run
+    import sympy as sp
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/complete_stable_full_interval.py", line 62, in saved_stage
+    result=actual(m,t,h,x,g,lus)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/resume_full_native_newton.py", line 27, in stages
+    files=inputs+[OLD/n for n in ['last-accepted-64.npz','rejected-joint-stage.npz','rejected-joint-stage.json','failure-64.json','coarse-receipt.json','linear-64.json']]
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/complete_stable_full_interval.py", line 47, in solve
+    try:return solver(m,correct,P,rhs,guess)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/balance_full_native_krylov.py", line 121, in solve
+    try:return ns['solve'](m,op,P,rhs,guess)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/balance_full_native_krylov.py", line 10, in solve
+    import resume_full_native_newton as prior
+AssertionError: ('Four-moment linear residual', 7.230025006726817e-14, [np.longdouble('1.8069752371304381546e-19'), np.longdouble('2.2837730198870862193e-20'), np.longdouble('2.535837717680774748e-21'), np.longdouble('1.990756095731633014e-30')])

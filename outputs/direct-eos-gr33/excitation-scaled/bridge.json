@@ -1,0 +1,18 @@
+{
+  "classification": "Counterexample candidate",
+  "command": [
+    "gfortran",
+    "-O2",
+    "-fPIC",
+    "-shared",
+    "-I/home/lpaiu/work/direct-eos-gr33/excitation-scaled/build/src",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/coulomb-curvature/coulomb_bridge.f90",
+    "-L/home/lpaiu/work/direct-eos-gr33/excitation-scaled/build/src",
+    "-Wl,-rpath,/home/lpaiu/work/direct-eos-gr33/excitation-scaled/build/src",
+    "-lfree_eos_direct24_excitation_scaled",
+    "-o",
+    "/home/lpaiu/work/direct-eos-gr33/excitation-scaled/excitation.so"
+  ],
+  "bridge_sha256": "a1a046b4faaffb05d15baa4c7d6be6912cabbb2e1c93cc317b4407210b157971",
+  "library_sha256": "1ece7a7b1d5acd54010e307172edae10f4681307a72356c06ac3d1b35443af26"
+}

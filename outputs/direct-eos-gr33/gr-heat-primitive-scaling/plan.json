@@ -1,0 +1,76 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "a2d50b8",
+  "bindings": {
+    "verification/gr_heat_primitive_inverse.py": "f4bda1760f688bddb10530b816c7c4042d97f381a8e0ebc0d261de9f8499e433",
+    "outputs/direct-eos-gr33/initial-state-17-4.npz": "5dcc8ffb8b32a9f15ccc4c8bb7111d19be8dcdc66611ad2942e3a4a0cf6cc6d6",
+    "outputs/direct-eos-gr33/gr-microphysics/auxiliaries.npz": "63744d1a041ebc39bd33dfa0f5e181d64378966c1ee22364c477009bee08d976",
+    "outputs/direct-eos-gr33/gr-heat-entropy-closure/initial-rates.npz": "c288fbf689b4fdccfef9901bf503363c1cd998fe014a5de023ce9f49d99aba4a",
+    "outputs/direct-eos-gr33/gr-heat-characteristics/coefficients.npz": "c3e942d127fc698ae0edd8c5ead2d3047d1180aa017024c2ec895ba756683eb8",
+    "outputs/direct-eos-gr33/gr-heat-entropy-closure/manifest.json": "d48ed74b8faa1d9bff3d881b78e980d792eb0b762c5ed7ca74120de77813787e",
+    "verification/gr_heat_primitive_scaling.py": "adac6ac3eaf6e05abcb52337d9cc2be529d68f6fa927ccbeaf20c8b3f8c3afe3",
+    "outputs/direct-eos-gr33/gr-heat-primitive-inverse/manifest.json": "0efe1f162b57800c56dce7d2c24072c4449b73cd4d9bec23abf4bffcec7b8e93",
+    "outputs/direct-eos-gr33/gr-heat-primitive-inverse/result.json": "2764b9788769b6b2fb28a06d4f8fadbe2ec842ceb30f61e2cdcc76fd1407bea5"
+  },
+  "cells": [
+    0,
+    1,
+    2,
+    64,
+    1024,
+    2048,
+    2972,
+    4096,
+    5734
+  ],
+  "probes": [
+    [
+      -0.0001,
+      0.0002,
+      -0.0001
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0001,
+      -0.0002,
+      0.0001
+    ]
+  ],
+  "probe_order": "log density shift, log temperature shift, v/c; Q retains the saved comoving heat value.",
+  "frozen_velocity_interval": [
+    -0.5,
+    0.5
+  ],
+  "root_logT_tolerance": 1e-09,
+  "root_velocity_tolerance": 1e-12,
+  "root_log_density_tolerance": 1e-10,
+  "scaled_residual_tolerance": 1e-10,
+  "root_guess": "lnT_true+0.003, v=0, density inferred from fixed normal baryon D=rho*W.",
+  "scope": "Post-failure solver diagnosis and separately registered scaling candidate. Original failure retained; no physical, global-root or finite-time GR certification.",
+  "change": "Reuse the exact prior run code object, target generation, EOS/analytic Jacobian and every acceptance criterion. Only the root invocation adds explicit unit variable scaling diag=[1,1]. Independently check the initial analytic Jacobian by symmetric native differences at two fixed resolutions before solving.",
+  "finite_steps": [
+    [
+      0.0001,
+      1e-06
+    ],
+    [
+      5e-05,
+      5e-07
+    ]
+  ],
+  "finite_Jacobian_row_relative_tolerance": 1e-05,
+  "original_failed_cases": [
+    [
+      2972,
+      0
+    ],
+    [
+      2972,
+      2
+    ]
+  ]
+}

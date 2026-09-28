@@ -1,0 +1,39 @@
+{
+  "classification": "Counterexample candidate",
+  "pressure_pilot": {
+    "completed": false,
+    "accepted_roots": 4,
+    "error": "info 125; invalid pressure-temperature predictor",
+    "gamma_column": "Pressure-mode pilot gamma computation is invalid and was not used in accepted gates."
+  },
+  "density_table": {
+    "completed": true,
+    "native_evaluations": 193,
+    "roots": 52
+  },
+  "cold_binary64": {
+    "completed": false,
+    "exit_code": 1,
+    "error": "info 0 with nonfinite thermodynamic derivatives"
+  },
+  "extended_cold": {
+    "completed": false,
+    "exit_code": 1,
+    "accepted_roots": 12,
+    "last_saved_seconds": 71.06413018399996,
+    "hard_timeout_seconds": 90,
+    "termination_cause": "Unresolved: tool returned exit code 1 without final stdout or exception record; do not infer target completion or timeout cause.",
+    "reused_saved_prefix_only": true
+  },
+  "surface_enclosure": {
+    "completed": true,
+    "native_calls": 0,
+    "gas_completion_is_explicit_premise": true
+  },
+  "enthalpy_reconstruction": {
+    "completed": true,
+    "native_calls": 0
+  },
+  "new_time_evolution_steps": 0,
+  "automatic_budget_expansion": false
+}

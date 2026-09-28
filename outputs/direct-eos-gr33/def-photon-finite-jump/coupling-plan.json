@@ -1,0 +1,24 @@
+{
+  "classification": "Counterexample candidate",
+  "reason": "The four-mode pilot measured 12.65 s build + 10.28 s evolution. The initial 240 s production estimate omitted the cost of repeated nonlocal multiplies. Reassess BEFORE production: four kernel builds, all predeclared comparisons, roughly 300-650 s, hard cap 720 s. No accuracy gate or physical duration changed.",
+  "forecast_seconds": [
+    300,
+    650
+  ],
+  "hard_seconds": 720,
+  "memory_cap_GB": 4,
+  "CPU_workers": 1,
+  "new_EOS_calls": 0,
+  "new_physical_queries": 0,
+  "new_stellar_steps": 0,
+  "automatic_expansion": false,
+  "source_change": "Split real/imaginary sparse matvec avoids full matrix dtype promotion; measured vector difference zero. The continuum normalization control uses all terms of the cited Eq.16, not only its linear photon-energy truncation.",
+  "bindings": {
+    "verification/def_photon_finite_jump_validate.py": "65816601ed2bd350a34e161905e460d7ebca0b9de049e1c3fab505720449e369",
+    "verification/def_photon_finite_jump.py": "3d1b43833d77f080a82d6467b39d81f041ac16d2885b3ae7d788c2bd924bbbb0",
+    "outputs/direct-eos-gr33/def-photon-finite-jump/plan.json": "acdf38438b1d83e58ff606481c16ae7737c0ce10361826b24f1db35016d4922b",
+    "outputs/direct-eos-gr33/def-photon-finite-jump/pilot.json": "c01b77603a00b62a73ded983d08ec20b14a19932a118053a50db1a4433ff046b",
+    "outputs/direct-eos-gr33/def-photon-finite-jump/pilot-source.py": "e8392228e00ff8ac8debdefaca4c057defd8b7a8edd202aee958a128b07755d8",
+    "outputs/direct-eos-gr33/def-photon-finite-jump/matvec-pilot.json": "50d4c518d69519d77c5777765ec94b7e208f433bc567992759c2d2f3f8b5287e"
+  }
+}

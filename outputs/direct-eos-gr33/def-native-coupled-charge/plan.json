@@ -1,0 +1,49 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "a19c21e12",
+  "claim": "Read the actual completed coupled histories with conserved energy, quantify recovery/history uncertainty, and apply their distributed deep and atmospheric sources to the same retarded scalar Green operator.",
+  "fidelity": "Retain the original Phase113 failed strict readout verdict. Its old report offsets never enter these new sources. No gas/heat/photon trajectory is repeated, no initial state or acceptance is changed.",
+  "source": "Use tau-S*v-k*p for nonrest trace(k=3) and radial metric stress(k=1). Add explicit baryon redistribution separately. Deep native density is frozen and its actual saved theta/eta supplies pressure and energy. Photon trace is zero; actual photon energy and radial pressure are exported for subsequent metric equations.",
+  "missing": "The deep density and metric were fixed. The fluid inner baryon debit is not mechanically evolved. Show a mathematically centered debit at the actual fluid inner face as an explicit conditional completion and retain its separate contribution. Do not call this or the snapshot energy a completed Bondi/ADM normalization.",
+  "domain": "Reuse1100km native interior and[-400,1200]m moving-fluid patch, sixteen common saved intervals, exact saved background weights/delays. The volume-average source is represented as constant inside each existing cell; spatial continuum error is not certified.",
+  "paths": [
+    "448/64",
+    "448/128",
+    "896/128 completed by104 restart"
+  ],
+  "controls": [
+    "same saved conservative state under two primitive seeds",
+    "17 versus9 stored time nodes",
+    "linear versus natural cubic histories",
+    "4 versus8 radial Gauss points inside existing cells",
+    "original coarse/fine histories",
+    "manufactured constant-weight delayed source"
+  ],
+  "gates": {
+    "source_seed": 1e-08,
+    "primitive": 2e-14,
+    "wave_space": 0.02,
+    "wave_time": 0.02,
+    "wave_history": 0.02,
+    "wave_quadrature": 0.002
+  },
+  "budget": {
+    "source_seconds": 45,
+    "readout_seconds": 45,
+    "native_constructor_calls": 8,
+    "CPU_threads": 1,
+    "memory_GB": 2,
+    "new_fluid_steps": 0
+  },
+  "forecast": "Phase113 independent saved endpoint recovery took1.68s including setup; reading51 snapshots reuses the same table and geometry. Stop if45s source or45s readout cap is exceeded. No new native table or time/spatial path.",
+  "stop": "Preserve any failed gate and do not replace whole source closure with a small component pass. No automatic resolution, horizon or production re-evolution.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_coupled_charge.py": "6dc4fa7798373b5f3c49ab8f1b041f329ecd1e40004e8c38d0579219df1313bf",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_cold_coupling.py": "0eb2bc3108dd815e3a51288ad866d3f2abe8e10ea7bbdce0969745eb537aca6e",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_release_charge.py": "436c719793fa72c33a8db5cc33a252f3ae06186baa382615adddbcf631c27486",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-cold-coupling/resumed-896-128.npz": "22ae56b3b1de6c18673cf794e69798a6cef04b45686f6d914727c40bfa4e1946",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-two-way-atmosphere/cells-896-steps-128.npz": "fdcc012fbf41b353412a40a54ef9febb7d2a5c372c4d6d2fd8b95c2c04989a50",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-two-way-atmosphere/cells-448-steps-128.npz": "c022f43edb26ceddeaf91e8038f383299eef70b9c83e6822809a3b7ff90ec221",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-two-way-atmosphere/cells-448-steps-64.npz": "6b62e7b34c6be7dadf63a1b38278b8be405f66f8293bd002110f3ae8adc63d4f"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": {
+    "classification": "Counterexample candidate",
+    "passed": false,
+    "controls": {
+      "quadrature": {
+        "delta_u": 1.0861922287556258e-05,
+        "delta_lambda": 0.0023573842371708985,
+        "delta_log_lapse": 0.004283774172376781,
+        "delta_log_speed": 0.00280636696070978,
+        "delta_u_prime": 3.12027949309054e-05,
+        "delta_nu_prime": 0.03812519966563929
+      },
+      "source_cadence": {
+        "delta_u": 0.025923868862526858,
+        "delta_lambda": 0.00041720346629522693,
+        "delta_log_lapse": 0.0007438063983114855,
+        "delta_log_speed": 0.0004975319181166332,
+        "delta_u_prime": 0.04002360457345328,
+        "delta_nu_prime": 0.0008668507800641347
+      }
+    },
+    "maximum_interface_relative": 2.6202256610841253e-16,
+    "compact_source_exterior_component_matched": true,
+    "additional_exterior_mixed_source_closed": false,
+    "auxiliary_mass_not_reclassified_as_photon_energy": true,
+    "full_goal_complete": false
+  },
+  "correction": "Resolve the original representation: integrate the primary pulse analytically in time; split spatial constraint integrals at existing field centers and pulse fronts; evaluate the constraint at actual material centers. Keep all existing physical cells,33/17 source clocks,4/8 coefficient representations and acceptance gates.",
+  "field_consistency": "Repropagate the affected local primary trace and J-source changes through the same wave/potential operator before constructing the corrected metric. Do not repair only the readout or force table.",
+  "exclusions": "The same additional exterior mixed source and full physical errors remain open. No permission to run transport until the unchanged metric gates pass.",
+  "budget_seconds": 480,
+  "total_action_seconds": 4200,
+  "first_route_admission": "Four times the first corrected route plus15s must fit the remaining480s. No automatic increase.",
+  "original_producer_sha256": "23a973200208c3073f726cd877fb5af0c764b7a80d90a909f42b44104270303d",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/return_native_mixed_gr.py": "ef517bfc642e450866bdc5753196eee47da416b476ed506e3451974317d2b475",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/resolve_native_mixed_return.py": "b3d1614e18c29847226a79cad38c12777a6855258e0e27be75b5dfa03983d4b6",
+    "native-mixed-return162-work/metric-0-receipt.json": "4a4aad162fdcb48f3e56365148447e582be73f4b19ea85a4764e5799c46386e9",
+    "native-mixed-return162-work/rejected-metric/result.json": "20b15c5d7881e0310cc8dbc2617092235577c7ef46be4d43a617233aedf606ec",
+    "native-mixed-return162-work/rejected-metric/metric-128-17-g8.npz": "44525f36155822c1dc1f091487c132ee53b01577c3b1047c9b6b9133dc2fe9a4",
+    "native-mixed-return162-work/rejected-metric/metric-128-g4.npz": "9f4d85a569ec96fd0fe6b4a60f67adcb470c3d5e0370ec85c544937b2531cff3",
+    "native-mixed-return162-work/rejected-metric/metric-128-g8.npz": "a1420106176ef6b12fea59975864a7763e40bb208b8b04d2ddd1f0b4a851f9c6"
+  }
+}

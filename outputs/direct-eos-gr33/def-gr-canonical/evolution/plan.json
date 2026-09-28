@@ -1,0 +1,37 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "29fe9acd",
+  "claim": "Apply the same 4012-face heat input and exact microscopic startup to actual fluid/scalar evolution from the complete continuous canonical GR weak form; test the previously failed component histories.",
+  "changed": "Full consistent weak spatial stiffness, inertia, physical pressure and source. Same original nodes, horizon, frozen background and heat input. No partial mass correction and no modal clipping.",
+  "decision": "Run the original16/32/64 time counts. Stop if any of four components fails. Only if all pass, run fixed coefficient, outer3R and every-other-node spatial contrasts. Never refine on failure.",
+  "gates": {
+    "time_relative": 0.02,
+    "time_order": 1.5,
+    "coefficient": 0.02,
+    "outer": 0.002,
+    "spatial_contrast": 0.02,
+    "linear_residual": 1e-09,
+    "heat_balance": 2e-13
+  },
+  "budget": {
+    "pilot_steps": 8,
+    "production_steps": 304,
+    "maximum_paths": 6,
+    "hard_seconds": 240,
+    "CPU_threads": 1,
+    "memory_GB": 3,
+    "new_EOS_calls": 0,
+    "automatic_expansion": false
+  },
+  "scope": "A candidate discretization of the original continuous linear GR equations. Changing the spatial scheme requires its own validation. No claim of full nonlinear, photon, outer-current, charge or observational closure.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_energy_evolution.py": "119ddc3820bf565083972edfae1eeec6bb972cc2d665423e90978d347ac18eec",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_energy_fem.py": "b032fd679022359230a75537dcfc51102454043b665b1da64cda5b00c637b65b",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_canonical.py": "950d245c6f2cd50c4e682d5cb8553ea31a2d08783f9fc88bfbe7dccc59ee973b",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_conduction_radau.py": "86daa01d85c964bafb8e4ab2ca2113a1bd0f9540b2f7a69c3bcc5f84c101b230",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/fine-bank.npz": "b4493a6e4cfb20d741725ecb61cec154ab9fc51a694001865748741060018d7e",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/coarse-bank.npz": "ea020f69b240c5c5cdd8810f963d88e5cc2d3269aff12c659422a7a6541ae0df",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-canonical/symbolic.json": "e8770b44f371345efd53c8e838018b9a08528adce8f17f7a37e8db9e794558a1",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-canonical/assembly.json": "e11f23f49f600981046667ef4de94030ec81706c2f3c57624df96c6f00dc340a"
+  }
+}

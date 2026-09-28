@@ -1,0 +1,18 @@
+{
+  "classification": "Conjectural",
+  "failure": {
+    "seconds": 25.00017809100001,
+    "CPU_seconds": 15.183372979000001,
+    "peak_RSS_bytes": 1375285248,
+    "error": "TimeoutError('Registered native acoustic budget')",
+    "source_sha256": "8682adb43788fd6220d39fa103bb3643247572f58d7fbcca7b8968f0e6eab9ba"
+  },
+  "check_spent_seconds": 54.065524064000016,
+  "decision": "The64zero-step path passed exact array and history checks. The25s action cap expired during construction of128before any physical step. Recheck saved64files without reconstructing that Model, then finish only128. Completing this restore gate is necessary for actual continuation.",
+  "forecast": "One measured constructor and first serialization14.8s plus the second serialization and file checks: assumed18..30s. No physical step, extra grid or horizon. A30s hard cap replaces30s of the coarse cap,350to320; total registered ceiling is not increased.",
+  "check_cap": 30,
+  "coarse_cap": 320,
+  "fine_cap": 550,
+  "no_total_budget_increase": true,
+  "source_sha256": "727ae408623e2bbd5c1f2436cdb1ec24c9ef37e4a97678d80f6007d5cdc35433"
+}

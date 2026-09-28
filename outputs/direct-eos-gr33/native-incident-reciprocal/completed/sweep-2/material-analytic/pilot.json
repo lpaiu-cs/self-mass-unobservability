@@ -1,0 +1,141 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "rows": [
+    {
+      "classification": "Counterexample candidate",
+      "passed": true,
+      "steps": 64,
+      "reference": 128,
+      "completed": 2,
+      "substeps": 13,
+      "balance_relative": [
+        1.0190255169784227e-18,
+        1.5928883812973107e-17,
+        1.0340052894458304e-14,
+        5.450569987976874e-18
+      ],
+      "directional": [
+        {
+          "time": 0.00010732597243527195,
+          "relative": [
+            0.00074538808529975,
+            0.0010308652278289711,
+            0.0005539682184652277,
+            2.090847175625104e-05
+          ]
+        }
+      ],
+      "directional_relative": 0.0010308652278289711,
+      "forward_probe_indicator": 0.5877558541056775,
+      "maximum_true_relative_state": 5.820863730941587e-29,
+      "endpoint_sum": [
+        -1.4066442957982872e-05,
+        9.267299117577319e+25,
+        4.002047684680084e+18,
+        -1.4125707042017128e+26
+      ],
+      "endpoint_L1": [
+        395313.3043135763,
+        9.267299174516168e+25,
+        1.023376569184216e+19,
+        3.724433463159259e+26
+      ],
+      "endpoint_sum_physical": [
+        -1.4066442957982873e-31,
+        0.9267299117577319,
+        4.002047684680084e-08,
+        -1.412570704201713
+      ],
+      "endpoint_L1_physical": [
+        3.953133043135763e-21,
+        0.9267299174516168,
+        1.0233765691842161e-07,
+        3.7244334631592593
+      ],
+      "discard_physical": [
+        1.4066442555140617e-31,
+        6.713675500254448e-14,
+        2.4639476063954804e-17,
+        1.4491739915852168e-09
+      ],
+      "raw_owner_calls": 164,
+      "seconds": 2.02565611,
+      "full_GR_feedback": false,
+      "final_charge_solved": false,
+      "worker_wall_seconds": 6.654113523999968,
+      "physical_branch_ratio": 3.463630891289281e-14,
+      "maximum_owner_error": 1.8890685044047918e-13,
+      "nominal_arithmetic_probe": 512
+    },
+    {
+      "classification": "Counterexample candidate",
+      "passed": true,
+      "steps": 128,
+      "reference": 128,
+      "completed": 2,
+      "substeps": 12,
+      "balance_relative": [
+        1.6968592414139935e-18,
+        5.735412405405764e-18,
+        7.579926674183982e-15,
+        1.4981206336119443e-16
+      ],
+      "directional": [
+        {
+          "time": 5.3662986217635974e-05,
+          "relative": [
+            0.0015995235765806708,
+            2.7136724798216095e-07,
+            0.0008708943301384904,
+            2.7494996563859308e-06
+          ]
+        }
+      ],
+      "directional_relative": 0.0015995235765806708,
+      "forward_probe_indicator": 0.055375341090317144,
+      "maximum_true_relative_state": 2.6636011688457886e-29,
+      "endpoint_sum": [
+        -2.2239574981597343e-07,
+        4.250676788872463e+24,
+        1.5639832751938893e+17,
+        -6.853938937707117e+25
+      ],
+      "endpoint_L1": [
+        11280.052413853648,
+        4.250678116157559e+24,
+        6.010551519468545e+17,
+        1.8455691307641642e+26
+      ],
+      "endpoint_sum_physical": [
+        -2.2239574981597345e-33,
+        0.04250676788872463,
+        1.5639832751938893e-09,
+        -0.6853938937707118
+      ],
+      "endpoint_L1_physical": [
+        1.1280052413853648e-22,
+        0.042506781161575594,
+        6.010551519468546e-09,
+        1.8455691307641642
+      ],
+      "discard_physical": [
+        2.2239576895717394e-33,
+        2.1704518292619055e-15,
+        1.1963614475483541e-18,
+        8.310044812239562e-10
+      ],
+      "raw_owner_calls": 150,
+      "seconds": 1.6913563910000065,
+      "full_GR_feedback": false,
+      "final_charge_solved": false,
+      "worker_wall_seconds": 6.443268762000002,
+      "physical_branch_ratio": 1.9942491924424997e-15,
+      "maximum_owner_error": 1.8890685044047918e-13,
+      "nominal_arithmetic_probe": 512
+    }
+  ],
+  "seconds": 6.443749423,
+  "upper_remaining_seconds": 355.58984293604686,
+  "eligible": true
+}

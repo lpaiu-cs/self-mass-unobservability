@@ -1,0 +1,23 @@
+{
+  "classification": "Counterexample candidate",
+  "sources": {
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/source/src/mod_eos_calc.f90": "dcd741d7029d4b289ed4cd9a45c39345513f2a02f292d970b7cf241d03ed41c6",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/source/src/eos_calc.f90": "45da91d2e8b4bc6afbd5a5dd3a0697b7bb72ea455e0f3bd7d2d5e4ed99d57eff",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/source/src/ionize.f90": "3922b6b3eb36b7c89f5c3c676e82428ff6ccccda64a3540753b906f955be1cfa",
+    "/home/lpaiu/work/direct-eos-gr33/molecular-spectral/source/src/mod_statistical_weight_data.f90": "768e0dd44e36022c2af7503472911b8b233b78cd132387232a18029dcfe9bc0d"
+  },
+  "original_runtime_unchanged": true,
+  "compiler": "GNU Fortran (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+  "rebuilt_modules": [
+    "mod_statistical_weight_data",
+    "mod_excitation",
+    "mod_eos_calc"
+  ],
+  "statistical_weight_consumers": [
+    "excitation_pi.f90",
+    "excitation_sum.f90",
+    "eos_calc.f90",
+    "ionize.f90"
+  ],
+  "no_unrebuilt_direct_statistical_weight_consumer": true
+}

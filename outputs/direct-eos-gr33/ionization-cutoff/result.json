@@ -1,0 +1,37 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "checkpoint": "8f878bb",
+  "fresh_mask": {
+    "maximum_atomic_stages": 29,
+    "maximum_omitted_stages": 28,
+    "relative_weight_cutoff": "[8.37894253381936897136257495563503098800913298292005902849728E-126, 8.37894253381936897136257495563503098800913298292005902849729E-126]",
+    "omitted_probability_upper": "[2.34610390946942331198152098757780867664255723521761652797924E-124, 2.34610390946942331198152098757780867664255723521761652797925E-124]",
+    "L1_error_upper": "[4.69220781893884662396304197515561735328511447043523305595848E-124, 4.69220781893884662396304197515561735328511447043523305595849E-124]",
+    "charge_expectation_error_upper": "[6.56909094651438527354825876521786429459916025860932627834187E-123, 6.56909094651438527354825876521786429459916025860932627834188E-123]",
+    "charge_square_expectation_error_upper": "[1.83934546502402787659351245426100200248776487241061135793572E-121, 1.83934546502402787659351245426100200248776487241061135793573E-121]",
+    "dimensionless_mixing_entropy_error_upper": "[6.78024029836663337162659565409986707549699040977891176586000E-122, 6.78024029836663337162659565409986707549699040977891176586001E-122]",
+    "proof": "At least one maximum weight remains. If the omitted/retained weight ratio is <=r*exp(-288), the omitted probability is <=r*exp(-288)/(1+r*exp(-288)). Retained renormalization changes the distribution in total variation by exactly that omitted probability. A bounded observable changes by at most its range times total variation. Fannes entropy bound is <=-delta*ln(delta)+delta+delta*ln(dimension-1).",
+    "conditions": "The current mask must be freshly computed from current log weights, with the exact declared log-cutoff rule; the atomic softmax has at most 29 stages. This is not automatically a bound on coupled hydrogen molecular equilibrium or a self-consistent nonideal root."
+  },
+  "fixed_mask_counterexample": {
+    "previous_weights": [
+      "1",
+      "exp(-300)"
+    ],
+    "current_weights": [
+      "1",
+      "1000"
+    ],
+    "reused_mask": [
+      false,
+      true
+    ],
+    "current_total_variation": "1000/1001",
+    "conclusion": "An old mask alone supplies no current small-error guarantee. The source explicitly permits reusing such a mask and notes that the current maximum may be removed."
+  },
+  "restoration_condition": "For a reused mask, certify the current omitted-to-retained weight ratio rho directly; then delta<=rho/(1+rho). A previous threshold alone is insufficient. Population/entropy value bounds do not supply free-energy derivative or equilibrium-location bounds without the corresponding derivative/curvature assumptions.",
+  "source_sha256": "1de80b8cd0063a798ff945cb95f5cafffb85ba4ab98ce25f46428975b56942f0",
+  "actual_EOS_mask_current_ratio_certified": false,
+  "physical_EOS_certified": false
+}

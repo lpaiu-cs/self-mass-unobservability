@@ -1,0 +1,48 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "comparisons": {
+    "time": [
+      0.00030983355735964165,
+      0.00016896279245209376,
+      0.00027991070326022487,
+      0.0017374912059839576
+    ],
+    "stress_time": [
+      0.00030998166101372886,
+      0.0003303811469519934,
+      0.0003092160879902958,
+      0.0003303811483916686,
+      0.0002959342071917896,
+      0.0002730638341897357
+    ]
+  },
+  "paths": [
+    {
+      "steps": 64,
+      "reference": 128,
+      "conservation": 1.0092860811922936e-15,
+      "pressure_probe": 3.7668371962944846e-05,
+      "legacy_material_sweep_comparison": null,
+      "energy_H_waveform_residual": [
+        6.623935316390165e-08,
+        1.0803601929222783e-08
+      ]
+    },
+    {
+      "steps": 128,
+      "reference": 128,
+      "conservation": 2.4503764884169637e-15,
+      "pressure_probe": 3.7678151900761135e-05,
+      "legacy_material_sweep_comparison": null,
+      "energy_H_waveform_residual": [
+        6.623792255583334e-08,
+        1.0805071904364997e-08
+      ]
+    }
+  ],
+  "seconds": 12.600470933999986,
+  "returned_photon_transfer_applied_to_material": true,
+  "coupled_fixed_point_verified": false,
+  "final_charge_solved": false
+}

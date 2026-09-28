@@ -1,0 +1,74 @@
+{
+  "operation": "Raise the existing molecular conservative initializer from nice 10 to nice 0",
+  "completed_at_utc": "2026-09-13T08:23:05.768240+00:00",
+  "boot_id": "9b968b4f-ecbd-483b-ada9-c1c871b6ab20",
+  "checkpoint_before": "2ef8e165f6219c98f41d714bf180c9cb55ff4b92",
+  "targets": {
+    "4699": {
+      "before": {
+        "pid": 4699,
+        "ppid": 4694,
+        "state": "S",
+        "start_ticks": 7391499,
+        "cpu_ticks": 59663,
+        "nice": 10,
+        "cpus": [
+          1
+        ]
+      },
+      "after": {
+        "pid": 4699,
+        "ppid": 4694,
+        "state": "S",
+        "start_ticks": 7391499,
+        "cpu_ticks": 59663,
+        "nice": 0,
+        "cpus": [
+          1
+        ]
+      }
+    },
+    "4794": {
+      "before": {
+        "pid": 4794,
+        "ppid": 4699,
+        "state": "R",
+        "start_ticks": 7553430,
+        "cpu_ticks": 1156415,
+        "nice": 10,
+        "cpus": [
+          1
+        ]
+      },
+      "after": {
+        "pid": 4794,
+        "ppid": 4699,
+        "state": "R",
+        "start_ticks": 7553430,
+        "cpu_ticks": 1157350,
+        "nice": 0,
+        "cpus": [
+          1
+        ]
+      }
+    }
+  },
+  "before_sample": {
+    "elapsed_seconds": 8.135384390989202,
+    "initial_worker_cpu_seconds": 2.66,
+    "GR8_cpu_seconds": 7.58,
+    "main_worker_count": 15,
+    "main_workers_running": 15,
+    "main_worker_cpu_seconds_total": 111.08
+  },
+  "after_sample": {
+    "elapsed_seconds": 8.107271209009923,
+    "initial_worker_cpu_seconds": 6.69,
+    "GR8_cpu_seconds": 7.57,
+    "main_worker_count": 15,
+    "main_workers_running": 15,
+    "main_worker_cpu_seconds_total": 106.74999999999999
+  },
+  "other_job_scheduling_verified_unchanged": true,
+  "scope": "Same running producer, one worker on CPU 1. Short CPU observations are not a whole-job speedup benchmark."
+}

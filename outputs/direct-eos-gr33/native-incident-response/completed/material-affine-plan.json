@@ -1,0 +1,21 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": 0.17472553400159951,
+  "repair": "At fixed primitive/geometry state, the lapse-gradient acceleration ap enters only the momentum source affinely. Measure its diagonal coefficient once at each saved background knot, verify opposite directions and two probe sizes, and remove that channel before the existing native finite directional response. Restore its exact linear force in both rate and momentum ledger.",
+  "reason": "A rapidly varying incident wave can make ap large relative to the hydrostatic acceleration while all primitive and dimensionless geometry changes stay small. Its old joint probe cap then suppresses the recoverable thermodynamic increment. The physical amplitude is unchanged.",
+  "controls": "Keep8x Richardson for the remaining channels and original4/8/16 comparisons,0.2percent derivative gate,1e-8 conservation and owner gates,1percent actual donor gate and2percent time gate. No changed waveform,clock or physical state.",
+  "scope": "Exact affine separation in the current finite material equation, not a full native EOS Jacobian certificate. The ap coefficient itself must agree below1e-12.",
+  "budgets": {
+    "check": 45,
+    "pilot": 60,
+    "production": 400
+  },
+  "total_production_allocation": 1500,
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/solve_native_incident_material.py": "94566d5f456f38c79f4c8e5170eae8917e93dd1a3745892d5480316e06c89722",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/solve_native_incident_lift.py": "3a94382fe1ad283cbad81b76e56c4348c2f9c844b5ba709aef675af120d27c75",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/apply_native_incident_drive.py": "7a80bc9db3a179d80bdc11168d68fb093fb7dc04c3e06219f2aeed702381f60b",
+    "native-incident-drive155-work/material/pilot-64.json": "ff16b902ffd6645be4b022e528d7a09442cfe80d71b066b679c2e8c60e014ddc",
+    "native-incident-drive155-work/photons-lift/result.json": "dba2360cd2dee997e0dcac2647c71b45d0778f0da6996c5d1fc80357337dab67"
+  }
+}

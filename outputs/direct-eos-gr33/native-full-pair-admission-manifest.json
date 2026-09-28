@@ -1,0 +1,205 @@
+{
+  "classification": "Counterexample candidate",
+  "actual_same_joint_solution_GR_computed": true,
+  "full_primary_photon_material_pair_completed": true,
+  "primary_time_relative": [
+    1.2442205390854842e-05,
+    4.943146628517156e-06,
+    2.6709385793575696e-05,
+    9.954374830236458e-06,
+    1.2107372530284252e-05,
+    2.5381302397131237e-05,
+    1.3132709732966368e-05,
+    7.325009703870524e-06,
+    4.943146628517221e-06,
+    2.6709385793575696e-05
+  ],
+  "common_15of16_actual_GR_return_pair_completed": true,
+  "returned_time_relative": [
+    0.00017328606180235952,
+    0.00016367178851619507,
+    6.40519281645598e-05,
+    0.00010529658434715084,
+    0.0001645121524179351,
+    0.0001635888219654725,
+    8.523871784142429e-06,
+    4.484917812885309e-06,
+    0.00016367178851619507,
+    6.40519281645598e-05
+  ],
+  "full_period_GR_return_completed": false,
+  "immutable_runtime_physical_bindings": {
+    "native-common-arithmetic239-work\\sweep-1\\photons\\complete-64.npz": "78293a016d40373449f40c8f57fd36c6cb7cc5422e23cb6f21935cc96c5fc1bc",
+    "native-common-arithmetic239-work\\sweep-1\\photons\\complete-128.npz": "21f4bb184474f832e26b8d5bb309e7f1050bce7070b8ddd7325e262eacbf8645",
+    "native-complete-return236-work\\sweep-1\\photons\\return-64.npz": "ffc766715f13184b0934df9af0af9ce5ebd61e8e35ccb0049b8ccf84b7c2eb07",
+    "native-complete-return236-work\\sweep-1\\photons\\return-128.npz": "9f53a5b5d357cf4d914b01f8dab89f4607e0fe146e096b6fb4609b1ee9651106",
+    "native-complete-return236-work\\recovered-64.npz": "e1331c3afa799a046cbfc79d595d509aaa2bae6788f593b9308d401b38f80c2a",
+    "native-complete-return236-work\\recovered-128.npz": "a5e06571fe5006e21fb2614724350f41b88ffb304d6ce4ddfa0b5dcf3b4b818d"
+  },
+  "actual_history_directory": "\\\\wsl.localhost\\Ubuntu-22.04\\home\\lpaiu\\work\\native-retained-tail-runtime",
+  "live_snapshots": {
+    "native-full-captured244-work": {
+      "state": "running",
+      "action": "endpoints",
+      "child_pid": 214705,
+      "completed": [
+        {
+          "action": "prepare",
+          "returncode": 0
+        },
+        {
+          "action": "assemble",
+          "returncode": 0
+        }
+      ],
+      "elapsed_seconds": 4.320207724002103
+    },
+    "native-returned-source245-work": {
+      "state": "completed",
+      "completed": [
+        {
+          "action": "prepare",
+          "returncode": 0
+        },
+        {
+          "action": "source",
+          "returncode": 0
+        }
+      ],
+      "elapsed_seconds": 4448.775200883003,
+      "final_charge_conclusion": "unadjudicated",
+      "full_goal_complete": false
+    },
+    "native-dense-returned246-work": {
+      "state": "running",
+      "action": "source",
+      "child_pid": 214691,
+      "completed": [
+        {
+          "action": "prepare",
+          "returncode": 0
+        },
+        {
+          "action": "geometry",
+          "returncode": 0
+        }
+      ],
+      "elapsed_seconds": 2959.4624146550013
+    },
+    "native-compensated-charge247-work": {
+      "state": "waiting",
+      "action": "same246long_dense_source",
+      "dependency_pid": 181543,
+      "elapsed_seconds": 2524.083449018999
+    },
+    "native-retarded-extension248-work": {
+      "state": "waiting",
+      "action": "same244full_source",
+      "dependency_pid": 214700,
+      "elapsed_seconds": 120.32815837500311
+    },
+    "native-full-return249-work": {
+      "state": "waiting",
+      "action": "actual236return_and248full_field",
+      "dependencies": {
+        "native-complete-return236-work": "completed",
+        "native-retarded-extension248-work": "waiting"
+      },
+      "elapsed_seconds": 120.2374353060004
+    }
+  },
+  "snapshot_KST": "2026-09-25T05:41:09.450370+09:00",
+  "final_charge_conclusion": "unadjudicated",
+  "physical_final_charge_solved": false,
+  "full_goal_complete": false,
+  "document_prefixes": {
+    "docs/model-definition.md": {
+      "bytes": 272271,
+      "sha256": "8cf42a3caa156a28d9113a54a7925285b039f9e066735dfc5c855c3fa0e89e12"
+    },
+    "docs/observable-targets.md": {
+      "bytes": 263090,
+      "sha256": "5054ad9e3aca6fcee6e6eeb4db665d91dd037c00c4150b8d38a6beb72ceb35e2"
+    },
+    "docs/adiabatic-limit.md": {
+      "bytes": 257429,
+      "sha256": "04874f7343266368fc7f0a37138ab2c547de8cec3baa20950e8f303e10b6245e"
+    },
+    "docs/nonadiabatic-regime.md": {
+      "bytes": 265921,
+      "sha256": "5c191aa975539e6dce7131482cef0128b1892633daf41e0138d3a1efaef1d724"
+    },
+    "docs/failure-ledger-dynamic-chi.md": {
+      "bytes": 303525,
+      "sha256": "ccff598077a92fd4597ac35a946961bc434e9b397f225c0f930fe30e30566ba0"
+    },
+    "docs/dynamic-charge-completion.md": {
+      "bytes": 131689,
+      "sha256": "034ff810adf17240387fa6a02b73cb92e89f2ba6f2ac5ddc4a458ca4778d9f2c"
+    }
+  },
+  "sha256": {
+    "notes/REQUEST250_COMPLETED_PHYSICAL_PAIRS_KO.md": "69b72d3f5c38c2d9fb401a6a5c38772e404c4242f31f714e55048553ed150275",
+    "docs/model-definition.md": "e226e647f41df699de053cb0b75a1d2ed1bfab30f00600f290fb8cff46ac44d5",
+    "docs/observable-targets.md": "a6c0a1770f2960fff26ff11ac0aed60a16d0c4a22315dc097d4ff1e9c9ad362c",
+    "docs/adiabatic-limit.md": "b59f71ee9b2347f3bef4a88531b3a5dd2b81c3ca9cce47aee35d56e7da27a064",
+    "docs/nonadiabatic-regime.md": "ed33812e8c896a8e8b0a2fca26abc7759255b2cbf42a810296265800f3ecba65",
+    "docs/failure-ledger-dynamic-chi.md": "337637e812482ee72053d9f90849b3a4f8199b09b4032ec9fdbcbae3b7b60e21",
+    "docs/dynamic-charge-completion.md": "9aa0f5750f54ef4417d6eeafd71ffb31362f689ce1209fd0830c0cecf19f888d",
+    "outputs/direct-eos-gr33/native-full-pair-admission/admission-repair-producer.py": "7589d0b688c1b85ecc8e32613010caab2d10328ba88ec5a930bc42e4d2a81369",
+    "outputs/direct-eos-gr33/native-full-pair-admission/native-compensated-charge247-work-full-controller-start.json": "3be0244d01f72a4ddd22bd85de0b343324e3a45ce54e1aa77e13714526f50cb8",
+    "outputs/direct-eos-gr33/native-full-pair-admission/native-dense-returned246-work-controller-start.json": "89e70c718b83c9d6368c7a5d2ba422e81938e467332b8f8935c30cdec21e0c69",
+    "outputs/direct-eos-gr33/native-full-pair-admission/native-full-captured244-work-controller-start.json": "a28ab4ade45524967ae8ad4b3f0a88dd6cee1e2d0ef2a9d2f7a96b410de75e7d",
+    "outputs/direct-eos-gr33/native-full-pair-admission/native-full-return249-work-controller-start.json": "bd5da1ebc174ba225ac15ac922ae77ea12c369a93bff66138495dc4fbafdfd60",
+    "outputs/direct-eos-gr33/native-full-pair-admission/native-retarded-extension248-work-controller-start.json": "3572350b2cc7ae4e031831d7c5193d1410d0495f162cec0966537ebe6c3cc991",
+    "outputs/direct-eos-gr33/native-full-pair-admission/native-returned-source245-work-controller-start.json": "a2099f8c7c8281c17647027f45b4ab67a219fa5a1af65907d6f500992fd15e82",
+    "outputs/direct-eos-gr33/native-full-pair-admission/publication-producer.py": "8e7cb1d3db7f5b07f707f20fc67341135a36eb2a10da5ef96ac6e91e142933bc",
+    "outputs/direct-eos-gr33/native-full-pair-admission/publication.json": "2e1cedf374cf5b6afe0be95d837e1d8969fe30b7b813fd9db1aa922d586f1981",
+    "outputs/direct-eos-gr33/native-full-pair-admission/result.json": "86ac9426bac860e60fe9042aed695c0c26e4d7564d0193b8530b22d30b25e46d",
+    "outputs/direct-eos-gr33/native-full-pair-admission/snapshot-native-compensated-charge247-work.json": "62eab31e96749af2171da06d5dc62aeac29cf0e39c71651cd80e55b32ba91dd5",
+    "outputs/direct-eos-gr33/native-full-pair-admission/snapshot-native-dense-returned246-work.json": "f0961e4ae6c76f4cc30bb17734ae6b49970aede93c9ee0462fdaed68f4157fcb",
+    "outputs/direct-eos-gr33/native-full-pair-admission/snapshot-native-full-captured244-work.json": "f01057648517f87063e2e25c68b25f7bfe28182e4e0354af526be3d3237ce178",
+    "outputs/direct-eos-gr33/native-full-pair-admission/snapshot-native-full-return249-work.json": "c9f3ecba99c030fe6070ad9cec132713b760e20efca344c9bdb22d57b9d4983a",
+    "outputs/direct-eos-gr33/native-full-pair-admission/snapshot-native-retarded-extension248-work.json": "1ae271b5a47aaaf82c3cb08f6242091d21522706ddbfee63f52446e350bc10ea",
+    "outputs/direct-eos-gr33/native-full-pair-admission/snapshot-native-returned-source245-work.json": "d2b80a4625cd6c3b7f7640c61a4d8a7919c5ff8398c96ae5d2a3e598ea8517a9",
+    "outputs/direct-eos-gr33/native-full-pair-admission/primary/audit-receipt.json": "42860c0593ba5c20fd305a1ff84f5fe9004c6e58ffda93d85af91589dc6cdb0e",
+    "outputs/direct-eos-gr33/native-full-pair-admission/primary/controller-status.json": "a220a69b96f34b28ff3af80a5f7a78d73843b7f7f2ed87abdf16cc103cbd9f76",
+    "outputs/direct-eos-gr33/native-full-pair-admission/primary/fine-receipt.json": "71c39db50bbd5ac2a09f9806b6af9162a256c736542f4a9b3ae316507dba371f",
+    "outputs/direct-eos-gr33/native-full-pair-admission/primary/prefix-result.json": "2fc708165166f99921181493af693c80a1ada3f6a15964b344ad8f0b0429fd9d",
+    "outputs/direct-eos-gr33/native-full-pair-admission/primary/result.json": "831253b0cc1b627f04464f7a4794bf582685b30ca6231011708168aad7a70c1b",
+    "outputs/direct-eos-gr33/native-full-pair-admission/repair/audit.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-full-pair-admission/repair/audit.stdout.log": "5a23474681e470b957d2ec47a7aad4925fe05fd4ad656679ffee33e1faee9537",
+    "outputs/direct-eos-gr33/native-full-pair-admission/repair/failed-audit-receipt.json": "5b82cb4388e3a4780cd9d14d8165c6b6607858abe2824855a39892a311a12fa2",
+    "outputs/direct-eos-gr33/native-full-pair-admission/repair/failed-audit.stderr.log": "4b6547b385cb4267fa478fd17c7bd675119b08931249c94a4d09816dead2ab86",
+    "outputs/direct-eos-gr33/native-full-pair-admission/repair/failed-audit.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-full-pair-admission/repair/failed-controller-start.json": "bd9d7c6d4226829b34f2f4953d07d07ba3028f5689b2111340aa1eabded4ae2e",
+    "outputs/direct-eos-gr33/native-full-pair-admission/repair/failed-controller-status.json": "3935a4332c50f575c23027338e7dba7e66a320a7ba1ef62febb8edee53bda396",
+    "outputs/direct-eos-gr33/native-full-pair-admission/repair/failed-input-binding-producer.py": "5db06681c4fdfd24c4adac08026e55593a8f13ef61ef956a108aa22a39ee49ef",
+    "outputs/direct-eos-gr33/native-full-pair-admission/repair/failed-prefix-admission.json": "40afd781aaa33e4424799759f3ac75a805974896b81de89fc519a693a6933f25",
+    "outputs/direct-eos-gr33/native-full-pair-admission/repair/failed-prefix-result.json": "2fc708165166f99921181493af693c80a1ada3f6a15964b344ad8f0b0429fd9d",
+    "outputs/direct-eos-gr33/native-full-pair-admission/repair/failed-result.json": "9a9ce5428a5f1065e61651af372b94a7cfc82f1d72d39056b0ae41aad2023948",
+    "outputs/direct-eos-gr33/native-full-pair-admission/repair/original-audit-receipt.json": "5b82cb4388e3a4780cd9d14d8165c6b6607858abe2824855a39892a311a12fa2",
+    "outputs/direct-eos-gr33/native-full-pair-admission/repair/original-prefix-admission.json": "40afd781aaa33e4424799759f3ac75a805974896b81de89fc519a693a6933f25",
+    "outputs/direct-eos-gr33/native-full-pair-admission/repair/original-prefix-result.json": "2fc708165166f99921181493af693c80a1ada3f6a15964b344ad8f0b0429fd9d",
+    "outputs/direct-eos-gr33/native-full-pair-admission/repair/phase244-launch.stderr.log": "8cb1095c73aa2e086dd6679a21661b948c551627f0ea97c227ee4051d8123f7e",
+    "outputs/direct-eos-gr33/native-full-pair-admission/repair/phase244-launch.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-full-pair-admission/repair/phase248-launch.stderr.log": "bcf2a9b0b5a4dff1794ef59f108abf3d6fdb5dbbfbc112386761ae424d29de1c",
+    "outputs/direct-eos-gr33/native-full-pair-admission/repair/phase248-launch.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-full-pair-admission/repair/phase249-launch.stderr.log": "a97b35b6737f560241d22f60ca32fa56aae1aa9e58c246011ce7a16c53ec8087",
+    "outputs/direct-eos-gr33/native-full-pair-admission/repair/phase249-launch.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/direct-eos-gr33/native-full-pair-admission/repair/plan.json": "475eab7fe562a9239edcc33e6443afe42db77a34a9442fa4ab04411d8b8214cb",
+    "outputs/direct-eos-gr33/native-full-pair-admission/repair/rearmed-waiters.json": "3fdcd38136cab464a5442cde5b0b0530ad20fedcf49bb611631c9900b61c78c2",
+    "outputs/direct-eos-gr33/native-full-pair-admission/repair/result.json": "30d37654fde72a31acaf7ea2065345fdbf84bc96616455824c3de249e66ab5e6",
+    "outputs/direct-eos-gr33/native-full-pair-admission/returned/audit-receipt.json": "8294f8310ca39934e1ba13343f573b0ffc58376a88846bfc57052e9dc055a7f1",
+    "outputs/direct-eos-gr33/native-full-pair-admission/returned/coarse-receipt.json": "42294c53f1e487304be0894fda6316d736cd0a76558a3a5cb284a3a8f4335f8f",
+    "outputs/direct-eos-gr33/native-full-pair-admission/returned/controller-status.json": "616938e554771bff49be0d76deb75f4f57a27a10fdbc2856ce1d4d26f11cd62c",
+    "outputs/direct-eos-gr33/native-full-pair-admission/returned/fine-receipt.json": "5f586683b36da6ab62435e5d1b985c5d61015b466acb8567230123493be1e3b2",
+    "outputs/direct-eos-gr33/native-full-pair-admission/returned/result.json": "286da1ea58c26747ab12b7416903acbdaa5e16be12b751671784002c66e7c039",
+    "outputs/direct-eos-gr33/native-full-pair-admission/repair/native-full-captured244-work/controller-start.json": "e1d2a20760016c3933b01fe227af8343c41c4089f10553ee6fe49fc063b19106",
+    "outputs/direct-eos-gr33/native-full-pair-admission/repair/native-full-captured244-work/controller-status.json": "c72a6615b62b0fc37846059ed1dcb7de082906d9bed6becc79fad5b73c2ce69a",
+    "outputs/direct-eos-gr33/native-full-pair-admission/repair/native-full-return249-work/controller-start.json": "395d5cb4b161cd892d31c6dde0775b661f8ab2b3061b5f81efec54b9106e087c",
+    "outputs/direct-eos-gr33/native-full-pair-admission/repair/native-full-return249-work/controller-status.json": "626364f275f91222fdcec497b5727d6cce17c9ace03064264a0b2ee45f8f4416",
+    "outputs/direct-eos-gr33/native-full-pair-admission/repair/native-retarded-extension248-work/controller-start.json": "d1f13cb952293d1bb64e5e5b3422e5bfd848e2dbe84e2ec542a03145647f7ac5",
+    "outputs/direct-eos-gr33/native-full-pair-admission/repair/native-retarded-extension248-work/controller-status.json": "eee3d072dfb541f9baddf3c605622370dea06671967470336fb33f051072f72d"
+  }
+}

@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/apply_actual_stage_gr.py", line 192, in <module>
+    else:globals()[action]()
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/apply_actual_stage_gr.py", line 126, in metric
+    rows.append(fn(m,n,q));path=OUT/f'metric/metric-{n}-g{q}.npz';d=dict(np.load(OUT/f'gr/source-{n}.npz'));z=dict(np.load(path));f=np.load(OUT/f'gr/fields-{n}-g8.npz')
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_dynamic_lapse.py", line 124, in run
+    photon,energy,row=self.boundary(d,steps,order)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/apply_actual_stage_gr.py", line 107, in boundary
+    ll=1.5*(1-theta[:,:,None])*lum[mask,0,None]+(1.5*theta[:,:,None]-.5)*lum[mask,1,None]
+IndexError: boolean index did not match indexed array along axis 0; size of axis is 215 but size of corresponding boolean axis is 29

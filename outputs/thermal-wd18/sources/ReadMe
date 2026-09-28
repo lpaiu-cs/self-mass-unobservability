@@ -1,0 +1,196 @@
+J/A+A/595/A35  Low-mass helium white dwarfs evolutionary models (Istrate+, 2016)
+================================================================================
+Models of low-mass helium white dwarfs including gravitational settling,
+thermal and chemical diffusion, and rotational mixing.
+    Istrate A., Marchant P., Tauris T.M., Langer N., Stancliffe R.J.,
+    Grassitelli L.
+    <Astron. Astrophys. 595, A35 (2016)>
+    =2016A&A...595A..35I        (SIMBAD/NED BibCode)
+================================================================================
+ADC_Keywords: Models, evolutionary ; Stars, ages ; Stars, white dwarf ;
+              Binaries, X-ray
+Keywords: white dwarfs - binaries: general - stars: low-mass -
+          pulsars: general - binaries: close
+
+Abstract:
+    A large number of extremely low-mass helium white dwarfs (ELM WDs)
+    have been discovered in recent years. The majority of them are found
+    in close binary systems suggesting they are formed either through a
+    common-envelope phase or via stable mass transfer in a low-mass X-ray
+    binary (LMXB) or a cataclysmic variable (CV) system. Here, we
+    investigate the formation of these objects through the LMXB channel
+    with emphasis on the proto-WD evolution in environments with different
+    metallicities. We study for the first time the combined ects of
+    rotational mixing and element diffusion (e.g. gravitational settling,
+    thermal and chemical diffusion) on the evolution of proto-WDs and on
+    the cooling properties of the resulting WDs. We present
+    state-of-the-art binary stellar evolution models computed with MESA
+    for metallicities of Z=0.02, 0.01, 0.001 and 0.0002, producing WDs
+    with masses between ~0.16-0.45M_{sun}_. Our results confirm that
+    element diffusion plays a significant role in the evolution of
+    proto-WDs that experience hydrogen shell flashes. The occurrence of
+    these flashes produces a clear dichotomy in the cooling timescales of
+    ELM WDs, which has important consequences e.g. for the age
+    determination of binary millisecond pulsars. In addition, we confirm
+    that the threshold mass at which this dichotomy occurs depends on
+    metallicity. Rotational mixing is found to counteract the effect of
+    gravitational settling in the surface layers of young, bloated ELM
+    proto-WDs and therefore plays a key role in determining their surface
+    chemical abundances, i.e. the observed presence of metals in their
+    atmospheres. We predict that these proto-WDs have helium-rich
+    envelopes through a significant part of their lifetime. This is of
+    great importance as helium is a crucial ingredient in the driving of
+    the {kappa}-mechanism suggested for the newly observed ELM proto-WD
+    pulsators. However, we find that the number of hydrogen shell flashes
+    and, as a result, the hydrogen envelope mass at the beginning of the
+    cooling track, are not influenced significantly by rotational mixing.
+    In addition to being dependent on proto-WD mass and metallicity, the
+    hydrogen envelope mass of the newly formed proto-WDs depends on
+    whether or not the donor star experiences a temporary contraction when
+    the H-burning shell crosses the hydrogen discontinuity left behind by
+    the convective envelope. The hydrogen envelope at detachment, although
+    small compared to the total mass of the WD, contains enough angular
+    momentum such that the spin frequency of the resulting WD on the
+    cooling track is well above the orbital frequency.
+
+Description:
+    Evolutionary models of low-mass helium white dwarfs including element
+    diffusion and rotational mixing. The WDs are produced considering
+    binary evolution through the LMXB channel, with final WDs masses
+    between ~0.16-~0.44. The models are computed using MESA, for different
+    metallicities: Z=0.02, 0.01, 0.001 and 0.0002.
+
+    For each metallicity, the models are divided in three categories:
+    (1) basic (no diffusion nor rotation are considered)
+    (2) diffusion (element diffusion is considered)
+    (3) rotation+diffusion (both element diffusion and rotational mixing
+    are considered)
+
+File Summary:
+--------------------------------------------------------------------------------
+ FileName      Lrecl  Records   Explanations
+--------------------------------------------------------------------------------
+ReadMe            80        .   This file
+list.dat          53      266   List of files
+basic/*            .      104   Individual files for basic models
+                                 (no diffusion nor rotation are considered)
+diff/*             .       80   Individual files for diffusion models
+                                 (element diffusion is considered)
+rot/*              .       82   Individual files for rotation+diffusion models
+                                 (both element diffusion and rotational mixing
+                                 are considered)
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: list.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units  Label     Explanations
+--------------------------------------------------------------------------------
+   1- 30  A30   ---    FileName  Name of the file (dir/filename)
+  33- 38  F6.4  ---    Z         Initial Z abundance (0.0002, 0.001, 0.01, 0.02)
+  40- 42  F3.1  Msun   M1        Initial mass of the primary (1.0, 1.4)
+  44- 46  F3.1  Msun   M2        Initial mass of the secondary (1.2, 1.4)
+  48- 53  F6.3  d      Prob      Initial orbital period (1.73-70.0)
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: basic/*
+--------------------------------------------------------------------------------
+   Bytes Format Units     Label     Explanations
+--------------------------------------------------------------------------------
+  18- 22  I5    --        Model     Model number counting from the start of the
+                                     run (model_number)
+  51- 72 E22.17 yr        AgeSt     Time since the start of the run
+                                     (star_age) (G1)
+  92-113 E22.17 Msun      MassSt    Mass of the proto-WD (star_mass)
+ 132-154 E23.17 [Msun/yr] logdM/dt  log10 of mass transfer rate
+                                     (mass_transfer_rate) (G2)
+ 174-195 E22.17 d         Porb      Orbital period (orbital_period)
+ 215-236 E22.17 Msun      MassNS    Mass of the neutron star acretor
+                                     (neutron_star_mass)
+ 256-277 E22.17 [K]       logTeff   log10 effective temperature
+ 296-318 E23.17 [Lsun]    logL      log10 luminosity
+ 337-359 E23.17 [Rsun]    logR      log10 radius
+ 378-400 E23.17 [cm/s2]   logg      log10 surface gravity
+ 419-441 E23.17 Msun      MHec      Mass of the helium core (He_core_mass)
+ 460-482 E23.17 Msun      Menv      Envelope mass (star_mass - he_core_mass)
+                                     (envelope_mass)
+ 501-523 E23.17 [Lsun]    logLnuc   Total thermal power given by nuclear
+                                     burning, excluding neutrinos
+ 542-564 E23.17 [Lsun]    logLpp    log10 total luminosity for pp burning
+ 583-605 E23.17 [Lsun]    logLcno   log10 total luminosity for CNO burning
+ 625-646 E22.17 --        surfH1    Mass fractions of H1 near surface
+                                     (surface_H1)
+ 666-687 E22.17 --        surfHe4   Mass fractions of He4 near surface
+                                     (surface_He4)
+ 707-728 E22.17 --        surfC12   Mass fractions of C12 near surface
+                                     (surface_c12)
+ 748-769 E22.17 --        surfO16   Mass fractions of O16 near surface
+                                     (surface_o16)
+ 789-810 E22.17 Msun      MtotH1    Mass of hydrogen for entire star
+                                     (total_mass_H1)
+ 830-851 E22.17 Msun      MtotHe4   Mass of helium for entire star
+                                     (total_mass_He4)
+ 871-892 E22.17 [K]       logTc     log10 temperature near center
+ 912-933 E22.17 [g/cm3]   logrhoc   log10 density near center
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: diff/* rot/*
+--------------------------------------------------------------------------------
+   Bytes   Format Units     Label      Explanations
+--------------------------------------------------------------------------------
+   18-  22 I5     ---       Model      Model number counting from the start of
+                                        the run (model_number)
+   51-  72 E22.17 yr        AgeSt      Time since the start of the run
+                                         (star_age) (G1)
+   92- 113 E22.17 Msun      MassSt     Mass of the proto-WD (star_mass)
+  132- 154 E23.17 [Msun/yr] logdM/dt   log10 of mass transfer rate
+                                        (mass_transfer_rate) (G2)
+  174- 195 E22.17 d         Porb       Orbital period (orbital_period)
+  215- 236 E22.17 Msun      MassNS     Mass of the neutron star acretor
+                                        (neutron_star_mass)
+  256- 277 E22.17 ---       Domega     Angular velocity at equator divided by
+                                        the critical angular velocity at
+                                        equator (surf_avg_omega/omega_crit)
+  296- 318 E23.17 km/s      vrot       Rotational velocity at equator
+  337- 359 E23.17 ---       Prot/Porb1 Rotational over orbital period for
+                                        proto-WD
+  379- 400 E22.17 [K]       logTeff    log10 effective temperature
+  419- 441 E23.17 [Lsun]    logL       log10 luminosity
+  460- 482 E23.17 [Rsun]    logR       log10 radius
+  501- 523 E23.17 [cm/s2]   logg       log10 surface gravity
+  542- 564 E23.17 Msun      MHec       Mass of the helium core (He_core_mass)
+  583- 605 E23.17 Msun      Menv       Envelope mass (star_mass - he_core_mass)
+                                        (envelope_mass)
+  624- 646 E23.17 [Lsun]    logLnuc    Total thermal power given by nuclear
+                                        burning, excluding neutrinos
+  665- 687 E23.17 [Lsun]    logLpp     log10 total luminosity for pp burning
+  706- 728 E23.17 [Lsun]    logLcno    log10 total luminosity for CNO burning
+  748- 769 E22.17 --        surfH1     Mass fractions of H1 near surface
+                                        (surface_H1)
+  789- 810 E22.17 --        surfHe4    Mass fractions of He4 near surface
+                                        (surface_He4)
+  830- 851 E22.17 --        surfC12    Mass fractions of C12 near surface
+                                        (surface_c12)
+  871- 892 E22.17 --        surfO16    Mass fractions of O16 near surface
+                                        (surface_o16)
+  912- 933 E22.17 --        surfCa40   Mass fractions of Ca40 near surface
+                                        (surface_ca40)
+  953- 974 E22.17 Msun      MtotH1     Mass of hydrogen for entire star
+                                        (total_mass_hydrogen)
+  994-1015 E22.17 Msun      MtotHe4    Mass of helium for entire star
+                                        (total_mass_total_mass_helium)
+ 1035-1056 E22.17 [K]       logTc      log10 temperature near center
+ 1076-1097 E22.17 [g/cm2]   logrhoc    log10 density  near center
+--------------------------------------------------------------------------------
+
+Global notes:
+Note (G1): the evolutionary tracks are give from the end of the mass transfer
+  (end of the LMXB phase) until the WD reaches the age of 14Gyr.
+Note (G2): we consider detachment from RLO when the mass transfer rate drops
+  below -13.5.
+--------------------------------------------------------------------------------
+
+Acknowledgements:
+    Alina Istrate, istrate(at)uwm.edu
+
+================================================================================
+(End)                                        Patricia Vannier [CDS]  19-Jul-2016

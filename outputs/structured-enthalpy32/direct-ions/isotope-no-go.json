@@ -1,0 +1,168 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "identity": "(M-(q+1)me)(N-q me)-(N-(q+1)me)(M-q me)=me(M-N)",
+  "assumptions": "Classical translational partition factors for two unequal isotope masses M,N > Z me, me > 0; otherwise equal electronic level data; freely varying charge populations at fixed nuclear isotope inventories.",
+  "consequence": "The adjacent-ionization translational mass ratios differ. A free-energy addition depending only on temperature and conserved isotope inventories is constant under charge redistribution and cannot change their equilibrium Saha ratio. Therefore an element-group EOS plus a composition-only entropy offset is not an exact isotope-resolved partial-ionization EOS.",
+  "boundary": "A separately assumed fixed charge state, or deliberately identical isotope masses, removes this specific obstruction. Neither removes other physical EOS uncertainties.",
+  "symbolic_check": true,
+  "source_sha256": {
+    "/home/lpaiu/work/direct-ions32/source/src/mod_free_eos_constants.f90": "b2343290a6c273e4e1e78079abbc8093c39efd6007a4523bde8063c581469af4",
+    "/home/lpaiu/work/direct-ions32/source/src/ionize.f90": "1de80b8cd0063a798ff945cb95f5cafffb85ba4ab98ce25f46428975b56942f0"
+  },
+  "finite_source_constant_electron_mass_amu": 0.0005485799094745132,
+  "finite_factor_census": [
+    {
+      "species": "h1",
+      "isotope_atomic_mass": 1.007825,
+      "reference_atomic_mass": 1.007825031898,
+      "maximum_adjacent_stage_mass_factor_relative": 2.585598402049527e-11
+    },
+    {
+      "species": "h2",
+      "isotope_atomic_mass": 2.0141018,
+      "reference_atomic_mass": 1.007825031898,
+      "maximum_adjacent_stage_mass_factor_relative": 0.0004081765451846575
+    },
+    {
+      "species": "he3",
+      "isotope_atomic_mass": 3.0160293,
+      "reference_atomic_mass": 4.00260325413,
+      "maximum_adjacent_stage_mass_factor_relative": 6.727843718534743e-05
+    },
+    {
+      "species": "he4",
+      "isotope_atomic_mass": 4.0026033,
+      "reference_atomic_mass": 4.00260325413,
+      "maximum_adjacent_stage_mass_factor_relative": 2.3567814366742823e-12
+    },
+    {
+      "species": "li7",
+      "isotope_atomic_mass": 7.0160045,
+      "reference_atomic_mass": 7.01600343426,
+      "maximum_adjacent_stage_mass_factor_relative": 1.7822854303517488e-11
+    },
+    {
+      "species": "be7",
+      "isotope_atomic_mass": 7.0169298,
+      "reference_atomic_mass": 9.012183062,
+      "maximum_adjacent_stage_mass_factor_relative": 2.5975134051448023e-05
+    },
+    {
+      "species": "b8",
+      "isotope_atomic_mass": 8.0246072,
+      "reference_atomic_mass": 11.009305166,
+      "maximum_adjacent_stage_mass_factor_relative": 2.78146006859048e-05
+    },
+    {
+      "species": "c13",
+      "isotope_atomic_mass": 13.0033548,
+      "reference_atomic_mass": 12.0,
+      "maximum_adjacent_stage_mass_factor_relative": 5.29371032231829e-06
+    },
+    {
+      "species": "n13",
+      "isotope_atomic_mass": 13.0057386,
+      "reference_atomic_mass": 14.00307400425,
+      "maximum_adjacent_stage_mass_factor_relative": 4.508610312314865e-06
+    },
+    {
+      "species": "n14",
+      "isotope_atomic_mass": 14.003074,
+      "reference_atomic_mass": 14.00307400425,
+      "maximum_adjacent_stage_mass_factor_relative": 1.787459069646502e-14
+    },
+    {
+      "species": "n15",
+      "isotope_atomic_mass": 15.0001089,
+      "reference_atomic_mass": 14.00307400425,
+      "maximum_adjacent_stage_mass_factor_relative": 3.9078548450532935e-06
+    },
+    {
+      "species": "o14",
+      "isotope_atomic_mass": 14.0085963,
+      "reference_atomic_mass": 15.99491461926,
+      "maximum_adjacent_stage_mass_factor_relative": 7.298627074270314e-06
+    },
+    {
+      "species": "o15",
+      "isotope_atomic_mass": 15.0030656,
+      "reference_atomic_mass": 15.99491461926,
+      "maximum_adjacent_stage_mass_factor_relative": 3.4028663684626537e-06
+    },
+    {
+      "species": "o16",
+      "isotope_atomic_mass": 15.9949146,
+      "reference_atomic_mass": 15.99491461926,
+      "maximum_adjacent_stage_mass_factor_relative": 6.217248937900877e-14
+    },
+    {
+      "species": "o17",
+      "isotope_atomic_mass": 16.9991317,
+      "reference_atomic_mass": 15.99491461926,
+      "maximum_adjacent_stage_mass_factor_relative": 3.040658248298911e-06
+    },
+    {
+      "species": "o18",
+      "isotope_atomic_mass": 17.999161,
+      "reference_atomic_mass": 15.99491461926,
+      "maximum_adjacent_stage_mass_factor_relative": 5.731394921548727e-06
+    },
+    {
+      "species": "f17",
+      "isotope_atomic_mass": 17.0020952,
+      "reference_atomic_mass": 18.99840316207,
+      "maximum_adjacent_stage_mass_factor_relative": 5.0881953675974145e-06
+    },
+    {
+      "species": "f18",
+      "isotope_atomic_mass": 18.000938,
+      "reference_atomic_mass": 18.99840316207,
+      "maximum_adjacent_stage_mass_factor_relative": 2.401238266336314e-06
+    },
+    {
+      "species": "f19",
+      "isotope_atomic_mass": 18.9984032,
+      "reference_atomic_mass": 18.99840316207,
+      "maximum_adjacent_stage_mass_factor_relative": 8.659739592076221e-14
+    },
+    {
+      "species": "ne18",
+      "isotope_atomic_mass": 18.0057082,
+      "reference_atomic_mass": 19.99244017525,
+      "maximum_adjacent_stage_mass_factor_relative": 4.543937848988655e-06
+    },
+    {
+      "species": "ne19",
+      "isotope_atomic_mass": 19.0018802,
+      "reference_atomic_mass": 19.99244017525,
+      "maximum_adjacent_stage_mass_factor_relative": 2.1467498325655754e-06
+    },
+    {
+      "species": "ne20",
+      "isotope_atomic_mass": 19.9924402,
+      "reference_atomic_mass": 19.99244017525,
+      "maximum_adjacent_stage_mass_factor_relative": 5.084821452783217e-14
+    },
+    {
+      "species": "mg22",
+      "isotope_atomic_mass": 21.9995738,
+      "reference_atomic_mass": 23.985041689,
+      "maximum_adjacent_stage_mass_factor_relative": 3.0979714457091134e-06
+    },
+    {
+      "species": "mg24",
+      "isotope_atomic_mass": 23.9850417,
+      "reference_atomic_mass": 23.985041689,
+      "maximum_adjacent_stage_mass_factor_relative": 1.5987211554602254e-14
+    },
+    {
+      "species": "ca40",
+      "isotope_atomic_mass": 39.962591,
+      "reference_atomic_mass": 39.96259085,
+      "maximum_adjacent_stage_mass_factor_relative": 7.749356711883593e-14
+    }
+  ],
+  "census_is_physical_pressure_bound": false,
+  "physical_EOS_certified": false
+}

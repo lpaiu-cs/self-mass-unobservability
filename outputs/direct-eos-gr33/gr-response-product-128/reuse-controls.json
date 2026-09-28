@@ -1,0 +1,32 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "checks": [
+    {
+      "position": 0,
+      "bitwise_H_replay": true,
+      "components": 72,
+      "old_seconds": 4.43278,
+      "new_seconds": 1.8545,
+      "speedup": 2.3902830951739014
+    },
+    {
+      "position": 1603,
+      "bitwise_H_replay": true,
+      "components": 72,
+      "old_seconds": 5.0461,
+      "new_seconds": 1.98101,
+      "speedup": 2.547236005875791
+    },
+    {
+      "position": 3205,
+      "bitwise_H_replay": true,
+      "components": 72,
+      "old_seconds": 6.30296,
+      "new_seconds": 1.91726,
+      "speedup": 3.2874831791202026
+    }
+  ],
+  "endpoint_components": 66,
+  "scope": "Three completed 12-Q jobs under the current shared host load. A finite timing comparison, not a whole-table EOS speed claim."
+}

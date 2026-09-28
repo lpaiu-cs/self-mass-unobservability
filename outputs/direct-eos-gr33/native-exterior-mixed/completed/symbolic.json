@@ -1,0 +1,10 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "constraints": "C_prime=a*r*q_lambda=e*[zeta_I_prime*H(rp-r)+(g-zeta_I(rp))*delta(r-rp)-rho*delta_prime(r-rp)]. Thus C=e*[(zeta_I(r)-zeta_I(R))*H(rp-r)+(g-zeta_I(R))*H(r-rp)-rho*delta(r-rp)], with zero additional inner port.",
+  "scalar_measure": "The mass-source measure is 2*Phi*C/(r*b) dr. The smooth known constraint stress is -4*e*Phi*lambda_I/(r*b)*H(rp-r) dr.",
+  "static_gradient": "Also include 2*a*r*Phi*(zeta_B*zeta_I_prime+zeta_I*zeta_B_prime) dr. Its smooth part is 4*a*Phi*lambda_I*zeta_B/b-4*e*Phi*zeta_I/(b*r); its shell is -2*e*Phi*zeta_I*(1-mu^2)*delta dr.",
+  "shell_pullback": "At fixed radius, the ray time Jacobian adds a second -zeta_I. Together with the static-gradient shell it cancels: delta shell integrand is -e*Phi/(2*a)*[g*(1-mu^2)/mu-(1+mu^2)*delta_mu/mu^2] H dr, plus the arrival-front shift. delta_mu=(1-mu^2)*h/mu and |h|<=Hmax*(1-R/r).",
+  "uniform_domain": "On t>=0,t-x/c<=T each source radius has time width at most T+x(r)/c. This also covers the noncausal-in-radius constraint tail. Reuse the old c*T potential norm only after adding its positive x-weighted vacuum integral.",
+  "scope": "Distribution and first-variation identities in the declared sector, plus elementary tail integrals. No assertion of exact ADM conservation or physical EOS closure."
+}

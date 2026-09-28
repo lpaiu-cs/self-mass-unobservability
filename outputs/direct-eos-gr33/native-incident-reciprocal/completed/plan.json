@@ -1,0 +1,52 @@
+{
+  "classification": "Counterexample candidate",
+  "before_checkpoint": "22f56148dc20d0e82f3c41ae8d28e22bf13ae959",
+  "claim": "Return actual driven baryon/momentum/inventory and noncollisional Etilde/H to simultaneous photons and total gas Etilde/H; return only the new collision transfers to free matter. Test reciprocal finite waveform residual, then read its compact charge.",
+  "decision": "Whether the original one-way incident response survives reciprocal material-photon coupling. Stop once both paths satisfy declared residual; otherwise at three sweeps or nondecreasing residual.",
+  "equations": "Etilde=Eref-(a_ref-a_surface)*cx*c^2*B. Mechanical cumulative M=Etilde/H from prior free matter minus its collision-only transfer. New gas evolves C(new photons,new Etilde/H;prior B,S,xi)+dM/dt. Free matter receives only C. Exact driver/lift remains unchanged.",
+  "interpolation": "Same17 canonical waveform knots; mechanical derivative uses the left interval at closing stages. A finite waveform residual is not a continuum contraction or error certificate.",
+  "budget": {
+    "per_action_seconds": {
+      "prepare": 30,
+      "check": 90,
+      "photon_pilot": 120,
+      "photon_production": 1100,
+      "material_pilot": 60,
+      "material_production": 400,
+      "residual": 60,
+      "compact": 180
+    },
+    "max_sweeps": 3,
+    "total_action_seconds": 5600,
+    "CPU_threads": 1,
+    "virtual_GiB": 3
+  },
+  "forecast": "Previous full lifted photons233.78s and material166.75s. New moving coefficient maps add17 points per clock. Equal-horizon4/8 photon and two-step material prefixes measure admission;2x forecast with previous late-step floor must fit1100s/400s. Later contention and Krylov cost remain extrapolated.",
+  "gates": {
+    "time": 0.02,
+    "reciprocal": 0.002,
+    "energy_H": 0.002,
+    "conservation": 1e-08,
+    "linear": 1e-12,
+    "mapping": 1e-10,
+    "velocity": 0.0001,
+    "material_probe": 0.002,
+    "branch": 0.01
+  },
+  "stop": "Any original gate, nondecreasing full material residual after the second sweep, three sweeps or5600s. No automatic refinement, new waveform, amplitude, horizon or background replay.",
+  "scope": "First-order retained constitutive maps on the corrected evolving background, prescribed external GR only. No native uniform derivatives, full nonlinear star, self-GR fixed point, complete infinity, orbital or static-nonabsorption claim.",
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "scope": "Invertible conserved energy coordinate and exact collision/mechanical partition only."
+  },
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/solve_native_incident_reciprocal.py": "56cd92283b1cf773e22b2d25756f2738cf5baef63ea67f52b1f33082bcd8b5a7",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/solve_native_incident_material.py": "0ea37733bf992680eda7c0dc1951163be8ea2c492875ed95d89259eed17e25bb",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/solve_native_incident_lift.py": "3a94382fe1ad283cbad81b76e56c4348c2f9c844b5ba709aef675af120d27c75",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/apply_native_incident_drive.py": "7a80bc9db3a179d80bdc11168d68fb093fb7dc04c3e06219f2aeed702381f60b",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_matter_photon_feedback.py": "19acadd46d8f6059406fc3614c151de187323cec68f73faf9319e663f0466fb9",
+    "native-incident-drive155-work/audit.json": "45a317c1a0669df422ec925936368f6df47b82cd4c9fde5cee19bce9ae6e12dc",
+    "native-incident-drive155-work/expanded-lifted-run.py": "96083169c2aae3e6c1d2684587dd003ab1c6bc740d5f2a5e2601b673ecdd02ff"
+  }
+}

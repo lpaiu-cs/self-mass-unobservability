@@ -1,0 +1,6 @@
+{
+  "classification": "Counterexample candidate",
+  "reason": "Both derivative-slot interventions must be recorded, including the failed attempt to classify slot 15 from unchanged outputs. Do not swap arguments based only on source disagreement.",
+  "controls": ["Temperature plus/minus 5e-5 at fixed four EOS inputs", "Ye-only change along the saved fresh-EOS temperature directions", "eta-only change along the same directions", "Compare the sum of three directional differences with the already saved full change"],
+  "policy": "Preserve original failed native analytic derivative tests. This attribution cannot certify the physical EOS or full composition Jacobian."
+}

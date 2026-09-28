@@ -1,0 +1,36 @@
+{
+  "classification": "Counterexample candidate",
+  "prior_failures": [
+    "collision/ gross unchanged cells",
+    "collision-exact/ early full-amplitude arithmetic",
+    "collision-resolved/ quadratic probe arithmetic"
+  ],
+  "method": "Keep direct finite collision evaluation. Only where its arithmetic indicator fails, evaluate the same deep conserved thermal root, cubic EOS/rates, inventory shifts and moving emissivity in40/60 decimal digits; subtract before rounding to longdouble. No numerical or physical amplitude replacement. Atmosphere and scattering keep their original owner.",
+  "control": "Require40/60 difference<1e-10, base owner<1e-9,60digit thermal step<1e-40; the original arithmetic0.002, number1e-10, projection1e-8 gates remain. Preserve rejected quadratic probe, never use it as a source.",
+  "pilot_knots": [
+    0,
+    2,
+    8,
+    16
+  ],
+  "source_cap_seconds": 600,
+  "total_cap_seconds": 3100,
+  "forecast": "Pilot has two amplitude diagnostics; production uses one. Twice the slowest measured seconds per factor for26 remaining points plus15s setup must fit600s.",
+  "reused": [
+    "retained-native-acoustic153-work/response-centered/collision-exact/64/point-1.json",
+    "retained-native-acoustic153-work/response-centered/collision-exact/64/point-0.json",
+    "retained-native-acoustic153-work/response-centered/collision-exact/64/point-16.json",
+    "retained-native-acoustic153-work/response-centered/collision-exact/64/point-8.json",
+    "retained-native-acoustic153-work/response-centered/collision-exact/128/point-0.json",
+    "retained-native-acoustic153-work/response-centered/collision-exact/128/point-16.json",
+    "retained-native-acoustic153-work/response-centered/collision-exact/128/point-8.json"
+  ],
+  "new_native_states": 0,
+  "uniform_derivative_enclosure": false,
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/apply_retained_native_acoustic.py": "3d5eb7a2cf6edd0834858bcb10c1e8e898ca57e984726da7bac1fcc43a9b916e",
+    "verification/retained_deep_collision_precision.py": "2f6eb40242dd4a1af95ad389dee4c1897db8a8c12bd8d77bc2bf1bbd48307a04",
+    "retained-native-acoustic153-work/response-centered/registered-probe-collision-producer.py": "b59c32b032a438b5be6348a3e0fa9c1af28773a6fd03b71418966e711fe718b0",
+    "retained-native-acoustic153-work/response-centered/source-pilot-resolved-receipt.json": "979e7ef2e3f6237382f2f5b61dc8ca7c0a2ab3dfd67da94823b11575369c743f"
+  }
+}

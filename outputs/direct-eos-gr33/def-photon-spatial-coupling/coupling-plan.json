@@ -1,0 +1,60 @@
+{
+  "classification": "Counterexample candidate",
+  "claim": "Evolve the same material plus spectral/angular photons with absorption, dipole angular gain, stimulated Kompaneets exchange and spatial streaming in one unsplit system.",
+  "duration": "One local temperature scale-height light travel time for kH=0,1,10. The isolated Kompaneets control runs for 8/rate_C with coefficients frozen; it is not stellar evolution over that physical duration.",
+  "angular_modes": [
+    16,
+    32
+  ],
+  "steps": [
+    16,
+    32,
+    64
+  ],
+  "choice_before_production": "The kH=10 mode crosses 10 angular phase radians. Use 16/32 Legendre modes rather than the pilot six modes, which measured cost only. No result-driven angular enlargement.",
+  "gates": {
+    "time_order_min": 1.8,
+    "time_difference_initial": 0.001,
+    "angle_difference_initial": 0.001,
+    "energy_balance": 1e-09,
+    "energy_equation_residual": 1e-09,
+    "entropy_growth": 1e-10,
+    "tail_capacity_fraction": 1e-17,
+    "Kompaneets_heating_relative": 1e-05,
+    "Kompaneets_number": 1e-10,
+    "equilibrium_projection": 0.001
+  },
+  "controls": [
+    "k=0, Compton-off reproduces Phase60 arrowhead solver on the same cells",
+    "Isolated Kompaneets: photon number, energy, LTE/Bose null modes, continuum 4*a*T^3*rate_C heating, 16/32/64 time order and asymptotic energy/number projection",
+    "No-collision Fourier streaming: exact angular-average sinc(k*c*t) and dipole/quadrupole moments",
+    "Split every fixed-opacity frequency cell in two; compare the coupled energy/temperature and isolated Kompaneets moments"
+  ],
+  "uncertainty": "At actual matter state repeat kH=1 with each bracket-temperature opacity held at the same physical frequency, and with isotropic rather than dipole gain and Compton removed. These are model sensitivities, not certified envelopes or permission to replace an incomplete physical kernel.",
+  "budget": {
+    "measured_pilot_seconds": 0.34420739099999764,
+    "forecast_seconds": [
+      15,
+      80
+    ],
+    "forecast_basis": "16/32 angular scaling and step count from the six-mode pilot; sparse factorization scaling is an assumption",
+    "hard_seconds": 180,
+    "peak_memory_estimate_GB": [
+      0.3,
+      1.5
+    ],
+    "CPU_workers": 1,
+    "new_queries": 0,
+    "new_EOS_calls": 0,
+    "new_stellar_steps": 0,
+    "automatic_expansion": false
+  },
+  "bindings": {
+    "verification/def_photon_spatial_validate.py": "52d5f07f34754821a87122d9eca850b5d32b4b83f7eeae0585c2c674a5c64a4e",
+    "verification/def_photon_spatial_coupling.py": "0e24d3e8f745fd7e33a5010c29da3d85a48906a9497c6989d15985cd1f719170",
+    "outputs/direct-eos-gr33/def-photon-spatial-coupling/bank.npz": "adb6377b93e4a48a8530e2e1bcccf6f433e700dac69d80cf434ff47dcd25705b",
+    "outputs/direct-eos-gr33/def-photon-spatial-coupling/bank.json": "eb6a62922e44f2d2a4c75924f23c8abda2690035c668d1c34107ae1adf8fc963",
+    "outputs/direct-eos-gr33/def-photon-spatial-coupling/reassessment.json": "b7058e78116573bc3d85d1dc156f931527d53b0f243d365ca27d43fb2f399c1c",
+    "outputs/direct-eos-gr33/def-photon-spatial-coupling/pilot.json": "a15e0f052e132376a99a19db64bcb898c4f565f4ae6b99aae92a14269d0d1ad7"
+  }
+}

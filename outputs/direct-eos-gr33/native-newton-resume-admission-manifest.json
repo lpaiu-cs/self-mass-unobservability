@@ -1,0 +1,98 @@
+{
+  "classification": "Counterexample candidate",
+  "admission_and_exact_restart_passed": true,
+  "actual_native_stage_rejection": {
+    "classification": "Counterexample candidate",
+    "error": "AssertionError(('True native joint Radau equation', [{'relative': 1.546437353430033e-12, 'moments': [1.4813348593368708e-17, 8.741418246839254e-19, 9.043151698537506e-20, 1.2987279243131988e-20]}, {'relative': 9.398031938908858e-12, 'moments': [1.4193606693787005e-17, 7.808129184016204e-19, 2.4461264044501944e-20, 1.298727641069903e-20]}, {'relative': 2.1548485514574707e-12, 'moments': [4.7077667667585056e-17, 3.874069978796285e-17, 3.723317523728525e-17, 3.9903590286959056e-17]}]))",
+    "time": 0.003246610666166976,
+    "step": 2.6831493108817987e-05,
+    "actual_accepted_steps": 112,
+    "macro_index": 60,
+    "sub_index": 1,
+    "last_accepted_inputs_saved": true,
+    "serialized_substep_restart_validated": false,
+    "final_charge_conclusion": "unadjudicated"
+  },
+  "new_physical_steps_in_restart_check": 0,
+  "coarse_remaining_substeps": 7,
+  "fine_remaining_substeps": 16,
+  "source_budgets_seconds": {
+    "prepare": 25,
+    "check": 90,
+    "coarse": 1800,
+    "fine": 2700,
+    "audit": 30
+  },
+  "maximum_Newton_proposals": 8,
+  "accuracy_gates_unchanged": true,
+  "actual_same_joint_solution_GR_computed": false,
+  "full_horizon_completed": false,
+  "physical_final_charge_solved": false,
+  "final_charge_conclusion": "unadjudicated",
+  "full_goal_complete": false,
+  "sha256": {
+    "verification/complete_stable_full_interval.py": "6f615bcec8019261af102a815083529d2fa018f69511da94fd6195fcf88754f9",
+    "verification/resume_full_native_newton.py": "68f0dc76c4be23e6a15a118e622d607b353d41817a433cec6187d0801eafb293",
+    "notes/REQUEST194_195_NATIVE_RESIDUAL_CONTINUATION_KO.md": "29d98ba6732a71489a2420c6ef1017928a65e307cec465f4ac5538476400cb4a",
+    "AGENTS.md": "242957ed6e8511706ad176d986ce93ad5fa4ddfcbde72aa144c9bc1fa76d5cd5",
+    "docs/model-definition.md": "67d3b7cce0df8ef0ff5a5b86c522f936eaa5efc2f4042ea76ced8e32ee0bd902",
+    "docs/observable-targets.md": "d6b4a5e4a508c7ec398dbcff1f15c440f82425da06092c1a80f8bd66c8b23350",
+    "docs/adiabatic-limit.md": "fc66859bbbeb406a835cec9f98dc2d30c31fae55dc1b01097c3a4d80a0acd2c1",
+    "docs/nonadiabatic-regime.md": "b3e454669a30d53f46efe45bde3f1a989f1759426e6ea5c825ea4c3a6017691f",
+    "docs/failure-ledger-dynamic-chi.md": "a7dfd744a03a20b81de69b68d8d9715765df497d2620750e3e0bc2fc60d13dde",
+    "docs/dynamic-charge-completion.md": "7a0650a0bff92314c1b3158cb68fc81b4d549d2406a36200ddc18116f1e63a20",
+    "outputs/direct-eos-gr33/native-newton-resume-admission/final-result.json": "b7e4747524e1176db3dc4aa9eefd56fb85bf1a72c3ccbe915734e2bb5bae393b",
+    "outputs/direct-eos-gr33/native-newton-resume-admission/followthrough-producer.py": "79923ed69e33d9ae54a1a51e17d323bb93f73d8c0a5214c3aae2ca515f91d4bd",
+    "outputs/direct-eos-gr33/native-newton-resume-admission/previous-publication-producer.py": "c83b58d55ad5dbf25094c2566a3455fc90359082387d7a45c96b1b977f41bba8",
+    "outputs/direct-eos-gr33/native-newton-resume-admission/publication-helper.py": "f5153c2b02c6b171dcb35b2d7028cf6666b3ac688f9cc6dc8b0e105c1dd881aa",
+    "outputs/direct-eos-gr33/native-newton-resume-admission/publication-producer.py": "4bdcd04984e56ea19d755983a9bcaceca986a3ed4327c675604dcc53a6e8f032",
+    "outputs/direct-eos-gr33/native-newton-resume-admission/publication.json": "f5a3b8c7445e5797632bcda2f76806243b9babd08b191647c2de508de37528e4",
+    "outputs/direct-eos-gr33/native-newton-resume-admission/native-resumed-newton195-work/check-receipt.json": "ae38b4f06ca282e68e1d5df384b3a00172ed1c6e84988e8d3af84fe3167777c6",
+    "outputs/direct-eos-gr33/native-newton-resume-admission/native-resumed-newton195-work/controller-start.json": "122d879f84ff00279cedbf96137fb020d995536cb0f3c80344c96efbcd743c5c",
+    "outputs/direct-eos-gr33/native-newton-resume-admission/native-resumed-newton195-work/expanded-eight-newton-stage.py": "1ef499a77fa9883d92685e7d42e0f4cdb77bca58beefbaf2bfaaf5131352e87b",
+    "outputs/direct-eos-gr33/native-newton-resume-admission/native-resumed-newton195-work/expanded-resumed-run.py": "6b1c3f3554bc4effde924c229f707f5807b2708338cd1e6c9e38ff277c644792",
+    "outputs/direct-eos-gr33/native-newton-resume-admission/native-resumed-newton195-work/plan.json": "c5405cba6ed44f9ec1b09704ee26e11186767cbbe1a75cb69b2a053a6eaaf60a",
+    "outputs/direct-eos-gr33/native-newton-resume-admission/native-resumed-newton195-work/prepare-receipt.json": "046ea7ca2b5ff2f084f4667643003b3e99b119ab73a291b00f842cfc972887c8",
+    "outputs/direct-eos-gr33/native-newton-resume-admission/native-resumed-newton195-work/restart-check.json": "9dc1d5434b67cc582a48016a45e92280fd6cc9fb2c9f747abf986178e0d0523b",
+    "outputs/direct-eos-gr33/native-newton-resume-admission/native-stable-full194-work/coarse-receipt.json": "5ee2bfbfd2edccc4cb3160d459872b2297c0f7047f9a468042ba08fa88033cb2",
+    "outputs/direct-eos-gr33/native-newton-resume-admission/native-stable-full194-work/external-interruption.json": "1e787438662d7f54bb74b67212f0a7e27681920da9bd71fe42dae8e4915a0434",
+    "outputs/direct-eos-gr33/native-newton-resume-admission/native-stable-full194-work/failure-64.json": "19f7c62bed556d0d84ff59fdb935a214abde458d0d755db06044b8658211ce5e",
+    "outputs/direct-eos-gr33/native-newton-resume-admission/native-stable-full194-work/last-accepted-64.npz": "d95287b3fc1225a30328cab1719df60e2195ba747f3b1160dec67193a6076ace",
+    "outputs/direct-eos-gr33/native-newton-resume-admission/native-stable-full194-work/linear-64.json": "ef0bcfe4f79ebc000be5f83264d6c35e898735340518c1acf4084873e32b655c",
+    "outputs/direct-eos-gr33/native-newton-resume-admission/native-stable-full194-work/plan.json": "d960f5eca4caf21eed45cdaca9d507fd28850964dcea07ced35e13f5d2583668",
+    "outputs/direct-eos-gr33/native-newton-resume-admission/native-stable-full194-work/predispatch-amendment.json": "9aa2faf4b3b86766bf1b65758313d3dc0daa7d3b6a3fc9011c03b4a2c2a93b97",
+    "outputs/direct-eos-gr33/native-newton-resume-admission/native-stable-full194-work/prepare-receipt.json": "f4e0752f2ba6b00a0f1d924dbd6b6168ad5df65cf6291d11c574f46ff22f2f0d",
+    "outputs/direct-eos-gr33/native-newton-resume-admission/native-stable-full194-work/prepared-producer.py": "80830f951650c5223b1bb646bd3bf79159e82eaa0a1150e0c06fbb14028eeea3",
+    "outputs/direct-eos-gr33/native-newton-resume-admission/native-stable-full194-work/rejected-joint-stage.json": "211d6a70d712a807093fffedd992c0ba4447a502e76d06f6e1bcac5e08ea3be2",
+    "outputs/direct-eos-gr33/native-newton-resume-admission/native-stable-full194-work/rejected-joint-stage.npz": "0765c352dff0bb259740f9cb829e99011485b44cf288f4405594ef589689c9ff",
+    "outputs/direct-eos-gr33/native-newton-resume-admission/native-stable-full194-work/stage-progress-64.json": "6b35ab0a70fe7734dcaa3e036bc494df31a3a2ac30cad947f9ec6bf5c4b848d6",
+    "outputs/direct-eos-gr33/native-newton-resume-admission/native-resumed-newton195-work/sweep-1/photons/resume-check-64.json": "2e29e42221543a1a1613855328798417ddbd6ffafb6264a71461f17b09f9124e",
+    "outputs/direct-eos-gr33/native-newton-resume-admission/native-resumed-newton195-work/sweep-1/photons/resume-check-64.npz": "51a028aa2f7f6e74de9758136f270bb6f9f15446a88468a3a4d02a49e618ea57"
+  },
+  "document_prefixes": {
+    "docs/model-definition.md": {
+      "bytes": 256972,
+      "sha256": "69fdf5a1b0a32e6566928f2023a9066601caf139e19e51d674ff33ab6c0c4997"
+    },
+    "docs/observable-targets.md": {
+      "bytes": 247646,
+      "sha256": "3b4950628f47c28956036f2f6a7078d5a8409fe5b6797a2e04a6bcc22ef531bd"
+    },
+    "docs/adiabatic-limit.md": {
+      "bytes": 242373,
+      "sha256": "e5affa69582625077ff0d9007be814d97aa32f3604bf84b4b5ea5d24ec6f9dde"
+    },
+    "docs/nonadiabatic-regime.md": {
+      "bytes": 250513,
+      "sha256": "7922750a5fe0fa0f763c02110b5839185b44b583d20736e3319bd4557d8a22e7"
+    },
+    "docs/failure-ledger-dynamic-chi.md": {
+      "bytes": 287778,
+      "sha256": "792a0eed96e8406ff5c79c8660f2c4efdddfa2d305c997530b1cc36513b42a83"
+    },
+    "docs/dynamic-charge-completion.md": {
+      "bytes": 115648,
+      "sha256": "5c5cd877fb5042bfd1f0dfaed9567f9d0779d5341bebacc020028ca97d5fdb1f"
+    }
+  }
+}

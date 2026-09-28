@@ -1,0 +1,12 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": false,
+  "stage": "native actual-temperature retrieval",
+  "http_status": 500,
+  "physical_queries": 1,
+  "table_received": false,
+  "source_hash": "778011f93a9ed56a99b668cd95c1d3ef519e58a1881534c1f80297575a425661",
+  "cause_boundary": "The stored form and provider help explicitly require temperatures from the native database grid. The submitted actual temperature is outside that list. HTTP 500 alone does not identify the server internals; the client failed to enforce the documented domain.",
+  "retry": false,
+  "source_help": "https://aphysics2.lanl.gov/static/opacdocs/opac-help.html"
+}

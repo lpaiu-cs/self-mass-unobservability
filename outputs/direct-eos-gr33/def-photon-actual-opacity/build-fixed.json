@@ -1,0 +1,59 @@
+{
+  "command": [
+    "gfortran",
+    "-std=legacy",
+    "-fno-automatic",
+    "-mcmodel=medium",
+    "-g",
+    "-fcheck=all",
+    "-fbacktrace",
+    "synspec54.f",
+    "-o",
+    "synspec54"
+  ],
+  "returncode": 0,
+  "seconds": 2.9754069680000015,
+  "acquisition": {
+    "files": [
+      {
+        "path": "data/h1.dat",
+        "bytes": 2791,
+        "sha256": "80d8abaef4d194929dc0fd52691442308806788196764bb8bea32d92d9e73ed9",
+        "git_blob": "b78a0e7ef7de330bc940914362ddda9df7aafad5"
+      },
+      {
+        "path": "data/he1.dat",
+        "bytes": 13955,
+        "sha256": "86f265a6bad0dcfa45202153e68b5090f8e284f5caac061dd7aea0d3c0ab7384",
+        "git_blob": "ec399bc6ee7d303189ed3e4a3623e88edc5a8b4e"
+      },
+      {
+        "path": "data/he2.dat",
+        "bytes": 10106,
+        "sha256": "36cebed1f4b05fafd8eb7eb27099d3d61af1a68fbf8216512494c2ddc3551322",
+        "git_blob": "34390037fae7d4689e445dfd3f031d0877b1719b"
+      },
+      {
+        "path": "data/hydprf.dat",
+        "bytes": 296126,
+        "sha256": "819aa92024d86bc155af7cd3c001783e015dc486085720d00b3a58309c113aa2",
+        "git_blob": "47b1951f324bc92afe1c5412d42dc735669f664b"
+      },
+      {
+        "path": "data/he1prf.dat",
+        "bytes": 94450,
+        "sha256": "8ec12907bcb42286fc83d06c7fbb0c7266764291dace11bf01d3021342e89f13",
+        "git_blob": "29c1a7b24d53b786ed7c54e350d9feb50e0b6f1f"
+      },
+      {
+        "path": "data/he2prf.dat",
+        "bytes": 358416,
+        "sha256": "e015e448be5b7448d498571f9475a8e6c6cbf32fcac36ef0369d8831afb3199f",
+        "git_blob": "25e1db26a65f12551b170ce24bc273b342ea070d"
+      }
+    ],
+    "seconds": 0.004700454999991166
+  },
+  "patch_sha256": "488d168429d56cc45b9f9640de8066536701eda89e03cd10c6ab4ffa483586c3",
+  "binary_sha256": "3805566f4acd2ed50abd5c1c982756726a7ffd463b9b456d995ea04218096e66"
+}

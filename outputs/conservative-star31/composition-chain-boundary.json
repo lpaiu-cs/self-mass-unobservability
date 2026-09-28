@@ -1,0 +1,29 @@
+{
+  "classification": "Counterexample candidate",
+  "baseline_seven_input_intervention_bitwise_equal": true,
+  "fixed_auxiliary_partial_checks": [
+    {
+      "species": "h1",
+      "fixed_auxiliary_partial_score": 1.0864034655996221e-09,
+      "passed": true
+    },
+    {
+      "species": "n14",
+      "fixed_auxiliary_partial_score": 7.724825844233068e-10,
+      "passed": true
+    }
+  ],
+  "weak_vector_correction_constant_in_fixed_auxiliary_controls": {
+    "partial-h1-1e-06": true,
+    "partial-h1-5e-07": true,
+    "partial-n14-1e-06": true,
+    "partial-n14-5e-07": true
+  },
+  "conclusion": "For these H1 and N14 controls, the returned native fixed-auxiliary partial is supported. Its difference from the composed source derivative is an auxiliary-chain contribution, not evidence that this fixed-auxiliary API partial itself is wrong. This finding does not repair the separately observed weak temperature/density derivative omissions.",
+  "next_derivative_requirement": "Differentiate the independent composition/EOS auxiliaries and assemble the full chain, or certify a direct composed derivative with a suitable boundary treatment. The failed all-zone H2 extrapolation is retained.",
+  "source_sha256": {
+    "net/public/net_lib.f90": "4083894c0d6f52d57888aa170b68dcf09278987492dad306d029ff95df695ebd",
+    "net/private/net_derivs.f90": "c9bc1ac9a146d10c7bffc8291d61f19b082f12a02b04e3e23456b33a2c824b84",
+    "net/private/net_screen.f90": "a799d2a5dfb0e14ec04b940e859d7802504d1e642962de94cfc0a73034e41da8"
+  }
+}

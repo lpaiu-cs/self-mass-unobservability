@@ -1,0 +1,42 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "075c83dcb",
+  "claim": "Connect the same material/scalar/metric solution to bulk redshifted heat transport, surface area/lapse luminosity and moving-photon feedback inside every coupled time stage.",
+  "changed": "Reconstruct radial lapse from the same pressure/mass/scalar constraints; include its volume and surface heat-flux terms. Use the actual current stage emission/motion in causal photons and iterate all added terms to1e-8.",
+  "preserved": "Native EOS/baryons, composition, C1 source, p4 consistent mass, coefficients, horizon, finite-pressure mechanical boundary, original numerical gates. No new background roots or native EOS calls.",
+  "boundary": "The externally maintained Pg is prescribed; its required work and momentum are stated. Its gravitational stress tensor and the full radiation-corrected scalar junction remain unclosed. No claim of an isolated stellar surface.",
+  "paths": [
+    "p4-8 pilot",
+    "p4-32",
+    "p4-64"
+  ],
+  "gates": {
+    "temperature": 0.02,
+    "velocity": 0.03,
+    "scalar": 0.03,
+    "closure": 1e-08
+  },
+  "budget": {
+    "total_seconds": 240,
+    "CPU_threads": 1,
+    "memory_GB": 5,
+    "maximum_closure_iterations": 6
+  },
+  "decision": "Stop on failed closure/tangent/residual or measured budget. No degree, mesh, period, profile or threshold expansion. Compare the saved same-order Phase96 path without relabeling its unresolved spatial error.",
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "lapse": "delta_nu_prime=(1+8*pi*r^2*A4*p)*delta_m/(r^2*b^2)+4*pi*r*A4*(delta_p+4*alpha*p*psi)/b+r*Phi*psi_prime. Exterior integration gives nu_s=Phi_s*psi_s-2*integral(Phi*psi/b)-integral[J/(r^2*b^2)+4*pi*r*Pr/b].",
+    "transport": "delta L contains op*(delta lnT+alpha*psi+delta nu) plus L0*(delta nu+2*alpha*psi-delta m/(r*b)). Surface delta L/L0=4*Delta lnT+(2+4*alpha*Phi_s+2*nu_s_prime)*zeta+4*alpha*psi_s+2*delta nu_s.",
+    "support": "Prescribed gas pressure supplies normal momentum Pg and moving-surface energy flux v*Pg. These local matching identities do not supply its gravitational stress tensor.",
+    "scope": "Algebra of the declared tangent equations and fixed transport coefficients. Not an isolated nonlinear atmosphere or a global final-charge theorem."
+  },
+  "bindings": {
+    "verification/def_native_metric_transport.py": "ed34e7e65a14fe12ecc61fd57e73edf33cd9f02b9cf63173fc30b4770755e7b4",
+    "verification/def_native_balanced_flux.py": "30ac81312f6e5457abf04676a967cbe19f0b0ebf8a4bdf57b60f142b152ccdf2",
+    "verification/def_native_moving_rays.py": "81f789dda581dfaa3d6240446060c5341395764e8023343bfa95b7287deaef66",
+    "outputs/direct-eos-gr33/def-native-balanced-flux/p4-64.npz": "6ef384c85ecd741802508878cd5e21d040c0129ff04b34bee4e2c1ba3e29bda3",
+    "outputs/direct-eos-gr33/def-native-coupled-readjustment/inputs.npz": "8f9fdcb82f703ebdc2e24683a98f966a7c926d797a551ae27e83f8bd9d4d99e2",
+    "outputs/direct-eos-gr33/def-native-coupled-readjustment/coefficients.npz": "0a078ab8f8d7de512b92620141f9a781f7cfa4eb947392b6a795181c24a451a0"
+  }
+}

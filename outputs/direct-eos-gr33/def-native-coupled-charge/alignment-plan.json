@@ -1,0 +1,10 @@
+{
+  "classification": "Counterexample candidate",
+  "issue": "The first readout stopped at the last radial quadrature node. That node changes slightly with Gauss order and grid, so the comparisons did not use exactly the same observer clock.",
+  "correction": "Use the common outer face light delay for every path and order. Preserve the first source/wave artifacts. Re-evaluate only the4.73s saved-source readout; do not rerun any fluid or EOS.",
+  "original_readout_budget_seconds": 45,
+  "first_readout_seconds": 4.732050233999999,
+  "remaining_readout_seconds": 40,
+  "gates_unchanged": true,
+  "source_sha256": "bfd3260e311afb3bbebb0e415fd1fc7e8d2af81d492739289c994083c301c454"
+}

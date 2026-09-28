@@ -1,0 +1,16 @@
+/home/lpaiu/work/native-retained-tail-runtime/verification/repair_retained_native_acoustic_force.py:17: RuntimeWarning: invalid value encountered in divide
+  c0=np.sqrt(g*p/(np.asarray(rho,LD)*(self.eos.cx+u)+p))
+Traceback (most recent call last):
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/repair_retained_native_acoustic_force.py", line 98, in <module>
+    if __name__=='__main__':main()
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/repair_retained_native_acoustic_force.py", line 93, in main
+    exec(compile(source,__file__,'exec'),ns);ns['force']()
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/repair_retained_native_acoustic_force.py", line 39, in force
+    new=np.divide(an*FL-bn*FR+an*bn*DU,dn,out=np.zeros_like(FL),where=dn>0)*scale
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/def_retained_native_acoustic.py", line 77, in hydro_sources
+    dx=dx.tolist(),dT=dT.tolist(),gamma=float(K/p),K=float(K),
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/repair_retained_native_acoustic_force.py", line 50, in difference
+    af,ae=hll(records[1],records[2],np.asarray(geo.af*geo.area,LD),ay,by)
+  File "/home/lpaiu/work/native-retained-tail-runtime/verification/repair_retained_native_acoustic_force.py", line 42, in hll
+    assert np.all(error<=bound+1e-100),float(np.max(error/np.maximum(bound,1e-300)))
+AssertionError: 1.4411518807585587e+17

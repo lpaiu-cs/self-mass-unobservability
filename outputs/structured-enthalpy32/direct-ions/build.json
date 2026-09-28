@@ -1,0 +1,55 @@
+{
+  "classification": "Counterexample candidate",
+  "commands": [
+    {
+      "command": [
+        "cmake",
+        "-S",
+        "/home/lpaiu/work/direct-ions32/source",
+        "-B",
+        "/home/lpaiu/work/direct-ions32/build",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DBUILD_SHARED_LIBS=ON",
+        "-DBUILD_TEST=ON",
+        "-DBUILD_DOC=OFF",
+        "-DBUILD_DOX_DOC=OFF"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "/home/lpaiu/work/direct-ions32/build",
+        "--target",
+        "free_eos",
+        "-j",
+        "2"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "gfortran",
+        "-O2",
+        "-fPIC",
+        "-shared",
+        "-I/home/lpaiu/work/direct-ions32/build/src",
+        "/mnt/e/lab/self-mass-unobservability/outputs/structured-enthalpy32/direct-ions/direct_ion_bridge.f90",
+        "-L/home/lpaiu/work/direct-ions32/build/src",
+        "-Wl,-rpath,/home/lpaiu/work/direct-ions32/build/src",
+        "-lfree_eos_direct24",
+        "-o",
+        "/home/lpaiu/work/direct-ions32/direct_ion_bridge.so"
+      ],
+      "returncode": 0
+    }
+  ],
+  "completed": true,
+  "sha256": {
+    "/home/lpaiu/work/direct-ions32/direct_ion_bridge.so": "f1cc68cd36f2d6e2b245ecbb90d9e2d81d2aa3e62d9838d9ae1e7498656f9601",
+    "/home/lpaiu/work/direct-ions32/build/src/libfree_eos_direct24.so.1.0.0": "2fc15c51134421571a2df94aa7bd7c5c65c5ce7e8d2ebed14a0fb41fc7d9a3e6"
+  },
+  "original_runtime_modified": false,
+  "physical_EOS_certified": false
+}

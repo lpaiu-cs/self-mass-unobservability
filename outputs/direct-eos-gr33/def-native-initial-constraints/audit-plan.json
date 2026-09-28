@@ -1,0 +1,15 @@
+{
+  "classification": "Counterexample candidate",
+  "seconds": 35,
+  "native_calls": 100,
+  "controls": [
+    "analytic uniform-density polar slice",
+    "first-law and Einstein identities",
+    "exact-source Gauss panel flux residual",
+    "native isentropic anchor recovery",
+    "represented-cell baryon inventory versus actual fluid mass"
+  ],
+  "source_sha256": "825043c65327356eae0b603c1ce97f1d13ce30b6fe4bc2c7514ff3b51e9fd615",
+  "producer_sha256": "6df77cb1717722b0df51c61aaa96f0c8823c88fea41cc6e719307b330964da7a",
+  "accept": "Initial mathematical constraint solution and actual finite-volume source matching are separate gates. A per-cell inventory mismatch must be fixed before reusing this state as a new physical flow."
+}

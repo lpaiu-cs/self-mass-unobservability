@@ -1,0 +1,7 @@
+{
+  "classification": "Counterexample candidate",
+  "default_failure_sha256": "dfc20251289f4c1e189144fb024147943772a08464ef24d61ab168576013ffa6",
+  "model": "Existing use_eosDT_HELMEOS=.true. with the same 26-species network. This changes the EOS to the fully ionized approximation; it is not a repair or certification of the default blended evaluator. The original peak rho, T and all abundances are retained at initialization. Reevaluate all EOS-dependent rates.",
+  "gates": "Keep the original strict energy and time-refinement gates unchanged. All original failures remain.",
+  "domain": "Only the peak hot fixed-volume cell is interpreted. Other profile zones are a native-call carrier. No cold atmosphere, hydrostatic equilibrium, global Helmholtz derivative consistency, or real-star EOS calibration is asserted."
+}

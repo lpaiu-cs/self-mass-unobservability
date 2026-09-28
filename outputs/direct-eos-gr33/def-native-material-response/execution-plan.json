@@ -1,0 +1,46 @@
+{
+  "classification": "Counterexample candidate",
+  "preserved_failures": [
+    "introspection-failure.json",
+    "export-failure.json",
+    "probe-failure.json",
+    "zero-target-failure.json"
+  ],
+  "corrections": "Use the defining expanded owner; include the original reference pressure-flux difference in the momentum source; preserve rest-subtracted energy at zero perturbation. Compare probes in separate physical RHS components including the actual forcing, rather than dividing an almost-zero flux response by itself.",
+  "method": "SSP2 over64/128 macro endpoints with original hydro CFL times64/steps; halve both macro clock and hydro cap. Interpolate saved17 background operators. Preserve the post-step numerical vacuum-floor projection in a signed discard. Independently compare Richardson RHS using half-sized probes at evolved states.",
+  "paths": [
+    [
+      64,
+      128
+    ],
+    [
+      128,
+      128
+    ],
+    [
+      128,
+      64
+    ]
+  ],
+  "check_seconds": 35,
+  "pilot_seconds": 35,
+  "production_seconds": 250,
+  "forecast_margin": 2,
+  "gates": {
+    "conservation": 1e-08,
+    "directional": 0.002,
+    "time": 0.02,
+    "background": 0.02,
+    "small": 1e-06
+  },
+  "binds": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_material_response.py": "56bb3c3814c5fad05d2a975d441ad824648825582d82a2cc8a15b50a4c9c4f38",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-material-response/pilot.json": "f30c7702c6952195e0162b8dadec4c93e7c7941b7a7a75ca8baf32e5beded04a",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-material-response/dispatch-plan.json": "817b3cb7156093a45e4adeab9a5e4371ff4bad899eb0f72b9839fd5172628fba",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_material_centered.py": "9e8b0fc38d98876e410cc4205a2de47a93b00f408972d399bac1feb3453e5278"
+  },
+  "eligible": true,
+  "forecast_seconds": 116.01834088500017,
+  "upper_seconds": 242.03668177000034,
+  "rationale": "Original160s cap not eligible with maintained2x margin. Measured three real prefixes forecast116.02s, upper242.04s. Reassess once to250s before dispatch, retain exactly the original paths and resume saved prefixes. Late costs remain extrapolated, bounded by the hard alarm. No new EOS calls or full nonlinear runs."
+}

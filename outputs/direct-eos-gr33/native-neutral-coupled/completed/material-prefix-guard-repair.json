@@ -1,0 +1,14 @@
+{
+  "classification": "Counterexample candidate",
+  "failure": {
+    "seconds": 6.047757942,
+    "CPU_seconds": 4.106849402,
+    "peak_RSS_bytes": 559263744,
+    "error": "AssertionError(('Future photon transfer', np.int64(1), np.longdouble('0.00021465194487054389599')))",
+    "source_sha256": "3d69852fa6767132e46eb2cf1522ffe2e1fb28492835f2239ba3ee04e01dc683"
+  },
+  "repair": "Place the finite-transfer guard at actual rhs consumption, not fields used for background-only activity masks. At the prefix endpoint use the existing closing-stage left derivative for the endpoint probe. Future transfers remain NaN; no future collision input is used.",
+  "source_sha256": "dc8fc99a779e9f3bcf49e253cf88b18b0d929dd7d572b2ea0fc1009a5deb4605",
+  "original_producer_sha256": "3d69852fa6767132e46eb2cf1522ffe2e1fb28492835f2239ba3ee04e01dc683",
+  "remaining_seconds": 50
+}

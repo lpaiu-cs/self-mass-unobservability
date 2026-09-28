@@ -1,0 +1,11 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "identities": [
+    "integral H = dt*H(lo)+dt*M0-M1",
+    "integral (time-lo)*H = dt^2*H(lo)/2+(dt^2*M0-M2)/2",
+    "C(t) affine: integral C*H=C1*1.5*(K0-K1/h)+C2*(1.5*K1/h-K0/2)",
+    "q_effective=A_inverse*J/h gives h*A*q_effective=J; paired collision moments and spectral ghosts use the same rates"
+  ],
+  "scope": "Known-source quadrature identities in the declared finite linear model; no global PDE or EOS error bound."
+}

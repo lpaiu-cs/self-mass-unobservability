@@ -1,0 +1,70 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "45afcf302",
+  "decision": "ACCEPT_COMMON_TIME_PROPAGATION_STOP_ON_NEW_BOUNDARY_SPATIAL_FAILURE",
+  "progress_class": "loophole progress; common four-field propagation accepted on all original polynomial spaces, new-boundary spatial discrepancy remains",
+  "actual_same_input_applied": true,
+  "propagation_passed": true,
+  "propagation_passed_all_three_spaces": true,
+  "spatial_comparison_started": true,
+  "spatial_passed": false,
+  "original_failure_resolved": false,
+  "goal_complete": false,
+  "full_dynamic_charge_solved": false,
+  "time_comparisons": {
+    "velocity_mass_RMS_m_s": {
+      "previous": 0.6387629115530276,
+      "last": 3.5183351014387944e-05,
+      "order": 14.14810002976354,
+      "contour": 3.119685688050959e-08
+    },
+    "scalar_mass_RMS": {
+      "previous": 0.6434065409504095,
+      "last": 7.131006791502729e-07,
+      "order": 19.783193393994328,
+      "contour": 4.67965617363039e-12
+    },
+    "old_interface_velocity_RMS_m_s": {
+      "previous": 0.6416670185519581,
+      "last": 1.9342198604408793e-05,
+      "order": 15.017785417143743,
+      "contour": 1.0207188875957527e-12
+    },
+    "new_interface_velocity_RMS_m_s": {
+      "previous": 0.6394650157384835,
+      "last": 1.2592589422447728e-07,
+      "order": 22.275859026813034,
+      "contour": 4.800135701230183e-14
+    }
+  },
+  "spatial_comparisons": {
+    "velocity_mass_RMS_m_s": {
+      "previous": 0.006328339803993897,
+      "last": 0.005095587453728587,
+      "decreased": true
+    },
+    "scalar_mass_RMS": {
+      "previous": 0.00020176614070125794,
+      "last": 6.104966569149359e-06,
+      "decreased": true
+    },
+    "old_interface_velocity_RMS_m_s": {
+      "previous": 0.012895046555784958,
+      "last": 0.006587728911311579,
+      "decreased": true
+    },
+    "new_interface_velocity_RMS_m_s": {
+      "previous": 0.12009305591440626,
+      "last": 0.060901639218842174,
+      "decreased": true
+    }
+  },
+  "conditional_checks_not_run": [
+    "coefficient",
+    "outer3R",
+    "quadrature8",
+    "sigma14"
+  ],
+  "new_EOS_calls": 0,
+  "next_bottleneck": "Resolve the source-support interface spatial wave representation on the same coupled system; retain the accepted propagator and original thresholds. No automatic degree/grid expansion. Then complete coefficient, outer, quadrature and sigma contrasts."
+}

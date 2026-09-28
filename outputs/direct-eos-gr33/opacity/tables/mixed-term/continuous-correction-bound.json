@@ -1,0 +1,40 @@
+{
+  "classification": "Proven",
+  "completed": true,
+  "coefficient_sha256": "d4e10e14edb5d27e11eeeccf7ff519326cf965c06996e258b66defb377d2a42c",
+  "rectangles": 29400,
+  "proof": "For u in [0,1], abs(u^3-u)<=2/5 and abs(3*u^2-1)<=2. The omitted mixed term is hx^2*hy^2/36 times the sum of four mixed-curvature coefficients times qx*qy. The triangle inequality gives value <=hx^2*hy^2*sum_abs/225, x derivative <=hx*hy^2*sum_abs/45, and y derivative <=hx^2*hy*sum_abs/45. The extrema of u-u^3 are endpoints and u=1/sqrt(3); 2/(3*sqrt(3))<2/5 follows from 25<27. All coefficient and grid arithmetic here is exact rational arithmetic.",
+  "quantities": [
+    "delta log10 conductivity",
+    "d delta log10 conductivity/d log10 rho",
+    "d delta log10 conductivity/d log10 T"
+  ],
+  "exact_global_bounds": [
+    "11194951/235929600",
+    "11194951/11796480",
+    "11194951/11796480"
+  ],
+  "approximate_global_bounds": [
+    0.04745038774278429,
+    0.9490077548556858,
+    0.9490077548556858
+  ],
+  "locations": [
+    [
+      68,
+      19,
+      0
+    ],
+    [
+      68,
+      19,
+      0
+    ],
+    [
+      68,
+      19,
+      0
+    ]
+  ],
+  "scope": "Bounds over every closed saved conduction interpolation rectangle and every convex Z interpolation. They bound the declared missing polynomial term, not table-data uncertainty, total opacity error, EOS, or GR evolution."
+}

@@ -1,0 +1,26 @@
+{
+  "classification": "Conjectural",
+  "evidence": "At saved knots1,8,16 the native neutral-rate change is dominated by the H state, with B/S/E changes far smaller; native component additivity is within1.7e-15 on those directions.",
+  "repair": "Move the actual nonlinear native T_H(B,S,Eref,H) into the Radau photon/thermal/H equation. Colored E/H matrices are only a quasi-Newton proposal operator, not the physical source. Retain lagged B/S and original Etilde mechanical source. Never overwrite evolved H after the solve.",
+  "controls": "Preserve the rejected global-linearity test. Record all column signs,17 old/new states and signed oscillatory E/H controls as proposal quality, not a physical equivalence certificate. Evaluate TRUE native H flux on both solved stages, form the full native Radau residual and allow at most two corrections using the proposal matrix. Original1e-12 equation and1e-13 physical moment residuals plus0.2percent native transport comparison must pass.",
+  "integration": "Same RadauIIA2,64/128 base clocks and fixed local bisections. H affine source uses its own actual stage time; only the retained Etilde mechanical rate stays first-stage-held. Store actual H transport stages and use their Radau-weighted value in collision/number ledgers.",
+  "budgets": {
+    "prepare": 10,
+    "localize": 30,
+    "assemble": 60,
+    "pilot": 240,
+    "assemble_native": 50
+  },
+  "CPU_threads": 1,
+  "virtual_GiB": 3,
+  "full_horizon_authorized": false,
+  "admission": "Assemble within60s; then one equal-horizon4/8macro-step pilot within240s. Original2percent time,1e-8 balances,1e-12 stage and0.2percent native-H gates. Preserve175 failure. No extra full sweep or clock refinement on failure.",
+  "forecast": "175 pilots took135.1s including startup; native material constructor about4.5s each. Sparse transport adds work not yet measured;240s is a hard pilot cap. Full-period cost must be measured separately before admission.",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/couple_native_neutral_transport.py": "c33be85d14e6e801239d64f186eaf761a81b9b97a70f7d9bfffb64644d5ee8b6",
+    "native-neutral-coupled177-work/plan.json": "8a6aaadf8476cb60f1e9bc32531967b1a9b1666aaedbb50b8c07b068d7ff7350",
+    "native-neutral-coupled177-work/localization.json": "c172dd6971eebd00ef45c6159607b101af24b19fd70d3c81205fc7f022fa5a79",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/solve_native_radau_transfer.py": "cade2ee551d8c9b443f283c8055e3bfb4641c1aa550d19c87b0f77c75abff44e",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/def_native_matter_photon_feedback.py": "19acadd46d8f6059406fc3614c151de187323cec68f73faf9319e663f0466fb9"
+  }
+}

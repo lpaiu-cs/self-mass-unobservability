@@ -1,0 +1,32 @@
+--- request12/AllTheories3Bodies.cpp
++++ request13/AllTheories3Bodies.cpp
+@@ -354,7 +354,7 @@
+ //             pasmin = interv.second - interv.first ;
+ //         }
+ 
+-        while ( interv.second > tpos[tn] and tn < nt) // interv.first <= tpos[tn] and
++        while ( tn < nt and interv.second > tpos[tn]) // interv.first <= tpos[tn] and
+         {
+             stepper.calc_state( tpos[tn] , current_state) ;
+             states[ ntneg + tn ] = current_state ;
+@@ -433,7 +433,7 @@
+               cout << "Integrator type does not match anything known ! Using Newtonian." << "\n";
+         }
+ 
+-        while ( interv.second > tneg[tn] and tn >= 0) // interv.first <= tneg[tn]  and
++        while ( tn >= 0 and interv.second > tneg[tn]) // interv.first <= tneg[tn]  and
+         {
+             stepper.calc_state( tneg[tn] , current_state) ;
+             states[tn ] = current_state;
+--- request12/Fittriple-compute.cpp
++++ request13/Fittriple-compute.cpp
+@@ -42,7 +42,8 @@
+ 
+ 
+     long int i,j =0;
+-    value_type errtoe = pow(dix, -14);
++    const char* e13 = getenv("TIMING13_ERRTOE");
++    value_type errtoe = e13 ? strtold(e13, NULL) : pow(dix, -14);
+     value_type npulsdir = 0.;
+     value_type lnposterior = zero ;
+     value_type * delay ;

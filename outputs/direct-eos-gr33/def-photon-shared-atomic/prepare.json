@@ -1,0 +1,17 @@
+{
+  "constants_build": {
+    "command": [
+      "gfortran",
+      "-I/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src",
+      "constants.f90",
+      "-L/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src",
+      "-Wl,-rpath,/home/lpaiu/work/direct-eos-gr33/molecular-spectral/build/src",
+      "-lfree_eos_direct24_molecular_spectral",
+      "-o",
+      "constants"
+    ],
+    "seconds": 0.5298339969999972
+  },
+  "stages": 16,
+  "excited_levels": 550
+}

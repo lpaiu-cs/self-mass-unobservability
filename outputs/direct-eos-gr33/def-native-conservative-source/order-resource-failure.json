@@ -1,0 +1,7 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": false,
+  "failure": "ArrayMemoryError: allocation of11.6MiB failed under the5GB RLIMIT_AS during first-stage sparse column scaling.",
+  "evolution_completed": false,
+  "source": "Release the assembly-only V/D quadrature caches before evolution. The initial p6 run reached the5GB virtual-address cap during first-stage scaling before completing the pilot. No numerical gate, source, degree, horizon or memory budget is changed."
+}

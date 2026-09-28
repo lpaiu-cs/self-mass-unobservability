@@ -1,0 +1,41 @@
+
+
+ read inlist_project
+                                         version_number        7623
+ read photos1/x850
+                 WARNING -- inlist initial_mass ignored    1.3999999999999999D+00
+                       using saved initial_mass instead    1.9745851365986666D-01
+
+ change to cno_extras.net
+ number of species =          22
+ new_rotation_flag = T
+ net name cno_extras.net
+ extra_terminal_output_file: log1
+ do_element_diffusion T
+ rotation_flag = T
+                                               tau_base    2.5118800000000000D+01
+                     which_atm_option: WD_tau_25_tables
+ kappa_file_prefix gn93
+ kappa_lowT_prefix lowT_fa05_gs98
+   eos_file_prefix mesa
+                                        OMP_NUM_THREADS           4
+
+
+__________________________________________________________________________________________________________________________________________________
+
+       step    lg_Tcntr    Teff       lg_LH     lg_Lnuc     Mass       H_rich     H_cntr     N_cntr     Y_surf     X_avg     eta_cntr  zones retry
+   lg_dt_yr    lg_Dcntr    lg_R       lg_L3a    lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf     Y_avg     gam_cntr  iters bckup
+     age_yr    lg_Pcntr    lg_L       lg_LZ     lg_Psurf    lg_Dsurf   C_core     C_cntr     Ne_cntr    Z_cntr     Z_avg     v_div_cs     dt_limit
+__________________________________________________________________________________________________________________________________________________
+
+ central hydrogen    1.0000002839163269E-099
+save profile for model number        19850
+save LOGS1/profile1.data for model 19850
+
+
+                star               model                 age                mass             lg_mdot           (r-rl)/rl          last photo
+                   1               19850     5.732508780E+09     1.974585137E-01    -9.900000000E+01    -9.570849228E-01        photos1/x850
+
+terminated evolution: dt_is_zero
+
+termination code: dt_is_zero

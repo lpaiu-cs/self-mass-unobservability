@@ -1,0 +1,7 @@
+{
+  "classification": "Counterexample candidate",
+  "reason": "A nonzero-pressure photosphere cannot be identified with an exact vacuum boundary.",
+  "atmosphere": "Below the first-zone pressure Ps attach a gamma=5/3 polytrope, matching rho and total energy at Ps. P=Ps*z^(5/2), rho=rhos*z^(3/2), u=u0+3P/(2rho), u0=us-3Ps/(2rhos). Integrate z from 1 to 0. This explicitly specified atmosphere reaches P=rho=0 and permits a Schwarzschild exterior.",
+  "observables": "Optical radius is the base of this mathematical atmosphere. Its mass and thickness are reported separately. Atmospheric transport and spectroscopy are not solved.",
+  "checks": "Continuity at Ps, first-law identity, and atmosphere mass relative to the numerical matching tolerance."
+}

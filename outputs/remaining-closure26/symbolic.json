@@ -1,0 +1,18 @@
+{
+  "classification": "Proven",
+  "finite_sampling_counterexample": "x**2*(x - 2)**2*(x - 1)**2*(x + 1)**2*(x + 2)**2",
+  "even_GR_branch_thermal_decoupling": true,
+  "coupled_transfer": "(lam + z)/(-B*C*eps**2 + ds*lam + ds*z)",
+  "Wronskian_identity": true,
+  "conservative_diffusion_dissipation": true,
+  "uniform_sphere_relative_error": 1.9406698470447736e-13,
+  "static_beta_derivative_bounds_m": [
+    "296927913859808578295810400000000000000000/875205860795424093900288250226141521",
+    "2642373382554990930597548582016000000000000000000000000000/818776418057588502733533978136078631556625811226219431"
+  ],
+  "static_beta_derivative_bounds_m_decimal": [
+    339266.36824614945,
+    3227.222138155352
+  ],
+  "derivative_domain": "b=abs(beta) in [0,4], fixed metric/matter satisfying the separately declared scalar value envelope; not a derivative certificate for EOS-dependent stellar reconstruction or timing."
+}

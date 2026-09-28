@@ -1,0 +1,38 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "5acae2934",
+  "claim": "Apply the actual GR geometry and saved paired photon energy/H/momentum transfer to the shared native material mass,momentum,energy and neutral fluxes; evolve the additional material response across the original interior/atmosphere mesh.",
+  "decision": "Determine the missing mass redistribution, velocity and pressure response before closing it back into radiation and GR. Do not replace material displacement by a small-force argument.",
+  "reuse": "All531 material cells, corrected64/128 nonlinear backgrounds, Phase124 collision integrals, Phase123 metric increments and original3.434ms. No new EOS bank or full nonlinear path.",
+  "method": "Forward Richardson directional flux differences through the actual native recovery, HLL shared face and limiter owners; retain direction-dependent branches. Apply SSP2 with the existing hydrodynamic CFL. Keep increments scaled separately by1e-26.",
+  "geometry": "Fixed Einstein mesh with perturbed Jordan area radius, proper volumes, lapse, radial length and lapse gradient. Hold the fixed material-label inventory gradient. Retain the original pressure/gravity residual as a reference covector instead of imposing equilibrium.",
+  "time_metric": "Physical radial momentum receives-(u_t+lambda_t)P. Reference material energy receives-a0*V*[Pr*(u_t+lambda_t)+2*Pt*u_t]. Convert the dynamic lapse energy of the existing owner back to a0 energy, including the background weighted-rate term.",
+  "boundary": "Same shared HLL face and native vacuum floor. The derivative of the floor projection is recorded as a signed discard; no unrecorded deletion or artificial heat source.",
+  "limits": "Radiation/metric histories are prescribed for this sweep. Additional fluid motion has not yet been returned into their evolution. Native derivative sampling and finite reconstruction are not uniform physical certification.",
+  "budgets": {
+    "check_seconds": 35,
+    "pilot_seconds": 35,
+    "production_seconds": 160,
+    "CPU_threads": 1,
+    "memory_GB": 2,
+    "new_native_bank_calls": 0
+  },
+  "gates": {
+    "owner": 1e-08,
+    "directional": 0.002,
+    "conservation": 1e-08,
+    "time": 0.02,
+    "background_time": 0.02,
+    "small_relative_state": 1e-06
+  },
+  "stop": "Stop on support, original owner guards, directional/conservation error or wall cap. Measure actual prefixes before production with2x cost margin. No automatic extra clocks,domain,EOS support or weakened gates.",
+  "reference": "https://arxiv.org/abs/gr-qc/0201064",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_material_response.py": "49022adc5cfc0e44195a886a2eed9a554c80ec40d7c8aca819536dc2ff63407c",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_projected_evolution.py": "abb57285b6f1b1dc0fa3dcd9488e441dba381d4ad4282c64e2f7bf57f5355a6b",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_monolithic_response.py": "76eab50e7cb8115bff4ce959641ed3cc9e7eabcf13bcae54b321b33f2ac5a695",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-collision-response/monolithic/result.json": "974ce60f642b0343fc9273f5380d167edd7636b9b6fbf90a4bc6feb214a4fc2e",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-collision-response/monolithic/steps-128-reference-128.npz": "dfc0d09415b64f08c45c8107ba1dcceccf2ec694f3ad434464853e4599d61bd6",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-collision-response/monolithic/steps-128-reference-64.npz": "70ec9230f38833c4bc3eed645296b313fbbe8edb645fa707adf40bdf25329851"
+  }
+}

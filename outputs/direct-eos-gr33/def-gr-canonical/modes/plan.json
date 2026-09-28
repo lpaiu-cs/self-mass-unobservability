@@ -1,0 +1,35 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "29fe9acd",
+  "claim": "Resolve remaining time-propagation error of the complete canonical GR energy by analytic heat-pole oscillator response in a mass-orthonormal rational space.",
+  "method": "Shift128, nested dimensions128/256/512, exact symmetric weak-form projection and exact pole response up to an explicit negligible exponential bound. No eigenvalue clipping or damping.",
+  "decision": "Only if all original four histories meet relative2% and order1.5, perform fixed coefficient, outer3R and coarser-space contrasts. No larger basis or refined spatial grid on failure.",
+  "gates": {
+    "relative": 0.02,
+    "order": 1.5,
+    "coefficient": 0.02,
+    "outer": 0.002,
+    "spatial": 0.02,
+    "linear_residual": 1e-09,
+    "heat_balance": 2e-13
+  },
+  "budget": {
+    "pilot_size": 64,
+    "production_maximum_size": 512,
+    "maximum_models": 4,
+    "hard_seconds": 450,
+    "CPU_threads": 1,
+    "memory_GB": 3,
+    "new_EOS_calls": 0,
+    "automatic_expansion": false
+  },
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_energy_modes.py": "cc10e572c8a0b1f1f4846e348ab9c9ca68d82186111431ee1cc0d291937b436d",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_energy_evolution.py": "119ddc3820bf565083972edfae1eeec6bb972cc2d665423e90978d347ac18eec",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_energy_fem.py": "b032fd679022359230a75537dcfc51102454043b665b1da64cda5b00c637b65b",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_gr_canonical.py": "950d245c6f2cd50c4e682d5cb8553ea31a2d08783f9fc88bfbe7dccc59ee973b",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/fine-bank.npz": "b4493a6e4cfb20d741725ecb61cec154ab9fc51a694001865748741060018d7e",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-radial-conduction-reconnect/coarse-bank.npz": "ea020f69b240c5c5cdd8810f963d88e5cc2d3269aff12c659422a7a6541ae0df",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-gr-canonical/evolution/result.json": "25e222aaba641a1c30d2bfc5c1d2f02b4a3b2be5d9135eb353f869c9d789ff10"
+  }
+}

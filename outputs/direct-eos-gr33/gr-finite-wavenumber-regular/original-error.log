@@ -1,0 +1,25 @@
+Traceback (most recent call last):
+  File "/mnt/e/lab/self-mass-unobservability/verification/gr_finite_wavenumber_runner.py", line 47, in <module>
+    if __name__=='__main__':globals()[sys.argv[1]]()
+  File "/mnt/e/lab/self-mass-unobservability/verification/gr_finite_wavenumber_runner.py", line 43, in run
+    def run():module()['run']()
+  File "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-finite-wavenumber-defined/effective-source.py", line 160, in run
+    plan=bindings();symbolic();controls();mp.mp.dps=plan['mp_decimal_digits'];iv.prec=plan['interval_bits']
+  File "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-finite-wavenumber-defined/effective-source.py", line 144, in controls
+    integral=mp.quad(f,points);source=cold(x,Q)
+  File "/usr/lib/python3/dist-packages/mpmath/calculus/quadrature.py", line 745, in quad
+    v, err = rule.summation(f, points[0], prec, epsilon, m, verbose)
+  File "/usr/lib/python3/dist-packages/mpmath/calculus/quadrature.py", line 233, in summation
+    result = self.sum_next(f, nodes, degree, prec, results, verbose)
+  File "/usr/lib/python3/dist-packages/mpmath/calculus/quadrature.py", line 307, in sum_next
+    S += self.ctx.fdot((w,f(x)) for (x,w) in nodes)
+  File "/usr/lib/python3/dist-packages/mpmath/ctx_mp_python.py", line 936, in fdot
+    for a, b in A:
+  File "/usr/lib/python3/dist-packages/mpmath/calculus/quadrature.py", line 307, in <genexpr>
+    S += self.ctx.fdot((w,f(x)) for (x,w) in nodes)
+  File "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/gr-finite-wavenumber-defined/effective-source.py", line 143, in f
+    return p*p/mp.sqrt(1+p*p)+p*(1+p*p-Q*Q)/(2*Q*mp.sqrt(1+p*p))*mp.log(abs((p+Q)/(p-Q)))
+  File "<string>", line 7, in __div__
+  File "/usr/lib/python3/dist-packages/mpmath/libmp/libmpf.py", line 960, in mpf_div
+    raise ZeroDivisionError
+ZeroDivisionError

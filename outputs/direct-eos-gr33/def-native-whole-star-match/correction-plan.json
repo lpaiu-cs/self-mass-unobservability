@@ -1,0 +1,72 @@
+{
+  "classification": "Counterexample candidate",
+  "failed_result_preserved": true,
+  "cause": "The root is accurate for the coarse ODE but not invariant under the registered tighter envelope/core evaluation. The dense envelope temperature error drives the residual, so root status is insufficient.",
+  "method": "Reuse the already measured 6x6 Jacobian; at most3 Newton corrections at core sub8/native envelope tolerance2e-9. One final independent sub16/tolerance2e-10 evaluation. No new finite-difference Jacobian, unchanged equations, input inventory and original gates.",
+  "budget": {
+    "prior_compute_seconds": 321.34504096300003,
+    "forecast_total_seconds": 527.877059159,
+    "total_cap_seconds": 600,
+    "hard_remaining_seconds": 278,
+    "newton_corrections_max": 3,
+    "new_full_jacobians": 0,
+    "automatic_expansion": false
+  },
+  "bindings": {
+    "verification/def_native_whole_star_correct.py": "827101e6bdab17fc9b796e921e81e2f09ec164a08aaa211e023e425912b24bd0",
+    "verification/def_native_whole_star_match.py": "ad91b95ad3bb0f0fd7629e9d23677375b806ba2bf373fc6765c5627d132634c8",
+    "outputs/direct-eos-gr33/def-native-whole-star-match/result.json": "cc7791fd08aa07e3b02cd0ddf8cdd0cff99b54f7aad490e8c295fbd5a36719af",
+    "outputs/direct-eos-gr33/def-native-whole-star-match/progress.json": "f9666cfdb2404fc20069f0896c48f014ec6a90fa6704798b7c60cad08a40d0d4",
+    "outputs/direct-eos-gr33/def-native-whole-star-match/plan.json": "5f6ac5f533f3446951af42542fd6baace13b817a3637e1bb7db636e762c4b8b8"
+  },
+  "jacobian": [
+    [
+      -0.03188891224189975,
+      -0.6267574979081648,
+      -0.5277536075792845,
+      5.766220834160345e-12,
+      2.120185971228283e-06,
+      0.0011401877390005081
+    ],
+    [
+      1.1753931149624003e-06,
+      2.310318603093413e-05,
+      -1.0006904161419252,
+      -8.548717289633629e-12,
+      -1.2989609388086918e-10,
+      -4.1960879202388834e-08
+    ],
+    [
+      1.5470089087173102,
+      17.162069607221607,
+      12.149183989507154,
+      -3.161915174139815e-10,
+      -4.880924109319198e-05,
+      -0.03122104103145271
+    ],
+    [
+      -1.880458087753925,
+      99.69917056194886,
+      108.2702479520137,
+      0.9999532518124566,
+      8.111914949804989,
+      -0.2401703327007788
+    ],
+    [
+      -67.30084649052125,
+      -1061.633107511143,
+      -1113.8138818722612,
+      -0.0005534706275524679,
+      -65.53765796582337,
+      2.406362665343685
+    ],
+    [
+      0.0,
+      0.18649642141707912,
+      -0.19250823868333106,
+      0.0,
+      1.0879297462883875e-06,
+      0.14687217810617118
+    ]
+  ]
+}

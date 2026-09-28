@@ -1,0 +1,32 @@
+--- initialization/Delay_brut.cpp
++++ readout/Delay_brut.cpp
+@@ -705,6 +705,15 @@
+         }
+     }
+ 
++
++    static bool exported15=false;
++    if (!exported15 && !einstein && shapiro && aberration && spinaxis==NULL) if(const char* file15=getenv("TIMING15_NONGEOM")) {
++        FILE* f15=fopen(file15,"w");if(!f15)throw runtime_error("readout export");
++        fprintf(f15,"%La %La %La %La %La %La %La %La\n",tis[0],Mp,Mi,Mo,freq,clight,deuxpi,daysec);
++        for(int k=0;k<3;++k)fprintf(f15,"%La ",SSB_to_PSB[k]);
++        for(int k=0;k<6;++k)fprintf(f15,"%La %La %La ",sp[0][k],si[0][k],so[0][k]);
++        fprintf(f15,"%La\n",delay[0]);fclose(f15);exported15=true;
++    }
+         return ;
+ }
+ 
+@@ -819,5 +828,13 @@
+      }
+ 
+ 
++
++    static bool exported15=false;
++    if (!exported15 && kopeikin && shklovskii) if(const char* file15=getenv("TIMING15_GEOM")) {
++        FILE* f15=fopen(file15,"w");if(!f15)throw runtime_error("readout export");
++        fprintf(f15,"%La %La %La %La %La %La %La %La %La\n",tis[0],currentBAT,posepoch,distance,distance_derivative,clightdays,yrsec,clight,radmasdeg);
++        for(int k=0;k<3;++k)fprintf(f15,"%La %La %La %La ",SSB_to_PSB[k],proper_motion[k],r_obs[k],sp[0][k]);
++        fprintf(f15,"%La\n",delay[0]);fclose(f15);exported15=true;
++    }
+         return ;
+ }

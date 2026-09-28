@@ -1,0 +1,7 @@
+{
+  "classification": "Counterexample candidate",
+  "stage": "zero-coupling control",
+  "error": "NumPy 2 batched solve RHS shape: size 129 differs from 9",
+  "physical_production_started": false,
+  "repair": "Append a singleton RHS axis then extract the last axis; frozen equations and gates unchanged."
+}

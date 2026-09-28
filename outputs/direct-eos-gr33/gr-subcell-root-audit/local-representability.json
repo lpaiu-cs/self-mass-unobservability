@@ -1,0 +1,42 @@
+{
+  "classification": "Proven",
+  "adjacent_binary64_inputs": true,
+  "two_point_energy_unit_scores": [
+    {
+      "display": "[1.001434348639148414087150301987844948110507304103115414322696149868616169980357600056, 1.001434348639148414087150301987844948110507304103115414322696149868616169980357602165]",
+      "binary_endpoints": [
+        [
+          0,
+          237482343348096802065843864924606873331357780933045342858314138259433079570555555,
+          -267,
+          268
+        ],
+        [
+          0,
+          474964686696193604131687729849213746662715561866090685716628276518866159141111111,
+          -268,
+          269
+        ]
+      ]
+    },
+    {
+      "display": "[1.001434348639151971896659132966548661071178487553905161427244865537951117205785126649, 1.001434348639151971896659132966548661071178487553905161427244865537951117205785130865]",
+      "binary_endpoints": [
+        [
+          0,
+          118741171674048822886306775653383060353271554714675822254527989548012591476798327,
+          -266,
+          267
+        ],
+        [
+          0,
+          237482343348097645772613551306766120706543109429351644509055979096025182953596655,
+          -267,
+          268
+        ]
+      ]
+    }
+  ],
+  "statement": "For the two consecutive binary64 lnT inputs and the recorded native entropy outputs interpreted as exact rational oracle values, both energy-unit residuals exceed the unchanged budget, even with interval evaluation of exp(lnT). There is no binary64 lnT value strictly between these endpoints. Hence this input interval has no admissible point under that oracle/gate representation.",
+  "limit": "No enclosure of native EOS evaluation error or physical entropy is assumed or proven. Opposite signs alone are not a validated continuum root bracket without an EOS error enclosure and continuity. Wider searches do not change this local fact. Higher-precision input/evaluation or a justified interval primitive representation is required before calling a repaired full-grid run a pass."
+}

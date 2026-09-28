@@ -1,0 +1,90 @@
+{
+  "classification": "Counterexample candidate",
+  "passed": true,
+  "readouts": [
+    {
+      "name": "driven_minus_undriven",
+      "amplitude": 0.00033723965178361615,
+      "differences": [
+        2.0024127967037927e-05,
+        6.439553757000256e-06
+      ],
+      "order": 1.6367067937165873,
+      "relative_time_difference": 0.019094889117997553,
+      "signal_over_empirical_time_error": 26.185017200688208
+    },
+    {
+      "name": "material_coupling_contrast",
+      "amplitude": 0.00021186499573193495,
+      "differences": [
+        1.2806142069571311e-05,
+        4.097659008101395e-06
+      ],
+      "order": 1.6439640814676033,
+      "relative_time_difference": 0.019340896753355204,
+      "signal_over_empirical_time_error": 25.851955386363425
+    }
+  ],
+  "paths": [
+    {
+      "label": "driven",
+      "steps": 48,
+      "seconds": 113.17366361999999,
+      "native_calls": 6611
+    },
+    {
+      "label": "decoupled",
+      "steps": 48,
+      "seconds": 89.82782265999998,
+      "native_calls": 5274
+    },
+    {
+      "label": "undriven",
+      "steps": 48,
+      "seconds": 52.161044532999995,
+      "native_calls": 3122
+    },
+    {
+      "label": "driven",
+      "steps": 96,
+      "seconds": 227.85313972899996,
+      "native_calls": 13277
+    },
+    {
+      "label": "decoupled",
+      "steps": 96,
+      "seconds": 192.145268741,
+      "native_calls": 10401
+    },
+    {
+      "label": "undriven",
+      "steps": 96,
+      "seconds": 99.36500358799992,
+      "native_calls": 5475
+    },
+    {
+      "label": "driven",
+      "steps": 192,
+      "seconds": 443.9282066689999,
+      "native_calls": 25808
+    },
+    {
+      "label": "decoupled",
+      "steps": 192,
+      "seconds": 344.58433101700007,
+      "native_calls": 20485
+    },
+    {
+      "label": "undriven",
+      "steps": 192,
+      "seconds": 187.98695578799993,
+      "native_calls": 11406
+    }
+  ],
+  "comparison_scope": "Same time-dependent undriven background plus any fixed polynomial in boundary drive and its first four time derivatives, with zero increment when the drive jet is zero. Tail readout tests this restricted class only; propagating scalar and acoustic memory are not automatically a thermal relaxation mode.",
+  "temperature_is_not_scalar_charge": true,
+  "fixed_grid_only": true,
+  "physical_EOS_certified": false,
+  "observational_closure": false,
+  "seconds": 1751.7215503730001
+}

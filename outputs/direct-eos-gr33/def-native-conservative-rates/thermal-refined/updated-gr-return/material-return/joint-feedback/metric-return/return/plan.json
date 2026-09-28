@@ -1,0 +1,34 @@
+{
+  "classification": "Counterexample candidate",
+  "before_checkpoint": "60877e975",
+  "claim": "Apply only the compensated new GR geometry and its actual paired photon transfers to free mass/momentum/energy/H, then export its pressure/trace and solve its compact GR contribution.",
+  "budgets": {
+    "pilot_seconds": 45,
+    "production_seconds": 350,
+    "CPU_processes": 3,
+    "threads_each": 1,
+    "total_virtual_GiB": 6,
+    "source_seconds": 75,
+    "GR_seconds": 120
+  },
+  "reuse": "Same updated physical background and adaptive signed material derivative owner. Its existing perturbation-size normalization handles the smaller direction without adding it to the large completed response. Reuse Phase134 full late-CFL raw-call counts for the forecast.",
+  "gates": {
+    "time": 0.02,
+    "background": 0.02,
+    "conservation": 1e-08,
+    "directional": 0.002,
+    "pressure": 0.002,
+    "GR_quadrature": 0.002,
+    "independent": 1e-09
+  },
+  "limits": "A finite additional GR feedback sweep, not an error enclosure. Do not use the measured gain as a uniform operator norm or disregard the remaining Phase134 waveform mismatch.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_feedback_metric_return.py": "46e9df0869340994cad010b38c6f43be59a425969f720e6ccc03999901a9e57f",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_feedback_metric_return.py": "d1eee97bcbfae9c6422c4401b4bc2406ca5a075758af09848cc797f5a387a001",
+    "/mnt/e/lab/self-mass-unobservability/verification/verify_native_updated_joint_feedback.py": "cd4fb3ab49d21b351c8107cae9db4d75375cf569719c920ff075bc0d49195cb8",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/metric-return/plan.json": "3b9c37ad96040da41c2c7bf9ef29879dcf9f5809e492ba0c917f9ff7b1a675bc",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/metric-return/lapse/result.json": "750c746e5fdb6926d9c325833e1aff430f97f4dd56d2d4760d21198e3fce260d",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/metric-return/response/result.json": "8fbd88f0e1c9cdf78173bda59317ea41b065e366852491600dadf8b240ff2080",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-conservative-rates/thermal-refined/updated-gr-return/material-return/joint-feedback/return/production.json": "60607be8be5278dbeb3d610f8a9753956b2e9e1087947a17bab5e64c290364fb"
+  }
+}

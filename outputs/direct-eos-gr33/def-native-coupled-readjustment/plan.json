@@ -1,0 +1,62 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "4c6f99a28",
+  "claim": "Apply the actual Phase92 native core/envelope background to simultaneous thermal, material, scalar and metric evolution. Retain the base cooling, nonzero outgoing flux and finite-pressure scalar junction.",
+  "equations": "qdot=w-H*f; M*wdot=-K*q+F*E+causal_photon_force; Edot=f; internal fdot=lambda*(tc*L0+Lq*q+LE*E-f); outgoing f=tc*L0+4*tc*L0*surface_Lagrangian_delta_lnT.",
+  "initial": "q=E=0, physical qdot=0, nonzero stored constitutive currents f=tc*L0 and w=H*f. No artificial zero-current startup. Internal core gradients set L0; shared base and radiative envelope use the matched L0.",
+  "scope": "Frozen LTE grey Cattaneo coefficients and composition, temperature feedback, fixed emitting geometry. Finite gas pressure is held by an explicit bath. Rays use the same emitted-energy history. No claimed physical non-LTE atmosphere, complete metric-dependent transport, continuum proof or final charge.",
+  "horizon_seconds": 0.0034344311179287023,
+  "paths": [
+    "p4-16",
+    "p4-32",
+    "p4-64",
+    "p2-64"
+  ],
+  "gates": {
+    "temperature_time": 0.02,
+    "temperature_space": 0.02,
+    "GR_time": 0.03,
+    "GR_space": 0.03,
+    "linear_residual": 1e-09,
+    "heat_identity": 1e-09,
+    "inventory": 1e-12,
+    "tangent_temperature": 0.05
+  },
+  "decision": "Accept only the fields whose independent time/space controls pass. If any gate fails preserve the failure and diagnose before changing resolution, horizon or physical equations. No automatic extension.",
+  "budget": {
+    "total_seconds": 600,
+    "pilot_seconds": 60,
+    "CPU_threads": 1,
+    "memory_GB": 5,
+    "native_calls": 6003,
+    "maximum_production_paths": 4,
+    "automatic_expansion": false
+  },
+  "bindings": {
+    "verification/def_native_coupled_readjustment.py": "e63c7c13d35cd017ffadd1be707e022320712a3c3dd312a441e596229b813548",
+    "verification/def_native_whole_star_match.py": "ed2aa9ed37b9dfa187f543c3bd399860a8bb230bbc8956902ce4388857f2c185",
+    "verification/def_native_photon_exterior.py": "7f49ce3e8bfda7ec975eac0eae43345b5b1f34a18084e2b41c459602e5f46d48",
+    "verification/def_gr_hierarchical.py": "7861123d4adfdfdaa21daee3fc7d79dcdffdd024ca48b3f453921b5cb745992b",
+    "verification/def_gr_spatial_repair.py": "d13044861c2b4761d5e6349d809c3368f46112974f374aa050aada516c80f8e5",
+    "verification/def_native_temperature_closure.py": "fadab7b4fc656ebf8b522b8fdc26a8196afa15d646cf76d3b2cd1ec7d0b9fed7",
+    "outputs/direct-eos-gr33/def-native-whole-star-match/background.npz": "07cf1bdca40788799b7aea67273e73fafb5bda615103bdd73aac38bc020a5acf",
+    "outputs/direct-eos-gr33/def-native-whole-star-match/final-core.npz": "386c48ad8a2038332242075bcf45c93b9241b18763aba3004d12a799a1d61b14",
+    "outputs/direct-eos-gr33/def-native-whole-star-match/final-envelope.npz": "cdb53cf0830fa5442deb22fac2d78781935290ed86f8a580d5a1083ebb8c6a56",
+    "outputs/direct-eos-gr33/def-native-whole-star-match/audit.json": "ebc72ced573988b4e4758280f18b7156a9fdbbe8e896b74e3266da0ea0d73c04",
+    "outputs/direct-eos-gr33/def-gr-canonical/regular/symbolic.json": "8f8cde31425ed8b59bc502949deac818c1d062a587a3080e5ee3a7210dd04323"
+  },
+  "symbolic": {
+    "classification": "Proven",
+    "passed": true,
+    "temperature": {
+      "classification": "Proven",
+      "passed": true,
+      "identity": "Delta lnT = ad*Delta lnrho + Q/(cv*T). Equivalently ad*(Delta lnrho-rho_ref)+Q/(cp*T), rho_ref=rho_T_at_P*Q/(cp*T). cp/cv=1-ad*rho_T_at_P.",
+      "preserved_cp_use": "The fixed-pressure entropy-density source rho_ref still uses cp, as before. Only the temperature map written in total-density coordinates needs cv.",
+      "scope": "Thermodynamic differential identity at fixed composition; no physical EOS error certificate."
+    },
+    "finite_surface": "Continuity of the Lagrangian scalar gradient gives Pcanonical_inside-Pcanonical_outside=8*pi*A4*C*r^3*p*(2*alpha+r*Phi)*zeta. It vanishes only at zero pressure.",
+    "pressure": "Pcanonical_fluid=-4*pi*A4*C*r^3*DeltaP/b. The frozen emitting geometry boundary has DeltaP=4*Prad*Delta lnT, with fixed external gas pressure.",
+    "scope": "Algebraic boundary and thermodynamic identities in the declared tangent model. Photon corrections to background coefficients, moving-ray geometry, nuclear evolution and non-LTE opacity are outside this model."
+  }
+}

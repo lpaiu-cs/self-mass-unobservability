@@ -1,0 +1,33 @@
+{
+  "classification": "Counterexample candidate",
+  "bindings": {
+    "verification/def_conduction_component.py": "99429632233f9cea4fd8fa08438f5a212991f272e91435b422cf1e914e35d2ed",
+    "verification/def_conductive_cauchy.py": "16c558db20b7355e60d1008d9ee297d4ffd525dbbbbae0a53c53d43be7e84fc5",
+    "outputs/direct-eos-gr33/def-conduction-core/coupled/plan.json": "789cb5a75130fca7cf98ef03552bcfa5c087d37580b7263d0db8212f72c4f118",
+    "outputs/direct-eos-gr33/def-conduction-core/coupled/result.json": "2095af65f7822070f94da77769b6eeddd818f03a051d7f93e6da12b215f59a88",
+    "outputs/direct-eos-gr33/def-conduction-core/coupled/heat-only-64.npz": "c93b683fea4a5a7503e52db1570f55c90456f9e8e1f29a09369fb99e99c6e5b3",
+    "outputs/direct-eos-gr33/def-conduction-core/coupled/heat-only-64.json": "c166cde569de869f7e16a5fa1f5dea9d9b637c080639ea716a2e3fa103a0c2f4"
+  },
+  "reason": "Combined readout is dominated by the previously solved reactive source. Passing its norm cannot validate the much smaller added conduction response. Isolate the already declared linear source component without increasing grid resolution, horizon, collision samples or relaxing the old criteria.",
+  "cases": [
+    "heat-16",
+    "heat-32",
+    "coarse-bank-64",
+    "outer-64"
+  ],
+  "gates": {
+    "time_relative": 0.02,
+    "time_order": 1.5,
+    "coefficient_relative": 0.02,
+    "outer_relative": 0.002,
+    "heat_balance": 2e-13
+  },
+  "budget": {
+    "steps": 176,
+    "paths": 4,
+    "hard_seconds": 60,
+    "forecast_seconds": 52,
+    "basis": "Measured setup 3.71 s/path and 0.1143 s/step, times 1.5 allowance. Reuse the already saved fine heat-only 64 path.",
+    "automatic_expansion": false
+  }
+}

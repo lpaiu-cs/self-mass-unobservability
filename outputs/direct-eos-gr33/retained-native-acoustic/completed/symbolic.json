@@ -1,0 +1,9 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "premise": "Differentiable constrained EOS at fixed specific chemical inventories; reversible adiabatic first law du=P/rho dlnrho.",
+  "temperature_slope": "(P/rho-u_x)/u_T",
+  "bulk_modulus": "P_x+P_T*(P/rho-u_x)/u_T",
+  "gamma": "bulk_modulus/P",
+  "sound_speed_squared_over_c_squared": "bulk_modulus/(rho*(cx*c^2+u)+P)"
+}

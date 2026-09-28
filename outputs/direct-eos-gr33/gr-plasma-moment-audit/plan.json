@@ -1,0 +1,11 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "d5246ee",
+  "bindings": {
+    "verification/verify_plasma_moment_certificate.py": "fa6d908041e0bd754845cbfec7dffcd90ecfbefd564a39285e632d5cc83b4729",
+    "outputs/direct-eos-gr33/gr-plasma-moment-certificate/manifest.json": "203e1631e831403a9fc3cc73d024853d234e735600ed536f43fe6a4a8369dd5a"
+  },
+  "rule": "Use outward saved decimal moment-error upper bounds and denominator lower bound as exact Fractions. Recompute coefficient/kernel budgets, including the saved certified tail upper bounds. Preserve the original arithmetic outputs and record any additional outward export padding.",
+  "threshold": "1e-10",
+  "physical_EOS_certified": false
+}

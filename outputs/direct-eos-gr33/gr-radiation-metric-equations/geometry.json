@@ -1,0 +1,15 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "metric_constraints": [
+    "m_r=4*pi*r^2*E",
+    "a_t=-4*pi*r*a^2*N*J",
+    "N_r/N=a^2*(m/r^2+4*pi*r*S)",
+    "m_t=-4*pi*N*r^2*J/a"
+  ],
+  "energy": "d_t(a*r^2*E)+d_r(N*r^2*J)=-r^2*(a_t*S+J*N_r)+N*a*r^2*sE",
+  "momentum": "d_t(a^2*r^2*J)+d_r(N*a*r^2*S)=N*a*r^2*(S*a_r/a+2*Pperp/r-E*N_r/N)+N*a^2*r^2*sJ",
+  "baryon": "d_t(a*r^2*D)+d_r(N*r^2*D*v)=0; D=rho_B/sqrt(1-v^2)",
+  "constraint_propagation": "The energy equation with zero TOTAL source and the three metric constraints imply m_rt=m_tr. Matter/radiation four-forces must cancel in the total stress tensor. An unrepresented volumetric neutrino loss does not satisfy this zero-total-source premise.",
+  "limitation": "Smooth spherical tensor identities in this gauge, not a numerical evolution, nonlinear stability proof or EOS certificate."
+}

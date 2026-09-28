@@ -1,0 +1,54 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "f2be22103",
+  "claim": "Replace the unresolved staggered P1 photon field by nonnegative angular occupations in the same actual native interior, and evolve those occupations together with nonlinear hydrogen and heat.",
+  "decision": "A positive, conservative angular solution with bounded time/angle comparisons may supply the spectrum/flux for the moving atmosphere; no final charge from the old incompatible moment reconstruction.",
+  "reuse": "Same16 native radii,152 frequencies,96 nonlinear EOS/rate states and3.434ms horizon. No repeated native bank, no fluid or full-GR rerun.",
+  "model": "Axisymmetric angular finite volumes at fixed Killing frequency in the saved Jordan metric. Conservative radial and angular upwind streaming; nonlinear reciprocal H bound-free exchange and the normalized angle-dependent Thomson kernel. Fixed density/metric and other local initial ionic inventories remain.",
+  "initial": "Preserve local Planck mean, saved grey flux and K/J=1/3. For flux ratio<=1/2 use two constant hemispheres. Where flux is slightly larger, use a positive quadratic outgoing hemisphere with the same three discrete moments and zero incoming hemisphere. This supplies previously unspecified higher angular moments, not a uniquely inferred observed field.",
+  "boundary": "Vacuum incoming at the outer surface. Inner incoming angular spectrum fixed to its actual saved background; inner outgoing is transported. Export the actual outgoing surface occupation and both Killing energy and photon-number port histories.",
+  "discretization": "Backward Euler positive streaming, followed by conservative nonlinear implicit local exchange. First-order splitting; independent64/128 time and8/16 angle comparisons. Photon positivity is checked without clipping.",
+  "gates": {
+    "energy": 1e-08,
+    "local_exchange": 1e-09,
+    "positive_photons": true,
+    "moment_variance": 1e-12,
+    "time_trace": 0.02,
+    "time_surface_spectrum": 0.02,
+    "angle_trace": 0.02,
+    "angle_surface_spectrum": 0.02
+  },
+  "budget": {
+    "pilot_angles": 8,
+    "pilot_steps": 32,
+    "paths": [
+      [
+        8,
+        64
+      ],
+      [
+        8,
+        128
+      ],
+      [
+        16,
+        128
+      ]
+    ],
+    "transport_seconds": 120,
+    "native_audit_calls": 80,
+    "native_audit_seconds": 15,
+    "CPU_threads": 1,
+    "memory_GB": 2
+  },
+  "forecast": "Phase109 global nonlinear sparse solve took41.7s. Angular transport here factors only128/256 streaming unknowns once and solves local2variable material equations; actual cost unmeasured. Measure pilot before production; forecast with3x angular scaling margin.",
+  "stop": "No automatic radius,frequency,time,angle or native-support enlargement. Preserve a failed path. Positive angular moments do not certify radial/frequency convergence, physical spectrum, moving gas, all reaction channels or full GR/scalar feedback.",
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_angular_photons.py": "9bf6f09012009c4376ad1579c62bc85bc944756c26c79ee6116f6294adac1abf",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_causal_nonlinear.py": "30a951fc7c2e22602c412cabc44e411d72574720dc7a6e001ea410466f57738a",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-causal-photons/bank-16-8.npz": "a1a50db7f12f7111bd87a9e46a514e1db75227f5e74d234f64beafc6a67b6104",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-causal-photons/nonlinear/bank.npz": "aea1336c6593876117420be212837ec6f44e1990d3c9c48c3aaa70c61185535e",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-causal-photons/nonlinear/repaired-bank.json": "e22402867a584f2f2e5fec2961958a49f6dcf5cce0b9c6c30fa8bdd27116582f",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-causal-photons/nonlinear/audit.json": "30817e1b887e31a4ad6c1b937e7684d981d443c85dc9cd99241ccfade003152c"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "40892f8",
+  "bindings": {
+    "verification/gr_nonlinear_thermal.py": "bc8d34d693acbeccc87d18018217452127c218301e7900a14d9f7c0272963e61",
+    "verification/opacity_tables.py": "ba01a5ebe3062eb1b13b23ccb918f99158fba6fd0c72fcba191c1ba4a028c7b9",
+    "verification/conservative_star.py": "9bcfe7bd2c07504abb6da3a5e7deea07c9c9b08f27ed12b33dd9310497cd60b7",
+    "verification/direct_eos_gr.py": "5709a4cbf5830de09001481813617d43ee2c935a0dff3cd813110d73a7066fdf",
+    "outputs/direct-eos-gr33/initial-state-17-4.npz": "5dcc8ffb8b32a9f15ccc4c8bb7111d19be8dcdc66611ad2942e3a4a0cf6cc6d6",
+    "outputs/direct-eos-gr33/initial-GR.json": "b6e5840a94c820af9f729b17c45acc2c8cc03d3b220d09880a487f93640eb3f8",
+    "outputs/direct-eos-gr33/gr-microphysics/auxiliaries.npz": "63744d1a041ebc39bd33dfa0f5e181d64378966c1ee22364c477009bee08d976",
+    "outputs/direct-eos-gr33/gr-opacity/new-GR-captured.npz": "32975fa6317f066f122dfdca8cf88d84fcaa79b182416df5b01b3593d44b6ef3",
+    "outputs/direct-eos-gr33/gr-opacity/evaluation.npz": "4d1274167b4b26a23308e9e978841f774d9d41d350ae79c4aad125108c4a2b2c",
+    "outputs/direct-eos-gr33/gr-transport/diagnostics.npz": "296f6bcdd1623223957e0b1c391f89ea6613141337c6dc308e155650fb98b669",
+    "verification/gr_caloric_refinement.py": "6dd36f53e9fe504efb3ef895e96d2cf73dfb977d8420c219554aa88a9d6c0e1e",
+    "outputs/direct-eos-gr33/gr-caloric-increment/plan.json": "95a35c02ee620b30158e417a73af3e27fab7a6bc23f61f980cae9b311ad03607",
+    "outputs/direct-eos-gr33/gr-caloric-audit/path-2.json": "7b3802b0d8819d8747b3d52ce84c277f6ba0e499de4e4a05e4e61bf40b2451ad",
+    "verification/gr_caloric_64.py": "b6ac9792585a09a70d439c34753b7323ea07ffe4a2e25b8d8efff98bfc3c547e",
+    "verification/gr_caloric_resume.py": "ea40f76fa785a2852f2c9dca793c91727fa2401a3bed5c953b28ab27e1ca8be7",
+    "outputs/direct-eos-gr33/gr-caloric-refinement/plan.json": "ff7eea5d9398551c53edee3f9ee3c569809a3fe58a09eb41c47df03fde457cde",
+    "outputs/direct-eos-gr33/gr-caloric-refinement/exact-audit/path-32.json": "007697854d7d2c8786acb90fd1c3313797be4172816b78b0dac058c6d118c5a9",
+    "outputs/direct-eos-gr33/gr-caloric-refinement/path-32.npz": "bde3f093126ada057f21f16191e7cf3768e43111f3dc6fe4cc6bd818343ba970",
+    "outputs/direct-eos-gr33/gr-caloric-64/path-32.npz": "bde3f093126ada057f21f16191e7cf3768e43111f3dc6fe4cc6bd818343ba970",
+    "outputs/direct-eos-gr33/gr-caloric-64/original-run.py": "e5ce9fe7257c7b344a6050cc535e2fd58785bb3a3b79a268d0bcb14b4b363e3a",
+    "outputs/direct-eos-gr33/gr-caloric-64/resumed-run.py": "68e44d9a7dcdb926b5f6fe8662c07e159c9e9dd91f8980686ebb795a37e46249"
+  },
+  "processes": 8,
+  "step_counts": [
+    64
+  ],
+  "duration_rule": "min(1 coordinate second, 0.02/max(abs(initial closed dlnT/dt)))",
+  "max_Newton_iterations": 12,
+  "max_backtracks": 10,
+  "temperature_step_cap": 0.1,
+  "local_energy_residual_scaled_tolerance": 2e-12,
+  "global_energy_relative_to_exchange_tolerance": 1e-08,
+  "finite_time_refinement_logT_tolerance": 0.0001,
+  "boundary": "Both external faces closed, no nuclear or neutrino sources in this operator. Fixed baryon density, fixed GR geometry and fixed nuclear composition.",
+  "equation": "dm_i*N_i*(u_i(T_new)-u_i(T_old))=dt*(Linf_inner-Linf_outer). Face flux and EOS are fully reevaluated at the new temperature. Newton Jacobian includes opacity temperature derivatives.",
+  "limitations": "A nonlinear operator closure control, not a fluid/metric/atmosphere, convection or physical EOS certificate. Finite time refinement is not a rigorous time-error enclosure.",
+  "physical_EOS_certified": false,
+  "full_GR_evolution": false,
+  "caloric_coordinate": "U(delta)-U(0)=integral_0^delta [cv*T](lnT_old+z) dz. Store delta separately from the absolute binary64 log temperature. Four-point Gauss integration multiplies delta after summing capacities. No large absolute energy subtraction enters the residual.",
+  "Newton_method": "Use endpoint cv*T as the caloric quasi-Newton diagonal and the original analytic face/opacity derivatives. Require both original local residual and original global energy criteria before accepting a step.",
+  "quadrature_nodes": 4,
+  "independent_quadrature_nodes": 2,
+  "finite_quadrature_difference_tolerance": 1e-08,
+  "native_link": "Report the original absolute-energy endpoint difference against the caloric increment with an explicit endpoint ulp budget. It is not used to silently certify the new coordinate or its continuous error.",
+  "limits": "Fixed density/metric/composition closed operator. The integral chart equals the native energy only under first-law differentiability along the path. Native branch jumps, quadrature remainder, EOS primitive errors and physical calibration remain separate.",
+  "diagnostic_binding": {
+    "verification/gr_caloric_increment.py": "68a2a5e2a7543a11a7f70cafe8018c3cd649a8287459e4bcebc2e2c6a714fe87",
+    "outputs/direct-eos-gr33/gr-thermal-endpoint-replay/manifest.json": "06402fc4b3117d6099e146c5e70f37794cdda935190557dcb46b35822960da3f",
+    "outputs/direct-eos-gr33/gr-nonlinear-thermal/failure-manifest.json": "98a196472db0bd935508c3691115f4adc0764b40aadeaf8a3f519a3690db49e3"
+  },
+  "continuation": "The original exact 16/32 maximum stored lnT difference exceeded the unchanged 1e-4 time gate. Compute 64 steps from the same initial state with the identical duration, EOS, opacity, face operator, Newton method, arithmetic and tolerances. Retain all previous failures.",
+  "inherited_algorithm_sha256": "68a2a5e2a7543a11a7f70cafe8018c3cd649a8287459e4bcebc2e2c6a714fe87",
+  "resume": "Reuse the already checked reversible endpoint replay overlay. On first execution it restores zero steps. A later resume must exactly replay every saved accepted endpoint; no accepted state is reset or duplicated.",
+  "source_overlay": {
+    "shift=np.zeros(n,dtype=ld);old_a=base.copy();total_energy=np.zeros(n,dtype=ld);exchanged=ld(0);history=[];dt=duration/steps": "shift,old_a,total_energy,exchanged,history,dt,start_step=initialize_path(steps,n,duration,mass,base)",
+    "for step in range(steps):": "for step in range(start_step,steps):",
+    "np.savez_compressed(OUT/f'path-{steps}.npz',": "save_path(OUT/f'path-{steps}.npz',"
+  }
+}

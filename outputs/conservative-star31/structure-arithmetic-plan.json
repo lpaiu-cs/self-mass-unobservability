@@ -1,0 +1,17 @@
+{
+  "classification": "Counterexample candidate",
+  "input_sha256": "877414d781cc24a9d6da02b6a140093d7dbec633b4c9e6c1872b7bcf9ed24502",
+  "EOS_table_sha256": "c01bf08d851b28e8bd742fc58e6b0c71aa9338fecf69ada0d42e8fe7d3eb0965",
+  "shooting_parameters": [
+    48.49328826849363,
+    -3.6561530223160216e-05,
+    -2.916912266223843e-11
+  ],
+  "parameters_refitted": false,
+  "arithmetics": [
+    "binary64",
+    "longdouble"
+  ],
+  "scope": "Replay the same declared fixed shooting point with the same EOS table. Compare material-coordinate integration arithmetic and direct EOS evaluations. Extended precision does not improve the native binary64 EOS or certify physical/model error.",
+  "baseline": "Require the binary64 replay to reproduce saved geometry and thermodynamics bitwise before interpreting the arithmetic difference."
+}

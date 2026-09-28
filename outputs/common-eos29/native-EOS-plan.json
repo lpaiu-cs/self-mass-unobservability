@@ -1,0 +1,10 @@
+{
+  "classification": "Counterexample candidate",
+  "registered_before_argument_intervention": true,
+  "boundary": "The existing net_get interface explicitly accepts Ye, eta, d_eta_dlnT and d_eta_dlnRho. Evaluate these from the same declared FreeEOS composition map at the actual rho,T,X, pass them into our disposable native process before net_get runs, record original and used arguments, and restore their original bytes after return.",
+  "safety_and_integrity": "No returned reaction values are overwritten. The executable file remains SHA-identical. This is explicitly a changed scientific-input experiment, unlike the earlier read-only tracer. The shim refuses any screening mode except extended=2.",
+  "theta_e": "The source uses theta_e in the classic screening branch. The extended branch does not use it. Coulomb_Info stores theta_e but the supplied rates source has no read of that field. Preserve the original unused argument and bind these source files.",
+  "controls": ["Pass-through shim versus the prior read-only trace", "Used arguments equal saved replacements; all writes restored", "Direct returned heat/neutrino equals the native profile export", "Finite temperature derivatives versus an independently recomputed EOS-input perturbation"],
+  "tolerances": {"pass_through_relative": 1e-10, "native_export_relative": 1e-12, "burning_source_temperature_derivative_relative": 0.001},
+  "remaining_boundary": "Weak-rate and screening formulae retain their own approximation classes. In particular, the native derivative API does not accept state derivatives of Ye or composition derivatives of eta. Validate derivatives rather than assuming a complete EOS chain rule. Opacity and thermal-neutrino EOS auxiliaries remain separate."
+}

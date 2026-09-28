@@ -1,0 +1,85 @@
+{
+  "reason": "Preserve the second-time fine trajectory in memory while the reflecting-wall native comparison isolates outer exchange. The second-time coarse control continues.",
+  "boot_id": "9b968b4f-ecbd-483b-ada9-c1c871b6ab20",
+  "root": 1162,
+  "processes": [
+    {
+      "pid": 1162,
+      "parent": 1153,
+      "start": "620039",
+      "state": "S",
+      "command": "python3 verification/gr_implicit_second_heat_time.py run --refinement 4 --workers 10"
+    },
+    {
+      "pid": 1172,
+      "parent": 1162,
+      "start": "620836",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_second_heat_time.py run --refinement 4 --workers 10"
+    },
+    {
+      "pid": 1173,
+      "parent": 1162,
+      "start": "620836",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_second_heat_time.py run --refinement 4 --workers 10"
+    },
+    {
+      "pid": 1174,
+      "parent": 1162,
+      "start": "620836",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_second_heat_time.py run --refinement 4 --workers 10"
+    },
+    {
+      "pid": 1175,
+      "parent": 1162,
+      "start": "620837",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_second_heat_time.py run --refinement 4 --workers 10"
+    },
+    {
+      "pid": 1176,
+      "parent": 1162,
+      "start": "620837",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_second_heat_time.py run --refinement 4 --workers 10"
+    },
+    {
+      "pid": 1177,
+      "parent": 1162,
+      "start": "620837",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_second_heat_time.py run --refinement 4 --workers 10"
+    },
+    {
+      "pid": 1178,
+      "parent": 1162,
+      "start": "620837",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_second_heat_time.py run --refinement 4 --workers 10"
+    },
+    {
+      "pid": 1179,
+      "parent": 1162,
+      "start": "620837",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_second_heat_time.py run --refinement 4 --workers 10"
+    },
+    {
+      "pid": 1180,
+      "parent": 1162,
+      "start": "620838",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_second_heat_time.py run --refinement 4 --workers 10"
+    },
+    {
+      "pid": 1181,
+      "parent": 1162,
+      "start": "620838",
+      "state": "R",
+      "command": "python3 verification/gr_implicit_second_heat_time.py run --refinement 4 --workers 10"
+    }
+  ],
+  "all_stopped": true
+}

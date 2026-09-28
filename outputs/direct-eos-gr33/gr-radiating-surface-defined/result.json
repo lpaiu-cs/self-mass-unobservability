@@ -1,0 +1,26 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "necessary_junction": "In the comoving orthonormal surface frame, T_in(n,n)=P and T_in(u,n)=-Q. Pure outgoing null dust gives psi and -psi. Continuity therefore requires P=Q=psi. This is necessary, not a claim that this single equation suffices for complete matching.",
+  "outgoing_metric": "ds^2=-(1-2M(u)/R)du^2-2 du dR+R^2 dOmega^2; u is retarded Bondi time at infinity.",
+  "proper_time_relation": "Let sigma be surface proper time, U=dR/dsigma and Gamma=sqrt(U^2+1-2M/R)>|U|. Timelike normalization gives du/dsigma=1/(Gamma+U). On the interior material worldtube U=W*v/a and Gamma=W/a.",
+  "mass_and_readout": "With P=Q and full mass matching, dM/dsigma=-4*pi*R^2*Q*(Gamma+U). Hence L_infinity=-dM/du=4*pi*R^2*Q*(Gamma+U)^2. This is bolometric mass/energy flux; it does not determine a spectrum or instrument likelihood.",
+  "redshift_factor": "L_infinity/L_comoving=(Gamma+U)^2=(1-2M/R)*(1+v)/(1-v). At v=0 this reduces to 1/a^2, equal to N^2 only with the appropriate static exterior lapse normalization.",
+  "cgs_restoration": "For physical local heat flux q in erg/(cm^2 s), L_comoving=4*pi*R_cm^2*q. Use the same dimensionless redshift/Doppler factor. If M_phys is in grams and u in physical seconds, L_infinity=-c^2*dM_phys/du. Q=q/c in the interior stress tensor; it is not q itself.",
+  "saved_boundary": {
+    "surface_index": 0,
+    "log_pressure_exact": "2323444911467861/281474976710656",
+    "pressure_cgs_enclosure": "[3845.02167421667622400158470142161591642202368399109143479354, 3845.02167421667622400158470142161591642202368399109143479355]",
+    "pressure_cgs_display": 3845.021674216676,
+    "proper_Q_erg_cm3_exact": "0",
+    "outward_Linfinity_erg_s_exact": "0",
+    "normalized_P_minus_Q_over_P": "1",
+    "necessary_Vaidya_junction_satisfied": false,
+    "verdict": "The current positive-pressure, zero-heat material endpoint cannot be identified with a no-layer vacuum or pure outgoing Vaidya surface. It is a closed interior boundary. This does not invalidate its earlier closed-boundary control calculations."
+  },
+  "missing_boundary": "Retain or solve the exterior pressure-bearing atmosphere/radiation stress, or explicitly add a physically justified surface layer. Simply turning on a flux or relabeling the photospheric endpoint does not solve the matching problem. A general atmosphere need not obey the pure-null-dust condition P=Q.",
+  "actual_atmosphere_solved": false,
+  "actual_time_trajectory_computed": false,
+  "observational_inference_completed": false,
+  "new_dynamic_chi_observable_proven": false
+}

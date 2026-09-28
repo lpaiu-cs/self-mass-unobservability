@@ -1,0 +1,10 @@
+{
+  "classification": "Conjectural",
+  "target": "Outward interval derivative and centered-difference truncation bound for the four declared double-table weak vector contributions at all initial burning cells, with rho, free Ye and X fixed.",
+  "step": 5e-05,
+  "decimal_precision": 40,
+  "exact_model": "Treat the captured binary32 table coefficients/knots and binary64 initial T,rho,Ye,X, low-T rates as exact numbers. Temperature is T0 exp(s). Use exact bilinear log-rate interpolation, exp(log(10)*lograte), and the declared piecewise linear blend.",
+  "boundary": "Require the whole temperature stencil to stay in one table and blend branch. Record any crossing as not certified rather than differentiating through a kink.",
+  "proof": "On one branch L=exp(A+B*T9), D^3 L=(z+3*z^2+z^3)*L, z=B*T9. For a linear blend a, D^3[a*L+(1-a)*low]=a*D^3L+a_prime*(3*D^2L+3*DL+L-low). The centered derivative error is <=h^2 sup|D^3f|/6. Interval arithmetic also encloses the error of the saved floating derivative at the center.",
+  "excludes": "Other native reactions, EOS auxiliary derivatives, composition derivatives, physical nuclear/EOS data, GR evolution and observations."
+}

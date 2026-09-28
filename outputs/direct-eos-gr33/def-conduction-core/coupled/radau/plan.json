@@ -1,0 +1,41 @@
+{
+  "classification": "Counterexample candidate",
+  "bindings": {
+    "verification/def_conduction_radau.py": "86daa01d85c964bafb8e4ab2ca2113a1bd0f9540b2f7a69c3bcc5f84c101b230",
+    "verification/def_conductive_cauchy.py": "16c558db20b7355e60d1008d9ee297d4ffd525dbbbbae0a53c53d43be7e84fc5",
+    "outputs/direct-eos-gr33/def-conduction-core/coupled/plan.json": "789cb5a75130fca7cf98ef03552bcfa5c087d37580b7263d0db8212f72c4f118",
+    "outputs/direct-eos-gr33/def-conduction-core/coupled/component/result.json": "057d6a8c11a323889ec32b72a9ad4dd1907fb8a7eae1d6c2c2cbf89a9f420d80",
+    "outputs/direct-eos-gr33/def-conduction-core/bank.npz": "e06cedcea729c9299c2e59ce5b940ea9ccacd947a452cdec80ec209abfad24f9",
+    "outputs/direct-eos-gr33/def-conduction-core/coarse-bank.npz": "31acde08639f4d8713add4454d955985e8df68058bd41cab54f2b1caeb4021ac",
+    "outputs/direct-eos-gr33/def-conduction-core/coupled/radau/initial-source.py": "43a92947089ca6cd1fe189d90e5420d2be7ed4d3ed8d542d60466a067b986231",
+    "outputs/direct-eos-gr33/def-conduction-core/coupled/radau/initial-plan.json": "80e0348dabb97c396dffc8de566858ad8b0a48bb82c6d498e53c76bc9457c4fa"
+  },
+  "preserved_failure": "Newmark heat-only velocity time history: 32/64 relative difference 0.021965831943863916 and order 0.6167685881501919; scalar passed. Combined-source success does not repair this failure.",
+  "change": "Two-stage Radau IIA on exactly the same K,D,source and analytic microscopic lift. Third order and L-stable; no changed spatial mesh, source, time counts, boundary or accuracy gate.",
+  "paths": [
+    "heat-16",
+    "heat-32",
+    "heat-64",
+    "coarse-bank-64",
+    "outer-64",
+    "combined-64"
+  ],
+  "gates": {
+    "time_relative": 0.02,
+    "time_order": 1.5,
+    "coefficient_relative": 0.02,
+    "outer_relative": 0.002,
+    "linear_residual": 1e-09,
+    "heat_balance": 2e-13
+  },
+  "budget": {
+    "pilot_steps": 8,
+    "production_steps": 304,
+    "paths": 6,
+    "hard_seconds": 180,
+    "CPU_workers": 1,
+    "BLAS_threads": 1,
+    "automatic_expansion": false
+  },
+  "preserved_control_failure": "The oscillator position-only order check failed (2.64895 then 2.85296 at omega=3). The position error coefficient nearly cancels near phase pi. Preserve these values; validate the full scaled position/velocity phase vector and the independently derived exact RK discrete solution. Same 2.8 phase-order threshold, stellar gates unchanged."
+}

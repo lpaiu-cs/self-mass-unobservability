@@ -1,0 +1,10 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "7c14403",
+  "reason": "The direct one-step energy score passes at 9.95186e-7, but its 6.42e32 erg margin is smaller than the linearized entropy-inverse residual estimates. Keep that original numerical pass and the original running 2/4-step paths unchanged.",
+  "residual": "At every isentropic EOS inversion require abs(T*(s-s_target)) <= max(2 erg/g,32 ulp(abs(H))). This changes numerical root termination, not the EOS, matter, boundary luminosity, or original energy gate.",
+  "solver": "Fifteen positive-capacity Newton trials and up to three neighboring binary64 lnT values on either side. Record and stop on failure; do not raise the tolerance.",
+  "scope": "Independent re-projection of the already accepted one-step reference state, rebuilding its EOS table and fitting GR constraints. This does not yet re-integrate a strict-root trajectory or certify continuous/physical EOS error.",
+  "reference_sha256": "2fca68b03e6adcda523432b4bf4024a769730afbff84c3980079a462da163a17",
+  "original_state_sha256": "7e529c4596b2cb93c2fdfb7a0076bcde3918b17824dd76fb1fbaba1cbfda4a67"
+}

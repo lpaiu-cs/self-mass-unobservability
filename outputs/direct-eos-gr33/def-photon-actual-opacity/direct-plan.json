@@ -1,0 +1,7 @@
+{
+  "classification": "Counterexample candidate",
+  "reason": "The 1.27s full-line run exposed a j/chi interpolation defect. Direct continuum evaluation is required before coupling. Preparation failures consumed under 10s of the originally budgeted 720s native work.",
+  "change": "At most three further native runs, <=120s each: actual direct coarse/fine and infrared extension. Retain original gates. No stellar steps or automatic expansion.",
+  "retained_failure": "actual-lines-r11 maximum Kirchhoff residual 0.4855297925822448. Not an accepted LTE spectrum.",
+  "expected_seconds": "Unmeasured direct-continuum cost. Hard cap120s for ~55000 x 600 source loops."
+}

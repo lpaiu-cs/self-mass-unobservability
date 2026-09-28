@@ -1,0 +1,19 @@
+{
+  "classification": "Conjectural",
+  "claim": "Refine the saved last photon system independently of any port target, then inspect its actual unchanged coupled equation and original port gate.",
+  "reason": "Exact original photon input improves4.7407e-12only to4.5472e-12. The last conditional solution and its original RHS are retained; no8block or fluid replay is needed.",
+  "method": "Resume220accepted15steps and the exact saved16th photon pair after RHS/residual identity. Tighten only the internal conditional targets1e-14/1e-13 to1e-18/1e-17; keep12corrections and every original acceptance gate. Record whether this reduces the independent port discrepancy.",
+  "cap_seconds": 900,
+  "CPU_threads": 1,
+  "virtual_GiB": 6,
+  "new_physical_steps": 0,
+  "forecast": "Original single conditional block45.95s including model; a retained pair should require only the remaining correction(s). Allow15minutes, no automatic tighter or longer solve.",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/restart_photon_recovery_from_archive.py": "6250ff626fc1f84867a9c677ae17cca1b6be5b15eef55b8e84e09a87672ef09b",
+    "native-archival-photon220-work/checked-producer.py": "2ec5d8be1d97380b6e15184682dde09c9a5c10dd411c97c9bdfe9f8dee45a2d7",
+    "native-archival-photon220-work/accepted-128.npz": "73d35c9e5c85a2d33479599d6dcd020ccedee0f73db9887679861f504efc2b03",
+    "native-archival-photon220-work/current-pair.npz": "2fba7169435a2a16f3813303af358a699aa90f5ad7e3409b66fdef27f9235909",
+    "native-archival-photon220-work/clock-128/snapshot-02.json": "bb608800ada0255dbb6be5aec2e52fa3705e759906b7530a29d4f80c881da83c"
+  },
+  "final_charge_conclusion": "unadjudicated"
+}

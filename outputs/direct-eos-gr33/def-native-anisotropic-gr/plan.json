@@ -1,0 +1,51 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "c57efa4b6",
+  "claim": "Derive the missing anisotropic conserved-phase-space metric closure and evolve separately stored retarded scalar/mass increments using the completed corrected-background trajectories. Establish the precision and actual forcing for the next spatial transport feedback.",
+  "decision": "Do the coupled scalar potential/volume response and actual photon radial stresses preserve the represented direct sign? Determine whether ordinary background addition would erase the computed metric increments before attempting any new fluid run.",
+  "reuse": "Completed Phase12164/128 matter/photon paths, initial20-point constraint panels and native bulk moduli. No fluid trajectory, EOS bank or wider physical horizon.",
+  "model": "Momentarily scalar-balanced initial operator; canonical photon radial deformation retains its actual fourth angular moment. Gas responds isentropically at fixed coordinate baryons/inventory. Actual additional energy, radial stress and trace are saved forcing. Solve compact retarded Volterra potential feedback separately from the background, with zero initial increments.",
+  "limits": "Spatial material/photon transport is still prescribed. Fields omit unrepresented exterior/deep-core forcing; finite cell reconstruction and saved time interpolation remain. No old GR lower bound is inherited.",
+  "budget": {
+    "source_seconds": 25,
+    "field_seconds": 90,
+    "max_potential_iterations": 4,
+    "readout_seconds": 30,
+    "CPU_threads": 1,
+    "memory_GB": 3,
+    "new_fluid_steps": 0,
+    "new_native_calls": 0
+  },
+  "controls": {
+    "sources": [
+      64,
+      128
+    ],
+    "radial_orders": [
+      4,
+      8
+    ],
+    "field_times": 17,
+    "field_locations": "actual531 centers plus outer face",
+    "identity": 1e-12,
+    "direct_reproduction": 1e-09,
+    "time": 0.02,
+    "quadrature": 0.002,
+    "iteration": 1e-08,
+    "contraction": 0.01
+  },
+  "forecast": "Saved source export/readout previously took9.3s. Scalar field evaluation uses about38million retarded source evaluations per order8 pass and blocks one time at a time; max four potential iterates. Stop at90s; no automatic mesh/time or iteration enlargement.",
+  "references": [
+    "https://arxiv.org/abs/gr-qc/9707041,2.23-2.26",
+    "https://arxiv.org/abs/gr-qc/0201064,233-237"
+  ],
+  "bindings": {
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_anisotropic_gr.py": "8c70ea3234a101e81db0c159c0fcf4edf02b16f0910b066f2781699d74efca85",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_projected_evolution.py": "abb57285b6f1b1dc0fa3dcd9488e441dba381d4ad4282c64e2f7bf57f5355a6b",
+    "/mnt/e/lab/self-mass-unobservability/verification/def_native_feedback_gr.py": "c954951960fa54da6eb208882b853370e64117819399b6754f23d1519a7d1d2d",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-projected-evolution/source-64.npz": "62b0688e88509e960ad68af1e285de958dab66ca68a55ae73940035da2017b23",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-projected-evolution/source-128.npz": "8544725b8ac9000c0154fa97be6bba8cf27df14066377b619be4394c126c66ac",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-projected-evolution/coupled-128.npz": "abbdb3f8e916aea2273158b5c4a81fa40493d3ac89d8b97739ac888e2eedb82f",
+    "/mnt/e/lab/self-mass-unobservability/outputs/direct-eos-gr33/def-native-initial-constraints/finite-volume/balanced-20.npz": "72ae702c85db57f0c02c1e5ca15dfad7df50d901b4270531e5b49c8c3746d3cb"
+  }
+}

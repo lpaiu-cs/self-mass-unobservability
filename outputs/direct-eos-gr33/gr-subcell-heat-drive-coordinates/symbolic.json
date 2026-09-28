@@ -1,0 +1,8 @@
+{
+  "classification": "Proven",
+  "passed": true,
+  "Fourier_target": "At initial v=0, Q_F=-K*T/(a*c)*partial_r ln(T*N), with Q=proper heat flux/c and conductivity K. The thermal force includes the lapse gradient.",
+  "isentropic_jet": "For a differentiable fixed-composition EOS obeying du=T ds+(P/rho)dlnrho, k=(P/rho-u_lnrho)/(cv*T), Gamma=chi_rho+chi_T*k and nabla_ad=k/Gamma. Along ds=0, dH/dlnP=P/rho, so the enthalpy lapse N*(C+H)=constant gives partial_r ln(T*N)=(nabla_ad-P/(epsilon+P))*partial_r lnP.",
+  "arbitrary_drive": "With the previous frozen initial variables, T_log_dot=Y+V*v_dot and Q_dot+w*v_dot=R. The full quadratic heat law gives v_dot={tau*[R-Q*(kr*X+kt*Y)/2]-N*(Q_F-Q)}/{w*(tau-h)+tau*Q*kt*V/2}. Q_F=Q is a specialization, not a consequence of initially zero material velocity.",
+  "boundary": "The jet identity requires the stated Gibbs/differentiability premises; the numerical EOS outputs do not certify those premises on a continuum. The general rate formula is not a computed GR trajectory."
+}

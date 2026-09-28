@@ -1,0 +1,33 @@
+{
+  "classification": "Counterexample candidate",
+  "checkpoint": "0f6b09ed",
+  "claim": "Determine whether identical native opacity inputs produce additive harmonic and arithmetic integrals under nested partitions of the same line window.",
+  "decision": "If the 1/3/999 group integrals disagree beyond the original 1e-3 mean gate, reject fine native group moments as an identified common loss measure. Do not normalize them or increase resolution automatically.",
+  "boundaries": [
+    2,
+    4,
+    1000
+  ],
+  "reuse_999_groups": true,
+  "gates": {
+    "mean_relative": 0.001,
+    "input_printing_score": 1
+  },
+  "budget": {
+    "queries": 2,
+    "forecast_seconds": 5,
+    "hard_seconds": 45,
+    "per_query_seconds": 20,
+    "CPU_workers": 1,
+    "new_stellar_steps": 0,
+    "new_native_EOS_calls": 0
+  },
+  "bindings": {
+    "verification/def_photon_partition_audit.py": "df4e5ab16728e028357ddd2a45bd9e0e4745a0d550f1d53035faae7546eee9c8",
+    "verification/def_photon_loss_bounds.py": "591c6345aaa06f9b2c30f2f7e5ba9a926f4056b1c2cf3876a4b95200eee8403a",
+    "outputs/direct-eos-gr33/def-photon-partition-audit/requests.json": "1d80df316aac9653417e73039458761ab5b6b81fc4e968a3bef3c5a7e932ee68",
+    "outputs/direct-eos-gr33/def-photon-display-fixed/phLine4T0-table.txt": "01476771ac4f528e55eca4c5cd1a3d46f75be1ac29dfe3cdf111d47f35919e2b",
+    "outputs/direct-eos-gr33/def-photon-display-fixed/phLine4T0-generated-results-request.json": "0d350c028fa6448198409d352d4b329f6ac126a0b8ba6a4b27771ae86b019cb5",
+    "outputs/direct-eos-gr33/def-photon-display-fixed/result.json": "a7ce744821fa8a4d5113ce2809ca8647e299ddbc45f3187a16ced229e975dd12"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "classification": "Counterexample candidate",
+  "eligible": true,
+  "preserved_budget_rejection_seconds": 537.5509488006606,
+  "upper_remaining_seconds": 379.292502421799,
+  "forecasts": [
+    {
+      "clock": 64,
+      "old_full_substeps": 503,
+      "accepted_substeps": 16,
+      "seconds_per_substep": 0.11914567945526837,
+      "remaining_seconds": 67.75033666171569
+    },
+    {
+      "clock": 128,
+      "old_full_substeps": 985,
+      "accepted_substeps": 32,
+      "seconds_per_substep": 0.1181875779005076,
+      "remaining_seconds": 121.89591454918379
+    }
+  ],
+  "correction": "Use actual SSP substeps as the common work unit across the old two-raw and new analytic-flux operators. Retain the larger old/new measured cost, old full-period late CFL count, setup and2x margin. This changes neither450s production cap nor640s total cap.",
+  "assumptions": "The current later physical CFL and per-step cost can differ. Hard wall/memory caps and unchanged numerical gates remain active; stop rather than enlarge them.",
+  "claim": "Apply the accepted same173photon history to the full free-material trajectory, preserving its new accepted4/8prefix arrays.",
+  "arithmetic": "Nominal constitutive partial step is1e-5 with half/double controls. Legacy field nominal_arithmetic_probe16described the replaced global conservative probe and is corrected at the metadata write boundary.",
+  "final_charge_conclusion": "unadjudicated",
+  "bindings": {
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/continue_native_material_flux_tangent.py": "51c5c357e64bea7d508373c5e45170598e447675aa7f9308a7afbe2dad934a0c",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/resolve_native_material_flux_tangent.py": "2fa05ed1f22270cd620c9615a7de5c68ef248b938254503ff3678739df356829",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/resolve_native_material_face_response.py": "36a861d334961397b55c25d9f8c3440e67929ce6f01e990dd1fc15c82b991dc8",
+    "/home/lpaiu/work/native-retained-tail-runtime/verification/return_native_pressure_matter.py": "87e964fe3eb006fc3a75a3d3461307bf0288ef37ad2240a7ba39571a18ad45fa",
+    "native-pressure-matter174-work/flux-tangent-plan.json": "7496de174229dd75ecc0bea0d6c8f239bd0491365c5b484ec1778805436227ca",
+    "native-pressure-matter174-work/flux-tangent-check.json": "0757c64bf6dcc50df26e1f6e6f53a2c6cffcdf5ef201704f056b73ece155f9c7",
+    "native-pressure-matter174-work/flux-tangent-symbolic.json": "73878abc8bb7999888e30af24d06ae58c8e9e13cd729d6cecf3a6a450808ce3d",
+    "native-pressure-matter174-work/flux-tangent-pilot-receipt.json": "aa820ff9a85554b57831a640a4e6c0c41cba44c6390edf87d9b9697a33f01f1b",
+    "native-pressure-matter174-work/sweep-1/material-flux-tangent/pilot.json": "7be4badf90b2434b476bf613eccce4bcf40b6d7502786fe33dba2e0d1b372b94",
+    "native-pressure-matter174-work/sweep-1/material-flux-tangent/pilot-64.npz": "6b97a69caaddbcfe25c9e07882a331ea03c0680c2143ef77af807a2719dfdd12",
+    "native-pressure-matter174-work/sweep-1/photons/steps-64-reference-128.npz": "a5acac6a5e00d711b71087619d86b2ee9e7cfa4b0b5dbb1cea5793b015a29cf2",
+    "native-pressure-matter174-work/sweep-1/material-flux-tangent/pilot-128.npz": "d30b04c6b44ef77cf41993722d362210c28efb3c545acf2279c1e665b2326764",
+    "native-pressure-matter174-work/sweep-1/photons/steps-128-reference-128.npz": "38dab72a5391214b7e4819efcbb7a6a57a01e46a33696955c56346d2544a1bdd"
+  }
+}
