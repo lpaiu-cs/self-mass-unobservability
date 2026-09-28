@@ -1,22 +1,24 @@
 # Unified manuscript
 
-The current paper is **Static response and dynamical identifiability in free-fall tests: finite-order boundaries and a pulsar-triple application**.
+The current paper is **Identifying a relaxing internal state in free-fall timing: finite-frequency boundaries and an application to PSR J0337+1715**.
 
-- `manuscript.md` is the single editable source; `main.tex` is generated.
+- `manuscript.md` is the focused paper (28 September 2026); `main.tex` is generated.
+- `supplement.md` is its Supplemental Material: the previous full manuscript (*Static response and dynamical identifiability in free-fall tests*), with the periastron correction, aligned claim wording, thermal-cutoff qualification and public-replay instructions. It keeps its own numbering, and the paper cites it as "SM Section 4.6" and so on. `supplement.tex` is generated with `python paper/build_manuscript.py supplement.md supplement.tex`.
 - `references.bib` supplies numbered BibTeX citations.
-- `figures/conditional-intervals.pdf` plots the stored table without refitting.
-- `figures/coverage-validation.pdf` plots the registered linear-model validation.
-- `figures/comparator-phase-validation.pdf` plots comparator information and phase envelopes.
-- `figures/remaining-levers-validation.pdf` plots independent joint-region inclusion and measured transient effects.
-- `revision-manifest.json` records input SHA-256 digests.
-- `../output/pdf/free-fall-identifiability.pdf` is the reviewed rendered output.
-- Section 4.6 (the worked white-dwarf calculation) was integrated on 28 September 2026 after independent review, with Pandoc 3.11, which reproduces the previous `main.tex` byte for byte from the previous source. The rendered PDF and the journal source archive below were rebuilt the same day with Tectonic 0.17.0 for the Physical Review D submission; `../output/submission/` also holds the cover letter, a plain-text abstract and the submission checklist. Do not run `package_revision.py` as is: it rewrites `revision-manifest.json` from its fixed 9 September list and would drop the later bindings.
-- `../output/submission/free-fall-identifiability-source.zip` contains the journal source: `main.tex`, `main.bbl`, `references.bib`, the four figures and a README; it compiles on its own.
+- `figures/conditional-intervals.pdf` plots the stored table without refitting (paper and SM).
+- `figures/coverage-validation.pdf` plots the registered linear-model validation (SM).
+- `figures/comparator-phase-validation.pdf` plots comparator information and phase envelopes (SM).
+- `figures/remaining-levers-validation.pdf` plots independent joint-region inclusion and measured transient effects (SM).
+- `revision-manifest.json` records input SHA-256 digests. `submission-manifest.json` binds the current submission files; older phase manifests bind their historical revisions.
+- `../output/pdf/free-fall-identifiability.pdf` and `../output/pdf/free-fall-identifiability-supplement.pdf` are the rendered paper and SM.
+- SM Section 4.6 (the worked white-dwarf calculation) was integrated on 28 September 2026 after independent review, with Pandoc 3.11. The PDFs and the journal source archive below are built with Tectonic 0.17.0 for the Physical Review D submission; `../output/submission/` also holds the cover letter, a plain-text abstract and the submission checklist. Do not run `package_revision.py` as is: it rewrites `revision-manifest.json` from its fixed 9 September list and would drop the later bindings. Package with `../outputs/direct-eos-gr33/native-focused-manuscript/scripts/phase291-package.py` instead.
+- The final independent review (28 September 2026) found that the physical drive had used the wrong periastron convention. The released Nutimo code uses the ELL1 convention, eta = e sin(varpi) and kappa = e cos(varpi), and `symbolic/physical_matching.py` and `verification/physical_drive_completion.py` now follow it. The affected outputs were regenerated, and the superseded versions are in `../outputs/research-completion/withdrawn-periastron-convention/`. `verification/simultaneous_inference.py validate` recomputes the registered simulations together with the data section. Its simulated noise is drawn in an eigenbasis that is not unique for repeated eigenvalues, so under a different linear-algebra configuration (for example `OPENBLAS_NUM_THREADS=1` instead of 4) its counts agree with the registered run only within Monte Carlo error; a fixed configuration reproduces itself exactly. The committed file therefore keeps the registered simulation rows (see its `data_revision` field).
+- `../output/submission/free-fall-identifiability-source.zip` contains the journal source of the paper: `main.tex`, `main.bbl`, `references.bib`, its one figure and a README; it compiles on its own.
 - `../docs/unified-revision-2026-09-09.md` maps the review issues to corrections and remaining limitations.
 
-The separate Paper A/B sources and builders are historical snapshots, superseded for submission. Do not combine their previous headlines with this revision's conclusions. The default Makefile builds only the unified paper.
+The separate Paper A/B sources and builders are historical snapshots, superseded for submission. Do not combine their previous headlines with this revision's conclusions. The root Makefile contains symbolic targets; use the explicit commands below to build both submission documents.
 
-The latest scope and failures are in `../docs/remaining-levers-2026-09-09.md`. The paper now includes isolated live timing evaluations. It does not claim numerical EOS matching or complete nonlinear pulse/noise inference.
+`../docs/remaining-levers-2026-09-09.md` is a historical lever ledger. The current submission scope and qualifications are in the paper, SM and `../notes/REQUEST295_SUBMISSION_CORRECTIONS_KO.md`. The conditional inference and worked stellar model do not establish complete nonlinear pulse/noise inference or overall physical closure.
 
 ## Request 12 reproduction
 
@@ -42,15 +44,29 @@ Python with the repository's NumPy/SymPy dependencies and Matplotlib, Pandoc, an
 ```bash
 python paper/build_figures.py
 python paper/build_manuscript.py
+python paper/build_manuscript.py supplement.md supplement.tex
 cd paper
 latexmk -pdf -interaction=nonstopmode -halt-on-error -output-directory=build main.tex
+latexmk -pdf -interaction=nonstopmode -halt-on-error -output-directory=build supplement.tex
 ```
 
-Alternatively, from the root use `tectonic --keep-logs --keep-intermediates --outdir paper/build paper/main.tex` after creating `paper/build`. The builder accepts an absolute Pandoc executable path through the `PANDOC` environment variable. `pypandoc-binary` supplies one when Pandoc is not installed. The committed TeX and figure can be compiled directly without Pandoc or Python.
+Alternatively, from the root use `tectonic --keep-logs --keep-intermediates --outdir paper/build paper/main.tex` (and the same for `paper/supplement.tex`) after creating `paper/build`. The builder accepts an absolute Pandoc executable path through the `PANDOC` environment variable. `pypandoc-binary` supplies one when Pandoc is not installed. The committed TeX and figure can be compiled directly without Pandoc or Python.
 
-After compiling, run `python paper/package_revision.py` from the root to copy the final PDF, refresh the SHA-256 manifest and assemble the portable source ZIP. The archive omits the bulky timing arrays; the manifest identifies them in the repository.
+Also compile the cover letter with `tectonic --outdir output/submission output/submission/cover-letter-prd.tex`. After compiling, run `python outputs/direct-eos-gr33/native-focused-manuscript/scripts/phase291-package.py` to copy both PDFs, write the plain-text abstract, assemble the portable source ZIP and refresh the submission hashes. It resolves its own checkout, independently of the working directory. Existing research-input bindings are retained. The archive omits the bulky timing arrays; the manifest identifies them in the repository. `paper/package_revision.py` is kept only as a historical record (see above).
+
+## Public replay
+
+The submission snapshot is tagged `prd-submission-2026-09-28`. A public clone and NumPy suffice for:
+
+```bash
+python verification/replay_public_inference.py
+```
+
+Status: Imported from prior work. The small `outputs/research-completion/public-inference.json` record holds the six carrier coefficients, precision matrix, physical-drive parameters, evaluated lags and threshold. The script independently forms the two drive columns and solves the whitened least-squares problem, reproducing the omnibus statistic and all six sections, including the nonnegative-beta constraint. This is a replay conditional on the exported fit, not a timing-engine run, derivative certificate or new coverage calibration. `--export` regenerates the record only when the private frozen arrays are available; fixed seeds and the calibration remain unchanged.
 
 ## Bounded verification
+
+The full first command below requires omitted binary inputs (including the baseline, 35 Jacobians and all manifest-bound arrays). It cannot finish on the public snapshot alone. Use the public replay above for the compact conditional inference. Analytic-only scripts can be run separately without those arrays.
 
 ```bash
 python verification/verify_unified_paper.py

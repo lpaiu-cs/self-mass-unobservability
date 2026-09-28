@@ -1,0 +1,44 @@
+{
+ "classification": "Imported from prior work (presentation only; no new computation or numerical claim)",
+ "passed": true,
+ "verdict": "FOCUSED_PAPER_AND_SUPPLEMENT_BUILT__NO_NEW_CLAIMS__FINAL_CHARGE_CONCLUSION_UNCHANGED",
+ "user_instruction": "narrow the focus; do not repeat known facts (2026-09-28)",
+ "title": "Identifying a relaxing internal state in free-fall timing: finite-frequency boundaries and an application to PSR J0337+1715",
+ "pages": {
+  "paper": 11,
+  "supplement": 30,
+  "previous_paper": 30,
+  "cover_letter": 1
+ },
+ "paper_keeps": [
+  "Theorem 1 (previous Theorem 3)",
+  "rate-gap comparator inequality",
+  "two-sample moment-variance identification and close-pole limit",
+  "transient insufficiency of a finite periodic record",
+  "damped scalar-charge realization and phase closure",
+  "J0337 application: Tables 1-2, Figure 1, nuisance-span dependence, coverage, comparator information, corrected drive, record limits"
+ ],
+ "moved_to_supplement": [
+  "static operator catalog (SM Section 2, Appendices A-C)",
+  "nuisance-projected rank and pair-coupling benchmark (SM 4.1-4.2)",
+  "white-dwarf calculation (SM 4.6)",
+  "full audits and provenance (SM 5.2, 5.5-5.10, Appendices D-E)",
+  "Figures 2-4"
+ ],
+ "checks": [
+  "all numbers of the paper occur in 39962a753:paper/manuscript.md",
+  "SM body below the abstract is byte-identical to the previous manuscript",
+  "no undefined references, no overfull boxes, no dropped inline math",
+  "builder regenerates the previous main.tex byte for byte",
+  "source archive compiles standalone (11 pages)",
+  "verify_unified_paper table checks pass on the new paper"
+ ],
+ "final_charge_conclusion": "unchanged: no new computation; the Discussion summarizes SM Section 4.6 with the same numbers",
+ "remaining": [
+  "affiliation, e-mail, ORCID (author)",
+  "public snapshot update: the paper points to paper/supplement.md (needs author instruction to push)",
+  "submission"
+ ],
+ "full_goal_complete": false,
+ "snapshot_KST": "2026-09-28T09:50:30.950575+09:00"
+}

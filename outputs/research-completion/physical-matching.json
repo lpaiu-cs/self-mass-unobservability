@@ -18,14 +18,14 @@
     "phase_closure_invariance_and_historical_mismatch"
   ],
   "input_sha256": "44d0403ca91540c7c59ea8f5422b67e827ca243dd6965f7c3a018c4476fae059",
-  "phase_convention_source": "https://arxiv.org/html/2411.10066v2 (footnote 3 and Table 4)",
+  "phase_convention_source": "released Nutimo src/Parameters.cpp (omega = inversetrigo(kappa/e, eta/e)) and src/Utilities.cpp (inversetrigo(cos, sin)); t_asc convention from https://arxiv.org/html/2411.10066v2 (footnote 3); consistent with Ransom et al. 2014 Table 1",
   "pericenter_radians": {
-    "in": -0.1232682097453528,
-    "out": -0.10004791741852397
+    "in": 1.6940645365402494,
+    "out": 1.6708442442134206
   },
   "leading_physical_phase_radians": {
-    "in": -0.029458374595941222,
-    "out": -1.1508722029085414,
+    "in": -1.8467911208814425,
+    "out": -2.9217643645404867,
     "dif": -2.0433991176038204
   },
   "archived_auxiliary_phase_radians": {
@@ -34,11 +34,11 @@
     "dif": 1.0981935359860975
   },
   "physical_minus_archived_radians": {
-    "in": 1.6940645365402816,
-    "out": 1.6708442442134208,
+    "in": -0.12326820974521979,
+    "out": -0.10004791741852426,
     "dif": 3.1415926535896688
   },
-  "physical_closure_radians": 3.118372361263166,
+  "physical_closure_radians": -3.1183723612628644,
   "archived_closure_radians": 3.5793590313915047e-13,
   "common_origin_cannot_fix_closure": true,
   "matching": {

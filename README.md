@@ -1,25 +1,32 @@
 # self-mass-unobservability
 
-The current result is a single revised paper: **Static response and dynamical identifiability in free-fall tests: finite-order boundaries and a pulsar-triple application**. The separate Paper A/B drafts are historical and are superseded for submission.
+The current paper is **Identifying a relaxing internal state in free-fall timing: finite-frequency boundaries and an application to PSR J0337+1715**. The separate Paper A/B drafts are historical and are superseded for submission.
 
-## Current entry points
+## Current submission
 
-- [Unified manuscript](paper/manuscript.md) and [rendered PDF](output/pdf/free-fall-identifiability.pdf).
-- [Latest remaining-lever results](docs/remaining-levers-2026-09-09.md): corrected drive, joint inference, live transient/derivative checks and observable-pole uniqueness; empirical-promotion limits retained.
-- [Ordered research completion](docs/research-completion-2026-09-09.md): full nuisance audit, conditional coverage validation and force/drive matching.
-- [Levers 4–5 completion](docs/levers-4-5-completion-2026-09-09.md): physical comparators, expanded phases, transient-response and observing-gap boundaries.
-- [Review-resolution record](docs/unified-revision-2026-09-09.md), [claims and limits](docs/paper-claims-vs-nonclaims.md), and [theorem package](docs/theorem-package.md).
-- [Build and bounded verification](paper/README.md), [input manifest](paper/revision-manifest.json), and [dynamic failure ledger](docs/failure-ledger-dynamic-chi.md).
+The prepared submission is tagged [`prd-submission-2026-09-28`](https://github.com/lpaiu-cs/self-mass-unobservability/tree/prd-submission-2026-09-28). This identifies the prepared files, not a completed journal submission.
 
-Status: Proven. The analytic results separate fixed-order representation from exact reconstruction, finite-carrier interpolation and nuisance-projected identifiability. Smooth-flat response has every finite jet. Three distinct positive carriers can be matched by a freely fitted real degree-five derivative comparator.
+- [Main paper](paper/manuscript.md) and [PDF](output/pdf/free-fall-identifiability.pdf).
+- [Supplemental Material](paper/supplement.md) and [PDF](output/pdf/free-fall-identifiability-supplement.pdf), including the worked white-dwarf model.
+- [Submission corrections and verification](notes/REQUEST295_SUBMISSION_CORRECTIONS_KO.md), [submission checklist](output/submission/submission-checklist-prd.md) and [file hashes](paper/submission-manifest.json).
+- [Build and bounded verification](paper/README.md), [research-input manifest](paper/revision-manifest.json) and [public-snapshot policy](PUBLIC_SNAPSHOT.md).
 
-Status: Imported from prior work. Stored J0337 results report no detection under their registered finite-grid rule. At a two-day lag and assumed K=10 width inflation, the normalized beta interval is 3.53e-9 with the full stored nuisance space and 1.68e-9 with truncation. These are conditional Gaussian constructions, not drive-independent SEP exclusions or validated coverage statements. Request 12 adds separately recorded live transient/derivative and local nonlinear evaluations; it does not replace the historical verdicts.
+Status: Proven. A nonzero single relaxation pole can be matched at K distinct positive carrier frequencies by a freely fitted real derivative comparator of degree N if and only if N >= 2K - 1. The paper specifies restrictions that can restore identifiability and finite-data limitations.
 
-Status: Imported from prior work. The follow-through retains all 90 nuisance directions and tests an explicitly estimated covariance. Minimum interval coverage is 94.59% within the registered linear-model family; diagonal covariance can under-cover severely. These are new conditional simulations, not a new timing integration.
+Status: Imported from prior work. After correcting the periastron convention, the stored six carrier coefficients exceed the calibrated null threshold, but an instantaneous plus single-relaxation response to the leading physical drive does not reproduce them at the six evaluated lags. No relaxation is detected and no drive-independent empirical SEP bound is claimed. The result remains conditional on the archived timing derivatives and covariance fit.
 
-Status: Counterexample candidate. A reciprocal scalar-charge action now supplies conditional force-level matching. Actual EOS-to-body parameters remain uncomputed. Internal modes already exist in dynamical EFT.
+Status: Conjectural. The white-dwarf transient-charge interpretation retains its stated model assumptions. The reported thermal-lag estimates are contributions from scanned layers; the uncomputed deeper-layer tail prevents interpreting them as total-lag bounds. The submission does not declare overall physical closure.
 
-Status: Proven. The leading physical potential drive has a phase closure incompatible with the historical auxiliary analysis. Its physical-beta interpretation is withdrawn; a common time shift or coefficient rescaling cannot repair it.
+## Public replay
+
+A public clone and NumPy suffice for these checks; no omitted binary arrays are needed:
+
+```bash
+python verification/check_submission_package.py
+python verification/replay_public_inference.py
+```
+
+The replay independently forms the physical drive and solves the exported six-coefficient inference. It does not rerun the timing engine, certify derivatives or repeat coverage calibration. The full `verify_unified_paper.py` additionally requires the arrays described in [PUBLIC_SNAPSHOT.md](PUBLIC_SNAPSHOT.md).
 
 ## Historical program
 

@@ -1,22 +1,22 @@
-% Cover letter for the Physical Review D submission. Fill in the bracketed items before submitting.
+% Cover letter for the Physical Review D submission.
 \documentclass[11pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
 \usepackage{microtype}
-\usepackage[margin=0.85in]{geometry}
-\usepackage{xcolor}
+\usepackage[margin=0.8in]{geometry}
 \usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+\setlength{\emergencystretch}{2em}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{0.45em}
-\newcommand{\fillin}[1]{\textcolor{red}{\textbf{[#1]}}}
+\setlength{\parskip}{0.4em}
 \pagestyle{empty}
 
 \begin{document}
 
 Juneyoung Kim\\
-\fillin{Affiliation or ``Independent researcher''}\\
-\fillin{Corresponding e-mail} \quad ORCID: \fillin{ORCID iD}
+Independent researcher\\
+\href{mailto:lpaiu.cs@gmail.com}{lpaiu.cs@gmail.com}
 
 28 September 2026
 
@@ -25,21 +25,23 @@ The Editors\\
 
 Dear Editors,
 
-I am submitting the manuscript \emph{``Static response and dynamical identifiability in free-fall tests: finite-order boundaries and a pulsar-triple application''} for consideration as a regular article in \emph{Physical Review D}, in the area of gravitation and tests of gravity.
+I am submitting the manuscript \emph{``Identifying a relaxing internal state in free-fall timing: finite-frequency boundaries and an application to PSR J0337+1715''} for consideration as a regular article in \emph{Physical Review D}, in the area of gravitation and tests of gravity.
 
-Free-fall tests with the pulsar triple PSR J0337+1715 constrain body-dependent couplings with great precision, and they are usually read through static sensitivities of the bodies. The manuscript asks a sharper question: when a body has an internal state that relaxes on orbital timescales, what can free-fall timing data identify beyond a static description, and under which conditions?
+Free-fall tests with the pulsar triple PSR J0337+1715 are usually read through static sensitivities of the bodies. The manuscript asks what free-fall timing can identify when a body has an internal state that relaxes on orbital timescales, given that the data sample the response only at a few orbital carriers and after nuisance fitting.
 
 The main results are:
 \begin{itemize}\setlength{\itemsep}{1pt}\setlength{\parskip}{0pt}
-\item A finite-order static reference space, in which an electric-tidal quotient has five representatives through weight four.
-\item An interpolation boundary: a nonzero single pole can be matched at $K$ positive frequencies by real derivative coefficients of degree $N$ if and only if $N\ge2K-1$. For a positive reciprocal relaxation spectrum, two calibrated complex samples instead identify one observable relaxation time through a moment-variance equality, while finite precision cannot separate arbitrarily close poles.
-\item A damped scalar-charge realization with reciprocal forces and a controlled one-pole reduction, applied conditionally to a stored J0337 timing analysis. Its nuisance-space dependence and the failed empirical-promotion gates are reported rather than hidden.
-\item A worked calculation for the inner white dwarf of the triple. A scalar pulse leaves a transient retarded monopole signal in the star's displaced matter. At orbital timescales its structural response is small, and a layer-by-layer thermal-relaxation estimate puts the lagged part at $4\times10^{-9}$ to $3.3\times10^{-7}$ of that term. The corresponding timing sensitivity is not computed, so the paper states a scale comparison, not an exclusion.
+\item An exact boundary: a nonzero single pole can be matched at $K$ positive carrier frequencies by a derivative comparator of degree $N$ with unrestricted real coefficients if and only if $N\ge2K-1$.
+\item Conditions that restore identifiability, and their limits: a rate gap in a positive reciprocal spectrum gives an inequality that a slow pole violates; two calibrated complex samples test for one observable relaxation time and recover it when a moment-variance equality holds, but finite precision cannot separate arbitrarily close poles, and a finite periodic record does not determine transients.
+\item A damped scalar-charge realization with reciprocal forces, whose leading physical drive in J0337 obeys a phase closure that the drive dictionary of our earlier stored analysis violates.
+\item A conditional application to that stored J0337 analysis: nuisance truncation had narrowed its intervals by factors of 2.1 to 27.5, depending on lag and interval width, a calibrated six-coefficient region is validated on independent simulations, and at six evaluated lags the recorded carrier coefficients show an excess that the leading physical drive, with or without a single relaxation, does not reproduce. No relaxation is detected, and failed validation gates are reported.
 \end{itemize}
 
-I believe the paper suits \emph{Physical Review D} because it connects the effective-field-theory description of extended bodies with the inference practice of pulsar tests of gravity. It states precisely which conclusions are proven, which rest on stored computations, and which remain conjectural: every substantive claim carries one of four explicit labels (Proven, Imported from prior work, Counterexample candidate, Conjectural). The paper does not claim a new empirical bound on violations of the strong equivalence principle.
+These statements specialize classical interpolation, moment and system-identification results, which the paper cites; the contribution is their formulation for nuisance-projected free-fall timing and their application. The accompanying Supplemental Material holds a finite static operator catalog, the full audits with their provenance, and a worked calculation for the inner white dwarf of the triple.
 
-The code, numerical records and SHA-256-bound manifests are available in the public repository \url{https://github.com/lpaiu-cs/self-mass-unobservability}; the Data and Code Availability section states what is and is not deposited. AI agents were used substantively in the research and in drafting the text. This use is disclosed in the manuscript (Section~7), following the APS policy on AI tools.
+I believe the paper suits \emph{Physical Review D} because it connects the effective-field-theory description of extended bodies with the inference practice of pulsar tests of gravity. Explicit labels mark which claims are proven, which rest on stored computations, and which remain conjectural. The paper does not claim a new empirical bound on violations of the strong equivalence principle.
+
+The code, numerical records and SHA-256-bound manifests are available in the public snapshot tagged \path{prd-submission-2026-09-28} at \url{https://github.com/lpaiu-cs/self-mass-unobservability}; the Data and Code Availability section states what is and is not deposited, including a compact public replay of the conditional inference. AI agents were used substantively in the research and in drafting the text. This use is disclosed in the manuscript's Use of AI tools section, following the APS policy on AI tools.
 
 The manuscript has not been published and is not under consideration elsewhere. I have no competing interests to declare.
 

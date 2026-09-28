@@ -2525,3 +2525,30 @@ Status: Conjectural. 전체 시간 수렴·연속 오차·물리 EOS·외부·�
 분류: Imported from prior work. 원고 전문을 정독하고 자동 점검(참고문헌 실재·교차 참조·조판·표기)과 쪽 렌더링을 했다. 제출을 막는 오류는 없었다. 고친 것은 다음과 같다: 참고문헌에 인쇄되던 내부 메모 삭제, DOI 2건 추가, AI 모델 버전(Claude Opus 5.5, GPT-6-Astra), 미국식 철자·수식·en dash 정리, 저장소 내부 표현 삭제, 데이터 가용성의 공개 스냅숏 문구. 전체 이력(51.6 GB)은 GitHub 한도를 넘어, 저자 결정에 따라 대형 배열을 뺀 공개 스냅숏으로 올린다(`PUBLIC_SNAPSHOT.md`). 남은 필수 항목은 소속·ORCID뿐이다.
 
 분류: Conjectural. PRD 게재 가능성은 약 15–35%(중심 약 25%)로 본다. 초기 반려 약 25–40%, 심사로 가면 약 35–55%다. 주된 약점은 분량·문체, 핵심 정리의 제한된 새로움, 비검출·조건부 결과다. 초점을 좁히고 새로움의 위치를 명시하면 가능성이 오른다. [근거 290](../notes/REQUEST290_FINAL_REVIEW_KO.md).
+
+
+## 단계291 — 원고 초점 축소
+
+분류: Imported from prior work. 사용자 지시로 PRD 제출 원고의 초점을 좁혔다. 본문(11쪽, 새 제목 *Identifying a relaxing internal state in free-fall timing: finite-frequency boundaries and an application to PSR J0337+1715*)은 식별성 경계(유한 반송파 보간 경계, 속도 간극 부등식, 두 표본 모멘트-분산 식별과 가까운 극의 한계, 유한 주기 기록의 과도 응답 불충분성), 감쇠 스칼라 전하 실현과 위상 폐합, J0337 조건부 적용만 남긴다. 알려진 사실은 한 줄이나 인용으로 줄였다. 이전 전체 원고는 제목·초록만 바꿔 보충 자료(`paper/supplement.md`, 30쪽)로 옮겼다. 새 계산·새 수치는 없고(본문 수치가 모두 이전 원고에 있다), 최종 전하 결론은 유지된다. [근거 291](../notes/REQUEST291_FOCUSED_MANUSCRIPT_KO.md).
+
+
+## 단계292 — 최종 독립 검토와 근점 규약 정정
+
+분류: Imported from prior work. Claude Opus 5.5, Claude Fable 5.1, GPT-6-Astra의 독립 심사가 모두 주요 수정을 권했다. Opus가 J0337 물리 구동의 η·κ 규약 오류를 찾았다. 코드는 η=e sin ϖ를 쓰는데 분석은 η=e cos ϖ로 읽었다. 이를 바로잡고 영향받는 계산을 다시 돌렸다(각 수 초). 이전 출력은 `outputs/research-completion/withdrawn-periastron-convention/`에 보존했다.
+
+실패 기록: 실패한 단계는 `symbolic/physical_matching.py`와 `verification/physical_drive_completion.py`의 근점 각 계산이다. 빠진 최소 가정은 런타임 코드의 매개변수 규약 확인이다. 이전 결론 '모든 물리 지연 단면이 β=0을 포함한다'를 철회한다.
+
+분류: Imported from prior work. 수정 뒤 여섯 단면이 모두 비어 있다. 기록된 반송파 초과(옴니버스 16.3525, 명목 p≈0.012)를 물리 구동의 순간+완화 응답이 재현하지 못한다. relaxation 검출은 아니며 원인은 분리하지 못했다. 백색왜성의 최종 전하 결론은 유지된다. 문헌 위치, 두 표본 조건, 한정어, 정의 등 나머지 지적도 반영했다(본문 13쪽). [근거 292](../notes/REQUEST292_FINAL_INDEPENDENT_REVIEW_KO.md).
+
+
+## 단계293 — 확인 심사와 경미 수정
+
+분류: Imported from prior work. 단계292 개정판을 세 심사자(Opus 5.5, Fable 5.1, GPT-6-Astra)가 확인 심사했다. 모두 경미 수정 후 수락을 권했고, 세 명 모두 근점 규약 정정을 독립적으로 확인했다. J0337 결론의 범위를 평가한 여섯 지연과 순간항+단일 완화 모형으로 한정했다. 2일 단면의 근소한 기각을 정량화했고(보정 순서통계량 12.27–12.82, 표준오차 약 0.13), 보관된 도함수 조건을 명시했다.
+
+분류: Proven. 통계량은 볼록 이차식이고 β=0 직선이 모든 단면에 들어 있다. 제약 없는 β̂은 18일을 빼면 음수다. 따라서 등전하 실현의 β≥0 아래에서는 여섯 단면 모두 최솟값이 14.59 이상이다. 백색왜성의 최종 전하 결론은 유지된다. [근거 293](../notes/REQUEST293_CONFIRMATION_REVIEW_KO.md).
+
+## 단계295 — 투고 전 조건 정정과 공개 재생
+
+분류: Imported from prior work. 공개 재생에서도 기존 J0337 여섯 단면과 비음수 beta 판정은 유지된다. 열 완화의 4.0e-9 / 3.3e-7은 열 시간 1e13 s까지 계산한 층의 부분합이며, 전체 지연 상한으로 해석하지 않는다.
+
+분류: Proven. 같은 Debye 껍질 모형에서 미계산 총 세기 T_tail의 잔여항은 T_tail/(omega*tau_cut) 이하이다. 분류: Conjectural. T_tail 자체의 보장은 없으며, 모형 전체의 열 지연 인증과 전체 물리 목표는 완료하지 않았다. 실패한 단계는 부분합에서 전체 지연으로의 승격이고, 빠진 최소 조건은 깊은 층의 총 완화 세기 또는 그 잔여항의 보장이다. 기존 기록과 기준을 보존하고 원고 범위를 정정했다. [근거 295](../notes/REQUEST295_SUBMISSION_CORRECTIONS_KO.md).

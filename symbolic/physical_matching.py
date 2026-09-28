@@ -55,9 +55,11 @@ def main():
     p=dict(zip(z['names'],z['params']))
     om={k:2*np.pi/p[v] for k,v in [('in','period_i'),('out','period_o')]}
     om['dif']=om['in']-om['out']
-    # Published table: eta=e*cos(varpi), kappa=e*sin(varpi) in this release.
-    # Do not substitute the opposite ELL1 name convention from another implementation.
-    per={k:float(np.arctan2(p['kappa_'+v],p['eta_'+v])) for k,v in [('in','p'),('out','b')]}
+    # The released Nutimo code sets omega = inversetrigo(kappa/e, eta/e) with inversetrigo(cos, sin)
+    # (src/Parameters.cpp, src/Utilities.cpp): eta = e*sin(varpi), kappa = e*cos(varpi), the ELL1 convention.
+    # It gives varpi = 97.06 and 95.73 degrees, as in Ransom et al. 2014. The earlier reading
+    # eta = e*cos(varpi) from the paper's parameter ordering was wrong and is withdrawn (phase 292).
+    per={k:float(np.arctan2(p['eta_'+v],p['kappa_'+v])) for k,v in [('in','p'),('out','b')]}
     longitudes={'in':-om['in']*p['tasc_p'],'out':-om['out']*p['tasc_b']}
     physical={'in':longitudes['in']-per['in'],'out':longitudes['out']-per['out'],
               'dif':longitudes['in']-longitudes['out']+np.pi}
@@ -73,7 +75,7 @@ def main():
     passed.append('phase_closure_invariance_and_historical_mismatch')
     result=dict(status='Proven',scope='Conditional Newtonian scalar-charge model and leading coplanar drive; no EOS or complete timing matching',
                 checks=passed,input_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),
-                phase_convention_source='https://arxiv.org/html/2411.10066v2 (footnote 3 and Table 4)',
+                phase_convention_source='released Nutimo src/Parameters.cpp (omega = inversetrigo(kappa/e, eta/e)) and src/Utilities.cpp (inversetrigo(cos, sin)); t_asc convention from https://arxiv.org/html/2411.10066v2 (footnote 3); consistent with Ransom et al. 2014 Table 1',
                 pericenter_radians=per,leading_physical_phase_radians={k:wrap(v) for k,v in physical.items()},
                 archived_auxiliary_phase_radians={k:wrap(v) for k,v in archived.items()},
                 physical_minus_archived_radians={k:wrap(physical[k]-archived[k]) for k in physical},

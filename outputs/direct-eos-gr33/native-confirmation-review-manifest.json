@@ -1,0 +1,142 @@
+{
+ "classification": "Imported from prior work (confirmation review and wording fixes); Proven (sign-constrained section bound)",
+ "passed": true,
+ "verdict": "CONFIRMATION_REVIEW_DONE__ALL_MINOR_REVISION_THEN_ACCEPT__FIXES_APPLIED__FINAL_CHARGE_CONCLUSION_UNCHANGED",
+ "reviews": {
+  "GPT-6-Astra": "minor revision then accept; all earlier points resolved; B1 confirmed",
+  "Claude Fable 5.1": "minor revision then accept; B1 confirmed",
+  "Claude Opus 5.5": "minor revision then accept; B1 resolved; scope and marginal 2-day rejection flagged"
+ },
+ "fixes": [
+  "conclusion limited to six evaluated lags and an instantaneous plus single-relaxation response",
+  "marginal 2-day rejection quantified (order statistics 12.27-12.82, SE 0.13)",
+  "sign-constrained bound: with beta >= 0 every section minimum >= 14.59 (convex quadratic, beta = 0 line in every section)",
+  "archived-derivative condition",
+  "relation of p = 0.26 and p = 0.012",
+  "ratio range wording",
+  "diagonal weighting of both K=1 columns",
+  "unit amplitudes in comparator phase sets",
+  "REML and timing-noise citations",
+  "sensitivity scale sigma_B about 2-10",
+  "internal wording",
+  "SM alignment (Repository line, Theorem 3, Section 3.5, Section 5.3, Section 5.9, AI section, process wording)"
+ ],
+ "declined": [
+  "eta/kappa as symbols (kappa already denotes the charge stiffness)",
+  "section minima on all 65 lags (new computation)",
+  "Cholesky draws (would change the registered procedure)",
+  "six-coefficient estimate table (not in the stored record)"
+ ],
+ "new_number_checks": [
+  "97.06",
+  "95.73",
+  "3.16481295",
+  "2.34",
+  "27.5",
+  "2.10",
+  "17.41",
+  "0.005389",
+  "6.29",
+  "1.17",
+  "4.63",
+  "465",
+  "0.0311",
+  "5.4\\times10^{-30}",
+  "5.3\\times10^{-25}",
+  "12.84",
+  "14.39",
+  "14.59",
+  "0.012",
+  "0.999998",
+  "1.00742",
+  "0.7858",
+  "0.8722",
+  "12.27",
+  "12.82",
+  "0.13",
+  "12.59",
+  "7.4\\times10^{-12}",
+  "3.5\\times10^{-10}",
+  "1.7\\times10^{-9}",
+  "about 2 to 10"
+ ],
+ "pages": {
+  "paper": 13,
+  "supplement": 30,
+  "cover_letter": 1
+ },
+ "remaining": [
+  "affiliation, e-mail, ORCID",
+  "public snapshot update (author instruction)",
+  "cause of the six-coefficient excess"
+ ],
+ "full_goal_complete": false,
+ "snapshot_KST": "2026-09-28T11:32:54.897914+09:00",
+ "document_prefixes": {
+  "docs/model-definition.md": {
+   "bytes": 309486,
+   "sha256": "8535d8ba7174abe18572a47d0affa898faadcf3d40dfd8dce7bacb9a8969eeb4"
+  },
+  "docs/observable-targets.md": {
+   "bytes": 300305,
+   "sha256": "005a145ebabbb02334acba66cfc36b454dcbda4bc2e6469f3bf81fabde5fcbac"
+  },
+  "docs/adiabatic-limit.md": {
+   "bytes": 294644,
+   "sha256": "4758299adf929071de740ebd99199ccdeca5c1e3eec619f23c0f907246ecf178"
+  },
+  "docs/nonadiabatic-regime.md": {
+   "bytes": 303136,
+   "sha256": "c5489480c2edc2edeb1ab5aeacec1b1491ee2a0f6891eebc1fc18c6d831ce0de"
+  },
+  "docs/failure-ledger-dynamic-chi.md": {
+   "bytes": 340740,
+   "sha256": "2c803b2ec2bf9b3c7e45454d25e2e7b6fdc66ca3e1c787649eb7b0796151f3b6"
+  },
+  "docs/dynamic-charge-completion.md": {
+   "bytes": 168904,
+   "sha256": "656fc58e0380e14edd87b46b22617da0b2cfa4ef2e1670cfbd39a010147d03e3"
+  },
+  "docs/remaining-levers-2026-09-09.md": {
+   "bytes": 6201,
+   "sha256": "f02e1de5a5288e1e618b06313785dd6f2adf298d5e6bfdfc6e9667208128905d"
+  }
+ },
+ "sha256": {
+  "notes/REQUEST293_CONFIRMATION_REVIEW_KO.md": "b7b7d6b8a03e73d20a34905533a83845d82eca33aa33119089c2f1ac29bd4dc7",
+  "paper/manuscript.md": "cb43b951d1adc0c4ce22ab7ae659ab33645493d25a9822ccb2d8200fd4c77753",
+  "paper/main.tex": "be27036243e1a07a5f5e7e592cb3e1ceb739b6c897e5f7a73926006b276a7fcc",
+  "paper/supplement.md": "885f6be868e12cbc48186924c262adbd11237e1b518234d677e7bba7b1540724",
+  "paper/supplement.tex": "f5835d55efc9c3cd7ac4affbc631e592eecf8cb4d1afb26564871c2c12a3563f",
+  "paper/references.bib": "ec08f0f943f10b06af8c0c4292b8490295dfc8f6fe1e1ae001e1eec3092a7b5a",
+  "output/pdf/free-fall-identifiability.pdf": "8ec00dc4c8ad5e52d1eecb17e1da8feefac902a2c138b3fdd9352321fcf2c18e",
+  "output/pdf/free-fall-identifiability-supplement.pdf": "19e3c6c71b274df87414b230a90c00d05d3bc286a007a87fc4386c4c902a3d40",
+  "output/submission/free-fall-identifiability-source.zip": "0ad2a40c60c1ad997b9f8929255927f9216c2da996779a0e3be8c13acf7f35c9",
+  "output/submission/cover-letter-prd.tex": "8fb9dfb17721da9e6dd71150a9415b41cca3df54dbcbaba29eac2b6b467afd5b",
+  "output/submission/cover-letter-prd.pdf": "e05f6d787722970869217ca5d75f425c434361d6748db5b3f90af35472d097df",
+  "output/submission/abstract-plain.txt": "6dd0219da4d8ac0526537ad247e8fb3122d6a46ac4a2d0aa6c2d44b57150c4eb",
+  "output/submission/submission-checklist-prd.md": "f3b1deaa376ffedaf54d58b44c947ca6f79b6fb588d0c8ce1925165cc88c6950",
+  "docs/model-definition.md": "2f43dd214b25ba072c58222a49bfd38735f6ba7f820533a690f24ba0e824f60b",
+  "docs/observable-targets.md": "ad6f11f72c6e5863b438cf2384725985919495e29015f3eae7c8556538594272",
+  "docs/adiabatic-limit.md": "c827262bbb407a594c7806032fbe1d954bbb31e4ed5db06aa4403f977f85ac17",
+  "docs/nonadiabatic-regime.md": "04e4008bfd5fe5c9da9d6b24d748be70df8094d4a9781dac1fceb92971d2c3b4",
+  "docs/failure-ledger-dynamic-chi.md": "e866187b3d62d635c05d66a31ef963209d4976f9ddf5d86ea937f75d4f70ffda",
+  "docs/dynamic-charge-completion.md": "a512e132ec9ed2d406f0696833109912bdbf0b781d21c8b72765071a43a7902d",
+  "docs/remaining-levers-2026-09-09.md": "1f9af0b889135fcb942e2400e04d5e43f845a6204416bc6a56a984612f93e3e6",
+  "outputs/direct-eos-gr33/native-confirmation-review/confirmation-fable-5.1-prompt.md": "70c49245083eda5df8ca6ed1a6963c3717388f25ce42552ced9eba68fc9f9e0b",
+  "outputs/direct-eos-gr33/native-confirmation-review/confirmation-fable-5.1.md": "ee683293a637fa8817d94a6e2adbe19a5a0cd6f3f743a49ac355ef6d4513cafc",
+  "outputs/direct-eos-gr33/native-confirmation-review/confirmation-gpt-6-astra-cli.log": "f52ee848547eccce53aa4a86f91bb015ddcb278702e189523c299503c2016b6e",
+  "outputs/direct-eos-gr33/native-confirmation-review/confirmation-gpt-6-astra-prompt.md": "41e08b1cab1a73e3749c6324601648f9e4bf7dd8d42dc4e05f347f1d93e4102c",
+  "outputs/direct-eos-gr33/native-confirmation-review/confirmation-gpt-6-astra.md": "a01be12b5d121a22c92b64967d6072b166a70e5ce8de04a23f5e429cafefab34",
+  "outputs/direct-eos-gr33/native-confirmation-review/confirmation-opus-5.5-prompt.md": "b46ade46b018c961155f720b3c2fb548fa29e319292e39d1210b08629966bad3",
+  "outputs/direct-eos-gr33/native-confirmation-review/confirmation-opus-5.5.md": "9cc40778d50e5a34c1db4b19efa924c64832eaa43a43008d8814bd4dd02ba2e8",
+  "outputs/direct-eos-gr33/native-confirmation-review/confirmation-prompt.md": "bcf97303ae1e71213500ddc40d0203fd45772dec5c1f605826d717b0dc0ed2dc",
+  "outputs/direct-eos-gr33/native-confirmation-review/publication.json": "f4c39c412b1d60ba6cb79589d5363825d8eafc310bb46100d9f0e251211e2a7c",
+  "outputs/direct-eos-gr33/native-confirmation-review/result.json": "d3b56d8589e3fccea1e5d216fb5fc80491a0cc7911135b8332b238376ee44f23",
+  "outputs/direct-eos-gr33/native-confirmation-review/build/main.log": "778ef1c6490d07a35d97055bc69b9c4ea51744960dcb9f0bc77eb8952ef99efa",
+  "outputs/direct-eos-gr33/native-confirmation-review/build/supplement.log": "f435252c21e2e2ee72067671c801c355386d9dc1416851206f419f09cbc7e4f8",
+  "outputs/direct-eos-gr33/native-confirmation-review/scripts/phase293-bib.py": "455c0d6717b5c84a0d2c4d089a6e988af002469a7fd4ad88aca3df69957eb667",
+  "outputs/direct-eos-gr33/native-confirmation-review/scripts/phase293-edits.py": "8e13e1aea0ffdc0ec7bddcd2bbfbde24b59e9eece2731ba9acfef29c20af2d51",
+  "outputs/direct-eos-gr33/native-confirmation-review/scripts/phase293-publish.py": "3aad75bcd850809058d035f0a8f1378275345f90f10feaa4a602d68e41748f33"
+ }
+}

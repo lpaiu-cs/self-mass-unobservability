@@ -128,7 +128,6 @@ where the first term comes from the inner eccentricity and the second from the o
 **Imported from prior work.** The Cassini measurement \(\gamma-1=(2.1\pm2.3)\times10^{-5}\) \cite{bertotti2003cassini}, with \(\gamma-1=-2\alpha_0^2/(1+\alpha_0^2)\) \cite{damour1992tensor} taken at its 2\(\sigma\) lower limit, gives \(|\alpha_0|\le3.54\times10^{-3}\), or \(\varphi_\infty\le8.84\times10^{-4}\) for \(\beta_s=-4\). The declared \(\varphi_\infty=10^{-3}\) lies outside this range, so we rescale \(\mathcal S_{\rm struct}\) as \(\varphi_\infty^2\). **Conjectural.** With \(|a_o|\simeq|\alpha_0|\) and \(|a_p|\le1\), the structural scale is \(|\mathcal S_{\rm struct}|\,\delta\varphi_{\rm mod}\le2.13\times10^{-18}\). The in-phase adiabatic part and, under the two assumptions, the thermally relaxing part therefore each change the pulsar–inner pair factor by at most \(2.13\times10^{-18}\) (\(4.3\times10^{-18}\) together) and the inner–outer pair factor by at most \(7.53\times10^{-21}\); the lagged thermal part is at most half of its bound. These lie about eight orders of magnitude below the stored Section 5 scales at \(\tau_\chi=2\) d, the shortest stored lag, where the Table 1 envelopes are smallest:
 
 - \(2.8\times10^{-10}\) (K=1, truncated)
-- \(4.1\times10^{-10}\) (physical-drive endpoint)
 - \(1.7\times10^{-9}\) (K=10, truncated)
 - \(3.5\times10^{-9}\) (K=10, full)
 - \(1.57\times10^{-7}\) (\(K\approx934\))

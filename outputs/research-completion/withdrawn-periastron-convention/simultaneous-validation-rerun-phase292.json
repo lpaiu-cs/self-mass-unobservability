@@ -1,0 +1,197 @@
+{
+  "status": "Imported from prior work",
+  "seed": 2026090913,
+  "nsim": 8192,
+  "rows": [
+    {
+      "a": 0.0,
+      "misspecified": false,
+      "order_statistic_95": 12.71538412157465,
+      "inclusion": {
+        "hits": 7799,
+        "n": 8192,
+        "fraction": 0.9520263671875,
+        "lo95": 0.9471828888357353,
+        "hi95": 0.9564461085296744
+      },
+      "null_false_positive": {
+        "hits": 393,
+        "n": 8192,
+        "fraction": 0.0479736328125,
+        "lo95": 0.04355389147032562,
+        "hi95": 0.052817111164264754
+      },
+      "covariance_upper_boundary": 0.0,
+      "covariance_envelope_known_scale_inclusion": {
+        "hits": 7756,
+        "n": 8192,
+        "fraction": 0.94677734375,
+        "lo95": 0.9417035686559307,
+        "hi95": 0.9514323023560594
+      }
+    },
+    {
+      "a": 0.25,
+      "misspecified": false,
+      "order_statistic_95": 12.62178388266598,
+      "inclusion": {
+        "hits": 7818,
+        "n": 8192,
+        "fraction": 0.954345703125,
+        "lo95": 0.9496087048901067,
+        "hi95": 0.9586567901663487
+      },
+      "null_false_positive": {
+        "hits": 374,
+        "n": 8192,
+        "fraction": 0.045654296875,
+        "lo95": 0.04134320983365131,
+        "hi95": 0.050391295109893215
+      },
+      "covariance_upper_boundary": 0.0,
+      "covariance_envelope_known_scale_inclusion": {
+        "hits": 7791,
+        "n": 8192,
+        "fraction": 0.9510498046875,
+        "lo95": 0.946162394043765,
+        "hi95": 0.95551439376752
+      }
+    },
+    {
+      "a": 1.0,
+      "misspecified": false,
+      "order_statistic_95": 12.666167645094331,
+      "inclusion": {
+        "hits": 7803,
+        "n": 8192,
+        "fraction": 0.9525146484375,
+        "lo95": 0.9476933328925727,
+        "hi95": 0.9569117692498992
+      },
+      "null_false_positive": {
+        "hits": 389,
+        "n": 8192,
+        "fraction": 0.0474853515625,
+        "lo95": 0.04308823075010085,
+        "hi95": 0.052306667107427235
+      },
+      "covariance_upper_boundary": 0.0,
+      "covariance_envelope_known_scale_inclusion": {
+        "hits": 7778,
+        "n": 8192,
+        "fraction": 0.949462890625,
+        "lo95": 0.9445051759387111,
+        "hi95": 0.9539992713471215
+      }
+    },
+    {
+      "a": 4.0,
+      "misspecified": false,
+      "order_statistic_95": 12.672407506460477,
+      "inclusion": {
+        "hits": 7804,
+        "n": 8192,
+        "fraction": 0.95263671875,
+        "lo95": 0.9478209647152894,
+        "hi95": 0.957028163621448
+      },
+      "null_false_positive": {
+        "hits": 388,
+        "n": 8192,
+        "fraction": 0.04736328125,
+        "lo95": 0.04297183637855197,
+        "hi95": 0.052179035284710545
+      },
+      "covariance_upper_boundary": 0.59423828125,
+      "covariance_envelope_known_scale_inclusion": {
+        "hits": 7774,
+        "n": 8192,
+        "fraction": 0.948974609375,
+        "lo95": 0.9439955254028677,
+        "hi95": 0.9535328171059027
+      }
+    },
+    {
+      "a": 1.0,
+      "misspecified": true,
+      "order_statistic_95": 12.363701159284286,
+      "inclusion": {
+        "hits": 7836,
+        "n": 8192,
+        "fraction": 0.95654296875,
+        "lo95": 0.9519097866809901,
+        "hi95": 0.9607481798722456
+      },
+      "null_false_positive": {
+        "hits": 356,
+        "n": 8192,
+        "fraction": 0.04345703125,
+        "lo95": 0.03925182012775444,
+        "hi95": 0.04809021331900981
+      },
+      "covariance_upper_boundary": 0.0,
+      "covariance_envelope_known_scale_inclusion": {
+        "hits": 7823,
+        "n": 8192,
+        "fraction": 0.9549560546875,
+        "lo95": 0.9502475984976763,
+        "hi95": 0.959238027530107
+      }
+    }
+  ],
+  "scope": "Six-dimensional region on frozen linear arrays, fixed Fourier family; continuous phase/lag projection inherits region inclusion when true mean is in its span.",
+  "threshold": 12.824176622705194,
+  "nominal_chi6": 12.591587243743977,
+  "signal_translation_control": true,
+  "data": {
+    "a": 0.08316109496333533,
+    "scale": 1.1132948486350225,
+    "omnibus_null_statistic": 16.352521525733433,
+    "exceeds_threshold": true,
+    "physical_lag_sections": [
+      {
+        "tau": 2.0,
+        "minimum_statistic": 12.84464503942657,
+        "empty": true,
+        "beta": -7.16630853938307e-10,
+        "joint_region_abs_beta_upper": null
+      },
+      {
+        "tau": 5.0,
+        "minimum_statistic": 14.39182902750081,
+        "empty": true,
+        "beta": -4.644517175240033e-10,
+        "joint_region_abs_beta_upper": null
+      },
+      {
+        "tau": 18.0,
+        "minimum_statistic": 14.58758029727821,
+        "empty": true,
+        "beta": 7.399464444617865e-12,
+        "joint_region_abs_beta_upper": null
+      },
+      {
+        "tau": 52.0,
+        "minimum_statistic": 14.535879804898881,
+        "empty": true,
+        "beta": -8.073276861251327e-11,
+        "joint_region_abs_beta_upper": null
+      },
+      {
+        "tau": 200.0,
+        "minimum_statistic": 14.451776256692948,
+        "empty": true,
+        "beta": -2.666777340963396e-10,
+        "joint_region_abs_beta_upper": null
+      },
+      {
+        "tau": 500.0,
+        "minimum_statistic": 14.426480151868404,
+        "empty": true,
+        "beta": -6.863318446321898e-10,
+        "joint_region_abs_beta_upper": null
+      }
+    ]
+  },
+  "calibration_sha256": "4c6a5f2a843e667c44f808b267f6af641490e0d2b0ba75dac5b88b3b6eccbb74"
+}

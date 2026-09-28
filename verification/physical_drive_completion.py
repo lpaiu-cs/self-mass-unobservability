@@ -25,7 +25,8 @@ def drive():
     a_o = a_b*(m_o+m_b)/m_o
     f = m_i/m_b
     e = np.array([math.hypot(p['eta_p'], p['kappa_p']), math.hypot(p['eta_b'], p['kappa_b'])])
-    varpi = np.array([math.atan2(p['kappa_p'], p['eta_p']), math.atan2(p['kappa_b'], p['eta_b'])])
+    # ELL1 convention of the released code: eta = e*sin(varpi), kappa = e*cos(varpi) (see symbolic/physical_matching.py).
+    varpi = np.array([math.atan2(p['eta_p'], p['kappa_p']), math.atan2(p['eta_b'], p['kappa_b'])])
     potential_factors = gm/299792458.**2*np.array([m_i/a_i, m_o/a_o])
     amplitudes = np.array([potential_factors[0]*e[0], potential_factors[1]*e[1], potential_factors[1]*f*a_i/a_o])
     ustar = amplitudes.sum()

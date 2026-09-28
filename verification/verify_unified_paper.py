@@ -72,16 +72,21 @@ def main():
     value = u95_of(gate["beta_hat_lin"], data["K_dyn"]*gate["sigma_fisher"])
     assert math.isclose(value, data["anchors"]["tau_2"]["u95pm_K10"], rel_tol=1e-12)
     manuscript = (ROOT / "paper/manuscript.md").read_text(encoding="utf-8")
+    # Full-space K=1 envelopes come from the registered nuisance audit (cut 0, rank 90).
+    import csv
+    with open(ROOT/"outputs/research-completion/nuisance-intervals.csv", encoding="utf-8") as handle:
+        full_k1 = {float(r["tau"]): float(r["U"]) for r in csv.DictReader(handle)
+                   if float(r["cut"]) == 0 and r["rank"] == "90" and float(r["K"]) == 1}
     for key, row in data["anchors"].items():
         lag = key.removeprefix("tau_")
         table = next(line for line in manuscript.splitlines() if line.startswith(lag+" & "))
         numbers = re.findall(r"(\d+\.\d+)\\times10\^\{(-?\d+)\}", table)
-        expected = [row[k] for k in ("u95pm_K10_fullrank", "u95pm_K10", "u95pm_fisher")]
-        assert len(numbers) == 3
+        expected = [row["u95pm_K10_fullrank"], full_k1[float(lag)], row["u95pm_K10"], row["u95pm_fisher"]]
+        assert len(numbers) == 4
         for (mantissa, exponent), stored in zip(numbers, expected):
             assert math.isclose(float(mantissa)*10**int(exponent), stored, rel_tol=5e-4)
         ratio = float(table.split(" & ")[-1].rstrip("\\"))
-        assert abs(ratio-expected[0]/expected[1]) < 0.0051
+        assert abs(ratio-expected[0]/expected[2]) < 0.0051
     assert data["detection_candidate"] is False
     # Verify the new descriptive table directly against the frozen per-condition counts.
     folder=ROOT/'outputs/research-completion'
@@ -108,7 +113,12 @@ def main():
     assert max(r['upper_fraction'] for r in estimated['amplitude_estimates'])==0
     matching=json.loads((folder/'physical-matching.json').read_text())
     assert len(matching['checks'])==14 and matching['common_origin_cannot_fix_closure']
-    assert abs(matching['physical_closure_radians']-3.11837236)<1e-8
+    # ELL1 convention of the released code (phase 292): eta = e sin(varpi), kappa = e cos(varpi).
+    import numpy as np
+    frozen=np.load(ROOT/'request10_external/baseline_planetGR.npz',allow_pickle=True); fp=dict(zip(frozen['names'],frozen['params']))
+    for k,v in [('in','p'),('out','b')]:
+        assert abs(matching['pericenter_radians'][k]-math.atan2(fp['eta_'+v],fp['kappa_'+v]))<1e-12
+    assert abs(matching['physical_closure_radians']%(2*math.pi)-3.16481295)<1e-8
     comparison=json.loads((folder/'comparator-audit.json').read_text())
     assert len(comparison['rows'])==378 and len(comparison['positive_fast_spectrum_witnesses'])==54
     for row in comparison['rows']:
@@ -138,7 +148,6 @@ def main():
     assert min(weakest['delta_chi2_plus'],weakest['delta_chi2_minus'])<.153
     assert all(r['transient_outside_known_drive_span']>.79 for r in phases['transients']['rows'])
     assert phases['numerical']['full_derivative_error_certificate'] is False
-    import numpy as np
     physical=json.loads((folder/'corrected-physical-drive.json').read_text())
     assert math.isclose(sum(physical['drive']['normalized_amplitudes']),1.,abs_tol=1e-12)
     assert physical['drive']['mass_o_parameter_difference']<1e-12
@@ -149,8 +158,9 @@ def main():
     assert validated['calibration_sha256']==hashlib.sha256((folder/'simultaneous-calibration.json').read_bytes()).hexdigest()
     for row in validated['rows']:
         assert row['inclusion']['hits']+row['null_false_positive']['hits']==8192
+    # With the corrected phases every physical lag section lies outside the calibrated region.
     for row in validated['data']['physical_lag_sections']:
-        assert not row['empty'] and row['joint_region_abs_beta_upper']>=2*abs(row['beta'])
+        assert row['empty'] and row['minimum_statistic']>validated['threshold'] and row['joint_region_abs_beta_upper'] is None
     live=json.loads((folder/'runtime12-analysis.json').read_text())
     assert len(live['transient'])==3 and all(r['convergence_5percent_pass'] for r in live['transient'])
     assert len(live['derivative_rows'])==28 and live['halfstep_basis']['rigorous_derivative_error_bound'] is None

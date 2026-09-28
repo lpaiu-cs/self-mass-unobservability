@@ -1,0 +1,75 @@
+{
+ "classification": "Imported from prior work (confirmation review and wording fixes); Proven (sign-constrained section bound)",
+ "passed": true,
+ "verdict": "CONFIRMATION_REVIEW_DONE__ALL_MINOR_REVISION_THEN_ACCEPT__FIXES_APPLIED__FINAL_CHARGE_CONCLUSION_UNCHANGED",
+ "reviews": {
+  "GPT-6-Astra": "minor revision then accept; all earlier points resolved; B1 confirmed",
+  "Claude Fable 5.1": "minor revision then accept; B1 confirmed",
+  "Claude Opus 5.5": "minor revision then accept; B1 resolved; scope and marginal 2-day rejection flagged"
+ },
+ "fixes": [
+  "conclusion limited to six evaluated lags and an instantaneous plus single-relaxation response",
+  "marginal 2-day rejection quantified (order statistics 12.27-12.82, SE 0.13)",
+  "sign-constrained bound: with beta >= 0 every section minimum >= 14.59 (convex quadratic, beta = 0 line in every section)",
+  "archived-derivative condition",
+  "relation of p = 0.26 and p = 0.012",
+  "ratio range wording",
+  "diagonal weighting of both K=1 columns",
+  "unit amplitudes in comparator phase sets",
+  "REML and timing-noise citations",
+  "sensitivity scale sigma_B about 2-10",
+  "internal wording",
+  "SM alignment (Repository line, Theorem 3, Section 3.5, Section 5.3, Section 5.9, AI section, process wording)"
+ ],
+ "declined": [
+  "eta/kappa as symbols (kappa already denotes the charge stiffness)",
+  "section minima on all 65 lags (new computation)",
+  "Cholesky draws (would change the registered procedure)",
+  "six-coefficient estimate table (not in the stored record)"
+ ],
+ "new_number_checks": [
+  "97.06",
+  "95.73",
+  "3.16481295",
+  "2.34",
+  "27.5",
+  "2.10",
+  "17.41",
+  "0.005389",
+  "6.29",
+  "1.17",
+  "4.63",
+  "465",
+  "0.0311",
+  "5.4\\times10^{-30}",
+  "5.3\\times10^{-25}",
+  "12.84",
+  "14.39",
+  "14.59",
+  "0.012",
+  "0.999998",
+  "1.00742",
+  "0.7858",
+  "0.8722",
+  "12.27",
+  "12.82",
+  "0.13",
+  "12.59",
+  "7.4\\times10^{-12}",
+  "3.5\\times10^{-10}",
+  "1.7\\times10^{-9}",
+  "about 2 to 10"
+ ],
+ "pages": {
+  "paper": 13,
+  "supplement": 30,
+  "cover_letter": 1
+ },
+ "remaining": [
+  "affiliation, e-mail, ORCID",
+  "public snapshot update (author instruction)",
+  "cause of the six-coefficient excess"
+ ],
+ "full_goal_complete": false,
+ "snapshot_KST": "2026-09-28T11:32:54.897914+09:00"
+}

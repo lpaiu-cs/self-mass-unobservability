@@ -1,0 +1,130 @@
+{
+  "classification": "Imported from prior work",
+  "scope": "Frozen conditional inference only; no derivative certification, coverage recalibration, or timing-engine replay.",
+  "basis_order": [
+    "col_in_c",
+    "col_in_s",
+    "col_out_c",
+    "col_out_s",
+    "col_dif_c",
+    "col_dif_s"
+  ],
+  "basis_convention": "response to cos(omega*t), then cos(omega*t+pi/2) = -sin(omega*t)",
+  "carrier_coefficients": [
+    1.3747500762475444e-11,
+    -1.5758672094743524e-11,
+    -3.940306295162282e-09,
+    -8.745564741486392e-10,
+    -3.2636033251262084e-10,
+    -7.449359126371482e-10
+  ],
+  "coefficient_precision": [
+    [
+      3.164167059825079e+21,
+      -2.7830262949110533e+20,
+      -7.745839101559049e+18,
+      -7.075312278919004e+18,
+      2.4014062738423113e+20,
+      -1.5830265902369787e+20
+    ],
+    [
+      -2.7830262949110533e+20,
+      2.387485742580255e+21,
+      -2.7041059176702132e+19,
+      9.966884740672967e+18,
+      -8.505724558278402e+19,
+      6.2094916677660295e+19
+    ],
+    [
+      -7.745839101559051e+18,
+      -2.7041059176702132e+19,
+      3.5847782933716803e+18,
+      -1.376747139655964e+19,
+      -8.326806908915133e+17,
+      4.522725987295181e+17
+    ],
+    [
+      -7.075312278919004e+18,
+      9.966884740672969e+18,
+      -1.3767471396559643e+19,
+      6.458806068990516e+19,
+      5.202432854218096e+18,
+      -1.1694144463820065e+18
+    ],
+    [
+      2.4014062738423107e+20,
+      -8.505724558278402e+19,
+      -8.326806908915135e+17,
+      5.202432854218097e+18,
+      6.664699964942652e+19,
+      -4.223956774850292e+19
+    ],
+    [
+      -1.5830265902369787e+20,
+      6.2094916677660295e+19,
+      4.522725987295178e+17,
+      -1.1694144463820065e+18,
+      -4.2239567748502905e+19,
+      3.019012303446263e+19
+    ]
+  ],
+  "threshold": 12.824176622705194,
+  "covariance_a": 0.08316109496333533,
+  "residual_scale": 1.1132948486349696,
+  "drive": {
+    "normalized_amplitudes": [
+      0.2439492540772467,
+      0.6919568193488699,
+      0.06409392657388348
+    ],
+    "phases_radians": [
+      -1.8467911208814425,
+      -2.9217643645404867,
+      -2.0433991176038204
+    ],
+    "angular_frequencies_per_day": [
+      3.856136695791377,
+      0.019199654300698213,
+      3.836937041490679
+    ],
+    "Ustar": 1.7499915636961934e-10
+  },
+  "lags_days": [
+    2.0,
+    5.0,
+    18.0,
+    52.0,
+    200.0,
+    500.0
+  ],
+  "source_sha256": {
+    "outputs/research-completion/simultaneous-validation.json": "d96bba214c5b626095a718f87422fa195d47467b57bcc5fb0283d22342f6d71f",
+    "outputs/research-completion/simultaneous-calibration.json": "4c6a5f2a843e667c44f808b267f6af641490e0d2b0ba75dac5b88b3b6eccbb74",
+    "outputs/research-completion/physical-matching.json": "3cd321c11fedfdcbff6c9bde46af211f79025f97703deb4b2b588473fc3b5402",
+    "verification/simultaneous_inference.py": "fb121e2bc18a22e0709f23411f9ffc57eac422a620b8edf1e36d941a7b0919b7",
+    "verification/physical_drive_completion.py": "f9cf8df8fd319b3ce7201f978fc9e3f49d43c0ed9bea06c537f51c37d6915951",
+    "verification/comparator_audit.py": "06dff5193f4a10119b20603536b3beef4bd9ae0d711a389d780b7e305ab6e164",
+    "verification/coverage_audit.py": "922ef429d470540e774a4154c23abb667946d96bd553b2ff220e51c04c1e2119",
+    "verification/nuisance_audit.py": "07bd95724ed44c8c60b841d441391b37835de03adf33791656d489e5658807f6",
+    "verification/estimated_covariance_audit.py": "fe998ee28c2e1c2c9f1aff366baf78387ae4079ce2ab37907646dc15bf095b68",
+    "request10_external/scripts/sep_common.py": "78b4ccb1fdbe1265c05953338e4f533ada561445827992c55293fb86d3d2a005"
+  },
+  "frozen_input_sha256": {
+    "request10_external/scripts/sep_common.py": "78b4ccb1fdbe1265c05953338e4f533ada561445827992c55293fb86d3d2a005",
+    "request10_external/scripts/sep_phase_marg_10_8e.py": "dcf2b07592cc28ccebe42fb3157b61648b7b0da840f70013cc2e35cd892814f2",
+    "request10_external/baseline_planetGR.npz": "44d0403ca91540c7c59ea8f5422b67e827ca243dd6965f7c3a018c4476fae059",
+    "request10_external/finite_jacobian_v2.npy": "29025ab20c263e8ddd9fd43352c1649679abd5c5f6beef718fd02920ac87a3c0",
+    "request10_external/finite_jacobian_v2_meta.json": "f129c4e2447647e8908e89aa117ff40944b52181dee8ec829b1aab0cf21e2d98",
+    "request10_external/finite_jacobian.npy": "70290a189725158ca9a557f99e1ed736c1732ace9d356adc442cf65eec9d4d08",
+    "request10_external/finite_jacobian_meta.json": "f35fb2f5df2a051d8d020d6c36e9627308e75422e9bd834c118cbd7181ed96a9",
+    "request10_external/carrier_projection_rank.json": "accfd9fe32322ce79614afff68601c81272a0ae8ef8d363c377725a2ebdd45eb",
+    "request10_external/sep_dynamic/col_SEP_D.npz": "0fe29967276af38db2e38fa60b6e35415d19a7e4f2f5b20414c9ce276fc4e49d",
+    "request10_external/sep_dynamic/sep_dynamic_columns.npz": "dbeb961e93a7cad2951d9c76e89cd9c016d6e7d133fdb26e7a0a7e73fb22d6c5",
+    "request10_external/sep_dynamic/sep_phase_marg_10_8e.json": "f8d715e5260fcf4268cb2e63d41da4b754fba67b970bc81920f42c68b0a34c36",
+    "request10_external/sep_dynamic/sep_rn_robustness_10_8h.json": "f34acbeb2808ec2f5f441f89dd566fee07f27d596124fff0d5dba462a8239400",
+    "request10_external/sep_dynamic/sep_gateG2.json": "6de1569fdbe031558d03865c2933247c10cbfa4a7112b3941efe83de5d3d96e2",
+    "request10_external/sep_dynamic/sep_gateG2wp.json": "2a1a63bd99a35632ab0638d28638d616e58ba012991903327a7597f8599b3aea",
+    "request10_external/sep_dynamic/sep_quadrature_overlap_10_8g.json": "d2fa9162f69e6b4fa6063eed59ae4b23bba46703022e587ae1f3f57a509455bf",
+    "request10_external/sep_dynamic/turn_search_10_8d.json": "78fef6085c725a0d766832d2c7607a173484edda82af8e886b0a1e1eed3e01fd"
+  }
+}

@@ -1,0 +1,101 @@
+{
+ "classification": "Imported from prior work (presentation only; no new computation or numerical claim)",
+ "passed": true,
+ "verdict": "FOCUSED_PAPER_AND_SUPPLEMENT_BUILT__NO_NEW_CLAIMS__FINAL_CHARGE_CONCLUSION_UNCHANGED",
+ "user_instruction": "narrow the focus; do not repeat known facts (2026-09-28)",
+ "title": "Identifying a relaxing internal state in free-fall timing: finite-frequency boundaries and an application to PSR J0337+1715",
+ "pages": {
+  "paper": 11,
+  "supplement": 30,
+  "previous_paper": 30,
+  "cover_letter": 1
+ },
+ "paper_keeps": [
+  "Theorem 1 (previous Theorem 3)",
+  "rate-gap comparator inequality",
+  "two-sample moment-variance identification and close-pole limit",
+  "transient insufficiency of a finite periodic record",
+  "damped scalar-charge realization and phase closure",
+  "J0337 application: Tables 1-2, Figure 1, nuisance-span dependence, coverage, comparator information, corrected drive, record limits"
+ ],
+ "moved_to_supplement": [
+  "static operator catalog (SM Section 2, Appendices A-C)",
+  "nuisance-projected rank and pair-coupling benchmark (SM 4.1-4.2)",
+  "white-dwarf calculation (SM 4.6)",
+  "full audits and provenance (SM 5.2, 5.5-5.10, Appendices D-E)",
+  "Figures 2-4"
+ ],
+ "checks": [
+  "all numbers of the paper occur in 39962a753:paper/manuscript.md",
+  "SM body below the abstract is byte-identical to the previous manuscript",
+  "no undefined references, no overfull boxes, no dropped inline math",
+  "builder regenerates the previous main.tex byte for byte",
+  "source archive compiles standalone (11 pages)",
+  "verify_unified_paper table checks pass on the new paper"
+ ],
+ "final_charge_conclusion": "unchanged: no new computation; the Discussion summarizes SM Section 4.6 with the same numbers",
+ "remaining": [
+  "affiliation, e-mail, ORCID (author)",
+  "public snapshot update: the paper points to paper/supplement.md (needs author instruction to push)",
+  "submission"
+ ],
+ "full_goal_complete": false,
+ "snapshot_KST": "2026-09-28T09:50:30.950575+09:00",
+ "document_prefixes": {
+  "docs/model-definition.md": {
+   "bytes": 307248,
+   "sha256": "83ecb15d6423a7d89b4aa8c0f90f1fa8e4b4fe817d4ae937a5952b5d6d212277"
+  },
+  "docs/observable-targets.md": {
+   "bytes": 298067,
+   "sha256": "3d2160fa2ab48d57ab55bb73a6da1dfcdc3b59ee61cf6af4d2b2347205b3125f"
+  },
+  "docs/adiabatic-limit.md": {
+   "bytes": 292406,
+   "sha256": "55ff01f161fc39a97b7039be06505a678b5b6ab71e28d422f0e15513f790e56f"
+  },
+  "docs/nonadiabatic-regime.md": {
+   "bytes": 300898,
+   "sha256": "158daafffc3c5c937e8fe43ecf43ab82cf146eddcf8548a9e0cb18a313ee822a"
+  },
+  "docs/failure-ledger-dynamic-chi.md": {
+   "bytes": 338502,
+   "sha256": "7da0f0a45c1f9f5a0f4a5dfbbbde973cf3ba72841947c7cd1eb519717c9bcb90"
+  },
+  "docs/dynamic-charge-completion.md": {
+   "bytes": 166666,
+   "sha256": "5c21819a262874c37764d37529a2c7ce155551d52079f04a0929dc053ad6d922"
+  }
+ },
+ "sha256": {
+  "notes/REQUEST291_FOCUSED_MANUSCRIPT_KO.md": "d405eedc839d90dc80fe42f2de0a884ddb2b9cbd829d995c38a6cf503f1e6364",
+  "paper/supplement.md": "182d1c8a372e83e33b85b05b17b33284ba6627966c89a633cc03031a4b7debc5",
+  "paper/supplement.tex": "a1b365dd4799f4580f806217ce8a9d83d42ef70f25c2eb68365a6579ec39de24",
+  "output/pdf/free-fall-identifiability-supplement.pdf": "941610ef28d5d0861a4e4826f483927555f8988e95da7f8a436de5484d104ae1",
+  "paper/manuscript.md": "ae66207b4ab0f7f52020aa9175756ff9088fdeeb5ae239e359dffd0c4c07a084",
+  "paper/main.tex": "b2d69dbcab59c173e5af6665c8af2058993546c0e6f2b739aacb6fbff2463adb",
+  "paper/build_manuscript.py": "45603ea0dd0882361de6aaa79fe081fdade9ac109a7d595c7e78d23177786642",
+  "paper/README.md": "ffe0dd1cb01e84df31616467374f9c572916853b559f663568aacc5ced589f49",
+  "output/pdf/free-fall-identifiability.pdf": "53aa936bfee151e70b92d4005e404b05baf2e5e1dedab7dcef10cca91d55aac6",
+  "output/submission/free-fall-identifiability-source.zip": "07727470fe7b4a74a8903f0bc0edd8b8236ebd7f4ec0ef591f32671fd167cebb",
+  "output/submission/cover-letter-prd.tex": "f8746ed8bfd62b10c7852b590ab7d2b89aa32b11b9748b6d38c63d26ae5a00b7",
+  "output/submission/cover-letter-prd.pdf": "c4e82300e4062bb53507cc333ecf922373f6133e395211e8339fe7476771cd68",
+  "output/submission/abstract-plain.txt": "4d1c16a8ca8f78fa7ff4b52ea61132bb5905aa1da0412064f1137aa2ce2cd137",
+  "output/submission/submission-checklist-prd.md": "277f4c0c28cc661954156899190f7f9e224fcf71fa7c829e01b41daf82b40228",
+  "docs/model-definition.md": "9eb48cb02483b2cbef4b7b06e31530a1c956ab4bf800c9ad7615d9d5f904ccbe",
+  "docs/observable-targets.md": "4a1087ec4006ca7e5da1ac96fd1f9a38ae55e61308240e26b699ca7f82a04f72",
+  "docs/adiabatic-limit.md": "da1381202aa905041853116a316ed69fe4f9bb920538fa2878383037247c6378",
+  "docs/nonadiabatic-regime.md": "ae0ace1d04441892800389b16ccfddcb3a8561dae8a710e2f4c6243c0ac75db7",
+  "docs/failure-ledger-dynamic-chi.md": "ce2b84bcc4e29902adac080c9d8784f4d617ebb76e5017095496c7aabd34fbac",
+  "docs/dynamic-charge-completion.md": "8c6aeeb376e52d7d45160c2a79ef63ff78841b9448d4e2c0ae7302c85e6655e8",
+  "outputs/direct-eos-gr33/native-focused-manuscript/publication.json": "02165e80e2140726bf539af4434c89bf69eaee55f6b959f153d2300072f858fa",
+  "outputs/direct-eos-gr33/native-focused-manuscript/result.json": "59df08218cd9c9b895521ff2b14462295479cb7f2ec54e5adb5c770f9d3388b7",
+  "outputs/direct-eos-gr33/native-focused-manuscript/build/main.log": "78f8c9a0d878c6c1a0356f9e71de422d1fc03993b6639dd22b490f59c4a8a09b",
+  "outputs/direct-eos-gr33/native-focused-manuscript/build/supplement.log": "6d6de5c7ddd8bed66eeb0b5304a6c8ed60f3e52cf6869deb541d83ef4ab5dbc6",
+  "outputs/direct-eos-gr33/native-focused-manuscript/scripts/check291-numbers.py": "25567f93f503804a272911186ada849d2b7a833c454fd63139d780179777c854",
+  "outputs/direct-eos-gr33/native-focused-manuscript/scripts/check291-tex.py": "8319e1f4df08cde3a9c6635793596e936f5c11f6af11bfa3e2981e2d6f5253d2",
+  "outputs/direct-eos-gr33/native-focused-manuscript/scripts/phase291-package.py": "3091dbbd3520f54e4235cb0a86dd3d9f5d89feaa5b7f6a6a09983043844d0166",
+  "outputs/direct-eos-gr33/native-focused-manuscript/scripts/phase291-publish.py": "96e6bc8f59828aa7389c8176cd983c638ffdc3a714293e7afee20973ebb8f8ad",
+  "outputs/direct-eos-gr33/native-focused-manuscript/scripts/phase291-split.py": "952750315d897297b86b69ca2cd9211e0df60eafefd379fcdb733d4061ac4639"
+ }
+}

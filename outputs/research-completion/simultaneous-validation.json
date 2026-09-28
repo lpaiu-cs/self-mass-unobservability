@@ -145,53 +145,54 @@
   "signal_translation_control": true,
   "data": {
     "a": 0.08316109496333533,
-    "scale": 1.1132948486351752,
-    "omnibus_null_statistic": 16.352521522378137,
+    "scale": 1.1132948486350225,
+    "omnibus_null_statistic": 16.352521525733433,
     "exceeds_threshold": true,
     "physical_lag_sections": [
       {
         "tau": 2.0,
-        "minimum_statistic": 11.043751360285437,
-        "empty": false,
-        "beta": -1.6033259233841463e-10,
-        "joint_region_abs_beta_upper": 4.1021677699492633e-10
+        "minimum_statistic": 12.84464503942657,
+        "empty": true,
+        "beta": -7.16630853938307e-10,
+        "joint_region_abs_beta_upper": null
       },
       {
         "tau": 5.0,
-        "minimum_statistic": 11.321791385275699,
-        "empty": false,
-        "beta": -1.2897931420595906e-10,
-        "joint_region_abs_beta_upper": 3.633673884361681e-10
+        "minimum_statistic": 14.39182902750081,
+        "empty": true,
+        "beta": -4.644517175240033e-10,
+        "joint_region_abs_beta_upper": null
       },
       {
         "tau": 18.0,
-        "minimum_statistic": 11.508435506706428,
-        "empty": false,
-        "beta": -1.0526847923274958e-10,
-        "joint_region_abs_beta_upper": 3.383885774121184e-10
+        "minimum_statistic": 14.58758029727821,
+        "empty": true,
+        "beta": 7.399464444617865e-12,
+        "joint_region_abs_beta_upper": null
       },
       {
         "tau": 52.0,
-        "minimum_statistic": 11.655190224773698,
-        "empty": false,
-        "beta": -1.1229734435014153e-10,
-        "joint_region_abs_beta_upper": 4.6057007421090146e-10
+        "minimum_statistic": 14.535879804898881,
+        "empty": true,
+        "beta": -8.073276861251327e-11,
+        "joint_region_abs_beta_upper": null
       },
       {
         "tau": 200.0,
-        "minimum_statistic": 11.775267818002106,
-        "empty": false,
-        "beta": 6.447447568714629e-11,
-        "joint_region_abs_beta_upper": 1.7928089772729461e-09
+        "minimum_statistic": 14.451776256692948,
+        "empty": true,
+        "beta": -2.666777340963396e-10,
+        "joint_region_abs_beta_upper": null
       },
       {
         "tau": 500.0,
-        "minimum_statistic": 11.662154380091337,
-        "empty": false,
-        "beta": 1.987419841425578e-09,
-        "joint_region_abs_beta_upper": 8.316716840503746e-09
+        "minimum_statistic": 14.426480151868404,
+        "empty": true,
+        "beta": -6.863318446321898e-10,
+        "joint_region_abs_beta_upper": null
       }
     ]
   },
-  "calibration_sha256": "4c6a5f2a843e667c44f808b267f6af641490e0d2b0ba75dac5b88b3b6eccbb74"
+  "calibration_sha256": "4c6a5f2a843e667c44f808b267f6af641490e0d2b0ba75dac5b88b3b6eccbb74",
+  "data_revision": "phase 292: physical lag sections recomputed with the ELL1 periastron convention (eta = e sin varpi); simulation rows are the registered frozen run; a rerun with the same seeds on the current backend is kept in withdrawn-periastron-convention/simultaneous-validation-rerun-phase292.json and differs only within Monte Carlo error"
 }

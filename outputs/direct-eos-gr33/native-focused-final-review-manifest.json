@@ -1,0 +1,199 @@
+{
+ "classification": "Imported from prior work (review, correction and regenerated outputs); Proven (convention check)",
+ "passed": true,
+ "verdict": "FINAL_REVIEW_DONE__PERIASTRON_CONVENTION_CORRECTED__J0337_PHYSICAL_PLANE_REJECTED__FINAL_CHARGE_CONCLUSION_UNCHANGED",
+ "user_instruction": "final independent review by Claude Opus 5.5, Claude Fable 5.1 and GPT-6-Astra (2026-09-28)",
+ "reviews": {
+  "GPT-6-Astra": "major revision; no mathematical error or numerical mismatch",
+  "Claude Fable 5.1": "major revision; mathematics verified with sympy, numbers matched",
+  "Claude Opus 5.5": "major revision; blocking error B1 (eta/kappa convention reversed relative to the released code)"
+ },
+ "blocking_error": {
+  "description": "physical-drive pericenters used varpi = atan2(kappa, eta); the released Nutimo code uses eta = e sin(varpi), kappa = e cos(varpi) (ELL1)",
+  "evidence": [
+   "Nutimo src/Parameters.cpp: omp = inversetrigo(kappap/ei, etap/ei); src/Utilities.cpp: inversetrigo(cosv, sinv)",
+   "frozen parameter indices 2/4/8/10 = eta_p/kappa_p/eta_b/kappa_b = Nutimo etap/kappap/etaB/kappaB",
+   "Ransom et al. 2014 Table 1: (e sin w)_I = 6.8567e-4, (e cos w)_I = -9.171e-5, w_I = 97.6182 deg, w_O = 95.619493 deg",
+   "time origin: Nutimo shifts treference to zero and builds the initial state there; DopplerF = 1"
+  ],
+  "cause": "the parameter ordering \"e cos w, e sin w\" in the text of Voisin et al. 2025 was read as (eta, kappa)",
+  "failing_step": "symbolic/physical_matching.py and verification/physical_drive_completion.py pericenter angle",
+  "missing_assumption": "check of the runtime code convention"
+ },
+ "corrected": {
+  "pericenter_radians": [
+   1.69406454,
+   1.67084424
+  ],
+  "closure": 3.16481295,
+  "physical_minus_archived": [
+   0.12326821,
+   0.10004792,
+   "pi"
+  ],
+  "physical_sections": "all six empty; minimum statistics 12.84 (2 d) and 14.39-14.59 above threshold 12.8242",
+  "comparator_minima": [
+   0.005389,
+   6.29e-05,
+   1.17e-05,
+   4.63e-06
+  ],
+  "even_only": 0.0311,
+  "transient_sigma_ratio": [
+   0.999998,
+   1.00742
+  ],
+  "halfstep_sigma_factor": [
+   0.7858,
+   0.8722
+  ]
+ },
+ "withdrawn": [
+  "every physical lag section includes beta = 0",
+  "endpoints 4.10217e-10 and 8.31672e-9",
+  "minima 0.08289/8.36e-6/3.19e-6/2.88e-6 (589x), even 0.003035",
+  "transient ratio 1.00096-1.00523",
+  "half-step factors 0.8680-0.8785"
+ ],
+ "unchanged": [
+  "archived dictionary closure violation and physical-beta withdrawal",
+  "omitted-input RMS 3.37427 percent",
+  "Tables 1-2 envelopes and coverage",
+  "registered six-coefficient inclusion 95.17-95.43 percent",
+  "omnibus 16.3525",
+  "positive rate-gap witnesses",
+  "white-dwarf final-charge conclusion"
+ ],
+ "reproducibility": "rerunning simultaneous_inference validate reproduces the registered simulations only within Monte Carlo error when the thread count differs (eigenbasis of repeated eigenvalues); a fixed configuration reproduces itself; registered rows kept, data section replaced",
+ "responses": "notes/REQUEST292_FINAL_INDEPENDENT_REVIEW_KO.md",
+ "new_number_checks": [
+  "97.06",
+  "95.73",
+  "3.16481295",
+  "2.34",
+  "27.5",
+  "2.10",
+  "17.41",
+  "0.005389",
+  "6.29",
+  "1.17",
+  "4.63",
+  "465",
+  "0.0311",
+  "5.4\\times10^{-30}",
+  "5.3\\times10^{-25}",
+  "12.84",
+  "14.39",
+  "14.59",
+  "0.012",
+  "0.999998",
+  "1.00742",
+  "0.7858",
+  "0.8722"
+ ],
+ "pages": {
+  "paper": 13,
+  "supplement": 30,
+  "cover_letter": 1
+ },
+ "remaining": [
+  "confirmation review of the correction",
+  "affiliation, e-mail, ORCID",
+  "public snapshot update (author instruction)",
+  "cause of the six-coefficient excess"
+ ],
+ "full_goal_complete": false,
+ "snapshot_KST": "2026-09-28T11:01:09.081904+09:00",
+ "document_prefixes": {
+  "docs/model-definition.md": {
+   "bytes": 308162,
+   "sha256": "9eb48cb02483b2cbef4b7b06e31530a1c956ab4bf800c9ad7615d9d5f904ccbe"
+  },
+  "docs/observable-targets.md": {
+   "bytes": 298981,
+   "sha256": "4a1087ec4006ca7e5da1ac96fd1f9a38ae55e61308240e26b699ca7f82a04f72"
+  },
+  "docs/adiabatic-limit.md": {
+   "bytes": 293320,
+   "sha256": "da1381202aa905041853116a316ed69fe4f9bb920538fa2878383037247c6378"
+  },
+  "docs/nonadiabatic-regime.md": {
+   "bytes": 301812,
+   "sha256": "ae0ace1d04441892800389b16ccfddcb3a8561dae8a710e2f4c6243c0ac75db7"
+  },
+  "docs/failure-ledger-dynamic-chi.md": {
+   "bytes": 339416,
+   "sha256": "ce2b84bcc4e29902adac080c9d8784f4d617ebb76e5017095496c7aabd34fbac"
+  },
+  "docs/dynamic-charge-completion.md": {
+   "bytes": 167580,
+   "sha256": "8c6aeeb376e52d7d45160c2a79ef63ff78841b9448d4e2c0ae7302c85e6655e8"
+  },
+  "docs/remaining-levers-2026-09-09.md": {
+   "bytes": 4877,
+   "sha256": "a06271997236667f410e7737b8a0204c5dfdb7a3955955d4279b8851b71aaf5f"
+  }
+ },
+ "sha256": {
+  "notes/REQUEST292_FINAL_INDEPENDENT_REVIEW_KO.md": "ece9c30224a1a0a576f48fffefa502bf536862e74a5aa7258072cc3c32aa6af2",
+  "outputs/research-completion/withdrawn-periastron-convention/comparator-audit.json": "bd6213140866220e1ad78e68913dcc93dd24038e3628919d62e18457305ee33a",
+  "outputs/research-completion/withdrawn-periastron-convention/comparator-phase-validation.pdf": "6d98b47710c8415c364169bd916748998f6549b76c07292007bfd4373e2287c9",
+  "outputs/research-completion/withdrawn-periastron-convention/corrected-physical-drive.json": "a74bd8174269cd13a0f045978100bffbf0ed9d9d742f36e7981db1a5ef3355f0",
+  "outputs/research-completion/withdrawn-periastron-convention/physical-matching.json": "d10cf67115fcf75aecaa0aa225d651b907bff86990df306858df735fc2e1c91c",
+  "outputs/research-completion/withdrawn-periastron-convention/remaining-levers-validation.pdf": "9429c5f4f7da298d078a0ce22f23def46744920b6c5e8f5b819ace3c1cc6afc1",
+  "outputs/research-completion/withdrawn-periastron-convention/runtime12-analysis.json": "3cc7d66c7a26b80920559bf67ddbfd247020969e2c676167063379f6435bf79b",
+  "outputs/research-completion/withdrawn-periastron-convention/simultaneous-validation-rerun-phase292.json": "ac77d32a1d4b4cd16cb9b3dbea19bf64cd19f7743e8ac8207ac95a95f2ad44a7",
+  "outputs/research-completion/withdrawn-periastron-convention/simultaneous-validation.json": "733de3d490c856cfc58e04ee94ded4bb0e90753f39c2f413178c273b0a5a429a",
+  "outputs/research-completion/physical-matching.json": "3cd321c11fedfdcbff6c9bde46af211f79025f97703deb4b2b588473fc3b5402",
+  "outputs/research-completion/corrected-physical-drive.json": "751b27f8f4c4207bb824614c16b21ea1746ec0d2c164b67087a52af84467e231",
+  "outputs/research-completion/comparator-audit.json": "a9a6165b0f1a557598292af3ea6e4706cc6beb23b71a8eddad01d771df6cf536",
+  "outputs/research-completion/simultaneous-validation.json": "d96bba214c5b626095a718f87422fa195d47467b57bcc5fb0283d22342f6d71f",
+  "outputs/research-completion/runtime12-analysis.json": "c6ce29772a431c0a27fcd74120dcc3a4092c0be378ca25ef6c80408a22649fbb",
+  "paper/figures/comparator-phase-validation.pdf": "1b691c29a08274059fc8ddf0ecfd83879ed66778b01e00c8eb170402a062369f",
+  "paper/figures/remaining-levers-validation.pdf": "601e6c6c14212fa2c65913c32f0ac830187af75be70acf15a3380a457741a2d6",
+  "symbolic/physical_matching.py": "a06f79f023c8373a5085ab8059672b51a243a9ce66500a2322f404850728a134",
+  "verification/physical_drive_completion.py": "f9cf8df8fd319b3ce7201f978fc9e3f49d43c0ed9bea06c537f51c37d6915951",
+  "verification/verify_unified_paper.py": "2fcbf5cb9e6e83b59a02b3ff4ba239f4b5f54c476e08c7983a42d1434f960a24",
+  "paper/manuscript.md": "b42e46e4c5dbed590f08fb6f06c5207ff3b3d0fa8f1ed8dd58104ada78bc36bb",
+  "paper/main.tex": "1357f8668a88cc5b7ce20d4523ce265e017ad46453a67c092f1926902c655e34",
+  "paper/supplement.md": "bdd6d88ece1f5a707a5764957c4b7423f2677a6ab650748bc07edf847840d2be",
+  "paper/supplement.tex": "0b35b28884e28f48c24e7eb0fda1092be564ff5f0f402e0987f1989dc0e9dbe9",
+  "paper/references.bib": "42d1de779cd313145433d7bcfeda1330c5d29f840e822ba9b1f326e6c1c3607c",
+  "paper/README.md": "c840c40c498fb60df61ae9726b9578f9fab2cdcecfc19e9b1f20194186da0bbd",
+  "docs/white-dwarf-free-fall-charge-section.md": "46021ccccb81c6a8f9785e00740123bd961b7f562551c6d3b209c6aa6835f4f8",
+  "output/pdf/free-fall-identifiability.pdf": "f7bfb0fcc1a95b4bfadd678281487cd7432bfa116046f79749941dfafed53591",
+  "output/pdf/free-fall-identifiability-supplement.pdf": "45a5d80705d9f0aaba6dfd7636d575ead2ae5b415e7818383681562819c1e62b",
+  "output/submission/free-fall-identifiability-source.zip": "e5c6c35fd9dde5562198f08008f94ce5de2ffcd1e340b26d09c1af6087eaebd8",
+  "output/submission/cover-letter-prd.tex": "6987cbc066206264bf687b1dc05dac807a36770ea71961e490412c2ff98d5c08",
+  "output/submission/cover-letter-prd.pdf": "6ea7e6ebe4d8e9458f3530ec5dc791e55bc31d6df815e6456c4fa7c38306bc43",
+  "output/submission/abstract-plain.txt": "a7706964a433e7d1d24897635161586e1f273824fc8da0a0ebab60bf6f4ed822",
+  "output/submission/submission-checklist-prd.md": "da052bc1f4a8dcb66f63e5e54b75d020c0965000f7436b8b0f15e48f0d4b18e3",
+  "docs/model-definition.md": "8535d8ba7174abe18572a47d0affa898faadcf3d40dfd8dce7bacb9a8969eeb4",
+  "docs/observable-targets.md": "005a145ebabbb02334acba66cfc36b454dcbda4bc2e6469f3bf81fabde5fcbac",
+  "docs/adiabatic-limit.md": "4758299adf929071de740ebd99199ccdeca5c1e3eec619f23c0f907246ecf178",
+  "docs/nonadiabatic-regime.md": "c5489480c2edc2edeb1ab5aeacec1b1491ee2a0f6891eebc1fc18c6d831ce0de",
+  "docs/failure-ledger-dynamic-chi.md": "2c803b2ec2bf9b3c7e45454d25e2e7b6fdc66ca3e1c787649eb7b0796151f3b6",
+  "docs/dynamic-charge-completion.md": "656fc58e0380e14edd87b46b22617da0b2cfa4ef2e1670cfbd39a010147d03e3",
+  "docs/remaining-levers-2026-09-09.md": "f02e1de5a5288e1e618b06313785dd6f2adf298d5e6bfdfc6e9667208128905d",
+  "outputs/direct-eos-gr33/native-focused-final-review/compare292.json": "0b2baa224c2af02319d5ef747710da978f9204f5d8eb00a90273d1b5ace86f4a",
+  "outputs/direct-eos-gr33/native-focused-final-review/publication.json": "8a6e232c4ef334f332c2be69321490757993e43c5e2ea9b4df6bc3b3f232067e",
+  "outputs/direct-eos-gr33/native-focused-final-review/result.json": "7b43fbdd222947dc92aa3fc90e2eded102843143b2352b6b14a4fbeb82d37ad0",
+  "outputs/direct-eos-gr33/native-focused-final-review/review-claude-prompt.md": "5108b55f6d6dfdb85649879a086a632eb5d95ddfc758bc8536dabf542282496f",
+  "outputs/direct-eos-gr33/native-focused-final-review/review-fable-5.1.md": "339b2c689e08487cbbba5f3c90967be16651c86d90645549256b4aa9b196fd13",
+  "outputs/direct-eos-gr33/native-focused-final-review/review-gpt-6-astra-cli.log": "4e173284807598ab908f0e789b5c91ee569aca40c74c2b975bb4b6269b066879",
+  "outputs/direct-eos-gr33/native-focused-final-review/review-gpt-6-astra-prompt.md": "d178866d04d3a63f9b18b691b8ff578ab1e1ae3c8c41ff65b147eb9e7235091b",
+  "outputs/direct-eos-gr33/native-focused-final-review/review-gpt-6-astra.md": "a2c520484557bdcc9e720802ad662f3388ceeb577079d577af5c383bcd2b1c4a",
+  "outputs/direct-eos-gr33/native-focused-final-review/review-opus-5.5.md": "0ec88185ab1f46079ee9b4ca2ea9c86415d6cda794ede71fed35930bc44b9372",
+  "outputs/direct-eos-gr33/native-focused-final-review/review-prompt.md": "b6b28445e34288cd83ffd3991faad0248f848c316806a4fbcb6772f5f7070add",
+  "outputs/direct-eos-gr33/native-focused-final-review/build/main.log": "93c6baf98373cc7c0ce2fee597dde5ca8df8b93dbe26b4901a0acf5d640da3d7",
+  "outputs/direct-eos-gr33/native-focused-final-review/build/supplement.log": "caae79824a710bb93d70ebf680431e7d06e7c8e325601d3923b761cb908b258f",
+  "outputs/direct-eos-gr33/native-focused-final-review/scripts/compare292.py": "5dff845410333fb406bf61a4ef512962f576a8c347c18a1420d0305c5865a6ea",
+  "outputs/direct-eos-gr33/native-focused-final-review/scripts/find292.py": "6c7ec421be78fcf2477f85526be1b9c3d3c392ba2aecf8ad77f124f191389059",
+  "outputs/direct-eos-gr33/native-focused-final-review/scripts/phase292-draft.py": "e6cc97f4b399396292682aad33dfbada733acab7f223c8469ca05e161d7586ce",
+  "outputs/direct-eos-gr33/native-focused-final-review/scripts/phase292-publish.py": "6e3980bff9aabf87cf5b768e39c2e65d5117db27f751a901706976fe461a94d1",
+  "outputs/direct-eos-gr33/native-focused-final-review/scripts/phase292-supplement.py": "47f395dcda276cb51beb650e7352bc8db582ee322b1f4a0ebe97ca3ddd87e8bf",
+  "outputs/direct-eos-gr33/native-focused-final-review/scripts/phase292-validation-data.py": "284f336d15f006998eb3799b3dd5c6817359758ee5b1c6c5f60f55ceeb04b874",
+  "outputs/direct-eos-gr33/native-focused-final-review/scripts/ransom-table.py": "195a52b3a67e93683c1198f9ccec2f19030736caee64ccadeb6885aefc15293f",
+  "outputs/direct-eos-gr33/native-focused-final-review/scripts/repro292.py": "cbe760eddfcb91c4c04980509e30700e1f08558b5d44f814bdbca8a0f8df983d"
+ }
+}
