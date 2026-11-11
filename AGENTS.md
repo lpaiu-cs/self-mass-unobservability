@@ -10,7 +10,8 @@ Status: Imported from prior work. 미션 질문은 미결인 채로 닫았다. �
 - 허용되는 일은 기록의 사실 확인, 오류 정정, 보존·정리, 사용자가 명시적으로 요청한 질의 응답이다.
 - 재개는 사용자의 명시적 결정으로만 한다. "남은 것을 진행하라" 같은 포괄적 지시를 재개 승인으로 해석하지 않는다.
 - Physica Scripta 패키지는 미제출로 동결한다. 제출 여부는 저자의 별도 결정이다.
-- 로컬 main 체크아웃은 배열(`*.npz`, `*.npy`, `*.gz`)을 sparse checkout으로 내렸다. 배열과 전체 이력은 로컬 `.git`에만 있고 공개 저장소에는 없다. 전체 검증이 필요하면 `git sparse-checkout disable`로 되살린다.
+- 배열(`*.npz`, `*.npy`, `*.gz`, 약 50 GB)은 2026-11-11 사용자 결정으로 폐기했다. 공개 이력에 들어 있던 작은 배열 32개만 남는다. 배열을 읽는 검증(`verify_unified_paper.py` 등)은 더 이상 돌릴 수 없고, 빠른 검사 세 가지(`symbolic/state_identifiability.py`, `verification/projected_identifiability.py`, `verification/replay_public_inference.py`)는 돌아간다.
+- 로컬 이력은 배열 없이 재작성했다. 배열이 들어 있던 커밋은 ID가 바뀌었다. 기록에 인용된 옛 커밋 ID는 `docs/commit-id-map-2026-11-11.tsv`에서 새 ID를 찾는다. 재작성 직전 main에 있던 배열 가운데 폐기한 파일의 목록은 `docs/discarded-arrays-2026-11-11.tsv`에 있다.
 - 과거 기록을 인용하기 전에 이후 정오표로 대체됐는지 확인한다. 단계272–284의 부호·no-go·A4 진술은 `notes/REQUEST285_REVISION5_RESPONSE_KO.md`의 정오표로 대체됐다.
 - 아래 Mission 이하의 절은 종결 이전의 작업 규칙이며 역사 기록으로 보존한다. Claim Labels 규칙은 이 저장소의 과학적 진술에 계속 적용한다.
 
