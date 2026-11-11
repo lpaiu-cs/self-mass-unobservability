@@ -1,5 +1,18 @@
 # AGENTS.md
 
+## Research Line Status: CLOSED (2026-11-11)
+
+2026-11-11 사용자 결정: 이 저장소의 dynamic-chi / A4 loophole 연구선을 종결한다. 판정과 이유는 `docs/research-line-closure-2026-11-11.md`가 소유한다.
+
+Status: Imported from prior work. 미션 질문은 미결인 채로 닫았다. 분리된 관측 후보도 정확한 no-go 경계도 없다. 단계276의 no-go·A4 유지 판정은 단계284–285에서 철회됐고, 성립하는 분류는 선택한 응답족의 지연 진폭 상한에 관한 조건부 theorem progress다.
+
+- 새 dynamic-chi 작업, 장기 계산, 원고 개정, 투고·재투고를 시작하지 않는다.
+- 허용되는 일은 기록의 사실 확인, 오류 정정, 보존·정리, 사용자가 명시적으로 요청한 질의 응답이다.
+- 재개는 사용자의 명시적 결정으로만 한다. "남은 것을 진행하라" 같은 포괄적 지시를 재개 승인으로 해석하지 않는다.
+- Physica Scripta 패키지는 미제출로 동결한다. 제출 여부는 저자의 별도 결정이다.
+- 과거 기록을 인용하기 전에 이후 정오표로 대체됐는지 확인한다. 단계272–284의 부호·no-go·A4 진술은 `notes/REQUEST285_REVISION5_RESPONSE_KO.md`의 정오표로 대체됐다.
+- 아래 Mission 이하의 절은 종결 이전의 작업 규칙이며 역사 기록으로 보존한다. Claim Labels 규칙은 이 저장소의 과학적 진술에 계속 적용한다.
+
 ## Mission
 
 This repository is dynamic-loophole-first.

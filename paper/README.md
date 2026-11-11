@@ -1,6 +1,12 @@
 # Unified manuscript
 
-The current paper is **Identifying a relaxing internal state in free-fall timing: finite-frequency boundaries and an application to PSR J0337+1715**.
+The current journal candidate is **Finite-frequency identifiability of relaxation responses in free-fall timing**, prepared for **Physica Scripta** on 30 September 2026. Its editable Markdown, generated TeX, PDFs, cover letter, portable source and supplementary-code archives are in [`../output/submission/physica-scripta/`](../output/submission/physica-scripta/README.md). Use `python paper/build_physica_scripta.py` with the installed Tectonic path in `TECTONIC`; it reuses the Markdown builder below and verifies that every frozen GRG file is unchanged. No external submission has been made for this edition.
+
+The methods revision promotes the projected-separation criterion into the main text and adds dimensionless exact controls in `../verification/projected_identifiability.py`. Archived empirical numbers are reused. The full technical companion and its failures are preserved, with the derivative uncertainty and thermal-tail limitation still explicit. The current preparation and validation record is `../docs/physica-scripta-revision-2026-09-30.md`.
+
+## Previous integrated edition (preserved)
+
+The previous paper is **Identifying a relaxing internal state in free-fall timing: finite-frequency boundaries and an application to PSR J0337+1715**. The instructions below describe that preserved edition, not the new Physica Scripta package. The GRG edition was rejected at editorial assessment on 29 September 2026; `../docs/grg-submission-status.md` records the decision and analysis.
 
 - `manuscript.md` is the focused paper (28 September 2026); `main.tex` is generated.
 - `supplement.md` is its Supplemental Material: the previous full manuscript (*Static response and dynamical identifiability in free-fall tests*), with the periastron correction, aligned claim wording, thermal-cutoff qualification and public-replay instructions. It keeps its own numbering, and the paper cites it as "SM Section 4.6" and so on. `supplement.tex` is generated with `python paper/build_manuscript.py supplement.md supplement.tex`.

@@ -2560,3 +2560,9 @@ Status: Conjectural. 전체 시간 수렴·연속 오차·물리 EOS·외부·�
 분류: Imported from prior work. 공개 재생에서도 기존 J0337 여섯 단면과 비음수 beta 판정은 유지된다. 열 완화의 4.0e-9 / 3.3e-7은 열 시간 1e13 s까지 계산한 층의 부분합이며, 전체 지연 상한으로 해석하지 않는다.
 
 분류: Proven. 같은 Debye 껍질 모형에서 미계산 총 세기 T_tail의 잔여항은 T_tail/(omega*tau_cut) 이하이다. 분류: Conjectural. T_tail 자체의 보장은 없으며, 모형 전체의 열 지연 인증과 전체 물리 목표는 완료하지 않았다. 실패한 단계는 부분합에서 전체 지연으로의 승격이고, 빠진 최소 조건은 깊은 층의 총 완화 세기 또는 그 잔여항의 보장이다. 기존 기록과 기준을 보존하고 원고 범위를 정정했다. [근거 295](../notes/REQUEST295_SUBMISSION_CORRECTIONS_KO.md).
+
+## 2026-09-30 — 비단열 계수 차이와 측정 정보량의 구분
+
+분류: Proven. full column rank인 주어진 A에서는 비교 모형까지의 계수 공간 거리 \(\delta_N\)에 대해 \(\sigma_{\min}(A)^2\delta_N^2\le I_{\beta,N}\le\sigma_{\max}(A)^2\delta_N^2\)이다. rank가 같아도 정보량은 임의로 작을 수 있다. 새 무차원 정확 대조에서 동일한 응답과 차수 1 비교 모형의 거리 제곱은 117/1000이지만, A를 \(P+\epsilon(I-P)\)로 놓으면 정보량은 \(117\epsilon^2/1000\)이다. P는 그 비교 모형으로의 정사영이다.
+
+분류: Conjectural. 이 해석 대조는 실제 항성·타이밍 응답이나 최종 전하의 잔여 오차를 해결하지 않는다. 기존 열 꼬리와 미분 오차 조건을 유지하며 장기 계산은 실행하지 않았다. 분류는 theorem progress이며 새 physical loophole의 확인이 아니다. [개정·정확 대조·검증 기록](physica-scripta-revision-2026-09-30.md).
